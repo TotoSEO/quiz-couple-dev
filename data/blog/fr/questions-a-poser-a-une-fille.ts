@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'questions-a-poser-a-une-fille',
-  title: "90 questions à poser à une fille, pour la rencontrer vraiment",
+  title: "Les 90 meilleures questions à poser à une fille pour la connaître",
   metaTitle: "Questions à poser à une fille : 90 idées qui changent tout",
   metaDescription: "Marre du « salut, ça va ? » qui ne mène nulle part ? 90 questions à poser à une fille, du premier message au vrai tête-à-tête, sans jamais tomber dans l'interrogatoire.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',

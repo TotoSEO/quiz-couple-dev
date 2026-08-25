@@ -132,7 +132,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'reequilibrer',
-      title: "Comment rééquilibrer concrètement",
+      title: "Comment rééquilibrer au quotidien",
       content: `<p>Pas de platitudes ici. Pas de « communiquez mieux » sans explication. Voici ce qui fonctionne vraiment, et ce qui ne fonctionne pas.</p>`,
       subsections: [
         {

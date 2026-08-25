@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'peur-de-l-engagement',
-  title: "La peur de l'engagement : ce qui se cache vraiment derrière (et comment avancer)",
+  title: "La peur de l'engagement : ce qui se cache derrière (et comment avancer)",
   metaTitle: "Peur de l'engagement : causes, signes et déblocage",
   metaDescription: "Il dit qu'il n'est « pas prêt » depuis deux ans ? Ou c'est toi qui bloques ? La peur de l'engagement décodée : ses vraies causes, ses signes... et comment en sortir.",
   featuredImage: '/blog/peur-de-l-engagement.webp',
@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'les-vraies-causes',
-      title: "Ce qui se cache vraiment derrière la peur de l'engagement",
+      title: "Ce qui se cache derrière la peur de l'engagement",
       content: `<p>« Phobie de l'engagement », l'expression fait sourire... mais le mécanisme est sérieux, et il a presque toujours l'une de ces quatre racines.</p>`,
       subsections: [
         {

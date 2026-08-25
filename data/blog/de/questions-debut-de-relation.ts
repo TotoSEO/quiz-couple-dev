@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'fragen-beziehungsanfang',
-  title: "60 Fragen für den Beziehungsanfang (bevor man sich hineinsteigert)",
-  metaTitle: "Fragen am Beziehungsanfang: die 60, die wirklich zählen",
+  title: "60 perfekte Fragen für den Beziehungsanfang",
+  metaTitle: "Fragen am Beziehungsanfang: die 60, die zählen",
   metaDescription: "In den ersten Wochen traut man sich nichts zu fragen, aus Angst, alles kaputtzumachen. Irrtum: Hier sind die 60 Fragen für den Beziehungsanfang, dosiert ohne Etappen zu überspringen.",
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Zwei dampfende Kaffeetassen nebeneinander, der Anfang eines Gesprächs",

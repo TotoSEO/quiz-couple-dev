@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'emotional-dependency-symptoms',
-  title: "Symptoms of emotional dependency: what it actually feels like",
+  title: "Symptoms of emotional dependency: examples and outcomes",
   metaTitle: "Emotional dependency: the symptoms that should alert you",
   metaDescription: "The phone checked 40 times, the fear of silence, the relationship taking up all the space... The 16 symptoms of emotional dependency, area by area.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',

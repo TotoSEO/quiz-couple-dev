@@ -60,7 +60,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'ce-qui-aide',
-      title: "Ce qui aide vraiment (des deux côtés)",
+      title: "Ce qui aide le plus (des deux côtés)",
       content: `<p>Le travail n'est pas le même selon le côté du couple où tu te trouves. Voici les deux, séparément, parce que les leviers sont opposés.</p>`,
       subsections: [
         {

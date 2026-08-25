@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'las-senales-que-pesan',
-      title: "Las señales que pesan de verdad (el conjunto)",
+      title: "Las señales que pesan (el conjunto)",
       content: `<p>Estos son los cambios que, JUNTOS y en el tiempo, constituyen un conjunto serio. Quédate con la palabra clave: cambio. Un comportamiento constante desde siempre no señala nada... es la ruptura de la costumbre la que habla.</p>
 <ol>
 <li><strong>El móvil convertido en santuario... hace poco:</strong> No el móvil privado de siempre: el que CAMBIA de estatus. Pantalla ahora boca abajo, código modificado, notificaciones apagadas, la ducha con el móvil... Un móvil que se convierte en caja fuerte de un día para otro cuenta que algo ha entrado en él.</li>

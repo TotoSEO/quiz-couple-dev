@@ -37,7 +37,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'qu-est-ce-que-le-love-bombing',
-      title: "Le love bombing, concrètement, c'est quoi",
+      title: "Le love bombing, c'est quoi",
       content: `<p>Le love bombing, c'est une phase de séduction d'une intensité inhabituelle, concentrée sur un temps très court, qui vise à créer un attachement fort <em>avant</em> que tu aies eu le temps d'évaluer la personne en face de toi.</p>
 <p>L'expression vient à l'origine du vocabulaire des mouvements sectaires, où les nouvelles recrues étaient submergées d'attention et de chaleur pour couper court à leur esprit critique. Le mécanisme est resté le même, transposé à la vie amoureuse.</p>
 <p>Le point important : <strong>le love bombing n'est pas défini par les gestes, il est défini par leur fonction.</strong> Offrir des fleurs, envoyer des messages, dire des mots forts, tout ça peut être parfaitement sincère. Ce qui fait le love bombing, c'est que ces gestes servent à installer une dette affective et à accélérer ton engagement, pas à te connaître.</p>`,

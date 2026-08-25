@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'zukunftsfragen-fuer-paare',
   title: "60 Zukunftsfragen für Paare vor den großen Entscheidungen",
-  metaTitle: "Zukunftsfragen für Paare: die 60, die wirklich verbindlich sind",
+  metaTitle: "Zukunftsfragen für Paare: die 60, die verbindlich sind",
   metaDescription: "Zusammenziehen, heiraten, ein Kind... Paare scheitern selten an fehlender Liebe, aber oft daran, nie darüber gesprochen zu haben. Die 60 Zukunftsfragen vorher.",
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Paar blickt auf einen Weg, der sich zum Horizont entrollt, Koffer in der Hand",

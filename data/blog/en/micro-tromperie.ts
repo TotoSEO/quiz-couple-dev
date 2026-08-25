@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'what-it-is-concretely',
-      title: "Micro-cheating, concretely",
+      title: "Micro-cheating, with examples",
       content: `<p>The simplest test for recognising micro-cheating fits in one question: <strong>would this behaviour survive your presence?</strong> What someone does the same whether you are there or not belongs to social life. What changes when you walk into the room belongs to something else. On that basis, the classic repertoire:</p>
 <ul>
 <li><strong>Targeted digital attention:</strong> Systematically liking the same person's photos, watching all their stories first, commenting with metronome regularity. One like is nothing; consistency is a signal, and everybody knows it perfectly well.</li>

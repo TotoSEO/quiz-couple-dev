@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'questions-debut-de-relation',
-  title: "60 questions à se poser en début de relation (avant de s'emballer)",
-  metaTitle: "Questions en début de relation : les 60 qui comptent vraiment",
+  title: "60 questions parfaites à se poser en début de relation",
+  metaTitle: "Questions en début de relation : les 60 qui comptent",
   metaDescription: "Les premières semaines, on n'ose rien demander de peur de tout casser. Erreur : voici les 60 questions de début de relation, dosées pour ne griller aucune étape.",
   featuredImage: '/blog/questions-debut-de-relation.webp',
   featuredImageAlt: "Deux tasses de café fumantes côte à côte, début d'une conversation",

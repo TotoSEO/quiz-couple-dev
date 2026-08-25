@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'the-signs-that-weigh',
-      title: "The signs that really weigh (the cluster)",
+      title: "The signs that weigh (the cluster)",
       content: `<p>Here are the changes that, TOGETHER and over time, make up a serious cluster. Remember the keyword: change. A behaviour that has always been constant signals nothing... it is the break in habit that speaks.</p>
 <ol>
 <li><strong>The phone turned into a sanctuary... recently:</strong> Not the phone that was always private: the one whose status CHANGES. Screen now face down, code changed, notifications muted, showering with the phone... A phone that becomes a safe overnight tells you something moved into it.</li>

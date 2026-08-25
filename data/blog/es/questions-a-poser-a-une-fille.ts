@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'preguntas-para-una-chica',
-  title: "90 preguntas para hacerle a una chica, para conocerla de verdad",
+  title: "Las 90 mejores preguntas para hacerle a una chica para conocerla",
   metaTitle: "90 preguntas para una chica (sin parecer un interrogatorio)",
   metaDescription: "¿Harto del «hola, ¿qué tal?» que no lleva a ninguna parte? 90 preguntas para hacerle a una chica, del primer mensaje al cara a cara, sin interrogatorios.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
@@ -112,7 +112,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'para-crear-complicidad',
-      title: "Para crear complicidad de verdad (51-65)",
+      title: "Para crear una complicidad más profunda (51-65)",
       content: `<p>Para sacar cuando ya hay conexión. Es el momento en que pasas de «conversación agradable» a «conversación que le contará a sus amigas». Ve despacio, una o dos por vez, no en ráfaga.</p>
 <ol start="51">
 <li>¿Qué te hace feliz de verdad, más allá de lo que se suele responder?</li>

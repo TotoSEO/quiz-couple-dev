@@ -129,7 +129,7 @@ Les conversations qui font avancer ne sont presque jamais « où en es-tu avec m
     },
     {
       id: 'pour-finir',
-      title: `Là où les sentiments se voient vraiment`,
+      title: `Là où les sentiments se voient`,
       content: `<p>Les sentiments chez un homme naissent rarement là où on les cherche… Pas dans les mots, pas dans les grands gestes, mais dans le fait de devenir une habitude, puis un manque.</p>
 
 <p><strong>Si vous en êtes à compter les signes</strong>, la vraie question n'est peut-être pas de savoir où il en est, mais si le rythme qu'il impose vous convient. Ce sont deux questions différentes, et la seconde vous appartient entièrement.</p>`,

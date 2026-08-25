@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: '36-fragen-um-sich-zu-verlieben',
-  title: "Die 36 Fragen, um sich zu verlieben: das vollständige Protokoll und was es wirklich bewirkt",
-  metaTitle: "36 Fragen, um sich zu verlieben: die Liste und die Methode",
+  title: "36 Fragen, um sich zu verlieben",
+  metaTitle: "36 Fragen, um sich zu verlieben - Quiz Couple",
   metaDescription: "Zwei Fremde, 36 Fragen, 4 Minuten Blickkontakt... und sechs Monate später eine Hochzeit. Arthur Arons Experiment, die Fragen, und wie ihr es heute Abend macht.",
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Zwei Stühle einander gegenüber unter einer warmen Glühbirne, dazwischen ein Fragenheft",
@@ -36,7 +36,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'serie-1',
-      title: "Serie 1: sich wirklich kennenlernen (Fragen 1 bis 12)",
+      title: "Serie 1: sich kennenlernen (Fragen 1 bis 12)",
       content: `<p>Die erste Stufe wirkt harmlos... ist sie nicht. Jede Frage enthält schon eine kleine Tür zum Intimen. Antworte ehrlich, nicht brillant!</p>
 <ol>
 <li>Wenn du mit irgendjemandem auf der Welt essen könntest, wen würdest du einladen?</li>

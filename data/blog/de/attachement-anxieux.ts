@@ -49,7 +49,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'was-wirklich-beruhigt',
-      title: "Was wirklich beruhigt (und was nie funktioniert)",
+      title: "Was beruhigt (und was nie funktioniert)",
       content: `<p>Räumen wir zuerst weg, was nicht funktioniert, denn das hast du längst ausprobiert: immer neue Beweise verlangen (die Wirkung erschöpft sich), überwachen (das füttert den Alarm), «intensive» Partner wählen, die dich vibrieren lassen (Intensität ist oft verkleidete Unbeständigkeit, und Unbeständigkeit ist Benzin in deinem Feuer). Und die schlechteste Strategie von allen: darauf warten, dass die andere Person es errät. Niemand schaltet einen Alarm ab, den er nicht hören kann.</p>
 <p>Was funktioniert, jetzt, in drei Bewegungen.</p>`,
       subsections: [

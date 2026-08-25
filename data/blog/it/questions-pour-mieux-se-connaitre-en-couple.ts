@@ -43,7 +43,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'il-vostro-quotidiano',
-      title: "Il vostro presente: cosa vivete davvero (13-24)",
+      title: "Il vostro presente: la vostra vita di tutti i giorni (13-24)",
       content: `<p>Il quotidiano si crede di condividerlo, ma ciascuno lo vive dal suo lato. Verifica.</p>
 <ol start="13">
 <li>Qual è il tuo momento preferito delle nostre giornate normali?</li>

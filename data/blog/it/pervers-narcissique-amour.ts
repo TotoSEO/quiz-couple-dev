@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'di-cosa-parliamo-davvero',
-      title: "Narcisista: di cosa parliamo davvero",
+      title: "Narcisista: di cosa parliamo",
       content: `<p>La parola è ovunque. Talmente ovunque, in effetti, che è diventata un insulto da litigio, e questo danneggia soprattutto chi ne vive uno vero. Rimettiamo quindi le cose al loro posto.</p>
 <p>Un narcisista è qualcuno che ha bisogno di sentirsi superiore per stare in piedi, e che usa l'altro come carburante. Non per scatti d'ira o per goffaggine, no: per funzionamento. Per lui la relazione non è un legame tra due persone. È piuttosto uno specchio, che deve restituirlo in grande. Finché lo ammiri, va tutto bene, sei perfetta. Ma appena torni a essere una persona reale, con bisogni, limiti e giornate storte... diventi un problema da correggere.</p>
 <aside class="blog-tip-box">
@@ -85,7 +85,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'i-segnali-che-contano',
-      title: "I segnali che contano davvero in amore",
+      title: "I segnali che contano in amore",
       content: `<p>Liste di venti segnali le trovi ovunque. Il problema è che, prese una per una, descrivono metà delle coppie che attraversano un periodo difficile. Ecco piuttosto i sei segnali che, insieme e nel tempo, disegnano una relazione di controllo. E nota cosa hanno in comune: <strong>i più affidabili non si vedono in lui, si vedono in te.</strong></p>
 <ol>
 <li><strong>Non riesci più a raccontare la tua relazione:</strong> Quando un'amica ti chiede come va, non sai cosa rispondere. Troppo complicato, troppo contesto, «bisogna conoscerlo»... Una relazione sana si racconta facilmente.</li>
@@ -132,7 +132,7 @@ const article: BlogArticleData = {
       subsections: [
         {
           id: 'ti-ama-davvero',
-          title: "Ti ama davvero?",
+          title: "Ti ama?",
           content: `<p>Ha bisogno di te, questo sì. E vista da dentro, quella necessità assomiglia moltissimo all'amore... Solo che ha bisogno di te come funzione: regolatrice d'immagine, fornitrice di ammirazione, colpevole di servizio. In realtà la domanda più utile non è cosa prova lui, a quella risposta non avrai mai davvero accesso. È piuttosto: il modo in cui ti ama ti fa bene? A questa puoi rispondere da sola.</p>`,
         },
         {

@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'domande-da-fare-alla-tua-ragazza',
-  title: "75 domande da fare alla tua ragazza, per (ri)scoprirla davvero",
+  title: "75 domande da fare alla tua ragazza, per (ri)scoprirla",
   metaTitle: "Domande da fare alla tua ragazza: 75 idee per ogni momento",
   metaDescription: "Credi di conoscerla a memoria? Scommessa: tra queste 75 domande da fare alla tua ragazza ce ne sono almeno dieci di cui non conosci la risposta.",
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',

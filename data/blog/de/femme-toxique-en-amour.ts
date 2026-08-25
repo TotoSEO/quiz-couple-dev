@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'toxische-frau-in-der-liebe',
-  title: "Toxische Frau in der Liebe: die Anzeichen, die Männer zu spät sehen",
+  title: "Toxische Frau in der Liebe: die subtilen Verhaltensweisen, die man kennen sollte",
   metaTitle: "Toxische Frau: Anzeichen und Verhaltensweisen in der Beziehung",
   metaDescription: "Wiederkehrende Dramen, Schuldgefühle, als Liebe getarnte Kontrolle... Die Anzeichen der toxischen Frau, die 6 typischen Profile, und die Frage, die niemand wagt: Und wenn ich es bin?",
   featuredImage: '/blog/femme-toxique-en-amour.webp',

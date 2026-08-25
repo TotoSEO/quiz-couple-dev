@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'preguntas-para-tu-novia',
-  title: "75 preguntas para hacerle a tu novia, para (re)descubrirla de verdad",
+  title: "75 preguntas para hacerle a tu novia, para (re)descubrirla",
   metaTitle: "Preguntas para tu novia: 75 ideas para todos los momentos",
   metaDescription: "¿Crees que la conoces de memoria? Apuesta: de estas 75 preguntas para hacerle a tu novia, hay al menos diez cuya respuesta no sabes.",
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',

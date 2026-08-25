@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'dependance-affective-rupture',
-  title: "Dépendance affective et rupture : survivre au sevrage, puis en faire une force",
+  title: "Dépendance affective et rupture : survivre au sevrage et rebondir",
   metaTitle: "Rupture et dépendance affective : traverser le manque",
   metaDescription: "Pour un dépendant affectif, une rupture n'est pas un chagrin : c'est un sevrage. Pourquoi ça fait si mal, les pièges des premières semaines, et comment en sortir grandi.",
   featuredImage: '/blog/dependance-affective-rupture.webp',

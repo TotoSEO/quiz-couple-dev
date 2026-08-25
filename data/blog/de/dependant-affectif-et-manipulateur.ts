@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'emotional-abhaengig-und-manipulator',
-  title: "Emotional abhängig und Manipulator: das perfekte Paar... für ihn",
+  title: "Ich bin emotional abhängig von einem Manipulator: Was tun?",
   metaTitle: "Emotionale Abhängigkeit und Manipulation: das gefangene Duo",
   metaDescription: "Der Manipulator erkennt emotionale Abhängigkeit wie ein Radar. Warum sich diese beiden Profile anziehen, was dieses Paar auslöst, und wie man das Duo sprengt.",
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',

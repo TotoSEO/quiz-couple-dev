@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'trennung-von-einem-narzissten',
-  title: "Trennung von einem Narzissten: was dich erwartet, Phase für Phase",
+  title: "Trennung von einem Narzissten: wie du es angehst",
   metaTitle: "Trennung von einem Narzissten: der Ausstiegsleitfaden",
   metaDescription: "Einen Narzissten zu verlassen gleicht keiner anderen Trennung. Was du vorher vorbereiten musst, was er danach tun wird, und wie du den Kontaktabbruch durchhältst.",
   featuredImage: '/blog/rupture-pervers-narcissique.webp',

@@ -129,7 +129,7 @@ Le conversazioni che fanno avanzare non sono quasi mai «cosa siamo». Partire d
     },
     {
       id: 'per-finire',
-      title: `Dove i sentimenti si vedono davvero`,
+      title: `Dove i sentimenti si vedono`,
       content: `<p>I sentimenti in un uomo nascono raramente dove li si cerca… Non nelle parole, non nei grandi gesti, ma nel diventare un'abitudine e poi una mancanza.</p>
 
 <p><strong>Se sei arrivata a contare i segnali</strong>, la vera domanda forse non è a che punto sia lui, ma se il ritmo che impone ti va bene. Sono due domande diverse, e la seconda appartiene interamente a te.</p>`,

@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'lo-que-aries-necesita-en-el-amor',
-      title: `Lo que Aries necesita de verdad en el amor`,
+      title: `Lo que Aries necesita en el amor`,
       content: `<p>Antes de analizar la compatibilidad signo por signo, hay algo fundamental que entender sobre Aries: <strong>necesita que le sorprendan</strong>. Una pareja previsible, que siempre dice que sí, que nunca le pone contra las cuerdas, le aburre. Rápido. Lo que Aries llama "pasión" es muchas veces esa tensión productiva entre dos voluntades que no se parecen del todo.</p>
 <p>Sus mejores compatibilidades rara vez son con signos que se le parecen al cien por cien. Leo (9/10) le estimula porque le planta cara con el mismo orgullo. Libra (9/10), su opuesto zodiacal, le fascina precisamente porque funciona al revés, donde Aries arremete, Libra sopesa los pros y los contras. Donde Aries dice lo que piensa, Libra busca la palabra justa. Esa diferencia, para Aries, es atracción pura.</p>
 <p>En el extremo contrario, las asociaciones más complicadas son aquellas que le piden que frene sin ofrecerle algo a cambio de ese esfuerzo. Cáncer (4/10) le exige gestionar emociones que no siempre sabe leer. Virgo (4/10) le pide que piense antes de actuar, algo que va en contra de todo lo que él es. Estas relaciones pueden funcionar, pero nunca surgen de forma natural.</p>

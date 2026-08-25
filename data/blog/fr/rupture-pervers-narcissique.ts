@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'rupture-pervers-narcissique',
-  title: "Rompre avec un pervers narcissique : ce qui t'attend, phase par phase",
+  title: "Rompre avec un pervers narcissique : comment s'y prendre",
   metaTitle: "Rupture avec un pervers narcissique : le guide de sortie",
   metaDescription: "Quitter un pervers narcissique ne ressemble à aucune autre rupture. Ce qu'il faut préparer avant, ce qu'il va faire après, et comment tenir le no contact.",
   featuredImage: '/blog/rupture-pervers-narcissique.webp',

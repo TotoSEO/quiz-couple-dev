@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'dependant-affectif-et-manipulateur',
-  title: "Dépendant affectif et manipulateur : le couple parfait... pour lui",
+  title: "Je suis dépendante affective d'un manipulateur : Que faire ?",
   metaTitle: "Dépendance affective et manipulation : le duo piégé",
   metaDescription: "Le manipulateur détecte le dépendant affectif comme un radar. Pourquoi ces deux profils s'attirent, ce que ce couple fait vivre, et comment casser le duo.",
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',

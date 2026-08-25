@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'questions-to-ask-your-girlfriend',
-  title: "75 questions to ask your girlfriend, to (re)discover her for real",
+  title: "75 questions to ask your girlfriend, to (re)discover her",
   metaTitle: "Questions to ask your girlfriend: 75 ideas for every moment",
   metaDescription: "Think you know her by heart? Bet: out of these 75 questions to ask your girlfriend, there are at least ten whose answer you don't know.",
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',

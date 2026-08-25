@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'emotionale-abhaengigkeit-nach-der-trennung',
-  title: "Emotionale Abhängigkeit und Trennung: den Entzug überstehen und daraus Stärke machen",
+  title: "Emotionale Abhängigkeit und Trennung: den Entzug überstehen und wieder aufstehen",
   metaTitle: "Trennung und emotionale Abhängigkeit: den Mangel durchqueren",
   metaDescription: "Für einen emotional abhängigen Menschen ist eine Trennung kein Liebeskummer: Sie ist ein Entzug. Warum es so wehtut, die Fallen der ersten Wochen, und wie man gestärkt herauskommt.",
   featuredImage: '/blog/dependance-affective-rupture.webp',

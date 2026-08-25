@@ -43,7 +43,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'your-daily-life',
-      title: "Your present: what you actually live (13-24)",
+      title: "Your present: your everyday life as it is (13-24)",
       content: `<p>You think you share daily life, but each of you lives it from your own side. Let's check.</p>
 <ol start="13">
 <li>What's your favourite moment of our ordinary days?</li>

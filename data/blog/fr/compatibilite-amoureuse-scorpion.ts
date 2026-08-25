@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'qui-peut-vraiment-tenir-avec-un-scorpion',
-      title: `Qui peut vraiment tenir avec un Scorpion`,
+      title: `Qui peut tenir avec un Scorpion`,
       content: `<p>Le Cancer (9/10) est sans doute sa compatibilité la plus intuitive. Ces deux signes d'Eau n'ont pas besoin de tout expliquer, ils se comprennent à un niveau que les mots n'atteignent pas toujours. Le Cancer apporte au Scorpion une douceur protectrice, et le Scorpion donne au Cancer la profondeur émotionnelle dont il a soif.</p>
 <p>La Vierge (9/10) est une compatibilité moins évidente mais tout aussi solide. Ce qui unit ces deux signes, c'est leur sérieux commun face à l'engagement. Ni l'un ni l'autre ne s'engage à la légère, et quand ils s'engagent, c'est pour construire quelque chose qui dure.</p>
 <p>Avec le Verseau (3/10), le Scorpion se heurte à une incompatibilité de fond. <strong>Le Verseau rationalise là où le Scorpion ressent.</strong> Il prend de la distance là où le Scorpion cherche la fusion. Ces deux façons d'être ne se rencontrent presque jamais au milieu, et la frustration que ça génère est souvent plus forte que l'attraction initiale.</p>

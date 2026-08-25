@@ -43,7 +43,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'vuestro-dia-a-dia',
-      title: "Vuestro presente: lo que vivís de verdad (13-24)",
+      title: "Vuestro presente: lo que vivís en el día a día (13-24)",
       content: `<p>El día a día se cree compartido, pero cada uno lo vive por su lado. Comprobación.</p>
 <ol start="13">
 <li>¿Cuál es tu momento favorito de nuestros días normales?</li>

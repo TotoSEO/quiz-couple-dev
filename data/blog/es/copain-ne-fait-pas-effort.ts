@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'novio-no-hace-esfuerzo',
   title: "Mi novio no hace ningún esfuerzo: qué significa y qué hacer",
-  metaTitle: "Mi novio no hace ningún esfuerzo: qué hacer de verdad",
+  metaTitle: "Mi novio no hace ningún esfuerzo: qué hacer",
   metaDescription: "Haces todo tú, él nada. O casi. Por qué algunos hombres dejan de esforzarse, cómo reconocerlo, qué significa y qué hacer concretamente.",
   featuredImage: '',
   featuredImageAlt: "Mesa puesta para dos, un cubierto preparado con esmero con vela y flores, el otro sitio vacío",

@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'compatibilite-amoureuse-cancer',
-  title: `Compatibilité amoureuse du Cancer : à qui peut-il vraiment ouvrir son cœur ?`,
+  title: `Compatibilité amoureuse du Cancer : à qui peut-il ouvrir son cœur ?`,
   metaTitle: `Compatibilité amoureuse Cancer : les unions qui le comblent`,
   metaDescription: `Le Cancer donne tout en amour, peut-être même trop. Quels signes savent recevoir cet amour sans en abuser ? Notre analyse complète de ses compatibilités.`,
   featuredImage: '/blog/compatibilite-amoureuse-cancer.svg',

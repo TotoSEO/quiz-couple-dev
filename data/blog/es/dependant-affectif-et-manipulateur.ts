@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'dependiente-emocional-y-manipulador',
-  title: "Dependiente emocional y manipulador: la pareja perfecta... para él",
+  title: "Soy dependiente emocional de un manipulador: ¿qué hago?",
   metaTitle: "Dependencia emocional y manipulación: el dúo atrapado",
   metaDescription: "El manipulador detecta al dependiente emocional como un radar. Por qué estos dos perfiles se atraen, qué hace vivir esta pareja y cómo romper el dúo.",
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',

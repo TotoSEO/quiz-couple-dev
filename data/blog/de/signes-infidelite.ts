@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'die-anzeichen-die-wiegen',
-      title: "Die Anzeichen, die wirklich wiegen (das Bündel)",
+      title: "Die Anzeichen, die wiegen (das Bündel)",
       content: `<p>Hier die Veränderungen, die ZUSAMMEN und über die Zeit ein ernstes Bündel bilden. Merke dir das Schlüsselwort: Veränderung. Ein Verhalten, das schon immer so war, signalisiert nichts. Es ist der Bruch mit der Gewohnheit, der spricht.</p>
 <ol>
 <li><strong>Das zum Heiligtum gewordene Handy, und zwar erst kürzlich:</strong> Nicht das seit jeher private Handy, sondern das, dessen Status sich ÄNDERT. Display jetzt nach unten, Code geändert, Benachrichtigungen aus, Duschen mit dem Handy. Ein Handy, das über Nacht zum Tresor wird, erzählt, dass etwas darin eingezogen ist.</li>

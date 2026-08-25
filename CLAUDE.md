@@ -125,6 +125,15 @@ Version humaine (à imiter) :
 - **Une pointe d'enthousiasme simple** est bienvenue : « ...et permet de
   passer un très bon moment à deux ! »
 
+### Les mots interdits dans les titres
+
+JAMAIS, dans un title, un H1, un H2 ou un H3 : « vraiment », « concrètement »,
+« en bref », ni leurs équivalents dans les autres langues (really, actually,
+in short ; realmente, de verdad, concretamente, en resumen ; wirklich,
+konkret gesagt, kurz gesagt ; davvero, veramente, concretamente, in breve).
+Ce sont des chevilles : un titre qui en a besoin est un titre mal posé.
+On reformule ou on retire le mot, dans la langue du titre.
+
 ### Les marqueurs IA interdits
 
 - « tient en une phrase », « tient en un mot », « tiennent en quelques

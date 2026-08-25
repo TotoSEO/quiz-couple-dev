@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'de-quoi-on-parle-vraiment',
-      title: "Pervers narcissique : de quoi on parle vraiment",
+      title: "Pervers narcissique : de quoi on parle",
       content: `<p>L'expression est partout. Tellement partout, en fait, qu'elle est devenue une insulte de dispute, et ça dessert surtout les personnes qui en vivent un vrai. Alors remettons les choses à leur place.</p>
 <p>Un pervers narcissique, c'est quelqu'un qui a besoin de se sentir supérieur pour tenir debout, et qui se sert de l'autre comme carburant. Pas par accès de colère ou par maladresse, non : par fonctionnement. Pour lui, la relation n'est pas vraiment un lien entre deux personnes. C'est plutôt un miroir, qui doit le renvoyer en grand. Tant que tu l'admires, tout va bien, tu es idéale. Mais dès que tu redeviens une personne réelle, avec des besoins, des limites, des mauvais jours... tu deviens un problème à corriger.</p>
 <aside class="blog-tip-box">
@@ -85,7 +85,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'les-signes-en-amour',
-      title: "Les signes qui comptent vraiment en amour",
+      title: "Les signes qui comptent en amour",
       content: `<p>Des listes de vingt signes, tu en trouveras partout. Le problème, c'est que prises une par une, elles décrivent la moitié des couples qui traversent une mauvaise passe ! Voici plutôt les six signaux qui, ensemble et dans la durée, dessinent une emprise. Et remarque leur point commun : <strong>les plus fiables ne se voient pas chez lui, ils se voient chez toi.</strong></p>
 <ol>
 <li><strong>Tu n'arrives plus à raconter ta relation :</strong> Quand une amie te demande comment ça va, tu ne sais pas quoi répondre. Trop compliqué, trop de contexte, « il faut le connaître »... Une relation saine, ça se raconte facilement.</li>
@@ -132,7 +132,7 @@ const article: BlogArticleData = {
       subsections: [
         {
           id: 'est-ce-qu-il-t-aime',
-          title: "Est-ce qu'il t'aime vraiment ?",
+          title: "Est-ce qu'il t'aime ?",
           content: `<p>Il a besoin de toi, ça oui. Et vu de l'intérieur, ce besoin ressemble beaucoup à de l'amour... Sauf qu'il a besoin de toi comme fonction : régulateur d'image, fournisseur d'admiration, coupable de service. En fait, la question la plus utile n'est pas de savoir ce qu'il ressent, tu n'auras jamais vraiment accès à cette réponse. C'est plutôt : est-ce que la manière dont il t'aime te fait du bien ? Celle-là, tu peux y répondre toute seule.</p>`,
         },
         {

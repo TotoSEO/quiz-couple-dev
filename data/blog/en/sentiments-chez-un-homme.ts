@@ -129,7 +129,7 @@ The conversations that move things are almost never "where do we stand". Startin
     },
     {
       id: 'to-finish',
-      title: `Where the feelings actually show`,
+      title: `Where the feelings show`,
       content: `<p>Feelings in a man rarely appear where you look for them… Not in the words, not in the grand gestures, but in becoming a habit, and then an absence.</p>
 
 <p><strong>If you have got as far as counting the signs</strong>, the real question may not be where he stands, but whether the pace he sets suits you. Those are two different questions, and the second one is entirely yours.</p>`,

@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'frasi-dei-manipolatori',
-  title: "Le frasi preferite dei manipolatori, e cosa vogliono dire davvero",
+  title: "Le 35 frasi preferite dei manipolatori",
   metaTitle: "35 frasi da manipolatore decifrate (e come rispondere)",
   metaDescription: "«Sei troppo sensibile», «è colpa tua», «te lo dico per il tuo bene»... 35 frasi da manipolatore decifrate, con la traduzione reale e come replicare.",
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',

@@ -87,7 +87,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'la-prueba-del-limite',
-      title: "¿Love bombing o flechazo de verdad? La prueba del límite",
+      title: "¿Love bombing o flechazo auténtico? La prueba del límite",
       content: `<p>Aquí está el punto que la mayoría de artículos esquiva. Un comienzo de relación sinceramente apasionado y un love bombing producen, en el momento, observaciones casi idénticas. Muchos mensajes, muchos cumplidos, muchas ganas. <strong>La intensidad no demuestra nada.</strong> Ni en un sentido ni en el otro.</p>
 <p>Lo que diferencia a los dos es lo que ocurre cuando no estás disponible.</p>`,
       subsections: [

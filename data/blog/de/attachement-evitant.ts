@@ -60,7 +60,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'was-hilft',
-      title: "Was wirklich hilft (auf beiden Seiten)",
+      title: "Was am meisten hilft (auf beiden Seiten)",
       content: `<p>Die Arbeit ist nicht dieselbe, je nachdem, auf welcher Seite der Beziehung du stehst. Hier sind beide, getrennt, denn die Hebel sind gegensätzlich.</p>`,
       subsections: [
         {

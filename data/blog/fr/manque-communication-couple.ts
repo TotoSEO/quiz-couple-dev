@@ -172,7 +172,7 @@ const article: BlogArticleData = {
         },
         {
           id: 'therapie-de-couple',
-          title: "La thérapie de couple : ce que c'est vraiment",
+          title: "La thérapie de couple : ce que c'est",
           content: `<p>Beaucoup de gens voient la thérapie de couple comme un dernier recours, un aveu d'échec. C'est exactement l'inverse. <strong>C'est un outil pour les couples qui veulent encore se battre pour leur relation.</strong> Les couples qui ont vraiment abandonné ne prennent pas de rendez-vous.</p>
 <p>Un thérapeute de couple ne prend pas parti. Il crée un cadre où chacun peut s'exprimer sans que ça dégénère. Il identifie les patterns de communication toxiques et aide à en construire de nouveaux. Si ton couple ne communique plus et que vos tentatives en autonomie échouent, c'est probablement le meilleur investissement que tu puisses faire. Pas pour « sauver » la relation à tout prix, mais pour comprendre si elle peut fonctionner différemment. Pour faire le point, notre <a href="/test-couple-sain/">test de couple sain</a> peut t'aider à évaluer où vous en êtes objectivement.</p>`,
         },

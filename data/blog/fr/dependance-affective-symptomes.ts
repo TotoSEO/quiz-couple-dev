@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'dependance-affective-symptomes',
-  title: "Symptômes de la dépendance affective : ce que ça fait vivre, concrètement",
+  title: "Les symptômes de la dépendance affective : Exemples et résultats",
   metaTitle: "Dépendance affective : les symptômes qui doivent alerter",
   metaDescription: "Le téléphone vérifié 40 fois, la peur du silence, le couple qui prend toute la place... Les 16 symptômes de la dépendance affective, sphère par sphère.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',

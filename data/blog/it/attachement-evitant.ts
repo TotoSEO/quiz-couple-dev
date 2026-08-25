@@ -60,7 +60,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'cosa-aiuta',
-      title: "Cosa aiuta davvero (da entrambi i lati)",
+      title: "Cosa aiuta di più (da entrambi i lati)",
       content: `<p>Il lavoro non è lo stesso a seconda del lato della coppia in cui ti trovi. Eccoli entrambi, separatamente, perché le leve sono opposte.</p>`,
       subsections: [
         {

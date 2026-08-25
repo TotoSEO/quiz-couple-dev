@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'worum-es-wirklich-geht',
-      title: "Narzisst: worum es wirklich geht",
+      title: "Narzisst: worum es geht",
       content: `<p>Das Wort ist überall. So sehr, dass es zur Streitbeleidigung geworden ist, und das schadet vor allem denen, die wirklich mit einem leben. Rücken wir die Dinge also zurecht.</p>
 <p>Ein Narzisst ist jemand, der sich überlegen fühlen muss, um aufrecht zu bleiben, und der den anderen als Treibstoff benutzt. Nicht aus Wutausbrüchen oder Ungeschick, nein: aus Funktionsweise. Für ihn ist die Beziehung keine Verbindung zwischen zwei Menschen. Sie ist eher ein Spiegel, der ihn groß zurückwerfen soll. Solange du ihn bewunderst, ist alles gut, du bist perfekt. Aber sobald du wieder ein echter Mensch wirst, mit Bedürfnissen, Grenzen und schlechten Tagen... wirst du zu einem Problem, das korrigiert gehört.</p>
 <aside class="blog-tip-box">
@@ -85,7 +85,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'die-anzeichen-die-zaehlen',
-      title: "Die Anzeichen, die in der Liebe wirklich zählen",
+      title: "Die Anzeichen, die in der Liebe zählen",
       content: `<p>Listen mit zwanzig Anzeichen findest du überall. Das Problem ist, dass sie einzeln genommen die Hälfte aller Paare in einer schwierigen Phase beschreiben. Hier stattdessen die sechs Signale, die gemeinsam und über Zeit das Bild einer Kontrollbeziehung ergeben. Und achte auf ihre Gemeinsamkeit: <strong>die zuverlässigsten sieht man nicht bei ihm, sondern bei dir.</strong></p>
 <ol>
 <li><strong>Du kannst deine Beziehung nicht mehr erzählen:</strong> Wenn eine Freundin fragt, wie es läuft, weißt du nicht, was du sagen sollst. Zu kompliziert, zu viel Kontext, «man muss ihn kennen»... Eine gesunde Beziehung erzählt sich leicht.</li>
@@ -132,7 +132,7 @@ const article: BlogArticleData = {
       subsections: [
         {
           id: 'liebt-er-dich-wirklich',
-          title: "Liebt er dich wirklich?",
+          title: "Liebt er dich?",
           content: `<p>Er braucht dich, das schon. Und von innen betrachtet sieht dieses Brauchen der Liebe sehr ähnlich... Nur braucht er dich als Funktion: Imagepflegerin, Bewunderungslieferantin, Schuldige vom Dienst. Die nützlichere Frage ist ohnehin nicht, was er fühlt, an diese Antwort kommst du nie wirklich heran. Sondern: tut dir die Art, wie er dich liebt, gut? Die kannst du allein beantworten.</p>`,
         },
         {

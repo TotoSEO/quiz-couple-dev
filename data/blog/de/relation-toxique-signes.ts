@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'toxische-beziehung-anzeichen',
-  title: "Toxische Beziehung: die Anzeichen erkennen und wissen, ob sie sich reparieren lässt",
+  title: "Toxische Beziehung: was das ist und wie man die Anzeichen erkennt",
   metaTitle: "Toxische Beziehung: die 7 Anzeichen, die nichts verzeihen",
   metaDescription: "Eine Beziehung ist nicht wegen ihrer Streits toxisch, sondern wegen dem, wozu sie dich macht. Die 7 verlässlichen Anzeichen, der Unterschied zur schweren Phase, und was sich reparieren lässt.",
   featuredImage: '/blog/relation-toxique-signes.webp',

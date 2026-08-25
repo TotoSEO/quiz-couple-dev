@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'fragen-an-ein-maedchen',
-  title: "90 Fragen an ein Mädchen, um sie wirklich kennenzulernen",
+  title: "Die 90 besten Fragen an ein Mädchen, um sie kennenzulernen",
   metaTitle: "90 Fragen an ein Mädchen (ohne Verhör-Feeling)",
   metaDescription: "Genug von «Hey, wie geht's?», das nirgendwohin führt? 90 Fragen an ein Mädchen, von der ersten Nachricht bis zum Treffen, ganz ohne Verhör.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',

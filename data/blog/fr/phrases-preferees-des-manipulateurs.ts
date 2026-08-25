@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'phrases-preferees-des-manipulateurs',
-  title: "Les phrases préférées des manipulateurs, et ce qu'elles veulent vraiment dire",
+  title: "Les 35 phrases préférées des manipulateurs",
   metaTitle: "Phrases de manipulateur : les repérer et savoir y répondre",
   metaDescription: "« Tu es trop sensible », « c'est de ta faute », « je dis ça pour ton bien »... 35 phrases de manipulateur décodées, avec leur vraie traduction et comment riposter.",
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',

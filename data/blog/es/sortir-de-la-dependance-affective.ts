@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'superar-la-dependencia-emocional',
-  title: "Cómo superar la dependencia emocional: 12 ejercicios concretos, fase por fase",
+  title: "Cómo superar la dependencia emocional: 12 ejercicios concretos",
   metaTitle: "Superar la dependencia emocional: el plan en 3 fases",
   metaDescription: "No consejos vagos: un plan de verdad. 12 ejercicios concretos repartidos en 3 fases para superar la dependencia emocional, semana a semana.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',

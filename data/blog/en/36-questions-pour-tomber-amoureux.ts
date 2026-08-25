@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: '36-questions-to-fall-in-love',
-  title: "The 36 questions to fall in love: the full protocol, and what it really does",
-  metaTitle: "36 questions to fall in love: the list and the method",
+  title: "36 questions to fall in love",
+  metaTitle: "36 Questions to Fall in Love - Quiz Couple",
   metaDescription: "Two strangers, 36 questions, 4 minutes of eye contact... and a wedding six months later. Arthur Aron's experiment, the questions, and how to do it tonight.",
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Two chairs facing each other under a warm bulb, a notebook of questions between them",

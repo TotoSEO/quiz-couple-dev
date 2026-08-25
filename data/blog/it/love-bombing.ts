@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'love-bombing-in-breve',
-      title: "Il love bombing in breve",
+      title: "Il love bombing in poche parole",
       content: `<div><table><thead><tr><th>Cosa osservi</th><th>Inizio di relazione sano</th><th>Love bombing</th></tr></thead><tbody>
 <tr><td>Il ritmo</td><td>Intenso, ma segue il tuo ritmo</td><td>Imposto, accelerato, gli corri dietro</td></tr>
 <tr><td>I complimenti</td><td>Su ciò che fai, che dici, su chi sei</td><td>Su una versione idealizzata di te che si è inventato</td></tr>
@@ -37,7 +37,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'che-cos-e-il-love-bombing',
-      title: "Che cos'è il love bombing, concretamente",
+      title: "Che cos'è il love bombing",
       content: `<p>Il love bombing è una fase di corteggiamento di intensità inusuale, concentrata in pochissimo tempo, che mira a creare un attaccamento forte <em>prima</em> che tu abbia avuto il tempo di valutare la persona che hai davanti.</p>
 <p>L'espressione nasce dal vocabolario dei movimenti settari, dove le nuove reclute venivano sommerse di attenzioni e calore per mettere fuori gioco il loro spirito critico. Il meccanismo è rimasto lo stesso, trasferito alla vita sentimentale.</p>
 <p>Il punto importante: <strong>il love bombing non si definisce dai gesti, si definisce dalla loro funzione.</strong> Regalare fiori, mandare messaggi, dire parole forti, tutto questo può essere perfettamente sincero. A renderlo love bombing è il fatto che quei gesti servono a installare un debito affettivo e ad accelerare il tuo impegno, non a conoscerti.</p>`,

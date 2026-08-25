@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: '36-questions-pour-tomber-amoureux',
-  title: "Les 36 questions pour tomber amoureux : le protocole complet, et ce qu'il fait vraiment",
-  metaTitle: "36 questions pour tomber amoureux : la liste et la méthode",
+  title: "36 questions pour tomber amoureux",
+  metaTitle: "36 questions pour tomber amoureux - Quiz Couple",
   metaDescription: "Deux inconnus, 36 questions, 4 minutes de regard... et un mariage six mois plus tard. L'expérience d'Arthur Aron, les questions traduites, et comment la faire ce soir.",
   featuredImage: '/blog/36-questions-pour-tomber-amoureux.webp',
   featuredImageAlt: "Deux chaises face à face sous une ampoule chaleureuse, un carnet de questions posé entre elles",
@@ -36,7 +36,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'serie-1',
-      title: "Série 1 : faire connaissance, vraiment (questions 1 à 12)",
+      title: "Série 1 : faire connaissance (questions 1 à 12)",
       content: `<p>Le premier palier a l'air anodin... il ne l'est pas. Chaque question contient déjà une petite porte vers l'intime. Réponds honnêtement, pas brillamment !</p>
 <ol>
 <li>Si tu pouvais dîner avec n'importe qui au monde, tu inviterais qui ?</li>

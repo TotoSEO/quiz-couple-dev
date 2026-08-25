@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'domande-da-fare-a-una-ragazza',
-  title: "90 domande da fare a una ragazza, per conoscerla davvero",
+  title: "Le 90 migliori domande da fare a una ragazza per conoscerla",
   metaTitle: "90 domande per una ragazza (senza sembrare un interrogatorio)",
   metaDescription: "Stanco del «ciao, come va?» che non porta da nessuna parte? 90 domande da fare a una ragazza, dal primo messaggio all'incontro, senza interrogatori.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',

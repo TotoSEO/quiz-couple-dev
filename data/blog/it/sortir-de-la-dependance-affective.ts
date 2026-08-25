@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'superare-la-dipendenza-affettiva',
-  title: "Come superare la dipendenza affettiva: 12 esercizi concreti, fase per fase",
+  title: "Come superare la dipendenza affettiva: 12 esercizi concreti",
   metaTitle: "Superare la dipendenza affettiva: il piano in 3 fasi",
   metaDescription: "Non consigli vaghi: un piano vero. 12 esercizi concreti distribuiti su 3 fasi per superare la dipendenza affettiva, settimana dopo settimana.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',

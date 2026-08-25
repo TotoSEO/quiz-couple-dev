@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'con-quien-geminis-encuentra-su-lugar',
-      title: `Con quién Géminis encuentra realmente su lugar`,
+      title: `Con quién Géminis encuentra su lugar`,
       content: `<p>Libra y Acuario (9/10 cada uno) son sus compañeros más naturales. Mismo elemento Aire, misma necesidad de estimulación mental, misma relación relajada con la libertad dentro de la pareja. Con ellos, Géminis no tiene que justificar su necesidad de espacio, se le entiende desde el primer momento.</p>
 <p>Sagitario (9/10) es un caso aparte. Es el opuesto zodiacal de Géminis, y como suele ocurrir con los opuestos, la atracción es real y compleja. Donde Géminis revolotea entre ideas, Sagitario busca el sentido profundo. Pueden complementarse de forma magnífica, o irritarse profundamente según el día. <strong>Esta relación nunca deja indiferente.</strong></p>
 <p>En el otro extremo del espectro, Tauro (3/10) y Capricornio (4/10) representan asociaciones difíciles para Géminis. No porque estos signos valgan menos, sino porque lo que buscan en el amor (estabilidad, arraigo, previsibilidad) es exactamente lo que Géminis rehúye. La frustración suele ser recíproca y tarda poco en instalarse.</p>

@@ -88,7 +88,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'ce-que-ce-vocabulaire-dit-vraiment-de-nous',
-      title: "Ce que ce vocabulaire dit vraiment de nous",
+      title: "Ce que ce vocabulaire dit de nous",
       content: `<p>Ces mots ont un point commun. Ils décrivent tous des situations qui existaient avant eux, le ghosting se pratiquait bien avant les smartphones, les signaux d'alerte dans une relation ont toujours existé, les coups de cœur non déclarés aussi. Ce qui a changé, c'est qu'on a maintenant des mots précis pour en parler.</p>
 <p>Et ça change quelque chose. Nommer une chose, c'est la rendre réelle, lui donner du poids, la sortir du domaine du flou où elle pouvait rester indéfiniment. Quand vous pouvez dire "il me ghoste" ou "c'est un red flag", vous pouvez aussi décider quoi faire avec ça.</p>
 <p>La question, c'est ce qu'on fait après avoir nommé. Parce que les mots n'agissent pas à notre place. Si vous reconnaissez des signaux dans votre relation, le <a href="https://quiz-couple.com/test-couple-sain/">test couple sain</a> est un bon point de départ pour voir où vous en êtes vraiment.</p>`,

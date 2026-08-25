@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'manipolatore-narcisista',
-  title: "Il manipolatore narcisista: come opera e dove è vulnerabile",
+  title: "Il manipolatore narcisista: come riconoscerlo facilmente",
   metaTitle: "Manipolatore narcisista: tecniche, punti deboli, reazioni",
   metaDescription: "Le sue tecniche nell'ordine in cui le tira fuori, i suoi veri punti deboli, l'effetto del silenzio su di lui e le sue reazioni quando viene smascherato.",
   featuredImage: '/blog/manipulateur-narcissique.webp',

@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'preguntas-sobre-el-futuro-pareja',
   title: "60 preguntas sobre el futuro para hacerse en pareja antes de las grandes decisiones",
-  metaTitle: "Preguntas sobre el futuro en pareja: las 60 que comprometen de verdad",
+  metaTitle: "Preguntas sobre el futuro en pareja: las 60 que comprometen",
   metaDescription: "Vivir juntos, casarse, un hijo... Rara vez se falla por falta de amor, pero a menudo por no haberlo hablado. Las 60 preguntas sobre el futuro que hacerse antes.",
   featuredImage: '/blog/questions-avenir-couple.webp',
   featuredImageAlt: "Pareja mirando un camino que se despliega hacia el horizonte, maletas en la mano",
@@ -47,7 +47,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'antes-de-comprometerse',
-      title: "Antes de comprometerse de verdad (16-30)",
+      title: "Antes de comprometerse en serio (16-30)",
       content: `<p>Matrimonio, pareja de hecho o compromiso sin papeles: da igual la forma, aquí se comprueba el fondo. Estas quince preguntas son las que las parejas lamentan no haberse hecho.</p>
 <ol start="16">
 <li>¿Qué significa el compromiso para ti, en concreto, no en verso?</li>

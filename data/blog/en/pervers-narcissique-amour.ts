@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'what-we-are-actually-talking-about',
-      title: "Narcissistic partner: what we're actually talking about",
+      title: "Narcissistic partner: what we are talking about",
       content: `<p>The word is everywhere. So everywhere, in fact, that it has become an insult thrown mid-argument, and the people it hurts most are those living with a real one. So let's put things back in their place.</p>
 <p>A narcissist is someone who needs to feel superior in order to stay upright, and who uses the other person as fuel. Not through fits of anger or clumsiness, no: by design. For him, the relationship isn't really a bond between two people. It's a mirror, and it has to reflect him large. As long as you admire him, everything's fine, you're perfect. But the moment you become a real person again, with needs, boundaries and bad days... you turn into a problem to be corrected.</p>
 <aside class="blog-tip-box">
@@ -85,7 +85,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'the-signs-that-count',
-      title: "The signs that actually count in a relationship",
+      title: "The signs that count in a relationship",
       content: `<p>You'll find lists of twenty signs everywhere. The problem is that taken one by one, they describe half the couples going through a rough patch. Here instead are the six signals that, together and over time, draw the shape of coercive control. And notice what they have in common: <strong>the most reliable ones aren't visible in him, they're visible in you.</strong></p>
 <ol>
 <li><strong>You can no longer describe your relationship:</strong> When a friend asks how it's going, you don't know what to say. Too complicated, too much context, "you'd have to know him"... A healthy relationship is easy to describe.</li>
@@ -132,7 +132,7 @@ const article: BlogArticleData = {
       subsections: [
         {
           id: 'does-he-really-love-you',
-          title: "Does he really love you?",
+          title: "Does he love you?",
           content: `<p>He needs you, that much is true. And from the inside, that need looks a lot like love... Except he needs you as a function: image regulator, admiration supplier, designated culprit. In fact, the most useful question isn't what he feels, you'll never truly have access to that answer. It's this: does the way he loves you do you good? That one, you can answer on your own.</p>`,
         },
         {

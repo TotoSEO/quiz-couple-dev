@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'breaking-up-with-a-narcissist',
-  title: "Breaking up with a narcissist: what's coming, phase by phase",
+  title: "Breaking up with a narcissist: how to go about it",
   metaTitle: "Breaking up with a narcissist: the exit guide",
   metaDescription: "Leaving a narcissist is like no other break-up. What to prepare beforehand, what he'll do afterwards, and how to hold the no contact.",
   featuredImage: '/blog/rupture-pervers-narcissique.webp',

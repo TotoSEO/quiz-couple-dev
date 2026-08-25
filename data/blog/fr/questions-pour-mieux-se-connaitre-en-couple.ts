@@ -43,7 +43,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'votre-quotidien',
-      title: "Votre présent : ce que vous vivez vraiment (13-24)",
+      title: "Votre présent : ce que vous vivez au quotidien (13-24)",
       content: `<p>Le quotidien, on croit le partager... mais chacun le vit de son côté. Vérification.</p>
 <ol start="13">
 <li>C'est quoi ton moment préféré de nos journées ordinaires ?</li>

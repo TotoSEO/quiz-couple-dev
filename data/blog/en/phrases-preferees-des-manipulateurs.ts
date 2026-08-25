@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'manipulator-phrases',
-  title: "The favourite phrases of manipulators, and what they really mean",
+  title: "The 35 favourite phrases of manipulators",
   metaTitle: "35 Manipulator Phrases Decoded (And How to Answer Them)",
   metaDescription: "\"You're too sensitive\", \"it's your fault\", \"I'm saying this for your own good\"... 35 manipulator phrases decoded, with their real translation and how to respond.",
   featuredImage: '/blog/phrases-preferees-des-manipulateurs.webp',

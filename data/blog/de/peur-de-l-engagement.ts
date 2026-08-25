@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'bindungsangst',
-  title: "Bindungsangst: was wirklich dahintersteckt (und wie es weitergeht)",
+  title: "Bindungsangst: was dahintersteckt (und wie es weitergeht)",
   metaTitle: "Bindungsangst: Ursachen, Anzeichen und wie sie sich löst",
   metaDescription: "Sagt er seit zwei Jahren, er sei «nicht bereit»? Oder blockierst du selbst? Bindungsangst entschlüsselt: ihre echten Ursachen, ihre Anzeichen und der Weg heraus.",
   featuredImage: '/blog/peur-de-l-engagement.webp',
@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'die-echten-ursachen',
-      title: "Was wirklich hinter der Bindungsangst steckt",
+      title: "Was hinter der Bindungsangst steckt",
       content: `<p>«Bindungsphobie», das Wort bringt Menschen zum Schmunzeln, aber der Mechanismus ist ernst, und er hat fast immer eine dieser vier Wurzeln.</p>`,
       subsections: [
         {

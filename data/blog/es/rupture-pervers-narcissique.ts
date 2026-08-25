@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'ruptura-con-un-narcisista',
-  title: "Romper con un narcisista: lo que te espera, fase por fase",
+  title: "Romper con un narcisista: cómo hacerlo",
   metaTitle: "Ruptura con un narcisista: la guía de salida",
   metaDescription: "Dejar a un narcisista no se parece a ninguna otra ruptura. Qué preparar antes, qué va a hacer después y cómo sostener el contacto cero.",
   featuredImage: '/blog/rupture-pervers-narcissique.webp',

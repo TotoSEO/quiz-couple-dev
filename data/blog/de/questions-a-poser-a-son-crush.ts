@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'fragen-an-deinen-crush',
-  title: "100 Fragen an deinen Crush, von der ersten Nachricht bis zum ersten Date",
-  metaTitle: "100 Fragen an deinen Crush (auf die wirklich geantwortet wird)",
+  title: "100 Fragen an deinen Crush",
+  metaTitle: "100 Fragen an deinen Crush | Quiz Couple",
   metaDescription: "Genug von Gesprächen, die einschlafen? 100 Fragen an deinen Crush, nach Situation sortiert: per Nachricht, zum Lachen, zum Flirten, um zu sehen, ob es passt.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Junge Person lächelt aufs Handy und tippt eine Nachricht an ihren Crush",

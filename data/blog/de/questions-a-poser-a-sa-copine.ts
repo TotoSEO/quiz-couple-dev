@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'fragen-an-deine-freundin',
-  title: "75 Fragen an deine Freundin, um sie wirklich neu zu entdecken",
+  title: "75 Fragen an deine Freundin, um sie (neu) zu entdecken",
   metaTitle: "Fragen an deine Freundin: 75 Ideen für jeden Moment",
   metaDescription: "Du glaubst, du kennst sie auswendig? Wetten: Von diesen 75 Fragen an deine Freundin gibt es mindestens zehn, deren Antwort du nicht kennst.",
   featuredImage: '/blog/questions-a-poser-a-sa-copine.webp',

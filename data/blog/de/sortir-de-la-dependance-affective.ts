@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'emotionale-abhaengigkeit-ueberwinden',
-  title: "Emotionale Abhängigkeit überwinden: 12 konkrete Übungen, Phase für Phase",
+  title: "Emotionale Abhängigkeit überwinden: 12 konkrete Übungen",
   metaTitle: "Emotionale Abhängigkeit überwinden: der Plan in 3 Phasen",
   metaDescription: "Keine vagen Ratschläge: ein echter Plan. 12 konkrete Übungen in 3 Phasen, um emotionale Abhängigkeit zu überwinden, Woche für Woche.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',

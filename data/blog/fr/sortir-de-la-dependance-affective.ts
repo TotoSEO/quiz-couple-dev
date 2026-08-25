@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'sortir-de-la-dependance-affective',
-  title: "Comment sortir de la dépendance affective : 12 exercices concrets, phase par phase",
+  title: "Comment sortir de la dépendance affective : 12 exercices concrets",
   metaTitle: "Sortir de la dépendance affective : le plan en 3 phases",
   metaDescription: "Pas des conseils vagues : un vrai plan. 12 exercices concrets répartis sur 3 phases pour sortir de la dépendance affective, semaine après semaine.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',

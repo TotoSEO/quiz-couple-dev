@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'aries-love-compatibility',
   title: `Aries love compatibility: the signs that ignite them (and the ones that burn out)`,
-  metaTitle: `Aries love compatibility: who can actually keep up?`,
+  metaTitle: `Aries love compatibility: who can keep up?`,
   metaDescription: `Aries falls fast, loves hard, and moves on quickly when the spark dies. Find out which zodiac signs can truly match their fire, and which ones fizzle out.`,
   featuredImage: '/blog/compatibilite-amoureuse-belier.svg',
   featuredImageAlt: `Aries astrological symbol, love compatibility`,

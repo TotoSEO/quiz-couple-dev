@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'dipendente-affettivo-e-manipolatore',
-  title: "Dipendente affettivo e manipolatore: la coppia perfetta... per lui",
+  title: "Sono dipendente affettiva di un manipolatore: che fare?",
   metaTitle: "Dipendenza affettiva e manipolazione: il duo intrappolato",
   metaDescription: "Il manipolatore rileva il dipendente affettivo come un radar. Perché questi due profili si attraggono, cosa fa vivere questa coppia, e come spezzare il duo.",
   featuredImage: '/blog/dependant-affectif-et-manipulateur.webp',

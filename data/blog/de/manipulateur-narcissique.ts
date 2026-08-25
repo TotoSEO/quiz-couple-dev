@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'narzisstischer-manipulator',
-  title: "Der narzisstische Manipulator: wie er vorgeht und wo er verwundbar ist",
+  title: "Der narzisstische Manipulator: wie du ihn einfach erkennst",
   metaTitle: "Narzisstischer Manipulator: Techniken, Schwachstellen, Reaktionen",
   metaDescription: "Seine Techniken in der Reihenfolge, in der er sie auspackt, seine echten Schwachstellen, die Wirkung von Schweigen auf ihn und seine Reaktionen, wenn man ihn entlarvt.",
   featuredImage: '/blog/manipulateur-narcissique.webp',

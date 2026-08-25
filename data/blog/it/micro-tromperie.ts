@@ -24,7 +24,7 @@ const article: BlogArticleData = {
   sections: [
     {
       id: 'che-cos-e-concretamente',
-      title: "Il microtradimento, concretamente",
+      title: "Il microtradimento, con degli esempi",
       content: `<p>Il test più semplice per riconoscere un microtradimento sta in una domanda: <strong>questo comportamento sopravvivrebbe alla tua presenza?</strong> Ciò che si fa uguale che tu ci sia o no appartiene alla vita sociale... Ciò che cambia quando entri nella stanza appartiene a un'altra cosa. Su questa base, il repertorio classico:</p>
 <ul>
 <li><strong>L'attenzione digitale mirata:</strong> Mettere like sistematicamente alle foto della stessa persona, guardare tutte le sue storie per prime, commentare con la regolarità di un metronomo... Un like non è niente; una costanza è un segnale, e lo sanno benissimo tutti.</li>

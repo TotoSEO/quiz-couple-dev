@@ -49,7 +49,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'lo-que-calma-de-verdad',
-      title: "Lo que calma de verdad (y lo que no funciona nunca)",
+      title: "Lo que calma (y lo que no funciona nunca)",
       content: `<p>Empecemos vaciando lo que no funciona, porque ya lo has probado: pedir siempre más pruebas (el efecto se agota), vigilar (alimenta la alarma), elegir parejas «intensas» que te hacen vibrar (la intensidad suele ser inconstancia disfrazada, y la inconstancia es gasolina en tu fuego)... Y la peor estrategia de todas: esperar a que el otro lo adivine. Nadie desactiva una alarma que no sabe oír.</p>
 <p>Lo que funciona, ahora, en tres movimientos.</p>`,
       subsections: [

@@ -3,7 +3,7 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'sintomi-dipendenza-affettiva',
-  title: "Sintomi della dipendenza affettiva: cosa si vive, concretamente",
+  title: "Sintomi della dipendenza affettiva: esempi e conseguenze",
   metaTitle: "Dipendenza affettiva: i sintomi che devono farti drizzare le orecchie",
   metaDescription: "Il telefono controllato 40 volte, la paura del silenzio, la coppia che occupa tutto lo spazio... I 16 sintomi della dipendenza affettiva, sfera per sfera.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',

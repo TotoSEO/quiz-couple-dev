@@ -3,8 +3,8 @@ import { AUTHORS } from '@/data/blog/authors';
 
 const article: BlogArticleData = {
   slug: 'preguntas-para-tu-crush',
-  title: "100 preguntas para hacerle a tu crush, del primer mensaje a la primera cita",
-  metaTitle: "100 preguntas para tu crush (que sí obtienen respuesta)",
+  title: "100 preguntas para hacerle a tu crush",
+  metaTitle: "100 preguntas para tu crush | Quiz Couple",
   metaDescription: "¿Harta de conversaciones que se apagan? 100 preguntas para hacerle a tu crush, ordenadas por situación: por mensaje, para reír, para flirtear, para ver si encajáis.",
   featuredImage: '/blog/questions-a-poser-a-son-crush.webp',
   featuredImageAlt: "Persona joven sonriendo al móvil mientras escribe un mensaje a su crush",
