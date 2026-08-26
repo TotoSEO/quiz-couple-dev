@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Un manipulateur ne ment pas au hasard. Il pioche dans un répertoire, toujours le même. Et une fois que tu connais le répertoire, quelque chose se casse dans le tour de magie.",
   introduction: `<p>« Tu es trop sensible. » Combien de fois tu l'as entendue, celle-là ? Et combien de fois tu es repartie en te demandant si, effectivement, tu n'exagérais pas un peu ?</p>
-<p>Voilà exactement pourquoi cet article existe. <strong>Les manipulateurs n'inventent rien : ils piochent dans un répertoire, et c'est toujours à peu près le même.</strong> Des phrases courtes, qui paraissent anodines, parfois même bienveillantes... et qui font un travail très précis dans ta tête. Inverser la faute, te faire douter, te faire taire.</p>
-<p>On va donc faire la seule chose qui les neutralise vraiment : les sortir du contexte et les regarder une par une. Leur vraie traduction, ce qu'elles cherchent à produire chez toi, et ce que tu peux répondre. Il y a des chances que tu en reconnaisses plusieurs au passage... et c'est un peu le but.</p>`,
+<p>Voilà exactement pourquoi cet article existe. <strong>Les manipulateurs n'inventent rien : ils piochent dans un répertoire, et c'est toujours à peu près le même.</strong> Des phrases courtes, qui paraissent anodines, parfois même bienveillantes... et qui font un travail très précis dans ta tête : inverser la faute, te faire douter, te faire taire.</p>
+<p>On va donc faire la seule chose qui les neutralise vraiment : les sortir du contexte et les regarder une par une, avec leur vraie traduction, ce qu'elles cherchent à produire chez toi, et ce que tu peux répondre. Il y a des chances que tu en reconnaisses plusieurs au passage... et c'est un peu le but.</p>`,
   quickSummary: [
     "Les phrases de manipulation se classent par fonction : inverser la faute, te faire douter, te faire taire, t'isoler.",
     "Leur point commun : elles ne répondent jamais au fond, elles attaquent ta légitimité à parler.",
@@ -26,9 +26,9 @@ const article: BlogArticleData = {
       id: 'pourquoi-ces-phrases-marchent',
       title: "Pourquoi ces phrases marchent aussi bien",
       content: `<p>Avant la liste, deux minutes sur la mécanique, parce qu'elle explique tout.</p>
-<p>Quand tu exprimes un désaccord ou une blessure, il y a deux façons de te répondre. Sur le fond : « ok, parlons de ce qui s'est passé ». Ou sur le cadre : « tu n'es pas en état d'en parler, tu exagères, ce n'est pas le moment »... La quasi-totalité des phrases de manipulateur jouent sur le cadre. <strong>Elles ne discutent jamais ce que tu dis. Elles contestent ton droit de le dire.</strong></p>
+<p>Quand tu exprimes un désaccord ou une blessure, il y a deux façons de te répondre. Sur le fond : « ok, parlons de ce qui s'est passé ». Ou sur le cadre : « tu n'es pas en état d'en parler, tu exagères, ce n'est pas le moment »... La quasi-totalité des phrases de manipulateur jouent sur le cadre. <strong>Elles ne discutent jamais ce que tu dis. Elles s'attaquent à ton droit de le dire, et c'est très différent.</strong></p>
 <p>Et c'est redoutable, parce que ça te déplace : au lieu de défendre ton sujet, te voilà en train de défendre ta légitimité, ta santé mentale, ton ton de voix. Le sujet initial, lui, a disparu. Par exemple, tu voulais parler d'un rendez-vous oublié... et vingt minutes plus tard, tu t'excuses pour la manière dont tu l'as dit. Le tour est joué.</p>
-<p>Une précision importante, quand même : tout le monde sort une de ces phrases un jour de fatigue. Ce qui signe un manipulateur, ce n'est pas la phrase, c'est le répertoire. La variété des formules, leur retour systématique, et le fait qu'au bout du compte, ce soit toujours toi qui t'excuses. Ce fonctionnement d'ensemble, c'est exactement celui du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a> : la phrase n'est qu'un rouage du système.</p>`,
+<p>Une précision importante, quand même : tout le monde sort une de ces phrases un jour de fatigue. Ce qui signe un manipulateur, c'est le répertoire : la variété des formules, leur retour systématique, et le fait qu'au bout du compte, ce soit toujours toi qui t'excuses. Ce fonctionnement d'ensemble, c'est exactement celui du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a> : la phrase n'est qu'un rouage du système.</p>`,
     },
     {
       id: 'inverser-la-faute',
@@ -57,7 +57,7 @@ const article: BlogArticleData = {
 <li><strong>« Tu as encore mal compris. »</strong> Le « encore » fait tout le travail : il installe un historique d'incompétence qui n'a jamais existé, et que tu ne penseras pas à contester.</li>
 <li><strong>« Tu devrais consulter, sérieusement. »</strong> La plus violente de la famille. Ta lucidité devient une pathologie. Et le jour où tu consultes vraiment, un bon psy voit clair très vite... c'est d'ailleurs pour ça qu'il déteste cette idée en pratique.</li>
 </ul>
-<p>Si ce brouillage te parle, la question de savoir si tu vis du gaslighting mérite un vrai détour par le <a href="/blog/gaslighting/">gaslighting et ses mécanismes</a>, parce qu'il ne se limite pas à des phrases.</p>`,
+<p>Si ce brouillage te parle, prends le temps de comprendre <a href="/blog/gaslighting/">comment le gaslighting s'installe</a>, parce qu'il ne se limite pas à des phrases.</p>`,
     },
     {
       id: 'se-victimiser',
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
 </ul>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Le détail qui trahit la famille n°4</p>
-<p>Ces phrases visent presque toujours tes points forts, pas tes faiblesses. Ton travail, ton humour, ton indépendance, ce qui te rend fière... Un partenaire maladroit critique ce que tu rates. Un manipulateur lime ce qui te tient debout.</p>
+<p>Ces phrases visent presque toujours tes points forts, pas tes faiblesses. Ton travail, ton humour, ton indépendance, ce qui te rend fière... Un partenaire maladroit critique ce que tu rates. Un manipulateur s'en prend à ce qui te tient debout, et c'est toute la différence.</p>
 </aside>`,
     },
     {
@@ -98,7 +98,7 @@ const article: BlogArticleData = {
 <ul>
 <li><strong>« On ne va pas revenir là-dessus. »</strong> Décret unilatéral de fin de sujet. Le dossier est clos parce qu'il l'a décidé, pas parce qu'il est réglé.</li>
 <li><strong>« Calme-toi. »</strong> Deux mots, et te voilà officiellement hystérique. Personne ne s'est jamais calmé en entendant « calme-toi », et ce n'est pas le but : le but, c'est le constat public que tu débordes.</li>
-<li><strong>« C'est bon, j'ai dit pardon. Tu veux quoi de plus ?! »</strong> Le pardon comme transaction expédiée. L'excuse n'est pas un pont vers toi, c'est un reçu qu'on te jette.</li>
+<li><strong>« C'est bon, j'ai dit pardon. Tu veux quoi de plus ?! »</strong> Ici le pardon est une transaction expédiée : il s'excuse pour fermer le dossier, pas pour le régler.</li>
 </ul>
 <p>Et pour t'isoler :</p>
 <ul>
@@ -114,7 +114,7 @@ const article: BlogArticleData = {
       title: "Les SMS du manipulateur : le répertoire version écrite",
       content: `<p>Par messages, le répertoire s'adapte, et ça vaut le coup d'en dire un mot parce que l'écrit a ses codes à lui.</p>
 <p>Il y a le <strong>silence radio</strong>, d'abord : trois jours sans réponse après un désaccord, puis un « tu me manques » à 23 h 47, comme si de rien n'était. Le <strong>pavé culpabilisant</strong>, ensuite : quinze lignes où ta soirée d'hier devient la preuve de ton égoïsme, envoyées à l'heure où tu ne peux pas répondre. Le <strong>message-vitrine</strong>, aussi : adorable par écrit, glacial en vrai... parce que l'écrit, ça se montre, et il le sait.</p>
-<p>Et puis il y a le plus troublant : le message gentil qui tombe PILE quand tu commençais à aller mieux. Celui-là n'est pas un hasard, c'est un instrument de mesure. Ta distance a été détectée, la reconquête démarre.</p>
+<p>Et puis il y a le plus troublant : le message gentil qui tombe PILE quand tu commençais à aller mieux. Celui-là n'a rien d'un hasard : ta distance a été détectée, et la reconquête démarre.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Ne supprime pas ces messages</p>
 <p>L'écrit est ta meilleure protection contre le « je n'ai jamais dit ça ». Garde les conversations, fais des captures datées, stocke-les hors de ton téléphone si tu peux. Si un jour tu as besoin d'y voir clair, ou de prouver quoi que ce soit, ces traces vaudront de l'or.</p>
@@ -132,7 +132,7 @@ const article: BlogArticleData = {
 <tr><td>« Calme-toi. »</td><td>Se calmer en s'excusant</td><td>« Je suis calme. Et j'attends toujours ta réponse. »</td></tr>
 </tbody></table></div>
 <p>Tu remarqueras le principe : des phrases courtes, factuelles, qui refusent le terrain proposé. Pas de plaidoirie ! La plaidoirie est exactement ce qu'il attend, parce qu'elle valide que ta légitimité était bien le sujet.</p>
-<p>Et sois honnête avec toi sur un point : si ces ripostes déclenchent systématiquement une escalade, du silence punitif ou une crise, tu n'as plus affaire à des maladresses de communication. Tu as affaire à un système. Les <a href="/blog/manipulateur-narcissique/">techniques du manipulateur narcissique</a>, ses points faibles et ses réactions quand on lui résiste méritent alors d'être connus en détail.</p>
+<p>Et sois honnête avec toi sur un point : si ces ripostes déclenchent systématiquement une escalade, du silence punitif ou une crise, tu n'as plus affaire à des maladresses de communication. Tu as affaire à un système. Là, autant connaître en détail les <a href="/blog/manipulateur-narcissique/">techniques du manipulateur narcissique</a>, ses points faibles et ses réactions quand on lui résiste.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Ces phrases, tu les entends chez toi ?</p>
 <p class="blog-cta-texte">Vingt questions passent en revue les situations concrètes d'une relation d'emprise, phrase par phrase, comportement par comportement. Le résultat te dit où tu en es, posément.</p>

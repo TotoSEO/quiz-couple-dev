@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Love and emotional dependency look enormously alike from the inside. Same intensity, same constant thoughts... and yet everything separates them.",
   introduction: `<p>It's a question we don't quite dare ask ourselves, because it's a bit frightening: do I love him... or do I mainly love the fact that he's there? Is it love, this thing that grips my stomach when he doesn't reply? Or something else?</p>
-<p>The confusion is normal, and we have to start by saying so: <strong>from the inside, intense love and emotional dependency look very similar.</strong> In both cases you think about him constantly, you hate his absence, you feel strongly. Intensity doesn't make the difference. What makes the difference is the direction: love carries you towards him, dependency makes you flee an emptiness.</p>
-<p>Let's make this very concrete: the 7 differences that separate the two, a mental experiment worth more than any speech, and a word about the most common case, the one where both coexist.</p>`,
+<p>The confusion is normal, and we have to start by saying so: <strong>from the inside, intense love and emotional dependency look very similar.</strong> In both cases you think about him constantly, you hate his absence, you feel strongly. The difference lies elsewhere, in the direction: love carries you towards him, dependency makes you flee an emptiness.</p>
+<p>Let's make this very concrete, with the 7 differences that separate the two and a mental experiment worth more than any speech.</p>`,
   quickSummary: [
     "Intensity settles nothing: love and dependency can be equally strong.",
     "The real difference is direction: love goes towards the other person, dependency flees an emptiness.",
@@ -49,12 +49,12 @@ const article: BlogArticleData = {
     {
       id: 'both-coexist',
       title: "The most common case: both at once",
-      content: `<p>Now for the nuance missing from every «love OR dependency» article: in real life it's almost never one or the other. <strong>You can genuinely love someone AND love them in a dependent way.</strong> The love is real, the partner is well chosen, it's the way of loving that is trapped.</p>
-<p>How do you tell? Look at what your relationship amplifies. Secure love amplifies the best in you: you dare more, you laugh more, you're more yourself. Dependent attachment amplifies your fears: you monitor more, you apologise more, you shrink. Same person, same love perhaps, but two opposite directions.</p>
+      content: `<p>Now for the nuance that matters most: in real life it's almost never one or the other. <strong>You can genuinely love someone AND love them in a dependent way.</strong> The love is real, the partner is well chosen, it's the way of loving that is trapped.</p>
+<p>How do you tell? Look at what your relationship amplifies. Secure love amplifies the best in you: you dare more, you laugh more easily. Dependent attachment amplifies your fears: you monitor everything, you apologise constantly, and little by little you shrink. Same person, same love perhaps, but two opposite directions.</p>
 <p>And that's excellent news, in fact. Because if the problem isn't the person but the attachment style, then there's nothing to break: there's something to repair, in you, for you. And <a href="/en/blog/overcome-emotional-dependency/">overcoming emotional dependency</a> is a marked path, exercise by exercise, that works perfectly well without leaving anyone.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 What if it's just habit?</p>
-<p>There's a third candidate people forget: habit. Neither fear of emptiness nor an impulse towards the other person, just the comfort of a daily life that runs smoothly. If your question sounds more like «do I still love him?» than «why am I so afraid of losing him?», it's less a story of dependency than a question of <a href="/en/love-or-habit-test/">love or habit</a>, and that one deserves its own answer.</p>
+<p>There's a third candidate people forget: habit. Neither fear of emptiness nor an impulse towards the other person, just the comfort of a daily life that runs smoothly. If your question sounds more like «do I still love him?» than «why am I so afraid of losing him?», it's less a story of dependency than a question of <a href="/en/love-or-habit-test/">love or habit</a>, and that one has its own answer.</p>
 </aside>`,
     },
     {

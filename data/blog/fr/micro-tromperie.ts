@@ -25,10 +25,10 @@ const article: BlogArticleData = {
     {
       id: 'c-est-quoi-concretement',
       title: "La micro-tromperie, avec des exemples",
-      content: `<p>Le test le plus simple pour reconnaître une micro-tromperie tient en une question : <strong>est-ce que ce comportement survivrait à ta présence ?</strong> Ce qu'on fait pareil que tu sois là ou pas relève de la vie sociale... Ce qui change quand tu entres dans la pièce relève d'autre chose. Sur cette base, le répertoire classique :</p>
+      content: `<p>Le test le plus simple pour reconnaître une micro-tromperie est une question : <strong>est-ce que ce comportement survivrait à ta présence ?</strong> Ce qu'on fait pareil que tu sois là ou pas relève de la vie sociale... Ce qui change quand tu entres dans la pièce relève d'autre chose. Sur cette base, le répertoire classique :</p>
 <ul>
 <li><strong>L'attention numérique ciblée :</strong> Liker systématiquement les photos de la même personne, visionner toutes ses stories en premier, commenter avec une régularité de métronome... Un like est un rien ; une constance est un signal, et tout le monde le sait très bien.</li>
-<li><strong>Les conversations à géométrie cachée :</strong> Des échanges anodins... qu'on efface quand même. Un écran qu'on incline, une appli qu'on ferme un peu vite, des notifications masquées pour UN contact précis. Le contenu est peut-être innocent : la dissimulation, elle, ne l'est jamais.</li>
+<li><strong>Les conversations à géométrie cachée :</strong> Des échanges anodins... qu'on efface quand même. Un écran qu'on incline, une appli qu'on ferme un peu vite, des notifications masquées pour UN contact précis. Le contenu est peut-être innocent ; la dissimulation ne l'est jamais.</li>
 <li><strong>L'ex en veilleuse :</strong> Garder de bons contacts avec un ex, ça existe et c'est sain... Lui écrire aux heures des confidences, se voir sans le mentionner, comparer (« elle, elle comprenait ») : c'est autre chose. La différence entre une amitié et une braise, c'est ce qu'on en dit à la maison.</li>
 <li><strong>Le marché entretenu :</strong> L'appli de rencontre « pas supprimée, juste oubliée », le profil discrètement actif, les matchs « pour l'ego »... En couple, garder une ligne ouverte sur le marché n'est pas un oubli : c'est une sortie de secours entretenue.</li>
 <li><strong>La confidence déplacée :</strong> Le plus subtil, et le plus sérieux : raconter à quelqu'un d'autre ce qu'on ne raconte plus à son partenaire. Ses doutes, ses problèmes de couple, ses victoires... Le jour où le confident principal n'est plus le partenaire, l'infidélité émotionnelle a commencé, quel que soit le reste.</li>
@@ -39,7 +39,7 @@ const article: BlogArticleData = {
       title: "Ce qui N'EN est pas (gardons les pieds sur terre)",
       content: `<p>Le concept de micro-tromperie a un défaut : mal utilisé, il transforme la vie sociale entière en délit... Alors traçons l'autre frontière, celle qui protège les couples de la paranoïa.</p>
 <p>Ne sont PAS des micro-tromperies : avoir des amis de l'autre sexe (ou du sexe qui correspond à son orientation, soyons précis), trouver quelqu'un d'attirant (être en couple ne rend pas aveugle, ça rend engagé), liker des photos au fil du scroll sans pattern particulier, avoir des collègues et leur parler, garder son jardin secret (l'intimité personnelle n'est pas une cachette)... et avoir une vie sociale sans compte-rendu permanent !</p>
-<p>La différence tient en deux mots qu'on a déjà croisés : le secret et la constance. Un comportement social ouvert et occasionnel, c'est la vie... Le même comportement, dissimulé et répété avec la même personne, c'est un investissement. Et si le tri te semble flou dans ton cas précis, reviens au test du début : qu'est-ce qui changerait si tu étais dans la pièce ? La réponse fait le tri toute seule.</p>
+<p>La différence se joue sur deux mots qu'on a déjà croisés : le secret et la constance. Un comportement social ouvert et occasionnel, c'est la vie... Le même comportement, dissimulé et répété avec la même personne, c'est un investissement. Et si le tri te semble flou dans ton cas précis, reviens au test du début : qu'est-ce qui changerait si tu étais dans la pièce ? La réponse fait le tri toute seule.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Et surveiller son partenaire pour « vérifier », alors ?</p>
 <p>Piège symétrique : traquer les likes de l'autre, éplucher ses abonnements, faire des captures « au cas où »... c'est répondre à une éventuelle micro-tromperie par une micro-surveillance, et les deux abîment le couple. Si tu en es là, le vrai sujet est le doute, pas les likes : apprendre à trier les <a href="/blog/signes-infidelite/">signes d'infidélité</a> qui pèsent vraiment des faux indices te rendra ta tranquillité bien mieux que la surveillance.</p>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
 <li>Des messages effacés après coup</li>
 <li>Un prénom que ton partenaire n'a jamais entendu</li>
 <li>Une version édulcorée quand on te pose la question</li>
-<li>Une énergie que le couple, lui, ne reçoit plus</li>
+<li>Une énergie que le couple ne reçoit plus</li>
 </ul>
 </div>
 </div>`,
@@ -71,7 +71,7 @@ const article: BlogArticleData = {
       id: 'pourquoi-ca-fait-si-mal',
       title: "Pourquoi ça fait si mal, alors qu'« il ne s'est rien passé »",
       content: `<p>C'est LA phrase qu'on oppose à celui ou celle qui ose aborder le sujet : « mais il ne s'est rien passé ! »... Et c'est vrai, au sens du code pénal du couple. Alors pourquoi cette blessure bien réelle ?</p>
-<p>Parce que la micro-tromperie ne blesse pas par ce qui s'est passé : elle blesse par ce qu'elle révèle et par ce qu'elle prépare. <strong>Ce qu'elle révèle :</strong> une part d'attention, d'énergie et de séduction qui sort du couple, en douce... c'est-à-dire précisément la part dont le couple manque peut-être. <strong>Ce qu'elle prépare :</strong> les grandes infidélités naissent rarement d'un coup de folie ; elles poussent sur des mois de micro-terrain préparé, une complicité qui monte, une ambiguïté entretenue, une frontière repoussée centimètre par centimètre... La micro-tromperie n'est pas grave parce que c'est « déjà tromper ». Elle est sérieuse parce que c'est SOUVENT le chemin qui y mène.</p>
+<p>Parce que la micro-tromperie ne blesse pas par ce qui s'est passé : elle blesse par ce qu'elle révèle et par ce qu'elle prépare. <strong>Ce qu'elle révèle :</strong> une part d'attention, d'énergie et de séduction qui sort du couple, en douce... c'est-à-dire précisément la part dont le couple manque peut-être. <strong>Ce qu'elle prépare :</strong> les grandes infidélités naissent rarement d'un coup de folie ; elles poussent sur des mois de micro-terrain préparé, une complicité qui monte, une ambiguïté entretenue, une frontière repoussée centimètre par centimètre... La micro-tromperie n'est pas grave parce que ce serait « déjà tromper » : elle est sérieuse parce que c'est SOUVENT le chemin qui y mène.</p>
 <p>Et il y a la blessure du secret, la pire : découvrir que l'autre CACHAIT, même un truc « innocent », abîme la confiance plus que le truc lui-même. C'est le paradoxe bien connu : on pardonne plus facilement une attirance avouée qu'un like effacé...</p>`,
     },
     {

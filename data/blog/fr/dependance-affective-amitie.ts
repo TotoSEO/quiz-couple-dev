@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "On surveille la dépendance affective dans nos couples... et on la laisse s'installer tranquillement dans nos amitiés, là où personne ne pense à la chercher.",
   introduction: `<p>Il y a une jalousie dont personne ne parle jamais : celle qu'on ressent quand notre meilleure amie se rapproche de quelqu'un d'autre. Ce pincement quand elle raconte une soirée où on n'était pas... Ce besoin de savoir qu'on reste « la » personne, la première au courant, la préférée. On n'ose pas le dire, parce que ça paraît absurde : de la jalousie, entre copines ?</p>
 <p>Et pourtant. <strong>La dépendance affective est un mode d'attachement, pas une exclusivité du couple : elle s'installe partout où il y a du lien.</strong> Et l'amitié est même son terrain le plus discret, parce que personne ne surveille... On répète « les amies, c'est sacré », et sous cette bannière-là, des liens entiers virent doucement du précieux au fusionnel, du fusionnel à l'étouffant.</p>
-<p>Alors regardons ce que personne ne regarde : les signes d'une amitié devenue dépendance, des deux côtés du lien, ce que ça fait aux amitiés concernées... et comment rééquilibrer sans tout casser, parce que c'est possible, et même plus facile qu'en couple.</p>`,
+<p>Alors regardons ça de près : les signes d'une amitié devenue dépendance, des deux côtés du lien, ce que ça fait aux amitiés concernées... et comment rééquilibrer sans tout casser, parce que c'est possible, et même plus facile qu'en couple.</p>`,
   quickSummary: [
     "La dépendance affective s'installe dans tous les liens : le couple, l'amitié, la famille.",
     "En amitié, elle se déguise en loyauté : exclusivité, jalousie amicale, besoin d'être « la » personne.",
@@ -77,7 +77,7 @@ const article: BlogArticleData = {
         {
           id: 'elargis-chacune-de-ton-cote',
           title: "Élargis, chacune de ton côté",
-          content: `<p>Le remède n'est pas de moins l'aimer, il est d'aimer plus large : réinvestir deux autres liens, une activité, un cercle... Chaque fil ajouté enlève du poids au fil principal, et l'amitié respire mieux. C'est l'exact esprit des <a href="/blog/sortir-de-la-dependance-affective/">exercices de sortie de dépendance</a>, phase 2 en tête, et ils s'appliquent trait pour trait.</p>`,
+          content: `<p>Le remède, ce n'est pas de l'aimer moins, c'est d'aimer plus large : réinvestir deux autres liens, une activité, un cercle... Chaque fil ajouté enlève du poids au fil principal, et l'amitié respire mieux. C'est l'exact esprit des <a href="/blog/sortir-de-la-dependance-affective/">exercices de sortie de dépendance</a>, phase 2 en tête, et ils s'appliquent trait pour trait.</p>`,
         },
         {
           id: 'ose-la-conversation',

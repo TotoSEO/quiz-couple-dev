@@ -10,9 +10,9 @@ const article: BlogArticleData = {
   featuredImageAlt: "Schachspieler, dessen Figuren menschliche Silhouetten sind",
   publishedAt: '2026-09-15T13:53:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Der narzisstische Manipulator wird immer als allmächtig dargestellt. Das stimmt nicht. Sein System hat Schwachstellen, bekannte und vorhersehbare, wenn man weiß, wo man hinsehen muss.",
-  introduction: `<p>Wenn man «narzisstischer Manipulator» sucht, landet man immer beim selben Artikel: die Liste der Anzeichen, das Porträt des Monsters, und dann sieh zu. Gut zum Verstehen, aber danach? Sobald du WEISST, dass du es mit einem Manipulator zu tun hast, lautet die eigentliche Frage: Wie funktioniert er, und wie schützt man sich konkret?</p>
-<p>Dieser Artikel packt das Problem also von der anderen Seite an. <strong>Der narzisstische Manipulator ist nicht allmächtig. Er ist ein System, und ein System hat Regeln, Muster und Schwachstellen.</strong> Seine Techniken sind vorhersehbar. Seine Reaktionen auch. Und seine Schwachstellen sind von einem Manipulator zum nächsten erstaunlich konstant.</p>
+  excerpt: "Der narzisstische Manipulator ist alles andere als allmächtig: Sein System hat Schwachstellen, bekannte und vorhersehbare, wenn man weiß, wo man hinsehen muss.",
+  introduction: `<p>Du weißt, oder du ahnst sehr stark, dass du es mit einem narzisstischen Manipulator zu tun hast. Ab da reicht es nicht mehr, die Anzeichen zu erkennen: Die eigentliche Frage wird, wie er funktioniert und wie man sich konkret schützt.</p>
+<p><strong>Der narzisstische Manipulator ist nicht allmächtig: Er ist ein System, und ein System hat Regeln, Muster und Schwachstellen.</strong> Seine Techniken sind vorhersehbar. Seine Reaktionen auch. Und seine Schwachstellen sind von einem Manipulator zum nächsten erstaunlich konstant.</p>
 <p>Wir schauen uns der Reihe nach an: seine Lieblingstechniken, seine echten Verwundbarkeiten, was dein Schweigen bei ihm auslöst, und seine typischen Reaktionen, wenn man ihm widersteht. Nicht, um ihn auszutricksen, dazu unten mehr, sondern weil die Mechanik zu verstehen bereits heißt, nicht mehr darin zu stecken.</p>`,
   quickSummary: [
     "Narzisstischer Manipulator und narzisstischer Missbraucher: zwei Etiketten für dasselbe Muster.",
@@ -44,7 +44,7 @@ const article: BlogArticleData = {
     {
       id: 'seine-schwachstellen',
       title: "Die Schwachstellen des Manipulators (ja, er hat welche)",
-      content: `<p>Man stellt ihn immer als unerbittliche Maschine dar. In Wirklichkeit ruht sein System auf präzisen Bedingungen, und jede davon ist eine Schwachstelle.</p>
+      content: `<p>Von innen wirkt sein System unerbittlich. In Wirklichkeit ruht es auf präzisen Bedingungen, und jede davon ist eine Schwachstelle.</p>
 <ol>
 <li><strong>Echte Gleichgültigkeit:</strong> Nicht die gespielte, die erkennt er: die echte, die kommt, wenn du verstanden hast und nichts mehr erwartest. Sein System läuft auf deiner Reaktion, Bewunderung oder Leid, egal welche. Ein Mensch, der nicht mehr reagiert, ist eine geschlossene Zapfsäule.</li>
 <li><strong>Zeugen:</strong> Seine ganze Mechanik braucht die geschlossene Tür. Ein anwesender Dritter, ein Gespräch zu dritt, eine eingeweihte Familie, und die öffentliche Figur muss auf der Bühne bleiben, was die private neutralisiert. Deshalb arbeitet er so hart daran, dich zu isolieren.</li>
@@ -61,7 +61,7 @@ const article: BlogArticleData = {
       id: 'die-wirkung-von-schweigen',
       title: "Die Wirkung von Schweigen auf den Manipulator",
       content: `<p>Das ist eine der häufigsten Fragen, und sie verdient eine präzise Antwort, denn Schweigen ist eine zweischneidige Waffe.</p>
-<p>Was dein Schweigen bei ihm auslöst, zuerst: einen Mangel. Deine Aufmerksamkeit, deine Reaktionen, deine Gefühle sind sein täglicher Treibstoff, was im Englischen «narcissistic supply» heißt. Kontakt abbrechen heißt Nachschub abschneiden. Und dann passiert etwas sehr Vorhersehbares: <strong>Es beginnt nie mit Respekt, es beginnt mit einer Eskalation.</strong> Mehr Nachrichten, reaktivierter Charme, Schuldzuweisungen, Wut, manchmal alle drei am selben Tag. Er testet alle Türen, der Reihe nach.</p>
+<p>Was dein Schweigen bei ihm auslöst, zuerst: einen Mangel. Deine Aufmerksamkeit, deine Reaktionen, deine Gefühle sind sein täglicher Treibstoff, was im Englischen «narcissistic supply» heißt. Kontakt abbrechen heißt Nachschub abschneiden. Und dann passiert etwas sehr Vorhersehbares: <strong>Es löst zuerst eine Eskalation aus, niemals Respekt.</strong> Mehr Nachrichten, reaktivierter Charme, Schuldzuweisungen, Wut, manchmal alle drei am selben Tag. Er testet alle Türen, der Reihe nach.</p>
 <p>Danach zwei mögliche Ausgänge. Entweder du hältst durch, und er wendet sich schließlich einer anderen Aufmerksamkeitsquelle zu, manchmal mit einem letzten Feuerwerk öffentlicher Herabsetzung, um sein Image zu retten. Oder du gibst einmal nach, ein einziges «antworte mir», und du hast ihm gerade beigebracht, wie viele Tage Druck nötig sind, um dich zurückzuholen. Genau deshalb muss Schweigen bei diesem Profil eine vorbereitete Entscheidung sein, kein Schmollen und kein Test.</p>
 <p>Ein letzter wichtiger Punkt: Das Schweigen, von dem hier die Rede ist, ist das des Ausstiegs aus der Beziehung, der berühmte Kontaktabbruch. Innerhalb der Beziehung funktioniert Schweigen, um «es ihm klarzumachen», nicht: Er liest dieses Schweigen als Strafe, also als Reaktion, also als Treibstoff. Wieder einmal ist das das Spiel, das er am besten kennt.</p>`,
     },

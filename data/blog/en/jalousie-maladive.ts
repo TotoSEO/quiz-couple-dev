@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Normal jealousy protects a relationship. Pathological jealousy devours it... and it devours first the person feeling it.",
   introduction: `<p>It always starts with a small thing. A first name that comes up too often, a smile at a party, a phone left face down on the table... and a scenario starts spinning in your head. You know it rests on nothing, that scenario. You know it! But it spins anyway, faster and faster, and there you are checking, questioning, imagining... and hating yourself for doing it.</p>
 <p>First thing to put down, because it brings relief: <strong>being jealous is normal. Jealousy is a universal emotion, present in every couple where the two people matter to each other.</strong> The problem isn't feeling it. The problem is when it takes the controls: when it decides your evenings, your questions, your searches... and makes everyone suffer, starting with you.</p>
-<p>This article draws the line between the two, goes looking for the real roots of pathological jealousy (clue: they are almost never in the other person)... and gives the way out, which exists and which works. Whether the jealousy is yours or your partner's, by the way: we speak to both.</p>`,
+<p>Let's draw the line between the two, go looking for the real roots of pathological jealousy (clue: they are almost never in the other person)... and gives the way out, which exists and which works. Whether the jealousy is yours or your partner's, by the way: we speak to both.</p>`,
   quickSummary: [
     "Jealousy is normal; it turns pathological when it decides for you and makes you suffer without proof.",
     "The central criterion: healthy jealousy reacts to facts, pathological jealousy manufactures its scenarios.",
@@ -82,7 +82,7 @@ const article: BlogArticleData = {
         {
           id: 'treat-scenarios-as-scenarios',
           title: "Treat scenarios as scenarios",
-          content: `<p>When the film starts, name it: «this is my inner cinema, not information». Then ask yourself the only useful question: «what FACTS do I have?» Not impressions, facts. You will discover that 95% of your films run without a single fact in the credits. Naming them strips them of the status of truth.</p>`,
+          content: `<p>When the film starts, name it: «this is my inner cinema, not information». Then ask yourself the only useful question: «what FACTS do I have?» Not impressions, facts. You will discover that most of your films run without a single fact in the credits. Naming them strips them of the status of truth.</p>`,
         },
         {
           id: 'rebuild-your-own-life',
@@ -93,7 +93,7 @@ const article: BlogArticleData = {
           id: 'talk-about-it-the-right-way',
           title: "Talk about it, the right way round",
           content: `<p>Not «admit it!»... but «I'm making up films, that's my own work site, and I'm working on it». That sentence changes everything: it turns your partner from suspect into ally. Jealousy owned as personal work brings people closer; jealousy disguised as an investigation destroys. And if the underlying load is too heavy, an old betrayal, an anxiety that overflows, a therapist speeds things up enormously... it is a classic and rewarding piece of therapeutic work.</p>
-<p>One last word, to finish on the real stake. Pathological jealousy presents itself as proof of love... that is its finest lie. Love wants the other person's happiness; pathological jealousy wants their surveillance. The day you feel that difference from the inside, the work is already half done... and the other half, you now know where it starts.</p>
+<p>One last word, to finish on the real stake. Pathological jealousy presents itself as proof of love... that is its finest lie. Love wants the other person's happiness, whereas pathological jealousy mostly wants to watch them. The day you feel that difference from the inside, the work is already half done... and the other half, you now know where it starts.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Where exactly does your jealousy stand?</p>
 <p class="blog-cta-texte">A series of questions assesses your jealousy across the concrete situations in this article: the scenarios, the checking, the effect on your relationship... and places you between normal jealousy and the kind that can be worked on.</p>

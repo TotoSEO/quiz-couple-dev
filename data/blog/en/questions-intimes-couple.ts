@@ -11,7 +11,7 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-19T09:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "There are the conversations you have every day... and the ones you never dare start. Guess which ones bring you closest.",
-  introduction: `<p>You tell each other everything, well, almost. Work, friends, plans, what you're eating tonight. But there's one territory people talk about far less easily, even after years: what the other person actually feels, what they don't dare ask for, what they miss, what they want. The intimate, the real thing.</p>
+  introduction: `<p>You tell each other everything, well, almost. Work, friends, plans, what you're eating tonight. But there's one territory people talk about far less easily, even after years: what the other person actually feels, what they don't dare ask for, what they miss, what they want. In short, the intimate, the real thing.</p>
 <p><strong>And that's a shame, because that is exactly where a couple's closeness is decided.</strong> Not in grand declarations! In those conversations that are a little barer than the rest, the ones you start in a low voice, on an evening when you feel good.</p>
 <p>Here are 65 intimate questions, deliberately graded: we start very gently, on the emotional side, and the temperature rises step by step. Stop wherever you want, pick whatever sounds like you. The only real instruction manual is the right moment, and that's exactly where we begin.</p>`,
   quickSummary: [
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Question 44 matters as much as 45</p>
-<p>Talking about desires also means talking about limits, and a couple that can say «not that» is a couple that can say «yes, that» with confidence. If an answer surprises one of you, take it as information, not as a request. You can say anything to each other; you owe each other nothing.</p>
+<p>Talking about desires also means talking about limits, and a couple that can say «not that» is a couple that can say «yes, that» with confidence. If an answer surprises one of you, take it as information, not as a request. You can say anything to each other, but you owe each other nothing.</p>
 </aside>`,
     },
     {

@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Two people talking at a table, one listening attentively to the other",
   publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "The difference between a conversation that stalls and a girl who wants to see you again isn't your patter. It's the quality of your questions, and what you do with the answers.",
+  excerpt: "A conversation that stalls or a girl who wants to see you again: it comes down to the quality of your questions, and what you do with the answers.",
   introduction: `<p>Let's be honest for two minutes. The problem is almost never finding ONE question to ask. The problem is that "how are you?", "what do you do?" and "good weekend?" are exactly how every other conversation she's having right now begins...</p>
 <p><strong>A good question makes the difference because it shows something rare: that you're interested in her, not just in making conversation.</strong> And that, believe me, gets noticed immediately.</p>
-<p>So here are 90 questions, sorted by situation: by message to open, face to face to get to know her, to make her laugh, to build closeness, to flirt without being heavy... and finally to find out whether she likes you. With one piece of advice that applies to all 90: the question opens the door, but the way you listen to the answer is what makes her want to come in.</p>`,
+<p>So here are 90 questions, sorted by situation, from the first message to the face-to-face where it all plays out. With one piece of advice that applies to all 90: the way you listen to the answer makes the difference, far more than the question itself.</p>`,
   quickSummary: [
     "90 questions sorted by situation, from the first message to knowing whether she likes you.",
     "One question, then silence: it's listening that seduces, not your stock of questions.",

@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Paar am Tisch, beide lachen, sie beantwortet eine Frage mit den Händen",
   publishedAt: '2026-09-29T17:24:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Die Falle langer Beziehungen ist nicht, sich nicht mehr zu lieben. Sie ist, zu glauben, man sei mit dem Entdecken fertig.",
+  excerpt: "Die Falle langer Beziehungen ist, zu glauben, man sei mit dem Entdecken fertig. Diese 75 Fragen beweisen das Gegenteil.",
   introduction: `<p>Kleiner Test, bevor wir anfangen: Du kennst ihr Lieblingsessen, ihren Kultfilm, ihr Parfum. Einfach. Und jetzt: Weißt du, worauf sie dieses Jahr am stolzesten ist? Was ihr gerade fehlt? Was sie sich nicht zu fragen traut? Schon weniger einfach, oder?</p>
 <p><strong>Das ist die Falle eingespielter Paare: Wir verwechseln, sie gut zu kennen, damit, mit dem Entdecken fertig zu sein.</strong> Nur ändert sie sich, wie du, wie alle. Und die Antworten von vor zwei Jahren sind nicht unbedingt die von heute.</p>
 <p>Hier sind 75 Fragen an deine Freundin, von der leichtesten bis zur tiefsten. Nicht, um ein Samstagabendverhör zu veranstalten! Um diese langen Gespräche zurückzuholen, die vom Anfang, in denen du jemanden entdeckt hast. Nimm zwei, drei Fragen, wenn der Moment passt, und lass es laufen.</p>`,
@@ -143,7 +143,7 @@ const article: BlogArticleData = {
 <li>Wo siehst du uns in fünf Jahren, ehrlich?</li>
 <li>Was sollten wir dieses Jahr zusammen anfangen?</li>
 </ol>
-<p>Und nach der 75? Danach kennst du das Prinzip: Nicht die Fragen zählen, sondern die Gewohnheit, sie zu stellen. Paare, die halten, sind nicht die, die alles voneinander wissen, sondern die, die sich weiter <a href="/de/fragen-fuer-paare/">Paarfragen</a> stellen, regelmäßig, so wie man ein Feuer am Brennen hält.</p>
+<p>Und nach der 75? Danach kennst du das Prinzip: Was zählt, ist die Gewohnheit, sie zu stellen. Paare, die halten, stellen sich weiter <a href="/de/fragen-fuer-paare/">Paarfragen</a>, regelmäßig, so wie man ein Feuer am Brennen hält.</p>
 <div><table><thead><tr><th>Die Reihe</th><th>Was sie öffnet</th></tr></thead><tbody>
 <tr><td>Um sie neu zu entdecken</td><td>Was du zu wissen glaubtest und was sich seitdem geändert hat</td></tr>
 <tr><td>Über euch beide</td><td>Eure Geschichte von ihrer Seite aus gesehen</td></tr>

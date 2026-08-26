@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "El apego ansioso no duda del amor que da... duda del que recibe. En permanencia. Y eso agota a los dos lados de la pareja.",
   introduction: `<p>Puede que conozcas esta sensación: todo va bien en tu relación, objetivamente... y sin embargo una parte de ti sigue en alerta. Un tono algo frío, una respuesta más corta de lo habitual, una noche sin mensaje: salta la alarma. Y ahí estás buscando pruebas de que todo va bien, otra vez, como ayer, como mañana.</p>
 <p><strong>Eso tiene nombre: el apego ansioso. No es locura, ni debilidad, ni «demasiado amor»... es un sistema de alarma ajustado con demasiada sensibilidad, y se ajustó mucho antes que tú.</strong> Alrededor de una persona de cada cinco funciona así en el amor. O sea que si te reconoces, ¡estás en muy numerosa compañía!</p>
-<p>En este artículo: las señales concretas del apego ansioso en pareja, la espiral que lo agrava (y que alimentas sin querer), lo que lo calma de verdad... y lo que no funciona nunca, pese a las apariencias. Porque al final hay una buena noticia de verdad: este estilo evoluciona particularmente bien.</p>`,
+<p>Aquí van las señales concretas del apego ansioso en pareja, la espiral que lo agrava (y que alimentas sin querer), lo que lo calma de verdad... y lo que no funciona nunca, pese a las apariencias. Porque al final hay una buena noticia de verdad: este estilo evoluciona particularmente bien.</p>`,
   quickSummary: [
     "El apego ansioso es un sistema de alarma demasiado sensible, ajustado en la infancia... no un defecto de amor.",
     "Sus señales: hipervigilancia a las señales, miedo al abandono, necesidad de tranquilidad en bucle.",
@@ -67,7 +67,7 @@ const article: BlogArticleData = {
           id: 'elegir-y-dejar-actuar-la-estabilidad',
           title: "Elegir (y dejar actuar) la estabilidad",
           content: `<p>Si estás buscando: desconfía de tu atracción por las montañas rusas y dale una oportunidad a las parejas constantes, aunque el principio te parezca «menos fuerte». La investigación es tajante: la relación estable es el mejor terapeuta del apego ansioso, la famosa seguridad adquirida... El aburrimiento de los inicios seguros suele ser solo el silencio de la alarma. ¡Uno se acostumbra notablemente bien!</p>
-<p>Y una última cosa, porque se la merece: las personas de apego ansioso son también, muy a menudo, las parejas más atentas, leales y generosas que existen... La sensibilidad que te hace sufrir es la misma que te hace querer tan bien. El trabajo no consiste en apagarla. Consiste en desconectarla del miedo... para dejarla entera al amor.</p>
+<p>Y una última cosa, porque se la merece: las personas de apego ansioso son también, muy a menudo, las parejas más atentas, leales y generosas que existen... La sensibilidad que te hace sufrir es la misma que te hace querer tan bien. El trabajo no consiste en apagarla, consiste en desconectarla del miedo... para dejarla entera al amor.</p>
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Lo que calma la alarma</p>

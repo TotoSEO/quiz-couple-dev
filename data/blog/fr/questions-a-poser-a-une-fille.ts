@@ -10,14 +10,14 @@ const article: BlogArticleData = {
   featuredImageAlt: "Homme et femme en terrasse, conversation animée autour d'un café",
   publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "La différence entre une conversation qui patine et une fille qui a envie de te revoir, ce n'est pas ton niveau de tchatche. C'est la qualité de tes questions... et ce que tu fais des réponses.",
-  introduction: `<p>Soyons honnêtes deux minutes. Le problème n'est presque jamais de trouver UNE question à poser. Le problème, c'est que « ça va ? », « tu fais quoi dans la vie ? » et « t'as passé un bon week-end ? », toutes les autres conversations qu'elle a en ce moment commencent exactement pareil...</p>
+  excerpt: "Une conversation qui patine ou une fille qui a envie de te revoir, ça se joue à la qualité de tes questions... et à ce que tu fais des réponses.",
+  introduction: `<p>Soyons honnêtes deux minutes. Le problème n'est presque jamais de trouver UNE question à poser. Le problème, c'est que toutes les autres conversations qu'elle a en ce moment commencent exactement pareil : « ça va ? », « tu fais quoi dans la vie ? », « t'as passé un bon week-end ? »...</p>
 <p><strong>Une bonne question fait la différence parce qu'elle montre un truc rare : que tu t'intéresses à elle, pas juste à faire la conversation.</strong> Et ça, crois-moi, ça se remarque tout de suite.</p>
-<p>Voici donc 90 questions, classées par situation : par message pour lancer, en face-à-face pour faire connaissance, pour la faire rire, pour créer de la complicité, pour flirter sans lourdeur... et pour savoir, enfin, si tu lui plais. Avec un conseil qui vaut pour les 90 : la question ouvre la porte, mais c'est ta façon d'écouter la réponse qui donne envie d'entrer.</p>`,
+<p>Voici donc 90 questions, classées par situation, du premier message au tête-à-tête où tout se joue. Avec un conseil qui vaut pour les 90 : c'est ta façon d'écouter la réponse qui fait la différence, bien plus que la question elle-même.</p>`,
   quickSummary: [
     "90 questions classées par situation, du premier message au tête-à-tête.",
     "La règle numéro un : une question, puis on écoute. Vraiment. La relance vaut plus que la question suivante.",
-    "Les questions banales (métier, plat préféré, signe astro) sont là où les conversations vont mourir.",
+    "Les questions banales (métier, plat préféré, signe astro) sont celles qui font mourir les conversations.",
     "Le flirt efficace se joue en sous-entendus, jamais en frontal.",
     "Ses réponses, ses relances et ses questions à elle te diront très vite si tu lui plais.",
   ],

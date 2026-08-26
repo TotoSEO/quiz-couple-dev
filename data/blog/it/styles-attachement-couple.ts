@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Quattro cuori stilizzati che rappresentano i quattro stili di attaccamento, collegati da fili diversi",
   publishedAt: '2026-11-28T08:25:00+01:00',
   author: AUTHORS['thomas'],
-  excerpt: "Perché alcuni amano con serenità, altri aggrappandosi, altri fuggendo? La risposta sta in una parola: l'attaccamento. E si gioca molto prima della prima storia d'amore.",
+  excerpt: "Perché alcuni amano con serenità, altri aggrappandosi, altri fuggendo? La risposta ha un nome: l'attaccamento. E si gioca molto prima della prima storia d'amore.",
   introduction: `<p>Avrai sicuramente notato questo strano fenomeno: in una coppia, ciascuno sembra suonare uno spartito scritto in anticipo. Uno ha bisogno di vicinanza, si sente presto trascurato, rilancia... L'altro ha bisogno d'aria, si sente presto invaso, si allontana. E più uno si aggrappa, più l'altro indietreggia! Come se il copione fosse già scritto ancora prima dell'incontro.</p>
 <p>In parte lo era. <strong>Quel copione si chiama stile di attaccamento: il modo in cui il tuo sistema emotivo ha imparato, da piccolissimo, a gestire il legame, la vicinanza e la separazione.</strong> È la teoria dell'attaccamento, uno dei campi più solidi della psicologia moderna, avviata da John Bowlby negli anni Cinquanta... e getta sulle coppie adulte una luce piuttosto spettacolare.</p>
 <p>Esistono quattro grandi stili: sicuro, ansioso, evitante, disorganizzato. Li passiamo in rassegna uno per uno, in versione vita amorosa concreta, vediamo come si combinano in coppia... e soprattutto rispondiamo alla domanda scomoda: si può cambiare? Spoiler: sì.</p>`,
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'da-dove-viene-il-tuo-stile',
       title: "Da dove viene il tuo stile di attaccamento",
-      content: `<p>Il principio sta in due frasi. Da neonato dipendevi interamente dalle tue figure di attaccamento, e il tuo sistema nervoso ha imparato una strategia per mantenere il legame: se i tuoi bisogni ricevevano risposte affidabili, ha imparato che il legame è sicuro... Se le risposte erano imprevedibili, assenti o spaventose, ha improvvisato una strategia di sopravvivenza: aggrapparsi più forte, o imparare a non avere più bisogno.</p>
+      content: `<p>Il principio è semplice. Da neonato dipendevi interamente dalle tue figure di attaccamento, e il tuo sistema nervoso ha imparato una strategia per mantenere il legame: se i tuoi bisogni ricevevano risposte affidabili, ha imparato che il legame è sicuro... Se le risposte erano imprevedibili, assenti o spaventose, ha improvvisato una strategia di sopravvivenza: aggrapparsi più forte, o imparare a non avere più bisogno.</p>
 <p>Quella strategia, testata migliaia di volte prima dei tuoi tre anni, è diventata la tua impostazione predefinita. E da adulto, indovina quale relazione risveglia esattamente gli stessi circuiti del legame genitore-figlio? La coppia, ovviamente... È per questo che adulti brillanti e posati si ritrovano, in amore, a spiare una spunta blu o a soffocare appena qualcuno li ama troppo: non reagisce l'adulto, reagisce l'impostazione.</p>
 <p>Buona notizia prima di entrare nei profili: un'impostazione non è un'identità. Ci torniamo più sotto, ma tienilo a mente mentre ti riconosci nelle descrizioni... perché ti riconoscerai!</p>`,
     },

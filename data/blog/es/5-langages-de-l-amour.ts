@@ -51,7 +51,7 @@ const article: BlogArticleData = {
         {
           id: 'detector-2-lo-que-das',
           title: "Detector n.º 2: lo que das espontáneamente",
-          content: `<p>Por defecto ofrecemos lo que nos gustaría recibir. Quien hace cumplidos sin parar habla «palabras». Quien organiza fines de semana habla «tiempo». Quien arregla, prepara, gestiona, habla «servicio». Mira lo que más te da tu pareja: no es lo que cree que quieres. Es SU lengua materna la que te habla... y eso ya es una declaración.</p>
+          content: `<p>Por defecto ofrecemos lo que nos gustaría recibir. Quien hace cumplidos sin parar habla «palabras». Quien organiza fines de semana habla «tiempo». Quien arregla, prepara, gestiona, habla «servicio». Mira lo que más te da tu pareja: no es lo que cree que quieres, es SU lengua materna la que te habla... y eso ya es una declaración.</p>
 <p>Haz el ejercicio para los dos, ahora, mentalmente: tu top 2, su top 2. Si no tenéis ningún lenguaje en común, ¡probablemente acabes de entender diez años de malentendidos! Y si quieres una medida más serena que la intuición, el <a href="/es/test-lenguaje-amor-pareja/">test de los lenguajes del amor</a> establece tu perfil completo, lenguaje por lenguaje... para hacer cada uno por su lado, evidentemente.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 El malentendido más frecuente de las parejas</p>
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
       id: 'los-limites-del-concepto',
       title: "Los límites del concepto (porque los tiene)",
       content: `<p>Seamos completos: los 5 lenguajes son una herramienta estupenda... y no una ciencia exacta. El concepto viene del asesoramiento conyugal, no de la investigación académica, y los estudios recientes matizan dos puntos: los «lenguajes» no son categorías estancas (todo el mundo necesita un poco de los cinco, y la jerarquía se mueve según las etapas)... y hablar el idioma del otro mejora las parejas, sí, pero no más que estar globalmente atento a sus necesidades. Dicho de otro modo: la magia no está en la tipología, está en la atención.</p>
-<p>Y una advertencia que cuenta: los lenguajes del amor explican los malentendidos entre gente de buena fe... NUNCA excusan los desequilibrios de fondo. «Los servicios no son mi lenguaje» no es un motivo para no tocar jamás una sartén. Y si tú das en todos los idiomas mientras enfrente no llega nada en ninguno... eso ya no es un problema de traducción. Es un problema de implicación, y se mira de frente.</p>
+<p>Y una advertencia que cuenta: los lenguajes del amor explican los malentendidos entre gente de buena fe... NUNCA excusan los desequilibrios de fondo. «Los servicios no son mi lenguaje» no es un motivo para no tocar jamás una sartén. Y si tú das en todos los idiomas mientras enfrente no llega nada en ninguno... eso ya no es un problema de traducción, es un problema de implicación, y se mira de frente.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Descubrid vuestros dos lenguajes, esta noche</p>
 <p class="blog-cta-texte">El test establece tu perfil completo en los cinco lenguajes, con tu dominante y tu punto ciego. Hacedlo cada uno por vuestro lado, comparad... y regalaos la conversación más útil del mes.</p>

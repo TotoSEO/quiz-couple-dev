@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Siempre imaginamos al narcisista en masculino. Resultado: los hombres que viven el dominio en femenino dudan dos veces, de su relación y de su derecho a sufrirla.",
   introduction: `<p>Busca «narcisista» en cualquier web: los ejemplos son masculinos, las víctimas femeninas. Así que cuando es TU pareja la que sopla frío y calor, la que te destruye a puerta cerrada y encandila a todo el mundo fuera, ¿qué haces? Dudas. Dos veces mejor que una. De lo que vives, primero. Y de tu derecho a sufrirlo, después.</p>
-<p><strong>Digámoslo claro: la perversión narcisista existe en femenino, hace los mismos destrozos, y los hombres que la sufren son las víctimas más silenciosas que hay.</strong> No porque sea menos grave. Porque nadie les ha dado el vocabulario, y «quejarse de su mujer», socialmente, suena a debilidad o a mala fe.</p>
-<p>Este artículo hace el trabajo por orden: primero las máscaras, porque son su firma. Luego las 10 señales, en versión concreta. Y al final, lo que puedes hacer, porque el objetivo no es ponerle una etiqueta a ella, es sacarte a TI de la niebla.</p>`,
+<p><strong>La perversión narcisista existe en femenino, hace los mismos destrozos, y los hombres que la sufren son las víctimas más silenciosas que hay.</strong> No porque sea menos grave. Porque nadie les ha dado el vocabulario, y «quejarse de su mujer», socialmente, suena a debilidad o a mala fe.</p>
+<p>Empezamos por sus máscaras, porque son su firma, y después pasamos a las 10 señales en versión concreta. El objetivo no es ponerle una etiqueta a ella, es sacarte a TI de la niebla.</p>`,
   quickSummary: [
     "La perversión narcisista en femenino existe, con los mismos mecanismos y otro envoltorio.",
     "Su especialidad: las máscaras. Adorable fuera, demoledora dentro, víctima en cuanto hablas.",
@@ -32,7 +32,7 @@ const article: BlogArticleData = {
     {
       id: 'sus-mascaras',
       title: "Sus máscaras: la especialidad de la casa",
-      content: `<p>El narcisista masculino se apoya de buena gana en la autoridad frontal. La mujer narcisista trabaja con máscaras. El contraste entre sus caras no es un añadido al problema: es el corazón del dispositivo.</p>
+      content: `<p>El narcisista masculino se apoya de buena gana en la autoridad frontal. La mujer narcisista trabaja más bien con máscaras, y el contraste entre sus caras es el corazón del dispositivo, no un añadido al problema.</p>
 <div><table><thead><tr><th></th><th>En público</th><th>En privado</th></tr></thead><tbody>
 <tr><td>Con tus amigos</td><td>Encantadora, divertida, «tío, qué suerte tienes»</td><td>El repaso asesino en el coche: fulano es «pesado», mengano «te hunde»</td></tr>
 <tr><td>Con tu familia</td><td>Nuera perfecta, detalles, cumplidos</td><td>Cada visita se paga: reproches, humores, «tu madre me odia»</td></tr>
@@ -48,14 +48,14 @@ const article: BlogArticleData = {
 <ol>
 <li><strong>La culpabilización como lengua materna:</strong> No son órdenes: son suspiros, «venga, pásalo bien» que significan lo contrario, «tranquilo, ya estoy acostumbrada a estar sola». Acabas renunciando por tu cuenta, y ese es exactamente el principio: no prohíbe nada, lo hace todo caro.</li>
 <li><strong>El estatus de víctima en preventivo:</strong> Ella sufre. Siempre, estructuralmente, y por tu culpa. Su infancia, sus ex «todos unos cabrones», y ahora tú. Ese estatus no es fragilidad, es una posición estratégica: no se le puede reprochar nada a quien está mal.</li>
-<li><strong>Tu valor cotizando a la baja, con suavidad:</strong> Tu trabajo «está bien pero bueno», tus proyectos «monos», tus logros minimizados o apropiados. Fíjate en el detalle que mata: en público te valora. La demolición es un producto exclusivamente de interior.</li>
+<li><strong>Tu valor cotizando a la baja, con suavidad:</strong> Tu trabajo «está bien pero bueno», tus proyectos «monos», tus logros minimizados o apropiados. Fíjate en el detalle que mata: en público te valora. La demolición nunca sale de casa.</li>
 <li><strong>Celos de tus apoyos, no de tus rivales:</strong> Contraintuitivo, pero muy típico: sus celos reales apuntan a lo que te hace sólido sin ella. Tus amigos de siempre, tu hermano, tu deporte, tu éxito profesional. Todo lo que te alimenta fuera es un competidor a eliminar.</li>
 <li><strong>El frío y calor afectivo como herramienta de adiestramiento:</strong> Ternura espectacular cuando entras en el redil, frío polar cuando resistes. Al cabo de un tiempo haces de todo por quedarte en la zona templada, y sigues llamándolo amor.</li>
 <li><strong>Tu realidad renegociada sin parar:</strong> Las escenas que montó ella pasan a ser escenas que montaste TÚ. Lo que dijo ayer nunca lo dijo. El gaslighting no tiene sexo, y ella lo maneja tanto mejor cuanto que llora mejor que tú.</li>
 <li><strong>El dinero y lo cotidiano como terreno de control:</strong> Tus gastos vigilados, los suyos sagrados; tu carga de trabajo invisible, la suya heroica. El desequilibrio nunca es discutible: cuestionarlo es «agredirla».</li>
 <li><strong>La intimidad con cuentagotas estratégico:</strong> El deseo se vuelve recompensa, su retirada una sanción. Nunca formulado así, claro, pero el calendario habla solo, y has acabado dándote cuenta.</li>
-<li><strong>Tus grietas archivadas y sacadas como arma:</strong> Lo más frágil que le confiaste vuelve, justo, en el momento en que más duele. Una discusión con ella no es un desacuerdo: es un ataque quirúrgico a tus puntos débiles.</li>
-<li><strong>Cuando por fin hablas: la inversión total.</strong> El día que te atreves a decir «basta», descubres su obra maestra: el colérico eres tú, el inestable eres tú, el manipulador eres tú. Y ella tiene testigos, recuerda, los lleva preparando desde el principio.</li>
+<li><strong>Tus grietas archivadas y sacadas como arma:</strong> Lo más frágil que le confiaste vuelve, justo, en el momento en que más duele. Una discusión con ella es un ataque quirúrgico a tus puntos débiles, mucho más que un desacuerdo.</li>
+<li><strong>Cuando por fin hablas, la inversión total:</strong> El día que te atreves a decir «basta», descubres su obra maestra: el colérico eres tú, el inestable eres tú, el manipulador eres tú. Y ella tiene testigos, recuerda, los lleva preparando desde el principio.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 ¿Muchas de estas señales te suenan?</p>
@@ -65,7 +65,7 @@ const article: BlogArticleData = {
     {
       id: 'lo-que-le-hace-a-un-hombre',
       title: "Lo que le hace a un hombre, por dentro",
-      content: `<p>Hay que decirlo, porque nadie lo dice: los hombres bajo dominio desarrollan exactamente los mismos síntomas que las mujeres víctimas. La duda permanente, la autocensura, la vigilancia agotadora, la vergüenza, con una capa más: la sensación de no tener derecho a quejarse. «Soy un hombre, debería poder con esto.»</p>
+      content: `<p>Y hay que decirlo: los hombres bajo dominio desarrollan exactamente los mismos síntomas que las mujeres víctimas. La duda permanente, la autocensura, la vigilancia agotadora, la vergüenza, con una capa más: la sensación de no tener derecho a quejarse. «Soy un hombre, debería poder con esto.»</p>
 <p>Pues aclaremos las cosas. Estar bajo el dominio de una manipuladora no dice nada de tu virilidad, de tu fuerza ni de tu inteligencia. Estos sistemas funcionan con gente buena, precisamente porque es buena: tu lealtad, tu paciencia y tus ganas de hacerlo bien son la materia prima del mecanismo. Hombres brillantes y sólidos pasan por ello como los demás, solo que tardan más en pedir ayuda.</p>
 <p>Y si compruebas que no consigues irte pese a todo lo que acabas de leer, no es falta de valor: es el funcionamiento atrapado del apego, a veces doblado por una verdadera <a href="/es/blog/dependencia-emocional-en-la-pareja/">dependencia emocional</a> que ella ha cultivado con cuidado. Se desmonta, pero no solo.</p>
 <div class="blog-cta">

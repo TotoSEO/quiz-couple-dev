@@ -13,19 +13,19 @@ const article: BlogArticleData = {
   excerpt: "Le problème avec un homme pervers narcissique, c'est que tu es la seule à voir ce que tu vois. Voici les 12 comportements qui finissent par le trahir.",
   introduction: `<p>Si tu tapes « pervers narcissique homme » dans un moteur de recherche, ce n'est pas par curiosité intellectuelle... C'est qu'un homme précis, ton compagnon, ton ex, peut-être le père de tes enfants, t'a mise en alerte. Et que quelque chose ne colle pas : cet homme que tout le monde adore te fait vivre, à huis clos, quelque chose que personne n'imagine.</p>
 <p><strong>C'est le piège numéro un avec ce profil. Le décalage entre l'homme public et l'homme privé est si violent que tu passes pour folle dès que tu essaies de le décrire.</strong> Alors, forcément, tu arrêtes de le décrire. Et tu te retrouves seule avec tes questions.</p>
-<p>Cet article reprend les 12 comportements typiques de l'homme pervers narcissique, dans l'ordre où ils se montrent : d'abord le personnage en société, puis la mécanique des débuts, puis ce qui se passe une fois la porte fermée... et enfin ce qu'il devient quand tu commences à résister. Tu n'as pas besoin de cocher les 12, d'ailleurs. Ce que tu cherches, c'est une trajectoire. Tu vas vite voir si tu la reconnais.</p>`,
+<p>Voici les 12 comportements typiques de l'homme pervers narcissique, dans l'ordre où ils apparaissent. Tu n'as pas besoin de cocher les 12, d'ailleurs : ce que tu cherches, c'est une trajectoire, et tu vas vite voir si tu la reconnais.</p>`,
   quickSummary: [
     "Un homme pervers narcissique se repère à la trajectoire : personnage parfait dehors, contrôle croissant dedans.",
     "Les 12 signes suivent l'ordre réel d'apparition : société, séduction, intimité, résistance.",
     "Aucun signe isolé ne suffit ; c'est l'accumulation et la répétition qui parlent.",
     "Plus tu poses de limites, plus le masque tombe : la résistance est le meilleur révélateur.",
-    "En cas de doute sérieux, des vérifications concrètes existent, à commencer par un test structuré.",
+    "En cas de doute sérieux, le test de 20 questions en fin d'article t'aide à y voir clair.",
   ],
   sections: [
     {
       id: 'les-12-signes-en-un-coup-d-oeil',
       title: "Les 12 signes en un coup d'œil",
-      content: `<p>Voici la carte de l'article. Si un groupe te parle plus que les autres, va directement y jeter un œil.</p>
+      content: `<p>Voici les quatre étapes, et les signes qui vont avec. Si un groupe te parle plus que les autres, va directement y jeter un œil.</p>
 <ol class="blog-liste-reperes">
 <li><a href="#en-societe-le-personnage">En société : le personnage public (signes 1 à 3)</a></li>
 <li><a href="#au-debut-avec-toi">Au début avec toi : la séduction stratégique (signes 4 à 6)</a></li>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
           id: 'dans-l-intimite',
           title: "Dans l'intimité : le contrôle installé (signes 7 à 9)",
           content: `<ol start="7">
-<li><strong>Il vise tes points forts, pas tes faiblesses :</strong> C'est contre-intuitif, et c'est pourtant sa signature. Ton métier, ton humour, ta famille, ce qui te rend fière : c'est précisément là que tombent les remarques. Une faiblesse critiquée, ça peut être un conseil maladroit. Une force systématiquement rabaissée, non. Ça, c'est une stratégie de démolition.</li>
+<li><strong>Il vise tes points forts, pas tes faiblesses :</strong> C'est contre-intuitif, et c'est pourtant sa signature. Ton métier, ton humour, ta famille, ce qui te rend fière : c'est précisément là que tombent les remarques. Une faiblesse critiquée, ça peut être un conseil maladroit. Une force systématiquement rabaissée, ça n'en est jamais un : c'est une stratégie de démolition.</li>
 <li><strong>Ta réalité est renégociée en permanence :</strong> Ce que tu as vu, il ne l'a pas fait. Ce qu'il a dit, tu l'as mal compris. Ce que tu ressens, tu l'exagères... À force, tu doutes de ta mémoire au point de vérifier en cachette. Ce gaslighting quotidien, c'est le cœur du système.</li>
 <li><strong>Ton monde rétrécit, sans interdiction formelle :</strong> Il ne t'a jamais interdit de voir tes amies, non. Il a juste rendu chaque sortie coûteuse : une humeur avant, des reproches après, une crise le lendemain. Dans ce genre de situation, il y a des chances qu'au bout de quelques mois, sans trop savoir comment, tu te retrouves à faire le calcul toute seule... Et c'est exactement ce qui était prévu.</li>
 </ol>`,
@@ -86,7 +86,7 @@ const article: BlogArticleData = {
       id: 'ce-que-ca-fait-vivre',
       title: "Ce que ça te fait vivre, et pourquoi tu doutes encore",
       content: `<p>Si tu as reconnu la trajectoire, une question reste probablement : « mais alors pourquoi je l'aime encore ? »</p>
-<p>Parce que le système est conçu pour ça, tout simplement. L'alternance entre l'homme merveilleux et l'homme destructeur ne te rend pas lucide, elle te rend accro. C'est le même ressort que les jeux de hasard, la récompense imprévisible... Et parce qu'il t'a entraînée à douter, aussi. Des mois de « tu exagères », ça laisse des traces : au moment de conclure, tu te demandes encore si ce n'est pas toi qui dramatises.</p>
+<p>Parce que le système est conçu pour ça, tout simplement. Cette alternance entre l'homme merveilleux et l'homme destructeur rend accro. C'est le même ressort que les jeux de hasard, la récompense imprévisible... Et parce qu'il t'a entraînée à douter, aussi. Des mois de « tu exagères », ça laisse des traces : au moment de conclure, tu te demandes encore si ce n'est pas toi qui dramatises.</p>
 <p>Alors relis la liste, et remarque un détail : <strong>la moitié des signes ne décrivent pas son comportement à lui, mais l'état dans lequel il te met, toi.</strong> C'est le meilleur détecteur dont tu disposes, et il se trompe rarement. Beaucoup de ces comportements figurent d'ailleurs dans les <a href="/blog/red-flags-homme/">red flags chez un homme</a>, dont ils sont la version la plus aboutie... et la plus dangereuse.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Tu veux une réponse posée, pas une intuition de plus ?</p>
@@ -94,7 +94,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/test-pervers-narcissique/">Vérifier ce que je vis</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
-<p>Un dernier mot. Cet article, tu l'as peut-être lu pour une sœur, une amie, une collègue... Ce que tu peux faire pour elle tient en une phrase : reste un lien qui ne juge pas. L'isolement est la condition du système. Chaque personne qui reste dans sa vie est une porte de sortie possible.</p>
+<p>Un dernier mot. Cet article, tu l'as peut-être lu pour une sœur, une amie, une collègue... Ce que tu peux faire pour elle, c'est d'abord ça : rester un lien qui ne juge pas. Le système ne fonctionne que si elle est isolée. Chaque personne qui reste dans sa vie est une porte de sortie possible.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seule avec un article</p>
 <p>Menaces, contrôle de ton argent ou de tes déplacements, violence physique même « une seule fois » : en France, le 3919 est gratuit, anonyme et ouvert 24h/24. En cas d'urgence immédiate, le 17, ou le 114 par SMS quand tu ne peux pas parler. Un psychologue formé aux violences psychologiques change une trajectoire bien plus qu'une lecture, celle-ci comprise.</p>

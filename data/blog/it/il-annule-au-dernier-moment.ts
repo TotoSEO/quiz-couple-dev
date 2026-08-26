@@ -18,7 +18,7 @@ const article: BlogArticleData = {
     "Il segnale da guardare non è la sua scusa, è se propone lui un'altra data, con un giorno dentro.",
     "Sul momento: rispondere corto, niente rimproveri, e non proporre una data al posto suo.",
     "Se dopo due giorni non ha proposto niente, basta un messaggio. Uno solo.",
-    "Due disdette senza una nuova data sono una risposta. È solo detta in un altro modo.",
+    "Due disdette senza una nuova data sono già una risposta, anche se lui non la mette mai in parole.",
   ],
   sections: [
     {
@@ -33,11 +33,11 @@ const article: BlogArticleData = {
 <li><strong>Ha altro quella sera:</strong> una proposta migliore, qualcosa con i suoi amici, un'altra persona. Qui la disdetta è una scelta, anche se lui non la presenta così.</li>
 <li><strong>Non aveva mai pensato di venire:</strong> l'appuntamento esisteva per non dover dire di no, e ha aspettato l'ultimo momento per risparmiarsi la conversazione. È il caso più raro, ed è anche quello che si vede più in fretta dopo.</li>
 </ul>
-<p>Il problema è che questi cinque motivi producono più o meno lo stesso messaggio. «Scusa, mi è capitata una cosa, non ce la faccio.» Non puoi distinguerli leggendo il testo, ed è normale, perché l'informazione non è lì dentro. È da un'altra parte.</p>`,
+<p>Il problema è che questi cinque motivi producono più o meno lo stesso messaggio. «Scusa, mi è capitata una cosa, non ce la faccio.» Non puoi distinguerli leggendo il testo, ed è normale, perché l'informazione non è nel messaggio. È in quello che fa subito dopo, ed è quello che andiamo a guardare adesso.</p>`,
     },
     {
       id: 'le-signal',
-      title: "L'unico segnale che conta, e non è la sua scusa",
+      title: "L'unico segnale che conta",
       content: `<p>Guarda cosa fa nei minuti dopo la disdetta, non cosa racconta per spiegarla. Una scusa lunga e dettagliata non dimostra niente, dimostra che è a disagio. Quello che conta è se propone qualcosa da solo, con un giorno dentro.</p>
 <div><table><thead><tr><th>Cosa ti manda</th><th>Cosa vuol dire</th></tr></thead><tbody>
 <tr><td>Disdice e propone subito un altro giorno preciso</td><td>Voleva vederti. La disdetta non è il punto.</td></tr>
@@ -54,7 +54,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'ce-que-dit-la-recherche',
-      title: "Perché una disdetta non dice niente e due disdette dicono tutto",
+      title: "Perché è la seconda disdetta quella che conta",
       content: `<p>C'è una ragione semplice, ed è nota da tempo.</p>
 <p>Nel 1985 tre ricercatori, John Rempel, John Holmes e Mark Zanna, hanno pubblicato un lavoro sulla fiducia nella coppia, sul <em>Journal of Personality and Social Psychology</em>. È diventato un classico. Ci spiegano che la fiducia si costruisce in tre tappe, e sempre nello stesso ordine.</p>
 <p>La prima la chiamano prevedibilità. Si appoggia su una cosa sola: quello che hai già visto fare a quella persona, più volte. La seconda riguarda chi è, e non più soltanto cosa fa. La terza è la scommessa che fai sulle sue intenzioni, senza prove.</p>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
 <p>L'altra cosa che si gioca quella sera è quello che tu farai di quella disdetta nella tua testa. Nel 1990 Thomas Bradbury e Frank Fincham hanno riletto decine di studi sul modo in cui le persone in coppia spiegano il comportamento dell'altro. Era sul <em>Psychological Bulletin</em>, e il risultato è netto.</p>
 <p>Le persone infelici nella loro coppia spiegano sempre allo stesso modo i gesti negativi del partner. Viene da lui («è fatto così»), non cambierà («sarà sempre così»), e tinge tutto il resto («tanto non funziona niente»). Davanti esattamente allo stesso gesto, le persone felici guardano prima alle circostanze.</p>
 <p>La parte più interessante viene dopo. Gli studi che seguono le stesse coppie per anni fanno pensare che queste spiegazioni non si limitino a riflettere lo stato della coppia: ci pesano sopra. In altre parole, la storia che ti racconti stasera può cambiare quello che succederà dopo.</p>
-<p>Questi lavori riguardano coppie stabili, non un secondo appuntamento. Quello che resta vero è il riflesso: aspettare di avere di che giudicare prima di giudicare. E la sera in cui ti danno buca è proprio quella in cui hai più voglia di fare il contrario.</p>`,
+<p>Questi lavori riguardano coppie stabili, non un secondo appuntamento. Quello che resta vero è il riflesso: aspettare di aver visto abbastanza prima di farsi un'idea. E la sera in cui ti danno buca, quel riflesso non viene da solo...</p>`,
     },
     {
       id: 'quoi-repondre',
@@ -135,7 +135,7 @@ const article: BlogArticleData = {
 </div>
 <p class="imsg-note"><strong>Perché funziona:</strong> non è una punizione e non si dice con un tono freddo. Smetti semplicemente di portare l'organizzazione da sola, che è una reazione sana e non un broncio. Da lì in poi, o propone qualcosa nella settimana e saprai che tiene a vederti, o non propone niente e saprai anche quello. La parola importante è «quando»: non chiudi la porta, smetti solo di tenerla aperta a braccio teso.</p>
 </div>
-<p>E se l'appuntamento alla fine si fa, abbiamo preparato una lista per non restare a corto di argomenti. Ecco <a href="/it/domande-primo-appuntamento/">di cosa parlare quando ci si vede per la prima volta</a>, dal leggero fino ai temi che contano.</p>`,
+<p>E se l'appuntamento alla fine si fa, resterà solo da trovare <a href="/it/domande-primo-appuntamento/">di cosa parlare per quella prima volta</a>, cominciando dal leggero.</p>`,
     },
     {
       id: 'quand-arreter',
@@ -144,8 +144,8 @@ const article: BlogArticleData = {
 <p><strong>Due disdette e nessuna nuova data proposta:</strong> il conto è chiuso. Non è sfortuna, è qualcuno che ti tiene disponibile senza vederti, e può durare mesi se glielo lasci fare.</p>
 <p><strong>Sei sempre tu che proponi, che scrivi, che organizzi:</strong> conta gli ultimi cinque appuntamenti e guarda chi li ha fatti partire. Quando la risposta è «io» cinque volte su cinque, il problema non è più la disdetta di venerdì, è <a href="/it/blog/ragazzo-non-si-impegna/">lo squilibrio che si è installato senza che nessuno lo dica</a>.</p>
 <p><strong>Disdice ogni volta che la cosa si fa un po' seria:</strong> una cena da lui, un weekend, una serata con i tuoi amici. Se le disdette cadono sempre sugli appuntamenti che impegnano, non è un caso, e assomiglia molto a <a href="/it/blog/paura-dell-impegno/">qualcuno che indietreggia appena sente la relazione avanzare</a>.</p>
-<p><strong>Passi più tempo a decifrare che a vederlo:</strong> è il più affidabile dei quattro segnali, e il più facile da ignorare. Una relazione che comincia bene non chiede tutto questo lavoro di decifrazione, molto semplicemente perché non c'è granché da decifrare.</p>
-<p>Se hai ancora dei dubbi, c'è qualcosa di più eloquente dei suoi messaggi: <a href="/it/mi-ama-in-segreto-test/">quello che fa quando niente lo obbliga</a>. Spesso risponde alla domanda in tre minuti.</p>
+<p><strong>Passi più tempo a decifrare che a vederlo:</strong> è il più affidabile dei quattro, anche se è quello che si preferisce non vedere. Una relazione che comincia bene non chiede tutto questo lavoro di decifrazione, molto semplicemente perché non c'è granché da decifrare.</p>
+<p>E se hai ancora dei dubbi, girati la domanda: può darsi che lui <a href="/it/mi-ama-in-segreto-test/">tenga a te senza osare mostrarlo</a>? In certi uomini, le disdette nascondono proprio questo.</p>
 <a href="/it/blog/red-flag-in-un-uomo/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leggi anche</span><span class="blog-read-also-title">13 red flag in un uomo</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
     {

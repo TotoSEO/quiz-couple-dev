@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Les couples ne se plantent presque jamais par manque d'amour. Ils se plantent sur des sujets qu'ils n'avaient jamais mis sur la table.",
-  introduction: `<p>Il y a une statistique que personne ne calcule mais que tout le monde connaît : la plupart des grandes crises de couple portent sur des sujets... dont les deux savaient qu'il faudrait parler un jour. L'argent. Les enfants. La belle-famille. La répartition des tâches. Le « un jour » est juste arrivé trop tard, en pleine crise, au pire moment pour en discuter calmement.</p>
-<p><strong>Parler d'avenir n'a jamais tué une histoire solide. Ne pas en parler en a tué beaucoup.</strong> Et contrairement à ce qu'on croit, ces conversations ne sont pas solennelles ni pesantes... bien menées, ce sont même parmi les plus excitantes qu'un couple puisse avoir !</p>
+  introduction: `<p>Il y a une statistique que personne ne calcule mais que tout le monde connaît : la plupart des grandes crises de couple portent sur des sujets... dont les deux savaient qu'il faudrait parler un jour : l'argent, les enfants, la belle-famille, la répartition des tâches. Le « un jour » est juste arrivé trop tard, en pleine crise, au pire moment pour en discuter calmement.</p>
+<p><strong>Parler d'avenir n'a jamais tué une histoire solide, alors que ne pas en parler en a tué beaucoup.</strong> Et contrairement à ce qu'on croit, ces conversations ne sont pas solennelles ni pesantes... bien menées, ce sont même parmi les plus excitantes qu'un couple puisse avoir !</p>
 <p>Voici 60 questions d'avenir, classées par grande étape : avant d'emménager, avant de s'engager pour de bon, avant un enfant, autour de l'argent, et sur vos rêves communs. À picorer AVANT que les sujets deviennent urgents... c'est tout leur intérêt.</p>`,
   quickSummary: [
     "60 questions classées par étape : emménager, s'engager, un enfant, l'argent, les rêves.",
@@ -94,7 +94,7 @@ const article: BlogArticleData = {
     {
       id: 'l-argent-et-les-grandes-decisions',
       title: "L'argent et les grandes décisions (46-55)",
-      content: `<p>Le sujet dont personne ne parle au début et dont tout le monde se dispute après ! L'argent en couple, ce n'est jamais des chiffres... c'est de la sécurité, de la liberté et du pouvoir. Autant en parler quand tout va bien.</p>
+      content: `<p>Le sujet dont personne ne parle au début et dont tout le monde se dispute après ! L'argent en couple, ce n'est jamais juste des chiffres : derrière, il y a de la sécurité, de la liberté et du pouvoir. Autant en parler quand tout va bien.</p>
 <ol start="46">
 <li>C'est quoi ton rapport à l'argent : sécurité, plaisir, angoisse, liberté ?</li>
 <li>Compte commun, comptes séparés, ou mixte : ton modèle, et pourquoi ?</li>
@@ -111,7 +111,7 @@ const article: BlogArticleData = {
     {
       id: 'vos-reves-communs',
       title: "Vos rêves communs (56-60)",
-      content: `<p>On finit par le carburant. Parce qu'un couple, ce n'est pas juste une gestion réussie... c'est une direction qui donne envie. Cinq questions, les plus belles.</p>
+      content: `<p>On finit par le carburant. Parce qu'un couple, ce n'est pas juste une gestion réussie... c'est une direction qui donne envie. Il en reste cinq, les plus belles.</p>
 <ol start="56">
 <li>C'est quoi le rêve qu'on n'a jamais formulé à voix haute, tous les deux ?</li>
 <li>Si on s'accordait une année complètement folle, elle ressemblerait à quoi ?</li>

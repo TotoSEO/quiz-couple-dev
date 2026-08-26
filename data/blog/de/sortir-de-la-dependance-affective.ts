@@ -5,14 +5,14 @@ const article: BlogArticleData = {
   slug: 'emotionale-abhaengigkeit-ueberwinden',
   title: "Emotionale Abhängigkeit überwinden: 12 konkrete Übungen",
   metaTitle: "Emotionale Abhängigkeit überwinden: der Plan in 3 Phasen",
-  metaDescription: "Keine vagen Ratschläge: ein echter Plan. 12 konkrete Übungen in 3 Phasen, um emotionale Abhängigkeit zu überwinden, Woche für Woche.",
+  metaDescription: "Ein Plan in 3 Phasen mit 12 konkreten Übungen, um emotionale Abhängigkeit zu überwinden, Woche für Woche, samt der Fallen, die man unterwegs kennen sollte.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Person zerbricht eine herzförmige Kette, Treppenstufen im Hintergrund",
   publishedAt: '2026-09-22T11:32:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Arbeite an dir», «lerne dich zu lieben»... Danke, aber konkret, was macht man Montagmorgen? Hier ist der Plan, Übung für Übung.",
   introduction: `<p>Wenn du schon einmal gesucht hast, wie man aus emotionaler Abhängigkeit herauskommt, kennst du das Lied: «gewinne dein Selbstvertrauen zurück», «konzentriere dich auf deine Bedürfnisse», «lerne dich zu lieben». Wahre Ratschläge, sicher. Aber vollkommen unbrauchbar an einem Dienstagabend um 23 Uhr, wenn du auf dein Handy starrst und auf seine Antwort wartest.</p>
-<p><strong>Emotionale Abhängigkeit verlässt man nicht mit Vorsätzen. Man verlässt sie mit Handlungen, kleinen, präzisen, wiederholten.</strong> Genau wie man ein Knie nach einer Verletzung rehabilitiert: Niemand sagt dir «geh wieder», man gibt dir Übungen, in einer Reihenfolge, mit einer Steigerung.</p>
+<p><strong>Emotionale Abhängigkeit verlässt man mit Handlungen, kleinen, präzisen und wiederholten, nicht mit Vorsätzen.</strong> Genau wie man ein Knie nach einer Verletzung rehabilitiert: Niemand sagt dir «geh wieder», man gibt dir Übungen, in einer Reihenfolge, mit einer Steigerung.</p>
 <p>Genau das machen wir hier. Drei Phasen, zwölf Übungen, vom Dringendsten zum Tiefsten. Du musst nicht alles perfekt machen, du musst nur mit der ersten anfangen. Und davor zwei Minuten, um zu verstehen, wogegen du kämpfst, denn das verändert, wie du die Übungen machst.</p>`,
   quickSummary: [
     "Emotionale Abhängigkeit ist ein Regulationsreflex: Du nutzt den anderen, um deinen Innenzustand zu beruhigen.",
@@ -66,8 +66,8 @@ const article: BlogArticleData = {
       title: "Phase 3: festigen (Monat 2 und 3)",
       content: `<p>Die Notfälle sind im Griff, dein Leben füllt sich. Bleibt das Fundament: eine innere Sicherheit aufbauen, die von niemandem mehr abhängt. Das ist die langsamste Phase, und die lohnendste.</p>
 <ol start="9">
-<li><strong>Die geplante Einsamkeit:</strong> Ein Moment allein pro Woche, bewusst gewählt, ritualisiert: ein Kaffee draußen, eine Ausstellung, ein Spaziergang. Es geht nicht darum, es auszuhalten, sondern deinem Nervensystem beizubringen, dass Alleinsein ein sicherer Ort ist. Der Unterschied zwischen erlittener und geschenkter Einsamkeit ist genau der Unterschied zwischen Verlassenwerden und Freiheit.</li>
-<li><strong>Der Brief vom schlimmsten Fall:</strong> Eine kräftige Übung, in Ruhe zu machen: Schreib auf, was konkret passieren würde, wenn die Beziehung enden würde. Nicht den fantasierten emotionalen Tsunami, sondern den realen Ablauf: wo du wohnen würdest, wer um dich wäre, was du in den ersten Monaten tun würdest. Beim Schreiben entdeckst du etwas Gegenintuitives: Der schlimmste Fall ist schmerzhaft, aber er ist ÜBERLEBBAR. Und eine überlebbare Angst verliert den größten Teil ihrer Macht.</li>
+<li><strong>Die geplante Einsamkeit:</strong> Ein Moment allein pro Woche, bewusst gewählt, ritualisiert: ein Kaffee draußen, eine Ausstellung, ein Spaziergang. Es geht nicht darum, es auszuhalten, sondern deinem Nervensystem beizubringen, dass Alleinsein ein sicherer Ort ist. Gewähltes Alleinsein hat nichts mehr mit Verlassenwerden zu tun, und dein Körper spürt das mit der Zeit.</li>
+<li><strong>Der Brief vom schlimmsten Fall:</strong> Eine kräftige Übung, in Ruhe zu machen: Schreib auf, was konkret passieren würde, wenn die Beziehung enden würde. Nicht den fantasierten emotionalen Tsunami, sondern den realen Ablauf: wo du wohnen würdest, wer um dich wäre, was du in den ersten Monaten tun würdest. Beim Schreiben entdeckst du etwas Gegenintuitives: Der schlimmste Fall ist schmerzhaft, aber du kannst ihn überleben. Und eine Angst, von der du weißt, dass du sie durchstehen kannst, verliert den größten Teil ihrer Macht.</li>
 <li><strong>Beziehung aus Wahl, nicht aus Bedürfnis:</strong> Stell dir regelmäßig diese Frage: «Wenn ich keine Angst hätte, was würde ich wählen?» Bleiben muss eine Antwort werden, kein Reflex. Das ist die große Umkehrung dieser ganzen Arbeit: vom «ich bleibe, weil ich es brauche» zum «ich bleibe, weil ich es wähle». An dem Tag, an dem du den Unterschied von innen spürst, ist es gewonnen.</li>
 <li><strong>Die monatliche Bilanz:</strong> Einmal im Monat nimmst du dein Tagebuch aus Phase 1 und vergleichst: Häufigkeit der Wellen, ihre Intensität, deine Erholungsgeschwindigkeit. Tiefe Fortschritte sind im Alltag unsichtbar und über drei Monate spektakulär. Dieser Termin mit dir selbst ist auch dein bestes Gegenmittel gegen Entmutigung.</li>
 </ol>`,
@@ -90,7 +90,7 @@ const article: BlogArticleData = {
         {
           id: 'falle-3-im-geheimen-gegen-jemanden',
           title: "Falle 3: das alles heimlich gegen jemanden tun",
-          content: `<p>Diese Übungen sind Arbeit für dich, keine Strategie, um ihn zu einer Reaktion zu bringen. Wenn du deine Tage des Schweigens zählst und dabei seine Reaktion beobachtest, steigst du nicht aus der Abhängigkeit aus, du spielst sie in einem anderen Spiel.</p>
+          content: `<p>Diese Übungen sind Arbeit für dich, keine Strategie, um ihn zu einer Reaktion zu bringen. Wenn du deine Tage des Schweigens zählst und dabei seine Reaktion beobachtest, steigst du nicht aus der Abhängigkeit aus, du spielst sie nur in anderer Form weiter.</p>
 <p>Und der wirklich letzte Rat: Du musst diesen Weg nicht allein gehen. Eine Therapeutin oder ein Therapeut mit Kenntnis kognitiver Verhaltenstherapie oder von Bindungsverletzungen beschleunigt die Arbeit enorm. Zum Lesen ergänzt der Klassiker des Genres, «Die Sucht, gebraucht zu werden» von Melody Beattie, diesen Plan sehr gut, wenn du auf Papier weitergehen willst.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Bevor du anfängst: miss deinen Ausgangspunkt</p>

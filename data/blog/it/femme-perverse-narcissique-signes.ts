@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Immaginiamo sempre il narcisista al maschile. Risultato: gli uomini che vivono il controllo al femminile dubitano due volte, della loro relazione e del loro diritto a soffrirne.",
   introduction: `<p>Cerca «narcisista» su qualunque sito: gli esempi sono al maschile, le vittime al femminile. Così, quando è LA TUA compagna a soffiare il caldo e il freddo, a demolirti a porte chiuse e ad affascinare tutti fuori, tu cosa fai? Dubiti. Due volte anziché una. Di quello che vivi, prima. E del tuo diritto a soffrirne, poi.</p>
-<p><strong>Diciamolo chiaramente: la perversione narcisistica esiste al femminile, fa gli stessi danni, e gli uomini che la subiscono sono le vittime più silenziose che esistano.</strong> Non perché sia meno grave. Perché nessuno ha dato loro il vocabolario, e «lamentarsi della propria donna», socialmente, passa per debolezza o malafede.</p>
-<p>Questo articolo lavora in ordine: prima le maschere, perché sono la sua firma. Poi i 10 segnali, in versione concreta. E alla fine, cosa puoi fare, perché l'obiettivo non è mettere un'etichetta su di lei, è tirare TE fuori dalla nebbia.</p>`,
+<p><strong>La perversione narcisistica esiste al femminile, fa gli stessi danni, e gli uomini che la subiscono sono le vittime più silenziose che esistano.</strong> Non perché sia meno grave. Perché nessuno ha dato loro il vocabolario, e «lamentarsi della propria donna», socialmente, passa per debolezza o malafede.</p>
+<p>Cominciamo dalle sue maschere, perché sono la sua firma, e poi passiamo ai 10 segnali in versione concreta. L'obiettivo non è mettere un'etichetta su di lei, è tirare TE fuori dalla nebbia.</p>`,
   quickSummary: [
     "La perversione narcisistica al femminile esiste, con gli stessi meccanismi e una confezione diversa.",
     "La sua specialità: le maschere. Adorabile fuori, demolitrice dentro, vittima appena parli.",
@@ -32,7 +32,7 @@ const article: BlogArticleData = {
     {
       id: 'le-sue-maschere',
       title: "Le sue maschere: la specialità della casa",
-      content: `<p>L'uomo narcisista si appoggia volentieri all'autorità frontale. La donna narcisista lavora di maschera. Il contrasto tra i suoi volti non è un contorno del problema: è il cuore del dispositivo.</p>
+      content: `<p>L'uomo narcisista si appoggia volentieri all'autorità frontale. La donna narcisista lavora piuttosto di maschera, e il contrasto tra i suoi volti è il cuore del dispositivo, non un contorno del problema.</p>
 <div><table><thead><tr><th></th><th>In pubblico</th><th>In privato</th></tr></thead><tbody>
 <tr><td>Con i tuoi amici</td><td>Affascinante, spiritosa, «sei fortunato, eh»</td><td>Il debriefing assassino in auto: quello è «pesante», quell'altro «ti tira giù»</td></tr>
 <tr><td>Con la tua famiglia</td><td>Nuora perfetta, attenzioni, complimenti</td><td>Ogni visita si paga: rimproveri, umori, «tua madre mi odia»</td></tr>
@@ -48,14 +48,14 @@ const article: BlogArticleData = {
 <ol>
 <li><strong>La colpevolizzazione come lingua madre:</strong> Non ordini: sospiri, «vai pure, divertiti» che significano il contrario, «tranquillo, sono abituata a stare sola». Finisci per rinunciare da solo, ed è esattamente il principio: non vieta niente, rende tutto costoso.</li>
 <li><strong>Lo status di vittima in prevenzione:</strong> Lei soffre. Sempre, strutturalmente, e per colpa tua. La sua infanzia, i suoi ex «tutti stronzi», e adesso tu. Quello status non è fragilità, è una posizione strategica: non si può rimproverare niente a chi sta male.</li>
-<li><strong>Il tuo valore quotato al ribasso, con dolcezza:</strong> Il tuo lavoro «va bene, però», i tuoi progetti «carini», i tuoi successi ridimensionati o intestati a lei. Nota il dettaglio che uccide: in pubblico ti valorizza. La demolizione è un prodotto esclusivamente da interno.</li>
+<li><strong>Il tuo valore quotato al ribasso, con dolcezza:</strong> Il tuo lavoro «va bene, però», i tuoi progetti «carini», i tuoi successi ridimensionati o intestati a lei. Nota il dettaglio che uccide: in pubblico ti valorizza. La demolizione non esce mai di casa.</li>
 <li><strong>La gelosia dei tuoi appoggi, non delle rivali:</strong> Controintuitivo, ma tipicissimo: la sua vera gelosia colpisce ciò che ti rende solido senza di lei. Gli amici di sempre, tuo fratello, il tuo sport, il tuo successo professionale. Tutto ciò che ti nutre altrove è un concorrente da eliminare.</li>
 <li><strong>Il caldo e freddo affettivo come strumento di addestramento:</strong> Tenerezza spettacolare quando rientri nei ranghi, freddo polare quando resisti. A un certo punto fai di tutto per restare nella zona tiepida, e continui a chiamarlo amore.</li>
 <li><strong>La tua realtà rinegoziata in permanenza:</strong> Le scenate che ha fatto lei diventano scenate che hai fatto TU. Quello che ha detto ieri non l'ha mai detto. Il gaslighting non ha sesso, e lei lo maneggia tanto meglio quanto meglio piange di te.</li>
 <li><strong>I soldi e il quotidiano come terreno di controllo:</strong> Le tue spese sorvegliate, le sue sacre; il tuo carico di lavoro invisibile, il suo eroico. Lo squilibrio non è mai discutibile: contestarlo significa «aggredirla».</li>
 <li><strong>L'intimità col contagocce strategico:</strong> Il desiderio diventa una ricompensa, il suo ritiro una sanzione. Mai formulato così, ovviamente, ma il calendario parla da solo, e alla fine te ne sei accorto.</li>
-<li><strong>Le tue fragilità archiviate e riesumate come arma:</strong> Quello che le hai confidato di più fragile riemerge, precisamente, nel momento in cui fa più male. Un litigio con lei non è un disaccordo: è un colpo chirurgico sui tuoi punti deboli.</li>
-<li><strong>Quando finalmente parli: l'inversione totale.</strong> Il giorno in cui osi dire «basta», scopri il suo capolavoro: il collerico sei tu, l'instabile sei tu, il manipolatore sei tu. E lei ha dei testimoni, ricordatelo, li prepara dall'inizio.</li>
+<li><strong>Le tue fragilità archiviate e riesumate come arma:</strong> Quello che le hai confidato di più fragile riemerge, precisamente, nel momento in cui fa più male. Un litigio con lei è un colpo chirurgico sui tuoi punti deboli, molto più che un disaccordo.</li>
+<li><strong>Quando finalmente parli, l'inversione totale:</strong> Il giorno in cui osi dire «basta», scopri il suo capolavoro: il collerico sei tu, l'instabile sei tu, il manipolatore sei tu. E lei ha dei testimoni, ricordatelo, li prepara dall'inizio.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Molti di questi segnali ti dicono qualcosa?</p>
@@ -65,7 +65,7 @@ const article: BlogArticleData = {
     {
       id: 'cosa-fa-a-un-uomo',
       title: "Cosa fa a un uomo, dall'interno",
-      content: `<p>Va detto, perché nessuno lo dice: gli uomini sotto controllo sviluppano esattamente gli stessi sintomi delle donne vittime. Il dubbio permanente, l'autocensura, la vigilanza sfiancante, la vergogna, con uno strato in più: la sensazione di non avere il diritto di lamentarsi. «Sono un uomo, dovrei gestirla.»</p>
+      content: `<p>E va detto: gli uomini sotto controllo sviluppano esattamente gli stessi sintomi delle donne vittime. Il dubbio permanente, l'autocensura, la vigilanza sfiancante, la vergogna, con uno strato in più: la sensazione di non avere il diritto di lamentarsi. «Sono un uomo, dovrei gestirla.»</p>
 <p>Allora mettiamo le cose in chiaro. Essere sotto il controllo di una manipolatrice non dice nulla della tua virilità, della tua forza o della tua intelligenza. Questi sistemi funzionano sulle brave persone, proprio perché sono brave: la tua lealtà, la tua pazienza e la tua voglia di fare bene sono la materia prima del meccanismo. Uomini brillanti e solidi ci passano come gli altri, ci mettono solo più tempo a chiedere aiuto.</p>
 <p>E se constati che non riesci ad andartene nonostante tutto quello che hai appena letto, non è mancanza di coraggio: è il funzionamento intrappolato dell'attaccamento, a volte raddoppiato da una vera <a href="/it/blog/dipendenza-affettiva-nella-coppia/">dipendenza affettiva</a> che lei ha coltivato con cura. Si smonta, ma non da soli.</p>
 <div class="blog-cta">

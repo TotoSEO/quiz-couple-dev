@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Le gaslighting ne te ment pas sur les faits. Il te ment sur toi : ta mémoire, ta perception, ta santé mentale. C'est ce qui en fait la manipulation la plus corrosive qui existe.",
   introduction: `<p>Tu as vu la scène. Tu étais là, tu as entendu les mots, tu pourrais les répéter... Et pourtant, en face, un aplomb parfait : « je n'ai jamais dit ça ». Pas une hésitation. Alors tu vérifies dans ta tête, une fois, deux fois... et une petite fissure s'ouvre : et si c'était moi ?</p>
-<p>Cette fissure a un nom : le gaslighting. <strong>Ce n'est pas un mensonge sur les faits, c'est une attaque sur l'instrument de mesure : toi.</strong> Ta mémoire, ta perception, ta stabilité... Répétée assez longtemps, cette manipulation produit un résultat unique en son genre : une victime qui ne peut plus se fier à elle-même, et qui dépend donc de son manipulateur pour savoir ce qui est réel.</p>
+<p>Cette fissure a un nom : le gaslighting. <strong>Ce n'est pas un mensonge sur les faits : c'est une attaque contre l'instrument de mesure, autrement dit toi.</strong> Ta mémoire, ta perception, ta stabilité... Répétée assez longtemps, cette manipulation produit un résultat unique en son genre : une victime qui ne peut plus se fier à elle-même, et qui dépend donc de son manipulateur pour savoir ce qui est réel.</p>
 <p>Le mot est partout depuis quelques années, souvent à tort et à travers, alors remettons de la précision : d'où vient le terme, comment le mécanisme fonctionne exactement, comment le distinguer d'un simple désaccord de souvenirs... et surtout comment reprendre pied quand on est dedans. Parce qu'on en sort, et mieux : on en sort avec un détecteur intégré.</p>`,
   quickSummary: [
     "Le gaslighting attaque ta perception, pas les faits : c'est toi qu'on conteste, pas la scène.",
@@ -26,13 +26,13 @@ const article: BlogArticleData = {
       id: 'd-ou-vient-le-mot',
       title: "D'où vient le mot (et pourquoi il est si juste)",
       content: `<p>Le terme vient d'un film de 1944, « Gaslight » (« Hantise » en français), avec Ingrid Bergman. L'intrigue : un mari fait baisser les lampes à gaz de la maison... puis assure à sa femme que la lumière n'a pas changé, que c'est elle qui voit mal. Détail par détail, il déplace des objets, nie des sons, réécrit des scènes, jusqu'à la convaincre qu'elle perd la raison.</p>
-<p>Tout y est déjà : la falsification du réel, le déni tranquille, et surtout LA signature du gaslighting, qui le distingue de tous les autres mensonges... <strong>le but n'est pas de te faire croire une chose fausse, mais de te faire douter de ta capacité à savoir.</strong> Un menteur veut gagner un point. Un gaslighter veut gagner l'arbitre.</p>
+<p>Tout y est déjà : la falsification du réel, le déni tranquille, et surtout LA signature du gaslighting, qui le distingue de tous les autres mensonges... <strong>le but n'est pas de te faire croire une chose fausse, mais de te faire douter de ta capacité à savoir.</strong> Un menteur veut gagner un point dans la discussion ; un gaslighter veut gagner l'arbitre, c'est-à-dire ton jugement.</p>
 <p>Le phénomène est aujourd'hui documenté par la psychologie, reconnu comme forme de violence psychologique... et au Québec, on le nomme joliment « détournement cognitif ». C'est exactement ça : un détournement, celui de ton propre jugement.</p>`,
     },
     {
       id: 'le-mecanisme-en-3-temps',
       title: "Le mécanisme, en trois temps",
-      content: `<p>Le gaslighting ne débarque jamais d'un coup, il monte en puissance par paliers. Les voici dans l'ordre, et tu vas voir que la progression est logique... c'est une escalade de la cible.</p>`,
+      content: `<p>Le gaslighting ne débarque jamais d'un coup, il monte en puissance par paliers. Les voici dans l'ordre, et tu vas voir que la progression est logique... la cible monte d'un cran à chaque palier.</p>`,
       subsections: [
         {
           id: 'temps-1-nier-les-faits',

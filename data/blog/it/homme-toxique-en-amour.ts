@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Tra il maldestro che può cambiare e il manipolatore che non cambierà c'è tutta una gamma... e non ci si protegge allo stesso modo.",
   introduction: `<p>Da quando «tossico» è diventata la parola dell'epoca, ci si mette dentro di tutto: il geloso, il distante, il collerico, il bugiardo. Ed è un vero problema, perché quegli uomini non si somigliano. Alcuni fanno male per immaturità, senza volerlo, e possono cambiare. Altri fanno male per funzionamento, e non cambieranno. <strong>Confondere i due significa o fuggire da un uomo che sarebbe potuto crescere... o restare anni con un uomo che non crescerà mai.</strong></p>
-<p>Questo articolo quindi fa ordine. Sei profili di uomo tossico in amore, dal meno grave al più grave: cosa ti fa vivere concretamente ciascuno, come lo riconosci... e soprattutto, per ognuno, la risposta a LA domanda: questo può cambiare?</p>
+<p>Allora facciamo ordine: sei profili di uomo tossico in amore, dal meno grave al più grave, con cosa ti fa vivere concretamente ciascuno, come lo riconosci... e soprattutto, per ognuno, la risposta a LA domanda: questo può cambiare?</p>
 <p>Una premessa però, e conta: un profilo si giudica sulla durata, non su un periodo brutto. Ogni uomo può essere pesante sei mesi in un anno difficile. Qui parliamo di funzionamenti installati, che si ripetono e che ti costano. È quella ripetizione a fare la tossicità, come abbiamo posto nei <a href="/it/blog/segnali-relazione-tossica/">segnali di una relazione tossica</a>.</p>`,
   quickSummary: [
     "«Tossico» copre profili molto diversi... che non si gestiscono allo stesso modo.",
@@ -39,7 +39,7 @@ const article: BlogArticleData = {
     {
       id: 'profilo-3-il-geloso',
       title: "Profilo 3: il geloso che sorveglia",
-      content: `<p>All'inizio quasi lusingava. Poi le domande sono diventate verifiche, le verifiche rimproveri, ed eccoti a mandare foto della tua serata «per rassicurarlo»... La gelosia di questo profilo non è un'emozione che lo attraversa, è un sistema che si installa e che cresce a ogni concessione.</p>
+      content: `<p>All'inizio quasi lusingava. Poi le domande sono diventate verifiche, le verifiche rimproveri, ed eccoti a mandare foto della tua serata «per rassicurarlo»... La gelosia di questo profilo non è solo un'emozione che passa: è un sistema che si installa e che cresce a ogni concessione.</p>
 <p><strong>Cosa ti fa vivere:</strong> una libertà sotto condizione. I tuoi vestiti, i tuoi amici, i tuoi orari diventano argomenti... e ti autocensuri sempre di più per evitare le crisi.</p>
 <p><strong>Può cambiare?</strong> Solo se riconosce che il problema è suo, non nei tuoi comportamenti. Un geloso che dice «aiutami, so che è irrazionale» può lavorarci, spesso su una <a href="/it/blog/dipendenza-affettiva-negli-uomini/">dipendenza affettiva maschile</a> che non dice il suo nome. Un geloso che dice «cambia tu e sarò meno geloso» non cambierà: ti ha già nominata responsabile del suo problema.</p>`,
     },
@@ -53,7 +53,7 @@ const article: BlogArticleData = {
     {
       id: 'profilo-5-chi-svaluta',
       title: "Profilo 5: chi svaluta con dolcezza",
-      content: `<p>Non urla mai, non ti insulta... lima. Una piccola osservazione sul tuo vestito, una battuta sulle tue ambizioni, un «carino» sul tuo progetto, un silenzio marcato quando brilli in società. Prese una per una, ogni frecciata è indifendibile come rimprovero («ma stavo scherzando!»)... accumulate, fanno un lavoro di logoramento notevole.</p>
+      content: `<p>Non urla mai, non ti insulta... ti lima, poco a poco. Una piccola osservazione sul tuo vestito, una battuta sulle tue ambizioni, un «carino» sul tuo progetto, un silenzio marcato quando brilli in società. Prese una per una, ogni frecciata è indifendibile come rimprovero («ma stavo scherzando!»)... accumulate, fanno un lavoro di logoramento notevole.</p>
 <p><strong>Cosa ti fa vivere:</strong> un'autostima che si scioglie senza causa identificabile. Ti trovi meno divertente, meno capace, meno interessante di prima... e non lo colleghi a lui, visto che «non fa niente di grave».</p>
 <p><strong>Può cambiare?</strong> Il test è semplice, e ormai conosci il metodo: nomina il comportamento, una volta, con calma, con due esempi precisi. Un maldestro cade dalle nuvole e si corregge, almeno in parte. Uno che svaluta di fondo rovescia la scena: sei «troppo suscettibile», «cerchi problemi»... Quell'inversione è la sua risposta. Ed è definitiva.</p>`,
     },

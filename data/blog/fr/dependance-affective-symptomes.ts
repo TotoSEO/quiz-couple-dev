@@ -10,9 +10,9 @@ const article: BlogArticleData = {
   featuredImageAlt: "Personne enchaînée à un téléphone affichant un cœur, dans l'attente d'une réponse",
   publishedAt: '2026-09-12T11:33:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "La dépendance affective ne se voit pas dans le miroir. Elle se voit dans les détails : ce que tu ressens quand il ne répond pas, ce que tu annules pour lui, ce que tu n'oses plus dire.",
+  excerpt: "La dépendance affective se voit dans les détails : ce que tu ressens quand il ne répond pas, ce que tu annules pour lui, ce que tu n'oses plus dire.",
   introduction: `<p>Il ne t'a pas répondu depuis deux heures. Objectivement, il ne s'est rien passé : il travaille, il vit sa vie, tout va bien. Mais toi, tu as déjà vérifié ton téléphone quinze fois, relu ton dernier message pour voir s'il était maladroit, et échafaudé trois scénarios dont un où il te quitte...</p>
-<p>Si cette scène te parle, tu t'es peut-être déjà demandé si tu n'étais pas « trop ». Trop attachée, trop anxieuse, trop dépendante. <strong>La vraie question n'est pas de savoir si tu aimes trop fort. C'est de savoir si ton équilibre émotionnel dépend entièrement de quelqu'un d'autre.</strong> Ça, c'est la dépendance affective, et elle a des symptômes précis.</p>
+<p>Si cette scène te parle, tu t'es peut-être déjà demandé si tu n'étais pas « trop ». Trop attachée, trop anxieuse, trop dépendante. <strong>La vraie question, c'est de savoir si ton équilibre émotionnel dépend entièrement de quelqu'un d'autre, pas si tu aimes trop fort.</strong> Ça, c'est la dépendance affective, et elle a des symptômes précis.</p>
 <p>On va les passer en revue un par un, sphère par sphère : ce qui se passe dans ta tête, dans ton couple, dans ton corps, et avec les autres. Pas pour te coller une étiquette, hein. Juste pour t'aider à voir clair... parce que ce fonctionnement se travaille très bien, une fois qu'on l'a identifié.</p>`,
   quickSummary: [
     "Le symptôme central : ton état émotionnel dépend des signaux de l'autre, heure par heure.",
@@ -41,8 +41,8 @@ const article: BlogArticleData = {
 <li><strong>La peur de l'abandon, en tâche de fond :</strong> Pas une inquiétude ponctuelle : un programme qui tourne en permanence. Un ton un peu sec, un « on verra », un regard distrait... et ton cerveau conclut au pire. Le plus épuisant, c'est que même les bons moments sont contaminés : tu profites à moitié, parce qu'une partie de toi anticipe déjà la fin.</li>
 <li><strong>L'interprétation permanente :</strong> Tu relis les messages, tu analyses les emojis, tu compares le temps de réponse d'aujourd'hui à celui de la semaine dernière... Ton couple est devenu une enquête, et toi une détective à plein temps. Épuisant, et surtout : sans fin, parce qu'aucune preuve ne rassure plus de quelques heures.</li>
 <li><strong>Le besoin de réassurance à répétition :</strong> « Tu m'aimes ? », « Tout va bien entre nous ? », posées non pas pour ouvrir une conversation, mais pour calmer une angoisse. La réponse fonctionne comme un médicament... à effet court. Il faut vite une nouvelle dose.</li>
-<li><strong>La valeur personnelle indexée sur lui :</strong> S'il te valorise, tu vaux quelque chose. S'il est distant, tu ne vaux plus rien. Ton estime de toi ne t'appartient plus : elle est cotée en bourse, et c'est lui le marché.</li>
-<li><strong>L'incapacité à être seule sans souffrir :</strong> La solitude ne te repose pas, elle te met en alerte. Un week-end sans lui n'est pas un moment à toi : c'est une épreuve à traverser, montre en main.</li>
+<li><strong>La valeur personnelle indexée sur lui :</strong> S'il te valorise, tu vaux quelque chose. S'il est distant, tu ne vaux plus rien. Ton estime de toi ne t'appartient plus : elle monte et descend selon son humeur à lui.</li>
+<li><strong>L'incapacité à être seule sans souffrir :</strong> La solitude ne te repose pas, elle te met en alerte. Un week-end sans lui, ce n'est plus un moment à toi, c'est une épreuve à traverser, montre en main.</li>
 </ol>`,
     },
     {
@@ -50,7 +50,7 @@ const article: BlogArticleData = {
       title: "Dans ton couple (symptômes 6 à 10)",
       content: `<ol start="6">
 <li><strong>Tu ne dis plus non :</strong> Par peur de décevoir, de créer un froid, de donner une raison de partir. Tes préférences passent systématiquement après les siennes, au point que tu ne sais parfois plus ce que tu préfères, toi.</li>
-<li><strong>Tu t'effaces par anticipation :</strong> Tu devines ses envies avant qu'il les formule, tu désamorces les conflits avant qu'ils existent, tu ravales les reproches avant de les dire. Vu de loin, tu es « facile à vivre ». Vu de près, tu as disparu.</li>
+<li><strong>Tu t'effaces par anticipation :</strong> Tu devines ses envies avant qu'il les formule, tu désamorces les conflits avant qu'ils existent, tu ravales les reproches avant de les dire. Vu de loin, tu es « facile à vivre ». Sauf qu'à force de t'effacer, tu as disparu.</li>
 <li><strong>La jalousie devient envahissante :</strong> Pas forcément des scènes : parfois juste une surveillance discrète, les réseaux vérifiés, les « c'est qui elle ? » qu'on regrette aussitôt. Derrière, toujours la même logique : chaque personne autour de lui est une menace pour ta survie émotionnelle.</li>
 <li><strong>Tu restes, même quand ça fait mal :</strong> C'est le symptôme le plus lourd de conséquences. Une relation moyenne, décevante, parfois franchement toxique... et pourtant l'idée de partir est plus effrayante que l'idée de souffrir. Attention d'ailleurs : ce profil attire précisément les partenaires qui exploitent, on y revient plus bas.</li>
 <li><strong>Le couple a mangé tout le reste :</strong> Tes projets, tes passions, tes soirées à toi : tout est passé au second plan, sans décision consciente. Un jour tu réalises que ça fait des mois que tu n'as rien fait qui n'implique pas lui...</li>
@@ -110,7 +110,7 @@ const article: BlogArticleData = {
         {
           id: 'faq-les-hommes-aussi',
           title: "Les hommes sont-ils concernés aussi ?",
-          content: `<p>Complètement, et probablement plus qu'on le croit : ils consultent moins, en parlent moins, et leurs symptômes prennent parfois d'autres formes, jalousie de contrôle, colère, ou hyper-investissement dans le couple. Le sujet mérite son propre décryptage, c'est ce qu'on fait dans la <a href="/blog/dependance-affective-chez-l-homme/">dépendance affective chez l'homme</a>.</p>
+          content: `<p>Complètement, et probablement plus qu'on le croit : ils consultent moins, en parlent moins, et leurs symptômes prennent parfois d'autres formes, jalousie de contrôle, colère, ou hyper-investissement dans le couple. Le sujet a ses codes à lui, et on les détaille dans la <a href="/blog/dependance-affective-chez-l-homme/">dépendance affective chez l'homme</a>.</p>
 <a href="/blog/dependance-affective/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Dépendance affective : quand aimer devient un besoin vital</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
         },
       ],

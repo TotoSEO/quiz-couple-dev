@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'pourquoi-ca-marche',
       title: "Pourquoi 36 questions peuvent créer de l'intimité",
-      content: `<p>Le secret ne tient pas dans les questions elles-mêmes, il tient dans leur ARCHITECTURE. Aron a construit sa liste sur un principe simple : l'intimité naît de l'auto-dévoilement réciproque et progressif. Traduction : je te montre quelque chose de moi, tu me montres quelque chose de toi, et on monte d'un cran à chaque échange...</p>
+      content: `<p>Le secret n'est pas dans les questions elles-mêmes : il est dans leur ARCHITECTURE. Aron a construit sa liste sur un principe simple : l'intimité naît de l'auto-dévoilement réciproque et progressif. Traduction : je te montre quelque chose de moi, tu me montres quelque chose de toi, et on monte d'un cran à chaque échange...</p>
 <p>C'est exactement ce qui se passe naturellement quand deux personnes tombent amoureuses, sauf que ça prend des semaines. Le protocole compresse le processus en 90 minutes, en forçant deux choses que la conversation ordinaire évite : la <strong>réciprocité stricte</strong> (les deux répondent à tout, pas d'interviewer et d'interviewé) et la <strong>gradation</strong> (impossible de sauter aux confidences profondes sans être passé par les paliers).</p>
 <p>Et les quatre minutes de regard, alors ? Elles ne sont pas décoratives : soutenir un regard, c'est de la vulnérabilité pure, sans les mots pour se cacher. Après 36 questions d'échauffement, ces quatre minutes-là scellent quelque chose... La plupart des gens qui l'ont fait en parlent encore des années après.</p>
 <div><table><thead><tr><th>La série</th><th>Son rôle dans le protocole</th></tr></thead><tbody>
@@ -111,7 +111,7 @@ const article: BlogArticleData = {
 <p>Reste la question d'après, celle que tout le monde se pose sur le trajet du retour : ce qu'on a ressenti, c'était l'ambiance... ou le début de quelque chose ?</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Après les 36 questions... vous êtes compatibles à combien ?</p>
-<p class="blog-cta-texte">L'expérience crée la proximité ; la compatibilité, elle, se mesure. Une série de questions croise vos visions, vos rythmes et vos valeurs, et vous dit où votre duo est solide... et où ça frottera.</p>
+<p class="blog-cta-texte">L'expérience crée la proximité, mais la compatibilité se mesure. Une série de questions croise vos visions, vos rythmes et vos valeurs, et vous dit où votre duo est solide... et où ça frottera.</p>
 <a class="blog-cta-btn" href="/test-compatibilite-amoureuse/">Mesurer notre compatibilité</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; À faire à deux</p>
 </div>

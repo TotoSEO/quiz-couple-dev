@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Avec un pervers narcissique, la rupture n'est pas la fin de l'histoire. C'est un chapitre à part entière... et celui qui se prépare le plus.",
   introduction: `<p>Quitter quelqu'un, c'est déjà difficile. Quitter un pervers narcissique, c'est un exercice à part : une rupture où l'autre ne te laisse pas partir, où les larmes succèdent aux menaces, où l'homme des débuts réapparaît pile au bon moment... et où tu peux te retrouver, trois semaines plus tard, revenue sans trop savoir comment.</p>
-<p>Il faut le dire sans détour : <strong>la plupart des victimes ne partent pas une fois. Elles partent plusieurs fois, parce que personne ne les avait prévenues de ce qui se passe APRÈS l'annonce.</strong> Ce n'est pas une question de volonté. C'est une question de préparation.</p>
-<p>Alors préparons. Ce qui se joue avant la rupture, pendant, et surtout après, parce que c'est après que tout se décide. Si tu lis ça en pleine hésitation, garde une chose en tête : tu n'as pas à être sûre à 100 % pour te préparer. Se préparer n'engage à rien... et ça change tout le jour où tu décides.</p>`,
+<p>Il faut le dire sans détour : <strong>la plupart des victimes ne partent pas une fois. Elles partent plusieurs fois, parce que personne ne les avait prévenues de ce qui se passe APRÈS l'annonce.</strong> Ce n'est pas une question de volonté, c'est une question de préparation.</p>
+<p>Alors préparons, en regardant ce qui se joue avant la rupture, pendant, et surtout après, parce que c'est après que tout se décide. Si tu lis ça en pleine hésitation, garde une chose en tête : tu n'as pas à être sûre à 100 % pour te préparer. Se préparer n'engage à rien... et ça change tout le jour où tu décides.</p>`,
   quickSummary: [
     "Une rupture avec un pervers narcissique se prépare en silence, avant l'annonce.",
     "L'annonce idéale : courte, factuelle, sans négociation... et sans espoir de « bonne fin ».",
@@ -48,8 +48,8 @@ const article: BlogArticleData = {
       id: 'pendant-l-annonce',
       title: "Pendant : l'annonce, version courte",
       content: `<p>Oublie la grande explication. Tu ne lui feras pas comprendre, tu ne lui feras pas admettre, tu n'auras pas la conversation de clôture des films... Chercher une « bonne fin » avec un pervers narcissique, c'est lui offrir une dernière table de négociation, et il est bien meilleur que toi à ce jeu-là.</p>
-<p>La formule qui marche tient en trois points : <strong>courte, factuelle, fermée.</strong> « J'ai pris ma décision, c'est terminé, elle n'est pas négociable. » Pas de liste de reproches, elle sera contestée point par point. Pas de « j'ai besoin de temps », il entendra « négociable ». Pas de justifications... elles sont des prises.</p>
-<p>Et prépare-toi à la séquence qui suit l'annonce, parce qu'elle est d'une prévisibilité totale : les larmes et les promesses d'abord, la colère ensuite, la culpabilisation en troisième (« tu détruis tout », « après tout ce qu'on a vécu »)... et parfois les menaces. Ce n'est pas du chagrin qui s'exprime, c'est un système qui teste toutes les portes, dans l'ordre. Ces <a href="/blog/manipulateur-narcissique/">réactions types du manipulateur</a> sont d'une prévisibilité remarquable... et les connaître à l'avance leur enlève l'essentiel de leur pouvoir.</p>`,
+<p>La formule qui marche est <strong>courte, factuelle, fermée.</strong> « J'ai pris ma décision, c'est terminé, elle n'est pas négociable. » Pas de liste de reproches, elle sera contestée point par point. Pas de « j'ai besoin de temps », il entendra « négociable ». Pas de justifications non plus... chacune lui donne une prise pour relancer la discussion.</p>
+<p>Et prépare-toi à la séquence qui suit l'annonce, parce qu'elle est d'une prévisibilité totale : les larmes et les promesses d'abord, la colère ensuite, la culpabilisation en troisième (« tu détruis tout », « après tout ce qu'on a vécu »)... et parfois les menaces. Ça ressemble à du chagrin, mais c'est surtout un système qui teste toutes les portes, dans l'ordre. Ces <a href="/blog/manipulateur-narcissique/">réactions types du manipulateur</a> se répètent d'une histoire à l'autre... et les connaître à l'avance leur enlève l'essentiel de leur pouvoir.</p>`,
     },
     {
       id: 'apres-la-tempete',
@@ -69,7 +69,7 @@ const article: BlogArticleData = {
         {
           id: 'acte-3-les-retours-cycliques',
           title: "Acte 3 : les retours cycliques",
-          content: `<p>Silence... puis réapparition. Un anniversaire, un « je passais par là », un message anodin à 23 h. Le hoovering, littéralement « l'aspirateur » : il revient vérifier si la porte rouvre. Et remarque le timing : presque toujours quand tu commences à aller mieux. Ce n'est pas un hasard, c'est un radar.</p>`,
+          content: `<p>Silence... puis réapparition. Un anniversaire, un « je passais par là », un message anodin à 23 h. Le hoovering, littéralement « l'aspirateur » : il revient vérifier si la porte rouvre. Et remarque le timing : presque toujours quand tu commences à aller mieux. Ce n'est pas un hasard : il a une sorte de radar pour ça.</p>`,
         },
       ],
     },
@@ -81,13 +81,13 @@ const article: BlogArticleData = {
         {
           id: 'le-retour-vers-les-anciennes',
           title: "Le retour vers les anciennes",
-          content: `<p>Un pervers narcissique ne solde jamais vraiment ses histoires : il maintient un vivier. Des ex « restées en bons termes », des « amies » ambiguës, des réapparitions périodiques... Chaque ancienne relation est une source de carburant potentielle, à réactiver en cas de pénurie. Si tu apprends qu'il est retourné voir une ex : ce n'est pas qu'elle était mieux. C'est qu'elle a répondu.</p>`,
+          content: `<p>Un pervers narcissique ne solde jamais vraiment ses histoires : il maintient un vivier. Des ex « restées en bons termes », des « amies » ambiguës, des réapparitions périodiques... Chaque ancienne relation est une source de carburant potentielle, à réactiver en cas de pénurie. Si tu apprends qu'il est retourné voir une ex, ce n'est pas qu'elle était mieux : c'est juste qu'elle a répondu.</p>`,
         },
         {
           id: 'le-remplacement-eclair',
           title: "Le remplacement éclair",
-          content: `<p>Trois semaines après votre rupture, le voilà en couple, affiché, rayonnant, « enfin heureux »... Douloureux à voir, et pourtant c'est une signature, pas une preuve d'amour : il lui faut un miroir en permanence, n'importe lequel. La nouvelle n'a pas gagné un prince. Elle vient d'entrer dans la phase d'idéalisation du même cycle que toi... et tu sais exactement ce qui l'attend.</p>
-<p>Dans les deux cas, la leçon est la même : <strong>rien de tout ça ne parle de ta valeur.</strong> Le casting change, le système reste.</p>`,
+          content: `<p>Trois semaines après votre rupture, le voilà en couple, affiché, rayonnant, « enfin heureux »... Douloureux à voir, et pourtant c'est une signature, pas une preuve d'amour : il lui faut un miroir en permanence, n'importe lequel. La nouvelle n'a pas gagné un prince : elle vient d'entrer dans la phase d'idéalisation du même cycle que toi... et tu sais exactement ce qui l'attend.</p>
+<p>Dans les deux cas, la leçon est la même : <strong>rien de tout ça ne parle de ta valeur.</strong> Les visages changent, mais le système ne change pas.</p>`,
         },
       ],
     },
@@ -96,7 +96,7 @@ const article: BlogArticleData = {
       title: "Le no contact : les règles qui font qu'il tient",
       content: `<p>Le no contact, coupure totale des canaux, est l'outil le plus efficace qui existe face à ce profil... à condition de le traiter pour ce qu'il est : un sevrage, pas un test de volonté.</p>
 <ul>
-<li><strong>Total, sinon rien :</strong> Blocage partout : téléphone, réseaux, mail. Un canal « au cas où » n'est pas une prudence, c'est une porte entrouverte... et il ne lui en faut qu'une.</li>
+<li><strong>Total, sinon rien :</strong> Blocage partout : téléphone, réseaux, mail. Un canal gardé « au cas où », c'est une porte entrouverte... et il ne lui en faut qu'une.</li>
 <li><strong>Préviens ton entourage :</strong> Les intermédiaires sont son plan B favori : « dis-lui juste que... ». Tes proches doivent savoir qu'ils ne transmettent rien, dans aucun sens.</li>
 <li><strong>Prépare la rechute d'envie :</strong> Il y aura des soirs où tu voudras juste « savoir comment il va ». C'est le manque qui parle, pas ton jugement. Relis ta liste factuelle, appelle ton appui... et laisse passer la vague, elle passe.</li>
 <li><strong>Cas particulier : enfants ou obligations communes.</strong> Le no contact devient un « contact minimal » : écrit, factuel, limité au strict nécessaire, idéalement sur un seul canal traçable. Tout le reste des règles s'applique.</li>

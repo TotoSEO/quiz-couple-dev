@@ -51,7 +51,7 @@ const article: BlogArticleData = {
         {
           id: 'rilevatore-2-cio-che-dai',
           title: "Rilevatore n. 2: ciò che dai spontaneamente",
-          content: `<p>Per impostazione predefinita offriamo ciò che vorremmo ricevere. Chi fa complimenti in continuazione parla «parole». Chi organizza weekend parla «tempo». Chi ripara, prepara, gestisce, parla «servizio». Guarda cosa ti dà di più il tuo partner: non è quello che crede che tu voglia. È la SUA lingua madre che ti sta parlando... ed è già una dichiarazione.</p>
+          content: `<p>Per impostazione predefinita offriamo ciò che vorremmo ricevere. Chi fa complimenti in continuazione parla «parole». Chi organizza weekend parla «tempo». Chi ripara, prepara, gestisce, parla «servizio». Guarda cosa ti dà di più il tuo partner: non è quello che crede che tu voglia, è la SUA lingua madre che ti sta parlando... ed è già una dichiarazione.</p>
 <p>Fate l'esercizio per voi due, adesso, mentalmente: la tua top 2, la sua top 2. Se non avete nessun linguaggio in comune, probabilmente hai appena capito dieci anni di equivoci! E se vuoi una misura più serena dell'intuizione, il <a href="/it/test-linguaggio-amore-coppia/">test dei linguaggi dell'amore</a> stabilisce il tuo profilo completo, linguaggio per linguaggio... da fare ciascuno per conto proprio, ovviamente.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 L'equivoco più frequente delle coppie</p>
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
       id: 'i-limiti-del-concetto',
       title: "I limiti del concetto (perché ne ha)",
       content: `<p>Siamo completi: i 5 linguaggi sono uno strumento formidabile... e non una scienza esatta. Il concetto viene dalla consulenza coniugale, non dalla ricerca accademica, e gli studi recenti sfumano due punti: i «linguaggi» non sono categorie stagne (tutti hanno bisogno un po' di tutti e cinque, e la gerarchia si muove secondo i periodi)... e parlare la lingua dell'altro migliora le coppie, sì, ma non più che essere globalmente attenti ai suoi bisogni. In altre parole: la magia non sta nella tipologia, sta nell'attenzione.</p>
-<p>E un avvertimento che conta: i linguaggi dell'amore spiegano gli equivoci tra persone in buona fede... non scusano MAI gli squilibri di fondo. «I servizi non sono il mio linguaggio» non è un motivo per non toccare mai una pentola! E se tu dai in tutte le lingue mentre di fronte non arriva niente in nessuna... non è più un problema di traduzione. È un problema di investimento, e si guarda in faccia.</p>
+<p>E un avvertimento che conta: i linguaggi dell'amore spiegano gli equivoci tra persone in buona fede... non scusano MAI gli squilibri di fondo. «I servizi non sono il mio linguaggio» non è un motivo per non toccare mai una pentola! E se tu dai in tutte le lingue mentre di fronte non arriva niente in nessuna... non è più un problema di traduzione, è un problema di investimento, e si guarda in faccia.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Scoprite i vostri due linguaggi, stasera</p>
 <p class="blog-cta-texte">Il test stabilisce il tuo profilo completo sui cinque linguaggi, con il tuo dominante e il tuo punto cieco. Fatelo ciascuno per conto proprio, confrontate... e regalatevi la conversazione più utile del mese.</p>

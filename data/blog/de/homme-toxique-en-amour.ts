@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Zwischen dem Ungeschickten, der sich ändern kann, und dem Manipulator, der es nicht wird, liegt eine ganze Bandbreite... und man schützt sich nicht bei allen gleich.",
   introduction: `<p>Seit «toxisch» das Wort der Stunde ist, wird alles darunter einsortiert: der Eifersüchtige, der Distanzierte, der Cholerische, der Lügner. Und das ist ein echtes Problem, denn diese Männer ähneln sich nicht. Manche schaden aus Unreife, ohne es zu wollen, und können sich ändern. Andere schaden aus ihrem Funktionieren heraus und werden sich nicht ändern. <strong>Beide zu verwechseln heißt, entweder vor einem Mann zu fliehen, der hätte erwachsen werden können... oder jahrelang bei einem zu bleiben, der es nie wird.</strong></p>
-<p>Dieser Artikel sortiert also. Sechs Profile des toxischen Manns in der Liebe, vom am wenigsten schweren zum schwersten: was jeder konkret anrichtet, woran du ihn erkennst... und vor allem, für jeden, die Antwort auf DIE Frage: Kann dieser sich ändern?</p>
+<p>Sortieren wir also: sechs Profile des toxischen Manns in der Liebe, vom am wenigsten schweren zum schwersten, jeweils mit dem, was er konkret anrichtet, woran du ihn erkennst... und vor allem mit der Antwort auf DIE Frage: Kann dieser sich ändern?</p>
 <p>Eine Voraussetzung allerdings, und sie zählt: Ein Profil beurteilt man über die Dauer, nicht über eine schlechte Phase. Jeder Mann kann in einem schwierigen Jahr sechs Monate anstrengend sein. Hier reden wir von eingespielten Mustern, die sich wiederholen und dich etwas kosten. Diese Wiederholung macht die Toxizität, wie wir bei den <a href="/de/blog/toxische-beziehung-anzeichen/">Anzeichen einer toxischen Beziehung</a> festgehalten haben.</p>`,
   quickSummary: [
     "«Toxisch» deckt sehr unterschiedliche Profile ab... die man nicht gleich handhabt.",
@@ -39,7 +39,7 @@ const article: BlogArticleData = {
     {
       id: 'profil-3-der-eifersuechtige',
       title: "Profil 3: der Eifersüchtige, der überwacht",
-      content: `<p>Am Anfang war es fast schmeichelhaft. Dann wurden aus Fragen Kontrollen, aus Kontrollen Vorwürfe, und schon schickst du Fotos von deinem Abend, «um ihn zu beruhigen»... Die Eifersucht dieses Profils ist keine Emotion, die durch ihn hindurchgeht, sie ist ein System, das sich einrichtet und mit jedem Zugeständnis wächst.</p>
+      content: `<p>Am Anfang war es fast schmeichelhaft. Dann wurden aus Fragen Kontrollen, aus Kontrollen Vorwürfe, und schon schickst du Fotos von deinem Abend, «um ihn zu beruhigen»... Die Eifersucht dieses Profils ist nicht bloß eine Emotion, die vorbeizieht: Sie ist ein System, das sich einrichtet und mit jedem Zugeständnis wächst.</p>
 <p><strong>Was das mit dir macht:</strong> Freiheit unter Bedingungen. Deine Kleidung, deine Freunde, deine Uhrzeiten werden zu Themen... und du zensierst dich immer mehr, um Szenen zu vermeiden.</p>
 <p><strong>Kann er sich ändern?</strong> Nur wenn er anerkennt, dass das Problem bei ihm liegt, nicht in deinem Verhalten. Ein Eifersüchtiger, der sagt «hilf mir, ich weiß, dass es irrational ist», kann daran arbeiten, oft an einer <a href="/de/blog/emotionale-abhaengigkeit-bei-maennern/">männlichen emotionalen Abhängigkeit</a>, die sich nicht so nennt. Ein Eifersüchtiger, der sagt «ändere dich, dann bin ich weniger eifersüchtig», wird sich nicht ändern: Er hat dich schon zur Verantwortlichen für sein Problem ernannt.</p>`,
     },
@@ -53,7 +53,7 @@ const article: BlogArticleData = {
     {
       id: 'profil-5-der-abwerter',
       title: "Profil 5: der sanfte Abwerter",
-      content: `<p>Er schreit nie, er beleidigt dich nicht... er feilt. Eine kleine Bemerkung zu deinem Outfit, ein Witz über deine Ambitionen, ein «wie süß» zu deinem Projekt, ein betontes Schweigen, wenn du in Gesellschaft glänzt. Einzeln genommen ist jede Spitze als Vorwurf nicht haltbar («ich habe doch Spaß gemacht!»)... angehäuft leisten sie bemerkenswerte Untergrabungsarbeit.</p>
+      content: `<p>Er schreit nie, er beleidigt dich nicht... er feilt an dir, Stück für Stück. Eine kleine Bemerkung zu deinem Outfit, ein Witz über deine Ambitionen, ein «wie süß» zu deinem Projekt, ein betontes Schweigen, wenn du in Gesellschaft glänzt. Einzeln genommen ist jede Spitze als Vorwurf nicht haltbar («ich habe doch Spaß gemacht!»)... angehäuft leisten sie bemerkenswerte Untergrabungsarbeit.</p>
 <p><strong>Was das mit dir macht:</strong> Ein Selbstwert, der ohne erkennbare Ursache dahinschmilzt. Du findest dich weniger lustig, weniger fähig, weniger interessant als früher... und bringst es nicht mit ihm in Verbindung, da «er ja nichts Schlimmes tut».</p>
 <p><strong>Kann er sich ändern?</strong> Der Test ist einfach, und du kennst die Methode inzwischen: Benenne das Verhalten, einmal, ruhig, mit zwei genauen Beispielen. Ein Ungeschickter fällt aus allen Wolken und korrigiert sich, zumindest teilweise. Ein Abwerter im Kern dreht die Szene um: Du bist «zu empfindlich», du «suchst Probleme»... Diese Umkehr ist seine Antwort. Und sie ist endgültig.</p>`,
     },

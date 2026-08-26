@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Gaslighting doesn't lie to you about the facts. It lies to you about you: your memory, your perception, your sanity. That's what makes it the most corrosive manipulation there is.",
   introduction: `<p>You saw the scene. You were there, you heard the words, you could repeat them... And yet, opposite you, perfect composure: «I never said that». Not a hesitation. So you check in your head, once, twice... and a small crack opens: what if it was me?</p>
-<p>That crack has a name: gaslighting. <strong>It isn't a lie about the facts, it's an attack on the measuring instrument: you.</strong> Your memory, your perception, your stability... Repeated long enough, this manipulation produces a result of its own kind: a victim who can no longer trust herself, and who therefore depends on her manipulator to know what is real.</p>
+<p>That crack has a name: gaslighting. <strong>It isn't a lie about the facts: it's an attack on the measuring instrument, in other words you.</strong> Your memory, your perception, your stability... Repeated long enough, this manipulation produces a result of its own kind: a victim who can no longer trust herself, and who therefore depends on her manipulator to know what is real.</p>
 <p>The word has been everywhere for a few years, often misused, so let's put some precision back: where the term comes from, how the mechanism works exactly, how to tell it apart from a simple disagreement about memories... and above all how to find your footing when you're in it. Because people do get out, and better: they get out with a built-in detector.</p>`,
   quickSummary: [
     "Gaslighting attacks your perception, not the facts: it's you being contested, not the scene.",
@@ -26,13 +26,13 @@ const article: BlogArticleData = {
       id: 'where-the-word-comes-from',
       title: "Where the word comes from (and why it's so apt)",
       content: `<p>The term comes from a 1944 film, «Gaslight», with Ingrid Bergman. The plot: a husband dims the gas lamps in the house... then assures his wife that the light hasn't changed, that it's her eyes that are failing. Detail by detail, he moves objects, denies sounds, rewrites scenes, until he convinces her she's losing her mind.</p>
-<p>It's all there already: the falsification of reality, the calm denial, and above all THE signature of gaslighting, which sets it apart from every other lie... <strong>the aim isn't to make you believe something false, but to make you doubt your ability to know.</strong> A liar wants to win a point. A gaslighter wants to win the referee.</p>
+<p>It's all there already: the falsification of reality, the calm denial, and above all THE signature of gaslighting, which sets it apart from every other lie... <strong>the aim isn't to make you believe something false, but to make you doubt your ability to know.</strong> A liar wants to win a point in the discussion; a gaslighter wants to win the referee, meaning your judgement.</p>
 <p>The phenomenon is now documented by psychology and recognised as a form of psychological abuse. Some describe it neatly as «cognitive hijacking». That's exactly it: a hijacking, of your own judgement.</p>`,
     },
     {
       id: 'the-three-stage-mechanism',
       title: "The mechanism, in three stages",
-      content: `<p>Gaslighting never arrives all at once, it escalates in steps. Here they are in order, and you'll see the progression is logical... it's an escalation of the target.</p>`,
+      content: `<p>Gaslighting never arrives all at once, it escalates in steps. Here they are in order, and you'll see the progression is logical... the target moves up a step each time.</p>`,
       subsections: [
         {
           id: 'stage-1-denying-the-facts',

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "The start of a relationship is the only moment when you could ask anything... and the moment when you dare ask nothing. Let's fix that.",
   introduction: `<p>Here's the paradox of early relationships: it's THE moment when the right questions would change everything, and it's the moment when we carefully avoid them, for fear of looking intense, of skipping a stage, of breaking the magic. So we move forward blind, all smiles, discovering the important information by accident, three months too late.</p>
-<p><strong>Asking questions early in a relationship isn't a lack of lightness. It's avoiding building with your eyes shut.</strong> It's all in the pacing: there are the first-month questions, the third-month ones... and the ones that can wait, because everything has its moment.</p>
+<p><strong>Asking questions early in a relationship isn't a lack of lightness, it's avoiding building with your eyes shut.</strong> It's all in the pacing: there are the first-month questions, the third-month ones... and the ones that can wait, because everything has its moment.</p>
 <p>Here are 60 deliberately paced questions, from the lightest to the most committing, plus a bonus list of the ones it's better NOT to ask straight away. Because at the start of a story, knowing when to stay quiet is sometimes as useful as knowing what to ask.</p>`,
   quickSummary: [
     "60 questions paced by stage: after the first dates, then over the following weeks.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'after-the-first-dates',
       title: "After the first dates: getting to know each other (1-15)",
-      content: `<p>At this stage there's one mission: finding out who this person really is, beyond the character of the first few dates. Lightness compulsory, depth optional.</p>
+      content: `<p>At this stage there's one mission: finding out who this person really is, beyond the character of the first few dates. Lightness is compulsory, and depth stays optional.</p>
 <ol>
 <li>What do you do when you have a day entirely to yourself?</li>
 <li>What's your natural rhythm: going out or staying in?</li>
@@ -110,7 +110,7 @@ const article: BlogArticleData = {
     {
       id: 'not-to-ask-too-early',
       title: "Bonus: the 8 questions NOT to ask too early (53-60)",
-      content: `<p>Yes, they count among the 60... because knowing how to hold them back is an early-relationship skill in its own right! Each has its hour. Too early, it weighs everything down; at the right moment, it builds.</p>
+      content: `<p>Yes, they count among the 60... because knowing how to hold them back is an early-relationship skill in its own right! Each has its hour. Asked too early, it weighs the moment down; asked at the right time, it moves things forward.</p>
 <ol start="53">
 <li><strong>«What was the problem with your ex?»</strong> Too early, you get either a prosecution case or an awkward silence. Romantic history arrives on its own, once trust is there.</li>
 <li><strong>«Do you love me?»</strong> Asked before it's felt, it forces an answer... and a forced answer is worth nothing. Watch the gestures instead, they speak earlier than words.</li>

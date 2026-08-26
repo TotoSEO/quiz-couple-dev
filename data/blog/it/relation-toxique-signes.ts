@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "«Tossica», la parola è ovunque, al punto da non dire più niente. Eppure la vera relazione tossica ha segnali precisi... e una domanda centrale: si può riparare?",
   introduction: `<p>«Relazione tossica»... La parola è talmente ovunque che serve per tutto: un litigio un po' forte, un ex rancoroso, un disaccordo sulle vacanze, ecco, tossica! Risultato: quando ti poni DAVVERO la domanda sulla tua relazione, non sai più cosa pensare. È grave? È normale? Sono io?</p>
-<p>Allora poniamo il criterio vero, quello che rimette ordine: <strong>una relazione non è tossica per quello che contiene, è tossica per quello che ti fa.</strong> Litigi ne hanno tutte le coppie. Differenze, periodi grigi, parole che scappano: uguale. La domanda non è lì. La domanda è: in che stato ti mette questa relazione, settimana dopo settimana?</p>
-<p>Vediamolo con calma: i 7 segnali affidabili, la differenza tra una relazione tossica e un periodo difficile, e soprattutto la domanda che nessuno tratta bene: si ripara o no?</p>`,
+<p>Allora poniamo il criterio vero, quello che rimette ordine: <strong>una relazione è tossica per quello che ti fa, non per quello che contiene.</strong> Litigi ne hanno tutte le coppie. Differenze, periodi grigi, parole che scappano: uguale. La domanda non è lì. La domanda è: in che stato ti mette questa relazione, settimana dopo settimana?</p>
+<p>Vediamolo con calma, fino alla domanda che conta di più: si ripara o no?</p>`,
   quickSummary: [
     "Il criterio centrale: non cosa contiene la relazione, ma cosa ti fa diventare.",
     "I 7 segnali affidabili si misurano nel tempo, non su una brutta settimana.",
@@ -71,12 +71,12 @@ const article: BlogArticleData = {
 </ul>
 </div>
 </div>
-<p>In una frase: <strong>un periodo difficile sfianca, una relazione tossica trasforma.</strong> Da un periodo difficile si esce stanche ma intere. Da una relazione tossica si esce dovendo ricordare chi si era prima.</p>`,
+<p>La differenza, in fondo: <strong>un periodo difficile sfianca, una relazione tossica trasforma.</strong> Da un periodo difficile si esce stanche ma intere. Da una relazione tossica si esce dovendo ricordare chi si era prima.</p>`,
     },
     {
       id: 'tossica-non-vuol-dire-manipolatrice',
       title: "Sfumatura importante: tossica non vuol dire sempre manipolatrice",
-      content: `<p>È il punto che quasi tutti gli articoli mancano, eppure cambia tutto il seguito. Esistono due grandi famiglie di relazioni tossiche, e non hanno la stessa prognosi.</p>`,
+      content: `<p>Esistono due grandi famiglie di relazioni tossiche, non hanno la stessa prognosi, e questa sfumatura cambia tutto il seguito.</p>`,
       subsections: [
         {
           id: 'la-dinamica-tossica-in-due',
@@ -86,7 +86,7 @@ const article: BlogArticleData = {
         {
           id: 'il-controllo-di-uno-solo',
           title: "Il controllo di uno solo",
-          content: `<p>Qui la tossicità non è un incidente del sistema: è il sistema. Controllo, colpevolizzazione, svalutazione, isolamento, organizzati a beneficio di uno solo. Se i segnali che spunti somigliano a quelli del <a href="/it/blog/narcisista-in-amore/">narcisista in amore</a>, o alle <a href="/it/blog/manipolatore-narcisista/">tecniche del manipolatore narcisista</a>, non sei più in una dinamica infelice: sei in una relazione di controllo. E quella non si «ripara» in due, visto che uno dei due non ha alcun interesse a cambiare.</p>
+          content: `<p>Qui la tossicità non ha niente di accidentale: il controllo, la colpevolizzazione, la svalutazione e l'isolamento sono organizzati a beneficio di uno solo. Se i segnali che spunti somigliano a quelli del <a href="/it/blog/narcisista-in-amore/">narcisista in amore</a>, o alle <a href="/it/blog/manipolatore-narcisista/">tecniche del manipolatore narcisista</a>, non sei più in una dinamica infelice: sei in una relazione di controllo. E quella non si «ripara» in due, visto che uno dei due non ha alcun interesse a cambiare.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Come sapere in quale famiglia sei?</p>
 <p>Un indizio affidabile: proponi un cambiamento vero, terapia di coppia, nuove regole, sforzi precisi e con una data. In una dinamica in due, l'altro è sollevato che se ne parli, anche in modo goffo. In una relazione di controllo, la proposta stessa diventa un'aggressione, ed eccoti di nuovo a scusarti.</p>
@@ -97,7 +97,7 @@ const article: BlogArticleData = {
     {
       id: 'si-puo-riparare',
       title: "Si può riparare? E come?",
-      content: `<p>Per la dinamica tossica in due, la risposta è sì, a tre condizioni, non una di meno. Che ENTRAMBI riconoscano il problema, senza rimandarsi il conto intero. Che ENTRAMBI cambino comportamenti concreti, non solo intenzioni. E che esista una cornice, un terzo, una terapia di coppia, regole scritte, perché le abitudini tossiche non si smontano a mani nude. Se ti sembra che queste condizioni ci siano da voi, salvare la coppia diventa un progetto realistico, da portare avanti seriamente, tappa dopo tappa.</p>
+      content: `<p>Per la dinamica tossica in due, la risposta è sì, a tre condizioni, non una di meno: che ENTRAMBI riconoscano il problema, senza rimandarsi il conto intero; che ENTRAMBI cambino comportamenti concreti, non solo intenzioni; e che esista una cornice, un terzo, una terapia di coppia, regole scritte, perché le abitudini tossiche non si smontano a mani nude. Se ti sembra che queste condizioni ci siano da voi, salvare la coppia diventa un progetto realistico, da portare avanti seriamente, tappa dopo tappa.</p>
 <p>Per il controllo di uno solo... non prendiamoci in giro: la riparazione richiederebbe che la persona che beneficia del sistema accetti di smontarlo. Non succede quasi mai, e di sicuro non sotto ultimatum amoroso. In quel caso il lavoro non è più «come riparo la relazione», ma «come mi proteggo, e poi esco». È un altro cantiere, e comincia smettendo di dubitare di quello che vivi.</p>
 <p>In entrambi i casi, una tappa viene prima di tutte le altre: oggettivare. Uscire dalla nebbia delle impressioni, mettere i fatti in chiaro.</p>
 <div class="blog-cta">
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/it/test-relazione-tossica/">Collocare la mia relazione</a>
 <p class="blog-cta-note">Gratis &middot; Senza registrazione &middot; Risultato immediato</p>
 </div>
-<p>E se leggendo tutto questo una vocina ti dice «in realtà lo so già»... ascoltala. Spesso si sa molto prima di osare saperlo. L'elenco delle <a href="/it/blog/cose-non-accettare-coppia/">cose da non accettare mai in una coppia</a> può aiutarti a mettere in chiaro i tuoi limiti, nero su bianco. Spesso è il primo passo che conta.</p>
+<p>E se leggendo tutto questo una vocina ti dice «in realtà lo so già»... ascoltala: spesso si conosce la risposta molto prima di osare dirsela. L'elenco delle <a href="/it/blog/cose-non-accettare-coppia/">cose da non accettare mai in una coppia</a> può aiutarti a mettere in chiaro i tuoi limiti, nero su bianco. Spesso è il primo passo che conta.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Se sei in pericolo, non restare da sola con un articolo</p>
 <p>Minacce, controllo sui tuoi soldi o sui tuoi spostamenti, violenza fisica anche «una volta sola»: in Italia il 1522 è gratuito, anonimo e attivo 24 ore su 24. In caso di pericolo immediato, il 112.</p>

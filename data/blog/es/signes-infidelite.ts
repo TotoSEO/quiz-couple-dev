@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Móvil boca abajo sobre una mesa entre dos personas que se dan la espalda",
   publishedAt: '2026-12-19T12:18:00+01:00',
   author: AUTHORS['thomas'],
-  excerpt: "La duda sobre una infidelidad es una de las peores cosas que se pueden vivir en pareja... y paradójicamente, la mayoría de las listas de «señales» la agravan en vez de aclararla.",
+  excerpt: "La duda sobre una infidelidad es una de las peores cosas que se pueden vivir en pareja... y paradójicamente, las «señales» tomadas una a una la agravan en vez de aclararla.",
   introduction: `<p>Si estás leyendo este artículo, algo te ha puesto en alerta. Un cambio de costumbres, un móvil vuelto intocable, una distancia nueva... o solo una intuición, esa cosa sorda que se niega a callarse. Y desde entonces oscilas entre dos vergüenzas: la de sospechar sin pruebas y la de no querer ver.</p>
-<p>Así que pongamos primero un marco honesto, porque el tema lo merece: <strong>ninguna señal aislada prueba una infidelidad. Ninguna.</strong> Las listas de «15 señales de que te engaña» fabrican sobre todo angustia: cada señal tomada por separado tiene diez explicaciones inocentes. Lo que cuenta es el CONJUNTO: varios cambios, simultáneos, duraderos, sin explicación coherente.</p>
-<p>Este artículo separa el grano de la paja en tres tiempos: las señales que pesan de verdad, las que se citan en todas partes y no prueban nada... y sobre todo, qué HACER con la duda, porque ella es el verdadero veneno. Pasar meses en la incertidumbre daña más que una respuesta, sea cual sea.</p>`,
+<p>Así que pongamos primero un marco honesto, porque el tema lo merece: <strong>ninguna señal aislada prueba una infidelidad. Ninguna.</strong> Tomadas una a una, las «señales» fabrican sobre todo angustia: cada una tiene diez explicaciones inocentes. Lo que cuenta es el CONJUNTO: varios cambios, simultáneos, duraderos, sin explicación coherente.</p>
+<p>Vamos a separar el grano de la paja en tres tiempos: las señales que pesan de verdad, las que se citan en todas partes y no prueban nada... y sobre todo, qué HACER con la duda, porque ella es el verdadero veneno. Pasar meses en la incertidumbre daña más que una respuesta, sea cual sea.</p>`,
   quickSummary: [
     "Ninguna señal aislada prueba nada: es el conjunto de cambios simultáneos el que habla.",
     "Las señales pesadas: el móvil convertido en caja fuerte, los bloques de agenda difusos, la distancia emocional nueva.",
@@ -38,13 +38,13 @@ const article: BlogArticleData = {
     },
     {
       id: 'las-falsas-senales',
-      title: "Las falsas señales que todas las listas copian",
-      content: `<p>Ahora la selección inversa, porque estas «señales» citadas en todas partes hacen destrozos en parejas perfectamente fieles.</p>`,
+      title: "Las falsas señales más extendidas",
+      content: `<p>Ahora la selección inversa, porque estas «señales» tan extendidas hacen destrozos en parejas perfectamente fieles.</p>`,
       subsections: [
         {
           id: 'el-cambio-de-look',
           title: "El cambio de look",
-          content: `<p>Deporte nuevo, corte nuevo, ropa cuidada... ¡La mitad de las listas lo convierten en indicio de adulterio! En realidad es antes que nada la señal de alguien que se reapropia de su imagen: una edad redonda, un ponerse las pilas, unas ganas de gustar... incluso a ti, por cierto. Por separado: nada.</p>`,
+          content: `<p>Deporte nuevo, corte nuevo, ropa cuidada... ¡A menudo se convierte en indicio de adulterio! En realidad es antes que nada la señal de alguien que se reapropia de su imagen: una edad redonda, un ponerse las pilas, unas ganas de gustar... incluso a ti, por cierto. Por separado: nada.</p>`,
         },
         {
           id: 'las-horas-extra-y-el-cansancio',
@@ -92,7 +92,7 @@ const article: BlogArticleData = {
           id: 'paso-3-saca-las-consecuencias',
           title: "Paso 3: saca las consecuencias de la respuesta",
           content: `<p>Si las explicaciones se sostienen: el frente pasa a ser la duda misma, tu inseguridad, vuestra comunicación... y es un buen trabajo de pareja. Si la respuesta huye o da la vuelta: todavía no tienes pruebas, pero tienes una información importante sobre la transparencia de tu pareja... y tienes derecho a convertirlo en un tema central. Y si la verdad cae: doloroso, pero recuperas por fin el poder de decidir, que te pertenecía por derecho.</p>
-<p>Una última palabra, quizá la más importante. Sea cual sea el desenlace, recuerda esto: la duda prolongada no es un estado de vida aceptable. Tienes derecho a una relación en la que no necesites ser detective. Ese derecho no depende de lo que tu pareja haya hecho o no. Forma parte del contrato básico. Y si la respuesta que obtienes acaba planteando la cuestión de lo que viene después, la pregunta de si es <a href="/es/blog/dejarlo-o-seguir-pareja/">momento de dejarlo o de seguir</a> merece mirarse de frente... con la misma honestidad.</p>
+<p>Una última palabra, quizá la más importante. Sea cual sea el desenlace, recuerda esto: la duda prolongada no es un estado de vida aceptable. Tienes derecho a una relación en la que no necesites ser detective. Ese derecho no depende de lo que tu pareja haya hecho o no. Forma parte del contrato básico. Y si la respuesta que obtienes acaba planteando la cuestión de lo que viene después, la pregunta de si es <a href="/es/blog/dejarlo-o-seguir-pareja/">momento de dejarlo o de seguir</a> tendrá que mirarse de frente... con la misma honestidad.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Objetivar la duda, antes de la conversación</p>
 <p class="blog-cta-texte">Una serie de preguntas repasa los cambios concretos de tu relación, el conjunto real frente a las impresiones, y te dice si tu alerta es una inquietud fundada o una duda que se autoalimenta.</p>

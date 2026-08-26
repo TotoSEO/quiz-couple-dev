@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Un manipolatore non mente a caso. Pesca da un repertorio, sempre lo stesso. E una volta che conosci il repertorio, qualcosa si rompe nel gioco di prestigio.",
   introduction: `<p>«Sei troppo sensibile.» Quante volte l'hai sentita? E quante volte te ne sei andata chiedendoti se, effettivamente, non stessi esagerando un po'?</p>
-<p>È esattamente per questo che esiste questo articolo. I manipolatori non inventano nulla: pescano da un repertorio, ed è più o meno sempre lo stesso. Frasi brevi, che sembrano innocue, a volte perfino gentili... e che fanno un lavoro molto preciso nella tua testa. Ribaltare la colpa, farti dubitare, farti tacere.</p>
+<p>È esattamente per questo che esiste questo articolo. I manipolatori non inventano nulla: pescano da un repertorio, ed è più o meno sempre lo stesso. Frasi brevi, che sembrano innocue, a volte perfino gentili... e che fanno un lavoro molto preciso nella tua testa: ribaltare la colpa, farti dubitare, farti tacere.</p>
 <p>Facciamo quindi l'unica cosa che le neutralizza davvero: tirarle fuori dal contesto e guardarle una per una. La loro traduzione reale, quello che cercano di produrre in te e cosa puoi rispondere. Ci sono buone probabilità che ne riconosca parecchie lungo la strada... ed è un po' lo scopo.</p>`,
   quickSummary: [
     "Queste frasi non discutono mai quello che hai detto, contestano il tuo diritto di dirlo.",
@@ -27,8 +27,8 @@ const article: BlogArticleData = {
       title: "Perché queste frasi funzionano così bene",
       content: `<p>Prima della lista, due minuti sul meccanismo, perché spiega tutto.</p>
 <p>Quando esprimi un disaccordo o una ferita, ci sono due modi di risponderti. Sulla sostanza: «ok, parliamo di quello che è successo». Oppure sulla cornice: «non sei in condizione di parlarne, esageri, non è il momento»...</p>
-<p>Quasi tutte le frasi da manipolatore giocano sulla cornice. <strong>Non discutono mai quello che dici. Contestano il tuo diritto di dirlo.</strong> Ed è micidiale, perché ti sposta: invece di difendere il tuo argomento, ti ritrovi a difendere la tua legittimità, la tua salute mentale, il tuo tono di voce. L'argomento iniziale, intanto, è sparito. Volevi parlare di un appuntamento dimenticato... e venti minuti dopo ti scusi per come lo hai detto. Gioco fatto.</p>
-<p>Una precisazione importante, però: tutti tiriamo fuori una di queste frasi in una giornata storta. Ciò che segnala un manipolatore non è la frase, è il repertorio. La varietà delle formule, il loro ritorno sistematico, e il fatto che alla fine sia sempre tu a scusarti. Questo funzionamento d'insieme è esattamente quello del <a href="/it/blog/narcisista-in-amore/">narcisista nella coppia</a>: la frase è solo un ingranaggio del sistema.</p>`,
+<p>Quasi tutte le frasi da manipolatore giocano sulla cornice. <strong>Non discutono mai quello che dici. Attaccano il tuo diritto di dirlo, ed è una cosa molto diversa.</strong> Ed è micidiale, perché ti sposta: invece di difendere il tuo argomento, ti ritrovi a difendere la tua legittimità, la tua salute mentale, il tuo tono di voce. L'argomento iniziale, intanto, è sparito. Volevi parlare di un appuntamento dimenticato... e venti minuti dopo ti scusi per come lo hai detto. Gioco fatto.</p>
+<p>Una precisazione importante, però: tutti tiriamo fuori una di queste frasi in una giornata storta. Ciò che segnala un manipolatore è il repertorio: la varietà delle formule, il loro ritorno sistematico, e il fatto che alla fine sia sempre tu a scusarti. Questo funzionamento d'insieme è esattamente quello del <a href="/it/blog/narcisista-in-amore/">narcisista nella coppia</a>: la frase è solo un ingranaggio del sistema.</p>`,
     },
     {
       id: 'ribaltare-la-colpa',
@@ -57,7 +57,7 @@ const article: BlogArticleData = {
 <li><strong>«Lo pensano tutti che esageri.»</strong> Il rinforzo invisibile: un tribunale fantasma, non verificabile, convocato contro di te. Chi sono «tutti»? Non lo saprai mai.</li>
 <li><strong>«Dovresti farti vedere, davvero.»</strong> La più violenta della famiglia. La tua lucidità diventa una patologia. E il giorno in cui ci vai davvero, un bravo professionista ci vede chiaro subito... è proprio per questo che in pratica detesta l'idea.</li>
 </ul>
-<p>Se questo annebbiamento ti parla, la domanda se stai vivendo gaslighting merita un vero passaggio dal <a href="/it/blog/gaslighting-segnali/">gaslighting e i suoi meccanismi</a>, perché non si limita a delle frasi.</p>`,
+<p>Se questo annebbiamento ti parla, prenditi il tempo di capire <a href="/it/blog/gaslighting-segnali/">come si installa il gaslighting</a>, perché non si limita a delle frasi.</p>`,
     },
     {
       id: 'fare-la-vittima',
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
 </ul>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Il dettaglio che tradisce la famiglia n.4</p>
-<p>Queste frasi mirano quasi sempre ai tuoi punti di forza, non alle tue debolezze. Il tuo lavoro, la tua ironia, la tua indipendenza, ciò che ti rende fiera... Un compagno maldestro critica quello che sbagli. Un manipolatore lima quello che ti tiene in piedi.</p>
+<p>Queste frasi mirano quasi sempre ai tuoi punti di forza, non alle tue debolezze. Il tuo lavoro, la tua ironia, la tua indipendenza, ciò che ti rende fiera... Un compagno maldestro critica quello che sbagli. Un manipolatore se la prende con quello che ti tiene in piedi, ed è tutta la differenza.</p>
 </aside>`,
     },
     {
@@ -98,7 +98,7 @@ const article: BlogArticleData = {
 <ul>
 <li><strong>«Non ci torniamo sopra.»</strong> Decreto unilaterale di fine argomento. Il caso è chiuso perché l'ha deciso lui, non perché sia risolto.</li>
 <li><strong>«Calmati.»</strong> Due parole, ed eccoti ufficialmente isterica. Nessuno si è mai calmato sentendosi dire «calmati», e non è nemmeno lo scopo: lo scopo è la constatazione pubblica che stai debordando.</li>
-<li><strong>«Ti ho chiesto scusa, no? Cosa vuoi di più?!»</strong> Il perdono come pratica sbrigata. La scusa non è un ponte verso di te, è una ricevuta che ti viene lanciata.</li>
+<li><strong>«Ti ho chiesto scusa, no? Cosa vuoi di più?!»</strong> Qui il perdono è una pratica sbrigata: chiede scusa per chiudere il fascicolo, non per sistemarlo.</li>
 </ul>
 <p>E per isolarti:</p>
 <ul>
@@ -114,7 +114,7 @@ const article: BlogArticleData = {
       title: "I messaggi del manipolatore: il repertorio in versione scritta",
       content: `<p>Per messaggio il repertorio si adatta, e vale la pena dirne una parola perché lo scritto ha i suoi codici.</p>
 <p>C'è il <strong>silenzio radio</strong>, prima di tutto: tre giorni senza risposta dopo un disaccordo, poi un «mi manchi» alle 23:47, come se niente fosse. Il <strong>papiro colpevolizzante</strong>, poi: quindici righe in cui la tua serata di ieri diventa la prova del tuo egoismo, inviate all'ora in cui non puoi rispondere. Il <strong>messaggio vetrina</strong>, anche: adorabile per iscritto, glaciale dal vivo... perché lo scritto si può mostrare, e lui lo sa.</p>
-<p>E poi c'è il più inquietante: il messaggio gentile che arriva PROPRIO quando cominciavi a stare meglio. Quello non è un caso, è uno strumento di misura. La tua distanza è stata rilevata, la riconquista parte.</p>
+<p>E poi c'è il più inquietante: il messaggio gentile che arriva PROPRIO quando cominciavi a stare meglio. Quello non ha niente di casuale: la tua distanza è stata rilevata, e la riconquista parte.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Non cancellare quei messaggi</p>
 <p>Lo scritto è la tua migliore protezione contro il «non l'ho mai detto». Conserva le conversazioni, fai screenshot datati, tienili fuori dal telefono se puoi. Se un giorno ti servirà vedere chiaro, o dimostrare qualcosa, quelle tracce varranno oro.</p>
@@ -132,7 +132,7 @@ const article: BlogArticleData = {
 <tr><td>«Calmati.»</td><td>Calmarsi scusandosi</td><td>«Sono calma. E aspetto ancora la tua risposta.»</td></tr>
 </tbody></table></div>
 <p>Noterai il principio: frasi brevi, concrete, che rifiutano il terreno proposto. Niente arringhe. L'arringa è esattamente quello che aspetta, perché conferma che il tema era la tua legittimità.</p>
-<p>E sii onesta con te su un punto: se queste repliche scatenano sistematicamente un'escalation, silenzio punitivo o una scenata, non hai più a che fare con maldestrezze comunicative. Hai a che fare con un sistema. Le <a href="/it/blog/manipolatore-narcisista/">tecniche del manipolatore narcisista</a>, i suoi punti deboli e le sue reazioni quando gli si resiste meritano allora di essere conosciute nel dettaglio.</p>
+<p>E sii onesta con te su un punto: se queste repliche scatenano sistematicamente un'escalation, silenzio punitivo o una scenata, non hai più a che fare con maldestrezze comunicative. Hai a che fare con un sistema. A quel punto, tanto vale conoscere nel dettaglio le <a href="/it/blog/manipolatore-narcisista/">tecniche del manipolatore narcisista</a>, i suoi punti deboli e le sue reazioni quando gli si resiste.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Senti queste frasi a casa tua?</p>
 <p class="blog-cta-texte">Venti domande ripercorrono le situazioni concrete di una relazione di controllo, frase per frase, comportamento per comportamento. Il risultato ti dice dove sei, con calma.</p>

@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Liebe und emotionale Abhängigkeit ähneln sich von innen enorm. Dieselbe Intensität, dieselben Dauergedanken... und trotzdem trennt sie alles.",
   introduction: `<p>Es ist eine Frage, die man sich kaum zu stellen wagt, weil sie ein bisschen Angst macht: Liebe ich ihn... oder liebe ich vor allem die Tatsache, dass er da ist? Ist das Liebe, dieses Ding, das mir den Bauch zusammenzieht, wenn er nicht antwortet? Oder etwas anderes?</p>
-<p>Die Verwirrung ist normal, und man muss damit anfangen: <strong>Von innen betrachtet ähneln sich intensive Liebe und emotionale Abhängigkeit sehr.</strong> In beiden Fällen denkst du ununterbrochen an ihn, hasst seine Abwesenheit, fühlst stark. Die Intensität macht den Unterschied nicht. Was den Unterschied macht, ist die Richtung: Liebe trägt dich zu ihm hin, Abhängigkeit lässt dich vor einer Leere fliehen.</p>
-<p>Machen wir das sehr konkret: die 7 Unterschiede, die beides trennen, ein Gedankenexperiment, das mehr wert ist als jede Rede, und ein Wort zum häufigsten Fall, dem, in dem beides zusammen auftritt.</p>`,
+<p>Die Verwirrung ist normal, und man muss damit anfangen: <strong>Von innen betrachtet ähneln sich intensive Liebe und emotionale Abhängigkeit sehr.</strong> In beiden Fällen denkst du ununterbrochen an ihn, hasst seine Abwesenheit, fühlst stark. Der Unterschied liegt woanders, in der Richtung: Liebe trägt dich zu ihm hin, Abhängigkeit lässt dich vor einer Leere fliehen.</p>
+<p>Machen wir das sehr konkret, mit den 7 Unterschieden, die beides trennen, und einem Gedankenexperiment, das mehr wert ist als jede Rede.</p>`,
   quickSummary: [
     "Intensität entscheidet nichts: Liebe und Abhängigkeit können gleich stark sein.",
     "Der echte Unterschied ist die Richtung: Liebe geht zum anderen hin, Abhängigkeit flieht eine Leere.",
@@ -49,12 +49,12 @@ const article: BlogArticleData = {
     {
       id: 'beides-zusammen',
       title: "Der häufigste Fall: beides zugleich",
-      content: `<p>Jetzt die Nuance, die allen Artikeln der Sorte «Liebe ODER Abhängigkeit» fehlt: Im echten Leben ist es fast nie das eine oder das andere. <strong>Man kann jemanden aufrichtig lieben UND ihn auf abhängige Weise lieben.</strong> Die Liebe ist echt, der Partner gut gewählt, gefangen ist die Art zu lieben.</p>
-<p>Woran erkennt man das? Schau, was deine Beziehung verstärkt. Sichere Liebe verstärkt dein Bestes: Du traust dich mehr, lachst mehr, bist mehr du selbst. Abhängige Bindung verstärkt deine Ängste: Du überwachst mehr, entschuldigst dich mehr, schrumpfst. Dieselbe Person, vielleicht dieselbe Liebe, aber zwei entgegengesetzte Richtungen.</p>
+      content: `<p>Jetzt die Nuance, die am meisten zählt: Im echten Leben ist es fast nie das eine oder das andere. <strong>Man kann jemanden aufrichtig lieben UND ihn auf abhängige Weise lieben.</strong> Die Liebe ist echt, der Partner gut gewählt, gefangen ist die Art zu lieben.</p>
+<p>Woran erkennt man das? Schau, was deine Beziehung verstärkt. Sichere Liebe verstärkt dein Bestes: Du traust dich mehr, lachst leichter. Abhängige Bindung verstärkt deine Ängste: Du überwachst alles, entschuldigst dich ständig, und nach und nach schrumpfst du. Dieselbe Person, vielleicht dieselbe Liebe, aber zwei entgegengesetzte Richtungen.</p>
 <p>Und das ist eigentlich eine ausgezeichnete Nachricht. Denn wenn das Problem nicht die Person ist, sondern der Bindungsstil, gibt es nichts zu zerbrechen: Es gibt etwas zu reparieren, bei dir, für dich. Und <a href="/de/blog/emotionale-abhaengigkeit-ueberwinden/">emotionale Abhängigkeit zu überwinden</a> ist ein markierter Weg, Übung für Übung, der sehr gut funktioniert, ohne jemanden zu verlassen.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Und wenn es nur Gewohnheit wäre?</p>
-<p>Es gibt einen dritten Kandidaten, den man vergisst: die Gewohnheit. Weder Angst vor der Leere noch der Schwung zum anderen hin, einfach der Komfort eines Alltags, der läuft. Wenn deine Frage eher «liebe ich ihn noch?» lautet als «warum habe ich solche Angst, ihn zu verlieren?», ist es weniger eine Geschichte von Abhängigkeit als eine Frage von <a href="/de/liebe-oder-gewohnheit-test/">Liebe oder Gewohnheit</a>, und die verdient ihre eigene Antwort.</p>
+<p>Es gibt einen dritten Kandidaten, den man vergisst: die Gewohnheit. Weder Angst vor der Leere noch der Schwung zum anderen hin, einfach der Komfort eines Alltags, der läuft. Wenn deine Frage eher «liebe ich ihn noch?» lautet als «warum habe ich solche Angst, ihn zu verlieren?», ist es weniger eine Geschichte von Abhängigkeit als eine Frage von <a href="/de/liebe-oder-gewohnheit-test/">Liebe oder Gewohnheit</a>, und die hat ihre eigene Antwort.</p>
 </aside>`,
     },
     {

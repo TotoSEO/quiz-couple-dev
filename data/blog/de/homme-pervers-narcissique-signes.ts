@@ -13,11 +13,11 @@ const article: BlogArticleData = {
   excerpt: "Das Problem mit einem narzisstischen Mann ist, dass du die Einzige bist, die sieht, was du siehst. Hier sind die 12 Verhaltensweisen, die ihn am Ende verraten.",
   introduction: `<p>Wenn du «narzisstischer Mann» in eine Suchmaschine tippst, dann nicht aus intellektueller Neugier... Sondern weil ein ganz bestimmter Mann, dein Partner, dein Ex, vielleicht der Vater deiner Kinder, dich alarmiert hat. Und weil etwas nicht zusammenpasst: dieser Mann, den alle verehren, lässt dich hinter verschlossenen Türen etwas erleben, das sich niemand vorstellt.</p>
 <p>Das ist Falle Nummer eins bei diesem Profil. Der Abstand zwischen dem öffentlichen und dem privaten Mann ist so heftig, dass du wie verrückt wirkst, sobald du ihn beschreiben willst. Also hörst du irgendwann auf, ihn zu beschreiben. Und bleibst mit deinen Fragen allein.</p>
-<p>Dieser Artikel geht die 12 typischen Verhaltensweisen eines narzisstischen Mannes durch, in der Reihenfolge, in der sie sich zeigen: zuerst die Figur in Gesellschaft, dann die Mechanik des Anfangs, dann das, was hinter geschlossener Tür passiert... und schließlich, was aus ihm wird, wenn du dich zu wehren beginnst. Du musst übrigens nicht alle 12 abhaken. Was du suchst, ist ein Verlauf. Du wirst schnell merken, ob du ihn wiedererkennst.</p>`,
+<p>Hier sind die 12 typischen Verhaltensweisen eines narzisstischen Mannes, in der Reihenfolge, in der sie auftauchen. Du musst übrigens nicht alle 12 abhaken: Was du suchst, ist ein Verlauf, und du wirst schnell merken, ob du ihn wiedererkennst.</p>`,
   quickSummary: [
-    "Die Signatur ist kein Verhalten, sondern der Abstand: nach außen tadellos, im Inneren zermürbend.",
+    "Die Signatur ist der Abstand zwischen den beiden Männern: nach außen tadellos, im Inneren zermürbend.",
     "Die 12 Anzeichen folgen einem Verlauf: die öffentliche Figur, die strategische Verführung, die installierte Kontrolle, dann die Eskalation.",
-    "Die Hälfte der Anzeichen beschreibt nicht ihn, sondern den Zustand, in den er dich versetzt. Das ist dein bester Detektor.",
+    "Die Hälfte der Anzeichen beschreibt eher den Zustand, in den er dich versetzt, als sein Verhalten. Das ist dein bester Detektor.",
     "Ein einzelnes Verhalten beweist nichts. Wiederholung, Häufung und Richtung schon.",
     "Der eigentliche Test ist dein Widerstand: ein ungeschickter Mann bessert sich, ein Narzisst eskaliert.",
   ],
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'die-12-anzeichen-im-ueberblick',
       title: "Die 12 Anzeichen auf einen Blick",
-      content: `<p>Hier ist die Karte des Artikels. Wenn dich eine Gruppe mehr anspricht als die anderen, geh direkt dorthin.</p>
+      content: `<p>Hier sind die vier Etappen, mit den Anzeichen, die dazugehören. Wenn dich eine Gruppe mehr anspricht als die anderen, geh direkt dorthin.</p>
 <ol class="blog-liste-reperes">
 <li><a href="#in-gesellschaft">In Gesellschaft: die öffentliche Figur (Anzeichen 1 bis 3)</a></li>
 <li><a href="#am-anfang-mit-dir">Am Anfang mit dir: die strategische Verführung (Anzeichen 4 bis 6)</a></li>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
           id: 'im-privaten',
           title: "Im Privaten: die installierte Kontrolle (Anzeichen 7 bis 9)",
           content: `<ol start="7">
-<li><strong>Er zielt auf deine Stärken, nicht auf deine Schwächen:</strong> Das ist kontraintuitiv und doch seine Signatur. Dein Beruf, dein Humor, deine Familie, das, worauf du stolz bist: genau dort landen die Bemerkungen. Eine kritisierte Schwäche kann ein ungeschickter Rat sein. Eine systematisch heruntergeredete Stärke nicht. Das ist eine Abrissstrategie.</li>
+<li><strong>Er zielt auf deine Stärken, nicht auf deine Schwächen:</strong> Das ist kontraintuitiv und doch seine Signatur. Dein Beruf, dein Humor, deine Familie, das, worauf du stolz bist: genau dort landen die Bemerkungen. Eine kritisierte Schwäche kann ein ungeschickter Rat sein. Eine systematisch heruntergeredete Stärke ist nie einer: Das ist eine Abrissstrategie.</li>
 <li><strong>Deine Realität wird ständig neu verhandelt:</strong> Was du gesehen hast, hat er nicht getan. Was er gesagt hat, hast du falsch verstanden. Was du fühlst, übertreibst du... Mit der Zeit zweifelst du so sehr an deinem Gedächtnis, dass du heimlich nachprüfst. Dieses tägliche <a href="/de/blog/gaslighting-anzeichen/">Gaslighting</a> ist das Herz des Systems.</li>
 <li><strong>Deine Welt schrumpft, ganz ohne Verbot:</strong> Er hat dir nie verboten, deine Freundinnen zu sehen. Er hat jede Verabredung nur teuer gemacht: eine Laune vorher, Vorwürfe danach, eine Szene am nächsten Tag. In so einer Lage stehen die Chancen gut, dass du nach ein paar Monaten, ohne genau zu wissen wie, die Rechnung von allein aufmachst... Und genau das war vorgesehen.</li>
 </ol>`,
@@ -85,7 +85,7 @@ const article: BlogArticleData = {
     {
       id: 'was-es-mit-dir-macht',
       title: "Was es mit dir macht, und warum du noch zweifelst",
-      content: `<p>Wenn du den Verlauf wiedererkannt hast, bleibt vermutlich eine Frage: «warum liebe ich ihn dann noch?» Weil das System genau dafür gebaut ist, ganz einfach. Der Wechsel zwischen dem wunderbaren und dem zerstörerischen Mann macht dich nicht klarsichtig, er macht dich süchtig. Es ist derselbe Mechanismus wie beim Glücksspiel, die unvorhersehbare Belohnung...</p>
+      content: `<p>Wenn du den Verlauf wiedererkannt hast, bleibt vermutlich eine Frage: «warum liebe ich ihn dann noch?» Weil das System genau dafür gebaut ist, ganz einfach. Dieser Wechsel zwischen dem wunderbaren und dem zerstörerischen Mann macht süchtig. Es ist derselbe Mechanismus wie beim Glücksspiel, die unvorhersehbare Belohnung...</p>
 <p>Und weil er dir das Zweifeln antrainiert hat. Monate von «du übertreibst» hinterlassen Spuren: im Moment des Schlussfolgerns fragst du dich immer noch, ob nicht doch du dramatisierst.</p>
 <p>Lies die Liste also noch einmal und achte auf ein Detail: die Hälfte der Anzeichen beschreibt nicht sein Verhalten, sondern den Zustand, in den er dich versetzt. Das ist der beste Detektor, den du hast, und er irrt selten. Viele dieser Verhaltensweisen finden sich übrigens in den <a href="/de/blog/red-flags-bei-einem-mann/">Red Flags bei einem Mann</a>, deren vollendetste Ausprägung sie sind... und deren gefährlichste.</p>
 <div class="blog-cta">
@@ -94,7 +94,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/de/narzisstischer-partner-test/">Prüfen, was ich erlebe</a>
 <p class="blog-cta-note">Kostenlos &middot; Ohne Anmeldung &middot; Sofortiges Ergebnis</p>
 </div>
-<p>Ein letztes Wort. Vielleicht hast du diesen Artikel für eine Schwester, eine Freundin, eine Kollegin gelesen... Was du für sie tun kannst, passt in einen Satz: bleib eine Verbindung, die nicht urteilt. Isolation ist die Voraussetzung des Systems. Jeder Mensch, der in ihrem Leben bleibt, ist ein möglicher Ausgang.</p>
+<p>Ein letztes Wort. Vielleicht hast du diesen Artikel für eine Schwester, eine Freundin, eine Kollegin gelesen... Was du für sie tun kannst, beginnt damit: bleib eine Verbindung, die nicht urteilt. Das System funktioniert nur, solange sie isoliert ist. Jeder Mensch, der in ihrem Leben bleibt, ist ein möglicher Ausgang.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Wenn du in Gefahr bist, bleib nicht mit einem Artikel allein</p>
 <p>Drohungen, Kontrolle über dein Geld oder deine Wege, körperliche Gewalt auch «nur einmal»: in Deutschland ist das Hilfetelefon Gewalt gegen Frauen unter 08000 116 016 rund um die Uhr erreichbar, kostenlos und vertraulich. In Österreich die Frauenhelpline 0800 222 555. Bei unmittelbarer Gefahr: 110. Und ein auf psychische Gewalt spezialisierter Psychologe verändert deinen Weg mehr als jede Lektüre. Diese eingeschlossen.</p>

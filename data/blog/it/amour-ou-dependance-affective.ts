@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "L'amore e la dipendenza affettiva si somigliano enormemente visti dall'interno. Stessa intensità, stessi pensieri permanenti... eppure tutto li oppone.",
   introduction: `<p>È una domanda che non si osa troppo farsi, perché fa un po' paura: lo amo lui... o amo soprattutto il fatto che ci sia? È amore, questa cosa che mi stringe lo stomaco quando non risponde? O è altro?</p>
-<p>La confusione è normale, e bisogna cominciare col dirlo: <strong>visti dall'interno, l'amore intenso e la dipendenza affettiva si somigliano molto.</strong> In entrambi i casi pensi a lui di continuo, detesti la sua assenza, senti forte. L'intensità non fa la differenza. A farla è la direzione: l'amore ti porta verso di lui, la dipendenza ti fa fuggire un vuoto.</p>
-<p>Rendiamolo molto concreto: le 7 differenze che distinguono i due, un esperimento mentale che vale più di qualsiasi discorso, e una parola sul caso più frequente, quello in cui i due convivono.</p>`,
+<p>La confusione è normale, e bisogna cominciare col dirlo: <strong>visti dall'interno, l'amore intenso e la dipendenza affettiva si somigliano molto.</strong> In entrambi i casi pensi a lui di continuo, detesti la sua assenza, senti forte. La differenza si gioca altrove, sulla direzione: l'amore ti porta verso di lui, la dipendenza ti fa fuggire un vuoto.</p>
+<p>Rendiamolo molto concreto, con le 7 differenze che distinguono i due e un esperimento mentale che vale più di qualsiasi discorso.</p>`,
   quickSummary: [
     "L'intensità non distingue niente: amore e dipendenza possono essere ugualmente forti.",
     "La vera differenza è la direzione: l'amore va verso l'altro, la dipendenza fugge un vuoto.",
@@ -49,12 +49,12 @@ const article: BlogArticleData = {
     {
       id: 'i-due-convivono',
       title: "Il caso più frequente: entrambi insieme",
-      content: `<p>Ora la sfumatura che manca a tutti gli articoli del genere «amore O dipendenza»: nella vita vera non è quasi mai l'uno o l'altro. <strong>Si può amare sinceramente qualcuno E amarlo in modo dipendente.</strong> L'amore è reale, il partner è scelto bene, è il modo di amare a essere intrappolato.</p>
-<p>Come capirlo? Guarda cosa amplifica la tua relazione. Un amore sicuro amplifica il tuo meglio: osi di più, ridi di più, sei più te stessa. Un attaccamento dipendente amplifica le tue paure: sorvegli di più, ti scusi di più, ti rimpicciolisci. Stessa persona, forse stesso amore, ma due direzioni opposte.</p>
+      content: `<p>Ora la sfumatura che conta di più: nella vita vera non è quasi mai l'uno o l'altro. <strong>Si può amare sinceramente qualcuno E amarlo in modo dipendente.</strong> L'amore è reale, il partner è scelto bene, è il modo di amare a essere intrappolato.</p>
+<p>Come capirlo? Guarda cosa amplifica la tua relazione. Un amore sicuro amplifica il tuo meglio: osi di più, ridi più facilmente. Un attaccamento dipendente amplifica le tue paure: sorvegli tutto, ti scusi di continuo, e a poco a poco ti rimpicciolisci. Stessa persona, forse stesso amore, ma due direzioni opposte.</p>
 <p>Ed è un'ottima notizia, in fondo. Perché se il problema non è la persona ma il modo di attaccamento, allora non c'è niente da rompere: c'è qualcosa da riparare, in te, per te. E <a href="/it/blog/superare-la-dipendenza-affettiva/">superare la dipendenza affettiva</a> è un percorso segnalato, esercizio dopo esercizio, che funziona benissimo senza lasciare nessuno.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 E se fosse solo abitudine?</p>
-<p>Esiste un terzo candidato che si dimentica: l'abitudine. Né la paura del vuoto, né lo slancio verso l'altro, solo il comfort di un quotidiano che gira. Se la tua domanda somiglia più a «lo amo ancora?» che a «perché ho così paura di perderlo?», è meno una storia di dipendenza che una questione di <a href="/it/test-amore-o-abitudine/">amore o abitudine</a>, e quella merita una risposta a parte.</p>
+<p>Esiste un terzo candidato che si dimentica: l'abitudine. Né la paura del vuoto, né lo slancio verso l'altro, solo il comfort di un quotidiano che gira. Se la tua domanda somiglia più a «lo amo ancora?» che a «perché ho così paura di perderlo?», è meno una storia di dipendenza che una questione di <a href="/it/test-amore-o-abitudine/">amore o abitudine</a>, e quella ha una risposta tutta sua.</p>
 </aside>`,
     },
     {

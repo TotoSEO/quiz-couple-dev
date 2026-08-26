@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Couples almost never fail for lack of love. They fail on subjects they had never put on the table.",
-  introduction: `<p>There's a statistic nobody calculates but everybody knows: most major relationship crises are about subjects... both people knew they'd have to discuss one day. Money. Children. In-laws. Sharing the chores. «One day» simply arrived too late, in the middle of a crisis, at the worst possible moment for discussing it calmly.</p>
-<p><strong>Talking about the future has never killed a solid relationship. Not talking about it has killed plenty.</strong> And contrary to what people think, these conversations aren't solemn or heavy... handled well, they're among the most exciting a couple can have!</p>
+  introduction: `<p>There's a statistic nobody calculates but everybody knows: most major relationship crises are about subjects... both people knew they'd have to discuss one day: money, children, in-laws, sharing the chores. «One day» simply arrived too late, in the middle of a crisis, at the worst possible moment for discussing it calmly.</p>
+<p><strong>Talking about the future has never killed a solid relationship, whereas not talking about it has killed plenty.</strong> And contrary to what people think, these conversations aren't solemn or heavy... handled well, they're among the most exciting a couple can have!</p>
 <p>Here are 60 future questions, sorted by major stage: before moving in, before committing for good, before a child, around money, and about your shared dreams. To pick at BEFORE the subjects become urgent, that's the whole point.</p>`,
   quickSummary: [
     "60 questions sorted by stage: moving in, committing, a child, money, dreams.",
@@ -94,7 +94,7 @@ const article: BlogArticleData = {
     {
       id: 'money-and-big-decisions',
       title: "Money and the big decisions (46-55)",
-      content: `<p>The subject nobody talks about at the start and everybody argues about later! Money in a relationship is never about figures... it's about security, freedom and power. So talk about it while everything's fine.</p>
+      content: `<p>The subject nobody talks about at the start and everybody argues about later! Money in a relationship is never just about figures: behind it there's security, freedom and power. So talk about it while everything's fine.</p>
 <ol start="46">
 <li>What's your relationship with money: security, pleasure, anxiety, freedom?</li>
 <li>Joint account, separate accounts, or mixed: your model, and why?</li>
@@ -111,7 +111,7 @@ const article: BlogArticleData = {
     {
       id: 'your-shared-dreams',
       title: "Your shared dreams (56-60)",
-      content: `<p>We finish with the fuel. Because a couple isn't just successful management... it's a direction that makes you want to go. Five questions, the loveliest ones.</p>
+      content: `<p>We finish with the fuel. Because a couple isn't just successful management... it's a direction that makes you want to go. There are five left, the loveliest ones.</p>
 <ol start="56">
 <li>What's the dream we've never said out loud, the two of us?</li>
 <li>If we gave ourselves one completely crazy year, what would it look like?</li>

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Der Beginn einer Beziehung ist der einzige Moment, in dem man alles fragen könnte... und der, in dem man sich nichts zu fragen traut. Reparieren wir das.",
   introduction: `<p>Hier ist das Paradox des Beziehungsanfangs: Es ist DER Moment, in dem die richtigen Fragen alles verändern würden, und es ist der Moment, in dem man sie sorgfältig vermeidet... aus Angst, intensiv zu wirken, eine Etappe zu überspringen, den Zauber zu zerstören. Also geht man blind voran, mit einem Lächeln, und entdeckt die wichtigen Informationen zufällig, drei Monate zu spät.</p>
-<p><strong>Am Beziehungsanfang Fragen zu stellen ist kein Mangel an Leichtigkeit. Es heißt, nicht mit geschlossenen Augen zu bauen.</strong> Alles liegt in der Dosierung: Es gibt die Fragen des ersten Monats, die des dritten... und die, die warten können, denn alles hat seine Zeit.</p>
+<p><strong>Am Beziehungsanfang Fragen zu stellen ist kein Mangel an Leichtigkeit, es heißt nur, nicht mit geschlossenen Augen zu bauen.</strong> Alles liegt in der Dosierung: Es gibt die Fragen des ersten Monats, die des dritten... und die, die warten können, denn alles hat seine Zeit.</p>
 <p>Hier sind 60 bewusst dosierte Fragen, von den leichtesten bis zu den verbindlichsten, mit einer Bonusliste derer, die man besser NICHT sofort stellt. Denn am Anfang einer Geschichte ist Schweigenkönnen manchmal genauso nützlich wie Fragenkönnen.</p>`,
   quickSummary: [
     "60 nach Etappen dosierte Fragen: nach den ersten Dates, dann im Lauf der Wochen.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'nach-den-ersten-dates',
       title: "Nach den ersten Dates: sich kennenlernen (1-15)",
-      content: `<p>In dieser Phase gibt es nur eine Mission: herausfinden, wer dieser Mensch wirklich ist, jenseits der Figur der ersten Dates. Leichtigkeit Pflicht... Tiefe optional.</p>
+      content: `<p>In dieser Phase gibt es nur eine Mission: herausfinden, wer dieser Mensch wirklich ist, jenseits der Figur der ersten Dates. Die Leichtigkeit ist Pflicht, die Tiefe bleibt optional.</p>
 <ol>
 <li>Was machst du, wenn du einen Tag ganz für dich hast?</li>
 <li>Was ist dein natürlicher Rhythmus: eher ausgehen oder eher Nest?</li>
@@ -110,7 +110,7 @@ const article: BlogArticleData = {
     {
       id: 'nicht-zu-frueh-fragen',
       title: "Bonus: die 8 Fragen, die man NICHT zu früh stellt (53-60)",
-      content: `<p>Ja, sie zählen zu den 60... denn sie zurückhalten zu können ist eine eigenständige Beziehungsanfang-Kompetenz! Jede hat ihre Stunde. Zu früh drückt sie alles nieder; im richtigen Moment baut sie.</p>
+      content: `<p>Ja, sie zählen zu den 60... denn sie zurückhalten zu können ist eine eigenständige Beziehungsanfang-Kompetenz! Jede hat ihre Stunde. Zu früh gestellt drückt sie die Stimmung; im richtigen Moment bringt sie euch weiter.</p>
 <ol start="53">
 <li><strong>«Was war das Problem mit deiner Ex?»</strong> Zu früh bekommst du entweder eine Anklageschrift oder eine peinliche Stille. Die Liebesvergangenheit kommt von allein, wenn Vertrauen da ist.</li>
 <li><strong>«Liebst du mich?»</strong> Vor dem Gefühl gestellt, erzwingt sie eine Antwort... und eine erzwungene Antwort ist nichts wert. Beobachte lieber die Gesten, sie sprechen früher als Worte.</li>

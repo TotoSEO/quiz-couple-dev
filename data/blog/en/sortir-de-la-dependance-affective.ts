@@ -5,14 +5,14 @@ const article: BlogArticleData = {
   slug: 'overcome-emotional-dependency',
   title: "How to overcome emotional dependency: 12 concrete exercises",
   metaTitle: "Overcome emotional dependency: the three-phase plan",
-  metaDescription: "Not vague advice: a real plan. 12 concrete exercises across 3 phases to overcome emotional dependency, week after week.",
+  metaDescription: "A 3-phase plan with 12 concrete exercises to overcome emotional dependency, week after week, with the traps to know along the way.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Person breaking a heart-shaped chain, staircase steps in the background",
   publishedAt: '2026-09-22T11:32:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Work on yourself», «learn to love yourself»... Thanks, but concretely, what do you do on Monday morning? Here's the plan, exercise by exercise.",
   introduction: `<p>If you've ever searched for how to get out of emotional dependency, you know the song: «rebuild your confidence», «refocus on your needs», «learn to love yourself». True advice, no doubt. But perfectly unusable on a Tuesday night at 11pm, when you're staring at your phone waiting for his reply.</p>
-<p><strong>You don't leave emotional dependency behind with resolutions. You leave it with actions, small, precise, repeated.</strong> Exactly like rehabbing a knee after an injury, in fact: nobody tells you «walk again», they give you exercises, in an order, with a progression.</p>
+<p><strong>You leave emotional dependency behind with actions, small, precise and repeated, not with resolutions.</strong> Exactly like rehabbing a knee after an injury, in fact: nobody tells you «walk again», they give you exercises, in an order, with a progression.</p>
 <p>That's what we're going to do here. Three phases, twelve exercises, from the most urgent to the deepest. You don't need to do everything perfectly, you just need to start with the first one. And before that, two minutes to understand what you're up against, because it changes how you do the exercises.</p>`,
   quickSummary: [
     "Emotional dependency is a regulation reflex: you use the other person to calm your inner state.",
@@ -66,8 +66,8 @@ const article: BlogArticleData = {
       title: "Phase 3: consolidate (months 2 and 3)",
       content: `<p>The emergencies are handled, your life is filling up. What's left is the foundation: building an inner security that no longer depends on anyone. It's the slowest phase, and the one that pays off most.</p>
 <ol start="9">
-<li><strong>Scheduled solitude:</strong> One moment alone a week, chosen, ritualised: a coffee on a terrace, an exhibition, a walk. The point isn't to endure it, it's to teach your nervous system that solitude is a safe place. The difference between enduring solitude and giving it to yourself as a gift is exactly the difference between abandonment and freedom.</li>
-<li><strong>The worst-case letter:</strong> A demanding exercise, to do calmly: write what would happen, concretely, if the relationship ended. Not the fantasised emotional tsunami, the real sequence: where you'd live, who'd be around you, what you'd do in the first months. As you write, you'll discover something counter-intuitive: the worst-case scenario is painful, but it is SURVIVABLE. And a survivable fear loses most of its power.</li>
+<li><strong>Scheduled solitude:</strong> One moment alone a week, chosen, ritualised: a coffee on a terrace, an exhibition, a walk. The point isn't to endure it, it's to teach your nervous system that solitude is a safe place. Chosen solitude has nothing in common with abandonment, and your body ends up feeling it.</li>
+<li><strong>The worst-case letter:</strong> A demanding exercise, to do calmly: write what would happen, concretely, if the relationship ended. Not the fantasised emotional tsunami, the real sequence: where you'd live, who'd be around you, what you'd do in the first months. As you write, you'll discover something counter-intuitive: the worst-case scenario is painful, but you can survive it. And a fear you know you can get through loses most of its power.</li>
 <li><strong>A relationship by choice, not by need:</strong> Regularly, ask yourself this question: «if I weren't afraid, what would I choose?» Staying has to become an answer, not a reflex. That's the great reversal of all this work: going from «I stay because I need to» to «I stay because I choose to». The day you feel the difference from the inside, you've won.</li>
 <li><strong>The monthly review:</strong> Once a month, take out your phase 1 journal and compare: the frequency of the waves, their intensity, how fast you recover. Deep progress is invisible day to day and spectacular over three months. That appointment with yourself is also your best antidote to discouragement.</li>
 </ol>`,
@@ -90,7 +90,7 @@ const article: BlogArticleData = {
         {
           id: 'trap-3-doing-it-in-secret',
           title: "Trap 3: doing all this in secret, against someone",
-          content: `<p>These exercises are work for you, not a strategy to make him react. If you're counting your days of silence while watching for his reaction, you're not getting out of dependency, you're playing it as a different game.</p>
+          content: `<p>These exercises are work for you, not a strategy to make him react. If you're counting your days of silence while watching for his reaction, you're not getting out of dependency, you're just playing it in another form.</p>
 <p>And the real last piece of advice: you don't have to walk this road alone. A therapist who knows cognitive behavioural therapy or attachment wounds speeds the work up enormously. On the reading side, the genre classic, «Codependent No More» by Melody Beattie, complements this plan very well if you want to go further on paper.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Before you start: measure your starting point</p>

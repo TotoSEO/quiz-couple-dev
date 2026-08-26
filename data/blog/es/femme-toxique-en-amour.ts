@@ -13,13 +13,13 @@ const article: BlogArticleData = {
   excerpt: "Los hombres tardan de media mucho más en nombrar una relación tóxica... porque nunca les enseñaron cómo se ve cuando viene de una mujer.",
   introduction: `<p>Haz la prueba a tu alrededor: pregúntales a unos tíos qué es una mujer tóxica. Obtendrás bromas, referencias de películas... y muy pocas respuestas serias. Porque todos hemos crecido con la idea de que la toxicidad en pareja es cosa de hombres. Resultado: cuando un hombre vive una relación que lo daña, no la nombra. Dice que ella «tiene carácter». Dice que es «complicado». Aguanta... y tarda años en entenderlo.</p>
 <p><strong>Así que digámoslo simple: la toxicidad no tiene sexo, y sus versiones femeninas hacen tanto daño como las demás.</strong> Solo están mejor camufladas socialmente: una mujer que controla «te quiere mucho», una mujer que monta escenas es «apasionada», una mujer que te rebaja «tiene réplica».</p>
-<p>Este artículo desmonta el camuflaje: los 6 perfiles de mujer tóxica en el amor, las señales que los delatan, lo que distingue lo difícil de lo destructivo... y al final, la pregunta que el 90 % de los artículos esquiva: ¿y si el tóxico de la pareja eres tú?</p>`,
+<p>Desmontemos, pues, el camuflaje: los 6 perfiles de mujer tóxica en el amor, las señales que los delatan, lo que distingue lo difícil de lo destructivo... y al final, la pregunta más incómoda: ¿y si el tóxico de la pareja eres tú?</p>`,
   quickSummary: [
     "La toxicidad femenina existe, solo está mejor camuflada socialmente.",
     "6 perfiles tipo: la dramática, la culpabilizadora, la controladora, la celosa, la insatisfecha, la veleta.",
     "El criterio central sigue siendo el mismo: en qué te convierte la relación, con el tiempo.",
     "Difícil no significa tóxica: lo que decide es la repetición y la ausencia de cuestionamiento.",
-    "Y la pregunta espejo merece hacerse: a veces el comportamiento tóxico está en ambos lados... o en el tuyo.",
+    "Y hay que atreverse con la pregunta espejo: a veces el comportamiento tóxico está en ambos lados... o en el tuyo.",
   ],
   sections: [
     {
@@ -27,11 +27,11 @@ const article: BlogArticleData = {
       title: "Los 6 perfiles de mujer tóxica en el amor",
       content: `<p>Como con los hombres, estos perfiles se juzgan por meses, no por una mala racha. Y el criterio final no cambia nunca: lo que TE hace, con el tiempo.</p>
 <ol>
-<li><strong>La reina del drama:</strong> Con ella el conflicto no es un accidente, es un modo de vínculo. Todo se vuelve escena: un retraso, una palabra torcida, una mirada. La intensidad sustituye a la intimidad y confundes el agotamiento con la pasión. La señal que la delata: después de cada tormenta, siempre eres tú quien repara, nunca ella.</li>
+<li><strong>La reina del drama:</strong> Con ella el conflicto no es un accidente, es un modo de vínculo. Todo se vuelve escena: un retraso, una palabra torcida, una mirada. La pareja vive de intensidad más que de intimidad, y confundes el agotamiento con la pasión. La señal que la delata: después de cada tormenta, siempre eres tú quien repara, nunca ella.</li>
 <li><strong>La culpabilizadora:</strong> Rara vez reproches frontales: suspiros, «nada, ve tú», silencios cargados, cuentas llevadas en tu lugar. Vives con una deuda permanente cuyo importe y origen desconoces. A la larga pides permiso sin que nadie te lo haya exigido nunca.</li>
 <li><strong>La controladora social:</strong> ¡No te prohíbe nada, hombre! Solo tiene una opinión definitiva sobre cada uno de tus amigos, una migraña las noches de fútbol, una urgencia los findes con los colegas. Tu mundo se encoge por desánimo, no por prohibición. Relee tus últimos seis meses: ¿a quién has visto, sin ella?</li>
 <li><strong>La celosa intrusiva:</strong> Tu móvil ya no tiene vida privada, tus compañeras de trabajo tienen todas un nombre sospechoso y cada salida acaba en interrogatorio. La excusa siempre es la misma: «es porque te quiero». Pero la confianza no es un extra de la pareja: es su base.</li>
-<li><strong>La eterna insatisfecha:</strong> Hagas lo que hagas, no es eso. No es suficiente, no es como debía, no es el momento. El mecanismo desgasta porque te mantiene en fracaso permanente: corres tras una meta que retrocede cada vez que te acercas. Una pareja sana a veces te da la razón. Esta, nunca.</li>
+<li><strong>La eterna insatisfecha:</strong> Hagas lo que hagas, no es eso. No es suficiente, no es como debía, no es el momento. El mecanismo desgasta porque te mantiene en fracaso permanente: corres tras una meta que retrocede cada vez que te acercas. Una pareja sana a veces te da la razón; esta no te la da nunca.</li>
 <li><strong>La veleta pasional:</strong> Adorable el lunes, glacial el miércoles, enamoradísima el sábado... sin que nada, por tu parte, explique las variaciones. Vives colgado de su meteorología, experto a tu pesar en microseñales. Esa alternancia engancha, lo hemos visto en todas partes... y agota más que cualquier discusión.</li>
 </ol>
 <aside class="blog-tip-box">
@@ -57,7 +57,7 @@ const article: BlogArticleData = {
     {
       id: 'y-si-fuera-yo',
       title: "La pregunta que nadie se atreve: ¿y si el tóxico soy yo?",
-      content: `<p>Artículo trampa, en realidad. Porque al leer los 6 perfiles una parte de los lectores ha pensado en su pareja... y otra parte se ha reconocido, en silencio. Si es tu caso, primero: respeto. Hacerse la pregunta es exactamente lo que una persona tóxica instalada no hace nunca.</p>
+      content: `<p>Este artículo es una trampa, en realidad. Porque al leer los 6 perfiles una parte de los lectores ha pensado en su pareja... y otra parte se ha reconocido, en silencio. Si es tu caso, primero: respeto. Hacerse la pregunta es exactamente lo que una persona tóxica instalada no hace nunca.</p>
 <p>Tres comprobaciones honestas. <strong>Una:</strong> cuando ella te dice que algo le duele, ¿qué haces con esa información, en concreto, en las semanas siguientes? <strong>Dos:</strong> ¿tus disculpas cambian algo, o son tickets de salida de crisis? <strong>Tres:</strong> hazle la pregunta, de verdad: «¿hay cosas que ya no te atreves a decirme?»... y escucha la respuesta sin defenderte. Su cara en el momento en que preguntes valdrá por todas las respuestas.</p>
 <p>La buena noticia, en ambos sentidos: un comportamiento tóxico consciente y trabajado es un comportamiento que puede cambiar. Lo que no cambia es el que se niega... en los dos lados de la pareja.</p>
 <div class="blog-cta">

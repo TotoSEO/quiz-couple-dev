@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Handy mit dem Display nach unten auf dem Tisch zwischen zwei Menschen, die sich den Rücken zukehren",
   publishedAt: '2026-12-19T12:18:00+01:00',
   author: AUTHORS['thomas'],
-  excerpt: "Der Zweifel an der Treue gehört zum Schlimmsten, was man in einer Beziehung erlebt, und paradoxerweise verschlimmern ihn die meisten Listen von «Anzeichen», statt ihn zu klären.",
+  excerpt: "Der Zweifel an der Treue gehört zum Schlimmsten, was man in einer Beziehung erlebt, und paradoxerweise verschlimmern ihn einzeln betrachtete «Anzeichen», statt ihn zu klären.",
   introduction: `<p>Wenn du diesen Artikel liest, hat dich etwas alarmiert. Eine veränderte Gewohnheit, ein Handy, das unantastbar geworden ist, eine neue Distanz, oder einfach eine Ahnung, dieses dumpfe Etwas, das nicht schweigen will. Und seitdem schwankst du zwischen zwei Formen von Scham: der, ohne Beweis zu verdächtigen, und der, nicht hinsehen zu wollen.</p>
-<p>Setzen wir also zuerst einen ehrlichen Rahmen, denn das Thema verdient ihn: <strong>Kein einzelnes Anzeichen beweist eine Untreue. Keines.</strong> Listen mit «15 Anzeichen, dass er dich betrügt» produzieren vor allem Angst: Jedes Anzeichen für sich hat zehn harmlose Erklärungen. Was zählt, ist das BÜNDEL: mehrere Veränderungen, gleichzeitig, dauerhaft, ohne stimmige Erklärung.</p>
-<p>Dieser Artikel sortiert in drei Schritten: die Anzeichen, die wirklich schwer wiegen, die, die überall zitiert werden und nichts beweisen, und vor allem, was man mit dem Zweifel TUT, denn er ist das eigentliche Gift. Monatelang in der Ungewissheit zu bleiben schadet mehr als eine Antwort, wie auch immer sie ausfällt.</p>`,
+<p>Setzen wir also zuerst einen ehrlichen Rahmen, denn das Thema verdient ihn: <strong>Kein einzelnes Anzeichen beweist eine Untreue. Keines.</strong> Einzeln betrachtet produzieren «Anzeichen» vor allem Angst: Jedes für sich hat zehn harmlose Erklärungen. Was zählt, ist das BÜNDEL: mehrere Veränderungen, gleichzeitig, dauerhaft, ohne stimmige Erklärung.</p>
+<p>Sortieren wir in drei Schritten: die Anzeichen, die wirklich schwer wiegen, die, die überall zitiert werden und nichts beweisen, und vor allem, was man mit dem Zweifel TUT, denn er ist das eigentliche Gift. Monatelang in der Ungewissheit zu bleiben schadet mehr als eine Antwort, wie auch immer sie ausfällt.</p>`,
   quickSummary: [
     "Kein einzelnes Anzeichen beweist etwas: Es ist das Bündel gleichzeitiger Veränderungen, das spricht.",
     "Die schweren Anzeichen: das zum Tresor gewordene Handy, unklare Blöcke im Kalender, neue emotionale Distanz.",
@@ -38,13 +38,13 @@ const article: BlogArticleData = {
     },
     {
       id: 'die-falschen-anzeichen',
-      title: "Die falschen Anzeichen, die alle Listen abschreiben",
-      content: `<p>Jetzt die umgekehrte Sortierung, denn diese überall zitierten «Anzeichen» richten in vollkommen treuen Beziehungen Schaden an.</p>`,
+      title: "Die verbreitetsten falschen Anzeichen",
+      content: `<p>Jetzt die umgekehrte Sortierung, denn diese weitverbreiteten «Anzeichen» richten in vollkommen treuen Beziehungen Schaden an.</p>`,
       subsections: [
         {
           id: 'der-veraenderte-look',
           title: "Der veränderte Look",
-          content: `<p>Neuer Sport, neuer Haarschnitt, sorgfältige Kleidung: Die Hälfte der Listen macht daraus ein Indiz für Ehebruch! In Wirklichkeit ist es zuerst das Zeichen von jemandem, der sich sein Bild zurückholt: ein runder Geburtstag, ein Neuanfang, die Lust zu gefallen, übrigens auch dir. Für sich genommen: nichts.</p>`,
+          content: `<p>Neuer Sport, neuer Haarschnitt, sorgfältige Kleidung: Oft wird daraus ein Indiz für Ehebruch gemacht! In Wirklichkeit ist es zuerst das Zeichen von jemandem, der sich sein Bild zurückholt: ein runder Geburtstag, ein Neuanfang, die Lust zu gefallen, übrigens auch dir. Für sich genommen: nichts.</p>`,
         },
         {
           id: 'ueberstunden-und-muedigkeit',
@@ -92,7 +92,7 @@ const article: BlogArticleData = {
           id: 'schritt-3-zieh-die-konsequenzen',
           title: "Schritt 3: zieh die Konsequenzen aus der Antwort",
           content: `<p>Wenn die Erklärungen tragen: Die Baustelle wird der Zweifel selbst, deine Unsicherheit, eure Kommunikation, und das ist eine gute Paararbeit. Wenn die Antwort ausweicht oder umkehrt: Du hast noch keinen Beweis, aber eine wichtige Information über die Transparenz deines Partners, und du darfst das zum zentralen Thema machen. Und wenn die Wahrheit fällt: schmerzhaft, aber du bekommst endlich die Entscheidungsmacht zurück, die dir zustand.</p>
-<p>Ein letztes Wort, vielleicht das wichtigste. Wie es auch ausgeht, denk daran: Anhaltender Zweifel ist kein akzeptabler Lebenszustand. Du hast ein Recht auf eine Beziehung, in der du keine Detektivin sein musst. Dieses Recht hängt nicht davon ab, was dein Partner getan oder nicht getan hat. Es gehört zum Grundvertrag. Und wenn die Antwort, die du bekommst, am Ende die Frage nach dem Weitergehen stellt, verdient die Frage, ob es <a href="/de/blog/beziehung-beenden-oder-weitermachen/">Zeit ist, zu beenden oder weiterzumachen</a>, einen offenen Blick, mit derselben Ehrlichkeit.</p>
+<p>Ein letztes Wort, vielleicht das wichtigste. Wie es auch ausgeht, denk daran: Anhaltender Zweifel ist kein akzeptabler Lebenszustand. Du hast ein Recht auf eine Beziehung, in der du keine Detektivin sein musst. Dieses Recht hängt nicht davon ab, was dein Partner getan oder nicht getan hat. Es gehört zum Grundvertrag. Und wenn die Antwort, die du bekommst, am Ende die Frage nach dem Weitergehen stellt, braucht die Frage, ob es <a href="/de/blog/beziehung-beenden-oder-weitermachen/">Zeit ist, zu beenden oder weiterzumachen</a>, einen offenen Blick, mit derselben Ehrlichkeit.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Den Zweifel versachlichen, vor dem Gespräch</p>
 <p class="blog-cta-texte">Eine Fragenreihe geht die konkreten Veränderungen eurer Beziehung durch, das reale Bündel gegen die Eindrücke, und sagt dir, ob dein Alarm eine begründete Sorge ist oder ein Zweifel, der sich selbst nährt.</p>

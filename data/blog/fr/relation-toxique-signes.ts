@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "« Toxique », le mot est partout, au point de ne plus rien dire. Pourtant, la vraie relation toxique a des signes précis... et une question centrale : est-ce que ça se répare ?",
   introduction: `<p>« Relation toxique »... Le mot est tellement partout qu'il sert à tout : une dispute un peu forte, un ex rancunier, un désaccord sur les vacances, hop, toxique ! Résultat, quand on se pose VRAIMENT la question pour son propre couple, on ne sait plus quoi penser. Est-ce que c'est grave ? Est-ce que c'est normal ? Est-ce que c'est moi ?</p>
-<p>Alors posons le vrai critère, celui qui remet tout en ordre : <strong>une relation n'est pas toxique par ce qu'elle contient, elle est toxique par ce qu'elle te fait.</strong> Des disputes, tous les couples en ont. Des différences, des périodes grises, des mots qui dépassent : pareil. La question n'est pas là. La question, c'est : dans quel état cette relation te met-elle, semaine après semaine ?</p>
-<p>On va voir ça posément : les 7 signes fiables, la différence entre une relation toxique et une passe difficile, et surtout la question que personne ne traite bien... est-ce que ça se répare, ou pas ?</p>`,
+<p>Alors posons le vrai critère, celui qui remet tout en ordre : <strong>une relation est toxique par ce qu'elle te fait, pas par ce qu'elle contient.</strong> Des disputes, tous les couples en ont. Des différences, des périodes grises, des mots qui dépassent : pareil. La question n'est pas là. La question, c'est : dans quel état cette relation te met-elle, semaine après semaine ?</p>
+<p>On va voir ça posément, jusqu'à la question qui compte le plus : est-ce que ça se répare, ou pas ?</p>`,
   quickSummary: [
     "Le critère central : pas ce que la relation contient, mais ce qu'elle te fait devenir.",
     "Les 7 signes fiables se mesurent sur la durée, pas sur une mauvaise semaine.",
@@ -71,12 +71,12 @@ const article: BlogArticleData = {
 </ul>
 </div>
 </div>
-<p>En une phrase : <strong>une passe difficile épuise, une relation toxique transforme.</strong> On sort d'une passe difficile fatiguée mais entière. On sort d'une relation toxique en devant se rappeler qui on était avant...</p>`,
+<p>La différence, au fond : <strong>une passe difficile épuise, une relation toxique transforme.</strong> On sort d'une passe difficile fatiguée mais entière. On sort d'une relation toxique en devant se rappeler qui on était avant...</p>`,
     },
     {
       id: 'toxique-ne-veut-pas-dire-manipulateur',
       title: "Nuance importante : toxique ne veut pas toujours dire manipulateur",
-      content: `<p>C'est le point que presque tous les articles ratent, et il change pourtant toute la suite. Il existe deux grandes familles de relations toxiques, et elles n'ont pas le même pronostic.</p>`,
+      content: `<p>Il existe deux grandes familles de relations toxiques, elles n'ont pas le même pronostic, et cette nuance change toute la suite.</p>`,
       subsections: [
         {
           id: 'la-dynamique-toxique-a-deux',
@@ -86,7 +86,7 @@ const article: BlogArticleData = {
         {
           id: 'l-emprise-d-un-seul',
           title: "L'emprise d'un seul",
-          content: `<p>Là, la toxicité n'est pas un accident du système : elle est le système. Contrôle, culpabilisation, dévalorisation, isolement... organisés au bénéfice d'un seul. Si les signes que tu coches ressemblent à ceux du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>, ou aux <a href="/blog/manipulateur-narcissique/">techniques du manipulateur narcissique</a>, tu n'es plus dans la dynamique malheureuse : tu es dans la relation d'emprise. Et ça, ça ne se « répare » pas à deux, puisque l'un des deux n'a aucun intérêt à ce que ça change.</p>
+          content: `<p>Là, la toxicité n'a rien d'un accident : le contrôle, la culpabilisation, la dévalorisation et l'isolement sont organisés au bénéfice d'un seul. Si les signes que tu coches ressemblent à ceux du <a href="/blog/pervers-narcissique-amour/">pervers narcissique en amour</a>, ou aux <a href="/blog/manipulateur-narcissique/">techniques du manipulateur narcissique</a>, tu n'es plus dans la dynamique malheureuse : tu es dans la relation d'emprise. Et ça, ça ne se « répare » pas à deux, puisque l'un des deux n'a aucun intérêt à ce que ça change.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Comment savoir dans quelle famille tu es ?</p>
 <p>Un indice fiable : propose un vrai changement, thérapie de couple, nouvelles règles, efforts précis et datés. Dans une dynamique à deux, l'autre est soulagé qu'on en parle, même maladroitement. Dans une emprise, la proposition elle-même devient une agression... et te voilà encore une fois en train de t'excuser.</p>
@@ -97,7 +97,7 @@ const article: BlogArticleData = {
     {
       id: 'est-ce-que-ca-se-repare',
       title: "Est-ce que ça se répare ? Et comment ?",
-      content: `<p>Pour la dynamique toxique à deux, la réponse est oui, à trois conditions, pas une de moins. Que les DEUX reconnaissent le problème, sans se renvoyer la facture entière. Que les DEUX changent des comportements concrets, pas juste des intentions. Et qu'un cadre existe, un tiers, une thérapie de couple, des règles écrites, parce que les habitudes toxiques ne se démontent pas à main nue. Si ces conditions te semblent réunies chez vous, alors <a href="/blog/sauver-son-couple/">sauver son couple</a> devient un projet réaliste... à mener sérieusement, étape par étape.</p>
+      content: `<p>Pour la dynamique toxique à deux, la réponse est oui, à trois conditions, pas une de moins : que les DEUX reconnaissent le problème, sans se renvoyer la facture entière ; que les DEUX changent des comportements concrets, pas juste des intentions ; et qu'un cadre existe, un tiers, une thérapie de couple, des règles écrites, parce que les habitudes toxiques ne se démontent pas à main nue. Si ces conditions te semblent réunies chez vous, alors <a href="/blog/sauver-son-couple/">sauver son couple</a> devient un projet réaliste... à mener sérieusement, étape par étape.</p>
 <p>Pour l'emprise d'un seul... on ne va pas se mentir : la réparation demanderait que la personne qui bénéficie du système accepte de le démonter. Ça n'arrive presque jamais, et sûrement pas sous ultimatum amoureux. Dans ce cas, le travail n'est plus « comment réparer la relation », mais « comment me protéger, puis sortir ». C'est un autre chantier, et il commence par arrêter de douter de ce que tu vis.</p>
 <p>Dans les deux cas, une étape s'impose avant toutes les autres : objectiver. Sortir du brouillard des impressions, mettre les faits à plat...</p>
 <div class="blog-cta">
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/test-couple-toxique/">Situer ma relation</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
-<p>Et si en lisant tout ça, une petite voix te dit « je sais déjà, en fait »... écoute-la. On sait souvent bien avant d'oser savoir. La liste des <a href="/blog/choses-pas-accepter-couple/">choses à ne jamais accepter dans un couple</a> peut t'aider à remettre tes limites au clair, noir sur blanc. C'est souvent le premier pas qui compte.</p>
+<p>Et si en lisant tout ça, une petite voix te dit « je sais déjà, en fait »... écoute-la : on connaît souvent la réponse bien avant d'oser se la dire. La liste des <a href="/blog/choses-pas-accepter-couple/">choses à ne jamais accepter dans un couple</a> peut t'aider à remettre tes limites au clair, noir sur blanc. C'est souvent le premier pas qui compte.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Si tu es en danger, ne reste pas seul(e) avec un article</p>
 <p>Menaces, contrôle de ton argent ou de tes déplacements, violence physique même « une seule fois » : en France, le 3919 est gratuit, anonyme, ouvert 24h/24, et il écoute les femmes comme les hommes. En cas d'urgence immédiate, le 17, ou le 114 par SMS quand tu ne peux pas parler.</p>

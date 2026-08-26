@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Paare scheitern fast nie an fehlender Liebe. Sie scheitern an Themen, die sie nie auf den Tisch gelegt haben.",
-  introduction: `<p>Es gibt eine Statistik, die niemand berechnet und die jeder kennt: Die meisten großen Beziehungskrisen drehen sich um Themen... von denen beide wussten, dass man eines Tages darüber reden müsste. Geld. Kinder. Schwiegereltern. Die Aufteilung der Aufgaben. Das «eines Tages» kam schlicht zu spät, mitten in der Krise, im denkbar schlechtesten Moment, um in Ruhe zu reden.</p>
-<p><strong>Über die Zukunft zu reden hat noch nie eine solide Geschichte getötet. Nicht darüber zu reden hat viele getötet.</strong> Und anders als man denkt, sind diese Gespräche weder feierlich noch schwer... gut geführt gehören sie sogar zu den aufregendsten, die ein Paar haben kann!</p>
+  introduction: `<p>Es gibt eine Statistik, die niemand berechnet und die jeder kennt: Die meisten großen Beziehungskrisen drehen sich um Themen... von denen beide wussten, dass man eines Tages darüber reden müsste: Geld, Kinder, Schwiegereltern, die Aufteilung der Aufgaben. Das «eines Tages» kam schlicht zu spät, mitten in der Krise, im denkbar schlechtesten Moment, um in Ruhe zu reden.</p>
+<p><strong>Über die Zukunft zu reden hat noch nie eine solide Geschichte getötet, während das Schweigen darüber viele getötet hat.</strong> Und anders als man denkt, sind diese Gespräche weder feierlich noch schwer... gut geführt gehören sie sogar zu den aufregendsten, die ein Paar haben kann!</p>
 <p>Hier sind 60 Zukunftsfragen, nach großen Etappen geordnet: vor dem Zusammenziehen, vor der endgültigen Bindung, vor einem Kind, rund ums Geld und über eure gemeinsamen Träume. Zum Herauspicken, BEVOR die Themen dringend werden, genau darin liegt ihr Wert.</p>`,
   quickSummary: [
     "60 Fragen nach Etappen geordnet: zusammenziehen, binden, ein Kind, Geld, Träume.",
@@ -94,7 +94,7 @@ const article: BlogArticleData = {
     {
       id: 'geld-und-grosse-entscheidungen',
       title: "Geld und die großen Entscheidungen (46-55)",
-      content: `<p>Das Thema, über das am Anfang niemand spricht und über das sich später alle streiten! Geld in der Beziehung sind nie Zahlen... es sind Sicherheit, Freiheit und Macht. Also redet darüber, solange alles gut läuft.</p>
+      content: `<p>Das Thema, über das am Anfang niemand spricht und über das sich später alle streiten! Geld in der Beziehung sind nie bloß Zahlen: Dahinter stecken Sicherheit, Freiheit und Macht. Also redet darüber, solange alles gut läuft.</p>
 <ol start="46">
 <li>Wie ist dein Verhältnis zu Geld: Sicherheit, Vergnügen, Angst, Freiheit?</li>
 <li>Gemeinsames Konto, getrennte Konten oder gemischt: dein Modell, und warum?</li>
@@ -111,7 +111,7 @@ const article: BlogArticleData = {
     {
       id: 'eure-gemeinsamen-traeume',
       title: "Eure gemeinsamen Träume (56-60)",
-      content: `<p>Zum Schluss der Treibstoff. Denn eine Beziehung ist nicht nur gelungenes Management... sie ist eine Richtung, auf die man Lust hat. Fünf Fragen, die schönsten.</p>
+      content: `<p>Zum Schluss der Treibstoff. Denn eine Beziehung ist nicht nur gelungenes Management... sie ist eine Richtung, auf die man Lust hat. Fünf bleiben übrig, die schönsten.</p>
 <ol start="56">
 <li>Was ist der Traum, den wir beide nie laut ausgesprochen haben?</li>
 <li>Wenn wir uns ein völlig verrücktes Jahr gönnen würden, wie sähe es aus?</li>

@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "La gelosia normale protegge la coppia. La gelosia patologica la divora... e divora per prima la persona che la prova.",
   introduction: `<p>Comincia sempre da una piccola cosa. Un nome che torna troppo spesso, un sorriso a una festa, un telefono appoggiato a faccia in giù sul tavolo... e uno scenario che comincia a girare nella tua testa. Sai che non si regge su niente, quello scenario. Lo sai! Ma gira lo stesso, sempre più veloce, ed eccoti a controllare, interrogare, immaginare... e ad avercela con te stessa per averlo fatto.</p>
 <p>La prima cosa da dire, perché consola: <strong>essere gelosi è normale. La gelosia è un'emozione universale, presente in tutte le coppie in cui i due contano l'uno per l'altra.</strong> Il problema non è provarla. Il problema è quando prende i comandi: quando decide le tue serate, le tue domande, le tue perquisizioni... e fa soffrire tutti, a cominciare da te.</p>
-<p>Questo articolo traccia il confine tra le due, va a cercare le vere radici della gelosia patologica (indizio: non stanno quasi mai nell'altro)... e indica la via d'uscita, che esiste e che funziona. Che la gelosia sia la tua o quella del tuo partner, del resto: parliamo a entrambi.</p>`,
+<p>Tracciamo il confine tra le due, andiamo a cercare le vere radici della gelosia patologica (indizio: non stanno quasi mai nell'altro)... e indica la via d'uscita, che esiste e che funziona. Che la gelosia sia la tua o quella del tuo partner, del resto: parliamo a entrambi.</p>`,
   quickSummary: [
     "La gelosia è normale; diventa patologica quando decide al posto tuo e fa soffrire senza prove.",
     "Il criterio centrale: la gelosia sana reagisce a fatti, quella patologica fabbrica i suoi scenari.",
@@ -82,7 +82,7 @@ const article: BlogArticleData = {
         {
           id: 'trattare-gli-scenari-come-scenari',
           title: "Trattare gli scenari come scenari",
-          content: `<p>Quando parte il film, nominalo: «questo è il mio cinema interiore, non un'informazione». Poi poniti l'unica domanda utile: «quali FATTI ho?». Non impressioni, fatti. Scoprirai che il 95 % dei tuoi film gira senza un solo fatto nei titoli di coda. Nominarli significa togliere loro lo statuto di verità.</p>`,
+          content: `<p>Quando parte il film, nominalo: «questo è il mio cinema interiore, non un'informazione». Poi poniti l'unica domanda utile: «quali FATTI ho?». Non impressioni, fatti. Scoprirai che il la maggior parte dei tuoi film gira senza un solo fatto nei titoli di coda. Nominarli significa togliere loro lo statuto di verità.</p>`,
         },
         {
           id: 'rafforzare-la-tua-vita',
@@ -93,7 +93,7 @@ const article: BlogArticleData = {
           id: 'parlarne-nel-verso-giusto',
           title: "Parlarne, nel verso giusto",
           content: `<p>Non «confessa!»... ma «mi faccio dei film, è il mio cantiere e ci sto lavorando». Questa frase cambia tutto: trasforma il tuo partner da sospettato in alleato. La gelosia assunta come lavoro personale avvicina; la gelosia travestita da indagine distrugge. E se il fondo è troppo carico, un tradimento antico, un'angoscia che trabocca, uno psicologo accelera enormemente... è un cantiere classico e gratificante delle terapie.</p>
-<p>Un'ultima parola, per finire sulla vera posta in gioco. La gelosia patologica si presenta come una prova d'amore... è la sua bugia più bella. L'amore vuole la felicità dell'altro; la gelosia patologica vuole la sua sorveglianza. Il giorno in cui senti la differenza dall'interno, il lavoro è già fatto a metà... e dell'altra metà adesso sai da dove comincia.</p>
+<p>Un'ultima parola, per finire sulla vera posta in gioco. La gelosia patologica si presenta come una prova d'amore... è la sua bugia più bella. L'amore vuole la felicità dell'altro, mentre la gelosia patologica vuole soprattutto sorvegliarlo. Il giorno in cui senti la differenza dall'interno, il lavoro è già fatto a metà... e dell'altra metà adesso sai da dove comincia.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">La tua gelosia, a che punto è esattamente?</p>
 <p class="blog-cta-texte">Una serie di domande valuta la tua gelosia sulle situazioni concrete di questo articolo: gli scenari, le verifiche, l'effetto sulla tua coppia... e ti colloca tra la gelosia normale e quella su cui si lavora.</p>

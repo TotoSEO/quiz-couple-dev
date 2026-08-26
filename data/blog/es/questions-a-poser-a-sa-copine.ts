@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Pareja sentada a la mesa riéndose, ella responde a una pregunta gesticulando",
   publishedAt: '2026-09-29T17:24:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "La trampa de las parejas que duran no es dejar de quererse. Es creer que ya se ha terminado de descubrirse.",
+  excerpt: "La trampa de las parejas que duran es creer que ya se ha terminado de descubrirse. Estas 75 preguntas demuestran lo contrario.",
   introduction: `<p>Pequeña prueba antes de empezar: sabes cuál es su plato favorito, su película de culto, su perfume. Fácil. Ahora, ¿sabes de qué está más orgullosa este año? ¿Qué echa de menos ahora mismo? ¿Qué no se atreve a pedirte? Menos fácil, ¿eh?</p>
 <p><strong>Esa es la trampa de las parejas asentadas: confundimos conocerla bien con haber terminado de descubrirla.</strong> Salvo que ella cambia, como tú, como todo el mundo. Y las respuestas de hace dos años ya no son necesariamente las de hoy.</p>
 <p>Aquí van 75 preguntas para hacerle a tu novia, de lo más ligero a lo más profundo. ¡No para montar un interrogatorio de sábado noche! Para recuperar esas conversaciones que duran, las del principio, aquellas en las que descubrías a alguien. Coge dos o tres preguntas cuando el momento acompañe y deja que pase.</p>`,
@@ -143,7 +143,7 @@ const article: BlogArticleData = {
 <li>¿Dónde nos imaginas dentro de cinco años, sinceramente?</li>
 <li>¿Qué deberíamos empezar juntos este año?</li>
 </ol>
-<p>¿Y después de la 75? Después ya sabes el principio: no son las preguntas lo que cuenta, es la costumbre de hacérselas. Las parejas que duran no son las que lo saben todo la una de la otra, son las que siguen haciéndose <a href="/es/preguntas-pareja/">preguntas de pareja</a>, con regularidad, como quien mantiene un fuego.</p>
+<p>¿Y después de la 75? Después ya sabes el principio: lo que cuenta es la costumbre de hacérselas. Las parejas que duran siguen haciéndose <a href="/es/preguntas-pareja/">preguntas de pareja</a>, con regularidad, como quien mantiene un fuego.</p>
 <div><table><thead><tr><th>La serie</th><th>Qué abre</th></tr></thead><tbody>
 <tr><td>Para redescubrirla</td><td>Lo que creías saber y que ha cambiado desde entonces</td></tr>
 <tr><td>Sobre vosotros dos</td><td>Vuestra historia vista desde su lado</td></tr>

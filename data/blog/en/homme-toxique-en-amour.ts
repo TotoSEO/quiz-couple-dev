@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Between the clumsy one who can change and the manipulator who won't, there's a whole range... and you don't protect yourself from them the same way.",
   introduction: `<p>Ever since «toxic» became the word of the era, everything gets filed under it: the jealous one, the distant one, the angry one, the liar. And that's a real problem, because those men are nothing alike. Some damage through immaturity, without meaning to, and can change. Others damage through their very functioning, and won't change. <strong>Confusing the two means either running from a man who could have grown up... or staying for years with a man who never will.</strong></p>
-<p>So this article sorts them out. Six profiles of the toxic man in love, from the least serious to the most: what each one puts you through in practice, how you recognise him... and above all, for each one, the answer to THE question: can this one change?</p>
+<p>So let's sort them out: six profiles of the toxic man in love, from the least serious to the most, with what each one puts you through in practice, how you recognise him... and above all, for each one, the answer to THE question: can this one change?</p>
 <p>One prerequisite though, and it counts: a profile is judged over time, not over a bad patch. Any man can be difficult for six months in a hard year. We're talking here about established patterns that repeat and that cost you. That repetition is what makes toxicity, as we set out in the <a href="/en/blog/toxic-relationship-signs/">signs of a toxic relationship</a>.</p>`,
   quickSummary: [
     "«Toxic» covers very different profiles... which aren't handled the same way.",
@@ -39,7 +39,7 @@ const article: BlogArticleData = {
     {
       id: 'profile-3-the-jealous',
       title: "Profile 3: the jealous one who monitors",
-      content: `<p>At first it was almost flattering. Then the questions became checks, the checks became reproaches, and there you are sending photos of your evening «to reassure him». This profile's jealousy isn't an emotion passing through him, it's a system settling in, and it grows with every concession.</p>
+      content: `<p>At first it was almost flattering. Then the questions became checks, the checks became reproaches, and there you are sending photos of your evening «to reassure him». This profile's jealousy isn't just an emotion passing through: it's a system settling in, and it grows with every concession.</p>
 <p><strong>What it puts you through:</strong> freedom on conditions. Your outfits, your friends, your schedule become topics... and you censor yourself more and more to avoid the scenes.</p>
 <p><strong>Can he change?</strong> Only if he recognises the problem is in him, not in your behaviour. A jealous man who says «help me, I know it's irrational» can work on it, often on a <a href="/en/blog/emotional-dependency-in-men/">male emotional dependency</a> that dares not speak its name. A jealous man who says «change yourself and I'll be less jealous» won't change: he has already named you responsible for his problem.</p>`,
     },

@@ -13,13 +13,13 @@ const article: BlogArticleData = {
   excerpt: "Men take on average far longer to name a toxic relationship... because nobody ever taught them what it looks like when it comes from a woman.",
   introduction: `<p>Try it around you: ask some guys what a toxic woman is. You'll get jokes, film references... and very few serious answers. Because we all grew up with the idea that toxicity in a relationship is a men's affair. The result: when a man lives through a relationship that damages him, he doesn't name it. He says she's «got character». He says it's «complicated». He absorbs it... and takes years to understand.</p>
 <p><strong>So let's say it simply: toxicity has no gender, and its female versions do as much damage as any other.</strong> They're just better camouflaged socially: a woman who controls «cares about you», a woman who makes scenes is «passionate», a woman who belittles you «gives as good as she gets».</p>
-<p>This article dismantles the camouflage: the 6 profiles of the toxic woman in love, the signs that give them away, what separates difficult from destructive... and at the end, the question 90% of articles dodge: what if the toxic one in the relationship is you?</p>`,
+<p>Let's dismantle the camouflage, then: the 6 profiles of the toxic woman in love, the signs that give them away, what separates difficult from destructive... and at the end, the most uncomfortable question: what if the toxic one in the relationship is you?</p>`,
   quickSummary: [
     "Female toxicity exists, it's just better camouflaged socially.",
     "6 typical profiles: the drama queen, the guilt-tripper, the controller, the jealous one, the never-satisfied, the weathervane.",
     "The core criterion stays the same: what the relationship turns you into, over time.",
     "Difficult doesn't mean toxic: it's repetition and the absence of self-questioning that decide.",
-    "And the mirror question deserves asking: sometimes the toxic behaviour is on both sides... or on yours.",
+    "And you have to dare the mirror question: sometimes the toxic behaviour is on both sides... or on yours.",
   ],
   sections: [
     {
@@ -27,11 +27,11 @@ const article: BlogArticleData = {
       title: "The 6 profiles of the toxic woman in love",
       content: `<p>As with men, these profiles are judged over months, not over a bad patch. And the final criterion never changes: what it does to YOU, over time.</p>
 <ol>
-<li><strong>The drama queen:</strong> With her, conflict isn't an accident, it's a mode of connection. Everything becomes a scene: being late, a wrong word, a look. Intensity replaces intimacy, and you confuse exhaustion with passion. The tell: after every storm, you're always the one repairing, never her.</li>
+<li><strong>The drama queen:</strong> With her, conflict isn't an accident, it's a mode of connection. Everything becomes a scene: being late, a wrong word, a look. The relationship runs on intensity more than intimacy, and you confuse exhaustion with passion. The tell: after every storm, you're always the one repairing, never her.</li>
 <li><strong>The guilt-tripper:</strong> Rarely frontal reproaches: sighs, «fine, go ahead», loaded silences, accounts kept on your behalf. You live with a permanent debt whose amount and origin you don't know. In the long run you ask permission without anyone ever demanding it.</li>
 <li><strong>The social controller:</strong> She forbids you nothing, come on! She just has a definitive opinion on every one of your friends, a migraine on football nights, an emergency on weekends with the lads. Your world shrinks through discouragement, not through prohibition. Reread your last six months: who did you see, without her?</li>
 <li><strong>The intrusive jealous one:</strong> Your phone has no private life left, your female colleagues all have a suspicious first name, and every night out gets a debriefing. The excuse is always the same, «it's because I care about you». But trust isn't an optional extra in a relationship: it's the foundation.</li>
-<li><strong>The never-satisfied:</strong> Whatever you do, that's not it. Not enough, not the right way, not at the right moment. The mechanism wears you down because it keeps you in permanent failure: you're chasing a finishing line that moves back every time you get close. A healthy relationship sometimes tells you you're right. This one, never.</li>
+<li><strong>The never-satisfied:</strong> Whatever you do, that's not it. Not enough, not the right way, not at the right moment. The mechanism wears you down because it keeps you in permanent failure: you're chasing a finishing line that moves back every time you get close. A healthy relationship sometimes tells you you're right; this one never does.</li>
 <li><strong>The passionate weathervane:</strong> Adorable on Monday, glacial on Wednesday, madly in love on Saturday... with nothing on your side explaining the variations. You live hanging on her weather, an unwilling expert in micro-signals. That alternation is addictive, we've seen it everywhere else... and it exhausts you more surely than any argument.</li>
 </ol>
 <aside class="blog-tip-box">
@@ -57,7 +57,7 @@ const article: BlogArticleData = {
     {
       id: 'what-if-its-me',
       title: "The question nobody dares: what if I'm the toxic one?",
-      content: `<p>A trap of an article, in fact. Because while reading the 6 profiles, some readers thought about their partner... and others recognised themselves, in silence. If that's you, first: respect. Asking the question is exactly what an entrenched toxic person never does.</p>
+      content: `<p>This article is a trap, in fact. Because while reading the 6 profiles, some readers thought about their partner... and others recognised themselves, in silence. If that's you, first: respect. Asking the question is exactly what an entrenched toxic person never does.</p>
 <p>Three honest checks. <strong>One:</strong> when she tells you something hurts her, what do you do with that information, concretely, in the weeks that follow? <strong>Two:</strong> do your apologies change anything, or are they exit tickets from a crisis? <strong>Three:</strong> ask her the question, genuinely: «is there anything you no longer dare tell me?»... and listen to the answer without defending yourself. Her face at the moment you ask will be worth every answer.</p>
 <p>The good news, in both directions: a toxic behaviour that is conscious and worked on is a behaviour that can change. What doesn't change is the one that gets denied... on either side of the relationship.</p>
 <div class="blog-cta">

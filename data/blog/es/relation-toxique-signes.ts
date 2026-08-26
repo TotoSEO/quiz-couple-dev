@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "«Tóxica», la palabra está en todas partes hasta el punto de no decir nada. Y sin embargo la relación tóxica de verdad tiene señales precisas... y una pregunta central: ¿tiene arreglo?",
   introduction: `<p>«Relación tóxica»... La palabra está tan presente que sirve para todo: una discusión un poco fuerte, un ex rencoroso, un desacuerdo sobre las vacaciones, ¡hala, tóxica! Resultado: cuando te haces DE VERDAD la pregunta sobre tu propia relación, ya no sabes qué pensar. ¿Es grave? ¿Es normal? ¿Soy yo?</p>
-<p>Así que pongamos el criterio de verdad, el que lo ordena todo: <strong>una relación no es tóxica por lo que contiene, es tóxica por lo que te hace.</strong> Discusiones las tienen todas las parejas. Diferencias, épocas grises, palabras que se pasan de la raya: igual. La pregunta no está ahí. La pregunta es: ¿en qué estado te deja esta relación, semana tras semana?</p>
-<p>Vamos a verlo con calma: las 7 señales fiables, la diferencia entre una relación tóxica y un bache, y sobre todo la pregunta que nadie trata bien: ¿tiene arreglo o no?</p>`,
+<p>Así que pongamos el criterio de verdad, el que lo ordena todo: <strong>una relación es tóxica por lo que te hace, no por lo que contiene.</strong> Discusiones las tienen todas las parejas. Diferencias, épocas grises, palabras que se pasan de la raya: igual. La pregunta no está ahí. La pregunta es: ¿en qué estado te deja esta relación, semana tras semana?</p>
+<p>Vamos a verlo con calma, hasta llegar a la pregunta que más importa: ¿tiene arreglo o no?</p>`,
   quickSummary: [
     "El criterio central: no lo que la relación contiene, sino aquello en lo que te convierte.",
     "Las 7 señales fiables se miden en el tiempo, no en una mala semana.",
@@ -71,12 +71,12 @@ const article: BlogArticleData = {
 </ul>
 </div>
 </div>
-<p>En una frase: <strong>un mal momento agota, una relación tóxica transforma.</strong> De un mal momento se sale cansada pero entera. De una relación tóxica se sale teniendo que recordar quién eras antes.</p>`,
+<p>La diferencia, en el fondo: <strong>un mal momento agota, una relación tóxica transforma.</strong> De un mal momento se sale cansada pero entera. De una relación tóxica se sale teniendo que recordar quién eras antes.</p>`,
     },
     {
       id: 'toxica-no-es-manipuladora',
       title: "Matiz importante: tóxica no siempre significa manipuladora",
-      content: `<p>Es el punto que casi todos los artículos se saltan, y sin embargo cambia todo lo que viene después. Existen dos grandes familias de relaciones tóxicas, y no tienen el mismo pronóstico.</p>`,
+      content: `<p>Existen dos grandes familias de relaciones tóxicas, no tienen el mismo pronóstico, y ese matiz cambia todo lo que viene después.</p>`,
       subsections: [
         {
           id: 'la-dinamica-toxica-entre-dos',
@@ -86,7 +86,7 @@ const article: BlogArticleData = {
         {
           id: 'el-dominio-de-uno-solo',
           title: "El dominio de uno solo",
-          content: `<p>Aquí la toxicidad no es un accidente del sistema: es el sistema. Control, culpabilización, desvalorización, aislamiento, organizados en beneficio de uno solo. Si las señales que marcas se parecen a las del <a href="/es/blog/narcisista-en-el-amor/">narcisista en el amor</a>, o a las <a href="/es/blog/manipulador-narcisista/">técnicas del manipulador narcisista</a>, ya no estás en una dinámica desgraciada: estás en una relación de dominio. Y eso no se «arregla» entre dos, porque uno de los dos no tiene ningún interés en que cambie.</p>
+          content: `<p>Aquí la toxicidad no tiene nada de accidente: el control, la culpabilización, la desvalorización y el aislamiento están organizados en beneficio de uno solo. Si las señales que marcas se parecen a las del <a href="/es/blog/narcisista-en-el-amor/">narcisista en el amor</a>, o a las <a href="/es/blog/manipulador-narcisista/">técnicas del manipulador narcisista</a>, ya no estás en una dinámica desgraciada: estás en una relación de dominio. Y eso no se «arregla» entre dos, porque uno de los dos no tiene ningún interés en que cambie.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 ¿Cómo saber en qué familia estás?</p>
 <p>Una pista fiable: propón un cambio de verdad, terapia de pareja, normas nuevas, esfuerzos concretos y con fecha. En una dinámica entre dos, el otro se siente aliviado de que se hable, aunque sea con torpeza. En una relación de dominio, la propuesta misma se vuelve una agresión, y ahí estás otra vez pidiendo perdón.</p>
@@ -97,7 +97,7 @@ const article: BlogArticleData = {
     {
       id: 'tiene-arreglo',
       title: "¿Tiene arreglo? ¿Y cómo?",
-      content: `<p>Para la dinámica tóxica entre dos, la respuesta es sí, con tres condiciones, ni una menos. Que LOS DOS reconozcan el problema, sin pasarle al otro la factura entera. Que LOS DOS cambien comportamientos concretos, no solo intenciones. Y que exista un marco, un tercero, una terapia de pareja, normas escritas, porque las costumbres tóxicas no se desmontan a mano desnuda. Si esas condiciones te parecen reunidas en vuestro caso, salvar la pareja pasa a ser un proyecto realista, que hay que llevar en serio, paso a paso.</p>
+      content: `<p>Para la dinámica tóxica entre dos, la respuesta es sí, con tres condiciones, ni una menos: que LOS DOS reconozcan el problema, sin pasarle al otro la factura entera; que LOS DOS cambien comportamientos concretos, no solo intenciones; y que exista un marco, un tercero, una terapia de pareja, normas escritas, porque las costumbres tóxicas no se desmontan a mano desnuda. Si esas condiciones te parecen reunidas en vuestro caso, salvar la pareja pasa a ser un proyecto realista, que hay que llevar en serio, paso a paso.</p>
 <p>Para el dominio de uno solo... no nos engañemos: la reparación exigiría que la persona que se beneficia del sistema aceptara desmontarlo. Eso no pasa casi nunca, y desde luego no bajo ultimátum amoroso. En ese caso el trabajo ya no es «cómo arreglo la relación», sino «cómo me protejo y luego salgo». Es otra obra, y empieza por dejar de dudar de lo que vives.</p>
 <p>En ambos casos hay una etapa que va antes que todas: objetivar. Salir de la niebla de las impresiones, poner los hechos sobre la mesa.</p>
 <div class="blog-cta">
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/es/test-relacion-toxica/">Situar mi relación</a>
 <p class="blog-cta-note">Gratis &middot; Sin registro &middot; Resultado inmediato</p>
 </div>
-<p>Y si al leer todo esto una vocecita te dice «en realidad ya lo sé»... escúchala. Solemos saberlo mucho antes de atrevernos a saberlo. La lista de <a href="/es/blog/cosas-no-aceptar-pareja/">cosas que nunca hay que aceptar en una pareja</a> puede ayudarte a poner tus límites en claro, negro sobre blanco. Suele ser el primer paso el que cuenta.</p>
+<p>Y si al leer todo esto una vocecita te dice «en realidad ya lo sé»... escúchala: solemos conocer la respuesta mucho antes de atrevernos a decírnosla. La lista de <a href="/es/blog/cosas-no-aceptar-pareja/">cosas que nunca hay que aceptar en una pareja</a> puede ayudarte a poner tus límites en claro, negro sobre blanco. Suele ser el primer paso el que cuenta.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Si estás en peligro, no te quedes a solas con un artículo</p>
 <p>Amenazas, control de tu dinero o de tus desplazamientos, violencia física aunque sea «una sola vez»: en España el 016 es gratuito, no deja rastro en la factura y atiende 24 horas. En caso de urgencia inmediata, el 112.</p>

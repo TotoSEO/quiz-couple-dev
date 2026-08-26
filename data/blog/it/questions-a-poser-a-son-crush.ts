@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Ragazza sorride al telefono mentre scrive un messaggio al suo crush",
   publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "La parte difficile con un crush non è trovare cosa dire. Sono le domande che trasformano uno scambio educato in una connessione vera.",
+  excerpt: "La parte difficile con un crush è trovare la domanda che rilancia la conversazione al momento giusto. Eccone 100, divise per situazione.",
   introduction: `<p>Conosci quel momento... La conversazione gira a vuoto, i «bene, e tu?» si accumulano, e senti che se nessuno tira fuori altro finirà educatamente in un «buona serata allora». Con un crush ogni scambio conta doppio. Così, prima o poi, ci ritroviamo tutti a fissare il telefono senza sapere cosa scrivere.</p>
 <p><strong>Una buona domanda fa due cose insieme: mostra che ti interessi davvero e fa venire voglia di rispondere.</strong> È tutto quello che si chiede a una conversazione che comincia. Ed è esattamente quello che fanno le 100 domande che seguono.</p>
-<p>Sono divise per situazione: per aprire via messaggio, per conoscerlo, per farlo ridere, per andare un po' più a fondo, per flirtare senza esagerare... e per verificare, con leggerezza, se tra voi potrebbe funzionare. Scriviamo «lui» per semplicità, ma tutto funziona ovviamente in ogni direzione.</p>`,
+<p>Sono divise per situazione, dal primo messaggio al primo appuntamento. Scriviamo «lui» per semplicità, ma tutto funziona ovviamente in ogni direzione.</p>`,
   quickSummary: [
     "100 domande divise per situazione, dal primo messaggio al primo appuntamento.",
     "Una domanda alla volta: tre nello stesso messaggio sembrano un modulo.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'per-messaggio-per-aprire',
       title: "Per messaggio, per aprire o riaprire (1-15)",
-      content: `<p>Il formato breve, perfetto per iniziare una conversazione o svegliare un filo che si addormenta. Facile da mandare, facile da rispondere... è tutto quello che si chiede a un primo scambio.</p>
+      content: `<p>Il formato breve, perfetto per iniziare una conversazione o svegliare un filo che si addormenta. Facile da mandare, facile da rispondere, e per cominciare basta e avanza!</p>
 <ol>
 <li>La tua giornata in tre emoji, senza barare?</li>
 <li>Sei più da vocale di quattro minuti o da muro di testo?</li>
@@ -122,7 +122,7 @@ const article: BlogArticleData = {
     {
       id: 'per-flirtare',
       title: "Per flirtare, senza esagerare (66-80)",
-      content: `<p>Il flirt che funziona sta in una regola semplice: suggerire invece che annunciare. Queste domande mandano il segnale lasciando l'altro libero di raccoglierlo... o no. È esattamente ciò che le rende efficaci senza mai risultare pesanti.</p>
+      content: `<p>Il flirt che funziona segue una regola semplice: suggerire invece che annunciare. Queste domande mandano il segnale lasciando l'altro libero di raccoglierlo... o no. È esattamente ciò che le rende efficaci senza mai risultare pesanti.</p>
 <ol start="66">
 <li>Cosa hai notato per primo di me, sinceramente?</li>
 <li>Qual è la tua idea di appuntamento perfetto, senza budget illimitato?</li>
@@ -192,7 +192,7 @@ const article: BlogArticleData = {
 <tr><td>Flirtare</td><td>Suggerito, con una via d'uscita</td><td>Il complimento che mette a disagio</td></tr>
 <tr><td>Il primo appuntamento</td><td>Aperto, e ascoltato davvero</td><td>Recitare le domande preparate</td></tr>
 </tbody></table></div>
-<p>E se quello che ti blocca è piuttosto capire cosa provi <em>tu</em>, abbiamo fatto <a href="/it/test-amore-o-cotta/">un test che distingue la cotta dai sentimenti veri</a>, in 35 domande.</p>
+<p>E se quello che ti blocca è piuttosto capire cosa provi <em>tu</em>, puoi <a href="/it/test-amore-o-cotta/">distinguere la cotta dai sentimenti veri</a> in 35 domande.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Pensa a te, o risponde solo per educazione?</p>
 <p class="blog-cta-texte">Una serie di domande passa in rassegna i segnali veri, quelli che non si notano quando ci sei dentro: i suoi rilanci, le sue attenzioni, com'è quando ci sei tu. Risultato immediato, e nessuno lo saprà.</p>

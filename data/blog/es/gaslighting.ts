@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "El gaslighting no te miente sobre los hechos. Te miente sobre ti: tu memoria, tu percepción, tu salud mental. Eso lo convierte en la manipulación más corrosiva que existe.",
   introduction: `<p>Viste la escena. Estabas allí, oíste las palabras, podrías repetirlas... Y sin embargo, enfrente, un aplomo perfecto: «yo nunca dije eso». Ni una vacilación. Entonces lo compruebas mentalmente, una vez, dos... y se abre una grietecita: ¿y si fui yo?</p>
-<p>Esa grieta tiene nombre: el gaslighting. <strong>No es una mentira sobre los hechos, es un ataque al instrumento de medida: tú.</strong> Tu memoria, tu percepción, tu estabilidad... Repetida el tiempo suficiente, esta manipulación produce un resultado único en su género: una víctima que ya no puede fiarse de sí misma y que depende, por tanto, de su manipulador para saber qué es real.</p>
+<p>Esa grieta tiene nombre: el gaslighting. <strong>No es una mentira sobre los hechos: es un ataque al instrumento de medida, es decir, a ti.</strong> Tu memoria, tu percepción, tu estabilidad... Repetida el tiempo suficiente, esta manipulación produce un resultado único en su género: una víctima que ya no puede fiarse de sí misma y que depende, por tanto, de su manipulador para saber qué es real.</p>
 <p>La palabra está en todas partes desde hace unos años, a menudo mal usada, así que pongamos precisión: de dónde viene el término, cómo funciona exactamente el mecanismo, cómo distinguirlo de un simple desacuerdo de recuerdos... y sobre todo cómo recuperar el pie cuando estás dentro. Porque se sale, y aún mejor: se sale con un detector incorporado.</p>`,
   quickSummary: [
     "El gaslighting ataca tu percepción, no los hechos: lo que se cuestiona eres tú, no la escena.",
@@ -26,13 +26,13 @@ const article: BlogArticleData = {
       id: 'de-donde-viene-la-palabra',
       title: "De dónde viene la palabra (y por qué es tan certera)",
       content: `<p>El término viene de una película de 1944, «Gaslight» («Luz que agoniza» en español), con Ingrid Bergman. La trama: un marido baja las lámparas de gas de la casa... y luego le asegura a su mujer que la luz no ha cambiado, que es ella la que ve mal. Detalle a detalle, mueve objetos, niega sonidos, reescribe escenas, hasta convencerla de que está perdiendo la razón.</p>
-<p>Ahí está ya todo: la falsificación de lo real, la negación tranquila y, sobre todo, LA firma del gaslighting, la que lo distingue de cualquier otra mentira... <strong>el objetivo no es hacerte creer algo falso, sino hacerte dudar de tu capacidad de saber.</strong> Un mentiroso quiere ganar un punto. Un gaslighter quiere ganar al árbitro.</p>
+<p>Ahí está ya todo: la falsificación de lo real, la negación tranquila y, sobre todo, LA firma del gaslighting, la que lo distingue de cualquier otra mentira... <strong>el objetivo no es hacerte creer algo falso, sino hacerte dudar de tu capacidad de saber.</strong> Un mentiroso quiere ganar un punto en la discusión; un gaslighter quiere ganar al árbitro, es decir, a tu juicio.</p>
 <p>El fenómeno está hoy documentado por la psicología y reconocido como forma de violencia psicológica. Algunos lo llaman con acierto «secuestro cognitivo». Es exactamente eso: un secuestro, el de tu propio juicio.</p>`,
     },
     {
       id: 'el-mecanismo-en-3-tiempos',
       title: "El mecanismo, en tres tiempos",
-      content: `<p>El gaslighting nunca llega de golpe, sube de intensidad por escalones. Aquí están por orden, y verás que la progresión es lógica... es una escalada del blanco.</p>`,
+      content: `<p>El gaslighting nunca llega de golpe, sube de intensidad por escalones. Aquí están por orden, y verás que la progresión es lógica... el blanco sube un escalón cada vez.</p>`,
       subsections: [
         {
           id: 'tiempo-1-negar-los-hechos',

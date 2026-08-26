@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "On imagine toujours le pervers narcissique au masculin. Résultat : les hommes qui vivent l'emprise au féminin doutent deux fois, de leur couple, et de leur droit d'en souffrir.",
   introduction: `<p>Cherche « pervers narcissique » sur n'importe quel site : les exemples sont au masculin, les victimes au féminin. Alors quand c'est TA compagne qui souffle le chaud et le froid, qui te démolit à huis clos et qui charme tout le monde dehors... tu fais quoi, toi ? Tu doutes. Deux fois plutôt qu'une. De ce que tu vis, d'abord. Et de ton droit d'en souffrir, ensuite.</p>
-<p><strong>Disons-le clairement : la perversion narcissique existe au féminin, elle fait les mêmes dégâts, et les hommes qui la subissent sont les victimes les plus silencieuses qui soient.</strong> Pas parce que c'est moins grave. Parce que personne ne leur a donné le vocabulaire, et que « se plaindre de sa femme », socialement, ça passe pour de la faiblesse ou de la mauvaise foi.</p>
-<p>Cet article fait le travail dans l'ordre : les masques d'abord, parce que c'est sa signature. Les 10 signes ensuite, version concrète. Et à la fin, ce que tu peux faire, parce que le but n'est pas de mettre une étiquette sur elle... c'est de te sortir du brouillard, toi.</p>`,
+<p><strong>La perversion narcissique existe au féminin, elle fait les mêmes dégâts, et les hommes qui la subissent sont les victimes les plus silencieuses qui soient.</strong> Pas parce que c'est moins grave. Parce que personne ne leur a donné le vocabulaire, et que « se plaindre de sa femme », socialement, ça passe pour de la faiblesse ou de la mauvaise foi.</p>
+<p>On commence par ses masques, parce que c'est sa signature, puis on passe aux 10 signes en version concrète. Le but n'est pas de mettre une étiquette sur elle... c'est de te sortir du brouillard, toi.</p>`,
   quickSummary: [
     "La perversion narcissique au féminin existe, avec les mêmes mécanismes... et un habillage différent.",
     "Sa spécialité : les masques. Adorable dehors, démolisseuse dedans, victime dès que tu parles.",
@@ -32,7 +32,7 @@ const article: BlogArticleData = {
     {
       id: 'les-masques',
       title: "Ses masques : la spécialité de la maison",
-      content: `<p>L'homme pervers narcissique s'appuie volontiers sur l'autorité frontale. La femme perverse narcissique, elle, travaille au masque. Le contraste entre ses visages n'est pas un à-côté du problème : c'est le cœur du dispositif.</p>
+      content: `<p>L'homme pervers narcissique s'appuie volontiers sur l'autorité frontale. La femme perverse narcissique travaille plutôt au masque, et le contraste entre ses visages est le cœur du dispositif, pas un à-côté du problème.</p>
 <div><table><thead><tr><th></th><th>En public</th><th>En privé</th></tr></thead><tbody>
 <tr><td>Avec tes amis</td><td>Charmante, drôle, « t'as trop de chance mec »</td><td>Le débrief assassin dans la voiture : untel est « lourd », untel « te tire vers le bas »</td></tr>
 <tr><td>Avec ta famille</td><td>Belle-fille parfaite, attentions, compliments</td><td>Chaque visite se paie : reproches, humeurs, « ta mère me déteste »</td></tr>
@@ -48,14 +48,14 @@ const article: BlogArticleData = {
 <ol>
 <li><strong>La culpabilisation comme langue maternelle :</strong> Pas des ordres : des soupirs, des « vas-y, amuse-toi bien » qui veulent dire l'inverse, des « c'est bon, j'ai l'habitude d'être seule ». Tu finis par renoncer de toi-même, et c'est exactement le principe : elle n'interdit rien, elle rend tout coûteux.</li>
 <li><strong>Le statut de victime en préventif :</strong> Elle souffre. Toujours, structurellement, et par ta faute. Son enfance, ses ex « tous des connards », et maintenant toi... Ce statut n'est pas une fragilité, c'est une position stratégique : on ne peut rien reprocher à quelqu'un qui va mal.</li>
-<li><strong>Ta valeur cotée à la baisse, en douceur :</strong> Ton boulot « c'est bien mais bon », tes projets « mignons », tes réussites minimisées ou récupérées. Remarque le détail qui tue : en public, elle te valorise. La démolition, c'est un produit d'intérieur exclusivement.</li>
+<li><strong>Ta valeur cotée à la baisse, en douceur :</strong> Ton boulot « c'est bien mais bon », tes projets « mignons », tes réussites minimisées ou récupérées. Remarque le détail qui tue : en public, elle te valorise. La démolition, elle ne sort jamais de la maison.</li>
 <li><strong>La jalousie de tes appuis, pas de tes rivales :</strong> Contre-intuitif, mais très typique : sa vraie jalousie vise ce qui te rend solide sans elle. Tes potes de toujours, ton frère, ton sport, ta réussite pro... Tout ce qui te nourrit ailleurs est un concurrent à éliminer.</li>
 <li><strong>Le chaud-froid affectif comme outil de dressage :</strong> Tendresse spectaculaire quand tu rentres dans le rang, froid polaire quand tu résistes. Au bout d'un moment, tu fais tout pour rester dans la zone tiède... et tu appelles encore ça de l'amour.</li>
 <li><strong>Ta réalité renégociée en permanence :</strong> Les scènes qu'elle a faites deviennent des scènes que TU as faites. Ce qu'elle a dit hier n'a jamais été dit. Le gaslighting n'a pas de sexe, et elle le manie d'autant mieux qu'elle pleure mieux que toi.</li>
 <li><strong>L'argent et le quotidien comme terrain de contrôle :</strong> Tes dépenses surveillées, les siennes sacrées ; ta charge de travail invisible, la sienne héroïque. Le déséquilibre n'est jamais discutable : le contester, c'est l'« agresser ».</li>
 <li><strong>L'intimité au compte-gouttes stratégique :</strong> Le désir devient une récompense, son retrait une sanction. Jamais formulé ainsi, évidemment... mais le calendrier parle de lui-même, et tu as fini par le remarquer.</li>
-<li><strong>Tes failles archivées, ressorties en arme :</strong> Ce que tu lui as confié de plus fragile ressort, précisément, au moment où ça fait le plus mal. Une dispute avec elle, ce n'est pas un désaccord : c'est une frappe chirurgicale sur tes points faibles.</li>
-<li><strong>Quand tu parles enfin : l'inversion totale.</strong> Le jour où tu oses dire « ça suffit », tu découvres son chef-d'œuvre : c'est toi le colérique, toi l'instable, toi le manipulateur. Et elle a des témoins, souviens-toi... elle les prépare depuis le début.</li>
+<li><strong>Tes failles archivées, ressorties en arme :</strong> Ce que tu lui as confié de plus fragile ressort, précisément, au moment où ça fait le plus mal. Une dispute avec elle, c'est une frappe chirurgicale sur tes points faibles, bien plus qu'un désaccord.</li>
+<li><strong>Quand tu parles enfin, l'inversion totale :</strong> Le jour où tu oses dire « ça suffit », tu découvres son chef-d'œuvre : c'est toi le colérique, toi l'instable, toi le manipulateur. Et elle a des témoins, souviens-toi... elle les prépare depuis le début.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Beaucoup de ces signes te rappellent quelque chose ?</p>
@@ -65,7 +65,7 @@ const article: BlogArticleData = {
     {
       id: 'ce-que-ca-fait-a-un-homme',
       title: "Ce que ça fait à un homme, de l'intérieur",
-      content: `<p>Il faut le dire, parce que personne ne le dit : les hommes sous emprise développent exactement les mêmes symptômes que les femmes victimes. Le doute permanent, l'autocensure, la vigilance épuisante, la honte... avec une couche en plus : le sentiment de ne pas avoir le droit de se plaindre. « Je suis un homme, je devrais gérer. »</p>
+      content: `<p>Et il faut le dire : les hommes sous emprise développent exactement les mêmes symptômes que les femmes victimes. Le doute permanent, l'autocensure, la vigilance épuisante, la honte... avec une couche en plus : le sentiment de ne pas avoir le droit de se plaindre. « Je suis un homme, je devrais gérer. »</p>
 <p>Alors mettons les choses au clair. Être sous l'emprise d'une manipulatrice ne dit rien de ta virilité, de ta force ou de ton intelligence. Ces systèmes fonctionnent sur des gens bien, précisément parce qu'ils sont bien : ta loyauté, ta patience et ton envie de bien faire sont les matières premières du mécanisme. Les hommes brillants et solides y passent comme les autres... ils mettent juste plus longtemps à demander de l'aide.</p>
 <p>Et si tu constates que tu n'arrives pas à partir malgré tout ce que tu viens de lire, ce n'est pas un manque de courage : c'est le fonctionnement piégé de l'attachement, parfois doublé d'un vrai <a href="/blog/dependance-affective/">attachement dépendant</a> qu'elle a soigneusement entretenu. Ça se démonte, mais pas tout seul.</p>
 <div class="blog-cta">

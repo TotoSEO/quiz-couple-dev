@@ -10,9 +10,9 @@ const article: BlogArticleData = {
   featuredImageAlt: "Persona encadenada a un móvil que muestra un corazón, esperando una respuesta",
   publishedAt: '2026-09-12T11:33:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "La dependencia emocional no se ve en el espejo. Se ve en los detalles: lo que sientes cuando no responde, lo que anulas por él, lo que ya no te atreves a decir.",
+  excerpt: "La dependencia emocional se ve en los detalles: lo que sientes cuando no responde, lo que anulas por él, lo que ya no te atreves a decir.",
   introduction: `<p>No te ha contestado en dos horas. Objetivamente no ha pasado nada: está trabajando, vive su vida, todo va bien. Pero tú ya has mirado el móvil quince veces, has releído tu último mensaje para ver si fue torpe y has montado tres escenarios, uno de ellos con él dejándote.</p>
-<p>Si esa escena te suena, quizá ya te hayas preguntado si no serás «demasiado». Demasiado apegada, demasiado ansiosa, demasiado dependiente. <strong>La pregunta de verdad no es si quieres demasiado. Es si tu equilibrio emocional depende por completo de otra persona.</strong> Eso es la dependencia emocional, y tiene síntomas precisos.</p>
+<p>Si esa escena te suena, quizá ya te hayas preguntado si no serás «demasiado». Demasiado apegada, demasiado ansiosa, demasiado dependiente. <strong>La verdadera pregunta es si tu equilibrio emocional depende por completo de otra persona, no si quieres demasiado.</strong> Eso es la dependencia emocional, y tiene síntomas precisos.</p>
 <p>Vamos a repasarlos uno a uno, esfera por esfera: lo que pasa en tu cabeza, en tu pareja, en tu cuerpo y con los demás. No para colgarte una etiqueta. Solo para ayudarte a ver claro, porque este funcionamiento se trabaja muy bien una vez identificado.</p>`,
   quickSummary: [
     "El síntoma central: tu estado emocional depende de las señales del otro, hora a hora.",
@@ -41,8 +41,8 @@ const article: BlogArticleData = {
 <li><strong>El miedo al abandono, de fondo:</strong> No una inquietud puntual: un programa que corre todo el rato. Un tono algo seco, un «ya veremos», una mirada distraída, y tu cerebro concluye lo peor. Lo más agotador es que hasta los buenos momentos quedan contaminados: los disfrutas a medias, porque una parte de ti ya anticipa el final.</li>
 <li><strong>La interpretación permanente:</strong> Relees los mensajes, analizas los emojis, comparas el tiempo de respuesta de hoy con el de la semana pasada. Tu pareja se ha convertido en una investigación y tú en detective a jornada completa. Agotador y, sobre todo, sin fin, porque ninguna prueba tranquiliza más de unas horas.</li>
 <li><strong>La necesidad de tranquilizarte una y otra vez:</strong> «¿Me quieres?», «¿estamos bien?», preguntas hechas no para abrir una conversación sino para calmar una angustia. La respuesta funciona como un medicamento de efecto corto. Enseguida hace falta otra dosis.</li>
-<li><strong>Tu valor personal indexado a él:</strong> Si te valora, vales algo. Si está distante, ya no vales nada. Tu autoestima ha dejado de pertenecerte: cotiza en bolsa, y el mercado es él.</li>
-<li><strong>La incapacidad de estar sola sin sufrir:</strong> La soledad no te descansa, te pone en alerta. Un fin de semana sin él no es un rato para ti: es una prueba que hay que atravesar, reloj en mano.</li>
+<li><strong>Tu valor personal indexado a él:</strong> Si te valora, vales algo. Si está distante, ya no vales nada. Tu autoestima ha dejado de pertenecerte: sube y baja según su humor.</li>
+<li><strong>La incapacidad de estar sola sin sufrir:</strong> La soledad no te descansa, te pone en alerta. Un fin de semana sin él ya no es un rato para ti, es una prueba que hay que atravesar, reloj en mano.</li>
 </ol>`,
     },
     {
@@ -50,7 +50,7 @@ const article: BlogArticleData = {
       title: "En tu pareja (síntomas 6 a 10)",
       content: `<ol start="6">
 <li><strong>Ya no dices que no:</strong> Por miedo a decepcionar, a crear tensión, a darle un motivo para irse. Tus preferencias van sistemáticamente después de las suyas, hasta el punto de que a veces ya no sabes qué prefieres tú.</li>
-<li><strong>Te borras por anticipado:</strong> Adivinas sus deseos antes de que los formule, desactivas los conflictos antes de que existan, te tragas los reproches antes de decirlos. De lejos eres «fácil de llevar». De cerca, has desaparecido.</li>
+<li><strong>Te borras por anticipado:</strong> Adivinas sus deseos antes de que los formule, desactivas los conflictos antes de que existan, te tragas los reproches antes de decirlos. De lejos eres «fácil de llevar». Solo que, de tanto borrarte, has desaparecido.</li>
 <li><strong>Los celos se vuelven invasivos:</strong> No necesariamente escenas: a veces solo una vigilancia discreta, las redes revisadas, el «¿quién es esa?» del que te arrepientes al segundo. Detrás, siempre la misma lógica: cada persona a su alrededor es una amenaza para tu supervivencia emocional.</li>
 <li><strong>Te quedas, aunque duela:</strong> Es el síntoma con las consecuencias más pesadas. Una relación mediocre, decepcionante, a veces claramente tóxica, y aun así la idea de irte da más miedo que la idea de sufrir. Ojo, además: este perfil atrae precisamente a las parejas que lo explotan, volvemos a ello más abajo.</li>
 <li><strong>La pareja se ha comido todo lo demás:</strong> Tus proyectos, tus aficiones, tus noches propias: todo ha pasado a segundo plano, sin decisión consciente. Un día te das cuenta de que llevas meses sin hacer nada que no lo incluya a él.</li>
@@ -110,7 +110,7 @@ const article: BlogArticleData = {
         {
           id: 'faq-los-hombres-tambien',
           title: "¿Los hombres también lo viven?",
-          content: `<p>Completamente, y probablemente más de lo que se cree: consultan menos, hablan menos de ello, y sus síntomas toman a veces otras formas, celos de control, rabia o hiperinversión en la pareja. El tema merece su propio análisis, es lo que hacemos en la <a href="/es/blog/dependencia-emocional-en-el-hombre/">dependencia emocional en el hombre</a>.</p>
+          content: `<p>Completamente, y probablemente más de lo que se cree: consultan menos, hablan menos de ello, y sus síntomas toman a veces otras formas, celos de control, rabia o hiperinversión en la pareja. El tema tiene sus propios códigos, y los detallamos en la <a href="/es/blog/dependencia-emocional-en-el-hombre/">dependencia emocional en el hombre</a>.</p>
 <a href="/es/blog/dependencia-emocional-en-la-pareja/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leer también</span><span class="blog-read-also-title">Dependencia emocional: cuando querer se vuelve una necesidad vital</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
         },
       ],

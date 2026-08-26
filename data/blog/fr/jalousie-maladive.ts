@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "La jalousie normale protège le couple. La jalousie maladive le dévore... et elle dévore d'abord celui qui la ressent.",
   introduction: `<p>Ça commence toujours par une petite chose. Un prénom qui revient trop souvent, un sourire à une soirée, un téléphone posé face contre table... et un scénario qui se met à tourner dans ta tête. Tu sais qu'il ne repose sur rien, ce scénario. Tu le sais ! Mais il tourne quand même, de plus en plus vite, et te voilà à vérifier, questionner, imaginer... et à t'en vouloir de le faire.</p>
 <p>Première chose à poser, parce qu'elle soulage : <strong>être jaloux est normal. La jalousie est une émotion universelle, présente dans tous les couples qui comptent l'un pour l'autre...</strong> Le problème n'est pas de la ressentir. Le problème, c'est quand elle prend les commandes : quand elle décide de tes soirées, de tes questions, de tes fouilles... et qu'elle fait souffrir tout le monde, à commencer par toi.</p>
-<p>Cet article trace la frontière entre les deux, va chercher les vraies racines de la jalousie maladive (indice : elles ne sont presque jamais chez l'autre)... et donne le chemin de sortie, qui existe et qui marche. Que la jalousie soit la tienne ou celle de ton partenaire, d'ailleurs : on parle aux deux.</p>`,
+<p>On va tracer la frontière entre les deux, aller chercher les vraies racines de la jalousie maladive (indice : elles ne sont presque jamais chez l'autre)... et donner le chemin de sortie, qui existe et qui marche. Que la jalousie soit la tienne ou celle de ton partenaire, d'ailleurs : on parle aux deux.</p>`,
   quickSummary: [
     "La jalousie est normale ; elle devient maladive quand elle décide à ta place et fait souffrir sans preuve.",
     "Le critère central : la jalousie saine réagit à des faits, la maladive fabrique ses scénarios.",
@@ -53,7 +53,7 @@ const article: BlogArticleData = {
         {
           id: 'la-blessure-jamais-refermee',
           title: "La blessure jamais refermée",
-          content: `<p>Une trahison passée, la tienne ou celle vue chez tes parents, et le système conclut : ça peut arriver n'importe quand, à n'importe qui... La jalousie devient alors une vigilance de vétéran : tu ne surveilles pas ton partenaire actuel, tu surveilles le fantôme du précédent. Lui paie une dette qu'il n'a jamais contractée.</p>
+          content: `<p>Une trahison passée, la tienne ou celle vue chez tes parents, et le système conclut : ça peut arriver n'importe quand, à n'importe qui... La jalousie devient alors une vigilance de vétéran : tu ne surveilles pas ton partenaire actuel, tu surveilles le fantôme du précédent. Et lui paie une dette qu'il n'a jamais contractée.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Le cas où la jalousie n'est pas maladive : elle est alimentée</p>
 <p>Avant de te déclarer jalouse maladive, vérifie une chose : certains partenaires ENTRETIENNENT la jalousie... ambiguïtés cultivées, comparaisons, triangulation (« ma collègue, elle, me comprend »), chaud-froid stratégique. Si ta jalousie a des braises qu'on attise, le problème n'est pas ton alarme : c'est le pyromane. La triangulation est d'ailleurs une pièce maîtresse dans la façon dont <a href="/blog/manipulateur-narcissique/">opère un manipulateur narcissique</a>... et elle fabrique de la jalousie sur mesure.</p>
@@ -82,7 +82,7 @@ const article: BlogArticleData = {
         {
           id: 'traiter-les-scenarios-comme-des-scenarios',
           title: "Traiter les scénarios comme des scénarios",
-          content: `<p>Quand le film démarre, nomme-le : « c'est mon cinéma intérieur, pas une information »... Puis pose-toi la seule question utile : « quels FAITS ai-je ? » Pas des impressions, des faits. Tu découvriras que 95 % de tes films tournent sans un seul fait au générique. Les nommer, c'est leur retirer le statut de vérité.</p>`,
+          content: `<p>Quand le film démarre, nomme-le : « c'est mon cinéma intérieur, pas une information »... Puis pose-toi la seule question utile : « quels FAITS ai-je ? » Pas des impressions, des faits. Tu découvriras que la plupart de tes films tournent sans un seul fait au générique. Les nommer, c'est leur retirer le statut de vérité.</p>`,
         },
         {
           id: 'remuscler-ta-propre-vie',
@@ -93,7 +93,7 @@ const article: BlogArticleData = {
           id: 'et-en-parler-dans-le-bon',
           title: "En parler, dans le bon sens",
           content: `<p>Pas « avoue ! »... mais « je me fais des films, c'est mon chantier, et j'y travaille ». Cette phrase change tout : elle transforme ton partenaire de suspect en allié. La jalousie assumée comme un travail personnel rapproche ; la jalousie déguisée en enquête détruit. Et si le fond est trop chargé, une trahison ancienne, une angoisse qui déborde, un psy accélère énormément... c'est un chantier classique et gratifiant des thérapies.</p>
-<p>Un dernier mot, pour finir sur le vrai enjeu. La jalousie maladive se présente comme une preuve d'amour... c'est son plus beau mensonge. L'amour veut le bonheur de l'autre ; la jalousie maladive veut sa surveillance. Le jour où tu fais la différence de l'intérieur, le travail est déjà à moitié fait... et l'autre moitié, tu sais maintenant par où elle commence.</p>
+<p>Un dernier mot, pour finir sur le vrai enjeu. La jalousie maladive se présente comme une preuve d'amour... c'est son plus beau mensonge. L'amour veut le bonheur de l'autre, alors que la jalousie maladive veut surtout le surveiller. Le jour où tu fais la différence de l'intérieur, le travail est déjà à moitié fait... et l'autre moitié, tu sais maintenant par où elle commence.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Ta jalousie, elle en est où, exactement ?</p>
 <p class="blog-cta-texte">Une série de questions évalue ta jalousie sur les situations concrètes de cet article : les scénarios, les vérifications, l'effet sur ton couple... et te situe entre la jalousie normale et celle qui se travaille.</p>

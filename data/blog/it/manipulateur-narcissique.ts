@@ -10,9 +10,9 @@ const article: BlogArticleData = {
   featuredImageAlt: "Giocatore di scacchi i cui pezzi sono sagome umane",
   publishedAt: '2026-09-15T13:53:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Il manipolatore narcisista viene sempre presentato come onnipotente. È falso. Il suo sistema ha delle falle, note e prevedibili, a patto di sapere dove guardare.",
-  introduction: `<p>Quando cerchi «manipolatore narcisista» finisci sempre sullo stesso articolo: l'elenco dei segnali, il ritratto del mostro, e arrangiati. Ottimo per capire, ma dopo? Una volta che SAI di avere a che fare con un manipolatore, la vera domanda diventa: come funziona e come ci si protegge concretamente.</p>
-<p>Questo articolo prende quindi il problema dall'altro lato. <strong>Il manipolatore narcisista non è onnipotente. È un sistema, e un sistema ha regole, schemi e falle.</strong> Le sue tecniche sono prevedibili. Anche le sue reazioni. E i suoi punti deboli sono sorprendentemente costanti da un manipolatore all'altro.</p>
+  excerpt: "Il manipolatore narcisista non ha niente di onnipotente: il suo sistema ha delle falle, note e prevedibili, a patto di sapere dove guardare.",
+  introduction: `<p>Sai, o sospetti molto forte, di avere a che fare con un manipolatore narcisista. Arrivati lì, riconoscere i segnali non basta più: la vera domanda diventa come funziona e come ci si protegge concretamente.</p>
+<p><strong>Il manipolatore narcisista non è onnipotente: è un sistema, e un sistema ha regole, schemi e falle.</strong> Le sue tecniche sono prevedibili. Anche le sue reazioni. E i suoi punti deboli sono sorprendentemente costanti da un manipolatore all'altro.</p>
 <p>Vediamo, nell'ordine: le sue tecniche preferite, le sue vulnerabilità reali, cosa produce il tuo silenzio su di lui e le sue reazioni tipo quando gli si resiste. Non per giocare al più furbo con lui, lo ripetiamo più sotto, ma perché capire la meccanica significa già non esserci più dentro.</p>`,
   quickSummary: [
     "Manipolatore narcisista e narcisista patologico: due etichette per uno stesso funzionamento di controllo.",
@@ -44,7 +44,7 @@ const article: BlogArticleData = {
     {
       id: 'i-suoi-punti-deboli',
       title: "I punti deboli del manipolatore (sì, ne ha)",
-      content: `<p>Lo si presenta sempre come una macchina implacabile. In realtà il suo sistema poggia su condizioni precise, e ognuna è una falla.</p>
+      content: `<p>Visto da dentro, il suo sistema sembra implacabile. In realtà poggia su condizioni precise, e ognuna è una falla.</p>
 <ol>
 <li><strong>L'indifferenza sincera:</strong> Non quella recitata, quella la riconosce: quella vera, che arriva quando hai capito e non aspetti più niente. Il suo sistema va a reazione tua, ammirazione o sofferenza, poco importa. Una persona che non reagisce più è una pompa di benzina chiusa.</li>
 <li><strong>I testimoni:</strong> Tutta la sua meccanica esige la porta chiusa. Un terzo presente, una conversazione a tre, una famiglia informata, e il personaggio pubblico deve restare in scena, il che neutralizza quello privato. Per questo lavora così tanto per isolarti.</li>
@@ -61,7 +61,7 @@ const article: BlogArticleData = {
       id: 'l-effetto-del-silenzio',
       title: "L'effetto del silenzio sul manipolatore",
       content: `<p>È una delle domande più poste e merita una risposta precisa, perché il silenzio è un'arma a doppio taglio.</p>
-<p>Cosa produce in lui il tuo silenzio, prima di tutto: una mancanza. La tua attenzione, le tue reazioni, le tue emozioni sono il suo carburante quotidiano, quello che in inglese si chiama «narcissistic supply». Tagliare il contatto significa tagliare l'approvvigionamento. E lì succede una cosa molto prevedibile: <strong>non comincia mai col rispetto, comincia con un'escalation.</strong> Messaggi moltiplicati, fascino riattivato, colpevolizzazione, rabbia, a volte tutte e tre nella stessa giornata. Prova tutte le porte, in ordine.</p>
+<p>Cosa produce in lui il tuo silenzio, prima di tutto: una mancanza. La tua attenzione, le tue reazioni, le tue emozioni sono il suo carburante quotidiano, quello che in inglese si chiama «narcissistic supply». Tagliare il contatto significa tagliare l'approvvigionamento. E lì succede una cosa molto prevedibile: <strong>la prima cosa che scatena è un'escalation, mai il rispetto.</strong> Messaggi moltiplicati, fascino riattivato, colpevolizzazione, rabbia, a volte tutte e tre nella stessa giornata. Prova tutte le porte, in ordine.</p>
 <p>Poi due esiti possibili. O tieni, e finisce per rivolgersi a un'altra fonte di attenzione, a volte con un ultimo fuoco d'artificio di denigrazione pubblica per salvare la sua immagine. Oppure cedi una volta, un solo «rispondimi», e gli hai appena insegnato quanti giorni di pressione servono per riprenderti. È esattamente per questo che il silenzio, con questo profilo, deve essere una decisione preparata, non un broncio né un test.</p>
 <p>Ultimo punto, importante: il silenzio di cui parliamo qui è quello dell'uscita dalla relazione, il famoso contatto zero. All'interno della coppia, tacere per «farglielo capire» non funziona: lui legge quel silenzio come una punizione, quindi come una reazione, quindi come carburante. Di nuovo, è il gioco che conosce meglio.</p>`,
     },

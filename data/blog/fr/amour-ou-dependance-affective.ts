@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "L'amour et la dépendance affective se ressemblent énormément vus de l'intérieur. Même intensité, mêmes pensées permanentes... et pourtant, tout les oppose.",
   introduction: `<p>C'est une question qu'on n'ose pas trop se poser, parce qu'elle fait un peu peur : est-ce que je l'aime, lui... ou est-ce que j'aime surtout le fait qu'il soit là ? Est-ce que c'est de l'amour, ce truc qui me serre le ventre quand il ne répond pas ? Ou autre chose ?</p>
-<p>La confusion est normale, et il faut commencer par le dire : <strong>vus de l'intérieur, l'amour intense et la dépendance affective se ressemblent beaucoup.</strong> Dans les deux cas, tu penses à lui sans arrêt, tu détestes son absence, tu ressens fort... L'intensité ne fait pas la différence. Ce qui fait la différence, c'est la direction : l'amour te porte vers lui, la dépendance te fait fuir un vide.</p>
-<p>On va rendre ça très concret : les 7 différences qui départagent les deux, une expérience mentale qui vaut tous les discours, et un mot sur le cas le plus fréquent... celui où les deux coexistent.</p>`,
+<p>La confusion est normale, et il faut commencer par le dire : <strong>vus de l'intérieur, l'amour intense et la dépendance affective se ressemblent beaucoup.</strong> Dans les deux cas, tu penses à lui sans arrêt, tu détestes son absence, tu ressens fort... La différence se joue ailleurs, sur la direction : l'amour te porte vers lui, la dépendance te fait fuir un vide.</p>
+<p>On va rendre ça très concret, avec les 7 différences qui départagent les deux et une expérience mentale qui vaut tous les discours.</p>`,
   quickSummary: [
     "L'intensité ne départage rien : amour et dépendance peuvent être aussi forts l'un que l'autre.",
     "La vraie différence est la direction : l'amour va vers l'autre, la dépendance fuit un vide.",
@@ -49,12 +49,12 @@ const article: BlogArticleData = {
     {
       id: 'les-deux-coexistent',
       title: "Le cas le plus fréquent : les deux à la fois",
-      content: `<p>Maintenant, la nuance qui manque à tous les articles du genre « amour OU dépendance » : dans la vraie vie, ce n'est presque jamais l'un ou l'autre. <strong>On peut aimer sincèrement quelqu'un ET l'aimer d'une façon dépendante.</strong> L'amour est réel, le partenaire est bien choisi... c'est la manière d'aimer qui est piégée.</p>
-<p>Comment le savoir ? Regarde ce que ta relation amplifie. Un amour sécure amplifie ce que tu as de meilleur : tu oses plus, tu ris plus, tu es plus toi. Un attachement dépendant amplifie tes peurs : tu surveilles plus, tu t'excuses plus, tu rétrécis. Même personne, même amour peut-être... mais deux directions opposées.</p>
+      content: `<p>Maintenant, la nuance qui compte le plus : dans la vraie vie, ce n'est presque jamais l'un ou l'autre. <strong>On peut aimer sincèrement quelqu'un ET l'aimer d'une façon dépendante.</strong> L'amour est réel, le partenaire est bien choisi... c'est la manière d'aimer qui est piégée.</p>
+<p>Comment le savoir ? Regarde ce que ta relation amplifie. Un amour sécure amplifie ce que tu as de meilleur : tu oses plus, tu ris plus facilement. Un attachement dépendant amplifie tes peurs : tu surveilles tout, tu t'excuses sans arrêt, et petit à petit tu rétrécis. Même personne, même amour peut-être... mais deux directions opposées.</p>
 <p>Et c'est une excellente nouvelle, en fait. Parce que si le problème n'est pas la personne mais le mode d'attachement, alors il n'y a rien à casser : il y a quelque chose à réparer, chez toi, pour toi. Et <a href="/blog/sortir-de-la-dependance-affective/">sortir de la dépendance affective</a> est un chemin balisé, exercice par exercice... qui se fait très bien sans quitter personne.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Et si c'était juste de l'habitude ?</p>
-<p>Il existe un troisième candidat qu'on oublie : l'habitude. Ni la peur du vide, ni l'élan vers l'autre... juste le confort d'un quotidien qui roule. Si ta question ressemble plus à « est-ce que je l'aime encore ? » qu'à « pourquoi j'ai si peur de le perdre ? », c'est moins une histoire de dépendance qu'une question d'<a href="/test-amour-ou-habitude/">amour ou d'habitude</a>... et celle-là mérite sa propre réponse.</p>
+<p>Il existe un troisième candidat qu'on oublie : l'habitude. Ni la peur du vide, ni l'élan vers l'autre... juste le confort d'un quotidien qui roule. Si ta question ressemble plus à « est-ce que je l'aime encore ? » qu'à « pourquoi j'ai si peur de le perdre ? », c'est moins une histoire de dépendance qu'une question d'<a href="/test-amour-ou-habitude/">amour ou d'habitude</a>... et celle-là a sa propre réponse.</p>
 </aside>`,
     },
     {

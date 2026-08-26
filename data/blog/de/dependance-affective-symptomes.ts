@@ -10,9 +10,9 @@ const article: BlogArticleData = {
   featuredImageAlt: "Person, an ein Handy mit einem Herz gekettet, wartet auf eine Antwort",
   publishedAt: '2026-09-12T11:33:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Emotionale Abhängigkeit sieht man nicht im Spiegel. Man sieht sie in den Details: was du fühlst, wenn er nicht antwortet, was du für ihn absagst, was du dich nicht mehr zu sagen traust.",
+  excerpt: "Emotionale Abhängigkeit sieht man in den Details: was du fühlst, wenn er nicht antwortet, was du für ihn absagst, was du dich nicht mehr zu sagen traust.",
   introduction: `<p>Er hat seit zwei Stunden nicht geantwortet. Objektiv ist nichts passiert: Er arbeitet, lebt sein Leben, alles ist in Ordnung. Aber du hast dein Handy schon fünfzehnmal geprüft, deine letzte Nachricht noch einmal gelesen, um zu sehen, ob sie ungeschickt war, und drei Szenarien gebaut, in einem verlässt er dich.</p>
-<p>Wenn dir diese Szene bekannt vorkommt, hast du dich vielleicht schon gefragt, ob du «zu viel» bist. Zu anhänglich, zu ängstlich, zu abhängig. <strong>Die eigentliche Frage ist nicht, ob du zu sehr liebst. Sie ist, ob dein emotionales Gleichgewicht vollständig von jemand anderem abhängt.</strong> Das ist emotionale Abhängigkeit, und sie hat klare Symptome.</p>
+<p>Wenn dir diese Szene bekannt vorkommt, hast du dich vielleicht schon gefragt, ob du «zu viel» bist. Zu anhänglich, zu ängstlich, zu abhängig. <strong>Die eigentliche Frage ist, ob dein emotionales Gleichgewicht vollständig von jemand anderem abhängt, nicht ob du zu sehr liebst.</strong> Das ist emotionale Abhängigkeit, und sie hat klare Symptome.</p>
 <p>Wir gehen sie einzeln durch, Bereich für Bereich: was in deinem Kopf passiert, in deiner Beziehung, in deinem Körper und mit anderen Menschen. Nicht, um dir ein Etikett aufzukleben. Nur, damit du klarer siehst, denn an diesem Muster lässt sich sehr gut arbeiten, sobald man es erkannt hat.</p>`,
   quickSummary: [
     "Das Kernsymptom: Dein Gefühlszustand hängt von den Signalen des anderen ab, Stunde für Stunde.",
@@ -41,8 +41,8 @@ const article: BlogArticleData = {
 <li><strong>Die Verlassensangst im Hintergrund:</strong> Keine punktuelle Sorge: ein Programm, das ununterbrochen läuft. Ein etwas schroffer Ton, ein «mal sehen», ein zerstreuter Blick, und dein Gehirn schließt auf das Schlimmste. Am erschöpfendsten ist, dass sogar die guten Momente kontaminiert sind: Du genießt sie nur halb, weil ein Teil von dir schon das Ende vorwegnimmt.</li>
 <li><strong>Das ständige Deuten:</strong> Du liest Nachrichten nach, analysierst Emojis, vergleichst die heutige Antwortzeit mit der von letzter Woche. Deine Beziehung ist zur Ermittlung geworden und du zur Vollzeitdetektivin. Anstrengend und vor allem endlos, denn kein Beweis beruhigt länger als ein paar Stunden.</li>
 <li><strong>Das wiederholte Bedürfnis nach Rückversicherung:</strong> «Liebst du mich?», «Ist alles gut zwischen uns?», gestellt nicht um ein Gespräch zu öffnen, sondern um eine Angst zu beruhigen. Die Antwort wirkt wie ein Medikament mit kurzer Wirkdauer. Schnell braucht es eine neue Dosis.</li>
-<li><strong>Dein Selbstwert an ihn gekoppelt:</strong> Schätzt er dich, bist du etwas wert. Ist er distanziert, bist du nichts mehr wert. Dein Selbstwertgefühl gehört dir nicht mehr: Es ist börsennotiert, und er ist der Markt.</li>
-<li><strong>Die Unfähigkeit, allein zu sein, ohne zu leiden:</strong> Alleinsein erholt dich nicht, es versetzt dich in Alarm. Ein Wochenende ohne ihn ist keine Zeit für dich: Es ist eine Prüfung, die du durchstehst, mit Blick auf die Uhr.</li>
+<li><strong>Dein Selbstwert an ihn gekoppelt:</strong> Schätzt er dich, bist du etwas wert. Ist er distanziert, bist du nichts mehr wert. Dein Selbstwertgefühl gehört dir nicht mehr: Es steigt und fällt mit seiner Laune.</li>
+<li><strong>Die Unfähigkeit, allein zu sein, ohne zu leiden:</strong> Alleinsein erholt dich nicht, es versetzt dich in Alarm. Ein Wochenende ohne ihn ist keine Zeit für dich mehr, sondern eine Prüfung, die du durchstehst, mit Blick auf die Uhr.</li>
 </ol>`,
     },
     {
@@ -50,7 +50,7 @@ const article: BlogArticleData = {
       title: "In deiner Beziehung (Symptome 6 bis 10)",
       content: `<ol start="6">
 <li><strong>Du sagst nicht mehr nein:</strong> Aus Angst zu enttäuschen, Kälte zu erzeugen, einen Grund zum Gehen zu liefern. Deine Vorlieben kommen systematisch nach seinen, so sehr, dass du manchmal gar nicht mehr weißt, was du selbst lieber magst.</li>
-<li><strong>Du löschst dich vorbeugend aus:</strong> Du errätst seine Wünsche, bevor er sie ausspricht, entschärfst Konflikte, bevor es sie gibt, schluckst Vorwürfe, bevor du sie sagst. Von weitem bist du «unkompliziert». Von nahem bist du verschwunden.</li>
+<li><strong>Du löschst dich vorbeugend aus:</strong> Du errätst seine Wünsche, bevor er sie ausspricht, entschärfst Konflikte, bevor es sie gibt, schluckst Vorwürfe, bevor du sie sagst. Von weitem bist du «unkompliziert». Nur bist du, vor lauter Zurücknehmen, verschwunden.</li>
 <li><strong>Eifersucht wird übergriffig:</strong> Nicht unbedingt Szenen: manchmal nur diskrete Überwachung, geprüfte Profile, das «wer ist die?», das du sofort bereust. Dahinter immer dieselbe Logik: Jeder Mensch um ihn herum ist eine Bedrohung für dein emotionales Überleben.</li>
 <li><strong>Du bleibst, auch wenn es wehtut:</strong> Das ist das Symptom mit den schwersten Folgen. Eine mittelmäßige, enttäuschende, manchmal offen toxische Beziehung, und trotzdem macht die Idee zu gehen mehr Angst als die Idee zu leiden. Übrigens Vorsicht: Genau dieses Profil zieht die Partner an, die es ausnutzen, dazu weiter unten mehr.</li>
 <li><strong>Die Beziehung hat alles andere aufgefressen:</strong> Deine Projekte, deine Leidenschaften, deine eigenen Abende: Alles ist in den Hintergrund gerutscht, ohne bewusste Entscheidung. Eines Tages merkst du, dass du seit Monaten nichts gemacht hast, das ihn nicht einschließt.</li>
@@ -110,7 +110,7 @@ const article: BlogArticleData = {
         {
           id: 'faq-auch-maenner',
           title: "Sind Männer auch betroffen?",
-          content: `<p>Absolut, und vermutlich mehr, als man denkt: Sie holen sich seltener Hilfe, sprechen weniger darüber, und ihre Symptome nehmen manchmal andere Formen an, kontrollierende Eifersucht, Wut oder Überinvestition in die Beziehung. Das Thema verdient eine eigene Analyse, und genau die liefern wir zur <a href="/de/blog/emotionale-abhaengigkeit-bei-maennern/">emotionalen Abhängigkeit bei Männern</a>.</p>
+          content: `<p>Absolut, und vermutlich mehr, als man denkt: Sie holen sich seltener Hilfe, sprechen weniger darüber, und ihre Symptome nehmen manchmal andere Formen an, kontrollierende Eifersucht, Wut oder Überinvestition in die Beziehung. Das Thema hat seine eigenen Codes, und wir gehen sie in der <a href="/de/blog/emotionale-abhaengigkeit-bei-maennern/">emotionalen Abhängigkeit bei Männern</a> durch.</p>
 <a href="/de/blog/emotionale-abhaengigkeit-in-beziehungen/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Auch lesen</span><span class="blog-read-also-title">Emotionale Abhängigkeit: wenn Lieben zum lebensnotwendigen Bedürfnis wird</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
         },
       ],

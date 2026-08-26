@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "A manipulator doesn't lie at random. He picks from a repertoire, always the same one. And once you know the repertoire, something breaks in the magic trick.",
   introduction: `<p>"You're too sensitive." How many times have you heard that one? And how many times did you walk away wondering whether, actually, you were overreacting a bit?</p>
-<p>That's exactly why this article exists. Manipulators invent nothing: they draw from a repertoire, and it's roughly always the same one. Short phrases that sound harmless, sometimes even kind... and that do a very precise job in your head. Reverse the blame, make you doubt, shut you up.</p>
+<p>That's exactly why this article exists. Manipulators invent nothing: they draw from a repertoire, and it's roughly always the same one. Short phrases that sound harmless, sometimes even kind... and that do a very precise job in your head: reverse the blame, make you doubt, shut you up.</p>
 <p>So we're going to do the one thing that genuinely neutralises them: take them out of context and look at them one by one. Their real translation, what they aim to produce in you, and what you can say back. There's a fair chance you'll recognise several along the way... and that's rather the point.</p>`,
   quickSummary: [
     "These phrases never discuss what you said, they contest your right to say it.",
@@ -27,8 +27,8 @@ const article: BlogArticleData = {
       title: "Why these phrases work so well",
       content: `<p>Before the list, two minutes on the mechanism, because it explains everything.</p>
 <p>When you express disagreement or hurt, there are two ways to answer you. On the substance: "ok, let's talk about what happened." Or on the frame: "you're in no state to discuss this, you're exaggerating, this isn't the moment"...</p>
-<p>Almost all manipulator phrases play on the frame. <strong>They never discuss what you say. They contest your right to say it.</strong> And that's devastating, because it displaces you: instead of defending your subject, you find yourself defending your legitimacy, your mental health, your tone of voice. The original subject, meanwhile, has vanished. You wanted to talk about a forgotten appointment... and twenty minutes later you're apologising for the way you raised it. Job done.</p>
-<p>One important note, though: everyone comes out with one of these phrases on a tired day. What marks a manipulator isn't the phrase, it's the repertoire. The variety of formulas, their systematic return, and the fact that in the end it's always you who apologises. That overall pattern is exactly that of <a href="/en/blog/narcissist-in-love-signs/">a narcissist in a relationship</a>: the phrase is only one cog in the system.</p>`,
+<p>Almost all manipulator phrases play on the frame. <strong>They never discuss what you say. They go after your right to say it, and that is very different.</strong> And that's devastating, because it displaces you: instead of defending your subject, you find yourself defending your legitimacy, your mental health, your tone of voice. The original subject, meanwhile, has vanished. You wanted to talk about a forgotten appointment... and twenty minutes later you're apologising for the way you raised it. Job done.</p>
+<p>One important note, though: everyone comes out with one of these phrases on a tired day. What marks a manipulator is the repertoire: the variety of formulas, their systematic return, and the fact that in the end it's always you who apologises. That overall pattern is exactly that of <a href="/en/blog/narcissist-in-love-signs/">a narcissist in a relationship</a>: the phrase is only one cog in the system.</p>`,
     },
     {
       id: 'reversing-blame',
@@ -57,7 +57,7 @@ const article: BlogArticleData = {
 <li><strong>"Everyone thinks you're overreacting."</strong> The invisible backup: a phantom tribunal, unverifiable, summoned against you. Who is "everyone"? You'll never know.</li>
 <li><strong>"You should see someone, seriously."</strong> The most violent of the family. Your clarity becomes a pathology. And the day you actually do see someone, a good therapist sees through it very fast... which is precisely why he hates the idea in practice.</li>
 </ul>
-<p>If that blurring rings true, the question of whether you're living through gaslighting deserves a proper look at <a href="/en/blog/gaslighting-signs/">gaslighting and how it works</a>, because it isn't limited to phrases.</p>`,
+<p>If that blurring rings true, take the time to understand <a href="/en/blog/gaslighting-signs/">how gaslighting takes hold</a>, because it isn't limited to phrases.</p>`,
     },
     {
       id: 'playing-victim',
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
 </ul>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 The detail that gives family 4 away</p>
-<p>These phrases almost always target your strengths, not your weaknesses. Your work, your humour, your independence, whatever makes you proud... A clumsy partner criticises what you get wrong. A manipulator files down what holds you up.</p>
+<p>These phrases almost always target your strengths, not your weaknesses. Your work, your humour, your independence, whatever makes you proud... A clumsy partner criticises what you get wrong. A manipulator goes after what holds you up, and that is the whole difference.</p>
 </aside>`,
     },
     {
@@ -98,7 +98,7 @@ const article: BlogArticleData = {
 <ul>
 <li><strong>"We're not going over this again."</strong> A unilateral decree ending the subject. The file is closed because he decided so, not because it's resolved.</li>
 <li><strong>"Calm down."</strong> Two words, and you're officially hysterical. Nobody has ever calmed down on hearing "calm down", and that isn't the point: the point is the public observation that you're overflowing.</li>
-<li><strong>"I said sorry, alright? What more do you want?!"</strong> The apology as a transaction dispatched. The apology isn't a bridge towards you, it's a receipt thrown at you.</li>
+<li><strong>"I said sorry, alright? What more do you want?!"</strong> Here the apology is a transaction to get through: he says sorry to close the file, not to settle it.</li>
 </ul>
 <p>And to isolate you:</p>
 <ul>
@@ -114,7 +114,7 @@ const article: BlogArticleData = {
       title: "The manipulator's texts: the repertoire in writing",
       content: `<p>By message, the repertoire adapts, and it's worth a word because writing has its own codes.</p>
 <p>There's <strong>radio silence</strong> first: three days without a reply after a disagreement, then a "I miss you" at 11.47pm, as if nothing had happened. The <strong>guilt wall of text</strong> next: fifteen lines in which last night becomes proof of your selfishness, sent at the hour when you can't reply. The <strong>shop window message</strong> too: adorable in writing, glacial in person... because writing can be shown, and he knows it.</p>
-<p>And then there's the most disturbing one: the kind message that lands PRECISELY when you were starting to feel better. That one isn't a coincidence, it's a measuring instrument. Your distance has been detected, the reconquest is starting.</p>
+<p>And then there's the most disturbing one: the kind message that lands PRECISELY when you were starting to feel better. That one is no coincidence: your distance has been detected, and the reconquest is starting.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Don't delete those messages</p>
 <p>Writing is your best protection against "I never said that". Keep the conversations, take dated screenshots, store them off your phone if you can. If one day you need to see clearly, or to prove anything at all, those traces will be worth gold.</p>
@@ -132,7 +132,7 @@ const article: BlogArticleData = {
 <tr><td>"Calm down."</td><td>Calming down by apologising</td><td>"I am calm. And I'm still waiting for your answer."</td></tr>
 </tbody></table></div>
 <p>You'll notice the principle: short factual sentences that refuse the ground being offered. No pleading. Pleading is exactly what he's waiting for, because it validates that your legitimacy was the subject all along.</p>
-<p>And be honest with yourself on one point: if these replies systematically trigger escalation, punishing silence or a scene, you're no longer dealing with clumsy communication. You're dealing with a system. The <a href="/en/blog/narcissistic-manipulator/">techniques of the narcissistic manipulator</a>, his weak points and his reactions when you resist deserve to be known in detail at that stage.</p>
+<p>And be honest with yourself on one point: if these replies systematically trigger escalation, punishing silence or a scene, you're no longer dealing with clumsy communication. You're dealing with a system. At that stage, you might as well know in detail the <a href="/en/blog/narcissistic-manipulator/">techniques of the narcissistic manipulator</a>, his weak points and his reactions when you resist.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Do you hear these phrases at home?</p>
 <p class="blog-cta-texte">Twenty questions go through the concrete situations of a controlling relationship, phrase by phrase, behaviour by behaviour. The result tells you where you stand, calmly.</p>

@@ -13,11 +13,11 @@ const article: BlogArticleData = {
   excerpt: "Il problema con un uomo narcisista è che sei l'unica a vedere quello che vedi. Ecco i 12 comportamenti che finiscono per tradirlo.",
   introduction: `<p>Se scrivi «uomo narcisista» in un motore di ricerca non è per curiosità intellettuale... È perché un uomo preciso, il tuo compagno, il tuo ex, forse il padre dei tuoi figli, ti ha messo in allarme. E perché qualcosa non torna: quest'uomo che tutti adorano ti fa vivere, a porte chiuse, qualcosa che nessuno immagina.</p>
 <p>È la trappola numero uno con questo profilo. La distanza tra l'uomo pubblico e quello privato è così violenta che passi per pazza appena provi a descriverla. Così, inevitabilmente, smetti di descriverla. E resti sola con le tue domande.</p>
-<p>Questo articolo ripercorre i 12 comportamenti tipici dell'uomo narcisista, nell'ordine in cui si mostrano: prima il personaggio in società, poi la meccanica degli inizi, poi cosa succede una volta chiusa la porta... e infine cosa diventa quando cominci a resistere. Non serve spuntarli tutti e 12, tra l'altro. Quello che cerchi è una traiettoria. Capirai in fretta se la riconosci.</p>`,
+<p>Ecco i 12 comportamenti tipici dell'uomo narcisista, nell'ordine in cui compaiono. Non serve spuntarli tutti e 12, tra l'altro: quello che cerchi è una traiettoria, e capirai in fretta se la riconosci.</p>`,
   quickSummary: [
-    "La firma non è un comportamento, è lo scarto: irreprensibile fuori, demolitore dentro.",
+    "La firma è lo scarto tra i due uomini: irreprensibile fuori, demolitore dentro.",
     "I 12 segnali seguono una traiettoria: il personaggio pubblico, la seduzione strategica, il controllo installato, poi l'escalation.",
-    "Metà dei segnali non descrivono lui, descrivono lo stato in cui ti mette. È il tuo miglior rilevatore.",
+    "Metà dei segnali descrivono lo stato in cui ti mette, più che il suo comportamento. È il tuo miglior rilevatore.",
     "Un comportamento isolato non prova nulla. La ripetizione, l'accumulo e la direzione sì.",
     "Il vero rivelatore è la tua resistenza: un uomo maldestro migliora, un narcisista fa escalation.",
   ],
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'i-12-segnali-in-sintesi',
       title: "I 12 segnali in sintesi",
-      content: `<p>Ecco la mappa dell'articolo. Se un gruppo ti parla più degli altri, vai direttamente lì.</p>
+      content: `<p>Ecco le quattro tappe, con i segnali che le accompagnano. Se un gruppo ti parla più degli altri, vai direttamente lì.</p>
 <ol class="blog-liste-reperes">
 <li><a href="#in-societa">In società: il personaggio pubblico (segnali da 1 a 3)</a></li>
 <li><a href="#all-inizio-con-te">All'inizio con te: la seduzione strategica (segnali da 4 a 6)</a></li>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
           id: 'nell-intimita',
           title: "Nell'intimità: il controllo installato (segnali da 7 a 9)",
           content: `<ol start="7">
-<li><strong>Mira ai tuoi punti di forza, non alle tue debolezze:</strong> È controintuitivo, eppure è la sua firma. Il tuo lavoro, il tuo umorismo, la tua famiglia, ciò che ti rende fiera: è lì che cadono le osservazioni. Una debolezza criticata può essere un consiglio maldestro. Un punto di forza sistematicamente sminuito, no. Quella è una strategia di demolizione.</li>
+<li><strong>Mira ai tuoi punti di forza, non alle tue debolezze:</strong> È controintuitivo, eppure è la sua firma. Il tuo lavoro, il tuo umorismo, la tua famiglia, ciò che ti rende fiera: è lì che cadono le osservazioni. Una debolezza criticata può essere un consiglio maldestro. Un punto di forza sistematicamente sminuito non lo è mai: è una strategia di demolizione.</li>
 <li><strong>La tua realtà viene rinegoziata di continuo:</strong> Quello che hai visto, lui non l'ha fatto. Quello che ha detto, tu l'hai capito male. Quello che senti, lo esageri... A forza, dubiti della tua memoria al punto di verificare di nascosto. Questo <a href="/it/blog/gaslighting-segnali/">gaslighting</a> quotidiano è il cuore del sistema.</li>
 <li><strong>Il tuo mondo si restringe, senza alcun divieto:</strong> Non ti ha mai vietato di vedere le tue amiche. Ha solo reso costosa ogni uscita: un umore prima, rimproveri dopo, una scenata il giorno seguente. In una situazione del genere, è molto probabile che dopo qualche mese, senza sapere bene come, ti ritrovi a fare il calcolo da sola... Ed è esattamente quello che era previsto.</li>
 </ol>`,
@@ -85,7 +85,7 @@ const article: BlogArticleData = {
     {
       id: 'cosa-ti-fa-vivere',
       title: "Cosa ti fa vivere, e perché dubiti ancora",
-      content: `<p>Se hai riconosciuto la traiettoria, probabilmente ti resta una domanda: «allora perché lo amo ancora?». Perché il sistema è fatto apposta, semplicemente. L'alternanza tra l'uomo meraviglioso e quello distruttivo non ti rende lucida, ti rende dipendente. È la stessa molla del gioco d'azzardo, la ricompensa imprevedibile...</p>
+      content: `<p>Se hai riconosciuto la traiettoria, probabilmente ti resta una domanda: «allora perché lo amo ancora?». Perché il sistema è fatto apposta, semplicemente. Quell'alternanza tra l'uomo meraviglioso e quello distruttivo ti rende dipendente. È la stessa molla del gioco d'azzardo, la ricompensa imprevedibile...</p>
 <p>E perché ti ha anche allenata a dubitare. Mesi di «esageri» lasciano il segno: al momento di concludere, ti chiedi ancora se non sia tu a drammatizzare.</p>
 <p>Rileggi quindi la lista e nota un dettaglio: metà dei segnali non descrivono il suo comportamento, ma lo stato in cui mette te. È il miglior rilevatore di cui disponi, e sbaglia di rado. Molti di questi comportamenti figurano del resto tra le <a href="/it/blog/red-flag-in-un-uomo/">red flag in un uomo</a>, di cui sono la versione più compiuta... e la più pericolosa.</p>
 <div class="blog-cta">
@@ -94,7 +94,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/it/test-partner-narcisista/">Verificare cosa vivo</a>
 <p class="blog-cta-note">Gratuito &middot; Senza registrazione &middot; Risultato immediato</p>
 </div>
-<p>Un'ultima cosa. Forse hai letto questo articolo per una sorella, un'amica, una collega... Quello che puoi fare per lei sta in una frase: resta un legame che non giudica. L'isolamento è la condizione del sistema. Ogni persona che resta nella sua vita è una possibile via d'uscita.</p>
+<p>Un'ultima cosa. Forse hai letto questo articolo per una sorella, un'amica, una collega... Quello che puoi fare per lei comincia da qui: resta un legame che non giudica. Il sistema funziona solo finché lei è isolata. Ogni persona che resta nella sua vita è una possibile via d'uscita.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Se sei in pericolo, non restare sola con un articolo</p>
 <p>Minacce, controllo del tuo denaro o dei tuoi spostamenti, violenza fisica anche «una volta sola»: in Italia il 1522 è gratuito, anonimo e attivo 24 ore su 24, per donne e uomini. In caso di emergenza immediata, il 112. E uno psicologo formato sulla violenza psicologica cambierà la tua traiettoria molto più di qualsiasi lettura. Questa compresa.</p>

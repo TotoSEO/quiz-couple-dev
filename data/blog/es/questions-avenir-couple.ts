@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Las parejas casi nunca fracasan por falta de amor. Fracasan por temas que nunca habían puesto sobre la mesa.",
-  introduction: `<p>Hay una estadística que nadie calcula pero que todo el mundo conoce: la mayoría de las grandes crisis de pareja giran sobre temas... que los dos sabían que habría que hablar algún día. El dinero. Los hijos. La familia política. El reparto de las tareas. El «algún día» simplemente llegó tarde, en plena crisis, en el peor momento para hablarlo con calma.</p>
-<p><strong>Hablar del futuro nunca ha matado una historia sólida. No hablarlo ha matado muchas.</strong> Y al contrario de lo que se cree, estas conversaciones no son solemnes ni pesadas... bien llevadas, ¡son incluso de las más emocionantes que puede tener una pareja!</p>
+  introduction: `<p>Hay una estadística que nadie calcula pero que todo el mundo conoce: la mayoría de las grandes crisis de pareja giran sobre temas... que los dos sabían que habría que hablar algún día: el dinero, los hijos, la familia política, el reparto de las tareas. El «algún día» simplemente llegó tarde, en plena crisis, en el peor momento para hablarlo con calma.</p>
+<p><strong>Hablar del futuro nunca ha matado una historia sólida, mientras que no hablarlo ha matado muchas.</strong> Y al contrario de lo que se cree, estas conversaciones no son solemnes ni pesadas... bien llevadas, ¡son incluso de las más emocionantes que puede tener una pareja!</p>
 <p>Aquí van 60 preguntas sobre el futuro, clasificadas por gran etapa: antes de vivir juntos, antes de comprometerse de verdad, antes de un hijo, en torno al dinero y sobre vuestros sueños comunes. Para picotear ANTES de que los temas se vuelvan urgentes... ahí está todo su interés.</p>`,
   quickSummary: [
     "60 preguntas clasificadas por etapa: vivir juntos, comprometerse, un hijo, el dinero, los sueños.",
@@ -94,7 +94,7 @@ const article: BlogArticleData = {
     {
       id: 'el-dinero-y-las-grandes-decisiones',
       title: "El dinero y las grandes decisiones (46-55)",
-      content: `<p>¡El tema del que nadie habla al principio y por el que todo el mundo discute después! El dinero en pareja nunca son cifras... es seguridad, libertad y poder. Mejor hablarlo cuando todo va bien.</p>
+      content: `<p>¡El tema del que nadie habla al principio y por el que todo el mundo discute después! El dinero en pareja nunca son solo cifras: detrás hay seguridad, libertad y poder. Mejor hablarlo cuando todo va bien.</p>
 <ol start="46">
 <li>¿Cuál es tu relación con el dinero: seguridad, placer, angustia, libertad?</li>
 <li>Cuenta común, cuentas separadas o mixto: ¿tu modelo y por qué?</li>
@@ -111,7 +111,7 @@ const article: BlogArticleData = {
     {
       id: 'vuestros-suenos-comunes',
       title: "Vuestros sueños comunes (56-60)",
-      content: `<p>Terminamos por el combustible. Porque una pareja no es solo una gestión lograda... es una dirección que da ganas. Cinco preguntas, las más bonitas.</p>
+      content: `<p>Terminamos por el combustible. Porque una pareja no es solo una gestión lograda... es una dirección que da ganas. Quedan cinco, las más bonitas.</p>
 <ol start="56">
 <li>¿Cuál es el sueño que nunca hemos formulado en voz alta, los dos?</li>
 <li>Si nos concediéramos un año completamente loco, ¿cómo sería?</li>

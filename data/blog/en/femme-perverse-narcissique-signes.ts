@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "We always picture the narcissistic abuser as male. The result: men living under a woman's control doubt twice over, about their relationship, and about their right to suffer from it.",
   introduction: `<p>Search «narcissistic abuser» on any site: the examples are male, the victims female. So when it's YOUR partner who blows hot and cold, who tears you down behind closed doors and charms everyone outside, what do you do? You doubt. Twice rather than once. About what you're living through, first. And about your right to suffer from it, second.</p>
-<p><strong>Let's be clear: narcissistic abuse exists in women, it does the same damage, and the men who endure it are the most silent victims there are.</strong> Not because it's less serious. Because nobody gave them the vocabulary, and «complaining about your wife», socially, comes across as weakness or bad faith.</p>
-<p>This article does the work in order: the masks first, because that's her signature. The 10 signs next, in concrete terms. And at the end, what you can do, because the goal isn't to slap a label on her, it's to get YOU out of the fog.</p>`,
+<p><strong>Narcissistic abuse exists in women, it does the same damage, and the men who endure it are the most silent victims there are.</strong> Not because it's less serious. Because nobody gave them the vocabulary, and «complaining about your wife», socially, comes across as weakness or bad faith.</p>
+<p>We start with her masks, because they are her signature, then move on to the 10 signs in concrete terms. The goal isn't to slap a label on her, it's to get YOU out of the fog.</p>`,
   quickSummary: [
     "Narcissistic abuse in women exists, with the same mechanisms and a different packaging.",
     "Her speciality: the masks. Adorable outside, demolishing inside, the victim as soon as you speak up.",
@@ -32,7 +32,7 @@ const article: BlogArticleData = {
     {
       id: 'her-masks',
       title: "Her masks: the house speciality",
-      content: `<p>The male narcissistic abuser readily leans on frontal authority. The narcissistic woman works with masks. The contrast between her faces isn't a side effect of the problem: it's the heart of the device.</p>
+      content: `<p>The male narcissistic abuser readily leans on frontal authority. The narcissistic woman works with masks instead, and the contrast between her faces is the heart of the device, not a side effect of the problem.</p>
 <div><table><thead><tr><th></th><th>In public</th><th>In private</th></tr></thead><tbody>
 <tr><td>With your friends</td><td>Charming, funny, «mate, you're so lucky»</td><td>The assassin debrief in the car: this one is «heavy going», that one «drags you down»</td></tr>
 <tr><td>With your family</td><td>Perfect daughter-in-law, thoughtful, complimentary</td><td>Every visit gets paid for: reproaches, moods, «your mother hates me»</td></tr>
@@ -48,14 +48,14 @@ const article: BlogArticleData = {
 <ol>
 <li><strong>Guilt as a mother tongue:</strong> Not orders: sighs, «go on, have fun» that mean the opposite, «it's fine, I'm used to being alone». You end up giving up of your own accord, and that's exactly the principle: she bans nothing, she makes everything expensive.</li>
 <li><strong>Victim status, pre-emptively:</strong> She suffers. Always, structurally, and because of you. Her childhood, her exes «all bastards», and now you. That status isn't fragility, it's a strategic position: you can't hold anything against someone who is doing badly.</li>
-<li><strong>Your worth marked down, gently:</strong> Your job «is fine but still», your projects «cute», your successes minimised or claimed. Notice the killer detail: in public, she praises you. The demolition is strictly an indoor product.</li>
+<li><strong>Your worth marked down, gently:</strong> Your job «is fine but still», your projects «cute», your successes minimised or claimed. Notice the killer detail: in public, she praises you. The demolition never leaves the house.</li>
 <li><strong>Jealous of your supports, not your rivals:</strong> Counter-intuitive but very typical: her real jealousy targets whatever makes you solid without her. Your lifelong mates, your brother, your sport, your professional success. Anything that feeds you elsewhere is a competitor to eliminate.</li>
 <li><strong>Hot and cold as a training tool:</strong> Spectacular tenderness when you fall into line, polar cold when you resist. After a while you do everything to stay in the lukewarm zone, and you still call it love.</li>
 <li><strong>Your reality permanently renegotiated:</strong> The scenes she made become scenes YOU made. What she said yesterday was never said. Gaslighting has no gender, and she handles it all the better because she cries better than you.</li>
 <li><strong>Money and daily life as control terrain:</strong> Your spending monitored, hers sacred; your workload invisible, hers heroic. The imbalance is never up for discussion: challenging it means «attacking» her.</li>
 <li><strong>Intimacy dispensed strategically:</strong> Desire becomes a reward, its withdrawal a sanction. Never phrased that way, obviously, but the calendar speaks for itself, and you've ended up noticing.</li>
-<li><strong>Your vulnerabilities archived, brought back as weapons:</strong> What you confided most fragile comes back, precisely, at the moment when it hurts most. An argument with her isn't a disagreement: it's a surgical strike on your weak points.</li>
-<li><strong>When you finally speak up: total inversion.</strong> The day you dare say «enough», you discover her masterpiece: you're the angry one, you're the unstable one, you're the manipulator. And she has witnesses, remember, she's been preparing them from the start.</li>
+<li><strong>Your vulnerabilities archived, brought back as weapons:</strong> What you confided most fragile comes back, precisely, at the moment when it hurts most. An argument with her is a surgical strike on your weak points, far more than a disagreement.</li>
+<li><strong>When you finally speak up, total inversion:</strong> The day you dare say «enough», you discover her masterpiece: you're the angry one, you're the unstable one, you're the manipulator. And she has witnesses, remember, she's been preparing them from the start.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Do a lot of these signs ring a bell?</p>
@@ -65,7 +65,7 @@ const article: BlogArticleData = {
     {
       id: 'what-it-does-to-a-man',
       title: "What it does to a man, from the inside",
-      content: `<p>It has to be said, because nobody says it: men under this kind of control develop exactly the same symptoms as female victims. Permanent doubt, self-censorship, exhausting vigilance, shame, with an extra layer on top: the feeling of not having the right to complain. «I'm a man, I should be able to handle this.»</p>
+      content: `<p>And it has to be said: men under this kind of control develop exactly the same symptoms as female victims. Permanent doubt, self-censorship, exhausting vigilance, shame, with an extra layer on top: the feeling of not having the right to complain. «I'm a man, I should be able to handle this.»</p>
 <p>So let's be clear. Being under a female manipulator's control says nothing about your masculinity, your strength or your intelligence. These systems work on good people, precisely because they're good: your loyalty, your patience and your wish to do right are the raw materials of the mechanism. Brilliant, solid men go through it like everyone else, they just take longer to ask for help.</p>
 <p>And if you notice you can't leave despite everything you've just read, that isn't a lack of courage: it's the trapped functioning of attachment, sometimes doubled by genuine <a href="/en/blog/emotional-dependency-in-relationships/">dependent attachment</a> that she has carefully maintained. It can be dismantled, but not on your own.</p>
 <div class="blog-cta">

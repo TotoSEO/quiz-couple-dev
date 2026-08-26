@@ -11,7 +11,7 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-19T09:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Están las conversaciones de todos los días... y las que no te atreves a empezar. Adivina cuáles acercan más.",
-  introduction: `<p>Os lo contáis todo, bueno, casi. El trabajo, los amigos, los planes, qué cenáis hoy. Pero hay un terreno del que se habla mucho menos fácilmente, incluso después de años: lo que el otro siente de verdad, lo que no se atreve a pedir, lo que echa de menos, lo que le apetece. Lo íntimo, lo de verdad.</p>
+  introduction: `<p>Os lo contáis todo, bueno, casi. El trabajo, los amigos, los planes, qué cenáis hoy. Pero hay un terreno del que se habla mucho menos fácilmente, incluso después de años: lo que el otro siente de verdad, lo que no se atreve a pedir, lo que echa de menos, lo que le apetece. En fin, lo íntimo, lo de verdad.</p>
 <p><strong>Y es una pena, porque ahí es exactamente donde se juega la complicidad de una pareja.</strong> ¡No en las grandes declaraciones! En esas conversaciones un poco más desnudas que las demás, las que se lanzan en voz baja, una noche en la que uno se siente bien.</p>
 <p>Aquí van 65 preguntas íntimas, graduadas a propósito: empezamos con suavidad, por las emociones, y vamos subiendo la temperatura. Para donde quieras, coge lo que os pegue. El único manual de instrucciones real es el momento adecuado, y justo por ahí empezamos.</p>`,
   quickSummary: [
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 La pregunta 44 importa tanto como la 45</p>
-<p>Hablar de deseos también es hablar de límites, y una pareja que sabe decirse «eso no» es una pareja que puede decirse «eso sí» con confianza. Si una respuesta os sorprende a alguno, tomadla como información, no como una petición. Podéis decíroslo todo; no os debéis nada.</p>
+<p>Hablar de deseos también es hablar de límites, y una pareja que sabe decirse «eso no» es una pareja que puede decirse «eso sí» con confianza. Si una respuesta os sorprende a alguno, tomadla como información, no como una petición. Podéis decíroslo todo, pero no os debéis nada.</p>
 </aside>`,
     },
     {

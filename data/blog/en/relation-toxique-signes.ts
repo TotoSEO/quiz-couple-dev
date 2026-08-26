@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "«Toxic», the word is everywhere, to the point of meaning nothing. And yet a genuinely toxic relationship has precise signs, and one central question: can it be fixed?",
   introduction: `<p>«Toxic relationship»... The word is so everywhere that it covers everything: a slightly heated argument, a bitter ex, a disagreement about holidays, boom, toxic! The result is that when you ACTUALLY ask the question about your own relationship, you no longer know what to think. Is it serious? Is it normal? Is it me?</p>
-<p>So let's set out the real criterion, the one that puts everything back in order: <strong>a relationship isn't toxic because of what it contains, it's toxic because of what it does to you.</strong> Every couple has arguments. Differences, grey periods, words that go too far: same. That isn't the question. The question is: what state does this relationship put you in, week after week?</p>
-<p>We'll look at it calmly: the 7 reliable signs, the difference between a toxic relationship and a rough patch, and above all the question nobody handles well: can it be fixed, or not?</p>`,
+<p>So let's set out the real criterion, the one that puts everything back in order: <strong>a relationship is toxic because of what it does to you, not because of what it contains.</strong> Every couple has arguments. Differences, grey periods, words that go too far: same. That isn't the question. The question is: what state does this relationship put you in, week after week?</p>
+<p>We'll look at it calmly, all the way to the question that matters most: can it be fixed, or not?</p>`,
   quickSummary: [
     "The core criterion: not what the relationship contains, but what it turns you into.",
     "The 7 reliable signs are measured over time, not over one bad week.",
@@ -71,12 +71,12 @@ const article: BlogArticleData = {
 </ul>
 </div>
 </div>
-<p>In one sentence: <strong>a rough patch exhausts you, a toxic relationship transforms you.</strong> You come out of a rough patch tired but whole. You come out of a toxic relationship having to remember who you were before.</p>`,
+<p>The difference, deep down: <strong>a rough patch exhausts you, a toxic relationship transforms you.</strong> You come out of a rough patch tired but whole. You come out of a toxic relationship having to remember who you were before.</p>`,
     },
     {
       id: 'toxic-doesnt-mean-manipulative',
       title: "An important nuance: toxic doesn't always mean manipulative",
-      content: `<p>This is the point almost every article misses, and yet it changes everything that follows. There are two big families of toxic relationships, and they don't have the same prognosis.</p>`,
+      content: `<p>There are two big families of toxic relationships, they don't have the same prognosis, and that nuance changes everything that follows.</p>`,
       subsections: [
         {
           id: 'the-two-person-toxic-dynamic',
@@ -86,7 +86,7 @@ const article: BlogArticleData = {
         {
           id: 'one-persons-hold',
           title: "One person's hold",
-          content: `<p>Here the toxicity isn't an accident of the system: it is the system. Control, guilt-tripping, devaluation, isolation, all organised for the benefit of one person. If the signs you're ticking look like those of the <a href="/en/blog/narcissist-in-love-signs/">narcissist in love</a>, or the <a href="/en/blog/narcissistic-manipulator/">narcissistic manipulator's techniques</a>, you're no longer in an unhappy dynamic: you're in a coercive relationship. And that can't be «fixed» together, since one of the two has no interest in anything changing.</p>
+          content: `<p>Here the toxicity is no accident: control, guilt-tripping, devaluation and isolation are all organised for the benefit of one person. If the signs you're ticking look like those of the <a href="/en/blog/narcissist-in-love-signs/">narcissist in love</a>, or the <a href="/en/blog/narcissistic-manipulator/">narcissistic manipulator's techniques</a>, you're no longer in an unhappy dynamic: you're in a coercive relationship. And that can't be «fixed» together, since one of the two has no interest in anything changing.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 How to know which family you're in?</p>
 <p>A reliable clue: propose a real change, couples therapy, new rules, specific efforts with a date on them. In a two-person dynamic, the other is relieved that it's being talked about, even clumsily. In a coercive relationship, the proposal itself becomes an attack, and there you are apologising once again.</p>
@@ -97,7 +97,7 @@ const article: BlogArticleData = {
     {
       id: 'can-it-be-fixed',
       title: "Can it be fixed? And how?",
-      content: `<p>For the two-person toxic dynamic, the answer is yes, on three conditions, not one fewer. That BOTH recognise the problem, without handing each other the whole bill. That BOTH change concrete behaviours, not just intentions. And that a framework exists, a third party, couples therapy, written rules, because toxic habits can't be dismantled bare-handed. If those conditions seem to be met in your case, then saving your relationship becomes a realistic project, to be run seriously, step by step.</p>
+      content: `<p>For the two-person toxic dynamic, the answer is yes, on three conditions, not one fewer: that BOTH recognise the problem, without handing each other the whole bill; that BOTH change concrete behaviours, not just intentions; and that a framework exists, a third party, couples therapy, written rules, because toxic habits can't be dismantled bare-handed. If those conditions seem to be met in your case, then saving your relationship becomes a realistic project, to be run seriously, step by step.</p>
 <p>For one person's hold... let's not kid ourselves: repair would require the person who benefits from the system to agree to dismantle it. That almost never happens, and certainly not under a romantic ultimatum. In that case the work is no longer «how do I fix the relationship» but «how do I protect myself, then leave». That's a different project, and it starts by no longer doubting what you're living through.</p>
 <p>In both cases, one step comes before all the others: getting objective. Coming out of the fog of impressions, laying the facts out flat.</p>
 <div class="blog-cta">
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/en/toxic-relationship-test/">Place my relationship</a>
 <p class="blog-cta-note">Free &middot; No sign-up &middot; Instant result</p>
 </div>
-<p>And if while reading all this a small voice says «I already know, actually», listen to it. We often know long before we dare to know. The list of <a href="/en/blog/things-not-accept-relationship/">things you should never accept in a relationship</a> can help you set your limits out clearly, in black and white. It's often the first step that counts.</p>
+<p>And if while reading all this a small voice says «I already know, actually», listen to it: we often know the answer long before we dare say it to ourselves. The list of <a href="/en/blog/things-not-accept-relationship/">things you should never accept in a relationship</a> can help you set your limits out clearly, in black and white. It's often the first step that counts.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ If you're in danger, don't stay alone with an article</p>
 <p>Threats, control over your money or your movements, physical violence even «just once»: look up the domestic abuse helpline in your country, most are free, anonymous and open around the clock, for women and men alike. If you're in immediate danger, call your local emergency number.</p>

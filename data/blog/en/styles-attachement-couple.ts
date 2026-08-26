@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Four stylised hearts representing the four attachment styles, linked by different threads",
   publishedAt: '2026-11-28T08:25:00+01:00',
   author: AUTHORS['thomas'],
-  excerpt: "Why do some people love serenely, others by clinging, others by fleeing? The answer holds in one word: attachment. And it's decided long before the first love story.",
+  excerpt: "Why do some people love serenely, others by clinging, others by fleeing? The answer has a name: attachment. And it's decided long before the first love story.",
   introduction: `<p>You've surely noticed this strange phenomenon: in a couple, each person seems to be playing a score written in advance. One needs closeness, quickly feels neglected, reaches out again... The other needs air, quickly feels invaded, moves away. And the more one clings, the more the other retreats! As if the script had been written before they even met.</p>
 <p>It partly was. <strong>That script is called the attachment style: the way your emotional system learned, very early, to handle connection, closeness and separation.</strong> It's attachment theory, one of the most solid fields of modern psychology, started by John Bowlby in the 1950s... and it shines a rather spectacular light on adult couples.</p>
 <p>There are four main styles: secure, anxious, avoidant, disorganised. We're going to go through them one by one, in concrete love-life terms, see how they combine in a couple... and above all answer the awkward question: can you change? Spoiler: yes.</p>`,
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'where-your-style-comes-from',
       title: "Where your attachment style comes from",
-      content: `<p>The principle holds in two sentences. As a baby you depended entirely on your attachment figures, and your nervous system learned a strategy for keeping the bond: if your needs got reliable responses, it learned that the bond is safe... If the responses were unpredictable, absent or frightening, it improvised a survival strategy: cling harder, or learn not to need any more.</p>
+      content: `<p>The principle is simple. As a baby you depended entirely on your attachment figures, and your nervous system learned a strategy for keeping the bond: if your needs got reliable responses, it learned that the bond is safe... If the responses were unpredictable, absent or frightening, it improvised a survival strategy: cling harder, or learn not to need any more.</p>
 <p>That strategy, tested thousands of times before you were three, became your default setting. And in adulthood, guess which relationship wakes up exactly the same circuits as the parent-child bond? The couple, obviously... That's why brilliant, composed adults find themselves, in love, watching for a read receipt or suffocating as soon as someone loves them too much: it isn't the adult reacting, it's the setting.</p>
 <p>Good news before we get into the profiles: a setting isn't an identity. We'll come back to that below, but keep it in mind while you recognise yourself in the descriptions... because you will recognise yourself!</p>`,
     },

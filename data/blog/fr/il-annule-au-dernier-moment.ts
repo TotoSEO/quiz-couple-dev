@@ -18,7 +18,7 @@ const article: BlogArticleData = {
     "Le signal à regarder n'est pas son excuse, c'est s'il repropose une date lui-même, avec un jour dedans.",
     "Sur le moment : répondre court, ne pas faire de reproche, et ne pas reproposer de date à sa place.",
     "S'il n'a rien reproposé au bout de deux jours, une relance suffit. Une seule.",
-    "Deux annulations sans nouvelle date, c'est une réponse. Elle est juste dite autrement.",
+    "Deux annulations sans nouvelle date, c'est déjà une réponse, même si elle n'est pas dite avec des mots.",
   ],
   sections: [
     {
@@ -33,11 +33,11 @@ const article: BlogArticleData = {
 <li><strong>Il a autre chose ce soir-là :</strong> une meilleure proposition, un plan avec ses potes, quelqu'un d'autre. Là, l'annulation est un choix, même s'il ne l'assume pas comme ça.</li>
 <li><strong>Il n'avait pas prévu de venir :</strong> le rendez-vous existait pour ne pas dire non, et il a attendu le dernier moment pour ne pas avoir la conversation. C'est le cas le plus rare, et c'est aussi celui qui se voit le plus vite après.</li>
 </ul>
-<p>Le problème, c'est que ces cinq raisons donnent à peu près le même message. « Désolé, gros imprévu, je peux pas. » Vous ne pouvez pas les distinguer en lisant le texte, et c'est normal, parce que l'information n'est pas dedans. Elle est ailleurs.</p>`,
+<p>Le problème, c'est que ces cinq raisons donnent à peu près le même message. « Désolé, gros imprévu, je peux pas. » Vous ne pouvez pas les distinguer en lisant le texte, et c'est normal, parce que l'information n'est pas dans le message. Elle est dans ce qu'il fait juste après, et c'est ce qu'on va regarder maintenant.</p>`,
     },
     {
       id: 'le-signal',
-      title: "Le seul signal qui compte, et ce n'est pas son excuse",
+      title: "Le seul signal qui compte",
       content: `<p>Regardez ce qu'il fait dans les minutes qui suivent son annulation, pas ce qu'il raconte pour l'expliquer. Une excuse longue et détaillée ne prouve rien, elle prouve qu'il est gêné. Ce qui compte, c'est s'il repropose quelque chose tout seul, avec un jour dedans.</p>
 <div><table><thead><tr><th>Ce qu'il envoie</th><th>Ce que ça dit</th></tr></thead><tbody>
 <tr><td>Il annule et propose un autre jour précis dans la foulée</td><td>Il voulait vous voir. L'annulation n'est pas le sujet.</td></tr>
@@ -54,7 +54,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'ce-que-dit-la-recherche',
-      title: "Pourquoi une annulation ne dit rien et deux annulations disent tout",
+      title: "Pourquoi c'est la deuxième annulation qui compte",
       content: `<p>Il y a une raison simple à ça, et elle est connue depuis longtemps.</p>
 <p>En 1985, trois chercheurs, John Rempel, John Holmes et Mark Zanna, ont publié un travail sur la confiance dans le couple, dans le <em>Journal of Personality and Social Psychology</em>. Il est devenu un classique. Ils y expliquent que la confiance se construit en trois étapes, et toujours dans le même ordre.</p>
 <p>La première, ils l'appellent la prévisibilité. Elle ne repose que sur une chose : ce que vous avez déjà vu la personne faire, plusieurs fois. La deuxième porte sur ce qu'elle est, et plus seulement sur ce qu'elle fait. La troisième, c'est le pari que vous faites sur ses intentions, sans preuve.</p>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
 <p>L'autre chose qui se joue ce soir-là, c'est ce que vous allez faire de cette annulation dans votre tête. En 1990, Thomas Bradbury et Frank Fincham ont relu des dizaines d'études sur la façon dont les gens en couple expliquent le comportement de l'autre. C'était dans le <em>Psychological Bulletin</em>, et le résultat est net.</p>
 <p>Les personnes malheureuses dans leur couple expliquent toujours les gestes négatifs de leur partenaire de la même manière. Ça vient de lui (« il est comme ça »), ça ne changera pas (« il sera toujours comme ça ») et ça déteint sur tout (« de toute façon rien ne va »). Devant exactement le même geste, les personnes heureuses cherchent d'abord du côté des circonstances.</p>
 <p>Le plus intéressant vient après. Les études qui suivent les mêmes couples pendant des années laissent penser que ces explications ne font pas que refléter l'état du couple : elles pèsent dessus. Autrement dit, l'histoire que vous vous racontez ce soir peut changer ce qui va se passer après.</p>
-<p>Ces travaux portent sur des couples installés, pas sur un deuxième rendez-vous. Ce qui reste vrai, c'est le réflexe : attendre d'avoir de quoi juger avant de juger. Et le soir où on vous pose un lapin, c'est justement là qu'on a le plus envie de faire l'inverse.</p>`,
+<p>Ces travaux portent sur des couples installés, pas sur un deuxième rendez-vous. Ce qui reste vrai, c'est le réflexe : attendre d'en avoir vu assez avant de se faire une idée. Et le soir où on vous pose un lapin, ce réflexe ne vient pas tout seul...</p>`,
     },
     {
       id: 'quoi-repondre',
@@ -135,7 +135,7 @@ const article: BlogArticleData = {
 </div>
 <p class="imsg-note"><strong>Pourquoi ça marche :</strong> ce n'est pas une punition et ça ne se dit pas sur un ton froid. Vous arrêtez simplement de porter l'organisation toute seule, ce qui est une réaction saine et pas une bouderie. À partir de là, soit il propose quelque chose dans la semaine et vous saurez qu'il tient à vous voir, soit il ne propose rien et vous saurez aussi. Le mot important est « quand » : vous ne fermez pas la porte, vous arrêtez juste de la tenir ouverte à bout de bras.</p>
 </div>
-<p>Et si le rendez-vous finit par avoir lieu, on a préparé une liste pour ne pas se retrouver à court. Voilà <a href="/questions-premier-rendez-vous/">de quoi se parler quand on se voit pour la première fois</a>, du plus léger jusqu'aux sujets qui comptent.</p>`,
+<p>Et si le rendez-vous finit par avoir lieu, il ne restera plus qu'à trouver <a href="/questions-premier-rendez-vous/">de quoi se parler pour cette première fois</a>, en commençant par le plus léger.</p>`,
     },
     {
       id: 'quand-arreter',
@@ -144,8 +144,8 @@ const article: BlogArticleData = {
 <p><strong>Deux annulations et aucune date reproposée :</strong> le compte est bon. Ce n'est pas la malchance, c'est quelqu'un qui vous garde disponible sans vous voir, et ça peut durer des mois si vous le laissez faire.</p>
 <p><strong>C'est toujours vous qui proposez, qui relancez, qui organisez :</strong> comptez les cinq derniers rendez-vous et regardez qui les a lancés. Quand la réponse est « moi » cinq fois sur cinq, le problème n'est plus l'annulation de vendredi, c'est <a href="/blog/copain-ne-fait-pas-effort/">le déséquilibre qui s'est installé sans que personne le dise</a>.</p>
 <p><strong>Il annule à chaque fois que ça devient un peu sérieux :</strong> un dîner chez lui, un week-end, une soirée avec vos amis. Si les annulations tombent toujours sur les rendez-vous qui engagent, ce n'est pas le hasard, et ça ressemble beaucoup à <a href="/blog/peur-de-l-engagement/">quelqu'un qui recule dès qu'il sent la relation avancer</a>.</p>
-<p><strong>Vous passez plus de temps à décrypter qu'à le voir :</strong> c'est le signal le plus fiable des quatre, et le plus facile à ignorer. Une relation qui commence bien ne demande pas tout ce décryptage, tout simplement parce qu'il n'y a pas grand-chose à décrypter.</p>
-<p>Si vous hésitez encore, il y a plus parlant que ses messages : <a href="/test-m-aime-t-il-elle-en-secret/">ce qu'il fait quand rien ne l'y oblige</a>. Ça répond souvent à la question en trois minutes.</p>
+<p><strong>Vous passez plus de temps à décrypter qu'à le voir :</strong> c'est le plus fiable des quatre, même si c'est celui qu'on préfère ne pas voir. Une relation qui commence bien ne demande pas tout ce décryptage, tout simplement parce qu'il n'y a pas grand-chose à décrypter.</p>
+<p>Et si vous hésitez encore, posez-vous la question autrement : est-ce qu'il <a href="/test-m-aime-t-il-elle-en-secret/">tient à vous sans oser le montrer</a> ? Chez certains hommes, les annulations cachent exactement ça.</p>
 <a href="/blog/red-flags-homme/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les 13 red flags chez un homme</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
     {

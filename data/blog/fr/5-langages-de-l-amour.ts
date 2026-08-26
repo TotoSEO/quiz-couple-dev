@@ -51,7 +51,7 @@ const article: BlogArticleData = {
         {
           id: 'detecteur-n2-ce-que-tu-donnes',
           title: "Détecteur n°2 : ce que tu donnes spontanément",
-          content: `<p>On offre par défaut ce qu'on aimerait recevoir... Celui qui complimente sans arrêt parle « paroles ». Celle qui organise des week-ends parle « temps ». Celui qui répare, prépare, gère... parle « services ». Regarde ce que ton partenaire te donne le plus : ce n'est pas ce qu'il croit que tu veux. C'est SA langue maternelle qu'il te parle... et c'est déjà une déclaration.</p>
+          content: `<p>On offre par défaut ce qu'on aimerait recevoir... Celui qui complimente sans arrêt parle « paroles ». Celle qui organise des week-ends parle « temps ». Celui qui répare, prépare, gère... parle « services ». Regarde ce que ton partenaire te donne le plus : ce n'est pas ce qu'il croit que tu veux, c'est SA langue maternelle qu'il te parle... et c'est déjà une déclaration.</p>
 <p>Fais l'exercice pour vous deux, là, mentalement : ton top 2, son top 2... Si vous n'avez aucun langage en commun, tu viens probablement de comprendre dix ans de malentendus ! Et si tu veux une mesure plus posée que l'intuition, le <a href="/test-langage-amour-couple/">test des langages de l'amour</a> établit ton profil complet, langage par langage... à faire chacun de son côté, évidemment.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Le malentendu le plus fréquent des couples</p>
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
       id: 'les-limites-du-concept',
       title: "Les limites du concept (parce qu'il en a)",
       content: `<p>Soyons complets : les 5 langages sont un outil formidable... et pas une science exacte. Le concept vient du conseil conjugal, pas de la recherche académique, et les études récentes nuancent deux points : les « langages » ne sont pas des catégories étanches (tout le monde a besoin d'un peu des cinq, la hiérarchie bouge selon les périodes)... et parler la langue de l'autre améliore les couples, oui, mais pas plus que d'être globalement attentif à ses besoins. Autrement dit : la magie n'est pas dans la typologie, elle est dans l'attention.</p>
-<p>Et une mise en garde qui compte : les langages de l'amour expliquent les malentendus entre gens de bonne foi... ils n'excusent JAMAIS les déséquilibres de fond. « Les services, c'est pas mon langage » n'est pas un motif pour ne jamais toucher une casserole ! Et si tu donnes dans toutes les langues pendant qu'en face rien ne vient dans aucune... ce n'est plus un problème de traduction. C'est un problème d'investissement, et il se regarde en face.</p>
+<p>Et une mise en garde qui compte : les langages de l'amour expliquent les malentendus entre gens de bonne foi... ils n'excusent JAMAIS les déséquilibres de fond. « Les services, c'est pas mon langage » n'est pas un motif pour ne jamais toucher une casserole ! Et si tu donnes dans toutes les langues pendant qu'en face rien ne vient dans aucune... ce n'est plus un problème de traduction, c'est un problème d'investissement... et il se regarde en face.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Découvrez vos deux langages, ce soir</p>
 <p class="blog-cta-texte">Le test établit ton profil complet sur les cinq langages, avec ton dominant et ton point aveugle. Faites-le chacun de votre côté, comparez... et offrez-vous la conversation la plus utile du mois.</p>

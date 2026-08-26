@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "On imagine le dépendant affectif collant et suppliant. Chez les hommes, ça ressemble plus souvent à de la jalousie, de la colère... ou à un mec qui n'est jamais célibataire.",
   introduction: `<p>Quand on dit « dépendance affective », tout le monde visualise la même scène : quelqu'un qui supplie, qui s'accroche, qui envoie quinze messages... Et comme la plupart des hommes ne se reconnaissent pas dans cette image, ils concluent que ça ne les concerne pas. Grosse erreur.</p>
-<p><strong>La dépendance affective masculine existe, elle est massive... et elle porte des masques que personne n'identifie comme du manque affectif.</strong> La jalousie qui contrôle. La colère qui explose pour rien. L'hyper-investissement du mec parfait qui fait tout à la maison. Ou ce phénomène que tout le monde connaît sans le nommer : l'homme qui n'est JAMAIS célibataire plus de trois semaines...</p>
-<p>Cet article fait ce que les autres ne font pas : décrire la dépendance affective version homme, avec ses vrais visages. Si tu es un homme et que tu lis ça, accroche-toi, il y a des chances que ça pique un peu. Et si tu es une femme qui reconnaît son compagnon... la fin de l'article est aussi pour toi.</p>`,
+<p><strong>La dépendance affective masculine existe, elle est massive... et elle porte des masques que personne n'identifie comme du manque affectif.</strong> Ça ressemble à de la jalousie qui contrôle, à de la colère qui explose pour rien, à l'hyper-investissement du mec parfait qui fait tout à la maison, ou encore à ce phénomène que tout le monde connaît sans le nommer : l'homme qui n'est JAMAIS célibataire plus de trois semaines...</p>
+<p>Voici donc la dépendance affective version homme, avec ses vrais visages. Si tu es un homme et que tu lis ça, accroche-toi, il y a des chances que ça pique un peu. Et si tu es une femme qui reconnaît son compagnon... la fin de l'article est aussi pour toi.</p>`,
   quickSummary: [
     "La dépendance affective masculine ne ressemble pas au cliché : elle se déguise.",
     "Ses masques favoris : la jalousie de contrôle, la colère, l'hyper-investissement, les relations en chaîne.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'pourquoi-on-ne-la-voit-pas',
       title: "Pourquoi on ne la voit jamais chez les hommes",
-      content: `<p>Deux raisons, une sociale et une mécanique.</p>
+      content: `<p>Il y a deux raisons à ça, une sociale et une mécanique.</p>
 <p>La sociale d'abord : on apprend aux garçons à ne pas être « en demande ». Pleurer pour une fille, avouer qu'on a peur de perdre quelqu'un, dire « j'ai besoin de toi »... tout ça coûte cher en virilité perçue. Résultat, le besoin affectif masculin apprend très tôt à se déguiser en autre chose. Il ne disparaît pas, hein. Il se maquille.</p>
 <p>La mécanique ensuite : la dépendance affective reste la même sous le déguisement : <a href="/blog/dependance-affective/">un système où l'autre régule ton état émotionnel</a>. Chez beaucoup de femmes, l'angoisse s'exprime en demande de réassurance, visible. Chez beaucoup d'hommes, elle s'exprime en <em>contrôle</em> : si je ne peux pas supplier, je vais sécuriser. Surveiller. Verrouiller. C'est le même moteur... avec une carrosserie différente. Et cette carrosserie-là fait beaucoup plus de dégâts autour.</p>`,
     },
@@ -34,13 +34,13 @@ const article: BlogArticleData = {
       title: "Les 8 visages de la dépendance affective masculine",
       content: `<ol>
 <li><strong>La jalousie de contrôle :</strong> Pas la petite jalousie flatteuse : celle qui vérifie, questionne, suspecte. Le téléphone regardé « par hasard », les « il était là, lui ? », les soirées entre copines qui posent problème... Derrière le contrôle, toujours la même chose : la terreur de perdre, incapable de se dire autrement.</li>
-<li><strong>La colère paratonnerre :</strong> Beaucoup d'hommes dépendants affectifs ne connaissent qu'une émotion de sortie : l'agacement. Elle rentre tard, il explose. Elle oublie de prévenir, il fait la gueule deux jours. Traduis : « j'ai eu peur, et je ne sais pas le dire ». La colère est la peur qui a trouvé une porte de sortie virile.</li>
-<li><strong>L'hyper-investissement du mec parfait :</strong> Contre-intuitif, celui-là. Il fait tout : les courses, les cadeaux, les projets, les réparations... Généreux ? En surface. En profondeur, c'est un contrat implicite : « je me rends indispensable pour que tu ne puisses pas partir ». L'amour qui achète sa sécurité n'est plus tout à fait un cadeau.</li>
+<li><strong>La colère paratonnerre :</strong> Beaucoup d'hommes dépendants affectifs ne connaissent qu'une émotion de sortie : l'agacement. Elle rentre tard, il explose. Elle oublie de prévenir, il fait la gueule deux jours. Traduis : « j'ai eu peur, et je ne sais pas le dire ». La colère, c'est juste la peur qui a trouvé une porte de sortie plus virile.</li>
+<li><strong>L'hyper-investissement du mec parfait :</strong> Contre-intuitif, celui-là. Il fait tout : les courses, les cadeaux, les projets, les réparations... Généreux ? En surface. En profondeur, c'est un contrat implicite : « je me rends indispensable pour que tu ne puisses pas partir ». Un amour qui sert à acheter sa sécurité, ce n'est plus tout à fait un cadeau.</li>
 <li><strong>Jamais célibataire :</strong> Le grand classique : les relations en chaîne, la suivante qui commence avant que la précédente finisse, l'incapacité totale à être seul plus d'un mois. Ce n'est pas de l'amour de l'amour... c'est l'horreur du vide. Et chaque enchaînement empêche précisément le travail qui réglerait le problème.</li>
 <li><strong>L'humeur télécommandée :</strong> Elle est tendre, sa journée est bonne. Elle est distante, sa journée est fichue. Ses collègues le voient à sa tête : « ça va pas avec ta copine ? » Quand ton humeur se lit comme un bulletin météo de ton couple, le thermostat est dehors.</li>
 <li><strong>Les potes en jachère :</strong> Le foot du jeudi abandonné, les potes « de avant », les vacances entre gars devenues impensables... Pas parce qu'elle l'interdit, attention ! Parce que s'éloigner d'elle, même deux jours, coûte trop cher en angoisse. Alors il reste. Et il appelle ça de l'amour.</li>
-<li><strong>Le sacrifice permanent, comptabilisé en silence :</strong> Il dit oui à tout, s'oublie complètement... et tient les comptes sans le savoir. Le jour où ça déborde, ça sort en vrac : « moi j'ai TOUT fait pour toi ! » Le dévouement qui attend un retour n'était pas du dévouement, c'était un placement.</li>
-<li><strong>La peur de l'abandon déguisée en exigence :</strong> Il ne supplie pas, il exige. De la présence, des comptes, des preuves. Ça ressemble à de l'autorité... c'est de la panique en costume. Et ça épuise l'autre exactement comme la demande plaintive, en pire.</li>
+<li><strong>Le sacrifice permanent, comptabilisé en silence :</strong> Il dit oui à tout, s'oublie complètement... et tient les comptes sans le savoir. Le jour où ça déborde, ça sort en vrac : « moi j'ai TOUT fait pour toi ! » Un dévouement qui attend un retour, au fond, c'est un placement.</li>
+<li><strong>La peur de l'abandon déguisée en exigence :</strong> Il ne supplie pas, il exige. De la présence, des comptes, des preuves. Ça ressemble à de l'autorité, mais en dessous, c'est de la panique. Et ça épuise l'autre exactement comme la demande plaintive, en pire.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Le point où ça devient grave</p>
@@ -54,13 +54,13 @@ const article: BlogArticleData = {
 <tr><td>Les potes en jachère</td><td>Un homme casé, c'est normal</td><td>Une vie entière rangée derrière une seule personne</td></tr>
 <tr><td>Le sacrifice comptabilisé</td><td>Un partenaire dévoué</td><td>Une dette qu'il espère se voir rembourser</td></tr>
 <tr><td>L'humeur télécommandée</td><td>Quelqu'un de lunatique</td><td>Un état intérieur piloté depuis l'extérieur</td></tr>
-<tr><td>La peur déguisée en exigence</td><td>Un homme autoritaire</td><td>De la panique qui a mis un costume</td></tr>
+<tr><td>La peur déguisée en exigence</td><td>Un homme autoritaire</td><td>De la panique déguisée en autorité</td></tr>
 </tbody></table></div>`,
     },
     {
       id: 'ce-que-ca-fait-au-couple',
       title: "Ce que ça fait au couple (le cercle vicieux)",
-      content: `<p>Le drame de la dépendance affective masculine, c'est qu'elle fabrique exactement ce qu'elle redoute. Le mécanisme tient en trois temps, et il est d'une régularité implacable.</p>
+      content: `<p>Le drame de la dépendance affective masculine, c'est qu'elle fabrique exactement ce qu'elle redoute. Le mécanisme se joue en trois temps, et il est d'une régularité implacable.</p>
 <p>Il serre trop fort, par peur de perdre. Elle étouffe, alors elle prend de la distance, pour respirer, simplement. Il sent la distance, panique... et serre encore plus fort. Jalousie en hausse, contrôle en hausse, reproches en hausse. Elle s'éloigne davantage. Et un jour elle part, non pas parce qu'elle ne l'aimait pas... mais parce qu'on ne peut pas aimer en apnée.</p>
 <p>Le pire ? Ce départ « confirme » sa croyance de départ : on finit toujours par m'abandonner. Et le voilà reparti pour un tour, avec la suivante, en pire. C'est exactement ce cercle que les <a href="/blog/dependance-affective-symptomes/">symptômes classiques du manque affectif</a> alimentent en silence... tant que personne ne le nomme.</p>`,
     },
