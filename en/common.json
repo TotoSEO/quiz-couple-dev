@@ -85,7 +85,7 @@
     "sourcePrefTitre": "Add Quiz Couple to my preferred sources",
     "sourcePrefSous": "You will spot Quiz Couple more easily in your Google searches and its AI answers!",
     "sourcePrefAria": "Add Quiz Couple to your Google preferred sources",
-    "sourcePrefAide": "Preferred sources is a Google setting: you pick the sites you like, and Google puts them higher in your results and in its AI answers. It lives in your Google account, so you need to be signed in, and you can remove a site whenever you want.",
+    "sourcePrefAide": "A Google setting: the sites you add appear higher in your results and in AI answers. It is tied to your Google account and can be removed at any time.",
     "sourcePrefAideAria": "What is a preferred source?"
   },
   "buttons": {

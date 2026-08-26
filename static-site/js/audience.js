@@ -120,6 +120,10 @@
   window.QCAudience = {
     visite: function () { return exclu() ? null : visite(false); },
     exclu: exclu,
+    // Lu par blog-lectures.js : le robot et le proprietaire du site n'ont pas
+    // a peupler le compteur de lectures. Dupliquer la liste des robots
+    // ailleurs, c'est se garantir deux listes qui divergent.
+    ignorer: function () { return ignorer(); },
     exclure: function (oui) { if (oui) ecris(CLE_EXCLU, '1'); else efface(CLE_EXCLU); }
   };
 
