@@ -233,10 +233,10 @@
     "metaDescription": "Anima gemella o solo una bella storia? 20 domande, un indice e un verdetto che non si limita a lusingare. Test gratuito, da solo o in due, senza registrazione."
   },
   "jeuxCouple": {
-    "title": "Giochi di coppia online: 8 giochi gratis da fare in due",
+    "title": "Giochi di coppia online: 11 giochi gratis da fare in due",
     "shortTitle": "Giochi di coppia",
-    "description": "Otto giochi da fare in due: pro o contro, chi di noi due, preferiresti, i dilemmi, obbligo o verità, la versione piccante, la ruota delle penitenze e il tabellone.",
-    "metaDescription": "8 giochi di coppia gratis su un solo telefono: pro o contro, chi di noi due, preferiresti, i dilemmi, obbligo o verità e la ruota delle penitenze. Senza registrazione."
+    "description": "Undici giochi da fare in due: il sì o no, pro o contro, chi potrebbe, non ho mai, chi di noi due, preferiresti, i dilemmi, obbligo o verità, la versione piccante, la ruota delle penitenze e il tabellone.",
+    "metaDescription": "11 giochi di coppia gratis su un solo telefono: sì o no, pro o contro, chi di noi due, preferiresti, i dilemmi, obbligo o verità e la ruota delle penitenze. Senza registrazione."
   },
   "jeuGages": {
     "title": "Penitenze di coppia: il gioco della ruota, 140 penitenze",
@@ -328,5 +328,19 @@
     "metaTitle": "Amore o Crush? Test online di 35 domande",
     "metaDescription": "35 domande per sapere se è una cotta o se sono sentimenti d'amore. Le domande si adattano a seconda che la tua cotta sia un ragazzo o una ragazza.",
     "description": "Rispondi su quello che provi, il punteggio separa attrazione, cotta e sentimenti veri."
+  },
+  "jeuQuiPourrait": {
+    "title": "Chi potrebbe? Gioco di coppia online con 100+ domande",
+    "shortTitle": "Chi potrebbe?",
+    "metaTitle": "Chi potrebbe? Gioco di coppia online con 100+ domande",
+    "metaDescription": "Una domanda, i vostri due nomi, e voi indicate chi ne sarebbe capace. 108 domande, partite da 20, 40 o 60, gratis e senza registrazione.",
+    "description": "Appare una domanda e indicate chi ne sarebbe capace: uno di voi due, o nessuno."
+  },
+  "jeuOuiNon": {
+    "title": "Gioco Sì o No per coppie online - 120 domande",
+    "shortTitle": "Sì o no",
+    "metaTitle": "Gioco Sì o No per coppie online - 120 domande",
+    "metaDescription": "120 situazioni di vita in due da decidere con un sì o un no, con i voti di tutte le altre coppie dopo ogni risposta. Gratis, senza registrazione.",
+    "description": "Situazioni di coppia da decidere con un sì o un no, con i voti di tutti gli altri dopo ogni risposta."
   }
 }

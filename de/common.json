@@ -68,7 +68,9 @@
     "testEx": "Denkt mein Ex noch an mich?",
     "testChargeMentale": "Wer trägt die Mental Load?",
     "quizRencontre": "Fragen fürs erste Date",
-    "jeuJamais": "Ich hab noch nie"
+    "jeuJamais": "Ich hab noch nie",
+    "jeuQuiPourrait": "Wer könnte?",
+    "jeuOuiNon": "Ja oder Nein"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "120 situazioni • Voti in diretta • Gratis",
+    "title": "Gioco Sì o No da fare in coppia online",
+    "titleHighlight": "Sì o No",
+    "description": "Appare una situazione, rispondete sì o no, e scoprite subito cosa hanno votato gli altri."
+  },
+  "jsonLd": {
+    "name": "Sì o no, versione coppia"
+  },
+  "exemples": {
+    "avant": "",
+    "apres": ": sì o no?"
+  },
+  "section1": {
+    "title": "Il sì o no, che gioco è?",
+    "p1": "Il sì o no è un gioco di conversazione semplicissimo. Qualcuno lancia una domanda chiusa, tipo «diresti sì a un tatuaggio di coppia?», e ognuno risponde sì o no, senza il diritto di girarci intorno. Non c'è niente da installare e niente da contare, ed è per questo che sta tra <a href=\"/it/giochi-di-coppia/\">i giochi più semplici da fare in due</a>: parte all'aperitivo, in macchina, o una sera qualunque sul divano.",
+    "p2": "Detta così la regola sembra poca cosa, eppure il gioco gira da generazioni. Se funziona così bene, è perché non si può sfumare: tutti vorremmo rispondere «dipende», e proprio quello è vietato. Rispondere sì o rispondere no obbliga a scegliere un campo, ed è lì che partono le discussioni.",
+    "p3": "Ne esistono tante varianti: tra amici con le penitenze, in famiglia in versione tranquilla, o come gioco alcolico. Qui l'abbiamo adattato alla coppia, e ci abbiamo aggiunto una cosa che ci piace molto: a ogni situazione, vedete cosa hanno risposto tutti gli altri visitatori. Non giocate solo in due, vi confrontate con tutti."
+  },
+  "section2": {
+    "title": "La differenza con il sì o no classico",
+    "intro": "La differenza principale sta nelle domande, e in quello che si fa delle risposte. Il sì o no classico si gioca veloce, quasi sempre per ridere, e le domande parlano di tutto un po'. La nostra versione pone situazioni di vita in due, e tiene traccia di tutti i voti. Ecco cosa cambia, fianco a fianco:",
+    "colClassique": "Il sì o no classico",
+    "colCouple": "La nostra versione coppia",
+    "ligne1Titre": "Le domande",
+    "ligne1Classique": "Di tutto un po': «hai mai mentito a tua madre?»",
+    "ligne1Couple": "Situazioni di vita in due: conto in comune, casa, animale, suoceri",
+    "ligne2Titre": "Chi risponde",
+    "ligne2Classique": "Ognuno a turno, il più in fretta possibile",
+    "ligne2Couple": "La coppia risponde con una voce sola, dopo averne parlato",
+    "ligne3Titre": "Cosa si scopre",
+    "ligne3Classique": "Aneddoti e attacchi di risate",
+    "ligne3Couple": "L'opinione della vostra metà su argomenti che non avevate mai toccato",
+    "ligne4Titre": "La fine della partita",
+    "ligne4Classique": "Quando qualcuno molla o si passa ad altro",
+    "ligne4Couple": "Quando volete: non c'è punteggio né traguardo",
+    "apres": "Una piccola precisazione al volo, perché la confusione torna spesso: il sì o no non è il gioco del né sì né no. In quello, le due parole sono vietate e bisogna resistere senza pronunciarle. Qui è il contrario, sono le due sole risposte ammesse."
+  },
+  "section3": {
+    "title": "Le regole del nostro gioco",
+    "intro": "Non c'è quasi niente da imparare. Vi mettete in due davanti allo stesso schermo, e va così:",
+    "etape1Titre": "Appare una situazione",
+    "etape1Texte": "Per esempio «Avere un conto in comune». Ne parlate se serve, poi rispondete con un solo gesto: SÌ o NO. Se una situazione non vi riguarda, c'è anche il pulsante «Salta».",
+    "etape2Titre": "Appaiono i voti di tutti",
+    "etape2Texte": "Subito dopo la vostra risposta, vedete i numeri: per esempio 1.203 persone hanno votato sì, e 255 hanno votato no. Sapete subito se siete con la maggioranza o controcorrente.",
+    "etape3Titre": "Continuate, oppure no",
+    "etape3Texte": "Ci sono 120 situazioni, ma niente vi obbliga a farle tutte in una volta. Il gioco non ha punteggio né schermata finale: vi fermate quando volete, e riprendete più tardi dove restano situazioni.",
+    "apres": "Un dettaglio tecnico che ha il suo peso: ogni situazione si vota una sola volta a persona. Se tornate domani, le situazioni già decise mostrano i loro numeri senza farvi rivotare. Così le percentuali significano qualcosa: nessuno può gonfiare un campo cliccando dieci volte."
+  },
+  "section4": {
+    "title": "Esempi di situazioni del gioco",
+    "intro": "Ecco venti delle centoventi situazioni, così come il gioco le pone. C'è del molto concreto, del più impegnativo, e qualche argomento che quasi nessuno osa tirare fuori a bruciapelo:",
+    "apres": "Le altre 100 sono nel gioco, servite in un ordine diverso a ogni visita. Alcune pungono un po', e onestamente è anche lo scopo: un disaccordo su «Avere un migliore amico del sesso opposto» dice più di una serata intera di banalità. Se un argomento si inceppa, non spazzatelo via: potrebbe essere l'inizio di <a href=\"/it/domande-coppia/\">una vera conversazione in due</a>, e vale più della partita."
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "q1": "Come si gioca al sì o no in coppia?",
+    "a1": "Aprite il gioco in due su un telefono, appare una situazione, e rispondete sì o no con una voce sola. Subito dopo, il gioco mostra cosa hanno votato gli altri. Ci sono 120 situazioni, e vi fermate quando volete.",
+    "q2": "I numeri mostrati sono voti veri?",
+    "a2": "Sì. Ogni clic su sì o su no viene registrato, tutti i visitatori insieme, e ogni persona può votare una sola volta per situazione. I numeri che vedete si muovono man mano che giocano le altre coppie.",
+    "q3": "Bisogna essere d'accordo in due per rispondere?",
+    "a3": "È lo spirito del gioco: la risposta è della coppia, non di uno solo. Se non siete d'accordo, è un'ottima notizia, vuol dire che c'è un argomento vero da discutere prima di cliccare.",
+    "q4": "Si può giocare tra amici, o da soli?",
+    "a4": "Il gioco è scritto per una coppia: le situazioni parlano di conto in comune, di suoceri o di intimità. Da soli funziona lo stesso, votate la vostra opinione e la confrontate con quella degli altri. Tra amici, alcune situazioni cadranno nel vuoto, ma niente lo vieta.",
+    "q5": "Cosa succede alla fine delle 120 situazioni?",
+    "a5": "Non granché, ed è voluto: non c'è punteggio né classifica, il gioco vi dice semplicemente che avete visto tutto. Se il formato vi piace, <a href=\"/it/dilemmi-di-coppia/\">i dilemmi di coppia</a> funzionano sullo stesso principio dei voti, con patti impossibili al posto delle situazioni."
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "120 Situationen • Live-Stimmen • Kostenlos",
+    "title": "Ja oder Nein, das Spiel für Paare online",
+    "titleHighlight": "Ja oder Nein",
+    "description": "Eine Situation erscheint, ihr antwortet mit Ja oder Nein, und ihr seht sofort, was alle anderen gestimmt haben."
+  },
+  "jsonLd": {
+    "name": "Ja oder Nein, die Paar-Version"
+  },
+  "exemples": {
+    "avant": "",
+    "apres": ": Ja oder Nein?"
+  },
+  "section1": {
+    "title": "Was für ein Spiel ist Ja oder Nein?",
+    "p1": "Ja oder Nein ist ein ganz einfaches Gesprächsspiel. Jemand wirft eine geschlossene Frage in die Runde, etwa „würdest du Ja zu einem Partner-Tattoo sagen?“, und jeder antwortet mit Ja oder Nein, ohne das Recht, sich herauszureden. Es gibt nichts zu installieren und nichts zu zählen, und deshalb gehört es zu <a href=\"/de/paarspiele/\">den einfachsten Spielen für zu zweit</a>: es startet beim Aperitif, im Auto, oder an einem ganz normalen Abend auf dem Sofa.",
+    "p2": "So gesagt klingt die Regel dünn, und trotzdem läuft das Spiel seit Generationen. Wenn es so gut funktioniert, dann weil man nicht abwägen darf: wir alle wollen „kommt drauf an“ antworten, und genau das ist verboten. Mit Ja oder mit Nein zu antworten zwingt dazu, sich auf eine Seite zu stellen, und genau da beginnen die Gespräche.",
+    "p3": "Es gibt viele Varianten: unter Freunden mit Strafen, in der Familie in der braven Version, oder als Trinkspiel. Hier haben wir es fürs Paar angepasst, und etwas hinzugefügt, das wir sehr mögen: bei jeder Situation seht ihr, was alle anderen Besucher geantwortet haben. Ihr spielt nicht nur zu zweit, ihr vergleicht euch mit allen."
+  },
+  "section2": {
+    "title": "Der Unterschied zum klassischen Ja oder Nein",
+    "intro": "Der Hauptunterschied liegt in den Fragen, und in dem, was mit den Antworten passiert. Das klassische Ja oder Nein wird schnell gespielt, meist zum Lachen, und die Fragen drehen sich um alles Mögliche. Unsere Version stellt Situationen aus dem Leben zu zweit, und behält jede Stimme im Gedächtnis. Das ändert sich, Seite an Seite:",
+    "colClassique": "Das klassische Ja oder Nein",
+    "colCouple": "Unsere Paar-Version",
+    "ligne1Titre": "Die Fragen",
+    "ligne1Classique": "Alles Mögliche: „hast du deine Mutter schon mal angelogen?“",
+    "ligne1Couple": "Situationen aus dem Leben zu zweit: gemeinsames Konto, Haus, Haustier, Schwiegereltern",
+    "ligne2Titre": "Wer antwortet",
+    "ligne2Classique": "Jeder der Reihe nach, so schnell wie möglich",
+    "ligne2Couple": "Das Paar antwortet mit einer Stimme, nachdem es darüber geredet hat",
+    "ligne3Titre": "Was man entdeckt",
+    "ligne3Classique": "Anekdoten und Lachanfälle",
+    "ligne3Couple": "Die Meinung deiner besseren Hälfte zu Themen, die ihr nie angesprochen hattet",
+    "ligne4Titre": "Das Ende der Runde",
+    "ligne4Classique": "Wenn jemand aufgibt oder man zu etwas anderem übergeht",
+    "ligne4Couple": "Wann ihr wollt: es gibt weder Punkte noch Ziellinie",
+    "apres": "Eine kleine Klarstellung nebenbei, weil die Verwechslung oft vorkommt: Ja oder Nein ist nicht das Spiel „Sag nicht Ja, sag nicht Nein“. Dort sind diese zwei Wörter verboten und man muss durchhalten, ohne sie auszusprechen. Hier ist es umgekehrt, sie sind die zwei einzigen erlaubten Antworten."
+  },
+  "section3": {
+    "title": "Die Regeln unseres Spiels",
+    "intro": "Es gibt fast nichts zu lernen. Ihr setzt euch zu zweit vor denselben Bildschirm, und es läuft so:",
+    "etape1Titre": "Eine Situation erscheint",
+    "etape1Texte": "Zum Beispiel „Ein gemeinsames Konto haben“. Ihr besprecht es, wenn nötig, dann antwortet ihr mit einem einzigen Tippen: JA oder NEIN. Wenn euch eine Situation nichts angeht, gibt es auch den Knopf „Überspringen“.",
+    "etape2Titre": "Die Stimmen von allen erscheinen",
+    "etape2Texte": "Direkt nach eurer Antwort seht ihr die Zahlen: zum Beispiel haben 1 203 Personen mit Ja gestimmt, und 255 mit Nein. Ihr wisst sofort, ob ihr bei der Mehrheit seid oder gegen den Strom schwimmt.",
+    "etape3Titre": "Ihr macht weiter, oder nicht",
+    "etape3Texte": "Es gibt 120 Situationen, aber nichts zwingt euch, sie in einem Rutsch zu machen. Das Spiel hat weder Punkte noch Endbildschirm: ihr hört auf, wann ihr wollt, und macht später da weiter, wo noch Situationen übrig sind.",
+    "apres": "Ein technisches Detail, das zählt: über jede Situation kann pro Person nur einmal abgestimmt werden. Wenn ihr morgen wiederkommt, zeigen die schon entschiedenen Situationen ihre Zahlen, ohne euch noch mal abstimmen zu lassen. Dadurch bedeuten die Prozente wirklich etwas: niemand kann eine Seite aufblasen, indem er zehnmal klickt."
+  },
+  "section4": {
+    "title": "Beispiele für Situationen aus dem Spiel",
+    "intro": "Hier sind zwanzig der hundertzwanzig Situationen, genau so, wie das Spiel sie stellt. Es gibt sehr Konkretes, Verbindlicheres, und ein paar Themen, die man selten frontal anspricht:",
+    "apres": "Die anderen 100 stecken im Spiel und kommen bei jedem Besuch in anderer Reihenfolge. Manche piksen ein bisschen, und ehrlich gesagt gehört das dazu: eine Uneinigkeit über „Einen besten Freund vom anderen Geschlecht haben“ sagt mehr als ein ganzer Abend Belanglosigkeiten. Wenn ein Thema hakt, wischt es nicht beiseite: es könnte der Anfang <a href=\"/de/fragen-fuer-paare/\">eines echten Gesprächs zu zweit</a> sein, und das ist mehr wert als die Runde."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Wie spielt man Ja oder Nein als Paar?",
+    "a1": "Ihr öffnet das Spiel zu zweit auf einem Handy, eine Situation erscheint, und ihr antwortet mit einer Stimme Ja oder Nein. Direkt danach zeigt das Spiel, was alle anderen gestimmt haben. Es gibt 120 Situationen, und ihr hört auf, wann ihr wollt.",
+    "q2": "Sind die angezeigten Zahlen echte Stimmen?",
+    "a2": "Ja. Jeder Klick auf Ja oder Nein wird gezählt, alle Besucher zusammen, und jede Person kann pro Situation nur einmal abstimmen. Die Zahlen, die ihr seht, bewegen sich, während andere Paare spielen.",
+    "q3": "Müsst ihr euch beide einig sein, um zu antworten?",
+    "a3": "Das ist der Geist des Spiels: die Antwort gehört dem Paar, nicht einem von beiden. Wenn ihr uneinig seid, ist das eine ausgezeichnete Nachricht, denn dann gibt es ein echtes Thema zu besprechen, bevor ihr klickt.",
+    "q4": "Kann man mit Freunden spielen, oder allein?",
+    "a4": "Das Spiel ist für ein Paar geschrieben: die Situationen handeln von gemeinsamem Konto, Schwiegereltern oder Intimem. Allein funktioniert es auch, ihr stimmt eure Meinung ab und vergleicht sie mit allen anderen. Unter Freunden werden manche Situationen ins Leere laufen, aber verboten ist es nicht.",
+    "q5": "Was passiert nach den 120 Situationen?",
+    "a5": "Nicht viel, und das ist Absicht: es gibt weder Punkte noch Rangliste, das Spiel sagt euch einfach, dass ihr alles gesehen habt. Wenn euch das Format gefällt, laufen <a href=\"/de/dilemmata-fuer-paare/\">die Paar-Dilemmata</a> nach demselben Abstimmungsprinzip, mit unmöglichen Deals statt Situationen."
+  }
+}

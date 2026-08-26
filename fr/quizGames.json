@@ -359,7 +359,9 @@
     "testChargeMentale": "Test charge mentale du couple",
     "quizRencontre": "Questions de premier rendez-vous",
     "jeuJamais": "Je n'ai jamais",
-    "testCrush": "Test amour ou crush"
+    "testCrush": "Test amour ou crush",
+    "jeuQuiPourrait": "Qui pourrait ?",
+    "jeuOuiNon": "Oui ou non"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",

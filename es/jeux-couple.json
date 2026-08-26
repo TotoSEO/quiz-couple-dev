@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "8 juegos • Gratis • Sin registro",
+    "badge": "11 juegos • Gratis • Sin registro",
     "title": "Nuestros juegos para jugar en pareja, listos en un toque",
     "titleHighlight": "para jugar en pareja",
-    "description": "Ocho juegos que arrancan en un solo móvil entre los dos, sin cuenta y sin instalar nada."
+    "description": "Once juegos que arrancan en un solo móvil entre los dos, sin cuenta y sin instalar nada."
   },
   "stats": {
-    "jeux": "8",
+    "jeux": "11",
     "jeuxLabel": "juegos para dos",
     "cartes": "390",
     "cartesLabel": "cartas, prendas y dilemas",
@@ -64,13 +64,23 @@
     "jamaisTagline": "Una frase, dos respuestas, y las confesiones se van sumando",
     "jamaisContenu": "100 frases escritas para parejas, en partidas de 15, 30 o 100",
     "jamaisDuree": "10 a 30 min",
-    "jamaisJoueurs": "2 jugadores"
+    "jamaisJoueurs": "2 jugadores",
+    "quiPourraitNom": "¿Quién podría?",
+    "quiPourraitTagline": "Una pregunta, dos nombres, y señaláis al culpable",
+    "quiPourraitContenu": "108 preguntas para jugar en 20, 40 o 60, sacadas al azar",
+    "quiPourraitDuree": "5 a 20 min",
+    "quiPourraitJoueurs": "2 jugadores",
+    "ouiNonNom": "Sí o no",
+    "ouiNonTagline": "Situaciones que decidir, y los votos de todos los demás",
+    "ouiNonContenu": "120 situaciones de vida en pareja, con los votos de todos los visitantes tras cada respuesta",
+    "ouiNonDuree": "2 a 20 min",
+    "ouiNonJoueurs": "2 jugadores"
   },
   "section1": {
     "title": "Lo que un juego en pareja cambia en una noche",
     "p1": "Un <strong class=\"text-foreground\">juego de pareja</strong> no parece gran cosa. Y sin embargo resuelve un problema muy concreto: entre dos siempre se acaba dando vueltas a los mismos temas. El día, el trabajo, qué se cena… Un juego impone un marco, y ese marco da permiso para hacer preguntas que nunca se harían de golpe.",
     "p2": "Por eso también un juego funciona mejor que una película cuando de verdad queréis reencontraros. Delante de una pantalla sois dos personas una al lado de la otra mirando a otro sitio. Alrededor de un juego sois dos personas que se miran. La diferencia se nota a los diez minutos.",
-    "p3": "Los ocho juegos de esta página se juegan online, gratis, en un solo móvil. Nada que crear, nada que instalar, nada que preparar."
+    "p3": "Los once juegos de esta página se juegan online, gratis, en un solo móvil. Nada que crear, nada que instalar, nada que preparar."
   },
   "section2": {
     "title": "Qué juego elegir según el momento",

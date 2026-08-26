@@ -1774,6 +1774,124 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .imsg-mauvais .imsg-etiquette { color: hsl(var(--destructive)); background: hsl(var(--destructive) / .13); }
 .imsg-mauvais .imsg-note { background: hsl(var(--destructive) / .07); }
 .dark .imsg-bon .imsg-etiquette { color: hsl(152 55% 66%); }
+
+/* ── Qui pourrait : l'écran de jeu ──────────────────────────
+   L'écran est monté une seule fois : les cartes des prénoms ne bougent
+   jamais, seule la question circule au-dessus. Les transitions ci-dessous
+   ne portent donc que sur le texte de la question, jamais sur l'écran. */
+.qp-jeu { max-width: 36rem; margin: 0 auto; }
+.qp-carte {
+  text-align: center;
+  padding: 2rem 1.25rem 1.75rem;
+  border-radius: calc(var(--radius) + 8px);
+  border: 1px solid hsl(var(--border));
+  background:
+    radial-gradient(120% 90% at 50% 0%, hsl(var(--primary) / 0.10), transparent 60%),
+    hsl(var(--card));
+  margin-bottom: 1.25rem;
+}
+.qp-titre {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 5vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  background: linear-gradient(92deg, hsl(var(--primary)), hsl(var(--secondary)));
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+  margin-bottom: 0.65rem;
+}
+.qp-question {
+  font-size: clamp(1.15rem, 3.4vw, 1.5rem);
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  line-height: 1.35;
+  min-height: 2.7em;             /* deux lignes réservées : la carte ne change pas de hauteur */
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+.qp-question--sortie { opacity: 0; transform: translateY(-6px); }
+.qp-question--entree { animation: qpEntree 220ms ease; }
+@keyframes qpEntree {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.qp-choix {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem;
+}
+.qp-btn {
+  border-radius: calc(var(--radius) + 6px);
+  padding: 2rem 0.75rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 150ms ease, box-shadow 150ms ease, filter 150ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.qp-btn-nom {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 4.5vw, 1.9rem);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  line-height: 1.15;
+}
+.qp-btn--vert {
+  background: linear-gradient(160deg, hsl(152 62% 42%), hsl(160 65% 33%));
+  border-color: hsl(152 62% 30%);
+  color: #fff;
+  box-shadow: 0 10px 24px -12px hsl(155 60% 30% / 0.65);
+}
+.qp-btn--jaune {
+  background: linear-gradient(160deg, hsl(44 96% 56%), hsl(38 92% 48%));
+  border-color: hsl(38 80% 40%);
+  color: hsl(30 55% 16%);
+  box-shadow: 0 10px 24px -12px hsl(40 80% 40% / 0.6);
+}
+.qp-btn:hover { transform: translateY(-2px); }
+.qp-btn:active { transform: scale(0.98); }
+.qp-btn--pris { filter: brightness(1.12); transform: scale(1.03); }
+
+.qp-personne {
+  display: block;
+  margin: 0.9rem auto 0;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted) / 0.5);
+  color: hsl(var(--muted-foreground));
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease, transform 150ms ease;
+}
+.qp-personne:hover { background: hsl(var(--muted)); color: hsl(var(--foreground)); }
+.qp-personne:active { transform: scale(0.97); }
+.qp-personne.qp-btn--pris { background: hsl(var(--muted)); color: hsl(var(--foreground)); transform: scale(1.03); }
+
+/* Résultats : les deux cartes reprennent les couleurs des joueurs. */
+.qp-resultats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem;
+  max-width: 26rem; margin: 0 auto;
+}
+.qp-resultat {
+  border-radius: calc(var(--radius) + 6px);
+  padding: 1.25rem 0.75rem 1.1rem;
+  display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+}
+.qp-resultat--vert { background: linear-gradient(160deg, hsl(152 62% 42%), hsl(160 65% 33%)); color: #fff; }
+.qp-resultat--jaune { background: linear-gradient(160deg, hsl(44 96% 56%), hsl(38 92% 48%)); color: hsl(30 55% 16%); }
+.qp-resultat-nom { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; overflow-wrap: anywhere; }
+.qp-resultat-nb { font-family: var(--font-display); font-weight: 800; font-size: 2.4rem; line-height: 1; }
+.qp-resultat-mot { font-size: 0.78rem; opacity: 0.85; }
+.qp-resultat-personne { margin-top: 0.9rem; font-size: 0.9rem; color: hsl(var(--muted-foreground)); }
+
+.dark .qp-btn--vert { box-shadow: 0 10px 24px -12px hsl(0 0% 0% / 0.6); }
+.dark .qp-btn--jaune { box-shadow: 0 10px 24px -12px hsl(0 0% 0% / 0.6); }
+
+@media (max-width: 420px) {
+  .qp-carte { padding: 1.5rem 0.9rem 1.35rem; }
+  .qp-btn { padding: 1.5rem 0.5rem; }
+}
 .dark .imsg {
   --imsg-gris: hsl(280 10% 22%);
   box-shadow: 0 14px 34px -22px hsl(0 0% 0% / .7);
@@ -2200,6 +2318,126 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 @media (prefers-reduced-motion: reduce) {
   .pc-barre-pour, .pc-barre-contre, .pc-choix-btn { transition: none; }
+}
+
+/* ─── Jeu « Oui ou non » ─────────────────────────────────────
+   Même famille visuelle que le pour ou contre, mais l'écran est monté une
+   seule fois : la situation change au fondu dans la carte, et le verdict se
+   déplie dessous sans que rien d'autre ne bouge. Vert pour le oui, rouge
+   doux pour le non. */
+.onn-jeu { display: grid; justify-items: center; }
+
+.onn-carte {
+  position: relative; width: 100%; max-width: 34rem;
+  display: grid; justify-items: center; text-align: center; gap: .55rem;
+  padding: 2rem 1.4rem 2.2rem;
+  border-radius: 1.5rem; border: 2px solid hsl(var(--border));
+  background: hsl(var(--card));
+  box-shadow: 0 20px 44px -34px hsl(var(--primary) / .8);
+  overflow: hidden;
+}
+.onn-carte::before {
+  content: ''; position: absolute; inset: 0 0 auto; height: 5px;
+  background: linear-gradient(90deg, hsl(152 60% 45%), hsl(0 65% 58%));
+}
+.onn-amorce {
+  font-size: .74rem; font-weight: 900; letter-spacing: .16em; text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+.onn-texte {
+  margin: 0; font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(1.25rem, 4.6vw, 1.65rem); line-height: 1.32; text-wrap: balance;
+  color: hsl(var(--foreground));
+  /* Deux lignes réservées : la carte garde sa hauteur d'une situation à
+     l'autre, l'écran ne respire pas à chaque changement. */
+  min-height: 2.7em;
+  display: grid; align-items: center;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+.onn-texte--sortie { opacity: 0; transform: translateY(-6px); }
+.onn-texte--entree { animation: onnEntree 220ms ease; }
+@keyframes onnEntree {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.onn-consigne {
+  margin: 1.1rem 0 .8rem; text-align: center;
+  font-size: .85rem; color: hsl(var(--muted-foreground));
+}
+.onn-choix {
+  display: grid; grid-template-columns: 1fr 1fr; gap: .7rem;
+  width: 100%; max-width: 34rem; margin-top: .2rem;
+}
+.onn-btn {
+  display: grid; justify-items: center; gap: .2rem;
+  padding: 1.05rem .6rem; border-radius: 1.15rem; cursor: pointer;
+  border: 2px solid hsl(var(--border)); background: hsl(var(--card));
+  font-family: var(--font-display); font-weight: 800; font-size: 1.05rem;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, opacity 180ms ease;
+}
+.onn-btn-emoji { font-size: 1.6rem; line-height: 1; }
+.onn-btn--oui { border-color: hsl(152 60% 42% / .55); color: hsl(152 55% 34%); }
+.onn-btn--non { border-color: hsl(0 65% 58% / .55); color: hsl(0 60% 46%); }
+.onn-btn--oui:hover:not(:disabled) { background: hsl(152 60% 42% / .1); transform: translateY(-2px); }
+.onn-btn--non:hover:not(:disabled) { background: hsl(0 65% 58% / .1); transform: translateY(-2px); }
+.onn-btn.est-choisi { transform: scale(.97); border-width: 3px; }
+.onn-btn:disabled { cursor: default; }
+.onn-btn:disabled:not(.est-choisi) { opacity: .45; }
+.onn-passer {
+  margin-top: .9rem; padding: .35rem .6rem; border: 0; background: none; cursor: pointer;
+  font-size: .82rem; color: hsl(var(--muted-foreground)); text-decoration: underline;
+}
+
+/* Le verdict de tous les visiteurs, déplié sur place après le vote.
+   L'attribut hidden doit gagner contre les display posés par classe (.btn,
+   .onn-resultat), sinon le bouton « suivant » et le verdict de la question
+   précédente restent visibles pendant le vote. */
+.onn-jeu [hidden] { display: none !important; }
+.onn-resultat { display: grid; justify-items: center; width: 100%; animation: onnEntree 260ms ease; }
+.onn-votre-choix { margin: 1.1rem 0 .9rem; font-size: .95rem; color: hsl(var(--muted-foreground)); }
+.onn-votre-choix strong { color: hsl(var(--foreground)); }
+.onn-camps-hote { display: grid; justify-items: center; width: 100%; }
+.onn-camps {
+  display: grid; grid-template-columns: 1fr 1fr; gap: .7rem;
+  width: 100%; max-width: 34rem;
+}
+.onn-camp {
+  display: grid; justify-items: center; gap: .1rem;
+  padding: .8rem .5rem; border-radius: 1rem;
+  border: 2px solid transparent; background: hsl(var(--muted) / .5);
+}
+.onn-camp-lbl { font-size: .75rem; font-weight: 800; letter-spacing: .05em; }
+.onn-camp-pct { font-family: var(--font-display); font-weight: 900; font-size: 1.8rem; line-height: 1.1; }
+.onn-camp-nb { font-size: .78rem; color: hsl(var(--muted-foreground)); }
+.onn-camp--oui { background: hsl(152 60% 42% / .13); color: hsl(152 55% 32%); }
+.onn-camp--non { background: hsl(0 65% 58% / .13); color: hsl(0 58% 44%); }
+.onn-camp-pct, .onn-camp-lbl { color: inherit; }
+.onn-camp.est-le-votre { border-color: currentColor; }
+
+.onn-barre {
+  display: flex; width: 100%; max-width: 34rem; height: .75rem;
+  margin-top: .7rem; border-radius: 9999px; overflow: hidden;
+  background: hsl(var(--muted));
+}
+.onn-barre-oui { background: hsl(152 58% 44%); transition: width 800ms cubic-bezier(.22,1,.36,1); }
+.onn-barre-non { background: hsl(0 62% 58%); transition: width 800ms cubic-bezier(.22,1,.36,1); }
+.onn-total { margin: .6rem 0 0; font-size: .82rem; color: hsl(var(--muted-foreground)); text-align: center; }
+
+.onn-suivant { margin-top: 1.1rem; width: 100%; max-width: 34rem; justify-content: center; }
+.onn-fin { display: grid; justify-items: center; }
+
+.dark .onn-btn--oui, .dark .onn-camp--oui { color: hsl(152 55% 62%); }
+.dark .onn-btn--non, .dark .onn-camp--non { color: hsl(0 80% 74%); }
+
+@media (max-width: 380px) {
+  .onn-choix, .onn-camps { grid-template-columns: 1fr; }
+  .onn-camp-pct { font-size: 1.55rem; }
+  .onn-texte { min-height: 3.9em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .onn-barre-oui, .onn-barre-non, .onn-btn, .onn-texte { transition: none; }
+  .onn-resultat, .onn-texte--entree { animation: none; }
 }
 
 /* Le bloc qui salue une partie menée jusqu'au bout. Il n'apparaît qu'une

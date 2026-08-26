@@ -68,7 +68,9 @@
     "testEx": "Does my ex still think about me?",
     "testChargeMentale": "Who carries the mental load?",
     "quizRencontre": "First date questions",
-    "jeuJamais": "Never Have I Ever"
+    "jeuJamais": "Never Have I Ever",
+    "jeuQuiPourrait": "Who could?",
+    "jeuOuiNon": "Yes or no"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

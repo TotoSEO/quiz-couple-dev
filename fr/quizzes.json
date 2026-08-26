@@ -245,10 +245,10 @@
     "metaDescription": "Âme sœur ou belle histoire ? 20 questions, un indice et un verdict qui ne se contente pas de flatter. Test gratuit, seul ou à deux, sans inscription."
   },
   "jeuxCouple": {
-    "title": "Jeux de couple en ligne : 8 jeux gratuits à jouer à deux",
+    "title": "Jeux de couple en ligne : 11 jeux gratuits à jouer à deux",
     "shortTitle": "Jeux de couple",
-    "description": "Huit jeux à jouer à deux : pour ou contre, qui de nous deux, tu préfères, les dilemmes, action ou vérité, sa version coquine, la roue des gages et le plateau.",
-    "metaDescription": "8 jeux de couple gratuits sur un seul téléphone : pour ou contre, qui de nous deux, tu préfères, les dilemmes, action ou vérité et la roue des gages. Sans inscription."
+    "description": "Onze jeux à jouer à deux : le oui ou non, pour ou contre, qui pourrait, je n'ai jamais, qui de nous deux, tu préfères, les dilemmes, action ou vérité, sa version coquine, la roue des gages et le plateau.",
+    "metaDescription": "11 jeux de couple gratuits sur un seul téléphone : oui ou non, pour ou contre, qui de nous deux, tu préfères, les dilemmes, action ou vérité et la roue des gages. Sans inscription."
   },
   "jeuGages": {
     "title": "Gage couple : le jeu de la roue, 140 gages tirés au hasard",
@@ -340,5 +340,19 @@
     "metaTitle": "Amour ou en Crush ? Test en ligne 35 questions",
     "metaDescription": "35 questions pour savoir si tu es en crush ou si ce sont des sentiments amoureux. Les questions s'adaptent selon que ton crush est un garçon ou une fille.",
     "description": "Réponds sur ce que tu ressens, le score fait le tri entre l'attirance, le crush et les sentiments amoureux."
+  },
+  "jeuQuiPourrait": {
+    "title": "Qui pourrait ? Jeu de couple en ligne 100+ questions",
+    "shortTitle": "Qui pourrait ?",
+    "metaTitle": "Qui pourrait ? Jeu de couple en ligne 100+ questions",
+    "metaDescription": "Une question, vos deux prénoms, et vous désignez qui en serait capable. 108 questions, parties de 20, 40 ou 60, gratuit et sans inscription.",
+    "description": "Une question s'affiche, vous désignez qui en serait capable : l'un de vous deux, ou personne."
+  },
+  "jeuOuiNon": {
+    "title": "Jeu Oui ou Non pour couples en ligne - 120 questions",
+    "shortTitle": "Oui ou non",
+    "metaTitle": "Jeu Oui ou Non pour couples en ligne - 120 questions",
+    "metaDescription": "120 situations de vie à deux à trancher par oui ou par non, avec les votes de tous les autres couples affichés après chaque réponse. Gratuit, sans inscription.",
+    "description": "Des situations de couple à trancher par oui ou non, avec les votes de tous les autres affichés après chaque réponse."
   }
 }

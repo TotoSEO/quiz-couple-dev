@@ -76,6 +76,8 @@ export const ROUTE_SLUGS = {
   testFinCouple: { fr: 'test-est-ce-la-fin-de-mon-couple', en: 'is-my-relationship-over-test', es: 'test-es-el-final-de-mi-relacion', de: 'ist-meine-beziehung-am-ende-test', it: 'test-e-la-fine-della-mia-relazione' },
   pourContre: { fr: 'quiz-pour-contre-couple', en: 'for-or-against-couple-game', es: 'juego-a-favor-o-en-contra-pareja', de: 'dafuer-oder-dagegen-paarspiel', it: 'gioco-pro-o-contro-coppia' },
   jeuJamais: { fr: 'je-nai-jamais-jeu-couple', en: 'never-have-i-ever-couples-game', es: 'yo-nunca-juego-pareja', de: 'ich-hab-noch-nie-paar-spiel', it: 'non-ho-mai-gioco-coppia' },
+  jeuQuiPourrait: { fr: 'qui-pourrait-couple', en: 'who-could-couples-game', es: 'quien-podria-juego-pareja', de: 'wer-koennte-paar-spiel', it: 'chi-potrebbe-gioco-coppia' },
+  jeuOuiNon: { fr: 'jeu-oui-non-couple', en: 'yes-or-no-couples-game', es: 'juego-si-o-no-pareja', de: 'ja-oder-nein-paar-spiel', it: 'gioco-si-o-no-coppia' },
   quizTentation: { fr: 'quiz-ile-de-la-tentation', en: 'temptation-island-quiz', es: 'quiz-la-isla-de-las-tentaciones', de: 'temptation-island-quiz', it: 'quiz-temptation-island' },
   admin: { fr: 'admin', en: 'admin', es: 'admin', de: 'admin', it: 'admin' },
   activities: { fr: 'activites-autours-de-moi', en: 'couple-activities-near-me', es: 'actividades-en-pareja-cerca', de: 'paar-aktivitaeten-in-der-naehe', it: 'attivita-di-coppia-vicino' },
@@ -145,6 +147,8 @@ export const QUIZ_FEATURED = {
   testFinCouple:     { file: 'corde-effilochee',           old: null,                  alt: { fr: 'Une corde tendue, effilochée en son centre, dont il ne reste que quelques fils', en: 'A taut rope, frayed at its centre, with only a few threads still holding', es: 'Una cuerda tensa, deshilachada en el centro, de la que solo quedan unos hilos', de: 'Ein gespanntes Seil, in der Mitte ausgefranst, nur noch wenige Fäden halten', it: 'Una corda tesa, sfilacciata al centro, di cui restano solo pochi fili' } },
   pourContre:        { file: 'pour-contre-pouces',       old: null,                  alt: { fr: 'Un pouce levé rose et un pouce baissé violet séparés par un cœur, pour le jeu pour ou contre en couple', en: 'A pink thumbs-up and a purple thumbs-down separated by a heart, for the for or against couple game', es: 'Un pulgar hacia arriba rosa y uno hacia abajo morado separados por un corazón, para el juego a favor o en contra en pareja', de: 'Ein rosa Daumen hoch und ein violetter Daumen runter, getrennt durch ein Herz, für das Paarspiel dafür oder dagegen', it: 'Un pollice in su rosa e un pollice in giù viola separati da un cuore, per il gioco pro o contro in coppia' } },
   jeuJamais:         { file: 'jamais-doigts-leves',     old: null,                  alt: { fr: "Deux mains qui comptent sur leurs doigts levés lors d'une partie de je n'ai jamais en couple", en: 'Two hands counting on raised fingers during a couples never have I ever game', es: 'Dos manos contando con los dedos levantados durante una partida de yo nunca en pareja', de: 'Zwei Hände, die beim Ich hab noch nie für Paare mit erhobenen Fingern zählen', it: 'Due mani che contano sulle dita alzate durante una partita di non ho mai in coppia' } },
+  jeuQuiPourrait:    { file: 'qui-pourrait-duel',      old: null,                  alt: { fr: 'Deux cartes de jeu, une verte et une jaune, posées face à face sur une table entre deux personnes', en: 'Two game cards, one green and one yellow, facing each other on a table between two people', es: 'Dos cartas de juego, una verde y una amarilla, frente a frente sobre una mesa entre dos personas', de: 'Zwei Spielkarten, eine grüne und eine gelbe, einander gegenüber auf einem Tisch zwischen zwei Personen', it: 'Due carte da gioco, una verde e una gialla, una di fronte all\'altra su un tavolo tra due persone' } },
+  jeuOuiNon:         { file: 'oui-non-vote',           old: null,                  alt: { fr: 'Deux cartes de vote face à face, une verte pour le oui et une rouge pour le non', en: 'Two voting cards facing each other, a green one for yes and a red one for no', es: 'Dos tarjetas de voto frente a frente, una verde para el sí y una roja para el no', de: 'Zwei Abstimmungskarten einander gegenüber, eine grüne für Ja und eine rote für Nein', it: 'Due carte per votare una di fronte all\'altra, una verde per il sì e una rossa per il no' } },
   quizTentation:     { file: 'island-bonfire',            old: null,                  alt: { fr: 'Feu de camp sur une plage tropicale la nuit, avec palmiers et pleine lune', en: 'Bonfire on a tropical beach at night, with palm trees and a full moon', es: 'Hoguera en una playa tropical de noche, con palmeras y luna llena', de: 'Lagerfeuer an einem tropischen Strand bei Nacht, mit Palmen und Vollmond', it: 'Falò su una spiaggia tropicale di notte, con palme e luna piena' } },
 };
 
@@ -208,6 +212,8 @@ export const ROUTE_CONFIG = {
   testFinCouple: { template: 'quiz-fin-couple', namespaces: ['quiz-fin-couple', 'quizzes', 'quizGames', 'gd', 'common'] },
   pourContre: { template: 'jeu-pour-contre', namespaces: ['jeu-pour-contre', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuJamais: { template: 'jeu-jamais', namespaces: ['jeu-jamais', 'quizzes', 'quizGames', 'gd', 'common'] },
+  jeuQuiPourrait: { template: 'jeu-qui-pourrait', namespaces: ['jeu-qui-pourrait', 'quizzes', 'quizGames', 'gd', 'common'] },
+  jeuOuiNon: { template: 'jeu-oui-non', namespaces: ['jeu-oui-non', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizTentation: { template: 'quiz-tentation', namespaces: ['quiz-tentation', 'quizzes', 'quizGames', 'gd', 'common'] },
   testPurete: { template: 'test-purete', namespaces: ['test-purete', 'quizzes', 'common'] },
   admin: { template: 'admin', namespaces: ['common'] },
@@ -238,7 +244,8 @@ export const ADSENSE_CLIENT = 'ca-pub-3699606544344200';
 // Sans cette liste, les six jeux ne remontaient aucune partie a l'admin.
 const ROUTES_JEUX = [
   'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
-  'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais',
+  'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais', 'jeuQuiPourrait',
+  'jeuOuiNon',
 ];
 
 export function estPageJouable(routeKey) {
@@ -1306,6 +1313,8 @@ export const QUIZ_RELATED_ARTICLES = {
   jeuQuiDeNous:     ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],
   jeuDilemmes:      ['choses-pas-accepter-couple', 'disputes-couple'],
   jeuJamais:        ['questions-intimes-couple', 'questions-pour-mieux-se-connaitre-en-couple'],
+  jeuQuiPourrait:   ['questions-pour-mieux-se-connaitre-en-couple', 'questions-couple-telephone-message'],
+  jeuOuiNon:        ['choses-pas-accepter-couple', 'questions-pour-mieux-se-connaitre-en-couple'],
   jeuGages:         ['activites-couple-ete', 'comment-savoir-si-cest-le-bon'],
 };
 // Ajouts sur des entrées déjà existantes : on complète sans réécrire la table,

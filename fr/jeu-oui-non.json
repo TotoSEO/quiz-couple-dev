@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "120 situations • Votes en direct • Gratuit",
+    "title": "Jeu Oui ou Non à faire en couple en ligne",
+    "titleHighlight": "Oui ou Non",
+    "description": "Une situation s'affiche, vous répondez oui ou non, et vous découvrez aussitôt ce que les autres ont voté."
+  },
+  "jsonLd": {
+    "name": "Oui ou non, version couple"
+  },
+  "exemples": {
+    "avant": "",
+    "apres": " : oui ou non ?"
+  },
+  "section1": {
+    "title": "Le oui ou non, c'est quoi comme jeu ?",
+    "p1": "Le oui ou non est un jeu de discussion tout simple. Quelqu'un lance une question fermée, du genre « est-ce que tu dirais oui à un tatouage assorti ? », et chacun répond par oui ou par non, sans avoir le droit de tourner autour. Il n'y a rien à installer et rien à compter, et c'est pour ça qu'on le range parmi <a href=\"/jeux-de-couple/\">les jeux les plus simples à faire à deux</a> : il se lance à l'apéro, en voiture, ou un soir de semaine sur le canapé.",
+    "p2": "La règle a l'air pauvre dite comme ça, et pourtant le jeu tourne depuis des générations. S'il marche aussi bien, c'est parce qu'on n'a pas le droit de nuancer : on a tous envie de répondre « ça dépend », et justement, c'est interdit. Répondre oui ou répondre non oblige à choisir un camp, et c'est là que les discussions démarrent.",
+    "p3": "Il en existe plein de variantes : entre amis avec des gages, en famille en version sage, ou encore en jeu à boire. Ici, on l'a adapté au couple, et on y a ajouté quelque chose qu'on aime beaucoup : à chaque situation, vous voyez ce que tous les autres visiteurs ont répondu. Vous ne jouez pas juste à deux, vous vous comparez à tout le monde."
+  },
+  "section2": {
+    "title": "La différence avec le oui ou non classique",
+    "intro": "La principale différence est dans les questions, et dans ce qu'on fait des réponses. Le oui ou non classique se joue vite, souvent pour rire, et les questions parlent de tout et de rien. Notre version pose des situations de vie à deux, et garde une trace de tous les votes. Voici ce que ça change, côte à côte :",
+    "colClassique": "Le oui ou non classique",
+    "colCouple": "Notre version couple",
+    "ligne1Titre": "Les questions",
+    "ligne1Classique": "De tout et de rien : « tu as déjà menti à ta mère ? »",
+    "ligne1Couple": "Des situations de vie à deux : compte commun, maison, animal, belle-famille",
+    "ligne2Titre": "Qui répond",
+    "ligne2Classique": "Chacun son tour, le plus vite possible",
+    "ligne2Couple": "Le couple répond d'une seule voix, après en avoir discuté",
+    "ligne3Titre": "Ce qu'on découvre",
+    "ligne3Classique": "Des anecdotes et des fous rires",
+    "ligne3Couple": "L'avis de votre moitié sur des sujets que vous n'aviez jamais abordés",
+    "ligne4Titre": "La fin de partie",
+    "ligne4Classique": "Quand quelqu'un craque ou qu'on passe à autre chose",
+    "ligne4Couple": "Quand vous voulez : il n'y a ni score ni ligne d'arrivée",
+    "apres": "Petite précision au passage, parce que la confusion revient souvent : le oui ou non n'est pas le ni oui ni non. Dans le ni oui ni non, ces deux mots sont interdits et il faut tenir le plus longtemps possible sans les prononcer. Ici c'est l'inverse, ce sont les deux seules réponses autorisées."
+  },
+  "section3": {
+    "title": "Les règles de notre jeu",
+    "intro": "Il n'y a presque rien à apprendre. Vous vous installez à deux devant le même écran, et ça se passe comme ça :",
+    "etape1Titre": "Une situation s'affiche",
+    "etape1Texte": "Par exemple « Avoir un compte commun ». Vous en discutez si besoin, puis vous répondez d'un seul geste : OUI ou NON. Si une situation ne vous concerne pas, le bouton « Passer » existe aussi.",
+    "etape2Titre": "Les votes de tout le monde apparaissent",
+    "etape2Texte": "Juste après votre réponse, vous voyez les chiffres : par exemple 1 203 personnes ont voté oui, et 255 ont voté non. Vous savez tout de suite si vous êtes dans la majorité ou à contre-courant.",
+    "etape3Titre": "Vous continuez, ou pas",
+    "etape3Texte": "Il y a 120 situations, mais rien ne vous oblige à les faire d'une traite. Le jeu n'a ni score ni écran de fin : vous vous arrêtez quand vous voulez, et vous reprenez plus tard là où il reste des situations.",
+    "apres": "Un détail technique qui a son importance : chaque situation ne se vote qu'une seule fois par personne. Si vous revenez demain, les situations déjà tranchées montrent leurs chiffres sans vous laisser revoter. Du coup, les pourcentages veulent dire quelque chose : personne ne peut gonfler un camp en cliquant dix fois."
+  },
+  "section4": {
+    "title": "Des exemples de situations du jeu",
+    "intro": "Voici vingt des cent vingt situations, telles que le jeu les pose. Il y a du très concret, du plus engageant, et quelques sujets qu'on n'ose pas toujours lancer de front :",
+    "apres": "Les 100 autres sont dans le jeu, servies dans un ordre différent à chaque visite. Certaines fâchent gentiment, et d'ailleurs c'est un peu le but : un désaccord sur « Avoir un meilleur ami du sexe opposé » en dit plus long qu'une soirée entière de banalités. Si un sujet coince, ne le balayez pas d'un revers de main : c'est peut-être le début d'<a href=\"/questions-couple/\">une vraie conversation à deux</a>, et elle vaut plus que la partie."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment on joue au oui ou non en couple ?",
+    "a1": "Vous ouvrez le jeu à deux sur un téléphone, une situation s'affiche, et vous répondez oui ou non d'une seule voix. Juste après, le jeu montre ce que les autres ont voté. Il y a 120 situations, et vous vous arrêtez quand vous voulez.",
+    "q2": "Les chiffres affichés sont de vrais votes ?",
+    "a2": "Oui. Chaque clic sur oui ou sur non est enregistré, tous visiteurs confondus, et chaque personne ne peut voter qu'une seule fois par situation. Les chiffres que vous voyez bougent donc au fil des parties des autres couples.",
+    "q3": "Il faut être d'accord tous les deux pour répondre ?",
+    "a3": "C'est l'esprit du jeu : la réponse est celle du couple, pas celle d'un seul. Si vous n'êtes pas d'accord, c'est une excellente nouvelle, ça veut dire qu'il y a un vrai sujet à discuter avant de cliquer.",
+    "q4": "On peut y jouer entre amis, ou tout seul ?",
+    "a4": "Le jeu est écrit pour un couple : les situations parlent de compte commun, de belle-famille ou d'intimité. Tout seul, ça marche aussi, vous votez votre avis et vous le comparez à celui des autres. Entre amis, certaines situations tomberont à plat, mais rien ne l'interdit.",
+    "q5": "Que se passe-t-il au bout des 120 situations ?",
+    "a5": "Pas grand-chose, et c'est voulu : il n'y a ni score ni classement, le jeu vous dit simplement que vous avez tout vu. Si le format vous plaît, <a href=\"/dilemmes-couple/\">les dilemmes de couple</a> fonctionnent sur le même principe de votes, avec des marchés impossibles à la place des situations."
+  }
+}

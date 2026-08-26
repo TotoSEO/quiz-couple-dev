@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "120 situaciones • Votos en directo • Gratis",
+    "title": "Juego Sí o No para jugar en pareja online",
+    "titleHighlight": "Sí o No",
+    "description": "Aparece una situación, respondéis sí o no, y descubrís al momento lo que han votado los demás."
+  },
+  "jsonLd": {
+    "name": "Sí o no, versión pareja"
+  },
+  "exemples": {
+    "avant": "",
+    "apres": ": ¿sí o no?"
+  },
+  "section1": {
+    "title": "El sí o no, ¿qué clase de juego es?",
+    "p1": "El sí o no es un juego de conversación de lo más simple. Alguien lanza una pregunta cerrada, del tipo «¿dirías que sí a un tatuaje a juego?», y cada uno responde sí o no, sin derecho a irse por las ramas. No hay nada que instalar ni nada que contar, y por eso está entre <a href=\"/es/juegos-para-parejas/\">los juegos más simples para jugar a dos</a>: se lanza en el aperitivo, en el coche, o un martes cualquiera en el sofá.",
+    "p2": "La regla parece poca cosa dicha así, y sin embargo el juego lleva generaciones funcionando. Si funciona tan bien, es porque no se puede matizar: todos queremos responder «depende», y justamente eso está prohibido. Responder sí o responder no obliga a elegir un bando, y ahí es donde arrancan las conversaciones.",
+    "p3": "Existen muchas variantes: entre amigos con prendas, en familia en versión suave, o como juego de beber. Aquí lo hemos adaptado a la pareja, y le hemos añadido algo que nos gusta mucho: en cada situación, veis lo que han respondido todos los demás visitantes. No jugáis solo entre vosotros, os comparáis con todo el mundo."
+  },
+  "section2": {
+    "title": "La diferencia con el sí o no clásico",
+    "intro": "La principal diferencia está en las preguntas, y en lo que se hace con las respuestas. El sí o no clásico se juega rápido, casi siempre para reír, y las preguntas hablan de todo un poco. Nuestra versión plantea situaciones de vida en pareja, y guarda registro de todos los votos. Esto es lo que cambia, lado a lado:",
+    "colClassique": "El sí o no clásico",
+    "colCouple": "Nuestra versión pareja",
+    "ligne1Titre": "Las preguntas",
+    "ligne1Classique": "De todo un poco: «¿alguna vez le has mentido a tu madre?»",
+    "ligne1Couple": "Situaciones de vida en pareja: cuenta conjunta, casa, mascota, suegros",
+    "ligne2Titre": "Quién responde",
+    "ligne2Classique": "Cada uno por turnos, lo más rápido posible",
+    "ligne2Couple": "La pareja responde con una sola voz, después de hablarlo",
+    "ligne3Titre": "Lo que se descubre",
+    "ligne3Classique": "Anécdotas y ataques de risa",
+    "ligne3Couple": "La opinión de tu media naranja sobre temas que nunca habíais tocado",
+    "ligne4Titre": "El final de la partida",
+    "ligne4Classique": "Cuando alguien se rinde o se pasa a otra cosa",
+    "ligne4Couple": "Cuando queráis: no hay puntuación ni línea de meta",
+    "apres": "Una aclaración de paso, porque la confusión vuelve a menudo: el sí o no no es el ni sí ni no. En el ni sí ni no, esas dos palabras están prohibidas y hay que aguantar sin pronunciarlas. Aquí es al revés, son las dos únicas respuestas permitidas."
+  },
+  "section3": {
+    "title": "Las reglas de nuestro juego",
+    "intro": "No hay casi nada que aprender. Os ponéis los dos delante de la misma pantalla, y va así:",
+    "etape1Titre": "Aparece una situación",
+    "etape1Texte": "Por ejemplo «Tener una cuenta conjunta». Lo habláis si hace falta, y respondéis con un solo gesto: SÍ o NO. Si una situación no os toca, también existe el botón «Pasar».",
+    "etape2Titre": "Aparecen los votos de todo el mundo",
+    "etape2Texte": "Justo después de vuestra respuesta, veis los números: por ejemplo 1.203 personas han votado sí, y 255 han votado no. Sabéis al instante si estáis con la mayoría o a contracorriente.",
+    "etape3Titre": "Seguís, o no",
+    "etape3Texte": "Hay 120 situaciones, pero nada os obliga a hacerlas del tirón. El juego no tiene puntuación ni pantalla final: paráis cuando queráis, y retomáis más tarde donde queden situaciones.",
+    "apres": "Un detalle técnico que tiene su importancia: cada situación solo se vota una vez por persona. Si volvéis mañana, las situaciones ya decididas muestran sus números sin dejaros votar otra vez. Así los porcentajes significan algo: nadie puede inflar un bando haciendo clic diez veces."
+  },
+  "section4": {
+    "title": "Ejemplos de situaciones del juego",
+    "intro": "Aquí tenéis veinte de las ciento veinte situaciones, tal como las plantea el juego. Hay cosas muy concretas, otras que comprometen más, y algunos temas que casi nadie se atreve a sacar de frente:",
+    "apres": "Las otras 100 están en el juego, servidas en un orden distinto en cada visita. Algunas escuecen un poco, y francamente esa es parte de la gracia: un desacuerdo sobre «Tener un mejor amigo del sexo opuesto» dice más que una noche entera de banalidades. Si un tema se atasca, no lo apartéis de un manotazo: puede ser el comienzo de <a href=\"/es/preguntas-pareja/\">una conversación de verdad entre los dos</a>, y eso vale más que la partida."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cómo se juega al sí o no en pareja?",
+    "a1": "Abrís el juego los dos en un móvil, aparece una situación, y respondéis sí o no con una sola voz. Justo después, el juego muestra lo que han votado los demás. Hay 120 situaciones, y paráis cuando queráis.",
+    "q2": "¿Los números que se muestran son votos reales?",
+    "a2": "Sí. Cada clic en sí o en no queda registrado, todos los visitantes juntos, y cada persona solo puede votar una vez por situación. Los números que veis se mueven a medida que juegan otras parejas.",
+    "q3": "¿Hay que estar de acuerdo los dos para responder?",
+    "a3": "Ese es el espíritu del juego: la respuesta es de la pareja, no de uno solo. Si no estáis de acuerdo, es una noticia excelente, significa que hay un tema de verdad que discutir antes de hacer clic.",
+    "q4": "¿Se puede jugar entre amigos, o en solitario?",
+    "a4": "El juego está escrito para una pareja: las situaciones hablan de cuenta conjunta, de suegros o de intimidad. En solitario también funciona, votáis vuestra opinión y la comparáis con la de los demás. Entre amigos, algunas situaciones caerán en vacío, pero nada lo impide.",
+    "q5": "¿Qué pasa al acabar las 120 situaciones?",
+    "a5": "Poca cosa, y es a propósito: no hay puntuación ni clasificación, el juego simplemente os dice que lo habéis visto todo. Si el formato os gusta, <a href=\"/es/dilemas-de-pareja/\">los dilemas de pareja</a> funcionan con el mismo principio de votos, con tratos imposibles en lugar de situaciones."
+  }
+}

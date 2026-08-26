@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "8 jeux • Gratuits • Sans inscription",
+    "badge": "11 jeux • Gratuits • Sans inscription",
     "title": "Nos jeux à faire en couple, prêts en un clic",
     "titleHighlight": "à faire en couple",
-    "description": "Huit jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
+    "description": "Onze jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
   },
   "stats": {
-    "jeux": "8",
+    "jeux": "11",
     "jeuxLabel": "jeux à deux",
     "cartes": "390",
     "cartesLabel": "cartes, gages et dilemmes",
@@ -64,13 +64,23 @@
     "jamaisTagline": "Une affirmation, deux réponses, et on compte les aveux",
     "jamaisContenu": "100 affirmations écrites pour les couples, à jouer en 15, 30 ou 100",
     "jamaisDuree": "10 à 30 min",
-    "jamaisJoueurs": "2 joueurs"
+    "jamaisJoueurs": "2 joueurs",
+    "quiPourraitNom": "Qui pourrait ?",
+    "quiPourraitTagline": "Une question, deux prénoms, et vous désignez le coupable",
+    "quiPourraitContenu": "108 questions à jouer en 20, 40 ou 60, tirées au hasard",
+    "quiPourraitDuree": "5 à 20 min",
+    "quiPourraitJoueurs": "2 joueurs",
+    "ouiNonNom": "Oui ou non",
+    "ouiNonTagline": "Des situations à trancher, et les votes de tous les autres",
+    "ouiNonContenu": "120 situations de vie à deux, avec les votes de tous les visiteurs après chaque réponse",
+    "ouiNonDuree": "2 à 20 min",
+    "ouiNonJoueurs": "2 joueurs"
   },
   "section1": {
     "title": "Ce qu'un jeu à deux change à une soirée",
     "p1": "Un <strong class=\"text-foreground\">jeu de couple</strong> n'a l'air de rien. Et pourtant il règle un problème très concret : à deux, on finit toujours par tourner autour des mêmes sujets. La journée, le boulot, ce qu'on mange ce soir… Un jeu impose un cadre, et ce cadre donne la permission de poser des questions qu'on ne poserait jamais de but en blanc.",
     "p2": "C'est aussi pour ça qu'un jeu marche mieux qu'un film quand vous voulez vraiment vous retrouver. Devant un écran, vous êtes deux personnes côte à côte qui regardent ailleurs. Autour d'un jeu, vous êtes deux personnes qui se regardent. La différence se sent au bout de dix minutes.",
-    "p3": "Les huit jeux de cette page se jouent en ligne, gratuitement, sur un seul téléphone. Rien à créer, rien à installer, rien à préparer."
+    "p3": "Les onze jeux de cette page se jouent en ligne, gratuitement, sur un seul téléphone. Rien à créer, rien à installer, rien à préparer."
   },
   "section2": {
     "title": "Quel jeu choisir selon le moment",
