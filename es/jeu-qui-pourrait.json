@@ -3,7 +3,7 @@
     "badge": "108 preguntas • 2 jugadores • Gratis",
     "title": "Juego quién podría especial parejas | 100+ preguntas",
     "titleHighlight": "quién podría",
-    "description": "Aparece una pregunta, vuestros dos nombres debajo, y señaláis. Simple, rápido y sorprendentemente revelador."
+    "description": "Aparece una pregunta, vuestros dos nombres debajo, y señaláis al que sería capaz."
   },
   "jsonLd": {
     "name": "Quién podría, versión pareja"
@@ -14,46 +14,46 @@
     "apres": "?"
   },
   "section1": {
-    "title": "Las reglas, en treinta segundos",
-    "intro": "El quién podría es un juego que se juega en pareja, con un solo teléfono. Aparece una pregunta, del tipo «¿Quién podría comprarse un reloj de lujo por impulso?», y señaláis al culpable: uno de los dos, tocando su nombre. Si ninguno de los dos sería capaz, hay un tercer botón, más discreto: «Nadie».",
-    "intro2": "No hay respuesta correcta ni puntos que contar para vosotros: el juego simplemente guarda quién ha sido señalado, y os lo enseña al final. Así funciona:",
+    "title": "Las reglas del juego quién podría",
+    "intro": "El quién podría es un juego que se puede jugar en pareja, con un solo teléfono. Es un juego muy simple: aparece una pregunta, del tipo «¿Quién podría comprarse un reloj de lujo por impulso?», y respondéis tocando un nombre. Si pensáis que es él, tocáis su nombre, si pensáis que eres tú, tocas el tuyo. Y si ninguno de los dos sería capaz, hay un botón «Nadie» justo debajo.",
+    "intro2": "No hay respuesta correcta y no hay puntos que contar. El juego simplemente guarda quién ha sido señalado en cada pregunta, y os enseña el total al final. Así va una partida:",
     "etape1Titre": "Escribid vuestros nombres y elegid la duración",
-    "etape1Texte": "20, 40 o 60 preguntas, sacadas al azar entre las 108 del juego. Una partida de 20 se juega en cinco minutos.",
-    "etape2Titre": "Señalad, pregunta tras pregunta",
-    "etape2Texte": "Lo ideal es poneros de acuerdo antes de tocar. En la práctica, la negociación es el juego: «¿qué? ¿yo? en la vida».",
-    "etape3Titre": "Descubrid el veredicto",
-    "etape3Texte": "Al final, el juego os dice quién ha sido señalado más veces. El título de «capaz de todo» se gana, y se discute.",
-    "apres": "Un pequeño detalle que lo cambia todo: la pantalla no se mueve entre pregunta y pregunta. Vuestros dos nombres se quedan en su sitio, solo la pregunta va cambiando arriba. Así se encadena rápido, y una partida de 40 pasa sin que os deis cuenta."
+    "etape1Texte": "Podéis jugar 20, 40 o 60 preguntas, sacadas al azar entre las 108 del juego. Una partida de 20 preguntas dura unos cinco minutos.",
+    "etape2Titre": "Señalad a alguien en cada pregunta",
+    "etape2Texte": "Lo ideal es poneros de acuerdo antes de tocar la pantalla. La mayoría de las veces, uno de los dos no está de acuerdo, y justo ahí es cuando el juego se pone divertido.",
+    "etape3Titre": "Mirad el veredicto",
+    "etape3Texte": "Al final, el juego os enseña cuántas veces ha sido señalado cada uno, y quién lo ha sido más.",
+    "apres": "No hay nada más que preparar: el juego va online, gratis, y podéis pasaros el teléfono o dejarlo en medio de los dos."
   },
   "section2": {
-    "title": "La diferencia con el «quién de los dos»",
-    "p1": "También tenemos <a href=\"/es/quien-de-los-dos-pareja/\">un juego quién de los dos</a> en la web, y de lejos se parecen, así que mejor decirlo claro. El quién de los dos habla de lo que ya sois: quién es el más cabezota, quién habla más, quién cocina mejor. Se responde con lo que se ve todos los días.",
-    "p2": "El quién podría habla de lo que seríais capaces de hacer. Quién podría tirarse en paracaídas, dejarlo todo para abrir una casa rural, gastarse el presupuesto de vacaciones en una noche. Ya no se constata, se apuesta. Y ahí es donde se pone interesante: vais a descubrir la imagen que el otro tiene de vosotros, y no siempre coincide con la que tenéis de vosotros mismos.",
-    "p3": "Que te señalen en «quién podría llorar con un vídeo de animales» cuando te creías insospechable, hace reaccionar. La mitad de las partidas termina en «espera, ¿¿así me ves??», y francamente, es el mejor momento del juego."
+    "title": "La diferencia con el quién de los dos",
+    "p1": "También tenemos <a href=\"/es/quien-de-los-dos-pareja/\">un juego quién de los dos</a> en la web, y los dos juegos se parecen mucho. La diferencia está en las preguntas. En el quién de los dos, se responde sobre lo que ya sois: quién es el más cabezota, quién habla más, quién cocina mejor, etc. Las respuestas ya las sabéis, porque las vivís todos los días.",
+    "p2": "En el quién podría, se responde sobre lo que seríais capaces de hacer. Quién podría tirarse en paracaídas, quién podría dejarlo todo para abrir una casa rural, o quién podría gastarse el presupuesto de vacaciones en una noche. Nadie sabe la respuesta, así que cada uno da su opinión, y descubrís la imagen que el otro tiene de vosotros. No siempre coincide con la que tenéis de vosotros mismos, por cierto.",
+    "p3": "Que te señalen en «quién podría llorar con un vídeo de animales» cuando te creías insospechable, hace reaccionar. La mayoría de las veces, la pregunta que viene después es «espera, ¿¿así me ves??», y eso abre conversaciones que no habríais tenido de otra forma."
   },
   "section3": {
     "title": "Ejemplos de preguntas del juego",
-    "intro": "Aquí tenéis veinte de las ciento ocho preguntas, tal como las plantea el juego. Hay ligeras, menos ligeras, y algunas trampas donde el más sensato de los dos no siempre gana:",
-    "apres": "Las otras 88 están en el juego, sacadas al azar en cada partida. Si termináis vuestras 20 preguntas y queréis seguir, el juego propone encadenar 20 más, y «Volver a jugar con otras preguntas» saca primero de las que aún no han salido."
+    "intro": "Aquí tenéis veinte preguntas de las ciento ocho, tal como las plantea el juego. Las hay ligeras, menos ligeras, y algunas que dan para discutir:",
+    "apres": "Las otras 88 están en el juego, y cada partida las saca al azar. Si termináis vuestras 20 preguntas y queréis seguir, el juego propone encadenar 20 más. Y el botón «Volver a jugar con otras preguntas» saca primero de las que aún no han salido."
   },
   "section4": {
-    "title": "Para que la partida salga bien",
-    "intro": "No hay mucho que saber, pero estas cuatro costumbres marcan la diferencia entre una partida correcta y una memorable:",
+    "title": "Algunos consejos para jugar",
+    "intro": "No hay mucho que saber para jugar, pero estas cuatro costumbres hacen las partidas mucho mejores:",
     "resumeTitre": "Las buenas costumbres",
-    "resume1": "<strong>Justificad vuestras elecciones:</strong> «Tú, porque la última vez en el restaurante…». La anécdota que acompaña la señalada vale más que la señalada. De este tipo de intercambio salen <a href=\"/es/preguntas-pareja/\">las conversaciones de pareja de verdad</a>, esas que nunca se empiezan de frente.",
-    "resume2": "<strong>El botón «Nadie» es una opción seria:</strong> No lo uséis para no mojaros en cada pregunta, perdería toda la gracia. Guardadlo para las preguntas en las que, sinceramente, ninguno de los dos se atrevería.",
-    "resume3": "<strong>Aceptad el veredicto con estilo:</strong> Que te nombren «capaz de todo» es un título, no una acusación. Discutirlo a voces también forma parte del juego.",
-    "resume4": "<strong>Volved a jugar otro día:</strong> Con 108 preguntas, dos noches de juego no se parecen. Y las respuestas a veces cambian entre partida y partida, lo que también dice mucho.",
-    "apres": "Y si la noche está lanzada y queréis <a href=\"/es/juegos-para-parejas/\">seguir con otra cosa</a>, el formato combina muy bien con <a href=\"/es/yo-nunca-juego-pareja/\">una partida de yo nunca</a> justo después: se pasa de las apuestas a las confesiones."
+    "resume1": "<strong>Explicad vuestras elecciones:</strong> «Tú, porque la última vez en el restaurante…». Muchas veces lo que hace reír es la anécdota que acompaña la respuesta, más que la respuesta en sí.",
+    "resume2": "<strong>No abuséis del botón «Nadie»:</strong> Si lo elegís en cada pregunta para no mojaros, el juego pierde la gracia. Guardadlo para las preguntas en las que, sinceramente, ninguno de los dos se atrevería.",
+    "resume3": "<strong>Aceptad el veredicto:</strong> Que te señalen como «capaz de todo» no tiene nada de malo. Y si no estás de acuerdo, dilo: el debate forma parte del juego.",
+    "resume4": "<strong>Volved a jugar otro día:</strong> Con 108 preguntas, podéis hacer varias partidas sin repetir las mismas. Y las respuestas a veces cambian de una partida a otra, lo que también es interesante.",
+    "apres": "Y si el juego os gusta, tenemos <a href=\"/es/juegos-para-parejas/\">otros juegos para jugar a dos</a> con la misma idea: un teléfono, nada que instalar, y preguntas que dan conversación. El <a href=\"/es/yo-nunca-juego-pareja/\">yo nunca</a> es seguramente el más conocido, y muchas parejas lo empiezan justo después de un quién podría."
   },
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": "¿Cómo se juega al quién podría en pareja?",
     "a1": "Escribís vuestros dos nombres, elegís 20, 40 o 60 preguntas, y en cada pregunta tocáis el nombre del que sería capaz, o «Nadie». Al final, el juego os dice quién ha sido señalado más veces.",
     "q2": "¿Hay que estar de acuerdo los dos para responder?",
-    "a2": "Esa es la idea, y justamente eso es lo que da conversación. Si no conseguís poneros de acuerdo, que gane el que mejor defienda su caso. El juego no comprueba nada: vuestra negociación es la regla.",
+    "a2": "Esa es la idea, y justamente eso es lo que da conversación. Si no conseguís poneros de acuerdo, gana el que mejor defienda su caso. De todas formas, el juego no comprueba nada, así que decidís vosotros.",
     "q3": "¿Se puede jugar a distancia?",
-    "a3": "Sí. Abrid el juego cada uno por vuestro lado con los mismos nombres y la misma duración, responded por videollamada, y comparad vuestros veredictos al final. Los desacuerdos al señalar tienen aún más gracia a distancia.",
+    "a3": "Sí. Abrid el juego cada uno por vuestro lado con los mismos nombres y la misma duración, responded por videollamada, y comparad vuestros resultados al final. No siempre señalaréis a la misma persona, y ahí está la gracia.",
     "q4": "¿Las preguntas cambian en cada partida?",
     "a4": "Sí. Cada partida saca sus preguntas al azar entre las 108, y «Volver a jugar con otras preguntas» saca primero de las que aún no han salido desde que llegasteis a la página.",
     "q5": "¿Funciona también entre amigos?",

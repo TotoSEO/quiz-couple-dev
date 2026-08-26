@@ -3,7 +3,7 @@
     "badge": "108 questions • 2 joueurs • Gratuit",
     "title": "Jeu qui pourrait spécial couple | 100+ questions",
     "titleHighlight": "qui pourrait",
-    "description": "Une question s'affiche, vos deux prénoms en dessous, et vous désignez. Simple, rapide, et étonnamment révélateur."
+    "description": "Une question s'affiche, vos deux prénoms en dessous, et vous désignez celui qui en serait capable."
   },
   "jsonLd": {
     "name": "Qui pourrait, version couple"
@@ -14,48 +14,48 @@
     "apres": " ?"
   },
   "section1": {
-    "title": "Les règles, en trente secondes",
-    "intro": "Le qui pourrait est un jeu qu'on fait à deux, sur un seul téléphone. Une question s'affiche, du genre « Qui pourrait acheter une montre de luxe sur un coup de tête ? », et vous désignez le coupable : l'un de vous deux, en touchant son prénom. Si aucun des deux n'en serait capable, il y a un troisième bouton, plus discret : « Personne ».",
-    "intro2": "Il n'y a pas de bonne réponse et pas de points à compter pour vous : le jeu retient simplement qui a été désigné, et vous le montre à la fin. Voici comment ça se passe :",
+    "title": "Les règles du jeu qui pourrait",
+    "intro": "Le qui pourrait est un jeu qu'on peut faire en couple, sur un seul téléphone. C'est un jeu très simple : une question s'affiche, du genre « Qui pourrait acheter une montre de luxe sur un coup de tête ? », et vous répondez en touchant un prénom. Si vous pensez que c'est lui, vous touchez son prénom, si vous pensez que c'est vous, vous touchez le vôtre. Et si aucun des deux n'en serait capable, il y a un bouton « Personne » juste en dessous.",
+    "intro2": "Il n'y a pas de bonne réponse et il n'y a pas de points à compter. Le jeu retient simplement qui a été désigné à chaque question, et vous montre le total à la fin. Voici comment se passe une partie :",
     "etape1Titre": "Entrez vos prénoms et choisissez la longueur",
-    "etape1Texte": "20, 40 ou 60 questions, tirées au hasard parmi les 108 du jeu. Une partie de 20 se joue en cinq minutes.",
-    "etape2Titre": "Désignez, question après question",
-    "etape2Texte": "Idéalement, mettez-vous d'accord avant de taper. Dans les faits, c'est la négociation qui fait le jeu : « quoi ? moi ? jamais de la vie ».",
-    "etape3Titre": "Découvrez le verdict",
-    "etape3Texte": "À la fin, le jeu vous dit qui a été désigné le plus souvent. Le titre de « capable de tout » se gagne, et il se conteste.",
-    "apres": "Petit détail qui change tout : l'écran ne bouge pas entre les questions. Vos deux prénoms restent en place, seule la question circule au-dessus. Du coup, on enchaîne vite, et une partie de 40 passe sans qu'on la voie passer."
+    "etape1Texte": "Vous pouvez jouer en 20, 40 ou 60 questions, tirées au hasard parmi les 108 du jeu. Une partie de 20 questions dure à peu près cinq minutes.",
+    "etape2Titre": "Désignez quelqu'un à chaque question",
+    "etape2Texte": "L'idéal, c'est de vous mettre d'accord avant de toucher l'écran. La plupart du temps, l'un des deux n'est pas d'accord, et c'est justement là que le jeu devient drôle.",
+    "etape3Titre": "Regardez le verdict",
+    "etape3Texte": "À la fin, le jeu vous montre combien de fois chacun a été désigné, et qui l'a été le plus souvent.",
+    "apres": "Il n'y a rien d'autre à préparer : le jeu se joue en ligne, gratuitement, et vous pouvez vous passer le téléphone ou le poser entre vous deux."
   },
   "section2": {
-    "title": "La différence avec le « qui de nous deux »",
-    "p1": "On a aussi <a href=\"/qui-de-nous-deux/\">un jeu qui de nous deux</a> sur le site, et les deux se ressemblent de loin, alors autant le dire clairement. Le qui de nous deux parle de ce que vous êtes déjà : qui est le plus têtu, qui est le plus bavard, qui cuisine le mieux. On y répond en se basant sur ce qu'on constate tous les jours.",
-    "p2": "Le qui pourrait, lui, parle de ce que vous seriez capables de faire. Qui pourrait sauter en parachute, tout plaquer pour un gîte à la campagne, dépenser le budget vacances en une soirée. On ne constate plus, on parie. Et c'est là que ça devient intéressant : vous allez découvrir l'image que l'autre a de vous, et elle ne colle pas toujours à celle que vous avez de vous-même.",
-    "p3": "Se faire désigner sur « qui pourrait pleurer devant une vidéo d'animaux » quand on se croyait insoupçonnable, ça fait réagir. La moitié des parties se termine en « attends, tu me vois comme ça ?? », et franchement, c'est le meilleur moment du jeu."
+    "title": "La différence avec le qui de nous deux",
+    "p1": "On a aussi <a href=\"/qui-de-nous-deux/\">un jeu qui de nous deux</a> sur le site, et les deux jeux se ressemblent beaucoup. La différence est dans les questions. Dans le qui de nous deux, on répond sur ce que vous êtes déjà : qui est le plus têtu, qui est le plus bavard, qui cuisine le mieux, etc. Vous connaissez déjà les réponses, puisque vous le vivez tous les jours.",
+    "p2": "Dans le qui pourrait, on répond sur ce que vous seriez capables de faire. Qui pourrait sauter en parachute, qui pourrait tout plaquer pour ouvrir un gîte à la campagne, ou encore qui pourrait dépenser le budget vacances en une soirée. Personne ne connaît la réponse, du coup chacun donne son avis, et vous découvrez l'image que l'autre a de vous. Elle ne colle pas toujours à celle que vous avez de vous-même, d'ailleurs.",
+    "p3": "Se faire désigner sur « qui pourrait pleurer devant une vidéo d'animaux » quand on se croyait insoupçonnable, ça fait réagir. La plupart du temps, la question qui suit c'est « attends, tu me vois comme ça ?? », et ça lance des discussions qu'on n'aurait jamais eues autrement."
   },
   "section3": {
     "title": "Des exemples de questions du jeu",
-    "intro": "Voici vingt des cent-huit questions, telles que le jeu les pose. Il y a du léger, du moins léger, et quelques pièges où le plus sage des deux ne gagne pas toujours :",
-    "apres": "Les 88 autres sont dans le jeu, tirées au hasard à chaque partie. Si vous finissez vos 20 questions et que vous voulez continuer, le jeu propose d'enchaîner 20 de plus, et « recommencer avec d'autres questions » repioche dans ce qui n'a pas encore été posé."
+    "intro": "Voici vingt questions parmi les cent-huit, telles que le jeu les pose. Il y en a des légères, des moins légères, et quelques-unes qui font débat :",
+    "apres": "Les 88 autres sont dans le jeu, et chaque partie les tire au hasard. Si vous finissez vos 20 questions et que vous voulez continuer, le jeu propose d'en enchaîner 20 de plus. Et le bouton « Recommencer avec d'autres questions » pioche d'abord dans celles qui ne sont pas encore passées."
   },
   "section4": {
-    "title": "Pour que la partie soit réussie",
-    "intro": "Il n'y a pas grand-chose à savoir, mais ces quatre habitudes font la différence entre une partie correcte et une partie mémorable :",
+    "title": "Quelques conseils pour jouer",
+    "intro": "Il n'y a pas grand-chose à savoir pour jouer, mais ces quatre habitudes rendent les parties bien meilleures :",
     "resumeTitre": "Les bonnes habitudes",
-    "resume1": "<strong>Justifiez vos choix :</strong> « Toi, parce que la dernière fois au restaurant… ». L'anecdote qui accompagne la désignation vaut plus que la désignation. C'est de ce genre d'échange que sortent <a href=\"/questions-couple/\">les vraies conversations de couple</a>, celles qu'on ne lance jamais de front.",
-    "resume2": "<strong>Le bouton « Personne » est un vrai choix :</strong> Ne l'utilisez pas pour éviter de trancher à chaque question, il perdrait tout son sel. Gardez-le pour les questions où, honnêtement, aucun de vous deux n'oserait.",
-    "resume3": "<strong>Acceptez le verdict avec panache :</strong> Être désigné « capable de tout », c'est un titre, pas une accusation. Le contester bruyamment fait aussi partie du jeu.",
-    "resume4": "<strong>Rejouez une autre fois :</strong> Avec 108 questions, deux soirées de jeu ne se ressemblent pas. Et les réponses changent parfois entre deux parties, ce qui en dit long aussi.",
-    "apres": "Et si la soirée est lancée et que vous voulez <a href=\"/jeux-de-couple/\">continuer sur autre chose</a>, le format se marie très bien avec <a href=\"/je-nai-jamais-jeu-couple/\">une partie de je n'ai jamais</a> juste derrière : on passe des paris aux aveux."
+    "resume1": "<strong>Expliquez vos choix :</strong> « Toi, parce que la dernière fois au restaurant… ». C'est souvent l'anecdote qui vient avec la réponse qui fait rire, plus que la réponse elle-même.",
+    "resume2": "<strong>N'abusez pas du bouton « Personne » :</strong> Si vous le prenez à chaque question pour éviter de choisir, le jeu perd son intérêt. Gardez-le pour les questions où, honnêtement, aucun de vous deux n'oserait.",
+    "resume3": "<strong>Acceptez le verdict :</strong> Se faire désigner « capable de tout » n'a rien de méchant. Et si vous n'êtes pas d'accord, dites-le : le débat fait partie du jeu.",
+    "resume4": "<strong>Rejouez une autre fois :</strong> Avec 108 questions, vous pouvez faire plusieurs parties sans retomber sur les mêmes. Et les réponses changent parfois d'une partie à l'autre, ce qui est intéressant aussi.",
+    "apres": "Et si le jeu vous plaît, on a <a href=\"/jeux-de-couple/\">d'autres jeux à faire à deux</a> sur le même principe : un téléphone, rien à installer, et des questions qui font parler. Le <a href=\"/je-nai-jamais-jeu-couple/\">je n'ai jamais</a> est sans doute le plus connu, et beaucoup de couples le lancent juste après un qui pourrait."
   },
   "faq": {
     "title": "Questions fréquentes",
     "q1": "Comment on joue au qui pourrait en couple ?",
     "a1": "Vous entrez vos deux prénoms, vous choisissez 20, 40 ou 60 questions, et à chaque question vous touchez le prénom de celui qui en serait capable, ou « Personne ». À la fin, le jeu vous dit qui a été désigné le plus souvent.",
     "q2": "Il faut être d'accord tous les deux pour répondre ?",
-    "a2": "C'est l'idée, et c'est justement ce qui fait discuter. Si vous n'arrivez pas à vous mettre d'accord, tranchez à celui qui défend le mieux son cas. Le jeu ne vérifie rien : c'est votre négociation qui fait la règle.",
+    "a2": "C'est l'idée, et c'est justement ce qui fait discuter. Si vous n'arrivez pas à vous mettre d'accord, celui qui défend le mieux son cas l'emporte. De toute façon, le jeu ne vérifie rien, donc c'est vous qui décidez.",
     "q3": "On peut y jouer à distance ?",
-    "a3": "Oui. Ouvrez chacun le jeu de votre côté avec les mêmes prénoms et la même longueur, répondez en visio, et comparez vos verdicts à la fin. Les désaccords de désignation sont encore plus drôles à distance.",
+    "a3": "Oui. Ouvrez chacun le jeu de votre côté avec les mêmes prénoms et la même longueur, répondez en visio, et comparez vos résultats à la fin. Vous ne désignerez pas toujours la même personne, et c'est là que c'est drôle.",
     "q4": "Les questions changent à chaque partie ?",
-    "a4": "Oui. Chaque partie tire ses questions au hasard parmi les 108, et « recommencer avec d'autres questions » pioche d'abord dans celles qui n'ont pas encore été posées depuis votre arrivée sur la page.",
+    "a4": "Oui. Chaque partie tire ses questions au hasard parmi les 108, et « Recommencer avec d'autres questions » pioche d'abord dans celles qui ne sont pas encore passées depuis votre arrivée sur la page.",
     "q5": "Ça marche aussi entre amis ?",
     "a5": "Très bien, tant que vous êtes deux : le jeu affiche deux prénoms. Entre amis, en famille, en colocation, les questions fonctionnent pareil. Il n'y a que quelques questions de couple dans le lot, et elles passent très bien entre amis aussi."
   }

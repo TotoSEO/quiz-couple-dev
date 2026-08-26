@@ -3,7 +3,7 @@
     "badge": "108 domande • 2 giocatori • Gratis",
     "title": "Gioco chi potrebbe speciale coppia | 100+ domande",
     "titleHighlight": "chi potrebbe",
-    "description": "Appare una domanda, i vostri due nomi sotto, e voi indicate. Semplice, veloce e sorprendentemente rivelatore."
+    "description": "Appare una domanda, i vostri due nomi sotto, e voi indicate chi ne sarebbe capace."
   },
   "jsonLd": {
     "name": "Chi potrebbe, versione coppia"
@@ -14,46 +14,46 @@
     "apres": "?"
   },
   "section1": {
-    "title": "Le regole, in trenta secondi",
-    "intro": "Il chi potrebbe è un gioco che si fa in due, su un solo telefono. Appare una domanda, tipo «Chi potrebbe comprare un orologio di lusso d'impulso?», e voi indicate il colpevole: uno di voi due, toccando il suo nome. Se nessuno dei due ne sarebbe capace, c'è un terzo pulsante, più discreto: «Nessuno».",
-    "intro2": "Non c'è una risposta giusta e non ci sono punti da contare per voi: il gioco si segna semplicemente chi è stato indicato, e ve lo mostra alla fine. Ecco come funziona:",
+    "title": "Le regole del gioco chi potrebbe",
+    "intro": "Il chi potrebbe è un gioco che si può fare in coppia, su un solo telefono. È un gioco molto semplice: appare una domanda, tipo «Chi potrebbe comprare un orologio di lusso d'impulso?», e voi rispondete toccando un nome. Se pensate che sia lui, toccate il suo nome, se pensate che sia tu, tocchi il tuo. E se nessuno dei due ne sarebbe capace, c'è un pulsante «Nessuno» proprio lì sotto.",
+    "intro2": "Non c'è una risposta giusta e non ci sono punti da contare. Il gioco si segna semplicemente chi è stato indicato a ogni domanda, e vi mostra il totale alla fine. Ecco come va una partita:",
     "etape1Titre": "Inserite i vostri nomi e scegliete la lunghezza",
-    "etape1Texte": "20, 40 o 60 domande, pescate a caso tra le 108 del gioco. Una partita da 20 si gioca in cinque minuti.",
-    "etape2Titre": "Indicate, domanda dopo domanda",
-    "etape2Texte": "L'ideale è mettervi d'accordo prima di toccare. In pratica, la trattativa è il gioco: «cosa? io? mai nella vita».",
-    "etape3Titre": "Scoprite il verdetto",
-    "etape3Texte": "Alla fine, il gioco vi dice chi è stato indicato più spesso. Il titolo di «capace di tutto» si conquista, e si contesta.",
-    "apres": "Un piccolo dettaglio che cambia tutto: lo schermo non si muove tra una domanda e l'altra. I vostri due nomi restano al loro posto, solo la domanda gira sopra. Così si va veloci, e una partita da 40 passa senza che ve ne accorgiate."
+    "etape1Texte": "Potete giocare 20, 40 o 60 domande, pescate a caso tra le 108 del gioco. Una partita da 20 domande dura più o meno cinque minuti.",
+    "etape2Titre": "Indicate qualcuno a ogni domanda",
+    "etape2Texte": "L'ideale è mettervi d'accordo prima di toccare lo schermo. La maggior parte delle volte, uno dei due non è d'accordo, ed è proprio lì che il gioco diventa divertente.",
+    "etape3Titre": "Guardate il verdetto",
+    "etape3Texte": "Alla fine, il gioco vi mostra quante volte è stato indicato ognuno di voi, e chi lo è stato più spesso.",
+    "apres": "Non c'è nient'altro da preparare: il gioco va online, gratis, e potete passarvi il telefono o posarlo in mezzo a voi due."
   },
   "section2": {
-    "title": "La differenza con il «chi di noi due»",
-    "p1": "Sul sito abbiamo anche <a href=\"/it/chi-di-noi-due-coppia/\">un gioco chi di noi due</a>, e da lontano i due si somigliano, quindi tanto vale dirlo chiaramente. Il chi di noi due parla di quello che siete già: chi è il più testardo, chi parla di più, chi cucina meglio. Si risponde in base a quello che si vede tutti i giorni.",
-    "p2": "Il chi potrebbe parla di quello che sareste capaci di fare. Chi potrebbe lanciarsi col paracadute, mollare tutto per un agriturismo in campagna, spendere il budget delle vacanze in una sera. Non si constata più, si scommette. Ed è lì che diventa interessante: scoprirete l'immagine che l'altro ha di voi, e non sempre coincide con quella che avete di voi stessi.",
-    "p3": "Farsi indicare su «chi potrebbe piangere davanti a un video di animali» quando ci si credeva insospettabili, fa reagire. Metà delle partite finisce con «aspetta, mi vedi così??», e francamente è il momento migliore del gioco."
+    "title": "La differenza con il chi di noi due",
+    "p1": "Sul sito abbiamo anche <a href=\"/it/chi-di-noi-due-coppia/\">un gioco chi di noi due</a>, e i due giochi si somigliano molto. La differenza sta nelle domande. Nel chi di noi due, si risponde su quello che siete già: chi è il più testardo, chi parla di più, chi cucina meglio, eccetera. Le risposte le conoscete già, perché le vivete tutti i giorni.",
+    "p2": "Nel chi potrebbe, si risponde su quello che sareste capaci di fare. Chi potrebbe lanciarsi col paracadute, chi potrebbe mollare tutto per aprire un agriturismo in campagna, o ancora chi potrebbe spendere il budget delle vacanze in una sera. La risposta non la conosce nessuno, quindi ognuno dice la sua, e scoprite l'immagine che l'altro ha di voi. Tra l'altro, non sempre coincide con quella che avete di voi stessi.",
+    "p3": "Farsi indicare su «chi potrebbe piangere davanti a un video di animali» quando ci si credeva insospettabili, fa reagire. La maggior parte delle volte, la domanda che arriva dopo è «aspetta, mi vedi così??», e da lì partono conversazioni che non avreste mai fatto altrimenti."
   },
   "section3": {
     "title": "Esempi di domande del gioco",
-    "intro": "Ecco venti delle centotto domande, così come il gioco le pone. Ce ne sono di leggere, di meno leggere, e qualche trappola dove il più saggio dei due non sempre vince:",
-    "apres": "Le altre 88 sono nel gioco, pescate a caso a ogni partita. Se finite le vostre 20 domande e volete continuare, il gioco propone di aggiungerne altre 20, e «Ricomincia con altre domande» pesca prima tra quelle che non sono ancora uscite."
+    "intro": "Ecco venti domande tra le centotto, così come il gioco le pone. Ce ne sono di leggere, di meno leggere, e alcune su cui si discute:",
+    "apres": "Le altre 88 sono nel gioco, e ogni partita le pesca a caso. Se finite le vostre 20 domande e volete continuare, il gioco propone di aggiungerne altre 20. E il pulsante «Ricomincia con altre domande» pesca prima tra quelle che non sono ancora uscite."
   },
   "section4": {
-    "title": "Perché la partita riesca bene",
-    "intro": "Non c'è molto da sapere, ma queste quattro abitudini fanno la differenza tra una partita discreta e una memorabile:",
+    "title": "Qualche consiglio per giocare",
+    "intro": "Non c'è molto da sapere per giocare, ma queste quattro abitudini rendono le partite molto migliori:",
     "resumeTitre": "Le buone abitudini",
-    "resume1": "<strong>Giustificate le vostre scelte:</strong> «Tu, perché l'ultima volta al ristorante…». L'aneddoto che accompagna l'indicazione vale più dell'indicazione. È da questo tipo di scambio che nascono <a href=\"/it/domande-coppia/\">le vere conversazioni di coppia</a>, quelle che non si iniziano mai a freddo.",
-    "resume2": "<strong>Il pulsante «Nessuno» è una scelta vera:</strong> Non usatelo per non sbilanciarvi a ogni domanda, perderebbe tutto il suo sapore. Tenetelo per le domande in cui, onestamente, nessuno dei due oserebbe.",
-    "resume3": "<strong>Accettate il verdetto con stile:</strong> Essere nominato «capace di tutto» è un titolo, non un'accusa. Anche contestarlo a gran voce fa parte del gioco.",
-    "resume4": "<strong>Rigiocate un'altra volta:</strong> Con 108 domande, due serate di gioco non si somigliano. E le risposte a volte cambiano da una partita all'altra, il che dice parecchio anche quello, se ci pensate.",
-    "apres": "E se la serata è partita e volete <a href=\"/it/giochi-di-coppia/\">continuare con qualcos'altro</a>, il formato si sposa benissimo con <a href=\"/it/non-ho-mai-gioco-coppia/\">una partita di non ho mai</a> subito dopo: si passa dalle scommesse alle confessioni."
+    "resume1": "<strong>Spiegate le vostre scelte:</strong> «Tu, perché l'ultima volta al ristorante…». Spesso è l'aneddoto che accompagna la risposta a far ridere, più della risposta in sé.",
+    "resume2": "<strong>Non abusate del pulsante «Nessuno»:</strong> Se lo scegliete a ogni domanda per non sbilanciarvi, il gioco perde il suo senso. Tenetelo per le domande in cui, onestamente, nessuno dei due oserebbe.",
+    "resume3": "<strong>Accettate il verdetto:</strong> Farsi indicare come «capace di tutto» non ha niente di cattivo. E se non siete d'accordo, ditelo: discuterne fa parte del gioco.",
+    "resume4": "<strong>Rigiocate un'altra volta:</strong> Con 108 domande, potete fare più partite senza ricadere sulle stesse. E le risposte a volte cambiano da una partita all'altra, e anche quello è interessante.",
+    "apres": "E se il gioco vi piace, abbiamo <a href=\"/it/giochi-di-coppia/\">altri giochi da fare in due</a> con la stessa idea: un telefono, niente da installare, e domande che fanno parlare. Il <a href=\"/it/non-ho-mai-gioco-coppia/\">non ho mai</a> è probabilmente il più conosciuto, e molte coppie lo iniziano subito dopo un chi potrebbe."
   },
   "faq": {
     "title": "Domande frequenti",
     "q1": "Come si gioca al chi potrebbe in coppia?",
     "a1": "Inserite i vostri due nomi, scegliete 20, 40 o 60 domande, e a ogni domanda toccate il nome di chi ne sarebbe capace, oppure «Nessuno». Alla fine, il gioco vi dice chi è stato indicato più spesso.",
     "q2": "Bisogna essere d'accordo in due per rispondere?",
-    "a2": "L'idea è quella, ed è proprio quello che fa discutere. Se non riuscite a mettervi d'accordo, vince chi difende meglio la sua causa. Il gioco non verifica niente: la vostra trattativa fa la regola.",
+    "a2": "L'idea è quella, ed è proprio quello che fa discutere. Se non riuscite a mettervi d'accordo, vince chi difende meglio la sua causa. Tanto il gioco non verifica niente, quindi decidete voi.",
     "q3": "Si può giocare a distanza?",
-    "a3": "Sì. Aprite il gioco ognuno dal suo lato con gli stessi nomi e la stessa lunghezza, rispondete in videochiamata e confrontate i vostri verdetti alla fine. I disaccordi su chi indicare sono ancora più divertenti a distanza.",
+    "a3": "Sì. Aprite il gioco ognuno dal suo lato con gli stessi nomi e la stessa lunghezza, rispondete in videochiamata e confrontate i vostri risultati alla fine. Non indicherete sempre la stessa persona, ed è lì che viene da ridere.",
     "q4": "Le domande cambiano a ogni partita?",
     "a4": "Sì. Ogni partita pesca le sue domande a caso tra le 108, e «Ricomincia con altre domande» pesca prima tra quelle che non sono ancora uscite da quando siete arrivati sulla pagina.",
     "q5": "Funziona anche tra amici?",
