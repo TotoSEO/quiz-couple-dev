@@ -81,7 +81,10 @@
     "privacy": "Privacy Policy",
     "sitemap": "Sitemap",
     "copyright": "All rights reserved. Made with",
-    "inFrance": "in France"
+    "inFrance": "in France",
+    "sourcePrefTitre": "Add Quiz Couple to my preferred sources",
+    "sourcePrefSous": "You will spot Quiz Couple more easily in your Google searches and its AI answers!",
+    "sourcePrefAria": "Add Quiz Couple to your Google preferred sources"
   },
   "buttons": {
     "start": "Start",

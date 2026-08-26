@@ -82,7 +82,10 @@
     "privacy": "Politique de confidentialité",
     "sitemap": "Plan du site",
     "copyright": "Tous droits réservés. Fait avec",
-    "inFrance": "en France"
+    "inFrance": "en France",
+    "sourcePrefTitre": "Ajouter Quiz Couple à mes sources préférées",
+    "sourcePrefSous": "Vous verrez plus facilement Quiz Couple dans vos recherches Google et ses réponses IA !",
+    "sourcePrefAria": "Ajouter Quiz Couple aux sources préférées de Google"
   },
   "buttons": {
     "start": "Commencer",
