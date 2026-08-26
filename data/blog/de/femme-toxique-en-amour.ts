@@ -13,13 +13,13 @@ const article: BlogArticleData = {
   excerpt: "Männer brauchen im Schnitt viel länger, um eine toxische Beziehung zu benennen... weil ihnen nie beigebracht wurde, wie sie aussieht, wenn sie von einer Frau kommt.",
   introduction: `<p>Mach den Test in deinem Umfeld: Frag ein paar Typen, was eine toxische Frau ist. Du bekommst Witze, Filmzitate... und sehr wenige ernsthafte Antworten. Weil wir alle mit der Vorstellung aufgewachsen sind, dass Toxizität in der Beziehung Männersache ist. Ergebnis: Wenn ein Mann eine Beziehung erlebt, die ihn beschädigt, benennt er sie nicht. Er sagt, sie habe «Charakter». Er sagt, es sei «kompliziert». Er steckt es weg... und braucht Jahre, um es zu verstehen.</p>
 <p><strong>Sagen wir es also schlicht: Toxizität hat kein Geschlecht, und ihre weiblichen Versionen richten genauso viel Schaden an wie die anderen.</strong> Sie sind nur gesellschaftlich besser getarnt: Eine Frau, die kontrolliert, «hängt an dir», eine Frau, die Szenen macht, ist «leidenschaftlich», eine Frau, die dich kleinmacht, «hat Schlagfertigkeit».</p>
-<p>Dieser Artikel zerlegt die Tarnung: die 6 Profile der toxischen Frau in der Liebe, die Anzeichen, die sie verraten, was schwierig von zerstörerisch trennt... und am Ende die Frage, die 90 Prozent der Artikel umgehen: Und wenn der Toxische in der Beziehung du bist?</p>`,
+<p>Zerlegen wir diese Tarnung: die 6 Profile der toxischen Frau in der Liebe, die Anzeichen, die sie verraten, was schwierig von zerstörerisch trennt... und am Ende die unbequemste Frage: Und wenn der Toxische in der Beziehung du bist?</p>`,
   quickSummary: [
     "Weibliche Toxizität gibt es, sie ist nur gesellschaftlich besser getarnt.",
     "6 typische Profile: die Dramaqueen, die Schuldzuweiserin, die Kontrolleurin, die Eifersüchtige, die nie Zufriedene, die Wetterfahne.",
     "Das zentrale Kriterium bleibt dasselbe: wozu die Beziehung dich macht, über die Dauer.",
     "Schwierig heißt nicht toxisch: Entscheidend sind die Wiederholung und das fehlende Hinterfragen.",
-    "Und die Spiegelfrage lohnt sich: Manchmal liegt das toxische Verhalten auf beiden Seiten... oder auf deiner.",
+    "Und man muss die Spiegelfrage wagen: Manchmal liegt das toxische Verhalten auf beiden Seiten... oder auf deiner.",
   ],
   sections: [
     {
@@ -27,11 +27,11 @@ const article: BlogArticleData = {
       title: "Die 6 Profile der toxischen Frau in der Liebe",
       content: `<p>Wie bei Männern beurteilt man diese Profile über Monate, nicht über eine schlechte Phase. Und das Endkriterium ändert sich nie: was es mit DIR macht, auf Dauer.</p>
 <ol>
-<li><strong>Die Dramaqueen:</strong> Bei ihr ist Konflikt kein Unfall, sondern eine Beziehungsform. Alles wird zur Szene: eine Verspätung, ein schiefes Wort, ein Blick. Intensität ersetzt Nähe, und du verwechselst Erschöpfung mit Leidenschaft. Das verräterische Zeichen: Nach jedem Sturm bist immer du derjenige, der repariert, nie sie.</li>
+<li><strong>Die Dramaqueen:</strong> Bei ihr ist Konflikt kein Unfall, sondern eine Beziehungsform. Alles wird zur Szene: eine Verspätung, ein schiefes Wort, ein Blick. Die Beziehung lebt von Intensität mehr als von Nähe, und du verwechselst Erschöpfung mit Leidenschaft. Das verräterische Zeichen: Nach jedem Sturm bist immer du derjenige, der repariert, nie sie.</li>
 <li><strong>Die Schuldzuweiserin:</strong> Selten frontale Vorwürfe: Seufzer, ein «schon gut, geh nur», geladene Pausen, Rechnungen, die an deiner Stelle geführt werden. Du lebst mit einer Dauerschuld, deren Höhe und Ursprung du nicht kennst. Auf Dauer bittest du um Erlaubnis, ohne dass sie je verlangt wurde.</li>
 <li><strong>Die soziale Kontrolleurin:</strong> Sie verbietet dir nichts, wo denkst du hin! Sie hat nur zu jedem deiner Freunde eine endgültige Meinung, an Fußballabenden Migräne, an Wochenenden mit den Kumpels einen Notfall. Deine Welt schrumpft aus Entmutigung, nicht aus Verbot. Lies deine letzten sechs Monate nach: Wen hast du gesehen, ohne sie?</li>
 <li><strong>Die aufdringlich Eifersüchtige:</strong> Dein Handy hat kein Privatleben mehr, deine Kolleginnen tragen alle einen verdächtigen Vornamen, und jeder Abend endet in einer Nachbesprechung. Die Ausrede ist immer dieselbe: «weil du mir wichtig bist». Aber Vertrauen ist kein Extra der Beziehung: Es ist ihr Fundament.</li>
-<li><strong>Die ewig Unzufriedene:</strong> Was du auch tust, es ist nicht das Richtige. Nicht genug, nicht so, wie es sein soll, nicht zum richtigen Zeitpunkt. Der Mechanismus zermürbt, weil er dich in Dauerversagen hält: Du läufst einer Ziellinie hinterher, die zurückweicht, sobald du näher kommst. Eine gesunde Beziehung gibt dir manchmal recht. Diese nie.</li>
+<li><strong>Die ewig Unzufriedene:</strong> Was du auch tust, es ist nicht das Richtige. Nicht genug, nicht so, wie es sein soll, nicht zum richtigen Zeitpunkt. Der Mechanismus zermürbt, weil er dich in Dauerversagen hält: Du läufst einer Ziellinie hinterher, die zurückweicht, sobald du näher kommst. Eine gesunde Beziehung gibt dir manchmal recht; diese tut es nie.</li>
 <li><strong>Die leidenschaftliche Wetterfahne:</strong> Am Montag entzückend, am Mittwoch eisig, am Samstag wahnsinnig verliebt... ohne dass irgendetwas auf deiner Seite die Schwankungen erklärt. Du hängst an ihrem Wetter, unfreiwilliger Experte für Mikrosignale. Dieser Wechsel macht süchtig, das haben wir überall sonst gesehen... und er erschöpft sicherer als jeder Streit.</li>
 </ol>
 <aside class="blog-tip-box">
@@ -57,7 +57,7 @@ const article: BlogArticleData = {
     {
       id: 'und-wenn-ich-es-bin',
       title: "Die Frage, die niemand wagt: Und wenn ich der Toxische bin?",
-      content: `<p>Ein Fallenartikel, eigentlich. Denn beim Lesen der 6 Profile hat ein Teil der Leser an seine Partnerin gedacht... und ein anderer Teil hat sich selbst erkannt, im Stillen. Wenn das auf dich zutrifft, zuerst: Respekt. Sich die Frage zu stellen ist genau das, was ein gefestigt toxischer Mensch nie tut.</p>
+      content: `<p>Dieser Artikel ist eigentlich eine Falle. Denn beim Lesen der 6 Profile hat ein Teil der Leser an seine Partnerin gedacht... und ein anderer Teil hat sich selbst erkannt, im Stillen. Wenn das auf dich zutrifft, zuerst: Respekt. Sich die Frage zu stellen ist genau das, was ein gefestigt toxischer Mensch nie tut.</p>
 <p>Drei ehrliche Prüfungen. <strong>Erstens:</strong> Wenn sie dir sagt, dass etwas sie verletzt, was machst du mit dieser Information, konkret, in den Wochen danach? <strong>Zweitens:</strong> Ändern deine Entschuldigungen etwas, oder sind sie Ausstiegstickets aus der Krise? <strong>Drittens:</strong> Stell ihr die Frage, wirklich: «Gibt es Dinge, die du dich nicht mehr traust, mir zu sagen?»... und hör die Antwort, ohne dich zu verteidigen. Ihr Gesicht in dem Moment, in dem du fragst, wiegt alle Antworten auf.</p>
 <p>Die gute Nachricht, in beide Richtungen: Ein toxisches Verhalten, das bewusst ist und bearbeitet wird, ist ein Verhalten, das sich ändern kann. Was sich nicht ändert, ist das, was geleugnet wird... auf beiden Seiten der Beziehung.</p>
 <div class="blog-cta">

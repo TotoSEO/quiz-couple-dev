@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "People think escaping the hold means leaving. In reality, leaving is only the third stage out of four... and it isn't the hardest.",
   introduction: `<p>If you've already tried to leave, you know that maddening paradox: you KNOW. You've understood the mechanism, you've read the articles, you can describe how he works better than a manual... and yet, you're still here. Or you left, then came back. Perhaps several times.</p>
-<p>So let's put an end right away to the worst interpretation, the one gnawing at you: no, this isn't a lack of willpower, and no, you're not «too weak». <strong>A coercive hold isn't an opinion you abandon. It's a state, manufactured chemically and psychologically, and it gets dismantled in a certain order.</strong> Not with one burst of willpower... stage by stage.</p>
-<p>This article describes that path: the trauma bond that explains why it's so hard, the four stages of liberation, and the mistakes that send people back. Wherever you are on the route, you'll be able to place yourself... and see what comes next.</p>`,
+<p>So let's put an end right away to the worst interpretation, the one gnawing at you: no, this isn't a lack of willpower, and no, you're not «too weak». <strong>A coercive hold isn't an opinion you abandon: it's a state, manufactured chemically and psychologically, and it gets dismantled in a certain order.</strong> It doesn't come down to one burst of willpower, it comes apart stage by stage.</p>
+<p>Here is that path: the trauma bond that explains why it's so hard, the four stages of liberation, and the mistakes that send people back. Wherever you are on the route, you'll be able to place yourself... and see what comes next.</p>`,
   quickSummary: [
     "The hold is a state, not a weakness: the trauma bond is manufactured, therefore it can be undone.",
     "Liberation follows 4 stages: clarity, releasing guilt, detachment, rebuilding.",

@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Vigilamos la dependencia emocional en nuestras parejas... y la dejamos instalarse tranquilamente en nuestras amistades, donde nadie piensa en buscarla.",
   introduction: `<p>Hay unos celos de los que nadie habla nunca: los que sientes cuando tu mejor amiga se acerca a otra persona. Ese pinchazo cuando cuenta una noche en la que tú no estabas... Esa necesidad de saber que sigues siendo «la» persona, la primera en enterarte, la preferida. No te atreves a decirlo porque suena absurdo: ¿celos, entre amigas?</p>
 <p>Y sin embargo. <strong>La dependencia emocional es un modo de apego, no una exclusiva de la pareja: se instala allí donde hay vínculo.</strong> Y la amistad es incluso su terreno más discreto, porque nadie vigila... Repetimos que «las amigas son sagradas» y, bajo esa bandera, vínculos enteros pasan suavemente de lo precioso a lo fusional, y de lo fusional a lo asfixiante.</p>
-<p>Miremos entonces lo que nadie mira: las señales de una amistad convertida en dependencia, en los dos lados del vínculo, lo que le hace a las amistades afectadas... y cómo reequilibrar sin romperlo todo, porque es posible, e incluso más fácil que en pareja.</p>`,
+<p>Miremos entonces esto de cerca: las señales de una amistad convertida en dependencia, en los dos lados del vínculo, lo que le hace a las amistades afectadas... y cómo reequilibrar sin romperlo todo, porque es posible, e incluso más fácil que en pareja.</p>`,
   quickSummary: [
     "La dependencia emocional se instala en todos los vínculos: la pareja, la amistad, la familia.",
     "En la amistad se disfraza de lealtad: exclusividad, celos entre amigas, necesidad de ser «la» persona.",

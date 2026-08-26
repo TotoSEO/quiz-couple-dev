@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "We watch out for emotional dependency in our relationships... and let it settle quietly into our friendships, where nobody thinks to look for it.",
   introduction: `<p>There's a jealousy nobody ever talks about: the one you feel when your best friend gets closer to someone else. That pinch when she talks about an evening you weren't part of... That need to know you're still «the» person, the first to be told, the favourite. You don't dare say it, because it sounds absurd: jealousy, between friends?</p>
 <p>And yet. <strong>Emotional dependency is a mode of attachment, not an exclusive feature of romantic relationships: it settles wherever there's a bond.</strong> And friendship is even its most discreet ground, because nobody is watching... We repeat that «friends are sacred», and under that banner, entire bonds slide gently from precious to fusional, from fusional to suffocating.</p>
-<p>So let's look at what nobody looks at: the signs of a friendship turned into dependency, on both sides of the bond, what it does to the friendships concerned... and how to rebalance without breaking everything, because it's possible, and even easier than in a relationship.</p>`,
+<p>So let's take a proper look: the signs of a friendship turned into dependency, on both sides of the bond, what it does to the friendships concerned... and how to rebalance without breaking everything, because it's possible, and even easier than in a relationship.</p>`,
   quickSummary: [
     "Emotional dependency settles into every bond: relationships, friendships, family.",
     "In friendship it disguises itself as loyalty: exclusivity, friendly jealousy, needing to be «the» person.",

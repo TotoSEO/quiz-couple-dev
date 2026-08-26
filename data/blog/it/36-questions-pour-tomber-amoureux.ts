@@ -111,7 +111,7 @@ const article: BlogArticleData = {
 <p>Resta la domanda successiva, quella che tutti si fanno sulla via del ritorno: quello che abbiamo provato era l'atmosfera... o l'inizio di qualcosa?</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Dopo le 36 domande... quanto siete compatibili?</p>
-<p class="blog-cta-texte">L'esperimento crea vicinanza; la compatibilità, invece, si misura. Una serie di domande incrocia le vostre visioni, i vostri ritmi e i vostri valori, e vi dice dove il vostro duo è solido... e dove attriterà.</p>
+<p class="blog-cta-texte">L'esperimento crea vicinanza; la compatibilità, invece, si misura. Una serie di domande incrocia le vostre visioni, i vostri ritmi e i vostri valori, e vi dice dove il vostro duo è solido... e dove ci sarà attrito.</p>
 <a class="blog-cta-btn" href="/it/test-compatibilita-amorosa/">Misurare la nostra compatibilità</a>
 <p class="blog-cta-note">Gratis &middot; Senza registrazione &middot; Da fare in due</p>
 </div>

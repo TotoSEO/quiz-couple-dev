@@ -13,13 +13,13 @@ const article: BlogArticleData = {
   excerpt: "Les hommes mettent en moyenne bien plus longtemps à nommer une relation toxique... parce qu'on ne leur a jamais appris à quoi ça ressemble quand ça vient d'une femme.",
   introduction: `<p>Fais le test autour de toi : demande à des mecs ce qu'est une femme toxique. Tu obtiendras des blagues, des références de films... et très peu de réponses sérieuses. Parce qu'on a tous grandi avec l'idée que la toxicité en couple, c'est une affaire d'hommes. Résultat : quand un homme vit une relation qui l'abîme, il ne la nomme pas. Il dit qu'elle a « du caractère ». Il dit que c'est « compliqué ». Il encaisse... et il met des années à comprendre.</p>
 <p><strong>Alors disons-le simplement : la toxicité n'a pas de sexe, et ses versions féminines font autant de dégâts que les autres.</strong> Elles sont juste mieux camouflées, socialement : une femme qui contrôle « tient à toi », une femme qui fait des crises est « passionnée », une femme qui te rabaisse a « du répondant »...</p>
-<p>Cet article démonte le camouflage : les 6 profils de femme toxique en amour, les signes qui les trahissent, ce qui distingue le difficile du destructeur... et à la fin, la question que 90 % des articles esquivent : et si le toxique du couple, c'était toi ?</p>`,
+<p>Démontons donc le camouflage : les 6 profils de femme toxique en amour, les signes qui les trahissent, ce qui distingue le difficile du destructeur... et à la fin, la question la plus inconfortable : et si le toxique du couple, c'était toi ?</p>`,
   quickSummary: [
     "La toxicité féminine existe, elle est juste mieux camouflée socialement.",
     "6 profils types : la dramatique, la culpabilisatrice, la contrôleuse, la jalouse, l'insatisfaite, la girouette.",
     "Le critère central reste le même : ce que la relation te fait devenir, sur la durée.",
     "Difficile ne veut pas dire toxique : c'est la répétition et l'absence de remise en question qui tranchent.",
-    "Et la question miroir mérite d'être posée : parfois, le comportement toxique est des deux côtés... ou du tien.",
+    "Et il faut oser la question miroir : parfois, le comportement toxique est des deux côtés... ou du tien.",
   ],
   sections: [
     {
@@ -27,16 +27,16 @@ const article: BlogArticleData = {
       title: "Les 6 profils de femme toxique en amour",
       content: `<p>Comme pour les hommes, ces profils se jugent sur des mois, pas sur une mauvaise passe. Et le critère final ne change jamais : ce que ça TE fait, dans la durée.</p>
 <ol>
-<li><strong>La reine du drame :</strong> Chez elle, le conflit n'est pas un accident, c'est un mode de lien. Tout devient scène : un retard, un mot de travers, un regard... L'intensité remplace l'intimité, et tu confonds l'épuisement avec de la passion. Le signe qui trahit : après chaque tempête, c'est toujours toi qui répares, jamais elle.</li>
+<li><strong>La reine du drame :</strong> Chez elle, le conflit n'est pas un accident, c'est un mode de lien. Tout devient scène : un retard, un mot de travers, un regard... Le couple vit d'intensité plus que d'intimité, et tu confonds l'épuisement avec de la passion. Le signe qui trahit : après chaque tempête, c'est toujours toi qui répares, jamais elle.</li>
 <li><strong>La culpabilisatrice :</strong> Rarement des reproches frontaux : des soupirs, des « c'est bon, vas-y », des silences chargés, des comptes tenus à ta place... Tu vis avec une dette permanente dont tu ne connais ni le montant ni l'origine. À la longue, tu demandes la permission sans qu'on te l'ait jamais exigée.</li>
 <li><strong>La contrôleuse sociale :</strong> Elle ne t'interdit rien, voyons ! Elle a juste un avis définitif sur chacun de tes amis, une migraine les soirs de foot, une urgence les week-ends entre potes... Ton monde rétrécit par découragement, pas par interdiction. Relis tes six derniers mois : qui as-tu vu, sans elle ?</li>
-<li><strong>La jalouse intrusive :</strong> Ton téléphone n'a plus de vie privée, tes collègues féminines ont toutes un prénom suspect, et chaque sortie donne lieu à un débriefing... L'excuse est toujours la même, « c'est parce que je tiens à toi ». Mais la confiance n'est pas une option du couple : c'en est le socle.</li>
-<li><strong>L'éternelle insatisfaite :</strong> Quoi que tu fasses, ce n'est pas ça. Pas assez, pas comme il faut, pas au bon moment... Le mécanisme est usant parce qu'il te met en échec permanent : tu cours après une ligne d'arrivée qui recule à chaque fois que tu t'approches. Un couple sain te donne parfois raison. Celui-là, jamais.</li>
+<li><strong>La jalouse intrusive :</strong> Ton téléphone n'a plus de vie privée, tes collègues féminines ont toutes un prénom suspect, et chaque sortie donne lieu à un débriefing... L'excuse est toujours la même, « c'est parce que je tiens à toi ». Mais la confiance, dans un couple, ce n'est pas une option en plus : c'est le socle.</li>
+<li><strong>L'éternelle insatisfaite :</strong> Quoi que tu fasses, ce n'est pas ça. Pas assez, pas comme il faut, pas au bon moment... Le mécanisme est usant parce qu'il te met en échec permanent : tu cours après une ligne d'arrivée qui recule à chaque fois que tu t'approches. Un couple sain te donne parfois raison ; celui-là ne te la donne jamais.</li>
 <li><strong>La girouette passionnelle :</strong> Adorable le lundi, glaciale le mercredi, amoureuse folle le samedi... sans que rien, de ton côté, n'explique les variations. Tu vis accroché à sa météo, expert malgré toi en micro-signaux. Cette alternance-là rend accro, on l'a vu partout ailleurs... et elle épuise plus sûrement que n'importe quelle dispute.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Où s'arrête le « caractère », où commence le toxique ?</p>
-<p>Une femme exigeante, entière, avec du tempérament, peut être un excellent partenaire : le caractère se discute, s'ajuste, s'assume. Le toxique, lui, se reconnaît à trois choses : ça se répète, ça ne se remet jamais en question... et c'est toujours toi qui t'adaptes. Si tes limites déclenchent l'escalade au lieu du dialogue, tu as changé de catégorie.</p>
+<p>Une femme exigeante, entière, avec du tempérament, peut être un excellent partenaire : le caractère se discute, s'ajuste, s'assume. Le toxique se reconnaît à trois choses : ça se répète, ça ne se remet jamais en question... et c'est toujours toi qui t'adaptes. Si tes limites déclenchent l'escalade au lieu du dialogue, tu as changé de catégorie.</p>
 </aside>
 <div><table><thead><tr><th>Le profil</th><th>Le mécanisme central</th></tr></thead><tbody>
 <tr><td><strong>La reine du drame</strong></td><td>Le conflit n'est pas un accident, c'est son mode de lien</td></tr>
@@ -57,7 +57,7 @@ const article: BlogArticleData = {
     {
       id: 'et-si-c-etait-moi',
       title: "La question que personne n'ose : et si c'était moi, le toxique ?",
-      content: `<p>Article piège, en fait. Parce qu'en lisant les 6 profils, une partie des lecteurs a pensé à sa compagne... et une autre partie s'est reconnue, en silence. Si c'est ton cas, d'abord : respect. Se poser la question est exactement ce qu'une personne toxique installée ne fait jamais.</p>
+      content: `<p>C'est un article piège, en fait. Parce qu'en lisant les 6 profils, une partie des lecteurs a pensé à sa compagne... et une autre partie s'est reconnue, en silence. Si c'est ton cas, d'abord : respect. Se poser la question est exactement ce qu'une personne toxique installée ne fait jamais.</p>
 <p>Trois vérifications honnêtes. <strong>Un :</strong> quand elle te dit que quelque chose la blesse, qu'est-ce que tu fais de cette information, concrètement, dans les semaines qui suivent ? <strong>Deux :</strong> tes excuses changent-elles quelque chose, ou est-ce que ce sont des tickets de sortie de crise ? <strong>Trois :</strong> pose-lui la question, réellement : « est-ce qu'il y a des choses que tu n'oses plus me dire ? »... et écoute la réponse sans te défendre. Sa tête au moment où tu poses la question vaudra toutes les réponses.</p>
 <p>La bonne nouvelle, dans les deux sens : un comportement toxique conscient et travaillé, c'est un comportement qui peut changer. Ce qui ne change pas, c'est celui qu'on nie... des deux côtés du couple.</p>
 <div class="blog-cta">
