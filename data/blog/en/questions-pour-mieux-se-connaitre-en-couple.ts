@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Couple sitting back to back with question marks and hearts above them",
   publishedAt: '2026-10-10T13:37:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "The day you stop asking each other questions, you haven't finished discovering each other... you've just stopped looking.",
+  excerpt: "You never finish discovering each other, you just stop looking. These 60 questions restart the search, together.",
   introduction: `<p>Try the experiment one day: ask a couple who've been together ten years whether they know each other by heart. They'll say yes, obviously. Then ask them three fairly precise questions, the dream he gave up, the fear she never mentions, what each of them thinks the other thinks of them, and watch their faces. There's always a surprise. Always!</p>
 <p><strong>Because you never finish knowing someone. You just stop looking, and that's very different.</strong> The good news is that curiosity can be relit: all it takes is asking real questions again, and listening to the answers as if it were day one.</p>
 <p>These 60 questions are asked BY BOTH OF YOU: each of you answers every question, taking turns. That's the rule of the game, and it's what changes everything, because you discover as much by answering as by listening. Five themes, from the past to the future. Settle in.</p>`,

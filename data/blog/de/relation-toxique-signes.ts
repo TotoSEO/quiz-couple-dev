@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "«Toxisch», das Wort ist überall, bis es nichts mehr sagt. Und doch hat die echte toxische Beziehung präzise Anzeichen... und eine zentrale Frage: Lässt sie sich reparieren?",
   introduction: `<p>«Toxische Beziehung»... Das Wort ist so allgegenwärtig, dass es für alles herhält: ein etwas heftiger Streit, ein nachtragender Ex, eine Uneinigkeit über den Urlaub, zack, toxisch! Ergebnis: Wenn man sich die Frage WIRKLICH für die eigene Beziehung stellt, weiß man nicht mehr, was man denken soll. Ist es schlimm? Ist es normal? Liegt es an mir?</p>
-<p>Setzen wir also das echte Kriterium, das alles ordnet: <strong>Eine Beziehung ist nicht wegen dem toxisch, was sie enthält, sie ist toxisch wegen dem, was sie mit dir macht.</strong> Streit haben alle Paare. Unterschiede, graue Phasen, Worte, die zu weit gehen: genauso. Da liegt die Frage nicht. Die Frage lautet: In welchen Zustand versetzt dich diese Beziehung, Woche für Woche?</p>
-<p>Schauen wir es uns in Ruhe an: die 7 verlässlichen Anzeichen, der Unterschied zwischen einer toxischen Beziehung und einer schweren Phase, und vor allem die Frage, die niemand gut behandelt: Lässt es sich reparieren oder nicht?</p>`,
+<p>Setzen wir also das echte Kriterium, das alles ordnet: <strong>Eine Beziehung ist toxisch wegen dem, was sie mit dir macht, nicht wegen dem, was sie enthält.</strong> Streit haben alle Paare. Unterschiede, graue Phasen, Worte, die zu weit gehen: genauso. Da liegt die Frage nicht. Die Frage lautet: In welchen Zustand versetzt dich diese Beziehung, Woche für Woche?</p>
+<p>Schauen wir es uns in Ruhe an, bis zur Frage, die am meisten zählt: Lässt es sich reparieren oder nicht?</p>`,
   quickSummary: [
     "Das zentrale Kriterium: nicht, was die Beziehung enthält, sondern wozu sie dich macht.",
     "Die 7 verlässlichen Anzeichen misst man über die Dauer, nicht über eine schlechte Woche.",
@@ -71,12 +71,12 @@ const article: BlogArticleData = {
 </ul>
 </div>
 </div>
-<p>In einem Satz: <strong>Eine schwere Phase erschöpft, eine toxische Beziehung verwandelt.</strong> Aus einer schweren Phase kommt man müde, aber ganz heraus. Aus einer toxischen Beziehung kommt man heraus und muss sich erinnern, wer man vorher war.</p>`,
+<p>Der Unterschied, im Kern: <strong>Eine schwere Phase erschöpft, eine toxische Beziehung verwandelt.</strong> Aus einer schweren Phase kommt man müde, aber ganz heraus. Aus einer toxischen Beziehung kommt man heraus und muss sich erinnern, wer man vorher war.</p>`,
     },
     {
       id: 'toxisch-heisst-nicht-manipulativ',
       title: "Wichtige Nuance: toxisch heißt nicht immer manipulativ",
-      content: `<p>Das ist der Punkt, den fast alle Artikel verfehlen, und er verändert doch alles Weitere. Es gibt zwei große Familien toxischer Beziehungen, und sie haben nicht dieselbe Prognose.</p>`,
+      content: `<p>Es gibt zwei große Familien toxischer Beziehungen, sie haben nicht dieselbe Prognose, und diese Nuance verändert alles Weitere.</p>`,
       subsections: [
         {
           id: 'die-toxische-dynamik-zu-zweit',
@@ -86,7 +86,7 @@ const article: BlogArticleData = {
         {
           id: 'der-griff-eines-einzelnen',
           title: "Der Griff eines Einzelnen",
-          content: `<p>Hier ist die Toxizität kein Unfall des Systems: Sie ist das System. Kontrolle, Schuldzuweisung, Abwertung, Isolation, organisiert zum Nutzen eines Einzigen. Wenn die Anzeichen, die du ankreuzt, denen des <a href="/de/blog/narzisst-in-der-liebe/">Narzissten in der Liebe</a> ähneln oder den <a href="/de/blog/narzisstischer-manipulator/">Techniken des narzisstischen Manipulators</a>, bist du nicht mehr in einer unglücklichen Dynamik: Du bist in einer Beziehung mit Machtgefälle. Und die lässt sich nicht zu zweit «reparieren», da einer der beiden kein Interesse an Veränderung hat.</p>
+          content: `<p>Hier ist die Toxizität kein Unfall: Kontrolle, Schuldzuweisung, Abwertung und Isolation sind zum Nutzen eines Einzigen organisiert. Wenn die Anzeichen, die du ankreuzt, denen des <a href="/de/blog/narzisst-in-der-liebe/">Narzissten in der Liebe</a> ähneln oder den <a href="/de/blog/narzisstischer-manipulator/">Techniken des narzisstischen Manipulators</a>, bist du nicht mehr in einer unglücklichen Dynamik: Du bist in einer Beziehung mit Machtgefälle. Und die lässt sich nicht zu zweit «reparieren», da einer der beiden kein Interesse an Veränderung hat.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Wie erkennst du, in welcher Familie du bist?</p>
 <p>Ein verlässlicher Hinweis: Schlag eine echte Veränderung vor, Paartherapie, neue Regeln, konkrete Bemühungen mit Datum. In einer Dynamik zu zweit ist der andere erleichtert, dass darüber gesprochen wird, auch ungeschickt. Bei einem Machtgefälle wird der Vorschlag selbst zum Angriff, und schon entschuldigst du dich wieder.</p>
@@ -97,7 +97,7 @@ const article: BlogArticleData = {
     {
       id: 'laesst-es-sich-reparieren',
       title: "Lässt es sich reparieren? Und wie?",
-      content: `<p>Für die toxische Dynamik zu zweit lautet die Antwort ja, unter drei Bedingungen, keine weniger. Dass BEIDE das Problem anerkennen, ohne einander die ganze Rechnung zuzuschieben. Dass BEIDE konkrete Verhaltensweisen ändern, nicht nur Absichten. Und dass ein Rahmen existiert, ein Dritter, eine Paartherapie, schriftliche Regeln, denn toxische Gewohnheiten lassen sich nicht mit bloßen Händen abbauen. Wenn diese Bedingungen bei euch erfüllt scheinen, wird es ein realistisches Projekt, die Beziehung zu retten, ernsthaft betrieben, Schritt für Schritt.</p>
+      content: `<p>Für die toxische Dynamik zu zweit lautet die Antwort ja, unter drei Bedingungen, keine weniger: dass BEIDE das Problem anerkennen, ohne einander die ganze Rechnung zuzuschieben; dass BEIDE konkrete Verhaltensweisen ändern, nicht nur Absichten; und dass ein Rahmen existiert, ein Dritter, eine Paartherapie, schriftliche Regeln, denn toxische Gewohnheiten lassen sich nicht mit bloßen Händen abbauen. Wenn diese Bedingungen bei euch erfüllt scheinen, wird es ein realistisches Projekt, die Beziehung zu retten, ernsthaft betrieben, Schritt für Schritt.</p>
 <p>Beim Griff eines Einzelnen... machen wir uns nichts vor: Reparatur würde verlangen, dass die Person, die vom System profitiert, es abbaut. Das passiert fast nie, und sicher nicht unter romantischem Ultimatum. In dem Fall lautet die Arbeit nicht mehr «wie repariere ich die Beziehung», sondern «wie schütze ich mich und gehe dann». Das ist eine andere Baustelle, und sie beginnt damit, nicht mehr an dem zu zweifeln, was du erlebst.</p>
 <p>In beiden Fällen kommt ein Schritt vor allen anderen: objektivieren. Aus dem Nebel der Eindrücke heraus, die Fakten flach auf den Tisch.</p>
 <div class="blog-cta">
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/de/toxische-beziehung-test/">Meine Beziehung einordnen</a>
 <p class="blog-cta-note">Kostenlos &middot; Ohne Anmeldung &middot; Sofortiges Ergebnis</p>
 </div>
-<p>Und wenn beim Lesen eine kleine Stimme sagt «ich weiß es eigentlich schon»... hör auf sie. Man weiß es oft lange, bevor man es zu wissen wagt. Die Liste der <a href="/de/blog/grenzen-beziehung-nicht-akzeptieren/">Dinge, die man in einer Beziehung nie akzeptieren sollte</a>, kann dir helfen, deine Grenzen schwarz auf weiß zu klären. Oft zählt der erste Schritt.</p>
+<p>Und wenn beim Lesen eine kleine Stimme sagt «ich weiß es eigentlich schon»... hör auf sie: Man kennt die Antwort oft lange, bevor man wagt, sie sich zu sagen. Die Liste der <a href="/de/blog/grenzen-beziehung-nicht-akzeptieren/">Dinge, die man in einer Beziehung nie akzeptieren sollte</a>, kann dir helfen, deine Grenzen schwarz auf weiß zu klären. Oft zählt der erste Schritt.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Wenn du in Gefahr bist, bleib nicht allein mit einem Artikel</p>
 <p>Drohungen, Kontrolle über dein Geld oder deine Wege, körperliche Gewalt auch «nur einmal»: In Deutschland ist das Hilfetelefon Gewalt gegen Frauen unter 08000 116 016 kostenlos, anonym und rund um die Uhr erreichbar, für Männer gibt es das Hilfetelefon Gewalt an Männern unter 0800 123 99 00. Bei unmittelbarer Gefahr: 110.</p>

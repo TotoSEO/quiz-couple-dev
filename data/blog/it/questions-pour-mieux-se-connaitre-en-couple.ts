@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Coppia seduta schiena contro schiena con punti interrogativi e cuori sopra di loro",
   publishedAt: '2026-10-10T13:37:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Il giorno in cui si smette di farsi domande, non si è finito di scoprirsi... si è solo smesso di cercare.",
+  excerpt: "Non si finisce mai di scoprirsi, si smette solo di cercare. Queste 60 domande fanno ripartire la ricerca, in due.",
   introduction: `<p>Fai l'esperimento un giorno: chiedi a una coppia insieme da dieci anni se si conoscono a memoria. Diranno di sì, ovviamente. Poi fai loro tre domande un po' precise, il sogno che lui ha abbandonato, la paura che lei non dice mai, cosa ciascuno crede che l'altro pensi di lui... e guarda le facce. C'è sempre una sorpresa. Sempre!</p>
 <p><strong>Perché non si finisce mai di conoscere qualcuno. Si smette solo di cercare, ed è molto diverso.</strong> La buona notizia è che la curiosità si riaccende: basta rifare domande vere e ascoltare le risposte come il primo giorno.</p>
 <p>Queste 60 domande si fanno IN DUE: ciascuno risponde a ogni domanda, a turno. È la regola del gioco, ed è lei a cambiare tutto, perché si scopre tanto rispondendo quanto ascoltando. Cinque temi, dal passato al futuro. Mettetevi comodi.</p>`,

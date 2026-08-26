@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Pareja sentada espalda con espalda con interrogantes y corazones encima",
   publishedAt: '2026-10-10T13:37:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "El día en que se dejan de hacer preguntas, no es que se haya terminado de descubrir al otro... es que se ha dejado de buscar.",
+  excerpt: "Nunca se termina de descubrir al otro, solo se deja de buscar. Estas 60 preguntas reactivan la búsqueda, a dos.",
   introduction: `<p>Haz la prueba un día: pregúntale a una pareja de diez años si se conocen de memoria. Dirán que sí, evidentemente. Luego hazles tres preguntas algo precisas, el sueño que él abandonó, el miedo que ella nunca dice, lo que cada uno cree que el otro piensa de él... y mira las caras. Siempre hay una sorpresa. ¡Siempre!</p>
 <p><strong>Porque nunca se termina de conocer a alguien. Solo se deja de buscar, y es muy distinto.</strong> La buena noticia es que la curiosidad se vuelve a encender: basta con volver a hacer preguntas de verdad y escuchar las respuestas como el primer día.</p>
 <p>Estas 60 preguntas se hacen ENTRE LOS DOS: cada uno responde a cada pregunta, por turnos. Es la regla del juego, y es lo que lo cambia todo, porque se descubre tanto respondiendo como escuchando. Cinco temas, del pasado al futuro. Poneos cómodos.</p>`,

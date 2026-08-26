@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "El amor y la dependencia emocional se parecen muchísimo vistos desde dentro. Misma intensidad, mismos pensamientos permanentes... y sin embargo todo los opone.",
   introduction: `<p>Es una pregunta que no nos atrevemos mucho a hacernos, porque da un poco de miedo: ¿lo quiero a él... o quiero sobre todo el hecho de que esté? ¿Es amor eso que me aprieta el estómago cuando no responde? ¿O es otra cosa?</p>
-<p>La confusión es normal, y hay que empezar por decirlo: <strong>vistos desde dentro, el amor intenso y la dependencia emocional se parecen mucho.</strong> En ambos casos piensas en él sin parar, odias su ausencia, sientes con fuerza. La intensidad no marca la diferencia. Lo que la marca es la dirección: el amor te lleva hacia él, la dependencia te hace huir de un vacío.</p>
-<p>Vamos a hacerlo muy concreto: las 7 diferencias que separan a los dos, un experimento mental que vale más que cualquier discurso, y una palabra sobre el caso más frecuente, aquel en que ambos conviven.</p>`,
+<p>La confusión es normal, y hay que empezar por decirlo: <strong>vistos desde dentro, el amor intenso y la dependencia emocional se parecen mucho.</strong> En ambos casos piensas en él sin parar, odias su ausencia, sientes con fuerza. La diferencia se juega en otro sitio, en la dirección: el amor te lleva hacia él, la dependencia te hace huir de un vacío.</p>
+<p>Vamos a hacerlo muy concreto, con las 7 diferencias que separan a los dos y un experimento mental que vale más que cualquier discurso.</p>`,
   quickSummary: [
     "La intensidad no separa nada: amor y dependencia pueden ser igual de fuertes.",
     "La diferencia real es la dirección: el amor va hacia el otro, la dependencia huye de un vacío.",
@@ -49,12 +49,12 @@ const article: BlogArticleData = {
     {
       id: 'ambos-conviven',
       title: "El caso más frecuente: los dos a la vez",
-      content: `<p>Ahora el matiz que falta en todos los artículos de «amor O dependencia»: en la vida real casi nunca es lo uno o lo otro. <strong>Se puede querer sinceramente a alguien Y quererlo de forma dependiente.</strong> El amor es real, la pareja está bien elegida, lo que está atrapado es la manera de querer.</p>
-<p>¿Cómo saberlo? Mira lo que amplifica tu relación. Un amor seguro amplifica lo mejor de ti: te atreves más, te ríes más, eres más tú. Un apego dependiente amplifica tus miedos: vigilas más, te disculpas más, te encoges. Misma persona, mismo amor quizá, pero dos direcciones opuestas.</p>
+      content: `<p>Ahora el matiz que más importa: en la vida real casi nunca es lo uno o lo otro. <strong>Se puede querer sinceramente a alguien Y quererlo de forma dependiente.</strong> El amor es real, la pareja está bien elegida, lo que está atrapado es la manera de querer.</p>
+<p>¿Cómo saberlo? Mira lo que amplifica tu relación. Un amor seguro amplifica lo mejor de ti: te atreves más, te ríes con más facilidad. Un apego dependiente amplifica tus miedos: lo vigilas todo, te disculpas sin parar, y poco a poco te encoges. Misma persona, mismo amor quizá, pero dos direcciones opuestas.</p>
 <p>Y en realidad es una noticia excelente. Porque si el problema no es la persona sino el modo de apego, entonces no hay nada que romper: hay algo que reparar, en ti y para ti. Y <a href="/es/blog/superar-la-dependencia-emocional/">superar la dependencia emocional</a> es un camino balizado, ejercicio a ejercicio, que se hace muy bien sin dejar a nadie.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 ¿Y si fuera solo costumbre?</p>
-<p>Existe un tercer candidato que se olvida: la costumbre. Ni miedo al vacío, ni impulso hacia el otro, solo la comodidad de un día a día que funciona. Si tu pregunta se parece más a «¿lo sigo queriendo?» que a «¿por qué tengo tanto miedo de perderlo?», es menos una historia de dependencia que una cuestión de <a href="/es/test-amor-o-costumbre/">amor o costumbre</a>, y esa merece su propia respuesta.</p>
+<p>Existe un tercer candidato que se olvida: la costumbre. Ni miedo al vacío, ni impulso hacia el otro, solo la comodidad de un día a día que funciona. Si tu pregunta se parece más a «¿lo sigo queriendo?» que a «¿por qué tengo tanto miedo de perderlo?», es menos una historia de dependencia que una cuestión de <a href="/es/test-amor-o-costumbre/">amor o costumbre</a>, y esa tiene su propia respuesta.</p>
 </aside>`,
     },
     {

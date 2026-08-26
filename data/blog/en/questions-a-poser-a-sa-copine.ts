@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Couple at a table laughing, she answers a question with her hands",
   publishedAt: '2026-09-29T17:24:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "The trap of long relationships isn't falling out of love. It's believing you've finished discovering each other.",
+  excerpt: "The trap of long relationships is believing you've finished discovering each other. These 75 questions prove otherwise.",
   introduction: `<p>Quick test before we start: you know her favourite dish, her cult film, her perfume. Easy. Now, do you know what she's most proud of this year? What she's missing right now? What she doesn't dare ask you for? Less easy, right.</p>
 <p><strong>That's the trap of settled couples: we confuse knowing her well with having finished discovering her.</strong> Except she changes, like you, like everyone. And the answers from two years ago aren't necessarily today's.</p>
 <p>Here are 75 questions to ask your girlfriend, from the lightest to the deepest. Not to organise a Saturday night interrogation! To bring back those long conversations, the ones from the beginning, the ones where you were discovering someone. Pick two or three questions when the moment suits, and let it happen.</p>`,
@@ -143,7 +143,7 @@ const article: BlogArticleData = {
 <li>Where do you picture us in five years, honestly?</li>
 <li>What should we start together this year?</li>
 </ol>
-<p>And after number 75? After that, you know the principle: it isn't the questions that count, it's the habit of asking them. Couples that last aren't the ones who know everything about each other, they're the ones who keep asking each other <a href="/en/couple-questions/">couple questions</a>, regularly, the way you keep a fire going.</p>
+<p>And after number 75? After that, you know the principle: what counts is the habit of asking them. Couples that last keep asking each other <a href="/en/couple-questions/">couple questions</a>, regularly, the way you keep a fire going.</p>
 <div><table><thead><tr><th>The set</th><th>What it opens up</th></tr></thead><tbody>
 <tr><td>To rediscover her</td><td>What you thought you knew, and what has changed since</td></tr>
 <tr><td>About the two of you</td><td>Your story seen from her side</td></tr>

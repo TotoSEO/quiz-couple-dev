@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Coppia a tavola che ride, lei risponde a una domanda gesticolando",
   publishedAt: '2026-09-29T17:24:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "La trappola delle coppie che durano non è smettere di amarsi. È credere di aver finito di scoprirsi.",
+  excerpt: "La trappola delle coppie che durano è credere di aver finito di scoprirsi. Queste 75 domande dimostrano il contrario.",
   introduction: `<p>Piccolo test prima di cominciare: sai qual è il suo piatto preferito, il suo film di culto, il suo profumo. Facile. E adesso: sai di cosa è più orgogliosa quest'anno? Cosa le manca in questo periodo? Cosa non osa chiederti? Meno facile, eh.</p>
 <p><strong>È la trappola delle coppie assestate: confondiamo il conoscerla bene con l'aver finito di scoprirla.</strong> Solo che lei cambia, come te, come tutti. E le risposte di due anni fa non sono necessariamente quelle di oggi.</p>
 <p>Ecco 75 domande da fare alla tua ragazza, dalla più leggera alla più profonda. Non per organizzare un interrogatorio del sabato sera! Per ritrovare quelle conversazioni che durano, quelle dell'inizio, quelle in cui scoprivi qualcuno. Prendi due o tre domande quando il momento si presta, e lascia fare.</p>`,
@@ -143,7 +143,7 @@ const article: BlogArticleData = {
 <li>Dove ci immagini tra cinque anni, sinceramente?</li>
 <li>Cosa dovremmo cominciare insieme quest'anno?</li>
 </ol>
-<p>E dopo la 75? Dopo conosci il principio: non sono le domande a contare, è l'abitudine di farsele. Le coppie che durano non sono quelle che sanno tutto l'una dell'altro, sono quelle che continuano a farsi <a href="/it/domande-coppia/">domande di coppia</a>, con regolarità, come si tiene acceso un fuoco.</p>
+<p>E dopo la 75? Dopo conosci il principio: quello che conta è l'abitudine di farsele. Le coppie che durano continuano a farsi <a href="/it/domande-coppia/">domande di coppia</a>, con regolarità, come si tiene acceso un fuoco.</p>
 <div><table><thead><tr><th>La serie</th><th>Cosa apre</th></tr></thead><tbody>
 <tr><td>Per riscoprirla</td><td>Quello che credevi di sapere, e che nel frattempo è cambiato</td></tr>
 <tr><td>Su voi due</td><td>La vostra storia vista dal suo lato</td></tr>

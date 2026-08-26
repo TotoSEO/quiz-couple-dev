@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Couple attablé en train de rire, elle répond à une question en gesticulant",
   publishedAt: '2026-09-29T17:24:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Le piège des couples qui durent, ce n'est pas de ne plus s'aimer. C'est de croire qu'on a fini de se découvrir.",
+  excerpt: "Le piège des couples qui durent, c'est de croire qu'on a fini de se découvrir. Ces 75 questions prouvent le contraire.",
   introduction: `<p>Petit test avant de commencer : tu sais quel est son plat préféré, son film culte, son parfum. Facile. Maintenant... tu sais de quoi elle est le plus fière cette année ? Ce qui lui manque en ce moment ? Ce qu'elle n'ose pas te demander ? Moins facile, hein.</p>
 <p><strong>C'est le piège des couples installés : on confond bien la connaître et avoir fini de la découvrir.</strong> Sauf qu'elle change, comme toi, comme tout le monde. Et les réponses d'il y a deux ans ne sont plus forcément celles d'aujourd'hui...</p>
 <p>Voici 75 questions à poser à ta copine, du plus léger au plus profond. Pas pour organiser un interrogatoire du samedi soir ! Pour retrouver ces conversations qui durent, celles du début, celles où tu découvrais quelqu'un. Pioche deux ou trois questions quand le moment s'y prête, et laisse faire.</p>`,
@@ -143,7 +143,7 @@ const article: BlogArticleData = {
 <li>Tu nous imagines où dans cinq ans, sincèrement ?</li>
 <li>Qu'est-ce qu'on devrait commencer ensemble cette année ?</li>
 </ol>
-<p>Et après la 75 ? Après, tu connais le principe : ce ne sont pas les questions qui comptent, c'est l'habitude de se les poser. Les couples qui durent ne sont pas ceux qui savent tout l'un de l'autre... ce sont ceux qui continuent de se poser des <a href="/questions-couple/">questions de couple</a>, régulièrement, comme on entretient un feu.</p>
+<p>Et après la 75 ? Après, tu connais le principe : ce qui compte, c'est l'habitude de se les poser. Les couples qui durent continuent de se poser des <a href="/questions-couple/">questions de couple</a>, régulièrement, comme on entretient un feu.</p>
 <div><table><thead><tr><th>La série</th><th>Ce qu'elle ouvre</th></tr></thead><tbody>
 <tr><td>Pour la redécouvrir</td><td>Ce que tu croyais savoir, et qui a changé depuis</td></tr>
 <tr><td>Sur vous deux</td><td>Votre histoire vue de son côté à elle</td></tr>
