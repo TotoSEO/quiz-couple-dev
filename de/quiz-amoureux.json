@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "Quiz für Paare",
-    "title": "Liebes-Quiz: 20 Fragen, um zu sehen, ob ihr gleich antwortet",
-    "titleHighlight": "Liebes-Quiz",
+    "title": "Antwortet ihr gleich? Liebes-Fragebogen für Paare in 20 Fragen",
+    "titleHighlight": "Antwortet ihr gleich",
     "description": "20 Fragen über eure Geschichte. Jeder antwortet für sich, danach wird verglichen: Wie oft landet ihr auf derselben Antwort, ohne euch abzusprechen?",
     "statements": "20 Fragen",
     "score": "Antworten im Vergleich",
