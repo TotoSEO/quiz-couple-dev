@@ -20,7 +20,7 @@
     "etape1Titre": "Gebt eure Vornamen ein und wählt die Länge",
     "etape1Texte": "Ihr könnt 20, 40 oder 60 Fragen spielen, zufällig gezogen aus den 108 des Spiels. Eine Runde mit 20 Fragen dauert ungefähr fünf Minuten.",
     "etape2Titre": "Zeigt bei jeder Frage auf jemanden",
-    "etape2Texte": "Am besten einigt ihr euch, bevor ihr den Bildschirm antippt. Meistens ist einer von beiden anderer Meinung, und genau da wird das Spiel lustig.",
+    "etape2Texte": "Am besten einigt ihr euch, bevor ihr den Bildschirm antippt. Meistens ist einer von beiden anderer Meinung, und genau da wird das Spiel lustig!",
     "etape3Titre": "Schaut euch das Urteil an",
     "etape3Texte": "Am Ende zeigt euch das Spiel, wie oft jeder von euch gezeigt wurde, und wer am häufigsten dran war.",
     "apres": "Mehr braucht es nicht: das Spiel läuft online, kostenlos, und ihr könnt das Handy weiterreichen oder einfach zwischen euch legen."
@@ -28,8 +28,8 @@
   "section2": {
     "title": "Der Unterschied zum Wer von uns beiden",
     "p1": "Wir haben auch <a href=\"/de/wer-von-uns-beiden-paarspiel/\">ein Wer-von-uns-beiden-Spiel</a> auf der Seite, und die beiden Spiele ähneln sich sehr. Der Unterschied liegt in den Fragen. Beim Wer von uns beiden antwortet man über das, was ihr schon seid: wer sturer ist, wer mehr redet, wer besser kocht, und so weiter. Die Antworten kennt ihr schon, weil ihr sie jeden Tag erlebt.",
-    "p2": "Beim Wer könnte antwortet man über das, wozu ihr fähig wärt. Wer könnte Fallschirm springen, wer könnte alles hinschmeißen und eine Pension auf dem Land eröffnen, oder wer könnte das Urlaubsbudget an einem Abend ausgeben. Die Antwort kennt niemand, also gibt jeder seine Meinung ab, und ihr entdeckt das Bild, das der andere von euch hat. Es passt übrigens nicht immer zu dem, das ihr von euch selbst habt.",
-    "p3": "Bei „wer könnte bei einem Tiervideo weinen“ gezeigt zu werden, wenn man sich für unverdächtig hielt, sorgt für Reaktionen. Meistens kommt als Nächstes „Moment, so siehst du mich??“, und daraus entstehen Gespräche, die ihr sonst nie geführt hättet."
+    "p2": "Beim Wer könnte antwortet man über das, wozu ihr fähig wärt. Wer könnte Fallschirm springen, wer könnte alles hinschmeißen und eine Pension auf dem Land eröffnen, oder wer könnte das Urlaubsbudget an einem Abend ausgeben... Die Antwort kennt niemand, also gibt jeder seine Meinung ab, und ihr entdeckt das Bild, das der andere von euch hat. Es passt übrigens nicht immer zu dem, das ihr von euch selbst habt.",
+    "p3": "Bei „wer könnte bei einem Tiervideo weinen“ gezeigt zu werden, wenn man sich für unverdächtig hielt, sorgt für Reaktionen. Meistens kommt als Nächstes „Moment, so siehst du mich??“, und daraus entstehen Gespräche, die ihr sonst nie geführt hättet!"
   },
   "section3": {
     "title": "Beispiele für Fragen aus dem Spiel",

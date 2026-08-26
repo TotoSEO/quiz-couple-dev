@@ -20,7 +20,7 @@
     "etape1Titre": "Entrez vos prénoms et choisissez la longueur",
     "etape1Texte": "Vous pouvez jouer en 20, 40 ou 60 questions, tirées au hasard parmi les 108 du jeu. Une partie de 20 questions dure à peu près cinq minutes.",
     "etape2Titre": "Désignez quelqu'un à chaque question",
-    "etape2Texte": "L'idéal, c'est de vous mettre d'accord avant de toucher l'écran. La plupart du temps, l'un des deux n'est pas d'accord, et c'est justement là que le jeu devient drôle.",
+    "etape2Texte": "L'idéal, c'est de vous mettre d'accord avant de toucher l'écran. La plupart du temps, l'un des deux n'est pas d'accord, et c'est justement là que le jeu devient drôle !",
     "etape3Titre": "Regardez le verdict",
     "etape3Texte": "À la fin, le jeu vous montre combien de fois chacun a été désigné, et qui l'a été le plus souvent.",
     "apres": "Il n'y a rien d'autre à préparer : le jeu se joue en ligne, gratuitement, et vous pouvez vous passer le téléphone ou le poser entre vous deux."
@@ -28,8 +28,8 @@
   "section2": {
     "title": "La différence avec le qui de nous deux",
     "p1": "On a aussi <a href=\"/qui-de-nous-deux/\">un jeu qui de nous deux</a> sur le site, et les deux jeux se ressemblent beaucoup. La différence est dans les questions. Dans le qui de nous deux, on répond sur ce que vous êtes déjà : qui est le plus têtu, qui est le plus bavard, qui cuisine le mieux, etc. Vous connaissez déjà les réponses, puisque vous le vivez tous les jours.",
-    "p2": "Dans le qui pourrait, on répond sur ce que vous seriez capables de faire. Qui pourrait sauter en parachute, qui pourrait tout plaquer pour ouvrir un gîte à la campagne, ou encore qui pourrait dépenser le budget vacances en une soirée. Personne ne connaît la réponse, du coup chacun donne son avis, et vous découvrez l'image que l'autre a de vous. Elle ne colle pas toujours à celle que vous avez de vous-même, d'ailleurs.",
-    "p3": "Se faire désigner sur « qui pourrait pleurer devant une vidéo d'animaux » quand on se croyait insoupçonnable, ça fait réagir. La plupart du temps, la question qui suit c'est « attends, tu me vois comme ça ?? », et ça lance des discussions qu'on n'aurait jamais eues autrement."
+    "p2": "Dans le qui pourrait, on répond sur ce que vous seriez capables de faire. Qui pourrait sauter en parachute, qui pourrait tout plaquer pour ouvrir un gîte à la campagne, ou encore qui pourrait dépenser le budget vacances en une soirée... Personne ne connaît la réponse, du coup chacun donne son avis, et vous découvrez l'image que l'autre a de vous. Elle ne colle pas toujours à celle que vous avez de vous-même, d'ailleurs.",
+    "p3": "Se faire désigner sur « qui pourrait pleurer devant une vidéo d'animaux » quand on se croyait insoupçonnable, ça fait réagir. La plupart du temps, la question qui suit c'est « attends, tu me vois comme ça ?? », et ça lance des discussions qu'on n'aurait jamais eues autrement !"
   },
   "section3": {
     "title": "Des exemples de questions du jeu",
