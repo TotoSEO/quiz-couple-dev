@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Die ängstliche Bindung zweifelt nicht an der Liebe, die sie gibt, sondern an der, die sie bekommt. Ununterbrochen. Und das erschöpft beide Seiten der Beziehung.",
   introduction: `<p>Vielleicht kennst du dieses Gefühl: In deiner Beziehung läuft objektiv alles gut, und trotzdem bleibt ein Teil von dir in Alarmbereitschaft. Ein etwas kühler Tonfall, eine kürzere Antwort als sonst, ein Abend ohne Nachricht, und der Alarm geht los. Und schon suchst du nach Beweisen, dass alles in Ordnung ist, wieder einmal, wie gestern, wie morgen.</p>
 <p><strong>Dafür gibt es einen Namen: die ängstliche Bindung. Das ist keine Verrücktheit, keine Schwäche und kein Zuviel an Liebe, sondern ein Alarmsystem, das zu empfindlich eingestellt wurde, und zwar lange vor dir.</strong> Etwa jede fünfte Person funktioniert in der Liebe so. Wenn du dich also wiedererkennst, bist du in sehr zahlreicher Gesellschaft!</p>
-<p>In diesem Artikel: die konkreten Anzeichen der ängstlichen Bindung in der Beziehung, die Spirale, die sie verschlimmert und die du ungewollt fütterst, was sie wirklich beruhigt und was nie funktioniert, allem Anschein zum Trotz. Denn am Ende steht eine echte gute Nachricht: Dieser Stil entwickelt sich besonders gut weiter.</p>`,
+<p>Hier sind die konkreten Anzeichen der ängstlichen Bindung in der Beziehung, die Spirale, die sie verschlimmert und die du ungewollt fütterst, was sie wirklich beruhigt und was nie funktioniert, allem Anschein zum Trotz. Denn am Ende steht eine echte gute Nachricht: Dieser Stil entwickelt sich besonders gut weiter.</p>`,
   quickSummary: [
     "Die ängstliche Bindung ist ein zu empfindliches Alarmsystem, in der Kindheit eingestellt, und kein Mangel an Liebe.",
     "Ihre Anzeichen: Hyperwachsamkeit für Signale, Verlustangst, Bedürfnis nach Rückversicherung in Dauerschleife.",
@@ -67,7 +67,7 @@ const article: BlogArticleData = {
           id: 'stabilitaet-waehlen-und-wirken-lassen',
           title: "Stabilität wählen (und wirken lassen)",
           content: `<p>Wenn du gerade suchst: Misstraue deiner Anziehung zur Achterbahn und gib beständigen Partnern eine Chance, auch wenn dir der Anfang «weniger stark» vorkommt. Die Forschung ist eindeutig: Die stabile Beziehung ist die beste Therapie für die ängstliche Bindung, die berühmte erworbene Sicherheit. Die Langeweile sicherer Anfänge ist meist nur die Stille des Alarms. Daran gewöhnt man sich bemerkenswert gut!</p>
-<p>Und noch eine letzte Sache, weil sie es verdient: Menschen mit ängstlicher Bindung sind auch, sehr oft, die aufmerksamsten, loyalsten und großzügigsten Partner überhaupt. Die Sensibilität, unter der du leidest, ist dieselbe, die dich so gut lieben lässt. Die Arbeit besteht nicht darin, sie abzuschalten. Sie besteht darin, sie von der Angst abzukoppeln, damit sie ganz der Liebe gehört.</p>
+<p>Und noch eine letzte Sache, weil sie es verdient: Menschen mit ängstlicher Bindung sind auch, sehr oft, die aufmerksamsten, loyalsten und großzügigsten Partner überhaupt. Die Sensibilität, unter der du leidest, ist dieselbe, die dich so gut lieben lässt. Die Arbeit besteht nicht darin, sie abzuschalten, sondern darin, sie von der Angst abzukoppeln, damit sie ganz der Liebe gehört.</p>
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Was den Alarm beruhigt</p>

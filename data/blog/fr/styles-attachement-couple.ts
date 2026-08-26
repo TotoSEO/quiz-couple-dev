@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Quatre cœurs stylisés représentant les quatre styles d'attachement, reliés par des fils différents",
   publishedAt: '2026-11-28T08:25:00+01:00',
   author: AUTHORS['thomas'],
-  excerpt: "Pourquoi certains aiment sereinement, d'autres en s'accrochant, d'autres en fuyant ? La réponse tient en un mot : l'attachement. Et il se joue bien avant la première histoire d'amour.",
+  excerpt: "Pourquoi certains aiment sereinement, d'autres en s'accrochant, d'autres en fuyant ? La réponse a un nom : l'attachement. Et il se joue bien avant la première histoire d'amour.",
   introduction: `<p>Tu as sûrement remarqué ce phénomène étrange : dans un couple, chacun semble jouer une partition écrite d'avance. L'un a besoin de proximité, se sent vite délaissé, relance... L'autre a besoin d'air, se sent vite envahi, s'éloigne. Et plus l'un s'accroche, plus l'autre recule ! Comme si le scénario était déjà écrit avant même la rencontre...</p>
 <p>Il l'était, en partie. <strong>Ce scénario s'appelle le style d'attachement : la façon dont ton système émotionnel a appris, tout petit, à gérer le lien, la proximité et la séparation.</strong> C'est la théorie de l'attachement, un des champs les plus solides de la psychologie moderne, initiée par John Bowlby dans les années 1950... et elle éclaire les couples adultes d'une lumière assez spectaculaire.</p>
 <p>Il existe quatre grands styles : sécure, anxieux, évitant, désorganisé. On va les passer en revue un par un, version vie amoureuse concrète, voir comment ils se combinent en couple... et surtout répondre à la question qui fâche : est-ce qu'on peut en changer ? Spoiler : oui.</p>`,
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'd-ou-vient-ton-style',
       title: "D'où vient ton style d'attachement",
-      content: `<p>Le principe tient en deux phrases. Bébé, tu dépendais entièrement de tes figures d'attachement, et ton système nerveux a appris une stratégie pour garder le lien : si tes besoins recevaient des réponses fiables, il a appris que le lien est sûr... Si les réponses étaient imprévisibles, absentes ou effrayantes, il a bricolé une stratégie de survie : s'accrocher plus fort, ou apprendre à ne plus avoir besoin.</p>
+      content: `<p>Le principe est simple. Bébé, tu dépendais entièrement de tes figures d'attachement, et ton système nerveux a appris une stratégie pour garder le lien : si tes besoins recevaient des réponses fiables, il a appris que le lien est sûr... Si les réponses étaient imprévisibles, absentes ou effrayantes, il a bricolé une stratégie de survie : s'accrocher plus fort, ou apprendre à ne plus avoir besoin.</p>
 <p>Cette stratégie, testée des milliers de fois avant tes trois ans, est devenue ton réglage par défaut. Et à l'âge adulte, devine quelle relation réveille exactement les mêmes circuits que le lien parent-enfant ? Le couple, évidemment... C'est pour ça que des adultes brillants et posés se retrouvent, en amour, à guetter un accusé de lecture ou à étouffer dès qu'on les aime trop : ce n'est pas l'adulte qui réagit, c'est le réglage.</p>
 <p>Bonne nouvelle avant d'entrer dans les profils : un réglage n'est pas une identité. On y revient plus bas, mais garde-le en tête pendant que tu te reconnais dans les descriptions... parce que tu vas te reconnaître !</p>`,
     },

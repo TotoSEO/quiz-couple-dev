@@ -11,9 +11,9 @@ const article: BlogArticleData = {
   publishedAt: '2026-11-24T10:38:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Au téléphone, pas de regard, pas de gestes... juste les mots. C'est exactement pour ça que les bonnes questions y font des merveilles.",
-  introduction: `<p>Il y a un moment que tous les couples connaissent, qu'ils vivent à 800 kilomètres ou à deux arrondissements : celui où l'appel du soir tourne au bulletin météo. « Ta journée ? » « Ça va. » « Tu manges quoi ? » « Des pâtes. »... Le lien est là, l'envie aussi, mais la conversation, elle, tourne à vide.</p>
+  introduction: `<p>Il y a un moment que tous les couples connaissent, qu'ils vivent à 800 kilomètres ou à deux arrondissements : celui où l'appel du soir tourne au bulletin météo. « Ta journée ? » « Ça va. » « Tu manges quoi ? » « Des pâtes. »... Le lien est là, l'envie aussi, mais la conversation tourne à vide.</p>
 <p>C'est normal, en fait : à distance, on perd tout ce qui nourrit d'habitude les échanges, les regards, le contexte partagé, les gestes... <strong>Il ne reste que les mots.</strong> <strong>Et c'est précisément pour ça que les bonnes questions font des merveilles au téléphone : elles redonnent aux mots quelque chose à faire.</strong></p>
-<p>Voici 60 questions pensées pour les échanges à distance : les soirées chacun chez soi, les vrais couples à distance, les messages de la journée... et les grands appels qui durent. Certaines tiennent en un SMS, d'autres méritent une heure au téléphone. À toi de doser !</p>`,
+<p>Voici 60 questions pensées pour les échanges à distance : les soirées chacun chez soi, les vrais couples à distance, les messages de la journée... et les grands appels qui durent. Certaines s'envoient en un SMS, d'autres méritent une heure au téléphone. À toi de doser !</p>`,
   quickSummary: [
     "60 questions calibrées pour le téléphone et les messages, du SMS d'une ligne au grand appel du soir.",
     "La règle du format : par écrit, des questions courtes ; à l'oral, des questions ouvertes.",

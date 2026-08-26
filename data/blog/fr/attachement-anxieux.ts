@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "L'attachement anxieux ne doute pas de l'amour qu'il donne... il doute de celui qu'il reçoit. En permanence. Et c'est épuisant des deux côtés du couple.",
   introduction: `<p>Tu connais peut-être cette sensation : tout va bien dans ton couple, objectivement... et pourtant une partie de toi reste sur le qui-vive. Un ton un peu froid, une réponse plus courte que d'habitude, une soirée sans message : l'alarme se déclenche. Et te voilà à chercher des preuves que tout va bien, encore, comme hier, comme demain...</p>
 <p><strong>Ça porte un nom : l'attachement anxieux. Ce n'est ni de la folie, ni de la faiblesse, ni « trop d'amour »... c'est un système d'alarme réglé trop sensible, et il s'est réglé bien avant toi.</strong> Environ une personne sur cinq fonctionne comme ça en amour. Autant dire que si tu te reconnais, tu es en très nombreuse compagnie !</p>
-<p>Dans cet article : les signes concrets de l'attachement anxieux en couple, la spirale qui l'aggrave (et que tu alimentes sans le vouloir), ce qui l'apaise vraiment... et ce qui ne marche jamais, malgré les apparences. Parce qu'il y a une vraie bonne nouvelle au bout : ce style-là évolue particulièrement bien.</p>`,
+<p>Voici les signes concrets de l'attachement anxieux en couple, la spirale qui l'aggrave (et que tu alimentes sans le vouloir), ce qui l'apaise vraiment... et ce qui ne marche jamais, malgré les apparences. Parce qu'il y a une vraie bonne nouvelle au bout : ce style-là évolue particulièrement bien.</p>`,
   quickSummary: [
     "L'attachement anxieux est un système d'alarme trop sensible, réglé dans l'enfance... pas un défaut d'amour.",
     "Ses signes : hypervigilance aux signaux, peur de l'abandon, besoin de réassurance en boucle.",
@@ -67,7 +67,7 @@ const article: BlogArticleData = {
           id: 'choisir-et-laisser-agir-la-stabilite',
           title: "Choisir (et laisser agir) la stabilité",
           content: `<p>Si tu es en recherche : méfie-toi de ton attirance pour les montagnes russes, et donne leur chance aux partenaires constants, même si le début te semble « moins fort ». La recherche est formelle : la relation stable est le meilleur thérapeute de l'attachement anxieux, la fameuse sécurité acquise... L'ennui des débuts sécures, c'est souvent juste le silence de l'alarme. On s'y fait remarquablement bien !</p>
-<p>Et un mot pour finir, parce qu'il est mérité : les anxieux de l'attachement sont aussi, très souvent, les partenaires les plus attentifs, les plus loyaux et les plus généreux qui soient... La sensibilité qui te fait souffrir est la même qui te fait aimer si bien. Le travail ne consiste pas à l'éteindre. Il consiste à la débrancher de la peur... pour la laisser toute entière à l'amour.</p>
+<p>Et un mot pour finir, parce qu'il est mérité : les anxieux de l'attachement sont aussi, très souvent, les partenaires les plus attentifs, les plus loyaux et les plus généreux qui soient... La sensibilité qui te fait souffrir est la même qui te fait aimer si bien. Le travail ne consiste pas à l'éteindre, il consiste à la débrancher de la peur... pour la laisser tout entière à l'amour.</p>
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Ce qui apaise l'alarme</p>

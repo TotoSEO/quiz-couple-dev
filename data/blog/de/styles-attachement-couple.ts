@@ -10,7 +10,7 @@ const article: BlogArticleData = {
   featuredImageAlt: "Vier stilisierte Herzen für die vier Bindungsstile, mit unterschiedlichen Fäden verbunden",
   publishedAt: '2026-11-28T08:25:00+01:00',
   author: AUTHORS['thomas'],
-  excerpt: "Warum lieben manche gelassen, andere klammernd, andere fliehend? Die Antwort steckt in einem Wort: Bindung. Und sie entscheidet sich lange vor der ersten Liebesgeschichte.",
+  excerpt: "Warum lieben manche gelassen, andere klammernd, andere fliehend? Die Antwort hat einen Namen: Bindung. Und sie entscheidet sich lange vor der ersten Liebesgeschichte.",
   introduction: `<p>Sicher ist dir dieses seltsame Phänomen aufgefallen: In einer Beziehung scheint jeder eine im Voraus geschriebene Partitur zu spielen. Der eine braucht Nähe, fühlt sich schnell vernachlässigt, hakt nach... Der andere braucht Luft, fühlt sich schnell überrannt, entfernt sich. Und je mehr der eine klammert, desto weiter weicht der andere zurück! Als wäre das Drehbuch schon vor der Begegnung geschrieben gewesen.</p>
 <p>Zum Teil war es das. <strong>Dieses Drehbuch heißt Bindungsstil: die Art, wie dein Gefühlssystem ganz früh gelernt hat, mit Bindung, Nähe und Trennung umzugehen.</strong> Das ist die Bindungstheorie, eines der solidesten Felder der modernen Psychologie, von John Bowlby in den 1950ern begründet... und sie wirft auf erwachsene Paare ein ziemlich spektakuläres Licht.</p>
 <p>Es gibt vier große Stile: sicher, ängstlich, vermeidend, desorganisiert. Wir gehen sie einzeln durch, in konkreter Liebesleben-Version, sehen, wie sie sich in der Beziehung kombinieren... und beantworten vor allem die unangenehme Frage: Kann man sich ändern? Spoiler: ja.</p>`,
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'woher-dein-stil-kommt',
       title: "Woher dein Bindungsstil kommt",
-      content: `<p>Das Prinzip passt in zwei Sätze. Als Baby warst du völlig von deinen Bindungspersonen abhängig, und dein Nervensystem hat eine Strategie gelernt, um die Bindung zu halten: Wenn deine Bedürfnisse verlässliche Antworten bekamen, hat es gelernt, dass Bindung sicher ist... Waren die Antworten unvorhersehbar, abwesend oder beängstigend, hat es eine Überlebensstrategie gebastelt: fester klammern oder lernen, nichts mehr zu brauchen.</p>
+      content: `<p>Das Prinzip ist einfach. Als Baby warst du völlig von deinen Bindungspersonen abhängig, und dein Nervensystem hat eine Strategie gelernt, um die Bindung zu halten: Wenn deine Bedürfnisse verlässliche Antworten bekamen, hat es gelernt, dass Bindung sicher ist... Waren die Antworten unvorhersehbar, abwesend oder beängstigend, hat es eine Überlebensstrategie gebastelt: fester klammern oder lernen, nichts mehr zu brauchen.</p>
 <p>Diese Strategie, tausendfach vor deinem dritten Lebensjahr getestet, wurde zu deiner Grundeinstellung. Und im Erwachsenenalter, rate mal, welche Beziehung genau dieselben Schaltkreise weckt wie die Eltern-Kind-Bindung? Die Paarbeziehung, natürlich... Deshalb ertappen sich brillante, gefasste Erwachsene in der Liebe dabei, auf eine Lesebestätigung zu starren oder zu ersticken, sobald man sie zu sehr liebt: Nicht der Erwachsene reagiert, sondern die Einstellung.</p>
 <p>Gute Nachricht, bevor wir zu den Profilen kommen: Eine Einstellung ist keine Identität. Wir kommen weiter unten darauf zurück, aber behalte es im Kopf, während du dich in den Beschreibungen wiedererkennst... denn du wirst dich wiedererkennen!</p>`,
     },

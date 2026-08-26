@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Anxious attachment doesn't doubt the love it gives... it doubts the love it receives. Permanently. And that's exhausting on both sides of the relationship.",
   introduction: `<p>You may know this sensation: everything is fine in your relationship, objectively... and yet part of you stays on alert. A slightly cool tone, a shorter reply than usual, an evening without a message: the alarm goes off. And there you are looking for proof that everything's fine, again, like yesterday, like tomorrow.</p>
 <p><strong>It has a name: anxious attachment. It's neither madness, nor weakness, nor «too much love»... it's an alarm system set too sensitively, and it was set long before you.</strong> About one person in five works like that in love. Which means if you recognise yourself, you're in very numerous company!</p>
-<p>In this article: the concrete signs of anxious attachment in a relationship, the spiral that makes it worse (and that you feed without meaning to), what genuinely soothes it... and what never works, despite appearances. Because there's real good news at the end: this style responds particularly well to work.</p>`,
+<p>Here are the concrete signs of anxious attachment in a relationship, the spiral that makes it worse (and that you feed without meaning to), what genuinely soothes it... and what never works, despite appearances. Because there's real good news at the end: this style responds particularly well to work.</p>`,
   quickSummary: [
     "Anxious attachment is an over-sensitive alarm system, set in childhood... not a defect of love.",
     "Its signs: hypervigilance to signals, fear of abandonment, needing reassurance on a loop.",
@@ -67,7 +67,7 @@ const article: BlogArticleData = {
           id: 'choosing-and-letting-stability-work',
           title: "Choosing (and letting) stability work",
           content: `<p>If you're looking: be wary of your attraction to roller-coasters, and give the constant partners a chance, even if the start feels «less strong». The research is unambiguous: a stable relationship is the best therapist for anxious attachment, the famous earned security... The boredom of secure beginnings is often just the silence of the alarm. You get used to it remarkably well!</p>
-<p>And a final word, because it's deserved: people with anxious attachment are also, very often, the most attentive, loyal and generous partners there are... The sensitivity that makes you suffer is the same one that makes you love so well. The work isn't about switching it off. It's about unplugging it from fear... and leaving all of it for love.</p>
+<p>And a final word, because it's deserved: people with anxious attachment are also, very often, the most attentive, loyal and generous partners there are... The sensitivity that makes you suffer is the same one that makes you love so well. The work isn't about switching it off, it's about unplugging it from fear... and leaving all of it for love.</p>
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> What soothes the alarm</p>

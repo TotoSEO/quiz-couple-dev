@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "L'attaccamento ansioso non dubita dell'amore che dà, dubita di quello che riceve. In permanenza. E questo sfinisce entrambi i lati della coppia.",
   introduction: `<p>Forse conosci questa sensazione: nella tua relazione va tutto bene, oggettivamente, eppure una parte di te resta in allerta. Un tono un po' freddo, una risposta più corta del solito, una serata senza messaggi: scatta l'allarme. Ed eccoti a cercare prove che va tutto bene, ancora una volta, come ieri, come domani.</p>
 <p><strong>Questa cosa ha un nome: l'attaccamento ansioso. Non è follia, non è debolezza, non è «troppo amore»: è un sistema d'allarme regolato con troppa sensibilità, ed è stato regolato molto prima di te.</strong> Circa una persona su cinque funziona così in amore. Quindi se ti riconosci, sei in compagnia numerosissima!</p>
-<p>In questo articolo: i segnali concreti dell'attaccamento ansioso nella coppia, la spirale che lo aggrava (e che alimenti senza volerlo), quello che lo calma davvero e quello che non funziona mai, malgrado le apparenze. Perché alla fine c'è una buona notizia vera: questo stile evolve particolarmente bene.</p>`,
+<p>Ecco i segnali concreti dell'attaccamento ansioso nella coppia, la spirale che lo aggrava (e che alimenti senza volerlo), quello che lo calma davvero e quello che non funziona mai, malgrado le apparenze. Perché alla fine c'è una buona notizia vera: questo stile evolve particolarmente bene.</p>`,
   quickSummary: [
     "L'attaccamento ansioso è un sistema d'allarme troppo sensibile, regolato nell'infanzia, non un difetto d'amore.",
     "I suoi segnali: ipervigilanza sui segnali, paura dell'abbandono, bisogno di rassicurazione a ripetizione.",
@@ -67,7 +67,7 @@ const article: BlogArticleData = {
           id: 'scegliere-e-lasciare-agire-la-stabilita',
           title: "Scegliere (e lasciare agire) la stabilità",
           content: `<p>Se stai cercando: diffida della tua attrazione per le montagne russe e dai una possibilità ai partner costanti, anche se l'inizio ti sembra «meno forte». La ricerca è netta: la relazione stabile è il miglior terapeuta dell'attaccamento ansioso, la famosa sicurezza acquisita. La noia degli inizi sicuri è spesso solo il silenzio dell'allarme. Ci si abitua notevolmente bene!</p>
-<p>E un'ultima cosa, perché se la merita: le persone con attaccamento ansioso sono anche, molto spesso, i partner più attenti, leali e generosi che esistano. La sensibilità che ti fa soffrire è la stessa che ti fa amare così bene. Il lavoro non consiste nello spegnerla. Consiste nello staccarla dalla paura, per lasciarla tutta all'amore.</p>
+<p>E un'ultima cosa, perché se la merita: le persone con attaccamento ansioso sono anche, molto spesso, i partner più attenti, leali e generosi che esistano. La sensibilità che ti fa soffrire è la stessa che ti fa amare così bene. Il lavoro non consiste nello spegnerla, ma nello staccarla dalla paura, per lasciarla tutta all'amore.</p>
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Cosa calma l'allarme</p>

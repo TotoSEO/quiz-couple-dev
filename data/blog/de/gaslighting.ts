@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Gaslighting belügt dich nicht über die Fakten. Es belügt dich über dich: dein Gedächtnis, deine Wahrnehmung, deinen Verstand. Das macht es zur ätzendsten Manipulation überhaupt.",
   introduction: `<p>Du hast die Szene gesehen. Du warst da, du hast die Worte gehört, du könntest sie wiederholen... Und trotzdem, gegenüber, vollkommene Sicherheit: «das habe ich nie gesagt». Kein Zögern. Also prüfst du in deinem Kopf, einmal, zweimal... und ein kleiner Riss öffnet sich: Und wenn ich es war?</p>
-<p>Dieser Riss hat einen Namen: Gaslighting. <strong>Das ist keine Lüge über die Fakten, das ist ein Angriff auf das Messinstrument: dich.</strong> Dein Gedächtnis, deine Wahrnehmung, deine Stabilität... Lange genug wiederholt, erzeugt diese Manipulation ein einzigartiges Ergebnis: ein Opfer, das sich selbst nicht mehr trauen kann und deshalb von seinem Manipulator abhängt, um zu wissen, was real ist.</p>
+<p>Dieser Riss hat einen Namen: Gaslighting. <strong>Das ist keine Lüge über die Fakten: Das ist ein Angriff auf das Messinstrument, also auf dich.</strong> Dein Gedächtnis, deine Wahrnehmung, deine Stabilität... Lange genug wiederholt, erzeugt diese Manipulation ein einzigartiges Ergebnis: ein Opfer, das sich selbst nicht mehr trauen kann und deshalb von seinem Manipulator abhängt, um zu wissen, was real ist.</p>
 <p>Das Wort ist seit einigen Jahren überall, oft falsch verwendet, also bringen wir Präzision hinein: woher der Begriff kommt, wie der Mechanismus genau funktioniert, wie man ihn von einer bloßen Erinnerungsdifferenz unterscheidet... und vor allem, wie man wieder Boden findet, wenn man drinsteckt. Denn man kommt heraus, und besser noch: mit einem eingebauten Detektor.</p>`,
   quickSummary: [
     "Gaslighting greift deine Wahrnehmung an, nicht die Fakten: Bestritten wirst du, nicht die Szene.",
@@ -26,13 +26,13 @@ const article: BlogArticleData = {
       id: 'woher-das-wort-kommt',
       title: "Woher das Wort kommt (und warum es so treffend ist)",
       content: `<p>Der Begriff stammt aus einem Film von 1944, «Gaslight» (auf Deutsch «Das Haus der Lady Alquist»), mit Ingrid Bergman. Die Handlung: Ein Ehemann dreht die Gaslampen im Haus herunter... und versichert seiner Frau dann, das Licht habe sich nicht verändert, sie sehe schlecht. Detail für Detail verrückt er Gegenstände, leugnet Geräusche, schreibt Szenen um, bis er sie überzeugt, dass sie den Verstand verliert.</p>
-<p>Alles ist schon da: die Fälschung des Realen, das ruhige Leugnen, und vor allem DIE Signatur des Gaslighting, die es von allen anderen Lügen unterscheidet... <strong>Das Ziel ist nicht, dich etwas Falsches glauben zu lassen, sondern dich an deiner Fähigkeit zu wissen zweifeln zu lassen.</strong> Ein Lügner will einen Punkt gewinnen. Ein Gaslighter will den Schiedsrichter gewinnen.</p>
+<p>Alles ist schon da: die Fälschung des Realen, das ruhige Leugnen, und vor allem DIE Signatur des Gaslighting, die es von allen anderen Lügen unterscheidet... <strong>Das Ziel ist nicht, dich etwas Falsches glauben zu lassen, sondern dich an deiner Fähigkeit zu wissen zweifeln zu lassen.</strong> Ein Lügner will einen Punkt in der Diskussion gewinnen; ein Gaslighter will den Schiedsrichter gewinnen, also dein Urteil.</p>
 <p>Das Phänomen ist heute von der Psychologie dokumentiert und als Form psychischer Gewalt anerkannt. Manche nennen es treffend eine «kognitive Entführung». Genau das ist es: eine Entführung, die deines eigenen Urteils.</p>`,
     },
     {
       id: 'der-mechanismus-in-3-stufen',
       title: "Der Mechanismus, in drei Stufen",
-      content: `<p>Gaslighting kommt nie auf einen Schlag, es steigert sich stufenweise. Hier sind sie der Reihe nach, und du wirst sehen, dass die Steigerung logisch ist... es ist eine Eskalation des Ziels.</p>`,
+      content: `<p>Gaslighting kommt nie auf einen Schlag, es steigert sich stufenweise. Hier sind sie der Reihe nach, und du wirst sehen, dass die Steigerung logisch ist... das Ziel rückt mit jeder Stufe eine Ebene höher.</p>`,
       subsections: [
         {
           id: 'stufe-1-fakten-leugnen',
