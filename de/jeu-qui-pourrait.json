@@ -3,7 +3,7 @@
     "badge": "108 Fragen • 2 Spieler • Kostenlos",
     "title": "Wer könnte, das Spiel für Paare | 100+ Fragen",
     "titleHighlight": "Wer könnte",
-    "description": "Eine Frage erscheint, eure zwei Vornamen darunter, und ihr zeigt. Einfach, schnell und erstaunlich aufschlussreich."
+    "description": "Eine Frage erscheint, eure zwei Vornamen darunter, und ihr zeigt auf den, der dazu fähig wäre."
   },
   "jsonLd": {
     "name": "Wer könnte, die Paar-Version"
@@ -14,48 +14,48 @@
     "apres": "?"
   },
   "section1": {
-    "title": "Die Regeln, in dreißig Sekunden",
-    "intro": "Wer könnte ist ein Spiel, das man zu zweit spielt, auf einem einzigen Handy. Eine Frage erscheint, etwa „Wer könnte sich aus einer Laune heraus eine Luxusuhr kaufen?“, und ihr zeigt auf den Schuldigen: auf einen von euch beiden, indem ihr seinen Vornamen antippt. Wenn keiner von euch dazu fähig wäre, gibt es einen dritten, dezenteren Knopf: „Niemand“.",
-    "intro2": "Es gibt keine richtige Antwort und keine Punkte, die ihr zählen müsst: das Spiel merkt sich einfach, wer gezeigt wurde, und zeigt es euch am Ende. So läuft es ab:",
+    "title": "Die Regeln vom Wer könnte",
+    "intro": "Wer könnte ist ein Spiel, das man als Paar spielen kann, auf einem einzigen Handy. Es ist ein sehr einfaches Spiel: eine Frage erscheint, etwa „Wer könnte sich aus einer Laune heraus eine Luxusuhr kaufen?“, und ihr antwortet, indem ihr einen Vornamen antippt. Wenn ihr denkt, dass er es ist, tippt ihr seinen Vornamen an, wenn ihr denkt, dass du es bist, tippst du deinen an. Und wenn keiner von euch beiden dazu fähig wäre, gibt es direkt darunter einen Knopf „Niemand“.",
+    "intro2": "Es gibt keine richtige Antwort und es gibt keine Punkte zu zählen. Das Spiel merkt sich einfach, wer bei jeder Frage gezeigt wurde, und zeigt euch am Ende die Summe. So läuft eine Runde ab:",
     "etape1Titre": "Gebt eure Vornamen ein und wählt die Länge",
-    "etape1Texte": "20, 40 oder 60 Fragen, zufällig gezogen aus den 108 des Spiels. Eine Runde mit 20 ist in fünf Minuten gespielt.",
-    "etape2Titre": "Zeigt, Frage für Frage",
-    "etape2Texte": "Am besten einigt ihr euch, bevor ihr tippt. In der Praxis ist das Verhandeln das eigentliche Spiel: „was? ich? niemals im Leben“.",
-    "etape3Titre": "Entdeckt das Urteil",
-    "etape3Texte": "Am Ende sagt euch das Spiel, wer am häufigsten gezeigt wurde. Der Titel „zu allem fähig“ will verdient sein, und er wird angefochten.",
-    "apres": "Ein kleines Detail, das alles ändert: der Bildschirm bewegt sich zwischen den Fragen nicht. Eure zwei Vornamen bleiben an ihrem Platz, nur die Frage darüber wechselt. Dadurch geht es schnell voran, und eine Runde mit 40 ist vorbei, ehe man es merkt."
+    "etape1Texte": "Ihr könnt 20, 40 oder 60 Fragen spielen, zufällig gezogen aus den 108 des Spiels. Eine Runde mit 20 Fragen dauert ungefähr fünf Minuten.",
+    "etape2Titre": "Zeigt bei jeder Frage auf jemanden",
+    "etape2Texte": "Am besten einigt ihr euch, bevor ihr den Bildschirm antippt. Meistens ist einer von beiden anderer Meinung, und genau da wird das Spiel lustig.",
+    "etape3Titre": "Schaut euch das Urteil an",
+    "etape3Texte": "Am Ende zeigt euch das Spiel, wie oft jeder von euch gezeigt wurde, und wer am häufigsten dran war.",
+    "apres": "Mehr braucht es nicht: das Spiel läuft online, kostenlos, und ihr könnt das Handy weiterreichen oder einfach zwischen euch legen."
   },
   "section2": {
-    "title": "Der Unterschied zum „Wer von uns beiden“",
-    "p1": "Wir haben auch <a href=\"/de/wer-von-uns-beiden-paarspiel/\">ein Wer-von-uns-beiden-Spiel</a> auf der Seite, und von Weitem ähneln sich die beiden, also sagen wir es klar. Das Wer von uns beiden handelt von dem, was ihr schon seid: wer sturer ist, wer mehr redet, wer besser kocht. Man antwortet mit dem, was man jeden Tag sieht.",
-    "p2": "Das Wer könnte handelt davon, wozu ihr fähig wärt. Wer könnte Fallschirm springen, alles hinschmeißen für eine Pension auf dem Land, das Urlaubsbudget an einem Abend ausgeben. Man stellt nichts mehr fest, man wettet. Und genau da wird es interessant: ihr entdeckt das Bild, das der andere von euch hat, und es passt nicht immer zu dem, das ihr von euch selbst habt.",
-    "p3": "Bei „wer könnte bei einem Tiervideo weinen“ gezeigt zu werden, wenn man sich für unverdächtig hielt, sorgt für Reaktionen. Die Hälfte der Runden endet mit „Moment, so siehst du mich??“, und ehrlich gesagt ist das der beste Moment des Spiels."
+    "title": "Der Unterschied zum Wer von uns beiden",
+    "p1": "Wir haben auch <a href=\"/de/wer-von-uns-beiden-paarspiel/\">ein Wer-von-uns-beiden-Spiel</a> auf der Seite, und die beiden Spiele ähneln sich sehr. Der Unterschied liegt in den Fragen. Beim Wer von uns beiden antwortet man über das, was ihr schon seid: wer sturer ist, wer mehr redet, wer besser kocht, und so weiter. Die Antworten kennt ihr schon, weil ihr sie jeden Tag erlebt.",
+    "p2": "Beim Wer könnte antwortet man über das, wozu ihr fähig wärt. Wer könnte Fallschirm springen, wer könnte alles hinschmeißen und eine Pension auf dem Land eröffnen, oder wer könnte das Urlaubsbudget an einem Abend ausgeben. Die Antwort kennt niemand, also gibt jeder seine Meinung ab, und ihr entdeckt das Bild, das der andere von euch hat. Es passt übrigens nicht immer zu dem, das ihr von euch selbst habt.",
+    "p3": "Bei „wer könnte bei einem Tiervideo weinen“ gezeigt zu werden, wenn man sich für unverdächtig hielt, sorgt für Reaktionen. Meistens kommt als Nächstes „Moment, so siehst du mich??“, und daraus entstehen Gespräche, die ihr sonst nie geführt hättet."
   },
   "section3": {
     "title": "Beispiele für Fragen aus dem Spiel",
-    "intro": "Hier sind zwanzig der hundertacht Fragen, genau so, wie das Spiel sie stellt. Es gibt leichte, weniger leichte, und ein paar Fallen, bei denen der Vernünftigere von euch beiden nicht immer gewinnt:",
-    "apres": "Die anderen 88 stecken im Spiel und werden in jeder Runde zufällig gezogen. Wenn ihr eure 20 Fragen durch habt und weitermachen wollt, bietet das Spiel 20 weitere an, und „Nochmal mit anderen Fragen spielen“ zieht zuerst aus dem, was noch nicht gestellt wurde."
+    "intro": "Hier sind zwanzig der hundertacht Fragen, genau so, wie das Spiel sie stellt. Es gibt leichte, weniger leichte, und ein paar, über die man sich streiten kann:",
+    "apres": "Die anderen 88 stecken im Spiel, und jede Runde zieht sie zufällig. Wenn ihr eure 20 Fragen durch habt und weitermachen wollt, bietet das Spiel 20 weitere an. Und der Knopf „Nochmal mit anderen Fragen spielen“ zieht zuerst aus denen, die noch nicht dran waren."
   },
   "section4": {
-    "title": "Damit die Runde gelingt",
-    "intro": "Viel muss man nicht wissen, aber diese vier Gewohnheiten machen den Unterschied zwischen einer ordentlichen Runde und einer unvergesslichen:",
+    "title": "Ein paar Tipps zum Spielen",
+    "intro": "Viel muss man zum Spielen nicht wissen, aber diese vier Gewohnheiten machen die Runden deutlich besser:",
     "resumeTitre": "Die guten Gewohnheiten",
-    "resume1": "<strong>Begründet eure Wahl:</strong> „Du, weil letztes Mal im Restaurant…“. Die Anekdote, die zum Zeigen dazugehört, ist mehr wert als das Zeigen selbst. Aus genau dieser Art Austausch entstehen <a href=\"/de/fragen-fuer-paare/\">die echten Paargespräche</a>, die man nie frontal beginnt.",
-    "resume2": "<strong>Der Knopf „Niemand“ ist eine echte Wahl:</strong> Benutzt ihn nicht, um euch bei jeder Frage zu drücken, sonst verliert er seinen Reiz. Hebt ihn für die Fragen auf, bei denen sich ehrlich gesagt keiner von euch trauen würde.",
-    "resume3": "<strong>Nehmt das Urteil mit Haltung an:</strong> Zum „zu allem fähig“ ernannt zu werden ist ein Titel, keine Anklage. Ihn lautstark anzufechten gehört auch zum Spiel.",
-    "resume4": "<strong>Spielt ein anderes Mal wieder:</strong> Mit 108 Fragen gleichen sich zwei Spieleabende nicht. Und die Antworten ändern sich manchmal von Runde zu Runde, was auch einiges verrät.",
-    "apres": "Und wenn der Abend läuft und ihr <a href=\"/de/paarspiele/\">mit etwas anderem weitermachen</a> wollt, passt das Format sehr gut zu <a href=\"/de/ich-hab-noch-nie-paar-spiel/\">einer Runde Ich hab noch nie</a> direkt danach: von den Wetten geht es zu den Geständnissen."
+    "resume1": "<strong>Begründet eure Wahl:</strong> „Du, weil letztes Mal im Restaurant…“. Oft ist es die Anekdote zur Antwort, die zum Lachen bringt, mehr als die Antwort selbst.",
+    "resume2": "<strong>Übertreibt es nicht mit dem Knopf „Niemand“:</strong> Wenn ihr ihn bei jeder Frage nehmt, um euch nicht festzulegen, verliert das Spiel seinen Reiz. Hebt ihn für die Fragen auf, bei denen sich ehrlich gesagt keiner von euch trauen würde.",
+    "resume3": "<strong>Nehmt das Urteil an:</strong> Als „zu allem fähig“ gezeigt zu werden ist nichts Böses. Und wenn ihr anderer Meinung seid, sagt es: der Streit darüber gehört zum Spiel.",
+    "resume4": "<strong>Spielt ein anderes Mal wieder:</strong> Mit 108 Fragen könnt ihr mehrere Runden spielen, ohne auf dieselben zu treffen. Und die Antworten ändern sich manchmal von Runde zu Runde, was auch interessant ist.",
+    "apres": "Und wenn euch das Spiel gefällt, haben wir <a href=\"/de/paarspiele/\">weitere Spiele für zu zweit</a> nach derselben Idee: ein Handy, nichts zu installieren, und Fragen, die ins Reden bringen. <a href=\"/de/ich-hab-noch-nie-paar-spiel/\">Ich hab noch nie</a> ist wahrscheinlich das bekannteste, und viele Paare starten es direkt nach einem Wer könnte."
   },
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Wie spielt man Wer könnte als Paar?",
     "a1": "Ihr gebt eure zwei Vornamen ein, wählt 20, 40 oder 60 Fragen, und bei jeder Frage tippt ihr auf den Vornamen von dem, der dazu fähig wäre, oder auf „Niemand“. Am Ende sagt euch das Spiel, wer am häufigsten gezeigt wurde.",
     "q2": "Müsst ihr euch beide einig sein, um zu antworten?",
-    "a2": "Das ist die Idee, und genau das bringt euch ins Reden. Wenn ihr euch nicht einigen könnt, gewinnt der, der seinen Fall am besten verteidigt. Das Spiel prüft nichts: eure Verhandlung macht die Regel.",
+    "a2": "Das ist die Idee, und genau das bringt euch ins Reden. Wenn ihr euch nicht einigen könnt, gewinnt der, der seinen Fall am besten verteidigt. Das Spiel prüft sowieso nichts, also entscheidet ihr.",
     "q3": "Kann man auf Distanz spielen?",
-    "a3": "Ja. Öffnet das Spiel jeder auf seiner Seite mit denselben Vornamen und derselben Länge, antwortet per Videoanruf und vergleicht am Ende eure Urteile. Uneinigkeiten beim Zeigen sind auf Distanz noch lustiger.",
+    "a3": "Ja. Öffnet das Spiel jeder auf seiner Seite mit denselben Vornamen und derselben Länge, antwortet per Videoanruf und vergleicht am Ende eure Ergebnisse. Ihr werdet nicht immer auf dieselbe Person zeigen, und genau das ist das Lustige.",
     "q4": "Ändern sich die Fragen in jeder Runde?",
-    "a4": "Ja. Jede Runde zieht ihre Fragen zufällig aus den 108, und „Nochmal mit anderen Fragen spielen“ zieht zuerst aus denen, die seit eurer Ankunft auf der Seite noch nicht gestellt wurden.",
+    "a4": "Ja. Jede Runde zieht ihre Fragen zufällig aus den 108, und „Nochmal mit anderen Fragen spielen“ zieht zuerst aus denen, die seit eurer Ankunft auf der Seite noch nicht dran waren.",
     "q5": "Funktioniert es auch unter Freunden?",
     "a5": "Sehr gut, solange ihr zu zweit seid: das Spiel zeigt zwei Vornamen an. Unter Freunden, in der Familie, in der WG funktionieren die Fragen genauso. Nur wenige Fragen im Stapel sind Paarfragen, und auch die passen unter Freunden gut."
   }
