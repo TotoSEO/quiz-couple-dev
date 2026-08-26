@@ -42,6 +42,7 @@
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="messages">Messagerie<span class="admin-pastille hidden" data-notif="messages">!</span></button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="stats">Stats</button>
             <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="trafic">Trafic</button>
+            <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="blog">Blog</button>
             <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="affiliation">Affiliation</button>
             </div>
             <%# Le site est statique : ce qui est saisi ici vit dans Supabase et
@@ -324,6 +325,66 @@
               <button class="stats-tri" data-tri-pages="rebond" style="--col:hsl(38 92% 45%);">Rebond <span class="stats-tri-fleche">▾</span></button>
             </div>
             <div id="trafic-pages" class="stats-list"><p class="stats-movers-vide">Chargement...</p></div>
+          </div>
+        </div>
+
+        <!-- Blog Tab -->
+        <div id="admin-blog-tab" class="hidden">
+          <div class="stats-comp stats-comp--periode" role="group" aria-label="Période">
+            <button class="stats-comp-btn" data-blog-periode="7">7 j</button>
+            <button class="stats-comp-btn active" data-blog-periode="30">30 j</button>
+            <button class="stats-comp-btn" data-blog-periode="90">90 j</button>
+            <button class="stats-comp-btn" data-blog-periode="365">1 an</button>
+          </div>
+
+          <div class="trafic-kpis">
+            <div class="stats-tete trafic-kpi--visites">
+              <p class="stats-tete-titre"><span aria-hidden="true">📖</span> Lectures</p>
+              <p class="stats-tete-jour" id="blog-lectures-total">-</p>
+              <p class="stats-tete-sub" id="blog-lectures-sub">sur la période</p>
+            </div>
+            <div class="stats-tete trafic-kpi--vues">
+              <p class="stats-tete-titre"><span aria-hidden="true">📄</span> Pages vues</p>
+              <p class="stats-tete-jour" id="blog-vues-total">-</p>
+              <p class="stats-tete-sub">rechargements compris</p>
+            </div>
+            <div class="stats-tete trafic-kpi--profondeur">
+              <p class="stats-tete-titre"><span aria-hidden="true">🗂️</span> Articles lus</p>
+              <p class="stats-tete-jour" id="blog-articles-total">-</p>
+              <p class="stats-tete-sub">au moins une lecture</p>
+            </div>
+            <div class="stats-tete trafic-kpi--rebond">
+              <p class="stats-tete-titre"><span aria-hidden="true">🔎</span> Arrivées directes</p>
+              <p class="stats-tete-jour" id="blog-entrees-total">-</p>
+              <p class="stats-tete-sub">des lectures viennent d'un moteur ou d'un lien</p>
+            </div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Les articles les plus lus</h2>
+                <p class="stats-panel-sub">Une lecture, c'est une visite : quelqu'un qui recharge la page ou qui y revient dans la demi-heure a lu l'article une fois. « Directes » compte les visites qui ont commencé sur l'article, donc arrivées d'un moteur ou d'un lien externe. « Total » est le compteur affiché au lecteur sous le titre, depuis toujours.</p>
+              </div>
+            </div>
+            <div class="stats-entetes blog-entetes">
+              <span class="stats-entete-nom">Article</span>
+              <button class="stats-tri" data-tri-blog="lectures" style="--col:hsl(258 70% 55%);">Lectures <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-blog="vues" style="--col:hsl(var(--muted-foreground));">Vues <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-blog="entrees" style="--col:hsl(217 91% 52%);">Directes <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-blog="total" style="--col:hsl(338 72% 52%);">Total <span class="stats-tri-fleche">▾</span></button>
+            </div>
+            <div id="blog-articles" class="stats-list"><p class="stats-movers-vide">Chargement...</p></div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Sources préférées Google</h2>
+                <p class="stats-panel-sub">Les clics sur « Ajouter Quiz Couple à mes sources préférées », par emplacement. À lire comme une intention, pas comme un nombre d'abonnés : le clic ouvre l'outil de Google, où il reste une confirmation à donner, et Google ne renvoie jamais le résultat à l'éditeur. Personne ne peut savoir combien de gens sont allés jusqu'au bout.</p>
+              </div>
+            </div>
+            <div id="blog-sourcepref" class="trafic-barres"><p class="stats-movers-vide">Chargement...</p></div>
           </div>
         </div>
 
@@ -693,6 +754,35 @@
   .stats-infobulle-ligne .stats-infobulle-val{margin-left:auto;font-weight:700;font-variant-numeric:tabular-nums;}
   .stats-row-sur{flex:0 0 8.5rem;text-align:right;font-size:0.75rem;font-variant-numeric:tabular-nums;color:hsl(var(--muted-foreground));white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   @media (max-width:520px){.stats-row-sur{display:none;}}
+
+  /* ── Onglet Blog ──────────────────────────────────────────────────────
+     Meme grille que « Toutes les pages », a une difference pres : la
+     premiere colonne porte le titre de l'article et pas son chemin. Un
+     titre est long, il passe donc sur deux lignes plutot que d'etre coupe
+     au milieu d'un mot. */
+  .blog-entetes .stats-tri,.blog-ligne .stats-cell{flex-basis:4.6rem;}
+  .blog-ligne{cursor:default;}
+  .blog-ligne:hover{background:none;}
+  #blog-articles .stats-row-name{white-space:normal;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3;}
+  .blog-lien{color:inherit;text-decoration:none;}
+  .blog-lien:hover{color:hsl(var(--primary));text-decoration:underline;}
+  /* Le meme article existe en cinq langues : sans cette pastille, cinq
+     lignes de titres traduits se ressemblent trop pour etre distinguees.
+     Elle passe devant le titre et pas derriere : sur telephone, un titre
+     long est coupe a deux lignes et emportait la pastille avec lui. */
+  .blog-langue{margin-right:0.45rem;padding:0.05rem 0.35rem;border-radius:0.35rem;background:hsl(var(--muted));color:hsl(var(--muted-foreground));font-size:0.62rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;}
+  .blog-sourcepref-note{margin:0.85rem 0 0;font-size:0.72rem;line-height:1.5;color:hsl(var(--muted-foreground));}
+  /* Deux barres seulement, et des noms plus longs que ceux des referents :
+     la colonne des noms peut respirer. */
+  #blog-sourcepref .trafic-barre-nom{flex-basis:9.5rem;}
+  @media (max-width:640px){#blog-sourcepref .trafic-barre-nom{flex-basis:7rem;}}
+  @media (max-width:640px){
+    .blog-entetes .stats-tri,.blog-ligne .stats-cell{flex-basis:3.4rem;font-size:0.8rem;}
+    /* Quatre colonnes de chiffres et un titre ne tiennent pas sur un
+       telephone. « Vues » saute en premier : les lectures disent la meme
+       chose sans compter les rechargements. */
+    .blog-entetes .stats-tri[data-tri-blog="vues"],.blog-ligne .stats-cell--vues{display:none;}
+  }
 
   /* ── Sections repliables (sommaire) ── */
   .stats-details{background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem;margin-bottom:1.5rem;box-shadow:0 4px 16px -10px hsl(var(--primary)/0.15);}

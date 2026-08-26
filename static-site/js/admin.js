@@ -1858,6 +1858,155 @@
     majFleches('[data-tri-pages]', 'triPages', traficTriPages);
   }
 
+  // ══ Onglet Blog ════════════════════════════════════════════════════════
+  // Le blog n'a pas sa propre mesure : les articles sont des pages comme les
+  // autres dans page_views. Ce qu'apporte cet onglet, c'est le filtre (les
+  // chemins /blog/ et /<langue>/blog/ seulement), le nom lisible en face du
+  // chemin, et le total depuis toujours, qui est le chiffre affiche au
+  // lecteur sous le titre de l'article.
+  var blogPeriode = 30;
+  var blogDonnees = null;            // { articles, sourcePref }
+  var blogTri = { col: 'lectures', sens: -1 };
+
+  // Le classement rend des chemins, le lecteur veut des titres.
+  // SEED_ARTICLES est injecte au build et porte, pour chaque article, son
+  // slug et son titre dans les cinq langues. Un chemin inconnu (article
+  // depublie, ancienne URL) garde son chemin plutot que de disparaitre.
+  var _blogTitres = null;
+  function titreArticle(chemin) {
+    if (!_blogTitres) {
+      _blogTitres = {};
+      (SEED_ARTICLES || []).forEach(function (a) {
+        (a.translations || []).forEach(function (tr) {
+          if (!tr || !tr.slug) return;
+          var c = tr.lang === 'fr' ? '/blog/' + tr.slug + '/' : '/' + tr.lang + '/blog/' + tr.slug + '/';
+          _blogTitres[c] = tr.title || tr.slug;
+        });
+      });
+    }
+    return _blogTitres[chemin] || chemin;
+  }
+
+  var BLOG_EMPLACEMENTS = {
+    pied: 'Pied de page',
+    blog: 'Sous un article'
+  };
+
+  function loadBlog() {
+    var tz = fuseau();
+    var n = blogPeriode;
+    Promise.all([
+      statsRpc('get_blog_articles', { p_days: n, p_tz: tz }),
+      statsRpc('get_source_pref_clics', { p_days: n, p_tz: tz })
+    ]).then(function (r) {
+      blogDonnees = {
+        articles: Array.isArray(r[0]) ? r[0] : [],
+        sourcePref: Array.isArray(r[1]) ? r[1] : [],
+        erreur: !Array.isArray(r[0])
+      };
+      renderBlog();
+    }).catch(function () {
+      blogDonnees = { articles: [], sourcePref: [], erreur: true };
+      renderBlog();
+    });
+  }
+
+  var TXT_BLOG_ATTENTE = 'Aucune lecture enregistrée sur la période.';
+  var TXT_BLOG_ERREUR = 'Les fonctions de lecture du blog ne sont pas encore créées dans Supabase. Appliquez la migration blog_lectures_source_pref, puis rechargez.';
+
+  function renderBlog() {
+    renderBlogKpis();
+    renderBlogArticles();
+    renderBlogSourcePref();
+  }
+
+  function renderBlogKpis() {
+    var l = (blogDonnees && blogDonnees.articles) || [];
+    var lectures = 0, vues = 0, entrees = 0;
+    l.forEach(function (a) {
+      lectures += Number(a.lectures) || 0;
+      vues += Number(a.vues) || 0;
+      entrees += Number(a.entrees) || 0;
+    });
+    function set(id, v) { var e = document.getElementById(id); if (e) e.textContent = v; }
+    set('blog-lectures-total', lectures ? nb(lectures) : '-');
+    set('blog-vues-total', vues ? nb(vues) : '-');
+    set('blog-articles-total', l.length ? nb(l.length) : '-');
+    // En pourcentage plutot qu'en valeur : ce qui compte n'est pas combien
+    // d'arrivees directes, c'est quelle part des lectures ne doit rien au
+    // maillage interne.
+    set('blog-entrees-total', lectures ? pct(entrees, lectures) + ' %' : '-');
+    var sub = document.getElementById('blog-lectures-sub');
+    if (sub) sub.textContent = 'sur ' + blogPeriode + ' jours';
+  }
+
+  function renderBlogArticles() {
+    var el = document.getElementById('blog-articles');
+    if (!el) return;
+    var lignes = ((blogDonnees && blogDonnees.articles) || []).map(function (x) {
+      var entrees = Number(x.entrees) || 0;
+      return {
+        path: x.path,
+        titre: titreArticle(x.path),
+        lang: x.lang || 'fr',
+        lectures: Number(x.lectures) || 0,
+        vues: Number(x.vues) || 0,
+        entrees: entrees,
+        total: Number(x.total) || 0,
+        rebond: entrees ? Math.round((Number(x.rebonds) / entrees) * 100) : 0
+      };
+    });
+    if (!lignes.length) {
+      messageVide('blog-articles', blogDonnees && blogDonnees.erreur ? TXT_BLOG_ERREUR : TXT_BLOG_ATTENTE);
+      return;
+    }
+    var t = blogTri;
+    lignes.sort(function (a, b) { return (a[t.col] - b[t.col]) * t.sens; });
+    var max = Math.max.apply(null, lignes.map(function (x) { return x[t.col]; })) || 1;
+    el.innerHTML = lignes.map(function (l) {
+      return '<div class="stats-row blog-ligne" style="--fam:hsl(258 70% 55%);--part:' + (l[t.col] / max) * 100 + '%">'
+        + '<span class="stats-row-name" title="' + esc(l.path) + '">'
+        + '<span class="blog-langue">' + esc(l.lang) + '</span>'
+        + '<a class="blog-lien" href="' + esc(l.path) + '" target="_blank" rel="noopener">' + esc(l.titre) + '</a></span>'
+        + '<span class="stats-cell stats-cell--visites">' + nb(l.lectures) + '</span>'
+        + '<span class="stats-cell stats-cell--vues">' + nb(l.vues) + '</span>'
+        + '<span class="stats-cell stats-cell--lances">' + nb(l.entrees)
+        + '<span class="stats-cell-jour trafic-sous">' + (l.entrees ? l.rebond + ' % rebond' : '—') + '</span></span>'
+        + '<span class="stats-cell stats-cell--finis">' + nb(l.total) + '</span>'
+        + '</div>';
+    }).join('');
+    majFleches('[data-tri-blog]', 'triBlog', blogTri);
+  }
+
+  function renderBlogSourcePref() {
+    var el = document.getElementById('blog-sourcepref');
+    if (!el) return;
+    var l = ((blogDonnees && blogDonnees.sourcePref) || []).map(function (x) {
+      return {
+        nom: BLOG_EMPLACEMENTS[x.emplacement] || x.emplacement,
+        valeur: Number(x.visites) || 0,
+        clics: Number(x.clics) || 0,
+        total: Number(x.total) || 0
+      };
+    });
+    if (!l.length) {
+      messageVide('blog-sourcepref', blogDonnees && blogDonnees.erreur ? TXT_BLOG_ERREUR : 'Aucun clic sur la période.');
+      return;
+    }
+    var total = l.reduce(function (a, x) { return a + x.valeur; }, 0);
+    var max = Math.max.apply(null, l.map(function (x) { return x.valeur; })) || 1;
+    el.innerHTML = l.map(function (x) {
+      return '<div class="trafic-barre">'
+        + '<span class="trafic-barre-nom" title="' + esc(x.nom) + '">' + esc(x.nom) + '</span>'
+        + '<span class="trafic-barre-piste"><span class="trafic-barre-jauge" style="--bar:hsl(217 91% 52%);width:' + ((x.valeur / max) * 100) + '%"></span></span>'
+        + '<span class="trafic-barre-val">' + nb(x.valeur)
+        + '<span class="trafic-barre-pct">' + pct(x.valeur, total) + ' %</span></span>'
+        + '</div>';
+    }).join('')
+      + '<p class="blog-sourcepref-note">Visites distinctes ayant cliqué sur la période. Depuis toujours, tous emplacements confondus : '
+      + nb(l.reduce(function (a, x) { return a + x.total; }, 0)) + ' clics.</p>';
+  }
+
   // Fleche montante ou descendante sur l'en-tete actif, comme dans l'onglet
   // Stats : sans repere, on ne sait plus dans quel sens la liste est rangee.
   function majFleches(selecteur, attr, etat) {
@@ -1884,6 +2033,8 @@
     if (afTab) afTab.classList.toggle('hidden', tab !== 'affiliation');
     var trTab = document.getElementById('admin-trafic-tab');
     if (trTab) trTab.classList.toggle('hidden', tab !== 'trafic');
+    var blTab = document.getElementById('admin-blog-tab');
+    if (blTab) blTab.classList.toggle('hidden', tab !== 'blog');
 
     if (tab === 'stats') {
       loadStats();
@@ -1892,6 +2043,11 @@
     // six agregats sont assez legers pour ne pas justifier un cache.
     if (tab === 'trafic') {
       loadTrafic();
+    }
+    // Meme raison que le trafic : les lectures bougent en continu, et les
+    // deux agregats sont assez legers pour se recharger a chaque ouverture.
+    if (tab === 'blog') {
+      loadBlog();
     }
     // L'onglet affiliation vit dans son propre module : il gere son jeton et
     // ne parle qu'a Affilae, sans rien partager avec le reste de l'admin.
@@ -2955,6 +3111,17 @@
     }
     brancheTri('[data-tri-ent]', 'triEnt', traficTriEnt, renderTraficEntonnoir);
     brancheTri('[data-tri-pages]', 'triPages', traficTriPages, renderTraficPages);
+
+    // ── Commandes de l'onglet Blog ────────────────────────────────────
+    document.querySelectorAll('.stats-comp-btn[data-blog-periode]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        document.querySelectorAll('.stats-comp-btn[data-blog-periode]').forEach(function (x) { x.classList.remove('active'); });
+        this.classList.add('active');
+        blogPeriode = parseInt(this.dataset.blogPeriode, 10) || 30;
+        loadBlog();
+      });
+    });
+    brancheTri('[data-tri-blog]', 'triBlog', blogTri, renderBlogArticles);
 
     // Redraw charts on resize (canvas is width-dependent)
     var rT;

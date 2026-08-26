@@ -205,6 +205,42 @@
     } catch (e) {}
   }
 
+  // ── Clics sur « Ajouter Quiz Couple à mes sources préférées » ───────────
+  // Ce qu'on mesure ici, c'est l'intention, jamais le résultat. Le bouton
+  // ouvre l'outil de Google, où il reste une confirmation à donner, sur une
+  // page qui ne nous appartient pas. Google ne renvoie rien : ni retour
+  // JavaScript, ni rapport dans la Search Console, ni API. Personne ne peut
+  // savoir combien de gens sont allés jusqu'au bout, et ce compteur ne doit
+  // jamais être lu comme un nombre d'abonnés.
+  //
+  // Reste que le chiffre sert : il dit si l'encart intéresse quelqu'un, et
+  // lequel des deux emplacements travaille le mieux.
+  function clicSourcePref(e) {
+    var lien = e.target && e.target.closest ? e.target.closest('.gsource-btn') : null;
+    if (!lien) return;
+    if (ignorer()) return;
+    var corps = {
+      visite_id: visite(false),
+      emplacement: lien.getAttribute('data-emplacement') || 'pied',
+      lang: document.documentElement.lang || 'fr',
+      path: chemin()
+    };
+    try {
+      fetch(URL_SB + '/rest/v1/source_pref_clics', {
+        method: 'POST',
+        keepalive: true,
+        headers: {
+          'apikey': KEY_SB,
+          'Authorization': 'Bearer ' + KEY_SB,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify(corps)
+      }).catch(function () {});
+    } catch (e2) {}
+  }
+  document.addEventListener('click', clicSourcePref, true);
+
   // ── Départ ──────────────────────────────────────────────────────────────
   // Chrome précharge les liens qu'il juge probables. Compter un préchargement
   // inventerait des visites qui n'ont jamais eu lieu : on attend que la page

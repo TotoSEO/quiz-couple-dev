@@ -1518,6 +1518,19 @@ async function generateBlogArticle(articleMeta, lang) {
   };
   const bl = breadcrumbLabels[lang] || breadcrumbLabels.fr;
 
+  // ── Nombre de mots et temps de lecture ──────────────────────────────────
+  // Un seul comptage sert les deux usages : wordCount dans les donnees
+  // structurees, et le « X min de lecture » affiche sous le titre. Les faire
+  // diverger reviendrait a annoncer au lecteur autre chose qu'a Google.
+  const texteArticle = (article.introduction || '') + ' ' + (article.sections || []).map(s =>
+    (s.content || '') + ' ' + (s.subsections || []).map(sub => sub.content || '').join(' ')
+  ).join(' ');
+  const wordCount = texteArticle.replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length;
+  // 200 mots par minute, la vitesse de lecture courante a l'ecran pour de la
+  // prose grand public. Jamais moins d'une minute : « 0 min de lecture » ne
+  // veut rien dire.
+  const readingMinutes = Math.max(1, Math.round(wordCount / 200));
+
   const jsonLdItems = [
     {
       '@context': 'https://schema.org',
@@ -1529,11 +1542,6 @@ async function generateBlogArticle(articleMeta, lang) {
       ],
     },
     (() => {
-      // Compute word count from all article text
-      let text = (article.introduction || '') + ' ' + (article.sections || []).map(s =>
-        (s.content || '') + ' ' + (s.subsections || []).map(sub => sub.content || '').join(' ')
-      ).join(' ');
-      const wc = text.replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length;
       const schemaType = articleMeta.frOnly ? 'NewsArticle' : 'Article';
       const imageUrl = article.featuredImage
         ? (article.featuredImage.startsWith('http') ? article.featuredImage : `${BASE_URL}${article.featuredImage}`)
@@ -1556,7 +1564,7 @@ async function generateBlogArticle(articleMeta, lang) {
         datePublished: withTime(article.publishedAt),
         dateModified: withTime(article.modifiedAt || article.publishedAt),
         inLanguage: lang,
-        wordCount: wc,
+        wordCount,
         author: {
           '@type': 'Person',
           name: authorData.name || 'Quiz Couple',
@@ -1617,6 +1625,8 @@ async function generateBlogArticle(articleMeta, lang) {
     article,
     authorBio,
     articleAlternates,
+    wordCount,
+    readingMinutes,
     // Category
     articleCategory: articleMeta.category || null,
     articleCategoryLabel: articleMeta.category && BLOG_CATEGORIES[articleMeta.category] ? BLOG_CATEGORIES[articleMeta.category][lang] || BLOG_CATEGORIES[articleMeta.category].fr : null,

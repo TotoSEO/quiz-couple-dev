@@ -84,7 +84,9 @@
     "inFrance": "in Frankreich gemacht",
     "sourcePrefTitre": "Quiz Couple zu meinen bevorzugten Quellen hinzufügen",
     "sourcePrefSous": "So seht ihr Quiz Couple leichter in euren Google-Suchen und deren KI-Antworten!",
-    "sourcePrefAria": "Quiz Couple zu den bevorzugten Quellen bei Google hinzufügen"
+    "sourcePrefAria": "Quiz Couple zu den bevorzugten Quellen bei Google hinzufügen",
+    "sourcePrefAide": "Bevorzugte Quellen ist eine Einstellung von Google: Ihr wählt die Seiten aus, die ihr mögt, und Google zeigt sie weiter oben in euren Ergebnissen und in seinen KI-Antworten. Das hängt an eurem Google-Konto, ihr müsst also angemeldet sein, und ihr könnt eine Seite jederzeit wieder entfernen.",
+    "sourcePrefAideAria": "Was ist eine bevorzugte Quelle?"
   },
   "buttons": {
     "start": "Starten",
