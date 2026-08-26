@@ -230,18 +230,6 @@
 
         <!-- Trafic Tab -->
         <div id="admin-trafic-tab" class="hidden">
-          <!-- Mesure premiere partie : ce bandeau dit d'ou viennent les
-               chiffres, parce qu'ils ne coincideront jamais avec Analytics et
-               qu'il vaut mieux savoir pourquoi. -->
-          <div class="trafic-intro">
-            <p class="trafic-intro-titre">Mesure maison, sans cookie et sans consentement</p>
-            <p class="trafic-intro-txt">Ces chiffres viennent du site lui-même, pas de Google Analytics : aucun bloqueur ne les intercepte et aucun bandeau ne les conditionne. Ils sont donc plus hauts, et plus proches du réel. On compte des <strong>visites</strong>, pas des personnes : quelqu'un qui revient demain compte une deuxième fois. Une visite se termine après 30 minutes sans nouvelle page.</p>
-            <div class="trafic-exclu">
-              <span id="trafic-exclu-etat">Vos visites : <strong>comptées</strong></span>
-              <button id="trafic-exclu-btn" class="btn btn-outline btn-sm">Ne plus me compter</button>
-            </div>
-          </div>
-
           <div class="stats-comp stats-comp--periode" role="group" aria-label="Période">
             <button class="stats-comp-btn" data-trafic-periode="1">Aujourd'hui</button>
             <button class="stats-comp-btn active" data-trafic-periode="7">7 j</button>
@@ -551,6 +539,10 @@
   .stats-tri.est-actif{color:var(--col);}
   .stats-tri-fleche{font-size:0.65rem;opacity:0.35;}
   .stats-tri.est-actif .stats-tri-fleche{opacity:1;}
+  /* Sur « Tout », la colonne des lancés date sa mesure : sans ça, une page
+     ancienne à 12 finis pour 0 lancé ressemble à un compteur cassé. */
+  .stats-tri-note{flex-basis:100%;font-size:0.55rem;font-weight:600;letter-spacing:0;text-transform:none;opacity:0.65;text-align:right;}
+  .stats-tri{flex-wrap:wrap;}
   .stats-row{position:relative;display:flex;align-items:center;gap:0.5rem;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid hsl(var(--border)/0.6);padding:0.55rem 0.7rem;cursor:pointer;color:inherit;overflow:hidden;transition:background .15s;}
   .stats-row:last-child{border-bottom:none;}
   .stats-row::before{content:'';position:absolute;inset:0 auto 0 0;width:var(--part,0%);background:color-mix(in srgb, var(--fam) 11%, transparent);pointer-events:none;transition:width .25s ease;}
@@ -630,16 +622,8 @@
   /* ── Onglet Trafic ──────────────────────────────────────────────────
      Il reprend le vocabulaire visuel des stats (panneaux, lignes, cellules
      alignees a droite) et n'ajoute que ce qui lui est propre : une grille de
-     quatre indicateurs au lieu de trois, des barres horizontales pour les
-     repartitions, et le bandeau d'exclusion. */
-  .trafic-intro{border:1px solid hsl(var(--border));border-left:3px solid hsl(258 70% 55%);border-radius:0.75rem;padding:0.85rem 1rem;margin-bottom:1.1rem;background:hsl(258 70% 55%/0.05);}
-  .trafic-intro-titre{font-size:0.85rem;font-weight:700;margin:0 0 0.2rem;color:hsl(258 70% 45%);}
-  .dark .trafic-intro-titre{color:hsl(258 80% 76%);}
-  .trafic-intro-txt{font-size:0.78rem;line-height:1.55;color:hsl(var(--muted-foreground));margin:0;}
-  .trafic-exclu{display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-top:0.7rem;padding-top:0.7rem;border-top:1px dashed hsl(var(--border));font-size:0.8rem;}
-  .trafic-exclu strong{color:hsl(var(--foreground));}
-  .trafic-exclu.est-exclu strong{color:hsl(150 62% 36%);}
-  .dark .trafic-exclu.est-exclu strong{color:hsl(150 55% 60%);}
+     quatre indicateurs au lieu de trois et des barres horizontales pour les
+     repartitions. */
   .trafic-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0.9rem;margin-bottom:1.5rem;}
   .trafic-kpi--visites{--tete:hsl(258 70% 52%);}
   .trafic-kpi--vues{--tete:hsl(199 85% 42%);}

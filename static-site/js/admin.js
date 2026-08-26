@@ -426,6 +426,7 @@
     'confiance': 'testConfiance',
     'coquin': 'quizCoquin',
     'couche': 'testCouche',
+    'crush': 'testCrush',
     'dependance': 'testDependance',
     'dilemmes': 'jeuDilemmes',
     'distance': 'testDistance',
@@ -437,12 +438,15 @@
     'gage-couple': 'jeuGages',
     'genant': 'quizGenant',
     'infidelite': 'testInfidelite',
+    'jalousie1': 'testJalousie',
+    'jalousie2': 'testJalousie',
     'karmique': 'testKarmique',
     'knowledge': 'quizKnowledge',
     'langage-amour': 'testLangageAmour',
     'mariage': 'testMariage',
     'marrant': 'quizMarrant',
     'most': 'quizMost',
+    'oui-non': 'jeuOuiNon',
     'parentalite': 'testParentalite',
     'pervers': 'testPervers',
     'plateau-couple': 'jeuPlateau',
@@ -450,6 +454,7 @@
     'jamais': 'jeuJamais',
     'purete': 'testPurete',
     'qui-de-nous-deux': 'jeuQuiDeNous',
+    'qui-pourrait': 'jeuQuiPourrait',
     'rencontre': 'quizRencontre',
     'sain': 'testCoupleSain',
     'secret': 'testSecret',
@@ -637,6 +642,27 @@
             if (!idx[slug]) idx[slug] = {};
             idx[slug][k] = (idx[slug][k] || 0) + rowTotal(r);
           });
+          // Le 21 août 2026 est un jour partiel : la mesure des lancés a été
+          // mise en service en cours de journée, alors que les complétions y
+          // comptent depuis minuit. On retire ce jour-là à la source, pour
+          // que courbes, sommes de période et taux en héritent tous, et on
+          // corrige d'autant les totaux déjà affichés. La date est en dur :
+          // c'est un fait historique, pas le premier jour de la fenêtre
+          // chargée, qui finira par ne plus remonter jusque-là.
+          var JOUR_PARTIEL = '2026-08-21';
+          var retirePartiel = 0;
+          Object.keys(idx).forEach(function (slug) {
+            var v = idx[slug][JOUR_PARTIEL];
+            if (v) {
+              retirePartiel += v;
+              if (statsLances && statsLances[slug] != null) statsLances[slug] = Math.max(0, statsLances[slug] - v);
+            }
+            delete idx[slug][JOUR_PARTIEL];
+          });
+          if (retirePartiel && elTotal && elTotal.textContent !== '—') {
+            var totalBrut = parseInt(elTotal.textContent.replace(/\D/g, ''), 10);
+            if (!isNaN(totalBrut)) elTotal.textContent = Math.max(0, totalBrut - retirePartiel).toLocaleString('fr-FR');
+          }
           statsLancesParJour = idx;
           renderStatsList();
           if (_lastTotalSeries) renderTotalDaily(_lastTotalSeries);
@@ -665,11 +691,9 @@
   // affiches a cote du rapport, chacun juge de l'echantillon.
   var MINI_PAGE = 5;
 
-  // Debut de la fenetre : le lendemain du premier lancement enregistre, pas
-  // le jour meme. Ce premier jour est forcement partiel, la mesure ayant ete
-  // mise en service en cours de journee, alors que les completions y comptent
-  // depuis minuit. L'y inclure gonflerait le taux d'un facteur arbitraire.
-  // Tant que ce lendemain n'est pas passe, il n'y a pas de fenetre du tout.
+  // Debut de la fenetre : le premier jour COMPLET de mesure. Le jour partiel
+  // de mise en service (21 aout) est deja retire de la serie a la source,
+  // dans chargeLancements : le plus ancien jour restant est donc plein.
   function debutFenetre() {
     if (!statsLancesParJour) return null;
     var min = null;
@@ -678,10 +702,7 @@
         if (statsLancesParJour[slug][j] > 0 && (min === null || j < min)) min = j;
       });
     });
-    if (!min) return null;
-    var d = new Date(min + 'T12:00:00Z');
-    d.setUTCDate(d.getUTCDate() + 1);
-    return d.toISOString().slice(0, 10);
+    return min;
   }
 
   // Somme des deux compteurs d'une page sur la fenetre commune. Retourne null
@@ -1148,10 +1169,15 @@
       + COLONNES.map(function (c) {
           var actif = statsTri.col === c.cle;
           var fleche = !actif ? '⇅' : (statsTri.sens === -1 ? '▼' : '▲');
+          // Sur « Tout », la colonne des lancés ne couvre pas des mois comme
+          // celle des finis : on date sa mesure dans l'en-tête, sinon une
+          // vieille page à 12 finis pour 0 lancé ressemble à un bug.
+          var note = (c.cle === 'lances' && statsPeriode === 0 && debutFenetre())
+            ? '<span class="stats-tri-note">dep. ' + esc(jourCourt(debutFenetre())) + '</span>' : '';
           return '<button type="button" class="stats-tri' + (actif ? ' est-actif' : '') + '"'
             + ' style="--col:' + c.couleur + '" data-tri="' + c.cle + '"'
             + ' aria-label="Trier par ' + c.nom + (actif && statsTri.sens === -1 ? ', décroissant' : ', croissant') + '">'
-            + c.nom + '<span class="stats-tri-fleche" aria-hidden="true">' + fleche + '</span></button>';
+            + c.nom + '<span class="stats-tri-fleche" aria-hidden="true">' + fleche + '</span>' + note + '</button>';
         }).join('')
       + '</div>';
 
@@ -1391,6 +1417,22 @@
       }
     });
 
+    // Trace un chemin arrondi passant par tous les points : chaque sommet
+    // devient un point de contrôle d'une quadratique jusqu'au milieu du
+    // segment suivant. La courbe passe exactement par le premier et le
+    // dernier point, et ne peut pas dépasser les valeurs extrêmes de plus
+    // d'une demi-maille, ce qui garde le tracé honnête.
+    function cheminLisse(pts) {
+      ctx.moveTo(pts[0].x, pts[0].y);
+      if (pts.length === 2) { ctx.lineTo(pts[1].x, pts[1].y); return; }
+      for (var k = 1; k < pts.length - 1; k++) {
+        var mx = (pts[k].x + pts[k + 1].x) / 2, my = (pts[k].y + pts[k + 1].y) / 2;
+        ctx.quadraticCurveTo(pts[k].x, pts[k].y, mx, my);
+      }
+      var fin = pts[pts.length - 1];
+      ctx.quadraticCurveTo(fin.x, fin.y, fin.x, fin.y);
+    }
+
     visibles.forEach(function (c) {
       // On decoupe en segments continus : chaque trou (null) coupe la ligne.
       var segs = [], cour = [];
@@ -1400,22 +1442,21 @@
       });
       if (cour.length) segs.push(cour);
 
-      // Aplat seulement quand une seule courbe est affichee : superposes, les
-      // aplats faussent les couleurs.
-      if (visibles.length === 1) {
-        segs.forEach(function (seg) {
-          if (seg.length < 2) return;
-          var g = ctx.createLinearGradient(0, padT, 0, padT + plotH);
-          g.addColorStop(0, c.couleur + '59');
-          g.addColorStop(1, c.couleur + '08');
-          ctx.beginPath();
-          ctx.moveTo(xAt(seg[0].i), yAt(seg[0].v, c.axe));
-          seg.forEach(function (pt) { ctx.lineTo(xAt(pt.i), yAt(pt.v, c.axe)); });
-          ctx.lineTo(xAt(seg[seg.length - 1].i), padT + plotH);
-          ctx.lineTo(xAt(seg[0].i), padT + plotH);
-          ctx.closePath(); ctx.fillStyle = g; ctx.fill();
-        });
-      }
+      // Aplat sous chaque courbe : appuyé quand elle est seule, léger quand
+      // plusieurs se superposent, pour que les couleurs restent lisibles.
+      var alphaHaut = visibles.length === 1 ? '59' : '24';
+      segs.forEach(function (seg) {
+        if (seg.length < 2) return;
+        var xy = seg.map(function (pt) { return { x: xAt(pt.i), y: yAt(pt.v, c.axe) }; });
+        var g = ctx.createLinearGradient(0, padT, 0, padT + plotH);
+        g.addColorStop(0, c.couleur + alphaHaut);
+        g.addColorStop(1, c.couleur + '00');
+        ctx.beginPath();
+        cheminLisse(xy);
+        ctx.lineTo(xy[xy.length - 1].x, padT + plotH);
+        ctx.lineTo(xy[0].x, padT + plotH);
+        ctx.closePath(); ctx.fillStyle = g; ctx.fill();
+      });
 
       ctx.lineWidth = 2.5; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
       segs.forEach(function (seg) {
@@ -1427,10 +1468,7 @@
           return;
         }
         ctx.beginPath();
-        seg.forEach(function (pt, k) {
-          var x = xAt(pt.i), y = yAt(pt.v, c.axe);
-          k === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-        });
+        cheminLisse(seg.map(function (pt) { return { x: xAt(pt.i), y: yAt(pt.v, c.axe) }; }));
         ctx.strokeStyle = c.couleur; ctx.stroke();
       });
 
@@ -1584,26 +1622,10 @@
     return s;
   }
 
-  // ── Exclusion du proprietaire ──────────────────────────────────────────
-  // Il se promene beaucoup sur son propre site : sans ca il en est le premier
-  // visiteur. Le drapeau vit dans le navigateur, il faut donc le poser sur
-  // chaque appareil. Il bloque les trois mesures d'un coup : page vue,
-  // lancement, partie terminee.
-  function traficExclu() {
-    try { return localStorage.getItem('qc-no-track') === '1'; } catch (e) { return false; }
-  }
-  function majExclu() {
-    var boite = document.querySelector('.trafic-exclu');
-    var etat = document.getElementById('trafic-exclu-etat');
-    var btn = document.getElementById('trafic-exclu-btn');
-    if (!boite || !etat || !btn) return;
-    var off = traficExclu();
-    boite.classList.toggle('est-exclu', off);
-    etat.innerHTML = off
-      ? 'Vos visites : <strong>exclues</strong> sur ce navigateur'
-      : 'Vos visites : <strong>comptées</strong>';
-    btn.textContent = off ? 'Me compter à nouveau' : 'Ne plus me compter';
-  }
+  // Le bandeau d'explication et le bouton d'exclusion ont quitte l'onglet
+  // Trafic. Le drapeau qc-no-track, lui, reste lu par audience.js : les
+  // visites du proprietaire restent exclues sur les navigateurs ou il a ete
+  // pose ; il n'y a simplement plus d'interface pour le changer ici.
 
   // ── Chargement ─────────────────────────────────────────────────────────
   function loadTrafic() {
@@ -1642,7 +1664,6 @@
   }
 
   function renderTrafic() {
-    majExclu();
     renderTraficKpis();
     renderTraficCourbe();
     renderTraficSources();
@@ -2934,15 +2955,6 @@
     }
     brancheTri('[data-tri-ent]', 'triEnt', traficTriEnt, renderTraficEntonnoir);
     brancheTri('[data-tri-pages]', 'triPages', traficTriPages, renderTraficPages);
-
-    var exBtn = document.getElementById('trafic-exclu-btn');
-    if (exBtn) exBtn.addEventListener('click', function () {
-      try {
-        if (traficExclu()) localStorage.removeItem('qc-no-track');
-        else localStorage.setItem('qc-no-track', '1');
-      } catch (e) {}
-      majExclu();
-    });
 
     // Redraw charts on resize (canvas is width-dependent)
     var rT;
