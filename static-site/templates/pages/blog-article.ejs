@@ -21,6 +21,26 @@
   const copyLinkLabel = lang === 'fr' ? 'Copier le lien' : lang === 'en' ? 'Copy link' : lang === 'es' ? 'Copiar enlace' : lang === 'de' ? 'Link kopieren' : 'Copia link';
   const copiedLabel = lang === 'fr' ? 'Copié !' : lang === 'en' ? 'Copied!' : lang === 'es' ? '¡Copiado!' : lang === 'de' ? 'Kopiert!' : 'Copiato!';
 
+  // Temps de lecture : calculé au build à partir du nombre de mots, le même
+  // qui part dans les données structurées.
+  const readingTimeLabel = lang === 'fr' ? `${readingMinutes} min de lecture`
+    : lang === 'en' ? `${readingMinutes} min read`
+    : lang === 'es' ? `${readingMinutes} min de lectura`
+    : lang === 'de' ? `${readingMinutes} Min. Lesezeit`
+    : `${readingMinutes} min di lettura`;
+
+  // Le compteur de lectures est rempli par le navigateur : c'est un chiffre
+  // vivant, il ne peut pas être figé dans une page statique. Le gabarit pose
+  // le modèle de phrase, le script remplace {n} et lève le hidden.
+  const readCountTemplate = lang === 'fr' ? 'Ce contenu a été lu {n} fois'
+    : lang === 'en' ? 'This article has been read {n} times'
+    : lang === 'es' ? 'Este contenido se ha leído {n} veces'
+    : lang === 'de' ? 'Dieser Beitrag wurde {n} Mal gelesen'
+    : 'Questo contenuto è stato letto {n} volte';
+  // En dessous de ce seuil, le compteur reste invisible : « lu 4 fois » sur
+  // un article publié hier dessert l'article au lieu de le servir.
+  const readCountSeuil = 50;
+
   // Sidebar labels
   const sidebarTestsLabel = lang === 'fr' ? 'Tests de couple' : lang === 'en' ? 'Couple tests' : lang === 'es' ? 'Tests de pareja' : lang === 'de' ? 'Paar-Tests' : 'Test di coppia';
   const sidebarQuizzesLabel = lang === 'fr' ? 'Quiz pour couple' : lang === 'en' ? 'Couple quizzes' : lang === 'es' ? 'Quiz de pareja' : lang === 'de' ? 'Paar-Quiz' : 'Quiz di coppia';
@@ -59,7 +79,7 @@
       <div class="mb-4"><span class="blog-category-badge"><%= articleCategoryLabel %></span></div>
       <% } %>
 
-      <!-- Date de publication et signature de l'auteur -->
+      <!-- Date de publication, signature, temps de lecture et lectures -->
       <div class="mb-8">
         <div class="blog-signature">
           <time datetime="<%= isoDate %>" class="blog-signature-date">
@@ -74,6 +94,42 @@
             <span><%= article.author.name %></span>
           </a>
           <% } %>
+          <span class="blog-signature-sep" aria-hidden="true">|</span>
+          <span class="blog-signature-meta">
+            <svg class="blog-signature-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <%= readingTimeLabel %>
+          </span>
+          <span class="blog-signature-sep" id="blog-lectures-sep" aria-hidden="true" hidden>|</span>
+          <span class="blog-signature-meta" id="blog-lectures" hidden
+                data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>"
+                data-path="<%= pagePath %>" data-seuil="<%= readCountSeuil %>"
+                data-modele="<%= readCountTemplate %>"></span>
+        </div>
+
+        <!-- Sources préférées Google, version compacte.
+             Le pied de page porte déjà l'encart complet ; ici on est juste
+             sous la signature, au moment où quelqu'un vient de décider que
+             l'article valait le coup. D'où le point d'interrogation plutôt
+             qu'une ligne d'explication : la question « c'est quoi ? » se pose
+             à quelques lecteurs, elle n'a pas à pousser l'article vers le
+             bas pour tous les autres. -->
+        <div class="gsource gsource--mini">
+          <a class="gsource-btn" href="https://www.google.com/preferences/source?q=quiz-couple.com"
+             target="_blank" rel="noopener" data-emplacement="blog"
+             aria-label="<%= t('common:footer.sourcePrefAria', 'Ajouter Quiz Couple aux sources préférées de Google') %>">
+            <span class="gsource-g" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="20" height="20" focusable="false">
+                <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+                <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+                <path fill="#FBBC05" d="M11.69 27.18c-.44-1.32-.69-2.73-.69-4.18s.25-2.86.69-4.18v-5.7H4.34C2.85 16.09 2 19.95 2 24s.85 7.91 2.34 10.88l7.35-5.7z"/>
+                <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+              </svg>
+            </span>
+            <span class="gsource-txt"><%= t('common:footer.sourcePrefTitre', 'Ajouter Quiz Couple à mes sources préférées') %></span>
+          </a>
+          <button type="button" class="gsource-aide" aria-expanded="false" aria-controls="gsource-bulle"
+                  aria-label="<%= t('common:footer.sourcePrefAideAria', "Qu'est-ce qu'une source préférée ?") %>">?</button>
+          <p class="gsource-bulle" id="gsource-bulle" hidden><%= t('common:footer.sourcePrefAide', '') %></p>
         </div>
       </div>
 
@@ -295,3 +351,5 @@
     </div>
   </div>
 </div>
+
+<script src="/js/blog-lectures.js" defer></script>

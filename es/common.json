@@ -81,7 +81,12 @@
     "privacy": "Política de privacidad",
     "sitemap": "Mapa del sitio",
     "copyright": "Todos los derechos reservados. Hecho con",
-    "inFrance": "en Francia"
+    "inFrance": "en Francia",
+    "sourcePrefTitre": "Añadir Quiz Couple a mis fuentes preferidas",
+    "sourcePrefSous": "¡Veréis Quiz Couple más fácilmente en vuestras búsquedas de Google y en sus respuestas de IA!",
+    "sourcePrefAria": "Añadir Quiz Couple a las fuentes preferidas de Google",
+    "sourcePrefAide": "Las fuentes preferidas son una opción de Google: elegís los sitios que os gustan y Google los coloca más arriba en vuestros resultados y en sus respuestas de IA. Se guarda en vuestra cuenta de Google, así que hay que haber iniciado sesión, y podéis quitar un sitio cuando queráis.",
+    "sourcePrefAideAria": "¿Qué es una fuente preferida?"
   },
   "buttons": {
     "start": "Empezar",
