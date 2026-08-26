@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Entre el torpe que puede cambiar y el manipulador que no cambiará hay toda una gama... y no te proteges de ellos de la misma manera.",
   introduction: `<p>Desde que «tóxico» se convirtió en la palabra de moda, ahí dentro cabe todo: el celoso, el distante, el que se enfada, el mentiroso. Y es un problema de verdad, porque esos hombres no se parecen. Algunos dañan por inmadurez, sin querer, y pueden cambiar. Otros dañan por funcionamiento, y no cambiarán. <strong>Confundir a los dos es o huir de un hombre que podría haber crecido... o quedarse años con un hombre que no crecerá nunca.</strong></p>
-<p>Este artículo, por tanto, ordena. Seis perfiles de hombre tóxico en el amor, del menos grave al más grave: lo que cada uno te hace vivir en concreto, cómo lo reconoces... y sobre todo, para cada uno, la respuesta a LA pregunta: ¿este puede cambiar?</p>
+<p>Así que vamos a ordenar: seis perfiles de hombre tóxico en el amor, del menos grave al más grave, con lo que cada uno te hace vivir en concreto, cómo lo reconoces... y sobre todo, para cada uno, la respuesta a LA pregunta: ¿este puede cambiar?</p>
 <p>Un requisito previo, eso sí, y cuenta: un perfil se juzga con el tiempo, no por una mala racha. Cualquier hombre puede ser pesado seis meses en un año difícil. Aquí hablamos de funcionamientos instalados, que se repiten y que te cuestan. Es esa repetición la que hace la toxicidad, como se planteó en las <a href="/es/blog/senales-relacion-toxica/">señales de una relación tóxica</a>.</p>`,
   quickSummary: [
     "«Tóxico» abarca perfiles muy distintos... que no se gestionan igual.",
@@ -39,7 +39,7 @@ const article: BlogArticleData = {
     {
       id: 'perfil-3-el-celoso',
       title: "Perfil 3: el celoso que vigila",
-      content: `<p>Al principio casi halagaba. Luego las preguntas se volvieron comprobaciones, las comprobaciones reproches, y ahí estás mandando fotos de tu noche «para tranquilizarlo»... Los celos de este perfil no son una emoción que le atraviesa, son un sistema que se instala y que crece con cada concesión.</p>
+      content: `<p>Al principio casi halagaba. Luego las preguntas se volvieron comprobaciones, las comprobaciones reproches, y ahí estás mandando fotos de tu noche «para tranquilizarlo»... Los celos de este perfil no son solo una emoción que pasa: son un sistema que se instala y que crece con cada concesión.</p>
 <p><strong>Lo que te hace vivir:</strong> una libertad condicionada. Tu ropa, tus amigos, tus horarios se vuelven temas... y te autocensuras cada vez más para evitar las crisis.</p>
 <p><strong>¿Puede cambiar?</strong> Solo si reconoce que el problema está en él, no en tus comportamientos. Un celoso que dice «ayúdame, sé que es irracional» puede trabajarlo, a menudo sobre una <a href="/es/blog/dependencia-emocional-en-el-hombre/">dependencia emocional masculina</a> que no dice su nombre. Un celoso que dice «cambia tú y yo tendré menos celos» no cambiará: ya te ha nombrado responsable de su problema.</p>`,
     },
@@ -53,7 +53,7 @@ const article: BlogArticleData = {
     {
       id: 'perfil-5-el-que-desvaloriza',
       title: "Perfil 5: el que desvaloriza con suavidad",
-      content: `<p>Nunca grita, no te insulta... lima. Un comentario sobre tu ropa, una broma sobre tus ambiciones, un «qué mono» sobre tu proyecto, un silencio marcado cuando brillas en sociedad. Tomadas de una en una, cada pulla es indefendible como reproche («¡pero si era broma!»)... acumuladas, hacen un trabajo de zapa notable.</p>
+      content: `<p>Nunca grita, no te insulta... te va limando. Un comentario sobre tu ropa, una broma sobre tus ambiciones, un «qué mono» sobre tu proyecto, un silencio marcado cuando brillas en sociedad. Tomadas de una en una, cada pulla es indefendible como reproche («¡pero si era broma!»)... acumuladas, hacen un trabajo de zapa notable.</p>
 <p><strong>Lo que te hace vivir:</strong> una autoestima que se derrite sin causa identificable. Te encuentras menos graciosa, menos capaz, menos interesante que antes... y no lo relacionas con él, porque «no hace nada grave».</p>
 <p><strong>¿Puede cambiar?</strong> La prueba es simple, y ya conoces el método: nombra el comportamiento, una vez, con calma, con dos ejemplos concretos. Un torpe se queda de piedra y se corrige, al menos en parte. Un desvalorizador de fondo da la vuelta a la escena: eres «demasiado susceptible», «buscas problemas»... Esa inversión es su respuesta. Y es definitiva.</p>`,
     },

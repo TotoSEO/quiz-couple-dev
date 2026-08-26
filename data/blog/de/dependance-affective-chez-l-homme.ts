@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Man stellt sich den emotional Abhängigen anhänglich und flehend vor. Bei Männern sieht das öfter nach Eifersucht aus, nach Wut... oder nach einem Typen, der nie Single ist.",
   introduction: `<p>Wenn man «emotionale Abhängigkeit» sagt, sieht jeder dieselbe Szene vor sich: jemand, der fleht, sich festklammert, fünfzehn Nachrichten schickt. Und weil sich die meisten Männer in diesem Bild nicht wiedererkennen, schließen sie, dass es sie nicht betrifft. Großer Irrtum.</p>
-<p><strong>Männliche emotionale Abhängigkeit gibt es, sie ist weit verbreitet... und sie trägt Masken, die niemand als emotionalen Mangel erkennt.</strong> Die Eifersucht, die kontrolliert. Die Wut, die wegen nichts explodiert. Die Überinvestition des perfekten Typen, der zu Hause alles macht. Oder dieses Phänomen, das jeder kennt, ohne es zu benennen: der Mann, der NIE länger als drei Wochen Single ist.</p>
-<p>Dieser Artikel macht, was die anderen nicht machen: die emotionale Abhängigkeit in ihrer männlichen Version beschreiben, mit ihren echten Gesichtern. Wenn du ein Mann bist und das liest, halt dich fest, es kann gut sein, dass es ein bisschen brennt. Und wenn du eine Frau bist, die ihren Partner wiedererkennt, ist auch das Ende des Artikels für dich.</p>`,
+<p><strong>Männliche emotionale Abhängigkeit gibt es, sie ist weit verbreitet... und sie trägt Masken, die niemand als emotionalen Mangel erkennt.</strong> Sie sieht aus wie Eifersucht, die kontrolliert, wie Wut, die wegen nichts explodiert, wie die Überinvestition des perfekten Typen, der zu Hause alles macht, oder wie dieses Phänomen, das jeder kennt, ohne es zu benennen: der Mann, der NIE länger als drei Wochen Single ist.</p>
+<p>Hier kommt also die emotionale Abhängigkeit in ihrer männlichen Version, mit ihren echten Gesichtern. Wenn du ein Mann bist und das liest, halt dich fest, es kann gut sein, dass es ein bisschen brennt. Und wenn du eine Frau bist, die ihren Partner wiedererkennt, ist auch das Ende des Artikels für dich.</p>`,
   quickSummary: [
     "Männliche emotionale Abhängigkeit sieht nicht aus wie das Klischee: Sie verkleidet sich.",
     "Ihre Lieblingsmasken: kontrollierende Eifersucht, Wut, Überinvestition, Beziehungen am Fließband.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'warum-man-sie-nicht-sieht',
       title: "Warum man sie bei Männern nie sieht",
-      content: `<p>Zwei Gründe, ein sozialer und ein mechanischer.</p>
+      content: `<p>Dafür gibt es zwei Gründe, einen sozialen und einen mechanischen.</p>
 <p>Zuerst der soziale: Jungen lernen, nicht «bedürftig» zu sein. Wegen einer Frau zu weinen, zuzugeben, dass man Angst hat, jemanden zu verlieren, «ich brauche dich» zu sagen, all das kostet viel an wahrgenommener Männlichkeit. Ergebnis: Das männliche Bindungsbedürfnis lernt sehr früh, sich als etwas anderes zu verkleiden. Es verschwindet nicht. Es schminkt sich.</p>
 <p>Dann der mechanische: Emotionale Abhängigkeit bleibt unter der Verkleidung dieselbe, <a href="/de/blog/emotionale-abhaengigkeit-in-beziehungen/">ein System, in dem der andere deinen Gefühlszustand reguliert</a>. Bei vielen Frauen äußert sich die Angst als sichtbare Bitte um Rückversicherung. Bei vielen Männern äußert sie sich als <em>Kontrolle</em>: Wenn ich nicht flehen kann, sichere ich ab. Überwache. Riegle zu. Es ist derselbe Motor mit anderer Karosserie. Und diese Karosserie richtet ringsum viel mehr Schaden an.</p>`,
     },
@@ -34,13 +34,13 @@ const article: BlogArticleData = {
       title: "Die 8 Gesichter männlicher emotionaler Abhängigkeit",
       content: `<ol>
 <li><strong>Die kontrollierende Eifersucht:</strong> Nicht die kleine schmeichelhafte Eifersucht: die, die prüft, ausfragt, verdächtigt. Das Handy «zufällig» angeschaut, das «war der auch da?», die Mädelsabende, die zum Problem werden. Hinter der Kontrolle immer dasselbe: die Panik zu verlieren, unfähig, sich anders auszudrücken.</li>
-<li><strong>Die Wut als Blitzableiter:</strong> Viele emotional abhängige Männer kennen nur eine ausgehende Emotion: Gereiztheit. Sie kommt spät heim, er explodiert. Sie vergisst Bescheid zu sagen, er schmollt zwei Tage. Übersetzung: «Ich hatte Angst und kann es nicht sagen». Wut ist Angst, die einen männlichen Ausgang gefunden hat.</li>
-<li><strong>Die Überinvestition des perfekten Typen:</strong> Diese ist gegenintuitiv. Er macht alles: den Einkauf, die Geschenke, die Pläne, die Reparaturen. Großzügig? An der Oberfläche. Darunter ist es ein stiller Vertrag: «Ich mache mich unentbehrlich, damit du nicht gehen kannst». Liebe, die sich ihre Sicherheit kauft, ist kein ganzes Geschenk mehr.</li>
+<li><strong>Die Wut als Blitzableiter:</strong> Viele emotional abhängige Männer kennen nur eine ausgehende Emotion: Gereiztheit. Sie kommt spät heim, er explodiert. Sie vergisst Bescheid zu sagen, er schmollt zwei Tage. Übersetzung: «Ich hatte Angst und kann es nicht sagen». Die Wut ist einfach Angst, die einen männlicheren Ausgang gefunden hat.</li>
+<li><strong>Die Überinvestition des perfekten Typen:</strong> Diese ist gegenintuitiv. Er macht alles: den Einkauf, die Geschenke, die Pläne, die Reparaturen. Großzügig? An der Oberfläche. Darunter ist es ein stiller Vertrag: «Ich mache mich unentbehrlich, damit du nicht gehen kannst». Eine Liebe, die dazu dient, sich Sicherheit zu kaufen, ist kein ganzes Geschenk mehr.</li>
 <li><strong>Nie Single:</strong> Der große Klassiker: Beziehungen am Fließband, die nächste beginnt, bevor die vorige endet, völlige Unfähigkeit, länger als einen Monat allein zu sein. Das ist keine Liebe zur Liebe, das ist Horror vor der Leere. Und jede Verkettung verhindert genau die Arbeit, die das Problem lösen würde.</li>
 <li><strong>Die ferngesteuerte Stimmung:</strong> Sie ist zärtlich, sein Tag ist gut. Sie ist distanziert, sein Tag ist ruiniert. Die Kollegen sehen es ihm an: «Ärger mit deiner Freundin?» Wenn sich deine Stimmung wie ein Wetterbericht deiner Beziehung lesen lässt, steht das Thermostat draußen.</li>
 <li><strong>Die brachliegenden Kumpels:</strong> Der Donnerstagsfußball aufgegeben, die Freunde «von früher», der Männerurlaub undenkbar geworden. Nicht weil sie es verbietet, Achtung! Weil sich von ihr zu entfernen, auch nur zwei Tage, zu viel Angst kostet. Also bleibt er. Und nennt es Liebe.</li>
-<li><strong>Das dauernde Opfer, still verbucht:</strong> Er sagt zu allem Ja, vergisst sich völlig... und führt dabei unbewusst Buch. An dem Tag, an dem es überläuft, kommt alles auf einmal: «Ich habe ALLES für dich getan!» Hingabe, die eine Gegenleistung erwartet, war keine Hingabe, sondern eine Anlage.</li>
-<li><strong>Verlassensangst als Forderung verkleidet:</strong> Er fleht nicht, er fordert. Anwesenheit, Rechenschaft, Beweise. Es sieht aus wie Autorität, es ist Panik im Anzug. Und es erschöpft den anderen genauso wie klagende Bedürftigkeit, nur schlimmer.</li>
+<li><strong>Das dauernde Opfer, still verbucht:</strong> Er sagt zu allem Ja, vergisst sich völlig... und führt dabei unbewusst Buch. An dem Tag, an dem es überläuft, kommt alles auf einmal: «Ich habe ALLES für dich getan!» Hingabe, die eine Gegenleistung erwartet, ist im Grunde eine Anlage.</li>
+<li><strong>Verlassensangst als Forderung verkleidet:</strong> Er fleht nicht, er fordert. Anwesenheit, Rechenschaft, Beweise. Es sieht aus wie Autorität, aber darunter ist es Panik. Und es erschöpft den anderen genauso wie klagende Bedürftigkeit, nur schlimmer.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Der Punkt, an dem es ernst wird</p>
@@ -54,13 +54,13 @@ const article: BlogArticleData = {
 <tr><td>Die brachliegenden Kumpels</td><td>Ein vergebener Mann, ganz normal</td><td>Ein ganzes Leben hinter einer einzigen Person einsortiert</td></tr>
 <tr><td>Das verbuchte Opfer</td><td>Ein hingebungsvoller Partner</td><td>Eine Schuld, deren Rückzahlung er erhofft</td></tr>
 <tr><td>Die ferngesteuerte Stimmung</td><td>Jemand Launischer</td><td>Ein Innenzustand, von außen gesteuert</td></tr>
-<tr><td>Angst als Forderung verkleidet</td><td>Ein autoritärer Mann</td><td>Panik, die einen Anzug angezogen hat</td></tr>
+<tr><td>Angst als Forderung verkleidet</td><td>Ein autoritärer Mann</td><td>Panik, als Autorität verkleidet</td></tr>
 </tbody></table></div>`,
     },
     {
       id: 'was-das-mit-der-beziehung-macht',
       title: "Was das mit der Beziehung macht (der Teufelskreis)",
-      content: `<p>Das Drama der männlichen emotionalen Abhängigkeit ist, dass sie genau das herstellt, was sie fürchtet. Der Mechanismus hat drei Takte und ist von unerbittlicher Regelmäßigkeit.</p>
+      content: `<p>Das Drama der männlichen emotionalen Abhängigkeit ist, dass sie genau das herstellt, was sie fürchtet. Der Mechanismus läuft in drei Takten ab und ist von unerbittlicher Regelmäßigkeit.</p>
 <p>Er hält zu fest, aus Angst zu verlieren. Sie erstickt, also nimmt sie Abstand, einfach um zu atmen. Er spürt den Abstand, gerät in Panik... und hält noch fester. Eifersucht steigt, Kontrolle steigt, Vorwürfe steigen. Sie entfernt sich weiter. Und eines Tages geht sie, nicht weil sie ihn nicht geliebt hätte, sondern weil man nicht unter Atemanhalten lieben kann.</p>
 <p>Das Schlimmste? Dieser Weggang «bestätigt» seine Ausgangsüberzeugung: Man verlässt mich am Ende immer. Und schon geht es von vorn los, mit der Nächsten, schlimmer. Genau diesen Kreis nähren die <a href="/de/blog/emotionale-abhaengigkeit-symptome/">klassischen Symptome des emotionalen Mangels</a> im Stillen... solange niemand ihn benennt.</p>`,
     },

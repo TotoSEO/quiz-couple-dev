@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "El inicio de una relación es el único momento en que se podría preguntar todo... y aquel en que no se atreve uno a preguntar nada. Vamos a arreglarlo.",
   introduction: `<p>Ahí está la paradoja de los inicios de relación: es EL momento en que las buenas preguntas lo cambiarían todo, y es el momento en que se evitan cuidadosamente... por miedo a parecer intenso, a saltarse una etapa, a romper la magia. Así que se avanza a ciegas, todo sonrisas, descubriendo la información importante por accidente, tres meses tarde.</p>
-<p><strong>Hacer preguntas al inicio de una relación no es falta de ligereza. Es evitar construir con los ojos cerrados.</strong> Todo está en la dosificación: están las preguntas del primer mes, las del tercero... y las que pueden esperar, porque cada cosa tiene su momento.</p>
+<p><strong>Hacer preguntas al inicio de una relación no es falta de ligereza, es evitar construir con los ojos cerrados.</strong> Todo está en la dosificación: están las preguntas del primer mes, las del tercero... y las que pueden esperar, porque cada cosa tiene su momento.</p>
 <p>Aquí van 60 preguntas dosificadas a propósito, de las más ligeras a las más comprometidas, y de regalo la lista de las que mejor NO hacer enseguida. Porque al principio de una historia, saber callarse es a veces tan útil como saber preguntar.</p>`,
   quickSummary: [
     "60 preguntas dosificadas por etapa: después de las primeras citas, y luego con las semanas.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'tras-las-primeras-citas',
       title: "Tras las primeras citas: conoceros (1-15)",
-      content: `<p>En esta fase hay una sola misión: descubrir quién es esa persona de verdad, más allá del personaje de las primeras citas. Ligereza obligatoria... profundidad opcional.</p>
+      content: `<p>En esta fase hay una sola misión: descubrir quién es esa persona de verdad, más allá del personaje de las primeras citas. La ligereza es obligatoria, la profundidad es opcional.</p>
 <ol>
 <li>¿Qué haces cuando tienes un día entero para ti?</li>
 <li>¿Cuál es tu ritmo natural: más de salir o más de casa?</li>
@@ -110,7 +110,7 @@ const article: BlogArticleData = {
     {
       id: 'no-hacer-demasiado-pronto',
       title: "Extra: las 8 preguntas que NO hay que hacer demasiado pronto (53-60)",
-      content: `<p>Sí, cuentan dentro de las 60... ¡porque saber retenerlas es una competencia de inicio de relación en sí misma! Cada una tiene su hora. Demasiado pronto, hunde; en el momento adecuado, construye.</p>
+      content: `<p>Sí, cuentan dentro de las 60... ¡porque saber retenerlas es una competencia de inicio de relación en sí misma! Cada una tiene su hora. Hecha demasiado pronto, hunde el ambiente; hecha en el momento adecuado, hace avanzar las cosas.</p>
 <ol start="53">
 <li><strong>«¿Cuál fue el problema con tu ex?»</strong> Demasiado pronto, obtienes o un relato acusatorio o un mal rato. El pasado sentimental llega solo, cuando hay confianza.</li>
 <li><strong>«¿Me quieres?»</strong> Hecha antes de sentirse, fuerza una respuesta... y una respuesta forzada no vale nada. Observa mejor los gestos, hablan antes que las palabras.</li>

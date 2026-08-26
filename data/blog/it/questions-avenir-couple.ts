@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Le coppie non falliscono quasi mai per mancanza d'amore. Falliscono su argomenti che non avevano mai messo sul tavolo.",
-  introduction: `<p>C'è una statistica che nessuno calcola ma che tutti conoscono: la maggior parte delle grandi crisi di coppia riguarda argomenti... che entrambi sapevano di dover affrontare un giorno. I soldi. I figli. I suoceri. La divisione delle faccende. Il «un giorno» è semplicemente arrivato troppo tardi, in piena crisi, nel peggior momento per parlarne con calma.</p>
-<p><strong>Parlare di futuro non ha mai ucciso una storia solida. Non parlarne ne ha uccise molte.</strong> E al contrario di quello che si crede, queste conversazioni non sono solenni né pesanti... condotte bene, sono anzi tra le più entusiasmanti che una coppia possa avere!</p>
+  introduction: `<p>C'è una statistica che nessuno calcola ma che tutti conoscono: la maggior parte delle grandi crisi di coppia riguarda argomenti... che entrambi sapevano di dover affrontare un giorno: i soldi, i figli, i suoceri, la divisione delle faccende. Il «un giorno» è semplicemente arrivato troppo tardi, in piena crisi, nel peggior momento per parlarne con calma.</p>
+<p><strong>Parlare di futuro non ha mai ucciso una storia solida, mentre non parlarne ne ha uccise molte.</strong> E al contrario di quello che si crede, queste conversazioni non sono solenni né pesanti... condotte bene, sono anzi tra le più entusiasmanti che una coppia possa avere!</p>
 <p>Ecco 60 domande sul futuro, classificate per grande tappa: prima di andare a vivere insieme, prima di impegnarsi sul serio, prima di un figlio, attorno ai soldi e sui vostri sogni comuni. Da piluccare PRIMA che gli argomenti diventino urgenti... è tutto il loro interesse.</p>`,
   quickSummary: [
     "60 domande classificate per tappa: convivere, impegnarsi, un figlio, i soldi, i sogni.",
@@ -94,7 +94,7 @@ const article: BlogArticleData = {
     {
       id: 'i-soldi-e-le-grandi-decisioni',
       title: "I soldi e le grandi decisioni (46-55)",
-      content: `<p>L'argomento di cui nessuno parla all'inizio e per cui tutti litigano dopo! I soldi in coppia non sono mai cifre... sono sicurezza, libertà e potere. Tanto vale parlarne quando va tutto bene.</p>
+      content: `<p>L'argomento di cui nessuno parla all'inizio e per cui tutti litigano dopo! I soldi in coppia non sono mai solo cifre: dietro ci sono sicurezza, libertà e potere. Tanto vale parlarne quando va tutto bene.</p>
 <ol start="46">
 <li>Qual è il tuo rapporto con i soldi: sicurezza, piacere, angoscia, libertà?</li>
 <li>Conto comune, conti separati o misto: il tuo modello, e perché?</li>
@@ -111,7 +111,7 @@ const article: BlogArticleData = {
     {
       id: 'i-vostri-sogni-comuni',
       title: "I vostri sogni comuni (56-60)",
-      content: `<p>Finiamo con il carburante. Perché una coppia non è solo una gestione riuscita... è una direzione che fa venire voglia. Cinque domande, le più belle.</p>
+      content: `<p>Finiamo con il carburante. Perché una coppia non è solo una gestione riuscita... è una direzione che fa venire voglia. Ne restano cinque, le più belle.</p>
 <ol start="56">
 <li>Qual è il sogno che non abbiamo mai formulato ad alta voce, tutti e due?</li>
 <li>Se ci concedessimo un anno completamente folle, come sarebbe?</li>

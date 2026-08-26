@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "We picture the emotionally dependent person as clingy and pleading. In men it more often looks like jealousy, anger... or a guy who's never single.",
   introduction: `<p>When you say «emotional dependency», everyone pictures the same scene: someone pleading, clinging, sending fifteen messages. And since most men don't recognise themselves in that image, they conclude it doesn't apply to them. Big mistake.</p>
-<p><strong>Male emotional dependency exists, it's widespread, and it wears masks nobody identifies as emotional need.</strong> The jealousy that controls. The anger that explodes over nothing. The over-investment of the perfect guy who does everything at home. Or that phenomenon everyone knows without naming it: the man who is NEVER single for more than three weeks.</p>
-<p>This article does what the others don't: describe emotional dependency in its male version, with its real faces. If you're a man reading this, brace yourself, there's a good chance it stings a bit. And if you're a woman recognising your partner, the end of the article is for you too.</p>`,
+<p><strong>Male emotional dependency exists, it's widespread, and it wears masks nobody identifies as emotional need.</strong> It looks like jealousy that controls, like anger that explodes over nothing, like the over-investment of the perfect guy who does everything at home, or like that phenomenon everyone knows without naming it: the man who is NEVER single for more than three weeks.</p>
+<p>So here is emotional dependency in its male version, with its real faces. If you're a man reading this, brace yourself, there's a good chance it stings a bit. And if you're a woman recognising your partner, the end of the article is for you too.</p>`,
   quickSummary: [
     "Male emotional dependency doesn't look like the cliché: it disguises itself.",
     "Its favourite masks: controlling jealousy, anger, over-investment, back-to-back relationships.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'why-we-never-see-it',
       title: "Why we never see it in men",
-      content: `<p>Two reasons, one social and one mechanical.</p>
+      content: `<p>There are two reasons for that, one social and one mechanical.</p>
 <p>The social one first: boys are taught not to be «in need». Crying over a girl, admitting you're afraid of losing someone, saying «I need you», all of that costs a lot in perceived masculinity. As a result, male emotional need learns very early to disguise itself as something else. It doesn't disappear. It puts on makeup.</p>
 <p>Then the mechanical one: emotional dependency stays the same under the disguise, <a href="/en/blog/emotional-dependency-in-relationships/">a system where the other person regulates your emotional state</a>. In many women, anxiety expresses itself as a visible demand for reassurance. In many men it expresses itself as <em>control</em>: if I can't plead, I'll secure. Monitor. Lock down. It's the same engine with different bodywork. And that bodywork does much more damage around it.</p>`,
     },
@@ -34,13 +34,13 @@ const article: BlogArticleData = {
       title: "The 8 faces of male emotional dependency",
       content: `<ol>
 <li><strong>Controlling jealousy:</strong> Not the small flattering jealousy: the kind that checks, questions, suspects. The phone looked at «by chance», the «was he there?», the girls' nights that become a problem. Behind the control, always the same thing: the terror of losing, unable to say itself any other way.</li>
-<li><strong>Anger as a lightning rod:</strong> Many emotionally dependent men know only one outgoing emotion: irritation. She comes home late, he explodes. She forgets to let him know, he sulks for two days. Translation: «I was scared, and I don't know how to say it». Anger is fear that has found a masculine exit.</li>
-<li><strong>The over-investment of the perfect guy:</strong> This one is counter-intuitive. He does everything: the shopping, the presents, the plans, the repairs. Generous? On the surface. Underneath, it's an implicit contract: «I'm making myself indispensable so you can't leave». Love that buys its own security isn't quite a gift any more.</li>
+<li><strong>Anger as a lightning rod:</strong> Many emotionally dependent men know only one outgoing emotion: irritation. She comes home late, he explodes. She forgets to let him know, he sulks for two days. Translation: «I was scared, and I don't know how to say it». The anger is just fear that has found a more masculine way out.</li>
+<li><strong>The over-investment of the perfect guy:</strong> This one is counter-intuitive. He does everything: the shopping, the presents, the plans, the repairs. Generous? On the surface. Underneath, it's an implicit contract: «I'm making myself indispensable so you can't leave». A love that's there to buy security isn't quite a gift any more.</li>
 <li><strong>Never single:</strong> The great classic: back-to-back relationships, the next one starting before the previous one ends, total inability to be alone for more than a month. It isn't a love of love, it's a horror of emptiness. And each new link prevents precisely the work that would fix the problem.</li>
 <li><strong>Remote-controlled mood:</strong> She's tender, his day is good. She's distant, his day is ruined. His colleagues can read it on his face: «trouble with your girlfriend?» When your mood reads like a weather bulletin for your relationship, the thermostat is outside.</li>
 <li><strong>Friendships left fallow:</strong> The Thursday football abandoned, the friends «from before», the lads' holiday now unthinkable. Not because she forbids it, careful! Because moving away from her, even for two days, costs too much in anxiety. So he stays. And he calls it love.</li>
-<li><strong>Permanent sacrifice, silently accounted for:</strong> He says yes to everything, forgets himself entirely, and keeps the books without knowing it. The day it overflows, it comes out all at once: «I did EVERYTHING for you!» Devotion that expects a return wasn't devotion, it was an investment.</li>
-<li><strong>Fear of abandonment disguised as demands:</strong> He doesn't plead, he demands. Presence, accounts, proof. It looks like authority, it's panic in a suit. And it exhausts the other person exactly like plaintive neediness, only worse.</li>
+<li><strong>Permanent sacrifice, silently accounted for:</strong> He says yes to everything, forgets himself entirely, and keeps the books without knowing it. The day it overflows, it comes out all at once: «I did EVERYTHING for you!» Devotion that expects a return is really just an investment.</li>
+<li><strong>Fear of abandonment disguised as demands:</strong> He doesn't plead, he demands. Presence, accounts, proof. It looks like authority, but underneath it's panic. And it exhausts the other person exactly like plaintive neediness, only worse.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ The point where it becomes serious</p>
@@ -54,7 +54,7 @@ const article: BlogArticleData = {
 <tr><td>Friendships left fallow</td><td>A settled man, that's normal</td><td>An entire life filed behind one person</td></tr>
 <tr><td>Accounted-for sacrifice</td><td>A devoted partner</td><td>A debt he hopes to be repaid</td></tr>
 <tr><td>Remote-controlled mood</td><td>Someone moody</td><td>An inner state piloted from outside</td></tr>
-<tr><td>Fear disguised as demands</td><td>An authoritarian man</td><td>Panic that has put on a suit</td></tr>
+<tr><td>Fear disguised as demands</td><td>An authoritarian man</td><td>Panic disguised as authority</td></tr>
 </tbody></table></div>`,
     },
     {

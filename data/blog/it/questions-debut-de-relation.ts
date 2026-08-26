@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "L'inizio di una relazione è l'unico momento in cui si potrebbe chiedere tutto... e quello in cui non si osa chiedere niente. Rimediamo.",
   introduction: `<p>Ecco il paradosso degli inizi di relazione: è IL momento in cui le domande giuste cambierebbero tutto, ed è il momento in cui le si evita con cura... per paura di sembrare intensi, di bruciare una tappa, di rompere la magia. Così si avanza alla cieca, tutti sorrisi, scoprendo le informazioni importanti per caso, tre mesi troppo tardi.</p>
-<p><strong>Fare domande all'inizio di una relazione non è mancanza di leggerezza. È evitare di costruire a occhi chiusi.</strong> Tutto sta nel dosaggio: ci sono le domande del primo mese, quelle del terzo... e quelle che aspetteranno, perché ogni cosa ha il suo momento.</p>
+<p><strong>Fare domande all'inizio di una relazione non è mancanza di leggerezza, è evitare di costruire a occhi chiusi.</strong> Tutto sta nel dosaggio: ci sono le domande del primo mese, quelle del terzo... e quelle che aspetteranno, perché ogni cosa ha il suo momento.</p>
 <p>Ecco 60 domande dosate apposta, dalle più leggere alle più impegnative, con in regalo l'elenco di quelle che è meglio NON fare subito. Perché all'inizio di una storia, saper tacere è a volte utile quanto saper chiedere.</p>`,
   quickSummary: [
     "60 domande dosate per tappa: dopo i primi appuntamenti, poi con il passare delle settimane.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'dopo-i-primi-appuntamenti',
       title: "Dopo i primi appuntamenti: conoscersi (1-15)",
-      content: `<p>A questo stadio c'è una sola missione: scoprire chi è davvero questa persona, oltre il personaggio dei primi appuntamenti. Leggerezza obbligatoria... profondità facoltativa.</p>
+      content: `<p>A questo stadio c'è una sola missione: scoprire chi è davvero questa persona, oltre il personaggio dei primi appuntamenti. La leggerezza è obbligatoria, la profondità resta facoltativa.</p>
 <ol>
 <li>Cosa fai quando hai una giornata tutta per te?</li>
 <li>Qual è il tuo ritmo naturale: più uscite o più tana?</li>
@@ -110,7 +110,7 @@ const article: BlogArticleData = {
     {
       id: 'da-non-fare-troppo-presto',
       title: "Bonus: le 8 domande da NON fare troppo presto (53-60)",
-      content: `<p>Sì, contano nelle 60... perché saperle trattenere è una competenza da inizio relazione a pieno titolo! Ognuna ha la sua ora. Troppo presto affonda tutto; al momento giusto costruisce.</p>
+      content: `<p>Sì, contano nelle 60... perché saperle trattenere è una competenza da inizio relazione a pieno titolo! Ognuna ha la sua ora. Fatta troppo presto affonda l'atmosfera; fatta al momento giusto fa avanzare le cose.</p>
 <ol start="53">
 <li><strong>«Qual era il problema con la tua ex?»</strong> Troppo presto ottieni o un atto d'accusa o un imbarazzo. Il passato sentimentale arriva da solo, quando c'è fiducia.</li>
 <li><strong>«Mi ami?»</strong> Posta prima di essere sentita, forza una risposta... e una risposta forzata non vale niente. Osserva piuttosto i gesti, parlano prima delle parole.</li>

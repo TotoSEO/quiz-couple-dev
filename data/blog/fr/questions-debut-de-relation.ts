@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Le début d'une relation, c'est le seul moment où on peut tout se demander... et où on n'ose rien demander. Réparons ça.",
   introduction: `<p>Le paradoxe des débuts de relation, le voilà : c'est LE moment où les bonnes questions changeraient tout, et c'est le moment où on les évite soigneusement... de peur de passer pour un intense, de griller une étape, de casser la magie. Alors on avance à l'aveugle, tout sourire, en découvrant les infos importantes par accident, trois mois trop tard.</p>
-<p><strong>Poser des questions en début de relation, ce n'est pas manquer de légèreté. C'est éviter de construire les yeux fermés.</strong> Tout est dans le dosage : il y a les questions du premier mois, celles du troisième... et celles qui attendront, parce que chaque chose a son moment.</p>
+<p><strong>Poser des questions en début de relation, ce n'est pas manquer de légèreté, c'est éviter de construire les yeux fermés.</strong> Tout est dans le dosage : il y a les questions du premier mois, celles du troisième... et celles qui attendront, parce que chaque chose a son moment.</p>
 <p>Voici 60 questions dosées exprès, des plus légères aux plus engageantes, avec en bonus la liste de celles qu'il vaut mieux NE PAS poser tout de suite. Parce qu'en début d'histoire, savoir se taire est parfois aussi utile que savoir demander...</p>`,
   quickSummary: [
     "60 questions dosées par étape : après les premiers rendez-vous, puis au fil des semaines.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'apres-les-premiers-rendez-vous',
       title: "Après les premiers rendez-vous : apprendre à se connaître (1-15)",
-      content: `<p>À ce stade, une seule mission : découvrir qui est cette personne, pour de vrai, au-delà du personnage des premiers rendez-vous. Légèreté obligatoire... profondeur en option.</p>
+      content: `<p>À ce stade, une seule mission : découvrir qui est cette personne, pour de vrai, au-delà du personnage des premiers rendez-vous. La légèreté est obligatoire, la profondeur reste en option.</p>
 <ol>
 <li>Qu'est-ce que tu fais quand tu as une journée rien qu'à toi ?</li>
 <li>C'est quoi ton rythme naturel : plutôt sorties ou plutôt cocon ?</li>
@@ -110,7 +110,7 @@ const article: BlogArticleData = {
     {
       id: 'a-ne-pas-poser-trop-tot',
       title: "Bonus : les 8 questions à NE PAS poser trop tôt (53-60)",
-      content: `<p>Oui, elles comptent dans les 60... parce que savoir les retenir est une compétence de début de relation à part entière ! Chacune a son heure. Trop tôt, elle plombe ; au bon moment, elle construit.</p>
+      content: `<p>Oui, elles comptent dans les 60... parce que savoir les retenir est une compétence de début de relation à part entière ! Chacune a son heure. Posée trop tôt, elle plombe l'ambiance ; posée au bon moment, elle fait avancer les choses.</p>
 <ol start="53">
 <li><strong>« C'était quoi le problème avec ton ex ? »</strong> Trop tôt, tu obtiens soit un récit à charge, soit un malaise. Le passé sentimental arrive tout seul, quand la confiance est là.</li>
 <li><strong>« Tu m'aimes ? »</strong> Posée avant d'être ressentie, elle force une réponse... et une réponse forcée ne vaut rien. Observe plutôt les gestes, ils parlent plus tôt que les mots.</li>

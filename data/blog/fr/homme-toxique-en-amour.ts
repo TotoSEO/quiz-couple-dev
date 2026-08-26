@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Entre le maladroit qui peut changer et le manipulateur qui ne changera pas, il y a toute une gamme... et on ne s'en protège pas de la même façon.",
   introduction: `<p>Depuis que « toxique » est devenu le mot de l'époque, on range tout dedans : le jaloux, le distant, le colérique, le menteur... Et c'est un vrai problème, parce que ces hommes-là ne se ressemblent pas. Certains abîment par immaturité, sans le vouloir, et peuvent changer. D'autres abîment par fonctionnement, et ne changeront pas. <strong>Confondre les deux, c'est soit fuir un homme qui aurait pu grandir... soit rester des années avec un homme qui ne grandira jamais.</strong></p>
-<p>Cet article fait donc le tri. Six profils d'homme toxique en amour, du moins grave au plus grave : ce que chacun fait vivre concrètement, à quoi tu le reconnais... et surtout, pour chacun, la réponse à LA question : est-ce que celui-là peut changer ?</p>
+<p>Alors faisons le tri : six profils d'homme toxique en amour, du moins grave au plus grave, avec ce que chacun fait vivre concrètement, à quoi tu le reconnais... et surtout, pour chacun, la réponse à LA question : est-ce que celui-là peut changer ?</p>
 <p>Un préalable quand même, et il compte : un profil se juge sur la durée, pas sur une mauvaise passe. Tout homme peut être pénible six mois dans une année difficile... On parle ici de fonctionnements installés, qui se répètent, et qui te coûtent. C'est cette répétition-là qui fait la toxicité, comme on l'a posé dans les <a href="/blog/relation-toxique-signes/">signes d'une relation toxique</a>.</p>`,
   quickSummary: [
     "« Toxique » recouvre des profils très différents... qui ne se gèrent pas pareil.",
@@ -39,7 +39,7 @@ const article: BlogArticleData = {
     {
       id: 'profil-3-le-jaloux',
       title: "Profil 3 : le jaloux qui surveille",
-      content: `<p>Au début, ça flattait presque. Puis les questions sont devenues des vérifications, les vérifications des reproches, et te voilà à envoyer des photos de ta soirée « pour le rassurer »... La jalousie de ce profil n'est pas une émotion qui le traverse, c'est un système qui s'installe, et qui grossit avec chaque concession.</p>
+      content: `<p>Au début, ça flattait presque. Puis les questions sont devenues des vérifications, les vérifications des reproches, et te voilà à envoyer des photos de ta soirée « pour le rassurer »... La jalousie de ce profil n'est pas juste une émotion qui passe : c'est un système qui s'installe, et qui grossit avec chaque concession.</p>
 <p><strong>Ce que ça te fait vivre :</strong> une liberté sous conditions. Tes tenues, tes amis, tes horaires deviennent des sujets... et tu t'autocensures de plus en plus pour éviter les crises.</p>
 <p><strong>Est-ce qu'il peut changer ?</strong> Seulement s'il reconnaît que le problème est chez lui, pas dans tes comportements. Un jaloux qui dit « aide-moi, je sais que c'est irrationnel » peut travailler, souvent sur une <a href="/blog/dependance-affective-chez-l-homme/">dépendance affective masculine</a> qui ne dit pas son nom. Un jaloux qui dit « change-toi et je serai moins jaloux » ne changera pas : il t'a déjà nommée responsable de son problème.</p>`,
     },
@@ -53,7 +53,7 @@ const article: BlogArticleData = {
     {
       id: 'profil-5-le-devalorisateur',
       title: "Profil 5 : le dévalorisateur en douceur",
-      content: `<p>Il ne crie jamais, il ne t'insulte pas... il lime. Une petite remarque sur ta tenue, une blague sur tes ambitions, un « c'est mignon » sur ton projet, un silence appuyé quand tu brilles en société. Pris un par un, chaque pique est indéfendable comme reproche (« mais je plaisantais ! »)... accumulés, ils font un travail de sape remarquable.</p>
+      content: `<p>Il ne crie jamais, il ne t'insulte pas... il t'use par petites touches. Une petite remarque sur ta tenue, une blague sur tes ambitions, un « c'est mignon » sur ton projet, un silence appuyé quand tu brilles en société. Pris un par un, chaque pique est indéfendable comme reproche (« mais je plaisantais ! »)... accumulés, ils font un travail de sape remarquable.</p>
 <p><strong>Ce que ça te fait vivre :</strong> une estime de toi qui fond sans cause identifiable. Tu te trouves moins drôle, moins capable, moins intéressante qu'avant... et tu ne relies pas ça à lui, puisque « il ne fait rien de grave ».</p>
 <p><strong>Est-ce qu'il peut changer ?</strong> Le test est simple, et tu connais la méthode maintenant : nomme le comportement, une fois, calmement, avec deux exemples précis. Un maladroit tombe des nues et se corrige, au moins partiellement. Un dévalorisateur de fond retourne la scène : tu es « trop susceptible », tu « cherches les problèmes »... Cette inversion-là, c'est sa réponse. Et elle est définitive.</p>`,
     },

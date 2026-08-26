@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Con un narcisista, la rottura non è la fine della storia. È un capitolo a sé... e quello che richiede più preparazione.",
   introduction: `<p>Lasciare qualcuno è già difficile. Lasciare un narcisista è un esercizio a parte: una rottura in cui l'altro non ti lascia andare, in cui le lacrime seguono le minacce, in cui l'uomo degli inizi riappare proprio al momento giusto... e in cui puoi ritrovarti, tre settimane dopo, tornata senza sapere bene come.</p>
-<p>Bisogna dirlo senza giri di parole: <strong>la maggior parte delle vittime non se ne va una volta. Se ne va più volte, perché nessuno le aveva avvisate di cosa succede DOPO l'annuncio.</strong> Non è una questione di volontà. È una questione di preparazione.</p>
-<p>Allora prepariamoci. Cosa si gioca prima della rottura, durante, e soprattutto dopo, perché è dopo che si decide tutto. Se leggi questo in piena esitazione, tieni a mente una cosa: non devi essere sicura al 100% per prepararti. Prepararsi non impegna a nulla... e cambia tutto il giorno in cui decidi.</p>`,
+<p>Bisogna dirlo senza giri di parole: <strong>la maggior parte delle vittime non se ne va una volta. Se ne va più volte, perché nessuno le aveva avvisate di cosa succede DOPO l'annuncio.</strong> Non è una questione di volontà, è una questione di preparazione.</p>
+<p>Allora prepariamoci, guardando cosa si gioca prima della rottura, durante, e soprattutto dopo, perché è dopo che si decide tutto. Se leggi questo in piena esitazione, tieni a mente una cosa: non devi essere sicura al 100% per prepararti. Prepararsi non impegna a nulla... e cambia tutto il giorno in cui decidi.</p>`,
   quickSummary: [
     "Una rottura con un narcisista si prepara in silenzio, prima dell'annuncio.",
     "L'annuncio ideale: corto, fattuale, senza trattativa... e senza speranza di un «bel finale».",
@@ -48,8 +48,8 @@ const article: BlogArticleData = {
       id: 'durante-l-annuncio',
       title: "Durante: l'annuncio, versione corta",
       content: `<p>Dimentica la grande spiegazione. Non gli farai capire, non gli farai ammettere niente, non avrai la conversazione di chiusura dei film. Cercare un «bel finale» con un narcisista significa offrirgli un ultimo tavolo di trattativa, e in quel gioco è molto più bravo di te.</p>
-<p>La formula che funziona sta in tre punti: <strong>corta, fattuale, chiusa.</strong> «Ho preso la mia decisione, è finita, non è negoziabile.» Niente elenco di rimproveri, verrà contestato punto per punto. Niente «ho bisogno di tempo», lui sentirà «negoziabile». Niente giustificazioni... sono appigli.</p>
-<p>E preparati alla sequenza che segue l'annuncio, perché è di una prevedibilità totale: prima le lacrime e le promesse, poi la rabbia, al terzo posto la colpevolizzazione («stai distruggendo tutto», «dopo tutto quello che abbiamo vissuto»)... e a volte le minacce. Non è dolore che si esprime, è un sistema che prova tutte le porte, in ordine. Queste <a href="/it/blog/manipolatore-narcisista/">reazioni tipo del manipolatore</a> sono di una prevedibilità notevole... e conoscerle in anticipo toglie loro quasi tutto il potere.</p>`,
+<p>La formula che funziona è <strong>corta, fattuale, chiusa.</strong> «Ho preso la mia decisione, è finita, non è negoziabile.» Niente elenco di rimproveri, verrà contestato punto per punto. Niente «ho bisogno di tempo», lui sentirà «negoziabile». E niente giustificazioni... ognuna gli dà un appiglio per rilanciare la discussione.</p>
+<p>E preparati alla sequenza che segue l'annuncio, perché è di una prevedibilità totale: prima le lacrime e le promesse, poi la rabbia, al terzo posto la colpevolizzazione («stai distruggendo tutto», «dopo tutto quello che abbiamo vissuto»)... e a volte le minacce. Sembra dolore, ma è soprattutto un sistema che prova tutte le porte, in ordine. Queste <a href="/it/blog/manipolatore-narcisista/">reazioni tipo del manipolatore</a> si ripetono da una storia all'altra... e conoscerle in anticipo toglie loro quasi tutto il potere.</p>`,
     },
     {
       id: 'dopo-la-tempesta',
@@ -69,7 +69,7 @@ const article: BlogArticleData = {
         {
           id: 'atto-3-i-ritorni-ciclici',
           title: "Atto 3: i ritorni ciclici",
-          content: `<p>Silenzio... poi ricomparsa. Un compleanno, un «passavo di qua», un messaggio innocuo alle undici di sera. L'hoovering, letteralmente «l'aspirapolvere»: torna a verificare se la porta si riapre. E nota il tempismo: quasi sempre quando cominci a stare meglio. Non è un caso, è un radar.</p>`,
+          content: `<p>Silenzio... poi ricomparsa. Un compleanno, un «passavo di qua», un messaggio innocuo alle undici di sera. L'hoovering, letteralmente «l'aspirapolvere»: torna a verificare se la porta si riapre. E nota il tempismo: quasi sempre quando cominci a stare meglio. Non è un caso: ha una specie di radar per questo.</p>`,
         },
       ],
     },
@@ -81,13 +81,13 @@ const article: BlogArticleData = {
         {
           id: 'il-ritorno-dalle-vecchie',
           title: "Il ritorno dalle vecchie",
-          content: `<p>Un narcisista non chiude mai davvero le sue storie: mantiene un vivaio. Ex «rimaste in buoni rapporti», «amiche» ambigue, ricomparse periodiche. Ogni relazione passata è una fonte di carburante potenziale, da riattivare in caso di penuria. Se scopri che è tornato da un'ex: non è che lei fosse meglio. È che lei ha risposto.</p>`,
+          content: `<p>Un narcisista non chiude mai davvero le sue storie: mantiene un vivaio. Ex «rimaste in buoni rapporti», «amiche» ambigue, ricomparse periodiche. Ogni relazione passata è una fonte di carburante potenziale, da riattivare in caso di penuria. Se scopri che è tornato da un'ex, non è che lei fosse meglio: è solo che lei ha risposto.</p>`,
         },
         {
           id: 'la-sostituzione-lampo',
           title: "La sostituzione lampo",
-          content: `<p>Tre settimane dopo la vostra rottura, eccolo in coppia, esibito, raggiante, «finalmente felice». Doloroso da vedere, eppure è una firma, non una prova d'amore: gli serve uno specchio in permanenza, uno qualunque. La nuova non ha vinto un principe. È appena entrata nella fase di idealizzazione dello stesso ciclo che hai vissuto tu... e sai esattamente cosa la aspetta.</p>
-<p>In entrambi i casi la lezione è la stessa: <strong>niente di tutto questo parla del tuo valore.</strong> Il cast cambia, il sistema resta.</p>`,
+          content: `<p>Tre settimane dopo la vostra rottura, eccolo in coppia, esibito, raggiante, «finalmente felice». Doloroso da vedere, eppure è una firma, non una prova d'amore: gli serve uno specchio in permanenza, uno qualunque. La nuova non ha vinto un principe: è appena entrata nella fase di idealizzazione dello stesso ciclo che hai vissuto tu... e sai esattamente cosa la aspetta.</p>
+<p>In entrambi i casi la lezione è la stessa: <strong>niente di tutto questo parla del tuo valore.</strong> I volti cambiano, ma il sistema non cambia.</p>`,
         },
       ],
     },
@@ -96,7 +96,7 @@ const article: BlogArticleData = {
       title: "Il contatto zero: le regole che lo fanno reggere",
       content: `<p>Il contatto zero, taglio totale dei canali, è lo strumento più efficace che esista davanti a questo profilo... a patto di trattarlo per quello che è: una disintossicazione, non una prova di volontà.</p>
 <ul>
-<li><strong>Totale, altrimenti niente:</strong> Blocco ovunque: telefono, social, mail. Un canale «nel caso» non è prudenza, è una porta socchiusa... e a lui ne basta una.</li>
+<li><strong>Totale, altrimenti niente:</strong> Blocco ovunque: telefono, social, mail. Un canale tenuto «nel caso» è una porta socchiusa... e a lui ne basta una.</li>
 <li><strong>Avvisa chi ti sta intorno:</strong> Gli intermediari sono il suo piano B preferito: «digli solo che...». I tuoi cari devono sapere che non trasmettono niente, in nessuna direzione.</li>
 <li><strong>Prepara la ricaduta della voglia:</strong> Ci saranno sere in cui vorrai solo «sapere come sta». È l'astinenza che parla, non il tuo giudizio. Rileggi il tuo elenco fattuale, chiama il tuo appoggio... e lascia passare l'onda, passa.</li>
 <li><strong>Caso particolare: figli o obblighi comuni.</strong> Il contatto zero diventa un «contatto minimo»: scritto, fattuale, limitato allo stretto necessario, idealmente su un solo canale tracciabile. Tutte le altre regole restano valide.</li>

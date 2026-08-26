@@ -12,8 +12,8 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Bei einem Narzissten ist die Trennung nicht das Ende der Geschichte. Sie ist ein eigenes Kapitel... und dasjenige, das die meiste Vorbereitung braucht.",
   introduction: `<p>Jemanden zu verlassen ist schon schwer. Einen Narzissten zu verlassen ist eine eigene Übung: eine Trennung, bei der der andere dich nicht gehen lässt, bei der auf Drohungen Tränen folgen, bei der der Mann vom Anfang genau im richtigen Moment wieder auftaucht... und bei der du dich drei Wochen später zurück wiederfinden kannst, ohne recht zu wissen wie.</p>
-<p>Man muss es ohne Umschweife sagen: <strong>Die meisten Betroffenen gehen nicht einmal. Sie gehen mehrmals, weil niemand sie gewarnt hat, was NACH der Ankündigung passiert.</strong> Das ist keine Frage des Willens. Es ist eine Frage der Vorbereitung.</p>
-<p>Bereiten wir uns also vor. Was vor der Trennung passiert, währenddessen und vor allem danach, denn danach entscheidet sich alles. Wenn du das mitten im Zögern liest, behalte eines im Kopf: Du musst dir nicht zu 100 Prozent sicher sein, um dich vorzubereiten. Vorbereitung verpflichtet zu nichts... und sie verändert alles an dem Tag, an dem du entscheidest.</p>`,
+<p>Man muss es ohne Umschweife sagen: <strong>Die meisten Betroffenen gehen nicht einmal. Sie gehen mehrmals, weil niemand sie gewarnt hat, was NACH der Ankündigung passiert.</strong> Das ist keine Frage des Willens, sondern eine Frage der Vorbereitung.</p>
+<p>Bereiten wir uns also vor und schauen, was vor der Trennung passiert, währenddessen und vor allem danach, denn danach entscheidet sich alles. Wenn du das mitten im Zögern liest, behalte eines im Kopf: Du musst dir nicht zu 100 Prozent sicher sein, um dich vorzubereiten. Vorbereitung verpflichtet zu nichts... und sie verändert alles an dem Tag, an dem du entscheidest.</p>`,
   quickSummary: [
     "Eine Trennung von einem Narzissten wird im Stillen vorbereitet, vor der Ankündigung.",
     "Die ideale Ankündigung: kurz, sachlich, keine Verhandlung... und keine Hoffnung auf ein «gutes Ende».",
@@ -48,8 +48,8 @@ const article: BlogArticleData = {
       id: 'waehrend-der-ankuendigung',
       title: "Währenddessen: die Ankündigung, Kurzfassung",
       content: `<p>Vergiss die große Erklärung. Du wirst ihn nichts verstehen lassen, du wirst ihn nichts zugeben lassen, du bekommst nicht das Abschlussgespräch aus den Filmen. Ein «gutes Ende» mit einem Narzissten zu suchen heißt, ihm einen letzten Verhandlungstisch anzubieten, und in diesem Spiel ist er viel besser als du.</p>
-<p>Die Formel, die funktioniert, hat drei Punkte: <strong>kurz, sachlich, geschlossen.</strong> «Ich habe meine Entscheidung getroffen, es ist vorbei, sie ist nicht verhandelbar.» Keine Vorwurfsliste, sie wird Punkt für Punkt bestritten. Kein «ich brauche Zeit», er hört «verhandelbar». Keine Rechtfertigungen... sie sind Griffe.</p>
-<p>Und bereite dich auf die Abfolge nach der Ankündigung vor, denn sie ist völlig vorhersehbar: zuerst Tränen und Versprechen, dann Wut, an dritter Stelle Schuldzuweisungen («du zerstörst alles», «nach allem, was wir erlebt haben»)... und manchmal Drohungen. Das ist kein Kummer, der sich ausdrückt, das ist ein System, das alle Türen testet, der Reihe nach. Diese <a href="/de/blog/narzisstischer-manipulator/">typischen Reaktionen des Manipulators</a> sind bemerkenswert vorhersehbar... und sie im Voraus zu kennen nimmt ihnen den größten Teil ihrer Macht.</p>`,
+<p>Die Formel, die funktioniert, ist <strong>kurz, sachlich, geschlossen.</strong> «Ich habe meine Entscheidung getroffen, es ist vorbei, sie ist nicht verhandelbar.» Keine Vorwurfsliste, sie wird Punkt für Punkt bestritten. Kein «ich brauche Zeit», er hört «verhandelbar». Auch keine Rechtfertigungen... jede gibt ihm einen Griff, um die Diskussion neu zu eröffnen.</p>
+<p>Und bereite dich auf die Abfolge nach der Ankündigung vor, denn sie ist völlig vorhersehbar: zuerst Tränen und Versprechen, dann Wut, an dritter Stelle Schuldzuweisungen («du zerstörst alles», «nach allem, was wir erlebt haben»)... und manchmal Drohungen. Es sieht aus wie Kummer, aber es ist vor allem ein System, das alle Türen testet, der Reihe nach. Diese <a href="/de/blog/narzisstischer-manipulator/">typischen Reaktionen des Manipulators</a> wiederholen sich von einer Geschichte zur nächsten... und sie im Voraus zu kennen nimmt ihnen den größten Teil ihrer Macht.</p>`,
     },
     {
       id: 'danach-der-sturm',
@@ -69,7 +69,7 @@ const article: BlogArticleData = {
         {
           id: 'akt-3-die-zyklische-rueckkehr',
           title: "Akt 3: die zyklische Rückkehr",
-          content: `<p>Stille... dann Wiederauftauchen. Ein Geburtstag, ein «ich war gerade in der Gegend», eine harmlose Nachricht um 23 Uhr. Hoovering, wörtlich «Staubsaugen»: Er kommt prüfen, ob die Tür wieder aufgeht. Und achte auf das Timing: fast immer, wenn es dir gerade besser geht. Das ist kein Zufall, das ist ein Radar.</p>`,
+          content: `<p>Stille... dann Wiederauftauchen. Ein Geburtstag, ein «ich war gerade in der Gegend», eine harmlose Nachricht um 23 Uhr. Hoovering, wörtlich «Staubsaugen»: Er kommt prüfen, ob die Tür wieder aufgeht. Und achte auf das Timing: fast immer, wenn es dir gerade besser geht. Das ist kein Zufall: Er hat eine Art Radar dafür.</p>`,
         },
       ],
     },
@@ -81,13 +81,13 @@ const article: BlogArticleData = {
         {
           id: 'die-rueckkehr-zu-den-frueheren',
           title: "Die Rückkehr zu den Früheren",
-          content: `<p>Ein Narzisst schließt seine Geschichten nie wirklich ab: Er unterhält ein Reservoir. Exfreundinnen, mit denen er «im Guten» blieb, mehrdeutige «Freundinnen», regelmäßige Wiederauftritte. Jede frühere Beziehung ist eine potenzielle Treibstoffquelle, bei Knappheit zu reaktivieren. Wenn du erfährst, dass er eine Ex wieder getroffen hat: Es liegt nicht daran, dass sie besser war. Es liegt daran, dass sie geantwortet hat.</p>`,
+          content: `<p>Ein Narzisst schließt seine Geschichten nie wirklich ab: Er unterhält ein Reservoir. Exfreundinnen, mit denen er «im Guten» blieb, mehrdeutige «Freundinnen», regelmäßige Wiederauftritte. Jede frühere Beziehung ist eine potenzielle Treibstoffquelle, bei Knappheit zu reaktivieren. Wenn du erfährst, dass er eine Ex wieder getroffen hat, liegt es nicht daran, dass sie besser war: Es liegt einfach daran, dass sie geantwortet hat.</p>`,
         },
         {
           id: 'der-blitzersatz',
           title: "Der Blitzersatz",
-          content: `<p>Drei Wochen nach eurer Trennung ist er wieder in einer Beziehung, zur Schau gestellt, strahlend, «endlich glücklich». Schmerzhaft zu sehen, und doch ist es eine Signatur, kein Liebesbeweis: Er braucht permanent einen Spiegel, irgendeinen. Die Neue hat keinen Prinzen gewonnen. Sie ist gerade in die Idealisierungsphase desselben Zyklus eingetreten wie du... und du weißt genau, was sie erwartet.</p>
-<p>In beiden Fällen ist die Lehre dieselbe: <strong>Nichts davon spricht über deinen Wert.</strong> Die Besetzung wechselt, das System bleibt.</p>`,
+          content: `<p>Drei Wochen nach eurer Trennung ist er wieder in einer Beziehung, zur Schau gestellt, strahlend, «endlich glücklich». Schmerzhaft zu sehen, und doch ist es eine Signatur, kein Liebesbeweis: Er braucht permanent einen Spiegel, irgendeinen. Die Neue hat keinen Prinzen gewonnen: Sie ist gerade in die Idealisierungsphase desselben Zyklus eingetreten wie du... und du weißt genau, was sie erwartet.</p>
+<p>In beiden Fällen ist die Lehre dieselbe: <strong>Nichts davon spricht über deinen Wert.</strong> Die Gesichter wechseln, aber das System bleibt dasselbe.</p>`,
         },
       ],
     },
@@ -96,7 +96,7 @@ const article: BlogArticleData = {
       title: "Der Kontaktabbruch: die Regeln, die ihn tragen",
       content: `<p>Der Kontaktabbruch, das vollständige Kappen aller Kanäle, ist das wirksamste Werkzeug gegen dieses Profil... vorausgesetzt, man behandelt ihn als das, was er ist: ein Entzug, keine Willensprüfung.</p>
 <ul>
-<li><strong>Total, sonst gar nicht:</strong> Blockieren überall: Telefon, soziale Netzwerke, Mail. Ein Kanal «für alle Fälle» ist keine Vorsicht, es ist eine angelehnte Tür... und mehr braucht er nicht.</li>
+<li><strong>Total, sonst gar nicht:</strong> Blockieren überall: Telefon, soziale Netzwerke, Mail. Ein Kanal, der «für alle Fälle» offen bleibt, ist eine angelehnte Tür... und mehr braucht er nicht.</li>
 <li><strong>Informiere dein Umfeld:</strong> Vermittler sind sein liebster Plan B: «sag ihr nur, dass...». Deine Nächsten müssen wissen, dass sie in keine Richtung etwas weitergeben.</li>
 <li><strong>Rechne mit dem Rückfallimpuls:</strong> Es wird Abende geben, an denen du einfach «wissen willst, wie es ihm geht». Das ist der Entzug, der spricht, nicht dein Urteil. Lies deine sachliche Liste noch einmal, ruf deine Stütze an... und lass die Welle vorbeiziehen, sie geht vorbei.</li>
 <li><strong>Sonderfall: Kinder oder gemeinsame Verpflichtungen.</strong> Aus dem Kontaktabbruch wird «minimaler Kontakt»: schriftlich, sachlich, auf das Nötigste beschränkt, idealerweise über einen einzigen nachvollziehbaren Kanal. Alle anderen Regeln gelten weiter.</li>
