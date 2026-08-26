@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Due persone che parlano a un tavolo, una ascolta l'altra con attenzione",
   publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "La differenza tra una conversazione che si spegne e una ragazza che ha voglia di rivederti non è la tua parlantina. È la qualità delle tue domande, e quello che fai delle risposte.",
+  excerpt: "Una conversazione che si spegne o una ragazza che ha voglia di rivederti: tutto si gioca sulla qualità delle tue domande, e su quello che fai delle risposte.",
   introduction: `<p>Siamo onesti due minuti. Il problema non è quasi mai trovare UNA domanda da fare. Il problema è che «come va?», «che lavoro fai?» e «bel weekend?» sono esattamente il modo in cui iniziano tutte le altre conversazioni che lei sta avendo in questo momento.</p>
 <p><strong>Una buona domanda fa la differenza perché mostra una cosa rara: che ti interessi a lei, non solo al fatto di parlare.</strong> E quello, credimi, si sente subito.</p>
-<p>Ecco 90 domande, ordinate per situazione: via messaggio per rompere il ghiaccio, dal vivo per conoscervi, per farla ridere, per creare complicità, per flirtare con eleganza e per sapere, finalmente, se le piaci. Con un consiglio che vale per tutte e 90: la domanda apre la porta, ma è il tuo modo di ascoltare la risposta che fa venire voglia di entrare.</p>`,
+<p>Ecco 90 domande, ordinate per situazione, dal primo messaggio al faccia a faccia dove si decide tutto. Con un consiglio che vale per tutte e 90: è il tuo modo di ascoltare la risposta a fare la differenza, molto più della domanda in sé.</p>`,
   quickSummary: [
     "90 domande ordinate per situazione, dal primo messaggio al capire se le piaci.",
     "Una domanda poi silenzio: quello che conquista è l'ascolto, non la scorta di domande.",

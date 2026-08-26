@@ -18,7 +18,7 @@ const article: BlogArticleData = {
     "Das Signal ist nicht seine Ausrede, sondern ob er von sich aus einen neuen Termin vorschlägt, mit einem Tag darin.",
     "Im Moment selbst: kurz antworten, keine Vorwürfe, und keinen Termin an seiner Stelle vorschlagen.",
     "Wenn nach zwei Tagen nichts kommt, reicht eine Nachricht. Genau eine.",
-    "Zwei Absagen ohne neuen Termin sind eine Antwort. Sie wird nur anders formuliert.",
+    "Zwei Absagen ohne neuen Termin sind schon eine Antwort, auch wenn er sie nie in Worte fasst.",
   ],
   sections: [
     {
@@ -33,11 +33,11 @@ const article: BlogArticleData = {
 <li><strong>Er hat an dem Abend etwas anderes vor:</strong> ein besseres Angebot, etwas mit seinen Freunden, jemand anderes. Hier ist die Absage eine Entscheidung, auch wenn er sie nicht so darstellt.</li>
 <li><strong>Er hatte nie vor zu kommen:</strong> das Date gab es nur, damit er nicht Nein sagen musste, und er hat bis zum letzten Moment gewartet, um sich das Gespräch zu sparen. Das ist der seltenste Fall, und zugleich der, der sich danach am schnellsten zeigt.</li>
 </ul>
-<p>Das Problem ist, dass alle fünf Gründe ungefähr dieselbe Nachricht erzeugen. «Sorry, mir ist etwas dazwischengekommen, ich schaffe es nicht.» Am Text kannst du sie nicht unterscheiden, und das ist normal, denn die Information steckt nicht darin. Sie steckt woanders.</p>`,
+<p>Das Problem ist, dass alle fünf Gründe ungefähr dieselbe Nachricht erzeugen. «Sorry, mir ist etwas dazwischengekommen, ich schaffe es nicht.» Am Text kannst du sie nicht unterscheiden, und das ist normal, denn die Information steckt nicht in der Nachricht. Sie steckt in dem, was er direkt danach tut, und genau das schauen wir uns jetzt an.</p>`,
     },
     {
       id: 'le-signal',
-      title: "Das einzige Signal, auf das es ankommt, und es ist nicht seine Ausrede",
+      title: "Das einzige Signal, auf das es ankommt",
       content: `<p>Schau darauf, was er in den Minuten nach der Absage tut, nicht darauf, was er zur Erklärung erzählt. Eine lange, detaillierte Ausrede beweist nichts, sie beweist, dass es ihm unangenehm ist. Worauf es ankommt: schlägt er von allein etwas Neues vor, mit einem Tag darin.</p>
 <div><table><thead><tr><th>Was er schickt</th><th>Was das heißt</th></tr></thead><tbody>
 <tr><td>Er sagt ab und nennt gleich danach einen konkreten neuen Tag</td><td>Er wollte dich sehen. Die Absage ist nicht das Thema.</td></tr>
@@ -54,7 +54,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'ce-que-dit-la-recherche',
-      title: "Warum eine Absage nichts sagt und zwei Absagen alles",
+      title: "Warum erst die zweite Absage zählt",
       content: `<p>Dafür gibt es einen einfachen Grund, und er ist seit Langem bekannt.</p>
 <p>1985 haben drei Forscher, John Rempel, John Holmes und Mark Zanna, eine Arbeit über Vertrauen in Paarbeziehungen veröffentlicht, im <em>Journal of Personality and Social Psychology</em>. Sie ist ein Klassiker geworden. Darin erklären sie, dass Vertrauen in drei Schritten entsteht, und zwar immer in derselben Reihenfolge.</p>
 <p>Den ersten nennen sie Vorhersagbarkeit. Er beruht auf einer einzigen Sache: darauf, was du die Person schon mehrfach hast tun sehen. Der zweite betrifft, wer sie ist, und nicht mehr nur, was sie tut. Der dritte ist die Wette, die du auf ihre Absichten abschließt, ohne Beweise.</p>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
 <p>Das andere, was an diesem Abend passiert, ist das, was du in deinem Kopf aus der Absage machst. 1990 haben Thomas Bradbury und Frank Fincham Dutzende Studien darüber durchgesehen, wie Menschen in Beziehungen das Verhalten des anderen erklären. Das stand im <em>Psychological Bulletin</em>, und das Ergebnis ist deutlich.</p>
 <p>Menschen, die in ihrer Beziehung unglücklich sind, erklären negatives Verhalten des Partners immer gleich. Es kommt von ihm («er ist eben so»), es wird sich nicht ändern («er wird immer so sein»), und es färbt auf alles andere ab («es läuft ja sowieso nichts»). Bei genau demselben Verhalten schauen glückliche Menschen zuerst auf die Umstände.</p>
 <p>Das Interessante kommt danach. Studien, die dieselben Paare über Jahre begleiten, legen nahe, dass diese Erklärungen den Zustand der Beziehung nicht nur abbilden: sie wirken auf ihn. Anders gesagt, die Geschichte, die du dir heute Abend erzählst, kann verändern, was danach passiert.</p>
-<p>Diese Arbeiten betreffen feste Paare, nicht ein zweites Date. Was trotzdem gilt, ist der Reflex: warten, bis du genug hast, um zu urteilen, bevor du urteilst. Und der Abend, an dem du versetzt wirst, ist genau der, an dem du am liebsten das Gegenteil tust.</p>`,
+<p>Diese Arbeiten betreffen feste Paare, nicht ein zweites Date. Was trotzdem gilt, ist der Reflex: warten, bis du genug gesehen hast, bevor du dir ein Bild machst. Und an dem Abend, an dem du versetzt wirst, kommt dieser Reflex nicht von allein...</p>`,
     },
     {
       id: 'quoi-repondre',
@@ -135,7 +135,7 @@ const article: BlogArticleData = {
 </div>
 <p class="imsg-note"><strong>Warum das funktioniert:</strong> es ist keine Strafe und es wird nicht kalt gesagt. Du trägst die Organisation einfach nicht mehr allein, was eine gesunde Reaktion ist und kein Schmollen. Ab da schlägt er entweder in dieser Woche etwas vor, dann weißt du, dass er dich sehen will, oder er schlägt nichts vor, dann weißt du das auch. Das wichtige Wort ist «wenn»: du schlägst die Tür nicht zu, du hältst sie nur nicht mehr mit ausgestrecktem Arm offen.</p>
 </div>
-<p>Und falls das Date am Ende doch stattfindet, haben wir eine Liste vorbereitet, damit dir nichts ausgeht. Hier ist, <a href="/de/fragen-erstes-date/">worüber man redet, wenn man sich zum ersten Mal sieht</a>, vom Leichten bis zu den Themen, die zählen.</p>`,
+<p>Und falls das Date am Ende doch stattfindet, bleibt nur noch, <a href="/de/fragen-erstes-date/">Gesprächsstoff für dieses erste Mal</a> zu finden, angefangen beim Leichten.</p>`,
     },
     {
       id: 'quand-arreter',
@@ -144,8 +144,8 @@ const article: BlogArticleData = {
 <p><strong>Zwei Absagen und nie ein neuer Termin von ihm:</strong> das reicht. Das ist kein Pech, das ist jemand, der dich verfügbar hält, ohne dich zu sehen, und das kann Monate so gehen, wenn du es zulässt.</p>
 <p><strong>Immer schlägst du vor, meldest dich, organisierst:</strong> zähl die letzten fünf Verabredungen und schau, von wem sie ausgingen. Wenn die Antwort fünfmal von fünf «von mir» lautet, ist das Problem nicht mehr die Absage vom Freitag, sondern <a href="/de/blog/freund-gibt-sich-keine-muehe/">das Ungleichgewicht, das sich eingeschlichen hat, ohne dass es jemand ausspricht</a>.</p>
 <p><strong>Er sagt jedes Mal ab, wenn es etwas ernster wird:</strong> Abendessen bei ihm, ein Wochenende, ein Abend mit deinen Freunden. Wenn die Absagen immer auf die Termine fallen, die etwas bedeuten, ist das kein Zufall, und es sieht sehr nach <a href="/de/blog/bindungsangst/">jemandem aus, der zurückweicht, sobald er die Beziehung vorankommen spürt</a>.</p>
-<p><strong>Du verbringst mehr Zeit mit Entschlüsseln als mit ihm:</strong> das ist das verlässlichste der vier Signale und das, das man am leichtesten übersieht. Eine Beziehung, die gut beginnt, verlangt dieses ganze Entschlüsseln nicht, ganz einfach weil es nicht viel zu entschlüsseln gibt.</p>
-<p>Wenn du immer noch schwankst: es gibt etwas Aussagekräftigeres als seine Nachrichten. <a href="/de/liebt-er-sie-mich-heimlich-test/">Was er tut, wenn ihn nichts dazu zwingt</a>. Das beantwortet die Frage oft in drei Minuten.</p>
+<p><strong>Du verbringst mehr Zeit mit Entschlüsseln als mit ihm:</strong> das ist das verlässlichste der vier, auch wenn man es am liebsten nicht sehen will. Eine Beziehung, die gut beginnt, verlangt dieses ganze Entschlüsseln nicht, ganz einfach weil es nicht viel zu entschlüsseln gibt.</p>
+<p>Und wenn du immer noch schwankst, stell dir die Frage anders: Kann es sein, dass er <a href="/de/liebt-er-sie-mich-heimlich-test/">an dir hängt, ohne es zeigen zu können</a>? Bei manchen Männern steckt hinter den Absagen genau das.</p>
 <a href="/de/blog/red-flags-bei-einem-mann/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Auch lesen</span><span class="blog-read-also-title">13 Red Flags bei einem Mann</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
     {

@@ -13,11 +13,11 @@ const article: BlogArticleData = {
   excerpt: "El problema con un hombre narcisista es que eres la única que ve lo que ves. Aquí están las 12 conductas que acaban delatándolo.",
   introduction: `<p>Si escribes «hombre narcisista» en un buscador, no es por curiosidad intelectual... Es porque un hombre concreto, tu pareja, tu ex, quizá el padre de tus hijos, te ha puesto en alerta. Y algo no encaja: ese hombre que todo el mundo adora te hace vivir, a puerta cerrada, algo que nadie imagina.</p>
 <p>Esa es la trampa número uno con este perfil. La distancia entre el hombre público y el privado es tan violenta que pareces loca en cuanto intentas describirla. Así que, claro, dejas de describirla. Y te quedas sola con tus preguntas.</p>
-<p>Este artículo repasa las 12 conductas típicas del hombre narcisista, en el orden en que se muestran: primero el personaje en sociedad, luego la mecánica de los inicios, después lo que pasa cuando se cierra la puerta... y por último en qué se convierte cuando empiezas a resistir. No hace falta que marques las 12, por cierto. Lo que buscas es una trayectoria. Verás enseguida si la reconoces.</p>`,
+<p>Aquí tienes las 12 conductas típicas del hombre narcisista, en el orden en que aparecen. No hace falta que marques las 12, por cierto: lo que buscas es una trayectoria, y verás enseguida si la reconoces.</p>`,
   quickSummary: [
-    "La firma no es una conducta, es la distancia: irreprochable fuera, demoledor dentro.",
+    "La firma es la distancia entre los dos hombres: irreprochable fuera, demoledor dentro.",
     "Las 12 señales siguen una trayectoria: el personaje público, la seducción estratégica, el control instalado y luego la escalada.",
-    "La mitad de las señales no lo describen a él, describen el estado en el que te deja. Ese es tu mejor detector.",
+    "La mitad de las señales describen el estado en el que te deja, más que su conducta. Ese es tu mejor detector.",
     "Una conducta aislada no prueba nada. La repetición, la acumulación y la dirección sí.",
     "El verdadero revelador es tu resistencia: un hombre torpe mejora, un narcisista escala.",
   ],
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'las-12-senales-de-un-vistazo',
       title: "Las 12 señales de un vistazo",
-      content: `<p>Este es el mapa del artículo. Si un grupo te habla más que los otros, ve directamente allí.</p>
+      content: `<p>Estas son las cuatro etapas, con las señales de cada una. Si un grupo te habla más que los otros, ve directamente allí.</p>
 <ol class="blog-liste-reperes">
 <li><a href="#en-sociedad">En sociedad: el personaje público (señales 1 a 3)</a></li>
 <li><a href="#al-principio-contigo">Al principio contigo: la seducción estratégica (señales 4 a 6)</a></li>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
           id: 'en-la-intimidad',
           title: "En la intimidad: el control instalado (señales 7 a 9)",
           content: `<ol start="7">
-<li><strong>Apunta a tus puntos fuertes, no a tus debilidades:</strong> Es contraintuitivo, y sin embargo es su firma. Tu trabajo, tu humor, tu familia, lo que te enorgullece: ahí es exactamente donde caen los comentarios. Una debilidad criticada puede ser un consejo torpe. Un punto fuerte rebajado sistemáticamente, no. Eso es una estrategia de demolición.</li>
+<li><strong>Apunta a tus puntos fuertes, no a tus debilidades:</strong> Es contraintuitivo, y sin embargo es su firma. Tu trabajo, tu humor, tu familia, lo que te enorgullece: ahí es exactamente donde caen los comentarios. Una debilidad criticada puede ser un consejo torpe. Un punto fuerte rebajado sistemáticamente no lo es nunca: es una estrategia de demolición.</li>
 <li><strong>Tu realidad se renegocia constantemente:</strong> Lo que viste, él no lo hizo. Lo que dijo, tú lo entendiste mal. Lo que sientes, lo exageras... A fuerza, dudas de tu memoria hasta el punto de comprobar a escondidas. Ese <a href="/es/blog/gaslighting-senales/">gaslighting</a> cotidiano es el corazón del sistema.</li>
 <li><strong>Tu mundo se encoge, sin prohibición formal:</strong> Nunca te ha prohibido ver a tus amigas. Simplemente ha hecho que cada salida salga cara: un humor antes, reproches después, una crisis al día siguiente. En ese tipo de situación, es muy probable que al cabo de unos meses, sin saber muy bien cómo, te encuentres haciendo el cálculo tú sola... Y es exactamente lo previsto.</li>
 </ol>`,
@@ -85,7 +85,7 @@ const article: BlogArticleData = {
     {
       id: 'lo-que-te-hace-vivir',
       title: "Lo que te hace vivir, y por qué todavía dudas",
-      content: `<p>Si has reconocido la trayectoria, probablemente te quede una pregunta: «entonces, ¿por qué lo sigo queriendo?». Porque el sistema está hecho para eso, sencillamente. La alternancia entre el hombre maravilloso y el destructivo no te vuelve lúcida, te vuelve adicta. Es el mismo resorte que los juegos de azar, la recompensa imprevisible...</p>
+      content: `<p>Si has reconocido la trayectoria, probablemente te quede una pregunta: «entonces, ¿por qué lo sigo queriendo?». Porque el sistema está hecho para eso, sencillamente. Esa alternancia entre el hombre maravilloso y el destructivo te vuelve adicta. Es el mismo resorte que los juegos de azar, la recompensa imprevisible...</p>
 <p>Y porque también te ha entrenado para dudar. Meses de «exageras» dejan huella: en el momento de concluir, todavía te preguntas si no serás tú la que dramatiza.</p>
 <p>Así que relee la lista y fíjate en un detalle: la mitad de las señales no describen su comportamiento, sino el estado en el que te deja a ti. Es el mejor detector del que dispones, y se equivoca pocas veces. Muchas de estas conductas figuran además en las <a href="/es/blog/red-flags-en-un-hombre/">red flags en un hombre</a>, de las que son la versión más acabada... y la más peligrosa.</p>
 <div class="blog-cta">
@@ -94,7 +94,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/es/test-pareja-narcisista/">Comprobar lo que vivo</a>
 <p class="blog-cta-note">Gratis &middot; Sin registro &middot; Resultado inmediato</p>
 </div>
-<p>Una última cosa. Puede que hayas leído este artículo por una hermana, una amiga, una compañera... Lo que puedes hacer por ella cabe en una frase: sé un vínculo que no juzga. El aislamiento es la condición del sistema. Cada persona que sigue en su vida es una salida posible.</p>
+<p>Una última cosa. Puede que hayas leído este artículo por una hermana, una amiga, una compañera... Lo que puedes hacer por ella empieza por esto: ser un vínculo que no juzga. El sistema solo funciona si ella está aislada. Cada persona que sigue en su vida es una salida posible.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Si estás en peligro, no te quedes sola con un artículo</p>
 <p>Amenazas, control de tu dinero o de tus movimientos, violencia física aunque sea «una sola vez»: en España, el 016 es gratuito, no deja rastro en la factura y atiende las 24 horas. En caso de urgencia inmediata, el 112. Y un psicólogo formado en violencia psicológica cambiará tu trayectoria mucho más que cualquier lectura. Esta incluida.</p>

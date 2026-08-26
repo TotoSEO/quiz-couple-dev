@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Un manipulador no miente al azar. Elige de un repertorio, siempre el mismo. Y en cuanto conoces el repertorio, algo se rompe en el truco de magia.",
   introduction: `<p>«Eres demasiado sensible.» ¿Cuántas veces has oído esa? ¿Y cuántas te has ido preguntándote si, efectivamente, no estarías exagerando un poco?</p>
-<p>Por eso existe este artículo. Los manipuladores no inventan nada: tiran de un repertorio, y es más o menos siempre el mismo. Frases cortas, que parecen inofensivas, a veces incluso amables... y que hacen un trabajo muy preciso en tu cabeza. Invertir la culpa, hacerte dudar, hacerte callar.</p>
+<p>Por eso existe este artículo. Los manipuladores no inventan nada: tiran de un repertorio, y es más o menos siempre el mismo. Frases cortas, que parecen inofensivas, a veces incluso amables... y que hacen un trabajo muy preciso en tu cabeza: invertir la culpa, hacerte dudar, hacerte callar.</p>
 <p>Así que vamos a hacer lo único que de verdad las neutraliza: sacarlas de contexto y mirarlas una por una. Su traducción real, lo que buscan producir en ti y lo que puedes responder. Hay bastantes posibilidades de que reconozcas varias por el camino... y ese es justamente el objetivo.</p>`,
   quickSummary: [
     "Estas frases nunca discuten lo que has dicho, cuestionan tu derecho a decirlo.",
@@ -27,8 +27,8 @@ const article: BlogArticleData = {
       title: "Por qué funcionan tan bien estas frases",
       content: `<p>Antes de la lista, dos minutos sobre el mecanismo, porque lo explica todo.</p>
 <p>Cuando expresas un desacuerdo o una herida, hay dos formas de responderte. Sobre el fondo: «vale, hablemos de lo que ha pasado». O sobre la forma: «no estás en condiciones de hablar de esto, exageras, no es el momento»...</p>
-<p>Casi todas las frases de manipulador juegan con la forma. <strong>Nunca discuten lo que dices. Cuestionan tu derecho a decirlo.</strong> Y es demoledor, porque te desplaza: en vez de defender tu tema, acabas defendiendo tu legitimidad, tu salud mental, tu tono de voz. El tema inicial, mientras tanto, ha desaparecido. Querías hablar de una cita olvidada... y veinte minutos después te disculpas por la manera en que lo has dicho. Truco completado.</p>
-<p>Una precisión importante, eso sí: todo el mundo suelta una de estas frases un día de cansancio. Lo que marca a un manipulador no es la frase, es el repertorio. La variedad de fórmulas, su retorno sistemático, y el hecho de que al final siempre seas tú quien se disculpa. Ese funcionamiento de conjunto es exactamente el del <a href="/es/blog/narcisista-en-el-amor/">narcisista en la pareja</a>: la frase es solo un engranaje del sistema.</p>`,
+<p>Casi todas las frases de manipulador juegan con la forma. <strong>Nunca discuten lo que dices. Atacan tu derecho a decirlo, y eso es muy distinto.</strong> Y es demoledor, porque te desplaza: en vez de defender tu tema, acabas defendiendo tu legitimidad, tu salud mental, tu tono de voz. El tema inicial, mientras tanto, ha desaparecido. Querías hablar de una cita olvidada... y veinte minutos después te disculpas por la manera en que lo has dicho. Truco completado.</p>
+<p>Una precisión importante, eso sí: todo el mundo suelta una de estas frases un día de cansancio. Lo que marca a un manipulador es el repertorio: la variedad de fórmulas, su retorno sistemático, y el hecho de que al final siempre seas tú quien se disculpa. Ese funcionamiento de conjunto es exactamente el del <a href="/es/blog/narcisista-en-el-amor/">narcisista en la pareja</a>: la frase es solo un engranaje del sistema.</p>`,
     },
     {
       id: 'invertir-la-culpa',
@@ -57,7 +57,7 @@ const article: BlogArticleData = {
 <li><strong>«Todo el mundo piensa que exageras.»</strong> El refuerzo invisible: un tribunal fantasma, imposible de verificar, convocado contra ti. ¿Quién es «todo el mundo»? Nunca lo sabrás.</li>
 <li><strong>«Deberías ir al psicólogo, en serio.»</strong> La más violenta de la familia. Tu lucidez se convierte en patología. Y el día en que vayas de verdad, un buen profesional lo ve clarísimo enseguida... por eso mismo detesta la idea en la práctica.</li>
 </ul>
-<p>Si ese emborronamiento te suena, la pregunta de si vives gaslighting merece un rodeo por <a href="/es/blog/gaslighting-senales/">el gaslighting y sus mecanismos</a>, porque no se limita a unas frases.</p>`,
+<p>Si ese emborronamiento te suena, tómate el tiempo de entender <a href="/es/blog/gaslighting-senales/">cómo se instala el gaslighting</a>, porque no se limita a unas frases.</p>`,
     },
     {
       id: 'victimizarse',
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
 </ul>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 El detalle que delata a la familia n.º 4</p>
-<p>Estas frases apuntan casi siempre a tus puntos fuertes, no a tus debilidades. Tu trabajo, tu humor, tu independencia, lo que te enorgullece... Una pareja torpe critica lo que se te da mal. Un manipulador lima lo que te mantiene en pie.</p>
+<p>Estas frases apuntan casi siempre a tus puntos fuertes, no a tus debilidades. Tu trabajo, tu humor, tu independencia, lo que te enorgullece... Una pareja torpe critica lo que se te da mal. Un manipulador va contra lo que te mantiene en pie, y esa es toda la diferencia.</p>
 </aside>`,
     },
     {
@@ -98,7 +98,7 @@ const article: BlogArticleData = {
 <ul>
 <li><strong>«No vamos a volver sobre eso.»</strong> Decreto unilateral de fin del tema. El expediente se cierra porque lo ha decidido él, no porque esté resuelto.</li>
 <li><strong>«Cálmate.»</strong> Dos palabras y ya eres oficialmente una histérica. Nadie se ha calmado nunca al oír «cálmate», y no es el objetivo: el objetivo es la constatación pública de que te desbordas.</li>
-<li><strong>«Ya está, he pedido perdón. ¿Qué más quieres?»</strong> El perdón como trámite despachado. La disculpa no es un puente hacia ti, es un recibo que te lanzan.</li>
+<li><strong>«Ya está, he pedido perdón. ¿Qué más quieres?»</strong> Aquí el perdón es un trámite despachado: pide perdón para cerrar el expediente, no para arreglarlo.</li>
 </ul>
 <p>Y para aislarte:</p>
 <ul>
@@ -114,7 +114,7 @@ const article: BlogArticleData = {
       title: "Los mensajes del manipulador: el repertorio en versión escrita",
       content: `<p>Por mensajes, el repertorio se adapta, y merece la pena decirlo porque lo escrito tiene sus propios códigos.</p>
 <p>Está el <strong>silencio radio</strong>, primero: tres días sin responder después de un desacuerdo, y luego un «te echo de menos» a las 23:47, como si nada. El <strong>tocho culpabilizador</strong>, después: quince líneas donde tu noche de ayer se convierte en la prueba de tu egoísmo, enviadas a la hora en que no puedes responder. El <strong>mensaje escaparate</strong>, también: adorable por escrito, glacial en persona... porque lo escrito se puede enseñar, y él lo sabe.</p>
-<p>Y luego está el más inquietante: el mensaje amable que cae JUSTO cuando empezabas a estar mejor. Ese no es casualidad, es un instrumento de medida. Ha detectado tu distancia, la reconquista arranca.</p>
+<p>Y luego está el más inquietante: el mensaje amable que cae JUSTO cuando empezabas a estar mejor. Ese no tiene nada de casualidad: ha detectado tu distancia, y la reconquista arranca.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ No borres esos mensajes</p>
 <p>Lo escrito es tu mejor protección contra el «yo nunca he dicho eso». Guarda las conversaciones, haz capturas con fecha, guárdalas fuera del móvil si puedes. Si algún día necesitas ver claro, o demostrar cualquier cosa, esas huellas valdrán oro.</p>
@@ -132,7 +132,7 @@ const article: BlogArticleData = {
 <tr><td>«Cálmate.»</td><td>Calmarse pidiendo perdón</td><td>«Estoy tranquila. Y sigo esperando tu respuesta.»</td></tr>
 </tbody></table></div>
 <p>Verás el principio: frases cortas, factuales, que rechazan el terreno propuesto. Nada de alegatos. El alegato es exactamente lo que él espera, porque valida que tu legitimidad era el tema.</p>
-<p>Y sé honesta contigo en un punto: si estas réplicas provocan sistemáticamente una escalada, silencio castigo o una crisis, ya no estás ante torpezas de comunicación. Estás ante un sistema. Las <a href="/es/blog/manipulador-narcisista/">técnicas del manipulador narcisista</a>, sus puntos débiles y sus reacciones cuando se le resiste merecen entonces conocerse en detalle.</p>
+<p>Y sé honesta contigo en un punto: si estas réplicas provocan sistemáticamente una escalada, silencio castigo o una crisis, ya no estás ante torpezas de comunicación. Estás ante un sistema. Llegados ahí, más vale conocer en detalle las <a href="/es/blog/manipulador-narcisista/">técnicas del manipulador narcisista</a>, sus puntos débiles y sus reacciones cuando se le resiste.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">¿Oyes estas frases en tu casa?</p>
 <p class="blog-cta-texte">Veinte preguntas repasan las situaciones concretas de una relación de dominio, frase por frase, conducta por conducta. El resultado te dice dónde estás, con calma.</p>

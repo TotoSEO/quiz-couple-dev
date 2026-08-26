@@ -13,11 +13,11 @@ const article: BlogArticleData = {
   excerpt: "The problem with a narcissistic man is that you're the only one who sees what you see. Here are the 12 behaviours that eventually give him away.",
   introduction: `<p>If you're typing "narcissistic man" into a search engine, it isn't out of intellectual curiosity... It's because one specific man, your partner, your ex, maybe the father of your children, has put you on alert. And something doesn't add up: this man everyone adores makes you live, behind closed doors, something nobody imagines.</p>
 <p>That's trap number one with this profile. The gap between the public man and the private one is so violent that you come across as unhinged the moment you try to describe it. So, naturally, you stop describing it. And you end up alone with your questions.</p>
-<p>This article goes through the 12 typical behaviours of a narcissistic man, in the order they show themselves: first the character in company, then the mechanics of the early days, then what happens once the door closes... and finally what he becomes when you start pushing back. You don't need to tick all 12, by the way. What you're looking for is a trajectory. You'll know very quickly whether you recognise it.</p>`,
+<p>Here are the 12 typical behaviours of a narcissistic man, in the order they appear. You don't need to tick all 12, by the way: what you are looking for is a trajectory, and you will know very quickly whether you recognise it.</p>`,
   quickSummary: [
-    "The signature isn't a behaviour, it's the gap: irreproachable outside, crushing inside.",
+    "The signature is the gap between the two men: irreproachable outside, crushing inside.",
     "The 12 signs follow a trajectory: the public character, the strategic seduction, installed control, then escalation.",
-    "Half the signs don't describe him, they describe the state he puts you in. That's your best detector.",
+    "Half the signs describe the state he puts you in rather than his behaviour. That's your best detector.",
     "One isolated behaviour proves nothing. Repetition, accumulation and direction do.",
     "The real giveaway is your resistance: a clumsy man improves, a narcissist escalates.",
   ],
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'the-12-signs-at-a-glance',
       title: "The 12 signs at a glance",
-      content: `<p>Here's the map of the article. If one group speaks to you more than the others, go straight to it.</p>
+      content: `<p>Here are the four stages, and the signs that go with each one. If one group speaks to you more than the others, go straight to it.</p>
 <ol class="blog-liste-reperes">
 <li><a href="#in-company">In company: the public character (signs 1 to 3)</a></li>
 <li><a href="#early-on-with-you">Early on with you: strategic seduction (signs 4 to 6)</a></li>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
           id: 'in-private',
           title: "In private: control installed (signs 7 to 9)",
           content: `<ol start="7">
-<li><strong>He aims at your strengths, not your weaknesses:</strong> It's counter-intuitive, and it's his signature. Your job, your humour, your family, whatever makes you proud: that's precisely where the remarks land. A criticised weakness can be clumsy advice. A strength systematically undermined, no. That's a demolition strategy.</li>
+<li><strong>He aims at your strengths, not your weaknesses:</strong> It's counter-intuitive, and it's his signature. Your job, your humour, your family, whatever makes you proud: that's precisely where the remarks land. A criticised weakness can be clumsy advice. A strength systematically undermined never is: that's a demolition strategy.</li>
 <li><strong>Your reality is renegotiated constantly:</strong> What you saw, he didn't do. What he said, you misunderstood. What you feel, you're exaggerating... In time you doubt your memory enough to check in secret. This daily <a href="/en/blog/gaslighting-signs/">gaslighting</a> is the heart of the system.</li>
 <li><strong>Your world shrinks, with no formal ban:</strong> He never forbade you from seeing your friends. He simply made every outing expensive: a mood before, reproaches after, a scene the next day. In that kind of situation, there's a good chance that within a few months, without quite knowing how, you find yourself doing the calculation on your own... And that's exactly what was planned.</li>
 </ol>`,
@@ -85,7 +85,7 @@ const article: BlogArticleData = {
     {
       id: 'what-it-does-to-you',
       title: "What it does to you, and why you still doubt",
-      content: `<p>If you recognised the trajectory, one question probably remains: "so why do I still love him?" Because the system is designed for it, quite simply. The alternation between the wonderful man and the destructive one doesn't make you lucid, it makes you hooked. It's the same mechanism as gambling, the unpredictable reward...</p>
+      content: `<p>If you recognised the trajectory, one question probably remains: "so why do I still love him?" Because the system is designed for it, quite simply. That alternation between the wonderful man and the destructive one gets you hooked. It's the same mechanism as gambling, the unpredictable reward...</p>
 <p>And because he trained you to doubt, too. Months of "you're exaggerating" leave marks: at the moment of concluding, you still wonder whether you're the one being dramatic.</p>
 <p>So reread the list, and notice one detail: half the signs don't describe his behaviour, they describe the state he puts you in. That's the best detector you have, and it's rarely wrong. Many of these behaviours also appear in the <a href="/en/blog/red-flags-in-a-man/">red flags in a man</a>, of which they are the most complete version... and the most dangerous.</p>
 <div class="blog-cta">
@@ -94,7 +94,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/en/narcissistic-partner-test/">Check what I'm living</a>
 <p class="blog-cta-note">Free &middot; No sign-up &middot; Instant result</p>
 </div>
-<p>One last word. You may have read this article for a sister, a friend, a colleague... What you can do for her fits in one sentence: stay a connection that doesn't judge. Isolation is the system's precondition. Every person who stays in her life is a possible way out.</p>
+<p>One last word. You may have read this article for a sister, a friend, a colleague... What you can do for her starts with this: stay a connection that doesn't judge. The system only works if she is isolated. Every person who stays in her life is a possible way out.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ If you're in danger, don't stay alone with an article</p>
 <p>Threats, control over your money or your movements, physical violence even "just once": look up the domestic abuse helpline in your country, they are free and confidential, and most run around the clock. A psychologist trained in coercive control will change your trajectory far more than any reading. This one included.</p>

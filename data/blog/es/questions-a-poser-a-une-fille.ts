@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Dos personas hablando en una mesa, una escucha atentamente a la otra",
   publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "La diferencia entre una conversación que se apaga y una chica con ganas de volver a verte no es tu labia. Es la calidad de tus preguntas, y lo que haces con las respuestas.",
+  excerpt: "Una conversación que se apaga o una chica con ganas de volver a verte: todo se juega en la calidad de tus preguntas, y en lo que haces con las respuestas.",
   introduction: `<p>Seamos honestos dos minutos. El problema casi nunca es encontrar UNA pregunta que hacer. El problema es que «¿qué tal?», «¿a qué te dedicas?» y «¿buen finde?» son exactamente como empiezan todas las demás conversaciones que ella tiene ahora mismo...</p>
 <p><strong>Una buena pregunta marca la diferencia porque demuestra algo poco común: que te interesas por ella, no solo por dar conversación.</strong> Y eso, créeme, se nota al instante.</p>
-<p>Aquí van 90 preguntas, ordenadas por situación: por mensaje para arrancar, cara a cara para conoceros, para hacerla reír, para crear complicidad, para flirtear sin pesadez... y para saber, por fin, si le gustas. Con un consejo que vale para las 90: la pregunta abre la puerta, pero es tu manera de escuchar la respuesta lo que da ganas de entrar.</p>`,
+<p>Aquí van 90 preguntas, ordenadas por situación, del primer mensaje al cara a cara donde todo se decide. Con un consejo que vale para las 90: es tu manera de escuchar la respuesta lo que marca la diferencia, mucho más que la pregunta en sí.</p>`,
   quickSummary: [
     "90 preguntas ordenadas por situación, del primer mensaje a saber si le gustas.",
     "Una pregunta y luego silencio: lo que seduce es escuchar, no el stock de preguntas.",

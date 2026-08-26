@@ -18,7 +18,7 @@ const article: BlogArticleData = {
     "The signal to watch is not his excuse, it is whether he suggests another date himself, with a day in it.",
     "In the moment: reply short, no reproach, and do not propose a new date in his place.",
     "If he has suggested nothing after two days, one follow-up is enough. Just the one.",
-    "Two cancellations with no new date is an answer. It is simply being said another way.",
+    "Two cancellations with no new date is already an answer, even if he never puts it into words.",
   ],
   sections: [
     {
@@ -33,11 +33,11 @@ const article: BlogArticleData = {
 <li><strong>He has something else on that night:</strong> a better offer, plans with his mates, someone else. Here the cancellation is a choice, even if he does not present it as one.</li>
 <li><strong>He was never planning to come:</strong> the date existed so that he would not have to say no, and he waited until the last moment to avoid the conversation. This is the rarest case, and also the one that shows itself fastest afterwards.</li>
 </ul>
-<p>The trouble is that all five reasons produce roughly the same message. "So sorry, something's come up, I can't make it." You cannot tell them apart by reading the text, and that is normal, because the information is not in there. It is somewhere else.</p>`,
+<p>The trouble is that all five reasons produce roughly the same message. "So sorry, something's come up, I can't make it." You cannot tell them apart by reading the text, and that is normal, because the information is not in the message. It is in what he does right after, and that is what we are going to look at now.</p>`,
     },
     {
       id: 'le-signal',
-      title: "The only signal that counts, and it isn't his excuse",
+      title: "The only signal that counts",
       content: `<p>Look at what he does in the minutes after cancelling, not at what he says to explain it. A long, detailed excuse proves nothing, it proves he is uncomfortable. What counts is whether he offers something else on his own, with a day in it.</p>
 <div><table><thead><tr><th>What he sends</th><th>What it tells you</th></tr></thead><tbody>
 <tr><td>He cancels and suggests a specific day straight away</td><td>He wanted to see you. The cancellation is not the point.</td></tr>
@@ -54,7 +54,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'ce-que-dit-la-recherche',
-      title: "Why one cancellation tells you nothing and two tell you everything",
+      title: "Why the second cancellation is the one that matters",
       content: `<p>There is a simple reason for that, and it has been known for a long time.</p>
 <p>In 1985, three researchers, John Rempel, John Holmes and Mark Zanna, published a piece of work on trust in couples, in the <em>Journal of Personality and Social Psychology</em>. It has become a classic. They explain that trust is built in three stages, and always in the same order.</p>
 <p>The first one they call predictability. It rests on one thing only: what you have already seen the person do, several times. The second is about who they are, and no longer only about what they do. The third is the bet you place on their intentions, with no proof.</p>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
 <p>The other thing happening that evening is what you are going to do with the cancellation in your own head. In 1990, Thomas Bradbury and Frank Fincham went back through dozens of studies on the way people in couples explain each other's behaviour. It was in <em>Psychological Bulletin</em>, and the result is clear.</p>
 <p>People who are unhappy in their relationship always explain their partner's negative behaviour the same way. It comes from him ("he's like that"), it will not change ("he'll always be like that"), and it colours everything else ("nothing works anyway"). Faced with exactly the same behaviour, happy people look at the circumstances first.</p>
 <p>The interesting part comes next. Studies that follow the same couples for years suggest that these explanations do not only reflect the state of the relationship: they weigh on it. In other words, the story you tell yourself tonight can change what happens afterwards.</p>
-<p>This work is about established couples, not about a second date. What still holds is the reflex: wait until you have enough to judge before judging. And the evening you get stood up is exactly when you most want to do the opposite.</p>`,
+<p>This work is about established couples, not about a second date. What still holds is the reflex: wait until you have seen enough before making up your mind. And the evening you get stood up, that reflex does not come easily...</p>`,
     },
     {
       id: 'quoi-repondre',
@@ -135,7 +135,7 @@ const article: BlogArticleData = {
 </div>
 <p class="imsg-note"><strong>Why it works:</strong> it is not a punishment and it is not said in a cold tone. You are simply no longer carrying the organising on your own, which is a healthy reaction rather than a sulk. From there, either he suggests something within the week and you will know he wants to see you, or he suggests nothing and you will know that too. The important word is "when": you are not closing the door, you are just stopping holding it open at arm's length.</p>
 </div>
-<p>And if the date does end up happening, we have put together a list so you never run dry. Here are <a href="/en/first-date-questions-game/">things to talk about when you meet someone for the first time</a>, from the light stuff up to the subjects that matter.</p>`,
+<p>And if the date does end up happening, all that will be left is finding <a href="/en/first-date-questions-game/">things to talk about for that first time</a>, starting with the light stuff.</p>`,
     },
     {
       id: 'quand-arreter',
@@ -144,8 +144,8 @@ const article: BlogArticleData = {
 <p><strong>Two cancellations and never a new date proposed:</strong> that is enough. It is not bad luck, it is someone keeping you available without seeing you, and it can go on for months if you let it.</p>
 <p><strong>It is always you who suggests, who follows up, who organises:</strong> count the last five dates and look at who started them. When the answer is "me" five times out of five, the problem is no longer Friday's cancellation, it is <a href="/en/blog/boyfriend-doesnt-make-effort/">the imbalance that has settled in without anyone naming it</a>.</p>
 <p><strong>He cancels every time it gets a bit serious:</strong> dinner at his place, a weekend away, an evening with your friends. If the cancellations always land on the dates that commit to something, it is not chance, and it looks a lot like <a href="/en/blog/fear-of-commitment/">someone who backs off the moment he feels the relationship moving forward</a>.</p>
-<p><strong>You spend more time decoding than seeing him:</strong> this is the most reliable of the four signals, and the easiest to ignore. A relationship that starts well does not call for all this decoding, quite simply because there is not much to decode.</p>
-<p>If you are still hesitating, there is something more telling than his messages: <a href="/en/does-he-she-secretly-love-me-test/">what he does when nothing obliges him to</a>. That often answers the question in three minutes.</p>
+<p><strong>You spend more time decoding than seeing him:</strong> this is the most reliable of the four, even if it is the one you would rather not see. A relationship that starts well does not call for all this decoding, quite simply because there is not much to decode.</p>
+<p>And if you are still hesitating, ask the question differently: does he <a href="/en/does-he-she-secretly-love-me-test/">care about you without daring to show it</a>? With some men, the cancellations hide exactly that.</p>
 <a href="/en/blog/red-flags-in-a-man/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">13 Red Flags in a man</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
     {

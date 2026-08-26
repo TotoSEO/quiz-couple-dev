@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Junge Person lächelt aufs Handy und tippt eine Nachricht an ihren Crush",
   publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Das Schwierige an einem Crush ist nicht, etwas zu sagen. Es sind die Fragen, die aus einem höflichen Austausch eine echte Verbindung machen.",
+  excerpt: "Das Schwierige an einem Crush ist, im richtigen Moment die Frage zu finden, die das Gespräch wieder in Gang bringt. Hier sind 100, nach Situation sortiert.",
   introduction: `<p>Du kennst diesen Moment... Das Gespräch dreht sich im Kreis, die «gut, und dir?» reihen sich aneinander, und du spürst: wenn jetzt niemand etwas anderes bringt, stirbt das höflich in einem «dann noch einen schönen Abend». Bei einem Crush zählt jeder Austausch doppelt. Und so starren wir alle irgendwann aufs Handy, ohne zu wissen, was wir schreiben sollen.</p>
 <p><strong>Eine gute Frage tut zwei Dinge gleichzeitig: sie zeigt echtes Interesse, und sie macht Lust zu antworten.</strong> Mehr verlangt man von einem beginnenden Gespräch nicht. Und genau das können die folgenden 100 Fragen.</p>
-<p>Sie sind nach Situation sortiert: um per Nachricht zu starten, um ihn kennenzulernen, um ihn zum Lachen zu bringen, um etwas weiter zu gehen, um zu flirten ohne zu übertreiben... und um beiläufig zu prüfen, ob das zwischen euch passen könnte. Wir schreiben «er» der Einfachheit halber, aber alles funktioniert natürlich in jede Richtung.</p>`,
+<p>Sie sind nach Situation sortiert, von der ersten Nachricht bis zum ersten Date. Wir schreiben «er» der Einfachheit halber, aber alles funktioniert natürlich in jede Richtung.</p>`,
   quickSummary: [
     "100 Fragen nach Situation sortiert, von der ersten Nachricht bis zum ersten Date.",
     "Eine Frage nach der anderen: drei in derselben Nachricht wirken wie ein Formular.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'per-nachricht-zum-start',
       title: "Per Nachricht, zum Starten oder Wiederbeleben (1-15)",
-      content: `<p>Das kurze Format, perfekt für den Gesprächsanfang oder um einen einschlafenden Chat zu wecken. Leicht zu senden, leicht zu beantworten... mehr verlangt man von einem ersten Austausch nicht.</p>
+      content: `<p>Das kurze Format, perfekt für den Gesprächsanfang oder um einen einschlafenden Chat zu wecken. Leicht zu senden, leicht zu beantworten, und das reicht völlig für den Anfang!</p>
 <ol>
 <li>Dein Tag in drei Emojis, ohne zu schummeln?</li>
 <li>Bist du eher Vier-Minuten-Sprachnachricht oder Textwand?</li>
@@ -192,7 +192,7 @@ const article: BlogArticleData = {
 <tr><td>Flirten</td><td>Angedeutet, mit Ausweg</td><td>Das Kompliment, das unangenehm wird</td></tr>
 <tr><td>Das erste Date</td><td>Offen, und wirklich zugehört</td><td>Die vorbereiteten Fragen abspulen</td></tr>
 </tbody></table></div>
-<p>Und wenn dich eher die Frage blockiert, was <em>du</em> eigentlich fühlst: wir haben <a href="/de/liebe-oder-crush-test/">einen Test, der Schwärmerei von echten Gefühlen trennt</a>, in 35 Fragen.</p>
+<p>Und wenn dich eher die Frage blockiert, was <em>du</em> eigentlich fühlst: dann kannst du in 35 Fragen <a href="/de/liebe-oder-crush-test/">Schwärmerei von echten Gefühlen trennen</a>.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Denkt er an dich, oder antwortet er nur höflich?</p>
 <p class="blog-cta-texte">Eine Reihe von Fragen geht die echten Signale durch, die man mittendrin nicht bemerkt: seine Rückfragen, seine Aufmerksamkeiten, wie er ist, wenn du dabei bist. Sofortiges Ergebnis, und niemand erfährt davon.</p>

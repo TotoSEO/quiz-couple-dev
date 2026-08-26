@@ -18,7 +18,7 @@ const article: BlogArticleData = {
     "La señal que hay que mirar no es su excusa, es si propone otra fecha él solo, con un día dentro.",
     "En el momento: contestar corto, sin reproches, y sin proponer fecha en su lugar.",
     "Si a los dos días no ha propuesto nada, con un mensaje basta. Uno solo.",
-    "Dos cancelaciones sin fecha nueva son una respuesta. Solo que está dicha de otra manera.",
+    "Dos cancelaciones sin fecha nueva ya son una respuesta, aunque él nunca la diga con palabras.",
   ],
   sections: [
     {
@@ -33,11 +33,11 @@ const article: BlogArticleData = {
 <li><strong>Tiene otra cosa esa noche:</strong> un plan mejor, algo con sus amigos, otra persona. Ahí la cancelación es una elección, aunque él no lo presente así.</li>
 <li><strong>Nunca pensó en venir:</strong> la cita existía para no tener que decir que no, y esperó al último momento para ahorrarse la conversación. Es el caso más raro, y también el que se ve más rápido después.</li>
 </ul>
-<p>El problema es que esos cinco motivos producen más o menos el mismo mensaje. «Lo siento, me ha surgido algo, no puedo.» No puedes distinguirlos leyendo el texto, y es normal, porque la información no está ahí dentro. Está en otro sitio.</p>`,
+<p>El problema es que esos cinco motivos producen más o menos el mismo mensaje. «Lo siento, me ha surgido algo, no puedo.» No puedes distinguirlos leyendo el texto, y es normal, porque la información no está en el mensaje. Está en lo que hace justo después, y eso es lo que vamos a mirar ahora.</p>`,
     },
     {
       id: 'le-signal',
-      title: "La única señal que cuenta, y no es su excusa",
+      title: "La única señal que cuenta",
       content: `<p>Mira lo que hace en los minutos siguientes a la cancelación, no lo que cuenta para explicarla. Una excusa larga y detallada no demuestra nada, demuestra que está incómodo. Lo que cuenta es si propone otra cosa él solo, con un día dentro.</p>
 <div><table><thead><tr><th>Lo que te manda</th><th>Lo que te dice</th></tr></thead><tbody>
 <tr><td>Cancela y propone otro día concreto acto seguido</td><td>Quería verte. La cancelación no es el tema.</td></tr>
@@ -54,7 +54,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'ce-que-dit-la-recherche',
-      title: "Por qué una cancelación no dice nada y dos lo dicen todo",
+      title: "Por qué la que cuenta es la segunda cancelación",
       content: `<p>Hay una razón sencilla para eso, y se conoce desde hace tiempo.</p>
 <p>En 1985, tres investigadores, John Rempel, John Holmes y Mark Zanna, publicaron un trabajo sobre la confianza en la pareja, en el <em>Journal of Personality and Social Psychology</em>. Se ha convertido en un clásico. Ahí explican que la confianza se construye en tres etapas, y siempre en el mismo orden.</p>
 <p>A la primera la llaman previsibilidad. Se apoya en una sola cosa: lo que ya le has visto hacer a esa persona, varias veces. La segunda va sobre quién es, y ya no solo sobre lo que hace. La tercera es la apuesta que haces sobre sus intenciones, sin pruebas.</p>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
 <p>Lo otro que se juega esa noche es lo que tú vas a hacer con esa cancelación en tu cabeza. En 1990, Thomas Bradbury y Frank Fincham repasaron decenas de estudios sobre la forma en que la gente en pareja explica el comportamiento del otro. Fue en el <em>Psychological Bulletin</em>, y el resultado es claro.</p>
 <p>Las personas infelices en su pareja explican siempre los gestos negativos del otro de la misma manera. Viene de él («es así»), no va a cambiar («siempre será así») y tiñe todo lo demás («total, nada funciona»). Ante exactamente el mismo gesto, las personas felices miran primero las circunstancias.</p>
 <p>Lo más interesante viene después. Los estudios que siguen a las mismas parejas durante años apuntan a que esas explicaciones no solo reflejan el estado de la pareja: pesan sobre ella. Dicho de otra forma, la historia que te cuentas esta noche puede cambiar lo que pase después.</p>
-<p>Estos trabajos van sobre parejas ya formadas, no sobre una segunda cita. Lo que sigue siendo cierto es el reflejo: esperar a tener con qué juzgar antes de juzgar. Y la noche en que te dan plantón es justo cuando más ganas tienes de hacer lo contrario.</p>`,
+<p>Estos trabajos van sobre parejas ya formadas, no sobre una segunda cita. Lo que sigue siendo cierto es el reflejo: esperar a haber visto lo suficiente antes de hacerte una idea. Y la noche en que te dan plantón, ese reflejo no sale solo...</p>`,
     },
     {
       id: 'quoi-repondre',
@@ -135,7 +135,7 @@ const article: BlogArticleData = {
 </div>
 <p class="imsg-note"><strong>Por qué funciona:</strong> no es un castigo y no se dice en tono frío. Simplemente dejas de cargar tú sola con la organización, que es una reacción sana y no un enfado. A partir de ahí, o propone algo esa semana y sabrás que le apetece verte, o no propone nada y también lo sabrás. La palabra importante es «cuando»: no cierras la puerta, solo dejas de sostenerla abierta con el brazo estirado.</p>
 </div>
-<p>Y si la cita acaba ocurriendo, hemos preparado una lista para que no te quedes sin tema. Aquí tienes <a href="/es/preguntas-primera-cita/">de qué hablar cuando os veis por primera vez</a>, desde lo ligero hasta los temas que importan.</p>`,
+<p>Y si la cita acaba ocurriendo, solo quedará encontrar <a href="/es/preguntas-primera-cita/">de qué hablar en esa primera vez</a>, empezando por lo más ligero.</p>`,
     },
     {
       id: 'quand-arreter',
@@ -144,8 +144,8 @@ const article: BlogArticleData = {
 <p><strong>Dos cancelaciones y ninguna fecha nueva propuesta:</strong> ya está. No es mala suerte, es alguien que te mantiene disponible sin verte, y eso puede durar meses si le dejas.</p>
 <p><strong>Siempre propones tú, escribes tú, organizas tú:</strong> cuenta las cinco últimas citas y mira quién las arrancó. Cuando la respuesta es «yo» cinco de cinco, el problema ya no es la cancelación del viernes, es <a href="/es/blog/novio-no-hace-esfuerzo/">el desequilibrio que se ha instalado sin que nadie lo diga</a>.</p>
 <p><strong>Cancela cada vez que la cosa se pone un poco seria:</strong> una cena en su casa, un fin de semana, una noche con tus amigos. Si las cancelaciones caen siempre en las citas que comprometen, no es casualidad, y se parece mucho a <a href="/es/blog/miedo-al-compromiso/">alguien que se echa atrás en cuanto siente que la relación avanza</a>.</p>
-<p><strong>Pasas más tiempo descifrando que viéndolo:</strong> es la más fiable de las cuatro señales, y la más fácil de ignorar. Una relación que empieza bien no pide todo ese descifrado, sencillamente porque no hay gran cosa que descifrar.</p>
-<p>Si sigues dudando, hay algo más elocuente que sus mensajes: <a href="/es/test-me-quiere-en-secreto/">lo que hace cuando nada le obliga</a>. Eso suele contestar a la pregunta en tres minutos.</p>
+<p><strong>Pasas más tiempo descifrando que viéndolo:</strong> es la más fiable de las cuatro, aunque sea la que preferimos no ver. Una relación que empieza bien no pide todo ese descifrado, sencillamente porque no hay gran cosa que descifrar.</p>
+<p>Y si sigues dudando, hazte la pregunta de otra manera: ¿será que <a href="/es/test-me-quiere-en-secreto/">le importas sin atreverse a demostrarlo</a>? En algunos hombres, las cancelaciones esconden justo eso.</p>
 <a href="/es/blog/red-flags-en-un-hombre/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leer también</span><span class="blog-read-also-title">13 red flags en un hombre</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
     {

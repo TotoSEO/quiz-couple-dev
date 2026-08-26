@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Zwei Menschen im Gespräch an einem Tisch, eine Person hört aufmerksam zu",
   publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Der Unterschied zwischen einem Gespräch, das einschläft, und einem Mädchen, das dich wiedersehen will, ist nicht dein Redetalent. Es ist die Qualität deiner Fragen und was du mit den Antworten machst.",
+  excerpt: "Ob ein Gespräch einschläft oder sie dich wiedersehen will, entscheidet sich an der Qualität deiner Fragen und daran, was du mit den Antworten machst.",
   introduction: `<p>Seien wir zwei Minuten ehrlich. Das Problem ist fast nie, EINE Frage zu finden. Das Problem ist, dass «wie geht's?», «was machst du beruflich?» und «schönes Wochenende gehabt?» exakt so klingen wie alle anderen Gespräche, die sie gerade führt.</p>
 <p><strong>Eine gute Frage macht den Unterschied, weil sie etwas Seltenes zeigt: dass du dich für sie interessierst und nicht nur fürs Reden.</strong> Und das spürt man, glaub mir, sofort.</p>
-<p>Hier sind 90 Fragen, nach Situation sortiert: per Nachricht zum Einstieg, von Angesicht zu Angesicht zum Kennenlernen, um sie zum Lachen zu bringen, um Nähe aufzubauen, um elegant zu flirten und um endlich zu wissen, ob sie auf dich steht. Mit einem Tipp, der für alle 90 gilt: die Frage öffnet die Tür, aber es ist deine Art zuzuhören, die Lust macht hineinzugehen.</p>`,
+<p>Hier sind 90 Fragen, nach Situation sortiert, von der ersten Nachricht bis zum Gespräch von Angesicht zu Angesicht, in dem sich alles entscheidet. Mit einem Tipp, der für alle 90 gilt: Deine Art zuzuhören macht den Unterschied, viel mehr als die Frage selbst.</p>`,
   quickSummary: [
     "90 Fragen nach Situation sortiert, von der ersten Nachricht bis zur Frage, ob sie auf dich steht.",
     "Eine Frage, dann Stille: attraktiv macht das Zuhören, nicht der Fragenvorrat.",

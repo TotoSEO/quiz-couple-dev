@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Persona joven sonriendo al móvil mientras escribe un mensaje a su crush",
   publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Lo difícil con un crush no es encontrar qué decir. Es hacer las preguntas que convierten una charla educada en una conexión real.",
+  excerpt: "Lo difícil con un crush es encontrar la pregunta que reaviva la conversación en el momento justo. Aquí tienes 100, ordenadas por situación.",
   introduction: `<p>Conoces ese momento... La conversación da vueltas, se encadenan los «bien, ¿y tú?», y notas que si nadie saca otra cosa, esto va a morir educadamente en un «buenas noches, entonces». Con un crush, cada intercambio cuenta doble. Así que, tarde o temprano, todos acabamos mirando el móvil sin saber qué enviar.</p>
 <p><strong>Una buena pregunta hace dos cosas a la vez: demuestra que te interesas de verdad y da ganas de responder.</strong> Es todo lo que se le pide a una conversación que empieza. Y es exactamente lo que hacen las 100 preguntas que siguen.</p>
-<p>Están ordenadas por situación: para arrancar por mensaje, para conocerlo, para reír, para ir un poco más lejos, para flirtear sin pasarse... y para comprobar, como quien no quiere la cosa, si esto podría funcionar. Escribimos «él» por simplificar, pero todo funciona evidentemente en todos los sentidos.</p>`,
+<p>Están ordenadas por situación, del primer mensaje a la primera cita. Escribimos «él» por simplificar, pero todo funciona evidentemente en todos los sentidos.</p>`,
   quickSummary: [
     "100 preguntas ordenadas por situación, del primer mensaje a la primera cita.",
     "Una pregunta cada vez: tres en el mismo mensaje parece un formulario.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'por-mensaje-para-arrancar',
       title: "Por mensaje, para arrancar o retomar (1-15)",
-      content: `<p>El formato corto, perfecto para empezar una conversación o despertar un hilo que se apaga. Fácil de enviar, fácil de responder... es todo lo que se le pide a un primer intercambio.</p>
+      content: `<p>El formato corto, perfecto para empezar una conversación o despertar un hilo que se apaga. Fácil de enviar, fácil de responder, ¡y con eso basta para empezar!</p>
 <ol>
 <li>¿Tu día en tres emojis, sin hacer trampas?</li>
 <li>¿Eres más de audio de cuatro minutos o de tocho de texto?</li>
@@ -122,7 +122,7 @@ const article: BlogArticleData = {
     {
       id: 'para-flirtear',
       title: "Para flirtear, sin pasarse (66-80)",
-      content: `<p>El flirteo que funciona se resume en una regla sencilla: sugerir en vez de anunciar. Estas preguntas mandan la señal dejando al otro libre de recogerla... o no. Es exactamente lo que las hace eficaces sin resultar nunca pesadas.</p>
+      content: `<p>El flirteo que funciona sigue una regla sencilla: sugerir en vez de anunciar. Estas preguntas mandan la señal dejando al otro libre de recogerla... o no. Es exactamente lo que las hace eficaces sin resultar nunca pesadas.</p>
 <ol start="66">
 <li>¿Qué notaste primero de mí, sinceramente?</li>
 <li>¿Cuál es tu idea de cita perfecta, sin presupuesto ilimitado?</li>
@@ -192,7 +192,7 @@ const article: BlogArticleData = {
 <tr><td>Flirtear</td><td>Sugerido, con salida posible</td><td>El cumplido que incomoda</td></tr>
 <tr><td>La primera cita</td><td>Abierto, y escuchado de verdad</td><td>Recitar las preguntas preparadas</td></tr>
 </tbody></table></div>
-<p>Y si lo que te bloquea es más bien saber qué sientes <em>tú</em>, hemos hecho <a href="/es/test-amor-o-crush/">un test que distingue el crush de los sentimientos de verdad</a>, en 35 preguntas.</p>
+<p>Y si lo que te bloquea es más bien saber qué sientes <em>tú</em>, puedes <a href="/es/test-amor-o-crush/">distinguir el crush de los sentimientos de verdad</a> en 35 preguntas.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">¿Piensa en ti o solo responde por educación?</p>
 <p class="blog-cta-texte">Una serie de preguntas repasa las señales reales, las que no se ven cuando estás metida dentro: sus retomas, sus detalles, cómo es cuando estás delante. Resultado inmediato y nadie se enterará.</p>

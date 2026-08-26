@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Young person smiling at their phone while typing a message to their crush",
   publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "The hard part with a crush isn't finding something to say. It's asking the questions that turn a polite exchange into a real connection.",
+  excerpt: "The hard part with a crush is finding the question that revives the conversation at the right moment. Here are 100 of them, sorted by situation.",
   introduction: `<p>You know the moment... The conversation is going round in circles, the "good, you?" pile up, and you can feel that if nobody brings something else, it's going to die politely in a "have a good evening then". With a crush, every exchange counts double. So sooner or later we all end up staring at our phone with no idea what to send.</p>
 <p><strong>A good question does two things at once: it shows you're genuinely interested, and it makes them want to answer.</strong> That's all you ask of a conversation that's just starting. And it's exactly what the 100 questions below do.</p>
-<p>They're sorted by situation: to open by message, to get to know him, to make him laugh, to go a bit further, to flirt without overdoing it... and to check, casually, whether this could work between you. We write "he" for simplicity, but everything obviously works in every direction.</p>`,
+<p>They're sorted by situation, from the first message to the first date. We write "he" for simplicity, but everything obviously works in every direction.</p>`,
   quickSummary: [
     "100 questions sorted by situation, from the first message to the first date.",
     "One question at a time: three in the same message reads like a form.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'by-message-to-open',
       title: "By message, to open or reopen (1-15)",
-      content: `<p>The short format, perfect to start a conversation or wake up a thread that's drifting off. Easy to send, easy to answer... that's all you ask of a first exchange.</p>
+      content: `<p>The short format, perfect to start a conversation or wake up a thread that's drifting off. Easy to send, easy to answer, and that's plenty to get things going!</p>
 <ol>
 <li>Your day in three emojis, no cheating?</li>
 <li>Are you more of a four-minute voice note or a wall of text?</li>
@@ -122,7 +122,7 @@ const article: BlogArticleData = {
     {
       id: 'to-flirt',
       title: "To flirt, without overdoing it (66-80)",
-      content: `<p>Flirting that works comes down to one simple rule: suggest rather than announce. These questions send the signal while leaving the other person free to take it... or not. That's exactly what makes them effective without ever being heavy-handed.</p>
+      content: `<p>Flirting that works follows one simple rule: suggest rather than announce. These questions send the signal while leaving the other person free to take it... or not. That's exactly what makes them effective without ever being heavy-handed.</p>
 <ol start="66">
 <li>What did you notice first about me, honestly?</li>
 <li>What's your idea of a perfect date, with no unlimited budget?</li>
@@ -192,7 +192,7 @@ const article: BlogArticleData = {
 <tr><td>Flirting</td><td>Suggested, with a way out</td><td>The compliment that makes him uncomfortable</td></tr>
 <tr><td>The first date</td><td>Open, and genuinely listened to</td><td>Reciting your prepared questions</td></tr>
 </tbody></table></div>
-<p>And if what is really blocking you is knowing what <em>you</em> feel, we built <a href="/en/love-or-crush-test/">a test that sorts a crush from real feelings</a>, in 35 questions.</p>
+<p>And if what is really blocking you is knowing what <em>you</em> feel, you can <a href="/en/love-or-crush-test/">sort a crush from real feelings</a> in 35 questions.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Is he thinking about you, or just being polite?</p>
 <p class="blog-cta-texte">A series of questions goes through the real signals, the ones you don't notice when you're in the middle of it: his follow-ups, his attentions, the way he is when you're there. Instant result, and nobody will know.</p>

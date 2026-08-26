@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Deux téléphones face à face reliés par des bulles de conversation et un cœur",
   publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Le plus dur avec un crush, ce n'est pas de trouver quoi dire. C'est de poser les questions qui transforment une conversation polie en vraie connexion.",
+  excerpt: "Le plus dur avec un crush, c'est de trouver la question qui relance la conversation au bon moment. En voici 100, classées par situation.",
   introduction: `<p>Tu connais ce moment... La conversation tourne, les « ça va et toi » s'enchaînent, et tu sens que si personne ne relance avec autre chose, ça va gentiment mourir en « bonne soirée alors ». Avec un crush, chaque échange compte double ! Du coup, on se retrouve tous, un jour ou l'autre, à fixer son téléphone sans savoir quoi envoyer.</p>
 <p><strong>Une bonne question fait deux choses à la fois : elle montre que tu t'intéresses vraiment, et elle donne envie de répondre.</strong> C'est tout ce qu'on demande à une conversation naissante, en fait. Et c'est exactement ce que les 100 questions qui suivent savent faire.</p>
-<p>Elles sont classées par situation : pour lancer par message, pour apprendre à le connaître, pour rire, pour aller un peu plus loin, pour flirter sans trop en faire... et pour vérifier, mine de rien, si ça pourrait coller entre vous. On écrit « il » pour simplifier, mais tout fonctionne évidemment dans tous les sens.</p>`,
+<p>Elles sont classées par situation, du premier message au premier rendez-vous. On écrit « il » pour simplifier, mais tout fonctionne évidemment dans tous les sens.</p>`,
   quickSummary: [
     "100 questions classées par situation, du premier message au premier rendez-vous.",
     "La règle d'or : une question à la fois, et tu réponds aussi à celles que tu poses.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'par-message-pour-lancer',
       title: "Par message, pour lancer ou relancer (1-15)",
-      content: `<p>Le format court, parfait pour un début de conversation ou pour réveiller un fil qui s'endort. Facile à envoyer, facile à répondre... c'est tout ce qu'on demande à un premier échange !</p>
+      content: `<p>Le format court, parfait pour un début de conversation ou pour réveiller un fil qui s'endort. Facile à envoyer, facile à répondre, et ça suffit largement pour commencer !</p>
 <ol>
 <li>Ta journée en trois emojis, sans tricher ?</li>
 <li>Tu es plutôt vocal de 4 minutes ou pavé de texte ?</li>
@@ -71,7 +71,7 @@ const article: BlogArticleData = {
 <li>C'est quoi ta plus grande fierté, celle que tu ne racontes pas ?</li>
 <li>Qu'est-ce qui te fait te sentir vivant ?</li>
 <li>Tu préfères être admiré ou être compris ?</li>
-<li>Qu'est-ce que les gens rient de toi gentiment ?</li>
+<li>De quoi tes amis se moquent gentiment chez toi ?</li>
 <li>Qu'est-ce que tu ferais de ta vie si tu étais sûr de réussir ?</li>
 </ol>`,
     },
@@ -122,7 +122,7 @@ const article: BlogArticleData = {
     {
       id: 'pour-flirter-sans-trop-en-faire',
       title: "Pour flirter, sans trop en faire (66-80)",
-      content: `<p>Le flirt qui fonctionne tient en une règle toute simple : suggérer plutôt qu'annoncer. Ces questions envoient le signal, tout en laissant l'autre libre de le saisir... ou pas. C'est exactement ce qui les rend efficaces sans jamais être lourdes.</p>
+      content: `<p>Le flirt qui fonctionne suit une règle toute simple : suggérer plutôt qu'annoncer. Ces questions envoient le signal, tout en laissant l'autre libre de le saisir... ou pas. C'est exactement ce qui les rend efficaces sans jamais être lourdes.</p>
 <ol start="66">
 <li>Tu as remarqué quoi en premier chez moi, honnêtement ?</li>
 <li>C'est quoi ton idée du rendez-vous parfait, sans budget illimité ?</li>
@@ -192,7 +192,7 @@ const article: BlogArticleData = {
 <tr><td>Flirter</td><td>Suggéré, avec une porte de sortie</td><td>Le compliment qui met mal à l'aise</td></tr>
 <tr><td>Le premier rendez-vous</td><td>Ouvert, et vraiment écouté</td><td>Réciter ses questions préparées</td></tr>
 </tbody></table></div>
-<p>Et si la question qui te bloque est plutôt de savoir ce que toi tu ressens, on a fait <a href="/test-amour-ou-crush/">un test qui fait le tri entre le crush et les sentiments amoureux</a>, en 35 questions.</p>
+<p>Et si la question qui te bloque est plutôt de savoir ce que toi tu ressens, tu peux <a href="/test-amour-ou-crush/">faire le tri entre le crush et les vrais sentiments</a> en 35 questions.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Il pense à toi, ou il répond juste poliment ?</p>
 <p class="blog-cta-texte">Une série de questions passe en revue les vrais signaux, ceux qu'on ne remarque pas quand on a le nez dedans : ses relances, ses attentions, sa manière d'être quand tu es là. Résultat immédiat, et personne n'en saura rien.</p>
