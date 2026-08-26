@@ -663,7 +663,547 @@ var QuizEngine = (function() {
     });
 
     shareRow.appendChild(btn);
+    // L'image de story ne doit jamais pouvoir casser un ecran de resultat :
+    // tout echec (canvas absent, police, memoire) laisse le partage texte seul.
+    try { renderStoryShare(shareRow, partage); } catch (e) {}
     wrap.appendChild(shareRow);
+  }
+
+  // ─── Image de résultat pour les stories ───────────────────────────────────
+  // Le partage texte passe bien sur WhatsApp, mais sur Instagram, TikTok,
+  // Snapchat ou Facebook, ce qui circule c'est une image verticale. On dessine
+  // donc le résultat au canvas, en 1080x1920, dans trois visuels au choix.
+  // Tout est tracé à la main (dégradés, bulles, cœurs) : aucune ressource à
+  // télécharger, l'image sort en une frame même hors connexion.
+  var STORY_L = 1080, STORY_H = 1920;
+
+  function storyDonnees(partage) {
+    var o = (partage && typeof partage === 'object') ? partage : {};
+    var q = nomDuQuiz();
+    var score = '';
+    if (o.pct !== undefined && o.pct !== null && o.pct !== '') score = o.pct + ' %';
+    else if (o.score !== undefined && o.score !== null && o.total) score = o.score + '/' + o.total;
+    else if (o.score !== undefined && o.score !== null && o.score !== '') score = String(o.score);
+    var etiquette = (o.type === 'duo' || o.type === 'cartes' || o.type === 'plateau')
+      ? tg('story.scoreDuo', 'Notre résultat')
+      : tg('story.scoreSolo', 'Mon résultat');
+    // Les guillemets suivent la langue : on reprend ceux du message texte
+    // (« » en français, “ ” en anglais, „ “ en allemand...), et une insécable
+    // les colle au texte pour qu'un guillemet ne parte jamais seul à la ligne.
+    var verdictCite = '';
+    if (o.verdict) {
+      var gabarit = tg('share.verdict', ' : « {{result}} »').replace(/^\s*:\s*/, '');
+      verdictCite = gabarit.replace(/\{\{result\}\}/g, o.verdict)
+        .replace(/^([«„“"]) /, '$1\u00a0').replace(/ ([»“”"])$/, '\u00a0$1');
+    }
+    return {
+      emoji: q.emoji || '💜',
+      quiz: q.nom || 'Quiz Couple',
+      score: score,
+      verdict: verdictCite,
+      etiquette: etiquette,
+      cta: tg('story.ctaImage', 'Fais le test toi aussi sur'),
+      url: 'quiz-couple.com'
+    };
+  }
+
+  // Découpe un texte en lignes qui tiennent dans maxL, deux lignes au plus :
+  // au-delà, on tronque avec une ellipse plutôt que de rapetisser à l'infini.
+  function storyLignes(ctx, texte, maxL, maxLignes) {
+    var mots = String(texte).split(' '), lignes = [], courante = '';
+    for (var i = 0; i < mots.length; i++) {
+      var essai = courante ? courante + ' ' + mots[i] : mots[i];
+      if (ctx.measureText(essai).width <= maxL || !courante) courante = essai;
+      else { lignes.push(courante); courante = mots[i]; }
+    }
+    if (courante) lignes.push(courante);
+    if (lignes.length > maxLignes) {
+      lignes = lignes.slice(0, maxLignes);
+      var der = lignes[maxLignes - 1];
+      while (der && ctx.measureText(der + '…').width > maxL) der = der.slice(0, -1).replace(/\s+$/, '');
+      lignes[maxLignes - 1] = der + '…';
+    }
+    return lignes;
+  }
+
+  // Un verdict long rétrécit avant d'être tronqué : on descend le corps
+  // jusqu'à ce que le texte tienne dans le nombre de lignes autorisé.
+  function storyLignesAjuste(ctx, texte, maxL, maxLignes, px, pxMin) {
+    var essai = px;
+    while (essai > pxMin) {
+      ctx.font = storyFont(essai, true);
+      var lignes = storyLignes(ctx, texte, maxL, maxLignes + 1);
+      if (lignes.length <= maxLignes) return { lignes: lignes, px: essai };
+      essai -= 4;
+    }
+    ctx.font = storyFont(pxMin, true);
+    return { lignes: storyLignes(ctx, texte, maxL, maxLignes), px: pxMin };
+  }
+
+  function storyFont(px, gras, poppins) {
+    return (gras ? '700 ' : '400 ') + px + 'px ' + (poppins ? "'Poppins', " : '') +
+      "'Inter', system-ui, -apple-system, sans-serif";
+  }
+
+  function storyPastille(ctx, x, y, l, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + l, y, x + l, y + h, r);
+    ctx.arcTo(x + l, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + l, y, r);
+    ctx.closePath();
+  }
+
+  function storyCoeur(ctx, cx, cy, s) {
+    ctx.beginPath();
+    ctx.moveTo(cx, cy + s * 0.38);
+    ctx.bezierCurveTo(cx - s * 0.62, cy - s * 0.02, cx - s * 0.34, cy - s * 0.5, cx, cy - s * 0.18);
+    ctx.bezierCurveTo(cx + s * 0.34, cy - s * 0.5, cx + s * 0.62, cy - s * 0.02, cx, cy + s * 0.38);
+    ctx.closePath();
+  }
+
+  // Le texte centré multi-lignes revient dans les trois visuels.
+  function storyTexteCentre(ctx, lignes, cx, y, interligne) {
+    for (var i = 0; i < lignes.length; i++) ctx.fillText(lignes[i], cx, y + i * interligne);
+    return y + (lignes.length - 1) * interligne;
+  }
+
+  // La pastille « quiz-couple.com » du bas, partagée par les trois visuels ;
+  // seules les couleurs changent.
+  function storyPied(ctx, d, yCta, couleurCta, fondPastille, couleurUrl, contour) {
+    ctx.textAlign = 'center';
+    ctx.font = storyFont(40, false);
+    ctx.fillStyle = couleurCta;
+    ctx.fillText(d.cta, STORY_L / 2, yCta);
+    ctx.font = storyFont(56, true, true);
+    var lUrl = ctx.measureText(d.url).width + 120, hUrl = 108;
+    var xUrl = (STORY_L - lUrl) / 2, yUrl = yCta + 44;
+    storyPastille(ctx, xUrl, yUrl, lUrl, hUrl, hUrl / 2);
+    ctx.fillStyle = fondPastille;
+    ctx.fill();
+    if (contour) { ctx.strokeStyle = contour; ctx.lineWidth = 3; ctx.stroke(); }
+    ctx.fillStyle = couleurUrl;
+    ctx.fillText(d.url, STORY_L / 2, yUrl + hUrl / 2 + 20);
+  }
+
+  // ── Visuel 1 : le dégradé signature, bulles et cœurs flottants ──
+  function storyVisuel1(ctx, d) {
+    var fond = ctx.createLinearGradient(0, 0, STORY_L, STORY_H);
+    fond.addColorStop(0, 'hsl(340, 70%, 62%)');
+    fond.addColorStop(1, 'hsl(270, 45%, 42%)');
+    ctx.fillStyle = fond;
+    ctx.fillRect(0, 0, STORY_L, STORY_H);
+
+    var bulles = [[130, 240, 110, 0.10], [950, 170, 150, 0.08], [990, 620, 70, 0.12], [90, 890, 55, 0.14],
+      [180, 1560, 130, 0.09], [930, 1420, 100, 0.10], [540, 130, 45, 0.12], [880, 1750, 60, 0.12]];
+    for (var i = 0; i < bulles.length; i++) {
+      ctx.beginPath();
+      ctx.arc(bulles[i][0], bulles[i][1], bulles[i][2], 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,' + bulles[i][3] + ')';
+      ctx.fill();
+    }
+    var coeurs = [[100, 480, 70, 0.25, -0.3], [980, 380, 55, 0.3, 0.25], [940, 950, 80, 0.22, 0.15],
+      [140, 1200, 50, 0.3, -0.2], [850, 1620, 65, 0.25, -0.15], [230, 1780, 85, 0.2, 0.3]];
+    for (i = 0; i < coeurs.length; i++) {
+      ctx.save();
+      ctx.translate(coeurs[i][0], coeurs[i][1]);
+      ctx.rotate(coeurs[i][4]);
+      storyCoeur(ctx, 0, 0, coeurs[i][2]);
+      ctx.fillStyle = 'rgba(255,255,255,' + coeurs[i][3] + ')';
+      ctx.fill();
+      ctx.restore();
+    }
+
+    ctx.textAlign = 'center';
+    ctx.font = storyFont(46, true, true);
+    var marque = '💜 Quiz Couple';
+    var lM = ctx.measureText(marque).width + 110;
+    storyPastille(ctx, (STORY_L - lM) / 2, 150, lM, 96, 48);
+    ctx.fillStyle = 'rgba(255,255,255,0.95)';
+    ctx.fill();
+    ctx.fillStyle = 'hsl(340, 65%, 45%)';
+    ctx.fillText(marque, STORY_L / 2, 214);
+
+    ctx.font = storyFont(52, true);
+    ctx.fillStyle = 'rgba(255,255,255,0.9)';
+    ctx.fillText(d.etiquette.toUpperCase(), STORY_L / 2, 448);
+
+    var cy = 810, r = 300;
+    ctx.save();
+    ctx.shadowColor = 'rgba(60, 10, 60, 0.35)';
+    ctx.shadowBlur = 70;
+    ctx.shadowOffsetY = 24;
+    ctx.beginPath();
+    ctx.arc(STORY_L / 2, cy, r, 0, Math.PI * 2);
+    ctx.fillStyle = '#fff';
+    ctx.fill();
+    ctx.restore();
+    ctx.beginPath();
+    ctx.arc(STORY_L / 2, cy, r + 26, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(255,255,255,0.45)';
+    ctx.lineWidth = 6;
+    ctx.stroke();
+
+    var accent = ctx.createLinearGradient(STORY_L / 2 - r, cy - r, STORY_L / 2 + r, cy + r);
+    accent.addColorStop(0, 'hsl(340, 70%, 55%)');
+    accent.addColorStop(1, 'hsl(270, 50%, 48%)');
+    if (d.score) {
+      ctx.font = storyFont(110, false);
+      ctx.fillText(d.emoji, STORY_L / 2, cy - 130);
+      ctx.fillStyle = accent;
+      var pxScore = d.score.length > 5 ? 150 : 190;
+      ctx.font = storyFont(pxScore, true, true);
+      ctx.fillText(d.score, STORY_L / 2, cy + 100);
+    } else {
+      ctx.font = storyFont(260, false);
+      ctx.fillText(d.emoji, STORY_L / 2, cy + 90);
+    }
+
+    ctx.fillStyle = '#fff';
+    ctx.font = storyFont(64, true, true);
+    var lignesQuiz = storyLignes(ctx, d.quiz, 880, 2);
+    var yQuiz = storyTexteCentre(ctx, lignesQuiz, STORY_L / 2, 1270, 82);
+
+    var basVerdict = yQuiz;
+    if (d.verdict) {
+      var aj = storyLignesAjuste(ctx, d.verdict, 760, 2, 48, 36);
+      var lignesV = aj.lignes, inter = Math.round(aj.px * 1.32);
+      var hV = 70 + lignesV.length * inter;
+      var lV = 0;
+      for (i = 0; i < lignesV.length; i++) lV = Math.max(lV, ctx.measureText(lignesV[i]).width);
+      lV += 130;
+      var yV = yQuiz + 70;
+      storyPastille(ctx, (STORY_L - lV) / 2, yV, lV, hV, hV / 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.94)';
+      ctx.fill();
+      ctx.fillStyle = 'hsl(335, 55%, 38%)';
+      storyTexteCentre(ctx, lignesV, STORY_L / 2, yV + 46 + aj.px * 0.72, inter);
+      basVerdict = yV + hV;
+    }
+
+    storyPied(ctx, d, Math.max(basVerdict + 130, 1700), 'rgba(255,255,255,0.85)', 'rgba(255,255,255,0.16)', '#fff', 'rgba(255,255,255,0.7)');
+  }
+
+  // ── Visuel 2 : fond crème, carte blanche arrondie, semis de cœurs ──
+  function storyVisuel2(ctx, d) {
+    ctx.fillStyle = 'hsl(18, 64%, 96%)';
+    ctx.fillRect(0, 0, STORY_L, STORY_H);
+    for (var ly = 0; ly < 13; ly++) {
+      for (var lx = 0; lx < 7; lx++) {
+        var px = lx * 170 + (ly % 2 ? 85 : 0), py = ly * 160 + 40;
+        ctx.save();
+        ctx.translate(px, py);
+        ctx.rotate(((lx + ly) % 3 - 1) * 0.35);
+        storyCoeur(ctx, 0, 0, 34);
+        ctx.fillStyle = 'hsla(340, 65%, 62%, 0.10)';
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    // La carte s'ajuste au texte : on mesure d'abord, on dessine ensuite,
+    // sinon un nom de test court laisse un grand vide blanc en bas.
+    var cx = STORY_L / 2, xC = 96, lC = STORY_L - 192;
+    ctx.textAlign = 'center';
+    ctx.font = storyFont(62, true, true);
+    var lignesQuiz = storyLignes(ctx, d.quiz, lC - 160, 2);
+    var lignesV = null, pxV = 46;
+    if (d.verdict) {
+      var ajV = storyLignesAjuste(ctx, d.verdict, lC - 240, 2, 46, 36);
+      lignesV = ajV.lignes;
+      pxV = ajV.px;
+    }
+    var yC = lignesQuiz.length > 1 ? 400 : 440;
+    var basQuiz = yC + 420 + (lignesQuiz.length - 1) * 78;
+    var basScore = basQuiz + (d.score ? 340 : 310);
+    var interV = Math.round(pxV * 1.32);
+    var basCarte = basScore + (lignesV ? 104 + lignesV.length * interV : 0) + 80;
+    var hC = basCarte - yC;
+
+    ctx.save();
+    ctx.shadowColor = 'hsla(340, 60%, 45%, 0.22)';
+    ctx.shadowBlur = 80;
+    ctx.shadowOffsetY = 30;
+    storyPastille(ctx, xC, yC, lC, hC, 72);
+    ctx.fillStyle = '#fff';
+    ctx.fill();
+    ctx.restore();
+
+    ctx.font = storyFont(48, true, true);
+    var ruban = d.etiquette + ' 💘';
+    var lR = ctx.measureText(ruban).width + 130, hR = 110;
+    var grad = ctx.createLinearGradient(cx - lR / 2, 0, cx + lR / 2, 0);
+    grad.addColorStop(0, 'hsl(340, 70%, 58%)');
+    grad.addColorStop(1, 'hsl(270, 45%, 52%)');
+    ctx.save();
+    ctx.shadowColor = 'hsla(340, 70%, 45%, 0.4)';
+    ctx.shadowBlur = 34;
+    ctx.shadowOffsetY = 10;
+    storyPastille(ctx, cx - lR / 2, yC - hR / 2, lR, hR, hR / 2);
+    ctx.fillStyle = grad;
+    ctx.fill();
+    ctx.restore();
+    ctx.fillStyle = '#fff';
+    ctx.fillText(ruban, cx, yC + 18);
+
+    ctx.font = storyFont(130, false);
+    ctx.fillText(d.emoji, cx, yC + 290);
+
+    ctx.fillStyle = 'hsl(335, 25%, 22%)';
+    ctx.font = storyFont(62, true, true);
+    storyTexteCentre(ctx, lignesQuiz, cx, yC + 420, 78);
+
+    var accent = ctx.createLinearGradient(cx - 250, 0, cx + 250, 0);
+    accent.addColorStop(0, 'hsl(340, 70%, 55%)');
+    accent.addColorStop(1, 'hsl(270, 50%, 48%)');
+    if (d.score) {
+      ctx.fillStyle = accent;
+      ctx.font = storyFont(d.score.length > 5 ? 160 : 210, true, true);
+      ctx.fillText(d.score, cx, basQuiz + 260);
+    } else {
+      ctx.font = storyFont(170, false);
+      ctx.fillText('💞', cx, basQuiz + 240);
+    }
+
+    if (lignesV) {
+      ctx.font = storyFont(pxV, true);
+      var hV = 64 + lignesV.length * interV, lV = 0;
+      for (var i = 0; i < lignesV.length; i++) lV = Math.max(lV, ctx.measureText(lignesV[i]).width);
+      lV += 120;
+      storyPastille(ctx, cx - lV / 2, basScore + 24, lV, hV, hV / 2);
+      ctx.fillStyle = 'hsl(340, 65%, 95%)';
+      ctx.fill();
+      ctx.fillStyle = 'hsl(335, 55%, 42%)';
+      storyTexteCentre(ctx, lignesV, cx, basScore + 44 + pxV * 0.72, interV);
+    }
+
+    storyPied(ctx, d, Math.max(basCarte + 130, 1700), 'hsl(335, 25%, 40%)', 'hsl(340, 65%, 92%)', 'hsl(335, 60%, 42%)', null);
+  }
+
+  // ── Visuel 3 : nuit néon, cœur lumineux ──
+  function storyVisuel3(ctx, d) {
+    ctx.fillStyle = 'hsl(268, 45%, 10%)';
+    ctx.fillRect(0, 0, STORY_L, STORY_H);
+    var halo = ctx.createRadialGradient(STORY_L / 2, 760, 80, STORY_L / 2, 760, 900);
+    halo.addColorStop(0, 'hsla(320, 80%, 45%, 0.28)');
+    halo.addColorStop(1, 'hsla(268, 45%, 10%, 0)');
+    ctx.fillStyle = halo;
+    ctx.fillRect(0, 0, STORY_L, STORY_H);
+
+    var graines = [[90, 160, 3], [240, 90, 2], [520, 200, 2.6], [820, 120, 3.4], [1000, 300, 2],
+      [80, 640, 2.4], [1010, 760, 3], [150, 1120, 2], [960, 1180, 2.6], [110, 1500, 3],
+      [890, 1560, 2.2], [420, 1820, 2.6], [700, 1760, 2], [560, 60, 2], [980, 1860, 2.8]];
+    for (var i = 0; i < graines.length; i++) {
+      ctx.beginPath();
+      ctx.arc(graines[i][0], graines[i][1], graines[i][2], 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.7)';
+      ctx.fill();
+    }
+
+    ctx.textAlign = 'center';
+    ctx.save();
+    ctx.font = storyFont(46, true, true);
+    ctx.fillStyle = '#fff';
+    ctx.shadowColor = 'hsl(340, 90%, 60%)';
+    ctx.shadowBlur = 26;
+    ctx.fillText('💜 Quiz Couple', STORY_L / 2, 200);
+    ctx.restore();
+
+    var cy = 800, s = 620;
+    ctx.save();
+    ctx.strokeStyle = 'hsl(340, 95%, 64%)';
+    ctx.lineWidth = 12;
+    ctx.lineJoin = 'round';
+    ctx.shadowColor = 'hsl(340, 95%, 58%)';
+    ctx.shadowBlur = 60;
+    storyCoeur(ctx, STORY_L / 2, cy, s);
+    ctx.stroke();
+    ctx.shadowBlur = 24;
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.save();
+    ctx.fillStyle = '#fff';
+    ctx.shadowColor = 'hsl(340, 95%, 62%)';
+    ctx.shadowBlur = 42;
+    if (d.score) {
+      ctx.font = storyFont(44, true);
+      ctx.fillText(d.etiquette.toUpperCase(), STORY_L / 2, cy - 160);
+      ctx.font = storyFont(d.score.length > 5 ? 130 : 170, true, true);
+      ctx.fillText(d.score, STORY_L / 2, cy + 20);
+    } else {
+      ctx.font = storyFont(200, false);
+      ctx.shadowBlur = 30;
+      ctx.fillText(d.emoji, STORY_L / 2, cy + 20);
+    }
+    ctx.restore();
+
+    ctx.fillStyle = '#fff';
+    ctx.font = storyFont(62, true, true);
+    var lignesQuiz = storyLignes(ctx, d.quiz, 880, 2);
+    var yQuiz = storyTexteCentre(ctx, lignesQuiz, STORY_L / 2, 1300, 80);
+
+    var basVerdict = yQuiz;
+    if (d.verdict) {
+      var aj = storyLignesAjuste(ctx, d.verdict, 760, 2, 46, 36);
+      var lignesV = aj.lignes, inter = Math.round(aj.px * 1.32);
+      var hV = 66 + lignesV.length * inter, lV = 0;
+      for (i = 0; i < lignesV.length; i++) lV = Math.max(lV, ctx.measureText(lignesV[i]).width);
+      lV += 130;
+      var yV = yQuiz + 66;
+      ctx.save();
+      storyPastille(ctx, (STORY_L - lV) / 2, yV, lV, hV, hV / 2);
+      ctx.strokeStyle = 'hsl(268, 80%, 72%)';
+      ctx.lineWidth = 5;
+      ctx.shadowColor = 'hsl(268, 80%, 65%)';
+      ctx.shadowBlur = 26;
+      ctx.stroke();
+      ctx.restore();
+      ctx.fillStyle = 'hsl(268, 90%, 88%)';
+      storyTexteCentre(ctx, lignesV, STORY_L / 2, yV + 44 + aj.px * 0.72, inter);
+      basVerdict = yV + hV;
+    }
+
+    storyPied(ctx, d, Math.max(basVerdict + 130, 1700), 'hsla(268, 80%, 88%, 0.9)', 'hsla(340, 90%, 60%, 0.16)', '#fff', 'hsl(340, 90%, 60%)');
+  }
+
+  var STORY_VISUELS = [storyVisuel1, storyVisuel2, storyVisuel3];
+
+  function storyDessine(indice, d, echelle) {
+    var canvas = document.createElement('canvas');
+    canvas.width = Math.round(STORY_L * echelle);
+    canvas.height = Math.round(STORY_H * echelle);
+    var ctx = canvas.getContext('2d');
+    if (!ctx) return null;
+    ctx.scale(echelle, echelle);
+    ctx.textBaseline = 'alphabetic';
+    STORY_VISUELS[indice](ctx, d);
+    return canvas;
+  }
+
+  // Les logos des réseaux où l'image a sa place. Facebook a bien des stories,
+  // au même format vertical que les autres.
+  var STORY_RESEAUX = [
+    { nom: 'Instagram', html: '<span class="story-reseau story-reseau--ig"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.2" cy="6.8" r="1.15" fill="#fff" stroke="none"/></svg></span>' },
+    { nom: 'TikTok', html: '<span class="story-reseau story-reseau--tt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>' },
+    { nom: 'Snapchat', html: '<span class="story-reseau story-reseau--sc"><svg viewBox="0 0 24 24" fill="#fff" stroke="rgba(0,0,0,0.14)" stroke-width="0.6"><path d="M12 2.6c-3.1 0-5.3 2.3-5.3 5.4v3c0 .4-.35.72-.86.9l-2 .76c-.55.21-.55.98 0 1.19l2.62.98c.4.15.7.5.8.92l.26.98c.12.44.6.68 1.04.55.76-.23 2.1-.56 3.44-.56s2.68.33 3.44.56c.44.13.92-.11 1.04-.55l.26-.98c.1-.42.4-.77.8-.92l2.62-.98c.55-.21.55-.98 0-1.19l-2-.76c-.51-.18-.86-.5-.86-.9V8c0-3.1-2.2-5.4-5.3-5.4z"/></svg></span>' },
+    { nom: 'Facebook', html: '<span class="story-reseau story-reseau--fb"><svg viewBox="0 0 24 24" fill="#fff"><path d="M13.6 21v-7.4h2.5l.38-2.9H13.6V8.85c0-.84.23-1.41 1.44-1.41h1.54V4.85c-.27-.04-1.18-.12-2.24-.12-2.22 0-3.74 1.36-3.74 3.85v2.12H8.1v2.9h2.5V21h3z"/></svg></span>' }
+  ];
+
+  function renderStoryShare(shareRow, partage) {
+    var canvasTest = document.createElement('canvas');
+    if (!canvasTest.getContext || !canvasTest.getContext('2d') || !canvasTest.toBlob) return;
+
+    var d = storyDonnees(partage);
+    var bloc = el('div', 'story-share');
+
+    var titre = el('p', 'story-share-titre');
+    titre.textContent = tg('story.titre', 'Votre résultat en image, prêt pour la story :');
+    bloc.appendChild(titre);
+
+    var carrousel = el('div', 'story-share-carrousel');
+    carrousel.setAttribute('role', 'listbox');
+    carrousel.setAttribute('aria-label', tg('story.choix', 'Choisissez votre visuel'));
+    var points = el('div', 'story-share-points');
+    var choisi = 0;
+    var slides = [], pastilles = [];
+
+    function choisir(i) {
+      choisi = i;
+      for (var j = 0; j < slides.length; j++) {
+        slides[j].classList.toggle('est-choisi', j === i);
+        slides[j].setAttribute('aria-selected', j === i ? 'true' : 'false');
+        pastilles[j].classList.toggle('est-actif', j === i);
+      }
+      try { slides[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' }); } catch (e) {}
+    }
+
+    for (var i = 0; i < STORY_VISUELS.length; i++) {
+      (function(i) {
+        var slide = el('button', 'story-share-slide');
+        slide.type = 'button';
+        slide.setAttribute('role', 'option');
+        slide.setAttribute('aria-label', tg('story.apercu', 'Visuel {{n}}').replace('{{n}}', i + 1));
+        slide.addEventListener('click', function() { choisir(i); });
+        slides.push(slide);
+        carrousel.appendChild(slide);
+        var p = el('span', 'story-share-point');
+        pastilles.push(p);
+        points.appendChild(p);
+      })(i);
+    }
+
+    var btn = el('button', 'story-share-btn');
+    btn.type = 'button';
+    btn.innerHTML = '✨ <span>' + esc(tg('story.bouton', 'Ajouter en story !')) + '</span>';
+
+    var reseaux = el('div', 'story-share-reseaux');
+    reseaux.setAttribute('aria-label', tg('story.reseaux', 'À poster sur Instagram, TikTok, Snapchat ou Facebook'));
+    var htmlReseaux = '';
+    for (i = 0; i < STORY_RESEAUX.length; i++) htmlReseaux += STORY_RESEAUX[i].html.replace('<span ', '<span title="' + STORY_RESEAUX[i].nom + '" ');
+    reseaux.innerHTML = htmlReseaux;
+
+    var note = el('p', 'story-share-note');
+    note.hidden = true;
+
+    bloc.appendChild(carrousel);
+    bloc.appendChild(points);
+    bloc.appendChild(btn);
+    bloc.appendChild(reseaux);
+    bloc.appendChild(note);
+    shareRow.appendChild(bloc);
+
+    // Les aperçus attendent les polices : dessinés trop tôt, Poppins retombe
+    // sur la police système et les trois vignettes changent de tête au rechargement.
+    function peindreApercus() {
+      for (var i = 0; i < STORY_VISUELS.length; i++) {
+        try {
+          var c = storyDessine(i, d, 0.22);
+          if (!c) continue;
+          var img = document.createElement('img');
+          img.src = c.toDataURL('image/png');
+          img.alt = tg('story.apercu', 'Visuel {{n}}').replace('{{n}}', i + 1);
+          img.width = c.width;
+          img.height = c.height;
+          slides[i].innerHTML = '';
+          slides[i].appendChild(img);
+        } catch (e) {}
+      }
+      choisir(0);
+    }
+    if (document.fonts && document.fonts.ready && document.fonts.ready.then) {
+      var lance = false;
+      var go = function() { if (!lance) { lance = true; peindreApercus(); } };
+      document.fonts.ready.then(go).catch(go);
+      setTimeout(go, 1200);
+    } else {
+      peindreApercus();
+    }
+
+    btn.addEventListener('click', function() {
+      var canvas;
+      try { canvas = storyDessine(choisi, d, 1); } catch (e) { return; }
+      if (!canvas) return;
+      canvas.toBlob(function(blob) {
+        if (!blob) return;
+        var fichier;
+        try { fichier = new File([blob], 'quiz-couple-story.png', { type: 'image/png' }); } catch (e) { fichier = null; }
+        if (fichier && navigator.canShare && navigator.canShare({ files: [fichier] }) && navigator.share) {
+          navigator.share({ files: [fichier], title: tg('share.titre', 'Quiz Couple') }).catch(function() {});
+        } else {
+          var a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = 'quiz-couple-story.png';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          setTimeout(function() { URL.revokeObjectURL(a.href); }, 4000);
+          note.textContent = tg('story.enregistree', 'Image enregistrée ! Ouvrez Instagram, TikTok, Snapchat ou Facebook et ajoutez-la à votre story.');
+          note.hidden = false;
+        }
+      }, 'image/png');
+    });
   }
 
   // ─── Common UI Components ─────────────────────────────────
