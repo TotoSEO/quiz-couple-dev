@@ -45,11 +45,11 @@ const article: BlogArticleData = {
           id: 'ce-qui-se-passe-dans-son-corps',
           title: "Cosa succede nel suo corpo in quel momento",
           content: `<p>Una situazione che conta innesca la stessa meccanica di un pericolo. Il corpo va in allerta, l'adrenalina sale, il cuore accelera e il sangue va verso i muscoli. È il sistema nervoso simpatico che prende il comando, e non fa differenza tra un orso e una donna che gli piace.</p>
-<p><strong>La bocca.</strong> In allerta la saliva cambia: diventa più densa, e la bocca dà quella sensazione sgradevole di essere secca. Da qui il deglutire continuo e il sorso d'acqua ogni due minuti. È anche per questo che la voce si stringe un po'.</p>
-<p><strong>Le mani.</strong> Le ghiandole sudoripare dei palmi rispondono alle emozioni, non solo al caldo. Uno stress sociale basta ad attivarle, e un uomo che lo sa passerà la serata ad asciugarsi le mani. Quanto ai gesti verso il viso e il collo, sono gesti di auto-calma: ci si tocca per calmarsi, come ci si strofina gli occhi quando si è stanchi.</p>
-<p><strong>Lo sguardo.</strong> Questo merita una spiegazione, perché lo si legge quasi sempre al contrario. Nel 1998 Arthur Glenberg e il suo gruppo hanno pubblicato su <em>Memory &amp; Cognition</em> cinque esperimenti sul distogliere lo sguardo. Risultato: più la domanda è difficile, più le persone guardano altrove per rispondere. E non è imbarazzo, i ricercatori hanno verificato proprio questo punto. È utile: distogliere lo sguardo taglia una parte di quello che arriva da fuori, e libera spazio per pensare.</p>
+<p><strong>La bocca:</strong> in allerta la saliva cambia: diventa più densa, e la bocca dà quella sensazione sgradevole di essere secca. Da qui il deglutire continuo e il sorso d'acqua ogni due minuti. È anche per questo che la voce si stringe un po'.</p>
+<p><strong>Le mani:</strong> le ghiandole sudoripare dei palmi rispondono alle emozioni, non solo al caldo. Uno stress sociale basta ad attivarle, e un uomo che lo sa passerà la serata ad asciugarsi le mani. Quanto ai gesti verso il viso e il collo, sono gesti di auto-calma: ci si tocca per calmarsi, come ci si strofina gli occhi quando si è stanchi.</p>
+<p><strong>Lo sguardo:</strong> è quello che si legge quasi sempre al contrario. Nel 1998 Arthur Glenberg e il suo gruppo hanno pubblicato su <em>Memory &amp; Cognition</em> cinque esperimenti sul distogliere lo sguardo. Risultato: più la domanda è difficile, più le persone guardano altrove per rispondere. E non è imbarazzo, i ricercatori hanno verificato proprio questo punto. È utile: distogliere lo sguardo taglia una parte di quello che arriva da fuori, e libera spazio per pensare.</p>
 <p>In altre parole, quando ti parla fissando il bancone, non ti sta evitando. Spesso sta cercando cosa dire, e la tua faccia gli occupa troppa banda perché ci riesca guardandoti.</p>
-<p><strong>Il rossore.</strong> Quello è a parte, perché non serve a niente. Darwin gli ha dedicato l'ultimo capitolo di <em>L'espressione delle emozioni nell'uomo e negli animali</em>, nel 1872, e lo chiamava «la più singolare e la più umana di tutte le espressioni». Nessun altro animale arrossisce. Compare nelle persone cieche dalla nascita, quindi non è appreso, e si attiva per un solo motivo: pensare a cosa gli altri pensano di noi. È il segno più onesto della lista, proprio perché è impossibile da fabbricare.</p>`,
+<p><strong>Il rossore:</strong> quello è a parte, perché non serve a niente. Darwin gli ha dedicato l'ultimo capitolo di <em>L'espressione delle emozioni nell'uomo e negli animali</em>, nel 1872, e lo chiamava «la più singolare e la più umana di tutte le espressioni». Nessun altro animale arrossisce. Compare nelle persone cieche dalla nascita, quindi non è appreso, e si attiva per un solo motivo: pensare a cosa gli altri pensano di noi. È il segno più onesto della lista, proprio perché è impossibile da fabbricare.</p>`,
         },
       ],
     },
@@ -66,8 +66,8 @@ const article: BlogArticleData = {
 <tr><td>È nervoso e ti fa domande su di te</td><td>Buon segno. Vuole conoscerti nonostante il disagio.</td></tr>
 <tr><td>È nervoso e parla soprattutto di sé</td><td>Sta gestendo la sua immagine più che interessarsi a te. Da verificare la prossima volta.</td></tr>
 </tbody></table></div>
-<p>C'è un ultimo caso, e vale la pena nominarlo. Un uomo molto nervoso può disdire all'ultimo momento, non perché non abbia voglia, ma perché la pressione è diventata troppa. Se ti succede, <a href="/it/blog/annulla-all-ultimo-momento/">quello che fa nei minuti successivi</a> ti dirà molto più della disdetta stessa.</p>
-<p>E se vuoi toglierti il dubbio senza aspettare, <a href="/it/mi-ama-in-segreto-test/">quello che fa quando non si sa osservato</a> è molto più eloquente del suo modo di tenere il bicchiere.</p>`,
+<p>C'è anche l'uomo così nervoso da disdire all'ultimo momento. Non perché non abbia voglia, ma perché la pressione è diventata troppa. Se ti succede, <a href="/it/blog/annulla-all-ultimo-momento/">quello che fa nei minuti successivi</a> ti dirà molto più della disdetta stessa.</p>
+<p>E alcuni non lo diranno mai da soli. Un uomo può essere premuroso, nervoso, presente da mesi, e comunque <a href="/it/mi-ama-in-segreto-test/">tenersi dentro quello che prova</a> aspettando un segnale da parte tua. Nei molto timidi è perfino lo scenario più comune.</p>`,
     },
     {
       id: 'la-reaction-a-avoir',
@@ -84,10 +84,10 @@ const article: BlogArticleData = {
         {
           id: 'changer-de-position',
           title: "Cambia posizione invece di cambiare argomento",
-          content: `<p>Questo è il consiglio più efficace della pagina, e non lo dà nessuno. Quando qualcuno è nervoso, per istinto si cerca un altro argomento di conversazione. Non funziona, perché il problema non è l'argomento, è il faccia a faccia.</p>
+          content: `<p>Questo è il consiglio più efficace della pagina. Quando qualcuno è nervoso, per istinto si cerca un altro argomento di conversazione. Non funziona, perché il problema non è l'argomento, è il faccia a faccia.</p>
 <p>Un faccia a faccia sono due persone che si guardano, senza niente per occupare le mani e senza via di fuga per gli occhi. È la configurazione più dura che esista per chi è nervoso.</p>
 <p>Quindi cambiala. Proponi di camminare un po'. Andate a prendere da bere insieme. Uscite a prendere aria. <strong>Fianco a fianco tutto diventa più semplice:</strong> le mani hanno qualcosa da fare, gli occhi possono guardare avanti, e i silenzi non pesano più. Cinque minuti dopo ti ritrovi spesso davanti una persona completamente diversa.</p>
-<p>Se siete bloccati faccia a faccia e non c'è niente da fare, dagli domande facili da prendere al volo. Abbiamo messo insieme <a href="/it/domande-primo-appuntamento/">di cosa parlare quando ci si vede per la prima volta</a>, cominciando dal molto leggero, ed è fatta apposta.</p>`,
+<p>Se siete bloccati faccia a faccia e non c'è niente da fare, dagli <a href="/it/domande-primo-appuntamento/">domande facili da prendere al volo</a>: la sua peggior serata al ristorante, la serie che si vergogna di amare, cose così.</p>`,
         },
         {
           id: 'jouer-de-sa-nervosite',

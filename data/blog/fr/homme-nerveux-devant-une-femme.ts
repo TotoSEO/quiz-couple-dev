@@ -45,11 +45,11 @@ const article: BlogArticleData = {
           id: 'ce-qui-se-passe-dans-son-corps',
           title: "Ce qui se passe dans son corps à ce moment-là",
           content: `<p>Une situation qui compte, ça déclenche la même mécanique qu'un danger. Le corps passe en alerte, l'adrénaline monte, le cœur accélère et le sang part vers les muscles. C'est le système nerveux sympathique qui prend la main, et il ne fait pas la différence entre un ours et une femme qui vous plaît.</p>
-<p><strong>La bouche.</strong> En alerte, la salive change : elle devient plus épaisse, et la bouche donne cette sensation désagréable d'être sèche. D'où le fait qu'il déglutit sans arrêt et qu'il boit une gorgée toutes les deux minutes. C'est aussi pour ça que la voix se serre un peu.</p>
-<p><strong>Les mains.</strong> Les glandes sudoripares des paumes réagissent aux émotions, pas seulement à la chaleur. Un stress social suffit à les faire transpirer, et un homme qui le sait passera son temps à s'essuyer les mains. Quant aux gestes vers le visage et le cou, ce sont des gestes d'apaisement : on se touche pour se calmer, comme on se frotte les yeux quand on est fatigué.</p>
-<p><strong>Le regard.</strong> Celui-là mérite d'être expliqué, parce qu'on l'interprète presque toujours de travers. En 1998, Arthur Glenberg et son équipe ont publié dans <em>Memory &amp; Cognition</em> cinq expériences sur le fait de détourner les yeux. Résultat : plus la question posée est difficile, plus les gens regardent ailleurs pour y répondre. Et ce n'est pas de la gêne, les chercheurs ont vérifié ce point. C'est utile : détourner le regard coupe une partie de ce qui arrive de l'extérieur, et libère de la place pour réfléchir.</p>
+<p><strong>La bouche :</strong> en alerte, la salive change : elle devient plus épaisse, et la bouche donne cette sensation désagréable d'être sèche. D'où le fait qu'il déglutit sans arrêt et qu'il boit une gorgée toutes les deux minutes. C'est aussi pour ça que la voix se serre un peu.</p>
+<p><strong>Les mains :</strong> les glandes sudoripares des paumes réagissent aux émotions, pas seulement à la chaleur. Un stress social suffit à les faire transpirer, et un homme qui le sait passera son temps à s'essuyer les mains. Quant aux gestes vers le visage et le cou, ce sont des gestes d'apaisement : on se touche pour se calmer, comme on se frotte les yeux quand on est fatigué.</p>
+<p><strong>Le regard :</strong> c'est celui qu'on interprète presque toujours de travers. En 1998, Arthur Glenberg et son équipe ont publié dans <em>Memory &amp; Cognition</em> cinq expériences sur le fait de détourner les yeux. Résultat : plus la question posée est difficile, plus les gens regardent ailleurs pour y répondre. Et ce n'est pas de la gêne, les chercheurs ont vérifié ce point. C'est utile : détourner le regard coupe une partie de ce qui arrive de l'extérieur, et libère de la place pour réfléchir.</p>
 <p>Autrement dit, quand il vous parle et qu'il fixe le comptoir, ce n'est pas qu'il vous fuit. C'est souvent qu'il cherche quoi dire, et que votre visage lui prend trop de bande passante pour qu'il y arrive en vous regardant.</p>
-<p><strong>Le rouge.</strong> Le rougissement est à part, parce qu'il ne sert à rien. Darwin lui a consacré le dernier chapitre de <em>L'Expression des émotions chez l'homme et les animaux</em>, en 1872, et il l'appelait « la plus singulière et la plus humaine de toutes les expressions ». Aucun autre animal ne rougit. Ça apparaît chez les personnes aveugles de naissance, donc ce n'est pas appris, et ça se déclenche pour une seule raison : le fait de penser à ce que les autres pensent de nous. C'est le signe le plus honnête de la liste, justement parce qu'il est impossible à fabriquer.</p>`,
+<p><strong>Le rouge :</strong> le rougissement est à part, parce qu'il ne sert à rien. Darwin lui a consacré le dernier chapitre de <em>L'Expression des émotions chez l'homme et les animaux</em>, en 1872, et il l'appelait « la plus singulière et la plus humaine de toutes les expressions ». Aucun autre animal ne rougit. Ça apparaît chez les personnes aveugles de naissance, donc ce n'est pas appris, et ça se déclenche pour une seule raison : le fait de penser à ce que les autres pensent de nous. C'est le signe le plus honnête de la liste, justement parce qu'il est impossible à fabriquer.</p>`,
         },
       ],
     },
@@ -66,8 +66,8 @@ const article: BlogArticleData = {
 <tr><td>Il est nerveux et il vous pose des questions sur vous</td><td>Bon signe. Il veut vous connaître malgré l'inconfort.</td></tr>
 <tr><td>Il est nerveux et il parle surtout de lui</td><td>Il gère son image plus qu'il ne s'intéresse à vous. À voir la prochaine fois.</td></tr>
 </tbody></table></div>
-<p>Il y a un dernier cas, et il vaut la peine d'être dit. Un homme très nerveux peut annuler à la dernière minute, non pas parce qu'il n'a pas envie, mais parce que la pression est devenue trop forte. Si ça vous arrive, <a href="/blog/il-annule-au-dernier-moment/">ce qu'il fait dans les minutes qui suivent</a> vous en dira beaucoup plus long que l'annulation elle-même.</p>
-<p>Et si vous voulez trancher sans attendre, <a href="/test-m-aime-t-il-elle-en-secret/">ce qu'il fait quand il ne se sait pas observé</a> est bien plus parlant que sa façon de tenir son verre.</p>`,
+<p>Il y a aussi le cas de l'homme tellement nerveux qu'il annule à la dernière minute. Ce n'est pas qu'il n'a pas envie, c'est que la pression est devenue trop forte. Si ça vous arrive, <a href="/blog/il-annule-au-dernier-moment/">ce qu'il fait dans les minutes qui suivent</a> vous en dira beaucoup plus long que l'annulation elle-même.</p>
+<p>Et puis certains ne se déclareront jamais d'eux-mêmes. Un homme peut être attentionné, nerveux, présent depuis des mois, et <a href="/test-m-aime-t-il-elle-en-secret/">garder ses sentiments pour lui</a> en attendant un signe de votre part. Chez les grands timides, c'est même le scénario le plus courant.</p>`,
     },
     {
       id: 'la-reaction-a-avoir',
@@ -84,10 +84,10 @@ const article: BlogArticleData = {
         {
           id: 'changer-de-position',
           title: "Changer de position plutôt que de sujet",
-          content: `<p>C'est le conseil le plus efficace de la page, et personne ne le donne. Quand quelqu'un est nerveux, on cherche instinctivement un autre sujet de conversation. Ça ne marche pas, parce que le problème n'est pas le sujet, c'est le face-à-face.</p>
+          content: `<p>C'est le conseil le plus efficace de la page. Quand quelqu'un est nerveux, on cherche instinctivement un autre sujet de conversation. Ça ne marche pas, parce que le problème n'est pas le sujet, c'est le face-à-face.</p>
 <p>Un face-à-face, c'est deux personnes qui se regardent, sans rien pour occuper les mains et sans échappatoire pour les yeux. C'est la configuration la plus dure qui existe pour quelqu'un de nerveux.</p>
 <p>Alors changez-la. Proposez de marcher un peu. Allez chercher les boissons ensemble. Sortez prendre l'air. <strong>Côte à côte, tout devient plus simple :</strong> les mains ont quelque chose à faire, les yeux ont le droit de regarder devant, et les silences ne pèsent plus rien. Vous verrez souvent quelqu'un de complètement différent au bout de cinq minutes.</p>
-<p>Si vous êtes coincées en face à face et qu'il n'y a rien à faire, donnez-lui des questions faciles à attraper. On a listé <a href="/questions-premier-rendez-vous/">de quoi parler quand on se voit pour la première fois</a>, en commençant par le très léger, et c'est fait pour ça.</p>`,
+<p>Si vous êtes coincés en face à face et qu'il n'y a rien à faire, donnez-lui <a href="/questions-premier-rendez-vous/">des questions faciles à attraper</a> : sa pire soirée au restaurant, la série qu'il a honte d'aimer, ce genre de choses.</p>`,
         },
         {
           id: 'jouer-de-sa-nervosite',

@@ -45,11 +45,11 @@ const article: BlogArticleData = {
           id: 'ce-qui-se-passe-dans-son-corps',
           title: "Qué pasa en su cuerpo en ese momento",
           content: `<p>Una situación que importa dispara la misma mecánica que un peligro. El cuerpo se pone en alerta, sube la adrenalina, el corazón se acelera y la sangre se va hacia los músculos. Es el sistema nervioso simpático el que toma el mando, y no distingue entre un oso y una mujer que le gusta.</p>
-<p><strong>La boca.</strong> En alerta, la saliva cambia: se vuelve más espesa, y la boca da esa sensación desagradable de estar seca. De ahí que trague sin parar y que dé un sorbo cada dos minutos. Es también por eso que la voz se le tensa un poco.</p>
-<p><strong>Las manos.</strong> Las glándulas sudoríparas de las palmas responden a las emociones, no solo al calor. Un estrés social basta para activarlas, y un hombre que lo sabe se pasará la noche secándose las manos. En cuanto a los gestos hacia la cara y el cuello, son gestos de calma: nos tocamos para tranquilizarnos, igual que nos frotamos los ojos cuando estamos cansados.</p>
-<p><strong>La mirada.</strong> Esta merece explicación, porque casi siempre se interpreta al revés. En 1998, Arthur Glenberg y su equipo publicaron en <em>Memory &amp; Cognition</em> cinco experimentos sobre el hecho de apartar la mirada. Resultado: cuanto más difícil es la pregunta, más aparta la gente los ojos para responder. Y no es vergüenza, los investigadores comprobaron ese punto. Es útil: apartar la mirada corta parte de lo que llega de fuera y deja sitio para pensar.</p>
+<p><strong>La boca:</strong> en alerta, la saliva cambia: se vuelve más espesa, y la boca da esa sensación desagradable de estar seca. De ahí que trague sin parar y que dé un sorbo cada dos minutos. Es también por eso que la voz se le tensa un poco.</p>
+<p><strong>Las manos:</strong> las glándulas sudoríparas de las palmas responden a las emociones, no solo al calor. Un estrés social basta para activarlas, y un hombre que lo sabe se pasará la noche secándose las manos. En cuanto a los gestos hacia la cara y el cuello, son gestos de calma: nos tocamos para tranquilizarnos, igual que nos frotamos los ojos cuando estamos cansados.</p>
+<p><strong>La mirada:</strong> es la que casi siempre se interpreta al revés. En 1998, Arthur Glenberg y su equipo publicaron en <em>Memory &amp; Cognition</em> cinco experimentos sobre el hecho de apartar la mirada. Resultado: cuanto más difícil es la pregunta, más aparta la gente los ojos para responder. Y no es vergüenza, los investigadores comprobaron ese punto. Es útil: apartar la mirada corta parte de lo que llega de fuera y deja sitio para pensar.</p>
 <p>Dicho de otra forma, cuando te habla y mira fijamente la barra, no es que te esté esquivando. Muchas veces es que está buscando qué decir, y tu cara le ocupa demasiado ancho de banda para conseguirlo mirándote.</p>
-<p><strong>El rubor.</strong> Ese va aparte, porque no sirve para nada. Darwin le dedicó el último capítulo de <em>La expresión de las emociones en el hombre y en los animales</em>, en 1872, y lo llamaba «la más singular y la más humana de todas las expresiones». Ningún otro animal se ruboriza. Aparece en personas ciegas de nacimiento, así que no se aprende, y se dispara por un solo motivo: pensar en lo que los demás piensan de nosotros. Es la señal más honesta de la lista, precisamente porque es imposible de fabricar.</p>`,
+<p><strong>El rubor:</strong> ese va aparte, porque no sirve para nada. Darwin le dedicó el último capítulo de <em>La expresión de las emociones en el hombre y en los animales</em>, en 1872, y lo llamaba «la más singular y la más humana de todas las expresiones». Ningún otro animal se ruboriza. Aparece en personas ciegas de nacimiento, así que no se aprende, y se dispara por un solo motivo: pensar en lo que los demás piensan de nosotros. Es la señal más honesta de la lista, precisamente porque es imposible de fabricar.</p>`,
         },
       ],
     },
@@ -66,8 +66,8 @@ const article: BlogArticleData = {
 <tr><td>Está nervioso y te hace preguntas sobre ti</td><td>Buena señal. Quiere conocerte a pesar de la incomodidad.</td></tr>
 <tr><td>Está nervioso y habla sobre todo de él</td><td>Está gestionando su imagen más que interesándose por ti. A comprobar la próxima vez.</td></tr>
 </tbody></table></div>
-<p>Hay un último caso, y merece nombrarse. Un hombre muy nervioso puede cancelar en el último momento, no porque no tenga ganas, sino porque la presión se ha hecho demasiado grande. Si te pasa, <a href="/es/blog/cancela-en-el-ultimo-momento/">lo que hace en los minutos siguientes</a> te dirá mucho más que la cancelación en sí.</p>
-<p>Y si quieres salir de dudas sin esperar, <a href="/es/test-me-quiere-en-secreto/">lo que hace cuando no se sabe observado</a> es mucho más elocuente que su forma de sujetar el vaso.</p>`,
+<p>También está el hombre tan nervioso que cancela en el último momento. No es que no tenga ganas, es que la presión se ha hecho demasiado grande. Si te pasa, <a href="/es/blog/cancela-en-el-ultimo-momento/">lo que hace en los minutos siguientes</a> te dirá mucho más que la cancelación en sí.</p>
+<p>Y algunos no lo dirán nunca por sí solos. Un hombre puede ser atento, estar nervioso, llevar meses ahí, y aun así <a href="/es/test-me-quiere-en-secreto/">guardarse lo que siente</a> esperando una señal tuya. En los muy tímidos es incluso el escenario más habitual.</p>`,
     },
     {
       id: 'la-reaction-a-avoir',
@@ -84,10 +84,10 @@ const article: BlogArticleData = {
         {
           id: 'changer-de-position',
           title: "Cambia de posición en vez de cambiar de tema",
-          content: `<p>Este es el consejo más eficaz de la página, y no lo da nadie. Cuando alguien está nervioso, buscamos por instinto otro tema de conversación. No funciona, porque el problema no es el tema, es el cara a cara.</p>
+          content: `<p>Este es el consejo más eficaz de la página. Cuando alguien está nervioso, buscamos por instinto otro tema de conversación. No funciona, porque el problema no es el tema, es el cara a cara.</p>
 <p>Un cara a cara son dos personas que se miran, sin nada que ocupe las manos y sin escapatoria para los ojos. Es la configuración más dura que existe para alguien nervioso.</p>
 <p>Así que cámbiala. Propón andar un poco. Id juntos a por las bebidas. Salid a tomar el aire. <strong>Uno al lado del otro, todo se vuelve más fácil:</strong> las manos tienen algo que hacer, los ojos pueden mirar al frente, y los silencios dejan de pesar. Muchas veces vas a ver a una persona completamente distinta cinco minutos después.</p>
-<p>Si estáis atrapados en un cara a cara y no hay nada que hacer, dale preguntas fáciles de coger al vuelo. Hemos hecho una lista de <a href="/es/preguntas-primera-cita/">de qué hablar cuando os veis por primera vez</a>, empezando por lo muy ligero, y está pensada justo para eso.</p>`,
+<p>Si estáis atrapados en un cara a cara y no hay nada que hacer, dale <a href="/es/preguntas-primera-cita/">preguntas fáciles de coger al vuelo</a>: su peor cena en un restaurante, la serie que le da vergüenza confesar, ese tipo de cosas.</p>`,
         },
         {
           id: 'jouer-de-sa-nervosite',
