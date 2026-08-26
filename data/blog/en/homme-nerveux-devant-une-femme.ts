@@ -45,11 +45,11 @@ const article: BlogArticleData = {
           id: 'ce-qui-se-passe-dans-son-corps',
           title: "What is happening in his body at that moment",
           content: `<p>A situation that matters triggers the same machinery as a danger. The body goes on alert, adrenaline rises, the heart speeds up and blood heads for the muscles. It is the sympathetic nervous system taking over, and it does not tell the difference between a bear and a woman he likes.</p>
-<p><strong>The mouth.</strong> On alert, saliva changes: it gets thicker, and the mouth gets that unpleasant dry feeling. Hence the constant swallowing and the sip of water every two minutes. It is also why the voice tightens a little.</p>
-<p><strong>The hands.</strong> The sweat glands in the palms respond to emotion, not only to heat. Social stress alone is enough to set them off, and a man who knows it will spend his evening drying his hands. As for the gestures towards the face and the neck, those are self-soothing: we touch ourselves to calm down, the way we rub our eyes when we are tired.</p>
-<p><strong>The eyes.</strong> This one deserves explaining, because it is almost always read the wrong way. In 1998, Arthur Glenberg and his team published five experiments in <em>Memory &amp; Cognition</em> on looking away. The result: the harder the question, the more people avert their eyes to answer it. And it is not embarrassment, the researchers checked that point specifically. It is useful: looking away cuts out part of what is coming in from outside, and frees up room to think.</p>
+<p><strong>The mouth:</strong> on alert, saliva changes: it gets thicker, and the mouth gets that unpleasant dry feeling. Hence the constant swallowing and the sip of water every two minutes. It is also why the voice tightens a little.</p>
+<p><strong>The hands:</strong> the sweat glands in the palms respond to emotion, not only to heat. Social stress alone is enough to set them off, and a man who knows it will spend his evening drying his hands. As for the gestures towards the face and the neck, those are self-soothing: we touch ourselves to calm down, the way we rub our eyes when we are tired.</p>
+<p><strong>The eyes:</strong> this is the sign that almost always gets read the wrong way. In 1998, Arthur Glenberg and his team published five experiments in <em>Memory &amp; Cognition</em> on looking away. The result: the harder the question, the more people avert their eyes to answer it. And it is not embarrassment, the researchers checked that point specifically. It is useful: looking away cuts out part of what is coming in from outside, and frees up room to think.</p>
 <p>In other words, when he is talking to you while staring at the bar, it is not that he is avoiding you. Often it is that he is looking for what to say, and your face takes up too much bandwidth for him to manage it while looking at you.</p>
-<p><strong>The blushing.</strong> That one stands apart, because it serves no purpose at all. Darwin gave it the final chapter of <em>The Expression of the Emotions in Man and Animals</em>, in 1872, and called it "the most peculiar and the most human of all expressions". No other animal blushes. It appears in people blind from birth, so it is not learned, and it fires for one reason only: thinking about what others think of us. It is the most honest sign on the list, precisely because it cannot be faked.</p>`,
+<p><strong>The blushing:</strong> that one stands apart, because it serves no purpose at all. Darwin gave it the final chapter of <em>The Expression of the Emotions in Man and Animals</em>, in 1872, and called it "the most peculiar and the most human of all expressions". No other animal blushes. It appears in people blind from birth, so it is not learned, and it fires for one reason only: thinking about what others think of us. It is the most honest sign on the list, precisely because it cannot be faked.</p>`,
         },
       ],
     },
@@ -64,10 +64,10 @@ const article: BlogArticleData = {
 <tr><td>He is nervous with you and relaxed with everyone else</td><td>It is you. Watch him talk to someone else, the difference jumps out.</td></tr>
 <tr><td>He is like that with everyone</td><td>It is his shyness, and it says nothing about you.</td></tr>
 <tr><td>He is nervous and he asks you questions about yourself</td><td>Good sign. He wants to know you despite the discomfort.</td></tr>
-<tr><td>He is nervous and he mostly talks about himself</td><td>He is managing his image more than he is interested in you. Worth checking next time.</td></tr>
+<tr><td>He is nervous and he mostly talks about himself</td><td>He is managing his image more than he is interested in you. See how he is next time.</td></tr>
 </tbody></table></div>
-<p>There is one last case, and it is worth naming. A very nervous man can cancel at the last minute, not because he does not want to come, but because the pressure got too high. If that happens to you, <a href="/en/blog/he-cancelled-last-minute/">what he does in the minutes that follow</a> will tell you far more than the cancellation itself.</p>
-<p>And if you want to settle it without waiting, <a href="/en/does-he-she-secretly-love-me-test/">what he does when he does not know he is being watched</a> is much more telling than the way he holds his glass.</p>`,
+<p>There is also the man who is so nervous that he cancels at the last minute. It is not that he does not want to come, it is that the pressure got too high. If that happens to you, <a href="/en/blog/he-cancelled-last-minute/">what he does in the minutes that follow</a> will tell you far more than the cancellation itself.</p>
+<p>And some men will never say it first. A man can be attentive, nervous, around for months, and still <a href="/en/does-he-she-secretly-love-me-test/">keep his feelings to himself</a> while he waits for a sign from you. With the very shy ones, that is actually the most common scenario.</p>`,
     },
     {
       id: 'la-reaction-a-avoir',
@@ -84,10 +84,10 @@ const article: BlogArticleData = {
         {
           id: 'changer-de-position',
           title: "Change the position rather than the subject",
-          content: `<p>This is the most useful tip on the page, and nobody gives it. When someone is nervous, the instinct is to look for another topic of conversation. It does not work, because the problem is not the topic, it is the face-to-face.</p>
+          content: `<p>This is the most useful tip on the page. When someone is nervous, the instinct is to look for another topic of conversation. It does not work, because the problem is not the topic, it is the face-to-face.</p>
 <p>A face-to-face is two people looking at each other, with nothing to keep the hands busy and no escape route for the eyes. It is the hardest possible setup for someone who is nervous.</p>
 <p>So change it. Suggest walking a bit. Go and get the drinks together. Step outside for some air. <strong>Side by side, everything gets easier:</strong> the hands have something to do, the eyes are allowed to look ahead, and the silences stop weighing anything. You will often meet a completely different person five minutes later.</p>
-<p>If you are stuck face to face and there is nothing to be done, hand him questions that are easy to catch. We have listed <a href="/en/first-date-questions-game/">things to talk about when you meet for the first time</a>, starting with the very light ones, and that is exactly what they are for.</p>`,
+<p>If you are stuck face to face and there is nothing to be done, hand him <a href="/en/first-date-questions-game/">questions that are easy to catch</a>: his worst night out, the series he is embarrassed to love, that kind of thing.</p>`,
         },
         {
           id: 'jouer-de-sa-nervosite',

@@ -45,11 +45,11 @@ const article: BlogArticleData = {
           id: 'ce-qui-se-passe-dans-son-corps',
           title: "Was in diesem Moment in seinem Körper passiert",
           content: `<p>Eine Situation, die zählt, löst dieselbe Mechanik aus wie eine Gefahr. Der Körper geht in Alarm, Adrenalin steigt, das Herz beschleunigt und das Blut geht in die Muskeln. Das sympathische Nervensystem übernimmt, und es unterscheidet nicht zwischen einem Bären und einer Frau, die ihm gefällt.</p>
-<p><strong>Der Mund.</strong> Im Alarmzustand verändert sich der Speichel: er wird dickflüssiger, und der Mund fühlt sich unangenehm trocken an. Daher das ständige Schlucken und der Schluck Wasser alle zwei Minuten. Auch die Stimme wird deshalb etwas enger.</p>
-<p><strong>Die Hände.</strong> Die Schweißdrüsen der Handflächen reagieren auf Gefühle, nicht nur auf Wärme. Sozialer Stress reicht aus, und ein Mann, der das weiß, wischt sich den ganzen Abend die Hände ab. Die Gesten Richtung Gesicht und Hals wiederum sind Beruhigungsgesten: man berührt sich, um sich zu beruhigen, so wie man sich die Augen reibt, wenn man müde ist.</p>
-<p><strong>Der Blick.</strong> Der verdient eine Erklärung, weil er fast immer falsch gedeutet wird. 1998 veröffentlichten Arthur Glenberg und sein Team in <em>Memory &amp; Cognition</em> fünf Experimente zum Wegschauen. Das Ergebnis: je schwieriger die Frage, desto öfter schauen Menschen zur Antwort weg. Und es ist keine Verlegenheit, das haben die Forscher eigens geprüft. Es ist nützlich: wegschauen blendet einen Teil dessen aus, was von außen kommt, und schafft Platz zum Denken.</p>
+<p><strong>Der Mund:</strong> Im Alarmzustand verändert sich der Speichel: er wird dickflüssiger, und der Mund fühlt sich unangenehm trocken an. Daher das ständige Schlucken und der Schluck Wasser alle zwei Minuten. Auch die Stimme wird deshalb etwas enger.</p>
+<p><strong>Die Hände:</strong> Die Schweißdrüsen der Handflächen reagieren auf Gefühle, nicht nur auf Wärme. Sozialer Stress reicht aus, und ein Mann, der das weiß, wischt sich den ganzen Abend die Hände ab. Die Gesten Richtung Gesicht und Hals wiederum sind Beruhigungsgesten: man berührt sich, um sich zu beruhigen, so wie man sich die Augen reibt, wenn man müde ist.</p>
+<p><strong>Der Blick:</strong> Der wird fast immer falsch gedeutet. 1998 veröffentlichten Arthur Glenberg und sein Team in <em>Memory &amp; Cognition</em> fünf Experimente zum Wegschauen. Das Ergebnis: je schwieriger die Frage, desto öfter schauen Menschen zur Antwort weg. Und es ist keine Verlegenheit, das haben die Forscher eigens geprüft. Es ist nützlich: wegschauen blendet einen Teil dessen aus, was von außen kommt, und schafft Platz zum Denken.</p>
 <p>Anders gesagt: wenn er mit dir spricht und dabei die Theke anstarrt, weicht er dir nicht aus. Meistens sucht er nach Worten, und dein Gesicht braucht ihm dafür zu viel Bandbreite.</p>
-<p><strong>Das Erröten.</strong> Das steht für sich, weil es zu nichts nützt. Darwin hat ihm 1872 das letzte Kapitel von <em>Der Ausdruck der Gemütsbewegungen bei dem Menschen und den Tieren</em> gewidmet und nannte es «den eigentümlichsten und menschlichsten aller Ausdrücke». Kein anderes Tier errötet. Es tritt bei blind geborenen Menschen auf, ist also nicht gelernt, und es wird aus einem einzigen Grund ausgelöst: dem Gedanken daran, was andere über uns denken. Es ist das ehrlichste Zeichen der Liste, gerade weil man es nicht herstellen kann.</p>`,
+<p><strong>Das Erröten:</strong> Das steht für sich, weil es zu nichts nützt. Darwin hat ihm 1872 das letzte Kapitel von <em>Der Ausdruck der Gemütsbewegungen bei dem Menschen und den Tieren</em> gewidmet und nannte es «den eigentümlichsten und menschlichsten aller Ausdrücke». Kein anderes Tier errötet. Es tritt bei blind geborenen Menschen auf, ist also nicht gelernt, und es wird aus einem einzigen Grund ausgelöst: dem Gedanken daran, was andere über uns denken. Es ist das ehrlichste Zeichen der Liste, gerade weil man es nicht herstellen kann.</p>`,
         },
       ],
     },
@@ -66,8 +66,8 @@ const article: BlogArticleData = {
 <tr><td>Er ist nervös und stellt dir Fragen über dich</td><td>Gutes Zeichen. Er will dich trotz des Unbehagens kennenlernen.</td></tr>
 <tr><td>Er ist nervös und redet vor allem über sich</td><td>Er verwaltet sein Bild, statt sich für dich zu interessieren. Beim nächsten Mal prüfen.</td></tr>
 </tbody></table></div>
-<p>Es gibt noch einen letzten Fall, und der gehört benannt. Ein sehr nervöser Mann kann in letzter Minute absagen, nicht weil er keine Lust hat, sondern weil der Druck zu groß geworden ist. Wenn dir das passiert, sagt dir <a href="/de/blog/er-sagt-in-letzter-minute-ab/">das, was er in den Minuten danach tut</a>, weit mehr als die Absage selbst.</p>
-<p>Und wenn du es ohne Warten klären willst: <a href="/de/liebt-er-sie-mich-heimlich-test/">was er tut, wenn er sich unbeobachtet glaubt</a>, ist viel aussagekräftiger als die Art, wie er sein Glas hält.</p>`,
+<p>Es gibt auch den Mann, der so nervös ist, dass er in letzter Minute absagt. Nicht weil er keine Lust hat, sondern weil der Druck zu groß geworden ist. Wenn dir das passiert, sagt dir <a href="/de/blog/er-sagt-in-letzter-minute-ab/">das, was er in den Minuten danach tut</a>, weit mehr als die Absage selbst.</p>
+<p>Und manche sagen es nie von selbst. Ein Mann kann aufmerksam sein, nervös, seit Monaten da, und trotzdem <a href="/de/liebt-er-sie-mich-heimlich-test/">seine Gefühle für sich behalten</a>, während er auf ein Zeichen von dir wartet. Bei den ganz Schüchternen ist das sogar das häufigste Szenario.</p>`,
     },
     {
       id: 'la-reaction-a-avoir',
@@ -84,10 +84,10 @@ const article: BlogArticleData = {
         {
           id: 'changer-de-position',
           title: "Wechsle die Position statt das Thema",
-          content: `<p>Das ist der wirksamste Tipp dieser Seite, und niemand gibt ihn. Wenn jemand nervös ist, sucht man instinktiv ein anderes Gesprächsthema. Das funktioniert nicht, denn das Problem ist nicht das Thema, sondern das Gegenübersitzen.</p>
+          content: `<p>Das ist der wirksamste Tipp dieser Seite. Wenn jemand nervös ist, sucht man instinktiv ein anderes Gesprächsthema. Das funktioniert nicht, denn das Problem ist nicht das Thema, sondern das Gegenübersitzen.</p>
 <p>Ein Gegenüber, das sind zwei Menschen, die sich ansehen, ohne etwas für die Hände und ohne Ausweg für die Augen. Für jemanden, der nervös ist, ist das die härteste denkbare Anordnung.</p>
 <p>Also ändere sie. Schlag vor, ein Stück zu gehen. Holt zusammen die Getränke. Geht kurz an die Luft. <strong>Nebeneinander wird alles einfacher:</strong> die Hände haben etwas zu tun, die Augen dürfen nach vorn schauen, und die Pausen wiegen nichts mehr. Fünf Minuten später hast du oft einen völlig anderen Menschen vor dir.</p>
-<p>Wenn ihr im Gegenüber festhängt und nichts zu machen ist, gib ihm Fragen, die leicht zu fangen sind. Wir haben aufgeschrieben, <a href="/de/fragen-erstes-date/">worüber man redet, wenn man sich zum ersten Mal sieht</a>, angefangen beim ganz Leichten, und genau dafür ist die Liste da.</p>`,
+<p>Wenn ihr im Gegenüber festhängt und nichts zu machen ist, gib ihm <a href="/de/fragen-erstes-date/">Fragen, die leicht zu fangen sind</a>: sein schlimmster Restaurantabend, die Serie, die er ungern zugibt, solche Sachen.</p>`,
         },
         {
           id: 'jouer-de-sa-nervosite',
