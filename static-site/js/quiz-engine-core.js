@@ -674,8 +674,29 @@ var QuizEngine = (function() {
   // Snapchat ou Facebook, ce qui circule c'est une image verticale. On dessine
   // donc le résultat au canvas, en 1080x1920, dans trois visuels au choix.
   // Tout est tracé à la main (dégradés, bulles, cœurs) : aucune ressource à
-  // télécharger, l'image sort en une frame même hors connexion.
+  // télécharger, pas d'emoji dont le rendu dépend du téléphone, et l'image
+  // sort en une frame même hors connexion.
   var STORY_L = 1080, STORY_H = 1920;
+
+  // Les prénoms au moment du résultat, quel que soit le moteur : chaque
+  // famille de moteurs a son champ, on les essaie dans l'ordre. Un moteur
+  // sans prénoms rend un tableau vide et l'image garde son étiquette générique.
+  function nomsPartage(m) {
+    if (!m || m === window) return [];
+    var bruts = [];
+    if (typeof m.playerName === 'string' && m.playerName) bruts = [m.playerName];
+    else if (m.noms && m.noms.length) bruts = m.noms;
+    else if (m.joueurs && m.joueurs.length) bruts = m.joueurs;
+    else if (m.players && m.players.length) bruts = m.players;
+    var noms = [];
+    for (var i = 0; i < bruts.length; i++) {
+      var n = bruts[i];
+      if (n && typeof n === 'object') n = n.name || n.nom || '';
+      n = String(n || '').trim();
+      if (n) noms.push(n);
+    }
+    return noms;
+  }
 
   function storyDonnees(partage) {
     var o = (partage && typeof partage === 'object') ? partage : {};
@@ -684,9 +705,15 @@ var QuizEngine = (function() {
     if (o.pct !== undefined && o.pct !== null && o.pct !== '') score = o.pct + ' %';
     else if (o.score !== undefined && o.score !== null && o.total) score = o.score + '/' + o.total;
     else if (o.score !== undefined && o.score !== null && o.score !== '') score = String(o.score);
-    var etiquette = (o.type === 'duo' || o.type === 'cartes' || o.type === 'plateau')
+    // Les prénoms prennent la place de l'étiquette générique : « Léa & Hugo »
+    // dit bien mieux « c'est nous » que « Notre résultat ». Au-delà de trois
+    // prénoms, la ligne devient illisible, on repasse au générique.
+    var noms = o.noms || [];
+    var qui = '';
+    if (noms.length >= 1 && noms.length <= 3) qui = noms.join(' & ');
+    var etiquette = qui || ((o.type === 'duo' || o.type === 'cartes' || o.type === 'plateau')
       ? tg('story.scoreDuo', 'Notre résultat')
-      : tg('story.scoreSolo', 'Mon résultat');
+      : tg('story.scoreSolo', 'Mon résultat'));
     // Les guillemets suivent la langue : on reprend ceux du message texte
     // (« » en français, “ ” en anglais, „ “ en allemand...), et une insécable
     // les colle au texte pour qu'un guillemet ne parte jamais seul à la ligne.
@@ -694,10 +721,9 @@ var QuizEngine = (function() {
     if (o.verdict) {
       var gabarit = tg('share.verdict', ' : « {{result}} »').replace(/^\s*:\s*/, '');
       verdictCite = gabarit.replace(/\{\{result\}\}/g, o.verdict)
-        .replace(/^([«„“"]) /, '$1\u00a0').replace(/ ([»“”"])$/, '\u00a0$1');
+        .replace(/^([«„“"]) /, '$1 ').replace(/ ([»“”"])$/, ' $1');
     }
     return {
-      emoji: q.emoji || '💜',
       quiz: q.nom || 'Quiz Couple',
       score: score,
       verdict: verdictCite,
@@ -709,6 +735,7 @@ var QuizEngine = (function() {
 
   // Découpe un texte en lignes qui tiennent dans maxL, deux lignes au plus :
   // au-delà, on tronque avec une ellipse plutôt que de rapetisser à l'infini.
+  // La coupe se fait sur l'espace simple : l'insécable reste collée au mot.
   function storyLignes(ctx, texte, maxL, maxLignes) {
     var mots = String(texte).split(' '), lignes = [], courante = '';
     for (var i = 0; i < mots.length; i++) {
@@ -726,8 +753,13 @@ var QuizEngine = (function() {
     return lignes;
   }
 
-  // Un verdict long rétrécit avant d'être tronqué : on descend le corps
-  // jusqu'à ce que le texte tienne dans le nombre de lignes autorisé.
+  function storyFont(px, gras, poppins) {
+    return (gras ? '700 ' : '400 ') + px + 'px ' + (poppins ? "'Poppins', " : '') +
+      "'Inter', system-ui, -apple-system, sans-serif";
+  }
+
+  // Un texte long rétrécit avant d'être tronqué : on descend le corps
+  // jusqu'à ce qu'il tienne dans le nombre de lignes autorisé.
   function storyLignesAjuste(ctx, texte, maxL, maxLignes, px, pxMin) {
     var essai = px;
     while (essai > pxMin) {
@@ -740,9 +772,18 @@ var QuizEngine = (function() {
     return { lignes: storyLignes(ctx, texte, maxL, maxLignes), px: pxMin };
   }
 
-  function storyFont(px, gras, poppins) {
-    return (gras ? '700 ' : '400 ') + px + 'px ' + (poppins ? "'Poppins', " : '') +
-      "'Inter', system-ui, -apple-system, sans-serif";
+  // Le corps qui fait tenir un texte d'une ligne dans sa forme : le score
+  // dans le cercle ou le cœur, les prénoms dans leur bandeau. Laisse la
+  // police réglée sur le corps retenu.
+  function storyCorps(ctx, texte, maxL, px, pxMin, poppins) {
+    var essai = px;
+    while (essai > pxMin) {
+      ctx.font = storyFont(essai, true, poppins);
+      if (ctx.measureText(texte).width <= maxL) return essai;
+      essai -= 6;
+    }
+    ctx.font = storyFont(pxMin, true, poppins);
+    return pxMin;
   }
 
   function storyPastille(ctx, x, y, l, h, r) {
@@ -767,6 +808,29 @@ var QuizEngine = (function() {
   function storyTexteCentre(ctx, lignes, cx, y, interligne) {
     for (var i = 0; i < lignes.length; i++) ctx.fillText(lignes[i], cx, y + i * interligne);
     return y + (lignes.length - 1) * interligne;
+  }
+
+  // La marque en haut de l'image : un cœur dessiné + « Quiz Couple ».
+  // Pas d'emoji, le rendu est identique sur tous les téléphones.
+  function storyMarque(ctx, y, fond, couleurTexte, couleurCoeur) {
+    ctx.font = storyFont(44, true, true);
+    var texte = 'Quiz Couple';
+    var lT = ctx.measureText(texte).width;
+    var coeurS = 46, ecart = 20, marge = 52, h = 96;
+    var lM = lT + coeurS + ecart + marge * 2;
+    var x = (STORY_L - lM) / 2;
+    if (fond) {
+      storyPastille(ctx, x, y, lM, h, h / 2);
+      ctx.fillStyle = fond;
+      ctx.fill();
+    }
+    storyCoeur(ctx, x + marge + coeurS / 2, y + h / 2 + 2, coeurS);
+    ctx.fillStyle = couleurCoeur;
+    ctx.fill();
+    ctx.fillStyle = couleurTexte;
+    ctx.textAlign = 'left';
+    ctx.fillText(texte, x + marge + coeurS + ecart, y + h / 2 + 15);
+    ctx.textAlign = 'center';
   }
 
   // La pastille « quiz-couple.com » du bas, partagée par les trois visuels ;
@@ -816,18 +880,11 @@ var QuizEngine = (function() {
     }
 
     ctx.textAlign = 'center';
-    ctx.font = storyFont(46, true, true);
-    var marque = '💜 Quiz Couple';
-    var lM = ctx.measureText(marque).width + 110;
-    storyPastille(ctx, (STORY_L - lM) / 2, 150, lM, 96, 48);
-    ctx.fillStyle = 'rgba(255,255,255,0.95)';
-    ctx.fill();
-    ctx.fillStyle = 'hsl(340, 65%, 45%)';
-    ctx.fillText(marque, STORY_L / 2, 214);
+    storyMarque(ctx, 150, 'rgba(255,255,255,0.95)', 'hsl(340, 65%, 45%)', 'hsl(340, 70%, 58%)');
 
-    ctx.font = storyFont(52, true);
-    ctx.fillStyle = 'rgba(255,255,255,0.9)';
-    ctx.fillText(d.etiquette.toUpperCase(), STORY_L / 2, 448);
+    var pxEti = storyCorps(ctx, d.etiquette.toUpperCase(), 880, 52, 34);
+    ctx.fillStyle = 'rgba(255,255,255,0.92)';
+    ctx.fillText(d.etiquette.toUpperCase(), STORY_L / 2, 452);
 
     var cy = 810, r = 300;
     ctx.save();
@@ -848,16 +905,15 @@ var QuizEngine = (function() {
     var accent = ctx.createLinearGradient(STORY_L / 2 - r, cy - r, STORY_L / 2 + r, cy + r);
     accent.addColorStop(0, 'hsl(340, 70%, 55%)');
     accent.addColorStop(1, 'hsl(270, 50%, 48%)');
+    ctx.fillStyle = accent;
     if (d.score) {
-      ctx.font = storyFont(110, false);
-      ctx.fillText(d.emoji, STORY_L / 2, cy - 130);
-      ctx.fillStyle = accent;
-      var pxScore = d.score.length > 5 ? 150 : 190;
-      ctx.font = storyFont(pxScore, true, true);
-      ctx.fillText(d.score, STORY_L / 2, cy + 100);
+      // Le score reste dans le cercle quelle que soit sa longueur : le corps
+      // descend jusqu'à ce que le texte tienne dans la corde utile.
+      var pxScore = storyCorps(ctx, d.score, 440, 200, 90, true);
+      ctx.fillText(d.score, STORY_L / 2, cy + pxScore * 0.34);
     } else {
-      ctx.font = storyFont(260, false);
-      ctx.fillText(d.emoji, STORY_L / 2, cy + 90);
+      storyCoeur(ctx, STORY_L / 2, cy, 340);
+      ctx.fill();
     }
 
     ctx.fillStyle = '#fff';
@@ -914,10 +970,10 @@ var QuizEngine = (function() {
       lignesV = ajV.lignes;
       pxV = ajV.px;
     }
-    var yC = lignesQuiz.length > 1 ? 400 : 440;
-    var basQuiz = yC + 420 + (lignesQuiz.length - 1) * 78;
-    var basScore = basQuiz + (d.score ? 340 : 310);
     var interV = Math.round(pxV * 1.32);
+    var yC = lignesQuiz.length > 1 ? 440 : 480;
+    var basQuiz = yC + 250 + (lignesQuiz.length - 1) * 78;
+    var basScore = basQuiz + (d.score ? 320 : 330);
     var basCarte = basScore + (lignesV ? 104 + lignesV.length * interV : 0) + 80;
     var hC = basCarte - yC;
 
@@ -930,9 +986,10 @@ var QuizEngine = (function() {
     ctx.fill();
     ctx.restore();
 
-    ctx.font = storyFont(48, true, true);
-    var ruban = d.etiquette + ' 💘';
-    var lR = ctx.measureText(ruban).width + 130, hR = 110;
+    // Le ruban porte les prénoms (ou l'étiquette générique) et rétrécit
+    // pour rester dans la carte.
+    var pxR = storyCorps(ctx, d.etiquette, lC - 200, 48, 32, true);
+    var lR = ctx.measureText(d.etiquette).width + 130, hR = 110;
     var grad = ctx.createLinearGradient(cx - lR / 2, 0, cx + lR / 2, 0);
     grad.addColorStop(0, 'hsl(340, 70%, 58%)');
     grad.addColorStop(1, 'hsl(270, 45%, 52%)');
@@ -945,25 +1002,22 @@ var QuizEngine = (function() {
     ctx.fill();
     ctx.restore();
     ctx.fillStyle = '#fff';
-    ctx.fillText(ruban, cx, yC + 18);
-
-    ctx.font = storyFont(130, false);
-    ctx.fillText(d.emoji, cx, yC + 290);
+    ctx.fillText(d.etiquette, cx, yC + pxR * 0.36);
 
     ctx.fillStyle = 'hsl(335, 25%, 22%)';
     ctx.font = storyFont(62, true, true);
-    storyTexteCentre(ctx, lignesQuiz, cx, yC + 420, 78);
+    storyTexteCentre(ctx, lignesQuiz, cx, yC + 250, 78);
 
     var accent = ctx.createLinearGradient(cx - 250, 0, cx + 250, 0);
     accent.addColorStop(0, 'hsl(340, 70%, 55%)');
     accent.addColorStop(1, 'hsl(270, 50%, 48%)');
+    ctx.fillStyle = accent;
     if (d.score) {
-      ctx.fillStyle = accent;
-      ctx.font = storyFont(d.score.length > 5 ? 160 : 210, true, true);
-      ctx.fillText(d.score, cx, basQuiz + 260);
+      var pxScore = storyCorps(ctx, d.score, lC - 260, 210, 90, true);
+      ctx.fillText(d.score, cx, basQuiz + 170 + pxScore * 0.34);
     } else {
-      ctx.font = storyFont(170, false);
-      ctx.fillText('💞', cx, basQuiz + 240);
+      storyCoeur(ctx, cx, basQuiz + 190, 300);
+      ctx.fill();
     }
 
     if (lignesV) {
@@ -1003,14 +1057,21 @@ var QuizEngine = (function() {
 
     ctx.textAlign = 'center';
     ctx.save();
-    ctx.font = storyFont(46, true, true);
-    ctx.fillStyle = '#fff';
     ctx.shadowColor = 'hsl(340, 90%, 60%)';
     ctx.shadowBlur = 26;
-    ctx.fillText('💜 Quiz Couple', STORY_L / 2, 200);
+    storyMarque(ctx, 150, null, '#fff', 'hsl(340, 95%, 64%)');
     ctx.restore();
 
-    var cy = 800, s = 620;
+    // Les prénoms au-dessus du cœur, hors de la forme pour ne jamais la chevaucher.
+    var pxEti = storyCorps(ctx, d.etiquette.toUpperCase(), 880, 46, 32);
+    ctx.save();
+    ctx.fillStyle = '#fff';
+    ctx.shadowColor = 'hsl(340, 90%, 60%)';
+    ctx.shadowBlur = 22;
+    ctx.fillText(d.etiquette.toUpperCase(), STORY_L / 2, 430);
+    ctx.restore();
+
+    var cy = 850, s = 600;
     ctx.save();
     ctx.strokeStyle = 'hsl(340, 95%, 64%)';
     ctx.lineWidth = 12;
@@ -1028,21 +1089,20 @@ var QuizEngine = (function() {
     ctx.shadowColor = 'hsl(340, 95%, 62%)';
     ctx.shadowBlur = 42;
     if (d.score) {
-      ctx.font = storyFont(44, true);
-      ctx.fillText(d.etiquette.toUpperCase(), STORY_L / 2, cy - 160);
-      ctx.font = storyFont(d.score.length > 5 ? 130 : 170, true, true);
-      ctx.fillText(d.score, STORY_L / 2, cy + 20);
+      // Le cœur se resserre vers le bas : la largeur utile est prise à
+      // hauteur du texte, et le corps descend jusqu'à y tenir.
+      var pxScore = storyCorps(ctx, d.score, 400, 170, 80, true);
+      ctx.fillText(d.score, STORY_L / 2, cy + pxScore * 0.30);
     } else {
-      ctx.font = storyFont(200, false);
-      ctx.shadowBlur = 30;
-      ctx.fillText(d.emoji, STORY_L / 2, cy + 20);
+      storyCoeur(ctx, STORY_L / 2, cy, 260);
+      ctx.fill();
     }
     ctx.restore();
 
     ctx.fillStyle = '#fff';
     ctx.font = storyFont(62, true, true);
     var lignesQuiz = storyLignes(ctx, d.quiz, 880, 2);
-    var yQuiz = storyTexteCentre(ctx, lignesQuiz, STORY_L / 2, 1300, 80);
+    var yQuiz = storyTexteCentre(ctx, lignesQuiz, STORY_L / 2, 1330, 80);
 
     var basVerdict = yQuiz;
     if (d.verdict) {
@@ -1136,7 +1196,7 @@ var QuizEngine = (function() {
 
     var btn = el('button', 'story-share-btn');
     btn.type = 'button';
-    btn.innerHTML = '✨ <span>' + esc(tg('story.bouton', 'Ajouter en story !')) + '</span>';
+    btn.innerHTML = '<span>' + esc(tg('story.bouton', 'Ajouter en story !')) + '</span>';
 
     var reseaux = el('div', 'story-share-reseaux');
     reseaux.setAttribute('aria-label', tg('story.reseaux', 'À poster sur Instagram, TikTok, Snapchat ou Facebook'));
@@ -2227,7 +2287,7 @@ var QuizEngine = (function() {
     dispositionResultat(wrap, {
       resultat: resultat,
       actions: zoneActions({
-        share: { type: 'solo', score: this.totalScore, total: maxScore, pct: pct, verdict: result ? result.title : '' },
+        share: { noms: nomsPartage(this), type: 'solo', score: this.totalScore, total: maxScore, pct: pct, verdict: result ? result.title : '' },
         restart: function() {
           if (self.hasLocalStorage) { try { localStorage.removeItem('quiz-' + self.prefix); } catch (e) {} }
           self.phase = 'intro'; self.render();
@@ -2596,7 +2656,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
+      share: { noms: nomsPartage(this), type: 'duo', pct: pct, verdict: result ? result.title : '' },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
 
@@ -2703,7 +2763,7 @@ var QuizEngine = (function() {
     wrap.appendChild(box);
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', pct: pctG, verdict: (bG && bG.title) || '' },
+      share: { noms: nomsPartage(this), type: 'duo', pct: pctG, verdict: (bG && bG.title) || '' },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
 
@@ -3100,7 +3160,7 @@ var QuizEngine = (function() {
     blocPartenaireSecond(wrap, 'coquin', this.lang);
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', pct: pct },
+      share: { noms: nomsPartage(this), type: 'duo', pct: pct },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -3333,7 +3393,7 @@ var QuizEngine = (function() {
     wrap.appendChild(el('p', 'text-lg font-medium mb-4', msg));
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', pct: Math.round(((this.scores[0] + this.scores[1]) / this.questions.length) * 100) },
+      share: { noms: nomsPartage(this), type: 'duo', pct: Math.round(((this.scores[0] + this.scores[1]) / this.questions.length) * 100) },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -3540,7 +3600,7 @@ var QuizEngine = (function() {
       esc(tgd(this.prefix + '.finTexte', tg('result.sharedMoment', 'Vous avez partagé un super moment ensemble !')))));
 
     renderActionButtons(wrap, {
-      share: { type: 'fun' },
+      share: { noms: nomsPartage(this), type: 'fun' },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -3783,7 +3843,7 @@ var QuizEngine = (function() {
     // avec la même équipe. La reprise depuis le début rejoue donc ici aussi,
     // en repartant des mêmes joueurs et en remettant les compteurs à zéro.
     renderActionButtons(wrap, {
-      share: { type: 'fun' },
+      share: { noms: nomsPartage(this), type: 'fun' },
       restart: function() {
         self.currentQ = 0;
         self.designations = {};
@@ -4369,7 +4429,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
+      share: { noms: nomsPartage(this), type: 'duo', pct: pct, verdict: result ? result.title : '' },
       restart: function() {
         self.phase = 'mode'; self.mode = null;
         self.currentQ = 0; self.currentPlayer = 0;
@@ -4596,7 +4656,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', pct: pct, verdict: result ? result.title : '' },
+      share: { noms: nomsPartage(this), type: 'duo', pct: pct, verdict: result ? result.title : '' },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -4838,7 +4898,7 @@ var QuizEngine = (function() {
     wrap.appendChild(summaryWrap);
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', score: this.score, total: total, pct: pct, verdict: result ? result.title : '' },
+      share: { noms: nomsPartage(this), type: 'duo', score: this.score, total: total, pct: pct, verdict: result ? result.title : '' },
       restart: function() { self.phase = 'intro'; self.render(); }
     });
 
@@ -5054,7 +5114,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
-      share: { type: 'profil', verdict: profile.title || '' },
+      share: { noms: nomsPartage(this), type: 'profil', verdict: profile.title || '' },
       restart: function() { self.phase = 'intro'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -5312,7 +5372,7 @@ var QuizEngine = (function() {
         wrap.appendChild(enc);
       }
       renderActionButtons(wrap, {
-        share: { type: 'profil', verdict: r.titre },
+        share: { noms: nomsPartage(this), type: 'profil', verdict: r.titre },
         restart: function() { self.phase = 'setup'; self.render(); }
       });
       this.container.appendChild(wrap);
@@ -5348,7 +5408,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', pct: moyenne },
+      share: { noms: nomsPartage(this), type: 'duo', pct: moyenne },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -5677,7 +5737,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', pct: partPorteur, verdict: v.title ? prenoms(v.title) : '' },
+      share: { noms: nomsPartage(this), type: 'duo', pct: partPorteur, verdict: v.title ? prenoms(v.title) : '' },
       restart: function() { self.phase = 'setup'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -6061,7 +6121,7 @@ var QuizEngine = (function() {
     wrap.appendChild(hero);
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', points: true, score: this.score },
+      share: { noms: nomsPartage(this), type: 'duo', points: true, score: this.score },
       restart: function () { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
     this.container.appendChild(wrap);
@@ -6336,7 +6396,7 @@ var QuizEngine = (function() {
     wrap.appendChild(hero);
 
     renderActionButtons(wrap, {
-      share: { type: 'solo', pct: resistance },
+      share: { noms: nomsPartage(this), type: 'solo', pct: resistance },
       restart: function () { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
     this.container.appendChild(wrap);
@@ -6556,7 +6616,7 @@ var QuizEngine = (function() {
     }
 
     renderActionButtons(wrap, {
-      share: { type: 'cartes', score: this.releves, total: total },
+      share: { noms: nomsPartage(this), type: 'cartes', score: this.releves, total: total },
       restart: function() { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
     this.container.appendChild(wrap);
@@ -6710,7 +6770,7 @@ var QuizEngine = (function() {
       wrap.appendChild(el('p', 'roue-compteur', compte));
       // Pas de bloc « poursuivez avec » ici : la partie n'a pas de fin, il ne
       // faut pas transformer chaque tour en ecran de resultat.
-      renderShareButton(wrap, { type: 'fun' });
+      renderShareButton(wrap, { noms: nomsPartage(this), type: 'fun' });
     }
 
     this.container.appendChild(wrap);
@@ -7203,7 +7263,7 @@ var QuizEngine = (function() {
     wrap.appendChild(rejouer);
 
     renderActionButtons(wrap, {
-      share: { type: 'plateau', nom: this.joueur(g), score: this.tours },
+      share: { noms: nomsPartage(this), type: 'plateau', nom: this.joueur(g), score: this.tours },
       restart: function() { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
     this.container.appendChild(wrap);
@@ -7798,7 +7858,7 @@ var QuizEngine = (function() {
     wrap.appendChild(autreMode);
 
     renderActionButtons(wrap, {
-      share: { type: 'duo', pct: pct, verdict: verdict },
+      share: { noms: nomsPartage(this), type: 'duo', pct: pct, verdict: verdict },
       restart: function() { self.stopper(); self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
     this.container.appendChild(wrap);
@@ -8221,7 +8281,7 @@ var QuizEngine = (function() {
     dispositionResultat(wrap, {
       resultat: resultat,
       actions: zoneActions({
-        share: { type: 'solo', score: oks, total: n, pct: pct, verdict: this.tg('palier' + palier + 'Titre', '') },
+        share: { noms: nomsPartage(this), type: 'solo', score: oks, total: n, pct: pct, verdict: this.tg('palier' + palier + 'Titre', '') },
         restart: function () {
           self.dilemmes = shuffleArray(self.dilemmes);
           self.idx = 0; self.choix = null; self.historique = [];
@@ -8524,7 +8584,7 @@ var QuizEngine = (function() {
     dispositionResultat(wrap, {
       resultat: resultat,
       actions: zoneActions({
-        share: { type: 'solo', score: pours, total: n, pct: pct, verdict: this.tg('palier' + palier + 'Titre', '') },
+        share: { noms: nomsPartage(this), type: 'solo', score: pours, total: n, pct: pct, verdict: this.tg('palier' + palier + 'Titre', '') },
         restart: function () {
           self.questions = shuffleArray(self.questions);
           self.idx = 0; self.choix = null; self.historique = [];
@@ -8817,7 +8877,7 @@ var QuizEngine = (function() {
     wrap.appendChild(rejouer);
 
     renderActionButtons(wrap, {
-      share: { type: 'fun' },
+      share: { noms: nomsPartage(this), type: 'fun' },
       restart: function() { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
     this.container.appendChild(wrap);
@@ -9110,7 +9170,7 @@ var QuizEngine = (function() {
     wrap.appendChild(rejouer);
 
     renderActionButtons(wrap, {
-      share: { type: 'fun' },
+      share: { noms: nomsPartage(this), type: 'fun' },
       restart: function() { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
     });
     this.container.appendChild(wrap);
