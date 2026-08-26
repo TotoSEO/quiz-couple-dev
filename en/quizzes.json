@@ -233,10 +233,10 @@
     "metaDescription": "Soulmate or just a beautiful story? 20 questions, one score and a verdict that does not simply flatter. Free test, alone or together, no sign-up."
   },
   "jeuxCouple": {
-    "title": "Online games for couples: 10 free games to play together",
+    "title": "Online games for couples: 11 free games to play together",
     "shortTitle": "Couple games",
-    "description": "Ten games to play together: for or against, who could, never have I ever, which one of us, would you rather, dilemmas, truth or dare, its naughty version, the forfeit wheel and the board game.",
-    "metaDescription": "10 free couple games on a single phone: for or against, which one of us, would you rather, dilemmas, truth or dare and the forfeit wheel. No sign-up."
+    "description": "Eleven games to play together: yes or no, for or against, who could, never have I ever, which one of us, would you rather, dilemmas, truth or dare, its naughty version, the forfeit wheel and the board game.",
+    "metaDescription": "11 free couple games on a single phone: yes or no, for or against, which one of us, would you rather, dilemmas, truth or dare and the forfeit wheel. No sign-up."
   },
   "jeuGages": {
     "title": "Couple Forfeits: the Wheel Game, 140 Random Forfeits",
@@ -335,5 +335,12 @@
     "metaTitle": "Who Could? Online Couples Game with 100+ Questions",
     "metaDescription": "One question, your two names, and you point at who could do it. 108 questions, rounds of 20, 40 or 60, free and no sign-up.",
     "description": "A question appears, you point at who could do it: one of you two, or nobody."
+  },
+  "jeuOuiNon": {
+    "title": "Yes or No Game for Couples Online - 120 Questions",
+    "shortTitle": "Yes or no",
+    "metaTitle": "Yes or No Game for Couples Online - 120 Questions",
+    "metaDescription": "120 couple situations to settle with a yes or a no, with the votes of every other couple shown after each answer. Free, no sign-up.",
+    "description": "Couple situations to settle with a yes or a no, with everyone else's votes shown after each answer."
   }
 }

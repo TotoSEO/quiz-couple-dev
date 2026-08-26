@@ -380,6 +380,9 @@
     jeuDilemmes: 'Dilemmes',
     pourContre: 'Pour ou contre',
     jeuJamais: "Je n'ai jamais",
+    jeuQuiPourrait: 'Qui pourrait',
+    jeuOuiNon: 'Oui ou non',
+    testCrush: 'Amour ou crush',
     quizTentation: 'Tentation',
     testPurete: 'Test de pureté',
     testAmeSoeur: 'Test âme sœur',
@@ -483,14 +486,21 @@
   };
   var LIBELLE_FAMILLE = { test: 'Tests', quiz: 'Quiz', jeu: 'Jeux' };
 
-  // ── Pages sans parcours : pas de taux de finition ──
-  // Ces deux-la rendent leur resultat immediatement, a partir de deux
-  // prenoms ou de deux dates. Il n'y a pas de questionnaire a abandonner en
-  // route, donc pas d'ecart possible entre lance et fini : leur taux ne
-  // mesure rien et, mele aux autres, il tire la moyenne d'ensemble.
-  // Elles restent comptees dans les lances et dans les termines.
-  var SANS_RATIO = ['testAstroPrenoms', 'testDateNaissance'];
-  function sansRatio(slug) { return SANS_RATIO.indexOf(canon(slug)) !== -1; }
+  // ── Pages sans taux de finition, avec le motif affiche ──
+  // Les deux premieres rendent leur resultat immediatement, a partir de deux
+  // prenoms ou de deux dates : pas de questionnaire a abandonner en route,
+  // donc pas d'ecart possible entre lance et fini. Le oui ou non, lui, n'a
+  // pas de fin de partie du tout : on s'arrete quand on veut, il n'envoie
+  // jamais de completion. Dans les deux cas le taux ne mesure rien et, mele
+  // aux autres, il tirerait la moyenne d'ensemble.
+  // Ces pages restent comptees dans les lances (et les termines pour celles
+  // qui en ont).
+  var SANS_RATIO = {
+    testAstroPrenoms: 'résultat immédiat',
+    testDateNaissance: 'résultat immédiat',
+    jeuOuiNon: 'jeu sans fin de partie'
+  };
+  function sansRatio(slug) { return Object.prototype.hasOwnProperty.call(SANS_RATIO, canon(slug)); }
   function familleQuiz(slug) {
     if (!slug) return 'test';
     if (FAMILLES.jeu.indexOf(slug) !== -1) return 'jeu';
@@ -1057,7 +1067,7 @@
   function troisValeurs(slug, terminesTotal) {
     var c = comptesPeriode(slug, terminesTotal);
     var res = { lances: c.lances, finis: c.finis, ratio: null, motif: '' };
-    if (sansRatio(slug)) { res.motif = 'résultat immédiat'; return res; }
+    if (sansRatio(slug)) { res.motif = SANS_RATIO[canon(slug)]; return res; }
     // Sur toute l'histoire, le rapport melangerait des mois de completions et
     // quelques heures de lancements : on borne a la fenetre commune. Sur une
     // periode choisie, les deux series couvrent deja les memes jours.

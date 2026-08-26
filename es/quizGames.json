@@ -358,7 +358,8 @@
     "quizRencontre": "Preguntas de primera cita",
     "jeuJamais": "Yo nunca",
     "testCrush": "Test amor o crush",
-    "jeuQuiPourrait": "¿Quién podría?"
+    "jeuQuiPourrait": "¿Quién podría?",
+    "jeuOuiNon": "Sí o no"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",

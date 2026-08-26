@@ -358,7 +358,8 @@
     "quizRencontre": "First date questions",
     "jeuJamais": "Never Have I Ever",
     "testCrush": "Love or crush test",
-    "jeuQuiPourrait": "Who could?"
+    "jeuQuiPourrait": "Who could?",
+    "jeuOuiNon": "Yes or no"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

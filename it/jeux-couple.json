@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "10 giochi • Gratis • Senza registrazione",
+    "badge": "11 giochi • Gratis • Senza registrazione",
     "title": "I nostri giochi da fare in due, pronti con un tocco",
     "titleHighlight": "da fare in due",
-    "description": "Dieci giochi che partono su un solo telefono fra voi due, senza account e senza installare nulla."
+    "description": "Undici giochi che partono su un solo telefono fra voi due, senza account e senza installare nulla."
   },
   "stats": {
-    "jeux": "10",
+    "jeux": "11",
     "jeuxLabel": "giochi in due",
     "cartes": "390",
     "cartesLabel": "carte, penitenze e dilemmi",
@@ -69,13 +69,18 @@
     "quiPourraitTagline": "Una domanda, due nomi, e voi indicate il colpevole",
     "quiPourraitContenu": "108 domande da giocare in 20, 40 o 60, pescate a caso",
     "quiPourraitDuree": "5-20 min",
-    "quiPourraitJoueurs": "2 giocatori"
+    "quiPourraitJoueurs": "2 giocatori",
+    "ouiNonNom": "Sì o no",
+    "ouiNonTagline": "Situazioni da decidere, e i voti di tutti gli altri",
+    "ouiNonContenu": "120 situazioni di vita in due, con i voti di tutti i visitatori dopo ogni risposta",
+    "ouiNonDuree": "2-20 min",
+    "ouiNonJoueurs": "2 giocatori"
   },
   "section1": {
     "title": "Che cosa cambia un gioco in due in una serata",
     "p1": "Un <strong class=\"text-foreground\">gioco di coppia</strong> sembra una sciocchezza. Eppure risolve un problema molto concreto: in due si finisce sempre per girare attorno agli stessi argomenti. La giornata, il lavoro, cosa si mangia stasera… Un gioco impone una cornice, e quella cornice dà il permesso di fare domande che di punto in bianco non si farebbero mai.",
     "p2": "È anche il motivo per cui un gioco funziona meglio di un film quando volete davvero ritrovarvi. Davanti a uno schermo siete due persone affiancate che guardano altrove. Attorno a un gioco siete due persone che si guardano. La differenza si sente dopo dieci minuti.",
-    "p3": "I dieci giochi di questa pagina si giocano online, gratis, su un solo telefono. Niente da creare, niente da installare, niente da preparare."
+    "p3": "Gli undici giochi di questa pagina si giocano online, gratis, su un solo telefono. Niente da creare, niente da installare, niente da preparare."
   },
   "section2": {
     "title": "Quale gioco scegliere a seconda del momento",

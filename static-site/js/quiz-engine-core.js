@@ -888,6 +888,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'pour-contre', icon: '👍', route: 'pourContre' },
     { type: 'jeu', key: 'jamais', icon: '🙊', route: 'jeuJamais' },
     { type: 'jeu', key: 'qui-pourrait', icon: '🏆', route: 'jeuQuiPourrait' },
+    { type: 'jeu', key: 'oui-non', icon: '✅', route: 'jeuOuiNon' },
   ];
 
   // Suggestions de fin de partie, choisies une par une pour chaque page.
@@ -8576,6 +8577,293 @@ var QuizEngine = (function() {
     smoothScroll(wrap, 'center');
   };
 
+  // ─── Jeu « Oui ou non » spécial couple ────────────────────
+  // Des situations, un OUI, un NON, et après chaque vote les chiffres de
+  // tous les visiteurs, comme sur les dilemmes. Pas de score et pas de fin
+  // de partie : on s'arrête quand on veut. C'est voulu que ce moteur ne
+  // montre jamais de carte de résultat ni de data-quiz-done : la page ne
+  // déclare aucune partie terminée, et l'admin la range dans SANS_RATIO
+  // pour ne pas lui calculer un taux de finition qui ne mesurerait rien.
+  //
+  // Même rendu sans reconstruction que le qui pourrait : l'écran est monté
+  // une seule fois, la situation change au fondu, et le bloc des deux camps
+  // se remplit sur place après le vote.
+  var ON_CLE_VOTES = 'oui-non-votes';
+  function OuiNonGame(config) {
+    this.container = config.container;
+    this.prefix = config.prefix || 'ouiNon';
+    this.lang = config.lang || 'fr';
+    this.pool = config.questions || [];
+    this.dejaVotes = lireVotesLocaux(ON_CLE_VOTES);
+    // Les situations déjà tranchées depuis ce navigateur partent en fin de
+    // file : on sert d'abord du neuf, et une situation déjà votée montre
+    // directement ses chiffres au lieu de laisser voter une deuxième fois.
+    var self = this;
+    var fraiches = this.pool.filter(function (q) { return !self.dejaVotes[q.id]; });
+    var vues = this.pool.filter(function (q) { return self.dejaVotes[q.id]; });
+    this.questions = shuffleArray(fraiches).concat(shuffleArray(vues));
+    this.idx = 0;
+    this.choix = null;
+    this.totaux = null;
+    this.envoiEnCours = false;
+    this.phase = 'intro';
+    this.ui = null;
+    this.render();
+  }
+
+  // Les libellés vivent dans gd.json avec les situations : tgd, pas tg.
+  OuiNonGame.prototype.qtg = function (cle, repli) {
+    return tgd(this.prefix + '.' + cle, repli);
+  };
+
+  OuiNonGame.prototype.render = function () {
+    this.container.innerHTML = '';
+    this.ui = null;
+    if (this.phase === 'intro') this.renderIntro();
+    else if (this.phase === 'fin') this.renderFin();
+    else this.renderJeu();
+  };
+
+  OuiNonGame.prototype.renderIntro = function () {
+    var self = this;
+    var ecran = ecranDepart({
+      icone: '✅',
+      titre: this.qtg('introTitre', 'Oui ou non ?'),
+      desc: this.qtg('introTexte', ''),
+      meta: '💬 ' + this.pool.length + ' ' + esc(this.qtg('metaQuestions', 'situations')) +
+        ' &bull; ⏱ ' + esc(this.qtg('metaDuree', 'vous arrêtez quand vous voulez')),
+      bouton: this.qtg('commencer', 'Première situation'),
+      onStart: function () { self.phase = 'jeu'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(ecran.wrap);
+    // Un seul aller-retour pendant que l'écran d'intro est là : les deux
+    // camps de toutes les situations, prêts avant le premier vote.
+    this.chargerTotaux();
+  };
+
+  OuiNonGame.prototype.chargerTotaux = function () {
+    var self = this;
+    if (this._chargement) return this._chargement;
+    this._chargement = fetch(SUPABASE_URL + '/rest/v1/rpc/get_oui_non_counts', {
+      method: 'POST',
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' },
+      body: '{}'
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (lignes) {
+        var t = {};
+        if (Array.isArray(lignes)) {
+          lignes.forEach(function (l) {
+            t[l.question_id] = { oui: +l.oui || 0, non: +l.non || 0 };
+          });
+        }
+        self.totaux = t;
+      })
+      .catch(function () { self.totaux = {}; });
+    return this._chargement;
+  };
+
+  // L'écran de jeu, monté une seule fois. La carte et les deux boutons ne
+  // bougent jamais ; le texte de la situation et le bloc des camps sont mis
+  // à jour sur place.
+  OuiNonGame.prototype.renderJeu = function () {
+    var self = this;
+    var wrap = el('div', 'quiz-engine onn-jeu quiz-question-enter');
+
+    var carte = el('div', 'onn-carte');
+    carte.innerHTML =
+      '<span class="onn-amorce">' + esc(this.qtg('amorce', 'Oui ou non')) + '</span>' +
+      '<p class="onn-texte" aria-live="polite"></p>';
+    wrap.appendChild(carte);
+
+    var consigne = el('p', 'onn-consigne', esc(this.qtg('consigne', '')));
+    wrap.appendChild(consigne);
+
+    var choix = el('div', 'onn-choix');
+    var bOui = el('button', 'onn-btn onn-btn--oui');
+    bOui.type = 'button';
+    bOui.innerHTML = '<span class="onn-btn-emoji">✅</span><span class="onn-btn-txt">' + esc(this.qtg('oui', 'OUI')) + '</span>';
+    var bNon = el('button', 'onn-btn onn-btn--non');
+    bNon.type = 'button';
+    bNon.innerHTML = '<span class="onn-btn-emoji">❌</span><span class="onn-btn-txt">' + esc(this.qtg('non', 'NON')) + '</span>';
+    choix.appendChild(bOui);
+    choix.appendChild(bNon);
+    wrap.appendChild(choix);
+
+    // La zone du verdict, vide tant qu'on n'a pas voté. Elle se remplit sur
+    // place, l'écran ne bouge pas.
+    var resultat = el('div', 'onn-resultat');
+    resultat.hidden = true;
+    resultat.innerHTML =
+      '<p class="onn-votre-choix"></p>' +
+      '<div class="onn-camps-hote"></div>' +
+      '<p class="onn-total"></p>';
+    wrap.appendChild(resultat);
+
+    var suivant = el('button', 'btn btn-cta onn-suivant', esc(this.qtg('suivant', 'Situation suivante')));
+    suivant.type = 'button';
+    suivant.hidden = true;
+    suivant.addEventListener('click', function () { self.suivant(); });
+    wrap.appendChild(suivant);
+
+    var passer = el('button', 'onn-passer', esc(this.qtg('passer', 'Passer cette situation')));
+    passer.type = 'button';
+    passer.addEventListener('click', function () { self.suivant(); });
+    wrap.appendChild(passer);
+
+    this.ui = {
+      texte: carte.querySelector('.onn-texte'),
+      consigne: consigne,
+      boutons: [bOui, bNon],
+      resultat: resultat,
+      votreChoix: resultat.querySelector('.onn-votre-choix'),
+      campsHote: resultat.querySelector('.onn-camps-hote'),
+      total: resultat.querySelector('.onn-total'),
+      suivant: suivant,
+      passer: passer
+    };
+
+    bOui.addEventListener('click', function () { self.voter('oui', bOui); });
+    bNon.addEventListener('click', function () { self.voter('non', bNon); });
+
+    this.majSituation(false);
+    this.container.appendChild(wrap);
+  };
+
+  // Passe l'écran en état « vote » ou « verdict » sans rien reconstruire.
+  OuiNonGame.prototype.etatVote = function (ouvert) {
+    var ui = this.ui;
+    ui.resultat.hidden = ouvert;
+    ui.suivant.hidden = ouvert;
+    ui.passer.hidden = !ouvert;
+    ui.consigne.hidden = !ouvert;
+    ui.boutons.forEach(function (b) {
+      b.disabled = !ouvert;
+      if (ouvert) b.classList.remove('est-choisi');
+    });
+  };
+
+  OuiNonGame.prototype.majSituation = function (anime) {
+    var self = this;
+    var q = this.questions[this.idx];
+    var deja = this.dejaVotes[q.id];
+
+    function poser() {
+      // Deux clics rapprochés sur « suivant » peuvent mener à l'écran de fin
+      // pendant que ce fondu est en vol : l'écran de jeu n'existe plus.
+      if (!self.ui) return;
+      self.ui.texte.textContent = q.texte;
+      if (deja) {
+        // Déjà tranchée depuis ce navigateur : les chiffres, pas un revote.
+        self.choix = deja;
+        self.ui.boutons[deja === 'oui' ? 0 : 1].classList.add('est-choisi');
+        self.etatVote(false);
+        self.remplirVerdict(q, deja);
+      } else {
+        self.choix = null;
+        self.etatVote(true);
+      }
+    }
+
+    if (!anime) { poser(); return; }
+    this.ui.texte.classList.add('onn-texte--sortie');
+    setTimeout(function () {
+      if (!self.ui) return;
+      poser();
+      self.ui.texte.classList.remove('onn-texte--sortie');
+      self.ui.texte.classList.add('onn-texte--entree');
+      setTimeout(function () { if (self.ui) self.ui.texte.classList.remove('onn-texte--entree'); }, 220);
+    }, 160);
+  };
+
+  OuiNonGame.prototype.voter = function (choix, bouton) {
+    var self = this;
+    if (this.envoiEnCours || this.choix) return;
+    this.envoiEnCours = true;
+    var q = this.questions[this.idx];
+    this.choix = choix;
+    bouton.classList.add('est-choisi');
+    ecrireVoteLocal(ON_CLE_VOTES, q.id, choix);
+    this.dejaVotes[q.id] = choix;
+
+    // Le vote compte localement tout de suite : le verdict ne doit pas
+    // attendre le réseau, et un envoi qui échoue ne bloque pas le jeu.
+    if (!this.totaux) this.totaux = {};
+    if (!this.totaux[q.id]) this.totaux[q.id] = { oui: 0, non: 0 };
+    this.totaux[q.id][choix]++;
+
+    identifiantVotant('oui-non-votant', 'quiz-couple-oui-non:').then(function (votant) {
+      return fetch(SUPABASE_URL + '/rest/v1/oui_non_votes', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json', 'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ question_id: q.id, choix: choix, lang: self.lang, votant: votant })
+      });
+    }).catch(function () {});
+
+    setTimeout(function () {
+      self.envoiEnCours = false;
+      self.etatVote(false);
+      self.remplirVerdict(q, choix);
+    }, 260);
+  };
+
+  OuiNonGame.prototype.remplirVerdict = function (q, choix) {
+    var ui = this.ui;
+    var c = (this.totaux && this.totaux[q.id]) || { oui: 0, non: 0 };
+    var total = c.oui + c.non;
+    // Sans aucun vote connu, le sien compte quand même : la barre ne doit
+    // jamais s'afficher vide sous les yeux de celui qui vient de voter.
+    if (total === 0) { c = { oui: choix === 'oui' ? 1 : 0, non: choix === 'non' ? 1 : 0 }; total = 1; }
+    var pctOui = Math.round((c.oui / total) * 100);
+    var pctNon = 100 - pctOui;
+
+    ui.votreChoix.innerHTML = esc(this.qtg('votreReponse', 'Votre réponse : {{r}}'))
+      .replace('{{r}}', '<strong>' + esc(choix === 'oui' ? this.qtg('oui', 'OUI') : this.qtg('non', 'NON')) + '</strong>');
+
+    var duo = blocDeuxCamps({
+      prefixe: 'onn', lang: this.lang,
+      voix: this.qtg('votes', 'votes'), voix1: this.qtg('vote', 'vote'),
+      a: { suffixe: 'oui', emoji: '✅', libelle: this.qtg('oui', 'OUI'),
+           pct: pctOui, voix: c.oui, sien: choix === 'oui' },
+      b: { suffixe: 'non', emoji: '❌', libelle: this.qtg('non', 'NON'),
+           pct: pctNon, voix: c.non, sien: choix === 'non' }
+    });
+    ui.campsHote.innerHTML = '';
+    ui.campsHote.appendChild(duo.camps);
+    ui.campsHote.appendChild(duo.barre);
+
+    ui.total.textContent = total === 1
+      ? this.qtg('surTotal1', 'Vous êtes les premiers à voter sur cette situation')
+      : this.qtg('surTotal', '{{n}} personnes ont voté sur cette situation').replace('{{n}}', fmtNombre(total, this.lang));
+  };
+
+  OuiNonGame.prototype.suivant = function () {
+    if (this.idx + 1 >= this.questions.length) { this.phase = 'fin'; this.render(); return; }
+    this.idx++;
+    this.majSituation(true);
+  };
+
+  // La fin n'existe que quand les 120 situations sont épuisées. Pas de carte
+  // de résultat, pas de score : juste le mot de la fin et une porte de
+  // sortie vers un jeu voisin.
+  OuiNonGame.prototype.renderFin = function () {
+    var wrap = el('div', 'quiz-engine onn-fin animate-fade-in text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-3', '🎉'));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', this.qtg('finTitre', 'Vous avez tout vu !')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6', this.qtg('finTexte', '')));
+    var urlSuite = getRelatedQuizUrl('jeuDilemmes', this.lang);
+    if (urlSuite && urlSuite !== '/') {
+      var lien = el('a', 'btn btn-cta', esc(this.qtg('finSuite', 'Enchaînez sur les dilemmes')));
+      lien.href = urlSuite;
+      wrap.appendChild(lien);
+    }
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -8604,6 +8892,7 @@ var QuizEngine = (function() {
     PourContreGame: PourContreGame,
     JamaisGame: JamaisGame,
     QuiPourraitGame: QuiPourraitGame,
+    OuiNonGame: OuiNonGame,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "120 situations • Live votes • Free",
+    "title": "The yes or no game to play as a couple online",
+    "titleHighlight": "yes or no",
+    "description": "A situation appears, you answer yes or no, and you instantly see what everyone else voted."
+  },
+  "jsonLd": {
+    "name": "Yes or no, couples edition"
+  },
+  "exemples": {
+    "avant": "",
+    "apres": ": yes or no?"
+  },
+  "section1": {
+    "title": "What kind of game is yes or no?",
+    "p1": "Yes or no is a very simple talking game. Someone throws out a closed question, something like \"would you say yes to matching tattoos?\", and everyone answers yes or no, with no right to dance around it. There is nothing to install and nothing to count, which is why it sits among <a href=\"/en/couple-games/\">the simplest games to play as a pair</a>: it starts over drinks, in the car, or on the sofa on a random weeknight.",
+    "p2": "The rule sounds thin put like that, and yet the game has been going for generations. If it works so well, it is because you are not allowed to qualify your answer: we all want to say \"it depends\", and that is exactly what is forbidden. Answering yes or answering no forces you to pick a side, and that is where the conversations start.",
+    "p3": "There are plenty of variants: with friends and forfeits, a tame family version, or a drinking game. Here, we adapted it for couples, and we added something we really like: on every situation, you see what all the other visitors answered. You are not just playing as a pair, you are comparing yourselves to everyone."
+  },
+  "section2": {
+    "title": "How it differs from the classic yes or no",
+    "intro": "The main difference is in the questions, and in what happens to the answers. The classic yes or no is played fast, usually for laughs, and the questions are about anything and everything. Our version asks situations about life as a couple, and keeps a record of every vote. Here is what changes, side by side:",
+    "colClassique": "The classic yes or no",
+    "colCouple": "Our couples version",
+    "ligne1Titre": "The questions",
+    "ligne1Classique": "Anything goes: \"have you ever lied to your mother?\"",
+    "ligne1Couple": "Situations about life as a couple: joint account, house, pet, in-laws",
+    "ligne2Titre": "Who answers",
+    "ligne2Classique": "Each in turn, as fast as possible",
+    "ligne2Couple": "The couple answers with one voice, after talking it over",
+    "ligne3Titre": "What you find out",
+    "ligne3Classique": "Anecdotes and fits of laughter",
+    "ligne3Couple": "What your partner thinks about topics you had never brought up",
+    "ligne4Titre": "The end of the game",
+    "ligne4Classique": "When someone cracks or the group moves on",
+    "ligne4Couple": "Whenever you want: there is no score and no finish line",
+    "apres": "One small clarification while we are at it, because the mix-up comes back often: yes or no is not the \"don't say yes or no\" game. In that one, those two words are banned and you have to hold out without saying them. Here it is the opposite, they are the only two answers allowed."
+  },
+  "section3": {
+    "title": "The rules of our game",
+    "intro": "There is almost nothing to learn. You settle down as a pair in front of the same screen, and it goes like this:",
+    "etape1Titre": "A situation appears",
+    "etape1Texte": "For example \"Having a joint bank account\". You talk it over if you need to, then you answer with a single tap: YES or NO. If a situation does not apply to you, there is a \"Skip\" button too.",
+    "etape2Titre": "Everyone's votes appear",
+    "etape2Texte": "Right after your answer, you see the numbers: for example 1,203 people voted yes, and 255 voted no. You know straight away whether you are with the majority or against the tide.",
+    "etape3Titre": "You keep going, or not",
+    "etape3Texte": "There are 120 situations, but nothing forces you to do them in one sitting. The game has no score and no end screen: you stop whenever you want, and you pick it up later where situations are left.",
+    "apres": "One technical detail that matters: each situation can only be voted on once per person. If you come back tomorrow, the situations you already settled show their numbers without letting you vote again. So the percentages actually mean something: nobody can inflate one side by clicking ten times."
+  },
+  "section4": {
+    "title": "Examples of situations from the game",
+    "intro": "Here are twenty of the hundred and twenty situations, exactly as the game asks them. There is the very concrete, the more committing, and a few topics people rarely dare to bring up head-on:",
+    "apres": "The other 100 are in the game, served in a different order on every visit. Some of them sting a little, and honestly that is part of the point: a disagreement over \"Having a best friend of the opposite sex\" says more than a whole evening of small talk. If a topic gets stuck, do not brush it aside: it might be the start of <a href=\"/en/couple-questions/\">a real conversation between the two of you</a>, and that is worth more than the game."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How do you play yes or no as a couple?",
+    "a1": "You open the game together on one phone, a situation appears, and you answer yes or no with one voice. Right after, the game shows what everyone else voted. There are 120 situations, and you stop whenever you want.",
+    "q2": "Are the numbers shown real votes?",
+    "a2": "Yes. Every click on yes or on no is recorded, all visitors combined, and each person can only vote once per situation. The numbers you see move as other couples play.",
+    "q3": "Do you both need to agree to answer?",
+    "a3": "That is the spirit of the game: the answer belongs to the couple, not to one of you. If you disagree, that is excellent news, it means there is a real topic to discuss before clicking.",
+    "q4": "Can you play with friends, or alone?",
+    "a4": "The game is written for a couple: the situations are about joint accounts, in-laws or intimacy. Alone, it works too, you vote your opinion and compare it to everyone else's. With friends, some situations will fall flat, but nothing stops you.",
+    "q5": "What happens after the 120 situations?",
+    "a5": "Not much, and that is on purpose: there is no score and no ranking, the game simply tells you that you have seen everything. If you like the format, <a href=\"/en/couple-dilemmas-game/\">the couple dilemmas</a> run on the same voting principle, with impossible deals instead of situations."
+  }
+}

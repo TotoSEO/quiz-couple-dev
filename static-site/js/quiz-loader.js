@@ -276,6 +276,7 @@
     // « j'ai eu des frissons une fois », les points vivent dans gd.json.
     // ── Qui pourrait : deux prénoms, une question, on désigne ──
     'qui-pourrait':   { prefix: 'quiPourrait', engine: 'qui-pourrait', totalQ: 0, pool: 0, textOnly: true },
+    'oui-non':        { prefix: 'ouiNon', engine: 'oui-non', totalQ: 0, pool: 0, textOnly: true },
 
     'crush':          { modes: [
       { id: 'homme', emoji: '👦', prefix: 'crushH', engine: 'solo', totalQ: 35, pool: 35, quizType: 'crush', ascending: true, ptsExplicites: true, resultPrefix: 'crush' },
@@ -513,6 +514,28 @@
         return;
       }
       new QuizEngine.QuiPourraitGame({ container: container, prefix: config.prefix, lang: lang, questions: qpQuestions });
+      return;
+    }
+
+    // Oui ou non : même chargement, un réservoir de situations numérotées lu
+    // en entier. L'identifiant de chaque situation est son rang, c'est lui
+    // qui rattache les votes en base : une traduction manquante saute sans
+    // décaler les votes de personne.
+    if (config.engine === 'oui-non') {
+      var onQuestions = [];
+      for (var oni = 1; oni <= 120; oni++) {
+        var cleOn = config.prefix + '.q' + oni;
+        var texteOn = QuizEngine.tgd(cleOn, null);
+        if (!texteOn || texteOn === cleOn) continue;
+        onQuestions.push({ id: oni, texte: texteOn });
+      }
+      if (onQuestions.length === 0) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      new QuizEngine.OuiNonGame({ container: container, prefix: config.prefix, lang: lang, questions: onQuestions });
       return;
     }
 

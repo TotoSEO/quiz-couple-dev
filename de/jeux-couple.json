@@ -1,12 +1,12 @@
 {
   "hero": {
-    "badge": "10 Spiele • Kostenlos • Ohne Anmeldung",
+    "badge": "11 Spiele • Kostenlos • Ohne Anmeldung",
     "title": "Unsere Spiele für zu zweit, in einem Tipp startklar",
     "titleHighlight": "für zu zweit",
-    "description": "Zehn Spiele, die auf einem einzigen Handy zwischen euch beiden starten, ohne Konto und ohne Installation."
+    "description": "Elf Spiele, die auf einem einzigen Handy zwischen euch beiden starten, ohne Konto und ohne Installation."
   },
   "stats": {
-    "jeux": "10",
+    "jeux": "11",
     "jeuxLabel": "Spiele zu zweit",
     "cartes": "390",
     "cartesLabel": "Karten, Strafen und Dilemmas",
@@ -69,13 +69,18 @@
     "quiPourraitTagline": "Eine Frage, zwei Vornamen, und ihr zeigt auf den Schuldigen",
     "quiPourraitContenu": "108 Fragen, gespielt in Runden mit 20, 40 oder 60, zufällig gezogen",
     "quiPourraitDuree": "5 bis 20 Min",
-    "quiPourraitJoueurs": "2 Spieler"
+    "quiPourraitJoueurs": "2 Spieler",
+    "ouiNonNom": "Ja oder Nein",
+    "ouiNonTagline": "Situationen zum Entscheiden, und die Stimmen aller anderen",
+    "ouiNonContenu": "120 Situationen aus dem Leben zu zweit, nach jeder Antwort die Stimmen aller Besucher",
+    "ouiNonDuree": "2 bis 20 Min",
+    "ouiNonJoueurs": "2 Spieler"
   },
   "section1": {
     "title": "Was ein Spiel zu zweit an einem Abend verändert",
     "p1": "Ein <strong class=\"text-foreground\">Paarspiel</strong> sieht nach nichts aus. Und doch löst es ein sehr konkretes Problem: zu zweit dreht man sich am Ende immer um dieselben Themen. Der Tag, die Arbeit, was es heute Abend gibt… Ein Spiel setzt einen Rahmen, und dieser Rahmen erlaubt Fragen, die man aus dem Nichts heraus nie stellen würde.",
     "p2": "Deshalb funktioniert ein Spiel auch besser als ein Film, wenn ihr euch wirklich wiederfinden wollt. Vor einem Bildschirm seid ihr zwei Menschen nebeneinander, die woanders hinschauen. Um ein Spiel herum seid ihr zwei Menschen, die einander anschauen. Den Unterschied spürt man nach zehn Minuten.",
-    "p3": "Die zehn Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten."
+    "p3": "Die elf Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten."
   },
   "section2": {
     "title": "Welches Spiel zu welchem Moment passt",
