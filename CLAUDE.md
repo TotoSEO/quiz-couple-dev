@@ -124,6 +124,13 @@ Version humaine (à imiter) :
   fermés par « etc. » quand la liste pourrait continuer.
 - **Une pointe d'enthousiasme simple** est bienvenue : « ...et permet de
   passer un très bon moment à deux ! »
+- **De la ponctuation vivante, demandée par Thomas :** un ou deux « ! » en
+  fin de phrase par page, là où l'enthousiasme est sincère, et quelques
+  « ... » quand une phrase reste en suspens (« Toi, parce que la dernière
+  fois au restaurant... »). Ça rend la lecture vivante. À petite dose : une
+  page qui en est tapissée redevient un tic. La règle vaut dans les cinq
+  langues, avec la typographie de chacune (espace avant le « ! » en
+  français, « ¡...! » en espagnol).
 
 ### Les mots interdits dans les titres
 
