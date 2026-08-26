@@ -5,7 +5,6 @@
    * Variables received:
    * - article, lang, t, canonical, routeKey, getLocalizedUrl, alternates, escapeHtml, JSON
    * - articleAlternates, authorBio
-   * - sidebarTests, sidebarQuizzes, sidebarOther, sidebarArticles
    */
 
   // ── Computed values ──────────────────────────────────────────────────
@@ -40,13 +39,6 @@
   // En dessous de ce seuil, le compteur reste invisible : « lu 4 fois » sur
   // un article publié hier dessert l'article au lieu de le servir.
   const readCountSeuil = 50;
-
-  // Sidebar labels
-  const sidebarTestsLabel = lang === 'fr' ? 'Tests de couple' : lang === 'en' ? 'Couple tests' : lang === 'es' ? 'Tests de pareja' : lang === 'de' ? 'Paar-Tests' : 'Test di coppia';
-  const sidebarQuizzesLabel = lang === 'fr' ? 'Quiz pour couple' : lang === 'en' ? 'Couple quizzes' : lang === 'es' ? 'Quiz de pareja' : lang === 'de' ? 'Paar-Quiz' : 'Quiz di coppia';
-  const sidebarJeuxLabel = lang === 'fr' ? 'Jeux de couple' : lang === 'en' ? 'Couple games' : lang === 'es' ? 'Juegos para parejas' : lang === 'de' ? 'Paarspiele' : 'Giochi di coppia';
-  const sidebarOtherLabel = lang === 'fr' ? 'Outils' : lang === 'en' ? 'Tools' : lang === 'es' ? 'Herramientas' : lang === 'de' ? 'Werkzeuge' : 'Strumenti';
-  const sidebarRecentLabel = lang === 'fr' ? 'Articles récents' : lang === 'en' ? 'Recent articles' : lang === 'es' ? 'Artículos recientes' : lang === 'de' ? 'Neueste Artikel' : 'Articoli recenti';
 
   // Format published date
   const publishedDate = new Date(article.publishedAt);
@@ -146,13 +138,9 @@
 
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
-<!-- Two-column layout: article + sidebar -->
 <div class="section-padding">
   <div class="container mx-auto px-4">
-    <div class="blog-layout">
-
-      <!-- Main article column -->
-      <article class="blog-article blog-layout-main">
+    <article class="blog-article">
 
         <!-- Table of contents (collapsed by default) -->
         <% if (article.sections && article.sections.length > 1) { %>
@@ -267,88 +255,6 @@
             <% } %>
           </div>
         </aside>
-      </article>
-
-      <!-- Sidebar -->
-      <aside class="blog-sidebar">
-        <div class="blog-sidebar-inner">
-
-          <!-- Tests de couple (collapsible) -->
-          <div class="blog-sidebar-section">
-            <button class="blog-sidebar-toggle" aria-expanded="true" onclick="var p=this.parentElement;p.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!p.classList.contains('is-collapsed'))">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-              <span><%= sidebarTestsLabel %></span>
-              <svg class="blog-sidebar-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="blog-sidebar-list">
-              <% for (const item of sidebarTests) { %>
-              <a href="<%= item.url %>" class="blog-sidebar-link"><%= item.label %></a>
-              <% } %>
-            </div>
-          </div>
-
-          <!-- Quiz pour couple (collapsible) -->
-          <div class="blog-sidebar-section">
-            <button class="blog-sidebar-toggle" aria-expanded="true" onclick="var p=this.parentElement;p.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!p.classList.contains('is-collapsed'))">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-              <span><%= sidebarQuizzesLabel %></span>
-              <svg class="blog-sidebar-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="blog-sidebar-list">
-              <% for (const item of sidebarQuizzes) { %>
-              <a href="<%= item.url %>" class="blog-sidebar-link"><%= item.label %></a>
-              <% } %>
-            </div>
-          </div>
-
-          <!-- Jeux de couple (collapsible) -->
-          <% if (typeof sidebarJeux !== 'undefined' && sidebarJeux.length > 0) { %>
-          <div class="blog-sidebar-section">
-            <button class="blog-sidebar-toggle" aria-expanded="true" onclick="var p=this.parentElement;p.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!p.classList.contains('is-collapsed'))">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="16" cy="11" r="1"/><circle cx="18" cy="14" r="1"/></svg>
-              <span><%= sidebarJeuxLabel %></span>
-              <svg class="blog-sidebar-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="blog-sidebar-list">
-              <% for (const item of sidebarJeux) { %>
-              <a href="<%= item.url %>" class="blog-sidebar-link"><%= item.label %></a>
-              <% } %>
-            </div>
-          </div>
-          <% } %>
-
-          <!-- Outils -->
-          <div class="blog-sidebar-section">
-            <button class="blog-sidebar-toggle" aria-expanded="true" onclick="var p=this.parentElement;p.classList.toggle('is-collapsed');this.setAttribute('aria-expanded',!p.classList.contains('is-collapsed'))">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-              <span><%= sidebarOtherLabel %></span>
-              <svg class="blog-sidebar-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="blog-sidebar-list">
-              <% for (const item of sidebarOther) { %>
-              <a href="<%= item.url %>" class="blog-sidebar-link"><%= item.label %></a>
-              <% } %>
-            </div>
-          </div>
-
-          <!-- Articles récents -->
-          <% if (sidebarArticles && sidebarArticles.length > 0) { %>
-          <div class="blog-sidebar-section blog-sidebar-articles">
-            <div class="blog-sidebar-heading">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-              <span><%= sidebarRecentLabel %></span>
-            </div>
-            <div class="blog-sidebar-list">
-              <% for (const a of sidebarArticles) { %>
-              <a href="<%= a.url %>" class="blog-sidebar-link"><%= a.title %></a>
-              <% } %>
-            </div>
-          </div>
-          <% } %>
-
-        </div>
-      </aside>
-
-    </div>
+    </article>
   </div>
 </div>
