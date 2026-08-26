@@ -10,9 +10,9 @@ const article: BlogArticleData = {
   featuredImageAlt: "Persona incatenata a un telefono che mostra un cuore, in attesa di una risposta",
   publishedAt: '2026-09-12T11:33:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "La dipendenza affettiva non si vede allo specchio. Si vede nei dettagli: cosa provi quando non risponde, cosa annulli per lui, cosa non osi più dire.",
+  excerpt: "La dipendenza affettiva si vede nei dettagli: cosa provi quando non risponde, cosa annulli per lui, cosa non osi più dire.",
   introduction: `<p>Non ti risponde da due ore. Oggettivamente non è successo niente: lavora, vive la sua vita, va tutto bene. Ma tu hai già controllato il telefono quindici volte, riletto il tuo ultimo messaggio per capire se era goffo e costruito tre scenari, in uno dei quali ti lascia.</p>
-<p>Se questa scena ti dice qualcosa, forse ti sei già chiesta se non sei «troppo». Troppo attaccata, troppo ansiosa, troppo dipendente. <strong>La vera domanda non è se ami troppo. È se il tuo equilibrio emotivo dipende interamente da qualcun altro.</strong> Quella è la dipendenza affettiva, e ha sintomi precisi.</p>
+<p>Se questa scena ti dice qualcosa, forse ti sei già chiesta se non sei «troppo». Troppo attaccata, troppo ansiosa, troppo dipendente. <strong>La vera domanda è se il tuo equilibrio emotivo dipende interamente da qualcun altro, non se ami troppo.</strong> Quella è la dipendenza affettiva, e ha sintomi precisi.</p>
 <p>Li passiamo in rassegna uno per uno, sfera per sfera: cosa succede nella tua testa, nella tua coppia, nel tuo corpo e con gli altri. Non per appiccicarti un'etichetta. Solo per aiutarti a vedere chiaro, perché su questo funzionamento si lavora molto bene, una volta identificato.</p>`,
   quickSummary: [
     "Il sintomo centrale: il tuo stato emotivo dipende dai segnali dell'altro, ora per ora.",
@@ -41,8 +41,8 @@ const article: BlogArticleData = {
 <li><strong>La paura dell'abbandono, di sottofondo:</strong> Non una preoccupazione occasionale: un programma che gira in permanenza. Un tono un po' secco, un «vedremo», uno sguardo distratto, e il tuo cervello conclude il peggio. La cosa più sfiancante è che anche i bei momenti sono contaminati: te li godi a metà, perché una parte di te anticipa già la fine.</li>
 <li><strong>L'interpretazione permanente:</strong> Rileggi i messaggi, analizzi le emoji, confronti il tempo di risposta di oggi con quello della settimana scorsa. La tua coppia è diventata un'indagine e tu una detective a tempo pieno. Sfiancante e soprattutto senza fine, perché nessuna prova rassicura per più di qualche ora.</li>
 <li><strong>Il bisogno di rassicurazione a ripetizione:</strong> «Mi ami?», «Va tutto bene tra noi?», poste non per aprire una conversazione ma per calmare un'angoscia. La risposta funziona come un farmaco a effetto breve. Serve presto una nuova dose.</li>
-<li><strong>Il valore personale indicizzato a lui:</strong> Se ti valorizza, vali qualcosa. Se è distante, non vali più niente. La tua autostima non ti appartiene più: è quotata in borsa, e il mercato è lui.</li>
-<li><strong>L'incapacità di stare sola senza soffrire:</strong> La solitudine non ti riposa, ti mette in allerta. Un weekend senza di lui non è un momento per te: è una prova da attraversare, orologio alla mano.</li>
+<li><strong>Il valore personale indicizzato a lui:</strong> Se ti valorizza, vali qualcosa. Se è distante, non vali più niente. La tua autostima non ti appartiene più: sale e scende secondo il suo umore.</li>
+<li><strong>L'incapacità di stare sola senza soffrire:</strong> La solitudine non ti riposa, ti mette in allerta. Un weekend senza di lui non è più un momento per te, è una prova da attraversare, orologio alla mano.</li>
 </ol>`,
     },
     {
@@ -50,7 +50,7 @@ const article: BlogArticleData = {
       title: "Nella tua coppia (sintomi da 6 a 10)",
       content: `<ol start="6">
 <li><strong>Non dici più di no:</strong> Per paura di deludere, di creare gelo, di dargli un motivo per andarsene. Le tue preferenze vengono sistematicamente dopo le sue, al punto che a volte non sai più cosa preferisci tu.</li>
-<li><strong>Ti cancelli in anticipo:</strong> Indovini i suoi desideri prima che li formuli, disinneschi i conflitti prima che esistano, ingoi i rimproveri prima di dirli. Da lontano sei «facile da vivere». Da vicino sei sparita.</li>
+<li><strong>Ti cancelli in anticipo:</strong> Indovini i suoi desideri prima che li formuli, disinneschi i conflitti prima che esistano, ingoi i rimproveri prima di dirli. Da lontano sei «facile da vivere». Solo che, a furia di cancellarti, sei sparita.</li>
 <li><strong>La gelosia diventa invadente:</strong> Non per forza scenate: a volte solo una sorveglianza discreta, i social controllati, il «chi è quella?» di cui ti penti subito. Dietro, sempre la stessa logica: ogni persona attorno a lui è una minaccia per la tua sopravvivenza emotiva.</li>
 <li><strong>Resti, anche quando fa male:</strong> È il sintomo dalle conseguenze più pesanti. Una relazione mediocre, deludente, a volte apertamente tossica, eppure l'idea di andartene fa più paura dell'idea di soffrire. Attenzione, tra l'altro: questo profilo attira proprio i partner che lo sfruttano, ci torniamo più sotto.</li>
 <li><strong>La coppia ha mangiato tutto il resto:</strong> I tuoi progetti, le tue passioni, le tue serate: tutto è passato in secondo piano, senza una decisione consapevole. Un giorno ti accorgi che sono mesi che non fai niente che non lo coinvolga.</li>
@@ -110,7 +110,7 @@ const article: BlogArticleData = {
         {
           id: 'faq-anche-gli-uomini',
           title: "Riguarda anche gli uomini?",
-          content: `<p>Assolutamente, e probabilmente più di quanto si creda: consultano meno, ne parlano meno, e i loro sintomi prendono a volte altre forme, gelosia di controllo, rabbia o iper-investimento nella coppia. Il tema merita un'analisi a parte, ed è quello che facciamo con la <a href="/it/blog/dipendenza-affettiva-negli-uomini/">dipendenza affettiva negli uomini</a>.</p>
+          content: `<p>Assolutamente, e probabilmente più di quanto si creda: consultano meno, ne parlano meno, e i loro sintomi prendono a volte altre forme, gelosia di controllo, rabbia o iper-investimento nella coppia. Il tema ha i suoi codici, e li vediamo nel dettaglio nella <a href="/it/blog/dipendenza-affettiva-negli-uomini/">dipendenza affettiva negli uomini</a>.</p>
 <a href="/it/blog/dipendenza-affettiva-nella-coppia/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leggi anche</span><span class="blog-read-also-title">Dipendenza affettiva: quando amare diventa un bisogno vitale</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
         },
       ],

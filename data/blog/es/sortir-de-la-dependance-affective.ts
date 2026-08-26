@@ -5,14 +5,14 @@ const article: BlogArticleData = {
   slug: 'superar-la-dependencia-emocional',
   title: "Cómo superar la dependencia emocional: 12 ejercicios concretos",
   metaTitle: "Superar la dependencia emocional: el plan en 3 fases",
-  metaDescription: "No consejos vagos: un plan de verdad. 12 ejercicios concretos repartidos en 3 fases para superar la dependencia emocional, semana a semana.",
+  metaDescription: "Un plan en 3 fases con 12 ejercicios concretos para superar la dependencia emocional, semana a semana, con las trampas que conviene conocer por el camino.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Persona rompiendo una cadena en forma de corazón, escalones de fondo",
   publishedAt: '2026-09-22T11:32:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Trabaja en ti», «aprende a quererte»... Gracias, pero en concreto, ¿qué hago el lunes por la mañana? Aquí está el plan, ejercicio a ejercicio.",
   introduction: `<p>Si alguna vez has buscado cómo salir de la dependencia emocional, ya te sabes la canción: «recupera la confianza en ti», «céntrate en tus necesidades», «aprende a quererte». Consejos ciertos, sin duda. Pero perfectamente inservibles un martes a las once de la noche, mientras miras fijamente el móvil esperando su respuesta.</p>
-<p><strong>De la dependencia emocional no se sale con propósitos. Se sale con gestos, pequeños, precisos, repetidos.</strong> Igual que se rehabilita una rodilla tras una lesión: nadie te dice «vuelve a andar», te dan ejercicios, en un orden, con una progresión.</p>
+<p><strong>De la dependencia emocional se sale con gestos, pequeños, precisos y repetidos, no con propósitos.</strong> Igual que se rehabilita una rodilla tras una lesión: nadie te dice «vuelve a andar», te dan ejercicios, en un orden, con una progresión.</p>
 <p>Es lo que vamos a hacer aquí. Tres fases, doce ejercicios, de lo más urgente a lo más profundo. No hace falta que lo hagas todo perfecto, solo hace falta que empieces por el primero. Y antes de eso, dos minutos para entender contra qué luchas, porque cambia la forma de hacer los ejercicios.</p>`,
   quickSummary: [
     "La dependencia emocional es un reflejo de regulación: usas al otro para calmar tu estado interno.",
@@ -66,8 +66,8 @@ const article: BlogArticleData = {
       title: "Fase 3: consolidar (meses 2 y 3)",
       content: `<p>Las urgencias están gestionadas, tu vida se va llenando. Queda el fondo: construir una seguridad interior que ya no dependa de nadie. Es la fase más lenta, y la que más rinde.</p>
 <ol start="9">
-<li><strong>La soledad programada:</strong> Un rato a solas por semana, elegido, ritualizado: un café en una terraza, una expo, un paseo. El objetivo no es aguantar, es enseñarle a tu sistema nervioso que la soledad es un lugar seguro. La diferencia entre padecer la soledad y regalártela es exactamente la diferencia entre el abandono y la libertad.</li>
-<li><strong>La carta del peor escenario:</strong> Ejercicio duro, para hacer con calma: escribe lo que pasaría, en concreto, si la relación se acabara. No el tsunami emocional fantaseado, el desarrollo real: dónde vivirías, quién te rodearía, qué harías los primeros meses. Al escribirlo vas a descubrir algo contraintuitivo: el peor escenario duele, pero es SOBREVIVIBLE. Y un miedo sobrevivible pierde casi todo su poder.</li>
+<li><strong>La soledad programada:</strong> Un rato a solas por semana, elegido, ritualizado: un café en una terraza, una expo, un paseo. El objetivo no es aguantar, es enseñarle a tu sistema nervioso que la soledad es un lugar seguro. Una soledad elegida ya no tiene nada que ver con un abandono, y tu cuerpo acaba notándolo.</li>
+<li><strong>La carta del peor escenario:</strong> Ejercicio duro, para hacer con calma: escribe lo que pasaría, en concreto, si la relación se acabara. No el tsunami emocional fantaseado, el desarrollo real: dónde vivirías, quién te rodearía, qué harías los primeros meses. Al escribirlo vas a descubrir algo contraintuitivo: el peor escenario duele, pero puedes sobrevivir a él. Y un miedo que sabes que puedes atravesar pierde casi todo su poder.</li>
 <li><strong>La pareja por elección, no por necesidad:</strong> Con regularidad, hazte esta pregunta: «si no tuviera miedo, ¿qué elegiría?» Quedarse tiene que volverse una respuesta, no un reflejo. Es el gran vuelco de todo este trabajo: pasar de «me quedo porque lo necesito» a «me quedo porque lo elijo». El día que sientas la diferencia por dentro, está ganado.</li>
 <li><strong>El balance mensual:</strong> Una vez al mes, recupera tu diario de la fase 1 y compara: la frecuencia de las olas, su intensidad, tu velocidad de recuperación. Los avances de fondo son invisibles en el día a día y espectaculares a tres meses. Esa cita contigo misma es también tu mejor antídoto contra el desánimo.</li>
 </ol>`,
@@ -90,7 +90,7 @@ const article: BlogArticleData = {
         {
           id: 'trampa-3-hacerlo-en-secreto',
           title: "Trampa n.º 3: hacer todo esto en secreto contra alguien",
-          content: `<p>Estos ejercicios son un trabajo para ti, no una estrategia para hacerle reaccionar. Si cuentas tus días de silencio vigilando su reacción, no estás saliendo de la dependencia, la estás jugando en otro tablero.</p>
+          content: `<p>Estos ejercicios son un trabajo para ti, no una estrategia para hacerle reaccionar. Si cuentas tus días de silencio vigilando su reacción, no estás saliendo de la dependencia, solo la estás jugando de otra forma.</p>
 <p>Y el último consejo de verdad: no tienes por qué hacer este camino sola. Un psicólogo que conozca las terapias cognitivo-conductuales o las heridas de apego acelera enormemente el trabajo. En cuanto a lectura, el clásico del género, «Ya no seas codependiente» de Melody Beattie, complementa muy bien este plan si quieres ir más lejos en papel.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Antes de empezar: mide tu punto de partida</p>

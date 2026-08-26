@@ -11,7 +11,7 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-19T09:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Ci sono le conversazioni di tutti i giorni... e quelle che non si osa iniziare. Indovina quali avvicinano di più.",
-  introduction: `<p>Vi dite tutto, be', quasi. Il lavoro, gli amici, i progetti, cosa mangiate stasera. Ma c'è un territorio di cui si parla molto meno facilmente, anche dopo anni: cosa prova davvero l'altro, cosa non osa chiedere, cosa gli manca, cosa desidera. L'intimo, quello vero.</p>
+  introduction: `<p>Vi dite tutto, be', quasi. Il lavoro, gli amici, i progetti, cosa mangiate stasera. Ma c'è un territorio di cui si parla molto meno facilmente, anche dopo anni: cosa prova davvero l'altro, cosa non osa chiedere, cosa gli manca, cosa desidera. Insomma, l'intimo, quello vero.</p>
 <p><strong>Ed è un peccato, perché è esattamente lì che si gioca la complicità di una coppia.</strong> Non nelle grandi dichiarazioni! In quelle conversazioni un po' più nude delle altre, quelle che si iniziano a bassa voce, una sera in cui ci si sente bene.</p>
 <p>Ecco 65 domande intime, graduate di proposito: si parte piano, dalle emozioni, e si sale progressivamente di temperatura. Ti fermi dove volete, prendi quello che vi somiglia. L'unico vero manuale d'uso è il momento giusto, ed è proprio da lì che cominciamo.</p>`,
   quickSummary: [
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 La domanda 44 conta quanto la 45</p>
-<p>Parlare di desideri significa anche parlare di limiti, e una coppia che sa dirsi «quello no» è una coppia che può dirsi «quello sì» in fiducia. Se una risposta sorprende uno dei due, prendetela come un'informazione, non come una richiesta. Potete dirvi tutto; non vi dovete niente.</p>
+<p>Parlare di desideri significa anche parlare di limiti, e una coppia che sa dirsi «quello no» è una coppia che può dirsi «quello sì» in fiducia. Se una risposta sorprende uno dei due, prendetela come un'informazione, non come una richiesta. Potete dirvi tutto, ma non vi dovete niente.</p>
 </aside>`,
     },
     {

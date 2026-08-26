@@ -11,7 +11,7 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-19T09:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Il y a les conversations qu'on a tous les jours... et celles qu'on n'ose pas lancer. Devine lesquelles rapprochent le plus.",
-  introduction: `<p>Vous vous dites tout, enfin presque. Le boulot, les amis, les projets, ce que vous mangez ce soir... Mais il y a un territoire dont on parle beaucoup moins facilement, même après des années : ce que l'autre ressent vraiment, ce qu'il n'ose pas demander, ce qui lui manque, ce dont il a envie. L'intime, le vrai.</p>
+  introduction: `<p>Vous vous dites tout, enfin presque. Le boulot, les amis, les projets, ce que vous mangez ce soir... Mais il y a un territoire dont on parle beaucoup moins facilement, même après des années : ce que l'autre ressent vraiment, ce qu'il n'ose pas demander, ce qui lui manque, ce dont il a envie. Bref, l'intime, le vrai.</p>
 <p><strong>Et c'est dommage, parce que c'est exactement là que se joue la complicité d'un couple.</strong> Pas dans les grandes déclarations ! Dans ces conversations un peu plus nues que les autres, celles qu'on lance à voix basse, un soir où on se sent bien...</p>
 <p>Voici 65 questions intimes, graduées volontairement : on commence tout en douceur, côté émotions, et on monte progressivement en température. Tu t'arrêtes où vous voulez, tu pioches ce qui vous ressemble. Le seul vrai mode d'emploi, c'est le bon moment... et on commence justement par ça.</p>`,
   quickSummary: [
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 La question 44 est aussi importante que la 45</p>
-<p>Parler de désirs, c'est aussi parler de limites, et un couple qui sait se dire « ça non » est un couple qui peut se dire « ça oui » en confiance. Si une réponse vous surprend l'un ou l'autre, prenez-la comme une information, pas comme une demande. On peut tout se dire ; on ne se doit rien.</p>
+<p>Parler de désirs, c'est aussi parler de limites, et un couple qui sait se dire « ça non » est un couple qui peut se dire « ça oui » en confiance. Si une réponse vous surprend l'un ou l'autre, prenez-la comme une information, pas comme une demande. On peut tout se dire, mais on ne se doit rien.</p>
 </aside>`,
     },
     {

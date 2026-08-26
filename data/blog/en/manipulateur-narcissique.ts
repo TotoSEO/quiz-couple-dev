@@ -10,9 +10,9 @@ const article: BlogArticleData = {
   featuredImageAlt: "Chess player whose pieces are human silhouettes",
   publishedAt: '2026-09-15T13:53:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "The narcissistic manipulator is always presented as all-powerful. That's false. His system has flaws, known and predictable, provided you know where to look.",
-  introduction: `<p>When you search «narcissistic manipulator», you always land on the same article: the list of signs, the portrait of the monster, and good luck with that. Fine for understanding, but then what? Once you KNOW you're dealing with a manipulator, the real question becomes: how does he work, and how do you protect yourself in practice?</p>
-<p>So this article takes the problem from the other end. <strong>The narcissistic manipulator is not all-powerful. He's a system, and a system has rules, patterns and flaws.</strong> His techniques are predictable. So are his reactions. And his weak points are remarkably consistent from one manipulator to the next.</p>
+  excerpt: "The narcissistic manipulator is nowhere near all-powerful: his system has flaws, known and predictable, provided you know where to look.",
+  introduction: `<p>You know, or you strongly suspect, that you are dealing with a narcissistic manipulator. Once you are there, recognising the signs is no longer enough: the real question becomes how he works, and how you protect yourself in practice.</p>
+<p><strong>The narcissistic manipulator is not all-powerful: he's a system, and a system has rules, patterns and flaws.</strong> His techniques are predictable. So are his reactions. And his weak points are remarkably consistent from one manipulator to the next.</p>
 <p>We're going to look, in order, at his favourite techniques, his real vulnerabilities, what your silence does to him, and his typical reactions when you resist. Not to outsmart him, we'll come back to that below, but because understanding the mechanics is already a way of no longer being inside them.</p>`,
   quickSummary: [
     "Narcissistic manipulator and narcissistic abuser: two labels for the same coercive pattern.",
@@ -44,7 +44,7 @@ const article: BlogArticleData = {
     {
       id: 'his-weak-points',
       title: "The manipulator's weak points (yes, he has some)",
-      content: `<p>He's always presented as an implacable machine. In reality his system rests on precise conditions, and each one is a flaw.</p>
+      content: `<p>From the inside, his system looks implacable. In reality it rests on precise conditions, and each one is a flaw.</p>
 <ol>
 <li><strong>Genuine indifference:</strong> Not performed indifference, he detects that: the real kind, the one that comes when you've understood and no longer expect anything. His system runs on your reaction, admiration or suffering, it doesn't matter which. A person who no longer reacts is a closed fuel pump.</li>
 <li><strong>Witnesses:</strong> His whole mechanism requires closed doors. A third party present, a three-way conversation, a family in the know, and the public character has to stay on stage, which neutralises the private one. That's why he works so hard to isolate you.</li>
@@ -61,7 +61,7 @@ const article: BlogArticleData = {
       id: 'the-effect-of-silence',
       title: "The effect of silence on the manipulator",
       content: `<p>This is one of the most asked questions, and it deserves a precise answer, because silence is a weapon with two edges.</p>
-<p>What your silence produces in him, first: a lack. Your attention, your reactions, your emotions are his daily fuel, what English speakers call «narcissistic supply». Cutting contact cuts the supply. And then something very predictable happens: <strong>it never starts with respect, it starts with an escalation.</strong> Multiplied messages, charm reactivated, guilt-tripping, anger, sometimes all three in the same day. He tests every door, in order.</p>
+<p>What your silence produces in him, first: a lack. Your attention, your reactions, your emotions are his daily fuel, what English speakers call «narcissistic supply». Cutting contact cuts the supply. And then something very predictable happens: <strong>it triggers an escalation first, never respect.</strong> Multiplied messages, charm reactivated, guilt-tripping, anger, sometimes all three in the same day. He tests every door, in order.</p>
 <p>Then two possible outcomes. Either you hold, and he ends up turning towards another source of attention, sometimes with one last firework of public disparagement to save his image. Or you crack once, a single «answer me», and you've just taught him how many days of pressure it takes to get you back. That's exactly why silence, with this profile, has to be a prepared decision, not a sulk or a test.</p>
 <p>One last important point: the silence we're talking about here is the silence of leaving, the famous no contact. Inside the relationship, going quiet to «make him understand» doesn't work: he reads that silence as punishment, therefore as a reaction, therefore as fuel. Once again, that's the game he knows best.</p>`,
     },

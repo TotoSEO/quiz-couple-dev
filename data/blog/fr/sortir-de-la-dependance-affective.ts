@@ -5,14 +5,14 @@ const article: BlogArticleData = {
   slug: 'sortir-de-la-dependance-affective',
   title: "Comment sortir de la dépendance affective : 12 exercices concrets",
   metaTitle: "Sortir de la dépendance affective : le plan en 3 phases",
-  metaDescription: "Pas des conseils vagues : un vrai plan. 12 exercices concrets répartis sur 3 phases pour sortir de la dépendance affective, semaine après semaine.",
+  metaDescription: "Un plan en 3 phases et 12 exercices concrets pour sortir de la dépendance affective, semaine après semaine, avec les pièges à connaître en route.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Personne brisant une chaîne en forme de cœur, marches d'escalier en arrière-plan",
   publishedAt: '2026-09-22T11:32:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "« Travaille sur toi », « apprends à t'aimer »... Merci, mais concrètement, on fait quoi lundi matin ? Voici le plan, exercice par exercice.",
   introduction: `<p>Si tu as déjà cherché comment sortir de la dépendance affective, tu connais la chanson : « reprends confiance en toi », « recentre-toi sur tes besoins », « apprends à t'aimer »... Des conseils vrais, sans doute. Mais parfaitement inutilisables un mardi soir à 23 heures, quand tu fixes ton téléphone en attendant sa réponse.</p>
-<p><strong>La dépendance affective ne se quitte pas avec des résolutions. Elle se quitte avec des gestes, petits, précis, répétés.</strong> Exactement comme on rééduque un genou après une blessure, en fait : personne ne te dit « remarche », on te donne des exercices, dans un ordre, avec une progression.</p>
+<p><strong>La dépendance affective se quitte avec des gestes, petits, précis et répétés, pas avec des résolutions.</strong> Exactement comme on rééduque un genou après une blessure, en fait : personne ne te dit « remarche », on te donne des exercices, dans un ordre, avec une progression.</p>
 <p>C'est ce qu'on va faire ici. Trois phases, douze exercices, du plus urgent au plus profond. Tu n'as pas besoin de tout faire parfaitement... tu as juste besoin de commencer par le premier. Et avant ça, deux minutes pour comprendre contre quoi tu te bats, parce que ça change la façon de faire les exercices.</p>`,
   quickSummary: [
     "La dépendance affective est un réflexe de régulation : tu utilises l'autre pour calmer ton état interne.",
@@ -66,8 +66,8 @@ const article: BlogArticleData = {
       title: "Phase 3 : consolider (mois 2 et 3)",
       content: `<p>Les urgences sont gérées, ta vie se remplit. Reste le fond : construire une sécurité intérieure qui ne dépende plus de personne. C'est la phase la plus lente... et la plus payante.</p>
 <ol start="9">
-<li><strong>La solitude programmée :</strong> Un moment seul par semaine, choisi, ritualisé : un café en terrasse, une expo, une marche. Le but n'est pas de tenir, c'est d'apprendre à ton système nerveux que la solitude est un lieu sûr. La différence entre subir la solitude et se l'offrir, c'est exactement la différence entre l'abandon et la liberté.</li>
-<li><strong>La lettre du pire scénario :</strong> Exercice costaud, à faire posée : écris ce qui se passerait, concrètement, si la relation s'arrêtait. Pas le tsunami émotionnel fantasmé, le déroulé réel : où tu vivrais, qui t'entourerait, ce que tu ferais les premiers mois... En écrivant, tu vas découvrir un truc contre-intuitif : le pire scénario est douloureux, mais il est SURVIVABLE. Et une peur survivable perd l'essentiel de son pouvoir.</li>
+<li><strong>La solitude programmée :</strong> Un moment seul par semaine, choisi, ritualisé : un café en terrasse, une expo, une marche. Le but n'est pas de tenir, c'est d'apprendre à ton système nerveux que la solitude est un lieu sûr. Une solitude choisie n'a plus rien à voir avec un abandon, et ton corps finit par le sentir.</li>
+<li><strong>La lettre du pire scénario :</strong> Exercice costaud, à faire posée : écris ce qui se passerait, concrètement, si la relation s'arrêtait. Pas le tsunami émotionnel fantasmé, le déroulé réel : où tu vivrais, qui t'entourerait, ce que tu ferais les premiers mois... En écrivant, tu vas découvrir un truc contre-intuitif : le pire scénario est douloureux, mais tu peux y survivre. Et une peur qu'on sait pouvoir traverser perd l'essentiel de son pouvoir.</li>
 <li><strong>Le couple par choix, pas par besoin :</strong> Régulièrement, pose-toi cette question : « si je n'avais pas peur, qu'est-ce que je choisirais ? » Rester doit devenir une réponse, pas un réflexe. C'est le grand renversement de tout ce travail : passer de « je reste parce que j'ai besoin » à « je reste parce que je choisis ». Le jour où tu sens la différence de l'intérieur... c'est gagné.</li>
 <li><strong>Le bilan mensuel :</strong> Une fois par mois, reprends ton journal de la phase 1 et compare : la fréquence des vagues, leur intensité, ta vitesse de récupération. Les progrès de fond sont invisibles au quotidien et spectaculaires sur trois mois. Ce rendez-vous avec toi-même est aussi ton meilleur antidote au découragement.</li>
 </ol>`,
@@ -90,7 +90,7 @@ const article: BlogArticleData = {
         {
           id: 'piege-n3-faire-tout-ca-en',
           title: "Piège n°3 : faire tout ça en secret contre quelqu'un",
-          content: `<p>Ces exercices sont un travail pour toi, pas une stratégie pour le faire réagir. Si tu comptes tes jours de silence en guettant sa réaction, tu n'es pas en train de sortir de la dépendance, tu es en train de la jouer à un autre jeu.</p>
+          content: `<p>Ces exercices sont un travail pour toi, pas une stratégie pour le faire réagir. Si tu comptes tes jours de silence en guettant sa réaction, tu n'es pas en train de sortir de la dépendance, tu es juste en train d'y jouer sous une autre forme.</p>
 <p>Et le vrai dernier conseil : tu n'es pas obligée de faire ce chemin seule. Un psy qui connaît les thérapies cognitives et comportementales ou les blessures d'attachement accélère énormément le travail. Côté lecture, le classique du genre, « 50 exercices pour sortir de la dépendance affective » de Géraldyne Prévot-Gigant, complète très bien ce plan si tu veux aller plus loin sur papier.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Avant de commencer : mesure ton point de départ</p>

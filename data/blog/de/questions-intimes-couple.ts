@@ -11,7 +11,7 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-19T09:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Es gibt die Gespräche, die man jeden Tag führt... und die, die man sich nie zu beginnen traut. Rate, welche am meisten näher bringen.",
-  introduction: `<p>Ihr erzählt euch alles, na ja, fast. Die Arbeit, die Freunde, die Pläne, was es heute Abend gibt. Aber es gibt ein Gebiet, über das man deutlich schwerer spricht, selbst nach Jahren: was der andere wirklich fühlt, was er sich nicht zu fragen traut, was ihm fehlt, worauf er Lust hat. Das Intime, das echte.</p>
+  introduction: `<p>Ihr erzählt euch alles, na ja, fast. Die Arbeit, die Freunde, die Pläne, was es heute Abend gibt. Aber es gibt ein Gebiet, über das man deutlich schwerer spricht, selbst nach Jahren: was der andere wirklich fühlt, was er sich nicht zu fragen traut, was ihm fehlt, worauf er Lust hat. Kurz: das Intime, das echte.</p>
 <p><strong>Und das ist schade, denn genau dort entscheidet sich die Vertrautheit eines Paares.</strong> Nicht in den großen Erklärungen! In diesen Gesprächen, die etwas nackter sind als die anderen, die man leise beginnt, an einem Abend, an dem man sich wohlfühlt.</p>
 <p>Hier sind 65 intime Fragen, bewusst gestaffelt: Wir beginnen sanft, bei den Gefühlen, und steigern die Temperatur Schritt für Schritt. Hör auf, wo ihr wollt, nimm mit, was zu euch passt. Die einzige echte Gebrauchsanweisung ist der richtige Moment, und genau damit fangen wir an.</p>`,
   quickSummary: [
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Frage 44 ist so wichtig wie 45</p>
-<p>Über Wünsche zu sprechen heißt auch, über Grenzen zu sprechen, und ein Paar, das «das nicht» sagen kann, ist ein Paar, das «das ja» im Vertrauen sagen kann. Wenn eine Antwort eine oder einen von euch überrascht, nehmt sie als Information, nicht als Aufforderung. Ihr könnt euch alles sagen; ihr schuldet euch nichts.</p>
+<p>Über Wünsche zu sprechen heißt auch, über Grenzen zu sprechen, und ein Paar, das «das nicht» sagen kann, ist ein Paar, das «das ja» im Vertrauen sagen kann. Wenn eine Antwort eine oder einen von euch überrascht, nehmt sie als Information, nicht als Aufforderung. Ihr könnt euch alles sagen, aber ihr schuldet euch nichts.</p>
 </aside>`,
     },
     {

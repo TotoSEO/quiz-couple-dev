@@ -5,14 +5,14 @@ const article: BlogArticleData = {
   slug: 'superare-la-dipendenza-affettiva',
   title: "Come superare la dipendenza affettiva: 12 esercizi concreti",
   metaTitle: "Superare la dipendenza affettiva: il piano in 3 fasi",
-  metaDescription: "Non consigli vaghi: un piano vero. 12 esercizi concreti distribuiti su 3 fasi per superare la dipendenza affettiva, settimana dopo settimana.",
+  metaDescription: "Un piano in 3 fasi con 12 esercizi concreti per superare la dipendenza affettiva, settimana dopo settimana, con le trappole da conoscere lungo la strada.",
   featuredImage: '/blog/sortir-de-la-dependance-affective.webp',
   featuredImageAlt: "Persona che spezza una catena a forma di cuore, gradini di una scala sullo sfondo",
   publishedAt: '2026-09-22T11:32:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Lavora su te stessa», «impara ad amarti»... Grazie, ma concretamente, cosa si fa lunedì mattina? Ecco il piano, esercizio per esercizio.",
   introduction: `<p>Se hai già cercato come uscire dalla dipendenza affettiva, conosci la canzone: «riprendi fiducia in te», «rimetti al centro i tuoi bisogni», «impara ad amarti». Consigli veri, senza dubbio. Ma perfettamente inutilizzabili un martedì sera alle undici, quando fissi il telefono aspettando la sua risposta.</p>
-<p><strong>Dalla dipendenza affettiva non si esce con i buoni propositi. Si esce con dei gesti, piccoli, precisi, ripetuti.</strong> Esattamente come si riabilita un ginocchio dopo un infortunio: nessuno ti dice «ricomincia a camminare», ti danno degli esercizi, in un ordine, con una progressione.</p>
+<p><strong>Dalla dipendenza affettiva si esce con dei gesti, piccoli, precisi e ripetuti, non con i buoni propositi.</strong> Esattamente come si riabilita un ginocchio dopo un infortunio: nessuno ti dice «ricomincia a camminare», ti danno degli esercizi, in un ordine, con una progressione.</p>
 <p>È quello che faremo qui. Tre fasi, dodici esercizi, dal più urgente al più profondo. Non devi fare tutto alla perfezione, devi solo cominciare dal primo. E prima di questo, due minuti per capire contro cosa stai lottando, perché cambia il modo di fare gli esercizi.</p>`,
   quickSummary: [
     "La dipendenza affettiva è un riflesso di regolazione: usi l'altro per calmare il tuo stato interno.",
@@ -66,8 +66,8 @@ const article: BlogArticleData = {
       title: "Fase 3: consolidare (mesi 2 e 3)",
       content: `<p>Le urgenze sono gestite, la tua vita si riempie. Resta il fondo: costruire una sicurezza interiore che non dipenda più da nessuno. È la fase più lenta, e la più redditizia.</p>
 <ol start="9">
-<li><strong>La solitudine programmata:</strong> Un momento da sola a settimana, scelto, ritualizzato: un caffè al tavolino, una mostra, una camminata. Lo scopo non è resistere, è insegnare al tuo sistema nervoso che la solitudine è un luogo sicuro. La differenza tra subire la solitudine e regalarsela è esattamente la differenza tra l'abbandono e la libertà.</li>
-<li><strong>La lettera dello scenario peggiore:</strong> Esercizio impegnativo, da fare con calma: scrivi cosa succederebbe, concretamente, se la relazione finisse. Non lo tsunami emotivo fantasticato, lo svolgimento reale: dove vivresti, chi ti starebbe intorno, cosa faresti i primi mesi. Scrivendo scoprirai una cosa controintuitiva: lo scenario peggiore è doloroso, ma è SOPRAVVIVIBILE. E una paura sopravvivibile perde quasi tutto il suo potere.</li>
+<li><strong>La solitudine programmata:</strong> Un momento da sola a settimana, scelto, ritualizzato: un caffè al tavolino, una mostra, una camminata. Lo scopo non è resistere, è insegnare al tuo sistema nervoso che la solitudine è un luogo sicuro. Una solitudine scelta non ha più niente a che vedere con un abbandono, e il tuo corpo finisce per sentirlo.</li>
+<li><strong>La lettera dello scenario peggiore:</strong> Esercizio impegnativo, da fare con calma: scrivi cosa succederebbe, concretamente, se la relazione finisse. Non lo tsunami emotivo fantasticato, lo svolgimento reale: dove vivresti, chi ti starebbe intorno, cosa faresti i primi mesi. Scrivendo scoprirai una cosa controintuitiva: lo scenario peggiore è doloroso, ma puoi sopravviverci. E una paura che sai di poter attraversare perde quasi tutto il suo potere.</li>
 <li><strong>La coppia per scelta, non per bisogno:</strong> Regolarmente, poniti questa domanda: «se non avessi paura, cosa sceglierei?» Restare deve diventare una risposta, non un riflesso. È il grande ribaltamento di tutto questo lavoro: passare da «resto perché ne ho bisogno» a «resto perché lo scelgo». Il giorno in cui senti la differenza da dentro, è fatta.</li>
 <li><strong>Il bilancio mensile:</strong> Una volta al mese, riprendi il diario della fase 1 e confronta: la frequenza delle onde, la loro intensità, la tua velocità di recupero. I progressi di fondo sono invisibili nel quotidiano e spettacolari su tre mesi. Quell'appuntamento con te stessa è anche il tuo miglior antidoto allo scoraggiamento.</li>
 </ol>`,
@@ -90,7 +90,7 @@ const article: BlogArticleData = {
         {
           id: 'trappola-3-farlo-in-segreto',
           title: "Trappola n°3: fare tutto questo di nascosto contro qualcuno",
-          content: `<p>Questi esercizi sono un lavoro per te, non una strategia per farlo reagire. Se conti i tuoi giorni di silenzio spiando la sua reazione, non stai uscendo dalla dipendenza, la stai giocando su un altro tavolo.</p>
+          content: `<p>Questi esercizi sono un lavoro per te, non una strategia per farlo reagire. Se conti i tuoi giorni di silenzio spiando la sua reazione, non stai uscendo dalla dipendenza, la stai solo giocando in un'altra forma.</p>
 <p>E il vero ultimo consiglio: non sei obbligata a fare questo percorso da sola. Un terapeuta che conosce le terapie cognitivo-comportamentali o le ferite d'attaccamento accelera enormemente il lavoro. Sul fronte letture, il classico del genere, «Codependent No More» di Melody Beattie, completa molto bene questo piano se vuoi andare oltre su carta.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Prima di cominciare: misura il tuo punto di partenza</p>

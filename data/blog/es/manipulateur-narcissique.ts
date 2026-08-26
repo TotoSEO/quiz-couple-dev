@@ -10,9 +10,9 @@ const article: BlogArticleData = {
   featuredImageAlt: "Jugador de ajedrez cuyas piezas son siluetas humanas",
   publishedAt: '2026-09-15T13:53:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Siempre se presenta al manipulador narcisista como todopoderoso. Es falso. Su sistema tiene fallos, conocidos y previsibles, siempre que sepas dónde mirar.",
-  introduction: `<p>Cuando buscas «manipulador narcisista» siempre caes en el mismo artículo: la lista de señales, el retrato del monstruo, y apáñate. Muy bien para entender, ¿pero después? Una vez que SABES que tienes delante a un manipulador, la pregunta de verdad pasa a ser: cómo funciona y cómo te proteges en concreto.</p>
-<p>Así que este artículo coge el problema por el otro lado. <strong>El manipulador narcisista no es todopoderoso. Es un sistema, y un sistema tiene reglas, patrones y fallos.</strong> Sus técnicas son previsibles. Sus reacciones también. Y sus puntos débiles son sorprendentemente constantes de un manipulador a otro.</p>
+  excerpt: "El manipulador narcisista no tiene nada de todopoderoso: su sistema tiene fallos, conocidos y previsibles, siempre que sepas dónde mirar.",
+  introduction: `<p>Sabes, o sospechas muy fuerte, que tienes delante a un manipulador narcisista. Llegados ahí, reconocer las señales ya no basta: la verdadera pregunta pasa a ser cómo funciona y cómo te proteges en concreto.</p>
+<p><strong>El manipulador narcisista no es todopoderoso: es un sistema, y un sistema tiene reglas, patrones y fallos.</strong> Sus técnicas son previsibles. Sus reacciones también. Y sus puntos débiles son sorprendentemente constantes de un manipulador a otro.</p>
 <p>Vamos a ver, por orden: sus técnicas preferidas, sus vulnerabilidades reales, lo que produce tu silencio en él y sus reacciones tipo cuando le plantas cara. No para pasarte de lista con él, volveremos a eso más abajo, sino porque entender la mecánica ya es dejar de estar dentro.</p>`,
   quickSummary: [
     "Manipulador narcisista y perverso narcisista: dos etiquetas para un mismo funcionamiento de dominio.",
@@ -44,7 +44,7 @@ const article: BlogArticleData = {
     {
       id: 'sus-puntos-debiles',
       title: "Los puntos débiles del manipulador (sí, los tiene)",
-      content: `<p>Siempre se le presenta como una máquina implacable. En realidad su sistema descansa sobre condiciones precisas, y cada una es un fallo.</p>
+      content: `<p>Visto desde dentro, su sistema parece implacable. En realidad descansa sobre condiciones precisas, y cada una es un fallo.</p>
 <ol>
 <li><strong>La indiferencia sincera:</strong> No la fingida, esa la detecta: la de verdad, la que llega cuando has entendido y ya no esperas nada. Su sistema funciona con tu reacción, admiración o sufrimiento, da igual. Una persona que ya no reacciona es un surtidor cerrado.</li>
 <li><strong>Los testigos:</strong> Toda su mecánica exige puertas cerradas. Un tercero presente, una conversación a tres, una familia al corriente, y el personaje público debe seguir en escena, lo que neutraliza al personaje privado. Por eso trabaja tanto en aislarte.</li>
@@ -61,7 +61,7 @@ const article: BlogArticleData = {
       id: 'el-efecto-del-silencio',
       title: "El efecto del silencio sobre el manipulador",
       content: `<p>Es una de las preguntas más repetidas y merece una respuesta precisa, porque el silencio es un arma de doble filo.</p>
-<p>Lo que tu silencio produce en él, primero: una carencia. Tu atención, tus reacciones, tus emociones son su combustible diario, lo que en inglés llaman «narcissistic supply». Cortar el contacto es cortar el suministro. Y ahí pasa algo muy previsible: <strong>nunca empieza por respeto, empieza por una escalada.</strong> Mensajes multiplicados, encanto reactivado, culpabilización, rabia, a veces las tres cosas el mismo día. Prueba todas las puertas, por orden.</p>
+<p>Lo que tu silencio produce en él, primero: una carencia. Tu atención, tus reacciones, tus emociones son su combustible diario, lo que en inglés llaman «narcissistic supply». Cortar el contacto es cortar el suministro. Y ahí pasa algo muy previsible: <strong>lo primero que provoca es una escalada, nunca respeto.</strong> Mensajes multiplicados, encanto reactivado, culpabilización, rabia, a veces las tres cosas el mismo día. Prueba todas las puertas, por orden.</p>
 <p>Después, dos desenlaces posibles. O aguantas y acaba girándose hacia otra fuente de atención, a veces con un último fuego artificial de desprestigio público para salvar su imagen. O cedes una vez, un solo «contéstame», y acabas de enseñarle cuántos días de presión hacen falta para recuperarte. Justo por eso el silencio, ante este perfil, tiene que ser una decisión preparada, no un enfado ni una prueba.</p>
 <p>Último punto, importante: el silencio del que hablamos aquí es el de la salida de la relación, el famoso contacto cero. Dentro de la pareja, callarse para «que lo entienda» no funciona: él lee ese silencio como un castigo, o sea como una reacción, o sea como combustible. Otra vez, es el juego que mejor conoce.</p>`,
     },
