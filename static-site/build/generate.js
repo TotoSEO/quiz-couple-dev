@@ -1630,36 +1630,6 @@ async function generateBlogArticle(articleMeta, lang) {
     // Category
     articleCategory: articleMeta.category || null,
     articleCategoryLabel: articleMeta.category && BLOG_CATEGORIES[articleMeta.category] ? BLOG_CATEGORIES[articleMeta.category][lang] || BLOG_CATEGORIES[articleMeta.category].fr : null,
-    // Sidebar data
-    // La barre laterale du blog liste tous les tests et tous les quiz : les
-    // pages absentes de cette liste ne recevaient aucun lien depuis le blog.
-    sidebarTests: [
-      'testCouple', 'testAmeSoeur', 'testCommonPoints', 'testCompatibilite', 'testSuisJeAmoureux', 'testDistance',
-      'testToxic', 'testPervers', 'testAmourHabitude', 'testCoupleSain', 'testMariage', 'testDivorce',
-      'testParentalite', 'testEmmenager', 'testAstroPrenoms', 'testDateNaissance', 'testKarmique',
-      'testJalousie', 'testInfidelite', 'testCouche', 'testSecret', 'testDistanceAime', 'testEx', 'testChargeMentale', 'testLangageAmour', 'testAttachement', 'testConfiance', 'testFinCouple', 'testAmourAmitie', 'testCrush',
-    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
-    sidebarQuizzes: [
-      'quizAmoureux', 'quizCoquin', 'quizMarrant', 'quizGenant', 'quizKnowledge',
-      'quizMost', 'quizAdo', 'quizVraiFaux', 'zamours', 'quizTentation', 'quizRencontre',
-    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
-    sidebarJeux: [
-      'jeuxCouple', 'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre',
-    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })).filter(item => item.url),
-    sidebarOther: [
-      'questionsCouple',
-    ].map(k => ({ label: t(`quizzes:${k}.shortTitle`, t(`quizzes:${k}.title`, k)), url: getLocalizedUrl(k, lang) })),
-    sidebarArticles: BLOG_ARTICLES
-      .filter(a => a.internalSlug !== articleMeta.internalSlug && !(a.frOnly && lang !== 'fr'))
-      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
-      .slice(0, 5)
-      .map(a => {
-        const slug = a.slugs[lang] || a.internalSlug;
-        const aPath = path.resolve(__dirname, '../../data/blog', lang, `${a.internalSlug}.ts`);
-        const aFr = path.resolve(__dirname, '../../data/blog/fr', `${a.internalSlug}.ts`);
-        const aData = parseArticleTs(aPath) || parseArticleTs(aFr);
-        return { title: aData?.title || a.internalSlug, url: getArticleUrl(slug, lang) };
-      }),
   };
 
   try {
