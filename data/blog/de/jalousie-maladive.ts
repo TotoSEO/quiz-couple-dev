@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Normale Eifersucht schützt die Beziehung. Krankhafte Eifersucht verschlingt sie, und sie verschlingt zuerst den, der sie empfindet.",
   introduction: `<p>Es beginnt immer mit einer Kleinigkeit. Ein Vorname, der zu oft fällt, ein Lächeln auf einer Party, ein Handy, das mit dem Display nach unten auf dem Tisch liegt, und ein Szenario beginnt sich in deinem Kopf zu drehen. Du weißt, dass dieses Szenario auf nichts beruht. Du weißt es! Aber es dreht sich trotzdem, immer schneller, und schon kontrollierst du, fragst nach, malst dir Dinge aus und bist wütend auf dich, weil du es tust.</p>
 <p>Das Erste, was gesagt werden muss, weil es entlastet: <strong>Eifersüchtig zu sein ist normal. Eifersucht ist ein universelles Gefühl, das es in allen Beziehungen gibt, in denen die beiden einander wichtig sind.</strong> Das Problem ist nicht, sie zu empfinden. Das Problem beginnt, wenn sie die Steuerung übernimmt: wenn sie über deine Abende entscheidet, über deine Fragen, über deine Durchsuchungen, und wenn sie alle leiden lässt, allen voran dich.</p>
-<p>Dieser Artikel zieht die Grenze zwischen beidem, sucht die echten Wurzeln der krankhaften Eifersucht (Hinweis: Sie liegen fast nie beim anderen) und zeigt den Weg hinaus, den es gibt und der funktioniert. Ob die Eifersucht deine ist oder die deines Partners: Wir sprechen zu beiden.</p>`,
+<p>Ziehen wir die Grenze zwischen beidem, suchen wir die echten Wurzeln der krankhaften Eifersucht (Hinweis: Sie liegen fast nie beim anderen) und zeigt den Weg hinaus, den es gibt und der funktioniert. Ob die Eifersucht deine ist oder die deines Partners: Wir sprechen zu beiden.</p>`,
   quickSummary: [
     "Eifersucht ist normal; sie wird krankhaft, wenn sie an deiner Stelle entscheidet und ohne Beweis leiden lässt.",
     "Das zentrale Kriterium: Gesunde Eifersucht reagiert auf Fakten, krankhafte erfindet ihre Szenarien.",
@@ -82,7 +82,7 @@ const article: BlogArticleData = {
         {
           id: 'szenarien-als-szenarien-behandeln',
           title: "Szenarien als Szenarien behandeln",
-          content: `<p>Wenn der Film anläuft, benenne ihn: «das ist mein inneres Kino, keine Information». Dann stelle dir die einzig nützliche Frage: «welche FAKTEN habe ich?» Keine Eindrücke, Fakten. Du wirst feststellen, dass 95 Prozent deiner Filme ohne eine einzige Tatsache im Abspann laufen. Sie zu benennen nimmt ihnen den Status von Wahrheit.</p>`,
+          content: `<p>Wenn der Film anläuft, benenne ihn: «das ist mein inneres Kino, keine Information». Dann stelle dir die einzig nützliche Frage: «welche FAKTEN habe ich?» Keine Eindrücke, Fakten. Du wirst feststellen, dass die meisten deiner Filme ohne eine einzige Tatsache im Abspann laufen. Sie zu benennen nimmt ihnen den Status von Wahrheit.</p>`,
         },
         {
           id: 'das-eigene-leben-staerken',
@@ -93,7 +93,7 @@ const article: BlogArticleData = {
           id: 'darueber-reden-in-der-richtigen-richtung',
           title: "Darüber reden, in der richtigen Richtung",
           content: `<p>Nicht «gib es zu!», sondern «ich mache mir Filme, das ist meine Baustelle, und ich arbeite daran». Dieser Satz verändert alles: Er macht aus deinem Partner statt eines Verdächtigen einen Verbündeten. Eifersucht, die als persönliche Arbeit angenommen wird, bringt einander näher; Eifersucht, die als Ermittlung getarnt ist, zerstört. Und wenn der Grund zu schwer wiegt, ein alter Verrat, eine Angst, die überläuft, beschleunigt eine Therapie enorm: Es ist eine klassische und dankbare Arbeit.</p>
-<p>Ein letztes Wort, um beim eigentlichen Punkt zu enden. Krankhafte Eifersucht gibt sich als Liebesbeweis aus, das ist ihre schönste Lüge. Liebe will das Glück des anderen; krankhafte Eifersucht will seine Überwachung. An dem Tag, an dem du den Unterschied von innen spürst, ist die Arbeit schon halb getan, und von der anderen Hälfte weißt du jetzt, wo sie beginnt.</p>
+<p>Ein letztes Wort, um beim eigentlichen Punkt zu enden. Krankhafte Eifersucht gibt sich als Liebesbeweis aus, das ist ihre schönste Lüge. Liebe will das Glück des anderen, während krankhafte Eifersucht ihn vor allem überwachen will. An dem Tag, an dem du den Unterschied von innen spürst, ist die Arbeit schon halb getan, und von der anderen Hälfte weißt du jetzt, wo sie beginnt.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Wo genau steht deine Eifersucht?</p>
 <p class="blog-cta-texte">Eine Fragenreihe bewertet deine Eifersucht anhand der konkreten Situationen aus diesem Artikel: die Szenarien, die Kontrollen, die Wirkung auf eure Beziehung, und ordnet dich zwischen normaler Eifersucht und der Sorte ein, an der man arbeitet.</p>

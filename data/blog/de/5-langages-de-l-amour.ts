@@ -51,7 +51,7 @@ const article: BlogArticleData = {
         {
           id: 'detektor-2-was-du-gibst',
           title: "Detektor 2: was du spontan gibst",
-          content: `<p>Wir schenken von Haus aus das, was wir gern bekommen würden. Wer ununterbrochen Komplimente macht, spricht «Worte». Wer Wochenenden organisiert, spricht «Zeit». Wer repariert, vorbereitet, regelt, spricht «Hilfsbereitschaft». Schau, was dein Partner dir am meisten gibt: Es ist nicht das, wovon er glaubt, dass du es willst. Es ist SEINE Muttersprache, die er mit dir spricht, und das ist schon eine Erklärung.</p>
+          content: `<p>Wir schenken von Haus aus das, was wir gern bekommen würden. Wer ununterbrochen Komplimente macht, spricht «Worte». Wer Wochenenden organisiert, spricht «Zeit». Wer repariert, vorbereitet, regelt, spricht «Hilfsbereitschaft». Schau, was dein Partner dir am meisten gibt: Es ist nicht das, wovon er glaubt, dass du es willst, sondern SEINE Muttersprache, die er mit dir spricht, und das ist schon eine Erklärung.</p>
 <p>Macht die Übung jetzt für euch beide, im Kopf: deine Top 2, seine Top 2. Wenn ihr keine gemeinsame Sprache habt, hast du vermutlich gerade zehn Jahre Missverständnisse verstanden! Und wenn du ein ruhigeres Maß als die Intuition willst: Der <a href="/de/liebessprache-test-paar/">Test der Sprachen der Liebe</a> erstellt dein vollständiges Profil, Sprache für Sprache, natürlich jeder für sich.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Das häufigste Missverständnis in Paaren</p>
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
       id: 'die-grenzen-des-konzepts',
       title: "Die Grenzen des Konzepts (denn es hat welche)",
       content: `<p>Der Vollständigkeit halber: Die 5 Sprachen sind ein großartiges Werkzeug und keine exakte Wissenschaft. Das Konzept stammt aus der Eheberatung, nicht aus der akademischen Forschung, und neuere Studien relativieren zwei Punkte: Die «Sprachen» sind keine dichten Kategorien (jeder braucht von allen fünf etwas, und die Rangfolge verschiebt sich mit den Lebensphasen), und die Sprache des anderen zu sprechen verbessert Beziehungen, ja, aber nicht mehr, als insgesamt aufmerksam für seine Bedürfnisse zu sein. Anders gesagt: Die Magie liegt nicht in der Typologie, sie liegt in der Aufmerksamkeit.</p>
-<p>Und eine Warnung, die zählt: Die Sprachen der Liebe erklären Missverständnisse zwischen Menschen guten Willens, sie entschuldigen NIE grundlegende Ungleichgewichte. «Hilfsbereitschaft ist nicht meine Sprache» ist kein Grund, nie einen Topf anzufassen! Und wenn du in allen Sprachen gibst, während gegenüber in keiner etwas kommt, ist das kein Übersetzungsproblem mehr. Dann ist es ein Einsatzproblem, und das schaut man sich direkt an.</p>
+<p>Und eine Warnung, die zählt: Die Sprachen der Liebe erklären Missverständnisse zwischen Menschen guten Willens, sie entschuldigen NIE grundlegende Ungleichgewichte. «Hilfsbereitschaft ist nicht meine Sprache» ist kein Grund, nie einen Topf anzufassen! Und wenn du in allen Sprachen gibst, während gegenüber in keiner etwas kommt, ist das kein Übersetzungsproblem mehr, sondern ein Einsatzproblem, und das schaut man sich direkt an.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Entdeckt eure beiden Sprachen, noch heute Abend</p>
 <p class="blog-cta-texte">Der Test erstellt dein vollständiges Profil über die fünf Sprachen, mit deiner dominanten und deinem blinden Fleck. Macht ihn jeder für sich, vergleicht und schenkt euch das nützlichste Gespräch des Monats.</p>

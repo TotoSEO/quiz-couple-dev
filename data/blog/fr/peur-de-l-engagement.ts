@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "La peur de l'engagement n'est presque jamais une peur de l'autre. C'est une peur de ce qu'on croit devoir perdre en s'engageant... et ça change tout au problème.",
   introduction: `<p>« Je ne suis pas prêt. » Trois mots qui peuvent tenir une relation en suspens pendant des années... Pas prêt à officialiser, pas prêt à emménager, pas prêt à se projeter. Et en face, l'autre attend, entre patience et usure, en se demandant la vraie question : c'est moi le problème, ou c'est lui ?</p>
 <p>Réponse courte : ni l'un ni l'autre, la plupart du temps. <strong>La peur de l'engagement n'est presque jamais une peur de l'autre : c'est une peur de ce qu'on croit devoir perdre en s'engageant.</strong> Sa liberté, son identité, ses options... ou une peur plus ancienne encore, celle de reproduire un naufrage qu'on a vu de trop près.</p>
-<p>Cet article s'adresse aux deux personnes du problème : celui ou celle qui bloque, et celui ou celle qui attend. Les vraies causes, les signes qui distinguent la peur du simple désintérêt... et les leviers pour avancer, dans un sens ou dans l'autre. Parce que rester des années dans l'entre-deux, ça, c'est la pire option pour tout le monde.</p>`,
+<p>On va parler aux deux personnes du problème : celui ou celle qui bloque, et celui ou celle qui attend. Les vraies causes, les signes qui distinguent la peur du simple désintérêt... et les leviers pour avancer, dans un sens ou dans l'autre. Parce que rester des années dans l'entre-deux, ça, c'est la pire option pour tout le monde.</p>`,
   quickSummary: [
     "La peur de l'engagement est une peur de perdre (liberté, identité, options)... pas une peur de l'autre.",
     "Ses racines classiques : le naufrage parental, les blessures d'ex, l'attachement évitant, le mythe du choix parfait.",
@@ -35,7 +35,7 @@ const article: BlogArticleData = {
         {
           id: 'les-cicatrices-d-ex',
           title: "Les cicatrices laissées par un ex",
-          content: `<p> Une trahison, une rupture brutale, une relation d'emprise... et le système conclut : plus jamais démuni. L'engagement devient une exposition au tir, et la distance une armure. C'est une peur qui se respecte... et qui se soigne, parce qu'une armure permanente est une prison à retardement.</p>`,
+          content: `<p>Une trahison, une rupture brutale, une relation d'emprise... et le système conclut : plus jamais démuni. L'engagement devient une exposition au tir, et la distance une armure. C'est une peur qui se respecte... et qui se soigne, parce qu'une armure qu'on ne retire jamais finit par enfermer.</p>`,
         },
         {
           id: 'l-attachement-evitant',
@@ -45,7 +45,7 @@ const article: BlogArticleData = {
         {
           id: 'le-mythe-du-choix-parfait',
           title: "Le mythe du choix parfait",
-          content: `<p>Version moderne, nourrie par la culture du match illimité : s'engager, c'est renoncer à toutes les autres options... et si LA bonne personne était la prochaine ? Ce vertige-là n'est pas une peur de l'engagement au sens strict, c'est une incapacité à choisir, entretenue par l'illusion qu'un choix parfait existe. Indice : les gens heureux en couple n'ont pas trouvé le choix parfait. Ils ont arrêté d'en chercher un.</p>
+          content: `<p>Version moderne, nourrie par la culture du match illimité : s'engager, c'est renoncer à toutes les autres options... et si LA bonne personne était la prochaine ? Ce vertige-là n'est pas une peur de l'engagement au sens strict, c'est une incapacité à choisir, entretenue par l'illusion qu'un choix parfait existe. Indice : les gens heureux en couple n'ont pas trouvé le choix parfait, ils ont arrêté d'en chercher un.</p>
 <div><table><thead><tr><th>La cause</th><th>Ce qu'elle fait croire</th><th>Ce qui la desserre</th></tr></thead><tbody>
 <tr><td><strong>Le naufrage vu de près</strong></td><td>S'engager finit toujours mal</td><td>Séparer leur histoire de la vôtre</td></tr>
 <tr><td><strong>Les cicatrices d'ex</strong></td><td>Ça va recommencer pareil</td><td>Nommer ce qui n'a rien à voir cette fois</td></tr>
@@ -82,7 +82,7 @@ const article: BlogArticleData = {
 </div>
 </div>
 <p>Le plus simple, pour trancher, c'est de regarder les rendez-vous. Chez quelqu'un qui a peur, ils ont lieu, même s'il traîne des pieds pour la suite. Chez quelqu'un qui n'a pas envie, ils sautent, et <a href="/blog/il-annule-au-dernier-moment/">l'annulation n'est jamais suivie d'une nouvelle date</a>.</p>
-<p>Et un troisième cas mérite d'être nommé : le « pas prêt » stratégique, qui garde quelqu'un sous la main sans rien donner... Si le refus d'engagement s'accompagne de chaud-froid calculé, de tests, d'un contrôle de ta disponibilité, tu n'es pas face à une peur, tu es face à une gestion de stock. Les <a href="/blog/relation-toxique-signes/">marqueurs d'une relation toxique</a> t'aideront à faire la part des choses.</p>`,
+<p>Et il reste un troisième cas à nommer : le « pas prêt » stratégique, qui garde quelqu'un sous la main sans rien donner... Si le refus d'engagement s'accompagne de chaud-froid calculé, de tests, d'un contrôle de ta disponibilité, tu n'es pas face à une peur, tu es face à une gestion de stock. Les <a href="/blog/relation-toxique-signes/">marqueurs d'une relation toxique</a> t'aideront à faire la part des choses.</p>`,
     },
     {
       id: 'avancer-quand-on-a-peur',
@@ -118,7 +118,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/tester-son-couple/">Faire le point à deux</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; Résultat immédiat</p>
 </div>
-<p>Une dernière chose, pour les deux côtés du problème. L'engagement fait peur parce qu'on le prend pour une perte de liberté... alors que les couples qui durent racontent tous l'inverse : la sécurité du lien est précisément ce qui leur a permis d'oser plus, dehors comme dedans. La liberté n'est pas ce qu'on abandonne en s'engageant. C'est, assez souvent... ce qu'on y gagne. Et le jour où l'emménagement devient une vraie question plutôt qu'une angoisse, vous saurez la poser correctement : les <a href="/blog/questions-avenir-couple/">questions d'avenir à se poser en couple</a> sont exactement faites pour ça.</p>
+<p>Une dernière chose, pour les deux côtés du problème. L'engagement fait peur parce qu'on le prend pour une perte de liberté... alors que les couples qui durent racontent tous l'inverse : la sécurité du lien est précisément ce qui leur a permis d'oser plus, dehors comme dedans. La liberté n'est pas ce qu'on abandonne en s'engageant : assez souvent, c'est même ce qu'on y gagne. Et le jour où l'emménagement devient une vraie question plutôt qu'une angoisse, vous saurez la poser correctement : les <a href="/blog/questions-avenir-couple/">questions d'avenir à se poser en couple</a> sont exactement faites pour ça.</p>
 <a href="/blog/attachement-evitant/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">L'attachement évitant en amour : aimer de loin, fuir de près</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

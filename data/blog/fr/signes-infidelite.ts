@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Téléphone posé face contre table entre deux personnes qui se tournent le dos",
   publishedAt: '2026-12-19T12:18:00+01:00',
   author: AUTHORS['thomas'],
-  excerpt: "Le doute sur une infidélité est une des pires choses à vivre en couple... et paradoxalement, la plupart des listes de « signes » l'aggravent au lieu de l'éclairer.",
+  excerpt: "Le doute sur une infidélité est une des pires choses à vivre en couple... et paradoxalement, les « signes » pris un par un l'aggravent au lieu de l'éclairer.",
   introduction: `<p>Si tu lis cet article, quelque chose t'a mise en alerte. Un changement d'habitudes, un téléphone devenu intouchable, une distance nouvelle... ou juste une intuition, ce truc sourd qui refuse de se taire. Et depuis, tu oscilles entre deux hontes : celle de soupçonner sans preuve, et celle de ne pas vouloir voir...</p>
-<p>Alors posons d'abord un cadre honnête, parce que le sujet le mérite : <strong>aucun signe isolé ne prouve une infidélité. Aucun.</strong> Les listes de « 15 signes qui montrent qu'il te trompe » fabriquent surtout de l'angoisse : chaque signe pris seul a dix explications innocentes... Ce qui compte, c'est le FAISCEAU : plusieurs changements, simultanés, durables, sans explication cohérente.</p>
-<p>Cet article fait le tri en trois temps : les signes qui pèsent vraiment lourd, ceux qu'on cite partout et qui ne prouvent rien... et surtout, quoi FAIRE du doute, parce que c'est lui, le vrai poison. Rester des mois dans l'incertitude abîme plus qu'une réponse, quelle qu'elle soit.</p>`,
+<p>Alors posons d'abord un cadre honnête, parce que le sujet le mérite : <strong>aucun signe isolé ne prouve une infidélité. Aucun.</strong> Pris un par un, les « signes » fabriquent surtout de l'angoisse : chacun a dix explications innocentes... Ce qui compte, c'est le FAISCEAU : plusieurs changements, simultanés, durables, sans explication cohérente.</p>
+<p>Alors faisons le tri en trois temps : les signes qui pèsent vraiment lourd, ceux qu'on cite partout et qui ne prouvent rien... et surtout, quoi FAIRE du doute, parce que c'est lui, le vrai poison. Rester des mois dans l'incertitude abîme plus qu'une réponse, quelle qu'elle soit.</p>`,
   quickSummary: [
     "Aucun signe isolé ne prouve rien : c'est le faisceau de changements simultanés qui parle.",
     "Les signes lourds : le téléphone sanctuarisé, les blocs d'emploi du temps flous, la distance émotionnelle nouvelle.",
@@ -38,13 +38,13 @@ const article: BlogArticleData = {
     },
     {
       id: 'les-faux-signes',
-      title: "Les faux signes que toutes les listes recopient",
-      content: `<p>Maintenant, le tri inverse, parce que ces « signes » cités partout font des dégâts dans des couples parfaitement fidèles...</p>`,
+      title: "Les faux signes les plus répandus",
+      content: `<p>Maintenant, le tri inverse, parce que ces « signes » très répandus font des dégâts dans des couples parfaitement fidèles...</p>`,
       subsections: [
         {
           id: 'le-changement-de-look',
           title: "Le changement de look",
-          content: `<p>Nouveau sport, nouvelle coupe, vêtements soignés... La moitié des listes en font un indice d'adultère ! En réalité, c'est d'abord le signe de quelqu'un qui se réapproprie son image : un cap d'âge, une reprise en main, une envie de plaire... y compris à toi, d'ailleurs. Pris seul : rien.</p>`,
+          content: `<p>Nouveau sport, nouvelle coupe, vêtements soignés... On en fait souvent un indice d'adultère ! En réalité, c'est d'abord le signe de quelqu'un qui se réapproprie son image : un cap d'âge, une reprise en main, une envie de plaire... y compris à toi, d'ailleurs. Pris seul : rien.</p>`,
         },
         {
           id: 'les-heures-sup-et-la-fatigue',
@@ -92,7 +92,7 @@ const article: BlogArticleData = {
           id: 'etape-3-tire-les-consequences-de',
           title: "Étape 3 : tire les conséquences de la réponse",
           content: `<p>Si les explications tiennent : le chantier devient le doute lui-même, ton insécurité, votre communication... et c'est un beau chantier de couple. Si la réponse fuit ou retourne : tu n'as pas encore de preuve, mais tu as une information majeure sur la transparence de ton partenaire... et tu as le droit d'en faire un sujet central. Et si la vérité tombe : douloureux, mais tu récupères enfin le pouvoir de décider, qui t'appartenait de droit.</p>
-<p>Un dernier mot, le plus important peut-être. Quelle que soit l'issue, rappelle-toi ceci : le doute prolongé n'est pas un état de vie acceptable. Tu as le droit à une relation où tu n'as pas besoin d'être détective... Ce droit-là ne dépend pas de ce que ton partenaire a fait ou non. Il fait partie du contrat de base. Et si la réponse que tu obtiens finit par poser la question de la suite, la question de savoir si c'est <a href="/blog/arreter-ou-continuer-relation/">le moment d'arrêter ou de continuer</a> mérite alors d'être regardée en face... avec la même honnêteté.</p>
+<p>Un dernier mot, le plus important peut-être. Quelle que soit l'issue, rappelle-toi ceci : le doute prolongé n'est pas un état de vie acceptable. Tu as le droit à une relation où tu n'as pas besoin d'être détective... Ce droit-là ne dépend pas de ce que ton partenaire a fait ou non. Il fait partie du contrat de base. Et si la réponse que tu obtiens finit par poser la question de la suite, la question de savoir si c'est <a href="/blog/arreter-ou-continuer-relation/">le moment d'arrêter ou de continuer</a> devra alors se regarder en face... avec la même honnêteté.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Objectiver le doute, avant la conversation</p>
 <p class="blog-cta-texte">Une série de questions passe en revue les changements concrets de ta relation, le faisceau réel versus les impressions, et te dit si ton alerte relève de l'inquiétude fondée ou du doute qui s'auto-alimente.</p>

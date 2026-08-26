@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Telefono appoggiato a faccia in giù sul tavolo tra due persone che si voltano le spalle",
   publishedAt: '2026-12-19T12:18:00+01:00',
   author: AUTHORS['thomas'],
-  excerpt: "Il dubbio su un'infedeltà è una delle cose peggiori da vivere in coppia... e paradossalmente, la maggior parte delle liste di «segnali» lo aggrava invece di chiarirlo.",
+  excerpt: "Il dubbio su un'infedeltà è una delle cose peggiori da vivere in coppia... e paradossalmente, i «segnali» presi uno a uno lo aggravano invece di chiarirlo.",
   introduction: `<p>Se stai leggendo questo articolo, qualcosa ti ha messo in allerta. Un cambio di abitudini, un telefono diventato intoccabile, una distanza nuova... o solo un'intuizione, quella cosa sorda che si rifiuta di tacere. E da allora oscilli tra due vergogne: quella di sospettare senza prove e quella di non voler vedere.</p>
-<p>Mettiamo allora prima una cornice onesta, perché l'argomento la merita: <strong>nessun segnale isolato prova un'infedeltà. Nessuno.</strong> Le liste dei «15 segnali che ti tradisce» fabbricano soprattutto angoscia: ogni segnale preso da solo ha dieci spiegazioni innocenti. Quello che conta è l'INSIEME: più cambiamenti, simultanei, duraturi, senza spiegazione coerente.</p>
-<p>Questo articolo fa ordine in tre tempi: i segnali che pesano davvero, quelli citati ovunque che non provano nulla... e soprattutto, cosa FARE del dubbio, perché è lui il vero veleno. Restare mesi nell'incertezza rovina più di una risposta, qualunque essa sia.</p>`,
+<p>Mettiamo allora prima una cornice onesta, perché l'argomento la merita: <strong>nessun segnale isolato prova un'infedeltà. Nessuno.</strong> Presi uno a uno, i «segnali» fabbricano soprattutto angoscia: ognuno ha dieci spiegazioni innocenti. Quello che conta è l'INSIEME: più cambiamenti, simultanei, duraturi, senza spiegazione coerente.</p>
+<p>Facciamo ordine in tre tempi: i segnali che pesano davvero, quelli citati ovunque che non provano nulla... e soprattutto, cosa FARE del dubbio, perché è lui il vero veleno. Restare mesi nell'incertezza rovina più di una risposta, qualunque essa sia.</p>`,
   quickSummary: [
     "Nessun segnale isolato prova nulla: è l'insieme di cambiamenti simultanei che parla.",
     "I segnali pesanti: il telefono diventato cassaforte, i blocchi di agenda vaghi, la distanza emotiva nuova.",
@@ -38,13 +38,13 @@ const article: BlogArticleData = {
     },
     {
       id: 'i-falsi-segnali',
-      title: "I falsi segnali che tutte le liste ricopiano",
-      content: `<p>Adesso la selezione inversa, perché questi «segnali» citati ovunque fanno danni in coppie perfettamente fedeli.</p>`,
+      title: "I falsi segnali più diffusi",
+      content: `<p>Adesso la selezione inversa, perché questi «segnali» diffusissimi fanno danni in coppie perfettamente fedeli.</p>`,
       subsections: [
         {
           id: 'il-cambio-di-look',
           title: "Il cambio di look",
-          content: `<p>Sport nuovo, taglio nuovo, vestiti curati... Metà delle liste ne fanno un indizio di adulterio! In realtà è prima di tutto il segnale di qualcuno che si riappropria della propria immagine: una soglia d'età, una ripresa in mano, una voglia di piacere... anche a te, del resto. Preso da solo: niente.</p>`,
+          content: `<p>Sport nuovo, taglio nuovo, vestiti curati... Spesso se ne fa un indizio di adulterio! In realtà è prima di tutto il segnale di qualcuno che si riappropria della propria immagine: una soglia d'età, una ripresa in mano, una voglia di piacere... anche a te, del resto. Preso da solo: niente.</p>`,
         },
         {
           id: 'gli-straordinari-e-la-stanchezza',
@@ -92,7 +92,7 @@ const article: BlogArticleData = {
           id: 'tappa-3-trai-le-conseguenze',
           title: "Tappa 3: trai le conseguenze della risposta",
           content: `<p>Se le spiegazioni reggono: il cantiere diventa il dubbio stesso, la tua insicurezza, la vostra comunicazione... ed è un bel cantiere di coppia. Se la risposta fugge o ribalta: non hai ancora prove, ma hai un'informazione importante sulla trasparenza del tuo partner... e hai il diritto di farne un tema centrale. E se la verità viene fuori: doloroso, ma recuperi finalmente il potere di decidere, che ti spettava di diritto.</p>
-<p>Un'ultima parola, forse la più importante. Qualunque sia l'esito, ricorda questo: il dubbio prolungato non è uno stato di vita accettabile. Hai diritto a una relazione in cui non ti serve fare la detective. Quel diritto non dipende da ciò che il tuo partner ha fatto o non ha fatto. Fa parte del contratto di base. E se la risposta che ottieni finisce per porre la questione del seguito, la domanda se sia <a href="/it/blog/lasciarsi-o-continuare-coppia/">il momento di lasciarsi o di continuare</a> merita di essere guardata in faccia... con la stessa onestà.</p>
+<p>Un'ultima parola, forse la più importante. Qualunque sia l'esito, ricorda questo: il dubbio prolungato non è uno stato di vita accettabile. Hai diritto a una relazione in cui non ti serve fare la detective. Quel diritto non dipende da ciò che il tuo partner ha fatto o non ha fatto. Fa parte del contratto di base. E se la risposta che ottieni finisce per porre la questione del seguito, la domanda se sia <a href="/it/blog/lasciarsi-o-continuare-coppia/">il momento di lasciarsi o di continuare</a> andrà guardata in faccia... con la stessa onestà.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Oggettivare il dubbio, prima della conversazione</p>
 <p class="blog-cta-texte">Una serie di domande passa in rassegna i cambiamenti concreti della tua relazione, l'insieme reale contro le impressioni, e ti dice se la tua allerta è un'inquietudine fondata o un dubbio che si autoalimenta.</p>

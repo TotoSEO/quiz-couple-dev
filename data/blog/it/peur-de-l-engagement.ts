@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "La paura dell'impegno non è quasi mai paura dell'altro. È la paura di ciò che si crede di dover perdere impegnandosi... e questo cambia tutto il problema.",
   introduction: `<p>«Non sono pronto.» Tre parole che possono tenere una relazione sospesa per anni. Non pronto a ufficializzare, non pronto ad andare a convivere, non pronto a proiettarsi. E dall'altra parte qualcuno aspetta, tra pazienza e logoramento, ponendosi la vera domanda: sono io il problema, o è lui?</p>
 <p>Risposta breve: né l'uno né l'altro, il più delle volte. <strong>La paura dell'impegno non è quasi mai paura dell'altro: è la paura di ciò che si crede di dover perdere impegnandosi.</strong> La propria libertà, la propria identità, le proprie opzioni... o una paura ancora più antica, quella di riprodurre un naufragio visto troppo da vicino.</p>
-<p>Questo articolo si rivolge a entrambe le persone del problema: chi si blocca e chi aspetta. Le cause reali, i segnali che distinguono la paura dal semplice disinteresse... e le leve per andare avanti, in un senso o nell'altro. Perché restare anni nel mezzo è l'opzione peggiore per tutti.</p>`,
+<p>Parliamo a entrambe le persone del problema: chi si blocca e chi aspetta. Le cause reali, i segnali che distinguono la paura dal semplice disinteresse... e le leve per andare avanti, in un senso o nell'altro. Perché restare anni nel mezzo è l'opzione peggiore per tutti.</p>`,
   quickSummary: [
     "La paura dell'impegno è paura di perdere (libertà, identità, opzioni)... non paura dell'altro.",
     "Le sue radici classiche: il naufragio dei genitori, le ferite di un ex, l'attaccamento evitante, il mito della scelta perfetta.",
@@ -35,7 +35,7 @@ const article: BlogArticleData = {
         {
           id: 'le-cicatrici-lasciate-da-un-ex',
           title: "Le cicatrici lasciate da un ex",
-          content: `<p>Un tradimento, una rottura brutale, una relazione di controllo... e il sistema conclude: mai più indifeso. L'impegno diventa un'esposizione al fuoco e la distanza un'armatura. È una paura che si rispetta... e che si cura, perché un'armatura permanente è una prigione a scoppio ritardato.</p>`,
+          content: `<p>Un tradimento, una rottura brutale, una relazione di controllo... e il sistema conclude: mai più indifeso. L'impegno diventa un'esposizione al fuoco e la distanza un'armatura. È una paura che si rispetta... e che si cura, perché un'armatura che non si toglie mai finisce per rinchiudere.</p>`,
         },
         {
           id: 'l-attaccamento-evitante',
@@ -45,7 +45,7 @@ const article: BlogArticleData = {
         {
           id: 'il-mito-della-scelta-perfetta',
           title: "Il mito della scelta perfetta",
-          content: `<p>Versione moderna, alimentata dalla cultura del match illimitato: impegnarsi significa rinunciare a tutte le altre opzioni... e se LA persona giusta fosse la prossima? Quella vertigine non è paura dell'impegno in senso stretto, è un'incapacità di scegliere, tenuta in vita dall'illusione che una scelta perfetta esista. Indizio: le persone felici in coppia non hanno trovato la scelta perfetta. Hanno smesso di cercarne una.</p>
+          content: `<p>Versione moderna, alimentata dalla cultura del match illimitato: impegnarsi significa rinunciare a tutte le altre opzioni... e se LA persona giusta fosse la prossima? Quella vertigine non è paura dell'impegno in senso stretto, è un'incapacità di scegliere, tenuta in vita dall'illusione che una scelta perfetta esista. Indizio: le persone felici in coppia non hanno trovato la scelta perfetta, hanno smesso di cercarne una.</p>
 <div><table><thead><tr><th>La causa</th><th>Cosa fa credere</th><th>Cosa la allenta</th></tr></thead><tbody>
 <tr><td><strong>Il naufragio visto da vicino</strong></td><td>Impegnarsi finisce sempre male</td><td>Separare la loro storia dalla vostra</td></tr>
 <tr><td><strong>Le cicatrici di un ex</strong></td><td>Ricomincerà esattamente uguale</td><td>Nominare ciò che stavolta non c'entra nulla</td></tr>
@@ -82,7 +82,7 @@ const article: BlogArticleData = {
 </div>
 </div>
 <p>Il modo più semplice per capirlo è guardare gli appuntamenti. Con chi ha paura, si fanno, anche se poi tira per le lunghe sul resto. Con chi non ne ha voglia, saltano, e <a href="/it/blog/annulla-all-ultimo-momento/">alla disdetta non segue mai una nuova data</a>.</p>
-<p>E un terzo caso merita di essere nominato: il «non sono pronto» strategico, che tiene qualcuno a portata di mano senza dare nulla. Se il rifiuto di impegnarsi si accompagna a un caldo e freddo calcolato, a test, a un controllo della tua disponibilità, non hai davanti una paura, hai davanti una gestione di magazzino. I <a href="/it/blog/segnali-relazione-tossica/">marcatori di una relazione tossica</a> ti aiuteranno a fare chiarezza.</p>`,
+<p>E resta un terzo caso da nominare: il «non sono pronto» strategico, che tiene qualcuno a portata di mano senza dare nulla. Se il rifiuto di impegnarsi si accompagna a un caldo e freddo calcolato, a test, a un controllo della tua disponibilità, non hai davanti una paura, hai davanti una gestione di magazzino. I <a href="/it/blog/segnali-relazione-tossica/">marcatori di una relazione tossica</a> ti aiuteranno a fare chiarezza.</p>`,
     },
     {
       id: 'andare-avanti-quando-la-paura-e-tua',
@@ -118,7 +118,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/it/test-compatibilita-coppia/">Fare il punto in due</a>
 <p class="blog-cta-note">Gratuito &middot; Senza registrazione &middot; Risultato immediato</p>
 </div>
-<p>Un'ultima cosa, per entrambi i lati del problema. L'impegno fa paura perché lo si prende per una perdita di libertà... mentre le coppie che durano raccontano tutte il contrario: la sicurezza del legame è precisamente ciò che ha permesso loro di osare di più, fuori come dentro. La libertà non è ciò a cui si rinuncia impegnandosi. È, abbastanza spesso... ciò che ci si guadagna. E il giorno in cui andare a convivere diventerà una vera domanda invece che un'angoscia, saprete porvela come si deve: le <a href="/it/blog/domande-sul-futuro-di-coppia/">domande sul futuro da farsi in coppia</a> sono fatte esattamente per questo.</p>
+<p>Un'ultima cosa, per entrambi i lati del problema. L'impegno fa paura perché lo si prende per una perdita di libertà... mentre le coppie che durano raccontano tutte il contrario: la sicurezza del legame è precisamente ciò che ha permesso loro di osare di più, fuori come dentro. La libertà non è ciò a cui si rinuncia impegnandosi: abbastanza spesso, è ciò che ci si guadagna. E il giorno in cui andare a convivere diventerà una vera domanda invece che un'angoscia, saprete porvela come si deve: le <a href="/it/blog/domande-sul-futuro-di-coppia/">domande sul futuro da farsi in coppia</a> sono fatte esattamente per questo.</p>
 <a href="/it/blog/attaccamento-evitante-in-amore/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leggi anche</span><span class="blog-read-also-title">L'attaccamento evitante in amore: amare da lontano, fuggire da vicino</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

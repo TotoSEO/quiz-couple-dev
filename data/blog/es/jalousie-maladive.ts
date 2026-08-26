@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Los celos normales protegen a la pareja. Los celos patológicos la devoran... y devoran primero a quien los siente.",
   introduction: `<p>Siempre empieza por una cosa pequeña. Un nombre que vuelve demasiado a menudo, una sonrisa en una fiesta, un móvil dejado boca abajo sobre la mesa... y un escenario que empieza a girar en tu cabeza. Sabes que no se apoya en nada, ese escenario. ¡Lo sabes! Pero gira igualmente, cada vez más rápido, y ahí estás revisando, preguntando, imaginando... y odiándote por hacerlo.</p>
 <p>Lo primero que hay que decir, porque alivia: <strong>tener celos es normal. Los celos son una emoción universal, presente en todas las parejas en las que ambos importan al otro.</strong> El problema no es sentirlos. El problema es cuando toman los mandos: cuando deciden tus noches, tus preguntas, tus registros... y hacen sufrir a todo el mundo, empezando por ti.</p>
-<p>Este artículo traza la frontera entre ambos, va a buscar las raíces reales de los celos patológicos (pista: casi nunca están en el otro)... y da el camino de salida, que existe y que funciona. Que los celos sean los tuyos o los de tu pareja, por cierto: hablamos a los dos.</p>`,
+<p>Vamos a trazar la frontera entre ambos, buscar las raíces reales de los celos patológicos (pista: casi nunca están en el otro)... y da el camino de salida, que existe y que funciona. Que los celos sean los tuyos o los de tu pareja, por cierto: hablamos a los dos.</p>`,
   quickSummary: [
     "Los celos son normales; se vuelven patológicos cuando deciden por ti y hacen sufrir sin pruebas.",
     "El criterio central: los celos sanos reaccionan a hechos, los patológicos fabrican sus escenarios.",
@@ -82,7 +82,7 @@ const article: BlogArticleData = {
         {
           id: 'tratar-los-escenarios-como-escenarios',
           title: "Tratar los escenarios como escenarios",
-          content: `<p>Cuando arranca la película, nómbrala: «esto es mi cine interior, no una información». Luego hazte la única pregunta útil: «¿qué HECHOS tengo?». No impresiones, hechos. Descubrirás que el 95 % de tus películas giran sin un solo hecho en los créditos. Nombrarlas es quitarles el estatus de verdad.</p>`,
+          content: `<p>Cuando arranca la película, nómbrala: «esto es mi cine interior, no una información». Luego hazte la única pregunta útil: «¿qué HECHOS tengo?». No impresiones, hechos. Descubrirás que el la mayoría de tus películas giran sin un solo hecho en los créditos. Nombrarlas es quitarles el estatus de verdad.</p>`,
         },
         {
           id: 'reforzar-tu-propia-vida',
@@ -93,7 +93,7 @@ const article: BlogArticleData = {
           id: 'hablarlo-en-el-buen-sentido',
           title: "Hablarlo, en el buen sentido",
           content: `<p>No «¡confiesa!»... sino «me monto películas, es mi trabajo pendiente y estoy en ello». Esa frase lo cambia todo: convierte a tu pareja de sospechoso en aliado. Los celos asumidos como un trabajo personal acercan; los celos disfrazados de investigación destruyen. Y si el fondo pesa demasiado, una traición antigua, una angustia que desborda, un psicólogo acelera enormemente... es un trabajo clásico y agradecido de las terapias.</p>
-<p>Una última palabra, para terminar en lo que de verdad está en juego. Los celos patológicos se presentan como una prueba de amor... esa es su mentira más bonita. El amor quiere la felicidad del otro; los celos patológicos quieren su vigilancia. El día en que notas la diferencia desde dentro, el trabajo ya está medio hecho... y de la otra mitad ya sabes por dónde empieza.</p>
+<p>Una última palabra, para terminar en lo que de verdad está en juego. Los celos patológicos se presentan como una prueba de amor... esa es su mentira más bonita. El amor quiere la felicidad del otro, mientras que los celos patológicos quieren sobre todo vigilarlo. El día en que notas la diferencia desde dentro, el trabajo ya está medio hecho... y de la otra mitad ya sabes por dónde empieza.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Tus celos, ¿en qué punto están exactamente?</p>
 <p class="blog-cta-texte">Una serie de preguntas evalúa tus celos en las situaciones concretas de este artículo: los escenarios, las comprobaciones, el efecto en tu pareja... y te sitúa entre los celos normales y los que hay que trabajar.</p>

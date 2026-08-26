@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Bindungsangst ist fast nie Angst vor der anderen Person. Sie ist die Angst vor dem, was man durch Bindung zu verlieren glaubt, und das verändert das ganze Problem.",
   introduction: `<p>«Ich bin nicht bereit.» Drei Worte, die eine Beziehung jahrelang in der Schwebe halten können. Nicht bereit, es offiziell zu machen, nicht bereit zusammenzuziehen, nicht bereit, sich eine Zukunft vorzustellen. Und gegenüber wartet jemand, zwischen Geduld und Erschöpfung, und stellt sich die eigentliche Frage: Liegt es an mir oder an ihm?</p>
 <p>Kurze Antwort: meistens an keinem von beiden. <strong>Bindungsangst ist fast nie Angst vor der anderen Person: Sie ist die Angst vor dem, was man durch Bindung zu verlieren glaubt.</strong> Die eigene Freiheit, die eigene Identität, die eigenen Möglichkeiten, oder eine noch ältere Angst, die Angst, einen Schiffbruch zu wiederholen, den man aus zu großer Nähe gesehen hat.</p>
-<p>Dieser Artikel richtet sich an beide Personen des Problems: an die, die blockiert, und an die, die wartet. Die echten Ursachen, die Anzeichen, die Angst von schlichtem Desinteresse unterscheiden, und die Hebel, um weiterzukommen, in die eine oder die andere Richtung. Denn jahrelang im Dazwischen zu bleiben ist für alle die schlechteste Option.</p>`,
+<p>Reden wir mit beiden Personen des Problems: an die, die blockiert, und an die, die wartet. Die echten Ursachen, die Anzeichen, die Angst von schlichtem Desinteresse unterscheiden, und die Hebel, um weiterzukommen, in die eine oder die andere Richtung. Denn jahrelang im Dazwischen zu bleiben ist für alle die schlechteste Option.</p>`,
   quickSummary: [
     "Bindungsangst ist die Angst zu verlieren (Freiheit, Identität, Möglichkeiten), nicht die Angst vor der anderen Person.",
     "Ihre klassischen Wurzeln: der elterliche Schiffbruch, Verletzungen durch eine Ex, vermeidende Bindung, der Mythos der perfekten Wahl.",
@@ -35,7 +35,7 @@ const article: BlogArticleData = {
         {
           id: 'die-narben-einer-ex-beziehung',
           title: "Die Narben aus einer Ex-Beziehung",
-          content: `<p>Ein Verrat, eine brutale Trennung, eine Beziehung unter Kontrolle, und das System zieht seinen Schluss: nie wieder schutzlos. Bindung wird zum Aufenthalt im Schussfeld, Distanz zur Rüstung. Diese Angst verdient Respekt, und sie verdient Behandlung, denn eine dauerhafte Rüstung ist ein Gefängnis mit Zeitzünder.</p>`,
+          content: `<p>Ein Verrat, eine brutale Trennung, eine Beziehung unter Kontrolle, und das System zieht seinen Schluss: nie wieder schutzlos. Bindung wird zum Aufenthalt im Schussfeld, Distanz zur Rüstung. Diese Angst verdient Respekt, und sie verdient Behandlung, denn eine Rüstung, die man nie ablegt, sperrt einen am Ende ein.</p>`,
         },
         {
           id: 'die-vermeidende-bindung',
@@ -45,7 +45,7 @@ const article: BlogArticleData = {
         {
           id: 'der-mythos-der-perfekten-wahl',
           title: "Der Mythos der perfekten Wahl",
-          content: `<p>Die moderne Variante, genährt von der Kultur des unbegrenzten Matches: Sich zu binden heißt, auf alle anderen Optionen zu verzichten, und was, wenn DIE richtige Person die nächste wäre? Dieser Schwindel ist im engeren Sinn keine Bindungsangst, sondern eine Unfähigkeit zu wählen, aufrechterhalten von der Illusion, es gebe eine perfekte Wahl. Ein Hinweis: Glückliche Paare haben nicht die perfekte Wahl gefunden. Sie haben aufgehört, danach zu suchen.</p>
+          content: `<p>Die moderne Variante, genährt von der Kultur des unbegrenzten Matches: Sich zu binden heißt, auf alle anderen Optionen zu verzichten, und was, wenn DIE richtige Person die nächste wäre? Dieser Schwindel ist im engeren Sinn keine Bindungsangst, sondern eine Unfähigkeit zu wählen, aufrechterhalten von der Illusion, es gebe eine perfekte Wahl. Ein Hinweis: Glückliche Paare haben nicht die perfekte Wahl gefunden, sie haben aufgehört, danach zu suchen.</p>
 <div><table><thead><tr><th>Die Ursache</th><th>Was sie glauben lässt</th><th>Was sie lockert</th></tr></thead><tbody>
 <tr><td><strong>Der Schiffbruch aus der Nähe</strong></td><td>Bindung endet immer schlecht</td><td>Ihre Geschichte von eurer trennen</td></tr>
 <tr><td><strong>Die Narben einer Ex-Beziehung</strong></td><td>Es fängt genauso wieder an</td><td>Benennen, was diesmal völlig anders ist</td></tr>
@@ -82,7 +82,7 @@ const article: BlogArticleData = {
 </div>
 </div>
 <p>Am einfachsten klärst du das über die Verabredungen selbst. Bei jemandem, der Angst hat, finden sie statt, auch wenn er beim Rest zögert. Bei jemandem, der keine Lust hat, platzen sie, und <a href="/de/blog/er-sagt-in-letzter-minute-ab/">auf die Absage folgt nie ein neuer Termin</a>.</p>
-<p>Und ein dritter Fall verdient einen Namen: das strategische «nicht bereit», das jemanden in Reichweite hält, ohne etwas zu geben. Wenn die Bindungsverweigerung mit berechnetem Wechselbad einhergeht, mit Tests, mit Kontrolle über deine Verfügbarkeit, hast du es nicht mit einer Angst zu tun, sondern mit Bestandsverwaltung. Die <a href="/de/blog/toxische-beziehung-anzeichen/">Marker einer toxischen Beziehung</a> helfen dir beim Sortieren.</p>`,
+<p>Und es bleibt ein dritter Fall zu benennen: das strategische «nicht bereit», das jemanden in Reichweite hält, ohne etwas zu geben. Wenn die Bindungsverweigerung mit berechnetem Wechselbad einhergeht, mit Tests, mit Kontrolle über deine Verfügbarkeit, hast du es nicht mit einer Angst zu tun, sondern mit Bestandsverwaltung. Die <a href="/de/blog/toxische-beziehung-anzeichen/">Marker einer toxischen Beziehung</a> helfen dir beim Sortieren.</p>`,
     },
     {
       id: 'weiterkommen-wenn-die-angst-deine-ist',
@@ -118,7 +118,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/de/paar-kompatibilitaetstest/">Zu zweit Bilanz ziehen</a>
 <p class="blog-cta-note">Kostenlos &middot; Ohne Anmeldung &middot; Sofortiges Ergebnis</p>
 </div>
-<p>Eine letzte Sache, für beide Seiten des Problems. Bindung macht Angst, weil man sie für einen Verlust an Freiheit hält, während alle Paare, die halten, das Gegenteil erzählen: Die Sicherheit der Bindung war genau das, was ihnen erlaubt hat, mehr zu wagen, draußen wie drinnen. Freiheit ist nicht das, was man mit der Bindung aufgibt. Sie ist ziemlich oft das, was man dabei gewinnt. Und an dem Tag, an dem Zusammenziehen eine echte Frage wird statt einer Angst, werdet ihr sie richtig stellen können: Die <a href="/de/blog/zukunftsfragen-fuer-paare/">Zukunftsfragen für Paare</a> sind genau dafür gemacht.</p>
+<p>Eine letzte Sache, für beide Seiten des Problems. Bindung macht Angst, weil man sie für einen Verlust an Freiheit hält, während alle Paare, die halten, das Gegenteil erzählen: Die Sicherheit der Bindung war genau das, was ihnen erlaubt hat, mehr zu wagen, draußen wie drinnen. Freiheit ist nicht das, was man mit der Bindung aufgibt: Ziemlich oft ist sie das, was man dabei gewinnt. Und an dem Tag, an dem Zusammenziehen eine echte Frage wird statt einer Angst, werdet ihr sie richtig stellen können: Die <a href="/de/blog/zukunftsfragen-fuer-paare/">Zukunftsfragen für Paare</a> sind genau dafür gemacht.</p>
 <a href="/de/blog/vermeidende-bindung-in-der-liebe/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Auch lesen</span><span class="blog-read-also-title">Vermeidende Bindung in der Liebe: von weitem lieben, aus der Nähe fliehen</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

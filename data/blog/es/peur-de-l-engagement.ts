@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "El miedo al compromiso casi nunca es miedo a la otra persona. Es miedo a lo que uno cree que va a perder comprometiéndose... y eso cambia todo el problema.",
   introduction: `<p>«No estoy preparado.» Tres palabras que pueden mantener una relación en suspenso durante años. No preparado para oficializar, no preparado para irse a vivir juntos, no preparado para proyectarse. Y enfrente alguien espera, entre la paciencia y el desgaste, haciéndose la pregunta de verdad: ¿el problema soy yo, o es él?</p>
 <p>Respuesta corta: ninguno de los dos, la mayoría de las veces. <strong>El miedo al compromiso casi nunca es miedo a la otra persona: es miedo a lo que uno cree que va a perder comprometiéndose.</strong> Su libertad, su identidad, sus opciones... o un miedo aún más antiguo, el de repetir un naufragio que se vio demasiado de cerca.</p>
-<p>Este artículo se dirige a las dos personas del problema: quien se bloquea y quien espera. Las causas reales, las señales que distinguen el miedo del simple desinterés... y las palancas para avanzar, en un sentido o en otro. Porque quedarse años en el entremedio es la peor opción para todo el mundo.</p>`,
+<p>Vamos a hablarles a las dos personas del problema: quien se bloquea y quien espera. Las causas reales, las señales que distinguen el miedo del simple desinterés... y las palancas para avanzar, en un sentido o en otro. Porque quedarse años en el entremedio es la peor opción para todo el mundo.</p>`,
   quickSummary: [
     "El miedo al compromiso es miedo a perder (libertad, identidad, opciones)... no miedo a la otra persona.",
     "Sus raíces clásicas: el naufragio parental, las heridas de un ex, el apego evitativo, el mito de la elección perfecta.",
@@ -35,7 +35,7 @@ const article: BlogArticleData = {
         {
           id: 'las-cicatrices-de-un-ex',
           title: "Las cicatrices que dejó un ex",
-          content: `<p>Una traición, una ruptura brutal, una relación de control... y el sistema concluye: nunca más indefenso. El compromiso se convierte en una exposición al fuego y la distancia en una armadura. Es un miedo que se respeta... y que se cura, porque una armadura permanente es una prisión con temporizador.</p>`,
+          content: `<p>Una traición, una ruptura brutal, una relación de control... y el sistema concluye: nunca más indefenso. El compromiso se convierte en una exposición al fuego y la distancia en una armadura. Es un miedo que se respeta... y que se cura, porque una armadura que no se quita nunca acaba encerrando.</p>`,
         },
         {
           id: 'el-apego-evitativo',
@@ -45,7 +45,7 @@ const article: BlogArticleData = {
         {
           id: 'el-mito-de-la-eleccion-perfecta',
           title: "El mito de la elección perfecta",
-          content: `<p>Versión moderna, alimentada por la cultura del match ilimitado: comprometerse es renunciar a todas las demás opciones... ¿y si LA persona adecuada fuera la siguiente? Ese vértigo no es miedo al compromiso en sentido estricto, es una incapacidad de elegir, mantenida viva por la ilusión de que existe una elección perfecta. Pista: la gente feliz en pareja no encontró la elección perfecta. Dejó de buscarla.</p>
+          content: `<p>Versión moderna, alimentada por la cultura del match ilimitado: comprometerse es renunciar a todas las demás opciones... ¿y si LA persona adecuada fuera la siguiente? Ese vértigo no es miedo al compromiso en sentido estricto, es una incapacidad de elegir, mantenida viva por la ilusión de que existe una elección perfecta. Pista: la gente feliz en pareja no encontró la elección perfecta, dejó de buscarla.</p>
 <div><table><thead><tr><th>La causa</th><th>Lo que hace creer</th><th>Lo que la afloja</th></tr></thead><tbody>
 <tr><td><strong>El naufragio visto de cerca</strong></td><td>Comprometerse siempre acaba mal</td><td>Separar su historia de la vuestra</td></tr>
 <tr><td><strong>Las cicatrices de un ex</strong></td><td>Va a repetirse exactamente igual</td><td>Nombrar lo que no tiene nada que ver esta vez</td></tr>
@@ -82,7 +82,7 @@ const article: BlogArticleData = {
 </div>
 </div>
 <p>Lo más simple, para decidirlo, es mirar las citas. Con alguien que tiene miedo, ocurren, aunque arrastre los pies con lo que viene después. Con alguien que no tiene ganas, se caen, y <a href="/es/blog/cancela-en-el-ultimo-momento/">la cancelación nunca va seguida de una nueva fecha</a>.</p>
-<p>Y un tercer caso merece nombrarse: el «no estoy preparado» estratégico, que mantiene a alguien a mano sin dar nada. Si la negativa a comprometerse viene con frío y calor calculado, con pruebas, con un control de tu disponibilidad, no estás ante un miedo, estás ante una gestión de existencias. Los <a href="/es/blog/senales-relacion-toxica/">marcadores de una relación tóxica</a> te ayudarán a distinguir.</p>`,
+<p>Y queda un tercer caso por nombrar: el «no estoy preparado» estratégico, que mantiene a alguien a mano sin dar nada. Si la negativa a comprometerse viene con frío y calor calculado, con pruebas, con un control de tu disponibilidad, no estás ante un miedo, estás ante una gestión de existencias. Los <a href="/es/blog/senales-relacion-toxica/">marcadores de una relación tóxica</a> te ayudarán a distinguir.</p>`,
     },
     {
       id: 'avanzar-cuando-el-miedo-es-tuyo',
@@ -118,7 +118,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/es/test-compatibilidad-pareja/">Hacer balance en pareja</a>
 <p class="blog-cta-note">Gratis &middot; Sin registro &middot; Resultado inmediato</p>
 </div>
-<p>Una última cosa, para los dos lados del problema. El compromiso da miedo porque se toma por una pérdida de libertad... mientras que las parejas que duran cuentan todas lo contrario: la seguridad del vínculo es precisamente lo que les permitió atreverse a más, fuera y dentro. La libertad no es lo que se abandona al comprometerse. Es, bastante a menudo... lo que se gana. Y el día en que irse a vivir juntos sea una pregunta real en vez de una angustia, sabréis planteárosla bien: las <a href="/es/blog/preguntas-sobre-el-futuro-pareja/">preguntas de futuro que hacerse en pareja</a> están hechas exactamente para eso.</p>
+<p>Una última cosa, para los dos lados del problema. El compromiso da miedo porque se toma por una pérdida de libertad... mientras que las parejas que duran cuentan todas lo contrario: la seguridad del vínculo es precisamente lo que les permitió atreverse a más, fuera y dentro. La libertad no es lo que se abandona al comprometerse: bastante a menudo, es lo que se gana. Y el día en que irse a vivir juntos sea una pregunta real en vez de una angustia, sabréis planteárosla bien: las <a href="/es/blog/preguntas-sobre-el-futuro-pareja/">preguntas de futuro que hacerse en pareja</a> están hechas exactamente para eso.</p>
 <a href="/es/blog/apego-evitativo-en-el-amor/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leer también</span><span class="blog-read-also-title">El apego evitativo en el amor: querer de lejos, huir de cerca</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

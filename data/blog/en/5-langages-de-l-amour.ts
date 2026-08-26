@@ -51,7 +51,7 @@ const article: BlogArticleData = {
         {
           id: 'detector-2-what-you-give',
           title: "Detector 2: what you give spontaneously",
-          content: `<p>By default we offer what we would like to receive. The one who compliments non-stop speaks «words». The one who organises weekends speaks «time». The one who repairs, prepares, handles things speaks «service». Look at what your partner gives you most: it isn't what they think you want. It is THEIR mother tongue they are speaking to you... and that is already a declaration.</p>
+          content: `<p>By default we offer what we would like to receive. The one who compliments non-stop speaks «words». The one who organises weekends speaks «time». The one who repairs, prepares, handles things speaks «service». Look at what your partner gives you most: it isn't what they think you want, it is THEIR mother tongue they are speaking to you... and that is already a declaration.</p>
 <p>Do the exercise for the two of you, right now, in your head: your top 2, their top 2. If you have no language in common, you have probably just understood ten years of misunderstandings! And if you want a calmer measure than intuition, the <a href="/en/love-language-test-couple/">love languages test</a> maps your full profile, language by language... to be taken separately, obviously.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 The most frequent misunderstanding in couples</p>
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
       id: 'the-limits-of-the-concept',
       title: "The limits of the concept (because it has them)",
       content: `<p>Let's be complete: the 5 languages are a wonderful tool... and not an exact science. The concept comes from marriage counselling, not academic research, and recent studies qualify two points: the «languages» aren't watertight categories (everyone needs a bit of all five, and the hierarchy shifts with life stages)... and speaking the other's language does improve relationships, yes, but no more than being broadly attentive to their needs. In other words: the magic isn't in the typology, it is in the attention.</p>
-<p>And one warning that matters: love languages explain misunderstandings between people of good faith... they NEVER excuse a fundamental imbalance. «Service isn't my language» is not a reason to never touch a saucepan! And if you give in every language while nothing comes back in any of them, this isn't a translation problem any more. It is an investment problem, and it has to be looked at head on.</p>
+<p>And one warning that matters: love languages explain misunderstandings between people of good faith... they NEVER excuse a fundamental imbalance. «Service isn't my language» is not a reason to never touch a saucepan! And if you give in every language while nothing comes back in any of them, this isn't a translation problem any more, it is an investment problem, and it has to be looked at head on.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Discover both your languages, tonight</p>
 <p class="blog-cta-texte">The test maps your full profile across the five languages, with your dominant one and your blind spot. Take it separately, compare... and give yourselves the most useful conversation of the month.</p>

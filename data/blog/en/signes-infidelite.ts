@@ -10,10 +10,10 @@ const article: BlogArticleData = {
   featuredImageAlt: "Phone lying face down on a table between two people turning their backs on each other",
   publishedAt: '2026-12-19T12:18:00+01:00',
   author: AUTHORS['thomas'],
-  excerpt: "Doubt about infidelity is one of the worst things to live through in a relationship... and paradoxically, most lists of «signs» make it worse instead of clearer.",
+  excerpt: "Doubt about infidelity is one of the worst things to live through in a relationship... and paradoxically, «signs» taken one by one make it worse instead of clearer.",
   introduction: `<p>If you are reading this article, something has put you on alert. A change in habits, a phone that has become untouchable, a new distance... or just an intuition, that dull thing that refuses to shut up. And ever since, you have been swinging between two kinds of shame: suspecting without proof, and not wanting to see.</p>
-<p>So let's set an honest frame first, because the subject deserves it: <strong>no isolated sign proves an infidelity. None.</strong> Lists of «15 signs he is cheating on you» mostly manufacture anxiety: every sign taken alone has ten innocent explanations. What counts is the CLUSTER: several changes, simultaneous, lasting, with no coherent explanation.</p>
-<p>This article sorts it out in three stages: the signs that genuinely weigh, the ones quoted everywhere that prove nothing... and above all, what to DO with the doubt, because that is the real poison. Spending months in uncertainty damages you more than an answer does, whatever the answer is.</p>`,
+<p>So let's set an honest frame first, because the subject deserves it: <strong>no isolated sign proves an infidelity. None.</strong> Taken one by one, «signs» mostly manufacture anxiety: each one has ten innocent explanations. What counts is the CLUSTER: several changes, simultaneous, lasting, with no coherent explanation.</p>
+<p>Let's sort it out in three stages: the signs that genuinely weigh, the ones quoted everywhere that prove nothing... and above all, what to DO with the doubt, because that is the real poison. Spending months in uncertainty damages you more than an answer does, whatever the answer is.</p>`,
   quickSummary: [
     "No isolated sign proves anything: it is the cluster of simultaneous changes that speaks.",
     "The heavy signs: the phone turned into a vault, the vague blocks in the schedule, new emotional distance.",
@@ -38,13 +38,13 @@ const article: BlogArticleData = {
     },
     {
       id: 'the-false-signs',
-      title: "The false signs every list copies out",
-      content: `<p>Now the reverse sorting, because these «signs» quoted everywhere do damage in perfectly faithful couples.</p>`,
+      title: "The most widespread false signs",
+      content: `<p>Now the reverse sorting, because these widespread «signs» do damage in perfectly faithful couples.</p>`,
       subsections: [
         {
           id: 'the-change-of-look',
           title: "The change of look",
-          content: `<p>New sport, new haircut, well-chosen clothes... Half the lists make it a clue of adultery! In reality it is first of all the sign of someone reclaiming their own image: an age milestone, taking themselves back in hand, a wish to appeal... including to you, by the way. Taken alone: nothing.</p>`,
+          content: `<p>New sport, new haircut, well-chosen clothes... It often gets read as a clue of adultery! In reality it is first of all the sign of someone reclaiming their own image: an age milestone, taking themselves back in hand, a wish to appeal... including to you, by the way. Taken alone: nothing.</p>`,
         },
         {
           id: 'overtime-and-tiredness',
@@ -92,7 +92,7 @@ const article: BlogArticleData = {
           id: 'step-3-draw-the-consequences',
           title: "Step 3: draw the consequences of the answer",
           content: `<p>If the explanations hold: the work site becomes the doubt itself, your insecurity, your communication... and that is a fine piece of couple work. If the answer dodges or reverses: you still have no proof, but you have major information about your partner's transparency... and you have every right to make it a central subject. And if the truth comes out: painful, but you finally get back the power to decide, which was rightfully yours.</p>
-<p>One last word, perhaps the most important. Whatever the outcome, remember this: prolonged doubt is not an acceptable way to live. You are entitled to a relationship where you don't need to be a detective. That entitlement doesn't depend on what your partner did or didn't do. It is part of the basic contract. And if the answer you get ends up raising the question of what comes next, whether it is <a href="/en/blog/stay-or-leave-relationship-signs/">time to stay or to leave</a> deserves to be looked at head on... with the same honesty.</p>
+<p>One last word, perhaps the most important. Whatever the outcome, remember this: prolonged doubt is not an acceptable way to live. You are entitled to a relationship where you don't need to be a detective. That entitlement doesn't depend on what your partner did or didn't do. It is part of the basic contract. And if the answer you get ends up raising the question of what comes next, whether it is <a href="/en/blog/stay-or-leave-relationship-signs/">time to stay or to leave</a> has to be looked at head on... with the same honesty.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Put the doubt into perspective, before the conversation</p>
 <p class="blog-cta-texte">A series of questions reviews the concrete changes in your relationship, the real cluster versus the impressions, and tells you whether your alert comes from a grounded worry or from doubt feeding on itself.</p>
