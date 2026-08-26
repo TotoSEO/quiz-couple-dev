@@ -162,6 +162,14 @@
   <script src="/js/obl.js" defer></script>
   <script src="/js/scroll-reveal.js" defer></script>
   <script src="/js/quiz-extras.js" defer></script>
+  <%# Le compteur de lectures a besoin de window.QCAudience, donc il doit
+      partir APRES audience.js. Les scripts differes s'executent dans l'ordre
+      du document : place dans le corps de l'article, celui-ci passait avant
+      et ne trouvait pas la mesure d'audience. Sur la page de listing, il ne
+      trouve pas de compteur et ne fait rien. %>
+  <% if (routeKey === 'blog') { %>
+  <script src="/js/blog-lectures.js" defer></script>
+  <% } %>
 
   <!-- GA (deferred) -->
   <script>

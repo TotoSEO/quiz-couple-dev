@@ -344,47 +344,49 @@
               <p class="stats-tete-sub" id="blog-lectures-sub">sur la période</p>
             </div>
             <div class="stats-tete trafic-kpi--vues">
-              <p class="stats-tete-titre"><span aria-hidden="true">📄</span> Pages vues</p>
-              <p class="stats-tete-jour" id="blog-vues-total">-</p>
-              <p class="stats-tete-sub">rechargements compris</p>
+              <p class="stats-tete-titre"><span aria-hidden="true">👀</span> Ouvertures</p>
+              <p class="stats-tete-jour" id="blog-ouvertures-total">-</p>
+              <p class="stats-tete-sub">visites qui ont affiché un article</p>
             </div>
             <div class="stats-tete trafic-kpi--profondeur">
-              <p class="stats-tete-titre"><span aria-hidden="true">🗂️</span> Articles lus</p>
-              <p class="stats-tete-jour" id="blog-articles-total">-</p>
-              <p class="stats-tete-sub">au moins une lecture</p>
+              <p class="stats-tete-titre"><span aria-hidden="true">📈</span> Taux de lecture</p>
+              <p class="stats-tete-jour" id="blog-taux-total">-</p>
+              <p class="stats-tete-sub">des ouvertures vont jusqu'à la lecture</p>
             </div>
             <div class="stats-tete trafic-kpi--rebond">
               <p class="stats-tete-titre"><span aria-hidden="true">🔎</span> Arrivées directes</p>
               <p class="stats-tete-jour" id="blog-entrees-total">-</p>
-              <p class="stats-tete-sub">des lectures viennent d'un moteur ou d'un lien</p>
+              <p class="stats-tete-sub">des ouvertures viennent d'un moteur ou d'un lien</p>
             </div>
-          </div>
-
-          <div class="stats-panel">
-            <div class="stats-panel-head">
-              <div>
-                <h2 class="stats-panel-title">Les articles les plus lus</h2>
-                <p class="stats-panel-sub">Une lecture, c'est une visite : quelqu'un qui recharge la page ou qui y revient dans la demi-heure a lu l'article une fois. « Directes » compte les visites qui ont commencé sur l'article, donc arrivées d'un moteur ou d'un lien externe. « Total » est le compteur affiché au lecteur sous le titre, depuis toujours.</p>
-              </div>
-            </div>
-            <div class="stats-entetes blog-entetes">
-              <span class="stats-entete-nom">Article</span>
-              <button class="stats-tri" data-tri-blog="lectures" style="--col:hsl(258 70% 55%);">Lectures <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-blog="vues" style="--col:hsl(var(--muted-foreground));">Vues <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-blog="entrees" style="--col:hsl(217 91% 52%);">Directes <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-blog="total" style="--col:hsl(338 72% 52%);">Total <span class="stats-tri-fleche">▾</span></button>
-            </div>
-            <div id="blog-articles" class="stats-list"><p class="stats-movers-vide">Chargement...</p></div>
           </div>
 
           <div class="stats-panel">
             <div class="stats-panel-head">
               <div>
                 <h2 class="stats-panel-title">Sources préférées Google</h2>
-                <p class="stats-panel-sub">Les clics sur « Ajouter Quiz Couple à mes sources préférées », par emplacement. À lire comme une intention, pas comme un nombre d'abonnés : le clic ouvre l'outil de Google, où il reste une confirmation à donner, et Google ne renvoie jamais le résultat à l'éditeur. Personne ne peut savoir combien de gens sont allés jusqu'au bout.</p>
+                <p class="stats-panel-sub">Les clics sur « Ajouter Quiz Couple à mes sources préférées », jour par jour et par emplacement. Cliquez une vignette pour masquer ou réafficher sa courbe. À lire comme une intention, pas comme un nombre d'abonnés : le clic ouvre l'outil de Google, où il reste une confirmation à donner, et Google ne renvoie jamais le résultat à l'éditeur.</p>
               </div>
             </div>
-            <div id="blog-sourcepref" class="trafic-barres"><p class="stats-movers-vide">Chargement...</p></div>
+            <div class="stats-legende" id="blog-sourcepref-legende" role="group" aria-label="Courbes affichées"></div>
+            <canvas id="blog-sourcepref-chart" class="stats-canvas" style="height:220px;"></canvas>
+            <p class="blog-sourcepref-note" id="blog-sourcepref-note"></p>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Les articles les plus lus</h2>
+                <p class="stats-panel-sub">Une <strong>lecture</strong> est une visite qui est restée sur l'article un quart du temps de lecture estimé, onglet au premier plan, et qui a fait défiler au-delà de la moitié. Une <strong>ouverture</strong> est une visite qui a simplement affiché la page. « Directes » compte les ouvertures qui ont commencé sur l'article, donc arrivées d'un moteur ou d'un lien externe. « Total » est le compteur affiché au lecteur sous le titre, en lectures et depuis toujours.</p>
+              </div>
+            </div>
+            <div class="stats-entetes blog-entetes">
+              <span class="stats-entete-nom">Article</span>
+              <button class="stats-tri" data-tri-blog="lectures" style="--col:hsl(258 70% 55%);">Lectures <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-blog="ouvertures" style="--col:hsl(var(--muted-foreground));">Ouvertures <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-blog="entrees" style="--col:hsl(217 91% 52%);">Directes <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-blog="total" style="--col:hsl(338 72% 52%);">Total <span class="stats-tri-fleche">▾</span></button>
+            </div>
+            <div id="blog-articles" class="stats-list"><p class="stats-movers-vide">Chargement...</p></div>
           </div>
         </div>
 
@@ -772,16 +774,12 @@
      long est coupe a deux lignes et emportait la pastille avec lui. */
   .blog-langue{margin-right:0.45rem;padding:0.05rem 0.35rem;border-radius:0.35rem;background:hsl(var(--muted));color:hsl(var(--muted-foreground));font-size:0.62rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;}
   .blog-sourcepref-note{margin:0.85rem 0 0;font-size:0.72rem;line-height:1.5;color:hsl(var(--muted-foreground));}
-  /* Deux barres seulement, et des noms plus longs que ceux des referents :
-     la colonne des noms peut respirer. */
-  #blog-sourcepref .trafic-barre-nom{flex-basis:9.5rem;}
-  @media (max-width:640px){#blog-sourcepref .trafic-barre-nom{flex-basis:7rem;}}
   @media (max-width:640px){
     .blog-entetes .stats-tri,.blog-ligne .stats-cell{flex-basis:3.4rem;font-size:0.8rem;}
     /* Quatre colonnes de chiffres et un titre ne tiennent pas sur un
-       telephone. « Vues » saute en premier : les lectures disent la meme
-       chose sans compter les rechargements. */
-    .blog-entetes .stats-tri[data-tri-blog="vues"],.blog-ligne .stats-cell--vues{display:none;}
+       telephone. « Ouvertures » saute en premier : c'est la colonne dont on
+       peut se passer, les lectures portent l'information utile. */
+    .blog-entetes .stats-tri[data-tri-blog="ouvertures"],.blog-ligne .stats-cell--vues{display:none;}
   }
 
   /* ── Sections repliables (sommaire) ── */

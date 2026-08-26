@@ -9241,49 +9241,74 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .jnj-legende li { font-size: 0.75rem; }
 }
 
-/* ── Encart « sources préférées Google » (pied de page) ──────
-   Le halo du G reprend la mécanique du bouton vedette du menu : un dégradé
-   conique qu'on fait tourner en animant un angle déclaré via @property,
-   ici dans les quatre couleurs de Google. */
+/* ── Bouton « sources préférées Google » ─────────────────────────────────
+   Pas d'encadré autour du bouton : le bouton EST l'encadré. Un cadre dans un
+   cadre, c'est ce qui rendait l'ensemble mou et le contour du bouton
+   invisible.
+
+   Le contour est un filet lumineux qui tourne en boucle, comme une LED sur
+   un rail. Mécanique : un dégradé conique dont un seul arc est allumé, posé
+   deux pixels plus large que le bouton, puis recouvert par un disque opaque
+   qui ne laisse voir que la bordure. L'angle du dégradé est une propriété
+   déclarée, donc animable ; sans @property (Firefox ancien, Safari < 16.4)
+   l'arc reste immobile, ce qui est un repli acceptable. */
 @property --gs-angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+@property --gs-led   { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
 
 .gsource {
   display: grid; justify-items: center; gap: 0.6rem;
-  margin: 0 auto 2.5rem; padding: 1.5rem 1.25rem;
-  max-width: 34rem;
-  border-radius: 1.25rem;
-  border: 1px solid hsl(var(--border));
-  background:
-    radial-gradient(ellipse at 0% 0%, hsl(var(--primary) / 0.06), transparent 62%),
-    hsl(var(--card));
+  max-width: 34rem; margin: 0 auto 2.5rem;
   text-align: center;
 }
+
 .gsource-btn {
+  position: relative; isolation: isolate;
   display: inline-flex; align-items: center; gap: 0.85rem;
-  padding: 0.85rem 1.35rem;
-  border-radius: 1rem;
-  border: 1px solid hsl(var(--border));
-  background: hsl(var(--background));
+  padding: 0.8rem 1.3rem;
+  border: 0; border-radius: 1rem;
+  background: transparent;
   font-family: var(--font-display); font-weight: 700;
   font-size: clamp(0.95rem, 2.6vw, 1.05rem); line-height: 1.3;
   color: hsl(var(--foreground));
   text-decoration: none;
-  box-shadow: 0 10px 26px -20px hsl(var(--primary) / 0.9);
-  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.gsource-btn:hover {
-  transform: translateY(-2px);
-  border-color: hsl(var(--primary) / 0.35);
-  box-shadow: 0 16px 34px -20px hsl(var(--primary) / 1);
+.gsource-btn:hover { transform: translateY(-2px); }
+.gsource-btn:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 4px; }
+
+/* La LED. Le halo la suit parce que drop-shadow épouse l'alpha du dégradé :
+   seul l'arc allumé projette de la lumière, le reste du tour est
+   transparent et ne projette rien. */
+.gsource-btn::before {
+  content: ''; position: absolute; z-index: -2; inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--gs-led),
+    transparent 0deg, transparent 116deg,
+    #4285F4 130deg, #EA4335 146deg, #FBBC05 160deg, #34A853 172deg,
+    transparent 180deg, transparent 296deg,
+    #4285F4 310deg, #EA4335 326deg, #FBBC05 340deg, #34A853 352deg,
+    transparent 360deg);
+  filter: drop-shadow(0 0 5px hsl(var(--primary) / 0.55));
+  animation: gsourceLed 3.4s linear infinite;
 }
-.gsource-btn:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
+/* Le rail sur lequel la LED court : un filet fixe, discret mais présent, qui
+   dessine le bouton même quand la lumière est de l'autre côté. */
+.gsource-btn::after {
+  content: ''; position: absolute; z-index: -1; inset: 0;
+  border-radius: inherit;
+  background: hsl(var(--background));
+  box-shadow: inset 0 0 0 1px hsl(var(--border)),
+              0 10px 26px -22px hsl(var(--primary) / 0.9);
+}
+@keyframes gsourceLed { to { --gs-led: 360deg; } }
+.gsource-btn:hover::before { animation-duration: 1.7s; filter: drop-shadow(0 0 7px hsl(var(--primary) / 0.7)); }
 
 /* La pastille du G : le halo tourne derrière, le disque blanc au-dessus
    garde le logo lisible. */
 .gsource-g {
   position: relative; isolation: isolate; flex-shrink: 0;
   display: grid; place-items: center;
-  width: 2.9rem; height: 2.9rem;
+  width: 2.4rem; height: 2.4rem;
   border-radius: 9999px;
   --gs-angle: 0deg;
 }
@@ -9294,11 +9319,9 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
     #4285F4 0deg, #EA4335 90deg, #FBBC05 180deg, #34A853 270deg, #4285F4 360deg);
   filter: blur(5px);
   opacity: 0.9;
+  box-shadow: 0 0 14px 2px hsl(var(--primary) / 0.18);
   animation: gsourceTour 3.2s linear infinite;
 }
-/* Une seconde couche, plus large et plus floue : c'est elle qui fait la
-   lueur qui déborde de la pastille, l'autre dessine le liseré net. */
-.gsource-g::before { box-shadow: 0 0 14px 2px hsl(var(--primary) / 0.18); }
 .gsource-g::after {
   content: ''; position: absolute; z-index: -1; inset: 2px;
   border-radius: 9999px;
@@ -9315,17 +9338,20 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   color: hsl(var(--muted-foreground));
 }
 
-.dark .gsource-btn { background: hsl(var(--card)); }
+.dark .gsource-btn::after { background: hsl(var(--card)); }
 
 @media (max-width: 430px) {
-  .gsource { padding: 1.25rem 1rem; }
-  .gsource-btn { width: 100%; padding: 0.85rem 1rem; gap: 0.7rem; }
-  .gsource-g { width: 2.5rem; height: 2.5rem; }
+  .gsource-btn { width: 100%; padding: 0.8rem 1rem; gap: 0.7rem; }
+  .gsource-g { width: 2.2rem; height: 2.2rem; }
 }
-/* Sans @property (Firefox ancien, Safari < 16.4), l'angle ne s'anime pas :
-   le halo reste fixe, ce qui est un repli acceptable. Mouvement réduit :
-   on l'arrête franchement. */
+/* Mouvement réduit : la LED s'arrête et le contour redevient un filet fixe,
+   entièrement coloré pour rester visible sans bouger. */
 @media (prefers-reduced-motion: reduce) {
+  .gsource-btn::before {
+    animation: none; filter: none;
+    background: conic-gradient(#4285F4, #EA4335, #FBBC05, #34A853, #4285F4);
+    opacity: 0.65;
+  }
   .gsource-g::before { animation: none; }
   .gsource-btn { transition: none; }
 }
@@ -9353,46 +9379,48 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .blog-signature [hidden] { display: none !important; }
 
 /* ── Sources préférées Google, version compacte (sous la signature) ──────
-   Même encart que le pied de page, réduit : le bouton, le halo, et un point
-   d'interrogation qui déplie l'explication au lieu de l'imposer. */
+   Le bouton et son point d'interrogation, posés directement sur la page :
+   pas de cadre autour, le bouton porte déjà le sien. */
 .gsource--mini {
   display: flex; align-items: center; justify-content: center;
   gap: 0.5rem;
   position: relative;
   width: fit-content; max-width: 100%;
   margin: 0.9rem auto 0;
-  padding: 0.4rem 0.5rem;
-  border-radius: 1rem;
+  padding: 0;
 }
 .gsource--mini .gsource-btn {
   min-width: 0;
-  padding: 0.45rem 0.8rem;
-  gap: 0.55rem;
-  border-radius: 0.75rem;
-  font-size: 0.8rem;
-  box-shadow: none;
+  padding: 0.5rem 0.85rem;
+  gap: 0.6rem;
+  border-radius: 0.8rem;
+  font-size: 0.82rem;
 }
-.gsource--mini .gsource-btn:hover { transform: none; box-shadow: 0 8px 20px -16px hsl(var(--primary)); }
-.gsource--mini .gsource-g { width: 1.9rem; height: 1.9rem; }
+.gsource--mini .gsource-btn:hover { transform: none; }
+.gsource--mini .gsource-g { width: 1.85rem; height: 1.85rem; }
 .gsource--mini .gsource-txt { white-space: normal; }
 
+/* Le « ? » reprend le filet du bouton, en cercle et sans la LED : deux
+   lumières qui tournent côte à côte, ce serait une guirlande. */
 .gsource-aide {
   flex-shrink: 0;
   display: grid; place-items: center;
-  width: 1.5rem; height: 1.5rem;
+  width: 1.75rem; height: 1.75rem;
   border-radius: 9999px;
-  border: 1px solid hsl(var(--border));
-  background: hsl(var(--muted) / 0.6);
+  border: 1.5px solid hsl(var(--border));
+  background: hsl(var(--background));
   color: hsl(var(--muted-foreground));
   font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; line-height: 1;
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
 }
+.dark .gsource-aide { background: hsl(var(--card)); }
 .gsource-aide:hover,
 .gsource-aide[aria-expanded="true"] {
-  background: hsl(var(--primary) / 0.12);
-  border-color: hsl(var(--primary) / 0.4);
+  border-color: hsl(var(--primary) / 0.6);
+  background: hsl(var(--primary) / 0.1);
   color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.12);
 }
 .gsource-aide:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 2px; }
 
@@ -9400,21 +9428,21 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    le bas quand on l'ouvre, sinon l'article saute sous le curseur. */
 .gsource-bulle {
   position: absolute; z-index: 20;
-  top: calc(100% + 0.5rem); left: 50%; transform: translateX(-50%);
-  width: min(24rem, calc(100vw - 2rem));
-  margin: 0; padding: 0.85rem 1rem;
-  border-radius: 0.9rem;
+  top: calc(100% + 0.55rem); left: 50%; transform: translateX(-50%);
+  width: min(23rem, calc(100vw - 2rem));
+  margin: 0; padding: 0.8rem 0.95rem;
+  border-radius: 0.85rem;
   border: 1px solid hsl(var(--border));
   background: hsl(var(--card));
   box-shadow: 0 18px 40px -24px hsl(var(--foreground) / 0.55);
-  font-size: 0.82rem; line-height: 1.55;
+  font-size: 0.8rem; line-height: 1.55;
   color: hsl(var(--muted-foreground));
   text-align: left;
 }
 .gsource--mini [hidden] { display: none !important; }
 
 @media (max-width: 430px) {
-  .gsource--mini { width: 100%; padding: 0.35rem; }
-  .gsource--mini .gsource-btn { flex: 1 1 auto; }
-  .gsource--mini .gsource-g { width: 1.75rem; height: 1.75rem; }
+  .gsource--mini { width: 100%; }
+  .gsource--mini .gsource-btn { flex: 1 1 auto; width: auto; }
+  .gsource--mini .gsource-g { width: 1.7rem; height: 1.7rem; }
 }
