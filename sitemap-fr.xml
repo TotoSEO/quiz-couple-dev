@@ -10,7 +10,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -370,7 +370,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/paarspiele/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/giochi-di-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeux-de-couple/"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -602,7 +602,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/dilemmata-fuer-paare/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/dilemmi-di-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/dilemmes-couple/"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -663,6 +663,30 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/non-ho-mai-gioco-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/je-nai-jamais-jeu-couple/"/>
     <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/qui-pourrait-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/qui-pourrait-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/who-could-couples-game/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quien-podria-juego-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/wer-koennte-paar-spiel/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/chi-potrebbe-gioco-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/qui-pourrait-couple/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/jeu-oui-non-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/jeu-oui-non-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/yes-or-no-couples-game/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/juego-si-o-no-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/ja-oder-nein-paar-spiel/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/gioco-si-o-no-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeu-oui-non-couple/"/>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
