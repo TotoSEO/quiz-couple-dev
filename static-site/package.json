@@ -5,8 +5,6 @@
   "type": "module",
   "scripts": {
     "build": "node build/verifie-pools.js && node build/generate.js",
-    "build:css": "node build/compile-css.js",
-    "build:all": "npm run build:css && npm run build",
     "preview": "npx serve dist -l 3000",
     "indexnow": "node build/indexnow.js",
     "indexnow:dry": "node build/indexnow.js --dry-run",
