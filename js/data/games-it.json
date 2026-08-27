@@ -302,6 +302,17 @@
     "messageCopied": "Messaggio copiato! 💜",
     "titre": "Quiz Couple"
   },
+  "story": {
+    "titre": "Il tuo risultato in immagine, pronto per la storia:",
+    "choix": "Scegli il tuo visual",
+    "apercu": "Visual {{n}}",
+    "bouton": "Aggiungi alla tua storia!",
+    "scoreSolo": "Il mio risultato",
+    "scoreDuo": "Il nostro risultato",
+    "ctaImage": "Fai il test anche tu su",
+    "reseaux": "Da pubblicare su Instagram, TikTok, Snapchat o Facebook",
+    "enregistree": "Immagine salvata! Apri Instagram, TikTok, Snapchat o Facebook e aggiungila alla tua storia."
+  },
   "parentalite": {
     "setupDesc": "Entrambi rispondete separatamente alle stesse 20 domande.",
     "scoreOn60": "Punteggio su 60 per persona",

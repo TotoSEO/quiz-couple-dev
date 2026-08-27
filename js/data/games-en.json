@@ -302,6 +302,17 @@
     "messageCopied": "Message copied! 💜",
     "titre": "Quiz Couple"
   },
+  "story": {
+    "titre": "Your result as an image, story-ready:",
+    "choix": "Pick your design",
+    "apercu": "Design {{n}}",
+    "bouton": "Add to your story!",
+    "scoreSolo": "My result",
+    "scoreDuo": "Our result",
+    "ctaImage": "Take the test too at",
+    "reseaux": "Post it on Instagram, TikTok, Snapchat or Facebook",
+    "enregistree": "Image saved! Open Instagram, TikTok, Snapchat or Facebook and add it to your story."
+  },
   "parentalite": {
     "setupDesc": "Both of you answer the same 20 questions separately.",
     "scoreOn60": "Score out of 60 per person",
