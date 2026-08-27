@@ -42,6 +42,8 @@
 - [Moving In Together Test](https://quiz-couple.com/en/moving-in-together-test/): Should you move in together?
 - [Does My Ex Still Think About Me](https://quiz-couple.com/en/does-my-ex-still-think-about-me/): 15 weighted questions on what an ex actually does rather than what you read into it, with two question sets depending on their gender and four result tiers
 - [Mental Load Test for Couples](https://quiz-couple.com/en/mental-load-test-couples/): 20 household tasks rated on who thinks of them, not who does them, playable alone or by both partners, returning a split, a per-area breakdown and the gap between the two accounts
+- [Soulmate Test](https://quiz-couple.com/en/soulmate-test/): 20 questions across four pillars (ease, deep agreement, hardship, autonomy), with an index and a verdict drawn from the shape of the profile; solo, duo or single mode
+- [Love or Crush Test](https://quiz-couple.com/en/love-or-crush-test/): 35 weighted questions to tell a real feeling from a passing crush, with question sets adapted to the crush's gender
 
 ### Fun Quizzes
 - [Love Quiz](https://quiz-couple.com/en/love-quiz/): Romantic debate questions
@@ -75,6 +77,7 @@
 - [Zodiac Compatibility](https://quiz-couple.com/en/zodiac-signs-names-compatibility/): Astrology + first name analysis
 - [Birth Date Love Compatibility](https://quiz-couple.com/en/birth-date-love-compatibility/): Two birth dates crossed through three readings, numerology life path, sun sign and Chinese zodiac with the real lunar new year dates
 - [Couple Activities Near Me](https://quiz-couple.com/en/couple-activities-near-me/): Date ideas by location
+- [Où partir en vacances en couple](https://quiz-couple.com/test-ou-partir-en-vacances/): questionnaire matching your answers against 244 destinations with budget, season and travel style (FR)
 
 ## Blog
 
