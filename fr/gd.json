@@ -9375,6 +9375,7 @@
     "introTexte": "Des situations de couple, une par une, et une seule chose à faire : répondre oui ou répondre non. Après chaque vote, vous voyez ce que les autres ont répondu.",
     "metaQuestions": "situations",
     "metaDuree": "vous arrêtez quand vous voulez",
+    "compteurGlobal": "{{n}} oui/non déjà répondus sur ces situations",
     "commencer": "Première situation",
     "amorce": "Oui ou non",
     "consigne": "Discutez-en si besoin, puis répondez d'un seul geste.",

@@ -9237,8 +9237,23 @@ var QuizEngine = (function() {
     });
     this.container.appendChild(ecran.wrap);
     // Un seul aller-retour pendant que l'écran d'intro est là : les deux
-    // camps de toutes les situations, prêts avant le premier vote.
-    this.chargerTotaux();
+    // camps de toutes les situations, prêts avant le premier vote. Le même
+    // chargement nourrit le compteur au-dessus du bouton : la somme des
+    // oui/non déjà déposés sur l'ensemble des situations. Tant que rien
+    // n'est revenu (ou à zéro), la ligne n'existe pas à l'écran.
+    var ligne = el('p', 'onn-compteur-global');
+    ligne.hidden = true;
+    if (ecran.bouton && ecran.bouton.parentNode) ecran.bouton.parentNode.insertBefore(ligne, ecran.bouton);
+    else ecran.wrap.appendChild(ligne);
+    this.chargerTotaux().then(function () {
+      var t = self.totaux || {}, total = 0;
+      for (var k in t) total += (t[k].oui || 0) + (t[k].non || 0);
+      if (total > 0) {
+        ligne.textContent = self.qtg('compteurGlobal', '{{n}} oui/non déjà répondus sur ces situations')
+          .replace('{{n}}', fmtNombre(total, self.lang));
+        ligne.hidden = false;
+      }
+    });
   };
 
   OuiNonGame.prototype.chargerTotaux = function () {
@@ -9256,10 +9271,18 @@ var QuizEngine = (function() {
           lignes.forEach(function (l) {
             t[l.question_id] = { oui: +l.oui || 0, non: +l.non || 0 };
           });
+        } else if (lignes) {
+          // Une erreur PostgREST arrive ici en objet : la page reste jouable,
+          // mais le problème doit se voir dans la console au lieu de passer
+          // pour « aucun vote ».
+          try { console.warn('[oui-non] totaux indisponibles :', lignes); } catch (e) {}
         }
         self.totaux = t;
       })
-      .catch(function () { self.totaux = {}; });
+      .catch(function (e) {
+        self.totaux = {};
+        try { console.warn('[oui-non] totaux injoignables :', e); } catch (err) {}
+      });
     return this._chargement;
   };
 

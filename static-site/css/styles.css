@@ -2331,6 +2331,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
    doux pour le non. */
 .onn-jeu { display: grid; justify-items: center; }
 
+.onn-compteur-global {
+  margin: 0.25rem 0 0.875rem; text-align: center;
+  font-size: 0.875rem; font-weight: 600; color: hsl(var(--primary));
+}
 .onn-carte {
   position: relative; width: 100%; max-width: 34rem;
   display: grid; justify-items: center; text-align: center; gap: .55rem;
