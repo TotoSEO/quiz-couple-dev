@@ -2331,9 +2331,27 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
    doux pour le non. */
 .onn-jeu { display: grid; justify-items: center; }
 
-.onn-compteur-global {
-  margin: 0.25rem 0 0.875rem; text-align: center;
-  font-size: 0.875rem; font-weight: 600; color: hsl(var(--primary));
+/* Le compteur du hero : une pastille vivante sous le paragraphe du H1,
+   avec un point vert qui pulse comme un indicateur en direct. */
+.onn-hero-compteur {
+  display: flex; width: fit-content; align-items: center; gap: 0.55rem;
+  margin: 1.15rem auto 0; padding: 0.5rem 1.15rem; border-radius: 999px;
+  border: 1px solid hsl(var(--primary) / 0.3);
+  background: hsl(var(--card) / 0.85);
+  font-size: 0.875rem; font-weight: 700; letter-spacing: 0.01em;
+  color: hsl(var(--foreground));
+  box-shadow: 0 4px 14px hsl(var(--primary) / 0.16);
+}
+.onn-hero-compteur[hidden] { display: none; }
+.onn-compteur-point {
+  width: 0.5rem; height: 0.5rem; border-radius: 999px; flex-shrink: 0;
+  background: hsl(150, 70%, 45%);
+  animation: onnCompteurPouls 2.2s ease-out infinite;
+}
+@keyframes onnCompteurPouls {
+  0% { box-shadow: 0 0 0 0 hsl(150 70% 45% / 0.55); }
+  70% { box-shadow: 0 0 0 7px hsl(150 70% 45% / 0); }
+  100% { box-shadow: 0 0 0 0 hsl(150 70% 45% / 0); }
 }
 .onn-carte {
   position: relative; width: 100%; max-width: 34rem;
