@@ -1848,7 +1848,11 @@ async function main() {
   for (const { from, to } of REDIRECTS) {
     const redirectDir = path.join(DIST_DIR, from);
     ensureDir(redirectDir);
-    const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="refresh" content="0;url=${to}"><link rel="canonical" href="${BASE_URL}${to}"><title>Redirecting...</title></head><body><p>Redirecting to <a href="${to}">${to}</a></p></body></html>`;
+    // noindex : ces pages ne portent que quatre mots et n'existent que pour
+    // rediriger. Sans lui, Google peut explorer et retenir 45 pages quasi
+    // vides, ce qui pese sur l'appreciation globale du site (revue AdSense
+    // comprise). Le canonical seul est un signal plus faible.
+    const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0;url=${to}"><link rel="canonical" href="${BASE_URL}${to}"><title>Redirecting...</title></head><body><p>Redirecting to <a href="${to}">${to}</a></p></body></html>`;
     fs.writeFileSync(path.join(redirectDir, 'index.html'), html);
     console.log(`[redirect] ${from} → ${to}`);
   }
