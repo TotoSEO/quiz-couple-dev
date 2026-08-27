@@ -302,6 +302,17 @@
     "messageCopied": "Message copié ! 💜",
     "titre": "Quiz Couple"
   },
+  "story": {
+    "titre": "Votre résultat en image, prêt pour la story :",
+    "choix": "Choisissez votre visuel",
+    "apercu": "Visuel {{n}}",
+    "bouton": "Ajouter en story !",
+    "scoreSolo": "Mon résultat",
+    "scoreDuo": "Notre résultat",
+    "ctaImage": "Fais le test toi aussi sur",
+    "reseaux": "À poster sur Instagram, TikTok, Snapchat ou Facebook",
+    "enregistree": "Image enregistrée ! Ouvrez Instagram, TikTok, Snapchat ou Facebook et ajoutez-la à votre story."
+  },
   "parentalite": {
     "setupDesc": "Répondez chacun de votre côté aux mêmes 20 questions.",
     "scoreOn60": "Score sur 60 par personne",
