@@ -9283,7 +9283,6 @@
     "introTexte": "Couple situations, one at a time, and only one thing to do: answer yes or answer no. After each vote, you see what everyone else answered.",
     "metaQuestions": "situations",
     "metaDuree": "stop whenever you want",
-    "compteurGlobal": "{{n}} yes/no answers already given on these situations",
     "commencer": "First situation",
     "amorce": "Yes or no",
     "consigne": "Talk it over if you need to, then answer with a single tap.",

@@ -9237,21 +9237,10 @@ var QuizEngine = (function() {
     });
     this.container.appendChild(ecran.wrap);
     // Un seul aller-retour pendant que l'écran d'intro est là : les deux
-    // camps de toutes les situations, prêts avant le premier vote. Le même
-    // chargement remplit la pastille du hero, sous le paragraphe du H1,
-    // comme sur les autres pages : la somme des oui/non déjà déposés sur
-    // l'ensemble des situations. Sans chiffre, la pastille reste masquée.
-    this.chargerTotaux().then(function () {
-      var t = self.totaux || {}, total = 0;
-      for (var k in t) total += (t[k].oui || 0) + (t[k].non || 0);
-      var cpt = document.getElementById('oui-non-compteur');
-      if (cpt && total > 0) {
-        cpt.innerHTML = '<span class="onn-compteur-point" aria-hidden="true"></span>' +
-          esc(self.qtg('compteurGlobal', '{{n}} oui/non déjà répondus sur ces situations')
-            .replace('{{n}}', fmtNombre(total, self.lang)));
-        cpt.hidden = false;
-      }
-    });
+    // camps de toutes les situations, prêts avant le premier vote. La bulle
+    // de compteur du hero est remplie par quiz-extras.js, qui somme la même
+    // réponse, comme sur les dilemmes et le pour ou contre.
+    this.chargerTotaux();
   };
 
   OuiNonGame.prototype.chargerTotaux = function () {
