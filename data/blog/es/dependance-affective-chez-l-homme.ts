@@ -12,39 +12,39 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Imaginamos al dependiente emocional pegajoso y suplicante. En los hombres se parece más a menudo a celos, a rabia... o a un tío que nunca está soltero.",
   introduction: `<p>Cuando se dice «dependencia emocional», todo el mundo visualiza la misma escena: alguien que suplica, que se agarra, que manda quince mensajes. Y como la mayoría de los hombres no se reconocen en esa imagen, concluyen que no va con ellos. Gran error.</p>
-<p><strong>La dependencia emocional masculina existe, es masiva... y lleva máscaras que nadie identifica como carencia afectiva.</strong> Se parece a unos celos que controlan, a una rabia que explota por nada, a la hiperimplicación del tío perfecto que lo hace todo en casa, o a ese fenómeno que todo el mundo conoce sin nombrarlo: el hombre que NUNCA está soltero más de tres semanas.</p>
-<p>Así que aquí está la dependencia emocional en versión hombre, con sus caras reales. Si eres un hombre y estás leyendo esto, agárrate, hay posibilidades de que escueza un poco. Y si eres una mujer que reconoce a su pareja... el final del artículo también es para ti.</p>`,
+<p><strong>La dependencia emocional masculina existe, es masiva, y lleva máscaras que nadie identifica como carencia afectiva.</strong> Se parece a unos celos que controlan, a una rabia que explota por nada, a la hiperimplicación del tío perfecto que lo hace todo en casa, o a ese fenómeno que todo el mundo conoce sin nombrarlo: el hombre que NUNCA está soltero más de tres semanas.</p>
+<p>Así que aquí está la dependencia emocional en versión hombre, con sus caras reales. Si eres un hombre y estás leyendo esto, agárrate, hay posibilidades de que escueza un poco. Y si eres una mujer que reconoce a su pareja, el final del artículo también es para ti.</p>`,
   quickSummary: [
     "La dependencia emocional masculina no se parece al cliché: se disfraza.",
     "Sus máscaras favoritas: los celos de control, la rabia, la hiperimplicación, las relaciones encadenadas.",
     "La mecánica de fondo es la misma que en las mujeres: el otro regula tu estado interno.",
     "El tabú lo agrava todo: un hombre «necesitado», socialmente, no se dice.",
-    "Se trabaja exactamente igual... a condición de aceptar antes nombrarlo.",
+    "Se trabaja igual que en las mujeres, a condición de aceptar antes nombrarlo.",
   ],
   sections: [
     {
       id: 'por-que-no-se-ve',
       title: "Por qué no se ve nunca en los hombres",
       content: `<p>Hay dos razones para eso, una social y una mecánica.</p>
-<p>La social primero: a los niños se les enseña a no estar «necesitados». Llorar por una chica, admitir que se tiene miedo de perder a alguien, decir «te necesito»... todo eso cuesta caro en virilidad percibida. Resultado: la necesidad afectiva masculina aprende muy pronto a disfrazarse de otra cosa. No desaparece. Se maquilla.</p>
-<p>Y luego la mecánica: la dependencia emocional sigue siendo la misma bajo el disfraz, <a href="/es/blog/dependencia-emocional-en-la-pareja/">un sistema en el que el otro regula tu estado emocional</a>. En muchas mujeres la angustia se expresa como demanda de tranquilidad, visible. En muchos hombres se expresa como <em>control</em>: si no puedo suplicar, voy a asegurar. Vigilar. Cerrar. Es el mismo motor con otra carrocería. Y esa carrocería hace mucho más daño alrededor.</p>`,
+<p>La social primero: a los niños se les enseña a no estar «necesitados». Llorar por una chica, admitir que se tiene miedo de perder a alguien, decir «te necesito», todo eso cuesta caro en virilidad percibida. Resultado: la necesidad afectiva masculina aprende muy pronto a disfrazarse de otra cosa. No desaparece. Se maquilla.</p>
+<p>Y luego la mecánica. Bajo el disfraz se encuentra lo mismo: <a href="/es/blog/dependencia-emocional-en-la-pareja/">un sistema en el que el otro regula tu estado emocional</a>. En muchas mujeres la angustia se expresa como demanda de tranquilidad, visible. En muchos hombres se expresa como <em>control</em>: si no puedo suplicar, voy a asegurar. Vigilar. Cerrar. Es el mismo motor con otra carrocería. Y esa carrocería hace mucho más daño alrededor.</p>`,
     },
     {
       id: 'las-mascaras-masculinas',
       title: "Las 8 caras de la dependencia emocional masculina",
       content: `<ol>
-<li><strong>Los celos de control:</strong> No los celitos halagadores: los que comprueban, preguntan, sospechan. El móvil mirado «por casualidad», los «¿estaba él?», las noches con amigas que se vuelven un problema. Detrás del control, siempre lo mismo: el terror a perder, incapaz de decirse de otra manera.</li>
+<li><strong>Los celos de control:</strong> Comprueba, pregunta, sospecha. El móvil mirado «por casualidad», los «¿estaba él?», las noches con amigas que se vuelven un problema. Detrás del control siempre está el terror a perder, que no sabe decirse de otra manera.</li>
 <li><strong>La rabia pararrayos:</strong> Muchos hombres dependientes emocionales conocen una sola emoción de salida: el enfado. Ella llega tarde, él explota. Ella se olvida de avisar, él pone mala cara dos días. Traducción: «he tenido miedo y no sé decirlo». La rabia es solo el miedo que ha encontrado una salida más viril.</li>
-<li><strong>La hiperimplicación del tío perfecto:</strong> Esta es contraintuitiva. Lo hace todo: la compra, los regalos, los planes, los arreglos. ¿Generoso? En la superficie. En el fondo es un contrato implícito: «me hago indispensable para que no puedas irte». Un amor que sirve para comprar su seguridad ya no es del todo un regalo.</li>
-<li><strong>Nunca soltero:</strong> El gran clásico: las relaciones encadenadas, la siguiente que empieza antes de que acabe la anterior, la incapacidad total de estar solo más de un mes. No es amor al amor, es horror al vacío. Y cada encadenamiento impide justamente el trabajo que arreglaría el problema.</li>
-<li><strong>El humor teledirigido:</strong> Ella está cariñosa, su día es bueno. Ella está distante, su día está arruinado. Sus compañeros se lo ven en la cara: «¿problemas con tu chica?» Cuando tu humor se lee como el parte meteorológico de tu pareja, el termostato está fuera.</li>
-<li><strong>Los amigos en barbecho:</strong> El fútbol de los jueves abandonado, los colegas «de antes», las vacaciones entre tíos vueltas impensables. ¡No porque ella lo prohíba, ojo! Porque alejarse de ella, aunque sean dos días, cuesta demasiada angustia. Así que se queda. Y lo llama amor.</li>
-<li><strong>El sacrificio permanente, contabilizado en silencio:</strong> Dice que sí a todo, se olvida por completo... y lleva las cuentas sin saberlo. El día que desborda, sale a lo bruto: «¡yo lo he hecho TODO por ti!» Una entrega que espera algo a cambio, en el fondo, es una inversión.</li>
-<li><strong>El miedo al abandono disfrazado de exigencia:</strong> No suplica, exige. Presencia, explicaciones, pruebas. Parece autoridad, pero debajo hay pánico. Y agota al otro exactamente igual que la demanda quejosa, pero peor.</li>
+<li><strong>La hiperimplicación del tío perfecto:</strong> Esta es contraintuitiva. Lo hace todo: la compra, los regalos, los planes, los arreglos. ¿Generoso? En la superficie. En el fondo es un contrato implícito: «me hago indispensable para que no puedas irte». El problema es que esa generosidad siempre espera algo a cambio.</li>
+<li><strong>Nunca soltero:</strong> El gran clásico: las relaciones encadenadas, la siguiente que empieza antes de que acabe la anterior, la incapacidad total de estar solo más de un mes. Detrás del encadenamiento está sobre todo el miedo a quedarse a solas consigo mismo. Y mientras encadena, nunca hace el trabajo que arreglaría el problema.</li>
+<li><strong>El humor teledirigido:</strong> Ella está cariñosa, su día es bueno. Ella está distante, su día está arruinado. Sus compañeros se lo ven en la cara: «¿problemas con tu chica?» Cuando tu humor depende tanto del suyo, ya no eres tú quien lo regula.</li>
+<li><strong>Los amigos en barbecho:</strong> El fútbol de los jueves abandonado, los colegas «de antes», las vacaciones entre tíos vueltas impensables. ¡No porque ella lo prohíba, ojo! Porque alejarse de ella, aunque sean dos días, cuesta demasiada angustia. Así que se queda, y se dice que eso es amor.</li>
+<li><strong>El sacrificio permanente, contabilizado en silencio:</strong> Dice que sí a todo, se olvida por completo, y lleva las cuentas sin saberlo. El día que desborda, sale a lo bruto: «¡yo lo he hecho TODO por ti!» Una entrega que espera algo a cambio acaba siempre reclamándolo.</li>
+<li><strong>El miedo al abandono disfrazado de exigencia:</strong> No suplica, exige. Presencia, explicaciones, pruebas. Parece autoridad, pero debajo hay pánico. Y agota al otro tanto como la demanda quejosa, pero peor.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ El punto en que se vuelve grave</p>
-<p>Control del móvil, de las salidas, de la ropa, aislamiento del otro. La dependencia emocional masculina, sin tratar, puede deslizarse hacia comportamientos que ya no son «mal de amores» sino control coercitivo, y ese deslizamiento hace víctimas. Si te reconoces en esa pendiente, es ahora cuando hay que actuar, no después de la próxima crisis.</p>
+<p>Control del móvil, de las salidas, de la ropa, aislamiento del otro... Sin tratar, la dependencia emocional masculina puede deslizarse hacia el control coercitivo. Eso ya no es «mal de amores», y hace víctimas. Si te reconoces en esa pendiente, es ahora cuando hay que actuar, no después de la próxima crisis.</p>
 </aside>
 <div><table><thead><tr><th>La máscara</th><th>Lo que ve el entorno</th><th>Lo que hay debajo</th></tr></thead><tbody>
 <tr><td>Los celos de control</td><td>Un tío posesivo</td><td>El terror a no contar lo suficiente</td></tr>
@@ -60,33 +60,33 @@ const article: BlogArticleData = {
     {
       id: 'lo-que-le-hace-a-la-pareja',
       title: "Lo que le hace a la pareja (el círculo vicioso)",
-      content: `<p>El drama de la dependencia emocional masculina es que fabrica exactamente lo que teme. El mecanismo funciona en tres tiempos y es de una regularidad implacable.</p>
-<p>Aprieta demasiado fuerte, por miedo a perder. Ella se ahoga, así que toma distancia, simplemente para respirar. Él siente la distancia, entra en pánico... y aprieta más fuerte todavía. Celos al alza, control al alza, reproches al alza. Ella se aleja más. Y un día se va, no porque no lo quisiera... sino porque no se puede querer en apnea.</p>
-<p>¿Lo peor? Esa marcha «confirma» su creencia inicial: al final siempre me abandonan. Y ahí va otra vez, con la siguiente, y peor. Es exactamente ese círculo el que alimentan en silencio los <a href="/es/blog/sintomas-dependencia-emocional/">síntomas clásicos de la carencia afectiva</a>... mientras nadie lo nombre.</p>`,
+      content: `<p>El drama de la dependencia emocional masculina es que fabrica lo que teme. Y siempre ocurre en el mismo orden.</p>
+<p>Aprieta demasiado fuerte, por miedo a perder. Ella se ahoga, así que toma distancia, simplemente para respirar. Él siente la distancia, entra en pánico y aprieta más fuerte todavía. Celos al alza, control al alza, reproches al alza. Ella se aleja más. Y un día se va, no porque no lo quisiera, sino porque no se puede querer en apnea.</p>
+<p>¿Lo peor? Esa marcha «confirma» lo que ya creía: al final siempre me abandonan. Y ahí va otra vez, con la siguiente, y peor. Es ese círculo el que alimentan en silencio los <a href="/es/blog/sintomas-dependencia-emocional/">síntomas clásicos de la carencia afectiva</a>, mientras nadie lo nombre.</p>`,
     },
     {
       id: 'salir-version-hombre',
       title: "Salir de ahí, versión hombre",
-      content: `<p>El método de fondo es el mismo para todo el mundo: los <a href="/es/blog/superar-la-dependencia-emocional/">12 ejercicios para superar la dependencia emocional</a> funcionan exactamente igual en masculino, estabilizar, reapropiarse de la vida, consolidar. Pero hay tres especificidades masculinas que cambian la cosa, y mejor decirlas sin rodeos.</p>`,
+      content: `<p>El método de fondo es el mismo para todo el mundo: los <a href="/es/blog/superar-la-dependencia-emocional/">12 ejercicios para superar la dependencia emocional</a> funcionan igual de bien en masculino: estabilizar, reapropiarse de la vida, consolidar. Pero hay tres especificidades masculinas que cambian la cosa.</p>`,
       subsections: [
         {
           id: 'uno-nombrar-primero',
           title: "Nombrar, primero",
-          content: `<p>No puedes trabajar un problema que llamas «ella me pone de los nervios». La primera victoria es traducir: detrás de mis celos hay miedo. Detrás de mi rabia hay carencia. Cuesta la primera vez... y lo cambia todo, porque sobre el miedo se puede trabajar, sobre «ella me pone de los nervios» no.</p>`,
+          content: `<p>No puedes trabajar un problema que llamas «ella me pone de los nervios». La primera victoria es traducir: detrás de mis celos hay miedo. Detrás de mi rabia hay carencia. Cuesta la primera vez, pero lo cambia todo: sobre el miedo se puede trabajar, sobre «ella me pone de los nervios» no.</p>`,
         },
         {
           id: 'dos-hablarlo-con-un-amigo',
           title: "Hablarlo con UN amigo",
-          content: `<p>No con diez, no en redes: uno, el más fiable. Los hombres subestiman muchísimo lo que eso desbloquea, porque esperan ser juzgados... y se encuentran enfrente con un «tío, yo también» una de cada dos veces. El tabú muere en cuanto sale de la cabeza.</p>`,
+          content: `<p>No con diez, no en redes: uno, el más fiable. Los hombres subestiman muchísimo lo que eso desbloquea, porque esperan ser juzgados, y se encuentran enfrente con un «tío, yo también» una de cada dos veces.</p>`,
         },
         {
           id: 'tres-el-psicologo-no-es-una-derrota',
           title: "El psicólogo no es una derrota",
-          content: `<p>Es un entrenador, literalmente. ¿Contratas a un entrenador para el deporte o a un mecánico para el coche, no? Con las heridas de apego pasa igual: hay gente cuyo oficio es ese, y los resultados son espectaculares justamente en los hombres... porque llegan con veinte años de palabra atrasada por recuperar.</p>
-<p>Y una última cosa si eres la pareja que ha reconocido a su hombre en este artículo: no puedes hacer el trabajo por él, y tranquilizarlo cada vez más no cura nada, alimenta el sistema. ¿Qué puedes hacer? Nombrar lo que ves, sin desprecio, una vez, con claridad... y animarlo a buscar ayuda. El resto le pertenece.</p>
+          content: `<p>Un psicólogo es un entrenador. ¿Contratas a un entrenador para el deporte o a un mecánico para el coche, no? Con las heridas de apego pasa igual: hay gente cuyo oficio es ese, y los resultados son espectaculares en los hombres, porque llegan con veinte años de palabra atrasada por recuperar.</p>
+<p>Una cosa si eres la pareja que ha reconocido a su hombre en este artículo: no puedes hacer el trabajo por él, y tranquilizarlo cada vez más no cura nada, alimenta el sistema. Lo que sí puedes hacer es nombrar lo que ves una vez, con claridad y sin desprecio, y animarlo a buscar ayuda. El resto le pertenece.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Haz balance, ahora, en cinco minutos</p>
-<p class="blog-cta-texte">Una serie de preguntas evalúa tu modo de apego con situaciones concretas: los celos, el control, el vacío, el humor. No se enterará nadie, y por fin lo sabrás tú.</p>
+<p class="blog-cta-texte">Una serie de preguntas evalúa tu modo de apego con situaciones concretas: los celos, el control, el vacío, el humor. No se enterará nadie, y por fin sabrás dónde estás.</p>
 <a class="blog-cta-btn" href="/es/test-dependencia-emocional/">Comprobar dónde estoy</a>
 <p class="blog-cta-note">Gratis &middot; Sin registro &middot; Resultado inmediato</p>
 </div>

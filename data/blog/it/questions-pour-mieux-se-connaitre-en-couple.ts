@@ -86,7 +86,7 @@ const article: BlogArticleData = {
     {
       id: 'la-vostra-coppia',
       title: "La vostra coppia, vista dall'interno (37-48)",
-      content: `<p>Ora che siamo riscaldati... parliamo di voi. Queste domande fanno il punto senza fare il processo, ed è tutta la loro arte.</p>
+      content: `<p>Ora che siamo riscaldati, parliamo di voi. Queste domande fanno il punto senza fare il processo.</p>
 <ol start="37">
 <li>Qual è il nostro risultato più bello, noi due?</li>
 <li>Quale momento della nostra storia rivivresti tale e quale?</li>
@@ -124,8 +124,8 @@ const article: BlogArticleData = {
     {
       id: 'trasformare-la-prova',
       title: "E adesso, trasformate la prova",
-      content: `<p>Se avete giocato fin qui, avete raccolto delle sorprese, garantito. Tenete il riflesso: dieci domande a serata, una volta al mese, e la vostra coppia non ricadrà mai nel pilota automatico. È esattamente lo stesso principio delle grandi serate di <a href="/it/domande-coppia/">domande per coppie</a>... con l'abitudine in più.</p>
-<p>Resta una cosa divertente da fare con tutto quello che avete appena imparato. Credete di aver ascoltato bene l'altro? Davvero bene?</p>
+      content: `<p>Se avete giocato fin qui, avete raccolto delle sorprese. Tenete il riflesso: dieci domande a serata, una volta al mese, e la vostra coppia non ricadrà mai nel pilota automatico. È lo stesso principio delle grandi serate di <a href="/it/domande-coppia/">domande per coppie</a>, con l'abitudine in più.</p>
+<p>Resta una cosa divertente da fare con tutto questo: vedere chi ha ascoltato meglio.</p>
 <div><table><thead><tr><th>Il territorio</th><th>Cosa ci si trova</th></tr></thead><tbody>
 <tr><td>Le vostre radici</td><td>Ciò che ha fabbricato i suoi riflessi, molto prima di te</td></tr>
 <tr><td>Il vostro quotidiano</td><td>Le piccole cose che pesano e non si dicono</td></tr>
@@ -139,7 +139,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/it/quiz-chi-conosce-meglio-partner/">Lanciare la sfida</a>
 <p class="blog-cta-note">Gratis &middot; Senza registrazione &middot; Da giocare in due</p>
 </div>
-<p>E se queste serate di domande diventano il vostro rituale preferito, c'è di che tenere per mesi: le <a href="/it/blog/domande-da-fare-al-tuo-ragazzo/">100 domande lato lui</a> per lei, le <a href="/it/blog/domande-da-fare-alla-tua-ragazza/">domande da fare alla tua ragazza</a> per lui... e il livello sopra quando sarete pronti, ma quello lo scoprirete da soli.</p>
+<p>E se queste serate diventano il vostro rituale, c'è di che tenere per mesi: le <a href="/it/blog/domande-da-fare-al-tuo-ragazzo/">100 domande da fare al tuo ragazzo</a> da un lato, le <a href="/it/blog/domande-da-fare-alla-tua-ragazza/">domande da fare alla tua ragazza</a> dall'altro.</p>
 <a href="/it/blog/domande-intime-di-coppia/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leggi anche</span><span class="blog-read-also-title">65 domande intime da fare al tuo partner, dalle più dolci alle più osate</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

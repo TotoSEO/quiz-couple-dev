@@ -86,7 +86,7 @@ const article: BlogArticleData = {
     {
       id: 'vuestra-pareja',
       title: "Vuestra pareja, vista desde dentro (37-48)",
-      content: `<p>Ahora que estamos calientes... hablemos de vosotros. Estas preguntas hacen balance sin abrir un juicio, y ahí está todo su arte.</p>
+      content: `<p>Ahora que estamos calientes, hablemos de vosotros. Estas preguntas hacen balance sin abrir un juicio.</p>
 <ol start="37">
 <li>¿Cuál es nuestro mayor logro, de los dos?</li>
 <li>¿Qué momento de nuestra historia revivirías tal cual?</li>
@@ -124,8 +124,8 @@ const article: BlogArticleData = {
     {
       id: 'aprovechar-lo-aprendido',
       title: "Y ahora, aprovechad lo aprendido",
-      content: `<p>Si habéis jugado hasta aquí, habéis recogido sorpresas, garantizado. Conservad el reflejo: diez preguntas por noche, una vez al mes, y vuestra pareja no volverá a caer en el piloto automático. Es exactamente el mismo principio que las grandes noches de <a href="/es/preguntas-pareja/">preguntas de pareja</a>... con la costumbre añadida.</p>
-<p>Queda una cosa divertida por hacer con todo lo que acabáis de aprender. ¿Creéis que habéis escuchado bien al otro? ¿De verdad bien?</p>
+      content: `<p>Si habéis jugado hasta aquí, habéis recogido sorpresas. Conservad el reflejo: diez preguntas por noche, una vez al mes, y vuestra pareja no volverá a caer en el piloto automático. Es el mismo principio que las grandes noches de <a href="/es/preguntas-pareja/">preguntas de pareja</a>, con la costumbre añadida.</p>
+<p>Queda una cosa divertida por hacer con todo eso: ver quién ha escuchado mejor.</p>
 <div><table><thead><tr><th>El territorio</th><th>Qué se encuentra ahí</th></tr></thead><tbody>
 <tr><td>Vuestras raíces</td><td>Lo que fabricó sus reflejos, mucho antes de ti</td></tr>
 <tr><td>Vuestro día a día</td><td>Las cosas pequeñas que pesan y no se dicen</td></tr>
@@ -139,7 +139,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/es/quiz-quien-conoce-mejor-pareja/">Lanzar el reto</a>
 <p class="blog-cta-note">Gratis &middot; Sin registro &middot; Para jugar en pareja</p>
 </div>
-<p>Y si estas noches de preguntas se convierten en vuestro ritual favorito, hay para meses: las <a href="/es/blog/preguntas-para-tu-novio/">100 preguntas para él</a> por su lado, las <a href="/es/blog/preguntas-para-tu-novia/">preguntas para hacerle a tu novia</a> por el suyo... y el nivel superior cuando estéis listos, pero eso lo descubriréis solos.</p>
+<p>Y si estas noches se convierten en vuestro ritual, hay para meses: las <a href="/es/blog/preguntas-para-tu-novio/">100 preguntas para hacerle a tu novio</a> por un lado, las <a href="/es/blog/preguntas-para-tu-novia/">preguntas para hacerle a tu novia</a> por el otro.</p>
 <a href="/es/blog/preguntas-intimas-pareja/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leer también</span><span class="blog-read-also-title">65 preguntas íntimas para tu pareja, de las más dulces a las más atrevidas</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

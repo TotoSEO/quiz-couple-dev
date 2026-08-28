@@ -19,7 +19,7 @@ const article: BlogArticleData = {
     "Its favourite masks: controlling jealousy, anger, over-investment, back-to-back relationships.",
     "The underlying mechanism is the same as in women: the other person regulates your inner state.",
     "The taboo makes everything worse: a man «in need», socially, isn't something you say.",
-    "It can be worked on exactly the same way... provided you first agree to name it.",
+    "It can be worked on the same way as in women, provided you first agree to name it.",
   ],
   sections: [
     {
@@ -33,18 +33,18 @@ const article: BlogArticleData = {
       id: 'the-male-masks',
       title: "The 8 faces of male emotional dependency",
       content: `<ol>
-<li><strong>Controlling jealousy:</strong> Not the small flattering jealousy: the kind that checks, questions, suspects. The phone looked at «by chance», the «was he there?», the girls' nights that become a problem. Behind the control, always the same thing: the terror of losing, unable to say itself any other way.</li>
+<li><strong>Controlling jealousy:</strong> He checks, he questions, he suspects. The phone looked at «by chance», the «was he there?», the girls' nights that become a problem. Behind the control, there's always the terror of losing, which doesn't know how to say itself any other way.</li>
 <li><strong>Anger as a lightning rod:</strong> Many emotionally dependent men know only one outgoing emotion: irritation. She comes home late, he explodes. She forgets to let him know, he sulks for two days. Translation: «I was scared, and I don't know how to say it». The anger is just fear that has found a more masculine way out.</li>
-<li><strong>The over-investment of the perfect guy:</strong> This one is counter-intuitive. He does everything: the shopping, the presents, the plans, the repairs. Generous? On the surface. Underneath, it's an implicit contract: «I'm making myself indispensable so you can't leave». A love that's there to buy security isn't quite a gift any more.</li>
-<li><strong>Never single:</strong> The great classic: back-to-back relationships, the next one starting before the previous one ends, total inability to be alone for more than a month. It isn't a love of love, it's a horror of emptiness. And each new link prevents precisely the work that would fix the problem.</li>
-<li><strong>Remote-controlled mood:</strong> She's tender, his day is good. She's distant, his day is ruined. His colleagues can read it on his face: «trouble with your girlfriend?» When your mood reads like a weather bulletin for your relationship, the thermostat is outside.</li>
-<li><strong>Friendships left fallow:</strong> The Thursday football abandoned, the friends «from before», the lads' holiday now unthinkable. Not because she forbids it, careful! Because moving away from her, even for two days, costs too much in anxiety. So he stays. And he calls it love.</li>
-<li><strong>Permanent sacrifice, silently accounted for:</strong> He says yes to everything, forgets himself entirely, and keeps the books without knowing it. The day it overflows, it comes out all at once: «I did EVERYTHING for you!» Devotion that expects a return is really just an investment.</li>
-<li><strong>Fear of abandonment disguised as demands:</strong> He doesn't plead, he demands. Presence, accounts, proof. It looks like authority, but underneath it's panic. And it exhausts the other person exactly like plaintive neediness, only worse.</li>
+<li><strong>The over-investment of the perfect guy:</strong> This one is counter-intuitive. He does everything: the shopping, the presents, the plans, the repairs. Generous? On the surface. Underneath, it's an implicit contract: «I'm making myself indispensable so you can't leave». The problem is that this kind of generosity always expects something back.</li>
+<li><strong>Never single:</strong> The great classic: back-to-back relationships, the next one starting before the previous one ends, total inability to be alone for more than a month. Behind the chaining, there is mostly the fear of being left alone with himself. And as long as he keeps chaining, he never does the work that would fix the problem.</li>
+<li><strong>Remote-controlled mood:</strong> She's tender, his day is good. She's distant, his day is ruined. His colleagues can read it on his face: «trouble with your girlfriend?» When your mood depends that much on hers, you're no longer the one setting it.</li>
+<li><strong>Friendships left fallow:</strong> The Thursday football abandoned, the friends «from before», the lads' holiday now unthinkable. Not because she forbids it, careful! Because moving away from her, even for two days, costs too much in anxiety. So he stays, and he tells himself it's love.</li>
+<li><strong>Permanent sacrifice, silently accounted for:</strong> He says yes to everything, forgets himself entirely, and keeps the books without knowing it. The day it overflows, it comes out all at once: «I did EVERYTHING for you!» Devotion that expects a return always ends up claiming it.</li>
+<li><strong>Fear of abandonment disguised as demands:</strong> He doesn't plead, he demands. Presence, accounts, proof. It looks like authority, but underneath it's panic. And it exhausts the other person as much as plaintive neediness, only worse.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ The point where it becomes serious</p>
-<p>Controlling the phone, the outings, the clothes, isolating the other person. Untreated male emotional dependency can slide into behaviours that are no longer «love-sickness» but coercive control, and that slide creates victims. If you recognise yourself on that slope, now is the time to act, not after the next crisis.</p>
+<p>Controlling the phone, the outings, the clothes, isolating the other person... Untreated, male emotional dependency can slide into coercive control. That is no longer «love-sickness», and it creates victims. If you recognise yourself on that slope, now is the time to act, not after the next crisis.</p>
 </aside>
 <div><table><thead><tr><th>The mask</th><th>What people around him see</th><th>What's underneath</th></tr></thead><tbody>
 <tr><td>Controlling jealousy</td><td>A possessive guy</td><td>The terror of not mattering enough</td></tr>
@@ -60,33 +60,33 @@ const article: BlogArticleData = {
     {
       id: 'what-it-does-to-the-relationship',
       title: "What it does to the relationship (the vicious circle)",
-      content: `<p>The tragedy of male emotional dependency is that it manufactures exactly what it dreads. The mechanism has three beats, and it's relentlessly regular.</p>
+      content: `<p>The tragedy of male emotional dependency is that it manufactures what it dreads. And it always unfolds in the same order.</p>
 <p>He grips too tightly, out of fear of losing. She suffocates, so she takes some distance, simply to breathe. He feels the distance, panics, and grips even tighter. Jealousy up, control up, reproaches up. She moves further away. And one day she leaves, not because she didn't love him, but because you can't love while holding your breath.</p>
-<p>The worst part? That departure «confirms» his original belief: people always end up abandoning me. And off he goes again, with the next one, worse. That's exactly the circle the <a href="/en/blog/emotional-dependency-symptoms/">classic symptoms of emotional need</a> feed in silence, as long as nobody names it.</p>`,
+<p>The worst part? That departure «confirms» his original belief: people always end up abandoning me. And off he goes again, with the next one, worse. That's the circle the <a href="/en/blog/emotional-dependency-symptoms/">classic symptoms of emotional need</a> feed in silence, as long as nobody names it.</p>`,
     },
     {
       id: 'getting-out-male-version',
       title: "Getting out of it, the male version",
-      content: `<p>The underlying method is the same for everyone: the <a href="/en/blog/overcome-emotional-dependency/">12 exercises to overcome emotional dependency</a> work exactly the same way for men, stabilise, reclaim your life, consolidate. But there are three male specifics that change the game, and we may as well say them straight.</p>`,
+      content: `<p>The underlying method is the same for everyone: the <a href="/en/blog/overcome-emotional-dependency/">12 exercises to overcome emotional dependency</a> work just as well for men: stabilise, reclaim your life, consolidate. But there are three male specifics that change the game.</p>`,
       subsections: [
         {
           id: 'one-name-it-first',
           title: "Name it, first",
-          content: `<p>You can't work on a problem you call «she annoys me». The first victory is translating: behind my jealousy there's fear. Behind my anger there's need. It costs something, the first time, and it changes everything, because you can work on fear, not on «she annoys me».</p>`,
+          content: `<p>You can't work on a problem you call «she annoys me». The first victory is translating: behind my jealousy there's fear. Behind my anger there's need. It costs something, the first time, but it changes everything: you can work on fear, not on «she annoys me».</p>`,
         },
         {
           id: 'two-tell-one-friend',
           title: "Tell ONE friend",
-          content: `<p>Not ten, not on social media: one, the most reliable. Men massively underestimate what that unlocks, because they expect to be judged, and half the time they get back a «mate, me too». The taboo dies the moment you get it out of your head.</p>`,
+          content: `<p>Not ten, not on social media: one, the most reliable. Men massively underestimate what that unlocks, because they expect to be judged, and half the time they get back a «mate, me too».</p>`,
         },
         {
           id: 'three-therapy-isnt-defeat',
           title: "A therapist isn't a defeat",
-          content: `<p>It's a coach, literally. You'd hire a coach for sport or a mechanic for the car, wouldn't you? Attachment wounds are the same: there are people whose job it is, and the results are spectacular precisely with men, because they arrive with twenty years of unspoken words to catch up on.</p>
-<p>And one last word if you're the partner who recognised her man in this article: you can't do the work for him, and reassuring him more and more heals nothing, it feeds the system. What you can do? Name what you see, without contempt, once, clearly, and encourage him towards help. The rest belongs to him.</p>
+          content: `<p>A therapist is a coach. You'd hire a coach for sport or a mechanic for the car, wouldn't you? Attachment wounds are the same: there are people whose job it is, and the results are spectacular with men, because they arrive with twenty years of unspoken words to catch up on.</p>
+<p>A word if you're the partner who recognised her man in this article: you can't do the work for him, and reassuring him more and more heals nothing, it feeds the system. What you can do is name what you see once, clearly and without contempt, then encourage him to go and get help. The rest belongs to him.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Take stock, right now, in five minutes</p>
-<p class="blog-cta-texte">A set of questions assesses your attachment style through concrete situations, jealousy, control, emptiness, mood. Nobody will know, and you'll finally know yourself.</p>
+<p class="blog-cta-texte">A set of questions assesses your attachment style through concrete situations, jealousy, control, emptiness, mood. Nobody will know, and you'll finally know where you stand.</p>
 <a class="blog-cta-btn" href="/en/emotional-dependency-test/">Check where I stand</a>
 <p class="blog-cta-note">Free &middot; No sign-up &middot; Instant result</p>
 </div>

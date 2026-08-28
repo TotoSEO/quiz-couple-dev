@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "El amor y la dependencia emocional se parecen muchísimo vistos desde dentro. Misma intensidad, mismos pensamientos permanentes... y sin embargo todo los opone.",
   introduction: `<p>Es una pregunta que no nos atrevemos mucho a hacernos, porque da un poco de miedo: ¿lo quiero a él... o quiero sobre todo el hecho de que esté? ¿Es amor eso que me aprieta el estómago cuando no responde? ¿O es otra cosa?</p>
-<p>La confusión es normal, y hay que empezar por decirlo: <strong>vistos desde dentro, el amor intenso y la dependencia emocional se parecen mucho.</strong> En ambos casos piensas en él sin parar, odias su ausencia, sientes con fuerza. La diferencia se juega en otro sitio, en la dirección: el amor te lleva hacia él, la dependencia te hace huir de un vacío.</p>
+<p>La confusión es normal: <strong>vistos desde dentro, el amor intenso y la dependencia emocional se parecen mucho.</strong> En ambos casos piensas en él sin parar, odias su ausencia, sientes con fuerza. La diferencia se juega en otro sitio, en la dirección: el amor te lleva hacia él, la dependencia te hace huir de un vacío.</p>
 <p>Vamos a hacerlo muy concreto, con las 7 diferencias que separan a los dos y un experimento mental que vale más que cualquier discurso.</p>`,
   quickSummary: [
     "La intensidad no separa nada: amor y dependencia pueden ser igual de fuertes.",
@@ -60,8 +60,8 @@ const article: BlogArticleData = {
     {
       id: 'responder-a-la-pregunta',
       title: "Entonces, ¿amor o dependencia? Responder de una vez",
-      content: `<p>Recapitulemos lo que puedes hacer, en concreto, para salir de esta pregunta que lleva semanas dando vueltas en tu cabeza.</p>
-<p>Repasa las 7 diferencias y cuenta tus líneas con honestidad. Haz el test del finde, de verdad si se presenta la ocasión: las respuestas imaginadas son útiles, las vividas son definitivas. Háblalo con alguien que te conocía antes de esta relación y hazle LA pregunta incómoda: «¿cómo me ves, desde que estoy con él?»</p>
+      content: `<p>Tres cosas que hacer para dejar de dar vueltas.</p>
+<p>Repasa las 7 diferencias y cuenta tus líneas. Haz el test del finde, de verdad si se presenta la ocasión: las respuestas imaginadas son útiles, las vividas son definitivas. Y háblalo con alguien que te conocía antes de él. Hazle LA pregunta incómoda: «¿cómo me ves, desde que estoy con él?»</p>
 <p>Y si quieres una medida tranquila, estructurada, que no dependa de tu humor de esa noche...</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Amor, costumbre o dependencia: mídelo de verdad</p>
@@ -69,7 +69,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/es/test-dependencia-emocional/">Obtener mi respuesta</a>
 <p class="blog-cta-note">Gratis &middot; Sin registro &middot; Resultado inmediato</p>
 </div>
-<p>Una última cosa, para terminar con suavidad. Si descubres que tu forma de querer se inclina hacia la dependencia, no lo conviertas en un veredicto sobre tu historia. No significa que tu amor sea falso ni que tu pareja esté condenada. Significa que quieres con un miedo viejo colgado a la espalda, y que ese miedo se puede soltar. Muchas parejas atraviesan este trabajo y salen con un vínculo más ligero que antes. La tuya también puede.</p>
+<p>Una última cosa. Si descubres que tu forma de querer se inclina hacia la dependencia, no lo conviertas en un veredicto sobre tu historia. No significa que tu amor sea falso ni que tu pareja esté condenada. Significa que quieres con un miedo viejo colgado a la espalda, y que ese miedo se puede soltar. Muchas parejas atraviesan este trabajo y salen con un vínculo más ligero que antes. La tuya también puede.</p>
 <a href="/es/blog/dependencia-emocional-en-la-pareja/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leer también</span><span class="blog-read-also-title">Dependencia emocional: cuando querer se vuelve una necesidad vital</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

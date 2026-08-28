@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "On ne finit jamais de se découvrir, on arrête juste de chercher. Ces 60 questions relancent la recherche, à deux.",
   introduction: `<p>Fais l'expérience un jour : demande à un couple installé depuis dix ans s'ils se connaissent par cœur. Ils diront oui, évidemment. Puis pose-leur trois questions un peu précises, le rêve qu'il a abandonné, la peur qu'elle ne dit jamais, ce que chacun croit que l'autre pense de lui... et regarde les visages. Il y a toujours une surprise. Toujours !</p>
 <p><strong>Parce qu'on ne finit jamais de connaître quelqu'un. On arrête juste de chercher, et c'est très différent.</strong> La bonne nouvelle, c'est que la curiosité, ça se rallume : il suffit de reposer des vraies questions, et d'écouter les réponses comme au premier jour.</p>
-<p>Ces 60 questions se posent À DEUX : chacun répond à chaque question, à tour de rôle. C'est la règle du jeu, et c'est elle qui change tout... parce qu'on découvre autant en répondant qu'en écoutant. Cinq thèmes, du passé à l'avenir. Installez-vous bien.</p>`,
+<p>Ces 60 questions se posent À DEUX : chacun répond à chaque question, à tour de rôle. C'est la règle du jeu, et c'est elle qui change tout, parce qu'on découvre autant en répondant qu'en écoutant. Cinq thèmes, du passé à l'avenir. Installez-vous bien.</p>`,
   quickSummary: [
     "60 questions à se poser À DEUX : chacun répond, à tour de rôle.",
     "Cinq thèmes : vos racines, votre quotidien, vos profondeurs, votre couple, vos envies.",
@@ -63,7 +63,7 @@ const article: BlogArticleData = {
     {
       id: 'vos-profondeurs',
       title: "Vos profondeurs : ce qu'on ne demande jamais (25-36)",
-      content: `<p>La série des grandes conversations. Un thème par soirée, pas plus... et laissez les réponses respirer.</p>
+      content: `<p>La série des grandes conversations. Un thème par soirée, pas plus, et laissez les réponses respirer.</p>
 <ol start="25">
 <li>De quoi as-tu peur que tu ne dis jamais à voix haute ?</li>
 <li>Qu'est-ce que tu crois que je pense de toi... et qui est peut-être faux ?</li>
@@ -80,13 +80,13 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 La règle qui protège cette série</p>
-<p>Ce que l'autre confie ici ne ressort JAMAIS en dispute. Jamais. C'est le contrat implicite des vraies conversations : si une confidence devient une munition, c'était la dernière. Protégez ce que vous récoltez là... c'est le trésor du jeu.</p>
+<p>Ce que l'autre confie ici ne ressort JAMAIS en dispute. Jamais. C'est le contrat implicite des vraies conversations : si une confidence devient une munition, c'était la dernière. Protégez ce que vous récoltez là, c'est le trésor du jeu.</p>
 </aside>`,
     },
     {
       id: 'votre-couple',
       title: "Votre couple, vu de l'intérieur (37-48)",
-      content: `<p>Maintenant qu'on est échauffés... parlons de vous. Ces questions font le point sans faire le procès, et c'est tout leur art.</p>
+      content: `<p>Maintenant qu'on est échauffés, parlons de vous. Ces questions font le point sans faire le procès.</p>
 <ol start="37">
 <li>C'est quoi notre plus belle réussite, à nous deux ?</li>
 <li>Quel moment de notre histoire tu revivrais tel quel ?</li>
@@ -105,7 +105,7 @@ const article: BlogArticleData = {
     {
       id: 'vos-envies',
       title: "Vos envies et la suite (49-60)",
-      content: `<p>On finit tournés vers l'avant. Ces douze questions dessinent la suite... et elles réservent souvent les plus belles surprises du jeu.</p>
+      content: `<p>On finit tournés vers l'avant. Ces douze questions dessinent la suite, et elles réservent souvent les plus belles surprises du jeu.</p>
 <ol start="49">
 <li>Qu'est-ce que tu as envie qu'on ose, qu'on n'a jamais osé ?</li>
 <li>C'est quoi ton fantasme de voyage, même irréaliste ?</li>
@@ -124,8 +124,8 @@ const article: BlogArticleData = {
     {
       id: 'transformer-l-essai',
       title: "Et maintenant, transformez l'essai",
-      content: `<p>Si vous avez joué le jeu jusqu'ici, vous avez récolté des surprises, c'est garanti. Gardez le réflexe : dix questions par soirée, une fois par mois, et votre couple ne retombera jamais dans le pilote automatique. C'est exactement le même principe que les grandes soirées de <a href="/questions-couple/">questions pour couple</a>... l'habitude en plus.</p>
-<p>Il reste un truc amusant à faire avec tout ce que vous venez d'apprendre. Vous croyez avoir bien écouté l'autre ? Vraiment bien ?</p>
+      content: `<p>Si vous avez joué le jeu jusqu'ici, vous avez récolté des surprises. Gardez le réflexe : dix questions par soirée, une fois par mois, et votre couple ne retombera jamais dans le pilote automatique. C'est le même principe que les grandes soirées de <a href="/questions-couple/">questions pour couple</a>, l'habitude en plus.</p>
+<p>Reste un truc amusant à faire avec tout ça : vérifier qui a le mieux écouté.</p>
 <div><table><thead><tr><th>Le territoire</th><th>Ce qu'on y trouve</th></tr></thead><tbody>
 <tr><td>Vos racines</td><td>Ce qui a fabriqué ses réflexes, bien avant toi</td></tr>
 <tr><td>Votre quotidien</td><td>Les petites choses qui pèsent et qu'on ne dit pas</td></tr>
@@ -139,7 +139,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/quiz-qui-connait-mieux-partenaire/">Lancer le défi</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; À jouer à deux</p>
 </div>
-<p>Et si ces soirées de questions deviennent votre rituel préféré, il y a de quoi tenir des mois : les <a href="/blog/questions-a-poser-a-son-copain/">100 questions côté copain</a> côté elle, les <a href="/blog/questions-a-poser-a-sa-copine/">questions à poser à sa copine</a> côté lui... et le niveau au-dessus quand vous serez prêts, mais ça, vous le découvrirez tout seuls.</p>
+<p>Et si ces soirées deviennent votre rituel, il y a de quoi tenir des mois : les <a href="/blog/questions-a-poser-a-son-copain/">100 questions à poser à son copain</a> d'un côté, les <a href="/blog/questions-a-poser-a-sa-copine/">questions à poser à sa copine</a> de l'autre.</p>
 <a href="/blog/questions-intimes-couple/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">65 questions intimes à poser à son copain, des plus douces aux plus osées</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

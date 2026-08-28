@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "L'amore e la dipendenza affettiva si somigliano enormemente visti dall'interno. Stessa intensità, stessi pensieri permanenti... eppure tutto li oppone.",
   introduction: `<p>È una domanda che non si osa troppo farsi, perché fa un po' paura: lo amo lui... o amo soprattutto il fatto che ci sia? È amore, questa cosa che mi stringe lo stomaco quando non risponde? O è altro?</p>
-<p>La confusione è normale, e bisogna cominciare col dirlo: <strong>visti dall'interno, l'amore intenso e la dipendenza affettiva si somigliano molto.</strong> In entrambi i casi pensi a lui di continuo, detesti la sua assenza, senti forte. La differenza si gioca altrove, sulla direzione: l'amore ti porta verso di lui, la dipendenza ti fa fuggire un vuoto.</p>
+<p>La confusione è normale: <strong>visti dall'interno, l'amore intenso e la dipendenza affettiva si somigliano molto.</strong> In entrambi i casi pensi a lui di continuo, detesti la sua assenza, senti forte. La differenza si gioca altrove, sulla direzione: l'amore ti porta verso di lui, la dipendenza ti fa fuggire un vuoto.</p>
 <p>Rendiamolo molto concreto, con le 7 differenze che distinguono i due e un esperimento mentale che vale più di qualsiasi discorso.</p>`,
   quickSummary: [
     "L'intensità non distingue niente: amore e dipendenza possono essere ugualmente forti.",
@@ -60,8 +60,8 @@ const article: BlogArticleData = {
     {
       id: 'rispondere-alla-domanda',
       title: "Allora, amore o dipendenza? Rispondere una volta per tutte",
-      content: `<p>Ricapitoliamo cosa puoi fare, concretamente, per uscire da questa domanda che gira in tondo da settimane nella tua testa.</p>
-<p>Riprendi le 7 differenze e conta onestamente le tue righe. Fai il test del weekend, davvero se se ne presenta l'occasione: le risposte immaginate sono utili, quelle vissute sono definitive. Parlane con qualcuno che ti conosceva prima di questa relazione, e fagli LA domanda scomoda: «come mi trovi, da quando sto con lui?»</p>
+      content: `<p>Tre cose da fare per smettere di girare in tondo.</p>
+<p>Riprendi le 7 differenze e conta le tue righe. Fai il test del weekend, davvero se se ne presenta l'occasione: le risposte immaginate sono utili, quelle vissute sono definitive. E parlane con qualcuno che ti conosceva prima di lui. Fagli LA domanda scomoda: «come mi trovi, da quando sto con lui?»</p>
 <p>E se vuoi una misura tranquilla, strutturata, che non dipenda dal tuo umore della sera...</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Amore, abitudine o dipendenza: misuralo davvero</p>
@@ -69,7 +69,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/it/test-dipendenza-affettiva/">Ottenere la mia risposta</a>
 <p class="blog-cta-note">Gratis &middot; Senza registrazione &middot; Risultato immediato</p>
 </div>
-<p>Un'ultima cosa, per finire con dolcezza. Se scopri che il tuo modo di amare pende verso la dipendenza, non trasformarlo in un verdetto sulla tua storia. Non vuol dire né che il tuo amore sia falso, né che la tua coppia sia condannata. Vuol dire che ami con una vecchia paura appesa alla schiena, e che quella paura si può posare. Molte coppie attraversano questo lavoro e ne escono con un legame più leggero di prima. Anche la tua può.</p>
+<p>Un'ultima cosa. Se scopri che il tuo modo di amare pende verso la dipendenza, non trasformarlo in un verdetto sulla tua storia. Non vuol dire né che il tuo amore sia falso, né che la tua coppia sia condannata. Vuol dire che ami con una vecchia paura appesa alla schiena, e che quella paura si può posare. Molte coppie attraversano questo lavoro e ne escono con un legame più leggero di prima. Anche la tua può.</p>
 <a href="/it/blog/dipendenza-affettiva-nella-coppia/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leggi anche</span><span class="blog-read-also-title">Dipendenza affettiva: quando amare diventa un bisogno vitale</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
