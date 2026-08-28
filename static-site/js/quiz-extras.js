@@ -488,6 +488,37 @@
     obs.observe(document.body, { childList: true, subtree: true });
   }
 
+  // ── Retour d'un « Recommencer » ────────────────────────────────────
+  // Ce bouton recharge la page plutot que de redessiner le bloc sur place :
+  // la reprise compte alors comme une page vue, et tout repart vraiment de
+  // zero. Reste a ramener la vue sur le moteur, sinon la personne qui voulait
+  // rejouer se retrouve en haut de l'article, loin du test.
+  //
+  // On attend que le moteur ait du contenu : il se monte apres le
+  // telechargement de ses questions, donc bien apres le chargement du HTML.
+  // Passe six secondes on renonce, plutot que de faire sauter la page sous les
+  // doigts de quelqu'un qui a commence a lire.
+  function replaceSurLeMoteur() {
+    var vu;
+    try {
+      vu = sessionStorage.getItem('qc-rejoue');
+      if (!vu) return;
+      sessionStorage.removeItem('qc-rejoue');
+    } catch (e) { return; }
+    // La restauration automatique du defilement avait ete coupee le temps du
+    // rechargement : on la rend au navigateur.
+    try { history.scrollRestoration = 'auto'; } catch (e) {}
+    var debut = Date.now();
+    (function attends() {
+      var m = document.querySelector('#quiz-engine, [data-quiz], #astro-form, #dn-outil, #vacances-racine');
+      if (m && (m.textContent || '').trim().length > 20) {
+        m.scrollIntoView({ block: 'start' });
+        return;
+      }
+      if (Date.now() - debut < 6000) setTimeout(attends, 120);
+    })();
+  }
+
   function boot() {
     document.body.classList.add('quiz-page');
     var pq = document.getElementById('pq-reviews');
@@ -499,6 +530,7 @@
     watchStart(slug);
     initReviews(slug);
     resultRating();
+    replaceSurLeMoteur();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);

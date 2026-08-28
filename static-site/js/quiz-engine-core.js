@@ -1745,6 +1745,29 @@ var QuizEngine = (function() {
     }
   }
 
+  // ── Recommencer : on recharge la page ─────────────────────
+  // Le bouton redessinait le bloc du moteur sur place. La partie repartait
+  // bien de zero, mais l'URL ne bougeait pas : rien ne comptait comme une page
+  // vue, alors que c'est le bouton le plus clique de l'ecran de resultat.
+  // Un rechargement rend cette reprise visible dans les mesures, et remet la
+  // page entiere dans son etat de depart sans qu'aucun moteur ait a se
+  // souvenir de ce qu'il doit reinitialiser.
+  //
+  // Le rappel du moteur est tout de meme execute avant : c'est lui qui efface
+  // la partie enregistree en local. Sans lui, le rechargement la restaurerait
+  // aussitot et ramenerait droit a l'ecran de resultat qu'on voulait quitter.
+  // Le redessin qu'il declenche au passage n'est jamais peint, la navigation
+  // est demandee dans la meme tache.
+  function recommenceLaPage(rappel) {
+    try { if (typeof rappel === 'function') rappel(); } catch (e) {}
+    // Sans ca le navigateur rouvre la page a la hauteur ou elle etait, soit au
+    // milieu d'un ecran de resultat qui n'existe plus. Le drapeau dit a
+    // quiz-extras de ramener la vue sur le moteur une fois celui-ci en place.
+    try { history.scrollRestoration = 'manual'; } catch (e) {}
+    try { sessionStorage.setItem('qc-rejoue', '1'); } catch (e) {}
+    location.reload();
+  }
+
   // Les actions d'apres-resultat : partager en premier, puis rejouer.
   function zoneActions(opts) {
     var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
@@ -1763,7 +1786,9 @@ var QuizEngine = (function() {
     // « Autres questions » et « Recommencer » faisaient la même promesse à un
     // tirage près, côte à côte, au moment où il fallait au contraire une seule
     // sortie évidente. Il ne reste que la reprise depuis le début.
-    if (opts.restart) bouton('🔄', tg('result.restartFromBeginning', 'Recommencer'), opts.restart, true);
+    if (opts.restart) bouton('🔄', tg('result.restartFromBeginning', 'Recommencer'), function () {
+      recommenceLaPage(opts.restart);
+    }, true);
     if (opts.changePlayers) bouton('👥', tg('result.changePlayers', 'Changer de joueurs'), opts.changePlayers);
     if (actions.childNodes.length) zone.appendChild(actions);
     return zone;

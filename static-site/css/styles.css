@@ -5689,7 +5689,14 @@ h1, h2, h3, h4, h5, h6,
 .qr-plan {
   display: grid; gap: 1.25rem;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-areas: "resultat" "actions" "avis" "suite" "story";
+  /* Le bloc de renvoi vient juste sous la carte de resultat. Il etait tout en
+     bas : sur un ecran de 390px, son premier lien tombait a 923px, sous un
+     ecran entier de defilement, derriere le partage, le bouton de reprise et
+     les etoiles. Or c'est le seul bloc de la page qui ouvre une autre page, et
+     le moment ou on vient de lire son verdict est celui ou l'envie d'en faire
+     un autre est la plus forte. Sur bureau il occupe deja une colonne collante
+     visible d'entree, la disposition en deux colonnes ne bouge donc pas. */
+  grid-template-areas: "resultat" "suite" "actions" "avis" "story";
   max-width: 72rem; margin: 0 auto;
 }
 .qr-zone--resultat { grid-area: resultat; }
