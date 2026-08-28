@@ -94,7 +94,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'quelle-che-non-si-osa',
-      title: "Quelle che non si osa fare... e che evitano i malintesi (46-52)",
+      title: "Quelle che non si osa fare, e che evitano i malintesi (46-52)",
       content: `<p>Le sette domande che tutti rigirano in testa senza tirarle fuori. Sono scomode per trenta secondi, ed evitano mesi di malintesi. Scegli il tuo momento, respira, e vai.</p>
 <ol start="46">
 <li>Siamo esclusivi, o non ce lo siamo mai detti davvero?</li>

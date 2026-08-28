@@ -94,7 +94,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'las-que-no-se-atreve',
-      title: "Las que no se atreve uno a hacer... y que evitan malentendidos (46-52)",
+      title: "Las que no se atreve uno a hacer, y que evitan malentendidos (46-52)",
       content: `<p>Las siete preguntas que todo el mundo da vueltas en la cabeza sin soltarlas. Son incómodas treinta segundos, y evitan meses de malentendidos. Elige tu momento, respira y adelante.</p>
 <ol start="46">
 <li>¿Somos exclusivos o nunca lo hemos dicho realmente?</li>

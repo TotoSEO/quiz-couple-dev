@@ -94,7 +94,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'celles-qu-on-n-ose-pas',
-      title: "Celles qu'on n'ose pas poser... et qui évitent les malentendus (46-52)",
+      title: "Celles qu'on n'ose pas poser, et qui évitent les malentendus (46-52)",
       content: `<p>Les sept questions que tout le monde tourne dans sa tête sans les sortir. Elles sont inconfortables trente secondes, et elles évitent des mois de malentendus. Choisis ton moment, respire, et vas-y.</p>
 <ol start="46">
 <li>On est exclusifs, ou on ne s'est jamais vraiment dit ?</li>

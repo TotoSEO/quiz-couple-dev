@@ -94,7 +94,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'the-ones-you-dont-dare',
-      title: "The ones you don't dare ask... and that prevent misunderstandings (46-52)",
+      title: "The ones you don't dare ask, and that prevent misunderstandings (46-52)",
       content: `<p>The seven questions everyone turns over in their head without letting them out. They're uncomfortable for thirty seconds, and they save months of misunderstanding. Choose your moment, breathe, and go.</p>
 <ol start="46">
 <li>Are we exclusive, or have we never actually said?</li>

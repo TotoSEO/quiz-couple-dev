@@ -94,7 +94,7 @@ const article: BlogArticleData = {
     },
     {
       id: 'die-man-sich-nicht-traut',
-      title: "Die, die man sich nicht traut... und die Missverständnisse verhindern (46-52)",
+      title: "Die, die man sich nicht traut, und die Missverständnisse verhindern (46-52)",
       content: `<p>Die sieben Fragen, die jeder im Kopf wälzt, ohne sie auszusprechen. Sie sind dreißig Sekunden unangenehm, und sie ersparen Monate an Missverständnissen. Wähl deinen Moment, atme, und los.</p>
 <ol start="46">
 <li>Sind wir exklusiv, oder haben wir das nie wirklich gesagt?</li>
