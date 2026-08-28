@@ -11,13 +11,13 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Paare scheitern fast nie an fehlender Liebe. Sie scheitern an Themen, die sie nie auf den Tisch gelegt haben.",
-  introduction: `<p>Es gibt eine Statistik, die niemand berechnet und die jeder kennt: Die meisten großen Beziehungskrisen drehen sich um Themen... von denen beide wussten, dass man eines Tages darüber reden müsste: Geld, Kinder, Schwiegereltern, die Aufteilung der Aufgaben. Das «eines Tages» kam schlicht zu spät, mitten in der Krise, im denkbar schlechtesten Moment, um in Ruhe zu reden.</p>
-<p><strong>Über die Zukunft zu reden hat noch nie eine solide Geschichte getötet, während das Schweigen darüber viele getötet hat.</strong> Und anders als man denkt, sind diese Gespräche weder feierlich noch schwer... gut geführt gehören sie sogar zu den aufregendsten, die ein Paar haben kann!</p>
+  introduction: `<p>Die meisten großen Beziehungskrisen drehen sich um Themen, von denen beide wussten, dass man eines Tages darüber reden müsste: Geld, Kinder, Schwiegereltern, die Aufteilung der Aufgaben. Das «eines Tages» kam schlicht zu spät, mitten in der Krise, im denkbar schlechtesten Moment, um in Ruhe zu reden.</p>
+<p><strong>Über die Zukunft zu reden hat noch nie eine solide Geschichte getötet, während das Schweigen darüber viele getötet hat.</strong> Und diese Gespräche sind weder feierlich noch schwer. Gut geführt gehören sie sogar zu den aufregendsten, die ein Paar haben kann!</p>
 <p>Hier sind 60 Zukunftsfragen, nach großen Etappen geordnet: vor dem Zusammenziehen, vor der endgültigen Bindung, vor einem Kind, rund ums Geld und über eure gemeinsamen Träume. Zum Herauspicken, BEVOR die Themen dringend werden, genau darin liegt ihr Wert.</p>`,
   quickSummary: [
     "60 Fragen nach Etappen geordnet: zusammenziehen, binden, ein Kind, Geld, Träume.",
     "Das Prinzip: darüber reden, bevor es dringend ist, nie mitten in der Krise.",
-    "Ihr müsst nicht in allem einer Meinung sein... aber wissen, wo die Abstände liegen.",
+    "Ihr müsst nicht in allem einer Meinung sein, aber wissen, wo die Abstände liegen.",
     "Eine Etappe nach der anderen: Diese Gespräche genießt man über Wochen.",
     "Die Antworten verändern sich: Die besten Zukunftsfragen stellt man jedes Jahr neu.",
   ],
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'vor-dem-zusammenziehen',
       title: "Vor dem Zusammenziehen (1-15)",
-      content: `<p>Das Zusammenleben ist der erste echte Test konkreter Passung... und der am meisten unterschätzte. Man zieht wegen eines Gefühls zusammen und lebt mit Gewohnheiten!</p>
+      content: `<p>Das Zusammenleben ist der erste echte Test konkreter Passung, und der am meisten unterschätzte. Man zieht wegen eines Gefühls zusammen und lebt mit Gewohnheiten!</p>
 <ol>
 <li>Wie viel Alleinsein brauchst du in einer normalen Woche, in ehrlichen Stunden?</li>
 <li>Ordentlich oder chaotisch: Wo stehst du, und was erträgst du beim anderen?</li>
@@ -41,9 +41,9 @@ const article: BlogArticleData = {
 <li>Was hast du an deinen früheren Wohnsituationen gehasst, WG inklusive?</li>
 <li>Welche Rituale von vorher behalten wir, wenn wir zusammenwohnen?</li>
 <li>Was ist deine Definition eines gelungenen gemeinsamen Zuhauses, in drei Worten?</li>
-<li>Und wenn die ersten sechs Monate schlecht laufen... was vereinbaren wir jetzt für diesen Fall?</li>
+<li>Und wenn die ersten sechs Monate schlecht laufen, was vereinbaren wir jetzt für diesen Fall?</li>
 </ol>
-<p>Wenn dich die Hälfte dieser Antworten überrascht, ist das kein schlechtes Zeichen, im Gegenteil: besser jetzt entdecken. Und um daraus eine überlegte Entscheidung zu machen, gleicht der <a href="/de/zusammenziehen-test-paare/">Test «bereit zusammenzuziehen»</a> eure Antworten Punkt für Punkt ab... das erspart, die Unterschiede erst mit ausgepackten Kisten zu entdecken.</p>`,
+<p>Wenn dich die Hälfte dieser Antworten überrascht, ist das kein schlechtes Zeichen, im Gegenteil: besser jetzt entdecken. Und um daraus eine überlegte Entscheidung zu machen, gleicht der <a href="/de/zusammenziehen-test-paare/">Test «bereit zusammenzuziehen»</a> eure Antworten Punkt für Punkt ab, und das erspart, die Unterschiede erst mit ausgepackten Kisten zu entdecken.</p>`,
     },
     {
       id: 'vor-der-bindung',
@@ -57,16 +57,16 @@ const article: BlogArticleData = {
 <li>Treue: Definieren wir sie gleich? Prüfen wir das.</li>
 <li>Was machen wir, wenn einer von uns durch einen echten Sturm geht, Arbeitslosigkeit, Krankheit, Depression?</li>
 <li>Welchen Platz wird deine Familie in unserem Leben haben? Und meine?</li>
-<li>Was ist dein Paarmodell, das, das dich inspiriert... und das, das dir als Warnung dient?</li>
+<li>Was ist dein Paarmodell, das, das dich inspiriert, und das, das dir als Warnung dient?</li>
 <li>Was wirst du nie opfern, auch nicht für uns?</li>
 <li>Wie gehen wir mit unseren Unterschieden in Religion, Kultur oder Werten um, falls es welche gibt?</li>
 <li>Was würde für dich eine Trennung rechtfertigen? Harte Frage, nützliche Antwort.</li>
 <li>Wie stellst du dir unsere Wochenenden in zehn Jahren vor?</li>
 <li>Was haben die verheirateten Paare um dich herum deiner Meinung nach verpasst?</li>
 <li>Was brauchst du, um dich IN der Bindung frei zu fühlen?</li>
-<li>Und wenn jeder von uns seine Definition von «wir» aufschreibt... wetten, dass sie verschieden sind?</li>
+<li>Und wenn jeder von uns seine Definition von «wir» aufschreibt? Wetten, dass sie verschieden sind?</li>
 </ol>
-<p>Die 20 und die 26 verdienen einen eigenen Abend. Und wenn ihr durch seid, stellt der <a href="/de/ehe-kompatibilitaetstest/">Test «bereit für die Ehe»</a> eure Antworten einander gegenüber, schwarz auf weiß... es ist erstaunlich, was dabei herauskommt.</p>`,
+<p>Die 20 und die 26 verdienen einen eigenen Abend. Und wenn ihr durch seid, stellt der <a href="/de/ehe-kompatibilitaetstest/">Test «bereit für die Ehe»</a> eure Antworten einander gegenüber, schwarz auf weiß, und es ist erstaunlich, was dabei herauskommt.</p>`,
     },
     {
       id: 'vor-einem-kind',
@@ -80,16 +80,16 @@ const article: BlogArticleData = {
 <li>Was ist dein Erziehungsmodell: fester Rahmen, Freiheit, und woher kommt es?</li>
 <li>Was geben wir weiter, was Religion, Werte, Traditionen angeht?</li>
 <li>Welche Rolle bekommen die Großeltern, und welche Grenzen?</li>
-<li>Wie stellst du dir vor, dass wir ein Paar bleiben... während wir Eltern werden?</li>
+<li>Wie stellst du dir vor, dass wir ein Paar bleiben, während wir Eltern werden?</li>
 <li>Was ist deine größte Angst daran, Vater oder Mutter zu werden?</li>
 <li>Was haben deine Eltern falsch gemacht, das du unbedingt vermeiden willst?</li>
 <li>Und was haben sie richtig gemacht, das du wiederholen willst?</li>
 <li>Bildschirme, Zucker, Strafen: drei heikle Themen, positionieren wir uns jetzt?</li>
-<li>Wenn unser Kind ganz anders wäre als vorgestellt... was würde dann noch zählen?</li>
+<li>Wenn unser Kind ganz anders wäre als vorgestellt, was würde dann noch zählen?</li>
 <li>Wo wohnen wir in diesem Szenario? In der Nähe von wem?</li>
-<li>Und wenn einer von uns seine Meinung zu Kindern ändert... was versprechen wir uns heute, hier?</li>
+<li>Und wenn einer von uns seine Meinung zu Kindern ändert, was versprechen wir uns heute, hier?</li>
 </ol>
-<p>Kein Paar ist hier «in allem einer Meinung», keine Sorge. Das Ziel sind null blinde Flecken... und der <a href="/de/elternschafts-bereitschaftstest/">Test «bereit für ein Baby»</a> macht genau diese Abgleicharbeit, Thema für Thema.</p>`,
+<p>Kein Paar ist hier «in allem einer Meinung», keine Sorge. Das Ziel sind null blinde Flecken, und der <a href="/de/elternschafts-bereitschaftstest/">Test «bereit für ein Baby»</a> macht genau diese Abgleicharbeit, Thema für Thema.</p>`,
     },
     {
       id: 'geld-und-grosse-entscheidungen',
@@ -105,13 +105,13 @@ const article: BlogArticleData = {
 <li>Was würdest du tun, wenn wir morgen erben oder eine große Summe gewinnen?</li>
 <li>Die Familie finanziell unterstützen: Wie weit ist das für dich normal?</li>
 <li>Wie wird bei uns eine große Entscheidung getroffen: Konsens, abwechselnd, eigene Bereiche?</li>
-<li>Welche Ausgabe anderer Paare findest du absurd... und welche von dir finde ich absurd?</li>
+<li>Welche Ausgabe anderer Paare findest du absurd, und welche von dir finde ich absurd?</li>
 </ol>`,
     },
     {
       id: 'eure-gemeinsamen-traeume',
       title: "Eure gemeinsamen Träume (56-60)",
-      content: `<p>Zum Schluss der Treibstoff. Denn eine Beziehung ist nicht nur gelungenes Management... sie ist eine Richtung, auf die man Lust hat. Fünf bleiben übrig, die schönsten.</p>
+      content: `<p>Zum Schluss der Treibstoff. Denn eine Beziehung ist nicht nur gelungenes Management, sie ist auch eine Richtung, auf die man Lust hat. Fünf bleiben übrig, die schönsten.</p>
 <ol start="56">
 <li>Was ist der Traum, den wir beide nie laut ausgesprochen haben?</li>
 <li>Wenn wir uns ein völlig verrücktes Jahr gönnen würden, wie sähe es aus?</li>
@@ -121,9 +121,9 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Das Ritual, das alles verändert</p>
-<p>Die Antworten auf diese 60 Fragen sind nicht in Stein gemeißelt: Sie bewegen sich mit den Jahren und den Ereignissen. Paare, die halten, gehen die großen Fragen regelmäßig neu durch, einmal im Jahr, zum Beispiel am Jahrestag des Kennenlernens... Dieser Termin ist mehr wert als alle Verträge der Welt.</p>
+<p>Die Antworten auf diese 60 Fragen sind nicht in Stein gemeißelt: Sie bewegen sich mit den Jahren und den Ereignissen. Paare, die halten, gehen die großen Fragen regelmäßig neu durch, einmal im Jahr, zum Beispiel am Jahrestag des Kennenlernens. Dieser Termin ist mehr wert als alle Verträge der Welt.</p>
 </aside>
-<p>Und wenn dir diese Zukunftsgespräche Lust auf die großen Diskussionen gemacht haben, deckt die <a href="/de/fragen-fuer-paare/">vollständige Sammlung an Fragen für zwei</a> alle anderen Register ab... von den leichtesten bis zu den tiefsten, es reicht für Jahre voller Abende.</p>
+<p>Und wenn dir diese Zukunftsgespräche Lust auf die großen Diskussionen gemacht haben, deckt die <a href="/de/fragen-fuer-paare/">vollständige Sammlung an Fragen für zwei</a> alle anderen Register ab, von den leichtesten bis zu den tiefsten. Es reicht für Jahre voller Abende.</p>
 <div><table><thead><tr><th>Die Etappe</th><th>Das Thema, das man zu spät entdeckt</th></tr></thead><tbody>
 <tr><td>Vor dem Zusammenziehen</td><td>Wer was zahlt, und was passiert, wenn einer den Job verliert</td></tr>
 <tr><td>Vor der Bindung</td><td>Was jeder hinter dem Wort «Bindung» versteht</td></tr>

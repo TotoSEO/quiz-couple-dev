@@ -11,15 +11,15 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-20T11:16:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "The start of a relationship is the only moment when you could ask anything... and the moment when you dare ask nothing. Let's fix that.",
-  introduction: `<p>Here's the paradox of early relationships: it's THE moment when the right questions would change everything, and it's the moment when we carefully avoid them, for fear of looking intense, of skipping a stage, of breaking the magic. So we move forward blind, all smiles, discovering the important information by accident, three months too late.</p>
-<p><strong>Asking questions early in a relationship isn't a lack of lightness, it's avoiding building with your eyes shut.</strong> It's all in the pacing: there are the first-month questions, the third-month ones... and the ones that can wait, because everything has its moment.</p>
-<p>Here are 60 deliberately paced questions, from the lightest to the most committing, plus a bonus list of the ones it's better NOT to ask straight away. Because at the start of a story, knowing when to stay quiet is sometimes as useful as knowing what to ask.</p>`,
+  introduction: `<p>The start of a relationship is THE moment when the right questions would change everything, and it's also the moment when we carefully avoid them, for fear of looking intense, of skipping a stage, of breaking the magic. So we move forward blind, all smiles, discovering the important information by accident, three months too late.</p>
+<p><strong>Asking questions early in a relationship isn't a lack of lightness, it's avoiding building with your eyes shut.</strong> It's all in the pacing: there are the first-month questions, the third-month ones, and the ones that can wait.</p>
+<p>Here are 60 deliberately paced questions, from the lightest to the most committing, plus a bonus list of the ones it's better NOT to ask straight away. Because at the start of a story, some questions really do gain from waiting their turn.</p>`,
   quickSummary: [
     "60 questions paced by stage: after the first dates, then over the following weeks.",
     "The principle: one conversation at a time, never a full check-up.",
     "The values questions slip into real life, not into a solemn face-to-face.",
     "The ones you don't dare ask (exclusivity, expectations) are often the ones that prevent painful misunderstandings.",
-    "Bonus: the 8 questions NOT to ask too early... and why.",
+    "Bonus: the 8 questions NOT to ask too early, and why.",
   ],
   sections: [
     {
@@ -47,7 +47,7 @@ const article: BlogArticleData = {
     {
       id: 'over-the-weeks',
       title: "Over the weeks: digging without skipping a stage (16-30)",
-      content: `<p>The relationship is settling in, and so is trust. This is the moment to understand how this person works... particularly in a relationship, since that is the subject after all.</p>
+      content: `<p>The relationship is settling in, and so is trust. This is the moment to understand how this person works, and particularly how they work in a relationship.</p>
 <ol start="16">
 <li>How do you show that something's wrong: do you talk, withdraw, wait?</li>
 <li>What's your relationship with your phone when you're with someone?</li>
@@ -67,13 +67,13 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 The best moment for these questions? Never the solemn face-to-face</p>
-<p>Questions 16 to 30 land badly in interview mode... and wonderfully well in real life: in the car, walking, cooking. Parallel gazes loosen tongues far better than eye contact. Save the face-to-face for cuddles, not for questions.</p>
+<p>Questions 16 to 30 land badly in interview mode, and wonderfully well in real life: in the car, walking, cooking. Parallel gazes loosen tongues far better than eye contact. Save the face-to-face for cuddles, not for questions.</p>
 </aside>`,
     },
     {
       id: 'the-deeper-questions',
       title: "The deeper questions: values and compatibility (31-45)",
-      content: `<p>When it gets serious, these fifteen questions check that you're looking in the same direction. You don't need to agree on everything, but it's better to know the gaps early than to discover them married.</p>
+      content: `<p>When it gets serious, these fifteen questions check that you're looking in the same direction. You don't need to agree on everything, but it's better to know the gaps early than to discover them once you're married.</p>
 <ol start="31">
 <li>What's a successful life, for you, in ten years?</li>
 <li>What place does work take in your ideal life?</li>
@@ -95,7 +95,7 @@ const article: BlogArticleData = {
     {
       id: 'the-ones-you-dont-dare',
       title: "The ones you don't dare ask... and that prevent misunderstandings (46-52)",
-      content: `<p>The seven questions everyone turns over in their head without letting them out. They're uncomfortable for thirty seconds... and they save months of misunderstanding. Choose your moment, breathe, and go.</p>
+      content: `<p>The seven questions everyone turns over in their head without letting them out. They're uncomfortable for thirty seconds, and they save months of misunderstanding. Choose your moment, breathe, and go.</p>
 <ol start="46">
 <li>Are we exclusive, or have we never actually said?</li>
 <li>What are you looking for at the moment: a relationship, or are you letting things come?</li>
@@ -110,16 +110,16 @@ const article: BlogArticleData = {
     {
       id: 'not-to-ask-too-early',
       title: "Bonus: the 8 questions NOT to ask too early (53-60)",
-      content: `<p>Yes, they count among the 60... because knowing how to hold them back is an early-relationship skill in its own right! Each has its hour. Asked too early, it weighs the moment down; asked at the right time, it moves things forward.</p>
+      content: `<p>Yes, they count among the 60, because knowing to wait for the right moment is part of the exercise! Each has its hour. Asked too early, it weighs the moment down; asked at the right time, it moves things forward.</p>
 <ol start="53">
 <li><strong>«What was the problem with your ex?»</strong> Too early, you get either a prosecution case or an awkward silence. Romantic history arrives on its own, once trust is there.</li>
-<li><strong>«Do you love me?»</strong> Asked before it's felt, it forces an answer... and a forced answer is worth nothing. Watch the gestures instead, they speak earlier than words.</li>
-<li><strong>«When are we moving in together?»</strong> Everything in its time, and that particular time has its own questionnaire... later.</li>
+<li><strong>«Do you love me?»</strong> Asked before it's felt, it forces an answer, and a forced answer is worth nothing. Watch the gestures instead, they speak earlier than words.</li>
+<li><strong>«When are we moving in together?»</strong> Everything in its time, and that particular time has its own questionnaire, later.</li>
 <li><strong>«How much do you earn?»</strong> The relationship with money, yes (question 34). The figure, no. Not yet.</li>
 <li><strong>«Why are you still single?»</strong> The great classic that means to be a compliment and sounds like a suspicion.</li>
 <li><strong>«Your parents are going to adore me, don't you think?»</strong> Meeting the family is a stage, not a second-week topic.</li>
-<li><strong>«How many partners have you had?»</strong> No good answer, no good moment, no good reason. Honestly, none.</li>
-<li><strong>«Will we still be together in five years?»</strong> That one you'll answer together... by being there. It's the only known good method.</li>
+<li><strong>«How many partners have you had?»</strong> No good answer, no good moment. Honestly, no reason to ask it.</li>
+<li><strong>«Will we still be together in five years?»</strong> That one you'll answer together, by being there.</li>
 </ol>
 <div><table><thead><tr><th>The question</th><th>Why not now</th><th>When it makes sense</th></tr></thead><tbody>
 <tr><td>«What are we, the two of us?»</td><td>Too early, it forces an answer nobody has</td><td>When the weeks have given you something to go on</td></tr>
@@ -131,7 +131,7 @@ const article: BlogArticleData = {
     {
       id: 'and-if-its-the-right-moment',
       title: "And after these 60 questions?",
-      content: `<p>If you've asked even half of all that over the weeks, you already know the essentials: how this person works, what they're looking for, and whether your directions line up. That's infinitely more than most couples know at the same stage.</p>
+      content: `<p>If you've asked even half of all that over the weeks, you already know the essentials: how this person works, what they're looking for, and whether your directions line up. That's already far more than most couples know at the same stage.</p>
 <p>What remains is the question that questions don't settle: what YOU feel. The attachment building up, is it friendship overflowing, attraction passing through, or the start of the real thing? At some point you have to ask yourself straight.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Overflowing friendship or the start of love?</p>

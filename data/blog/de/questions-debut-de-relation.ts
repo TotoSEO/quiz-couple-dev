@@ -11,15 +11,15 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-20T11:16:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Der Beginn einer Beziehung ist der einzige Moment, in dem man alles fragen könnte... und der, in dem man sich nichts zu fragen traut. Reparieren wir das.",
-  introduction: `<p>Hier ist das Paradox des Beziehungsanfangs: Es ist DER Moment, in dem die richtigen Fragen alles verändern würden, und es ist der Moment, in dem man sie sorgfältig vermeidet... aus Angst, intensiv zu wirken, eine Etappe zu überspringen, den Zauber zu zerstören. Also geht man blind voran, mit einem Lächeln, und entdeckt die wichtigen Informationen zufällig, drei Monate zu spät.</p>
-<p><strong>Am Beziehungsanfang Fragen zu stellen ist kein Mangel an Leichtigkeit, es heißt nur, nicht mit geschlossenen Augen zu bauen.</strong> Alles liegt in der Dosierung: Es gibt die Fragen des ersten Monats, die des dritten... und die, die warten können, denn alles hat seine Zeit.</p>
-<p>Hier sind 60 bewusst dosierte Fragen, von den leichtesten bis zu den verbindlichsten, mit einer Bonusliste derer, die man besser NICHT sofort stellt. Denn am Anfang einer Geschichte ist Schweigenkönnen manchmal genauso nützlich wie Fragenkönnen.</p>`,
+  introduction: `<p>Der Beziehungsanfang ist DER Moment, in dem die richtigen Fragen alles verändern würden, und es ist zugleich der Moment, in dem man sie sorgfältig vermeidet, aus Angst, intensiv zu wirken, eine Etappe zu überspringen, den Zauber zu zerstören. Also geht man blind voran, mit einem Lächeln, und entdeckt die wichtigen Informationen zufällig, drei Monate zu spät.</p>
+<p><strong>Am Beziehungsanfang Fragen zu stellen ist kein Mangel an Leichtigkeit, es heißt nur, nicht mit geschlossenen Augen zu bauen.</strong> Alles liegt in der Dosierung: Es gibt die Fragen des ersten Monats, die des dritten, und die, die warten können.</p>
+<p>Hier sind 60 bewusst dosierte Fragen, von den leichtesten bis zu den verbindlichsten, mit einer Bonusliste derer, die man besser NICHT sofort stellt. Denn am Anfang einer Geschichte gewinnen manche Fragen deutlich, wenn sie warten.</p>`,
   quickSummary: [
     "60 nach Etappen dosierte Fragen: nach den ersten Dates, dann im Lauf der Wochen.",
     "Das Prinzip: ein Gespräch nach dem anderen, nie ein kompletter Check-up.",
     "Die Wertefragen schleichen sich ins echte Leben ein, nicht in ein feierliches Gegenüber.",
     "Die, die man sich nicht traut (Exklusivität, Erwartungen), verhindern oft schmerzhafte Missverständnisse.",
-    "Bonus: die 8 Fragen, die man NICHT zu früh stellt... und warum.",
+    "Bonus: die 8 Fragen, die man NICHT zu früh stellt, und warum.",
   ],
   sections: [
     {
@@ -47,7 +47,7 @@ const article: BlogArticleData = {
     {
       id: 'im-lauf-der-wochen',
       title: "Im Lauf der Wochen: tiefer gehen, ohne Etappen zu überspringen (16-30)",
-      content: `<p>Die Beziehung setzt sich, das Vertrauen auch. Jetzt ist der Moment, zu verstehen, wie dieser Mensch funktioniert... vor allem in einer Beziehung, denn darum geht es schließlich.</p>
+      content: `<p>Die Beziehung setzt sich, das Vertrauen auch. Jetzt ist der Moment, zu verstehen, wie dieser Mensch funktioniert, und vor allem, wie er in einer Beziehung funktioniert.</p>
 <ol start="16">
 <li>Wie zeigst du, dass etwas nicht stimmt: redest du, ziehst du dich zurück, wartest du ab?</li>
 <li>Wie ist dein Verhältnis zum Handy, wenn du mit jemandem zusammen bist?</li>
@@ -67,13 +67,13 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Der beste Moment für diese Fragen? Nie das feierliche Gegenüber</p>
-<p>Die Fragen 16 bis 30 kommen im Interviewmodus schlecht an... und im echten Leben wunderbar: im Auto, beim Gehen, beim Kochen. Parallele Blicke lösen die Zunge viel besser als Augenkontakt. Heb das Gegenüber für Umarmungen auf, nicht für Fragen.</p>
+<p>Die Fragen 16 bis 30 kommen im Interviewmodus schlecht an, und im echten Leben wunderbar: im Auto, beim Gehen, beim Kochen. Parallele Blicke lösen die Zunge viel besser als Augenkontakt. Heb das Gegenüber für Umarmungen auf, nicht für Fragen.</p>
 </aside>`,
     },
     {
       id: 'die-grundfragen',
       title: "Die Grundfragen: Werte und Passung (31-45)",
-      content: `<p>Wenn es ernst wird, prüfen diese fünfzehn Fragen, ob ihr in dieselbe Richtung schaut. Ihr müsst nicht in allem einer Meinung sein, aber es ist besser, die Abstände früh zu kennen, als sie verheiratet zu entdecken.</p>
+      content: `<p>Wenn es ernst wird, prüfen diese fünfzehn Fragen, ob ihr in dieselbe Richtung schaut. Ihr müsst nicht in allem einer Meinung sein, aber es ist besser, die Abstände früh zu kennen, als sie erst als Verheiratete zu entdecken.</p>
 <ol start="31">
 <li>Was ist für dich in zehn Jahren ein gelungenes Leben?</li>
 <li>Welchen Platz nimmt Arbeit in deinem idealen Leben ein?</li>
@@ -95,7 +95,7 @@ const article: BlogArticleData = {
     {
       id: 'die-man-sich-nicht-traut',
       title: "Die, die man sich nicht traut... und die Missverständnisse verhindern (46-52)",
-      content: `<p>Die sieben Fragen, die jeder im Kopf wälzt, ohne sie auszusprechen. Sie sind dreißig Sekunden unangenehm... und sie ersparen Monate an Missverständnissen. Wähl deinen Moment, atme, und los.</p>
+      content: `<p>Die sieben Fragen, die jeder im Kopf wälzt, ohne sie auszusprechen. Sie sind dreißig Sekunden unangenehm, und sie ersparen Monate an Missverständnissen. Wähl deinen Moment, atme, und los.</p>
 <ol start="46">
 <li>Sind wir exklusiv, oder haben wir das nie wirklich gesagt?</li>
 <li>Was suchst du gerade: eine Geschichte, oder lässt du es kommen?</li>
@@ -110,16 +110,16 @@ const article: BlogArticleData = {
     {
       id: 'nicht-zu-frueh-fragen',
       title: "Bonus: die 8 Fragen, die man NICHT zu früh stellt (53-60)",
-      content: `<p>Ja, sie zählen zu den 60... denn sie zurückhalten zu können ist eine eigenständige Beziehungsanfang-Kompetenz! Jede hat ihre Stunde. Zu früh gestellt drückt sie die Stimmung; im richtigen Moment bringt sie euch weiter.</p>
+      content: `<p>Ja, sie zählen zu den 60, denn den richtigen Moment abzuwarten gehört zur Übung dazu! Jede hat ihre Stunde. Zu früh gestellt drückt sie die Stimmung; im richtigen Moment bringt sie euch weiter.</p>
 <ol start="53">
 <li><strong>«Was war das Problem mit deiner Ex?»</strong> Zu früh bekommst du entweder eine Anklageschrift oder eine peinliche Stille. Die Liebesvergangenheit kommt von allein, wenn Vertrauen da ist.</li>
-<li><strong>«Liebst du mich?»</strong> Vor dem Gefühl gestellt, erzwingt sie eine Antwort... und eine erzwungene Antwort ist nichts wert. Beobachte lieber die Gesten, sie sprechen früher als Worte.</li>
-<li><strong>«Wann ziehen wir zusammen?»</strong> Alles zu seiner Zeit, und diese Zeit hat übrigens einen eigenen Fragebogen... später.</li>
+<li><strong>«Liebst du mich?»</strong> Vor dem Gefühl gestellt, erzwingt sie eine Antwort, und eine erzwungene Antwort ist nichts wert. Beobachte lieber die Gesten, sie sprechen früher als Worte.</li>
+<li><strong>«Wann ziehen wir zusammen?»</strong> Alles zu seiner Zeit, und diese Zeit hat übrigens einen eigenen Fragebogen, später.</li>
 <li><strong>«Wie viel verdienst du?»</strong> Das Verhältnis zu Geld, ja (Frage 34). Die Zahl, nein. Noch nicht.</li>
 <li><strong>«Warum bist du eigentlich noch Single?»</strong> Der große Klassiker, der ein Kompliment sein will und wie ein Verdacht klingt.</li>
 <li><strong>«Deine Eltern werden mich lieben, oder?»</strong> Die Familie kennenzulernen ist eine Etappe, kein Thema für die zweite Woche.</li>
-<li><strong>«Wie viele Partner hattest du?»</strong> Keine gute Antwort, kein guter Moment, kein guter Grund. Ehrlich, keiner.</li>
-<li><strong>«Sind wir in fünf Jahren noch zusammen?»</strong> Die beantwortet ihr gemeinsam... indem ihr dort seid. Es ist die einzige bekannte gute Methode.</li>
+<li><strong>«Wie viele Partner hattest du?»</strong> Keine gute Antwort, kein guter Moment. Ehrlich, kein Grund, sie zu stellen.</li>
+<li><strong>«Sind wir in fünf Jahren noch zusammen?»</strong> Die beantwortet ihr gemeinsam, indem ihr dort seid.</li>
 </ol>
 <div><table><thead><tr><th>Die Frage</th><th>Warum nicht jetzt</th><th>Wann sie Sinn ergibt</th></tr></thead><tbody>
 <tr><td>«Was sind wir eigentlich?»</td><td>Zu früh erzwingt sie eine Antwort, die niemand hat</td><td>Wenn die Wochen Anhaltspunkte geliefert haben</td></tr>
@@ -131,7 +131,7 @@ const article: BlogArticleData = {
     {
       id: 'und-wenn-es-der-richtige-moment-ist',
       title: "Und nach diesen 60 Fragen?",
-      content: `<p>Wenn du auch nur die Hälfte davon im Lauf der Wochen gestellt hast, weißt du schon das Wesentliche: wie dieser Mensch funktioniert, was er sucht, und ob eure Richtungen zusammenpassen. Das ist unendlich viel mehr, als die meisten Paare im selben Stadium wissen.</p>
+      content: `<p>Wenn du auch nur die Hälfte davon im Lauf der Wochen gestellt hast, weißt du schon das Wesentliche: wie dieser Mensch funktioniert, was er sucht, und ob eure Richtungen zusammenpassen. Das ist schon deutlich mehr, als die meisten Paare im selben Stadium wissen.</p>
 <p>Bleibt die Frage, die Fragen nicht klären: was DU fühlst. Die wachsende Bindung, ist das überfließende Freundschaft, vorbeiziehende Anziehung, oder der Anfang der echten Sache? Irgendwann muss man sie sich offen stellen.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Überfließende Freundschaft oder beginnende Liebe?</p>

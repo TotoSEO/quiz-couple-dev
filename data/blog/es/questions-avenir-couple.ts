@@ -11,13 +11,13 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Las parejas casi nunca fracasan por falta de amor. Fracasan por temas que nunca habían puesto sobre la mesa.",
-  introduction: `<p>Hay una estadística que nadie calcula pero que todo el mundo conoce: la mayoría de las grandes crisis de pareja giran sobre temas... que los dos sabían que habría que hablar algún día: el dinero, los hijos, la familia política, el reparto de las tareas. El «algún día» simplemente llegó tarde, en plena crisis, en el peor momento para hablarlo con calma.</p>
-<p><strong>Hablar del futuro nunca ha matado una historia sólida, mientras que no hablarlo ha matado muchas.</strong> Y al contrario de lo que se cree, estas conversaciones no son solemnes ni pesadas... bien llevadas, ¡son incluso de las más emocionantes que puede tener una pareja!</p>
-<p>Aquí van 60 preguntas sobre el futuro, clasificadas por gran etapa: antes de vivir juntos, antes de comprometerse de verdad, antes de un hijo, en torno al dinero y sobre vuestros sueños comunes. Para picotear ANTES de que los temas se vuelvan urgentes... ahí está todo su interés.</p>`,
+  introduction: `<p>La mayoría de las grandes crisis de pareja giran sobre temas que los dos sabían que habría que hablar algún día: el dinero, los hijos, la familia política, el reparto de las tareas. El «algún día» simplemente llegó tarde, en plena crisis, en el peor momento para hablarlo con calma.</p>
+<p><strong>Hablar del futuro nunca ha matado una historia sólida, mientras que no hablarlo ha matado muchas.</strong> Y estas conversaciones no son ni solemnes ni pesadas. Bien llevadas, ¡son incluso de las más emocionantes que puede tener una pareja!</p>
+<p>Aquí van 60 preguntas sobre el futuro, clasificadas por gran etapa: antes de vivir juntos, antes de comprometerse de verdad, antes de un hijo, en torno al dinero y sobre vuestros sueños comunes. Para picotear ANTES de que los temas se vuelvan urgentes, ahí está todo su interés.</p>`,
   quickSummary: [
     "60 preguntas clasificadas por etapa: vivir juntos, comprometerse, un hijo, el dinero, los sueños.",
     "El principio: hablarlo antes de que sea urgente, nunca en plena crisis.",
-    "No hace falta estar de acuerdo en todo... pero sí saber dónde están las diferencias.",
+    "No hace falta estar de acuerdo en todo, pero sí saber dónde están las diferencias.",
     "Una etapa cada vez: estas conversaciones se saborean a lo largo de semanas.",
     "Las respuestas evolucionan: las mejores preguntas sobre el futuro se repiten cada año.",
   ],
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'antes-de-vivir-juntos',
       title: "Antes de vivir juntos (1-15)",
-      content: `<p>La convivencia es la primera prueba real de compatibilidad concreta... y la más subestimada. ¡Se convive por un sentimiento y se sobrevive con hábitos!</p>
+      content: `<p>La convivencia es la primera prueba real de compatibilidad concreta, y la más subestimada. ¡Se convive por un sentimiento y se sobrevive con hábitos!</p>
 <ol>
 <li>¿Cuánta soledad necesitas en una semana normal, en horas honestas?</li>
 <li>Ordenado o desordenado: ¿dónde te sitúas y qué soportas del otro?</li>
@@ -41,9 +41,9 @@ const article: BlogArticleData = {
 <li>¿Qué detestaste de tus convivencias pasadas, pisos compartidos incluidos?</li>
 <li>¿Qué rituales de antes conservamos cuando vivamos juntos?</li>
 <li>¿Cuál es tu definición de una casa nuestra lograda, en tres palabras?</li>
-<li>¿Y si los seis primeros meses fueran mal... qué nos decimos ahora para ese momento?</li>
+<li>¿Y si los seis primeros meses fueran mal, qué nos decimos ahora para ese momento?</li>
 </ol>
-<p>Si la mitad de estas respuestas te sorprenden, no es mala señal, al contrario: mejor descubrirlas ahora. Y para convertirlo en una decisión serena, el <a href="/es/test-vivir-juntos-pareja/">test «listos para vivir juntos»</a> cruza vuestras respuestas punto por punto... evita descubrir las diferencias con las cajas ya desmontadas.</p>`,
+<p>Si la mitad de estas respuestas te sorprenden, no es mala señal, al contrario: mejor descubrirlas ahora. Y para convertirlo en una decisión serena, el <a href="/es/test-vivir-juntos-pareja/">test «listos para vivir juntos»</a> cruza vuestras respuestas punto por punto, y evita descubrir las diferencias con las cajas ya desmontadas.</p>`,
     },
     {
       id: 'antes-de-comprometerse',
@@ -57,7 +57,7 @@ const article: BlogArticleData = {
 <li>La fidelidad, ¿la definimos igual? Comprobémoslo.</li>
 <li>¿Qué hacemos si uno de los dos atraviesa una tormenta de verdad, paro, enfermedad, depresión?</li>
 <li>¿Qué lugar tendrá tu familia en nuestra vida? ¿Y la mía?</li>
-<li>¿Cuál es tu modelo de pareja, el que te inspira... y el que te sirve de advertencia?</li>
+<li>¿Cuál es tu modelo de pareja, el que te inspira, y el que te sirve de advertencia?</li>
 <li>¿Qué no sacrificarás nunca, ni siquiera por nosotros?</li>
 <li>¿Cómo gestionamos nuestras diferencias de religión, cultura o valores, si las hay?</li>
 <li>¿Qué justificaría, para ti, una separación? Pregunta dura, respuesta útil.</li>
@@ -66,7 +66,7 @@ const article: BlogArticleData = {
 <li>¿Qué necesitas para sentirte libre DENTRO del compromiso?</li>
 <li>¿Y si escribiéramos cada uno nuestra definición de «nosotros»? ¿Te apuestas a que son distintas?</li>
 </ol>
-<p>La 20 y la 26 merecen una noche entera para ellas solas. Y cuando hayáis hecho el recorrido, el <a href="/es/test-compatibilidad-matrimonio/">test «listos para el matrimonio»</a> pone vuestras respuestas cara a cara, negro sobre blanco... es sorprendente lo que se descubre.</p>`,
+<p>La 20 y la 26 merecen una noche entera para ellas solas. Y cuando hayáis hecho el recorrido, el <a href="/es/test-compatibilidad-matrimonio/">test «listos para el matrimonio»</a> pone vuestras respuestas cara a cara, negro sobre blanco, y es sorprendente lo que se descubre.</p>`,
     },
     {
       id: 'antes-de-un-hijo',
@@ -80,16 +80,16 @@ const article: BlogArticleData = {
 <li>¿Cuál es tu modelo de educación: marco firme, libertad, y de dónde viene?</li>
 <li>¿Qué transmitimos en cuanto a religión, valores, tradiciones?</li>
 <li>¿Qué papel tendrán los abuelos y qué límites?</li>
-<li>¿Cómo te imaginas que sigamos siendo pareja... siendo padres?</li>
+<li>¿Cómo te imaginas que sigamos siendo pareja siendo padres?</li>
 <li>¿Cuál es tu mayor miedo al ser padre o madre?</li>
 <li>¿Qué hicieron mal tus padres que quieres evitar a toda costa?</li>
 <li>¿Y qué hicieron bien que quieres reproducir?</li>
 <li>Pantallas, azúcar, castigos: tres temas espinosos, ¿nos posicionamos ya?</li>
-<li>Si nuestro hijo fuera muy distinto de lo que imaginamos... ¿qué seguiría importando?</li>
+<li>Si nuestro hijo fuera muy distinto de lo que imaginamos, ¿qué seguiría importando?</li>
 <li>¿Dónde vivimos en ese escenario? ¿Cerca de quién?</li>
-<li>¿Y si uno de los dos cambia de opinión sobre los hijos... qué nos prometemos hoy, aquí?</li>
+<li>¿Y si uno de los dos cambia de opinión sobre los hijos, qué nos prometemos hoy, aquí?</li>
 </ol>
-<p>Ninguna pareja está «de acuerdo en todo» aquí, tranquilo. El objetivo es cero ángulos muertos... y el <a href="/es/test-parentalidad-pareja/">test «listos para un bebé»</a> hace exactamente ese trabajo de verificación cruzada, tema por tema.</p>`,
+<p>Ninguna pareja está «de acuerdo en todo» aquí, tranquilo. El objetivo es cero ángulos muertos, y el <a href="/es/test-parentalidad-pareja/">test «listos para un bebé»</a> hace exactamente ese trabajo de verificación cruzada, tema por tema.</p>`,
     },
     {
       id: 'el-dinero-y-las-grandes-decisiones',
@@ -105,13 +105,13 @@ const article: BlogArticleData = {
 <li>¿Qué harías si mañana heredáramos o ganáramos una suma grande?</li>
 <li>Ayudar económicamente a la familia: ¿hasta dónde es normal para ti?</li>
 <li>Una gran decisión, ¿cómo se toma en nuestra casa: consenso, por turnos, ámbitos reservados?</li>
-<li>¿Cuál es el gasto de otras parejas que te parece absurdo... y el tuyo que a mí me parece absurdo?</li>
+<li>¿Cuál es el gasto de otras parejas que te parece absurdo, y el tuyo que a mí me parece absurdo?</li>
 </ol>`,
     },
     {
       id: 'vuestros-suenos-comunes',
       title: "Vuestros sueños comunes (56-60)",
-      content: `<p>Terminamos por el combustible. Porque una pareja no es solo una gestión lograda... es una dirección que da ganas. Quedan cinco, las más bonitas.</p>
+      content: `<p>Terminamos por el combustible. Porque una pareja no es solo una gestión lograda, es también una dirección que da ganas. Quedan cinco, las más bonitas.</p>
 <ol start="56">
 <li>¿Cuál es el sueño que nunca hemos formulado en voz alta, los dos?</li>
 <li>Si nos concediéramos un año completamente loco, ¿cómo sería?</li>
@@ -121,9 +121,9 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 El ritual que lo cambia todo</p>
-<p>Las respuestas a estas 60 preguntas no están grabadas: se mueven con los años y con los acontecimientos. Las parejas que duran repasan las grandes preguntas con regularidad, una vez al año, una noche de aniversario del encuentro por ejemplo... Esa cita vale por todos los contratos del mundo.</p>
+<p>Las respuestas a estas 60 preguntas no están grabadas: se mueven con los años y con los acontecimientos. Las parejas que duran repasan las grandes preguntas con regularidad, una vez al año, una noche de aniversario del encuentro por ejemplo. Esa cita vale por todos los contratos del mundo.</p>
 </aside>
-<p>Y si estas conversaciones sobre el futuro te han dado el gusto por las grandes discusiones, la <a href="/es/preguntas-pareja/">colección completa de preguntas para hacerse en pareja</a> cubre todos los demás registros... de las más ligeras a las más profundas, hay para años de noches.</p>
+<p>Y si estas conversaciones sobre el futuro te han dado el gusto por las grandes discusiones, la <a href="/es/preguntas-pareja/">colección completa de preguntas para hacerse en pareja</a> cubre todos los demás registros, de las más ligeras a las más profundas. Hay para años de noches.</p>
 <div><table><thead><tr><th>La etapa</th><th>El tema que se descubre demasiado tarde</th></tr></thead><tbody>
 <tr><td>Antes de vivir juntos</td><td>Quién paga qué y qué pasa si uno pierde el trabajo</td></tr>
 <tr><td>Antes de comprometerse</td><td>Lo que cada uno pone detrás de la palabra «compromiso»</td></tr>
