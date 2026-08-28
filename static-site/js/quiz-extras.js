@@ -265,8 +265,21 @@
         body: JSON.stringify(donnees)
       });
     }
+    // Un refus de la base passait totalement inapercu : la mesure disparaissait
+    // sans que rien ne le signale. C'est ainsi qu'une page a pu accumuler des
+    // lancements sans une seule partie terminee, alors que le navigateur
+    // envoyait bien la ligne. On retente sans le numero de visite, puis on dit
+    // en clair ce qui a ete refuse, avec la reponse de PostgREST : ouvrir la
+    // console sur la page suffit alors a lire la cause.
     poste(avec).then(function (r) {
-      if (!r.ok && visite) return poste(corps);
+      if (r.ok) return null;
+      if (visite) return poste(corps).then(function (r2) { return r2.ok ? null : r2; });
+      return r;
+    }).then(function (echec) {
+      if (!echec) return;
+      return echec.text().then(function (txt) {
+        console.warn('[quiz-couple] ' + table + ' refuse (' + echec.status + ') : ' + txt);
+      });
     }).catch(function () {});
   }
 

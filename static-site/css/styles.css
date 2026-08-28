@@ -2900,9 +2900,19 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 #quiz-engine .choice-btn { text-align: left; }
 .quiz-engine .quiz-add-player-btn { margin-bottom: 1.5rem; }
 
-/* Question entry animation */
-.quiz-question-enter { animation: quizSlideIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
-@keyframes quizSlideIn { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+/* Question entry animation
+   Chaque moteur redessine tout son bloc a chaque reponse. Ce bloc repartait
+   de opacity 0 et de 30px sur la droite : a chaque question, l'ecran entier
+   disparaissait puis revenait en glissant, ce qui se lit comme une saccade.
+   On garde une entree, mais discrete et deux fois plus courte : le bloc ne
+   disparait plus, il se pose. Le deplacement horizontal disparait, c'est lui
+   qui se voyait le plus.
+   transform: none en fin d'animation plutot que translateX(0) : une valeur
+   de transform figee par le fill-mode ferait du bloc un bloc conteneur pour
+   ses descendants en position fixed. */
+.quiz-question-enter { animation: quizSlideIn 0.2s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes quizSlideIn { from { opacity: 0.4; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .quiz-question-enter { animation: none; } }
 
 /* Quiz option buttons */
 .quiz-option {
@@ -4190,8 +4200,12 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 /* ── Result share button (primary virality CTA) ───────────── */
 
 .result-share-row {
-  display: flex; justify-content: center;
+  /* Colonne, et non ligne : cette zone porte le bouton de partage ET le bloc
+     de l'image story. En ligne, les deux se mettaient cote a cote et le
+     bouton sortait de l'ecran sur mobile. */
+  display: flex; flex-direction: column; align-items: stretch;
   max-width: 28rem; margin-left: auto; margin-right: auto;
+  min-width: 0;
 }
 .result-share-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem;
@@ -4214,6 +4228,10 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
    carrousel, le bouton « Ajouter en story ! » et les réseaux où
    l'image a sa place. Tout en arrondi, dans la charte. */
 .story-share {
+  /* min-width: 0 : sans lui, la largeur intrinseque du carrousel (trois
+     vignettes cote a cote) gonfle la colonne de grille du resultat et fait
+     sortir tout le bloc de l'ecran sur mobile. */
+  min-width: 0;
   margin-top: 1.25rem; padding: 1.25rem 1rem 1.375rem;
   border-radius: calc(var(--radius) + 8px);
   border: 1px solid hsl(var(--primary) / 0.18);
@@ -4224,6 +4242,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   font-size: 0.9375rem; font-weight: 700; color: hsl(var(--foreground));
 }
 .story-share-carrousel {
+  min-width: 0;
   display: flex; gap: 0.75rem; overflow-x: auto; padding: 0.375rem 0.25rem 0.625rem;
   scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
   scrollbar-width: none; justify-content: flex-start;
