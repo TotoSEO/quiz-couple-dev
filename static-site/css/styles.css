@@ -5689,13 +5689,19 @@ h1, h2, h3, h4, h5, h6,
 .qr-plan {
   display: grid; gap: 1.25rem;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-areas: "resultat" "actions" "avis" "suite";
+  grid-template-areas: "resultat" "actions" "avis" "suite" "story";
   max-width: 72rem; margin: 0 auto;
 }
 .qr-zone--resultat { grid-area: resultat; }
 .qr-zone--actions  { grid-area: actions; }
 .qr-zone--avis     { grid-area: avis; }
 .qr-zone--suite    { grid-area: suite; }
+/* Le bloc de l'image story n'avait pas de zone nommee : la grille le posait
+   en fin de flux par defaut, quel que soit son rang dans le DOM. Sa place est
+   maintenant declaree, au meme endroit mais volontairement. Il vient apres le
+   bloc de renvoi vers les autres tests, qui est le seul de la page a ouvrir
+   une autre page et n'a donc rien a gagner a etre repousse. */
+.qr-zone--story    { grid-area: story; }
 
 /* La zone du résultat porte la carte : c'est elle qu'on regarde en premier. */
 .qr-zone--resultat {
@@ -5764,7 +5770,8 @@ h1, h2, h3, h4, h5, h6,
     grid-template-areas:
       "resultat suite"
       "actions  suite"
-      "avis     suite";
+      "avis     suite"
+      "story    suite";
   }
   /* Le résultat est plus large que les questions : on libère le conteneur,
      uniquement quand un écran de résultat est là. */
@@ -8423,18 +8430,18 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .coquin-suivant { display: block; margin: 0 auto; }
 
 /* Palier de mi-partie : continuer ou s'arrêter. */
-.coquin-palier-icone { font-size: 3rem; line-height: 1; margin-bottom: 0.75rem; }
-.coquin-palier-titre {
+.coquin-palier-icone, .quiz-palier-icone { font-size: 3rem; line-height: 1; margin-bottom: 0.75rem; }
+.coquin-palier-titre, .quiz-palier-titre {
   font-family: Poppins, Inter, sans-serif;
   font-size: 1.5rem; font-weight: 800; line-height: 1.25; margin-bottom: 0.5rem;
 }
-.coquin-palier-score { font-size: 0.9375rem; font-weight: 600; color: hsl(var(--primary)); margin-bottom: 0.75rem; }
-.coquin-palier-texte {
+.coquin-palier-score, .quiz-palier-score { font-size: 0.9375rem; font-weight: 600; color: hsl(var(--primary)); margin-bottom: 0.75rem; }
+.coquin-palier-texte, .quiz-palier-texte {
   font-size: 0.9375rem; line-height: 1.6; color: hsl(var(--muted-foreground));
   max-width: 30rem; margin: 0 auto 1.75rem;
 }
-.coquin-palier-choix { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
-.coquin-palier-choix .btn { width: 100%; max-width: 22rem; }
+.coquin-palier-choix, .quiz-palier-choix { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+.coquin-palier-choix .btn, .quiz-palier-choix .btn { width: 100%; max-width: 22rem; }
 
 @media (max-width: 560px) {
   .coquin-duel { grid-template-columns: 1fr; gap: 0.5rem; }

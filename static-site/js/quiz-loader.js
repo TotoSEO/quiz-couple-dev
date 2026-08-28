@@ -214,26 +214,20 @@
     'karmique':       { prefix: 'karmique', engine: 'profile', totalQ: 20, pool: 20, quizType: 'karmique', typologie: 'karmique', categoryMap: { a: 'apaise', b: 'miroir', c: 'karmique' } },
 
     // ── Les 5 langages de l'amour (typologie à cinq axes) ──
-    // Le sens des lettres tourne d'une question à l'autre : cinq permutations
-    // qui se répètent tous les cinq questions, pour que chaque langage soit
-    // proposé autant de fois à chaque position et qu'on ne puisse pas répondre
-    // « toujours a » sans lire. La table est donc une fonction, pas un tableau.
-    'langage-amour':  { prefix: 'loveLanguage', engine: 'profile', totalQ: 30, pool: 30, quizType: 'langage-amour', typologie: 'langageAmour',
-      categoryMap: (function() {
-        var LANGS = ['words', 'acts', 'gifts', 'time', 'touch'];
-        var PERMS = [
-          [0, 1, 2, 3, 4], // words, acts,  gifts, time,  touch
-          [3, 4, 0, 1, 2], // time,  touch, words, acts,  gifts
-          [1, 2, 3, 4, 0], // acts,  gifts, time,  touch, words
-          [4, 0, 1, 3, 2], // touch, words, acts,  time,  gifts
-          [2, 3, 4, 0, 1]  // gifts, time,  touch, words, acts
-        ];
-        return function(optId, questionId) {
-          var col = ['a', 'b', 'c', 'd', 'e'].indexOf(optId);
-          if (col < 0) return null;
-          return LANGS[PERMS[(questionId - 1) % 5][col]];
-        };
-      })() },
+    // Deux longueurs, parce que trente questions d'affilee etaient trop : la
+    // page se lancait beaucoup et se terminait peu. La version courte en pose
+    // quinze, puis propose le resultat ou la suite. Les deux modes tirent dans
+    // le meme lot de trente et partagent la meme table : ce qui change est le
+    // rang auquel on s'arrete, pas ce qu'on mesure.
+    // Aucun desequilibre a craindre du tirage : chaque question propose les
+    // cinq langages en options, quinze questions les proposent donc quinze
+    // fois chacun, quelles que soient celles qui sortent.
+    'langage-amour':  { modesGrand: true, modes: [
+      { id: 'court',   emoji: '💗', prefix: 'loveLanguage', engine: 'profile', totalQ: 30, pool: 30, limite: 15,
+        quizType: 'langage-amour', typologie: 'langageAmour' },
+      { id: 'complet', emoji: '💞', prefix: 'loveLanguage', engine: 'profile', totalQ: 30, pool: 30,
+        quizType: 'langage-amour', typologie: 'langageAmour' }
+    ] },
 
     // ── Confiance quiz (solo scoring, trust assessment) ──
     // ── Dependance affective (solo, ascendant : plus de points = plus dependant) ──
@@ -1782,6 +1776,29 @@
     // reste du profil.
     langageAmour: {
       icone: '💕',
+      // Quel langage marque quelle lettre. Le sens des lettres tourne d'une
+      // question a l'autre : cinq permutations qui se repetent tous les cinq
+      // rangs, pour que chaque langage soit propose autant de fois a chaque
+      // position et qu'on ne puisse pas repondre « toujours a » sans lire.
+      // C'est donc une fonction, pas une table figee. Elle vit ici plutot que
+      // dans la configuration parce que les deux formats de la page la
+      // partagent : ils mesurent la meme chose, ils s'arretent seulement a des
+      // rangs differents.
+      carte: (function() {
+        var LANGS = ['words', 'acts', 'gifts', 'time', 'touch'];
+        var PERMS = [
+          [0, 1, 2, 3, 4], // words, acts,  gifts, time,  touch
+          [3, 4, 0, 1, 2], // time,  touch, words, acts,  gifts
+          [1, 2, 3, 4, 0], // acts,  gifts, time,  touch, words
+          [4, 0, 1, 3, 2], // touch, words, acts,  time,  gifts
+          [2, 3, 4, 0, 1]  // gifts, time,  touch, words, acts
+        ];
+        return function(optId, questionId) {
+          var col = ['a', 'b', 'c', 'd', 'e'].indexOf(optId);
+          if (col < 0) return null;
+          return LANGS[PERMS[(questionId - 1) % 5][col]];
+        };
+      })(),
       axes: [
         { id: 'words', color: '#6366f1', defaut: 'Paroles valorisantes' },
         { id: 'acts',  color: '#10b981', defaut: 'Services rendus' },
@@ -1902,7 +1919,18 @@
       prefix: cfg.prefix,
       lang: lang,
       labels: { icon: typo.icone },
-      categoryMap: cfg.categoryMap,
+      // La table vient de la page, ou a defaut de la typologie : celles dont
+      // le sens des lettres tourne la rangent avec leurs axes, pour qu'un
+      // format court et un format long ne puissent pas en avoir deux copies
+      // qui divergent.
+      categoryMap: cfg.categoryMap || typo.carte,
+      // Rang auquel le moteur propose le resultat une premiere fois. Absent
+      // pour les typologies qui posent toutes leurs questions d'un trait.
+      limite: cfg.limite,
+      // Duree annoncee sur l'ecran de depart. Sans elle, une page a deux
+      // formats affiche la meme estimation pour quinze et pour trente
+      // questions, et la version courte ne parait pas plus courte.
+      dureeMeta: cfg.id ? texteMode(cfg, cfg.id, 'Duree', null) : null,
       profiles: profiles,
       axes: axes,
       axisLabels: axisLabels
