@@ -10,29 +10,29 @@ const article: BlogArticleData = {
   featuredImageAlt: "Zwei Freundinnen, verbunden durch einen zu straff gespannten roten Faden zwischen ihren Handgelenken",
   publishedAt: '2026-11-14T16:55:00+01:00',
   author: AUTHORS['thomas'],
-  excerpt: "Wir achten auf emotionale Abhängigkeit in unseren Beziehungen... und lassen sie sich in unseren Freundschaften ganz ruhig einnisten, wo niemand nach ihr sucht.",
-  introduction: `<p>Es gibt eine Eifersucht, von der nie jemand spricht: die, die man fühlt, wenn die beste Freundin jemand anderem näherkommt. Dieser Stich, wenn sie von einem Abend erzählt, an dem man nicht dabei war... Dieses Bedürfnis zu wissen, dass man «die» Person bleibt, die Erste, die es erfährt, die Liebste. Man traut sich nicht, es zu sagen, weil es absurd klingt: Eifersucht, unter Freundinnen?</p>
-<p>Und doch. <strong>Emotionale Abhängigkeit ist eine Bindungsform, keine Exklusivität der Paarbeziehung: Sie nistet sich überall dort ein, wo Bindung ist.</strong> Und Freundschaft ist sogar ihr diskretestes Terrain, weil niemand hinschaut... Wir wiederholen «Freundinnen sind heilig», und unter dieser Fahne kippen ganze Bindungen sanft vom Kostbaren ins Verschmolzene, vom Verschmolzenen ins Erstickende.</p>
-<p>Schauen wir also genau hin: die Anzeichen einer zur Abhängigkeit gewordenen Freundschaft, auf beiden Seiten der Bindung, was das mit den betroffenen Freundschaften macht... und wie man neu ausbalanciert, ohne alles zu zerstören, denn das geht, und sogar leichter als in einer Beziehung.</p>`,
+  excerpt: "Wir achten auf emotionale Abhängigkeit in unseren Beziehungen, und lassen sie sich in unseren Freundschaften ganz ruhig einnisten, wo niemand nach ihr sucht.",
+  introduction: `<p>Es gibt eine Eifersucht, von der nie jemand spricht: die, die man fühlt, wenn die beste Freundin jemand anderem näherkommt. Dieser Stich, wenn sie von einem Abend erzählt, an dem man nicht dabei war. Dieses Bedürfnis zu wissen, dass man «die» Person bleibt, die Erste, die es erfährt, die Liebste. Man traut sich nicht, es zu sagen, weil es absurd klingt: Eifersucht, unter Freundinnen?</p>
+<p>Und doch. <strong>Emotionale Abhängigkeit ist eine Bindungsform, keine Exklusivität der Paarbeziehung: Sie nistet sich überall dort ein, wo Bindung ist.</strong> Und Freundschaft ist sogar ihr diskretestes Terrain, weil niemand hinschaut. Wir wiederholen «Freundinnen sind heilig», und unter dieser Fahne kippen ganze Bindungen sanft vom Kostbaren ins Verschmolzene, vom Verschmolzenen ins Erstickende.</p>
+<p>Schauen wir also genau hin: die Anzeichen einer zur Abhängigkeit gewordenen Freundschaft, und wie man neu ausbalanciert, ohne alles zu zerstören. Das geht, und sogar leichter als in einer Beziehung.</p>`,
   quickSummary: [
     "Emotionale Abhängigkeit nistet sich in allen Bindungen ein: Beziehung, Freundschaft, Familie.",
     "In der Freundschaft verkleidet sie sich als Loyalität: Exklusivität, Eifersucht unter Freundinnen, «die» Person sein müssen.",
     "Das zentrale Anzeichen ändert sich nicht: Dein emotionales Gleichgewicht hängt von den Signalen der anderen ab.",
-    "Eine gesunde Freundschaft übersteht Distanz, andere Bindungen und stille Phasen... ohne Drama.",
+    "Eine gesunde Freundschaft übersteht Distanz, andere Bindungen und stille Phasen, ohne Drama.",
     "Eine verschmolzene Freundschaft neu auszubalancieren funktioniert sehr gut, und ohne sie zu verlieren.",
   ],
   sections: [
     {
       id: 'die-gesichter-der-erstickenden-bindung',
       title: "Wie emotionale Abhängigkeit in Freundschaften aussieht",
-      content: `<p>Sie sieht nach überhaupt nichts Alarmierendem aus, genau das ist das Problem! Von Weitem wirkt sie sogar wie eine Musterfreundschaft: verschmolzen, intensiv, «wie Schwestern»... Die Anzeichen stecken in den Details, hier sind sie.</p>
+      content: `<p>Sie sieht nach überhaupt nichts Alarmierendem aus, genau das ist das Problem! Von Weitem wirkt sie sogar wie eine Musterfreundschaft: verschmolzen, intensiv, «wie Schwestern». Die Anzeichen stecken in den Details.</p>
 <ol>
-<li><strong>Die stille Exklusivität:</strong> Ihre neuen Freundschaften stechen dich. Eine Kollegin, die nah geworden ist, eine neue Sportfreundin... und schon bewertest du die Bedrohung. Eine gesunde Freundschaft freut sich über andere Bindungen; eine Freundschafts-Abhängigkeit erlebt sie als Konkurrenz.</li>
-<li><strong>Das Nachrichtenbarometer:</strong> Schnelle Antwort, heiterer Tag. Gelesen ohne Antwort, und schon scrollst du durch eure Gespräche, um zu verstehen, «was du gemacht hast»... Wenn ihre Antwortzeit deine Stimmung steuert, hat die Bindung ihre Natur geändert.</li>
+<li><strong>Die stille Exklusivität:</strong> Ihre neuen Freundschaften stechen dich. Eine Kollegin, die nah geworden ist, eine neue Sportfreundin, und schon bewertest du die Bedrohung. Eine gesunde Freundschaft freut sich über andere Bindungen; eine Freundschafts-Abhängigkeit erlebt sie als Konkurrenz.</li>
+<li><strong>Das Nachrichtenbarometer:</strong> Schnelle Antwort, heiterer Tag. Gelesen ohne Antwort, und schon scrollst du durch eure Gespräche, um zu verstehen, «was du gemacht hast». Wenn ihre Antwortzeit deine Stimmung steuert, hat die Bindung ihre Natur geändert.</li>
 <li><strong>Das Bedürfnis, es als Erste zu erfahren:</strong> Eine wichtige Nachricht aus ihrem Leben von jemand anderem zu hören verletzt dich unverhältnismäßig. Nicht enttäuscht: verletzt, wie bei einem Verrat. Es geht um den Status, mehr als um die Information.</li>
-<li><strong>Die still geführte Rechnung:</strong> Wer ruft öfter an, wer schlägt öfter etwas vor, wer ist letztes Mal gefahren... Eine Buchhaltung, die du nie zeigst, die aber im Hintergrund läuft und ihren Anteil an stummem Groll produziert.</li>
+<li><strong>Die still geführte Rechnung:</strong> Wer ruft öfter an, wer schlägt öfter etwas vor, wer ist letztes Mal gefahren. Eine Buchhaltung, die du nie zeigst, die aber im Hintergrund läuft und ihren Anteil an stummem Groll produziert.</li>
 <li><strong>Die Leere in stillen Phasen:</strong> Wenn sie weniger verfügbar ist, eine neue Beziehung, ein fordernder Job, ein Baby, fühlst du kein normales Vermissen: Du fühlst Verlassenwerden. Mit dieser Mischung aus Trauer und Wut, die man sonst Trennungen vorbehält.</li>
-<li><strong>Die Bindung, die die anderen aufgefressen hat:</strong> Weil ihr «die» Person füreinander seid, sind eure Welten um das Duo herum geschrumpft. Weniger neue Begegnungen, weniger gepflegte Bindungen... und eine enorme Fragilität: Dein ganzes Gleichgewicht ruht auf einem einzigen Faden.</li>
+<li><strong>Die Bindung, die die anderen aufgefressen hat:</strong> Weil ihr «die» Person füreinander seid, sind eure Welten um das Duo herum geschrumpft. Weniger neue Begegnungen, weniger gepflegte Bindungen, und eine enorme Fragilität: Dein ganzes Gleichgewicht ruht auf einem einzigen Faden.</li>
 </ol>
 <p>Dir wird auffallen, dass der Grundmechanismus genau der ist, den man <a href="/de/blog/emotionale-abhaengigkeit-symptome/">Symptom für Symptom in der Beziehung</a> beobachtet: Die andere ist zu deinem Gefühlsregler geworden. Nur die Kulisse hat gewechselt.</p>
 <div class="blog-verdict">
@@ -61,12 +61,12 @@ const article: BlogArticleData = {
     {
       id: 'woher-es-kommt',
       title: "Woher es kommt (und die anderen Gesichter der Abhängigkeit)",
-      content: `<p>Emotionale Abhängigkeit in Freundschaften wächst auf demselben Boden wie die anderen: eine alte Bindungsunsicherheit, die Verlassensangst, ein an den Blick der anderen gekoppeltes Selbstwertgefühl... Die <a href="/de/blog/emotionale-abhaengigkeit-in-beziehungen/">vollständige Mechanik</a> ist dieselbe, und das ist logisch: Wir haben nur ein Bindungssystem, und es funktioniert bei allen gleich.</p>
-<p>Deshalb kommt emotionale Abhängigkeit auch in mehreren Formen vor, oft bei derselben Person kombiniert: <strong>romantisch</strong> (die bekannteste), <strong>freundschaftlich</strong> (die von heute), <strong>familiär</strong> (der Erwachsene, der ohne das Okay eines Elternteils nichts entscheiden kann, oder umgekehrt der Elternteil, der an seinen erwachsenen Kindern klebt)... und eine diffuse Form, die allgemeine emotionale Abhängigkeit: das dauernde Bedürfnis nach Bestätigung, von wem auch immer, Kollegen und soziale Netzwerke inbegriffen.</p>
-<p>Ein nützlicher Hinweis: Wenn du dasselbe Muster in mehreren Bindungsarten wiederfindest, hör auf, das Problem bei den anderen zu suchen, es reist mit dir... Und das ist eine verkleidete gute Nachricht: Eine einzige Tiefenarbeit klärt alle Fronten auf einmal.</p>
+      content: `<p>Emotionale Abhängigkeit in Freundschaften wächst auf demselben Boden wie die anderen: eine alte Bindungsunsicherheit, die Verlassensangst, ein an den Blick der anderen gekoppeltes Selbstwertgefühl. Die <a href="/de/blog/emotionale-abhaengigkeit-in-beziehungen/">vollständige Mechanik</a> ist dieselbe, und das ist logisch: Wir haben nur ein Bindungssystem, und es funktioniert bei allen gleich.</p>
+<p>Deshalb kommt emotionale Abhängigkeit auch in mehreren Formen vor, oft bei derselben Person kombiniert: <strong>romantisch</strong> (die bekannteste), <strong>freundschaftlich</strong> (die von heute), <strong>familiär</strong> (der Erwachsene, der ohne das Okay eines Elternteils nichts entscheiden kann, oder umgekehrt der Elternteil, der an seinen erwachsenen Kindern klebt), und eine diffuse Form, die allgemeine emotionale Abhängigkeit: das dauernde Bedürfnis nach Bestätigung, von wem auch immer, Kollegen und soziale Netzwerke inbegriffen.</p>
+<p>Ein nützlicher Hinweis: Wenn du dasselbe Muster in mehreren Bindungsarten wiederfindest, hör auf, das Problem bei den anderen zu suchen, es reist mit dir. Und das ist eine verkleidete gute Nachricht: Eine einzige Tiefenarbeit klärt alle Fronten auf einmal.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Verschmolzene Freundschaft ist kein Schimpfwort</p>
-<p>Intensive Freundschaften, «beste Freundinnen seit der Grundschule», vierstündige Gespräche... nichts davon ist krankhaft! Freudige Verschmelzung ist eines der großen Glücke des Lebens. Die Grenze wird an derselben Stelle wie sonst überschritten: wenn Angst da ist, Überwachung, wiederkehrendes Leiden... und man es der anderen nicht mehr zu sagen wagt.</p>
+<p>Intensive Freundschaften, «beste Freundinnen seit der Grundschule», vierstündige Gespräche, nichts davon ist krankhaft! Freudige Verschmelzung ist eines der großen Glücke des Lebens. Die Grenze wird an derselben Stelle wie sonst überschritten: wenn Angst da ist, Überwachung, wiederkehrendes Leiden, und man es der anderen nicht mehr zu sagen wagt.</p>
 </aside>`,
     },
     {
@@ -77,26 +77,26 @@ const article: BlogArticleData = {
         {
           id: 'erweitert-jede-auf-ihrer-seite',
           title: "Erweitert, jede auf ihrer Seite",
-          content: `<p>Das Heilmittel ist nicht, sie weniger zu lieben, sondern breiter zu lieben: zwei andere Bindungen wieder investieren, eine Aktivität, einen Kreis... Jeder zusätzliche Faden nimmt dem Hauptfaden Gewicht, und die Freundschaft atmet besser. Das ist genau der Geist der <a href="/de/blog/emotionale-abhaengigkeit-ueberwinden/">Ausstiegsübungen aus der Abhängigkeit</a>, allen voran Phase 2, und sie gelten hier Zug um Zug.</p>`,
+          content: `<p>Das Heilmittel ist nicht, sie weniger zu lieben, sondern breiter zu lieben: zwei andere Bindungen wieder investieren, eine Aktivität, einen Kreis. Jeder zusätzliche Faden nimmt dem Hauptfaden Gewicht, und die Freundschaft atmet besser. Das ist genau der Geist der <a href="/de/blog/emotionale-abhaengigkeit-ueberwinden/">Ausstiegsübungen aus der Abhängigkeit</a>, allen voran Phase 2, und sie gelten hier Zug um Zug.</p>`,
         },
         {
           id: 'wage-das-gespraech',
           title: "Wage das Gespräch",
-          content: `<p>Die mutige Version: «Mir fällt auf, dass ich mich zu sehr an uns klammere, und ich will, dass wir kostbar bleiben, ohne dass es erdrückend wird»... Eine echte Freundin flieht vor diesem Gespräch nicht. Oft gibt sie sogar erleichtert zu, dass sie es kommen sah.</p>`,
+          content: `<p>Die mutige Version: «Mir fällt auf, dass ich mich zu sehr an uns klammere, und ich will, dass wir kostbar bleiben, ohne dass es erdrückend wird». Eine echte Freundin flieht vor diesem Gespräch nicht. Oft gibt sie sogar erleichtert zu, dass sie es kommen sah.</p>`,
         },
         {
           id: 'haeng-das-barometer-ab',
           title: "Häng das Barometer ab",
-          content: `<p>Wende die Fristregel an, bevor du auf ein Schweigen reagierst, hör mit der Buchhaltung auf, und vor allem: Deute ihre anderen Bindungen nicht mehr als Bedrohung. Ihre nette neue Kollegin hat nicht deinen Platz eingenommen... denn dein Platz ist kein Einzelsitz.</p>`,
+          content: `<p>Wende die Fristregel an, bevor du auf ein Schweigen reagierst, hör mit der Buchhaltung auf, und vor allem: Deute ihre anderen Bindungen nicht mehr als Bedrohung. Ihre nette neue Kollegin hat nicht deinen Platz eingenommen, denn dein Platz ist kein Einzelsitz.</p>`,
         },
         {
           id: 'ein-sonderfall-zum-beobachten',
           title: "Ein Sonderfall, den man im Auge behalten sollte",
-          content: `<p>Wenn dir beim Lesen auffällt, dass deine Freundin deine Abhängigkeit NÄHRT, Schuldgefühle, wenn du andere Leute triffst, strafende Kälte, eingeforderte Exklusivität... hat das Problem den Namen gewechselt. Ein Machtgefälle gibt es auch in Freundschaften, und man geht damit um wie mit anderen Machtgefällen, nicht wie mit einem emotionalen Ungleichgewicht.</p>
-<p>Ein letztes Wort, weil es tröstet: Freundschaften, die ein Neuausbalancieren durchlaufen, kommen fast immer stärker heraus. Weniger Abhängigkeit heißt weniger versteckter Groll, weniger maßlose Enttäuschungen... und mehr Platz für das, was Freundschaft unersetzlich macht: gewählt zu werden, frei, wieder und wieder. Das ist doch besser als notwendig zu sein, oder?</p>
+          content: `<p>Wenn dir beim Lesen auffällt, dass deine Freundin deine Abhängigkeit NÄHRT, Schuldgefühle, wenn du andere Leute triffst, strafende Kälte, eingeforderte Exklusivität, hat das Problem den Namen gewechselt. Ein Machtgefälle gibt es auch in Freundschaften, und man geht damit um wie mit anderen Machtgefällen, nicht wie mit einem emotionalen Ungleichgewicht.</p>
+<p>Und Freundschaften, die ein Neuausbalancieren durchlaufen, kommen fast immer stärker heraus. Weniger Abhängigkeit heißt weniger versteckter Groll, weniger maßlose Enttäuschungen, und mehr Platz für das, was Freundschaft unersetzlich macht: gewählt zu werden, frei, wieder und wieder. Das ist doch besser als notwendig zu sein, oder?</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Wo steht deine Bindungsfähigkeit?</p>
-<p class="blog-cta-texte">Der Test bewertet deinen grundlegenden Bindungsstil, den, der alle deine Beziehungen färbt, Freundschaften inbegriffen. Eine ruhige Momentaufnahme deiner Art zu lieben... und dich festzuhalten.</p>
+<p class="blog-cta-texte">Der Test bewertet deinen grundlegenden Bindungsstil, den, der alle deine Beziehungen färbt, Freundschaften inbegriffen. Eine ruhige Momentaufnahme deiner Art zu lieben, und dich festzuhalten.</p>
 <a class="blog-cta-btn" href="/de/emotionale-abhaengigkeit-test/">Meine Bindung einschätzen</a>
 <p class="blog-cta-note">Kostenlos &middot; Ohne Anmeldung &middot; Sofortiges Ergebnis</p>
 </div>
