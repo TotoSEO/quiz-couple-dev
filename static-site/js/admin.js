@@ -1082,6 +1082,28 @@
     return { finis: finis, lances: lances, ratio: lances ? Math.min(100, Math.round((finis / lances) * 100)) : null };
   }
 
+  // ── Pages dont les fins de partie n'arrivent jamais dans la serie ──
+  // Le compteur general (get_quiz_counts) connait des parties terminees pour
+  // cette page, mais la serie quotidienne n'en voit aucune, aucun jour, quelle
+  // que soit la fenetre demandee. Le rapport finis/lances y vaut donc
+  // mecaniquement zero, meme avec quatre-vingt-dix lancements dans la semaine.
+  // Ce zero decrit un defaut de mesure, pas une page que personne ne termine :
+  // l'afficher accuse la page a la place de la mesure. On preferre un tiret.
+  //
+  // La serie vide dans son ensemble ne prouve rien : tant qu'elle n'est pas
+  // chargee, aucune page n'est declaree aveugle.
+  function serieAveugle(slug, terminesTotal) {
+    if (!terminesTotal || !statsParJour) return false;
+    var vue = false;
+    for (var k in statsParJour) { if (Object.prototype.hasOwnProperty.call(statsParJour, k)) { vue = true; break; } }
+    if (!vue) return false;
+    var m = statsParJour[canon(slug)];
+    if (!m) return true;
+    for (var j in m) if (Object.prototype.hasOwnProperty.call(m, j) && m[j]) return false;
+    return true;
+  }
+  var MOTIF_AVEUGLE = 'fins de partie absentes de la série';
+
   // Les trois chiffres d'une page sur la periode choisie, prets a afficher.
   // Le ratio vaut null quand il ne veut rien dire : page a resultat immediat,
   // ou trop peu de lancements pour conclure.
@@ -1089,6 +1111,7 @@
     var c = comptesPeriode(slug, terminesTotal);
     var res = { lances: c.lances, finis: c.finis, ratio: null, motif: '' };
     if (sansRatio(slug)) { res.motif = SANS_RATIO[canon(slug)]; return res; }
+    if (serieAveugle(slug, terminesTotal)) { res.motif = MOTIF_AVEUGLE; return res; }
     // Sur toute l'histoire, le rapport melangerait des mois de completions et
     // quelques heures de lancements : on borne a la fenetre commune. Sur une
     // periode choisie, les deux series couvrent deja les memes jours.
@@ -1163,6 +1186,18 @@
       html += '<p class="stats-avis">Sur « Tout », les finis remontent à des mois que les lancés n\'ont pas encore : les deux colonnes ne couvrent pas la même période, et le ratio ne peut pas se calculer. '
         + (depuis ? 'Il apparaîtra à partir du ' + jourCourt(depuis) + '. ' : '')
         + 'Choisissez une période pour comparer ce qui est comparable.</p>';
+    }
+    // Une page aveugle ne se voit pas dans la liste : sa colonne Finis affiche
+    // un zero comme une page qui vient d'ouvrir. On la nomme donc en clair,
+    // sinon le tiret du ratio passe pour un oubli.
+    var aveugles = lignes.filter(function (l) { return l.v.motif === MOTIF_AVEUGLE; });
+    if (aveugles.length) {
+      html += '<p class="stats-avis">'
+        + (aveugles.length === 1
+            ? 'Une page compte des parties terminées au total, mais aucune n\'apparaît dans la série quotidienne : '
+            : aveugles.length + ' pages comptent des parties terminées au total, mais aucune n\'apparaît dans la série quotidienne : ')
+        + esc(aveugles.map(function (l) { return nomQuiz(l.slug); }).join(', '))
+        + '. Leur ratio vaudrait zéro quel que soit le nombre de lancés, il n\'est donc pas affiché.</p>';
     }
     html += '<div class="stats-entetes">'
       + '<span class="stats-entete-nom">Page</span>'
