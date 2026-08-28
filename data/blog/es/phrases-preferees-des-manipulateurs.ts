@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Un manipulador no miente al azar. Elige de un repertorio, siempre el mismo. Y en cuanto conoces el repertorio, algo se rompe en el truco de magia.",
   introduction: `<p>«Eres demasiado sensible.» ¿Cuántas veces has oído esa? ¿Y cuántas te has ido preguntándote si, efectivamente, no estarías exagerando un poco?</p>
-<p>Por eso existe este artículo. Los manipuladores no inventan nada: tiran de un repertorio, y es más o menos siempre el mismo. Frases cortas, que parecen inofensivas, a veces incluso amables, y que hacen un trabajo muy preciso en tu cabeza: invertir la culpa, hacerte dudar, hacerte callar.</p>
+<p>Por eso existe este artículo. <strong>Los manipuladores no inventan nada: tiran de un repertorio, y es más o menos siempre el mismo.</strong> Frases cortas, que parecen inofensivas, a veces incluso amables, y que hacen un trabajo muy preciso en tu cabeza: invertir la culpa, hacerte dudar, hacerte callar.</p>
 <p>Así que vamos a hacer lo único que de verdad las neutraliza: sacarlas de contexto y mirarlas una por una. Su traducción real, lo que buscan producir en ti y lo que puedes responder. Hay bastantes posibilidades de que reconozcas varias por el camino... y ese es justamente el objetivo.</p>`,
   quickSummary: [
     "Estas frases nunca discuten lo que has dicho, cuestionan tu derecho a decirlo.",
@@ -123,7 +123,7 @@ const article: BlogArticleData = {
     {
       id: 'como-responder',
       title: "Cómo responder a estas frases (sin dejarte la noche en ello)",
-      content: `<p>Regla de oro: no te justifiques sobre la forma, vuelve al fondo. Cada minuto que pasas demostrando que no eres «demasiado sensible» es un minuto ganado para él. Así se ve en la práctica.</p>
+      content: `<p>Regla de oro: <strong>no te justifiques sobre la forma, vuelve al fondo.</strong> Cada minuto que pasas demostrando que no eres «demasiado sensible» es un minuto ganado para él. Así se ve en la práctica.</p>
 <div><table><thead><tr><th>Él dice...</th><th>Evita</th><th>Prueba mejor</th></tr></thead><tbody>
 <tr><td>«Eres demasiado sensible.»</td><td>«No es verdad, no soy demasiado sensible, la prueba es...»</td><td>«Puede ser. ¿Y de la cita de ayer, cuándo hablamos?»</td></tr>
 <tr><td>«Yo nunca he dicho eso.»</td><td>Sacar las pruebas una por una</td><td>«No vamos a debatir eso. Yo lo oí, y este es el efecto que me hizo.»</td></tr>

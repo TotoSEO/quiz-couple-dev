@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Un manipolatore non mente a caso. Pesca da un repertorio, sempre lo stesso. E una volta che conosci il repertorio, qualcosa si rompe nel gioco di prestigio.",
   introduction: `<p>«Sei troppo sensibile.» Quante volte l'hai sentita? E quante volte te ne sei andata chiedendoti se, effettivamente, non stessi esagerando un po'?</p>
-<p>Ecco perché esiste questo articolo. I manipolatori non inventano nulla: pescano da un repertorio, ed è più o meno sempre lo stesso. Frasi brevi, che sembrano innocue, a volte perfino gentili, e che fanno un lavoro molto preciso nella tua testa: ribaltare la colpa, farti dubitare, farti tacere.</p>
+<p>Ecco perché esiste questo articolo. <strong>I manipolatori non inventano nulla: pescano da un repertorio, ed è più o meno sempre lo stesso.</strong> Frasi brevi, che sembrano innocue, a volte perfino gentili, e che fanno un lavoro molto preciso nella tua testa: ribaltare la colpa, farti dubitare, farti tacere.</p>
 <p>Facciamo quindi l'unica cosa che le neutralizza davvero: tirarle fuori dal contesto e guardarle una per una. La loro traduzione reale, quello che cercano di produrre in te e cosa puoi rispondere. Ci sono buone probabilità che ne riconosca parecchie lungo la strada... ed è un po' lo scopo.</p>`,
   quickSummary: [
     "Queste frasi non discutono mai quello che hai detto, contestano il tuo diritto di dirlo.",
@@ -123,7 +123,7 @@ const article: BlogArticleData = {
     {
       id: 'come-rispondere',
       title: "Come rispondere a queste frasi (senza perderci la serata)",
-      content: `<p>Regola d'oro: non giustificarti sulla forma, torna alla sostanza. Ogni minuto passato a dimostrare che non sei «troppo sensibile» è un minuto guadagnato per lui. Ecco come funziona in pratica.</p>
+      content: `<p>Regola d'oro: <strong>non giustificarti sulla forma, torna alla sostanza.</strong> Ogni minuto passato a dimostrare che non sei «troppo sensibile» è un minuto guadagnato per lui. Ecco come funziona in pratica.</p>
 <div><table><thead><tr><th>Lui dice...</th><th>Evita</th><th>Prova invece</th></tr></thead><tbody>
 <tr><td>«Sei troppo sensibile.»</td><td>«Non è vero, non sono troppo sensibile, la prova è...»</td><td>«Può darsi. E dell'appuntamento di ieri, quando ne parliamo?»</td></tr>
 <tr><td>«Non l'ho mai detto.»</td><td>Tirare fuori le prove una per una</td><td>«Non stiamo a discuterne. Io l'ho sentito, e questo è l'effetto che mi ha fatto.»</td></tr>

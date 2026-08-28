@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Il problema con un uomo narcisista è che sei l'unica a vedere quello che vedi. I 12 comportamenti che finiscono per tradirlo.",
   introduction: `<p>Se scrivi «uomo narcisista» in un motore di ricerca, la curiosità intellettuale non c'entra niente. Un uomo preciso ti ha messo in allarme: il tuo compagno, il tuo ex, forse il padre dei tuoi figli. E qualcosa non torna, perché quest'uomo che tutti adorano ti fa vivere, a porte chiuse, qualcosa che nessuno immagina.</p>
-<p>È la trappola numero uno con questo profilo. La distanza tra l'uomo pubblico e quello privato è così violenta che passi per pazza appena provi a descriverla. Così, inevitabilmente, smetti di descriverla. E resti sola con le tue domande.</p>
+<p><strong>È la trappola numero uno con questo profilo. La distanza tra l'uomo pubblico e quello privato è così violenta che passi per pazza appena provi a descriverla.</strong> Così, inevitabilmente, smetti di descriverla. E resti sola con le tue domande.</p>
 <p>Ecco i 12 comportamenti tipici dell'uomo narcisista, nell'ordine in cui compaiono. Non serve spuntarli tutti e 12, tra l'altro: quello che cerchi è una traiettoria, e capirai in fretta se la riconosci.</p>`,
   quickSummary: [
     "La firma è lo scarto tra i due uomini: irreprensibile fuori, demolitore dentro.",
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
       title: "Cosa ti fa vivere, e perché dubiti ancora",
       content: `<p>Se hai riconosciuto la traiettoria, probabilmente ti resta una domanda: «allora perché lo amo ancora?». Perché il sistema è fatto apposta, semplicemente. Quell'alternanza tra l'uomo meraviglioso e quello distruttivo ti rende dipendente. È la stessa molla del gioco d'azzardo, quella della ricompensa imprevedibile.</p>
 <p>E perché ti ha anche allenata a dubitare. Mesi di «esageri» lasciano il segno: al momento di concludere, ti chiedi ancora se non sia tu a drammatizzare.</p>
-<p>Rileggi quindi la lista e nota un dettaglio: metà dei segnali non descrivono il suo comportamento, ma lo stato in cui mette te. È il miglior rilevatore di cui disponi, e sbaglia di rado. Molti di questi comportamenti figurano del resto tra le <a href="/it/blog/red-flag-in-un-uomo/">red flag in un uomo</a>, di cui sono la versione più compiuta, e la più pericolosa.</p>
+<p>Rileggi quindi la lista e nota un dettaglio: <strong>metà dei segnali non descrivono il suo comportamento, ma lo stato in cui mette te.</strong> È il miglior rilevatore di cui disponi, e sbaglia di rado. Molti di questi comportamenti figurano del resto tra le <a href="/it/blog/red-flag-in-un-uomo/">red flag in un uomo</a>, di cui sono la versione più compiuta, e la più pericolosa.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Vuoi una risposta serena e non l'ennesima intuizione?</p>
 <p class="blog-cta-texte">Venti domande ripercorrono le situazioni esatte che hai appena letto, e il risultato ti dice dove si colloca la tua relazione. Da fare con calma, per te, senza che nessuno lo sappia.</p>

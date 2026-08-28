@@ -5,13 +5,13 @@ const article: BlogArticleData = {
   slug: 'questions-to-ask-a-girl',
   title: "The 90 best questions to ask a girl to get to know her",
   metaTitle: "90 Questions to Ask a Girl (Without the Interrogation)",
-  metaDescription: "Tired of \"hey, how are you?\" going nowhere? 90 questions to ask a girl, from the first message to a real one to one, never an interrogation.",
+  metaDescription: "Tired of «hey, how are you?» going nowhere? 90 questions to ask a girl, from the first message to a real one to one, never an interrogation.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Two people talking at a table, one listening attentively to the other",
   publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "A conversation that stalls or a girl who wants to see you again: it comes down to the quality of your questions, and what you do with the answers.",
-  introduction: `<p>Let's be honest for two minutes. The problem is almost never finding ONE question to ask. The problem is that "how are you?", "what do you do?" and "good weekend?" are how every other conversation she's having right now begins.</p>
+  introduction: `<p>Let's be honest for two minutes. The problem is almost never finding ONE question to ask. The problem is that «how are you?», «what do you do?» and «good weekend?» are how every other conversation she's having right now begins.</p>
 <p><strong>A good question changes things because it shows something rare: that you're interested in her, not just in making conversation.</strong> And that, believe me, gets noticed immediately.</p>
 <p>So here are 90 questions, sorted by situation, from the first message to the face-to-face where it all plays out. With one piece of advice that applies to all 90: the way you listen to the answer makes the difference, far more than the question itself.</p>`,
   quickSummary: [
@@ -25,11 +25,11 @@ const article: BlogArticleData = {
     {
       id: 'rules-before-questions',
       title: "Two rules before you start",
-      content: `<p><strong>One question, then silence:</strong> The classic reflex when you're nervous is to chain them: question, answer, question, answer... After ten minutes she feels she's in a job interview, and you're exhausted. Ask your question, listen to the answer, and build ON it. "You said you grew up by the coast, don't you miss the sea?" is worth ten new questions.</p>
+      content: `<p><strong>One question, then silence:</strong> The classic reflex when you're nervous is to chain them: question, answer, question, answer... After ten minutes she feels she's in a job interview, and you're exhausted. Ask your question, listen to the answer, and build ON it. «You said you grew up by the coast, don't you miss the sea?» is worth ten new questions.</p>
 <p><strong>Answer your own questions too:</strong> If you ask about her worst night out, follow with yours, especially if it's ridiculous. It's the exchange that creates connection, not the collection of information. And daring to tell something that doesn't flatter you is precisely what makes you different from the other conversations she's having.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Questions to avoid, while we're here</p>
-<p>"Why are you single?" (she's heard it a hundred times, and there's no good answer). "What was your ex like?" (too early, always). Salary, weight, "are you looking for something serious?" by the second message. Keep one principle in mind: if the question sounds like screening a candidate, it kills the magic.</p>
+<p>«Why are you single?» (she's heard it a hundred times, and there's no good answer). «What was your ex like?» (too early, always). Salary, weight, «are you looking for something serious?» by the second message. Keep one principle in mind: if the question sounds like screening a candidate, it kills the magic.</p>
 </aside>
 <div><table><thead><tr><th>The rule</th><th>Why it changes everything</th></tr></thead><tbody>
 <tr><td>One question at a time</td><td>Two in a row, and it becomes a form</td></tr>
@@ -113,7 +113,7 @@ const article: BlogArticleData = {
     {
       id: 'to-build-closeness',
       title: "To build real closeness (51-65)",
-      content: `<p>Bring these out when it's already clicking. This is where you move from "nice conversation" to "conversation she'll tell her friends about". Go gently, one or two at a time, not a burst.</p>
+      content: `<p>Bring these out when it's already clicking. This is where you move from «nice conversation» to «conversation she'll tell her friends about». Go gently, one or two at a time, not a burst.</p>
 <ol start="51">
 <li>What genuinely makes you happy, beyond the usual answers?</li>
 <li>What's the hardest lesson you've learned so far?</li>
@@ -155,7 +155,7 @@ const article: BlogArticleData = {
     {
       id: 'to-know-if-she-likes-you',
       title: "To find out whether she likes you (79-90)",
-      content: `<p>No frontal question here, you'll notice. "Do you like me?" asked too early guarantees pressure and the end of any lightness. These twelve questions do the same job... better, and without breaking the mood.</p>
+      content: `<p>No frontal question here, you'll notice. «Do you like me?» asked too early guarantees pressure and the end of any lightness. These twelve questions do the same job... better, and without breaking the mood.</p>
 <ol start="79">
 <li>What makes you want to see someone again after a first meeting?</li>
 <li>Do you tell your friends about our conversations, or am I dreaming?</li>
@@ -163,7 +163,7 @@ const article: BlogArticleData = {
 <li>What has surprised you about me since we started talking?</li>
 <li>Would you rather we met up this week, or shall I keep guessing?</li>
 <li>If you had to introduce me to someone, what would you say about me?</li>
-<li>What are we doing next time? Yes, I said "next time".</li>
+<li>What are we doing next time? Yes, I said «next time».</li>
 <li>What signal do you send when you like someone, so I can check something?</li>
 <li>Are you more likely to make the first move or wait for it?</li>
 <li>What would make this a good week, and am I in it?</li>

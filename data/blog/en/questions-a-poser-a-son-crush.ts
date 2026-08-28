@@ -11,9 +11,9 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "The hard part with a crush is finding the question that revives the conversation at the right moment. Here are 100 of them, sorted by situation.",
-  introduction: `<p>You know the moment. The conversation is going round in circles, the "good, you?" pile up, and you can feel that if nobody brings something else, it's going to die politely in a "have a good evening then". With a crush, every exchange counts double. So sooner or later we all end up staring at our phone with no idea what to send.</p>
+  introduction: `<p>You know the moment. The conversation is going round in circles, the «good, you?» pile up, and you can feel that if nobody brings something else, it's going to die politely in a «have a good evening then». With a crush, every exchange counts double. So sooner or later we all end up staring at our phone with no idea what to send.</p>
 <p><strong>A good question does two things at once: it shows you're genuinely interested, and it makes them want to answer.</strong> That's all you ask of a conversation that's just starting. The 100 questions below are built for it.</p>
-<p>They're sorted by situation, from the first message to the first date. We write "he" for simplicity, but everything obviously works in every direction.</p>`,
+<p>They're sorted by situation, from the first message to the first date. We write «he» for simplicity, but everything obviously works in every direction.</p>`,
   quickSummary: [
     "100 questions sorted by situation, from the first message to the first date.",
     "One question at a time: three in the same message reads like a form.",
@@ -31,7 +31,7 @@ const article: BlogArticleData = {
 <li>Are you more of a four-minute voice note or a wall of text?</li>
 <li>What are you listening to on repeat right now?</li>
 <li>Your current series, the one you hide and the one you own?</li>
-<li>If I say "best snack at 11pm", what do you answer?</li>
+<li>If I say «best snack at 11pm», what do you answer?</li>
 <li>Last photo on your phone you can send me without shame?</li>
 <li>What's your completely useless talent?</li>
 <li>Last thing that made you laugh alone in the street?</li>
@@ -159,7 +159,7 @@ const article: BlogArticleData = {
 <li>Big conversations or silent closeness?</li>
 <li>What do you want from a relationship, ideally?</li>
 <li>Do you think you can tell each other everything, or should you keep private gardens?</li>
-<li>Your level of organisation on a scale from 1 to "I have a spreadsheet"?</li>
+<li>Your level of organisation on a scale from 1 to «I have a spreadsheet»?</li>
 <li>What reassures you about someone you're starting to like?</li>
 <li>If this became serious between us, what would absolutely have to stay as it is now?</li>
 </ol>`,

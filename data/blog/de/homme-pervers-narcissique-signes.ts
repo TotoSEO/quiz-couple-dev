@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Das Problem mit einem narzisstischen Mann ist, dass du die Einzige bist, die sieht, was du siehst. Die 12 Verhaltensweisen, die ihn am Ende verraten.",
   introduction: `<p>Wenn du «narzisstischer Mann» in eine Suchmaschine tippst, hat intellektuelle Neugier damit nichts zu tun. Ein ganz bestimmter Mann hat dich alarmiert: dein Partner, dein Ex, vielleicht der Vater deiner Kinder. Und etwas passt nicht zusammen, denn dieser Mann, den alle verehren, lässt dich hinter verschlossenen Türen etwas erleben, das sich niemand vorstellt.</p>
-<p>Das ist Falle Nummer eins bei diesem Profil. Der Abstand zwischen dem öffentlichen und dem privaten Mann ist so heftig, dass du wie verrückt wirkst, sobald du ihn beschreiben willst. Also hörst du irgendwann auf, ihn zu beschreiben. Und bleibst mit deinen Fragen allein.</p>
+<p><strong>Das ist Falle Nummer eins bei diesem Profil. Der Abstand zwischen dem öffentlichen und dem privaten Mann ist so heftig, dass du wie verrückt wirkst, sobald du ihn beschreiben willst.</strong> Also hörst du irgendwann auf, ihn zu beschreiben. Und bleibst mit deinen Fragen allein.</p>
 <p>Hier sind die 12 typischen Verhaltensweisen eines narzisstischen Mannes, in der Reihenfolge, in der sie auftauchen. Du musst übrigens nicht alle 12 abhaken: Was du suchst, ist ein Verlauf, und du wirst schnell merken, ob du ihn wiedererkennst.</p>`,
   quickSummary: [
     "Die Signatur ist der Abstand zwischen den beiden Männern: nach außen tadellos, im Inneren zermürbend.",
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
       title: "Was es mit dir macht, und warum du noch zweifelst",
       content: `<p>Wenn du den Verlauf wiedererkannt hast, bleibt vermutlich eine Frage: «warum liebe ich ihn dann noch?» Weil das System genau dafür gebaut ist, ganz einfach. Dieser Wechsel zwischen dem wunderbaren und dem zerstörerischen Mann macht süchtig. Es ist derselbe Mechanismus wie beim Glücksspiel, der mit der unvorhersehbaren Belohnung.</p>
 <p>Und weil er dir das Zweifeln antrainiert hat. Monate von «du übertreibst» hinterlassen Spuren: im Moment des Schlussfolgerns fragst du dich immer noch, ob nicht doch du dramatisierst.</p>
-<p>Lies die Liste also noch einmal und achte auf ein Detail: die Hälfte der Anzeichen beschreibt nicht sein Verhalten, sondern den Zustand, in den er dich versetzt. Das ist der beste Detektor, den du hast, und er irrt selten. Viele dieser Verhaltensweisen finden sich übrigens in den <a href="/de/blog/red-flags-bei-einem-mann/">Red Flags bei einem Mann</a>, deren vollendetste Ausprägung sie sind, und deren gefährlichste.</p>
+<p>Lies die Liste also noch einmal und achte auf ein Detail: <strong>die Hälfte der Anzeichen beschreibt nicht sein Verhalten, sondern den Zustand, in den er dich versetzt.</strong> Das ist der beste Detektor, den du hast, und er irrt selten. Viele dieser Verhaltensweisen finden sich übrigens in den <a href="/de/blog/red-flags-bei-einem-mann/">Red Flags bei einem Mann</a>, deren vollendetste Ausprägung sie sind, und deren gefährlichste.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Du willst eine ruhige Antwort statt einer weiteren Ahnung?</p>
 <p class="blog-cta-texte">Zwanzig Fragen gehen genau die Situationen durch, die du gerade gelesen hast, und das Ergebnis sagt dir, wo deine Beziehung steht. In Ruhe, für dich, ohne dass es jemand erfährt.</p>

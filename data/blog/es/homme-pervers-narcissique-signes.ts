@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "El problema con un hombre narcisista es que eres la única que ve lo que ves. Las 12 conductas que acaban delatándolo.",
   introduction: `<p>Si escribes «hombre narcisista» en un buscador, la curiosidad intelectual no tiene nada que ver. Un hombre concreto te ha puesto en alerta: tu pareja, tu ex, quizá el padre de tus hijos. Y algo no encaja, porque ese hombre que todo el mundo adora te hace vivir, a puerta cerrada, algo que nadie imagina.</p>
-<p>Esa es la trampa número uno con este perfil. La distancia entre el hombre público y el privado es tan violenta que pareces loca en cuanto intentas describirla. Así que, claro, dejas de describirla. Y te quedas sola con tus preguntas.</p>
+<p><strong>Esa es la trampa número uno con este perfil. La distancia entre el hombre público y el privado es tan violenta que pareces loca en cuanto intentas describirla.</strong> Así que, claro, dejas de describirla. Y te quedas sola con tus preguntas.</p>
 <p>Aquí tienes las 12 conductas típicas del hombre narcisista, en el orden en que aparecen. No hace falta que marques las 12, por cierto: lo que buscas es una trayectoria, y verás enseguida si la reconoces.</p>`,
   quickSummary: [
     "La firma es la distancia entre los dos hombres: irreprochable fuera, demoledor dentro.",
@@ -87,7 +87,7 @@ const article: BlogArticleData = {
       title: "Lo que te hace vivir, y por qué todavía dudas",
       content: `<p>Si has reconocido la trayectoria, probablemente te quede una pregunta: «entonces, ¿por qué lo sigo queriendo?». Porque el sistema está hecho para eso, sencillamente. Esa alternancia entre el hombre maravilloso y el destructivo te vuelve adicta. Es el mismo resorte que los juegos de azar, el de la recompensa imprevisible.</p>
 <p>Y porque también te ha entrenado para dudar. Meses de «exageras» dejan huella: en el momento de concluir, todavía te preguntas si no serás tú la que dramatiza.</p>
-<p>Así que relee la lista y fíjate en un detalle: la mitad de las señales no describen su comportamiento, sino el estado en el que te deja a ti. Es el mejor detector del que dispones, y se equivoca pocas veces. Muchas de estas conductas figuran además en las <a href="/es/blog/red-flags-en-un-hombre/">red flags en un hombre</a>, de las que son la versión más acabada, y la más peligrosa.</p>
+<p>Así que relee la lista y fíjate en un detalle: <strong>la mitad de las señales no describen su comportamiento, sino el estado en el que te deja a ti.</strong> Es el mejor detector del que dispones, y se equivoca pocas veces. Muchas de estas conductas figuran además en las <a href="/es/blog/red-flags-en-un-hombre/">red flags en un hombre</a>, de las que son la versión más acabada, y la más peligrosa.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">¿Quieres una respuesta serena y no otra intuición?</p>
 <p class="blog-cta-texte">Veinte preguntas repasan las situaciones exactas que acabas de leer, y el resultado te dice dónde está tu relación. Para hacerlo con calma, para ti, sin que nadie lo sepa.</p>

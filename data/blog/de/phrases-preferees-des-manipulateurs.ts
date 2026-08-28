@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Ein Manipulator lügt nicht zufällig. Er greift in ein Repertoire, immer dasselbe. Und sobald du das Repertoire kennst, bricht etwas im Zaubertrick.",
   introduction: `<p>«Du bist zu empfindlich.» Wie oft hast du diesen Satz schon gehört? Und wie oft bist du danach gegangen und hast dich gefragt, ob du nicht tatsächlich ein bisschen übertreibst?</p>
-<p>Deshalb gibt es diesen Artikel. Manipulatoren erfinden nichts: sie greifen in ein Repertoire, und es ist ungefähr immer dasselbe. Kurze Sätze, die harmlos klingen, manchmal sogar wohlwollend, und die in deinem Kopf sehr präzise Arbeit leisten: die Schuld umdrehen, dich zweifeln lassen, dich zum Schweigen bringen.</p>
+<p>Deshalb gibt es diesen Artikel. <strong>Manipulatoren erfinden nichts: sie greifen in ein Repertoire, und es ist ungefähr immer dasselbe.</strong> Kurze Sätze, die harmlos klingen, manchmal sogar wohlwollend, und die in deinem Kopf sehr präzise Arbeit leisten: die Schuld umdrehen, dich zweifeln lassen, dich zum Schweigen bringen.</p>
 <p>Wir tun also das Einzige, was sie wirklich neutralisiert: sie aus dem Zusammenhang nehmen und einzeln anschauen. Ihre echte Übersetzung, was sie in dir auslösen sollen, und was du erwidern kannst. Die Chancen stehen gut, dass du unterwegs mehrere wiedererkennst... und das ist auch ein bisschen der Sinn.</p>`,
   quickSummary: [
     "Diese Sätze diskutieren nie, was du gesagt hast, sie bestreiten dein Recht, es zu sagen.",
@@ -123,7 +123,7 @@ const article: BlogArticleData = {
     {
       id: 'wie-du-antwortest',
       title: "Wie du auf diese Sätze antwortest (ohne deinen Abend zu verlieren)",
-      content: `<p>Goldene Regel: rechtfertige dich nicht über den Rahmen, komm zur Sache zurück. Jede Minute, die du damit verbringst zu beweisen, dass du nicht «zu empfindlich» bist, ist eine gewonnene Minute für ihn. So sieht das in der Praxis aus.</p>
+      content: `<p>Goldene Regel: <strong>rechtfertige dich nicht über den Rahmen, komm zur Sache zurück.</strong> Jede Minute, die du damit verbringst zu beweisen, dass du nicht «zu empfindlich» bist, ist eine gewonnene Minute für ihn. So sieht das in der Praxis aus.</p>
 <div><table><thead><tr><th>Er sagt...</th><th>Vermeide</th><th>Versuch lieber</th></tr></thead><tbody>
 <tr><td>«Du bist zu empfindlich.»</td><td>«Nein, das stimmt nicht, ich bin nicht zu empfindlich, der Beweis...»</td><td>«Vielleicht. Und der Termin gestern, wann reden wir darüber?»</td></tr>
 <tr><td>«Das habe ich nie gesagt.»</td><td>Die Beweise einzeln hervorholen</td><td>«Darüber diskutieren wir nicht. Ich habe es gehört, und das hat es mit mir gemacht.»</td></tr>

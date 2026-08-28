@@ -63,7 +63,7 @@ const article: BlogArticleData = {
           title: "Dans l'intimité : le contrôle installé (signes 7 à 9)",
           content: `<ol start="7">
 <li><strong>Il vise tes points forts, pas tes faiblesses :</strong> C'est contre-intuitif, et c'est pourtant sa signature. Ton métier, ton humour, ta famille, ce qui te rend fière : c'est précisément là que tombent les remarques. Une faiblesse critiquée, ça peut être un conseil maladroit. Une force systématiquement rabaissée, ça n'en est jamais un : c'est une stratégie de démolition.</li>
-<li><strong>Ta réalité est renégociée en permanence :</strong> Ce que tu as vu, il ne l'a pas fait. Ce qu'il a dit, tu l'as mal compris. Ce que tu ressens, tu l'exagères. À force, tu doutes de ta mémoire au point de vérifier en cachette. Ce gaslighting quotidien, c'est le cœur du système.</li>
+<li><strong>Ta réalité est renégociée en permanence :</strong> Ce que tu as vu, il ne l'a pas fait. Ce qu'il a dit, tu l'as mal compris. Ce que tu ressens, tu l'exagères. À force, tu doutes de ta mémoire au point de vérifier en cachette. Ce <a href="/blog/gaslighting/">gaslighting quotidien</a>, c'est le cœur du système.</li>
 <li><strong>Ton monde rétrécit, sans interdiction formelle :</strong> Il ne t'a jamais interdit de voir tes amies, non. Il a juste rendu chaque sortie coûteuse : une humeur avant, des reproches après, une crise le lendemain. Dans ce genre de situation, il y a des chances qu'au bout de quelques mois, sans trop savoir comment, tu te retrouves à faire le calcul toute seule. Et c'est exactement ce qui était prévu.</li>
 </ol>`,
         },
