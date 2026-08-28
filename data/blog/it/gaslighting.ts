@@ -11,9 +11,9 @@ const article: BlogArticleData = {
   publishedAt: '2026-11-21T12:28:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Il gaslighting non ti mente sui fatti. Ti mente su di te: la tua memoria, la tua percezione, la tua salute mentale. È ciò che ne fa la manipolazione più corrosiva che esista.",
-  introduction: `<p>Hai visto la scena. Eri lì, hai sentito le parole, potresti ripeterle... Eppure, di fronte, un aplomb perfetto: «non l'ho mai detto». Nemmeno un'esitazione. Allora verifichi nella tua testa, una volta, due... e si apre una piccola crepa: e se fossi stata io?</p>
-<p>Quella crepa ha un nome: il gaslighting. <strong>Non è una menzogna sui fatti: è un attacco allo strumento di misura, cioè a te.</strong> La tua memoria, la tua percezione, la tua stabilità... Ripetuta abbastanza a lungo, questa manipolazione produce un risultato unico nel suo genere: una vittima che non può più fidarsi di sé, e che quindi dipende dal suo manipolatore per sapere cosa è reale.</p>
-<p>La parola è ovunque da qualche anno, spesso a sproposito, quindi rimettiamo precisione: da dove viene il termine, come funziona esattamente il meccanismo, come distinguerlo da un semplice disaccordo di ricordi... e soprattutto come ritrovare l'appoggio quando ci sei dentro. Perché se ne esce, e meglio: se ne esce con un rilevatore incorporato.</p>`,
+  introduction: `<p>Hai visto la scena. Eri lì, hai sentito le parole, potresti ripeterle. Eppure, di fronte, un aplomb perfetto: «non l'ho mai detto». Nemmeno un'esitazione. Allora verifichi nella tua testa, una volta, due, e si apre una piccola crepa: e se fossi stata io?</p>
+<p>Quella crepa ha un nome: il gaslighting. <strong>Non è una menzogna sui fatti: è un attacco allo strumento di misura, cioè a te.</strong> La tua memoria, la tua percezione, la tua stabilità. Ripetuta abbastanza a lungo, questa manipolazione produce un risultato unico nel suo genere: una vittima che non può più fidarsi di sé, e che quindi dipende dal suo manipolatore per sapere cosa è reale.</p>
+<p>La parola è ovunque da qualche anno, spesso a sproposito, quindi rimettiamo precisione: da dove viene il termine, come funziona il meccanismo, e come ritrovare l'appoggio quando ci sei dentro. Perché se ne esce, e meglio: se ne esce con un rilevatore incorporato.</p>`,
   quickSummary: [
     "Il gaslighting attacca la tua percezione, non i fatti: a essere contestata sei tu, non la scena.",
     "Il meccanismo sale in 3 tempi: negare i fatti, squalificare quello che senti, patologizzare la tua persona.",
@@ -25,29 +25,29 @@ const article: BlogArticleData = {
     {
       id: 'da-dove-viene-la-parola',
       title: "Da dove viene la parola (e perché è così azzeccata)",
-      content: `<p>Il termine viene da un film del 1944, «Gaslight» («Angoscia» in italiano), con Ingrid Bergman. La trama: un marito abbassa le lampade a gas della casa... e poi assicura alla moglie che la luce non è cambiata, che è lei a vedere male. Dettaglio dopo dettaglio sposta oggetti, nega suoni, riscrive scene, fino a convincerla che sta perdendo la ragione.</p>
-<p>C'è già tutto: la falsificazione del reale, la negazione tranquilla e soprattutto LA firma del gaslighting, quella che lo distingue da ogni altra menzogna... <strong>lo scopo non è farti credere una cosa falsa, ma farti dubitare della tua capacità di sapere.</strong> Un bugiardo vuole vincere un punto nella discussione; un gaslighter vuole vincere l'arbitro, cioè il tuo giudizio.</p>
+      content: `<p>Il termine viene da un film del 1944, «Gaslight» («Angoscia» in italiano), con Ingrid Bergman. La trama: un marito abbassa le lampade a gas della casa, e poi assicura alla moglie che la luce non è cambiata, che è lei a vedere male. Dettaglio dopo dettaglio sposta oggetti, nega suoni, riscrive scene, fino a convincerla che sta perdendo la ragione.</p>
+<p>C'è già tutto: la falsificazione del reale, la negazione tranquilla e soprattutto LA firma del gaslighting, quella che lo distingue da ogni altra menzogna: <strong>lo scopo non è farti credere una cosa falsa, ma farti dubitare della tua capacità di sapere.</strong> Un bugiardo vuole vincere un punto nella discussione; un gaslighter vuole vincere l'arbitro, cioè il tuo giudizio.</p>
 <p>Il fenomeno è oggi documentato dalla psicologia e riconosciuto come forma di violenza psicologica. Qualcuno lo chiama efficacemente «dirottamento cognitivo». È esattamente questo: un dirottamento, quello del tuo stesso giudizio.</p>`,
     },
     {
       id: 'il-meccanismo-in-3-tempi',
       title: "Il meccanismo, in tre tempi",
-      content: `<p>Il gaslighting non arriva mai tutto in una volta, sale di potenza a gradini. Eccoli in ordine, e vedrai che la progressione è logica... il bersaglio sale di un gradino ogni volta.</p>`,
+      content: `<p>Il gaslighting non arriva mai tutto in una volta, sale di potenza a gradini. Eccoli in ordine: il bersaglio sale di un gradino ogni volta.</p>`,
       subsections: [
         {
           id: 'tempo-1-negare-i-fatti',
           title: "Tempo 1: negare i fatti",
-          content: `<p>«Non l'ho mai detto.» «Confondi.» «Non è andata così.» A questo stadio si contesta la scena, non ancora te. È destabilizzante, ma puoi ancora rispondere sul terreno dei fatti... ed è proprio per questo che non si ferma lì.</p>`,
+          content: `<p>«Non l'ho mai detto.» «Confondi.» «Non è andata così.» A questo stadio si contesta la scena, non ancora te. È destabilizzante, ma puoi ancora rispondere sul terreno dei fatti, ed è proprio per questo che non si ferma lì.</p>`,
         },
         {
           id: 'tempo-2-squalificare-quello-che-senti',
           title: "Tempo 2: squalificare quello che senti",
-          content: `<p>«Esageri.» «Sei troppo sensibile.» «Ne stai facendo un dramma.» Lo spostamento è sottile e decisivo: non si discute più quello che è successo, si discute la tua reazione. Anche se i fatti sono accertati, quello che senti viene dichiarato difettoso... ed eccoti a giustificarti di esserti sentita male.</p>`,
+          content: `<p>«Esageri.» «Sei troppo sensibile.» «Ne stai facendo un dramma.» Lo spostamento è sottile e decisivo: non si discute più quello che è successo, si discute la tua reazione. Anche se i fatti sono accertati, quello che senti viene dichiarato difettoso, ed eccoti a giustificarti di esserti sentita male.</p>`,
         },
         {
           id: 'tempo-3-patologizzare-la-tua-persona',
           title: "Tempo 3: patologizzare la tua persona",
-          content: `<p>«Sei pazza.» «Dovresti farti vedere.» «Lo vedono tutti che non stai bene.» Ultimo gradino: non sono più la scena né la reazione a essere in causa, è tutto il tuo equipaggiamento mentale. Arrivati lì, ogni protesta diventa una prova in più del tuo «stato»... La trappola è chiusa: più ti difendi, più confermi.</p>
+          content: `<p>«Sei pazza.» «Dovresti farti vedere.» «Lo vedono tutti che non stai bene.» Ultimo gradino: non sono più la scena né la reazione a essere in causa, è tutto il tuo equipaggiamento mentale. Arrivati lì, ogni protesta diventa una prova in più del tuo «stato». La trappola è chiusa: più ti difendi, più confermi.</p>
 <p>Aggiungi il reclutamento di testimoni, «anche tua sorella dice che ultimamente sei fuori», e l'annebbiamento è totale: la tua realtà è diventata minoritaria nella tua stessa vita.</p>`,
         },
       ],
@@ -55,7 +55,7 @@ const article: BlogArticleData = {
     {
       id: 'gaslighting-o-no',
       title: "Gaslighting, menzogna o semplice malafede? La tabella che decide",
-      content: `<p>Precisazione indispensabile, perché la parola si usa per tutto: NO, ogni disaccordo di ricordi non è gaslighting! Due persone in buona fede ricordano diversamente la stessa serata, è anzi la norma... Ecco come fare la cernita.</p>
+      content: `<p>Precisazione indispensabile, perché la parola si usa per tutto: NO, ogni disaccordo di ricordi non è gaslighting! Due persone in buona fede ricordano diversamente la stessa serata, è anzi la norma. Ecco come fare la cernita.</p>
 <div><table><thead><tr><th></th><th>Disaccordo normale</th><th>Malafede ordinaria</th><th>Gaslighting</th></tr></thead><tbody>
 <tr><td>Il bersaglio</td><td>I fatti («credevo che...»)</td><td>I fatti, per evitare una colpa</td><td>TU: la tua memoria, la tua percezione</td></tr>
 <tr><td>La frequenza</td><td>Puntuale, nei due sensi</td><td>Nei momenti di conflitto</td><td>Sistematica, a senso unico</td></tr>
@@ -68,17 +68,17 @@ const article: BlogArticleData = {
     {
       id: 'le-frasi-e-gli-effetti',
       title: "Le frasi tipo, e cosa producono alla lunga",
-      content: `<p>Del repertorio verbale del gaslighting conosci già dei pezzi: «non l'ho mai detto», «te lo inventi», «ti fai i film», «lo dicono tutti che esageri», «dovresti farti vedere»... Quelle formule compongono la famiglia numero 2 del <a href="/it/blog/frasi-dei-manipolatori/">repertorio di frasi del manipolatore</a>: quelle che mirano alla tua percezione. Qui fermiamoci piuttosto su ciò che quelle frasi FANNO, perché è lì che il gaslighting si distingue da tutto il resto.</p>
-<p>A forza, la vittima sviluppa comportamenti molto specifici... e se ti riconosci in questo elenco, prendilo come una diagnosi in negativo:</p>
+      content: `<p>Del repertorio verbale del gaslighting conosci già dei pezzi: «non l'ho mai detto», «te lo inventi», «ti fai i film», «lo dicono tutti che esageri», «dovresti farti vedere». Quelle formule compongono la famiglia numero 2 del <a href="/it/blog/frasi-dei-manipolatori/">repertorio di frasi del manipolatore</a>: quelle che mirano alla tua percezione. Qui fermiamoci piuttosto su ciò che quelle frasi FANNO, perché è lì che il gaslighting si distingue da tutto il resto.</p>
+<p>A forza, la vittima sviluppa comportamenti molto specifici, e se ti riconosci in questo elenco, prendilo come una diagnosi in negativo:</p>
 <ul>
-<li><strong>Registri, annoti, fai screenshot:</strong> Conversazioni rilette dieci volte, appunti datati di nascosto, a volte registrazioni... Nessuno documenta la propria vita di coppia senza motivo: cerchi prove CONTRO il dubbio che ti hanno installato.</li>
-<li><strong>Chiedi verifiche incrociate:</strong> «Tu c'eri, ha detto proprio così, vero?»... Chi ti sta intorno diventa il tuo tribunale della realtà.</li>
+<li><strong>Registri, annoti, fai screenshot:</strong> Conversazioni rilette dieci volte, appunti datati di nascosto, a volte registrazioni. Nessuno documenta la propria vita di coppia senza motivo: cerchi prove CONTRO il dubbio che ti hanno installato.</li>
+<li><strong>Chiedi verifiche incrociate:</strong> «Tu c'eri, ha detto proprio così, vero?» Chi ti sta intorno diventa il tuo tribunale della realtà.</li>
 <li><strong>Cominci le frasi con scuse percettive:</strong> «Forse mi sbaglio, ma...», «sarò io che esagero...»: il dubbio è diventato la tua punteggiatura.</li>
-<li><strong>Hai adottato LA SUA versione di te:</strong> «Sono troppo sensibile», detto con le tue stesse labbra... Il gaslighting ha vinto il giorno in cui fai il suo lavoro da sola.</li>
+<li><strong>Hai adottato LA SUA versione di te:</strong> «Sono troppo sensibile», detto con le tue stesse labbra. Il gaslighting ha vinto il giorno in cui fai il suo lavoro da sola.</li>
 </ul>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 È sempre volontario?</p>
-<p>Non sempre, e la sfumatura conta. Esiste un gaslighting «di evitamento»: qualcuno che nega per incapacità di assumersi le cose, senza strategia... È distruttivo anche quello, ma si può affrontare: messo davanti all'effetto prodotto, può sentire e cambiare. Il gaslighting strategico, invece, sopravvive a ogni confronto, prove comprese. Come sempre, è la reazione alla prova a fare la cernita.</p>
+<p>Non sempre, e la sfumatura conta. Esiste un gaslighting «di evitamento»: qualcuno che nega per incapacità di assumersi le cose, senza strategia. È distruttivo anche quello, ma si può affrontare: messo davanti all'effetto prodotto, può sentire e cambiare. Il gaslighting strategico, invece, sopravvive a ogni confronto, prove comprese. Come sempre, è la reazione alla prova a fare la cernita.</p>
 </aside>`,
     },
     {
@@ -89,12 +89,12 @@ const article: BlogArticleData = {
         {
           id: 'uno-lo-scritto-lo-scritto',
           title: "Lo scritto, lo scritto, lo scritto",
-          content: `<p>Un diario datato, fattuale, tenuto a caldo: cosa è stato detto, fatto, quando. Lo scritto è la tua arma assoluta perché ha una proprietà magica: non dubita mai di sé. Il giorno in cui ti arriva un «non l'ho mai detto», non avrai nemmeno bisogno di sventolarlo... sapere che l'appunto esiste basta a tenere in piedi la tua certezza.</p>`,
+          content: `<p>Un diario datato, fattuale, tenuto a caldo: cosa è stato detto, fatto, quando. Lo scritto è la tua arma assoluta perché ha una proprietà magica: non dubita mai di sé. Il giorno in cui ti arriva un «non l'ho mai detto», non avrai nemmeno bisogno di sventolarlo: sapere che l'appunto esiste basta a tenere in piedi la tua certezza.</p>`,
         },
         {
           id: 'due-rompi-la-porta-chiusa',
           title: "Rompi la porta chiusa",
-          content: `<p>Il gaslighting ha bisogno di un mondo chiuso in cui la sua voce sia l'unica fonte. Riapri le finestre: racconta scene precise a una persona di fiducia, con regolarità. Non perché decida lei... per risentire il suono che fa la realtà quando nessuno la contesta.</p>`,
+          content: `<p>Il gaslighting ha bisogno di un mondo chiuso in cui la sua voce sia l'unica fonte. Riapri le finestre: racconta scene precise a una persona di fiducia, con regolarità. Non perché decida lei, ma per risentire il suono che fa la realtà quando nessuno la contesta.</p>`,
         },
         {
           id: 'tre-smetti-di-perorare',
@@ -104,8 +104,8 @@ const article: BlogArticleData = {
         {
           id: 'quattro-fai-il-bilancio-della-relazione',
           title: "Fai il bilancio della relazione",
-          content: `<p>Il gaslighting isolato quasi non esiste: di solito è il pezzo forte di un insieme, controllo, svalutazione, cicli caldo-freddo... Prenditi il tempo di guardare l'insieme in faccia, con i <a href="/it/blog/segnali-relazione-tossica/">segnali che fanno una relazione tossica</a> come griglia. E sappi una cosa: in molti paesi la violenza psicologica ripetuta nella coppia è un reato riconosciuto e giudicato. Quello che vivi ha un nome ovunque... anche nella legge.</p>
-<p>E per finire, la buona notizia promessa nell'introduzione: le persone uscite dal gaslighting sviluppano quasi tutte lo stesso superpotere... un rilevatore ultrasensibile alle contestazioni di realtà. La prima volta che ti arriverà un «esageri» strategico, sentirai il meccanismo PRIMA della crepa. Quel giorno saprai che la tua bussola è riparata... e che è diventata infrangibile.</p>
+          content: `<p>Il gaslighting isolato quasi non esiste: di solito è il pezzo forte di un insieme, controllo, svalutazione, cicli caldo-freddo. Prenditi il tempo di guardare l'insieme in faccia, con i <a href="/it/blog/segnali-relazione-tossica/">segnali che fanno una relazione tossica</a> come griglia. E sappi una cosa: in molti paesi la violenza psicologica ripetuta nella coppia è un reato riconosciuto e giudicato. Quello che vivi ha un nome ovunque, anche nella legge.</p>
+<p>Le persone uscite dal gaslighting sviluppano quasi tutte lo stesso superpotere: un rilevatore ultrasensibile alle contestazioni di realtà. La prima volta che ti arriverà un «esageri» strategico, sentirai il meccanismo PRIMA della crepa. Quel giorno saprai che la tua bussola è riparata, e che è diventata infrangibile.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Se sei in pericolo, non restare da sola con un articolo</p>
 <p>Minacce, controllo sui tuoi soldi o sui tuoi spostamenti, violenza fisica anche «una volta sola»: in Italia il 1522 è gratuito, anonimo e attivo 24 ore su 24, per donne e uomini. In caso di pericolo immediato, il 112.</p>

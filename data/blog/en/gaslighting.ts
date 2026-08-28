@@ -11,9 +11,9 @@ const article: BlogArticleData = {
   publishedAt: '2026-11-21T12:28:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Gaslighting doesn't lie to you about the facts. It lies to you about you: your memory, your perception, your sanity. That's what makes it the most corrosive manipulation there is.",
-  introduction: `<p>You saw the scene. You were there, you heard the words, you could repeat them... And yet, opposite you, perfect composure: «I never said that». Not a hesitation. So you check in your head, once, twice... and a small crack opens: what if it was me?</p>
-<p>That crack has a name: gaslighting. <strong>It isn't a lie about the facts: it's an attack on the measuring instrument, in other words you.</strong> Your memory, your perception, your stability... Repeated long enough, this manipulation produces a result of its own kind: a victim who can no longer trust herself, and who therefore depends on her manipulator to know what is real.</p>
-<p>The word has been everywhere for a few years, often misused, so let's put some precision back: where the term comes from, how the mechanism works exactly, how to tell it apart from a simple disagreement about memories... and above all how to find your footing when you're in it. Because people do get out, and better: they get out with a built-in detector.</p>`,
+  introduction: `<p>You saw the scene. You were there, you heard the words, you could repeat them. And yet, opposite you, perfect composure: «I never said that». Not a hesitation. So you check in your head, once, twice, and a small crack opens: what if it was me?</p>
+<p>That crack has a name: gaslighting. <strong>It isn't a lie about the facts: it's an attack on the measuring instrument, in other words you.</strong> Your memory, your perception, your stability. Repeated long enough, this manipulation produces a result of its own kind: a victim who can no longer trust herself, and who therefore depends on her manipulator to know what is real.</p>
+<p>The word has been everywhere for a few years, often misused, so let's put some precision back: where the term comes from, how the mechanism works, and how to find your footing when you're in it. Because people do get out, and better: they get out with a built-in detector.</p>`,
   quickSummary: [
     "Gaslighting attacks your perception, not the facts: it's you being contested, not the scene.",
     "The mechanism escalates in 3 stages: denying the facts, disqualifying your feelings, pathologising you as a person.",
@@ -25,29 +25,29 @@ const article: BlogArticleData = {
     {
       id: 'where-the-word-comes-from',
       title: "Where the word comes from (and why it's so apt)",
-      content: `<p>The term comes from a 1944 film, «Gaslight», with Ingrid Bergman. The plot: a husband dims the gas lamps in the house... then assures his wife that the light hasn't changed, that it's her eyes that are failing. Detail by detail, he moves objects, denies sounds, rewrites scenes, until he convinces her she's losing her mind.</p>
-<p>It's all there already: the falsification of reality, the calm denial, and above all THE signature of gaslighting, which sets it apart from every other lie... <strong>the aim isn't to make you believe something false, but to make you doubt your ability to know.</strong> A liar wants to win a point in the discussion; a gaslighter wants to win the referee, meaning your judgement.</p>
+      content: `<p>The term comes from a 1944 film, «Gaslight», with Ingrid Bergman. The plot: a husband dims the gas lamps in the house, then assures his wife that the light hasn't changed, that it's her eyes that are failing. Detail by detail, he moves objects, denies sounds, rewrites scenes, until he convinces her she's losing her mind.</p>
+<p>It's all there already: the falsification of reality, the calm denial, and above all THE signature of gaslighting, which sets it apart from every other lie: <strong>the aim isn't to make you believe something false, but to make you doubt your ability to know.</strong> A liar wants to win a point in the discussion; a gaslighter wants to win the referee, meaning your judgement.</p>
 <p>The phenomenon is now documented by psychology and recognised as a form of psychological abuse. Some describe it neatly as «cognitive hijacking». That's exactly it: a hijacking, of your own judgement.</p>`,
     },
     {
       id: 'the-three-stage-mechanism',
       title: "The mechanism, in three stages",
-      content: `<p>Gaslighting never arrives all at once, it escalates in steps. Here they are in order, and you'll see the progression is logical... the target moves up a step each time.</p>`,
+      content: `<p>Gaslighting never arrives all at once, it escalates in steps. Here they are in order: the target moves up a step each time.</p>`,
       subsections: [
         {
           id: 'stage-1-denying-the-facts',
           title: "Stage 1: denying the facts",
-          content: `<p>«I never said that.» «You're confusing things.» «That isn't what happened.» At this stage the scene is being contested, not you yet. It's destabilising, but you can still answer on the ground of facts... which is exactly why it doesn't stop there.</p>`,
+          content: `<p>«I never said that.» «You're confusing things.» «That isn't what happened.» At this stage the scene is being contested, not you yet. It's destabilising, but you can still answer on the ground of facts, which is exactly why it doesn't stop there.</p>`,
         },
         {
           id: 'stage-2-disqualifying-your-feelings',
           title: "Stage 2: disqualifying your feelings",
-          content: `<p>«You're exaggerating.» «You're too sensitive.» «You're making a whole drama out of it.» The shift is subtle and decisive: what happened is no longer up for discussion, your reaction is. Even if the facts are established, your feeling is declared defective... and there you are justifying being hurt.</p>`,
+          content: `<p>«You're exaggerating.» «You're too sensitive.» «You're making a whole drama out of it.» The shift is subtle and decisive: what happened is no longer up for discussion, your reaction is. Even if the facts are established, your feeling is declared defective, and there you are justifying being hurt.</p>`,
         },
         {
           id: 'stage-3-pathologising-you',
           title: "Stage 3: pathologising you as a person",
-          content: `<p>«You're crazy.» «You should see someone.» «Everyone can see you're not well.» The last step: it's no longer the scene or the reaction that's in question, it's your entire mental equipment. Once there, every protest becomes further proof of your «state»... The trap is closed: the more you defend yourself, the more you confirm.</p>
+          content: `<p>«You're crazy.» «You should see someone.» «Everyone can see you're not well.» The last step: it's no longer the scene or the reaction that's in question, it's your entire mental equipment. Once there, every protest becomes further proof of your «state». The trap is closed: the more you defend yourself, the more you confirm.</p>
 <p>Add to that the recruitment of witnesses, «even your sister thinks you're losing it lately», and the fog is total: your reality has become a minority position in your own life.</p>`,
         },
       ],
@@ -55,7 +55,7 @@ const article: BlogArticleData = {
     {
       id: 'gaslighting-or-not',
       title: "Gaslighting, lying or plain bad faith? The table that settles it",
-      content: `<p>An indispensable clarification, because the word gets used for everything: NO, every disagreement about memories isn't gaslighting! Two people in good faith remember the same evening differently, that's the norm... Here's how to sort it out.</p>
+      content: `<p>An indispensable clarification, because the word gets used for everything: NO, every disagreement about memories isn't gaslighting! Two people in good faith remember the same evening differently, that's the norm. Here's how to sort it out.</p>
 <div><table><thead><tr><th></th><th>Normal disagreement</th><th>Ordinary bad faith</th><th>Gaslighting</th></tr></thead><tbody>
 <tr><td>The target</td><td>The facts («I thought that...»)</td><td>The facts, to avoid blame</td><td>YOU: your memory, your perception</td></tr>
 <tr><td>The frequency</td><td>Occasional, both ways</td><td>During conflicts</td><td>Systematic, one-way</td></tr>
@@ -68,17 +68,17 @@ const article: BlogArticleData = {
     {
       id: 'the-phrases-and-the-effects',
       title: "The typical phrases, and what they produce over time",
-      content: `<p>You already know parts of gaslighting's verbal repertoire: «I never said that», «you're making it up», «you're imagining things», «everyone thinks you're exaggerating», «you should see someone»... Those formulas make up family number 2 of the <a href="/en/blog/manipulator-phrases/">manipulator's phrase repertoire</a>: the ones aimed at your perception. Here, let's stop instead at what those phrases DO, because that's where gaslighting differs from everything else.</p>
-<p>Over time, the victim develops very specific behaviours... and if you recognise yourself in this list, treat it as a diagnosis in negative:</p>
+      content: `<p>You already know parts of gaslighting's verbal repertoire: «I never said that», «you're making it up», «you're imagining things», «everyone thinks you're exaggerating», «you should see someone». Those formulas make up family number 2 of the <a href="/en/blog/manipulator-phrases/">manipulator's phrase repertoire</a>: the ones aimed at your perception. Here, let's stop instead at what those phrases DO, because that's where gaslighting differs from everything else.</p>
+<p>Over time, the victim develops very specific behaviours, and if you recognise yourself in this list, treat it as a diagnosis in negative:</p>
 <ul>
-<li><strong>You record, you note, you screenshot:</strong> Conversations reread ten times, dated notes kept secretly, sometimes recordings... Nobody documents their own relationship for no reason: you're looking for evidence AGAINST the doubt that's been installed in you.</li>
-<li><strong>You ask for cross-checks:</strong> «You were there, that's what he said, right?»... The people around you become your court of reality.</li>
+<li><strong>You record, you note, you screenshot:</strong> Conversations reread ten times, dated notes kept secretly, sometimes recordings. Nobody documents their own relationship for no reason: you're looking for evidence AGAINST the doubt that's been installed in you.</li>
+<li><strong>You ask for cross-checks:</strong> «You were there, that's what he said, right?» The people around you become your court of reality.</li>
 <li><strong>You start your sentences with perceptual apologies:</strong> «Maybe I'm wrong, but...», «it's probably me exaggerating...»: doubt has become your punctuation.</li>
-<li><strong>You've adopted HIS version of you:</strong> «I'm too sensitive», said with your own lips... Gaslighting has won the day you do its work yourself.</li>
+<li><strong>You've adopted HIS version of you:</strong> «I'm too sensitive», said with your own lips. Gaslighting has won the day you do its work yourself.</li>
 </ul>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Is it always deliberate?</p>
-<p>Not always, and the nuance matters. There's an «avoidance» gaslighting: someone who denies out of an inability to take responsibility, with no strategy... That's destructive too, but it can be confronted: faced with the effect produced, they can hear it and change. Strategic gaslighting survives every confrontation, proof included. As always, it's the reaction to proof that sorts it out.</p>
+<p>Not always, and the nuance matters. There's an «avoidance» gaslighting: someone who denies out of an inability to take responsibility, with no strategy. That's destructive too, but it can be confronted: faced with the effect produced, they can hear it and change. Strategic gaslighting survives every confrontation, proof included. As always, it's the reaction to proof that sorts it out.</p>
 </aside>`,
     },
     {
@@ -89,12 +89,12 @@ const article: BlogArticleData = {
         {
           id: 'one-write-write-write',
           title: "Write, write, write",
-          content: `<p>A dated, factual journal, kept in the moment: what was said, done, when. Writing is your ultimate weapon because it has a magic property: it never doubts itself. The day «I never said that» comes at you, you won't even need to brandish it... knowing the note exists is enough to hold your certainty upright.</p>`,
+          content: `<p>A dated, factual journal, kept in the moment: what was said, done, when. Writing is your ultimate weapon because it has a magic property: it never doubts itself. The day «I never said that» comes at you, you won't even need to brandish it: knowing the note exists is enough to hold your certainty upright.</p>`,
         },
         {
           id: 'two-break-the-closed-doors',
           title: "Break the closed doors",
-          content: `<p>Gaslighting needs a closed world where his voice is the only source. Open the windows again: tell precise scenes to someone you trust, regularly. Not so they can rule on it... so you can hear again the sound reality makes when nobody contests it.</p>`,
+          content: `<p>Gaslighting needs a closed world where his voice is the only source. Open the windows again: tell precise scenes to someone you trust, regularly. Not so they can rule on it, but so you can hear again the sound reality makes when nobody contests it.</p>`,
         },
         {
           id: 'three-stop-pleading',
@@ -104,8 +104,8 @@ const article: BlogArticleData = {
         {
           id: 'four-take-stock-of-the-relationship',
           title: "Take stock of the relationship",
-          content: `<p>Isolated gaslighting almost never exists: it's usually the centrepiece of a whole, control, belittling, hot-and-cold cycles... Take the time to look at the whole thing squarely, with the <a href="/en/blog/toxic-relationship-signs/">signs of a toxic relationship</a> as your grid. And know one thing: in many countries repeated psychological abuse within a couple is a recognised criminal offence. What you're living through has a name everywhere... including in the law.</p>
-<p>And finally, the good news promised in the introduction: people who come out of gaslighting almost all develop the same superpower... an ultra-sensitive detector for reality-contesting. The first time someone throws a strategic «you're exaggerating» at you, you'll feel the mechanism BEFORE the crack. That day you'll know your compass is repaired... and that it has become unbreakable.</p>
+          content: `<p>Isolated gaslighting almost never exists: it's usually the centrepiece of a whole, control, belittling, hot-and-cold cycles. Take the time to look at the whole thing squarely, with the <a href="/en/blog/toxic-relationship-signs/">signs of a toxic relationship</a> as your grid. And know one thing: in many countries repeated psychological abuse within a couple is a recognised criminal offence. What you're living through has a name everywhere, including in the law.</p>
+<p>People who come out of gaslighting almost all develop the same superpower: an ultra-sensitive detector for reality-contesting. The first time someone throws a strategic «you're exaggerating» at you, you'll feel the mechanism BEFORE the crack. That day you'll know your compass is repaired, and that it has become unbreakable.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ If you're in danger, don't stay alone with an article</p>
 <p>Threats, control over your money or your movements, physical violence even «just once»: look up the domestic abuse helpline in your country, most are free, anonymous and open around the clock, for women and men alike. If you're in immediate danger, call your local emergency number.</p>
