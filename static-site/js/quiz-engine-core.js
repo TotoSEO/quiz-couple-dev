@@ -1690,6 +1690,15 @@ var QuizEngine = (function() {
       z.classList.add('qr-zone', 'qr-zone--' + nom);
       wrap.appendChild(z);
     });
+    // Le bloc de l'image story se place apres l'avis : on lit son verdict, on
+    // note le test, et c'est seulement la qu'on propose de le mettre en story.
+    // Il est construit avec le bouton de partage, on le deplace donc ici,
+    // au seul endroit ou toutes les zones sont assemblees.
+    var story = wrap.querySelector('.story-share');
+    if (story && zones.avis && zones.avis.parentNode === wrap) {
+      story.classList.add('qr-zone', 'qr-zone--story');
+      wrap.insertBefore(story, zones.avis.nextSibling);
+    }
     if (zones.resultat) alignerLaProse(zones.resultat);
     // Tous les moteurs finissent ici, y compris SoloTest et le jeu de
     // dilemmes qui ont leur propre mise en page : c'est donc le seul endroit
