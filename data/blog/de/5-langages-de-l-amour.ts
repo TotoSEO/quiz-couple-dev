@@ -79,7 +79,7 @@ const article: BlogArticleData = {
           id: 'regel-3-ohne-scham-bitten',
           title: "Regel 3: man bittet ohne Scham",
           content: `<p>«Wenn du mir eine Freude machen willst, sag mir Dinge, das ist albern, aber es ist mein Ding.» Dieser Satz nimmt den folgenden Worten KEINEN Wert, entgegen der Legende! Der Mythos «wenn er mich lieben würde, wüsste er es» hat mehr Beziehungen getötet als echte Unvereinbarkeiten. Niemand errät eine Fremdsprache: Man bringt sie bei.</p>
-<p>Und ein Rhythmus-Trick zum Schluss: Wählt jeder EINE Geste pro Woche in der Sprache des anderen, nur eine, aber bewusst. Nach einem Monat ist die Wirkung schon da. Es ist dasselbe Prinzip wie bei den <a href="/de/blog/fragen-um-sich-besser-kennenzulernen/">Fragen, um euch besser kennenzulernen</a>: bescheidene Regelmäßigkeit schlägt den großen Auftritt.</p>`,
+<p>Ein Rhythmus-Trick: Wählt jeder EINE Geste pro Woche in der Sprache des anderen, nur eine, aber bewusst. Nach einem Monat ist die Wirkung schon da. Es ist dasselbe Prinzip wie bei den <a href="/de/blog/fragen-um-sich-besser-kennenzulernen/">Fragen, um euch besser kennenzulernen</a>: bescheidene Regelmäßigkeit schlägt den großen Auftritt.</p>`,
         },
       ],
     },
