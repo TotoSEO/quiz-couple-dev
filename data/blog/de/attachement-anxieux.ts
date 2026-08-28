@@ -67,7 +67,7 @@ const article: BlogArticleData = {
           id: 'stabilitaet-waehlen-und-wirken-lassen',
           title: "Stabilität wählen (und wirken lassen)",
           content: `<p>Wenn du gerade suchst: Misstraue deiner Anziehung zur Achterbahn und gib beständigen Partnern eine Chance, auch wenn dir der Anfang «weniger stark» vorkommt. Die Forschung ist eindeutig: Die stabile Beziehung ist die beste Therapie für die ängstliche Bindung, die berühmte erworbene Sicherheit. Die Langeweile sicherer Anfänge ist meist nur die Stille des Alarms. Daran gewöhnt man sich bemerkenswert gut!</p>
-<p>Und noch eine letzte Sache, weil sie es verdient: Menschen mit ängstlicher Bindung sind auch, sehr oft, die aufmerksamsten, loyalsten und großzügigsten Partner überhaupt. Die Sensibilität, unter der du leidest, ist dieselbe, die dich so gut lieben lässt. Die Arbeit besteht nicht darin, sie abzuschalten, sondern darin, sie von der Angst abzukoppeln, damit sie ganz der Liebe gehört.</p>
+<p>Menschen mit ängstlicher Bindung sind auch, sehr oft, die aufmerksamsten, loyalsten und großzügigsten Partner überhaupt. Die Sensibilität, unter der du leidest, ist dieselbe, die dich so gut lieben lässt. Die Arbeit besteht nicht darin, sie abzuschalten, sondern darin, sie von der Angst abzukoppeln, damit sie ganz der Liebe gehört.</p>
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Was den Alarm beruhigt</p>

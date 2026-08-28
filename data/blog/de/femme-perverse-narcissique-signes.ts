@@ -46,7 +46,7 @@ const article: BlogArticleData = {
       title: "Die 10 Anzeichen im Einzelnen",
       content: `<p>Wie immer bei diesem Profil beweist kein einzelnes Anzeichen etwas. Es zählen die Häufung, die Wiederholung und die Gesamtrichtung. In den typisch weiblichen Formen sieht das so aus.</p>
 <ol>
-<li><strong>Schuldgefühle als Muttersprache:</strong> Keine Befehle: Seufzer, ein «geh nur, viel Spaß», das das Gegenteil meint, ein «schon gut, ich bin es gewohnt, allein zu sein». Am Ende verzichtest du von selbst, und genau das ist das Prinzip: Sie verbietet nichts, sie macht alles teuer.</li>
+<li><strong>Schuldgefühle als Muttersprache:</strong> Befehle gibt es nie. Seufzer, ein «geh nur, viel Spaß», das das Gegenteil meint, ein «schon gut, ich bin es gewohnt, allein zu sein». Am Ende verzichtest du von selbst, und das ist das Prinzip selbst: Sie verbietet nichts, sie macht alles teuer.</li>
 <li><strong>Der Opferstatus als Vorsorge:</strong> Sie leidet. Immer, strukturell, und durch deine Schuld. Ihre Kindheit, ihre Exfreunde «alles Idioten», und jetzt du. Dieser Status ist keine Zerbrechlichkeit, er ist eine strategische Position: Jemandem, dem es schlecht geht, kann man nichts vorwerfen.</li>
 <li><strong>Dein Wert leise abgewertet:</strong> Dein Job «ist ja gut, aber», deine Projekte «niedlich», deine Erfolge kleingeredet oder vereinnahmt. Beachte das entscheidende Detail: In der Öffentlichkeit lobt sie dich. Der Abriss verlässt das Haus nie.</li>
 <li><strong>Eifersucht auf deine Stützen, nicht auf Rivalinnen:</strong> Gegenintuitiv, aber sehr typisch: Ihre echte Eifersucht zielt auf alles, was dich ohne sie stark macht. Deine langjährigen Freunde, dein Bruder, dein Sport, dein beruflicher Erfolg. Alles, was dich anderswo nährt, ist eine zu beseitigende Konkurrenz.</li>
@@ -54,7 +54,7 @@ const article: BlogArticleData = {
 <li><strong>Deine Realität ständig neu verhandelt:</strong> Die Szenen, die sie gemacht hat, werden zu Szenen, die DU gemacht hast. Was sie gestern gesagt hat, wurde nie gesagt. Gaslighting hat kein Geschlecht, und sie beherrscht es umso besser, als sie besser weint als du.</li>
 <li><strong>Geld und Alltag als Kontrollgelände:</strong> Deine Ausgaben überwacht, ihre heilig; deine Arbeitslast unsichtbar, ihre heldenhaft. Das Ungleichgewicht steht nie zur Debatte: Es infrage zu stellen heißt, sie zu «attackieren».</li>
 <li><strong>Intimität in strategischen Dosen:</strong> Begehren wird zur Belohnung, sein Entzug zur Strafe. Nie so formuliert, natürlich, aber der Kalender spricht für sich, und du hast es irgendwann bemerkt.</li>
-<li><strong>Deine wunden Punkte archiviert und als Waffe hervorgeholt:</strong> Was du ihr am Verletzlichsten anvertraut hast, kommt genau in dem Moment zurück, in dem es am meisten wehtut. Ein Streit mit ihr ist ein chirurgischer Schlag auf deine Schwachstellen, weit mehr als eine Meinungsverschiedenheit.</li>
+<li><strong>Deine wunden Punkte archiviert und als Waffe hervorgeholt:</strong> Was du ihr am Verletzlichsten anvertraut hast, kommt ausgerechnet in dem Moment zurück, in dem es am meisten wehtut. Ein Streit mit ihr ist ein chirurgischer Schlag auf deine Schwachstellen, weit mehr als eine Meinungsverschiedenheit.</li>
 <li><strong>Wenn du endlich redest, die totale Umkehr:</strong> An dem Tag, an dem du «es reicht» sagst, entdeckst du ihr Meisterwerk: Du bist der Cholerische, du der Instabile, du der Manipulator. Und sie hat Zeugen, denk daran, sie bereitet sie von Anfang an vor.</li>
 </ol>
 <aside class="blog-tip-box">
@@ -65,7 +65,7 @@ const article: BlogArticleData = {
     {
       id: 'was-das-mit-einem-mann-macht',
       title: "Was das mit einem Mann macht, von innen",
-      content: `<p>Und man muss es sagen: Männer unter diesem Griff entwickeln genau dieselben Symptome wie weibliche Opfer. Den ständigen Zweifel, die Selbstzensur, die erschöpfende Wachsamkeit, die Scham, mit einer Schicht obendrauf: dem Gefühl, sich nicht beklagen zu dürfen. «Ich bin ein Mann, ich müsste das hinkriegen.»</p>
+      content: `<p>Und man muss es sagen: Männer unter diesem Griff entwickeln dieselben Symptome wie weibliche Opfer. Den ständigen Zweifel, die Selbstzensur, die erschöpfende Wachsamkeit, die Scham, mit einer Schicht obendrauf: dem Gefühl, sich nicht beklagen zu dürfen. «Ich bin ein Mann, ich müsste das hinkriegen.»</p>
 <p>Also klären wir das. Unter dem Griff einer Manipulatorin zu stehen sagt nichts über deine Männlichkeit, deine Stärke oder deine Intelligenz. Diese Systeme funktionieren bei guten Menschen, gerade weil sie gut sind: Deine Loyalität, deine Geduld und dein Wunsch, es richtig zu machen, sind die Rohstoffe des Mechanismus. Kluge, gefestigte Männer geraten genauso hinein wie alle anderen, sie brauchen nur länger, um Hilfe zu holen.</p>
 <p>Und wenn du feststellst, dass du trotz allem gerade Gelesenen nicht gehen kannst, ist das kein Mangel an Mut: Es ist das gefangene Funktionieren der Bindung, manchmal verdoppelt durch echte <a href="/de/blog/emotionale-abhaengigkeit-in-beziehungen/">emotionale Abhängigkeit</a>, die sie sorgfältig gepflegt hat. Das lässt sich auseinandernehmen, aber nicht allein.</p>
 <div class="blog-cta">

@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Ein Manipulator lügt nicht zufällig. Er greift in ein Repertoire, immer dasselbe. Und sobald du das Repertoire kennst, bricht etwas im Zaubertrick.",
   introduction: `<p>«Du bist zu empfindlich.» Wie oft hast du diesen Satz schon gehört? Und wie oft bist du danach gegangen und hast dich gefragt, ob du nicht tatsächlich ein bisschen übertreibst?</p>
-<p>Genau deshalb gibt es diesen Artikel. Manipulatoren erfinden nichts: sie greifen in ein Repertoire, und es ist ungefähr immer dasselbe. Kurze Sätze, die harmlos klingen, manchmal sogar wohlwollend... und die in deinem Kopf sehr präzise Arbeit leisten: die Schuld umdrehen, dich zweifeln lassen, dich zum Schweigen bringen.</p>
+<p>Deshalb gibt es diesen Artikel. <strong>Manipulatoren erfinden nichts: sie greifen in ein Repertoire, und es ist ungefähr immer dasselbe.</strong> Kurze Sätze, die harmlos klingen, manchmal sogar wohlwollend, und die in deinem Kopf sehr präzise Arbeit leisten: die Schuld umdrehen, dich zweifeln lassen, dich zum Schweigen bringen.</p>
 <p>Wir tun also das Einzige, was sie wirklich neutralisiert: sie aus dem Zusammenhang nehmen und einzeln anschauen. Ihre echte Übersetzung, was sie in dir auslösen sollen, und was du erwidern kannst. Die Chancen stehen gut, dass du unterwegs mehrere wiedererkennst... und das ist auch ein bisschen der Sinn.</p>`,
   quickSummary: [
     "Diese Sätze diskutieren nie, was du gesagt hast, sie bestreiten dein Recht, es zu sagen.",
@@ -26,9 +26,9 @@ const article: BlogArticleData = {
       id: 'warum-diese-saetze-wirken',
       title: "Warum diese Sätze so gut funktionieren",
       content: `<p>Vor der Liste zwei Minuten zum Mechanismus, denn er erklärt alles.</p>
-<p>Wenn du Widerspruch oder Verletzung äußerst, gibt es zwei Arten zu antworten. Zur Sache: «okay, reden wir darüber, was passiert ist.» Oder zum Rahmen: «du bist nicht in der Verfassung, darüber zu reden, du übertreibst, das ist nicht der Moment»...</p>
+<p>Wenn du Widerspruch oder Verletzung äußerst, gibt es zwei Arten zu antworten. Zur Sache: «okay, reden wir darüber, was passiert ist.» Oder zum Rahmen: «du bist nicht in der Verfassung, darüber zu reden, du übertreibst, das ist nicht der Moment».</p>
 <p>Fast alle Manipulator-Sätze spielen auf den Rahmen. <strong>Sie diskutieren nie, was du sagst. Sie greifen dein Recht an, es zu sagen, und das ist etwas ganz anderes.</strong> Und das ist verheerend, weil es dich verschiebt: statt deine Sache zu verteidigen, verteidigst du plötzlich deine Berechtigung, deine psychische Gesundheit, deinen Tonfall. Das ursprüngliche Thema ist inzwischen verschwunden. Du wolltest über einen vergessenen Termin sprechen... und zwanzig Minuten später entschuldigst du dich für die Art, wie du es gesagt hast. Trick gelungen.</p>
-<p>Eine wichtige Einschränkung: jeder lässt an einem müden Tag einen dieser Sätze fallen. Einen Manipulator kennzeichnet das Repertoire: die Vielfalt der Formeln, ihre systematische Wiederkehr, und dass am Ende immer du dich entschuldigst. Dieses Gesamtmuster ist genau das des <a href="/de/blog/narzisst-in-der-liebe/">Narzissten in der Beziehung</a>: der Satz ist nur ein Rädchen im System.</p>`,
+<p>Eine wichtige Einschränkung: jeder lässt an einem müden Tag einen dieser Sätze fallen. Einen Manipulator kennzeichnet das Repertoire: die Vielfalt der Formeln, ihre systematische Wiederkehr, und dass am Ende immer du dich entschuldigst. Dieses Gesamtmuster ist das des <a href="/de/blog/narzisst-in-der-liebe/">Narzissten in der Beziehung</a>: der Satz ist nur ein Rädchen im System.</p>`,
     },
     {
       id: 'schuld-umdrehen',
@@ -55,18 +55,18 @@ const article: BlogArticleData = {
 <li><strong>«Du hast das schon wieder falsch verstanden.»</strong> Das «schon wieder» macht die ganze Arbeit: es installiert eine Vorgeschichte von Unfähigkeit, die es nie gab und die du nicht bestreiten wirst.</li>
 <li><strong>«Du bildest dir etwas ein.»</strong> Kommt genau dann, wenn deine Intuition heiß läuft. Je besser dein Radar, desto öfter hörst du ihn.</li>
 <li><strong>«Alle finden, dass du übertreibst.»</strong> Die unsichtbare Verstärkung: ein Phantomgericht, unüberprüfbar, gegen dich einberufen. Wer ist «alle»? Du wirst es nie erfahren.</li>
-<li><strong>«Du solltest wirklich mal jemanden aufsuchen.»</strong> Der brutalste der Familie. Deine Klarsicht wird zur Krankheit. Und an dem Tag, an dem du wirklich hingehst, durchschaut eine gute Therapeutin das sehr schnell... genau deshalb hasst er die Idee in der Praxis.</li>
+<li><strong>«Du solltest wirklich mal jemanden aufsuchen.»</strong> Der brutalste der Familie. Deine Klarsicht wird zur Krankheit. Und an dem Tag, an dem du wirklich hingehst, durchschaut eine gute Therapeutin das sehr schnell, und eben deshalb hasst er die Idee in der Praxis.</li>
 </ul>
 <p>Wenn dir diese Vernebelung bekannt vorkommt, nimm dir die Zeit zu verstehen, <a href="/de/blog/gaslighting-anzeichen/">wie sich Gaslighting einnistet</a>, denn es beschränkt sich nicht auf Sätze.</p>`,
     },
     {
       id: 'sich-zum-opfer-machen',
       title: "Familie 3: sich zum Opfer machen",
-      content: `<p>Der Manipulator hat ein besonderes Talent, härter zu leiden als du, und zwar genau in dem Moment, in dem du leidest.</p>
+      content: `<p>Der Manipulator hat ein besonderes Talent, härter zu leiden als du, und zwar in dem Moment, in dem du selbst leidest.</p>
 <ul>
 <li><strong>«Nach allem, was ich für dich getan habe...»</strong> Die Schuld. Nie aufgeschlüsselt, nie beglichen, immer verfügbar. Du bist dauerhaft im Minus, ohne je den Kontoauszug gesehen zu haben.</li>
 <li><strong>«Niemand versteht mich. Nicht einmal du.»</strong> Das «nicht einmal du» ist der arbeitende Teil: jetzt musst du beweisen, dass du nicht wie die anderen bist. Und um es zu beweisen, gibst du nach.</li>
-<li><strong>«Ich habe wirklich kein Glück mit Menschen.»</strong> Hör diesem Satz am Anfang einer Beziehung genau zu: seine «verrückten» Ex-Partnerinnen, seine «verräterischen» Freunde, seine «neidischen» Kollegen... Eines Tages wirst du der Liste beitreten. Diese Erzählung von den verrückten Ex-Partnerinnen ist sogar Anzeichen Nummer 3 beim <a href="/de/blog/narzisstischer-mann-anzeichen/">narzisstischen Mann</a>... und das Porträt, das er von ihnen zeichnet, ist das, das er von dir zeichnen wird.</li>
+<li><strong>«Ich habe wirklich kein Glück mit Menschen.»</strong> Hör diesem Satz am Anfang einer Beziehung genau zu: seine «verrückten» Ex-Partnerinnen, seine «verräterischen» Freunde, seine «neidischen» Kollegen. Eines Tages wirst du der Liste beitreten. Diese Erzählung von den verrückten Ex-Partnerinnen ist sogar Anzeichen Nummer 3 beim <a href="/de/blog/narzisstischer-mann-anzeichen/">narzisstischen Mann</a>, und das Porträt, das er von ihnen zeichnet, ist das, das er von dir zeichnen wird.</li>
 <li><strong>«Ich mache das alles für uns, und so dankst du es mir.»</strong> Seine Entscheidungen werden zu Opfern für dich, und dein Vorwurf zu Undankbarkeit. Nach einer Aufstellung dieser Opfer hat nie jemand gefragt.</li>
 <li><strong>«Es ist ja sowieso nie genug, was ich tue.»</strong> Der Satz, der das Thema beendet, indem er dich als unersättlich hinstellt. Danach wird jede Bitte zum Angriff.</li>
 <li><strong>«Sag doch gleich, dass ich ein Monster bin.»</strong> Die defensive Übertreibung: er treibt deinen Vorwurf ins Absurde, damit du ihn fallen lässt. Du wolltest über eine Verspätung reden, jetzt beteuerst du, dass er kein Monster ist.</li>
@@ -81,13 +81,13 @@ const article: BlogArticleData = {
 <li><strong>«Süß, dass du es versuchst.»</strong> Ein Kompliment und eine Ohrfeige im selben Satz. Nicht vorwerfbar («ich habe dir doch ein Kompliment gemacht!»), nicht abzufedern.</li>
 <li><strong>«Ohne mich würdest du das nicht schaffen.»</strong> Dieser bereitet den Boden für die Abhängigkeit. Lange genug wiederholt, glaubst du ihn irgendwann... und hast Angst zu gehen.</li>
 <li><strong>«Niemand sonst würde dich aushalten.»</strong> Der dunkle Zwilling des vorherigen. Er macht aus deiner Beziehung einen Gefallen, den man dir tut.</li>
-<li><strong>«Bist du dir da sicher?»</strong> Systematisch gestellt, zu deinen beruflichen Entscheidungen, deiner Kleidung, deinen Freundinnen... Ein Satz, und dein Selbstvertrauen geht wieder in die Werkstatt.</li>
+<li><strong>«Bist du dir da sicher?»</strong> Systematisch gestellt, zu deinen beruflichen Entscheidungen, deiner Kleidung, deinen Freundinnen. Ein Satz, und dein Selbstvertrauen geht wieder in die Werkstatt.</li>
 <li><strong>«Gut, dass ich es dir sage.»</strong> Die Kritik als Dienstleistung verpackt. Du kannst sie weder ablehnen noch diskutieren, du müsstest dich auch noch bedanken.</li>
 <li><strong>«Du nimmst alles wörtlich.»</strong> Die humoristische Fassung von «du bist zu empfindlich»: die verletzende Bemerkung wird zum Witz, und dein Problem wird dein fehlender Humor.</li>
 </ul>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Das Detail, das Familie 4 verrät</p>
-<p>Diese Sätze zielen fast immer auf deine Stärken, nicht auf deine Schwächen. Deinen Beruf, deinen Humor, deine Unabhängigkeit, das, worauf du stolz bist... Ein ungeschickter Partner kritisiert, was dir misslingt. Ein Manipulator geht auf das los, was dich aufrecht hält, und das ist der ganze Unterschied.</p>
+<p>Diese Sätze zielen fast immer auf deine Stärken, nicht auf deine Schwächen. Deinen Beruf, deinen Humor, deine Unabhängigkeit, das, worauf du stolz bist. Ein ungeschickter Partner kritisiert, was dir misslingt. Ein Manipulator geht auf das los, was dich aufrecht hält, und das ist der ganze Unterschied.</p>
 </aside>`,
     },
     {
@@ -113,7 +113,7 @@ const article: BlogArticleData = {
       id: 'die-nachrichten-des-manipulators',
       title: "Die Nachrichten des Manipulators: das Repertoire in Schriftform",
       content: `<p>Per Nachricht passt sich das Repertoire an, und das ist ein Wort wert, denn Geschriebenes hat eigene Regeln.</p>
-<p>Da ist zuerst die <strong>Funkstille</strong>: drei Tage keine Antwort nach einem Streit, dann ein «du fehlst mir» um 23:47, als wäre nichts gewesen. Dann die <strong>Schuldwand</strong>: fünfzehn Zeilen, in denen dein gestriger Abend zum Beweis deines Egoismus wird, geschickt zu der Stunde, in der du nicht antworten kannst. Auch die <strong>Schaufensternachricht</strong>: schriftlich reizend, persönlich eisig... denn Geschriebenes kann man zeigen, und das weiß er.</p>
+<p>Da ist zuerst die <strong>Funkstille</strong>: drei Tage keine Antwort nach einem Streit, dann ein «du fehlst mir» um 23:47, als wäre nichts gewesen. Dann die <strong>Schuldwand</strong>: fünfzehn Zeilen, in denen dein gestriger Abend zum Beweis deines Egoismus wird, geschickt zu der Stunde, in der du nicht antworten kannst. Auch die <strong>Schaufensternachricht</strong>: schriftlich reizend, persönlich eisig, denn Geschriebenes kann man zeigen, und das weiß er.</p>
 <p>Und dann gibt es die verstörendste: die nette Nachricht, die GENAU dann kommt, wenn es dir besser zu gehen begann. Die ist kein Zufall: deine Distanz wurde erkannt, und die Rückeroberung startet.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Lösch diese Nachrichten nicht</p>
@@ -123,7 +123,7 @@ const article: BlogArticleData = {
     {
       id: 'wie-du-antwortest',
       title: "Wie du auf diese Sätze antwortest (ohne deinen Abend zu verlieren)",
-      content: `<p>Goldene Regel: rechtfertige dich nicht über den Rahmen, komm zur Sache zurück. Jede Minute, die du damit verbringst zu beweisen, dass du nicht «zu empfindlich» bist, ist eine gewonnene Minute für ihn. So sieht das in der Praxis aus.</p>
+      content: `<p>Goldene Regel: <strong>rechtfertige dich nicht über den Rahmen, komm zur Sache zurück.</strong> Jede Minute, die du damit verbringst zu beweisen, dass du nicht «zu empfindlich» bist, ist eine gewonnene Minute für ihn. So sieht das in der Praxis aus.</p>
 <div><table><thead><tr><th>Er sagt...</th><th>Vermeide</th><th>Versuch lieber</th></tr></thead><tbody>
 <tr><td>«Du bist zu empfindlich.»</td><td>«Nein, das stimmt nicht, ich bin nicht zu empfindlich, der Beweis...»</td><td>«Vielleicht. Und der Termin gestern, wann reden wir darüber?»</td></tr>
 <tr><td>«Das habe ich nie gesagt.»</td><td>Die Beweise einzeln hervorholen</td><td>«Darüber diskutieren wir nicht. Ich habe es gehört, und das hat es mit mir gemacht.»</td></tr>
@@ -131,7 +131,7 @@ const article: BlogArticleData = {
 <tr><td>«Nach allem, was ich für dich getan habe...»</td><td>Auflisten, was du getan hast</td><td>«Das ist kein Wettbewerb. Ich rede von einer konkreten Sache.»</td></tr>
 <tr><td>«Beruhig dich.»</td><td>Sich beruhigen, indem man sich entschuldigt</td><td>«Ich bin ruhig. Und ich warte immer noch auf deine Antwort.»</td></tr>
 </tbody></table></div>
-<p>Du erkennst das Prinzip: kurze, sachliche Sätze, die das angebotene Terrain verweigern. Kein Plädoyer. Das Plädoyer ist genau das, worauf er wartet, weil es bestätigt, dass deine Berechtigung das Thema war.</p>
+<p>Du erkennst das Prinzip: kurze, sachliche Sätze, die das angebotene Terrain verweigern. Kein Plädoyer. Das Plädoyer ist das, worauf er wartet, weil es bestätigt, dass deine Berechtigung das Thema war.</p>
 <p>Und sei in einem Punkt ehrlich zu dir: wenn diese Antworten systematisch Eskalation, strafendes Schweigen oder eine Szene auslösen, geht es nicht mehr um ungeschickte Kommunikation. Es geht um ein System. Dann lohnt es sich, die <a href="/de/blog/narzisstischer-manipulator/">Techniken des narzisstischen Manipulators</a>, seine Schwachstellen und seine Reaktionen auf Widerstand im Detail zu kennen.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Hörst du diese Sätze bei dir zu Hause?</p>

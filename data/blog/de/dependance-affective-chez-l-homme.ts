@@ -12,14 +12,14 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Man stellt sich den emotional Abhängigen anhänglich und flehend vor. Bei Männern sieht das öfter nach Eifersucht aus, nach Wut... oder nach einem Typen, der nie Single ist.",
   introduction: `<p>Wenn man «emotionale Abhängigkeit» sagt, sieht jeder dieselbe Szene vor sich: jemand, der fleht, sich festklammert, fünfzehn Nachrichten schickt. Und weil sich die meisten Männer in diesem Bild nicht wiedererkennen, schließen sie, dass es sie nicht betrifft. Großer Irrtum.</p>
-<p><strong>Männliche emotionale Abhängigkeit gibt es, sie ist weit verbreitet... und sie trägt Masken, die niemand als emotionalen Mangel erkennt.</strong> Sie sieht aus wie Eifersucht, die kontrolliert, wie Wut, die wegen nichts explodiert, wie die Überinvestition des perfekten Typen, der zu Hause alles macht, oder wie dieses Phänomen, das jeder kennt, ohne es zu benennen: der Mann, der NIE länger als drei Wochen Single ist.</p>
+<p><strong>Männliche emotionale Abhängigkeit gibt es, sie ist weit verbreitet, und sie trägt Masken, die niemand als emotionalen Mangel erkennt.</strong> Sie sieht aus wie Eifersucht, die kontrolliert, wie Wut, die wegen nichts explodiert, wie die Überinvestition des perfekten Typen, der zu Hause alles macht, oder wie dieses Phänomen, das jeder kennt, ohne es zu benennen: der Mann, der NIE länger als drei Wochen Single ist.</p>
 <p>Hier kommt also die emotionale Abhängigkeit in ihrer männlichen Version, mit ihren echten Gesichtern. Wenn du ein Mann bist und das liest, halt dich fest, es kann gut sein, dass es ein bisschen brennt. Und wenn du eine Frau bist, die ihren Partner wiedererkennt, ist auch das Ende des Artikels für dich.</p>`,
   quickSummary: [
     "Männliche emotionale Abhängigkeit sieht nicht aus wie das Klischee: Sie verkleidet sich.",
     "Ihre Lieblingsmasken: kontrollierende Eifersucht, Wut, Überinvestition, Beziehungen am Fließband.",
     "Der Grundmechanismus ist derselbe wie bei Frauen: Der andere reguliert deinen Innenzustand.",
     "Das Tabu verschlimmert alles: Ein «bedürftiger» Mann, das sagt man gesellschaftlich nicht.",
-    "Daran lässt sich genau gleich arbeiten... vorausgesetzt, man benennt es zuerst.",
+    "Daran lässt sich arbeiten wie bei Frauen, vorausgesetzt, man benennt es zuerst.",
   ],
   sections: [
     {
@@ -27,24 +27,24 @@ const article: BlogArticleData = {
       title: "Warum man sie bei Männern nie sieht",
       content: `<p>Dafür gibt es zwei Gründe, einen sozialen und einen mechanischen.</p>
 <p>Zuerst der soziale: Jungen lernen, nicht «bedürftig» zu sein. Wegen einer Frau zu weinen, zuzugeben, dass man Angst hat, jemanden zu verlieren, «ich brauche dich» zu sagen, all das kostet viel an wahrgenommener Männlichkeit. Ergebnis: Das männliche Bindungsbedürfnis lernt sehr früh, sich als etwas anderes zu verkleiden. Es verschwindet nicht. Es schminkt sich.</p>
-<p>Dann der mechanische: Emotionale Abhängigkeit bleibt unter der Verkleidung dieselbe, <a href="/de/blog/emotionale-abhaengigkeit-in-beziehungen/">ein System, in dem der andere deinen Gefühlszustand reguliert</a>. Bei vielen Frauen äußert sich die Angst als sichtbare Bitte um Rückversicherung. Bei vielen Männern äußert sie sich als <em>Kontrolle</em>: Wenn ich nicht flehen kann, sichere ich ab. Überwache. Riegle zu. Es ist derselbe Motor mit anderer Karosserie. Und diese Karosserie richtet ringsum viel mehr Schaden an.</p>`,
+<p>Dann der mechanische. Unter der Verkleidung steckt dasselbe: <a href="/de/blog/emotionale-abhaengigkeit-in-beziehungen/">ein System, in dem der andere deinen Gefühlszustand reguliert</a>. Bei vielen Frauen äußert sich die Angst als sichtbare Bitte um Rückversicherung. Bei vielen Männern äußert sie sich als <em>Kontrolle</em>: Wenn ich nicht flehen kann, sichere ich ab. Überwache. Riegle zu. Es ist derselbe Motor mit anderer Karosserie. Und diese Karosserie richtet ringsum viel mehr Schaden an.</p>`,
     },
     {
       id: 'die-maennlichen-masken',
       title: "Die 8 Gesichter männlicher emotionaler Abhängigkeit",
       content: `<ol>
-<li><strong>Die kontrollierende Eifersucht:</strong> Nicht die kleine schmeichelhafte Eifersucht: die, die prüft, ausfragt, verdächtigt. Das Handy «zufällig» angeschaut, das «war der auch da?», die Mädelsabende, die zum Problem werden. Hinter der Kontrolle immer dasselbe: die Panik zu verlieren, unfähig, sich anders auszudrücken.</li>
+<li><strong>Die kontrollierende Eifersucht:</strong> Er prüft, er fragt aus, er verdächtigt. Das Handy «zufällig» angeschaut, das «war der auch da?», die Mädelsabende, die zum Problem werden. Hinter der Kontrolle steckt immer die Panik zu verlieren, die sich nicht anders auszudrücken weiß.</li>
 <li><strong>Die Wut als Blitzableiter:</strong> Viele emotional abhängige Männer kennen nur eine ausgehende Emotion: Gereiztheit. Sie kommt spät heim, er explodiert. Sie vergisst Bescheid zu sagen, er schmollt zwei Tage. Übersetzung: «Ich hatte Angst und kann es nicht sagen». Die Wut ist einfach Angst, die einen männlicheren Ausgang gefunden hat.</li>
-<li><strong>Die Überinvestition des perfekten Typen:</strong> Diese ist gegenintuitiv. Er macht alles: den Einkauf, die Geschenke, die Pläne, die Reparaturen. Großzügig? An der Oberfläche. Darunter ist es ein stiller Vertrag: «Ich mache mich unentbehrlich, damit du nicht gehen kannst». Eine Liebe, die dazu dient, sich Sicherheit zu kaufen, ist kein ganzes Geschenk mehr.</li>
-<li><strong>Nie Single:</strong> Der große Klassiker: Beziehungen am Fließband, die nächste beginnt, bevor die vorige endet, völlige Unfähigkeit, länger als einen Monat allein zu sein. Das ist keine Liebe zur Liebe, das ist Horror vor der Leere. Und jede Verkettung verhindert genau die Arbeit, die das Problem lösen würde.</li>
-<li><strong>Die ferngesteuerte Stimmung:</strong> Sie ist zärtlich, sein Tag ist gut. Sie ist distanziert, sein Tag ist ruiniert. Die Kollegen sehen es ihm an: «Ärger mit deiner Freundin?» Wenn sich deine Stimmung wie ein Wetterbericht deiner Beziehung lesen lässt, steht das Thermostat draußen.</li>
-<li><strong>Die brachliegenden Kumpels:</strong> Der Donnerstagsfußball aufgegeben, die Freunde «von früher», der Männerurlaub undenkbar geworden. Nicht weil sie es verbietet, Achtung! Weil sich von ihr zu entfernen, auch nur zwei Tage, zu viel Angst kostet. Also bleibt er. Und nennt es Liebe.</li>
-<li><strong>Das dauernde Opfer, still verbucht:</strong> Er sagt zu allem Ja, vergisst sich völlig... und führt dabei unbewusst Buch. An dem Tag, an dem es überläuft, kommt alles auf einmal: «Ich habe ALLES für dich getan!» Hingabe, die eine Gegenleistung erwartet, ist im Grunde eine Anlage.</li>
-<li><strong>Verlassensangst als Forderung verkleidet:</strong> Er fleht nicht, er fordert. Anwesenheit, Rechenschaft, Beweise. Es sieht aus wie Autorität, aber darunter ist es Panik. Und es erschöpft den anderen genauso wie klagende Bedürftigkeit, nur schlimmer.</li>
+<li><strong>Die Überinvestition des perfekten Typen:</strong> Diese ist gegenintuitiv. Er macht alles: den Einkauf, die Geschenke, die Pläne, die Reparaturen. Großzügig? An der Oberfläche. Darunter ist es ein stiller Vertrag: «Ich mache mich unentbehrlich, damit du nicht gehen kannst». Das Problem ist, dass diese Art von Großzügigkeit immer etwas zurückerwartet.</li>
+<li><strong>Nie Single:</strong> Der große Klassiker: Beziehungen am Fließband, die nächste beginnt, bevor die vorige endet, völlige Unfähigkeit, länger als einen Monat allein zu sein. Hinter der Verkettung steckt vor allem die Angst, mit sich allein zu bleiben. Und solange er verkettet, macht er nie die Arbeit, die das Problem lösen würde.</li>
+<li><strong>Die ferngesteuerte Stimmung:</strong> Sie ist zärtlich, sein Tag ist gut. Sie ist distanziert, sein Tag ist ruiniert. Die Kollegen sehen es ihm an: «Ärger mit deiner Freundin?» Wenn deine Stimmung so sehr von ihrer abhängt, regelst nicht mehr du sie.</li>
+<li><strong>Die brachliegenden Kumpels:</strong> Der Donnerstagsfußball aufgegeben, die Freunde «von früher», der Männerurlaub undenkbar geworden. Nicht weil sie es verbietet, Achtung! Weil sich von ihr zu entfernen, auch nur zwei Tage, zu viel Angst kostet. Also bleibt er, und redet sich ein, das sei Liebe.</li>
+<li><strong>Das dauernde Opfer, still verbucht:</strong> Er sagt zu allem Ja, vergisst sich völlig, und führt dabei unbewusst Buch. An dem Tag, an dem es überläuft, kommt alles auf einmal: «Ich habe ALLES für dich getan!» Hingabe, die eine Gegenleistung erwartet, fordert sie irgendwann ein.</li>
+<li><strong>Verlassensangst als Forderung verkleidet:</strong> Er fleht nicht, er fordert. Anwesenheit, Rechenschaft, Beweise. Es sieht aus wie Autorität, aber darunter ist es Panik. Und es erschöpft den anderen so sehr wie klagende Bedürftigkeit, nur schlimmer.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Der Punkt, an dem es ernst wird</p>
-<p>Kontrolle über das Handy, die Ausgänge, die Kleidung, Isolation der anderen Person. Unbehandelte männliche emotionale Abhängigkeit kann in Verhaltensweisen abgleiten, die kein «Liebeskummer» mehr sind, sondern Zwangskontrolle, und dieses Abgleiten fordert Opfer. Wenn du dich auf diesem Gefälle wiedererkennst, ist jetzt der Moment zu handeln, nicht nach der nächsten Krise.</p>
+<p>Kontrolle über das Handy, die Ausgänge, die Kleidung, Isolation der anderen Person... Unbehandelt kann männliche emotionale Abhängigkeit in Zwangskontrolle abgleiten. Das ist kein «Liebeskummer» mehr, und es fordert Opfer. Wenn du dich auf diesem Gefälle wiedererkennst, ist jetzt der Moment zu handeln, nicht nach der nächsten Krise.</p>
 </aside>
 <div><table><thead><tr><th>Die Maske</th><th>Was das Umfeld sieht</th><th>Was darunter liegt</th></tr></thead><tbody>
 <tr><td>Die kontrollierende Eifersucht</td><td>Ein besitzergreifender Typ</td><td>Die Panik, nicht genug zu zählen</td></tr>
@@ -60,33 +60,33 @@ const article: BlogArticleData = {
     {
       id: 'was-das-mit-der-beziehung-macht',
       title: "Was das mit der Beziehung macht (der Teufelskreis)",
-      content: `<p>Das Drama der männlichen emotionalen Abhängigkeit ist, dass sie genau das herstellt, was sie fürchtet. Der Mechanismus läuft in drei Takten ab und ist von unerbittlicher Regelmäßigkeit.</p>
-<p>Er hält zu fest, aus Angst zu verlieren. Sie erstickt, also nimmt sie Abstand, einfach um zu atmen. Er spürt den Abstand, gerät in Panik... und hält noch fester. Eifersucht steigt, Kontrolle steigt, Vorwürfe steigen. Sie entfernt sich weiter. Und eines Tages geht sie, nicht weil sie ihn nicht geliebt hätte, sondern weil man nicht unter Atemanhalten lieben kann.</p>
-<p>Das Schlimmste? Dieser Weggang «bestätigt» seine Ausgangsüberzeugung: Man verlässt mich am Ende immer. Und schon geht es von vorn los, mit der Nächsten, schlimmer. Genau diesen Kreis nähren die <a href="/de/blog/emotionale-abhaengigkeit-symptome/">klassischen Symptome des emotionalen Mangels</a> im Stillen... solange niemand ihn benennt.</p>`,
+      content: `<p>Das Drama der männlichen emotionalen Abhängigkeit ist, dass sie das herstellt, was sie fürchtet. Und es läuft immer in derselben Reihenfolge ab.</p>
+<p>Er hält zu fest, aus Angst zu verlieren. Sie erstickt, also nimmt sie Abstand, einfach um zu atmen. Er spürt den Abstand, gerät in Panik und hält noch fester. Eifersucht steigt, Kontrolle steigt, Vorwürfe steigen. Sie entfernt sich weiter. Und eines Tages geht sie, nicht weil sie ihn nicht geliebt hätte, sondern weil man nicht unter Atemanhalten lieben kann.</p>
+<p>Das Schlimmste? Dieser Weggang «bestätigt», was er ohnehin geglaubt hat: Man verlässt mich am Ende immer. Und schon geht es von vorn los, mit der Nächsten, schlimmer. Diesen Kreis nähren die <a href="/de/blog/emotionale-abhaengigkeit-symptome/">klassischen Symptome des emotionalen Mangels</a> im Stillen, solange niemand ihn benennt.</p>`,
     },
     {
       id: 'ausstieg-maennerversion',
       title: "Herauskommen, in der Männerversion",
-      content: `<p>Die Grundmethode ist für alle gleich: Die <a href="/de/blog/emotionale-abhaengigkeit-ueberwinden/">12 Übungen zur Überwindung emotionaler Abhängigkeit</a> funktionieren im Männlichen genauso, stabilisieren, sich das Leben zurückholen, festigen. Aber es gibt drei männliche Besonderheiten, die den Unterschied machen, und man kann sie auch klar aussprechen.</p>`,
+      content: `<p>Die Grundmethode ist für alle gleich: Die <a href="/de/blog/emotionale-abhaengigkeit-ueberwinden/">12 Übungen zur Überwindung emotionaler Abhängigkeit</a> funktionieren bei Männern genauso gut: stabilisieren, sich das Leben zurückholen, festigen. Aber es gibt drei männliche Besonderheiten, die den Unterschied machen.</p>`,
       subsections: [
         {
           id: 'eins-zuerst-benennen',
           title: "Zuerst benennen",
-          content: `<p>Du kannst an keinem Problem arbeiten, das du «sie nervt mich» nennst. Der erste Sieg ist die Übersetzung: Hinter meiner Eifersucht steckt Angst. Hinter meiner Wut steckt Mangel. Das kostet beim ersten Mal... und es verändert alles, denn an Angst kann man arbeiten, an «sie nervt mich» nicht.</p>`,
+          content: `<p>Du kannst an keinem Problem arbeiten, das du «sie nervt mich» nennst. Der erste Sieg ist die Übersetzung: Hinter meiner Eifersucht steckt Angst. Hinter meiner Wut steckt Mangel. Das kostet beim ersten Mal, aber es verändert alles: An Angst kann man arbeiten, an «sie nervt mich» nicht.</p>`,
         },
         {
           id: 'zwei-mit-einem-kumpel-reden',
           title: "Mit EINEM Kumpel darüber reden",
-          content: `<p>Nicht mit zehn, nicht in sozialen Netzwerken: mit einem, dem verlässlichsten. Männer unterschätzen massiv, was das löst, weil sie erwarten, verurteilt zu werden, und jedes zweite Mal ein «Alter, ich auch» zurückbekommen. Das Tabu stirbt, sobald es den Kopf verlässt.</p>`,
+          content: `<p>Nicht mit zehn, nicht in sozialen Netzwerken: mit einem, dem verlässlichsten. Männer unterschätzen massiv, was das löst, weil sie erwarten, verurteilt zu werden, und jedes zweite Mal ein «Alter, ich auch» zurückbekommen.</p>`,
         },
         {
           id: 'drei-therapie-ist-keine-niederlage',
           title: "Therapie ist keine Niederlage",
-          content: `<p>Das ist buchstäblich ein Trainer. Für Sport holst du dir doch einen Coach und fürs Auto eine Werkstatt? Mit Bindungsverletzungen ist es genauso: Es gibt Menschen, deren Beruf das ist, und die Ergebnisse sind gerade bei Männern spektakulär... weil sie mit zwanzig Jahren unausgesprochener Worte ankommen.</p>
-<p>Und ein letztes Wort, wenn du die Partnerin bist, die ihren Mann in diesem Artikel wiedererkannt hat: Du kannst die Arbeit nicht für ihn machen, und ihn immer weiter zu beruhigen heilt nichts, es füttert das System. Was du tun kannst? Benennen, was du siehst, ohne Verachtung, einmal, klar... und ihn zu Hilfe ermutigen. Der Rest gehört ihm.</p>
+          content: `<p>Ein Therapeut ist ein Trainer. Für Sport holst du dir doch einen Coach und fürs Auto eine Werkstatt? Mit Bindungsverletzungen ist es genauso: Es gibt Menschen, deren Beruf das ist, und die Ergebnisse sind bei Männern spektakulär, weil sie mit zwanzig Jahren unausgesprochener Worte ankommen.</p>
+<p>Ein Wort, wenn du die Partnerin bist, die ihren Mann in diesem Artikel wiedererkannt hat: Du kannst die Arbeit nicht für ihn machen, und ihn immer weiter zu beruhigen heilt nichts, es füttert das System. Was du tun kannst: einmal klar und ohne Verachtung benennen, was du siehst, und ihn ermutigen, sich Hilfe zu holen. Der Rest gehört ihm.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Zieh Bilanz, jetzt, in fünf Minuten</p>
-<p class="blog-cta-texte">Eine Fragenreihe bewertet deinen Bindungsstil anhand konkreter Situationen, Eifersucht, Kontrolle, Leere, Stimmung. Niemand erfährt es, und du weißt endlich Bescheid.</p>
+<p class="blog-cta-texte">Eine Fragenreihe bewertet deinen Bindungsstil anhand konkreter Situationen, Eifersucht, Kontrolle, Leere, Stimmung. Niemand erfährt es, und du weißt endlich, woran du bist.</p>
 <a class="blog-cta-btn" href="/de/emotionale-abhaengigkeit-test/">Prüfen, wo ich stehe</a>
 <p class="blog-cta-note">Kostenlos &middot; Ohne Anmeldung &middot; Sofortiges Ergebnis</p>
 </div>

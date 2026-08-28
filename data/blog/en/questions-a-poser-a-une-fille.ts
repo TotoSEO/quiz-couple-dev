@@ -5,14 +5,14 @@ const article: BlogArticleData = {
   slug: 'questions-to-ask-a-girl',
   title: "The 90 best questions to ask a girl to get to know her",
   metaTitle: "90 Questions to Ask a Girl (Without the Interrogation)",
-  metaDescription: "Tired of \"hey, how are you?\" going nowhere? 90 questions to ask a girl, from the first message to a real one to one, never an interrogation.",
+  metaDescription: "Tired of «hey, how are you?» going nowhere? 90 questions to ask a girl, from the first message to a real one to one, never an interrogation.",
   featuredImage: '/blog/questions-a-poser-a-une-fille.webp',
   featuredImageAlt: "Two people talking at a table, one listening attentively to the other",
   publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "A conversation that stalls or a girl who wants to see you again: it comes down to the quality of your questions, and what you do with the answers.",
-  introduction: `<p>Let's be honest for two minutes. The problem is almost never finding ONE question to ask. The problem is that "how are you?", "what do you do?" and "good weekend?" are exactly how every other conversation she's having right now begins...</p>
-<p><strong>A good question makes the difference because it shows something rare: that you're interested in her, not just in making conversation.</strong> And that, believe me, gets noticed immediately.</p>
+  introduction: `<p>Let's be honest for two minutes. The problem is almost never finding ONE question to ask. The problem is that «how are you?», «what do you do?» and «good weekend?» are how every other conversation she's having right now begins.</p>
+<p><strong>A good question changes things because it shows something rare: that you're interested in her, not just in making conversation.</strong> And that, believe me, gets noticed immediately.</p>
 <p>So here are 90 questions, sorted by situation, from the first message to the face-to-face where it all plays out. With one piece of advice that applies to all 90: the way you listen to the answer makes the difference, far more than the question itself.</p>`,
   quickSummary: [
     "90 questions sorted by situation, from the first message to knowing whether she likes you.",
@@ -25,11 +25,11 @@ const article: BlogArticleData = {
     {
       id: 'rules-before-questions',
       title: "Two rules before you start",
-      content: `<p><strong>One question, then silence:</strong> The classic reflex when you're nervous is to chain them: question, answer, question, answer... After ten minutes she feels she's in a job interview, and you're exhausted. Ask your question, listen to the answer, and build ON it. "You said you grew up by the coast, don't you miss the sea?" is worth ten new questions.</p>
+      content: `<p><strong>One question, then silence:</strong> The classic reflex when you're nervous is to chain them: question, answer, question, answer... After ten minutes she feels she's in a job interview, and you're exhausted. Ask your question, listen to the answer, and build ON it. «You said you grew up by the coast, don't you miss the sea?» is worth ten new questions.</p>
 <p><strong>Answer your own questions too:</strong> If you ask about her worst night out, follow with yours, especially if it's ridiculous. It's the exchange that creates connection, not the collection of information. And daring to tell something that doesn't flatter you is precisely what makes you different from the other conversations she's having.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Questions to avoid, while we're here</p>
-<p>"Why are you single?" (she's heard it a hundred times, and there's no good answer). "What was your ex like?" (too early, always). Salary, weight, "are you looking for something serious?" by the second message... Keep one principle in mind: if the question sounds like screening a candidate, it kills the magic.</p>
+<p>«Why are you single?» (she's heard it a hundred times, and there's no good answer). «What was your ex like?» (too early, always). Salary, weight, «are you looking for something serious?» by the second message. Keep one principle in mind: if the question sounds like screening a candidate, it kills the magic.</p>
 </aside>
 <div><table><thead><tr><th>The rule</th><th>Why it changes everything</th></tr></thead><tbody>
 <tr><td>One question at a time</td><td>Two in a row, and it becomes a form</td></tr>
@@ -42,7 +42,7 @@ const article: BlogArticleData = {
     {
       id: 'by-message-to-open',
       title: "By message or on an app, to open (1-15)",
-      content: `<p>The goal here isn't to be profound, it's to be easy to answer and slightly more interesting than the rest. That's all.</p>
+      content: `<p>No need to be profound here. Be easy to answer, and slightly more interesting than the rest. That's all.</p>
 <ol>
 <li>Your week in two emojis, and am I allowed to ask why?</li>
 <li>What are you listening to on repeat right now, no cheating?</li>
@@ -91,7 +91,7 @@ const article: BlogArticleData = {
     {
       id: 'to-make-her-laugh',
       title: "To make her laugh (36-50)",
-      content: `<p>Laughter is the best compatibility detector there is. And the advantage of these questions is that they're funny even when the answer isn't... because it's the conversation afterwards that counts.</p>
+      content: `<p>Laughter is the best compatibility detector there is. And the advantage of these questions is that they're funny even when the answer isn't, because it's the conversation afterwards that counts.</p>
 <ol start="36">
 <li>What's your absurd theory that you still half defend?</li>
 <li>How long would you survive in a horror film, seriously?</li>
@@ -113,7 +113,7 @@ const article: BlogArticleData = {
     {
       id: 'to-build-closeness',
       title: "To build real closeness (51-65)",
-      content: `<p>Bring these out when it's already clicking. This is where you move from "nice conversation" to "conversation she'll tell her friends about". Go gently, one or two at a time, not a burst.</p>
+      content: `<p>Bring these out when it's already clicking. This is where you move from «nice conversation» to «conversation she'll tell her friends about». Go gently, one or two at a time, not a burst.</p>
 <ol start="51">
 <li>What genuinely makes you happy, beyond the usual answers?</li>
 <li>What's the hardest lesson you've learned so far?</li>
@@ -155,7 +155,7 @@ const article: BlogArticleData = {
     {
       id: 'to-know-if-she-likes-you',
       title: "To find out whether she likes you (79-90)",
-      content: `<p>No frontal question here, you'll notice. "Do you like me?" asked too early guarantees pressure and the end of any lightness. These twelve questions do the same job... better, and without breaking the mood.</p>
+      content: `<p>No frontal question here, you'll notice. «Do you like me?» asked too early guarantees pressure and the end of any lightness. These twelve questions do the same job... better, and without breaking the mood.</p>
 <ol start="79">
 <li>What makes you want to see someone again after a first meeting?</li>
 <li>Do you tell your friends about our conversations, or am I dreaming?</li>
@@ -163,7 +163,7 @@ const article: BlogArticleData = {
 <li>What has surprised you about me since we started talking?</li>
 <li>Would you rather we met up this week, or shall I keep guessing?</li>
 <li>If you had to introduce me to someone, what would you say about me?</li>
-<li>What are we doing next time? Yes, I said "next time".</li>
+<li>What are we doing next time? Yes, I said «next time».</li>
 <li>What signal do you send when you like someone, so I can check something?</li>
 <li>Are you more likely to make the first move or wait for it?</li>
 <li>What would make this a good week, and am I in it?</li>
@@ -179,14 +179,14 @@ const article: BlogArticleData = {
       id: 'now-its-your-turn',
       title: "And now it's your turn",
       content: `<p>One last thing, and it may be the most important. These 90 questions are a starting point, not a magic method. The girl in front of you isn't waiting for a perfect questionnaire: she's waiting for someone real, who listens, who builds on what she says, who dares to answer his own questions without giving himself the good role.</p>
-<p>And if you're already talking every day, you've probably noticed you think about her a bit more than expected... At some point the real question stops being what to ask her: it becomes whether you're <a href="/en/am-i-in-love-test/">falling in love without realising it</a>. It happens faster than people think.</p>
+<p>And if you're already talking every day, you've probably noticed you think about her a bit more than expected. At some point the real question stops being what to ask her: it becomes whether you're <a href="/en/am-i-in-love-test/">falling in love without realising it</a>. It happens faster than people think.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">And what does she feel?</p>
 <p class="blog-cta-texte">Her follow-ups, her attentions, the way she is when you're there: a series of questions goes through the signals that really count, the ones you miss when you're in the middle of it. Instant result.</p>
 <a class="blog-cta-btn" href="/en/does-he-she-secretly-love-me-test/">Check whether she likes me</a>
 <p class="blog-cta-note">Free &middot; No sign-up &middot; 3 minutes</p>
 </div>
-<p>Then the day she becomes your girlfriend, you'll see the register change: <a href="/en/couple-questions/">the questions couples ask each other</a> take over, and the point is no longer to shine but to build. That day, you'll be a step ahead... because you'll already know how to listen.</p>
+<p>Then the day she becomes your girlfriend, you'll see the register change: <a href="/en/couple-questions/">the questions couples ask each other</a> take over, and the point is no longer to shine but to build. That day, you'll be a step ahead, because you'll already know how to listen.</p>
 <a href="/en/blog/questions-to-ask-your-crush/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">100 questions to ask your crush, from the first message to the first date</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

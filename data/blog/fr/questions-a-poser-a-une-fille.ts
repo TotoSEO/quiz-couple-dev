@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Une conversation qui patine ou une fille qui a envie de te revoir, ça se joue à la qualité de tes questions... et à ce que tu fais des réponses.",
-  introduction: `<p>Soyons honnêtes deux minutes. Le problème n'est presque jamais de trouver UNE question à poser. Le problème, c'est que toutes les autres conversations qu'elle a en ce moment commencent exactement pareil : « ça va ? », « tu fais quoi dans la vie ? », « t'as passé un bon week-end ? »...</p>
-<p><strong>Une bonne question fait la différence parce qu'elle montre un truc rare : que tu t'intéresses à elle, pas juste à faire la conversation.</strong> Et ça, crois-moi, ça se remarque tout de suite.</p>
+  introduction: `<p>Soyons honnêtes deux minutes. Le problème n'est presque jamais de trouver UNE question à poser. Le problème, c'est que toutes les autres conversations qu'elle a en ce moment commencent de la même façon : « ça va ? », « tu fais quoi dans la vie ? », « t'as passé un bon week-end ? »</p>
+<p><strong>Une bonne question change la donne parce qu'elle montre un truc rare : que tu t'intéresses à elle, pas juste à faire la conversation.</strong> Et ça, crois-moi, ça se remarque tout de suite.</p>
 <p>Voici donc 90 questions, classées par situation, du premier message au tête-à-tête où tout se joue. Avec un conseil qui vaut pour les 90 : c'est ta façon d'écouter la réponse qui fait la différence, bien plus que la question elle-même.</p>`,
   quickSummary: [
     "90 questions classées par situation, du premier message au tête-à-tête.",
@@ -26,10 +26,10 @@ const article: BlogArticleData = {
       id: 'les-regles-avant-les-questions',
       title: "Deux règles avant de dégainer",
       content: `<p><strong>Une question, puis le silence :</strong> Le réflexe classique quand on stresse, c'est d'enchaîner : question, réponse, question, réponse... Au bout de dix minutes, elle a l'impression de passer un entretien, et toi tu es épuisé. Pose ta question, écoute la réponse, et rebondis DESSUS. « Tu m'as dit que tu avais grandi à Marseille, ça te manque pas, la mer ? » vaut dix questions nouvelles.</p>
-<p><strong>Réponds aussi à tes propres questions :</strong> Si tu lui demandes son pire souvenir de soirée, enchaîne avec le tien, surtout s'il est ridicule. C'est l'échange qui crée la connexion, pas la collecte d'informations. Et puis, par exemple, oser raconter un truc pas à ton avantage... c'est précisément ce qui te rend différent des autres conversations qu'elle a en ce moment.</p>
+<p><strong>Réponds aussi à tes propres questions :</strong> Si tu lui demandes son pire souvenir de soirée, enchaîne avec le tien, surtout s'il est ridicule. C'est l'échange qui crée la connexion, pas la collecte d'informations. Et puis, par exemple, oser raconter un truc pas à ton avantage, c'est précisément ce qui te rend différent des autres conversations qu'elle a en ce moment.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Les questions à éviter, tant qu'on y est</p>
-<p>« Pourquoi t'es célibataire ? » (elle l'a entendue cent fois, et c'est un piège sans bonne réponse). « C'était quoi ton ex ? » (trop tôt, toujours). Le salaire, le poids, « t'es plutôt relation sérieuse ou pas ? » dès le deuxième message... Garde en tête un principe simple : si la question ressemble à un tri de candidature, elle tue la magie.</p>
+<p>« Pourquoi t'es célibataire ? » (elle l'a entendue cent fois, et c'est un piège sans bonne réponse). « C'était quoi ton ex ? » (trop tôt, toujours). Le salaire, le poids, « t'es plutôt relation sérieuse ou pas ? » dès le deuxième message. Garde en tête un principe simple : si la question ressemble à un tri de candidature, elle tue la magie.</p>
 </aside>
 <div><table><thead><tr><th>La règle</th><th>Pourquoi elle change tout</th></tr></thead><tbody>
 <tr><td>Une question à la fois</td><td>Deux questions d'affilée, et ça devient un formulaire</td></tr>
@@ -42,7 +42,7 @@ const article: BlogArticleData = {
     {
       id: 'par-message-pour-lancer',
       title: "Par message ou sur une app, pour lancer (1-15)",
-      content: `<p>L'objectif ici n'est pas d'être profond, c'est d'être facile à répondre et un peu plus intéressant que les autres. C'est tout.</p>
+      content: `<p>Ici, inutile d'être profond. Il faut être facile à répondre, et un peu plus intéressant que les autres. C'est tout.</p>
 <ol>
 <li>Ta semaine en deux emojis, et j'ai le droit de demander pourquoi ?</li>
 <li>Qu'est-ce que tu écoutes en boucle en ce moment, sans tricher ?</li>
@@ -91,7 +91,7 @@ const article: BlogArticleData = {
     {
       id: 'pour-la-faire-rire',
       title: "Pour la faire rire (36-50)",
-      content: `<p>Le rire, c'est le meilleur détecteur de compatibilité qui existe. Et l'avantage de ces questions, c'est qu'elles font rire même quand la réponse est nulle... parce que c'est la discussion d'après qui compte.</p>
+      content: `<p>Le rire, c'est le meilleur détecteur de compatibilité qui existe. Et l'avantage de ces questions, c'est qu'elles font rire même quand la réponse est nulle, parce que c'est la discussion d'après qui compte.</p>
 <ol start="36">
 <li>C'est quoi ta théorie absurde que tu défends quand même un peu ?</li>
 <li>Tu survivrais combien de temps dans un film d'horreur, sérieusement ?</li>
@@ -179,14 +179,14 @@ const article: BlogArticleData = {
       id: 'et-maintenant-a-toi-de-jouer',
       title: "Et maintenant, à toi de jouer",
       content: `<p>Dernière chose, et c'est peut-être la plus importante. Ces 90 questions sont un point de départ, pas une méthode magique. La fille en face de toi n'attend pas un questionnaire parfait : elle attend quelqu'un de vrai, qui écoute, qui rebondit, qui ose répondre à ses propres questions sans se donner le beau rôle.</p>
-<p>Et si vous en êtes déjà à vous parler tous les jours, tu as sans doute remarqué que tu penses à elle un peu plus que prévu... Au bout d'un moment, la vraie question n'est plus de savoir quoi lui demander : c'est de savoir si tu es en train de <a href="/test-suis-je-amoureux/">tomber amoureux</a> sans t'en rendre compte. Ça arrive plus vite qu'on croit.</p>
+<p>Et si vous en êtes déjà à vous parler tous les jours, tu as sans doute remarqué que tu penses à elle un peu plus que prévu. Au bout d'un moment, la vraie question n'est plus de savoir quoi lui demander : c'est de savoir si tu es en train de <a href="/test-suis-je-amoureux/">tomber amoureux</a> sans t'en rendre compte. Ça arrive plus vite qu'on croit.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Et elle, elle ressent quoi ?</p>
 <p class="blog-cta-texte">Ses relances, ses attentions, sa façon d'être quand tu es là : une série de questions passe en revue les signaux qui comptent vraiment, ceux qu'on rate quand on a le nez dedans. Résultat immédiat.</p>
 <a class="blog-cta-btn" href="/test-m-aime-t-il-elle-en-secret/">Vérifier si je lui plais</a>
 <p class="blog-cta-note">Gratuit &middot; Sans inscription &middot; 3 minutes</p>
 </div>
-<p>Puis le jour où elle devient ta copine, tu verras, le registre change : ce sont les <a href="/questions-couple/">questions qu'on se pose en couple</a> qui prennent le relais, et l'enjeu n'est plus de briller mais de construire. Ce jour-là, tu auras une longueur d'avance... puisque tu sauras déjà écouter.</p>
+<p>Puis le jour où elle devient ta copine, tu verras, le registre change : ce sont les <a href="/questions-couple/">questions qu'on se pose en couple</a> qui prennent le relais, et l'enjeu n'est plus de briller mais de construire. Ce jour-là, tu auras une longueur d'avance, puisque tu sauras déjà écouter.</p>
 <a href="/blog/questions-a-poser-a-son-crush/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">100 questions à poser à son crush, du premier message au premier rendez-vous</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

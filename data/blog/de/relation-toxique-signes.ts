@@ -11,7 +11,7 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-03T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Toxisch», das Wort ist überall, bis es nichts mehr sagt. Und doch hat die echte toxische Beziehung präzise Anzeichen... und eine zentrale Frage: Lässt sie sich reparieren?",
-  introduction: `<p>«Toxische Beziehung»... Das Wort ist so allgegenwärtig, dass es für alles herhält: ein etwas heftiger Streit, ein nachtragender Ex, eine Uneinigkeit über den Urlaub, zack, toxisch! Ergebnis: Wenn man sich die Frage WIRKLICH für die eigene Beziehung stellt, weiß man nicht mehr, was man denken soll. Ist es schlimm? Ist es normal? Liegt es an mir?</p>
+  introduction: `<p>«Toxische Beziehung». Das Wort ist so allgegenwärtig, dass es für alles herhält: ein etwas heftiger Streit, ein nachtragender Ex, eine Uneinigkeit über den Urlaub, zack, toxisch! Ergebnis: Wenn man sich die Frage WIRKLICH für die eigene Beziehung stellt, weiß man nicht mehr, was man denken soll. Ist es schlimm? Ist es normal? Liegt es an mir?</p>
 <p>Setzen wir also das echte Kriterium, das alles ordnet: <strong>Eine Beziehung ist toxisch wegen dem, was sie mit dir macht, nicht wegen dem, was sie enthält.</strong> Streit haben alle Paare. Unterschiede, graue Phasen, Worte, die zu weit gehen: genauso. Da liegt die Frage nicht. Die Frage lautet: In welchen Zustand versetzt dich diese Beziehung, Woche für Woche?</p>
 <p>Schauen wir es uns in Ruhe an, bis zur Frage, die am meisten zählt: Lässt es sich reparieren oder nicht?</p>`,
   quickSummary: [

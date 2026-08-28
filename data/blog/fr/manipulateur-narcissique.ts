@@ -13,7 +13,7 @@ const article: BlogArticleData = {
   excerpt: "Le manipulateur narcissique n'a rien de tout-puissant : son système a des failles, connues et prévisibles... à condition de savoir où regarder.",
   introduction: `<p>Tu sais, ou tu suspectes très fort, que tu as affaire à un manipulateur narcissique. Une fois qu'on en est là, reconnaître les signes ne suffit plus : la vraie question devient comment il fonctionne, et comment on s'en protège concrètement.</p>
 <p><strong>Le manipulateur narcissique n'est pas tout-puissant : c'est un système, et un système, ça a des règles, des schémas... et des failles.</strong> Ses techniques sont prévisibles. Ses réactions aussi. Et ses points faibles sont étonnamment constants d'un manipulateur à l'autre.</p>
-<p>On va donc voir, dans l'ordre : ses techniques préférées, ses vulnérabilités réelles, ce que produit ton silence sur lui, et ses réactions types quand on lui résiste. Pas pour jouer au plus malin avec lui, on va le redire plus bas... mais parce que comprendre la mécanique, c'est déjà ne plus être dedans.</p>`,
+<p>On va donc voir, dans l'ordre : ses techniques préférées, ses vulnérabilités réelles, ce que produit ton silence sur lui, et ses réactions types quand on lui résiste. Pas pour jouer au plus malin avec lui, on va le redire plus bas, mais parce que comprendre la mécanique, c'est déjà ne plus être dedans.</p>`,
   quickSummary: [
     "Manipulateur narcissique et pervers narcissique : deux étiquettes pour un même fonctionnement d'emprise.",
     "Ses techniques suivent un ordre : charme ciblé, dette affective, triangulation, gaslighting, punition froide.",
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'deux-noms-un-profil',
       title: "Manipulateur narcissique, pervers narcissique : deux noms, un même profil",
-      content: `<p>Réglons d'abord la question du vocabulaire, parce qu'elle embrouille tout le monde. « Manipulateur narcissique », « pervers narcissique », « PN »... En pratique, ces étiquettes décrivent le même fonctionnement : un besoin de domination alimenté par l'image, et un usage de l'autre comme ressource. La nuance, quand on veut la faire, c'est que tous les manipulateurs ne sont pas narcissiques : certains manipulent par intérêt ponctuel, sans ce besoin structurel d'écraser pour exister.</p>
+      content: `<p>Réglons d'abord la question du vocabulaire, parce qu'elle embrouille tout le monde. « Manipulateur narcissique », « pervers narcissique », « PN ». En pratique, ces étiquettes décrivent le même fonctionnement : un besoin de domination alimenté par l'image, et un usage de l'autre comme ressource. La nuance, quand on veut la faire, c'est que tous les manipulateurs ne sont pas narcissiques : certains manipulent par intérêt ponctuel, sans ce besoin structurel d'écraser pour exister.</p>
 <p>Celui dont on parle ici, c'est le manipulateur au sens fort : celui dont la manipulation n'est pas un outil occasionnel mais un mode de relation permanent. Ce qu'il produit dans un couple porte un nom : le cycle d'emprise du <a href="/blog/pervers-narcissique-amour/">pervers narcissique dans le couple</a>, avec son brouillard et ses saisons. Ici, on se concentre sur la mécanique de l'individu : ses gestes techniques, si on peut dire.</p>`,
     },
     {
@@ -33,9 +33,9 @@ const article: BlogArticleData = {
       title: "Ses techniques, dans l'ordre où il les sort",
       content: `<p>Chaque manipulateur a son style, mais la boîte à outils est standard. Et elle s'ouvre presque toujours dans le même ordre.</p>
 <ol>
-<li><strong>Le charme ciblé :</strong> Pas un charme généreux : un charme d'investisseur. Il identifie ce qui te manque, de la reconnaissance, de la sécurité, de l'intensité, et il le fournit massivement. C'est la phase d'accroche, et elle est d'autant plus efficace qu'elle vise juste.</li>
-<li><strong>La dette affective :</strong> Cadeaux, services, disponibilité spectaculaire... qui se transforment vite en créance. Tout ce qu'il a « fait pour toi » devient un argument, une facture émotionnelle qu'on te présente à chaque désaccord.</li>
-<li><strong>La triangulation :</strong> Technique redoutable et souvent invisible : il introduit un tiers dans l'équation. Une ex « qui le comprenait mieux », une collègue « tellement drôle », un rival flou... L'objectif : créer une concurrence permanente, te maintenir en compétition pour une place que tu croyais acquise.</li>
+<li><strong>Le charme ciblé :</strong> Rien de généreux là-dedans, c'est un charme d'investisseur. Il identifie ce qui te manque, de la reconnaissance, de la sécurité, de l'intensité, et il le fournit massivement. C'est la phase d'accroche, et elle est d'autant plus efficace qu'elle vise juste.</li>
+<li><strong>La dette affective :</strong> Cadeaux, services, disponibilité spectaculaire, qui se transforment vite en créance. Tout ce qu'il a « fait pour toi » devient un argument, une facture émotionnelle qu'on te présente à chaque désaccord.</li>
+<li><strong>La triangulation :</strong> Technique redoutable et souvent invisible : il introduit un tiers dans l'équation. Une ex « qui le comprenait mieux », une collègue « tellement drôle », un rival flou. L'objectif : créer une concurrence permanente, te maintenir en compétition pour une place que tu croyais acquise.</li>
 <li><strong>Le gaslighting :</strong> La réécriture du réel : ce que tu as vu n'a pas eu lieu, ce qu'il a dit n'a jamais été dit. À la longue, tu doutes de ta mémoire, et il devient l'unique source fiable de la réalité du couple. Ses formules exactes, on les a listées dans les <a href="/blog/phrases-preferees-des-manipulateurs/">phrases préférées des manipulateurs</a>.</li>
 <li><strong>La punition froide :</strong> Quand tu résistes : silence, retrait d'affection, ambiance glaciale. Jamais nommée, jamais assumée (« mais non, tout va bien »), ce qui t'oblige à deviner ta faute et à la réparer préventivement.</li>
 <li><strong>La victimisation en dernier recours :</strong> Quand tout le reste échoue, il souffre. Bruyamment, publiquement si nécessaire. C'est sa sortie de secours favorite : impossible d'en vouloir à quelqu'un qui va si mal...</li>
@@ -44,26 +44,26 @@ const article: BlogArticleData = {
     {
       id: 'ses-points-faibles',
       title: "Les points faibles du manipulateur (oui, il en a)",
-      content: `<p>Vu de l'intérieur, son système a l'air implacable. En réalité, il repose sur des conditions précises... et chacune est une faille.</p>
+      content: `<p>Vu de l'intérieur, son système a l'air implacable. En réalité, il repose sur des conditions précises, et chacune est une faille.</p>
 <ol>
-<li><strong>L'indifférence sincère :</strong> Pas l'indifférence jouée, il la détecte : la vraie, celle qui vient quand tu as compris et que tu n'attends plus rien. Son système carbure à ta réaction, admiration ou souffrance, peu importe. Une personne qui ne réagit plus, c'est une pompe à essence fermée.</li>
-<li><strong>Les témoins :</strong> Toute sa mécanique exige le huis clos. Un tiers présent, une conversation à trois, une famille au courant... et le personnage public doit rester en scène, ce qui neutralise le personnage privé. C'est pour ça qu'il travaille si dur à t'isoler.</li>
+<li><strong>L'indifférence sincère :</strong> L'indifférence jouée, il la détecte tout de suite. Celle qui compte est la vraie, celle qui vient quand tu as compris et que tu n'attends plus rien. Son système carbure à ta réaction, admiration ou souffrance, peu importe. Une personne qui ne réagit plus, c'est une pompe à essence fermée.</li>
+<li><strong>Les témoins :</strong> Toute sa mécanique exige le huis clos. Un tiers présent, une conversation à trois, une famille au courant, et le personnage public doit rester en scène, ce qui neutralise le personnage privé. C'est pour ça qu'il travaille si dur à t'isoler.</li>
 <li><strong>L'écrit :</strong> Le « je n'ai jamais dit ça » meurt face à une capture d'écran. Il le sait, d'ailleurs : remarque comme les pires choses se disent à l'oral, et comme les messages écrits, eux, sont soignés.</li>
 <li><strong>Le temps et la constance :</strong> Son jeu demande des résultats rapides : te déstabiliser, te faire céder, te récupérer. Face à quelqu'un de calmement constant, qui répète la même limite sans s'énerver, semaine après semaine... le système s'épuise. Il n'est pas équipé pour le marathon.</li>
 <li><strong>Le non sans justification :</strong> Un refus argumenté, c'est une prise : chaque argument peut être contesté, retourné, épuisé. Un « non » simple, répété tel quel, ne lui offre aucune surface d'attaque. C'est frustrant pour lui à un point que tu n'imagines pas.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Connaître ses failles n'est pas une invitation à jouer</p>
-<p>Ces points faibles servent à te protéger, pas à le battre à son propre jeu. Entrer dans une partie de manipulation contre un manipulateur, c'est jouer sa spécialité, sur son terrain, avec ses règles... Tu y perdrais ton énergie et, plus grave, un peu de toi. La vraie victoire, c'est la sortie du jeu.</p>
+<p>Ces points faibles servent à te protéger, pas à le battre à son propre jeu. Entrer dans une partie de manipulation contre un manipulateur, c'est jouer sa spécialité, sur son terrain, avec ses règles. Tu y perdrais ton énergie et, plus grave, un peu de toi. La vraie victoire, c'est la sortie du jeu.</p>
 </aside>`,
     },
     {
       id: 'l-effet-du-silence',
       title: "L'effet du silence sur le manipulateur",
       content: `<p>C'est une des questions les plus posées, et elle mérite une réponse précise, parce que le silence est une arme... à double tranchant.</p>
-<p>Ce que ton silence produit chez lui, d'abord : un manque. Ton attention, tes réactions, tes émotions sont son carburant quotidien, ce que les anglophones appellent la « narcissic supply ». Couper le contact, c'est couper l'approvisionnement. Et là, il se passe quelque chose de très prévisible : <strong>ça déclenche d'abord une escalade, jamais du respect.</strong> Messages multipliés, charme réactivé, culpabilisation, colère, parfois les trois dans la même journée... Il teste toutes les portes, dans l'ordre.</p>
-<p>Ensuite, deux issues possibles. Soit tu tiens, et il finit par se tourner vers une autre source d'attention, avec parfois un dernier feu d'artifice de dénigrement public pour sauver son image. Soit tu craques une fois, un seul « réponds-moi »... et tu viens de lui apprendre combien de jours de pression sont nécessaires pour te récupérer. C'est exactement pour ça que le silence, face à ce profil, doit être une décision préparée, pas une bouderie ni un test.</p>
-<p>Dernier point, important : le silence dont on parle ici, c'est celui de la sortie de relation, le fameux no contact. À l'intérieur du couple, se taire pour « lui faire comprendre » ne fonctionne pas : il lit ce silence comme une punition, donc comme une réaction, donc comme du carburant. Encore une fois... c'est le jeu qu'il connaît le mieux.</p>`,
+<p>Ce que ton silence produit chez lui, d'abord : un manque. Ton attention, tes réactions, tes émotions sont son carburant quotidien, ce que les anglophones appellent la « narcissic supply ». Couper le contact, c'est couper l'approvisionnement. Et là, il se passe quelque chose de très prévisible : <strong>ça déclenche d'abord une escalade, jamais du respect.</strong> Messages multipliés, charme réactivé, culpabilisation, colère, parfois les trois dans la même journée. Il teste toutes les portes, dans l'ordre.</p>
+<p>Ensuite, deux issues possibles. Soit tu tiens, et il finit par se tourner vers une autre source d'attention, avec parfois un dernier feu d'artifice de dénigrement public pour sauver son image. Soit tu craques une fois, un seul « réponds-moi »... et tu viens de lui apprendre combien de jours de pression sont nécessaires pour te récupérer. C'est pour ça que le silence, face à ce profil, doit être une décision préparée, pas une bouderie ni un test.</p>
+<p>Dernier point, important : le silence dont on parle ici, c'est celui de la sortie de relation, le fameux no contact. À l'intérieur du couple, se taire pour « lui faire comprendre » ne fonctionne pas : il lit ce silence comme une punition, donc comme une réaction, donc comme du carburant. Encore une fois, c'est le jeu qu'il connaît le mieux.</p>`,
     },
     {
       id: 'ses-reactions-types',
@@ -76,7 +76,7 @@ const article: BlogArticleData = {
 <tr><td>Tu le quittes</td><td>Reconquête intensive, puis dénigrement public, puis réapparitions cycliques</td><td>Ce n'est pas toi qu'il veut récupérer, c'est le contrôle et l'image</td></tr>
 <tr><td>Tu vas visiblement mieux sans lui</td><td>Retour « par hasard », message nostalgique, gentillesse soudaine</td><td>Ton mieux-être est une perte de contrôle : il vient vérifier si la porte rouvre</td></tr>
 </tbody></table></div>
-<p>La dernière ligne du tableau est celle qui piège le plus de monde, des mois après la rupture... Cette phase-là, avec ses réapparitions calibrées, est la signature de la <a href="/blog/rupture-pervers-narcissique/">rupture face à un pervers narcissique</a>... Et si tu es encore dans la relation au moment où tu lis ça, sache que <a href="/blog/sortir-emprise-pervers-narcissique/">se libérer de l'emprise</a> suit quatre étapes qui commencent bien avant le départ.</p>
+<p>La dernière ligne du tableau est celle qui piège le plus de monde, des mois après la rupture. Cette phase-là, avec ses réapparitions calibrées, est la signature de la <a href="/blog/rupture-pervers-narcissique/">rupture face à un pervers narcissique</a>. Et si tu es encore dans la relation au moment où tu lis ça, sache que <a href="/blog/sortir-emprise-pervers-narcissique/">se libérer de l'emprise</a> suit quatre étapes qui commencent bien avant le départ.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Besoin de savoir à quoi tu as affaire, exactement ?</p>
 <p class="blog-cta-texte">Vingt questions reprennent les comportements décrits dans cet article, situation par situation, et le résultat te dit où ta relation se situe. Discret, immédiat, et souvent très éclairant.</p>

@@ -46,7 +46,7 @@ const article: BlogArticleData = {
       title: "Las 10 señales, en versión concreta",
       content: `<p>Como siempre con este perfil, ninguna señal aislada demuestra nada. Lo que cuenta es la acumulación, la repetición y el sentido general. En sus formas femeninas típicas, queda así.</p>
 <ol>
-<li><strong>La culpabilización como lengua materna:</strong> No son órdenes: son suspiros, «venga, pásalo bien» que significan lo contrario, «tranquilo, ya estoy acostumbrada a estar sola». Acabas renunciando por tu cuenta, y ese es exactamente el principio: no prohíbe nada, lo hace todo caro.</li>
+<li><strong>La culpabilización como lengua materna:</strong> Órdenes, nunca. Suspiros, «venga, pásalo bien» que significan lo contrario, «tranquilo, ya estoy acostumbrada a estar sola». Acabas renunciando por tu cuenta, y ese es el principio mismo: no prohíbe nada, lo hace todo caro.</li>
 <li><strong>El estatus de víctima en preventivo:</strong> Ella sufre. Siempre, estructuralmente, y por tu culpa. Su infancia, sus ex «todos unos cabrones», y ahora tú. Ese estatus no es fragilidad, es una posición estratégica: no se le puede reprochar nada a quien está mal.</li>
 <li><strong>Tu valor cotizando a la baja, con suavidad:</strong> Tu trabajo «está bien pero bueno», tus proyectos «monos», tus logros minimizados o apropiados. Fíjate en el detalle que mata: en público te valora. La demolición nunca sale de casa.</li>
 <li><strong>Celos de tus apoyos, no de tus rivales:</strong> Contraintuitivo, pero muy típico: sus celos reales apuntan a lo que te hace sólido sin ella. Tus amigos de siempre, tu hermano, tu deporte, tu éxito profesional. Todo lo que te alimenta fuera es un competidor a eliminar.</li>
@@ -65,7 +65,7 @@ const article: BlogArticleData = {
     {
       id: 'lo-que-le-hace-a-un-hombre',
       title: "Lo que le hace a un hombre, por dentro",
-      content: `<p>Y hay que decirlo: los hombres bajo dominio desarrollan exactamente los mismos síntomas que las mujeres víctimas. La duda permanente, la autocensura, la vigilancia agotadora, la vergüenza, con una capa más: la sensación de no tener derecho a quejarse. «Soy un hombre, debería poder con esto.»</p>
+      content: `<p>Y hay que decirlo: los hombres bajo dominio desarrollan los mismos síntomas que las mujeres víctimas. La duda permanente, la autocensura, la vigilancia agotadora, la vergüenza, con una capa más: la sensación de no tener derecho a quejarse. «Soy un hombre, debería poder con esto.»</p>
 <p>Pues aclaremos las cosas. Estar bajo el dominio de una manipuladora no dice nada de tu virilidad, de tu fuerza ni de tu inteligencia. Estos sistemas funcionan con gente buena, precisamente porque es buena: tu lealtad, tu paciencia y tus ganas de hacerlo bien son la materia prima del mecanismo. Hombres brillantes y sólidos pasan por ello como los demás, solo que tardan más en pedir ayuda.</p>
 <p>Y si compruebas que no consigues irte pese a todo lo que acabas de leer, no es falta de valor: es el funcionamiento atrapado del apego, a veces doblado por una verdadera <a href="/es/blog/dependencia-emocional-en-la-pareja/">dependencia emocional</a> que ella ha cultivado con cuidado. Se desmonta, pero no solo.</p>
 <div class="blog-cta">

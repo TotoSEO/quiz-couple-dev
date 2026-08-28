@@ -11,13 +11,13 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-27T14:30:00+01:00',
   author: AUTHORS['thomas'],
   excerpt: "Les couples ne se plantent presque jamais par manque d'amour. Ils se plantent sur des sujets qu'ils n'avaient jamais mis sur la table.",
-  introduction: `<p>Il y a une statistique que personne ne calcule mais que tout le monde connaît : la plupart des grandes crises de couple portent sur des sujets... dont les deux savaient qu'il faudrait parler un jour : l'argent, les enfants, la belle-famille, la répartition des tâches. Le « un jour » est juste arrivé trop tard, en pleine crise, au pire moment pour en discuter calmement.</p>
-<p><strong>Parler d'avenir n'a jamais tué une histoire solide, alors que ne pas en parler en a tué beaucoup.</strong> Et contrairement à ce qu'on croit, ces conversations ne sont pas solennelles ni pesantes... bien menées, ce sont même parmi les plus excitantes qu'un couple puisse avoir !</p>
-<p>Voici 60 questions d'avenir, classées par grande étape : avant d'emménager, avant de s'engager pour de bon, avant un enfant, autour de l'argent, et sur vos rêves communs. À picorer AVANT que les sujets deviennent urgents... c'est tout leur intérêt.</p>`,
+  introduction: `<p>La plupart des grandes crises de couple portent sur des sujets dont les deux savaient qu'il faudrait parler un jour : l'argent, les enfants, la belle-famille, la répartition des tâches. Le « un jour » est juste arrivé trop tard, en pleine crise, au pire moment pour en discuter calmement.</p>
+<p><strong>Parler d'avenir n'a jamais tué une histoire solide, alors que ne pas en parler en a tué beaucoup.</strong> Et ces conversations ne sont ni solennelles ni pesantes. Bien menées, ce sont même parmi les plus excitantes qu'un couple puisse avoir !</p>
+<p>Voici 60 questions d'avenir, classées par grande étape : avant d'emménager, avant de s'engager pour de bon, avant un enfant, autour de l'argent, et sur vos rêves communs. À picorer AVANT que les sujets deviennent urgents, c'est tout leur intérêt.</p>`,
   quickSummary: [
     "60 questions classées par étape : emménager, s'engager, un enfant, l'argent, les rêves.",
     "Le principe : en parler avant que ce soit urgent, jamais en pleine crise.",
-    "Pas besoin d'être d'accord sur tout... mais il faut savoir où sont les écarts.",
+    "Pas besoin d'être d'accord sur tout, mais il faut savoir où sont les écarts.",
     "Une étape à la fois : ces conversations se dégustent sur des semaines.",
     "Les réponses évoluent : les meilleures questions d'avenir se reposent chaque année.",
   ],
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'avant-d-emmenager',
       title: "Avant d'emménager ensemble (1-15)",
-      content: `<p>La cohabitation est le premier vrai test de compatibilité concrète... et le plus sous-estimé. On emménage sur un sentiment, on cohabite sur des habitudes !</p>
+      content: `<p>La cohabitation est le premier vrai test de compatibilité concrète, et le plus sous-estimé. On emménage sur un sentiment, on cohabite sur des habitudes !</p>
 <ol>
 <li>C'est quoi ton besoin de solitude dans une semaine normale, en heures honnêtes ?</li>
 <li>Rangé ou bordélique : tu te situes où, et tu supportes quoi chez l'autre ?</li>
@@ -41,14 +41,14 @@ const article: BlogArticleData = {
 <li>Qu'est-ce que tu as détesté dans tes cohabitations passées, coloc comprise ?</li>
 <li>On garde quoi comme rituels d'avant, quand on vivra ensemble ?</li>
 <li>C'est quoi ta définition d'un chez-nous réussi, en trois mots ?</li>
-<li>Et si ça se passait mal les six premiers mois... on se dit quoi maintenant pour ce moment-là ?</li>
+<li>Et si ça se passait mal les six premiers mois, on se dit quoi maintenant pour ce moment-là ?</li>
 </ol>
-<p>Si la moitié de ces réponses te surprennent, ce n'est pas un mauvais signe, au contraire : mieux vaut les découvrir maintenant. Et pour transformer l'essai en décision posée, le <a href="/test-habiter-vivre-ensemble/">test « prêts à vivre ensemble »</a> croise vos réponses point par point... ça évite de découvrir les écarts avec les cartons déjà déballés.</p>`,
+<p>Si la moitié de ces réponses te surprennent, ce n'est pas un mauvais signe, au contraire : mieux vaut les découvrir maintenant. Et pour transformer l'essai en décision posée, le <a href="/test-habiter-vivre-ensemble/">test « prêts à vivre ensemble »</a> croise vos réponses point par point, et ça évite de découvrir les écarts avec les cartons déjà déballés.</p>`,
     },
     {
       id: 'avant-de-s-engager',
       title: "Avant de s'engager pour de bon (16-30)",
-      content: `<p>Mariage, pacs, ou engagement sans papier : peu importe la forme, c'est le fond qui se vérifie ici. Ces quinze questions sont celles que les couples regrettent de ne pas s'être posées...</p>
+      content: `<p>Mariage, pacs, ou engagement sans papier : peu importe la forme, c'est le fond qui se vérifie ici. Ces quinze questions sont celles que les couples regrettent de ne pas s'être posées.</p>
 <ol start="16">
 <li>Qu'est-ce que l'engagement veut dire pour toi, concrètement, pas en poème ?</li>
 <li>Mariage : envie, indifférence, ou principe ? Et pourquoi ?</li>
@@ -57,21 +57,21 @@ const article: BlogArticleData = {
 <li>La fidélité, on la définit pareil ? Vérifions.</li>
 <li>Qu'est-ce qu'on fait si l'un de nous traverse une vraie tempête, chômage, maladie, dépression ?</li>
 <li>Ta famille, elle aura quelle place dans notre vie ? Et la mienne ?</li>
-<li>C'est quoi ton modèle de couple, celui qui t'inspire... et celui qui te sert de repoussoir ?</li>
+<li>C'est quoi ton modèle de couple, celui qui t'inspire, et celui qui te sert de repoussoir ?</li>
 <li>Qu'est-ce que tu ne sacrifieras jamais, même pour nous ?</li>
 <li>On gère comment nos différences de religion, de culture ou de valeurs, si on en a ?</li>
 <li>Qu'est-ce qui, pour toi, justifierait une séparation ? Question dure, réponse utile.</li>
 <li>Tu imagines nos week-ends dans dix ans comment ?</li>
 <li>C'est quoi le truc que les couples mariés autour de toi ont raté, à ton avis ?</li>
 <li>De quoi tu as besoin pour te sentir libre DANS l'engagement ?</li>
-<li>Et si on écrivait chacun notre définition de « nous » ... tu paries qu'elles sont différentes ?</li>
+<li>Et si on écrivait chacun notre définition de « nous » ? Tu paries qu'elles sont différentes ?</li>
 </ol>
-<p>La 20 et la 26 méritent une vraie soirée à elles seules. Et quand vous aurez fait le tour, le <a href="/test-couple-mariage/">test « prêts pour le mariage »</a> met vos réponses face à face, noir sur blanc... c'est étonnant ce qu'on découvre.</p>`,
+<p>La 20 et la 26 méritent une vraie soirée à elles seules. Et quand vous aurez fait le tour, le <a href="/test-couple-mariage/">test « prêts pour le mariage »</a> met vos réponses face à face, noir sur blanc, et c'est étonnant ce qu'on découvre.</p>`,
     },
     {
       id: 'avant-un-enfant',
       title: "Avant un enfant (31-45)",
-      content: `<p>Le sujet le plus engageant de tous, et celui où le non-dit coûte le plus cher. Ces questions ne se posent pas en une fois, hein... mais elles doivent toutes avoir été posées avant le grand saut.</p>
+      content: `<p>Le sujet le plus engageant de tous, et celui où le non-dit coûte le plus cher. Ces questions ne se posent pas en une fois, hein, mais elles doivent toutes avoir été posées avant le grand saut.</p>
 <ol start="31">
 <li>Un enfant : c'est un projet daté, une envie floue, ou une question ouverte ?</li>
 <li>Pourquoi tu veux un enfant, toi ? La vraie réponse, pas la réponse sociale.</li>
@@ -80,16 +80,16 @@ const article: BlogArticleData = {
 <li>C'est quoi ton modèle d'éducation : cadre ferme, liberté, et ça vient d'où ?</li>
 <li>On transmet quoi côté religion, valeurs, traditions ?</li>
 <li>Les grands-parents auront quel rôle, et quelles limites ?</li>
-<li>Comment tu imagines qu'on reste un couple... en devenant des parents ?</li>
+<li>Comment tu imagines qu'on reste un couple en devenant parents ?</li>
 <li>C'est quoi ta plus grande peur en devenant père ou mère ?</li>
 <li>Qu'est-ce que tes parents ont raté que tu veux absolument éviter ?</li>
 <li>Et qu'est-ce qu'ils ont réussi que tu veux reproduire ?</li>
 <li>Écrans, sucre, punitions : trois sujets qui fâchent, on se positionne maintenant ?</li>
-<li>Si notre enfant était très différent de ce qu'on imagine... qu'est-ce qui compterait encore ?</li>
+<li>Si notre enfant était très différent de ce qu'on imagine, qu'est-ce qui compterait encore ?</li>
 <li>On habite où, dans ce scénario ? Près de qui ?</li>
-<li>Et si l'un de nous change d'avis sur les enfants... on se promet quoi, là, aujourd'hui ?</li>
+<li>Et si l'un de nous change d'avis sur les enfants, on se promet quoi, là, aujourd'hui ?</li>
 </ol>
-<p>Aucun couple n'est « d'accord sur tout » ici, rassure-toi. L'objectif, c'est zéro angle mort... et le <a href="/test-parentalite-couple/">test « prêts pour un bébé »</a> fait exactement ce travail de vérification croisée, sujet par sujet.</p>`,
+<p>Aucun couple n'est « d'accord sur tout » ici, rassure-toi. L'objectif, c'est zéro angle mort, et le <a href="/test-parentalite-couple/">test « prêts pour un bébé »</a> fait exactement ce travail de vérification croisée, sujet par sujet.</p>`,
     },
     {
       id: 'l-argent-et-les-grandes-decisions',
@@ -105,13 +105,13 @@ const article: BlogArticleData = {
 <li>Qu'est-ce que tu ferais si on héritait ou gagnait une grosse somme demain ?</li>
 <li>Aider financièrement sa famille : jusqu'où c'est normal pour toi ?</li>
 <li>Une grande décision, ça se prend comment chez nous : consensus, tour de rôle, domaines réservés ?</li>
-<li>C'est quoi la dépense des autres couples que tu trouves absurde... et la tienne que je trouve absurde ?</li>
+<li>C'est quoi la dépense des autres couples que tu trouves absurde, et la tienne que je trouve absurde ?</li>
 </ol>`,
     },
     {
       id: 'vos-reves-communs',
       title: "Vos rêves communs (56-60)",
-      content: `<p>On finit par le carburant. Parce qu'un couple, ce n'est pas juste une gestion réussie... c'est une direction qui donne envie. Il en reste cinq, les plus belles.</p>
+      content: `<p>On finit par le carburant. Parce qu'un couple, ce n'est pas juste une gestion réussie, c'est aussi une direction qui donne envie. Il en reste cinq, les plus belles.</p>
 <ol start="56">
 <li>C'est quoi le rêve qu'on n'a jamais formulé à voix haute, tous les deux ?</li>
 <li>Si on s'accordait une année complètement folle, elle ressemblerait à quoi ?</li>
@@ -121,9 +121,9 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Le rituel qui change tout</p>
-<p>Les réponses à ces 60 questions ne sont pas gravées : elles bougent, avec les années et les événements. Les couples qui durent refont le tour des grandes questions régulièrement, une fois par an, un soir d'anniversaire de rencontre par exemple... Ce rendez-vous-là vaut tous les contrats du monde.</p>
+<p>Les réponses à ces 60 questions ne sont pas gravées : elles bougent, avec les années et les événements. Les couples qui durent refont le tour des grandes questions régulièrement, une fois par an, un soir d'anniversaire de rencontre par exemple. Ce rendez-vous-là vaut tous les contrats du monde.</p>
 </aside>
-<p>Et si ces conversations d'avenir t'ont donné le goût des grandes discussions, la <a href="/questions-couple/">collection complète de questions à se poser à deux</a> couvre tous les autres registres... des plus légères aux plus profondes, il y a de quoi tenir des années de soirées.</p>
+<p>Et si ces conversations d'avenir t'ont donné le goût des grandes discussions, la <a href="/questions-couple/">collection complète de questions à se poser à deux</a> couvre tous les autres registres, des plus légères aux plus profondes. Il y a de quoi tenir des années de soirées.</p>
 <div><table><thead><tr><th>Le cap</th><th>Le sujet qu'on découvre trop tard</th></tr></thead><tbody>
 <tr><td>Avant d'emménager</td><td>Qui paie quoi, et ce qui se passe si l'un perd son travail</td></tr>
 <tr><td>Avant de s'engager</td><td>Ce que chacun met derrière le mot « engagement »</td></tr>

@@ -11,9 +11,9 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "The hard part with a crush is finding the question that revives the conversation at the right moment. Here are 100 of them, sorted by situation.",
-  introduction: `<p>You know the moment... The conversation is going round in circles, the "good, you?" pile up, and you can feel that if nobody brings something else, it's going to die politely in a "have a good evening then". With a crush, every exchange counts double. So sooner or later we all end up staring at our phone with no idea what to send.</p>
-<p><strong>A good question does two things at once: it shows you're genuinely interested, and it makes them want to answer.</strong> That's all you ask of a conversation that's just starting. And it's exactly what the 100 questions below do.</p>
-<p>They're sorted by situation, from the first message to the first date. We write "he" for simplicity, but everything obviously works in every direction.</p>`,
+  introduction: `<p>You know the moment. The conversation is going round in circles, the «good, you?» pile up, and you can feel that if nobody brings something else, it's going to die politely in a «have a good evening then». With a crush, every exchange counts double. So sooner or later we all end up staring at our phone with no idea what to send.</p>
+<p><strong>A good question does two things at once: it shows you're genuinely interested, and it makes them want to answer.</strong> That's all you ask of a conversation that's just starting. The 100 questions below are built for it.</p>
+<p>They're sorted by situation, from the first message to the first date. We write «he» for simplicity, but everything obviously works in every direction.</p>`,
   quickSummary: [
     "100 questions sorted by situation, from the first message to the first date.",
     "One question at a time: three in the same message reads like a form.",
@@ -31,7 +31,7 @@ const article: BlogArticleData = {
 <li>Are you more of a four-minute voice note or a wall of text?</li>
 <li>What are you listening to on repeat right now?</li>
 <li>Your current series, the one you hide and the one you own?</li>
-<li>If I say "best snack at 11pm", what do you answer?</li>
+<li>If I say «best snack at 11pm», what do you answer?</li>
 <li>Last photo on your phone you can send me without shame?</li>
 <li>What's your completely useless talent?</li>
 <li>Last thing that made you laugh alone in the street?</li>
@@ -51,7 +51,7 @@ const article: BlogArticleData = {
     {
       id: 'to-get-to-know-him',
       title: "To get to know him (16-35)",
-      content: `<p>The fundamentals. This is where you find out who he really is, beyond the character of the first exchanges... and believe me, there are often surprises.</p>
+      content: `<p>The fundamentals. This is where you find out who he really is, beyond the character of the first exchanges, and believe me, there are often surprises.</p>
 <ol start="16">
 <li>What are you passionate about to the point of losing track of time?</li>
 <li>How would you describe yourself in three words, and which three would your friends pick?</li>
@@ -78,7 +78,7 @@ const article: BlogArticleData = {
     {
       id: 'funny-to-make-him-laugh',
       title: "Funny, to make him laugh (36-50)",
-      content: `<p>Humour is the shortest route between two people who like each other. These questions carry no stakes at all... and that's exactly why they work so well.</p>
+      content: `<p>Humour is the shortest route between two people who like each other. These questions carry no stakes at all, and that's why they work so well.</p>
 <ol start="36">
 <li>What's your favourite conspiracy theory, the one you half defend?</li>
 <li>Which animal would be your official spokesperson?</li>
@@ -100,7 +100,7 @@ const article: BlogArticleData = {
     {
       id: 'a-bit-more-personal',
       title: "A bit more personal (51-65)",
-      content: `<p>Bring these out when the conversation is well under way and you sense it can go further than jokes. That's often exactly where a crush becomes something else...</p>
+      content: `<p>Bring these out when the conversation is well under way and you sense it can go further than jokes. That's often where a crush becomes something else...</p>
 <ol start="51">
 <li>What genuinely makes you happy, not on paper, for real?</li>
 <li>Do you talk about your feelings easily, or keep everything in?</li>
@@ -122,7 +122,7 @@ const article: BlogArticleData = {
     {
       id: 'to-flirt',
       title: "To flirt, without overdoing it (66-80)",
-      content: `<p>Flirting that works follows one simple rule: suggest rather than announce. These questions send the signal while leaving the other person free to take it... or not. That's exactly what makes them effective without ever being heavy-handed.</p>
+      content: `<p>Flirting that works follows one simple rule: suggest rather than announce. These questions send the signal while leaving the other person free to take it... or not. That's what makes them effective without ever being heavy-handed.</p>
 <ol start="66">
 <li>What did you notice first about me, honestly?</li>
 <li>What's your idea of a perfect date, with no unlimited budget?</li>
@@ -142,13 +142,13 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 How to know whether he's into it</p>
-<p>Watch his follow-ups more than his answers. Someone interested answers, then sends a question back, reacts, restarts the thread the next day... Someone polite answers well, and stops there. Message length matters less than you think: what matters is who restarts the machine.</p>
+<p>Watch his follow-ups more than his answers. Someone interested answers, then sends a question back, reacts, restarts the thread the next day. Someone polite answers well, and stops there. Message length matters less than you think: what matters is who restarts the machine.</p>
 </aside>`,
     },
     {
       id: 'to-see-if-it-fits',
       title: "To see whether it could work between you (81-92)",
-      content: `<p>Under their light conversational cover, these twelve questions check the essentials: your rhythms, your expectations, your outlooks. It's exactly the work done by <a href="/en/couple-questions/">couple questions</a> once a relationship is under way; in crush form, you check the same things without ever asking THE frontal question.</p>
+      content: `<p>Under their light conversational cover, these twelve questions check the essentials: your rhythms, your expectations, your outlooks. It's the work done by <a href="/en/couple-questions/">couple questions</a> once a relationship is under way; in crush form, you check the same things without ever asking THE frontal question.</p>
 <ol start="81">
 <li>What's your ideal weekend: tight plan or total improvisation?</li>
 <li>Do you need a lot of time to yourself, or do you like continuous presence?</li>
@@ -159,7 +159,7 @@ const article: BlogArticleData = {
 <li>Big conversations or silent closeness?</li>
 <li>What do you want from a relationship, ideally?</li>
 <li>Do you think you can tell each other everything, or should you keep private gardens?</li>
-<li>Your level of organisation on a scale from 1 to "I have a spreadsheet"?</li>
+<li>Your level of organisation on a scale from 1 to «I have a spreadsheet»?</li>
 <li>What reassures you about someone you're starting to like?</li>
 <li>If this became serious between us, what would absolutely have to stay as it is now?</li>
 </ol>`,
@@ -167,7 +167,7 @@ const article: BlogArticleData = {
     {
       id: 'at-the-first-date',
       title: "In person, at the first date (93-100)",
-      content: `<p>Eight questions to save for face to face. Open enough to get him talking, light enough never to weigh down the mood... exactly what a first date evening needs.</p>
+      content: `<p>Eight questions to save for face to face. Open enough to get him talking, light enough never to weigh down the mood. Just what a first date evening needs.</p>
 <ol start="93">
 <li>So, what's it like meeting me in person compared to the messages?</li>
 <li>What's the most surprising thing you've learned about me since we started talking?</li>
@@ -184,7 +184,7 @@ const article: BlogArticleData = {
       id: 'if-you-dont-dare',
       title: "And if you don't dare send anything at all?",
       content: `<p>A quick word for whoever has read this far without sending a single message: that's normal. A crush, by definition, makes you lose your nerve. Start with questions 1 to 15. Just one. The simplest, the one that sounds like you. The goal isn't to be brilliant, it's to open a door.</p>
-<p>And if you already talk every day but still can't tell whether it's mutual... stop rereading your conversations for the tenth time. Honestly. There are far more reliable signals than your interpretation of his emojis at 1am.</p>
+<p>And if you already talk every day but still can't tell whether it's mutual, stop rereading your conversations for the tenth time. Honestly. There are far more reliable signals than your interpretation of his emojis at 1am.</p>
 <div><table><thead><tr><th>The stage</th><th>The right register</th><th>The classic mistake</th></tr></thead><tbody>
 <tr><td>The first messages</td><td>Light, short, one question at a time</td><td>The wall of text expecting an essay</td></tr>
 <tr><td>Getting to know him</td><td>Curious, about concrete things</td><td>The disguised interrogation</td></tr>

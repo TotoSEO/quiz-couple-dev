@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Un manipolatore non mente a caso. Pesca da un repertorio, sempre lo stesso. E una volta che conosci il repertorio, qualcosa si rompe nel gioco di prestigio.",
   introduction: `<p>«Sei troppo sensibile.» Quante volte l'hai sentita? E quante volte te ne sei andata chiedendoti se, effettivamente, non stessi esagerando un po'?</p>
-<p>È esattamente per questo che esiste questo articolo. I manipolatori non inventano nulla: pescano da un repertorio, ed è più o meno sempre lo stesso. Frasi brevi, che sembrano innocue, a volte perfino gentili... e che fanno un lavoro molto preciso nella tua testa: ribaltare la colpa, farti dubitare, farti tacere.</p>
+<p>Ecco perché esiste questo articolo. <strong>I manipolatori non inventano nulla: pescano da un repertorio, ed è più o meno sempre lo stesso.</strong> Frasi brevi, che sembrano innocue, a volte perfino gentili, e che fanno un lavoro molto preciso nella tua testa: ribaltare la colpa, farti dubitare, farti tacere.</p>
 <p>Facciamo quindi l'unica cosa che le neutralizza davvero: tirarle fuori dal contesto e guardarle una per una. La loro traduzione reale, quello che cercano di produrre in te e cosa puoi rispondere. Ci sono buone probabilità che ne riconosca parecchie lungo la strada... ed è un po' lo scopo.</p>`,
   quickSummary: [
     "Queste frasi non discutono mai quello che hai detto, contestano il tuo diritto di dirlo.",
@@ -26,9 +26,9 @@ const article: BlogArticleData = {
       id: 'perche-funzionano',
       title: "Perché queste frasi funzionano così bene",
       content: `<p>Prima della lista, due minuti sul meccanismo, perché spiega tutto.</p>
-<p>Quando esprimi un disaccordo o una ferita, ci sono due modi di risponderti. Sulla sostanza: «ok, parliamo di quello che è successo». Oppure sulla cornice: «non sei in condizione di parlarne, esageri, non è il momento»...</p>
+<p>Quando esprimi un disaccordo o una ferita, ci sono due modi di risponderti. Sulla sostanza: «ok, parliamo di quello che è successo». Oppure sulla cornice: «non sei in condizione di parlarne, esageri, non è il momento».</p>
 <p>Quasi tutte le frasi da manipolatore giocano sulla cornice. <strong>Non discutono mai quello che dici. Attaccano il tuo diritto di dirlo, ed è una cosa molto diversa.</strong> Ed è micidiale, perché ti sposta: invece di difendere il tuo argomento, ti ritrovi a difendere la tua legittimità, la tua salute mentale, il tuo tono di voce. L'argomento iniziale, intanto, è sparito. Volevi parlare di un appuntamento dimenticato... e venti minuti dopo ti scusi per come lo hai detto. Gioco fatto.</p>
-<p>Una precisazione importante, però: tutti tiriamo fuori una di queste frasi in una giornata storta. Ciò che segnala un manipolatore è il repertorio: la varietà delle formule, il loro ritorno sistematico, e il fatto che alla fine sia sempre tu a scusarti. Questo funzionamento d'insieme è esattamente quello del <a href="/it/blog/narcisista-in-amore/">narcisista nella coppia</a>: la frase è solo un ingranaggio del sistema.</p>`,
+<p>Una precisazione importante, però: tutti tiriamo fuori una di queste frasi in una giornata storta. Ciò che segnala un manipolatore è il repertorio: la varietà delle formule, il loro ritorno sistematico, e il fatto che alla fine sia sempre tu a scusarti. Questo funzionamento d'insieme è quello del <a href="/it/blog/narcisista-in-amore/">narcisista nella coppia</a>: la frase è solo un ingranaggio del sistema.</p>`,
     },
     {
       id: 'ribaltare-la-colpa',
@@ -55,18 +55,18 @@ const article: BlogArticleData = {
 <li><strong>«Hai capito male un'altra volta.»</strong> L'«un'altra volta» fa tutto il lavoro: installa uno storico di incompetenza che non è mai esistito e che non penserai a contestare.</li>
 <li><strong>«Ti stai facendo dei film.»</strong> Usata proprio quando la tua intuizione si scalda. Più il tuo radar è buono, più la sentirai.</li>
 <li><strong>«Lo pensano tutti che esageri.»</strong> Il rinforzo invisibile: un tribunale fantasma, non verificabile, convocato contro di te. Chi sono «tutti»? Non lo saprai mai.</li>
-<li><strong>«Dovresti farti vedere, davvero.»</strong> La più violenta della famiglia. La tua lucidità diventa una patologia. E il giorno in cui ci vai davvero, un bravo professionista ci vede chiaro subito... è proprio per questo che in pratica detesta l'idea.</li>
+<li><strong>«Dovresti farti vedere, davvero.»</strong> La più violenta della famiglia. La tua lucidità diventa una patologia. E il giorno in cui ci vai davvero, un bravo professionista ci vede chiaro subito, ed è proprio per questo che in pratica detesta l'idea.</li>
 </ul>
 <p>Se questo annebbiamento ti parla, prenditi il tempo di capire <a href="/it/blog/gaslighting-segnali/">come si installa il gaslighting</a>, perché non si limita a delle frasi.</p>`,
     },
     {
       id: 'fare-la-vittima',
       title: "Famiglia n.3: mettersi nella posizione della vittima",
-      content: `<p>Il manipolatore ha un talento particolare per soffrire più forte di te, nel momento esatto in cui soffri tu.</p>
+      content: `<p>Il manipolatore ha un talento particolare per soffrire più forte di te, proprio nel momento in cui soffri tu.</p>
 <ul>
 <li><strong>«Dopo tutto quello che ho fatto per te...»</strong> Il debito. Mai dettagliato, mai saldato, sempre disponibile. Sei in deficit permanente senza aver mai visto l'estratto conto.</li>
 <li><strong>«Nessuno mi capisce. Nemmeno tu.»</strong> Il «nemmeno tu» è la parte che lavora: eccoti costretta a dimostrare di non essere come gli altri. E per dimostrarlo, cedi.</li>
-<li><strong>«Davvero non ho fortuna con le persone.»</strong> Ascolta bene questa all'inizio di una relazione: le sue ex «pazze», i suoi amici «traditori», i colleghi «invidiosi»... Un giorno ti unirai alla lista. Quel racconto delle ex pazze è addirittura il segnale numero 3 dell'<a href="/it/blog/uomo-narcisista-segnali/">uomo narcisista</a>... e il ritratto che fa di loro è quello che farà di te.</li>
+<li><strong>«Davvero non ho fortuna con le persone.»</strong> Ascolta bene questa all'inizio di una relazione: le sue ex «pazze», i suoi amici «traditori», i colleghi «invidiosi». Un giorno ti unirai alla lista. Quel racconto delle ex pazze è addirittura il segnale numero 3 dell'<a href="/it/blog/uomo-narcisista-segnali/">uomo narcisista</a>, e il ritratto che fa di loro è quello che farà di te.</li>
 <li><strong>«Faccio tutto questo per noi, ed ecco come mi ringrazi.»</strong> Le sue scelte diventano sacrifici per te, e il tuo rimprovero ingratitudine. Nessuno ha mai chiesto il rendiconto di quei sacrifici.</li>
 <li><strong>«Tanto qualunque cosa faccia non va mai bene.»</strong> La frase che chiude il tema indicandoti come insaziabile. Dopo di lei, chiedere qualsiasi cosa diventa un'aggressione.</li>
 <li><strong>«Vai, dì pure che sono un mostro già che ci sei.»</strong> L'esagerazione difensiva: spinge il tuo rimprovero all'assurdo perché tu lasci perdere. Volevi parlare di un ritardo, ed eccoti a giurare che non è un mostro.</li>
@@ -81,13 +81,13 @@ const article: BlogArticleData = {
 <li><strong>«È carino che ci provi.»</strong> Un complimento e uno schiaffo nella stessa frase. Impossibile da rimproverare («ma ti ho fatto un complimento!»), impossibile da incassare.</li>
 <li><strong>«Senza di me non ce la faresti.»</strong> Questa prepara il terreno della dipendenza. Ripetuta abbastanza a lungo, finisci per crederci... e per avere paura di andartene.</li>
 <li><strong>«Nessun altro ti sopporterebbe.»</strong> La gemella oscura della precedente. Trasforma la vostra storia in un favore che ti viene fatto.</li>
-<li><strong>«Sei sicura, eh?»</strong> Chiesto sistematicamente sulle tue scelte di lavoro, sui tuoi vestiti, sulle tue amiche... Una sola frase, e la tua fiducia torna in officina.</li>
+<li><strong>«Sei sicura, eh?»</strong> Chiesto sistematicamente sulle tue scelte di lavoro, sui tuoi vestiti, sulle tue amiche. Una sola frase, e la tua fiducia torna in officina.</li>
 <li><strong>«Meno male che ci sono io a dirtelo.»</strong> La critica confezionata come servizio reso. Non puoi né rifiutarla né discuterla, dovresti pure ringraziare.</li>
 <li><strong>«Prendi tutto alla lettera.»</strong> La versione umoristica del «sei troppo sensibile»: l'osservazione che ferisce diventa una battuta, e il tuo problema diventa la mancanza di ironia.</li>
 </ul>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Il dettaglio che tradisce la famiglia n.4</p>
-<p>Queste frasi mirano quasi sempre ai tuoi punti di forza, non alle tue debolezze. Il tuo lavoro, la tua ironia, la tua indipendenza, ciò che ti rende fiera... Un compagno maldestro critica quello che sbagli. Un manipolatore se la prende con quello che ti tiene in piedi, ed è tutta la differenza.</p>
+<p>Queste frasi mirano quasi sempre ai tuoi punti di forza, non alle tue debolezze. Il tuo lavoro, la tua ironia, la tua indipendenza, ciò che ti rende fiera. Un compagno maldestro critica quello che sbagli. Un manipolatore se la prende con quello che ti tiene in piedi, ed è tutta la differenza.</p>
 </aside>`,
     },
     {
@@ -113,7 +113,7 @@ const article: BlogArticleData = {
       id: 'i-messaggi-del-manipolatore',
       title: "I messaggi del manipolatore: il repertorio in versione scritta",
       content: `<p>Per messaggio il repertorio si adatta, e vale la pena dirne una parola perché lo scritto ha i suoi codici.</p>
-<p>C'è il <strong>silenzio radio</strong>, prima di tutto: tre giorni senza risposta dopo un disaccordo, poi un «mi manchi» alle 23:47, come se niente fosse. Il <strong>papiro colpevolizzante</strong>, poi: quindici righe in cui la tua serata di ieri diventa la prova del tuo egoismo, inviate all'ora in cui non puoi rispondere. Il <strong>messaggio vetrina</strong>, anche: adorabile per iscritto, glaciale dal vivo... perché lo scritto si può mostrare, e lui lo sa.</p>
+<p>C'è il <strong>silenzio radio</strong>, prima di tutto: tre giorni senza risposta dopo un disaccordo, poi un «mi manchi» alle 23:47, come se niente fosse. Il <strong>papiro colpevolizzante</strong>, poi: quindici righe in cui la tua serata di ieri diventa la prova del tuo egoismo, inviate all'ora in cui non puoi rispondere. Il <strong>messaggio vetrina</strong>, anche: adorabile per iscritto, glaciale dal vivo, perché lo scritto si può mostrare, e lui lo sa.</p>
 <p>E poi c'è il più inquietante: il messaggio gentile che arriva PROPRIO quando cominciavi a stare meglio. Quello non ha niente di casuale: la tua distanza è stata rilevata, e la riconquista parte.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Non cancellare quei messaggi</p>
@@ -123,7 +123,7 @@ const article: BlogArticleData = {
     {
       id: 'come-rispondere',
       title: "Come rispondere a queste frasi (senza perderci la serata)",
-      content: `<p>Regola d'oro: non giustificarti sulla forma, torna alla sostanza. Ogni minuto passato a dimostrare che non sei «troppo sensibile» è un minuto guadagnato per lui. Ecco come funziona in pratica.</p>
+      content: `<p>Regola d'oro: <strong>non giustificarti sulla forma, torna alla sostanza.</strong> Ogni minuto passato a dimostrare che non sei «troppo sensibile» è un minuto guadagnato per lui. Ecco come funziona in pratica.</p>
 <div><table><thead><tr><th>Lui dice...</th><th>Evita</th><th>Prova invece</th></tr></thead><tbody>
 <tr><td>«Sei troppo sensibile.»</td><td>«Non è vero, non sono troppo sensibile, la prova è...»</td><td>«Può darsi. E dell'appuntamento di ieri, quando ne parliamo?»</td></tr>
 <tr><td>«Non l'ho mai detto.»</td><td>Tirare fuori le prove una per una</td><td>«Non stiamo a discuterne. Io l'ho sentito, e questo è l'effetto che mi ha fatto.»</td></tr>
@@ -131,7 +131,7 @@ const article: BlogArticleData = {
 <tr><td>«Dopo tutto quello che ho fatto per te...»</td><td>Elencare quello che hai fatto tu</td><td>«Non è una gara. Ti sto parlando di una cosa precisa.»</td></tr>
 <tr><td>«Calmati.»</td><td>Calmarsi scusandosi</td><td>«Sono calma. E aspetto ancora la tua risposta.»</td></tr>
 </tbody></table></div>
-<p>Noterai il principio: frasi brevi, concrete, che rifiutano il terreno proposto. Niente arringhe. L'arringa è esattamente quello che aspetta, perché conferma che il tema era la tua legittimità.</p>
+<p>Noterai il principio: frasi brevi, concrete, che rifiutano il terreno proposto. Niente arringhe. L'arringa è quello che aspetta, perché conferma che il tema era la tua legittimità.</p>
 <p>E sii onesta con te su un punto: se queste repliche scatenano sistematicamente un'escalation, silenzio punitivo o una scenata, non hai più a che fare con maldestrezze comunicative. Hai a che fare con un sistema. A quel punto, tanto vale conoscere nel dettaglio le <a href="/it/blog/manipolatore-narcisista/">tecniche del manipolatore narcisista</a>, i suoi punti deboli e le sue reazioni quando gli si resiste.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Senti queste frasi a casa tua?</p>

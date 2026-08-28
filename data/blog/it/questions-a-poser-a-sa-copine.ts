@@ -130,7 +130,7 @@ const article: BlogArticleData = {
 <li>Qual è il complimento che ti ho fatto e che non hai mai dimenticato?</li>
 <li>Adesso, subito: cosa ti farebbe piacere?</li>
 </ol>
-<p>Noterai che questa serie apre delle porte. Se avete voglia di andare oltre nella confidenza, le <a href="/it/blog/domande-intime-di-coppia/">domande intime da farsi in coppia</a> prendono esattamente il testimone, con la salita di temperatura che ne consegue.</p>`,
+<p>Noterai che questa serie apre delle porte. Se avete voglia di andare oltre nella confidenza, le <a href="/it/blog/domande-intime-di-coppia/">domande intime da farsi in coppia</a> prendono il testimone da lì, con la salita di temperatura che ne consegue.</p>`,
     },
     {
       id: 'quotidiano-e-futuro',
@@ -149,7 +149,7 @@ const article: BlogArticleData = {
 <tr><td>Su voi due</td><td>La vostra storia vista dal suo lato</td></tr>
 <tr><td>Divertenti e leggere</td><td>Leggerezza, e spesso una porta verso il resto</td></tr>
 <tr><td>Un po' profonde</td><td>Quello di cui non parlate mai per mancanza di occasione</td></tr>
-<tr><td>Amore e complicità</td><td>Cosa la fa sentire amata, esattamente</td></tr>
+<tr><td>Amore e complicità</td><td>Cosa la fa sentire amata, nel dettaglio</td></tr>
 <tr><td>Quotidiano e futuro</td><td>Gli argomenti che si rimandano finché non fanno arrabbiare</td></tr>
 </tbody></table></div>
 <div class="blog-cta">

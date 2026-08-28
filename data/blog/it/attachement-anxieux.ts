@@ -67,7 +67,7 @@ const article: BlogArticleData = {
           id: 'scegliere-e-lasciare-agire-la-stabilita',
           title: "Scegliere (e lasciare agire) la stabilità",
           content: `<p>Se stai cercando: diffida della tua attrazione per le montagne russe e dai una possibilità ai partner costanti, anche se l'inizio ti sembra «meno forte». La ricerca è netta: la relazione stabile è il miglior terapeuta dell'attaccamento ansioso, la famosa sicurezza acquisita. La noia degli inizi sicuri è spesso solo il silenzio dell'allarme. Ci si abitua notevolmente bene!</p>
-<p>E un'ultima cosa, perché se la merita: le persone con attaccamento ansioso sono anche, molto spesso, i partner più attenti, leali e generosi che esistano. La sensibilità che ti fa soffrire è la stessa che ti fa amare così bene. Il lavoro non consiste nello spegnerla, ma nello staccarla dalla paura, per lasciarla tutta all'amore.</p>
+<p>Le persone con attaccamento ansioso sono anche, molto spesso, i partner più attenti, leali e generosi che esistano. La sensibilità che ti fa soffrire è la stessa che ti fa amare così bene. Il lavoro non consiste nello spegnerla, ma nello staccarla dalla paura, per lasciarla tutta all'amore.</p>
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Cosa calma l'allarme</p>

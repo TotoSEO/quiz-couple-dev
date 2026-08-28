@@ -46,7 +46,7 @@ const article: BlogArticleData = {
       title: "I 10 segnali, in versione concreta",
       content: `<p>Come sempre con questo profilo, nessun segnale isolato prova niente. Contano l'accumulo, la ripetizione e il senso generale. Nelle sue forme femminili tipiche, viene così.</p>
 <ol>
-<li><strong>La colpevolizzazione come lingua madre:</strong> Non ordini: sospiri, «vai pure, divertiti» che significano il contrario, «tranquillo, sono abituata a stare sola». Finisci per rinunciare da solo, ed è esattamente il principio: non vieta niente, rende tutto costoso.</li>
+<li><strong>La colpevolizzazione come lingua madre:</strong> Ordini, mai. Sospiri, «vai pure, divertiti» che significano il contrario, «tranquillo, sono abituata a stare sola». Finisci per rinunciare da solo, ed è il principio stesso: non vieta niente, rende tutto costoso.</li>
 <li><strong>Lo status di vittima in prevenzione:</strong> Lei soffre. Sempre, strutturalmente, e per colpa tua. La sua infanzia, i suoi ex «tutti stronzi», e adesso tu. Quello status non è fragilità, è una posizione strategica: non si può rimproverare niente a chi sta male.</li>
 <li><strong>Il tuo valore quotato al ribasso, con dolcezza:</strong> Il tuo lavoro «va bene, però», i tuoi progetti «carini», i tuoi successi ridimensionati o intestati a lei. Nota il dettaglio che uccide: in pubblico ti valorizza. La demolizione non esce mai di casa.</li>
 <li><strong>La gelosia dei tuoi appoggi, non delle rivali:</strong> Controintuitivo, ma tipicissimo: la sua vera gelosia colpisce ciò che ti rende solido senza di lei. Gli amici di sempre, tuo fratello, il tuo sport, il tuo successo professionale. Tutto ciò che ti nutre altrove è un concorrente da eliminare.</li>
@@ -65,7 +65,7 @@ const article: BlogArticleData = {
     {
       id: 'cosa-fa-a-un-uomo',
       title: "Cosa fa a un uomo, dall'interno",
-      content: `<p>E va detto: gli uomini sotto controllo sviluppano esattamente gli stessi sintomi delle donne vittime. Il dubbio permanente, l'autocensura, la vigilanza sfiancante, la vergogna, con uno strato in più: la sensazione di non avere il diritto di lamentarsi. «Sono un uomo, dovrei gestirla.»</p>
+      content: `<p>E va detto: gli uomini sotto controllo sviluppano gli stessi sintomi delle donne vittime. Il dubbio permanente, l'autocensura, la vigilanza sfiancante, la vergogna, con uno strato in più: la sensazione di non avere il diritto di lamentarsi. «Sono un uomo, dovrei gestirla.»</p>
 <p>Allora mettiamo le cose in chiaro. Essere sotto il controllo di una manipolatrice non dice nulla della tua virilità, della tua forza o della tua intelligenza. Questi sistemi funzionano sulle brave persone, proprio perché sono brave: la tua lealtà, la tua pazienza e la tua voglia di fare bene sono la materia prima del meccanismo. Uomini brillanti e solidi ci passano come gli altri, ci mettono solo più tempo a chiedere aiuto.</p>
 <p>E se constati che non riesci ad andartene nonostante tutto quello che hai appena letto, non è mancanza di coraggio: è il funzionamento intrappolato dell'attaccamento, a volte raddoppiato da una vera <a href="/it/blog/dipendenza-affettiva-nella-coppia/">dipendenza affettiva</a> che lei ha coltivato con cura. Si smonta, ma non da soli.</p>
 <div class="blog-cta">

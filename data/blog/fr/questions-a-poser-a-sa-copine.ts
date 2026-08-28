@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Le piège des couples qui durent, c'est de croire qu'on a fini de se découvrir. Ces 75 questions prouvent le contraire.",
   introduction: `<p>Petit test avant de commencer : tu sais quel est son plat préféré, son film culte, son parfum. Facile. Maintenant... tu sais de quoi elle est le plus fière cette année ? Ce qui lui manque en ce moment ? Ce qu'elle n'ose pas te demander ? Moins facile, hein.</p>
-<p><strong>C'est le piège des couples installés : on confond bien la connaître et avoir fini de la découvrir.</strong> Sauf qu'elle change, comme toi, comme tout le monde. Et les réponses d'il y a deux ans ne sont plus forcément celles d'aujourd'hui...</p>
+<p><strong>C'est le piège des couples installés : on confond bien la connaître et avoir fini de la découvrir.</strong> Sauf qu'elle change, comme toi, comme tout le monde. Et les réponses d'il y a deux ans ne sont plus forcément celles d'aujourd'hui.</p>
 <p>Voici 75 questions à poser à ta copine, du plus léger au plus profond. Pas pour organiser un interrogatoire du samedi soir ! Pour retrouver ces conversations qui durent, celles du début, celles où tu découvrais quelqu'un. Pioche deux ou trois questions quand le moment s'y prête, et laisse faire.</p>`,
   quickSummary: [
     "75 questions du léger au profond, à picorer selon le moment.",
@@ -47,7 +47,7 @@ const article: BlogArticleData = {
     {
       id: 'sur-vous-deux',
       title: "Sur vous deux (16-30)",
-      content: `<p>Les questions qui font parler du « nous » sans transformer la soirée en bilan de couple. Attention aux réponses... elles font parfois monter des larmes, dans le bon sens.</p>
+      content: `<p>Les questions qui font parler du « nous » sans transformer la soirée en bilan de couple. Attention aux réponses, elles font parfois monter des larmes, dans le bon sens.</p>
 <ol start="16">
 <li>C'est quoi ton souvenir préféré de nous, celui qui gagne toujours ?</li>
 <li>Qu'est-ce que tu as pensé de moi la toute première fois ?</li>
@@ -69,7 +69,7 @@ const article: BlogArticleData = {
     {
       id: 'droles-et-legeres',
       title: "Drôles et légères (31-45)",
-      content: `<p>Zéro enjeu, garanti. Juste de quoi rire un bon coup... et découvrir qu'elle a des théories très arrêtées sur des sujets très absurdes.</p>
+      content: `<p>Zéro enjeu, garanti. Juste de quoi rire un bon coup, et découvrir qu'elle a des théories très arrêtées sur des sujets très absurdes.</p>
 <ol start="31">
 <li>C'est quoi ton avis le plus tranché sur un sujet qui n'a aucune importance ?</li>
 <li>Quel animal me correspondrait, franchement ?</li>
@@ -111,7 +111,7 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Le conseil qui change tout sur cette série</p>
-<p>Quand elle répond à une question profonde, résiste à l'envie de commenter, de relativiser ou de « résoudre ». Le réflexe de réparer est louable... et c'est le meilleur moyen de couper la confidence. Écoute, creuse doucement (« raconte »), et garde tes solutions pour plus tard. Elle ne cherche pas un consultant, elle te montre quelque chose.</p>
+<p>Quand elle répond à une question profonde, résiste à l'envie de commenter, de relativiser ou de « résoudre ». Le réflexe de réparer est louable, et c'est le meilleur moyen de couper la confidence. Écoute, creuse doucement (« raconte »), et garde tes solutions pour plus tard. Elle ne cherche pas un consultant, elle te montre quelque chose.</p>
 </aside>`,
     },
     {
@@ -130,12 +130,12 @@ const article: BlogArticleData = {
 <li>C'est quoi le compliment que je t'ai fait et que tu n'as jamais oublié ?</li>
 <li>Là, tout de suite : qu'est-ce qui te ferait plaisir ?</li>
 </ol>
-<p>Tu remarqueras que cette série ouvre des portes... Si vous avez envie d'aller plus loin dans la confidence, les <a href="/blog/questions-intimes-couple/">questions intimes à se poser en couple</a> prennent exactement le relais, avec la montée en température qui va avec.</p>`,
+<p>Tu remarqueras que cette série ouvre des portes. Si vous avez envie d'aller plus loin dans la confidence, les <a href="/blog/questions-intimes-couple/">questions intimes à se poser en couple</a> prennent le relais, avec la montée en température qui va avec.</p>`,
     },
     {
       id: 'quotidien-et-avenir',
       title: "Quotidien et avenir (71-75)",
-      content: `<p>Les cinq dernières, mine de rien, sont les plus importantes. Elles vérifient que vous avancez dans la même direction... et elles se posent bien mieux autour d'un café que pendant une dispute.</p>
+      content: `<p>Les cinq dernières, mine de rien, sont les plus importantes. Elles vérifient que vous avancez dans la même direction, et elles se posent bien mieux autour d'un café que pendant une dispute.</p>
 <ol start="71">
 <li>Qu'est-ce qui te rendrait notre quotidien encore plus doux ?</li>
 <li>C'est quoi ton équilibre idéal entre temps à deux et temps à toi ?</li>

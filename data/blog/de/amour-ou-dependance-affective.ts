@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Liebe und emotionale Abhängigkeit ähneln sich von innen enorm. Dieselbe Intensität, dieselben Dauergedanken... und trotzdem trennt sie alles.",
   introduction: `<p>Es ist eine Frage, die man sich kaum zu stellen wagt, weil sie ein bisschen Angst macht: Liebe ich ihn... oder liebe ich vor allem die Tatsache, dass er da ist? Ist das Liebe, dieses Ding, das mir den Bauch zusammenzieht, wenn er nicht antwortet? Oder etwas anderes?</p>
-<p>Die Verwirrung ist normal, und man muss damit anfangen: <strong>Von innen betrachtet ähneln sich intensive Liebe und emotionale Abhängigkeit sehr.</strong> In beiden Fällen denkst du ununterbrochen an ihn, hasst seine Abwesenheit, fühlst stark. Der Unterschied liegt woanders, in der Richtung: Liebe trägt dich zu ihm hin, Abhängigkeit lässt dich vor einer Leere fliehen.</p>
+<p>Die Verwirrung ist normal: <strong>Von innen betrachtet ähneln sich intensive Liebe und emotionale Abhängigkeit sehr.</strong> In beiden Fällen denkst du ununterbrochen an ihn, hasst seine Abwesenheit, fühlst stark. Der Unterschied liegt woanders, in der Richtung: Liebe trägt dich zu ihm hin, Abhängigkeit lässt dich vor einer Leere fliehen.</p>
 <p>Machen wir das sehr konkret, mit den 7 Unterschieden, die beides trennen, und einem Gedankenexperiment, das mehr wert ist als jede Rede.</p>`,
   quickSummary: [
     "Intensität entscheidet nichts: Liebe und Abhängigkeit können gleich stark sein.",
@@ -60,8 +60,8 @@ const article: BlogArticleData = {
     {
       id: 'die-frage-beantworten',
       title: "Also, Liebe oder Abhängigkeit? Endgültig antworten",
-      content: `<p>Fassen wir zusammen, was du konkret tun kannst, um aus dieser Frage herauszukommen, die seit Wochen in deinem Kopf kreist.</p>
-<p>Nimm die 7 Unterschiede noch einmal und zähl deine Zeilen ehrlich. Mach den Wochenendtest, wenn sich die Gelegenheit ergibt, in echt: Vorgestellte Antworten sind nützlich, erlebte Antworten sind endgültig. Sprich mit jemandem, der dich vor dieser Beziehung kannte, und stell ihm DIE unangenehme Frage: «Wie wirke ich auf dich, seit ich mit ihm zusammen bin?»</p>
+      content: `<p>Drei Dinge, damit die Frage aufhört zu kreisen.</p>
+<p>Nimm die 7 Unterschiede noch einmal und zähl deine Zeilen. Mach den Wochenendtest, wenn sich die Gelegenheit ergibt, in echt: Vorgestellte Antworten sind nützlich, erlebte Antworten sind endgültig. Und sprich mit jemandem, der dich vor ihm kannte. Stell ihm DIE unangenehme Frage: «Wie wirke ich auf dich, seit ich mit ihm zusammen bin?»</p>
 <p>Und wenn du ein ruhiges, strukturiertes Maß willst, das nicht von deiner Abendstimmung abhängt...</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Liebe, Gewohnheit oder Abhängigkeit: miss es wirklich</p>
@@ -69,7 +69,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/de/emotionale-abhaengigkeit-test/">Meine Antwort bekommen</a>
 <p class="blog-cta-note">Kostenlos &middot; Ohne Anmeldung &middot; Sofortiges Ergebnis</p>
 </div>
-<p>Eine letzte Sache, zum sanften Abschluss. Wenn du entdeckst, dass deine Art zu lieben Richtung Abhängigkeit neigt, mach daraus kein Urteil über deine Geschichte. Es heißt weder, dass deine Liebe unecht ist, noch dass deine Beziehung verloren ist. Es heißt, dass du mit einer alten Angst auf dem Rücken liebst, und dass diese Angst abgelegt werden kann. Viele Paare gehen durch diese Arbeit und kommen mit einer leichteren Bindung heraus als zuvor. Deine kann das auch.</p>
+<p>Eine letzte Sache. Wenn du entdeckst, dass deine Art zu lieben Richtung Abhängigkeit neigt, mach daraus kein Urteil über deine Geschichte. Es heißt weder, dass deine Liebe unecht ist, noch dass deine Beziehung verloren ist. Es heißt, dass du mit einer alten Angst auf dem Rücken liebst, und dass diese Angst abgelegt werden kann. Viele Paare gehen durch diese Arbeit und kommen mit einer leichteren Bindung heraus als zuvor. Deine kann das auch.</p>
 <a href="/de/blog/emotionale-abhaengigkeit-in-beziehungen/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Auch lesen</span><span class="blog-read-also-title">Emotionale Abhängigkeit: wenn Lieben zum lebensnotwendigen Bedürfnis wird</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

@@ -33,7 +33,7 @@ const article: BlogArticleData = {
       title: "Sus técnicas, en el orden en que las saca",
       content: `<p>Cada manipulador tiene su estilo, pero la caja de herramientas es estándar. Y se abre casi siempre en el mismo orden.</p>
 <ol>
-<li><strong>El encanto dirigido:</strong> No es un encanto generoso: es un encanto de inversor. Identifica lo que te falta, reconocimiento, seguridad, intensidad, y te lo suministra a lo grande. Es la fase de enganche, y es tanto más eficaz cuanto que da en el blanco.</li>
+<li><strong>El encanto dirigido:</strong> De generoso no tiene nada, es un encanto de inversor. Identifica lo que te falta, reconocimiento, seguridad, intensidad, y te lo suministra a lo grande. Es la fase de enganche, y es tanto más eficaz cuanto que da en el blanco.</li>
 <li><strong>La deuda afectiva:</strong> Regalos, favores, disponibilidad espectacular, que se transforman rápido en crédito. Todo lo que ha «hecho por ti» se convierte en argumento, en una factura emocional que te presenta en cada desacuerdo.</li>
 <li><strong>La triangulación:</strong> Técnica temible y a menudo invisible: introduce a un tercero en la ecuación. Una ex «que lo entendía mejor», una compañera «tan divertida», un rival difuso. El objetivo: crear una competencia permanente, mantenerte compitiendo por un sitio que creías tuyo.</li>
 <li><strong>El gaslighting:</strong> La reescritura de lo real: lo que viste no pasó, lo que dijo nunca lo dijo. A la larga dudas de tu memoria y él se vuelve la única fuente fiable sobre la realidad de la pareja. Sus fórmulas exactas las hemos listado en las <a href="/es/blog/frases-de-manipuladores/">frases preferidas de los manipuladores</a>.</li>
@@ -46,7 +46,7 @@ const article: BlogArticleData = {
       title: "Los puntos débiles del manipulador (sí, los tiene)",
       content: `<p>Visto desde dentro, su sistema parece implacable. En realidad descansa sobre condiciones precisas, y cada una es un fallo.</p>
 <ol>
-<li><strong>La indiferencia sincera:</strong> No la fingida, esa la detecta: la de verdad, la que llega cuando has entendido y ya no esperas nada. Su sistema funciona con tu reacción, admiración o sufrimiento, da igual. Una persona que ya no reacciona es un surtidor cerrado.</li>
+<li><strong>La indiferencia sincera:</strong> La fingida la detecta enseguida. La que cuenta es la de verdad, la que llega cuando has entendido y ya no esperas nada. Su sistema funciona con tu reacción, admiración o sufrimiento, da igual. Una persona que ya no reacciona es un surtidor cerrado.</li>
 <li><strong>Los testigos:</strong> Toda su mecánica exige puertas cerradas. Un tercero presente, una conversación a tres, una familia al corriente, y el personaje público debe seguir en escena, lo que neutraliza al personaje privado. Por eso trabaja tanto en aislarte.</li>
 <li><strong>Lo escrito:</strong> El «yo nunca dije eso» muere ante una captura de pantalla. Y lo sabe: fíjate cómo las peores cosas se dicen de viva voz y cómo los mensajes escritos están cuidados.</li>
 <li><strong>El tiempo y la constancia:</strong> Su juego pide resultados rápidos: desestabilizarte, hacerte ceder, recuperarte. Frente a alguien tranquilamente constante, que repite el mismo límite sin alterarse, semana tras semana, el sistema se agota. No está equipado para el maratón.</li>

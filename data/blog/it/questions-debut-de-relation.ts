@@ -11,15 +11,15 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-20T11:16:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "L'inizio di una relazione è l'unico momento in cui si potrebbe chiedere tutto... e quello in cui non si osa chiedere niente. Rimediamo.",
-  introduction: `<p>Ecco il paradosso degli inizi di relazione: è IL momento in cui le domande giuste cambierebbero tutto, ed è il momento in cui le si evita con cura... per paura di sembrare intensi, di bruciare una tappa, di rompere la magia. Così si avanza alla cieca, tutti sorrisi, scoprendo le informazioni importanti per caso, tre mesi troppo tardi.</p>
-<p><strong>Fare domande all'inizio di una relazione non è mancanza di leggerezza, è evitare di costruire a occhi chiusi.</strong> Tutto sta nel dosaggio: ci sono le domande del primo mese, quelle del terzo... e quelle che aspetteranno, perché ogni cosa ha il suo momento.</p>
-<p>Ecco 60 domande dosate apposta, dalle più leggere alle più impegnative, con in regalo l'elenco di quelle che è meglio NON fare subito. Perché all'inizio di una storia, saper tacere è a volte utile quanto saper chiedere.</p>`,
+  introduction: `<p>L'inizio di una relazione è IL momento in cui le domande giuste cambierebbero tutto, ed è anche il momento in cui le si evita con cura, per paura di sembrare intensi, di bruciare una tappa, di rompere la magia. Così si avanza alla cieca, tutti sorrisi, scoprendo le informazioni importanti per caso, tre mesi troppo tardi.</p>
+<p><strong>Fare domande all'inizio di una relazione non è mancanza di leggerezza, è evitare di costruire a occhi chiusi.</strong> Tutto sta nel dosaggio: ci sono le domande del primo mese, quelle del terzo, e quelle che aspetteranno.</p>
+<p>Ecco 60 domande dosate apposta, dalle più leggere alle più impegnative, con in regalo l'elenco di quelle che è meglio NON fare subito. Perché all'inizio di una storia, certe domande ci guadagnano parecchio ad aspettare il loro turno.</p>`,
   quickSummary: [
     "60 domande dosate per tappa: dopo i primi appuntamenti, poi con il passare delle settimane.",
     "Il principio: una conversazione alla volta, mai un check-up completo.",
     "Le domande sui valori si infilano nella vita reale, non in un faccia a faccia solenne.",
     "Quelle che non si osa fare (esclusività, aspettative) sono spesso quelle che evitano malintesi dolorosi.",
-    "In regalo: le 8 domande da NON fare troppo presto... e perché.",
+    "In regalo: le 8 domande da NON fare troppo presto, e perché.",
   ],
   sections: [
     {
@@ -47,7 +47,7 @@ const article: BlogArticleData = {
     {
       id: 'con-le-settimane',
       title: "Con le settimane: approfondire senza bruciare tappe (16-30)",
-      content: `<p>La relazione si assesta, e anche la fiducia. È il momento di capire come funziona questa persona... soprattutto in una relazione, visto che alla fine è il tema.</p>
+      content: `<p>La relazione si assesta, e anche la fiducia. È il momento di capire come funziona questa persona, e soprattutto come funziona in coppia.</p>
 <ol start="16">
 <li>Come esprimi che qualcosa non va: parli, ti isoli, aspetti?</li>
 <li>Qual è il tuo rapporto col telefono quando sei con qualcuno?</li>
@@ -67,13 +67,13 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Il momento migliore per queste domande? Mai il faccia a faccia solenne</p>
-<p>Le domande da 16 a 30 passano male in modalità colloquio... e benissimo nella vita vera: in auto, camminando, cucinando. Gli sguardi paralleli sciolgono la lingua molto meglio degli occhi negli occhi. Tieni il faccia a faccia per le coccole, non per le domande.</p>
+<p>Le domande da 16 a 30 passano male in modalità colloquio, e benissimo nella vita vera: in auto, camminando, cucinando. Gli sguardi paralleli sciolgono la lingua molto meglio degli occhi negli occhi. Tieni il faccia a faccia per le coccole, non per le domande.</p>
 </aside>`,
     },
     {
       id: 'le-domande-di-fondo',
       title: "Le domande di fondo: valori e compatibilità (31-45)",
-      content: `<p>Quando la cosa si fa seria, queste quindici domande verificano che guardiate nella stessa direzione. Non serve essere d'accordo su tutto, ma meglio conoscere le distanze presto che scoprirle da sposati.</p>
+      content: `<p>Quando la cosa si fa seria, queste quindici domande verificano che guardiate nella stessa direzione. Non serve essere d'accordo su tutto, ma meglio conoscere le distanze presto che scoprirle una volta sposati.</p>
 <ol start="31">
 <li>Cos'è una vita riuscita, per te, tra dieci anni?</li>
 <li>Che posto occupa il lavoro nella tua vita ideale?</li>
@@ -94,8 +94,8 @@ const article: BlogArticleData = {
     },
     {
       id: 'quelle-che-non-si-osa',
-      title: "Quelle che non si osa fare... e che evitano i malintesi (46-52)",
-      content: `<p>Le sette domande che tutti rigirano in testa senza tirarle fuori. Sono scomode per trenta secondi... ed evitano mesi di malintesi. Scegli il tuo momento, respira, e vai.</p>
+      title: "Quelle che non si osa fare, e che evitano i malintesi (46-52)",
+      content: `<p>Le sette domande che tutti rigirano in testa senza tirarle fuori. Sono scomode per trenta secondi, ed evitano mesi di malintesi. Scegli il tuo momento, respira, e vai.</p>
 <ol start="46">
 <li>Siamo esclusivi, o non ce lo siamo mai detti davvero?</li>
 <li>Cosa cerchi in questo momento: una storia, o lasci venire?</li>
@@ -110,16 +110,16 @@ const article: BlogArticleData = {
     {
       id: 'da-non-fare-troppo-presto',
       title: "Bonus: le 8 domande da NON fare troppo presto (53-60)",
-      content: `<p>Sì, contano nelle 60... perché saperle trattenere è una competenza da inizio relazione a pieno titolo! Ognuna ha la sua ora. Fatta troppo presto affonda l'atmosfera; fatta al momento giusto fa avanzare le cose.</p>
+      content: `<p>Sì, contano nelle 60, perché saper aspettare il momento giusto fa parte dell'esercizio! Ognuna ha la sua ora. Fatta troppo presto affonda l'atmosfera; fatta al momento giusto fa avanzare le cose.</p>
 <ol start="53">
 <li><strong>«Qual era il problema con la tua ex?»</strong> Troppo presto ottieni o un atto d'accusa o un imbarazzo. Il passato sentimentale arriva da solo, quando c'è fiducia.</li>
-<li><strong>«Mi ami?»</strong> Posta prima di essere sentita, forza una risposta... e una risposta forzata non vale niente. Osserva piuttosto i gesti, parlano prima delle parole.</li>
-<li><strong>«Quando andiamo a vivere insieme?»</strong> Ogni cosa a suo tempo, e quel tempo ha del resto un questionario tutto suo... più avanti.</li>
+<li><strong>«Mi ami?»</strong> Posta prima di essere sentita, forza una risposta, e una risposta forzata non vale niente. Osserva piuttosto i gesti, parlano prima delle parole.</li>
+<li><strong>«Quando andiamo a vivere insieme?»</strong> Ogni cosa a suo tempo, e quel tempo ha del resto un questionario tutto suo, più avanti.</li>
 <li><strong>«Quanto guadagni?»</strong> Il rapporto con i soldi sì (domanda 34). La cifra no. Non ancora.</li>
 <li><strong>«Perché sei ancora single?»</strong> Il grande classico che vuole essere un complimento e suona come un sospetto.</li>
 <li><strong>«Secondo te i tuoi genitori mi adoreranno?»</strong> Conoscere la famiglia è una tappa, non un argomento della seconda settimana.</li>
-<li><strong>«Quanti partner hai avuto?»</strong> Nessuna buona risposta, nessun buon momento, nessuna buona ragione. Nessuna, davvero.</li>
-<li><strong>«Staremo ancora insieme tra cinque anni?»</strong> A quella risponderete insieme... essendoci. È l'unico metodo buono conosciuto.</li>
+<li><strong>«Quanti partner hai avuto?»</strong> Nessuna buona risposta, nessun buon momento. Davvero, nessuna ragione per farla.</li>
+<li><strong>«Staremo ancora insieme tra cinque anni?»</strong> A quella risponderete insieme, standoci.</li>
 </ol>
 <div><table><thead><tr><th>La domanda</th><th>Perché non adesso</th><th>Quando ha senso</th></tr></thead><tbody>
 <tr><td>«Cosa siamo, noi due?»</td><td>Troppo presto forza una risposta che nessuno ha</td><td>Quando le settimane hanno dato degli elementi</td></tr>
@@ -131,7 +131,7 @@ const article: BlogArticleData = {
     {
       id: 'e-se-fosse-il-momento',
       title: "E dopo queste 60 domande?",
-      content: `<p>Se hai fatto anche solo la metà di tutto questo nel corso delle settimane, sai già l'essenziale: come funziona questa persona, cosa cerca, e se le vostre direzioni si accordano. È infinitamente più di quello che sanno la maggior parte delle coppie allo stesso stadio.</p>
+      content: `<p>Se hai fatto anche solo la metà di tutto questo nel corso delle settimane, sai già l'essenziale: come funziona questa persona, cosa cerca, e se le vostre direzioni si accordano. È già molto più di quello che sanno la maggior parte delle coppie allo stesso stadio.</p>
 <p>Resta la domanda che le domande non risolvono: cosa senti TU. L'attaccamento che sale, è amicizia che trabocca, attrazione di passaggio, o l'inizio della cosa vera? A un certo punto bisogna porsela francamente.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Amicizia che trabocca o inizio d'amore?</p>
@@ -139,7 +139,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/it/test-amore-o-amicizia/">Districare quello che provo</a>
 <p class="blog-cta-note">Gratis &middot; Senza registrazione &middot; Risultato immediato</p>
 </div>
-<p>E il giorno in cui l'inizio di relazione diventa ufficialmente una relazione... il questionario cambia registro. Le <a href="/it/blog/domande-da-fare-al-tuo-ragazzo/">domande da fare al tuo ragazzo</a> e le <a href="/it/blog/domande-da-fare-alla-tua-ragazza/">domande da fare alla tua ragazza</a> prendono il testimone, con l'immensa collezione di <a href="/it/domande-coppia/">domande per coppie</a> in riserva per tutte le serate successive. Vedrai: le conversazioni migliori sono ancora davanti a voi.</p>
+<p>E il giorno in cui l'inizio di relazione diventa ufficialmente una relazione, il questionario cambia registro. Le <a href="/it/blog/domande-da-fare-al-tuo-ragazzo/">domande da fare al tuo ragazzo</a> e le <a href="/it/blog/domande-da-fare-alla-tua-ragazza/">domande da fare alla tua ragazza</a> prendono il testimone, con l'immensa collezione di <a href="/it/domande-coppia/">domande per coppie</a> in riserva per tutte le serate successive. Vedrai: le conversazioni migliori sono ancora davanti a voi.</p>
 <a href="/it/blog/domande-da-fare-al-tuo-crush/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leggi anche</span><span class="blog-read-also-title">100 domande da fare al tuo crush, dal primo messaggio al primo appuntamento</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

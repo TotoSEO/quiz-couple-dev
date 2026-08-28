@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Una conversazione che si spegne o una ragazza che ha voglia di rivederti: tutto si gioca sulla qualità delle tue domande, e su quello che fai delle risposte.",
-  introduction: `<p>Siamo onesti due minuti. Il problema non è quasi mai trovare UNA domanda da fare. Il problema è che «come va?», «che lavoro fai?» e «bel weekend?» sono esattamente il modo in cui iniziano tutte le altre conversazioni che lei sta avendo in questo momento.</p>
-<p><strong>Una buona domanda fa la differenza perché mostra una cosa rara: che ti interessi a lei, non solo al fatto di parlare.</strong> E quello, credimi, si sente subito.</p>
+  introduction: `<p>Siamo onesti due minuti. Il problema non è quasi mai trovare UNA domanda da fare. Il problema è che «come va?», «che lavoro fai?» e «bel weekend?» sono il modo in cui iniziano tutte le altre conversazioni che lei sta avendo in questo momento.</p>
+<p><strong>Una buona domanda cambia le cose perché mostra un fatto raro: che ti interessi a lei, non solo al fatto di parlare.</strong> E quello, credimi, si sente subito.</p>
 <p>Ecco 90 domande, ordinate per situazione, dal primo messaggio al faccia a faccia dove si decide tutto. Con un consiglio che vale per tutte e 90: è il tuo modo di ascoltare la risposta a fare la differenza, molto più della domanda in sé.</p>`,
   quickSummary: [
     "90 domande ordinate per situazione, dal primo messaggio al capire se le piaci.",
@@ -42,7 +42,7 @@ const article: BlogArticleData = {
     {
       id: 'via-messaggio-per-iniziare',
       title: "Via messaggio o su un'app, per iniziare (1-15)",
-      content: `<p>L'obiettivo qui non è essere profondi, è essere facili da rispondere e un po' più interessanti degli altri. Nient'altro.</p>
+      content: `<p>Qui non serve essere profondi. Serve essere facili da rispondere, e un po' più interessanti degli altri. Nient'altro.</p>
 <ol>
 <li>La tua settimana in due emoji, e posso chiederti perché?</li>
 <li>Cosa ascolti a ripetizione in questo periodo, senza barare?</li>

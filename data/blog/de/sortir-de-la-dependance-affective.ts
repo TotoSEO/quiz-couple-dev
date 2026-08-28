@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "«Arbeite an dir», «lerne dich zu lieben»... Danke, aber konkret, was macht man Montagmorgen? Hier ist der Plan, Übung für Übung.",
   introduction: `<p>Wenn du schon einmal gesucht hast, wie man aus emotionaler Abhängigkeit herauskommt, kennst du das Lied: «gewinne dein Selbstvertrauen zurück», «konzentriere dich auf deine Bedürfnisse», «lerne dich zu lieben». Wahre Ratschläge, sicher. Aber vollkommen unbrauchbar an einem Dienstagabend um 23 Uhr, wenn du auf dein Handy starrst und auf seine Antwort wartest.</p>
-<p><strong>Emotionale Abhängigkeit verlässt man mit Handlungen, kleinen, präzisen und wiederholten, nicht mit Vorsätzen.</strong> Genau wie man ein Knie nach einer Verletzung rehabilitiert: Niemand sagt dir «geh wieder», man gibt dir Übungen, in einer Reihenfolge, mit einer Steigerung.</p>
+<p><strong>Emotionale Abhängigkeit verlässt man mit Handlungen, kleinen, präzisen und wiederholten, nicht mit Vorsätzen.</strong> Ähnlich wie man ein Knie nach einer Verletzung rehabilitiert: Niemand sagt dir «geh wieder», man gibt dir Übungen, in einer Reihenfolge, mit einer Steigerung.</p>
 <p>Genau das machen wir hier. Drei Phasen, zwölf Übungen, vom Dringendsten zum Tiefsten. Du musst nicht alles perfekt machen, du musst nur mit der ersten anfangen. Und davor zwei Minuten, um zu verstehen, wogegen du kämpfst, denn das verändert, wie du die Übungen machst.</p>`,
   quickSummary: [
     "Emotionale Abhängigkeit ist ein Regulationsreflex: Du nutzt den anderen, um deinen Innenzustand zu beruhigen.",
@@ -80,7 +80,7 @@ const article: BlogArticleData = {
         {
           id: 'falle-1-rueckfall-macht-alles-zunichte',
           title: "Falle 1: glauben, ein Rückfall mache alles zunichte",
-          content: `<p>Du hältst zehn Tage durch, dann fegt ein Abend voller Angst deine guten Vorsätze weg, und? Der Rückfall gehört zum Lernen, genau wie man beim Radfahrenlernen wieder hinfällt. Was zählt, ist der Trend über drei Monate, nicht der gestrige Abend.</p>`,
+          content: `<p>Du hältst zehn Tage durch, dann fegt ein Abend voller Angst deine guten Vorsätze weg, und? Der Rückfall gehört zum Lernen, so wie man beim Radfahrenlernen wieder hinfällt. Was zählt, ist der Trend über drei Monate, nicht der gestrige Abend.</p>`,
         },
         {
           id: 'falle-2-partner-wechseln',

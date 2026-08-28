@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Das Schwierige an einem Crush ist, im richtigen Moment die Frage zu finden, die das Gespräch wieder in Gang bringt. Hier sind 100, nach Situation sortiert.",
-  introduction: `<p>Du kennst diesen Moment... Das Gespräch dreht sich im Kreis, die «gut, und dir?» reihen sich aneinander, und du spürst: wenn jetzt niemand etwas anderes bringt, stirbt das höflich in einem «dann noch einen schönen Abend». Bei einem Crush zählt jeder Austausch doppelt. Und so starren wir alle irgendwann aufs Handy, ohne zu wissen, was wir schreiben sollen.</p>
-<p><strong>Eine gute Frage tut zwei Dinge gleichzeitig: sie zeigt echtes Interesse, und sie macht Lust zu antworten.</strong> Mehr verlangt man von einem beginnenden Gespräch nicht. Und genau das können die folgenden 100 Fragen.</p>
+  introduction: `<p>Du kennst diesen Moment. Das Gespräch dreht sich im Kreis, die «gut, und dir?» reihen sich aneinander, und du spürst: wenn jetzt niemand etwas anderes bringt, stirbt das höflich in einem «dann noch einen schönen Abend». Bei einem Crush zählt jeder Austausch doppelt. Und so starren wir alle irgendwann aufs Handy, ohne zu wissen, was wir schreiben sollen.</p>
+<p><strong>Eine gute Frage tut zwei Dinge gleichzeitig: sie zeigt echtes Interesse, und sie macht Lust zu antworten.</strong> Mehr verlangt man von einem beginnenden Gespräch nicht. Dafür sind die folgenden 100 Fragen gemacht.</p>
 <p>Sie sind nach Situation sortiert, von der ersten Nachricht bis zum ersten Date. Wir schreiben «er» der Einfachheit halber, aber alles funktioniert natürlich in jede Richtung.</p>`,
   quickSummary: [
     "100 Fragen nach Situation sortiert, von der ersten Nachricht bis zum ersten Date.",
@@ -51,7 +51,7 @@ const article: BlogArticleData = {
     {
       id: 'um-ihn-kennenzulernen',
       title: "Um ihn kennenzulernen (16-35)",
-      content: `<p>Das Fundament. Hier findest du heraus, wer er wirklich ist, jenseits der Figur der ersten Nachrichten... und glaub mir, es gibt oft Überraschungen.</p>
+      content: `<p>Das Fundament. Hier findest du heraus, wer er wirklich ist, jenseits der Figur der ersten Nachrichten, und glaub mir, es gibt oft Überraschungen.</p>
 <ol start="16">
 <li>Wofür brennst du so sehr, dass du die Zeit vergisst?</li>
 <li>Wie beschreibst du dich in drei Worten, und welche würden deine Freunde wählen?</li>
@@ -78,7 +78,7 @@ const article: BlogArticleData = {
     {
       id: 'lustig-zum-lachen',
       title: "Lustig, um ihn zum Lachen zu bringen (36-50)",
-      content: `<p>Humor ist die kürzeste Abkürzung zwischen zwei Menschen, die sich mögen. Diese Fragen haben null Einsatz... und genau deshalb funktionieren sie so gut.</p>
+      content: `<p>Humor ist die kürzeste Abkürzung zwischen zwei Menschen, die sich mögen. Diese Fragen haben null Einsatz, und deshalb funktionieren sie so gut.</p>
 <ol start="36">
 <li>Was ist deine liebste Verschwörungstheorie, die du halb verteidigst?</li>
 <li>Welches Tier wäre dein offizieller Sprecher?</li>
@@ -100,7 +100,7 @@ const article: BlogArticleData = {
     {
       id: 'etwas-persoenlicher',
       title: "Etwas persönlicher (51-65)",
-      content: `<p>Für den Moment, in dem das Gespräch schon läuft und du spürst, dass es über Witze hinausgehen kann. Genau dort wird aus einem Crush oft etwas anderes...</p>
+      content: `<p>Für den Moment, in dem das Gespräch schon läuft und du spürst, dass es über Witze hinausgehen kann. Dort wird aus einem Crush oft etwas anderes...</p>
 <ol start="51">
 <li>Was macht dich wirklich glücklich, nicht auf dem Papier, sondern echt?</li>
 <li>Sprichst du leicht über deine Gefühle, oder behältst du alles für dich?</li>
@@ -122,7 +122,7 @@ const article: BlogArticleData = {
     {
       id: 'zum-flirten',
       title: "Zum Flirten, ohne zu übertreiben (66-80)",
-      content: `<p>Flirten, das funktioniert, folgt einer einfachen Regel: andeuten statt ankündigen. Diese Fragen senden das Signal und lassen dem anderen die Freiheit, es aufzugreifen... oder nicht. Genau das macht sie wirksam, ohne je aufdringlich zu sein.</p>
+      content: `<p>Flirten, das funktioniert, folgt einer einfachen Regel: andeuten statt ankündigen. Diese Fragen senden das Signal und lassen dem anderen die Freiheit, es aufzugreifen... oder nicht. Das macht sie wirksam, ohne je aufdringlich zu sein.</p>
 <ol start="66">
 <li>Was ist dir zuerst an mir aufgefallen, ehrlich?</li>
 <li>Was ist deine Idee eines perfekten Dates, ohne unbegrenztes Budget?</li>
@@ -142,13 +142,13 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Woran du merkst, ob er interessiert ist</p>
-<p>Achte weniger auf seine Antworten als auf seine Rückfragen. Wer interessiert ist, antwortet, stellt dann eine Frage zurück, hakt nach, meldet sich am nächsten Tag wieder... Wer nur höflich ist, antwortet freundlich und lässt es dabei. Die Länge der Nachrichten zählt weniger, als du denkst: entscheidend ist, wer die Maschine wieder anwirft.</p>
+<p>Achte weniger auf seine Antworten als auf seine Rückfragen. Wer interessiert ist, antwortet, stellt dann eine Frage zurück, hakt nach, meldet sich am nächsten Tag wieder. Wer nur höflich ist, antwortet freundlich und lässt es dabei. Die Länge der Nachrichten zählt weniger, als du denkst: entscheidend ist, wer die Maschine wieder anwirft.</p>
 </aside>`,
     },
     {
       id: 'ob-es-passen-koennte',
       title: "Um zu sehen, ob es zwischen euch passen könnte (81-92)",
-      content: `<p>Unter ihrer leichten Gesprächsoberfläche prüfen diese zwölf Fragen das Wesentliche: eure Rhythmen, eure Erwartungen, eure Vorstellungen. Es ist genau die Arbeit, die <a href="/de/fragen-fuer-paare/">Paarfragen</a> leisten, sobald eine Beziehung läuft; in der Crush-Version prüft man dasselbe, ohne je DIE frontale Frage zu stellen.</p>
+      content: `<p>Unter ihrer leichten Gesprächsoberfläche prüfen diese zwölf Fragen das Wesentliche: eure Rhythmen, eure Erwartungen, eure Vorstellungen. Es ist die Arbeit, die <a href="/de/fragen-fuer-paare/">Paarfragen</a> leisten, sobald eine Beziehung läuft; in der Crush-Version prüft man dasselbe, ohne je DIE frontale Frage zu stellen.</p>
 <ol start="81">
 <li>Was ist dein ideales Wochenende: klarer Plan oder totale Improvisation?</li>
 <li>Brauchst du viel Zeit für dich, oder magst du dauerhafte Nähe?</li>
@@ -167,7 +167,7 @@ const article: BlogArticleData = {
     {
       id: 'beim-ersten-date',
       title: "In echt, beim ersten Date (93-100)",
-      content: `<p>Acht Fragen für das Treffen von Angesicht zu Angesicht. Offen genug, um ihn zum Reden zu bringen, leicht genug, um die Stimmung nie zu belasten... genau das, was ein erster Abend braucht.</p>
+      content: `<p>Acht Fragen für das Treffen von Angesicht zu Angesicht. Offen genug, um ihn zum Reden zu bringen, leicht genug, um die Stimmung nie zu belasten. Eben das, was ein erster Abend braucht.</p>
 <ol start="93">
 <li>Wie ist es, mich in echt zu treffen, verglichen mit den Nachrichten?</li>
 <li>Was war das Überraschendste, das du über mich erfahren hast, seit wir schreiben?</li>
@@ -184,7 +184,7 @@ const article: BlogArticleData = {
       id: 'wenn-du-dich-nicht-traust',
       title: "Und wenn du dich gar nicht traust, etwas zu schreiben?",
       content: `<p>Ein kurzes Wort an alle, die bis hierher gelesen haben, ohne eine einzige Nachricht zu schicken: das ist normal. Ein Crush raubt einem per Definition die Mittel. Fang mit den Fragen 1 bis 15 an. Nur einer. Der einfachsten, der, die zu dir passt. Es geht nicht darum, brillant zu sein, sondern eine Tür zu öffnen.</p>
-<p>Und wenn ihr schon täglich schreibt, du aber immer noch nicht weißt, ob es beidseitig ist... hör auf, eure Gespräche zum zehnten Mal zu lesen. Ehrlich. Es gibt weit verlässlichere Signale als deine Deutung seiner Emojis um ein Uhr nachts.</p>
+<p>Und wenn ihr schon täglich schreibt, du aber immer noch nicht weißt, ob es beidseitig ist, hör auf, eure Gespräche zum zehnten Mal zu lesen. Ehrlich. Es gibt weit verlässlichere Signale als deine Deutung seiner Emojis um ein Uhr nachts.</p>
 <div><table><thead><tr><th>Die Etappe</th><th>Das richtige Register</th><th>Der klassische Fehler</th></tr></thead><tbody>
 <tr><td>Die ersten Nachrichten</td><td>Leicht, kurz, eine Frage auf einmal</td><td>Die Textwand, die einen Aufsatz erwartet</td></tr>
 <tr><td>Kennenlernen</td><td>Neugierig, an Konkretem</td><td>Das getarnte Verhör</td></tr>

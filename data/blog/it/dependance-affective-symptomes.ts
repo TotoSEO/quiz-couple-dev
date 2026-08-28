@@ -26,7 +26,7 @@ const article: BlogArticleData = {
       id: 'sintomo-centrale',
       title: "Il sintomo centrale, quello che riassume tutti gli altri",
       content: `<p>Prima dell'elenco bisogna capire il meccanismo di base, perché tutti i sintomi ne derivano. La <a href="/it/blog/dipendenza-affettiva-nella-coppia/">dipendenza affettiva</a>, in fondo, è usare l'altro come regolatore emotivo: la tua calma, il tuo valore, la tua sicurezza interiore passano dai suoi segnali. Un messaggio affettuoso e la tua giornata è bella. Un silenzio e crolla tutto.</p>
-<p>Il problema non è essere toccata dai segnali del tuo compagno, lo siamo tutti! Il problema è l'ampiezza. Quando una persona esterna tiene il termostato del tuo stato interno, non sei più nel legame, sei nella sopravvivenza. Ed è esattamente quello che descrivono i sintomi seguenti, ciascuno a modo suo.</p>
+<p>Il problema non è essere toccata dai segnali del tuo compagno, lo siamo tutti! Il problema è l'ampiezza. Quando una persona esterna tiene il termostato del tuo stato interno, non sei più nel legame, sei nella sopravvivenza. Ed è quello che descrivono i sintomi seguenti, ciascuno a modo suo.</p>
 <div><table><thead><tr><th>Dove si manifesta</th><th>Come appare concretamente</th></tr></thead><tbody>
 <tr><td><strong>Nella tua testa</strong></td><td>L'interpretazione permanente, la paura dell'abbandono di sottofondo</td></tr>
 <tr><td><strong>Nella tua coppia</strong></td><td>La rassicurazione che non regge mai, i limiti che non si pongono</td></tr>
@@ -38,7 +38,7 @@ const article: BlogArticleData = {
       id: 'nella-tua-testa',
       title: "Nella tua testa (sintomi da 1 a 5)",
       content: `<ol>
-<li><strong>La paura dell'abbandono, di sottofondo:</strong> Non una preoccupazione occasionale: un programma che gira in permanenza. Un tono un po' secco, un «vedremo», uno sguardo distratto, e il tuo cervello conclude il peggio. La cosa più sfiancante è che anche i bei momenti sono contaminati: te li godi a metà, perché una parte di te anticipa già la fine.</li>
+<li><strong>La paura dell'abbandono, di sottofondo:</strong> Un programma che gira in permanenza, più che una preoccupazione che passa. Un tono un po' secco, un «vedremo», uno sguardo distratto, e il tuo cervello conclude il peggio. La cosa più sfiancante è che anche i bei momenti sono contaminati: te li godi a metà, perché una parte di te anticipa già la fine.</li>
 <li><strong>L'interpretazione permanente:</strong> Rileggi i messaggi, analizzi le emoji, confronti il tempo di risposta di oggi con quello della settimana scorsa. La tua coppia è diventata un'indagine e tu una detective a tempo pieno. Sfiancante e soprattutto senza fine, perché nessuna prova rassicura per più di qualche ora.</li>
 <li><strong>Il bisogno di rassicurazione a ripetizione:</strong> «Mi ami?», «Va tutto bene tra noi?», poste non per aprire una conversazione ma per calmare un'angoscia. La risposta funziona come un farmaco a effetto breve. Serve presto una nuova dose.</li>
 <li><strong>Il valore personale indicizzato a lui:</strong> Se ti valorizza, vali qualcosa. Se è distante, non vali più niente. La tua autostima non ti appartiene più: sale e scende secondo il suo umore.</li>
@@ -51,7 +51,7 @@ const article: BlogArticleData = {
       content: `<ol start="6">
 <li><strong>Non dici più di no:</strong> Per paura di deludere, di creare gelo, di dargli un motivo per andarsene. Le tue preferenze vengono sistematicamente dopo le sue, al punto che a volte non sai più cosa preferisci tu.</li>
 <li><strong>Ti cancelli in anticipo:</strong> Indovini i suoi desideri prima che li formuli, disinneschi i conflitti prima che esistano, ingoi i rimproveri prima di dirli. Da lontano sei «facile da vivere». Solo che, a furia di cancellarti, sei sparita.</li>
-<li><strong>La gelosia diventa invadente:</strong> Non per forza scenate: a volte solo una sorveglianza discreta, i social controllati, il «chi è quella?» di cui ti penti subito. Dietro, sempre la stessa logica: ogni persona attorno a lui è una minaccia per la tua sopravvivenza emotiva.</li>
+<li><strong>La gelosia diventa invadente:</strong> Spesso senza una sola scenata, solo una sorveglianza discreta, i social controllati, il «chi è quella?» di cui ti penti subito. Dietro, sempre la stessa logica: ogni persona attorno a lui è una minaccia per la tua sopravvivenza emotiva.</li>
 <li><strong>Resti, anche quando fa male:</strong> È il sintomo dalle conseguenze più pesanti. Una relazione mediocre, deludente, a volte apertamente tossica, eppure l'idea di andartene fa più paura dell'idea di soffrire. Attenzione, tra l'altro: questo profilo attira proprio i partner che lo sfruttano, ci torniamo più sotto.</li>
 <li><strong>La coppia ha mangiato tutto il resto:</strong> I tuoi progetti, le tue passioni, le tue serate: tutto è passato in secondo piano, senza una decisione consapevole. Un giorno ti accorgi che sono mesi che non fai niente che non lo coinvolga.</li>
 </ol>
@@ -63,7 +63,7 @@ const article: BlogArticleData = {
     {
       id: 'nel-tuo-corpo',
       title: "Nel tuo corpo (sintomi da 11 a 13)",
-      content: `<p>Se ne parla di rado, eppure... La dipendenza affettiva è anche una faccenda fisica, perché l'insicurezza permanente è stress cronico. Concretamente:</p>
+      content: `<p>Se ne parla di rado, ed è un peccato. La dipendenza affettiva è anche una faccenda fisica, perché l'insicurezza permanente è stress cronico. Concretamente:</p>
 <ol start="11">
 <li><strong>Il nodo allo stomaco del silenzio:</strong> Una vera reazione fisica quando non risponde: gola chiusa, stomaco stretto, difficoltà a concentrarti su altro. Il tuo corpo tratta un messaggio in ritardo come un pericolo.</li>
 <li><strong>Il sonno a pezzi nelle sere di dubbio:</strong> I rimuginii delle due di notte, i risvegli per controllare il telefono, la stanchezza che si accumula e rende l'ansia ancora meno gestibile il giorno dopo. Circolo vizioso classico.</li>
@@ -74,7 +74,7 @@ const article: BlogArticleData = {
       id: 'con-gli-altri',
       title: "Con gli altri (sintomi da 14 a 16)",
       content: `<ol start="14">
-<li><strong>Le tue amicizie sono a maggese:</strong> Non per disamore: per riassegnazione di tutte le tue risorse alla relazione. Le amiche «di prima» ricevono risposte gentili e serate rimandate, finché smettono di proporre.</li>
+<li><strong>Le tue amicizie sono a maggese:</strong> Il disamore non c'entra niente: tutte le tue risorse sono state riassegnate alla relazione. Le amiche «di prima» ricevono risposte gentili e serate rimandate, finché smettono di proporre.</li>
 <li><strong>Chiedi a tutti di rassicurarti:</strong> L'analisi dei suoi messaggi con la tua migliore amica, i «secondo te mi ama?» in loop. Chi ti sta attorno diventa il pronto soccorso della tua coppia. Generoso all'inizio, sfinito alla lunga.</li>
 <li><strong>Scegli sempre lo stesso profilo:</strong> Distante, inafferrabile, tiepido, ed eccoti di nuovo a rincorrere. Non è sfortuna: l'insicurezza cerca ciò che conosce. E quando il partner distante è anche un manipolatore, il cocktail diventa davvero pericoloso: la coppia <a href="/it/blog/dipendente-affettivo-e-manipolatore/">dipendente affettivo e manipolatore</a> trasforma la tua paura dell'abbandono in uno strumento di controllo su misura.</li>
 </ol>`,

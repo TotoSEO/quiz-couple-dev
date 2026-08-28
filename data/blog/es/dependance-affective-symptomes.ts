@@ -26,7 +26,7 @@ const article: BlogArticleData = {
       id: 'sintoma-central',
       title: "El síntoma central, el que resume todos los demás",
       content: `<p>Antes de la lista hay que entender el mecanismo de base, porque de él salen todos los síntomas. La <a href="/es/blog/dependencia-emocional-en-la-pareja/">dependencia emocional</a> es, en el fondo, usar al otro como regulador emocional: tu calma, tu valor, tu seguridad interior pasan por sus señales. Un mensaje cariñoso y tu día es bonito. Un silencio y todo se derrumba.</p>
-<p>El problema no es que te afecten las señales de tu pareja, ¡le pasa a todo el mundo! El problema es la amplitud. Cuando alguien de fuera sostiene el termostato de tu estado interno, ya no estás en el vínculo, estás en la supervivencia. Y eso es exactamente lo que describen los síntomas siguientes, cada uno a su manera.</p>
+<p>El problema no es que te afecten las señales de tu pareja, ¡le pasa a todo el mundo! El problema es la amplitud. Cuando alguien de fuera sostiene el termostato de tu estado interno, ya no estás en el vínculo, estás en la supervivencia. Y eso es lo que describen los síntomas siguientes, cada uno a su manera.</p>
 <div><table><thead><tr><th>Dónde se manifiesta</th><th>Cómo se ve en concreto</th></tr></thead><tbody>
 <tr><td><strong>En tu cabeza</strong></td><td>La interpretación permanente, el miedo al abandono de fondo</td></tr>
 <tr><td><strong>En tu pareja</strong></td><td>La tranquilidad que nunca dura, los límites que no se ponen</td></tr>
@@ -38,7 +38,7 @@ const article: BlogArticleData = {
       id: 'en-tu-cabeza',
       title: "En tu cabeza (síntomas 1 a 5)",
       content: `<ol>
-<li><strong>El miedo al abandono, de fondo:</strong> No una inquietud puntual: un programa que corre todo el rato. Un tono algo seco, un «ya veremos», una mirada distraída, y tu cerebro concluye lo peor. Lo más agotador es que hasta los buenos momentos quedan contaminados: los disfrutas a medias, porque una parte de ti ya anticipa el final.</li>
+<li><strong>El miedo al abandono, de fondo:</strong> Un programa que corre todo el rato, más que una inquietud que pasa. Un tono algo seco, un «ya veremos», una mirada distraída, y tu cerebro concluye lo peor. Lo más agotador es que hasta los buenos momentos quedan contaminados: los disfrutas a medias, porque una parte de ti ya anticipa el final.</li>
 <li><strong>La interpretación permanente:</strong> Relees los mensajes, analizas los emojis, comparas el tiempo de respuesta de hoy con el de la semana pasada. Tu pareja se ha convertido en una investigación y tú en detective a jornada completa. Agotador y, sobre todo, sin fin, porque ninguna prueba tranquiliza más de unas horas.</li>
 <li><strong>La necesidad de tranquilizarte una y otra vez:</strong> «¿Me quieres?», «¿estamos bien?», preguntas hechas no para abrir una conversación sino para calmar una angustia. La respuesta funciona como un medicamento de efecto corto. Enseguida hace falta otra dosis.</li>
 <li><strong>Tu valor personal indexado a él:</strong> Si te valora, vales algo. Si está distante, ya no vales nada. Tu autoestima ha dejado de pertenecerte: sube y baja según su humor.</li>
@@ -51,7 +51,7 @@ const article: BlogArticleData = {
       content: `<ol start="6">
 <li><strong>Ya no dices que no:</strong> Por miedo a decepcionar, a crear tensión, a darle un motivo para irse. Tus preferencias van sistemáticamente después de las suyas, hasta el punto de que a veces ya no sabes qué prefieres tú.</li>
 <li><strong>Te borras por anticipado:</strong> Adivinas sus deseos antes de que los formule, desactivas los conflictos antes de que existan, te tragas los reproches antes de decirlos. De lejos eres «fácil de llevar». Solo que, de tanto borrarte, has desaparecido.</li>
-<li><strong>Los celos se vuelven invasivos:</strong> No necesariamente escenas: a veces solo una vigilancia discreta, las redes revisadas, el «¿quién es esa?» del que te arrepientes al segundo. Detrás, siempre la misma lógica: cada persona a su alrededor es una amenaza para tu supervivencia emocional.</li>
+<li><strong>Los celos se vuelven invasivos:</strong> A menudo sin una sola escena, solo una vigilancia discreta, las redes revisadas, el «¿quién es esa?» del que te arrepientes al segundo. Detrás, siempre la misma lógica: cada persona a su alrededor es una amenaza para tu supervivencia emocional.</li>
 <li><strong>Te quedas, aunque duela:</strong> Es el síntoma con las consecuencias más pesadas. Una relación mediocre, decepcionante, a veces claramente tóxica, y aun así la idea de irte da más miedo que la idea de sufrir. Ojo, además: este perfil atrae precisamente a las parejas que lo explotan, volvemos a ello más abajo.</li>
 <li><strong>La pareja se ha comido todo lo demás:</strong> Tus proyectos, tus aficiones, tus noches propias: todo ha pasado a segundo plano, sin decisión consciente. Un día te das cuenta de que llevas meses sin hacer nada que no lo incluya a él.</li>
 </ol>
@@ -63,7 +63,7 @@ const article: BlogArticleData = {
     {
       id: 'en-tu-cuerpo',
       title: "En tu cuerpo (síntomas 11 a 13)",
-      content: `<p>Se habla poco de esto y, sin embargo... La dependencia emocional también es un asunto físico, porque la inseguridad permanente es estrés crónico. En concreto:</p>
+      content: `<p>Se habla poco de esto, y es una pena. La dependencia emocional también es un asunto físico, porque la inseguridad permanente es estrés crónico. En concreto:</p>
 <ol start="11">
 <li><strong>El nudo en el estómago del silencio:</strong> Una reacción física real cuando no responde: garganta cerrada, estómago apretado, dificultad para concentrarte en otra cosa. Tu cuerpo trata un mensaje que tarda como un peligro.</li>
 <li><strong>El sueño roto las noches de duda:</strong> Las vueltas a la cabeza a las dos de la mañana, los despertares para mirar el móvil, el cansancio que se acumula y hace la ansiedad aún menos manejable al día siguiente. Círculo vicioso clásico.</li>
@@ -74,7 +74,7 @@ const article: BlogArticleData = {
       id: 'con-los-demas',
       title: "Con los demás (síntomas 14 a 16)",
       content: `<ol start="14">
-<li><strong>Tus amistades están en barbecho:</strong> No por desamor: por reasignar todos tus recursos a la relación. Las amigas «de antes» reciben respuestas educadas y planes aplazados, hasta que dejan de proponer.</li>
+<li><strong>Tus amistades están en barbecho:</strong> El desamor no tiene nada que ver: todos tus recursos se han reasignado a la relación. Las amigas «de antes» reciben respuestas educadas y planes aplazados, hasta que dejan de proponer.</li>
 <li><strong>Le pides a todo el mundo que te tranquilice:</strong> El análisis de sus mensajes con tu mejor amiga, los «¿tú crees que me quiere?» en bucle. Tu entorno se convierte en el servicio de urgencias de tu pareja. Generoso al principio, agotado a la larga.</li>
 <li><strong>Eliges siempre el mismo perfil:</strong> Distante, inasible, tibio, y ahí estás otra vez corriendo detrás. No es mala suerte: la inseguridad busca lo que conoce. Y cuando la pareja distante es además un manipulador, el cóctel se vuelve francamente peligroso: el dúo <a href="/es/blog/dependiente-emocional-y-manipulador/">dependiente emocional y manipulador</a> convierte tu miedo al abandono en una herramienta de control a medida.</li>
 </ol>`,

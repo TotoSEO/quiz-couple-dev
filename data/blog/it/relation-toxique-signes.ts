@@ -11,7 +11,7 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-03T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Tossica», la parola è ovunque, al punto da non dire più niente. Eppure la vera relazione tossica ha segnali precisi... e una domanda centrale: si può riparare?",
-  introduction: `<p>«Relazione tossica»... La parola è talmente ovunque che serve per tutto: un litigio un po' forte, un ex rancoroso, un disaccordo sulle vacanze, ecco, tossica! Risultato: quando ti poni DAVVERO la domanda sulla tua relazione, non sai più cosa pensare. È grave? È normale? Sono io?</p>
+  introduction: `<p>«Relazione tossica». La parola è talmente ovunque che serve per tutto: un litigio un po' forte, un ex rancoroso, un disaccordo sulle vacanze, ecco, tossica! Risultato: quando ti poni DAVVERO la domanda sulla tua relazione, non sai più cosa pensare. È grave? È normale? Sono io?</p>
 <p>Allora poniamo il criterio vero, quello che rimette ordine: <strong>una relazione è tossica per quello che ti fa, non per quello che contiene.</strong> Litigi ne hanno tutte le coppie. Differenze, periodi grigi, parole che scappano: uguale. La domanda non è lì. La domanda è: in che stato ti mette questa relazione, settimana dopo settimana?</p>
 <p>Vediamolo con calma, fino alla domanda che conta di più: si ripara o no?</p>`,
   quickSummary: [

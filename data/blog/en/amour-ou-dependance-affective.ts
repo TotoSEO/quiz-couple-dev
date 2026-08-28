@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Love and emotional dependency look enormously alike from the inside. Same intensity, same constant thoughts... and yet everything separates them.",
   introduction: `<p>It's a question we don't quite dare ask ourselves, because it's a bit frightening: do I love him... or do I mainly love the fact that he's there? Is it love, this thing that grips my stomach when he doesn't reply? Or something else?</p>
-<p>The confusion is normal, and we have to start by saying so: <strong>from the inside, intense love and emotional dependency look very similar.</strong> In both cases you think about him constantly, you hate his absence, you feel strongly. The difference lies elsewhere, in the direction: love carries you towards him, dependency makes you flee an emptiness.</p>
+<p>The confusion is normal: <strong>from the inside, intense love and emotional dependency look very similar.</strong> In both cases you think about him constantly, you hate his absence, you feel strongly. The difference lies elsewhere, in the direction: love carries you towards him, dependency makes you flee an emptiness.</p>
 <p>Let's make this very concrete, with the 7 differences that separate the two and a mental experiment worth more than any speech.</p>`,
   quickSummary: [
     "Intensity settles nothing: love and dependency can be equally strong.",
@@ -60,8 +60,8 @@ const article: BlogArticleData = {
     {
       id: 'answering-the-question',
       title: "So, love or dependency? Answering it for good",
-      content: `<p>Let's recap what you can do, concretely, to get out of this question that's been going round in your head for weeks.</p>
-<p>Go back over the 7 differences and count your lines honestly. Do the weekend test, for real if the chance comes up: imagined answers are useful, lived answers are definitive. Talk about it with someone who knew you before this relationship, and ask them THE awkward question: «how do I seem to you, since I've been with him?»</p>
+      content: `<p>Three things to do to stop going round in circles.</p>
+<p>Go back over the 7 differences and count your lines. Do the weekend test, for real if the chance comes up: imagined answers are useful, lived answers are definitive. And talk about it with someone who knew you before him. Ask them THE awkward question: «how do I seem to you, since I've been with him?»</p>
 <p>And if you want a calm, structured measure that doesn't depend on your mood that evening...</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Love, habit or dependency: measure it properly</p>
@@ -69,7 +69,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/en/emotional-dependency-test/">Get my answer</a>
 <p class="blog-cta-note">Free &middot; No sign-up &middot; Instant result</p>
 </div>
-<p>One last thing, to finish gently. If you discover that your way of loving leans towards dependency, don't turn that into a verdict on your story. It doesn't mean your love is fake, nor that your relationship is doomed. It means you love with an old fear clinging to your back, and that fear can be set down. Plenty of couples go through this work and come out with a lighter bond than before. Yours can too.</p>
+<p>One last thing. If you discover that your way of loving leans towards dependency, don't turn that into a verdict on your story. It doesn't mean your love is fake, nor that your relationship is doomed. It means you love with an old fear clinging to your back, and that fear can be set down. Plenty of couples go through this work and come out with a lighter bond than before. Yours can too.</p>
 <a href="/en/blog/emotional-dependency-in-relationships/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">Emotional dependency: when loving becomes a vital need</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

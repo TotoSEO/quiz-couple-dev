@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Un manipulador no miente al azar. Elige de un repertorio, siempre el mismo. Y en cuanto conoces el repertorio, algo se rompe en el truco de magia.",
   introduction: `<p>«Eres demasiado sensible.» ¿Cuántas veces has oído esa? ¿Y cuántas te has ido preguntándote si, efectivamente, no estarías exagerando un poco?</p>
-<p>Por eso existe este artículo. Los manipuladores no inventan nada: tiran de un repertorio, y es más o menos siempre el mismo. Frases cortas, que parecen inofensivas, a veces incluso amables... y que hacen un trabajo muy preciso en tu cabeza: invertir la culpa, hacerte dudar, hacerte callar.</p>
+<p>Por eso existe este artículo. <strong>Los manipuladores no inventan nada: tiran de un repertorio, y es más o menos siempre el mismo.</strong> Frases cortas, que parecen inofensivas, a veces incluso amables, y que hacen un trabajo muy preciso en tu cabeza: invertir la culpa, hacerte dudar, hacerte callar.</p>
 <p>Así que vamos a hacer lo único que de verdad las neutraliza: sacarlas de contexto y mirarlas una por una. Su traducción real, lo que buscan producir en ti y lo que puedes responder. Hay bastantes posibilidades de que reconozcas varias por el camino... y ese es justamente el objetivo.</p>`,
   quickSummary: [
     "Estas frases nunca discuten lo que has dicho, cuestionan tu derecho a decirlo.",
@@ -26,9 +26,9 @@ const article: BlogArticleData = {
       id: 'por-que-funcionan',
       title: "Por qué funcionan tan bien estas frases",
       content: `<p>Antes de la lista, dos minutos sobre el mecanismo, porque lo explica todo.</p>
-<p>Cuando expresas un desacuerdo o una herida, hay dos formas de responderte. Sobre el fondo: «vale, hablemos de lo que ha pasado». O sobre la forma: «no estás en condiciones de hablar de esto, exageras, no es el momento»...</p>
+<p>Cuando expresas un desacuerdo o una herida, hay dos formas de responderte. Sobre el fondo: «vale, hablemos de lo que ha pasado». O sobre la forma: «no estás en condiciones de hablar de esto, exageras, no es el momento».</p>
 <p>Casi todas las frases de manipulador juegan con la forma. <strong>Nunca discuten lo que dices. Atacan tu derecho a decirlo, y eso es muy distinto.</strong> Y es demoledor, porque te desplaza: en vez de defender tu tema, acabas defendiendo tu legitimidad, tu salud mental, tu tono de voz. El tema inicial, mientras tanto, ha desaparecido. Querías hablar de una cita olvidada... y veinte minutos después te disculpas por la manera en que lo has dicho. Truco completado.</p>
-<p>Una precisión importante, eso sí: todo el mundo suelta una de estas frases un día de cansancio. Lo que marca a un manipulador es el repertorio: la variedad de fórmulas, su retorno sistemático, y el hecho de que al final siempre seas tú quien se disculpa. Ese funcionamiento de conjunto es exactamente el del <a href="/es/blog/narcisista-en-el-amor/">narcisista en la pareja</a>: la frase es solo un engranaje del sistema.</p>`,
+<p>Una precisión importante, eso sí: todo el mundo suelta una de estas frases un día de cansancio. Lo que marca a un manipulador es el repertorio: la variedad de fórmulas, su retorno sistemático, y el hecho de que al final siempre seas tú quien se disculpa. Ese funcionamiento de conjunto es el del <a href="/es/blog/narcisista-en-el-amor/">narcisista en la pareja</a>: la frase es solo un engranaje del sistema.</p>`,
     },
     {
       id: 'invertir-la-culpa',
@@ -55,7 +55,7 @@ const article: BlogArticleData = {
 <li><strong>«Otra vez lo has entendido mal.»</strong> El «otra vez» hace todo el trabajo: instala un historial de incompetencia que nunca existió y que no se te ocurrirá discutir.</li>
 <li><strong>«Te estás montando películas.»</strong> Se usa justo cuando tu intuición se calienta. Cuanto mejor es tu radar, más la oirás.</li>
 <li><strong>«Todo el mundo piensa que exageras.»</strong> El refuerzo invisible: un tribunal fantasma, imposible de verificar, convocado contra ti. ¿Quién es «todo el mundo»? Nunca lo sabrás.</li>
-<li><strong>«Deberías ir al psicólogo, en serio.»</strong> La más violenta de la familia. Tu lucidez se convierte en patología. Y el día en que vayas de verdad, un buen profesional lo ve clarísimo enseguida... por eso mismo detesta la idea en la práctica.</li>
+<li><strong>«Deberías ir al psicólogo, en serio.»</strong> La más violenta de la familia. Tu lucidez se convierte en patología. Y el día en que vayas de verdad, un buen profesional lo ve clarísimo enseguida, y por eso mismo detesta la idea en la práctica.</li>
 </ul>
 <p>Si ese emborronamiento te suena, tómate el tiempo de entender <a href="/es/blog/gaslighting-senales/">cómo se instala el gaslighting</a>, porque no se limita a unas frases.</p>`,
     },
@@ -66,7 +66,7 @@ const article: BlogArticleData = {
 <ul>
 <li><strong>«Después de todo lo que he hecho por ti...»</strong> La deuda. Nunca detallada, nunca saldada, siempre disponible. Estás en déficit permanente sin haber visto jamás el extracto.</li>
 <li><strong>«Nadie me entiende. Ni siquiera tú.»</strong> El «ni siquiera tú» es la parte que trabaja: ahí estás obligada a demostrar que no eres como los demás. Y para demostrarlo, cedes.</li>
-<li><strong>«La verdad es que no tengo suerte con la gente.»</strong> Escucha bien esa al principio de una relación: sus ex «locas», sus amigos «traidores», sus compañeros «envidiosos»... Un día te unirás a la lista. Ese relato de las ex locas es incluso la señal n.º 3 del <a href="/es/blog/hombre-narcisista-senales/">hombre narcisista</a>... y el retrato que hace de ellas es el que hará de ti.</li>
+<li><strong>«La verdad es que no tengo suerte con la gente.»</strong> Escucha bien esa al principio de una relación: sus ex «locas», sus amigos «traidores», sus compañeros «envidiosos». Un día te unirás a la lista. Ese relato de las ex locas es incluso la señal n.º 3 del <a href="/es/blog/hombre-narcisista-senales/">hombre narcisista</a>, y el retrato que hace de ellas es el que hará de ti.</li>
 <li><strong>«Hago todo esto por nosotros, y así me lo agradeces.»</strong> Sus decisiones se convierten en sacrificios por ti, y tu reproche en ingratitud. Nadie ha pedido nunca el extracto de esos sacrificios.</li>
 <li><strong>«De todas formas, haga lo que haga, nunca es suficiente.»</strong> La frase que cierra el tema señalándote como insaciable. Después de ella, pedir cualquier cosa se convierte en una agresión.</li>
 <li><strong>«Venga, di que soy un monstruo ya que estás.»</strong> La exageración defensiva: lleva tu reproche al absurdo para que lo dejes pasar. Querías hablar de un retraso y acabas jurando que no es un monstruo.</li>
@@ -81,13 +81,13 @@ const article: BlogArticleData = {
 <li><strong>«Qué mono que lo intentes.»</strong> Un cumplido y una bofetada en la misma frase. Imposible de reprochar («¡pero si te he hecho un cumplido!»), imposible de encajar.</li>
 <li><strong>«Sin mí no saldrías adelante.»</strong> Esa prepara el terreno de la dependencia. Repetida el tiempo suficiente, acabas creyéndola... y teniendo miedo de irte.</li>
 <li><strong>«Nadie más te aguantaría.»</strong> La gemela oscura de la anterior. Convierte tu relación en un favor que te hacen.</li>
-<li><strong>«¿Seguro que quieres eso?»</strong> Preguntado sistemáticamente sobre tus decisiones de trabajo, tu ropa, tus amigas... Una sola frase y tu confianza se va a revisión.</li>
+<li><strong>«¿Seguro que quieres eso?»</strong> Preguntado sistemáticamente sobre tus decisiones de trabajo, tu ropa, tus amigas. Una sola frase y tu confianza se va a revisión.</li>
 <li><strong>«Menos mal que estoy yo para decírtelo.»</strong> La crítica envuelta en servicio prestado. No puedes ni rechazarla ni discutirla, encima habría que dar las gracias.</li>
 <li><strong>«Te lo tomas todo al pie de la letra.»</strong> La versión humorística del «eres demasiado sensible»: el comentario hiriente se convierte en broma, y tu problema en falta de humor.</li>
 </ul>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 El detalle que delata a la familia n.º 4</p>
-<p>Estas frases apuntan casi siempre a tus puntos fuertes, no a tus debilidades. Tu trabajo, tu humor, tu independencia, lo que te enorgullece... Una pareja torpe critica lo que se te da mal. Un manipulador va contra lo que te mantiene en pie, y esa es toda la diferencia.</p>
+<p>Estas frases apuntan casi siempre a tus puntos fuertes, no a tus debilidades. Tu trabajo, tu humor, tu independencia, lo que te enorgullece. Una pareja torpe critica lo que se te da mal. Un manipulador va contra lo que te mantiene en pie, y esa es toda la diferencia.</p>
 </aside>`,
     },
     {
@@ -113,7 +113,7 @@ const article: BlogArticleData = {
       id: 'los-mensajes-del-manipulador',
       title: "Los mensajes del manipulador: el repertorio en versión escrita",
       content: `<p>Por mensajes, el repertorio se adapta, y merece la pena decirlo porque lo escrito tiene sus propios códigos.</p>
-<p>Está el <strong>silencio radio</strong>, primero: tres días sin responder después de un desacuerdo, y luego un «te echo de menos» a las 23:47, como si nada. El <strong>tocho culpabilizador</strong>, después: quince líneas donde tu noche de ayer se convierte en la prueba de tu egoísmo, enviadas a la hora en que no puedes responder. El <strong>mensaje escaparate</strong>, también: adorable por escrito, glacial en persona... porque lo escrito se puede enseñar, y él lo sabe.</p>
+<p>Está el <strong>silencio radio</strong>, primero: tres días sin responder después de un desacuerdo, y luego un «te echo de menos» a las 23:47, como si nada. El <strong>tocho culpabilizador</strong>, después: quince líneas donde tu noche de ayer se convierte en la prueba de tu egoísmo, enviadas a la hora en que no puedes responder. El <strong>mensaje escaparate</strong>, también: adorable por escrito, glacial en persona, porque lo escrito se puede enseñar, y él lo sabe.</p>
 <p>Y luego está el más inquietante: el mensaje amable que cae JUSTO cuando empezabas a estar mejor. Ese no tiene nada de casualidad: ha detectado tu distancia, y la reconquista arranca.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ No borres esos mensajes</p>
@@ -123,7 +123,7 @@ const article: BlogArticleData = {
     {
       id: 'como-responder',
       title: "Cómo responder a estas frases (sin dejarte la noche en ello)",
-      content: `<p>Regla de oro: no te justifiques sobre la forma, vuelve al fondo. Cada minuto que pasas demostrando que no eres «demasiado sensible» es un minuto ganado para él. Así se ve en la práctica.</p>
+      content: `<p>Regla de oro: <strong>no te justifiques sobre la forma, vuelve al fondo.</strong> Cada minuto que pasas demostrando que no eres «demasiado sensible» es un minuto ganado para él. Así se ve en la práctica.</p>
 <div><table><thead><tr><th>Él dice...</th><th>Evita</th><th>Prueba mejor</th></tr></thead><tbody>
 <tr><td>«Eres demasiado sensible.»</td><td>«No es verdad, no soy demasiado sensible, la prueba es...»</td><td>«Puede ser. ¿Y de la cita de ayer, cuándo hablamos?»</td></tr>
 <tr><td>«Yo nunca he dicho eso.»</td><td>Sacar las pruebas una por una</td><td>«No vamos a debatir eso. Yo lo oí, y este es el efecto que me hizo.»</td></tr>
@@ -131,7 +131,7 @@ const article: BlogArticleData = {
 <tr><td>«Después de todo lo que he hecho por ti...»</td><td>Enumerar lo que has hecho tú</td><td>«Esto no es un concurso. Te estoy hablando de una cosa concreta.»</td></tr>
 <tr><td>«Cálmate.»</td><td>Calmarse pidiendo perdón</td><td>«Estoy tranquila. Y sigo esperando tu respuesta.»</td></tr>
 </tbody></table></div>
-<p>Verás el principio: frases cortas, factuales, que rechazan el terreno propuesto. Nada de alegatos. El alegato es exactamente lo que él espera, porque valida que tu legitimidad era el tema.</p>
+<p>Verás el principio: frases cortas, factuales, que rechazan el terreno propuesto. Nada de alegatos. El alegato es lo que él espera, porque valida que tu legitimidad era el tema.</p>
 <p>Y sé honesta contigo en un punto: si estas réplicas provocan sistemáticamente una escalada, silencio castigo o una crisis, ya no estás ante torpezas de comunicación. Estás ante un sistema. Llegados ahí, más vale conocer en detalle las <a href="/es/blog/manipulador-narcisista/">técnicas del manipulador narcisista</a>, sus puntos débiles y sus reacciones cuando se le resiste.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">¿Oyes estas frases en tu casa?</p>

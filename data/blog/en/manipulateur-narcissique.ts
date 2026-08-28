@@ -33,7 +33,7 @@ const article: BlogArticleData = {
       title: "His techniques, in the order he pulls them out",
       content: `<p>Every manipulator has his own style, but the toolbox is standard. And it almost always opens in the same order.</p>
 <ol>
-<li><strong>Targeted charm:</strong> Not generous charm: investor charm. He identifies what you lack, recognition, security, intensity, and supplies it massively. This is the hooking phase, and it's all the more effective for hitting the mark.</li>
+<li><strong>Targeted charm:</strong> Nothing generous about it, this is investor charm. He identifies what you lack, recognition, security, intensity, and supplies it massively. This is the hooking phase, and it's all the more effective for hitting the mark.</li>
 <li><strong>Emotional debt:</strong> Gifts, favours, spectacular availability, which quickly turn into a claim. Everything he «did for you» becomes an argument, an emotional invoice presented at every disagreement.</li>
 <li><strong>Triangulation:</strong> A formidable and often invisible technique: he introduces a third party into the equation. An ex «who understood him better», a colleague «who's so funny», a vague rival. The goal: create permanent competition, keep you competing for a place you thought was yours.</li>
 <li><strong>Gaslighting:</strong> Rewriting reality: what you saw never happened, what he said was never said. Over time you doubt your memory, and he becomes the only reliable source on the reality of your relationship. We've listed his exact formulas in the <a href="/en/blog/manipulator-phrases/">favourite phrases of manipulators</a>.</li>
@@ -46,7 +46,7 @@ const article: BlogArticleData = {
       title: "The manipulator's weak points (yes, he has some)",
       content: `<p>From the inside, his system looks implacable. In reality it rests on precise conditions, and each one is a flaw.</p>
 <ol>
-<li><strong>Genuine indifference:</strong> Not performed indifference, he detects that: the real kind, the one that comes when you've understood and no longer expect anything. His system runs on your reaction, admiration or suffering, it doesn't matter which. A person who no longer reacts is a closed fuel pump.</li>
+<li><strong>Genuine indifference:</strong> Performed indifference he spots straight away. The kind that counts is the real one, the one that comes when you've understood and no longer expect anything. His system runs on your reaction, admiration or suffering, it doesn't matter which. A person who no longer reacts is a closed fuel pump.</li>
 <li><strong>Witnesses:</strong> His whole mechanism requires closed doors. A third party present, a three-way conversation, a family in the know, and the public character has to stay on stage, which neutralises the private one. That's why he works so hard to isolate you.</li>
 <li><strong>Written records:</strong> «I never said that» dies in front of a screenshot. He knows it, by the way: notice how the worst things get said out loud, and how the written messages are carefully worded.</li>
 <li><strong>Time and consistency:</strong> His game needs fast results: destabilise you, make you give in, win you back. Faced with someone calmly consistent, who repeats the same boundary without getting worked up, week after week, the system runs out. He isn't built for the marathon.</li>
@@ -62,7 +62,7 @@ const article: BlogArticleData = {
       title: "The effect of silence on the manipulator",
       content: `<p>This is one of the most asked questions, and it deserves a precise answer, because silence is a weapon with two edges.</p>
 <p>What your silence produces in him, first: a lack. Your attention, your reactions, your emotions are his daily fuel, what English speakers call «narcissistic supply». Cutting contact cuts the supply. And then something very predictable happens: <strong>it triggers an escalation first, never respect.</strong> Multiplied messages, charm reactivated, guilt-tripping, anger, sometimes all three in the same day. He tests every door, in order.</p>
-<p>Then two possible outcomes. Either you hold, and he ends up turning towards another source of attention, sometimes with one last firework of public disparagement to save his image. Or you crack once, a single «answer me», and you've just taught him how many days of pressure it takes to get you back. That's exactly why silence, with this profile, has to be a prepared decision, not a sulk or a test.</p>
+<p>Then two possible outcomes. Either you hold, and he ends up turning towards another source of attention, sometimes with one last firework of public disparagement to save his image. Or you crack once, a single «answer me», and you've just taught him how many days of pressure it takes to get you back. That's why silence, with this profile, has to be a prepared decision, not a sulk or a test.</p>
 <p>One last important point: the silence we're talking about here is the silence of leaving, the famous no contact. Inside the relationship, going quiet to «make him understand» doesn't work: he reads that silence as punishment, therefore as a reaction, therefore as fuel. Once again, that's the game he knows best.</p>`,
     },
     {

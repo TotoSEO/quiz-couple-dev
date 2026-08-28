@@ -26,7 +26,7 @@ const article: BlogArticleData = {
       id: 'core-symptom',
       title: "The core symptom, the one that sums up all the others",
       content: `<p>Before the list, you need to understand the basic mechanism, because every symptom flows from it. <a href="/en/blog/emotional-dependency-in-relationships/">Emotional dependency</a> is, at bottom, using the other person as an emotional regulator: your calm, your worth, your inner security all come through his signals. One tender message and your day is beautiful. One silence and everything collapses.</p>
-<p>The problem isn't being affected by your partner's signals, everyone is! The problem is the amplitude. When someone outside you holds the thermostat of your inner state, you're no longer in a relationship, you're in survival mode. And that is exactly what the following symptoms describe, each in its own way.</p>
+<p>The problem isn't being affected by your partner's signals, everyone is! The problem is the amplitude. When someone outside you holds the thermostat of your inner state, you're no longer in a relationship, you're in survival mode. And that is what the following symptoms describe, each in its own way.</p>
 <div><table><thead><tr><th>Where it shows up</th><th>What it looks like in practice</th></tr></thead><tbody>
 <tr><td><strong>In your head</strong></td><td>Constant interpretation, fear of abandonment running in the background</td></tr>
 <tr><td><strong>In your relationship</strong></td><td>Reassurance that never holds, boundaries that never get set</td></tr>
@@ -38,7 +38,7 @@ const article: BlogArticleData = {
       id: 'in-your-head',
       title: "In your head (symptoms 1 to 5)",
       content: `<ol>
-<li><strong>Fear of abandonment, running in the background:</strong> Not an occasional worry: a program running permanently. A slightly sharp tone, a «we'll see», a distracted look, and your brain jumps to the worst. The most exhausting part is that even the good moments get contaminated: you only half enjoy them, because part of you is already anticipating the end.</li>
+<li><strong>Fear of abandonment, running in the background:</strong> A program running permanently, rather than a worry that passes. A slightly sharp tone, a «we'll see», a distracted look, and your brain jumps to the worst. The most exhausting part is that even the good moments get contaminated: you only half enjoy them, because part of you is already anticipating the end.</li>
 <li><strong>Constant interpretation:</strong> You reread the messages, analyse the emojis, compare today's reply time to last week's. Your relationship has become an investigation, and you a full-time detective. Exhausting, and above all endless, because no proof reassures for more than a few hours.</li>
 <li><strong>The repeated need for reassurance:</strong> «Do you love me?», «Are we okay?», asked not to open a conversation but to calm anxiety. The answer works like medication, with a short-acting effect. You quickly need another dose.</li>
 <li><strong>Self-worth indexed to him:</strong> If he values you, you're worth something. If he's distant, you're worth nothing. Your self-esteem no longer belongs to you: it rises and falls with his mood.</li>
@@ -51,7 +51,7 @@ const article: BlogArticleData = {
       content: `<ol start="6">
 <li><strong>You no longer say no:</strong> For fear of disappointing, of creating a chill, of giving him a reason to leave. Your preferences systematically come after his, to the point where sometimes you no longer know what you prefer.</li>
 <li><strong>You erase yourself pre-emptively:</strong> You guess his wishes before he says them, defuse conflicts before they exist, swallow complaints before voicing them. From a distance you look «easy to live with». Except that by erasing yourself, you have disappeared.</li>
-<li><strong>Jealousy becomes invasive:</strong> Not necessarily scenes: sometimes just discreet monitoring, checked social media, the «who is she?» you regret instantly. Behind it, always the same logic: every person around him is a threat to your emotional survival.</li>
+<li><strong>Jealousy becomes invasive:</strong> Often without a single scene, just discreet monitoring, checked social media, the «who is she?» you regret instantly. Behind it, always the same logic: every person around him is a threat to your emotional survival.</li>
 <li><strong>You stay, even when it hurts:</strong> This is the symptom with the heaviest consequences. An average relationship, disappointing, sometimes frankly toxic, and yet the idea of leaving is more frightening than the idea of suffering. Be careful here: this profile attracts precisely the partners who exploit it, more on that below.</li>
 <li><strong>The relationship has eaten everything else:</strong> Your projects, your passions, your own evenings: everything has slid into second place, without any conscious decision. One day you realise it has been months since you did anything that didn't involve him.</li>
 </ol>
@@ -63,7 +63,7 @@ const article: BlogArticleData = {
     {
       id: 'in-your-body',
       title: "In your body (symptoms 11 to 13)",
-      content: `<p>We rarely talk about it, and yet. Emotional dependency is also a physical matter, because permanent insecurity is chronic stress. In practice:</p>
+      content: `<p>We rarely talk about it, which is a shame. Emotional dependency is also a physical matter, because permanent insecurity is chronic stress. In practice:</p>
 <ol start="11">
 <li><strong>The knot in your stomach when he goes quiet:</strong> A real physical reaction when he doesn't reply: tight throat, knotted stomach, difficulty concentrating on anything else. Your body treats a late message as a danger.</li>
 <li><strong>Sleep falling apart on doubt-filled nights:</strong> The 2am ruminating, waking up to check the phone, the fatigue that piles up and makes the anxiety even harder to manage the next day. A classic vicious circle.</li>
@@ -74,7 +74,7 @@ const article: BlogArticleData = {
       id: 'with-other-people',
       title: "With other people (symptoms 14 to 16)",
       content: `<ol start="14">
-<li><strong>Your friendships lie fallow:</strong> Not from lack of love: from reallocating all your resources to the relationship. The friends from «before» get polite replies and postponed evenings, until they stop suggesting anything.</li>
+<li><strong>Your friendships lie fallow:</strong> Lack of love has nothing to do with it: every resource you have has been reallocated to the relationship. The friends from «before» get polite replies and postponed evenings, until they stop suggesting anything.</li>
 <li><strong>You ask everyone to reassure you:</strong> Analysing his messages with your best friend, the «do you think he loves me?» on repeat. The people around you become your relationship's emergency service. Generous at first, exhausted in the long run.</li>
 <li><strong>You always pick the same profile:</strong> Distant, elusive, lukewarm, and there you are running again. It isn't bad luck: insecurity looks for what it knows. And when the distant partner is also a manipulator, the cocktail becomes genuinely dangerous: the <a href="/en/blog/codependent-and-manipulator/">codependent and manipulator</a> duo turns your fear of abandonment into a made-to-measure control tool.</li>
 </ol>`,

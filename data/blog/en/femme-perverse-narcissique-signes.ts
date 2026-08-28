@@ -46,7 +46,7 @@ const article: BlogArticleData = {
       title: "The 10 signs, in concrete terms",
       content: `<p>As always with this profile, no single sign proves anything. What counts is the accumulation, the repetition and the overall direction. In its typical female forms, it looks like this.</p>
 <ol>
-<li><strong>Guilt as a mother tongue:</strong> Not orders: sighs, «go on, have fun» that mean the opposite, «it's fine, I'm used to being alone». You end up giving up of your own accord, and that's exactly the principle: she bans nothing, she makes everything expensive.</li>
+<li><strong>Guilt as a mother tongue:</strong> No orders, ever. Sighs, «go on, have fun» that mean the opposite, «it's fine, I'm used to being alone». You end up giving up of your own accord, and that's the principle itself: she bans nothing, she makes everything expensive.</li>
 <li><strong>Victim status, pre-emptively:</strong> She suffers. Always, structurally, and because of you. Her childhood, her exes «all bastards», and now you. That status isn't fragility, it's a strategic position: you can't hold anything against someone who is doing badly.</li>
 <li><strong>Your worth marked down, gently:</strong> Your job «is fine but still», your projects «cute», your successes minimised or claimed. Notice the killer detail: in public, she praises you. The demolition never leaves the house.</li>
 <li><strong>Jealous of your supports, not your rivals:</strong> Counter-intuitive but very typical: her real jealousy targets whatever makes you solid without her. Your lifelong mates, your brother, your sport, your professional success. Anything that feeds you elsewhere is a competitor to eliminate.</li>
@@ -65,7 +65,7 @@ const article: BlogArticleData = {
     {
       id: 'what-it-does-to-a-man',
       title: "What it does to a man, from the inside",
-      content: `<p>And it has to be said: men under this kind of control develop exactly the same symptoms as female victims. Permanent doubt, self-censorship, exhausting vigilance, shame, with an extra layer on top: the feeling of not having the right to complain. «I'm a man, I should be able to handle this.»</p>
+      content: `<p>And it has to be said: men under this kind of control develop the same symptoms as female victims. Permanent doubt, self-censorship, exhausting vigilance, shame, with an extra layer on top: the feeling of not having the right to complain. «I'm a man, I should be able to handle this.»</p>
 <p>So let's be clear. Being under a female manipulator's control says nothing about your masculinity, your strength or your intelligence. These systems work on good people, precisely because they're good: your loyalty, your patience and your wish to do right are the raw materials of the mechanism. Brilliant, solid men go through it like everyone else, they just take longer to ask for help.</p>
 <p>And if you notice you can't leave despite everything you've just read, that isn't a lack of courage: it's the trapped functioning of attachment, sometimes doubled by genuine <a href="/en/blog/emotional-dependency-in-relationships/">dependent attachment</a> that she has carefully maintained. It can be dismantled, but not on your own.</p>
 <div class="blog-cta">

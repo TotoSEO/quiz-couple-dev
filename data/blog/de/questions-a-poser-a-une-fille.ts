@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Ob ein Gespräch einschläft oder sie dich wiedersehen will, entscheidet sich an der Qualität deiner Fragen und daran, was du mit den Antworten machst.",
-  introduction: `<p>Seien wir zwei Minuten ehrlich. Das Problem ist fast nie, EINE Frage zu finden. Das Problem ist, dass «wie geht's?», «was machst du beruflich?» und «schönes Wochenende gehabt?» exakt so klingen wie alle anderen Gespräche, die sie gerade führt.</p>
-<p><strong>Eine gute Frage macht den Unterschied, weil sie etwas Seltenes zeigt: dass du dich für sie interessierst und nicht nur fürs Reden.</strong> Und das spürt man, glaub mir, sofort.</p>
+  introduction: `<p>Seien wir zwei Minuten ehrlich. Das Problem ist fast nie, EINE Frage zu finden. Das Problem ist, dass «wie geht's?», «was machst du beruflich?» und «schönes Wochenende gehabt?» genauso klingen wie alle anderen Gespräche, die sie gerade führt.</p>
+<p><strong>Eine gute Frage ändert etwas, weil sie etwas Seltenes zeigt: dass du dich für sie interessierst und nicht nur fürs Reden.</strong> Und das spürt man, glaub mir, sofort.</p>
 <p>Hier sind 90 Fragen, nach Situation sortiert, von der ersten Nachricht bis zum Gespräch von Angesicht zu Angesicht, in dem sich alles entscheidet. Mit einem Tipp, der für alle 90 gilt: Deine Art zuzuhören macht den Unterschied, viel mehr als die Frage selbst.</p>`,
   quickSummary: [
     "90 Fragen nach Situation sortiert, von der ersten Nachricht bis zur Frage, ob sie auf dich steht.",
@@ -42,7 +42,7 @@ const article: BlogArticleData = {
     {
       id: 'per-nachricht-zum-einstieg',
       title: "Per Nachricht oder in einer App, zum Einstieg (1-15)",
-      content: `<p>Das Ziel hier ist nicht Tiefe, sondern leicht zu beantworten und ein bisschen interessanter als die anderen. Mehr nicht.</p>
+      content: `<p>Tiefe braucht es hier nicht. Leicht zu beantworten muss es sein, und ein bisschen interessanter als die anderen. Mehr nicht.</p>
 <ol>
 <li>Deine Woche in zwei Emojis, und darf ich fragen warum?</li>
 <li>Was hörst du gerade rauf und runter, ohne zu schummeln?</li>

@@ -86,7 +86,7 @@ const article: BlogArticleData = {
     {
       id: 'your-relationship',
       title: "Your relationship, seen from the inside (37-48)",
-      content: `<p>Now that we're warmed up, let's talk about you two. These questions take stock without putting anyone on trial, and that's their whole art.</p>
+      content: `<p>Now that we're warmed up, let's talk about you two. These questions take stock without putting anyone on trial.</p>
 <ol start="37">
 <li>What's our finest achievement, the two of us?</li>
 <li>Which moment of our story would you relive exactly as it was?</li>
@@ -124,8 +124,8 @@ const article: BlogArticleData = {
     {
       id: 'make-it-count',
       title: "And now, make it count",
-      content: `<p>If you've played along this far, you've collected surprises, guaranteed. Keep the habit: ten questions per evening, once a month, and your relationship will never fall back into autopilot. It's exactly the same principle as the big evenings of <a href="/en/couple-questions/">couple questions</a>, with the habit added on top.</p>
-<p>There's one fun thing left to do with everything you've just learned. You think you listened well to the other person? Really well?</p>
+      content: `<p>If you've played along this far, you've collected surprises. Keep the habit: ten questions per evening, once a month, and your relationship will never fall back into autopilot. It's the same principle as the big evenings of <a href="/en/couple-questions/">couple questions</a>, with the habit added on top.</p>
+<p>One fun thing left to do with all that: find out who listened best.</p>
 <div><table><thead><tr><th>The territory</th><th>What you find there</th></tr></thead><tbody>
 <tr><td>Your roots</td><td>What built their reflexes, long before you</td></tr>
 <tr><td>Your daily life</td><td>The small things that weigh and go unsaid</td></tr>
@@ -139,7 +139,7 @@ const article: BlogArticleData = {
 <a class="blog-cta-btn" href="/en/who-knows-partner-best-quiz/">Start the challenge</a>
 <p class="blog-cta-note">Free &middot; No sign-up &middot; To play as a pair</p>
 </div>
-<p>And if these question evenings become your favourite ritual, there's enough here for months: the <a href="/en/blog/questions-to-ask-your-boyfriend/">100 questions for him</a> on her side, the <a href="/en/blog/questions-to-ask-your-girlfriend/">questions to ask your girlfriend</a> on his, and the level above when you're ready, but you'll discover that on your own.</p>
+<p>And if these evenings become your ritual, there's enough here for months: the <a href="/en/blog/questions-to-ask-your-boyfriend/">100 questions to ask your boyfriend</a> on one side, the <a href="/en/blog/questions-to-ask-your-girlfriend/">questions to ask your girlfriend</a> on the other.</p>
 <a href="/en/blog/intimate-questions-for-couples/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">65 intimate questions to ask your partner, from the gentlest to the boldest</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

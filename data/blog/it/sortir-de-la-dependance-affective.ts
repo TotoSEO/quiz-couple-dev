@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "«Lavora su te stessa», «impara ad amarti»... Grazie, ma concretamente, cosa si fa lunedì mattina? Ecco il piano, esercizio per esercizio.",
   introduction: `<p>Se hai già cercato come uscire dalla dipendenza affettiva, conosci la canzone: «riprendi fiducia in te», «rimetti al centro i tuoi bisogni», «impara ad amarti». Consigli veri, senza dubbio. Ma perfettamente inutilizzabili un martedì sera alle undici, quando fissi il telefono aspettando la sua risposta.</p>
-<p><strong>Dalla dipendenza affettiva si esce con dei gesti, piccoli, precisi e ripetuti, non con i buoni propositi.</strong> Esattamente come si riabilita un ginocchio dopo un infortunio: nessuno ti dice «ricomincia a camminare», ti danno degli esercizi, in un ordine, con una progressione.</p>
+<p><strong>Dalla dipendenza affettiva si esce con dei gesti, piccoli, precisi e ripetuti, non con i buoni propositi.</strong> Un po' come si riabilita un ginocchio dopo un infortunio: nessuno ti dice «ricomincia a camminare», ti danno degli esercizi, in un ordine, con una progressione.</p>
 <p>È quello che faremo qui. Tre fasi, dodici esercizi, dal più urgente al più profondo. Non devi fare tutto alla perfezione, devi solo cominciare dal primo. E prima di questo, due minuti per capire contro cosa stai lottando, perché cambia il modo di fare gli esercizi.</p>`,
   quickSummary: [
     "La dipendenza affettiva è un riflesso di regolazione: usi l'altro per calmare il tuo stato interno.",
@@ -80,7 +80,7 @@ const article: BlogArticleData = {
         {
           id: 'trappola-1-la-ricaduta-annulla-tutto',
           title: "Trappola n°1: credere che la ricaduta annulli tutto",
-          content: `<p>Terrai dieci giorni, poi una sera d'angoscia spazzerà via i tuoi buoni propositi, e allora? La ricaduta fa parte dell'apprendimento, esattamente come si ricade imparando ad andare in bici. Ciò che conta è la tendenza su tre mesi, non la serata di ieri.</p>`,
+          content: `<p>Terrai dieci giorni, poi una sera d'angoscia spazzerà via i tuoi buoni propositi, e allora? La ricaduta fa parte dell'apprendimento, come si ricade imparando ad andare in bici. Ciò che conta è la tendenza su tre mesi, non la serata di ieri.</p>`,
         },
         {
           id: 'trappola-2-cambiare-partner',
