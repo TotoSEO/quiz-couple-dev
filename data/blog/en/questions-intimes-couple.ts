@@ -12,14 +12,14 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "There are the conversations you have every day... and the ones you never dare start. Guess which ones bring you closest.",
   introduction: `<p>You tell each other everything, well, almost. Work, friends, plans, what you're eating tonight. But there's one territory people talk about far less easily, even after years: what the other person actually feels, what they don't dare ask for, what they miss, what they want. In short, the intimate, the real thing.</p>
-<p><strong>And that's a shame, because that is exactly where a couple's closeness is decided.</strong> Not in grand declarations! In those conversations that are a little barer than the rest, the ones you start in a low voice, on an evening when you feel good.</p>
-<p>Here are 65 intimate questions, deliberately graded: we start very gently, on the emotional side, and the temperature rises step by step. Stop wherever you want, pick whatever sounds like you. The only real instruction manual is the right moment, and that's exactly where we begin.</p>`,
+<p><strong>And that's a shame, because that is where a couple's closeness is decided.</strong> Not in grand declarations! In those conversations that are a little barer than the rest, the ones you start in a low voice, on an evening when you feel good.</p>
+<p>Here are 65 intimate questions, deliberately graded: we start very gently, on the emotional side, and the temperature rises step by step. Stop wherever you want, pick whatever sounds like you. The only real instruction manual is the right moment, and that's where we begin.</p>`,
   quickSummary: [
     "65 graded intimate questions: emotions first, closeness next, desire last.",
     "The golden rule: intimacy is offered, never imposed. An «I don't know» is an answer.",
     "The right setting does everything: a quiet evening, zero screens, zero pressure.",
     "Answer every question you ask, otherwise it's not a conversation, it's a survey.",
-    "And when the conversation turns into a game, there are formats built for exactly that.",
+    "And when the conversation turns into a game, there are formats built for it.",
   ],
   sections: [
     {
@@ -147,8 +147,8 @@ const article: BlogArticleData = {
       id: 'turn-it-into-a-game',
       title: "What if you turned it into a game?",
       content: `<p>You may have felt it while reading: past a certain point, these questions are asking to become a game for two. And it's often easier to get started when there are rules, taking turns, a frame that gives permission.</p>
-<p>For playful evenings, the <a href="/en/spicy-couple-quiz/">spicy couple quiz</a> takes exactly this rise in temperature, question after question, with a guess-and-reveal format that throws sparks. And if you enjoy the little thrill of a confession, the questions you don't quite dare ask have their official playground: the <a href="/en/embarrassing-couple-quiz/">embarrassing quiz</a>, reserved for couples who don't mind blushing a bit!</p>
-<p>One last thing, and it counts. If while reading this list you thought «we'd never dare», that might be the best reason to try, starting with the first fifteen. Intimacy builds exactly like conversation: gently, regularly, and together. The <a href="/en/blog/questions-to-ask-your-boyfriend/">questions to ask your boyfriend</a> in everyday mode do that warm-up work very well, by the way. These ones take over when you're ready.</p>
+<p>For playful evenings, the <a href="/en/spicy-couple-quiz/">spicy couple quiz</a> takes this same rise in temperature, question after question, with a guess-and-reveal format that throws sparks. And if you enjoy the little thrill of a confession, the questions you don't quite dare ask have their official playground: the <a href="/en/embarrassing-couple-quiz/">embarrassing quiz</a>, reserved for couples who don't mind blushing a bit!</p>
+<p>One last thing, and it counts. If while reading this list you thought «we'd never dare», that might be the best reason to try, starting with the first fifteen. Intimacy builds like conversation: gently, regularly, and together. The <a href="/en/blog/questions-to-ask-your-boyfriend/">questions to ask your boyfriend</a> in everyday mode do that warm-up work very well, by the way. These ones take over when you're ready.</p>
 <a href="/en/couple-questions/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Read also</span><span class="blog-read-also-title">120 questions for couples to ask each other, sorted by theme</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],

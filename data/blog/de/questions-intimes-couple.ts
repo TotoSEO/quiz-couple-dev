@@ -12,14 +12,14 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "Es gibt die Gespräche, die man jeden Tag führt... und die, die man sich nie zu beginnen traut. Rate, welche am meisten näher bringen.",
   introduction: `<p>Ihr erzählt euch alles, na ja, fast. Die Arbeit, die Freunde, die Pläne, was es heute Abend gibt. Aber es gibt ein Gebiet, über das man deutlich schwerer spricht, selbst nach Jahren: was der andere wirklich fühlt, was er sich nicht zu fragen traut, was ihm fehlt, worauf er Lust hat. Kurz: das Intime, das echte.</p>
-<p><strong>Und das ist schade, denn genau dort entscheidet sich die Vertrautheit eines Paares.</strong> Nicht in den großen Erklärungen! In diesen Gesprächen, die etwas nackter sind als die anderen, die man leise beginnt, an einem Abend, an dem man sich wohlfühlt.</p>
-<p>Hier sind 65 intime Fragen, bewusst gestaffelt: Wir beginnen sanft, bei den Gefühlen, und steigern die Temperatur Schritt für Schritt. Hör auf, wo ihr wollt, nimm mit, was zu euch passt. Die einzige echte Gebrauchsanweisung ist der richtige Moment, und genau damit fangen wir an.</p>`,
+<p><strong>Und das ist schade, denn dort entscheidet sich die Vertrautheit einesPaares.</strong> Nicht in den großen Erklärungen! In diesen Gesprächen, die etwas nackter sind als die anderen, die man leise beginnt, an einem Abend, an dem man sich wohlfühlt.</p>
+<p>Hier sind 65 intime Fragen, bewusst gestaffelt: Wir beginnen sanft, bei den Gefühlen, und steigern die Temperatur Schritt für Schritt. Hör auf, wo ihr wollt, nimm mit, was zu euch passt. Die einzige echte Gebrauchsanweisung ist der richtige Moment, und damit fangen wir an.</p>`,
   quickSummary: [
     "65 gestaffelte intime Fragen: erst Gefühle, dann Vertrautheit, zuletzt Begehren.",
     "Die goldene Regel: Intimität wird angeboten, nie aufgezwungen. Ein «weiß nicht» ist eine Antwort.",
     "Der richtige Rahmen macht alles: ein ruhiger Abend, null Bildschirme, null Druck.",
     "Beantworte jede Frage, die du stellst, sonst ist es kein Gespräch mehr, sondern eine Umfrage.",
-    "Und wenn das Gespräch zum Spiel wird, gibt es Formate, die genau dafür gemacht sind.",
+    "Und wenn das Gespräch zum Spiel wird, gibt es Formate, die dafür gemacht sind.",
   ],
   sections: [
     {
@@ -147,8 +147,8 @@ const article: BlogArticleData = {
       id: 'daraus-ein-spiel-machen',
       title: "Und wenn ihr ein Spiel daraus macht?",
       content: `<p>Vielleicht hast du es beim Lesen gespürt: Ab einem bestimmten Punkt wollen diese Fragen zu einem Spiel zu zweit werden. Es ist ohnehin oft leichter loszulegen, wenn es Regeln gibt, Züge, einen Rahmen, der erlaubt.</p>
-<p>Für verspielte Abende greift das <a href="/de/pikantes-paar-quiz/">pikante Paar-Quiz</a> genau diesen Temperaturanstieg auf, Frage für Frage, mit einem Raten-und-Aufdecken-Format, das Funken schlägt. Und wenn ihr den kleinen Nervenkitzel des Geständnisses mögt, haben die Fragen, die man sich kaum zu stellen traut, ihren offiziellen Spielplatz: das <a href="/de/peinliches-paar-quiz/">peinliche Quiz</a>, reserviert für Paare, die zu ein bisschen Erröten stehen!</p>
-<p>Eine letzte Sache, und sie zählt. Wenn du beim Lesen dieser Liste gedacht hast «das würden wir uns nie trauen», ist das vielleicht der beste Grund, es zu versuchen, angefangen bei den ersten fünfzehn. Intimität trainiert man genau wie ein Gespräch: sanft, regelmäßig und zu zweit. Die <a href="/de/blog/fragen-an-deinen-freund/">Fragen an deinen Freund</a> in der Alltagsversion machen diese Aufwärmarbeit übrigens sehr gut. Diese hier übernehmen, wenn ihr bereit seid.</p>
+<p>Für verspielte Abende greift das <a href="/de/pikantes-paar-quiz/">pikante Paar-Quiz</a> denselben Temperaturanstieg auf, Frage für Frage, mit einem Raten-und-Aufdecken-Format, das Funken schlägt. Und wenn ihr den kleinen Nervenkitzel des Geständnisses mögt, haben die Fragen, die man sich kaum zu stellen traut, ihren offiziellen Spielplatz: das <a href="/de/peinliches-paar-quiz/">peinliche Quiz</a>, reserviert für Paare, die zu ein bisschen Erröten stehen!</p>
+<p>Eine letzte Sache, und sie zählt. Wenn du beim Lesen dieser Liste gedacht hast «das würden wir uns nie trauen», ist das vielleicht der beste Grund, es zu versuchen, angefangen bei den ersten fünfzehn. Intimität trainiert man wie ein Gespräch: sanft, regelmäßig und zu zweit. Die <a href="/de/blog/fragen-an-deinen-freund/">Fragen an deinen Freund</a> in der Alltagsversion machen diese Aufwärmarbeit übrigens sehr gut. Diese hier übernehmen, wenn ihr bereit seid.</p>
 <a href="/de/fragen-fuer-paare/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Auch lesen</span><span class="blog-read-also-title">120 Fragen, die sich Paare stellen sollten, nach Themen sortiert</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
