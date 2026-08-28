@@ -130,7 +130,7 @@ const article: BlogArticleData = {
 <li>Welches Kompliment von mir hast du nie vergessen?</li>
 <li>Jetzt sofort: Was würde dir Freude machen?</li>
 </ol>
-<p>Dir wird auffallen, dass diese Reihe Türen öffnet. Wenn ihr im Vertrauen weitergehen wollt, übernehmen die <a href="/de/blog/intime-fragen-fuer-paare/">intimen Fragen für Paare</a> genau an dieser Stelle, mit dem Temperaturanstieg, der dazugehört.</p>`,
+<p>Dir wird auffallen, dass diese Reihe Türen öffnet. Wenn ihr im Vertrauen weitergehen wollt, übernehmen die <a href="/de/blog/intime-fragen-fuer-paare/">intimen Fragen für Paare</a> an dieser Stelle, mit dem Temperaturanstieg, der dazugehört.</p>`,
     },
     {
       id: 'alltag-und-zukunft',
@@ -149,7 +149,7 @@ const article: BlogArticleData = {
 <tr><td>Über euch beide</td><td>Eure Geschichte von ihrer Seite aus gesehen</td></tr>
 <tr><td>Lustig und leicht</td><td>Leichtigkeit, und oft eine Tür zum Rest</td></tr>
 <tr><td>Etwas tiefer</td><td>Worüber ihr mangels Gelegenheit nie sprecht</td></tr>
-<tr><td>Liebe und Vertrautheit</td><td>Was ihr genau das Gefühl gibt, geliebt zu werden</td></tr>
+<tr><td>Liebe und Vertrautheit</td><td>Was ihr ganz konkret das Gefühl gibt, geliebt zu werden</td></tr>
 <tr><td>Alltag und Zukunft</td><td>Die Themen, die man aufschiebt, bis sie Ärger machen</td></tr>
 </tbody></table></div>
 <div class="blog-cta">

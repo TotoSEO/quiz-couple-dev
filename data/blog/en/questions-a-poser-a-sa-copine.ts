@@ -130,7 +130,7 @@ const article: BlogArticleData = {
 <li>What's the compliment I gave you that you've never forgotten?</li>
 <li>Right now, this second: what would make you happy?</li>
 </ol>
-<p>You'll notice this set opens doors. If you feel like going further into confidences, the <a href="/en/blog/intimate-questions-for-couples/">intimate questions for couples</a> take over exactly there, with the rise in temperature that goes with it.</p>`,
+<p>You'll notice this set opens doors. If you feel like going further into confidences, the <a href="/en/blog/intimate-questions-for-couples/">intimate questions for couples</a> take over from there, with the rise in temperature that goes with it.</p>`,
     },
     {
       id: 'daily-life-and-future',

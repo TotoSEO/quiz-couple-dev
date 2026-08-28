@@ -11,7 +11,7 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-03T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Tóxica», la palabra está en todas partes hasta el punto de no decir nada. Y sin embargo la relación tóxica de verdad tiene señales precisas... y una pregunta central: ¿tiene arreglo?",
-  introduction: `<p>«Relación tóxica»... La palabra está tan presente que sirve para todo: una discusión un poco fuerte, un ex rencoroso, un desacuerdo sobre las vacaciones, ¡hala, tóxica! Resultado: cuando te haces DE VERDAD la pregunta sobre tu propia relación, ya no sabes qué pensar. ¿Es grave? ¿Es normal? ¿Soy yo?</p>
+  introduction: `<p>«Relación tóxica». La palabra está tan presente que sirve para todo: una discusión un poco fuerte, un ex rencoroso, un desacuerdo sobre las vacaciones, ¡hala, tóxica! Resultado: cuando te haces DE VERDAD la pregunta sobre tu propia relación, ya no sabes qué pensar. ¿Es grave? ¿Es normal? ¿Soy yo?</p>
 <p>Así que pongamos el criterio de verdad, el que lo ordena todo: <strong>una relación es tóxica por lo que te hace, no por lo que contiene.</strong> Discusiones las tienen todas las parejas. Diferencias, épocas grises, palabras que se pasan de la raya: igual. La pregunta no está ahí. La pregunta es: ¿en qué estado te deja esta relación, semana tras semana?</p>
 <p>Vamos a verlo con calma, hasta llegar a la pregunta que más importa: ¿tiene arreglo o no?</p>`,
   quickSummary: [

@@ -130,7 +130,7 @@ const article: BlogArticleData = {
 <li>¿Cuál es el piropo que te hice y que nunca has olvidado?</li>
 <li>Ahora mismo: ¿qué te haría ilusión?</li>
 </ol>
-<p>Verás que esta serie abre puertas. Si os apetece ir más lejos en la confidencia, las <a href="/es/blog/preguntas-intimas-pareja/">preguntas íntimas para hacerse en pareja</a> toman exactamente el relevo, con la subida de temperatura que las acompaña.</p>`,
+<p>Verás que esta serie abre puertas. Si os apetece ir más lejos en la confidencia, las <a href="/es/blog/preguntas-intimas-pareja/">preguntas íntimas para hacerse en pareja</a> toman el relevo desde ahí, con la subida de temperatura quelas acompaña.</p>`,
     },
     {
       id: 'cotidiano-y-futuro',
@@ -149,7 +149,7 @@ const article: BlogArticleData = {
 <tr><td>Sobre vosotros dos</td><td>Vuestra historia vista desde su lado</td></tr>
 <tr><td>Divertidas y ligeras</td><td>Ligereza, y a menudo una puerta hacia el resto</td></tr>
 <tr><td>Un poco profundas</td><td>Aquello de lo que nunca habláis por falta de ocasión</td></tr>
-<tr><td>Amor y complicidad</td><td>Lo que la hace sentirse querida, exactamente</td></tr>
+<tr><td>Amor y complicidad</td><td>Lo que la hace sentirse querida, punto por punto</td></tr>
 <tr><td>Cotidiano y futuro</td><td>Los temas que se aplazan hasta que enfadan</td></tr>
 </tbody></table></div>
 <div class="blog-cta">

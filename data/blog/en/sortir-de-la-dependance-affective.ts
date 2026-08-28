@@ -12,7 +12,7 @@ const article: BlogArticleData = {
   author: AUTHORS['thomas'],
   excerpt: "«Work on yourself», «learn to love yourself»... Thanks, but concretely, what do you do on Monday morning? Here's the plan, exercise by exercise.",
   introduction: `<p>If you've ever searched for how to get out of emotional dependency, you know the song: «rebuild your confidence», «refocus on your needs», «learn to love yourself». True advice, no doubt. But perfectly unusable on a Tuesday night at 11pm, when you're staring at your phone waiting for his reply.</p>
-<p><strong>You leave emotional dependency behind with actions, small, precise and repeated, not with resolutions.</strong> Exactly like rehabbing a knee after an injury, in fact: nobody tells you «walk again», they give you exercises, in an order, with a progression.</p>
+<p><strong>You leave emotional dependency behind with actions, small, precise and repeated, not with resolutions.</strong> Much like rehabbing a knee after an injury, in fact: nobody tells you «walk again», they give you exercises, in an order, with a progression.</p>
 <p>That's what we're going to do here. Three phases, twelve exercises, from the most urgent to the deepest. You don't need to do everything perfectly, you just need to start with the first one. And before that, two minutes to understand what you're up against, because it changes how you do the exercises.</p>`,
   quickSummary: [
     "Emotional dependency is a regulation reflex: you use the other person to calm your inner state.",
@@ -80,7 +80,7 @@ const article: BlogArticleData = {
         {
           id: 'trap-1-believing-relapse-cancels',
           title: "Trap 1: believing that a relapse cancels everything",
-          content: `<p>You'll hold out for ten days, then one anxious evening will sweep away your good resolutions, and so what? Relapse is part of the learning, exactly like falling off while learning to ride a bike. What counts is the trend over three months, not last night.</p>`,
+          content: `<p>You'll hold out for ten days, then one anxious evening will sweep away your good resolutions, and so what? Relapse is part of the learning, the way you fall off while learning to ride a bike. What counts is the trend over three months, not last night.</p>`,
         },
         {
           id: 'trap-2-changing-partner',

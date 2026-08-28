@@ -11,7 +11,7 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-03T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "« Toxique », le mot est partout, au point de ne plus rien dire. Pourtant, la vraie relation toxique a des signes précis... et une question centrale : est-ce que ça se répare ?",
-  introduction: `<p>« Relation toxique »... Le mot est tellement partout qu'il sert à tout : une dispute un peu forte, un ex rancunier, un désaccord sur les vacances, hop, toxique ! Résultat, quand on se pose VRAIMENT la question pour son propre couple, on ne sait plus quoi penser. Est-ce que c'est grave ? Est-ce que c'est normal ? Est-ce que c'est moi ?</p>
+  introduction: `<p>« Relation toxique ». Le mot est tellement partout qu'il sert à tout : une dispute un peu forte, un ex rancunier, un désaccord sur les vacances, hop, toxique ! Résultat, quand on se pose VRAIMENT la question pour son propre couple, on ne sait plus quoi penser. Est-ce que c'est grave ? Est-ce que c'est normal ? Est-ce que c'est moi ?</p>
 <p>Alors posons le vrai critère, celui qui remet tout en ordre : <strong>une relation est toxique par ce qu'elle te fait, pas par ce qu'elle contient.</strong> Des disputes, tous les couples en ont. Des différences, des périodes grises, des mots qui dépassent : pareil. La question n'est pas là. La question, c'est : dans quel état cette relation te met-elle, semaine après semaine ?</p>
 <p>On va voir ça posément, jusqu'à la question qui compte le plus : est-ce que ça se répare, ou pas ?</p>`,
   quickSummary: [
@@ -25,15 +25,15 @@ const article: BlogArticleData = {
     {
       id: 'les-7-signes',
       title: "Les 7 signes d'une relation toxique",
-      content: `<p>Aucun de ces signes ne se juge sur un épisode isolé, on l'a dit. Regarde la tendance sur plusieurs mois... et sois honnête avec toi-même, c'est le seul prérequis.</p>
+      content: `<p>Aucun de ces signes ne se juge sur un épisode isolé, on l'a dit. Regarde la tendance sur plusieurs mois, et sois honnête avec toi-même, c'est le seul prérequis.</p>
 <ol>
 <li><strong>Tu vas moins bien depuis cette relation :</strong> Le signe le plus simple, et le plus ignoré. Sommeil, humeur, énergie, confiance : fais le comparatif avant/maintenant. Une relation peut traverser des orages ; elle ne devrait pas dégrader ta santé de fond.</li>
-<li><strong>Les conflits tournent en boucle, sans jamais rien régler :</strong> La même dispute revient, avec les mêmes phrases, les mêmes positions... et aucune n'aboutit à un changement. Se disputer n'est pas un signe de toxicité. Se disputer pour rien changer, si.</li>
+<li><strong>Les conflits tournent en boucle, sans jamais rien régler :</strong> La même dispute revient, avec les mêmes phrases, les mêmes positions, et aucune n'aboutit à un changement. Se disputer n'est pas un signe de toxicité. Se disputer pour rien changer, si.</li>
 <li><strong>Tu marches sur des œufs :</strong> Tu calcules tes mots, tu choisis « le bon moment », tu renonces à des sujets entiers pour éviter la réaction d'en face. Quand la prudence devient ton mode de communication par défaut, quelque chose ne va vraiment pas.</li>
 <li><strong>Le compteur des torts ne tourne que dans un sens :</strong> À la fin de chaque conflit, c'est toi qui t'excuses. Toi qui répares, toi qui fais l'effort. Un couple sain se partage les torts de façon à peu près équitable sur la durée... pas à 90/10.</li>
 <li><strong>Ta vie extérieure a rétréci :</strong> Amis moins vus, famille mise à distance, activités abandonnées. Peu importe le mécanisme, reproches, crises, ou simple épuisement : si la relation a asséché le reste de ta vie, c'est un signal majeur.</li>
-<li><strong>Le chantage affectif fait partie du fonctionnement :</strong> L'amour, l'humeur ou la présence de l'autre sont conditionnés à ton obéissance. « Si tu m'aimais, tu... », les silences punitifs, les menaces de partir dégainées à chaque désaccord... L'affection est devenue une monnaie.</li>
-<li><strong>Tu ne te reconnais plus :</strong> Plus méfiante, plus éteinte, plus dure, ou simplement plus petite... Quand plusieurs proches te disent « tu as changé » et que ce n'est pas un compliment, écoute-les. Ils voient ce que l'intérieur de la relation t'empêche de voir.</li>
+<li><strong>Le chantage affectif fait partie du fonctionnement :</strong> L'amour, l'humeur ou la présence de l'autre sont conditionnés à ton obéissance. « Si tu m'aimais, tu... », les silences punitifs, les menaces de partir dégainées à chaque désaccord. L'affection est devenue une monnaie.</li>
+<li><strong>Tu ne te reconnais plus :</strong> Plus méfiante, plus éteinte, plus dure, ou simplement plus petite. Quand plusieurs proches te disent « tu as changé » et que ce n'est pas un compliment, écoute-les. Ils voient ce que l'intérieur de la relation t'empêche de voir.</li>
 </ol>
 <div><table><thead><tr><th>Le signe</th><th>Où ça se voit en premier</th></tr></thead><tbody>
 <tr><td>Tu vas moins bien depuis cette relation</td><td>Ton sommeil, ton énergie, ton humeur de fond</td></tr>
@@ -48,7 +48,7 @@ const article: BlogArticleData = {
     {
       id: 'toxique-ou-passe-difficile',
       title: "Relation toxique ou passe difficile ? La vraie différence",
-      content: `<p>C'est LA question qui fait douter tout le monde, parce que les mauvaises périodes existent dans tous les couples : un deuil, un burn-out, une naissance, un déménagement... Des mois entiers peuvent être gris sans que la relation soit toxique. Voilà comment les distinguer.</p>
+      content: `<p>C'est LA question qui fait douter tout le monde, parce que les mauvaises périodes existent dans tous les couples : un deuil, un burn-out, une naissance, un déménagement. Des mois entiers peuvent être gris sans que la relation soit toxique. Voilà comment les distinguer.</p>
 <div class="blog-verdict">
 <div class="blog-verdict-col blog-verdict-col--oui">
 <p class="blog-verdict-titre"><span aria-hidden="true">👍</span> Passe difficile</p>
@@ -81,7 +81,7 @@ const article: BlogArticleData = {
         {
           id: 'la-dynamique-toxique-a-deux',
           title: "La dynamique toxique à deux",
-          content: `<p>Deux personnes pas méchantes du tout peuvent fabriquer, ensemble, un système qui les abîme : l'une poursuit, l'autre fuit ; l'une explose, l'autre se ferme ; les blessures de l'une activent les blessures de l'autre... Personne ne manipule personne, et pourtant tout le monde souffre. La bonne nouvelle : ces dynamiques-là, quand les deux en prennent conscience, se travaillent réellement.</p>`,
+          content: `<p>Deux personnes pas méchantes du tout peuvent fabriquer, ensemble, un système qui les abîme : l'une poursuit, l'autre fuit ; l'une explose, l'autre se ferme ; les blessures de l'une activent les blessures de l'autre. Personne ne manipule personne, et pourtant tout le monde souffre. La bonne nouvelle : ces dynamiques-là, quand les deux en prennent conscience, se travaillent réellement.</p>`,
         },
         {
           id: 'l-emprise-d-un-seul',
@@ -97,9 +97,9 @@ const article: BlogArticleData = {
     {
       id: 'est-ce-que-ca-se-repare',
       title: "Est-ce que ça se répare ? Et comment ?",
-      content: `<p>Pour la dynamique toxique à deux, la réponse est oui, à trois conditions, pas une de moins : que les DEUX reconnaissent le problème, sans se renvoyer la facture entière ; que les DEUX changent des comportements concrets, pas juste des intentions ; et qu'un cadre existe, un tiers, une thérapie de couple, des règles écrites, parce que les habitudes toxiques ne se démontent pas à main nue. Si ces conditions te semblent réunies chez vous, alors <a href="/blog/sauver-son-couple/">sauver son couple</a> devient un projet réaliste... à mener sérieusement, étape par étape.</p>
+      content: `<p>Pour la dynamique toxique à deux, la réponse est oui, à trois conditions, pas une de moins : que les DEUX reconnaissent le problème, sans se renvoyer la facture entière ; que les DEUX changent des comportements concrets, pas juste des intentions ; et qu'un cadre existe, un tiers, une thérapie de couple, des règles écrites, parce que les habitudes toxiques ne se démontent pas à main nue. Si ces conditions te semblent réunies chez vous, alors <a href="/blog/sauver-son-couple/">sauver son couple</a> devient un projet réaliste, à mener sérieusement, étape par étape.</p>
 <p>Pour l'emprise d'un seul... on ne va pas se mentir : la réparation demanderait que la personne qui bénéficie du système accepte de le démonter. Ça n'arrive presque jamais, et sûrement pas sous ultimatum amoureux. Dans ce cas, le travail n'est plus « comment réparer la relation », mais « comment me protéger, puis sortir ». C'est un autre chantier, et il commence par arrêter de douter de ce que tu vis.</p>
-<p>Dans les deux cas, une étape s'impose avant toutes les autres : objectiver. Sortir du brouillard des impressions, mettre les faits à plat...</p>
+<p>Dans les deux cas, une étape s'impose avant toutes les autres : objectiver. Sortir du brouillard des impressions, mettre les faits à plat.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Ta relation, elle en est où, exactement ?</p>
 <p class="blog-cta-texte">Une série de questions passe ta relation au crible des situations concrètes de cet article : conflits, équilibre, liberté, état intérieur. Le résultat te situe posément, du couple qui traverse une passe au couple qui abîme.</p>

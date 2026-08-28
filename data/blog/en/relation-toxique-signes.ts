@@ -11,7 +11,7 @@ const article: BlogArticleData = {
   publishedAt: '2026-10-03T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "«Toxic», the word is everywhere, to the point of meaning nothing. And yet a genuinely toxic relationship has precise signs, and one central question: can it be fixed?",
-  introduction: `<p>«Toxic relationship»... The word is so everywhere that it covers everything: a slightly heated argument, a bitter ex, a disagreement about holidays, boom, toxic! The result is that when you ACTUALLY ask the question about your own relationship, you no longer know what to think. Is it serious? Is it normal? Is it me?</p>
+  introduction: `<p>«Toxic relationship». The word is used so widely now that it covers everything: a slightly heated argument, a bitter ex, a disagreement about holidays, boom, toxic! The result is that when you ACTUALLY ask the question about your own relationship, you no longer know what to think. Is it serious? Is it normal? Is it me?</p>
 <p>So let's set out the real criterion, the one that puts everything back in order: <strong>a relationship is toxic because of what it does to you, not because of what it contains.</strong> Every couple has arguments. Differences, grey periods, words that go too far: same. That isn't the question. The question is: what state does this relationship put you in, week after week?</p>
 <p>We'll look at it calmly, all the way to the question that matters most: can it be fixed, or not?</p>`,
   quickSummary: [
