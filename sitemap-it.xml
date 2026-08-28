@@ -747,6 +747,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/it/blog/annulla-all-ultimo-momento/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/il-annule-au-dernier-moment/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/he-cancelled-last-minute/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/cancela-en-el-ultimo-momento/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/er-sagt-in-letzter-minute-ab/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/annulla-all-ultimo-momento/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/il-annule-au-dernier-moment/"/>
+    <lastmod>2026-08-28T14:41:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/it/blog/cosa-prova-un-uomo-quando-lo-ignori/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/homme-qu-on-ignore/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/how-men-feel-when-ignored/"/>
