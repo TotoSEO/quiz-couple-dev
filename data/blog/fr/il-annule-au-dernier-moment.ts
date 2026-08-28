@@ -25,7 +25,7 @@ const article: BlogArticleData = {
       id: 'ce-que-ca-veut-dire',
       title: "Ce qu'une annulation de dernière minute veut dire",
       content: `<p>La réponse honnête ne va pas vous plaire : la première fois, ça ne veut presque rien dire. Les gens annulent pour des raisons banales, et la plupart du temps ces raisons sont vraies.</p>
-<p>Voici ce qu'il peut y avoir derrière, du plus fréquent au moins fréquent.</p>
+<p>Dans les faits, il n'y a pas trente-six raisons possibles. De la plus fréquente à la plus rare :</p>
 <ul>
 <li><strong>Un imprévu réel :</strong> un boulot qui déborde, un enfant à garder, une voiture qui ne démarre pas, un rhume attrapé la veille. C'est de loin le cas le plus courant, et personne n'y peut rien.</li>
 <li><strong>La flemme du moment :</strong> il avait dit oui mardi, on est vendredi, il a eu une semaine longue et l'idée de se doucher et de prendre le métro le décourage. Ça ne dit rien sur ce qu'il pense de vous, ça dit juste qu'il est fatigué et pas très courageux.</li>
@@ -33,7 +33,7 @@ const article: BlogArticleData = {
 <li><strong>Il a autre chose ce soir-là :</strong> une meilleure proposition, un plan avec ses potes, quelqu'un d'autre. Là, l'annulation est un choix, même s'il ne l'assume pas comme ça.</li>
 <li><strong>Il n'avait pas prévu de venir :</strong> le rendez-vous existait pour ne pas dire non, et il a attendu le dernier moment pour ne pas avoir la conversation. C'est le cas le plus rare, et c'est aussi celui qui se voit le plus vite après.</li>
 </ul>
-<p>Le problème, c'est que ces cinq raisons donnent à peu près le même message. « Désolé, gros imprévu, je peux pas. » Vous ne pouvez pas les distinguer en lisant le texte, et c'est normal, parce que l'information n'est pas dans le message. Elle est dans ce qu'il fait juste après, et c'est ce qu'on va regarder maintenant.</p>`,
+<p>Le problème, c'est que ces cinq raisons donnent à peu près le même message. « Désolé, gros imprévu, je peux pas. » Vous ne pouvez pas les distinguer en lisant le texte, tout simplement parce que l'information n'est pas dedans. Elle est dans ce qu'il fait juste après, et c'est ce qu'on va regarder maintenant.</p>`,
     },
     {
       id: 'le-signal',
@@ -54,11 +54,11 @@ const article: BlogArticleData = {
     },
     {
       id: 'ce-que-dit-la-recherche',
-      title: "Pourquoi c'est la deuxième annulation qui compte",
-      content: `<p>Il y a une raison simple à ça, et elle est connue depuis longtemps.</p>
+      title: "Pourquoi la deuxième annulation pèse plus lourd",
+      content: `<p>Ça s'explique, et pas depuis hier.</p>
 <p>En 1985, trois chercheurs, John Rempel, John Holmes et Mark Zanna, ont publié un travail sur la confiance dans le couple, dans le <em>Journal of Personality and Social Psychology</em>. Il est devenu un classique. Ils y expliquent que la confiance se construit en trois étapes, et toujours dans le même ordre.</p>
 <p>La première, ils l'appellent la prévisibilité. Elle ne repose que sur une chose : ce que vous avez déjà vu la personne faire, plusieurs fois. La deuxième porte sur ce qu'elle est, et plus seulement sur ce qu'elle fait. La troisième, c'est le pari que vous faites sur ses intentions, sans preuve.</p>
-<p><strong>La première étape a donc besoin de répétitions.</strong> Une annulation toute seule ne vous apprend rien. C'est un fait isolé, et un fait isolé ne fait pas une habitude. La deuxième annulation vous apprend quelque chose, et c'est pour ça qu'elle pèse beaucoup plus lourd que la première. Ce n'est pas de la susceptibilité de votre part. C'est le moment où vous avez enfin de quoi vous faire une idée.</p>
+<p><strong>La première étape a donc besoin de répétitions.</strong> Une annulation toute seule ne vous apprend rien. C'est un fait isolé, et un fait isolé ne fait pas une habitude. La deuxième annulation vous apprend quelque chose, et c'est pour ça qu'elle pèse beaucoup plus lourd que la première. Rien à voir avec de la susceptibilité de votre part : vous avez enfin de quoi vous faire une idée, c'est tout.</p>
 <p>L'autre chose qui se joue ce soir-là, c'est ce que vous allez faire de cette annulation dans votre tête. En 1990, Thomas Bradbury et Frank Fincham ont relu des dizaines d'études sur la façon dont les gens en couple expliquent le comportement de l'autre. C'était dans le <em>Psychological Bulletin</em>, et le résultat est net.</p>
 <p>Les personnes malheureuses dans leur couple expliquent toujours les gestes négatifs de leur partenaire de la même manière. Ça vient de lui (« il est comme ça »), ça ne changera pas (« il sera toujours comme ça ») et ça déteint sur tout (« de toute façon rien ne va »). Devant exactement le même geste, les personnes heureuses cherchent d'abord du côté des circonstances.</p>
 <p>Le plus intéressant vient après. Les études qui suivent les mêmes couples pendant des années laissent penser que ces explications ne font pas que refléter l'état du couple : elles pèsent dessus. Autrement dit, l'histoire que vous vous racontez ce soir peut changer ce qui va se passer après.</p>
@@ -67,7 +67,7 @@ const article: BlogArticleData = {
     {
       id: 'quoi-repondre',
       title: "Quoi lui répondre dans l'heure qui suit",
-      content: `<p>Il y a trois choses à faire, et elles sont simples.</p>
+      content: `<p>Trois choses à faire, pas une de plus.</p>
 <ol>
 <li>Répondre court.</li>
 <li>Ne pas faire de reproche.</li>
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-recue">Je peux pas ce soir finalement</p>
 <p class="imsg-bulle imsg-envoyee">Ah ok, pas de souci. Bonne soirée&nbsp;!</p>
 </div>
-<p class="imsg-note"><strong>Pourquoi ça marche :</strong> il n'y a pas de point d'interrogation, et c'est volontaire. Quelqu'un qui annule en une ligne sans expliquer ni reproposer vous laisse un blanc, et le premier réflexe est de le remplir en posant une question. Ne le remplissez pas. La conversation s'arrête là où il l'a arrêtée, et ce qu'il fera ensuite vous en dira plus que tout ce que vous pourriez lui demander maintenant.</p>
+<p class="imsg-note"><strong>L'idée :</strong> il n'y a pas de point d'interrogation, et c'est volontaire. Quelqu'un qui annule en une ligne sans expliquer ni reproposer vous laisse un blanc, et le premier réflexe est de le remplir en posant une question. Ne le remplissez pas. La conversation s'arrête là où il l'a arrêtée, et ce qu'il fera ensuite vous en dira plus que tout ce que vous pourriez lui demander maintenant.</p>
 </div>
 <p>Beaucoup de femmes choisissent une autre voie et ne répondent pas du tout, en se disant que ça le fera réagir. <a href="/blog/homme-qu-on-ignore/">Ce que ça provoque chez lui</a> ressemble plus souvent à de la confusion qu'à une prise de conscience, et vous vous retrouvez à deux à attendre un message.</p>`,
     },
@@ -122,9 +122,9 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-envoyee imsg-collee">Hello&nbsp;! Alors, tu t'en es sorti avec ton neveu&nbsp;? 😄</p>
 <p class="imsg-bulle imsg-envoyee">Dis, on se le refait quand ce verre&nbsp;? Moi je peux jeudi ou samedi.</p>
 </div>
-<p class="imsg-note"><strong>Pourquoi ça marche :</strong> vous reprenez un détail de son message, donc ça ne ressemble pas à une demande de comptes, ça ressemble à quelqu'un qui écoute. Puis vous donnez deux jours précis. Un « oui » devient facile à dire, et un « non » devient visible. S'il ne prend ni jeudi ni samedi et ne propose rien d'autre à la place, vous avez votre réponse sans avoir eu à la demander.</p>
+<p class="imsg-note"><strong>Pourquoi ça marche :</strong> vous reprenez un détail de son message, donc ça ne ressemble pas à une demande de comptes, ça ressemble à quelqu'un qui écoute. Puis vous donnez deux jours précis. Un « oui » devient facile à dire, et un « non » devient visible. S'il ne prend ni jeudi ni samedi et ne propose rien d'autre à la place, vous saurez à quoi vous en tenir sans avoir eu à poser la question.</p>
 </div>
-<p>La deuxième annulation est un autre moment, et elle se traite autrement. Ce n'est plus une relance qu'il faut envoyer, c'est une phrase qui vous sort de l'organisation.</p>
+<p>La deuxième annulation est un autre moment, et elle se traite autrement. Là, une relance ne sert plus à grand-chose. Ce qu'il faut envoyer, c'est une phrase qui vous sort de l'organisation.</p>
 <div class="imsg imsg-bon">
 <div class="imsg-tete"><span class="imsg-avatar">L</span><span class="imsg-nom">Lucas</span><span class="imsg-etiquette">S'il annule une deuxième fois</span></div>
 <div class="imsg-fil">
@@ -133,17 +133,17 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-envoyee imsg-collee">Pas de souci.</p>
 <p class="imsg-bulle imsg-envoyee">Écoute, on arrête de fixer des choses pour l'instant, tu me fais signe quand tu as un moment de libre.</p>
 </div>
-<p class="imsg-note"><strong>Pourquoi ça marche :</strong> ce n'est pas une punition et ça ne se dit pas sur un ton froid. Vous arrêtez simplement de porter l'organisation toute seule, ce qui est une réaction saine et pas une bouderie. À partir de là, soit il propose quelque chose dans la semaine et vous saurez qu'il tient à vous voir, soit il ne propose rien et vous saurez aussi. Le mot important est « quand » : vous ne fermez pas la porte, vous arrêtez juste de la tenir ouverte à bout de bras.</p>
+<p class="imsg-note"><strong>Ce que ça change :</strong> ce n'est pas une punition et ça ne se dit pas sur un ton froid. Vous arrêtez simplement de porter l'organisation toute seule, ce qui est une réaction saine et pas une bouderie. À partir de là, soit il propose quelque chose dans la semaine et vous saurez qu'il tient à vous voir, soit il ne propose rien et vous saurez aussi. Le mot important est « quand » : vous ne fermez pas la porte, vous arrêtez juste de la tenir ouverte à bout de bras.</p>
 </div>
 <p>Et si le rendez-vous finit par avoir lieu, il ne restera plus qu'à trouver <a href="/questions-premier-rendez-vous/">de quoi se parler pour cette première fois</a>, en commençant par le plus léger.</p>`,
     },
     {
       id: 'quand-arreter',
       title: "Quand il faut arrêter d'attendre",
-      content: `<p>Il y a un moment où la question n'est plus de savoir quoi répondre. Voici à quoi il ressemble.</p>
-<p><strong>Deux annulations et aucune date reproposée :</strong> le compte est bon. Ce n'est pas la malchance, c'est quelqu'un qui vous garde disponible sans vous voir, et ça peut durer des mois si vous le laissez faire.</p>
+      content: `<p>Arrive un moment où la question n'est plus de savoir quoi répondre. Quatre situations le disent assez clairement.</p>
+<p><strong>Deux annulations et aucune date reproposée :</strong> le compte est bon. La malchance n'a rien à voir là-dedans. Quelqu'un vous garde disponible sans vous voir, et ça peut durer des mois si vous le laissez faire.</p>
 <p><strong>C'est toujours vous qui proposez, qui relancez, qui organisez :</strong> comptez les cinq derniers rendez-vous et regardez qui les a lancés. Quand la réponse est « moi » cinq fois sur cinq, le problème n'est plus l'annulation de vendredi, c'est <a href="/blog/copain-ne-fait-pas-effort/">le déséquilibre qui s'est installé sans que personne le dise</a>.</p>
-<p><strong>Il annule à chaque fois que ça devient un peu sérieux :</strong> un dîner chez lui, un week-end, une soirée avec vos amis. Si les annulations tombent toujours sur les rendez-vous qui engagent, ce n'est pas le hasard, et ça ressemble beaucoup à <a href="/blog/peur-de-l-engagement/">quelqu'un qui recule dès qu'il sent la relation avancer</a>.</p>
+<p><strong>Il annule à chaque fois que ça devient un peu sérieux :</strong> un dîner chez lui, un week-end, une soirée avec vos amis. Si les annulations tombent toujours sur les rendez-vous qui engagent, le hasard a bon dos, et ça ressemble beaucoup à <a href="/blog/peur-de-l-engagement/">quelqu'un qui recule dès qu'il sent la relation avancer</a>.</p>
 <p><strong>Vous passez plus de temps à décrypter qu'à le voir :</strong> c'est le plus fiable des quatre, même si c'est celui qu'on préfère ne pas voir. Une relation qui commence bien ne demande pas tout ce décryptage, tout simplement parce qu'il n'y a pas grand-chose à décrypter.</p>
 <p>Et si vous hésitez encore, posez-vous la question autrement : est-ce qu'il <a href="/test-m-aime-t-il-elle-en-secret/">tient à vous sans oser le montrer</a> ? Chez certains hommes, les annulations cachent exactement ça.</p>
 <a href="/blog/red-flags-homme/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Lire aussi</span><span class="blog-read-also-title">Les 13 red flags chez un homme</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,

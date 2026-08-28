@@ -25,7 +25,7 @@ const article: BlogArticleData = {
       id: 'ce-que-ca-veut-dire',
       title: "Qué significa una cancelación de última hora",
       content: `<p>La respuesta honesta no te va a gustar: la primera vez, casi no significa nada. La gente cancela por motivos corrientes, y la mayoría de las veces esos motivos son ciertos.</p>
-<p>Esto es lo que puede haber detrás, de lo más frecuente a lo menos.</p>
+<p>En realidad no hay tantas posibilidades. De la más frecuente a la más rara:</p>
 <ul>
 <li><strong>Un imprevisto de verdad:</strong> el trabajo que se alarga, un niño que hay que cuidar, un coche que no arranca, un resfriado que le pilló ayer. Es de lejos el caso más común, y ahí no hay nada que hacer.</li>
 <li><strong>La pereza del momento:</strong> dijo que sí el martes, hoy es viernes, ha tenido una semana larga y la idea de ducharse y coger el metro le tira para atrás. Eso no dice nada de lo que piensa de ti, dice que está cansado y que no es muy valiente.</li>
@@ -33,7 +33,7 @@ const article: BlogArticleData = {
 <li><strong>Tiene otra cosa esa noche:</strong> un plan mejor, algo con sus amigos, otra persona. Ahí la cancelación es una elección, aunque él no lo presente así.</li>
 <li><strong>Nunca pensó en venir:</strong> la cita existía para no tener que decir que no, y esperó al último momento para ahorrarse la conversación. Es el caso más raro, y también el que se ve más rápido después.</li>
 </ul>
-<p>El problema es que esos cinco motivos producen más o menos el mismo mensaje. «Lo siento, me ha surgido algo, no puedo.» No puedes distinguirlos leyendo el texto, y es normal, porque la información no está en el mensaje. Está en lo que hace justo después, y eso es lo que vamos a mirar ahora.</p>`,
+<p>El problema es que esos cinco motivos producen más o menos el mismo mensaje. «Lo siento, me ha surgido algo, no puedo.» No puedes distinguirlos leyendo el texto, sencillamente porque la información no está ahí. Está en lo que hace justo después, y eso es lo que vamos a mirar ahora.</p>`,
     },
     {
       id: 'le-signal',
@@ -54,11 +54,11 @@ const article: BlogArticleData = {
     },
     {
       id: 'ce-que-dit-la-recherche',
-      title: "Por qué la que cuenta es la segunda cancelación",
-      content: `<p>Hay una razón sencilla para eso, y se conoce desde hace tiempo.</p>
+      title: "Por qué la segunda cancelación pesa más",
+      content: `<p>Esto tiene explicación, y no es de ayer.</p>
 <p>En 1985, tres investigadores, John Rempel, John Holmes y Mark Zanna, publicaron un trabajo sobre la confianza en la pareja, en el <em>Journal of Personality and Social Psychology</em>. Se ha convertido en un clásico. Ahí explican que la confianza se construye en tres etapas, y siempre en el mismo orden.</p>
 <p>A la primera la llaman previsibilidad. Se apoya en una sola cosa: lo que ya le has visto hacer a esa persona, varias veces. La segunda va sobre quién es, y ya no solo sobre lo que hace. La tercera es la apuesta que haces sobre sus intenciones, sin pruebas.</p>
-<p><strong>Así que la primera etapa necesita repeticiones.</strong> Una cancelación sola no te enseña nada. Es un hecho aislado, y un hecho aislado no hace una costumbre. La segunda cancelación sí te enseña algo, y por eso pesa mucho más que la primera. No es que tú seas susceptible. Es el momento en que por fin tienes con qué hacerte una idea.</p>
+<p><strong>Así que la primera etapa necesita repeticiones.</strong> Una cancelación sola no te enseña nada. Es un hecho aislado, y un hecho aislado no hace una costumbre. La segunda cancelación sí te enseña algo, y por eso pesa mucho más que la primera. Nada que ver con ser susceptible: por fin tienes con qué hacerte una idea, y ya está.</p>
 <p>Lo otro que se juega esa noche es lo que tú vas a hacer con esa cancelación en tu cabeza. En 1990, Thomas Bradbury y Frank Fincham repasaron decenas de estudios sobre la forma en que la gente en pareja explica el comportamiento del otro. Fue en el <em>Psychological Bulletin</em>, y el resultado es claro.</p>
 <p>Las personas infelices en su pareja explican siempre los gestos negativos del otro de la misma manera. Viene de él («es así»), no va a cambiar («siempre será así») y tiñe todo lo demás («total, nada funciona»). Ante exactamente el mismo gesto, las personas felices miran primero las circunstancias.</p>
 <p>Lo más interesante viene después. Los estudios que siguen a las mismas parejas durante años apuntan a que esas explicaciones no solo reflejan el estado de la pareja: pesan sobre ella. Dicho de otra forma, la historia que te cuentas esta noche puede cambiar lo que pase después.</p>
@@ -67,7 +67,7 @@ const article: BlogArticleData = {
     {
       id: 'quoi-repondre',
       title: "Qué contestarle en la hora siguiente",
-      content: `<p>Hay tres cosas que hacer, y son sencillas.</p>
+      content: `<p>Tres cosas que hacer, ni una más.</p>
 <ol>
 <li>Contestar corto.</li>
 <li>No reprochar nada.</li>
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-recue">Al final esta noche no puedo</p>
 <p class="imsg-bulle imsg-envoyee">Ah vale, sin problema. ¡Buena noche!</p>
 </div>
-<p class="imsg-note"><strong>Por qué funciona:</strong> no hay ningún signo de interrogación, y es a propósito. Quien cancela en una línea sin explicar ni volver a proponer te deja un hueco, y el primer impulso es llenarlo preguntando algo. No lo llenes. La conversación se para donde él la ha parado, y lo que haga después te va a decir más que cualquier cosa que puedas preguntarle ahora.</p>
+<p class="imsg-note"><strong>La idea:</strong> no hay ningún signo de interrogación, y es a propósito. Quien cancela en una línea sin explicar ni volver a proponer te deja un hueco, y el primer impulso es llenarlo preguntando algo. No lo llenes. La conversación se para donde él la ha parado, y lo que haga después te va a decir más que cualquier cosa que puedas preguntarle ahora.</p>
 </div>
 <p>Muchas chicas eligen otro camino y directamente no contestan, pensando que así reaccionará. <a href="/es/blog/que-siente-un-hombre-cuando-lo-ignoras/">Lo que eso provoca en él</a> se parece mucho más a la confusión que a una toma de conciencia, y acabáis los dos esperando un mensaje.</p>`,
     },
@@ -122,9 +122,9 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-envoyee imsg-collee">¡Hola! ¿Qué tal, sobreviviste a tu sobrino? 😄</p>
 <p class="imsg-bulle imsg-envoyee">Oye, ¿cuándo nos tomamos esa copa? Yo puedo el jueves o el sábado.</p>
 </div>
-<p class="imsg-note"><strong>Por qué funciona:</strong> retomas un detalle de su mensaje, así que no suena a pedirle cuentas, suena a alguien que escucha. Y luego das dos días concretos. El «sí» se vuelve fácil de decir, y el «no» se vuelve visible. Si no coge ni el jueves ni el sábado y no propone nada a cambio, tienes tu respuesta sin haber tenido que pedirla.</p>
+<p class="imsg-note"><strong>Por qué funciona:</strong> retomas un detalle de su mensaje, así que no suena a pedirle cuentas, suena a alguien que escucha. Y luego das dos días concretos. El «sí» se vuelve fácil de decir, y el «no» se vuelve visible. Si no coge ni el jueves ni el sábado y no propone nada a cambio, sabrás a qué atenerte sin haber tenido que preguntar.</p>
 </div>
-<p>La segunda cancelación es otro momento, y se trata de otra manera. Ahí no hay que enviar un mensaje para retomar, hay que decir una frase que te saque de la organización.</p>
+<p>La segunda cancelación es otro momento, y se trata de otra manera. Ahí un mensaje para retomar ya no sirve de mucho. Lo que toca es una frase que te saque de la organización.</p>
 <div class="imsg imsg-bon">
 <div class="imsg-tete"><span class="imsg-avatar">Á</span><span class="imsg-nom">Álvaro</span><span class="imsg-etiquette">Si cancela una segunda vez</span></div>
 <div class="imsg-fil">
@@ -133,17 +133,17 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-envoyee imsg-collee">Sin problema.</p>
 <p class="imsg-bulle imsg-envoyee">Mira, dejamos de fijar cosas por ahora, ya me dices tú cuando tengas un rato.</p>
 </div>
-<p class="imsg-note"><strong>Por qué funciona:</strong> no es un castigo y no se dice en tono frío. Simplemente dejas de cargar tú sola con la organización, que es una reacción sana y no un enfado. A partir de ahí, o propone algo esa semana y sabrás que le apetece verte, o no propone nada y también lo sabrás. La palabra importante es «cuando»: no cierras la puerta, solo dejas de sostenerla abierta con el brazo estirado.</p>
+<p class="imsg-note"><strong>Lo que cambia:</strong> no es un castigo y no se dice en tono frío. Simplemente dejas de cargar tú sola con la organización, que es una reacción sana y no un enfado. A partir de ahí, o propone algo esa semana y sabrás que le apetece verte, o no propone nada y también lo sabrás. La palabra importante es «cuando»: no cierras la puerta, solo dejas de sostenerla abierta con el brazo estirado.</p>
 </div>
 <p>Y si la cita acaba ocurriendo, solo quedará encontrar <a href="/es/preguntas-primera-cita/">de qué hablar en esa primera vez</a>, empezando por lo más ligero.</p>`,
     },
     {
       id: 'quand-arreter',
       title: "Cuándo hay que dejar de esperar",
-      content: `<p>Hay un momento en que la pregunta ya no es qué contestar. Este es su aspecto.</p>
-<p><strong>Dos cancelaciones y ninguna fecha nueva propuesta:</strong> ya está. No es mala suerte, es alguien que te mantiene disponible sin verte, y eso puede durar meses si le dejas.</p>
+      content: `<p>Llega un momento en que la pregunta ya no es qué contestar. Cuatro situaciones lo dicen bastante claro.</p>
+<p><strong>Dos cancelaciones y ninguna fecha nueva propuesta:</strong> ya está. La mala suerte no tiene nada que ver. Alguien te mantiene disponible sin verte, y eso puede durar meses si le dejas.</p>
 <p><strong>Siempre propones tú, escribes tú, organizas tú:</strong> cuenta las cinco últimas citas y mira quién las arrancó. Cuando la respuesta es «yo» cinco de cinco, el problema ya no es la cancelación del viernes, es <a href="/es/blog/novio-no-hace-esfuerzo/">el desequilibrio que se ha instalado sin que nadie lo diga</a>.</p>
-<p><strong>Cancela cada vez que la cosa se pone un poco seria:</strong> una cena en su casa, un fin de semana, una noche con tus amigos. Si las cancelaciones caen siempre en las citas que comprometen, no es casualidad, y se parece mucho a <a href="/es/blog/miedo-al-compromiso/">alguien que se echa atrás en cuanto siente que la relación avanza</a>.</p>
+<p><strong>Cancela cada vez que la cosa se pone un poco seria:</strong> una cena en su casa, un fin de semana, una noche con tus amigos. Si las cancelaciones caen siempre en las citas que comprometen, la casualidad queda muy bien de excusa, y se parece mucho a <a href="/es/blog/miedo-al-compromiso/">alguien que se echa atrás en cuanto siente que la relación avanza</a>.</p>
 <p><strong>Pasas más tiempo descifrando que viéndolo:</strong> es la más fiable de las cuatro, aunque sea la que preferimos no ver. Una relación que empieza bien no pide todo ese descifrado, sencillamente porque no hay gran cosa que descifrar.</p>
 <p>Y si sigues dudando, hazte la pregunta de otra manera: ¿será que <a href="/es/test-me-quiere-en-secreto/">le importas sin atreverse a demostrarlo</a>? En algunos hombres, las cancelaciones esconden justo eso.</p>
 <a href="/es/blog/red-flags-en-un-hombre/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leer también</span><span class="blog-read-also-title">13 red flags en un hombre</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,

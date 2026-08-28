@@ -25,7 +25,7 @@ const article: BlogArticleData = {
       id: 'ce-que-ca-veut-dire',
       title: "Cosa significa una disdetta all'ultimo momento",
       content: `<p>La risposta onesta non ti farà piacere: la prima volta non significa quasi niente. La gente disdice per motivi banali, e nella maggior parte dei casi quei motivi sono veri.</p>
-<p>Ecco cosa può esserci dietro, dal più frequente al meno frequente.</p>
+<p>In pratica non ci sono tante possibilità. Dalla più frequente alla più rara:</p>
 <ul>
 <li><strong>Un imprevisto vero:</strong> il lavoro che si allunga, un bambino da tenere, la macchina che non parte, un raffreddore preso ieri. È di gran lunga il caso più comune, e non ci può fare niente nessuno.</li>
 <li><strong>La pigrizia del momento:</strong> aveva detto sì martedì, oggi è venerdì, ha avuto una settimana lunga e l'idea di farsi la doccia e prendere la metro lo scoraggia. Questo non dice niente su cosa pensa di te, dice che è stanco e poco coraggioso.</li>
@@ -33,7 +33,7 @@ const article: BlogArticleData = {
 <li><strong>Ha altro quella sera:</strong> una proposta migliore, qualcosa con i suoi amici, un'altra persona. Qui la disdetta è una scelta, anche se lui non la presenta così.</li>
 <li><strong>Non aveva mai pensato di venire:</strong> l'appuntamento esisteva per non dover dire di no, e ha aspettato l'ultimo momento per risparmiarsi la conversazione. È il caso più raro, ed è anche quello che si vede più in fretta dopo.</li>
 </ul>
-<p>Il problema è che questi cinque motivi producono più o meno lo stesso messaggio. «Scusa, mi è capitata una cosa, non ce la faccio.» Non puoi distinguerli leggendo il testo, ed è normale, perché l'informazione non è nel messaggio. È in quello che fa subito dopo, ed è quello che andiamo a guardare adesso.</p>`,
+<p>Il problema è che questi cinque motivi producono più o meno lo stesso messaggio. «Scusa, mi è capitata una cosa, non ce la faccio.» Non puoi distinguerli leggendo il testo, per il semplice fatto che l'informazione non è lì dentro. È in quello che fa subito dopo, ed è quello che andiamo a guardare adesso.</p>`,
     },
     {
       id: 'le-signal',
@@ -54,11 +54,11 @@ const article: BlogArticleData = {
     },
     {
       id: 'ce-que-dit-la-recherche',
-      title: "Perché è la seconda disdetta quella che conta",
-      content: `<p>C'è una ragione semplice, ed è nota da tempo.</p>
+      title: "Perché la seconda disdetta pesa di più",
+      content: `<p>Una spiegazione c'è, e non è di ieri.</p>
 <p>Nel 1985 tre ricercatori, John Rempel, John Holmes e Mark Zanna, hanno pubblicato un lavoro sulla fiducia nella coppia, sul <em>Journal of Personality and Social Psychology</em>. È diventato un classico. Ci spiegano che la fiducia si costruisce in tre tappe, e sempre nello stesso ordine.</p>
 <p>La prima la chiamano prevedibilità. Si appoggia su una cosa sola: quello che hai già visto fare a quella persona, più volte. La seconda riguarda chi è, e non più soltanto cosa fa. La terza è la scommessa che fai sulle sue intenzioni, senza prove.</p>
-<p><strong>La prima tappa ha quindi bisogno di ripetizioni.</strong> Una disdetta da sola non ti insegna niente. È un fatto isolato, e un fatto isolato non fa un'abitudine. La seconda disdetta ti insegna qualcosa, ed è per questo che pesa molto più della prima. Non sei tu che sei suscettibile. È il momento in cui finalmente hai di che farti un'idea.</p>
+<p><strong>La prima tappa ha quindi bisogno di ripetizioni.</strong> Una disdetta da sola non ti insegna niente. È un fatto isolato, e un fatto isolato non fa un'abitudine. La seconda disdetta ti insegna qualcosa, ed è per questo che pesa molto più della prima. Niente a che vedere con la suscettibilità: finalmente hai di che farti un'idea, tutto qui.</p>
 <p>L'altra cosa che si gioca quella sera è quello che tu farai di quella disdetta nella tua testa. Nel 1990 Thomas Bradbury e Frank Fincham hanno riletto decine di studi sul modo in cui le persone in coppia spiegano il comportamento dell'altro. Era sul <em>Psychological Bulletin</em>, e il risultato è netto.</p>
 <p>Le persone infelici nella loro coppia spiegano sempre allo stesso modo i gesti negativi del partner. Viene da lui («è fatto così»), non cambierà («sarà sempre così»), e tinge tutto il resto («tanto non funziona niente»). Davanti esattamente allo stesso gesto, le persone felici guardano prima alle circostanze.</p>
 <p>La parte più interessante viene dopo. Gli studi che seguono le stesse coppie per anni fanno pensare che queste spiegazioni non si limitino a riflettere lo stato della coppia: ci pesano sopra. In altre parole, la storia che ti racconti stasera può cambiare quello che succederà dopo.</p>
@@ -67,7 +67,7 @@ const article: BlogArticleData = {
     {
       id: 'quoi-repondre',
       title: "Cosa rispondergli nell'ora successiva",
-      content: `<p>Ci sono tre cose da fare, e sono semplici.</p>
+      content: `<p>Tre cose da fare, non una di più.</p>
 <ol>
 <li>Rispondere corto.</li>
 <li>Non fare rimproveri.</li>
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-recue">Stasera alla fine non posso</p>
 <p class="imsg-bulle imsg-envoyee">Ah ok, nessun problema. Buona serata!</p>
 </div>
-<p class="imsg-note"><strong>Perché funziona:</strong> non c'è nessun punto interrogativo, ed è voluto. Chi disdice in una riga senza spiegare né riproporre ti lascia un vuoto, e il primo riflesso è riempirlo con una domanda. Non riempirlo. La conversazione si ferma dove l'ha fermata lui, e quello che farà dopo ti dirà più di qualsiasi cosa tu possa chiedergli adesso.</p>
+<p class="imsg-note"><strong>L'idea:</strong> non c'è nessun punto interrogativo, ed è voluto. Chi disdice in una riga senza spiegare né riproporre ti lascia un vuoto, e il primo riflesso è riempirlo con una domanda. Non riempirlo. La conversazione si ferma dove l'ha fermata lui, e quello che farà dopo ti dirà più di qualsiasi cosa tu possa chiedergli adesso.</p>
 </div>
 <p>Molte ragazze scelgono un'altra strada e non rispondono affatto, pensando che così reagirà. <a href="/it/blog/cosa-prova-un-uomo-quando-lo-ignori/">Quello che gli provoca</a> assomiglia molto più alla confusione che a una presa di coscienza, e finite in due ad aspettare un messaggio.</p>`,
     },
@@ -122,9 +122,9 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-envoyee imsg-collee">Ciao! Allora, sei sopravvissuto a tuo nipote? 😄</p>
 <p class="imsg-bulle imsg-envoyee">Senti, quando ce lo facciamo questo aperitivo? Io posso giovedì o sabato.</p>
 </div>
-<p class="imsg-note"><strong>Perché funziona:</strong> riprendi un dettaglio del suo messaggio, quindi non suona come chiedere conto, suona come qualcuno che ascolta. Poi dai due giorni precisi. Un «sì» diventa facile da dire, e un «no» diventa visibile. Se non prende né giovedì né sabato e non propone niente al posto loro, hai la tua risposta senza aver dovuto chiederla.</p>
+<p class="imsg-note"><strong>Perché funziona:</strong> riprendi un dettaglio del suo messaggio, quindi non suona come chiedere conto, suona come qualcuno che ascolta. Poi dai due giorni precisi. Un «sì» diventa facile da dire, e un «no» diventa visibile. Se non prende né giovedì né sabato e non propone niente al posto loro, saprai a che punto sei senza aver dovuto chiedere.</p>
 </div>
-<p>La seconda disdetta è un altro momento, e si tratta in un altro modo. Lì non è un messaggio per riprendere il contatto che serve, è una frase che ti tira fuori dall'organizzazione.</p>
+<p>La seconda disdetta è un altro momento, e si tratta in un altro modo. Lì un messaggio per riprendere il contatto non serve granché. Quello che serve è una frase che ti tira fuori dall'organizzazione.</p>
 <div class="imsg imsg-bon">
 <div class="imsg-tete"><span class="imsg-avatar">M</span><span class="imsg-nom">Matteo</span><span class="imsg-etiquette">Se disdice una seconda volta</span></div>
 <div class="imsg-fil">
@@ -133,17 +133,17 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-envoyee imsg-collee">Nessun problema.</p>
 <p class="imsg-bulle imsg-envoyee">Senti, smettiamo di fissare cose per adesso, fammi un fischio quando hai una serata libera.</p>
 </div>
-<p class="imsg-note"><strong>Perché funziona:</strong> non è una punizione e non si dice con un tono freddo. Smetti semplicemente di portare l'organizzazione da sola, che è una reazione sana e non un broncio. Da lì in poi, o propone qualcosa nella settimana e saprai che tiene a vederti, o non propone niente e saprai anche quello. La parola importante è «quando»: non chiudi la porta, smetti solo di tenerla aperta a braccio teso.</p>
+<p class="imsg-note"><strong>Cosa cambia:</strong> non è una punizione e non si dice con un tono freddo. Smetti semplicemente di portare l'organizzazione da sola, che è una reazione sana e non un broncio. Da lì in poi, o propone qualcosa nella settimana e saprai che tiene a vederti, o non propone niente e saprai anche quello. La parola importante è «quando»: non chiudi la porta, smetti solo di tenerla aperta a braccio teso.</p>
 </div>
 <p>E se l'appuntamento alla fine si fa, resterà solo da trovare <a href="/it/domande-primo-appuntamento/">di cosa parlare per quella prima volta</a>, cominciando dal leggero.</p>`,
     },
     {
       id: 'quand-arreter',
       title: "Quando smettere di aspettare",
-      content: `<p>C'è un momento in cui la domanda non è più cosa rispondere. Ecco com'è fatto.</p>
-<p><strong>Due disdette e nessuna nuova data proposta:</strong> il conto è chiuso. Non è sfortuna, è qualcuno che ti tiene disponibile senza vederti, e può durare mesi se glielo lasci fare.</p>
+      content: `<p>Arriva un momento in cui la domanda non è più cosa rispondere. Quattro situazioni lo dicono abbastanza chiaramente.</p>
+<p><strong>Due disdette e nessuna nuova data proposta:</strong> il conto è chiuso. La sfortuna non c'entra niente. Qualcuno ti tiene disponibile senza vederti, e può durare mesi se glielo lasci fare.</p>
 <p><strong>Sei sempre tu che proponi, che scrivi, che organizzi:</strong> conta gli ultimi cinque appuntamenti e guarda chi li ha fatti partire. Quando la risposta è «io» cinque volte su cinque, il problema non è più la disdetta di venerdì, è <a href="/it/blog/ragazzo-non-si-impegna/">lo squilibrio che si è installato senza che nessuno lo dica</a>.</p>
-<p><strong>Disdice ogni volta che la cosa si fa un po' seria:</strong> una cena da lui, un weekend, una serata con i tuoi amici. Se le disdette cadono sempre sugli appuntamenti che impegnano, non è un caso, e assomiglia molto a <a href="/it/blog/paura-dell-impegno/">qualcuno che indietreggia appena sente la relazione avanzare</a>.</p>
+<p><strong>Disdice ogni volta che la cosa si fa un po' seria:</strong> una cena da lui, un weekend, una serata con i tuoi amici. Se le disdette cadono sempre sugli appuntamenti che impegnano, il caso è una scusa comoda, e assomiglia molto a <a href="/it/blog/paura-dell-impegno/">qualcuno che indietreggia appena sente la relazione avanzare</a>.</p>
 <p><strong>Passi più tempo a decifrare che a vederlo:</strong> è il più affidabile dei quattro, anche se è quello che si preferisce non vedere. Una relazione che comincia bene non chiede tutto questo lavoro di decifrazione, molto semplicemente perché non c'è granché da decifrare.</p>
 <p>E se hai ancora dei dubbi, girati la domanda: può darsi che lui <a href="/it/mi-ama-in-segreto-test/">tenga a te senza osare mostrarlo</a>? In certi uomini, le disdette nascondono proprio questo.</p>
 <a href="/it/blog/red-flag-in-un-uomo/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leggi anche</span><span class="blog-read-also-title">13 red flag in un uomo</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,

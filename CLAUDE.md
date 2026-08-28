@@ -202,6 +202,78 @@ de style (« elle, », « lui, ») disparaît.
 La règle vaut pour tout nouveau contenu et pour toute réécriture, dans les
 cinq langues : on transpose le ton, pas seulement les mots.
 
+### Varier les tournures : la réserve de formulations
+
+Un texte se repère comme écrit par une machine autant à ses tics qu'à ses
+fautes. Toujours ouvrir par le même connecteur, enchaîner des phrases de même
+longueur, conclure chaque paragraphe en reformulant le précédent : c'est ça qui
+sonne faux, avant même le vocabulaire.
+
+D'où cette réserve de formulations, à consulter avant et pendant la rédaction.
+**Ce n'est pas une liste à cocher.** On n'y pioche que lorsqu'une expression
+tombe juste dans la phrase qu'on est en train d'écrire. Reformuler une phrase
+correcte pour réussir à y caser un mot de la liste est pire que de ne pas
+l'utiliser : ça se voit, et ça abîme le texte.
+
+Elle sert surtout à éviter l'automatisme. Si « Il est important de noter que »
+revient dans trois articles, on change, et la liste dit par quoi.
+
+- avantageux, sublime, c'est une manière de, en l'occurrence, par rapport au
+  fait que, dans la plupart des cas, quelque chose de
+- à vrai dire, à première vue, dans les faits, dans le fond, au passage, à ce
+  propos, de ce côté-là, d'un côté comme de l'autre, dans une certaine mesure,
+  à bien y réfléchir, en quelque sorte, pour ainsi dire
+- à défaut de, faute de, quitte à, histoire de, question de, rien que pour, ne
+  serait-ce que, tout simplement, mine de rien, au bout du compte, au final
+- entre autres, de loin, de près, à ce niveau-là, sur ce point-là, de ce point
+  de vue, dans ce cas précis, dans le cas présent, à ce stade, pour le coup,
+  dans la réalité, à l'inverse, à l'opposé, tant qu'à faire
+- autant dire que, il faut dire que, il faut bien reconnaître que, on peut
+  difficilement nier que, force est de constater que, encore faut-il que,
+  reste à savoir si
+- tout dépend de, ça dépend surtout de, selon les cas, selon les situations,
+  suivant les cas, dans bien des cas, la plupart du temps
+- une bonne partie de, une petite partie de, pas mal de, un certain nombre de,
+  une poignée de, une multitude de
+- pas forcément, pas nécessairement, pas toujours, pas vraiment, plus ou moins,
+  plus d'une fois, à plusieurs reprises
+- ce qui est intéressant, c'est que… / le problème, c'est que… / le truc, c'est
+  que… / ce n'est pas forcément évident au premier abord / on pourrait penser
+  que… / à première vue, on aurait tendance à… / en réalité, c'est un peu plus
+  compliqué / ça paraît simple, mais… / c'est là que ça devient intéressant
+- le plus simple reste de…, pour faire simple…, pour prendre un exemple
+  concret…, disons que…, autrement dit…, en clair…, pour le dire autrement…,
+  si on regarde les choses autrement…
+- ça change pas mal de choses, ça peut faire une vraie différence, ça reste
+  quand même…, ce n'est pas rien, ce n'est pas forcément le meilleur choix,
+  ça vaut le coup de…, ça peut valoir le détour, à chacun de voir
+- c'est surtout une question de…, tout est une question de…, il y a quand même
+  un point à garder en tête, il y a un petit détail qui change tout, c'est
+  justement là que…, c'est souvent à ce moment-là que…
+
+Et on évite systématiquement la formulation la plus élégante ou la plus
+académique quand une tournure simple, voire un peu familière, colle mieux au
+ton de la page.
+
+### Varier aussi la construction
+
+Le vocabulaire ne suffit pas. Ce qui trahit une machine, c'est le moule. À
+proscrire :
+
+- les suites de phrases de longueur identique ;
+- les listes de trois éléments qui reviennent à chaque section ;
+- les paragraphes bâtis tous pareil, et les conclusions qui reformulent
+  mécaniquement ce qui précède ;
+- les oppositions en « ce n'est pas X, c'est Y » utilisées en boucle ;
+- les mêmes connecteurs en tête de phrase d'un bout à l'autre.
+
+Une phrase courte a le droit de suivre une phrase longue. Une transition a le
+droit d'être directe. Un paragraphe a le droit de commencer sans connecteur.
+
+Ces deux sections valent pour tous les contenus à venir, pas seulement pour
+ceux du jour, et dans les cinq langues : on transpose l'intention, on ne
+traduit pas la liste mot à mot.
+
 ## Maillage interne : les règles
 
 Les ancres contextuelles et descriptives sont les liens les plus puissants du

@@ -25,7 +25,7 @@ const article: BlogArticleData = {
       id: 'ce-que-ca-veut-dire',
       title: "Was eine Absage in letzter Minute bedeutet",
       content: `<p>Die ehrliche Antwort wird dir nicht gefallen: beim ersten Mal bedeutet sie fast nichts. Leute sagen aus banalen Gründen ab, und meistens stimmen diese Gründe sogar.</p>
-<p>Das kann dahinterstecken, vom Häufigsten zum Seltensten.</p>
+<p>In der Praxis gibt es gar nicht so viele Möglichkeiten. Vom Häufigsten zum Seltensten:</p>
 <ul>
 <li><strong>Etwas ist wirklich dazwischengekommen:</strong> die Arbeit zieht sich, ein Kind muss betreut werden, das Auto springt nicht an, eine Erkältung von gestern. Das ist mit Abstand der häufigste Fall, und dagegen kann niemand etwas.</li>
 <li><strong>Er konnte sich nicht aufraffen:</strong> am Dienstag hat er zugesagt, jetzt ist Freitag, die Woche war lang und der Gedanke an Duschen und Bahnfahren schreckt ihn ab. Das sagt nichts darüber, was er von dir hält, es sagt, dass er müde und nicht besonders mutig ist.</li>
@@ -33,12 +33,12 @@ const article: BlogArticleData = {
 <li><strong>Er hat an dem Abend etwas anderes vor:</strong> ein besseres Angebot, etwas mit seinen Freunden, jemand anderes. Hier ist die Absage eine Entscheidung, auch wenn er sie nicht so darstellt.</li>
 <li><strong>Er hatte nie vor zu kommen:</strong> das Date gab es nur, damit er nicht Nein sagen musste, und er hat bis zum letzten Moment gewartet, um sich das Gespräch zu sparen. Das ist der seltenste Fall, und zugleich der, der sich danach am schnellsten zeigt.</li>
 </ul>
-<p>Das Problem ist, dass alle fünf Gründe ungefähr dieselbe Nachricht erzeugen. «Sorry, mir ist etwas dazwischengekommen, ich schaffe es nicht.» Am Text kannst du sie nicht unterscheiden, und das ist normal, denn die Information steckt nicht in der Nachricht. Sie steckt in dem, was er direkt danach tut, und genau das schauen wir uns jetzt an.</p>`,
+<p>Das Problem ist, dass alle fünf Gründe ungefähr dieselbe Nachricht erzeugen. «Sorry, mir ist etwas dazwischengekommen, ich schaffe es nicht.» Am Text kannst du sie nicht unterscheiden, schlicht und einfach deshalb, weil die Information gar nicht darin steckt. Sie steckt in dem, was er direkt danach tut, und genau das schauen wir uns jetzt an.</p>`,
     },
     {
       id: 'le-signal',
       title: "Das einzige Signal, auf das es ankommt",
-      content: `<p>Schau darauf, was er in den Minuten nach der Absage tut, nicht darauf, was er zur Erklärung erzählt. Eine lange, detaillierte Ausrede beweist nichts, sie beweist, dass es ihm unangenehm ist. Worauf es ankommt: schlägt er von allein etwas Neues vor, mit einem Tag darin.</p>
+      content: `<p>Schau darauf, was er in den Minuten nach der Absage tut, nicht darauf, was er zur Erklärung erzählt. Eine lange, detaillierte Ausrede beweist nichts, sie beweist, dass es ihm unangenehm ist. Entscheidend ist, ob er von allein etwas Neues vorschlägt, mit einem Tag darin.</p>
 <div><table><thead><tr><th>Was er schickt</th><th>Was das heißt</th></tr></thead><tbody>
 <tr><td>Er sagt ab und nennt gleich danach einen konkreten neuen Tag</td><td>Er wollte dich sehen. Die Absage ist nicht das Thema.</td></tr>
 <tr><td>Er sagt ab, entschuldigt sich viel, schlägt nichts vor</td><td>Es ist ihm unangenehm, aber er hat sich nicht entschieden. Genau hinsehen.</td></tr>
@@ -55,10 +55,10 @@ const article: BlogArticleData = {
     {
       id: 'ce-que-dit-la-recherche',
       title: "Warum erst die zweite Absage zählt",
-      content: `<p>Dafür gibt es einen einfachen Grund, und er ist seit Langem bekannt.</p>
+      content: `<p>Das lässt sich erklären, und zwar nicht erst seit gestern.</p>
 <p>1985 haben drei Forscher, John Rempel, John Holmes und Mark Zanna, eine Arbeit über Vertrauen in Paarbeziehungen veröffentlicht, im <em>Journal of Personality and Social Psychology</em>. Sie ist ein Klassiker geworden. Darin erklären sie, dass Vertrauen in drei Schritten entsteht, und zwar immer in derselben Reihenfolge.</p>
 <p>Den ersten nennen sie Vorhersagbarkeit. Er beruht auf einer einzigen Sache: darauf, was du die Person schon mehrfach hast tun sehen. Der zweite betrifft, wer sie ist, und nicht mehr nur, was sie tut. Der dritte ist die Wette, die du auf ihre Absichten abschließt, ohne Beweise.</p>
-<p><strong>Der erste Schritt braucht also Wiederholungen.</strong> Eine einzelne Absage lehrt dich nichts. Sie ist ein Einzelfall, und ein Einzelfall ergibt keine Gewohnheit. Die zweite Absage lehrt dich etwas, und deshalb wiegt sie viel schwerer als die erste. Das ist keine Empfindlichkeit von dir. Das ist der Moment, in dem du endlich genug hast, um dir ein Bild zu machen.</p>
+<p><strong>Der erste Schritt braucht also Wiederholungen.</strong> Eine einzelne Absage lehrt dich nichts. Sie ist ein Einzelfall, und ein Einzelfall ergibt keine Gewohnheit. Die zweite Absage lehrt dich etwas, und deshalb wiegt sie viel schwerer als die erste. Mit Empfindlichkeit hat das nichts zu tun: du hast endlich genug, um dir ein Bild zu machen, mehr nicht.</p>
 <p>Das andere, was an diesem Abend passiert, ist das, was du in deinem Kopf aus der Absage machst. 1990 haben Thomas Bradbury und Frank Fincham Dutzende Studien darüber durchgesehen, wie Menschen in Beziehungen das Verhalten des anderen erklären. Das stand im <em>Psychological Bulletin</em>, und das Ergebnis ist deutlich.</p>
 <p>Menschen, die in ihrer Beziehung unglücklich sind, erklären negatives Verhalten des Partners immer gleich. Es kommt von ihm («er ist eben so»), es wird sich nicht ändern («er wird immer so sein»), und es färbt auf alles andere ab («es läuft ja sowieso nichts»). Bei genau demselben Verhalten schauen glückliche Menschen zuerst auf die Umstände.</p>
 <p>Das Interessante kommt danach. Studien, die dieselben Paare über Jahre begleiten, legen nahe, dass diese Erklärungen den Zustand der Beziehung nicht nur abbilden: sie wirken auf ihn. Anders gesagt, die Geschichte, die du dir heute Abend erzählst, kann verändern, was danach passiert.</p>
@@ -67,7 +67,7 @@ const article: BlogArticleData = {
     {
       id: 'quoi-repondre',
       title: "Was du in der Stunde danach antwortest",
-      content: `<p>Es gibt drei Dinge zu tun, und sie sind einfach.</p>
+      content: `<p>Drei Dinge, mehr nicht.</p>
 <ol>
 <li>Kurz antworten.</li>
 <li>Keinen Vorwurf machen.</li>
@@ -106,7 +106,7 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-recue">Heute Abend geht doch nicht</p>
 <p class="imsg-bulle imsg-envoyee">Ah ok, kein Problem. Schönen Abend dir!</p>
 </div>
-<p class="imsg-note"><strong>Warum das funktioniert:</strong> es steht kein Fragezeichen darin, und das ist Absicht. Wer in einer Zeile absagt, ohne zu erklären und ohne einen neuen Vorschlag, lässt dir eine Lücke, und der erste Reflex ist, sie mit einer Frage zu füllen. Füll sie nicht. Das Gespräch endet dort, wo er es beendet hat, und was er als Nächstes tut, sagt dir mehr als alles, was du ihn jetzt fragen könntest.</p>
+<p class="imsg-note"><strong>Die Idee:</strong> es steht kein Fragezeichen darin, und das ist Absicht. Wer in einer Zeile absagt, ohne zu erklären und ohne einen neuen Vorschlag, lässt dir eine Lücke, und der erste Reflex ist, sie mit einer Frage zu füllen. Füll sie nicht. Das Gespräch endet dort, wo er es beendet hat, und was er als Nächstes tut, sagt dir mehr als alles, was du ihn jetzt fragen könntest.</p>
 </div>
 <p>Viele Frauen wählen einen anderen Weg und antworten gar nicht, in der Annahme, dass er dann reagiert. <a href="/de/blog/was-fuehlt-ein-mann-wenn-man-ihn-ignoriert/">Was das bei ihm auslöst</a> sieht deutlich öfter nach Verwirrung aus als nach einer Einsicht, und am Ende wartet ihr zu zweit auf eine Nachricht.</p>`,
     },
@@ -122,9 +122,9 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-envoyee imsg-collee">Hey! Und, hast du deinen Neffen überlebt? 😄</p>
 <p class="imsg-bulle imsg-envoyee">Sag mal, wann holen wir das Getränk nach? Ich kann Donnerstag oder Samstag.</p>
 </div>
-<p class="imsg-note"><strong>Warum das funktioniert:</strong> du greifst ein Detail aus seiner Nachricht auf, es klingt also nicht nach Rechenschaft, sondern nach jemandem, der zuhört. Und dann nennst du zwei konkrete Tage. Ein «ja» wird leicht, ein «nein» wird sichtbar. Nimmt er weder Donnerstag noch Samstag und schlägt nichts anderes vor, hast du deine Antwort, ohne danach gefragt zu haben.</p>
+<p class="imsg-note"><strong>Warum das funktioniert:</strong> du greifst ein Detail aus seiner Nachricht auf, es klingt also nicht nach Rechenschaft, sondern nach jemandem, der zuhört. Und dann nennst du zwei konkrete Tage. Ein «ja» wird leicht, ein «nein» wird sichtbar. Nimmt er weder Donnerstag noch Samstag und schlägt nichts anderes vor, weißt du, woran du bist, ohne danach gefragt zu haben.</p>
 </div>
-<p>Die zweite Absage ist ein anderer Moment und wird anders behandelt. Da geht es nicht ums Nachfassen, sondern um einen Satz, der dich aus der Organisation herausholt.</p>
+<p>Die zweite Absage ist ein anderer Moment und wird anders behandelt. Nachfassen bringt an dieser Stelle nicht mehr viel. Was du schickst, ist ein Satz, der dich aus der Organisation herausholt.</p>
 <div class="imsg imsg-bon">
 <div class="imsg-tete"><span class="imsg-avatar">J</span><span class="imsg-nom">Jonas</span><span class="imsg-etiquette">Wenn er ein zweites Mal absagt</span></div>
 <div class="imsg-fil">
@@ -133,17 +133,17 @@ const article: BlogArticleData = {
 <p class="imsg-bulle imsg-envoyee imsg-collee">Kein Problem.</p>
 <p class="imsg-bulle imsg-envoyee">Hör mal, wir machen erst mal keine Termine mehr aus, meld dich einfach, wenn du einen Abend frei hast.</p>
 </div>
-<p class="imsg-note"><strong>Warum das funktioniert:</strong> es ist keine Strafe und es wird nicht kalt gesagt. Du trägst die Organisation einfach nicht mehr allein, was eine gesunde Reaktion ist und kein Schmollen. Ab da schlägt er entweder in dieser Woche etwas vor, dann weißt du, dass er dich sehen will, oder er schlägt nichts vor, dann weißt du das auch. Das wichtige Wort ist «wenn»: du schlägst die Tür nicht zu, du hältst sie nur nicht mehr mit ausgestrecktem Arm offen.</p>
+<p class="imsg-note"><strong>Was sich ändert:</strong> es ist keine Strafe und es wird nicht kalt gesagt. Du trägst die Organisation einfach nicht mehr allein, was eine gesunde Reaktion ist und kein Schmollen. Ab da schlägt er entweder in dieser Woche etwas vor, dann weißt du, dass er dich sehen will, oder er schlägt nichts vor, dann weißt du das auch. Das wichtige Wort ist «wenn»: du schlägst die Tür nicht zu, du hältst sie nur nicht mehr mit ausgestrecktem Arm offen.</p>
 </div>
 <p>Und falls das Date am Ende doch stattfindet, bleibt nur noch, <a href="/de/fragen-erstes-date/">Gesprächsstoff für dieses erste Mal</a> zu finden, angefangen beim Leichten.</p>`,
     },
     {
       id: 'quand-arreter',
       title: "Wann du aufhören solltest zu warten",
-      content: `<p>Es gibt einen Punkt, an dem die Frage nicht mehr lautet, was du antwortest. So sieht er aus.</p>
-<p><strong>Zwei Absagen und nie ein neuer Termin von ihm:</strong> das reicht. Das ist kein Pech, das ist jemand, der dich verfügbar hält, ohne dich zu sehen, und das kann Monate so gehen, wenn du es zulässt.</p>
+      content: `<p>Irgendwann lautet die Frage nicht mehr, was du antwortest. Vier Situationen sagen es deutlich genug.</p>
+<p><strong>Zwei Absagen und nie ein neuer Termin von ihm:</strong> das reicht. Mit Pech hat das nichts zu tun. Da hält dich jemand verfügbar, ohne dich zu sehen, und das kann Monate so gehen, wenn du es zulässt.</p>
 <p><strong>Immer schlägst du vor, meldest dich, organisierst:</strong> zähl die letzten fünf Verabredungen und schau, von wem sie ausgingen. Wenn die Antwort fünfmal von fünf «von mir» lautet, ist das Problem nicht mehr die Absage vom Freitag, sondern <a href="/de/blog/freund-gibt-sich-keine-muehe/">das Ungleichgewicht, das sich eingeschlichen hat, ohne dass es jemand ausspricht</a>.</p>
-<p><strong>Er sagt jedes Mal ab, wenn es etwas ernster wird:</strong> Abendessen bei ihm, ein Wochenende, ein Abend mit deinen Freunden. Wenn die Absagen immer auf die Termine fallen, die etwas bedeuten, ist das kein Zufall, und es sieht sehr nach <a href="/de/blog/bindungsangst/">jemandem aus, der zurückweicht, sobald er die Beziehung vorankommen spürt</a>.</p>
+<p><strong>Er sagt jedes Mal ab, wenn es etwas ernster wird:</strong> Abendessen bei ihm, ein Wochenende, ein Abend mit deinen Freunden. Wenn die Absagen immer auf die Termine fallen, die etwas bedeuten, ist der Zufall eine bequeme Erklärung, und es sieht sehr nach <a href="/de/blog/bindungsangst/">jemandem aus, der zurückweicht, sobald er die Beziehung vorankommen spürt</a>.</p>
 <p><strong>Du verbringst mehr Zeit mit Entschlüsseln als mit ihm:</strong> das ist das verlässlichste der vier, auch wenn man es am liebsten nicht sehen will. Eine Beziehung, die gut beginnt, verlangt dieses ganze Entschlüsseln nicht, ganz einfach weil es nicht viel zu entschlüsseln gibt.</p>
 <p>Und wenn du immer noch schwankst, stell dir die Frage anders: Kann es sein, dass er <a href="/de/liebt-er-sie-mich-heimlich-test/">an dir hängt, ohne es zeigen zu können</a>? Bei manchen Männern steckt hinter den Absagen genau das.</p>
 <a href="/de/blog/red-flags-bei-einem-mann/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Auch lesen</span><span class="blog-read-also-title">13 Red Flags bei einem Mann</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
