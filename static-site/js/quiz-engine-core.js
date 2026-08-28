@@ -1273,6 +1273,14 @@ var QuizEngine = (function() {
   // rejouaient le gestionnaire, comptaient le point en double et sautaient la
   // question suivante. Ce verrou expire de lui-même, il ne peut donc jamais
   // figer un moteur si un chemin de code sort par une branche imprévue.
+  // Temps pendant lequel la reponse choisie reste a l'ecran avant de passer a
+  // la suivante. A 350 ms, cette attente s'ajoutait a une animation d'entree
+  // de 400 ms : trois quarts de seconde d'immobilite a chaque question, ce qui
+  // se ressent comme un a-coup plutot que comme un enchainement. La reponse
+  // selectionnee reste tres lisible a 260 ms, et le verrou anti-double-clic
+  // d'answerLock (600 ms) n'en depend pas.
+  var DELAI_REPONSE = 260;
+
   function answerLock(obj, ms) {
     var now = Date.now();
     if (obj.__answerLockUntil && now < obj.__answerLockUntil) return false;
@@ -2172,7 +2180,7 @@ var QuizEngine = (function() {
         setTimeout(function() {
           if (self.currentQ < total - 1) { self.currentQ++; self.render(); }
           else { self.phase = 'results'; self.saveState(); self.render(); }
-        }, 350);
+        }, DELAI_REPONSE);
       });
       optionsWrap.appendChild(optBtn);
     });
@@ -2596,7 +2604,7 @@ var QuizEngine = (function() {
             }
           }
           self.render();
-        }, 350);
+        }, DELAI_REPONSE);
       });
       optionsWrap.appendChild(optBtn);
     });
@@ -2986,7 +2994,7 @@ var QuizEngine = (function() {
           siblings[s].style.pointerEvents = 'none';
         }
         round.guess = opt.id;
-        setTimeout(function() { self.phase = 'revealing'; self.render(); }, 350);
+        setTimeout(function() { self.phase = 'revealing'; self.render(); }, DELAI_REPONSE);
       });
       optionsWrap.appendChild(optBtn);
     });
@@ -3033,7 +3041,7 @@ var QuizEngine = (function() {
         }
         round.actual = opt.id;
         round.correct = (round.guess === opt.id);
-        setTimeout(function() { self.phase = 'feedback'; self.render(); }, 350);
+        setTimeout(function() { self.phase = 'feedback'; self.render(); }, DELAI_REPONSE);
       });
       optionsWrap.appendChild(optBtn);
     });
@@ -4375,7 +4383,7 @@ var QuizEngine = (function() {
             self.phase = 'results';
           }
           self.render();
-        }, 350);
+        }, DELAI_REPONSE);
       });
       optionsWrap.appendChild(optBtn);
     });
@@ -4599,7 +4607,7 @@ var QuizEngine = (function() {
             self.phase = 'results';
           }
           self.render();
-        }, 350);
+        }, DELAI_REPONSE);
       });
       optionsWrap.appendChild(optBtn);
     });
