@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "La parte difficile con un crush è trovare la domanda che rilancia la conversazione al momento giusto. Eccone 100, divise per situazione.",
-  introduction: `<p>Conosci quel momento... La conversazione gira a vuoto, i «bene, e tu?» si accumulano, e senti che se nessuno tira fuori altro finirà educatamente in un «buona serata allora». Con un crush ogni scambio conta doppio. Così, prima o poi, ci ritroviamo tutti a fissare il telefono senza sapere cosa scrivere.</p>
-<p><strong>Una buona domanda fa due cose insieme: mostra che ti interessi davvero e fa venire voglia di rispondere.</strong> È tutto quello che si chiede a una conversazione che comincia. Ed è esattamente quello che fanno le 100 domande che seguono.</p>
+  introduction: `<p>Conosci quel momento. La conversazione gira a vuoto, i «bene, e tu?» si accumulano, e senti che se nessuno tira fuori altro finirà educatamente in un «buona serata allora». Con un crush ogni scambio conta doppio. Così, prima o poi, ci ritroviamo tutti a fissare il telefono senza sapere cosa scrivere.</p>
+<p><strong>Una buona domanda fa due cose insieme: mostra che ti interessi davvero e fa venire voglia di rispondere.</strong> È tutto quello che si chiede a una conversazione che comincia. Le 100 domande che seguono sono fatte per questo.</p>
 <p>Sono divise per situazione, dal primo messaggio al primo appuntamento. Scriviamo «lui» per semplicità, ma tutto funziona ovviamente in ogni direzione.</p>`,
   quickSummary: [
     "100 domande divise per situazione, dal primo messaggio al primo appuntamento.",
@@ -51,7 +51,7 @@ const article: BlogArticleData = {
     {
       id: 'per-conoscerlo',
       title: "Per conoscerlo (16-35)",
-      content: `<p>Le fondamenta. È qui che scopri chi è davvero, oltre il personaggio dei primi scambi... e credimi, spesso ci sono sorprese.</p>
+      content: `<p>Le fondamenta. È qui che scopri chi è davvero, oltre il personaggio dei primi scambi, e credimi, spesso ci sono sorprese.</p>
 <ol start="16">
 <li>Cosa ti appassiona al punto da farti perdere la cognizione del tempo?</li>
 <li>Come ti descrivi in tre parole, e quali direbbero i tuoi amici?</li>
@@ -78,7 +78,7 @@ const article: BlogArticleData = {
     {
       id: 'divertenti-per-farlo-ridere',
       title: "Divertenti, per farlo ridere (36-50)",
-      content: `<p>L'ironia è la scorciatoia più breve tra due persone che si piacciono. Queste domande non hanno alcuna posta in gioco... ed è esattamente per questo che funzionano così bene.</p>
+      content: `<p>L'ironia è la scorciatoia più breve tra due persone che si piacciono. Queste domande non hanno alcuna posta in gioco, ed è per questo che funzionano così bene.</p>
 <ol start="36">
 <li>Qual è la tua teoria del complotto preferita, quella che difendi a metà?</li>
 <li>Quale animale sarebbe il tuo portavoce ufficiale?</li>
@@ -122,7 +122,7 @@ const article: BlogArticleData = {
     {
       id: 'per-flirtare',
       title: "Per flirtare, senza esagerare (66-80)",
-      content: `<p>Il flirt che funziona segue una regola semplice: suggerire invece che annunciare. Queste domande mandano il segnale lasciando l'altro libero di raccoglierlo... o no. È esattamente ciò che le rende efficaci senza mai risultare pesanti.</p>
+      content: `<p>Il flirt che funziona segue una regola semplice: suggerire invece che annunciare. Queste domande mandano il segnale lasciando l'altro libero di raccoglierlo... o no. È ciò che le rende efficaci senza mai risultare pesanti.</p>
 <ol start="66">
 <li>Cosa hai notato per primo di me, sinceramente?</li>
 <li>Qual è la tua idea di appuntamento perfetto, senza budget illimitato?</li>
@@ -142,13 +142,13 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Come capire se gli piaci</p>
-<p>Guarda meno le sue risposte e più i suoi rilanci. Chi è interessato risponde, poi ti rimanda una domanda, rilancia, riprende il giorno dopo... Chi è solo educato risponde bene, e si ferma lì. La lunghezza dei messaggi conta meno di quanto credi: conta chi rimette in moto la macchina.</p>
+<p>Guarda meno le sue risposte e più i suoi rilanci. Chi è interessato risponde, poi ti rimanda una domanda, rilancia, riprende il giorno dopo. Chi è solo educato risponde bene, e si ferma lì. La lunghezza dei messaggi conta meno di quanto credi: conta chi rimette in moto la macchina.</p>
 </aside>`,
     },
     {
       id: 'per-vedere-se-funziona',
       title: "Per capire se tra voi potrebbe funzionare (81-92)",
-      content: `<p>Sotto l'aria di conversazione leggera, queste dodici domande verificano l'essenziale: i vostri ritmi, le vostre aspettative, le vostre visioni. È esattamente il lavoro che fanno le <a href="/it/domande-coppia/">domande di coppia</a> una volta avviata la storia; in versione crush si verifica la stessa cosa senza fare mai LA domanda frontale.</p>
+      content: `<p>Sotto l'aria di conversazione leggera, queste dodici domande verificano l'essenziale: i vostri ritmi, le vostre aspettative, le vostre visioni. È il lavoro che fanno le <a href="/it/domande-coppia/">domande di coppia</a> una volta avviata la storia; in versione crush si verifica la stessa cosa senza fare mai LA domanda frontale.</p>
 <ol start="81">
 <li>Qual è il tuo fine settimana ideale: programma preciso o improvvisazione totale?</li>
 <li>Hai bisogno di molto tempo per te, o ti piace la presenza continua?</li>
@@ -167,7 +167,7 @@ const article: BlogArticleData = {
     {
       id: 'al-primo-appuntamento',
       title: "Dal vivo, al primo appuntamento (93-100)",
-      content: `<p>Otto domande da tenere per il faccia a faccia. Abbastanza aperte da farlo parlare, abbastanza leggere da non appesantire mai l'atmosfera... esattamente quello che serve la sera di un primo appuntamento.</p>
+      content: `<p>Otto domande da tenere per il faccia a faccia. Abbastanza aperte da farlo parlare, abbastanza leggere da non appesantire mai l'atmosfera. Quello che serve la sera di un primo appuntamento.</p>
 <ol start="93">
 <li>Allora, com'è conoscermi dal vivo rispetto ai messaggi?</li>
 <li>Qual è la cosa più sorprendente che hai scoperto di me da quando ci scriviamo?</li>
@@ -184,7 +184,7 @@ const article: BlogArticleData = {
       id: 'se-non-osi',
       title: "E se non osi mandargli nulla?",
       content: `<p>Due parole per chi ha letto fin qui senza aver mandato un solo messaggio: è normale. Un crush, per definizione, ti fa perdere i mezzi. Comincia dalle domande dalla 1 alla 15. Una sola. La più semplice, quella che ti somiglia. L'obiettivo non è essere brillante, è aprire una porta.</p>
-<p>E se già vi scrivete tutti i giorni ma ancora non capisci se è reciproco... smetti di rileggere le vostre conversazioni per la decima volta. Davvero. Ci sono segnali molto più affidabili della tua interpretazione delle sue emoji all'una di notte.</p>
+<p>E se già vi scrivete tutti i giorni ma ancora non capisci se è reciproco, smetti di rileggere le vostre conversazioni per la decima volta. Davvero. Ci sono segnali molto più affidabili della tua interpretazione delle sue emoji all'una di notte.</p>
 <div><table><thead><tr><th>La fase</th><th>Il registro giusto</th><th>L'errore classico</th></tr></thead><tbody>
 <tr><td>I primi messaggi</td><td>Leggero, breve, una domanda alla volta</td><td>Il papiro che aspetta un tema</td></tr>
 <tr><td>Conoscersi</td><td>Curioso, su cose concrete</td><td>L'interrogatorio travestito</td></tr>

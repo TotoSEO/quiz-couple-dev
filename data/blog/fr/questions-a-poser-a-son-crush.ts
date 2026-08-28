@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-01T11:34:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Le plus dur avec un crush, c'est de trouver la question qui relance la conversation au bon moment. En voici 100, classées par situation.",
-  introduction: `<p>Tu connais ce moment... La conversation tourne, les « ça va et toi » s'enchaînent, et tu sens que si personne ne relance avec autre chose, ça va gentiment mourir en « bonne soirée alors ». Avec un crush, chaque échange compte double ! Du coup, on se retrouve tous, un jour ou l'autre, à fixer son téléphone sans savoir quoi envoyer.</p>
-<p><strong>Une bonne question fait deux choses à la fois : elle montre que tu t'intéresses vraiment, et elle donne envie de répondre.</strong> C'est tout ce qu'on demande à une conversation naissante, en fait. Et c'est exactement ce que les 100 questions qui suivent savent faire.</p>
+  introduction: `<p>Tu connais ce moment. La conversation tourne, les « ça va et toi » s'enchaînent, et tu sens que si personne ne relance avec autre chose, ça va gentiment mourir en « bonne soirée alors ». Avec un crush, chaque échange compte double ! Du coup, on se retrouve tous, un jour ou l'autre, à fixer son téléphone sans savoir quoi envoyer.</p>
+<p><strong>Une bonne question fait deux choses à la fois : elle montre que tu t'intéresses vraiment, et elle donne envie de répondre.</strong> C'est tout ce qu'on demande à une conversation naissante, en fait. Les 100 questions qui suivent sont faites pour ça.</p>
 <p>Elles sont classées par situation, du premier message au premier rendez-vous. On écrit « il » pour simplifier, mais tout fonctionne évidemment dans tous les sens.</p>`,
   quickSummary: [
     "100 questions classées par situation, du premier message au premier rendez-vous.",
@@ -51,7 +51,7 @@ const article: BlogArticleData = {
     {
       id: 'pour-apprendre-a-le-connaitre',
       title: "Pour apprendre à le connaître (16-35)",
-      content: `<p>Les fondamentaux. C'est là que tu découvres qui il est vraiment, au-delà du personnage des premiers échanges... et crois-moi, il y a souvent des surprises.</p>
+      content: `<p>Les fondamentaux. C'est là que tu découvres qui il est vraiment, au-delà du personnage des premiers échanges, et crois-moi, il y a souvent des surprises.</p>
 <ol start="16">
 <li>Qu'est-ce qui te passionne au point d'en perdre la notion du temps ?</li>
 <li>Tu te décris comment en trois mots, et tes amis diraient lesquels ?</li>
@@ -78,7 +78,7 @@ const article: BlogArticleData = {
     {
       id: 'droles-pour-le-faire-rire',
       title: "Drôles, pour le faire rire (36-50)",
-      content: `<p>L'humour, c'est le raccourci le plus court entre deux personnes qui se plaisent. Ces questions n'ont aucun enjeu... et c'est exactement pour ça qu'elles marchent aussi bien !</p>
+      content: `<p>L'humour, c'est le raccourci le plus court entre deux personnes qui se plaisent. Ces questions n'ont aucun enjeu, et c'est pour ça qu'elles marchent aussi bien !</p>
 <ol start="36">
 <li>C'est quoi ta théorie du complot préférée, celle que tu défends à moitié ?</li>
 <li>Quel animal serait ton porte-parole officiel ?</li>
@@ -122,7 +122,7 @@ const article: BlogArticleData = {
     {
       id: 'pour-flirter-sans-trop-en-faire',
       title: "Pour flirter, sans trop en faire (66-80)",
-      content: `<p>Le flirt qui fonctionne suit une règle toute simple : suggérer plutôt qu'annoncer. Ces questions envoient le signal, tout en laissant l'autre libre de le saisir... ou pas. C'est exactement ce qui les rend efficaces sans jamais être lourdes.</p>
+      content: `<p>Le flirt qui fonctionne suit une règle toute simple : suggérer plutôt qu'annoncer. Ces questions envoient le signal, tout en laissant l'autre libre de le saisir... ou pas. C'est ce qui les rend efficaces sans jamais être lourdes.</p>
 <ol start="66">
 <li>Tu as remarqué quoi en premier chez moi, honnêtement ?</li>
 <li>C'est quoi ton idée du rendez-vous parfait, sans budget illimité ?</li>
@@ -142,13 +142,13 @@ const article: BlogArticleData = {
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">📌 Comment savoir si ça lui plaît</p>
-<p>Regarde moins ses réponses que ses relances. Quelqu'un d'intéressé répond, puis te renvoie une question, rebondit, relance le lendemain... Quelqu'un de poli répond bien, et s'arrête là. La longueur des messages compte moins que tu ne crois : ce qui compte, c'est qui relance la machine.</p>
+<p>Regarde moins ses réponses que ses relances. Quelqu'un d'intéressé répond, puis te renvoie une question, rebondit, relance le lendemain. Quelqu'un de poli répond bien, et s'arrête là. La longueur des messages compte moins que tu ne crois : ce qui compte, c'est qui relance la machine.</p>
 </aside>`,
     },
     {
       id: 'pour-voir-si-ca-pourrait-coller',
       title: "Pour voir si ça pourrait coller entre vous (81-92)",
-      content: `<p>Sous leurs airs de conversation légère, ces douze questions vérifient l'essentiel : vos rythmes, vos attentes, vos visions. C'est exactement le travail que font les <a href="/questions-couple/">questions de couple</a> une fois l'histoire lancée ; en version crush, on vérifie la même chose sans jamais poser LA question frontale.</p>
+      content: `<p>Sous leurs airs de conversation légère, ces douze questions vérifient l'essentiel : vos rythmes, vos attentes, vos visions. C'est le travail que font les <a href="/questions-couple/">questions de couple</a> une fois l'histoire lancée ; en version crush, on vérifie la même chose sans jamais poser LA question frontale.</p>
 <ol start="81">
 <li>C'est quoi ton week-end idéal : programme carré ou improvisation totale ?</li>
 <li>Tu as besoin de beaucoup de temps pour toi, ou tu aimes la présence en continu ?</li>
@@ -167,7 +167,7 @@ const article: BlogArticleData = {
     {
       id: 'au-premier-rendez-vous',
       title: "En vrai, au premier rendez-vous (93-100)",
-      content: `<p>Huit questions à garder pour le face-à-face. Assez ouvertes pour faire parler, assez légères pour ne jamais plomber l'ambiance... bref, exactement ce qu'il faut un soir de premier rendez-vous.</p>
+      content: `<p>Huit questions à garder pour le face-à-face. Assez ouvertes pour faire parler, assez légères pour ne jamais plomber l'ambiance. Bref, ce qu'il faut un soir de premier rendez-vous.</p>
 <ol start="93">
 <li>Alors, c'est comment de me rencontrer en vrai par rapport aux messages ?</li>
 <li>C'est quoi la chose la plus surprenante que tu aies apprise sur moi depuis qu'on parle ?</li>
@@ -184,7 +184,7 @@ const article: BlogArticleData = {
       id: 'et-s-il-ne-se-passe-rien',
       title: "Et si tu n'oses pas lui envoyer quoi que ce soit ?",
       content: `<p>Petit mot pour celle ou celui qui a lu jusqu'ici sans avoir envoyé le moindre message : c'est normal ! Un crush, par définition, fait perdre les moyens. Commence par les questions 1 à 15. Une seule. La plus simple, celle qui te ressemble. Le but n'est pas d'être brillant, c'est juste d'ouvrir une porte.</p>
-<p>Et si vous parlez déjà tous les jours mais que tu n'arrives toujours pas à savoir si c'est réciproque... arrête de relire vos conversations pour la dixième fois. Franchement. Il y a des signaux bien plus fiables que ton interprétation de ses emojis à 1 heure du matin.</p>
+<p>Et si vous parlez déjà tous les jours mais que tu n'arrives toujours pas à savoir si c'est réciproque, arrête de relire vos conversations pour la dixième fois. Franchement. Il y a des signaux bien plus fiables que ton interprétation de ses emojis à 1 heure du matin.</p>
 <div><table><thead><tr><th>L'étape</th><th>Le bon registre</th><th>L'erreur classique</th></tr></thead><tbody>
 <tr><td>Les premiers messages</td><td>Léger, court, une seule question à la fois</td><td>Le pavé qui attend une dissertation</td></tr>
 <tr><td>Faire connaissance</td><td>Curieux, sur du concret</td><td>L'interrogatoire déguisé</td></tr>

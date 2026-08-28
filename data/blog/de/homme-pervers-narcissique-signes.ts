@@ -10,8 +10,8 @@ const article: BlogArticleData = {
   featuredImageAlt: "Ein Mann lächelt in Gesellschaft, während seine Partnerin verunsichert wegschaut",
   publishedAt: '2026-08-29T15:25:00+02:00',
   author: AUTHORS['thomas'],
-  excerpt: "Das Problem mit einem narzisstischen Mann ist, dass du die Einzige bist, die sieht, was du siehst. Hier sind die 12 Verhaltensweisen, die ihn am Ende verraten.",
-  introduction: `<p>Wenn du «narzisstischer Mann» in eine Suchmaschine tippst, dann nicht aus intellektueller Neugier... Sondern weil ein ganz bestimmter Mann, dein Partner, dein Ex, vielleicht der Vater deiner Kinder, dich alarmiert hat. Und weil etwas nicht zusammenpasst: dieser Mann, den alle verehren, lässt dich hinter verschlossenen Türen etwas erleben, das sich niemand vorstellt.</p>
+  excerpt: "Das Problem mit einem narzisstischen Mann ist, dass du die Einzige bist, die sieht, was du siehst. Die 12 Verhaltensweisen, die ihn am Ende verraten.",
+  introduction: `<p>Wenn du «narzisstischer Mann» in eine Suchmaschine tippst, hat intellektuelle Neugier damit nichts zu tun. Ein ganz bestimmter Mann hat dich alarmiert: dein Partner, dein Ex, vielleicht der Vater deiner Kinder. Und etwas passt nicht zusammen, denn dieser Mann, den alle verehren, lässt dich hinter verschlossenen Türen etwas erleben, das sich niemand vorstellt.</p>
 <p>Das ist Falle Nummer eins bei diesem Profil. Der Abstand zwischen dem öffentlichen und dem privaten Mann ist so heftig, dass du wie verrückt wirkst, sobald du ihn beschreiben willst. Also hörst du irgendwann auf, ihn zu beschreiben. Und bleibst mit deinen Fragen allein.</p>
 <p>Hier sind die 12 typischen Verhaltensweisen eines narzisstischen Mannes, in der Reihenfolge, in der sie auftauchen. Du musst übrigens nicht alle 12 abhaken: Was du suchst, ist ein Verlauf, und du wirst schnell merken, ob du ihn wiedererkennst.</p>`,
   quickSummary: [
@@ -25,7 +25,7 @@ const article: BlogArticleData = {
     {
       id: 'die-12-anzeichen-im-ueberblick',
       title: "Die 12 Anzeichen auf einen Blick",
-      content: `<p>Hier sind die vier Etappen, mit den Anzeichen, die dazugehören. Wenn dich eine Gruppe mehr anspricht als die anderen, geh direkt dorthin.</p>
+      content: `<p>Vier Etappen, mit den Anzeichen, die dazugehören. Wenn dich eine Gruppe mehr anspricht als die anderen, geh direkt dorthin.</p>
 <ol class="blog-liste-reperes">
 <li><a href="#in-gesellschaft">In Gesellschaft: die öffentliche Figur (Anzeichen 1 bis 3)</a></li>
 <li><a href="#am-anfang-mit-dir">Am Anfang mit dir: die strategische Verführung (Anzeichen 4 bis 6)</a></li>
@@ -44,18 +44,18 @@ const article: BlogArticleData = {
           id: 'in-gesellschaft',
           title: "In Gesellschaft: die öffentliche Figur (Anzeichen 1 bis 3)",
           content: `<ol>
-<li><strong>Ein kalibrierter Charme, nie umsonst:</strong> Er ist brillant, witzig, aufmerksam... aber beobachte, bei wem. Nützliche Leute, Neuankömmlinge zum Erobern, Zeugen zum Bezaubern. Der ungeschickte Kellner oder die langsame Kassiererin sehen einen ganz anderen Mann. Diese Höflichkeit mit variabler Geometrie ist eines der frühesten Anzeichen überhaupt.</li>
-<li><strong>Großzügigkeit mit Publikum:</strong> Die großen Gesten kommen, wenn Zuschauer da sind: das Geschenk vor deinen Freundinnen, die Anekdote, in der er dich gerettet hat, das Kompliment in Gesellschaft... Ohne Publikum lässt die Großzügigkeit seltsamerweise nach. Irgendwann fällt dir etwas Merkwürdiges auf: draußen wirst du besser behandelt als zu Hause.</li>
-<li><strong>Alle seine Ex-Partnerinnen sind verrückt:</strong> Keine einzige Geschichte, die normal endet. Nur «Hysterische», «Toxische», Frauen, die ihn «zerstört haben»... Hör dieser Erzählung genau zu, denn sie hat zwei Funktionen: dir zu schmeicheln (du bist anders) und den Boden zu bereiten. Dieses Porträt der Verrückten ist nämlich genau das, das er eines Tages von dir zeichnen wird.</li>
+<li><strong>Ein kalibrierter Charme, nie umsonst:</strong> Er ist brillant, witzig, aufmerksam, aber beobachte genau, bei wem. Bei nützlichen Leuten, und bei denen, die noch zu erobern sind. Der ungeschickte Kellner oder die langsame Kassiererin sehen einen ganz anderen Mann. Diese Höflichkeit mit variabler Geometrie ist eines der frühesten Anzeichen überhaupt.</li>
+<li><strong>Großzügigkeit mit Publikum:</strong> Die großen Gesten kommen, wenn Zuschauer da sind: das Geschenk vor deinen Freundinnen, die Anekdote, in der er dich gerettet hat, das Kompliment in Gesellschaft. Ohne Publikum lässt die Großzügigkeit seltsamerweise nach. Irgendwann fällt dir etwas Merkwürdiges auf: draußen wirst du besser behandelt als zu Hause.</li>
+<li><strong>Alle seine Ex-Partnerinnen sind verrückt:</strong> Keine einzige Geschichte, die normal endet. Nur «Hysterische», «Toxische», Frauen, die ihn «zerstört haben». Hör dieser Erzählung genau zu, sie hat zwei Funktionen: dir zu schmeicheln (du bist anders) und den Boden zu bereiten. Dieses Porträt der Verrückten ist nämlich genau das, das er eines Tages von dir zeichnen wird.</li>
 </ol>`,
         },
         {
           id: 'am-anfang-mit-dir',
           title: "Am Anfang mit dir: die strategische Verführung (Anzeichen 4 bis 6)",
           content: `<ol start="4">
-<li><strong>Alles geht zu schnell, und er gibt das Tempo vor:</strong> Sehr frühe Liebeserklärungen, sofortige Pläne, permanente Präsenz... genau das Schema des <a href="/de/blog/love-bombing-anzeichen/">Love Bombings</a>. Das Detail, das alles ändert: versuch ein wenig zu bremsen und schau, ob dein Tempo respektiert oder verhandelt wird.</li>
-<li><strong>Du bist «anders als alle anderen»:</strong> Achtung, das ist kein Kompliment für das, was du tust. Es ist ein Status, den er dir gewährt. Es ist berauschend, das muss man zugeben... und es ist eine Falle. Ein gewährter Status kann entzogen werden. Und er wird es, genau dann, wenn es am meisten wehtut.</li>
-<li><strong>Er testet deine Grenzen, ganz beiläufig:</strong> Eine grenzwertige Bemerkung «aus Spaß», eine Verspätung ohne Entschuldigung, eine Vertraulichkeit von dir, die du bei anderen wiederfindest... Das sind Sonden. Er misst schlicht, was du durchgehen lässt. Und jede geschluckte Kleinigkeit erweitert den Spielraum für die nächste.</li>
+<li><strong>Alles geht zu schnell, und er gibt das Tempo vor:</strong> Sehr frühe Liebeserklärungen, sofortige Pläne, permanente Präsenz: genau das Schema des <a href="/de/blog/love-bombing-anzeichen/">Love Bombings</a>. Das Detail, das alles ändert: versuch ein wenig zu bremsen und schau, ob dein Tempo respektiert oder verhandelt wird.</li>
+<li><strong>Du bist «anders als alle anderen»:</strong> Achtung, er lobt nicht das, was du tust. Er gewährt dir einen Status. Es ist berauschend, das muss man zugeben... und es ist eine Falle. Ein gewährter Status kann entzogen werden. Und er wird es, genau dann, wenn es am meisten wehtut.</li>
+<li><strong>Er testet deine Grenzen, ganz beiläufig:</strong> Eine grenzwertige Bemerkung «aus Spaß», eine Verspätung ohne Entschuldigung, eine Vertraulichkeit von dir, die du bei anderen wiederfindest. Das sind Sonden. Er misst schlicht, was du durchgehen lässt. Und jede geschluckte Kleinigkeit erweitert den Spielraum für die nächste.</li>
 </ol>`,
         },
         {
@@ -63,8 +63,8 @@ const article: BlogArticleData = {
           title: "Im Privaten: die installierte Kontrolle (Anzeichen 7 bis 9)",
           content: `<ol start="7">
 <li><strong>Er zielt auf deine Stärken, nicht auf deine Schwächen:</strong> Das ist kontraintuitiv und doch seine Signatur. Dein Beruf, dein Humor, deine Familie, das, worauf du stolz bist: genau dort landen die Bemerkungen. Eine kritisierte Schwäche kann ein ungeschickter Rat sein. Eine systematisch heruntergeredete Stärke ist nie einer: Das ist eine Abrissstrategie.</li>
-<li><strong>Deine Realität wird ständig neu verhandelt:</strong> Was du gesehen hast, hat er nicht getan. Was er gesagt hat, hast du falsch verstanden. Was du fühlst, übertreibst du... Mit der Zeit zweifelst du so sehr an deinem Gedächtnis, dass du heimlich nachprüfst. Dieses tägliche <a href="/de/blog/gaslighting-anzeichen/">Gaslighting</a> ist das Herz des Systems.</li>
-<li><strong>Deine Welt schrumpft, ganz ohne Verbot:</strong> Er hat dir nie verboten, deine Freundinnen zu sehen. Er hat jede Verabredung nur teuer gemacht: eine Laune vorher, Vorwürfe danach, eine Szene am nächsten Tag. In so einer Lage stehen die Chancen gut, dass du nach ein paar Monaten, ohne genau zu wissen wie, die Rechnung von allein aufmachst... Und genau das war vorgesehen.</li>
+<li><strong>Deine Realität wird ständig neu verhandelt:</strong> Was du gesehen hast, hat er nicht getan. Was er gesagt hat, hast du falsch verstanden. Was du fühlst, übertreibst du. Mit der Zeit zweifelst du so sehr an deinem Gedächtnis, dass du heimlich nachprüfst. Dieses tägliche <a href="/de/blog/gaslighting-anzeichen/">Gaslighting</a> ist das Herz des Systems.</li>
+<li><strong>Deine Welt schrumpft, ganz ohne Verbot:</strong> Er hat dir nie verboten, deine Freundinnen zu sehen. Er hat jede Verabredung nur teuer gemacht: eine Laune vorher, Vorwürfe danach, eine Szene am nächsten Tag. In so einer Lage stehen die Chancen gut, dass du nach ein paar Monaten, ohne genau zu wissen wie, die Rechnung von allein aufmachst. Und genau das war vorgesehen.</li>
 </ol>`,
         },
         {
@@ -72,8 +72,8 @@ const article: BlogArticleData = {
           title: "Wenn du dich wehrst: die Maske fällt (Anzeichen 10 bis 12)",
           content: `<ol start="10">
 <li><strong>Kalte Wut ersetzt die Diskussion:</strong> Ein Widerspruch wird nicht besprochen, er wird bezahlt: Schweigen über Tage, entzogene Zuwendung, bleierne Stimmung. Die Strafe wird nie benannt, was dich zwingt, deine Schuld zu erraten. Und dich damit dauerhaft selbst zu überwachen.</li>
-<li><strong>Er wird zum Opfer, notfalls öffentlich:</strong> An dem Tag, an dem du nach Monaten der Zermürbung endlich laut wirst, entdeckst du die Umkehrung: er leidet, er erträgt, er erzählt im Umfeld, dass er sich «Sorgen um dich macht»... Diese vorbeugende Kampagne hat ein klares Ziel: deine Glaubwürdigkeit zerstören, bevor du sprichst.</li>
-<li><strong>Dein Weggang löst Rückeroberung aus, keine Selbstprüfung:</strong> Versprechen, Tränen, angekündigte Therapie, die Rückkehr des Mannes vom Anfang. Und sobald du zurück bist, kehrt das System zurück. Schlimmer. Dieser Rückeroberungszyklus hat seine Regeln... dieselben, die eine <a href="/de/blog/trennung-von-einem-narzissten/">Trennung von einem Narzissten</a> zu einer eigenen Übung machen, auf die man sich vorbereitet.</li>
+<li><strong>Er wird zum Opfer, notfalls öffentlich:</strong> An dem Tag, an dem du nach Monaten der Zermürbung endlich laut wirst, entdeckst du die Umkehrung: er leidet, er erträgt, er erzählt im Umfeld, dass er sich «Sorgen um dich macht». Diese vorbeugende Kampagne hat ein klares Ziel: deine Glaubwürdigkeit zerstören, bevor du sprichst.</li>
+<li><strong>Dein Weggang löst Rückeroberung aus, keine Selbstprüfung:</strong> Versprechen, Tränen, angekündigte Therapie, die Rückkehr des Mannes vom Anfang. Und sobald du zurück bist, kehrt das System zurück. Schlimmer. Dieser Rückeroberungszyklus hat seine Regeln, dieselben, die eine <a href="/de/blog/trennung-von-einem-narzissten/">Trennung von einem Narzissten</a> zu einer eigenen Übung machen, auf die man sich vorbereitet.</li>
 </ol>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Der eigentliche Test ist dein Widerstand</p>
@@ -85,16 +85,16 @@ const article: BlogArticleData = {
     {
       id: 'was-es-mit-dir-macht',
       title: "Was es mit dir macht, und warum du noch zweifelst",
-      content: `<p>Wenn du den Verlauf wiedererkannt hast, bleibt vermutlich eine Frage: «warum liebe ich ihn dann noch?» Weil das System genau dafür gebaut ist, ganz einfach. Dieser Wechsel zwischen dem wunderbaren und dem zerstörerischen Mann macht süchtig. Es ist derselbe Mechanismus wie beim Glücksspiel, die unvorhersehbare Belohnung...</p>
+      content: `<p>Wenn du den Verlauf wiedererkannt hast, bleibt vermutlich eine Frage: «warum liebe ich ihn dann noch?» Weil das System genau dafür gebaut ist, ganz einfach. Dieser Wechsel zwischen dem wunderbaren und dem zerstörerischen Mann macht süchtig. Es ist derselbe Mechanismus wie beim Glücksspiel, der mit der unvorhersehbaren Belohnung.</p>
 <p>Und weil er dir das Zweifeln antrainiert hat. Monate von «du übertreibst» hinterlassen Spuren: im Moment des Schlussfolgerns fragst du dich immer noch, ob nicht doch du dramatisierst.</p>
-<p>Lies die Liste also noch einmal und achte auf ein Detail: die Hälfte der Anzeichen beschreibt nicht sein Verhalten, sondern den Zustand, in den er dich versetzt. Das ist der beste Detektor, den du hast, und er irrt selten. Viele dieser Verhaltensweisen finden sich übrigens in den <a href="/de/blog/red-flags-bei-einem-mann/">Red Flags bei einem Mann</a>, deren vollendetste Ausprägung sie sind... und deren gefährlichste.</p>
+<p>Lies die Liste also noch einmal und achte auf ein Detail: die Hälfte der Anzeichen beschreibt nicht sein Verhalten, sondern den Zustand, in den er dich versetzt. Das ist der beste Detektor, den du hast, und er irrt selten. Viele dieser Verhaltensweisen finden sich übrigens in den <a href="/de/blog/red-flags-bei-einem-mann/">Red Flags bei einem Mann</a>, deren vollendetste Ausprägung sie sind, und deren gefährlichste.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">Du willst eine ruhige Antwort statt einer weiteren Ahnung?</p>
 <p class="blog-cta-texte">Zwanzig Fragen gehen genau die Situationen durch, die du gerade gelesen hast, und das Ergebnis sagt dir, wo deine Beziehung steht. In Ruhe, für dich, ohne dass es jemand erfährt.</p>
 <a class="blog-cta-btn" href="/de/narzisstischer-partner-test/">Prüfen, was ich erlebe</a>
 <p class="blog-cta-note">Kostenlos &middot; Ohne Anmeldung &middot; Sofortiges Ergebnis</p>
 </div>
-<p>Ein letztes Wort. Vielleicht hast du diesen Artikel für eine Schwester, eine Freundin, eine Kollegin gelesen... Was du für sie tun kannst, beginnt damit: bleib eine Verbindung, die nicht urteilt. Das System funktioniert nur, solange sie isoliert ist. Jeder Mensch, der in ihrem Leben bleibt, ist ein möglicher Ausgang.</p>
+<p>Ein letztes Wort. Vielleicht hast du diesen Artikel für eine Schwester, eine Freundin, eine Kollegin gelesen. Was du für sie tun kannst, beginnt damit: bleib eine Verbindung, die nicht urteilt. Das System funktioniert nur, solange sie isoliert ist. Jeder Mensch, der in ihrem Leben bleibt, ist ein möglicher Ausgang.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Wenn du in Gefahr bist, bleib nicht mit einem Artikel allein</p>
 <p>Drohungen, Kontrolle über dein Geld oder deine Wege, körperliche Gewalt auch «nur einmal»: in Deutschland ist das Hilfetelefon Gewalt gegen Frauen unter 08000 116 016 rund um die Uhr erreichbar, kostenlos und vertraulich. In Österreich die Frauenhelpline 0800 222 555. Bei unmittelbarer Gefahr: 110. Und ein auf psychische Gewalt spezialisierter Psychologe verändert deinen Weg mehr als jede Lektüre. Diese eingeschlossen.</p>
