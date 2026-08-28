@@ -4949,14 +4949,28 @@ var QuizEngine = (function() {
     this.axes = config.axes || PROFILE_AXES_DEFAUT;
     this.axisLabels = config.axisLabels || { secure: 'Sécure', anxious: 'Anxieux', avoidant: 'Évitant' };
     this.classifier = typeof config.classify === 'function' ? config.classify : null;
+    this.dureeMeta = config.dureeMeta || null;
     this.introTitle = config.introTitle || tg('attachment.introTitle', 'Quel est votre style d\'attachement ?');
     this.resultLabel = config.resultLabel || tg('attachment.yourStyle', 'Votre style d\'attachement');
     this.phase = 'intro';
     this.currentQ = 0;
     this.answers = [];
+    // Nombre de questions posees avant de proposer le resultat une premiere
+    // fois. Sans limite c'est tout le lot, et les typologies existantes ne
+    // changent pas d'un iota. Avec une limite, le moteur s'arrete a ce rang
+    // et laisse le choix entre s'arreter la ou continuer.
+    this.limiteInitiale = Math.min(config.limite || this.questions.length, this.questions.length);
+    this.limite = this.limiteInitiale;
     this.tally = this.tallyVierge();
     this.render();
   }
+
+  // Combien de questions ont ete posees. C'est le denominateur des
+  // pourcentages : compter sur trente alors que quinze ont ete posees
+  // diviserait chaque axe par deux.
+  ProfileQuiz.prototype.nbPosees = function() {
+    return this.limite || this.questions.length || 1;
+  };
 
   ProfileQuiz.prototype.tallyVierge = function() {
     var t = {};
@@ -4978,6 +4992,7 @@ var QuizEngine = (function() {
     this.container.innerHTML = '';
     if (this.phase === 'intro') this.renderIntro();
     else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'palier') this.renderPalier();
     else if (this.phase === 'results') this.renderResults();
   };
 
@@ -4986,10 +5001,13 @@ var QuizEngine = (function() {
     var ecran = ecranDepart({
       icone: this.labels.icon || '🔗',
       titre: this.introTitle,
-      meta: pastilleMeta(this.questions.length),
+      meta: pastilleMeta(this.limiteInitiale, null, this.dureeMeta),
       bouton: tg('playerSetup.startTest', 'Commencer le test'),
       onStart: function() {
         self.phase = 'playing'; self.currentQ = 0; self.answers = [];
+        // Refaire le test repart de la version courte, sinon celui qui est
+        // alle au bout la premiere fois n'aurait plus jamais le choix.
+        self.limite = self.limiteInitiale;
         self.tally = self.tallyVierge();
         self.render();
       }
@@ -5000,7 +5018,10 @@ var QuizEngine = (function() {
   ProfileQuiz.prototype.renderQuestion = function() {
     var self = this;
     var q = this.questions[this.currentQ];
-    var total = this.questions.length;
+    // La barre de progression compte jusqu'a la limite en cours, pas jusqu'au
+    // lot entier : annoncer « 3/30 » a quelqu'un qui a demande la version
+    // courte lui ferait croire qu'il s'est trompe de format.
+    var total = this.limite;
     var wrap = el('div', 'quiz-engine quiz-question-enter');
     renderProgressBar(wrap, this.currentQ, total);
 
@@ -5032,8 +5053,9 @@ var QuizEngine = (function() {
         if (cat && self.tally[cat] !== undefined) self.tally[cat]++;
         setTimeout(function() {
           if (self.currentQ < total - 1) { self.currentQ++; self.render(); }
+          else if (self.limite < self.questions.length) { self.phase = 'palier'; self.render(); }
           else { self.phase = 'results'; self.render(); }
-        }, 300);
+        }, DELAI_REPONSE);
       });
       optionsWrap.appendChild(optBtn);
     });
@@ -5056,8 +5078,48 @@ var QuizEngine = (function() {
     this.container.appendChild(wrap);
   };
 
+  // Palier : la version courte est finie, on continue ou on s'arrete ici.
+  // Celui qui vient de repondre a quinze questions a montre qu'il accrochait,
+  // et c'est la que la proposition d'aller plus loin porte, pas au depart ou
+  // trente questions font reculer. Le resultat reste le bouton principal :
+  // la personne est venue pour lui, on ne le lui dispute pas.
+  ProfileQuiz.prototype.renderPalier = function() {
+    var self = this;
+    var restant = this.questions.length - this.limite;
+    function lu(cle, repli) {
+      var plein = self.prefix + '.' + cle;
+      var v = tgd(plein, null);
+      return (v && v !== plein) ? v : repli;
+    }
+
+    var wrap = el('div', 'quiz-engine quiz-palier animate-fade-in text-center');
+    wrap.appendChild(el('div', 'quiz-palier-icone', lu('palierIcone', '💗')));
+    wrap.appendChild(el('h2', 'quiz-palier-titre',
+      esc(lu('palierTitre', 'Vous avez repondu aux {{n}} questions !').replace('{{n}}', this.limite))));
+    wrap.appendChild(el('p', 'quiz-palier-texte',
+      esc(lu('palierTexte', 'Vos resultats sont prets.').replace('{{n}}', restant))));
+
+    var choix = el('div', 'quiz-palier-choix');
+    var voir = el('button', 'btn btn-cta btn-lg', esc(lu('palierResultats', 'Voir mes resultats')));
+    voir.addEventListener('click', function() { self.phase = 'results'; self.render(); });
+    var continuer = el('button', 'btn btn-outline',
+      esc(lu('palierContinuer', 'Continuer avec {{n}} questions de plus').replace('{{n}}', restant)));
+    continuer.addEventListener('click', function() {
+      self.limite = self.questions.length;
+      self.currentQ = self.currentQ + 1;
+      self.phase = 'playing';
+      self.render();
+      smoothScroll(self.container, 'start');
+    });
+    choix.appendChild(voir);
+    choix.appendChild(continuer);
+    wrap.appendChild(choix);
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   ProfileQuiz.prototype.classify = function() {
-    var n = this.questions.length || 1;
+    var n = this.nbPosees();
     if (this.classifier) return this.classifier(this.tally, n);
     var s = this.tally.secure, anx = this.tally.anxious, av = this.tally.avoidant;
     if (s >= Math.ceil(n * 0.45)) return 'secure';
@@ -5094,7 +5156,7 @@ var QuizEngine = (function() {
     var key = this.classify();
     var profile = this.profiles[key] || {};
     this.enregistreProfil(key);
-    var n = this.questions.length || 1;
+    var n = this.nbPosees();
     var pcts = {};
     for (var a = 0; a < this.axes.length; a++) {
       var idA = this.axes[a].id;
