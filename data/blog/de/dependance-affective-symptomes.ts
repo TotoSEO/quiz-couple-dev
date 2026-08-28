@@ -26,7 +26,7 @@ const article: BlogArticleData = {
       id: 'kernsymptom',
       title: "Das Kernsymptom, das alle anderen zusammenfasst",
       content: `<p>Vor der Liste musst du den Grundmechanismus verstehen, denn alle Symptome gehen daraus hervor. <a href="/de/blog/emotionale-abhaengigkeit-in-beziehungen/">Emotionale Abhängigkeit</a> heißt im Kern, den anderen als Gefühlsregler zu benutzen: Deine Ruhe, dein Wert, deine innere Sicherheit laufen über seine Signale. Eine zärtliche Nachricht und dein Tag ist schön. Eine Stille und alles bricht zusammen.</p>
-<p>Das Problem ist nicht, von den Signalen deines Partners berührt zu werden, das ist jeder! Das Problem ist die Amplitude. Wenn jemand von außen das Thermostat deines Innenzustands hält, bist du nicht mehr in der Beziehung, du bist im Überlebensmodus. Und genau das beschreiben die folgenden Symptome, jedes auf seine Weise.</p>
+<p>Das Problem ist nicht, von den Signalen deines Partners berührt zu werden, das ist jeder! Das Problem ist die Amplitude. Wenn jemand von außen das Thermostat deines Innenzustands hält, bist du nicht mehr in der Beziehung, du bist im Überlebensmodus. Und das beschreiben die folgenden Symptome, jedes auf seine Weise.</p>
 <div><table><thead><tr><th>Wo es sich zeigt</th><th>Wie es konkret aussieht</th></tr></thead><tbody>
 <tr><td><strong>In deinem Kopf</strong></td><td>Das ständige Deuten, die Verlassensangst im Hintergrund</td></tr>
 <tr><td><strong>In deiner Beziehung</strong></td><td>Beruhigung, die nie hält, Grenzen, die nie gesetzt werden</td></tr>
@@ -38,7 +38,7 @@ const article: BlogArticleData = {
       id: 'in-deinem-kopf',
       title: "In deinem Kopf (Symptome 1 bis 5)",
       content: `<ol>
-<li><strong>Die Verlassensangst im Hintergrund:</strong> Keine punktuelle Sorge: ein Programm, das ununterbrochen läuft. Ein etwas schroffer Ton, ein «mal sehen», ein zerstreuter Blick, und dein Gehirn schließt auf das Schlimmste. Am erschöpfendsten ist, dass sogar die guten Momente kontaminiert sind: Du genießt sie nur halb, weil ein Teil von dir schon das Ende vorwegnimmt.</li>
+<li><strong>Die Verlassensangst im Hintergrund:</strong> Ein Programm, das ununterbrochen läuft, und nicht eine Sorge, die vorbeigeht. Ein etwas schroffer Ton, ein «mal sehen», ein zerstreuter Blick, und dein Gehirn schließt auf das Schlimmste. Am erschöpfendsten ist, dass sogar die guten Momente kontaminiert sind: Du genießt sie nur halb, weil ein Teil von dir schon das Ende vorwegnimmt.</li>
 <li><strong>Das ständige Deuten:</strong> Du liest Nachrichten nach, analysierst Emojis, vergleichst die heutige Antwortzeit mit der von letzter Woche. Deine Beziehung ist zur Ermittlung geworden und du zur Vollzeitdetektivin. Anstrengend und vor allem endlos, denn kein Beweis beruhigt länger als ein paar Stunden.</li>
 <li><strong>Das wiederholte Bedürfnis nach Rückversicherung:</strong> «Liebst du mich?», «Ist alles gut zwischen uns?», gestellt nicht um ein Gespräch zu öffnen, sondern um eine Angst zu beruhigen. Die Antwort wirkt wie ein Medikament mit kurzer Wirkdauer. Schnell braucht es eine neue Dosis.</li>
 <li><strong>Dein Selbstwert an ihn gekoppelt:</strong> Schätzt er dich, bist du etwas wert. Ist er distanziert, bist du nichts mehr wert. Dein Selbstwertgefühl gehört dir nicht mehr: Es steigt und fällt mit seiner Laune.</li>
@@ -51,7 +51,7 @@ const article: BlogArticleData = {
       content: `<ol start="6">
 <li><strong>Du sagst nicht mehr nein:</strong> Aus Angst zu enttäuschen, Kälte zu erzeugen, einen Grund zum Gehen zu liefern. Deine Vorlieben kommen systematisch nach seinen, so sehr, dass du manchmal gar nicht mehr weißt, was du selbst lieber magst.</li>
 <li><strong>Du löschst dich vorbeugend aus:</strong> Du errätst seine Wünsche, bevor er sie ausspricht, entschärfst Konflikte, bevor es sie gibt, schluckst Vorwürfe, bevor du sie sagst. Von weitem bist du «unkompliziert». Nur bist du, vor lauter Zurücknehmen, verschwunden.</li>
-<li><strong>Eifersucht wird übergriffig:</strong> Nicht unbedingt Szenen: manchmal nur diskrete Überwachung, geprüfte Profile, das «wer ist die?», das du sofort bereust. Dahinter immer dieselbe Logik: Jeder Mensch um ihn herum ist eine Bedrohung für dein emotionales Überleben.</li>
+<li><strong>Eifersucht wird übergriffig:</strong> Oft ohne eine einzige Szene, nur diskrete Überwachung, geprüfte Profile, das «wer ist die?», das du sofort bereust. Dahinter immer dieselbe Logik: Jeder Mensch um ihn herum ist eine Bedrohung für dein emotionales Überleben.</li>
 <li><strong>Du bleibst, auch wenn es wehtut:</strong> Das ist das Symptom mit den schwersten Folgen. Eine mittelmäßige, enttäuschende, manchmal offen toxische Beziehung, und trotzdem macht die Idee zu gehen mehr Angst als die Idee zu leiden. Übrigens Vorsicht: Genau dieses Profil zieht die Partner an, die es ausnutzen, dazu weiter unten mehr.</li>
 <li><strong>Die Beziehung hat alles andere aufgefressen:</strong> Deine Projekte, deine Leidenschaften, deine eigenen Abende: Alles ist in den Hintergrund gerutscht, ohne bewusste Entscheidung. Eines Tages merkst du, dass du seit Monaten nichts gemacht hast, das ihn nicht einschließt.</li>
 </ol>
@@ -63,7 +63,7 @@ const article: BlogArticleData = {
     {
       id: 'in-deinem-koerper',
       title: "In deinem Körper (Symptome 11 bis 13)",
-      content: `<p>Darüber wird selten gesprochen, und trotzdem. Emotionale Abhängigkeit ist auch eine körperliche Sache, denn dauerhafte Unsicherheit ist chronischer Stress. Konkret:</p>
+      content: `<p>Darüber wird selten gesprochen, und das ist schade. Emotionale Abhängigkeit ist auch eine körperliche Sache, denn dauerhafte Unsicherheit ist chronischer Stress. Konkret:</p>
 <ol start="11">
 <li><strong>Der Knoten im Bauch bei Stille:</strong> Eine echte körperliche Reaktion, wenn er nicht antwortet: enger Hals, verkrampfter Magen, Schwierigkeit, dich auf etwas anderes zu konzentrieren. Dein Körper behandelt eine verspätete Nachricht wie eine Gefahr.</li>
 <li><strong>Zerstörter Schlaf in Zweifelsnächten:</strong> Das Grübeln um zwei Uhr nachts, das Aufwachen, um das Handy zu prüfen, die Müdigkeit, die sich anhäuft und die Angst am nächsten Tag noch schwerer beherrschbar macht. Klassischer Teufelskreis.</li>
@@ -74,7 +74,7 @@ const article: BlogArticleData = {
       id: 'mit-anderen',
       title: "Mit anderen (Symptome 14 bis 16)",
       content: `<ol start="14">
-<li><strong>Deine Freundschaften liegen brach:</strong> Nicht aus fehlender Zuneigung: weil alle deine Ressourcen zur Beziehung umgeleitet werden. Die Freundinnen von «früher» bekommen höfliche Antworten und verschobene Abende, bis sie aufhören, etwas vorzuschlagen.</li>
+<li><strong>Deine Freundschaften liegen brach:</strong> Fehlende Zuneigung hat damit nichts zu tun: alle deine Ressourcen sind zur Beziehung umgeleitet worden. Die Freundinnen von «früher» bekommen höfliche Antworten und verschobene Abende, bis sie aufhören, etwas vorzuschlagen.</li>
 <li><strong>Du bittest alle um Beruhigung:</strong> Die Analyse seiner Nachrichten mit deiner besten Freundin, die «glaubst du, er liebt mich?» in Dauerschleife. Dein Umfeld wird zum Rettungsdienst deiner Beziehung. Am Anfang großzügig, auf Dauer erschöpft.</li>
 <li><strong>Du wählst immer dasselbe Profil:</strong> Distanziert, schwer greifbar, lauwarm, und schon rennst du wieder hinterher. Das ist kein Pech: Unsicherheit sucht, was sie kennt. Und wenn der distanzierte Partner zusätzlich ein Manipulator ist, wird der Cocktail richtig gefährlich: Das Duo <a href="/de/blog/emotional-abhaengig-und-manipulator/">emotional abhängig und Manipulator</a> verwandelt deine Verlassensangst in ein maßgeschneidertes Kontrollwerkzeug.</li>
 </ol>`,

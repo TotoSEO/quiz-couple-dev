@@ -11,8 +11,8 @@ const article: BlogArticleData = {
   publishedAt: '2026-09-08T13:26:00+02:00',
   author: AUTHORS['thomas'],
   excerpt: "Una conversación que se apaga o una chica con ganas de volver a verte: todo se juega en la calidad de tus preguntas, y en lo que haces con las respuestas.",
-  introduction: `<p>Seamos honestos dos minutos. El problema casi nunca es encontrar UNA pregunta que hacer. El problema es que «¿qué tal?», «¿a qué te dedicas?» y «¿buen finde?» son exactamente como empiezan todas las demás conversaciones que ella tiene ahora mismo...</p>
-<p><strong>Una buena pregunta marca la diferencia porque demuestra algo poco común: que te interesas por ella, no solo por dar conversación.</strong> Y eso, créeme, se nota al instante.</p>
+  introduction: `<p>Seamos honestos dos minutos. El problema casi nunca es encontrar UNA pregunta que hacer. El problema es que «¿qué tal?», «¿a qué te dedicas?» y «¿buen finde?» son la manera en que empiezan todas las demás conversaciones que ella tiene ahora mismo.</p>
+<p><strong>Una buena pregunta cambia las cosas porque demuestra algo poco común: que te interesas por ella, no solo por dar conversación.</strong> Y eso, créeme, se nota al instante.</p>
 <p>Aquí van 90 preguntas, ordenadas por situación, del primer mensaje al cara a cara donde todo se decide. Con un consejo que vale para las 90: es tu manera de escuchar la respuesta lo que marca la diferencia, mucho más que la pregunta en sí.</p>`,
   quickSummary: [
     "90 preguntas ordenadas por situación, del primer mensaje a saber si le gustas.",
@@ -29,7 +29,7 @@ const article: BlogArticleData = {
 <p><strong>Responde también a tus propias preguntas:</strong> Si le preguntas por su peor noche, sigue con la tuya, sobre todo si es ridícula. Es el intercambio lo que crea conexión, no la recogida de información. Y atreverte a contar algo que no te deja bien es precisamente lo que te hace distinto de las otras conversaciones que ella tiene ahora.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Preguntas a evitar, ya que estamos</p>
-<p>«¿Por qué estás soltera?» (la ha oído cien veces, y no tiene buena respuesta). «¿Cómo era tu ex?» (demasiado pronto, siempre). El sueldo, el peso, «¿buscas algo serio?» en el segundo mensaje... Ten en mente un principio simple: si la pregunta parece una criba de candidatas, mata la magia.</p>
+<p>«¿Por qué estás soltera?» (la ha oído cien veces, y no tiene buena respuesta). «¿Cómo era tu ex?» (demasiado pronto, siempre). El sueldo, el peso, «¿buscas algo serio?» en el segundo mensaje. Ten en mente un principio simple: si la pregunta parece una criba de candidatas, mata la magia.</p>
 </aside>
 <div><table><thead><tr><th>La regla</th><th>Por qué lo cambia todo</th></tr></thead><tbody>
 <tr><td>Una pregunta cada vez</td><td>Dos seguidas y se convierte en un formulario</td></tr>
@@ -42,7 +42,7 @@ const article: BlogArticleData = {
     {
       id: 'por-mensaje-para-arrancar',
       title: "Por mensaje o en una app, para arrancar (1-15)",
-      content: `<p>El objetivo aquí no es ser profundo, es ser fácil de responder y algo más interesante que los demás. Nada más.</p>
+      content: `<p>Aquí no hace falta ser profundo. Hay que ser fácil de responder, y algo más interesante que los demás. Nada más.</p>
 <ol>
 <li>¿Tu semana en dos emojis, y tengo derecho a preguntar por qué?</li>
 <li>¿Qué escuchas en bucle ahora mismo, sin hacer trampa?</li>
@@ -91,7 +91,7 @@ const article: BlogArticleData = {
     {
       id: 'para-hacerla-reir',
       title: "Para hacerla reír (36-50)",
-      content: `<p>La risa es el mejor detector de compatibilidad que existe. Y la ventaja de estas preguntas es que hacen gracia incluso cuando la respuesta es floja... porque lo que cuenta es la conversación de después.</p>
+      content: `<p>La risa es el mejor detector de compatibilidad que existe. Y la ventaja de estas preguntas es que hacen gracia incluso cuando la respuesta es floja, porque lo que cuenta es la conversación de después.</p>
 <ol start="36">
 <li>¿Cuál es tu teoría absurda que aun así defiendes un poco?</li>
 <li>¿Cuánto sobrevivirías en una película de terror, en serio?</li>
@@ -179,14 +179,14 @@ const article: BlogArticleData = {
       id: 'ahora-te-toca',
       title: "Y ahora te toca a ti",
       content: `<p>Una última cosa, y quizá la más importante. Estas 90 preguntas son un punto de partida, no un método mágico. La chica que tienes delante no espera un cuestionario perfecto: espera a alguien real, que escucha, que rebota, que se atreve a responder a sus propias preguntas sin quedarse siempre en el buen papel.</p>
-<p>Y si ya habláis todos los días, seguramente has notado que piensas en ella algo más de lo previsto... En algún momento la pregunta real deja de ser qué preguntarle: pasa a ser si te estás <a href="/es/test-estoy-enamorado/">enamorando sin darte cuenta</a>. Pasa más rápido de lo que se cree.</p>
+<p>Y si ya habláis todos los días, seguramente has notado que piensas en ella algo más de lo previsto. En algún momento la pregunta real deja de ser qué preguntarle: pasa a ser si te estás <a href="/es/test-estoy-enamorado/">enamorando sin darte cuenta</a>. Pasa más rápido de lo que se cree.</p>
 <div class="blog-cta">
 <p class="blog-cta-titre">¿Y ella qué siente?</p>
 <p class="blog-cta-texte">Sus retomas, sus detalles, cómo es cuando estás delante: una serie de preguntas repasa las señales que de verdad cuentan, las que se escapan cuando estás metido dentro. Resultado inmediato.</p>
 <a class="blog-cta-btn" href="/es/test-me-quiere-en-secreto/">Comprobar si le gusto</a>
 <p class="blog-cta-note">Gratis &middot; Sin registro &middot; 3 minutos</p>
 </div>
-<p>Y el día en que se convierta en tu novia, verás cambiar el registro: toman el relevo <a href="/es/preguntas-pareja/">las preguntas que se hacen en pareja</a>, y ya no se trata de brillar sino de construir. Ese día llevarás ventaja... porque ya sabrás escuchar.</p>
+<p>Y el día en que se convierta en tu novia, verás cambiar el registro: toman el relevo <a href="/es/preguntas-pareja/">las preguntas que se hacen en pareja</a>, y ya no se trata de brillar sino de construir. Ese día llevarás ventaja, porque ya sabrás escuchar.</p>
 <a href="/es/blog/preguntas-para-tu-crush/" class="blog-read-also"><span class="blog-read-also-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="blog-read-also-content"><span class="blog-read-also-label">Leer también</span><span class="blog-read-also-title">100 preguntas para hacerle a tu crush, del primer mensaje a la primera cita</span></span><svg class="blog-read-also-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>`,
     },
   ],
