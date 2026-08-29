@@ -141,7 +141,24 @@
     'most':           { prefix: 'most', engine: 'most', totalQ: 20, pool: 245, textOnly: true },
 
     // ── Parentalite quiz (2 players, same questions, explicit point values) ──
-    'parentalite':    { prefix: 'parentalite', engine: 'parentalite', totalQ: 24, pool: 24 },
+    // Test parentalite : deux formats sur le meme lot de vingt-quatre.
+    // ORDRE_PARENTALITE range les questions de la plus decisive a la moins
+    // decisive : les douze premieres suffisent a situer un couple (motivation,
+    // sante du couple, conflits, organisation, argent, nuits, valeurs, travail,
+    // nombre d'enfants, reaction a chaud, vie sociale), les douze suivantes
+    // affinent. La version courte s'arrete au douzieme et propose de continuer.
+    'parentalite':    { modesGrand: true,
+      // Les questions rangees de la plus decisive a la moins decisive. Les
+      // douze premieres composent la version courte ; l'ordre est porte par la
+      // page et recopie sur le format choisi.
+      ordre: [20, 1, 8, 4, 6, 3, 2, 5, 13, 16, 15, 9,
+              19, 7, 10, 12, 21, 14, 11, 18, 17, 22, 23, 24],
+      modes: [
+      { id: 'court',   emoji: '🍼', prefix: 'parentalite', engine: 'parentalite',
+        totalQ: 24, pool: 24, limite: 12 },
+      { id: 'complet', emoji: '👶', prefix: 'parentalite', engine: 'parentalite',
+        totalQ: 24, pool: 24 }
+    ] },
 
     // ── Emmenager quiz (same engine as parentalite) ──
     'emmenager':      { prefix: 'emmenager', engine: 'parentalite', totalQ: 20, pool: 20 },
@@ -332,6 +349,21 @@
   // ─── Pages à deux formats ────────────────────────────────
   // Les libellés du choix vivent avec les questions, sous le préfixe du quiz :
   // « genant.modeTestTitre », « genant.modeJeuDesc »…
+  // Range les questions selon une liste d'identifiants, puis melange a
+  // l'interieur du bloc de tete (les « limite » premieres) et du bloc de queue.
+  function ordonnerParPriorite(questions, ordre, limite) {
+    var rang = {};
+    for (var i = 0; i < ordre.length; i++) rang[ordre[i]] = i;
+    var triees = questions.slice().sort(function (a, b) {
+      var ra = (rang[a.id] === undefined) ? 9999 : rang[a.id];
+      var rb = (rang[b.id] === undefined) ? 9999 : rang[b.id];
+      return ra - rb;
+    });
+    if (!limite || limite >= triees.length) return QuizEngine.shuffleArray(triees);
+    return QuizEngine.shuffleArray(triees.slice(0, limite))
+      .concat(QuizEngine.shuffleArray(triees.slice(limite)));
+  }
+
   function texteMode(cfg, id, champ, repli) {
     var cle = cfg.prefix + '.mode' + id.charAt(0).toUpperCase() + id.slice(1) + champ;
     var v = QuizEngine.tgd(cle, null);
@@ -363,6 +395,9 @@
         for (var i = 0; i < racine.modes.length; i++) {
           if (racine.modes[i].id !== id) continue;
           config = racine.modes[i];
+          // L'ordre de priorite est declare une fois sur la page : les deux
+          // formats posent les memes questions, dans le meme ordre.
+          if (racine.ordre && !config.ordre) config.ordre = racine.ordre;
           poserRetourAuxModes(racine, lu('modesRetour', 'Changer de format'));
           initFromData();
           return;
@@ -645,7 +680,14 @@
 
     // Randomly select totalQ questions from pool if pool > totalQ
     var hasRandomPool = questions.length > config.totalQ;
-    if (config.stratifie) {
+    if (config.ordre && config.ordre.length) {
+      // Ordre de priorite fixe : les questions les plus decisives d'abord, pour
+      // qu'une version courte mesure bien ce qu'elle annonce. On melange a
+      // l'interieur de chaque bloc pour que deux parties ne se suivent pas
+      // dans le meme ordre, sans jamais faire remonter une question du second
+      // bloc dans le premier.
+      questions = ordonnerParPriorite(questions, config.ordre, config.limite || 0);
+    } else if (config.stratifie) {
       // Tirage stratifie : les questions posees couvrent toutes les dimensions
       // du bareme, pour que deux parties du meme couple mesurent la meme chose.
       questions = QuizEngine.tirageStratifieTester(questions, config.totalQ);
@@ -1650,13 +1692,16 @@
       });
     }
 
-    // Fixed score ranges for parentalite (out of 60 per player):
-    // r1: 0-19, r2: 20-34, r3: 35-47, r4: 48-60
+    // Paliers de verdict, en pourcentage du maximum atteignable. Ils etaient
+    // exprimes en points sur soixante alors que le test en compte soixante-douze
+    // (vingt-quatre questions a trois points) : personne au-dessus de soixante
+    // ne recevait de verdict. Le pourcentage regle ce cas et laisse la version
+    // courte, notee sur trente-six, tomber sur les memes paliers.
     if (results.length === 4) {
-      results[0].min = 0;  results[0].max = 19;
-      results[1].min = 20; results[1].max = 34;
-      results[2].min = 35; results[2].max = 47;
-      results[3].min = 48; results[3].max = 60;
+      results[0].minPct = 0;  results[0].maxPct = 31;
+      results[1].minPct = 32; results[1].maxPct = 57;
+      results[2].minPct = 58; results[2].maxPct = 79;
+      results[3].minPct = 80; results[3].maxPct = 100;
     }
 
     new QuizEngine.ParentaliteQuiz({
@@ -1664,7 +1709,8 @@
       questions: questions,
       results: results,
       prefix: cfg.prefix,
-      lang: lang
+      lang: lang,
+      limite: cfg.limite
     });
   }
 

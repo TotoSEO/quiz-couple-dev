@@ -1,84 +1,76 @@
 {
   "hero": {
-    "badge": "Gratuit \u2022 Sans inscription \u2022 10 min",
-    "title": "Test en ligne | \u00cates-vous pr\u00eat \u00e0 avoir des enfants ?",
-    "titleHighlight": "parentalit\u00e9",
-    "intro1": "Vous y pensez depuis quelques semaines. Peut-\u00eatre quelques mois. L\u2019id\u00e9e d\u2019un enfant revient dans vos conversations, dans vos silences aussi. Et puis un jour, la question tombe pour de bon : est-ce qu\u2019on est vraiment pr\u00eats ?",
-    "intro2": "Ce test de parentalit\u00e9 ne va pas vous donner une r\u00e9ponse binaire (personne ne le peut). Mais il va vous forcer, tous les deux, \u00e0 regarder les choses en face. 24 questions honn\u00eates sur votre couple, vos finances, votre mode de vie, vos peurs. R\u00e9pondez chacun de votre c\u00f4t\u00e9, comparez ensuite. C\u2019est souvent dans l\u2019\u00e9cart entre vos r\u00e9ponses que se cachent les vraies discussions \u00e0 avoir."
+    "badge": "Gratuit • Sans inscription • 5 ou 10 min",
+    "title": "Test en ligne | Êtes-vous prêt à avoir des enfants ?",
+    "titleHighlight": "prêt à avoir des enfants",
+    "jumpBtn": "Aller au test",
+    "intro1": "Vous y pensez depuis quelques semaines. Peut-être quelques mois. L’idée d’un enfant revient dans vos conversations, dans vos silences aussi. Et puis un jour, la question tombe pour de bon : est-ce qu’on est vraiment prêts ?",
+    "intro2": "Ce test de parentalité ne va pas vous donner une réponse binaire (personne ne le peut). Mais il va vous forcer, tous les deux, à regarder les choses en face. Douze questions honnêtes sur votre couple, vos finances, votre mode de vie et vos peurs, ou les vingt-quatre si vous voulez creuser. Répondez chacun de votre côté, comparez ensuite. C’est souvent dans l’écart entre vos réponses que se cachent les vraies discussions à avoir."
   },
   "quiz": {
-    "sectionTitle": "Faites le test de parentalit\u00e9 ici !"
+    "sectionTitle": "Faites le test de parentalité ici !"
   },
   "seo": {
-    "s1Title": "Questions de couple avant enfant : pourquoi c\u2019est si important d\u2019en parler",
-    "s1p1": "On conna\u00eet tous un couple qui a fait un b\u00e9b\u00e9 \"pour voir\". Spoiler : \u00e7a se passe rarement comme pr\u00e9vu. Et c\u2019est logique. Un enfant ne met pas un couple sur pause, il appuie sur acc\u00e9l\u00e9rer. Ce qui allait bien va mieux, ce qui grattait un peu devient une plaie ouverte.",
-    "s1p2": "Les <strong>questions \u00e0 se poser avant d\u2019avoir des enfants</strong> ne sont pas l\u00e0 pour refroidir votre envie. C\u2019est l\u2019inverse. Elles sont l\u00e0 pour vous assurer que votre envie repose sur du concret, pas sur un fantasme Instagram avec des bodies pastel et un berceau en rotin. La r\u00e9alit\u00e9 d\u2019un nouveau-n\u00e9, c\u2019est 3h de sommeil par nuit, des couches \u00e0 2h du matin et une libido qui prend des vacances (longues).",
-    "s1p3": "Selon une \u00e9tude publi\u00e9e dans le <em>Journal of Family Psychology</em>, environ 67% des couples constatent une baisse de satisfaction conjugale dans les 3 premi\u00e8res ann\u00e9es suivant la naissance d\u2019un enfant. Ce chiffre n\u2019est pas l\u00e0 pour vous faire peur. Il est l\u00e0 pour dire une chose simple : <strong>les couples qui s\u2019en sortent le mieux sont ceux qui avaient anticip\u00e9 les difficult\u00e9s</strong>. Pas ceux qui avaient le plus d\u2019argent ou le plus grand appart. Ceux qui avaient parl\u00e9. Vraiment parl\u00e9.",
-
-    "s2Title": "Les 5 sujets que chaque couple devrait aborder avant de faire un b\u00e9b\u00e9",
-    "s2r1Title": "L\u2019argent",
-    "s2r1Text": "Un enfant co\u00fbte en moyenne entre 500 et 800 \u20ac par mois la premi\u00e8re ann\u00e9e en France. Couches, lait, garde, v\u00eatements qu\u2019il porte 3 semaines avant d\u2019\u00eatre trop petits\u2026 Avoir un matelas financier, m\u00eame modeste, change tout. La pr\u00e9carit\u00e9 financi\u00e8re est l\u2019un des premiers facteurs de tension dans les jeunes familles.",
+    "s1Title": "Questions de couple avant enfant : pourquoi c’est si important d’en parler",
+    "s1p1": "On connaît tous un couple qui a fait un bébé \"pour voir\". Spoiler : ça se passe rarement comme prévu. Et c’est logique. Un enfant ne met pas un couple sur pause, il appuie sur accélérer. Ce qui allait bien va mieux, ce qui grattait un peu devient une plaie ouverte.",
+    "s1p2": "Les <strong>questions à se poser avant d’avoir des enfants</strong> ne sont pas là pour refroidir votre envie. C’est l’inverse. Elles sont là pour vous assurer que votre envie repose sur du concret, pas sur un fantasme Instagram avec des bodies pastel et un berceau en rotin. La réalité d’un nouveau-né, c’est 3h de sommeil par nuit, des couches à 2h du matin et une libido qui prend des vacances (longues).",
+    "s1p3": "Selon une étude publiée dans le <em>Journal of Family Psychology</em>, environ 67% des couples constatent une baisse de satisfaction conjugale dans les 3 premières années suivant la naissance d’un enfant. Ce chiffre n’est pas là pour vous faire peur. Il est là pour dire une chose simple : <strong>les couples qui s’en sortent le mieux sont ceux qui avaient anticipé les difficultés</strong>. Pas ceux qui avaient le plus d’argent ou le plus grand appart. Ceux qui avaient parlé. Vraiment parlé.",
+    "s2Title": "Les 5 sujets que chaque couple devrait aborder avant de faire un bébé",
+    "s2r1Title": "L’argent",
+    "s2r1Text": "Un enfant coûte en moyenne entre 500 et 800 € par mois la première année en France. Couches, lait, garde, vêtements qu’il porte 3 semaines avant d’être trop petits… Avoir un matelas financier, même modeste, change tout. La précarité financière est l’un des premiers facteurs de tension dans les jeunes familles.",
     "s2r2Title": "La charge parentale",
-    "s2r2Text": "C\u2019est LE sujet qui fait ou d\u00e9fait les couples apr\u00e8s l\u2019arriv\u00e9e d\u2019un b\u00e9b\u00e9. Qui se l\u00e8ve la nuit ? Qui g\u00e8re les rendez-vous m\u00e9dicaux ? En 2024, les femmes assument encore 70% des t\u00e2ches domestiques et parentales en France (INSEE). En parler <strong>avant</strong>, c\u2019est non n\u00e9gociable.",
-    "s2r3Title": "Le style \u00e9ducatif",
-    "s2r3Text": "Parents stricts vs famille cool o\u00f9 tout se n\u00e9gociait ? Ces diff\u00e9rences deviennent des lignes de fracture quand il faut d\u00e9cider si on pose un cadre strict ou si on laisse de la libert\u00e9. Parlez-en maintenant.",
-    "s2r4Title": "L\u2019impact sur le couple",
-    "s2r4Text": "L\u2019amour seul ne suffit pas \u00e0 encaisser le choc des premiers mois. Il faut aussi de l\u2019organisation, de la patience, et une capacit\u00e9 \u00e0 se voir au plus moche sans que \u00e7a d\u00e9truise tout.",
+    "s2r2Text": "C’est LE sujet qui fait ou défait les couples après l’arrivée d’un bébé. Qui se lève la nuit ? Qui gère les rendez-vous médicaux ? En 2024, les femmes assument encore 70% des tâches domestiques et parentales en France (INSEE). En parler <strong>avant</strong>, c’est non négociable.",
+    "s2r3Title": "Le style éducatif",
+    "s2r3Text": "Parents stricts vs famille cool où tout se négociait ? Ces différences deviennent des lignes de fracture quand il faut décider si on pose un cadre strict ou si on laisse de la liberté. Parlez-en maintenant.",
+    "s2r4Title": "L’impact sur le couple",
+    "s2r4Text": "L’amour seul ne suffit pas à encaisser le choc des premiers mois. Il faut aussi de l’organisation, de la patience, et une capacité à se voir au plus moche sans que ça détruise tout.",
     "s2r5Title": "Les peurs",
-    "s2r5Text": "Peur de ne pas \u00eatre \u00e0 la hauteur. Peur de reproduire les erreurs de ses parents. Peur de perdre sa libert\u00e9. Ces peurs sont normales. Ce qui ne l\u2019est pas, c\u2019est de les ignorer. Une peur exprim\u00e9e perd la moiti\u00e9 de son pouvoir.",
-
-    "s2Tip": "Astuce : faites chacun la liste de vos 3 principales inqui\u00e9tudes li\u00e9es \u00e0 la parentalit\u00e9, puis comparez-les. Les \u00e9carts r\u00e9v\u00e8lent souvent les conversations les plus importantes \u00e0 avoir.",
-
-    "s3Title": "Comment savoir si on est pr\u00eat \u00e0 avoir un enfant : les vrais signaux",
-    "s3p1": "Spoiler : le \"bon moment\" parfait n\u2019existe pas. Si vous attendez d\u2019avoir tout align\u00e9 (finances, carri\u00e8re, logement, maturit\u00e9 \u00e9motionnelle, lune croissante et mercure en r\u00e9trograde), vous n\u2019y arriverez jamais. Mais il y a quand m\u00eame des signaux qui ne trompent pas.",
-    "s3p2": "Vous \u00eates probablement pr\u00eats si votre couple est dans une bonne dynamique, si vous arrivez \u00e0 g\u00e9rer les conflits sans vous d\u00e9truire mutuellement, si l\u2019envie vient de vous deux (et pas de la pression sociale), et si vous avez au minimum discut\u00e9 des sujets mentionn\u00e9s plus haut. \u00c0 l\u2019inverse, si votre couple bat de l\u2019aile, si vous esp\u00e9rez qu\u2019un b\u00e9b\u00e9 va tout arranger, ou si l\u2019un de vous n\u2019est pas vraiment partant\u2026 attendez.",
-    "s3p3": "Un test de parentalit\u00e9 comme celui que vous venez de faire ne remplace pas un vrai travail d\u2019introspection (et encore moins un accompagnement pro si besoin). Mais c\u2019est un bon point de d\u00e9part pour ouvrir le dialogue.",
-
-    "s3Quote": "\u00catre pr\u00eat, ce n\u2019est pas ne plus avoir peur. C\u2019est avoir assez confiance en son couple pour avancer malgr\u00e9 la peur.",
-
-    "s4Title": "L\u2019erreur la plus courante : ne pas parler du \"apr\u00e8s\"",
-    "s4p1": "On parle beaucoup du \"est-ce qu\u2019on fait un b\u00e9b\u00e9 ?\", on parle de la grossesse, de l\u2019accouchement, du pr\u00e9nom. Et puis le b\u00e9b\u00e9 arrive. Et l\u00e0, c\u2019est le trou noir. Personne n\u2019avait pr\u00e9vu que le quotidien ressemblerait \u00e0 \u00e7a.",
-    "s4p2": "Le \"apr\u00e8s\", c\u2019est les 6 premiers mois o\u00f9 vous allez fonctionner en mode survie. C\u2019est la m\u00e8re qui se sent seule m\u00eame si le p\u00e8re est l\u00e0. C\u2019est le p\u00e8re qui ne sait pas quoi faire parce que personne ne lui a appris. C\u2019est les disputes \u00e0 3h du mat\u2019 parce que le b\u00e9b\u00e9 pleure et que tout le monde est \u00e0 bout.",
-    "s4p3": "On ne dit pas \u00e7a pour dramatiser. On dit \u00e7a parce que les couples qui en parlent <strong>avant</strong> traversent cette p\u00e9riode plus sereinement. Demandez-vous : qui fera quoi pendant le cong\u00e9 maternit\u00e9 ? Est-ce que le co-parent prendra un cong\u00e9 aussi ? Comment on g\u00e8re les visites de la famille ? Est-ce qu\u2019on s\u2019autorise \u00e0 demander de l\u2019aide ? Toutes ces <strong>questions \u00e0 se poser en couple avant un enfant</strong> paraissent banales sur le papier. En pratique, elles font une diff\u00e9rence \u00e9norme.",
-    "s4p4": "Si <a href=\"/tester-son-couple/\">votre couple est solide</a>, ces d\u00e9fis seront des \u00e9preuves que vous traverserez ensemble. Sinon, c\u2019est le moment de renforcer vos bases avant d\u2019ajouter un b\u00e9b\u00e9 dans l\u2019\u00e9quation.",
-
-    "s4Tip": "Exercice pratique : passez une journ\u00e9e enti\u00e8re avec un b\u00e9b\u00e9 (neveu, ni\u00e8ce, enfant d\u2019amis). Pas pour jouer \u00e0 la famille parfaite, mais pour observer comment vous g\u00e9rez la fatigue, l\u2019imprévu et la r\u00e9partition des t\u00e2ches ensemble.",
-
-    "s5Title": "La question du timing : existe-t-il un \u00e2ge id\u00e9al ?",
-    "s5p1": "M\u00e9dicalement, la fertilit\u00e9 f\u00e9minine commence \u00e0 d\u00e9cliner significativement apr\u00e8s 35 ans. C\u2019est un fait biologique, pas un jugement. C\u00f4t\u00e9 masculin, la qualit\u00e9 du sperme baisse aussi avec l\u2019\u00e2ge, m\u00eame si on en parle moins.",
-    "s5p2": "Mais le timing, ce n\u2019est pas que la biologie. C\u2019est aussi votre stabilit\u00e9 \u00e9motionnelle, votre maturit\u00e9 relationnelle, votre situation mat\u00e9rielle. Certains couples de 25 ans sont plus pr\u00eats que d\u2019autres \u00e0 38. \u00catre jeune parent, c\u2019est avoir l\u2019\u00e9nergie physique mais parfois moins de recul. \u00catre parent plus tard, c\u2019est l\u2019inverse. Il n\u2019y a pas de formule magique.",
-    "s5p3": "Ce qu\u2019on sait avec certitude, c\u2019est que les couples qui font un enfant parce qu\u2019ils le veulent vraiment (et pas \"avant qu\u2019il soit trop tard\", pas \"parce que tout le monde le fait\") vivent mieux la transition vers la parentalit\u00e9. Le d\u00e9sir sinc\u00e8re et partag\u00e9, c\u2019est le meilleur signal de tous.",
-
-    "s6Title": "Refaire le test dans 6 mois : pourquoi c\u2019est une bonne id\u00e9e",
-    "s6p1": "Votre score aujourd\u2019hui, c\u2019est une photo \u00e0 un instant T. Vos r\u00e9ponses vont \u00e9voluer. Vos finances vont peut-\u00eatre changer, votre situation professionnelle aussi. Votre couple va traverser de nouvelles \u00e9preuves (ou au contraire se renforcer). C\u2019est pour \u00e7a qu\u2019on vous recommande de refaire ce test de parentalit\u00e9 dans quelques mois.",
-    "s6p2": "L\u2019id\u00e9e, c\u2019est pas d\u2019attendre le score parfait. C\u2019est de voir si vos r\u00e9ponses bougent dans le bon sens. Si les sujets qui bloquaient se d\u00e9bloquent. Et surtout, si l\u2019envie grandit ou s\u2019estompe, parce que les deux sont valides.",
-    "s6p3": "Entre-temps, la parentalit\u00e9 c\u2019est aussi une question de compatibilit\u00e9 au quotidien. Savoir si vous avez <a href=\"/test-points-communs-couples/\">suffisamment de points communs</a> pour construire un projet aussi gros, \u00e7a compte. Et si le mariage fait aussi partie de la r\u00e9flexion, \u00e7a vaut le coup de v\u00e9rifier que vous \u00eates <a href=\"/test-couple-mariage/\">align\u00e9s sur cette question-l\u00e0 aussi</a>.",
-
-    "faqTitle": "Questions fr\u00e9quentes sur la parentalit\u00e9 et le couple",
+    "s2r5Text": "Peur de ne pas être à la hauteur. Peur de reproduire les erreurs de ses parents. Peur de perdre sa liberté. Ces peurs sont normales. Ce qui ne l’est pas, c’est de les ignorer. Une peur exprimée perd la moitié de son pouvoir.",
+    "s2Tip": "Astuce : faites chacun la liste de vos 3 principales inquiétudes liées à la parentalité, puis comparez-les. Les écarts révèlent souvent les conversations les plus importantes à avoir.",
+    "s3Title": "Comment savoir si on est prêt à avoir un enfant : les vrais signaux",
+    "s3p1": "Spoiler : le \"bon moment\" parfait n’existe pas. Si vous attendez d’avoir tout aligné (finances, carrière, logement, maturité émotionnelle, lune croissante et mercure en rétrograde), vous n’y arriverez jamais. Mais il y a quand même des signaux qui ne trompent pas.",
+    "s3p2": "Vous êtes probablement prêts si votre couple est dans une bonne dynamique, si vous arrivez à gérer les conflits sans vous détruire mutuellement, si l’envie vient de vous deux (et pas de la pression sociale), et si vous avez au minimum discuté des sujets mentionnés plus haut. À l’inverse, si votre couple bat de l’aile, si vous espérez qu’un bébé va tout arranger, ou si l’un de vous n’est pas vraiment partant… attendez.",
+    "s3p3": "Un test de parentalité comme celui que vous venez de faire ne remplace pas un vrai travail d’introspection (et encore moins un accompagnement pro si besoin). Mais c’est un bon point de départ pour ouvrir le dialogue.",
+    "s3Quote": "Être prêt, ce n’est pas ne plus avoir peur. C’est avoir assez confiance en son couple pour avancer malgré la peur.",
+    "s4Title": "L’erreur la plus courante : ne pas parler du \"après\"",
+    "s4p1": "On parle beaucoup du \"est-ce qu’on fait un bébé ?\", on parle de la grossesse, de l’accouchement, du prénom. Et puis le bébé arrive. Et là, c’est le trou noir. Personne n’avait prévu que le quotidien ressemblerait à ça.",
+    "s4p2": "Le \"après\", c’est les 6 premiers mois où vous allez fonctionner en mode survie. C’est la mère qui se sent seule même si le père est là. C’est le père qui ne sait pas quoi faire parce que personne ne lui a appris. C’est les disputes à 3h du mat’ parce que le bébé pleure et que tout le monde est à bout.",
+    "s4p3": "On ne dit pas ça pour dramatiser. On dit ça parce que les couples qui en parlent <strong>avant</strong> traversent cette période plus sereinement. Demandez-vous : qui fera quoi pendant le congé maternité ? Est-ce que le co-parent prendra un congé aussi ? Comment on gère les visites de la famille ? Est-ce qu’on s’autorise à demander de l’aide ? Toutes ces <strong>questions à se poser en couple avant un enfant</strong> paraissent banales sur le papier. En pratique, elles font une différence énorme.",
+    "s4p4": "Si <a href=\"/tester-son-couple/\">votre couple est solide</a>, ces défis seront des épreuves que vous traverserez ensemble. Sinon, c’est le moment de renforcer vos bases avant d’ajouter un bébé dans l’équation.",
+    "s4Tip": "Exercice pratique : passez une journée entière avec un bébé (neveu, nièce, enfant d’amis). Pas pour jouer à la famille parfaite, mais pour observer comment vous gérez la fatigue, l’imprévu et la répartition des tâches ensemble.",
+    "s5Title": "La question du timing : existe-t-il un âge idéal ?",
+    "s5p1": "Médicalement, la fertilité féminine commence à décliner significativement après 35 ans. C’est un fait biologique, pas un jugement. Côté masculin, la qualité du sperme baisse aussi avec l’âge, même si on en parle moins.",
+    "s5p2": "Mais le timing, ce n’est pas que la biologie. C’est aussi votre stabilité émotionnelle, votre maturité relationnelle, votre situation matérielle. Certains couples de 25 ans sont plus prêts que d’autres à 38. Être jeune parent, c’est avoir l’énergie physique mais parfois moins de recul. Être parent plus tard, c’est l’inverse. Il n’y a pas de formule magique.",
+    "s5p3": "Ce qu’on sait avec certitude, c’est que les couples qui font un enfant parce qu’ils le veulent vraiment (et pas \"avant qu’il soit trop tard\", pas \"parce que tout le monde le fait\") vivent mieux la transition vers la parentalité. Le désir sincère et partagé, c’est le meilleur signal de tous.",
+    "s6Title": "Refaire le test dans 6 mois : pourquoi c’est une bonne idée",
+    "s6p1": "Votre score aujourd’hui, c’est une photo à un instant T. Vos réponses vont évoluer. Vos finances vont peut-être changer, votre situation professionnelle aussi. Votre couple va traverser de nouvelles épreuves (ou au contraire se renforcer). C’est pour ça qu’on vous recommande de refaire ce test de parentalité dans quelques mois.",
+    "s6p2": "L’idée, c’est pas d’attendre le score parfait. C’est de voir si vos réponses bougent dans le bon sens. Si les sujets qui bloquaient se débloquent. Et surtout, si l’envie grandit ou s’estompe, parce que les deux sont valides.",
+    "s6p3": "Entre-temps, la parentalité c’est aussi une question de compatibilité au quotidien. Savoir si vous avez <a href=\"/test-points-communs-couples/\">suffisamment de points communs</a> pour construire un projet aussi gros, ça compte. Et si le mariage fait aussi partie de la réflexion, ça vaut le coup de vérifier que vous êtes <a href=\"/test-couple-mariage/\">alignés sur cette question-là aussi</a>.",
+    "faqTitle": "Questions fréquentes sur la parentalité et le couple",
     "faq": [
       {
-        "q": "Est-ce normal d\u2019avoir peur d\u2019avoir un enfant ?",
-        "a": "Oui, compl\u00e8tement. Avoir peur ne veut pas dire ne pas \u00eatre pr\u00eat. \u00c7a veut dire que vous mesurez l\u2019ampleur de ce qui vous attend, et c\u2019est plut\u00f4t sain. Le vrai probl\u00e8me, ce n\u2019est pas d\u2019avoir peur. C\u2019est de ne pas pouvoir en parler avec votre partenaire."
+        "q": "Est-ce normal d’avoir peur d’avoir un enfant ?",
+        "a": "Oui, complètement. Avoir peur ne veut pas dire ne pas être prêt. Ça veut dire que vous mesurez l’ampleur de ce qui vous attend, et c’est plutôt sain. Le vrai problème, ce n’est pas d’avoir peur. C’est de ne pas pouvoir en parler avec votre partenaire."
       },
       {
-        "q": "Mon partenaire ne veut pas d\u2019enfant et moi oui, comment faire ?",
-        "a": "C\u2019est l\u2019un des d\u00e9saccords les plus douloureux dans un couple, parce qu\u2019il n\u2019y a pas de compromis \u00e9vident. La premi\u00e8re \u00e9tape, c\u2019est de comprendre pourquoi. Est-ce un \"pas maintenant\" ou un \"jamais\" ? Parlez-en sans pression, id\u00e9alement avec l\u2019aide d\u2019un th\u00e9rapeute de couple."
+        "q": "Mon partenaire ne veut pas d’enfant et moi oui, comment faire ?",
+        "a": "C’est l’un des désaccords les plus douloureux dans un couple, parce qu’il n’y a pas de compromis évident. La première étape, c’est de comprendre pourquoi. Est-ce un \"pas maintenant\" ou un \"jamais\" ? Parlez-en sans pression, idéalement avec l’aide d’un thérapeute de couple."
       },
       {
-        "q": "Un b\u00e9b\u00e9 peut-il sauver un couple en crise ?",
-        "a": "Non. C\u2019est un mythe dangereux. Un b\u00e9b\u00e9 amplifie les dynamiques existantes. Si votre couple va bien, un enfant va probablement renforcer votre lien. Si votre couple est en difficult\u00e9, un b\u00e9b\u00e9 va ajouter du stress. Avant de penser b\u00e9b\u00e9, v\u00e9rifiez que <a href=\"/test-couple-toxique/\">votre relation n\u2019a pas des traits toxiques</a>."
+        "q": "Un bébé peut-il sauver un couple en crise ?",
+        "a": "Non. C’est un mythe dangereux. Un bébé amplifie les dynamiques existantes. Si votre couple va bien, un enfant va probablement renforcer votre lien. Si votre couple est en difficulté, un bébé va ajouter du stress. Avant de penser bébé, vérifiez que <a href=\"/test-couple-toxique/\">votre relation n’a pas des traits toxiques</a>."
       },
       {
-        "q": "\u00c0 partir de quel \u00e2ge est-on trop vieux pour avoir un enfant ?",
-        "a": "Il n\u2019y a pas de r\u00e9ponse universelle. La m\u00e9decine reproductive a repouss\u00e9 les limites biologiques (PMA, cong\u00e9lation d\u2019ovocytes\u2026), mais les grossesses tardives comportent statistiquement plus de risques. Ce qui compte, c\u2019est de prendre cette d\u00e9cision avec votre m\u00e9decin et votre partenaire."
+        "q": "À partir de quel âge est-on trop vieux pour avoir un enfant ?",
+        "a": "Il n’y a pas de réponse universelle. La médecine reproductive a repoussé les limites biologiques (PMA, congélation d’ovocytes…), mais les grossesses tardives comportent statistiquement plus de risques. Ce qui compte, c’est de prendre cette décision avec votre médecin et votre partenaire."
       },
       {
         "q": "Comment aborder le sujet des enfants avec mon/ma partenaire ?",
-        "a": "\u00c9vitez le \"faut qu\u2019on parle\" dramatique un dimanche soir. Amenez le sujet naturellement, dans un moment calme. Vous pouvez m\u00eame utiliser ce test comme pr\u00e9texte : \"Tiens, j\u2019ai trouv\u00e9 un test de parentalit\u00e9 en ligne, on le fait ensemble ?\"."
+        "a": "Évitez le \"faut qu’on parle\" dramatique un dimanche soir. Amenez le sujet naturellement, dans un moment calme. Vous pouvez même utiliser ce test comme prétexte : \"Tiens, j’ai trouvé un test de parentalité en ligne, on le fait ensemble ?\"."
       },
       {
-        "q": "Combien co\u00fbte un enfant la premi\u00e8re ann\u00e9e en France ?",
-        "a": "En moyenne, comptez entre 6 000 et 10 000 \u20ac la premi\u00e8re ann\u00e9e, hors frais de garde (qui peuvent facilement doubler la facture). Les postes les plus lourds : couches (environ 600-800 \u20ac/an), alimentation, v\u00eatements, \u00e9quipement et frais m\u00e9dicaux non rembours\u00e9s."
+        "q": "Combien coûte un enfant la première année en France ?",
+        "a": "En moyenne, comptez entre 6 000 et 10 000 € la première année, hors frais de garde (qui peuvent facilement doubler la facture). Les postes les plus lourds : couches (environ 600-800 €/an), alimentation, vêtements, équipement et frais médicaux non remboursés."
       }
     ]
   }

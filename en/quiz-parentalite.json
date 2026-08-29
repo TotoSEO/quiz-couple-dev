@@ -1,10 +1,11 @@
 {
   "hero": {
-    "badge": "Free \u2022 No signup \u2022 10 min",
+    "badge": "Free • No signup • 5 or 10 min",
     "title": "Online Test | Are You Ready to Have Children?",
-    "titleHighlight": "readiness",
+    "titleHighlight": "Ready to Have Children",
+    "jumpBtn": "Go to the test",
     "intro1": "You've been thinking about it for a few weeks. Maybe a few months. The idea of a child keeps coming back in your conversations, and in your silences too. And then one day, the question hits for real: are we actually ready?",
-    "intro2": "This parenthood readiness test won't give you a yes-or-no answer (nobody can). But it will force both of you to face things honestly. 24 straight-up questions about your relationship, your finances, your lifestyle, your fears. Answer separately, then compare. It's often in the gap between your answers that the real conversations are hiding."
+    "intro2": "This parenthood readiness test won't give you a yes-or-no answer (nobody can). But it will force both of you to face things honestly. Twelve straight-up questions about your relationship, your finances, your lifestyle and your fears, or all twenty-four if you want to dig. Answer separately, then compare. It's often in the gap between your answers that the real conversations are hiding."
   },
   "quiz": {
     "sectionTitle": "Take the parenthood readiness test here!"
@@ -14,7 +15,6 @@
     "s1p1": "We all know a couple who had a baby \"to see what happens.\" Spoiler: it rarely goes as planned. And it makes sense. A child doesn't put your relationship on pause, it hits fast-forward. What was going well gets better, what was slightly irritating becomes an open wound.",
     "s1p2": "The <strong>questions to ask before having children</strong> aren't there to cool down your desire. It's the opposite. They're there to make sure your desire is grounded in reality, not in an Instagram fantasy of pastel onesies and rattan cribs. The reality of a newborn is 3 hours of sleep a night, diaper changes at 2 AM, and a libido that goes on vacation (a long one).",
     "s1p3": "According to a study published in the <em>Journal of Family Psychology</em>, about 67% of couples experience a decline in relationship satisfaction within the first 3 years after a child's birth. That number isn't there to scare you. It's there to say one simple thing: <strong>the couples who do best are those who anticipated the difficulties</strong>. Not the ones with the most money or the biggest apartment. The ones who talked. Really talked.",
-
     "s2Title": "The 5 topics every couple should discuss before having a baby",
     "s2r1Title": "Money",
     "s2r1Text": "A child costs on average between $500 and $800 per month in the first year. Diapers, formula, childcare, clothes they outgrow in 3 weeks... Having a financial cushion, even a modest one, changes everything. Financial strain is one of the leading causes of tension in young families.",
@@ -27,32 +27,25 @@
     "s2r5Title": "Fears",
     "s2r5Text": "Fear of not being good enough. Fear of repeating your parents' mistakes. Fear of losing your freedom, your identity. These fears are normal. What's not normal is ignoring them. A fear expressed loses half its power.",
     "s2Tip": "Try this: each of you writes down your 3 biggest concerns about parenthood, then compare them. The gaps often reveal the most important conversations to have.",
-
     "s3Title": "How to know if you're ready for a child: the real signs",
     "s3p1": "Spoiler: the \"perfect moment\" doesn't exist. If you wait until everything is aligned (finances, career, housing, emotional maturity, waxing moon, and Mercury in retrograde), you'll never get there. But there are signs that don't lie.",
     "s3p2": "You're probably ready if your relationship is in a good place, if you can handle conflicts without destroying each other, if the desire comes from both of you (and not from social pressure), and if you've at least discussed the topics mentioned above. Conversely, if your relationship is shaky, if you're hoping a baby will fix everything, or if one of you isn't really on board... wait.",
     "s3p3": "A parenthood readiness test like the one you just took doesn't replace real introspection (and certainly not professional guidance if needed). But it's a good starting point to open the dialogue.",
-
     "s3Quote": "Being ready doesn't mean having no fear. It means trusting your relationship enough to move forward despite the fear.",
-
     "s4Title": "The most common mistake: not talking about the \"after\"",
     "s4p1": "People talk a lot about \"should we have a baby?\", about the pregnancy, the delivery, the name. And then the baby arrives. And it's a black hole. Nobody predicted that daily life would look like this.",
     "s4p2": "The \"after\" is the first 6 months where you'll operate in survival mode. It's the mother feeling alone even though the father is there. It's the father not knowing what to do because nobody taught him. It's the arguments at 3 AM because the baby is crying and everyone is at their breaking point.",
     "s4p3": "We're not saying this to be dramatic. We're saying it because couples who talk about this <strong>beforehand</strong> get through this period more smoothly. Ask yourselves: who does what during maternity leave? Will the co-parent take leave too? How do we handle family visits? Do we allow ourselves to ask for help? All these <strong>questions to ask as a couple before having a child</strong> seem trivial on paper. In practice, they make an enormous difference.",
     "s4p4": "If <a href=\"/en/couple-compatibility-test/\">your relationship is solid</a>, these challenges will be trials you weather together. If not, now is the time to strengthen your foundation before adding a baby to the equation.",
-
     "s4Tip": "Practical exercise: spend a full day with a baby (nephew, niece, friend's child). Not to play perfect family, but to observe how you handle exhaustion, the unexpected, and dividing tasks together.",
-
     "s5Title": "The timing question: is there an ideal age?",
     "s5p1": "Medically, female fertility begins to decline significantly after age 35. That's a biological fact, not a judgment. On the male side, sperm quality also decreases with age, even though it's discussed less often.",
     "s5p2": "But timing isn't just about biology. It's also about your emotional stability, your relational maturity, your material circumstances. Some couples at 25 are more ready than others at 38. Being a young parent means having physical energy but sometimes less perspective. Being an older parent is the opposite. There's no magic formula.",
     "s5p3": "What we know for certain is that couples who have a child because they truly want to (and not \"before it's too late,\" not \"because everyone else is\") navigate the transition to parenthood better. A sincere, shared desire is the best sign of all.",
-
     "s6Title": "Retaking the test in 6 months: why it's a good idea",
     "s6p1": "Your score today is a snapshot of a specific moment. Your answers will evolve. Your finances may change, your career situation too. Your relationship will face new challenges (or conversely, grow stronger). That's why we recommend retaking this parenthood readiness test in a few months.",
     "s6p2": "The point isn't to wait for a perfect score. It's to see if your answers are moving in the right direction. If the topics that were blocking you are getting unblocked. And above all, if the desire is growing or fading, because both are valid.",
     "s6p3": "In the meantime, parenthood is also a question of day-to-day compatibility. Knowing whether you have <a href=\"/en/couple-common-points-test/\">enough in common</a> to build a project this big matters. And if marriage is also part of the conversation, it's worth checking that you're <a href=\"/en/marriage-compatibility-test/\">aligned on that question too</a>.",
-
     "faqTitle": "Frequently asked questions about parenthood and relationships",
     "faq": [
       {
