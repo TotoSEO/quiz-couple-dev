@@ -2,13 +2,12 @@
   "hero": {
     "badge": "Gratis • Sin registro • 5 min",
     "title": "Test de pareja: ¿cuán fuerte es vuestra relación?",
-    "description": "20 preguntas para medir la solidez de vuestra relación. Los dos en el mismo móvil o cada uno por turnos: lo elegís al empezar.",
+    "description": "20 preguntas para medir la solidez de vuestra relación. Los dos en el mismo móvil o cada uno por turnos, elegid el formato que queréis jugar.",
     "duration": "5 minutos",
     "players": "2 jugadores",
     "questions": "20 preguntas",
     "titleHighlight": "vuestra relación",
-    "intro1": "¿Os preguntáis <strong>dónde se encuentra realmente vuestra relación</strong>? Este test de pareja gratuito os permite hacer balance juntos, con total honestidad. En solo 20 preguntas, descubrid vuestros puntos fuertes, vuestras diferencias y los temas que merecen vuestra atención.",
-    "intro2": "Llevéis juntos unos meses o varios años, dedicar veinte preguntas a compararos es una forma estupenda de tomar distancia y abrir conversaciones que no surgirían solas."
+    "intro1": "Llevéis juntos unos meses o varios años, un pequeño test para compararos es una forma estupenda de tomar distancia y abrir temas que no se os ocurriría sacar sin más."
   },
   "section1": {
     "title": "¿Qué es un test de pareja y para qué sirve?",

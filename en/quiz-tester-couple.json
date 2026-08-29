@@ -2,13 +2,12 @@
   "hero": {
     "badge": "Free • No signup • 5 min",
     "title": "Relationship test: how strong is your couple?",
-    "description": "20 questions to measure how solid your relationship is. Together on one phone or each in turn: you choose at the start.",
+    "description": "20 questions to measure how solid your relationship is. Together on one phone or each in turn, pick the format you want to play.",
     "duration": "5 minutes",
     "players": "2 players",
     "questions": "20 questions",
     "titleHighlight": "your couple",
-    "intro1": "Wondering <strong>where your relationship really stands</strong>? This free couple test lets you take stock together, with complete honesty. In just 20 questions, discover your strengths, your differences, and the topics that deserve your attention.",
-    "intro2": "Whether you've been together for a few months or for years, taking twenty questions to compare yourselves is a great way to step back and open up conversations you wouldn't start on your own."
+    "intro1": "Whether you've been together for a few months or for years, a small test to compare yourselves is a great way to step back and open up subjects you wouldn't necessarily think of bringing up!"
   },
   "section1": {
     "title": "What is a couple test and what is it for?",

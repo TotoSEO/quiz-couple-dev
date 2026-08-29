@@ -2,13 +2,12 @@
   "hero": {
     "badge": "Gratuit • Sans inscription • 5 min",
     "title": "Test de couple : évaluez la solidité de votre relation",
-    "description": "20 questions pour mesurer la solidité de votre relation. À deux sur le même téléphone ou chacun son tour : vous choisissez au départ.",
+    "description": "20 questions pour mesurer la solidité de votre relation. À deux sur le même téléphone ou chacun son tour, choisissez le format que vous souhaitez jouer.",
     "duration": "5 minutes",
     "players": "2 joueurs",
     "questions": "20 questions",
     "titleHighlight": "votre relation",
-    "intro1": "Vous vous demandez <strong>où en est votre couple</strong> ? Ce test de couple gratuit vous permet de faire le point ensemble, sans tabou. En 20 questions, découvrez vos points forts, vos différences, et les sujets qui méritent votre attention.",
-    "intro2": "Que vous soyez ensemble depuis quelques mois ou depuis des années, prendre vingt questions pour vous comparer est un excellent moyen de prendre du recul et d'ouvrir le dialogue sur des sujets qu'on ne pense pas à aborder spontanément."
+    "intro1": "Que vous soyez ensemble depuis quelques mois ou depuis des années, ce petit test pour vous comparer est un excellent moyen de prendre du recul et d'ouvrir le dialogue sur des sujets qu'on ne pense pas forcément à aborder !"
   },
   "section1": {
     "title": "Qu'est-ce qu'un test de couple et à quoi ça sert ?",

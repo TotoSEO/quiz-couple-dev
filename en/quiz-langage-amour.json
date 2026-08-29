@@ -3,6 +3,7 @@
     "badge": "5 Languages • 30 questions • 5 min",
     "title": "The 5 love languages: find yours in 30 questions",
     "titleHighlight": "5 love languages",
+    "jumpBtn": "Go to the test",
     "description": "30 questions to identify how you express and receive love. A test based on Gary Chapman's 5 Love Languages theory."
   },
   "intro": {
@@ -28,7 +29,7 @@
     "lang3Text": "The Gifts love language isn't about materialism. It's about the <strong class=\"text-foreground\">symbolism behind the gesture</strong>: someone thought of you, took the time to choose something that truly fits you. For these people, a gift is physical proof that they're on their partner's mind. The absence of gifts or forgetting important dates can feel like a deep lack of interest.",
     "lang3Examples": "Real-life examples: a small gift picked up during errands, flowers for no particular reason, an object that recalls a shared memory, a personalized gift for an anniversary, a handwritten letter.",
     "lang4Title": "Quality Time",
-    "lang4Text": "People who value Quality Time need <strong class=\"text-foreground\">full and complete presence</strong>. It's not enough to be in the same room, what matters is undivided attention, eye contact, and active listening. A phone-free dinner for two, a hand-in-hand walk, a deep evening conversation means far more than an expensive piece of jewelry. For these people, the time you give them is the measure of your love.",
+    "lang4Text": "People who value Quality Time need <strong class=\"text-foreground\">full and complete presence</strong>. It's not enough to be in the same room, it takes undivided attention, eye contact, and active listening. A phone-free dinner for two, a hand-in-hand walk, a deep evening conversation means far more than an expensive piece of jewelry. For these people, the time you give them is the measure of your love.",
     "lang4Examples": "Real-life examples: a screen-free dinner, a distraction-free walk for two, a board game night, a shared activity (cooking, sports, gardening), a vacation planned together.",
     "lang5Title": "Physical Touch",
     "lang5Text": "Physical Touch goes well beyond sexuality. It encompasses every form of physical contact that creates a sense of safety and connection: holding hands, a caress through the hair, a spontaneous hug, a hand resting on the shoulder. For people whose dominant language this is, <strong class=\"text-foreground\">physical contact is the primary channel through which they receive love</strong>. The absence of touch can create a deep sense of isolation, even within a relationship.",
@@ -145,7 +146,7 @@
         "Long stretches without contact, affection saved for the bedroom"
       ]
     ],
-    "note": "No language is better than another: what matters is speaking your partner's rather than your own."
+    "note": "No language is better than another, you just have to speak your partner's rather than your own."
   },
   "stats": {
     "titre": "The real breakdown, among the people who take this test",

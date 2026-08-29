@@ -308,7 +308,13 @@ var QuizEngine = (function() {
     // Trois formats tiennent sur une ligne au-dessus de la coupure mobile ;
     // en dessous, la grille repasse a une colonne comme pour deux.
     var trois = (o.modes || []).length > 2;
-    var liste = el('div', grand ? ('choix-modes' + (trois ? ' choix-modes--trois' : '')) : 'quiz-modes-liste');
+    // Certains tests nomment leurs formats par une phrase et non par un mot :
+    // la taille geante calibree pour SOLO et DUO coupait alors les mots en
+    // deux sur mobile. Au-dela de quatorze caracteres on passe en noms longs.
+    var longs = (o.modes || []).some(function (m) { return (m.titre || '').length > 14; });
+    var liste = el('div', grand
+      ? ('choix-modes' + (trois ? ' choix-modes--trois' : '') + (longs ? ' choix-modes--longs' : ''))
+      : 'quiz-modes-liste');
     (o.modes || []).forEach(function(m) {
       var carte = el('button', grand
         ? 'choix-mode choix-mode--' + m.id
@@ -4499,23 +4505,36 @@ var QuizEngine = (function() {
     this.currentQ = 0;
     this.currentPlayer = 0;
     this.scores = [[], []];
+    // Nombre de questions posees avant de proposer le resultat une premiere
+    // fois. Sans limite c'est tout le lot et le test se comporte comme avant.
+    this.limiteInitiale = Math.min(config.limite || this.questions.length, this.questions.length);
+    this.limite = this.limiteInitiale;
+    this.render();
+  }
+
+  // Total de points atteignable par personne sur les questions effectivement
+  // posees. Le calculer sur tout le lot diviserait le score de la version
+  // courte par deux et la ferait tomber systematiquement dans le verdict bas.
+  ParentaliteQuiz.prototype.maxParPersonne = function() {
     var maxPts = 0;
-    for (var i = 0; i < this.questions.length; i++) {
+    var n = Math.min(this.limite, this.questions.length);
+    for (var i = 0; i < n; i++) {
       var qMax = 0;
-      for (var j = 0; j < this.questions[i].options.length; j++) {
-        if (this.questions[i].options[j].points > qMax) qMax = this.questions[i].options[j].points;
+      var opts = this.questions[i].options || [];
+      for (var j = 0; j < opts.length; j++) {
+        if (opts[j].points > qMax) qMax = opts[j].points;
       }
       maxPts += qMax;
     }
-    this.maxPerPlayer = maxPts || 60;
-    this.render();
-  }
+    return maxPts || 60;
+  };
 
   ParentaliteQuiz.prototype.render = function() {
     this.container.innerHTML = '';
     if (this.phase === 'setup') this.renderSetup();
     else if (this.phase === 'handoff') this.renderHandoff();
     else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'palier') this.renderPalier();
     else if (this.phase === 'results') this.renderResults();
   };
 
@@ -4529,9 +4548,10 @@ var QuizEngine = (function() {
 
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-2 text-center', tg('parentalite.setupDesc', 'Répondez chacun de votre côté aux mêmes 20 questions.')));
+    var minutes = Math.max(3, Math.round(this.limiteInitiale * 25 / 60));
     wrap.appendChild(el('div', 'quiz-setup-meta',
-      '📝 ' + this.questions.length + ' ' + esc(tg('meta.questionsWord', 'questions')) + ' &bull; ⏱ ' +
-      esc(tg('meta.duration', '10 min')) + ' &bull; ' + esc(tg('parentalite.scoreOn60', 'Score sur 60 par personne'))));
+      '📝 ' + this.limiteInitiale + ' ' + esc(tg('meta.questionsWord', 'questions')) + ' &bull; ⏱ ' +
+      minutes + ' min'));
 
     var form = el('div', 'quiz-setup-grid max-w-lg mx-auto');
 
@@ -4581,7 +4601,7 @@ var QuizEngine = (function() {
   ParentaliteQuiz.prototype.renderQuestion = function() {
     var self = this;
     var q = this.questions[this.currentQ];
-    var total = this.questions.length;
+    var total = this.limite;
     var totalAnswers = total * 2;
     var answeredCount = this.scores[0].length + this.scores[1].length;
     var player = this.players[this.currentPlayer];
@@ -4628,6 +4648,10 @@ var QuizEngine = (function() {
             self.currentQ++;
             self.currentPlayer = 0;
             self.phase = 'handoff';
+          } else if (self.limite < self.questions.length) {
+            // Fin de la version courte : le resultat est pret, on laisse le
+            // choix entre s'arreter la et enchainer sur le reste du lot.
+            self.phase = 'palier';
           } else {
             self.phase = 'results';
           }
@@ -4640,6 +4664,46 @@ var QuizEngine = (function() {
     this.container.appendChild(wrap);
   };
 
+  // Palier : la version courte est finie, on continue ou on s'arrete ici.
+  // Le couple qui vient de repondre a douze questions chacun a montre qu'il
+  // accrochait ; c'est la que la proposition d'aller plus loin porte, pas au
+  // depart ou vingt-quatre questions font reculer. Le resultat reste le bouton
+  // principal : ils sont venus pour lui.
+  ParentaliteQuiz.prototype.renderPalier = function() {
+    var self = this;
+    var restant = this.questions.length - this.limite;
+    function lu(cle, repli) {
+      var plein = self.prefix + '.' + cle;
+      var v = tgd(plein, null);
+      return (v && v !== plein) ? v : repli;
+    }
+
+    var wrap = el('div', 'quiz-engine quiz-palier animate-fade-in text-center');
+    wrap.appendChild(el('div', 'quiz-palier-icone', lu('palierIcone', '🍼')));
+    wrap.appendChild(el('h2', 'quiz-palier-titre',
+      esc(lu('palierTitre', 'Vos {{n}} questions sont faites !').replace('{{n}}', this.limite))));
+    wrap.appendChild(el('p', 'quiz-palier-texte',
+      esc(lu('palierTexte', 'Vos resultats sont prets.').replace('{{n}}', restant))));
+
+    var choix = el('div', 'quiz-palier-choix');
+    var voir = el('button', 'btn btn-cta btn-lg', esc(lu('palierResultats', 'Voir nos resultats')));
+    voir.addEventListener('click', function() { self.phase = 'results'; self.render(); });
+    var continuer = el('button', 'btn btn-outline',
+      esc(lu('palierContinuer', 'Continuer avec {{n}} questions de plus').replace('{{n}}', restant)));
+    continuer.addEventListener('click', function() {
+      self.limite = self.questions.length;
+      self.currentQ = self.currentQ + 1;
+      self.currentPlayer = 0;
+      self.phase = 'handoff';
+      self.render();
+    });
+    choix.appendChild(voir);
+    choix.appendChild(continuer);
+    wrap.appendChild(choix);
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   ParentaliteQuiz.prototype.renderResults = function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
@@ -4647,7 +4711,8 @@ var QuizEngine = (function() {
     var s1 = this.scores[0].reduce(function(s, v) { return s + v; }, 0);
     var s2 = this.scores[1].reduce(function(s, v) { return s + v; }, 0);
     var totalScore = s1 + s2;
-    var maxTotal = this.maxPerPlayer * 2;
+    var maxParPersonne = this.maxParPersonne();
+    var maxTotal = maxParPersonne * 2;
     var pct = Math.round((totalScore / maxTotal) * 100);
 
     // Combined score header
@@ -4663,28 +4728,31 @@ var QuizEngine = (function() {
     for (var i = 0; i < 2; i++) {
       var score = i === 0 ? s1 : s2;
       var card = el('div', 'glass-card rounded-xl p-4 text-center');
-      var iPctP = Math.round((score / this.maxPerPlayer) * 100);
+      var iPctP = Math.round((score / maxParPersonne) * 100);
       card.innerHTML = '<p class="font-semibold mb-2" style="color:' + colors[i].bg + '">' + esc(this.players[i].name) + '</p>' +
         renderScoreRing(iPctP, 'sm') +
-        '<p class="text-xs text-muted-foreground">' + score + '/' + this.maxPerPlayer + '</p>';
+        '<p class="text-xs text-muted-foreground">' + score + '/' + maxParPersonne + '</p>';
       scoresGrid.appendChild(card);
     }
     wrap.appendChild(scoresGrid);
 
-    // Alert if big gap between scores
-    if (Math.abs(s1 - s2) > 15) {
+    // Alert if big gap between scores. Le seuil suit le format joue : quinze
+    // points d'ecart sur trente-six n'ont pas le meme sens que sur soixante-douze.
+    if (Math.abs(s1 - s2) > Math.round(maxParPersonne * 0.21)) {
       var gapAlert = el('div', 'glass-card rounded-xl p-4 mb-6 border-l-4 border-orange-400');
       gapAlert.innerHTML = '<p class="text-sm">' + esc(tg('parentalite.gapWarning', 'Il y a un écart significatif entre vos deux scores. C\'est souvent dans ces écarts que se trouvent les discussions les plus importantes à avoir.')) + '</p>';
       wrap.appendChild(gapAlert);
     }
 
     // Find matching result based on combined score
+    // Le verdict se lit en pourcentage du maximum atteignable : le meme couple
+    // tombe sur le meme palier qu'il ait joue douze questions ou vingt-quatre.
     var result = null;
     for (var j = 0; j < this.results.length; j++) {
       var r = this.results[j];
-      // Use individual player score (average) to match results on 60-point scale
-      var avgScore = totalScore / 2;
-      if (avgScore >= (r.min || 0) && avgScore <= (r.max || 999)) { result = r; break; }
+      var bas = (r.minPct !== undefined) ? r.minPct : 0;
+      var haut = (r.maxPct !== undefined) ? r.maxPct : 100;
+      if (pct >= bas && pct <= haut) { result = r; break; }
     }
     if (result) {
       var resultCard = el('div', 'glass-card rounded-xl p-6 mb-6 text-left max-w-lg mx-auto');

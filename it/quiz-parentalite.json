@@ -1,10 +1,11 @@
 {
   "hero": {
-    "badge": "Gratuito • Senza registrazione • 10 min",
+    "badge": "Gratuito • Senza registrazione • 5 o 10 min",
     "title": "Test online | Siete pronti ad avere figli?",
-    "titleHighlight": "genitorialità",
+    "titleHighlight": "pronti ad avere figli",
+    "jumpBtn": "Vai al test",
     "intro1": "Ci pensate da qualche settimana. Forse qualche mese. L’idea di un figlio torna nelle vostre conversazioni, anche nei vostri silenzi. E poi un giorno la domanda arriva davvero: siamo pronti per davvero?",
-    "intro2": "Questo test di genitorialità non vi darà una risposta binaria (nessuno può farlo). Ma vi costringerà, entrambi, a guardare le cose in faccia. 24 domande oneste sulla vostra coppia, le vostre finanze, il vostro stile di vita, le vostre paure. Rispondete ognuno per conto proprio, poi confrontatevi. Spesso è nello scarto tra le vostre risposte che si nascondono le vere discussioni da affrontare."
+    "intro2": "Questo test di genitorialità non vi darà una risposta binaria (nessuno può farlo). Ma vi costringerà, entrambi, a guardare le cose in faccia. Dodici domande oneste sulla vostra coppia, le vostre finanze, il vostro stile di vita e le vostre paure, o tutte e ventiquattro se volete approfondire. Rispondete ognuno per conto proprio, poi confrontatevi. Spesso è nello scarto tra le vostre risposte che si nascondono le vere discussioni da affrontare."
   },
   "quiz": {
     "sectionTitle": "Fate il test di genitorialità qui!"

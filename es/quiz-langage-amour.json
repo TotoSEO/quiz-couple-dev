@@ -3,6 +3,7 @@
     "badge": "5 Lenguajes • 30 preguntas • 5 min",
     "title": "Los 5 lenguajes del amor: descubre el tuyo en 30 preguntas",
     "titleHighlight": "5 lenguajes del amor",
+    "jumpBtn": "Ir al test",
     "description": "30 preguntas para identificar cómo expresas y recibes el amor. Un test basado en la teoría de los 5 lenguajes del amor de Gary Chapman."
   },
   "intro": {
@@ -28,7 +29,7 @@
     "lang3Text": "El lenguaje de los regalos no se reduce al materialismo. Se trata de la <strong class=\"text-foreground\">carga simbólica que hay detrás del gesto</strong>: alguien ha pensado en ti, se ha tomado el tiempo de elegir algo que te representa. Para estas personas, un regalo es la prueba física de que el otro las lleva en el pensamiento. La ausencia de regalos o el olvido de fechas importantes puede vivirse como una profunda falta de interés.",
     "lang3Examples": "Ejemplos concretos: un detallito traído de un recado, flores sin ocasión especial, un objeto que recuerda un momento compartido, un detalle personalizado por un aniversario, una carta escrita a mano.",
     "lang4Title": "Los Momentos de Calidad",
-    "lang4Text": "Las personas sensibles a los momentos de calidad necesitan una <strong class=\"text-foreground\">presencia plena y completa</strong>. No basta con estar en la misma habitación: lo que importa es la atención sin dividir, la mirada, la escucha activa. Una cena a solas sin móvil, un paseo de la mano, una conversación profunda por la noche vale mucho más que una joya cara. Para estas personas, el tiempo que les dedicas es la medida de tu amor.",
+    "lang4Text": "Las personas sensibles a los momentos de calidad necesitan una <strong class=\"text-foreground\">presencia plena y completa</strong>. No basta con estar en la misma habitación, hace falta atención sin dividir, mirada, escucha activa. Una cena a solas sin móvil, un paseo de la mano, una conversación profunda por la noche vale mucho más que una joya cara. Para estas personas, el tiempo que les dedicas es la medida de tu amor.",
     "lang4Examples": "Ejemplos concretos: una cena sin pantallas, un paseo en pareja sin distracciones, una noche de juegos de mesa, una actividad compartida (cocina, deporte, jardinería), unas vacaciones planificadas juntos.",
     "lang5Title": "El Contacto Físico",
     "lang5Text": "El contacto físico va mucho más allá de la sexualidad. Abarca todas las formas de contacto corporal que crean una sensación de seguridad y conexión: cogerse de la mano, una caricia en el pelo, un abrazo espontáneo, una mano en el hombro. Para las personas cuyo lenguaje dominante es este, <strong class=\"text-foreground\">el contacto físico es el canal principal por el que reciben el amor</strong>. La ausencia de contacto puede generar un profundo sentimiento de aislamiento, incluso dentro de la pareja.",
@@ -145,7 +146,7 @@
         "Largos periodos sin contacto, el cariño reservado a la cama"
       ]
     ],
-    "note": "Ningún lenguaje vale más que otro: lo que cuenta es hablar el de la otra persona y no el propio."
+    "note": "Ningún lenguaje vale más que otro, solo hay que hablar el de la otra persona y no el propio."
   },
   "stats": {
     "titre": "El reparto real entre quienes hacen este test",

@@ -3,6 +3,7 @@
     "badge": "5 Langages • 30 questions • 5 min",
     "title": "Les 5 langages de l'amour : découvrez le vôtre en 30 questions",
     "titleHighlight": "5 langages de l'amour",
+    "jumpBtn": "Aller au test",
     "description": "30 questions pour identifier comment vous exprimez et recevez l'amour. Un test basé sur la théorie des 5 langages de Gary Chapman."
   },
   "intro": {
@@ -28,7 +29,7 @@
     "lang3Text": "Le langage des cadeaux ne se résume pas au matérialisme. Il s'agit de la <strong class=\"text-foreground\">symbolique derrière le geste</strong> : quelqu'un a pensé à vous, a pris le temps de choisir quelque chose qui vous correspond. Pour ces personnes, un cadeau est la preuve physique que l'autre les porte dans ses pensées. L'absence de cadeaux ou l'oubli de dates importantes peut être vécue comme un manque d'intérêt profond.",
     "lang3Examples": "Exemples concrets : un petit cadeau rapporté d'une course, des fleurs sans occasion particulière, un objet qui rappelle un souvenir commun, une attention personnalisée pour un anniversaire, une lettre écrite à la main.",
     "lang4Title": "Les Moments de Qualité (Quality Time)",
-    "lang4Text": "Les personnes sensibles aux moments de qualité ont besoin d'une <strong class=\"text-foreground\">présence pleine et entière</strong>. Il ne suffit pas d'être dans la même pièce : ce qui compte, c'est l'attention non divisée, le regard, l'écoute active. Un dîner en tête-à-tête sans téléphone, une promenade main dans la main, une conversation profonde le soir vaut bien plus qu'un bijou coûteux. Pour ces personnes, le temps que vous leur consacrez est la mesure de votre amour.",
+    "lang4Text": "Les personnes sensibles aux moments de qualité ont besoin d'une <strong class=\"text-foreground\">présence pleine et entière</strong>. Il ne suffit pas d'être dans la même pièce, il faut une attention non divisée, le regard, l'écoute active. Un dîner en tête-à-tête sans téléphone, une promenade main dans la main, une conversation profonde le soir vaut bien plus qu'un bijou coûteux. Pour ces personnes, le temps que vous leur consacrez est la mesure de votre amour.",
     "lang4Examples": "Exemples concrets : un dîner sans écrans, une balade à deux sans distraction, une soirée jeu de société, une activité partagée (cuisine, sport, jardinage), des vacances planifiées ensemble.",
     "lang5Title": "Le Toucher Physique (Physical Touch)",
     "lang5Text": "Le toucher physique va bien au-delà de la sexualité. Il englobe toutes les formes de contact corporel qui créent un sentiment de sécurité et de connexion : se tenir la main, une caresse dans les cheveux, un câlin spontané, une main posée sur l'épaule. Pour les personnes dont c'est le langage dominant, <strong class=\"text-foreground\">le contact physique est le canal principal par lequel elles reçoivent l'amour</strong>. L'absence de toucher peut créer un profond sentiment d'isolement, même au sein du couple.",
@@ -145,7 +146,7 @@
         "Les longues périodes sans contact, l'affection réservée au lit"
       ]
     ],
-    "note": "Aucun langage ne vaut mieux qu'un autre : ce qui compte, c'est de parler celui de l'autre plutôt que le sien."
+    "note": "Aucun langage ne vaut mieux qu'un autre, il faut juste parler celui de l'autre plutôt que le sien."
   },
   "stats": {
     "titre": "La répartition réelle, chez les gens qui passent ce test",

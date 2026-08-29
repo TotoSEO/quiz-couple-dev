@@ -1,10 +1,11 @@
 {
   "hero": {
-    "badge": "Kostenlos \u2022 Ohne Anmeldung \u2022 10 Min",
+    "badge": "Kostenlos • Ohne Anmeldung • 5 oder 10 Min",
     "title": "Online-Test | Seid ihr bereit für ein Kind?",
-    "titleHighlight": "Elternschaft",
+    "titleHighlight": "bereit für ein Kind",
+    "jumpBtn": "Zum Test springen",
     "intro1": "Ihr denkt seit ein paar Wochen darüber nach. Vielleicht seit ein paar Monaten. Der Gedanke an ein Kind taucht in euren Gesprächen auf, aber auch in euren Momenten der Stille. Und dann fällt irgendwann die entscheidende Frage: Sind wir wirklich bereit?",
-    "intro2": "Dieser Elternschaftstest gibt euch keine binäre Antwort (das kann niemand). Aber er wird euch beide dazu bringen, den Tatsachen ins Auge zu sehen. 24 ehrliche Fragen über eure Beziehung, eure Finanzen, euren Lebensstil, eure Ängste. Beantwortet sie jeweils für euch, vergleicht danach. Oft verbergen sich in der Diskrepanz eurer Antworten die wirklich wichtigen Gespräche."
+    "intro2": "Dieser Elternschaftstest gibt euch keine binäre Antwort (das kann niemand). Aber er wird euch beide dazu bringen, den Tatsachen ins Auge zu sehen. Zwölf ehrliche Fragen über eure Beziehung, eure Finanzen, euren Lebensstil und eure Ängste, oder alle vierundzwanzig, wenn ihr tiefer gehen wollt. Beantwortet sie jeweils für euch, vergleicht danach. Oft verbergen sich in der Diskrepanz eurer Antworten die wirklich wichtigen Gespräche."
   },
   "quiz": {
     "sectionTitle": "Macht hier den Elternschaftstest!"
@@ -14,45 +15,37 @@
     "s1p1": "Wir kennen alle ein Paar, das ein Baby bekommen hat, \"um zu sehen, was passiert\". Spoiler: Es läuft selten wie geplant. Und das ist logisch. Ein Kind drückt nicht auf Pause, sondern auf Vorspulen. Was gut lief, wird besser, was schon ein wenig kratzte, wird zur offenen Wunde.",
     "s1p2": "Die <strong>Fragen, die man sich vor dem Kinderkriegen stellen sollte</strong>, sind nicht dazu da, euren Wunsch abzukühlen. Im Gegenteil. Sie sind dazu da sicherzustellen, dass euer Wunsch auf Konkretem basiert und nicht auf einer Instagram-Fantasie mit Pastellstramplern und Rattanwiege. Die Realität mit einem Neugeborenen bedeutet 3 Stunden Schlaf pro Nacht, Windeln um 2 Uhr morgens und eine Libido, die (langen) Urlaub nimmt.",
     "s1p3": "Laut einer Studie im <em>Journal of Family Psychology</em> stellen etwa 67% der Paare in den ersten 3 Jahren nach der Geburt eines Kindes einen Rückgang der Beziehungszufriedenheit fest. Diese Zahl soll euch keine Angst machen. Sie sagt eine einfache Sache: <strong>Die Paare, die am besten durchkommen, sind diejenigen, die die Schwierigkeiten vorhergesehen haben</strong>. Nicht die mit dem meisten Geld oder der größten Wohnung. Die, die geredet haben. Wirklich geredet.",
-
     "s2Title": "Die 5 Themen, die jedes Paar vor dem Kinderwunsch ansprechen sollte",
     "s2r1Title": "Geld",
-    "s2r1Text": "Ein Kind kostet im ersten Jahr durchschnittlich zwischen 500 und 800 Euro pro Monat. Windeln, Milch, Betreuung, Kleidung, die nach 3 Wochen zu klein ist... Ein finanzielles Polster, auch ein bescheidenes, ver\u00e4ndert alles. Finanzielle Unsicherheit ist einer der ersten Spannungsfaktoren in jungen Familien.",
+    "s2r1Text": "Ein Kind kostet im ersten Jahr durchschnittlich zwischen 500 und 800 Euro pro Monat. Windeln, Milch, Betreuung, Kleidung, die nach 3 Wochen zu klein ist... Ein finanzielles Polster, auch ein bescheidenes, verändert alles. Finanzielle Unsicherheit ist einer der ersten Spannungsfaktoren in jungen Familien.",
     "s2r2Title": "Elterliche Aufgaben",
-    "s2r2Text": "DAS Thema, das Beziehungen nach der Ankunft eines Babys zusammenh\u00e4lt oder zerst\u00f6rt. Wer steht nachts auf? Wer k\u00fcmmert sich um Arzttermine? Laut Statistischem Bundesamt \u00fcbernehmen Frauen noch rund 66% der Haus- und Familienarbeit. Dar\u00fcber <strong>vorher</strong> zu sprechen, ist nicht verhandelbar.",
+    "s2r2Text": "DAS Thema, das Beziehungen nach der Ankunft eines Babys zusammenhält oder zerstört. Wer steht nachts auf? Wer kümmert sich um Arzttermine? Laut Statistischem Bundesamt übernehmen Frauen noch rund 66% der Haus- und Familienarbeit. Darüber <strong>vorher</strong> zu sprechen, ist nicht verhandelbar.",
     "s2r3Title": "Erziehungsstil",
-    "s2r3Text": "Strenge Eltern vs lockere Familie, in der alles ausgehandelt wurde? Diese Unterschiede werden zu Bruchlinien, wenn es darum geht, ob man einen strengen Rahmen setzt oder Freiheit l\u00e4sst. Sprecht jetzt dar\u00fcber.",
+    "s2r3Text": "Strenge Eltern vs lockere Familie, in der alles ausgehandelt wurde? Diese Unterschiede werden zu Bruchlinien, wenn es darum geht, ob man einen strengen Rahmen setzt oder Freiheit lässt. Sprecht jetzt darüber.",
     "s2r4Title": "Auswirkungen aufs Paarleben",
-    "s2r4Text": "Liebe allein reicht nicht, um den Schock der ersten Monate zu verkraften. Es braucht auch Organisation, Geduld und die F\u00e4higkeit, sich in den schlimmsten Momenten zu sehen, ohne dass es alles zerst\u00f6rt.",
-    "s2r5Title": "Die \u00c4ngste",
-    "s2r5Text": "Angst, nicht gut genug zu sein. Angst, die Fehler der eigenen Eltern zu wiederholen. Angst, die Freiheit zu verlieren. Diese \u00c4ngste sind normal. Was nicht normal ist, ist sie zu ignorieren. Eine ausgesprochene Angst verliert die H\u00e4lfte ihrer Macht.",
-    "s2Tip": "Tipp: Schreibt jeder eure 3 gr\u00f6\u00dften Bedenken zur Elternschaft auf und vergleicht sie. Die Unterschiede zeigen oft die wichtigsten Gespr\u00e4che, die ihr f\u00fchren solltet.",
-
-    "s3Title": "Wie wei\u00df man, ob man bereit ist f\u00fcr ein Kind: Die echten Signale",
+    "s2r4Text": "Liebe allein reicht nicht, um den Schock der ersten Monate zu verkraften. Es braucht auch Organisation, Geduld und die Fähigkeit, sich in den schlimmsten Momenten zu sehen, ohne dass es alles zerstört.",
+    "s2r5Title": "Die Ängste",
+    "s2r5Text": "Angst, nicht gut genug zu sein. Angst, die Fehler der eigenen Eltern zu wiederholen. Angst, die Freiheit zu verlieren. Diese Ängste sind normal. Was nicht normal ist, ist sie zu ignorieren. Eine ausgesprochene Angst verliert die Hälfte ihrer Macht.",
+    "s2Tip": "Tipp: Schreibt jeder eure 3 größten Bedenken zur Elternschaft auf und vergleicht sie. Die Unterschiede zeigen oft die wichtigsten Gespräche, die ihr führen solltet.",
+    "s3Title": "Wie weiß man, ob man bereit ist für ein Kind: Die echten Signale",
     "s3p1": "Spoiler: Den \"perfekten Moment\" gibt es nicht. Wenn ihr wartet, bis alles stimmt (Finanzen, Karriere, Wohnung, emotionale Reife, zunehmender Mond und Merkur in Retrograde), schafft ihr es nie. Aber es gibt dennoch Signale, die nicht trügen.",
     "s3p2": "Ihr seid wahrscheinlich bereit, wenn eure Beziehung in einer guten Dynamik ist, wenn ihr Konflikte bewältigen könnt, ohne euch gegenseitig zu zerstören, wenn der Wunsch von euch beiden kommt (und nicht vom sozialen Druck), und wenn ihr zumindest über die oben genannten Themen gesprochen habt. Umgekehrt: Wenn eure Beziehung kriselt, wenn ihr hofft, dass ein Baby alles retten wird, oder wenn einer von euch nicht wirklich dabei ist... wartet.",
     "s3p3": "Ein Elternschaftstest wie dieser ersetzt keine echte Selbstreflexion (und schon gar keine professionelle Begleitung, falls nötig). Aber er ist ein guter Ausgangspunkt, um den Dialog zu eröffnen.",
-
     "s3Quote": "Bereit zu sein bedeutet nicht, keine Angst mehr zu haben. Es bedeutet, genug Vertrauen in eure Beziehung zu haben, um trotz der Angst voranzugehen.",
-
-    "s4Title": "Der häufigste Fehler: Nicht \u00fcber das \"Danach\" sprechen",
+    "s4Title": "Der häufigste Fehler: Nicht über das \"Danach\" sprechen",
     "s4p1": "Man spricht viel über das \"Wollen wir ein Baby?\", man spricht über die Schwangerschaft, die Geburt, den Namen. Und dann kommt das Baby. Und dann: schwarzes Loch. Niemand hatte vorhergesehen, dass der Alltag so aussehen würde.",
     "s4p2": "Das \"Danach\" sind die ersten 6 Monate im Überlebensmodus. Es ist die Mutter, die sich allein fühlt, obwohl der Vater da ist. Es ist der Vater, der nicht weiß, was er tun soll, weil es ihm niemand beigebracht hat. Es sind die Streits um 3 Uhr morgens, weil das Baby schreit und alle am Ende sind.",
     "s4p3": "Wir sagen das nicht, um zu dramatisieren. Wir sagen das, weil Paare, die <strong>vorher</strong> darüber sprechen, diese Zeit gelassener durchstehen. Fragt euch: Wer macht was während des Mutterschutzes? Nimmt der Co-Elternteil auch Elternzeit? Wie handhaben wir Familienbesuche? Erlauben wir uns, um Hilfe zu bitten? All diese <strong>Fragen, die man als Paar vor einem Kind klären sollte</strong>, erscheinen auf dem Papier banal. In der Praxis machen sie einen enormen Unterschied.",
     "s4p4": "Wenn <a href=\"/de/paar-kompatibilitaetstest/\">eure Beziehung solide ist</a>, werden diese Herausforderungen Prüfungen sein, die ihr gemeinsam meistert. Wenn nicht, ist jetzt der Moment, eure Grundlagen zu stärken, bevor ein Baby zur Gleichung hinzukommt.",
-
-    "s4Tip": "Praktische \u00dcbung: Verbringt einen ganzen Tag mit einem Baby (Neffe, Nichte, Kind von Freunden). Nicht um die perfekte Familie zu spielen, sondern um zu beobachten, wie ihr zusammen mit M\u00fcdigkeit, Unvorhergesehenem und Aufgabenverteilung umgeht.",
-
+    "s4Tip": "Praktische Übung: Verbringt einen ganzen Tag mit einem Baby (Neffe, Nichte, Kind von Freunden). Nicht um die perfekte Familie zu spielen, sondern um zu beobachten, wie ihr zusammen mit Müdigkeit, Unvorhergesehenem und Aufgabenverteilung umgeht.",
     "s5Title": "Die Frage des Timings: Gibt es ein ideales Alter?",
     "s5p1": "Medizinisch gesehen beginnt die weibliche Fruchtbarkeit nach 35 signifikant abzunehmen. Das ist eine biologische Tatsache, kein Urteil. Auf männlicher Seite nimmt die Spermienqualität ebenfalls mit dem Alter ab, auch wenn darüber weniger gesprochen wird.",
     "s5p2": "Aber Timing ist nicht nur Biologie. Es ist auch eure emotionale Stabilität, eure Beziehungsreife, eure materielle Situation. Manche Paare mit 25 sind bereiter als andere mit 38. Junge Eltern zu sein bedeutet körperliche Energie, aber manchmal weniger Gelassenheit. Spätere Elternschaft ist das Gegenteil. Es gibt keine Zauberformel.",
     "s5p3": "Was wir mit Sicherheit wissen: Paare, die ein Kind bekommen, weil sie es wirklich wollen (und nicht \"bevor es zu spät ist\", nicht \"weil es alle machen\"), erleben den Übergang zur Elternschaft besser. Der aufrichtige und geteilte Wunsch ist das beste Signal von allen.",
-
     "s6Title": "Den Test in 6 Monaten wiederholen: Warum das eine gute Idee ist",
     "s6p1": "Euer Ergebnis heute ist eine Momentaufnahme. Eure Antworten werden sich weiterentwickeln. Eure Finanzen werden sich vielleicht ändern, eure berufliche Situation auch. Eure Beziehung wird neue Prüfungen durchlaufen (oder sich im Gegenteil stärken). Deshalb empfehlen wir euch, diesen Elternschaftstest in ein paar Monaten zu wiederholen.",
     "s6p2": "Es geht nicht darum, auf das perfekte Ergebnis zu warten. Es geht darum zu sehen, ob sich eure Antworten in die richtige Richtung bewegen. Ob sich blockierte Themen lösen. Und vor allem, ob der Wunsch wächst oder nachlässt, denn beides ist berechtigt.",
     "s6p3": "In der Zwischenzeit: Elternschaft ist auch eine Frage der alltäglichen Kompatibilität. Zu wissen, ob ihr <a href=\"/de/gemeinsamkeiten-test-paare/\">genügend Gemeinsamkeiten</a> habt, um ein so großes Projekt aufzubauen, ist wichtig. Und wenn die Ehe auch Teil eurer Überlegungen ist, lohnt es sich zu überprüfen, ob ihr <a href=\"/de/ehe-kompatibilitaetstest/\">auch in dieser Frage auf einer Linie seid</a>.",
-
     "faqTitle": "Häufig gestellte Fragen zur Elternschaft und Partnerschaft",
     "faq": [
       {
@@ -61,7 +54,7 @@
       },
       {
         "q": "Mein Partner will kein Kind und ich schon, was tun?",
-        "a": "Das ist eine der schmerzhaftesten Meinungsverschiedenheiten in einer Beziehung, weil es keinen offensichtlichen Kompromiss gibt. Der erste Schritt ist zu verstehen, warum. Ist es ein \u201enicht jetzt\u201c oder ein \u201eniemals\u201c? Sprecht dar\u00fcber ohne Druck, idealerweise mit Hilfe eines Paartherapeuten."
+        "a": "Das ist eine der schmerzhaftesten Meinungsverschiedenheiten in einer Beziehung, weil es keinen offensichtlichen Kompromiss gibt. Der erste Schritt ist zu verstehen, warum. Ist es ein „nicht jetzt“ oder ein „niemals“? Sprecht darüber ohne Druck, idealerweise mit Hilfe eines Paartherapeuten."
       },
       {
         "q": "Kann ein Baby eine Beziehung in der Krise retten?",
@@ -73,7 +66,7 @@
       },
       {
         "q": "Wie bringe ich das Thema Kinder mit meinem Partner zur Sprache?",
-        "a": "Vermeidet das dramatische \u201eWir m\u00fcssen reden\u201c an einem Sonntagabend. Bringt das Thema nat\u00fcrlich auf, in einem ruhigen Moment. Ihr k\u00f6nnt sogar diesen Test als Anlass nehmen: \u201eSchau mal, ich habe einen Elternschaftstest online gefunden, machen wir ihn zusammen?\u201c."
+        "a": "Vermeidet das dramatische „Wir müssen reden“ an einem Sonntagabend. Bringt das Thema natürlich auf, in einem ruhigen Moment. Ihr könnt sogar diesen Test als Anlass nehmen: „Schau mal, ich habe einen Elternschaftstest online gefunden, machen wir ihn zusammen?“."
       },
       {
         "q": "Was kostet ein Kind im ersten Jahr in Deutschland?",
