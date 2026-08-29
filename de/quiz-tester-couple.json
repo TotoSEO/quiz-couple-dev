@@ -2,13 +2,12 @@
   "hero": {
     "badge": "Kostenlos • Ohne Anmeldung • 5 Min",
     "title": "Paartest: Wie stark ist eure Beziehung?",
-    "description": "20 Fragen, um zu messen, wie stabil eure Beziehung ist. Zu zweit an einem Handy oder abwechselnd: ihr entscheidet zu Beginn.",
+    "description": "20 Fragen, um zu messen, wie stabil eure Beziehung ist. Zu zweit an einem Handy oder abwechselnd, wählt das Format, das ihr spielen wollt.",
     "duration": "5 Minuten",
     "players": "2 Spieler",
     "questions": "20 Fragen",
     "titleHighlight": "eure Beziehung",
-    "intro1": "Fragt ihr euch, <strong>wo eure Beziehung wirklich steht</strong>? Dieser kostenlose Paartest ermöglicht es euch, gemeinsam und ehrlich Bilanz zu ziehen. In nur 20 Fragen entdeckt ihr eure Stärken, eure Unterschiede und die Themen, die eure Aufmerksamkeit verdienen.",
-    "intro2": "Ob ihr seit ein paar Monaten oder seit Jahren zusammen seid: sich zwanzig Fragen lang zu vergleichen ist eine gute Art, Abstand zu gewinnen und Gespräche zu öffnen, die von allein nicht entstehen."
+    "intro1": "Ob ihr seit ein paar Monaten oder seit Jahren zusammen seid, ein kleiner Test zum Vergleichen ist eine gute Art, Abstand zu gewinnen und Themen anzusprechen, auf die man von allein nicht kommt!"
   },
   "section1": {
     "title": "Was ist ein Paartest und wozu dient er?",

@@ -464,7 +464,7 @@
     },
     "r2": {
       "title": "Vous avez quelque chose, mais ça mérite qu'on y travaille",
-      "text": "Il y a une vraie base entre {{name1}} et {{name2}}. Des moments forts, une complicité qui existe. Mais certaines zones sont encore floues. Ce qui compte, c'est si vous avez tous les deux envie d'y aller.",
+      "text": "Il y a une vraie base entre {{name1}} et {{name2}}. Des moments forts, une complicité qui existe. Mais certaines zones sont encore floues. Reste à savoir si vous avez tous les deux envie d'y aller.",
       "adviceTitle": "Notre conseil",
       "advice": "Prenez un moment pour parler de ce qui fonctionne bien entre vous, et de ce qui pourrait s'améliorer. La clé, c'est la régularité de ces échanges."
     },

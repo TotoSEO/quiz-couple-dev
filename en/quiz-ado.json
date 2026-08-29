@@ -464,7 +464,7 @@
     },
     "r2": {
       "title": "You have something, but it needs work",
-      "text": "There's a real foundation between {{name1}} and {{name2}}. Strong moments, a connection that exists. But some areas are still fuzzy. What matters is whether you both want to go for it.",
+      "text": "There's a real foundation between {{name1}} and {{name2}}. Strong moments, a connection that exists. But some areas are still fuzzy. The question left is whether you both want to go for it.",
       "adviceTitle": "Our advice",
       "advice": "Take a moment to talk about what's working between you, and what could improve. The key is making these conversations regular."
     },
