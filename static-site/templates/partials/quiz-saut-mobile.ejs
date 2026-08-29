@@ -1,0 +1,39 @@
+<%
+  /* Raccourci mobile vers le moteur de jeu.
+     Sur un téléphone, le hero et son introduction repoussent le jeu sous deux
+     ou trois écrans de défilement. Le bouton ne s'affiche que si la page
+     fournit son libellé (clé hero.jumpBtn), et seulement sous la coupure
+     mobile : sur grand écran le moteur est déjà visible ou à un scroll.
+     Attendu : ns (namespace de la page), t (traducteur). */
+  var _sautLibelle = t(ns + ':hero.jumpBtn', '');
+  if (_sautLibelle === ns + ':hero.jumpBtn') _sautLibelle = '';
+%>
+<% if (_sautLibelle) { %>
+<div class="quiz-saut-mobile">
+  <button type="button" class="quiz-saut-btn" data-saut-cible="#quiz-engine">
+    <span><%= _sautLibelle %></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+  </button>
+</div>
+<script>
+/* Une ancre HTML colle la cible sous l'en-tête sticky. On vise plutôt le
+   centre de l'écran quand le moteur y tient, et une marge confortable sous
+   l'en-tête quand il est plus haut que la fenêtre. */
+(function () {
+  var btn = document.querySelector('.quiz-saut-btn');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var cible = document.querySelector(btn.getAttribute('data-saut-cible') || '#quiz-engine');
+    if (!cible) return;
+    var entete = document.getElementById('site-header');
+    var hEntete = entete ? entete.getBoundingClientRect().height : 0;
+    var r = cible.getBoundingClientRect();
+    var haut = window.pageYOffset + r.top;
+    var marge = Math.max(hEntete + 16, (window.innerHeight - r.height) / 2);
+    var y = Math.max(0, haut - marge);
+    try { window.scrollTo({ top: y, behavior: 'smooth' }); }
+    catch (e) { window.scrollTo(0, y); }
+  });
+})();
+</script>
+<% } %>

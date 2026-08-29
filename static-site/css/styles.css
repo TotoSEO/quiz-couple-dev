@@ -8974,6 +8974,15 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    ete calibree pour SOLO et DUO. */
 .choix-modes--trois { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 44rem; }
 .choix-modes--trois .choix-mode-nom { font-size: clamp(1.15rem, 2.2vw, 1.5rem); letter-spacing: .04em; }
+/* Certains tests nomment leurs formats par une phrase (« Le test complet avec
+   résultats précis ») et non par un mot. La taille géante, calibrée pour SOLO
+   et DUO, coupait alors les mots en deux sur mobile : le moteur pose la classe
+   ci-dessous dès qu'un nom dépasse quatorze caractères. */
+.choix-modes--longs .choix-mode-nom {
+  font-size: clamp(1.1rem, 3.2vw, 1.45rem);
+  letter-spacing: .01em; line-height: 1.2; overflow-wrap: break-word;
+}
+.choix-modes--longs .choix-mode-desc { font-size: .82rem; }
 .choix-mode {
   --sm-h: 340; --sm-s: 65%; --sm-l: 65%;
   position: relative; display: flex; flex-direction: column; align-items: center;
@@ -9029,6 +9038,8 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    sur toute la largeur : la carte au nom le plus long est aussi celle qui a le
    plus de place. */
 @media (max-width: 767px) {
+  .choix-modes--longs { grid-template-columns: 1fr; max-width: 24rem; gap: .7rem; }
+  .choix-modes--longs .choix-mode { padding: 1.05rem 1rem .95rem; }
   .choix-modes--trois { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 26rem; gap: .8rem; }
   .choix-modes--trois .choix-mode--celib { grid-column: 1 / -1; }
   .choix-modes--trois .choix-mode-nom { font-size: clamp(1.35rem, 5vw, 1.8rem); }
@@ -9040,6 +9051,36 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .choix-modes--trois { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 24rem; }
   .choix-mode { padding: 1.25rem 1rem 1.1rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   RACCOURCI MOBILE VERS LE MOTEUR
+   Sur téléphone, le hero et l'introduction repoussent le jeu
+   sous deux ou trois écrans. Le bouton n'existe que là.
+   ═══════════════════════════════════════════════════════════ */
+.quiz-saut-mobile { display: none; }
+@media (max-width: 767px) {
+  .quiz-saut-mobile {
+    display: flex; justify-content: center;
+    /* Le hero est une colonne flex sous 1200px et l'image porte order: 99 pour
+       passer sous le texte. Le bouton la suit donc avec un ordre superieur. */
+    order: 100;
+    margin: 0.9rem auto 0; padding: 0 1rem;
+  }
+  .quiz-saut-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.7rem 1.35rem; cursor: pointer;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-size: 0.95rem; font-weight: 600; line-height: 1;
+    color: #fff; border: none; border-radius: 999px;
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
+    box-shadow: 0 10px 22px -12px hsl(var(--primary) / 0.9);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .quiz-saut-btn:active { transform: translateY(1px); }
+  .quiz-saut-btn svg { width: 1.05rem; height: 1.05rem; }
+  .quiz-saut-btn:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
+}
+@media (prefers-reduced-motion: reduce) { .quiz-saut-btn { transition: none; } }
 
 /* ═══════════════════════════════════════════════════════════
    ENCART PARTENAIRE AFFILIÉ (pages au contenu adulte)

@@ -308,7 +308,13 @@ var QuizEngine = (function() {
     // Trois formats tiennent sur une ligne au-dessus de la coupure mobile ;
     // en dessous, la grille repasse a une colonne comme pour deux.
     var trois = (o.modes || []).length > 2;
-    var liste = el('div', grand ? ('choix-modes' + (trois ? ' choix-modes--trois' : '')) : 'quiz-modes-liste');
+    // Certains tests nomment leurs formats par une phrase et non par un mot :
+    // la taille geante calibree pour SOLO et DUO coupait alors les mots en
+    // deux sur mobile. Au-dela de quatorze caracteres on passe en noms longs.
+    var longs = (o.modes || []).some(function (m) { return (m.titre || '').length > 14; });
+    var liste = el('div', grand
+      ? ('choix-modes' + (trois ? ' choix-modes--trois' : '') + (longs ? ' choix-modes--longs' : ''))
+      : 'quiz-modes-liste');
     (o.modes || []).forEach(function(m) {
       var carte = el('button', grand
         ? 'choix-mode choix-mode--' + m.id
