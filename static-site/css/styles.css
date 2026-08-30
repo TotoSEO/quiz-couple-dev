@@ -743,17 +743,11 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
   flex-wrap: wrap; gap: .5rem .65rem;
   width: fit-content; margin: .85rem auto 0;
   padding: .5rem .95rem;
-  text-decoration: none; color: inherit;
+  color: inherit;
   border: 1px solid hsl(var(--border) / .7);
   border-radius: 999px;
   background: hsl(var(--card) / .6);
   backdrop-filter: blur(14px) saturate(1.2);
-  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
-}
-.note-site:hover, .note-site:focus-visible {
-  transform: translateY(-2px);
-  border-color: hsl(var(--primary) / .45);
-  box-shadow: 0 12px 26px -18px hsl(var(--primary) / .8);
 }
 .note-site-etoiles { display: inline-flex; gap: .12rem; }
 .note-site-etoile { position: relative; display: block; width: 1.05rem; height: 1.05rem; }
@@ -770,23 +764,14 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
   font-family: var(--font-display); font-weight: 800; font-size: 1.05rem;
   line-height: 1; color: hsl(var(--foreground)); font-variant-numeric: tabular-nums;
 }
-.note-site-detail {
-  display: flex; flex-direction: column; gap: .1rem;
-  font-size: .72rem; line-height: 1.2; color: hsl(var(--muted-foreground));
-}
-.note-site-lien {
-  font-weight: 600; font-size: .68rem; color: hsl(var(--primary));
-  text-decoration: underline; text-underline-offset: 2px;
-  text-decoration-color: hsl(var(--primary) / .35);
-}
-.note-site:hover .note-site-lien { text-decoration-color: hsl(var(--primary) / .8); }
+.note-site-detail { font-size: .72rem; line-height: 1.2; color: hsl(var(--muted-foreground)); }
+
 @media (min-width: 768px) {
   .note-site { margin-left: 0; margin-right: auto; }
   .note-site-etoile { width: 1.15rem; height: 1.15rem; }
   .note-site-etoile::after { -webkit-mask-size: 1.15rem 1.15rem; mask-size: 1.15rem 1.15rem; }
   .note-site-valeur { font-size: 1.15rem; }
   .note-site-detail { font-size: .78rem; }
-  .note-site-lien { font-size: .72rem; }
 }
 
 /* Hero floating visual, 3D perspective */
@@ -1052,7 +1037,7 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .raison, .raison-glyphe, .raison-numero, .etape-corps, .etape-pastille, .note-site { transition: none; }
+  .raison, .raison-glyphe, .raison-numero, .etape-corps, .etape-pastille { transition: none; }
   [data-anime-groupe].a-animer .raison,
   [data-anime-groupe].a-animer .etape { opacity: 1; }
   [data-anime-groupe].est-visible .raison,
@@ -6603,12 +6588,24 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ── Quiz engine options: a bit more punch (thicker, bolder, springy) ── */
-.quiz-engine .quiz-option, #quiz-engine .quiz-option { border-width: 2.5px; font-weight: 700; }
-.quiz-engine .quiz-option:hover, #quiz-engine .quiz-option:hover {
-  transform: translateY(-3px) scale(1.005);
-  box-shadow: 0 14px 30px -12px hsl(var(--primary) / .4), 0 3px 10px rgba(0,0,0,.05);
+/* Ces trois regles portaient l'ancien survol en verre depoli : elevation
+   douce et halo rose. Elles sont ecrites avec un identifiant, elles
+   l'emportent donc sur tout ce qui suit dans le fichier. On les aligne ici
+   plutot que d'empiler une surcharge de plus. */
+.quiz-engine .quiz-option, #quiz-engine .quiz-option {
+  border-width: var(--qe-trait-i); font-weight: 700;
 }
-.quiz-engine .quiz-option.selected, #quiz-engine .quiz-option.selected { border-width: 2.5px; }
+.quiz-engine .quiz-option:hover, #quiz-engine .quiz-option:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 hsl(var(--primary));
+}
+.quiz-engine .quiz-option:active, #quiz-engine .quiz-option:active {
+  transform: translate(1px, 1px);
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+}
+.quiz-engine .quiz-option.selected, #quiz-engine .quiz-option.selected {
+  border-width: var(--qe-trait-i); transform: none;
+}
 
 /* ═══════════════════════════════════════════════════════════════════
    Quiz engine — redesigned intro / start screen (real design, no big emoji)
@@ -6619,18 +6616,13 @@ h1, h2, h3, h4, h5, h6,
    (applies to all quiz types incl. the 2-player name-entry screens)
    ═══════════════════════════════════════════════════════════════════ */
 .quiz-setup-screen {
-  --ink: 268 45% 27%;
-  border: 5px solid hsl(var(--ink)) !important;
-  border-radius: 1.9rem !important;
-  box-shadow: 9px 9px 0 hsl(var(--ink)) !important;
+  border: var(--qe-trait) solid hsl(var(--ink)) !important;
+  border-radius: var(--qe-rayon) !important;
+  box-shadow: var(--qe-ombre) hsl(var(--ink)) !important;
   background: hsl(var(--card)) !important;
   backdrop-filter: none !important;
   text-align: center;
 }
-/* Dark mode: a near-black ink vanishes against the dark card, so the chunky
-   borders/shadows lose all contrast. Use a light lavender "ink" instead so the
-   sticker outlines actually pop. */
-.dark .quiz-setup-screen { --ink: 270 30% 62%; }
 
 /* Bubble title, highlighted (surligné) but readable.
    The setup screen is a flex column, so the h2 is stretched to full width by
@@ -6658,14 +6650,14 @@ h1, h2, h3, h4, h5, h6,
 
 /* Icon becomes a chunky, slightly tilted badge */
 .quiz-setup-screen .quiz-setup-icon {
-  border: 4px solid hsl(var(--ink)) !important;
-  box-shadow: 5px 5px 0 hsl(var(--ink)) !important;
+  border: var(--qe-trait-i) solid hsl(var(--ink)) !important;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink)) !important;
   transform: rotate(-5deg); animation: none !important;
 }
 /* Player cards: thick borders + a playful tilt */
 .quiz-setup-screen .quiz-player-card {
-  border: 4px solid hsl(var(--ink)) !important;
-  box-shadow: 5px 5px 0 hsl(var(--ink)) !important;
+  border: var(--qe-trait-i) solid hsl(var(--ink)) !important;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink)) !important;
   background: hsl(var(--card)) !important;
 }
 .quiz-setup-screen .quiz-setup-grid > .quiz-player-card:nth-child(1) { transform: rotate(-1.6deg); }
@@ -6678,17 +6670,17 @@ h1, h2, h3, h4, h5, h6,
 
 /* Meta chip + start button, chunky */
 .quiz-setup-screen .quiz-setup-meta {
-  border: 2.5px solid hsl(var(--ink)) !important; border-radius: 999px !important;
+  border: var(--qe-trait-p) solid hsl(var(--ink)) !important; border-radius: 999px !important;
   background: hsl(var(--card)) !important; font-weight: 700;
 }
 .quiz-setup-screen .quiz-setup-start-btn {
-  border: 4px solid hsl(var(--ink)) !important;
-  box-shadow: 6px 6px 0 hsl(var(--ink)) !important;
+  border: var(--qe-trait-i) solid hsl(var(--ink)) !important;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink)) !important;
   border-radius: 999px !important;
 }
 .quiz-setup-screen .quiz-setup-start-btn:hover {
-  transform: translate(-2px,-2px) !important;
-  box-shadow: 8px 8px 0 hsl(var(--ink)) !important;
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 6px 6px 0 hsl(var(--ink)) !important;
 }
 /* Gender buttons chunky too */
 .quiz-setup-screen .gender-btn { border-width: 2.5px !important; }
@@ -6697,8 +6689,8 @@ h1, h2, h3, h4, h5, h6,
    use .glass-card for their inner name-entry cards and a plain .btn-cta start
    button — give them the same chunky sticker treatment as the DuoMatch screen. */
 .quiz-setup-screen .glass-card {
-  border: 4px solid hsl(var(--ink)) !important;
-  box-shadow: 5px 5px 0 hsl(var(--ink)) !important;
+  border: var(--qe-trait-i) solid hsl(var(--ink)) !important;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink)) !important;
   background: hsl(var(--card)) !important;
   backdrop-filter: none !important;
 }
@@ -6709,13 +6701,13 @@ h1, h2, h3, h4, h5, h6,
   border: 2.5px solid hsl(var(--ink) / .8) !important; border-radius: .85rem !important; text-align: center;
 }
 .quiz-setup-screen .btn-cta {
-  border: 4px solid hsl(var(--ink)) !important;
-  box-shadow: 6px 6px 0 hsl(var(--ink)) !important;
+  border: var(--qe-trait-i) solid hsl(var(--ink)) !important;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink)) !important;
   border-radius: 999px !important;
 }
 .quiz-setup-screen .btn-cta:hover {
-  transform: translate(-2px,-2px) !important;
-  box-shadow: 8px 8px 0 hsl(var(--ink)) !important;
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 6px 6px 0 hsl(var(--ink)) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -9751,4 +9743,529 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .gsource--mini { width: 100%; }
   .gsource--mini .gsource-btn { flex: 1 1 auto; width: auto; }
   .gsource--mini .gsource-g { width: 1.7rem; height: 1.7rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MOTEUR DE QUIZ : UNE SEULE DIRECTION ARTISTIQUE
+   L'ecran de depart avait recu le traitement « autocollant » (trait epais
+   a l'encre, ombre portee franche, coins tres arrondis) ; l'ecran de jeu
+   et l'ecran de resultat etaient restes en verre depoli, filet d'un pixel
+   et ombres floues. On passait d'une direction a l'autre au clic sur
+   « Commencer », en plein milieu de la partie.
+   Les jetons ci-dessous sont ceux deja employes par le quiz personnalise
+   (.custom-quiz-section), c'est donc la direction de la maison, appliquee
+   partout : depart, choix de mode, saisie des prenoms, questions, palier,
+   resultat. Rien ne bouge cote JavaScript, la structure du DOM est
+   inchangee : ce fichier ne fait que redessiner ce qui existe.
+   ═══════════════════════════════════════════════════════════════════ */
+.quiz-engine-section,
+#quiz-engine, .quiz-engine,
+.jalousie-encart, .quiz-modes-retour {
+  --ink: 268 45% 27%;
+  --qe-trait: 4px;      /* la carte qui contient l'ecran */
+  --qe-trait-i: 3px;    /* les cartes et boutons a l'interieur */
+  --qe-trait-p: 2px;    /* les pastilles et les petits badges */
+  --qe-ombre: 8px 8px 0;
+  --qe-ombre-i: 4px 4px 0;
+  --qe-ombre-p: 2px 2px 0;
+  --qe-rayon: 1.9rem;
+  --qe-rayon-i: 1.2rem;
+}
+/* Sur fond sombre, une encre presque noire disparait dans la carte : les
+   contours perdent tout contraste. On passe a un lavande clair. */
+.dark .quiz-engine-section,
+.dark #quiz-engine, .dark .quiz-engine,
+.dark .jalousie-encart, .dark .quiz-modes-retour { --ink: 270 30% 62%; }
+
+/* Sur telephone, le meme trait parait deux fois plus lourd : on descend
+   d'un cran, l'ombre comprise, pour que la carte respire. */
+@media (max-width: 640px) {
+  .quiz-engine-section,
+  #quiz-engine, .quiz-engine,
+  .jalousie-encart, .quiz-modes-retour {
+    --qe-trait: 3px; --qe-trait-i: 2.5px; --qe-trait-p: 2px;
+    --qe-ombre: 5px 5px 0; --qe-ombre-i: 3px 3px 0;
+    --qe-rayon: 1.5rem; --qe-rayon-i: 1rem;
+  }
+}
+
+/* ── La carte du moteur, quel que soit l'ecran affiche ────────── */
+.quiz-engine {
+  border: var(--qe-trait) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon);
+  box-shadow: var(--qe-ombre) hsl(var(--ink));
+  background: hsl(var(--card));
+  backdrop-filter: none;
+}
+.dark .quiz-engine { box-shadow: var(--qe-ombre) hsl(var(--ink)); }
+
+/* ── L'entete de progression ──────────────────────────────────── */
+.quiz-progress-label, .quiz-progress-pct {
+  border: var(--qe-trait-p) solid hsl(var(--ink));
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  color: hsl(var(--ink));
+}
+.dark .quiz-progress-label, .dark .quiz-progress-pct { color: hsl(var(--foreground)); }
+.quiz-progress-pct { background: hsl(var(--primary) / .16); }
+.quiz-progress-bar {
+  height: .8rem;
+  border: var(--qe-trait-p) solid hsl(var(--ink));
+  border-radius: 999px;
+  background: hsl(var(--muted));
+  box-shadow: none;
+}
+.quiz-progress-fill { box-shadow: none; }
+
+/* ── La question ─────────────────────────────────────────────── */
+/* Le titre de question etait en Inter demi-gras, quand l'ecran de depart
+   juste avant affichait un Poppins tres gras. Meme famille, meme graisse. */
+.quiz-question-enter > h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  line-height: 1.25;
+  font-size: clamp(1.15rem, 4.2vw, 1.5rem);
+  max-width: 34rem;
+  margin-left: auto; margin-right: auto;
+  text-wrap: balance;
+}
+
+/* ── Les reponses ────────────────────────────────────────────── */
+.quiz-engine .quiz-option {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  background: hsl(var(--card));
+  backdrop-filter: none;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  font-weight: 700;
+  transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+}
+/* Pas de bascule laterale ici, contrairement aux cartes de depart : une
+   liste de cinq reponses inclinees deborde du cadre sur un petit ecran. */
+.quiz-engine .quiz-option:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 hsl(var(--primary));
+  border-color: hsl(var(--ink));
+  background: linear-gradient(135deg, hsl(var(--primary) / .1), hsl(var(--secondary) / .08));
+}
+.quiz-engine .quiz-option:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 hsl(var(--ink));
+  transition-duration: 80ms;
+}
+.quiz-engine .quiz-option.selected {
+  border-color: hsl(var(--ink));
+  background: linear-gradient(135deg, hsl(var(--primary) / .2), hsl(var(--secondary) / .14));
+  box-shadow: var(--qe-ombre-i) hsl(var(--primary));
+  transform: none;
+}
+/* La lettre et la coche reprennent le meme trait, sinon elles flottent. */
+.quiz-engine .quiz-option-letter {
+  border: 2px solid hsl(var(--ink));
+  border-radius: .7rem;
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  background: hsl(var(--card));
+  color: hsl(var(--ink));
+  font-weight: 800;
+}
+.dark .quiz-engine .quiz-option-letter { color: hsl(var(--foreground)); }
+.quiz-engine .quiz-option:hover .quiz-option-letter,
+.quiz-engine .quiz-option.selected .quiz-option-letter {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: #fff;
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  transform: none;
+}
+.quiz-engine .quiz-option::after { border: 2px solid hsl(var(--ink)); }
+.quiz-engine .quiz-option:hover::after { border-color: hsl(var(--ink)); transform: translateY(-50%); }
+.quiz-engine .quiz-option.selected::after {
+  border-color: hsl(var(--ink));
+  background-color: hsl(var(--primary));
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  transform: translateY(-50%);
+}
+/* Les autres familles de reponses : echelles, vrai/faux, boutons de choix. */
+.quiz-engine .quiz-scale-option,
+.quiz-engine .choice-btn,
+.quiz-engine .gender-btn {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  background: hsl(var(--card));
+  font-weight: 700;
+}
+.quiz-engine .quiz-scale-option:hover,
+.quiz-engine .choice-btn:hover,
+.quiz-engine .gender-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 hsl(var(--primary));
+}
+
+/* ── Les cartes de choix de mode ─────────────────────────────── */
+.quiz-engine .quiz-mode-carte,
+.quiz-engine .choix-mode {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  background: hsl(var(--card));
+}
+.quiz-engine .quiz-mode-carte:hover, .quiz-engine .quiz-mode-carte:focus-visible,
+.quiz-engine .choix-mode:hover, .quiz-engine .choix-mode:focus-visible {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 hsl(var(--primary));
+}
+.quiz-engine .quiz-mode-emoji {
+  border: 2px solid hsl(var(--ink));
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+}
+
+/* ── L'encart de mise en garde, avant le depart ──────────────── */
+.quiz-setup-screen .quiz-setup-note {
+  border: var(--qe-trait-p) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  background: hsl(var(--card));
+}
+
+/* ── Les boutons du moteur, hors ecran de depart ─────────────── */
+.quiz-engine .btn-cta,
+.quiz-engine .btn-outline,
+.quiz-engine .quiz-next-btn {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: 999px;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  font-weight: 800;
+}
+.quiz-engine .btn-outline { background: hsl(var(--card)); color: hsl(var(--ink)); }
+.dark .quiz-engine .btn-outline { color: hsl(var(--foreground)); }
+.quiz-engine .btn-cta:hover,
+.quiz-engine .btn-outline:hover,
+.quiz-engine .quiz-next-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 hsl(var(--ink));
+}
+/* Le bouton fantome reste discret : c'est une sortie secondaire, lui poser
+   un cadre a l'encre le mettrait au meme rang que « Commencer ». */
+.quiz-engine .btn-ghost { border: 0; box-shadow: none; font-weight: 700; }
+
+/* ── L'ecran de resultat ─────────────────────────────────────── */
+.quiz-engine .quiz-result-card,
+.quiz-engine .qr-zone--resultat,
+.quiz-engine .qr-zone--suite {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon);
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  background: hsl(var(--card));
+}
+.quiz-engine .qr-zone--avis {
+  border: var(--qe-trait-p) dashed hsl(var(--ink) / .55);
+  border-radius: var(--qe-rayon-i);
+}
+.quiz-engine .qr-advice,
+.quiz-engine .qr-rate {
+  border: var(--qe-trait-p) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+}
+.quiz-engine .qr-rate { border-style: solid; }
+.quiz-engine .result-related-card,
+.quiz-engine .qr-orientation-lien,
+.quiz-engine .qr-partenaire {
+  border: var(--qe-trait-p) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  background: hsl(var(--card));
+}
+.quiz-engine .result-related-card:hover,
+.quiz-engine .qr-orientation-lien:hover,
+.quiz-engine .qr-partenaire:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--qe-ombre-i) hsl(var(--primary));
+  border-color: hsl(var(--ink));
+}
+.quiz-engine .result-related-emoji {
+  border: 2px solid hsl(var(--ink));
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+}
+
+/* ── Les panneaux internes communs a plusieurs moteurs ───────── */
+.quiz-engine .glass-card {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  background: hsl(var(--card));
+  backdrop-filter: none;
+}
+.quiz-engine .input, .quiz-engine .textarea {
+  border: var(--qe-trait-p) solid hsl(var(--ink) / .8);
+  border-radius: .85rem;
+}
+/* On garde un halo en plus de l'ombre portee : sans lui, le champ actif ne
+   se distinguerait plus au clavier, l'ancien anneau de focus etant ecrase. */
+.quiz-engine .input:focus, .quiz-engine .textarea:focus {
+  border-color: hsl(var(--ink));
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink)), 0 0 0 3px hsl(var(--primary) / .2);
+}
+
+/* Le bouton de retour au choix de mode vit hors de la carte : il garde son
+   trait, en plus fin, pour rester une sortie et non une action principale. */
+.quiz-modes-retour { border: var(--qe-trait-p) solid hsl(var(--ink) / .5); border-radius: 999px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-engine .quiz-option,
+  .quiz-engine .quiz-mode-carte,
+  .quiz-engine .choix-mode,
+  .quiz-engine .btn-cta,
+  .quiz-engine .btn-outline,
+  .quiz-engine .result-related-card { transition: none; }
+  .quiz-engine .quiz-option:hover,
+  .quiz-engine .quiz-mode-carte:hover,
+  .quiz-engine .choix-mode:hover,
+  .quiz-engine .btn-cta:hover,
+  .quiz-engine .btn-outline:hover,
+  .quiz-engine .result-related-card:hover { transform: none; }
+}
+
+/* ── L'ecran de resultat a ses propres boutons ────────────────── */
+/* Partage, reprise, story : trois boutons dessines chacun de leur cote,
+   avant que l'ecran de depart ne fixe la direction. Ils la reprennent. */
+.quiz-engine .result-share-btn,
+.quiz-engine .result-action-btn,
+.quiz-engine .story-share-btn {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: 999px;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  font-weight: 800;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.quiz-engine .result-action-btn { background: hsl(var(--card)); color: hsl(var(--ink)); }
+.dark .quiz-engine .result-action-btn { color: hsl(var(--foreground)); }
+.quiz-engine .result-share-btn:hover,
+.quiz-engine .result-action-btn:hover,
+.quiz-engine .story-share-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 hsl(var(--ink));
+}
+.quiz-engine .qr-zone--story {
+  border: var(--qe-trait-p) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+}
+.quiz-engine .qr-zone--avis { box-shadow: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-engine .result-share-btn,
+  .quiz-engine .result-action-btn,
+  .quiz-engine .story-share-btn { transition: none; }
+  .quiz-engine .result-share-btn:hover,
+  .quiz-engine .result-action-btn:hover,
+  .quiz-engine .story-share-btn:hover { transform: none; }
+}
+
+/* ── Les quatre jeux a carte : dilemmes, pour ou contre, oui-non,
+      qui pourrait ────────────────────────────────────────────────
+   Meme structure dans les quatre : une carte qui pose la situation, deux
+   gros boutons dessous. Ils partagent maintenant le trait du moteur. */
+.quiz-engine .dil-carte,
+.quiz-engine .pc-carte,
+.quiz-engine .onn-carte,
+.quiz-engine .qp-carte {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon);
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+}
+.quiz-engine .dil-choix-btn,
+.quiz-engine .pc-choix-btn,
+.quiz-engine .onn-btn,
+.quiz-engine .qp-btn {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+}
+.quiz-engine .dil-choix-btn:hover,
+.quiz-engine .pc-choix-btn:hover,
+.quiz-engine .onn-btn:hover,
+.quiz-engine .qp-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 hsl(var(--ink));
+}
+/* L'etat « choisi » ecrase la translation : le bouton s'enfonce. */
+.quiz-engine .dil-choix-btn.est-choisi,
+.quiz-engine .pc-choix-btn.est-choisi,
+.quiz-engine .onn-btn.est-choisi,
+.quiz-engine .qp-btn--pris {
+  transform: translate(1px, 1px);
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+}
+/* Le bandeau « MAIS » du dilemme se detache sur la carte : son halo blanc
+   devient un vrai contour, comme le reste. */
+.quiz-engine .dil-mais {
+  border: 2px solid hsl(var(--ink));
+  box-shadow: 0 0 0 4px hsl(var(--card));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-engine .dil-choix-btn,
+  .quiz-engine .pc-choix-btn,
+  .quiz-engine .onn-btn,
+  .quiz-engine .qp-btn { transition: none; }
+  .quiz-engine .dil-choix-btn:hover,
+  .quiz-engine .pc-choix-btn:hover,
+  .quiz-engine .onn-btn:hover,
+  .quiz-engine .qp-btn:hover { transform: none; }
+}
+
+/* ── Les Z'amours garde sa scene de plateau televise ──────────── */
+/* Fond sombre, dorures, neons : c'est une identite voulue, pas un oubli.
+   L'encre violette du moteur y serait invisible, on la remplace par la
+   dorure du jeu pour que l'ecran de resultat reste dans son decor. */
+.quiz-engine.zamours-results { --ink: 43 90% 62%; }
+
+/* ── Les moteurs qui dessinent leur propre ecran de jeu ────────
+   Quatre familles ne passent pas par .quiz-option : le quiz de
+   connaissance (roles et validation a l'oral), le jeu marrant (une carte
+   a lire), le vote « qui est le plus » et le vrai/faux. Elles avaient
+   chacune leur filet d'un pixel, donc quatre nuances de la meme page. */
+.quiz-engine .kq-role,
+.quiz-engine .kq-question,
+.quiz-engine .funny-carte,
+.quiz-engine .quiz-most-player-btn,
+.quiz-engine .quiz-tf-btn,
+.quiz-engine .quiz-validate-btn {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+}
+.quiz-engine .kq-question,
+.quiz-engine .funny-carte { border-radius: var(--qe-rayon); }
+/* Les roles se lisent d'un coup d'oeil : un trait plus fin suffit, ils ne
+   sont pas cliquables. */
+.quiz-engine .kq-role {
+  border-width: var(--qe-trait-p);
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+}
+.quiz-engine .quiz-most-player-btn,
+.quiz-engine .quiz-tf-btn,
+.quiz-engine .quiz-validate-btn {
+  transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+}
+.quiz-engine .quiz-most-player-btn:hover,
+.quiz-engine .quiz-tf-btn:hover,
+.quiz-engine .quiz-validate-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 hsl(var(--ink));
+}
+.quiz-engine .quiz-most-player-btn:active,
+.quiz-engine .quiz-tf-btn:active,
+.quiz-engine .quiz-validate-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+}
+/* Le bouton « suivante » du jeu marrant et l'etiquette de la carte. */
+.quiz-engine .funny-carte-etiquette,
+.quiz-engine .kq-question-sur {
+  border: 2px solid hsl(var(--ink));
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-engine .quiz-most-player-btn,
+  .quiz-engine .quiz-tf-btn,
+  .quiz-engine .quiz-validate-btn { transition: none; }
+  .quiz-engine .quiz-most-player-btn:hover,
+  .quiz-engine .quiz-tf-btn:hover,
+  .quiz-engine .quiz-validate-btn:hover { transform: none; }
+}
+
+/* ── Le quiz ado a son propre moteur, pas ses propres couleurs ──
+   Il est ecrit en classes utilitaires, il ne passait donc par aucune des
+   regles ci-dessus : cadre a l'encre autour, contenu en filet d'un pixel
+   a l'interieur. On raccroche ses trois surfaces. */
+.quiz-engine .ado-mode-card {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.quiz-engine .ado-mode-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 hsl(var(--primary));
+}
+.quiz-engine .ado-mode-icon {
+  border: 2px solid hsl(var(--ink));
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+}
+.quiz-engine input[type="text"],
+.quiz-engine input[type="number"] {
+  border: var(--qe-trait-p) solid hsl(var(--ink) / .8);
+  border-radius: .85rem;
+}
+.quiz-engine input[type="text"]:focus,
+.quiz-engine input[type="number"]:focus {
+  border-color: hsl(var(--ink));
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink)), 0 0 0 3px hsl(var(--primary) / .2);
+}
+.quiz-engine .btn-primary {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: 999px;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  font-weight: 800;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.quiz-engine .btn-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 hsl(var(--ink));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-engine .ado-mode-card,
+  .quiz-engine .btn-primary { transition: none; }
+  .quiz-engine .ado-mode-card:hover,
+  .quiz-engine .btn-primary:hover { transform: none; }
+}
+
+/* ── Deux ecrans gardent leur fond, l'encadrement en plus ─────
+   La carte de resultat et l'ecran de palier du premier rendez-vous
+   portaient un degrade qui fait leur caractere : le fond uni pose plus
+   haut sur .quiz-engine le leur retirait. On le leur rend, en gardant le
+   trait et l'ombre communs. */
+.quiz-engine.quiz-result-card {
+  background: linear-gradient(145deg, hsl(var(--primary) / .07), hsl(var(--secondary) / .09), hsl(var(--primary) / .05));
+}
+.quiz-engine.funny-palier {
+  background: linear-gradient(160deg, hsl(var(--primary) / .09), hsl(var(--secondary) / .06));
+}
+
+/* ── L'arrivee des reponses ───────────────────────────────────
+   Le moteur pose deja un animation-delay croissant sur chaque reponse
+   (60ms, 120ms, 180ms...) mais aucune animation ne s'y accrochait : le
+   calcul partait a la poubelle. On lui donne enfin quelque chose a
+   retarder, les reponses se posent l'une apres l'autre.
+   L'animation joue sur « translate », pas sur « transform » : le survol
+   des reponses utilise transform, et une animation l'emporte sur une
+   declaration ordinaire. Les deux proprietes se composent, elles ne se
+   marchent donc pas dessus. */
+@keyframes qeReponseEntre {
+  from { opacity: 0; translate: 0 8px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+.quiz-question-enter .quiz-option {
+  animation: qeReponseEntre .3s cubic-bezier(.22, 1, .36, 1) backwards;
+}
+/* Les cartes de mode n'ont pas de delai pose par le moteur : on l'ecrit
+   ici, les trois formats possibles au maximum. */
+.quiz-modes .choix-mode,
+.quiz-modes .quiz-mode-carte {
+  animation: qeReponseEntre .34s cubic-bezier(.22, 1, .36, 1) backwards;
+}
+.quiz-modes .choix-mode:nth-child(2),
+.quiz-modes .quiz-mode-carte:nth-child(2) { animation-delay: .07s; }
+.quiz-modes .choix-mode:nth-child(3),
+.quiz-modes .quiz-mode-carte:nth-child(3) { animation-delay: .14s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-question-enter .quiz-option,
+  .quiz-modes .choix-mode,
+  .quiz-modes .quiz-mode-carte { animation: none; }
 }

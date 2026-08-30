@@ -187,7 +187,7 @@
           var noteLocale = noteHero.toFixed(1).replace('.', lang === 'en' ? '.' : ',');
         %>
         <% if (nbAvisHero > 0) { %>
-        <a class="note-site" href="#avis" aria-label="<%= t('home:noteSite.label', 'Note moyenne du site') %> : <%= noteLocale %>/5, <%= nbAvisHero %> <%= t('common:reviews.reviews', 'avis') %>">
+        <div class="note-site" role="img" aria-label="<%= t('home:noteSite.label', 'Note moyenne du site') %> : <%= noteLocale %>/5, <%= nbAvisHero %> <%= t('common:reviews.reviews', 'avis') %>">
           <span class="note-site-etoiles" aria-hidden="true">
             <% for (var ns = 1; ns <= 5; ns++) {
                  var plein = Math.max(0, Math.min(1, noteHero - (ns - 1))); %>
@@ -199,9 +199,8 @@
           <span class="note-site-valeur"><%= noteLocale %></span>
           <span class="note-site-detail">
             <span class="note-site-sur"><%= t('common:reviews.basedOn', 'Basé sur') %> <%= nbAvisHero %> <%= t('common:reviews.reviews', 'avis') %></span>
-            <span class="note-site-lien"><%= t('home:noteSite.cta', 'Lire les avis') %></span>
           </span>
-        </a>
+        </div>
         <% } %>
       </div>
 
