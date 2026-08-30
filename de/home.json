@@ -52,55 +52,55 @@
     }
   },
   "whyDoQuiz": {
-    "title": "Wozu dienen",
-    "titleHighlight": "diese Quiz",
-    "subtitle": "Mehr als nur ein Spiel, unsere Quiz sind ein Werkzeug, um eure Beziehung zu bereichern",
+    "title": "Wozu diese Quiz",
+    "titleHighlight": "gut sind",
+    "subtitle": "Sechs gute Gründe, heute Abend zum Handy zu greifen statt zur nächsten Serie.",
     "reasons": {
       "testRelation": {
-        "title": "Beziehung testen",
-        "description": "Bewertet eure Kompatibilität und identifiziert eure Stärken, um eine noch stärkere Beziehung aufzubauen."
+        "title": "Wissen, wo ihr steht",
+        "description": "Eure Stärken, eure blinden Flecken und ein Ergebnis, das alles zusammenfasst. Ehrlicher als ein Gespräch am Ende des Abends, und in fünf Minuten erledigt."
       },
       "haveFun": {
-        "title": "Gemeinsam Spaß haben",
-        "description": "Verwandelt einen gewöhnlichen Moment in ein Paar-Spiel. Lacht, diskutiert und schafft gemeinsame Erinnerungen."
+        "title": "Einen richtig guten Abend haben",
+        "description": "Nichts zu reservieren, nichts zu installieren. Ein Handy, ihr beide, und der Abend nimmt eine andere Richtung."
       },
       "discover": {
-        "title": "Den anderen entdecken",
-        "description": "Lernt überraschende Dinge über euren Partner, auch nach Jahren der Beziehung."
+        "title": "Noch etwas Neues erfahren",
+        "description": "Auch nach zehn Jahren gibt es Antworten, die ihr noch nie gehört habt. Oft ist es die dümmste Frage, die sie hervorholt."
       },
       "strengthen": {
-        "title": "Verbindung stärken",
-        "description": "Schafft Momente authentischer Verbindung und stärkt die Bande, die euch vereinen."
+        "title": "Die Vertrautheit zurückholen",
+        "description": "Eine Runde, in der ihr lacht und euch aufzieht, wie am Anfang. Genau das geht verloren, wenn eine Woche die nächste jagt."
       },
       "dialogue": {
-        "title": "Dialog eröffnen",
-        "description": "Beginnt tiefe und aufrichtige Gespräche über Themen, die ihr im Alltag nicht ansprecht."
+        "title": "Aussprechen, was sonst ungesagt bleibt",
+        "description": "Manche Themen kommen von allein nie auf den Tisch. Eine Frage vom Bildschirm nimmt man leichter an als eine Frage vom Partner."
       },
       "memories": {
-        "title": "Erinnerungen schaffen",
-        "description": "Teilt eine einzigartige Erfahrung zusammen und bewahrt eine Erinnerung an diesen Moment der Komplizenschaft."
+        "title": "Etwas davon behalten",
+        "description": "Ein Ergebnis zum Teilen, ein Screenshot zum Hinschicken, und ein Gespräch, das noch lange nach der letzten Frage weitergeht."
       }
     }
   },
   "howItWorks": {
-    "title": "Wie",
+    "title": "So",
     "titleHighlight": "funktioniert es",
-    "subtitle": "Einfach, schnell und lustig: in nur 3 Schritten",
+    "subtitle": "Drei Schritte, und es geht los.",
     "steps": {
       "choose": {
         "step": "1",
-        "title": "Wähle dein Quiz",
-        "description": "Wähle aus unseren Quiz das aus, das zu deiner aktuellen Stimmung passt."
+        "title": "Wählt aus",
+        "description": "Ein ernster Test oder ein leichtes Spiel, je nach Stimmung. Alles ist kostenlos und nichts verlangt ein Konto."
       },
       "answer": {
         "step": "2",
-        "title": "Antwortet zusammen",
-        "description": "Macht es euch bequem und beantwortet die Fragen zu zweit."
+        "title": "Antwortet",
+        "description": "Abwechselnd am selben Handy oder jeder für sich. Die Fragen kommen eine nach der anderen."
       },
       "results": {
         "step": "3",
-        "title": "Entdecke deine Ergebnisse",
-        "description": "Erhalte deinen Score, personalisierte Ratschläge und teile deine Ergebnisse!"
+        "title": "Seht nach",
+        "description": "Ein ausführliches Ergebnis, die passenden Hinweise dazu, und etwas, womit ihr weitermachen könnt."
       }
     }
   },
@@ -169,5 +169,9 @@
     "item10": "🧠 Kennt ihr euch wirklich?",
     "item11": "👀 Wer von uns beiden?",
     "item12": "⚡ Sofort Ergebnisse"
+  },
+  "noteSite": {
+    "label": "Durchschnittsnote der Seite",
+    "cta": "Bewertungen lesen"
   }
 }

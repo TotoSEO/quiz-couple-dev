@@ -52,55 +52,55 @@
     }
   },
   "whyDoQuiz": {
-    "title": "¿Para qué sirve hacer",
+    "title": "Para qué sirve hacer",
     "titleHighlight": "estos quiz",
-    "subtitle": "Más que un simple juego, nuestros quiz son una herramienta para enriquecer tu relación",
+    "subtitle": "Seis buenas razones para sacar el móvil esta noche en lugar de empezar otra serie.",
     "reasons": {
       "testRelation": {
-        "title": "Probar tu relación",
-        "description": "Evalúa tu compatibilidad e identifica tus puntos fuertes para construir una relación aún más sólida."
+        "title": "Saber en qué punto estáis",
+        "description": "Vuestros puntos fuertes, vuestros puntos ciegos y una nota que lo resume. Es más honesto que una conversación de final de noche, y se hace en cinco minutos."
       },
       "haveFun": {
-        "title": "Divertirse juntos",
-        "description": "Transforma un momento ordinario en un juego de pareja. Ríe, debate y crea recuerdos juntos."
+        "title": "Pasar una buena noche",
+        "description": "Nada que reservar, nada que instalar. Un móvil, vosotros dos, y la noche toma otro rumbo."
       },
       "discover": {
-        "title": "Descubrir al otro",
-        "description": "Aprende cosas sorprendentes sobre tu pareja, incluso después de años de relación."
+        "title": "Seguir descubriendo cosas",
+        "description": "Incluso después de diez años quedan respuestas que nunca habéis oído. Suele ser la pregunta más tonta la que las saca."
       },
       "strengthen": {
-        "title": "Fortalecer la complicidad",
-        "description": "Crea momentos de conexión auténtica y refuerza los lazos que os unen."
+        "title": "Recuperar la complicidad",
+        "description": "Una partida en la que os reís y os picáis, como al principio. Ese tipo de momento que se pierde cuando las semanas se encadenan."
       },
       "dialogue": {
-        "title": "Abrir el diálogo",
-        "description": "Inicia conversaciones profundas y sinceras sobre temas que no abordas a diario."
+        "title": "Decir lo que no se dice",
+        "description": "Algunos temas no salen nunca solos. Una pregunta que hace la pantalla se acepta mejor que una pregunta que hace el otro."
       },
       "memories": {
-        "title": "Crear recuerdos",
-        "description": "Comparte una experiencia única juntos y guarda un recuerdo de este momento de complicidad."
+        "title": "Quedaros con algo",
+        "description": "Un resultado para compartir, una captura para mandaros y una conversación que sigue mucho después de la última pregunta."
       }
     }
   },
   "howItWorks": {
-    "title": "¿Cómo",
+    "title": "Cómo",
     "titleHighlight": "funciona",
-    "subtitle": "Simple, rápido y divertido: en solo 3 pasos",
+    "subtitle": "Tres pasos, y ya estáis dentro.",
     "steps": {
       "choose": {
         "step": "1",
-        "title": "Elige tu quiz",
-        "description": "Selecciona entre nuestros quiz el que corresponda a tu estado de ánimo."
+        "title": "Elegid",
+        "description": "Un test serio o un juego ligero, según el momento. Todo es gratis y nada pide una cuenta."
       },
       "answer": {
         "step": "2",
-        "title": "Responde juntos",
-        "description": "Ponte cómodo y responde las preguntas juntos."
+        "title": "Responded",
+        "description": "Por turnos en el mismo móvil, o cada uno por su lado. Las preguntas llegan de una en una."
       },
       "results": {
         "step": "3",
-        "title": "Descubre tus resultados",
-        "description": "¡Obtén tu puntuación, consejos personalizados y comparte tus resultados!"
+        "title": "Descubrid",
+        "description": "Un resultado detallado, los consejos que lo acompañan y con qué seguir después."
       }
     }
   },
@@ -169,5 +169,9 @@
     "item10": "🧠 ¿Os conocéis de verdad?",
     "item11": "👀 ¿Quién de los dos?",
     "item12": "⚡ Resultados al instante"
+  },
+  "noteSite": {
+    "label": "Nota media del sitio",
+    "cta": "Leer las opiniones"
   }
 }

@@ -52,55 +52,55 @@
     }
   },
   "whyDoQuiz": {
-    "title": "What's the point of taking",
-    "titleHighlight": "these quizzes",
-    "subtitle": "More than just a game, our quizzes are a tool to enrich your relationship",
+    "title": "What these quizzes",
+    "titleHighlight": "are for",
+    "subtitle": "Six good reasons to pick up the phone tonight instead of starting another series.",
     "reasons": {
       "testRelation": {
-        "title": "Test your relationship",
-        "description": "Evaluate your compatibility and identify your strengths to build an even stronger relationship."
+        "title": "Know where you stand",
+        "description": "Your strengths, your blind spots, and a score that sums it up. It's more honest than an end-of-evening conversation, and it takes five minutes."
       },
       "haveFun": {
-        "title": "Have fun together",
-        "description": "Turn an ordinary moment into a couple game. Laugh, debate and create memories together."
+        "title": "Have a proper evening",
+        "description": "Nothing to book, nothing to install. One phone, the two of you, and the evening takes a different turn."
       },
       "discover": {
-        "title": "Discover each other",
-        "description": "Learn surprising things about your partner, even after years together."
+        "title": "Learn something new",
+        "description": "Even after ten years, there are answers you have never heard. It's often the silliest question that brings them out."
       },
       "strengthen": {
-        "title": "Strengthen your bond",
-        "description": "Create moments of authentic connection and strengthen the ties that bind you."
+        "title": "Get the spark back",
+        "description": "A round where you laugh and tease each other, the way you did at the start. The kind of moment that slips away as the weeks pile up."
       },
       "dialogue": {
-        "title": "Open dialogue",
-        "description": "Start deep and sincere conversations on topics you don't address daily."
+        "title": "Say what goes unsaid",
+        "description": "Some subjects never come up on their own. A question asked by a screen lands better than a question asked by your partner."
       },
       "memories": {
-        "title": "Create memories",
-        "description": "Share a unique experience together and keep a memory of this moment of complicity."
+        "title": "Keep something from it",
+        "description": "A result to share, a screenshot to send each other, and a conversation that carries on well past the last question."
       }
     }
   },
   "howItWorks": {
-    "title": "How does it",
-    "titleHighlight": "work",
-    "subtitle": "Simple, fast and fun: in just 3 steps",
+    "title": "How it",
+    "titleHighlight": "works",
+    "subtitle": "Three steps, and you're off.",
     "steps": {
       "choose": {
         "step": "1",
-        "title": "Choose your quiz",
-        "description": "Select from our quizzes the one that matches your current mood."
+        "title": "Choose",
+        "description": "A serious test or a light game, depending on the mood. Everything is free and nothing asks for an account."
       },
       "answer": {
         "step": "2",
-        "title": "Answer together",
-        "description": "Get comfortable and answer the questions together."
+        "title": "Answer",
+        "description": "Taking turns on the same phone, or each on your own. The questions come one at a time."
       },
       "results": {
         "step": "3",
-        "title": "Discover your results",
-        "description": "Get your score, personalized advice and share your results!"
+        "title": "Find out",
+        "description": "A detailed result, the advice that goes with it, and something to move on to next."
       }
     }
   },
@@ -169,5 +169,9 @@
     "item10": "🧠 How well do you know each other?",
     "item11": "👀 Which one of us?",
     "item12": "⚡ Instant results"
+  },
+  "noteSite": {
+    "label": "Site average rating",
+    "cta": "Read the reviews"
   }
 }
