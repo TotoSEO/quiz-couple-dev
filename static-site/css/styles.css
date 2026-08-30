@@ -1151,7 +1151,9 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* Quiz option */
 .quiz-option { transition: all 200ms ease-out; }
+@media (hover: hover) and (pointer: fine) {
 .quiz-option:hover { transform: scale(1.02); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+}
 .quiz-option:active { transform: scale(0.98); }
 
 /* ── Scrollbar ────────────────────────────────────────────── */
@@ -2060,7 +2062,9 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   color: hsl(30 55% 16%);
   box-shadow: 0 10px 24px -12px hsl(40 80% 40% / 0.6);
 }
+@media (hover: hover) and (pointer: fine) {
 .qp-btn:hover { transform: translateY(-2px); }
+}
 .qp-btn:active { transform: scale(0.98); }
 .qp-btn--pris { filter: brightness(1.12); transform: scale(1.03); }
 
@@ -2076,7 +2080,9 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   cursor: pointer;
   transition: background 150ms ease, color 150ms ease, transform 150ms ease;
 }
+@media (hover: hover) and (pointer: fine) {
 .qp-personne:hover { background: hsl(var(--muted)); color: hsl(var(--foreground)); }
+}
 .qp-personne:active { transform: scale(0.97); }
 .qp-personne.qp-btn--pris { background: hsl(var(--muted)); color: hsl(var(--foreground)); transform: scale(1.03); }
 
@@ -2242,8 +2248,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .dil-choix-emoji { font-size: 1.6rem; line-height: 1; }
 .dil-choix-btn--ok { border-color: hsl(145 60% 45% / .5); color: hsl(145 60% 32%); }
 .dil-choix-btn--pasok { border-color: hsl(0 70% 55% / .5); color: hsl(0 68% 45%); }
+@media (hover: hover) and (pointer: fine) {
 .dil-choix-btn--ok:hover { background: hsl(145 60% 45% / .1); transform: translateY(-2px); }
 .dil-choix-btn--pasok:hover { background: hsl(0 70% 55% / .1); transform: translateY(-2px); }
+}
 .dil-choix-btn.est-choisi { transform: scale(.97); }
 .dil-passer {
   margin-top: .9rem; padding: .35rem .6rem; border: 0; background: none; cursor: pointer;
@@ -2358,9 +2366,15 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   background: hsl(var(--card));
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.qr-partenaire:hover, .qr-partenaire:focus-visible {
+.qr-partenaire:focus-visible {
   transform: translateY(-2px); border-color: hsl(var(--primary) / .45);
   box-shadow: 0 14px 34px -18px hsl(var(--primary) / .45);
+}
+@media (hover: hover) and (pointer: fine) {
+.qr-partenaire:hover {
+  transform: translateY(-2px); border-color: hsl(var(--primary) / .45);
+  box-shadow: 0 14px 34px -18px hsl(var(--primary) / .45);
+}
 }
 .qr-partenaire-image {
   display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover;
@@ -2393,7 +2407,9 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   display: inline-block; width: 1rem; height: 1rem;
   margin-left: .35rem; vertical-align: -2px; transition: transform .2s ease;
 }
+@media (hover: hover) and (pointer: fine) {
 .qr-partenaire:hover .qr-partenaire-cta svg { transform: translateX(3px); }
+}
 
 .qr-orientation {
   display: grid; gap: .55rem; margin: 1.5rem auto 0; max-width: 34rem; text-align: left;
@@ -2476,8 +2492,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .pc-choix-emoji { font-size: 1.6rem; line-height: 1; }
 .pc-choix-btn--pour { border-color: hsl(338 72% 62% / .55); color: hsl(338 68% 46%); }
 .pc-choix-btn--contre { border-color: hsl(265 55% 58% / .55); color: hsl(265 52% 46%); }
+@media (hover: hover) and (pointer: fine) {
 .pc-choix-btn--pour:hover { background: hsl(338 72% 62% / .1); transform: translateY(-2px); }
 .pc-choix-btn--contre:hover { background: hsl(265 55% 58% / .1); transform: translateY(-2px); }
+}
 .pc-choix-btn.est-choisi { transform: scale(.97); }
 .pc-passer {
   margin-top: .9rem; padding: .35rem .6rem; border: 0; background: none; cursor: pointer;
@@ -2595,8 +2613,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .onn-btn-emoji { font-size: 1.6rem; line-height: 1; }
 .onn-btn--oui { border-color: hsl(152 60% 42% / .55); color: hsl(152 55% 34%); }
 .onn-btn--non { border-color: hsl(0 65% 58% / .55); color: hsl(0 60% 46%); }
+@media (hover: hover) and (pointer: fine) {
 .onn-btn--oui:hover:not(:disabled) { background: hsl(152 60% 42% / .1); transform: translateY(-2px); }
 .onn-btn--non:hover:not(:disabled) { background: hsl(0 65% 58% / .1); transform: translateY(-2px); }
+}
 .onn-btn.est-choisi { transform: scale(.97); border-width: 3px; }
 .onn-btn:disabled { cursor: default; }
 .onn-btn:disabled:not(.est-choisi) { opacity: .45; }
@@ -3149,11 +3169,13 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media (hover: hover) and (pointer: fine) {
 .quiz-option:hover {
   border-color: hsl(var(--primary) / 0.5);
   background: hsl(var(--primary) / 0.06);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px -4px hsl(var(--primary) / 0.12);
+}
 }
 .quiz-option:active { transform: scale(0.97); transition-duration: 80ms; }
 .quiz-option.selected {
@@ -3173,9 +3195,11 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   font-weight: 700; font-size: 0.8rem;
   transition: all 250ms ease;
 }
+@media (hover: hover) and (pointer: fine) {
 .quiz-option:hover .quiz-option-letter {
   background: hsl(var(--primary) / 0.15);
   color: hsl(var(--primary));
+}
 }
 .quiz-option.selected .quiz-option-letter {
   background: hsl(var(--primary));
@@ -3385,7 +3409,9 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   display: flex; align-items: center; justify-content: center; gap: 0.3rem;
   -webkit-tap-highlight-color: transparent;
 }
+@media (hover: hover) and (pointer: fine) {
 .gender-btn:hover { border-color: hsl(var(--primary) / 0.4); }
+}
 .gender-btn-selected { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 .gender-btn-selected.gender-btn-male { border-color: #3b82f6; background: #3b82f6; color: #fff; }
 .gender-btn-selected.gender-btn-female { border-color: #ec4899; background: #ec4899; color: #fff; }
@@ -3428,11 +3454,18 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
   -webkit-tap-highlight-color: transparent;
 }
-.ado-mode-card:hover, .ado-mode-card:focus-visible {
+.ado-mode-card:focus-visible {
   transform: translateY(-4px);
   border-color: hsl(var(--primary) / 0.55);
   box-shadow: 0 16px 32px -18px hsl(var(--primary) / 0.6);
   outline: none;
+}
+@media (hover: hover) and (pointer: fine) {
+.ado-mode-card:hover {
+  transform: translateY(-4px);
+  border-color: hsl(var(--primary) / 0.55);
+  box-shadow: 0 16px 32px -18px hsl(var(--primary) / 0.6);
+}
 }
 .ado-mode-icon {
   width: 60px; height: 60px; border-radius: 18px; display: flex; align-items: center; justify-content: center;
@@ -3455,10 +3488,14 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 /* ── Knowledge Quiz: Validation buttons ──────────────────── */
 .quiz-validate-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: calc(var(--radius) + 4px); border: 2px solid; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 200ms ease; }
 .quiz-validate-correct { border-color: #22c55e; color: #22c55e; background: rgba(34, 197, 94, 0.08); }
+@media (hover: hover) and (pointer: fine) {
 .quiz-validate-correct:hover { background: #22c55e; color: #fff; transform: scale(1.05); }
+}
 .quiz-validate-correct svg { width: 24px; height: 24px; }
 .quiz-validate-wrong { border-color: #ef4444; color: #ef4444; background: rgba(239, 68, 68, 0.08); }
+@media (hover: hover) and (pointer: fine) {
 .quiz-validate-wrong:hover { background: #ef4444; color: #fff; transform: scale(1.05); }
+}
 .quiz-validate-wrong svg { width: 24px; height: 24px; }
 
 /* ── Debate Quiz: Scale option ───────────────────────────── */
@@ -3474,7 +3511,9 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .quiz-most-players-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
 @media (min-width: 640px) { .quiz-most-players-grid { grid-template-columns: repeat(3, 1fr); } }
 .quiz-most-player-btn { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1rem; border-radius: calc(var(--radius) + 4px); border: 2px solid hsl(var(--border)); background: hsl(var(--card) / 0.8); color: hsl(var(--foreground)); font-size: 0.9rem; cursor: pointer; transition: all 200ms ease; }
+@media (hover: hover) and (pointer: fine) {
 .quiz-most-player-btn:hover { border-color: hsl(var(--primary) / 0.6); background: hsl(var(--primary) / 0.08); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+}
 .quiz-most-player-btn.selected { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.15); box-shadow: 0 0 0 3px hsl(var(--primary) / 0.2); }
 .quiz-most-nobody-btn { border-style: dashed; opacity: 0.7; }
 
@@ -3491,7 +3530,9 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 
 /* Add player button (Most quiz) */
 .quiz-add-player-btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.75rem; border-radius: calc(var(--radius) + 4px); border: 2px dashed hsl(var(--border)); background: transparent; color: hsl(var(--muted-foreground)); font-size: 0.875rem; cursor: pointer; transition: all 200ms ease; }
+@media (hover: hover) and (pointer: fine) {
 .quiz-add-player-btn:hover { border-color: hsl(var(--primary)); color: hsl(var(--primary)); background: hsl(var(--primary) / 0.05); }
+}
 .quiz-add-player-btn svg { width: 18px; height: 18px; }
 
 /* Icon button (remove player) */
@@ -3500,14 +3541,20 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 
 /* ── True/False Quiz buttons ─────────────────────────────── */
 .quiz-tf-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; padding: 1.5rem 1rem; border-radius: calc(var(--radius) + 6px); border: 2px solid hsl(var(--border)); background: hsl(var(--card) / 0.8); color: hsl(var(--foreground)); font-size: 1rem; cursor: pointer; transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+@media (hover: hover) and (pointer: fine) {
 .quiz-tf-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+}
 .quiz-tf-btn:active { transform: scale(0.97); }
 .quiz-tf-icon { font-size: 1.75rem; font-weight: 700; line-height: 1; }
 .quiz-tf-label { font-weight: 600; font-size: 1.1rem; }
+@media (hover: hover) and (pointer: fine) {
 .quiz-tf-btn--true:hover { border-color: hsl(142 71% 45%); background: hsl(142 71% 45% / 0.1); }
+}
 .quiz-tf-btn--true:active, .quiz-tf-btn--true.selected { border-color: hsl(142 71% 45%); background: hsl(142 71% 45% / 0.15); box-shadow: 0 0 0 3px hsl(142 71% 45% / 0.2); }
 .quiz-tf-btn--true .quiz-tf-icon { color: hsl(142 71% 45%); }
+@media (hover: hover) and (pointer: fine) {
 .quiz-tf-btn--false:hover { border-color: hsl(0 84% 60%); background: hsl(0 84% 60% / 0.1); }
+}
 .quiz-tf-btn--false:active, .quiz-tf-btn--false.selected { border-color: hsl(0 84% 60%); background: hsl(0 84% 60% / 0.15); box-shadow: 0 0 0 3px hsl(0 84% 60% / 0.2); }
 .quiz-tf-btn--false .quiz-tf-icon { color: hsl(0 84% 60%); }
 
@@ -3542,11 +3589,13 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   box-shadow: 0 0 0 3px hsl(0 84% 60% / 0.2);
 }
 .quiz-tf-btn--eteint { opacity: 0.42; }
+@media (hover: hover) and (pointer: fine) {
 .quiz-tf-btn--bonne:hover, .quiz-tf-btn--mauvaise:hover, .quiz-tf-btn--eteint:hover {
   transform: none; box-shadow: none;
 }
 .quiz-tf-btn--bonne:hover { box-shadow: 0 0 0 3px hsl(142 71% 45% / 0.22); }
 .quiz-tf-btn--mauvaise:hover { box-shadow: 0 0 0 3px hsl(0 84% 60% / 0.2); }
+}
 .quiz-tf-vous {
   font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.04em; color: hsl(var(--muted-foreground));
@@ -4478,7 +4527,9 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 .story-share-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (hover: hover) and (pointer: fine) {
 .story-share-slide:hover { transform: translateY(-3px); }
+}
 .story-share-slide.est-choisi {
   border-color: hsl(var(--primary));
   box-shadow: 0 8px 22px hsl(var(--primary) / 0.35);
@@ -4593,9 +4644,11 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   background: hsl(var(--card)); text-decoration: none; color: hsl(var(--foreground));
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
+@media (hover: hover) and (pointer: fine) {
 .result-related-card:hover {
   border-color: hsl(var(--primary) / 0.5);
   transform: translateY(-3px); box-shadow: 0 12px 24px -14px hsl(var(--primary) / 0.5);
+}
 }
 .result-related-emoji {
   font-size: 1.7rem; width: 48px; height: 48px; flex-shrink: 0;
@@ -4979,7 +5032,10 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   opacity: 0;
   transition: opacity 0.4s ease;
 }
+@media (hover: hover) and (pointer: fine) {
 .quiz-option:hover::before { opacity: 1; }
+}
+@media (hover: hover) and (pointer: fine) {
 .quiz-option:hover {
   border-color: hsl(var(--primary) / 0.4);
   background: hsl(var(--card));
@@ -4987,6 +5043,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   box-shadow:
     0 8px 32px -8px hsl(var(--primary) / 0.15),
     0 2px 8px rgba(0,0,0,0.04);
+}
 }
 .quiz-option:active {
   transform: scale(0.98) translateY(0);
@@ -5009,11 +5066,13 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.06);
   transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+@media (hover: hover) and (pointer: fine) {
 .quiz-option:hover .quiz-option-letter {
   background: linear-gradient(135deg, hsl(var(--primary) / 0.15), hsl(var(--primary) / 0.08));
   color: hsl(var(--primary));
   transform: scale(1.08);
   box-shadow: 0 2px 8px -2px hsl(var(--primary) / 0.2);
+}
 }
 .quiz-option.selected .quiz-option-letter {
   background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
@@ -5077,7 +5136,9 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   z-index: 1;
 }
+@media (hover: hover) and (pointer: fine) {
 .quiz-option:hover::after { border-color: hsl(var(--primary) / 0.55); transform: translateY(-50%) scale(1.08); }
+}
 .quiz-option.selected::after {
   border-color: hsl(var(--primary));
   background-color: hsl(var(--primary));
@@ -5457,12 +5518,16 @@ footer .mt-12.border-t svg.text-primary {
 .quiz-setup-icon svg { width: 36px; height: 36px; }
 .quiz-setup-meta { padding: 0.75rem 1.5rem; border-radius: 0.75rem; background: hsl(var(--muted) / 0.4); border: 1px solid hsl(var(--border) / 0.3); }
 .quiz-setup-start-btn { max-width: 20rem !important; border-radius: calc(var(--radius)) !important; background: linear-gradient(135deg, hsl(var(--primary)), hsl(338 70% 55%)) !important; box-shadow: 0 4px 16px -2px hsl(var(--primary) / 0.4), 0 12px 32px -8px hsl(var(--primary) / 0.2) !important; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important; }
+@media (hover: hover) and (pointer: fine) {
 .quiz-setup-start-btn:hover { transform: translateY(-3px) scale(1.03) !important; box-shadow: 0 8px 24px -4px hsl(var(--primary) / 0.5), 0 16px 48px -12px hsl(var(--primary) / 0.3) !important; }
+}
 .quiz-player-card { border-radius: 1rem; padding: 1.75rem; background: hsl(var(--card)); border: 1px solid hsl(var(--border) / 0.5); transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
 .quiz-player-card:focus-within { border-color: hsl(var(--primary) / 0.4); box-shadow: 0 0 0 3px hsl(var(--primary) / 0.08), 0 8px 24px -8px hsl(var(--primary) / 0.1); }
 .quiz-player-number { width: 40px; height: 40px; border-radius: 0.75rem; box-shadow: 0 6px 16px -4px hsl(var(--primary) / 0.35); }
 .gender-btn { border-radius: 0.75rem; border-width: 1.5px; padding: 0.75rem 1rem; transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); }
+@media (hover: hover) and (pointer: fine) {
 .gender-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+}
 .gender-btn-selected { transform: scale(1.04) !important; box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important; }
 /* SEO article: alternating soft "content blocks" to break the flat wall of
    text (background variation + breathing room, no copy changes). */
@@ -5515,10 +5580,14 @@ footer .mt-12.border-t svg.text-primary {
 .breadcrumb { padding: 0.5rem 1rem; border-radius: 9999px; background: hsl(var(--muted) / 0.3); display: inline-flex; font-size: 0.8125rem; }
 .breadcrumb ol { display: flex; align-items: center; gap: 0.375rem; list-style: none; padding: 0; margin: 0; }
 .quiz-validate-correct, .quiz-validate-wrong { border-radius: calc(var(--radius)); border-width: 1.5px; padding: 1rem 2.5rem; transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); }
+@media (hover: hover) and (pointer: fine) {
 .quiz-validate-correct:hover { transform: scale(1.06) translateY(-2px); box-shadow: 0 8px 24px -4px rgba(34, 197, 94, 0.3); }
 .quiz-validate-wrong:hover { transform: scale(1.06) translateY(-2px); box-shadow: 0 8px 24px -4px rgba(239, 68, 68, 0.3); }
+}
 .quiz-most-player-btn { border-radius: 1rem; border-width: 1.5px; padding: 1.25rem; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+@media (hover: hover) and (pointer: fine) {
 .quiz-most-player-btn:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 12px 28px -8px hsl(var(--primary) / 0.15); }
+}
 .quiz-most-player-btn.selected { box-shadow: 0 0 0 3px hsl(var(--primary) / 0.12), 0 8px 20px -4px hsl(var(--primary) / 0.2); transform: scale(1.04); }
 .quiz-player-letter { width: 44px; height: 44px; border-radius: calc(var(--radius)); box-shadow: 0 4px 12px -2px hsl(var(--primary) / 0.3); }
 .quiz-podium-gold { border-radius: 1rem; background: linear-gradient(135deg, hsl(45 90% 55% / 0.06), hsl(45 80% 65% / 0.03)); box-shadow: 0 4px 16px -4px hsl(45 90% 55% / 0.15); }
@@ -6593,11 +6662,7 @@ h1, h2, h3, h4, h5, h6,
    l'emportent donc sur tout ce qui suit dans le fichier. On les aligne ici
    plutot que d'empiler une surcharge de plus. */
 .quiz-engine .quiz-option, #quiz-engine .quiz-option {
-  border-width: var(--qe-trait-i); font-weight: 700;
-}
-.quiz-engine .quiz-option:hover, #quiz-engine .quiz-option:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 hsl(var(--primary));
+  border-width: var(--qe-trait-i); font-weight: 500;
 }
 .quiz-engine .quiz-option:active, #quiz-engine .quiz-option:active {
   transform: translate(1px, 1px);
@@ -6678,9 +6743,11 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: var(--qe-ombre-i) hsl(var(--ink)) !important;
   border-radius: 999px !important;
 }
+@media (hover: hover) and (pointer: fine) {
 .quiz-setup-screen .quiz-setup-start-btn:hover {
   transform: translate(-2px, -2px) !important;
   box-shadow: 6px 6px 0 hsl(var(--ink)) !important;
+}
 }
 /* Gender buttons chunky too */
 .quiz-setup-screen .gender-btn { border-width: 2.5px !important; }
@@ -6705,9 +6772,11 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: var(--qe-ombre-i) hsl(var(--ink)) !important;
   border-radius: 999px !important;
 }
+@media (hover: hover) and (pointer: fine) {
 .quiz-setup-screen .btn-cta:hover {
   transform: translate(-2px, -2px) !important;
   box-shadow: 6px 6px 0 hsl(var(--ink)) !important;
+}
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -8109,8 +8178,13 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   background: hsl(var(--card)); box-shadow: 5px 5px 0 hsl(var(--ink, 268 45% 27%));
   transition: transform .18s cubic-bezier(.34, 1.56, .64, 1), box-shadow .18s ease;
 }
-.quiz-mode-carte:hover, .quiz-mode-carte:focus-visible {
+.quiz-mode-carte:focus-visible {
   transform: translate(-2px, -2px); box-shadow: 7px 7px 0 hsl(var(--ink, 268 45% 27%));
+}
+@media (hover: hover) and (pointer: fine) {
+.quiz-mode-carte:hover {
+  transform: translate(-2px, -2px); box-shadow: 7px 7px 0 hsl(var(--ink, 268 45% 27%));
+}
 }
 .quiz-mode-carte--jeu { --qm-h: 22; --qm-s: 88%; --qm-l: 56%; }
 .quiz-mode-emoji {
@@ -9227,10 +9301,17 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 .choix-mode > * { position: relative; }
 .choix-mode--duo { --sm-h: 270; --sm-s: 40%; --sm-l: 55%; }
-.choix-mode:hover, .choix-mode:focus-visible {
+.choix-mode:focus-visible {
   transform: translateY(-4px);
   border-color: hsl(var(--sm-h) var(--sm-s) var(--sm-l));
   box-shadow: 0 16px 32px -18px hsl(var(--sm-h) var(--sm-s) var(--sm-l) / .85);
+}
+@media (hover: hover) and (pointer: fine) {
+.choix-mode:hover {
+  transform: translateY(-4px);
+  border-color: hsl(var(--sm-h) var(--sm-s) var(--sm-l));
+  box-shadow: 0 16px 32px -18px hsl(var(--sm-h) var(--sm-s) var(--sm-l) / .85);
+}
 }
 .choix-mode:focus-visible { outline: 2px solid hsl(var(--sm-h) var(--sm-s) var(--sm-l)); outline-offset: 3px; }
 /* Composant partagé par le test de couple et le test couple sain.
@@ -9471,9 +9552,15 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   background: hsl(var(--card)); color: hsl(var(--foreground));
   transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
 }
+@media (hover: hover) and (pointer: fine) {
 .jnj-btn:hover { transform: translateY(-2px); }
-.jnj-btn--jai:hover, .jnj-btn--jai.jnj-btn--pris { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.10); }
-.jnj-btn--jamais:hover, .jnj-btn--jamais.jnj-btn--pris { border-color: hsl(var(--secondary)); background: hsl(var(--secondary) / 0.10); }
+}
+.jnj-btn--jai.jnj-btn--pris { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.10); }
+.jnj-btn--jamais.jnj-btn--pris { border-color: hsl(var(--secondary)); background: hsl(var(--secondary) / 0.10); }
+@media (hover: hover) and (pointer: fine) {
+.jnj-btn--jai:hover { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.10); }
+.jnj-btn--jamais:hover { border-color: hsl(var(--secondary)); background: hsl(var(--secondary) / 0.10); }
+}
 .jnj-btn-emoji { font-size: 1.75rem; line-height: 1; }
 .jnj-btn-texte { font-weight: 700; font-size: 1rem; }
 .jnj-choix--verrouille .jnj-btn { pointer-events: none; }
@@ -9831,57 +9918,54 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 
 /* ── Les reponses ────────────────────────────────────────────── */
+/* Pas d'ombre portee sur les reponses. Le trait a l'encre fait deja le
+   cadre ; l'ombre franche par-dessus epaississait le bas et la droite de
+   chaque carte, au point que les reponses se lisaient comme des paves.
+   L'ombre reste sur ce qui doit sembler pose en relief : la carte du
+   moteur et les boutons d'action. */
 .quiz-engine .quiz-option {
   border: var(--qe-trait-i) solid hsl(var(--ink));
   border-radius: var(--qe-rayon-i);
   background: hsl(var(--card));
   backdrop-filter: none;
-  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
-  font-weight: 700;
+  box-shadow: none;
+  font-weight: 500;
   transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
 }
 /* Pas de bascule laterale ici, contrairement aux cartes de depart : une
    liste de cinq reponses inclinees deborde du cadre sur un petit ecran. */
-.quiz-engine .quiz-option:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 hsl(var(--primary));
-  border-color: hsl(var(--ink));
-  background: linear-gradient(135deg, hsl(var(--primary) / .1), hsl(var(--secondary) / .08));
-}
 .quiz-engine .quiz-option:active {
-  transform: translate(1px, 1px);
-  box-shadow: 2px 2px 0 hsl(var(--ink));
+  transform: scale(.985);
   transition-duration: 80ms;
 }
 .quiz-engine .quiz-option.selected {
-  border-color: hsl(var(--ink));
-  background: linear-gradient(135deg, hsl(var(--primary) / .2), hsl(var(--secondary) / .14));
-  box-shadow: var(--qe-ombre-i) hsl(var(--primary));
+  border-color: hsl(var(--primary));
+  background: linear-gradient(135deg, hsl(var(--primary) / .18), hsl(var(--secondary) / .12));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / .22);
   transform: none;
 }
 /* La lettre et la coche reprennent le meme trait, sinon elles flottent. */
 .quiz-engine .quiz-option-letter {
   border: 2px solid hsl(var(--ink));
   border-radius: .7rem;
-  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  box-shadow: none;
   background: hsl(var(--card));
   color: hsl(var(--ink));
-  font-weight: 800;
+  font-weight: 700;
 }
 .dark .quiz-engine .quiz-option-letter { color: hsl(var(--foreground)); }
-.quiz-engine .quiz-option:hover .quiz-option-letter,
 .quiz-engine .quiz-option.selected .quiz-option-letter {
   background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
   color: #fff;
-  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  border-color: hsl(var(--primary));
+  box-shadow: none;
   transform: none;
 }
 .quiz-engine .quiz-option::after { border: 2px solid hsl(var(--ink)); }
-.quiz-engine .quiz-option:hover::after { border-color: hsl(var(--ink)); transform: translateY(-50%); }
 .quiz-engine .quiz-option.selected::after {
-  border-color: hsl(var(--ink));
+  border-color: hsl(var(--primary));
   background-color: hsl(var(--primary));
-  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  box-shadow: none;
   transform: translateY(-50%);
 }
 /* Les autres familles de reponses : echelles, vrai/faux, boutons de choix. */
@@ -9894,12 +9978,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   background: hsl(var(--card));
   font-weight: 700;
 }
-.quiz-engine .quiz-scale-option:hover,
-.quiz-engine .choice-btn:hover,
-.quiz-engine .gender-btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 hsl(var(--primary));
-}
 
 /* ── Les cartes de choix de mode ─────────────────────────────── */
 .quiz-engine .quiz-mode-carte,
@@ -9909,8 +9987,8 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   box-shadow: var(--qe-ombre-i) hsl(var(--ink));
   background: hsl(var(--card));
 }
-.quiz-engine .quiz-mode-carte:hover, .quiz-engine .quiz-mode-carte:focus-visible,
-.quiz-engine .choix-mode:hover, .quiz-engine .choix-mode:focus-visible {
+.quiz-engine .quiz-mode-carte:focus-visible,
+.quiz-engine .choix-mode:focus-visible {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0 hsl(var(--primary));
 }
@@ -9938,12 +10016,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 .quiz-engine .btn-outline { background: hsl(var(--card)); color: hsl(var(--ink)); }
 .dark .quiz-engine .btn-outline { color: hsl(var(--foreground)); }
-.quiz-engine .btn-cta:hover,
-.quiz-engine .btn-outline:hover,
-.quiz-engine .quiz-next-btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 hsl(var(--ink));
-}
 /* Le bouton fantome reste discret : c'est une sortie secondaire, lui poser
    un cadre a l'encre le mettrait au meme rang que « Commencer ». */
 .quiz-engine .btn-ghost { border: 0; box-shadow: none; font-weight: 700; }
@@ -9975,13 +10047,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   border-radius: var(--qe-rayon-i);
   box-shadow: var(--qe-ombre-p) hsl(var(--ink));
   background: hsl(var(--card));
-}
-.quiz-engine .result-related-card:hover,
-.quiz-engine .qr-orientation-lien:hover,
-.quiz-engine .qr-partenaire:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: var(--qe-ombre-i) hsl(var(--primary));
-  border-color: hsl(var(--ink));
 }
 .quiz-engine .result-related-emoji {
   border: 2px solid hsl(var(--ink));
@@ -10018,12 +10083,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .quiz-engine .btn-cta,
   .quiz-engine .btn-outline,
   .quiz-engine .result-related-card { transition: none; }
-  .quiz-engine .quiz-option:hover,
-  .quiz-engine .quiz-mode-carte:hover,
-  .quiz-engine .choix-mode:hover,
-  .quiz-engine .btn-cta:hover,
-  .quiz-engine .btn-outline:hover,
-  .quiz-engine .result-related-card:hover { transform: none; }
 }
 
 /* ── L'ecran de resultat a ses propres boutons ────────────────── */
@@ -10040,12 +10099,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 .quiz-engine .result-action-btn { background: hsl(var(--card)); color: hsl(var(--ink)); }
 .dark .quiz-engine .result-action-btn { color: hsl(var(--foreground)); }
-.quiz-engine .result-share-btn:hover,
-.quiz-engine .result-action-btn:hover,
-.quiz-engine .story-share-btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 hsl(var(--ink));
-}
 .quiz-engine .qr-zone--story {
   border: var(--qe-trait-p) solid hsl(var(--ink));
   border-radius: var(--qe-rayon-i);
@@ -10057,9 +10110,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .quiz-engine .result-share-btn,
   .quiz-engine .result-action-btn,
   .quiz-engine .story-share-btn { transition: none; }
-  .quiz-engine .result-share-btn:hover,
-  .quiz-engine .result-action-btn:hover,
-  .quiz-engine .story-share-btn:hover { transform: none; }
 }
 
 /* ── Les quatre jeux a carte : dilemmes, pour ou contre, oui-non,
@@ -10083,13 +10133,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   box-shadow: var(--qe-ombre-i) hsl(var(--ink));
   transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
 }
-.quiz-engine .dil-choix-btn:hover,
-.quiz-engine .pc-choix-btn:hover,
-.quiz-engine .onn-btn:hover,
-.quiz-engine .qp-btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 hsl(var(--ink));
-}
 /* L'etat « choisi » ecrase la translation : le bouton s'enfonce. */
 .quiz-engine .dil-choix-btn.est-choisi,
 .quiz-engine .pc-choix-btn.est-choisi,
@@ -10110,10 +10153,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .quiz-engine .pc-choix-btn,
   .quiz-engine .onn-btn,
   .quiz-engine .qp-btn { transition: none; }
-  .quiz-engine .dil-choix-btn:hover,
-  .quiz-engine .pc-choix-btn:hover,
-  .quiz-engine .onn-btn:hover,
-  .quiz-engine .qp-btn:hover { transform: none; }
 }
 
 /* ── Les Z'amours garde sa scene de plateau televise ──────────── */
@@ -10150,12 +10189,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .quiz-engine .quiz-validate-btn {
   transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
 }
-.quiz-engine .quiz-most-player-btn:hover,
-.quiz-engine .quiz-tf-btn:hover,
-.quiz-engine .quiz-validate-btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 hsl(var(--ink));
-}
 .quiz-engine .quiz-most-player-btn:active,
 .quiz-engine .quiz-tf-btn:active,
 .quiz-engine .quiz-validate-btn:active {
@@ -10173,9 +10206,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .quiz-engine .quiz-most-player-btn,
   .quiz-engine .quiz-tf-btn,
   .quiz-engine .quiz-validate-btn { transition: none; }
-  .quiz-engine .quiz-most-player-btn:hover,
-  .quiz-engine .quiz-tf-btn:hover,
-  .quiz-engine .quiz-validate-btn:hover { transform: none; }
 }
 
 /* ── Le quiz ado a son propre moteur, pas ses propres couleurs ──
@@ -10187,10 +10217,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   border-radius: var(--qe-rayon-i);
   box-shadow: var(--qe-ombre-i) hsl(var(--ink));
   transition: transform .16s ease, box-shadow .16s ease;
-}
-.quiz-engine .ado-mode-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 hsl(var(--primary));
 }
 .quiz-engine .ado-mode-icon {
   border: 2px solid hsl(var(--ink));
@@ -10213,16 +10239,10 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   font-weight: 800;
   transition: transform .16s ease, box-shadow .16s ease;
 }
-.quiz-engine .btn-primary:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 hsl(var(--ink));
-}
 
 @media (prefers-reduced-motion: reduce) {
   .quiz-engine .ado-mode-card,
   .quiz-engine .btn-primary { transition: none; }
-  .quiz-engine .ado-mode-card:hover,
-  .quiz-engine .btn-primary:hover { transform: none; }
 }
 
 /* ── Deux ecrans gardent leur fond, l'encadrement en plus ─────
@@ -10268,4 +10288,112 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .quiz-question-enter .quiz-option,
   .quiz-modes .choix-mode,
   .quiz-modes .quiz-mode-carte { animation: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   LE SURVOL, RESERVE AUX APPAREILS QUI ONT VRAIMENT UN POINTEUR
+   Sur telephone, le navigateur laisse l'etat :hover colle sur le dernier
+   element touche. Le moteur redessinant tout son bloc a chaque reponse,
+   la reponse qui se retrouvait sous le doigt heritait du survol a la
+   question suivante : elle apparaissait coloree, comme deja cochee, sans
+   que personne ne l'ait choisie.
+   Tous les survols du moteur vivent donc ici. Au doigt il ne reste que
+   l'enfoncement au moment du tap et l'etat « choisi » apres coup, qui
+   sont les deux seuls retours qu'on veuille voir.
+   ═══════════════════════════════════════════════════════════════════ */
+@media (hover: hover) and (pointer: fine) {
+
+  .quiz-engine .quiz-option:hover, #quiz-engine .quiz-option:hover {
+    transform: none;
+    box-shadow: 0 0 0 3px hsl(var(--primary) / .16);
+    border-color: hsl(var(--primary) / .75);
+    background: linear-gradient(135deg, hsl(var(--primary) / .08), hsl(var(--secondary) / .06));
+  }
+  .quiz-engine .quiz-option:hover .quiz-option-letter {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    color: #fff;
+    border-color: hsl(var(--primary));
+    box-shadow: none;
+    transform: none;
+  }
+  .quiz-engine .quiz-option:hover::after { border-color: hsl(var(--primary) / .8); transform: translateY(-50%); }
+
+  .quiz-engine .quiz-scale-option:hover,
+  .quiz-engine .choice-btn:hover,
+  .quiz-engine .gender-btn:hover,
+  .quiz-engine .quiz-mode-carte:hover,
+  .quiz-engine .choix-mode:hover,
+  .quiz-engine .ado-mode-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 hsl(var(--primary));
+  }
+
+  .quiz-engine .btn-cta:hover,
+  .quiz-engine .btn-outline:hover,
+  .quiz-engine .btn-primary:hover,
+  .quiz-engine .quiz-next-btn:hover,
+  .quiz-engine .result-share-btn:hover,
+  .quiz-engine .result-action-btn:hover,
+  .quiz-engine .story-share-btn:hover,
+  .quiz-engine .dil-choix-btn:hover,
+  .quiz-engine .pc-choix-btn:hover,
+  .quiz-engine .onn-btn:hover,
+  .quiz-engine .qp-btn:hover,
+  .quiz-engine .quiz-most-player-btn:hover,
+  .quiz-engine .quiz-tf-btn:hover,
+  .quiz-engine .quiz-validate-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 hsl(var(--ink));
+  }
+
+  .quiz-engine .result-related-card:hover,
+  .quiz-engine .qr-orientation-lien:hover,
+  .quiz-engine .qr-partenaire:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--qe-ombre-i) hsl(var(--primary));
+    border-color: hsl(var(--ink));
+  }
+
+  /* Le deplacement au survol saute aussi quand on demande moins
+     d'animation : la couleur et l'ombre suffisent a marquer la cible. */
+  @media (prefers-reduced-motion: reduce) {
+    .quiz-engine .quiz-option:hover, #quiz-engine .quiz-option:hover,
+    .quiz-engine .quiz-scale-option:hover,
+    .quiz-engine .choice-btn:hover,
+    .quiz-engine .gender-btn:hover,
+    .quiz-engine .quiz-mode-carte:hover,
+    .quiz-engine .choix-mode:hover,
+    .quiz-engine .ado-mode-card:hover,
+    .quiz-engine .btn-cta:hover,
+    .quiz-engine .btn-outline:hover,
+    .quiz-engine .btn-primary:hover,
+    .quiz-engine .quiz-next-btn:hover,
+    .quiz-engine .result-share-btn:hover,
+    .quiz-engine .result-action-btn:hover,
+    .quiz-engine .story-share-btn:hover,
+    .quiz-engine .dil-choix-btn:hover,
+    .quiz-engine .pc-choix-btn:hover,
+    .quiz-engine .onn-btn:hover,
+    .quiz-engine .qp-btn:hover,
+    .quiz-engine .quiz-most-player-btn:hover,
+    .quiz-engine .quiz-tf-btn:hover,
+    .quiz-engine .quiz-validate-btn:hover,
+    .quiz-engine .result-related-card:hover,
+    .quiz-engine .qr-orientation-lien:hover,
+    .quiz-engine .qr-partenaire:hover { transform: none; }
+  }
+}
+
+/* ── L'air entre les reponses ─────────────────────────────────
+   Les moteurs empilent leurs reponses dans un conteneur a 0,5rem
+   d'ecart. C'etait deja juste avec un filet d'un pixel ; avec un trait
+   de trois et une ombre portee de trois de plus, les cartes se touchent
+   presque. On les ecarte, quel que soit le conteneur qui les porte. */
+.quiz-engine .quiz-option + .quiz-option,
+.quiz-engine .quiz-scale-option + .quiz-scale-option,
+.quiz-engine .choice-btn + .choice-btn { margin-top: .85rem; }
+@media (min-width: 641px) {
+  .quiz-engine .quiz-option + .quiz-option,
+  .quiz-engine .quiz-scale-option + .quiz-scale-option,
+  .quiz-engine .choice-btn + .choice-btn { margin-top: .95rem; }
 }

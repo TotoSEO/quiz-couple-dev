@@ -536,3 +536,67 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
 })();
+
+/**
+ * Recadrage du moteur apres chaque ecran.
+ *
+ * Les moteurs redessinent tout leur bloc a chaque reponse. Quand l'ecran
+ * suivant est plus court que le precedent (une question a deux reponses
+ * apres une a cinq, un palier, un ecran de resultat), le bouton qu'on
+ * vient de viser se retrouve hors de la fenetre et il faut remonter a la
+ * main pour lire la suite.
+ *
+ * A chaque nouvel ecran, on remet donc la carte du moteur en place. Pas
+ * collee sous l'en-tete comme le ferait une ancre : centree quand elle
+ * tient dans la fenetre, et sinon posee sous l'en-tete avec une marge, ce
+ * qui laisse la question en haut et le maximum de reponses dessous.
+ *
+ * Trois garde-fous : rien tant que la personne n'a pas touche au moteur
+ * (sinon on lui volerait sa lecture du haut de page a l'arrivee), rien
+ * quand un panneau modal est ouvert, et rien quand la carte est deja a sa
+ * place a une vingtaine de pixels pres.
+ */
+(function () {
+  'use strict';
+
+  var conteneur = document.getElementById('quiz-engine');
+  if (!conteneur || !window.MutationObserver) return;
+
+  var aInteragi = false;
+  ['pointerdown', 'keydown'].forEach(function (nom) {
+    conteneur.addEventListener(nom, function () { aInteragi = true; }, true);
+  });
+
+  var douceur = true;
+  try { douceur = !window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+
+  var minuteur = null;
+
+  function recadrer() {
+    // Un panneau modal bloque le defilement : bouger derriere lui n'a
+    // aucun sens et laisserait la page ailleurs a la fermeture.
+    if (document.querySelector('.qc-panneau-fond')) return;
+
+    var carte = conteneur.querySelector('.quiz-engine') || conteneur.firstElementChild;
+    if (!carte) return;
+    var r = carte.getBoundingClientRect();
+    if (!r.height) return;
+
+    var entete = document.getElementById('site-header');
+    var hEntete = entete ? entete.getBoundingClientRect().height : 0;
+    var haut = window.pageYOffset + r.top;
+    var marge = Math.max(hEntete + 16, (window.innerHeight - r.height) / 2);
+    var y = Math.max(0, haut - marge);
+    if (Math.abs(y - window.pageYOffset) < 24) return;
+
+    try { window.scrollTo({ top: y, behavior: douceur ? 'smooth' : 'auto' }); }
+    catch (e) { window.scrollTo(0, y); }
+  }
+
+  new MutationObserver(function () {
+    if (!aInteragi) return;
+    clearTimeout(minuteur);
+    // Le temps que le nouvel ecran soit entierement pose et mesure.
+    minuteur = setTimeout(recadrer, 70);
+  }).observe(conteneur, { childList: true });
+})();
