@@ -1987,13 +1987,15 @@ var QuizEngine = (function() {
   // CSS : tout l'encart est cliquable, le bouton n'est qu'un reperage visuel.
   function encartPartenaire(p) {
     var a = document.createElement('a');
-    a.className = 'qr-partenaire';
+    a.className = 'qr-partenaire' + (p.image ? '' : ' qr-partenaire--texte');
     a.href = p.url;
     a.target = '_blank';
     a.rel = 'sponsored nofollow noopener';
     a.innerHTML =
-      '<img class="qr-partenaire-image" src="' + esc(p.image) + '" alt="' + esc(p.alt || '') + '"' +
-        ' width="1200" height="675" loading="lazy" decoding="async">' +
+      (p.image
+        ? '<img class="qr-partenaire-image" src="' + esc(p.image) + '" alt="' + esc(p.alt || '') + '"' +
+          ' width="1200" height="675" loading="lazy" decoding="async">'
+        : '') +
       '<span class="qr-partenaire-corps">' +
         '<span class="qr-partenaire-mention">' + esc(p.mention) + '</span>' +
         '<span class="qr-partenaire-titre">' + esc(p.titre) + '</span>' +
@@ -2419,6 +2421,7 @@ var QuizEngine = (function() {
     this.modeSolo = config.modeSolo || false;
     this.setupTitle = config.setupTitle || '';
     this.setupDesc = config.setupDesc || '';
+    this.partenaire = config.partenaire || null;
     this.phase = 'setup';
     this.players = [null, null];
     this.currentQ = 0;
@@ -2703,6 +2706,10 @@ var QuizEngine = (function() {
       wrap.appendChild(advice);
     }
 
+    // Encart partenaire affilie, quand le test en declare un : apres le
+    // verdict et le conseil, jamais devant.
+    if (this.partenaire) wrap.appendChild(encartPartenaire(this.partenaire));
+
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'duo', pct: pct, verdict: result ? result.title : '' },
       restart: function() { self.phase = 'setup'; self.render(); }
@@ -2809,6 +2816,8 @@ var QuizEngine = (function() {
     }
 
     wrap.appendChild(box);
+
+    if (this.partenaire) wrap.appendChild(encartPartenaire(this.partenaire));
 
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'duo', pct: pctG, verdict: (bG && bG.title) || '' },
@@ -4139,6 +4148,7 @@ var QuizEngine = (function() {
     this.currentQ = 0;
     this.currentPlayer = 0;
     this.reponses = [[], []];   // en solo, seul l'indice 0 sert
+    this.partenaire = config.partenaire || null;
     this.render();
   }
 
@@ -4475,6 +4485,10 @@ var QuizEngine = (function() {
       noteSecu.innerHTML = '<p class="text-sm">' + esc(tg('healthy.securiteNote', 'Une de vos réponses porte sur la peur, la manipulation ou l\'humiliation. Ce point compte davantage que le reste du score : il mérite d\'être regardé de près, seul·e ou accompagné·e.')) + '</p>';
       wrap.appendChild(noteSecu);
     }
+
+    // L'encart ne sort pas quand une reponse a declenche l'alerte securite :
+    // proposer une sortie ou une degustation sous ce message-la serait indecent.
+    if (this.partenaire && !alerte) wrap.appendChild(encartPartenaire(this.partenaire));
 
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'duo', pct: pct, verdict: result ? result.title : '' },

@@ -2147,6 +2147,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .qr-partenaire-image {
   display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover;
 }
+/* Variante sans visuel : les partenaires dont aucune image de marque n'est
+   copiée en local. Un liseré dégradé tient lieu d'accroche visuelle. */
+.qr-partenaire--texte { border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, hsl(var(--secondary)), hsl(var(--primary))) 1; }
 .qr-partenaire-corps { display: block; padding: 1.1rem 1.25rem 1.25rem; }
 .qr-partenaire-mention {
   display: block; margin-bottom: .45rem;

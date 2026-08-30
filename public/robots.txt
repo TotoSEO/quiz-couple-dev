@@ -5,14 +5,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /confirmation-ebook/
 Disallow: /js/admin.js
-# /js/data/ n'est PAS interdit, et ne doit jamais l'être : c'est là que vivent
-# les questions et les resultats de tous les moteurs. Bloquer ce dossier
-# empechait le moteur de rendu de Google de les charger, si bien que 246 pages
-# jouables lui presentaient « Le contenu met du temps a charger » a la place
-# du test. Google demande explicitement de laisser explorer les ressources
-# necessaires au rendu.
-# Marqueur des liens partages : meme page que sans le parametre, le canonical
-# pointe deja vers l'adresse propre. On evite quand meme de la faire explorer.
 Disallow: /*?part
 
 # AI Crawlers - allowed to index content
