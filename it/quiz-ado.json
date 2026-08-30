@@ -30,7 +30,7 @@
     "genericError": "Si è verificato un errore. Riprova.",
     "sessionNotFound": "Nessuna sessione trovata con questo codice.",
     "waitingTitle": "In attesa del/della tuo/a partner…",
-    "waitingDesc": "Condividi questo codice con il/la tuo/a partner:",
+    "waitingDesc": "Condividi questo codice con il/la tuo/a partner perché entri nella sessione:",
     "shareCode": "Codice da condividere",
     "sharePage": "Condividi la pagina",
     "sharePageTitle": "Quiz di coppia adolescenti",
@@ -312,7 +312,7 @@
     "53b": "Ok, ma con momenti vuoti",
     "53c": "Bene",
     "53d": "Benissimo, non ne avremmo bisogno",
-    "54": "Avete atteggiamenti simili verso la scuola/lavoro?",
+    "54": "Avete atteggiamenti simili verso la scuola e il lavoro (seri, pigri, ambiziosi)?",
     "54a": "No, è fonte di attrito",
     "54b": "Un po' diversi",
     "54c": "Abbastanza simili",
@@ -458,7 +458,7 @@
     "playAgain": "Gioca ancora con nuove domande",
     "r1": {
       "title": "La vostra relazione sta ancora cercando la sua strada",
-      "text": "Non è un verdetto. Ma le vostre risposte mostrano che qualcosa non funziona. Prendetevi il tempo di parlare davvero, senza telefono, senza gruppo.",
+      "text": "Non è un verdetto. Ma le vostre risposte mostrano che qualcosa non funziona, forse una comunicazione che non passa ancora, aspettative diverse, o una relazione appena iniziata. Prendetevi il tempo di parlare davvero, senza telefono, senza gruppo.",
       "adviceTitle": "Il nostro consiglio",
       "advice": "Provate ad avere una vera conversazione, {{name1}} e {{name2}}, senza telefono, senza pressione. Chiedetevi: cosa vi aspettate davvero l'uno dall'altro?"
     },
@@ -483,7 +483,7 @@
   },
   "seo": {
     "s1Title": "Quiz di coppia per adolescenti: perché farsi queste domande è già un buon segno",
-    "s1P1": "Quando sei adolescente e stai con qualcuno, nessuno ti dà davvero un manuale. I tuoi genitori hanno la loro opinione (spesso non richiesta), i tuoi amici anche, e internet ti sommerge di consigli che non parlano veramente di te.",
+    "s1P1": "Quando sei adolescente e stai con qualcuno, nessuno ti dà davvero un manuale. I tuoi genitori hanno la loro opinione (spesso non richiesta), i tuoi amici anche, e internet ti sommerge di consigli che non parlano veramente di te. Eppure la domanda «la nostra relazione è solida?» finisce sempre per arrivare, una sera, tra due storie.",
     "s1P2": "Non è una cattiva domanda. È anzi una delle migliori che possiate farvi. Non perché siete in pericolo, ma perché mettersi in discussione insieme è una delle cose più mature che si possano fare in una relazione.",
     "s2Title": "Cos'è una relazione solida quando sei adolescente?",
     "s2P1": "La risposta breve: non è necessariamente una che dura 10 anni. È ciò che si chiama una <a href=\"/it/test-relazione-sana/\" class=\"text-primary underline\">relazione sana</a>, una in cui vi sentite bene, rispettati, liberi di essere voi stessi. Una relazione che vi fa crescere invece di pesarvi.",
@@ -505,14 +505,14 @@
     "s4Title": "La distanza da adolescenti: mito o realtà?",
     "s4P1": "È una delle domande più frequenti. Università, trasloco, scuola diversa... la distanza arriva spesso prima di quanto si pensi. Gestire una <a href=\"/it/quiz-coppia-distanza/\" class=\"text-primary underline\">coppia a distanza</a> può funzionare. Ma richiede molto più impegno di una relazione 'normale'.",
     "s4P2": "Cosa aiuta davvero: videochiamate regolari, piani in comune, comunicazione chiara sulle aspettative, e totale onestà su come vivete la distanza.",
-    "s4Tip": "Se sapete che sarete separati presto, parlatene adesso. Non in modo drammatico, solo una conversazione onesta su quello che volete entrambi.",
+    "s4Tip": "Se sapete che sarete separati presto, parlatene adesso. Non in modo drammatico, solo una conversazione onesta su quello che volete entrambi. È 100 volte più sano che aspettare che arrivi e subirlo.",
     "tipLabel": "Da sapere",
     "s5Title": "Gelosia nelle coppie adolescenti: normale o no?",
-    "s5P1": "Un po' di gelosia è umana. Ma c'è una differenza enorme tra 'ho provato un pizzico di gelosia' e 'gli/le controllo il telefono'.",
+    "s5P1": "Un po' di gelosia è umana. Nessuno vi dirà il contrario. Ma c'è una differenza enorme tra «ho provato un pizzico di gelosia» e «gli/le controllo il telefono, gli/le impongo di tagliare i contatti con gli amici».",
     "s5P2": "La gelosia mal gestita è una delle prime cause di rottura e sofferenza nelle coppie adolescenti, e può rendere rapidamente una relazione <a href=\"/it/test-relazione-tossica/\" class=\"text-primary underline\">tossica</a>. Spesso viene da una mancanza di fiducia, non necessariamente nell'altro, ma in sé stessi.",
     "s5Tip": "La gelosia non dimostra che ci tieni all'altro. Dimostra che hai paura di perderlo/a. Non è la stessa cosa. Lavorare su quella paura è ciò che cambia davvero le cose.",
     "s6Title": "Come capire se sei innamorato/a o solo attaccato/a?",
-    "s6P1": "L'amore assomiglia a questo: pensi a lui/lei e ti rende felice. Vuoi che stia bene, anche se non ti conviene. Vuoi condividere la tua vita con questa persona.",
+    "s6P1": "L'amore assomiglia a questo: pensi a lui/lei e ti rende felice. Vuoi che stia bene, anche se non ti conviene. Vuoi condividere la tua vita con questa persona, non solo avere qualcuno accanto.",
     "s6P2": "L'attaccamento per abitudine o paura assomiglia più a questo: resti perché hai paura della solitudine. Non immagini un futuro insieme, ma lasciarsi sembra troppo complicato.",
     "s7Title": "Social media e coppia: gestire senza perdersi",
     "s7P1": "Quello che il tuo partner pubblica online non è necessariamente una minaccia. Un like, un follow, una story guardata, non dice nulla sui suoi sentimenti per te.",
@@ -530,5 +530,8 @@
     "faq3A": "Sì! Ogni sessione seleziona 20 domande casuali tra 80. Potete rigiocare quante volte volete per scoprire nuove domande.",
     "faq4Q": "Le nostre risposte vengono conservate?",
     "faq4A": "Le sessioni scadono automaticamente dopo 30 minuti. Nessun dato personale viene conservato in modo permanente."
+  },
+  "jsonLd": {
+    "about": "quiz di coppia per adolescenti"
   }
 }

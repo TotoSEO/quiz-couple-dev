@@ -211,5 +211,8 @@
         "a": "Sì, questo quiz è progettato per essere giocato in due, contemporaneamente. Dovete essere insieme perché uno indovina e l'altro valida la risposta. Questa interazione in tempo reale è ciò che rende il gioco così divertente e arricchente."
       }
     ]
+  },
+  "jsonLd": {
+    "about": "quiz sulla conoscenza del partner"
   }
 }

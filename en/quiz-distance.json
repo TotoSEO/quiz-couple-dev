@@ -208,5 +208,8 @@
     "sub3Title": "What comes after",
     "sub3Text": "<ul><li>The first thing we do when we see each other again: you choose.</li><li>Honestly, how much longer before we're in the same city?</li><li>What would make you say this isn't worth it any more?</li><li>What are you dreading about the day we live together?</li><li>Which single-person habit are you not willing to give up?</li><li>If one of us had to move for the other, who would it be?</li></ul>",
     "outro": "One rule if you want this to work: answer first, ask second. Otherwise one of you ends up sitting through a job interview."
+  },
+  "jsonLd": {
+    "about": "long distance relationship"
   }
 }

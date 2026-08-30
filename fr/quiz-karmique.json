@@ -116,6 +116,7 @@
   },
   "jsonLd": {
     "quizName": "Test relation karmique",
-    "quizDescription": "Test gratuit de 20 questions pour identifier votre type de lien : relation karmique, lien miroir ou lien apaisé."
+    "quizDescription": "Test gratuit de 20 questions pour identifier votre type de lien : relation karmique, lien miroir ou lien apaisé.",
+    "about": "relation karmique"
   }
 }

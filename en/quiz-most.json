@@ -81,5 +81,8 @@
     "title": "Ready to discover who is the most... ?",
     "text": "Scroll back to the top to start your free quiz with your friends!",
     "button": "Start the quiz now"
+  },
+  "jsonLd": {
+    "about": "who is most likely quiz"
   }
 }

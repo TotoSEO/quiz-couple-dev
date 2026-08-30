@@ -208,5 +208,8 @@
     "sub3Title": "L'après, et les retrouvailles",
     "sub3Text": "<ul><li>La première chose qu'on fait quand on se revoit, tu la choisis.</li><li>Combien de temps encore, honnêtement, avant qu'on soit dans la même ville ?</li><li>Qu'est-ce qui te ferait dire que ça ne vaut plus le coup ?</li><li>Qu'est-ce que tu appréhendes le jour où on vivra ensemble ?</li><li>Quelle habitude de célibataire tu ne veux pas perdre ?</li><li>Si l'un de nous devait déménager pour l'autre, ce serait qui ?</li></ul>",
     "outro": "Une règle si vous voulez que ça marche : on répond en premier, on demande ensuite. Sinon l'un des deux se retrouve à passer un entretien d'embauche."
+  },
+  "jsonLd": {
+    "about": "relation à distance"
   }
 }

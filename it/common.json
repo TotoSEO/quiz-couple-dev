@@ -160,5 +160,8 @@
     "fun": "Fun",
     "wouldYouRather": "Preferiresti…",
     "questionsShort": "domande"
+  },
+  "jsonLd": {
+    "aboutDefaut": "coppia"
   }
 }

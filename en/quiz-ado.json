@@ -530,5 +530,8 @@
     "faq3A": "Yes! Each session randomly picks 20 questions from 80. You can replay as many times as you want to discover new questions.",
     "faq4Q": "Are our answers stored?",
     "faq4A": "Sessions expire automatically after 30 minutes. No personal data is permanently stored."
+  },
+  "jsonLd": {
+    "about": "teen couple quiz"
   }
 }

@@ -122,6 +122,7 @@
   },
   "jsonLd": {
     "quizName": "Test suis-je amoureux",
-    "quizDescription": "Test gratuit de 20 questions pour savoir si vous êtes amoureux ou simplement attiré par cette personne."
+    "quizDescription": "Test gratuit de 20 questions pour savoir si vous êtes amoureux ou simplement attiré par cette personne.",
+    "about": "amour"
   }
 }

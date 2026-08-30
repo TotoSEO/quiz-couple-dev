@@ -51,5 +51,8 @@
     "a3": "This quiz stays in a fun, reflective register, with no explicitly naughty questions. It covers values, priorities and everyday trade-offs. For something more intimate, take a look at our truth or dare games instead.",
     "q4": "Can you play this quiz long-distance?",
     "a4": "Absolutely! The format lends itself perfectly to playing at a distance, on video or even by message. Each of you reads the question on your own screen and gives an answer. It's an ideal activity for couples living far apart."
+  },
+  "jsonLd": {
+    "about": "would you rather couple"
   }
 }

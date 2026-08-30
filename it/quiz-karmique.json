@@ -116,6 +116,7 @@
   },
   "jsonLd": {
     "quizName": "Test relazione karmica",
-    "quizDescription": "Test gratuito di 20 domande per identificare il tuo tipo di legame: relazione karmica, legame specchio o legame sereno."
+    "quizDescription": "Test gratuito di 20 domande per identificare il tuo tipo di legame: relazione karmica, legame specchio o legame sereno.",
+    "about": "relazione karmica"
   }
 }

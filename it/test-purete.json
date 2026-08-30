@@ -240,5 +240,8 @@
   "meta": {
     "titre": "Test di purezza per coppie | Online e gratis",
     "description": "Test di purezza di coppia: 50 domande, un punteggio su 899 e il dettaglio per categoria. Fatelo da soli o in due, poi confrontatevi con il partner. Gratis, senza registrazione."
+  },
+  "jsonLd": {
+    "about": "test di purezza di coppia"
   }
 }

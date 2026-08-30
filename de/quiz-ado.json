@@ -30,7 +30,7 @@
     "genericError": "Ein Fehler ist aufgetreten. Versuche es erneut.",
     "sessionNotFound": "Keine Sitzung mit diesem Code gefunden.",
     "waitingTitle": "Warte auf deinen Partner…",
-    "waitingDesc": "Teile diesen Code mit deinem Partner:",
+    "waitingDesc": "Teile diesen Code mit deinem Partner oder deiner Partnerin, damit er oder sie der Sitzung beitritt:",
     "shareCode": "Code zum Teilen",
     "sharePage": "Seite teilen",
     "sharePageTitle": "Teenager-Paar-Quiz",
@@ -312,7 +312,7 @@
     "53b": "Okay, aber mit leeren Momenten",
     "53c": "Gut",
     "53d": "Super, wir bräuchten es nicht",
-    "54": "Habt ihr ähnliche Einstellungen zu Schule/Arbeit?",
+    "54": "Habt ihr ähnliche Einstellungen zu Schule und Arbeit (ernsthaft, faul, ehrgeizig)?",
     "54a": "Nein, das ist eine Reibungsquelle",
     "54b": "Ein bisschen verschieden",
     "54c": "Ziemlich ähnlich",
@@ -458,7 +458,7 @@
     "playAgain": "Nochmal mit neuen Fragen spielen",
     "r1": {
       "title": "Eure Beziehung sucht noch ihren Weg",
-      "text": "Das ist kein Urteil. Aber eure Antworten zeigen, dass etwas hakt. Nehmt euch Zeit, wirklich zu reden, ohne Handy, ohne Gruppe.",
+      "text": "Das ist kein Urteil. Aber eure Antworten zeigen, dass etwas hakt, vielleicht eine Kommunikation, die noch nicht funktioniert, unterschiedliche Erwartungen, oder eine Beziehung, die gerade erst anfängt. Nehmt euch Zeit, wirklich zu reden, ohne Handy, ohne Gruppe.",
       "adviceTitle": "Unser Rat",
       "advice": "Versucht ein echtes Gespräch zu führen, {{name1}} und {{name2}}, ohne Handy, ohne Druck. Fragt euch: Was erwartet ihr wirklich voneinander?"
     },
@@ -483,7 +483,7 @@
   },
   "seo": {
     "s1Title": "Paar-Quiz für Teenager: Warum diese Fragen stellen schon ein gutes Zeichen ist",
-    "s1P1": "Wenn du als Teenager in einer Beziehung bist, gibt dir niemand wirklich eine Anleitung. Deine Eltern haben ihre Meinung (oft ungefragt), deine Freunde auch, und das Internet ertränkt dich in Ratschlägen, die nicht wirklich zu dir passen.",
+    "s1P1": "Wenn du als Teenager in einer Beziehung bist, gibt dir niemand wirklich eine Anleitung. Deine Eltern haben ihre Meinung (oft ungefragt), deine Freunde auch, und das Internet ertränkt dich in Ratschlägen, die nicht wirklich zu dir passen. Trotzdem taucht die Frage „ist unsere Beziehung eigentlich stabil?\" irgendwann auf, an einem Abend, zwischen zwei Storys.",
     "s1P2": "Es ist keine schlechte Frage. Es ist sogar eine der besten. Nicht weil ihr in Gefahr seid, sondern weil gemeinsam zu hinterfragen eine der reifsten Sachen ist, die man in einer Beziehung tun kann.",
     "s2Title": "Was ist eine solide Beziehung als Teenager?",
     "s2P1": "Die kurze Antwort: nicht unbedingt eine, die 10 Jahre hält. Es ist das, was man eine <a href=\"/de/gesunde-beziehung-test/\" class=\"text-primary underline\">gesunde Beziehung</a> nennt, eine, in der ihr euch wohlfühlt, respektiert, frei seid ihr selbst zu sein. Eine Beziehung, die euch wachsen lässt statt zu belasten.",
@@ -505,14 +505,14 @@
     "s4Title": "Fernbeziehung als Teenager: Mythos oder Realität?",
     "s4P1": "Eine der häufigsten Fragen. Uni, Umzug, andere Schule... Distanz kommt oft früher als man denkt. Eine <a href=\"/de/fernbeziehung-quiz/\" class=\"text-primary underline\">Fernbeziehung</a> kann funktionieren. Aber es braucht viel mehr Einsatz als eine 'normale' Beziehung.",
     "s4P2": "Was am meisten hilft: regelmäßige Videoanrufe, gemeinsame Pläne, klare Kommunikation über Erwartungen, und totale Ehrlichkeit darüber, wie ihr die Distanz erlebt.",
-    "s4Tip": "Wenn ihr wisst, dass ihr bald getrennt sein werdet, redet jetzt darüber. Nicht dramatisch, einfach ein ehrliches Gespräch über das, was ihr beide wollt.",
+    "s4Tip": "Wenn ihr wisst, dass ihr bald getrennt sein werdet, redet jetzt darüber. Nicht dramatisch, einfach ein ehrliches Gespräch über das, was ihr beide wollt. Das ist 100 Mal gesünder, als abzuwarten, bis es passiert, und es dann auszuhalten.",
     "tipLabel": "Gut zu wissen",
     "s5Title": "Eifersucht in Teenager-Beziehungen: normal oder nicht?",
     "s5P1": "Ein bisschen Eifersucht ist menschlich. Aber es gibt einen riesigen Unterschied zwischen 'ich war kurz eifersüchtig' und 'ich kontrolliere sein/ihr Handy'.",
     "s5P2": "Schlecht gehandhabte Eifersucht ist eine der Hauptursachen für Trennungen und Leid bei Teenager-Paaren, und kann eine Beziehung schnell <a href=\"/de/toxische-beziehung-test/\" class=\"text-primary underline\">toxisch</a> machen. Sie kommt oft von mangelndem Selbstvertrauen.",
     "s5Tip": "Eifersucht beweist nicht, dass du den anderen magst. Sie beweist, dass du Angst hast, ihn/sie zu verlieren. Das ist nicht dasselbe. An dieser Angst zu arbeiten, das verändert wirklich etwas.",
     "s6Title": "Wie erkennt man ob man verliebt oder nur angehängt ist?",
-    "s6P1": "Liebe sieht so aus: Du denkst an sie/ihn und es macht dich glücklich. Du willst, dass es ihr/ihm gut geht, auch wenn es dir nicht immer passt.",
+    "s6P1": "Liebe sieht so aus: Du denkst an sie/ihn und es macht dich glücklich. Du willst, dass es ihr/ihm gut geht, auch wenn es dir nicht immer passt. Du willst dein Leben mit dieser Person teilen, nicht bloß jemanden neben dir haben.",
     "s6P2": "Anhaftung aus Gewohnheit oder Angst sieht eher so aus: Du bleibst, weil du Angst vor dem Alleinsein hast. Du siehst keine gemeinsame Zukunft, aber Schluss machen scheint zu kompliziert.",
     "s7Title": "Social Media und Beziehung: managen ohne sich zu verlieren",
     "s7P1": "Was dein Partner online postet, ist nicht unbedingt eine Bedrohung. Ein Like, ein Follow, eine angesehene Story, das sagt nichts über seine/ihre Gefühle für dich.",
@@ -527,8 +527,11 @@
     "faq2Q": "Ist es kostenlos und ohne Anmeldung?",
     "faq2A": "Ja, völlig kostenlos. Keine Anmeldung, keine E-Mail, kein Konto nötig. Spielt direkt im Browser.",
     "faq3Q": "Können wir mit anderen Fragen nochmal spielen?",
-    "faq3A": "Ja! Jede Sitzung wählt 20 zufällige Fragen aus 80. Ihr könnt so oft spielen wie ihr wollt.",
+    "faq3A": "Ja! Jede Sitzung wählt 20 zufällige Fragen aus 80. Ihr könnt so oft spielen, wie ihr wollt, und dabei immer neue Fragen entdecken.",
     "faq4Q": "Werden unsere Antworten gespeichert?",
     "faq4A": "Sitzungen laufen nach 30 Minuten automatisch ab. Keine persönlichen Daten werden dauerhaft gespeichert."
+  },
+  "jsonLd": {
+    "about": "Paar-Quiz für Jugendliche"
   }
 }

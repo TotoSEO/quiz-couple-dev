@@ -160,5 +160,8 @@
     "fun": "Fun",
     "wouldYouRather": "Would you rather…",
     "questionsShort": "questions"
+  },
+  "jsonLd": {
+    "aboutDefaut": "couple"
   }
 }

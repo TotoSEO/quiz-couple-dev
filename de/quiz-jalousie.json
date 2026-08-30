@@ -14,7 +14,7 @@
   "section2": {
     "title": "Ist Eifersucht in einer Beziehung schlimm?",
     "p1": "Die kurze Antwort: Es hängt von ihrer Intensität und den Verhaltensweisen ab, die sie erzeugt.",
-    "p2": "Leichte Eifersucht, die sich als Stich zeigt, wenn jemand deinen Partner anflirtet, oder als leichte Unruhe, wenn er/sie spät ohne Vorwarnung heimkommt, ist an sich kein Problem.",
+    "p2": "Leichte Eifersucht, die sich als Stich zeigt, wenn jemand deinen Partner anflirtet, oder als leichte Unruhe, wenn er/sie spät ohne Vorwarnung heimkommt, ist an sich kein Problem. Sie bleibt im Rahmen dessen, was menschlich ist, und sogar, bis zu einem gewissen Grad, dessen, was die Aufmerksamkeit füreinander in einer Beziehung wachhält.",
     "healthy": "<strong class=\"text-foreground\">Eifersucht bleibt gesund</strong>, solange sie nicht zu kontrollierenden oder überwachenden Verhaltensweisen führt. Sie ist eine Emotion, die sagt, dass dir dein Partner etwas bedeutet.",
     "toxic": "<strong class=\"text-foreground\">Eifersucht wird problematisch</strong>, wenn sie anfängt, Verhaltensweisen zu diktieren: Telefon überprüfen, Bewegungen überwachen, systematisches Befragen, soziale Kontakte des anderen einschränken.",
     "quote": "Wir wechseln von einer normalen Emotion zu einem Kontrollmodus, der <a href=\"/de/vertrauenstest-paar/\">Vertrauen</a> und persönlichen Raum beschädigt. Die eifersüchtige Person leidet, die überwachte Person erstickt. Beide verlieren."
@@ -37,7 +37,7 @@
   },
   "section4": {
     "title": "Wie hört man auf, eifersüchtig zu sein?",
-    "p1": "Der erste Schritt ist zu verstehen, woher die Eifersucht kommt. Nicht in allgemeiner Theorie, sondern in deinem konkreten Fall.",
+    "p1": "Der erste Schritt ist zu verstehen, woher die Eifersucht kommt. Nicht in allgemeiner Theorie, sondern in deinem konkreten Fall. War sie schon immer da, oder ist sie an einem bestimmten Punkt dieser Beziehung aufgetaucht?",
     "p2": "Was konkret hilft:",
     "pillar1Title": "Am Selbstvertrauen arbeiten",
     "pillar1Text": "Eifersucht aus dem Gefühl heraus, \"nicht gut genug\" zu sein, löst sich nicht durch mehr Überwachung, sondern durch den Wiederaufbau des Selbstwertgefühls. Therapie, wertschätzende Aktivitäten, soziales Umfeld außerhalb der Beziehung.",
@@ -50,7 +50,7 @@
     "title": "Mein Partner ist zu eifersüchtig: Was tun?",
     "intro": "Mit einer sehr eifersüchtigen Person zu leben ist auf besondere Weise erschöpfend. Weil man nichts falsch macht, aber trotzdem Rechenschaft ablegen muss.",
     "pillar1Title": "Liebe und Eifersucht nicht verwechseln",
-    "pillar1Text": "Übermäßige Eifersucht ist kein Beweis der Liebe, sondern ein Signal, dass etwas in ihm/ihr nicht stimmt und sich auf dich überträgt.",
+    "pillar1Text": "Übermäßige Eifersucht ist kein Beweis der Liebe, sondern ein Signal, dass etwas in ihm/ihr nicht stimmt und sich auf dich überträgt. Diese Unterscheidung verändert, wie man die Lage angeht.",
     "pillar2Title": "Direkt darüber sprechen",
     "pillar2Text": "Außerhalb eines Konfliktkontexts. \"Wenn du mehrmals am Tag überprüfst, wo ich bin, fühle ich mich überwacht und das belastet mich\" lässt den anderen etwas Konkretes hören.",
     "pillar3Title": "Klare Grenzen setzen",
@@ -64,7 +64,7 @@
     "p2": "Mit einem Fachmann zu arbeiten ist kein Eingeständnis des Scheiterns. Es ist oft der direkteste Weg zu einer gelassenen Beziehung.",
     "dontTitle": "Was Eifersucht verschlimmert",
     "dont1Title": "Beweise suchen",
-    "dont1Text": "Telefon durchsuchen, soziale Medien überwachen, Standorte überprüfen. Diese Verhaltensweisen füttern die Angst, anstatt sie zu beruhigen.",
+    "dont1Text": "Telefon durchsuchen, soziale Medien überwachen, Standorte überprüfen. Diese Verhaltensweisen füttern die Angst, anstatt sie zu beruhigen. Je mehr man sucht, desto mehr deutet man hinein, und der Teufelskreis setzt sich fest.",
     "dont2Title": "Beschuldigen ohne Fakten",
     "dont2Text": "Eine Interpretation in eine Anklage zu verwandeln schafft Misstrauen auf beiden Seiten und treibt den Partner weg statt zu beruhigen.",
     "doTitle": "Was hilft voranzukommen",
@@ -87,6 +87,7 @@
     "faq2Q": "Ist Eifersucht in einer Beziehung normal?",
     "faq2A": "Leichte, gelegentliche Eifersucht ist völlig normal und zeigt, dass dir dein Partner etwas bedeutet. Sie wird problematisch, wenn sie zu kontrollierenden Verhaltensweisen, Überwachung oder Einschränkung der Freiheiten des anderen führt.",
     "faq3Q": "Was soll ich tun, wenn mein Partner zu eifersüchtig ist?",
-    "faq3A": "Direkt darüber sprechen, außerhalb eines Konfliktkontexts, die tatsächliche Auswirkung auf dich ausdrücken und klare Grenzen setzen. Wenn Verhaltensweisen anhalten oder sich verstärken, kann eine professionelle Beratung notwendig sein."
+    "faq3A": "Direkt darüber sprechen, außerhalb eines Konfliktkontexts, die tatsächliche Auswirkung auf dich ausdrücken und klare Grenzen setzen. Wenn Verhaltensweisen anhalten oder sich verstärken, kann eine professionelle Beratung notwendig sein.",
+    "about": "Eifersucht in der Beziehung"
   }
 }

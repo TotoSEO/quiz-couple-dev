@@ -114,5 +114,8 @@
     "goodDesc": "Tenéis una buena base de puntos comunes.",
     "greatTitle": "Muy compatibles",
     "greatDesc": "Os conocéis y compartís muchas cosas."
+  },
+  "jsonLd": {
+    "about": "test de compatibilidad de pareja"
   }
 }

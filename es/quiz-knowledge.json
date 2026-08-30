@@ -211,5 +211,8 @@
         "a": "Sí, este quiz está diseñado para jugarse de a dos, al mismo tiempo. Debéis estar juntos ya que uno adivina y el otro valida la respuesta. Esta interacción en tiempo real es lo que hace el juego tan divertido y enriquecedor."
       }
     ]
+  },
+  "jsonLd": {
+    "about": "quiz para conocer a tu pareja"
   }
 }

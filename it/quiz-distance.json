@@ -87,11 +87,11 @@
       },
       {
         "title": "Gelosia e insicurezza",
-        "text": "A distanza, l'immaginazione è la tua peggior nemica. Quando quel dubbio si installa davvero, la domanda diventa <a href=\"/it/relazione-a-distanza-mi-ama-ancora/\">mi ama ancora</a>."
+        "text": "«Perché non risponde?», «Chi è quella ragazza nella sua storia?». A distanza, l'immaginazione è la tua peggior nemica. Senza una visibilità immediata, un semplice ritardo diventa uno scenario catastrofico. Quando quel dubbio si installa davvero, la domanda diventa <a href=\"/it/relazione-a-distanza-mi-ama-ancora/\">mi ama ancora</a>."
       },
       {
         "title": "Incertezza sul futuro",
-        "text": "L'ambiguità è tossica."
+        "text": "L'ambiguità è tossica. «Quando andremo a vivere insieme?». Senza una risposta chiara, la motivazione si sgretola."
       },
       {
         "title": "Pressione finanziaria e logistica",
@@ -109,10 +109,10 @@
   "section6": {
     "title": "Segnali che la vostra relazione a distanza può funzionare",
     "signs": [
-      "<strong>Comunicazione sincera e regolare</strong>",
-      "<strong>Fiducia e impegno reciproci</strong>",
-      "<strong>Progetti comuni e obiettivi chiari</strong>",
-      "<strong>Capacità di gestire l'incertezza</strong>"
+      "<strong>Comunicazione sincera e regolare</strong> - Ve la sentite di dire «oggi mi sento solo»",
+      "<strong>Fiducia e impegno reciproci</strong> - Costruiti con i fatti, non solo con le parole",
+      "<strong>Progetti comuni e obiettivi chiari</strong> - Una data di arrivo deve esistere, anche se vaga",
+      "<strong>Capacità di gestire l'incertezza</strong> - Trasformate la frustrazione nell'attesa di rivedervi"
     ]
   },
   "section7": {
@@ -124,11 +124,11 @@
       },
       {
         "title": "Usare la tecnologia intenzionalmente",
-        "text": "Privilegiare momenti di qualità."
+        "text": "Puntate su momenti di qualità (una vera videochiamata, come un appuntamento) invece che sulla quantità a vuoto."
       },
       {
         "title": "Gestire i momenti difficili insieme",
-        "text": "L'ascolto attivo vale più di qualsiasi regalo."
+        "text": "Se uno sta male, l'altro deve esserci. L'ascolto attivo vale più di qualsiasi regalo al mondo."
       },
       {
         "title": "Mantenere l'intimità",
@@ -181,11 +181,11 @@
         "a": "Fai il bilancio: questa persona ti porta più gioia che tristezza? I vostri valori di vita si allineano? Se la risposta è sì, la distanza è solo un dettaglio logistico temporaneo."
       },
       {
-        "q": "Quali sono i segnali di solidità?",
+        "q": "Quali sono i 10 segnali che la vostra relazione a distanza è solida?",
         "a": "Se ridete insieme, se pianificate il futuro, se c'è fiducia, e se ciascuno ha la propria vita sociale piena fuori dalla coppia, siete sulla buona strada."
       },
       {
-        "q": "Perché falliscono?",
+        "q": "Perché le relazioni a distanza falliscono (e come evitarlo)?",
         "a": "Falliscono spesso per mancanza di visione comune (nessuna data di fine) o per esaurimento (troppi viaggi, budget insufficiente). Per evitarlo: parlate dei vostri limiti e fate un piano finanziario e temporale realistico."
       }
     ]
@@ -208,5 +208,8 @@
     "sub3Title": "Il dopo e i ritrovarsi",
     "sub3Text": "<ul><li>La prima cosa che facciamo quando ci rivediamo: scegli tu.</li><li>Sinceramente, quanto manca prima di stare nella stessa città?</li><li>Cosa ti farebbe dire che non ne vale più la pena?</li><li>Cosa temi del giorno in cui vivremo insieme?</li><li>Quale abitudine da single non vuoi perdere?</li><li>Se uno dovesse trasferirsi per l'altro, chi sarebbe?</li></ul>",
     "outro": "Una regola perché funzioni: prima si risponde, poi si chiede. Altrimenti uno dei due finisce a fare un colloquio di lavoro."
+  },
+  "jsonLd": {
+    "about": "relazione a distanza"
   }
 }

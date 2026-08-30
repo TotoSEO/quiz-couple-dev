@@ -57,7 +57,7 @@
     "pillar2Title": "2. Versteckte Kontrolle",
     "pillar2Text": "Kontrolle sieht nicht immer wie Befehle aus. Sie kann als aufdringliche Ratschläge, Schuldzuweisungen (<em>\"Wenn du mich wirklich lieben würdest, würdest du das nicht tun\"</em>) oder strenge Finanzverwaltung auftreten.",
     "pillar3Title": "3. Umgekehrte Schuld",
-    "pillar3Text": "In einer gesunden Beziehung übernimmt jeder 50% der Verantwortung. In einer toxischen Beziehung tragen Sie 100% der Schuld.",
+    "pillar3Text": "In einer gesunden Beziehung übernimmt jeder 50% der Verantwortung. In einer toxischen Beziehung tragen Sie 100% der Schuld. Der andere stellt sich systematisch als Opfer oder als Ankläger dar, nie als verantwortlicher Partner.",
     "pillar4Title": "4. Unberechenbarkeit",
     "pillar4Text": "Sie wissen nie, woran Sie sind. Diese permanente Unsicherheit hält Ihr Nervensystem in Alarmbereitschaft (chronischer Stress), was Ihre physische und mentale Erschöpfung erklärt."
   },
@@ -76,12 +76,12 @@
     "do2Title": "Durchbrechen Sie die Isolation",
     "do2Text": "Sprechen Sie mit einer Vertrauensperson oder idealerweise mit einem Fachmann. Dinge laut auszusprechen macht sie real und verringert ihre Macht.",
     "do3Title": "Setzen Sie eine Testgrenze",
-    "do3Text": "Setzen Sie eine einfache, aber feste Grenze bei einem inakzeptablen Verhalten. Beobachten Sie die Reaktion. Ein gesunder Partner wird sich entschuldigen und anpassen. Ein toxischer Partner wird den Konflikt eskalieren."
+    "do3Text": "Setzen Sie eine einfache, aber feste Grenze bei einem inakzeptablen Verhalten (z. B. <em>\"Ich akzeptiere nicht mehr, dass du mich anschreist; wenn du es tust, verlasse ich den Raum\"</em>). Beobachten Sie die Reaktion. Ein gesunder Partner wird sich entschuldigen und anpassen. Ein toxischer Partner wird den Konflikt eskalieren."
   },
   "section7": {
     "title": "Das Wichtigste: Vertrauen Sie Ihrer Intuition",
     "p1": "Dieser Test ist kein Gerichtsurteil, sondern ein Spiegel. Wenn Sie diese Fragen mit schwerem Herzen beantwortet haben, weiß Ihr Körper bereits, was Ihr Verstand sich weigert zuzugeben.",
-    "p2": "Eine Liebesbeziehung sollte ein sicherer Hafen sein, kein Schlachtfeld. Sie haben das Recht, respektiert, gehört und emotional sicher zu sein.",
+    "p2": "Eine Liebesbeziehung sollte ein sicherer Hafen sein, kein Schlachtfeld. Sie haben das Recht, respektiert, gehört und emotional sicher zu sein. Die Verwirrung, die Sie spüren, ist kein Beweis Ihrer Schwäche, sondern das Zeichen dafür, dass Sie versuchen, sich an eine unnormale Situation anzupassen.",
     "p3": "Wenn dieses Ergebnis Sie beunruhigt, tragen Sie diese Last nicht allein."
   },
   "jsonLd": {
@@ -90,8 +90,9 @@
     "faq1Q": "Was ist der Unterschied zwischen einer schwierigen und einer toxischen Beziehung?",
     "faq1A": "In einem gesunden Paar in der Krise zielt der Konflikt auf Problemlösung. In einem toxischen Paar ist der Konflikt eine Funktionsweise zur Machtübernahme.",
     "faq2Q": "Warum sieht man die Toxizität nicht, wenn man mittendrin steckt?",
-    "faq2A": "Drei Hauptgründe: progressive Gewöhnung, intermittierende Verstärkung und übermäßige Empathie, die gegen einen selbst verwendet wird.",
+    "faq2A": "Drei Hauptgründe: progressive Gewöhnung (Frosch-im-Topf-Effekt), intermittierende Verstärkung (Flitterwochen-Momente) und übermäßige Empathie, die gegen einen selbst verwendet wird.",
     "faq3Q": "Was tun, wenn mein Test hohe Toxizität anzeigt?",
-    "faq3A": "Verbinden Sie sich mit der Realität durch Faktennotizen, durchbrechen Sie die Isolation und setzen Sie eine Testgrenze bei inakzeptablem Verhalten."
+    "faq3A": "Verbinden Sie sich mit der Realität durch Faktennotizen, durchbrechen Sie die Isolation und setzen Sie eine Testgrenze bei inakzeptablem Verhalten.",
+    "about": "toxische Beziehung"
   }
 }
