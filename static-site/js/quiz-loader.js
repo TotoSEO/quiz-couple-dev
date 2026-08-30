@@ -1475,12 +1475,71 @@
           bouton: 'Voir les ateliers près de chez vous'
         }
       }
+    },
+    // Test de couple : meme partenaire, meme lien de suivi, mais l'angle est
+    // celui du test (la routine comme seule vraie menace des couples solides).
+    'tester-couple': {
+      langues: ['fr'],
+      url: 'https://c3po.link/Q9Y6Z2a84u',
+      image: '/partenaires/wecandoo-atelier.webp',
+      alt: "Deux mains qui façonnent un bol sur un tour de potier pendant un atelier",
+      textes: {
+        fr: {
+          mention: 'Lien affilié',
+          titre: 'Et si votre prochaine soirée ne ressemblait pas aux autres ?',
+          texte: "Un couple s'use quand toutes les soirées se ressemblent. Wecandoo réunit des ateliers d'artisans partout en France : céramique, couteau, parfum, brasserie. Deux ou trois heures à fabriquer quelque chose à deux, et vous repartez avec l'objet.",
+          bouton: 'Voir les ateliers près de chez vous'
+        }
+      }
+    },
+    // Test a distance : les retrouvailles sont LE moment de ce public.
+    // AbracadaRoom vend des nuits insolites partout en France.
+    'distance': {
+      langues: ['fr'],
+      url: '',
+      textes: {
+        fr: {
+          mention: 'Lien affilié',
+          titre: "Vos prochaines retrouvailles méritent mieux qu'un canapé",
+          texte: "AbracadaRoom rassemble des nuits insolites partout en France : cabanes dans les arbres, bulles sous les étoiles, roulottes. Réservée à mi-chemin entre vos deux villes, une nuit comme ça transforme un simple week-end de retrouvailles en souvenir.",
+          bouton: 'Trouver une nuit insolite'
+        }
+      }
+    },
+    // Couple sain : sortir du quotidien a deux. Winalist ouvre les domaines
+    // viticoles (visite et degustation chez le vigneron).
+    'sain': {
+      langues: ['fr'],
+      url: '',
+      textes: {
+        fr: {
+          mention: 'Lien affilié',
+          titre: 'Vous prenez encore le temps de sortir à deux ?',
+          texte: "Winalist ouvre les portes des domaines viticoles : visite et dégustation chez le vigneron, souvent à moins d'une heure de chez vous. Une après-midi qui change du restaurant, et la conversation vient toute seule.",
+          bouton: 'Voir les domaines autour de chez vous'
+        }
+      }
+    },
+    // Points communs : le test mesure ce que le couple partage, l'encart
+    // propose d'en creer un de plus. Sport Decouverte vend des activites.
+    'common-points': {
+      langues: ['fr'],
+      url: '',
+      textes: {
+        fr: {
+          mention: 'Lien affilié',
+          titre: "Le meilleur point commun, c'est celui qu'on se crée",
+          texte: "Sport Découverte regroupe des activités à vivre à deux partout en France : parapente, karting, escalade, conduite sur circuit. Choisissez-en une que vous n'avez jamais faite ni l'un ni l'autre, et vous aurez une réponse commune de plus.",
+          bouton: 'Choisir votre prochaine activité'
+        }
+      }
     }
   };
 
   function partenaireResultat(quizType) {
     var p = PARTENAIRES_RESULTAT[quizType];
-    if (!p || p.langues.indexOf(lang) === -1) return null;
+    // Sans lien de suivi, pas d'encart : un clic non compte est un clic perdu.
+    if (!p || !p.url || p.langues.indexOf(lang) === -1) return null;
     var t = p.textes[lang];
     if (!t) return null;
     return { url: p.url, image: p.image, alt: p.alt, mention: t.mention,
@@ -1533,7 +1592,8 @@
       lang: lang,
       needsGender: cfg.needsGender || false,
       useScoring: cfg.useScoring || false,
-      modeSolo: cfg.modeSolo || false
+      modeSolo: cfg.modeSolo || false,
+      partenaire: partenaireResultat(quizType)
     });
   }
 
@@ -1587,7 +1647,8 @@
       results: results,
       prefix: usedPrefix,
       lang: lang,
-      reverseScore: usedHealthyNative
+      reverseScore: usedHealthyNative,
+      partenaire: partenaireResultat(quizType)
     });
   }
 

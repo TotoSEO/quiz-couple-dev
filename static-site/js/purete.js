@@ -368,10 +368,58 @@
 
     w.appendChild(blocPartage(score, pct));
     w.appendChild(blocCategories());
+    var partenaire = blocPartenaire();
+    if (partenaire) w.appendChild(partenaire);
     var suites = blocSuites();
     if (suites) w.appendChild(suites);
     w.appendChild(blocReprendre());
     return w;
+  }
+
+  // ─── Encart partenaire ──────────────────────────────────────────────────
+  // La banniere de la boutique deja posee sur le quiz coquin, avec le meme
+  // lien de suivi Affilae et les memes visuels copies en local. Boutique
+  // francaise : l'encart ne sort qu'en francais, les autres langues gardent
+  // leur ecran tel quel. Le lien porte rel="sponsored nofollow noopener" et
+  // la mention est visible sous le bouton, comme partout sur le site.
+  function blocPartenaire() {
+    // Jamais sur la version tout public : celui qui a repondu « moins de
+    // 16 ans » a la porte d'age ne doit pas voir une boutique pour adultes.
+    if (LANGUE !== 'fr' || !adulte) return null;
+    var titre = mode === 'solo'
+      ? 'Il te reste des cases à cocher 🤭'
+      : 'Il vous reste des cases à cocher 🤭';
+    var texte = 'Lingerie, jeux et accessoires livrés dans un emballage neutre : de quoi faire évoluer le score d\'ici au prochain test.';
+
+    var zone = el('div', 'partenaire-zone');
+    var a = document.createElement('a');
+    a.className = 'partenaire-banniere';
+    a.href = 'https://c3po.link/Quyean9abC';
+    a.target = '_blank';
+    a.rel = 'sponsored nofollow noopener';
+    a.setAttribute('aria-label', titre + ' - Le Passage du Désir');
+    a.innerHTML =
+      '<span class="partenaire-visuel">' +
+        '<img src="/partenaires/passage-du-desir.webp" alt="Mannequin en lingerie de dentelle, campagne Le Passage du Désir" loading="lazy" decoding="async" width="480" height="480">' +
+      '</span>' +
+      '<span class="partenaire-corps">' +
+        '<span class="partenaire-marque">' +
+          '<img class="partenaire-logo" src="/partenaires/passage-du-desir-logo.svg" alt="Le Passage du Désir" loading="lazy" decoding="async">' +
+        '</span>' +
+        '<span class="partenaire-surtitre">Notre partenaire</span>' +
+        '<span class="partenaire-titre">' + titre + '</span>' +
+        '<span class="partenaire-texte">' + texte + '</span>' +
+        '<span class="partenaire-atouts">' +
+          '<span class="partenaire-atout"><span aria-hidden="true">📦</span>Emballage neutre et discret</span>' +
+          '<span class="partenaire-atout"><span aria-hidden="true">⭐</span>4,8/5 sur Trustpilot</span>' +
+        '</span>' +
+        '<span class="partenaire-btn">Voir la boutique' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>' +
+        '</span>' +
+        '<span class="partenaire-mention">Lien partenaire. Le prix que vous payez reste le même.</span>' +
+      '</span>';
+    zone.appendChild(a);
+    return zone;
   }
 
   // ─── Poursuivre ailleurs ────────────────────────────────────────────────
