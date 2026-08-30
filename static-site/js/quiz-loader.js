@@ -246,6 +246,13 @@
         quizType: 'langage-amour', typologie: 'langageAmour' }
     ] },
 
+    // ── Personnalite amoureuse (typologie a quatre axes) ──
+    // Quinze questions, quatre reponses, une par facon d'aimer. Le sens des
+    // lettres tourne d'une question a l'autre : la table de correspondance
+    // vit avec les axes, dans TYPOLOGIES.
+    'personnalite':   { prefix: 'personnalite', engine: 'profile', totalQ: 15, pool: 15,
+                        quizType: 'personnalite', typologie: 'personnalite' },
+
     // ── Confiance quiz (solo scoring, trust assessment) ──
     // ── Dependance affective (solo, ascendant : plus de points = plus dependant) ──
     'dependance':     { prefix: 'dependance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'dependance', ascending: true },
@@ -1874,6 +1881,49 @@
         var tries = ordre.slice().sort(function(a, b) { return (t[b] || 0) - (t[a] || 0); });
         var tete = t[tries[0]] || 0, second = t[tries[1]] || 0;
         if (tete < Math.ceil(n * 0.35) || tete - second <= 1) return 'equilibre';
+        return tries[0];
+      }
+    },
+
+    // Personnalite amoureuse : quatre facons d'aimer, tirees des styles
+    // amoureux de John Alan Lee (eros, agape, ludus, pragma) et debarrassees
+    // de leur vocabulaire savant. Aucune n'est meilleure qu'une autre, et le
+    // cinquieme profil dit qu'aucune ne domine plutot que d'en designer une
+    // au hasard a une voix pres.
+    personnalite: {
+      icone: '💘',
+      // Meme principe que les langages : le sens des lettres tourne, pour
+      // qu'on ne puisse pas repondre « toujours a » sans lire. Quatre
+      // permutations qui se repetent tous les quatre rangs.
+      carte: (function() {
+        var AXES = ['passion', 'devouement', 'complicite', 'construction'];
+        var PERMS = [
+          [0, 1, 2, 3],
+          [2, 3, 0, 1],
+          [1, 0, 3, 2],
+          [3, 2, 1, 0]
+        ];
+        return function(optId, questionId) {
+          var col = ['a', 'b', 'c', 'd'].indexOf(optId);
+          if (col < 0) return null;
+          return AXES[PERMS[(questionId - 1) % 4][col]];
+        };
+      })(),
+      axes: [
+        { id: 'passion',      color: '#ec4899', defaut: 'Passion' },
+        { id: 'devouement',   color: '#22c55e', defaut: 'Dévouement' },
+        { id: 'complicite',   color: '#f59e0b', defaut: 'Complicité' },
+        { id: 'construction', color: '#6366f1', defaut: 'Construction' }
+      ],
+      profils: ['passion', 'devouement', 'complicite', 'construction', 'equilibre'],
+      // Il faut qu'un axe se detache vraiment : un tiers des reponses au
+      // moins, et deux longueurs d'avance sur le suivant. Sinon on annonce
+      // l'equilibre, qui est un resultat et non un aveu d'echec.
+      classify: function(t, n) {
+        var ordre = ['passion', 'devouement', 'complicite', 'construction'];
+        var tries = ordre.slice().sort(function(a, b) { return (t[b] || 0) - (t[a] || 0); });
+        var tete = t[tries[0]] || 0, second = t[tries[1]] || 0;
+        if (tete < Math.ceil(n * 0.33) || tete - second <= 1) return 'equilibre';
         return tries[0];
       }
     },

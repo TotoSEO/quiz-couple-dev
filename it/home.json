@@ -52,55 +52,55 @@
     }
   },
   "whyDoQuiz": {
-    "title": "A cosa serve fare",
+    "title": "A cosa servono",
     "titleHighlight": "questi quiz",
-    "subtitle": "Più di un semplice gioco, i nostri quiz sono uno strumento per arricchire la vostra relazione",
+    "subtitle": "Sei buoni motivi per prendere il telefono stasera invece di iniziare un'altra serie.",
     "reasons": {
       "testRelation": {
-        "title": "Testare la relazione",
-        "description": "Valutate la vostra compatibilità e identificate i vostri punti di forza per costruire una relazione ancora più solida."
+        "title": "Sapere a che punto siete",
+        "description": "I vostri punti di forza, i vostri punti ciechi e un punteggio che riassume tutto. È più onesto di una conversazione a fine serata, e si fa in cinque minuti."
       },
       "haveFun": {
-        "title": "Divertirsi insieme",
-        "description": "Trasformate un momento ordinario in un gioco di coppia. Ridete, discutete e create ricordi insieme."
+        "title": "Passare una bella serata",
+        "description": "Niente da prenotare, niente da installare. Un telefono, voi due, e la serata prende un'altra piega."
       },
       "discover": {
-        "title": "Scoprire l'altro",
-        "description": "Imparate cose sorprendenti sul vostro partner, anche dopo anni di relazione."
+        "title": "Scoprire ancora qualcosa",
+        "description": "Anche dopo dieci anni restano risposte che non avete mai sentito. Spesso è la domanda più sciocca a farle uscire."
       },
       "strengthen": {
-        "title": "Rafforzare la complicità",
-        "description": "Create momenti di connessione autentica e rafforzate i legami che vi uniscono."
+        "title": "Ritrovare la complicità",
+        "description": "Una partita in cui si ride e ci si punzecchia, come all'inizio. Il tipo di momento che si perde quando le settimane si accumulano."
       },
       "dialogue": {
-        "title": "Aprire il dialogo",
-        "description": "Avviate conversazioni profonde e sincere su argomenti che non affrontate quotidianamente."
+        "title": "Dire quello che non si dice",
+        "description": "Certi argomenti non escono mai da soli. Una domanda posta dallo schermo passa meglio di una domanda posta dall'altro."
       },
       "memories": {
-        "title": "Creare ricordi",
-        "description": "Condividete un'esperienza unica insieme e conservate un ricordo di questo momento di complicità."
+        "title": "Portarvi via qualcosa",
+        "description": "Un risultato da condividere, uno screenshot da mandarsi e una conversazione che continua ben oltre l'ultima domanda."
       }
     }
   },
   "howItWorks": {
     "title": "Come",
     "titleHighlight": "funziona",
-    "subtitle": "Semplice, veloce e divertente: in soli 3 passi",
+    "subtitle": "Tre passaggi, e siete partiti.",
     "steps": {
       "choose": {
         "step": "1",
-        "title": "Scegli il tuo quiz",
-        "description": "Seleziona tra i nostri quiz quello che corrisponde al tuo umore del momento."
+        "title": "Scegliete",
+        "description": "Un test serio o un gioco leggero, secondo l'umore. È tutto gratuito e niente chiede un account."
       },
       "answer": {
         "step": "2",
-        "title": "Rispondete insieme",
-        "description": "Mettetevi comodi e rispondete alle domande insieme."
+        "title": "Rispondete",
+        "description": "A turno sullo stesso telefono, o ognuno per conto suo. Le domande arrivano una alla volta."
       },
       "results": {
         "step": "3",
-        "title": "Scopri i tuoi risultati",
-        "description": "Ottieni il tuo punteggio, consigli personalizzati e condividi i tuoi risultati!"
+        "title": "Scoprite",
+        "description": "Un risultato dettagliato, i consigli che lo accompagnano, e con cosa proseguire dopo."
       }
     }
   },
@@ -169,5 +169,9 @@
     "item10": "🧠 Vi conoscete davvero?",
     "item11": "👀 Chi di noi due?",
     "item12": "⚡ Risultati immediati"
+  },
+  "noteSite": {
+    "label": "Voto medio del sito",
+    "cta": "Leggere le recensioni"
   }
 }

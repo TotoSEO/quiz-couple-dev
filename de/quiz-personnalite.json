@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Kostenlos • Ohne Anmeldung • 3 Min",
+    "title": "Liebespersönlichkeit: Wie bist du in einer Beziehung?",
+    "titleHighlight": "Liebespersönlichkeit",
+    "jumpBtn": "Zum Test springen",
+    "description": "15 Fragen, um herauszufinden, welchen Platz du in der Liebe einnimmst: den von jemandem, der stark liebt, der sich kümmert, der zum Lachen bringt, oder der aufbaut.",
+    "intro1": "Wir lieben nicht alle auf dieselbe Art, und das zeigt sich schon in den ersten Wochen. Manche sagen nach zehn Tagen «Ich liebe dich», andere beweisen es sechs Monate lang, bevor sie es aussprechen. Dieser Test gibt deiner Art einen Namen."
+  },
+  "quiz": {
+    "sectionTitle": "Mach den Test zur Liebespersönlichkeit"
+  },
+  "seo": {
+    "s1": {
+      "title": "Was ist eine Liebespersönlichkeit?",
+      "p1": "Deine Liebespersönlichkeit ist deine Art zu lieben, wenn du nicht darüber nachdenkst. Nicht was du über Liebe denkst, nicht was du in einem Gespräch sagen würdest: das, was du spontan tust, wenn dir jemand wichtig ist. Zum Beispiel kommt dein Partner nach einem miesen Tag nach Hause. Der eine nimmt ihn in den Arm und trägt den Tag mit. Der andere startet eine Serie und bestellt Sushi. Der dritte stellt Fragen und sucht nach einer Lösung. Keiner liebt mehr als die anderen, sie lieben anders.",
+      "p2": "Das ist eine ziemlich stabile Größe, jedenfalls über mehrere Jahre. Man kann den Partner wechseln, die Stadt und die Meinung zu vielem, und findet in der nächsten Geschichte dieselben Reflexe wieder. Den meisten fällt es an dem Tag auf, an dem ein Ex ihnen genau denselben Vorwurf macht wie der davor.",
+      "p3": "Zu wissen, welche deine ist, hilft bei zwei ziemlich genauen Dingen. Es erklärt, warum manche Beziehungen dich ausgelaugt haben, obwohl auf dem Papier alles passte. Und es gibt dir die Worte, jemandem zu sagen, was du brauchst, statt zu hoffen, dass er es errät."
+    },
+    "s2": {
+      "title": "Die vier Arten zu lieben",
+      "intro": "Der Test verteilt deine Antworten auf vier Arten zu lieben. Niemand hat nur eine: du wirst dich in zweien wiedererkennen, vielleicht in dreien, wobei eine deutlicher herausragt. Die nennt dir das Ergebnis, zusammen mit allen vier Balken.",
+      "pillar1Title": "Der Leidenschaftliche",
+      "pillar1Text": "Intensität zuerst. Er liebt schnell, stark, und er muss es spüren: die großen Erklärungen, die Abende, an denen der Rest der Welt verschwindet, das Wiedersehen am Bahnhof. Seine Stärke ist es, eine Geschichte lebendig zu machen. Seine Schwierigkeit beginnt, wenn Ruhe einkehrt und er sie für das Ende hält.",
+      "pillar2Title": "Der Fürsorgliche",
+      "pillar2Text": "Liebe wird bewiesen. Er merkt, was der andere braucht, bevor man ihn darum bittet, er hilft, er schützt. Bei ihm fühlt man sich sicher. Die Falle ist bekannt: vor lauter Blick auf den anderen sagt er nie, was er erwartet, und erwartet es trotzdem.",
+      "pillar3Title": "Der Verbündete",
+      "pillar3Text": "Liebe wie eine sehr gute Freundschaft. Sprüche, alberne Kosenamen, jemand, mit dem selbst eine Autofahrt angenehm ist. Leicht im Alltag, selten schwerfällig. Seine Grenze zeigt sich, wenn ein ernstes Thema kommt: der Witz, der die Lage entspannt, ist auch der, der dem Gespräch ausweicht.",
+      "pillar4Title": "Der Baumeister",
+      "pillar4Text": "Liebe als Vorhaben. Er schaut, ob zwei Leben zusammenhalten können: das Tempo, das Geld, die Kinder, der Ort zum Leben. Das ist nicht kalt, das ist eine Art, die Geschichte ernst zu nehmen. Was ihm manchmal fehlt, ist zu genießen, was gerade passiert, bevor er geprüft hat, ob es hält.",
+      "tip": "Ein Profil ist keine Schublade. Wenn deine beiden obersten Balken nah beieinanderliegen, lies beide Texte: viele Menschen sind eine Mischung, und oft beschreibt sie die Mischung am besten."
+    },
+    "s3": {
+      "title": "Woher deine Art zu lieben kommt",
+      "p1": "Der Gedanke, dass es mehrere, gleichermaßen gültige Arten zu lieben gibt, ist nicht neu. Der kanadische Soziologe John Alan Lee schlug schon 1973 eine Einteilung der Liebesstile vor, die bis heute als Bezugspunkt dient: die leidenschaftliche Liebe, die hingebungsvolle Liebe, die spielerische Liebe, die vernünftige Liebe und Mischungen daraus. Die vier Profile dieses Tests lehnen sich direkt daran an, ohne das gelehrte Vokabular.",
+      "p2": "Deine Art zu lieben entsteht früh, aus dem, was du zu Hause gesehen hast, aus dem, was deine ersten Geschichten dich gelehrt haben, und aus dem, was funktioniert hat oder nicht. Ein Jugendlicher, der aus heiterem Himmel verlassen wurde, kann ein Erwachsener werden, der alles prüft, bevor er sich bindet. Wer in einer Familie aufwuchs, in der wenig gesagt wurde, kann ein Leben lang die Liebe durch Taten beweisen.",
+      "p3": "Sie bewegt sich trotzdem, langsamer als man denkt, aber sie bewegt sich. Eine lange Beziehung, eine Therapie, eine Trennung, die alles auf null stellt: wer diesen Test fünf Jahre später wiederholt, landet nicht immer beim selben Profil.",
+      "quote": "Keine dieser vier Arten zu lieben ist besser als die anderen. Es sind die Missverständnisse zwischen zwei verschiedenen Arten, die Paaren schaden, nicht die Arten selbst."
+    },
+    "s4": {
+      "title": "Persönlichkeit, Sprache, Bindung: drei Anhaltspunkte, die man nicht verwechseln sollte",
+      "intro": "Drei Tests tauchen oft zusammen auf und messen drei verschiedene Dinge. So lassen sie sich unterscheiden.",
+      "p1": "Die drei ergänzen einander. Deine Liebespersönlichkeit sagt, welchen Platz du einnimmst, <a href=\"/de/liebessprache-test-paar/\">die Art, wie du diese Liebe im Alltag zeigst</a> sagt, über welche Gesten das läuft, und <a href=\"/de/bindungsstil-test/\">das, was in dir losgeht, wenn der andere auf Abstand geht</a> sagt, wie sicher du dich fühlst. Ein Paar, das alle drei gemacht hat, hat für eine Weile Gesprächsstoff."
+    },
+    "tableHeaders": [
+      "Der Test",
+      "Worauf er antwortet",
+      "Was du damit anfängst"
+    ],
+    "tableRows": [
+      [
+        "Die Liebespersönlichkeit",
+        "Welchen Platz du in einer Geschichte spontan einnimmst",
+        "Verstehen, warum immer dieselben Vorwürfe zurückkommen"
+      ],
+      [
+        "<a href=\"/de/liebessprache-test-paar/\">Die Sprache der Liebe</a>",
+        "Über welche Gesten du Liebe gibst und über welche du sie empfängst",
+        "Aufhören, das anzubieten, was der andere nicht braucht"
+      ],
+      [
+        "<a href=\"/de/bindungsstil-test/\">Der Bindungsstil</a>",
+        "Was in dir passiert, wenn der andere sich entfernt",
+        "Eine Angst beruhigen, die grundlos anspringt"
+      ]
+    ],
+    "s5": {
+      "title": "Den Test zu zweit machen und vergleichen",
+      "p1": "Der Test wird allein gespielt, eine Person nach der anderen. Das Interessante kommt danach: macht ihn jeder für sich, ohne die Antworten des anderen zu sehen, und vergleicht dann die vier Balken.",
+      "p2": "Zwei gleiche Profile gehen schnell, ihr versteht euch ohne Übersetzung. Zwei gegensätzliche Profile sind häufiger, als man denkt, und gut zu handhaben, sobald sie benannt sind. Ein Leidenschaftlicher mit einem Baumeister zum Beispiel: zwei Menschen, die sich gleich stark lieben, wobei einer täglich Beweise erwartet und der andere einen Fünfjahresplan. An dem Tag, an dem sie das wissen, hören sie auf, es einander vorzuwerfen.",
+      "p3": "Wer weitergehen will, misst danach <a href=\"/de/paar-kompatibilitaetstest/\">was eure Beziehung heute trägt</a>: dieser Test schaut auf die Fakten, nicht auf die Temperamente.",
+      "tip": "Jeder liest das Profil des anderen laut vor. Das wirkt erstaunlich gut: man hört Dinge, die man schlecht aufgenommen hätte, wenn der andere sie mit eigenen Worten gesagt hätte."
+    },
+    "s6": {
+      "title": "Was dieser Test nicht leistet",
+      "p1": "Er sagt nicht, ob ihr zusammenpasst. Zwei verschiedene Profile verstehen sich oft sehr gut, und zwei gleiche können sich gegenseitig verrückt machen.",
+      "p2": "Er ersetzt keine fachliche Einschätzung. Wenn dich anhaltendes Leid, ein Dauerzweifel oder eine Beziehung hierherbringt, die dir wehtut, reichen fünfzehn Fragen nicht, und sie behaupten es auch nicht.",
+      "p3": "Er ist nicht in Stein gemeißelt. Das Ergebnis beschreibt, wer du gerade bist, mit der Erfahrung, die du heute hast. Mach ihn in zwei Jahren noch einmal, du wirst sehen."
+    },
+    "faqTitle": "Häufige Fragen",
+    "faq": [
+      {
+        "q": "Was ist eine Liebespersönlichkeit?",
+        "a": "Es ist deine spontane Art zu lieben, das, was du ohne Nachdenken tust, wenn dir jemand wichtig ist. Manche brauchen Intensität, andere wollen sich kümmern, andere lachen, andere aufbauen. Alle vier gibt es, und keine ist besser als die anderen."
+      },
+      {
+        "q": "Ist der Test kostenlos?",
+        "a": "Ja, vollständig, und ohne Anmeldung. Fünfzehn Fragen, drei Minuten, und am Ende erscheint das Ergebnis mit allen vier Balken."
+      },
+      {
+        "q": "Wie lange dauert er?",
+        "a": "Etwa drei Minuten. Antworte aus dem ersten Impuls statt nach langem Überlegen: so trifft das Ergebnis am genauesten."
+      },
+      {
+        "q": "Kann man ihn zu zweit machen?",
+        "a": "Ja, und das ist die beste Art, ihn zu nutzen. Macht ihn jeder für sich und vergleicht dann die Profile. Die Unterschiede erklären oft Streitigkeiten, die ihr nicht entwirren konntet."
+      },
+      {
+        "q": "Kann sich meine Liebespersönlichkeit ändern?",
+        "a": "Sie entwickelt sich, langsam. Eine lange Beziehung, eine prägende Trennung oder Arbeit an sich selbst können den Zeiger verschieben. Fünf Jahre später landen viele nicht beim selben Profil."
+      },
+      {
+        "q": "Was ist der Unterschied zum Test der Sprachen der Liebe?",
+        "a": "Die Liebespersönlichkeit beschreibt den Platz, den du in einer Geschichte einnimmst. Die Sprache der Liebe beschreibt die Gesten, über die du gibst und empfängst. Beide ergänzen sich, und viele machen einen direkt nach dem anderen."
+      }
+    ]
+  }
+}

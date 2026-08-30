@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Gratuit • Sans inscription • 3 min",
+    "title": "Personnalité amoureuse : comment es-tu en couple ?",
+    "titleHighlight": "Personnalité amoureuse",
+    "jumpBtn": "Aller au test",
+    "description": "15 questions pour savoir quelle place tu prends en amour : celle de celui qui aime fort, de celui qui prend soin, de celui qui fait rire, ou de celui qui construit.",
+    "intro1": "On n'aime pas tous de la même façon, et ça se voit dès les premières semaines. Certains disent « je t'aime » au bout de dix jours, d'autres le prouvent pendant six mois avant de le dire. Ce test met un nom sur ta façon à toi."
+  },
+  "quiz": {
+    "sectionTitle": "Faites le test de personnalité amoureuse"
+  },
+  "seo": {
+    "s1": {
+      "title": "La personnalité amoureuse, c'est quoi ?",
+      "p1": "Ta personnalité amoureuse, c'est ta manière d'aimer quand tu ne réfléchis pas. Pas ce que tu penses de l'amour, pas ce que tu dirais dans une conversation : ce que tu fais spontanément quand tu tiens à quelqu'un. Par exemple, ton ou ta partenaire rentre après une journée pourrie. L'un va le prendre dans ses bras et encaisser la journée avec lui. L'autre va lancer une série et commander des sushis. Le troisième va poser des questions et chercher quoi faire. Aucun n'aime plus que les autres, ils aiment autrement.",
+      "p2": "C'est une donnée assez stable, en tout cas sur plusieurs années. On peut changer de partenaire, de ville et d'avis sur beaucoup de choses, et retrouver les mêmes réflexes dans l'histoire suivante. La plupart des gens s'en aperçoivent le jour où un ex leur fait exactement le même reproche que le précédent.",
+      "p3": "Savoir laquelle est la tienne sert à deux choses assez précises. Ça explique pourquoi certaines relations t'ont épuisé alors que tout allait bien sur le papier. Et ça te donne les mots pour dire à quelqu'un ce dont tu as besoin, au lieu d'espérer qu'il devine."
+    },
+    "s2": {
+      "title": "Les quatre façons d'aimer",
+      "intro": "Le test répartit tes réponses sur quatre façons d'aimer. Personne n'en a qu'une seule : tu vas te reconnaître dans deux, peut-être trois, avec une qui ressort plus fort. C'est celle-là que le résultat t'annonce, avec le détail des quatre barres.",
+      "pillar1Title": "Le Passionné",
+      "pillar1Text": "L'intensité d'abord. Il aime vite, fort, et il a besoin de le sentir : les grandes déclarations, les soirées où le reste du monde disparaît, les retrouvailles à la gare. Sa force est de rendre une histoire vivante. Sa difficulté commence quand le calme s'installe et qu'il le prend pour la fin.",
+      "pillar2Title": "Le Dévoué",
+      "pillar2Text": "L'amour se prouve. Il repère ce dont l'autre a besoin avant qu'on le lui demande, il rend service, il protège. C'est avec lui qu'on se sent en sécurité. Le piège est connu : à force de regarder l'autre, il ne dit jamais ce qu'il attend, et il l'attend quand même.",
+      "pillar3Title": "Le Complice",
+      "pillar3Text": "L'amour comme une très bonne amitié. Des vannes, des surnoms ridicules, quelqu'un avec qui même un trajet en voiture est agréable. Léger à vivre, rarement pesant. Sa limite se voit quand un sujet sérieux arrive : la blague qui détend est aussi celle qui évite la conversation.",
+      "pillar4Title": "Le Bâtisseur",
+      "pillar4Text": "L'amour comme un projet. Il regarde si les deux vies peuvent tenir ensemble : le rythme, l'argent, les enfants, l'endroit où vivre. Ce n'est pas froid, c'est une façon de prendre l'histoire au sérieux. Il lui manque parfois de profiter de ce qui se passe avant d'avoir vérifié que ça peut durer.",
+      "tip": "Un profil n'est pas une case. Si tes deux premières barres sont proches, lis les deux textes : beaucoup de gens sont un mélange, et c'est souvent le mélange qui les décrit le mieux."
+    },
+    "s3": {
+      "title": "D'où vient ta façon d'aimer",
+      "p1": "L'idée qu'il existe plusieurs façons d'aimer, également valables, ne date pas d'hier. Le sociologue canadien John Alan Lee a proposé dès 1973 une classification des styles amoureux qui sert encore de référence : l'amour passion, l'amour don de soi, l'amour jeu, l'amour raison, et des combinaisons entre eux. Les quatre profils de ce test s'en inspirent, débarrassés du vocabulaire savant.",
+      "p2": "Ta façon d'aimer se fabrique tôt, avec ce que tu as vu à la maison, ce que tes premières histoires t'ont appris, et ce qui a marché ou pas. Un adolescent quitté brutalement peut devenir un adulte qui vérifie tout avant de s'engager. Quelqu'un qui a grandi dans une famille où on se disait peu de choses peut passer sa vie à prouver l'amour par des actes.",
+      "p3": "Elle bouge quand même, plus lentement qu'on ne le croit mais elle bouge. Une longue relation, une thérapie, une rupture qui remet les compteurs à zéro : les gens qui refont ce test à cinq ans d'écart ne tombent pas toujours sur le même profil.",
+      "quote": "Aucune de ces quatre façons d'aimer ne vaut mieux que les autres. Ce sont les malentendus entre deux façons différentes qui abîment les couples, pas les façons elles-mêmes."
+    },
+    "s4": {
+      "title": "Personnalité, langage, attachement : trois repères à ne pas confondre",
+      "intro": "Trois tests reviennent souvent ensemble et mesurent trois choses différentes. Voilà comment les distinguer.",
+      "p1": "Les trois se complètent. Ta personnalité amoureuse dit la place que tu prends, <a href=\"/test-langage-amour-couple/\">la façon dont tu montres cet amour au quotidien</a> dit par quels gestes ça passe, et <a href=\"/test-style-attachement-couple/\">ce qui se déclenche en toi quand l'autre prend ses distances</a> dit à quel point tu te sens en sécurité. Un couple qui a fait les trois a de quoi tenir une conversation pour un moment."
+    },
+    "tableHeaders": [
+      "Le test",
+      "Il répond à quoi",
+      "Ce que tu en fais"
+    ],
+    "tableRows": [
+      [
+        "La personnalité amoureuse",
+        "Quelle place tu prends spontanément dans une histoire",
+        "Comprendre pourquoi les mêmes reproches reviennent"
+      ],
+      [
+        "<a href=\"/test-langage-amour-couple/\">Le langage de l'amour</a>",
+        "Par quels gestes tu donnes ton amour, et par lesquels tu le reçois",
+        "Arrêter d'offrir ce dont l'autre n'a pas besoin"
+      ],
+      [
+        "<a href=\"/test-style-attachement-couple/\">Le style d'attachement</a>",
+        "Ce qui se passe en toi quand l'autre s'éloigne",
+        "Calmer une peur qui se déclenche pour rien"
+      ]
+    ],
+    "s5": {
+      "title": "Faire le test à deux, et comparer",
+      "p1": "Le test se joue seul, une personne à la fois. Le plus intéressant vient après : faites-le chacun de votre côté, sans regarder les réponses de l'autre, puis comparez les quatre barres.",
+      "p2": "Deux profils identiques, ça va vite, vous vous comprenez sans traduction. Deux profils opposés, c'est plus fréquent qu'on ne croit, et ça se gère très bien une fois que c'est nommé. Un Passionné avec un Bâtisseur, par exemple : deux personnes qui s'aiment autant, dont l'une attend des preuves tous les jours et l'autre un plan sur cinq ans. Le jour où ils le savent, ils arrêtent de se le reprocher.",
+      "p3": "Pour aller plus loin, mesurez ensuite <a href=\"/tester-son-couple/\">ce que votre relation tient aujourd'hui</a> : ce test-là regarde les faits, pas les tempéraments.",
+      "tip": "Chacun lit à voix haute le profil de l'autre. C'est étonnamment efficace : on entend des choses qu'on aurait mal prises si l'autre les avait dites avec ses mots."
+    },
+    "s6": {
+      "title": "Ce que ce test ne fait pas",
+      "p1": "Il ne dit pas si vous êtes compatibles. Deux profils différents s'entendent souvent très bien, et deux profils identiques peuvent se rendre fous.",
+      "p2": "Il ne remplace pas un avis professionnel. Si ce qui t'amène ici est une souffrance qui dure, un doute permanent ou une relation qui te fait mal, quinze questions n'y suffiront pas, et elles ne le prétendent pas.",
+      "p3": "Il n'est pas figé. Le résultat décrit qui tu es en ce moment, avec l'expérience que tu as aujourd'hui. Refais-le dans deux ans, tu verras."
+    },
+    "faqTitle": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "C'est quoi, une personnalité amoureuse ?",
+        "a": "C'est ta façon spontanée d'aimer, ce que tu fais sans y penser quand tu tiens à quelqu'un. Certains ont besoin d'intensité, d'autres de prendre soin, d'autres de rire, d'autres de construire. Les quatre existent, aucune n'est meilleure que les autres."
+      },
+      {
+        "q": "Le test est-il gratuit ?",
+        "a": "Oui, entièrement, et sans inscription. Quinze questions, trois minutes, et le résultat s'affiche à la fin avec le détail de tes quatre barres."
+      },
+      {
+        "q": "Combien de temps ça prend ?",
+        "a": "Trois minutes environ. Réponds au premier réflexe plutôt qu'après réflexion : c'est comme ça que le résultat tombe le plus juste."
+      },
+      {
+        "q": "Peut-on le faire en couple ?",
+        "a": "Oui, et c'est la meilleure façon de s'en servir. Faites-le chacun de votre côté, puis comparez les profils. Les écarts expliquent souvent des disputes que vous n'arriviez pas à démêler."
+      },
+      {
+        "q": "Ma personnalité amoureuse peut-elle changer ?",
+        "a": "Elle évolue, lentement. Une longue relation, une rupture marquante ou un travail sur soi peuvent déplacer le curseur. À cinq ans d'écart, beaucoup de gens ne retombent pas sur le même profil."
+      },
+      {
+        "q": "Quelle différence avec le test des langages de l'amour ?",
+        "a": "La personnalité amoureuse décrit la place que tu prends dans une histoire. Le langage de l'amour décrit les gestes par lesquels tu donnes et tu reçois. Les deux se complètent, et beaucoup enchaînent l'un après l'autre."
+      }
+    ]
+  }
+}

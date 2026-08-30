@@ -54,53 +54,53 @@
   "whyDoQuiz": {
     "title": "À quoi ça sert de faire",
     "titleHighlight": "ces quiz",
-    "subtitle": "Bien plus qu'un simple jeu, nos quiz sont un outil pour enrichir votre relation",
+    "subtitle": "Six bonnes raisons de sortir le téléphone ce soir, plutôt qu'une série de plus.",
     "reasons": {
       "testRelation": {
-        "title": "Tester sa relation",
-        "description": "Évaluez votre compatibilité et identifiez vos points forts pour construire une relation encore plus solide."
+        "title": "Savoir où vous en êtes",
+        "description": "Vos points forts, vos angles morts, et un score qui résume l'ensemble. C'est plus honnête qu'une discussion de fin de soirée, et ça prend cinq minutes."
       },
       "haveFun": {
-        "title": "S'amuser ensemble",
-        "description": "Transformez un moment ordinaire en jeu de couple. Riez, débattez et créez des souvenirs ensemble."
+        "title": "Passer une bonne soirée",
+        "description": "Rien à réserver, rien à installer. Un téléphone, vous deux, et la soirée prend une autre tournure."
       },
       "discover": {
-        "title": "Découvrir l'autre",
-        "description": "Apprenez des choses surprenantes sur votre partenaire, même après des années de relation."
+        "title": "Apprendre encore des choses",
+        "description": "Même après dix ans, il reste des réponses que vous n'avez jamais entendues. C'est souvent la question la plus bête qui les fait sortir."
       },
       "strengthen": {
-        "title": "Renforcer la complicité",
-        "description": "Créez des moments de connexion authentique et renforcez les liens qui vous unissent."
+        "title": "Retrouver la complicité",
+        "description": "Une partie où on rit et où on se chambre, comme au début. Le genre de moment qui se perd quand les semaines s'enchaînent."
       },
       "dialogue": {
-        "title": "Ouvrir le dialogue",
-        "description": "Lancez des conversations profondes et sincères sur des sujets que vous n'abordez pas au quotidien."
+        "title": "Dire ce qui ne se dit pas",
+        "description": "Certains sujets ne se lancent jamais tout seuls. Une question posée par l'écran passe mieux qu'une question posée par l'autre."
       },
       "memories": {
-        "title": "Créer des souvenirs",
-        "description": "Partagez une expérience unique ensemble et gardez un souvenir de ce moment de complicité."
+        "title": "En garder quelque chose",
+        "description": "Un résultat à partager, une capture à s'envoyer, et une conversation qui continue bien après la dernière question."
       }
     }
   },
   "howItWorks": {
     "title": "Comment ça",
     "titleHighlight": "marche",
-    "subtitle": "Simple, rapide et amusant : en 3 étapes seulement",
+    "subtitle": "Trois étapes, et vous êtes lancés.",
     "steps": {
       "choose": {
         "step": "1",
-        "title": "Choisissez votre quiz",
-        "description": "Sélectionnez parmi nos quiz celui qui correspond à votre humeur du moment."
+        "title": "Choisissez",
+        "description": "Un test sérieux ou un jeu léger, selon l'humeur du moment. Tout est gratuit et rien ne demande de compte."
       },
       "answer": {
         "step": "2",
-        "title": "Répondez ensemble",
-        "description": "Installez-vous confortablement et répondez aux questions à deux."
+        "title": "Répondez",
+        "description": "Chacun son tour sur le même téléphone, ou chacun de son côté. Les questions arrivent une par une."
       },
       "results": {
         "step": "3",
-        "title": "Découvrez vos résultats",
-        "description": "Obtenez votre score, des conseils personnalisés et partagez vos résultats !"
+        "title": "Découvrez",
+        "description": "Un résultat détaillé, les conseils qui vont avec, et de quoi enchaîner sur le test suivant."
       }
     }
   },
@@ -169,5 +169,9 @@
     "item10": "🧠 Vous connaissez-vous vraiment ?",
     "item11": "👀 Qui de nous deux ?",
     "item12": "⚡ Résultats immédiats"
+  },
+  "noteSite": {
+    "label": "Note moyenne du site",
+    "cta": "Lire les avis"
   }
 }
