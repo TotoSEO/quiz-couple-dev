@@ -240,5 +240,8 @@
   "meta": {
     "titre": "Purity test for couples | Online & free",
     "description": "Couple purity test: 50 questions, a score out of 899, and the breakdown by category. Take it alone or together, then compare with your partner. Free, no sign-up."
+  },
+  "jsonLd": {
+    "about": "couple purity test"
   }
 }

@@ -87,11 +87,11 @@
       },
       {
         "title": "Eifersucht und Unsicherheit",
-        "text": "Auf Distanz ist die Fantasie Ihr schlimmster Feind. Wenn sich dieser Zweifel wirklich festsetzt, lautet die Frage <a href=\"/de/fernbeziehung-liebt-er-sie-mich-noch/\">liebt er oder sie mich noch</a>."
+        "text": "„Warum antwortet er nicht?\", „Wer ist das Mädchen in seiner Story?\". Auf Distanz ist die Fantasie Ihr schlimmster Feind. Ohne direkte Sicht wird aus einer schlichten Verspätung schnell ein Katastrophenszenario. Wenn sich dieser Zweifel wirklich festsetzt, lautet die Frage <a href=\"/de/fernbeziehung-liebt-er-sie-mich-noch/\">liebt er oder sie mich noch</a>."
       },
       {
         "title": "Unsicherheit über die Zukunft",
-        "text": "Unklarheit ist toxisch."
+        "text": "Unklarheit ist toxisch. „Wann ziehen wir endlich zusammen?\". Ohne klare Antwort bröckelt die Motivation."
       },
       {
         "title": "Finanzieller und logistischer Druck",
@@ -109,10 +109,10 @@
   "section6": {
     "title": "Zeichen, dass Ihre Fernbeziehung funktionieren kann",
     "signs": [
-      "<strong>Aufrichtige und regelmäßige Kommunikation</strong>",
-      "<strong>Gegenseitiges Vertrauen und Engagement</strong>",
-      "<strong>Gemeinsame Projekte und klare Ziele</strong>",
-      "<strong>Fähigkeit, Unsicherheit zu bewältigen</strong>"
+      "<strong>Aufrichtige und regelmäßige Kommunikation</strong> - Ihr traut euch zu sagen „Ich fühle mich heute allein\"",
+      "<strong>Gegenseitiges Vertrauen und Engagement</strong> - Durch Taten aufgebaut, nicht nur durch Worte",
+      "<strong>Gemeinsame Projekte und klare Ziele</strong> - Ein Enddatum muss es geben, und sei es ein vages",
+      "<strong>Fähigkeit, Unsicherheit zu bewältigen</strong> - Ihr macht aus der Frustration die Vorfreude auf das Wiedersehen"
     ]
   },
   "section7": {
@@ -124,11 +124,11 @@
       },
       {
         "title": "Technologie bewusst nutzen",
-        "text": "Qualitätsmomente über Quantität stellen."
+        "text": "Setzt auf Momente mit Qualität (ein richtiges Date per Video) statt auf leere Menge."
       },
       {
         "title": "Schwierige Momente gemeinsam bewältigen",
-        "text": "Aktives Zuhören ist mehr wert als alle Geschenke."
+        "text": "Wenn es einem schlecht geht, muss der andere da sein. Aktives Zuhören ist mehr wert als alle Geschenke der Welt."
       },
       {
         "title": "Intimität aufrechterhalten",
@@ -181,11 +181,11 @@
         "a": "Ziehen Sie Bilanz: bringt Ihnen diese Person mehr Freude als Traurigkeit? Passen Ihre Lebenswerte zusammen? Wenn die Antwort ja lautet, ist die Distanz nur ein vorübergehendes logistisches Detail."
       },
       {
-        "q": "Was sind die Zeichen für Stabilität?",
+        "q": "Was sind die 10 Zeichen dafür, dass eure Fernbeziehung stabil ist?",
         "a": "Wenn Sie zusammen lachen, wenn Sie die Zukunft planen, wenn Vertrauen da ist, und wenn jeder von Ihnen ein eigenes erfülltes Sozialleben außerhalb der Beziehung hat, sind Sie auf dem richtigen Weg."
       },
       {
-        "q": "Warum scheitern sie?",
+        "q": "Warum scheitern Fernbeziehungen (und wie vermeidet man das)?",
         "a": "Sie scheitern oft an fehlender gemeinsamer Vision (kein Enddatum) oder an Erschöpfung (zu viele Reisen, zu wenig Budget). Dagegen hilft: sprechen Sie über Ihre Grenzen und machen Sie einen realistischen Finanz- und Zeitplan."
       }
     ]
@@ -208,5 +208,8 @@
     "sub3Title": "Das Danach",
     "sub3Text": "<ul><li>Das Erste, was wir machen, wenn wir uns wiedersehen: du entscheidest.</li><li>Ehrlich: wie lange noch, bis wir in derselben Stadt sind?</li><li>Was würde dich sagen lassen, dass es sich nicht mehr lohnt?</li><li>Wovor hast du Respekt, wenn wir zusammenziehen?</li><li>Welche Single-Gewohnheit willst du auf keinen Fall aufgeben?</li><li>Wenn einer für den anderen umziehen müsste, wer wäre es?</li></ul>",
     "outro": "Eine Regel, damit es funktioniert: erst antworten, dann fragen. Sonst sitzt einer von euch am Ende in einem Bewerbungsgespräch."
+  },
+  "jsonLd": {
+    "about": "Fernbeziehung"
   }
 }

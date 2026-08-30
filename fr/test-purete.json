@@ -240,5 +240,8 @@
     "jauge_compare_couple": "Sur <strong>{n}</strong> tests, vous faites moins purs que <strong>{devant}%</strong> des gens.",
     "partage_copie_msg": "Message copié, collez-le où vous voulez",
     "hero_jauge_moyenne": "Score moyen"
+  },
+  "jsonLd": {
+    "about": "test de pureté en couple"
   }
 }

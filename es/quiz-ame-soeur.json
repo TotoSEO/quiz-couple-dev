@@ -34,7 +34,7 @@
   },
   "section3": {
     "title": "¿Existe, o es una invención?",
-    "p1": "La idea viene de Platón, en <em>El Banquete</em>. Los humanos eran seres dobles, Zeus los cortó en dos, y desde entonces cada uno busca su mitad. Es un mito, contado por un personaje de comedia, y ha atravesado veinticuatro siglos para acabar en las biografías de las aplicaciones de citas.",
+    "p1": "La idea viene de Platón, en <em>El Banquete</em>. Los humanos eran seres dobles, Zeus los cortó en dos, y desde entonces cada uno busca su mitad. Es un mito, contado por un personaje de comedia, y ha atravesado veinticuatro siglos para acabar en las biografías de las aplicaciones de citas. Veinticuatro siglos después, lo que sacamos de él son sobre todo las frases que nos escribimos al dorso de las tarjetas, muchas veces atribuidas al autor equivocado.",
     "p2": "Así que la pregunta de verdad no es «¿existe?», sino «¿qué cambia el hecho de creerlo?».",
     "p3": "Y ahí la investigación se pone interesante, en particular los trabajos de C. R. Knee. Dos creencias se oponen. El <strong>destino</strong>: las personas se convienen o no, y se ve enseguida. La <strong>construcción</strong>: una relación se fabrica, y las dificultades forman parte del trabajo. Resultado: los que creen en el destino encajan mal el primer conflicto de verdad, porque se convierte en la prueba de que se han equivocado de persona. Los otros solo ven un problema que resolver.",
     "p4": "Dicho de otro modo, buscar tu alma gemela puede dañar la relación que ya tienes. Por eso este test no mide ningún destino: mira lo que tu relación hace de ti, hoy."
@@ -116,5 +116,8 @@
     "p1": "Un alma gemela no se reconoce por la intensidad del principio, sino por lo que te queda después. Después de una discusión, después de una prueba, después de tres años.",
     "p2": "La única señal que no engaña es la que menos se mira: ¿esta relación te vuelve más tú mismo(a), o te ha encogido? Todo lo demás puede ser imitado por una bonita historia que no durará.",
     "p3": "Y si tu relación incluye miedo, control, humillaciones o violencia, ningún test tiene nada que decir. Habla con un profesional, o llama al <strong>016</strong> (violencia de género, España), disponible 24 horas y que no deja rastro en la factura."
+  },
+  "jsonLd": {
+    "about": "alma gemela"
   }
 }

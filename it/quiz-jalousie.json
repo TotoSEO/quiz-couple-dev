@@ -14,7 +14,7 @@
   "section2": {
     "title": "La gelosia in coppia è un problema?",
     "p1": "La risposta breve: dipende dalla sua intensità e dai comportamenti che produce.",
-    "p2": "Una gelosia lieve, quella che si manifesta come un pizzico quando qualcuno corteggia il partner o come una leggera ansia quando rientra tardi senza avvisare, non è un problema di per sé.",
+    "p2": "Una gelosia lieve, quella che si manifesta come un pizzico quando qualcuno corteggia il partner o come una leggera ansia quando rientra tardi senza avvisare, non è un problema di per sé. Resta nei limiti di ciò che è umano e anche, in una certa misura, di ciò che tiene viva l'attenzione reciproca nella relazione.",
     "healthy": "<strong class=\"text-foreground\">La gelosia resta sana</strong> finché non porta a comportamenti di controllo o sorveglianza. È un'emozione che dice che tieni al tuo partner.",
     "toxic": "<strong class=\"text-foreground\">La gelosia diventa problematica</strong> quando comincia a dettare comportamenti: controllare il telefono, sorvegliare gli spostamenti, interrogare sistematicamente, limitare le relazioni sociali dell'altro.",
     "quote": "Si passa da un'emozione normale a una modalità di controllo che danneggia <a href=\"/it/test-fiducia-coppia/\">la fiducia</a> e lo spazio vitale di ciascuno. La persona gelosa soffre, la persona sorvegliata soffoca. Entrambi perdono."
@@ -37,7 +37,7 @@
   },
   "section4": {
     "title": "Come smettere di essere geloso/a nella relazione?",
-    "p1": "Il primo passo è capire da dove viene la gelosia. Non in teoria generale, ma nel tuo caso specifico.",
+    "p1": "Il primo passo è capire da dove viene la gelosia. Non in teoria generale, ma nel tuo caso specifico. C'è sempre stata, oppure è comparsa in un momento particolare di questa relazione?",
     "p2": "Cosa aiuta concretamente:",
     "pillar1Title": "Lavorare sulla fiducia in sé",
     "pillar1Text": "La gelosia che viene dal sentirsi \"non abbastanza\" non si risolve sorvegliando di più l'altro, si risolve ricostruendo l'autostima. Terapia, attività gratificanti, cerchia sociale fuori dalla coppia.",
@@ -50,7 +50,7 @@
     "title": "Il mio/la mia partner è troppo geloso/a: cosa fare?",
     "intro": "Vivere con una persona molto gelosa è estenuante in modo particolare. Perché non fai nulla di sbagliato, ma devi comunque renderne conto.",
     "pillar1Title": "Non confondere amore e gelosia",
-    "pillar1Text": "La gelosia eccessiva non è una prova d'amore, è un segnale che qualcosa non va in lui/lei e si sta riversando su di te.",
+    "pillar1Text": "La gelosia eccessiva non è una prova d'amore, è un segnale che qualcosa non va in lui/lei e si sta riversando su di te. Questa distinzione cambia il modo di affrontare la situazione.",
     "pillar2Title": "Parlarne direttamente",
     "pillar2Text": "Fuori da un contesto di conflitto. \"Quando controlli dove sono più volte al giorno, mi sento sorvegliato/a e mi pesa\" permette all'altro di ascoltare qualcosa di concreto.",
     "pillar3Title": "Stabilire limiti chiari",
@@ -64,7 +64,7 @@
     "p2": "Lavorare con un professionista non è un'ammissione di fallimento. È spesso il percorso più diretto verso una relazione serena.",
     "dontTitle": "Cosa peggiora la gelosia",
     "dont1Title": "Cercare prove",
-    "dont1Text": "Frugare nel telefono, sorvegliare i social media, controllare le posizioni. Questi comportamenti alimentano l'ansia invece di calmarla.",
+    "dont1Text": "Frugare nel telefono, sorvegliare i social media, controllare le posizioni. Questi comportamenti alimentano l'ansia invece di calmarla. Più si cerca, più si interpreta, e il circolo vizioso si installa.",
     "dont2Title": "Accusare senza fatti",
     "dont2Text": "Trasformare un'interpretazione in un'accusa crea diffidenza da entrambi i lati e allontana il partner invece di rassicurare.",
     "doTitle": "Cosa aiuta ad andare avanti",
@@ -87,6 +87,7 @@
     "faq2Q": "La gelosia in coppia è normale?",
     "faq2A": "Una gelosia lieve e occasionale è del tutto normale e indica che tieni al tuo partner. Diventa problematica quando genera comportamenti di controllo, sorveglianza o restrizione delle libertà dell'altro.",
     "faq3Q": "Cosa fare se il mio/la mia partner è troppo geloso/a?",
-    "faq3A": "Parlarne direttamente fuori da un contesto di conflitto, esprimere l'impatto reale su di te e stabilire limiti chiari. Se i comportamenti persistono, consultare un professionista può essere necessario."
+    "faq3A": "Parlarne direttamente fuori da un contesto di conflitto, esprimere l'impatto reale su di te e stabilire limiti chiari. Se i comportamenti persistono, consultare un professionista può essere necessario.",
+    "about": "gelosia nella coppia"
   }
 }

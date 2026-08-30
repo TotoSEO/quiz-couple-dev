@@ -240,5 +240,8 @@
   "meta": {
     "titre": "Reinheitstest für Paare | Online & kostenlos",
     "description": "Reinheitstest für Paare: 50 Fragen, eine Punktzahl von maximal 899 und die Aufschlüsselung nach Kategorie. Allein oder zu zweit, dann mit dem Partner vergleichen. Gratis, ohne Anmeldung."
+  },
+  "jsonLd": {
+    "about": "Reinheitstest für Paare"
   }
 }

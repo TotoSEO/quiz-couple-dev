@@ -51,5 +51,8 @@
     "a3": "Este quiz se queda en un registro divertido y reflexivo, sin preguntas explícitamente picantes. Se habla de valores, prioridades y decisiones del día a día. Para algo más íntimo, echad un vistazo a nuestros juegos de verdad o reto.",
     "q4": "¿Se puede jugar a este quiz a distancia?",
     "a4": "¡Por supuesto! El formato se presta perfectamente a jugar a distancia, por videollamada o incluso por mensajes. Cada uno lee la pregunta en su pantalla y da su respuesta. Es una actividad ideal para las parejas que viven lejos."
+  },
+  "jsonLd": {
+    "about": "juego qué prefieres en pareja"
   }
 }

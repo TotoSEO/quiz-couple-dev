@@ -87,11 +87,11 @@
       },
       {
         "title": "Los celos y la inseguridad",
-        "text": "A distancia, la imaginación es tu peor enemiga. Cuando esa duda se instala de verdad, la pregunta pasa a ser <a href=\"/es/relacion-a-distancia-me-sigue-queriendo/\">¿me sigue queriendo?</a>."
+        "text": "«¿Por qué no contesta?», «¿Quién es esa chica de su story?». A distancia, la imaginación es tu peor enemiga. La falta de visibilidad inmediata puede convertir un simple retraso en un escenario catastrófico. Cuando esa duda se instala de verdad, la pregunta pasa a ser <a href=\"/es/relacion-a-distancia-me-sigue-queriendo/\">¿me sigue queriendo?</a>."
       },
       {
         "title": "Incertidumbre sobre el futuro",
-        "text": "La ambigüedad es tóxica."
+        "text": "La ambigüedad es tóxica. «¿Cuándo vamos a vivir juntos?». Sin una respuesta clara, la motivación se desmorona."
       },
       {
         "title": "Presión financiera y logística",
@@ -109,10 +109,10 @@
   "section6": {
     "title": "Señales de que tu relación a distancia puede funcionar",
     "signs": [
-      "<strong>Comunicación sincera y regular</strong>",
-      "<strong>Confianza y compromiso mutuos</strong>",
-      "<strong>Proyectos comunes y objetivos claros</strong>",
-      "<strong>Capacidad para manejar la incertidumbre</strong>"
+      "<strong>Comunicación sincera y regular</strong> - Os atrevéis a decir «hoy me siento solo»",
+      "<strong>Confianza y compromiso mutuos</strong> - Construidos con hechos, no solo con palabras",
+      "<strong>Proyectos comunes y objetivos claros</strong> - Tiene que haber una fecha de final, aunque sea difusa",
+      "<strong>Capacidad para manejar la incertidumbre</strong> - Convertís la frustración en ganas de volver a veros"
     ]
   },
   "section7": {
@@ -124,11 +124,11 @@
       },
       {
         "title": "Usar la tecnología intencionalmente",
-        "text": "Priorizar momentos de calidad."
+        "text": "Priorizad los momentos de calidad (una videollamada de verdad, como una cita) antes que la cantidad vacía."
       },
       {
         "title": "Gestionar los momentos difíciles juntos",
-        "text": "La escucha activa vale más que todos los regalos."
+        "text": "Si uno está mal, el otro tiene que estar ahí. La escucha activa vale más que todos los regalos del mundo."
       },
       {
         "title": "Mantener la intimidad",
@@ -181,11 +181,11 @@
         "a": "Haz balance: ¿esa persona te aporta más alegría que tristeza? ¿Vuestros valores de vida se alinean? Si la respuesta es sí, la distancia no es más que un detalle logístico temporal."
       },
       {
-        "q": "¿Cuáles son las señales de solidez?",
+        "q": "¿Cuáles son las 10 señales de que vuestra relación a distancia es sólida?",
         "a": "Si reís juntos, si planificáis el futuro, si hay confianza, y si cada uno tiene su propia vida social plena fuera de la pareja, vais por buen camino."
       },
       {
-        "q": "¿Por qué fracasan?",
+        "q": "¿Por qué fracasan las relaciones a distancia (y cómo evitarlo)?",
         "a": "Suelen fracasar por falta de visión común (sin fecha de fin) o por agotamiento (demasiados viajes, presupuesto insuficiente). Para evitarlo: hablad de vuestros límites y haced un plan financiero y temporal realista."
       }
     ]
@@ -208,5 +208,8 @@
     "sub3Title": "El después y los reencuentros",
     "sub3Text": "<ul><li>Lo primero que hacemos al vernos: eliges tú.</li><li>Sinceramente, ¿cuánto queda para estar en la misma ciudad?</li><li>¿Qué te haría decir que ya no merece la pena?</li><li>¿Qué te da miedo del día en que vivamos juntos?</li><li>¿Qué costumbre de soltero no piensas soltar?</li><li>Si uno tuviera que mudarse por el otro, ¿quién sería?</li></ul>",
     "outro": "Una regla si queréis que funcione: primero se responde, después se pregunta. Si no, uno de los dos acaba en una entrevista de trabajo."
+  },
+  "jsonLd": {
+    "about": "relación a distancia"
   }
 }

@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Test Matrimonio",
     "title": "¿Están listos para casarse? Test de compatibilidad matrimonial",
-    "description": "Casarse es mucho más que una fiesta bonita. Es una decisión de vida que compromete a dos personas durante décadas. Este test de matrimonio está diseñado para ayudarles a verificar que han reflexionado sobre todo esto, juntos, honestamente, antes de decir sí.",
+    "description": "Casarse es mucho más que una fiesta bonita y un vestido blanco. Es una decisión de vida que compromete a dos personas durante décadas, con todo lo que eso implica: las finanzas, los hijos, el día a día, los valores, los desacuerdos. Este test de matrimonio está diseñado para ayudaros a comprobar que habéis pensado en todo eso, juntos, honestamente, antes de decir sí.",
     "duration": "~10 minutos",
     "players": "En pareja",
     "questions": "30 preguntas",
@@ -23,7 +23,7 @@
     "faq1Q": "¿Puede este test predecir el éxito de un matrimonio?",
     "faq1A": "Ningún test puede. El matrimonio es una aventura humana impredecible. Este test ilumina zonas que aún no han explorado y les da un motivo para tener conversaciones importantes.",
     "faq2Q": "¿Saltar preguntas afecta el resultado?",
-    "faq2A": "No. Las preguntas saltadas se excluyen del cálculo. Su puntuación se basa solo en las preguntas respondidas.",
+    "faq2A": "No. Las preguntas saltadas se excluyen del cálculo. Vuestra puntuación se basa solo en las preguntas respondidas. Dicho esto, si saltáis una pregunta porque resulta incómoda, puede que sea justamente de la que más falta os hace hablar.",
     "faq3Q": "¿Es este test gratuito y confidencial?",
     "faq3A": "Sí, 100%. Sin registro, sin email. Sus respuestas no se guardan y permanecen solo en su dispositivo."
   },

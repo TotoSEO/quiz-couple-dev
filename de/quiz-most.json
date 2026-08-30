@@ -23,7 +23,7 @@
     "item2Title": "Ideal, um sich unter Freunden oder als Paar besser kennenzulernen",
     "item2Text": "Ob als Paar, langjährige Freunde oder neue Bekanntschaften, dieses Quiz zeigt, wie andere euch wahrnehmen. Eine spielerische Art, Bindungen zu stärken. Nur zu zweit sind unsere <a href=\"/de/paarspiele/\">Paarspiele</a> für genau dieses Format gemacht.",
     "item3Title": "Fragen für jeden Geschmack",
-    "item3Text": "Unsere Datenbank mit <strong>über 240 \"Wer ist am meisten\"-Fragen</strong> deckt alle Themen ab: von klassischen und familienfreundlichen bis hin zu pikanten Fragen für Erwachsene."
+    "item3Text": "Unsere Datenbank mit <strong>über 240 \"Wer ist am meisten\"-Fragen</strong> deckt alle Themen ab: von klassischen und familienfreundlichen bis hin zu pikanten Fragen für Erwachsene. Jede Runde ist einzigartig, weil 20 Fragen zufällig gezogen werden!"
   },
   "examples": {
     "title": "240+ \"Wer ist am meisten\"-Fragen für stundenlangen Spaß",
@@ -81,5 +81,8 @@
     "title": "Bereit zu entdecken, wer am meisten... ?",
     "text": "Scrollt zurück nach oben, um euer kostenloses Quiz mit euren Freunden zu starten!",
     "button": "Quiz jetzt starten"
+  },
+  "jsonLd": {
+    "about": "Wer ist am meisten Spiel"
   }
 }

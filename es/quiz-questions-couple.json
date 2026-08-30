@@ -172,7 +172,7 @@
   "liste": {
     "connaissance": {
       "titre": "Preguntas para conoceros mejor",
-      "intro": "Estas van por debajo de lo evidente. Creemos conocer a alguien porque conocemos sus costumbres; estas veinticuatro preguntas se interesan por lo que las fabricó.",
+      "intro": "Estas van por debajo de lo evidente. <a href=\"/es/blog/preguntas-para-conoceros-mejor/\">Creemos conocer a alguien porque conocemos sus costumbres</a>; estas veinticuatro preguntas se interesan por lo que las fabricó.",
       "questions": [
         "¿Qué decisión de tu pasado te cambió más, y te dabas cuenta en ese momento?",
         "¿Qué te transmitieron tus padres sin decírtelo nunca de forma explícita?",

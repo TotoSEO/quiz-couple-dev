@@ -116,5 +116,8 @@
     "p1": "Une âme sœur ne se reconnaît pas à l'intensité du début, mais à ce qu'il vous reste après. Après une dispute, après une épreuve, après trois ans.",
     "p2": "Le seul signe qui ne trompe pas est celui qu'on regarde le moins : est-ce que cette relation vous rend plus vous-même, ou est-ce qu'elle vous a rétréci ? Tout le reste peut être imité par une belle histoire qui ne durera pas.",
     "p3": "Et si votre relation comporte de la peur, du contrôle, des humiliations ou des violences, aucun test n'a son mot à dire. Parlez-en à un professionnel, ou au 3919, gratuit et anonyme."
+  },
+  "jsonLd": {
+    "about": "âme sœur"
   }
 }

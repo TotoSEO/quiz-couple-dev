@@ -530,5 +530,8 @@
     "faq3A": "Oui ! Chaque session tire 20 questions aléatoires parmi 80. Vous pouvez rejouer autant de fois que vous voulez pour découvrir de nouvelles questions.",
     "faq4Q": "Nos réponses sont-elles conservées ?",
     "faq4A": "Les sessions expirent automatiquement après 30 minutes. Aucune donnée personnelle n'est stockée de manière permanente."
+  },
+  "jsonLd": {
+    "about": "quiz de couple pour ados"
   }
 }

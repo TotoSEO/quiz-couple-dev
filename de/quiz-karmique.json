@@ -116,6 +116,7 @@
   },
   "jsonLd": {
     "quizName": "Test karmische Beziehung",
-    "quizDescription": "Gratis Test mit 20 Fragen, um deine Art von Verbindung zu bestimmen: karmische Beziehung, Spiegelverbindung oder ruhige Verbindung."
+    "quizDescription": "Gratis Test mit 20 Fragen, um deine Art von Verbindung zu bestimmen: karmische Beziehung, Spiegelverbindung oder ruhige Verbindung.",
+    "about": "karmische Beziehung"
   }
 }

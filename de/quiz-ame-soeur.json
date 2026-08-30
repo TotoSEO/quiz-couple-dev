@@ -34,7 +34,7 @@
   },
   "section3": {
     "title": "Gibt es das, oder ist es eine Erfindung?",
-    "p1": "Die Idee stammt von Platon, aus dem <em>Symposion</em>. Die Menschen waren Doppelwesen, Zeus hat sie in zwei Teile geschnitten, und seither sucht jeder seine Hälfte. Es ist ein Mythos, erzählt von einer Komödienfigur, und er hat vierundzwanzig Jahrhunderte überdauert, um in den Profiltexten von Dating-Apps zu landen.",
+    "p1": "Die Idee stammt von Platon, aus dem <em>Symposion</em>. Die Menschen waren Doppelwesen, Zeus hat sie in zwei Teile geschnitten, und seither sucht jeder seine Hälfte. Es ist ein Mythos, erzählt von einer Komödienfigur, und er hat vierundzwanzig Jahrhunderte überdauert, um in den Profiltexten von Dating-Apps zu landen. Vierundzwanzig Jahrhunderte später bleiben davon vor allem die Sätze, die man sich auf die Rückseite von Karten schreibt, oft dem falschen Autor zugeschrieben.",
     "p2": "Die eigentliche Frage lautet also nicht „gibt es das\", sondern „was ändert es, daran zu glauben\".",
     "p3": "Und da wird die Forschung interessant, besonders die Arbeiten von C. R. Knee. Zwei Überzeugungen stehen einander gegenüber. Das <strong>Schicksal</strong>: Menschen passen zueinander oder nicht, und man sieht es sofort. Die <strong>Entwicklung</strong>: Eine Beziehung wird gebaut, und Schwierigkeiten gehören zur Arbeit. Das Ergebnis: Wer an das Schicksal glaubt, verkraftet den ersten echten Konflikt schlecht, weil er zum Beweis wird, dass man sich in der Person geirrt hat. Die anderen sehen einfach ein Problem, das zu lösen ist.",
     "p4": "Anders gesagt: Die Suche nach der Seelenverwandtschaft kann die Beziehung beschädigen, die man schon hat. Deshalb misst dieser Test kein Schicksal: Er schaut, was deine Beziehung heute aus dir macht."
@@ -116,5 +116,8 @@
     "p1": "Eine Seelenverwandtschaft erkennt man nicht an der Intensität des Anfangs, sondern an dem, was danach bleibt. Nach einem Streit, nach einer Prüfung, nach drei Jahren.",
     "p2": "Das eine Anzeichen, das nicht täuscht, ist das, auf das am wenigsten geschaut wird: Macht diese Beziehung dich mehr zu dir selbst, oder hat sie dich kleiner gemacht? Alles andere lässt sich von einer schönen Geschichte nachahmen, die nicht halten wird.",
     "p3": "Und wenn deine Beziehung Angst, Kontrolle, Demütigungen oder Gewalt enthält, hat kein Test etwas mitzureden. Sprich mit einer Fachperson, oder ruf das <strong>Hilfetelefon</strong> unter <strong>08000 116 016</strong> an (Deutschland, kostenlos, rund um die Uhr)."
+  },
+  "jsonLd": {
+    "about": "Seelenverwandtschaft"
   }
 }

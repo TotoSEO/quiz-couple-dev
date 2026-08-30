@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Ehe-Test",
     "title": "Sind Sie bereit zu heiraten? Ehe-Kompatibilitätstest",
-    "description": "Heiraten ist viel mehr als ein schönes Fest. Es ist eine Lebensentscheidung, die zwei Menschen für Jahrzehnte bindet. Dieser Ehe-Test soll Ihnen helfen zu überprüfen, ob Sie wirklich über alles nachgedacht haben, gemeinsam, ehrlich, bevor Sie Ja sagen.",
+    "description": "Heiraten ist viel mehr als ein schönes Fest und ein weißes Kleid. Es ist eine Lebensentscheidung, die zwei Menschen für Jahrzehnte bindet, mit allem, was dazugehört: Finanzen, Kinder, Alltag, Werte, Meinungsverschiedenheiten. Dieser Ehe-Test soll euch helfen zu überprüfen, ob ihr über all das nachgedacht habt, gemeinsam, ehrlich, bevor ihr Ja sagt.",
     "duration": "~10 Minuten",
     "players": "Zu zweit",
     "questions": "30 Fragen",
@@ -23,7 +23,7 @@
     "faq1Q": "Kann dieser Test den Erfolg einer Ehe vorhersagen?",
     "faq1A": "Kein Test kann das. Die Ehe ist ein unvorhersehbares menschliches Abenteuer. Dieser Test beleuchtet blinde Flecken und gibt Ihnen einen Grund für wichtige Gespräche.",
     "faq2Q": "Beeinflusst das Überspringen von Fragen das Ergebnis?",
-    "faq2A": "Nein. Übersprungene Fragen werden aus der Berechnung ausgeschlossen. Ihre Punktzahl basiert nur auf beantworteten Fragen.",
+    "faq2A": "Nein. Übersprungene Fragen werden aus der Berechnung ausgeschlossen. Eure Punktzahl beruht nur auf den beantworteten Fragen. Wenn ihr eine Frage aber überspringt, weil sie unangenehm ist, dann ist es womöglich genau die, über die ihr am dringendsten reden solltet.",
     "faq3Q": "Ist dieser Test kostenlos und vertraulich?",
     "faq3A": "Ja, 100%. Keine Registrierung, keine E-Mail erforderlich. Ihre Antworten werden nicht gespeichert."
   },

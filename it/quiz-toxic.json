@@ -57,31 +57,31 @@
     "pillar2Title": "2. Il controllo mascherato",
     "pillar2Text": "Il controllo non assomiglia sempre a degli ordini. Può prendere la forma di consigli insistenti, colpevolizzazione (<em>\"Se mi amassi davvero, non faresti questo\"</em>) o gestione finanziaria rigida.",
     "pillar3Title": "3. La colpa invertita",
-    "pillar3Text": "In una relazione sana, ciascuno si assume il 50% della responsabilità. In una relazione tossica, porti il 100% della colpa.",
+    "pillar3Text": "In una relazione sana, ciascuno si assume il 50% della responsabilità. In una relazione tossica, porti il 100% della colpa. L'altro si mette sistematicamente nei panni della vittima o del procuratore, mai in quelli di un partner responsabile.",
     "pillar4Title": "4. L'imprevedibilità",
     "pillar4Text": "Non sai mai cosa aspettarti. Questa insicurezza permanente mantiene il tuo sistema nervoso in stato di allerta (stress cronico), il che spiega la tua stanchezza fisica e mentale."
   },
   "section6": {
     "title": "Il mio test indica una tossicità elevata: cosa fare?",
-    "p1": "Innanzitutto, sappi che questo test è puramente indicativo. Non è in alcun modo un risultato esatto e preciso, e non deve sostituire il parere di un professionista.",
+    "p1": "Innanzitutto, sappi che questo test è puramente indicativo. Non è in alcun modo un risultato esatto e preciso, e non deve sostituire il parere di un professionista. Se ritieni che la tua relazione sia davvero tossica, o addirittura pericolosa, contatta veri specialisti.",
     "p2": "Prendere coscienza della situazione è il passo più difficile, e lo hai appena fatto. Un punteggio alto non significa che devi fare le valigie immediatamente (salvo in caso di pericolo fisico immediato), ma significa che lo status quo non è più un'opzione.",
     "dontTitle": "Cosa NON fare",
     "dont1Title": "Cercare di \"salvare\" l'altro",
     "dont1Text": "Non puoi essere il terapeuta del tuo partner. La tossicità è un modo di funzionare che solo l'individuo interessato può decidere di cambiare.",
     "dont2Title": "Confrontare brutalmente con questo test",
-    "dont2Text": "Mostrare questo test a un partner tossico rischia di provocare una crisi. Tieni questo risultato per te, come una bussola interiore.",
+    "dont2Text": "Mostrare questo test a un partner tossico rischia di provocare una crisi (<em>\"Questo test non ha senso\"</em>, <em>\"La tossica sei tu\"</em>). Tieni questo risultato per te, come una bussola interiore.",
     "doTitle": "Cosa fare (Primi passi di lucidità)",
     "do1Title": "Riconnettiti con la realtà",
     "do1Text": "Annota i fatti. Tieni un diario oggettivo delle discussioni e delle parole. Rileggere ciò che è successo \"a freddo\" aiuta a contrastare il dubbio.",
     "do2Title": "Rompi l'isolamento",
     "do2Text": "Parla con una persona di fiducia o, idealmente, con un professionista. Dare un nome alle cose ad alta voce le rende reali e diminuisce il loro potere.",
     "do3Title": "Fissa un limite di prova",
-    "do3Text": "Metti un limite semplice ma fermo a un comportamento inaccettabile. Osserva la reazione. Un partner sano si scuserà e si adatterà. Un partner tossico escaierà il conflitto."
+    "do3Text": "Metti un limite semplice ma fermo a un comportamento inaccettabile (es: <em>\"Non accetto più che tu mi urli contro, se lo fai esco dalla stanza\"</em>). Osserva la reazione. Un partner sano si scuserà e si adatterà. Un partner tossico farà salire il conflitto."
   },
   "section7": {
     "title": "Da ricordare: Fidati della tua intuizione",
     "p1": "Questo test non è un verdetto di tribunale, è uno specchio. Se hai risposto a queste domande con il cuore stretto, il tuo corpo sa già ciò che la tua mente si rifiuta di ammettere.",
-    "p2": "Una relazione amorosa deve essere un porto sicuro, non un campo di battaglia. Hai il diritto di essere rispettato/a, ascoltato/a e di sentirti emotivamente al sicuro.",
+    "p2": "Una relazione amorosa deve essere un porto sicuro, non un campo di battaglia. Hai il diritto di essere rispettato/a, ascoltato/a e di sentirti emotivamente al sicuro. La confusione che senti non è una prova della tua debolezza, è il segno che stai cercando di adattarti a una situazione anormale.",
     "p3": "Se questo risultato ti preoccupa, non portare questo peso da solo/a."
   },
   "jsonLd": {
@@ -90,8 +90,9 @@
     "faq1Q": "Qual è la differenza tra una relazione difficile e una tossica?",
     "faq1A": "In una coppia sana in crisi, il conflitto mira a risolvere un problema. In una coppia tossica, il conflitto è un modo di funzionare per prendere il potere.",
     "faq2Q": "Perché non si vede la tossicità quando ci sei dentro?",
-    "faq2A": "Tre ragioni principali: assuefazione progressiva, rinforzo intermittente e empatia eccessiva usata contro di sé.",
+    "faq2A": "Tre ragioni principali: assuefazione progressiva (effetto rana bollita), rinforzo intermittente (momenti di luna di miele) ed empatia eccessiva usata contro di sé.",
     "faq3Q": "Cosa fare se il test indica una tossicità elevata?",
-    "faq3A": "Riconnettiti con la realtà annotando i fatti, rompi l'isolamento parlando con qualcuno di fiducia e fissa un limite di prova su un comportamento inaccettabile."
+    "faq3A": "Riconnettiti con la realtà annotando i fatti, rompi l'isolamento parlando con qualcuno di fiducia e fissa un limite di prova su un comportamento inaccettabile.",
+    "about": "relazione tossica"
   }
 }

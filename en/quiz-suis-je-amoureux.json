@@ -122,6 +122,7 @@
   },
   "jsonLd": {
     "quizName": "Am I in love test",
-    "quizDescription": "Free 20-question test to find out whether you are in love or simply attracted to this person."
+    "quizDescription": "Free 20-question test to find out whether you are in love or simply attracted to this person.",
+    "about": "romantic love"
   }
 }

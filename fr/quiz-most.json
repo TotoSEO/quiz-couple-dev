@@ -81,5 +81,8 @@
     "title": "Prêts à découvrir qui est le plus... ?",
     "text": "Remontez en haut de la page pour commencer votre quiz gratuit avec vos amis !",
     "button": "Commencer le quiz maintenant"
+  },
+  "jsonLd": {
+    "about": "jeu qui est le plus"
   }
 }

@@ -211,5 +211,8 @@
         "a": "Ja, dieses Quiz ist für zwei Personen gleichzeitig konzipiert. Ihr müsst zusammen sein, da einer rät und der andere die Antwort bestätigt. Diese Echtzeit-Interaktion macht das Spiel so unterhaltsam und bereichernd."
       }
     ]
+  },
+  "jsonLd": {
+    "about": "Quiz über den Partner"
   }
 }

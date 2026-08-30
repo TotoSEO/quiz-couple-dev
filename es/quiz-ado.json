@@ -458,7 +458,7 @@
     "playAgain": "Jugar de nuevo con otras preguntas",
     "r1": {
       "title": "Vuestra relación aún busca su camino",
-      "text": "No es un veredicto. Pero vuestras respuestas muestran que algo no acaba de encajar. Tomad tiempo para hablar de verdad, sin móvil, sin grupo.",
+      "text": "No es un veredicto. Pero vuestras respuestas muestran que algo no acaba de encajar, quizá una comunicación que todavía no funciona, expectativas distintas, o una relación que acaba de empezar. Tomaos tiempo para hablar de verdad, sin móvil, sin grupo.",
       "adviceTitle": "Nuestro consejo",
       "advice": "Intentad tener una conversación real, {{name1}} y {{name2}}, sin teléfono, sin presión. Preguntaos: ¿qué esperáis realmente el uno del otro?"
     },
@@ -505,7 +505,7 @@
     "s4Title": "La distancia cuando eres adolescente: ¿mito o realidad?",
     "s4P1": "Es una de las preguntas más frecuentes. Universidad, mudanza, instituto diferente... la distancia llega a menudo antes de lo que piensas. Gestionar una <a href=\"/es/quiz-pareja-distancia/\" class=\"text-primary underline\">pareja a distancia</a> puede funcionar. Pero requiere mucho más esfuerzo que una relación \"normal\".",
     "s4P2": "Lo que más ayuda: videollamadas regulares, planes en común, comunicación clara sobre lo que esperáis el uno del otro, y honestidad total sobre cómo vivís la distancia.",
-    "s4Tip": "Si sabéis que vais a estar separados pronto, hablad de ello ahora. No de forma dramática, solo una conversación honesta sobre lo que queréis los dos.",
+    "s4Tip": "Si sabéis que vais a estar separados pronto, hablad de ello ahora. No de forma dramática, solo una conversación honesta sobre lo que queréis los dos. Es 100 veces más sano que esperar a que llegue y aguantar.",
     "tipLabel": "Consejo",
     "s5Title": "Celos en pareja adolescente: ¿normal o no?",
     "s5P1": "Un poco de celos es humano. Nadie te dirá lo contrario. Pero hay una diferencia enorme entre \"sentí una pizca de celos\" y \"le reviso el móvil / le obligo a cortar con sus amigos\".",
@@ -530,5 +530,8 @@
     "faq3A": "¡Sí! Cada sesión selecciona 20 preguntas aleatorias de 80. Podéis volver a jugar tantas veces como queráis.",
     "faq4Q": "¿Se guardan nuestras respuestas?",
     "faq4A": "Las sesiones expiran automáticamente después de 30 minutos. No se almacenan datos personales de forma permanente."
+  },
+  "jsonLd": {
+    "about": "quiz de pareja para adolescentes"
   }
 }

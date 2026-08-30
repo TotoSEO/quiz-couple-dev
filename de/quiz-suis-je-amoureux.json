@@ -122,6 +122,7 @@
   },
   "jsonLd": {
     "quizName": "Bin ich verliebt Test",
-    "quizDescription": "Gratis Test mit 20 Fragen, um herauszufinden, ob du verliebt oder nur angezogen bist."
+    "quizDescription": "Gratis Test mit 20 Fragen, um herauszufinden, ob du verliebt oder nur angezogen bist.",
+    "about": "romantische Liebe"
   }
 }

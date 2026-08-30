@@ -23,7 +23,7 @@
     "item2Title": "Ideale per conoscersi meglio tra amici o in coppia",
     "item2Text": "Che siate in coppia, amici di lunga data o nuove conoscenze, questo quiz rivela come gli altri vi percepiscono. Un modo ludico per rafforzare i legami. Solo in due, i nostri <a href=\"/it/giochi-di-coppia/\">giochi di coppia</a> sono pensati per questo formato.",
     "item3Title": "Domande per tutti i gusti",
-    "item3Text": "Il nostro database di <strong>oltre 240 domande \"Chi è il più\"</strong> copre tutti i temi: dalle domande classiche e familiari a quelle più piccanti per adulti."
+    "item3Text": "Il nostro database di <strong>oltre 240 domande \"Chi è il più\"</strong> copre tutti i temi: dalle domande classiche e familiari a quelle più piccanti per adulti. Ogni partita è unica grazie all'estrazione casuale di 20 domande!"
   },
   "examples": {
     "title": "240+ domande \"Chi è il più\" per ore di divertimento",
@@ -81,5 +81,8 @@
     "title": "Pronti a scoprire chi è il più... ?",
     "text": "Tornate in cima alla pagina per iniziare il vostro quiz gratuito con i vostri amici!",
     "button": "Inizia il quiz ora"
+  },
+  "jsonLd": {
+    "about": "gioco chi è il più"
   }
 }

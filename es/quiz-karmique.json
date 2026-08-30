@@ -116,6 +116,7 @@
   },
   "jsonLd": {
     "quizName": "Test de relación kármica",
-    "quizDescription": "Test gratuito de 20 preguntas para identificar tu tipo de vínculo: relación kármica, vínculo espejo o vínculo sereno."
+    "quizDescription": "Test gratuito de 20 preguntas para identificar tu tipo de vínculo: relación kármica, vínculo espejo o vínculo sereno.",
+    "about": "relación kármica"
   }
 }

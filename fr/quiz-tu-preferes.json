@@ -51,5 +51,8 @@
     "a3": "Ce quiz reste dans un registre fun et réflexif, sans questions explicitement coquines. On y parle valeurs, priorités et arbitrages du quotidien. Pour une version plus intime, allez plutôt voir nos jeux d'action ou vérité.",
     "q4": "Peut-on jouer à ce quiz à distance ?",
     "a4": "Tout à fait ! Le format se prête parfaitement au jeu à distance, en visio ou même par messages. Chacun lit la question sur son écran et donne sa réponse. C'est d'ailleurs une activité idéale pour les couples qui vivent loin l'un de l'autre."
+  },
+  "jsonLd": {
+    "about": "jeu tu préfères en couple"
   }
 }

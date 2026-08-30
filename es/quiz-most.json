@@ -23,7 +23,7 @@
     "item2Title": "Ideal para conocerse mejor entre amigos o en pareja",
     "item2Text": "Ya seáis pareja, amigos de toda la vida o nuevos conocidos, este quiz revela cómo os perciben los demás. Es una forma lúdica de fortalecer los vínculos. Solo para dos, nuestros <a href=\"/es/juegos-para-parejas/\">juegos para parejas</a> están pensados para ese formato.",
     "item3Title": "Preguntas para todos los gustos",
-    "item3Text": "Nuestra base de <strong>más de 240 preguntas \"Quién es el más\"</strong> cubre todos los temas: desde preguntas clásicas y familiares hasta las más picantes para adultos."
+    "item3Text": "Nuestra base de <strong>más de 240 preguntas \"Quién es el más\"</strong> cubre todos los temas: desde preguntas clásicas y familiares hasta las más picantes para adultos. ¡Cada partida es única gracias al sorteo aleatorio de 20 preguntas!"
   },
   "examples": {
     "title": "240+ preguntas \"Quién es el más\" para horas de diversión",
@@ -81,5 +81,8 @@
     "title": "¿Listos para descubrir quién es el más... ?",
     "text": "¡Volved arriba para empezar vuestro quiz gratis con vuestros amigos!",
     "button": "Empezar el quiz ahora"
+  },
+  "jsonLd": {
+    "about": "juego quién es el más"
   }
 }

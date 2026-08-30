@@ -222,7 +222,7 @@
     "image": (typeof featuredImage !== 'undefined' && featuredImage) ? baseUrl + featuredImage : baseUrl + '/og-image.webp',
     "author": { "@type": "Organization", "name": "Quiz Couple", "url": baseUrl },
     "publisher": { "@type": "Organization", "name": "Quiz Couple", "url": baseUrl, "logo": { "@type": "ImageObject", "url": baseUrl + "/apple-touch-icon.png" } },
-    "about": { "@type": "Thing", "name": "couple" },
+    "about": { "@type": "Thing", "name": t(ns + ':jsonLd.about', t('common:jsonLd.aboutDefaut', 'couple')) },
     "additionalProperty": [
       { "@type": "PropertyValue", "name": "totalQuestions", "value": totalQ },
       { "@type": "PropertyValue", "name": "audience", "value": "couples" }

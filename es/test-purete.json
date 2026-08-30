@@ -240,5 +240,8 @@
   "meta": {
     "titre": "Test de pureza para parejas | Online y gratis",
     "description": "Test de pureza en pareja: 50 preguntas, puntuación sobre 899 y el detalle por categoría. Hazlo solo o en pareja y compara con tu pareja. Gratis, sin registro."
+  },
+  "jsonLd": {
+    "about": "test de pureza en pareja"
   }
 }

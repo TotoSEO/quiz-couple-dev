@@ -732,6 +732,10 @@ async function generatePage(routeKey, lang) {
       '@type': 'WebApplication',
       name: title,
       url: canonical,
+      // La langue etait declaree sur l'accueil et dans le balisage Quiz de
+      // chaque page, mais pas ici : les quarante-deux pages jouables
+      // annoncaient une application sans langue, dans les cinq versions.
+      inLanguage: lang,
       applicationCategory: 'LifestyleApplication',
       operatingSystem: 'Web',
       // isAccessibleForFree double la déclaration de prix : les deux

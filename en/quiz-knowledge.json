@@ -211,5 +211,8 @@
         "a": "Yes, this quiz is designed to be played by two people simultaneously. You need to be together since one guesses and the other validates the answer. This real-time interaction is what makes the game fun and enriching."
       }
     ]
+  },
+  "jsonLd": {
+    "about": "couple knowledge quiz"
   }
 }

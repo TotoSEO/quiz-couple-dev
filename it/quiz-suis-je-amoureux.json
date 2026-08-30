@@ -122,6 +122,7 @@
   },
   "jsonLd": {
     "quizName": "Test sono innamorato",
-    "quizDescription": "Test gratuito di 20 domande per sapere se sei innamorato o semplicemente attratto da questa persona."
+    "quizDescription": "Test gratuito di 20 domande per sapere se sei innamorato o semplicemente attratto da questa persona.",
+    "about": "amore romantico"
   }
 }

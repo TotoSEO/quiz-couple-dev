@@ -34,7 +34,7 @@
   },
   "section3": {
     "title": "Esiste, o è un'invenzione?",
-    "p1": "L'idea viene da Platone, nel <em>Simposio</em>. Gli esseri umani erano esseri doppi, Zeus li ha tagliati in due, e da allora ognuno cerca la propria metà. È un mito, raccontato da un personaggio comico, e ha attraversato ventiquattro secoli per finire nelle biografie delle app di incontri.",
+    "p1": "L'idea viene da Platone, nel <em>Simposio</em>. Gli esseri umani erano esseri doppi, Zeus li ha tagliati in due, e da allora ognuno cerca la propria metà. È un mito, raccontato da un personaggio comico, e ha attraversato ventiquattro secoli per finire nelle biografie delle app di incontri. Ventiquattro secoli dopo, quello che se ne ricava sono soprattutto le frasi che ci si scrive dietro ai biglietti, spesso attribuite all'autore sbagliato.",
     "p2": "La vera domanda quindi non è «esiste davvero», ma «che cosa cambia crederci».",
     "p3": "E lì la ricerca diventa interessante, in particolare i lavori di C. R. Knee. Due convinzioni si oppongono. Il <strong>destino</strong>: le persone si convengono o no, e si vede subito. La <strong>costruzione</strong>: una relazione si fabbrica, e le difficoltà fanno parte del lavoro. Risultato: chi crede nel destino incassa male il primo vero conflitto, perché diventa la prova di aver sbagliato persona. Gli altri ci vedono solo un problema da risolvere.",
     "p4": "In altre parole, cercare la propria anima gemella può rovinare la relazione che si ha già. Per questo il test non misura nessun destino: guarda che cosa la tua relazione fa di te, oggi."
@@ -116,5 +116,8 @@
     "p1": "Un'anima gemella non si riconosce dall'intensità dell'inizio, ma da quello che ti resta dopo. Dopo un litigio, dopo una prova, dopo tre anni.",
     "p2": "L'unico segnale che non inganna è quello che si guarda di meno: questa relazione ti rende più te stesso(a), oppure ti ha rimpicciolito(a)? Tutto il resto può essere imitato da una bella storia che non durerà.",
     "p3": "E se la tua relazione comporta paura, controllo, umiliazioni o violenze, nessun test ha voce in capitolo. Parlane con un professionista, oppure chiama il <strong>1522</strong> (antiviolenza, Italia), attivo 24 ore su 24 e gratuito."
+  },
+  "jsonLd": {
+    "about": "anima gemella"
   }
 }
