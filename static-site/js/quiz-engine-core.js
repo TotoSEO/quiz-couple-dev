@@ -1479,6 +1479,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
+    { type: 'test', key: 'personnalite', icon: '💘', route: 'testPersonnalite' },
     { type: 'test', key: 'attachement', icon: '🔗', route: 'testAttachement' },
     { type: 'test', key: 'confiance', icon: '🤝', route: 'testConfiance' },
     { type: 'quiz', key: 'amoureux', icon: '❤️', route: 'quizAmoureux' },
@@ -1563,8 +1564,9 @@ var QuizEngine = (function() {
     'crush':           ['testSecret', 'testSuisJeAmoureux', 'testAmourAmitie'],
     'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
     'distance-aime':   ['testDistance', 'testSecret', 'testAttachement'],
-    'langage-amour':   ['testAttachement', 'testCouple', 'quizKnowledge'],
-    'attachement':     ['testLangageAmour', 'testConfiance', 'testSuisJeAmoureux'],
+    'personnalite':    ['testLangageAmour', 'testAttachement', 'testCouple'],
+    'langage-amour':   ['testPersonnalite', 'testAttachement', 'testCouple'],
+    'attachement':     ['testPersonnalite', 'testLangageAmour', 'testConfiance'],
 
     // ── Tests à lecture symbolique ──────────────────────────────────────
     // On enchaîne sur l'autre lecture symbolique avant de revenir au concret.

@@ -44,8 +44,9 @@
     testEx:           ['testDependance', 'testAttachement', 'testSuisJeAmoureux', 'testToxic'],
     testChargeMentale:['testCoupleSain', 'testParentalite', 'testEmmenager', 'testCouple'],
     quizRencontre:    ['testAmourAmitie', 'questionsCouple', 'quizAmoureux', 'testSuisJeAmoureux'],
-    testLangageAmour: ['testAttachement', 'testCouple', 'quizKnowledge', 'testCoupleSain'],
-    testAttachement:  ['testDependance', 'testLangageAmour', 'testConfiance', 'testSuisJeAmoureux'],
+    testPersonnalite: ['testLangageAmour', 'testAttachement', 'testCouple', 'testCoupleSain'],
+    testLangageAmour: ['testPersonnalite', 'testAttachement', 'testCouple', 'quizKnowledge'],
+    testAttachement:  ['testPersonnalite', 'testDependance', 'testLangageAmour', 'testConfiance'],
 
     // Lecture symbolique
     testAmeSoeur:     ['testKarmique', 'testCouple', 'testCompatibilite', 'testSuisJeAmoureux'],

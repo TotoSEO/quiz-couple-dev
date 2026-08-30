@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Gratis • Sin registro • 3 min",
+    "title": "Personalidad amorosa: ¿cómo eres en pareja?",
+    "titleHighlight": "Personalidad amorosa",
+    "jumpBtn": "Ir al test",
+    "description": "15 preguntas para saber qué lugar ocupas en el amor: el de quien quiere con fuerza, el de quien cuida, el de quien hace reír, o el de quien construye.",
+    "intro1": "No queremos todos de la misma manera, y se nota desde las primeras semanas. Unos dicen «te quiero» a los diez días, otros lo demuestran seis meses antes de decirlo. Este test le pone nombre a tu manera."
+  },
+  "quiz": {
+    "sectionTitle": "Haz el test de personalidad amorosa"
+  },
+  "seo": {
+    "s1": {
+      "title": "¿Qué es la personalidad amorosa?",
+      "p1": "Tu personalidad amorosa es tu manera de querer cuando no lo piensas. No lo que opinas del amor, no lo que dirías en una conversación: lo que haces de forma espontánea cuando alguien te importa. Por ejemplo, tu pareja vuelve a casa después de un día horrible. Uno la abraza y se traga el día con ella. Otro pone una serie y pide sushi. El tercero hace preguntas y busca qué hacer. Ninguno quiere más que los demás, quieren de otra manera.",
+      "p2": "Es un dato bastante estable, al menos a lo largo de varios años. Puedes cambiar de pareja, de ciudad y de opinión sobre muchas cosas, y encontrarte con los mismos reflejos en la historia siguiente. La mayoría se da cuenta el día en que un ex le hace exactamente el mismo reproche que el anterior.",
+      "p3": "Saber cuál es la tuya sirve para dos cosas bastante concretas. Explica por qué algunas relaciones te agotaron cuando sobre el papel todo iba bien. Y te da las palabras para decirle a alguien lo que necesitas, en lugar de esperar que lo adivine."
+    },
+    "s2": {
+      "title": "Las cuatro maneras de querer",
+      "intro": "El test reparte tus respuestas entre cuatro maneras de querer. Nadie tiene solo una: te vas a reconocer en dos, quizá en tres, con una que destaca más. Esa es la que te anuncia el resultado, con el detalle de las cuatro barras.",
+      "pillar1Title": "El Apasionado",
+      "pillar1Text": "La intensidad primero. Quiere rápido, fuerte, y necesita sentirlo: las grandes declaraciones, las noches en las que el resto del mundo desaparece, los reencuentros en la estación. Su fuerza es hacer que una historia esté viva. Su dificultad empieza cuando llega la calma y la confunde con el final.",
+      "pillar2Title": "El Entregado",
+      "pillar2Text": "El amor se demuestra. Detecta lo que la otra persona necesita antes de que se lo pidan, echa una mano, protege. Con él uno se siente a salvo. La trampa es conocida: de tanto mirar al otro, nunca dice lo que espera, y lo espera igualmente.",
+      "pillar3Title": "El Cómplice",
+      "pillar3Text": "El amor como una muy buena amistad. Bromas, motes ridículos, alguien con quien hasta un trayecto en coche es agradable. Ligero de llevar, pocas veces pesado. Su límite se ve cuando llega un tema serio: la broma que relaja es también la que esquiva la conversación.",
+      "pillar4Title": "El Constructor",
+      "pillar4Text": "El amor como un proyecto. Mira si las dos vidas pueden encajar: el ritmo, el dinero, los hijos, el sitio donde vivir. No es frío, es una manera de tomarse la historia en serio. Lo que a veces le falta es disfrutar de lo que pasa antes de comprobar que puede durar.",
+      "tip": "Un perfil no es una casilla. Si tus dos primeras barras están cerca, lee los dos textos: mucha gente es una mezcla, y suele ser la mezcla lo que mejor la describe."
+    },
+    "s3": {
+      "title": "De dónde viene tu manera de querer",
+      "p1": "La idea de que existen varias maneras de querer, igual de válidas, no es de ayer. El sociólogo canadiense John Alan Lee propuso ya en 1973 una clasificación de los estilos amorosos que sigue sirviendo de referencia: el amor pasión, el amor entrega, el amor juego, el amor razón, y combinaciones entre ellos. Los cuatro perfiles de este test se inspiran en ella, sin el vocabulario académico.",
+      "p2": "Tu manera de querer se fabrica pronto, con lo que viste en casa, lo que te enseñaron tus primeras historias, y lo que funcionó o no. Un adolescente al que dejaron de golpe puede convertirse en un adulto que lo comprueba todo antes de comprometerse. Quien creció en una familia donde se decían pocas cosas puede pasarse la vida demostrando el amor con hechos.",
+      "p3": "Aun así se mueve, más despacio de lo que se cree pero se mueve. Una relación larga, una terapia, una ruptura que pone los contadores a cero: quien repite este test cinco años después no siempre cae en el mismo perfil.",
+      "quote": "Ninguna de estas cuatro maneras de querer vale más que las otras. Son los malentendidos entre dos maneras distintas los que estropean las parejas, no las maneras en sí."
+    },
+    "s4": {
+      "title": "Personalidad, lenguaje, apego: tres referencias que no hay que confundir",
+      "intro": "Tres tests aparecen juntos a menudo y miden tres cosas distintas. Así se distinguen.",
+      "p1": "Los tres se complementan. Tu personalidad amorosa dice qué lugar ocupas, <a href=\"/es/test-lenguaje-amor-pareja/\">la forma en que demuestras ese amor en el día a día</a> dice por qué gestos pasa, y <a href=\"/es/test-estilo-apego/\">lo que se dispara en ti cuando el otro se aleja</a> dice hasta qué punto te sientes a salvo. Una pareja que ha hecho los tres tiene conversación para rato."
+    },
+    "tableHeaders": [
+      "El test",
+      "A qué responde",
+      "Para qué te sirve"
+    ],
+    "tableRows": [
+      [
+        "La personalidad amorosa",
+        "Qué lugar ocupas espontáneamente en una historia",
+        "Entender por qué vuelven siempre los mismos reproches"
+      ],
+      [
+        "<a href=\"/es/test-lenguaje-amor-pareja/\">El lenguaje del amor</a>",
+        "Con qué gestos das tu amor, y con cuáles lo recibes",
+        "Dejar de ofrecer lo que el otro no necesita"
+      ],
+      [
+        "<a href=\"/es/test-estilo-apego/\">El estilo de apego</a>",
+        "Qué pasa dentro de ti cuando el otro se aleja",
+        "Calmar un miedo que salta sin motivo"
+      ]
+    ],
+    "s5": {
+      "title": "Hacer el test en pareja, y comparar",
+      "p1": "El test se hace solo, una persona cada vez. Lo más interesante viene después: hacedlo cada uno por vuestro lado, sin mirar las respuestas del otro, y comparad luego las cuatro barras.",
+      "p2": "Dos perfiles iguales van rápido, os entendéis sin traducción. Dos perfiles opuestos es más frecuente de lo que se cree, y se lleva muy bien una vez que tiene nombre. Un Apasionado con un Constructor, por ejemplo: dos personas que se quieren igual, una esperando pruebas todos los días y la otra un plan a cinco años. El día en que lo saben, dejan de echárselo en cara.",
+      "p3": "Para ir más lejos, medid después <a href=\"/es/test-compatibilidad-pareja/\">lo que vuestra relación sostiene hoy</a>: ese test mira los hechos, no los temperamentos.",
+      "tip": "Cada uno lee en voz alta el perfil del otro. Funciona sorprendentemente bien: se escuchan cosas que habríamos encajado mal si las hubiera dicho la otra persona con sus palabras."
+    },
+    "s6": {
+      "title": "Lo que este test no hace",
+      "p1": "No dice si sois compatibles. Dos perfiles distintos se entienden muchas veces muy bien, y dos perfiles iguales pueden volverse locos.",
+      "p2": "No sustituye a una opinión profesional. Si lo que te trae aquí es un malestar que dura, una duda permanente o una relación que te hace daño, quince preguntas no bastarán, y no pretenden hacerlo.",
+      "p3": "No está grabado en piedra. El resultado describe quién eres ahora, con la experiencia que tienes hoy. Repítelo dentro de dos años y verás."
+    },
+    "faqTitle": "Preguntas frecuentes",
+    "faq": [
+      {
+        "q": "¿Qué es una personalidad amorosa?",
+        "a": "Es tu manera espontánea de querer, lo que haces sin pensarlo cuando alguien te importa. Unos necesitan intensidad, otros cuidar, otros reírse, otros construir. Las cuatro existen, y ninguna es mejor que las demás."
+      },
+      {
+        "q": "¿El test es gratis?",
+        "a": "Sí, del todo, y sin registro. Quince preguntas, tres minutos, y el resultado aparece al final con el detalle de tus cuatro barras."
+      },
+      {
+        "q": "¿Cuánto se tarda?",
+        "a": "Unos tres minutos. Responde con el primer impulso más que después de pensarlo: así es como el resultado cae más ajustado."
+      },
+      {
+        "q": "¿Se puede hacer en pareja?",
+        "a": "Sí, y es la mejor forma de usarlo. Hacedlo cada uno por vuestro lado y comparad los perfiles. Las diferencias explican muchas veces discusiones que no conseguíais desenredar."
+      },
+      {
+        "q": "¿Puede cambiar mi personalidad amorosa?",
+        "a": "Evoluciona, despacio. Una relación larga, una ruptura que deja huella o un trabajo personal pueden mover la aguja. Con cinco años de diferencia, mucha gente no cae en el mismo perfil."
+      },
+      {
+        "q": "¿Qué diferencia hay con el test de los lenguajes del amor?",
+        "a": "La personalidad amorosa describe el lugar que ocupas en una historia. El lenguaje del amor describe los gestos con los que das y recibes. Los dos se complementan, y mucha gente hace uno detrás del otro."
+      }
+    ]
+  }
+}

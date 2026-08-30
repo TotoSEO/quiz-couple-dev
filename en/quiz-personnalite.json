@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badge": "Free • No signup • 3 min",
+    "title": "Love personality: what are you like in a relationship?",
+    "titleHighlight": "Love personality",
+    "jumpBtn": "Go to the test",
+    "description": "15 questions to find out which place you take in love: the one who loves hard, the one who takes care, the one who makes people laugh, or the one who builds.",
+    "intro1": "We don't all love the same way, and it shows within the first few weeks. Some say « I love you » after ten days, others prove it for six months before saying it. This test puts a name on yours."
+  },
+  "quiz": {
+    "sectionTitle": "Take the love personality test"
+  },
+  "seo": {
+    "s1": {
+      "title": "What is a love personality?",
+      "p1": "Your love personality is the way you love when you aren't thinking about it. Not what you believe about love, not what you'd say in a conversation: what you do, instinctively, when you care about someone. Say your partner comes home after a rotten day. One person will hold them and take the day on with them. Another will start a series and order sushi. A third will ask questions and look for something to do. None of them loves more than the others, they love differently.",
+      "p2": "It's a fairly stable thing, at least across several years. You can change partner, change city and change your mind about plenty of things, and find the same reflexes in the next relationship. Most people notice the day an ex makes exactly the same complaint as the one before.",
+      "p3": "Knowing which one is yours does two fairly precise jobs. It explains why some relationships wore you out when everything looked fine on paper. And it gives you the words to tell someone what you need, instead of hoping they'll work it out."
+    },
+    "s2": {
+      "title": "The four ways of loving",
+      "intro": "The test spreads your answers across four ways of loving. Nobody has just one: you'll recognise yourself in two, maybe three, with one standing out. That's the one the result gives you, along with all four bars.",
+      "pillar1Title": "The Passionate One",
+      "pillar1Text": "Intensity first. They love fast, hard, and they need to feel it: the grand declarations, the evenings where the rest of the world disappears, the reunions at the station. Their strength is making a relationship feel alive. Their trouble starts when the calm settles in and they mistake it for the end.",
+      "pillar2Title": "The Devoted One",
+      "pillar2Text": "Love gets proved. They spot what the other person needs before being asked, they help, they protect. They're the ones you feel safe with. The trap is a familiar one: from watching the other person so closely, they never say what they expect, and they expect it anyway.",
+      "pillar3Title": "The Playful One",
+      "pillar3Text": "Love as a very good friendship. Banter, ridiculous nicknames, someone whose company makes even a car journey pleasant. Light to live with, rarely heavy. The limit shows when a serious subject arrives: the joke that eases the mood is also the one that dodges the conversation.",
+      "pillar4Title": "The Builder",
+      "pillar4Text": "Love as a project. They look at whether two lives can hold together: the pace, the money, the children, where to live. It isn't cold, it's a way of taking the relationship seriously. What they sometimes miss is enjoying what's happening before checking that it can last.",
+      "tip": "A profile isn't a box. If your top two bars are close, read both texts: plenty of people are a mix, and the mix is often what describes them best."
+    },
+    "s3": {
+      "title": "Where your way of loving comes from",
+      "p1": "The idea that there are several equally valid ways of loving is not new. As early as 1973, the Canadian sociologist John Alan Lee proposed a classification of love styles that is still used as a reference: passionate love, selfless love, playful love, practical love, and combinations between them. The four profiles in this test draw on it directly, minus the academic vocabulary.",
+      "p2": "Your way of loving is built early, from what you saw at home, what your first relationships taught you, and what worked or didn't. A teenager dumped out of nowhere can become an adult who checks everything before committing. Someone who grew up in a family where little was said out loud can spend a lifetime proving love through actions.",
+      "p3": "It does move, though, more slowly than people think but it moves. A long relationship, therapy, a break-up that resets everything: people who retake this test five years apart don't always land on the same profile.",
+      "quote": "None of these four ways of loving is better than the others. It's the misunderstandings between two different ways that damage couples, not the ways themselves."
+    },
+    "s4": {
+      "title": "Personality, language, attachment: three markers worth telling apart",
+      "intro": "Three tests often come up together and measure three different things. Here is how to tell them apart.",
+      "p1": "The three complete each other. Your love personality says which place you take, <a href=\"/en/love-language-test-couple/\">the way you show that love day to day</a> says which gestures carry it, and <a href=\"/en/attachment-style-test/\">what gets triggered in you when the other person pulls away</a> says how safe you feel. A couple who has done all three has enough to talk about for a while."
+    },
+    "tableHeaders": [
+      "The test",
+      "What it answers",
+      "What you do with it"
+    ],
+    "tableRows": [
+      [
+        "The love personality",
+        "Which place you instinctively take in a relationship",
+        "Understand why the same complaints keep coming back"
+      ],
+      [
+        "<a href=\"/en/love-language-test-couple/\">The love language</a>",
+        "Which gestures you give love through, and receive it through",
+        "Stop offering what the other person doesn't need"
+      ],
+      [
+        "<a href=\"/en/attachment-style-test/\">The attachment style</a>",
+        "What happens inside you when the other person moves away",
+        "Calm a fear that goes off for no reason"
+      ]
+    ],
+    "s5": {
+      "title": "Taking the test as a couple, and comparing",
+      "p1": "The test is played alone, one person at a time. The interesting part comes after: take it each on your own side, without looking at each other's answers, then compare the four bars.",
+      "p2": "Two identical profiles is quick, you understand each other without translation. Two opposite profiles is more common than people think, and it's very manageable once it's named. A Passionate One with a Builder, for instance: two people who love each other just as much, one waiting for proof every day and the other for a five-year plan. The day they know it, they stop holding it against each other.",
+      "p3": "To go further, measure <a href=\"/en/couple-compatibility-test/\">what your relationship is holding today</a> next: that test looks at the facts rather than the temperaments.",
+      "tip": "Each of you reads the other's profile out loud. It works surprisingly well: you hear things you'd have taken badly if your partner had said them in their own words."
+    },
+    "s6": {
+      "title": "What this test doesn't do",
+      "p1": "It doesn't tell you whether you're compatible. Two different profiles often get on very well, and two identical ones can drive each other mad.",
+      "p2": "It doesn't replace a professional opinion. If what brings you here is lasting distress, permanent doubt or a relationship that hurts, fifteen questions won't be enough, and they don't claim to be.",
+      "p3": "It isn't fixed. The result describes who you are right now, with the experience you have today. Take it again in two years and see."
+    },
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "What is a love personality?",
+        "a": "It's your instinctive way of loving, what you do without thinking when you care about someone. Some need intensity, others need to take care, others to laugh, others to build. All four exist, and none is better than the rest."
+      },
+      {
+        "q": "Is the test free?",
+        "a": "Yes, entirely, and with no signup. Fifteen questions, three minutes, and the result appears at the end with all four of your bars."
+      },
+      {
+        "q": "How long does it take?",
+        "a": "About three minutes. Answer on first instinct rather than after thinking it over: that's when the result lands closest to the mark."
+      },
+      {
+        "q": "Can we take it as a couple?",
+        "a": "Yes, and that's the best way to use it. Take it each on your own side, then compare the profiles. The gaps often explain arguments you couldn't untangle."
+      },
+      {
+        "q": "Can my love personality change?",
+        "a": "It evolves, slowly. A long relationship, a break-up that leaves a mark or some work on yourself can shift the needle. Five years apart, plenty of people don't land on the same profile."
+      },
+      {
+        "q": "How is it different from the love languages test?",
+        "a": "The love personality describes the place you take in a relationship. The love language describes the gestures you give and receive love through. The two complete each other, and many people do one straight after the other."
+      }
+    ]
+  }
+}
