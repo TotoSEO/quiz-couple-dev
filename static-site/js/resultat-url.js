@@ -101,9 +101,12 @@
     return location.pathname + (restants.length ? '?' + restants.join('&') : '');
   }
 
+  // L'ancre est recollee a la fin : sans elle, quelqu'un arrive sur
+  // « /test-x/#faq » verrait l'ancre disparaitre de la barre d'adresse au
+  // moment du resultat.
   function avecParam() {
     var base = sansParam();
-    return base + (base.indexOf('?') === -1 ? '?' : '&') + CLE;
+    return base + (base.indexOf('?') === -1 ? '?' : '&') + CLE + location.hash;
   }
 
   function parametrePresent() {
@@ -227,16 +230,31 @@
   // ── Le point d'entree des moteurs ───────────────────────────────────────
   // Appele au moment exact ou le resultat vient d'etre construit. « cible »
   // est l'element qui le porte : c'est celui qu'on masque derriere la porte.
+  //
+  // Tout est enveloppe : on arrive ici une fois le resultat construit et
+  // affiche. Une erreur de ce fichier ne doit jamais empecher la remontee
+  // vers le resultat, qui est la seule chose que la personne attend.
   function arrivee(cible, options) {
     var opts = options || {};
     var suite = typeof opts.apres === 'function' ? opts.apres : function () {};
-    dejaPasse = true;
+    try { poseLAdresse(cible, opts, suite); }
+    catch (e) { try { suite(); } catch (e2) {} }
+  }
 
+  function poseLAdresse(cible, opts, suite) {
     // Une entree d'historique par resultat, pas par appel : un moteur qui
     // redessine son ecran en poserait deux, et le bouton « precedent » ne
     // ramenerait nulle part au premier appui.
-    if (!parametrePresent()) {
-      try { history.pushState({ qcResultat: 1 }, '', avecParam()); } catch (e) {}
+    //
+    // Le drapeau n'est leve que si l'adresse porte vraiment le parametre.
+    // Sans cette precaution, un pushState refuse laisserait le drapeau a vrai
+    // et le premier « precedent » rechargerait la page, donc effacerait un
+    // resultat que personne n'avait demande a quitter.
+    if (parametrePresent()) {
+      dejaPasse = true;
+    } else {
+      try { history.pushState({ qcResultat: 1 }, '', avecParam()); dejaPasse = true; }
+      catch (e) {}
     }
     mesure();
     rafraichirPubs();

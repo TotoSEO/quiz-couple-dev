@@ -534,10 +534,28 @@
     // Show results, hide form
     form.classList.add('hidden');
     results.classList.remove('hidden');
-    results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Ce test a son propre moteur et ne passe pas par le noyau : on signale
+    // nous-mêmes que le résultat est là, pour qu'il prenne son adresse et
+    // compte comme une page vue. Fichier absent ? On remonte simplement sur
+    // le résultat, comme avant.
+    function versLeResultat() {
+      results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    if (window.QCResultat) {
+      window.QCResultat.arrivee(results, {
+        lang: document.documentElement.lang || 'fr',
+        apres: versLeResultat
+      });
+    } else {
+      versLeResultat();
+    }
   });
 
   retryBtn.addEventListener('click', function() {
+    // Le formulaire revient sur place, sans rechargement : l'adresse
+    // annoncerait sinon un résultat devant un formulaire vide.
+    if (window.QCResultat) window.QCResultat.retour();
     results.classList.add('hidden');
     form.classList.remove('hidden');
     document.getElementById('name1').value = '';

@@ -1809,7 +1809,13 @@ var QuizEngine = (function() {
     if (opts.restart) bouton('🔄', tg('result.restartFromBeginning', 'Recommencer'), function () {
       recommenceLaPage(opts.restart);
     }, true);
-    if (opts.changePlayers) bouton('👥', tg('result.changePlayers', 'Changer de joueurs'), opts.changePlayers);
+    // Seule action de l'ecran de resultat qui redessine sur place au lieu de
+    // recharger : l'adresse doit perdre « ?resultat » elle aussi, sinon elle
+    // annonce un resultat devant la saisie des prenoms.
+    if (opts.changePlayers) bouton('👥', tg('result.changePlayers', 'Changer de joueurs'), function () {
+      if (window.QCResultat) window.QCResultat.retour();
+      opts.changePlayers();
+    });
     if (actions.childNodes.length) zone.appendChild(actions);
     return zone;
   }

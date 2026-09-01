@@ -623,6 +623,9 @@
     this.brancheProlonger();
 
     document.getElementById('wyr-retake').addEventListener('click', function() {
+      // La partie repart sur place, sans rechargement : l'adresse annoncerait
+      // sinon un résultat devant l'écran de départ.
+      if (window.QCResultat) window.QCResultat.retour();
       self.p1Answers = [];
       self.p2Answers = [];
       self.currentQ = 0;
