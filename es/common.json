@@ -88,7 +88,8 @@
     "sourcePrefSous": "¡Veréis Quiz Couple más fácilmente en vuestras búsquedas de Google y en sus respuestas de IA!",
     "sourcePrefAria": "Añadir Quiz Couple a las fuentes preferidas de Google",
     "sourcePrefAide": "Una opción de Google: los sitios que añadís aparecen más arriba en vuestros resultados y en las respuestas de IA. Está vinculada a vuestra cuenta de Google y se puede quitar en cualquier momento.",
-    "sourcePrefAideAria": "¿Qué es una fuente preferida?"
+    "sourcePrefAideAria": "¿Qué es una fuente preferida?",
+    "cookiePrefs": "Gestionar las cookies"
   },
   "buttons": {
     "start": "Empezar",

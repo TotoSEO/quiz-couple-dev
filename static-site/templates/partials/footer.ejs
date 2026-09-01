@@ -158,6 +158,12 @@
           <% for (const link of footerLegalLinks) { %>
           <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= link.label || t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
+          <%# Revenir sur son choix est une obligation, et ce lien est le seul
+              chemin pour le faire une fois la banniere fermee. Il reste
+              masque tant que la plateforme de consentement n'a pas repondu,
+              c'est consentement.js qui le devoile : un lien qui n'ouvre rien
+              vaut moins que pas de lien du tout. %>
+          <button type="button" data-cmp-ouvrir hidden class="text-left text-sm text-muted-foreground transition-colors hover:text-primary bg-transparent border-0 p-0 cursor-pointer"><%= t('common:footer.cookiePrefs', 'Gérer mes cookies') %></button>
         </div>
       </div>
     </div>

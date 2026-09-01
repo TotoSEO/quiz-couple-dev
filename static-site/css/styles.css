@@ -1167,7 +1167,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
-@keyframes slideInFromBottom { from { opacity: 0; transform: translateY(100%); } to { opacity: 1; transform: translateY(0); } }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 @keyframes pulseSoft { 0%, 100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.05); } }
 @keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
@@ -6600,34 +6599,10 @@ h1, h2, h3, h4, h5, h6,
 .cq-loading { text-align: center; color: hsl(var(--muted-foreground)); padding: 2.5rem; }
 
 /* ═══════════════════════════════════════════════════════════════════
-   Cookie banner (redesign) + review CTA emphasis + quiz-option punch
+   Le bandeau cookies maison a ete remplace par la plateforme de
+   consentement de la regie, qui apporte sa propre interface. Ses styles
+   sont donc partis avec lui.
    ═══════════════════════════════════════════════════════════════════ */
-.cookie-banner { position: fixed; bottom: 1rem; left: 1rem; right: 1rem; z-index: 60; display: flex; justify-content: center;
-  animation: slideInFromBottom .5s ease-out; }
-/* Must beat `.cookie-banner { display:flex }` so the JS `.hidden` toggle works */
-.cookie-banner.hidden { display: none !important; }
-.cookie-card { display: flex; align-items: center; gap: 1rem; width: 100%; max-width: 44rem;
-  padding: 1rem 1.35rem; border-radius: 1.5rem; background: hsl(var(--card));
-  border: 2px solid hsl(var(--primary) / .35);
-  box-shadow: 0 16px 46px -14px hsl(var(--primary) / .5), 0 4px 14px rgba(0,0,0,.14); }
-.cookie-emoji { font-size: 2rem; flex-shrink: 0; line-height: 1; }
-.cookie-text { flex: 1; margin: 0; font-size: .9rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
-.cookie-link { color: hsl(var(--primary)); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
-.cookie-actions { display: flex; align-items: center; gap: .85rem; flex-shrink: 0; }
-.cookie-refuse { background: none; border: none; color: hsl(var(--muted-foreground) / .8); font-size: .8rem; text-decoration: underline;
-  text-underline-offset: 2px; cursor: pointer; transition: color .2s; }
-.cookie-refuse:hover { color: hsl(var(--foreground)); }
-.cookie-accept { background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary))); color: #fff; border: none;
-  font-weight: 800; font-size: .92rem; padding: .75rem 1.6rem; border-radius: 999px; cursor: pointer; white-space: nowrap;
-  box-shadow: 0 10px 22px -6px hsl(var(--primary) / .6); transition: transform .15s, box-shadow .15s; }
-.cookie-accept:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -6px hsl(var(--primary) / .7); }
-@media (max-width: 640px) {
-  .cookie-card { flex-wrap: wrap; gap: .75rem; padding: 1rem; }
-  .cookie-emoji { font-size: 1.6rem; }
-  .cookie-text { flex: 1 1 calc(100% - 2.5rem); }
-  .cookie-actions { width: 100%; justify-content: space-between; }
-  .cookie-accept { flex: 1; text-align: center; }
-}
 
 /* ── Review CTA: make it impossible to miss ── */
 .pqx-form-wrap {

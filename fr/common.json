@@ -89,7 +89,8 @@
     "sourcePrefSous": "Vous verrez plus facilement Quiz Couple dans vos recherches Google et ses réponses IA !",
     "sourcePrefAria": "Ajouter Quiz Couple aux sources préférées de Google",
     "sourcePrefAide": "Une option de Google : les sites que vous ajoutez remontent plus haut dans vos résultats et dans les réponses IA. Le réglage est lié à votre compte Google et se retire à tout moment.",
-    "sourcePrefAideAria": "Qu'est-ce qu'une source préférée ?"
+    "sourcePrefAideAria": "Qu'est-ce qu'une source préférée ?",
+    "cookiePrefs": "Gérer mes cookies"
   },
   "buttons": {
     "start": "Commencer",
