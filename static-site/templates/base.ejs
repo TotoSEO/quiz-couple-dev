@@ -19,6 +19,13 @@
       configuration est enregistree, donc celui de la regie et non le notre. %>
   <link rel="preconnect" href="https://cmp.inmobi.com">
   <link rel="dns-prefetch" href="https://cmp.inmobi.com">
+  <%# La regie publicitaire est le premier domaine tiers que la page appelle
+      apres le consentement : on ouvre la connexion des l'en-tete, sinon le
+      premier emplacement paie le nom de domaine et la poignee de main TLS. %>
+  <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+  <link rel="preconnect" href="https://ads.themoneytizer.com">
+  <link rel="dns-prefetch" href="https://ads.themoneytizer.com">
+  <% } %>
   <!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
   <script type="text/javascript" async=true>
   (function() {
@@ -364,6 +371,12 @@
   <script src="/js/obl.js" defer></script>
   <script src="/js/scroll-reveal.js" defer></script>
   <script src="/js/quiz-extras.js" defer></script>
+  <%# Les emplacements de la regie sont poses en dernier, et leurs scripts ne
+      partent qu'une fois le document analyse : la page et le moteur de quiz
+      ne doivent alors plus rien a un domaine tiers. %>
+  <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+  <script src="/js/pub.js" defer></script>
+  <% } %>
   <%# Le compteur de lectures a besoin de window.QCAudience, donc il doit
       partir APRES audience.js. Les scripts differes s'executent dans l'ordre
       du document : place dans le corps de l'article, celui-ci passait avant
