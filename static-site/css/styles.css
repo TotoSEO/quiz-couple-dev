@@ -8762,10 +8762,10 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    Le double skyrail (4) n'apparaît pas : il se place tout seul dans les
    gouttières, hors du flux, et n'a donc aucune hauteur à réserver. */
 .pub {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  width: 100%;
   margin: 2.5rem auto;
+  text-align: center;
   overflow: hidden;
 }
 .pub--31, .pub--2, .pub--19 { min-height: 250px; }
@@ -8775,13 +8775,30 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 
 /* L'interstitiel se dessine par-dessus la page, pas dans le flux : son div
    n'est qu'un point d'ancrage. Il ne doit donc reserver aucune hauteur, sans
-   quoi il laisserait un blanc de 250 px au milieu de l'ecran de resultat. */
+   quoi il laisserait un blanc de 250 px au milieu de l'ecran de resultat.
+   Le skyrail se place lui aussi tout seul : ni l'un ni l'autre ne doit etre
+   rogne par l'enveloppe. */
 .pub--15 { display: block; min-height: 0; margin: 0; }
+.pub--15, .pub--4 { overflow: visible; }
 
-/* Le billboard fait 970 px de large sur grand écran : sans cette limite il
-   déborderait sur un téléphone avant même que la régie ait choisi son
-   format de repli. */
-.pub > div { max-width: 100%; }
+/* ── Le div de la regie doit avoir une taille reelle ───────────────────
+   C'est cette boite que leur script mesure pour savoir quels formats
+   demander. L'enveloppe etait en flex : le div n'ayant pour tout contenu que
+   deux balises script, invisibles, sa largeur se calculait sur son contenu et
+   valait donc zero, et « align-items: center » lui donnait une hauteur nulle
+   par-dessus. Tous les emplacements du site mesuraient 0 x 0, et un
+   emplacement de 0 px de large ne recoit jamais d'annonce : aucune taille ne
+   peut etre demandee, donc aucune enchere ne remonte.
+
+   L'enveloppe redevient un bloc ordinaire, le div prend toute sa largeur et
+   herite de la hauteur reservee. La limite de largeur reste : le billboard
+   fait 970 px sur grand ecran et deborderait d'un telephone avant meme que la
+   regie ait choisi son format de repli. */
+.pub > div {
+  width: 100%;
+  max-width: 100%;
+  min-height: inherit;
+}
 
 /* ── La colonne latérale ───────────────────────────────────────────────
    Elle ne porte que la publicité, et seulement là où il reste de la place à
