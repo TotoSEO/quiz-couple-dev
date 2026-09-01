@@ -165,9 +165,9 @@
 
   function poseInterstitiel() {
     if (interstitielPose) return;
-    var hote = document.querySelector('[data-pub-differee]');
+    var hote = document.querySelector('[data-pub-au-resultat]');
     if (!hote) return;
-    var format = hote.getAttribute('data-pub-differee');
+    var format = hote.getAttribute('data-pub-au-resultat');
     var site = hote.getAttribute('data-pub-site');
     if (!format || !site) return;
     interstitielPose = true;

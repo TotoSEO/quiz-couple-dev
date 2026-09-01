@@ -91,6 +91,11 @@
 
 <!-- Contenu SEO -->
 <div class="seo-content">
+<%# Le texte de cette page vit dans une suite de sections qui portent
+    chacune leur propre conteneur : on enveloppe l'ensemble d'un seul
+    coup, avec la variante qui laisse ces conteneurs tranquilles. %>
+<div class="avec-colonne avec-colonne--sections">
+  <div class="avec-colonne__contenu">
 <section>
   <div class="container mx-auto px-4 max-w-3xl">
     <h2 class="text-2xl md:text-3xl font-bold mb-4">Un test qui remplace le fameux « ça dépend »</h2>
@@ -239,6 +244,11 @@
     </div>
   </div>
 </section>
+  </div>
+  <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+  <aside class="avec-colonne__aside"><%- include('../partials/pub', { format: 3 }) %></aside>
+  <% } %>
+</div>
 </div>
 
 <%# La mention d'affiliation vit tout en bas de la page, discrète mais

@@ -258,6 +258,10 @@
 
 <!-- ══ Contenu ═══════════════════════════════════════════════════════════ -->
 <article class="pu-section pu-article">
+  <%# La page a sa propre largeur de lecture, portee par .pu-largeur : on
+      enveloppe autour d'elle, avec la variante qui la laisse tranquille. %>
+  <div class="avec-colonne avec-colonne--sections">
+  <div class="avec-colonne__contenu">
   <div class="pu-largeur">
     <% sections.forEach(function (s, idx) { %>
     <section class="pu-bloc-texte">
@@ -371,6 +375,11 @@
       </div>
     </section>
     <% } %>
+  </div>
+  </div>
+  <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+  <aside class="avec-colonne__aside"><%- include('../partials/pub', { format: 3 }) %></aside>
+  <% } %>
   </div>
 </article>
 

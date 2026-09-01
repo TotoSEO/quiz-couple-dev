@@ -11,6 +11,16 @@
   contenu vers le bas au moment ou elle se charge, et ce decalage est un signal
   de classement chez Google. La hauteur reservee est celle du format, elle vit
   dans css/styles.css.
+
+  Le div de l'emplacement est pose ici, ses deux scripts le sont par js/pub.js
+  une fois le document analyse. Poses dans le HTML, ils arretaient l'analyse de
+  la page le temps d'un aller-retour vers un domaine tiers, dix fois par page,
+  dont six avant le moteur de quiz ; en « defer » ils ne l'arretaient plus mais
+  passaient toujours devant lui dans l'ordre d'execution. L'adresse et l'ordre
+  des deux fichiers restent ceux de la regie, seul le moment change.
+
+  L'interstitiel garde son attribut a lui : il n'est pas pose au chargement,
+  mais au moment ou l'ecran de resultat s'affiche, par js/resultat-url.js.
 -%>
 <% if (typeof differe !== 'undefined' && differe) { %>
 <%# Emplacement differe : le div est pose maintenant, les scripts viendront
@@ -18,9 +28,9 @@
     resultat s'affiche. Leur chaine n'utilise aucun document.write et charge
     deja ses formats en creant des balises script : l'injection apres coup se
     comporte exactement comme le tag pose dans le HTML. %>
-<div class="pub pub--<%= format %>" data-pub-differee="<%= format %>" data-pub-site="142829"><div id="142829-<%= format %>"></div></div>
+<div class="pub pub--<%= format %>" data-pub-au-resultat="<%= format %>" data-pub-site="142829"><div id="142829-<%= format %>"></div></div>
 <% } else { %>
-<div class="pub pub--<%= format %>"<% if (typeof etiquette !== 'undefined' && etiquette) { %> aria-label="<%= etiquette %>"<% } %>>
-  <div id="142829-<%= format %>"><script src="//ads.themoneytizer.com/s/gen.js?type=<%= format %>"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=142829&formatId=<%= format %>"></script></div>
+<div class="pub pub--<%= format %>" data-pub-differee="<%= format %>" data-pub-site="142829"<% if (typeof etiquette !== 'undefined' && etiquette) { %> aria-label="<%= etiquette %>"<% } %>>
+  <div id="142829-<%= format %>"></div>
 </div>
 <% } %>
