@@ -219,10 +219,11 @@
          data-lang="<%= lang %>"
          data-supabase-url="<%= supabaseUrl %>"
          data-supabase-key="<%= supabaseKey %>"
-         data-suites="<%- escapeHtml(JSON.stringify(suites)) %>">
-      <noscript>
+         data-suites="<%- escapeHtml(JSON.stringify(suites)) %>"><%# Sans JavaScript, l'explication passe avant l'ecran d'attente : sinon
+          elle apparaitrait six cents pixels sous un spinner qui ne tournera
+          jamais. %><noscript>
         <p class="pu-noscript"><%= T('moteur.noscript', 'Ce test a besoin de JavaScript pour fonctionner. Activez-le puis rechargez la page.') %></p>
-      </noscript>
+      </noscript><%- include("../partials/quiz-loading", { lang, routeKey }) %>
     </div>
   </div>
 </section>
@@ -397,6 +398,26 @@
 .pu-largeur { max-width: 46rem; margin: 0 auto; padding: 0 1.15rem; }
 .pu-section { padding: 3rem 0; }
 .pu-section--moteur { padding-top: 2.2rem; }
+
+/* ── La place du moteur, reservee d'avance ─────────────────────────────
+   Le moteur se dessine en JavaScript dans un conteneur vide : sa premiere
+   carte poussait d'un coup tout ce qui suit vers le bas, de 663 px sur un
+   telephone. Ce decalage est un signal de classement chez Google, et il
+   valait a lui seul 0,148 sur cette page, la seule du site a depasser le
+   seuil de 0,1.
+
+   On reserve donc la hauteur de cette premiere carte. Elle a ete mesuree
+   dans les cinq langues : 635 a 763 px sous 640 px de large, 399 a 468 px
+   au-dela. Les valeurs retenues sont proches de la mediane, ce qui laisse
+   quelques dizaines de pixels d'ecart au pire, contre 663 avant.
+
+   L'ecran d'attente disparait au premier rendu du moteur, qui vide son
+   conteneur : la reservation ne laisse donc aucun blanc pendant la partie,
+   dont les ecrans sont plus courts que la carte de depart. */
+#purete .quiz-engine-loading { min-height: 41rem; }
+@media (min-width: 640px) {
+  #purete .quiz-engine-loading { min-height: 26.5rem; }
+}
 
 /* ── Hero ───────────────────────────────────────────────────────────────── */
 .pu-hero {
