@@ -190,6 +190,11 @@
   <!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <%# La base est appelee des le premier rendu : le compteur de parties et les
+      avis partent a 193 ms, quand le plus grand element se peint a 192 ms. Une
+      simple resolution de nom ne suffit donc pas, il faut la connexion
+      complete, poignee de main comprise. %>
+  <link rel="preconnect" href="<%= supabaseUrl %>">
   <link rel="dns-prefetch" href="<%= supabaseUrl %>">
   <title><%= rawTitle %></title>
   <meta name="description" content="<%= rawDescription %>">
