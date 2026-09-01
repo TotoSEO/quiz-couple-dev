@@ -12,7 +12,7 @@ import { minify } from 'html-minifier-terser';
 import { minify as minifyJs } from 'terser';
 import CleanCSS from 'clean-css';
 import {
-  BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID, ADSENSE_CLIENT,
+  BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
@@ -859,7 +859,6 @@ async function generatePage(routeKey, lang) {
     locale: LOCALES[lang],
     baseUrl: BASE_URL,
     gaId: GA_ID,
-    adsenseClient: ADSENSE_CLIENT,
     supabaseUrl: SUPABASE_URL,
     supabaseKey: SUPABASE_ANON_KEY,
     // Avis rendus dans le HTML servi : la note annoncée en JSON-LD doit exister
@@ -1598,7 +1597,6 @@ async function generateBlogArticle(articleMeta, lang) {
     locale: LOCALES[lang],
     baseUrl: BASE_URL,
     gaId: GA_ID,
-    adsenseClient: ADSENSE_CLIENT,
     supabaseUrl: SUPABASE_URL,
     supabaseKey: SUPABASE_ANON_KEY,
     title: escapeHtml(title),
@@ -1688,8 +1686,7 @@ async function generate404Pages() {
       locale: LOCALES[lang],
       baseUrl: BASE_URL,
       gaId: GA_ID,
-      adsenseClient: ADSENSE_CLIENT,
-      supabaseUrl: SUPABASE_URL,
+        supabaseUrl: SUPABASE_URL,
       supabaseKey: SUPABASE_ANON_KEY,
       title: title404[lang] || title404.fr,
       rawTitle: title404[lang] || title404.fr,

@@ -236,10 +236,10 @@ export const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIU
 
 // Google Analytics
 export const GA_ID = 'G-XZV8V6FEK5';
-// Identifiant AdSense. Posé ici parce qu'il sert à trois endroits : la balise
-// meta de validation, le script de diffusion, et le fichier ads.txt à la
-// racine, qui lui est écrit à la main dans public/ (Google le lit tel quel).
-export const ADSENSE_CLIENT = 'ca-pub-3699606544344200';
+// La régie du site est The Moneytizer. Le fichier ads.txt qu'elle fournit est
+// écrit tel quel dans public/, il déclare quiz-couple.com comme propriétaire
+// et themoneytizer.com comme gestionnaire. Il n'y a plus d'identifiant
+// publicitaire à poser dans les pages : leurs tags viennent de leur régie.
 
 // Pages jouables. Elles portent le bloc d'avis, le compteur de parties et,
 // des qu'elles ont de vrais avis, la note structuree. Les tests et les quiz
