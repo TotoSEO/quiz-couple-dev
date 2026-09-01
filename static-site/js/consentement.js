@@ -93,8 +93,15 @@
   var liens = document.querySelectorAll('[data-cmp-ouvrir]');
   if (!liens.length) return;
 
+  // La plateforme pose aussi son propre lien permanent, une pastille
+  // flottante posee par-dessus la page. Deux chemins vers le meme panneau,
+  // c'est un doublon, et le notre est mieux place et traduit.
+  // La classe n'est ajoutee qu'une fois notre lien reellement affiche : si
+  // quoi que ce soit empeche celui-ci d'apparaitre, le leur reste, et
+  // personne ne se retrouve sans moyen de revenir sur son choix.
   function montrerLiens() {
     for (var i = 0; i < liens.length; i++) liens[i].hidden = false;
+    document.documentElement.classList.add('cmp-lien-propre');
   }
   window.__tcfapi('ping', 2, function (etat) {
     if (etat && etat.cmpStatus === 'loaded') montrerLiens();

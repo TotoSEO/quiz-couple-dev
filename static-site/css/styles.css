@@ -10372,3 +10372,19 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .quiz-engine .quiz-scale-option + .quiz-scale-option,
   .quiz-engine .choice-btn + .choice-btn { margin-top: .95rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   PLATEFORME DE CONSENTEMENT
+   Son interface est posee dans notre page, pas dans un cadre etranger :
+   elle est donc habillable d'ici. Les classes qc-cmp2- sont les points
+   d'accroche stables du composant, les autres sont generees et changent
+   d'une version a l'autre.
+
+   Le lien permanent de la plateforme est une pastille flottante posee
+   par-dessus la page. Le pied de page en propose deja un, traduit et
+   range avec les autres liens, qui ouvre exactement le meme panneau.
+   On masque donc le sien, mais seulement une fois le notre affiche :
+   la classe est posee par consentement.js au moment ou il devoile le
+   lien, jamais avant.
+   ═══════════════════════════════════════════════════════════════════ */
+.cmp-lien-propre .qc-cmp2-persistent-link { display: none !important; }
