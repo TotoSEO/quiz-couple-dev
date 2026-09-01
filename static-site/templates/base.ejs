@@ -121,17 +121,11 @@
     if(localStorage.getItem('cookie-consent')==='accepted'){gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});}
   </script>
 
-  <%# AdSense. Il vient après le bloc ci-dessus, et pas avant : le mode
-      consentement doit être posé quand le script se charge, sinon AdSense
-      démarre sans connaître l'état du consentement.
-      Tant que personne n'a répondu au bandeau, les quatre signaux restent
-      refusés et les annonces sont non personnalisées. Un clic sur
-      « Accepter » les accorde tous les quatre, ce que le bandeau annonce
-      explicitement. %>
-  <% if (typeof adsenseClient !== 'undefined' && adsenseClient) { %>
-  <meta name="google-adsense-account" content="<%= adsenseClient %>">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= adsenseClient %>" crossorigin="anonymous"></script>
-  <% } %>
+  <%# La régie du site est The Moneytizer. AdSense a été retiré : le compte
+      ayant été refusé, son script se chargeait sur chaque page sans jamais
+      rien afficher, et la balise meta déclarait un compte non approuvé.
+      Les quatre signaux de consentement posés au-dessus restent utiles :
+      ils valent pour toute régie publicitaire, pas seulement pour Google. %>
 
   <%- typeof jsonLdHtml !== 'undefined' && jsonLdHtml ? jsonLdHtml : '' %>
 </head>
