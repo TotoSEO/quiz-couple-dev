@@ -1422,37 +1422,14 @@ async function copyJs() {
     copyDirRecursive(jsDir, destDir);
   }
 
-  // Inject SEED_ARTICLES into admin.js at build time
-  const adminJsPath = path.join(destDir, 'admin.js');
-  if (fs.existsSync(adminJsPath)) {
-    let content = fs.readFileSync(adminJsPath, 'utf-8');
-    if (content.includes('/*__SEED_ARTICLES__*/')) {
-      const seedJson = buildSeedArticles();
-      content = content.replace(/\/\*__SEED_ARTICLES__\*\/\[[\s\S]*?\n  \];/, seedJson + ';');
-      fs.writeFileSync(adminJsPath, content, 'utf-8');
-      console.log(`[js] Injected ${BLOG_ARTICLES.length} articles into admin.js SEED_ARTICLES`);
-    }
-  }
-
-  // Inject the Supabase URL + anon key (resolved from config.js, itself driven by the
-  // SUPABASE_URL / SUPABASE_ANON_KEY GitHub secrets) into the client JS files that hardcode
-  // them (quiz-engine-core, quiz-ado-multiplayer, questions-couple). This makes config.js
-  // the single source of truth so the project can be swapped via the secrets alone.
-  const supaUrlRe = /https:\/\/[a-z0-9]{16,}\.supabase\.co/g;
-  const supaAnonRe = /eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/g;
-  for (const file of fs.readdirSync(destDir).filter(f => f.endsWith('.js'))) {
-    const p = path.join(destDir, file);
-    const before = fs.readFileSync(p, 'utf-8');
-    const after = before.replace(supaUrlRe, SUPABASE_URL).replace(supaAnonRe, SUPABASE_ANON_KEY);
-    if (after !== before) fs.writeFileSync(p, after, 'utf-8');
-  }
-
-  console.log('[js] JS files copied to dist/js/');
-
   // ── Decoupe du moteur de quiz ──────────────────────────────────────
   // Une page n'utilise qu'un moteur sur vingt-trois. On ecrit un paquet par
-  // jeu de moteurs reellement atteignable, avant la minification pour qu'ils
-  // en beneficient comme les autres. Au moindre doute, on ne decoupe pas.
+  // jeu de moteurs reellement atteignable. Les paquets sont ecrits ICI, juste
+  // apres la copie et AVANT l'injection des secrets Supabase et la
+  // minification : ainsi ils passent par les memes etapes que tous les
+  // autres fichiers. Ecrits plus tard, ils partaient en production avec
+  // l'adresse et la cle factices du code source, et tout ce que le moteur
+  // demandait a la base revenait vide. Au moindre doute, on ne decoupe pas.
   try {
     const srcMoteur = fs.readFileSync(path.join(jsDir, 'quiz-engine-core.js'), 'utf-8');
     const srcChargeur = fs.readFileSync(path.join(jsDir, 'quiz-loader.js'), 'utf-8');
@@ -1484,6 +1461,45 @@ async function copyJs() {
   } catch (e) {
     console.warn(`[moteurs] decoupage abandonne : ${e.message}`);
   }
+
+
+  // Inject SEED_ARTICLES into admin.js at build time
+  const adminJsPath = path.join(destDir, 'admin.js');
+  if (fs.existsSync(adminJsPath)) {
+    let content = fs.readFileSync(adminJsPath, 'utf-8');
+    if (content.includes('/*__SEED_ARTICLES__*/')) {
+      const seedJson = buildSeedArticles();
+      content = content.replace(/\/\*__SEED_ARTICLES__\*\/\[[\s\S]*?\n  \];/, seedJson + ';');
+      fs.writeFileSync(adminJsPath, content, 'utf-8');
+      console.log(`[js] Injected ${BLOG_ARTICLES.length} articles into admin.js SEED_ARTICLES`);
+    }
+  }
+
+  // Inject the Supabase URL + anon key (resolved from config.js, itself driven by the
+  // SUPABASE_URL / SUPABASE_ANON_KEY GitHub secrets) into the client JS files that hardcode
+  // them (quiz-engine-core, quiz-ado-multiplayer, questions-couple). This makes config.js
+  // the single source of truth so the project can be swapped via the secrets alone.
+  const supaUrlRe = /https:\/\/[a-z0-9]{16,}\.supabase\.co/g;
+  const supaAnonRe = /eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/g;
+  for (const file of fs.readdirSync(destDir).filter(f => f.endsWith('.js'))) {
+    const p = path.join(destDir, file);
+    const before = fs.readFileSync(p, 'utf-8');
+    const after = before.replace(supaUrlRe, SUPABASE_URL).replace(supaAnonRe, SUPABASE_ANON_KEY);
+    if (after !== before) fs.writeFileSync(p, after, 'utf-8');
+  }
+  // Garde-fou : aucun fichier servi ne doit porter une autre adresse que
+  // celle des secrets. C'est exactement ce qui est arrive aux paquets du
+  // moteur quand ils etaient ecrits apres cette etape, et ca ne s'est vu
+  // qu'en production, les statistiques des jeux a votes revenant a zero.
+  for (const file of fs.readdirSync(destDir).filter(f => f.endsWith('.js'))) {
+    const texte = fs.readFileSync(path.join(destDir, file), 'utf-8');
+    const etrangeres = (texte.match(supaUrlRe) || []).filter(u => u !== SUPABASE_URL);
+    if (etrangeres.length) {
+      throw new Error(`[js] ${file} porte une adresse Supabase qui n'est pas celle des secrets : ${etrangeres[0]}`);
+    }
+  }
+
+  console.log('[js] JS files copied to dist/js/');
 
   // Minify JS files
   const jsFiles = fs.readdirSync(destDir).filter(f => f.endsWith('.js'));
