@@ -623,6 +623,9 @@
     this.brancheProlonger();
 
     document.getElementById('wyr-retake').addEventListener('click', function() {
+      // La partie repart sur place, sans rechargement : l'adresse annoncerait
+      // sinon un résultat devant l'écran de départ.
+      if (window.QCResultat) window.QCResultat.retour();
       self.p1Answers = [];
       self.p2Answers = [];
       self.currentQ = 0;
@@ -637,20 +640,18 @@
       self.container.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
-    // Panneau d'avant-résultats. Les moteurs partagés le déclenchent depuis
-    // dispositionResultat ; ce jeu construit son propre écran de résultat et
-    // ne passait donc jamais par là, c'était la seule page à ne pas l'avoir.
-    // Le résultat est déjà en place derrière le panneau, il n'y a rien à
-    // recalculer à la fermeture. Le panneau ne s'affiche qu'une fois par
-    // session et par jeu, donc prolonger jusqu'à trente ne le redonne pas.
+    // Les moteurs partagés signalent leur résultat depuis dispositionResultat ;
+    // ce jeu construit son propre écran et ne passe donc jamais par là. Sans
+    // cet appel, ce serait la seule page dont l'écran de résultat ne prendrait
+    // pas son adresse.
     var self2 = this;
-    if (typeof window.qcPanneauAvantResultats === 'function') {
-      window.qcPanneauAvantResultats({
+    if (window.QCResultat) {
+      window.QCResultat.arrivee(this.container.firstElementChild, {
         lang: this.container.dataset.lang || document.documentElement.lang || 'fr',
-        onContinue: function () {
+        apres: function () {
           try { self2.container.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
           catch (e) { self2.container.scrollIntoView(); }
-        },
+        }
       });
     } else {
       this.container.scrollIntoView({ behavior: 'smooth', block: 'start' });

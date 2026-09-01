@@ -482,11 +482,22 @@
         res.appendChild(el('p', { class: 'cq-sub', text: T('your_score', 'Votre score') }));
       }
       var actions = el('div', { class: 'cq-created-actions' }, [
-        el('button', { class: 'btn btn-outline', type: 'button', text: T('retry', 'Rejouer'), onclick: function () { answers = []; cur = 0; renderQ(); } }),
+        el('button', { class: 'btn btn-outline', type: 'button', text: T('retry', 'Rejouer'), onclick: function () {
+          // La partie repart sur place, sans rechargement : l'adresse
+          // annoncerait sinon un resultat devant la premiere question.
+          if (window.QCResultat) window.QCResultat.retour();
+          answers = []; cur = 0; renderQ();
+        } }),
         el('a', { class: 'btn btn-cta', href: PAGE_URL, text: T('create_own', 'Créer mon propre quiz') })
       ]);
       res.appendChild(actions);
       stage.appendChild(res);
+
+      // Comme sur les tests du site, l'ecran de resultat prend son adresse au
+      // moment ou il s'affiche. Le « ?q= » du quiz joue est conserve.
+      if (window.QCResultat) {
+        window.QCResultat.arrivee(res, { lang: LANG });
+      }
     }
     renderQ();
   }

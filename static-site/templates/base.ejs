@@ -330,6 +330,11 @@
       de l'analyse du HTML, sans attendre les images, pour attraper aussi les
       visites qui repartent en deux secondes. %>
   <script src="/js/audience.js" defer></script>
+  <%# L'ecran de resultat prend sa propre adresse et compte comme une page
+      vue. Il lit window.QCAudience, donc il passe apres la mesure d'audience.
+      Les moteurs de quiz sont charges plus haut dans le document, mais ils ne
+      l'appellent qu'a la fin d'une partie : l'ordre est sans consequence. %>
+  <script src="/js/resultat-url.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/mobile-menu.js" defer></script>
   <script src="/js/consentement.js" defer></script>

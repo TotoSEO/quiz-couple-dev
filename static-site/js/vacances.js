@@ -153,7 +153,17 @@
     rend(zone);
     versLeHaut();
     charge().then(function (d) {
-      setTimeout(function () { rend(ecranResultats(d)); versLeHaut(); }, 1100);
+      setTimeout(function () {
+        rend(ecranResultats(d));
+        // Ce moteur ne passe pas par le noyau : on signale nous-memes que le
+        // resultat est la, pour qu'il prenne son adresse et compte comme une
+        // page vue. Fichier absent ? On remonte simplement dessus.
+        if (window.QCResultat) {
+          window.QCResultat.arrivee(RACINE.firstElementChild, { lang: 'fr', apres: versLeHaut });
+        } else {
+          versLeHaut();
+        }
+      }, 1100);
     }).catch(function () {
       rend(el('p', 'va-erreur', 'Le chargement a échoué. Vérifiez votre connexion puis réessayez.'));
     });
@@ -282,7 +292,12 @@
     var refaire = el('button', 'va-refaire btn btn-outline');
     refaire.type = 'button';
     refaire.textContent = 'Refaire le test avec d\'autres envies';
-    refaire.addEventListener('click', function () { reponses = {}; etape = 0; rend(ecranQuestion()); versLeHaut(); });
+    refaire.addEventListener('click', function () {
+      // Le test repart sur place, sans rechargement : l'adresse annoncerait
+      // sinon un resultat devant la premiere question.
+      if (window.QCResultat) window.QCResultat.retour();
+      reponses = {}; etape = 0; rend(ecranQuestion()); versLeHaut();
+    });
     zone.appendChild(refaire);
 
     // Crédits des photos : les images viennent de Wikimedia Commons, la
