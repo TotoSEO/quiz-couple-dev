@@ -30,6 +30,15 @@ jobs:
       - name: Install dependencies
         run: cd static-site && npm ci
 
+      - name: Rafraîchir ads.txt depuis la régie
+        # La régie fournit un fichier PHP qui interroge son serveur à chaque
+        # requête. GitHub Pages n'exécute pas de PHP : on fait la même chose
+        # ici, à la construction. Le script ne remplace le fichier que si la
+        # réponse est plausible, et sort en succès sinon : une régie
+        # injoignable ne doit jamais bloquer un déploiement ni publier un
+        # ads.txt vide.
+        run: node static-site/build/rafraichir-ads-txt.mjs
+
       - name: Build static site
         run: cd static-site && npm run build
         env:
