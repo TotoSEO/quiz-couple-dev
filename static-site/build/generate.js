@@ -11,6 +11,7 @@ import ejs from 'ejs';
 import { minify } from 'html-minifier-terser';
 import { minify as minifyJs } from 'terser';
 import CleanCSS from 'clean-css';
+import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomDuPaquet, ecrisPaquets, TABLE_MOTEURS } from './moteurs.js';
 import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
@@ -110,6 +111,12 @@ function empreinteRessources() {
   return h.digest('hex').slice(0, 8);
 }
 const ASSET_V = empreinteRessources();
+
+// Le decoupage du moteur, prepare par copyJs() et consulte par generatePage().
+// Reste a null si le fichier ne se presente pas comme attendu : chaque page
+// garde alors le moteur entier.
+let DECOUPE = null;
+
 
 // Ajoute l'empreinte aux ressources internes d'une page. Les adresses
 // extérieures (AdSense, Google) et celles qui portent déjà une requête ne sont
@@ -534,6 +541,24 @@ function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
 }
 
+// Remplace le moteur entier par le paquet qui correspond aux moteurs que la
+// page peut atteindre. En cas de doute, on ne touche a rien : la page garde
+// le fichier complet, donc le comportement d'aujourd'hui.
+function choisitLePaquetMoteur(html) {
+  if (!DECOUPE) return html;
+  if (html.indexOf('/js/quiz-engine-core.js') === -1) return html;
+  let noms;
+  try {
+    noms = moteursDeLaPage(html, DECOUPE.quizConfig, DECOUPE.analyse.blocs);
+  } catch (e) {
+    return html;
+  }
+  if (!noms) return html;
+  const fichier = nomDuPaquet(noms);
+  if (!DECOUPE.paquets.has(fichier)) return html;
+  return html.replace(/\/js\/quiz-engine-core\.js/g, '/js/' + fichier);
+}
+
 async function minifyHtml(html) {
   html = stripEmDashes(html);
   html = versionneRessources(html);
@@ -953,6 +978,9 @@ async function generatePage(routeKey, lang) {
 
     // Neutralise les liens vers les articles programmés tant qu'ils ne sont pas publiés
     fullHtml = stripFutureLinks(fullHtml);
+
+    // Le moteur de quiz, reduit a ce que la page peut reellement atteindre.
+    fullHtml = choisitLePaquetMoteur(fullHtml);
 
     // Minify
     const minified = await minifyHtml(fullHtml);
@@ -1420,6 +1448,42 @@ async function copyJs() {
   }
 
   console.log('[js] JS files copied to dist/js/');
+
+  // ── Decoupe du moteur de quiz ──────────────────────────────────────
+  // Une page n'utilise qu'un moteur sur vingt-trois. On ecrit un paquet par
+  // jeu de moteurs reellement atteignable, avant la minification pour qu'ils
+  // en beneficient comme les autres. Au moindre doute, on ne decoupe pas.
+  try {
+    const srcMoteur = fs.readFileSync(path.join(jsDir, 'quiz-engine-core.js'), 'utf-8');
+    const srcChargeur = fs.readFileSync(path.join(jsDir, 'quiz-loader.js'), 'utf-8');
+    const analyse = analyseMoteur(srcMoteur);
+    const quizConfig = litQuizConfig(srcChargeur);
+    if (!analyse) {
+      console.warn('[moteurs] fichier du moteur inattendu : pas de decoupage');
+    } else if (!quizConfig) {
+      console.warn('[moteurs] configuration du chargeur illisible : pas de decoupage');
+    } else {
+      // Chaque valeur « engine » du chargeur doit etre connue, et chaque
+      // constructeur nomme doit exister : sinon une page se retrouverait sans
+      // son moteur. On prefere ne rien decouper.
+      const valeurs = new Set();
+      for (const m of srcChargeur.matchAll(/engine: '([^']+)'/g)) valeurs.add(m[1]);
+      const inconnues = [...valeurs].filter(v => !TABLE_MOTEURS[v]);
+      const absents = Object.values(TABLE_MOTEURS).filter(c => !analyse.blocs.has(c));
+      if (inconnues.length || absents.length) {
+        console.warn(`[moteurs] table incomplete (inconnus : ${inconnues.join(', ') || '-'} ; absents : ${absents.join(', ') || '-'}) : pas de decoupage`);
+      } else {
+        const ensembles = ensemblesPossibles(quizConfig, analyse.blocs);
+        const ecrits = ecrisPaquets(destDir, analyse, ensembles,
+          (dir, fichier, code) => fs.writeFileSync(path.join(dir, fichier), code, 'utf-8'));
+        DECOUPE = { analyse, quizConfig, paquets: new Set(ecrits.map(e => e.fichier)) };
+        const moyenne = Math.round(ecrits.reduce((a, e) => a + e.taille, 0) / ecrits.length / 1024);
+        console.log(`[moteurs] ${ecrits.length} paquets ecrits, ${moyenne}KB en moyenne (fichier entier : ${Math.round(srcMoteur.length / 1024)}KB)`);
+      }
+    }
+  } catch (e) {
+    console.warn(`[moteurs] decoupage abandonne : ${e.message}`);
+  }
 
   // Minify JS files
   const jsFiles = fs.readdirSync(destDir).filter(f => f.endsWith('.js'));
