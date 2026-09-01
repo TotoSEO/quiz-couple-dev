@@ -112,6 +112,7 @@
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-2xl">
       <div id="quiz-engine" data-quiz="ado" data-lang="<%= lang %>"><%- include("../partials/quiz-loading", { lang, routeKey }) %></div>
+      <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
     </div>
   </div>
 </section>
@@ -194,6 +195,9 @@
     </div>
   </div>
 </section>
+
+<%# Un seul encart dans le texte, la lecture deja commencee. %>
+<% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
 <%- include('../partials/related-tests', { routeKey, lang, t, getLocalizedUrl }) %>
 

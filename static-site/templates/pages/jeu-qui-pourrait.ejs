@@ -81,6 +81,7 @@
 <section class="py-10 md:py-14">
   <div class="container mx-auto px-4">
     <div id="quiz-engine" data-quiz="qui-pourrait" data-lang="<%= lang %>"><%- include("../partials/quiz-loading", { lang, routeKey }) %></div>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
   </div>
 </section>
 
@@ -107,6 +108,7 @@
       </div>
       <p class="text-muted-foreground leading-relaxed"><%- t(ns + ':section1.apres', '') %></p>
     </section>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>

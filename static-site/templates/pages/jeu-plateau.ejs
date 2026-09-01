@@ -69,6 +69,7 @@
   <div class="container mx-auto px-4">
     <div id="quiz-engine" data-quiz="plateau-couple" data-lang="<%= lang %>"><%- include("../partials/quiz-loading", { lang, routeKey }) %></div>
 
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
     <%/* Regles depliables depuis le jeu. Le texte est celui, deja traduit, des
          sections de la page : le moteur ne fait que devoiler ce bloc. */%>
     <div id="plateau-regles" class="plateau-regles" hidden>
@@ -110,6 +111,7 @@
         <p><%- t(ns + ':section1.p3', '') %></p>
       </div>
     </section>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>

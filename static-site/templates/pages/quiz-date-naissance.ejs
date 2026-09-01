@@ -176,6 +176,10 @@
   </div>
 </section>
 
+<%# Sous le moteur, jamais au-dessus : une publicite devant le repousserait
+    hors du premier ecran sur telephone. %>
+<% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
+
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
 <!-- Contenu SEO -->
@@ -190,6 +194,7 @@
         <p><%- t(ns + ':section1.p3') %></p>
       </div>
     </section>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
     <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: quizTitle }) %>
     <section class="mb-16">

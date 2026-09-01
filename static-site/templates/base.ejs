@@ -313,12 +313,27 @@
 <body class="bg-background text-foreground font-sans antialiased">
   <%- include('partials/header', { lang, t, getLocalizedUrl, routeSlugs: routeSlugs }) %>
 
+  <% var avecPub = typeof pagePublicitaire !== 'undefined' && pagePublicitaire; %>
   <main class="relative z-0">
     <%- content %>
+    <%# Le megabanner de bas de page. Il est pose ici plutot que dans chaque
+        gabarit : c'est le dernier endroit commun a toutes les pages, juste
+        avant le bloc d'avis, donc apres tout le contenu utile. %>
+    <% if (avecPub) { %>
+    <%- include('partials/pub', { format: 28 }) %>
+    <% } %>
     <% if (typeof pageJouable !== 'undefined' && pageJouable) { %>
     <%- include('partials/quiz-reviews', { lang: lang, t: t, routeKey: routeKey, genrePage: (typeof genrePage !== 'undefined' ? genrePage : 'test'), supabaseUrl: supabaseUrl, supabaseKey: supabaseKey }) %>
     <% } %>
   </main>
+
+  <%# Le double skyrail vit dans les gouttieres, a cote du contenu et jamais
+      dedans. Il ne prend aucune place dans le flux et ne decale rien : c'est
+      le seul format qu'on peut poser sans rien reserver. Il se place lui-meme
+      et ne s'affiche que sur les ecrans assez larges pour l'accueillir. %>
+  <% if (avecPub) { %>
+  <%- include('partials/pub', { format: 4 }) %>
+  <% } %>
 
   <%- include('partials/footer', { lang, t, getLocalizedUrl }) %>
 

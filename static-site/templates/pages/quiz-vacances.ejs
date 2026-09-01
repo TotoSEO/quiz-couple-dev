@@ -85,6 +85,7 @@
 <section class="py-10 md:py-14">
   <div class="container mx-auto px-4">
     <div id="vacances-racine" class="va-racine" data-lang="fr"></div>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
   </div>
 </section>
 
@@ -172,6 +173,9 @@
     </div>
   </div>
 </section>
+
+<%# Un seul encart dans le texte, la lecture deja commencee. %>
+<% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
 <section>
   <div class="container mx-auto px-4 max-w-3xl">

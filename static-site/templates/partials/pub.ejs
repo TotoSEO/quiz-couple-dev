@@ -1,0 +1,17 @@
+<%#
+  Un emplacement publicitaire de la regie.
+
+  Le tag est repris mot pour mot de The Moneytizer, seul le numero de format
+  change. On ne le reformule pas : leur script se reconnait a l'identifiant du
+  div, et une adresse reecrite ou un attribut deplace suffit a ce que
+  l'emplacement ne se remplisse jamais.
+
+  L'enveloppe .pub sert a une seule chose, mais elle est essentielle : reserver
+  la hauteur avant que l'annonce arrive. Sans elle, la publicite pousse le
+  contenu vers le bas au moment ou elle se charge, et ce decalage est un signal
+  de classement chez Google. La hauteur reservee est celle du format, elle vit
+  dans css/styles.css.
+-%>
+<div class="pub pub--<%= format %>"<% if (typeof etiquette !== 'undefined' && etiquette) { %> aria-label="<%= etiquette %>"<% } %>>
+  <div id="142829-<%= format %>"><script src="//ads.themoneytizer.com/s/gen.js?type=<%= format %>"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=142829&formatId=<%= format %>"></script></div>
+</div>

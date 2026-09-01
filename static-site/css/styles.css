@@ -8750,6 +8750,60 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   color: hsl(var(--foreground));
 }
 
+/* ── Les emplacements publicitaires ────────────────────────────────────
+   Une seule chose à faire ici, mais elle compte : réserver la hauteur du
+   format avant que l'annonce arrive. Une publicité qui pousse le contenu au
+   moment où elle se charge produit un décalage cumulé, et le décalage cumulé
+   est un signal de classement chez Google. On paie donc l'espace d'avance,
+   quitte à laisser un blanc quand la régie n'a rien à servir.
+
+   Les numéros sont ceux des formats de The Moneytizer : 31 billboard,
+   2 pavé haut, 19 pavé bas, 28 megabanner bas, 3 grand angle, 11 in text.
+   Le double skyrail (4) n'apparaît pas : il se place tout seul dans les
+   gouttières, hors du flux, et n'a donc aucune hauteur à réserver. */
+.pub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem auto;
+  overflow: hidden;
+}
+.pub--31, .pub--2, .pub--19 { min-height: 250px; }
+.pub--28 { min-height: 90px; }
+.pub--3  { min-height: 600px; }
+.pub--11 { min-height: 0; }
+
+/* Le billboard fait 970 px de large sur grand écran : sans cette limite il
+   déborderait sur un téléphone avant même que la régie ait choisi son
+   format de repli. */
+.pub > div { max-width: 100%; }
+
+/* ── La colonne latérale ───────────────────────────────────────────────
+   Elle ne porte que la publicité, et seulement là où il reste de la place à
+   côté du texte. En dessous de 1280 px elle n'est pas affichée et la page
+   retrouve exactement la mise en page qu'elle avait avant : une colonne
+   unique, centrée. Le contenu reste premier dans le code, la colonne vient
+   après, donc rien ne change pour l'indexation. */
+.avec-colonne { display: block; }
+.avec-colonne__aside { display: none; }
+
+@media (min-width: 1280px) {
+  .avec-colonne {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 3rem;
+    align-items: start;
+  }
+  /* Collante : elle suit la lecture au lieu de disparaître au premier
+     défilement. La marge haute dégage l'en-tête fixe. */
+  .avec-colonne__aside {
+    display: block;
+    position: sticky;
+    top: 6rem;
+  }
+  .avec-colonne__aside .pub { margin-top: 0; }
+}
+
 /* ── La porte du résultat ──────────────────────────────────────────────
    Le résultat est construit, puis masqué derrière cette carte le temps de
    la publicité qui donne accès à la suite. Elle est inerte aujourd'hui

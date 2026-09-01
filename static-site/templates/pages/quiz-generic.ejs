@@ -349,12 +349,23 @@
   </div>
 </section>
 
+<%# Le premier emplacement de la page, et le seul que verra celui qui vient
+    jouer sans rien lire. Il est sous le moteur, jamais au-dessus : sur
+    telephone le moteur commence a 774 px pour un pli a 844 px, une publicite
+    devant le repousserait entierement hors de l'ecran d'accueil. Il tombe
+    aussi juste sous l'ecran de resultat, qui s'affiche dans le moteur. %>
+<% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+<div class="container mx-auto px-4"><%- include('../partials/pub', { format: 31 }) %></div>
+<% } %>
+
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
 <!-- SEO Article -->
 <article class="py-16 md:py-24 seo-content">
-  <div class="container mx-auto px-4 max-w-3xl">
-    <% let _figShown = false; const _hasRich = !!tryKeys('seo.richContent'); %>
+  <div class="container mx-auto px-4">
+    <div class="avec-colonne">
+      <div class="avec-colonne__contenu max-w-3xl mx-auto">
+    <% let _figShown = false; let _pubPosee = false; const _hasRich = !!tryKeys('seo.richContent'); %>
     <% for (let s = 1; s <= sectionCount; s++) {
       const sTitle = getSectionTitle(s);
       if (!sTitle) continue;
@@ -501,7 +512,15 @@
       <% } %>
     </section>
     <% if (!_figShown && !_hasRich) { _figShown = true; %><%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: quizTitle }) %><% } %>
+    <%# Un seul encart dans le texte, apres la premiere section : assez bas
+        pour que la lecture soit commencee, assez haut pour etre vu. %>
+    <% if (!_pubPosee && typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { _pubPosee = true; %><%- include('../partials/pub', { format: 2 }) %><% } %>
     <% } %>
+
+    <%# Deux pages n'ont aucune section titree : leur contenu vit entierement
+        dans les blocs en cartes qui suivent, et la boucle ci-dessus ne tourne
+        pas. L'encart se pose alors ici, en tete du contenu restant. %>
+    <% if (!_pubPosee && typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { _pubPosee = true; %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
     <%/* Card-based content with icon pictograms */%>
     <% const whyTitle = tryKeys('seo.whyTitle');
@@ -585,6 +604,14 @@
     </section>
     <% } %>
 
+      </div>
+      <%# La colonne laterale n'existe qu'au-dela de 1280 px, la ou il reste de
+          la place a cote du texte. En dessous elle n'est pas affichee du tout :
+          le contenu retrouve exactement la mise en page d'avant. %>
+      <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+      <aside class="avec-colonne__aside"><%- include('../partials/pub', { format: 3 }) %></aside>
+      <% } %>
+    </div>
   </div>
 </article>
 

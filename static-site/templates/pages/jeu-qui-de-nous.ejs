@@ -69,6 +69,7 @@
 <section class="py-10 md:py-14">
   <div class="container mx-auto px-4">
     <div id="quiz-engine" data-quiz="qui-de-nous-deux" data-lang="<%= lang %>"><%- include("../partials/quiz-loading", { lang, routeKey }) %></div>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
   </div>
 </section>
 
@@ -87,6 +88,7 @@
         <p><%- t(ns + ':section1.p4', '') %></p>
       </div>
     </section>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>

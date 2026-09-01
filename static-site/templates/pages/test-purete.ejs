@@ -227,6 +227,10 @@
   </div>
 </section>
 
+<%# Sous le moteur, jamais au-dessus : une publicite devant le repousserait
+    hors du premier ecran sur telephone. %>
+<% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
+
 <%# Les questions en dur, pour un robot. Le moteur les pose en JavaScript,
     donc sans ce bloc la page ne montrait aucune question à l'indexation,
     contrairement à toutes les autres pages de test.
@@ -332,6 +336,10 @@
       </aside>
       <% } %>
     </section>
+
+<%# Un seul encart dans le texte, apres la premiere section : la boucle en
+    produit cinq, l'encart n'en accompagne qu'une. %>
+<% if (idx === 0 && typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
     <% }); %>
 
     <% if (faq.length) { %>

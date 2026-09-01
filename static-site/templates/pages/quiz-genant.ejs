@@ -90,6 +90,7 @@
 <section class="py-12 md:py-16">
   <div class="container mx-auto px-4">
     <div id="quiz-engine" data-quiz="genant" data-lang="<%= lang %>"><%- include("../partials/quiz-loading", { lang, routeKey }) %></div>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
   </div>
 </section>
 
@@ -107,6 +108,7 @@
         <p><%- t(ns + ':section1.p3', '') %></p>
       </div>
     </section>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
     <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>
     <section class="mb-16">

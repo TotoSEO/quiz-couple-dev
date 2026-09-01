@@ -140,6 +140,8 @@
 
 <div class="section-padding">
   <div class="container mx-auto px-4">
+    <div class="avec-colonne">
+      <div class="avec-colonne__contenu">
     <article class="blog-article">
 
         <!-- Table of contents (collapsed by default) -->
@@ -256,5 +258,19 @@
           </div>
         </aside>
     </article>
+
+    <%# L'in text se place tout seul entre les paragraphes, a l'endroit que la
+        regie juge le plus rentable. Le pave ferme l'article, apres la lecture. %>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+    <%- include('../partials/pub', { format: 11 }) %>
+    <%- include('../partials/pub', { format: 19 }) %>
+    <% } %>
+      </div>
+      <%# La colonne laterale n'apparait qu'au-dela de 1280 px. En dessous,
+          l'article retrouve la colonne unique d'avant, au pixel pres. %>
+      <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+      <aside class="avec-colonne__aside"><%- include('../partials/pub', { format: 3 }) %></aside>
+      <% } %>
+    </div>
   </div>
 </div>

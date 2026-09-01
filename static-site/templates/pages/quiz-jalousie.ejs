@@ -126,6 +126,7 @@
           <p class="text-muted-foreground"><%= labels.sub1 %></p>
         </div>
         <div id="quiz-engine" data-quiz="jalousie1" data-lang="<%= lang %>"><%- include('../partials/quiz-loading', { lang, routeKey }) %></div>
+        <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
       </div>
 
       <!-- Test 2 Container (hidden initially) -->
@@ -154,6 +155,7 @@
         <p><%- t(ns + ':section1.p3', '') %></p>
       </div>
     </section>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
     <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>
     <section class="mb-16">
