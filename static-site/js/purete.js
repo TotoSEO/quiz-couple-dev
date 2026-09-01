@@ -316,13 +316,13 @@
 
     chargeStats(mode + (adulte ? '' : '-ado')).then(function (s) {
       statsGlobales = s;
-      // Le panneau qui invite à laisser un avis passe avant les résultats,
-      // comme sur les autres tests. Le résultat est déjà construit derrière.
+      // Comme sur les autres tests, l'écran de résultat prend son adresse au
+      // moment où il s'affiche. Il est déjà construit à cet instant.
       rend(function () { return ecranResultat(score, pct); });
-      if (typeof window.qcPanneauAvantResultats === 'function') {
-        window.qcPanneauAvantResultats({
+      if (window.QCResultat) {
+        window.QCResultat.arrivee(RACINE.firstElementChild, {
           lang: 'fr',
-          onContinue: function () { versLeHaut(RACINE); }
+          apres: function () { versLeHaut(RACINE); }
         });
       } else {
         versLeHaut(RACINE);
@@ -724,7 +724,12 @@
     var bloc = el('div', 'pu-reprise');
     var b = el('button', 'pu-cta pu-cta--fantome', T('refaire', 'Refaire le test'));
     b.type = 'button';
-    b.addEventListener('click', function () { rend(ecranModes); versLeHaut(RACINE); });
+    b.addEventListener('click', function () {
+      // Le test repart sur place, sans rechargement : l'adresse annoncerait
+      // sinon un résultat devant l'écran de choix du mode.
+      if (window.QCResultat) window.QCResultat.retour();
+      rend(ecranModes); versLeHaut(RACINE);
+    });
     bloc.appendChild(b);
     return bloc;
   }

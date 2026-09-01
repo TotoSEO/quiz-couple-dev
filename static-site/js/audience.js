@@ -124,7 +124,13 @@
     // a peupler le compteur de lectures. Dupliquer la liste des robots
     // ailleurs, c'est se garantir deux listes qui divergent.
     ignorer: function () { return ignorer(); },
-    exclure: function (oui) { if (oui) ecris(CLE_EXCLU, '1'); else efface(CLE_EXCLU); }
+    exclure: function (oui) { if (oui) ecris(CLE_EXCLU, '1'); else efface(CLE_EXCLU); },
+    // Lu par resultat-url.js. Une partie se joue du debut a la fin sans
+    // changer de page : l'ecran de resultat, qui est le moment le plus
+    // regarde de la visite, ne comptait pour rien. Il s'enregistre desormais
+    // sous son propre chemin, avec le meme numero de visite, et les memes
+    // exclusions s'appliquent puisque c'est le meme envoi.
+    pageVue: function (cheminVoulu) { envoie(cheminVoulu); }
   };
 
   // ── Ce qu'on ne compte pas ──────────────────────────────────────────────
@@ -145,11 +151,19 @@
   // Sans normalisation, /Test-Couple, /test-couple et /test-couple/ font trois
   // lignes différentes dans le rapport pour une seule page. La requête et
   // l'ancre sont déjà exclues : location.pathname ne les contient pas.
-  function chemin() {
-    var p = (location.pathname || '/').toLowerCase();
+  //
+  // La normalisation est isolée parce qu'un chemin peut aussi arriver du
+  // dehors : l'écran de résultat s'enregistre sous /test-x/resultat/, un
+  // chemin qui n'existe pas comme page mais qui doit se ranger dans le
+  // tableau de bord exactement comme les autres.
+  function normalise(p) {
+    p = String(p || '/').toLowerCase();
+    if (p.charAt(0) !== '/') p = '/' + p;
     if (p.charAt(p.length - 1) !== '/') p += '/';
     return p.length > 200 ? p.slice(0, 200) : p;
   }
+
+  function chemin() { return normalise(location.pathname); }
 
   // ── D'où vient la visite ────────────────────────────────────────────────
   // Le nom d'hôte seulement, jamais l'URL complète : celle d'un moteur de
@@ -184,12 +198,12 @@
   // keepalive : la requête doit survivre à un départ immédiat de la page,
   // sinon les visites les plus courtes, justement celles qu'on cherche à
   // mesurer, se perdent en chemin.
-  function envoie() {
+  function envoie(cheminVoulu) {
     if (ignorer()) return;
     var pq = document.getElementById('pq-reviews');
     var corps = {
       visite_id: visite(),
-      path: chemin(),
+      path: cheminVoulu ? normalise(cheminVoulu) : chemin(),
       route_key: (pq && pq.dataset.quizSlug) || null,
       lang: document.documentElement.lang || 'fr',
       source: source()

@@ -425,6 +425,9 @@ var QuizEngine = (function() {
       var p = new URLSearchParams(location.search);
       p.forEach(function (v, k) {
         if (k === 'part') return;
+        // « resultat » n'a de sens que pour la partie en cours : partage, il
+        // n'ouvrirait rien et serait retire au chargement.
+        if (k === 'resultat') return;
         restants.push(encodeURIComponent(k) + (v ? '=' + encodeURIComponent(v) : ''));
       });
       restants.push('part');
@@ -1718,25 +1721,26 @@ var QuizEngine = (function() {
     if (zones.resultat) alignerLaProse(zones.resultat);
     // Tous les moteurs finissent ici, y compris SoloTest et le jeu de
     // dilemmes qui ont leur propre mise en page : c'est donc le seul endroit
-    // ou brancher le panneau d'avant-resultats pour qu'il couvre tout.
-    panneauAvantResultats(wrap);
+    // ou signaler qu'un resultat vient de s'afficher, pour que ce moment
+    // prenne sa propre adresse et compte comme une page vue.
+    arriveeAuResultat(wrap);
   }
 
-  // Le resultat est deja construit derriere le panneau : il n'y a rien a
-  // attendre ni a recalculer a la fermeture, on remonte juste dessus. Si le
-  // fichier qui porte le panneau n'a pas ete charge, on ne fait rien et le
-  // resultat s'affiche normalement.
-  function panneauAvantResultats(wrap) {
-    if (typeof window.qcPanneauAvantResultats !== 'function') return;
+  // Le resultat est deja construit : si une porte s'intercale un jour devant
+  // lui, il n'y a rien a recalculer a son ouverture, seulement a remonter
+  // dessus. Le fichier n'a pas ete charge ? Le resultat s'affiche comme
+  // avant, il ne prend simplement pas d'adresse a lui.
+  function arriveeAuResultat(wrap) {
+    if (!window.QCResultat) return;
     var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
-    window.qcPanneauAvantResultats({
+    window.QCResultat.arrivee(wrap, {
       lang: quizEl ? (quizEl.dataset.lang || 'fr') : 'fr',
-      onContinue: function () {
+      apres: function () {
         if (wrap && wrap.scrollIntoView) {
           try { wrap.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
           catch (e) { wrap.scrollIntoView(); }
         }
-      },
+      }
     });
   }
 
@@ -1773,6 +1777,14 @@ var QuizEngine = (function() {
     // quiz-extras de ramener la vue sur le moteur une fois celui-ci en place.
     try { history.scrollRestoration = 'manual'; } catch (e) {}
     try { sessionStorage.setItem('qc-rejoue', '1'); } catch (e) {}
+    // L'ecran de resultat a pose « ?resultat » dans l'adresse. Recharger
+    // celle-ci telle quelle rouvrirait une adresse de resultat sur un ecran
+    // de depart : on repart de l'adresse propre. location.replace plutot que
+    // reload pour ne pas laisser l'adresse de resultat derriere soi dans
+    // l'historique, alors qu'on vient justement de la quitter.
+    if (window.QCResultat) {
+      try { location.replace(window.QCResultat.urlPropre()); return; } catch (e) {}
+    }
     location.reload();
   }
 

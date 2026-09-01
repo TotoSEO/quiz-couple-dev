@@ -357,19 +357,29 @@
     el('dn-formulaire').classList.add('hidden');
     el('dn-suite').classList.remove('hidden');
 
-    // Ce moteur ne passe pas par le moteur commun : on appelle donc le
-    // panneau d'avant-resultats nous-memes, sinon cette page serait la seule
-    // a ne pas l'afficher. Absent du DOM ? On ne fait rien et le resultat
-    // s'affiche normalement.
-    if (typeof window.qcPanneauAvantResultats === 'function') {
-      window.qcPanneauAvantResultats({ lang: document.documentElement.lang || 'fr' });
+    function versLeResultat() {
+      var haut = racine.getBoundingClientRect().top + window.pageYOffset - 80;
+      window.scrollTo({ top: haut, behavior: 'smooth' });
     }
 
-    var haut = racine.getBoundingClientRect().top + window.pageYOffset - 80;
-    window.scrollTo({ top: haut, behavior: 'smooth' });
+    // Ce moteur ne passe pas par le moteur commun : on signale nous-memes que
+    // le resultat est la, sinon cette page serait la seule dont l'ecran de
+    // resultat ne prendrait pas son adresse. Fichier absent ? On remonte
+    // simplement sur le resultat, comme avant.
+    if (window.QCResultat) {
+      window.QCResultat.arrivee(sortie, {
+        lang: document.documentElement.lang || 'fr',
+        apres: versLeResultat
+      });
+    } else {
+      versLeResultat();
+    }
   }
 
   function recommencer() {
+    // Le formulaire revient sur place, sans rechargement : l'adresse
+    // annoncerait sinon un resultat devant un formulaire vide.
+    if (window.QCResultat) window.QCResultat.retour();
     el('dn-resultat').classList.add('hidden');
     el('dn-suite').classList.add('hidden');
     el('dn-formulaire').classList.remove('hidden');

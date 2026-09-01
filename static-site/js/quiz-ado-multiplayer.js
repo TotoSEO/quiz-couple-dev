@@ -837,15 +837,17 @@
       '</div>';
 
     document.getElementById('btn-replay').addEventListener('click', function () {
+      // La partie repart sur place, sans rechargement : l'adresse annoncerait
+      // sinon un resultat devant l'ecran de depart.
+      if (window.QCResultat) window.QCResultat.retour();
       resetState(); render();
     });
 
-    // Ce moteur ne passe pas par le moteur commun : on appelle donc le
-    // panneau d'avant-resultats nous-memes, sinon cette page serait la seule
-    // a ne pas l'afficher. Absent du DOM ? On ne fait rien et le resultat
-    // s'affiche normalement.
-    if (typeof window.qcPanneauAvantResultats === 'function') {
-      window.qcPanneauAvantResultats({ lang: document.documentElement.lang || 'fr' });
+    // Ce moteur ne passe pas par le moteur commun : on signale nous-memes que
+    // le resultat est la, sinon cette page serait la seule dont l'ecran de
+    // resultat ne prendrait pas son adresse.
+    if (window.QCResultat) {
+      window.QCResultat.arrivee(container.firstElementChild, { lang: document.documentElement.lang || 'fr' });
     }
 
     if (channel) { setTimeout(function () { channel.unsubscribe(); channel = null; }, 3000); }
