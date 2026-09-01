@@ -8792,16 +8792,35 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .avec-colonne { display: block; }
 .avec-colonne__aside { display: none; }
 
-@media (min-width: 1280px) {
+/* La colonne latérale ne doit pas décaler le texte. Une grille à deux
+   colonnes le ferait : la colonne du texte se centrerait dans ce qui reste
+   une fois les 300 px de la publicité pris, et la page entière partirait sur
+   la gauche. La grille en a donc trois, et le texte occupe celle du milieu :
+   les deux gouttières sont égales, la publicité se pose dans celle de droite
+   et le texte reste exactement là où il était, au pixel près.
+
+   La bande déborde volontairement le conteneur et se recentre sur la page,
+   sans quoi les 1400 px du conteneur ne laisseraient jamais la place d'une
+   colonne de 300 px à côté d'un texte centré. En dessous de 1600 px cette
+   place n'existe pas : la colonne n'apparaît pas du tout, et la page garde
+   sa colonne unique. */
+@media (min-width: 1600px) {
   .avec-colonne {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 300px;
-    gap: 3rem;
+    grid-template-columns: minmax(0, 1fr) var(--colonne-texte, 48rem) minmax(0, 1fr);
     align-items: start;
+    width: min(100vw - 4rem, 1600px);
+    margin-inline: calc(50% - min(50vw - 2rem, 800px));
   }
+  .avec-colonne--large { --colonne-texte: 56rem; }
+  .avec-colonne__contenu { grid-column: 2; min-width: 0; }
   /* Collante : elle suit la lecture au lieu de disparaître au premier
      défilement. La marge haute dégage l'en-tête fixe. */
   .avec-colonne__aside {
+    grid-column: 3;
+    justify-self: start;
+    width: 300px;
+    margin-left: 2rem;
     display: block;
     position: sticky;
     top: 6rem;
@@ -9869,6 +9888,7 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    ═══════════════════════════════════════════════════════════════════ */
 .quiz-engine-section,
 #quiz-engine, .quiz-engine,
+#astro-tool, #dn-outil,
 .jalousie-encart, .quiz-modes-retour {
   --ink: 268 45% 27%;
   --qe-trait: 4px;      /* la carte qui contient l'ecran */
@@ -9884,6 +9904,7 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    contours perdent tout contraste. On passe a un lavande clair. */
 .dark .quiz-engine-section,
 .dark #quiz-engine, .dark .quiz-engine,
+.dark #astro-tool, .dark #dn-outil,
 .dark .jalousie-encart, .dark .quiz-modes-retour { --ink: 270 30% 62%; }
 
 /* Sur telephone, le meme trait parait deux fois plus lourd : on descend
@@ -9891,6 +9912,7 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 @media (max-width: 640px) {
   .quiz-engine-section,
   #quiz-engine, .quiz-engine,
+  #astro-tool, #dn-outil,
   .jalousie-encart, .quiz-modes-retour {
     --qe-trait: 3px; --qe-trait-i: 2.5px; --qe-trait-p: 2px;
     --qe-ombre: 5px 5px 0; --qe-ombre-i: 3px 3px 0;
@@ -9925,7 +9947,14 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   background: none;
   padding: 0;
   overflow: visible;
+  /* C'est le cadre qui portait la marge : 2rem de garde en haut, en bas et
+     sur les cotes. Sans lui, les zones se retrouvaient serrees les unes
+     contre les autres et calees au ras du bord. On rend l'air aux zones,
+     sans rendre le cadre. */
+  gap: 1.75rem;
+  margin-block: .75rem;
 }
+@media (min-width: 900px) { .qr-plan { gap: 1.75rem 2.5rem; } }
 /* En sombre, l'ombre du moteur est posee par « .dark .quiz-engine », plus
    specifique que la regle ci-dessus : il faut la retirer nommement. */
 .dark .qr-plan { box-shadow: none; background: none; }
@@ -10336,6 +10365,132 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
+   LES DEUX OUTILS DE COMPATIBILITE, DANS LA CHARTE DES MOTEURS
+   Compatibilite par les signes et les prenoms, compatibilite par les dates
+   de naissance : ce sont des tests comme les autres, mais ils ont garde le
+   dessin d'avant, filet d'un pixel et ombre floue. Poses a cote d'un
+   « tester son couple », ils avaient l'air d'appartenir a un autre site.
+
+   Ils prennent donc le meme vocabulaire que les moteurs : trait a l'encre,
+   ombre portee franche sans flou, angles largement arrondis. Rien ne bouge
+   cote JavaScript, la structure reste la meme : on ne fait que redessiner.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── La carte de l'outil, comme celle du moteur ──────────────── */
+#astro-tool, #dn-outil {
+  border: var(--qe-trait) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon);
+  box-shadow: var(--qe-ombre) hsl(var(--ink));
+  background: hsl(var(--card));
+  backdrop-filter: none;
+}
+
+/* ── Les blocs de saisie : une carte par personne ────────────── */
+#astro-tool .astro-person-block,
+#dn-outil .dn-personne {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  background: hsl(var(--card));
+  padding: 1.25rem;
+}
+/* Le bloc « date de naissance » n'avait ni cadre ni fond : il en prend un,
+   et l'espacement passe du bas du bloc a l'interieur de la carte. */
+#dn-outil .dn-personne { margin-bottom: 1.5rem; }
+#dn-outil .dn-personne-titre { margin-top: 0; }
+
+/* ── Les pastilles numerotees ────────────────────────────────── */
+#astro-tool .astro-person-number,
+#dn-outil .dn-personne-num {
+  border: 2px solid hsl(var(--ink));
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+}
+
+/* ── Les champs et les listes deroulantes ────────────────────── */
+#astro-tool .astro-input,
+#dn-outil .astro-input {
+  border: var(--qe-trait-p) solid hsl(var(--ink) / .8);
+  border-radius: .85rem;
+}
+/* On garde un halo en plus de l'ombre portee : sans lui, le champ actif ne
+   se distinguerait plus au clavier. */
+#astro-tool .astro-input:focus,
+#dn-outil .astro-input:focus {
+  border-color: hsl(var(--ink));
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink)), 0 0 0 3px hsl(var(--primary) / .2);
+}
+
+/* ── Les boutons ─────────────────────────────────────────────── */
+#astro-tool .btn-cta,
+#astro-tool .btn-outline,
+#astro-tool .btn-primary,
+#dn-outil .btn-cta,
+#dn-outil .btn-outline,
+#dn-outil .btn-primary {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: 999px;
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  font-weight: 800;
+}
+#astro-tool .btn-outline,
+#dn-outil .btn-outline { background: hsl(var(--card)); color: hsl(var(--ink)); }
+.dark #astro-tool .btn-outline,
+.dark #dn-outil .btn-outline { color: hsl(var(--foreground)); }
+
+/* ── Les cartes du resultat ──────────────────────────────────── */
+#astro-tool .quiz-result-card,
+#dn-outil .quiz-result-card,
+#astro-tool .glass-card,
+#dn-outil .dn-fiche,
+#dn-outil .dn-bloc,
+#dn-outil .dn-suite-carte {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
+  background: hsl(var(--card));
+  backdrop-filter: none;
+}
+/* La fiche portait un filet de couleur en haut pour distinguer les deux
+   personnes. Le trait a l'encre le remplacerait mal : on garde la couleur,
+   posee cette fois sur la pastille et sur la jauge. */
+#dn-outil .dn-fiche { border-top-color: hsl(var(--ink)); }
+#dn-outil .dn-fiche-2 { border-top-color: hsl(var(--ink)); }
+
+/* L'anneau du score et les jauges des axes prennent le meme trait. */
+#astro-tool .quiz-score-circle,
+#dn-outil .dn-anneau-boite {
+  border: var(--qe-trait-i) solid hsl(var(--ink));
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  border-radius: 50%;
+}
+#dn-outil .dn-axe-piste {
+  border: 2px solid hsl(var(--ink));
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Le message d'erreur est une alerte : trait plein, fond de la carte, pour
+   qu'il ne se confonde pas avec un champ. */
+#dn-outil .dn-erreur {
+  border: var(--qe-trait-p) solid hsl(var(--ink));
+  border-radius: var(--qe-rayon-i);
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  background: hsl(var(--card));
+  padding: .65rem .9rem;
+}
+
+/* Le coeur qui separe les deux personnes reprend la pastille du moteur. */
+#astro-tool .astro-heart-icon,
+#dn-outil .astro-heart-icon {
+  border: 2px solid hsl(var(--ink));
+  border-radius: 999px;
+  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
+  background: hsl(var(--card));
+  padding: .3rem .5rem;
+  line-height: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
    LE SURVOL, RESERVE AUX APPAREILS QUI ONT VRAIMENT UN POINTEUR
    Sur telephone, le navigateur laisse l'etat :hover colle sur le dernier
    element touche. Le moteur redessinant tout son bloc a chaque reponse,
@@ -10386,7 +10541,13 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .quiz-engine .qp-btn:hover,
   .quiz-engine .quiz-most-player-btn:hover,
   .quiz-engine .quiz-tf-btn:hover,
-  .quiz-engine .quiz-validate-btn:hover {
+  .quiz-engine .quiz-validate-btn:hover,
+  #astro-tool .btn-cta:hover,
+  #astro-tool .btn-outline:hover,
+  #astro-tool .btn-primary:hover,
+  #dn-outil .btn-cta:hover,
+  #dn-outil .btn-outline:hover,
+  #dn-outil .btn-primary:hover {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 hsl(var(--ink));
   }
@@ -10425,7 +10586,13 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
     .quiz-engine .quiz-validate-btn:hover,
     .quiz-engine .result-related-card:hover,
     .quiz-engine .qr-orientation-lien:hover,
-    .quiz-engine .qr-partenaire:hover { transform: none; }
+    .quiz-engine .qr-partenaire:hover,
+    #astro-tool .btn-cta:hover,
+    #astro-tool .btn-outline:hover,
+    #astro-tool .btn-primary:hover,
+    #dn-outil .btn-cta:hover,
+    #dn-outil .btn-outline:hover,
+    #dn-outil .btn-primary:hover { transform: none; }
   }
 }
 

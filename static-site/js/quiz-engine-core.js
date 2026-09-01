@@ -393,6 +393,18 @@ var QuizEngine = (function() {
     return d.innerHTML;
   }
 
+  // Les verdicts et les conseils viennent de nos fichiers de traduction et
+  // portent parfois un lien interne. On echappe tout, puis on redonne vie a
+  // la petite liste de balises qu'on s'autorise, et aux liens qui restent sur
+  // le site : rien d'autre ne passe.
+  function escRiche(str) {
+    return esc(str)
+      .replace(/&lt;(\/?(?:strong|em|b|i))&gt;/g, '<$1>')
+      .replace(/&lt;br\s*\/?&gt;/g, '<br>')
+      .replace(/&lt;a href="(\/[^"&<>]*)"&gt;/g, '<a href="$1">')
+      .replace(/&lt;\/a&gt;/g, '</a>');
+  }
+
   // ── Phase C : partage + avis par quiz + compteur (ecran de resultat 2 colonnes) ──
   function pcLabels(lang) {
     var M = {
@@ -2304,7 +2316,7 @@ var QuizEngine = (function() {
       resultat.appendChild(el('p', 'qr-desc', result.description));
       if (result.advice) {
         var advice = el('div', 'qr-advice');
-        advice.innerHTML = '<strong>' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
+        advice.innerHTML = '<strong>' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(result.advice);
         resultat.appendChild(advice);
       }
     }
@@ -2722,7 +2734,7 @@ var QuizEngine = (function() {
     wrap.appendChild(hero);
     if (result && result.advice) {
       var advice = el('div', 'duo-result-advice');
-      advice.innerHTML = '<strong>' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
+      advice.innerHTML = '<strong>' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(result.advice);
       wrap.appendChild(advice);
     }
 
@@ -4495,7 +4507,7 @@ var QuizEngine = (function() {
       wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed max-w-lg mx-auto mb-4', result.description));
       if (result.advice) {
         var adviceEl = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto');
-        adviceEl.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
+        adviceEl.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(result.advice);
         wrap.appendChild(adviceEl);
       }
     }
@@ -4791,10 +4803,10 @@ var QuizEngine = (function() {
     if (result) {
       var resultCard = el('div', 'glass-card rounded-xl p-6 mb-6 text-left max-w-lg mx-auto');
       resultCard.innerHTML = '<h3 class="text-xl font-bold mb-3 text-center">' + esc(result.title) + '</h3>' +
-        '<p class="text-muted-foreground leading-relaxed mb-4">' + esc(result.description) + '</p>';
+        '<p class="text-muted-foreground leading-relaxed mb-4">' + escRiche(result.description) + '</p>';
       if (result.advice) {
         resultCard.innerHTML += '<div class="bg-primary/5 border border-primary/20 rounded-lg p-4 mt-3"><strong class="block mb-2">' +
-          esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong><span class="text-sm text-muted-foreground">' + esc(result.advice) + '</span></div>';
+          esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong><span class="text-sm text-muted-foreground">' + escRiche(result.advice) + '</span></div>';
       }
       wrap.appendChild(resultCard);
     }
@@ -5021,7 +5033,7 @@ var QuizEngine = (function() {
       wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto', result.description));
       if (result.advice) {
         var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto');
-        advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(result.advice);
+        advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(result.advice);
         wrap.appendChild(advice);
       }
     }
@@ -5315,7 +5327,7 @@ var QuizEngine = (function() {
     if (profile.description) wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto quiz-reveal-enter', profile.description));
     if (profile.advice) {
       var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
-      advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(profile.advice);
+      advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(profile.advice);
       wrap.appendChild(advice);
     }
 
@@ -5574,7 +5586,7 @@ var QuizEngine = (function() {
       if (r.texte) wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto text-center quiz-reveal-enter', r.texte));
       if (r.conseil) {
         var enc = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
-        enc.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + esc(r.conseil);
+        enc.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(r.conseil);
         wrap.appendChild(enc);
       }
       renderActionButtons(wrap, {
