@@ -8818,31 +8818,59 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 
    La bande déborde volontairement le conteneur et se recentre sur la page,
    sans quoi les 1400 px du conteneur ne laisseraient jamais la place d'une
-   colonne de 300 px à côté d'un texte centré. En dessous de 1600 px cette
-   place n'existe pas : la colonne n'apparaît pas du tout, et la page garde
-   sa colonne unique. */
-@media (min-width: 1600px) {
+   colonne de 300 px à côté d'un texte centré.
+
+   Le seuil se calcule : 736 px de texte, 300 px de publicité, et la même
+   gouttière des deux côtés. Il faut donc 1408 px de bande, atteints dès
+   1440 px de fenêtre. En dessous, la place n'existe pas et la page garde sa
+   colonne unique. */
+@media (min-width: 1440px) {
   .avec-colonne {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) var(--colonne-texte, 48rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) var(--colonne-texte, 46rem) minmax(0, 1fr);
     align-items: start;
-    width: min(100vw - 4rem, 1600px);
-    margin-inline: calc(50% - min(50vw - 2rem, 800px));
+    width: min(100vw - 2rem, 1600px);
+    margin-inline: calc(50% - min(50vw - 1rem, 800px));
   }
-  .avec-colonne--large { --colonne-texte: 56rem; }
-  .avec-colonne__contenu { grid-column: 2; min-width: 0; }
+  /* Le texte occupe la piste du milieu : le rembourrage du conteneur n'y
+     porte plus rien, et il coûterait 32 px sur la place de la colonne. Les
+     pages dont le texte vit dans des conteneurs imbriqués le gardent, sinon
+     leur colonne se retrouverait rognée deux fois. */
+  .avec-colonne:not(.avec-colonne--sections) > .avec-colonne__contenu { padding-inline: 0; }
+  .avec-colonne--sections { --colonne-texte: 48rem; }
+  /* Variante de la variante : le quiz ado limite ses blocs a 48rem, mais
+     a l'interieur d'un conteneur qui garde son rembourrage. La piste doit
+     donc compter les deux, sans quoi son texte perdrait 32 px. */
+  .avec-colonne--conteneur-interne { --colonne-texte: 50rem; }
+  .avec-colonne--large    { --colonne-texte: 52rem; }
+  .avec-colonne__contenu  { grid-column: 2; min-width: 0; }
   /* Collante : elle suit la lecture au lieu de disparaître au premier
      défilement. La marge haute dégage l'en-tête fixe. */
   .avec-colonne__aside {
     grid-column: 3;
     justify-self: start;
     width: 300px;
-    margin-left: 2rem;
+    /* Trois centimètres de garde quand la place le permet, la moitié de la
+       place libre quand elle est juste. Par construction la publicité ne
+       peut donc jamais déborder de sa gouttière, quelle que soit la
+       largeur de l'écran. */
+    margin-left: min(3rem, calc((100% - 300px) / 2));
     display: block;
     position: sticky;
     top: 6rem;
   }
   .avec-colonne__aside .pub { margin-top: 0; }
+}
+
+/* Une colonne de texte plus large demande une page plus large : le blog
+   écrit sur 832 px, les pages à sections sur 768 px. Entre 1440 et 1536 px
+   ces deux familles gardent leur colonne unique, sans quoi la publicité
+   viendrait mordre sur le texte. */
+@media (min-width: 1440px) and (max-width: 1535.98px) {
+  .avec-colonne--large,
+  .avec-colonne--sections { display: block; width: auto; margin-inline: 0; }
+  .avec-colonne--large > .avec-colonne__aside,
+  .avec-colonne--sections > .avec-colonne__aside { display: none; }
 }
 
 /* ── La porte du résultat ──────────────────────────────────────────────

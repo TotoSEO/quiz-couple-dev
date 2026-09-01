@@ -121,7 +121,11 @@
 
 <!-- SEO Content -->
 <section class="py-12 md:py-16 bg-muted/30">
-  <div class="container mx-auto px-4">
+  <%# Le texte et la foire aux questions vivent chacun dans leur propre
+      bloc a largeur limitee : on enveloppe le conteneur, avec la variante
+      qui laisse ces blocs tranquilles. %>
+  <div class="avec-colonne avec-colonne--sections avec-colonne--conteneur-interne">
+  <div class="avec-colonne__contenu container mx-auto px-4">
     <article class="max-w-3xl mx-auto prose prose-lg dark:prose-invert">
       <h2><%= t(ns + ':seo.s1Title') %></h2>
       <p><%= t(ns + ':seo.s1P1') %></p>
@@ -193,6 +197,10 @@
         <% } %>
       </div>
     </div>
+  </div>
+  <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+  <aside class="avec-colonne__aside"><%- include('../partials/pub', { format: 3 }) %></aside>
+  <% } %>
   </div>
 </section>
 

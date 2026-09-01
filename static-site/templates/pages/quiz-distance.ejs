@@ -94,7 +94,8 @@
 
 <!-- SEO Content -->
 <article class="py-16 md:py-24 seo-content">
-  <div class="container mx-auto px-4 max-w-3xl">
+  <div class="avec-colonne">
+    <div class="avec-colonne__contenu container mx-auto px-4 max-w-3xl">
 
     <%/* Intro */%>
     <% const introP1 = t(ns + ':intro.p1', ''); if (introP1) { %>
@@ -323,6 +324,13 @@
     </section>
     <% } %>
 
+    </div>
+    <%# La colonne laterale n'existe qu'au-dela de 1440 px, la ou il reste
+        de la place a cote d'un texte qui reste centre. En dessous elle
+        n'est pas affichee : le contenu garde sa mise en page d'avant. %>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+    <aside class="avec-colonne__aside"><%- include('../partials/pub', { format: 3 }) %></aside>
+    <% } %>
   </div>
 </article>
 
