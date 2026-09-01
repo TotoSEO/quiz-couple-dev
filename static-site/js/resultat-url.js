@@ -147,6 +147,47 @@
     } catch (e2) {}
   }
 
+  // ── L'interstitiel de l'ecran de resultat ───────────────────────────────
+  // Le div d'accueil est pose dans la page, vide ; ses scripts partent d'ici,
+  // au moment ou le resultat s'affiche. Le declencheur est donc le clic de la
+  // personne sur « voir mes resultats », et non le chargement de la page :
+  // c'est le motif que Google decrit pour son propre interstitiel web, et
+  // celui qui ne touche jamais quelqu'un qui arrive depuis la recherche.
+  //
+  // L'injection apres coup fonctionne parce que la chaine de la regie n'a
+  // aucun document.write : leur propre requestform.js charge deja le format
+  // en creant une balise script. On fait exactement la meme chose.
+  //
+  // Une seule fois par chargement de page. Rejouer dans la foulee ne redonne
+  // pas d'interstitiel : la regie a son propre plafond de frequence, et un
+  // deuxieme passage a la suite serait de toute facon de trop.
+  var interstitielPose = false;
+
+  function poseInterstitiel() {
+    if (interstitielPose) return;
+    var hote = document.querySelector('[data-pub-differee]');
+    if (!hote) return;
+    var format = hote.getAttribute('data-pub-differee');
+    var site = hote.getAttribute('data-pub-site');
+    if (!format || !site) return;
+    interstitielPose = true;
+
+    var cible = hote.firstElementChild || hote;
+    [
+      '//ads.themoneytizer.com/s/gen.js?type=' + format,
+      '//ads.themoneytizer.com/s/requestform.js?siteId=' + site + '&formatId=' + format
+    ].forEach(function (src) {
+      var b = document.createElement('script');
+      b.src = src;
+      // Une balise script creee en JavaScript part en asynchrone par defaut,
+      // et l'ordre d'execution n'est alors plus garanti. Le premier fichier
+      // installe ce dont le second se sert : il faut donc rendre la sequence
+      // explicite, ce que fait async a faux.
+      b.async = false;
+      cible.appendChild(b);
+    });
+  }
+
   // ── Le rafraichissement des emplacements publicitaires ──────────────────
   // Vide tant qu'aucun tag n'est pose. Une regie ne recharge pas ses
   // emplacements d'elle-meme quand l'adresse change sans rechargement : c'est
@@ -258,6 +299,7 @@
     }
     mesure();
     rafraichirPubs();
+    poseInterstitiel();
 
     if (!PORTE_ACTIVE || porte || !cible) { suite(); return; }
     var lang = opts.lang || document.documentElement.lang || 'fr';

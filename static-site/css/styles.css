@@ -8773,6 +8773,11 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .pub--3  { min-height: 600px; }
 .pub--11 { min-height: 0; }
 
+/* L'interstitiel se dessine par-dessus la page, pas dans le flux : son div
+   n'est qu'un point d'ancrage. Il ne doit donc reserver aucune hauteur, sans
+   quoi il laisserait un blanc de 250 px au milieu de l'ecran de resultat. */
+.pub--15 { display: block; min-height: 0; margin: 0; }
+
 /* Le billboard fait 970 px de large sur grand écran : sans cette limite il
    déborderait sur un téléphone avant même que la régie ait choisi son
    format de repli. */
