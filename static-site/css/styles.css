@@ -9903,6 +9903,29 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 .dark .quiz-engine { box-shadow: var(--qe-ombre) hsl(var(--ink)); }
 
+/* ── L'ecran de resultat se passe du cadre du moteur ───────────
+   Les zones du resultat sont deja des cartes : trait a l'encre, ombre franche,
+   coins arrondis. Les laisser dans la carte du moteur faisait un cadre, dans
+   un cadre, dans un cadre, et l'oeil ne savait plus ou regarder. On retire le
+   plus grand des trois, celui qui n'apportait qu'une bordure de plus : les
+   zones deviennent les cartes de la page.
+
+   La lueur tournante de .quiz-result-card part avec lui, elle n'avait de sens
+   que sur un fond. Le debordement redevient visible, sinon le cadre disparu
+   continuerait de rogner les ombres des cartes qu'il contenait. */
+.qr-plan {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  padding: 0;
+  overflow: visible;
+}
+/* En sombre, l'ombre du moteur est posee par « .dark .quiz-engine », plus
+   specifique que la regle ci-dessus : il faut la retirer nommement. */
+.dark .qr-plan { box-shadow: none; background: none; }
+.qr-plan::before { content: none; }
+
 /* ── L'entete de progression ──────────────────────────────────── */
 .quiz-progress-label, .quiz-progress-pct {
   border: var(--qe-trait-p) solid hsl(var(--ink));
