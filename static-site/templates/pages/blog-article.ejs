@@ -139,9 +139,8 @@
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
 <div class="section-padding">
-  <div class="container mx-auto px-4">
-    <div class="avec-colonne">
-      <div class="avec-colonne__contenu">
+  <div class="avec-colonne avec-colonne--large">
+    <div class="avec-colonne__contenu container mx-auto px-4">
     <article class="blog-article">
 
         <!-- Table of contents (collapsed by default) -->
@@ -265,12 +264,11 @@
     <%- include('../partials/pub', { format: 11 }) %>
     <%- include('../partials/pub', { format: 19 }) %>
     <% } %>
-      </div>
-      <%# La colonne laterale n'apparait qu'au-dela de 1280 px. En dessous,
-          l'article retrouve la colonne unique d'avant, au pixel pres. %>
-      <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
-      <aside class="avec-colonne__aside"><%- include('../partials/pub', { format: 3 }) %></aside>
-      <% } %>
     </div>
+    <%# La colonne laterale n'apparait qu'au-dela de 1600 px. En dessous,
+        l'article retrouve la colonne unique d'avant, au pixel pres. %>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+    <aside class="avec-colonne__aside"><%- include('../partials/pub', { format: 3 }) %></aside>
+    <% } %>
   </div>
 </div>
