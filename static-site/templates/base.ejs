@@ -322,6 +322,14 @@
     <% if (avecPub) { %>
     <%- include('partials/pub', { format: 28 }) %>
     <% } %>
+    <%# L'interstitiel de l'ecran de resultat. Le div est pose ici, vide : ses
+        scripts ne partent qu'au moment ou le resultat s'affiche, sur le clic
+        de la personne. C'est le bon declencheur, celui que Google decrit pour
+        son propre interstitiel web, et non le chargement de la page, qui
+        frapperait les visiteurs arrivant depuis la recherche. %>
+    <% if (avecPub && typeof pageJouable !== 'undefined' && pageJouable) { %>
+    <%- include('partials/pub', { format: 15, differe: true }) %>
+    <% } %>
     <% if (typeof pageJouable !== 'undefined' && pageJouable) { %>
     <%- include('partials/quiz-reviews', { lang: lang, t: t, routeKey: routeKey, genrePage: (typeof genrePage !== 'undefined' ? genrePage : 'test'), supabaseUrl: supabaseUrl, supabaseKey: supabaseKey }) %>
     <% } %>
