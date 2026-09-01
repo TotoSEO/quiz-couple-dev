@@ -88,7 +88,8 @@
     "sourcePrefSous": "So seht ihr Quiz Couple leichter in euren Google-Suchen und deren KI-Antworten!",
     "sourcePrefAria": "Quiz Couple zu den bevorzugten Quellen bei Google hinzufügen",
     "sourcePrefAide": "Eine Google-Einstellung: Die Seiten, die ihr hinzufügt, erscheinen weiter oben in euren Ergebnissen und in den KI-Antworten. Sie hängt an eurem Google-Konto und lässt sich jederzeit entfernen.",
-    "sourcePrefAideAria": "Was ist eine bevorzugte Quelle?"
+    "sourcePrefAideAria": "Was ist eine bevorzugte Quelle?",
+    "cookiePrefs": "Cookies verwalten"
   },
   "buttons": {
     "start": "Starten",
