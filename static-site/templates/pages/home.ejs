@@ -560,6 +560,9 @@
   </div>
 </section>
 
+<%# Un seul encart sur l'accueil, apres les articles et avant les avis. %>
+<div class="container mx-auto px-4"><% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %></div>
+
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
 <!-- Reviews Section -->

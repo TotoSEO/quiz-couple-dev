@@ -36,6 +36,8 @@
   </div>
 </section>
 
+<% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
+
 <script>
 (function() {
   var params = new URLSearchParams(window.location.search);

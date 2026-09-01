@@ -110,6 +110,7 @@
   <div class="container mx-auto px-4">
     <div class="max-w-3xl mx-auto">
       <div id="quiz-engine" data-quiz="langage-amour" data-lang="<%= lang %>"><%- include('../partials/quiz-loading', { lang, routeKey }) %></div>
+      <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
     </div>
   </div>
 </section>
@@ -158,6 +159,7 @@
       </figure>
       <% } %>
     </section>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
     <%# Statistiques réelles : la seule chose que cette page peut dire et
         qu'aucun concurrent ne publie. Le bloc reste masqué tant que

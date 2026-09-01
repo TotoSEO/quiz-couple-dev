@@ -235,6 +235,10 @@
   </div>
 </section>
 
+<%# Sous le moteur, jamais au-dessus : une publicite devant le repousserait
+    hors du premier ecran sur telephone. %>
+<% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
+
 <!-- E-Book Lead Magnet (FR only) -->
 <% if (lang === 'fr') { %>
 <section class="ebook-section py-16 md:py-20" id="ebook-astro">
@@ -303,6 +307,7 @@
         <p><%- t(ns + ':section1.p2') %></p>
       </div>
     </section>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
     <!-- Section 2 -->
     <%- include('../partials/seo-figure', { contentImage: typeof contentImage !== 'undefined' ? contentImage : null, contentImageAlt: (typeof quizTitle !== 'undefined' ? quizTitle : (typeof rawTitle !== 'undefined' ? rawTitle : '')) }) %>

@@ -16,7 +16,7 @@ import {
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
-  estPageJouable, genrePageJouable,
+  estPageJouable, genrePageJouable, pagePublicitaire,
 } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
 import { buildGitDateIndex, dateLaPlusRecente } from './git-dates.js';
@@ -890,6 +890,7 @@ async function generatePage(routeKey, lang) {
     // Navigation/routing
     routeKey,
     pageJouable: estPageJouable(routeKey),
+    pagePublicitaire: pagePublicitaire(routeKey),
     genrePage: genrePageJouable(routeKey),
     pureteQuestions: routeKey === 'testPurete' ? pureteQuestions(lang) : null,
     pagePath,
@@ -1613,6 +1614,7 @@ async function generateBlogArticle(articleMeta, lang) {
     articleModifiedTime: article.modifiedAt || article.publishedAt,
     articleAuthor: authorData.name || 'Quiz Couple',
     routeKey: 'blog',
+    pagePublicitaire: true,
     pagePath,
     routeSlugs: ROUTE_SLUGS,
     languages: LANGUAGES,
@@ -1697,6 +1699,7 @@ async function generate404Pages() {
       noindex: 'noindex, follow',
       ogImage: `${BASE_URL}/og-image.webp`,
       routeKey: '404',
+      pagePublicitaire: false,
       pagePath: '/404',
       routeSlugs: ROUTE_SLUGS,
       languages: LANGUAGES,

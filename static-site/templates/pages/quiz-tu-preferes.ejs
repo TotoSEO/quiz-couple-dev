@@ -137,6 +137,7 @@
       <%# data-quiz sert au moteur a retrouver ses suggestions de fin de partie.
           Sans lui, cette page etait la seule a retomber sur un tirage au hasard. %>
       <div id="wyr-quiz" class="wyr-jeu" data-quiz="tu-preferes" data-lang="<%= lang %>"></div>
+      <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
     </div>
   </div>
 </section>
@@ -147,6 +148,7 @@
 <article class="py-16 md:py-24 seo-content">
   <div class="container mx-auto px-4 max-w-3xl">
 
+    <% var _pubPosee = false; %>
     <% for (var s = 1; s <= sectionCount; s++) {
       var sTitle = tryKeys('section' + s + '.title');
       if (!sTitle) continue;
@@ -177,6 +179,9 @@
       </div>
       <% } %>
     </section>
+    <%# Un seul encart dans le texte, après la première section : la boucle en
+        produit cinq, l'encart n'en accompagne qu'une. %>
+    <% if (!_pubPosee && typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { _pubPosee = true; %><%- include('../partials/pub', { format: 2 }) %><% } %>
     <% } %>
 
     <% if (faqEntries.length > 0) { %>

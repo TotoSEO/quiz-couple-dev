@@ -256,6 +256,21 @@ export function estPageJouable(routeKey) {
   return /^(test|quiz)/.test(routeKey) || routeKey === 'zamours' || ROUTES_JEUX.includes(routeKey);
 }
 
+// Pages qui portent de la publicite. La liste dit l'inverse de la precedente :
+// on nomme ce qui n'en porte pas, parce que c'est le petit nombre et parce que
+// c'est ce qui doit rester vrai quoi qu'il arrive. Une page de mentions
+// legales, un formulaire de contact ou le tableau de bord n'ont rien a
+// monetiser, et une publicite sur la page de confirmation d'un ebook qu'on
+// vient de promettre ferait mauvais genre.
+const ROUTES_SANS_PUB = [
+  'admin', 'legalMentions', 'privacy', 'contact', 'ebookConfirm', 'sitemap', '404',
+];
+
+export function pagePublicitaire(routeKey) {
+  if (!routeKey) return false;
+  return !ROUTES_SANS_PUB.includes(routeKey);
+}
+
 // « Ce jeu a deja ete joue » / « ce quiz a deja ete joue » / « ce test a deja
 // ete realise » : le mot depend du genre de page, pas du prefixe de la cle.
 // Les Z'Amours porte la cle « zamours » mais reste un quiz.
