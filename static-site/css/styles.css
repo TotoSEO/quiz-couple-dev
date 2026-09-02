@@ -10663,10 +10663,15 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    d'une version a l'autre.
 
    Le lien permanent de la plateforme est une pastille flottante posee
-   par-dessus la page. Le pied de page en propose deja un, traduit et
-   range avec les autres liens, qui ouvre exactement le meme panneau.
-   On masque donc le sien, mais seulement une fois le notre affiche :
-   la classe est posee par consentement.js au moment ou il devoile le
-   lien, jamais avant.
+   par-dessus la page, en bas a droite. Le pied de page en propose deja
+   un, traduit et range avec les autres liens, qui ouvre exactement le
+   meme panneau. On masque donc le sien d'emblee : masque seulement une
+   fois le notre affiche, il apparaissait puis disparaissait a chaque
+   chargement de page, le temps que la plateforme reponde.
+
+   Le seul cas ou il doit rester est une page sans notre lien : c'est
+   consentement.js qui le signale, avant meme que la plateforme arrive,
+   pour que personne ne se retrouve sans moyen de revenir sur son choix.
    ═══════════════════════════════════════════════════════════════════ */
-.cmp-lien-propre .qc-cmp2-persistent-link { display: none !important; }
+.qc-cmp2-persistent-link { display: none !important; }
+.cmp-pastille-regie .qc-cmp2-persistent-link { display: block !important; }
