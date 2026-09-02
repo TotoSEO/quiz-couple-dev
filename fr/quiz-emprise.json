@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "badge": "Test gratuit",
+    "title": "Suis-je sous emprise psychologique ?",
+    "titleHighlight": "sous emprise",
+    "description": "Vingt questions sur votre liberté dans le couple : vos amis, votre argent, vos choix, votre parole. Pour mettre des mots sur <strong>ce que vous n'osez peut-être plus dire</strong>. Résultat immédiat et confidentiel.",
+    "subtitle": "Gratuit, confidentiel, résultat immédiat",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "L'emprise, ce n'est pas une dispute de trop",
+    "intro": "On imagine l'emprise avec des cris et des interdictions. La plupart du temps, ça ne ressemble pas à ça.",
+    "p1": "L'emprise psychologique est une relation où l'un des deux prend, petit à petit, le pouvoir sur la vie de l'autre. Pas d'un coup. Par des remarques, des bouderies, des « je dis ça pour toi », des colères qu'on apprend à éviter. Au bout de quelques mois ou de quelques années, la personne sous emprise ne décide plus grand-chose seule. Et souvent, elle ne s'en rend pas compte.",
+    "p2": "C'est justement ce qui la rend difficile à voir de l'intérieur. Chaque chose prise à part a une explication : il est jaloux parce qu'il a souffert, elle contrôle l'argent parce qu'elle gère mieux, il ne veut pas voir mes amis parce qu'ils ne l'aiment pas. Mises ensemble, ces explications dessinent autre chose.",
+    "p3": "Ce test ne regarde pas votre partenaire. Il vous regarde, vous : ce que vous osez encore faire, dire, penser. Il ne remplace pas un professionnel et il ne pose pas de diagnostic. Il sert à répondre à une question simple. Est-ce que je suis encore libre dans mon couple ?",
+    "quote": "« Le premier signe de l'emprise, c'est qu'on commence à se demander si on a le droit. »"
+  },
+  "section2": {
+    "title": "Liberté ou emprise : le tableau",
+    "intro": "Le même sujet, vu dans un couple libre et dans un couple sous emprise.",
+    "headerScore": "Sujet",
+    "headerLevel": "Dans un couple libre",
+    "headerAnalysis": "Sous emprise",
+    "row1Score": "Vos amis",
+    "row1Level": "Vous les voyez quand vous voulez",
+    "row1Analysis": "Vous les voyez moins, et c'est toujours « à cause d'eux »",
+    "row2Score": "Votre argent",
+    "row2Level": "Vous en disposez, les gros choix se font à deux",
+    "row2Analysis": "Vous justifiez des achats ordinaires, ou vous devez demander",
+    "row3Score": "Votre téléphone",
+    "row3Level": "Personne ne le fouille",
+    "row3Analysis": "Il est contrôlé, et vous supprimez des messages par précaution",
+    "row4Score": "Vos souvenirs",
+    "row4Level": "On peut avoir deux versions et en rire",
+    "row4Analysis": "On vous dit que vous inventez, et vous finissez par douter",
+    "row5Score": "Sa mauvaise humeur",
+    "row5Level": "C'est la sienne, elle passe",
+    "row5Analysis": "Vous marchez sur des œufs, et vous avez peur"
+  },
+  "section3": {
+    "title": "Les mécanismes qu'on reconnaît après coup",
+    "p1": "Les personnes qui sont sorties d'une relation d'emprise décrivent presque toutes les mêmes étapes. Sur le moment, aucune ne se voit clairement.",
+    "sub1Title": "L'isolement",
+    "sub1P1": "Ça commence par une remarque sur une amie, puis sur votre famille, puis sur vos collègues. Personne n'est assez bien, tout le monde vous veut du mal ou vous influence. Petit à petit, vous voyez moins de monde, pour éviter les discussions. Et un jour, il ne reste plus que lui ou elle pour vous dire ce qui est vrai.",
+    "sub2Title": "Le doute sur votre propre mémoire",
+    "sub2P1": "« Je n'ai jamais dit ça », « tu inventes », « tu exagères toujours ». Quand ces phrases reviennent souvent, on commence à ne plus se faire confiance. On note les choses, on réécoute les conversations dans sa tête, on s'excuse pour des faits dont on est pourtant sûr. Ça porte un nom, le gaslighting, et c'est un des ressorts les plus puissants de l'emprise.",
+    "sub3Title": "La culpabilité retournée",
+    "sub3P1": "Il ou elle vous a blessé et, à la fin de la discussion, c'est vous qui vous excusez. Vous avez « provoqué », vous avez « mal compris », vous êtes « trop sensible ». Une fois, ça arrive à tout le monde. Quand c'est toujours dans le même sens, ce n'est plus une dispute, c'est un mécanisme.",
+    "sub4Title": "La peur au quotidien",
+    "sub4P1": "Pas forcément la peur des coups. La peur de la réaction, de la bouderie qui va durer trois jours, de la colère froide, du « tu vas me le payer ». Vous adaptez votre tenue, vos horaires, vos mots. Vous marchez sur des œufs. C'est là que l'emprise se voit le mieux : dans tout ce que vous faites pour éviter que ça éclate."
+  },
+  "section4": {
+    "title": "Emprise, couple toxique, pervers narcissique : trois questions différentes",
+    "p1": "Ces trois mots reviennent souvent ensemble, et ils ne désignent pas la même chose. Ce test regarde ce que la relation vous fait. Un autre regarde <a href=\"/test-couple-toxique/\">comment vous fonctionnez à deux</a> : les disputes, le respect, la jalousie, la communication. Un troisième regarde <a href=\"/test-pervers-narcissique/\">le profil de votre partenaire</a>, et la mécanique bien particulière qu'il installe.",
+    "p2": "On peut être sous emprise sans que l'autre soit un pervers narcissique : une jalousie maladive, une anxiété très forte, une éducation où « l'homme décide » ou « la femme tient la maison » suffisent parfois. Et on peut vivre un couple toxique, avec des disputes et des mots qui blessent des deux côtés, sans emprise. L'emprise, c'est quand la relation n'est plus à égalité, et qu'un seul des deux a peur.",
+    "tip": "Si vous hésitez entre les trois, commencez par celui-ci. C'est le seul qui ne demande rien sur l'autre, seulement sur vous, et c'est souvent le plus facile à faire honnêtement."
+  },
+  "section5": {
+    "title": "Pourquoi on ne part pas",
+    "intro": "« Mais pourquoi tu restes ? » est la question la plus posée, et la plus injuste. Voici les vraies raisons, et aucune n'est de la faiblesse.",
+    "pillar1Title": "Parce que ça n'a pas toujours été comme ça",
+    "pillar1Text": "Le début était souvent formidable, trop même. On attend le retour de cette personne-là, et de temps en temps elle revient, quelques jours. Ces bons moments servent à tenir. Ils font partie du mécanisme.",
+    "pillar2Title": "Parce qu'on ne se fait plus confiance",
+    "pillar2Text": "Après des mois à s'entendre dire qu'on exagère, on finit par le croire. Partir demande de se faire confiance, et c'est exactement ce que l'emprise a abîmé en premier. Elle se mêle souvent à une <a href=\"/test-dependance-affective/\">dépendance affective</a> qui existait déjà, et qu'elle a nourrie.",
+    "pillar3Title": "Parce qu'on a peur",
+    "pillar3Text": "De sa réaction, de ce qu'il ou elle ferait, à vous, aux enfants, ou à lui-même. Cette peur est souvent fondée, et elle se prépare : on ne quitte pas une relation d'emprise sur un coup de tête, on la quitte avec un plan et des gens autour.",
+    "pillar4Title": "Parce qu'il ne reste plus personne",
+    "pillar4Text": "L'isolement a fait son travail. Les amis se sont éloignés, la famille a été tenue à distance, et l'idée de tout recommencer seul fait plus peur que de rester. C'est le premier fil à retisser, bien avant de décider quoi que ce soit."
+  },
+  "section6": {
+    "title": "Par où commencer, selon votre résultat",
+    "p1": "Il n'y a pas d'urgence à tout décider ce soir. Il y a une urgence à ne plus être seul avec ça.",
+    "sub1Title": "Reprendre un lien à l'extérieur",
+    "sub1P1": "Une amie, un frère, une collègue. Quelqu'un à qui vous pouvez raconter les faits, pas votre analyse, juste les faits. Le regard de quelqu'un qui vous connaît d'avant remet les choses à leur place plus vite que n'importe quel test.",
+    "sub2Title": "Noter ce qui se passe",
+    "sub2P1": "Une phrase, une date. Pas pour monter un dossier, pour ne plus douter de votre mémoire. Quand on relit trois mois de notes, ce qui paraissait « pas si grave » au jour le jour prend son vrai poids.",
+    "sub3Title": "Parler à un professionnel",
+    "sub3P1": "Un psychologue, une association, un médecin. En France, le 3919 (Violences Femmes Info) répond aussi aux violences psychologiques. Il est gratuit et anonyme, et il ne sert pas seulement aux situations de coups. Les hommes peuvent appeler le 116 006, le numéro d'aide aux victimes.",
+    "sub4Title": "Ne rien annoncer avant d'être prêt",
+    "sub4P1": "Si votre résultat est élevé et que vous avez peur, ne dites pas à votre partenaire que vous avez fait ce test, ni que vous pensez partir. Les associations le répètent : le moment le plus risqué, c'est celui où l'autre comprend qu'il perd le contrôle. On prépare d'abord, on annonce ensuite, et jamais seul.",
+    "tip": "Si vous êtes en danger, appelez le 17 ou le 112. Une relation d'emprise peut basculer, et personne ne vous reprochera d'avoir appelé pour rien."
+  },
+  "section7": {
+    "title": "Comment fonctionne ce test",
+    "p1": "Vingt questions sur votre vie de tous les jours, quatre réponses à chaque fois, de la plus libre à la plus contrainte. Vous répondez pour vous, sur les six derniers mois. Il n'y a rien à deviner sur votre partenaire, et vos réponses ne sont pas enregistrées.",
+    "p2": "Certaines questions pèsent plus lourd : celles sur la peur, l'isolement, l'argent et le doute sur votre mémoire, parce que ce sont les piliers de l'emprise. Et une réponse qui décrit de la peur, une surveillance ou des coups fait monter le résultat d'un cran à elle seule, quel que soit le reste : bouder de temps en temps et lever la main ne peuvent pas peser pareil. Le score vous place sur quatre paliers, de « libre dans votre couple » à « emprise installée », avec à chaque fois ce que ça veut dire et une première chose à faire.",
+    "tip": "Ce test n'est pas un diagnostic, et il ne remplace pas une personne formée à ces situations. Si votre résultat vous fait peur, c'est déjà une information. Prenez-la au sérieux, et parlez-en à quelqu'un."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose sur l'emprise",
+    "faq1Q": "C'est quoi, l'emprise psychologique dans un couple ?",
+    "faq1A": "C'est une relation où l'un des deux prend le pouvoir sur la vie de l'autre, en douceur et sur la durée : ses amis, son argent, ses choix, jusqu'à sa façon de penser. Il n'y a pas forcément de cris ni de coups. Il y a de la peur, du doute et un isolement qui grandit. La personne sous emprise ne s'en rend souvent compte qu'après coup.",
+    "faq2Q": "Quels sont les signes qu'on est sous emprise ?",
+    "faq2A": "Vous voyez moins vos proches, vous justifiez vos dépenses ou vos sorties, vous adaptez vos mots et vos tenues pour éviter une réaction, vous vous excusez souvent sans plus savoir pourquoi, et vous doutez de votre mémoire. Le signe le plus sûr : vous avez peur de sa réaction, et vous organisez votre vie autour de cette peur.",
+    "faq3Q": "Peut-on être sous emprise sans violence physique ?",
+    "faq3A": "Oui, et c'est même le cas le plus fréquent. L'emprise est une violence psychologique. La loi française la reconnaît comme telle : le harcèlement au sein du couple est puni, y compris sans aucun coup. Les numéros d'aide comme le 3919 répondent aussi à ces situations.",
+    "faq4Q": "Est-ce que je peux être sous emprise sans que mon partenaire soit un pervers narcissique ?",
+    "faq4A": "Oui. Le pervers narcissique est un profil précis, plutôt rare. L'emprise, elle, peut venir d'une jalousie maladive, d'une anxiété très forte, d'une éducation où l'un des deux « commande », ou d'un mélange de tout ça. Pour vous, l'important n'est pas d'étiqueter l'autre. C'est de mesurer ce que la relation vous fait.",
+    "faq5Q": "Comment sortir de l'emprise ?",
+    "faq5A": "Rarement seul, et rarement d'un coup. On commence par retrouver un lien à l'extérieur, une personne de confiance, puis un professionnel. On note ce qui se passe pour ne plus douter de soi. Et on prépare le départ avant de l'annoncer, parce que le moment où l'autre sent qu'il perd le contrôle est le plus délicat. Les associations spécialisées accompagnent exactement ça.",
+    "faq6Q": "Ce test est-il fiable ?",
+    "faq6A": "C'est un outil d'auto-observation, pas un diagnostic. Il vous aide à mettre des mots et à voir un ensemble là où, au quotidien, on ne voit que des détails isolés. Un résultat élevé ne prouve rien juridiquement et ne remplace pas l'avis d'un professionnel. Mais si vous vous êtes reconnu dans la plupart des questions, ce n'est pas rien, et ça mérite d'en parler."
+  },
+  "jsonLd": {
+    "about": "emprise psychologique dans le couple"
+  }
+}

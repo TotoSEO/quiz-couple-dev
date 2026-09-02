@@ -360,5 +360,17 @@
     "metaTitle": "Jeu Oui ou Non pour couples en ligne - 120 questions",
     "metaDescription": "120 situations de vie à deux à trancher par oui ou par non, avec les votes de tous les autres couples affichés après chaque réponse. Gratuit, sans inscription.",
     "description": "Des situations de couple à trancher par oui ou non, avec les votes de tous les autres affichés après chaque réponse."
+  },
+  "testAimeEncore": {
+    "title": "Test : m'aime-t-il encore ? 20 questions pour savoir",
+    "shortTitle": "Test m'aime-t-il encore ?",
+    "description": "Vingt situations du quotidien pour savoir si ses sentiments sont toujours là, ou si quelque chose s'est éloigné. Résultat immédiat, gratuit.",
+    "metaDescription": "Est-ce qu'il ou elle vous aime encore ? Vingt questions sur le quotidien pour distinguer la routine d'un vrai éloignement. Gratuit, résultat immédiat et pistes pour en parler."
+  },
+  "testEmprise": {
+    "title": "Test emprise psychologique : suis-je sous emprise ? Gratuit",
+    "shortTitle": "Test emprise psychologique",
+    "description": "Vingt questions sur votre liberté dans le couple : amis, argent, choix, parole. Pour mettre des mots sur ce que vous vivez.",
+    "metaDescription": "Suis-je sous emprise psychologique ? Vingt questions sur vos amis, votre argent, vos choix et votre parole. Un test gratuit et confidentiel, avec des pistes et des numéros d'aide."
   }
 }

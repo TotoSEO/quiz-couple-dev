@@ -256,6 +256,28 @@
     // ── Confiance quiz (solo scoring, trust assessment) ──
     // ── Dependance affective (solo, ascendant : plus de points = plus dependant) ──
     'dependance':     { prefix: 'dependance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'dependance', ascending: true },
+    // M'aime-t-il encore : les reponses vont du signe le plus rassurant au
+    // plus froid, le score monte donc avec l'eloignement (r1 aime, r4 defait).
+    'aime-encore':    { prefix: 'aimeEncore', engine: 'solo', totalQ: 20, pool: 20, quizType: 'aime-encore', ascending: true },
+    // Emprise : de la reponse la plus libre a la plus contrainte, le score
+    // monte avec l'emprise (r1 libre, r4 emprise installee). Les points sont
+    // ecrits dans gd.json (ptsExplicites) : les piliers, peur, isolement,
+    // argent, memoire, surveillance, valent bien plus que l'apparence, et la
+    // reponse qui decrit des coups vaut a elle seule le double d'un pilier.
+    // Les planchers vont plus loin : une seule de ces reponses porte le
+    // resultat au moins au palier indique, quel que soit le reste.
+    'emprise':        { prefix: 'emprise', engine: 'solo', totalQ: 20, pool: 20, quizType: 'emprise', ascending: true, ptsExplicites: true,
+                        planchers: [
+                          { q: 6,  o: 'e', palier: 4 },   // ca a deja eclate : coups, objets casses
+                          { q: 16, o: 'd', palier: 3 },   // peur de ce qu'il ou elle ferait
+                          { q: 6,  o: 'd', palier: 3 },   // peur quand il ou elle est de mauvaise humeur
+                          { q: 15, o: 'd', palier: 3 },   // surveillance : localisation, mots de passe
+                          { q: 4,  o: 'd', palier: 3 },   // pas d'acces reel a l'argent
+                          { q: 3,  o: 'd', palier: 3 },   // « tu inventes », plus sur de rien
+                          { q: 2,  o: 'd', palier: 3 },   // presque tous les proches perdus de vue
+                          { q: 9,  o: 'd', palier: 3 },   // « sans moi tu n'es rien »
+                          { q: 19, o: 'd', palier: 3 }    // peur des consequences si ca se savait
+                        ] },
 
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
 
@@ -1088,6 +1110,54 @@
       24: { d: 'projection',    w: 2 },
       25: { d: 'decision',      w: 3 }
     },
+    // M'aime-t-il encore : les projets, la tendresse, l'ecoute et la reponse
+    // a « il faut qu'on parle » disent plus qu'un telephone en main.
+    aimeEncore: {
+      1:  { d: 'accueil',    w: 2 },
+      2:  { d: 'mots',       w: 1 },
+      3:  { d: 'ecoute',     w: 3 },
+      4:  { d: 'tendresse',  w: 3 },
+      5:  { d: 'projets',    w: 3 },
+      6:  { d: 'soin',       w: 2 },
+      7:  { d: 'reparation', w: 3 },
+      8:  { d: 'regard',     w: 2 },
+      9:  { d: 'place',      w: 2 },
+      10: { d: 'temps',      w: 2 },
+      11: { d: 'desir',      w: 1 },
+      12: { d: 'ecoute',     w: 2 },
+      13: { d: 'telephone',  w: 1 },
+      14: { d: 'manque',     w: 2 },
+      15: { d: 'attentions', w: 1 },
+      16: { d: 'parole',     w: 3 },
+      17: { d: 'fierte',     w: 2 },
+      18: { d: 'projets',    w: 3 },
+      19: { d: 'temps',      w: 2 },
+      20: { d: 'intuition',  w: 2 }
+    },
+    // Emprise : la peur, l'isolement, l'argent et le doute sur sa propre
+    // memoire sont les piliers ; les gouts vestimentaires n'en sont qu'un signe.
+    emprise: {
+      1:  { d: 'decision',     w: 2 },
+      2:  { d: 'isolement',    w: 3 },
+      3:  { d: 'memoire',      w: 3 },
+      4:  { d: 'argent',       w: 3 },
+      5:  { d: 'telephone',    w: 2 },
+      6:  { d: 'peur',         w: 3 },
+      7:  { d: 'culpabilite',  w: 2 },
+      8:  { d: 'apparence',    w: 1 },
+      9:  { d: 'mots',         w: 2 },
+      10: { d: 'rabaissement', w: 2 },
+      11: { d: 'parole',       w: 2 },
+      12: { d: 'sorties',      w: 2 },
+      13: { d: 'excuses',      w: 2 },
+      14: { d: 'entourage',    w: 2 },
+      15: { d: 'surveillance', w: 3 },
+      16: { d: 'peur',         w: 3 },
+      17: { d: 'estime',       w: 2 },
+      18: { d: 'cycle',        w: 1 },
+      19: { d: 'honte',        w: 2 },
+      20: { d: 'synthese',     w: 2 }
+    },
     // Relation a distance : la place occupee la-bas et la fin annoncee de la
     // distance comptent plus que la qualite d'un appel.
     distanceAime: {
@@ -1584,6 +1654,7 @@
       hasSkip: cfg.hasSkip || false,
       hasLocalStorage: cfg.hasLocalStorage || false,
       needsName: cfg.needsName || false,
+      planchers: cfg.planchers || [],
       partenaire: partenaireResultat(cfg.quizType || 'solo')
     });
   }

@@ -73,7 +73,11 @@
     "quizRencontre": "Questions de premier rendez-vous",
     "jeuJamais": "Je n'ai jamais",
     "jeuQuiPourrait": "Qui pourrait ?",
-    "jeuOuiNon": "Oui ou non"
+    "jeuOuiNon": "Oui ou non",
+    "testAimeEncore": "M'aime-t-il encore ?",
+    "testAimeEncoreDesc": "Ses sentiments sont-ils toujours là ?",
+    "testEmprise": "Suis-je sous emprise ?",
+    "testEmpriseDesc": "Votre liberté dans le couple, en 20 questions"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

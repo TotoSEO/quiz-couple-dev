@@ -72,7 +72,11 @@
     "quizRencontre": "Fragen fürs erste Date",
     "jeuJamais": "Ich hab noch nie",
     "jeuQuiPourrait": "Wer könnte?",
-    "jeuOuiNon": "Ja oder Nein"
+    "jeuOuiNon": "Ja oder Nein",
+    "testAimeEncore": "Liebt er mich noch?",
+    "testAimeEncoreDesc": "Sind die Gefühle noch da?",
+    "testEmprise": "Stehe ich unter Kontrolle?",
+    "testEmpriseDesc": "Deine Freiheit in der Beziehung, in 20 Fragen"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

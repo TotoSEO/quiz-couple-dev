@@ -1490,6 +1490,8 @@ var QuizEngine = (function() {
     { type: 'test', key: 'couche', icon: '🛏️', route: 'testCouche' },
     { type: 'test', key: 'secret', icon: '💌', route: 'testSecret' },
     { type: 'test', key: 'distance-aime', icon: '📞', route: 'testDistanceAime' },
+    { type: 'test', key: 'aime-encore', icon: '💞', route: 'testAimeEncore' },
+    { type: 'test', key: 'emprise', icon: '🔒', route: 'testEmprise' },
     { type: 'test', key: 'ex', icon: '🕰️', route: 'testEx' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
@@ -1578,7 +1580,11 @@ var QuizEngine = (function() {
     'amour-amitie':    ['testSecret', 'testSuisJeAmoureux', 'testAmourHabitude'],
     'crush':           ['testSecret', 'testSuisJeAmoureux', 'testAmourAmitie'],
     'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
-    'distance-aime':   ['testDistance', 'testSecret', 'testAttachement'],
+    'distance-aime':   ['testDistance', 'testAimeEncore', 'testAttachement'],
+    // Le doute sur ses sentiments appelle la question du couple, puis de soi.
+    'aime-encore':     ['testFinCouple', 'testAmourHabitude', 'testCouple'],
+    // L'emprise appelle le regard sur la relation, puis sur l'autre.
+    'emprise':         ['testToxic', 'testPervers', 'testDependance'],
     'personnalite':    ['testLangageAmour', 'testAttachement', 'testCouple'],
     'langage-amour':   ['testPersonnalite', 'testAttachement', 'testCouple'],
     'attachement':     ['testPersonnalite', 'testLangageAmour', 'testConfiance'],
@@ -2054,6 +2060,16 @@ var QuizEngine = (function() {
     this.phase = 'intro';
     this.currentQ = 0;
     this.answers = [];
+    // La lettre choisie a chaque question, a cote des points : les planchers
+    // (ci-dessous) ont besoin de savoir quelle reponse a ete donnee, pas
+    // seulement combien elle valait.
+    this.choix = [];
+    // Planchers : une reponse qui, a elle seule, decrit une situation que le
+    // total ne doit pas pouvoir diluer (des coups, une surveillance, la peur
+    // de ce que l'autre ferait). Chaque entree nomme la question, la lettre
+    // et le palier minimum : { q: 6, o: 'e', palier: 4 }. Aucun test n'en
+    // declare par defaut, rien ne change pour les autres.
+    this.planchers = config.planchers || [];
     this.totalScore = 0;
     this.skippedCount = 0;
     this.playerName = '';
@@ -2229,6 +2245,7 @@ var QuizEngine = (function() {
         }
 
         self.answers[self.currentQ] = opt.points || 0;
+        self.choix[self.currentQ] = opt.id;
         self.totalScore = self.answers.reduce(function(s, v) { return s + (typeof v === 'number' ? v : 0); }, 0);
         // Divorce: check conditional Q11 (Q10 answer 'b' = has children)
         if (self.quizType === 'divorce' && q.id === 10) {
@@ -2261,6 +2278,7 @@ var QuizEngine = (function() {
         if (prevAnswer === 'skip') self.skippedCount--;
         if (typeof prevAnswer === 'number') self.totalScore -= prevAnswer;
         delete self.answers[self.currentQ];
+        delete self.choix[self.currentQ];
         self.saveState();
         self.render();
       });
@@ -2273,6 +2291,7 @@ var QuizEngine = (function() {
       var skipBtn = el('button', 'btn btn-ghost text-sm text-muted-foreground', tg('question.skipQuestion', 'Passer cette question') + ' →');
       skipBtn.addEventListener('click', function() {
         self.answers[self.currentQ] = 'skip';
+        self.choix[self.currentQ] = 'skip';
         self.skippedCount++;
         self.saveState();
         if (self.currentQ < total - 1) { self.currentQ++; self.render(); }
@@ -2294,6 +2313,25 @@ var QuizEngine = (function() {
       if (this.totalScore >= r.min && this.totalScore <= r.max) { result = r; break; }
     }
     if (!result && this.results.length > 0) result = this.results[this.results.length - 1];
+
+    // Les planchers : si une des reponses donnees en declenche un, le score
+    // est porte au seuil du palier minimum et le verdict suit. Le score est
+    // releve plutot que le seul verdict, pour que l'anneau, les points et le
+    // titre disent la meme chose. Bouder de temps en temps et lever la main
+    // ne peuvent pas peser pareil, meme noyes dans dix-neuf autres reponses.
+    if (this.planchers.length && this.results.length) {
+      var palierMin = 0;
+      for (var p = 0; p < this.planchers.length; p++) {
+        var pl = this.planchers[p];
+        for (var qi = 0; qi < this.questions.length; qi++) {
+          if (this.questions[qi].id === pl.q && this.choix[qi] === pl.o && pl.palier > palierMin) palierMin = pl.palier;
+        }
+      }
+      if (palierMin > 0 && palierMin <= this.results.length) {
+        var plancher = this.results[palierMin - 1];
+        if (this.totalScore < plancher.min) { this.totalScore = plancher.min; result = plancher; }
+      }
+    }
 
     var maxScore = this.results.length > 0 ? this.results[this.results.length - 1].max : 100;
     var pct = Math.round((this.totalScore / maxScore) * 100);

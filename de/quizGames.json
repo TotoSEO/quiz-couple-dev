@@ -371,7 +371,9 @@
     "jeuJamais": "Ich hab noch nie",
     "testCrush": "Liebe-oder-Crush-Test",
     "jeuQuiPourrait": "Wer könnte?",
-    "jeuOuiNon": "Ja oder Nein"
+    "jeuOuiNon": "Ja oder Nein",
+    "testAimeEncore": "Test Liebt er oder sie mich noch",
+    "testEmprise": "Test psychische Kontrolle"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -676,5 +678,15 @@
     "orient_distance_raison": "Ihr habt angegeben, getrennt zu wohnen. Dort bedeuten dieselben Signale etwas anderes.",
     "orient_toxique_nom": "Ist meine Beziehung toxisch?",
     "orient_toxique_raison": "Eine Beziehung kann enden, weil sie erlischt, oder weil sie schadet. Das ist nicht dasselbe."
+  },
+  "aime-encore": {
+    "introQuestion": "Bevor du beginnst:",
+    "introQuote": "Antworte für die letzten drei Monate, nicht für die letzte Woche.",
+    "disclaimer": "Niemand kann in den Kopf eines anderen Menschen sehen. Dieser Test ordnet, was du siehst, er fällt kein Urteil."
+  },
+  "emprise": {
+    "introQuestion": "Du stellst dir die Frage:",
+    "introQuote": "„Stehe ich unter Kontrolle… oder dramatisiere ich?“",
+    "disclaimer": "Dieser Test ist weder eine Diagnose noch ein Urteil. Er schaut auf deine Freiheit in der Beziehung, nicht auf die Persönlichkeit deines Partners. Deine Antworten werden nicht gespeichert."
   }
 }

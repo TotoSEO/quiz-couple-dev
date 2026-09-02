@@ -348,5 +348,17 @@
     "metaTitle": "Gioco Sì o No per coppie online - 120 domande",
     "metaDescription": "120 situazioni di vita in due da decidere con un sì o un no, con i voti di tutte le altre coppie dopo ogni risposta. Gratis, senza registrazione.",
     "description": "Situazioni di coppia da decidere con un sì o un no, con i voti di tutti gli altri dopo ogni risposta."
+  },
+  "testAimeEncore": {
+    "title": "Test: mi ama ancora? 20 domande per capirlo",
+    "shortTitle": "Test mi ama ancora?",
+    "description": "Venti situazioni quotidiane per capire se i suoi sentimenti ci sono ancora, o se qualcosa si è allontanato. Risultato immediato, gratis.",
+    "metaDescription": "Ti ama ancora? Venti domande sulla vita quotidiana per distinguere la routine da un vero allontanamento. Gratis, risultato immediato e piste per parlarne."
+  },
+  "testEmprise": {
+    "title": "Test manipolazione psicologica nella coppia: sono sotto controllo?",
+    "shortTitle": "Test manipolazione psicologica",
+    "description": "Venti domande sulla tua libertà nella coppia: amici, soldi, scelte, voce. Per dare un nome a quello che vivi.",
+    "metaDescription": "Sono vittima di manipolazione psicologica nella mia coppia? Venti domande sui tuoi amici, i tuoi soldi, le tue scelte e la tua voce. Un test gratuito e confidenziale, con piste e numeri di aiuto."
   }
 }

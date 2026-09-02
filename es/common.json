@@ -72,7 +72,11 @@
     "quizRencontre": "Preguntas de primera cita",
     "jeuJamais": "Yo nunca",
     "jeuQuiPourrait": "¿Quién podría?",
-    "jeuOuiNon": "Sí o no"
+    "jeuOuiNon": "Sí o no",
+    "testAimeEncore": "¿Me sigue queriendo?",
+    "testAimeEncoreDesc": "¿Sus sentimientos siguen ahí?",
+    "testEmprise": "¿Estoy bajo control?",
+    "testEmpriseDesc": "Tu libertad en la pareja, en 20 preguntas"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",
