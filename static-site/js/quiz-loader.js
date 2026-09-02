@@ -260,8 +260,24 @@
     // plus froid, le score monte donc avec l'eloignement (r1 aime, r4 defait).
     'aime-encore':    { prefix: 'aimeEncore', engine: 'solo', totalQ: 20, pool: 20, quizType: 'aime-encore', ascending: true },
     // Emprise : de la reponse la plus libre a la plus contrainte, le score
-    // monte avec l'emprise (r1 libre, r4 emprise installee).
-    'emprise':        { prefix: 'emprise', engine: 'solo', totalQ: 20, pool: 20, quizType: 'emprise', ascending: true },
+    // monte avec l'emprise (r1 libre, r4 emprise installee). Les points sont
+    // ecrits dans gd.json (ptsExplicites) : les piliers, peur, isolement,
+    // argent, memoire, surveillance, valent bien plus que l'apparence, et la
+    // reponse qui decrit des coups vaut a elle seule le double d'un pilier.
+    // Les planchers vont plus loin : une seule de ces reponses porte le
+    // resultat au moins au palier indique, quel que soit le reste.
+    'emprise':        { prefix: 'emprise', engine: 'solo', totalQ: 20, pool: 20, quizType: 'emprise', ascending: true, ptsExplicites: true,
+                        planchers: [
+                          { q: 6,  o: 'e', palier: 4 },   // ca a deja eclate : coups, objets casses
+                          { q: 16, o: 'd', palier: 3 },   // peur de ce qu'il ou elle ferait
+                          { q: 6,  o: 'd', palier: 3 },   // peur quand il ou elle est de mauvaise humeur
+                          { q: 15, o: 'd', palier: 3 },   // surveillance : localisation, mots de passe
+                          { q: 4,  o: 'd', palier: 3 },   // pas d'acces reel a l'argent
+                          { q: 3,  o: 'd', palier: 3 },   // « tu inventes », plus sur de rien
+                          { q: 2,  o: 'd', palier: 3 },   // presque tous les proches perdus de vue
+                          { q: 9,  o: 'd', palier: 3 },   // « sans moi tu n'es rien »
+                          { q: 19, o: 'd', palier: 3 }    // peur des consequences si ca se savait
+                        ] },
 
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
 
@@ -1638,6 +1654,7 @@
       hasSkip: cfg.hasSkip || false,
       hasLocalStorage: cfg.hasLocalStorage || false,
       needsName: cfg.needsName || false,
+      planchers: cfg.planchers || [],
       partenaire: partenaireResultat(cfg.quizType || 'solo')
     });
   }
