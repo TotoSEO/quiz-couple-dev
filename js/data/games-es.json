@@ -371,7 +371,9 @@
     "jeuJamais": "Yo nunca",
     "testCrush": "Test amor o crush",
     "jeuQuiPourrait": "¿Quién podría?",
-    "jeuOuiNon": "Sí o no"
+    "jeuOuiNon": "Sí o no",
+    "testAimeEncore": "Test me sigue queriendo",
+    "testEmprise": "Test manipulación psicológica"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
@@ -676,5 +678,15 @@
     "orient_distance_raison": "Has dicho que vivís a distancia. Ahí las señales no significan lo mismo.",
     "orient_toxique_nom": "¿Mi relación es tóxica?",
     "orient_toxique_raison": "Una relación puede acabar porque se apaga, o porque hace daño. No es lo mismo."
+  },
+  "aime-encore": {
+    "introQuestion": "Antes de empezar:",
+    "introQuote": "Responde sobre los últimos tres meses, no sobre la semana pasada.",
+    "disclaimer": "Nadie puede leer la mente de otra persona. Este test pone orden en lo que ves, no dicta un veredicto."
+  },
+  "emprise": {
+    "introQuestion": "Te haces la pregunta:",
+    "introQuote": "« ¿Estoy bajo control… o estoy exagerando? »",
+    "disclaimer": "Este test no es ni un diagnóstico ni un juicio. Mira tu libertad en la pareja, no la personalidad de tu pareja. Tus respuestas no se guardan."
   }
 }

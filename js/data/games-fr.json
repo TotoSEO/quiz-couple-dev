@@ -373,7 +373,9 @@
     "jeuJamais": "Je n'ai jamais",
     "testCrush": "Test amour ou crush",
     "jeuQuiPourrait": "Qui pourrait ?",
-    "jeuOuiNon": "Oui ou non"
+    "jeuOuiNon": "Oui ou non",
+    "testAimeEncore": "Test m'aime-t-il encore",
+    "testEmprise": "Test emprise psychologique"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -678,5 +680,15 @@
     "orient_distance_raison": "Vous avez répondu que vous vivez à distance. Les signaux n'y ont pas le même sens.",
     "orient_toxique_nom": "Est-ce que mon couple est toxique ?",
     "orient_toxique_raison": "Une relation peut finir parce qu'elle s'éteint, ou parce qu'elle abîme. Ce n'est pas la même chose."
+  },
+  "aime-encore": {
+    "introQuestion": "Avant de commencer :",
+    "introQuote": "Répondez sur les trois derniers mois, pas sur la semaine dernière.",
+    "disclaimer": "Personne ne peut lire dans la tête de quelqu'un d'autre. Ce test met de l'ordre dans ce que vous voyez, il ne rend pas de verdict."
+  },
+  "emprise": {
+    "introQuestion": "Vous vous posez la question :",
+    "introQuote": "« Est-ce que je suis sous emprise… ou est-ce que je dramatise ? »",
+    "disclaimer": "Ce test n'est ni un diagnostic, ni un jugement. Il regarde votre liberté dans le couple, pas la personnalité de votre partenaire. Vos réponses ne sont pas enregistrées."
   }
 }

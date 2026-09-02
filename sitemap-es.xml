@@ -10,7 +10,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -70,7 +70,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/toxische-beziehung-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-relazione-tossica/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-couple-toxique/"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -82,7 +82,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/narzisstischer-partner-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-partner-narcisista/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-pervers-narcissique/"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -298,7 +298,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/eifersucht-test-paar/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-gelosia-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-jalousie-couple/"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -550,7 +550,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/fernbeziehung-liebt-er-sie-mich-noch/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/relazione-a-distanza-mi-ama-ancora/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/relation-a-distance-m-aime-t-il-encore/"/>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -563,6 +563,30 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/il-mio-ex-pensa-ancora-a-me/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/mon-ex-pense-t-il-elle-encore-a-moi/"/>
     <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-me-sigue-queriendo/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-m-aime-t-il-encore/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/does-he-she-still-love-me-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-me-sigue-queriendo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/liebt-er-sie-mich-noch-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/mi-ama-ancora-test/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-m-aime-t-il-encore/"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-manipulacion-psicologica-pareja/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-emprise-psychologique/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/coercive-control-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-manipulacion-psicologica-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/psychische-kontrolle-beziehung-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-manipolazione-psicologica-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-emprise-psychologique/"/>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
