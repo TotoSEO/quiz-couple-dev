@@ -34,7 +34,12 @@
 (function () {
   'use strict';
 
-  if (typeof window.__tcfapi !== 'function' || typeof window.gtag !== 'function') return;
+  // Sans plateforme, rien a traduire ni a rouvrir : on laisse sa pastille
+  // au cas ou elle arriverait quand meme par un autre chemin.
+  if (typeof window.__tcfapi !== 'function') {
+    document.documentElement.classList.add('cmp-pastille-regie');
+    return;
+  }
 
   var TOUT_ACCORDE = {
     analytics_storage: 'granted',
@@ -70,7 +75,7 @@
     };
   }
 
-  window.__tcfapi('addEventListener', 2, function (donnees, ok) {
+  if (typeof window.gtag === 'function') window.__tcfapi('addEventListener', 2, function (donnees, ok) {
     if (!ok || !donnees) return;
 
     // Hors du champ du RGPD : aucune banniere n'est montree, donc aucun refus
@@ -91,17 +96,20 @@
   // atteignable de partout. Il est masque tant que la CMP n'a pas repondu :
   // un lien qui n'ouvre rien vaut moins que pas de lien du tout.
   var liens = document.querySelectorAll('[data-cmp-ouvrir]');
-  if (!liens.length) return;
 
   // La plateforme pose aussi son propre lien permanent, une pastille
-  // flottante posee par-dessus la page. Deux chemins vers le meme panneau,
-  // c'est un doublon, et le notre est mieux place et traduit.
-  // La classe n'est ajoutee qu'une fois notre lien reellement affiche : si
-  // quoi que ce soit empeche celui-ci d'apparaitre, le leur reste, et
-  // personne ne se retrouve sans moyen de revenir sur son choix.
+  // flottante en bas a droite de la page. Deux chemins vers le meme
+  // panneau, c'est un doublon, et le notre est mieux place et traduit :
+  // la feuille de style masque la pastille d'emblee. Sur une page qui
+  // n'aurait pas notre lien, on la laisse, et on le dit tout de suite,
+  // avant que la plateforme n'arrive, pour qu'elle ne clignote pas.
+  if (!liens.length) {
+    document.documentElement.classList.add('cmp-pastille-regie');
+    return;
+  }
+
   function montrerLiens() {
     for (var i = 0; i < liens.length; i++) liens[i].hidden = false;
-    document.documentElement.classList.add('cmp-lien-propre');
   }
   window.__tcfapi('ping', 2, function (etat) {
     if (etat && etat.cmpStatus === 'loaded') montrerLiens();
