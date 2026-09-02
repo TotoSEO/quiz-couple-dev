@@ -19,11 +19,13 @@
       configuration est enregistree, donc celui de la regie et non le notre. %>
   <link rel="preconnect" href="https://cmp.inmobi.com">
   <link rel="dns-prefetch" href="https://cmp.inmobi.com">
-  <%# La regie publicitaire est le premier domaine tiers que la page appelle
-      apres le consentement : on ouvre la connexion des l'en-tete, sinon le
-      premier emplacement paie le nom de domaine et la poignee de main TLS. %>
+  <%# La regie n'est appelee qu'une fois le document analyse, par js/pub.js,
+      et seulement pour les emplacements proches de l'ecran. Une connexion
+      ouverte des l'en-tete restait donc inutilisee le temps d'arriver la
+      (Chrome la referme au bout de dix secondes), et elle faisait une
+      cinquieme preconnexion la ou PageSpeed en tolere quatre. On garde la
+      resolution du nom : elle ne coute rien et vaut toute la visite. %>
   <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
-  <link rel="preconnect" href="https://ads.themoneytizer.com">
   <link rel="dns-prefetch" href="https://ads.themoneytizer.com">
   <% } %>
   <!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.3) -->
@@ -194,7 +196,11 @@
       avis partent a 193 ms, quand le plus grand element se peint a 192 ms. Une
       simple resolution de nom ne suffit donc pas, il faut la connexion
       complete, poignee de main comprise. %>
-  <link rel="preconnect" href="<%= supabaseUrl %>">
+  <%# Les appels a la base sont des fetch() avec en-tetes, donc en CORS : le
+      navigateur les fait passer par sa reserve de connexions anonymes, qui
+      n'est pas celle des scripts. Sans « crossorigin », la connexion ouverte
+      ici n'etait jamais reprise, et PageSpeed la signalait inutilisee. %>
+  <link rel="preconnect" href="<%= supabaseUrl %>" crossorigin>
   <link rel="dns-prefetch" href="<%= supabaseUrl %>">
   <title><%= rawTitle %></title>
   <meta name="description" content="<%= rawDescription %>">
@@ -290,7 +296,16 @@
   <link rel="preload" href="/assets/quiz-couple-hero.webp" as="image" type="image/webp">
   <!-- cf7a42f54f657854c287ed4d2afdf069 -->
   <% } else if (typeof featuredImage !== 'undefined' && featuredImage) { %>
+  <%# Le prechargement doit connaitre les memes candidats que la balise img :
+      sans « imagesrcset », il tirait toujours l'original de 1200 px, et le
+      navigateur, l'ayant deja en memoire, le gardait a la place de la variante
+      reduite que le srcset aurait choisie. Le href reste pour les navigateurs
+      qui ignorent imagesrcset. %>
+  <% if (typeof featuredImageSrcset !== 'undefined' && featuredImageSrcset) { %>
+  <link rel="preload" as="image" type="image/webp" href="<%= featuredImage %>" imagesrcset="<%= featuredImageSrcset %>" imagesizes="(min-width: 1200px) 500px, (min-width: 552px) 520px, calc(100vw - 32px)">
+  <% } else { %>
   <link rel="preload" href="<%= featuredImage %>" as="image" type="image/webp">
+  <% } %>
   <% } %>
 
   <!-- Full CSS -->

@@ -18,7 +18,11 @@
       else if (collee && y < 56) { collee = false; entete.classList.remove('est-collee'); }
     };
     window.addEventListener('scroll', poserEtat, { passive: true });
-    poserEtat();
+    // Le premier relevé attend que le navigateur ait fait sa propre mise en
+    // page : lire la position de défilement avant la force, et ce calcul
+    // complet coûtait 59 ms sur mobile d'après PageSpeed. Deux images plus
+    // tard, la mise en page est faite et la lecture ne coûte plus rien.
+    requestAnimationFrame(function() { requestAnimationFrame(poserEtat); });
   }
 
   // ── Menu mobile ─────────────────────────────────────────

@@ -906,6 +906,14 @@ async function generatePage(routeKey, lang) {
     ogImage: featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : `${BASE_URL}/og-image.webp`,
     featuredImage: featured ? `/quiz/featured/${featured.file}.webp` : null,
     featuredImageAlt: featured ? (featured.alt[lang] || featured.alt.fr) : '',
+    // La variante reduite de l'image de tete, quand elle existe dans le
+    // dossier 720/ : sur telephone, l'original de 1200 px etait affiche a
+    // 390 px de large, et PageSpeed comptait les octets en trop. Une image
+    // sans variante garde son seul fichier : rien ne casse, elle pese juste
+    // plus lourd. Les variantes sont produites une fois pour toutes et
+    // versionnees, la construction n'a besoin d'aucun outil d'image.
+    featuredImageSrcset: featured && fs.existsSync(path.join(PUBLIC_DIR, 'quiz', 'featured', '720', `${featured.file}.webp`))
+      ? `/quiz/featured/720/${featured.file}.webp 720w, /quiz/featured/${featured.file}.webp 1200w` : null,
     // L'illustration heritee n'est declaree que si son fichier existe : un
     // `old` pointant dans le vide afficherait un cadre d'image cassee.
     contentImage: featured && featured.old && fs.existsSync(path.join(PUBLIC_DIR, 'quiz', `${featured.old}.webp`))
