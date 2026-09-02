@@ -6,10 +6,17 @@
   var _fImg = (typeof featuredImage !== 'undefined') ? featuredImage : null;
   var _fAlt = (typeof featuredImageAlt !== 'undefined' && featuredImageAlt) ? featuredImageAlt : '';
   var _fVariant = (typeof variant !== 'undefined' && variant) ? variant : '';
+  /* Variante reduite (720 px) quand le generateur l'a trouvee : les telephones
+     la prennent, les grands ecrans et les ecrans denses gardent l'original de
+     1200 px. Les largeurs affichees viennent de styles.css : 500 px au plus
+     des 1200 px de fenetre, 520 px au plus en dessous, la largeur de l'ecran
+     moins les marges sur telephone. */
+  var _fSet = (typeof featuredImageSrcset !== 'undefined' && featuredImageSrcset) ? featuredImageSrcset : '';
+  var _fSizes = '(min-width: 1200px) 500px, (min-width: 552px) 520px, calc(100vw - 32px)';
 %>
 <% if (_fImg) { %>
 <figure class="quiz-hero-media<%= _fVariant === 'banner' ? ' quiz-hero-media--banner' : '' %>">
   <span class="quiz-hero-media__blob" aria-hidden="true"></span>
-  <img class="quiz-hero-media__img" src="<%= _fImg %>" alt="<%= _fAlt %>" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async">
+  <img class="quiz-hero-media__img" src="<%= _fImg %>"<% if (_fSet) { %> srcset="<%= _fSet %>" sizes="<%= _fSizes %>"<% } %> alt="<%= _fAlt %>" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async">
 </figure>
 <% } %>
