@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "badge": "Test gratuito",
+    "title": "Mi ama ancora?",
+    "titleHighlight": "ama ancora",
+    "description": "Venti situazioni di tutti i giorni per capire se <strong>i suoi sentimenti ci sono ancora</strong>, o se qualcosa si è allontanato. Risultato immediato, e qualche pista per quello che viene dopo.",
+    "subtitle": "Gratuito, confidenziale, risultato immediato",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Il dubbio che si installa senza fare rumore",
+    "intro": "La domanda non arriva tutta in una volta. Arriva a piccoli tocchi, e un giorno è lì.",
+    "p1": "Prima ci sono i dettagli. Un « ti amo » che non arriva più da solo. Serate uno accanto all'altro, ognuno sul proprio schermo. Un progetto di vacanze che resta vago da settimane. Presi uno per uno, questi dettagli non vogliono dire niente. Messi insieme, finiscono per porre una domanda che non si osa dire ad alta voce: mi ama ancora?",
+    "p2": "Questo test serve a guardare quei dettagli in faccia, con calma. Non emette un verdetto, nessuno può leggere nella testa di un'altra persona. Ma rimette i fatti in ordine: quello che fa, quello che non fa più, e da quando.",
+    "p3": "Una cosa da tenere a mente prima di rispondere: amare meno intensamente che all'inizio non vuol dire non amare più. La maggior parte delle coppie passa per periodi piatti, e molti si chiedono proprio allora se restano <a href=\"/it/test-amore-o-abitudine/\">per amore o per abitudine</a>. Il test distingue tra una passione che si è calmata e un legame che si sta sciogliendo.",
+    "quote": "« La cosa più dura non è sentire un no. È non sapere più cosa pensa. »"
+  },
+  "section2": {
+    "title": "Cosa rassicura, cosa deve mettere in allerta",
+    "intro": "La stessa quotidianità si può leggere in due modi. Questa tabella mette fianco a fianco quello che si vede in chi ama ancora, e in chi si è allontanato.",
+    "headerScore": "Situazione",
+    "headerLevel": "Ti ama ancora",
+    "headerAnalysis": "Qualcosa si è allontanato",
+    "row1Score": "Gli racconti la tua giornata",
+    "row1Level": "Ascolta e fa domande",
+    "row1Analysis": "Guarda il telefono, o taglia corto",
+    "row2Score": "Un litigio",
+    "row2Level": "Si fa pace, se ne riparla, anche in modo maldestro",
+    "row2Analysis": "Il silenzio dura giorni, o il litigio serve ad allontanarsi ancora",
+    "row3Score": "I progetti a sei mesi",
+    "row3Level": "Ne parla con voglia",
+    "row3Analysis": "« Vedremo », o l'argomento viene evitato",
+    "row4Score": "I gesti di tenerezza",
+    "row4Level": "Ci sono, senza pensarci",
+    "row4Analysis": "Sei sempre tu a farli",
+    "row5Score": "Una sera senza niente in programma",
+    "row5Level": "Vi ritrovate, anche senza fare niente",
+    "row5Analysis": "Due coinquilini educati"
+  },
+  "section3": {
+    "title": "Cosa cambia quando qualcuno non ama più",
+    "p1": "Quando i sentimenti se ne vanno, raramente si vede nelle grandi dichiarazioni. Si vede in quattro punti molto concreti della vita quotidiana.",
+    "sub1Title": "Il tempo che ti dedica",
+    "sub1P1": "Chi ama trova il tempo, anche quando non ne ha. Propone, sposta qualcosa, torna a casa un po' prima. Quando il legame si allontana, è il contrario: il lavoro, gli amici, lo sport, tutto viene prima, e a te resta quello che avanza. Attenzione però, un periodo molto pieno esiste in ogni vita. Quello che deve metterti in allerta è che duri, e che a lui o a lei non dispiaccia.",
+    "sub2Title": "I progetti",
+    "sub2P1": "È spesso il segnale più netto. Chi ti ama si proietta con te, anche nelle piccole cose: un fine settimana tra due mesi, un mobile da comprare, Natale da chi. Chi dubita resta nel vago, e chi non ama più evita del tutto l'argomento. Se senti spesso « non so dove sarò », ascolta quella frase per quello che è.",
+    "sub3Title": "La tenerezza e il desiderio",
+    "sub3P1": "Il desiderio cala in tutte le coppie, non è un segnale di per sé. La tenerezza, invece, se ne va molto più tardi. Una mano sulla schiena passando, un bacio senza motivo, un abbraccio davanti alla tv: quando tutto questo sparisce insieme al desiderio, e sembra mancare solo a te, c'è qualcosa da guardare.",
+    "sub4Title": "L'ascolto",
+    "sub4P1": "Chi si ama non lo si ascolta per educazione, lo si ascolta perché si vuole sapere. Se le tue frasi cadono nel vuoto, se devi ripetere tutto, se le tue preoccupazioni non vengono più ricordate, non è una questione di memoria. Molte coppie che vanno male hanno prima <a href=\"/it/test-relazione-sana/\">smesso di parlarsi davvero</a>, molto prima di smettere di amarsi."
+  },
+  "section4": {
+    "title": "Amare meno intensamente non è non amare più",
+    "intro": "Prima di concludere, bisogna escludere i falsi allarmi. Quattro situazioni somigliano alla fine dei sentimenti e non lo sono.",
+    "pillar1Title": "La routine",
+    "pillar1Text": "Dopo qualche anno, non ci si guarda più nello stesso modo. È normale. La routine addormenta l'attenzione, non uccide l'amore. Se i gesti tornano appena si esce dalla quotidianità, un fine settimana, una sera senza i bambini, il legame c'è.",
+    "pillar2Title": "La stanchezza",
+    "pillar2Text": "Un bambino che non dorme, un lavoro che trabocca, un genitore malato, un trasloco: chi è esausto non ha più niente da dare, e non ha niente a che vedere con te. Il test lo mostra bene, del resto. La stanchezza abbassa i gesti, non l'ascolto né i progetti.",
+    "pillar3Title": "Un periodo difficile",
+    "pillar3Text": "Un lutto, o una depressione che si installa. La persona si chiude in se stessa, e tu hai l'impressione di essere messo da parte. Qui non è l'amore che manca, è lo spazio per esprimerlo. Torna quando la persona sta meglio.",
+    "pillar4Title": "Un vero allontanamento",
+    "pillar4Text": "Quando i quattro segnali della sezione precedente sono presenti insieme da mesi, e niente torna nemmeno fuori dalla quotidianità, la domanda non è più « mi ama ancora? » ma « <a href=\"/it/test-e-la-fine-della-mia-relazione/\">sta finendo?</a> ». Sono due test diversi, e il secondo prende il posto del primo."
+  },
+  "section5": {
+    "title": "Cosa puoi fare già da stasera",
+    "p1": "Un risultato, qualunque sia, non serve a niente se lo si tiene per sé. Ecco da dove cominciare, in ordine.",
+    "sub1Title": "1. Osservare una settimana, senza mettere alla prova niente",
+    "sub1P1": "Non si tratta di tendere una trappola, né di « vedere se se ne accorge ». Solo di guardare cosa succede, e di annotare cosa ti fa bene e cosa ti manca. Una settimana basta per separare una brutta giornata da una tendenza.",
+    "sub2Title": "2. Fare la domanda con semplicità",
+    "sub2P1": "Non « mi ami ancora? » a mezzanotte dopo un litigio. Piuttosto, in un momento tranquillo: « Ho l'impressione che ci stiamo allontanando, lo senti anche tu? ». La formulazione conta: parli di voi due, non della sua colpa.",
+    "sub3Title": "3. Dire cosa ti manca",
+    "sub3P1": "Con esempi precisi. « Vorrei che tornassimo a fare delle serate in due », « mi manca quando non mi chiedi com'è andata la giornata ». Chi ama ancora lo sente. Chi non ama più si difende, o si irrita.",
+    "sub4Title": "4. Guardare la coppia, non solo l'altro",
+    "sub4P1": "Se hai un dubbio sui suoi sentimenti, spesso ce n'è anche uno sulla coppia in sé. Fare insieme un <a href=\"/it/test-compatibilita-coppia/\">test di coppia in due</a> a volte dice più di dieci conversazioni: si vede dove sta ciascuno, senza che uno accusi l'altro.",
+    "tip": "Se hai paura della sua reazione quando parlate di voi, se cammini sulle uova da mesi, la domanda non è più solo quella dei sentimenti. Guarda dal lato della <a href=\"/it/test-relazione-tossica/\">relazione tossica</a> o della <a href=\"/it/test-manipolazione-psicologica-coppia/\">manipolazione psicologica</a>: sono altri test, e altre risposte."
+  },
+  "section6": {
+    "title": "E se fossi tu a non amare più?",
+    "p1": "A volte la domanda si rovescia. Ci si chiede se lui ci ama ancora e, in fondo, non si è più tanto sicuri di amarlo. Non è una confessione vergognosa, è una domanda onesta, e merita la sua risposta.",
+    "p2": "Due test se ne occupano meglio di questo: <a href=\"/it/test-sono-innamorato/\">capire se sei ancora innamorato</a> per i sentimenti, e amore o abitudine per quello che ti fa restare. Falli prima di porre la domanda all'altro. Si parla meglio quando si sa cosa si prova!"
+  },
+  "section7": {
+    "title": "Come funziona questo test",
+    "p1": "Venti situazioni di tutti i giorni, quattro risposte ogni volta, dalla più rassicurante alla più fredda. Non c'è una risposta giusta, c'è la tua. Rispondi sugli ultimi tre mesi, non sulla settimana scorsa: una settimana può essere brutta per mille motivi.",
+    "p2": "Ogni risposta vale dei punti, e alcune domande pesano di più, quelle sui progetti, sulla tenerezza e sull'ascolto, perché sono quelle che dicono di più. Il punteggio ti colloca su quattro livelli, da « ti ama, e si vede » a « il legame si è sciolto ». A ogni livello, una lettura e una pista.",
+    "tip": "Questo test è uno strumento per vedere più chiaro, non una prova. Nessuno conosce i sentimenti di un'altra persona. Se il risultato ti preoccupa, l'unica cosa che conta dopo è la conversazione."
+  },
+  "seo": {
+    "faqTitle": "Le domande che ci si fa",
+    "faq1Q": "Come capire se mi ama ancora senza chiederglielo?",
+    "faq1A": "Guardando quello che fa piuttosto che quello che dice, per diverse settimane. Il tempo che ti dedica, i progetti che fa con te, la tenerezza quotidiana e il modo in cui ti ascolta: questi quattro segnali non mentono a lungo. Ma a un certo punto bisognerà comunque chiederglielo. Nessun test sostituisce la conversazione.",
+    "faq2Q": "Non mi dice più ti amo, vuol dire che non mi ama più?",
+    "faq2A": "Non per forza. Molte persone dicono meno « ti amo » con gli anni e lo dimostrano in altro modo, occupandosi di te, facendo progetti, ascoltandoti. Il segnale non è la sparizione della parola. È la sparizione della parola e dei gesti insieme.",
+    "faq3Q": "La mia ragazza è distante da qualche settimana, devo preoccuparmi?",
+    "faq3A": "Qualche settimana è poco. Un periodo pieno, una stanchezza, una preoccupazione che non ti ha ancora raccontato possono spiegare una distanza. Quello che deve metterti in allerta è quando dura mesi, quando niente torna nemmeno fuori dalla quotidianità, e quando lei non sembra infastidita da quell'allontanamento. Nel dubbio, chiediglielo, con semplicità.",
+    "faq4Q": "Mi ama ancora ma litighiamo tutto il tempo, è possibile?",
+    "faq4A": "Sì, ed è anche frequente. I litigi dicono che c'è ancora qualcosa da difendere. Quello che preoccupa è piuttosto il contrario: niente più litigi, niente più reazioni, più niente. Dopo un litigio, guarda soprattutto se si fa pace o se si lascia andare.",
+    "faq5Q": "Ci si può innamorare di nuovo di qualcuno che si è smesso di amare?",
+    "faq5A": "Quando l'amore si è spento del tutto, è raro. Ma la maggior parte delle volte, quello che prendiamo per la fine dei sentimenti è un lungo periodo senza attenzione. E lì, sì, spesso torna appena ci si ridà del tempo in due. È proprio per questo che il test separa i due casi.",
+    "faq6Q": "Questo test può dirmi se mi tradisce?",
+    "faq6A": "No. Un allontanamento può avere cento motivi, e un tradimento è solo uno di questi. Se è proprio questa domanda a tormentarti, esiste un <a href=\"/it/test-infedelta-coppia/\">test sui segnali di infedeltà</a>, che guarda altre cose."
+  },
+  "jsonLd": {
+    "about": "i sentimenti del partner nella coppia"
+  }
+}

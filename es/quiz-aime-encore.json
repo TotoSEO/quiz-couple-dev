@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "badge": "Test gratuito",
+    "title": "¿Me sigue queriendo?",
+    "titleHighlight": "sigue queriendo",
+    "description": "Veinte situaciones de todos los días para saber si <strong>sus sentimientos siguen ahí</strong>, o si algo se ha alejado. Resultado inmediato, y algunas pistas para lo que viene después.",
+    "subtitle": "Gratuito, confidencial, resultado inmediato",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "La duda que se instala sin hacer ruido",
+    "intro": "La pregunta no llega de golpe. Llega a pequeños toques, y un día está ahí.",
+    "p1": "Primero son detalles. Un « te quiero » que ya no sale solo. Noches uno al lado del otro, cada uno con su pantalla. Un plan de vacaciones que lleva semanas sin concretarse. Tomados uno a uno, esos detalles no significan nada. Juntos, acaban planteando una pregunta que no nos atrevemos a decir en voz alta: ¿me sigue queriendo?",
+    "p2": "Este test sirve para mirar esos detalles de frente, con calma. No dicta un veredicto, nadie puede leer la mente de otra persona. Pero pone los hechos en orden: lo que hace, lo que ya no hace, y desde cuándo.",
+    "p3": "Algo que conviene tener en mente antes de responder: querer con menos intensidad que al principio no es dejar de querer. La mayoría de las parejas pasan por épocas planas, y muchas personas se preguntan entonces si siguen <a href=\"/es/test-amor-o-costumbre/\">por amor o por costumbre</a>. El test distingue entre una pasión que se ha calmado y un vínculo que se está deshaciendo.",
+    "quote": "« Lo más duro no es oír un no. Es no saber ya lo que piensa. »"
+  },
+  "section2": {
+    "title": "Lo que tranquiliza, lo que debe alertar",
+    "intro": "El mismo día a día puede leerse de dos maneras. Esta tabla pone lado a lado lo que se ve en alguien que sigue queriendo, y en alguien que se ha alejado.",
+    "headerScore": "Situación",
+    "headerLevel": "Te sigue queriendo",
+    "headerAnalysis": "Algo se ha alejado",
+    "row1Score": "Le cuentas tu día",
+    "row1Level": "Escucha y hace preguntas",
+    "row1Analysis": "Mira el móvil, o corta la conversación",
+    "row2Score": "Una discusión",
+    "row2Level": "Se arregla, se vuelve a hablar, aunque sea torpemente",
+    "row2Analysis": "El silencio dura días, o la discusión sirve para alejarse más",
+    "row3Score": "Planes a seis meses",
+    "row3Level": "Habla de ellos con ganas",
+    "row3Analysis": "« Ya veremos », o evita el tema",
+    "row4Score": "Los gestos de cariño",
+    "row4Level": "Están ahí, sin pensarlo",
+    "row4Analysis": "Siempre eres tú quien los hace",
+    "row5Score": "Una noche sin nada previsto",
+    "row5Level": "Os reencontráis, aunque sea sin hacer nada",
+    "row5Analysis": "Dos compañeros de piso educados"
+  },
+  "section3": {
+    "title": "Lo que cambia cuando alguien deja de querer",
+    "p1": "Cuando los sentimientos se van, rara vez se nota en las grandes declaraciones. Se nota en cuatro lugares muy concretos del día a día.",
+    "sub1Title": "El tiempo que te dedica",
+    "sub1P1": "Alguien que quiere encuentra tiempo, incluso cuando no lo tiene. Propone, mueve algo de sitio, vuelve un poco antes a casa. Cuando el vínculo se aleja, es al revés: el trabajo, los amigos, el deporte, todo va antes, y tú te quedas con lo que sobra. Ojo, eso sí, una época muy cargada existe en todas las vidas. Lo que debe alertarte es que dure, y que a él o a ella no le moleste.",
+    "sub2Title": "Los planes",
+    "sub2P1": "Suele ser la señal más clara. Alguien que te quiere se proyecta contigo, incluso en cosas pequeñas: un fin de semana dentro de dos meses, un mueble que comprar, Navidad en casa de quién. Alguien que duda se queda en lo vago, y alguien que ya no quiere evita el tema directamente. Si oyes a menudo « no sé dónde estaré », escucha esa frase por lo que es.",
+    "sub3Title": "El cariño y el deseo",
+    "sub3P1": "El deseo baja en todas las parejas, no es una señal por sí solo. El cariño, en cambio, se va mucho más tarde. Una mano en la espalda al pasar, un beso sin motivo, un abrazo delante de la tele: cuando todo eso desaparece a la vez que el deseo, y parece que solo tú lo echas de menos, hay algo que mirar.",
+    "sub4Title": "La escucha",
+    "sub4P1": "A alguien a quien quieres no lo escuchas por educación, lo escuchas porque quieres saber. Si tus frases caen en el vacío, si tienes que repetirlo todo, si tus preocupaciones ya no se recuerdan, no es una cuestión de memoria. Muchas parejas que van mal primero <a href=\"/es/test-relacion-sana/\">dejaron de hablarse de verdad</a>, mucho antes de dejar de quererse."
+  },
+  "section4": {
+    "title": "Querer con menos intensidad no es dejar de querer",
+    "intro": "Antes de concluir nada, hay que descartar las falsas alarmas. Cuatro situaciones se parecen al final de los sentimientos y no lo son.",
+    "pillar1Title": "La rutina",
+    "pillar1Text": "Después de unos años, ya no os miráis de la misma manera. Es normal. La rutina adormece la atención, no mata el amor. Si los gestos vuelven en cuanto salís del día a día, un fin de semana, una noche sin los niños, el vínculo está ahí.",
+    "pillar2Title": "El agotamiento",
+    "pillar2Text": "Un bebé que no dorme, un trabajo que desborda, un padre enfermo, una mudanza: alguien agotado no tiene nada más que dar, y no tiene nada que ver contigo. El test lo muestra bien, por cierto. El cansancio baja los gestos, no la escucha ni los planes.",
+    "pillar3Title": "Una mala época",
+    "pillar3Text": "Un duelo, o una depresión que se instala. La persona se cierra en sí misma, y tú tienes la sensación de quedarte al margen. Aquí no es el amor lo que falta, es el espacio para expresarlo. Vuelve cuando la persona está mejor.",
+    "pillar4Title": "Un alejamiento real",
+    "pillar4Text": "Cuando las cuatro señales de la sección anterior llevan meses juntas, y nada vuelve ni siquiera fuera de la rutina, la pregunta ya no es « ¿me sigue queriendo? » sino « <a href=\"/es/test-es-el-final-de-mi-relacion/\">¿esto se está acabando?</a> ». Son dos tests distintos, y el segundo toma el relevo del primero."
+  },
+  "section5": {
+    "title": "Lo que puedes hacer desde esta noche",
+    "p1": "Un resultado, sea cual sea, no sirve de nada si te lo guardas. Por aquí se empieza, en orden.",
+    "sub1Title": "1. Observar una semana, sin poner a prueba nada",
+    "sub1P1": "No se trata de tenderle una trampa, ni de « ver si se da cuenta ». Solo de mirar lo que pasa, y de apuntar lo que te hace bien y lo que echas de menos. Una semana basta para separar un mal día de una tendencia.",
+    "sub2Title": "2. Hacer la pregunta con sencillez",
+    "sub2P1": "No « ¿me sigues queriendo? » a medianoche después de una discusión. Mejor en un momento tranquilo: « Tengo la sensación de que nos estamos alejando, ¿tú también lo notas? ». La formulación importa: hablas de vosotros dos, no de su culpa.",
+    "sub3Title": "3. Decir lo que echas de menos",
+    "sub3P1": "Con ejemplos concretos. « Me gustaría que volviéramos a tener noches para los dos », « me da pena cuando no me preguntas cómo me ha ido el día ». Alguien que sigue queriendo escucha eso. Alguien que ya no quiere se defiende, o se irrita.",
+    "sub4Title": "4. Mirar la pareja, no solo al otro",
+    "sub4P1": "Si dudas de sus sentimientos, casi siempre hay también una duda sobre la pareja en sí. Hacer juntos un <a href=\"/es/test-compatibilidad-pareja/\">test de pareja a dos</a> a veces dice más que diez conversaciones: se ve dónde está cada uno, sin que uno acuse al otro.",
+    "tip": "Si te da miedo su reacción cuando habláis de vosotros, si llevas meses pisando huevos, la pregunta ya no es solo la de los sentimientos. Mira hacia la <a href=\"/es/test-relacion-toxica/\">relación tóxica</a> o hacia la <a href=\"/es/test-manipulacion-psicologica-pareja/\">manipulación psicológica</a>: son otros tests, y otras respuestas."
+  },
+  "section6": {
+    "title": "¿Y si fueras tú quien ya no quiere?",
+    "p1": "A veces la pregunta se da la vuelta. Te preguntas si te sigue queriendo y, en el fondo, ya no estás tan seguro de quererle a él. No es una confesión vergonzosa, es una pregunta honesta, y merece su propia respuesta.",
+    "p2": "Dos tests se ocupan de eso mejor que este: <a href=\"/es/test-estoy-enamorado/\">saber si sigues enamorado</a> para los sentimientos, y amor o costumbre para lo que te hace quedarte. Hazlos antes de preguntarle al otro. ¡Se habla mejor cuando uno sabe lo que siente!"
+  },
+  "section7": {
+    "title": "Cómo funciona este test",
+    "p1": "Veinte situaciones de todos los días, cuatro respuestas cada vez, de la más tranquilizadora a la más fría. No hay respuesta correcta, hay la tuya. Responde sobre los últimos tres meses, no sobre la semana pasada: una semana puede ser mala por mil razones.",
+    "p2": "Cada respuesta vale puntos, y algunas preguntas pesan más, las de los planes, el cariño y la escucha, porque son las que más dicen. Tu puntuación te sitúa en cuatro niveles, de « te quiere, y se nota » a « el vínculo se ha deshecho ». En cada nivel, una lectura y una pista.",
+    "tip": "Este test es una herramienta para ver más claro, no una prueba. Nadie conoce los sentimientos de otra persona. Si el resultado te preocupa, lo único que cuenta después es la conversación."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que nos hacemos",
+    "faq1Q": "¿Cómo saber si me sigue queriendo sin preguntárselo?",
+    "faq1A": "Mirando lo que hace más que lo que dice, durante varias semanas. El tiempo que te dedica, los planes que hace contigo, el cariño del día a día y la manera en que te escucha: esas cuatro señales no mienten mucho tiempo. Pero en algún momento habrá que preguntárselo de todas formas. Ningún test sustituye la conversación.",
+    "faq2Q": "Ya no me dice te quiero, ¿significa que ya no me quiere?",
+    "faq2A": "No necesariamente. Mucha gente dice menos « te quiero » con los años y lo demuestra de otra manera, cuidándote, haciendo planes, escuchándote. La señal no es que desaparezca la palabra. Es que desaparezcan la palabra y los gestos a la vez.",
+    "faq3Q": "Mi novia lleva unas semanas distante, ¿debo preocuparme?",
+    "faq3A": "Unas semanas es poco. Una época cargada, un cansancio, una preocupación que aún no te ha contado pueden explicar una distancia. Lo que debe alertarte es que dure meses, que nada vuelva ni siquiera fuera del día a día, y que a ella no parezca molestarle ese alejamiento. Ante la duda, pregúntale, con sencillez.",
+    "faq4Q": "Me sigue queriendo pero discutimos todo el tiempo, ¿es posible?",
+    "faq4A": "Sí, y es incluso frecuente. Las discusiones dicen que todavía hay algo que defender. Lo preocupante es más bien lo contrario: ya no hay discusiones, ni reacciones, ni nada. Después de una discusión, mira sobre todo si se arregla o si se deja arrastrar.",
+    "faq5Q": "¿Se puede volver a enamorarse de alguien a quien se ha dejado de querer?",
+    "faq5A": "Cuando el amor se ha apagado del todo, es raro. Pero la mayoría de las veces, lo que tomamos por el final de los sentimientos es una larga época sin atención. Y ahí, sí, suele volver en cuanto os dais tiempo para los dos. Justamente por eso el test separa los dos casos.",
+    "faq6Q": "¿Este test puede decirme si me engaña?",
+    "faq6A": "No. Un alejamiento puede tener cien razones, y una infidelidad es solo una de ellas. Si es esa pregunta concreta la que te reconcome, existe un <a href=\"/es/test-infidelidad-pareja/\">test sobre las señales de infidelidad</a>, que mira otras cosas."
+  },
+  "jsonLd": {
+    "about": "los sentimientos de la pareja"
+  }
+}

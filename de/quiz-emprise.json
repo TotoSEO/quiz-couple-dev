@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "badge": "Kostenloser Test",
+    "title": "Stehe ich unter psychischer Kontrolle in meiner Beziehung?",
+    "titleHighlight": "psychischer Kontrolle",
+    "description": "Zwanzig Fragen zu deiner Freiheit in der Beziehung: deine Freunde, dein Geld, deine Entscheidungen, deine Stimme. Um Worte zu finden für <strong>das, was du dich vielleicht nicht mehr zu sagen traust</strong>. Sofortiges und vertrauliches Ergebnis.",
+    "subtitle": "Kostenlos, vertraulich, sofortiges Ergebnis",
+    "jumpBtn": "Test starten"
+  },
+  "section1": {
+    "title": "Kontrolle ist nicht ein Streit zu viel",
+    "intro": "Man stellt sich Kontrolle mit Schreien und Verboten vor. Meistens sieht sie nicht so aus.",
+    "p1": "Psychische Kontrolle ist eine Beziehung, in der einer von beiden nach und nach die Macht über das Leben des anderen übernimmt. Nicht auf einmal. Durch Bemerkungen, Schmollen, „Ich sag das nur für dich“, Wutausbrüche, die man zu vermeiden lernt. Nach ein paar Monaten oder ein paar Jahren entscheidet die kontrollierte Person kaum noch etwas allein. Und oft merkt sie es nicht.",
+    "p2": "Genau das macht es von innen so schwer zu sehen. Jede Sache für sich hat eine Erklärung: Er ist eifersüchtig, weil er verletzt wurde, sie kontrolliert das Geld, weil sie es besser kann, er will meine Freunde nicht sehen, weil sie ihn nicht mögen. Zusammen ergeben diese Erklärungen etwas anderes.",
+    "p3": "Dieser Test schaut nicht auf deinen Partner. Er schaut auf dich: was du dich noch traust zu tun, zu sagen, zu denken. Er ersetzt keine Fachperson und stellt keine Diagnose. Er dient dazu, eine einfache Frage zu beantworten. Bin ich in meiner Beziehung noch frei?",
+    "quote": "„Das erste Zeichen von Kontrolle ist, dass man anfängt, sich zu fragen, ob man darf.“"
+  },
+  "section2": {
+    "title": "Freiheit oder Kontrolle: die Tabelle",
+    "intro": "Dasselbe Thema, gesehen in einer freien Beziehung und in einer kontrollierenden.",
+    "headerScore": "Thema",
+    "headerLevel": "In einer freien Beziehung",
+    "headerAnalysis": "Unter Kontrolle",
+    "row1Score": "Deine Freunde",
+    "row1Level": "Du siehst sie, wann du willst",
+    "row1Analysis": "Du siehst sie seltener, und immer „wegen ihnen“",
+    "row2Score": "Dein Geld",
+    "row2Level": "Du verfügst darüber, große Entscheidungen fallen zu zweit",
+    "row2Analysis": "Du rechtfertigst gewöhnliche Einkäufe, oder du musst fragen",
+    "row3Score": "Dein Handy",
+    "row3Level": "Niemand durchsucht es",
+    "row3Analysis": "Es wird kontrolliert, und du löschst Nachrichten zur Sicherheit",
+    "row4Score": "Deine Erinnerungen",
+    "row4Level": "Es darf zwei Versionen geben, und man lacht darüber",
+    "row4Analysis": "Man sagt dir, du erfindest das, und du zweifelst am Ende",
+    "row5Score": "Seine schlechte Laune",
+    "row5Level": "Sie gehört ihm, sie geht vorbei",
+    "row5Analysis": "Du läufst auf Eierschalen, und du hast Angst"
+  },
+  "section3": {
+    "title": "Die Mechanismen, die man erst hinterher erkennt",
+    "p1": "Menschen, die aus einer kontrollierenden Beziehung herausgekommen sind, beschreiben fast alle dieselben Etappen. Im Moment selbst ist keine davon klar zu sehen.",
+    "sub1Title": "Die Isolation",
+    "sub1P1": "Es beginnt mit einer Bemerkung über eine Freundin, dann über deine Familie, dann über deine Kollegen. Niemand ist gut genug, alle wollen dir schaden oder beeinflussen dich. Nach und nach siehst du weniger Leute, um Diskussionen zu vermeiden. Und eines Tages bleibt nur noch er oder sie, um dir zu sagen, was wahr ist.",
+    "sub2Title": "Der Zweifel am eigenen Gedächtnis",
+    "sub2P1": "„Das habe ich nie gesagt“, „du erfindest das“, „du übertreibst immer“. Wenn diese Sätze oft wiederkommen, beginnt man, sich selbst nicht mehr zu trauen. Man schreibt Dinge auf, spielt Gespräche im Kopf noch einmal ab, entschuldigt sich für Fakten, bei denen man sich eigentlich sicher ist. Das hat einen Namen, Gaslighting, und es ist einer der stärksten Hebel der Kontrolle.",
+    "sub3Title": "Die umgedrehte Schuld",
+    "sub3P1": "Er oder sie hat dich verletzt, und am Ende des Gesprächs bist du es, der sich entschuldigt. Du hast „provoziert“, du hast „falsch verstanden“, du bist „zu empfindlich“. Einmal passiert das jedem. Wenn es immer in dieselbe Richtung geht, ist es kein Streit mehr, es ist ein Mechanismus.",
+    "sub4Title": "Die Angst im Alltag",
+    "sub4P1": "Nicht unbedingt die Angst vor Schlägen. Die Angst vor der Reaktion, vor dem Schmollen, das drei Tage dauern wird, vor der kalten Wut, vor dem „Das wirst du mir büßen“. Du passt deine Kleidung an, deine Zeiten, deine Worte. Du läufst auf Eierschalen. Genau dort zeigt sich Kontrolle am besten: in allem, was du tust, damit es nicht eskaliert."
+  },
+  "section4": {
+    "title": "Kontrolle, toxische Beziehung, narzisstischer Partner: drei verschiedene Fragen",
+    "p1": "Diese drei Begriffe tauchen oft zusammen auf, und sie bezeichnen nicht dasselbe. Dieser Test schaut darauf, was die Beziehung mit dir macht. Ein anderer schaut darauf, <a href=\"/de/toxische-beziehung-test/\">wie ihr zu zweit funktioniert</a>: Streit, Respekt, Eifersucht, Kommunikation. Ein dritter schaut auf <a href=\"/de/narzisstischer-partner-test/\">das Profil deines Partners</a>, und auf die ganz besondere Mechanik, die er aufbaut.",
+    "p2": "Man kann unter Kontrolle stehen, ohne dass der andere ein Narzisst ist: krankhafte Eifersucht, sehr starke Angst, eine Erziehung, in der „der Mann entscheidet“ oder „die Frau den Haushalt führt“, reichen manchmal aus. Und man kann eine toxische Beziehung leben, mit Streit und verletzenden Worten auf beiden Seiten, ohne Kontrolle. Kontrolle ist, wenn die Beziehung nicht mehr auf Augenhöhe ist, und nur einer von beiden Angst hat.",
+    "tip": "Wenn du zwischen den dreien zögerst, fang mit diesem an. Er ist der einzige, der nichts über den anderen fragt, nur über dich, und er ist oft der einfachste, den man ehrlich machen kann."
+  },
+  "section5": {
+    "title": "Warum man nicht geht",
+    "intro": "„Aber warum bleibst du?“ ist die häufigste Frage, und die ungerechteste. Hier sind die wahren Gründe, und keiner davon ist Schwäche.",
+    "pillar1Title": "Weil es nicht immer so war",
+    "pillar1Text": "Der Anfang war oft wunderbar, zu wunderbar sogar. Man wartet auf die Rückkehr dieses Menschen, und von Zeit zu Zeit kommt er zurück, für ein paar Tage. Diese guten Momente helfen durchzuhalten. Sie sind Teil des Mechanismus.",
+    "pillar2Title": "Weil man sich selbst nicht mehr traut",
+    "pillar2Text": "Nach Monaten, in denen man hört, dass man übertreibt, glaubt man es am Ende. Gehen verlangt, sich selbst zu vertrauen, und genau das hat die Kontrolle zuerst beschädigt. Oft vermischt sie sich mit einer <a href=\"/de/emotionale-abhaengigkeit-test/\">emotionalen Abhängigkeit</a>, die schon da war, und die sie genährt hat.",
+    "pillar3Title": "Weil man Angst hat",
+    "pillar3Text": "Vor seiner Reaktion, vor dem, was er oder sie tun würde, dir, den Kindern, oder sich selbst. Diese Angst ist oft begründet, und man muss sich darauf vorbereiten: Eine kontrollierende Beziehung verlässt man nicht aus einer Laune heraus, man verlässt sie mit einem Plan und mit Menschen um sich herum.",
+    "pillar4Title": "Weil niemand mehr da ist",
+    "pillar4Text": "Die Isolation hat ihre Arbeit getan. Die Freunde haben sich entfernt, die Familie wurde auf Abstand gehalten, und die Vorstellung, allein neu anzufangen, macht mehr Angst als zu bleiben. Das ist der erste Faden, den man wieder knüpfen muss, lange bevor man irgendetwas entscheidet."
+  },
+  "section6": {
+    "title": "Womit man anfängt, je nach Ergebnis",
+    "p1": "Es gibt keine Eile, heute Abend alles zu entscheiden. Es gibt eine Dringlichkeit, damit nicht mehr allein zu sein.",
+    "sub1Title": "Eine Verbindung nach außen wieder aufnehmen",
+    "sub1P1": "Eine Freundin, ein Bruder, eine Kollegin. Jemand, dem du die Fakten erzählen kannst, nicht deine Analyse, nur die Fakten. Der Blick eines Menschen, der dich von früher kennt, rückt die Dinge schneller zurecht als jeder Test.",
+    "sub2Title": "Aufschreiben, was passiert",
+    "sub2P1": "Ein Satz, ein Datum. Nicht, um eine Akte anzulegen, sondern um nicht mehr am eigenen Gedächtnis zu zweifeln. Wenn man drei Monate Notizen noch einmal liest, bekommt das, was im Alltag „nicht so schlimm“ wirkte, sein wahres Gewicht.",
+    "sub3Title": "Mit einer Fachperson sprechen",
+    "sub3P1": "Eine Psychologin, eine Beratungsstelle, ein Arzt. In Deutschland ist das Hilfetelefon „Gewalt gegen Frauen“ unter 116 016 rund um die Uhr erreichbar, kostenlos und anonym, und es ist auch für psychische Gewalt da, nicht nur für Schläge. Männer erreichen das Hilfetelefon „Gewalt an Männern“ unter 0800 123 99 00.",
+    "sub4Title": "Nichts ankündigen, bevor du bereit bist",
+    "sub4P1": "Wenn dein Ergebnis hoch ist und du Angst hast, sag deinem Partner nicht, dass du diesen Test gemacht hast, und nicht, dass du daran denkst zu gehen. Die Beratungsstellen wiederholen es: Der riskanteste Moment ist der, in dem der andere begreift, dass er die Kontrolle verliert. Erst vorbereiten, dann ankündigen, und nie allein.",
+    "tip": "Wenn du in Gefahr bist, ruf die 110 oder die 112 an. Eine kontrollierende Beziehung kann umschlagen, und niemand wird dir vorwerfen, umsonst angerufen zu haben."
+  },
+  "section7": {
+    "title": "Wie dieser Test funktioniert",
+    "p1": "Zwanzig Fragen zu deinem Alltag, jedes Mal vier Antworten, von der freiesten bis zur eingeschränktesten. Du antwortest für dich, für die letzten sechs Monate. Es gibt nichts über deinen Partner zu raten, und deine Antworten werden nicht gespeichert.",
+    "p2": "Manche Fragen wiegen mehr: die über Angst, Isolation, Geld und den Zweifel am eigenen Gedächtnis, weil das die Säulen der Kontrolle sind. Das Ergebnis ordnet dich auf vier Stufen ein, von „frei in deiner Beziehung“ bis „Kontrolle ist etabliert“, jedes Mal mit dem, was es bedeutet, und einem ersten Schritt.",
+    "tip": "Dieser Test ist keine Diagnose, und er ersetzt niemanden, der für solche Situationen ausgebildet ist. Wenn dir dein Ergebnis Angst macht, ist das schon eine Information. Nimm sie ernst, und sprich mit jemandem darüber."
+  },
+  "seo": {
+    "faqTitle": "Die Fragen zur psychischen Kontrolle",
+    "faq1Q": "Was ist psychische Kontrolle in einer Beziehung?",
+    "faq1A": "Es ist eine Beziehung, in der einer von beiden die Macht über das Leben des anderen übernimmt, sanft und über die Zeit: seine Freunde, sein Geld, seine Entscheidungen, bis hin zu seiner Art zu denken. Es gibt nicht unbedingt Schreie oder Schläge. Es gibt Angst, Zweifel und eine Isolation, die wächst. Die kontrollierte Person merkt es oft erst hinterher.",
+    "faq2Q": "Was sind die Anzeichen, dass man unter Kontrolle steht?",
+    "faq2A": "Du siehst deine Nahestehenden seltener, du rechtfertigst deine Ausgaben oder deine Ausflüge, du passt deine Worte und deine Kleidung an, um eine Reaktion zu vermeiden, du entschuldigst dich oft, ohne noch zu wissen wofür, und du zweifelst an deinem Gedächtnis. Das sicherste Zeichen: Du hast Angst vor seiner Reaktion, und du organisierst dein Leben um diese Angst herum.",
+    "faq3Q": "Kann man unter Kontrolle stehen, ohne körperliche Gewalt?",
+    "faq3A": "Ja, und das ist sogar der häufigste Fall. Kontrolle ist psychische Gewalt. Auch in Deutschland kann sie strafbar sein, etwa als Nötigung, Bedrohung oder Nachstellung, ganz ohne einen einzigen Schlag. Hilfetelefone wie 116 016 sind auch für diese Situationen da.",
+    "faq4Q": "Kann ich unter Kontrolle stehen, ohne dass mein Partner ein Narzisst ist?",
+    "faq4A": "Ja. Der narzisstische Partner ist ein genaues Profil, und eher selten. Kontrolle dagegen kann aus krankhafter Eifersucht kommen, aus sehr starker Angst, aus einer Erziehung, in der einer von beiden „das Sagen hat“, oder aus einer Mischung von all dem. Für dich ist nicht wichtig, den anderen zu etikettieren. Wichtig ist, zu messen, was die Beziehung mit dir macht.",
+    "faq5Q": "Wie kommt man aus einer kontrollierenden Beziehung heraus?",
+    "faq5A": "Selten allein, und selten auf einmal. Man beginnt damit, eine Verbindung nach außen wiederzufinden, eine Vertrauensperson, dann eine Fachperson. Man schreibt auf, was passiert, um nicht mehr an sich zu zweifeln. Und man bereitet den Weggang vor, bevor man ihn ankündigt, weil der Moment, in dem der andere spürt, dass er die Kontrolle verliert, der heikelste ist. Spezialisierte Beratungsstellen begleiten genau das.",
+    "faq6Q": "Ist dieser Test zuverlässig?",
+    "faq6A": "Er ist ein Werkzeug zur Selbstbeobachtung, keine Diagnose. Er hilft dir, Worte zu finden und ein Ganzes zu sehen, wo man im Alltag nur einzelne Details sieht. Ein hohes Ergebnis beweist rechtlich nichts und ersetzt nicht die Einschätzung einer Fachperson. Aber wenn du dich in den meisten Fragen wiedererkannt hast, ist das nicht nichts, und es verdient, dass du darüber sprichst."
+  },
+  "jsonLd": {
+    "about": "psychische Kontrolle in der Beziehung"
+  }
+}

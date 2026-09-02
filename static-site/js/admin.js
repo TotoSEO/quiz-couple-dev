@@ -375,6 +375,8 @@
     testCouche: 'A-t-il/elle couché ailleurs',
     testSecret: "M'aime-t-il/elle en secret",
     testDistanceAime: "M'aime-t-il/elle à distance",
+    testAimeEncore: "M'aime-t-il/elle encore",
+    testEmprise: 'Emprise psychologique',
     // 'zamours' est deja plus haut : c'est le seul identifiant identique dans
     // les deux nommages, une seule entree suffit.
     jeuDilemmes: 'Dilemmes',
@@ -458,6 +460,8 @@
     'rencontre': 'quizRencontre',
     'sain': 'testCoupleSain',
     'secret': 'testSecret',
+    'aime-encore': 'testAimeEncore',
+    'emprise': 'testEmprise',
     'suis-je-amoureux': 'testSuisJeAmoureux',
     'tentation': 'quizTentation',
     'tester-couple': 'testCouple',

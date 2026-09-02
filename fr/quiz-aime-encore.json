@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "badge": "Test gratuit",
+    "title": "Est-ce qu'il ou elle m'aime encore ?",
+    "titleHighlight": "m'aime encore",
+    "description": "Vingt situations de tous les jours pour savoir si <strong>ses sentiments sont toujours là</strong>, ou si quelque chose s'est éloigné. Résultat immédiat, et des pistes pour la suite.",
+    "subtitle": "Gratuit, confidentiel, résultat immédiat",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Le doute qui s'installe sans faire de bruit",
+    "intro": "La question ne vient pas d'un coup. Elle arrive par petites touches, et un jour elle est là.",
+    "p1": "Il y a d'abord des détails. Un « je t'aime » qui ne revient plus tout seul. Des soirées côte à côte, chacun sur son écran. Un projet de vacances qui reste vague depuis des semaines. Pris un par un, ces détails ne veulent rien dire. Mis ensemble, ils finissent par poser une question qu'on n'ose pas dire à voix haute : est-ce qu'il ou elle m'aime encore ?",
+    "p2": "Ce test sert à regarder ces détails en face, calmement. Il ne rend pas de verdict, personne ne peut lire dans la tête de quelqu'un d'autre. Mais il remet les faits dans l'ordre : ce qu'il ou elle fait, ce qu'il ou elle ne fait plus, et depuis quand.",
+    "p3": "Une chose à garder en tête avant de répondre : aimer moins fort qu'au début, ce n'est pas ne plus aimer. La plupart des couples passent par des périodes creuses, et beaucoup se demandent à ce moment-là s'ils restent <a href=\"/test-amour-ou-habitude/\">par amour ou par habitude</a>. Le test fait la différence entre une passion qui s'est calmée et un lien qui se défait.",
+    "quote": "« Le plus dur, ce n'est pas d'entendre non. C'est de ne plus savoir ce qu'il ou elle pense. »"
+  },
+  "section2": {
+    "title": "Ce qui rassure, ce qui doit alerter",
+    "intro": "Le même quotidien peut se lire de deux façons. Ce tableau met côte à côte ce qu'on voit chez quelqu'un qui aime encore, et chez quelqu'un qui s'est éloigné.",
+    "headerScore": "Situation",
+    "headerLevel": "Il ou elle vous aime encore",
+    "headerAnalysis": "Quelque chose s'est éloigné",
+    "row1Score": "Vous racontez votre journée",
+    "row1Level": "Il ou elle écoute et pose des questions",
+    "row1Analysis": "Il ou elle regarde son téléphone, ou coupe court",
+    "row2Score": "Une dispute",
+    "row2Level": "On répare, on en reparle, même maladroitement",
+    "row2Analysis": "Le silence dure des jours, ou la dispute sert à s'éloigner",
+    "row3Score": "Les projets à six mois",
+    "row3Level": "Il ou elle en parle avec envie",
+    "row3Analysis": "« On verra », ou le sujet est évité",
+    "row4Score": "Les gestes tendres",
+    "row4Level": "Ils sont là, sans y penser",
+    "row4Analysis": "C'est toujours vous qui les faites",
+    "row5Score": "Un soir sans rien de prévu",
+    "row5Level": "On se retrouve, même à ne rien faire",
+    "row5Analysis": "Deux colocataires polis"
+  },
+  "section3": {
+    "title": "Ce qui change quand quelqu'un n'aime plus",
+    "p1": "Quand les sentiments s'en vont, ça se voit rarement dans les grandes déclarations. Ça se voit dans quatre endroits très concrets du quotidien.",
+    "sub1Title": "Le temps qu'on vous donne",
+    "sub1P1": "Quelqu'un qui aime trouve du temps, même quand il n'en a pas. Il ou elle propose, décale un truc, rentre un peu plus tôt. Quand le lien s'éloigne, c'est l'inverse : le travail, les amis, le sport, tout passe avant, et vous prenez ce qui reste. Attention quand même, une période très chargée existe dans toutes les vies. Ce qui doit vous alerter, c'est que ça dure, et que ça ne le ou la dérange pas.",
+    "sub2Title": "Les projets",
+    "sub2P1": "C'est souvent le signe le plus net. Quelqu'un qui vous aime se projette avec vous, même sur des petites choses : un week-end dans deux mois, un meuble à acheter, Noël chez qui. Quelqu'un qui doute reste vague, et quelqu'un qui n'aime plus évite carrément le sujet. Si vous entendez souvent « je ne sais pas où j'en serai », écoutez cette phrase pour ce qu'elle est.",
+    "sub3Title": "La tendresse et le désir",
+    "sub3P1": "Le désir baisse dans tous les couples, ce n'est pas un signal en soi. La tendresse, elle, part beaucoup plus tard. Une main dans le dos en passant, un bisou pour rien, un câlin devant la télé : quand tout ça disparaît en même temps que le désir, et que ça ne semble manquer qu'à vous, il y a quelque chose à regarder.",
+    "sub4Title": "L'écoute",
+    "sub4P1": "On n'écoute pas quelqu'un par politesse quand on l'aime, on l'écoute parce qu'on a envie de savoir. Si vos phrases tombent dans le vide, si vous devez tout répéter, si vos inquiétudes ne sont plus retenues, ce n'est pas une question de mémoire. Beaucoup de couples qui vont mal ont d'abord <a href=\"/blog/manque-communication-couple/\">arrêté de se parler pour de vrai</a>, bien avant d'arrêter de s'aimer."
+  },
+  "section4": {
+    "title": "Aimer moins fort, ce n'est pas ne plus aimer",
+    "intro": "Avant de conclure, il faut écarter les fausses alertes. Quatre situations ressemblent à une fin de sentiments et n'en sont pas.",
+    "pillar1Title": "La routine",
+    "pillar1Text": "Après quelques années, on ne se regarde plus de la même façon. C'est normal. La routine endort l'attention, elle ne tue pas l'amour. Si les gestes reviennent dès qu'on sort du quotidien, un week-end, une soirée sans les enfants, le lien est là.",
+    "pillar2Title": "La fatigue",
+    "pillar2Text": "Un bébé qui ne dort pas, un boulot qui déborde, un parent malade, un déménagement : quelqu'un d'épuisé n'a plus rien à donner, et ça n'a rien à voir avec vous. Le test le montre bien, d'ailleurs. La fatigue fait baisser les gestes, pas l'écoute ni les projets.",
+    "pillar3Title": "Une passe difficile",
+    "pillar3Text": "Un deuil, ou une dépression qui s'installe. La personne se replie sur elle-même, et vous avez l'impression d'être mis à l'écart. Ici, ce n'est pas l'amour qui manque, c'est la place pour l'exprimer. Ça revient quand la personne va mieux.",
+    "pillar4Title": "Un vrai éloignement",
+    "pillar4Text": "Quand les quatre signes de la section précédente sont réunis depuis des mois, et que rien ne revient même hors du quotidien, la question n'est plus « m'aime-t-il encore ? » mais « <a href=\"/test-est-ce-la-fin-de-mon-couple/\">est-ce que c'est en train de finir ?</a> ». Ce sont deux tests différents, et le second prend le relais du premier."
+  },
+  "section5": {
+    "title": "Ce que vous pouvez faire dès ce soir",
+    "p1": "Un résultat, quel qu'il soit, ne sert à rien si on le garde pour soi. Voici par quoi commencer, dans l'ordre.",
+    "sub1Title": "1. Observer une semaine, sans rien tester",
+    "sub1P1": "Il ne s'agit pas de lui tendre un piège, ni de « voir s'il remarque ». Juste de regarder ce qui se passe, et de noter ce qui vous fait du bien et ce qui vous manque. Une semaine suffit pour séparer un mauvais jour d'une tendance.",
+    "sub2Title": "2. Poser la question simplement",
+    "sub2P1": "Pas « tu m'aimes encore ? » à minuit après une dispute. Plutôt, dans un moment calme : « J'ai l'impression qu'on s'éloigne, tu le sens aussi ? ». La formulation compte : vous parlez de vous deux, pas de sa faute.",
+    "sub3Title": "3. Dire ce qui vous manque",
+    "sub3P1": "Avec des exemples précis. « J'aimerais qu'on refasse des soirées à deux », « ça me manque quand tu ne me demandes pas comment s'est passée ma journée ». Quelqu'un qui aime encore entend ça. Quelqu'un qui n'aime plus se défend, ou s'agace.",
+    "sub4Title": "4. Regarder le couple, pas seulement l'autre",
+    "sub4P1": "Si vous avez un doute sur ses sentiments, il y en a souvent un sur le couple lui-même. Faire ensemble un <a href=\"/tester-son-couple/\">test de couple à deux</a> dit parfois plus que dix conversations : on voit où chacun en est, sans que l'un accuse l'autre.",
+    "tip": "Si vous avez peur de sa réaction quand vous parlez de vous deux, si vous marchez sur des œufs depuis des mois, la question n'est plus seulement celle des sentiments. Regardez du côté du <a href=\"/test-couple-toxique/\">couple toxique</a> ou de <a href=\"/test-emprise-psychologique/\">l'emprise</a> : ce sont d'autres tests, et d'autres réponses."
+  },
+  "section6": {
+    "title": "Et si c'était vous qui n'aimiez plus ?",
+    "p1": "La question se retourne parfois. On se demande s'il nous aime encore et, au fond, on n'est plus très sûr de l'aimer, lui. Ce n'est pas un aveu honteux, c'est une question honnête, et elle mérite sa propre réponse.",
+    "p2": "Deux tests s'en occupent mieux que celui-ci : <a href=\"/test-suis-je-amoureux/\">savoir si vous êtes encore amoureux</a> pour les sentiments, et amour ou habitude pour ce qui vous fait rester. Faites-les avant de poser la question à l'autre. On parle mieux quand on sait ce qu'on ressent soi-même !"
+  },
+  "section7": {
+    "title": "Comment fonctionne ce test",
+    "p1": "Vingt situations de tous les jours, quatre réponses à chaque fois, de la plus rassurante à la plus froide. Il n'y a pas de bonne réponse, il y a la vôtre. Répondez sur les trois derniers mois, pas sur la semaine dernière : une semaine peut être mauvaise pour mille raisons.",
+    "p2": "Chaque réponse compte pour des points, et certaines questions pèsent plus lourd, celles sur les projets, la tendresse et l'écoute, parce que ce sont elles qui en disent le plus. Votre score vous place sur quatre paliers, de « il ou elle vous aime, et ça se voit » à « le lien s'est défait ». À chaque palier, une lecture et une piste.",
+    "tip": "Ce test est un outil pour y voir plus clair, pas une preuve. Personne ne connaît les sentiments de quelqu'un d'autre. Si le résultat vous inquiète, la seule chose qui compte ensuite, c'est la conversation."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose",
+    "faq1Q": "Comment savoir s'il m'aime encore sans lui demander ?",
+    "faq1A": "En regardant ce qu'il fait plutôt que ce qu'il dit, sur plusieurs semaines. Le temps qu'il vous donne, les projets qu'il fait avec vous, la tendresse au quotidien et la façon dont il vous écoute : ces quatre signes ne mentent pas longtemps. Mais à un moment, il faudra quand même lui demander. Aucun test ne remplace la conversation.",
+    "faq2Q": "Il ne me dit plus je t'aime, ça veut dire qu'il ne m'aime plus ?",
+    "faq2A": "Pas forcément. Beaucoup de gens disent moins « je t'aime » avec les années et le montrent autrement, en s'occupant de vous, en faisant des projets, en vous écoutant. Le signal, ce n'est pas la disparition du mot. C'est la disparition du mot et des gestes en même temps.",
+    "faq3Q": "Ma copine est distante depuis quelques semaines, dois-je m'inquiéter ?",
+    "faq3A": "Quelques semaines, c'est court. Une période chargée, une fatigue, un souci qu'elle ne vous a pas encore dit peuvent expliquer une distance. Ce qui doit vous alerter, c'est quand ça dure des mois, que rien ne revient même hors du quotidien, et qu'elle ne semble pas gênée par cet éloignement. Dans le doute, demandez-lui, simplement.",
+    "faq4Q": "Il m'aime encore mais on se dispute tout le temps, c'est possible ?",
+    "faq4A": "Oui, et c'est même fréquent. Les disputes disent qu'il y a encore quelque chose à défendre. Ce qui est inquiétant, c'est plutôt l'inverse : plus de disputes, plus de réactions, plus rien. Après une dispute, regardez surtout si on répare ou si on laisse traîner.",
+    "faq5Q": "Peut-on retomber amoureux de quelqu'un qu'on a arrêté d'aimer ?",
+    "faq5A": "Quand l'amour s'est éteint pour de bon, c'est rare. Mais la plupart du temps, ce qu'on prend pour une fin de sentiments est une longue période sans attention. Et là, oui, ça revient souvent dès qu'on se redonne du temps à deux. C'est justement pour ça que le test sépare les deux cas.",
+    "faq6Q": "Ce test peut-il me dire s'il me trompe ?",
+    "faq6A": "Non. Un éloignement peut avoir cent raisons, et une infidélité n'en est qu'une. Si c'est cette question précise qui vous ronge, il existe un <a href=\"/test-infidelite-couple/\">test sur les signes d'infidélité</a>, qui regarde d'autres choses."
+  },
+  "jsonLd": {
+    "about": "sentiments du partenaire dans le couple"
+  }
+}

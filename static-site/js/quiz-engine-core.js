@@ -1490,6 +1490,8 @@ var QuizEngine = (function() {
     { type: 'test', key: 'couche', icon: '🛏️', route: 'testCouche' },
     { type: 'test', key: 'secret', icon: '💌', route: 'testSecret' },
     { type: 'test', key: 'distance-aime', icon: '📞', route: 'testDistanceAime' },
+    { type: 'test', key: 'aime-encore', icon: '💞', route: 'testAimeEncore' },
+    { type: 'test', key: 'emprise', icon: '🔒', route: 'testEmprise' },
     { type: 'test', key: 'ex', icon: '🕰️', route: 'testEx' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
@@ -1578,7 +1580,11 @@ var QuizEngine = (function() {
     'amour-amitie':    ['testSecret', 'testSuisJeAmoureux', 'testAmourHabitude'],
     'crush':           ['testSecret', 'testSuisJeAmoureux', 'testAmourAmitie'],
     'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
-    'distance-aime':   ['testDistance', 'testSecret', 'testAttachement'],
+    'distance-aime':   ['testDistance', 'testAimeEncore', 'testAttachement'],
+    // Le doute sur ses sentiments appelle la question du couple, puis de soi.
+    'aime-encore':     ['testFinCouple', 'testAmourHabitude', 'testCouple'],
+    // L'emprise appelle le regard sur la relation, puis sur l'autre.
+    'emprise':         ['testToxic', 'testPervers', 'testDependance'],
     'personnalite':    ['testLangageAmour', 'testAttachement', 'testCouple'],
     'langage-amour':   ['testPersonnalite', 'testAttachement', 'testCouple'],
     'attachement':     ['testPersonnalite', 'testLangageAmour', 'testConfiance'],

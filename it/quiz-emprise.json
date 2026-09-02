@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "badge": "Test gratuito",
+    "title": "Sono vittima di manipolazione psicologica nella mia coppia?",
+    "titleHighlight": "manipolazione psicologica",
+    "description": "Venti domande sulla tua libertà nella coppia: i tuoi amici, i tuoi soldi, le tue scelte, la tua voce. Per dare un nome a <strong>quello che forse non osi più dire</strong>. Risultato immediato e confidenziale.",
+    "subtitle": "Gratuito, confidenziale, risultato immediato",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "La manipolazione non è un litigio di troppo",
+    "intro": "Ci immaginiamo il controllo con urla e divieti. La maggior parte delle volte, non assomiglia a questo.",
+    "p1": "La manipolazione psicologica è una relazione in cui uno dei due prende, poco a poco, il potere sulla vita dell'altro. Non tutto in una volta. Con osservazioni, musi lunghi, « lo dico per il tuo bene », scatti di rabbia che si impara a evitare. Dopo qualche mese o qualche anno, la persona manipolata non decide quasi più niente da sola. E spesso, non se ne rende conto.",
+    "p2": "È proprio questo che la rende difficile da vedere dall'interno. Ogni cosa presa da sola ha una spiegazione: è geloso perché ha sofferto, controlla i soldi perché li gestisce meglio, non vuole vedere i miei amici perché non gli piacciono. Messe insieme, quelle spiegazioni disegnano altro.",
+    "p3": "Questo test non guarda il tuo partner. Guarda te: quello che osi ancora fare, dire, pensare. Non sostituisce un professionista e non fa una diagnosi. Serve a rispondere a una domanda semplice. Sono ancora libero nella mia coppia?",
+    "quote": "« Il primo segnale del controllo è che si comincia a chiedersi se se ne ha il diritto. »"
+  },
+  "section2": {
+    "title": "Libertà o controllo: la tabella",
+    "intro": "Lo stesso argomento, visto in una coppia libera e in una coppia sotto controllo.",
+    "headerScore": "Argomento",
+    "headerLevel": "In una coppia libera",
+    "headerAnalysis": "Sotto controllo",
+    "row1Score": "I tuoi amici",
+    "row1Level": "Li vedi quando vuoi",
+    "row1Analysis": "Li vedi meno, ed è sempre « colpa loro »",
+    "row2Score": "I tuoi soldi",
+    "row2Level": "Ne disponi, le grandi scelte si fanno in due",
+    "row2Analysis": "Giustifichi acquisti ordinari, o devi chiedere",
+    "row3Score": "Il tuo telefono",
+    "row3Level": "Nessuno lo controlla",
+    "row3Analysis": "È controllato, e cancelli messaggi per precauzione",
+    "row4Score": "I tuoi ricordi",
+    "row4Level": "Si possono avere due versioni e riderci sopra",
+    "row4Analysis": "Ti dicono che inventi, e finisci per dubitare",
+    "row5Score": "Il suo malumore",
+    "row5Level": "È suo, passa",
+    "row5Analysis": "Cammini sulle uova, e hai paura"
+  },
+  "section3": {
+    "title": "I meccanismi che si riconoscono dopo",
+    "p1": "Le persone uscite da una relazione di controllo descrivono quasi tutte le stesse tappe. Sul momento, nessuna si vede chiaramente.",
+    "sub1Title": "L'isolamento",
+    "sub1P1": "Comincia con un'osservazione su un'amica, poi sulla tua famiglia, poi sui tuoi colleghi. Nessuno va abbastanza bene, tutti ti vogliono male o ti influenzano. Poco a poco, vedi meno gente, per evitare discussioni. E un giorno, resta solo lui o lei a dirti cosa è vero.",
+    "sub2Title": "Il dubbio sulla tua memoria",
+    "sub2P1": "« Non l'ho mai detto », « te lo inventi », « esageri sempre ». Quando queste frasi tornano spesso, si comincia a non fidarsi più di sé. Si annotano le cose, si riascoltano le conversazioni nella propria testa, ci si scusa per fatti di cui pure si è sicuri. Ha un nome, gaslighting, ed è una delle leve più potenti del controllo.",
+    "sub3Title": "La colpa rovesciata",
+    "sub3P1": "Ti ha ferito e, alla fine della discussione, sei tu a scusarti. Hai « provocato », hai « capito male », sei « troppo sensibile ». Una volta, capita a tutti. Quando va sempre nella stessa direzione, non è più un litigio, è un meccanismo.",
+    "sub4Title": "La paura quotidiana",
+    "sub4P1": "Non per forza la paura delle botte. La paura della reazione, del muso che durerà tre giorni, della rabbia fredda, del « me la pagherai ». Adatti i tuoi vestiti, i tuoi orari, le tue parole. Cammini sulle uova. È lì che il controllo si vede meglio: in tutto quello che fai perché non esploda."
+  },
+  "section4": {
+    "title": "Manipolazione, relazione tossica, narcisista: tre domande diverse",
+    "p1": "Queste tre parole compaiono spesso insieme, e non indicano la stessa cosa. Questo test guarda quello che la relazione fa a te. Un altro guarda <a href=\"/it/test-relazione-tossica/\">come funzionate in due</a>: i litigi, il rispetto, la gelosia, la comunicazione. Un terzo guarda <a href=\"/it/test-partner-narcisista/\">il profilo del tuo partner</a>, e la meccanica molto particolare che installa.",
+    "p2": "Si può essere sotto controllo senza che l'altro sia un narcisista: una gelosia morbosa, un'ansia molto forte, un'educazione in cui « l'uomo decide » o « la donna tiene la casa » a volte bastano. E si può vivere una relazione tossica, con litigi e parole che feriscono da entrambe le parti, senza controllo. Il controllo è quando la relazione non è più tra pari, e solo uno dei due ha paura.",
+    "tip": "Se esiti tra i tre, comincia da questo. È l'unico che non chiede niente sull'altro, solo su di te, ed è spesso il più facile da fare con onestà."
+  },
+  "section5": {
+    "title": "Perché non si va via",
+    "intro": "« Ma perché resti? » è la domanda più fatta, e la più ingiusta. Ecco le vere ragioni, e nessuna è debolezza.",
+    "pillar1Title": "Perché non è sempre stato così",
+    "pillar1Text": "L'inizio era spesso meraviglioso, troppo persino. Si aspetta il ritorno di quella persona, e ogni tanto torna, per qualche giorno. Quei bei momenti servono a resistere. Fanno parte del meccanismo.",
+    "pillar2Title": "Perché non ci si fida più di sé",
+    "pillar2Text": "Dopo mesi a sentirsi dire che si esagera, si finisce per crederci. Andarsene richiede fiducia in sé, ed è esattamente la prima cosa che il controllo ha rovinato. Spesso si mescola a una <a href=\"/it/test-dipendenza-affettiva/\">dipendenza affettiva</a> che esisteva già, e che ha nutrito.",
+    "pillar3Title": "Perché si ha paura",
+    "pillar3Text": "Della sua reazione, di quello che farebbe, a te, ai figli, o a se stesso. Quella paura è spesso fondata, e va preparata: una relazione di controllo non si lascia d'impulso, si lascia con un piano e con persone intorno.",
+    "pillar4Title": "Perché non resta più nessuno",
+    "pillar4Text": "L'isolamento ha fatto il suo lavoro. Gli amici si sono allontanati, la famiglia è stata tenuta a distanza, e l'idea di ricominciare tutto da soli fa più paura che restare. È il primo filo da ritessere, molto prima di decidere qualsiasi cosa."
+  },
+  "section6": {
+    "title": "Da dove cominciare, secondo il tuo risultato",
+    "p1": "Non c'è urgenza di decidere tutto stasera. C'è urgenza di non essere più soli con questo.",
+    "sub1Title": "Riprendere un legame fuori",
+    "sub1P1": "Un'amica, un fratello, una collega. Qualcuno a cui puoi raccontare i fatti, non la tua analisi, solo i fatti. Lo sguardo di qualcuno che ti conosceva da prima rimette le cose a posto più in fretta di qualsiasi test.",
+    "sub2Title": "Annotare quello che succede",
+    "sub2P1": "Una frase, una data. Non per costruire un dossier, ma per non dubitare più della tua memoria. Quando si rileggono tre mesi di appunti, quello che sembrava « non così grave » giorno per giorno prende il suo vero peso.",
+    "sub3Title": "Parlare con un professionista",
+    "sub3P1": "Uno psicologo, un centro antiviolenza, un medico. In Italia, il 1522 risponde anche alla violenza psicologica. È gratuito, attivo 24 ore su 24, e non serve solo alle situazioni di botte. Anche gli uomini possono chiamarlo, o rivolgersi a un centro antiviolenza vicino a casa.",
+    "sub4Title": "Non annunciare niente prima di essere pronti",
+    "sub4P1": "Se il tuo risultato è alto e hai paura, non dire al tuo partner che hai fatto questo test, né che pensi di andartene. I centri antiviolenza lo ripetono: il momento più rischioso è quello in cui l'altro capisce che sta perdendo il controllo. Prima ci si prepara, poi si annuncia, e mai da soli.",
+    "tip": "Se sei in pericolo, chiama il 112. Una relazione di controllo può precipitare, e nessuno ti rimprovererà di aver chiamato per niente."
+  },
+  "section7": {
+    "title": "Come funziona questo test",
+    "p1": "Venti domande sulla tua vita di tutti i giorni, quattro risposte ogni volta, dalla più libera alla più costretta. Rispondi per te, sugli ultimi sei mesi. Non c'è niente da indovinare sul tuo partner, e le tue risposte non vengono salvate.",
+    "p2": "Alcune domande pesano di più: quelle sulla paura, sull'isolamento, sui soldi e sul dubbio sulla tua memoria, perché sono i pilastri del controllo. Il punteggio ti colloca su quattro livelli, da « libero nella tua coppia » a « controllo instaurato », ogni volta con quello che significa e una prima cosa da fare.",
+    "tip": "Questo test non è una diagnosi, e non sostituisce una persona formata per queste situazioni. Se il tuo risultato ti fa paura, è già un'informazione. Prendila sul serio, e parlane con qualcuno."
+  },
+  "seo": {
+    "faqTitle": "Le domande sulla manipolazione psicologica",
+    "faq1Q": "Cos'è la manipolazione psicologica nella coppia?",
+    "faq1A": "È una relazione in cui uno dei due prende il potere sulla vita dell'altro, con dolcezza e nel tempo: i suoi amici, i suoi soldi, le sue scelte, fino al suo modo di pensare. Non ci sono per forza urla né botte. Ci sono paura, dubbio e un isolamento che cresce. La persona manipolata spesso se ne rende conto solo dopo.",
+    "faq2Q": "Quali sono i segnali che si è sotto controllo?",
+    "faq2A": "Vedi meno le persone care, giustifichi le tue spese o le tue uscite, adatti le tue parole e i tuoi vestiti per evitare una reazione, ti scusi spesso senza più sapere perché, e dubiti della tua memoria. Il segnale più sicuro: hai paura della sua reazione, e organizzi la tua vita intorno a quella paura.",
+    "faq3Q": "Si può essere sotto controllo senza violenza fisica?",
+    "faq3A": "Sì, ed è anche il caso più frequente. Il controllo è una violenza psicologica. In Italia il reato di maltrattamenti in famiglia comprende anche la violenza psicologica, senza bisogno di un solo colpo. I numeri di aiuto come il 1522 rispondono anche a queste situazioni.",
+    "faq4Q": "Posso essere sotto controllo senza che il mio partner sia un narcisista?",
+    "faq4A": "Sì. Il narcisista è un profilo preciso, e piuttosto raro. Il controllo, invece, può venire da una gelosia morbosa, da un'ansia molto forte, da un'educazione in cui uno dei due « comanda », o da un misto di tutto questo. Per te, l'importante non è etichettare l'altro. È misurare quello che la relazione ti fa.",
+    "faq5Q": "Come uscire dal controllo?",
+    "faq5A": "Raramente da soli, e raramente tutto in una volta. Si comincia ritrovando un legame fuori, una persona di fiducia, poi un professionista. Si annota quello che succede per non dubitare più di sé. E si prepara la partenza prima di annunciarla, perché il momento in cui l'altro sente di perdere il controllo è il più delicato. I centri specializzati accompagnano esattamente questo.",
+    "faq6Q": "Questo test è affidabile?",
+    "faq6A": "È uno strumento di auto-osservazione, non una diagnosi. Ti aiuta a dare un nome alle cose e a vedere un insieme dove, giorno per giorno, si vedono solo dettagli isolati. Un risultato alto non prova niente dal punto di vista legale e non sostituisce il parere di un professionista. Ma se ti sei riconosciuto nella maggior parte delle domande, non è poco, e merita di parlarne."
+  },
+  "jsonLd": {
+    "about": "manipolazione psicologica nella coppia"
+  }
+}

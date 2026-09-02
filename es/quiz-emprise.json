@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "badge": "Test gratuito",
+    "title": "¿Estoy bajo manipulación psicológica en mi pareja?",
+    "titleHighlight": "manipulación psicológica",
+    "description": "Veinte preguntas sobre tu libertad en la pareja: tus amigos, tu dinero, tus decisiones, tu voz. Para poner palabras a <strong>lo que quizá ya no te atreves a decir</strong>. Resultado inmediato y confidencial.",
+    "subtitle": "Gratuito, confidencial, resultado inmediato",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "La manipulación no es una discusión de más",
+    "intro": "Nos imaginamos el control con gritos y prohibiciones. La mayoría de las veces, no se parece a eso.",
+    "p1": "La manipulación psicológica es una relación en la que uno de los dos toma, poco a poco, el poder sobre la vida del otro. No de golpe. A base de comentarios, de enfados silenciosos, de « lo digo por tu bien », de arrebatos que uno aprende a evitar. Al cabo de unos meses o de unos años, la persona manipulada ya casi no decide nada sola. Y a menudo, no se da cuenta.",
+    "p2": "Justamente eso es lo que la hace difícil de ver desde dentro. Cada cosa por separado tiene una explicación: es celoso porque ha sufrido, controla el dinero porque lo gestiona mejor, no quiere ver a mis amigos porque no le gustan. Juntas, esas explicaciones dibujan otra cosa.",
+    "p3": "Este test no mira a tu pareja. Te mira a ti: lo que todavía te atreves a hacer, a decir, a pensar. No sustituye a un profesional y no hace un diagnóstico. Sirve para responder a una pregunta sencilla. ¿Sigo siendo libre en mi pareja?",
+    "quote": "« La primera señal del control es que empiezas a preguntarte si tienes derecho. »"
+  },
+  "section2": {
+    "title": "Libertad o control: la tabla",
+    "intro": "El mismo tema, visto en una pareja libre y en una pareja bajo control.",
+    "headerScore": "Tema",
+    "headerLevel": "En una pareja libre",
+    "headerAnalysis": "Bajo control",
+    "row1Score": "Tus amigos",
+    "row1Level": "Los ves cuando quieres",
+    "row1Analysis": "Los ves menos, y siempre es « por culpa de ellos »",
+    "row2Score": "Tu dinero",
+    "row2Level": "Dispones de él, las grandes decisiones se toman a dos",
+    "row2Analysis": "Justificas compras corrientes, o tienes que pedir",
+    "row3Score": "Tu móvil",
+    "row3Level": "Nadie lo revisa",
+    "row3Analysis": "Está controlado, y borras mensajes por precaución",
+    "row4Score": "Tus recuerdos",
+    "row4Level": "Puede haber dos versiones y reírse de ello",
+    "row4Analysis": "Te dicen que te lo inventas, y acabas dudando",
+    "row5Score": "Su mal humor",
+    "row5Level": "Es suyo, se pasa",
+    "row5Analysis": "Pisas huevos, y tienes miedo"
+  },
+  "section3": {
+    "title": "Los mecanismos que se reconocen después",
+    "p1": "Las personas que han salido de una relación de control describen casi todas las mismas etapas. En el momento, ninguna se ve con claridad.",
+    "sub1Title": "El aislamiento",
+    "sub1P1": "Empieza con un comentario sobre una amiga, luego sobre tu familia, luego sobre tus compañeros de trabajo. Nadie es suficientemente bueno, todo el mundo te quiere hacer daño o te influye. Poco a poco, ves a menos gente, para evitar discusiones. Y un día, solo queda él o ella para decirte lo que es verdad.",
+    "sub2Title": "La duda sobre tu propia memoria",
+    "sub2P1": "« Yo nunca dije eso », « te lo inventas », « siempre exageras ». Cuando estas frases vuelven a menudo, uno empieza a no confiar en sí mismo. Apuntas las cosas, repites las conversaciones en tu cabeza, te disculpas por hechos de los que sin embargo estás seguro. Tiene un nombre, gaslighting, y es uno de los resortes más potentes del control.",
+    "sub3Title": "La culpa dada la vuelta",
+    "sub3P1": "Te ha hecho daño y, al final de la discusión, eres tú quien se disculpa. Lo has « provocado », lo has « entendido mal », eres « demasiado sensible ». Una vez, le pasa a cualquiera. Cuando siempre va en el mismo sentido, ya no es una discusión, es un mecanismo.",
+    "sub4Title": "El miedo en el día a día",
+    "sub4P1": "No necesariamente el miedo a los golpes. El miedo a la reacción, al enfado que durará tres días, a la rabia fría, al « me las vas a pagar ». Adaptas tu ropa, tus horarios, tus palabras. Pisas huevos. Ahí es donde mejor se ve el control: en todo lo que haces para que no estalle."
+  },
+  "section4": {
+    "title": "Manipulación, relación tóxica, narcisista: tres preguntas distintas",
+    "p1": "Estas tres palabras aparecen a menudo juntas, y no designan lo mismo. Este test mira lo que la relación te hace a ti. Otro mira <a href=\"/es/test-relacion-toxica/\">cómo funcionáis los dos</a>: las discusiones, el respeto, los celos, la comunicación. Un tercero mira <a href=\"/es/test-pareja-narcisista/\">el perfil de tu pareja</a>, y la mecánica muy particular que instala.",
+    "p2": "Se puede estar bajo control sin que el otro sea un narcisista: unos celos enfermizos, una ansiedad muy fuerte, una educación en la que « el hombre decide » o « la mujer lleva la casa » a veces bastan. Y se puede vivir una relación tóxica, con discusiones y palabras que hieren por los dos lados, sin control. El control es cuando la relación ya no es entre iguales, y solo uno de los dos tiene miedo.",
+    "tip": "Si dudas entre los tres, empieza por este. Es el único que no pregunta nada sobre el otro, solo sobre ti, y suele ser el más fácil de hacer con honestidad."
+  },
+  "section5": {
+    "title": "Por qué no nos vamos",
+    "intro": "« Pero ¿por qué te quedas? » es la pregunta más repetida, y la más injusta. Estas son las razones de verdad, y ninguna es debilidad.",
+    "pillar1Title": "Porque no siempre fue así",
+    "pillar1Text": "El principio fue a menudo maravilloso, demasiado incluso. Esperas que vuelva esa persona, y de vez en cuando vuelve, unos días. Esos buenos momentos sirven para aguantar. Forman parte del mecanismo.",
+    "pillar2Title": "Porque ya no confías en ti",
+    "pillar2Text": "Después de meses oyendo que exageras, acabas creyéndolo. Irse exige confiar en uno mismo, y eso es exactamente lo primero que el control estropeó. A menudo se mezcla con una <a href=\"/es/test-dependencia-emocional/\">dependencia emocional</a> que ya existía, y que ha alimentado.",
+    "pillar3Title": "Porque tienes miedo",
+    "pillar3Text": "De su reacción, de lo que haría, a ti, a los niños, o a sí mismo. Ese miedo suele estar fundado, y hay que prepararse: una relación de control no se deja por impulso, se deja con un plan y con gente alrededor.",
+    "pillar4Title": "Porque ya no queda nadie",
+    "pillar4Text": "El aislamiento ha hecho su trabajo. Los amigos se han alejado, la familia se ha mantenido a distancia, y la idea de empezar de cero solo da más miedo que quedarse. Ese es el primer hilo que hay que volver a tejer, mucho antes de decidir nada."
+  },
+  "section6": {
+    "title": "Por dónde empezar, según tu resultado",
+    "p1": "No hay urgencia por decidirlo todo esta noche. Hay urgencia por dejar de estar solo con esto.",
+    "sub1Title": "Recuperar un vínculo fuera",
+    "sub1P1": "Una amiga, un hermano, una compañera. Alguien a quien puedas contarle los hechos, no tu análisis, solo los hechos. La mirada de alguien que te conocía de antes pone las cosas en su sitio más rápido que cualquier test.",
+    "sub2Title": "Anotar lo que pasa",
+    "sub2P1": "Una frase, una fecha. No para montar un expediente, sino para dejar de dudar de tu memoria. Cuando se releen tres meses de notas, lo que parecía « no tan grave » día a día toma su peso real.",
+    "sub3Title": "Hablar con un profesional",
+    "sub3P1": "Un psicólogo, una asociación, un médico. En España, el 016 atiende también la violencia psicológica. Es gratuito, funciona las 24 horas y no deja rastro en la factura del teléfono, y no sirve solo para situaciones de golpes. También puedes escribir al 600 000 016 por WhatsApp.",
+    "sub4Title": "No anunciar nada antes de estar preparado",
+    "sub4P1": "Si tu resultado es alto y tienes miedo, no le digas a tu pareja que has hecho este test, ni que piensas irte. Las asociaciones lo repiten: el momento más arriesgado es aquel en que el otro entiende que está perdiendo el control. Primero se prepara, después se anuncia, y nunca a solas.",
+    "tip": "Si estás en peligro, llama al 112. Una relación de control puede dar un vuelco, y nadie te reprochará haber llamado para nada."
+  },
+  "section7": {
+    "title": "Cómo funciona este test",
+    "p1": "Veinte preguntas sobre tu vida de todos los días, cuatro respuestas cada vez, de la más libre a la más limitada. Respondes por ti, sobre los últimos seis meses. No hay nada que adivinar sobre tu pareja, y tus respuestas no se guardan.",
+    "p2": "Algunas preguntas pesan más: las del miedo, el aislamiento, el dinero y la duda sobre tu memoria, porque son los pilares del control. La puntuación te sitúa en cuatro niveles, de « libre en tu pareja » a « control instalado », cada vez con lo que significa y una primera cosa que hacer.",
+    "tip": "Este test no es un diagnóstico, y no sustituye a una persona formada para estas situaciones. Si tu resultado te da miedo, eso ya es una información. Tómala en serio, y habla con alguien."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas sobre la manipulación psicológica",
+    "faq1Q": "¿Qué es la manipulación psicológica en la pareja?",
+    "faq1A": "Es una relación en la que uno de los dos toma el poder sobre la vida del otro, con suavidad y con el tiempo: sus amigos, su dinero, sus decisiones, hasta su manera de pensar. No hay necesariamente gritos ni golpes. Hay miedo, duda y un aislamiento que crece. La persona manipulada a menudo solo se da cuenta después.",
+    "faq2Q": "¿Cuáles son las señales de que estás bajo control?",
+    "faq2A": "Ves menos a los tuyos, justificas tus gastos o tus salidas, adaptas tus palabras y tu ropa para evitar una reacción, te disculpas a menudo sin saber ya por qué, y dudas de tu memoria. La señal más segura: tienes miedo de su reacción, y organizas tu vida alrededor de ese miedo.",
+    "faq3Q": "¿Se puede estar bajo control sin violencia física?",
+    "faq3A": "Sí, y es incluso el caso más frecuente. El control es una violencia psicológica. En España, la ley contra la violencia de género la recoge expresamente, sin necesidad de un solo golpe. Los números de ayuda como el 016 atienden también estas situaciones.",
+    "faq4Q": "¿Puedo estar bajo control sin que mi pareja sea un narcisista?",
+    "faq4A": "Sí. El narcisista es un perfil preciso, y más bien raro. El control, en cambio, puede venir de unos celos enfermizos, de una ansiedad muy fuerte, de una educación en la que uno de los dos « manda », o de una mezcla de todo eso. Para ti, lo importante no es etiquetar al otro. Es medir lo que la relación te hace.",
+    "faq5Q": "¿Cómo salir de una relación de control?",
+    "faq5A": "Rara vez solo, y rara vez de golpe. Se empieza por recuperar un vínculo fuera, una persona de confianza, luego un profesional. Se anota lo que pasa para dejar de dudar de uno mismo. Y se prepara la salida antes de anunciarla, porque el momento en que el otro siente que pierde el control es el más delicado. Las asociaciones especializadas acompañan exactamente eso.",
+    "faq6Q": "¿Este test es fiable?",
+    "faq6A": "Es una herramienta de autoobservación, no un diagnóstico. Te ayuda a poner palabras y a ver un conjunto donde, en el día a día, solo se ven detalles aislados. Un resultado alto no prueba nada jurídicamente y no sustituye la opinión de un profesional. Pero si te has reconocido en la mayoría de las preguntas, no es poca cosa, y merece que hables de ello."
+  },
+  "jsonLd": {
+    "about": "manipulación psicológica en la pareja"
+  }
+}

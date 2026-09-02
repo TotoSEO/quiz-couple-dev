@@ -371,7 +371,9 @@
     "jeuJamais": "Non ho mai",
     "testCrush": "Test amore o cotta",
     "jeuQuiPourrait": "Chi potrebbe?",
-    "jeuOuiNon": "Sì o no"
+    "jeuOuiNon": "Sì o no",
+    "testAimeEncore": "Test mi ama ancora",
+    "testEmprise": "Test manipolazione psicologica"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
@@ -676,5 +678,15 @@
     "orient_distance_raison": "Hai risposto che vivete a distanza. Lì i segnali non hanno lo stesso significato.",
     "orient_toxique_nom": "La mia relazione è tossica?",
     "orient_toxique_raison": "Una relazione può finire perché si spegne, o perché fa male. Non è la stessa cosa."
+  },
+  "aime-encore": {
+    "introQuestion": "Prima di cominciare:",
+    "introQuote": "Rispondi sugli ultimi tre mesi, non sulla settimana scorsa.",
+    "disclaimer": "Nessuno può leggere nella testa di un'altra persona. Questo test mette ordine in quello che vedi, non emette un verdetto."
+  },
+  "emprise": {
+    "introQuestion": "Ti fai la domanda:",
+    "introQuote": "« Sono sotto controllo… o sto esagerando? »",
+    "disclaimer": "Questo test non è né una diagnosi né un giudizio. Guarda la tua libertà nella coppia, non la personalità del tuo partner. Le tue risposte non vengono salvate."
   }
 }
