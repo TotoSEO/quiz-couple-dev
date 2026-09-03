@@ -837,11 +837,13 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 .duel-jauge circle { fill: none; stroke-width: 6; }
 .duel-jauge-fond { stroke: hsl(var(--muted)); }
 .duel-jauge-arc { stroke: url(#duel-degrade); stroke-linecap: round; transition: stroke-dashoffset .9s cubic-bezier(.22, 1, .36, 1); }
+.duel-centre { display: flex; flex-direction: column; align-items: center; gap: .2rem; }
 .duel-jauge-nb {
-  position: relative; display: flex; flex-direction: column; align-items: center;
+  position: relative;
   font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 1rem; line-height: 1; color: hsl(var(--foreground));
 }
-.duel-jauge-nb small { font-size: .5rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: hsl(var(--muted-foreground)); margin-top: 2px; }
+/* La legende vit sous le cercle : dedans, l'arc la rognait des qu'il se remplissait. */
+.duel-jauge-legende { font-size: .55rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: hsl(var(--muted-foreground)); }
 
 /* Les manches, empilées : une seule est visible à la fois */
 .duel-manches { position: relative; height: 222px; margin-top: 1rem; }
@@ -929,9 +931,10 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 
 /* Hero decorative blobs, larger, more vivid */
 .hero-blob {
-  position: absolute; border-radius: 50%;
+  position: absolute; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   filter: blur(100px); pointer-events: none;
   animation: blob 12s ease-in-out infinite;
+  will-change: transform;
 }
 .hero-blob--1 { width: 500px; height: 500px; top: -15%; left: -8%; background: hsl(var(--primary) / 0.15); }
 .hero-blob--2 { width: 400px; height: 400px; bottom: -10%; right: -5%; background: hsl(var(--secondary) / 0.12); animation-delay: 4s; }
@@ -1260,7 +1263,13 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 @keyframes pulseSoft { 0%, 100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.05); } }
 @keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
-@keyframes blob { 0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: translate(0,0) rotate(0deg); } 33% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; transform: translate(10px,-10px) rotate(120deg); } 66% { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; transform: translate(-10px,10px) rotate(240deg); } }
+/* Les taches floues animaient leur border-radius sous un flou de 100px : la
+   forme changeait a chaque image et le navigateur redessinait tout le flou,
+   soixante fois par seconde. Mesure sur l'accueil : les neuf dixiemes du
+   travail de rendu de la page, sur bureau comme sur telephone. On ne fait
+   plus bouger que la transformation, que le compositeur applique sans
+   redessiner ; la forme organique est posee une fois pour toutes. */
+@keyframes blob { 0%, 100% { transform: translate(0,0) rotate(0deg) scale(1); } 33% { transform: translate(10px,-10px) rotate(120deg) scale(1.06); } 66% { transform: translate(-10px,10px) rotate(240deg) scale(0.96); } }
 @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
 @keyframes playerSwitch { 0% { opacity: 0; transform: translateX(30px); } 100% { opacity: 1; transform: translateX(0); } }
 @keyframes heartBeat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.15); } 30% { transform: scale(1); } 45% { transform: scale(1.1); } 60% { transform: scale(1); } }
@@ -3522,44 +3531,16 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   .quiz-setup-start-btn { margin-top: 1rem !important; padding: 0.85rem 1.5rem !important; font-size: 1rem !important; }
 }
 
-/* ── Quiz ado : selection du mode de jeu (cartes encadrees, gamifiees) ── */
-.ado-mode-select { display: flex; flex-direction: column; gap: 1.75rem; padding: 0.4rem 0; text-align: center; }
-.ado-mode-head { display: flex; flex-direction: column; gap: 0.4rem; }
-.ado-mode-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.4rem, 3.5vw, 1.85rem); margin: 0; }
-.ado-mode-sub { color: hsl(var(--muted-foreground)); margin: 0; font-size: 0.98rem; }
-.ado-mode-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 34rem; margin: 0 auto; width: 100%; }
-@media (max-width: 480px) { .ado-mode-grid { grid-template-columns: 1fr; } }
-.ado-mode-card {
-  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
-  padding: 1.65rem 1.1rem; cursor: pointer; text-align: center;
-  background: hsl(var(--card));
-  border: 2.5px solid hsl(var(--border));
-  border-radius: 1.25rem;
-  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
-  -webkit-tap-highlight-color: transparent;
-}
-.ado-mode-card:focus-visible {
-  transform: translateY(-4px);
-  border-color: hsl(var(--primary) / 0.55);
-  box-shadow: 0 16px 32px -18px hsl(var(--primary) / 0.6);
-  outline: none;
-}
-@media (hover: hover) and (pointer: fine) {
-.ado-mode-card:hover {
-  transform: translateY(-4px);
-  border-color: hsl(var(--primary) / 0.55);
-  box-shadow: 0 16px 32px -18px hsl(var(--primary) / 0.6);
-}
-}
+/* ── Quiz ado : la pastille d'icone des deux cartes de mode ──
+   Les cartes elles-memes sont les .choix-mode communs a tous les tests. */
 .ado-mode-icon {
   width: 60px; height: 60px; border-radius: 18px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: .35rem;
   background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
   color: #fff; box-shadow: 0 10px 22px -8px hsl(var(--primary) / 0.55);
 }
-.ado-mode-card--alt .ado-mode-icon { background: linear-gradient(135deg, #f59e0b, #ec4899); box-shadow: 0 10px 22px -8px rgba(236,72,153,0.55); }
+.ado-mode-icon--alt { background: linear-gradient(135deg, #f59e0b, #ec4899); box-shadow: 0 10px 22px -8px rgba(236,72,153,0.55); }
 .ado-mode-icon svg { width: 28px; height: 28px; }
-.ado-mode-name { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
-.ado-mode-desc { color: hsl(var(--muted-foreground)); font-size: 0.85rem; line-height: 1.4; }
 
 /* Gradient CTA button */
 .btn-gradient { background: linear-gradient(135deg, #ec4899, hsl(var(--secondary))) !important; color: #fff !important; border: none; }
@@ -10424,15 +10405,8 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 
 /* ── Le quiz ado a son propre moteur, pas ses propres couleurs ──
-   Il est ecrit en classes utilitaires, il ne passait donc par aucune des
-   regles ci-dessus : cadre a l'encre autour, contenu en filet d'un pixel
-   a l'interieur. On raccroche ses trois surfaces. */
-.quiz-engine .ado-mode-card {
-  border: var(--qe-trait-i) solid hsl(var(--ink));
-  border-radius: var(--qe-rayon-i);
-  box-shadow: var(--qe-ombre-i) hsl(var(--ink));
-  transition: transform .16s ease, box-shadow .16s ease;
-}
+   Ses ecrans reprennent les classes du moteur commun ; il ne reste a
+   raccrocher que les champs et le bouton plein. */
 .quiz-engine .ado-mode-icon {
   border: 2px solid hsl(var(--ink));
   box-shadow: var(--qe-ombre-p) hsl(var(--ink));
@@ -10456,7 +10430,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .quiz-engine .ado-mode-card,
   .quiz-engine .btn-primary { transition: none; }
 }
 
@@ -10663,8 +10636,7 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   .quiz-engine .choice-btn:hover,
   .quiz-engine .gender-btn:hover,
   .quiz-engine .quiz-mode-carte:hover,
-  .quiz-engine .choix-mode:hover,
-  .quiz-engine .ado-mode-card:hover {
+  .quiz-engine .choix-mode:hover {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0 hsl(var(--primary));
   }
@@ -10710,7 +10682,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
     .quiz-engine .gender-btn:hover,
     .quiz-engine .quiz-mode-carte:hover,
     .quiz-engine .choix-mode:hover,
-    .quiz-engine .ado-mode-card:hover,
     .quiz-engine .btn-cta:hover,
     .quiz-engine .btn-outline:hover,
     .quiz-engine .btn-primary:hover,
@@ -10806,3 +10777,137 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 @media (prefers-reduced-motion: reduce) {
   .quiz-engine .gender-btn, .quiz-setup-screen .gender-btn { transition: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   QUIZ ADO : LES PIECES PROPRES A SON MOTEUR
+   Le moteur ado reprend les ecrans du moteur commun (depart a
+   cartes joueurs, barre de progression, reponses lettrees, relais,
+   resultat). Ne restent ici que ce qu'il a en plus : le choix
+   creer / rejoindre, le code de partie, l'attente du partenaire,
+   les deux barres a distance, le badge de tour et le tableau de
+   comparaison des reponses.
+   ═══════════════════════════════════════════════════════════ */
+.quiz-engine .quiz-modes .choix-mode { padding-top: 1.35rem; }
+.ado-role-titre { width: 100%; text-align: center; font-weight: 700; font-size: .95rem; margin: 0 0 .8rem; color: hsl(var(--foreground)); }
+.ado-roles { margin-bottom: 1.4rem; }
+.quiz-mode-carte.est-choisi {
+  background: linear-gradient(135deg, hsl(var(--primary) / .16), hsl(var(--secondary) / .12));
+  border-color: hsl(var(--primary));
+  box-shadow: 5px 5px 0 hsl(var(--primary));
+}
+.quiz-setup-grid--seul { grid-template-columns: minmax(0, 1fr); max-width: 22rem; }
+.ado-code-saisie { text-align: center; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .3em; text-transform: uppercase; font-weight: 700; }
+.ado-erreur { width: 100%; text-align: center; color: hsl(var(--destructive, 0 72% 51%)); font-size: .9rem; font-weight: 600; margin: .9rem 0 0; }
+.ado-code {
+  margin: 0 auto .4rem; padding: 1rem 1.6rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(1.8rem, 6vw, 2.6rem); font-weight: 800; letter-spacing: .35em; text-indent: .35em;
+  color: hsl(var(--primary));
+  border: var(--qe-trait-i, 3px) dashed hsl(var(--ink, 268 45% 27%));
+  border-radius: var(--qe-rayon-i, 1.2rem);
+  background: hsl(var(--primary) / .07);
+  user-select: all;
+}
+.ado-attente { display: flex; flex-direction: column; align-items: center; gap: .8rem; padding: 1.2rem 0 .4rem; }
+.ado-attente--texte { padding: 1.6rem 0 .6rem; }
+.ado-attente .spinner { width: 2rem; height: 2rem; border-width: 3px; }
+.ado-attente-titre { margin: 0; font-weight: 700; color: hsl(var(--foreground)); }
+.ado-attente-note { margin: 0; font-size: .88rem; color: hsl(var(--muted-foreground)); }
+.ado-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 1.2rem; }
+.ado-retour { margin-top: 1rem; font-size: .9rem; display: inline-flex; align-items: center; gap: .3rem; }
+.ado-retour svg { width: 1rem; height: 1rem; }
+/* Le relais entre les deux joueurs : le bandeau commun, avec un vrai bouton
+   pour partir, car le second joueur ne doit pas voir les reponses du premier. */
+.ado-relais { cursor: default; padding-bottom: 1.7rem; }
+.ado-relais .btn { margin-top: .9rem; }
+.ado-relais .qc-relais-etape { margin-bottom: .2rem; text-transform: none; letter-spacing: 0; font-style: italic; }
+/* Le badge de tour prend la place du pourcentage dans la barre commune. */
+.ado-tour { display: inline-block; }
+.quiz-progress-pct:has(.ado-tour--2) { background: hsl(var(--secondary) / .16); color: hsl(var(--secondary)); }
+/* A distance : une barre par joueur, la sienne en rose, celle du partenaire
+   en violet. */
+.ado-duo-progression { display: grid; gap: .55rem; margin-bottom: .6rem; }
+.ado-duo-ligne { display: grid; grid-template-columns: 5.5rem 1fr 3.2rem; align-items: center; gap: .6rem; font-size: .8rem; font-weight: 700; }
+.ado-duo-nom { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: left; }
+.ado-duo-nom.ado-duo--moi { color: hsl(var(--primary)); }
+.ado-duo-nom.ado-duo--lui { color: hsl(var(--secondary)); }
+.ado-duo-compte { text-align: right; color: hsl(var(--muted-foreground)); font-variant-numeric: tabular-nums; }
+.quiz-progress-fill.ado-duo--lui { background: linear-gradient(to right, hsl(var(--secondary)), hsl(var(--secondary) / .7)); }
+.ado-question-numero { display: inline-block; margin: 0 0 1.2rem; }
+/* Le tableau des reponses, replie sous le verdict. */
+.ado-comparaison {
+  text-align: left;
+  border: var(--qe-trait-p, 2px) solid hsl(var(--ink, 268 45% 27%));
+  border-radius: var(--qe-rayon-i, 1.2rem);
+  background: hsl(var(--card));
+  overflow: hidden;
+}
+.ado-comparaison > summary {
+  list-style: none; cursor: pointer; padding: .9rem 1.1rem;
+  font-weight: 700; display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+}
+.ado-comparaison > summary::-webkit-details-marker { display: none; }
+.ado-comparaison > summary::after { content: '+'; font-size: 1.3rem; line-height: 1; font-weight: 800; color: hsl(var(--primary)); }
+.ado-comparaison[open] > summary::after { content: '−'; }
+.ado-comparaison[open] > summary { border-bottom: var(--qe-trait-p, 2px) solid hsl(var(--ink, 268 45% 27%) / .35); }
+.ado-comparaison-corps { overflow-x: auto; }
+.ado-tableau { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.ado-tableau th, .ado-tableau td { padding: .55rem .7rem; vertical-align: top; }
+.ado-tableau th { font-size: .72rem; letter-spacing: .05em; text-transform: uppercase; color: hsl(var(--muted-foreground)); background: hsl(var(--muted) / .5); text-align: left; }
+.ado-tableau tbody tr + tr td { border-top: 1px solid hsl(var(--border)); }
+.ado-tableau .ado-ligne--pareil td { background: hsl(var(--mint) / .1); }
+.ado-col-num { width: 2.2rem; color: hsl(var(--muted-foreground)); font-variant-numeric: tabular-nums; }
+.ado-col-verdict { width: 2.4rem; text-align: center; }
+.ado-pareil { color: hsl(var(--mint)); font-weight: 800; }
+.ado-different { color: hsl(var(--muted-foreground)); }
+/* Le retour a l'accueil est un lien qui porte la classe du bouton d'action. */
+.result-action-btn { text-decoration: none; }
+@media (max-width: 640px) {
+  .ado-duo-ligne { grid-template-columns: 4.2rem 1fr 2.8rem; font-size: .75rem; }
+  .ado-tableau { font-size: .8rem; }
+  .ado-tableau th, .ado-tableau td { padding: .45rem .5rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CARROUSELS DE L'ACCUEIL : LA COULEUR DE CHAQUE FAMILLE
+   Les tests sont roses, les quiz violets, les jeux verts : la
+   carte, sa pastille, son appel et les fleches prennent la couleur
+   du bloc qui les porte, au lieu du rose partout. Sous la piste,
+   une barre dit ou l'on en est dans la rangee, et un compteur
+   donne la derniere carte visible sur le total : on voit d'un
+   coup d'oeil qu'il y a trente-six tests et pas quatre.
+   ═══════════════════════════════════════════════════════════ */
+.quiz-section-block .quiz-bubble-card { border: 1.5px solid hsl(var(--bloc-accent) / .22); }
+.quiz-section-block .quiz-bubble-card:hover {
+  border-color: hsl(var(--bloc-accent) / .6);
+  box-shadow: 0 22px 44px -14px hsl(var(--bloc-accent) / .38), 0 8px 16px -4px rgba(0, 0, 0, .06);
+}
+.quiz-section-block .quiz-bubble-card:hover .quiz-bubble-title { color: hsl(var(--bloc-accent)); }
+.quiz-section-block .quiz-bubble-cta { color: hsl(var(--bloc-accent)); }
+.quiz-section-block .quiz-bubble-chip { box-shadow: 0 4px 12px -4px rgba(0, 0, 0, .25), 0 0 0 2px hsl(var(--bloc-accent) / .4); }
+.quiz-section-block .quiz-bubble-media::after { background: linear-gradient(180deg, transparent 55%, hsl(var(--bloc-accent) / .16) 100%); }
+.quiz-section-block .quiz-slider__nav { color: hsl(var(--bloc-accent)); border-color: hsl(var(--bloc-accent) / .35); }
+.quiz-section-block .quiz-slider__nav:hover { background: hsl(var(--bloc-accent)); color: #fff; }
+.quiz-slider__pied {
+  display: flex; align-items: center; gap: .8rem;
+  width: min(100%, 22rem); margin: -.25rem auto 0;
+}
+.quiz-slider__barre {
+  flex: 1; height: 5px; border-radius: 999px; overflow: hidden;
+  background: hsl(var(--bloc-accent, var(--primary)) / .16);
+}
+.quiz-slider__avance {
+  display: block; height: 100%; border-radius: 999px;
+  width: calc(var(--part, .25) * 100%); min-width: 1.25rem;
+  background: hsl(var(--bloc-accent, var(--primary)));
+  transform: translateX(calc(var(--avance, 0) * ((1 / var(--part, .25)) - 1) * 100%));
+  transition: transform .12s linear;
+}
+.quiz-slider__compteur {
+  font-size: .78rem; font-weight: 700; letter-spacing: .02em;
+  color: hsl(var(--bloc-accent, var(--primary)));
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.quiz-slider__compteur:empty { display: none; }
+@media (max-width: 640px) { .quiz-slider__pied { width: min(100%, 16rem); } }
+@media (prefers-reduced-motion: reduce) { .quiz-slider__avance { transition: none; } }
