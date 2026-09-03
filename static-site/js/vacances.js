@@ -117,7 +117,7 @@
     zone.appendChild(el('div', 'va-progression',
       '<div class="va-progression-barre" style="width:' + pct + '%"></div>'));
     zone.appendChild(el('div', 'va-etape', (etape + 1) + ' / ' + QUESTIONS.length));
-    zone.appendChild(el('h3', 'va-titre-question', esc(q.titre)));
+    zone.appendChild(el('h2', 'va-titre-question', esc(q.titre)));
     if (q.sous) zone.appendChild(el('p', 'va-sous-question', esc(q.sous)));
 
     var grille = el('div', 'va-options');
@@ -265,7 +265,7 @@
     var zone = el('div', 'va-resultats animate-fade-in');
     zone.setAttribute('data-quiz-done', '1');
 
-    zone.appendChild(el('h3', 'va-resultats-titre', 'Nous avons sans doute trouvé ce que vous cherchez 🙂 !'));
+    zone.appendChild(el('h2', 'va-resultats-titre', 'Nous avons sans doute trouvé ce que vous cherchez 🙂 !'));
 
     var recap = el('div', 'va-recap');
     [LIBELLES.duree[r.duree], LIBELLES.zone[r.zone], LIBELLES.decor[r.decor],
