@@ -172,5 +172,29 @@
   },
   "noteSite": {
     "label": "Voto medio del sito"
+  },
+  "heroDuel": {
+    "joueur1": "Giulia",
+    "joueur2": "Marco",
+    "question": "Domanda",
+    "jauge": "complicità",
+    "match": "Stessa risposta!",
+    "rate": "Non questa volta...",
+    "m1q": "Il suo piatto preferito?",
+    "m1a": "Le lasagne",
+    "m1b": "Le lasagne",
+    "m2q": "Il vostro primo bacio, dov'è stato?",
+    "m2a": "Nel parcheggio",
+    "m2b": "Nel parcheggio",
+    "m3q": "Chi è il più geloso dei due?",
+    "m3a": "Lui, di sicuro",
+    "m3b": "Lei, di sicuro",
+    "m4q": "Il suo film del cuore?",
+    "m4a": "Love Actually",
+    "m4b": "Love Actually",
+    "finEtiquette": "Risultato",
+    "finTitre": "Siete sulla stessa lunghezza d'onda!",
+    "finTexte": "3 risposte su 4 in comune",
+    "finCta": "Ora tocca a voi"
   }
 }

@@ -172,5 +172,29 @@
   },
   "noteSite": {
     "label": "Nota media del sitio"
+  },
+  "heroDuel": {
+    "joueur1": "Lucía",
+    "joueur2": "Mateo",
+    "question": "Pregunta",
+    "jauge": "complicidad",
+    "match": "¡Misma respuesta!",
+    "rate": "Esta vez no...",
+    "m1q": "¿Su plato favorito?",
+    "m1a": "La lasaña",
+    "m1b": "La lasaña",
+    "m2q": "¿Vuestro primer beso, dónde fue?",
+    "m2a": "En el parking",
+    "m2b": "En el parking",
+    "m3q": "¿Quién es el más celoso?",
+    "m3a": "Él, claramente",
+    "m3b": "Ella, claramente",
+    "m4q": "¿Su película de siempre?",
+    "m4a": "Love Actually",
+    "m4b": "Love Actually",
+    "finEtiquette": "Resultado",
+    "finTitre": "¡Estáis en la misma onda!",
+    "finTexte": "3 respuestas de 4 en común",
+    "finCta": "Os toca jugar"
   }
 }

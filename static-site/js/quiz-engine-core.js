@@ -1992,12 +1992,14 @@ var QuizEngine = (function() {
     var maleLbl = tg('playerSetup.male', 'Homme');
     var femaleLbl = tg('playerSetup.female', 'Femme');
     var maleBtn = el('button', 'gender-btn' + (selectedGender === 'homme' ? ' gender-btn-selected gender-btn-male' : ''));
-    maleBtn.innerHTML = '👨<span class="gender-label">' + esc(maleLbl) + '</span>';
+    maleBtn.textContent = '👨';
     maleBtn.setAttribute('aria-label', maleLbl);
+    maleBtn.title = maleLbl;
     maleBtn.addEventListener('click', function() { onSelect('homme'); });
     var femaleBtn = el('button', 'gender-btn' + (selectedGender === 'femme' ? ' gender-btn-selected gender-btn-female' : ''));
-    femaleBtn.innerHTML = '👩<span class="gender-label">' + esc(femaleLbl) + '</span>';
+    femaleBtn.textContent = '👩';
     femaleBtn.setAttribute('aria-label', femaleLbl);
+    femaleBtn.title = femaleLbl;
     femaleBtn.addEventListener('click', function() { onSelect('femme'); });
     genderWrap.appendChild(maleBtn);
     genderWrap.appendChild(femaleBtn);
@@ -2572,10 +2574,11 @@ var QuizEngine = (function() {
         var gWrap = el('div', 'flex gap-3 justify-center');
         var maleLabel = tg('playerSetup.male', 'Homme');
         var femaleLabel = tg('playerSetup.female', 'Femme');
-        var maleBtn = el('button', 'gender-btn', '👨<span class="gender-label">' + esc(maleLabel) + '</span>');
-        maleBtn.setAttribute('aria-label', maleLabel);
-        var femaleBtn = el('button', 'gender-btn', '👩<span class="gender-label">' + esc(femaleLabel) + '</span>');
-        femaleBtn.setAttribute('aria-label', femaleLabel);
+        // L'emoji seul : le libelle reste pour les lecteurs d'ecran et l'infobulle.
+        var maleBtn = el('button', 'gender-btn', '👨');
+        maleBtn.setAttribute('aria-label', maleLabel); maleBtn.title = maleLabel;
+        var femaleBtn = el('button', 'gender-btn', '👩');
+        femaleBtn.setAttribute('aria-label', femaleLabel); femaleBtn.title = femaleLabel;
         maleBtn.addEventListener('click', function() {
           genders[idx] = 'homme';
           maleBtn.className = 'gender-btn gender-btn-selected gender-btn-male';
@@ -4369,10 +4372,11 @@ var QuizEngine = (function() {
         var gWrap = el('div', 'flex gap-3 justify-center');
         var maleLabel = tg('playerSetup.male', 'Homme');
         var femaleLabel = tg('playerSetup.female', 'Femme');
-        var maleBtn = el('button', 'gender-btn', '👨<span class="gender-label">' + esc(maleLabel) + '</span>');
-        maleBtn.setAttribute('aria-label', maleLabel);
-        var femaleBtn = el('button', 'gender-btn', '👩<span class="gender-label">' + esc(femaleLabel) + '</span>');
-        femaleBtn.setAttribute('aria-label', femaleLabel);
+        // L'emoji seul : le libelle reste pour les lecteurs d'ecran et l'infobulle.
+        var maleBtn = el('button', 'gender-btn', '👨');
+        maleBtn.setAttribute('aria-label', maleLabel); maleBtn.title = maleLabel;
+        var femaleBtn = el('button', 'gender-btn', '👩');
+        femaleBtn.setAttribute('aria-label', femaleLabel); femaleBtn.title = femaleLabel;
         maleBtn.addEventListener('click', function() {
           genders[idx] = 'homme';
           maleBtn.className = 'gender-btn gender-btn-selected gender-btn-male';

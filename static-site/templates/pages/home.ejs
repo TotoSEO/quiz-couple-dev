@@ -206,23 +206,84 @@
         <% } %>
       </div>
 
-      <!-- Right column: floating cards -->
-      <div class="hero-visual">
-        <div class="hero-float-card hero-float-card--1 animate-float">
-          <span class="hero-float-icon">💕</span>
-          <span><%= t('quizzes:testCouple.shortTitle', 'Test Couple') %></span>
-        </div>
-        <div class="hero-float-card hero-float-card--2 animate-float-slow">
-          <span class="hero-float-icon">🔥</span>
-          <span><%= t('quizzes:quizCoquin.shortTitle', 'Quiz Coquin') %></span>
-        </div>
-        <div class="hero-float-card hero-float-card--3 animate-float" style="animation-delay: 300ms">
-          <span class="hero-float-icon">⚖️</span>
-          <span><%= t('quizzes:testDivorce.shortTitle', 'Dois-je divorcer ?') %></span>
-        </div>
-        <div class="hero-float-card hero-float-card--4 animate-float-slow" style="animation-delay: 600ms">
-          <span class="hero-float-icon">🧠</span>
-          <span><%= t('quizzes:quizKnowledge.shortTitle', 'Quiz Knowledge') %></span>
+      <!-- Colonne de droite : la démo « même réponse ». Décorative, masquée
+           aux lecteurs d'écran ; le seul lien qu'elle porte est retiré de
+           l'ordre de tabulation, les appels à l'action du hero suffisent. -->
+      <%
+        const duel = {
+          joueur1: t('home:heroDuel.joueur1', 'Léa'),
+          joueur2: t('home:heroDuel.joueur2', 'Tom'),
+          question: t('home:heroDuel.question', 'Question'),
+          jauge: t('home:heroDuel.jauge', 'complicité'),
+          match: t('home:heroDuel.match', 'Même réponse !'),
+          rate: t('home:heroDuel.rate', 'Pas cette fois...'),
+          finEtiquette: t('home:heroDuel.finEtiquette', 'Résultat'),
+          finTitre: t('home:heroDuel.finTitre', ''),
+          finTexte: t('home:heroDuel.finTexte', ''),
+          finCta: t('home:heroDuel.finCta', ''),
+          manches: []
+        };
+        for (let dm = 1; dm <= 6; dm++) {
+          const dq = t('home:heroDuel.m' + dm + 'q', '');
+          if (!dq) break;
+          duel.manches.push({ q: dq, a: t('home:heroDuel.m' + dm + 'a', ''), b: t('home:heroDuel.m' + dm + 'b', '') });
+        }
+        const duelOrbes = [
+          { emoji: '💕', prof: 0.35 }, { emoji: '🔥', prof: 0.7 }, { emoji: '🧠', prof: 0.25 }, { emoji: '💍', prof: 0.85 }
+        ];
+      %>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="duel-scene" id="hero-duel">
+          <% duelOrbes.forEach(function(o, oi) { %>
+          <div class="duel-orbe duel-orbe--<%= oi + 1 %>" data-prof="<%= o.prof %>"><span class="duel-orbe-int"><%= o.emoji %></span></div>
+          <% }); %>
+          <div class="duel-flotteur">
+            <div class="duel-carte">
+              <div class="duel-reflet"></div>
+              <div class="duel-tete">
+                <div class="duel-joueur duel-joueur--a"><span class="duel-avatar">👩</span><span class="duel-nom"><%= duel.joueur1 %></span></div>
+                <div class="duel-jauge">
+                  <svg viewBox="0 0 64 64">
+                    <defs>
+                      <linearGradient id="duel-degrade" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" style="stop-color: hsl(var(--primary))"/>
+                        <stop offset="1" style="stop-color: hsl(var(--secondary))"/>
+                      </linearGradient>
+                    </defs>
+                    <circle class="duel-jauge-fond" cx="32" cy="32" r="27"/>
+                    <circle class="duel-jauge-arc" cx="32" cy="32" r="27"/>
+                  </svg>
+                  <span class="duel-jauge-nb"><span><b>0</b>%</span><small><%= duel.jauge %></small></span>
+                </div>
+                <div class="duel-joueur duel-joueur--b"><span class="duel-avatar">👨</span><span class="duel-nom"><%= duel.joueur2 %></span></div>
+              </div>
+              <div class="duel-manches">
+                <% duel.manches.forEach(function(m, mi) { %>
+                <div class="duel-manche<%= mi === 0 ? ' est-active' : '' %>" data-ok="<%= m.a === m.b ? 1 : 0 %>">
+                  <p class="duel-etiquette"><%= duel.question %> <%= mi + 1 %>/<%= duel.manches.length %></p>
+                  <p class="duel-question"><%= m.q %></p>
+                  <div class="duel-reponses">
+                    <span class="duel-bulle duel-bulle--a"><%= m.a %></span>
+                    <span class="duel-bulle duel-bulle--b"><%= m.b %></span>
+                  </div>
+                  <p class="duel-verdict"><span class="duel-verdict-ok">💞 <%= duel.match %></span><span class="duel-verdict-ko">🤭 <%= duel.rate %></span></p>
+                </div>
+                <% }); %>
+                <div class="duel-manche duel-manche--fin" data-ok="1">
+                  <p class="duel-etiquette"><%= duel.finEtiquette %></p>
+                  <p class="duel-question"><%= duel.finTitre %></p>
+                  <p class="duel-fin-texte"><%= duel.finTexte %></p>
+                  <% if (duel.finCta) { %>
+                  <a class="duel-cta" href="<%= getLocalizedUrl('testCouple', lang) %>" tabindex="-1">
+                    <span><%= duel.finCta %></span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+                  </a>
+                  <% } %>
+                </div>
+              </div>
+              <div class="duel-coeurs"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -715,3 +776,4 @@
 })();
 </script>
 <script src="/js/home-dynamic.js" defer></script>
+<script src="/js/hero-duel.js" defer></script>

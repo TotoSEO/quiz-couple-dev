@@ -774,68 +774,158 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
   .note-site-detail { font-size: .78rem; }
 }
 
-/* Hero floating visual, 3D perspective */
-.hero-visual {
-  display: none;
-  position: relative; height: 420px;
-  perspective: 900px;
-}
+/* ═══════════════════════════════════════════════════════════
+   HERO ACCUEIL : LA DÉMO « MÊME RÉPONSE »
+   Une carte en relief joue une partie à deux sous les yeux du
+   visiteur : la question, les deux réponses qui arrivent chacune
+   de son côté, la jauge de complicité qui monte quand elles se
+   ressemblent, les cœurs qui partent. La carte s'incline sous la
+   souris et les pastilles autour bougent en parallaxe
+   (hero-duel.js). Tout tient en CSS et en transformations, sans
+   image ni bibliothèque. Sous 768px la colonne n'existe pas,
+   comme avant.
+   ═══════════════════════════════════════════════════════════ */
+.hero-visual { display: none; position: relative; height: 470px; }
 @media (min-width: 768px) { .hero-visual { display: block; } }
-.hero-float-card {
-  position: absolute;
-  padding: 1rem 1.75rem;
-  border-radius: var(--radius);
-  background: hsl(var(--card) / 0.65);
-  backdrop-filter: blur(24px) saturate(1.5);
-  border: 1px solid hsl(var(--border) / 0.4);
-  box-shadow:
-    0 12px 40px -8px rgba(0,0,0,0.12),
-    0 4px 16px -4px rgba(0,0,0,0.06),
-    inset 0 1px 0 hsl(0 0% 100% / 0.08);
-  font-weight: 600; font-size: 0.95rem;
-  white-space: nowrap;
-  display: flex; align-items: center; gap: 0.625rem;
-  transform-style: preserve-3d;
-  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.hero-float-card:hover {
-  transform: translateY(-6px) rotateX(2deg) rotateY(-2deg) scale(1.04);
-  box-shadow:
-    0 20px 60px -12px rgba(0,0,0,0.18),
-    0 8px 24px -4px rgba(0,0,0,0.08),
-    inset 0 1px 0 hsl(0 0% 100% / 0.12);
-  border-color: hsl(var(--primary) / 0.3);
-}
-.dark .hero-float-card {
-  background: hsl(var(--card) / 0.5);
-  box-shadow:
-    0 12px 40px -8px rgba(0,0,0,0.4),
-    0 4px 16px -4px rgba(0,0,0,0.25),
-    inset 0 1px 0 hsl(0 0% 100% / 0.05);
-}
-.hero-float-card--1 { top: 8%; left: 5%; animation: floatCard1 6s ease-in-out infinite; transform: rotateX(2deg) rotateY(-3deg); }
-.hero-float-card--2 { top: 38%; right: 0; animation: floatCard2 8s ease-in-out infinite 1s; transform: rotateX(-1deg) rotateY(4deg); }
-.hero-float-card--3 { bottom: 15%; left: 12%; animation: floatCard3 7s ease-in-out infinite 0.5s; transform: rotateX(3deg) rotateY(-2deg); }
-.hero-float-card--4 { top: 63%; left: 52%; animation: floatCard4 6.5s ease-in-out infinite 1.5s; transform: rotateX(-2deg) rotateY(3deg); }
-@keyframes floatCard1 { 0%, 100% { transform: translateY(0) rotateX(2deg) rotateY(-3deg); } 50% { transform: translateY(-22px) rotateX(0deg) rotateY(-1deg); } }
-@keyframes floatCard2 { 0%, 100% { transform: translateY(0) rotateX(-1deg) rotateY(4deg); } 50% { transform: translateY(-18px) rotateX(1deg) rotateY(2deg); } }
-@keyframes floatCard3 { 0%, 100% { transform: translateY(0) rotateX(3deg) rotateY(-2deg); } 50% { transform: translateY(-24px) rotateX(1deg) rotateY(0deg); } }
-@keyframes floatCard4 { 0%, 100% { transform: translateY(0) rotateX(-2deg) rotateY(3deg); } 50% { transform: translateY(-16px) rotateX(0deg) rotateY(1deg); } }
-.hero-float-card .hero-float-icon {
-  width: 40px; height: 40px; border-radius: 12px;
+.duel-scene {
+  position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.35rem;
-  background: hsl(var(--primary) / 0.12);
-  box-shadow: 0 4px 16px -4px hsl(var(--primary) / 0.3);
-  transition: all 0.3s ease;
+  perspective: 1100px;
 }
-.hero-float-card:hover .hero-float-icon {
-  transform: scale(1.1);
-  box-shadow: 0 6px 24px -4px hsl(var(--primary) / 0.5);
+/* La largeur se pose sur le flotteur : la carte est dans une boite flex, un
+   pourcentage sur elle-meme n'aurait rien a mesurer. */
+.duel-flotteur { width: min(304px, 100%); transform-style: preserve-3d; animation: duelFlotte 7s ease-in-out infinite; }
+@keyframes duelFlotte { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+.duel-carte {
+  --reflet-x: 50%; --reflet-y: 35%;
+  position: relative; width: 100%;
+  padding: 1.1rem 1.1rem 1.2rem;
+  border-radius: 1.6rem;
+  background: hsl(var(--card) / .92);
+  border: 1px solid hsl(var(--border) / .85);
+  box-shadow:
+    0 36px 70px -30px hsl(var(--primary) / .55),
+    0 18px 40px -22px rgba(0, 0, 0, .28),
+    inset 0 1px 0 hsl(0 0% 100% / .65);
+  transform-style: preserve-3d;
+  will-change: transform;
 }
-.hero-float-card--2 .hero-float-icon { background: hsl(var(--secondary) / 0.12); box-shadow: 0 4px 16px -4px hsl(var(--secondary) / 0.3); }
-.hero-float-card--3 .hero-float-icon { background: hsl(25 95% 60% / 0.12); box-shadow: 0 4px 16px -4px hsl(25 95% 60% / 0.3); }
-.hero-float-card--4 .hero-float-icon { background: hsl(var(--secondary) / 0.1); box-shadow: 0 4px 16px -4px hsl(var(--secondary) / 0.25); }
+.dark .duel-carte {
+  background: hsl(var(--card) / .94);
+  box-shadow: 0 36px 70px -30px hsl(var(--primary) / .4), 0 18px 40px -22px rgba(0, 0, 0, .6), inset 0 1px 0 hsl(0 0% 100% / .08);
+}
+/* Le reflet suit la souris : c'est lui qui donne l'impression de matière. */
+.duel-reflet {
+  position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(circle at var(--reflet-x) var(--reflet-y), hsl(0 0% 100% / .55), transparent 42%);
+  opacity: .75;
+}
+.dark .duel-reflet { opacity: .16; }
+
+/* L'en-tête : les deux joueurs, la jauge entre eux */
+.duel-tete { position: relative; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .5rem; }
+.duel-joueur { display: flex; flex-direction: column; align-items: center; gap: .35rem; font-size: .78rem; font-weight: 700; color: hsl(var(--muted-foreground)); }
+.duel-avatar {
+  width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 1.45rem; line-height: 1; background: hsl(var(--muted) / .85);
+  box-shadow: 0 0 0 3px hsl(var(--card)), 0 0 0 5px var(--duel-teinte);
+}
+.duel-joueur--a { --duel-teinte: #ec4899; }
+.duel-joueur--b { --duel-teinte: #3b82f6; }
+.duel-jauge { position: relative; width: 68px; height: 68px; display: grid; place-items: center; }
+.duel-jauge svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); overflow: visible; }
+.duel-jauge circle { fill: none; stroke-width: 6; }
+.duel-jauge-fond { stroke: hsl(var(--muted)); }
+.duel-jauge-arc { stroke: url(#duel-degrade); stroke-linecap: round; transition: stroke-dashoffset .9s cubic-bezier(.22, 1, .36, 1); }
+.duel-jauge-nb {
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 1rem; line-height: 1; color: hsl(var(--foreground));
+}
+.duel-jauge-nb small { font-size: .5rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: hsl(var(--muted-foreground)); margin-top: 2px; }
+
+/* Les manches, empilées : une seule est visible à la fois */
+.duel-manches { position: relative; height: 222px; margin-top: 1rem; }
+.duel-manche {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  opacity: 0; transform: translateY(14px); pointer-events: none;
+  transition: opacity .45s ease, transform .45s cubic-bezier(.22, 1, .36, 1);
+}
+.duel-manche.est-active { opacity: 1; transform: none; pointer-events: auto; }
+.duel-etiquette { font-size: .66rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: hsl(var(--primary)); margin: 0 0 .3rem; }
+.duel-question { font-family: 'Poppins', 'Inter', sans-serif; font-weight: 700; font-size: 1.05rem; line-height: 1.3; color: hsl(var(--foreground)); margin: 0 0 .85rem; }
+.duel-reponses { display: flex; flex-direction: column; gap: .5rem; }
+.duel-bulle {
+  max-width: 80%; padding: .5rem .8rem; border-radius: 1rem; font-size: .85rem; font-weight: 600; line-height: 1.3;
+  opacity: 0; transition: opacity .4s ease, transform .55s cubic-bezier(.34, 1.4, .64, 1), box-shadow .3s ease;
+}
+.duel-bulle--a { align-self: flex-start; background: #fce7f3; color: #9d174d; border-bottom-left-radius: .3rem; transform: translateX(-28px) scale(.92); }
+.duel-bulle--b { align-self: flex-end; background: #dbeafe; color: #1e40af; border-bottom-right-radius: .3rem; transform: translateX(28px) scale(.92); }
+.dark .duel-bulle--a { background: #831843; color: #fbcfe8; }
+.dark .duel-bulle--b { background: #1e3a8a; color: #bfdbfe; }
+.duel-manche.a-repondu .duel-bulle--a,
+.duel-manche.a-repondu-b .duel-bulle--b { opacity: 1; transform: none; }
+.duel-manche.est-revelee[data-ok="1"] .duel-bulle { box-shadow: 0 0 0 2px hsl(var(--mint) / .6), 0 10px 20px -12px hsl(var(--mint) / .9); }
+.duel-manche.est-revelee[data-ok="0"] .duel-bulle { opacity: .7; }
+.duel-verdict {
+  margin: auto 0 0; font-size: .85rem; font-weight: 800;
+  opacity: 0; transform: scale(.85); transform-origin: left center;
+  transition: opacity .35s ease, transform .45s cubic-bezier(.34, 1.56, .64, 1);
+}
+.duel-manche.est-revelee .duel-verdict { opacity: 1; transform: none; }
+.duel-verdict span { display: none; }
+.duel-manche[data-ok="1"] .duel-verdict-ok { display: inline; color: hsl(var(--mint)); }
+.duel-manche[data-ok="0"] .duel-verdict-ko { display: inline; color: hsl(var(--muted-foreground)); }
+.duel-manches.secoue { animation: duelSecoue .5s ease; }
+@keyframes duelSecoue { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-6px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(4px); } }
+
+/* L'écran de fin, puis on rejoue */
+.duel-manche--fin .duel-question { font-size: 1.15rem; margin-bottom: .35rem; }
+.duel-fin-texte { font-size: .85rem; color: hsl(var(--muted-foreground)); margin: 0 0 1rem; }
+.duel-cta {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: .4rem;
+  padding: .62rem 1.1rem; border-radius: 999px; text-decoration: none;
+  font-weight: 700; font-size: .85rem; color: #fff;
+  background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
+  box-shadow: 0 10px 22px -12px hsl(var(--primary) / .9);
+  opacity: 0; transform: translateY(8px);
+  transition: opacity .4s ease .25s, transform .4s ease .25s, box-shadow .2s ease;
+}
+.duel-manche--fin.est-revelee .duel-cta { opacity: 1; transform: none; }
+.duel-cta:hover { box-shadow: 0 14px 28px -12px hsl(var(--primary)); color: #fff; }
+.duel-cta svg { width: 1rem; height: 1rem; }
+
+/* Les cœurs qui partent quand les réponses se ressemblent */
+.duel-coeurs { position: absolute; left: 0; right: 0; top: 48%; height: 0; pointer-events: none; }
+.duel-coeur { position: absolute; top: 0; font-size: 1.15rem; line-height: 1; animation: duelCoeur var(--dur, 1.2s) cubic-bezier(.2, .7, .3, 1) forwards; }
+@keyframes duelCoeur {
+  0% { transform: translate(0, 0) scale(.5) rotate(0); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(1.15) rotate(var(--rot)); opacity: 0; }
+}
+
+/* Les pastilles autour, à des profondeurs différentes */
+.duel-orbe { position: absolute; z-index: 2; will-change: transform; }
+.duel-orbe-int {
+  display: grid; place-items: center; width: 56px; height: 56px; border-radius: 18px; font-size: 1.6rem; line-height: 1;
+  background: hsl(var(--card) / .78); border: 1px solid hsl(var(--border) / .7);
+  box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .3), inset 0 1px 0 hsl(0 0% 100% / .55);
+  animation: duelOrbe 6s ease-in-out infinite;
+}
+.dark .duel-orbe-int { box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .7), inset 0 1px 0 hsl(0 0% 100% / .06); }
+.duel-orbe--1 { top: 5%; left: 3%; }
+.duel-orbe--1 .duel-orbe-int { animation-delay: -1s; }
+.duel-orbe--2 { top: 13%; right: 1%; }
+.duel-orbe--2 .duel-orbe-int { animation-delay: -3s; width: 48px; height: 48px; font-size: 1.35rem; border-radius: 15px; }
+.duel-orbe--3 { bottom: 11%; left: 0; }
+.duel-orbe--3 .duel-orbe-int { animation-delay: -2s; width: 50px; height: 50px; font-size: 1.4rem; border-radius: 16px; }
+.duel-orbe--4 { bottom: 4%; right: 7%; }
+.duel-orbe--4 .duel-orbe-int { animation-delay: -4.5s; }
+@keyframes duelOrbe { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-10px) rotate(3deg); } }
+@media (max-width: 1023px) { .duel-orbe { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .duel-flotteur, .duel-orbe-int, .duel-manches.secoue, .duel-coeur { animation: none; }
+  .duel-manche, .duel-bulle, .duel-verdict, .duel-cta, .duel-jauge-arc { transition: none; }
+}
 
 /* Hero decorative blobs, larger, more vivid */
 .hero-blob {
@@ -3411,9 +3501,8 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 @media (hover: hover) and (pointer: fine) {
 .gender-btn:hover { border-color: hsl(var(--primary) / 0.4); }
 }
-.gender-btn-selected { transform: scale(1.05); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
-.gender-btn-selected.gender-btn-male { border-color: #3b82f6; background: #3b82f6; color: #fff; }
-.gender-btn-selected.gender-btn-female { border-color: #ec4899; background: #ec4899; color: #fff; }
+/* L'etat choisi est defini en fin de feuille, apres le style a l'encre du
+   moteur qui l'ecrasait (section « Choix du sexe »). */
 
 /* Compaction mobile : prenoms + genre + bouton visibles sans scroller */
 @media (max-width: 640px) {
@@ -3431,10 +3520,6 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
   .gender-btn { padding: 0.4rem 0.3rem; font-size: 0.75rem; gap: 0.2rem; }
   .quiz-setup-meta { margin-top: 1rem; padding: 0.4rem 1rem; font-size: 0.74rem; }
   .quiz-setup-start-btn { margin-top: 1rem !important; padding: 0.85rem 1.5rem !important; font-size: 1rem !important; }
-}
-@media (max-width: 400px) {
-  .gender-btn .gender-label { display: none; }
-  .gender-btn { font-size: 1.1rem; padding: 0.45rem 0.3rem; }
 }
 
 /* ── Quiz ado : selection du mode de jeu (cartes encadrees, gamifiees) ── */
@@ -4304,6 +4389,19 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .wave-divider { width: 100%; overflow: hidden; line-height: 0; margin: -1px 0; }
 .wave-divider svg { display: block; width: 100%; height: 4.5rem; }
 @media (min-width: 768px) { .wave-divider svg { height: 7rem; } }
+/* Les trois couches derivent lentement, chacune a son rythme et deux dans un
+   sens, une dans l'autre : la vague respire au lieu d'etre une bande figee.
+   Chaque couche est dessinee deux fois dans le partial, decalee de 1440
+   unites, et le deplacement vaut exactement une largeur : la boucle se
+   referme sans raccord. Sur telephone, et si l'utilisateur a demande moins
+   de mouvement, la vague reste immobile. */
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .vague-couche--voile { animation: vagueVersGauche 46s linear infinite; }
+  .vague-couche--fond  { animation: vagueVersDroite 64s linear infinite; }
+  .vague-couche--crete { animation: vagueVersGauche 90s linear infinite; }
+}
+@keyframes vagueVersGauche { from { transform: translateX(0); } to { transform: translateX(-1440px); } }
+@keyframes vagueVersDroite { from { transform: translateX(-1440px); } to { transform: translateX(0); } }
 
 .related-tests-section {
   padding: 3rem 0 4rem;
@@ -5527,7 +5625,6 @@ footer .mt-12.border-t svg.text-primary {
 @media (hover: hover) and (pointer: fine) {
 .gender-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
 }
-.gender-btn-selected { transform: scale(1.04) !important; box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important; }
 /* SEO article: alternating soft "content blocks" to break the flat wall of
    text (background variation + breathing room, no copy changes). */
 .seo-content section {
@@ -9456,11 +9553,10 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .quiz-saut-mobile { display: none; }
 @media (max-width: 767px) {
   .quiz-saut-mobile {
-    display: flex; justify-content: center;
-    /* Le hero est une colonne flex sous 1200px et l'image porte order: 99 pour
-       passer sous le texte. Le bouton la suit donc avec un ordre superieur. */
-    order: 100;
-    margin: 0.9rem auto 0; padding: 0 1rem;
+    display: flex; justify-content: flex-start;
+    /* Le bouton suit la bulle « realise X fois », que quiz-extras.js pose
+       juste apres le dernier paragraphe du hero : meme alignement a gauche. */
+    margin: 0.75rem 0 0; padding: 0;
   }
   .quiz-saut-btn {
     display: inline-flex; align-items: center; gap: 0.5rem;
@@ -10675,3 +10771,38 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    ═══════════════════════════════════════════════════════════════════ */
 .qc-cmp2-persistent-link { display: none !important; }
 .cmp-pastille-regie .qc-cmp2-persistent-link { display: block !important; }
+
+/* ═══════════════════════════════════════════════════════════
+   CHOIX DU SEXE : L'EMOJI SEUL, LA COULEUR DIT QUI EST CHOISI
+   L'ancien libellé « Homme » / « Femme » chargeait l'écran de
+   départ ; il reste dans aria-label et dans l'infobulle. L'état
+   choisi passe au bleu ou au rose, avec l'ombre franche du moteur
+   dans la même couleur : on voit du premier coup d'œil lequel
+   des deux est retenu. Ces règles viennent après le style à
+   l'encre du moteur, qui écrasait l'ancien état choisi.
+   ═══════════════════════════════════════════════════════════ */
+.gender-btn .gender-label { display: none; }
+.quiz-engine .gender-btn,
+.quiz-setup-screen .gender-btn {
+  flex: 0 0 auto; width: 3.6rem; height: 3.1rem; padding: 0; gap: 0;
+  font-size: 1.5rem; line-height: 1;
+  transition: transform .16s ease, box-shadow .16s ease, background .16s ease, border-color .16s ease, opacity .16s ease;
+}
+.quiz-engine .gender-btn:not(.gender-btn-selected) { opacity: .8; }
+.quiz-engine .gender-btn.gender-btn-selected { opacity: 1; transform: translate(-2px, -2px); }
+.quiz-engine .gender-btn.gender-btn-selected.gender-btn-male {
+  background: #dbeafe; border-color: #2563eb;
+  box-shadow: 4px 4px 0 #2563eb, 0 0 0 3px #bfdbfe;
+}
+.quiz-engine .gender-btn.gender-btn-selected.gender-btn-female {
+  background: #fce7f3; border-color: #db2777;
+  box-shadow: 4px 4px 0 #db2777, 0 0 0 3px #fbcfe8;
+}
+.dark .quiz-engine .gender-btn.gender-btn-selected.gender-btn-male { background: #1e3a8a; border-color: #60a5fa; box-shadow: 4px 4px 0 #60a5fa, 0 0 0 3px #1e40af; }
+.dark .quiz-engine .gender-btn.gender-btn-selected.gender-btn-female { background: #831843; border-color: #f472b6; box-shadow: 4px 4px 0 #f472b6, 0 0 0 3px #9d174d; }
+@media (hover: hover) and (pointer: fine) {
+  .quiz-engine .gender-btn:hover { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .quiz-engine .gender-btn, .quiz-setup-screen .gender-btn { transition: none; }
+}

@@ -172,5 +172,29 @@
   },
   "noteSite": {
     "label": "Durchschnittsnote der Seite"
+  },
+  "heroDuel": {
+    "joueur1": "Lena",
+    "joueur2": "Jonas",
+    "question": "Frage",
+    "jauge": "Einklang",
+    "match": "Gleiche Antwort!",
+    "rate": "Diesmal nicht...",
+    "m1q": "Das Lieblingsessen des anderen?",
+    "m1a": "Lasagne",
+    "m1b": "Lasagne",
+    "m2q": "Euer erster Kuss, wo war das?",
+    "m2a": "Auf dem Parkplatz",
+    "m2b": "Auf dem Parkplatz",
+    "m3q": "Wer ist eifersüchtiger?",
+    "m3a": "Er, ganz klar",
+    "m3b": "Sie, ganz klar",
+    "m4q": "Der Lieblingsfilm des anderen?",
+    "m4a": "Tatsächlich… Liebe",
+    "m4b": "Tatsächlich… Liebe",
+    "finEtiquette": "Ergebnis",
+    "finTitre": "Ihr seid auf einer Wellenlänge!",
+    "finTexte": "3 von 4 Antworten gleich",
+    "finCta": "Jetzt seid ihr dran"
   }
 }

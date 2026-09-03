@@ -263,7 +263,6 @@
 <section class="quiz-page-hero relative overflow-hidden">
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="background: radial-gradient(ellipse at 30% 30%, hsl(var(--primary) / 0.1) 0%, transparent 50%), radial-gradient(ellipse at 70% 70%, hsl(var(--secondary) / 0.06) 0%, transparent 50%);"></div>
   <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
-  <%- include('../partials/quiz-saut-mobile', { ns, t }) %>
   <div class="container mx-auto px-4 relative z-10">
     <div class="mx-auto max-w-3xl text-center">
       <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
@@ -296,6 +295,9 @@
       <% const heroSub = t(ns + ':hero.subtitle', ''); if (heroSub && heroSub !== ns + ':hero.subtitle') { %>
       <p class="text-sm text-muted-foreground mt-4 max-w-xl mx-auto"><%= heroSub %></p>
       <% } %>
+      <%# Le raccourci mobile vient ici, sous le dernier paragraphe : la bulle
+          « réalisé X fois » (quiz-extras.js) s'insère juste avant lui. %>
+      <%- include('../partials/quiz-saut-mobile', { ns, t }) %>
     </div>
     <% if (heroIntro1) { %>
     <div class="mx-auto max-w-3xl mt-8 space-y-4 text-muted-foreground leading-relaxed text-center">
