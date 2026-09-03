@@ -132,7 +132,10 @@
     manche();
   }
 
-  var visible = true;
+  // Sous 768px la colonne n'existe pas (display: none) : la scene n'a aucun
+  // rectangle a l'ecran et rien ne doit tourner, ni minuterie ni coeurs. Si la
+  // fenetre s'elargit, l'observateur d'intersection relance la partie.
+  var visible = scene.getClientRects().length > 0;
   function etat() { if (visible && !document.hidden) reprend(); else pause(); }
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (entrees) {

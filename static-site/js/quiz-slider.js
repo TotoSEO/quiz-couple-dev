@@ -6,6 +6,13 @@
     var prev = root.querySelector('[data-slider-prev]');
     var next = root.querySelector('[data-slider-next]');
     if (!track) return;
+    var compteur = root.querySelector('[data-slider-compteur]');
+    var cartes = track.querySelectorAll('.quiz-slide');
+    function pas() {
+      var card = cartes[0];
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '20') || 20;
+      return card ? card.getBoundingClientRect().width + gap : track.clientWidth * 0.8;
+    }
 
     function step() {
       var card = track.querySelector('.quiz-slide');
@@ -29,6 +36,18 @@
       if (next) next.disabled = fin;
       root.classList.toggle('is-start', debut);
       root.classList.toggle('is-end', fin);
+      // La barre sous la piste : la part visible et l'avancement, en variables
+      // CSS ; le compteur dit la derniere carte visible sur le total.
+      var part = track.scrollWidth ? track.clientWidth / track.scrollWidth : 1;
+      root.style.setProperty('--part', part.toFixed(4));
+      root.style.setProperty('--avance', (maxScroll > 0 ? Math.min(1, Math.max(0, x / maxScroll)) : 0).toFixed(4));
+      if (compteur && cartes.length) {
+        var w = pas();
+        var visibles = Math.max(1, Math.floor((track.clientWidth + 1) / w));
+        var premier = Math.round(x / w);
+        var dernier = fin ? cartes.length : Math.min(cartes.length, premier + visibles);
+        compteur.textContent = dernier + ' / ' + cartes.length;
+      }
     }
 
     if (prev) prev.addEventListener('click', function () {

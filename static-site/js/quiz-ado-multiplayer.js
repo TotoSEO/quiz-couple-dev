@@ -33,20 +33,6 @@
     waitingForPartner: false
   };
 
-  // ── Score ring SVG helper ──
-  function adoScoreRing(pct) {
-    var c = 283;
-    var offset = c - (c * pct / 100);
-    var color = pct >= 60 ? '#10b981' : pct >= 30 ? '#f59e0b' : '#ef4444';
-    return '<div class="score-ring-wrap" style="width:140px;height:140px;margin:0 auto">' +
-      '<svg viewBox="0 0 100 100" class="score-ring">' +
-        '<circle cx="50" cy="50" r="45" class="score-ring-bg"/>' +
-        '<circle cx="50" cy="50" r="45" class="score-ring-fill" style="stroke-dashoffset:' + offset + ';stroke:' + color + '"/>' +
-      '</svg>' +
-      '<span class="score-ring-value">' + pct + '%</span>' +
-    '</div>';
-  }
-
   // ── UI Translations ──
   var UI = {
     fr: {
@@ -88,7 +74,14 @@
       comparison: 'Voir le détail des réponses',
       connecting: 'Connexion…',
       createDesc2: 'Crée un code et envoie-le à ton/ta partenaire',
-      joinDesc2: 'Entre le code reçu de ton/ta partenaire'
+      joinDesc2: 'Entre le code reçu de ton/ta partenaire',
+      joueur: 'Joueur',
+      prenomCourt: 'Prénom',
+      questionLabel: 'Question',
+      metaQuestions: '{{n}} questions chacun',
+      notreConseil: 'Notre conseil',
+      nomLabel: 'Ton prénom',
+      roleTitre: 'Comment on se retrouve ?'
     },
     en: {
       modeTitle: 'Teen Couple Quiz',
@@ -129,7 +122,14 @@
       comparison: 'See answer details',
       connecting: 'Connecting…',
       createDesc2: 'Create a code and send it to your partner',
-      joinDesc2: 'Enter the code from your partner'
+      joinDesc2: 'Enter the code from your partner',
+      joueur: 'Player',
+      prenomCourt: 'First name',
+      questionLabel: 'Question',
+      metaQuestions: '{{n}} questions each',
+      notreConseil: 'Our advice',
+      nomLabel: 'Your name',
+      roleTitre: 'How do you meet up?'
     },
     es: {
       modeTitle: 'Quiz Pareja Adolescentes',
@@ -170,7 +170,14 @@
       comparison: 'Ver detalle',
       connecting: 'Conectando…',
       createDesc2: 'Crea un código y envíalo',
-      joinDesc2: 'Introduce el código recibido'
+      joinDesc2: 'Introduce el código recibido',
+      joueur: 'Jugador',
+      prenomCourt: 'Nombre',
+      questionLabel: 'Pregunta',
+      metaQuestions: '{{n}} preguntas cada uno',
+      notreConseil: 'Nuestro consejo',
+      nomLabel: 'Tu nombre',
+      roleTitre: '¿Cómo os conectáis?'
     },
     de: {
       modeTitle: 'Teenager Paar-Quiz',
@@ -211,7 +218,14 @@
       comparison: 'Details anzeigen',
       connecting: 'Verbinde…',
       createDesc2: 'Erstelle einen Code',
-      joinDesc2: 'Code eingeben'
+      joinDesc2: 'Code eingeben',
+      joueur: 'Spieler',
+      prenomCourt: 'Vorname',
+      questionLabel: 'Frage',
+      metaQuestions: '{{n}} Fragen pro Person',
+      notreConseil: 'Unser Tipp',
+      nomLabel: 'Dein Name',
+      roleTitre: 'Wie findet ihr euch?'
     },
     it: {
       modeTitle: 'Quiz Coppia Adolescenti',
@@ -252,11 +266,81 @@
       comparison: 'Vedi dettaglio',
       connecting: 'Connessione…',
       createDesc2: 'Crea un codice e invialo',
-      joinDesc2: 'Inserisci il codice ricevuto'
+      joinDesc2: 'Inserisci il codice ricevuto',
+      joueur: 'Giocatore',
+      prenomCourt: 'Nome',
+      questionLabel: 'Domanda',
+      metaQuestions: '{{n}} domande a testa',
+      notreConseil: 'Il nostro consiglio',
+      nomLabel: 'Il tuo nome',
+      roleTitre: 'Come vi collegate?'
     }
   };
 
   function t(key) { return (UI[lang] || UI.fr)[key] || UI.fr[key] || key; }
+
+  // ── Les briques d'ecran, calquees sur le moteur commun ──
+  // Ce moteur est a part, mais ses ecrans reprennent les memes classes que
+  // les autres tests : c'est la feuille de style du moteur commun qui les
+  // habille (cadre a l'encre, cartes joueurs, barre de progression, reponses,
+  // relais, ecran de resultat). Aucune regle n'est a ecrire deux fois.
+  var ICONE_DEUX = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>';
+  var ICONE_TEL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>';
+  var LETTRES = ['A', 'B', 'C', 'D', 'E'];
+
+  function enTete(icone, titre, desc) {
+    return '<div class="quiz-setup-icon mx-auto mb-6">' + icone + '</div>' +
+      '<h2 class="text-2xl font-bold mb-3 text-center"><span class="quiz-setup-h2-txt">' + esc(titre) + '</span></h2>' +
+      (desc ? '<p class="text-muted-foreground mb-8 text-center">' + esc(desc) + '</p>' : '');
+  }
+  function carteJoueur(num, inputId, valeur) {
+    return '<div class="quiz-player-card">' +
+      '<div class="quiz-player-number">' + num + '</div>' +
+      '<label class="block text-sm font-semibold mb-2 text-center" for="' + inputId + '">' + esc(t('joueur')) + ' ' + num + '</label>' +
+      '<input id="' + inputId + '" type="text" class="input w-full" placeholder="' + esc(t('prenomCourt')) + '" maxlength="30" autocomplete="off" value="' + esc(valeur || '') + '" />' +
+    '</div>';
+  }
+  function progression(courant, total, droite) {
+    var pct = Math.round(courant / total * 100);
+    var libelle = t('questionLabel') + ' ' + Math.min(courant + 1, total) + '/' + total;
+    return '<div class="quiz-progress-wrapper">' +
+      '<div class="quiz-progress-header">' +
+        '<span class="quiz-progress-label">' + esc(libelle) + '</span>' +
+        '<span class="quiz-progress-pct">' + (droite || (pct + '%')) + '</span>' +
+      '</div>' +
+      '<div class="quiz-progress-bar" role="progressbar" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100" aria-label="' + esc(libelle) + '">' +
+        '<div class="quiz-progress-fill" style="width:' + pct + '%"></div>' +
+      '</div>' +
+    '</div>';
+  }
+  // A distance, chacun avance a son rythme : deux barres, une par joueur,
+  // avec la meme piste que la barre commune.
+  function progressionDuo(moi, lui, nMoi, nLui) {
+    function ligne(nom, n, cls) {
+      return '<div class="ado-duo-ligne">' +
+        '<span class="ado-duo-nom ' + cls + '">' + esc(nom) + '</span>' +
+        '<div class="quiz-progress-bar"><div class="quiz-progress-fill ' + cls + '" style="width:' + (n / totalQ * 100) + '%"></div></div>' +
+        '<span class="ado-duo-compte">' + n + '/' + totalQ + '</span>' +
+      '</div>';
+    }
+    return '<div class="ado-duo-progression">' + ligne(moi, nMoi, 'ado-duo--moi') + ligne(lui, nLui, 'ado-duo--lui') + '</div>';
+  }
+  function anneauScore(pct) {
+    if (!document.getElementById('scoreGradientSvg')) {
+      var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.id = 'scoreGradientSvg'; svg.setAttribute('width', '0'); svg.setAttribute('height', '0'); svg.style.position = 'absolute';
+      svg.innerHTML = '<defs><linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="hsl(340, 65%, 65%)"/><stop offset="100%" stop-color="hsl(270, 40%, 70%)"/></linearGradient></defs>';
+      document.body.appendChild(svg);
+    }
+    var c = 283, offset = c - (c * pct / 100);
+    return '<div class="score-ring-wrap">' +
+      '<svg viewBox="0 0 100 100" class="score-ring" aria-hidden="true">' +
+        '<circle cx="50" cy="50" r="45" class="score-ring-bg"/>' +
+        '<circle cx="50" cy="50" r="45" class="score-ring-fill" style="stroke-dashoffset:' + offset + '"/>' +
+      '</svg>' +
+      '<span class="score-ring-value">' + pct + '%</span>' +
+    '</div>';
+  }
   function esc(s) { return s ? String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') : ''; }
 
   // Helper: resolve names consistently regardless of player perspective
@@ -381,21 +465,18 @@
   // ── Screen: Mode Select ──
   function renderModeSelect() {
     container.innerHTML =
-      '<div class="quiz-engine ado-mode-select">' +
-        '<div class="ado-mode-head">' +
-          '<h2 class="ado-mode-title">' + t('modeTitle') + '</h2>' +
-          '<p class="ado-mode-sub">' + t('modeSubtitle') + '</p>' +
-        '</div>' +
-        '<div class="ado-mode-grid">' +
-          '<button id="btn-local" type="button" class="ado-mode-card">' +
-            '<span class="ado-mode-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span>' +
-            '<span class="ado-mode-name">' + t('localBtn') + '</span>' +
-            '<span class="ado-mode-desc">' + t('localDesc') + '</span>' +
+      '<div class="quiz-engine quiz-setup-screen quiz-modes animate-fade-in">' +
+        enTete(ICONE_DEUX, t('modeTitle'), t('modeSubtitle')) +
+        '<div class="choix-modes choix-modes--longs">' +
+          '<button id="btn-local" type="button" class="choix-mode choix-mode--solo" aria-label="' + esc(t('localBtn') + ' : ' + t('localDesc')) + '">' +
+            '<span class="ado-mode-icon" aria-hidden="true">' + ICONE_TEL + '</span>' +
+            '<span class="choix-mode-nom">' + esc(t('localBtn')) + '</span>' +
+            '<span class="choix-mode-desc">' + esc(t('localDesc')) + '</span>' +
           '</button>' +
-          '<button id="btn-online" type="button" class="ado-mode-card ado-mode-card--alt">' +
-            '<span class="ado-mode-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>' +
-            '<span class="ado-mode-name">' + t('onlineBtn') + '</span>' +
-            '<span class="ado-mode-desc">' + t('onlineDesc') + '</span>' +
+          '<button id="btn-online" type="button" class="choix-mode choix-mode--duo" aria-label="' + esc(t('onlineBtn') + ' : ' + t('onlineDesc')) + '">' +
+            '<span class="ado-mode-icon ado-mode-icon--alt" aria-hidden="true">' + ICONE_DEUX + '</span>' +
+            '<span class="choix-mode-nom">' + esc(t('onlineBtn')) + '</span>' +
+            '<span class="choix-mode-desc">' + esc(t('onlineDesc')) + '</span>' +
           '</button>' +
         '</div>' +
       '</div>';
@@ -415,27 +496,21 @@
   // ── Screen: Name Input (Local mode) ──
   function renderNameInputLocal() {
     container.innerHTML =
-      '<div class="quiz-engine max-w-md mx-auto space-y-6">' +
-        backBtn() +
-        '<div class="space-y-4">' +
-          '<div>' +
-            '<label class="block text-sm font-medium mb-1.5" for="name1">' + t('player1Name') + '</label>' +
-            '<input id="name1" type="text" class="w-full rounded-lg border border-border bg-card px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="' + t('namePlaceholder') + '" maxlength="30" autocomplete="off" />' +
-          '</div>' +
-          '<div>' +
-            '<label class="block text-sm font-medium mb-1.5" for="name2">' + t('player2Name') + '</label>' +
-            '<input id="name2" type="text" class="w-full rounded-lg border border-border bg-card px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="' + t('namePlaceholder') + '" maxlength="30" autocomplete="off" />' +
-          '</div>' +
-          (state.error ? '<p class="text-sm text-destructive">' + esc(state.error) + '</p>' : '') +
-          '<button id="btn-go" class="btn btn-primary w-full py-3 text-base">' + t('startLocal') + '</button>' +
+      '<div class="quiz-engine quiz-setup-screen animate-fade-in">' +
+        enTete(ICONE_TEL, t('localBtn'), t('localDesc')) +
+        '<div class="quiz-setup-grid max-w-lg mx-auto">' +
+          carteJoueur(1, 'name1', state.name1) +
+          carteJoueur(2, 'name2', state.name2) +
         '</div>' +
+        (state.error ? '<p class="ado-erreur">' + esc(state.error) + '</p>' : '') +
+        '<div class="quiz-setup-meta">' + esc(t('metaQuestions').replace('{{n}}', totalQ)) + '</div>' +
+        '<button id="btn-go" type="button" class="btn btn-cta btn-lg quiz-setup-start-btn">' + esc(t('startLocal')) + '</button>' +
+        backBtn() +
       '</div>';
 
     addBackListener();
     var n1 = document.getElementById('name1');
     var n2 = document.getElementById('name2');
-    if (state.name1) n1.value = state.name1;
-    if (state.name2) n2.value = state.name2;
     n1.focus();
 
     document.getElementById('btn-go').addEventListener('click', function () {
@@ -460,35 +535,37 @@
 
   // ── Screen: Name Input (Online mode) ──
   function renderNameInputOnline() {
+    var role = state.onlineRole;
     container.innerHTML =
-      '<div class="quiz-engine max-w-md mx-auto space-y-6">' +
-        backBtn() +
-        '<div class="grid gap-3 mb-4">' +
-          '<button id="btn-create" class="btn ' + (state.onlineRole === 'create' ? 'btn-primary' : 'btn-outline') + ' py-3 text-sm flex flex-col items-center gap-0.5 w-full">' +
-            '<span>' + t('createGame') + '</span>' +
-            '<span class="text-xs opacity-70 font-normal leading-tight">' + t('createDesc2') + '</span>' +
+      '<div class="quiz-engine quiz-setup-screen animate-fade-in">' +
+        enTete(ICONE_DEUX, t('onlineBtn'), t('onlineDesc')) +
+        '<p class="ado-role-titre">' + esc(t('roleTitre')) + '</p>' +
+        '<div class="quiz-modes-liste ado-roles">' +
+          '<button id="btn-create" type="button" class="quiz-mode-carte' + (role === 'create' ? ' est-choisi' : '') + '" aria-pressed="' + (role === 'create') + '">' +
+            '<span class="quiz-mode-emoji" aria-hidden="true">✨</span>' +
+            '<span class="quiz-mode-corps"><span class="quiz-mode-titre">' + esc(t('createGame')) + '</span><span class="quiz-mode-desc">' + esc(t('createDesc2')) + '</span></span>' +
           '</button>' +
-          '<button id="btn-join" class="btn ' + (state.onlineRole === 'join' ? 'btn-primary' : 'btn-outline') + ' py-3 text-sm flex flex-col items-center gap-0.5 w-full">' +
-            '<span>' + t('joinGame') + '</span>' +
-            '<span class="text-xs opacity-70 font-normal leading-tight">' + t('joinDesc2') + '</span>' +
+          '<button id="btn-join" type="button" class="quiz-mode-carte' + (role === 'join' ? ' est-choisi' : '') + '" aria-pressed="' + (role === 'join') + '">' +
+            '<span class="quiz-mode-emoji" aria-hidden="true">🔑</span>' +
+            '<span class="quiz-mode-corps"><span class="quiz-mode-titre">' + esc(t('joinGame')) + '</span><span class="quiz-mode-desc">' + esc(t('joinDesc2')) + '</span></span>' +
           '</button>' +
         '</div>' +
-        (state.onlineRole ?
-        '<div class="space-y-4">' +
-          '<div>' +
-            '<label class="block text-sm font-medium mb-1.5" for="online-name">' + t('player1Name') + '</label>' +
-            '<input id="online-name" type="text" class="w-full rounded-lg border border-border bg-card px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="' + t('namePlaceholder') + '" maxlength="30" autocomplete="off" />' +
+        (role ?
+        '<div class="quiz-setup-grid quiz-setup-grid--seul max-w-lg mx-auto">' +
+          '<div class="quiz-player-card">' +
+            '<div class="quiz-player-number">' + (role === 'join' ? 2 : 1) + '</div>' +
+            '<label class="block text-sm font-semibold mb-2 text-center" for="online-name">' + esc(t('nomLabel')) + '</label>' +
+            '<input id="online-name" type="text" class="input w-full" placeholder="' + esc(t('namePlaceholder')) + '" maxlength="30" autocomplete="off" value="' + esc(state.name1) + '" />' +
+            (role === 'join' ?
+            '<label class="block text-sm font-semibold mt-4 mb-2 text-center" for="online-code">' + esc(t('sessionCode')) + '</label>' +
+            '<input id="online-code" type="text" class="input w-full ado-code-saisie" placeholder="' + esc(t('codePlaceholder')) + '" maxlength="6" autocomplete="off" autocapitalize="characters" spellcheck="false" />' : '') +
           '</div>' +
-          (state.onlineRole === 'join' ?
-          '<div>' +
-            '<label class="block text-sm font-medium mb-1.5" for="online-code">' + t('sessionCode') + '</label>' +
-            '<input id="online-code" type="text" class="w-full rounded-lg border border-border bg-card px-4 py-3 text-base text-center font-mono tracking-widest uppercase focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="' + t('codePlaceholder') + '" maxlength="6" autocomplete="off" />' +
-          '</div>' : '') +
-          (state.error ? '<p class="text-sm text-destructive">' + esc(state.error) + '</p>' : '') +
-          '<button id="btn-online-go" class="btn btn-primary w-full py-3 text-base" ' + (state.loading ? 'disabled' : '') + '>' +
-            (state.loading ? '<span class="spinner-sm mr-2"></span>' + t('connecting') : (state.onlineRole === 'join' ? t('joinGame') : t('createGame'))) +
-          '</button>' +
-        '</div>' : '') +
+        '</div>' +
+        (state.error ? '<p class="ado-erreur">' + esc(state.error) + '</p>' : '') +
+        '<button id="btn-online-go" type="button" class="btn btn-cta btn-lg quiz-setup-start-btn"' + (state.loading ? ' disabled' : '') + '>' +
+          (state.loading ? '<span class="spinner-sm"></span> ' + esc(t('connecting')) : esc(role === 'join' ? t('joinGame') : t('createGame'))) +
+        '</button>' : '') +
+        backBtn() +
       '</div>';
 
     addBackListener();
@@ -501,10 +578,7 @@
     });
 
     var nameInput = document.getElementById('online-name');
-    if (nameInput) {
-      if (state.name1) nameInput.value = state.name1;
-      if (!state.loading) nameInput.focus();
-    }
+    if (nameInput && !state.loading) nameInput.focus();
 
     var goBtn = document.getElementById('btn-online-go');
     if (goBtn) {
@@ -538,17 +612,14 @@
   // ── Screen: Waiting Room (online create) ──
   function renderWaiting() {
     container.innerHTML =
-      '<div class="max-w-md mx-auto py-12 text-center space-y-8">' +
-        '<div class="space-y-2">' +
-          '<div class="spinner mx-auto mb-4"></div>' +
-          '<h2 class="text-xl font-bold">' + t('waitingTitle') + '</h2>' +
-          '<p class="text-muted-foreground text-sm">' + t('waitingDesc') + '</p>' +
+      '<div class="quiz-engine quiz-setup-screen animate-fade-in">' +
+        enTete(ICONE_DEUX, t('waitingTitle'), t('waitingDesc')) +
+        '<div class="ado-code" aria-live="polite">' + esc(state.sessionCode) + '</div>' +
+        '<div class="ado-attente"><span class="spinner"></span></div>' +
+        '<div class="ado-actions">' +
+          '<button id="btn-copy" type="button" class="btn btn-outline">' + esc(t('copyCode')) + '</button>' +
+          '<button id="btn-cancel" type="button" class="btn btn-ghost">' + esc(t('back')) + '</button>' +
         '</div>' +
-        '<div class="bg-card border-2 border-dashed border-primary/40 rounded-xl p-6">' +
-          '<p class="text-4xl font-mono font-bold tracking-[0.4em] text-primary select-all">' + state.sessionCode + '</p>' +
-        '</div>' +
-        '<button id="btn-copy" class="btn btn-outline text-sm">' + t('copyCode') + '</button>' +
-        '<button id="btn-cancel" class="block mx-auto text-sm text-muted-foreground hover:text-foreground transition-colors">' + t('back') + '</button>' +
       '</div>';
 
     document.getElementById('btn-copy').addEventListener('click', function () {
@@ -573,12 +644,12 @@
     var doneName = state.name1;
     var nextName = state.name2;
     container.innerHTML =
-      '<div class="max-w-md mx-auto py-12 text-center space-y-6">' +
-        '<div class="text-6xl mb-4">🔄</div>' +
-        '<h2 class="text-2xl font-bold">' + t('passPhone').replace('{{name}}', esc(nextName)) + '</h2>' +
-        '<p class="text-muted-foreground">' + t('passPhoneDesc').replace('{{name}}', esc(doneName)).replace('{{name2}}', esc(nextName)) + '</p>' +
-        '<p class="text-sm text-muted-foreground italic">' + t('dontLook').replace('{{name}}', esc(doneName)) + '</p>' +
-        '<button id="btn-continue" class="btn btn-primary py-3 px-8 text-lg mt-4">' + t('tapToContinue') + '</button>' +
+      '<div class="qc-relais ado-relais" role="status" aria-live="polite">' +
+        '<div class="qc-relais-macaron" aria-hidden="true"><span>📱</span></div>' +
+        '<p class="qc-relais-annonce">' + esc(t('passPhone')).replace('{{name}}', '<span class="qc-relais-nom">' + esc(nextName) + '</span>') + '</p>' +
+        '<p class="qc-relais-note">' + esc(t('passPhoneDesc').replace('{{name}}', doneName).replace('{{name2}}', nextName)) + '</p>' +
+        '<p class="qc-relais-etape">' + esc(t('dontLook').replace('{{name}}', doneName)) + '</p>' +
+        '<button id="btn-continue" type="button" class="btn btn-cta btn-lg">' + esc(t('tapToContinue')) + '</button>' +
       '</div>';
 
     document.getElementById('btn-continue').addEventListener('click', function () {
@@ -592,7 +663,7 @@
   // ── Screen: Questions ──
   function renderQuestions() {
     if (!state.questionsReady || questions.length === 0) {
-      container.innerHTML = '<div class="text-center py-12"><div class="spinner mx-auto mb-4"></div></div>';
+      container.innerHTML = '<div class="quiz-engine quiz-setup-screen"><div class="ado-attente"><span class="spinner"></span></div></div>';
       return;
     }
 
@@ -646,111 +717,67 @@
       { key: 'd', text: q.d.replace(/\{\{name\}\}/g, partnerName) }
     ];
 
-    // Build dual progress bars for online mode
-    var progressHtml = '';
-    if (state.gameMode === 'online') {
-      var myNameProg = getMyName();
-      var myProgress = state.answers1.length;
-      var partnerProgress = state.partnerAnswers.length;
-      progressHtml =
-        '<div class="space-y-2 mb-2">' +
-          '<div class="flex items-center gap-2 text-xs">' +
-            '<span class="font-medium text-primary w-20 truncate">' + esc(myNameProg) + '</span>' +
-            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-primary h-2 rounded-full transition-all duration-300" style="width:' + (myProgress / totalQ * 100) + '%"></div></div>' +
-            '<span class="text-muted-foreground w-10 text-right">' + myProgress + '/' + totalQ + '</span>' +
-          '</div>' +
-          '<div class="flex items-center gap-2 text-xs">' +
-            '<span class="font-medium text-secondary w-20 truncate">' + esc(partnerName) + '</span>' +
-            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-secondary h-2 rounded-full transition-all duration-300" style="width:' + (partnerProgress / totalQ * 100) + '%"></div></div>' +
-            '<span class="text-muted-foreground w-10 text-right">' + partnerProgress + '/' + totalQ + '</span>' +
-          '</div>' +
-        '</div>';
-    }
+    // Sur le meme telephone, la barre dit a qui c'est le tour, a la place du
+    // pourcentage. A distance, chaque joueur a sa barre.
+    var barre = (state.gameMode === 'online')
+      ? progressionDuo(getMyName(), partnerName, state.answers1.length, state.partnerAnswers.length) +
+        '<p class="quiz-progress-label ado-question-numero">' + esc(t('questionLabel') + ' ' + (qi + 1) + '/' + totalQ) + '</p>'
+      : progression(qi, totalQ, '<span class="ado-tour ado-tour--' + state.currentPlayer + '">' + esc(t('turnOf').replace('{{name}}', currentName)) + '</span>');
 
     container.innerHTML =
-      '<div class="max-w-lg mx-auto py-6 space-y-6">' +
-        '<div class="flex items-center justify-between text-sm text-muted-foreground">' +
-          '<span>' + (qi + 1) + ' ' + t('questionOf') + ' ' + totalQ + '</span>' +
-          (state.gameMode === 'local' ?
-            '<span class="font-medium text-primary">' + t('turnOf').replace('{{name}}', esc(currentName)) + '</span>' :
-            '') +
-        '</div>' +
-        (state.gameMode === 'online' ? progressHtml :
-        '<div class="w-full bg-muted rounded-full h-2">' +
-          '<div class="bg-primary h-2 rounded-full transition-all duration-300" style="width:' + ((qi + 1) / totalQ * 100) + '%"></div>' +
-        '</div>') +
-        '<h3 class="text-lg font-semibold leading-snug">' + esc(qText) + '</h3>' +
-        '<div class="grid gap-3">' +
+      '<div class="quiz-engine quiz-question-enter">' +
+        barre +
+        '<h3 class="text-xl font-semibold mb-6 text-center">' + esc(qText) + '</h3>' +
+        '<div class="space-y-2">' +
           choices.map(function (c, idx) {
-            var optLetters = ['A','B','C','D','E'];
-            return '<button class="choice-btn quiz-option w-full" data-choice="' + c.key + '"><span class="quiz-option-letter">' + (optLetters[idx] || '') + '</span><span>' + esc(c.text) + '</span></button>';
+            return '<button type="button" class="quiz-option" data-choice="' + c.key + '" style="animation-delay:' + (idx * 60) + 'ms">' +
+              '<span class="quiz-option-letter">' + LETTRES[idx] + '</span><span>' + esc(c.text) + '</span></button>';
           }).join('') +
         '</div>' +
       '</div>';
 
-    container.querySelectorAll('.choice-btn').forEach(function (btn) {
+    var options = container.querySelectorAll('.quiz-option');
+    var verrou = false;
+    options.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        handleAnswer(btn.dataset.choice);
+        // Un seul choix par question : la reponse se marque, les autres
+        // s'eteignent, et l'ecran suivant vient apres un court temps, comme
+        // dans les autres tests.
+        if (verrou) return;
+        verrou = true;
+        btn.classList.add('selected');
+        options.forEach(function (o) { if (o !== btn) o.style.opacity = '0.5'; o.style.pointerEvents = 'none'; });
+        var choix = btn.getAttribute('data-choice');
+        setTimeout(function () { handleAnswer(choix); }, 260);
       });
     });
   }
 
-  // Online mode: waiting for partner to answer the same question
   function renderWaitingForQuestion() {
     var pName = getPartnerName();
-    var myName = getMyName();
-    var qi = state.currentQ;
     var myProgress = state.answers1.length;
     var partnerProgress = state.partnerAnswers.length;
-
     container.innerHTML =
-      '<div class="quiz-engine max-w-md mx-auto space-y-6">' +
-        // Dual progress bars
-        '<div class="space-y-2">' +
-          '<div class="flex items-center gap-2 text-xs">' +
-            '<span class="font-medium text-primary w-20 truncate">' + esc(myName) + '</span>' +
-            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-primary h-2 rounded-full transition-all duration-300" style="width:' + (myProgress / totalQ * 100) + '%"></div></div>' +
-            '<span class="text-muted-foreground w-10 text-right">' + myProgress + '/' + totalQ + '</span>' +
-          '</div>' +
-          '<div class="flex items-center gap-2 text-xs">' +
-            '<span class="font-medium text-secondary w-20 truncate">' + esc(pName) + '</span>' +
-            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-secondary h-2 rounded-full transition-all duration-300" style="width:' + (partnerProgress / totalQ * 100) + '%"></div></div>' +
-            '<span class="text-muted-foreground w-10 text-right">' + partnerProgress + '/' + totalQ + '</span>' +
-          '</div>' +
-        '</div>' +
-        // Waiting message
-        '<div class="text-center space-y-4 py-6">' +
-          '<div class="spinner mx-auto"></div>' +
-          '<p class="font-medium text-foreground">' + t('waitingAnswer').replace('{{name}}', esc(pName)) + '</p>' +
-          '<p class="text-sm text-muted-foreground">' + t('waitingProgress').replace('{{name}}', esc(pName)).replace('{{n}}', partnerProgress).replace('{{total}}', totalQ) + '</p>' +
+      '<div class="quiz-engine quiz-question-enter">' +
+        progressionDuo(getMyName(), pName, myProgress, partnerProgress) +
+        '<div class="ado-attente ado-attente--texte">' +
+          '<span class="spinner"></span>' +
+          '<p class="ado-attente-titre">' + esc(t('waitingAnswer').replace('{{name}}', pName)) + '</p>' +
+          '<p class="ado-attente-note">' + esc(t('waitingProgress').replace('{{name}}', pName).replace('{{n}}', partnerProgress).replace('{{total}}', totalQ)) + '</p>' +
         '</div>' +
       '</div>';
   }
 
-  // Online mode: I finished all questions, waiting for partner to finish too
   function renderWaitingForPartner() {
     var pName = getPartnerName();
-    var myName = getMyName();
     var pAnswers = state.partnerAnswers || [];
     container.innerHTML =
-      '<div class="quiz-engine max-w-md mx-auto space-y-6">' +
-        // Dual progress bars
-        '<div class="space-y-2">' +
-          '<div class="flex items-center gap-2 text-xs">' +
-            '<span class="font-medium text-primary w-20 truncate">' + esc(myName) + '</span>' +
-            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-primary h-2 rounded-full transition-all duration-300" style="width:100%"></div></div>' +
-            '<span class="text-muted-foreground w-10 text-right">' + totalQ + '/' + totalQ + '</span>' +
-          '</div>' +
-          '<div class="flex items-center gap-2 text-xs">' +
-            '<span class="font-medium text-secondary w-20 truncate">' + esc(pName) + '</span>' +
-            '<div class="flex-1 bg-muted rounded-full h-2"><div class="bg-secondary h-2 rounded-full transition-all duration-300" style="width:' + (pAnswers.length / totalQ * 100) + '%"></div></div>' +
-            '<span class="text-muted-foreground w-10 text-right">' + pAnswers.length + '/' + totalQ + '</span>' +
-          '</div>' +
-        '</div>' +
-        '<div class="text-center space-y-4 py-6">' +
-          '<div class="spinner mx-auto"></div>' +
-          '<p class="font-medium text-foreground">' + t('waitingAnswer').replace('{{name}}', esc(pName)) + '</p>' +
-          '<p class="text-sm text-muted-foreground">' + t('waitingProgress').replace('{{name}}', esc(pName)).replace('{{n}}', pAnswers.length).replace('{{total}}', totalQ) + '</p>' +
+      '<div class="quiz-engine quiz-question-enter">' +
+        progressionDuo(getMyName(), pName, totalQ, pAnswers.length) +
+        '<div class="ado-attente ado-attente--texte">' +
+          '<span class="spinner"></span>' +
+          '<p class="ado-attente-titre">' + esc(t('waitingAnswer').replace('{{name}}', pName)) + '</p>' +
+          '<p class="ado-attente-note">' + esc(t('waitingProgress').replace('{{name}}', pName).replace('{{n}}', pAnswers.length).replace('{{total}}', totalQ)) + '</p>' +
         '</div>' +
       '</div>';
   }
@@ -775,6 +802,7 @@
     // en réclamait cinq, si bien qu'au-delà de 80 % de réponses identiques le
     // couple le mieux assorti repartait sans titre, sans texte et sans conseil.
     var resultKey = pct >= 75 ? 'r4' : pct >= 50 ? 'r3' : pct >= 25 ? 'r2' : 'r1';
+    var palier = resultKey === 'r4' ? 'high' : resultKey === 'r1' ? 'low' : 'mid';
     var n1 = state.name1, n2 = state.name2;
 
     // Les verdicts s'adressent aux deux joueurs par leur prénom. Le moteur les
@@ -796,43 +824,45 @@
       var same = a1[j] === a2[j];
       var c1 = (q[a1[j]] || '-').replace(/\{\{name\}\}/g, n2);
       var c2 = (q[a2[j]] || '-').replace(/\{\{name\}\}/g, n1);
-      if (c1.length > 35) c1 = c1.substring(0, 32) + '…';
-      if (c2.length > 35) c2 = c2.substring(0, 32) + '…';
       compRows +=
-        '<tr class="border-b border-border/50 ' + (same ? 'bg-emerald-50/50 dark:bg-emerald-900/10' : '') + '">' +
-          '<td class="py-2 px-2 text-xs text-muted-foreground">' + (j+1) + '</td>' +
-          '<td class="py-2 px-2 text-sm">' + esc(c1) + '</td>' +
-          '<td class="py-2 px-2 text-sm">' + esc(c2) + '</td>' +
-          '<td class="py-2 px-2 text-center">' + (same ? '<span class="text-emerald-600 font-bold">✓</span>' : '<span class="text-muted-foreground">✗</span>') + '</td>' +
+        '<tr class="' + (same ? 'ado-ligne--pareil' : '') + '">' +
+          '<td class="ado-col-num">' + (j + 1) + '</td>' +
+          '<td>' + esc(c1) + '</td>' +
+          '<td>' + esc(c2) + '</td>' +
+          '<td class="ado-col-verdict">' + (same ? '<span class="ado-pareil" aria-label="identique">✓</span>' : '<span class="ado-different" aria-label="différent">✗</span>') + '</td>' +
         '</tr>';
     }
 
-    // Ce moteur a son propre ecran de resultat, sans .quiz-result-card : la
-    // page ne remontait donc aucune partie a l'admin.
+    // La carte porte data-quiz-done : c'est elle que l'admin compte comme une
+    // partie finie, et que resultat-url.js signale.
     container.innerHTML =
-      '<div class="quiz-engine max-w-lg mx-auto space-y-8" data-quiz-done="1">' +
-        '<div class="text-center space-y-4">' +
-          adoScoreRing(pct) +
-          '<p class="text-sm text-muted-foreground">' + matches + '/' + totalQ + ' ' + t('identical') + '</p>' +
-          '<p class="text-lg font-semibold text-gradient">' + t('matchPercent').replace('{{pct}}', pct) + '</p>' +
-          (resultTitle ? '<h2 class="text-2xl font-bold">' + esc(resultTitle) + '</h2>' : '') +
-          (resultDesc ? '<p class="text-muted-foreground">' + esc(resultDesc) + '</p>' : '') +
-          (resultAdvice ? '<div class="bg-primary/5 border border-primary/20 rounded-lg p-4 text-sm text-muted-foreground">' + esc(resultAdvice) + '</div>' : '') +
-        '</div>' +
-        '<details class="border border-border rounded-lg">' +
-          '<summary class="p-4 font-medium cursor-pointer hover:bg-muted/50 transition-colors">' + t('comparison') + '</summary>' +
-          '<div class="overflow-x-auto">' +
-            '<table class="w-full text-sm"><thead><tr class="border-b border-border bg-muted/30">' +
-              '<th class="py-2 px-2 text-left text-xs">#</th>' +
-              '<th class="py-2 px-2 text-left text-xs">' + esc(n1) + '</th>' +
-              '<th class="py-2 px-2 text-left text-xs">' + esc(n2) + '</th>' +
-              '<th class="py-2 px-2"></th>' +
-            '</tr></thead><tbody>' + compRows + '</tbody></table>' +
+      '<div class="quiz-engine quiz-result-card text-center qr-plan" data-quiz-done="1">' +
+        '<div class="qr-zone qr-zone--resultat">' +
+          '<div class="duo-result-hero duo-result-hero--' + palier + '">' +
+            '<div class="duo-result-emoji">' + (palier === 'high' ? '🎉' : palier === 'mid' ? '😊' : '🤔') + '</div>' +
+            '<div class="duo-result-ring">' + anneauScore(pct) + '</div>' +
+            '<div class="duo-result-match">' + matches + '/' + totalQ + ' ' + esc(t('identical')) + '</div>' +
+            (resultTitle ? '<h3 class="duo-result-title">' + esc(resultTitle) + '</h3>' : '') +
+            (resultDesc ? '<p class="duo-result-desc">' + esc(resultDesc) + '</p>' : '') +
           '</div>' +
-        '</details>' +
-        '<div class="flex gap-3 justify-center">' +
-          '<button id="btn-replay" class="btn btn-primary">' + t('playAgain') + '</button>' +
-          '<a href="/" class="btn btn-outline">' + t('backHome') + '</a>' +
+          (resultAdvice ? '<div class="duo-result-advice"><strong>' + esc(t('notreConseil')) + '</strong>' + esc(resultAdvice) + '</div>' : '') +
+          '<details class="ado-comparaison">' +
+            '<summary>' + esc(t('comparison')) + '</summary>' +
+            '<div class="ado-comparaison-corps">' +
+              '<table class="ado-tableau"><thead><tr>' +
+                '<th class="ado-col-num">#</th>' +
+                '<th>' + esc(n1) + '</th>' +
+                '<th>' + esc(n2) + '</th>' +
+                '<th class="ado-col-verdict"></th>' +
+              '</tr></thead><tbody>' + compRows + '</tbody></table>' +
+            '</div>' +
+          '</details>' +
+        '</div>' +
+        '<div class="qr-zone qr-zone--actions">' +
+          '<div class="result-actions-grid">' +
+            '<button id="btn-replay" type="button" class="result-action-btn result-action-btn--primary"><span class="result-action-icon">🔄</span><span class="result-action-label">' + esc(t('playAgain')) + '</span></button>' +
+            '<a href="' + (lang === 'fr' ? '/' : '/' + lang + '/') + '" class="result-action-btn"><span class="result-action-icon">🏠</span><span class="result-action-label">' + esc(t('backHome')) + '</span></a>' +
+          '</div>' +
         '</div>' +
       '</div>';
 
@@ -1012,10 +1042,11 @@
 
   // ── Helpers ──
   function backBtn() {
-    return '<button id="btn-back" class="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors">' +
-      '<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>' +
-      t('back') + '</button>';
+    return '<button id="btn-back" type="button" class="btn btn-ghost ado-retour">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg> ' +
+      esc(t('back')) + '</button>';
   }
+
   function addBackListener() {
     var btn = document.getElementById('btn-back');
     if (btn) btn.addEventListener('click', function () {
