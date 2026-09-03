@@ -172,5 +172,29 @@
   },
   "noteSite": {
     "label": "Site average rating"
+  },
+  "heroDuel": {
+    "joueur1": "Emma",
+    "joueur2": "Jack",
+    "question": "Question",
+    "jauge": "in sync",
+    "match": "Same answer!",
+    "rate": "Not this time...",
+    "m1q": "Their favourite dish?",
+    "m1a": "Lasagna",
+    "m1b": "Lasagna",
+    "m2q": "Your first kiss, where was it?",
+    "m2a": "In the car park",
+    "m2b": "In the car park",
+    "m3q": "Who is the jealous one?",
+    "m3a": "Him, clearly",
+    "m3b": "Her, clearly",
+    "m4q": "Their comfort film?",
+    "m4a": "Love Actually",
+    "m4b": "Love Actually",
+    "finEtiquette": "Result",
+    "finTitre": "You are on the same wavelength!",
+    "finTexte": "3 answers out of 4 in common",
+    "finCta": "Your turn to play"
   }
 }

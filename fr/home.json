@@ -172,5 +172,29 @@
   },
   "noteSite": {
     "label": "Note moyenne du site"
+  },
+  "heroDuel": {
+    "joueur1": "Léa",
+    "joueur2": "Tom",
+    "question": "Question",
+    "jauge": "complicité",
+    "match": "Même réponse !",
+    "rate": "Pas cette fois...",
+    "m1q": "Son plat préféré ?",
+    "m1a": "Les lasagnes",
+    "m1b": "Les lasagnes",
+    "m2q": "Votre premier baiser, c'était où ?",
+    "m2a": "Sur le parking",
+    "m2b": "Sur le parking",
+    "m3q": "Qui est le plus jaloux des deux ?",
+    "m3a": "Lui, clairement",
+    "m3b": "Elle, clairement",
+    "m4q": "Son film doudou ?",
+    "m4a": "Love Actually",
+    "m4b": "Love Actually",
+    "finEtiquette": "Résultat",
+    "finTitre": "Vous êtes sur la même longueur d'onde !",
+    "finTexte": "3 réponses sur 4 en commun",
+    "finCta": "À vous de jouer"
   }
 }

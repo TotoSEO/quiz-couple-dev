@@ -60,7 +60,6 @@
 <!-- Hero -->
 <section class="relative overflow-hidden hero-gradient py-16 md:py-24">
   <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
-  <%- include('../partials/quiz-saut-mobile', { ns, t }) %>
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -91,6 +90,9 @@
         <% } %>
       </h1>
       <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.description', '') %></p>
+      <%# Le raccourci mobile vient ici, sous le dernier paragraphe : la bulle
+          « réalisé X fois » (quiz-extras.js) s'insère juste avant lui. %>
+      <%- include('../partials/quiz-saut-mobile', { ns, t }) %>
     </div>
   </div>
 </section>

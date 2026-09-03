@@ -1,13 +1,48 @@
 <%
-  // Wave divider partial - pass variant ('muted'|'bg'/'background') and direction ('up'|'down')
+  // Séparateur en vague entre deux sections.
+  //   variant   : 'muted' | 'background', la couleur de la section qui suit
+  //   direction : 'down' | 'up'
+  // Trois couches : un voile aux couleurs du site, une vague translucide, puis
+  // la vague pleine qui fait la jonction avec la section suivante et porte un
+  // fin liseré dégradé sur sa crête. Chaque couche est dessinée deux fois,
+  // décalée d'une largeur : la dérive horizontale (styles.css, grand écran)
+  // boucle ainsi sans raccord visible.
   const v = typeof variant !== 'undefined' ? variant : 'muted';
   const d = typeof direction !== 'undefined' ? direction : 'down';
   const fillColor = v === 'muted' ? 'hsl(var(--muted))' : 'hsl(var(--background))';
   const transform = d === 'up' ? 'rotate(180deg)' : '';
+  // Plusieurs séparateurs cohabitent sur une page : le dégradé a besoin d'un
+  // identifiant qui lui soit propre.
+  const uid = 'vague-' + Math.random().toString(36).slice(2, 8);
+  // Les trois tracés sont périodiques sur 1440 : même ordonnée et même tangente
+  // aux deux bouts, sinon la copie décalée ferait un angle.
+  const voile = 'M0,58 C240,18 480,18 720,58 C960,98 1200,98 1440,58';
+  const fond  = 'M0,70 C240,106 480,106 720,70 C960,34 1200,34 1440,70';
+  const crete = 'M0,86 C300,116 560,58 820,80 C1060,100 1260,60 1440,86';
+  const ferme = ' L1440,121 L0,121 Z';
 %>
 <div class="wave-divider" aria-hidden="true" <% if (transform) { %>style="transform: <%= transform %>"<% } %>>
   <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full">
-    <path d="M0,50 C320,110 560,10 760,52 C1000,102 1200,18 1440,62 L1440,120 L0,120 Z" fill="<%= fillColor %>" opacity="0.45"></path>
-    <path d="M0,74 C280,28 520,104 780,66 C1020,32 1260,96 1440,50 L1440,120 L0,120 Z" fill="<%= fillColor %>" opacity="0.75"></path>
+    <defs>
+      <linearGradient id="<%= uid %>" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" style="stop-color: hsl(var(--primary))"/>
+        <stop offset="0.5" style="stop-color: hsl(var(--secondary))"/>
+        <stop offset="1" style="stop-color: hsl(var(--primary))"/>
+      </linearGradient>
+    </defs>
+    <g class="vague-couche vague-couche--voile" fill="url(#<%= uid %>)" opacity="0.14">
+      <path d="<%= voile + ferme %>"/>
+      <path d="<%= voile + ferme %>" transform="translate(1440 0)"/>
+    </g>
+    <g class="vague-couche vague-couche--fond" fill="<%= fillColor %>" opacity="0.55">
+      <path d="<%= fond + ferme %>"/>
+      <path d="<%= fond + ferme %>" transform="translate(1440 0)"/>
+    </g>
+    <g class="vague-couche vague-couche--crete">
+      <path d="<%= crete + ferme %>" fill="<%= fillColor %>"/>
+      <path d="<%= crete + ferme %>" fill="<%= fillColor %>" transform="translate(1440 0)"/>
+      <path d="<%= crete %>" fill="none" stroke="url(#<%= uid %>)" stroke-width="2" stroke-opacity="0.5" vector-effect="non-scaling-stroke"/>
+      <path d="<%= crete %>" fill="none" stroke="url(#<%= uid %>)" stroke-width="2" stroke-opacity="0.5" vector-effect="non-scaling-stroke" transform="translate(1440 0)"/>
+    </g>
   </svg>
 </div>
