@@ -4391,6 +4391,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .related-tests-header {
   text-align: center; margin-bottom: 2rem;
 }
+h2.related-tests-badge { line-height: 1.25; letter-spacing: -0.01em; }
 .related-tests-badge {
   display: inline-flex; align-items: center; gap: 0.5rem;
   font-size: 1.5rem; font-weight: 800;
@@ -6194,8 +6195,17 @@ h1, h2, h3, h4, h5, h6,
 .duo-pcard-ring { margin: 0.1rem 0; }
 @media (max-width: 420px) { .duo-players-scores { gap: 0.6rem; } .duo-pcard { padding: 0.95rem 0.5rem; } }
 
-/* On masque : le doublon "Continuez l'aventure" du bas ET le badge redondant du hero (le compteur = la bulle) */
-.quiz-page .related-tests-section { display: none !important; }
+/* Le bloc de renvoi du bas ne s'effaçait pas seulement sur les pages de test :
+   « quiz-page » est posé sur le corps de toutes les pages par quiz-extras.js,
+   si bien que le bloc était masqué partout, articles de blog compris, tout en
+   restant dans le HTML. Ses quatre cartes en H3 apparaissaient donc dans le
+   plan des titres sans rien à l'écran, sur 250 pages, et aucun lien de renvoi
+   n'était visible sur les articles.
+
+   Il ne disparaît plus que là où le doublon existe vraiment : quand l'écran de
+   résultat du moteur affiche sa propre zone de suggestions. Avant la partie,
+   et sur les pages sans moteur, le bloc est visible et ses titres comptent. */
+body:has(.qr-zone--suite) .related-tests-section { display: none !important; }
 .quiz-page .hero-badge { display: none !important; }
 
 /* ── Bulle "realise X fois" sous le fil d'Ariane ── */
@@ -10911,3 +10921,30 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .quiz-slider__compteur:empty { display: none; }
 @media (max-width: 640px) { .quiz-slider__pied { width: min(100%, 16rem); } }
 @media (prefers-reduced-motion: reduce) { .quiz-slider__avance { transition: none; } }
+
+/* ═══════════════════════════════════════════════════════════
+   PAS DE ZOOM AUTOMATIQUE SUR LES CHAMPS DE SAISIE
+   Safari sur iPhone agrandit la page dès qu'un champ prend le
+   focus avec une police inférieure à 16 px, et il ne revient
+   pas à l'échelle ensuite : la page reste zoomée, y compris
+   après un changement de page. Nos champs étaient à 14 px
+   (.input, .textarea) et 15 px (formulaire de contact), donc
+   la saisie des prénoms zoomait à chaque partie.
+
+   La correction ne touche que les champs de saisie, et
+   seulement quand l'entrée se fait au doigt : le dessin des
+   écrans reste identique à la souris. Interdire le zoom dans
+   la balise viewport aurait réglé le symptôme en retirant aux
+   lecteurs le droit d'agrandir la page ; ce n'est pas une
+   option.
+   ═══════════════════════════════════════════════════════════ */
+@media (hover: none) and (pointer: coarse) {
+  input:not([type='checkbox']):not([type='radio']):not([type='range']),
+  select,
+  textarea { font-size: 16px; }
+  /* Les trois familles qui étaient sous le seuil. Elles sont nommées parce
+     qu'une classe l'emporte sur un sélecteur d'élément : sans cela, la règle
+     ci-dessus ne les atteint pas. Tout nouveau champ doit rester à 16 px au
+     moins sur cette largeur, sinon le zoom revient. */
+  .input, .textarea, .cf-champ, .cf-textarea, .afl-select { font-size: 16px; }
+}

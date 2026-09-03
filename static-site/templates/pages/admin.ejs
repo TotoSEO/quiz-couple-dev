@@ -877,6 +877,10 @@
     background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
     background-position:calc(100% - 1rem) 55%,calc(100% - .7rem) 55%;background-size:.3rem .3rem,.3rem .3rem;background-repeat:no-repeat;}
   .afl-select--full{width:100%;}
+  /* Au doigt, un champ sous 16 px fait zoomer Safari sur iPhone, et la page
+     ne revient pas a l echelle : le tableau de bord se consulte aussi au
+     telephone. */
+  @media (hover: none) and (pointer: coarse) { .afl-select{font-size:16px;} }
   .afl-range{display:inline-flex;border:1px solid hsl(var(--border));border-radius:999px;overflow:hidden;background:hsl(var(--card));}
   .afl-range-btn{padding:.4rem .8rem;font-size:.8rem;font-weight:600;background:transparent;border:none;cursor:pointer;
     color:hsl(var(--muted-foreground));transition:background .15s,color .15s;}
