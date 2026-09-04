@@ -377,6 +377,10 @@
     testDistanceAime: "M'aime-t-il/elle à distance",
     testAimeEncore: "M'aime-t-il/elle encore",
     testEmprise: 'Emprise psychologique',
+    testPersonnalite: 'Personnalité amoureuse',
+    // Page retiree du site : ses parties restent en base et doivent garder
+    // un nom lisible, sinon la ligne s'affiche sous sa cle technique.
+    testBebe: 'Prêts pour un bébé (page retirée)',
     // 'zamours' est deja plus haut : c'est le seul identifiant identique dans
     // les deux nommages, une seule entree suffit.
     jeuDilemmes: 'Dilemmes',
@@ -504,12 +508,52 @@
   // aux autres, il tirerait la moyenne d'ensemble.
   // Ces pages restent comptees dans les lances (et les termines pour celles
   // qui en ont).
+  // Les deux premieres rendent leur resultat immediatement, a partir de deux
+  // prenoms ou de deux dates : pas de questionnaire a abandonner en route.
+  //
+  // Les dix jeux qui suivent n'ont pas de fin a atteindre. On y tire des
+  // cartes, des gages ou des dilemmes tant qu'on veut, et l'ecran de fin
+  // n'arrive que si quelqu'un appuie sur « Terminer la partie » plutot que
+  // de fermer l'onglet. Leur « taux de finition » mesure donc l'usage de ce
+  // bouton, rien d'autre, et il part dans tous les sens : 90 % pour la roue
+  // des gages, 12 % pour les dilemmes, 0 % pour le oui ou non, qui n'a meme
+  // pas ce bouton. Melees aux tests, ces pages tiraient la moyenne du site
+  // vers le bas sans rien dire de personne.
+  //
+  // Le criterion n'est pas un avis : ce sont exactement les pages declarees
+  // « totalQ: 0 » dans quiz-loader.js, celles dont le moteur ne connait pas
+  // de nombre de tours.
   var SANS_RATIO = {
     testAstroPrenoms: 'résultat immédiat',
     testDateNaissance: 'résultat immédiat',
-    jeuOuiNon: 'jeu sans fin de partie'
+    jeuOuiNon: 'jeu sans fin de partie',
+    jeuActionVerite: 'jeu sans fin de partie',
+    jeuActionVeriteHot: 'jeu sans fin de partie',
+    jeuGages: 'jeu sans fin de partie',
+    jeuPlateau: 'jeu sans fin de partie',
+    jeuQuiDeNous: 'jeu sans fin de partie',
+    jeuDilemmes: 'jeu sans fin de partie',
+    jeuJamais: 'jeu sans fin de partie',
+    pourContre: 'jeu sans fin de partie',
+    jeuQuiPourrait: 'jeu sans fin de partie'
   };
   function sansRatio(slug) { return Object.prototype.hasOwnProperty.call(SANS_RATIO, canon(slug)); }
+
+  // ── Pages retirees de la moyenne, mais qui gardent leur propre taux ──
+  // Le vrai ou faux a bien un parcours : trente affirmations tirees parmi
+  // cent, puis un ecran de resultat. Son taux a donc un sens pour lui-meme,
+  // et il est bas (15 %). Mais la page s'annonce partout comme « 100
+  // questions », et son abandon ne se compare pas a celui d'un test de vingt
+  // questions : dans la moyenne du site, il tire vers le bas une mesure qui
+  // sert a comparer les tests entre eux. Il en sort, sa ligne garde son
+  // chiffre.
+  var HORS_MOYENNE = { quizVraiFaux: true };
+  // Ce qui compte dans la moyenne du site : ni les pages sans taux, ni
+  // celles mises de cote ci-dessus.
+  function dansMoyenne(slug) {
+    var c = canon(slug);
+    return !sansRatio(c) && !Object.prototype.hasOwnProperty.call(HORS_MOYENNE, c);
+  }
   function familleQuiz(slug) {
     if (!slug) return 'test';
     if (FAMILLES.jeu.indexOf(slug) !== -1) return 'jeu';
@@ -549,6 +593,57 @@
   var statsParJour = null;
   var statsParJourUTC = false;
   var statsComp = 7;
+  // PostgREST plafonne toute reponse a mille lignes, et le plafond ne
+  // s'annonce pas : la fonction rend ses mille premieres lignes, statut 200,
+  // sans rien dire du reste. Les deux series quotidiennes par page ont
+  // depasse ce plafond (1 406 lignes pour les completions), et comme elles
+  // sont triees par identifiant de page, la coupure tombait en plein milieu
+  // de l'alphabet : dix-sept pages, de testEmprise a zamours, disparaissaient
+  // entierement de la serie. Leurs parties terminees ne comptaient plus nulle
+  // part, alors que leurs lancements, eux, tenaient encore sous le plafond.
+  // Le taux de finition du site comparait donc des lancements complets a des
+  // fins de partie amputees : 32 % affiches pour 41 % reels.
+  //
+  // On demande donc les pages une par une, jusqu'a ce qu'une reponse revienne
+  // plus courte que le lot demande. Une seule requete de plus dans le cas
+  // courant, et la mesure ne peut plus etre coupee en silence.
+  var LOT_RPC = 1000;
+  function statsRpcPages(fn, body) {
+    var tout = [];
+    function lot(depart) {
+      return fetch(SUPABASE_URL + '/rest/v1/rpc/' + fn + '?limit=' + LOT_RPC + '&offset=' + depart, {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json',
+          // Sans ce prefixe, l'en-tete Content-Range se termine par une
+          // etoile : le serveur rend le lot sans dire combien de lignes
+          // existent, et il n'y a plus aucun moyen de savoir qu'il en reste.
+          'Prefer': 'count=exact'
+        },
+        body: JSON.stringify(body || {})
+      }).then(function (r) {
+        var plage = r.headers.get('content-range') || '';
+        var m = /\/(\d+)$/.exec(plage);
+        var total = m ? parseInt(m[1], 10) : null;
+        return r.json().then(function (rows) { return { rows: rows, total: total }; });
+      }).then(function (rep) {
+        var rows = rep.rows;
+        // Une erreur PostgREST est un objet, pas un tableau : on la rend
+        // telle quelle pour que l'appelant garde son repli habituel.
+        if (!Array.isArray(rows)) return depart === 0 ? rows : tout;
+        tout = tout.concat(rows);
+        // Le serveur peut rendre moins que le lot demande : c'est son propre
+        // plafond qui s'applique, pas la fin des donnees. On se fie donc au
+        // nombre total annonce, et on ne retombe sur la longueur du lot que
+        // si l'en-tete manque. Un lot vide arrete la boucle dans tous les cas.
+        var reste = rep.total !== null ? (tout.length < rep.total) : (rows.length >= LOT_RPC);
+        if (!rows.length || !reste || depart >= LOT_RPC * 50) return tout;
+        return lot(tout.length);
+      });
+    }
+    return lot(0);
+  }
   function statsRpc(fn, body) {
     return fetch(SUPABASE_URL + '/rest/v1/rpc/' + fn, {
       method: 'POST',
@@ -636,7 +731,7 @@
       statsLances = map;
       renderStatsList();
       // La serie quotidienne arrive apres : elle borne la fenetre commune.
-      statsRpc('get_quiz_starts_daily_par_quiz', { p_days: joursCharges, p_tz: fuseau() })
+      statsRpcPages('get_quiz_starts_daily_par_quiz', { p_days: joursCharges, p_tz: fuseau() })
         .then(function (jours) {
           if (!Array.isArray(jours) || jours.error) return;
           var idx = {};
@@ -743,7 +838,7 @@
     jours = jours || joursCharges;
     joursCharges = jours;
     var tz = fuseau();
-    statsRpc('get_quiz_daily_par_quiz', { p_days: jours, p_tz: tz }).then(function (rows) {
+    statsRpcPages('get_quiz_daily_par_quiz', { p_days: jours, p_tz: tz }).then(function (rows) {
       if (Array.isArray(rows) && !rows.error) { indexeParJour(rows, false); return; }
       throw new Error('pas de rpc');
     }).catch(function () {
@@ -784,6 +879,14 @@
     });
     renderStatsList();
     renderMovers();
+    // Les trois blocs de tete et la courbe du taux se calculent sur cette
+    // serie : tant qu'elle n'etait pas la, le taux du jour affichait « lances
+    // pas encore mesures ». Le rafraichissement n'etait declenche que par
+    // l'arrivee des lancements, et l'ordre des deux reponses n'est pas
+    // garanti : depuis que les completions se chargent en deux requetes, ce
+    // sont elles qui arrivent en dernier et le taux restait vide. Chaque
+    // serie redessine donc l'autre a son arrivee.
+    if (_lastTotalSeries) renderTotalDaily(_lastTotalSeries);
     if (statsSelectedSlug) loadDaily(statsSelectedSlug);
   }
   // Cle AAAA-MM-JJ du jour situe n jours avant aujourd'hui, dans le meme
@@ -915,21 +1018,21 @@
     });
     if (depuis === null || iso < depuis) return null;
     Object.keys(statsLancesParJour).forEach(function (slug) {
-      if (horsImmediat && sansRatio(slug)) return;
+      if (horsImmediat && !dansMoyenne(slug)) return;
       var v = statsLancesParJour[slug][iso];
       if (v != null) { total += v; vu = true; }
     });
     return vu || iso >= depuis ? total : null;
   }
 
-  // Somme des parties finies d'un jour, en excluant les pages sans parcours.
+  // Somme des parties finies d'un jour, en excluant les pages hors moyenne.
   // Elle se prend sur les series par page et non sur la courbe totale, qui
   // est un agregat deja fondu et donc indecomposable.
   function finisDuJourHorsImmediat(iso) {
     if (!statsParJour) return null;
     var total = 0;
     Object.keys(statsParJour).forEach(function (slug) {
-      if (sansRatio(slug)) return;
+      if (!dansMoyenne(slug)) return;
       total += statsParJour[slug][iso] || 0;
     });
     return total;
@@ -1033,7 +1136,7 @@
       } else {
         var pct = Math.min(100, Math.round((finisRatio / lancesRatio) * 100));
         elR.textContent = pct + ' %';
-        if (elRD) elRD.textContent = finisRatio.toLocaleString('fr-FR') + ' finis sur ' + lancesRatio.toLocaleString('fr-FR') + ' lancés, hors résultats immédiats';
+        if (elRD) elRD.textContent = finisRatio.toLocaleString('fr-FR') + ' finis sur ' + lancesRatio.toLocaleString('fr-FR') + ' lancés, hors résultats immédiats et jeux sans fin de partie';
       }
     }
   }
@@ -1279,7 +1382,7 @@
         var aide = document.getElementById('admin-stats-mesure-aide');
         if (aide) {
           aide.textContent = statsTri.col === 'ratio'
-            ? 'Trié par taux de finition. Rouge sous 40 %, vert à partir de 70 %. Un tiret : page à résultat immédiat, ou aucun lancé enregistré.'
+            ? 'Trié par taux de finition. Rouge sous 40 %, vert à partir de 70 %. Un tiret : page sans parcours à finir (résultat immédiat, jeu sans fin de partie), ou aucun lancé enregistré.'
             : 'Trié par ' + (statsTri.col === 'lances' ? 'parties lancées' : 'parties finies') + '. Cliquez une ligne pour voir sa courbe.';
         }
         renderStatsList();
@@ -1675,7 +1778,7 @@
     Promise.all([
       statsRpc('get_trafic_resume', { p_days: n, p_tz: tz }),
       statsRpc('get_trafic_daily', { p_days: n, p_tz: tz }),
-      statsRpc('get_trafic_pages', { p_days: n, p_tz: tz }),
+      statsRpcPages('get_trafic_pages', { p_days: n, p_tz: tz }),
       statsRpc('get_trafic_sources', { p_days: n, p_tz: tz }),
       statsRpc('get_trafic_profondeur', { p_days: n, p_tz: tz }),
       statsRpc('get_trafic_entonnoir', { p_days: n, p_tz: tz })
