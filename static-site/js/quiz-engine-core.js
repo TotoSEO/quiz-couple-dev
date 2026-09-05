@@ -1713,33 +1713,57 @@ var QuizEngine = (function() {
   //   gauche = le resultat deja construit + avis sur CE quiz
   //   droite = "Poursuivez avec d'autres tests / quiz"
   //   pied   = UN partage + actions (recommencer, autres questions, joueurs)
+
+  // La zone d'avis, ou rien du tout : le formulaire revient vide quand les avis
+  // ne sont pas configures pour la page. La zone afficherait alors un cadre en
+  // pointilles sans rien dedans, et depuis qu'elle ouvre l'ecran de resultat,
+  // ce cadre vide serait la premiere chose qu'on voit.
+  function zoneAvis(lang) {
+    var formulaire = pcReviewForm(lang);
+    if (!formulaire.firstChild) return null;
+    var zone = el('div', 'quiz-reveal-enter');
+    zone.appendChild(formulaire);
+    return zone;
+  }
+
   // ─── Disposition commune des ecrans de resultat ───────────
-  // L'ordre du DOM etait : resultat + formulaire d'avis, puis les autres quiz,
-  // puis seulement le partage et le rejouer. Sur telephone, ou tout s'empile,
-  // on demandait donc une note avant meme d'avoir lu son verdict, et les deux
-  // actions qu'on veut vraiment faire apres un resultat arrivaient tout en bas,
-  // derriere une liste de six autres tests.
+  // Un resultat se lit toujours dans le meme ordre : la note, ce que j'ai
+  // obtenu, ou aller ensuite, ce que je peux faire, et l'image a partager. La
+  // notation ouvre l'ecran et le suit : collee en haut de sa colonne, elle
+  // reste sous la main pendant toute la lecture du verdict, puis s'arrete avec
+  // la colonne, avant le contenu de la page.
   //
-  // Un resultat se lit maintenant toujours dans le meme ordre : ce que j'ai
-  // obtenu, ce que je peux en faire, ce que j'en pense, ou aller ensuite. Le
-  // DOM suit cet ordre (donc le telephone aussi) et la mise en colonnes sur
-  // grand ecran se fait par zones, sans reordonner quoi que ce soit.
+  // Les deux actions qu'on veut vraiment faire apres un resultat, elles,
+  // arrivaient autrefois tout en bas, derriere une liste de six autres tests :
+  // elles suivent maintenant le verdict de pres.
   function dispositionResultat(wrap, zones) {
     wrap.classList.add('qr-plan');
-    ['resultat', 'actions', 'avis', 'suite'].forEach(function(nom) {
+    // La colonne principale rassemble l'avis, le resultat, les actions et la
+    // story. Elle existe pour une seule raison : donner au bloc d'avis, place
+    // en tete, de quoi suivre le defilement. Colle a son sommet, il accompagne
+    // la lecture du verdict et s'arrete avec la colonne, donc avant le contenu
+    // de la page. Sur telephone elle s'efface (display: contents) pour que le
+    // bloc de renvoi garde sa place entre le resultat et les actions.
+    var colonne = el('div', 'qr-colonne');
+    ['avis', 'resultat', 'actions'].forEach(function(nom) {
       var z = zones[nom];
       if (!z) return;
       z.classList.add('qr-zone', 'qr-zone--' + nom);
-      wrap.appendChild(z);
+      colonne.appendChild(z);
     });
-    // Le bloc de l'image story se place apres l'avis : on lit son verdict, on
-    // note le test, et c'est seulement la qu'on propose de le mettre en story.
-    // Il est construit avec le bouton de partage, on le deplace donc ici,
-    // au seul endroit ou toutes les zones sont assemblees.
+    wrap.appendChild(colonne);
+    if (zones.suite) {
+      zones.suite.classList.add('qr-zone', 'qr-zone--suite');
+      wrap.appendChild(zones.suite);
+    }
+    // Le bloc de l'image story ferme la colonne : on lit son verdict, on agit,
+    // et c'est seulement la qu'on propose de le mettre en story. Il est
+    // construit avec le bouton de partage, on le deplace donc ici, au seul
+    // endroit ou toutes les zones sont assemblees.
     var story = wrap.querySelector('.story-share');
-    if (story && zones.avis && zones.avis.parentNode === wrap) {
+    if (story) {
       story.classList.add('qr-zone', 'qr-zone--story');
-      wrap.insertBefore(story, zones.avis.nextSibling);
+      colonne.appendChild(story);
     }
     if (zones.resultat) alignerLaProse(zones.resultat);
     // Tous les moteurs finissent ici, y compris SoloTest et le jeu de
@@ -1981,8 +2005,7 @@ var QuizEngine = (function() {
     var resultat = el('div', 'quiz-reveal-enter');
     while (wrap.firstChild) resultat.appendChild(wrap.firstChild);
 
-    var avis = el('div', 'quiz-reveal-enter');
-    avis.appendChild(pcReviewForm(currentLang));
+    var avis = zoneAvis(currentLang);
 
     var suite = el('div', 'qr-right quiz-reveal-enter');
     renderRelatedQuizzes(suite, currentKey, currentLang);
@@ -2405,8 +2428,7 @@ var QuizEngine = (function() {
       }
     }
 
-    var avis = el('div', 'quiz-reveal-enter');
-    avis.appendChild(pcReviewForm(this.lang));
+    var avis = zoneAvis(this.lang);
 
     var suite = el('div', 'qr-right quiz-reveal-enter');
     renderRelatedQuizzes(suite, quizEl ? quizEl.dataset.quiz : '', quizEl ? (quizEl.dataset.lang || 'fr') : 'fr');
@@ -8537,8 +8559,7 @@ var QuizEngine = (function() {
     resultat.appendChild(el('h3', 'qr-title', esc(this.tg('palier' + palier + 'Titre', ''))));
     resultat.appendChild(el('p', 'qr-desc', esc(this.tg('palier' + palier + 'Texte', ''))));
 
-    var avis = el('div', 'quiz-reveal-enter');
-    avis.appendChild(pcReviewForm(this.lang));
+    var avis = zoneAvis(this.lang);
     var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
     var suite = el('div', 'qr-right quiz-reveal-enter');
     renderRelatedQuizzes(suite, quizEl ? quizEl.dataset.quiz : '', this.lang);
@@ -8840,8 +8861,7 @@ var QuizEngine = (function() {
     resultat.appendChild(el('h3', 'qr-title', esc(this.tg('palier' + palier + 'Titre', ''))));
     resultat.appendChild(el('p', 'qr-desc', esc(this.tg('palier' + palier + 'Texte', ''))));
 
-    var avis = el('div', 'quiz-reveal-enter');
-    avis.appendChild(pcReviewForm(this.lang));
+    var avis = zoneAvis(this.lang);
     var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
     var apres = el('div', 'qr-right quiz-reveal-enter');
     renderRelatedQuizzes(apres, quizEl ? quizEl.dataset.quiz : '', this.lang);

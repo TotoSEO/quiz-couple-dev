@@ -837,6 +837,9 @@
     // partie finie, et que resultat-url.js signale.
     container.innerHTML =
       '<div class="quiz-engine quiz-result-card text-center qr-plan" data-quiz-done="1">' +
+        // La colonne est la meme que celle du moteur commun : sans elle, les
+        // deux zones se retrouveraient cote a cote sur grand ecran.
+        '<div class="qr-colonne">' +
         '<div class="qr-zone qr-zone--resultat">' +
           '<div class="duo-result-hero duo-result-hero--' + palier + '">' +
             '<div class="duo-result-emoji">' + (palier === 'high' ? '🎉' : palier === 'mid' ? '😊' : '🤔') + '</div>' +
@@ -863,6 +866,7 @@
             '<button id="btn-replay" type="button" class="result-action-btn result-action-btn--primary"><span class="result-action-icon">🔄</span><span class="result-action-label">' + esc(t('playAgain')) + '</span></button>' +
             '<a href="' + (lang === 'fr' ? '/' : '/' + lang + '/') + '" class="result-action-btn"><span class="result-action-icon">🏠</span><span class="result-action-label">' + esc(t('backHome')) + '</span></a>' +
           '</div>' +
+        '</div>' +
         '</div>' +
       '</div>';
 
