@@ -6017,16 +6017,35 @@ h1, h2, h3, h4, h5, h6,
   align-self: start;
 }
 .pqx-rate-prompt { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; margin: 0 0 0.7rem; text-align: center; }
-/* ── Etoiles de notation : grandes, dorees, animees ── */
+/* ── Etoiles de notation : grandes, dorees, animees ──
+   Vides, elles n'etaient qu'un aplat gris tres clair, sans contour : sur la
+   carte blanche du resultat, cinq etoiles a peine plus foncees que le fond
+   ne se lisaient pas comme une note a donner. Elles portent maintenant leur
+   contour dore, qui dessine la forme quel que soit le remplissage. */
 .pqx-input-stars { display: flex; justify-content: center; gap: 0.5rem; }
 .pqx-star-btn { background: none; border: none; padding: 0.1rem; line-height: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; }
-.pqx-star-btn svg { width: 2.6rem; height: 2.6rem; fill: hsl(220 14% 88%); transition: transform 0.14s cubic-bezier(0.22,1,0.36,1), fill 0.14s; }
-.dark .pqx-star-btn svg { fill: hsl(220 12% 32%); }
+.pqx-star-btn svg {
+  --pqx-vide: hsl(42 90% 91%);
+  --pqx-plein: #f7b500;
+  width: 2.6rem; height: 2.6rem;
+  fill: var(--pqx-vide);
+  stroke: hsl(38 78% 56%); stroke-width: 1.2; stroke-linejoin: round;
+  transition: transform 0.14s cubic-bezier(0.22,1,0.36,1), fill 0.14s;
+}
+.dark .pqx-star-btn svg { --pqx-vide: hsl(40 20% 28%); stroke: hsl(42 80% 62%); }
 .pqx-star-btn:hover svg, .pqx-star-btn:focus-visible svg { transform: scale(1.22) rotate(-6deg); }
-.pqx-star-btn.on svg { fill: #f7b500; filter: drop-shadow(0 3px 6px hsl(42 100% 45% / 0.45)); }
+.pqx-star-btn.on svg { fill: var(--pqx-plein); stroke: hsl(38 88% 46%); filter: drop-shadow(0 3px 6px hsl(42 100% 45% / 0.45)); }
 .pqx-star-btn.just-picked svg { animation: pqxStarPop 0.42s cubic-bezier(0.34,1.56,0.64,1); }
 @keyframes pqxStarPop { 0% { transform: scale(1); } 45% { transform: scale(1.5) rotate(8deg); } 100% { transform: scale(1); } }
 @media (max-width: 560px) { .pqx-star-btn svg { width: 2.9rem; height: 2.9rem; } .pqx-input-stars { gap: 0.65rem; } }
+/* La sortie du formulaire : discrete, mais toujours la. */
+.pqx-fermer {
+  justify-self: center; background: none; border: 0; padding: 0.3rem 0.6rem;
+  font: inherit; font-size: 0.85rem; font-weight: 600;
+  color: hsl(var(--muted-foreground)); cursor: pointer;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.pqx-fermer:hover { color: hsl(var(--foreground)); }
 /* Le formulaire (prenom + mot) reste masque tant qu'aucune etoile n'est choisie */
 .pqx-more[hidden] { display: none !important; }
 .pqx-more { margin-top: 1.1rem; display: grid; gap: 0.7rem; }
@@ -6731,13 +6750,24 @@ body:has(.qr-zone--suite) .related-tests-section { display: none !important; }
 }
 .pqx-rate-prompt::after { content: '👇'; font-size: 1.15rem; animation: pqxBounce 1.4s ease-in-out infinite; }
 @keyframes pqxBounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
-/* Idle shimmer on the empty stars to invite the click */
-.pqx-input-stars:not(:hover) .pqx-star-btn:not(.on) svg { animation: pqxStarInvite 2.8s ease-in-out infinite; }
-.pqx-input-stars .pqx-star-btn:nth-child(2) svg { animation-delay: .1s; }
-.pqx-input-stars .pqx-star-btn:nth-child(3) svg { animation-delay: .2s; }
-.pqx-input-stars .pqx-star-btn:nth-child(4) svg { animation-delay: .3s; }
-.pqx-input-stars .pqx-star-btn:nth-child(5) svg { animation-delay: .4s; }
-@keyframes pqxStarInvite { 0%,100% { transform: none; } 50% { transform: scale(1.12) rotate(-4deg); } }
+/* La vague : tant que personne n'a note et que la souris n'est pas dessus, les
+   etoiles se remplissent l'une apres l'autre puis se revident. L'ancien
+   scintillement ne faisait que les agrandir un peu, ce qui montrait qu'il se
+   passait quelque chose sans jamais montrer a quoi elles servent. Des qu'une
+   note est donnee, la vague s'arrete : le remplissage doit alors dire la note
+   et rien d'autre. */
+.pqx-input-stars:not(:hover):not(:has(.on)) .pqx-star-btn svg {
+  animation: pqxVague 3.6s ease-in-out infinite;
+}
+.pqx-input-stars .pqx-star-btn:nth-child(2) svg { animation-delay: .12s; }
+.pqx-input-stars .pqx-star-btn:nth-child(3) svg { animation-delay: .24s; }
+.pqx-input-stars .pqx-star-btn:nth-child(4) svg { animation-delay: .36s; }
+.pqx-input-stars .pqx-star-btn:nth-child(5) svg { animation-delay: .48s; }
+@keyframes pqxVague {
+  0%, 46%, 100% { fill: var(--pqx-vide); transform: none; }
+  14% { fill: var(--pqx-plein); transform: scale(1.14) rotate(-5deg); }
+  30% { fill: var(--pqx-plein); transform: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   .pqx-form-wrap, .pqx-rate-prompt::after, .pqx-input-stars .pqx-star-btn svg { animation: none !important; }
 }

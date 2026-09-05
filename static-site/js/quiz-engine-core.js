@@ -408,11 +408,11 @@ var QuizEngine = (function() {
   // ── Phase C : partage + avis par quiz + compteur (ecran de resultat 2 colonnes) ──
   function pcLabels(lang) {
     var M = {
-      fr: { share: 'Partager', rate: 'Votre avis sur ce test en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Erreur, réessayez.', doneT: 'Ce test a déjà été réalisé {n} fois', doneQ: 'Ce quiz a déjà été joué {n} fois' },
-      en: { share: 'Share', rate: 'Rate this test in one click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Error, please retry.', doneT: 'This test has been taken {n} times', doneQ: 'This quiz has been played {n} times' },
-      es: { share: 'Compartir', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Una palabra (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Se verá tras la validación.', err: 'Error, inténtalo de nuevo.', doneT: 'Este test se ha realizado {n} veces', doneQ: 'Este quiz se ha jugado {n} veces' },
-      de: { share: 'Teilen', rate: 'Bewertung mit 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Erscheint nach der Prüfung.', err: 'Fehler, bitte erneut.', doneT: 'Dieser Test wurde {n} mal gemacht', doneQ: 'Dieses Quiz wurde {n} mal gespielt' },
-      it: { share: 'Condividi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola (facoltativo)', submit: 'Pubblica', thanks: 'Grazie! Sarà visibile dopo la moderazione.', err: 'Errore, riprova.', doneT: 'Questo test è stato fatto {n} volte', doneQ: 'Questo quiz è stato giocato {n} volte' }
+      fr: { share: 'Partager', close: 'Fermer', rate: 'Votre avis sur ce test en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Erreur, réessayez.', doneT: 'Ce test a déjà été réalisé {n} fois', doneQ: 'Ce quiz a déjà été joué {n} fois' },
+      en: { share: 'Share', close: 'Close', rate: 'Rate this test in one click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Error, please retry.', doneT: 'This test has been taken {n} times', doneQ: 'This quiz has been played {n} times' },
+      es: { share: 'Compartir', close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Una palabra (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Se verá tras la validación.', err: 'Error, inténtalo de nuevo.', doneT: 'Este test se ha realizado {n} veces', doneQ: 'Este quiz se ha jugado {n} veces' },
+      de: { share: 'Teilen', close: 'Schließen', rate: 'Bewertung mit 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Erscheint nach der Prüfung.', err: 'Fehler, bitte erneut.', doneT: 'Dieser Test wurde {n} mal gemacht', doneQ: 'Dieses Quiz wurde {n} mal gespielt' },
+      it: { share: 'Condividi', close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola (facoltativo)', submit: 'Pubblica', thanks: 'Grazie! Sarà visibile dopo la moderazione.', err: 'Errore, riprova.', doneT: 'Questo test è stato fatto {n} volte', doneQ: 'Questo quiz è stato giocato {n} volte' }
     };
     return M[lang] || M.fr;
   }
@@ -465,7 +465,8 @@ var QuizEngine = (function() {
       + '<input type="text" class="pqx-name input" maxlength="60" placeholder="' + esc(L.name) + '" autocomplete="off">'
       + '<textarea class="pqx-comment textarea" rows="2" maxlength="200" placeholder="' + esc(L.comment) + '"></textarea>'
       + '<button type="submit" class="pqx-submit btn btn-cta">' + esc(L.submit) + '</button>'
-      + '<p class="pqx-msg" aria-live="polite"></p></div></form>';
+      + '<p class="pqx-msg" aria-live="polite"></p>'
+      + '<button type="button" class="pqx-fermer">' + esc(L.close) + '</button></div></form>';
     var rating = 0;
     var starBtns = box.querySelectorAll('.pqx-star-btn');
     var starsWrap = box.querySelector('.pqx-input-stars');
@@ -486,6 +487,16 @@ var QuizEngine = (function() {
       });
     });
     if (starsWrap) starsWrap.addEventListener('mouseleave', function () { paint(rating); });
+    // Une note donnee ouvrait le formulaire sans aucun moyen de le refermer :
+    // il fallait publier son avis pour recuperer l'ecran. Le bouton le replie
+    // et remet les etoiles a vide, puisque rien n'a ete envoye.
+    var fermer = box.querySelector('.pqx-fermer');
+    if (fermer) fermer.addEventListener('click', function () {
+      rating = 0;
+      paint(0);
+      more.hidden = true;
+      more.classList.remove('pqx-more-reveal');
+    });
     box.querySelector('.pqx-form').addEventListener('submit', function (e) {
       e.preventDefault();
       var msg = box.querySelector('.pqx-msg');
