@@ -1,0 +1,52 @@
+{
+  "jsonLd": {
+    "name": "Phrases à compléter, jeu pour couple"
+  },
+  "hero": {
+    "badge": "Jeu à deux",
+    "title": "20 phrases à compléter : jeu de couple",
+    "titleHighlight": "phrases à compléter",
+    "description": "Vingt phrases laissées en suspens, à finir chacun son tour, ou tous les deux en même temps après un décompte de trois secondes."
+  },
+  "section1": {
+    "title": "Les phrases à compléter, c'est quoi",
+    "p1": "Les phrases à compléter, c'est un <a href=\"/jeux-de-couple/\">jeu qu'on peut faire à deux</a>, sur le canapé ou dans la voiture. Une phrase s'affiche, elle s'arrête au milieu, et chacun la termine comme il le sent. Par exemple : « Notre meilleur souvenir à deux, c'est… »",
+    "p2": "Si l'un répond « notre week-end à Lisbonne » et que l'autre répond « le jour où on a récupéré le chat », vous avez déjà deux histoires à raconter. Personne ne gagne, il n'y a rien à trouver : on complète, on écoute ce que l'autre a dit, et la plupart du temps ça part en discussion.",
+    "p3": "Tout se passe dans le navigateur, sans inscription et sans rien à installer. Un seul téléphone posé entre vous deux suffit."
+  },
+  "section2": {
+    "title": "Les deux façons de jouer",
+    "intro": "Voici comment fonctionne notre moteur de jeu ci-dessus. Avant de commencer, il vous demande comment vous voulez jouer. Les vingt phrases sont les mêmes dans les deux cas, c'est la façon de répondre qui change.",
+    "modeLectureEmoji": "💬",
+    "modeLectureTitre": "Chacun complète, puis on passe",
+    "modeLectureTexte": "La phrase s'affiche, vous la complétez à voix haute tous les deux, et vous restez dessus le temps que vous voulez. Quand vous avez fini d'en parler, vous cliquez sur « Suivant ». C'est la version tranquille, sans chrono et sans points.",
+    "modeChronoEmoji": "⏱️",
+    "modeChronoTitre": "On répond en même temps",
+    "modeChronoTexte": "Vous cliquez sur « Lancer le chrono » et le décompte part : 3, 2, 1, GO. Au « GO », vous dites votre réponse tous les deux au même moment, sans réfléchir. Le jeu vous demande ensuite si c'était pareil ou pas, et il compte vos réponses communes jusqu'au bout.",
+    "apres": "La phrase reste affichée pendant tout le tour, décompte compris : personne n'a besoin de la relire de mémoire. Et le bouton « Suivant » est là en permanence, même à côté du chrono. Si une phrase ne vous inspire pas, vous passez à la suivante."
+  },
+  "section3": {
+    "title": "Les 20 phrases du jeu",
+    "intro": "Voici les vingt phrases telles qu'elles sont posées. Dans le jeu elles sont mélangées à chaque partie, vous ne les aurez donc pas dans cet ordre-là.",
+    "apres": "Vous verrez, certaines partent sur un fou rire et d'autres sur une discussion d'un quart d'heure, et on ne sait jamais laquelle va faire quoi. Si vous accrochez à ce genre de soirée, il y a aussi <a href=\"/je-nai-jamais-jeu-couple/\">des affirmations où chacun avoue s'il l'a déjà fait ou pas</a>."
+  },
+  "section4": {
+    "title": "Quand sortir ce jeu",
+    "p1": "Le meilleur moment, c'est quand il ne se passe rien de spécial : un dimanche soir, un trajet en voiture, une salle d'attente, ou ces dîners où on a fait le tour de la journée et où <a href=\"/blog/questions-pour-mieux-se-connaitre-en-couple/\">on ne sait plus trop quoi se dire</a>.",
+    "p2": "Ça marche aussi à distance. L'un des deux ouvre la page et lit la phrase à voix haute en appel vidéo. Pour le mode chrono, mettez le haut-parleur, le décompte doit être entendu des deux côtés.",
+    "p3": "Un dernier conseil : dites la première réponse qui vous vient. Celle qu'on cherche pendant dix secondes est presque toujours moins drôle que celle qui sort toute seule. Et si le chrono vous plaît, il y a la même idée en plus poussé avec <a href=\"/quiz-qui-connait-mieux-partenaire/\">des questions où l'un répond à la place de l'autre</a>."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "On peut y jouer à combien ?",
+    "a1": "À deux, c'est fait pour ça. Rien n'empêche d'y jouer à quatre un soir de repas : chaque couple complète la phrase à son tour, et vous verrez vite que personne ne répond la même chose.",
+    "q2": "Combien de temps dure une partie ?",
+    "a2": "Une dizaine de minutes pour les vingt phrases si vous enchaînez. Beaucoup plus si vous vous mettez à raconter, et c'est plutôt bon signe. En mode chrono, comptez un peu plus : il y a trois secondes de décompte à chaque phrase, plus le temps de dire si vous avez répondu pareil.",
+    "q3": "On peut sauter une phrase ?",
+    "a3": "Oui. Le bouton « Suivant » est affiché en permanence, même pendant le décompte. Une phrase qui ne vous parle pas, vous la passez, ça ne change rien à la suite de la partie.",
+    "q4": "Les phrases reviennent dans le même ordre ?",
+    "a4": "Non, elles sont mélangées à chaque partie. Vous ne les retrouverez pas dans l'ordre de la liste ci-dessus. En revanche vous aurez bien les vingt à chaque fois.",
+    "q5": "Ça marche à distance ?",
+    "a5": "Oui, très bien. L'un des deux ouvre le jeu et lit la phrase à voix haute en appel vidéo. Pour le chrono, le haut-parleur suffit : vous entendez le décompte tous les deux et vous répondez au même moment."
+  }
+}

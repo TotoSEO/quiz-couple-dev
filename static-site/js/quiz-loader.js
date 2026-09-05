@@ -212,6 +212,11 @@
     // tour. Cent affirmations en réserve, la partie en pose 15, 30 ou 100. ──
     'jamais':                  { prefix: 'jamais', engine: 'jamais', totalQ: 0, pool: 0, textOnly: true },
 
+    // ── Phrases à compléter : vingt phrases laissées en suspens, que les
+    // deux personnes finissent à voix haute. Le moteur pose l'écran de choix
+    // lui-même : lecture simple, ou décompte de trois secondes. ──
+    'phrases':                 { prefix: 'phrases', engine: 'phrases', totalQ: 0, pool: 0, textOnly: true },
+
     // ── Pour ou contre : une proposition, deux camps, et les pourcentages
     // des couples qui sont passés avant. Les familles sont déclarées ici avec
     // leur effectif parce que l'identifiant envoyé en base est la position
@@ -606,6 +611,26 @@
         return;
       }
       new QuizEngine.OuiNonGame({ container: container, prefix: config.prefix, lang: lang, questions: onQuestions });
+      return;
+    }
+
+    // Phrases à compléter : vingt phrases numérotées, lues d'un coup. Le
+    // moteur mélange et pose l'écran de choix du mode avant de commencer.
+    if (config.engine === 'phrases') {
+      var phrases = [];
+      for (var phi = 1; phi <= 20; phi++) {
+        var clePh = config.prefix + '.q' + phi;
+        var textePh = QuizEngine.tgd(clePh, null);
+        if (!textePh || textePh === clePh) continue;
+        phrases.push({ id: phi, texte: textePh });
+      }
+      if (phrases.length === 0) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      new QuizEngine.PhrasesGame({ container: container, prefix: config.prefix, lang: lang, questions: phrases });
       return;
     }
 

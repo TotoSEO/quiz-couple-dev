@@ -1,0 +1,52 @@
+{
+  "jsonLd": {
+    "name": "Frases para completar, juego de pareja"
+  },
+  "hero": {
+    "badge": "Juego para dos",
+    "title": "20 frases para completar: juego de pareja",
+    "titleHighlight": "frases para completar",
+    "description": "Veinte frases que se quedan a medias, para terminarlas por turnos o los dos a la vez después de una cuenta atrás de tres segundos."
+  },
+  "section1": {
+    "title": "Qué es el juego de las frases para completar",
+    "p1": "Las frases para completar son un <a href=\"/es/juegos-para-parejas/\">juego que se puede hacer en pareja</a>, en el sofá o en el coche. Aparece una frase, se corta a la mitad, y cada uno la termina como le sale. Por ejemplo: «Nuestro mejor recuerdo juntos es…»",
+    "p2": "Si uno responde «nuestro finde en Lisboa» y el otro responde «el día que recogimos al gato», ya tenéis dos historias que contar. Nadie gana, no hay nada que adivinar: completáis, escucháis lo que ha dicho el otro y, la mayoría de las veces, ¡acabáis hablando un buen rato!",
+    "p3": "Todo funciona en el navegador, sin registro y sin instalar nada. Basta con un móvil entre los dos."
+  },
+  "section2": {
+    "title": "Las dos maneras de jugar",
+    "intro": "Así funciona nuestro motor de juego de aquí arriba. Antes de empezar os pregunta cómo queréis jugar. Las veinte frases son las mismas en los dos casos, lo que cambia es la forma de responder.",
+    "modeLectureEmoji": "💬",
+    "modeLectureTitre": "Cada uno completa y pasáis",
+    "modeLectureTexte": "Aparece la frase, la completáis en voz alta los dos, y os quedáis en ella el tiempo que queráis. Cuando hayáis terminado de hablar, pulsáis «Siguiente». Es la versión tranquila, sin cuenta atrás y sin puntos.",
+    "modeChronoEmoji": "⏱️",
+    "modeChronoTitre": "Respondéis a la vez",
+    "modeChronoTexte": "Pulsáis «Empezar la cuenta atrás» y arranca: 3, 2, 1, GO. Al «GO» decís vuestra respuesta los dos en el mismo momento, sin pensarlo. Después el juego os pregunta si era la misma, y va contando vuestras respuestas en común hasta el final.",
+    "apres": "La frase se queda en pantalla todo el turno, cuenta atrás incluida: nadie tiene que acordarse de ella. Y el botón «Siguiente» está siempre ahí, incluso al lado del cronómetro. Si una frase no os dice nada, pasáis a la siguiente."
+  },
+  "section3": {
+    "title": "Las 20 frases del juego",
+    "intro": "Estas son las veinte frases tal y como están escritas. En el juego se mezclan en cada partida, así que no os saldrán en este orden.",
+    "apres": "Ya veréis, unas acaban en carcajada y otras en una conversación de un cuarto de hora, y nunca se sabe cuál hará qué. Si os gusta este tipo de noche, también tenéis <a href=\"/es/yo-nunca-juego-pareja/\">frases en las que cada uno confiesa si lo ha hecho o no</a>."
+  },
+  "section4": {
+    "title": "Cuándo sacar este juego",
+    "p1": "El mejor momento es cuando no pasa nada especial: un domingo por la tarde, un viaje en coche, una sala de espera, o esas cenas en las que ya habéis contado el día entero y <a href=\"/es/blog/preguntas-para-conoceros-mejor/\">no sabéis muy bien de qué hablar</a>.",
+    "p2": "También funciona a distancia. Uno de los dos abre la página y lee la frase en voz alta en videollamada. Para el modo con cuenta atrás, poned el altavoz: la tenéis que oír los dos.",
+    "p3": "Un último consejo: decid la primera respuesta que se os ocurra. La que se busca durante diez segundos casi siempre tiene menos gracia que la que sale sola. Y si os gusta el modo con cuenta atrás, la misma idea va más lejos con <a href=\"/es/quiz-quien-conoce-mejor-pareja/\">preguntas en las que uno responde por el otro</a>."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cuántos podemos jugar?",
+    "a1": "Dos, para eso está hecho. Nada impide jugar entre cuatro en una cena: cada pareja completa la frase por turnos, y enseguida veréis que nadie responde lo mismo.",
+    "q2": "¿Cuánto dura una partida?",
+    "a2": "Unos diez minutos para las veinte frases si vais seguidos. Mucho más si os ponéis a contar cosas, que es buena señal. En el modo con cuenta atrás calculad un poco más: hay tres segundos de cuenta atrás en cada frase, más el tiempo de decir si habéis coincidido.",
+    "q3": "¿Se puede saltar una frase?",
+    "a3": "Sí. El botón «Siguiente» está en pantalla todo el rato, incluso durante la cuenta atrás. Una frase que no os dice nada la pasáis, y no cambia nada para el resto de la partida.",
+    "q4": "¿Las frases vuelven en el mismo orden?",
+    "a4": "No, se mezclan en cada partida. No las encontraréis en el orden de la lista de arriba. Eso sí, siempre salen las veinte.",
+    "q5": "¿Funciona a distancia?",
+    "a5": "Sí, muy bien. Uno de los dos abre el juego y lee la frase en voz alta en videollamada. Para la cuenta atrás basta con el altavoz: la oís los dos y respondéis en el mismo momento."
+  }
+}

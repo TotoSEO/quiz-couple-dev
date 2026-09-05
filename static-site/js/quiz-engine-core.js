@@ -1522,6 +1522,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'jamais', icon: '🙊', route: 'jeuJamais' },
     { type: 'jeu', key: 'qui-pourrait', icon: '🏆', route: 'jeuQuiPourrait' },
     { type: 'jeu', key: 'oui-non', icon: '✅', route: 'jeuOuiNon' },
+    { type: 'jeu', key: 'phrases', icon: '💬', route: 'jeuPhrases' },
   ];
 
   // Suggestions de fin de partie, choisies une par une pour chaque page.
@@ -1623,6 +1624,7 @@ var QuizEngine = (function() {
     'qui-de-nous-deux': ['quizKnowledge', 'jeuDilemmes', 'zamours', 'quizMost'],
     'dilemmes':         ['pourContre', 'quizTuPreferes', 'jeuQuiDeNous'],
     'pour-contre':      ['jeuDilemmes', 'quizTuPreferes', 'jeuQuiDeNous'],
+    'phrases':          ['jeuQuiDeNous', 'jeuJamais', 'quizKnowledge'],
   };
 
   function getRelatedQuizUrl(routeKey, lang) {
@@ -9737,6 +9739,280 @@ var QuizEngine = (function() {
     smoothScroll(wrap, 'center');
   };
 
+  // ── Phrases à compléter, version couple ────────────────────
+  // Vingt phrases laissées en suspens, que les deux personnes finissent à
+  // voix haute. Deux façons de jouer, choisies avant de commencer :
+  //
+  //   lecture — la phrase s'affiche, on la complète, on discute, on passe.
+  //             Aucun décompte, aucun point : c'est le jeu tel qu'il se
+  //             joue sur un canapé, le téléphone posé entre les deux.
+  //   chrono  — la même phrase, mais un décompte de trois secondes, et au
+  //             « GO » les deux répondent en même temps. Ils disent ensuite
+  //             si c'était pareil, et le jeu compte les réponses communes.
+  //
+  // La phrase ne bouge jamais tant qu'on n'a pas demandé la suivante : le
+  // décompte et les boutons vivent dans une zone à part, sous la carte. Le
+  // bouton « suivant » reste disponible pendant tout le tour, y compris à
+  // côté du chrono : personne ne doit rester coincé sur une phrase qui ne
+  // lui parle pas.
+  function PhrasesGame(config) {
+    this.container = config.container;
+    this.prefix = config.prefix || 'phrases';
+    this.lang = config.lang || 'fr';
+    this.pool = config.questions || [];
+    this.mode = 'lecture';
+    this.phase = 'mode';
+    this.questions = [];
+    this.idx = 0;
+    this.pareil = 0;
+    this.jouees = 0;      // phrases réellement passées au chrono
+    this.minuteurs = [];
+    this.zone = null;
+    this.etape = null;
+    this.render();
+  }
+
+  // Les libellés vivent dans gd.json à côté des phrases, comme pour les
+  // autres jeux : c'est tgd qui les lit, tg servirait le repli français
+  // dans les cinq langues.
+  PhrasesGame.prototype.ptg = function(cle, repli) {
+    return tgd(this.prefix + '.' + cle, repli);
+  };
+
+  PhrasesGame.prototype.total = function() {
+    return this.questions.length || this.pool.length;
+  };
+
+  // Un décompte en cours ne doit jamais survivre à l'écran qui l'a lancé :
+  // sans ça, un « suivant » cliqué sur « 2 » ferait apparaître le « GO »
+  // par-dessus la phrase suivante.
+  PhrasesGame.prototype.stopMinuteurs = function() {
+    this.minuteurs.forEach(clearTimeout);
+    this.minuteurs = [];
+  };
+
+  PhrasesGame.prototype.plusTard = function(ms, fn) {
+    this.minuteurs.push(setTimeout(fn, ms));
+  };
+
+  PhrasesGame.prototype.tirer = function() {
+    this.questions = shuffleArray(this.pool.slice());
+  };
+
+  PhrasesGame.prototype.render = function() {
+    this.stopMinuteurs();
+    this.container.innerHTML = '';
+    this.zone = null;
+    this.etape = null;
+    if (this.phase === 'mode') this.renderMode();
+    else if (this.phase === 'fin') this.renderFin();
+    else this.renderJeu();
+  };
+
+  PhrasesGame.prototype.nouvellePartie = function(mode) {
+    this.mode = mode;
+    this.tirer();
+    this.idx = 0;
+    this.pareil = 0;
+    this.jouees = 0;
+    this.phase = 'jeu';
+    this.render();
+    smoothScroll(this.container, 'start');
+  };
+
+  PhrasesGame.prototype.renderMode = function() {
+    var self = this;
+    this.container.appendChild(ecranModes({
+      icone: '💬',
+      titre: this.ptg('modeTitre', 'Vous jouez comment ?'),
+      desc: this.ptg('modeDesc', ''),
+      modes: [
+        { id: 'lecture', emoji: '💬',
+          titre: this.ptg('modeLectureTitre', ''),
+          desc: this.ptg('modeLectureDesc', ''),
+          meta: this.ptg('modeLectureMeta', '') },
+        { id: 'chrono', emoji: '⏱️',
+          titre: this.ptg('modeChronoTitre', ''),
+          desc: this.ptg('modeChronoDesc', ''),
+          meta: this.ptg('modeChronoMeta', '') }
+      ],
+      onChoix: function(id) { self.nouvellePartie(id); }
+    }));
+    smoothScroll(this.container, 'start');
+  };
+
+  PhrasesGame.prototype.renderJeu = function() {
+    var q = this.questions[this.idx];
+    var wrap = el('div', 'quiz-engine phr-jeu quiz-question-enter');
+    renderProgressBar(wrap, this.idx, this.total(),
+      this.ptg('phraseSur', 'Phrase {{n}} / {{total}}')
+        .replace('{{n}}', this.idx + 1).replace('{{total}}', this.total()));
+
+    var carte = el('div', 'phr-carte');
+    carte.innerHTML = '<p class="phr-enonce">' + esc(q.texte) + '</p>';
+    wrap.appendChild(carte);
+
+    // Tout ce qui change pendant le tour tient dans l'étape : les boutons,
+    // puis le décompte, puis la question « vous avez dit pareil ? ». La carte
+    // au-dessus n'est jamais reconstruite.
+    this.zone = el('div', 'phr-zone');
+    this.etape = el('div', 'phr-etape');
+    this.zone.appendChild(this.etape);
+    // Le « suivant » du mode chrono vit en dehors de l'étape : il doit rester
+    // sous la main pendant le décompte et pendant la question qui suit, sinon
+    // une phrase qui ne plaît pas retient les joueurs le temps d'un tour.
+    if (this.mode === 'chrono') {
+      var pied = el('div', 'phr-actions phr-actions--pied');
+      pied.appendChild(this.boutonSuivant('btn btn-outline phr-btn-suivant'));
+      this.zone.appendChild(pied);
+    }
+    wrap.appendChild(this.zone);
+    this.renderActions();
+
+    this.container.appendChild(wrap);
+  };
+
+  PhrasesGame.prototype.boutonSuivant = function(classe) {
+    var self = this;
+    var b = el('button', classe, esc(this.ptg('btnSuivant', 'Suivant')));
+    b.type = 'button';
+    b.addEventListener('click', function() { self.suivant(); });
+    return b;
+  };
+
+  PhrasesGame.prototype.renderActions = function() {
+    var self = this;
+    this.etape.innerHTML = '';
+    var barre = el('div', 'phr-actions');
+    if (this.mode === 'chrono') {
+      var chrono = el('button', 'btn btn-cta btn-gradient phr-btn-chrono',
+        esc(this.ptg('btnChrono', 'Lancer le chrono')));
+      chrono.type = 'button';
+      chrono.addEventListener('click', function() { self.lancerChrono(); });
+      barre.appendChild(chrono);
+    } else {
+      barre.appendChild(this.boutonSuivant('btn btn-cta btn-gradient phr-btn-seul'));
+    }
+    this.etape.appendChild(barre);
+  };
+
+  // Trois, deux, un, GO. Le compte à rebours remplace les boutons et garde
+  // la phrase au-dessus, pour qu'on puisse la relire jusqu'au dernier
+  // moment. Il s'annonce à voix haute pour les lecteurs d'écran.
+  PhrasesGame.prototype.lancerChrono = function() {
+    var self = this;
+    this.stopMinuteurs();
+    this.etape.innerHTML = '';
+
+    var bloc = el('div', 'phr-chrono');
+    var pastille = el('div', 'phr-chrono-nombre');
+    pastille.setAttribute('aria-live', 'assertive');
+    bloc.appendChild(pastille);
+    bloc.appendChild(el('p', 'phr-chrono-aide', esc(this.ptg('chronoAide', ''))));
+    this.etape.appendChild(bloc);
+
+    function poser(texte, go) {
+      pastille.textContent = texte;
+      pastille.className = 'phr-chrono-nombre' + (go ? ' phr-chrono-nombre--go' : '');
+      // La classe est retirée puis remise pour que l'animation reparte à
+      // chaque chiffre : sans ça, seul le « 3 » serait animé.
+      void pastille.offsetWidth;
+      pastille.classList.add('phr-chrono-bat');
+    }
+
+    poser('3', false);
+    this.plusTard(1000, function() { poser('2', false); });
+    this.plusTard(2000, function() { poser('1', false); });
+    this.plusTard(3000, function() { poser(self.ptg('chronoGo', 'GO !'), true); });
+    this.plusTard(3900, function() { self.demanderPareil(); });
+  };
+
+  PhrasesGame.prototype.demanderPareil = function() {
+    var self = this;
+    this.etape.innerHTML = '';
+    var bloc = el('div', 'phr-verdict animate-fade-in');
+    bloc.appendChild(el('p', 'phr-verdict-titre', esc(this.ptg('pareilTitre', ''))));
+
+    var choix = el('div', 'phr-choix');
+    [['pareil', this.ptg('btnPareil', 'Oui, pareil'), '🎯'],
+     ['different', this.ptg('btnDifferent', 'Non, pas du tout'), '🙃']].forEach(function(o) {
+      var b = el('button', 'phr-btn phr-btn--' + o[0]);
+      b.type = 'button';
+      b.innerHTML = '<span class="phr-btn-emoji" aria-hidden="true">' + o[2] + '</span>' +
+        '<span class="phr-btn-texte">' + esc(o[1]) + '</span>';
+      b.addEventListener('click', function() {
+        if (!answerLock(self, 400)) return;
+        self.jouees++;
+        if (o[0] === 'pareil') self.pareil++;
+        b.classList.add('phr-btn--pris');
+        choix.classList.add('phr-choix--verrouille');
+        self.plusTard(320, function() { self.suivant(); });
+      });
+      choix.appendChild(b);
+    });
+    bloc.appendChild(choix);
+    this.etape.appendChild(bloc);
+  };
+
+  PhrasesGame.prototype.suivant = function() {
+    this.stopMinuteurs();
+    this.idx++;
+    if (this.idx >= this.total()) this.phase = 'fin';
+    this.render();
+    if (this.phase === 'fin') return;
+    smoothScroll(this.container, 'start');
+  };
+
+  // Quatre paliers réguliers sur les phrases réellement passées au chrono :
+  // celui qui saute la moitié des phrases n'est pas jugé sur vingt.
+  PhrasesGame.prototype.verdict = function() {
+    var part = this.jouees ? this.pareil / this.jouees : 0;
+    var rang = part <= 0.25 ? 1 : part <= 0.5 ? 2 : part <= 0.75 ? 3 : 4;
+    return this.ptg('verdict' + rang, '');
+  };
+
+  PhrasesGame.prototype.renderFin = function() {
+    var self = this;
+    var chrono = this.mode === 'chrono' && this.jouees > 0;
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-3', chrono ? '⏱️' : '💬'));
+
+    if (chrono) {
+      // Une seule réponse en commun a sa propre phrase : « 1 réponses », c'est
+      // la faute d'accord qu'on lit en premier sur un écran de résultat.
+      var cleTitre = this.pareil === 1 ? 'finTitreChronoUn' : 'finTitreChrono';
+      wrap.appendChild(el('h2', 'text-2xl font-bold mb-2',
+        esc(this.ptg(cleTitre, '{{n}} / {{total}}')
+          .replace('{{n}}', this.pareil).replace('{{total}}', this.jouees))));
+      wrap.appendChild(el('p', 'text-muted-foreground mb-4', esc(this.ptg('finSousChrono', ''))));
+      wrap.appendChild(el('p', 'phr-fin-verdict', esc(this.verdict())));
+    } else {
+      wrap.appendChild(el('h2', 'text-2xl font-bold mb-2',
+        esc(this.ptg('finTitreLecture', '').replace('{{total}}', this.total()))));
+      wrap.appendChild(el('p', 'text-muted-foreground mb-4', esc(this.ptg('finSousLecture', ''))));
+    }
+
+    var rejouer = el('button', 'btn btn-cta btn-lg mt-2 mb-2', esc(this.ptg('recommencer', 'Rejouer')));
+    rejouer.type = 'button';
+    rejouer.addEventListener('click', function() { self.nouvellePartie(self.mode); });
+    wrap.appendChild(rejouer);
+
+    var changer = el('button', 'btn btn-outline phr-changer', esc(this.ptg('changerMode', '')));
+    changer.type = 'button';
+    changer.addEventListener('click', function() {
+      self.phase = 'mode';
+      self.render();
+    });
+    wrap.appendChild(changer);
+
+    renderActionButtons(wrap, {
+      share: { type: 'fun' },
+      restart: function() { self.phase = 'mode'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -9766,6 +10042,7 @@ var QuizEngine = (function() {
     JamaisGame: JamaisGame,
     QuiPourraitGame: QuiPourraitGame,
     OuiNonGame: OuiNonGame,
+    PhrasesGame: PhrasesGame,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

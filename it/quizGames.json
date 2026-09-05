@@ -374,7 +374,8 @@
     "jeuOuiNon": "Sì o no",
     "testAimeEncore": "Test mi ama ancora",
     "testEmprise": "Test manipolazione psicologica",
-    "testAmourAmi": "Test innamorato del migliore amico"
+    "testAmourAmi": "Test innamorato del migliore amico",
+    "jeuPhrases": "Frasi da completare"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",

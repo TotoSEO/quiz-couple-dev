@@ -374,7 +374,8 @@
     "jeuOuiNon": "Yes or no",
     "testAimeEncore": "Does he or she still love me test",
     "testEmprise": "Coercive control test",
-    "testAmourAmi": "In love with my best friend test"
+    "testAmourAmi": "In love with my best friend test",
+    "jeuPhrases": "Finish the sentence"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

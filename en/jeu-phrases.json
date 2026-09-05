@@ -1,0 +1,52 @@
+{
+  "jsonLd": {
+    "name": "Finish the sentence, couples game"
+  },
+  "hero": {
+    "badge": "Game for two",
+    "title": "20 sentences to finish: couples game",
+    "titleHighlight": "sentences to finish",
+    "description": "Twenty sentences left hanging, to finish one at a time, or both of you at once after a three-second countdown."
+  },
+  "section1": {
+    "title": "What the sentence game is",
+    "p1": "Finishing sentences is a <a href=\"/en/couple-games/\">game you can play as a couple</a>, on the sofa or in the car. A sentence comes up, it stops halfway through, and you each finish it however you want. For example: “Our best memory together is…”",
+    "p2": "If one of you says “our weekend in Lisbon” and the other says “the day we got the cat”, you already have two stories to tell. Nobody wins, there's nothing to guess: you finish the sentence, you listen to what the other one said, and most of the time it turns into a conversation!",
+    "p3": "Everything runs in the browser, no sign-up and nothing to install. One phone on the table between you is enough."
+  },
+  "section2": {
+    "title": "The two ways to play",
+    "intro": "Here's how our game engine above works. Before you start, it asks how you want to play. The twenty sentences are the same either way, what changes is how you answer.",
+    "modeLectureEmoji": "💬",
+    "modeLectureTitre": "You both finish it, then you move on",
+    "modeLectureTexte": "The sentence comes up, you both finish it out loud, and you stay on it as long as you like. When you're done talking about it, you tap “Next”. That's the quiet version, no countdown and no points.",
+    "modeChronoEmoji": "⏱️",
+    "modeChronoTitre": "You answer at the same time",
+    "modeChronoTexte": "You tap “Start the countdown” and off it goes: 3, 2, 1, GO. On “GO” you both say your answer at the same moment, without thinking. The game then asks whether it was the same, and it counts your matching answers all the way to the end.",
+    "apres": "The sentence stays on screen for the whole turn, countdown included: nobody has to keep it in their head. And the “Next” button is always there, even next to the countdown. If a sentence does nothing for you, move on to the following one."
+  },
+  "section3": {
+    "title": "The 20 sentences in the game",
+    "intro": "Here are the twenty sentences as they're written. In the game they're shuffled every round, so you won't get them in this order.",
+    "apres": "Some of them end in laughter and others in a fifteen-minute conversation, and you never know beforehand which will do what. If this kind of evening works for you, there are also <a href=\"/en/never-have-i-ever-couples-game/\">statements where you each admit whether you've done it or not</a>."
+  },
+  "section4": {
+    "title": "When to bring this game out",
+    "p1": "The best moment is when nothing much is happening: a Sunday evening, a car journey, a waiting room, or those dinners where you've been through the whole day already and <a href=\"/en/blog/questions-to-get-to-know-each-other/\">you don't quite know what to talk about any more</a>.",
+    "p2": "It works long-distance too. One of you opens the page and reads the sentence out loud on a video call. For the countdown mode, put it on speaker, you both need to hear it.",
+    "p3": "One last piece of advice: say the first answer that comes to mind. The one you dig around for over ten seconds is almost always less fun than the one that comes out on its own. And if the countdown mode is your thing, the same idea goes further with <a href=\"/en/who-knows-partner-best-quiz/\">questions where one of you answers for the other</a>."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "How many people can play?",
+    "a1": "Two, that's what it's made for. Nothing stops you playing with four over dinner: each couple finishes the sentence in turn, and you'll see straight away that nobody answers the same thing.",
+    "q2": "How long does a round take?",
+    "a2": "About ten minutes for the twenty sentences if you keep moving. Much longer if you start telling stories, which is a good sign. In countdown mode, allow a bit more: there are three seconds of countdown on every sentence, plus the time to say whether you matched.",
+    "q3": "Can we skip a sentence?",
+    "a3": "Yes. The “Next” button is on screen the whole time, even during the countdown. A sentence that does nothing for you, you skip, and it changes nothing for the rest of the round.",
+    "q4": "Do the sentences come back in the same order?",
+    "a4": "No, they're shuffled every round. You won't find them in the order of the list above. You do get all twenty every time, though.",
+    "q5": "Does it work long-distance?",
+    "a5": "Yes, very well. One of you opens the game and reads the sentence out loud on a video call. For the countdown, speaker mode is enough: you both hear it and you answer at the same moment."
+  }
+}

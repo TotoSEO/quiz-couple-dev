@@ -374,7 +374,8 @@
     "jeuOuiNon": "Ja oder Nein",
     "testAimeEncore": "Test Liebt er oder sie mich noch",
     "testEmprise": "Test psychische Kontrolle",
-    "testAmourAmi": "Test in besten Freund verliebt"
+    "testAmourAmi": "Test in besten Freund verliebt",
+    "jeuPhrases": "Sätze vervollständigen"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
