@@ -6056,28 +6056,31 @@ h1, h2, h3, h4, h5, h6,
    certains résultats étant centrés par construction.
    ═══════════════════════════════════════════════════════════════════ */
 .qr-plan {
-  display: grid; gap: 1.25rem;
-  grid-template-columns: minmax(0, 1fr);
-  /* Le bloc de renvoi vient juste sous la carte de resultat. Il etait tout en
-     bas : sur un ecran de 390px, son premier lien tombait a 923px, sous un
-     ecran entier de defilement, derriere le partage, le bouton de reprise et
-     les etoiles. Or c'est le seul bloc de la page qui ouvre une autre page, et
-     le moment ou on vient de lire son verdict est celui ou l'envie d'en faire
-     un autre est la plus forte. Sur bureau il occupe deja une colonne collante
-     visible d'entree, la disposition en deux colonnes ne bouge donc pas. */
-  grid-template-areas: "resultat" "suite" "actions" "avis" "story";
+  display: flex; flex-direction: column; gap: 1.25rem;
   max-width: 72rem; margin: 0 auto;
 }
-.qr-zone--resultat { grid-area: resultat; }
-.qr-zone--actions  { grid-area: actions; }
-.qr-zone--avis     { grid-area: avis; }
-.qr-zone--suite    { grid-area: suite; }
-/* Le bloc de l'image story n'avait pas de zone nommee : la grille le posait
-   en fin de flux par defaut, quel que soit son rang dans le DOM. Sa place est
-   maintenant declaree, au meme endroit mais volontairement. Il vient apres le
-   bloc de renvoi vers les autres tests, qui est le seul de la page a ouvrir
-   une autre page et n'a donc rien a gagner a etre repousse. */
-.qr-zone--story    { grid-area: story; }
+/* La colonne principale porte l'avis, le resultat, les actions et la story.
+   Sur telephone elle s'efface : ses blocs deviennent enfants directs de la
+   carte, et le bloc de renvoi peut reprendre sa place entre le resultat et
+   les actions. L'ordre ci-dessous vaut donc pour les deux mises en page. */
+.qr-colonne { display: contents; }
+/* L'ordre de lecture : ce que j'en pense, ce que j'ai obtenu, ou aller
+   ensuite, ce que je peux faire, et l'image a partager.
+   Le bloc de renvoi vient juste sous la carte de resultat. Il etait tout en
+   bas : sur un ecran de 390px, son premier lien tombait a 923px, sous un
+   ecran entier de defilement, derriere le partage, le bouton de reprise et
+   les etoiles. Or c'est le seul bloc de la page qui ouvre une autre page, et
+   le moment ou on vient de lire son verdict est celui ou l'envie d'en faire
+   un autre est la plus forte. Sur bureau il occupe deja une colonne collante
+   visible d'entree, la disposition en deux colonnes ne bouge donc pas. */
+.qr-zone--avis     { order: 1; }
+.qr-zone--resultat { order: 2; }
+.qr-zone--suite    { order: 3; }
+.qr-zone--actions  { order: 4; }
+/* L'image story ferme la marche : elle vient apres le bloc de renvoi vers les
+   autres tests, qui est le seul de la page a ouvrir une autre page et n'a donc
+   rien a gagner a etre repousse. */
+.qr-zone--story    { order: 5; }
 
 /* La zone du résultat porte la carte : c'est elle qu'on regarde en premier. */
 .qr-zone--resultat {
@@ -6111,17 +6114,30 @@ h1, h2, h3, h4, h5, h6,
 .qr-zone--actions { display: grid; gap: .75rem; justify-items: center; }
 .qr-zone--actions > * { width: 100%; margin: 0 !important; }
 
-/* L'avis se demande une fois qu'on a lu son résultat et qu'on a pu agir. */
+/* La notation ouvre l'écran de résultat et suit le défilement, mais seulement
+   dans la carte : sa colonne est son plafond, elle s'arrête donc net avant le
+   contenu de la page. 4.5rem la posent sous l'en-tête collant, qui mesure
+   61 px sur téléphone et 56 px sur ordinateur une fois la page défilée.
+   Le fond est opaque, sinon le verdict défilerait au travers : la teinte rose
+   d'origine est reposée par-dessus la couleur de la carte, à l'identique. */
 .qr-zone--avis {
   padding: 1.25rem 1.35rem; border-radius: 1.25rem;
   border: 2px dashed hsl(var(--primary) / .35);
-  background: hsl(var(--primary) / .04);
+  background: linear-gradient(hsl(var(--primary) / .04), hsl(var(--primary) / .04)) hsl(var(--card));
+  position: sticky; top: 4.5rem; z-index: 3;
+  /* Replié, le bloc fait 115 px. Une fois la note donnée, le formulaire
+     s'ouvre et il monte à 400 px : sur un petit téléphone il occuperait alors
+     plus de la moitié de l'écran en permanence. Il ne dépasse donc jamais la
+     hauteur visible, et défile de lui-même au-delà. */
+  max-height: calc(100vh - 6rem);
+  max-height: calc(100dvh - 6rem);
+  overflow-y: auto;
 }
 .qr-review { width: 100%; margin: 0; padding: 0; border: 0; }
 /* Repli : quand les avis ne sont pas configurés, quiz-extras ajoute son
    raccourci de notation directement dans la carte. Sans cette règle il
    atterrissait en case implicite, sous la colonne « et après ». */
-.qr-plan > .qr-rate { grid-area: avis; margin: 0; max-width: none; }
+.qr-plan > .qr-rate { order: 1; margin: 0; max-width: none; }
 .qr-review-title { font-family: var(--font-display); font-weight: 700; font-size: 1.02rem; margin: 0 0 .7rem; text-align: center; }
 .qr-review .pqx-input-stars { justify-content: center; }
 .qr-review .pqx-more { margin-top: .9rem; display: grid; gap: .6rem; }
@@ -6140,20 +6156,27 @@ h1, h2, h3, h4, h5, h6,
 
 @media (min-width: 900px) {
   .qr-plan {
-    grid-template-columns: minmax(0, 1.32fr) minmax(0, .68fr);
+    flex-direction: row; flex-wrap: wrap;
+    align-items: flex-start;
     gap: 1.35rem 2rem;
-    align-items: start;
-    grid-template-areas:
-      "resultat suite"
-      "actions  suite"
-      "avis     suite"
-      "story    suite";
   }
+  /* La colonne reprend son corps : c'est elle qui borne le défilement du bloc
+     de notation, qui s'arrête donc avec elle et jamais plus bas. */
+  .qr-colonne {
+    display: flex; flex-direction: column; gap: 1.35rem;
+    flex: 1.32 1 0; min-width: 0;
+  }
+  /* Le raccourci de notation du repli n'appartient à aucune colonne : il passe
+     sur sa propre ligne, sous les deux. */
+  .qr-plan > .qr-rate { flex: 0 0 100%; order: 9; }
   /* Le résultat est plus large que les questions : on libère le conteneur,
      uniquement quand un écran de résultat est là. */
   #quiz-engine:has(.qr-plan) { max-width: 72rem; }
   .jalousie-encart:has(.qr-plan) { max-width: 60rem; }
-  .qr-zone--suite { align-self: start; position: sticky; top: 1.5rem; }
+  /* Le bloc de renvoi se cale sur la même ligne que la notation : les deux
+     collants s'arrêtaient sinon à deux hauteurs différentes, et celui-ci
+     passait sous l'en-tête. */
+  .qr-zone--suite { flex: .68 1 0; min-width: 0; align-self: flex-start; position: sticky; top: 4.5rem; }
 }
 @media (prefers-reduced-motion: reduce) { .qr-zone--suite { position: static; } }
 @media (max-width: 560px) {
