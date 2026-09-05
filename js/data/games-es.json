@@ -402,23 +402,23 @@
       {
         "min": 0,
         "max": 19,
-        "tag": "Alerta",
-        "title": "Una pareja que sufre",
-        "desc": "Vuestras respuestas describen una relación que ahora mismo hace más daño que bien. Es una lectura dura, pero tiene una virtud: pone nombre a lo que probablemente ya sentís. Habladlo con alguien de confianza y, si el diálogo está roto, un terapeuta de pareja está exactamente para eso."
+        "tag": "Para hablarlo",
+        "title": "Muchas cosas que deciros",
+        "desc": "En la mayoría de las preguntas, vuestras respuestas van en el mismo sentido: la confianza ha recibido golpes, y las peleas no se cierran bien. Un test no sabe lo que vivís, así que no va a deciros lo que vale vuestra pareja. Lo que sí puede decir es que estos temas merecen una conversación de verdad, con calma, un día en que las cosas vayan bien. Y si no lo conseguís los dos solos, hablarlo con alguien neutral suele ayudar."
       },
       {
         "min": 20,
         "max": 34,
-        "tag": "Frágil",
-        "title": "Cimientos por reconstruir",
-        "desc": "Varios pilares, comunicación, confianza, reparación tras el conflicto, están dañados a la vez. Nada irreversible, pero no esperéis a que se arregle solo: elegid EL tema que más duele y abridlo con calma, fuera de una pelea."
+        "tag": "Por retomar",
+        "title": "Algunos cimientos por retomar",
+        "desc": "Varias respuestas muestran que se atasca en el mismo sitio: la manera de hablaros, o lo que queda después de una pelea. Nada irreversible, muchas parejas pasan por ahí. Lo más útil es elegir el tema que más pesa y abrirlo con calma, no en medio de una discusión."
       },
       {
         "min": 35,
         "max": 49,
         "tag": "En obras",
         "title": "Una pareja buscando su equilibrio",
-        "desc": "Hay vínculo, y hay fugas. Vuestras respuestas divergentes muestran exactamente dónde: esos son vuestros frentes prioritarios. El buen reflejo no es arreglarlo todo, es elegir dos y ponerse de verdad."
+        "desc": "Hay vínculo, y hay temas que chirrían. Vuestras respuestas muestran dónde, y ahí es donde hay que mirar primero. No hace falta arreglarlo todo de golpe: coged uno o dos, y ocupaos de ellos de verdad."
       },
       {
         "min": 50,

@@ -402,23 +402,23 @@
       {
         "min": 0,
         "max": 19,
-        "tag": "Allarme",
-        "title": "Una coppia che soffre",
-        "desc": "Le vostre risposte descrivono una relazione che in questo momento fa più male che bene. È una lettura dura, ma ha una virtù: dà un nome a ciò che probabilmente sentite già. Parlatene con qualcuno di fiducia e, se il dialogo si è rotto, un terapeuta di coppia serve esattamente a questo."
+        "tag": "Da parlarne",
+        "title": "Molte cose da dirvi",
+        "desc": "Nella maggior parte delle domande, le vostre risposte vanno nella stessa direzione: la fiducia ha preso dei colpi, e i litigi non si chiudono bene. Un test non sa cosa state vivendo, quindi non vi dirà quanto vale la vostra coppia. Quello che può dire è che questi argomenti meritano una vera conversazione, con calma, in un giorno in cui le cose vanno bene. E se da soli non ci riuscite, parlarne con qualcuno di neutrale spesso aiuta."
       },
       {
         "min": 20,
         "max": 34,
-        "tag": "Fragile",
-        "title": "Fondamenta da ricostruire",
-        "desc": "Diversi pilastri, comunicazione, fiducia, riparazione dopo il conflitto, sono danneggiati insieme. Nulla di irreversibile, ma non aspettate che si sistemi da solo: scegliete IL tema che fa più male e apritelo con calma, fuori da un litigio."
+        "tag": "Da riprendere",
+        "title": "Qualche fondamento da riprendere",
+        "desc": "Diverse risposte mostrano che si inceppa nello stesso punto: il modo di parlarvi, o quello che resta dopo un litigio. Niente di irreversibile, molte coppie ci passano. La cosa più utile è scegliere l'argomento che pesa di più e aprirlo con calma, non nel mezzo di una discussione."
       },
       {
         "min": 35,
         "max": 49,
         "tag": "In cantiere",
         "title": "Una coppia in cerca del suo equilibrio",
-        "desc": "C'è legame, e ci sono falle. Le vostre risposte divergenti mostrano esattamente dove: quelli sono i vostri cantieri prioritari. Il riflesso giusto non è sistemare tutto, è sceglierne due e mettercisi davvero."
+        "desc": "C'è legame, e ci sono argomenti che stridono. Le vostre risposte mostrano dove, ed è lì che va guardato per primo. Non serve sistemare tutto in una volta: prendetene uno o due, e occupatevene davvero."
       },
       {
         "min": 50,
