@@ -2474,16 +2474,25 @@ var QuizEngine = (function() {
   //   3 = fondamental (vie commune, epreuves traversees, projection, securite)
   //   2 = structurant (jalons sociaux, ancrage materiel, reparation)
   //   1 = confort     (vacances, autonomie, anciennete du dernier doute)
+  // `n` liste les rangs de reponse neutres : « pas encore », « jamais eu
+  // l'occasion ». Onze questions mesurent des jalons (vivre ensemble, familles
+  // rencontrees, epreuve traversee, vacances...) qu'un couple de quatre mois
+  // n'a simplement pas encore vecus. Comptes zero, ces jalons pesaient un
+  // tiers du bareme, et selon le tirage jusqu'a dix questions sur vingt : un
+  // jeune couple heureux tombait une fois sur deux sur « a consolider », avec
+  // un texte sur ses « zones de friction ». Une reponse neutre sort donc du
+  // calcul, au numerateur comme au denominateur : la note se fait sur ce que
+  // le couple a reellement vecu. Un jalon franchi compte toujours pour lui.
   var TESTER_BAREME = {
     testerC: {
-      1:  { d: 'anciennete', w: 2 },
-      2:  { d: 'jalons',     w: 2 },
-      3:  { d: 'social',     w: 2 },
-      4:  { d: 'ancrage',    w: 3 },
-      5:  { d: 'jalons',     w: 1 },
-      6:  { d: 'epreuves',   w: 3 },
-      7:  { d: 'projection', w: 3 },
-      8:  { d: 'ancrage',    w: 2 },
+      1:  { d: 'anciennete', w: 2, n: [2, 3] },
+      2:  { d: 'jalons',     w: 2, n: [2, 3] },
+      3:  { d: 'social',     w: 2, n: [3] },
+      4:  { d: 'ancrage',    w: 3, n: [2, 3] },
+      5:  { d: 'jalons',     w: 1, n: [3] },
+      6:  { d: 'epreuves',   w: 3, n: [3] },
+      7:  { d: 'projection', w: 3, n: [3] },
+      8:  { d: 'ancrage',    w: 2, n: [2] },
       9:  { d: 'epreuves',   w: 3 },
       10: { d: 'fiabilite',  w: 3 },
       11: { d: 'securite',   w: 3 },
@@ -2491,7 +2500,7 @@ var QuizEngine = (function() {
       13: { d: 'projection', w: 3 },
       14: { d: 'social',     w: 2 },
       15: { d: 'social',     w: 2 },
-      16: { d: 'social',     w: 2 },
+      16: { d: 'social',     w: 2, n: [3] },
       17: { d: 'fiabilite',  w: 2 },
       18: { d: 'epreuves',   w: 2 },
       19: { d: 'reparation', w: 3 },
@@ -2500,13 +2509,13 @@ var QuizEngine = (function() {
       22: { d: 'autonomie',  w: 1 },
       23: { d: 'fiabilite',  w: 2 },
       24: { d: 'securite',   w: 3 },
-      25: { d: 'jalons',     w: 1 },
+      25: { d: 'jalons',     w: 1, n: [2] },
       26: { d: 'epreuves',   w: 3 },
       27: { d: 'projection', w: 2 },
       28: { d: 'anciennete', w: 1 },
       29: { d: 'ancrage',    w: 2 },
       30: { d: 'securite',   w: 2 },
-      31: { d: 'epreuves',   w: 2 },
+      31: { d: 'epreuves',   w: 2, n: [3] },
       32: { d: 'anciennete', w: 2 },
       33: { d: 'autonomie',  w: 1 }
     }
@@ -2763,9 +2772,9 @@ var QuizEngine = (function() {
     yourScore: 'Score de {name}',
     globalScore: 'Score du couple',
     bands: [
-      { min: 0, max: 19, tag: 'Alerte', title: 'Un couple en souffrance', desc: 'Vos réponses décrivent une relation qui fait plus mal que du bien en ce moment. Ce constat est dur, mais il a une vertu : il nomme ce que vous ressentez sans doute déjà. Parlez-en à quelqu\'un de confiance, et si le dialogue est rompu, un thérapeute de couple est exactement fait pour ça.' },
-      { min: 20, max: 34, tag: 'Fragile', title: 'Des fondations à reprendre', desc: 'Plusieurs piliers, communication, confiance, réparation après conflit, sont abîmés en même temps. Rien d\'irréversible, mais n\'attendez pas que ça se répare seul : choisissez LE sujet qui fait le plus mal et ouvrez-le calmement, hors dispute.' },
-      { min: 35, max: 49, tag: 'En chantier', title: 'Un couple qui cherche son équilibre', desc: 'Il y a du lien, et il y a des fuites. Vos réponses divergentes montrent précisément où : ce sont vos chantiers prioritaires. Le bon réflexe n\'est pas de tout traiter, c\'est d\'en choisir deux et de s\'y mettre vraiment.' },
+      { min: 0, max: 19, tag: 'À en parler', title: 'Beaucoup de choses à se dire', desc: 'Sur la plupart des questions, vos réponses vont dans le même sens : la confiance a pris des coups, et les disputes ne se referment pas bien. Un test ne sait pas ce que vous vivez, alors il ne va pas vous dire ce que vaut votre couple. Ce qu\'il peut dire, c\'est que ces sujets méritent une vraie conversation, au calme, un jour où ça va. Et si vous n\'y arrivez pas à deux, en parler avec quelqu\'un de neutre aide souvent.' },
+      { min: 20, max: 34, tag: 'À reprendre', title: 'Quelques fondations à reprendre', desc: 'Plusieurs réponses montrent que ça coince au même endroit : la façon de se parler, ou ce qui reste après une dispute. Rien d\'irréversible, beaucoup de couples passent par là. Le plus utile, c\'est de choisir le sujet qui pèse le plus et de l\'ouvrir calmement, pas au milieu d\'une dispute.' },
+      { min: 35, max: 49, tag: 'En chantier', title: 'Un couple qui cherche son équilibre', desc: 'Il y a du lien, et il y a des sujets qui grincent. Vos réponses montrent où, et c\'est là qu\'il faut regarder en premier. Pas besoin de tout traiter d\'un coup : prenez-en un ou deux, et occupez-vous-en pour de vrai.' },
       { min: 50, max: 62, tag: 'À consolider', title: 'Une vraie base, des chantiers connus', desc: 'Votre couple tient sur de vraies fondations, avec des zones de friction que vous connaissez probablement déjà. La différence entre les couples qui progressent et les autres : les premiers en parlent avant que ça coince, pas après.' },
       { min: 63, max: 74, tag: 'Solide', title: 'Un couple solide', desc: 'Communication et confiance répondent présent, les frictions restent gérables. Votre marge de progression est dans les sujets que vous évitez encore : c\'est souvent là que dorment les 10 points manquants.' },
       { min: 75, max: 84, tag: 'Très solide', title: 'Un couple très solide', desc: 'Vous avez construit quelque chose de stable et d\'équilibré, qui traverse les tempêtes sans prendre l\'eau. Entretenez ce qui marche, et gardez un œil sur la routine : c\'est la seule vraie menace à ce niveau.' },
@@ -2854,29 +2863,34 @@ var QuizEngine = (function() {
       for (var k = 0; k < opts.length; k++) { if (opts[k].id === optId) return (opts[k].points || 0); }
       return 0;
     }
-    var scoreA = 0, scoreB = 0, maxTotal = 0;
+    // Chaque joueur a son propre total de poids : une reponse neutre (voir
+    // TESTER_BAREME) ne compte ni pour ni contre celui qui l'a donnee, et
+    // l'autre peut tres bien avoir repondu autrement a la meme question.
+    var scoreA = 0, scoreB = 0, maxA = 0, maxB = 0;
     for (var i = 0; i < total; i++) {
       if (bareme) {
         var fiche = bareme[this.questions[i].id];
         var poids = fiche && fiche.w ? fiche.w : 1;
-        maxTotal += poids;
-        scoreA += poids * valeurDe(rangDe(i, this.answers.p1[i]));
-        scoreB += poids * valeurDe(rangDe(i, this.answers.p2[i]));
+        var neutres = (fiche && fiche.n) || [];
+        var rA = rangDe(i, this.answers.p1[i]), rB = rangDe(i, this.answers.p2[i]);
+        if (neutres.indexOf(rA) === -1) { maxA += poids; scoreA += poids * valeurDe(rA); }
+        if (neutres.indexOf(rB) === -1) { maxB += poids; scoreB += poids * valeurDe(rB); }
       } else {
         var opts = this.questions[i].options || [];
         var qMax = 0;
         for (var k = 0; k < opts.length; k++) { if ((opts[k].points || 0) > qMax) qMax = opts[k].points || 0; }
-        maxTotal += qMax;
+        maxA += qMax; maxB += qMax;
         scoreA += ptsFor(i, this.answers.p1[i]);
         scoreB += ptsFor(i, this.answers.p2[i]);
       }
     }
-    if (maxTotal <= 0) maxTotal = 1;
+    if (maxA <= 0) maxA = 1;
+    if (maxB <= 0) maxB = 1;
     // En solo, une seule serie de reponses : la note du couple est celle-la,
     // sans moyenne avec une seconde grille qui n'existe pas.
-    var pctA = Math.round(scoreA / maxTotal * 100);
-    var pctB = Math.round(scoreB / maxTotal * 100);
-    var pctG = this.modeSolo ? pctA : Math.round((scoreA + scoreB) / (2 * maxTotal) * 100);
+    var pctA = Math.round(scoreA / maxA * 100);
+    var pctB = Math.round(scoreB / maxB * 100);
+    var pctG = this.modeSolo ? pctA : Math.round((pctA + pctB) / 2);
 
     var cl = tg('coupleLevel', null);
     if (!cl || !cl.bands || !cl.bands.length) cl = COUPLE_LEVEL_FALLBACK;

@@ -33,7 +33,7 @@
     "title": "Wie ihr euer Paartest-Ergebnis interpretiert",
     "p1": "Nicht jede Frage wiegt gleich schwer. Sich fünf Jahre nicht vorstellen zu können zählt mehr als ein schlecht überstandenes Wochenende allein: Jede Frage trägt ein Gewicht, das dem entspricht, was sie wirklich über Stabilität aussagt, und die Note ist das Verhältnis eurer Antworten zur Summe dieser Gewichte.",
     "quote": "Das Ergebnis ist nur ein Ausgangspunkt. Das Wesentliche ist, was ihr gemeinsam daraus macht.",
-    "p2": "Das Urteil bewegt sich auf acht Stufen, von der leidenden Beziehung bis zur fast perfekten Übereinstimmung: fein genug, dass zwei verschiedene Paare nicht dasselbe Etikett bekommen. Ihr erhaltet außerdem jeder euer individuelles Ergebnis, und der Abstand zwischen beiden ist oft der interessanteste Wert des Tests.",
+    "p2": "Das Urteil bewegt sich auf acht Stufen, von „viel, worüber ihr reden solltet“ bis zur fast perfekten Übereinstimmung: fein genug, dass zwei verschiedene Paare nicht dasselbe Etikett bekommen. Ihr erhaltet außerdem jeder euer individuelles Ergebnis, und der Abstand zwischen beiden ist oft der interessanteste Wert des Tests.",
     "headerScore": "Euer Ergebnis",
     "headerLevel": "Urteil",
     "headerAnalysis": "Was es erzählt",
@@ -54,13 +54,13 @@
     "row5Analysis": "Eine echte Basis, bekannte Reibungen: Sprecht darüber, bevor es klemmt",
     "row6Score": "35-49 %",
     "row6Level": "Im Umbau",
-    "row6Analysis": "Bindung mit Lecks: Wählt zwei Baustellen und bleibt dran",
+    "row6Analysis": "Bindung, und Themen, die knirschen: Nehmt euch ein oder zwei davon vor",
     "row7Score": "20-34 %",
-    "row7Level": "Fragil",
-    "row7Analysis": "Mehrere Säulen zugleich beschädigt: Öffnet das schmerzhafteste Thema, in Ruhe",
+    "row7Level": "Zum Aufarbeiten",
+    "row7Analysis": "Es hakt bei mehreren Antworten an derselben Stelle: Sprecht das schwerste Thema in Ruhe an",
     "row8Score": "0-19 %",
-    "row8Level": "Alarm",
-    "row8Analysis": "Die Beziehung tut gerade mehr weh, als sie guttut: Bleibt damit nicht allein"
+    "row8Level": "Zum Reden",
+    "row8Analysis": "Viel, worüber ihr reden solltet: ein echtes Gespräch an einem guten Tag, und Hilfe, wenn nötig"
   },
   "section4": {
     "title": "Fehler, die ihr beim Paartest vermeiden solltet",

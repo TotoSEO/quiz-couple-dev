@@ -402,23 +402,23 @@
       {
         "min": 0,
         "max": 19,
-        "tag": "Red flag",
-        "title": "A relationship in pain",
-        "desc": "Your answers describe a relationship that currently hurts more than it helps. It's a hard reading, but it has one virtue: it names what you probably already feel. Talk to someone you trust, and if dialogue has broken down, a couples therapist is exactly what that is for."
+        "tag": "Worth talking about",
+        "title": "A lot to talk about",
+        "desc": "On most questions your answers point the same way: trust has taken some hits, and arguments don't close well. A test doesn't know what you're living, so it won't tell you what your relationship is worth. What it can say is that these subjects deserve a real conversation, calmly, on a day when things are fine. And if you can't get there as a couple, talking to someone neutral often helps."
       },
       {
         "min": 20,
         "max": 34,
-        "tag": "Fragile",
-        "title": "Foundations to rebuild",
-        "desc": "Several pillars, communication, trust, repair after conflict, are damaged at the same time. Nothing irreversible, but don't wait for it to fix itself: pick THE subject that hurts most and open it calmly, outside of a fight."
+        "tag": "To rebuild",
+        "title": "A few foundations to rebuild",
+        "desc": "Several answers show that things get stuck in the same place: the way you talk to each other, or what's left after an argument. Nothing irreversible, plenty of couples go through this. The most useful thing is to pick the subject that weighs the most and open it calmly, not in the middle of a fight."
       },
       {
         "min": 35,
         "max": 49,
         "tag": "Under construction",
         "title": "A couple looking for its balance",
-        "desc": "There is a bond, and there are leaks. Your diverging answers show exactly where: those are your priority worksites. The right reflex isn't to fix everything, it's to pick two and truly commit."
+        "desc": "There is a bond, and there are subjects that grind. Your answers show where, and that's where to look first. No need to fix everything at once: take one or two, and really get to work on them."
       },
       {
         "min": 50,

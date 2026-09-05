@@ -33,7 +33,7 @@
     "title": "Come interpretare il risultato del vostro test di coppia",
     "p1": "Non tutte le domande pesano allo stesso modo. Non riuscire a proiettarsi a cinque anni conta più di un fine settimana da solo vissuto male: ogni domanda porta un peso in base a quello che dice davvero della solidità, e il voto è il rapporto fra le vostre risposte e il totale di quei pesi.",
     "quote": "Il punteggio è solo un punto di partenza. L'essenziale è ciò che ne fate insieme.",
-    "p2": "Il verdetto si gioca su otto livelli, dalla coppia che soffre all'intesa quasi perfetta: abbastanza fine perché due coppie diverse non ricevano la stessa etichetta. Ricevete inoltre ciascuno il proprio punteggio individuale, e la distanza tra i due è spesso il dato più interessante del test.",
+    "p2": "Il verdetto si gioca su otto livelli, da «molte cose da dirvi» all'intesa quasi perfetta: abbastanza fine perché due coppie diverse non ricevano la stessa etichetta. Ricevete inoltre ciascuno il proprio punteggio individuale, e la distanza tra i due è spesso il dato più interessante del test.",
     "headerScore": "Il vostro punteggio",
     "headerLevel": "Verdetto",
     "headerAnalysis": "Cosa racconta",
@@ -54,13 +54,13 @@
     "row5Analysis": "Una base vera, attriti noti: parlatene prima che si inceppi",
     "row6Score": "35-49 %",
     "row6Level": "In cantiere",
-    "row6Analysis": "Legame con falle: scegliete due cantieri e teneteli",
+    "row6Analysis": "Legame, e argomenti che stridono: prendetene uno o due e occupatevene",
     "row7Score": "20-34 %",
-    "row7Level": "Fragile",
-    "row7Analysis": "Più pilastri danneggiati insieme: aprite il tema più doloroso, con calma",
+    "row7Level": "Da riprendere",
+    "row7Analysis": "Si inceppa nello stesso punto in diverse risposte: aprite l'argomento che pesa di più, con calma",
     "row8Score": "0-19 %",
-    "row8Level": "Allarme",
-    "row8Analysis": "La relazione ora fa più male che bene: non restate soli con questo"
+    "row8Level": "Da parlarne",
+    "row8Analysis": "Molte cose da dirvi: una vera conversazione in un giorno buono, e un aiuto se serve"
   },
   "section4": {
     "title": "Errori da evitare durante un test di coppia",

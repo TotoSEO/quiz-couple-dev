@@ -404,23 +404,23 @@
       {
         "min": 0,
         "max": 19,
-        "tag": "Alerte",
-        "title": "Un couple en souffrance",
-        "desc": "Vos réponses décrivent une relation qui fait plus mal que du bien en ce moment. Ce constat est dur, mais il a une vertu : il nomme ce que vous ressentez sans doute déjà. Parlez-en à quelqu'un de confiance, et si le dialogue est rompu, un thérapeute de couple est exactement fait pour ça."
+        "tag": "À en parler",
+        "title": "Beaucoup de choses à se dire",
+        "desc": "Sur la plupart des questions, vos réponses vont dans le même sens : la confiance a pris des coups, et les disputes ne se referment pas bien. Un test ne sait pas ce que vous vivez, alors il ne va pas vous dire ce que vaut votre couple. Ce qu'il peut dire, c'est que ces sujets méritent une vraie conversation, au calme, un jour où ça va. Et si vous n'y arrivez pas à deux, en parler avec quelqu'un de neutre aide souvent."
       },
       {
         "min": 20,
         "max": 34,
-        "tag": "Fragile",
-        "title": "Des fondations à reprendre",
-        "desc": "Plusieurs piliers, communication, confiance, réparation après conflit, sont abîmés en même temps. Rien d'irréversible, mais n'attendez pas que ça se répare seul : choisissez LE sujet qui fait le plus mal et ouvrez-le calmement, hors dispute."
+        "tag": "À reprendre",
+        "title": "Quelques fondations à reprendre",
+        "desc": "Plusieurs réponses montrent que ça coince au même endroit : la façon de se parler, ou ce qui reste après une dispute. Rien d'irréversible, beaucoup de couples passent par là. Le plus utile, c'est de choisir le sujet qui pèse le plus et de l'ouvrir calmement, pas au milieu d'une dispute."
       },
       {
         "min": 35,
         "max": 49,
         "tag": "En chantier",
         "title": "Un couple qui cherche son équilibre",
-        "desc": "Il y a du lien, et il y a des fuites. Vos réponses divergentes montrent précisément où : ce sont vos chantiers prioritaires. Le bon réflexe n'est pas de tout traiter, c'est d'en choisir deux et de s'y mettre vraiment."
+        "desc": "Il y a du lien, et il y a des sujets qui grincent. Vos réponses montrent où, et c'est là qu'il faut regarder en premier. Pas besoin de tout traiter d'un coup : prenez-en un ou deux, et occupez-vous-en pour de vrai."
       },
       {
         "min": 50,
