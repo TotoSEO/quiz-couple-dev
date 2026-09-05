@@ -10,7 +10,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -322,7 +322,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/bin-ich-verliebt-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-sono-innamorato/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-suis-je-amoureux/"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -591,6 +591,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/en/in-love-with-my-best-friend-test/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-amour-meilleur-ami/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/in-love-with-my-best-friend-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-enamorado-de-mi-mejor-amigo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/in-besten-freund-verliebt-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-innamorato-del-migliore-amico/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-amour-meilleur-ami/"/>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/en/mental-load-test-couples/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-charge-mentale-couple/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/mental-load-test-couples/"/>
@@ -634,7 +646,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/liebe-oder-freundschaft-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-amore-o-amicizia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-amour-ou-amitie/"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1139,6 +1151,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/domande-da-fare-al-tuo-crush/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/questions-a-poser-a-son-crush/"/>
     <lastmod>2026-09-01T11:34:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/en/blog/manipulator-phrases/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/manipulator-phrases/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/frases-de-manipuladores/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/saetze-von-manipulatoren/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/frasi-dei-manipolatori/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/phrases-preferees-des-manipulateurs/"/>
+    <lastmod>2026-09-05T09:15:00+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
