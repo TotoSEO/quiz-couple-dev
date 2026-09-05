@@ -360,5 +360,12 @@
     "shortTitle": "Test psychische Kontrolle",
     "description": "Zwanzig Fragen zu deiner Freiheit in der Beziehung: Freunde, Geld, Entscheidungen, Stimme. Um Worte für das zu finden, was du erlebst.",
     "metaDescription": "Stehe ich unter psychischer Kontrolle? Zwanzig Fragen zu deinen Freunden, deinem Geld, deinen Entscheidungen und deiner Stimme. Ein kostenloser, vertraulicher Test mit nächsten Schritten und Hilfetelefonen."
+  },
+  "testAmourAmi": {
+    "title": "Liebst du deinen besten Freund oder deine beste Freundin? Online-Test",
+    "shortTitle": "In meine(n) BFF verliebt?",
+    "metaTitle": "Liebst du deinen besten Freund oder deine beste Freundin? Online-Test",
+    "description": "Fünfzehn Fragen, um herauszufinden, ob das, was du für deinen besten Freund oder deine beste Freundin fühlst, noch Freundschaft ist, oder schon etwas anderes.",
+    "metaDescription": "Bin ich in meinen besten Freund oder meine beste Freundin verliebt? Fünfzehn Fragen mit eigenem Gewicht, zwei Reihen je nachdem, ob dein Freund ein Junge oder ein Mädchen ist, und ein sofortiges Ergebnis."
   }
 }

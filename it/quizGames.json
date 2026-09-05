@@ -373,7 +373,8 @@
     "jeuQuiPourrait": "Chi potrebbe?",
     "jeuOuiNon": "Sì o no",
     "testAimeEncore": "Test mi ama ancora",
-    "testEmprise": "Test manipolazione psicologica"
+    "testEmprise": "Test manipolazione psicologica",
+    "testAmourAmi": "Test innamorato del migliore amico"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
@@ -688,5 +689,10 @@
     "introQuestion": "Ti fai la domanda:",
     "introQuote": "« Sono sotto controllo… o sto esagerando? »",
     "disclaimer": "Questo test non è né una diagnosi né un giudizio. Guarda la tua libertà nella coppia, non la personalità del tuo partner. Le tue risposte non vengono salvate."
+  },
+  "amour-ami": {
+    "introQuestion": "Ti fai la domanda:",
+    "introQuote": "« Sono innamorato/a del mio migliore amico o della mia migliore amica… o sto mescolando tutto? »",
+    "disclaimer": "Rispondi su quello che vivi, non su quello che vorresti. Nessuno vede le tue risposte."
   }
 }

@@ -373,7 +373,8 @@
     "jeuQuiPourrait": "¿Quién podría?",
     "jeuOuiNon": "Sí o no",
     "testAimeEncore": "Test me sigue queriendo",
-    "testEmprise": "Test manipulación psicológica"
+    "testEmprise": "Test manipulación psicológica",
+    "testAmourAmi": "Test enamorado de mi mejor amigo"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
@@ -688,5 +689,10 @@
     "introQuestion": "Te haces la pregunta:",
     "introQuote": "« ¿Estoy bajo control… o estoy exagerando? »",
     "disclaimer": "Este test no es ni un diagnóstico ni un juicio. Mira tu libertad en la pareja, no la personalidad de tu pareja. Tus respuestas no se guardan."
+  },
+  "amour-ami": {
+    "introQuestion": "Te haces la pregunta:",
+    "introQuote": "« ¿Estoy enamorado/a de mi mejor amigo/a… o lo estoy mezclando todo? »",
+    "disclaimer": "Responde sobre lo que vives, no sobre lo que te gustaría. Nadie ve tus respuestas."
   }
 }

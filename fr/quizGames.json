@@ -375,7 +375,8 @@
     "jeuQuiPourrait": "Qui pourrait ?",
     "jeuOuiNon": "Oui ou non",
     "testAimeEncore": "Test m'aime-t-il encore",
-    "testEmprise": "Test emprise psychologique"
+    "testEmprise": "Test emprise psychologique",
+    "testAmourAmi": "Test amoureux de mon meilleur ami"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -690,5 +691,10 @@
     "introQuestion": "Vous vous posez la question :",
     "introQuote": "« Est-ce que je suis sous emprise… ou est-ce que je dramatise ? »",
     "disclaimer": "Ce test n'est ni un diagnostic, ni un jugement. Il regarde votre liberté dans le couple, pas la personnalité de votre partenaire. Vos réponses ne sont pas enregistrées."
+  },
+  "amour-ami": {
+    "introQuestion": "Tu te poses la question :",
+    "introQuote": "« Est-ce que je suis amoureux(se) de mon/ma meilleur(e) ami(e)… ou est-ce que je mélange tout ? »",
+    "disclaimer": "Réponds sur ce que tu vis, pas sur ce que tu voudrais. Personne ne voit tes réponses."
   }
 }

@@ -373,7 +373,8 @@
     "jeuQuiPourrait": "Who could?",
     "jeuOuiNon": "Yes or no",
     "testAimeEncore": "Does he or she still love me test",
-    "testEmprise": "Coercive control test"
+    "testEmprise": "Coercive control test",
+    "testAmourAmi": "In love with my best friend test"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -688,5 +689,10 @@
     "introQuestion": "You're asking yourself:",
     "introQuote": "\"Am I being controlled… or am I being dramatic?\"",
     "disclaimer": "This test is neither a diagnosis nor a judgement. It looks at your freedom in the relationship, not at your partner's personality. Your answers aren't stored."
+  },
+  "amour-ami": {
+    "introQuestion": "You're asking yourself:",
+    "introQuote": "\"Am I in love with my best friend… or am I mixing everything up?\"",
+    "disclaimer": "Answer about what you live, not what you would like. Nobody sees your answers."
   }
 }

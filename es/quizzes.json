@@ -360,5 +360,12 @@
     "shortTitle": "Test manipulación psicológica",
     "description": "Veinte preguntas sobre tu libertad en la pareja: amigos, dinero, decisiones, voz. Para poner palabras a lo que vives.",
     "metaDescription": "¿Estoy bajo manipulación psicológica en mi pareja? Veinte preguntas sobre tus amigos, tu dinero, tus decisiones y tu voz. Un test gratuito y confidencial, con pistas y números de ayuda."
+  },
+  "testAmourAmi": {
+    "title": "¿Estás enamorado/a de tu mejor amigo/a? Test online",
+    "shortTitle": "¿Enamorado/a de mi BFF?",
+    "metaTitle": "¿Estás enamorado/a de tu mejor amigo/a? Test online",
+    "description": "Quince preguntas para saber si lo que sientes por tu mejor amigo o amiga sigue siendo amistad, o ya es otra cosa.",
+    "metaDescription": "¿Estoy enamorado/a de mi mejor amigo/a? Quince preguntas que pesan cada una lo suyo, dos series según tu amigo sea un chico o una chica, y un resultado inmediato."
   }
 }

@@ -360,5 +360,12 @@
     "shortTitle": "Test manipolazione psicologica",
     "description": "Venti domande sulla tua libertà nella coppia: amici, soldi, scelte, voce. Per dare un nome a quello che vivi.",
     "metaDescription": "Sono vittima di manipolazione psicologica nella mia coppia? Venti domande sui tuoi amici, i tuoi soldi, le tue scelte e la tua voce. Un test gratuito e confidenziale, con piste e numeri di aiuto."
+  },
+  "testAmourAmi": {
+    "title": "Ami il tuo migliore amico o la tua migliore amica? Test online",
+    "shortTitle": "Innamorato/a del/della BFF?",
+    "metaTitle": "Ami il tuo migliore amico o la tua migliore amica? Test online",
+    "description": "Quindici domande per capire se quello che provi per il tuo migliore amico o la tua migliore amica è ancora amicizia, o già qualcos'altro.",
+    "metaDescription": "Sono innamorato/a del mio migliore amico o della mia migliore amica? Quindici domande che pesano ognuna la sua parte, due serie a seconda che il tuo amico sia un ragazzo o una ragazza, e un risultato immediato."
   }
 }

@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "badge": "15 preguntas, resultado inmediato",
+    "title": "Test: ¿Estoy enamorado/a de mi BFF?",
+    "titleHighlight": "enamorado/a",
+    "description": "Dos series de preguntas, según tu mejor amigo sea un chico o una chica. Cada una pesa lo suyo: haber imaginado lo que viene después cuenta mucho más que una cena en casa de tus padres. Al final, un resultado claro, y qué hacer con él.",
+    "subtitle": "Gratis, sin registro, nadie ve tus respuestas",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "Enamorado/a de tu mejor amigo o amiga: por qué se tarda tanto en verlo",
+    "intro": "Todo el mundo conoce a alguien a quien le ha pasado. Y la mayoría de las veces, esa persona fue la última en darse cuenta.",
+    "p1": "Estar enamorado de tu mejor amiga o de tu mejor amigo es la situación más corriente que existe, y la más difícil de leer. Con alguien que acabas de conocer, las señales saltan a la vista: el nudo en el estómago, el móvil que miras cada dos minutos. Con un amigo de diez años, nada de eso. Las señales se han ido instalando una a una, sin hacer ruido.",
+    "p2": "Por eso se tardan meses en hacerse la pregunta. Y cuando llega, suele llegar desde fuera: alguien os dice que haríais buena pareja, o tu amigo empieza a salir con alguien y descubres que te duele mucho más de lo previsto.",
+    "p3": "Este test sirve justamente para eso: poner palabras a lo que sientes, antes de que la vida te obligue a hacerlo. Se apoya en lo que solo existe en el amor, no en <a href=\"/es/test-amor-o-amistad/\">lo que la amistad y el amor tienen en común</a>. Porque el gusto de estar juntos, la confianza, las risas hasta llorar, todo eso también existe entre amigos, y un test que lo contara te diría que estás enamorado de la mitad de tus contactos.",
+    "quote": "« Uno no se enamora de su mejor amigo. Un día se da cuenta de que ya lo estaba. »"
+  },
+  "section2": {
+    "title": "Amistad o amor: lo que cambia, situación por situación",
+    "intro": "La misma escena, vista por un amigo y por alguien que se está enamorando. Mira de qué lado te reconoces más a menudo.",
+    "headerScore": "La situación",
+    "headerLevel": "Si es amistad",
+    "headerAnalysis": "Si es amor",
+    "row1Score": "Te habla de una cita",
+    "row1Level": "Quieres saberlo todo, das consejos",
+    "row1Analysis": "Cambias de tema, o le encuentras defectos a la persona",
+    "row2Score": "Un abrazo que dura",
+    "row2Level": "Ni te das cuenta",
+    "row2Analysis": "Te das cuenta, y no quieres que se acabe",
+    "row3Score": "Alguien os dice que haríais buena pareja",
+    "row3Level": "Os reís, y se olvida",
+    "row3Analysis": "Tú también te ríes, y lo piensas por la noche",
+    "row4Score": "Imaginas dentro de diez años",
+    "row4Level": "Sois amigos, cada uno con su vida",
+    "row4Analysis": "Estáis juntos, y la imagen no te choca",
+    "row5Score": "La palabra « amigo »",
+    "row5Level": "Te encaja perfectamente",
+    "row5Analysis": "Te parece demasiado pequeña"
+  },
+  "section3": {
+    "title": "Las señales que no engañan",
+    "p1": "No todas las señales valen lo mismo. Que te encante pasar tiempo juntos no demuestra nada: es la definición misma de un mejor amigo. Las señales que cuentan son las que no tienen versión amistosa.",
+    "sub1Title": "El deseo físico",
+    "sub1P1": "No necesariamente las ganas de acostaros, aunque sea la señal más clara. Las ganas de contacto, sin más: buscar su mano, dejar que un abrazo dure, notar cómo huele. Entre amigos, el contacto físico es agradable y se olvida al momento. Aquí, no lo olvidas.",
+    "sub2Title": "Los celos que pinchan",
+    "sub2P1": "Un amigo se alegra cuando su amigo conoce a alguien. Si a ti te pincha, si le encuentras defectos a todas las personas que le gustan, si cambias de tema cuando te lo cuenta, eso no es la amistad hablando.",
+    "sub3Title": "Los demás ya no dan la talla",
+    "sub3P1": "Conoces a alguien que está bien, y sin querer comparas. Y el otro pierde. A menudo. Cuando tus citas terminan con un « no es lo mismo », conviene preguntarse: lo mismo que qué.",
+    "sub4Title": "El « ¿y si...? »",
+    "sub4P1": "Esa pequeña pregunta que pasa mientras le ves reír. Una vez, le pasa a todo el mundo. Si vuelve, si te sorprendes respondiéndola con detalle, ya no te estás haciendo una pregunta, estás esperando."
+  },
+  "section4": {
+    "title": "Cómo funciona este test",
+    "p1": "Quince preguntas, cuatro respuestas cada una. Empiezas diciendo si tu mejor amigo es un chico o una chica, para que las preguntas hablen de la persona correcta, sin un « él o ella » en cada línea.",
+    "p2": "Cada respuesta da un número de puntos propio, y las preguntas no pesan todas igual. Haber imaginado ya hacer el amor con esa persona, o verte viviendo en pareja con ella, da hasta doce puntos: esas ganas no existen en la amistad. Que haya conocido a tus padres da cuatro como máximo, porque un mejor amigo que conoce a los padres es lo normal.",
+    "p3": "Algunas respuestas fuertes garantizan un nivel: si llevas mucho tiempo esperando ese beso, el test no te dirá « es amistad » por diez respuestas tibias en otras partes. La puntuación va de 0 a 129, en cuatro niveles.",
+    "tip": "Responde sobre lo que vives, no sobre lo que te gustaría vivir, ni sobre lo que te parecería razonable. El test no juzga nada, y nadie ve tus respuestas."
+  },
+  "section5": {
+    "title": "Si el resultado dice sí: ¿se lo digo o no?",
+    "intro": "Es la pregunta que todo el mundo se hace justo después. No hay una respuesta buena para todos, pero hay un método.",
+    "pillar1Title": "Mide lo que arriesgas",
+    "pillar1Text": "No la amistad, al contrario de lo que se cree: una amistad sólida sobrevive a un « yo también lo pensé, pero no ». Lo que arriesgas son unas semanas incómodas. Lo que arriesgas callando son años haciéndote la pregunta.",
+    "pillar2Title": "Mira sus señales antes de hablar",
+    "pillar2Text": "¿Te busca con la mirada, te toca más que a los demás, te habla de sus citas con demasiada insistencia? Hay un test hecho justo para eso, que mira <a href=\"/es/test-me-quiere-en-secreto/\">si tu amigo te quiere en secreto</a>.",
+    "pillar3Title": "Dilo con sencillez",
+    "pillar3Text": "Sin grandes declaraciones, sin cartas. Una frase, en persona, en un momento tranquilo: « Tengo que decirte una cosa, y tienes todo el derecho a no sentir lo mismo. » El resto le toca decirlo a él o a ella.",
+    "pillar4Title": "Acepta la respuesta, sea cual sea",
+    "pillar4Text": "Un no no es el fin de la amistad, con una condición: que lo tomes como un no, y no como un « todavía no ». Deja un poco de aire, unas semanas, y retoma donde lo dejasteis. La mayoría de las amistades lo superan muy bien."
+  },
+  "section6": {
+    "title": "Si el resultado dice no: quédate con tu amigo, sin segundas intenciones",
+    "p1": "Un resultado bajo no tiene nada de decepcionante. Lo que tienes con esa persona, una amistad en la que os lo contáis todo, en la que corréis a daros las buenas noticias, es raro, y no vale menos que una historia de amor.",
+    "p2": "Si la pregunta te vino porque alguien os dijo que haríais buena pareja, puedes guardarla. Los demás proyectan a menudo sobre dos amigos cercanos lo que les gustaría ver. Y si te vino porque llevas un tiempo soltero y esa persona es la más cercana que tienes, también es normal: <a href=\"/es/blog/dependencia-emocional-en-la-pareja/\">no es amor, es carencia</a>, y eso no se cura con tu mejor amigo.",
+    "tip": "Si lo que sientes se parece más a <a href=\"/es/test-amor-o-crush/\">una atracción recién nacida por alguien a quien conoces poco</a>, necesitas otro test. Este está hecho para la gente que conoces de memoria."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que nos hacemos",
+    "faq1Q": "¿Se puede estar enamorado de tu mejor amigo sin darte cuenta?",
+    "faq1A": "Sí, y es incluso el caso más habitual. La cercanía de cada día instala las señales una a una, tan despacio que ninguna dispara la alarma. A menudo te das cuenta por un golpe: el amigo que empieza a salir con alguien, o alguien que hace la pregunta en voz alta.",
+    "faq2Q": "¿Cómo distinguir entre querer a tu amigo y estar enamorado?",
+    "faq2A": "Querer a un amigo es que te importe y desear su bien. Estar enamorado añade tres cosas que no tienen versión amistosa: el deseo físico, los celos cuando conoce a alguien, y el hecho de imaginar una vida en pareja. El test solo cuenta esas señales.",
+    "faq3Q": "¿Hay que decírselo?",
+    "faq3A": "Si el resultado es alto y la pregunta te está comiendo, sí, la mayoría de las veces. Una amistad sólida sobrevive a una conversación honesta. Lo que la estropea es fingir durante meses. Mira primero sus señales, elige un momento tranquilo, y dilo con sencillez.",
+    "faq4Q": "¿Y si es mi amigo el que está enamorado de mí?",
+    "faq4A": "Las señales son las mismas, en el otro sentido: te busca con la mirada, te toca más que a los demás, reacciona mal cuando hablas de tus citas, le encuentra defectos a todo el mundo. Si reconoces todo eso, la conversación será seguramente más fácil de lo que crees.",
+    "faq5Q": "¿Funciona el test si mi mejor amigo es de mi mismo sexo?",
+    "faq5A": "Sí. El test solo pregunta si tu amigo es un chico o una chica, para escribir las preguntas con el pronombre correcto. No te pregunta nada sobre ti.",
+    "faq6Q": "¿Puede una amistad convertirse en una historia de amor?",
+    "faq6A": "Sí, y muchas parejas empezaron así. La ventaja es que ya os conocéis, defectos incluidos: no hay fase en la que uno interpreta un papel. El inconveniente es que hay que aceptar perder la seguridad de la palabra « amigo ». Los que dan el paso dicen casi todos lo mismo: deberían haberlo hecho antes."
+  },
+  "jsonLd": {
+    "about": "estar enamorado de tu mejor amigo o de tu mejor amiga"
+  }
+}

@@ -373,7 +373,8 @@
     "jeuQuiPourrait": "Wer könnte?",
     "jeuOuiNon": "Ja oder Nein",
     "testAimeEncore": "Test Liebt er oder sie mich noch",
-    "testEmprise": "Test psychische Kontrolle"
+    "testEmprise": "Test psychische Kontrolle",
+    "testAmourAmi": "Test in besten Freund verliebt"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -688,5 +689,10 @@
     "introQuestion": "Du stellst dir die Frage:",
     "introQuote": "„Stehe ich unter Kontrolle… oder dramatisiere ich?“",
     "disclaimer": "Dieser Test ist weder eine Diagnose noch ein Urteil. Er schaut auf deine Freiheit in der Beziehung, nicht auf die Persönlichkeit deines Partners. Deine Antworten werden nicht gespeichert."
+  },
+  "amour-ami": {
+    "introQuestion": "Du stellst dir die Frage:",
+    "introQuote": "„Bin ich in meinen besten Freund oder meine beste Freundin verliebt… oder bringe ich alles durcheinander?“",
+    "disclaimer": "Antworte auf das, was du erlebst, nicht auf das, was du dir wünschst. Niemand sieht deine Antworten."
   }
 }
