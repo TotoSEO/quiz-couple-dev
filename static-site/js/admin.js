@@ -388,6 +388,7 @@
     jeuJamais: "Je n'ai jamais",
     jeuQuiPourrait: 'Qui pourrait',
     jeuOuiNon: 'Oui ou non',
+    jeuPhrases: 'Phrases à compléter',
     testCrush: 'Amour ou crush',
     testAmourAmi: 'Amoureux de mon meilleur ami',
     quizTentation: 'Tentation',
@@ -455,6 +456,7 @@
     'marrant': 'quizMarrant',
     'most': 'quizMost',
     'oui-non': 'jeuOuiNon',
+    'phrases': 'jeuPhrases',
     'parentalite': 'testParentalite',
     'pervers': 'testPervers',
     'plateau-couple': 'jeuPlateau',
@@ -495,7 +497,8 @@
     jeu: ['jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages', 'jeuPlateau', 'jeuQuiDeNous',
           'jeuDilemmes', 'pourContre', 'quizTuPreferes', 'jeuJamais',
           'action-ou-verite', 'action-ou-verite-coquin', 'gage-couple', 'plateau-couple',
-          'qui-de-nous-deux', 'dilemmes', 'pour-contre', 'tu-preferes', 'jamais'],
+          'qui-de-nous-deux', 'dilemmes', 'pour-contre', 'tu-preferes', 'jamais',
+          'jeuPhrases', 'phrases'],
     quiz: ['zamours', 'amoureux', 'coquin', 'genant', 'knowledge', 'marrant', 'most',
            'vrai-faux', 'ado', 'tentation', 'rencontre']
   };
@@ -529,6 +532,7 @@
     testAstroPrenoms: 'résultat immédiat',
     testDateNaissance: 'résultat immédiat',
     jeuOuiNon: 'jeu sans fin de partie',
+    jeuPhrases: 'jeu sans fin de partie',
     jeuActionVerite: 'jeu sans fin de partie',
     jeuActionVeriteHot: 'jeu sans fin de partie',
     jeuGages: 'jeu sans fin de partie',

@@ -1,0 +1,52 @@
+{
+  "jsonLd": {
+    "name": "Frasi da completare, gioco di coppia"
+  },
+  "hero": {
+    "badge": "Gioco in due",
+    "title": "20 frasi da completare: gioco di coppia",
+    "titleHighlight": "frasi da completare",
+    "description": "Venti frasi lasciate a metà, da finire uno alla volta oppure tutti e due insieme dopo un conto alla rovescia di tre secondi."
+  },
+  "section1": {
+    "title": "Cos'è il gioco delle frasi da completare",
+    "p1": "Le frasi da completare sono un <a href=\"/it/giochi-di-coppia/\">gioco che si può fare in due</a>, sul divano o in macchina. Compare una frase, si ferma a metà, e ognuno la finisce come gli viene. Per esempio: «Il nostro ricordo più bello insieme è…»",
+    "p2": "Se uno risponde «il nostro weekend a Lisbona» e l'altro risponde «il giorno in cui abbiamo preso il gatto», avete già due storie da raccontare. Non vince nessuno, non c'è niente da indovinare: si completa, si ascolta quello che ha detto l'altro, e la maggior parte delle volte si finisce a parlare!",
+    "p3": "Funziona tutto nel browser, senza registrazione e senza installare niente. Basta un telefono appoggiato tra voi due."
+  },
+  "section2": {
+    "title": "I due modi di giocare",
+    "intro": "Ecco come funziona il nostro motore di gioco qui sopra. Prima di cominciare vi chiede come volete giocare. Le venti frasi sono le stesse nei due casi, quello che cambia è il modo di rispondere.",
+    "modeLectureEmoji": "💬",
+    "modeLectureTitre": "Ognuno completa, poi si passa",
+    "modeLectureTexte": "Compare la frase, la completate a voce alta tutti e due, e ci restate sopra quanto volete. Quando avete finito di parlarne, toccate «Avanti». È la versione tranquilla, senza timer e senza punti.",
+    "modeChronoEmoji": "⏱️",
+    "modeChronoTitre": "Rispondete nello stesso momento",
+    "modeChronoTexte": "Toccate «Avvia il conto alla rovescia» e parte: 3, 2, 1, GO. Al «GO» dite la vostra risposta tutti e due insieme, senza pensarci. Poi il gioco vi chiede se era la stessa, e conta le vostre risposte in comune fino alla fine.",
+    "apres": "La frase resta sullo schermo per tutto il turno, conto alla rovescia compreso: nessuno deve tenerla a mente. E il pulsante «Avanti» c'è sempre, anche accanto al timer. Se una frase non vi dice niente, passate alla successiva."
+  },
+  "section3": {
+    "title": "Le 20 frasi del gioco",
+    "intro": "Ecco le venti frasi così come sono scritte. Nel gioco vengono mescolate a ogni partita, quindi non ve le ritroverete in quest'ordine.",
+    "apres": "Vedrete, alcune finiscono in una risata e altre in una chiacchierata di un quarto d'ora, e non si sa mai prima quale farà cosa. Se questo tipo di serata vi piace, ci sono anche <a href=\"/it/non-ho-mai-gioco-coppia/\">affermazioni in cui ognuno confessa se l'ha già fatto oppure no</a>."
+  },
+  "section4": {
+    "title": "Quando tirare fuori questo gioco",
+    "p1": "Il momento migliore è quando non succede niente di speciale: una domenica sera, un viaggio in macchina, una sala d'attesa, o quelle cene in cui avete già raccontato tutta la giornata e <a href=\"/it/blog/domande-per-conoscersi-meglio/\">non sapete più bene di cosa parlare</a>.",
+    "p2": "Funziona anche a distanza. Uno dei due apre la pagina e legge la frase a voce alta in videochiamata. Per la modalità con il conto alla rovescia mettete il vivavoce, dovete sentirlo tutti e due.",
+    "p3": "Un ultimo consiglio: dite la prima risposta che vi viene. Quella che si cerca per dieci secondi è quasi sempre meno divertente di quella che esce da sola. E se il conto alla rovescia vi piace, la stessa idea va più a fondo con <a href=\"/it/quiz-chi-conosce-meglio-partner/\">domande in cui uno risponde al posto dell'altro</a>."
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "q1": "In quanti si può giocare?",
+    "a1": "In due, è fatto per questo. Niente vieta di giocare in quattro a cena: ogni coppia completa la frase a turno, e vedrete subito che nessuno risponde la stessa cosa.",
+    "q2": "Quanto dura una partita?",
+    "a2": "Una decina di minuti per le venti frasi se andate avanti spediti. Molto di più se vi mettete a raccontare, che è piuttosto un buon segno. Con il conto alla rovescia calcolate un po' di più: tre secondi a ogni frase, più il tempo di dire se avete risposto uguale.",
+    "q3": "Si può saltare una frase?",
+    "a3": "Sì. Il pulsante «Avanti» è sempre sullo schermo, anche durante il conto alla rovescia. Una frase che non vi dice niente la saltate, e non cambia nulla per il resto della partita.",
+    "q4": "Le frasi tornano nello stesso ordine?",
+    "a4": "No, vengono mescolate a ogni partita. Non le ritroverete nell'ordine della lista qui sopra. In compenso le venti ci sono sempre tutte.",
+    "q5": "Funziona a distanza?",
+    "a5": "Sì, benissimo. Uno dei due apre il gioco e legge la frase a voce alta in videochiamata. Per il conto alla rovescia basta il vivavoce: lo sentite tutti e due e rispondete nello stesso momento."
+  }
+}

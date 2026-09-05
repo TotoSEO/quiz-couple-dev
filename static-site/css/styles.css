@@ -10948,3 +10948,86 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
      moins sur cette largeur, sinon le zoom revient. */
   .input, .textarea, .cf-champ, .cf-textarea, .afl-select { font-size: 16px; }
 }
+
+/* ── Phrases à compléter ────────────────────────────────────────────────
+   La carte de la phrase ne bouge pas de tout le tour : le décompte et les
+   boutons vivent dans la zone en dessous, qui est la seule à changer. */
+.phr-carte {
+  max-width: 34rem; margin: 0 auto 1.25rem; padding: 2.25rem 1.5rem;
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid hsl(var(--primary) / 0.25);
+  background: linear-gradient(160deg, hsl(var(--primary) / 0.07), hsl(var(--secondary) / 0.07));
+  text-align: center;
+}
+.phr-enonce {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: clamp(1.25rem, 4vw, 1.6rem); font-weight: 700; line-height: 1.35;
+  color: hsl(var(--foreground)); margin: 0;
+}
+.phr-zone { max-width: 34rem; margin: 0 auto; }
+.phr-actions { display: flex; flex-direction: column; gap: 0.75rem; }
+.phr-actions .btn { width: 100%; }
+/* Le « suivant » du mode chrono garde sa place sous l'étape en cours, quelle
+   qu'elle soit : le décompte et la question qui suit s'affichent au-dessus. */
+.phr-actions--pied { margin-top: 0.875rem; }
+@media (min-width: 640px) {
+  .phr-actions .btn { width: auto; min-width: 17rem; margin-inline: auto; }
+}
+
+.phr-chrono { text-align: center; padding: 0.5rem 0 0.25rem; }
+.phr-chrono-nombre {
+  display: flex; align-items: center; justify-content: center;
+  width: 5.5rem; height: 5.5rem; margin: 0 auto 0.75rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.16), hsl(var(--secondary) / 0.16));
+  border: 2px solid hsl(var(--primary) / 0.35);
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 2.5rem; font-weight: 800; line-height: 1;
+  color: hsl(var(--primary));
+}
+/* Le « GO » sort du gabarit des chiffres : il est plus court, plus large et
+   plus clair, pour qu'on voie le moment sans lire le mot. */
+.phr-chrono-nombre--go {
+  width: auto; min-width: 8rem; height: 4.5rem; padding: 0 1.5rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  border-color: transparent; color: #fff; font-size: 2rem; letter-spacing: 0.04em;
+}
+.phr-chrono-bat { animation: phrBat 320ms ease both; }
+@keyframes phrBat {
+  from { transform: scale(0.72); opacity: 0; }
+  60%  { transform: scale(1.06); opacity: 1; }
+  to   { transform: scale(1); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .phr-chrono-bat { animation: none; } }
+.phr-chrono-aide { margin: 0; color: hsl(var(--muted-foreground)); font-size: 0.95rem; }
+
+.phr-verdict-titre {
+  text-align: center; font-weight: 700; margin: 0 0 0.875rem;
+  font-size: 1.05rem; color: hsl(var(--foreground));
+}
+.phr-choix { display: grid; grid-template-columns: 1fr 1fr; gap: 0.875rem; }
+.phr-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 0.375rem;
+  padding: 1.25rem 0.75rem; cursor: pointer;
+  border-radius: var(--radius); border: 2px solid hsl(var(--border));
+  background: hsl(var(--card)); color: hsl(var(--foreground));
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .phr-btn:hover { transform: translateY(-2px); }
+  .phr-btn--pareil:hover { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.10); }
+  .phr-btn--different:hover { border-color: hsl(var(--secondary)); background: hsl(var(--secondary) / 0.10); }
+}
+.phr-btn--pareil.phr-btn--pris { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.10); }
+.phr-btn--different.phr-btn--pris { border-color: hsl(var(--secondary)); background: hsl(var(--secondary) / 0.10); }
+.phr-btn-emoji { font-size: 1.75rem; line-height: 1; }
+.phr-btn-texte { font-weight: 700; font-size: 1rem; }
+.phr-choix--verrouille .phr-btn { pointer-events: none; }
+
+.phr-fin-verdict {
+  max-width: 34rem; margin: 0 auto 1.5rem; padding: 1rem 1.25rem;
+  border-radius: var(--radius); background: hsl(var(--muted) / 0.5);
+  color: hsl(var(--foreground)); line-height: 1.6;
+}
+.phr-changer { display: block; margin: 0.25rem auto 0; }

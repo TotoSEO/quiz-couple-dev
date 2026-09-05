@@ -1,14 +1,14 @@
 {
   "hero": {
-    "badge": "11 jeux • Gratuits • Sans inscription",
+    "badge": "12 jeux • Gratuits • Sans inscription",
     "title": "Nos jeux à faire en couple, prêts en un clic",
     "titleHighlight": "à faire en couple",
-    "description": "Onze jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
+    "description": "Douze jeux qui se lancent sur un seul téléphone posé entre vous deux, sans compte et sans rien installer."
   },
   "stats": {
-    "jeux": "11",
+    "jeux": "12",
     "jeuxLabel": "jeux à deux",
-    "cartes": "390",
+    "cartes": "410",
     "cartesLabel": "cartes, gages et dilemmes",
     "compte": "0",
     "compteLabel": "compte à créer"
@@ -74,13 +74,18 @@
     "ouiNonTagline": "Des situations à trancher, et les votes de tous les autres",
     "ouiNonContenu": "120 situations de vie à deux, avec les votes de tous les visiteurs après chaque réponse",
     "ouiNonDuree": "2 à 20 min",
-    "ouiNonJoueurs": "2 joueurs"
+    "ouiNonJoueurs": "2 joueurs",
+    "phrasesNom": "Phrases à compléter",
+    "phrasesTagline": "Des phrases laissées en suspens, à finir chacun sa version",
+    "phrasesContenu": "20 phrases à compléter à voix haute, tranquillement ou tous les deux en même temps après un décompte",
+    "phrasesDuree": "10 à 15 min",
+    "phrasesJoueurs": "2 joueurs"
   },
   "section1": {
     "title": "Ce qu'un jeu à deux change à une soirée",
     "p1": "Un <strong class=\"text-foreground\">jeu de couple</strong> n'a l'air de rien. Et pourtant il règle un problème très concret : à deux, on finit toujours par tourner autour des mêmes sujets. La journée, le boulot, ce qu'on mange ce soir… Un jeu impose un cadre, et ce cadre donne la permission de poser des questions qu'on ne poserait jamais de but en blanc.",
     "p2": "C'est aussi pour ça qu'un jeu marche mieux qu'un film quand vous voulez vraiment vous retrouver. Devant un écran, vous êtes deux personnes côte à côte qui regardent ailleurs. Autour d'un jeu, vous êtes deux personnes qui se regardent. La différence se sent au bout de dix minutes.",
-    "p3": "Les onze jeux de cette page se jouent en ligne, gratuitement, sur un seul téléphone. Rien à créer, rien à installer, rien à préparer."
+    "p3": "Les douze jeux de cette page se jouent en ligne, gratuitement, sur un seul téléphone. Rien à créer, rien à installer, rien à préparer."
   },
   "section2": {
     "title": "Quel jeu choisir selon le moment",
@@ -115,7 +120,7 @@
     "conseil3Titre": "Le droit de passer son tour",
     "conseil3Texte": "Un jeu à deux ne fonctionne que si personne ne se sent piégé. Convenez dès le départ que chacun peut refuser une carte sans se justifier : les deux jeux de cartes prévoient un gage exactement pour ça.",
     "conseil4Titre": "Commencer plus doux que prévu",
-    "conseil4Texte": "L'erreur classique, c'est d'ouvrir sur le jeu le plus osé. Commencez léger : le reste vient tout seul une fois que le rire est passé."
+    "conseil4Texte": "L'erreur classique, c'est d'ouvrir sur le jeu le plus osé. Commencez par quelque chose qui ne demande rien à personne, comme <a href=\"/phrases-a-completer-couple/\">une phrase à finir à voix haute</a> : le reste vient tout seul une fois que le rire est passé."
   },
   "faq": {
     "title": "Questions fréquentes",

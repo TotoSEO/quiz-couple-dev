@@ -1,14 +1,14 @@
 {
   "hero": {
-    "badge": "11 juegos • Gratis • Sin registro",
+    "badge": "12 juegos • Gratis • Sin registro",
     "title": "Nuestros juegos para jugar en pareja, listos en un toque",
     "titleHighlight": "para jugar en pareja",
-    "description": "Once juegos que arrancan en un solo móvil entre los dos, sin cuenta y sin instalar nada."
+    "description": "Doce juegos que arrancan en un solo móvil entre los dos, sin cuenta y sin instalar nada."
   },
   "stats": {
-    "jeux": "11",
+    "jeux": "12",
     "jeuxLabel": "juegos para dos",
-    "cartes": "390",
+    "cartes": "410",
     "cartesLabel": "cartas, prendas y dilemas",
     "compte": "0",
     "compteLabel": "cuentas que crear"
@@ -74,13 +74,18 @@
     "ouiNonTagline": "Situaciones que decidir, y los votos de todos los demás",
     "ouiNonContenu": "120 situaciones de vida en pareja, con los votos de todos los visitantes tras cada respuesta",
     "ouiNonDuree": "2 a 20 min",
-    "ouiNonJoueurs": "2 jugadores"
+    "ouiNonJoueurs": "2 jugadores",
+    "phrasesNom": "Frases para completar",
+    "phrasesTagline": "Frases a medias, cada uno con su final",
+    "phrasesContenu": "20 frases para completar en voz alta, con calma o los dos a la vez tras una cuenta atrás",
+    "phrasesDuree": "10 a 15 min",
+    "phrasesJoueurs": "2 jugadores"
   },
   "section1": {
     "title": "Lo que un juego en pareja cambia en una noche",
     "p1": "Un <strong class=\"text-foreground\">juego de pareja</strong> no parece gran cosa. Y sin embargo resuelve un problema muy concreto: entre dos siempre se acaba dando vueltas a los mismos temas. El día, el trabajo, qué se cena… Un juego impone un marco, y ese marco da permiso para hacer preguntas que nunca se harían de golpe.",
     "p2": "Por eso también un juego funciona mejor que una película cuando de verdad queréis reencontraros. Delante de una pantalla sois dos personas una al lado de la otra mirando a otro sitio. Alrededor de un juego sois dos personas que se miran. La diferencia se nota a los diez minutos.",
-    "p3": "Los once juegos de esta página se juegan online, gratis, en un solo móvil. Nada que crear, nada que instalar, nada que preparar."
+    "p3": "Los doce juegos de esta página se juegan online, gratis, en un solo móvil. Nada que crear, nada que instalar, nada que preparar."
   },
   "section2": {
     "title": "Qué juego elegir según el momento",
@@ -115,7 +120,7 @@
     "conseil3Titre": "El derecho a pasar",
     "conseil3Texte": "Un juego entre dos solo funciona si nadie se siente atrapado. Acordad desde el principio que cualquiera puede rechazar una carta sin justificarse: los dos juegos de cartas tienen una prenda precisamente para eso.",
     "conseil4Titre": "Empezar más suave de lo previsto",
-    "conseil4Texte": "El error clásico es empezar por el juego más atrevido. Empezad suave: lo demás llega solo una vez que aparecen las risas."
+    "conseil4Texte": "El error clásico es empezar por el juego más atrevido. Empezad por algo que no le pide nada a nadie, como <a href=\"/es/frases-para-completar-pareja/\">una frase que hay que terminar en voz alta</a>: lo demás llega solo una vez que aparecen las risas."
   },
   "faq": {
     "title": "Preguntas frecuentes",

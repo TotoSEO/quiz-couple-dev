@@ -84,6 +84,7 @@
     { routeKey: 'jeuJamais', key: 'jeuJamais', icon: '🙊', img: 'quiz-most' },
     { routeKey: 'jeuQuiPourrait', key: 'jeuQuiPourrait', icon: '🏆', img: 'quiz-most' },
     { routeKey: 'jeuOuiNon', key: 'jeuOuiNon', icon: '✅', img: 'quiz-couple-sain' },
+    { routeKey: 'jeuPhrases', key: 'jeuPhrases', icon: '💬', img: 'quiz-most' },
   ];
 
   // Filter out tests/quizzes not available in current language
@@ -444,7 +445,7 @@
              const jTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : jTitle;
-             const accents = { quizTuPreferes: '270 45% 58%', jeuActionVerite: '340 65% 62%', jeuActionVeriteHot: '12 78% 56%', jeuGages: '190 60% 45%', jeuPlateau: '160 50% 42%', jeuQuiDeNous: '210 60% 52%', jeuDilemmes: '38 85% 52%', pourContre: '338 72% 58%', jeuJamais: '288 55% 52%', jeuQuiPourrait: '152 55% 40%', jeuOuiNon: '0 62% 52%' }; %>
+             const accents = { quizTuPreferes: '270 45% 58%', jeuActionVerite: '340 65% 62%', jeuActionVeriteHot: '12 78% 56%', jeuGages: '190 60% 45%', jeuPlateau: '160 50% 42%', jeuQuiDeNous: '210 60% 52%', jeuDilemmes: '38 85% 52%', pourContre: '338 72% 58%', jeuJamais: '288 55% 52%', jeuQuiPourrait: '152 55% 40%', jeuOuiNon: '0 62% 52%', jeuPhrases: '256 50% 56%' }; %>
           <a class="jeu-card quiz-slide" href="<%= getLocalizedUrl(item.routeKey, lang) %>" style="--jeu-accent: <%= accents[item.routeKey] || '340 65% 62%' %>">
             <span class="jeu-card-visuel">
               <img src="<%= fImg %>" alt="<%= escapeHtml(fAlt) %>" width="600" height="315" loading="lazy" decoding="async">

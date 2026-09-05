@@ -1,0 +1,52 @@
+{
+  "jsonLd": {
+    "name": "Sätze vervollständigen, Spiel für Paare"
+  },
+  "hero": {
+    "badge": "Spiel zu zweit",
+    "title": "20 Sätze zum Vervollständigen: Paarspiel",
+    "titleHighlight": "Sätze zum Vervollständigen",
+    "description": "Zwanzig angefangene Sätze, die ihr nacheinander zu Ende bringt, oder beide gleichzeitig nach einem Countdown von drei Sekunden."
+  },
+  "section1": {
+    "title": "Was das Spiel mit den angefangenen Sätzen ist",
+    "p1": "Sätze vervollständigen ist ein <a href=\"/de/paarspiele/\">Spiel, das man zu zweit machen kann</a>, auf dem Sofa oder im Auto. Ein Satz erscheint, er hört mittendrin auf, und jeder bringt ihn so zu Ende, wie es ihm einfällt. Zum Beispiel: „Unsere schönste gemeinsame Erinnerung ist…“",
+    "p2": "Wenn der eine „unser Wochenende in Lissabon“ sagt und der andere „der Tag, an dem wir die Katze geholt haben“, habt ihr schon zwei Geschichten zu erzählen. Niemand gewinnt, es gibt nichts zu erraten: ihr ergänzt, ihr hört, was der andere gesagt hat, und meistens wird ein Gespräch daraus!",
+    "p3": "Alles läuft im Browser, ohne Anmeldung und ohne Installation. Ein Handy zwischen euch beiden reicht."
+  },
+  "section2": {
+    "title": "Die zwei Arten zu spielen",
+    "intro": "So funktioniert unser Spielmodul hier oben. Bevor es losgeht, fragt es, wie ihr spielen wollt. Die zwanzig Sätze sind in beiden Fällen dieselben, anders ist nur die Art zu antworten.",
+    "modeLectureEmoji": "💬",
+    "modeLectureTitre": "Jeder ergänzt, dann geht es weiter",
+    "modeLectureTexte": "Der Satz erscheint, ihr ergänzt ihn beide laut, und ihr bleibt so lange dabei, wie ihr wollt. Wenn ihr genug darüber geredet habt, tippt ihr auf „Weiter“. Das ist die ruhige Variante, ohne Countdown und ohne Punkte.",
+    "modeChronoEmoji": "⏱️",
+    "modeChronoTitre": "Ihr antwortet gleichzeitig",
+    "modeChronoTexte": "Ihr tippt auf „Countdown starten“, und er läuft: 3, 2, 1, GO. Beim „GO“ sagt ihr beide eure Antwort im selben Moment, ohne nachzudenken. Danach fragt das Spiel, ob es dasselbe war, und zählt eure gemeinsamen Antworten bis zum Schluss.",
+    "apres": "Der Satz bleibt die ganze Runde stehen, auch während des Countdowns: niemand muss ihn im Kopf behalten. Und der Knopf „Weiter“ ist immer da, sogar neben dem Countdown. Wenn euch ein Satz nichts sagt, geht ihr zum nächsten."
+  },
+  "section3": {
+    "title": "Die 20 Sätze im Spiel",
+    "intro": "Hier sind die zwanzig Sätze so, wie sie geschrieben sind. Im Spiel werden sie jede Runde gemischt, ihr bekommt sie also nicht in dieser Reihenfolge.",
+    "apres": "Ihr werdet sehen, bei manchen lacht ihr los und bei anderen redet ihr eine Viertelstunde, und vorher weiß man nie, welcher Satz was auslöst. Wenn euch so ein Abend liegt, gibt es auch <a href=\"/de/ich-hab-noch-nie-paar-spiel/\">Aussagen, bei denen jeder zugibt, ob er es schon gemacht hat oder nicht</a>."
+  },
+  "section4": {
+    "title": "Wann ihr das Spiel rausholt",
+    "p1": "Der beste Moment ist der, in dem gerade nichts los ist: ein Sonntagabend, eine Autofahrt, ein Wartezimmer, oder diese Abendessen, bei denen der Tag längst durchgesprochen ist und <a href=\"/de/blog/fragen-um-sich-besser-kennenzulernen/\">euch nichts mehr einfällt, worüber ihr reden könntet</a>.",
+    "p2": "Auf Distanz geht es auch. Einer von euch öffnet die Seite und liest den Satz im Videoanruf laut vor. Für den Countdown-Modus stellt den Lautsprecher an, ihr müsst ihn beide hören.",
+    "p3": "Noch ein Tipp: sagt die erste Antwort, die euch einfällt. Die, nach der man zehn Sekunden sucht, ist fast immer weniger lustig als die, die von allein kommt. Und wenn euch der Countdown gefällt, geht dieselbe Idee weiter mit <a href=\"/de/wer-kennt-partner-besser-quiz/\">Fragen, bei denen einer für den anderen antwortet</a>."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Zu wie vielt kann man spielen?",
+    "a1": "Zu zweit, dafür ist es gemacht. Zu viert an einem Abendessen geht aber genauso: jedes Paar ergänzt den Satz der Reihe nach, und ihr merkt sofort, dass niemand dasselbe antwortet.",
+    "q2": "Wie lange dauert eine Runde?",
+    "a2": "Etwa zehn Minuten für die zwanzig Sätze, wenn ihr durchspielt. Deutlich länger, wenn ihr anfangt zu erzählen, und das ist eher ein gutes Zeichen. Im Countdown-Modus rechnet mit etwas mehr: drei Sekunden Countdown pro Satz, plus die Zeit zu sagen, ob es dasselbe war.",
+    "q3": "Kann man einen Satz überspringen?",
+    "a3": "Ja. Der Knopf „Weiter“ ist die ganze Zeit da, auch während des Countdowns. Einen Satz, der euch nichts sagt, überspringt ihr, und für den Rest der Runde ändert das nichts.",
+    "q4": "Kommen die Sätze in derselben Reihenfolge wieder?",
+    "a4": "Nein, sie werden jede Runde gemischt. In der Reihenfolge der Liste oben findet ihr sie nicht wieder. Alle zwanzig bekommt ihr aber jedes Mal.",
+    "q5": "Funktioniert das auch auf Distanz?",
+    "a5": "Ja, sehr gut. Einer öffnet das Spiel und liest den Satz im Videoanruf laut vor. Für den Countdown reicht der Lautsprecher: ihr hört ihn beide und antwortet im selben Moment."
+  }
+}
