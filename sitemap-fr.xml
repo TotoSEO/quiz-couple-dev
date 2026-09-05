@@ -370,7 +370,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/paarspiele/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/giochi-di-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeux-de-couple/"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -735,6 +735,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/gioco-si-o-no-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeu-oui-non-couple/"/>
     <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/phrases-a-completer-couple/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/phrases-a-completer-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/finish-the-sentence-couples-game/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/frases-para-completar-pareja/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/satz-vervollstaendigen-paarspiel/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/frasi-da-completare-coppia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/phrases-a-completer-couple/"/>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

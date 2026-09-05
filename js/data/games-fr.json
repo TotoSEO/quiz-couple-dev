@@ -376,7 +376,8 @@
     "jeuOuiNon": "Oui ou non",
     "testAimeEncore": "Test m'aime-t-il encore",
     "testEmprise": "Test emprise psychologique",
-    "testAmourAmi": "Test amoureux de mon meilleur ami"
+    "testAmourAmi": "Test amoureux de mon meilleur ami",
+    "jeuPhrases": "Phrases à compléter"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
