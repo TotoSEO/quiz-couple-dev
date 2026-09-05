@@ -33,7 +33,7 @@
     "title": "Cómo interpretar el resultado de vuestro test de pareja",
     "p1": "No todas las preguntas pesan igual. No poder proyectarse a cinco años cuenta más que un fin de semana a solas mal llevado: cada pregunta lleva un peso según lo que dice realmente de la solidez, y la nota es lo que vuestras respuestas suman frente al total de esos pesos.",
     "quote": "La puntuación es solo un punto de partida. Lo esencial es lo que hacéis con ella juntos.",
-    "p2": "El veredicto se juega en ocho niveles, de la pareja que sufre a la sintonía casi perfecta: lo bastante fino para que dos parejas distintas no reciban la misma etiqueta. Además, cada uno recibe su puntuación individual, y la distancia entre ambas suele ser el dato más interesante del test.",
+    "p2": "El veredicto se juega en ocho niveles, de «muchas cosas que deciros» a la sintonía casi perfecta: lo bastante fino para que dos parejas distintas no reciban la misma etiqueta. Además, cada uno recibe su puntuación individual, y la distancia entre ambas suele ser el dato más interesante del test.",
     "headerScore": "Vuestra puntuación",
     "headerLevel": "Veredicto",
     "headerAnalysis": "Qué cuenta",
@@ -54,13 +54,13 @@
     "row5Analysis": "Una base real, fricciones conocidas: habladlo antes de que se atasque",
     "row6Score": "35-49 %",
     "row6Level": "En obras",
-    "row6Analysis": "Vínculo con fugas: elegid dos frentes y mantenedlos",
+    "row6Analysis": "Vínculo, y temas que chirrían: coged uno o dos y ocupaos de ellos",
     "row7Score": "20-34 %",
-    "row7Level": "Frágil",
-    "row7Analysis": "Varios pilares dañados a la vez: abrid el tema más doloroso, con calma",
+    "row7Level": "Por retomar",
+    "row7Analysis": "Se atasca en el mismo sitio en varias respuestas: abrid el tema que más pesa, con calma",
     "row8Score": "0-19 %",
-    "row8Level": "Alerta",
-    "row8Analysis": "La relación ahora hace más daño que bien: no os quedéis solos con esto"
+    "row8Level": "Para hablarlo",
+    "row8Analysis": "Muchas cosas que deciros: una conversación de verdad un buen día, y ayuda si hace falta"
   },
   "section4": {
     "title": "Errores a evitar al hacer un test de pareja",

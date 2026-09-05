@@ -33,7 +33,7 @@
     "title": "How to interpret your couple test results",
     "p1": "Not every question carries the same weight. Being unable to picture five years from now counts for more than one badly handled weekend alone: each question carries a weight matching what it really says about solidity, and your score is what your answers earn against the total of those weights.",
     "quote": "The score is just a starting point. What truly matters is what you do with it together.",
-    "p2": "The verdict runs on eight levels, from a relationship in pain to an almost perfect match: fine enough that two different couples don't get the same label. You each also get your individual score, and the gap between the two is often the most interesting data point of the test.",
+    "p2": "The verdict runs on eight levels, from “a lot to talk about” to an almost perfect match: fine enough that two different couples don't get the same label. You each also get your individual score, and the gap between the two is often the most interesting data point of the test.",
     "headerScore": "Your score",
     "headerLevel": "Verdict",
     "headerAnalysis": "What it says",
@@ -54,13 +54,13 @@
     "row5Analysis": "A real base, known frictions: talk before it jams",
     "row6Score": "35-49%",
     "row6Level": "Under construction",
-    "row6Analysis": "A bond with leaks: pick two worksites and hold them",
+    "row6Analysis": "A bond, and subjects that grind: take one or two and get to work",
     "row7Score": "20-34%",
-    "row7Level": "Fragile",
-    "row7Analysis": "Several pillars damaged at once: open the most painful subject, calmly",
+    "row7Level": "To rebuild",
+    "row7Analysis": "Things get stuck in the same place across several answers: open the heaviest subject, calmly",
     "row8Score": "0-19%",
-    "row8Level": "Red flag",
-    "row8Analysis": "The relationship currently hurts more than it helps: don't stay alone with this"
+    "row8Level": "Worth talking about",
+    "row8Analysis": "A lot to talk about: a real conversation on a good day, and some help if needed"
   },
   "section4": {
     "title": "Mistakes to avoid when taking a couple test",
