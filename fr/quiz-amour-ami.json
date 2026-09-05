@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "badge": "15 questions, résultat immédiat",
+    "title": "Test : Suis-je amoureux(se) de mon/ma BFF",
+    "titleHighlight": "amoureux(se)",
+    "description": "Deux séries de questions, selon que ton ami est un garçon ou une fille. Chacune pèse son poids : avoir imaginé la suite compte bien plus qu'un dîner chez tes parents. À la fin, un résultat clair, et quoi en faire.",
+    "subtitle": "Gratuit, sans inscription, personne ne voit tes réponses",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Amoureux(se) de son/sa meilleur(e) ami(e) : pourquoi on met si longtemps à le voir",
+    "intro": "Tout le monde connaît quelqu'un à qui c'est arrivé. Et la plupart du temps, la personne a été la dernière à s'en rendre compte.",
+    "p1": "Être amoureux de sa meilleure amie ou de son meilleur ami, c'est la situation la plus banale qui soit, et la plus difficile à lire. Avec quelqu'un qu'on vient de rencontrer, les signes sautent aux yeux : le ventre qui se noue, le téléphone qu'on regarde toutes les deux minutes. Avec un ami de dix ans, rien de tout ça. Les signes se sont installés un par un, sans jamais faire de bruit.",
+    "p2": "Du coup, on met des mois à se poser la question. Et quand elle arrive, elle arrive souvent par l'extérieur : quelqu'un vous dit que vous iriez bien ensemble, ou ton ami se met en couple et tu découvres que ça te fait bien plus mal que prévu.",
+    "p3": "Ce test sert justement à ça : mettre des mots sur ce que tu ressens, avant que la vie te force à le faire. Il s'appuie sur ce qui n'existe que dans l'amour, pas sur <a href=\"/test-amour-ou-amitie/\">ce que l'amitié et l'amour partagent</a>. Parce que le plaisir d'être ensemble, la confiance, les fous rires, tout ça existe aussi entre amis, et un test qui les compterait te dirait que tu es amoureux de la moitié de tes contacts.",
+    "quote": "« On ne tombe pas amoureux de son meilleur ami. On se rend compte, un jour, qu'on l'était déjà. »"
+  },
+  "section2": {
+    "title": "Amitié ou amour : ce qui change, situation par situation",
+    "intro": "La même scène, vue par un ami et par quelqu'un qui est en train de tomber amoureux. Regarde de quel côté tu te reconnais le plus souvent.",
+    "headerScore": "La situation",
+    "headerLevel": "Si c'est de l'amitié",
+    "headerAnalysis": "Si c'est de l'amour",
+    "row1Score": "Il ou elle te parle d'un rencard",
+    "row1Level": "Tu veux tout savoir, tu donnes des conseils",
+    "row1Analysis": "Tu changes de sujet, ou tu trouves des défauts à la personne",
+    "row2Score": "Un câlin qui dure",
+    "row2Level": "Tu ne le remarques même pas",
+    "row2Analysis": "Tu le remarques, et tu ne veux pas qu'il s'arrête",
+    "row3Score": "Quelqu'un vous dit que vous iriez bien ensemble",
+    "row3Level": "Vous riez, et c'est oublié",
+    "row3Analysis": "Tu ris aussi, et tu y repenses le soir",
+    "row4Score": "Tu imagines dans dix ans",
+    "row4Level": "Vous êtes amis, chacun avec sa vie",
+    "row4Analysis": "Vous êtes ensemble, et l'image ne te choque pas",
+    "row5Score": "Le mot « ami »",
+    "row5Level": "Il te va très bien",
+    "row5Analysis": "Il te paraît trop petit"
+  },
+  "section3": {
+    "title": "Les signes qui ne trompent pas",
+    "p1": "Tous les signes ne se valent pas. Adorer passer du temps ensemble, ça ne prouve rien : c'est la définition même d'un meilleur ami. Les signes qui comptent sont ceux qui n'ont pas de version amicale.",
+    "sub1Title": "L'envie physique",
+    "sub1P1": "Pas forcément l'envie de coucher ensemble, même si c'est le signe le plus net. L'envie du contact, tout simplement : chercher sa main, laisser durer un câlin, remarquer son odeur. Entre amis, le contact physique est agréable et on l'oublie aussitôt. Là, tu ne l'oublies pas.",
+    "sub2Title": "La jalousie qui pince",
+    "sub2P1": "Un ami est content quand son ami rencontre quelqu'un. Si toi, ça te pince, si tu trouves des défauts à toutes les personnes qui lui plaisent, si tu changes de sujet quand il ou elle en parle, ce n'est pas de l'amitié qui s'exprime.",
+    "sub3Title": "Les autres qui ne font plus le poids",
+    "sub3P1": "Tu rencontres quelqu'un de bien, et sans le vouloir tu compares. Et l'autre perd. Souvent. Quand tes rencards se terminent par « c'est pas pareil », il faut se demander pareil que quoi.",
+    "sub4Title": "Le « et si ? »",
+    "sub4P1": "Cette petite question qui passe en le ou la regardant rire. Une fois, ça arrive à tout le monde. Si elle revient, si tu te surprends à y répondre en détail, tu n'es plus en train de te poser une question, tu es en train d'espérer."
+  },
+  "section4": {
+    "title": "Comment fonctionne ce test",
+    "p1": "Quinze questions, quatre réponses chacune. Tu commences par dire si ton meilleur ami est un garçon ou une fille, pour que les questions parlent de la bonne personne, sans « il ou elle » à chaque ligne.",
+    "p2": "Chaque réponse rapporte un nombre de points qui lui est propre, et les questions ne pèsent pas toutes pareil. Avoir déjà imaginé faire l'amour avec cette personne, ou te voir vivre en couple avec elle, rapporte jusqu'à douze points : ces envies-là n'existent pas dans l'amitié. Qu'elle ait rencontré tes parents en rapporte quatre au maximum, parce qu'un meilleur ami qui rencontre les parents, c'est normal.",
+    "p3": "Certaines réponses fortes garantissent un palier : si tu attends ce baiser depuis longtemps, le test ne te dira pas « c'est de l'amitié » à cause de dix réponses tièdes ailleurs. Le score va de 0 à 129, sur quatre paliers.",
+    "tip": "Réponds sur ce que tu vis, pas sur ce que tu voudrais vivre, ni sur ce que tu trouverais raisonnable. Le test ne juge rien, et personne ne voit tes réponses."
+  },
+  "section5": {
+    "title": "Si le résultat dit oui : lui dire, ou pas ?",
+    "intro": "C'est la question que tout le monde se pose juste après. Il n'y a pas de bonne réponse valable pour tout le monde, mais il y a une méthode.",
+    "pillar1Title": "Mesure ce que tu risques",
+    "pillar1Text": "Pas l'amitié, contrairement à ce qu'on croit : une amitié solide survit à un « moi aussi j'ai cru, mais non ». Ce que tu risques, c'est quelques semaines de gêne. Ce que tu risques en ne disant rien, c'est des années à te poser la question.",
+    "pillar2Title": "Regarde ses signaux avant de parler",
+    "pillar2Text": "Est-ce qu'il ou elle te cherche du regard, te touche plus que les autres, te parle de ses rencards avec un peu trop d'insistance ? Il existe un test fait pour ça, qui regarde <a href=\"/test-m-aime-t-il-elle-en-secret/\">si ton ami t'aime en secret</a>.",
+    "pillar3Title": "Dis-le simplement",
+    "pillar3Text": "Pas de grande déclaration, pas de lettre. Une phrase, en vrai, dans un moment calme : « Il faut que je te dise un truc, et tu as le droit de ne pas ressentir la même chose. » Le reste, c'est à lui ou à elle de le dire.",
+    "pillar4Title": "Accepte la réponse, quelle qu'elle soit",
+    "pillar4Text": "Un non n'est pas la fin de l'amitié, à une condition : que tu le prennes comme un non, et pas comme un « pas encore ». Laisse un peu d'air, quelques semaines, puis reprends là où vous en étiez. La plupart des amitiés y survivent très bien."
+  },
+  "section6": {
+    "title": "Si le résultat dit non : garde ton ami, sans arrière-pensée",
+    "p1": "Un résultat bas n'a rien de décevant. Ce que tu as avec cette personne, une amitié où on se raconte tout, où on se précipite pour annoncer ses bonnes nouvelles, c'est rare, et ça ne vaut pas moins qu'une histoire d'amour.",
+    "p2": "Si la question t'est venue parce que quelqu'un vous a dit que vous iriez bien ensemble, tu peux la ranger. Les autres projettent souvent sur deux amis proches ce qu'ils aimeraient voir. Et si elle t'est venue parce que tu es célibataire depuis un moment et que cette personne est la plus proche de toi, c'est normal aussi : <a href=\"/blog/dependance-affective/\">ce n'est pas de l'amour, c'est du manque</a>, et ça ne se soigne pas avec ton meilleur ami.",
+    "tip": "Si ce que tu ressens ressemble plutôt à <a href=\"/test-amour-ou-crush/\">une attirance toute neuve pour quelqu'un que tu connais peu</a>, c'est un autre test qu'il te faut. Celui-ci est fait pour les gens qu'on connaît par cœur."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose",
+    "faq1Q": "Peut-on être amoureux de son meilleur ami sans s'en rendre compte ?",
+    "faq1A": "Oui, et c'est même le cas le plus courant. La proximité de tous les jours installe les signes un par un, si lentement qu'aucun ne déclenche d'alarme. On s'en rend compte souvent par un choc : l'ami qui se met en couple, ou quelqu'un qui pose la question à haute voix.",
+    "faq2Q": "Comment faire la différence entre aimer son ami et être amoureux ?",
+    "faq2A": "Aimer un ami, c'est tenir à lui et vouloir son bien. Être amoureux ajoute trois choses qui n'ont pas de version amicale : l'envie physique, la jalousie quand il ou elle rencontre quelqu'un, et le fait d'imaginer une vie à deux. Le test ne compte que ces signes-là.",
+    "faq3Q": "Faut-il lui dire ?",
+    "faq3A": "Si le résultat est élevé et que la question te ronge, oui, la plupart du temps. Une amitié solide survit à une conversation honnête. Ce qui l'abîme, c'est de faire semblant pendant des mois. Regarde d'abord ses signaux, choisis un moment calme, et dis-le simplement.",
+    "faq4Q": "Et si c'est mon ami qui est amoureux de moi ?",
+    "faq4A": "Les signes sont les mêmes, dans l'autre sens : il ou elle te cherche du regard, te touche plus que les autres, réagit mal quand tu parles de tes rencards, trouve des défauts à tout le monde. Si tu reconnais tout ça, la conversation sera sans doute plus facile que tu ne le crois.",
+    "faq5Q": "Le test marche si mon meilleur ami est du même sexe que moi ?",
+    "faq5A": "Oui. Le test demande seulement si ton ami est un garçon ou une fille, pour écrire les questions avec le bon pronom. Il ne te demande rien sur toi.",
+    "faq6Q": "Une amitié peut-elle devenir une histoire d'amour ?",
+    "faq6A": "Oui, et beaucoup de couples ont commencé comme ça. L'avantage, c'est que vous vous connaissez déjà, défauts compris : pas de phase où on joue un rôle. L'inconvénient, c'est qu'il faut accepter de perdre la sécurité du mot « ami ». Ceux qui franchissent le pas disent presque tous la même chose : ils auraient dû le faire plus tôt."
+  },
+  "jsonLd": {
+    "about": "être amoureux de son meilleur ami ou de sa meilleure amie"
+  }
+}

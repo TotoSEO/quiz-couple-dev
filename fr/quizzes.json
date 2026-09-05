@@ -372,5 +372,12 @@
     "shortTitle": "Test emprise psychologique",
     "description": "Vingt questions sur votre liberté dans le couple : amis, argent, choix, parole. Pour mettre des mots sur ce que vous vivez.",
     "metaDescription": "Suis-je sous emprise psychologique ? Vingt questions sur vos amis, votre argent, vos choix et votre parole. Un test gratuit et confidentiel, avec des pistes et des numéros d'aide."
+  },
+  "testAmourAmi": {
+    "title": "Aimes-tu ton/ta meilleur(e) ami(e) ? Test en ligne",
+    "shortTitle": "Amoureux(se) de mon/ma BFF ?",
+    "metaTitle": "Aimes-tu ton/ta meilleur(e) ami(e) ? Test en ligne",
+    "description": "Quinze questions pour savoir si ce que tu ressens pour ton/ta meilleur(e) ami(e) est encore de l'amitié, ou déjà autre chose.",
+    "metaDescription": "Suis-je amoureux(se) de mon/ma meilleur(e) ami(e) ? Quinze questions qui pèsent chacune leur poids, deux séries selon que ton ami(e) est un garçon ou une fille, et un résultat immédiat."
   }
 }

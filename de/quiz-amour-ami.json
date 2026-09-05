@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "badge": "15 Fragen, sofortiges Ergebnis",
+    "title": "Test: Bin ich in meine(n) BFF verliebt?",
+    "titleHighlight": "verliebt",
+    "description": "Zwei Fragenreihen, je nachdem, ob dein bester Freund ein Junge oder ein Mädchen ist. Jede Frage hat ihr eigenes Gewicht: sich die Fortsetzung schon ausgemalt zu haben zählt viel mehr als ein Abendessen bei deinen Eltern. Am Ende ein klares Ergebnis, und was du damit anfangen kannst.",
+    "subtitle": "Kostenlos, ohne Anmeldung, niemand sieht deine Antworten",
+    "jumpBtn": "Test machen"
+  },
+  "section1": {
+    "title": "Verliebt in den besten Freund oder die beste Freundin: warum man es so lange nicht sieht",
+    "intro": "Jeder kennt jemanden, dem das passiert ist. Und meistens war diese Person die Letzte, die es gemerkt hat.",
+    "p1": "In die beste Freundin oder den besten Freund verliebt zu sein ist die gewöhnlichste Situation, die es gibt, und die schwierigste zu lesen. Bei jemandem, den man gerade erst kennengelernt hat, springen die Zeichen ins Auge: der Knoten im Bauch, das Handy, das man alle zwei Minuten anschaut. Bei einem Freund seit zehn Jahren nichts davon. Die Zeichen haben sich eines nach dem anderen eingerichtet, ohne je ein Geräusch zu machen.",
+    "p2": "Deshalb dauert es Monate, bis man sich die Frage überhaupt stellt. Und wenn sie kommt, kommt sie oft von außen: jemand sagt euch, ihr würdet gut zusammenpassen, oder dein Freund kommt mit jemandem zusammen und du merkst, dass es viel mehr wehtut als gedacht.",
+    "p3": "Genau dafür ist dieser Test da: Worte für das zu finden, was du fühlst, bevor das Leben dich dazu zwingt. Er stützt sich auf das, was nur in der Liebe vorkommt, nicht auf <a href=\"/de/liebe-oder-freundschaft-test/\">das, was Freundschaft und Liebe gemeinsam haben</a>. Denn die Freude am Zusammensein, das Vertrauen, das Lachen bis die Tränen kommen, all das gibt es auch unter Freunden, und ein Test, der das mitzählen würde, würde dir sagen, dass du in die Hälfte deiner Kontakte verliebt bist.",
+    "quote": "„Man verliebt sich nicht in seinen besten Freund. Man merkt eines Tages, dass man es schon längst war.“"
+  },
+  "section2": {
+    "title": "Freundschaft oder Liebe: was sich ändert, Situation für Situation",
+    "intro": "Dieselbe Szene, gesehen von einem Freund und von jemandem, der sich gerade verliebt. Schau, auf welcher Seite du dich öfter wiedererkennst.",
+    "headerScore": "Die Situation",
+    "headerLevel": "Wenn es Freundschaft ist",
+    "headerAnalysis": "Wenn es Liebe ist",
+    "row1Score": "Er oder sie erzählt dir von einem Date",
+    "row1Level": "Du willst alles wissen, du gibst Tipps",
+    "row1Analysis": "Du wechselst das Thema, oder du findest Fehler an der Person",
+    "row2Score": "Eine Umarmung, die länger dauert",
+    "row2Level": "Du merkst es gar nicht",
+    "row2Analysis": "Du merkst es, und du willst nicht, dass sie aufhört",
+    "row3Score": "Jemand sagt, ihr würdet gut zusammenpassen",
+    "row3Level": "Ihr lacht, und es ist vergessen",
+    "row3Analysis": "Du lachst auch, und denkst abends noch daran",
+    "row4Score": "Du stellst dir die Zeit in zehn Jahren vor",
+    "row4Level": "Ihr seid Freunde, jeder mit seinem Leben",
+    "row4Analysis": "Ihr seid zusammen, und das Bild erschreckt dich nicht",
+    "row5Score": "Das Wort „Freund“",
+    "row5Level": "Es passt dir sehr gut",
+    "row5Analysis": "Es kommt dir zu klein vor"
+  },
+  "section3": {
+    "title": "Die Zeichen, die nicht täuschen",
+    "p1": "Nicht alle Zeichen sind gleich viel wert. Gern Zeit miteinander zu verbringen beweist nichts: das ist die Definition eines besten Freundes. Die Zeichen, die zählen, sind die, die keine freundschaftliche Version haben.",
+    "sub1Title": "Das körperliche Verlangen",
+    "sub1P1": "Nicht unbedingt der Wunsch, miteinander zu schlafen, auch wenn das das deutlichste Zeichen ist. Einfach der Wunsch nach Berührung: nach seiner Hand greifen, eine Umarmung länger dauern lassen, seinen Geruch wahrnehmen. Unter Freunden ist Körperkontakt angenehm und sofort vergessen. Hier vergisst du ihn nicht.",
+    "sub2Title": "Die Eifersucht, die sticht",
+    "sub2P1": "Ein Freund freut sich, wenn sein Freund jemanden kennenlernt. Wenn es bei dir sticht, wenn du an allen Leuten, die ihm oder ihr gefallen, etwas auszusetzen hast, wenn du das Thema wechselst, sobald er oder sie davon erzählt, dann spricht da nicht die Freundschaft.",
+    "sub3Title": "Die anderen halten nicht mehr mit",
+    "sub3P1": "Du lernst jemanden Nettes kennen, und ohne es zu wollen vergleichst du. Und der andere verliert. Oft. Wenn deine Dates mit „es ist einfach nicht dasselbe“ enden, lohnt sich die Frage: dasselbe wie was?",
+    "sub4Title": "Das „Was wäre, wenn?“",
+    "sub4P1": "Diese kleine Frage, die dir durch den Kopf geht, während du ihn oder sie lachen siehst. Einmal, das passiert jedem. Wenn sie wiederkommt, wenn du dich dabei erwischst, sie im Detail zu beantworten, stellst du keine Frage mehr, du hoffst."
+  },
+  "section4": {
+    "title": "So funktioniert dieser Test",
+    "p1": "Fünfzehn Fragen, jeweils vier Antworten. Du sagst zuerst, ob dein bester Freund ein Junge oder ein Mädchen ist, damit die Fragen von der richtigen Person sprechen, ohne ein „er oder sie“ in jeder Zeile.",
+    "p2": "Jede Antwort bringt ihre eigene Punktzahl, und die Fragen wiegen nicht alle gleich. Sich schon vorgestellt zu haben, mit dieser Person zu schlafen, oder sich ein Leben als Paar mit ihr auszumalen, bringt bis zu zwölf Punkte: diese Wünsche gibt es in der Freundschaft nicht. Dass er oder sie deine Eltern kennt, bringt höchstens vier, weil ein bester Freund, der die Eltern kennt, ganz normal ist.",
+    "p3": "Manche starken Antworten sichern eine Stufe: wenn du seit langem auf diesen Kuss wartest, wird der Test dir nicht „das ist Freundschaft“ sagen, nur weil zehn andere Antworten lau waren. Die Punktzahl geht von 0 bis 129, in vier Stufen.",
+    "tip": "Antworte auf das, was du erlebst, nicht auf das, was du erleben möchtest, und nicht auf das, was du vernünftig fändest. Der Test urteilt über nichts, und niemand sieht deine Antworten."
+  },
+  "section5": {
+    "title": "Wenn das Ergebnis Ja sagt: es sagen, oder nicht?",
+    "intro": "Das ist die Frage, die sich alle direkt danach stellen. Es gibt keine richtige Antwort für alle, aber es gibt eine Methode.",
+    "pillar1Title": "Schätz ab, was du riskierst",
+    "pillar1Text": "Nicht die Freundschaft, anders als man denkt: eine feste Freundschaft überlebt ein „ich dachte das auch mal, aber nein“. Was du riskierst, sind ein paar unangenehme Wochen. Was du riskierst, wenn du nichts sagst, sind Jahre mit dieser Frage im Kopf.",
+    "pillar2Title": "Schau auf seine oder ihre Zeichen, bevor du redest",
+    "pillar2Text": "Sucht er oder sie deinen Blick, berührt dich mehr als andere, erzählt dir von Dates mit etwas zu viel Nachdruck? Dafür gibt es einen eigenen Test, der prüft, <a href=\"/de/liebt-er-sie-mich-heimlich-test/\">ob dein Freund dich heimlich liebt</a>.",
+    "pillar3Title": "Sag es einfach",
+    "pillar3Text": "Keine große Erklärung, kein Brief. Ein Satz, persönlich, in einem ruhigen Moment: „Ich muss dir etwas sagen, und du hast jedes Recht, nicht dasselbe zu fühlen.“ Der Rest ist an ihm oder ihr.",
+    "pillar4Title": "Nimm die Antwort an, wie sie auch ausfällt",
+    "pillar4Text": "Ein Nein ist nicht das Ende der Freundschaft, unter einer Bedingung: dass du es als Nein nimmst, und nicht als „noch nicht“. Lass etwas Luft, ein paar Wochen, dann macht ihr da weiter, wo ihr wart. Die meisten Freundschaften überstehen das sehr gut."
+  },
+  "section6": {
+    "title": "Wenn das Ergebnis Nein sagt: behalt deinen Freund, ohne Hintergedanken",
+    "p1": "Ein niedriges Ergebnis ist keine Enttäuschung. Was du mit dieser Person hast, eine Freundschaft, in der man sich alles erzählt, in der man losrennt, um gute Neuigkeiten zu teilen, ist selten, und es ist nicht weniger wert als eine Liebesgeschichte.",
+    "p2": "Wenn die Frage kam, weil euch jemand gesagt hat, ihr würdet gut zusammenpassen, kannst du sie weglegen. Andere projizieren oft auf zwei enge Freunde, was sie gern sehen würden. Und wenn sie kam, weil du seit einer Weile Single bist und diese Person dir am nächsten steht, ist das auch normal: <a href=\"/de/blog/emotionale-abhaengigkeit-in-beziehungen/\">das ist keine Liebe, das ist Vermissen</a>, und das heilt man nicht mit dem besten Freund.",
+    "tip": "Wenn das, was du fühlst, eher <a href=\"/de/liebe-oder-crush-test/\">einer ganz neuen Anziehung zu jemandem, den du kaum kennst</a>, gleicht, brauchst du einen anderen Test. Dieser hier ist für Menschen gemacht, die man in- und auswendig kennt."
+  },
+  "seo": {
+    "faqTitle": "Die Fragen, die man sich stellt",
+    "faq1Q": "Kann man in seinen besten Freund verliebt sein, ohne es zu merken?",
+    "faq1A": "Ja, und es ist sogar der häufigste Fall. Die tägliche Nähe richtet die Zeichen eines nach dem anderen ein, so langsam, dass keines Alarm schlägt. Man merkt es oft durch einen Schock: der Freund, der mit jemandem zusammenkommt, oder jemand, der die Frage laut ausspricht.",
+    "faq2Q": "Wie unterscheidet man, ob man seinen Freund liebt oder in ihn verliebt ist?",
+    "faq2A": "Einen Freund zu lieben heißt, dass er dir am Herzen liegt und du sein Bestes willst. Verliebt sein fügt drei Dinge hinzu, die keine freundschaftliche Version haben: das körperliche Verlangen, die Eifersucht, wenn er oder sie jemanden kennenlernt, und das Bild eines gemeinsamen Lebens. Der Test zählt nur diese Zeichen.",
+    "faq3Q": "Soll ich es ihm oder ihr sagen?",
+    "faq3A": "Wenn das Ergebnis hoch ist und die Frage an dir nagt, ja, meistens. Eine feste Freundschaft überlebt ein ehrliches Gespräch. Was sie beschädigt, ist monatelanges Verstellen. Schau zuerst auf seine oder ihre Zeichen, wähl einen ruhigen Moment, und sag es einfach.",
+    "faq4Q": "Und wenn mein Freund in mich verliebt ist?",
+    "faq4A": "Die Zeichen sind dieselben, nur umgekehrt: er oder sie sucht deinen Blick, berührt dich mehr als andere, reagiert schlecht, wenn du von deinen Dates erzählst, findet an allen etwas auszusetzen. Wenn du das alles wiedererkennst, wird das Gespräch wahrscheinlich leichter, als du denkst.",
+    "faq5Q": "Funktioniert der Test, wenn mein bester Freund dasselbe Geschlecht hat wie ich?",
+    "faq5A": "Ja. Der Test fragt nur, ob dein Freund ein Junge oder ein Mädchen ist, um die Fragen mit dem richtigen Pronomen zu schreiben. Über dich fragt er nichts.",
+    "faq6Q": "Kann aus einer Freundschaft eine Liebesgeschichte werden?",
+    "faq6A": "Ja, und viele Paare haben so angefangen. Der Vorteil: ihr kennt euch schon, Fehler eingeschlossen, es gibt keine Phase, in der man eine Rolle spielt. Der Nachteil: man muss die Sicherheit des Wortes „Freund“ aufgeben. Wer den Schritt macht, sagt fast immer dasselbe: er hätte es früher tun sollen."
+  },
+  "jsonLd": {
+    "about": "in den besten Freund oder die beste Freundin verliebt sein"
+  }
+}

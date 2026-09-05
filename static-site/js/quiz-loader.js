@@ -318,6 +318,18 @@
     'qui-pourrait':   { prefix: 'quiPourrait', engine: 'qui-pourrait', totalQ: 0, pool: 0, textOnly: true },
     'oui-non':        { prefix: 'ouiNon', engine: 'oui-non', totalQ: 0, pool: 0, textOnly: true },
 
+    // Amoureux de son meilleur ami : deux series selon le genre de l'ami, pour
+    // que les questions parlent de lui ou d'elle. Points explicites dans
+    // gd.json : imaginer la suite pese douze points, la rencontre avec les
+    // parents en pese quatre. Trois reponses garantissent au moins le palier
+    // « en train de tomber » : attendre ce baiser, avoir imagine faire
+    // l'amour souvent, s'etre vu vivre en couple en detail.
+    'amour-ami':      { modes: [
+      { id: 'homme', emoji: '👦', prefix: 'amourAmiH', engine: 'solo', totalQ: 15, pool: 15, quizType: 'amour-ami', ascending: true, ptsExplicites: true, resultPrefix: 'amourAmi',
+        planchers: [ { q: 1, o: 'd', palier: 3 }, { q: 2, o: 'd', palier: 3 }, { q: 3, o: 'd', palier: 3 } ] },
+      { id: 'femme', emoji: '👧', prefix: 'amourAmiF', engine: 'solo', totalQ: 15, pool: 15, quizType: 'amour-ami', ascending: true, ptsExplicites: true, resultPrefix: 'amourAmi',
+        planchers: [ { q: 1, o: 'd', palier: 3 }, { q: 2, o: 'd', palier: 3 }, { q: 3, o: 'd', palier: 3 } ] }
+    ] },
     'crush':          { modes: [
       { id: 'homme', emoji: '👦', prefix: 'crushH', engine: 'solo', totalQ: 35, pool: 35, quizType: 'crush', ascending: true, ptsExplicites: true, resultPrefix: 'crush' },
       { id: 'femme', emoji: '👧', prefix: 'crushF', engine: 'solo', totalQ: 35, pool: 35, quizType: 'crush', ascending: true, ptsExplicites: true, resultPrefix: 'crush' }

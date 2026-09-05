@@ -1492,6 +1492,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'distance-aime', icon: '📞', route: 'testDistanceAime' },
     { type: 'test', key: 'aime-encore', icon: '💞', route: 'testAimeEncore' },
     { type: 'test', key: 'emprise', icon: '🔒', route: 'testEmprise' },
+    { type: 'test', key: 'amour-ami', icon: '🧡', route: 'testAmourAmi' },
     { type: 'test', key: 'ex', icon: '🕰️', route: 'testEx' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
@@ -1579,6 +1580,8 @@ var QuizEngine = (function() {
     'suis-je-amoureux': ['testAmourAmitie', 'testSecret', 'testAttachement'],
     'amour-amitie':    ['testSecret', 'testSuisJeAmoureux', 'testAmourHabitude'],
     'crush':           ['testSecret', 'testSuisJeAmoureux', 'testAmourAmitie'],
+    // Le doute sur l'ami appelle la question de l'autre, puis celle du lien.
+    'amour-ami':       ['testSecret', 'testAmourAmitie', 'testCrush'],
     'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
     'distance-aime':   ['testDistance', 'testAimeEncore', 'testAttachement'],
     // Le doute sur ses sentiments appelle la question du couple, puis de soi.

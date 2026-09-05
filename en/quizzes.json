@@ -360,5 +360,12 @@
     "shortTitle": "Coercive control test",
     "description": "Twenty questions about your freedom in the relationship: friends, money, choices, voice. To put words on what you're living through.",
     "metaDescription": "Am I in a controlling relationship? Twenty questions about your friends, your money, your choices and your voice. A free, confidential test with next steps and helplines."
+  },
+  "testAmourAmi": {
+    "title": "Are you in love with your best friend? Online test",
+    "shortTitle": "In love with my BFF?",
+    "metaTitle": "Are you in love with your best friend? Online test",
+    "description": "Fifteen questions to find out whether what you feel for your best friend is still friendship, or already something else.",
+    "metaDescription": "Am I in love with my best friend? Fifteen questions that each carry their own weight, two sets depending on whether your friend is a guy or a girl, and an instant result."
   }
 }
