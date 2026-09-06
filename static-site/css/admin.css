@@ -185,7 +185,7 @@
 }
 .adm .stats-tete::before{content:'';position:absolute;inset:0 0 auto 0;height:3px;background:var(--tete);}
 .adm .stats-tete-titre{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--adm-ink-2);justify-content:flex-start;}
-.adm .stats-tete-jour{font-family:'Poppins','Inter',sans-serif;font-size:2.35rem;font-weight:800;line-height:1.05;color:var(--adm-ink);margin-top:.35rem;font-variant-numeric:normal;}
+.adm .stats-tete-jour{font-family:'Poppins','Inter',sans-serif;font-size:2.35rem;font-weight:800;line-height:1.05;color:var(--adm-ink);margin-top:.35rem;font-variant-numeric:normal;display:flex;flex-wrap:wrap;align-items:center;gap:.25rem .5rem;}
 .adm .stats-tete--ratio .stats-tete-jour{font-size:2.35rem;}
 .adm .stats-tete--ratio{min-width:0;text-align:left;border-color:var(--adm-line);}
 .adm .stats-tete--ratio .stats-tete-titre{justify-content:flex-start;}
@@ -201,14 +201,16 @@
 .adm .trafic-kpi--vues{--tete:var(--adm-s-vues);}
 .adm .trafic-kpi--profondeur{--tete:#1baf7a;}
 .adm .trafic-kpi--rebond{--tete:#eb6834;}
-/* La mini-courbe des quatorze derniers jours, a droite du chiffre */
-.adm-spark{position:absolute;right:1.1rem;top:2.55rem;width:7.75rem;height:2.6rem;pointer-events:none;}
+/* La mini-courbe des quatorze derniers jours, sous le chiffre, sur toute la
+   largeur de la tuile : posee en absolu a droite, elle passait sous le nombre
+   et son etiquette des que le chiffre etait long. */
+.adm-spark{display:block;width:100%;height:2.4rem;margin:.4rem 0 .15rem;pointer-events:none;}
 .adm-spark path{fill:none;stroke:var(--tete);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 .adm-spark .adm-spark-aire{fill:var(--tete);fill-opacity:.1;stroke:none;}
 .adm-spark circle{fill:var(--tete);stroke:var(--adm-card);stroke-width:2;}
 .adm-spark.est-vide{display:none;}
 /* Le delta du jour, a cote du chiffre, comme une etiquette */
-.adm-delta{display:inline-flex;align-items:center;gap:.2rem;vertical-align:middle;margin-left:.45rem;padding:.12rem .5rem;border-radius:999px;
+.adm-delta{display:inline-flex;align-items:center;gap:.2rem;vertical-align:middle;margin-left:0;padding:.12rem .5rem;border-radius:999px;
   font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:0;font-variant-numeric:tabular-nums;background:hsl(var(--muted)/.7);color:var(--adm-ink-2);}
 .adm-delta.est-plus{background:color-mix(in srgb,var(--adm-bon) 14%,transparent);color:var(--adm-bon);}
 .adm-delta.est-moins{background:color-mix(in srgb,var(--adm-mauvais) 12%,transparent);color:var(--adm-mauvais);}
@@ -216,6 +218,8 @@
 
 /* ── Panneaux et graphiques ────────────────────────────────────────── */
 .adm .stats-panel,.adm .stats-details,.adm .afl-panel{background:var(--adm-card);border:1px solid var(--adm-line);border-radius:1rem;box-shadow:none;}
+.adm .stats-movers{grid-template-columns:repeat(2,minmax(0,1fr));}
+.adm .stats-movers>div{min-width:0;}
 .adm .stats-panel{padding:1.25rem 1.4rem 1rem;margin-bottom:1.25rem;}
 .adm .stats-details{margin-bottom:1.25rem;}
 .adm .stats-panel-title,.adm .stats-details-titre{font-size:1rem;}
@@ -247,7 +251,8 @@
   .adm-contenu,.adm-top{padding-left:1.25rem;padding-right:1.25rem;}
 }
 @media (max-width:960px){
-  .adm-shell{grid-template-columns:1fr;}
+  .adm-shell{grid-template-columns:minmax(0,1fr);}
+  .adm-side,.adm-main{min-width:0;}
   .adm-side{position:sticky;top:0;height:auto;z-index:40;flex-direction:row;flex-wrap:wrap;align-items:center;gap:.4rem .5rem;
     padding:.55rem .75rem .35rem;border-right:none;border-bottom:1px solid var(--adm-line);}
   .adm-brand{flex:1 1 auto;padding:.15rem .25rem;}
@@ -259,7 +264,7 @@
   .adm-ico-btn{flex:0 0 auto;width:2.15rem;height:2.15rem;padding:0;}
   .adm-ico-btn span{display:none;}
   .adm-rafraichir{width:2.15rem;height:2.15rem;padding:0;}
-  .adm-nav{order:3;flex:1 1 100%;min-width:0;width:100%;flex-direction:row;gap:.2rem;overflow-x:auto;scrollbar-width:none;padding:.15rem 0 .1rem;}
+  .adm-nav{order:3;flex:1 1 100%;min-width:0;width:100%;flex-direction:row;gap:.2rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:.15rem 0 .1rem;}
   .adm-nav::-webkit-scrollbar{display:none;}
   .adm-nav-titre{display:none;}
   .adm-nav .admin-tab{width:auto;flex:0 0 auto;white-space:nowrap;padding:.45rem .7rem;font-size:.82rem;gap:.45rem;}
@@ -272,8 +277,16 @@
   .adm .stats-comp{flex-wrap:wrap;border-radius:.9rem;}
   .adm .stats-comp-btn{flex:1 1 auto;}
   .adm .adm-canvas--hero{height:clamp(240px,42vh,360px);}
+  /* Deux vignettes de legende par rangee, et les tops et flops qui ne
+     debordent plus de leur carte : la colonne de grille ne peut pas
+     s'elargir a ses lignes, c'est le nom de la page qui se raccourcit. */
+  .adm .stats-leg{flex:1 1 8rem;max-width:none;padding:.45rem .6rem;}
+  .adm .stats-leg-val{font-size:1.05rem;}
+  .adm .stats-movers{grid-template-columns:minmax(0,1fr);}
+  .adm .stats-movers>div,.adm .stats-mover{min-width:0;}
+  .adm .stats-mover-vals{display:none;}
   .adm .stats-tete-jour{font-size:1.9rem;}
-  .adm-spark{width:6rem;top:2.3rem;}
+  .adm-spark{height:2rem;}
 }
 @media (max-width:480px){
   .adm-cartes{grid-template-columns:1fr;}
