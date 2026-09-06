@@ -1,218 +1,146 @@
 <%
-  // Admin page - review moderation dashboard
-  // Not indexed by search engines (noindex meta handled in base.ejs)
+  // Tableau de bord d'administration : une application plein ecran, barre
+  // laterale a gauche, indicateurs et grand graphique au milieu. La page
+  // n'est pas indexee (noindex pose par base.ejs) et n'a ni en-tete ni pied
+  // de page du site : base.ejs les ecarte pour cette route.
+  //
+  // Le script admin.js retrouve tout par identifiant et par classe : les
+  // identifiants ci-dessous sont un contrat, on ne les renomme pas.
 %>
+<link rel="stylesheet" href="/css/admin.css">
 
-<section class="min-h-screen py-8">
-  <div class="container mx-auto px-4 max-w-5xl">
-    <div id="admin-app" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>">
-      <!-- Login Screen (shown by default) -->
-      <div id="admin-login" class="max-w-md mx-auto mt-20">
-        <div class="glass-card-strong rounded-2xl p-8 text-center space-y-6">
-          <div class="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
-            <svg class="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-          </div>
-          <div>
-            <h1 class="text-2xl font-bold">Administration</h1>
-            <p class="text-sm text-muted-foreground mt-1">Accès réservé à l'administrateur</p>
-          </div>
-          <div class="space-y-4">
-            <div class="relative">
-              <input type="password" id="admin-password" class="input w-full pr-10" placeholder="Mot de passe" autocomplete="current-password">
-              <button type="button" id="admin-toggle-pw" class="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors">
-                <svg class="w-4 h-4 eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                <svg class="w-4 h-4 eye-closed hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
-              </button>
-            </div>
-            <p id="admin-login-error" class="hidden text-sm text-destructive"></p>
-            <button id="admin-login-btn" class="btn btn-primary w-full py-3">Se connecter</button>
-          </div>
+<div id="admin-app" class="adm" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>">
+
+  <!-- Connexion (affichee par defaut) -->
+  <div id="admin-login" class="adm-login">
+    <div class="adm-login-carte">
+      <div class="adm-login-logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      </div>
+      <h1>Quiz Couple</h1>
+      <p class="adm-login-sub">Tableau de bord. Accès réservé à l'administrateur.</p>
+      <div class="adm-login-champ">
+        <input type="password" id="admin-password" class="input w-full" placeholder="Mot de passe" autocomplete="current-password" aria-label="Mot de passe">
+        <button type="button" id="admin-toggle-pw" class="adm-login-oeil" aria-label="Afficher ou masquer le mot de passe">
+          <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg class="eye-closed hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+        </button>
+      </div>
+      <p id="admin-login-error" class="adm-login-erreur hidden"></p>
+      <button id="admin-login-btn" class="btn btn-primary" type="button">Se connecter</button>
+    </div>
+  </div>
+
+  <!-- Le tableau de bord (masque tant qu'on n'est pas connecte) -->
+  <div id="admin-dashboard" class="adm-shell hidden">
+
+    <aside class="adm-side" aria-label="Navigation du tableau de bord">
+      <div class="adm-brand">
+        <div class="adm-brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-9.33-8.6C1 9 2.6 5.5 6 5.5c2 0 3.2 1.2 4 2.4.8-1.2 2-2.4 4-2.4 3.4 0 5 3.5 3.33 6.9C19 16.65 12 21 12 21z"/></svg>
+        </div>
+        <div>
+          <div class="adm-brand-nom">Quiz Couple</div>
+          <div class="adm-brand-sub">Tableau de bord</div>
         </div>
       </div>
 
-      <!-- Dashboard (hidden by default) -->
-      <div id="admin-dashboard" class="hidden">
-        <!-- Header -->
-        <div class="flex items-center justify-between mb-8 pb-4 border-b border-border flex-wrap gap-3">
-          <h1 class="text-2xl font-bold">Administration</h1>
-          <div class="flex items-center gap-4 flex-wrap">
-            <div class="flex rounded-lg border border-border overflow-hidden">
-              <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors active" data-tab="reviews">Avis<span class="admin-pastille hidden" data-notif="reviews">!</span></button>
-              <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="leads">Leads<span class="admin-pastille hidden" data-notif="leads">!</span></button>
-              <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="messages">Messagerie<span class="admin-pastille hidden" data-notif="messages">!</span></button>
-              <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="stats">Stats</button>
-            <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="trafic">Trafic</button>
-            <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="distance">Distance</button>
-            <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="blog">Blog</button>
-            <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="affiliation">Affiliation</button>
-            </div>
-            <%# Le site est statique : ce qui est saisi ici vit dans Supabase et
-                n'apparaît en ligne qu'après une reconstruction. Elle a lieu
-                toute seule toutes les deux heures ; ce bouton la déclenche
-                tout de suite. L'intitulé seul ne le disait pas. %>
-            <button id="admin-deploy" class="btn btn-sm"
-                    title="Reconstruit le site tout de suite pour publier les articles et avis enregistrés ici. Sans ça, la mise en ligne se fait toute seule dans les deux heures."
-                    style="background:hsl(var(--primary));color:white;display:flex;align-items:center;gap:0.5rem;">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              Publier maintenant
-            </button>
-            <button id="admin-logout" class="text-sm text-destructive hover:text-destructive/80 transition-colors">Deconnexion</button>
+      <nav class="adm-nav">
+        <p class="adm-nav-titre">Mesure</p>
+            <button class="admin-tab active" data-tab="stats" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-5 4 3 5-7"/></svg><span>Parties</span></button>
+            <button class="admin-tab" data-tab="trafic" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Trafic</span></button>
+            <button class="admin-tab" data-tab="blog" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg><span>Blog</span></button>
+            <button class="admin-tab" data-tab="distance" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg><span>À distance</span></button>
+        <p class="adm-nav-titre">Gestion</p>
+            <button class="admin-tab" data-tab="reviews" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><span>Avis</span><span class="admin-pastille hidden" data-notif="reviews">!</span></button>
+            <button class="admin-tab" data-tab="leads" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg><span>Leads</span><span class="admin-pastille hidden" data-notif="leads">!</span></button>
+            <button class="admin-tab" data-tab="messages" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><span>Messagerie</span><span class="admin-pastille hidden" data-notif="messages">!</span></button>
+        <p class="adm-nav-titre">Revenus</p>
+            <button class="admin-tab" data-tab="affiliation" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18M7 6h1v4"/><path d="M16.71 13.88l.7.71-2.82 2.82"/></svg><span>Affiliation</span></button>
+      </nav>
+
+      <div class="adm-side-pied">
+        <%# Le site est statique : ce qui est saisi ici vit dans Supabase et
+            n'apparaît en ligne qu'après une reconstruction. Elle a lieu toute
+            seule toutes les deux heures ; ce bouton la déclenche tout de suite. %>
+        <button id="admin-deploy" class="adm-publier" type="button"
+                title="Reconstruit le site tout de suite pour publier les articles et avis enregistrés ici. Sans ça, la mise en ligne se fait toute seule dans les deux heures.">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <span>Publier maintenant</span>
+        </button>
+        <div class="adm-side-actions">
+          <button id="theme-toggle" class="adm-ico-btn" type="button" aria-label="Changer le thème" title="Clair ou sombre">
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <span>Thème</span>
+          </button>
+          <button id="admin-logout" class="adm-ico-btn adm-ico-btn--danger" type="button" aria-label="Déconnexion">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+            <span>Déconnexion</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="adm-main">
+      <header class="adm-top">
+        <div>
+          <h1 class="adm-top-titre" id="adm-titre">Parties</h1>
+          <p class="adm-top-sub" id="adm-sous-titre">Lancés, terminés et taux de finition, toutes pages confondues</p>
+        </div>
+        <div class="adm-top-droite">
+          <span class="adm-puce" title="Validations d'activités">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <strong id="admin-stat-activities">-</strong> activités
+          </span>
+          <span class="adm-puce" id="adm-date"></span>
+          <span class="adm-puce adm-puce--fraicheur" id="adm-fraicheur" hidden
+                title="Les données lues restent en mémoire dans ce navigateur : changer d'onglet ne les recharge pas. « Actualiser » vide cette mémoire et recharge l'onglet ouvert."></span>
+          <button id="adm-rafraichir" class="adm-ico-btn adm-rafraichir" type="button" title="Recharger les données depuis la base">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+            <span>Actualiser</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="adm-contenu">
+
+        <!-- Etat de la publication (masque par defaut) -->
+        <div id="deploy-banner" class="hidden">
+          <div class="adm-bandeau-int">
+            <div id="deploy-spinner" class="hidden"></div>
+            <svg id="deploy-icon-success" class="hidden" style="color:hsl(142 71% 45%);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <svg id="deploy-icon-error" class="hidden" style="color:hsl(var(--destructive));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            <p id="deploy-message"></p>
           </div>
         </div>
 
-        <!-- Deploy status banner (hidden by default) -->
-        <div id="deploy-banner" class="hidden mb-6 rounded-xl p-4" style="border:1px solid hsl(var(--primary)/0.3);background:hsl(var(--primary)/0.05);">
-          <div style="display:flex;align-items:center;gap:0.75rem;">
-            <div id="deploy-spinner" class="hidden" style="width:1.25rem;height:1.25rem;border:2px solid hsl(var(--primary)/0.3);border-top-color:hsl(var(--primary));border-radius:50%;animation:spin 0.6s linear infinite;flex-shrink:0;"></div>
-            <svg id="deploy-icon-success" class="hidden w-5 h-5 flex-shrink-0" style="color:hsl(142 71% 45%);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <svg id="deploy-icon-error" class="hidden w-5 h-5 flex-shrink-0" style="color:hsl(var(--destructive));" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-            <p id="deploy-message" class="text-sm font-medium"></p>
-          </div>
-        </div>
-
-        <!-- Global Stats -->
-        <div class="mb-6">
-          <div class="glass-card rounded-xl p-4 flex items-center gap-3" style="max-width:280px;">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg" style="background:hsl(200 80% 92%);color:hsl(200 80% 45%);">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <p class="text-2xl font-bold" id="admin-stat-activities">-</p>
-              <p class="text-xs text-muted-foreground">Validations Activités</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Reviews Tab -->
-        <div id="admin-reviews-tab">
-          <!-- Stats cards -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-            <div class="glass-card rounded-xl p-4 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-lg">⭐</div>
-              <div>
-                <p class="text-2xl font-bold" id="admin-stat-avg">-</p>
-                <p class="text-xs text-muted-foreground">Note moyenne</p>
-              </div>
-            </div>
-            <div class="glass-card rounded-xl p-4 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-lg">🕐</div>
-              <div>
-                <p class="text-2xl font-bold" id="admin-stat-pending">-</p>
-                <p class="text-xs text-muted-foreground">En attente</p>
-              </div>
-            </div>
-            <div class="glass-card rounded-xl p-4 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-lg">✅</div>
-              <div>
-                <p class="text-2xl font-bold" id="admin-stat-approved">-</p>
-                <p class="text-xs text-muted-foreground">Approuvés</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Filters -->
-          <div class="flex items-center gap-3 mb-6 flex-wrap">
-            <button id="admin-refresh" class="btn btn-outline btn-sm">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
-              Actualiser
-            </button>
-            <div class="flex rounded-lg border border-border overflow-hidden">
-              <button class="admin-filter px-3 py-1.5 text-sm transition-colors active" data-filter="all">Tous <span id="admin-filter-all-count"></span></button>
-              <button class="admin-filter px-3 py-1.5 text-sm transition-colors" data-filter="pending">En attente <span id="admin-filter-pending-count"></span></button>
-              <button class="admin-filter px-3 py-1.5 text-sm transition-colors" data-filter="approved">Approuvés <span id="admin-filter-approved-count"></span></button>
-            </div>
-          </div>
-
-          <!-- Reviews list -->
-          <div id="admin-reviews-list" class="space-y-4">
-            <p class="text-center text-muted-foreground py-8">Chargement...</p>
-          </div>
-        </div>
-
-        <!-- Distance Tab : les parties jouees chacun sur son telephone -->
-        <div id="admin-distance-tab" class="hidden">
+        <!-- ═══ Parties (Stats) ═══ -->
+        <div id="admin-stats-tab">
           <div class="stats-tetes">
             <div class="stats-tete stats-tete--lances">
-              <p class="stats-tete-titre"><span aria-hidden="true">🚦</span> Lancés au total</p>
-              <p class="stats-tete-jour" id="admin-distance-lances">-</p>
-              <p class="stats-tete-sub">toutes les pages, depuis la mise en service des lancés</p>
-            </div>
-            <div class="stats-tete stats-tete--ratio">
-              <p class="stats-tete-titre">Part à distance</p>
-              <p class="stats-tete-jour" id="admin-distance-part">-</p>
-              <p class="stats-tete-sub" id="admin-distance-detail">des lancements se jouent chacun sur son téléphone</p>
-            </div>
-            <div class="stats-tete stats-tete--finis">
-              <p class="stats-tete-titre"><span aria-hidden="true">📲</span> À distance</p>
-              <p class="stats-tete-jour" id="admin-distance-total">-</p>
-              <p class="stats-tete-sub">lancés à distance, deux par partie (un par téléphone)</p>
-            </div>
-          </div>
-          <div class="stats-panel">
-            <div class="stats-panel-head">
-              <div>
-                <h2 class="stats-panel-title">Par page</h2>
-                <p class="stats-panel-sub">Un lancé à distance compte pour une personne : une partie à deux téléphones en fait deux, comme elle fait deux lancés et deux finis dans l'onglet Stats. Seules les pages qui proposent le mode à distance apparaissent.</p>
-              </div>
-            </div>
-            <div id="admin-distance-list" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
-          </div>
-        </div>
-
-        <!-- Stats Tab -->
-        <div id="admin-stats-tab" class="hidden">
-          <!-- Deux compteurs et le ratio du jour entre les deux -->
-          <div class="stats-tetes">
-            <div class="stats-tete stats-tete--lances">
-              <p class="stats-tete-titre"><span aria-hidden="true">🚦</span> Lancés</p>
-              <p class="stats-tete-jour" id="admin-lances-jour">-</p>
-              <p class="stats-tete-sub">aujourd'hui</p>
+              <p class="stats-tete-titre">Lancés aujourd'hui</p>
+              <p class="stats-tete-jour"><span id="admin-lances-jour">-</span><span class="adm-delta hidden" id="adm-delta-lances"></span></p>
+              <svg class="adm-spark est-vide" id="adm-spark-lances" viewBox="0 0 124 42" preserveAspectRatio="none" aria-hidden="true"></svg>
+              <p class="stats-tete-sub">parties commencées, toutes pages</p>
               <p class="stats-tete-total">Total : <strong id="admin-lances-total">-</strong></p>
               <p class="stats-tete-sub" id="admin-lances-distance"></p>
             </div>
+            <div class="stats-tete stats-tete--finis">
+              <p class="stats-tete-titre">Terminés aujourd'hui</p>
+              <p class="stats-tete-jour"><span id="admin-finis-jour">-</span><span class="adm-delta hidden" id="adm-delta-finis"></span></p>
+              <svg class="adm-spark est-vide" id="adm-spark-finis" viewBox="0 0 124 42" preserveAspectRatio="none" aria-hidden="true"></svg>
+              <p class="stats-tete-sub">parties allées jusqu'au résultat</p>
+              <p class="stats-tete-total">Total : <strong id="admin-finis-total">-</strong></p>
+            </div>
             <div class="stats-tete stats-tete--ratio">
-              <p class="stats-tete-titre">Ratio du jour</p>
+              <p class="stats-tete-titre">Taux de finition du jour</p>
               <p class="stats-tete-jour" id="admin-ratio-jour">-</p>
               <p class="stats-tete-sub" id="admin-ratio-detail">des parties lancées vont au bout</p>
             </div>
-            <div class="stats-tete stats-tete--finis">
-              <p class="stats-tete-titre"><span aria-hidden="true">🏁</span> Finis</p>
-              <p class="stats-tete-jour" id="admin-finis-jour">-</p>
-              <p class="stats-tete-sub">aujourd'hui</p>
-              <p class="stats-tete-total">Total : <strong id="admin-finis-total">-</strong></p>
-            </div>
           </div>
 
-          <!-- Tops et flops : pages en hausse et en baisse, replie par defaut -->
-          <details class="stats-details">
-            <summary>
-              <span class="stats-details-emoji" aria-hidden="true">🚀</span>
-              <span>
-                <span class="stats-details-titre">Tops et flops</span>
-                <span class="stats-details-sub">Les 5 pages qui montent et les 5 qui baissent</span>
-              </span>
-              <svg class="stats-details-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="stats-details-corps">
-              <div class="stats-comp" role="group" aria-label="Comparaison">
-                <button class="stats-comp-btn" data-comp="1">Aujourd'hui vs hier</button>
-                <button class="stats-comp-btn active" data-comp="7">7 j vs 7 j précédents</button>
-                <button class="stats-comp-btn" data-comp="30">30 j vs 30 j précédents</button>
-              </div>
-              <div class="stats-movers">
-                <div>
-                  <h3 class="stats-movers-titre">📈 En hausse</h3>
-                  <div id="admin-movers-hausse"><p class="stats-movers-vide">Chargement...</p></div>
-                </div>
-                <div>
-                  <h3 class="stats-movers-titre">📉 En baisse</h3>
-                  <div id="admin-movers-baisse"><p class="stats-movers-vide">Chargement...</p></div>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <!-- Total daily evolution curve -->
+          <!-- Le grand graphique -->
           <div class="stats-panel">
             <div class="stats-panel-head">
               <div>
@@ -220,16 +148,60 @@
                 <p class="stats-panel-sub">Lancés, terminés et taux de finition, jour par jour. Cliquez une vignette pour masquer ou réafficher sa courbe. Le taux écarte les pages qui n'ont pas de parcours à abandonner : celles à résultat immédiat, et les jeux de cartes qu'on arrête quand on veut.</p>
               </div>
               <div class="stats-range" role="group" aria-label="Période">
-                <button class="stats-range-btn active" data-range="30">30 j</button>
-                <button class="stats-range-btn" data-range="90">90 j</button>
-                <button class="stats-range-btn" data-range="365">1 an</button>
+                <button class="stats-range-btn active" data-range="30" type="button">30 j</button>
+                <button class="stats-range-btn" data-range="90" type="button">90 j</button>
+                <button class="stats-range-btn" data-range="365" type="button">1 an</button>
               </div>
             </div>
             <div class="stats-legende" id="admin-stats-legende" role="group" aria-label="Courbes affichées"></div>
-            <canvas id="admin-stats-total-chart" class="stats-canvas" style="height:240px;"></canvas>
+            <canvas id="admin-stats-total-chart" class="stats-canvas adm-canvas--hero"></canvas>
           </div>
 
-          <!-- Per-quiz breakdown + selected curve, replies par defaut -->
+          <div class="adm-duo">
+            <!-- Tops et flops -->
+            <details class="stats-details" open>
+              <summary>
+                <span class="stats-details-emoji" aria-hidden="true">🚀</span>
+                <span>
+                  <span class="stats-details-titre">Tops et flops</span>
+                  <span class="stats-details-sub">Les 5 pages qui montent et les 5 qui baissent</span>
+                </span>
+                <svg class="stats-details-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </summary>
+              <div class="stats-details-corps">
+                <div class="stats-comp" role="group" aria-label="Comparaison">
+                  <button class="stats-comp-btn active" data-comp="1" type="button">Aujourd'hui vs hier</button>
+                  <button class="stats-comp-btn" data-comp="7" type="button">7 j vs 7 j précédents</button>
+                  <button class="stats-comp-btn" data-comp="30" type="button">30 j vs 30 j précédents</button>
+                </div>
+                <div class="stats-movers">
+                  <div>
+                    <h3 class="stats-movers-titre">📈 En hausse</h3>
+                    <div id="admin-movers-hausse"><p class="stats-movers-vide">Chargement...</p></div>
+                  </div>
+                  <div>
+                    <h3 class="stats-movers-titre">📉 En baisse</h3>
+                    <div id="admin-movers-baisse"><p class="stats-movers-vide">Chargement...</p></div>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <!-- La courbe d'une seule page -->
+            <div class="stats-panel">
+              <div class="stats-panel-head">
+                <div>
+                  <h2 class="stats-panel-title" id="admin-stats-chart-title">Sélectionnez une page ci-dessous</h2>
+                  <p class="stats-panel-sub">Lancés, finis et taux de la page choisie dans la liste, jour par jour.</p>
+                </div>
+              </div>
+              <div class="stats-souscourbe">
+                <canvas id="admin-stats-chart" class="stats-canvas adm-canvas--sec"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Toutes les pages -->
           <details class="stats-details">
             <summary>
               <span class="stats-details-emoji" aria-hidden="true">📋</span>
@@ -241,54 +213,53 @@
             </summary>
             <div class="stats-details-corps">
               <div class="stats-comp stats-comp--periode" role="group" aria-label="Période">
-                <button class="stats-comp-btn active" data-periode="0">Tout</button>
-                <button class="stats-comp-btn" data-periode="1">Aujourd'hui</button>
-                <button class="stats-comp-btn" data-periode="7">7 j</button>
-                <button class="stats-comp-btn" data-periode="30">30 j</button>
-                <button class="stats-comp-btn" data-periode="60">60 j</button>
-                <button class="stats-comp-btn" data-periode="90">90 j</button>
-                <button class="stats-comp-btn" data-periode="182">6 mois</button>
-                <button class="stats-comp-btn" data-periode="365">1 an</button>
+                <button class="stats-comp-btn active" data-periode="0" type="button">Tout</button>
+                <button class="stats-comp-btn" data-periode="1" type="button">Aujourd'hui</button>
+                <button class="stats-comp-btn" data-periode="7" type="button">7 j</button>
+                <button class="stats-comp-btn" data-periode="30" type="button">30 j</button>
+                <button class="stats-comp-btn" data-periode="60" type="button">60 j</button>
+                <button class="stats-comp-btn" data-periode="90" type="button">90 j</button>
+                <button class="stats-comp-btn" data-periode="182" type="button">6 mois</button>
+                <button class="stats-comp-btn" data-periode="365" type="button">1 an</button>
               </div>
-              <p class="stats-panel-sub" id="admin-stats-mesure-aide" style="margin-bottom:0.6rem;">Cliquez sur l'en-tête d'une colonne pour trier, sur une ligne pour voir sa courbe.</p>
+              <p class="stats-panel-sub" id="admin-stats-mesure-aide" style="margin:.6rem 0;">Cliquez sur l'en-tête d'une colonne pour trier, sur une ligne pour voir sa courbe.</p>
               <div id="admin-stats-list" class="stats-list"></div>
-              <div class="stats-souscourbe">
-                <h3 class="stats-panel-title" id="admin-stats-chart-title" style="font-size:0.95rem;">Sélectionnez un quiz ci-dessus</h3>
-                <canvas id="admin-stats-chart" class="stats-canvas" style="height:180px;"></canvas>
-              </div>
             </div>
           </details>
         </div>
 
-
-        <!-- Trafic Tab -->
+        <!-- ═══ Trafic ═══ -->
         <div id="admin-trafic-tab" class="hidden">
-          <div class="stats-comp stats-comp--periode" role="group" aria-label="Période">
-            <button class="stats-comp-btn" data-trafic-periode="1">Aujourd'hui</button>
-            <button class="stats-comp-btn active" data-trafic-periode="7">7 j</button>
-            <button class="stats-comp-btn" data-trafic-periode="30">30 j</button>
-            <button class="stats-comp-btn" data-trafic-periode="90">90 j</button>
-            <button class="stats-comp-btn" data-trafic-periode="365">1 an</button>
+          <div class="adm-toolbar">
+            <div class="stats-comp stats-comp--periode" role="group" aria-label="Période">
+              <button class="stats-comp-btn active" data-trafic-periode="1" type="button">Aujourd'hui</button>
+              <button class="stats-comp-btn" data-trafic-periode="7" type="button">7 j</button>
+              <button class="stats-comp-btn" data-trafic-periode="30" type="button">30 j</button>
+              <button class="stats-comp-btn" data-trafic-periode="90" type="button">90 j</button>
+              <button class="stats-comp-btn" data-trafic-periode="365" type="button">1 an</button>
+            </div>
           </div>
 
           <div class="trafic-kpis">
             <div class="stats-tete trafic-kpi--visites">
-              <p class="stats-tete-titre"><span aria-hidden="true">👣</span> Visites</p>
+              <p class="stats-tete-titre">Visites</p>
               <p class="stats-tete-jour" id="trafic-visites">-</p>
+              <svg class="adm-spark est-vide" id="adm-spark-visites" viewBox="0 0 124 42" preserveAspectRatio="none" aria-hidden="true"></svg>
               <p class="stats-tete-sub" id="trafic-visites-sub">sur la période</p>
             </div>
             <div class="stats-tete trafic-kpi--vues">
-              <p class="stats-tete-titre"><span aria-hidden="true">📄</span> Pages vues</p>
+              <p class="stats-tete-titre">Pages vues</p>
               <p class="stats-tete-jour" id="trafic-vues">-</p>
+              <svg class="adm-spark est-vide" id="adm-spark-vues" viewBox="0 0 124 42" preserveAspectRatio="none" aria-hidden="true"></svg>
               <p class="stats-tete-sub">rechargements compris</p>
             </div>
             <div class="stats-tete trafic-kpi--profondeur">
-              <p class="stats-tete-titre"><span aria-hidden="true">🧭</span> Pages par visite</p>
+              <p class="stats-tete-titre">Pages par visite</p>
               <p class="stats-tete-jour" id="trafic-ppv">-</p>
               <p class="stats-tete-sub">en moyenne</p>
             </div>
             <div class="stats-tete trafic-kpi--rebond">
-              <p class="stats-tete-titre"><span aria-hidden="true">↩️</span> Une seule page</p>
+              <p class="stats-tete-titre">Une seule page</p>
               <p class="stats-tete-jour" id="trafic-rebond">-</p>
               <p class="stats-tete-sub" id="trafic-rebond-sub">des visites repartent sans cliquer</p>
             </div>
@@ -302,10 +273,10 @@
               </div>
             </div>
             <div class="stats-legende" id="trafic-legende" role="group" aria-label="Courbes affichées"></div>
-            <canvas id="trafic-chart" class="stats-canvas" style="height:240px;"></canvas>
+            <canvas id="trafic-chart" class="stats-canvas adm-canvas--hero"></canvas>
           </div>
 
-          <div class="trafic-duo">
+          <div class="adm-duo">
             <div class="stats-panel">
               <div class="stats-panel-head">
                 <div>
@@ -335,9 +306,9 @@
             </div>
             <div class="stats-entetes">
               <span class="stats-entete-nom">Page</span>
-              <button class="stats-tri" data-tri-ent="visites" style="--col:hsl(258 70% 55%);">Visites <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-ent="lances" style="--col:hsl(217 91% 52%);">Lancés <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-ent="finis" style="--col:hsl(338 72% 52%);">Finis <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-ent="visites" style="--col:var(--adm-s-visites);" type="button">Visites <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-ent="lances" style="--col:var(--adm-s-lances);" type="button">Lancés <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-ent="finis" style="--col:var(--adm-s-finis);" type="button">Finis <span class="stats-tri-fleche">▾</span></button>
             </div>
             <div id="trafic-entonnoir" class="stats-list"><p class="stats-movers-vide">Chargement...</p></div>
           </div>
@@ -351,42 +322,44 @@
             </div>
             <div class="stats-entetes trafic-entetes">
               <span class="stats-entete-nom">Page</span>
-              <button class="stats-tri" data-tri-pages="pages_vues" style="--col:hsl(var(--muted-foreground));">Vues <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-pages="visites" style="--col:hsl(258 70% 55%);">Visites <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-pages="entrees" style="--col:hsl(217 91% 52%);">Directes <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-pages="rebond" style="--col:hsl(38 92% 45%);">Rebond <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-pages="pages_vues" style="--col:hsl(var(--muted-foreground));" type="button">Vues <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-pages="visites" style="--col:var(--adm-s-visites);" type="button">Visites <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-pages="entrees" style="--col:var(--adm-s-lances);" type="button">Directes <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-pages="rebond" style="--col:var(--adm-s-taux);" type="button">Rebond <span class="stats-tri-fleche">▾</span></button>
             </div>
             <div id="trafic-pages" class="stats-list"><p class="stats-movers-vide">Chargement...</p></div>
           </div>
         </div>
 
-        <!-- Blog Tab -->
+        <!-- ═══ Blog ═══ -->
         <div id="admin-blog-tab" class="hidden">
-          <div class="stats-comp stats-comp--periode" role="group" aria-label="Période">
-            <button class="stats-comp-btn" data-blog-periode="7">7 j</button>
-            <button class="stats-comp-btn active" data-blog-periode="30">30 j</button>
-            <button class="stats-comp-btn" data-blog-periode="90">90 j</button>
-            <button class="stats-comp-btn" data-blog-periode="365">1 an</button>
+          <div class="adm-toolbar">
+            <div class="stats-comp stats-comp--periode" role="group" aria-label="Période">
+              <button class="stats-comp-btn" data-blog-periode="7" type="button">7 j</button>
+              <button class="stats-comp-btn active" data-blog-periode="30" type="button">30 j</button>
+              <button class="stats-comp-btn" data-blog-periode="90" type="button">90 j</button>
+              <button class="stats-comp-btn" data-blog-periode="365" type="button">1 an</button>
+            </div>
           </div>
 
           <div class="trafic-kpis">
             <div class="stats-tete trafic-kpi--visites">
-              <p class="stats-tete-titre"><span aria-hidden="true">📖</span> Lectures</p>
+              <p class="stats-tete-titre">Lectures</p>
               <p class="stats-tete-jour" id="blog-lectures-total">-</p>
               <p class="stats-tete-sub" id="blog-lectures-sub">sur la période</p>
             </div>
             <div class="stats-tete trafic-kpi--vues">
-              <p class="stats-tete-titre"><span aria-hidden="true">👀</span> Ouvertures</p>
+              <p class="stats-tete-titre">Ouvertures</p>
               <p class="stats-tete-jour" id="blog-ouvertures-total">-</p>
               <p class="stats-tete-sub">visites qui ont affiché un article</p>
             </div>
             <div class="stats-tete trafic-kpi--profondeur">
-              <p class="stats-tete-titre"><span aria-hidden="true">📈</span> Taux de lecture</p>
+              <p class="stats-tete-titre">Taux de lecture</p>
               <p class="stats-tete-jour" id="blog-taux-total">-</p>
               <p class="stats-tete-sub">des ouvertures vont jusqu'à la lecture</p>
             </div>
             <div class="stats-tete trafic-kpi--rebond">
-              <p class="stats-tete-titre"><span aria-hidden="true">🔎</span> Arrivées directes</p>
+              <p class="stats-tete-titre">Arrivées directes</p>
               <p class="stats-tete-jour" id="blog-entrees-total">-</p>
               <p class="stats-tete-sub">des ouvertures viennent d'un moteur ou d'un lien</p>
             </div>
@@ -400,7 +373,7 @@
               </div>
             </div>
             <div class="stats-legende" id="blog-sourcepref-legende" role="group" aria-label="Courbes affichées"></div>
-            <canvas id="blog-sourcepref-chart" class="stats-canvas" style="height:220px;"></canvas>
+            <canvas id="blog-sourcepref-chart" class="stats-canvas adm-canvas--sec"></canvas>
             <p class="blog-sourcepref-note" id="blog-sourcepref-note"></p>
           </div>
 
@@ -413,68 +386,135 @@
             </div>
             <div class="stats-entetes blog-entetes">
               <span class="stats-entete-nom">Article</span>
-              <button class="stats-tri" data-tri-blog="lectures" style="--col:hsl(258 70% 55%);">Lectures <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-blog="ouvertures" style="--col:hsl(var(--muted-foreground));">Ouvertures <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-blog="entrees" style="--col:hsl(217 91% 52%);">Directes <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-blog="total" style="--col:hsl(338 72% 52%);">Total <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-blog="lectures" style="--col:var(--adm-s-visites);" type="button">Lectures <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-blog="ouvertures" style="--col:hsl(var(--muted-foreground));" type="button">Ouvertures <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-blog="entrees" style="--col:var(--adm-s-lances);" type="button">Directes <span class="stats-tri-fleche">▾</span></button>
+              <button class="stats-tri" data-tri-blog="total" style="--col:var(--adm-s-finis);" type="button">Total <span class="stats-tri-fleche">▾</span></button>
             </div>
             <div id="blog-articles" class="stats-list"><p class="stats-movers-vide">Chargement...</p></div>
           </div>
         </div>
 
-        <!-- Leads Tab -->
-        <div id="admin-leads-tab" class="hidden">
-          <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
-            <h2 class="text-lg font-semibold">Leads</h2>
-            <button id="leads-refresh" class="btn btn-outline btn-sm">
-              <svg class="w-4 h-4 inline-block mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
-              Actualiser
-            </button>
+        <!-- ═══ À distance ═══ -->
+        <div id="admin-distance-tab" class="hidden">
+          <p class="adm-note" id="admin-distance-note"></p>
+          <div class="stats-tetes">
+            <div class="stats-tete stats-tete--lances">
+              <p class="stats-tete-titre">Lancés, toutes pages</p>
+              <p class="stats-tete-jour" id="admin-distance-lances">-</p>
+              <p class="stats-tete-sub">depuis la mise en service du mode à distance</p>
+            </div>
+            <div class="stats-tete stats-tete--finis">
+              <p class="stats-tete-titre">Lancés à distance</p>
+              <p class="stats-tete-jour" id="admin-distance-total">-</p>
+              <p class="stats-tete-sub">un par téléphone : une partie à deux en fait deux</p>
+              <p class="stats-tete-total" id="admin-distance-fins"></p>
+            </div>
+            <div class="stats-tete stats-tete--ratio">
+              <p class="stats-tete-titre">Part à distance</p>
+              <p class="stats-tete-jour" id="admin-distance-part">-</p>
+              <p class="stats-tete-sub" id="admin-distance-detail">des lancements se jouent chacun sur son téléphone</p>
+            </div>
           </div>
-          <div class="glass-card rounded-xl overflow-hidden">
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Évolution quotidienne</h2>
+                <p class="stats-panel-sub">Lancements de toutes les pages, lancements à distance et part à distance, jour par jour depuis la mise en service. Cliquez une vignette pour masquer ou réafficher sa courbe.</p>
+              </div>
+            </div>
+            <div class="stats-legende" id="admin-distance-legende" role="group" aria-label="Courbes affichées"></div>
+            <canvas id="admin-distance-chart" class="stats-canvas adm-canvas--hero"></canvas>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Par page</h2>
+                <p class="stats-panel-sub">Un lancé à distance compte pour une personne : une partie à deux téléphones en fait deux, comme elle fait deux lancés et deux finis dans l'onglet Parties. Les lancés de chaque page sont comptés depuis la mise en service, pour que la part soit juste. Seules les pages qui proposent le mode à distance apparaissent.</p>
+              </div>
+            </div>
+            <div id="admin-distance-list" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+        </div>
+
+        <!-- ═══ Avis ═══ -->
+        <div id="admin-reviews-tab" class="hidden">
+          <div class="stats-tetes">
+            <div class="stats-tete stats-tete--ratio">
+              <p class="stats-tete-titre">Note moyenne</p>
+              <p class="stats-tete-jour" id="admin-stat-avg">-</p>
+              <p class="stats-tete-sub">sur 5, avis approuvés</p>
+            </div>
+            <div class="stats-tete stats-tete--lances">
+              <p class="stats-tete-titre">En attente</p>
+              <p class="stats-tete-jour" id="admin-stat-pending">-</p>
+              <p class="stats-tete-sub">avis à modérer</p>
+            </div>
+            <div class="stats-tete stats-tete--finis">
+              <p class="stats-tete-titre">Approuvés</p>
+              <p class="stats-tete-jour" id="admin-stat-approved">-</p>
+              <p class="stats-tete-sub">visibles sur le site</p>
+            </div>
+          </div>
+          <div class="adm-toolbar">
+            <div class="stats-comp" role="group" aria-label="Filtre des avis">
+              <button class="admin-filter stats-comp-btn active" data-filter="all" type="button">Tous <span id="admin-filter-all-count"></span></button>
+              <button class="admin-filter stats-comp-btn" data-filter="pending" type="button">En attente <span id="admin-filter-pending-count"></span></button>
+              <button class="admin-filter stats-comp-btn" data-filter="approved" type="button">Approuvés <span id="admin-filter-approved-count"></span></button>
+            </div>
+            <button id="admin-refresh" class="btn btn-outline btn-sm" type="button"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg> Actualiser</button>
+          </div>
+          <div id="admin-reviews-list" class="adm-cartes">
+            <p class="text-center text-muted-foreground py-8">Chargement...</p>
+          </div>
+        </div>
+
+        <!-- ═══ Leads ═══ -->
+        <div id="admin-leads-tab" class="hidden">
+          <div class="adm-toolbar">
+            <h2>Leads</h2>
+            <button id="leads-refresh" class="btn btn-outline btn-sm" type="button"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg> Actualiser</button>
+          </div>
+          <div class="adm-table-wrap">
             <div style="overflow-x:auto;">
               <table id="leads-table" style="width:100%;border-collapse:collapse;font-size:0.875rem;">
-                <thead style="background:hsl(var(--muted));">
+                <thead>
                   <tr>
-                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;">Prénom</th>
-                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;">Adresse e-mail</th>
-                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;">Sujet</th>
-                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:600;">Date</th>
-                    <th style="padding:0.75rem 1rem;text-align:center;font-weight:600;">Vérifié</th>
-                    <th style="padding:0.75rem 1rem;text-align:center;font-weight:600;">Clôturé</th>
+                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Prénom</th>
+                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Adresse e-mail</th>
+                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Sujet</th>
+                    <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Date</th>
+                    <th style="padding:0.75rem 1rem;text-align:center;font-weight:700;">Vérifié</th>
+                    <th style="padding:0.75rem 1rem;text-align:center;font-weight:700;">Clôturé</th>
                   </tr>
                 </thead>
                 <tbody id="leads-table-body">
-                  <tr><td colspan="5" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Chargement...</td></tr>
+                  <tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Chargement...</td></tr>
                 </tbody>
               </table>
             </div>
           </div>
         </div>
 
-        <!-- Messages Tab -->
+        <!-- ═══ Messagerie ═══ -->
         <div id="admin-messages-tab" class="hidden">
-          <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
-            <h2 class="text-lg font-semibold">Messagerie</h2>
-            <div class="flex items-center gap-2 flex-wrap">
-              <div class="flex rounded-lg border border-border overflow-hidden">
-                <button class="messages-filter px-3 py-1.5 text-sm transition-colors active" data-filter="all">Tous</button>
-                <button class="messages-filter px-3 py-1.5 text-sm transition-colors" data-filter="new">Nouveaux</button>
-                <button class="messages-filter px-3 py-1.5 text-sm transition-colors" data-filter="read">Lus</button>
-                <button class="messages-filter px-3 py-1.5 text-sm transition-colors" data-filter="archived">Archivés</button>
-              </div>
-              <button id="messages-refresh" class="btn btn-outline btn-sm">
-                <svg class="w-4 h-4 inline-block mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
-                Actualiser
-              </button>
+          <div class="adm-toolbar">
+            <div class="stats-comp" role="group" aria-label="Filtre des messages">
+              <button class="messages-filter stats-comp-btn active" data-filter="all" type="button">Tous</button>
+              <button class="messages-filter stats-comp-btn" data-filter="new" type="button">Nouveaux</button>
+              <button class="messages-filter stats-comp-btn" data-filter="read" type="button">Lus</button>
+              <button class="messages-filter stats-comp-btn" data-filter="archived" type="button">Archivés</button>
             </div>
+            <button id="messages-refresh" class="btn btn-outline btn-sm" type="button"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg> Actualiser</button>
           </div>
-          <div id="messages-list" class="space-y-3">
+          <div id="messages-list" class="adm-cartes">
             <p class="text-center text-muted-foreground py-8">Chargement...</p>
           </div>
         </div>
 
-        <!-- Affiliation Tab -->
+        <!-- ═══ Affiliation ═══ -->
         <div id="admin-affiliation-tab" class="hidden">
 
           <!-- Saisie du jeton. Il n'est jamais écrit dans le dépôt : le site
@@ -603,438 +643,7 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<style>
-  @keyframes spin{to{transform:rotate(360deg)}}
-  /* ── Stats tab ── */
-  .stats-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem;}
-  .stats-kpi{display:flex;align-items:center;gap:0.9rem;padding:1.1rem 1.25rem;border-radius:1rem;background:hsl(var(--card));border:1px solid hsl(var(--border));box-shadow:0 4px 16px -8px hsl(var(--primary)/0.18);}
-  .stats-kpi-icon{width:2.75rem;height:2.75rem;border-radius:0.85rem;display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:#fff;flex-shrink:0;box-shadow:0 4px 12px -4px hsl(var(--primary)/0.5);}
-  .stats-kpi-value{font-family:'Poppins','Inter',sans-serif;font-size:1.6rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums;}
-  .stats-kpi-label{font-size:0.72rem;color:hsl(var(--muted-foreground));margin-top:0.25rem;text-transform:uppercase;letter-spacing:0.03em;font-weight:600;}
-  .stats-panel{background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem;padding:1.35rem 1.4rem;margin-bottom:1.5rem;box-shadow:0 4px 16px -10px hsl(var(--primary)/0.15);}
-  .stats-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;}
-  .stats-panel-title{font-family:'Poppins','Inter',sans-serif;font-size:1.05rem;font-weight:700;margin:0;}
-  .stats-panel-sub{font-size:0.8rem;color:hsl(var(--muted-foreground));margin:0.15rem 0 0;}
-  .stats-range{display:inline-flex;border:1px solid hsl(var(--border));border-radius:999px;overflow:hidden;flex-shrink:0;}
-  .stats-range-btn{padding:0.35rem 0.85rem;font-size:0.8rem;font-weight:600;background:transparent;border:none;cursor:pointer;color:hsl(var(--muted-foreground));transition:background .15s,color .15s;}
-  .stats-range-btn.active{background:hsl(var(--primary));color:#fff;}
-  .stats-canvas{width:100%;display:block;}
-  /* Une ligne = une page, trois chiffres par ligne. Le fond se remplit
-     selon la colonne de tri : classer par ratio dessine les ratios, classer
-     par lances dessine les volumes. Un filet separe chaque ligne, sinon
-     quarante lignes collees ne se lisent pas. */
-  .stats-list{display:flex;flex-direction:column;}
-  .stats-avis{font-size:0.78rem;line-height:1.5;color:hsl(var(--muted-foreground));background:hsl(38 92% 55%/0.1);border-left:3px solid hsl(38 92% 50%);border-radius:0.4rem;padding:0.55rem 0.75rem;margin-bottom:0.6rem;}
-  .stats-entetes{display:flex;align-items:center;gap:0.5rem;padding:0.3rem 0.7rem 0.45rem;border-bottom:2px solid hsl(var(--border));margin-bottom:0.1rem;}
-  .stats-entete-nom{flex:1;min-width:0;font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:hsl(var(--muted-foreground));}
-  .stats-tri{flex:0 0 5.2rem;display:flex;align-items:center;justify-content:flex-end;gap:0.2rem;background:none;border:none;padding:0.15rem 0.2rem;cursor:pointer;border-radius:0.35rem;font-size:0.7rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:hsl(var(--muted-foreground));white-space:nowrap;transition:color .15s,background .15s;}
-  .stats-tri:hover{background:hsl(var(--muted)/0.6);color:hsl(var(--foreground));}
-  .stats-tri.est-actif{color:var(--col);}
-  .stats-tri-fleche{font-size:0.65rem;opacity:0.35;}
-  .stats-tri.est-actif .stats-tri-fleche{opacity:1;}
-  /* Sur « Tout », la colonne des lancés date sa mesure : sans ça, une page
-     ancienne à 12 finis pour 0 lancé ressemble à un compteur cassé. */
-  .stats-tri-note{flex-basis:100%;font-size:0.55rem;font-weight:600;letter-spacing:0;text-transform:none;opacity:0.65;text-align:right;}
-  .stats-tri{flex-wrap:wrap;}
-  .stats-row{position:relative;display:flex;align-items:center;gap:0.5rem;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid hsl(var(--border)/0.6);padding:0.55rem 0.7rem;cursor:pointer;color:inherit;overflow:hidden;transition:background .15s;}
-  .stats-row:last-child{border-bottom:none;}
-  .stats-row::before{content:'';position:absolute;inset:0 auto 0 0;width:var(--part,0%);background:color-mix(in srgb, var(--fam) 11%, transparent);pointer-events:none;transition:width .25s ease;}
-  .stats-row:hover{background:hsl(var(--muted)/0.45);}
-  .stats-row.active{box-shadow:inset 2px 0 0 var(--fam);background:hsl(var(--muted)/0.5);}
-  .stats-row>*{position:relative;}
-  .stats-row-name{flex:1;min-width:0;font-size:0.88rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-  .stats-cell{flex:0 0 5.2rem;text-align:right;font-variant-numeric:tabular-nums;font-size:0.95rem;font-weight:700;}
-  .stats-cell--lances{color:hsl(217 91% 52%);}
-  .stats-cell--finis{color:hsl(338 72% 52%);}
-  .dark .stats-cell--lances{color:hsl(217 90% 70%);}
-  .dark .stats-cell--finis{color:hsl(338 80% 68%);}
-  .stats-cell--ratio{font-size:1.05rem;font-weight:800;}
-  /* Le delta du jour, sous le chiffre : assez petit pour ne pas concurrencer
-     le cumul, assez present pour se voir. Vert, comme un gain. */
-  .stats-cell{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;}
-  .stats-cell-jour{font-size:0.66rem;font-weight:700;color:hsl(150 62% 38%);letter-spacing:0;}
-  .dark .stats-cell-jour{color:hsl(150 55% 55%);}
-  .stats-cell--ratio .stats-cell-jour{color:hsl(var(--muted-foreground));}
-  .stats-cell.est-faible{color:hsl(0 72% 50%);}
-  .dark .stats-cell.est-faible{color:hsl(0 78% 68%);}
-  .stats-cell.est-fort{color:hsl(150 62% 36%);}
-  .dark .stats-cell.est-fort{color:hsl(150 55% 55%);}
-  .stats-cell.est-vide{color:hsl(var(--muted-foreground)/0.5);font-weight:600;font-size:0.85rem;}
-  @media (max-width:640px){
-    .stats-cell,.stats-tri{flex-basis:3.9rem;font-size:0.85rem;}
-    .stats-cell--ratio{font-size:0.95rem;}
-    .stats-row-name{font-size:0.82rem;}
-  }
-  /* Regroupement tests / quiz / jeux. Une couleur par famille, reprise sur
-     l'en-tete, sur le liseré de chaque ligne et sur sa barre : la liste fait
-     une quarantaine de pages, sans repere visuel on la lit mal. */
-  .stats-groupe{margin-top:1rem;}
-  .stats-groupe:first-child{margin-top:0.2rem;}
-  .stats-groupe-tete{display:flex;align-items:center;gap:0.5rem;padding:0.35rem 0.4rem;margin-bottom:0.25rem;border-bottom:1px solid hsl(var(--border));}
-  .stats-groupe-pastille{width:0.55rem;height:0.55rem;border-radius:9999px;background:var(--fam);flex:0 0 auto;}
-  .stats-groupe-nom{font-size:0.78rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--fam);}
-  .stats-groupe-compte{margin-left:auto;font-size:0.75rem;font-weight:600;color:hsl(var(--muted-foreground));font-variant-numeric:tabular-nums;}
-  .stats-row{border-left:2px solid transparent;}
-  .stats-groupe .stats-row{border-left-color:color-mix(in srgb, var(--fam) 45%, transparent);}
-  .stats-groupe .stats-row-bar>span{background:var(--fam);}
-  .stats-fam-test{--fam:hsl(265 62% 58%);}
-  .stats-fam-quiz{--fam:hsl(338 72% 58%);}
-  .stats-fam-jeu{--fam:hsl(172 60% 40%);}
-  .dark .stats-fam-test{--fam:hsl(265 70% 70%);}
-  .dark .stats-fam-quiz{--fam:hsl(338 80% 68%);}
-  .dark .stats-fam-jeu{--fam:hsl(172 55% 55%);}
-  /* Taux de finition : la valeur remplace le total, la barre represente le
-     pourcentage lui-meme. En dessous de 40 % la valeur passe en rouge, c'est
-     la lecture utile de tout ce tableau. */
-  .stats-row-val.est-faible{color:hsl(0 70% 52%);}
-  .dark .stats-row-val.est-faible{color:hsl(0 75% 68%);}
-  .stats-row-val.est-fort{color:hsl(150 62% 38%);}
-  .dark .stats-row-val.est-fort{color:hsl(150 55% 55%);}
-  .stats-row-val{flex-basis:3.6rem;}
-  /* Colonne secondaire : l'autre nombre du couple, en gris, pour garder le
-     contexte quand on regarde un ratio (128 sur 340). */
-  /* Trois blocs en tete : le compteur des lances, le ratio du jour au
-     milieu, le compteur des finis. Chaque compteur porte le chiffre du jour
-     en grand et le cumul en petit : c'est le couple qu'on regarde. */
-  .stats-tetes{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;margin-bottom:1.5rem;align-items:stretch;}
-  .stats-tete{border:1px solid hsl(var(--border));border-radius:1rem;padding:1rem 1.25rem;display:flex;flex-direction:column;justify-content:center;background:hsl(var(--card)/0.5);}
-  .stats-tete-titre{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--tete);}
-  .stats-tete-jour{font-size:2rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--tete);margin-top:0.15rem;}
-  .stats-tete-sub{font-size:0.75rem;color:hsl(var(--muted-foreground));}
-  .stats-tete-total{margin-top:0.5rem;padding-top:0.5rem;border-top:1px dashed hsl(var(--border));font-size:0.8rem;color:hsl(var(--muted-foreground));}
-  .stats-tete-total strong{color:hsl(var(--foreground));font-variant-numeric:tabular-nums;}
-  .stats-tete--lances{--tete:hsl(217 91% 60%);}
-  .stats-tete--finis{--tete:hsl(338 72% 58%);}
-  .stats-tete--ratio{--tete:hsl(38 92% 50%);min-width:11rem;text-align:center;border-color:var(--tete);}
-  .stats-tete--ratio .stats-tete-titre{justify-content:center;}
-  .stats-tete--ratio .stats-tete-jour{font-size:2.6rem;}
-  .dark .stats-tete--lances{--tete:hsl(217 90% 70%);}
-  .dark .stats-tete--finis{--tete:hsl(338 80% 68%);}
-  .dark .stats-tete--ratio{--tete:hsl(38 95% 62%);}
-  @media (max-width:700px){.stats-tetes{grid-template-columns:1fr;}.stats-tete--ratio{min-width:0;}}
-  /* ── Onglet Trafic ──────────────────────────────────────────────────
-     Il reprend le vocabulaire visuel des stats (panneaux, lignes, cellules
-     alignees a droite) et n'ajoute que ce qui lui est propre : une grille de
-     quatre indicateurs au lieu de trois et des barres horizontales pour les
-     repartitions. */
-  .trafic-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0.9rem;margin-bottom:1.5rem;}
-  .trafic-kpi--visites{--tete:hsl(258 70% 52%);}
-  .trafic-kpi--vues{--tete:hsl(199 85% 42%);}
-  .trafic-kpi--profondeur{--tete:hsl(150 55% 36%);}
-  .trafic-kpi--rebond{--tete:hsl(38 92% 42%);}
-  .dark .trafic-kpi--visites{--tete:hsl(258 85% 76%);}
-  .dark .trafic-kpi--vues{--tete:hsl(199 85% 65%);}
-  .dark .trafic-kpi--profondeur{--tete:hsl(150 55% 60%);}
-  .dark .trafic-kpi--rebond{--tete:hsl(38 92% 65%);}
-  @media (max-width:900px){.trafic-kpis{grid-template-columns:repeat(2,1fr);}}
-  @media (max-width:420px){.trafic-kpis{grid-template-columns:1fr;}}
-  .trafic-duo{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
-  .trafic-duo>.stats-panel{margin-bottom:1.5rem;}
-  @media (max-width:900px){.trafic-duo{grid-template-columns:1fr;gap:0;}}
-  /* Barres de repartition : la valeur est lisible meme quand la barre est
-     minuscule, parce que le chiffre vit a droite et pas dans la barre. */
-  .trafic-barres{display:flex;flex-direction:column;gap:0.4rem;}
-  .trafic-barre{display:flex;align-items:center;gap:0.6rem;font-size:0.82rem;}
-  .trafic-barre-nom{flex:0 0 7.5rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600;}
-  .trafic-barre-piste{flex:1;min-width:0;height:0.5rem;border-radius:9999px;background:hsl(var(--muted));overflow:hidden;}
-  /* display:block obligatoire : sur un span en flux inline, width et height
-     sont ignores et la jauge ne se dessine jamais. */
-  .trafic-barre-jauge{display:block;height:100%;border-radius:9999px;background:var(--bar,hsl(258 70% 55%));transition:width .25s ease;}
-  /* Le nombre et sa part l'un au-dessus de l'autre : cote a cote, « 2 778 »
-     et « 72 % » ne tenaient pas dans la colonne sur telephone et la ligne
-     doublait de hauteur. */
-  .trafic-barre-val{flex:0 0 4.4rem;text-align:right;font-variant-numeric:tabular-nums;font-weight:700;display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;}
-  .trafic-barre-pct{font-size:0.7rem;font-weight:600;color:hsl(var(--muted-foreground));}
-  @media (max-width:640px){.trafic-barre-nom{flex-basis:6rem;}}
-  /* Cinq colonnes dans « Toutes les pages » : les cellules retrecissent un
-     peu pour que le chemin garde de la place. */
-  .trafic-entetes .stats-tri,.trafic-ligne .stats-cell{flex-basis:4.6rem;}
-  @media (max-width:640px){
-    .trafic-entetes .stats-tri,.trafic-ligne .stats-cell{flex-basis:3.4rem;font-size:0.8rem;}
-    /* Quatre colonnes de chiffres plus un chemin ne tiennent pas sur un
-       telephone : le chemin se reduisait a « /te... ». « Vues » est la
-       colonne dont on peut se passer, les visites disent la meme chose sans
-       compter les rechargements. Elle revient des qu'il y a la place. */
-    .trafic-entetes .stats-tri[data-tri-pages="pages_vues"],
-    .trafic-ligne .stats-cell--vues{display:none;}
-    /* Et le chemin passe sur deux lignes plutot que d'etre coupe. */
-    #trafic-pages .stats-row-name{white-space:normal;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.25;}
-  }
-  .trafic-ligne{cursor:default;}
-  .trafic-ligne:hover{background:none;}
-  .trafic-sous{font-size:0.66rem;font-weight:600;color:hsl(var(--muted-foreground));letter-spacing:0;}
-  .stats-cell--visites{color:hsl(258 70% 52%);}
-  .stats-cell--vues{color:hsl(var(--muted-foreground));}
-  .dark .stats-cell--visites{color:hsl(258 85% 76%);}
-  .trafic-vide{font-size:0.82rem;color:hsl(var(--muted-foreground));padding:1.2rem 0.4rem;text-align:center;}
-  /* Le selecteur de periode a huit entrees : il doit pouvoir passer a la ligne. */
-  .stats-comp--periode{flex-wrap:wrap;}
-  /* Vignettes de selection des courbes, facon Search Console : on clique
-     pour masquer ou reafficher une courbe, la vignette eteinte se grise. */
-  .stats-legende{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.5rem;margin:0.25rem 0 0.9rem;}
-  .stats-leg{display:flex;flex-direction:column;gap:0.15rem;align-items:flex-start;padding:0.55rem 0.75rem;border:1px solid hsl(var(--border));border-radius:0.7rem;background:transparent;cursor:pointer;text-align:left;color:inherit;transition:background .15s,border-color .15s,opacity .15s;border-top:3px solid var(--leg);}
-  .stats-leg:hover{background:hsl(var(--muted)/0.5);}
-  .stats-leg-nom{display:flex;align-items:center;gap:0.4rem;font-size:0.75rem;font-weight:600;color:hsl(var(--muted-foreground));}
-  .stats-leg-puce{width:0.5rem;height:0.5rem;border-radius:9999px;background:var(--leg);flex:0 0 auto;}
-  .stats-leg-val{font-size:1.15rem;font-weight:700;font-variant-numeric:tabular-nums;color:var(--leg);}
-  .stats-leg.est-eteinte{opacity:0.45;border-top-color:hsl(var(--border));}
-  .stats-leg.est-eteinte .stats-leg-val{color:hsl(var(--muted-foreground));}
-  .stats-leg.est-eteinte .stats-leg-puce{background:hsl(var(--muted-foreground));}
-  .stats-infobulle-ligne{display:flex;align-items:center;gap:0.4rem;white-space:nowrap;}
-  .stats-infobulle-puce{width:0.45rem;height:0.45rem;border-radius:9999px;flex:0 0 auto;}
-  .stats-infobulle-nom{color:hsl(var(--muted-foreground));font-size:0.72rem;}
-  .stats-infobulle-ligne .stats-infobulle-val{margin-left:auto;font-weight:700;font-variant-numeric:tabular-nums;}
-  .stats-row-sur{flex:0 0 8.5rem;text-align:right;font-size:0.75rem;font-variant-numeric:tabular-nums;color:hsl(var(--muted-foreground));white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  @media (max-width:520px){.stats-row-sur{display:none;}}
-
-  /* ── Onglet Blog ──────────────────────────────────────────────────────
-     Meme grille que « Toutes les pages », a une difference pres : la
-     premiere colonne porte le titre de l'article et pas son chemin. Un
-     titre est long, il passe donc sur deux lignes plutot que d'etre coupe
-     au milieu d'un mot. */
-  .blog-entetes .stats-tri,.blog-ligne .stats-cell{flex-basis:4.6rem;}
-  .blog-ligne{cursor:default;}
-  .blog-ligne:hover{background:none;}
-  #blog-articles .stats-row-name{white-space:normal;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3;}
-  .blog-lien{color:inherit;text-decoration:none;}
-  .blog-lien:hover{color:hsl(var(--primary));text-decoration:underline;}
-  /* Le meme article existe en cinq langues : sans cette pastille, cinq
-     lignes de titres traduits se ressemblent trop pour etre distinguees.
-     Elle passe devant le titre et pas derriere : sur telephone, un titre
-     long est coupe a deux lignes et emportait la pastille avec lui. */
-  .blog-langue{margin-right:0.45rem;padding:0.05rem 0.35rem;border-radius:0.35rem;background:hsl(var(--muted));color:hsl(var(--muted-foreground));font-size:0.62rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;}
-  .blog-sourcepref-note{margin:0.85rem 0 0;font-size:0.72rem;line-height:1.5;color:hsl(var(--muted-foreground));}
-  @media (max-width:640px){
-    .blog-entetes .stats-tri,.blog-ligne .stats-cell{flex-basis:3.4rem;font-size:0.8rem;}
-    /* Quatre colonnes de chiffres et un titre ne tiennent pas sur un
-       telephone. « Ouvertures » saute en premier : c'est la colonne dont on
-       peut se passer, les lectures portent l'information utile. */
-    .blog-entetes .stats-tri[data-tri-blog="ouvertures"],.blog-ligne .stats-cell--vues{display:none;}
-  }
-
-  /* ── Sections repliables (sommaire) ── */
-  .stats-details{background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem;margin-bottom:1.5rem;box-shadow:0 4px 16px -10px hsl(var(--primary)/0.15);}
-  .stats-details summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:0.85rem;padding:1.05rem 1.4rem;border-radius:1rem;transition:background .15s;}
-  .stats-details summary::-webkit-details-marker{display:none;}
-  .stats-details summary:hover{background:hsl(var(--muted)/0.5);}
-  .stats-details-emoji{font-size:1.25rem;flex-shrink:0;}
-  .stats-details-titre{display:block;font-family:'Poppins','Inter',sans-serif;font-size:1.05rem;font-weight:700;}
-  .stats-details-sub{display:block;font-size:0.78rem;color:hsl(var(--muted-foreground));margin-top:0.1rem;}
-  .stats-details-chevron{width:1.15rem;height:1.15rem;margin-left:auto;flex-shrink:0;color:hsl(var(--muted-foreground));transition:transform .2s;}
-  .stats-details[open] .stats-details-chevron{transform:rotate(180deg);}
-  .stats-details-corps{padding:0.25rem 1.4rem 1.35rem;}
-  @media (max-width:520px){.stats-details summary{padding:0.95rem 1rem;}.stats-details-corps{padding:0.25rem 1rem 1.1rem;}}
-
-  /* ── Tops et flops ── */
-  .stats-comp{display:inline-flex;border:1px solid hsl(var(--border));border-radius:999px;overflow:hidden;max-width:100%;}
-  .stats-comp-btn{padding:0.35rem 0.8rem;font-size:0.78rem;font-weight:600;background:transparent;border:none;cursor:pointer;color:hsl(var(--muted-foreground));transition:background .15s,color .15s;white-space:nowrap;}
-  .stats-comp-btn.active{background:hsl(var(--primary));color:#fff;}
-  @media (max-width:560px){
-    div:has(> .stats-comp){max-width:100%;overflow-x:auto;scrollbar-width:none;}
-    .stats-comp{flex-shrink:0;}
-  }
-  .stats-movers{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.1rem;}
-  @media (max-width:700px){.stats-movers{grid-template-columns:1fr;}}
-  .stats-movers-titre{font-size:0.85rem;font-weight:700;margin-bottom:0.5rem;}
-  .stats-movers-vide{font-size:0.82rem;color:hsl(var(--muted-foreground));padding:0.4rem 0;}
-  .stats-mover{display:flex;align-items:center;gap:0.6rem;padding:0.42rem 0.4rem;border-radius:0.5rem;}
-  .stats-mover:nth-child(odd){background:hsl(var(--muted)/0.35);}
-  .stats-mover-nom{flex:1;font-size:0.82rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;}
-  .stats-mover-vals{font-size:0.76rem;color:hsl(var(--muted-foreground));font-variant-numeric:tabular-nums;white-space:nowrap;}
-  .stats-mover-delta{font-size:0.76rem;font-weight:700;padding:0.14rem 0.5rem;border-radius:999px;font-variant-numeric:tabular-nums;white-space:nowrap;}
-  .stats-mover-delta.est-plus{background:hsl(150 62% 40%/0.13);color:hsl(150 62% 32%);}
-  .dark .stats-mover-delta.est-plus{color:hsl(150 55% 60%);}
-  .stats-mover-delta.est-moins{background:hsl(0 72% 52%/0.12);color:hsl(0 72% 42%);}
-  .dark .stats-mover-delta.est-moins{color:hsl(0 80% 68%);}
-
-  .stats-souscourbe{margin-top:1.1rem;padding-top:1rem;border-top:1px solid hsl(var(--border));}
-
-  /* Les groupes de boutons segmentés (onglets, filtres avis, filtres messages)
-     sont des .flex qui ne rétrécissent pas : sur téléphone ils dépassaient de
-     la vue et décalaient toute la page vers la droite, quel que soit l'onglet
-     affiché. On les borne à la largeur disponible et on les laisse défiler. */
-  @media (max-width:520px){
-    div:has(> .admin-filter),
-    div:has(> .messages-filter),
-    div:has(> .admin-tab){
-      max-width:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;
-    }
-    div:has(> .admin-filter)::-webkit-scrollbar,
-    div:has(> .messages-filter)::-webkit-scrollbar,
-    div:has(> .admin-tab)::-webkit-scrollbar{display:none;}
-    .admin-filter,.messages-filter,.admin-tab{white-space:nowrap;flex-shrink:0;}
-    .admin-filter,.messages-filter{padding-left:.65rem;padding-right:.65rem;font-size:.8rem;}
-    /* Un élément flex a min-width:auto par défaut et refuse donc de descendre
-       sous la largeur de son contenu : sans cette ligne le conteneur des
-       onglets reste plus large que l'écran et le défilement interne ne sert
-       à rien. */
-    div:has(> div > .admin-tab){min-width:0;}
-    .admin-tab{padding-left:.7rem;padding-right:.7rem;}
-
-    .stats-repere{
-      position:absolute;z-index:19;pointer-events:none;
-      width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:9999px;
-      background:#7C5AD0;box-shadow:0 0 0 2px hsl(var(--card));
-    }
-  }
-
-  /* ═══ Onglet Affiliation ═══════════════════════════════════
-     Tableau de bord dense mais calme : on lit d'abord les quatre
-     chiffres, ensuite le détail par partenaire. Tout passe par les
-     variables du site, donc le mode sombre suit sans règle en plus. */
-
-  /* .hidden vaut display:none dans la feuille principale, mais ce bloc-ci est
-     chargé après elle : à spécificité égale mes display:flex et display:grid
-     gagnaient, et les éléments masqués restaient à l'écran. On rend donc la
-     classe prioritaire pour tout l'onglet. */
-  #admin-affiliation-tab .hidden{display:none !important;}
-
-  /* Écran de connexion au jeton */
-  .afl-gate{display:flex;justify-content:center;padding:2rem 0 3rem;}
-  .afl-gate-card{width:100%;max-width:26rem;display:grid;gap:.85rem;padding:2rem 1.75rem;border-radius:1.25rem;
-    background:hsl(var(--card));border:1px solid hsl(var(--border));box-shadow:0 20px 48px -32px hsl(var(--primary)/.5);text-align:center;}
-  .afl-gate-icon{font-size:2rem;line-height:1;}
-  .afl-gate-title{font-family:'Poppins','Inter',sans-serif;font-size:1.2rem;font-weight:700;margin:0;}
-  .afl-gate-text{font-size:.88rem;color:hsl(var(--muted-foreground));margin:0;line-height:1.55;}
-  .afl-gate-hint{font-size:.75rem;color:hsl(var(--muted-foreground));margin:0;}
-  .afl-gate-error{font-size:.82rem;color:hsl(var(--destructive));margin:0;}
-
-  /* Barre de contrôle */
-  .afl-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap;margin-bottom:1.25rem;}
-  .afl-bar-left,.afl-bar-right{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
-  .afl-select{appearance:none;padding:.45rem 2rem .45rem .8rem;border-radius:.65rem;border:1px solid hsl(var(--border));
-    background:hsl(var(--card));color:hsl(var(--foreground));font-size:.85rem;font-weight:600;cursor:pointer;
-    background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
-    background-position:calc(100% - 1rem) 55%,calc(100% - .7rem) 55%;background-size:.3rem .3rem,.3rem .3rem;background-repeat:no-repeat;}
-  .afl-select--full{width:100%;}
-  /* Au doigt, un champ sous 16 px fait zoomer Safari sur iPhone, et la page
-     ne revient pas a l echelle : le tableau de bord se consulte aussi au
-     telephone. */
-  @media (hover: none) and (pointer: coarse) { .afl-select{font-size:16px;} }
-  .afl-range{display:inline-flex;border:1px solid hsl(var(--border));border-radius:999px;overflow:hidden;background:hsl(var(--card));}
-  .afl-range-btn{padding:.4rem .8rem;font-size:.8rem;font-weight:600;background:transparent;border:none;cursor:pointer;
-    color:hsl(var(--muted-foreground));transition:background .15s,color .15s;}
-  .afl-range-btn:hover{color:hsl(var(--foreground));}
-  .afl-range-btn.active{background:hsl(var(--primary));color:#fff;}
-  .afl-updated{font-size:.72rem;color:hsl(var(--muted-foreground));font-variant-numeric:tabular-nums;}
-  .afl-icon-btn{width:2.1rem;height:2.1rem;display:inline-flex;align-items:center;justify-content:center;border-radius:.6rem;
-    border:1px solid hsl(var(--border));background:hsl(var(--card));color:hsl(var(--muted-foreground));cursor:pointer;transition:all .15s;}
-  .afl-icon-btn svg{width:1rem;height:1rem;}
-  .afl-icon-btn:hover{color:hsl(var(--primary));border-color:hsl(var(--primary)/.4);}
-  .afl-icon-btn--danger:hover{color:hsl(var(--destructive));border-color:hsl(var(--destructive)/.4);}
-  .afl-icon-btn.tourne svg{animation:spin .7s linear infinite;}
-  .afl-error{padding:.75rem 1rem;border-radius:.75rem;background:hsl(var(--destructive)/.1);
-    border:1px solid hsl(var(--destructive)/.3);color:hsl(var(--destructive));font-size:.85rem;margin-bottom:1rem;}
-
-  /* Indicateurs */
-  .afl-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.75rem;margin-bottom:1.5rem;}
-  .afl-kpi{display:grid;gap:.3rem;padding:1.1rem 1.2rem;border-radius:1rem;background:hsl(var(--card));
-    border:1px solid hsl(var(--border));box-shadow:0 4px 16px -12px hsl(var(--primary)/.4);}
-  .afl-kpi-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:hsl(var(--muted-foreground));}
-  .afl-kpi-value{font-family:'Poppins','Inter',sans-serif;font-size:1.55rem;font-weight:800;line-height:1.05;
-    font-variant-numeric:tabular-nums;white-space:nowrap;}
-  .afl-kpi--phare{border-color:hsl(var(--primary)/.35);background:hsl(var(--primary)/.05);}
-  .afl-kpi--phare .afl-kpi-value{color:hsl(var(--primary));}
-
-  /* Panneaux */
-  .afl-panel{background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem;
-    padding:1.35rem 1.4rem;margin-bottom:1.25rem;box-shadow:0 4px 16px -12px hsl(var(--primary)/.3);}
-  .afl-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;}
-  .afl-panel-title{font-family:'Poppins','Inter',sans-serif;font-size:1.05rem;font-weight:700;margin:0;}
-  .afl-panel-sub{font-size:.8rem;color:hsl(var(--muted-foreground));margin:.15rem 0 0;}
-  .afl-chips{display:inline-flex;gap:.35rem;flex-wrap:wrap;}
-  .afl-chip{padding:.3rem .75rem;border-radius:999px;border:1px solid hsl(var(--border));background:transparent;
-    font-size:.78rem;font-weight:600;color:hsl(var(--muted-foreground));cursor:pointer;transition:all .15s;}
-  .afl-chip:hover{color:hsl(var(--foreground));}
-  .afl-chip.active{background:hsl(var(--primary));border-color:hsl(var(--primary));color:#fff;}
-
-  /* Tableau */
-  .afl-tablewrap{overflow-x:auto;margin:0 -.4rem;}
-  .afl-table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:32rem;}
-  .afl-table th{text-align:left;padding:.5rem .55rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;
-    font-weight:700;color:hsl(var(--muted-foreground));border-bottom:1px solid hsl(var(--border));white-space:nowrap;}
-  .afl-table td{padding:.65rem .55rem;border-bottom:1px solid hsl(var(--border)/.6);vertical-align:middle;}
-  .afl-table tbody tr:last-child td{border-bottom:0;}
-  .afl-table tbody tr{transition:background .15s;}
-  .afl-table tbody tr:hover{background:hsl(var(--muted)/.5);}
-  .afl-num{text-align:right;font-variant-numeric:tabular-nums;}
-  .afl-sort{cursor:pointer;user-select:none;}
-  .afl-sort:hover{color:hsl(var(--primary));}
-  .afl-sort.tri::after{content:'';display:inline-block;margin-left:.3rem;border-left:.25rem solid transparent;
-    border-right:.25rem solid transparent;border-top:.3rem solid currentColor;vertical-align:middle;}
-  .afl-sort.tri.asc::after{border-top:0;border-bottom:.3rem solid currentColor;}
-  .afl-prog{font-weight:600;}
-  .afl-remu{font-size:.78rem;color:hsl(var(--muted-foreground));}
-  .afl-vide{padding:2rem .5rem;text-align:center;color:hsl(var(--muted-foreground));font-size:.85rem;}
-  .afl-statut{display:inline-block;padding:.16rem .55rem;border-radius:999px;font-size:.68rem;font-weight:700;
-    text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;}
-  .afl-statut--active{background:hsl(152 55% 45%/.16);color:hsl(152 60% 32%);}
-  .dark .afl-statut--active{color:hsl(152 60% 62%);}
-  .afl-statut--pending{background:hsl(38 85% 50%/.16);color:hsl(32 75% 38%);}
-  .dark .afl-statut--pending{color:hsl(38 85% 65%);}
-  .afl-statut--autre{background:hsl(var(--muted));color:hsl(var(--muted-foreground));}
-
-  /* Générateur */
-  .afl-gen{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.85rem;align-items:end;}
-  .afl-field{display:grid;gap:.3rem;min-width:0;}
-  .afl-field>span{font-size:.75rem;font-weight:600;color:hsl(var(--muted-foreground));}
-  .afl-field>span em{font-style:normal;font-weight:400;opacity:.75;}
-  .afl-gen-btn{height:2.6rem;}
-  .afl-gen-out{display:flex;align-items:center;gap:.6rem;margin-top:1rem;padding:.7rem .9rem;border-radius:.75rem;
-    background:hsl(var(--muted)/.6);border:1px solid hsl(var(--border));}
-  .afl-gen-out code{flex:1;min-width:0;font-size:.8rem;word-break:break-all;font-family:ui-monospace,Menlo,Consolas,monospace;}
-  .afl-copy{flex-shrink:0;padding:.35rem .8rem;border-radius:.5rem;border:1px solid hsl(var(--primary)/.35);
-    background:hsl(var(--primary)/.1);color:hsl(var(--primary));font-size:.78rem;font-weight:700;cursor:pointer;transition:all .15s;}
-  .afl-copy:hover{background:hsl(var(--primary));color:#fff;}
-  .afl-gen-note{margin:.7rem 0 0;font-size:.78rem;color:hsl(var(--muted-foreground));}
-
-  /* Conversions */
-  .afl-conv-list{display:grid;gap:.5rem;}
-  .afl-conv{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.7rem .85rem;
-    border-radius:.7rem;background:hsl(var(--muted)/.45);}
-  .afl-conv-nom{font-weight:600;font-size:.87rem;}
-  .afl-conv-meta{font-size:.73rem;color:hsl(var(--muted-foreground));margin-top:.1rem;}
-  .afl-conv-gain{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;}
-
-  @media (max-width:640px){
-    .afl-hide-sm{display:none;}
-    .afl-table td:nth-child(3){display:none;}
-    .afl-panel{padding:1.1rem .95rem;}
-    .afl-bar{gap:.5rem;}
-    .afl-bar-left{width:100%;}
-    .afl-select{flex:1;}
-    .afl-kpi-value{font-size:1.35rem;}
-    .afl-gen-out{flex-direction:column;align-items:stretch;}
-    .afl-copy{width:100%;}
-  }
-  @media (prefers-reduced-motion:reduce){.afl-icon-btn.tourne svg{animation:none;}}
-    .admin-tab{position:relative;}
-    /* Pastille d'alerte : un avis a moderer, un message non lu, un lead arrive
-       depuis la derniere visite de l'onglet. Le detail chiffre est dans le
-       title de la pastille. */
-    .admin-pastille{
-      position:absolute;top:.15rem;right:.1rem;
-      min-width:1.05rem;height:1.05rem;padding:0 .25rem;
-      display:inline-flex;align-items:center;justify-content:center;
-      border-radius:9999px;background:hsl(var(--destructive));color:#fff;
-      font-size:.65rem;font-weight:800;line-height:1;
-      box-shadow:0 0 0 2px hsl(var(--card));
-    }
-    .admin-pastille.hidden{display:none;}
-    /* Infobulle du graphique de statistiques */
-    .stats-infobulle{
-      position:absolute;z-index:20;pointer-events:none;
-      display:flex;flex-direction:column;gap:.1rem;
-      padding:.4rem .6rem;border-radius:.5rem;
-      background:hsl(var(--popover));border:1px solid hsl(var(--border));
-      box-shadow:0 10px 24px -8px rgb(0 0 0 / .35);
-      font-size:.75rem;line-height:1.3;white-space:nowrap;
-    }
-    .stats-infobulle.est-cachee,.stats-repere.est-cachee{display:none;}
-    .stats-infobulle-date{color:hsl(var(--muted-foreground));font-size:.7rem;}
-    .stats-infobulle-val{color:hsl(var(--foreground));font-weight:700;}
-</style>
 <script src="/js/admin.js" defer></script>
 <script src="/js/admin-affiliation.js" defer></script>
