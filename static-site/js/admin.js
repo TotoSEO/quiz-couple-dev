@@ -2135,6 +2135,12 @@
   // pose ; il n'y a simplement plus d'interface pour le changer ici.
 
   // ── Chargement ─────────────────────────────────────────────────────────
+  // La courbe montre toujours au moins deux semaines : sur « Aujourd'hui »
+  // ou « 7 j », les compteurs portent sur la periode choisie, mais une
+  // courbe d'un ou deux points n'apprend rien. La legende dit sur combien
+  // de jours elle porte quand ce n'est pas la periode des compteurs.
+  var TRAFIC_JOURS_COURBE_MINI = 14;
+  function joursCourbeTrafic() { return Math.max(traficPeriode, TRAFIC_JOURS_COURBE_MINI); }
   function loadTrafic() {
     var tz = fuseau();
     var n = traficPeriode;
@@ -2142,7 +2148,7 @@
     drawChart(document.getElementById('trafic-chart'), [], { loading: true });
     Promise.all([
       statsRpc('get_trafic_resume', { p_days: n, p_tz: tz }),
-      statsRpc('get_trafic_daily', { p_days: n, p_tz: tz }),
+      statsRpc('get_trafic_daily', { p_days: joursCourbeTrafic(), p_tz: tz }),
       statsRpcPages('get_trafic_pages', { p_days: n, p_tz: tz }),
       statsRpc('get_trafic_sources', { p_days: n, p_tz: tz }),
       statsRpc('get_trafic_profondeur', { p_days: n, p_tz: tz }),
@@ -2220,7 +2226,8 @@
       par[k] = { visites: Number(l.visites) || 0, vues: Number(l.pages_vues) || 0 };
     });
     var points = { visites: [], vues: [] };
-    for (var i = traficPeriode - 1; i >= 0; i--) {
+    var jours = joursCourbeTrafic();
+    for (var i = jours - 1; i >= 0; i--) {
       var iso = isoNJoursAvant(i);
       var d = new Date(iso + 'T12:00:00');
       var label = d.getDate() + '/' + (d.getMonth() + 1);
@@ -2228,8 +2235,9 @@
       points.visites.push({ date: d, label: label, total: v.visites });
       points.vues.push({ date: d, label: label, total: v.vues });
     }
+    var suffixe = jours !== traficPeriode ? ' · ' + jours + ' j' : '';
     var couches = TRAFIC_COURBES.map(function (c) {
-      return { cle: c.cle, nom: c.nom, couleur: teinte(c.cle, c.couleur), axe: 'gauche', unite: '',
+      return { cle: c.cle, nom: c.nom + suffixe, couleur: teinte(c.cle, c.couleur), axe: 'gauche', unite: '',
                visible: traficCouchesVues[c.cle], points: points[c.cle] };
     });
     // Les mini-courbes des deux tuiles, sur la periode affichee.
