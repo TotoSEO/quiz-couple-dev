@@ -68,14 +68,14 @@
       { id: 'solo', emoji: '🧠', prefix: 'chargeMentale', engine: 'chargeMentale',
         totalQ: 20, pool: 20, textOnly: true },
       { id: 'duo',  emoji: '👥', prefix: 'chargeMentale', engine: 'chargeMentale',
-        totalQ: 20, pool: 20, textOnly: true, duo: true }
+        totalQ: 20, pool: 20, textOnly: true, duo: true, distance: true }
     ] },
 
     'ame-soeur':      { modesGrand: true, modes: [
       { id: 'solo', emoji: '💫', prefix: 'ameSoeur', engine: 'piliers',
         totalQ: 20, pool: 24, ascending: true },
       { id: 'duo',  emoji: '👥', prefix: 'ameSoeur', engine: 'piliers',
-        totalQ: 20, pool: 24, ascending: true, duo: true },
+        totalQ: 20, pool: 24, ascending: true, duo: true, distance: true },
       { id: 'celib', emoji: '🧭', prefix: 'ameSoeurPortrait', engine: 'profile',
         typologie: 'ameSoeurPortrait', totalQ: 20, pool: 20,
         categoryMap: { a: 'ancrage', b: 'elan', c: 'parole', d: 'presence' } }
@@ -85,7 +85,7 @@
     'compatibilite':  { prefix: 'compatibilite', engine: 'duo-match', totalQ: 20, pool: 20, needsGender: true, resultSet: 'compat', distance: true },
 
     // ── Healthy quiz (2 players + gender, weighted scoring) ──
-    'sain':           { prefix: 'healthy', engine: 'healthy', totalQ: 20, pool: 78, needsGender: true },
+    'sain':           { prefix: 'healthy', engine: 'healthy', totalQ: 20, pool: 78, needsGender: true, distance: true },
 
     // ── Test a distance : en solo, et c'est le fond du sujet ────────────
     // Il se jouait a deux sur le meme telephone, avec un relais « passez le
@@ -155,13 +155,13 @@
               19, 7, 10, 12, 21, 14, 11, 18, 17, 22, 23, 24],
       modes: [
       { id: 'court',   emoji: '🍼', prefix: 'parentalite', engine: 'parentalite',
-        totalQ: 24, pool: 24, limite: 12 },
+        totalQ: 24, pool: 24, limite: 12, distance: true },
       { id: 'complet', emoji: '👶', prefix: 'parentalite', engine: 'parentalite',
-        totalQ: 24, pool: 24 }
+        totalQ: 24, pool: 24, distance: true }
     ] },
 
     // ── Emmenager quiz (same engine as parentalite) ──
-    'emmenager':      { prefix: 'emmenager', engine: 'parentalite', totalQ: 20, pool: 20 },
+    'emmenager':      { prefix: 'emmenager', engine: 'parentalite', totalQ: 20, pool: 20, distance: true },
 
     // ── Jalousie quizzes (solo scoring, two sub-tests on same page) ──
     'jalousie1':      { prefix: 'jalousie1', engine: 'solo', totalQ: 20, pool: 20, quizType: 'jalousie1', ascending: true },
@@ -201,7 +201,7 @@
     // d'ou les prefixes supplementaires a charger.
     'plateau-couple':          { prefix: 'plateau', engine: 'plateau', totalQ: 0, pool: 0, textOnly: true, prefixesExtra: ['actionVerite', 'gageRoue'] },
     // ── Qui de nous deux : vote secret de chacun puis revelation commune.
-    'qui-de-nous-deux':        { prefix: 'quiDeNous', engine: 'duo-vote', totalQ: 0, pool: 0, textOnly: true },
+    'qui-de-nous-deux':        { prefix: 'quiDeNous', engine: 'duo-vote', totalQ: 0, pool: 0, textOnly: true, distance: true },
 
     // ── Dilemmes : on accepte ou on refuse un marché, et on voit le score
     // des autres couples. Rien à voir avec « tu préfères », qui fait choisir
@@ -210,7 +210,7 @@
 
     // ── Je n'ai jamais : la même affirmation posée aux deux, chacun son
     // tour. Cent affirmations en réserve, la partie en pose 15, 30 ou 100. ──
-    'jamais':                  { prefix: 'jamais', engine: 'jamais', totalQ: 0, pool: 0, textOnly: true },
+    'jamais':                  { prefix: 'jamais', engine: 'jamais', totalQ: 0, pool: 0, textOnly: true, distance: true },
 
     // ── Phrases à compléter : vingt phrases laissées en suspens, que les
     // deux personnes finissent à voix haute. Le moteur pose l'écran de choix
@@ -320,7 +320,7 @@
     // Barème explicite : « j'y pense tous les jours » pèse plus lourd que
     // « j'ai eu des frissons une fois », les points vivent dans gd.json.
     // ── Qui pourrait : deux prénoms, une question, on désigne ──
-    'qui-pourrait':   { prefix: 'quiPourrait', engine: 'qui-pourrait', totalQ: 0, pool: 0, textOnly: true },
+    'qui-pourrait':   { prefix: 'quiPourrait', engine: 'qui-pourrait', totalQ: 0, pool: 0, textOnly: true, distance: true },
     'oui-non':        { prefix: 'ouiNon', engine: 'oui-non', totalQ: 0, pool: 0, textOnly: true },
 
     // Amoureux de son meilleur ami : deux series selon le genre de l'ami, pour
@@ -463,9 +463,19 @@
     b.className = 'quiz-modes-retour';
     b.innerHTML = '<span aria-hidden="true">&larr;</span> ' + libelle;
     b.addEventListener('click', function() {
-      b.remove();
-      config = racine;
-      initFromData();
+      var retour = function () {
+        b.remove();
+        config = racine;
+        initFromData();
+      };
+      // Une partie a distance est en cours : changer de format la casse pour
+      // deux personnes. On demande, et si oui l'autre apprend qui a annule.
+      var salon = window.QCSalon && window.QCSalon.actif;
+      if (salon) {
+        window.QCSalon.confirmerAnnulation(function () { salon.annuler(); retour(); });
+        return;
+      }
+      retour();
     });
     container.parentNode.insertBefore(b, container.nextSibling);
   }
@@ -488,7 +498,34 @@
     }
     return racine.distance ? racine : null;
   }
-  function demarrerRejointe(code, cible) {
+  // Le format que le createur a choisi, s'il y en a plusieurs sur la page.
+  function modeParId(racine, id) {
+    if (!racine.modes || !id) return null;
+    for (var i = 0; i < racine.modes.length; i++) {
+      if (racine.modes[i].id === id && racine.modes[i].distance) return racine.modes[i];
+    }
+    return null;
+  }
+  // La partie rejointe, en attente du moteur : il se construit comme
+  // d'habitude, trouve le salon dans sa configuration (optionsDistance),
+  // remet ses questions dans l'ordre du createur et demarre.
+  var partieRejointe = null;
+  function optionsDistance(cfg, pool) {
+    var o = { distance: !!cfg.distance, quizType: quizType, modeId: cfg.id || null, pool: pool || null };
+    if (partieRejointe) {
+      o.salon = partieRejointe.salon;
+      o.moiInfo = partieRejointe.moi;
+      o.partenaireInfo = partieRejointe.createur;
+      o.idsDepart = partieRejointe.ids;
+      partieRejointe = null;
+    }
+    return o;
+  }
+  function etendre(a, b) {
+    for (var k in b) if (Object.prototype.hasOwnProperty.call(b, k)) a[k] = b[k];
+    return a;
+  }
+  function demarrerRejointe(code, cible, racine) {
     QuizEngine.chargerSalon(function (S) {
       if (!S) { initFromData(); return; }
       var retourNormal = function () { S.retirerCodeDeUrl(); initFromData(); };
@@ -498,18 +535,10 @@
           S.rejoindre({
             code: codeOk, quizType: quizType, moi: moi, container: container,
             onDepart: function (dep, salon) {
-              config = cible;
-              var pool = parseGdQuestions(config.prefix, config.pool + 10, config.ascending, config.textOnly || false);
-              var parId = {};
-              for (var i = 0; i < pool.length; i++) parId[pool[i].id] = pool[i];
-              var questions = [];
-              for (var j = 0; j < dep.ids.length; j++) if (parId[dep.ids[j]]) questions.push(parId[dep.ids[j]]);
-              if (!questions.length || questions.length !== dep.ids.length) {
-                salon.fermer();
-                S.ecranErreur(container, S.messageErreur('reseau'), { onRetour: retourNormal });
-                return;
-              }
-              initDuoMatchQuiz(config, questions, pool, { salon: salon, moi: moi, createur: dep.createur });
+              config = modeParId(racine, dep.modeId) || cible;
+              if (racine.ordre && !config.ordre) config.ordre = racine.ordre;
+              partieRejointe = { salon: salon, moi: moi, createur: dep.createur, ids: dep.ids || [] };
+              initFromData();
             },
             onErreur: function (motif) {
               S.ecranErreur(container, S.messageErreur(motif), { onRetour: retourNormal });
@@ -530,17 +559,20 @@
       var cibleSalon = codeSalon ? configDistance(config) : null;
       if (cibleSalon) {
         // Les donnees du format vise doivent etre la, comme pour l'ecran des
-        // formats : meme sonde, memes retentatives.
-        var sondeS = cibleSalon.prefix + '.q1';
-        var vS = QuizEngine.tgd(sondeS, null);
-        if (!vS || vS === sondeS) {
+        // formats : meme sonde, memes retentatives. Qui de nous deux range ses
+        // questions par theme, et le couple sain lit les siennes sous
+        // « couple » en francais : une cle suffit parmi celles possibles.
+        var sondesS = [cibleSalon.prefix + (cibleSalon.engine === 'duo-vote' ? '.quotidien1' : '.q1')];
+        if (cibleSalon.engine === 'healthy') sondesS.push('couple.q1');
+        var donneesLa = sondesS.some(function (k) { var v = QuizEngine.tgd(k, null); return v && v !== k; });
+        if (!donneesLa) {
           if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
           if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
           showUnavailable(config);
           return;
         }
         salonTraite = true;
-        demarrerRejointe(codeSalon, cibleSalon);
+        demarrerRejointe(codeSalon, cibleSalon, config);
         return;
       }
       salonTraite = true;
@@ -598,7 +630,7 @@
         showUnavailable(config);
         return;
       }
-      new QuizEngine.DuoVoteGame({ container: container, prefix: config.prefix, lang: lang });
+      new QuizEngine.DuoVoteGame(etendre({ container: container, prefix: config.prefix, lang: lang }, optionsDistance(config)));
       return;
     }
 
@@ -640,7 +672,7 @@
         showUnavailable(config);
         return;
       }
-      new QuizEngine.JamaisGame({ container: container, prefix: config.prefix, lang: lang, questions: affirmations });
+      new QuizEngine.JamaisGame(etendre({ container: container, prefix: config.prefix, lang: lang, questions: affirmations }, optionsDistance(config)));
       return;
     }
     // Qui pourrait : même chargement que le je n'ai jamais, un réservoir
@@ -659,7 +691,7 @@
         showUnavailable(config);
         return;
       }
-      new QuizEngine.QuiPourraitGame({ container: container, prefix: config.prefix, lang: lang, questions: qpQuestions });
+      new QuizEngine.QuiPourraitGame(etendre({ container: container, prefix: config.prefix, lang: lang, questions: qpQuestions }, optionsDistance(config)));
       return;
     }
 
@@ -1771,13 +1803,12 @@
     });
   }
 
-  // `pool` est le reservoir complet, `aDistance` la partie deja rejointe par
-  // un lien : { salon, moi, createur }. Sans lui, le moteur s'ouvre sur son
-  // ecran des prenoms, avec l'interrupteur du mode a distance si la page l'offre.
-  function initDuoMatchQuiz(cfg, questions, pool, aDistance) {
+  // `pool` est le reservoir complet, avant tirage : le mode a distance en a
+  // besoin pour rejouer le tirage du createur (optionsDistance).
+  function initDuoMatchQuiz(cfg, questions, pool) {
     var total = questions.length;
     var results = cfg.resultSet === 'compat' ? buildCompatResults(total) : buildDuoResults(total);
-    new QuizEngine.DuoMatchQuiz({
+    new QuizEngine.DuoMatchQuiz(etendre({
       container: container,
       questions: questions,
       results: results,
@@ -1786,15 +1817,8 @@
       needsGender: cfg.needsGender || false,
       useScoring: cfg.useScoring || false,
       modeSolo: cfg.modeSolo || false,
-      partenaire: partenaireResultat(quizType),
-      pool: pool || null,
-      quizType: quizType,
-      modeId: cfg.id || null,
-      distance: !!cfg.distance,
-      salon: aDistance ? aDistance.salon : null,
-      moiInfo: aDistance ? aDistance.moi : null,
-      partenaireInfo: aDistance ? aDistance.createur : null
-    });
+      partenaire: partenaireResultat(quizType)
+    }, optionsDistance(cfg, pool)));
   }
 
   function initHealthyQuiz(cfg, questions) {
@@ -1806,6 +1830,9 @@
       // Fallback: try 'couple' prefix (FR behavior)
       healthyQuestions = parseGdQuestions('couple', 30);
     }
+
+    // Le reservoir complet, pour le mode a distance.
+    var poolSain = healthyQuestions.slice();
 
     // Tirage stratifie : les 20 questions couvrent toutes les dimensions du
     // barème au lieu d'être tirées au hasard, pour que deux parties du même
@@ -1841,7 +1868,7 @@
     // their weighting is reversed vs the 'couple' questions used as FR fallback.
     var usedPrefix = usedHealthyNative ? 'healthy' : 'couple';
 
-    new QuizEngine.HealthyQuiz({
+    new QuizEngine.HealthyQuiz(etendre({
       container: container,
       questions: healthyQuestions,
       results: results,
@@ -1849,7 +1876,7 @@
       lang: lang,
       reverseScore: usedHealthyNative,
       partenaire: partenaireResultat(quizType)
-    });
+    }, optionsDistance(cfg, poolSain)));
   }
 
   function initZamoursQuiz(cfg, questions) {
@@ -1965,14 +1992,14 @@
       results[3].minPct = 80; results[3].maxPct = 100;
     }
 
-    new QuizEngine.ParentaliteQuiz({
+    new QuizEngine.ParentaliteQuiz(etendre({
       container: container,
       questions: questions,
       results: results,
       prefix: cfg.prefix,
       lang: lang,
       limite: cfg.limite
-    });
+    }, optionsDistance(cfg)));
   }
 
   function initTruefalseQuiz(cfg, questions) {
@@ -2176,6 +2203,10 @@
   // stratifié communs, comme les autres tests à points.
   function initPiliersQuiz(cfg, questions) {
     questions = questionsPonderees(cfg, questions);
+    // Le reservoir complet, pondere pareil : le rejoignant d'une partie a
+    // distance y retrouve les questions tirees par le createur.
+    var poolPiliers = parseGdQuestions(cfg.prefix, cfg.pool + 10, cfg.ascending);
+    appliqueBaremePondere(cfg.prefix, poolPiliers, !!cfg.ascending);
 
     var piliers = PILIERS_AME_SOEUR.map(function(p) {
       return {
@@ -2199,7 +2230,7 @@
       if (v && v !== cfg.prefix + '.cv_' + cle) verdictsCouple[cle] = v;
     });
 
-    new QuizEngine.PiliersQuiz({
+    new QuizEngine.PiliersQuiz(etendre({
       container: container,
       questions: questions,
       prefix: cfg.prefix,
@@ -2215,7 +2246,7 @@
         introTitle: QuizEngine.tgd(cfg.prefix + '.introTitle', ''),
         resultLabel: QuizEngine.tgd(cfg.prefix + '.linkLabel', '')
       }
-    });
+    }, optionsDistance(cfg, poolPiliers)));
   }
 
   function initChargeMentaleQuiz(cfg, questions) {
@@ -2234,7 +2265,7 @@
       };
     });
 
-    new QuizEngine.ChargeMentaleQuiz({
+    new QuizEngine.ChargeMentaleQuiz(etendre({
       container: container,
       questions: taches,
       prefix: cfg.prefix,
@@ -2243,7 +2274,7 @@
       domaines: DOMAINES_CHARGE,
       verdicts: verdicts,
       labels: { introTitle: QuizEngine.tgd(cfg.prefix + '.introTitle', '') }
-    });
+    }, optionsDistance(cfg)));
   }
 
   function initProfileQuiz(cfg, questions) {

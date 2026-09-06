@@ -177,6 +177,21 @@
     new MutationObserver(check).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class', 'style', 'data-quiz-done'] });
   }
 
+  // ── Suivi des parties a distance ──
+  // Le salon (salon.js) annonce deux moments par telephone : le depart, quand
+  // les deux sont connectes, et la fin, quand le resultat s'affiche. Une
+  // partie a distance laisse donc deux departs et deux fins, un par personne,
+  // ce qui correspond aux deux lancements et deux completions qu'elle produit
+  // deja par ailleurs. La table salon_parties permet de dire quelle part des
+  // lancements se joue a distance, page par page.
+  function watchSalon(slug) {
+    document.addEventListener('qc:salon', function (e) {
+      var d = (e && e.detail) || {};
+      if (d.etape !== 'depart' && d.etape !== 'fin') return;
+      envoiePartie('salon_parties', { quiz_slug: slug, lang: lang, role: d.role === 'c' ? 'c' : 'j', etape: d.etape });
+    });
+  }
+
   // ── Suivi des lancements (une fois par session/quiz) ──
   // Une visite n'est pas un lancement. Quelqu'un qui lit la page et repart
   // sans rien toucher n'a pas commence le test, et le compter fausserait le
@@ -397,6 +412,7 @@
     countBubble(slug, genre);
     watch(slug, genre);
     watchStart(slug);
+    watchSalon(slug);
     initReviews(slug);
     resultRating();
     replaceSurLeMoteur();

@@ -727,6 +727,18 @@
     "parti": "{{nom}} se ha desconectado. Esperamos a que vuelva…",
     "revenu": "¡{{nom}} ha vuelto!",
     "quitter": "Salir de la partida",
-    "arrive": "¡{{nom}} se ha unido a la partida!"
+    "arrive": "¡{{nom}} se ha unido a la partida!",
+    "attenteDe": "Esperando a {{nom}}…",
+    "aRepondu": "¡{{nom}} ya ha respondido, te toca!",
+    "pareil": "¡Habéis respondido lo mismo!",
+    "different": "No es la misma respuesta. ¿Lo habláis?",
+    "suivant": "Siguiente",
+    "voirResultats": "Ver nuestros resultados",
+    "attenteSuivant": "{{nom}} todavía no ha pulsado siguiente…",
+    "annulerTexte": "Esta acción va a cancelar la partida para los dos. ¿Queréis continuar?",
+    "annulerOui": "Sí, cancelar la partida",
+    "annulerNon": "No, seguir jugando",
+    "annulee": "{{nom}} ha cancelado la partida.",
+    "retourTest": "Volver al test"
   }
 }

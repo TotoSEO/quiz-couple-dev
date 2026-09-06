@@ -45,23 +45,44 @@ npm run build          # Main site → dist/
 ### Mode à distance (`salon.js`)
 
 Par défaut, un test à deux se joue sur un seul téléphone qu'on se passe. Les
-moteurs qui déclarent `distance: true` dans `quiz-loader.js` (aujourd'hui
-`DuoMatchQuiz` : tester-couple en duo, common-points, compatibilite, amoureux)
-affichent en plus un interrupteur « Activer le mode à distance » sur l'écran
-des prénoms. Une personne crée la partie (code + QR code + lien
-`?salon=CODE`), l'autre rejoint, chacun répond sur son écran et le résultat se
-calcule à l'identique des deux côtés.
+configurations qui déclarent `distance: true` dans `quiz-loader.js` affichent
+en plus un interrupteur « Activer le mode à distance » sur l'écran des
+prénoms. Aujourd'hui : tester-couple en duo, common-points, compatibilite,
+amoureux (`DuoMatchQuiz`), couple sain (`HealthyQuiz`), parentalité court et
+complet et emménager (`ParentaliteQuiz`), âme sœur en duo (`PiliersQuiz`),
+charge mentale en duo (`ChargeMentaleQuiz`), je n'ai jamais (`JamaisGame`),
+qui de nous deux (`DuoVoteGame`, vote secret) et qui pourrait
+(`QuiPourraitGame`). Une personne crée la partie (code + QR code + lien
+`?salon=CODE`), l'autre rejoint, et les deux avancent question par question :
+chacun répond sur son écran, attend l'autre, les deux réponses s'affichent
+côte à côte sur la question (pour en parler), puis on ne passe à la suivante
+que quand les deux ont appuyé sur « Suivant ». Le résultat se calcule à
+l'identique des deux côtés. Quitter (bandeau) ou « Changer de mode » demande
+confirmation et annule pour les deux.
 
 - Aucune table en base : un salon est un canal Supabase Realtime (diffusion +
   présence) nommé d'après le code, vivant tant que quelqu'un y est abonné.
 - `salon.js`, `supabase-js` (CDN) et `js/vendor/qrcode.js` ne sont chargés
   qu'à l'activation ou à l'arrivée par un lien : la page ordinaire ne change pas.
 - Tout message reçu est contrôlé (version, rôle, type, tailles) avant
-  d'atteindre un moteur ; les prénoms passent par `esc()` au rendu.
-- Pour ajouter un moteur : poser `zoneDistance()` sur son écran de départ,
-  envoyer ses réponses avec `salon.envoyer('reponses', { a })`, les recevoir
-  avec `salon.on('reponses')`, et gérer une phase d'attente quand l'un a fini
-  avant l'autre. `DuoMatchQuiz.demarrerADistance` est le modèle.
+  d'atteindre un moteur ; les prénoms passent par `esc()` au rendu. Les
+  identifiants de questions envoyés au départ doivent être des nombres.
+- Le tour par tour est écrit une seule fois, dans `TourParTour`
+  (quiz-engine-core.js). Pour ajouter un moteur : poser `distance: true` dans
+  sa configuration, faire passer `optionsDistance(cfg, pool)` au constructeur
+  (chargeur), appeler `reprendrePartieRejointe(this, config)` dans le
+  constructeur, poser `zoneDistancePour(this, { formulaire, bouton, meta })`
+  sur l'écran des prénoms, et écrire `demarrerADistance(salon, moi, moiInfo,
+  partenaireInfo)` qui construit un `TourParTour` avec `question(idx)` (texte
+  et options `{ id, texte }`) et `surFin(a, b)` (ranger les deux séries puis
+  afficher le résultat). Un moteur qui tire ses questions autrement fournit
+  `idsDepart()` et `appliquerTirage(ids)`. `HealthyQuiz.demarrerADistance` est
+  le modèle le plus court.
+- Mesure : `salon.js` émet `qc:salon` (`depart`, `fin`) que `quiz-extras.js`
+  enregistre dans `salon_parties` (migration `20260906120000`), deux lignes par
+  partie comme il y a deux lancés ; l'admin a un onglet Distance
+  (`PAGES_DISTANCE` dans admin.js liste les pages), et l'origine des visites
+  compte les arrivées par lien ou QR code en « Mode DUO ».
 - Les essais sans réseau passent par `window.__QCSalonTransport`, une doublure
   du canal sur `BroadcastChannel` (voir la PR d'origine).
 
