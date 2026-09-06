@@ -49,9 +49,9 @@
       // DUO : chacun repond aux memes questions a tour de role, deux notes
       // individuelles et leur moyenne.
       { id: 'duo',  emoji: '👥', prefix: 'testerC', engine: 'duo-match', totalQ: 20, pool: 33,
-        useScoring: true, stratifie: true, needsGender: true }
+        useScoring: true, stratifie: true, needsGender: true, distance: true }
     ] },
-    'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 153, needsGender: true },
+    'common-points':  { prefix: 'commonPoints', engine: 'duo-match', totalQ: 20, pool: 153, needsGender: true, distance: true },
 
     // ── Test âme sœur : un indice, un verdict tiré de la forme du profil ──
     // Trois portes d'entrée sur la même page : seul sur un prénom saisi, à deux
@@ -82,7 +82,7 @@
     ] },
 
     // ── Love compatibility (2 players, matching = alignment % on core dimensions) ──
-    'compatibilite':  { prefix: 'compatibilite', engine: 'duo-match', totalQ: 20, pool: 20, needsGender: true, resultSet: 'compat' },
+    'compatibilite':  { prefix: 'compatibilite', engine: 'duo-match', totalQ: 20, pool: 20, needsGender: true, resultSet: 'compat', distance: true },
 
     // ── Healthy quiz (2 players + gender, weighted scoring) ──
     'sain':           { prefix: 'healthy', engine: 'healthy', totalQ: 20, pool: 78, needsGender: true },
@@ -114,7 +114,7 @@
     // d'accord → tout à fait d'accord » : on demandait donc son niveau
     // d'accord avec « Quel est mon plat préféré ? ». Ces cent vingt réponses
     // servent enfin, dans le moteur à deux qui compare vos choix.
-    'amoureux':       { prefix: 'amoureux', engine: 'duo-match', totalQ: 20, pool: 30 },
+    'amoureux':       { prefix: 'amoureux', engine: 'duo-match', totalQ: 20, pool: 30, distance: true },
 
     // ── Quiz marrant : des questions qu'on se pose l'un à l'autre ──
     // Six familles de vingt-cinq questions. Le moteur pioche lui-même, à parts
@@ -470,10 +470,81 @@
     container.parentNode.insertBefore(b, container.nextSibling);
   }
 
+  // ─── L'arrivee par un lien de salon ──────────────────────
+  // « ?salon=CODE » dans l'adresse : quelqu'un a recu un lien ou scanne un QR
+  // code. On saute l'ecran de choix du format, on demande juste son prenom,
+  // et le salon prend la main jusqu'a ce que le createur envoie le depart.
+  var salonTraite = false;
+  function lireCodeSalon() {
+    var m = /[?&]salon=([^&#]+)/.exec(location.search || '');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  // La configuration qui sait jouer a distance : le format qui le declare
+  // sur une page a plusieurs formats, la page elle-meme sinon.
+  function configDistance(racine) {
+    if (racine.modes) {
+      for (var i = 0; i < racine.modes.length; i++) if (racine.modes[i].distance) return racine.modes[i];
+      return null;
+    }
+    return racine.distance ? racine : null;
+  }
+  function demarrerRejointe(code, cible) {
+    QuizEngine.chargerSalon(function (S) {
+      if (!S) { initFromData(); return; }
+      var retourNormal = function () { S.retirerCodeDeUrl(); initFromData(); };
+      S.formulaireRejoindre(container, {
+        code: S.normaliserCode(code), needsGender: !!cible.needsGender,
+        onValider: function (moi, codeOk) {
+          S.rejoindre({
+            code: codeOk, quizType: quizType, moi: moi, container: container,
+            onDepart: function (dep, salon) {
+              config = cible;
+              var pool = parseGdQuestions(config.prefix, config.pool + 10, config.ascending, config.textOnly || false);
+              var parId = {};
+              for (var i = 0; i < pool.length; i++) parId[pool[i].id] = pool[i];
+              var questions = [];
+              for (var j = 0; j < dep.ids.length; j++) if (parId[dep.ids[j]]) questions.push(parId[dep.ids[j]]);
+              if (!questions.length || questions.length !== dep.ids.length) {
+                salon.fermer();
+                S.ecranErreur(container, S.messageErreur('reseau'), { onRetour: retourNormal });
+                return;
+              }
+              initDuoMatchQuiz(config, questions, pool, { salon: salon, moi: moi, createur: dep.createur });
+            },
+            onErreur: function (motif) {
+              S.ecranErreur(container, S.messageErreur(motif), { onRetour: retourNormal });
+            }
+          });
+        },
+        onRetour: retourNormal
+      });
+    });
+  }
+
   // Load translations then initialize
   var _dataAttempt = 0;
   var _repliComplet = false;
   function initFromData() {
+    if (!salonTraite) {
+      var codeSalon = lireCodeSalon();
+      var cibleSalon = codeSalon ? configDistance(config) : null;
+      if (cibleSalon) {
+        // Les donnees du format vise doivent etre la, comme pour l'ecran des
+        // formats : meme sonde, memes retentatives.
+        var sondeS = cibleSalon.prefix + '.q1';
+        var vS = QuizEngine.tgd(sondeS, null);
+        if (!vS || vS === sondeS) {
+          if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+          if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+          showUnavailable(config);
+          return;
+        }
+        salonTraite = true;
+        demarrerRejointe(codeSalon, cibleSalon);
+        return;
+      }
+      salonTraite = true;
+    }
     // Une page à deux formats commence par demander lequel. Le mode retenu
     // remplace la configuration : tout ce qui suit se déroule ensuite comme
     // pour un quiz ordinaire.
@@ -744,6 +815,10 @@
       return;
     }
 
+    // Le reservoir complet, avant tirage : le mode a distance en a besoin pour
+    // remettre les questions dans l'ordre choisi par le createur de la partie.
+    var poolComplet = questions.slice();
+
     // Randomly select totalQ questions from pool if pool > totalQ
     var hasRandomPool = questions.length > config.totalQ;
     if (config.ordre && config.ordre.length) {
@@ -768,7 +843,7 @@
         initSoloQuiz(config, questions);
         break;
       case 'duo-match':
-        initDuoMatchQuiz(config, questions);
+        initDuoMatchQuiz(config, questions, poolComplet);
         break;
       case 'healthy':
         initHealthyQuiz(config, questions);
@@ -1696,7 +1771,10 @@
     });
   }
 
-  function initDuoMatchQuiz(cfg, questions) {
+  // `pool` est le reservoir complet, `aDistance` la partie deja rejointe par
+  // un lien : { salon, moi, createur }. Sans lui, le moteur s'ouvre sur son
+  // ecran des prenoms, avec l'interrupteur du mode a distance si la page l'offre.
+  function initDuoMatchQuiz(cfg, questions, pool, aDistance) {
     var total = questions.length;
     var results = cfg.resultSet === 'compat' ? buildCompatResults(total) : buildDuoResults(total);
     new QuizEngine.DuoMatchQuiz({
@@ -1708,7 +1786,14 @@
       needsGender: cfg.needsGender || false,
       useScoring: cfg.useScoring || false,
       modeSolo: cfg.modeSolo || false,
-      partenaire: partenaireResultat(quizType)
+      partenaire: partenaireResultat(quizType),
+      pool: pool || null,
+      quizType: quizType,
+      modeId: cfg.id || null,
+      distance: !!cfg.distance,
+      salon: aDistance ? aDistance.salon : null,
+      moiInfo: aDistance ? aDistance.moi : null,
+      partenaireInfo: aDistance ? aDistance.createur : null
     });
   }
 

@@ -379,6 +379,167 @@ var QuizEngine = (function() {
       '<span class="party-tour-texte">' + esc(phrase) + '</span></span>';
   }
 
+  // ─── Le mode a distance ───────────────────────────────────
+  // Tout ce qui parle au reseau vit dans salon.js, charge seulement quand
+  // quelqu'un allume l'interrupteur ou arrive avec un code dans l'adresse.
+  var salonEnAttente = null;
+  function chargerSalon(cb) {
+    if (window.QCSalon) { cb(window.QCSalon); return; }
+    if (salonEnAttente) { salonEnAttente.push(cb); return; }
+    salonEnAttente = [cb];
+    var sc = document.createElement('script');
+    sc.src = _v('/js/salon.js'); sc.async = true;
+    function fini() {
+      var liste = salonEnAttente || []; salonEnAttente = null;
+      liste.forEach(function (f) { try { f(window.QCSalon || null); } catch (e) {} });
+    }
+    sc.onload = fini;
+    sc.onerror = fini;
+    document.head.appendChild(sc);
+  }
+
+  // La carte « moi » du mode a distance : un prenom, et le genre si le test
+  // s'en sert. Servie a l'ecran des prenoms et au formulaire de celui qui
+  // rejoint, pour que les deux se ressemblent.
+  function carteMoi(needsGender, valeurs) {
+    var carte = el('div', 'quiz-player-card salon-moi');
+    var label = el('label', 'block text-sm font-semibold mb-2 text-center', esc(tg('salon.votrePrenom', 'Votre prénom')));
+    label.setAttribute('for', 'salon-prenom');
+    var champ = el('input', 'input w-full');
+    champ.type = 'text'; champ.id = 'salon-prenom'; champ.maxLength = 20; champ.autocomplete = 'given-name';
+    champ.placeholder = tg('playerSetup.firstName', 'Prénom');
+    if (valeurs && valeurs.nom) champ.value = valeurs.nom;
+    carte.appendChild(label); carte.appendChild(champ);
+    var genre = (valeurs && valeurs.genre) || null;
+    if (needsGender) {
+      carte.appendChild(el('label', 'block text-sm font-semibold mt-4 mb-2 text-center', esc(tg('playerSetup.gender', 'Genre'))));
+      var gWrap = el('div', 'flex gap-3 justify-center');
+      var h = el('button', 'gender-btn' + (genre === 'homme' ? ' gender-btn-selected gender-btn-male' : ''), '👨');
+      var f = el('button', 'gender-btn' + (genre === 'femme' ? ' gender-btn-selected gender-btn-female' : ''), '👩');
+      h.type = 'button'; f.type = 'button';
+      h.setAttribute('aria-label', tg('playerSetup.male', 'Homme'));
+      f.setAttribute('aria-label', tg('playerSetup.female', 'Femme'));
+      h.addEventListener('click', function () { genre = 'homme'; h.className = 'gender-btn gender-btn-selected gender-btn-male'; f.className = 'gender-btn'; });
+      f.addEventListener('click', function () { genre = 'femme'; f.className = 'gender-btn gender-btn-selected gender-btn-female'; h.className = 'gender-btn'; });
+      gWrap.appendChild(h); gWrap.appendChild(f);
+      carte.appendChild(gWrap);
+    }
+    return {
+      el: carte,
+      champ: champ,
+      lire: function () { return { nom: champ.value.trim(), genre: genre }; }
+    };
+  }
+
+  // L'interrupteur « activer le mode a distance », pose sur l'ecran des
+  // prenoms des tests a deux. Eteint, rien ne change : les deux cartes et le
+  // bouton de depart restent tels quels. Allume, il les remplace par une
+  // seule carte (moi) et deux sorties : creer la partie, ou rejoindre avec
+  // un code. Le module reseau n'est charge qu'au clic sur l'une des deux.
+  //   o.formulaire, o.bouton, o.meta : ce qu'il masque quand il est allume
+  //   o.needsGender                 : demander le genre
+  //   o.creer(moi, Salon)           : { nom, genre } saisis
+  //   o.rejoindre(moi, code, Salon)
+  function zoneDistance(o) {
+    var zone = el('div', 'salon-zone');
+    var ligne = el('div', 'salon-interrupteur-ligne');
+    var label = el('label', 'salon-interrupteur');
+    var interrupteur = el('input');
+    interrupteur.type = 'checkbox'; interrupteur.id = 'salon-interrupteur';
+    interrupteur.setAttribute('role', 'switch'); interrupteur.setAttribute('aria-checked', 'false');
+    label.appendChild(interrupteur);
+    label.appendChild(el('span', 'salon-glissiere'));
+    label.appendChild(el('span', 'salon-libelle', esc(tg('salon.activer', 'Activer le mode à distance'))));
+    ligne.appendChild(label);
+    var aideBtn = el('button', 'salon-aide-btn', '?');
+    aideBtn.type = 'button';
+    aideBtn.setAttribute('aria-label', tg('salon.aideBtn', 'En savoir plus sur le mode à distance'));
+    aideBtn.setAttribute('aria-expanded', 'false');
+    aideBtn.setAttribute('aria-controls', 'salon-aide');
+    ligne.appendChild(aideBtn);
+    zone.appendChild(ligne);
+    var aide = el('p', 'salon-aide', esc(tg('salon.aide', '')));
+    aide.id = 'salon-aide'; aide.hidden = true;
+    aideBtn.addEventListener('click', function () {
+      aide.hidden = !aide.hidden;
+      aideBtn.setAttribute('aria-expanded', aide.hidden ? 'false' : 'true');
+    });
+    zone.appendChild(aide);
+
+    var detail = el('div', 'salon-detail');
+    detail.hidden = true;
+    var carte = carteMoi(!!o.needsGender);
+    var grille = el('div', 'quiz-setup-grid quiz-setup-grid--seul max-w-lg mx-auto');
+    grille.appendChild(carte.el);
+    detail.appendChild(grille);
+
+    var choix = el('div', 'salon-choix');
+    var creer = el('button', 'btn btn-cta btn-gradient', esc(tg('salon.creer', 'Créer la partie')));
+    creer.type = 'button';
+    var rejoindre = el('button', 'btn btn-outline', esc(tg('salon.jaiUnCode', 'J\'ai un code')));
+    rejoindre.type = 'button';
+    choix.appendChild(creer); choix.appendChild(rejoindre);
+    detail.appendChild(choix);
+
+    var zoneCode = el('div', 'salon-code-zone');
+    zoneCode.hidden = true;
+    var codeLabel = el('label', 'block text-sm font-semibold mb-2 text-center', esc(tg('salon.codeLabel', 'Code de la partie')));
+    codeLabel.setAttribute('for', 'salon-code');
+    var codeChamp = el('input', 'input w-full salon-code-saisie');
+    codeChamp.type = 'text'; codeChamp.id = 'salon-code'; codeChamp.maxLength = 8;
+    codeChamp.autocomplete = 'off'; codeChamp.autocapitalize = 'characters'; codeChamp.spellcheck = false;
+    codeChamp.placeholder = 'ABC123';
+    var erreur = el('p', 'salon-erreur'); erreur.hidden = true;
+    var valider = el('button', 'btn btn-cta salon-valider-code', esc(tg('salon.rejoindre', 'Rejoindre')));
+    valider.type = 'button';
+    zoneCode.appendChild(codeLabel); zoneCode.appendChild(codeChamp); zoneCode.appendChild(erreur); zoneCode.appendChild(valider);
+    detail.appendChild(zoneCode);
+    zone.appendChild(detail);
+
+    function prenomOuFocus() {
+      var moi = carte.lire();
+      if (!moi.nom) { carte.champ.focus(); return null; }
+      return moi;
+    }
+    creer.addEventListener('click', function () {
+      var moi = prenomOuFocus(); if (!moi) return;
+      creer.disabled = true;
+      chargerSalon(function (S) {
+        creer.disabled = false;
+        if (!S) { erreur.textContent = tg('salon.erreurReseau', ''); erreur.hidden = false; zoneCode.hidden = false; return; }
+        o.creer(moi, S);
+      });
+    });
+    rejoindre.addEventListener('click', function () {
+      zoneCode.hidden = false;
+      codeChamp.focus();
+    });
+    function tenterRejoindre() {
+      var moi = prenomOuFocus(); if (!moi) return;
+      chargerSalon(function (S) {
+        if (!S) { erreur.textContent = tg('salon.erreurReseau', ''); erreur.hidden = false; return; }
+        var code = S.normaliserCode(codeChamp.value);
+        if (!S.codeValide(code)) { erreur.textContent = tg('salon.codeInvalide', ''); erreur.hidden = false; codeChamp.focus(); return; }
+        erreur.hidden = true;
+        o.rejoindre(moi, code, S);
+      });
+    }
+    valider.addEventListener('click', tenterRejoindre);
+    codeChamp.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); tenterRejoindre(); } });
+    carte.champ.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); if (!zoneCode.hidden) tenterRejoindre(); } });
+
+    interrupteur.addEventListener('change', function () {
+      var on = interrupteur.checked;
+      interrupteur.setAttribute('aria-checked', on ? 'true' : 'false');
+      if (o.formulaire) o.formulaire.hidden = on;
+      if (o.bouton) o.bouton.hidden = on;
+      if (o.meta) o.meta.hidden = on;
+      detail.hidden = !on;
+      if (on) setTimeout(function () { try { carte.champ.focus({ preventScroll: true }); } catch (e) {} }, 60);
+    });
+    return zone;
+  }
+
   // ─── Utility ──────────────────────────────────────────────
   function el(tag, cls, html) {
     var e = document.createElement(tag);
@@ -440,6 +601,9 @@ var QuizEngine = (function() {
         // « resultat » n'a de sens que pour la partie en cours : partage, il
         // n'ouvrirait rien et serait retire au chargement.
         if (k === 'resultat') return;
+        // Le code d'un salon meurt avec la partie : partage, il ouvrirait
+        // un salon vide.
+        if (k === 'salon') return;
         restants.push(encodeURIComponent(k) + (v ? '=' + encodeURIComponent(v) : ''));
       });
       restants.push('part');
@@ -2541,11 +2705,26 @@ var QuizEngine = (function() {
     this.setupTitle = config.setupTitle || '';
     this.setupDesc = config.setupDesc || '';
     this.partenaire = config.partenaire || null;
+    // Le mode a distance : le reservoir complet sert a rejouer le tirage du
+    // createur, la page et le format servent a nommer le salon.
+    this.pool = config.pool || null;
+    this.quizType = config.quizType || '';
+    this.modeId = config.modeId || null;
+    this.distance = !!config.distance && !this.modeSolo;
+    this.salon = null;
+    this.moi = -1;
+    this.attenteUi = null;
     this.phase = 'setup';
     this.players = [null, null];
     this.currentQ = 0;
     this.currentPlayer = 0;
     this.answers = { p1: [], p2: [] };
+    // Partie rejointe par un lien : le chargeur a deja connecte le salon et
+    // remis les questions dans l'ordre du createur.
+    if (config.salon && config.moiInfo && config.partenaireInfo) {
+      this.demarrerADistance(config.salon, 1, config.moiInfo, config.partenaireInfo);
+      return;
+    }
     this.render();
   }
 
@@ -2554,6 +2733,7 @@ var QuizEngine = (function() {
     if (this.phase === 'setup') this.renderSetup();
     else if (this.phase === 'handoff') this.renderHandoff();
     else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'attente') this.renderAttente();
     else if (this.phase === 'results') this.renderResults();
   };
 
@@ -2668,9 +2848,130 @@ var QuizEngine = (function() {
     wrap.appendChild(title);
     wrap.appendChild(desc);
     wrap.appendChild(form);
+    if (this.distance) {
+      wrap.appendChild(zoneDistance({
+        formulaire: form, bouton: startBtn, meta: info, needsGender: this.needsGender,
+        creer: function (moi, S) { self.creerSalon(moi, S); },
+        rejoindre: function (moi, code, S) { self.rejoindreSalon(moi, code, S); }
+      }));
+    }
     wrap.appendChild(info);
     wrap.appendChild(startBtn);
     this.container.appendChild(wrap);
+  };
+
+  // ── Le mode a distance de DuoMatch ─────────────────────────
+  // Chacun repond a toutes les questions sur son telephone, a son rythme ;
+  // les reponses de l'autre arrivent par le salon, et le resultat se calcule
+  // des que les deux series sont completes, a l'identique des deux cotes.
+  DuoMatchQuiz.prototype.creerSalon = function (moi, S) {
+    var self = this;
+    S.creer({
+      quizType: this.quizType, modeId: this.modeId,
+      ids: this.questions.map(function (q) { return q.id; }),
+      moi: moi, container: this.container,
+      onPartenaire: function (partenaire, salon) { self.demarrerADistance(salon, 0, moi, partenaire); },
+      onRetour: function () { self.phase = 'setup'; self.render(); }
+    });
+  };
+
+  DuoMatchQuiz.prototype.rejoindreSalon = function (moi, code, S) {
+    var self = this;
+    var retour = function () { self.phase = 'setup'; self.render(); };
+    S.rejoindre({
+      code: code, quizType: this.quizType, moi: moi, container: this.container,
+      onDepart: function (dep, salon) {
+        if (!self.appliquerTirage(dep.ids)) {
+          salon.fermer();
+          S.ecranErreur(self.container, S.messageErreur('reseau'), { onRetour: retour });
+          return;
+        }
+        self.demarrerADistance(salon, 1, moi, dep.createur);
+      },
+      onErreur: function (motif) { S.ecranErreur(self.container, S.messageErreur(motif), { onRetour: retour }); }
+    });
+  };
+
+  // Le tirage du createur remplace le mien : memes questions, meme ordre,
+  // sinon les deux series de reponses ne parleraient pas des memes choses.
+  DuoMatchQuiz.prototype.appliquerTirage = function (ids) {
+    var source = this.pool || this.questions;
+    var parId = {};
+    for (var i = 0; i < source.length; i++) parId[source[i].id] = source[i];
+    var liste = [];
+    for (var j = 0; j < ids.length; j++) if (parId[ids[j]]) liste.push(parId[ids[j]]);
+    if (!liste.length || liste.length !== ids.length) return false;
+    this.questions = liste;
+    return true;
+  };
+
+  DuoMatchQuiz.prototype.demarrerADistance = function (salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    var a = { name: (moiInfo.nom || moiInfo.name || '').trim() || tg('playerSetup.player' + (moi + 1), 'Joueur ' + (moi + 1)), gender: moiInfo.genre || moiInfo.gender || null };
+    var b = { name: (partenaireInfo.nom || partenaireInfo.name || '').trim() || tg('playerSetup.player' + (2 - moi), 'Joueur ' + (2 - moi)), gender: partenaireInfo.genre || partenaireInfo.gender || null };
+    this.players = moi === 0 ? [a, b] : [b, a];
+    this.salon = salon;
+    this.moi = moi;
+    var total = this.questions.length;
+    this.answers = { p1: new Array(total).fill(null), p2: new Array(total).fill(null) };
+    this.currentQ = 0;
+    this.currentPlayer = moi;
+    this.phase = 'playing';
+    salon.brancherBandeau();
+    salon.on('reponses', function (d) {
+      var arr = new Array(total).fill(null);
+      for (var i = 0; i < Math.min(total, d.a.length); i++) arr[i] = d.a[i];
+      self.answers[self.cleAutre()] = arr;
+      self.partenaireAvance();
+    });
+    salon.on('resync', function () { self.envoyerReponses(); });
+    this.render();
+    // Le bandeau vit juste au-dessus du moteur : c'est lui qu'on amene en
+    // haut, sinon il reste cache sous l'en-tete collant.
+    smoothScroll(salon.bandeauEl || this.container, 'start');
+  };
+
+  DuoMatchQuiz.prototype.cleMoi = function () { return this.moi === 0 ? 'p1' : 'p2'; };
+  DuoMatchQuiz.prototype.cleAutre = function () { return this.moi === 0 ? 'p2' : 'p1'; };
+  DuoMatchQuiz.prototype.repondu = function (cle) {
+    return this.answers[cle].filter(function (x) { return x !== null && x !== undefined; }).length;
+  };
+  DuoMatchQuiz.prototype.autreComplet = function () { return this.repondu(this.cleAutre()) >= this.questions.length; };
+  DuoMatchQuiz.prototype.envoyerReponses = function () {
+    if (this.salon) this.salon.envoyer('reponses', { a: this.answers[this.cleMoi()] });
+  };
+  DuoMatchQuiz.prototype.nomPartenaire = function () {
+    var p = this.players[1 - this.moi];
+    return (p && p.name) || '';
+  };
+  DuoMatchQuiz.prototype.texteProgression = function () {
+    return window.QCSalon.avec(tg('salon.progression', '{{nom}} : {{n}}/{{total}}'),
+      { nom: this.nomPartenaire(), n: this.repondu(this.cleAutre()), total: this.questions.length });
+  };
+
+  // Les reponses d'en face viennent d'arriver : soit elles debloquent le
+  // resultat qu'on attendait, soit elles font juste avancer le petit compteur.
+  DuoMatchQuiz.prototype.partenaireAvance = function () {
+    if (this.phase === 'attente') {
+      if (this.autreComplet()) {
+        this.phase = 'results';
+        this.render();
+        if (this.salon) this.salon.fermerApres(4000);
+        return;
+      }
+      if (this.attenteUi) this.attenteUi.progression(this.repondu(this.cleAutre()));
+    } else if (this.phase === 'playing') {
+      var p = this.container.querySelector('.salon-progression--jeu');
+      if (p) p.textContent = this.texteProgression();
+    }
+  };
+
+  DuoMatchQuiz.prototype.renderAttente = function () {
+    var self = this;
+    this.attenteUi = window.QCSalon.ecranAttenteFin(this.container, {
+      nom: this.nomPartenaire(), n: this.repondu(this.cleAutre()), total: this.questions.length,
+      onQuitter: function () { if (self.salon) self.salon.fermer(); location.reload(); }
+    });
   };
 
   DuoMatchQuiz.prototype.renderHandoff = function() {
@@ -2701,6 +3002,7 @@ var QuizEngine = (function() {
     var wrap = el('div', 'quiz-engine quiz-question-enter');
 
     renderProgressBar(wrap, answered, totalNeeded, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total);
+    if (this.salon) wrap.appendChild(el('p', 'salon-progression salon-progression--jeu', esc(this.texteProgression())));
 
     // Player indicator with color. En solo personne n'a de tour : pas de badge.
     if (!this.modeSolo) {
@@ -2743,6 +3045,12 @@ var QuizEngine = (function() {
             self.answers.p1[self.currentQ] = opt.id;
             if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
             else { self.phase = 'results'; }
+          } else if (self.salon) {
+            self.answers[self.cleMoi()][self.currentQ] = opt.id;
+            self.envoyerReponses();
+            if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
+            else if (self.autreComplet()) { self.phase = 'results'; self.salon.fermerApres(4000); }
+            else { self.phase = 'attente'; }
           } else if (self.currentPlayer === 0) {
             self.answers.p1[self.currentQ] = opt.id;
             self.currentPlayer = 1;
@@ -10103,6 +10411,10 @@ var QuizEngine = (function() {
     // Exposé pour le chargeur, qui pose l'écran de choix avant de savoir quel
     // moteur il va instancier.
     ecranModes: ecranModes,
+    // Le mode a distance : le module reseau se charge a la demande, la carte
+    // « moi » est partagee avec lui.
+    chargerSalon: chargerSalon,
+    carteMoi: carteMoi,
     // Exposé pour les moteurs écrits dans un gabarit de page, qui doivent
     // annoncer le changement de joueur exactement comme les autres.
     relaisJoueur: relaisJoueur,
