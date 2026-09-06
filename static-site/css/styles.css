@@ -11084,3 +11084,97 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   color: hsl(var(--foreground)); line-height: 1.6;
 }
 .phr-changer { display: block; margin: 0.25rem auto 0; }
+
+/* ── Le mode à distance ─────────────────────────────────────────────────
+   L'interrupteur vit sur l'écran des prénoms ; les écrans du salon (code,
+   QR, attente) reprennent la carte de départ ; le bandeau vit hors du
+   conteneur du moteur, pour survivre à ses redessins. */
+.salon-zone { width: 100%; max-width: 32rem; margin: 0.25rem auto 0; }
+.salon-interrupteur {
+  display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+  cursor: pointer; user-select: none; padding: 0.5rem 0;
+}
+.salon-interrupteur input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.salon-glissiere {
+  position: relative; flex: 0 0 auto; width: 2.75rem; height: 1.5rem; border-radius: 999px;
+  background: hsl(var(--muted)); border: 2px solid hsl(var(--border));
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+.salon-glissiere::after {
+  content: ''; position: absolute; top: 0.125rem; left: 0.125rem; width: 1rem; height: 1rem;
+  border-radius: 50%; background: hsl(var(--card)); box-shadow: 0 1px 3px hsl(0 0% 0% / .25);
+  transition: transform 180ms ease;
+}
+.salon-interrupteur input:checked + .salon-glissiere { background: hsl(var(--primary)); border-color: hsl(var(--primary)); }
+.salon-interrupteur input:checked + .salon-glissiere::after { transform: translateX(1.25rem); }
+.salon-interrupteur input:focus-visible + .salon-glissiere { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
+.salon-libelle { font-weight: 700; font-size: 0.98rem; }
+.salon-aide-btn {
+  flex: 0 0 auto; width: 1.5rem; height: 1.5rem; border-radius: 50%;
+  border: 2px solid hsl(var(--primary) / .5); background: hsl(var(--primary) / .08);
+  color: hsl(var(--primary)); font-weight: 800; font-size: 0.85rem; line-height: 1; cursor: pointer;
+}
+.salon-aide-btn[aria-expanded="true"] { background: hsl(var(--primary)); color: #fff; }
+.salon-aide {
+  margin: 0 0 0.5rem; padding: 0.85rem 1rem; border-radius: var(--radius);
+  background: hsl(var(--primary) / .07); border: 1px dashed hsl(var(--primary) / .35);
+  font-size: 0.92rem; line-height: 1.55; color: hsl(var(--foreground) / .9); text-align: center;
+}
+.salon-aide[hidden] { display: none; }
+.salon-choix { display: grid; gap: 0.75rem; width: 100%; max-width: 24rem; margin: 1rem auto 0; }
+.salon-choix .btn { width: 100%; }
+.salon-code-zone { width: 100%; max-width: 20rem; margin: 0.75rem auto 0; }
+.salon-code-saisie {
+  text-align: center; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: .3em; text-transform: uppercase; font-weight: 700; font-size: 1.15rem;
+}
+.quiz-setup-grid--seul { grid-template-columns: minmax(0, 1fr); max-width: 20rem; }
+.salon-erreur { color: hsl(var(--destructive)); font-weight: 600; text-align: center; margin: 0.5rem 0 1rem; }
+
+.salon-code {
+  margin: 0 auto 1rem; padding: 0.9rem 1.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(1.8rem, 6vw, 2.6rem); font-weight: 800; letter-spacing: .35em; text-indent: .35em;
+  color: hsl(var(--primary));
+  border: 3px dashed hsl(var(--primary) / .55); border-radius: 1.2rem;
+  background: hsl(var(--primary) / .07);
+  user-select: all;
+}
+.salon-code--petit { font-size: 1.4rem; padding: 0.5rem 1rem; margin-top: 0.5rem; }
+/* Le QR code garde un fond blanc même en sombre : c'est ce que lit une caméra. */
+.salon-qr {
+  width: min(13rem, 60vw); margin: 0 auto 1rem; padding: 0.6rem;
+  background: #fff; border-radius: 1rem; border: 2px solid hsl(var(--border));
+}
+.salon-qr svg { display: block; width: 100%; height: auto; }
+.salon-actions { display: grid; gap: 0.6rem; width: 100%; max-width: 20rem; margin: 0 auto 1rem; }
+.salon-actions .btn { width: 100%; }
+.salon-attente { display: flex; align-items: center; justify-content: center; gap: 0.6rem; color: hsl(var(--muted-foreground)); margin: 0.25rem 0 0.75rem; }
+.salon-spinner {
+  display: inline-block; width: 1rem; height: 1rem; border-radius: 50%;
+  border: 2px solid hsl(var(--primary) / .3); border-top-color: hsl(var(--primary));
+  animation: salonTourne 0.9s linear infinite;
+}
+@keyframes salonTourne { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .salon-spinner { animation: none; } }
+.salon-annuler { margin-top: 0.5rem; }
+.salon-progression { font-weight: 700; color: hsl(var(--primary)); margin: 0 0 1rem; }
+.salon-progression--jeu { margin: -0.5rem 0 1rem; font-size: 0.9rem; text-align: center; }
+
+.salon-bandeau {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  max-width: 48rem; margin: 0 auto 0.85rem; padding: 0.55rem 1rem; border-radius: 999px;
+  font-size: 0.9rem; font-weight: 600;
+  background: hsl(var(--muted) / .6); color: hsl(var(--foreground) / .85);
+}
+.salon-bandeau-point { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: hsl(var(--muted-foreground)); flex: 0 0 auto; }
+.salon-bandeau--ok .salon-bandeau-point { background: #16a34a; box-shadow: 0 0 0 3px hsl(142 70% 45% / .25); }
+.salon-bandeau--alerte { background: hsl(38 92% 50% / .15); }
+.salon-bandeau--alerte .salon-bandeau-point { background: #f59e0b; }
+.salon-interrupteur-ligne { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+.salon-detail[hidden] { display: none; }
+.salon-valider-code { width: 100%; margin-top: 0.5rem; }
+/* L'interrupteur masque la grille des deux prénoms, la pastille et le bouton
+   de départ : leurs classes fixent un display, l'attribut hidden seul ne
+   suffisait pas. */
+.quiz-setup-grid[hidden], .quiz-setup-meta[hidden], .quiz-setup-start-btn[hidden] { display: none; }

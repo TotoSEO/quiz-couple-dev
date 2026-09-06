@@ -24,6 +24,7 @@ npm run build          # Main site → dist/
 - `static-site/templates/partials/related-tests.ejs` — Related tests internal linking
 - `static-site/js/quiz-engine-core.js` — Quiz engine (SoloTest, DuoMatch, Coquin, etc.)
 - `static-site/js/quiz-loader.js` — Quiz config & initialization
+- `static-site/js/salon.js` — Mode à distance (chacun sur son téléphone) : codes de partie, QR code, présence, chargé à la demande ; le moteur commun l'appelle via `QuizEngine.chargerSalon`
 - `static-site/css/styles.css` — Main stylesheet
 - `fr/*.json` — French translations (quizzes.json, common.json, home.json, gd.json, quiz-*.json)
 
@@ -40,6 +41,29 @@ npm run build          # Main site → dist/
 - `MostQuiz` — 2-8 players, vote (most)
 - `ParentaliteQuiz` — 2 players, explicit point values (parentalite, emmenager)
 - `TruefalseQuiz` — True/false with answer reveal (vrai-faux)
+
+### Mode à distance (`salon.js`)
+
+Par défaut, un test à deux se joue sur un seul téléphone qu'on se passe. Les
+moteurs qui déclarent `distance: true` dans `quiz-loader.js` (aujourd'hui
+`DuoMatchQuiz` : tester-couple en duo, common-points, compatibilite, amoureux)
+affichent en plus un interrupteur « Activer le mode à distance » sur l'écran
+des prénoms. Une personne crée la partie (code + QR code + lien
+`?salon=CODE`), l'autre rejoint, chacun répond sur son écran et le résultat se
+calcule à l'identique des deux côtés.
+
+- Aucune table en base : un salon est un canal Supabase Realtime (diffusion +
+  présence) nommé d'après le code, vivant tant que quelqu'un y est abonné.
+- `salon.js`, `supabase-js` (CDN) et `js/vendor/qrcode.js` ne sont chargés
+  qu'à l'activation ou à l'arrivée par un lien : la page ordinaire ne change pas.
+- Tout message reçu est contrôlé (version, rôle, type, tailles) avant
+  d'atteindre un moteur ; les prénoms passent par `esc()` au rendu.
+- Pour ajouter un moteur : poser `zoneDistance()` sur son écran de départ,
+  envoyer ses réponses avec `salon.envoyer('reponses', { a })`, les recevoir
+  avec `salon.on('reponses')`, et gérer une phase d'attente quand l'un a fini
+  avant l'autre. `DuoMatchQuiz.demarrerADistance` est le modèle.
+- Les essais sans réseau passent par `window.__QCSalonTransport`, une doublure
+  du canal sur `BroadcastChannel` (voir la PR d'origine).
 
 ## UI/UX Design Guidelines
 
