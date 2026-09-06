@@ -729,6 +729,18 @@
     "parti": "{{nom}} s'est déconnecté(e). On attend son retour…",
     "revenu": "{{nom}} est de retour !",
     "quitter": "Quitter la partie",
-    "arrive": "{{nom}} a rejoint la partie !"
+    "arrive": "{{nom}} a rejoint la partie !",
+    "attenteDe": "Dans l'attente de {{nom}}…",
+    "aRepondu": "{{nom}} a répondu, à vous !",
+    "pareil": "Vous avez répondu la même chose !",
+    "different": "Pas la même réponse. On en parle ?",
+    "suivant": "Suivant",
+    "voirResultats": "Voir nos résultats",
+    "attenteSuivant": "{{nom}} n'a pas encore cliqué sur suivant…",
+    "annulerTexte": "Cette interaction est sur le point d'annuler la partie. Souhaitez-vous continuer ?",
+    "annulerOui": "Oui, annuler la partie",
+    "annulerNon": "Non, continuer",
+    "annulee": "La partie a été annulée par {{nom}}.",
+    "retourTest": "Revenir au test"
   }
 }

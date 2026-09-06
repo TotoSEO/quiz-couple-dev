@@ -727,6 +727,18 @@
     "parti": "{{nom}} got disconnected. Waiting for them to come back…",
     "revenu": "{{nom}} is back!",
     "quitter": "Leave the game",
-    "arrive": "{{nom}} joined the game!"
+    "arrive": "{{nom}} joined the game!",
+    "attenteDe": "Waiting for {{nom}}…",
+    "aRepondu": "{{nom}} has answered, your turn!",
+    "pareil": "You gave the same answer!",
+    "different": "Not the same answer. Want to talk about it?",
+    "suivant": "Next",
+    "voirResultats": "See our results",
+    "attenteSuivant": "{{nom}} hasn't tapped next yet…",
+    "annulerTexte": "This will cancel the game for both of you. Do you want to continue?",
+    "annulerOui": "Yes, cancel the game",
+    "annulerNon": "No, keep playing",
+    "annulee": "The game was cancelled by {{nom}}.",
+    "retourTest": "Back to the test"
   }
 }
