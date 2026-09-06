@@ -243,7 +243,8 @@ var QuizEngine = (function() {
     wrap.appendChild(titreSurligne(o.titre));
     if (o.desc) wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(o.desc)));
     (o.corps || []).forEach(function(n) { if (n) wrap.appendChild(n); });
-    if (o.meta) wrap.appendChild(el('div', 'quiz-setup-meta', o.meta));
+    var metaEl = null;
+    if (o.meta) { metaEl = el('div', 'quiz-setup-meta', o.meta); wrap.appendChild(metaEl); }
     var btn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', esc(o.bouton || ''));
     btn.type = 'button';
     if (o.onStart) btn.addEventListener('click', o.onStart);
@@ -256,7 +257,7 @@ var QuizEngine = (function() {
         if (e.key === 'Enter') { e.preventDefault(); btn.click(); }
       });
     });
-    return { wrap: wrap, bouton: btn };
+    return { wrap: wrap, bouton: btn, meta: metaEl };
   }
 
   // Pastille « N questions • 5 min », commune a tous les ecrans de depart.
@@ -531,14 +532,302 @@ var QuizEngine = (function() {
     interrupteur.addEventListener('change', function () {
       var on = interrupteur.checked;
       interrupteur.setAttribute('aria-checked', on ? 'true' : 'false');
-      if (o.formulaire) o.formulaire.hidden = on;
-      if (o.bouton) o.bouton.hidden = on;
-      if (o.meta) o.meta.hidden = on;
+      var cache = function (x) {
+        if (!x) return;
+        if (Array.isArray(x)) x.forEach(function (n) { if (n) n.hidden = on; });
+        else x.hidden = on;
+      };
+      cache(o.formulaire); cache(o.bouton); cache(o.meta);
       detail.hidden = !on;
       if (on) setTimeout(function () { try { carte.champ.focus({ preventScroll: true }); } catch (e) {} }, 60);
     });
     return zone;
   }
+
+  // ── Creer ou rejoindre un salon depuis l'ecran des prenoms d'un moteur ──
+  // Le moteur porte quizType, modeId et son reservoir de questions, et sait
+  // demarrer (demarrerADistance). Les questions jouees sont celles du
+  // createur : il envoie leurs identifiants, le rejoignant remet les siennes
+  // dans le meme ordre. Un moteur qui tire autrement (une longueur choisie,
+  // des manches sans numero) fournit ses propres idsDepart et appliquerTirage.
+  function idsDepart(moteur) {
+    if (moteur.idsDepart) return moteur.idsDepart();
+    return moteur.questions.map(function (q) { return q.id; });
+  }
+  function remettreDansLOrdre(moteur, ids) {
+    var source = moteur.pool || moteur.questions || [];
+    var parId = {};
+    for (var i = 0; i < source.length; i++) parId[source[i].id] = source[i];
+    var liste = [];
+    for (var j = 0; j < ids.length; j++) if (parId[ids[j]]) liste.push(parId[ids[j]]);
+    if (!liste.length || liste.length !== ids.length) return false;
+    moteur.questions = liste;
+    return true;
+  }
+  function appliquerTirage(moteur, ids) {
+    if (moteur.appliquerTirage) return moteur.appliquerTirage(ids || []);
+    return remettreDansLOrdre(moteur, ids || []);
+  }
+  function salonCreer(moteur, moi, S) {
+    S.creer({
+      quizType: moteur.quizType, modeId: moteur.modeId || null,
+      ids: idsDepart(moteur), moi: moi, container: moteur.container,
+      onPartenaire: function (partenaire, salon) { moteur.demarrerADistance(salon, 0, moi, partenaire); },
+      onRetour: function () { moteur.phase = 'setup'; moteur.render(); }
+    });
+  }
+  function salonRejoindre(moteur, moi, code, S) {
+    var retour = function () { moteur.phase = 'setup'; moteur.render(); };
+    S.rejoindre({
+      code: code, quizType: moteur.quizType, moi: moi, container: moteur.container,
+      onDepart: function (dep, salon) {
+        if (!appliquerTirage(moteur, dep.ids)) {
+          salon.fermer();
+          S.ecranErreur(moteur.container, S.messageErreur('reseau'), { onRetour: retour });
+          return;
+        }
+        moteur.demarrerADistance(salon, 1, moi, dep.createur);
+      },
+      onErreur: function (motif) { S.ecranErreur(moteur.container, S.messageErreur(motif), { onRetour: retour }); }
+    });
+  }
+  // L'interrupteur « Activer le mode a distance » branche sur un moteur.
+  function zoneDistancePour(moteur, o) {
+    return zoneDistance({
+      formulaire: o.formulaire, bouton: o.bouton, meta: o.meta, needsGender: !!o.needsGender,
+      creer: function (moi, S) { salonCreer(moteur, moi, S); },
+      rejoindre: function (moi, code, S) { salonRejoindre(moteur, moi, code, S); }
+    });
+  }
+  // Partie rejointe par un lien : le chargeur a connecte le salon et le passe
+  // au moteur dans sa configuration. Le moteur remet ses questions dans
+  // l'ordre du createur et demarre. Renvoie vrai si le moteur n'a rien
+  // d'autre a faire (il ne dessine pas son ecran de depart).
+  function reprendrePartieRejointe(moteur, config) {
+    if (!config.salon || !config.moiInfo || !config.partenaireInfo) return false;
+    var S = window.QCSalon;
+    if (!appliquerTirage(moteur, config.idsDepart)) {
+      config.salon.fermer();
+      S.ecranErreur(moteur.container, S.messageErreur('reseau'), {
+        onRetour: function () { S.retirerCodeDeUrl(); location.reload(); }
+      });
+      return true;
+    }
+    moteur.demarrerADistance(config.salon, 1, config.moiInfo, config.partenaireInfo);
+    return true;
+  }
+  // Les deux joueurs dans l'ordre createur, rejoignant, avec un prenom de
+  // repli si l'un n'en a pas donne.
+  function joueursDuSalon(moi, moiInfo, partenaireInfo) {
+    function lire(info, rang) {
+      var nom = String((info && (info.nom || info.name)) || '').trim();
+      return { name: nom || tg('playerSetup.player' + (rang + 1), 'Joueur ' + (rang + 1)),
+               gender: (info && (info.genre || info.gender)) || null };
+    }
+    var a = lire(moiInfo, moi), b = lire(partenaireInfo, 1 - moi);
+    return moi === 0 ? [a, b] : [b, a];
+  }
+  function pointsOption(q, id) {
+    var opts = (q && q.options) || [];
+    for (var i = 0; i < opts.length; i++) if (opts[i].id === id) return opts[i].points || 0;
+    return 0;
+  }
+
+  // ── Le tour par tour a distance, commun a tous les tests a deux ─────────
+  // Un moteur qui joue a distance fournit peu de choses : la question a poser
+  // a un rang donne (un texte et des options), et quoi faire des deux series
+  // de reponses a la fin, avant d'afficher son ecran de resultat habituel.
+  // Tout le reste est ici, une seule fois : chacun repond sur son ecran et
+  // attend l'autre, les deux reponses s'affichent sur la question pour en
+  // parler, et on ne passe a la suivante que quand les deux ont appuye sur
+  // « Suivant ». Le resultat se calcule a l'identique des deux cotes.
+  //
+  //   moteur      : le moteur (son conteneur, son verrou de reponse)
+  //   salon, moi  : le salon connecte, et mon rang (0 a cree, 1 a rejoint)
+  //   noms        : [prenom du createur, prenom du rejoignant]
+  //   couleurs    : la couleur du badge de chacun, classe CSS ou { bg, text }
+  //   total       : nombre de questions
+  //   question    : rang -> { texte, options: [{ id, texte }], sur }
+  //   progression : rang -> libelle de la barre (facultatif)
+  //   surFin      : (reponses du createur, reponses du rejoignant) -> rien
+  function TourParTour(o) {
+    var self = this;
+    this.moteur = o.moteur;
+    this.container = o.moteur.container;
+    this.salon = o.salon;
+    this.moi = o.moi;
+    this.noms = o.noms;
+    this.couleurs = o.couleurs || ['badge-pink', 'badge-blue'];
+    this.total = o.total;
+    this.question = o.question;
+    this.progression = o.progression || null;
+    this.surFin = o.surFin;
+    this.reponses = [new Array(this.total).fill(null), new Array(this.total).fill(null)];
+    // Jusqu'a quelle question chacun a appuye sur « suivant ».
+    this.pretsMoi = -1;
+    this.pretsAutre = -1;
+    this.questionRendue = -1;
+    this.idx = 0;
+    this.fini = false;
+    o.moteur.tourParTour = this;
+
+    o.salon.brancherBandeau();
+    o.salon.on('reponses', function (d) {
+      var arr = new Array(self.total).fill(null);
+      for (var i = 0; i < Math.min(self.total, d.a.length); i++) arr[i] = d.a[i];
+      self.reponses[1 - self.moi] = arr;
+      // Ce qui s'affiche depend de ce qu'on sait : on redessine la question.
+      if (!self.fini) self.render();
+    });
+    o.salon.on('pret', function (d) {
+      if (d.q > self.pretsAutre) self.pretsAutre = d.q;
+      if (!self.fini && self.pretsMoi >= self.idx) self.avancerSiPossible();
+    });
+    o.salon.on('resync', function () { self.envoyerReponses(); self.envoyerPret(); });
+    o.salon.on('annule', function (d) {
+      self.fini = true;
+      window.QCSalon.ecranAnnulee(self.container, d.par, function () { location.reload(); });
+    });
+    this.render();
+    // Le bandeau vit juste au-dessus du moteur : c'est lui qu'on amene en
+    // haut, sinon il reste cache sous l'en-tete collant.
+    smoothScroll(o.salon.bandeauEl || this.container, 'start');
+  }
+
+  TourParTour.prototype.envoyerReponses = function () {
+    this.salon.envoyer('reponses', { a: this.reponses[this.moi] });
+  };
+  TourParTour.prototype.envoyerPret = function () {
+    if (this.pretsMoi >= 0) this.salon.envoyer('pret', { q: this.pretsMoi });
+  };
+  TourParTour.prototype.repondues = function () {
+    var n = 0;
+    for (var j = 0; j < 2; j++) {
+      for (var i = 0; i < this.total; i++) {
+        if (this.reponses[j][i] !== null && this.reponses[j][i] !== undefined) n++;
+      }
+    }
+    return n;
+  };
+  // Les deux ont appuye sur « suivant » : on avance ensemble, ou on termine.
+  TourParTour.prototype.avancerSiPossible = function () {
+    if (this.fini) return;
+    // L'un des deux n'a pas encore appuye : l'ecran le dit et on attend.
+    if (this.pretsMoi < this.idx || this.pretsAutre < this.idx) { this.render(); return; }
+    if (this.idx < this.total - 1) { this.idx++; this.render(); return; }
+    this.fini = true;
+    this.salon.terminer();
+    this.surFin(this.reponses[0], this.reponses[1]);
+  };
+
+  // Une question a distance, en quatre etapes :
+  //   repondre        : je n'ai pas encore repondu
+  //   attenteReponse  : j'ai repondu, l'autre pas encore (mes options figees)
+  //   reveal          : les deux ont repondu, les deux choix sont marques
+  //   attenteSuivant  : j'ai appuye sur suivant, j'attends que l'autre le fasse
+  TourParTour.prototype.render = function () {
+    var self = this;
+    var idx = this.idx, total = this.total;
+    var q = this.question(idx);
+    var maRep = this.reponses[this.moi][idx];
+    var saRep = this.reponses[1 - this.moi][idx];
+    var vide = function (v) { return v === null || v === undefined; };
+    var etape = vide(maRep) ? 'repondre'
+      : (vide(saRep) ? 'attenteReponse' : (this.pretsMoi >= idx ? 'attenteSuivant' : 'reveal'));
+    var nomMoi = this.noms[this.moi], nomAutre = this.noms[1 - this.moi];
+    var S = window.QCSalon;
+
+    // L'animation d'entree ne joue qu'a l'arrivee sur une nouvelle question :
+    // les redessins d'etape sur la meme question ne doivent pas la faire sauter.
+    var nouvelle = this.questionRendue !== idx;
+    this.questionRendue = idx;
+    this.container.innerHTML = '';
+    var wrap = el('div', 'quiz-engine salon-question salon-question--' + etape + (nouvelle ? ' quiz-question-enter' : ''));
+
+    var libelle = this.progression ? this.progression(idx)
+      : (tg('question.question', 'Question') + ' ' + (idx + 1) + '/' + total);
+    renderProgressBar(wrap, this.repondues(), total * 2, libelle);
+
+    var couleur = this.couleurs[this.moi];
+    var badge = el('div', 'text-center mb-4');
+    badge.innerHTML = (couleur && typeof couleur === 'object')
+      ? '<span class="badge" style="background:' + couleur.bg + ';color:' + couleur.text + '">' + esc(nomMoi) + '</span>'
+      : '<span class="badge ' + (couleur || 'badge-primary') + '">' + esc(nomMoi) + '</span>';
+    wrap.appendChild(badge);
+
+    if (q.sur) wrap.appendChild(el('p', 'salon-question-sur', esc(q.sur)));
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(q.texte)));
+
+    var optionsWrap = el('div', 'space-y-2');
+    var optLetters = ['A', 'B', 'C', 'D', 'E', 'F'];
+    q.options.forEach(function (opt, k) {
+      var optBtn = el('button', 'quiz-option');
+      optBtn.type = 'button';
+      var noms = '';
+      if (etape === 'reveal' || etape === 'attenteSuivant') {
+        var qui = [];
+        if (maRep === opt.id) qui.push({ nom: nomMoi, cls: 'moi' });
+        if (saRep === opt.id) qui.push({ nom: nomAutre, cls: 'autre' });
+        if (qui.length) {
+          optBtn.classList.add('salon-option--choisie');
+          noms = '<span class="salon-option-noms">' + qui.map(function (x) {
+            return '<span class="salon-option-nom salon-option-nom--' + x.cls + '">' + esc(x.nom) + '</span>';
+          }).join('') + '</span>';
+        }
+      } else if (etape === 'attenteReponse' && maRep === opt.id) {
+        optBtn.classList.add('selected');
+      }
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[k] || '') + '</span><span>' + esc(opt.texte) + '</span>' + noms;
+      if (nouvelle) optBtn.style.animationDelay = (k * 60) + 'ms';
+      if (etape === 'repondre') {
+        optBtn.addEventListener('click', function () {
+          if (!answerLock(self.moteur)) return;
+          self.reponses[self.moi][idx] = opt.id;
+          self.envoyerReponses();
+          self.render();
+        });
+      } else {
+        optBtn.disabled = true;
+        optBtn.classList.add('salon-option--figee');
+      }
+      optionsWrap.appendChild(optBtn);
+    });
+    wrap.appendChild(optionsWrap);
+
+    var pied = el('div', 'salon-pied');
+    function attente(texte) {
+      var p = el('p', 'salon-attente');
+      p.innerHTML = '<span class="salon-spinner" aria-hidden="true"></span> ' + esc(texte);
+      return p;
+    }
+    if (etape === 'repondre') {
+      if (!vide(saRep)) pied.appendChild(el('p', 'salon-indice', esc(S.avec(tg('salon.aRepondu', '{{nom}} a répondu, à vous !'), { nom: nomAutre }))));
+    } else if (etape === 'attenteReponse') {
+      pied.appendChild(attente(S.avec(tg('salon.attenteDe', 'Dans l\'attente de {{nom}}…'), { nom: nomAutre })));
+    } else {
+      var pareil = maRep === saRep;
+      pied.appendChild(el('p', 'salon-verdict-question' + (pareil ? ' est-pareil' : ''),
+        esc(pareil ? tg('salon.pareil', 'Vous avez répondu la même chose !') : tg('salon.different', 'Pas la même réponse. On en parle ?'))));
+      var dernier = idx >= total - 1;
+      var suivant = el('button', 'btn btn-cta btn-gradient salon-suivant',
+        esc(dernier ? tg('salon.voirResultats', 'Voir nos résultats') : tg('salon.suivant', 'Suivant')));
+      suivant.type = 'button';
+      if (etape === 'attenteSuivant') {
+        suivant.disabled = true;
+        pied.appendChild(suivant);
+        pied.appendChild(attente(S.avec(tg('salon.attenteSuivant', '{{nom}} n\'a pas encore cliqué sur suivant…'), { nom: nomAutre })));
+      } else {
+        suivant.addEventListener('click', function () {
+          self.pretsMoi = idx;
+          self.envoyerPret();
+          self.avancerSiPossible();
+        });
+        pied.appendChild(suivant);
+      }
+    }
+    wrap.appendChild(pied);
+    this.container.appendChild(wrap);
+  };
 
   // ─── Utility ──────────────────────────────────────────────
   function el(tag, cls, html) {
@@ -2711,19 +3000,13 @@ var QuizEngine = (function() {
     this.quizType = config.quizType || '';
     this.modeId = config.modeId || null;
     this.distance = !!config.distance && !this.modeSolo;
-    this.salon = null;
-    this.moi = -1;
     this.phase = 'setup';
     this.players = [null, null];
     this.currentQ = 0;
     this.currentPlayer = 0;
     this.answers = { p1: [], p2: [] };
-    // Partie rejointe par un lien : le chargeur a deja connecte le salon et
-    // remis les questions dans l'ordre du createur.
-    if (config.salon && config.moiInfo && config.partenaireInfo) {
-      this.demarrerADistance(config.salon, 1, config.moiInfo, config.partenaireInfo);
-      return;
-    }
+    // Partie rejointe par un lien : le chargeur a deja connecte le salon.
+    if (reprendrePartieRejointe(this, config)) return;
     this.render();
   }
 
@@ -2846,243 +3129,44 @@ var QuizEngine = (function() {
     wrap.appendChild(title);
     wrap.appendChild(desc);
     wrap.appendChild(form);
-    if (this.distance) {
-      wrap.appendChild(zoneDistance({
-        formulaire: form, bouton: startBtn, meta: info, needsGender: this.needsGender,
-        creer: function (moi, S) { self.creerSalon(moi, S); },
-        rejoindre: function (moi, code, S) { self.rejoindreSalon(moi, code, S); }
-      }));
-    }
+    if (this.distance) wrap.appendChild(zoneDistancePour(this, { formulaire: form, bouton: startBtn, meta: info, needsGender: this.needsGender }));
     wrap.appendChild(info);
     wrap.appendChild(startBtn);
     this.container.appendChild(wrap);
   };
 
   // ── Le mode a distance de DuoMatch ─────────────────────────
-  // Chacun repond a toutes les questions sur son telephone, a son rythme ;
-  // les reponses de l'autre arrivent par le salon, et le resultat se calcule
-  // des que les deux series sont completes, a l'identique des deux cotes.
-  DuoMatchQuiz.prototype.creerSalon = function (moi, S) {
-    var self = this;
-    S.creer({
-      quizType: this.quizType, modeId: this.modeId,
-      ids: this.questions.map(function (q) { return q.id; }),
-      moi: moi, container: this.container,
-      onPartenaire: function (partenaire, salon) { self.demarrerADistance(salon, 0, moi, partenaire); },
-      onRetour: function () { self.phase = 'setup'; self.render(); }
-    });
-  };
-
-  DuoMatchQuiz.prototype.rejoindreSalon = function (moi, code, S) {
-    var self = this;
-    var retour = function () { self.phase = 'setup'; self.render(); };
-    S.rejoindre({
-      code: code, quizType: this.quizType, moi: moi, container: this.container,
-      onDepart: function (dep, salon) {
-        if (!self.appliquerTirage(dep.ids)) {
-          salon.fermer();
-          S.ecranErreur(self.container, S.messageErreur('reseau'), { onRetour: retour });
-          return;
-        }
-        self.demarrerADistance(salon, 1, moi, dep.createur);
-      },
-      onErreur: function (motif) { S.ecranErreur(self.container, S.messageErreur(motif), { onRetour: retour }); }
-    });
-  };
-
-  // Le tirage du createur remplace le mien : memes questions, meme ordre,
-  // sinon les deux series de reponses ne parleraient pas des memes choses.
-  DuoMatchQuiz.prototype.appliquerTirage = function (ids) {
-    var source = this.pool || this.questions;
-    var parId = {};
-    for (var i = 0; i < source.length; i++) parId[source[i].id] = source[i];
-    var liste = [];
-    for (var j = 0; j < ids.length; j++) if (parId[ids[j]]) liste.push(parId[ids[j]]);
-    if (!liste.length || liste.length !== ids.length) return false;
-    this.questions = liste;
-    return true;
-  };
-
+  // Le tour par tour commun fait tout ; il ne reste qu'a lui donner les
+  // questions et a ranger les deux series de reponses a la fin.
   DuoMatchQuiz.prototype.demarrerADistance = function (salon, moi, moiInfo, partenaireInfo) {
     var self = this;
-    var a = { name: (moiInfo.nom || moiInfo.name || '').trim() || tg('playerSetup.player' + (moi + 1), 'Joueur ' + (moi + 1)), gender: moiInfo.genre || moiInfo.gender || null };
-    var b = { name: (partenaireInfo.nom || partenaireInfo.name || '').trim() || tg('playerSetup.player' + (2 - moi), 'Joueur ' + (2 - moi)), gender: partenaireInfo.genre || partenaireInfo.gender || null };
-    this.players = moi === 0 ? [a, b] : [b, a];
-    this.salon = salon;
-    this.moi = moi;
-    var total = this.questions.length;
-    this.answers = { p1: new Array(total).fill(null), p2: new Array(total).fill(null) };
-    // Jusqu'a quelle question chacun a appuye sur « suivant ».
-    this.pretsMoi = -1;
-    this.pretsAutre = -1;
-    this.questionRendue = -1;
-    this.currentQ = 0;
+    this.players = joueursDuSalon(moi, moiInfo, partenaireInfo);
     this.currentPlayer = moi;
     this.phase = 'playing';
-    salon.brancherBandeau();
-    salon.on('reponses', function (d) {
-      var arr = new Array(total).fill(null);
-      for (var i = 0; i < Math.min(total, d.a.length); i++) arr[i] = d.a[i];
-      self.answers[self.cleAutre()] = arr;
-      // Ce qui s'affiche depend de ce qu'on sait : on redessine la question.
-      if (self.phase === 'playing') self.render();
-    });
-    salon.on('pret', function (d) {
-      if (d.q > self.pretsAutre) self.pretsAutre = d.q;
-      if (self.phase === 'playing' && self.pretsMoi >= self.currentQ) self.avancerSiPossible();
-    });
-    salon.on('resync', function () { self.envoyerReponses(); self.envoyerPret(); });
-    salon.on('annule', function (d) {
-      self.phase = 'annulee';
-      window.QCSalon.ecranAnnulee(self.container, d.par, function () { location.reload(); });
-    });
-    this.render();
-    // Le bandeau vit juste au-dessus du moteur : c'est lui qu'on amene en
-    // haut, sinon il reste cache sous l'en-tete collant.
-    smoothScroll(salon.bandeauEl || this.container, 'start');
-  };
-
-  DuoMatchQuiz.prototype.cleMoi = function () { return this.moi === 0 ? 'p1' : 'p2'; };
-  DuoMatchQuiz.prototype.cleAutre = function () { return this.moi === 0 ? 'p2' : 'p1'; };
-  DuoMatchQuiz.prototype.repondu = function (cle) {
-    return this.answers[cle].filter(function (x) { return x !== null && x !== undefined; }).length;
-  };
-  DuoMatchQuiz.prototype.envoyerReponses = function () {
-    if (this.salon) this.salon.envoyer('reponses', { a: this.answers[this.cleMoi()] });
-  };
-  DuoMatchQuiz.prototype.envoyerPret = function () {
-    if (this.salon && this.pretsMoi >= 0) this.salon.envoyer('pret', { q: this.pretsMoi });
-  };
-  DuoMatchQuiz.prototype.nomPartenaire = function () {
-    var p = this.players[1 - this.moi];
-    return (p && p.name) || '';
-  };
-
-  // On ne passe a la question suivante que quand les deux ont appuye sur
-  // « suivant » pour celle-ci. La derniere mene au resultat, pareil : les
-  // deux doivent l'avoir demande, pour qu'aucun ne se retrouve seul devant.
-  DuoMatchQuiz.prototype.avancerSiPossible = function () {
-    var idx = this.currentQ;
-    if (this.pretsMoi < idx || this.pretsAutre < idx) { this.render(); return; }
-    if (idx < this.questions.length - 1) {
-      this.currentQ++;
-      this.render();
-      smoothScroll(this.salon && this.salon.bandeauEl ? this.salon.bandeauEl : this.container, 'start');
-    } else {
-      this.phase = 'results';
-      this.render();
-      if (this.salon) this.salon.terminer();
-    }
-  };
-
-  // La question, version a distance. L'etape se deduit de ce qu'on sait,
-  // ce qui rend le rendu rejouable a chaque message recu :
-  //   repondre        : je n'ai pas encore repondu
-  //   attenteReponse  : j'ai repondu, l'autre pas encore
-  //   reveal          : les deux reponses sont la, cote a cote, on en parle
-  //   attenteSuivant  : j'ai appuye sur suivant, j'attends que l'autre le fasse
-  DuoMatchQuiz.prototype.renderQuestionSalon = function () {
-    var self = this;
-    var q = this.questions[this.currentQ];
-    var total = this.questions.length;
-    var idx = this.currentQ;
-    var maRep = this.answers[this.cleMoi()][idx];
-    var saRep = this.answers[this.cleAutre()][idx];
-    var etape = maRep === null ? 'repondre'
-      : (saRep === null ? 'attenteReponse' : (this.pretsMoi >= idx ? 'attenteSuivant' : 'reveal'));
-    var nomMoi = this.players[this.moi].name, nomAutre = this.nomPartenaire();
-    var S = window.QCSalon;
-
-    // L'animation d'entree ne joue qu'a l'arrivee sur une nouvelle question :
-    // les redessins d'etape sur la meme question ne doivent pas la faire sauter.
-    var nouvelle = this.questionRendue !== idx;
-    this.questionRendue = idx;
-    var wrap = el('div', 'quiz-engine salon-question salon-question--' + etape + (nouvelle ? ' quiz-question-enter' : ''));
-
-    var answered = this.repondu('p1') + this.repondu('p2');
-    renderProgressBar(wrap, answered, total * 2, tg('question.question', 'Question') + ' ' + (idx + 1) + '/' + total);
-
-    var player = this.players[this.moi];
-    var color = this.needsGender ? getPlayerColor(player, this.players[1 - this.moi], this.moi) : null;
-    var badge = el('div', 'text-center mb-4');
-    badge.innerHTML = color
-      ? '<span class="badge" style="background:' + color.bg + ';color:' + color.text + '">' + esc(player.name) + '</span>'
-      : '<span class="badge badge-primary">' + esc(player.name) + '</span>';
-    wrap.appendChild(badge);
-
-    var qText = tgd(this.prefix + '.q' + q.id, q.text);
-    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
-
-    var optionsWrap = el('div', 'space-y-2');
-    var optLetters = ['A', 'B', 'C', 'D', 'E'];
-    q.options.forEach(function (opt, k) {
-      var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
-      var optBtn = el('button', 'quiz-option');
-      optBtn.type = 'button';
-      var noms = '';
-      if (etape === 'reveal' || etape === 'attenteSuivant') {
-        var qui = [];
-        if (maRep === opt.id) qui.push({ nom: nomMoi, cls: 'moi' });
-        if (saRep === opt.id) qui.push({ nom: nomAutre, cls: 'autre' });
-        if (qui.length) {
-          optBtn.classList.add('salon-option--choisie');
-          noms = '<span class="salon-option-noms">' + qui.map(function (x) {
-            return '<span class="salon-option-nom salon-option-nom--' + x.cls + '">' + esc(x.nom) + '</span>';
-          }).join('') + '</span>';
-        }
-      } else if (etape === 'attenteReponse' && maRep === opt.id) {
-        optBtn.classList.add('selected');
+    var couleurs = this.needsGender
+      ? [getPlayerColor(this.players[0], this.players[1], 0), getPlayerColor(this.players[1], this.players[0], 1)]
+      : null;
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi,
+      noms: [this.players[0].name, this.players[1].name],
+      couleurs: couleurs,
+      total: this.questions.length,
+      question: function (idx) {
+        var q = self.questions[idx];
+        return {
+          texte: tgd(self.prefix + '.q' + q.id, q.text),
+          options: q.options.map(function (opt) {
+            return { id: opt.id, texte: tgd(self.prefix + '.q' + q.id + opt.id, opt.text) };
+          })
+        };
+      },
+      surFin: function (a, b) {
+        self.answers = { p1: a, p2: b };
+        self.currentQ = self.questions.length - 1;
+        self.phase = 'results';
+        self.render();
       }
-      optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[k] || '') + '</span><span>' + esc(optText) + '</span>' + noms;
-      if (nouvelle) optBtn.style.animationDelay = (k * 60) + 'ms';
-      if (etape === 'repondre') {
-        optBtn.addEventListener('click', function () {
-          if (!answerLock(self)) return;
-          self.answers[self.cleMoi()][idx] = opt.id;
-          self.envoyerReponses();
-          self.render();
-        });
-      } else {
-        optBtn.disabled = true;
-        optBtn.classList.add('salon-option--figee');
-      }
-      optionsWrap.appendChild(optBtn);
     });
-    wrap.appendChild(optionsWrap);
-
-    var pied = el('div', 'salon-pied');
-    function attente(texte) {
-      var p = el('p', 'salon-attente');
-      p.innerHTML = '<span class="salon-spinner" aria-hidden="true"></span> ' + esc(texte);
-      return p;
-    }
-    if (etape === 'repondre') {
-      if (saRep !== null) pied.appendChild(el('p', 'salon-indice', esc(S.avec(tg('salon.aRepondu', '{{nom}} a répondu, à vous !'), { nom: nomAutre }))));
-    } else if (etape === 'attenteReponse') {
-      pied.appendChild(attente(S.avec(tg('salon.attenteDe', 'Dans l\'attente de {{nom}}…'), { nom: nomAutre })));
-    } else {
-      var pareil = maRep === saRep;
-      pied.appendChild(el('p', 'salon-verdict-question' + (pareil ? ' est-pareil' : ''),
-        esc(pareil ? tg('salon.pareil', 'Vous avez répondu la même chose !') : tg('salon.different', 'Pas la même réponse. On en parle ?'))));
-      var dernier = idx >= total - 1;
-      var suivant = el('button', 'btn btn-cta btn-gradient salon-suivant',
-        esc(dernier ? tg('salon.voirResultats', 'Voir nos résultats') : tg('salon.suivant', 'Suivant')));
-      suivant.type = 'button';
-      if (etape === 'attenteSuivant') {
-        suivant.disabled = true;
-        pied.appendChild(suivant);
-        pied.appendChild(attente(S.avec(tg('salon.attenteSuivant', '{{nom}} n\'a pas encore cliqué sur suivant…'), { nom: nomAutre })));
-      } else {
-        suivant.addEventListener('click', function () {
-          self.pretsMoi = idx;
-          self.envoyerPret();
-          self.avancerSiPossible();
-        });
-        pied.appendChild(suivant);
-      }
-    }
-    wrap.appendChild(pied);
-    this.container.appendChild(wrap);
   };
 
   DuoMatchQuiz.prototype.renderHandoff = function() {
@@ -3099,7 +3183,6 @@ var QuizEngine = (function() {
   };
 
   DuoMatchQuiz.prototype.renderQuestion = function() {
-    if (this.salon) return this.renderQuestionSalon();
     var self = this;
     var q = this.questions[this.currentQ];
     var total = this.questions.length;
@@ -4687,6 +4770,12 @@ var QuizEngine = (function() {
     this.currentPlayer = 0;
     this.reponses = [[], []];   // en solo, seul l'indice 0 sert
     this.partenaire = config.partenaire || null;
+    // Le mode a distance : le reservoir sert a rejouer le tirage du createur.
+    this.quizType = config.quizType || '';
+    this.modeId = config.modeId || null;
+    this.distance = !!config.distance;
+    this.pool = config.pool || null;
+    if (reprendrePartieRejointe(this, config)) return;
     this.render();
   }
 
@@ -4872,7 +4961,9 @@ var QuizEngine = (function() {
     });
 
     wrap.appendChild(form);
-    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
+    var meta = el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length));
+    if (this.distance) wrap.appendChild(zoneDistancePour(this, { formulaire: form, bouton: startBtn, meta: meta, needsGender: true }));
+    wrap.appendChild(meta);
     wrap.appendChild(startBtn);
 
     var retour = el('button', 'quiz-modes-retour', '← ' + tg('sainMode.retour', 'Changer de mode'));
@@ -4971,6 +5062,43 @@ var QuizEngine = (function() {
     this.container.appendChild(wrap);
   };
 
+  // A distance : le mode DUO, chacun sur son telephone. Les reponses arrivent
+  // en lettres, on les convertit au bareme comme le fait l'ecran de question.
+  HealthyQuiz.prototype.demarrerADistance = function (salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    this.mode = 'duo';
+    this.players = joueursDuSalon(moi, moiInfo, partenaireInfo).map(function (p, i) {
+      return { name: p.name, gender: p.gender || (i === 0 ? 'homme' : 'femme') };
+    });
+    this.currentPlayer = moi;
+    this.phase = 'playing';
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi,
+      noms: [this.players[0].name, this.players[1].name],
+      couleurs: [getPlayerColor(this.players[0], this.players[1], 0), getPlayerColor(this.players[1], this.players[0], 1)],
+      total: this.questions.length,
+      question: function (idx) {
+        var q = self.questions[idx];
+        return {
+          texte: tgd(self.prefix + '.q' + q.id, q.text),
+          options: q.options.map(function (opt) {
+            return { id: opt.id, texte: tgd(self.prefix + '.q' + q.id + opt.id, opt.text) };
+          })
+        };
+      },
+      surFin: function (a, b) {
+        self.reponses = [a, b].map(function (serie) {
+          return serie.map(function (id, i) {
+            var q = self.questions[i];
+            return { poids: self.poidsDe(q), valeur: self.valeurReponse(id), securite: self.estSecurite(q) };
+          });
+        });
+        self.phase = 'results';
+        self.render();
+      }
+    });
+  };
+
   HealthyQuiz.prototype.renderResults = function() {
     var self = this;
     var solo = this.mode === 'solo';
@@ -5062,6 +5190,10 @@ var QuizEngine = (function() {
     // fois. Sans limite c'est tout le lot et le test se comporte comme avant.
     this.limiteInitiale = Math.min(config.limite || this.questions.length, this.questions.length);
     this.limite = this.limiteInitiale;
+    this.quizType = config.quizType || '';
+    this.modeId = config.modeId || null;
+    this.distance = !!config.distance;
+    if (reprendrePartieRejointe(this, config)) return;
     this.render();
   }
 
@@ -5102,9 +5234,10 @@ var QuizEngine = (function() {
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-2 text-center', tg('parentalite.setupDesc', 'Répondez chacun de votre côté aux mêmes 20 questions.')));
     var minutes = Math.max(3, Math.round(this.limiteInitiale * 25 / 60));
-    wrap.appendChild(el('div', 'quiz-setup-meta',
+    var meta = el('div', 'quiz-setup-meta',
       '📝 ' + this.limiteInitiale + ' ' + esc(tg('meta.questionsWord', 'questions')) + ' &bull; ⏱ ' +
-      minutes + ' min'));
+      minutes + ' min');
+    wrap.appendChild(meta);
 
     var form = el('div', 'quiz-setup-grid max-w-lg mx-auto');
 
@@ -5134,8 +5267,51 @@ var QuizEngine = (function() {
     });
 
     wrap.appendChild(form);
+    if (this.distance) wrap.appendChild(zoneDistancePour(this, { formulaire: form, bouton: startBtn, meta: meta }));
     wrap.appendChild(startBtn);
     this.container.appendChild(wrap);
+  };
+
+  // A distance on joue la longueur du format choisi par le createur (la
+  // version courte s'arrete a ses douze questions, sans proposer la suite) :
+  // le rejoignant recoit exactement les questions a jouer.
+  ParentaliteQuiz.prototype.idsDepart = function () {
+    return this.questions.slice(0, this.limite).map(function (q) { return q.id; });
+  };
+  ParentaliteQuiz.prototype.appliquerTirage = function (ids) {
+    if (!remettreDansLOrdre(this, ids)) return false;
+    this.limite = this.questions.length;
+    return true;
+  };
+  ParentaliteQuiz.prototype.demarrerADistance = function (salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    this.players = joueursDuSalon(moi, moiInfo, partenaireInfo);
+    this.currentPlayer = moi;
+    this.phase = 'playing';
+    var total = Math.min(this.limite, this.questions.length);
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi,
+      noms: [this.players[0].name, this.players[1].name],
+      couleurs: [{ bg: '#ec4899', text: '#fff' }, { bg: '#3b82f6', text: '#fff' }],
+      total: total,
+      question: function (idx) {
+        var q = self.questions[idx];
+        return {
+          texte: tgd(self.prefix + '.q' + q.id, q.text),
+          options: q.options.map(function (opt) {
+            return { id: opt.id, texte: tgd(self.prefix + '.q' + q.id + opt.id, opt.text) };
+          })
+        };
+      },
+      surFin: function (a, b) {
+        self.limite = total;
+        self.scores = [a, b].map(function (serie) {
+          return serie.map(function (id, i) { return pointsOption(self.questions[i], id); });
+        });
+        self.phase = 'results';
+        self.render();
+      }
+    });
   };
 
   ParentaliteQuiz.prototype.renderHandoff = function() {
@@ -5879,6 +6055,12 @@ var QuizEngine = (function() {
     this.courant = 0;
     this.currentQ = 0;
     this.reponses = [[], []];
+    // Le mode a distance n'a de sens qu'en duo : chacun repond sur l'autre.
+    this.quizType = config.quizType || '';
+    this.modeId = config.modeId || null;
+    this.distance = !!config.distance && this.duo;
+    this.pool = config.pool || null;
+    if (reprendrePartieRejointe(this, config)) return;
     this.render();
   }
 
@@ -5948,7 +6130,43 @@ var QuizEngine = (function() {
         self.render();
       }
     });
+    if (this.distance) {
+      ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: corps, bouton: ecran.bouton, meta: ecran.meta }), ecran.meta || ecran.bouton);
+    }
     this.container.appendChild(ecran.wrap);
+  };
+
+  // A distance, chacun repond sur son partenaire depuis son telephone : les
+  // enonces portent le prenom de l'autre, comme au relais.
+  PiliersQuiz.prototype.demarrerADistance = function (salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    var joueurs = joueursDuSalon(moi, moiInfo, partenaireInfo);
+    this.joueurs = [joueurs[0].name, joueurs[1].name];
+    this.courant = moi;
+    this.phase = 'playing';
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi, noms: this.joueurs.slice(),
+      total: this.questions.length,
+      question: function (idx) {
+        var q = self.questions[idx];
+        return {
+          texte: self.prenom(tgd(self.prefix + '.q' + q.id, q.text), moi),
+          options: q.options.map(function (opt) {
+            return { id: opt.id, texte: self.prenom(tgd(self.prefix + '.q' + q.id + opt.id, opt.text), moi) };
+          })
+        };
+      },
+      surFin: function (a, b) {
+        self.reponses = [a, b].map(function (serie) {
+          return serie.map(function (id, i) {
+            var q = self.questions[i];
+            return { id: q.id, points: pointsOption(q, id) };
+          });
+        });
+        self.phase = 'results';
+        self.render();
+      }
+    });
   };
 
   PiliersQuiz.prototype.renderRelais = function() {
@@ -6171,6 +6389,10 @@ var QuizEngine = (function() {
     this.courant = 0;
     this.currentQ = 0;
     this.reponses = [[], []];
+    this.quizType = config.quizType || '';
+    this.modeId = config.modeId || null;
+    this.distance = !!config.distance && this.duo;
+    if (reprendrePartieRejointe(this, config)) return;
     this.render();
   }
 
@@ -6265,7 +6487,41 @@ var QuizEngine = (function() {
         self.render();
       }
     });
+    if (this.distance) {
+      ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: corps, bouton: ecran.bouton, meta: ecran.meta }), ecran.meta || ecran.bouton);
+    }
     this.container.appendChild(ecran.wrap);
+  };
+
+  // A distance : les cinq reponses portent les deux prenoms, dans l'ordre
+  // createur puis rejoignant, pareil sur les deux telephones.
+  ChargeMentaleQuiz.prototype.demarrerADistance = function (salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    var joueurs = joueursDuSalon(moi, moiInfo, partenaireInfo);
+    this.joueurs = [joueurs[0].name, joueurs[1].name];
+    this.courant = moi;
+    this.phase = 'playing';
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi, noms: this.joueurs.slice(),
+      total: this.questions.length,
+      question: function (idx) {
+        var q = self.questions[idx];
+        return {
+          texte: self.txt('q' + q.id, ''),
+          options: self.options().map(function (libelle, k) { return { id: k, texte: libelle }; })
+        };
+      },
+      surFin: function (a, b) {
+        self.reponses = [a, b].map(function (serie) {
+          return serie.map(function (k) {
+            var cran = ChargeMentaleQuiz.CRANS[Number(k)];
+            return (typeof cran === 'number') ? cran : 0;
+          });
+        });
+        self.phase = 'results';
+        self.render();
+      }
+    });
   };
 
   ChargeMentaleQuiz.prototype.renderRelais = function() {
@@ -8029,6 +8285,9 @@ var QuizEngine = (function() {
     this.debatsGagnes = 0;        // désaccords que le débat a tranchés
     this.historique = [];
     this.minuteurs = [];
+    this.quizType = config.quizType || '';
+    this.distance = !!config.distance;
+    if (reprendrePartieRejointe(this, config)) return;
     this.render();
   }
 
@@ -8054,11 +8313,15 @@ var QuizEngine = (function() {
 
   DuoVoteGame.prototype.lireTheme = function(id) {
     var out = [];
+    // Un numero par question, stable d'un telephone a l'autre : c'est lui
+    // que le createur d'une partie a distance envoie au rejoignant.
+    var rang = 0;
+    for (var r = 0; r < QDN_THEMES.length; r++) if (QDN_THEMES[r].id === id) rang = r;
     for (var i = 1; i <= 40; i++) {
       var k = this.prefix + '.' + id + i;
       var t = tgd(k, null);
       if (!t || t === k) { if (i > 2) break; else continue; }
-      out.push({ theme: id, texte: t });
+      out.push({ theme: id, texte: t, num: (rang + 1) * 100 + i });
     }
     return out;
   };
@@ -8138,7 +8401,76 @@ var QuizEngine = (function() {
         self.render();
       }
     });
+    if (this.distance) ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: grille, bouton: ecran.bouton, meta: ecran.meta }), ecran.meta || ecran.bouton);
     this.container.appendChild(ecran.wrap);
+  };
+
+  // A distance c'est le vote secret, sans se passer le telephone : chacun
+  // designe sur son ecran, la revelation est commune. Pas de debat a
+  // distance : un desaccord reste dans la liste « a reparler ensemble ».
+  DuoVoteGame.prototype.idsDepart = function () {
+    this.tirerManches();
+    return this.manches.map(function (m) { return m.num; });
+  };
+  DuoVoteGame.prototype.appliquerTirage = function (ids) {
+    var self = this, parNum = {};
+    QDN_THEMES.forEach(function (th) { self.lireTheme(th.id).forEach(function (m) { parNum[m.num] = m; }); });
+    var liste = [];
+    for (var i = 0; i < ids.length; i++) if (parNum[ids[i]]) liste.push(parNum[ids[i]]);
+    if (!liste.length || liste.length !== ids.length) return false;
+    this.manches = liste;
+    return true;
+  };
+  DuoVoteGame.prototype.demarrerADistance = function (salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    var joueurs = joueursDuSalon(moi, moiInfo, partenaireInfo);
+    this.stopper();
+    this.noms = [joueurs[0].name, joueurs[1].name];
+    this.mode = 'secret';
+    this.aDistance = true;
+    this.idx = 0; this.votes = [null, null]; this.tour = 0;
+    this.accords = 0; this.serie = 0; this.meilleureSerie = 0;
+    this.designations = [0, 0]; this.debatsGagnes = 0;
+    this.historique = [];
+    this.phase = 'vote';
+    var total = this.manches.length;
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi, noms: this.noms.slice(),
+      total: total,
+      question: function (idx) {
+        var m = self.manches[idx];
+        return {
+          sur: self.emojiTheme(m.theme) + ' ' + tgd(self.prefix + '.theme_' + m.theme, m.theme),
+          texte: tg('quiDeNous.amorce', 'Qui de vous deux…') + ' ' + m.texte,
+          options: [
+            { id: 0, texte: self.joueur(0) },
+            { id: 1, texte: self.joueur(1) },
+            { id: QDN_NSP, texte: tg('quiDeNous.nsp', 'On ne sait pas') }
+          ]
+        };
+      },
+      progression: function (idx) {
+        return tg('quiDeNous.manche', 'Manche {{n}} / {{total}}').replace('{{n}}', idx + 1).replace('{{total}}', total);
+      },
+      surFin: function (a, b) {
+        for (var i = 0; i < total; i++) {
+          var m = self.manches[i];
+          var votes = [Number(a[i]), Number(b[i])];
+          var passe = isNaN(votes[0]) || isNaN(votes[1]) || votes[0] === QDN_NSP || votes[1] === QDN_NSP;
+          var accord = !passe && votes[0] === votes[1];
+          self.historique[i] = { texte: m.texte, theme: m.theme, votes: votes, accord: accord, passe: passe, tranche: accord ? null : false };
+          if (accord) {
+            self.accords++;
+            self.serie++;
+            if (self.serie > self.meilleureSerie) self.meilleureSerie = self.serie;
+            if (votes[0] >= 0) self.designations[votes[0]]++;
+          } else if (!passe) self.serie = 0;
+        }
+        self.idx = total;
+        self.phase = 'fin';
+        self.render();
+      }
+    });
   };
 
   DuoVoteGame.prototype.nouvellePartie = function() {
@@ -8571,13 +8903,16 @@ var QuizEngine = (function() {
 
     var rejouer = el('button', 'btn btn-cta btn-lg mt-6 mb-2', esc(tg('quiDeNous.rejouer', 'Rejouer avec de nouvelles questions')));
     rejouer.type = 'button';
-    rejouer.addEventListener('click', function() { self.nouvellePartie(); });
+    // Une partie a distance est finie pour de bon : rejouer, c'est repartir
+    // de la page, chacun de son cote.
+    rejouer.addEventListener('click', function() { if (self.aDistance) { location.reload(); return; } self.nouvellePartie(); });
     wrap.appendChild(rejouer);
 
     // On peut refaire une partie dans l'autre mode sans repasser par les prenoms.
     var autreMode = el('button', 'btn btn-outline mb-2', esc(tg('quiDeNous.changerMode', 'Changer de façon de jouer')));
     autreMode.type = 'button';
     autreMode.addEventListener('click', function() {
+      if (self.aDistance) { location.reload(); return; }
       self.stopper(); self.phase = 'mode'; self.render();
     });
     wrap.appendChild(autreMode);
@@ -9355,6 +9690,9 @@ var QuizEngine = (function() {
     this.tour = 0;
     this.compte = [{ jai: 0, jamais: 0 }, { jai: 0, jamais: 0 }];
     this.dejaVues = {};
+    this.quizType = config.quizType || '';
+    this.distance = !!config.distance;
+    if (reprendrePartieRejointe(this, config)) return;
     this.render();
   }
 
@@ -9433,7 +9771,56 @@ var QuizEngine = (function() {
         smoothScroll(self.container, 'start');
       }
     });
+    // Le choix de la longueur reste visible : c'est le createur qui la fixe.
+    if (this.distance) ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: grille, bouton: ecran.bouton }), ecran.bouton);
     this.container.appendChild(ecran.wrap);
+  };
+
+  // A distance : le createur tire la sequence et n'envoie que les cartes de
+  // la longueur choisie ; chacun repond sur son telephone, les deux reponses
+  // s'affichent, et le camembert final se calcule pareil des deux cotes.
+  JamaisGame.prototype.idsDepart = function () {
+    this.tirer();
+    return this.questions.slice(0, this.limite).map(function (q) { return q.id; });
+  };
+  JamaisGame.prototype.appliquerTirage = function (ids) {
+    if (!remettreDansLOrdre(this, ids)) return false;
+    this.limite = this.questions.length;
+    return true;
+  };
+  JamaisGame.prototype.demarrerADistance = function (salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    var joueurs = joueursDuSalon(moi, moiInfo, partenaireInfo);
+    this.noms = [joueurs[0].name, joueurs[1].name];
+    this.aDistance = true;
+    this.phase = 'jeu';
+    var total = Math.min(this.limite, this.questions.length);
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi, noms: this.noms.slice(),
+      total: total,
+      question: function (idx) {
+        return {
+          texte: self.questions[idx].texte,
+          options: [
+            { id: 'jai', texte: self.jtg('btnJai', 'J\'ai déjà') },
+            { id: 'jamais', texte: self.jtg('btnJamais', 'Je n\'ai jamais') }
+          ]
+        };
+      },
+      progression: function (idx) {
+        return self.jtg('questionSur', 'Question {{n}} / {{total}}').replace('{{n}}', idx + 1).replace('{{total}}', total);
+      },
+      surFin: function (a, b) {
+        self.compte = [a, b].map(function (serie) {
+          var c = { jai: 0, jamais: 0 };
+          serie.forEach(function (v) { if (v === 'jai') c.jai++; else if (v === 'jamais') c.jamais++; });
+          return c;
+        });
+        self.idx = total;
+        self.phase = 'resultats';
+        self.render();
+      }
+    });
   };
 
   JamaisGame.prototype.renderJeu = function() {
@@ -9587,6 +9974,8 @@ var QuizEngine = (function() {
     var rejouer = el('button', 'btn btn-cta btn-lg mt-6 mb-2', this.jtg('recommencer', 'Recommencer avec d\'autres questions'));
     rejouer.type = 'button';
     rejouer.addEventListener('click', function() {
+      // Une partie a distance est finie pour de bon : on repart de la page.
+      if (self.aDistance) { location.reload(); return; }
       // Les cartes qui viennent d'être posées sortent du chapeau : la
       // partie suivante pioche dans ce qui n'a pas encore servi.
       for (var i = 0; i < self.idx; i++) self.dejaVues[self.questions[i].id] = true;
@@ -9632,6 +10021,9 @@ var QuizEngine = (function() {
     this.compte = [0, 0, 0];      // joueur 1, joueur 2, personne
     this.dejaVues = {};
     this.ui = null;               // références de l'écran de jeu monté
+    this.quizType = config.quizType || '';
+    this.distance = !!config.distance;
+    if (reprendrePartieRejointe(this, config)) return;
     this.render();
   }
 
@@ -9708,7 +10100,56 @@ var QuizEngine = (function() {
         smoothScroll(self.container, 'start');
       }
     });
+    if (this.distance) ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: grille, bouton: ecran.bouton }), ecran.bouton);
     this.container.appendChild(ecran.wrap);
+  };
+
+  // A distance chacun designe de son cote : les deux designations comptent,
+  // et le total affiche reste le nombre de questions.
+  QuiPourraitGame.prototype.idsDepart = function () {
+    this.tirer();
+    return this.questions.slice(0, this.limite).map(function (q) { return q.id; });
+  };
+  QuiPourraitGame.prototype.appliquerTirage = function (ids) {
+    if (!remettreDansLOrdre(this, ids)) return false;
+    this.limite = this.questions.length;
+    return true;
+  };
+  QuiPourraitGame.prototype.demarrerADistance = function (salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    var joueurs = joueursDuSalon(moi, moiInfo, partenaireInfo);
+    this.noms = [joueurs[0].name, joueurs[1].name];
+    this.aDistance = true;
+    this.phase = 'jeu';
+    var total = Math.min(this.limite, this.questions.length);
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi, noms: this.noms.slice(),
+      total: total,
+      question: function (idx) {
+        return {
+          sur: self.qtg('grandTitre', 'Qui pourrait'),
+          texte: self.questions[idx].texte,
+          options: [
+            { id: 0, texte: self.joueur(0) },
+            { id: 1, texte: self.joueur(1) },
+            { id: 2, texte: self.qtg('personne', 'Personne') }
+          ]
+        };
+      },
+      progression: function (idx) {
+        return self.qtg('questionSur', 'Question {{n}} / {{total}}').replace('{{n}}', idx + 1).replace('{{total}}', total);
+      },
+      surFin: function (a, b) {
+        self.compte = [0, 0, 0];
+        [a, b].forEach(function (serie) {
+          serie.forEach(function (v) { var k = Number(v); if (k >= 0 && k <= 2) self.compte[k]++; });
+        });
+        self.votesParQuestion = 2;
+        self.idx = total;
+        self.phase = 'resultats';
+        self.render();
+      }
+    });
   };
 
   // L'écran de jeu, monté une seule fois. Tout ce qui change d'une question
@@ -9845,7 +10286,9 @@ var QuizEngine = (function() {
 
   QuiPourraitGame.prototype.renderResultats = function() {
     var self = this;
-    var total = this.compte[0] + this.compte[1] + this.compte[2];
+    // A distance chaque question recoit deux designations : le total affiche
+    // reste le nombre de questions posees.
+    var total = Math.round((this.compte[0] + this.compte[1] + this.compte[2]) / (this.votesParQuestion || 1));
 
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
     wrap.appendChild(el('div', 'text-5xl mb-3', '🏆'));
@@ -9882,6 +10325,7 @@ var QuizEngine = (function() {
     var rejouer = el('button', 'btn btn-cta btn-lg mt-6 mb-2', this.qtg('recommencer', 'Recommencer avec d\'autres questions'));
     rejouer.type = 'button';
     rejouer.addEventListener('click', function() {
+      if (self.aDistance) { location.reload(); return; }
       for (var i = 0; i < self.idx; i++) self.dejaVues[self.questions[i].id] = true;
       self.tirer();
       self.idx = 0;

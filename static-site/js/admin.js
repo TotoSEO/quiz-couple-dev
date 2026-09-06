@@ -721,7 +721,9 @@
   // une partie en fait deux, comme elle fait deux lances et deux finis. La
   // table salon_parties n'existe qu'une fois sa migration passee ; sans elle,
   // l'onglet le dit et la ligne sous les lances reste vide.
-  var PAGES_DISTANCE = ['testCouple', 'testCommonPoints', 'testCompatibilite', 'quizAmoureux'];
+  var PAGES_DISTANCE = ['testCouple', 'testCommonPoints', 'testCompatibilite', 'quizAmoureux',
+    'testCoupleSain', 'testParentalite', 'testEmmenager', 'testAmeSoeur', 'testChargeMentale',
+    'jeuJamais', 'jeuQuiDeNous', 'jeuQuiPourrait'];
   function totalDistance() {
     return statsRpc('get_salon_total').then(function (v) {
       var n = Array.isArray(v) ? (v[0] && (v[0].get_salon_total != null ? v[0].get_salon_total : v[0])) : v;

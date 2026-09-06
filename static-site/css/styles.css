@@ -11116,6 +11116,8 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .salon-interrupteur input:checked + .salon-glissiere { background: hsl(var(--primary)); border-color: hsl(var(--primary)); }
 .salon-interrupteur input:checked + .salon-glissiere::after { transform: translateX(1.35rem); border-color: transparent; }
 .salon-picto { font-size: 1.1em; vertical-align: -0.1em; }
+/* La ligne au-dessus de la question (theme d'une manche, « Qui pourrait »). */
+.salon-question-sur { font-size: 0.85rem; font-weight: 600; color: hsl(var(--muted-foreground)); text-align: center; margin: -0.5rem 0 0.5rem; }
 .salon-interrupteur input:focus-visible + .salon-glissiere { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
 .salon-libelle { flex: 1 1 auto; text-align: left; font-weight: 700; font-size: 0.98rem; }
 .salon-aide-btn {
@@ -11191,7 +11193,7 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 /* L'interrupteur masque la grille des deux prénoms, la pastille et le bouton
    de départ : leurs classes fixent un display, l'attribut hidden seul ne
    suffisait pas. */
-.quiz-setup-grid[hidden], .quiz-setup-meta[hidden], .quiz-setup-start-btn[hidden] { display: none; }
+.quiz-setup-grid[hidden], .quiz-setup-meta[hidden], .quiz-setup-start-btn[hidden], .quiz-setup-nom[hidden] { display: none; }
 
 /* Les cartes de prenoms : sur telephone, deux cartes cote a cote laissaient
    un champ de la largeur d'un pouce. Elles s'empilent et sortent du
