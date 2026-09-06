@@ -727,6 +727,18 @@
     "parti": "{{nom}} hat die Verbindung verloren. Wir warten…",
     "revenu": "{{nom}} ist zurück!",
     "quitter": "Spiel verlassen",
-    "arrive": "{{nom}} ist dem Spiel beigetreten!"
+    "arrive": "{{nom}} ist dem Spiel beigetreten!",
+    "attenteDe": "Warten auf {{nom}}…",
+    "aRepondu": "{{nom}} hat geantwortet, du bist dran!",
+    "pareil": "Ihr habt dasselbe geantwortet!",
+    "different": "Nicht dieselbe Antwort. Redet ihr drüber?",
+    "suivant": "Weiter",
+    "voirResultats": "Unser Ergebnis ansehen",
+    "attenteSuivant": "{{nom}} hat noch nicht auf Weiter getippt…",
+    "annulerTexte": "Damit wird das Spiel für euch beide abgebrochen. Wollt ihr fortfahren?",
+    "annulerOui": "Ja, Spiel abbrechen",
+    "annulerNon": "Nein, weiterspielen",
+    "annulee": "{{nom}} hat das Spiel abgebrochen.",
+    "retourTest": "Zurück zum Test"
   }
 }

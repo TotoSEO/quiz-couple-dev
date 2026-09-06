@@ -42,6 +42,7 @@
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="messages">Messagerie<span class="admin-pastille hidden" data-notif="messages">!</span></button>
               <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="stats">Stats</button>
             <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="trafic">Trafic</button>
+            <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="distance">Distance</button>
             <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="blog">Blog</button>
             <button class="admin-tab px-4 py-2 text-sm font-medium transition-colors" data-tab="affiliation">Affiliation</button>
             </div>
@@ -128,6 +129,36 @@
           </div>
         </div>
 
+        <!-- Distance Tab : les parties jouees chacun sur son telephone -->
+        <div id="admin-distance-tab" class="hidden">
+          <div class="stats-tetes">
+            <div class="stats-tete stats-tete--lances">
+              <p class="stats-tete-titre"><span aria-hidden="true">🚦</span> Lancés au total</p>
+              <p class="stats-tete-jour" id="admin-distance-lances">-</p>
+              <p class="stats-tete-sub">toutes les pages, depuis la mise en service des lancés</p>
+            </div>
+            <div class="stats-tete stats-tete--ratio">
+              <p class="stats-tete-titre">Part à distance</p>
+              <p class="stats-tete-jour" id="admin-distance-part">-</p>
+              <p class="stats-tete-sub" id="admin-distance-detail">des lancements se jouent chacun sur son téléphone</p>
+            </div>
+            <div class="stats-tete stats-tete--finis">
+              <p class="stats-tete-titre"><span aria-hidden="true">📲</span> À distance</p>
+              <p class="stats-tete-jour" id="admin-distance-total">-</p>
+              <p class="stats-tete-sub">lancés à distance, deux par partie (un par téléphone)</p>
+            </div>
+          </div>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Par page</h2>
+                <p class="stats-panel-sub">Un lancé à distance compte pour une personne : une partie à deux téléphones en fait deux, comme elle fait deux lancés et deux finis dans l'onglet Stats. Seules les pages qui proposent le mode à distance apparaissent.</p>
+              </div>
+            </div>
+            <div id="admin-distance-list" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+        </div>
+
         <!-- Stats Tab -->
         <div id="admin-stats-tab" class="hidden">
           <!-- Deux compteurs et le ratio du jour entre les deux -->
@@ -137,6 +168,7 @@
               <p class="stats-tete-jour" id="admin-lances-jour">-</p>
               <p class="stats-tete-sub">aujourd'hui</p>
               <p class="stats-tete-total">Total : <strong id="admin-lances-total">-</strong></p>
+              <p class="stats-tete-sub" id="admin-lances-distance"></p>
             </div>
             <div class="stats-tete stats-tete--ratio">
               <p class="stats-tete-titre">Ratio du jour</p>

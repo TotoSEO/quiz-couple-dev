@@ -221,7 +221,7 @@
         if (this.role !== 'c') return;
         if (this.demarre) { this.envoyer('refus', { pour: 'complet' }); return; }
         this.partenaire = { nom: coupe(p.nom, 20) || tg('playerSetup.player2', 'Joueur 2'), genre: genreSur(p.genre) };
-        this.demarre = true;
+        this.marquerDemarre();
         this.envoyer('depart', {
           quizType: this.quizType, modeId: this.modeId || null, ids: this.ids || [],
           createur: this.moi
@@ -242,7 +242,7 @@
           nom: coupe(p.createur && p.createur.nom, 20) || tg('playerSetup.player1', 'Joueur 1'),
           genre: genreSur(p.createur && p.createur.genre)
         };
-        this.demarre = true;
+        this.marquerDemarre();
         if (this.minuteurDepart) { clearTimeout(this.minuteurDepart); this.minuteurDepart = null; }
         retirerCodeDeUrl();
         this.emettre('depart', { modeId: typeof p.modeId === 'string' ? p.modeId.slice(0, 30) : null, ids: ids, createur: this.partenaire });
@@ -260,6 +260,19 @@
           a.push(v === null || v === undefined ? null : (typeof v === 'number' ? v : String(v).slice(0, 12)));
         }
         this.emettre('reponses', { a: a });
+        break;
+      case 'pret':
+        // « J'ai appuye sur suivant jusqu'a la question n » : un simple rang,
+        // idempotent, qu'on peut renvoyer autant de fois qu'on veut.
+        if (!this.demarre) return;
+        var q = Number(p.q);
+        if (!isFinite(q) || q < 0 || q > 300) return;
+        this.emettre('pret', { q: Math.floor(q) });
+        break;
+      case 'annule':
+        if (!this.demarre) return;
+        this.emettre('annule', { par: coupe(p.par, 20) || (this.partenaire && this.partenaire.nom) || '' });
+        this.fermer();
         break;
       case 'etat':
         // Un moteur peut partager un etat libre (tour, manche...) : il est
@@ -313,9 +326,42 @@
     });
   };
 
+  // Le chargeur et le bandeau ont besoin de savoir s'il y a une partie en
+  // cours pour demander confirmation avant de la casser.
+  Salon.prototype.marquerDemarre = function () {
+    this.demarre = true;
+    window.QCSalon.actif = this;
+    this.mesure('depart');
+  };
+
+  // Une ligne de mesure par telephone et par etape : c'est quiz-extras.js qui
+  // l'envoie, avec le slug et la langue qu'il connait deja.
+  Salon.prototype.mesure = function (etape) {
+    try {
+      document.dispatchEvent(new CustomEvent('qc:salon', { detail: { etape: etape, role: this.role, code: this.code } }));
+    } catch (e) {}
+  };
+
+  // Annuler pour les deux : l'autre recoit le message et voit qui a annule.
+  Salon.prototype.annuler = function () {
+    if (this.ferme) return;
+    this.envoyer('annule', { par: this.moi.nom });
+    this.fermer();
+  };
+
+  // La partie est allee au bout : on le note, puis le canal tombe un peu
+  // plus tard, le temps que le partenaire recoive les dernieres reponses.
+  Salon.prototype.terminer = function () {
+    if (this.termineDeja) return;
+    this.termineDeja = true;
+    this.mesure('fin');
+    this.fermerApres(4000);
+  };
+
   Salon.prototype.fermer = function () {
     if (this.ferme) return;
     this.ferme = true;
+    if (window.QCSalon && window.QCSalon.actif === this) window.QCSalon.actif = null;
     if (this.minuteurDepart) { clearTimeout(this.minuteurDepart); this.minuteurDepart = null; }
     if (this.canal) { try { this.canal.fermer(); } catch (e) {} this.canal = null; }
     if (this.bandeauEl && this.bandeauEl.parentNode) this.bandeauEl.parentNode.removeChild(this.bandeauEl);
@@ -345,14 +391,65 @@
       this.container.parentNode.insertBefore(this.bandeauEl, this.container);
     }
     this.bandeauEl.className = 'salon-bandeau' + (ton ? ' salon-bandeau--' + ton : '');
-    this.bandeauEl.innerHTML = '<span class="salon-bandeau-point" aria-hidden="true"></span>' + esc(texte);
+    this.bandeauEl.innerHTML = '<span class="salon-bandeau-point" aria-hidden="true"></span><span class="salon-bandeau-texte">' + esc(texte) + '</span>';
+    // Une sortie toujours visible, qui demande confirmation : quitter une
+    // partie a distance, c'est l'annuler pour deux personnes.
+    if (!this.ferme && this.demarre) {
+      var self = this;
+      var quitter = el('button', 'salon-bandeau-quitter', esc(s('quitter', 'Quitter la partie')));
+      quitter.type = 'button';
+      quitter.addEventListener('click', function () {
+        confirmerAnnulation(function () { self.annuler(); location.reload(); });
+      });
+      this.bandeauEl.appendChild(quitter);
+    }
   };
+
+  // La boite de confirmation, la meme partout ou une partie peut se casser.
+  function confirmerAnnulation(onOui, onNon) {
+    var voile = el('div', 'salon-voile');
+    var boite = el('div', 'salon-modale');
+    boite.setAttribute('role', 'dialog'); boite.setAttribute('aria-modal', 'true');
+    boite.setAttribute('aria-labelledby', 'salon-modale-texte');
+    var texte = el('p', 'salon-modale-texte', esc(s('annulerTexte', 'Cette interaction est sur le point d\'annuler la partie. Souhaitez-vous continuer ?')));
+    texte.id = 'salon-modale-texte';
+    boite.appendChild(texte);
+    var actions = el('div', 'salon-modale-actions');
+    var non = el('button', 'btn btn-cta salon-modale-non', esc(s('annulerNon', 'Non, continuer')));
+    var oui = el('button', 'btn btn-outline salon-modale-oui', esc(s('annulerOui', 'Oui, annuler la partie')));
+    non.type = 'button'; oui.type = 'button';
+    function fermerBoite() { if (voile.parentNode) voile.parentNode.removeChild(voile); document.removeEventListener('keydown', surTouche); }
+    function surTouche(e) { if (e.key === 'Escape') { fermerBoite(); if (onNon) onNon(); } }
+    non.addEventListener('click', function () { fermerBoite(); if (onNon) onNon(); });
+    oui.addEventListener('click', function () { fermerBoite(); onOui(); });
+    voile.addEventListener('click', function (e) { if (e.target === voile) { fermerBoite(); if (onNon) onNon(); } });
+    document.addEventListener('keydown', surTouche);
+    actions.appendChild(non); actions.appendChild(oui);
+    boite.appendChild(actions);
+    voile.appendChild(boite);
+    document.body.appendChild(voile);
+    setTimeout(function () { try { non.focus(); } catch (e) {} }, 30);
+  }
+
+  // L'ecran de celui qui apprend que l'autre a annule.
+  function ecranAnnulee(container, par, onRetour) {
+    container.innerHTML = '';
+    var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in salon-ecran');
+    wrap.appendChild(el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-6', '🙁'));
+    wrap.appendChild(titre(avec(s('annulee', 'La partie a été annulée par {{nom}}.'), { nom: par || '' })));
+    var retour = el('button', 'btn btn-cta', esc(s('retourTest', 'Revenir au test')));
+    retour.type = 'button';
+    retour.addEventListener('click', function () { if (onRetour) onRetour(); else location.reload(); });
+    wrap.appendChild(retour);
+    container.appendChild(wrap);
+  }
 
   // Les messages de presence que tout moteur voudra afficher pareil.
   Salon.prototype.brancherBandeau = function () {
     var self = this;
     var nom = function () { return (self.partenaire && self.partenaire.nom) || ''; };
     this.bandeau(avec(s('avecPartenaire', 'Vous jouez à distance avec {{nom}}'), { nom: nom() }), 'ok');
+    this.on('annule', function () { self.bandeau(avec(s('annulee', 'La partie a été annulée par {{nom}}.'), { nom: nom() }), 'alerte'); });
     this.on('partenaireParti', function () {
       self.bandeau(avec(s('parti', '{{nom}} s\'est déconnecté(e). On attend son retour…'), { nom: nom() }), 'alerte');
     });
@@ -610,6 +707,9 @@
   }
 
   window.QCSalon = {
+    actif: null,
+    confirmerAnnulation: confirmerAnnulation,
+    ecranAnnulee: ecranAnnulee,
     creer: creer,
     rejoindre: rejoindre,
     formulaireRejoindre: formulaireRejoindre,

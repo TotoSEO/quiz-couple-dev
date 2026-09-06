@@ -449,7 +449,7 @@ var QuizEngine = (function() {
     interrupteur.setAttribute('role', 'switch'); interrupteur.setAttribute('aria-checked', 'false');
     label.appendChild(interrupteur);
     label.appendChild(el('span', 'salon-glissiere'));
-    label.appendChild(el('span', 'salon-libelle', esc(tg('salon.activer', 'Activer le mode à distance'))));
+    label.appendChild(el('span', 'salon-libelle', '<span class="salon-picto" aria-hidden="true">📲</span> ' + esc(tg('salon.activer', 'Activer le mode à distance'))));
     ligne.appendChild(label);
     var aideBtn = el('button', 'salon-aide-btn', '?');
     aideBtn.type = 'button';
@@ -2713,7 +2713,6 @@ var QuizEngine = (function() {
     this.distance = !!config.distance && !this.modeSolo;
     this.salon = null;
     this.moi = -1;
-    this.attenteUi = null;
     this.phase = 'setup';
     this.players = [null, null];
     this.currentQ = 0;
@@ -2733,7 +2732,6 @@ var QuizEngine = (function() {
     if (this.phase === 'setup') this.renderSetup();
     else if (this.phase === 'handoff') this.renderHandoff();
     else if (this.phase === 'playing') this.renderQuestion();
-    else if (this.phase === 'attente') this.renderAttente();
     else if (this.phase === 'results') this.renderResults();
   };
 
@@ -2914,6 +2912,10 @@ var QuizEngine = (function() {
     this.moi = moi;
     var total = this.questions.length;
     this.answers = { p1: new Array(total).fill(null), p2: new Array(total).fill(null) };
+    // Jusqu'a quelle question chacun a appuye sur « suivant ».
+    this.pretsMoi = -1;
+    this.pretsAutre = -1;
+    this.questionRendue = -1;
     this.currentQ = 0;
     this.currentPlayer = moi;
     this.phase = 'playing';
@@ -2922,9 +2924,18 @@ var QuizEngine = (function() {
       var arr = new Array(total).fill(null);
       for (var i = 0; i < Math.min(total, d.a.length); i++) arr[i] = d.a[i];
       self.answers[self.cleAutre()] = arr;
-      self.partenaireAvance();
+      // Ce qui s'affiche depend de ce qu'on sait : on redessine la question.
+      if (self.phase === 'playing') self.render();
     });
-    salon.on('resync', function () { self.envoyerReponses(); });
+    salon.on('pret', function (d) {
+      if (d.q > self.pretsAutre) self.pretsAutre = d.q;
+      if (self.phase === 'playing' && self.pretsMoi >= self.currentQ) self.avancerSiPossible();
+    });
+    salon.on('resync', function () { self.envoyerReponses(); self.envoyerPret(); });
+    salon.on('annule', function (d) {
+      self.phase = 'annulee';
+      window.QCSalon.ecranAnnulee(self.container, d.par, function () { location.reload(); });
+    });
     this.render();
     // Le bandeau vit juste au-dessus du moteur : c'est lui qu'on amene en
     // haut, sinon il reste cache sous l'en-tete collant.
@@ -2936,42 +2947,142 @@ var QuizEngine = (function() {
   DuoMatchQuiz.prototype.repondu = function (cle) {
     return this.answers[cle].filter(function (x) { return x !== null && x !== undefined; }).length;
   };
-  DuoMatchQuiz.prototype.autreComplet = function () { return this.repondu(this.cleAutre()) >= this.questions.length; };
   DuoMatchQuiz.prototype.envoyerReponses = function () {
     if (this.salon) this.salon.envoyer('reponses', { a: this.answers[this.cleMoi()] });
+  };
+  DuoMatchQuiz.prototype.envoyerPret = function () {
+    if (this.salon && this.pretsMoi >= 0) this.salon.envoyer('pret', { q: this.pretsMoi });
   };
   DuoMatchQuiz.prototype.nomPartenaire = function () {
     var p = this.players[1 - this.moi];
     return (p && p.name) || '';
   };
-  DuoMatchQuiz.prototype.texteProgression = function () {
-    return window.QCSalon.avec(tg('salon.progression', '{{nom}} : {{n}}/{{total}}'),
-      { nom: this.nomPartenaire(), n: this.repondu(this.cleAutre()), total: this.questions.length });
-  };
 
-  // Les reponses d'en face viennent d'arriver : soit elles debloquent le
-  // resultat qu'on attendait, soit elles font juste avancer le petit compteur.
-  DuoMatchQuiz.prototype.partenaireAvance = function () {
-    if (this.phase === 'attente') {
-      if (this.autreComplet()) {
-        this.phase = 'results';
-        this.render();
-        if (this.salon) this.salon.fermerApres(4000);
-        return;
-      }
-      if (this.attenteUi) this.attenteUi.progression(this.repondu(this.cleAutre()));
-    } else if (this.phase === 'playing') {
-      var p = this.container.querySelector('.salon-progression--jeu');
-      if (p) p.textContent = this.texteProgression();
+  // On ne passe a la question suivante que quand les deux ont appuye sur
+  // « suivant » pour celle-ci. La derniere mene au resultat, pareil : les
+  // deux doivent l'avoir demande, pour qu'aucun ne se retrouve seul devant.
+  DuoMatchQuiz.prototype.avancerSiPossible = function () {
+    var idx = this.currentQ;
+    if (this.pretsMoi < idx || this.pretsAutre < idx) { this.render(); return; }
+    if (idx < this.questions.length - 1) {
+      this.currentQ++;
+      this.render();
+      smoothScroll(this.salon && this.salon.bandeauEl ? this.salon.bandeauEl : this.container, 'start');
+    } else {
+      this.phase = 'results';
+      this.render();
+      if (this.salon) this.salon.terminer();
     }
   };
 
-  DuoMatchQuiz.prototype.renderAttente = function () {
+  // La question, version a distance. L'etape se deduit de ce qu'on sait,
+  // ce qui rend le rendu rejouable a chaque message recu :
+  //   repondre        : je n'ai pas encore repondu
+  //   attenteReponse  : j'ai repondu, l'autre pas encore
+  //   reveal          : les deux reponses sont la, cote a cote, on en parle
+  //   attenteSuivant  : j'ai appuye sur suivant, j'attends que l'autre le fasse
+  DuoMatchQuiz.prototype.renderQuestionSalon = function () {
     var self = this;
-    this.attenteUi = window.QCSalon.ecranAttenteFin(this.container, {
-      nom: this.nomPartenaire(), n: this.repondu(this.cleAutre()), total: this.questions.length,
-      onQuitter: function () { if (self.salon) self.salon.fermer(); location.reload(); }
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var idx = this.currentQ;
+    var maRep = this.answers[this.cleMoi()][idx];
+    var saRep = this.answers[this.cleAutre()][idx];
+    var etape = maRep === null ? 'repondre'
+      : (saRep === null ? 'attenteReponse' : (this.pretsMoi >= idx ? 'attenteSuivant' : 'reveal'));
+    var nomMoi = this.players[this.moi].name, nomAutre = this.nomPartenaire();
+    var S = window.QCSalon;
+
+    // L'animation d'entree ne joue qu'a l'arrivee sur une nouvelle question :
+    // les redessins d'etape sur la meme question ne doivent pas la faire sauter.
+    var nouvelle = this.questionRendue !== idx;
+    this.questionRendue = idx;
+    var wrap = el('div', 'quiz-engine salon-question salon-question--' + etape + (nouvelle ? ' quiz-question-enter' : ''));
+
+    var answered = this.repondu('p1') + this.repondu('p2');
+    renderProgressBar(wrap, answered, total * 2, tg('question.question', 'Question') + ' ' + (idx + 1) + '/' + total);
+
+    var player = this.players[this.moi];
+    var color = this.needsGender ? getPlayerColor(player, this.players[1 - this.moi], this.moi) : null;
+    var badge = el('div', 'text-center mb-4');
+    badge.innerHTML = color
+      ? '<span class="badge" style="background:' + color.bg + ';color:' + color.text + '">' + esc(player.name) + '</span>'
+      : '<span class="badge badge-primary">' + esc(player.name) + '</span>';
+    wrap.appendChild(badge);
+
+    var qText = tgd(this.prefix + '.q' + q.id, q.text);
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(qText)));
+
+    var optionsWrap = el('div', 'space-y-2');
+    var optLetters = ['A', 'B', 'C', 'D', 'E'];
+    q.options.forEach(function (opt, k) {
+      var optText = tgd(self.prefix + '.q' + q.id + opt.id, opt.text);
+      var optBtn = el('button', 'quiz-option');
+      optBtn.type = 'button';
+      var noms = '';
+      if (etape === 'reveal' || etape === 'attenteSuivant') {
+        var qui = [];
+        if (maRep === opt.id) qui.push({ nom: nomMoi, cls: 'moi' });
+        if (saRep === opt.id) qui.push({ nom: nomAutre, cls: 'autre' });
+        if (qui.length) {
+          optBtn.classList.add('salon-option--choisie');
+          noms = '<span class="salon-option-noms">' + qui.map(function (x) {
+            return '<span class="salon-option-nom salon-option-nom--' + x.cls + '">' + esc(x.nom) + '</span>';
+          }).join('') + '</span>';
+        }
+      } else if (etape === 'attenteReponse' && maRep === opt.id) {
+        optBtn.classList.add('selected');
+      }
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (optLetters[k] || '') + '</span><span>' + esc(optText) + '</span>' + noms;
+      if (nouvelle) optBtn.style.animationDelay = (k * 60) + 'ms';
+      if (etape === 'repondre') {
+        optBtn.addEventListener('click', function () {
+          if (!answerLock(self)) return;
+          self.answers[self.cleMoi()][idx] = opt.id;
+          self.envoyerReponses();
+          self.render();
+        });
+      } else {
+        optBtn.disabled = true;
+        optBtn.classList.add('salon-option--figee');
+      }
+      optionsWrap.appendChild(optBtn);
     });
+    wrap.appendChild(optionsWrap);
+
+    var pied = el('div', 'salon-pied');
+    function attente(texte) {
+      var p = el('p', 'salon-attente');
+      p.innerHTML = '<span class="salon-spinner" aria-hidden="true"></span> ' + esc(texte);
+      return p;
+    }
+    if (etape === 'repondre') {
+      if (saRep !== null) pied.appendChild(el('p', 'salon-indice', esc(S.avec(tg('salon.aRepondu', '{{nom}} a répondu, à vous !'), { nom: nomAutre }))));
+    } else if (etape === 'attenteReponse') {
+      pied.appendChild(attente(S.avec(tg('salon.attenteDe', 'Dans l\'attente de {{nom}}…'), { nom: nomAutre })));
+    } else {
+      var pareil = maRep === saRep;
+      pied.appendChild(el('p', 'salon-verdict-question' + (pareil ? ' est-pareil' : ''),
+        esc(pareil ? tg('salon.pareil', 'Vous avez répondu la même chose !') : tg('salon.different', 'Pas la même réponse. On en parle ?'))));
+      var dernier = idx >= total - 1;
+      var suivant = el('button', 'btn btn-cta btn-gradient salon-suivant',
+        esc(dernier ? tg('salon.voirResultats', 'Voir nos résultats') : tg('salon.suivant', 'Suivant')));
+      suivant.type = 'button';
+      if (etape === 'attenteSuivant') {
+        suivant.disabled = true;
+        pied.appendChild(suivant);
+        pied.appendChild(attente(S.avec(tg('salon.attenteSuivant', '{{nom}} n\'a pas encore cliqué sur suivant…'), { nom: nomAutre })));
+      } else {
+        suivant.addEventListener('click', function () {
+          self.pretsMoi = idx;
+          self.envoyerPret();
+          self.avancerSiPossible();
+        });
+        pied.appendChild(suivant);
+      }
+    }
+    wrap.appendChild(pied);
+    this.container.appendChild(wrap);
   };
 
   DuoMatchQuiz.prototype.renderHandoff = function() {
@@ -2988,6 +3099,7 @@ var QuizEngine = (function() {
   };
 
   DuoMatchQuiz.prototype.renderQuestion = function() {
+    if (this.salon) return this.renderQuestionSalon();
     var self = this;
     var q = this.questions[this.currentQ];
     var total = this.questions.length;
@@ -3002,7 +3114,6 @@ var QuizEngine = (function() {
     var wrap = el('div', 'quiz-engine quiz-question-enter');
 
     renderProgressBar(wrap, answered, totalNeeded, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total);
-    if (this.salon) wrap.appendChild(el('p', 'salon-progression salon-progression--jeu', esc(this.texteProgression())));
 
     // Player indicator with color. En solo personne n'a de tour : pas de badge.
     if (!this.modeSolo) {
@@ -3045,12 +3156,6 @@ var QuizEngine = (function() {
             self.answers.p1[self.currentQ] = opt.id;
             if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
             else { self.phase = 'results'; }
-          } else if (self.salon) {
-            self.answers[self.cleMoi()][self.currentQ] = opt.id;
-            self.envoyerReponses();
-            if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
-            else if (self.autreComplet()) { self.phase = 'results'; self.salon.fermerApres(4000); }
-            else { self.phase = 'attente'; }
           } else if (self.currentPlayer === 0) {
             self.answers.p1[self.currentQ] = opt.id;
             self.currentPlayer = 1;

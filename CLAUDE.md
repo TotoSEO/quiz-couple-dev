@@ -49,8 +49,12 @@ moteurs qui déclarent `distance: true` dans `quiz-loader.js` (aujourd'hui
 `DuoMatchQuiz` : tester-couple en duo, common-points, compatibilite, amoureux)
 affichent en plus un interrupteur « Activer le mode à distance » sur l'écran
 des prénoms. Une personne crée la partie (code + QR code + lien
-`?salon=CODE`), l'autre rejoint, chacun répond sur son écran et le résultat se
-calcule à l'identique des deux côtés.
+`?salon=CODE`), l'autre rejoint, et les deux avancent question par question :
+chacun répond sur son écran, attend l'autre, les deux réponses s'affichent
+côte à côte sur la question (pour en parler), puis on ne passe à la suivante
+que quand les deux ont appuyé sur « Suivant ». Le résultat se calcule à
+l'identique des deux côtés. Quitter (bandeau) ou « Changer de mode » demande
+confirmation et annule pour les deux.
 
 - Aucune table en base : un salon est un canal Supabase Realtime (diffusion +
   présence) nommé d'après le code, vivant tant que quelqu'un y est abonné.
@@ -62,6 +66,10 @@ calcule à l'identique des deux côtés.
   envoyer ses réponses avec `salon.envoyer('reponses', { a })`, les recevoir
   avec `salon.on('reponses')`, et gérer une phase d'attente quand l'un a fini
   avant l'autre. `DuoMatchQuiz.demarrerADistance` est le modèle.
+- Mesure : `salon.js` émet `qc:salon` (`depart`, `fin`) que `quiz-extras.js`
+  enregistre dans `salon_parties` (migration `20260906120000`), deux lignes par
+  partie comme il y a deux lancés ; l'admin a un onglet Distance, et l'origine
+  des visites compte les arrivées par lien ou QR code en « Mode DUO ».
 - Les essais sans réseau passent par `window.__QCSalonTransport`, une doublure
   du canal sur `BroadcastChannel` (voir la PR d'origine).
 

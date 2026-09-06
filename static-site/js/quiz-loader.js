@@ -463,9 +463,19 @@
     b.className = 'quiz-modes-retour';
     b.innerHTML = '<span aria-hidden="true">&larr;</span> ' + libelle;
     b.addEventListener('click', function() {
-      b.remove();
-      config = racine;
-      initFromData();
+      var retour = function () {
+        b.remove();
+        config = racine;
+        initFromData();
+      };
+      // Une partie a distance est en cours : changer de format la casse pour
+      // deux personnes. On demande, et si oui l'autre apprend qui a annule.
+      var salon = window.QCSalon && window.QCSalon.actif;
+      if (salon) {
+        window.QCSalon.confirmerAnnulation(function () { salon.annuler(); retour(); });
+        return;
+      }
+      retour();
     });
     container.parentNode.insertBefore(b, container.nextSibling);
   }

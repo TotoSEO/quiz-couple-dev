@@ -716,6 +716,87 @@
     loadTotalDaily(statsRange);
   }
 
+  // ── Parties a distance ──
+  // Un lance a distance est une personne qui a joue chacun sur son telephone :
+  // une partie en fait deux, comme elle fait deux lances et deux finis. La
+  // table salon_parties n'existe qu'une fois sa migration passee ; sans elle,
+  // l'onglet le dit et la ligne sous les lances reste vide.
+  var PAGES_DISTANCE = ['testCouple', 'testCommonPoints', 'testCompatibilite', 'quizAmoureux'];
+  function totalDistance() {
+    return statsRpc('get_salon_total').then(function (v) {
+      var n = Array.isArray(v) ? (v[0] && (v[0].get_salon_total != null ? v[0].get_salon_total : v[0])) : v;
+      if (n == null || isNaN(Number(n))) throw new Error('pas de rpc');
+      return Number(n);
+    });
+  }
+  function ligneDistance(lancesTotal) {
+    var el = document.getElementById('admin-lances-distance');
+    if (!el) return;
+    totalDistance().then(function (d) {
+      el.textContent = lancesTotal
+        ? lancesTotal.toLocaleString('fr-FR') + ' lancés au total · ' + d.toLocaleString('fr-FR') + ' à distance (' + pct(d, lancesTotal) + ' %)'
+        : d.toLocaleString('fr-FR') + ' à distance';
+    }).catch(function () { el.textContent = ''; });
+  }
+  function loadDistance() {
+    var listEl = document.getElementById('admin-distance-list');
+    var elL = document.getElementById('admin-distance-lances');
+    var elD = document.getElementById('admin-distance-total');
+    var elP = document.getElementById('admin-distance-part');
+    if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
+    Promise.all([
+      statsRpc('get_quiz_starts_total'),
+      totalDistance(),
+      statsRpc('get_quiz_starts_counts'),
+      statsRpc('get_salon_counts'),
+      statsRpc('get_quiz_counts')
+    ]).then(function (r) {
+      var lt = Array.isArray(r[0]) ? (r[0][0] && (r[0][0].get_quiz_starts_total != null ? r[0][0].get_quiz_starts_total : r[0][0])) : r[0];
+      var lancesTotal = Number(lt) || 0, distance = r[1];
+      if (elL) elL.textContent = lancesTotal.toLocaleString('fr-FR');
+      if (elD) elD.textContent = distance.toLocaleString('fr-FR');
+      if (elP) elP.textContent = lancesTotal ? pct(distance, lancesTotal) + ' %' : '—';
+      var lances = {}, finis = {}, dist = {};
+      fusionneComptes(Array.isArray(r[2]) ? r[2] : []).forEach(function (x) { lances[x.quiz_slug] = x.total; });
+      fusionneComptes(Array.isArray(r[4]) ? r[4] : []).forEach(function (x) { finis[x.quiz_slug] = x.total; });
+      (Array.isArray(r[3]) ? r[3] : []).forEach(function (x) {
+        var c = canon(x.quiz_slug);
+        if (!dist[c]) dist[c] = { departs: 0, fins: 0 };
+        dist[c].departs += Number(x.departs) || 0;
+        dist[c].fins += Number(x.fins) || 0;
+      });
+      var slugs = PAGES_DISTANCE.slice();
+      Object.keys(dist).forEach(function (k) { if (slugs.indexOf(k) === -1) slugs.push(k); });
+      var lignes = slugs.map(function (slug) {
+        var d = dist[slug] || { departs: 0, fins: 0 };
+        return { slug: slug, lances: lances[slug] || 0, finis: finis[slug] || 0, departs: d.departs, fins: d.fins };
+      }).sort(function (a, b) { return b.departs - a.departs || b.lances - a.lances; });
+      var max = Math.max(1, lignes.reduce(function (m, l) { return Math.max(m, l.departs); }, 0));
+      var html = '<div class="stats-entetes">'
+        + '<span class="stats-entete-nom">Page</span>'
+        + '<span class="stats-tri" style="--col:var(--stats-lances)">Lancés</span>'
+        + '<span class="stats-tri" style="--col:var(--stats-finis)">À distance</span>'
+        + '<span class="stats-tri" style="--col:var(--stats-ratio)">Part</span>'
+        + '</div>';
+      html += lignes.map(function (l) {
+        var part = l.lances ? pct(l.departs, l.lances) : null;
+        var bulle = nomQuiz(l.slug) + ' · ' + l.departs.toLocaleString('fr-FR') + ' lancés à distance, ' + l.fins.toLocaleString('fr-FR') + ' finis à distance, sur ' + l.lances.toLocaleString('fr-FR') + ' lancés en tout';
+        return '<div class="stats-row stats-row--fixe" style="--part:' + Math.round((l.departs / max) * 100) + '%" title="' + esc(bulle) + '">'
+          + '<span class="stats-row-name">' + esc(nomQuiz(l.slug)) + '</span>'
+          + '<span class="stats-cell stats-cell--lances">' + l.lances.toLocaleString('fr-FR') + '</span>'
+          + '<span class="stats-cell stats-cell--finis">' + l.departs.toLocaleString('fr-FR')
+          + (l.fins ? '<span class="stats-cell-jour" title="Finis à distance">' + l.fins.toLocaleString('fr-FR') + ' finis</span>' : '') + '</span>'
+          + (part === null ? '<span class="stats-cell stats-cell--ratio est-vide">—</span>'
+             : '<span class="stats-cell stats-cell--ratio">' + part + ' %</span>')
+          + '</div>';
+      }).join('');
+      if (listEl) listEl.innerHTML = html;
+    }).catch(function () {
+      if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Les parties à distance ne sont pas encore mesurées : la migration salon_parties n\'est pas appliquée.</p>';
+      if (elL) elL.textContent = '-'; if (elD) elD.textContent = '-'; if (elP) elP.textContent = '-';
+    });
+  }
+
   // ── Lancements : total et detail par page ──
   // Une partie lancee n'est pas une partie finie. Le rapport des deux, page
   // par page, est la seule facon de voir laquelle interesse mais decroche :
@@ -729,6 +810,7 @@
       var n = Array.isArray(v) ? (v[0] && (v[0].get_quiz_starts_total != null ? v[0].get_quiz_starts_total : v[0])) : v;
       if (n == null || isNaN(Number(n))) throw new Error('pas de rpc');
       if (elTotal) elTotal.textContent = Number(n).toLocaleString('fr-FR');
+      ligneDistance(Number(n));
       return statsRpc('get_quiz_starts_counts');
     }).then(function (rows) {
       if (!Array.isArray(rows) || rows.error) throw new Error('pas de rpc');
@@ -1749,7 +1831,7 @@
   // et on laisse le reste tel quel : inventer une categorie « autre » ferait
   // disparaitre justement ce qu'on cherche a decouvrir.
   var TRAFIC_SOURCES = {
-    'direct': 'Direct / favori', 'partage': 'Lien partagé',
+    'direct': 'Direct / favori', 'partage': 'Lien partagé', 'duo': 'Mode DUO',
     'google.com': 'Google', 'google.fr': 'Google', 'bing.com': 'Bing',
     'duckduckgo.com': 'DuckDuckGo', 'ecosia.org': 'Ecosia', 'qwant.com': 'Qwant',
     'search.brave.com': 'Brave', 'yahoo.com': 'Yahoo', 'yandex.com': 'Yandex',
@@ -2242,6 +2324,8 @@
     if (afTab) afTab.classList.toggle('hidden', tab !== 'affiliation');
     var trTab = document.getElementById('admin-trafic-tab');
     if (trTab) trTab.classList.toggle('hidden', tab !== 'trafic');
+    var diTab = document.getElementById('admin-distance-tab');
+    if (diTab) diTab.classList.toggle('hidden', tab !== 'distance');
     var blTab = document.getElementById('admin-blog-tab');
     if (blTab) blTab.classList.toggle('hidden', tab !== 'blog');
 
@@ -2252,6 +2336,9 @@
     // six agregats sont assez legers pour ne pas justifier un cache.
     if (tab === 'trafic') {
       loadTrafic();
+    }
+    if (tab === 'distance') {
+      loadDistance();
     }
     // Meme raison que le trafic : les lectures bougent en continu, et les
     // deux agregats sont assez legers pour se recharger a chaque ouverture.

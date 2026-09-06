@@ -184,7 +184,15 @@
     catch (e) { return (location.search || '').indexOf('part') !== -1; }
   }
 
+  // Un lien de salon ou un QR code : la personne vient rejoindre une partie a
+  // distance. C'est une provenance a part entiere, quel que soit le referent.
+  function marqueSalon() {
+    try { return new URLSearchParams(location.search).has('salon'); }
+    catch (e) { return /[?&]salon=/.test(location.search || ''); }
+  }
+
   function source() {
+    if (marqueSalon()) return 'duo';
     var r = document.referrer;
     if (!r) return marquePartage() ? 'partage' : 'direct';
     try {
