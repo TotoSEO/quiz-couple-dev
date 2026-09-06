@@ -14,7 +14,7 @@
   var currentArticle = null;
   var currentLang = 'fr';
   var translationCache = {}; // { "articleId-lang": { ... } }
-  var currentTab = 'reviews';
+  var currentTab = 'stats';
   var allLeads = [];
   var allMessages = [];
   var currentMessageFilter = 'all';
@@ -273,6 +273,12 @@
     // paresseux.
     if (allLeads.length === 0) loadLeads();
     if (allMessages.length === 0) loadMessages();
+    // L'onglet ouvert a l'arrivee est celui des parties : c'est le tableau
+    // de bord qu'on vient lire, les avis attendent derriere.
+    switchTab(currentTab);
+    majFraicheur();
+    var elDate = document.getElementById('adm-date');
+    if (elDate) elDate.textContent = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
   }
 
   // ── Noms lisibles des quiz ──
@@ -598,7 +604,7 @@
   // Alimente le compteur vert du jour et le comparatif tops / flops.
   var statsParJour = null;
   var statsParJourUTC = false;
-  var statsComp = 7;
+  var statsComp = 1;
   // PostgREST plafonne toute reponse a mille lignes, et le plafond ne
   // s'annonce pas : la fonction rend ses mille premieres lignes, statut 200,
   // sans rien dire du reste. Les deux series quotidiennes par page ont
@@ -615,6 +621,12 @@
   // courant, et la mesure ne peut plus etre coupee en silence.
   var LOT_RPC = 1000;
   function statsRpcPages(fn, body) {
+    var cle = 'pages:' + cleCache(fn, body);
+    var enCache = cacheLis(cle);
+    if (enCache !== undefined) return Promise.resolve(enCache);
+    return statsRpcPagesReseau(fn, body).then(function (r) { cacheEcris(cle, r); return r; });
+  }
+  function statsRpcPagesReseau(fn, body) {
     var tout = [];
     function lot(depart) {
       return fetch(SUPABASE_URL + '/rest/v1/rpc/' + fn + '?limit=' + LOT_RPC + '&offset=' + depart, {
@@ -650,7 +662,61 @@
     }
     return lot(0);
   }
+  // ── Cache des lectures ──────────────────────────────────────────────
+  // Chaque onglet lance ses propres requetes a l'ouverture ; sans cache, un
+  // aller-retour entre deux onglets refaisait des dizaines d'appels a la base
+  // pour redessiner la meme chose. Les reponses des RPC sont donc gardees
+  // dans ce navigateur (memoire de session : elles survivent a un
+  // rechargement, pas a la fermeture de l'onglet). Changer d'onglet relit la
+  // memoire ; le bouton « Actualiser » de l'en-tete la vide et recharge.
+  var CACHE_PREFIXE = 'admin-cache:';
+  var cacheMemoire = {};
+  function cacheLis(cle) {
+    if (Object.prototype.hasOwnProperty.call(cacheMemoire, cle)) return cacheMemoire[cle];
+    try {
+      var v = sessionStorage.getItem(CACHE_PREFIXE + cle);
+      if (v !== null) { var o = JSON.parse(v); cacheMemoire[cle] = o; return o; }
+    } catch (e) {}
+    return undefined;
+  }
+  function cacheEcris(cle, valeur) {
+    // Une erreur PostgREST est un objet porteur d'un code : on ne la garde
+    // pas, sinon une migration appliquee plus tard resterait invisible.
+    if (valeur && typeof valeur === 'object' && !Array.isArray(valeur) && (valeur.code || valeur.message)) return;
+    cacheMemoire[cle] = valeur;
+    try { sessionStorage.setItem(CACHE_PREFIXE + cle, JSON.stringify(valeur)); } catch (e) {}
+    if (!lisFraicheur()) poseFraicheur();
+  }
+  function videCache() {
+    cacheMemoire = {};
+    try {
+      Object.keys(sessionStorage).forEach(function (k) { if (k.indexOf(CACHE_PREFIXE) === 0) sessionStorage.removeItem(k); });
+      sessionStorage.removeItem('admin-cache-depuis');
+    } catch (e) {}
+  }
+  function poseFraicheur() {
+    try { sessionStorage.setItem('admin-cache-depuis', String(Date.now())); } catch (e) {}
+    majFraicheur();
+  }
+  function lisFraicheur() {
+    try { return Number(sessionStorage.getItem('admin-cache-depuis')) || 0; } catch (e) { return 0; }
+  }
+  function majFraicheur() {
+    var el = document.getElementById('adm-fraicheur');
+    if (!el) return;
+    var t = lisFraicheur();
+    el.textContent = t ? 'Données de ' + new Date(t).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }) : '';
+    el.hidden = !t;
+  }
+  function cleCache(fn, body) { return fn + ':' + JSON.stringify(body || {}); }
+
   function statsRpc(fn, body) {
+    var cle = cleCache(fn, body);
+    var enCache = cacheLis(cle);
+    if (enCache !== undefined) return Promise.resolve(enCache);
+    return statsRpcReseau(fn, body).then(function (r) { cacheEcris(cle, r); return r; });
+  }
+  function statsRpcReseau(fn, body) {
     return fetch(SUPABASE_URL + '/rest/v1/rpc/' + fn, {
       method: 'POST',
       headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' },
@@ -718,50 +784,155 @@
 
   // ── Parties a distance ──
   // Un lance a distance est une personne qui a joue chacun sur son telephone :
-  // une partie en fait deux, comme elle fait deux lances et deux finis. La
-  // table salon_parties n'existe qu'une fois sa migration passee ; sans elle,
-  // l'onglet le dit et la ligne sous les lances reste vide.
+  // une partie en fait deux, comme elle fait deux lances et deux finis. Le
+  // mode n'existe que depuis le 7 septembre 2026 : tout ce que cet onglet
+  // compare (lancements de toutes les pages, part a distance, courbe) part de
+  // cette date, sinon des semaines sans mode a distance ecrasent la part.
+  // La table salon_parties n'existe qu'une fois sa migration passee ; sans
+  // elle, l'onglet le dit et la ligne sous les lances reste vide.
   var PAGES_DISTANCE = ['testCouple', 'testCommonPoints', 'testCompatibilite', 'quizAmoureux',
     'testCoupleSain', 'testParentalite', 'testEmmenager', 'testAmeSoeur', 'testChargeMentale',
     'jeuJamais', 'jeuQuiDeNous', 'jeuQuiPourrait'];
-  function totalDistance() {
-    return statsRpc('get_salon_total').then(function (v) {
-      var n = Array.isArray(v) ? (v[0] && (v[0].get_salon_total != null ? v[0].get_salon_total : v[0])) : v;
-      if (n == null || isNaN(Number(n))) throw new Error('pas de rpc');
-      return Number(n);
+  var DEBUT_DISTANCE = (typeof window !== 'undefined' && window.__ADM_DEBUT_DISTANCE) || '2026-09-07';
+  var distanceCouchesVues = { lances: true, distance: true, part: true };
+  var _distanceCouches = null;
+
+  // Nombre de jours ecoules depuis la mise en service, aujourd'hui compris.
+  // Zero tant que la date n'est pas atteinte.
+  function joursDepuisDebutDistance() {
+    var d0 = new Date(DEBUT_DISTANCE + 'T12:00:00');
+    var auj = new Date(); auj.setHours(12, 0, 0, 0);
+    var n = Math.floor((auj.getTime() - d0.getTime()) / 86400000) + 1;
+    return Math.max(0, Math.min(365, n));
+  }
+  function dateDebutDistanceLisible() {
+    return new Date(DEBUT_DISTANCE + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' });
+  }
+  // La serie des lancements a distance depuis la mise en service, par jour.
+  // Renvoie { parJour: { iso: { departs, fins } }, departs, fins }.
+  function chargeDistanceParJour() {
+    var jours = joursDepuisDebutDistance();
+    if (!jours) return Promise.resolve({ parJour: {}, departs: 0, fins: 0, aucunJour: true });
+    return statsRpc('get_salon_daily', { p_days: jours + 1, p_tz: fuseau() }).then(function (rows) {
+      if (!Array.isArray(rows)) throw new Error('pas de rpc');
+      var parJour = {}, departs = 0, fins = 0;
+      rows.forEach(function (r) {
+        var k = rowDateKey(r);
+        if (!k || k < DEBUT_DISTANCE) return;
+        var d = Number(r.departs) || 0, f = Number(r.fins) || 0;
+        parJour[k] = { departs: (parJour[k] ? parJour[k].departs : 0) + d, fins: (parJour[k] ? parJour[k].fins : 0) + f };
+        departs += d; fins += f;
+      });
+      return { parJour: parJour, departs: departs, fins: fins };
     });
   }
-  function ligneDistance(lancesTotal) {
+  // Les lancements de toutes les pages depuis la mise en service, par jour et
+  // par page, a partir de la serie quotidienne des lancements.
+  function chargeLancesDepuisDebut() {
+    var jours = joursDepuisDebutDistance();
+    if (!jours) return Promise.resolve({ parJour: {}, parPage: {}, total: 0 });
+    return statsRpcPages('get_quiz_starts_daily_par_quiz', { p_days: jours + 1, p_tz: fuseau() }).then(function (rows) {
+      if (!Array.isArray(rows) || rows.error) throw new Error('pas de rpc');
+      var parJour = {}, parPage = {}, total = 0;
+      rows.forEach(function (r) {
+        var k = rowDateKey(r), slug = canon(r.quiz_slug);
+        if (!k || k < DEBUT_DISTANCE || !slug) return;
+        var v = rowTotal(r);
+        parJour[k] = (parJour[k] || 0) + v;
+        parPage[slug] = (parPage[slug] || 0) + v;
+        total += v;
+      });
+      return { parJour: parJour, parPage: parPage, total: total };
+    });
+  }
+  // Sous le total des lances de l'onglet Parties : la part a distance, sur la
+  // seule periode ou le mode existe.
+  function ligneDistance() {
     var el = document.getElementById('admin-lances-distance');
     if (!el) return;
-    totalDistance().then(function (d) {
-      el.textContent = lancesTotal
-        ? lancesTotal.toLocaleString('fr-FR') + ' lancés au total · ' + d.toLocaleString('fr-FR') + ' à distance (' + pct(d, lancesTotal) + ' %)'
-        : d.toLocaleString('fr-FR') + ' à distance';
+    Promise.all([chargeDistanceParJour(), chargeLancesDepuisDebut()]).then(function (r) {
+      if (r[0].aucunJour) { el.textContent = 'Mode à distance mesuré à partir du ' + dateDebutDistanceLisible(); return; }
+      el.textContent = r[1].total
+        ? r[1].total.toLocaleString('fr-FR') + ' lancés depuis le ' + dateDebutDistanceLisible() + ' · ' + r[0].departs.toLocaleString('fr-FR') + ' à distance (' + pct(r[0].departs, r[1].total) + ' %)'
+        : r[0].departs.toLocaleString('fr-FR') + ' à distance depuis le ' + dateDebutDistanceLisible();
     }).catch(function () { el.textContent = ''; });
+  }
+  function renderDistanceLegende(couches) {
+    var el = document.getElementById('admin-distance-legende');
+    if (!el) return;
+    el.innerHTML = couches.map(function (c) {
+      var valeur;
+      if (c.cle === 'part') valeur = c.total !== null ? c.total + ' %' : '—';
+      else valeur = c.points.reduce(function (a, p) { return a + (p.total || 0); }, 0).toLocaleString('fr-FR');
+      return '<button type="button" class="stats-leg' + (c.visible ? '' : ' est-eteinte') + '"'
+        + ' style="--leg:' + c.couleur + '" data-distance-courbe="' + c.cle + '"'
+        + ' aria-pressed="' + (c.visible ? 'true' : 'false') + '">'
+        + '<span class="stats-leg-nom"><span class="stats-leg-puce"></span>' + esc(c.nom) + '</span>'
+        + '<span class="stats-leg-val">' + valeur + '</span>'
+        + '</button>';
+    }).join('');
+  }
+  function renderDistanceCourbe(lances, distance) {
+    var cv = document.getElementById('admin-distance-chart');
+    if (!cv) return;
+    var jours = joursDepuisDebutDistance();
+    var points = { lances: [], distance: [], part: [] };
+    for (var i = jours - 1; i >= 0; i--) {
+      var iso = isoNJoursAvant(i);
+      if (iso < DEBUT_DISTANCE) continue;
+      var d = new Date(iso + 'T12:00:00');
+      var label = d.getDate() + '/' + (d.getMonth() + 1);
+      var l = lances.parJour[iso] || 0;
+      var dd = distance.parJour[iso] ? distance.parJour[iso].departs : 0;
+      points.lances.push({ date: d, label: label, total: l });
+      points.distance.push({ date: d, label: label, total: dd });
+      points.part.push({ date: d, label: label, total: l ? Math.min(100, Math.round((dd / l) * 100)) : null });
+    }
+    var partTotale = lances.total ? Math.min(100, Math.round((distance.departs / lances.total) * 100)) : null;
+    var couches = [
+      { cle: 'lances', nom: 'Lancés, toutes pages', couleur: teinte('lances', '#3B82F6'), axe: 'gauche', unite: '', total: null },
+      { cle: 'distance', nom: 'À distance', couleur: teinte('finis', '#EF4E88'), axe: 'gauche', unite: '', total: null },
+      { cle: 'part', nom: 'Part à distance', couleur: teinte('ratio', '#F59E0B'), axe: 'droite', unite: ' %', total: partTotale }
+    ].map(function (c) { c.visible = distanceCouchesVues[c.cle]; c.points = points[c.cle]; return c; });
+    _distanceCouches = couches;
+    renderDistanceLegende(couches);
+    drawChart(cv, couches, {});
   }
   function loadDistance() {
     var listEl = document.getElementById('admin-distance-list');
     var elL = document.getElementById('admin-distance-lances');
     var elD = document.getElementById('admin-distance-total');
     var elP = document.getElementById('admin-distance-part');
+    var elNote = document.getElementById('admin-distance-note');
+    var cv = document.getElementById('admin-distance-chart');
     if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
+    if (cv) drawChart(cv, [], { loading: true });
+    var depuis = dateDebutDistanceLisible();
+    if (elNote) elNote.textContent = 'Toutes les mesures de cet onglet partent du ' + depuis + ', premier jour du mode à distance.';
+    if (!joursDepuisDebutDistance()) {
+      if (elL) elL.textContent = '—'; if (elD) elD.textContent = '—'; if (elP) elP.textContent = '—';
+      if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">La mesure commence le ' + esc(depuis) + '.</p>';
+      if (cv) drawChart(cv, [], {});
+      var leg0 = document.getElementById('admin-distance-legende'); if (leg0) leg0.innerHTML = '';
+      return;
+    }
     Promise.all([
-      statsRpc('get_quiz_starts_total'),
-      totalDistance(),
-      statsRpc('get_quiz_starts_counts'),
-      statsRpc('get_salon_counts'),
+      chargeLancesDepuisDebut(),
+      chargeDistanceParJour(),
+      statsRpc('get_salon_counts_depuis', { p_depuis: DEBUT_DISTANCE, p_tz: fuseau() }),
       statsRpc('get_quiz_counts')
     ]).then(function (r) {
-      var lt = Array.isArray(r[0]) ? (r[0][0] && (r[0][0].get_quiz_starts_total != null ? r[0][0].get_quiz_starts_total : r[0][0])) : r[0];
-      var lancesTotal = Number(lt) || 0, distance = r[1];
-      if (elL) elL.textContent = lancesTotal.toLocaleString('fr-FR');
-      if (elD) elD.textContent = distance.toLocaleString('fr-FR');
-      if (elP) elP.textContent = lancesTotal ? pct(distance, lancesTotal) + ' %' : '—';
-      var lances = {}, finis = {}, dist = {};
-      fusionneComptes(Array.isArray(r[2]) ? r[2] : []).forEach(function (x) { lances[x.quiz_slug] = x.total; });
-      fusionneComptes(Array.isArray(r[4]) ? r[4] : []).forEach(function (x) { finis[x.quiz_slug] = x.total; });
-      (Array.isArray(r[3]) ? r[3] : []).forEach(function (x) {
+      var lances = r[0], distance = r[1];
+      if (!Array.isArray(r[2])) throw new Error('pas de rpc');
+      if (elL) elL.textContent = lances.total.toLocaleString('fr-FR');
+      if (elD) elD.textContent = distance.departs.toLocaleString('fr-FR');
+      if (elP) elP.textContent = lances.total ? pct(distance.departs, lances.total) + ' %' : '—';
+      var elFins = document.getElementById('admin-distance-fins');
+      if (elFins) elFins.textContent = distance.fins.toLocaleString('fr-FR') + ' finis à distance';
+      renderDistanceCourbe(lances, distance);
+
+      var dist = {};
+      r[2].forEach(function (x) {
         var c = canon(x.quiz_slug);
         if (!dist[c]) dist[c] = { departs: 0, fins: 0 };
         dist[c].departs += Number(x.departs) || 0;
@@ -771,18 +942,18 @@
       Object.keys(dist).forEach(function (k) { if (slugs.indexOf(k) === -1) slugs.push(k); });
       var lignes = slugs.map(function (slug) {
         var d = dist[slug] || { departs: 0, fins: 0 };
-        return { slug: slug, lances: lances[slug] || 0, finis: finis[slug] || 0, departs: d.departs, fins: d.fins };
+        return { slug: slug, lances: lances.parPage[slug] || 0, departs: d.departs, fins: d.fins };
       }).sort(function (a, b) { return b.departs - a.departs || b.lances - a.lances; });
       var max = Math.max(1, lignes.reduce(function (m, l) { return Math.max(m, l.departs); }, 0));
       var html = '<div class="stats-entetes">'
         + '<span class="stats-entete-nom">Page</span>'
-        + '<span class="stats-tri" style="--col:var(--stats-lances)">Lancés</span>'
-        + '<span class="stats-tri" style="--col:var(--stats-finis)">À distance</span>'
-        + '<span class="stats-tri" style="--col:var(--stats-ratio)">Part</span>'
+        + '<span class="stats-tri" style="--col:var(--adm-s-lances)">Lancés</span>'
+        + '<span class="stats-tri" style="--col:var(--adm-s-finis)">À distance</span>'
+        + '<span class="stats-tri" style="--col:var(--adm-s-taux)">Part</span>'
         + '</div>';
       html += lignes.map(function (l) {
         var part = l.lances ? pct(l.departs, l.lances) : null;
-        var bulle = nomQuiz(l.slug) + ' · ' + l.departs.toLocaleString('fr-FR') + ' lancés à distance, ' + l.fins.toLocaleString('fr-FR') + ' finis à distance, sur ' + l.lances.toLocaleString('fr-FR') + ' lancés en tout';
+        var bulle = nomQuiz(l.slug) + ' · ' + l.departs.toLocaleString('fr-FR') + ' lancés à distance, ' + l.fins.toLocaleString('fr-FR') + ' finis à distance, sur ' + l.lances.toLocaleString('fr-FR') + ' lancés depuis le ' + depuis;
         return '<div class="stats-row stats-row--fixe" style="--part:' + Math.round((l.departs / max) * 100) + '%" title="' + esc(bulle) + '">'
           + '<span class="stats-row-name">' + esc(nomQuiz(l.slug)) + '</span>'
           + '<span class="stats-cell stats-cell--lances">' + l.lances.toLocaleString('fr-FR') + '</span>'
@@ -794,25 +965,19 @@
       }).join('');
       if (listEl) listEl.innerHTML = html;
     }).catch(function () {
-      if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Les parties à distance ne sont pas encore mesurées : la migration salon_parties n\'est pas appliquée.</p>';
+      if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Les parties à distance ne sont pas encore mesurées : les migrations salon_parties et salon_daily ne sont pas appliquées.</p>';
       if (elL) elL.textContent = '-'; if (elD) elD.textContent = '-'; if (elP) elP.textContent = '-';
+      if (cv) drawChart(cv, [], {});
     });
   }
 
-  // ── Lancements : total et detail par page ──
-  // Une partie lancee n'est pas une partie finie. Le rapport des deux, page
-  // par page, est la seule facon de voir laquelle interesse mais decroche :
-  // trop longue, mal cadree, ou decevante des les premieres questions. Il n'y
-  // a volontairement pas de taux global : les completions ont des mois
-  // d'historique que les lancements n'ont pas, un chiffre unique melangerait
-  // les pages mesurees et celles qui ne le sont pas encore.
   function chargeLancements() {
     var elTotal = document.getElementById('admin-lances-total');
     statsRpc('get_quiz_starts_total').then(function (v) {
       var n = Array.isArray(v) ? (v[0] && (v[0].get_quiz_starts_total != null ? v[0].get_quiz_starts_total : v[0])) : v;
       if (n == null || isNaN(Number(n))) throw new Error('pas de rpc');
       if (elTotal) elTotal.textContent = Number(n).toLocaleString('fr-FR');
-      ligneDistance(Number(n));
+      ligneDistance();
       return statsRpc('get_quiz_starts_counts');
     }).then(function (rows) {
       if (!Array.isArray(rows) || rows.error) throw new Error('pas de rpc');
@@ -1094,6 +1259,51 @@
     { cle: 'finis',  nom: 'Terminés',         couleur: '#EF4E88', axe: 'gauche', unite: '' },
     { cle: 'ratio',  nom: 'Taux de finition', couleur: '#F59E0B', axe: 'droite', unite: ' %' }
   ];
+  // La couleur d'une serie vit dans css/admin.css (--adm-s-<cle>), en clair et
+  // en sombre ; le script la lit au moment de dessiner. Le repli sert si la
+  // feuille n'est pas chargee. Toujours un hexadecimal : le degrade sous la
+  // courbe colle un suffixe d'opacite a la couleur.
+  var TEINTES = { lances: 'lances', finis: 'finis', ratio: 'taux', visites: 'visites', vues: 'vues', pied: 'pied', blog: 'blog' };
+  function teinte(cle, repli) {
+    var app = document.getElementById('admin-app');
+    var v = app ? getComputedStyle(app).getPropertyValue('--adm-s-' + (TEINTES[cle] || cle)).trim() : '';
+    return /^#[0-9a-fA-F]{6}$/.test(v) ? v : repli;
+  }
+  // Une mini-courbe des derniers jours dans une tuile : le trait, un voile
+  // dessous et le point du jour. Rien d'autre, la tuile porte deja le chiffre.
+  function sparkline(id, valeurs) {
+    var svg = document.getElementById(id);
+    if (!svg) return;
+    var v = (valeurs || []).map(function (x) { return (x === null || x === undefined) ? null : Number(x); });
+    var connus = v.filter(function (x) { return x !== null && !isNaN(x); });
+    if (connus.length < 2) { svg.classList.add('est-vide'); svg.innerHTML = ''; return; }
+    var W = 124, H = 42, pad = 3;
+    var max = Math.max.apply(null, connus), min = Math.min.apply(null, connus);
+    if (max === min) { max = min + 1; }
+    var n = v.length;
+    var pts = [];
+    v.forEach(function (x, i) {
+      if (x === null || isNaN(x)) return;
+      pts.push([pad + (i / (n - 1)) * (W - 2 * pad), H - pad - ((x - min) / (max - min)) * (H - 2 * pad - 4)]);
+    });
+    var d = pts.map(function (p, i) { return (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join(' ');
+    var aire = d + ' L' + pts[pts.length - 1][0].toFixed(1) + ' ' + (H - 1) + ' L' + pts[0][0].toFixed(1) + ' ' + (H - 1) + ' Z';
+    var fin = pts[pts.length - 1];
+    svg.innerHTML = '<path class="adm-spark-aire" d="' + aire + '"/><path d="' + d + '"/>'
+      + '<circle cx="' + fin[0].toFixed(1) + '" cy="' + fin[1].toFixed(1) + '" r="3"/>';
+    svg.classList.remove('est-vide');
+  }
+  // Le delta du jour par rapport a hier, en etiquette a cote du chiffre.
+  function etiquetteDelta(id, aujourdhui, hier) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (aujourdhui === null || hier === null || aujourdhui === undefined || hier === undefined) { el.classList.add('hidden'); return; }
+    var d = aujourdhui - hier;
+    el.classList.remove('hidden', 'est-plus', 'est-moins');
+    if (d > 0) el.classList.add('est-plus'); else if (d < 0) el.classList.add('est-moins');
+    el.textContent = (d > 0 ? '+' : '') + d.toLocaleString('fr-FR') + ' vs hier';
+    el.title = 'Hier : ' + hier.toLocaleString('fr-FR');
+  }
   var courbesVisibles = { lances: true, finis: true, ratio: true };
 
   // Total des lancements du jour, toutes pages confondues. null avant la mise
@@ -1144,7 +1354,7 @@
     });
     var par = { lances: lances, finis: series, ratio: ratio };
     return COURBES.map(function (c) {
-      return { cle: c.cle, nom: c.nom, couleur: c.couleur, axe: c.axe, unite: c.unite,
+      return { cle: c.cle, nom: c.nom, couleur: teinte(c.cle, c.couleur), axe: c.axe, unite: c.unite,
                visible: courbesVisibles[c.cle], points: par[c.cle] };
     });
   }
@@ -1231,8 +1441,25 @@
     }
   }
 
+  // Les quatorze derniers jours en mini-courbe dans chaque tuile, et le delta
+  // du jour par rapport a hier a cote du chiffre.
+  function majTuiles(series) {
+    var n = series.length;
+    var finis = series.slice(-14).map(function (p) { return p.total; });
+    var lances = series.slice(-14).map(function (p) {
+      var iso = p.date.getFullYear() + '-' + String(p.date.getMonth() + 1).padStart(2, '0') + '-' + String(p.date.getDate()).padStart(2, '0');
+      return lancesDuJour(iso);
+    });
+    sparkline('adm-spark-finis', finis);
+    sparkline('adm-spark-lances', lances);
+    etiquetteDelta('adm-delta-finis', n ? series[n - 1].total : null, n > 1 ? series[n - 2].total : null);
+    var jour = isoNJoursAvant(0), hier = isoNJoursAvant(1);
+    etiquetteDelta('adm-delta-lances', statsLancesParJour ? lancesDuJour(jour) : null, statsLancesParJour ? lancesDuJour(hier) : null);
+  }
+
   function renderTotalDaily(series) {
     majTetes(series);
+    majTuiles(series);
     _lastTotalSeries = series;
     var couches = construitCourbes(series);
     renderLegende(couches);
@@ -1592,8 +1819,10 @@
     if (!cv) return;
     opts = opts || {};
     var dark = document.documentElement.classList.contains('dark');
-    var muted = dark ? 'rgba(190,180,210,0.45)' : 'rgba(90,70,110,0.4)';
-    var grid = dark ? 'rgba(200,190,220,0.12)' : 'rgba(90,70,110,0.12)';
+    var app = document.getElementById('admin-app');
+    var css = app ? getComputedStyle(app) : null;
+    var muted = (css && css.getPropertyValue('--adm-axis').trim()) || (dark ? 'rgba(190,180,210,0.5)' : 'rgba(90,70,110,0.5)');
+    var grid = (css && css.getPropertyValue('--adm-grid').trim()) || (dark ? 'rgba(200,190,220,0.12)' : 'rgba(90,70,110,0.12)');
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     var cssW = cv.clientWidth || 600, cssH = cv.clientHeight || 200;
     cv.width = cssW * dpr; cv.height = cssH * dpr;
@@ -1616,7 +1845,7 @@
     }
 
     var aDroite = visibles.some(function (c) { return c.axe === 'droite'; });
-    var padL = 38, padR = aDroite ? 42 : 12, padT = 12, padB = 22;
+    var padL = 46, padR = aDroite ? 46 : 14, padT = 14, padB = 26;
     var plotW = cssW - padL - padR, plotH = cssH - padT - padB;
     var n = visibles[0].points.length;
 
@@ -1634,18 +1863,20 @@
     }
 
     // L'axe de gauche porte les lignes de grille, celui de droite seulement
-    // ses etiquettes : deux grilles superposees brouillent la lecture.
+    // ses etiquettes : deux grilles superposees brouillent la lecture. Quatre
+    // paliers, en filets pleins d'un pixel : la grille se lit sans se voir.
     ctx.lineWidth = 1;
-    [0, 0.5, 1].forEach(function (f) {
-      var y = padT + plotH - f * plotH;
+    var paliers = cssH >= 260 ? [0, 0.25, 0.5, 0.75, 1] : [0, 0.5, 1];
+    paliers.forEach(function (f) {
+      var y = Math.round(padT + plotH - f * plotH) + 0.5;
       ctx.strokeStyle = grid;
       ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(cssW - padR, y); ctx.stroke();
       ctx.fillStyle = muted;
       ctx.textAlign = 'right';
-      ctx.fillText(String(Math.round(hautG * f)), padL - 6, y);
+      ctx.fillText(Math.round(hautG * f).toLocaleString('fr-FR'), padL - 8, y);
       if (aDroite) {
         ctx.textAlign = 'left';
-        ctx.fillText(Math.round(hautD * f) + ' %', cssW - padR + 6, y);
+        ctx.fillText(Math.round(hautD * f) + ' %', cssW - padR + 8, y);
       }
     });
 
@@ -1674,9 +1905,9 @@
       });
       if (cour.length) segs.push(cour);
 
-      // Aplat sous chaque courbe : appuyé quand elle est seule, léger quand
-      // plusieurs se superposent, pour que les couleurs restent lisibles.
-      var alphaHaut = visibles.length === 1 ? '59' : '24';
+      // Un voile sous chaque courbe, jamais un aplat : un peu plus present
+      // quand la courbe est seule, tres leger quand plusieurs se superposent.
+      var alphaHaut = visibles.length === 1 ? '2e' : '1a';
       segs.forEach(function (seg) {
         if (seg.length < 2) return;
         var xy = seg.map(function (pt) { return { x: xAt(pt.i), y: yAt(pt.v, c.axe) }; });
@@ -1690,7 +1921,7 @@
         ctx.closePath(); ctx.fillStyle = g; ctx.fill();
       });
 
-      ctx.lineWidth = 2.5; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+      ctx.lineWidth = 2; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
       segs.forEach(function (seg) {
         if (seg.length === 1) {
           // Un segment d'un seul point ne tracerait rien : on pose une pastille.
@@ -1707,18 +1938,22 @@
       var q = segs.length ? segs[segs.length - 1] : null;
       var dernier = q ? q[q.length - 1] : null;
       if (dernier) {
-        ctx.beginPath(); ctx.arc(xAt(dernier.i), yAt(dernier.v, c.axe), 3.5, 0, Math.PI * 2);
+        // Le point du jour, cerne de la couleur de la carte pour rester
+        // lisible quand deux courbes se croisent.
+        var surface = (css && css.getPropertyValue('--adm-card').trim()) || (dark ? '#140b1e' : '#ffffff');
+        ctx.beginPath(); ctx.arc(xAt(dernier.i), yAt(dernier.v, c.axe), 4, 0, Math.PI * 2);
         ctx.fillStyle = c.couleur; ctx.fill();
-        ctx.strokeStyle = dark ? '#1a1524' : '#fff'; ctx.lineWidth = 2; ctx.stroke();
+        ctx.strokeStyle = surface; ctx.lineWidth = 2; ctx.stroke();
       }
     });
 
     ctx.fillStyle = muted; ctx.textAlign = 'center';
-    var pas = Math.max(1, Math.ceil(n / 6));
-    for (var i = 0; i < n; i += pas) ctx.fillText(visibles[0].points[i].label, xAt(i), cssH - padB / 2 + 2);
+    // Une etiquette de date tous les 90 pixels environ : plus large, plus de dates.
+    var pas = Math.max(1, Math.ceil(n / Math.max(3, Math.floor(plotW / 90))));
+    for (var i = 0; i < n; i += pas) ctx.fillText(visibles[0].points[i].label, xAt(i), cssH - padB / 2 + 3);
     ctx.textAlign = 'left';
 
-    cv._geo = { couches: visibles, n: n, padL: padL, padR: padR, xAt: xAt, cssW: cssW };
+    cv._geo = { couches: visibles, n: n, padL: padL, padR: padR, padT: padT, plotH: plotH, xAt: xAt, yAt: yAt, cssW: cssW, cssH: cssH };
     brancheInfobulle(cv);
   }
 
@@ -1727,7 +1962,7 @@
     opts = opts || {};
     if (opts.loading) return drawChart(cv, [], { loading: true });
     return drawChart(cv, [{
-      cle: 'serie', nom: opts.nom || 'Parties', couleur: '#EF4E88',
+      cle: 'serie', nom: opts.nom || 'Parties', couleur: teinte('finis', '#EF4E88'),
       axe: opts.maxFixe === 100 ? 'droite' : 'gauche', unite: opts.unite || '',
       points: series || []
     }], opts);
@@ -1748,6 +1983,21 @@
     bulle.setAttribute('role', 'status');
     bulle.classList.add('est-cachee');
     (parent || document.body).appendChild(bulle);
+    // Le curseur : un filet vertical a la date survolee, et un point sur
+    // chaque courbe. On vise une date, jamais un trait de deux pixels.
+    var croix = document.createElement('div');
+    croix.className = 'stats-croix est-cachee';
+    (parent || document.body).appendChild(croix);
+    var reperes = [];
+    function repere(k) {
+      while (reperes.length <= k) {
+        var r = document.createElement('div');
+        r.className = 'stats-repere est-cachee';
+        (parent || document.body).appendChild(r);
+        reperes.push(r);
+      }
+      return reperes[k];
+    }
 
     function indexLePlusProche(clientX) {
       var g = cv._geo;
@@ -1779,12 +2029,35 @@
       bulle.innerHTML = html;
       bulle.classList.remove('est-cachee');
       var x = g.xAt(i);
-      bulle.style.left = Math.max(4, Math.min(g.cssW - bulle.offsetWidth - 4, x - bulle.offsetWidth / 2)) + 'px';
+      // L'infobulle se place a droite du curseur, ou a gauche quand la place
+      // manque : elle ne cache jamais le point qu'elle decrit.
+      var gauche = x + 14;
+      if (gauche + bulle.offsetWidth > g.cssW - 4) gauche = x - bulle.offsetWidth - 14;
+      bulle.style.left = Math.max(4, gauche) + 'px';
       // Cale sur le haut du canevas et non du panneau : sinon l'infobulle
       // recouvre les boutons de periode places au-dessus.
-      bulle.style.top = (cv.offsetTop + 4) + 'px';
+      bulle.style.top = (cv.offsetTop + 6) + 'px';
+      croix.style.left = (cv.offsetLeft + x) + 'px';
+      croix.style.top = (cv.offsetTop + (g.padT || 0)) + 'px';
+      croix.style.height = (g.plotH || (cv.clientHeight - 40)) + 'px';
+      croix.classList.remove('est-cachee');
+      var k = 0;
+      g.couches.forEach(function (c) {
+        var p = c.points[i];
+        if (!p || p.total === null || p.total === undefined || !g.yAt) return;
+        var r = repere(k++);
+        r.style.setProperty('--pt', c.couleur);
+        r.style.left = (cv.offsetLeft + x) + 'px';
+        r.style.top = (cv.offsetTop + g.yAt(p.total, c.axe)) + 'px';
+        r.classList.remove('est-cachee');
+      });
+      for (; k < reperes.length; k++) reperes[k].classList.add('est-cachee');
     }
-    function cache() { bulle.classList.add('est-cachee'); }
+    function cache() {
+      bulle.classList.add('est-cachee');
+      croix.classList.add('est-cachee');
+      reperes.forEach(function (r) { r.classList.add('est-cachee'); });
+    }
 
     cv.addEventListener('mousemove', montre);
     cv.addEventListener('mouseleave', cache);
@@ -1814,7 +2087,9 @@
   // permet de se passer de consentement, et c'est de toute facon la bonne
   // unite pour lire du trafic.
   // ═══════════════════════════════════════════════════════════════════════
-  var traficPeriode = 7;
+  // Le trafic s'ouvre sur la journee en cours : c'est ce qu'on vient voir
+  // en premier, les periodes plus longues sont a un clic.
+  var traficPeriode = 1;
   var traficDonnees = null;          // { resume, daily, pages, sources, profondeur, entonnoir }
   var traficCouchesVues = { visites: true, vues: true };
   var traficTriEnt = { col: 'visites', sens: -1 };
@@ -1954,9 +2229,12 @@
       points.vues.push({ date: d, label: label, total: v.vues });
     }
     var couches = TRAFIC_COURBES.map(function (c) {
-      return { cle: c.cle, nom: c.nom, couleur: c.couleur, axe: 'gauche', unite: '',
+      return { cle: c.cle, nom: c.nom, couleur: teinte(c.cle, c.couleur), axe: 'gauche', unite: '',
                visible: traficCouchesVues[c.cle], points: points[c.cle] };
     });
+    // Les mini-courbes des deux tuiles, sur la periode affichee.
+    sparkline('adm-spark-visites', points.visites.map(function (p) { return p.total; }));
+    sparkline('adm-spark-vues', points.vues.map(function (p) { return p.total; }));
     _traficCouches = couches;
     renderTraficLegende(couches);
     drawChart(cv, couches, {});
@@ -2223,7 +2501,7 @@
       points.blog.push({ date: d, label: label, total: v.blog });
     }
     var couches = BLOG_COURBES.map(function (c) {
-      return { cle: c.cle, nom: c.nom, couleur: c.couleur, axe: 'gauche', unite: '',
+      return { cle: c.cle, nom: c.nom, couleur: teinte(c.cle, c.couleur), axe: 'gauche', unite: '',
                visible: blogCouchesVues[c.cle], points: points[c.cle] };
     });
     _blogCouches = couches;
@@ -2312,10 +2590,41 @@
   }
 
   // ── Tab switching ──
+  // Le titre de la zone principale suit l'onglet : c'est lui qui dit ou on est.
+  var TITRES_ONGLETS = {
+    stats: ['Parties', 'Lancés, terminés et taux de finition, toutes pages confondues'],
+    trafic: ['Trafic', 'Visites et pages vues, mesurées par le site lui-même'],
+    blog: ['Blog', 'Lectures des articles et clics « source préférée » Google'],
+    distance: ['À distance', 'Les parties jouées chacun sur son téléphone'],
+    reviews: ['Avis', 'Modération des avis laissés sur les pages'],
+    leads: ['Leads', 'Les demandes reçues par le formulaire'],
+    messages: ['Messagerie', 'Les messages du formulaire de contact'],
+    affiliation: ['Affiliation', 'Clics, conversions et commissions Affilae']
+  };
+  function majTitre(tab) {
+    var t = TITRES_ONGLETS[tab];
+    var h = document.getElementById('adm-titre'), sub = document.getElementById('adm-sous-titre');
+    if (h && t) h.textContent = t[0];
+    if (sub && t) sub.textContent = t[1];
+  }
+
+  function rechargeOnglet(tab) {
+    if (tab === 'stats') loadStats();
+    else if (tab === 'trafic') loadTrafic();
+    else if (tab === 'blog') loadBlog();
+    else if (tab === 'distance') loadDistance();
+    else if (tab === 'reviews') loadReviews();
+    else if (tab === 'leads') { allLeads = []; loadLeads(); }
+    else if (tab === 'messages') { allMessages = []; loadMessages(); }
+    else if (tab === 'affiliation' && window.AdminAffiliation && window.AdminAffiliation.ouvrir) window.AdminAffiliation.ouvrir();
+  }
+
   function switchTab(tab) {
     currentTab = tab;
     document.querySelectorAll('.admin-tab').forEach(function (b) { b.classList.remove('active'); });
-    document.querySelector('.admin-tab[data-tab="' + tab + '"]').classList.add('active');
+    var onglet = document.querySelector('.admin-tab[data-tab="' + tab + '"]');
+    if (onglet) onglet.classList.add('active');
+    majTitre(tab);
 
     document.getElementById('admin-reviews-tab').classList.toggle('hidden', tab !== 'reviews');
     document.getElementById('admin-leads-tab').classList.toggle('hidden', tab !== 'leads');
@@ -3334,6 +3643,17 @@
     var deployBtn = document.getElementById('admin-deploy');
     if (deployBtn) deployBtn.addEventListener('click', triggerDeploy);
 
+    // Actualiser : on vide la memoire des lectures et on recharge l'onglet
+    // ouvert. Les autres onglets se rechargeront a leur prochaine ouverture.
+    var rafraichir = document.getElementById('adm-rafraichir');
+    if (rafraichir) rafraichir.addEventListener('click', function () {
+      videCache();
+      poseFraicheur();
+      rafraichir.classList.add('tourne');
+      setTimeout(function () { rafraichir.classList.remove('tourne'); }, 900);
+      rechargeOnglet(currentTab);
+    });
+
     // Stats range switch (30 / 90 / 365 days)
     document.querySelectorAll('.stats-range-btn').forEach(function (b) {
       b.addEventListener('click', function () {
@@ -3396,6 +3716,21 @@
       traficCouchesVues[cle] = !traficCouchesVues[cle];
       renderTraficCourbe();
     });
+    // La legende de la courbe des parties a distance, meme mecanique.
+    var legDi = document.getElementById('admin-distance-legende');
+    if (legDi) legDi.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-distance-courbe]');
+      if (!b) return;
+      var cle = b.dataset.distanceCourbe;
+      var allumees = Object.keys(distanceCouchesVues).filter(function (k) { return distanceCouchesVues[k]; });
+      if (distanceCouchesVues[cle] && allumees.length === 1) return;
+      distanceCouchesVues[cle] = !distanceCouchesVues[cle];
+      if (_distanceCouches) {
+        _distanceCouches.forEach(function (c) { c.visible = distanceCouchesVues[c.cle]; });
+        renderDistanceLegende(_distanceCouches);
+        drawChart(document.getElementById('admin-distance-chart'), _distanceCouches, {});
+      }
+    });
     // Tri des deux listes. Recliquer la meme colonne inverse le sens.
     function brancheTri(selecteur, attr, etat, redessine) {
       document.querySelectorAll(selecteur).forEach(function (b) {
@@ -3433,24 +3768,42 @@
       renderBlogSourceCourbe();
     });
 
-    // Redraw charts on resize (canvas is width-dependent)
+    // Le canevas depend de sa largeur et de ses couleurs : on redessine au
+    // redimensionnement, et au passage du clair au sombre (les series sont
+    // relues dans la feuille de style).
+    function redessineCourbes() {
+      if (currentTab === 'trafic') {
+        if (_traficCouches) renderTraficCourbe();
+        return;
+      }
+      if (currentTab === 'blog') {
+        if (_blogCouches) renderBlogSourceCourbe();
+        return;
+      }
+      if (currentTab === 'distance') {
+        if (_distanceCouches) {
+          _distanceCouches.forEach(function (c) { c.couleur = teinte(c.cle === 'part' ? 'ratio' : (c.cle === 'distance' ? 'finis' : 'lances'), c.couleur); });
+          renderDistanceLegende(_distanceCouches);
+          drawChart(document.getElementById('admin-distance-chart'), _distanceCouches, {});
+        }
+        return;
+      }
+      if (currentTab !== 'stats') return;
+      if (_lastTotalSeries) renderTotalDaily(_lastTotalSeries);
+      if (_lastQuizSeries) drawLineChart(document.getElementById('admin-stats-chart'), _lastQuizSeries, _lastQuizOpts);
+    }
     var rT;
     window.addEventListener('resize', function () {
       clearTimeout(rT);
-      rT = setTimeout(function () {
-        if (currentTab === 'trafic') {
-          if (_traficCouches) drawChart(document.getElementById('trafic-chart'), _traficCouches, {});
-          return;
-        }
-        if (currentTab === 'blog') {
-          if (_blogCouches) drawChart(document.getElementById('blog-sourcepref-chart'), _blogCouches, {});
-          return;
-        }
-        if (currentTab !== 'stats') return;
-        if (_lastTotalCouches) drawChart(document.getElementById('admin-stats-total-chart'), _lastTotalCouches, {});
-        if (_lastQuizSeries) drawLineChart(document.getElementById('admin-stats-chart'), _lastQuizSeries, _lastQuizOpts);
-      }, 180);
+      rT = setTimeout(redessineCourbes, 180);
     });
+    if (window.MutationObserver) {
+      new MutationObserver(function (muts) {
+        for (var i = 0; i < muts.length; i++) {
+          if (muts[i].attributeName === 'class') { setTimeout(redessineCourbes, 30); return; }
+        }
+      }).observe(document.documentElement, { attributes: true });
+    }
 
     // Articles create
     var createBtn = document.getElementById('articles-create');

@@ -1,0 +1,689 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   Tableau de bord d'administration
+   ───────────────────────────────────────────────────────────────────────
+   Une application plein ecran : barre laterale a gauche, en-tete de page,
+   tuiles d'indicateurs, un grand graphique, puis les panneaux. Tout est
+   porte par la classe .adm, rien ne deborde sur le site public. Les
+   couleurs des series sont des variables : le script les lit pour dessiner
+   les courbes, la feuille les reprend pour les legendes, et le mode sombre
+   n'a qu'a les redefinir. Chaque jeu de couleurs a passe le controle de
+   lisibilite (bande de clarte, separation daltonienne, contraste) sur la
+   surface reelle des cartes, en clair comme en sombre.
+   ═══════════════════════════════════════════════════════════════════════ */
+.adm{
+  --adm-plane:hsl(var(--background));
+  --adm-card:hsl(var(--card));
+  --adm-line:hsl(var(--border));
+  --adm-ink:hsl(var(--foreground));
+  --adm-ink-2:hsl(var(--muted-foreground));
+  --adm-s-lances:#3B82F6;
+  --adm-s-finis:#EF4E88;
+  --adm-s-taux:#F59E0B;
+  --adm-s-visites:#8B5CF6;
+  --adm-s-vues:#0EA5E9;
+  --adm-s-pied:#3B82F6;
+  --adm-s-blog:#EF4E88;
+  --adm-grid:rgba(90,70,110,.13);
+  --adm-axis:rgba(90,70,110,.55);
+  --adm-bon:#0a7a3c;
+  --adm-mauvais:#c22b2b;
+  color:var(--adm-ink);
+}
+.dark .adm{
+  --adm-s-lances:#3987e5;
+  --adm-s-finis:#d55181;
+  --adm-s-taux:#c98500;
+  --adm-s-visites:#9085e9;
+  --adm-s-vues:#199e70;
+  --adm-s-pied:#3987e5;
+  --adm-s-blog:#d55181;
+  --adm-grid:rgba(200,190,220,.13);
+  --adm-axis:rgba(190,180,210,.6);
+  --adm-bon:#3ecf78;
+  --adm-mauvais:#f07171;
+}
+.page-admin main{min-height:100vh;}
+/* .hidden vaut display:none dans la feuille du site, chargee avant celle-ci :
+   a specificite egale, un display:grid ou flex pose ici gagnerait et l'ecran
+   de connexion resterait affiche par-dessus le tableau. La classe est donc
+   prioritaire dans tout l'admin. */
+.adm .hidden{display:none !important;}
+
+/* ── Connexion ─────────────────────────────────────────────────────── */
+.adm-login{
+  min-height:100vh;display:grid;place-items:center;padding:2rem 1rem;
+  background:
+    radial-gradient(38rem 24rem at 15% 10%,hsl(var(--primary)/.16),transparent 60%),
+    radial-gradient(34rem 26rem at 90% 90%,hsl(var(--secondary)/.16),transparent 60%),
+    var(--adm-plane);
+}
+.adm-login-carte{
+  width:100%;max-width:24rem;padding:2.25rem 2rem 2rem;border-radius:1.5rem;
+  background:var(--adm-card);border:1px solid var(--adm-line);
+  box-shadow:0 30px 60px -36px hsl(var(--primary)/.55);text-align:center;
+}
+.adm-login-logo{width:3.5rem;height:3.5rem;margin:0 auto 1rem;border-radius:1.1rem;display:grid;place-items:center;
+  background:linear-gradient(135deg,hsl(var(--primary)),hsl(var(--secondary)));color:#fff;box-shadow:0 12px 24px -12px hsl(var(--primary)/.8);}
+.adm-login-logo svg{width:1.6rem;height:1.6rem;}
+.adm-login h1{font-family:'Poppins','Inter',sans-serif;font-size:1.4rem;font-weight:800;margin:0;}
+.adm-login-sub{font-size:.85rem;color:var(--adm-ink-2);margin:.3rem 0 1.5rem;}
+.adm-login-champ{position:relative;margin-bottom:.75rem;}
+.adm-login-champ .input{padding-right:2.75rem;height:2.9rem;}
+.adm-login-oeil{position:absolute;right:.6rem;top:50%;transform:translateY(-50%);width:2rem;height:2rem;display:grid;place-items:center;
+  border:none;background:transparent;color:var(--adm-ink-2);cursor:pointer;border-radius:.5rem;}
+.adm-login-oeil:hover{color:var(--adm-ink);background:hsl(var(--muted)/.6);}
+.adm-login-oeil svg{width:1rem;height:1rem;}
+.adm-login-oeil .hidden{display:none;}
+.adm-login-erreur{font-size:.82rem;color:hsl(var(--destructive));margin:0 0 .6rem;}
+.adm-login-erreur.hidden{display:none;}
+.adm-login .btn{width:100%;height:2.9rem;font-weight:700;}
+
+/* ── La coquille ───────────────────────────────────────────────────── */
+.adm-shell{display:grid;grid-template-columns:16.5rem minmax(0,1fr);min-height:100vh;background:var(--adm-plane);}
+.adm-shell.hidden{display:none;}
+
+/* Barre laterale */
+.adm-side{position:sticky;top:0;height:100vh;overflow-y:auto;display:flex;flex-direction:column;gap:.75rem;
+  padding:1rem .85rem 1rem;border-right:1px solid var(--adm-line);background:var(--adm-card);scrollbar-width:thin;}
+.adm-brand{display:flex;align-items:center;gap:.7rem;padding:.4rem .5rem .6rem;}
+.adm-brand-logo{width:2.4rem;height:2.4rem;flex:0 0 auto;border-radius:.8rem;display:grid;place-items:center;color:#fff;
+  background:linear-gradient(135deg,hsl(var(--primary)),hsl(var(--secondary)));box-shadow:0 10px 20px -12px hsl(var(--primary)/.9);}
+.adm-brand-logo svg{width:1.25rem;height:1.25rem;}
+.adm-brand-nom{font-family:'Poppins','Inter',sans-serif;font-weight:800;font-size:.98rem;line-height:1.1;}
+.adm-brand-sub{font-size:.66rem;color:var(--adm-ink-2);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-top:.15rem;}
+
+.adm-nav{display:flex;flex-direction:column;gap:.15rem;flex:1;}
+.adm-nav-titre{font-size:.64rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--adm-ink-2);padding:.95rem .65rem .4rem;margin:0;}
+.adm-nav .admin-tab{
+  position:relative;display:flex;align-items:center;gap:.7rem;width:100%;padding:.6rem .7rem;border-radius:.75rem;
+  border:none;background:transparent;color:var(--adm-ink-2);font-size:.9rem;font-weight:600;text-align:left;cursor:pointer;
+  transition:background .15s,color .15s;
+}
+.adm-nav .admin-tab:hover:not(.active){background:hsl(var(--muted)/.6);color:var(--adm-ink);}
+.adm-nav .admin-tab.active{background:hsl(var(--primary)/.12);color:hsl(var(--primary));}
+.adm-nav .admin-tab.active::before{content:'';position:absolute;left:-.85rem;top:.6rem;bottom:.6rem;width:3px;border-radius:0 3px 3px 0;background:hsl(var(--primary));}
+.adm-nav-ico{width:1.15rem;height:1.15rem;flex:0 0 auto;opacity:.9;}
+.adm-nav .admin-pastille{position:static;margin-left:auto;box-shadow:none;min-width:1.15rem;height:1.15rem;font-size:.66rem;}
+.adm-nav .admin-pastille.hidden{display:none;}
+
+.adm-side-pied{display:flex;flex-direction:column;gap:.55rem;padding-top:.85rem;border-top:1px solid var(--adm-line);}
+.adm-publier{
+  display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;height:2.6rem;border:none;border-radius:.8rem;
+  background:linear-gradient(135deg,hsl(var(--primary)),hsl(var(--secondary)));color:#fff;font-weight:700;font-size:.86rem;cursor:pointer;
+  box-shadow:0 10px 22px -14px hsl(var(--primary)/.9);transition:transform .15s,box-shadow .15s;
+}
+.adm-publier:hover{transform:translateY(-1px);box-shadow:0 14px 26px -14px hsl(var(--primary)/.95);}
+.adm-publier svg{width:1rem;height:1rem;}
+.adm-side-actions{display:flex;gap:.5rem;}
+.adm-ico-btn{
+  flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;height:2.3rem;border-radius:.7rem;
+  border:1px solid var(--adm-line);background:transparent;color:var(--adm-ink-2);font-size:.78rem;font-weight:600;cursor:pointer;
+  transition:background .15s,color .15s,border-color .15s;
+}
+.adm-ico-btn:hover{color:var(--adm-ink);background:hsl(var(--muted)/.6);}
+.adm-ico-btn svg{width:1rem;height:1rem;}
+.adm-ico-btn--danger:hover{color:hsl(var(--destructive));border-color:hsl(var(--destructive)/.4);}
+.adm .theme-icon-sun,.adm .theme-icon-moon{display:none;}
+.adm .theme-icon-moon{display:block;}
+.dark .adm .theme-icon-moon{display:none;}
+.dark .adm .theme-icon-sun{display:block;}
+
+/* Zone principale */
+.adm-main{min-width:0;display:flex;flex-direction:column;}
+.adm-top{
+  position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.95rem 2rem;border-bottom:1px solid var(--adm-line);
+  background:color-mix(in srgb,var(--adm-plane) 86%,transparent);backdrop-filter:blur(12px);
+}
+.adm-top-titre{font-family:'Poppins','Inter',sans-serif;font-size:1.4rem;font-weight:800;margin:0;line-height:1.1;}
+.adm-top-sub{font-size:.8rem;color:var(--adm-ink-2);margin:.2rem 0 0;}
+.adm-top-droite{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;justify-content:flex-end;}
+.adm-puce{display:inline-flex;align-items:center;gap:.45rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--adm-line);
+  background:var(--adm-card);font-size:.78rem;font-weight:600;color:var(--adm-ink-2);white-space:nowrap;}
+.adm-puce strong{color:var(--adm-ink);font-weight:800;}
+.adm-puce svg{width:.95rem;height:.95rem;}
+.adm-contenu{padding:1.5rem 2rem 3rem;}
+.adm-rafraichir{flex:0 0 auto;height:2.3rem;padding:0 .85rem;background:var(--adm-card);color:var(--adm-ink);}
+.adm-rafraichir.tourne svg{animation:spin .8s linear infinite;}
+.adm-puce--fraicheur[hidden]{display:none;}
+
+/* Bandeau de publication */
+#deploy-banner{margin:0 0 1.25rem;padding:.8rem 1rem;border-radius:.9rem;border:1px solid hsl(var(--primary)/.3);background:hsl(var(--primary)/.06);}
+#deploy-banner.hidden{display:none;}
+.adm-bandeau-int{display:flex;align-items:center;gap:.75rem;}
+.adm-bandeau-int svg{width:1.2rem;height:1.2rem;flex:0 0 auto;}
+.adm-bandeau-int .hidden{display:none;}
+#deploy-spinner{width:1.1rem;height:1.1rem;border:2px solid hsl(var(--primary)/.3);border-top-color:hsl(var(--primary));border-radius:50%;animation:spin .6s linear infinite;flex:0 0 auto;}
+#deploy-message{font-size:.85rem;font-weight:600;margin:0;}
+
+/* Barre d'outils d'un onglet : filtres a gauche, actions a droite */
+.adm-toolbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.1rem;}
+.adm-toolbar-gauche,.adm-toolbar-droite{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+.adm-toolbar h2{font-family:'Poppins','Inter',sans-serif;font-size:1.05rem;font-weight:700;margin:0;}
+
+/* Deux panneaux cote a cote quand la place le permet */
+.adm-duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;align-items:start;}
+.adm-duo>*{margin-bottom:1.25rem;min-width:0;}
+.adm .stats-details-corps,.adm .stats-panel{min-width:0;}
+.adm .stats-comp{max-width:100%;}
+
+/* Cartes rendues par le script (avis, messages) : une grille fluide */
+.adm-cartes{display:grid;grid-template-columns:repeat(auto-fill,minmax(22rem,1fr));gap:1rem;align-items:start;}
+.adm-cartes>p{grid-column:1/-1;}
+.adm-cartes .glass-card{background:var(--adm-card);border:1px solid var(--adm-line);box-shadow:none;}
+
+/* Tableau des leads */
+.adm-table-wrap{border:1px solid var(--adm-line);border-radius:1rem;background:var(--adm-card);overflow:hidden;}
+.adm-table-wrap table thead{background:hsl(var(--muted)/.6);}
+.adm-table-wrap table th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--adm-ink-2);}
+
+/* ── Tuiles d'indicateurs ──────────────────────────────────────────── */
+.adm .stats-tetes,.adm .trafic-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem;margin-bottom:1.25rem;align-items:stretch;}
+.adm .stats-tete{
+  position:relative;overflow:hidden;min-width:0;min-height:8.5rem;display:flex;flex-direction:column;gap:.1rem;justify-content:flex-start;
+  padding:1.1rem 1.25rem 1rem;border:1px solid var(--adm-line);border-radius:1rem;background:var(--adm-card);text-align:left;
+}
+.adm .stats-tete::before{content:'';position:absolute;inset:0 0 auto 0;height:3px;background:var(--tete);}
+.adm .stats-tete-titre{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--adm-ink-2);justify-content:flex-start;}
+.adm .stats-tete-jour{font-family:'Poppins','Inter',sans-serif;font-size:2.35rem;font-weight:800;line-height:1.05;color:var(--adm-ink);margin-top:.35rem;font-variant-numeric:normal;}
+.adm .stats-tete--ratio .stats-tete-jour{font-size:2.35rem;}
+.adm .stats-tete--ratio{min-width:0;text-align:left;border-color:var(--adm-line);}
+.adm .stats-tete--ratio .stats-tete-titre{justify-content:flex-start;}
+.adm-note{font-size:.8rem;color:var(--adm-ink-2);margin:0 0 1rem;padding:.55rem .85rem;border-radius:.7rem;background:hsl(var(--muted)/.5);border:1px solid var(--adm-line);}
+.adm-note:empty{display:none;}
+.adm .stats-tete-sub{font-size:.76rem;color:var(--adm-ink-2);}
+.adm .stats-tete-total{margin-top:auto;padding-top:.6rem;border-top:1px solid var(--adm-line);font-size:.78rem;color:var(--adm-ink-2);}
+.adm .stats-tete-total strong{color:var(--adm-ink);}
+.adm .stats-tete--lances{--tete:var(--adm-s-lances);}
+.adm .stats-tete--finis{--tete:var(--adm-s-finis);}
+.adm .stats-tete--ratio{--tete:var(--adm-s-taux);}
+.adm .trafic-kpi--visites{--tete:var(--adm-s-visites);}
+.adm .trafic-kpi--vues{--tete:var(--adm-s-vues);}
+.adm .trafic-kpi--profondeur{--tete:#1baf7a;}
+.adm .trafic-kpi--rebond{--tete:#eb6834;}
+/* La mini-courbe des quatorze derniers jours, a droite du chiffre */
+.adm-spark{position:absolute;right:1.1rem;top:2.55rem;width:7.75rem;height:2.6rem;pointer-events:none;}
+.adm-spark path{fill:none;stroke:var(--tete);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.adm-spark .adm-spark-aire{fill:var(--tete);fill-opacity:.1;stroke:none;}
+.adm-spark circle{fill:var(--tete);stroke:var(--adm-card);stroke-width:2;}
+.adm-spark.est-vide{display:none;}
+/* Le delta du jour, a cote du chiffre, comme une etiquette */
+.adm-delta{display:inline-flex;align-items:center;gap:.2rem;vertical-align:middle;margin-left:.45rem;padding:.12rem .5rem;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:0;font-variant-numeric:tabular-nums;background:hsl(var(--muted)/.7);color:var(--adm-ink-2);}
+.adm-delta.est-plus{background:color-mix(in srgb,var(--adm-bon) 14%,transparent);color:var(--adm-bon);}
+.adm-delta.est-moins{background:color-mix(in srgb,var(--adm-mauvais) 12%,transparent);color:var(--adm-mauvais);}
+.adm-delta.hidden{display:none;}
+
+/* ── Panneaux et graphiques ────────────────────────────────────────── */
+.adm .stats-panel,.adm .stats-details,.adm .afl-panel{background:var(--adm-card);border:1px solid var(--adm-line);border-radius:1rem;box-shadow:none;}
+.adm .stats-panel{padding:1.25rem 1.4rem 1rem;margin-bottom:1.25rem;}
+.adm .stats-details{margin-bottom:1.25rem;}
+.adm .stats-panel-title,.adm .stats-details-titre{font-size:1rem;}
+.adm .stats-canvas{width:100%;display:block;}
+.adm .adm-canvas--hero{height:clamp(320px,48vh,520px);}
+.adm .adm-canvas--sec{height:240px;}
+.adm .adm-canvas--petit{height:200px;}
+/* Vignettes de legende : une rangee de pastilles, jamais une grille */
+.adm .stats-legende{display:flex;flex-wrap:wrap;gap:.5rem;margin:.2rem 0 1rem;}
+.adm .stats-leg{flex:1 1 10.5rem;max-width:15rem;border-top:1px solid var(--adm-line);border-left:3px solid var(--leg);border-radius:.7rem;padding:.55rem .8rem;}
+.adm .stats-leg-val{color:var(--adm-ink);font-size:1.15rem;}
+.adm .stats-leg.est-eteinte{border-left-color:var(--adm-line);}
+/* Le curseur du graphique : un filet vertical et un point par courbe */
+.stats-croix{position:absolute;top:0;width:1px;background:var(--adm-axis,rgba(90,70,110,.5));pointer-events:none;z-index:18;}
+.stats-croix.est-cachee,.stats-repere.est-cachee{display:none;}
+.stats-repere{position:absolute;z-index:19;pointer-events:none;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:9999px;
+  background:var(--pt,#7C5AD0);box-shadow:0 0 0 2px var(--adm-card,#fff);}
+.adm .stats-infobulle{border-radius:.7rem;padding:.55rem .75rem;font-size:.78rem;line-height:1.35;gap:.15rem;}
+.adm .stats-infobulle-nom{font-size:.74rem;}
+/* Le premier titre du panneau de courbe d'une page */
+.adm .stats-souscourbe{margin-top:0;padding-top:0;border-top:none;}
+/* Selecteurs de periode */
+.adm .stats-comp,.adm .stats-range{background:var(--adm-card);}
+.adm .stats-comp-btn,.adm .stats-range-btn{padding:.42rem .9rem;}
+
+/* ── Telephone et petites largeurs ─────────────────────────────────── */
+@media (max-width:1100px){
+  .adm-shell{grid-template-columns:14.5rem minmax(0,1fr);}
+  .adm-contenu,.adm-top{padding-left:1.25rem;padding-right:1.25rem;}
+}
+@media (max-width:960px){
+  .adm-shell{grid-template-columns:1fr;}
+  .adm-side{position:sticky;top:0;height:auto;z-index:40;flex-direction:row;flex-wrap:wrap;align-items:center;gap:.4rem .5rem;
+    padding:.55rem .75rem .35rem;border-right:none;border-bottom:1px solid var(--adm-line);}
+  .adm-brand{flex:1 1 auto;padding:.15rem .25rem;}
+  .adm-brand-sub{display:none;}
+  .adm-side-pied{order:2;flex-direction:row;align-items:center;gap:.4rem;padding-top:0;border-top:none;}
+  .adm-publier{width:auto;height:2.15rem;padding:0 .8rem;font-size:.78rem;}
+  .adm-publier span{display:none;}
+  .adm-side-actions{gap:.4rem;}
+  .adm-ico-btn{flex:0 0 auto;width:2.15rem;height:2.15rem;padding:0;}
+  .adm-ico-btn span{display:none;}
+  .adm-rafraichir{width:2.15rem;height:2.15rem;padding:0;}
+  .adm-nav{order:3;flex:1 1 100%;min-width:0;width:100%;flex-direction:row;gap:.2rem;overflow-x:auto;scrollbar-width:none;padding:.15rem 0 .1rem;}
+  .adm-nav::-webkit-scrollbar{display:none;}
+  .adm-nav-titre{display:none;}
+  .adm-nav .admin-tab{width:auto;flex:0 0 auto;white-space:nowrap;padding:.45rem .7rem;font-size:.82rem;gap:.45rem;}
+  .adm-nav .admin-tab.active::before{display:none;}
+  .adm-nav-ico{width:1rem;height:1rem;}
+  .adm-top{position:static;padding:.9rem 1rem;}
+  .adm-top-titre{font-size:1.2rem;}
+  .adm-contenu{padding:1rem 1rem 2.5rem;}
+  .adm-duo{grid-template-columns:minmax(0,1fr);gap:0;}
+  .adm .stats-comp{flex-wrap:wrap;border-radius:.9rem;}
+  .adm .stats-comp-btn{flex:1 1 auto;}
+  .adm .adm-canvas--hero{height:clamp(240px,42vh,360px);}
+  .adm .stats-tete-jour{font-size:1.9rem;}
+  .adm-spark{width:6rem;top:2.3rem;}
+}
+@media (max-width:480px){
+  .adm-cartes{grid-template-columns:1fr;}
+  .adm .stats-tetes,.adm .trafic-kpis{grid-template-columns:1fr;}
+  .adm-puce{display:none;}
+}
+@media (prefers-reduced-motion:reduce){.adm-publier{transition:none;}}
+
+/* ═══ Le socle repris de l'ancien tableau de bord ═══════════════════════
+   Listes, lignes, cellules, tops et flops, onglet Trafic, Blog, Affiliation
+   et infobulle. Les regles de la coquille ci-dessus passent avant, celles-ci
+   portent le detail des panneaux. */
+
+  @keyframes spin{to{transform:rotate(360deg)}}
+  /* ── Stats tab ── */
+  .stats-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem;}
+  .stats-kpi{display:flex;align-items:center;gap:0.9rem;padding:1.1rem 1.25rem;border-radius:1rem;background:hsl(var(--card));border:1px solid hsl(var(--border));box-shadow:0 4px 16px -8px hsl(var(--primary)/0.18);}
+  .stats-kpi-icon{width:2.75rem;height:2.75rem;border-radius:0.85rem;display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:#fff;flex-shrink:0;box-shadow:0 4px 12px -4px hsl(var(--primary)/0.5);}
+  .stats-kpi-value{font-family:'Poppins','Inter',sans-serif;font-size:1.6rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums;}
+  .stats-kpi-label{font-size:0.72rem;color:hsl(var(--muted-foreground));margin-top:0.25rem;text-transform:uppercase;letter-spacing:0.03em;font-weight:600;}
+  .stats-panel{background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem;padding:1.35rem 1.4rem;margin-bottom:1.5rem;box-shadow:0 4px 16px -10px hsl(var(--primary)/0.15);}
+  .stats-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;}
+  .stats-panel-title{font-family:'Poppins','Inter',sans-serif;font-size:1.05rem;font-weight:700;margin:0;}
+  .stats-panel-sub{font-size:0.8rem;color:hsl(var(--muted-foreground));margin:0.15rem 0 0;}
+  .stats-range{display:inline-flex;border:1px solid hsl(var(--border));border-radius:999px;overflow:hidden;flex-shrink:0;}
+  .stats-range-btn{padding:0.35rem 0.85rem;font-size:0.8rem;font-weight:600;background:transparent;border:none;cursor:pointer;color:hsl(var(--muted-foreground));transition:background .15s,color .15s;}
+  .stats-range-btn.active{background:hsl(var(--primary));color:#fff;}
+  .stats-canvas{width:100%;display:block;}
+  /* Une ligne = une page, trois chiffres par ligne. Le fond se remplit
+     selon la colonne de tri : classer par ratio dessine les ratios, classer
+     par lances dessine les volumes. Un filet separe chaque ligne, sinon
+     quarante lignes collees ne se lisent pas. */
+  .stats-list{display:flex;flex-direction:column;}
+  .stats-avis{font-size:0.78rem;line-height:1.5;color:hsl(var(--muted-foreground));background:hsl(38 92% 55%/0.1);border-left:3px solid hsl(38 92% 50%);border-radius:0.4rem;padding:0.55rem 0.75rem;margin-bottom:0.6rem;}
+  .stats-entetes{display:flex;align-items:center;gap:0.5rem;padding:0.3rem 0.7rem 0.45rem;border-bottom:2px solid hsl(var(--border));margin-bottom:0.1rem;}
+  .stats-entete-nom{flex:1;min-width:0;font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:hsl(var(--muted-foreground));}
+  .stats-tri{flex:0 0 5.2rem;display:flex;align-items:center;justify-content:flex-end;gap:0.2rem;background:none;border:none;padding:0.15rem 0.2rem;cursor:pointer;border-radius:0.35rem;font-size:0.7rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:hsl(var(--muted-foreground));white-space:nowrap;transition:color .15s,background .15s;}
+  .stats-tri:hover{background:hsl(var(--muted)/0.6);color:hsl(var(--foreground));}
+  .stats-tri.est-actif{color:var(--col);}
+  .stats-tri-fleche{font-size:0.65rem;opacity:0.35;}
+  .stats-tri.est-actif .stats-tri-fleche{opacity:1;}
+  /* Sur « Tout », la colonne des lancés date sa mesure : sans ça, une page
+     ancienne à 12 finis pour 0 lancé ressemble à un compteur cassé. */
+  .stats-tri-note{flex-basis:100%;font-size:0.55rem;font-weight:600;letter-spacing:0;text-transform:none;opacity:0.65;text-align:right;}
+  .stats-tri{flex-wrap:wrap;}
+  .stats-row{position:relative;display:flex;align-items:center;gap:0.5rem;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid hsl(var(--border)/0.6);padding:0.55rem 0.7rem;cursor:pointer;color:inherit;overflow:hidden;transition:background .15s;}
+  .stats-row:last-child{border-bottom:none;}
+  .stats-row::before{content:'';position:absolute;inset:0 auto 0 0;width:var(--part,0%);background:color-mix(in srgb, var(--fam) 11%, transparent);pointer-events:none;transition:width .25s ease;}
+  .stats-row:hover{background:hsl(var(--muted)/0.45);}
+  .stats-row.active{box-shadow:inset 2px 0 0 var(--fam);background:hsl(var(--muted)/0.5);}
+  .stats-row>*{position:relative;}
+  .stats-row-name{flex:1;min-width:0;font-size:0.88rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .stats-cell{flex:0 0 5.2rem;text-align:right;font-variant-numeric:tabular-nums;font-size:0.95rem;font-weight:700;}
+  .stats-cell--lances{color:hsl(217 91% 52%);}
+  .stats-cell--finis{color:hsl(338 72% 52%);}
+  .dark .stats-cell--lances{color:hsl(217 90% 70%);}
+  .dark .stats-cell--finis{color:hsl(338 80% 68%);}
+  .stats-cell--ratio{font-size:1.05rem;font-weight:800;}
+  /* Le delta du jour, sous le chiffre : assez petit pour ne pas concurrencer
+     le cumul, assez present pour se voir. Vert, comme un gain. */
+  .stats-cell{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;}
+  .stats-cell-jour{font-size:0.66rem;font-weight:700;color:hsl(150 62% 38%);letter-spacing:0;}
+  .dark .stats-cell-jour{color:hsl(150 55% 55%);}
+  .stats-cell--ratio .stats-cell-jour{color:hsl(var(--muted-foreground));}
+  .stats-cell.est-faible{color:hsl(0 72% 50%);}
+  .dark .stats-cell.est-faible{color:hsl(0 78% 68%);}
+  .stats-cell.est-fort{color:hsl(150 62% 36%);}
+  .dark .stats-cell.est-fort{color:hsl(150 55% 55%);}
+  .stats-cell.est-vide{color:hsl(var(--muted-foreground)/0.5);font-weight:600;font-size:0.85rem;}
+  @media (max-width:640px){
+    .stats-cell,.stats-tri{flex-basis:3.9rem;font-size:0.85rem;}
+    .stats-cell--ratio{font-size:0.95rem;}
+    .stats-row-name{font-size:0.82rem;}
+  }
+  /* Regroupement tests / quiz / jeux. Une couleur par famille, reprise sur
+     l'en-tete, sur le liseré de chaque ligne et sur sa barre : la liste fait
+     une quarantaine de pages, sans repere visuel on la lit mal. */
+  .stats-groupe{margin-top:1rem;}
+  .stats-groupe:first-child{margin-top:0.2rem;}
+  .stats-groupe-tete{display:flex;align-items:center;gap:0.5rem;padding:0.35rem 0.4rem;margin-bottom:0.25rem;border-bottom:1px solid hsl(var(--border));}
+  .stats-groupe-pastille{width:0.55rem;height:0.55rem;border-radius:9999px;background:var(--fam);flex:0 0 auto;}
+  .stats-groupe-nom{font-size:0.78rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--fam);}
+  .stats-groupe-compte{margin-left:auto;font-size:0.75rem;font-weight:600;color:hsl(var(--muted-foreground));font-variant-numeric:tabular-nums;}
+  .stats-row{border-left:2px solid transparent;}
+  .stats-groupe .stats-row{border-left-color:color-mix(in srgb, var(--fam) 45%, transparent);}
+  .stats-groupe .stats-row-bar>span{background:var(--fam);}
+  .stats-fam-test{--fam:hsl(265 62% 58%);}
+  .stats-fam-quiz{--fam:hsl(338 72% 58%);}
+  .stats-fam-jeu{--fam:hsl(172 60% 40%);}
+  .dark .stats-fam-test{--fam:hsl(265 70% 70%);}
+  .dark .stats-fam-quiz{--fam:hsl(338 80% 68%);}
+  .dark .stats-fam-jeu{--fam:hsl(172 55% 55%);}
+  /* Taux de finition : la valeur remplace le total, la barre represente le
+     pourcentage lui-meme. En dessous de 40 % la valeur passe en rouge, c'est
+     la lecture utile de tout ce tableau. */
+  .stats-row-val.est-faible{color:hsl(0 70% 52%);}
+  .dark .stats-row-val.est-faible{color:hsl(0 75% 68%);}
+  .stats-row-val.est-fort{color:hsl(150 62% 38%);}
+  .dark .stats-row-val.est-fort{color:hsl(150 55% 55%);}
+  .stats-row-val{flex-basis:3.6rem;}
+  /* Colonne secondaire : l'autre nombre du couple, en gris, pour garder le
+     contexte quand on regarde un ratio (128 sur 340). */
+  /* Trois blocs en tete : le compteur des lances, le ratio du jour au
+     milieu, le compteur des finis. Chaque compteur porte le chiffre du jour
+     en grand et le cumul en petit : c'est le couple qu'on regarde. */
+  .stats-tetes{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;margin-bottom:1.5rem;align-items:stretch;}
+  .stats-tete{border:1px solid hsl(var(--border));border-radius:1rem;padding:1rem 1.25rem;display:flex;flex-direction:column;justify-content:center;background:hsl(var(--card)/0.5);}
+  .stats-tete-titre{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--tete);}
+  .stats-tete-jour{font-size:2rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--tete);margin-top:0.15rem;}
+  .stats-tete-sub{font-size:0.75rem;color:hsl(var(--muted-foreground));}
+  .stats-tete-total{margin-top:0.5rem;padding-top:0.5rem;border-top:1px dashed hsl(var(--border));font-size:0.8rem;color:hsl(var(--muted-foreground));}
+  .stats-tete-total strong{color:hsl(var(--foreground));font-variant-numeric:tabular-nums;}
+  .stats-tete--lances{--tete:hsl(217 91% 60%);}
+  .stats-tete--finis{--tete:hsl(338 72% 58%);}
+  .stats-tete--ratio{--tete:hsl(38 92% 50%);min-width:11rem;text-align:center;border-color:var(--tete);}
+  .stats-tete--ratio .stats-tete-titre{justify-content:center;}
+  .stats-tete--ratio .stats-tete-jour{font-size:2.6rem;}
+  .dark .stats-tete--lances{--tete:hsl(217 90% 70%);}
+  .dark .stats-tete--finis{--tete:hsl(338 80% 68%);}
+  .dark .stats-tete--ratio{--tete:hsl(38 95% 62%);}
+  @media (max-width:700px){.stats-tetes{grid-template-columns:1fr;}.stats-tete--ratio{min-width:0;}}
+  /* ── Onglet Trafic ──────────────────────────────────────────────────
+     Il reprend le vocabulaire visuel des stats (panneaux, lignes, cellules
+     alignees a droite) et n'ajoute que ce qui lui est propre : une grille de
+     quatre indicateurs au lieu de trois et des barres horizontales pour les
+     repartitions. */
+  .trafic-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0.9rem;margin-bottom:1.5rem;}
+  .trafic-kpi--visites{--tete:hsl(258 70% 52%);}
+  .trafic-kpi--vues{--tete:hsl(199 85% 42%);}
+  .trafic-kpi--profondeur{--tete:hsl(150 55% 36%);}
+  .trafic-kpi--rebond{--tete:hsl(38 92% 42%);}
+  .dark .trafic-kpi--visites{--tete:hsl(258 85% 76%);}
+  .dark .trafic-kpi--vues{--tete:hsl(199 85% 65%);}
+  .dark .trafic-kpi--profondeur{--tete:hsl(150 55% 60%);}
+  .dark .trafic-kpi--rebond{--tete:hsl(38 92% 65%);}
+  @media (max-width:900px){.trafic-kpis{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:420px){.trafic-kpis{grid-template-columns:1fr;}}
+  .trafic-duo{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+  .trafic-duo>.stats-panel{margin-bottom:1.5rem;}
+  @media (max-width:900px){.trafic-duo{grid-template-columns:1fr;gap:0;}}
+  /* Barres de repartition : la valeur est lisible meme quand la barre est
+     minuscule, parce que le chiffre vit a droite et pas dans la barre. */
+  .trafic-barres{display:flex;flex-direction:column;gap:0.4rem;}
+  .trafic-barre{display:flex;align-items:center;gap:0.6rem;font-size:0.82rem;}
+  .trafic-barre-nom{flex:0 0 7.5rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600;}
+  .trafic-barre-piste{flex:1;min-width:0;height:0.5rem;border-radius:9999px;background:hsl(var(--muted));overflow:hidden;}
+  /* display:block obligatoire : sur un span en flux inline, width et height
+     sont ignores et la jauge ne se dessine jamais. */
+  .trafic-barre-jauge{display:block;height:100%;border-radius:9999px;background:var(--bar,hsl(258 70% 55%));transition:width .25s ease;}
+  /* Le nombre et sa part l'un au-dessus de l'autre : cote a cote, « 2 778 »
+     et « 72 % » ne tenaient pas dans la colonne sur telephone et la ligne
+     doublait de hauteur. */
+  .trafic-barre-val{flex:0 0 4.4rem;text-align:right;font-variant-numeric:tabular-nums;font-weight:700;display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;}
+  .trafic-barre-pct{font-size:0.7rem;font-weight:600;color:hsl(var(--muted-foreground));}
+  @media (max-width:640px){.trafic-barre-nom{flex-basis:6rem;}}
+  /* Cinq colonnes dans « Toutes les pages » : les cellules retrecissent un
+     peu pour que le chemin garde de la place. */
+  .trafic-entetes .stats-tri,.trafic-ligne .stats-cell{flex-basis:4.6rem;}
+  @media (max-width:640px){
+    .trafic-entetes .stats-tri,.trafic-ligne .stats-cell{flex-basis:3.4rem;font-size:0.8rem;}
+    /* Quatre colonnes de chiffres plus un chemin ne tiennent pas sur un
+       telephone : le chemin se reduisait a « /te... ». « Vues » est la
+       colonne dont on peut se passer, les visites disent la meme chose sans
+       compter les rechargements. Elle revient des qu'il y a la place. */
+    .trafic-entetes .stats-tri[data-tri-pages="pages_vues"],
+    .trafic-ligne .stats-cell--vues{display:none;}
+    /* Et le chemin passe sur deux lignes plutot que d'etre coupe. */
+    #trafic-pages .stats-row-name{white-space:normal;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.25;}
+  }
+  .trafic-ligne{cursor:default;}
+  .trafic-ligne:hover{background:none;}
+  .trafic-sous{font-size:0.66rem;font-weight:600;color:hsl(var(--muted-foreground));letter-spacing:0;}
+  .stats-cell--visites{color:hsl(258 70% 52%);}
+  .stats-cell--vues{color:hsl(var(--muted-foreground));}
+  .dark .stats-cell--visites{color:hsl(258 85% 76%);}
+  .trafic-vide{font-size:0.82rem;color:hsl(var(--muted-foreground));padding:1.2rem 0.4rem;text-align:center;}
+  /* Le selecteur de periode a huit entrees : il doit pouvoir passer a la ligne. */
+  .stats-comp--periode{flex-wrap:wrap;}
+  /* Vignettes de selection des courbes, facon Search Console : on clique
+     pour masquer ou reafficher une courbe, la vignette eteinte se grise. */
+  .stats-legende{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.5rem;margin:0.25rem 0 0.9rem;}
+  .stats-leg{display:flex;flex-direction:column;gap:0.15rem;align-items:flex-start;padding:0.55rem 0.75rem;border:1px solid hsl(var(--border));border-radius:0.7rem;background:transparent;cursor:pointer;text-align:left;color:inherit;transition:background .15s,border-color .15s,opacity .15s;border-top:3px solid var(--leg);}
+  .stats-leg:hover{background:hsl(var(--muted)/0.5);}
+  .stats-leg-nom{display:flex;align-items:center;gap:0.4rem;font-size:0.75rem;font-weight:600;color:hsl(var(--muted-foreground));}
+  .stats-leg-puce{width:0.5rem;height:0.5rem;border-radius:9999px;background:var(--leg);flex:0 0 auto;}
+  .stats-leg-val{font-size:1.15rem;font-weight:700;font-variant-numeric:tabular-nums;color:var(--leg);}
+  .stats-leg.est-eteinte{opacity:0.45;border-top-color:hsl(var(--border));}
+  .stats-leg.est-eteinte .stats-leg-val{color:hsl(var(--muted-foreground));}
+  .stats-leg.est-eteinte .stats-leg-puce{background:hsl(var(--muted-foreground));}
+  .stats-infobulle-ligne{display:flex;align-items:center;gap:0.4rem;white-space:nowrap;}
+  .stats-infobulle-puce{width:0.45rem;height:0.45rem;border-radius:9999px;flex:0 0 auto;}
+  .stats-infobulle-nom{color:hsl(var(--muted-foreground));font-size:0.72rem;}
+  .stats-infobulle-ligne .stats-infobulle-val{margin-left:auto;font-weight:700;font-variant-numeric:tabular-nums;}
+  .stats-row-sur{flex:0 0 8.5rem;text-align:right;font-size:0.75rem;font-variant-numeric:tabular-nums;color:hsl(var(--muted-foreground));white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  @media (max-width:520px){.stats-row-sur{display:none;}}
+
+  /* ── Onglet Blog ──────────────────────────────────────────────────────
+     Meme grille que « Toutes les pages », a une difference pres : la
+     premiere colonne porte le titre de l'article et pas son chemin. Un
+     titre est long, il passe donc sur deux lignes plutot que d'etre coupe
+     au milieu d'un mot. */
+  .blog-entetes .stats-tri,.blog-ligne .stats-cell{flex-basis:4.6rem;}
+  .blog-ligne{cursor:default;}
+  .blog-ligne:hover{background:none;}
+  #blog-articles .stats-row-name{white-space:normal;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3;}
+  .blog-lien{color:inherit;text-decoration:none;}
+  .blog-lien:hover{color:hsl(var(--primary));text-decoration:underline;}
+  /* Le meme article existe en cinq langues : sans cette pastille, cinq
+     lignes de titres traduits se ressemblent trop pour etre distinguees.
+     Elle passe devant le titre et pas derriere : sur telephone, un titre
+     long est coupe a deux lignes et emportait la pastille avec lui. */
+  .blog-langue{margin-right:0.45rem;padding:0.05rem 0.35rem;border-radius:0.35rem;background:hsl(var(--muted));color:hsl(var(--muted-foreground));font-size:0.62rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;}
+  .blog-sourcepref-note{margin:0.85rem 0 0;font-size:0.72rem;line-height:1.5;color:hsl(var(--muted-foreground));}
+  @media (max-width:640px){
+    .blog-entetes .stats-tri,.blog-ligne .stats-cell{flex-basis:3.4rem;font-size:0.8rem;}
+    /* Quatre colonnes de chiffres et un titre ne tiennent pas sur un
+       telephone. « Ouvertures » saute en premier : c'est la colonne dont on
+       peut se passer, les lectures portent l'information utile. */
+    .blog-entetes .stats-tri[data-tri-blog="ouvertures"],.blog-ligne .stats-cell--vues{display:none;}
+  }
+
+  /* ── Sections repliables (sommaire) ── */
+  .stats-details{background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem;margin-bottom:1.5rem;box-shadow:0 4px 16px -10px hsl(var(--primary)/0.15);}
+  .stats-details summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:0.85rem;padding:1.05rem 1.4rem;border-radius:1rem;transition:background .15s;}
+  .stats-details summary::-webkit-details-marker{display:none;}
+  .stats-details summary:hover{background:hsl(var(--muted)/0.5);}
+  .stats-details-emoji{font-size:1.25rem;flex-shrink:0;}
+  .stats-details-titre{display:block;font-family:'Poppins','Inter',sans-serif;font-size:1.05rem;font-weight:700;}
+  .stats-details-sub{display:block;font-size:0.78rem;color:hsl(var(--muted-foreground));margin-top:0.1rem;}
+  .stats-details-chevron{width:1.15rem;height:1.15rem;margin-left:auto;flex-shrink:0;color:hsl(var(--muted-foreground));transition:transform .2s;}
+  .stats-details[open] .stats-details-chevron{transform:rotate(180deg);}
+  .stats-details-corps{padding:0.25rem 1.4rem 1.35rem;}
+  @media (max-width:520px){.stats-details summary{padding:0.95rem 1rem;}.stats-details-corps{padding:0.25rem 1rem 1.1rem;}}
+
+  /* ── Tops et flops ── */
+  .stats-comp{display:inline-flex;border:1px solid hsl(var(--border));border-radius:999px;overflow:hidden;max-width:100%;}
+  .stats-comp-btn{padding:0.35rem 0.8rem;font-size:0.78rem;font-weight:600;background:transparent;border:none;cursor:pointer;color:hsl(var(--muted-foreground));transition:background .15s,color .15s;white-space:nowrap;}
+  .stats-comp-btn.active{background:hsl(var(--primary));color:#fff;}
+  @media (max-width:560px){
+    div:has(> .stats-comp){max-width:100%;overflow-x:auto;scrollbar-width:none;}
+    .stats-comp{flex-shrink:0;}
+  }
+  .stats-movers{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.1rem;}
+  @media (max-width:700px){.stats-movers{grid-template-columns:1fr;}}
+  .stats-movers-titre{font-size:0.85rem;font-weight:700;margin-bottom:0.5rem;}
+  .stats-movers-vide{font-size:0.82rem;color:hsl(var(--muted-foreground));padding:0.4rem 0;}
+  .stats-mover{display:flex;align-items:center;gap:0.6rem;padding:0.42rem 0.4rem;border-radius:0.5rem;}
+  .stats-mover:nth-child(odd){background:hsl(var(--muted)/0.35);}
+  .stats-mover-nom{flex:1;font-size:0.82rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;}
+  .stats-mover-vals{font-size:0.76rem;color:hsl(var(--muted-foreground));font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .stats-mover-delta{font-size:0.76rem;font-weight:700;padding:0.14rem 0.5rem;border-radius:999px;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .stats-mover-delta.est-plus{background:hsl(150 62% 40%/0.13);color:hsl(150 62% 32%);}
+  .dark .stats-mover-delta.est-plus{color:hsl(150 55% 60%);}
+  .stats-mover-delta.est-moins{background:hsl(0 72% 52%/0.12);color:hsl(0 72% 42%);}
+  .dark .stats-mover-delta.est-moins{color:hsl(0 80% 68%);}
+
+  .stats-souscourbe{margin-top:1.1rem;padding-top:1rem;border-top:1px solid hsl(var(--border));}
+
+
+  /* ═══ Onglet Affiliation ═══════════════════════════════════
+     Tableau de bord dense mais calme : on lit d'abord les quatre
+     chiffres, ensuite le détail par partenaire. Tout passe par les
+     variables du site, donc le mode sombre suit sans règle en plus. */
+
+  /* .hidden vaut display:none dans la feuille principale, mais ce bloc-ci est
+     chargé après elle : à spécificité égale mes display:flex et display:grid
+     gagnaient, et les éléments masqués restaient à l'écran. On rend donc la
+     classe prioritaire pour tout l'onglet. */
+  #admin-affiliation-tab .hidden{display:none !important;}
+
+  /* Écran de connexion au jeton */
+  .afl-gate{display:flex;justify-content:center;padding:2rem 0 3rem;}
+  .afl-gate-card{width:100%;max-width:26rem;display:grid;gap:.85rem;padding:2rem 1.75rem;border-radius:1.25rem;
+    background:hsl(var(--card));border:1px solid hsl(var(--border));box-shadow:0 20px 48px -32px hsl(var(--primary)/.5);text-align:center;}
+  .afl-gate-icon{font-size:2rem;line-height:1;}
+  .afl-gate-title{font-family:'Poppins','Inter',sans-serif;font-size:1.2rem;font-weight:700;margin:0;}
+  .afl-gate-text{font-size:.88rem;color:hsl(var(--muted-foreground));margin:0;line-height:1.55;}
+  .afl-gate-hint{font-size:.75rem;color:hsl(var(--muted-foreground));margin:0;}
+  .afl-gate-error{font-size:.82rem;color:hsl(var(--destructive));margin:0;}
+
+  /* Barre de contrôle */
+  .afl-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap;margin-bottom:1.25rem;}
+  .afl-bar-left,.afl-bar-right{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+  .afl-select{appearance:none;padding:.45rem 2rem .45rem .8rem;border-radius:.65rem;border:1px solid hsl(var(--border));
+    background:hsl(var(--card));color:hsl(var(--foreground));font-size:.85rem;font-weight:600;cursor:pointer;
+    background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+    background-position:calc(100% - 1rem) 55%,calc(100% - .7rem) 55%;background-size:.3rem .3rem,.3rem .3rem;background-repeat:no-repeat;}
+  .afl-select--full{width:100%;}
+  /* Au doigt, un champ sous 16 px fait zoomer Safari sur iPhone, et la page
+     ne revient pas a l echelle : le tableau de bord se consulte aussi au
+     telephone. */
+  @media (hover: none) and (pointer: coarse) { .afl-select{font-size:16px;} }
+  .afl-range{display:inline-flex;border:1px solid hsl(var(--border));border-radius:999px;overflow:hidden;background:hsl(var(--card));}
+  .afl-range-btn{padding:.4rem .8rem;font-size:.8rem;font-weight:600;background:transparent;border:none;cursor:pointer;
+    color:hsl(var(--muted-foreground));transition:background .15s,color .15s;}
+  .afl-range-btn:hover{color:hsl(var(--foreground));}
+  .afl-range-btn.active{background:hsl(var(--primary));color:#fff;}
+  .afl-updated{font-size:.72rem;color:hsl(var(--muted-foreground));font-variant-numeric:tabular-nums;}
+  .afl-icon-btn{width:2.1rem;height:2.1rem;display:inline-flex;align-items:center;justify-content:center;border-radius:.6rem;
+    border:1px solid hsl(var(--border));background:hsl(var(--card));color:hsl(var(--muted-foreground));cursor:pointer;transition:all .15s;}
+  .afl-icon-btn svg{width:1rem;height:1rem;}
+  .afl-icon-btn:hover{color:hsl(var(--primary));border-color:hsl(var(--primary)/.4);}
+  .afl-icon-btn--danger:hover{color:hsl(var(--destructive));border-color:hsl(var(--destructive)/.4);}
+  .afl-icon-btn.tourne svg{animation:spin .7s linear infinite;}
+  .afl-error{padding:.75rem 1rem;border-radius:.75rem;background:hsl(var(--destructive)/.1);
+    border:1px solid hsl(var(--destructive)/.3);color:hsl(var(--destructive));font-size:.85rem;margin-bottom:1rem;}
+
+  /* Indicateurs */
+  .afl-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.75rem;margin-bottom:1.5rem;}
+  .afl-kpi{display:grid;gap:.3rem;padding:1.1rem 1.2rem;border-radius:1rem;background:hsl(var(--card));
+    border:1px solid hsl(var(--border));box-shadow:0 4px 16px -12px hsl(var(--primary)/.4);}
+  .afl-kpi-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:hsl(var(--muted-foreground));}
+  .afl-kpi-value{font-family:'Poppins','Inter',sans-serif;font-size:1.55rem;font-weight:800;line-height:1.05;
+    font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .afl-kpi--phare{border-color:hsl(var(--primary)/.35);background:hsl(var(--primary)/.05);}
+  .afl-kpi--phare .afl-kpi-value{color:hsl(var(--primary));}
+
+  /* Panneaux */
+  .afl-panel{background:hsl(var(--card));border:1px solid hsl(var(--border));border-radius:1rem;
+    padding:1.35rem 1.4rem;margin-bottom:1.25rem;box-shadow:0 4px 16px -12px hsl(var(--primary)/.3);}
+  .afl-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;}
+  .afl-panel-title{font-family:'Poppins','Inter',sans-serif;font-size:1.05rem;font-weight:700;margin:0;}
+  .afl-panel-sub{font-size:.8rem;color:hsl(var(--muted-foreground));margin:.15rem 0 0;}
+  .afl-chips{display:inline-flex;gap:.35rem;flex-wrap:wrap;}
+  .afl-chip{padding:.3rem .75rem;border-radius:999px;border:1px solid hsl(var(--border));background:transparent;
+    font-size:.78rem;font-weight:600;color:hsl(var(--muted-foreground));cursor:pointer;transition:all .15s;}
+  .afl-chip:hover{color:hsl(var(--foreground));}
+  .afl-chip.active{background:hsl(var(--primary));border-color:hsl(var(--primary));color:#fff;}
+
+  /* Tableau */
+  .afl-tablewrap{overflow-x:auto;margin:0 -.4rem;}
+  .afl-table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:32rem;}
+  .afl-table th{text-align:left;padding:.5rem .55rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;
+    font-weight:700;color:hsl(var(--muted-foreground));border-bottom:1px solid hsl(var(--border));white-space:nowrap;}
+  .afl-table td{padding:.65rem .55rem;border-bottom:1px solid hsl(var(--border)/.6);vertical-align:middle;}
+  .afl-table tbody tr:last-child td{border-bottom:0;}
+  .afl-table tbody tr{transition:background .15s;}
+  .afl-table tbody tr:hover{background:hsl(var(--muted)/.5);}
+  .afl-num{text-align:right;font-variant-numeric:tabular-nums;}
+  .afl-sort{cursor:pointer;user-select:none;}
+  .afl-sort:hover{color:hsl(var(--primary));}
+  .afl-sort.tri::after{content:'';display:inline-block;margin-left:.3rem;border-left:.25rem solid transparent;
+    border-right:.25rem solid transparent;border-top:.3rem solid currentColor;vertical-align:middle;}
+  .afl-sort.tri.asc::after{border-top:0;border-bottom:.3rem solid currentColor;}
+  .afl-prog{font-weight:600;}
+  .afl-remu{font-size:.78rem;color:hsl(var(--muted-foreground));}
+  .afl-vide{padding:2rem .5rem;text-align:center;color:hsl(var(--muted-foreground));font-size:.85rem;}
+  .afl-statut{display:inline-block;padding:.16rem .55rem;border-radius:999px;font-size:.68rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;}
+  .afl-statut--active{background:hsl(152 55% 45%/.16);color:hsl(152 60% 32%);}
+  .dark .afl-statut--active{color:hsl(152 60% 62%);}
+  .afl-statut--pending{background:hsl(38 85% 50%/.16);color:hsl(32 75% 38%);}
+  .dark .afl-statut--pending{color:hsl(38 85% 65%);}
+  .afl-statut--autre{background:hsl(var(--muted));color:hsl(var(--muted-foreground));}
+
+  /* Générateur */
+  .afl-gen{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.85rem;align-items:end;}
+  .afl-field{display:grid;gap:.3rem;min-width:0;}
+  .afl-field>span{font-size:.75rem;font-weight:600;color:hsl(var(--muted-foreground));}
+  .afl-field>span em{font-style:normal;font-weight:400;opacity:.75;}
+  .afl-gen-btn{height:2.6rem;}
+  .afl-gen-out{display:flex;align-items:center;gap:.6rem;margin-top:1rem;padding:.7rem .9rem;border-radius:.75rem;
+    background:hsl(var(--muted)/.6);border:1px solid hsl(var(--border));}
+  .afl-gen-out code{flex:1;min-width:0;font-size:.8rem;word-break:break-all;font-family:ui-monospace,Menlo,Consolas,monospace;}
+  .afl-copy{flex-shrink:0;padding:.35rem .8rem;border-radius:.5rem;border:1px solid hsl(var(--primary)/.35);
+    background:hsl(var(--primary)/.1);color:hsl(var(--primary));font-size:.78rem;font-weight:700;cursor:pointer;transition:all .15s;}
+  .afl-copy:hover{background:hsl(var(--primary));color:#fff;}
+  .afl-gen-note{margin:.7rem 0 0;font-size:.78rem;color:hsl(var(--muted-foreground));}
+
+  /* Conversions */
+  .afl-conv-list{display:grid;gap:.5rem;}
+  .afl-conv{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.7rem .85rem;
+    border-radius:.7rem;background:hsl(var(--muted)/.45);}
+  .afl-conv-nom{font-weight:600;font-size:.87rem;}
+  .afl-conv-meta{font-size:.73rem;color:hsl(var(--muted-foreground));margin-top:.1rem;}
+  .afl-conv-gain{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;}
+
+  @media (max-width:640px){
+    .afl-hide-sm{display:none;}
+    .afl-table td:nth-child(3){display:none;}
+    .afl-panel{padding:1.1rem .95rem;}
+    .afl-bar{gap:.5rem;}
+    .afl-bar-left{width:100%;}
+    .afl-select{flex:1;}
+    .afl-kpi-value{font-size:1.35rem;}
+    .afl-gen-out{flex-direction:column;align-items:stretch;}
+    .afl-copy{width:100%;}
+  }
+  @media (prefers-reduced-motion:reduce){.afl-icon-btn.tourne svg{animation:none;}}
+    /* Pastille d'alerte : un avis a moderer, un message non lu, un lead arrive
+       depuis la derniere visite de l'onglet. Le detail chiffre est dans le
+       title de la pastille. */
+    .admin-pastille{
+      position:absolute;top:.15rem;right:.1rem;
+      min-width:1.05rem;height:1.05rem;padding:0 .25rem;
+      display:inline-flex;align-items:center;justify-content:center;
+      border-radius:9999px;background:hsl(var(--destructive));color:#fff;
+      font-size:.65rem;font-weight:800;line-height:1;
+      box-shadow:0 0 0 2px hsl(var(--card));
+    }
+    .admin-pastille.hidden{display:none;}
+    /* Infobulle du graphique de statistiques */
+    .stats-infobulle{
+      position:absolute;z-index:20;pointer-events:none;
+      display:flex;flex-direction:column;gap:.1rem;
+      padding:.4rem .6rem;border-radius:.5rem;
+      background:hsl(var(--popover));border:1px solid hsl(var(--border));
+      box-shadow:0 10px 24px -8px rgb(0 0 0 / .35);
+      font-size:.75rem;line-height:1.3;white-space:nowrap;
+    }
+    .stats-infobulle.est-cachee,.stats-repere.est-cachee{display:none;}
+    .stats-infobulle-date{color:hsl(var(--muted-foreground));font-size:.7rem;}
+    .stats-infobulle-val{color:hsl(var(--foreground));font-weight:700;}

@@ -26,6 +26,7 @@ npm run build          # Main site → dist/
 - `static-site/js/quiz-loader.js` — Quiz config & initialization
 - `static-site/js/salon.js` — Mode à distance (chacun sur son téléphone) : codes de partie, QR code, présence, chargé à la demande ; le moteur commun l'appelle via `QuizEngine.chargerSalon`
 - `static-site/css/styles.css` — Main stylesheet
+- `static-site/templates/pages/admin.ejs`, `static-site/js/admin.js`, `static-site/css/admin.css` — Tableau de bord d'administration (`/admin/`) : coquille plein écran à barre latérale, tuiles, grands graphiques sur canvas, lectures RPC mises en mémoire de session (bouton « Actualiser »). Les identifiants du gabarit sont le contrat du script, on ne les renomme pas ; base.ejs n'y met ni en-tête ni pied de page.
 - `fr/*.json` — French translations (quizzes.json, common.json, home.json, gd.json, quiz-*.json)
 
 ## Quiz Engine Types
@@ -80,9 +81,12 @@ confirmation et annule pour les deux.
   le modèle le plus court.
 - Mesure : `salon.js` émet `qc:salon` (`depart`, `fin`) que `quiz-extras.js`
   enregistre dans `salon_parties` (migration `20260906120000`), deux lignes par
-  partie comme il y a deux lancés ; l'admin a un onglet Distance
-  (`PAGES_DISTANCE` dans admin.js liste les pages), et l'origine des visites
-  compte les arrivées par lien ou QR code en « Mode DUO ».
+  partie comme il y a deux lancés ; l'admin a un onglet À distance
+  (`PAGES_DISTANCE` dans admin.js liste les pages) dont toutes les mesures
+  partent du 7 septembre 2026 (`DEBUT_DISTANCE`), premier jour du mode, avec
+  la courbe quotidienne servie par `get_salon_daily` (migration
+  `20260906180000`) ; l'origine des visites compte les arrivées par lien ou QR
+  code en « Mode DUO ».
 - Les essais sans réseau passent par `window.__QCSalonTransport`, une doublure
   du canal sur `BroadcastChannel` (voir la PR d'origine).
 

@@ -337,8 +337,12 @@
 
   <%- typeof jsonLdHtml !== 'undefined' && jsonLdHtml ? jsonLdHtml : '' %>
 </head>
-<body class="bg-background text-foreground font-sans antialiased">
+<body class="bg-background text-foreground font-sans antialiased<%= routeKey === 'admin' ? ' page-admin' : '' %>">
+  <%# Le tableau de bord d'administration est une application plein ecran :
+      il porte sa propre barre laterale et n'a que faire de l'en-tete du site. %>
+  <% if (routeKey !== 'admin') { %>
   <%- include('partials/header', { lang, t, getLocalizedUrl, routeSlugs: routeSlugs }) %>
+  <% } %>
 
   <% var avecPub = typeof pagePublicitaire !== 'undefined' && pagePublicitaire; %>
   <main class="relative z-0">
@@ -370,7 +374,9 @@
   <%- include('partials/pub', { format: 4 }) %>
   <% } %>
 
+  <% if (routeKey !== 'admin') { %>
   <%- include('partials/footer', { lang, t, getLocalizedUrl }) %>
+  <% } %>
 
   <!-- JS -->
   <%# La mesure d'audience passe en premier : elle expose window.QCAudience,
