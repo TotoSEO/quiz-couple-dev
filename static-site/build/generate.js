@@ -112,6 +112,48 @@ function empreinteRessources() {
 }
 const ASSET_V = empreinteRessources();
 
+// ── La feuille de style critique ─────────────────────────────────────
+// css/critique/<cle>.css est la part de styles.css qu'une page type utilise
+// au chargement, relevee par build/critique.mjs dans Chromium. Le gabarit de
+// base la met en ligne dans le <head> et charge styles.css en differe : la
+// page s'affiche sans attendre 395 Ko de feuille. Quand aucune feuille
+// critique n'existe pour une page, elle garde la feuille bloquante d'avant.
+// L'empreinte inscrite en tete du fichier est celle de css/styles.css au
+// moment du releve : si elle a change, le premier rendu peut manquer une
+// regle recente le temps que la feuille complete arrive. On previent, sans
+// bloquer : « npm run critique » remet tout d'aplomb.
+const CRITIQUE_DIR = path.resolve(__dirname, '../css/critique');
+const CSS_EMPREINTE = crypto.createHash('md5')
+  .update(fs.readFileSync(path.resolve(__dirname, '../css/styles.css')))
+  .digest('hex').slice(0, 12);
+const critiqueCache = new Map();
+const critiquesPerimees = [];
+function cssCritiquePour(cle) {
+  if (!cle) return '';
+  if (critiqueCache.has(cle)) return critiqueCache.get(cle);
+  const fichier = path.join(CRITIQUE_DIR, `${cle}.css`);
+  let css = '';
+  if (fs.existsSync(fichier)) {
+    css = fs.readFileSync(fichier, 'utf-8');
+    const m = css.match(/^\/\*!\s*critique\s+\S+\s+styles=([0-9a-f]+)[^*]*\*\/\s*/);
+    if (m) {
+      if (m[1] !== CSS_EMPREINTE) critiquesPerimees.push(cle);
+      css = css.slice(m[0].length);
+    }
+  }
+  critiqueCache.set(cle, css);
+  return css;
+}
+function bilanCritique() {
+  const n = [...critiqueCache.values()].filter(Boolean).length;
+  console.log(`[critique] ${n} feuilles critiques mises en ligne`);
+  if (critiquesPerimees.length) {
+    console.warn(`[critique] ${critiquesPerimees.length} feuille(s) relevee(s) sur une ancienne version de styles.css ` +
+      `(${critiquesPerimees.slice(0, 5).join(', ')}${critiquesPerimees.length > 5 ? ', ...' : ''}) : ` +
+      `lancez « npm run critique » apres construction.`);
+  }
+}
+
 // Le decoupage du moteur, prepare par copyJs() et consulte par generatePage().
 // Reste a null si le fichier ne se presente pas comme attendu : chaque page
 // garde alors le moteur entier.
@@ -924,6 +966,7 @@ async function generatePage(routeKey, lang) {
     routeKey,
     pageJouable: estPageJouable(routeKey),
     pagePublicitaire: pagePublicitaire(routeKey),
+    cssCritique: cssCritiquePour(routeKey),
     genrePage: genrePageJouable(routeKey),
     pureteQuestions: routeKey === 'testPurete' ? pureteQuestions(lang) : null,
     pagePath,
@@ -1703,6 +1746,7 @@ async function generateBlogArticle(articleMeta, lang) {
     articleAuthor: authorData.name || 'Quiz Couple',
     routeKey: 'blog',
     pagePublicitaire: true,
+    cssCritique: cssCritiquePour('blog-article'),
     pagePath,
     routeSlugs: ROUTE_SLUGS,
     languages: LANGUAGES,
@@ -1952,6 +1996,7 @@ async function main() {
   // Summary
   const success = results.filter(r => r.success).length;
   const failed = results.filter(r => !r.success).length;
+  bilanCritique();
   console.log(`\n=== Build complete: ${success} pages generated, ${failed} failed ===`);
 
   if (failed > 0) {

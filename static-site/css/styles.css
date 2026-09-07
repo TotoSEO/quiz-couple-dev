@@ -610,6 +610,17 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
   100% { background-position: 0% center; }
 }
 @media (min-width: 768px) { .hero-title { font-size: 3.25rem; } }
+/* Sur un telephone, les animations qui repeignent a chaque image (le degrade
+   qui glisse dans le titre et sous le bouton du test de purete, la position
+   du fond) tournent sur le fil principal pendant tout le chargement, alors
+   que le processeur y est deja quatre fois plus lent qu'au bureau. Le degrade
+   reste, il ne bouge plus. Les taches de couleur floutees et la trame du
+   fond, elles, sont composees par la carte graphique : elles gardent leur
+   mouvement. */
+@media (max-width: 767.98px) {
+  .hero-title .text-gradient, .text-gradient { animation: none; background-position: 30% center; }
+  .btn-purete::before, .btn-purete:hover::before { animation: none; --nv-angle: 60deg; }
+}
 @media (min-width: 1024px) { .hero-title { font-size: 4.25rem; line-height: 1.05; } }
 .hero-desc {
   font-size: 1.1rem; color: hsl(var(--muted-foreground));

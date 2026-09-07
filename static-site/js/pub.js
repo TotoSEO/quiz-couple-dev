@@ -33,6 +33,21 @@
    visible ne bouge). Si la regie sert finalement quelque chose apres coup,
    l'emplacement se rouvre selon la meme regle.
 
+   ── Le moment du depart ──────────────────────────────────────────────
+   Rien ne part avant l'evenement load : tant que la page charge, la feuille
+   de style, les scripts et l'image de tete se partagent une connexion mobile
+   qui n'a pas de place pour 600 Ko de regie, et PageSpeed mesurait cette
+   concurrence dans le LCP. Une fois la page affichee, les emplacements
+   proches de l'ecran sont demandes tout de suite ; l'annonce arrive une
+   seconde plus tard qu'avant, sur une page deja lisible.
+
+   Le double skyrail vit dans les gouttieres a cote du contenu : il n'a de
+   sens qu'a partir de 1024 px de large. Sur un telephone, il ne s'affiche
+   jamais, mais son seul appel chargeait toute la chaine de la regie (encheres,
+   synchronisations, 3 s de processeur sur un Moto G) sur chaque page. Il
+   n'est donc demande que si la fenetre est assez large, et se pose quand
+   elle le devient.
+
    ── L'interstitiel ───────────────────────────────────────────────────
    Son div est pose vide dans la page, ses scripts partent d'ordinaire au
    moment ou l'ecran de resultat s'affiche (resultat-url.js). La regie decrit
@@ -51,6 +66,9 @@
   // dans les gouttieres) : la position de leur div dans le document ne dit
   // rien de leur visibilite, on les demande des le depart.
   var HORS_FLUX = { '4': true };
+  // La largeur a partir de laquelle un format hors flux a une gouttiere ou
+  // se poser.
+  var LARGEUR_HORS_FLUX = '(min-width: 1024px)';
 
   // La distance a laquelle un emplacement est demande avant d'entrer dans
   // l'ecran : une hauteur d'ecran, le temps pour la regie de repondre.
@@ -210,25 +228,45 @@
     }
   }
 
+  // Un format hors flux n'est demande que sur une fenetre assez large. Si
+  // elle s'elargit plus tard (fenetre de bureau redimensionnee), il part a ce
+  // moment-la, une seule fois.
+  function poseHorsFlux(liste) {
+    if (!liste.length) return;
+    var media = window.matchMedia ? window.matchMedia(LARGEUR_HORS_FLUX) : null;
+    function poseTous() {
+      for (var i = 0; i < liste.length; i++) { try { pose(liste[i]); } catch (e) {} }
+    }
+    if (!media || media.matches) { poseTous(); return; }
+    var surChangement = function (e) {
+      if (!e.matches) return;
+      if (media.removeEventListener) media.removeEventListener('change', surChangement);
+      else if (media.removeListener) media.removeListener(surChangement);
+      poseTous();
+    };
+    if (media.addEventListener) media.addEventListener('change', surChangement);
+    else if (media.addListener) media.addListener(surChangement);
+  }
+
   function demarre() {
     try { poseInterstitielSiInterne(); } catch (e) {}
     var tous = document.querySelectorAll('[data-pub-differee]:not([data-pub-posee])');
     var dansLeFlux = [];
+    var horsFlux = [];
     for (var i = 0; i < tous.length; i++) {
-      if (HORS_FLUX[tous[i].getAttribute('data-pub-differee')]) {
-        try { pose(tous[i]); } catch (e) {}
-      } else {
-        dansLeFlux.push(tous[i]);
-      }
+      if (HORS_FLUX[tous[i].getAttribute('data-pub-differee')]) horsFlux.push(tous[i]);
+      else dansLeFlux.push(tous[i]);
     }
+    try { poseHorsFlux(horsFlux); } catch (e) {}
     if (!dansLeFlux.length) return;
     if ('IntersectionObserver' in window) surveille(dansLeFlux);
     else repli(dansLeFlux);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', demarre);
-  } else {
+  // Au chargement complet de la page, jamais avant (voir en tete).
+  if (document.readyState === 'complete') {
     demarre();
+  } else {
+    window.addEventListener('load', demarre, { once: true });
   }
 })();
