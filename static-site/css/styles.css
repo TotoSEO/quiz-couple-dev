@@ -8968,6 +8968,28 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   max-width: 100%;
   min-height: inherit;
 }
+/* Ce que la regie pose dans le div est un cadre ou un conteneur a largeur
+   fixe, aligne a gauche de la boite pleine largeur : le centrer par rapport
+   au contenu demande des marges automatiques, text-align ne suffit pas pour
+   un bloc. Et rien ne doit deborder de l'emplacement sur telephone. */
+.pub > div > * { display: block; margin-left: auto; margin-right: auto; max-width: 100%; }
+.pub > div > script, .pub > div > style { display: none; }
+/* Un emplacement reste vide quand la regie n'a rien servi : pub.js le
+   replie une fois hors de l'ecran, pour ne pas laisser un cadre blanc. */
+.pub.pub--vide { min-height: 0; height: 0; margin: 0; padding: 0; }
+.pub.pub--vide > div { min-height: 0; }
+
+/* ── Les annonces que la regie glisse elle-meme dans le texte ──────────
+   Le format « in text » se place tout seul, « a l'endroit le plus
+   rentable » de l'article, sans egard pour la boite qui l'accueille : il a
+   atterri dans la colonne de texte d'une carte de 266 px et debordait de la
+   carte et de l'ecran. Un enfant de flex a une largeur minimale egale a son
+   contenu, c'est ce qui laissait la colonne s'elargir : on la laisse retrecir,
+   et tout cadre ou video insere prend au plus la largeur qu'il trouve. */
+.seo-content .flex > * { min-width: 0; }
+.seo-content iframe, .seo-content video, .seo-content ins,
+.seo-content [id^="142829-"], .seo-content [id^="tmt"], .seo-content [class*="moneytizer"] { max-width: 100%; }
+.seo-content .flex.items-start > div { overflow: hidden; }
 
 /* ── La colonne latérale ───────────────────────────────────────────────
    Elle ne porte que la publicité, et seulement là où il reste de la place à
@@ -11281,3 +11303,48 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 
 /* Les lignes fixes de l'onglet Distance de l'admin */
 .stats-row--fixe { cursor: default; }
+
+/* ── Bureau : le contenu dans son encart, les publicites autour ─────────
+   Sur grand ecran, les colonnes laterales (grand angle a droite des 1440 px,
+   skyrails dans les gouttieres) partagent la meme page que le texte, et les
+   bandes pleine largeur des sections faisaient de l'ensemble une seule
+   nappe : on ne voyait plus ou finissait le contenu et ou commencait la
+   publicite. A partir de 1024 px, la colonne de texte devient un encart a
+   part entiere : fond de carte, bordure, coins arrondis, ombre douce. Les
+   bandes alternees des sections restent, mais a l'interieur de l'encart, dont
+   les coins les rognent. Sous 1024 px rien ne change : il n'y a pas de
+   colonne laterale a distinguer sur telephone. Les pages a sections
+   (vacances, ado) et le blog gardent leur mise en page. */
+@media (min-width: 1024px) {
+  .seo-content .avec-colonne:not(.avec-colonne--sections) > .avec-colonne__contenu {
+    position: relative;
+    overflow: hidden;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border) / 0.85);
+    border-radius: 1.75rem;
+    padding: 0.25rem 2rem 0.5rem;
+    box-shadow:
+      0 30px 70px -48px hsl(var(--primary) / 0.45),
+      0 6px 24px -18px rgb(0 0 0 / 0.18);
+  }
+  .dark .seo-content .avec-colonne:not(.avec-colonne--sections) > .avec-colonne__contenu {
+    border-color: hsl(var(--border) / 0.6);
+    box-shadow: 0 30px 70px -48px rgb(0 0 0 / 0.7);
+  }
+  /* Les bandes des sections s'arretent aux bords de l'encart au lieu de
+     courir sur toute la largeur de l'ecran. */
+  .seo-content .avec-colonne:not(.avec-colonne--sections) > .avec-colonne__contenu section::before {
+    box-shadow: none;
+    clip-path: none;
+    left: -2rem;
+    right: -2rem;
+  }
+  .seo-content .avec-colonne:not(.avec-colonne--sections) > .avec-colonne__contenu section {
+    background: none;
+    border-color: transparent;
+    box-shadow: none;
+  }
+  .seo-content .avec-colonne:not(.avec-colonne--sections) > .avec-colonne__contenu section:hover { box-shadow: none; }
+  /* La colonne laterale demarre a la meme hauteur que l'encart. */
+  .avec-colonne__aside { padding-top: 0.25rem; }
+}
