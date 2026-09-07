@@ -591,6 +591,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/de/warum-finde-ich-keine-liebe-test/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-pourquoi-je-ne-trouve-pas-l-amour/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/why-cant-i-find-love-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-por-que-no-encuentro-el-amor/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/warum-finde-ich-keine-liebe-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-perche-non-trovo-l-amore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-pourquoi-je-ne-trouve-pas-l-amour/"/>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/de/in-besten-freund-verliebt-test/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-amour-meilleur-ami/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/in-love-with-my-best-friend-test/"/>
@@ -598,7 +610,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/in-besten-freund-verliebt-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-innamorato-del-migliore-amico/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-amour-meilleur-ami/"/>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
