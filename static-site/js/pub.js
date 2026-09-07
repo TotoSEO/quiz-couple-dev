@@ -19,6 +19,30 @@
    « async = false » sur une balise creee en JavaScript garde l'ordre
    d'execution entre les deux fichiers, ce dont la regie a besoin : c'est le
    meme mecanisme que pour l'interstitiel, deja verifie en production.
+
+   ── Les emplacements qui restent vides ────────────────────────────────
+   La hauteur d'un emplacement est reservee d'avance (styles.css), pour que
+   l'annonce ne pousse pas le contenu quand elle arrive. Mais la regie n'a pas
+   toujours quelque chose a servir, et un cadre vide de 250 px au milieu d'une
+   page est pire qu'une annonce. Une fois demande, chaque emplacement est donc
+   surveille : si rien n'y est apparu au bout de DELAI_VIDE, il se replie.
+   Jamais sous les yeux de la personne : un bloc qui disparait dans l'ecran
+   fait sauter le texte, et ce saut compte dans le decalage cumule que Google
+   mesure. Le repli attend que l'emplacement soit sorti de l'ecran (au-dessus,
+   l'ancrage de defilement du navigateur compense ; en dessous, rien de
+   visible ne bouge). Si la regie sert finalement quelque chose apres coup,
+   l'emplacement se rouvre selon la meme regle.
+
+   ── L'interstitiel ───────────────────────────────────────────────────
+   Son div est pose vide dans la page, ses scripts partent d'ordinaire au
+   moment ou l'ecran de resultat s'affiche (resultat-url.js). La regie decrit
+   pourtant son interstitiel comme un format qui « s'affiche a l'ouverture de
+   la page ». Quand la personne arrive d'une autre page du site, on le pose
+   donc des le depart, comme les autres formats : c'est la navigation interne
+   que Google tolere pour ce genre de format, et c'est le moment que la regie
+   attend. Quelqu'un qui arrive de l'exterieur garde l'ancien declencheur, au
+   resultat. Le drapeau data-pub-posee est partage par les deux scripts pour
+   qu'un interstitiel ne soit jamais demande deux fois.
    ═══════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -32,14 +56,13 @@
   // l'ecran : une hauteur d'ecran, le temps pour la regie de repondre.
   var MARGE = '800px 0px';
 
-  function pose(hote) {
-    if (hote.getAttribute('data-pub-posee')) return;
-    var format = hote.getAttribute('data-pub-differee');
-    var site = hote.getAttribute('data-pub-site');
-    if (!format || !site) return;
-    hote.setAttribute('data-pub-posee', '1');
+  // Le temps laisse a la regie pour remplir un emplacement demande, avant de
+  // le considerer vide. Leurs encheres prennent une a trois secondes ; huit
+  // laissent de la marge aux connexions lentes.
+  var DELAI_VIDE = 8000;
+  var PAS_SURVEILLANCE = 500;
 
-    var cible = hote.firstElementChild || hote;
+  function injecte(cible, format, site) {
     var sources = [
       '//ads.themoneytizer.com/s/gen.js?type=' + format,
       '//ads.themoneytizer.com/s/requestform.js?siteId=' + site + '&formatId=' + format
@@ -50,6 +73,110 @@
       balise.async = false;
       cible.appendChild(balise);
     }
+  }
+
+  function pose(hote) {
+    if (hote.getAttribute('data-pub-posee')) return;
+    var format = hote.getAttribute('data-pub-differee');
+    var site = hote.getAttribute('data-pub-site');
+    if (!format || !site) return;
+    hote.setAttribute('data-pub-posee', '1');
+    var cible = hote.firstElementChild || hote;
+    injecte(cible, format, site);
+    if (!HORS_FLUX[format]) surveilleRemplissage(hote, cible);
+  }
+
+  // ── Rempli ou vide ? ─────────────────────────────────────────────────
+  // Une annonce servie laisse toujours une boite visible dans le div de
+  // l'emplacement : un cadre, une image, une video, ou le conteneur que la
+  // regie construit autour. Les balises script, elles, n'ont pas de boite.
+  function estRempli(cible) {
+    var enfants = cible.querySelectorAll('*');
+    for (var i = 0; i < enfants.length; i++) {
+      var e = enfants[i];
+      if (e.tagName === 'SCRIPT' || e.tagName === 'STYLE' || e.tagName === 'LINK') continue;
+      if (e.offsetWidth > 20 && e.offsetHeight > 20) return true;
+    }
+    return false;
+  }
+
+  function horsEcran(hote) {
+    var r = hote.getBoundingClientRect();
+    return r.bottom <= 0 || r.top >= window.innerHeight;
+  }
+
+  // Applique un changement de mise en page a l'emplacement quand il n'est pas
+  // a l'ecran : tout de suite s'il est deja hors champ, sinon a sa sortie.
+  function quandHorsEcran(hote, action) {
+    if (horsEcran(hote)) { action(); return; }
+    if (!('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entrees) {
+      for (var i = 0; i < entrees.length; i++) {
+        if (entrees[i].isIntersecting) continue;
+        obs.disconnect();
+        action();
+        return;
+      }
+    });
+    obs.observe(hote);
+  }
+
+  function surveilleRemplissage(hote, cible) {
+    var debut = Date.now();
+    var minuteur = null;
+
+    function verifie() {
+      if (estRempli(cible)) {
+        hote.setAttribute('data-pub-remplie', '1');
+        if (hote.classList.contains('pub--vide')) {
+          quandHorsEcran(hote, function () { hote.classList.remove('pub--vide'); });
+        }
+        return true;
+      }
+      return false;
+    }
+
+    function boucle() {
+      if (verifie()) return;
+      if (Date.now() - debut >= DELAI_VIDE) {
+        quandHorsEcran(hote, function () {
+          // Derniere verification a l'instant du repli : la regie a pu servir
+          // entre-temps.
+          if (!verifie()) hote.classList.add('pub--vide');
+        });
+        return;
+      }
+      minuteur = setTimeout(boucle, PAS_SURVEILLANCE);
+    }
+    minuteur = setTimeout(boucle, PAS_SURVEILLANCE);
+
+    // Une annonce qui arrive apres le repli rouvre l'emplacement.
+    if ('MutationObserver' in window) {
+      var mo = new MutationObserver(function () {
+        if (hote.classList.contains('pub--vide') && verifie()) mo.disconnect();
+      });
+      mo.observe(cible, { childList: true, subtree: true });
+    }
+  }
+
+  // ── L'interstitiel a l'arrivee depuis une autre page du site ─────────
+  function arriveeInterne() {
+    var ref = document.referrer || '';
+    if (!ref || ref.indexOf(location.origin + '/') !== 0) return false;
+    try {
+      var u = new URL(ref);
+      return u.pathname !== location.pathname;
+    } catch (e) { return false; }
+  }
+
+  function poseInterstitielSiInterne() {
+    var hote = document.querySelector('[data-pub-au-resultat]:not([data-pub-posee])');
+    if (!hote || !arriveeInterne()) return;
+    var format = hote.getAttribute('data-pub-au-resultat');
+    var site = hote.getAttribute('data-pub-site');
+    if (!format || !site) return;
+    hote.setAttribute('data-pub-posee', '1');
+    injecte(hote.firstElementChild || hote, format, site);
   }
 
   // Un emplacement masque ne doit rien demander : la colonne laterale
@@ -84,6 +211,7 @@
   }
 
   function demarre() {
+    try { poseInterstitielSiInterne(); } catch (e) {}
     var tous = document.querySelectorAll('[data-pub-differee]:not([data-pub-posee])');
     var dansLeFlux = [];
     for (var i = 0; i < tous.length; i++) {

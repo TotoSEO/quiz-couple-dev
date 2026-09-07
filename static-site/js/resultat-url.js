@@ -167,10 +167,14 @@
     if (interstitielPose) return;
     var hote = document.querySelector('[data-pub-au-resultat]');
     if (!hote) return;
+    // pub.js a pu le poser des l'arrivee, quand la personne venait d'une
+    // autre page du site : le drapeau est partage, on ne le demande pas deux fois.
+    if (hote.getAttribute('data-pub-posee')) { interstitielPose = true; return; }
     var format = hote.getAttribute('data-pub-au-resultat');
     var site = hote.getAttribute('data-pub-site');
     if (!format || !site) return;
     interstitielPose = true;
+    hote.setAttribute('data-pub-posee', '1');
 
     var cible = hote.firstElementChild || hote;
     [
