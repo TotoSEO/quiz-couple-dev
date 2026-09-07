@@ -42,7 +42,22 @@
     element.type = 'text/javascript';
     element.src = url;
 
-    firstScript.parentNode.insertBefore(element, firstScript);
+    // Le talon __tcfapi ci-dessous est pose tout de suite, comme la regie le
+    // demande : tout partenaire qui l'interroge est mis en file. Le fichier
+    // de la plateforme (200 Ko avec sa liste de partenaires), lui, ne part
+    // qu'une fois le document analyse et le navigateur au repos : il se
+    // telechargeait en meme temps que la feuille de style et le HTML, sur la
+    // meme connexion mobile, et retardait le premier affichage. La banniere
+    // arrive une seconde plus tard ; les emplacements publicitaires, qui ne
+    // sont demandes qu'au chargement complet, attendent sa reponse par la
+    // file du talon, comme avant.
+    function poseChoice() { firstScript.parentNode.insertBefore(element, firstScript); }
+    function auRepos() {
+      if (window.requestIdleCallback) window.requestIdleCallback(poseChoice, { timeout: 1500 });
+      else setTimeout(poseChoice, 300);
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', auRepos);
+    else auRepos();
 
     function makeStub() {
       var TCF_LOCATOR_NAME = '__tcfapiLocator';
@@ -266,7 +281,11 @@
     })();
   </script>
 
-  <!-- Critical CSS (inlined for fast FCP) -->
+  <%# Ce petit bloc ecrit a la main precede la feuille critique relevee et la
+      feuille complete, qui le recouvrent toutes deux : ses couleurs ne sont
+      plus celles du site, mais il porte le trait sous l'en-tete (border-bottom)
+      que styles.css ne definit nulle part ailleurs. Il reste donc en place,
+      pour toutes les pages. %>
   <style>
     :root{--background:24 56% 97%;--foreground:328 30% 13%;--card:0 0% 100%;--primary:338 83% 62%;--primary-foreground:0 0% 100%;--muted:22 40% 93%;--muted-foreground:328 12% 42%;--border:338 34% 91%;--radius:0.875rem}
     .dark{--background:285 24% 8%;--foreground:330 25% 94%;--card:285 22% 12%;--primary:338 95% 71%;--muted:285 18% 16%;--muted-foreground:326 13% 66%;--border:290 16% 22%}
@@ -291,9 +310,11 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap"></noscript>
 
-  <!-- Preload hero image for LCP (home page) -->
+  <%# L'accueil ne porte aucune image dans son hero : l'illustration du bloc
+      « c'est quoi » est loin sous la ligne de flottaison et se charge a
+      l'approche. Le commentaire ci-dessous est un jeton de verification de
+      propriete, il doit rester dans le HTML de l'accueil. %>
   <% if (typeof routeKey !== 'undefined' && routeKey === 'home') { %>
-  <link rel="preload" href="/assets/quiz-couple-hero.webp" as="image" type="image/webp">
   <!-- cf7a42f54f657854c287ed4d2afdf069 -->
   <% } else if (typeof featuredImage !== 'undefined' && featuredImage) { %>
   <%# Le prechargement doit connaitre les memes candidats que la balise img :
@@ -308,8 +329,22 @@
   <% } %>
   <% } %>
 
-  <!-- Full CSS -->
+  <%# La feuille complete. Quand la page a sa feuille critique (voir
+      build/critique.mjs), celle-ci est mise en ligne juste au-dessus et la
+      feuille complete est chargee sans bloquer le rendu : « preload » la
+      demande tout de suite, « onload » l'applique des qu'elle est la, et la
+      priorite basse la fait passer derriere l'image de tete et les scripts
+      du moteur, dont le premier ecran depend, alors que rien de visible ne
+      depend d'elle. Le noscript garde le chemin d'avant pour les navigateurs
+      sans JavaScript. %>
+  <% var critique = typeof cssCritique !== 'undefined' && cssCritique; %>
+  <% if (critique) { %>
+  <style><%- critique %></style>
+  <link rel="preload" href="/css/styles.css" as="style" fetchpriority="low" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
+  <% } else { %>
   <link rel="stylesheet" href="/css/styles.css">
+  <% } %>
 
   <%# Empreinte de la construction. Le générateur remplace le jeton ci-dessous
       par la même empreinte que celle ajoutée aux scripts et à la feuille de
@@ -337,7 +372,12 @@
 
   <%- typeof jsonLdHtml !== 'undefined' && jsonLdHtml ? jsonLdHtml : '' %>
 </head>
-<body class="bg-background text-foreground font-sans antialiased<%= routeKey === 'admin' ? ' page-admin' : '' %>">
+<%# La classe quiz-page cache la pastille du hero et regle quelques details des
+    pages jouables (styles.css). quiz-extras.js la posait au chargement, donc
+    apres le premier affichage : la pastille disparaissait sous les yeux du
+    visiteur et tout le hero remontait de 59 px, un decalage que PageSpeed
+    comptait (CLS 0,05). Posee ici, elle est la des le premier rendu. %>
+<body class="bg-background text-foreground font-sans antialiased<%= routeKey === 'admin' ? ' page-admin' : '' %><%= (typeof pageJouable !== 'undefined' && pageJouable) ? ' quiz-page' : '' %>">
   <%# Le tableau de bord d'administration est une application plein ecran :
       il porte sa propre barre laterale et n'a que faire de l'en-tete du site. %>
   <% if (routeKey !== 'admin') { %>

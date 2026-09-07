@@ -28,7 +28,50 @@ npm run build          # Main site → dist/
 - `static-site/css/styles.css` — Main stylesheet
 - `static-site/templates/pages/admin.ejs`, `static-site/js/admin.js`, `static-site/css/admin.css` — Tableau de bord d'administration (`/admin/`) : coquille plein écran à barre latérale, tuiles, grands graphiques sur canvas, lectures RPC mises en mémoire de session (bouton « Actualiser »). Les identifiants du gabarit sont le contrat du script, on ne les renomme pas ; base.ejs n'y met ni en-tête ni pied de page.
 - `fr/*.json` — French translations (quizzes.json, common.json, home.json, gd.json, quiz-*.json)
-- `static-site/templates/partials/pub.ejs`, `static-site/js/pub.js` — Emplacements de la régie (The Moneytizer, site 142829) : 31 billboard sous le moteur, 2 pavé haut après la première section, 3 grand angle dans la colonne latérale (≥ 1440 px), 28 megabanner bas et 15 interstitiel dans base.ejs, 4 double skyrail hors flux. Jamais deux fois le même format sur une page. Les scripts partent de pub.js à l'approche de l'écran ; un emplacement resté vide huit secondes se replie hors de l'écran (`.pub--vide`) ; l'interstitiel part au chargement quand la visite vient d'une autre page du site, sinon au résultat (resultat-url.js). Le format « in text » se place tout seul dans l'article : les conteneurs du texte doivent tolérer un cadre inséré (`min-width: 0`, `max-width: 100%`).
+- `static-site/templates/partials/pub.ejs`, `static-site/js/pub.js` — Emplacements de la régie (The Moneytizer, site 142829) : 31 billboard sous le moteur, 2 pavé haut après la première section, 3 grand angle dans la colonne latérale (≥ 1440 px), 28 megabanner bas et 15 interstitiel dans base.ejs, 4 double skyrail hors flux. Jamais deux fois le même format sur une page. Les scripts partent de pub.js au chargement complet de la page (`load`), puis à l'approche de l'écran pour chaque emplacement ; le skyrail n'est demandé qu'à partir de 1024 px ; un emplacement resté vide huit secondes se replie hors de l'écran (`.pub--vide`) ; l'interstitiel part au chargement quand la visite vient d'une autre page du site, sinon au résultat (resultat-url.js). Le format « in text » se place tout seul dans l'article : les conteneurs du texte doivent tolérer un cadre inséré (`min-width: 0`, `max-width: 100%`).
+
+### Performance : la feuille critique et le moment des scripts tiers
+
+`css/styles.css` pèse 385 Ko minifiés et une page n'en utilise qu'une petite
+part. Pour ne plus bloquer le premier affichage dessus, chaque page type a sa
+feuille critique dans `static-site/css/critique/<clé>.css` (clé = `routeKey`,
+plus `blog-article`) : la part de `styles.css` réellement utilisée au
+chargement, relevée dans Chromium par `build/critique.mjs` (couverture CSS sur
+quatre passes : mobile et bureau, clair et sombre, menus ouverts, page
+parcourue). Le générateur la met en ligne dans le `<head>` et charge
+`styles.css` en `preload` + `onload`, donc sans bloquer ; une page sans feuille
+critique garde la feuille bloquante.
+
+- Après toute modification de `styles.css` ou d'un gabarit qui change les
+  classes présentes au chargement : `npm run build`, servir `dist/` sur
+  http://127.0.0.1:8099 (`python3 -m http.server 8099 --directory dist`), puis
+  `NODE_PATH=/opt/node22/lib/node_modules npm run critique` (une clé en
+  argument pour n'en refaire qu'une), puis `npm run build` de nouveau. Le
+  build prévient quand l'empreinte de `styles.css` inscrite en tête des
+  fichiers n'est plus la bonne ; une feuille périmée ne casse rien (la feuille
+  complète corrige tout dans la seconde), elle peut seulement faire manquer
+  une règle récente au premier rendu.
+- Les états que la couverture ne voit pas (survol, écrans suivants du moteur)
+  arrivent avec la feuille complète : un style indispensable dès le premier
+  écran doit correspondre à des éléments présents au chargement.
+
+Le reste de la règle : rien de tiers avant l'affichage. `pub.js` ne demande
+les emplacements qu'à l'événement `load` et le double skyrail seulement à
+partir de 1024 px ; le fichier de la plateforme de consentement part après
+`DOMContentLoaded` (le talon `__tcfapi` reste en tête) ; GA part au `load`.
+Les images de tête ont deux largeurs (`720/` et 1200 px) et les cartes de
+l'accueil les déclarent en `srcset`. Sur mobile, les animations qui
+repeignent à chaque image (dégradé du titre, halo du bouton pureté) sont
+coupées. Toute lecture de géométrie (`getBoundingClientRect`, `clientWidth`,
+`scrollY`) après une écriture dans le DOM force une mise en page complète :
+lire d'abord, écrire ensuite, comme dans `quiz-slider.js`.
+Dans un gabarit de test ou de jeu, l'include `partials/quiz-featured` (l'image
+de tête) se place en fin de section hero, après le texte : posé en tête, il
+était peint seul pendant que le reste de la section arrivait, puis sautait de
+300 px. Sur mobile il s'affiche sous le texte (`order: 99`), sur grand écran
+il est en absolu, donc sa place dans le code ne change rien à l'écran. La
+classe `quiz-page` du `<body>` vient du gabarit de base (`pageJouable`), pas
+seulement de `quiz-extras.js`, pour la même raison.
 
 ### Familles de navigation
 

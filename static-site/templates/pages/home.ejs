@@ -317,6 +317,13 @@
 <% } %>
 
 <!-- Quiz Section -->
+<%# Les images de tete existent en deux largeurs (1200 et 720 px, voir
+    QUIZ_FEATURED). Une carte du curseur mesure au plus 340 px : servir le
+    1200 px partout coutait 50 a 60 % du poids de chaque image. Le navigateur
+    choisit d'apres la largeur reelle de la carte a chaque point de rupture
+    (.quiz-slide dans styles.css). %>
+<% const TAILLES_CARTE = '(min-width: 1200px) 286px, (min-width: 900px) 31vw, (min-width: 640px) 46vw, 82vw';
+   function srcsetFeatured(f) { return f ? '/quiz/featured/720/' + f.file + '.webp 720w, /quiz/featured/' + f.file + '.webp 1200w' : ''; } %>
 <section id="quiz-section" class="section-padding bg-muted/20">
   <div class="container mx-auto px-4">
     <!-- Section intro -->
@@ -344,7 +351,7 @@
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--test">
               <div class="quiz-bubble-media">
-                <img src="<%= fImg %>" alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
+                <img src="<%= fImg %>"<% if (_f) { %> srcset="<%= srcsetFeatured(_f) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
                 <span class="quiz-bubble-chip"><%= item.icon %></span>
               </div>
               <div class="quiz-bubble-body">
@@ -398,7 +405,7 @@
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--celib">
               <div class="quiz-bubble-media">
-                <img src="<%= fImg %>" alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
+                <img src="<%= fImg %>"<% if (_f) { %> srcset="<%= srcsetFeatured(_f) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
                 <span class="quiz-bubble-chip"><%= item.icon %></span>
               </div>
               <div class="quiz-bubble-body">
@@ -453,7 +460,7 @@
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--quiz">
               <div class="quiz-bubble-media">
-                <img src="<%= fImg %>" alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
+                <img src="<%= fImg %>"<% if (_f) { %> srcset="<%= srcsetFeatured(_f) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
                 <span class="quiz-bubble-chip quiz-bubble-chip--quiz"><%= item.icon %></span>
               </div>
               <div class="quiz-bubble-body">
@@ -508,7 +515,7 @@
              const accents = { quizTuPreferes: '270 45% 58%', jeuActionVerite: '340 65% 62%', jeuActionVeriteHot: '12 78% 56%', jeuGages: '190 60% 45%', jeuPlateau: '160 50% 42%', jeuQuiDeNous: '210 60% 52%', jeuDilemmes: '38 85% 52%', pourContre: '338 72% 58%', jeuJamais: '288 55% 52%', jeuQuiPourrait: '152 55% 40%', jeuOuiNon: '0 62% 52%', jeuPhrases: '256 50% 56%' }; %>
           <a class="jeu-card quiz-slide" href="<%= getLocalizedUrl(item.routeKey, lang) %>" style="--jeu-accent: <%= accents[item.routeKey] || '340 65% 62%' %>">
             <span class="jeu-card-visuel">
-              <img src="<%= fImg %>" alt="<%= escapeHtml(fAlt) %>" width="600" height="315" loading="lazy" decoding="async">
+              <img src="<%= fImg %>"<% if (_f) { %> srcset="<%= srcsetFeatured(_f) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" width="600" height="315" loading="lazy" decoding="async">
             </span>
             <span class="jeu-card-corps">
               <span class="jeu-card-emoji" aria-hidden="true"><%= item.icon %></span>
@@ -597,7 +604,10 @@
         <!-- Illustration -->
         <div class="relative">
           <div class="glass-card rounded-3xl p-4 overflow-hidden aspect-video">
-            <img src="/assets/quiz-couple-hero.webp" alt="<%= t('home:whatIs.imageAlt', 'Quiz Couple') %>" class="w-full h-full rounded-2xl object-cover" loading="eager" fetchpriority="high" width="1920" height="1072">
+            <%# L'illustration est loin sous la ligne de flottaison et s'affiche a 350 px
+                 de large sur mobile : elle se charge a l'approche, dans une variante
+                 de 800 px, l'original de 1920 px restant pour les grands ecrans. %>
+            <img src="/assets/quiz-couple-hero-800.webp" srcset="/assets/quiz-couple-hero-800.webp 800w, /assets/quiz-couple-hero.webp 1920w" sizes="(min-width: 1024px) 45vw, 92vw" alt="<%= t('home:whatIs.imageAlt', 'Quiz Couple') %>" class="w-full h-full rounded-2xl object-cover" loading="lazy" decoding="async" width="1920" height="1072">
           </div>
         </div>
       </div>

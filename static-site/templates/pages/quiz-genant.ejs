@@ -51,7 +51,6 @@
 
 <!-- Hero -->
 <section class="relative overflow-hidden hero-gradient py-16 md:py-24">
-  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
   <div class="container mx-auto px-4">
     <div class="mx-auto max-w-3xl text-center">
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -84,6 +83,8 @@
       <% } %>
     </div>
   </div>
+  <%# L'image de tete vient en dernier dans le code : sur mobile, elle s'affiche sous le texte (order: 99) et sur grand ecran elle est posee en absolu. Placee en tete, elle etait peinte seule pendant que le reste de la section arrivait encore, puis sautait de 300 px quand le texte se mettait en place. %>
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
 </section>
 
 <!-- Quiz Engine -->

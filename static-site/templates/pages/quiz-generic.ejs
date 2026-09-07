@@ -263,7 +263,6 @@
 <!-- Hero -->
 <section class="quiz-page-hero relative overflow-hidden">
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true" style="background: radial-gradient(ellipse at 30% 30%, hsl(var(--primary) / 0.1) 0%, transparent 50%), radial-gradient(ellipse at 70% 70%, hsl(var(--secondary) / 0.06) 0%, transparent 50%);"></div>
-  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
   <div class="container mx-auto px-4 relative z-10">
     <div class="mx-auto max-w-3xl text-center">
       <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
@@ -307,6 +306,8 @@
     </div>
     <% } %>
   </div>
+  <%# L'image de tete vient en dernier dans le code : sur mobile, elle s'affiche sous le texte (order: 99) et sur grand ecran elle est posee en absolu. Placee en tete, elle etait peinte seule pendant que le reste de la section arrivait encore, puis sautait de 300 px quand le texte se mettait en place. %>
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
 </section>
 
 <!-- Quiz Engine -->

@@ -8,7 +8,8 @@
     "preview": "npx serve dist -l 3000",
     "indexnow": "node build/indexnow.js",
     "indexnow:dry": "node build/indexnow.js --dry-run",
-    "verifie:pools": "node build/verifie-pools.js"
+    "verifie:pools": "node build/verifie-pools.js",
+    "critique": "node build/critique.mjs"
   },
   "dependencies": {
     "ejs": "^3.1.10",
