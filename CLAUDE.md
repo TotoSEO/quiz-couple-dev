@@ -28,7 +28,7 @@ npm run build          # Main site → dist/
 - `static-site/css/styles.css` — Main stylesheet
 - `static-site/templates/pages/admin.ejs`, `static-site/js/admin.js`, `static-site/css/admin.css` — Tableau de bord d'administration (`/admin/`) : coquille plein écran à barre latérale, tuiles, grands graphiques sur canvas, lectures RPC mises en mémoire de session (bouton « Actualiser »). Les identifiants du gabarit sont le contrat du script, on ne les renomme pas ; base.ejs n'y met ni en-tête ni pied de page.
 - `fr/*.json` — French translations (quizzes.json, common.json, home.json, gd.json, quiz-*.json)
-- `static-site/templates/partials/pub.ejs`, `static-site/js/pub.js` — Emplacements de la régie (The Moneytizer, site 142829) : 31 billboard sous le moteur, 2 pavé haut après la première section, 3 grand angle dans la colonne latérale (≥ 1440 px), 28 megabanner bas et 15 interstitiel dans base.ejs, 4 double skyrail hors flux. Jamais deux fois le même format sur une page. Les scripts partent de pub.js au chargement complet de la page (`load`), puis à l'approche de l'écran pour chaque emplacement ; le skyrail n'est demandé qu'à partir de 1024 px ; un emplacement resté vide huit secondes se replie hors de l'écran (`.pub--vide`) ; l'interstitiel part au chargement quand la visite vient d'une autre page du site, sinon au résultat (resultat-url.js). Le format « in text » se place tout seul dans l'article : les conteneurs du texte doivent tolérer un cadre inséré (`min-width: 0`, `max-width: 100%`).
+- `static-site/templates/partials/pub.ejs`, `static-site/js/pub.js` — Emplacements de la régie (The Moneytizer, site 142829) : 31 billboard sous le moteur, 2 pavé haut après la première section, 3 grand angle dans la colonne latérale (≥ 1440 px), 28 megabanner bas et 15 interstitiel dans base.ejs, 4 double skyrail hors flux (pas sur l'accueil, il se posait par-dessus les curseurs). Jamais deux fois le même format sur une page. Les scripts partent de pub.js au chargement complet de la page (`load`), puis à l'approche de l'écran pour chaque emplacement ; le skyrail n'est demandé qu'à partir de 1024 px ; un emplacement resté vide huit secondes se replie hors de l'écran (`.pub--vide`) ; l'interstitiel part au chargement quand la visite vient d'une autre page du site, sinon au résultat (resultat-url.js). Le format « in text » se place tout seul dans l'article : les conteneurs du texte doivent tolérer un cadre inséré (`min-width: 0`, `max-width: 100%`).
 
 ### Performance : la feuille critique et le moment des scripts tiers
 
@@ -72,6 +72,13 @@ de tête) se place en fin de section hero, après le texte : posé en tête, il
 il est en absolu, donc sa place dans le code ne change rien à l'écran. La
 classe `quiz-page` du `<body>` vient du gabarit de base (`pageJouable`), pas
 seulement de `quiz-extras.js`, pour la même raison.
+Aucune animation d'entrée depuis l'opacité 0 sur ce qui est visible au
+chargement (hero, titre, image de tête) : Chrome ne retient jamais comme
+candidat LCP un élément peint à opacité nulle et ne revient pas dessus quand
+le fondu se termine. Un fondu `main > section:first-child` de 0,6 s donnait
+un LCP de 14 s sur mobile et « NO_LCP » sur bureau. Même chose pour les
+décors en absolu par-dessus le hero (taches floutées, trame en `::after`) :
+ils sont des dégradés du fond de `.hero-home`, pas des éléments.
 
 ### Familles de navigation
 
