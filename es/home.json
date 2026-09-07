@@ -125,6 +125,9 @@
     "jeuxTitle": "Nuestros juegos para jugar en pareja",
     "jeuxDesc": "{{n}} juegos que arrancan en un solo móvil, sin registro y sin preparar nada.",
     "jeuxCta": "Ver todos nuestros juegos para parejas",
+    "celibEyebrow": "Solteros",
+    "celibTitle": "Nuestros tests para solteros",
+    "celibDesc": "¿Tienes un crush, un ex que sigue en tu cabeza o un amigo demasiado cercano? Estos tests son para ti, incluso antes de estar en pareja.",
     "cards": {
       "testCouple": "20 preguntas para evaluar tu relación.",
       "testCommonPoints": "¿Tienes cosas en común con tu pareja?",

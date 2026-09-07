@@ -10,9 +10,6 @@
     { routeKey: 'testPervers', labelKey: 'nav.testPervers', icon: '🎭', descKey: 'nav.testPerversDesc' },
     { routeKey: 'testEmprise', labelKey: 'nav.testEmprise', icon: '🔒', descKey: 'nav.testEmpriseDesc' },
     { routeKey: 'testAmourHabitude', labelKey: 'nav.testAmourHabitude', icon: '☕', descKey: 'nav.testAmourHabitudeDesc' },
-    { routeKey: 'testAmourAmitie', labelKey: 'nav.testAmourAmitie', icon: '🧭', descKey: 'nav.testAmourAmitieDesc' },
-    { routeKey: 'testCrush', labelKey: 'nav.testCrush', icon: '💘', descKey: 'nav.testCrushDesc' },
-    { routeKey: 'testAmourAmi', labelKey: 'nav.testAmourAmi', icon: '🧡', descKey: 'nav.testAmourAmiDesc' },
     { routeKey: 'testCoupleSain', labelKey: 'nav.testCoupleSain', icon: '💚', descKey: 'nav.testCoupleSainDesc' },
     { routeKey: 'testMariage', labelKey: 'nav.testMariage', icon: '💒', descKey: 'nav.testMariageDesc' },
     { routeKey: 'testDivorce', labelKey: 'nav.testDivorce', icon: '⚖️', descKey: 'nav.testDivorceDesc' },
@@ -26,16 +23,25 @@
     { routeKey: 'testAttachement', labelKey: 'nav.testAttachement', icon: '🔗', descKey: 'nav.testAttachementDesc' },
     { routeKey: 'testConfiance', labelKey: 'nav.testConfiance', icon: '🤝', descKey: 'nav.testConfianceDesc' },
     { routeKey: 'testDependance', labelKey: 'nav.testDependance', icon: '⚓', descKey: 'nav.testDependanceDesc' },
-    { routeKey: 'testSuisJeAmoureux', labelKey: 'nav.testSuisJeAmoureux', icon: '💗', descKey: 'nav.testSuisJeAmoureuxDesc' },
     { routeKey: 'testAmeSoeur', labelKey: 'nav.testAmeSoeur', icon: '💫', descKey: 'nav.testAmeSoeurDesc' },
     { routeKey: 'testKarmique', labelKey: 'nav.testKarmique', icon: '🔮', descKey: 'nav.testKarmiqueDesc' },
     { routeKey: 'testInfidelite', labelKey: 'nav.testInfidelite', icon: '💔', descKey: 'nav.testInfideliteDesc' },
     { routeKey: 'testCouche', labelKey: 'nav.testCouche', icon: '🛏️', descKey: 'nav.testCoucheDesc' },
-    { routeKey: 'testSecret', labelKey: 'nav.testSecret', icon: '💌', descKey: 'nav.testSecretDesc' },
     { routeKey: 'testAimeEncore', labelKey: 'nav.testAimeEncore', icon: '💞', descKey: 'nav.testAimeEncoreDesc' },
     { routeKey: 'testDistanceAime', labelKey: 'nav.testDistanceAime', icon: '📞', descKey: 'nav.testDistanceAimeDesc' },
-    { routeKey: 'testEx', labelKey: 'nav.testEx', icon: '🕰️', descKey: 'nav.testExDesc' },
     { routeKey: 'testChargeMentale', labelKey: 'nav.testChargeMentale', icon: '🧠', descKey: 'nav.testChargeMentaleDesc' },
+  ];
+  // Les tests d'avant le couple : un crush, un ex, un ami un peu trop proche.
+  // Ils ont leur propre famille, pour que le menu des tests de couple ne les
+  // noie pas et que la personne célibataire trouve tout de suite sa porte.
+  // La même liste vit dans footer.ejs, sitemap.ejs et home.ejs.
+  const celibLinks = [
+    { routeKey: 'testSuisJeAmoureux', labelKey: 'nav.testSuisJeAmoureux' },
+    { routeKey: 'testCrush', labelKey: 'nav.testCrush' },
+    { routeKey: 'testAmourAmitie', labelKey: 'nav.testAmourAmitie' },
+    { routeKey: 'testAmourAmi', labelKey: 'nav.testAmourAmi' },
+    { routeKey: 'testSecret', labelKey: 'nav.testSecret' },
+    { routeKey: 'testEx', labelKey: 'nav.testEx' },
   ];
   const quizLinks = [
     { routeKey: 'quizAmoureux', labelKey: 'nav.quizAmoureux', icon: '❤️', descKey: 'nav.quizAmoureuxDesc' },
@@ -81,6 +87,7 @@
   // Filter out links that don't have a URL for the current language (frOnly pages in non-FR)
   const filterAvailable = (links) => links.filter(link => getLocalizedUrl(link.routeKey, lang));
   const testLinksFiltered = filterAvailable(testLinks);
+  const celibLinksFiltered = filterAvailable(celibLinks);
   const quizLinksFiltered = filterAvailable(quizLinks);
   const jeuLinksFiltered = filterAvailable(jeuLinks);
   const directLinksFiltered = filterAvailable(directLinks);
@@ -257,6 +264,28 @@
               </div>
             </div>
 
+            <!-- Tests célibataires -->
+            <div class="nav-dropdown n2-famille relative" data-megamenu style="--cat: var(--celib)">
+              <button class="n2-onglet nav-dropdown-trigger" aria-expanded="false">
+                <span class="n2-onglet-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg></span>
+                <%= t('common:nav.categorySingles', 'Tests célibataires') %>
+                <span class="n2-onglet-nb"><%= celibLinksFiltered.length %></span>
+                <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </button>
+              <div class="nav-megamenu nav-megamenu--celib nav-dropdown-content hidden">
+                <div class="nav-megamenu-inner">
+                  <div class="nav-megamenu-grid">
+                    <% for (const link of celibLinksFiltered) { %>
+                    <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item">
+                      <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
+                      <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                    </a>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- Quiz -->
             <div class="nav-dropdown n2-famille relative" data-megamenu style="--cat: var(--secondary)">
               <button class="n2-onglet nav-dropdown-trigger" aria-expanded="false">
@@ -322,9 +351,13 @@
             <span class="entete-n2-ressort" aria-hidden="true"></span>
 
             <!-- Activités -->
+            <%# Deux libellés, un seul affiché : le court prend le relais sur les
+                fenêtres bureau étroites, où la barre à quatre familles manque
+                de place (voir la règle dans styles.css). %>
             <a href="<%= getLocalizedUrl('activities', lang) %>" class="nav-cta-btn">
               <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <%= t('common:nav.activities', 'Activities') %>
+              <span class="nav-cta-texte"><%= t('common:nav.activities', 'Activities') %></span>
+              <span class="nav-cta-texte--court"><%= t('common:nav.activitiesCourt', 'Activités') %></span>
             </a>
           </div>
 
@@ -356,6 +389,28 @@
               <% } %>
               <div class="mobile-nav-grid">
                 <% for (const link of testLinksFiltered) { %>
+                <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item">
+                  <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
+                  <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                </a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tests célibataires -->
+          <div class="mobile-accordion" data-accordeon="celib" style="--cat: var(--celib)">
+            <button class="mobile-accordion-trigger" aria-expanded="false">
+              <span class="m-acc-titre">
+                <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg></span>
+                <%= t('common:nav.categorySingles', 'Tests célibataires') %>
+                <span class="mobile-nav-count"><%= celibLinksFiltered.length %></span>
+              </span>
+              <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+            <div class="mobile-accordion-content hidden">
+              <div class="mobile-nav-grid">
+                <% for (const link of celibLinksFiltered) { %>
                 <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item">
                   <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
                   <span><%= t('common:' + link.labelKey, link.labelKey) %></span>

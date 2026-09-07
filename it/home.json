@@ -125,6 +125,9 @@
     "jeuxTitle": "I nostri giochi da fare in due",
     "jeuxDesc": "{{n}} giochi che partono su un solo telefono, senza registrazione e senza preparare niente.",
     "jeuxCta": "Vedi tutti i nostri giochi di coppia",
+    "celibEyebrow": "Single",
+    "celibTitle": "I nostri test per single",
+    "celibDesc": "Hai una cotta, un ex che ti gira ancora in testa o un amico un po' troppo vicino? Questi test sono per te, anche prima di essere in coppia.",
     "cards": {
       "testCouple": "20 domande per valutare la vostra relazione.",
       "testCommonPoints": "Avete cose in comune con il vostro partner?",
