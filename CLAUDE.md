@@ -117,6 +117,7 @@ aux quatre endroits, dans la même famille.
 - `MostQuiz` — 2-8 players, vote (most)
 - `ParentaliteQuiz` — 2 players, explicit point values (parentalite, emmenager)
 - `TruefalseQuiz` — True/false with answer reveal (vrai-faux)
+- `quiz-tu-preferes.ejs` — Inline `WYRGame` (not part of quiz-loader): 15 or 30 dilemmas, two modes chosen on the setup screen and kept across replays. « Chacun son tour » (`mode='tour'`, default): both players answer on the same phone, relay banner between them, reveal after each dilemma, agreement rate at the end. « Ensemble » (`mode='ensemble'`): one answer per dilemma decided by the couple, no names, no relay, no reveal, result lists the choices with the letter picked. The setup accroche is « Tu préfères ? » (`UI.accroche`); `UI.or` is only the medallion between the two options.
 
 ### Mode à distance (`salon.js`)
 
