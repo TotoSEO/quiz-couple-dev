@@ -323,9 +323,9 @@
       reduite que le srcset aurait choisie. Le href reste pour les navigateurs
       qui ignorent imagesrcset. %>
   <% if (typeof featuredImageSrcset !== 'undefined' && featuredImageSrcset) { %>
-  <link rel="preload" as="image" type="image/webp" href="<%= featuredImage %>" imagesrcset="<%= featuredImageSrcset %>" imagesizes="(min-width: 1200px) 500px, (min-width: 552px) 520px, calc(100vw - 32px)">
+  <link rel="preload" as="image" type="image/webp" fetchpriority="high" href="<%= featuredImage %>" imagesrcset="<%= featuredImageSrcset %>" imagesizes="(min-width: 1200px) 500px, (min-width: 552px) 520px, calc(100vw - 32px)">
   <% } else { %>
-  <link rel="preload" href="<%= featuredImage %>" as="image" type="image/webp">
+  <link rel="preload" href="<%= featuredImage %>" as="image" type="image/webp" fetchpriority="high">
   <% } %>
   <% } %>
 

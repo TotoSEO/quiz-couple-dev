@@ -61,6 +61,13 @@
   --coquin-accent: 20 85% 60%;
   --coquin-dark: 340 60% 20%;
 }
+/* Le rose primaire fait 3,4:1 sur fond clair : bon pour un bouton ou un titre,
+   trop faible pour un petit texte (PageSpeed, accessibilite). Les textes en
+   petit corps colores en rose prennent cette teinte plus sombre, et sa
+   variante claire en mode sombre. */
+:root { --primary-texte: 338 65% 42%; }
+.dark { --primary-texte: 338 85% 76%; }
+
 
 /* ── Reset & Base ─────────────────────────────────────────── */
 
@@ -621,6 +628,16 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
    mouvement. */
 @media (max-width: 767.98px) {
   .hero-title .text-gradient, .text-gradient { animation: none; background-position: 30% center; }
+  /* Les autres animations infinies qui repeignent a chaque image (elles
+     n'animent ni transform ni opacity) : reflet des boutons, halo de la carte
+     d'avis et vague des etoiles, LED du bouton sources Google, point du
+     compteur. PageSpeed les compte parmi les « animations non composees » et
+     elles occupent le fil principal pendant tout le chargement. */
+  .btn-cta::after { animation: none; }
+  .pqx-form-wrap { animation: none; }
+  .pqx-input-stars:not(:hover):not(:has(.on)) .pqx-star-btn svg { animation: none; }
+  .gsource-btn::before, .gsource-g::before { animation: none; }
+  .quiz-count-bubble .qcb-dot { animation: none; }
   .btn-purete::before, .btn-purete:hover::before { animation: none; --nv-angle: 60deg; }
 }
 @media (min-width: 1024px) { .hero-title { font-size: 4.25rem; line-height: 1.05; } }
@@ -3458,7 +3475,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .quiz-setup-meta {
   text-align: center; margin-top: 1.5rem;
   padding: 0.55rem 1.35rem; border-radius: 9999px;
-  background: hsl(var(--primary) / 0.08); color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08); color: hsl(var(--primary-texte));
   border: 1px solid hsl(var(--primary) / 0.2);
   font-size: 0.82rem; font-weight: 700;
 }
@@ -5554,7 +5571,7 @@ footer .text-sm.font-semibold.uppercase {
   margin-bottom: 1rem;
   letter-spacing: 0.08em;
   font-size: 0.6875rem;
-  color: hsl(var(--primary));
+  color: hsl(var(--primary-texte));
 }
 footer .text-sm.font-semibold.uppercase::after {
   content: '';
@@ -5590,7 +5607,8 @@ footer .mt-12.border-t {
   border-color: hsl(var(--border) / 0.3);
 }
 footer .mt-12.border-t p {
-  opacity: 0.7;
+  /* Plus d'opacite reduite : le gris attenue tombait a 2,9:1 de contraste. */
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 footer .mt-12.border-t p:hover {
@@ -6284,7 +6302,11 @@ h1, h2, h3, h4, h5, h6,
    Il ne disparaît plus que là où le doublon existe vraiment : quand l'écran de
    résultat du moteur affiche sa propre zone de suggestions. Avant la partie,
    et sur les pages sans moteur, le bloc est visible et ses titres comptent. */
-body:has(.qr-zone--suite) .related-tests-section { display: none !important; }
+/* Le moteur pose quiz-has-result sur le body au moment ou il affiche le
+   resultat (et le retire au recommencement) : c'est le meme instant que
+   l'apparition de la zone de suggestions. Un :has() sur body obligeait Chrome
+   a reevaluer la regle a chaque insertion dans la page. */
+body.quiz-has-result .related-tests-section { display: none !important; }
 .quiz-page .hero-badge { display: none !important; }
 
 /* ── Bulle "realise X fois" sous le fil d'Ariane ── */

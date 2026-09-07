@@ -79,6 +79,16 @@ le fondu se termine. Un fondu `main > section:first-child` de 0,6 s donnait
 un LCP de 14 s sur mobile et « NO_LCP » sur bureau. Même chose pour les
 décors en absolu par-dessus le hero (taches floutées, trame en `::after`) :
 ils sont des dégradés du fond de `.hero-home`, pas des éléments.
+Sous 768 px, les animations infinies qui n'animent ni `transform` ni
+`opacity` (reflet des boutons, halo de la carte d'avis, LED du bouton sources
+Google, point du compteur) sont coupées dans le bloc `@media (max-width:
+767.98px)` de styles.css : elles repeignent à chaque image et PageSpeed les
+compte. Pas de `:has()` sur `body` (le moteur pose `quiz-has-result`). L'état
+collé de l'en-tête vient d'une sentinelle observée par IntersectionObserver
+(mobile-menu.js), jamais d'une lecture de `scrollY` au chargement.
+Accessibilité : un petit texte en rose prend `hsl(var(--primary-texte))`
+(3,4:1 avec `--primary`, insuffisant sous 18 px), et le pied de page garde
+son opacité à 1.
 
 ### Familles de navigation
 

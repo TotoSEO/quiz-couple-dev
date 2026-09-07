@@ -12,17 +12,38 @@
   // entre l'en-tête et le début de la page en remontant.
   if (entete) {
     var collee = false;
+    var pose = function(v) {
+      if (v === collee) return;
+      collee = v;
+      entete.classList.toggle('est-collee', v);
+    };
     var poserEtat = function() {
       var y = window.scrollY || document.documentElement.scrollTop || 0;
-      if (!collee && y > 96) { collee = true; entete.classList.add('est-collee'); }
-      else if (collee && y < 56) { collee = false; entete.classList.remove('est-collee'); }
+      if (!collee && y > 96) pose(true);
+      else if (collee && y < 56) pose(false);
     };
-    window.addEventListener('scroll', poserEtat, { passive: true });
-    // Le premier relevé attend que le navigateur ait fait sa propre mise en
-    // page : lire la position de défilement avant la force, et ce calcul
-    // complet coûtait 59 ms sur mobile d'après PageSpeed. Deux images plus
-    // tard, la mise en page est faite et la lecture ne coûte plus rien.
-    requestAnimationFrame(function() { requestAnimationFrame(poserEtat); });
+    // L'etat initial ne lit plus la position de defilement : cette lecture,
+    // faite juste apres que les autres scripts ont ecrit dans la page,
+    // forcait une mise en page complete (434 ms sur le Moto G de PageSpeed).
+    // Une sentinelle invisible, posee entre 56 et 96 px du haut du document,
+    // est observee a la place : entierement sortie par le haut, l'en-tete se
+    // colle ; entierement visible, il se decolle. L'observateur repond apres
+    // la mise en page du navigateur, sans jamais la forcer, et donne aussi
+    // l'etat initial (page rechargee a mi-hauteur, ancre).
+    if ('IntersectionObserver' in window) {
+      var sentinelle = document.createElement('div');
+      sentinelle.setAttribute('aria-hidden', 'true');
+      sentinelle.style.cssText = 'position:absolute;top:56px;left:0;width:1px;height:40px;pointer-events:none;visibility:hidden';
+      document.body.appendChild(sentinelle);
+      new IntersectionObserver(function(entrees) {
+        var e = entrees[entrees.length - 1];
+        if (e.boundingClientRect.bottom <= 0) pose(true);
+        else if (e.intersectionRatio >= 1) pose(false);
+      }, { threshold: [0, 1] }).observe(sentinelle);
+    } else {
+      window.addEventListener('scroll', poserEtat, { passive: true });
+      poserEtat();
+    }
   }
 
   // ── Menu mobile ─────────────────────────────────────────
