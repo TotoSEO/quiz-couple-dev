@@ -29,7 +29,7 @@ const article: BlogArticleData = {
 <p><strong>Rispondi anche tu alle tue domande:</strong> Se le chiedi della sua peggior serata, racconta anche la tua, soprattutto se è ridicola. È lo scambio che crea legame, non la raccolta di informazioni. E osare raccontare qualcosa che non ti mette in buona luce è esattamente ciò che ti distingue dalle altre conversazioni che lei sta avendo adesso.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Le domande da evitare, già che ci siamo</p>
-<p>«Perché sei single?» (l'ha sentita cento volte, e non esiste una buona risposta). «Com'era il tuo ex?» (troppo presto, sempre). Lo stipendio, il peso, «cerchi qualcosa di serio?» al secondo messaggio. Tieni a mente un principio semplice: se la domanda sembra una griglia di selezione, la magia muore.</p>
+<p>«<a href="/it/test-perche-non-trovo-l-amore/">Perché sei single?</a>» (l'ha sentita cento volte, e non esiste una buona risposta). «Com'era il tuo ex?» (troppo presto, sempre). Lo stipendio, il peso, «cerchi qualcosa di serio?» al secondo messaggio. Tieni a mente un principio semplice: se la domanda sembra una griglia di selezione, la magia muore.</p>
 </aside>
 <div><table><thead><tr><th>La regola</th><th>Perché cambia tutto</th></tr></thead><tbody>
 <tr><td>Una domanda alla volta</td><td>Due di fila e diventa un modulo</td></tr>

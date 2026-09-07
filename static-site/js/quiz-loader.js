@@ -283,6 +283,9 @@
                           { q: 9,  o: 'd', palier: 3 },   // « sans moi tu n'es rien »
                           { q: 19, o: 'd', palier: 3 }    // peur des consequences si ca se savait
                         ] },
+    // Pourquoi je ne trouve pas l'amour : de la reponse la plus ouverte a la
+    // plus fermee, le score monte avec ce qui retient (r1 occasions, r4 place prise).
+    'trouver-amour':  { prefix: 'trouverAmour', engine: 'solo', totalQ: 15, pool: 15, quizType: 'trouver-amour', ascending: true },
 
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
 
@@ -1301,6 +1304,26 @@
       18: { d: 'cycle',        w: 1 },
       19: { d: 'honte',        w: 2 },
       20: { d: 'synthese',     w: 2 }
+    },
+    // Pourquoi je ne trouve pas l'amour : l'ex, la fuite quand ca devient
+    // serieux, le doute sur sa valeur et la phrase du bilan pesent plus que
+    // l'agenda ou le regard des proches.
+    trouverAmour: {
+      1:  { d: 'occasions',     w: 2 },
+      2:  { d: 'ouverture',     w: 2 },
+      3:  { d: 'criteres',      w: 3 },
+      4:  { d: 'passe',         w: 3 },
+      5:  { d: 'engagement',    w: 3 },
+      6:  { d: 'estime',        w: 3 },
+      7:  { d: 'attachement',   w: 2 },
+      8:  { d: 'schema',        w: 2 },
+      9:  { d: 'disponibilite', w: 1 },
+      10: { d: 'rendez-vous',   w: 2 },
+      11: { d: 'confort',       w: 2 },
+      12: { d: 'entourage',     w: 1 },
+      13: { d: 'attentes',      w: 2 },
+      14: { d: 'initiative',    w: 2 },
+      15: { d: 'bilan',         w: 3 }
     },
     // Relation a distance : la place occupee la-bas et la fin annoncee de la
     // distance comptent plus que la qualite d'un appel.

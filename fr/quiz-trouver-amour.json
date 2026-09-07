@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "badge": "Test célibataire",
+    "title": "15 questions pour comprendre pourquoi vous ne trouvez pas l'amour",
+    "titleHighlight": "pourquoi vous ne trouvez pas l'amour",
+    "description": "Vous êtes célibataire depuis un moment et vous ne comprenez pas pourquoi. Ce test regarde <strong>vos rencontres, vos attentes et ce qui vous retient</strong>, et met un nom sur ce qui coince. Gratuit, résultat immédiat.",
+    "subtitle": "Quinze questions, deux minutes, personne ne voit vos réponses",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Pourquoi vous ne trouvez pas l'amour : ce que ce test regarde",
+    "intro": "Vous êtes célibataire depuis un moment. Vous n'êtes pas difficile, vous ne demandez pas la lune, et pourtant ça ne se fait pas.",
+    "p1": "La question « pourquoi je ne trouve pas l'amour ? » revient chez beaucoup de gens, et souvent au même moment : après une histoire qui n'a pas marché, ou quand tous les amis se mettent en couple. On se met alors à chercher une explication. Trop exigeant ? Pas assez bien ? Pas de chance ? La plupart du temps, ce n'est aucune des trois.",
+    "p2": "Ce test pose quinze questions sur des situations que vous connaissez : une soirée où vous ne connaissez personne, quelqu'un qui vous plaît mais qui ne coche pas vos critères, un message qui reste sans réponse, une relation qui devient sérieuse. Vos réponses dessinent ce qui se passe entre vous et la rencontre.",
+    "p3": "À la fin, vous avez un résultat sur quatre paliers, du plus simple (il vous manque des occasions) au plus profond (la place est encore prise). Chaque palier vient avec une lecture et une piste. Il ne dit pas qui vous êtes, il dit ce qui coince aujourd'hui. Et ça, ça peut changer !"
+  },
+  "section2": {
+    "title": "Les six raisons qui reviennent le plus",
+    "pillar1Title": "Pas assez d'occasions",
+    "pillar1Text": "C'est la raison la plus banale et la plus fréquente. Entre le travail, la maison et les mêmes amis, on peut passer des mois sans parler à quelqu'un de nouveau. Aucune application ne remplace ça.",
+    "pillar2Title": "Une liste trop précise",
+    "pillar2Text": "L'âge, la taille, le métier, la ville, la façon de s'habiller... Chaque critère se défend, mais mis ensemble ils ne laissent passer personne. Et ils décrivent souvent quelqu'un qu'on a déjà connu.",
+    "pillar3Title": "Un ex encore là",
+    "pillar3Text": "On peut être célibataire depuis deux ans et ne pas être libre. Tant qu'on compare, tant qu'on regarde ce que l'autre devient, la place est prise. Les nouvelles rencontres le sentent, même sans le savoir.",
+    "pillar4Title": "La peur que ça devienne sérieux",
+    "pillar4Text": "Tout va bien pendant trois semaines, puis on trouve des défauts, on ralentit, on s'éloigne. Ce n'est pas de la lassitude, c'est une protection. Elle vient souvent d'une histoire ancienne, dans le couple ou dans la famille.",
+    "pillar5Title": "Le doute sur ce qu'on vaut",
+    "pillar5Text": "Quand quelqu'un de bien s'intéresse à vous et que votre première pensée est « il va être déçu », vous partez déjà perdant. On se rend moins disponible, on teste l'autre, on se retire avant d'être quitté.",
+    "pillar6Title": "Une façon de s'attacher qui fait fuir, ou qui fuit",
+    "pillar6Text": "Certains s'attachent trop vite et trop fort, avec un besoin d'être rassuré à chaque message. D'autres prennent de la distance dès que l'autre se rapproche. Ces deux façons de s'attacher s'apprennent tôt, et elles se comprennent."
+  },
+  "section3": {
+    "title": "Ce qu'on se dit, et ce qui se passe",
+    "intro": "Le même célibat se raconte de plusieurs façons. Voici ce qu'on se dit souvent, et ce que ça cache la plupart du temps.",
+    "headerScore": "Ce qu'on se dit",
+    "headerLevel": "Ce que ça cache souvent",
+    "headerAnalysis": "Ce qui aide",
+    "row1Score": "« Je ne rencontre personne »",
+    "row1Level": "Une semaine sans nouvelles têtes",
+    "row1Analysis": "Une activité régulière, pas une soirée de plus",
+    "row2Score": "« Je suis trop difficile »",
+    "row2Level": "Une liste qui décrit un ex",
+    "row2Analysis": "Un rendez-vous hors critères, pour voir",
+    "row3Score": "« Ça ne dure jamais »",
+    "row3Level": "La distance dès que ça devient sérieux",
+    "row3Analysis": "Rester une semaine de plus, et regarder ce qui se passe",
+    "row4Score": "« Je ne plais pas »",
+    "row4Level": "Le doute sur soi, qui se voit",
+    "row4Analysis": "Laisser l'autre décider s'il est déçu ou pas",
+    "row5Score": "« Je suis bien seul »",
+    "row5Level": "Un abri, parfois",
+    "row5Analysis": "Se demander de quoi on se protège"
+  },
+  "section4": {
+    "title": "Par quoi commencer, selon votre résultat",
+    "p1": "Le résultat vous place sur un palier. Voici la première chose à faire pour chacun.",
+    "sub1Title": "Il vous manque des occasions",
+    "sub1P1": "Changez de décor une fois par semaine : un cours, une association, un sport d'équipe, un endroit où l'on croise les mêmes gens plusieurs fois. C'est la répétition qui crée les rencontres, pas la soirée exceptionnelle.",
+    "sub2Title": "Un réflexe vous freine",
+    "sub2P1": "Faites une fois l'inverse de ce que vous faites d'habitude. Recontactez en premier. Dites oui à quelqu'un qui ne vous a pas fait d'effet immédiat. La plupart des couples solides n'ont pas commencé par un coup de foudre.",
+    "sub3Title": "Vous vous protégez",
+    "sub3P1": "Cherchez d'où vient la protection avant de la forcer. Un <a href=\"/test-style-attachement-couple/\">test sur votre façon de vous attacher</a> est un bon point de départ, et si le mot « avenir » vous fait reculer, <a href=\"/blog/peur-de-l-engagement/\">la peur de l'engagement</a> se comprend mieux qu'on ne le croit.",
+    "sub4Title": "La place est prise",
+    "sub4P1": "Ne forcez pas la rencontre. Occupez-vous d'abord de ce qui prend la place : un ex, un manque, une peur. Et parlez-en, à un ami ou à un professionnel. Ce n'est pas un aveu de faiblesse, c'est juste plus rapide à deux.",
+    "tip": "Ce test parle de vous, pas des autres. Si vous vous demandez plutôt ce que ressent une personne précise, <a href=\"/test-m-aime-t-il-elle-en-secret/\">savoir si elle vous aime en secret</a> est une autre question, et un autre test."
+  },
+  "section5": {
+    "title": "Comment fonctionne ce test",
+    "p1": "Quinze situations, quatre réponses à chaque fois, de la plus ouverte à la plus fermée. Il n'y a pas de bonne réponse : répondez comme vous faites en vrai, pas comme vous aimeriez faire. Ça prend deux minutes.",
+    "p2": "Chaque réponse compte pour des points, et certaines questions pèsent plus lourd : celles sur votre ex, sur ce qui se passe quand ça devient sérieux et sur ce que vous pensez valoir. Ce sont elles qui en disent le plus. Votre score vous place sur l'un des quatre paliers, avec une lecture et une piste pour chacun."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose",
+    "faq1Q": "Pourquoi je ne trouve pas l'amour alors que je fais tout pour ?",
+    "faq1A": "Parce que « tout » est souvent la même chose répétée : les mêmes applications, les mêmes soirées, le même type de personne. Ce test regarde justement ce qui se répète. Et parfois, faire beaucoup d'efforts est une façon de ne pas regarder ce qui bloque en dessous : la peur que ça marche, ou une histoire pas finie.",
+    "faq2Q": "Est-ce normal d'être célibataire à 30 ans, à 40 ans ?",
+    "faq2A": "Oui. L'âge de la mise en couple recule depuis des années, et beaucoup de gens vivent plusieurs périodes de célibat dans leur vie. Ce qui compte, ce n'est pas l'âge, c'est de savoir si ce célibat vous convient ou s'il vous pèse. Si c'est le regard des autres qui pèse, le problème n'est pas le vôtre.",
+    "faq3Q": "Pourquoi je ne plais pas aux hommes, ou aux femmes ?",
+    "faq3A": "La plupart du temps, ce n'est pas une question de plaire. Quelqu'un qui doute de lui se rend moins disponible, écoute moins, teste l'autre sans s'en rendre compte, et l'autre le sent. Le test a plusieurs questions là-dessus. Si le résultat pointe l'estime de soi, c'est par là qu'il faut commencer, pas par votre apparence.",
+    "faq4Q": "Est-ce que je fais peur aux hommes ?",
+    "faq4A": "Beaucoup de femmes se posent cette question, souvent après une remarque entendue une fois. Une personne sûre d'elle, qui a une vie bien remplie, fait fuir ceux qui cherchaient quelqu'un à dominer. Ce n'est pas une perte. Ce qui peut gêner, par contre, c'est de mener un premier rendez-vous comme un entretien d'embauche. C'est la question dix du test.",
+    "faq5Q": "Suis-je fait pour être en couple ou pour rester seul ?",
+    "faq5A": "Certaines personnes sont heureuses seules, et ce test ne cherche pas à les convaincre du contraire. La différence se voit à une chose : est-ce que le célibat vous convient, ou est-ce qu'il vous protège ? Si vous êtes bien seul et que la rencontre ne vous fait pas peur, vous êtes fait pour ce que vous vivez. Si vous êtes bien seul « au moins », ce petit mot vaut la peine d'être regardé.",
+    "faq6Q": "Comment rencontrer quelqu'un quand on ne sort pas ?",
+    "faq6A": "En rendant régulier ce qui ne l'est pas. Une activité hebdomadaire où l'on revoit les mêmes personnes fait plus que dix soirées. Les applications peuvent aider, à condition de passer vite au vrai rendez-vous. Et pour ce premier rendez-vous, avoir <a href=\"/questions-premier-rendez-vous/\">quelques questions à poser</a> évite l'entretien d'embauche."
+  },
+  "jsonLd": {
+    "about": "célibat et rencontre amoureuse"
+  }
+}

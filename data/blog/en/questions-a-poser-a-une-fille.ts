@@ -29,7 +29,7 @@ const article: BlogArticleData = {
 <p><strong>Answer your own questions too:</strong> If you ask about her worst night out, follow with yours, especially if it's ridiculous. It's the exchange that creates connection, not the collection of information. And daring to tell something that doesn't flatter you is precisely what makes you different from the other conversations she's having.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Questions to avoid, while we're here</p>
-<p>«Why are you single?» (she's heard it a hundred times, and there's no good answer). «What was your ex like?» (too early, always). Salary, weight, «are you looking for something serious?» by the second message. Keep one principle in mind: if the question sounds like screening a candidate, it kills the magic.</p>
+<p>«<a href="/en/why-cant-i-find-love-test/">Why are you single?</a>» (she's heard it a hundred times, and there's no good answer). «What was your ex like?» (too early, always). Salary, weight, «are you looking for something serious?» by the second message. Keep one principle in mind: if the question sounds like screening a candidate, it kills the magic.</p>
 </aside>
 <div><table><thead><tr><th>The rule</th><th>Why it changes everything</th></tr></thead><tbody>
 <tr><td>One question at a time</td><td>Two in a row, and it becomes a form</td></tr>

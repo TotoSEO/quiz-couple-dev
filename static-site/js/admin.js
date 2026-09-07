@@ -383,6 +383,7 @@
     testDistanceAime: "M'aime-t-il/elle à distance",
     testAimeEncore: "M'aime-t-il/elle encore",
     testEmprise: 'Emprise psychologique',
+    testTrouverAmour: "Pourquoi je ne trouve pas l'amour",
     testPersonnalite: 'Personnalité amoureuse',
     // Page retiree du site : ses parties restent en base et doivent garder
     // un nom lisible, sinon la ligne s'affiche sous sa cle technique.
@@ -476,6 +477,7 @@
     'secret': 'testSecret',
     'aime-encore': 'testAimeEncore',
     'emprise': 'testEmprise',
+    'trouver-amour': 'testTrouverAmour',
     'suis-je-amoureux': 'testSuisJeAmoureux',
     'tentation': 'quizTentation',
     'tester-couple': 'testCouple',

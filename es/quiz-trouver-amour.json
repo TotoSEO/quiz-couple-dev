@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "badge": "Test para solteros",
+    "title": "15 preguntas para entender por qué no encuentras el amor",
+    "titleHighlight": "por qué no encuentras el amor",
+    "description": "Llevas un tiempo sin pareja y no entiendes por qué. Este test mira <strong>la gente que conoces, lo que esperas y lo que te frena</strong>, y pone nombre a lo que falla. Gratis, resultado inmediato.",
+    "subtitle": "Quince preguntas, dos minutos, nadie ve tus respuestas",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "Por qué no encuentras el amor: lo que mira este test",
+    "intro": "Llevas un tiempo sin pareja. No eres difícil, no pides la luna, y sin embargo no pasa.",
+    "p1": "La pregunta «¿por qué no encuentro el amor?» le viene a mucha gente, y a menudo en el mismo momento: después de una historia que no funcionó, o cuando todos los amigos se van emparejando. Entonces uno se pone a buscar una explicación. ¿Demasiado exigente? ¿No lo bastante bueno? ¿Mala suerte? La mayoría de las veces, no es ninguna de las tres.",
+    "p2": "Este test hace quince preguntas sobre situaciones que conoces: una fiesta donde no conoces a nadie, alguien que te gusta pero no cumple tus criterios, un mensaje que se queda sin respuesta, una relación que se pone seria. Tus respuestas dibujan lo que pasa entre tú y el encuentro.",
+    "p3": "Al final tienes un resultado en cuatro niveles, del más sencillo (te faltan ocasiones) al más profundo (el sitio sigue ocupado). Cada nivel viene con una lectura y una pista. No dice quién eres, dice lo que falla hoy. ¡Y eso puede cambiar!"
+  },
+  "section2": {
+    "title": "Las seis razones que más se repiten",
+    "pillar1Title": "Pocas ocasiones",
+    "pillar1Text": "Es la razón más corriente y la más frecuente. Entre el trabajo, la casa y los mismos amigos, se pueden pasar meses sin hablar con alguien nuevo. Ninguna aplicación sustituye eso.",
+    "pillar2Title": "Una lista demasiado precisa",
+    "pillar2Text": "La edad, la altura, el trabajo, la ciudad, la forma de vestir... Cada criterio se defiende, pero juntos no dejan pasar a nadie. Y a menudo describen a alguien que ya conociste.",
+    "pillar3Title": "Un ex todavía presente",
+    "pillar3Text": "Se puede llevar dos años sin pareja y no estar libre. Mientras comparas, mientras miras en qué anda la otra persona, el sitio está ocupado. La gente nueva lo nota, aunque no sepa por qué.",
+    "pillar4Title": "El miedo a que se ponga serio",
+    "pillar4Text": "Todo va bien durante tres semanas, luego le encuentras defectos, frenas, te alejas. No es cansancio, es una protección. Suele venir de una historia antigua, en la pareja o en la familia.",
+    "pillar5Title": "La duda sobre lo que uno vale",
+    "pillar5Text": "Cuando alguien que vale la pena se interesa por ti y tu primer pensamiento es «se va a decepcionar», ya sales perdiendo. Te haces menos disponible, pones a prueba a la otra persona, te retiras antes de que te dejen.",
+    "pillar6Title": "Una forma de apegarse que ahuyenta, o que huye",
+    "pillar6Text": "Algunos se apegan demasiado rápido y demasiado fuerte, con necesidad de que los tranquilicen en cada mensaje. Otros toman distancia en cuanto la otra persona se acerca. Las dos formas de apegarse se aprenden pronto, y las dos se entienden."
+  },
+  "section3": {
+    "title": "Lo que nos decimos, y lo que pasa",
+    "intro": "La misma soltería se cuenta de varias maneras. Esto es lo que uno se dice a menudo, y lo que suele esconder.",
+    "headerScore": "Lo que nos decimos",
+    "headerLevel": "Lo que suele esconder",
+    "headerAnalysis": "Lo que ayuda",
+    "row1Score": "«No conozco a nadie»",
+    "row1Level": "Una semana sin caras nuevas",
+    "row1Analysis": "Una actividad regular, no una fiesta más",
+    "row2Score": "«Soy demasiado exigente»",
+    "row2Level": "Una lista que describe a un ex",
+    "row2Analysis": "Una cita fuera de tus criterios, para ver",
+    "row3Score": "«Nunca dura»",
+    "row3Level": "La distancia en cuanto se pone serio",
+    "row3Analysis": "Quedarse una semana más, y mirar qué pasa",
+    "row4Score": "«No gusto»",
+    "row4Level": "La duda sobre uno mismo, que se nota",
+    "row4Analysis": "Dejar que la otra persona decida si se decepciona o no",
+    "row5Score": "«Estoy bien solo»",
+    "row5Level": "Un refugio, a veces",
+    "row5Analysis": "Preguntarse de qué uno se protege"
+  },
+  "section4": {
+    "title": "Por dónde empezar, según tu resultado",
+    "p1": "El resultado te coloca en un nivel. Esto es lo primero que hacer en cada uno.",
+    "sub1Title": "Te faltan ocasiones",
+    "sub1P1": "Cambia de escenario una vez por semana: un curso, una asociación, un deporte de equipo, un sitio donde te cruces varias veces con la misma gente. La repetición es lo que crea los encuentros, no la fiesta excepcional.",
+    "sub2Title": "Un reflejo te frena",
+    "sub2P1": "Haz una vez lo contrario de lo que haces siempre. Escribe tú primero. Dile que sí a alguien que no te impresionó de entrada. La mayoría de las parejas sólidas no empezaron con un amor a primera vista.",
+    "sub3Title": "Te proteges",
+    "sub3P1": "Busca de dónde viene la protección antes de forzarla. Un <a href=\"/es/test-estilo-apego/\">test sobre tu forma de apegarte</a> es un buen punto de partida, y si la palabra «futuro» te hace retroceder, <a href=\"/es/blog/miedo-al-compromiso/\">el miedo al compromiso</a> se entiende mejor de lo que parece.",
+    "sub4Title": "El sitio está ocupado",
+    "sub4P1": "No fuerces el encuentro. Ocúpate primero de lo que ocupa el sitio: un ex, una carencia, un miedo. Y háblalo, con un amigo o con un profesional. No es una muestra de debilidad, es simplemente más rápido entre dos.",
+    "tip": "Este test habla de ti, no de los demás. Si lo que te preguntas es más bien qué siente una persona concreta, <a href=\"/es/test-me-quiere-en-secreto/\">saber si te quiere en secreto</a> es otra pregunta, y otro test."
+  },
+  "section5": {
+    "title": "Cómo funciona este test",
+    "p1": "Quince situaciones, cuatro respuestas cada vez, de la más abierta a la más cerrada. No hay respuesta buena: responde como haces en realidad, no como te gustaría hacer. Lleva dos minutos.",
+    "p2": "Cada respuesta cuenta puntos, y algunas preguntas pesan más: las de tu ex, las de lo que pasa cuando se pone serio y las de lo que crees que vales. Son las que más dicen. Tu puntuación te coloca en uno de los cuatro niveles, con una lectura y una pista para cada uno."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que uno se hace",
+    "faq1Q": "¿Por qué no encuentro el amor si hago todo lo posible?",
+    "faq1A": "Porque «todo» suele ser lo mismo repetido: las mismas aplicaciones, las mismas fiestas, el mismo tipo de persona. Este test mira precisamente lo que se repite. Y a veces, esforzarse mucho es una manera de no mirar lo que bloquea por debajo: el miedo a que funcione, o una historia sin terminar.",
+    "faq2Q": "¿Es normal estar soltero a los 30, a los 40?",
+    "faq2A": "Sí. La edad a la que la gente se empareja lleva años retrasándose, y mucha gente vive varias épocas de soltería en su vida. Lo que cuenta no es la edad, es saber si esa soltería te va bien o te pesa. Si lo que pesa es la mirada de los demás, el problema no es tuyo.",
+    "faq3Q": "¿Por qué no gusto a los hombres, o a las mujeres?",
+    "faq3A": "La mayoría de las veces no es cuestión de gustar. Alguien que duda de sí mismo se hace menos disponible, escucha menos, pone a prueba a la otra persona sin darse cuenta, y la otra persona lo nota. El test tiene varias preguntas sobre esto. Si el resultado señala la autoestima, por ahí hay que empezar, no por tu aspecto.",
+    "faq4Q": "¿Doy miedo a los hombres?",
+    "faq4A": "Muchas mujeres se hacen esta pregunta, a menudo después de un comentario oído una vez. Una persona segura de sí misma, con una vida llena, ahuyenta a los que buscaban a alguien a quien dominar. Eso no es una pérdida. Lo que sí puede estorbar es llevar una primera cita como una entrevista de trabajo. Es la pregunta diez del test.",
+    "faq5Q": "¿Estoy hecho para estar en pareja o para estar solo?",
+    "faq5A": "Algunas personas son felices solas, y este test no intenta convencerlas de lo contrario. La diferencia se ve en una cosa: ¿la soltería te va bien, o te protege? Si estás bien solo y conocer a alguien no te da miedo, estás hecho para lo que vives. Si estás bien solo «al menos», esa palabrita merece una mirada.",
+    "faq6Q": "¿Cómo conocer a alguien cuando no salgo?",
+    "faq6A": "Haciendo regular lo que no lo es. Una actividad semanal donde vuelves a ver a las mismas personas hace más que diez noches de fiesta. Las aplicaciones pueden ayudar, siempre que se pase pronto a la cita de verdad. Y para esa primera cita, tener <a href=\"/es/preguntas-primera-cita/\">algunas preguntas que hacer</a> evita la entrevista de trabajo."
+  },
+  "jsonLd": {
+    "about": "soltería y encuentro amoroso"
+  }
+}

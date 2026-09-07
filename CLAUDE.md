@@ -35,10 +35,11 @@ Le menu (`templates/partials/header.ejs`), le pied de page (`footer.ejs`), le
 plan du site (`templates/pages/sitemap.ejs`) et l'accueil (`home.ejs`) rangent
 les pages en quatre familles, chacune avec sa couleur : Tests de couple
 (`--primary`), Tests célibataires (`--celib`, turquoise), Quiz (`--secondary`)
-et Jeux. Les tests célibataires sont les pages d'avant le couple : suis-je
-amoureux, amour ou crush, amour ou amitié, amoureux de mon/ma BFF, m'aime-t-il
-en secret, mon ex pense-t-il encore à moi. Il n'y a pas de page hub pour cette
-famille, seulement l'entrée de menu. Les listes de liens sont écrites en dur
+et Jeux. Les tests célibataires sont les pages d'avant le couple : pourquoi je
+ne trouve pas l'amour (solo, quinze questions), suis-je amoureux, amour ou
+crush, amour ou amitié, amoureux de mon/ma BFF, m'aime-t-il en secret, mon ex
+pense-t-il encore à moi. Il n'y a pas de page hub pour cette famille, seulement
+l'entrée de menu. Les listes de liens sont écrites en dur
 dans chacun des quatre gabarits : une page ajoutée ou déplacée se répercute
 aux quatre endroits, dans la même famille.
 

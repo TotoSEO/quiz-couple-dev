@@ -1958,6 +1958,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'emprise', icon: '🔒', route: 'testEmprise' },
     { type: 'test', key: 'amour-ami', icon: '🧡', route: 'testAmourAmi' },
     { type: 'test', key: 'ex', icon: '🕰️', route: 'testEx' },
+    { type: 'test', key: 'trouver-amour', icon: '🧭', route: 'testTrouverAmour' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
@@ -2047,6 +2048,8 @@ var QuizEngine = (function() {
     'crush':           ['testSecret', 'testSuisJeAmoureux', 'testAmourAmitie'],
     // Le doute sur l'ami appelle la question de l'autre, puis celle du lien.
     'amour-ami':       ['testSecret', 'testAmourAmitie', 'testCrush'],
+    // Le célibat qui dure appelle la façon de s'attacher, le manque, puis l'ex.
+    'trouver-amour':   ['testAttachement', 'testDependance', 'testEx'],
     'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
     'distance-aime':   ['testDistance', 'testAimeEncore', 'testAttachement'],
     // Le doute sur ses sentiments appelle la question du couple, puis de soi.

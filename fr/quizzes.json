@@ -385,5 +385,11 @@
     "metaTitle": "Aimes-tu ton/ta meilleur(e) ami(e) ? Test en ligne",
     "description": "Quinze questions pour savoir si ce que tu ressens pour ton/ta meilleur(e) ami(e) est encore de l'amitié, ou déjà autre chose.",
     "metaDescription": "Suis-je amoureux(se) de mon/ma meilleur(e) ami(e) ? Quinze questions qui pèsent chacune leur poids, deux séries selon que ton ami(e) est un garçon ou une fille, et un résultat immédiat."
+  },
+  "testTrouverAmour": {
+    "title": "Test célibataire : Pourquoi ne trouvez-vous pas l'amour ?",
+    "shortTitle": "Pourquoi je ne trouve pas l'amour ?",
+    "description": "Quinze questions sur vos rencontres, vos attentes et ce qui vous retient. Le résultat met un nom sur ce qui coince, sans juger.",
+    "metaDescription": "Pourquoi vous ne trouvez pas l'amour ? Quinze questions sur vos rencontres, vos attentes et ce qui vous retient, pour comprendre ce qui coince. Test gratuit, résultat immédiat et des pistes pour la suite."
   }
 }

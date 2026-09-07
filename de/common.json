@@ -81,7 +81,9 @@
     "testAimeEncore": "Liebt er mich noch?",
     "testAimeEncoreDesc": "Sind die Gefühle noch da?",
     "testEmprise": "Stehe ich unter Kontrolle?",
-    "testEmpriseDesc": "Deine Freiheit in der Beziehung, in 20 Fragen"
+    "testEmpriseDesc": "Deine Freiheit in der Beziehung, in 20 Fragen",
+    "testTrouverAmour": "Warum finde ich keine Liebe?",
+    "testTrouverAmourDesc": "Fünfzehn Fragen zu dem, was hakt, ohne Urteil"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",
