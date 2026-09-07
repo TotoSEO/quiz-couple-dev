@@ -48,16 +48,14 @@
    n'est donc demande que si la fenetre est assez large, et se pose quand
    elle le devient.
 
-   ── L'interstitiel ───────────────────────────────────────────────────
-   Son div est pose vide dans la page, ses scripts partent d'ordinaire au
-   moment ou l'ecran de resultat s'affiche (resultat-url.js). La regie decrit
-   pourtant son interstitiel comme un format qui « s'affiche a l'ouverture de
-   la page ». Quand la personne arrive d'une autre page du site, on le pose
-   donc des le depart, comme les autres formats : c'est la navigation interne
-   que Google tolere pour ce genre de format, et c'est le moment que la regie
-   attend. Quelqu'un qui arrive de l'exterieur garde l'ancien declencheur, au
-   resultat. Le drapeau data-pub-posee est partage par les deux scripts pour
-   qu'un interstitiel ne soit jamais demande deux fois.
+   ── Rien au-dessus de la ligne de flottaison ─────────────────────────
+   Aucune publicite ne doit etre visible dans le premier ecran, avant que la
+   personne ait bouge. Les emplacements qui tombent dans le premier ecran au
+   chargement, et le double skyrail qui se pose dans les gouttieres a cote du
+   contenu, attendent donc le premier defilement ; les autres sont demandes
+   a l'approche comme avant. L'interstitiel ne part qu'a l'ecran de resultat
+   (resultat-url.js), sur le geste de la personne : un interstitiel a
+   l'ouverture couvrirait le premier ecran, c'est exactement ce qu'on refuse.
    ═══════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -177,24 +175,29 @@
     }
   }
 
-  // ── L'interstitiel a l'arrivee depuis une autre page du site ─────────
-  function arriveeInterne() {
-    var ref = document.referrer || '';
-    if (!ref || ref.indexOf(location.origin + '/') !== 0) return false;
-    try {
-      var u = new URL(ref);
-      return u.pathname !== location.pathname;
-    } catch (e) { return false; }
+  // ── Le premier defilement ───────────────────────────────────────────
+  // Appelle fn une seule fois, au premier defilement reel de la page. Une
+  // page rechargee a mi-hauteur a deja defile : l'appel part tout de suite.
+  function auPremierDefilement(fn) {
+    var fait = false;
+    function declenche() {
+      if (fait) return;
+      fait = true;
+      window.removeEventListener('scroll', surDefilement);
+      fn();
+    }
+    function surDefilement() {
+      if ((window.scrollY || document.documentElement.scrollTop || 0) > 0) declenche();
+    }
+    if ((window.scrollY || document.documentElement.scrollTop || 0) > 0) { declenche(); return; }
+    window.addEventListener('scroll', surDefilement, { passive: true });
   }
 
-  function poseInterstitielSiInterne() {
-    var hote = document.querySelector('[data-pub-au-resultat]:not([data-pub-posee])');
-    if (!hote || !arriveeInterne()) return;
-    var format = hote.getAttribute('data-pub-au-resultat');
-    var site = hote.getAttribute('data-pub-site');
-    if (!format || !site) return;
-    hote.setAttribute('data-pub-posee', '1');
-    injecte(hote.firstElementChild || hote, format, site);
+  // Un emplacement est « dans le premier ecran » si son haut est au-dessus du
+  // bas de la fenetre au moment du chargement, sans avoir defile.
+  function dansLePremierEcran(hote) {
+    var r = hote.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0;
   }
 
   // Un emplacement masque ne doit rien demander : la colonne laterale
@@ -248,19 +251,31 @@
     else if (media.addListener) media.addListener(surChangement);
   }
 
+  function lance(liste) {
+    if (!liste.length) return;
+    if ('IntersectionObserver' in window) surveille(liste);
+    else repli(liste);
+  }
+
   function demarre() {
-    try { poseInterstitielSiInterne(); } catch (e) {}
     var tous = document.querySelectorAll('[data-pub-differee]:not([data-pub-posee])');
-    var dansLeFlux = [];
+    var plusBas = [];       // sous la ligne de flottaison : a l'approche, comme avant
+    var premierEcran = [];  // dans le premier ecran : apres le premier defilement
     var horsFlux = [];
     for (var i = 0; i < tous.length; i++) {
-      if (HORS_FLUX[tous[i].getAttribute('data-pub-differee')]) horsFlux.push(tous[i]);
-      else dansLeFlux.push(tous[i]);
+      var h = tous[i];
+      if (HORS_FLUX[h.getAttribute('data-pub-differee')]) { horsFlux.push(h); continue; }
+      var visible = false;
+      try { visible = dansLePremierEcran(h); } catch (e) {}
+      (visible ? premierEcran : plusBas).push(h);
     }
-    try { poseHorsFlux(horsFlux); } catch (e) {}
-    if (!dansLeFlux.length) return;
-    if ('IntersectionObserver' in window) surveille(dansLeFlux);
-    else repli(dansLeFlux);
+    lance(plusBas);
+    if (horsFlux.length || premierEcran.length) {
+      auPremierDefilement(function () {
+        try { poseHorsFlux(horsFlux); } catch (e) {}
+        lance(premierEcran);
+      });
+    }
   }
 
   // Au chargement complet de la page, jamais avant (voir en tete).

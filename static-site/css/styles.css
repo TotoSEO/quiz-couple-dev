@@ -11379,3 +11379,41 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   /* La colonne laterale demarre a la meme hauteur que l'encart. */
   .avec-colonne__aside { padding-top: 0.25rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   LA PLACE DES SKYRAILS
+   A partir de 1024 px, la regie peut poser ses deux skyrails dans les
+   gouttieres, a 8 px des bords de la fenetre, sur 120 a 160 px de large. La
+   colonne de contenu (46 rem) leur laisse la place, mais tout ce qui est plus
+   large qu'elle passait dessous : le hero des pages de test (texte a 2 rem du
+   bord, image qui deborde a droite), le bloc d'avis, les tests lies, le pied
+   de page, l'article de blog. Une seule gouttiere, --gouttiere-pub, tient
+   tout ca a distance : 152 px a 1024, 176 px a partir de 1352. Le hero garde
+   sa largeur propre, plus genereuse que la colonne de contenu.
+   ═══════════════════════════════════════════════════════════════════ */
+@media (min-width: 1024px) {
+  :root { --gouttiere-pub: clamp(9.5rem, 13vw, 11rem); }
+  .quiz-page-hero > .container,
+  .hero-gradient > .container,
+  .astro-hero-section > .container,
+  footer > .container {
+    padding-left: var(--gouttiere-pub);
+    padding-right: var(--gouttiere-pub);
+  }
+  .related-tests-section > .container { max-width: min(56rem, 100vw - 2 * var(--gouttiere-pub)); }
+  #pq-reviews { max-width: min(62rem, 100vw - 2 * var(--gouttiere-pub)); }
+  .blog-article { max-width: min(52rem, 100vw - 2 * var(--gouttiere-pub)); }
+  #jeux > .container { padding-left: var(--gouttiere-pub); padding-right: var(--gouttiere-pub); }
+}
+@media (min-width: 1200px) {
+  /* L'image de tete s'aligne sur la gouttiere au lieu de deborder vers le
+     bord, et le texte prend ce qui reste a sa gauche, 640 px au plus. */
+  .quiz-hero-media {
+    right: var(--gouttiere-pub);
+    width: clamp(300px, 27vw, 480px);
+  }
+  .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto,
+  .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto {
+    max-width: min(640px, 100vw - 2 * var(--gouttiere-pub) - clamp(300px, 27vw, 480px) - 3rem);
+  }
+}
