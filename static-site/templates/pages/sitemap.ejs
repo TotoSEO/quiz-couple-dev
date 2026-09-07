@@ -5,6 +5,7 @@ const i18n = {
     subtitle: 'Retrouvez toutes les pages de Quiz Couple',
     pages: 'Pages',
     tests: 'Tests de couple',
+    singles: 'Tests célibataires',
     quizzes: 'Quiz de couple',
     tools: 'Outils',
     articles: 'Articles du blog',
@@ -15,6 +16,7 @@ const i18n = {
     subtitle: 'Find all Quiz Couple pages',
     pages: 'Pages',
     tests: 'Couple Tests',
+    singles: 'Singles tests',
     quizzes: 'Couple Quizzes',
     tools: 'Tools',
     articles: 'Blog Articles',
@@ -25,6 +27,7 @@ const i18n = {
     subtitle: 'Encuentra todas las páginas de Quiz Couple',
     pages: 'Páginas',
     tests: 'Tests de pareja',
+    singles: 'Tests para solteros',
     quizzes: 'Quiz de pareja',
     tools: 'Herramientas',
     articles: 'Artículos del blog',
@@ -35,6 +38,7 @@ const i18n = {
     subtitle: 'Alle Seiten von Quiz Couple auf einen Blick',
     pages: 'Seiten',
     tests: 'Paar-Tests',
+    singles: 'Tests für Singles',
     quizzes: 'Paar-Quiz',
     tools: 'Werkzeuge',
     articles: 'Blog-Artikel',
@@ -45,6 +49,7 @@ const i18n = {
     subtitle: 'Trova tutte le pagine di Quiz Couple',
     pages: 'Pagine',
     tests: 'Test di coppia',
+    singles: 'Test per single',
     quizzes: 'Quiz di coppia',
     tools: 'Strumenti',
     articles: 'Articoli del blog',
@@ -53,17 +58,13 @@ const i18n = {
 };
 const s = i18n[lang] || i18n.fr;
 
-// Ces trois listes doivent rester alignees sur le pied de page : le plan du
+// Ces listes doivent rester alignees sur le pied de page : le plan du
 // site n'a d'interet que s'il mene reellement a toutes les pages.
 const testLinks = [
   { routeKey: 'testCouple', labelKey: 'nav.testCouple' },
   { routeKey: 'testCommonPoints', labelKey: 'nav.testCommonPoints' },
   { routeKey: 'testCompatibilite', labelKey: 'nav.testCompatibilite' },
-  { routeKey: 'testSuisJeAmoureux', labelKey: 'nav.testSuisJeAmoureux' },
   { routeKey: 'testDistance', labelKey: 'nav.testDistance' },
-  { routeKey: 'testAmourAmitie', labelKey: 'nav.testAmourAmitie' },
-  { routeKey: 'testCrush', labelKey: 'nav.testCrush' },
-  { routeKey: 'testAmourAmi', labelKey: 'nav.testAmourAmi' },
   { routeKey: 'testFinCouple', labelKey: 'nav.testFinCouple' },
   { routeKey: 'testToxic', labelKey: 'nav.testToxic' },
   { routeKey: 'testPervers', labelKey: 'nav.testPervers' },
@@ -80,13 +81,21 @@ const testLinks = [
   { routeKey: 'testJalousie', labelKey: 'nav.testJalousie' },
   { routeKey: 'testInfidelite', labelKey: 'nav.testInfidelite' },
   { routeKey: 'testCouche', labelKey: 'nav.testCouche' },
-  { routeKey: 'testSecret', labelKey: 'nav.testSecret' },
   { routeKey: 'testAimeEncore', labelKey: 'nav.testAimeEncore' },
   { routeKey: 'testDistanceAime', labelKey: 'nav.testDistanceAime' },
   { routeKey: 'testLangageAmour', labelKey: 'nav.testLangageAmour' },
   { routeKey: 'testPersonnalite', labelKey: 'nav.testPersonnalite' },
   { routeKey: 'testAttachement', labelKey: 'nav.testAttachement' },
   { routeKey: 'testConfiance', labelKey: 'nav.testConfiance' },
+];
+// Les tests d'avant le couple, même liste que dans header.ejs.
+const celibLinks = [
+  { routeKey: 'testSuisJeAmoureux', labelKey: 'nav.testSuisJeAmoureux' },
+  { routeKey: 'testCrush', labelKey: 'nav.testCrush' },
+  { routeKey: 'testAmourAmitie', labelKey: 'nav.testAmourAmitie' },
+  { routeKey: 'testAmourAmi', labelKey: 'nav.testAmourAmi' },
+  { routeKey: 'testSecret', labelKey: 'nav.testSecret' },
+  { routeKey: 'testEx', labelKey: 'nav.testEx' },
 ];
 const quizLinks = [
   { routeKey: 'quizAmoureux', labelKey: 'nav.quizAmoureux' },
@@ -130,6 +139,7 @@ const infoLinks = [
 const _dispo = (links) => links.filter(l => getLocalizedUrl(l.routeKey, lang));
 const testLinksDispo = _dispo(testLinks);
 const quizLinksDispo = _dispo(quizLinks);
+const celibLinksDispo = _dispo(celibLinks);
 const jeuxLinksDispo = _dispo(jeuxLinks);
 const toolLinksDispo = _dispo(toolLinks);
 %>
@@ -169,6 +179,8 @@ const toolLinksDispo = _dispo(toolLinks);
           </ul>
         </div>
 
+        <!-- Quiz + Tests célibataires -->
+        <div class="space-y-6">
         <!-- Quiz -->
         <div class="rounded-2xl border border-border bg-card p-6">
           <h3 class="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
@@ -182,6 +194,21 @@ const toolLinksDispo = _dispo(toolLinks);
             <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
             <% } %>
           </ul>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-card p-6">
+          <h3 class="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-sm" style="background: hsl(var(--celib) / 0.1)">
+              <svg class="w-4 h-4" style="color: hsl(var(--celib))" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg>
+            </span>
+            <%= s.singles %>
+          </h3>
+          <ul class="space-y-2">
+            <% for (const link of celibLinksDispo) { %>
+            <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
+            <% } %>
+          </ul>
+        </div>
         </div>
 
         <!-- Jeux + Tools + Info -->

@@ -125,6 +125,9 @@
     "jeuxTitle": "Nos jeux à jouer à deux",
     "jeuxDesc": "{{n}} jeux qui se lancent sur un seul téléphone, sans inscription et sans rien préparer.",
     "jeuxCta": "Voir tous nos jeux de couple",
+    "celibEyebrow": "Célibataires",
+    "celibTitle": "Nos tests pour les célibataires",
+    "celibDesc": "Vous avez un crush, un ex qui vous trotte dans la tête ou un ami un peu trop proche ? Ces tests sont faits pour vous, avant même d'être en couple.",
     "cards": {
       "testCouple": "20 questions pour évaluer votre relation.",
       "testCommonPoints": "Avez-vous des points communs avec votre partenaire ?",

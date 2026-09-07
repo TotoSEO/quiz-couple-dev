@@ -38,17 +38,11 @@
     { routeKey: 'testDateNaissance', key: 'testDateNaissance', icon: '📅', img: 'test-astro-prenoms' },
     { routeKey: 'testKarmique', key: 'testKarmique', icon: '🔮', img: 'test-astro-prenoms' },
     { routeKey: 'testAmeSoeur', key: 'testAmeSoeur', icon: '💫', img: 'quiz-amoureux' },
-    { routeKey: 'testSuisJeAmoureux', key: 'testSuisJeAmoureux', icon: '💗', img: 'quiz-amoureux' },
-    { routeKey: 'testAmourAmitie', key: 'testAmourAmitie', icon: '🧭', img: 'quiz-amoureux' },
-    { routeKey: 'testCrush', key: 'testCrush', icon: '💘', img: 'quiz-amoureux' },
-    { routeKey: 'testAmourAmi', key: 'testAmourAmi', icon: '🧡', img: 'quiz-amoureux' },
     { routeKey: 'testJalousie', key: 'testJalousie', icon: '🫣', img: 'test-jalousie' },
     { routeKey: 'testInfidelite', key: 'testInfidelite', icon: '💔', img: 'test-jalousie' },
     { routeKey: 'testCouche', key: 'testCouche', icon: '🛏️', img: 'test-jalousie' },
-    { routeKey: 'testSecret', key: 'testSecret', icon: '💌', img: 'quiz-amoureux' },
     { routeKey: 'testAimeEncore', key: 'testAimeEncore', icon: '💞', img: 'quiz-amoureux' },
     { routeKey: 'testDistanceAime', key: 'testDistanceAime', icon: '📞', img: 'test-distance' },
-    { routeKey: 'testEx', key: 'testEx', icon: '🕰️', img: 'quiz-amoureux' },
     { routeKey: 'testChargeMentale', key: 'testChargeMentale', icon: '🧠', img: 'test-couple-sain' },
     { routeKey: 'testLangageAmour', key: 'testLangageAmour', icon: '💬', img: 'test-langage-amour' },
     { routeKey: 'testPersonnalite', key: 'testPersonnalite', icon: '💘', img: 'test-langage-amour' },
@@ -57,6 +51,15 @@
     { routeKey: 'testConfiance', key: 'testConfiance', icon: '🤝', img: 'test-confiance' },
     { routeKey: 'testPurete', key: 'testPurete', icon: '🌡️', img: 'quiz-coquin' },
     { routeKey: 'testVacances', key: 'testVacances', icon: '✈️', img: 'test-couple' },
+  ];
+  // Les tests d'avant le couple, même liste que dans header.ejs.
+  const celib = [
+    { routeKey: 'testSuisJeAmoureux', key: 'testSuisJeAmoureux', icon: '💗', img: 'quiz-amoureux' },
+    { routeKey: 'testCrush', key: 'testCrush', icon: '💘', img: 'quiz-amoureux' },
+    { routeKey: 'testAmourAmitie', key: 'testAmourAmitie', icon: '🧭', img: 'quiz-amoureux' },
+    { routeKey: 'testAmourAmi', key: 'testAmourAmi', icon: '🧡', img: 'quiz-amoureux' },
+    { routeKey: 'testSecret', key: 'testSecret', icon: '💌', img: 'quiz-amoureux' },
+    { routeKey: 'testEx', key: 'testEx', icon: '🕰️', img: 'quiz-amoureux' },
   ];
   const quizzes = [
     { routeKey: 'quizAmoureux', key: 'quizAmoureux', icon: '❤️', img: 'quiz-amoureux' },
@@ -89,6 +92,7 @@
 
   // Filter out tests/quizzes not available in current language
   const testsFiltered = tests.filter(item => getLocalizedUrl(item.routeKey, lang));
+  const celibFiltered = celib.filter(item => getLocalizedUrl(item.routeKey, lang));
   const quizzesFiltered = quizzes.filter(item => getLocalizedUrl(item.routeKey, lang));
   const jeuxFiltered = jeux.filter(item => getLocalizedUrl(item.routeKey, lang));
 
@@ -364,6 +368,61 @@
         </div>
       </div>
     </div>
+
+    <% if (celibFiltered.length) { %>
+    <div class="quiz-section-divider">
+      <div class="quiz-section-divider-line"></div>
+      <div class="quiz-section-divider-line"></div>
+    </div>
+
+    <!-- Tests célibataires -->
+    <div class="quiz-section-block quiz-section-celib">
+      <div class="quiz-section-block-inner">
+        <div class="bloc-entete">
+          <span class="bloc-pastille">✨ <%= t('home:quizGrid.celibEyebrow', 'Célibataires') %></span>
+          <h2 class="bloc-titre"><%= t('home:quizGrid.celibTitle', 'Nos tests pour les célibataires') %></h2>
+          <span class="bloc-trait" aria-hidden="true"></span>
+          <p class="bloc-sous-titre"><%= t('home:quizGrid.celibDesc', '') %></p>
+        </div>
+        <div class="quiz-slider" data-slider>
+          <button type="button" class="quiz-slider__nav quiz-slider__nav--prev" data-slider-prev aria-label="<%= t('common:buttons.previous', 'Précédent') %>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="quiz-slider__track" data-slider-track>
+          <% for (let ci = 0; ci < celibFiltered.length; ci++) { const item = celibFiltered[ci];
+             const _f = quizFeatured && quizFeatured[item.routeKey];
+             const cTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key));
+             const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
+             const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : cTitle; %>
+          <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
+            <div class="quiz-bubble-card quiz-bubble-card--celib">
+              <div class="quiz-bubble-media">
+                <img src="<%= fImg %>" alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
+                <span class="quiz-bubble-chip"><%= item.icon %></span>
+              </div>
+              <div class="quiz-bubble-body">
+                <h3 class="quiz-bubble-title"><%= cTitle %></h3>
+                <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
+                <span class="quiz-bubble-cta quiz-bubble-cta--celib">
+                  <%= t('common:buttons.startTest', 'Faire le test') %>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <% } %>
+          </div>
+          <button type="button" class="quiz-slider__nav quiz-slider__nav--next" data-slider-next aria-label="<%= t('common:buttons.next', 'Suivant') %>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+          <div class="quiz-slider__pied" aria-hidden="true">
+            <div class="quiz-slider__barre"><span class="quiz-slider__avance"></span></div>
+            <span class="quiz-slider__compteur" data-slider-compteur></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %>
 
     <!-- Visual separator between tests and quizzes -->
     <div class="quiz-section-divider">

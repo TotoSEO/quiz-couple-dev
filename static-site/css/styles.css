@@ -15,6 +15,10 @@
   --primary: 338 72% 62%;
   --primary-foreground: 0 0% 100%;
   --secondary: 265 55% 58%;
+  /* Famille « Tests célibataires » (menu, accueil, plan du site) : un
+     turquoise fixe, lisible sur les deux thèmes, distinct du vert des jeux
+     de l'accueil et de l'orange du menu Jeux. */
+  --celib: 186 62% 38%;
   --secondary-foreground: 265 60% 20%;
   --muted: 280 20% 92%;
   --muted-foreground: 280 15% 45%;
@@ -1290,8 +1294,8 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* ── Navigation : en-tête à deux niveaux ──────────────────
    Niveau 1 : identité et outillage (logo, liens directs, langue, thème).
-   Niveau 2 : les trois familles (Tests, Quiz, Jeux), la pastille du test de
-   pureté et le bouton des activités.
+   Niveau 2 : les quatre familles (Tests de couple, Tests célibataires, Quiz,
+   Jeux), la pastille du test de pureté et le bouton des activités.
    Chaque famille porte sa couleur dans la variable --cat, posée sur le bloc
    dans le gabarit : tout ce qui suit (onglet, panneau, puce, accordéon) se
    teinte tout seul, sans dupliquer une règle par catégorie.
@@ -1447,9 +1451,11 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .entete-n1-liens { display: flex; align-items: center; gap: 0.25rem; margin-left: auto; }
   .entete-onglets { display: flex; align-items: center; gap: 0.3rem; width: 100%; height: 3.4rem; }
 }
-/* Fenêtres bureau étroites : la barre passait 93 px trop large à 1024. Les
-   compteurs s'effacent et tout se resserre d'un cran, rien ne disparaît. */
-@media (min-width: 1024px) and (max-width: 1249.98px) {
+/* Fenêtres bureau étroites. Avec quatre familles, la barre déborde jusqu'à
+   1440 px (de 99 px en français à 1280, de 156 px en espagnol, la langue la
+   plus longue) : jusqu'à ce seuil les compteurs s'effacent et tout se
+   resserre d'un cran, rien ne disparaît. */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
   .entete-onglets { gap: 0.1rem; }
   .n2-onglet { font-size: 0.8125rem; padding: 0 0.45rem 0 0.3rem; gap: 0.4rem; }
   .n2-onglet--scinde { padding: 0; }
@@ -1460,6 +1466,18 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .nav-vedette { font-size: 0.78125rem; padding: 0 0.6rem 0 0.5rem; }
   .nav-cta-btn { font-size: 0.78125rem; padding: 0 0.8rem; margin-left: 0.25rem; }
   .n1-lien { font-size: 0.78125rem; padding: 0 0.55rem; }
+}
+/* Sous 1180 px, resserrer ne suffit plus (jusqu'à 187 px de trop en espagnol
+   à 1024) : les pastilles d'icône des onglets s'effacent et le bouton des
+   activités passe à son libellé court. Les libellés des familles, eux,
+   restent entiers. */
+.nav-cta-texte--court { display: none; }
+@media (min-width: 1024px) and (max-width: 1179.98px) {
+  .n2-onglet-ic { display: none; }
+  .n2-onglet { padding-left: 0.45rem; }
+  .n2-onglet--scinde .nav-trigger-lien { padding-left: 0.45rem; }
+  .nav-cta-texte { display: none; }
+  .nav-cta-texte--court { display: inline; }
 }
 @media (min-width: 1024px) {
 
@@ -1640,6 +1658,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .nav-megamenu--tests { width: 54rem; }
 .nav-megamenu--quiz { width: 33rem; }
 .nav-megamenu--jeux { width: 33rem; }
+.nav-megamenu--celib { width: 33rem; }
 @keyframes menuDeplie {
   from { opacity: 0; transform: translateY(8px) scale(0.985); }
 }
@@ -4161,6 +4180,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .quiz-section-tests { --bloc-accent: 340 65% 60%; }
 .quiz-section-quizzes { --bloc-accent: 270 45% 55%; }
 .quiz-section-jeux { --bloc-accent: 160 48% 40%; }
+.quiz-section-celib { --bloc-accent: var(--celib); }
 @media (max-width: 640px) {
   .quiz-section-block { padding: 2rem .85rem 1.5rem; border-radius: 1.25rem; }
 }
@@ -4237,6 +4257,12 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
     0 22px 44px -14px hsl(var(--secondary) / 0.28),
     0 8px 16px -4px rgba(0,0,0,0.06);
 }
+.quiz-bubble-card--celib:hover {
+  border-color: hsl(var(--celib) / 0.3);
+  box-shadow:
+    0 22px 44px -14px hsl(var(--celib) / 0.28),
+    0 8px 16px -4px rgba(0,0,0,0.06);
+}
 
 /* ── Card image banner ── */
 .quiz-bubble-media {
@@ -4284,6 +4310,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 }
 .quiz-bubble-card:hover .quiz-bubble-title { color: hsl(var(--primary)); }
 .quiz-bubble-card--quiz:hover .quiz-bubble-title { color: hsl(var(--secondary)); }
+.quiz-bubble-card--celib:hover .quiz-bubble-title { color: hsl(var(--celib)); }
 .quiz-bubble-desc {
   font-size: 0.8125rem; color: hsl(var(--muted-foreground)); line-height: 1.55; margin-bottom: 1rem; flex: 1;
 }
@@ -4301,6 +4328,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 }
 .quiz-bubble-cta svg { width: 0.875rem; height: 0.875rem; flex-shrink: 0; }
 .quiz-bubble-cta--quiz { color: hsl(var(--secondary)); }
+.quiz-bubble-cta--celib { color: hsl(var(--celib)); }
 .quiz-bubble-card:hover .quiz-bubble-cta { gap: 0.625rem; }
 .quiz-bubble-card--quiz:hover .quiz-bubble-cta--quiz { box-shadow: none; }
 
