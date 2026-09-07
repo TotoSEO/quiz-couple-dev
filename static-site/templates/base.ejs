@@ -409,8 +409,10 @@
   <%# Le double skyrail vit dans les gouttieres, a cote du contenu et jamais
       dedans. Il ne prend aucune place dans le flux et ne decale rien : c'est
       le seul format qu'on peut poser sans rien reserver. Il se place lui-meme
-      et ne s'affiche que sur les ecrans assez larges pour l'accueillir. %>
-  <% if (avecPub) { %>
+      et ne s'affiche que sur les ecrans assez larges pour l'accueillir.
+      Pas sur l'accueil : ses blocs vont d'un bord a l'autre (curseurs,
+      bandeau, grille), et le skyrail se posait par-dessus le contenu. %>
+  <% if (avecPub && routeKey !== 'home') { %>
   <%- include('partials/pub', { format: 4 }) %>
   <% } %>
 
