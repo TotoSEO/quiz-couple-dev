@@ -29,7 +29,7 @@ const article: BlogArticleData = {
 <p><strong>Responde también a tus propias preguntas:</strong> Si le preguntas por su peor noche, sigue con la tuya, sobre todo si es ridícula. Es el intercambio lo que crea conexión, no la recogida de información. Y atreverte a contar algo que no te deja bien es precisamente lo que te hace distinto de las otras conversaciones que ella tiene ahora.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Preguntas a evitar, ya que estamos</p>
-<p>«¿Por qué estás soltera?» (la ha oído cien veces, y no tiene buena respuesta). «¿Cómo era tu ex?» (demasiado pronto, siempre). El sueldo, el peso, «¿buscas algo serio?» en el segundo mensaje. Ten en mente un principio simple: si la pregunta parece una criba de candidatas, mata la magia.</p>
+<p>«<a href="/es/test-por-que-no-encuentro-el-amor/">¿Por qué estás soltera?</a>» (la ha oído cien veces, y no tiene buena respuesta). «¿Cómo era tu ex?» (demasiado pronto, siempre). El sueldo, el peso, «¿buscas algo serio?» en el segundo mensaje. Ten en mente un principio simple: si la pregunta parece una criba de candidatas, mata la magia.</p>
 </aside>
 <div><table><thead><tr><th>La regla</th><th>Por qué lo cambia todo</th></tr></thead><tbody>
 <tr><td>Una pregunta cada vez</td><td>Dos seguidas y se convierte en un formulario</td></tr>

@@ -374,6 +374,7 @@
     "jeuOuiNon": "Yes or no",
     "testAimeEncore": "Does he or she still love me test",
     "testEmprise": "Coercive control test",
+    "testTrouverAmour": "Why can't I find love test",
     "testAmourAmi": "In love with my best friend test",
     "jeuPhrases": "Finish the sentence"
   },
@@ -740,5 +741,10 @@
     "annulerNon": "No, keep playing",
     "annulee": "The game was cancelled by {{nom}}.",
     "retourTest": "Back to the test"
+  },
+  "trouver-amour": {
+    "introQuestion": "Before you start:",
+    "introQuote": "Answer the way you actually do things, not the way you wish you did.",
+    "disclaimer": "This test does not say who you are. It looks at what gets in the way between you and meeting someone today, and that can change. Your answers are not stored."
   }
 }

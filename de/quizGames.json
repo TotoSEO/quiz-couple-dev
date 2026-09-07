@@ -374,6 +374,7 @@
     "jeuOuiNon": "Ja oder Nein",
     "testAimeEncore": "Test Liebt er oder sie mich noch",
     "testEmprise": "Test psychische Kontrolle",
+    "testTrouverAmour": "Test Warum finde ich keine Liebe",
     "testAmourAmi": "Test in besten Freund verliebt",
     "jeuPhrases": "Sätze vervollständigen"
   },
@@ -740,5 +741,10 @@
     "annulerNon": "Nein, weiterspielen",
     "annulee": "{{nom}} hat das Spiel abgebrochen.",
     "retourTest": "Zurück zum Test"
+  },
+  "trouver-amour": {
+    "introQuestion": "Bevor du anfängst:",
+    "introQuote": "Antworte so, wie du es wirklich machst, nicht so, wie du es gern machen würdest.",
+    "disclaimer": "Dieser Test sagt nicht, wer du bist. Er schaut darauf, was heute zwischen dir und einer Begegnung hakt, und das kann sich ändern. Deine Antworten werden nicht gespeichert."
   }
 }

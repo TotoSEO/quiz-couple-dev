@@ -29,7 +29,7 @@ const article: BlogArticleData = {
 <p><strong>Réponds aussi à tes propres questions :</strong> Si tu lui demandes son pire souvenir de soirée, enchaîne avec le tien, surtout s'il est ridicule. C'est l'échange qui crée la connexion, pas la collecte d'informations. Et puis, par exemple, oser raconter un truc pas à ton avantage, c'est précisément ce qui te rend différent des autres conversations qu'elle a en ce moment.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Les questions à éviter, tant qu'on y est</p>
-<p>« Pourquoi t'es célibataire ? » (elle l'a entendue cent fois, et c'est un piège sans bonne réponse). « C'était quoi ton ex ? » (trop tôt, toujours). Le salaire, le poids, « t'es plutôt relation sérieuse ou pas ? » dès le deuxième message. Garde en tête un principe simple : si la question ressemble à un tri de candidature, elle tue la magie.</p>
+<p>« <a href="/test-pourquoi-je-ne-trouve-pas-l-amour/">Pourquoi t'es célibataire ?</a> » (elle l'a entendue cent fois, et c'est un piège sans bonne réponse). « C'était quoi ton ex ? » (trop tôt, toujours). Le salaire, le poids, « t'es plutôt relation sérieuse ou pas ? » dès le deuxième message. Garde en tête un principe simple : si la question ressemble à un tri de candidature, elle tue la magie.</p>
 </aside>
 <div><table><thead><tr><th>La règle</th><th>Pourquoi elle change tout</th></tr></thead><tbody>
 <tr><td>Une question à la fois</td><td>Deux questions d'affilée, et ça devient un formulaire</td></tr>

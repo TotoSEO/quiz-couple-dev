@@ -373,5 +373,11 @@
     "metaTitle": "¿Estás enamorado/a de tu mejor amigo/a? Test online",
     "description": "Quince preguntas para saber si lo que sientes por tu mejor amigo o amiga sigue siendo amistad, o ya es otra cosa.",
     "metaDescription": "¿Estoy enamorado/a de mi mejor amigo/a? Quince preguntas que pesan cada una lo suyo, dos series según tu amigo sea un chico o una chica, y un resultado inmediato."
+  },
+  "testTrouverAmour": {
+    "title": "Test para solteros: ¿Por qué no encuentras el amor?",
+    "shortTitle": "¿Por qué no encuentro el amor?",
+    "description": "Quince preguntas sobre la gente que conoces, lo que esperas y lo que te frena. El resultado pone nombre a lo que falla, sin juzgar.",
+    "metaDescription": "¿Por qué no encuentras el amor? Quince preguntas sobre la gente que conoces, lo que esperas y lo que te frena, para entender qué falla. Test gratis, resultado inmediato y pistas para lo que viene después."
   }
 }

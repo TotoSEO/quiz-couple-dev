@@ -376,6 +376,7 @@
     "jeuOuiNon": "Oui ou non",
     "testAimeEncore": "Test m'aime-t-il encore",
     "testEmprise": "Test emprise psychologique",
+    "testTrouverAmour": "Test pourquoi je ne trouve pas l'amour",
     "testAmourAmi": "Test amoureux de mon meilleur ami",
     "jeuPhrases": "Phrases à compléter"
   },
@@ -742,5 +743,10 @@
     "annulerNon": "Non, continuer",
     "annulee": "La partie a été annulée par {{nom}}.",
     "retourTest": "Revenir au test"
+  },
+  "trouver-amour": {
+    "introQuestion": "Avant de commencer :",
+    "introQuote": "Répondez comme vous faites en vrai, pas comme vous aimeriez faire.",
+    "disclaimer": "Ce test ne dit pas qui vous êtes. Il regarde ce qui coince aujourd'hui entre vous et la rencontre, et ça peut changer. Vos réponses ne sont pas enregistrées."
   }
 }

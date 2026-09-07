@@ -373,5 +373,11 @@
     "metaTitle": "Ami il tuo migliore amico o la tua migliore amica? Test online",
     "description": "Quindici domande per capire se quello che provi per il tuo migliore amico o la tua migliore amica è ancora amicizia, o già qualcos'altro.",
     "metaDescription": "Sono innamorato/a del mio migliore amico o della mia migliore amica? Quindici domande che pesano ognuna la sua parte, due serie a seconda che il tuo amico sia un ragazzo o una ragazza, e un risultato immediato."
+  },
+  "testTrouverAmour": {
+    "title": "Test per single: perché non trovi l'amore?",
+    "shortTitle": "Perché non trovo l'amore?",
+    "description": "Quindici domande sulle persone che incontri, su quello che ti aspetti e su quello che ti frena. Il risultato dà un nome a quello che si inceppa, senza giudicare.",
+    "metaDescription": "Perché non trovi l'amore? Quindici domande sulle persone che incontri, su quello che ti aspetti e su quello che ti frena, per capire che cosa si inceppa. Test gratuito, risultato immediato e qualche pista per il dopo."
   }
 }

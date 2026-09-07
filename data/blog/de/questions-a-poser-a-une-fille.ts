@@ -29,7 +29,7 @@ const article: BlogArticleData = {
 <p><strong>Beantworte deine eigenen Fragen mit:</strong> Wenn du nach ihrem schlimmsten Abend fragst, erzähl auch deinen, vor allem wenn er peinlich ist. Der Austausch schafft Verbindung, nicht das Sammeln von Informationen. Und dich zu trauen, etwas zu erzählen, das dich nicht im besten Licht zeigt, ist genau das, was dich von den anderen Gesprächen unterscheidet, die sie gerade führt.</p>
 <aside class="blog-tip-box">
 <p class="blog-tip-box-title">⚠️ Fragen, die du besser lässt</p>
-<p>«Warum bist du eigentlich Single?» (hat sie hundertmal gehört, und es gibt keine gute Antwort darauf). «Wie war dein Ex so?» (immer zu früh). Gehalt, Gewicht, «suchst du was Ernstes?» in der zweiten Nachricht. Merk dir ein einfaches Prinzip: Wenn die Frage wie ein Bewerbungsraster klingt, ist der Zauber weg.</p>
+<p>«<a href="/de/warum-finde-ich-keine-liebe-test/">Warum bist du eigentlich Single?</a>» (hat sie hundertmal gehört, und es gibt keine gute Antwort darauf). «Wie war dein Ex so?» (immer zu früh). Gehalt, Gewicht, «suchst du was Ernstes?» in der zweiten Nachricht. Merk dir ein einfaches Prinzip: Wenn die Frage wie ein Bewerbungsraster klingt, ist der Zauber weg.</p>
 </aside>
 <div><table><thead><tr><th>Die Regel</th><th>Warum sie alles verändert</th></tr></thead><tbody>
 <tr><td>Eine Frage nach der anderen</td><td>Zwei hintereinander und es wird ein Formular</td></tr>

@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "badge": "Test per single",
+    "title": "15 domande per capire perché non trovi l'amore",
+    "titleHighlight": "perché non trovi l'amore",
+    "description": "Sei single da un po' e non capisci perché. Questo test guarda <strong>le persone che incontri, quello che ti aspetti e quello che ti frena</strong>, e dà un nome a quello che si inceppa. Gratuito, risultato immediato.",
+    "subtitle": "Quindici domande, due minuti, nessuno vede le tue risposte",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Perché non trovi l'amore: che cosa guarda questo test",
+    "intro": "Sei single da un po'. Non sei difficile, non chiedi la luna, e tuttavia non succede.",
+    "p1": "La domanda «perché non trovo l'amore?» viene a molte persone, e spesso nello stesso momento: dopo una storia che non ha funzionato, o quando tutti gli amici si mettono in coppia. Allora ci si mette a cercare una spiegazione. Troppo esigente? Non abbastanza? Sfortuna? La maggior parte delle volte non è nessuna delle tre.",
+    "p2": "Questo test fa quindici domande su situazioni che conosci: una serata in cui non conosci nessuno, qualcuno che ti piace ma non rientra nei tuoi criteri, un messaggio che resta senza risposta, una relazione che si fa seria. Le tue risposte disegnano quello che succede tra te e l'incontro.",
+    "p3": "Alla fine hai un risultato su quattro livelli, dal più semplice (ti mancano le occasioni) al più profondo (il posto è ancora occupato). Ogni livello arriva con una lettura e una pista. Non dice chi sei, dice che cosa si inceppa oggi. E questo può cambiare!"
+  },
+  "section2": {
+    "title": "Le sei ragioni che tornano più spesso",
+    "pillar1Title": "Poche occasioni",
+    "pillar1Text": "È la ragione più banale e la più frequente. Tra il lavoro, casa e gli stessi amici, si possono passare mesi senza parlare con qualcuno di nuovo. Nessuna app sostituisce questo.",
+    "pillar2Title": "Una lista troppo precisa",
+    "pillar2Text": "L'età, l'altezza, il lavoro, la città, il modo di vestirsi... Ogni criterio si difende, ma messi insieme non lasciano passare nessuno. E spesso descrivono qualcuno che si è già conosciuto.",
+    "pillar3Title": "Un ex ancora presente",
+    "pillar3Text": "Si può essere single da due anni e non essere liberi. Finché si confronta, finché si guarda che cosa fa l'altro, il posto è occupato. Le nuove conoscenze lo sentono, anche senza saperlo.",
+    "pillar4Title": "La paura che si faccia seria",
+    "pillar4Text": "Tutto va bene per tre settimane, poi si trovano difetti, si rallenta, ci si allontana. Non è stanchezza, è una protezione. Viene spesso da una storia vecchia, nella coppia o in famiglia.",
+    "pillar5Title": "Il dubbio su quanto si vale",
+    "pillar5Text": "Quando una persona che vale si interessa a te e il tuo primo pensiero è «resterà deluso», parti già perdente. Ci si rende meno disponibili, si mette alla prova l'altro, ci si ritira prima di essere lasciati.",
+    "pillar6Title": "Un modo di legarsi che fa scappare, o che scappa",
+    "pillar6Text": "Alcuni si legano troppo in fretta e troppo forte, con il bisogno di essere rassicurati a ogni messaggio. Altri prendono le distanze appena l'altro si avvicina. Questi due modi di legarsi si imparano presto, e si capiscono."
+  },
+  "section3": {
+    "title": "Quello che ci diciamo, e quello che succede",
+    "intro": "La stessa vita da single si racconta in diversi modi. Ecco quello che ci si dice spesso, e quello che nasconde la maggior parte delle volte.",
+    "headerScore": "Quello che ci diciamo",
+    "headerLevel": "Quello che spesso nasconde",
+    "headerAnalysis": "Quello che aiuta",
+    "row1Score": "«Non incontro nessuno»",
+    "row1Level": "Una settimana senza facce nuove",
+    "row1Analysis": "Un'attività regolare, non una serata in più",
+    "row2Score": "«Sono troppo esigente»",
+    "row2Level": "Una lista che descrive un ex",
+    "row2Analysis": "Un appuntamento fuori dai criteri, per vedere",
+    "row3Score": "«Non dura mai»",
+    "row3Level": "La distanza appena si fa seria",
+    "row3Analysis": "Restare una settimana in più, e guardare che cosa succede",
+    "row4Score": "«Non piaccio»",
+    "row4Level": "Il dubbio su di sé, che si vede",
+    "row4Analysis": "Lasciare che sia l'altro a decidere se è deluso o no",
+    "row5Score": "«Sto bene da solo»",
+    "row5Level": "Un rifugio, a volte",
+    "row5Analysis": "Chiedersi da che cosa ci si protegge"
+  },
+  "section4": {
+    "title": "Da dove cominciare, secondo il tuo risultato",
+    "p1": "Il risultato ti colloca su un livello. Ecco la prima cosa da fare per ciascuno.",
+    "sub1Title": "Ti mancano le occasioni",
+    "sub1P1": "Cambia scenario una volta a settimana: un corso, un'associazione, uno sport di squadra, un posto dove incroci più volte le stesse persone. È la ripetizione che crea gli incontri, non la serata eccezionale.",
+    "sub2Title": "Un riflesso ti frena",
+    "sub2P1": "Fai una volta il contrario di quello che fai di solito. Riscrivi tu per primo. Di' di sì a qualcuno che non ti ha colpito subito. La maggior parte delle coppie solide non è cominciata con un colpo di fulmine.",
+    "sub3Title": "Ti proteggi",
+    "sub3P1": "Cerca da dove viene la protezione prima di forzarla. Un <a href=\"/it/test-stile-attaccamento/\">test sul tuo modo di legarti</a> è un buon punto di partenza, e se la parola «futuro» ti fa fare un passo indietro, <a href=\"/it/blog/paura-dell-impegno/\">la paura dell'impegno</a> si capisce meglio di quanto si creda.",
+    "sub4Title": "Il posto è occupato",
+    "sub4P1": "Non forzare l'incontro. Occupati prima di quello che occupa il posto: un ex, una mancanza, una paura. E parlane, con un amico o con un professionista. Non è un'ammissione di debolezza, è solo più veloce in due.",
+    "tip": "Questo test parla di te, non degli altri. Se ti chiedi piuttosto che cosa prova una persona precisa, <a href=\"/it/mi-ama-in-segreto-test/\">sapere se ti ama in segreto</a> è un'altra domanda, e un altro test."
+  },
+  "section5": {
+    "title": "Come funziona questo test",
+    "p1": "Quindici situazioni, quattro risposte ogni volta, dalla più aperta alla più chiusa. Non c'è una risposta giusta: rispondi come fai davvero, non come vorresti fare. Ci vogliono due minuti.",
+    "p2": "Ogni risposta vale dei punti, e alcune domande pesano di più: quelle sul tuo ex, su quello che succede quando si fa seria e su quello che credi di valere. Sono quelle che dicono di più. Il tuo punteggio ti colloca su uno dei quattro livelli, con una lettura e una pista per ciascuno."
+  },
+  "seo": {
+    "faqTitle": "Le domande che ci si fa",
+    "faq1Q": "Perché non trovo l'amore anche se faccio di tutto?",
+    "faq1A": "Perché «tutto» spesso è la stessa cosa ripetuta: le stesse app, le stesse serate, lo stesso tipo di persona. Questo test guarda proprio quello che si ripete. E a volte fare molti sforzi è un modo per non guardare quello che blocca sotto: la paura che funzioni, o una storia non finita.",
+    "faq2Q": "È normale essere single a 30 anni, a 40?",
+    "faq2A": "Sì. L'età in cui ci si mette in coppia arretra da anni, e molte persone vivono diversi periodi da single nella vita. Quello che conta non è l'età, è sapere se questa vita da single ti va bene o ti pesa. Se a pesare è lo sguardo degli altri, il problema non è tuo.",
+    "faq3Q": "Perché non piaccio agli uomini, o alle donne?",
+    "faq3A": "La maggior parte delle volte non è una questione di piacere. Chi dubita di sé si rende meno disponibile, ascolta meno, mette alla prova l'altro senza rendersene conto, e l'altro lo sente. Il test ha diverse domande su questo. Se il risultato indica l'autostima, è da lì che bisogna cominciare, non dal tuo aspetto.",
+    "faq4Q": "Faccio paura agli uomini?",
+    "faq4A": "Molte donne si fanno questa domanda, spesso dopo un commento sentito una volta. Una persona sicura di sé, con una vita piena, fa scappare quelli che cercavano qualcuno da dominare. Non è una perdita. Quello che può disturbare, invece, è condurre un primo appuntamento come un colloquio di lavoro. È la domanda dieci del test.",
+    "faq5Q": "Sono fatto per la coppia o per stare da solo?",
+    "faq5A": "Alcune persone sono felici da sole, e questo test non cerca di convincerle del contrario. La differenza si vede in una cosa: la vita da single ti va bene, o ti protegge? Se stai bene da solo e l'incontro non ti fa paura, sei fatto per quello che vivi. Se stai bene da solo «almeno», quella parolina merita uno sguardo.",
+    "faq6Q": "Come conoscere qualcuno quando non si esce?",
+    "faq6A": "Rendendo regolare quello che non lo è. Un'attività settimanale in cui rivedi le stesse persone fa più di dieci serate. Le app possono aiutare, a patto di passare presto al vero appuntamento. E per quel primo appuntamento, avere <a href=\"/it/domande-primo-appuntamento/\">qualche domanda da fare</a> evita il colloquio di lavoro."
+  },
+  "jsonLd": {
+    "about": "vita da single e incontro amoroso"
+  }
+}
