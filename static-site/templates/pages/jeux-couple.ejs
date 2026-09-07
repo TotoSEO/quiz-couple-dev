@@ -20,7 +20,11 @@
     { routeKey: 'jeuPhrases',         cle: 'phrases',          emoji: '💬', accent: '256 50% 56%', img: 'deux-bulles-phrase' }
   ].map(function(j) {
     j.url = getLocalizedUrl(j.routeKey, lang);
+    // L'image de tete est celle de QUIZ_FEATURED (build/config.js), la meme
+    // que sur la page du jeu et sur l'accueil : le nom ecrit ici n'est qu'un
+    // repli si la route n'y est pas declaree.
     const f = quizFeatured && quizFeatured[j.routeKey];
+    if (f && f.file) j.img = f.file;
     j.alt = f ? (f.alt[lang] || f.alt.fr) : '';
     return j;
   }).filter(function(j) { return j.url; });
