@@ -14,7 +14,7 @@
   var currentArticle = null;
   var currentLang = 'fr';
   var translationCache = {}; // { "articleId-lang": { ... } }
-  var currentTab = 'stats';
+  var currentTab = 'trafic';
   var allLeads = [];
   var allMessages = [];
   var currentMessageFilter = 'all';
@@ -273,8 +273,9 @@
     // paresseux.
     if (allLeads.length === 0) loadLeads();
     if (allMessages.length === 0) loadMessages();
-    // L'onglet ouvert a l'arrivee est celui des parties : c'est le tableau
-    // de bord qu'on vient lire, les avis attendent derriere.
+    // L'onglet ouvert a l'arrivee est celui du trafic : c'est le chiffre
+    // qu'on vient regarder en premier le matin. Les parties, les avis et le
+    // reste attendent derriere, dans l'ordre du menu.
     switchTab(currentTab);
     majFraicheur();
     var elDate = document.getElementById('adm-date');
@@ -1298,15 +1299,15 @@
     svg.classList.remove('est-vide');
   }
   // Le delta du jour par rapport a hier, en etiquette a cote du chiffre.
-  function etiquetteDelta(id, aujourdhui, hier) {
+  function etiquetteDelta(id, aujourdhui, hier, libelle) {
     var el = document.getElementById(id);
     if (!el) return;
     if (aujourdhui === null || hier === null || aujourdhui === undefined || hier === undefined) { el.classList.add('hidden'); return; }
     var d = aujourdhui - hier;
     el.classList.remove('hidden', 'est-plus', 'est-moins');
     if (d > 0) el.classList.add('est-plus'); else if (d < 0) el.classList.add('est-moins');
-    el.textContent = (d > 0 ? '+' : '') + d.toLocaleString('fr-FR') + ' vs hier';
-    el.title = 'Hier : ' + hier.toLocaleString('fr-FR');
+    el.textContent = (d > 0 ? '+' : '') + d.toLocaleString('fr-FR') + ' ' + (libelle || 'vs hier');
+    el.title = (libelle ? 'Période précédente : ' : 'Hier : ') + hier.toLocaleString('fr-FR');
   }
   var courbesVisibles = { lances: true, finis: true, ratio: true };
 
@@ -2201,6 +2202,34 @@
   var TXT_ATTENTE = 'Aucune visite enregistrée sur la période. La mesure démarre au premier déploiement : les journées antérieures resteront vides.';
   var TXT_ERREUR = 'La table de mesure n\'a pas encore été créée dans Supabase. Appliquez la migration page_views, puis rechargez.';
 
+  // Variation par rapport a la periode qui precede, a cote des deux chiffres
+  // du haut. La serie quotidienne est deja chargee pour la courbe : la vue du
+  // jour se compare a hier, la vue a sept jours aux sept jours d'avant. Au
+  // dela, cette serie (quatorze jours au minimum, la periode sinon) ne remonte
+  // pas assez loin pour comparer a periode egale, et l'etiquette disparait
+  // plutot que d'afficher un ecart calcule sur une fenetre incomplete.
+  //
+  // La comparaison porte sur des journees entieres, comme celle de l'onglet
+  // Parties : a dix heures du matin, la journee en cours est forcement en
+  // retard sur la precedente.
+  function traficDeltas() {
+    var n = traficPeriode;
+    if (n !== 1 && n * 2 > joursCourbeTrafic()) return null;
+    var par = {};
+    (traficDonnees ? traficDonnees.daily : []).forEach(function (l) {
+      par[String(l.day).slice(0, 10)] = { visites: Number(l.visites) || 0, vues: Number(l.pages_vues) || 0 };
+    });
+    function somme(depuis, jours) {
+      var t = { visites: 0, vues: 0 };
+      for (var i = depuis; i < depuis + jours; i++) {
+        var v = par[isoNJoursAvant(i)];
+        if (v) { t.visites += v.visites; t.vues += v.vues; }
+      }
+      return t;
+    }
+    return { actuel: somme(0, n), avant: somme(n, n), libelle: n === 1 ? null : 'vs ' + n + ' j préc.' };
+  }
+
   function renderTraficKpis() {
     var r = (traficDonnees && traficDonnees.resume) || null;
     var visites = r ? Number(r.visites) : 0;
@@ -2216,6 +2245,9 @@
     if (sub) sub.textContent = traficPeriode === 1 ? "aujourd'hui" : 'sur ' + traficPeriode + ' jours';
     var rsub = document.getElementById('trafic-rebond-sub');
     if (rsub) rsub.textContent = visites ? nb(une) + ' visites d\'une seule page' : 'des visites repartent sans cliquer';
+    var d = traficDeltas();
+    etiquetteDelta('adm-delta-trafic-visites', d ? d.actuel.visites : null, d ? d.avant.visites : null, d && d.libelle);
+    etiquetteDelta('adm-delta-trafic-vues', d ? d.actuel.vues : null, d ? d.avant.vues : null, d && d.libelle);
   }
 
   // ── Courbe ─────────────────────────────────────────────────────────────
