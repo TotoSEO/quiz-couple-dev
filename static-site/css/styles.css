@@ -7525,13 +7525,26 @@ body.quiz-has-result .related-tests-section { display: none !important; }
    bouton maintenus sur une ligne, et un décor en inset négatif.
    ══════════════════════════════════════════════════════════════ */
 
-/* « Datenschutzerklärung » en text-3xl mesure 370 px : sans césure, un
-   seul mot composé fait déborder toute la page. hyphens s'appuie sur le
-   lang du document, donc la coupure suit les règles de la langue. */
+/* Un mot ne se coupe jamais au milieu pour tenir sur la ligne : il passe
+   entier à la ligne suivante. « hyphens: auto » posait une césure dans les
+   titres (« déco- / mposition »), ce qui se lit mal et fait tache dans un H1.
+   « overflow-wrap: break-word » reste, mais il ne s'applique qu'en dernier
+   recours, quand le mot est à lui seul plus large que la ligne entière :
+   c'est le cas des composés allemands (« Datenschutzerklärung » mesure
+   370 px en text-3xl), qui feraient sinon déborder toute la page à 360 px. */
 h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   overflow-wrap: break-word;
-  hyphens: auto;
+  hyphens: manual;
 }
+/* Deux endroits font exception, parce qu'un mot y est plus large que la ligne
+   entière : la couper reste le seul moyen de ne pas faire déborder la page, et
+   autant qu'elle porte un trait d'union plutôt que de tomber en plein milieu
+   d'une lettre. Les composés allemands d'abord (« Datenschutzerklärung »
+   mesure 370 px pour 328 px disponibles à 360 px, et l'allemand coupe ses mots
+   par convention), les étiquettes des cartes de catégories ensuite, larges de
+   116 px pour « Entretenimiento ». La coupure suit le lang du document. */
+:lang(de) h1, :lang(de) h2, :lang(de) h3, :lang(de) h4,
+.cat-carte-titre { hyphens: auto; }
 
 /* .btn force white-space: nowrap, ce qui fait sortir de l'écran les
    libellés longs (« Meinen Standort verwenden », « Commencer le quiz
