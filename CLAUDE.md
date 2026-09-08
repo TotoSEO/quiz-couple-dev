@@ -106,7 +106,7 @@ aux quatre endroits, dans la même famille.
 
 ## Quiz Engine Types
 
-- `SoloTest` — Single player, points-based (toxic, divorce, mariage, genant, jalousie, attachement, confiance)
+- `SoloTest` — Single player, points-based (toxic, divorce, mariage, genant, jalousie, attachement, confiance). Points par défaut = rang de la réponse (3, 2, 1, 0) et verdicts en tranches égales ; un test dont les réponses ne se valent pas déclare `ptsExplicites: true` (points dans `gd.json`, clés `prefix.q{N}{lettre}_pts`) et, si besoin, `paliers: [...]` (bornes hautes de chaque verdict sauf le dernier) dans `quiz-loader.js`. Le test du couple gênant fait les deux : ses réponses de rang deux valent 3 ou 2 selon qu'elles gênent vraiment, sur 60 points, avec les paliers 9, 24, 38, 50.
 - `DuoMatchQuiz` — 2 players, answer matching (tester-couple, common-points)
 - `HealthyQuiz` — 2 players, weighted scoring (couple-sain)
 - `DistanceQuiz` — 2 players, alternating turns (distance)

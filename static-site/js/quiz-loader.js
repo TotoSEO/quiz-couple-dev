@@ -173,7 +173,10 @@
     // poser à son copain » : ça, c'est un jeu à deux, pas un test. Les deux
     // vivent sur la même page, le visiteur choisit en arrivant.
     'genant':         { modes: [
-      { id: 'test', emoji: '📊', prefix: 'genant', engine: 'solo', totalQ: 15, pool: 15, quizType: 'genant' },
+      // Barème explicite (q{N}{lettre}_pts) : les réponses de rang deux ne se
+      // valent pas, un câlin au cinéma ne pèse pas comme une tension chez les
+      // parents. Les paliers sont posés à la main sur ce barème, voir plus bas.
+      { id: 'test', emoji: '📊', prefix: 'genant', engine: 'solo', totalQ: 15, pool: 15, quizType: 'genant', ptsExplicites: true, paliers: [9, 24, 38, 50] },
       { id: 'jeu',  emoji: '😳', prefix: 'genantJeu', engine: 'funny', totalQ: 20, pool: 0, textOnly: true,
         familles: [
           { id: 'corps', emoji: '🚽' }, { id: 'avant', emoji: '💔' },
@@ -1811,6 +1814,18 @@
     }
     var resultPrefix = cfg.resultPrefix || cfg.prefix;
     var results = parseGdResults(resultPrefix, realMaxScore);
+    // Paliers posés à la main : cfg.paliers donne la borne haute de chaque
+    // verdict sauf le dernier, qui monte jusqu'au maximum réel. Le découpage
+    // en tranches égales suppose que toutes les réponses se valent, ce qui
+    // n'est plus vrai quand un test déclare son propre barème : sur le test
+    // du couple gênant, un couple qui cochait des réponses ordinaires partout
+    // tombait dans l'avant-dernier verdict.
+    if (cfg.paliers && results.length && cfg.paliers.length === results.length - 1) {
+      for (var pr = 0; pr < results.length; pr++) {
+        results[pr].min = pr === 0 ? 0 : cfg.paliers[pr - 1] + 1;
+        results[pr].max = pr === results.length - 1 ? realMaxScore : cfg.paliers[pr];
+      }
+    }
     new QuizEngine.SoloTest({
       container: container,
       questions: questions,
