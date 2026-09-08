@@ -47,8 +47,8 @@
 
       <nav class="adm-nav">
         <p class="adm-nav-titre">Mesure</p>
-            <button class="admin-tab active" data-tab="stats" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-5 4 3 5-7"/></svg><span>Parties</span></button>
-            <button class="admin-tab" data-tab="trafic" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Trafic</span></button>
+            <button class="admin-tab active" data-tab="trafic" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Trafic</span></button>
+            <button class="admin-tab" data-tab="stats" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-5 4 3 5-7"/></svg><span>Parties</span></button>
             <button class="admin-tab" data-tab="blog" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg><span>Blog</span></button>
             <button class="admin-tab" data-tab="distance" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg><span>À distance</span></button>
         <p class="adm-nav-titre">Gestion</p>
@@ -85,8 +85,8 @@
     <div class="adm-main">
       <header class="adm-top">
         <div>
-          <h1 class="adm-top-titre" id="adm-titre">Parties</h1>
-          <p class="adm-top-sub" id="adm-sous-titre">Lancés, terminés et taux de finition, toutes pages confondues</p>
+          <h1 class="adm-top-titre" id="adm-titre">Trafic</h1>
+          <p class="adm-top-sub" id="adm-sous-titre">Visites et pages vues, mesurées par le site lui-même</p>
         </div>
         <div class="adm-top-droite">
           <span class="adm-puce" title="Validations d'activités">
@@ -116,7 +116,7 @@
         </div>
 
         <!-- ═══ Parties (Stats) ═══ -->
-        <div id="admin-stats-tab">
+        <div id="admin-stats-tab" class="hidden">
           <div class="stats-tetes">
             <div class="stats-tete stats-tete--lances">
               <p class="stats-tete-titre">Lancés aujourd'hui</p>
@@ -229,7 +229,7 @@
         </div>
 
         <!-- ═══ Trafic ═══ -->
-        <div id="admin-trafic-tab" class="hidden">
+        <div id="admin-trafic-tab">
           <div class="adm-toolbar">
             <div class="stats-comp stats-comp--periode" role="group" aria-label="Période">
               <button class="stats-comp-btn active" data-trafic-periode="1" type="button">Aujourd'hui</button>
@@ -243,13 +243,13 @@
           <div class="trafic-kpis">
             <div class="stats-tete trafic-kpi--visites">
               <p class="stats-tete-titre">Visites</p>
-              <p class="stats-tete-jour" id="trafic-visites">-</p>
+              <p class="stats-tete-jour"><span id="trafic-visites">-</span><span class="adm-delta hidden" id="adm-delta-trafic-visites"></span></p>
               <svg class="adm-spark est-vide" id="adm-spark-visites" viewBox="0 0 124 42" preserveAspectRatio="none" aria-hidden="true"></svg>
               <p class="stats-tete-sub" id="trafic-visites-sub">sur la période</p>
             </div>
             <div class="stats-tete trafic-kpi--vues">
               <p class="stats-tete-titre">Pages vues</p>
-              <p class="stats-tete-jour" id="trafic-vues">-</p>
+              <p class="stats-tete-jour"><span id="trafic-vues">-</span><span class="adm-delta hidden" id="adm-delta-trafic-vues"></span></p>
               <svg class="adm-spark est-vide" id="adm-spark-vues" viewBox="0 0 124 42" preserveAspectRatio="none" aria-hidden="true"></svg>
               <p class="stats-tete-sub">rechargements compris</p>
             </div>
