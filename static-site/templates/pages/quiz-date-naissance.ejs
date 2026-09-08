@@ -65,8 +65,7 @@
 <% } %>
 
 <!-- Hero -->
-<section class="relative overflow-hidden astro-hero-section py-16 md:py-24">
-  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '', variant: 'banner' }) %>
+<section class="quiz-page-hero relative overflow-hidden astro-hero-section">
   <div class="astro-stars" aria-hidden="true">
     <% for (let i = 1; i <= 20; i++) { %><div class="astro-star astro-star-<%= i %>"></div><% } %>
   </div>
@@ -98,6 +97,8 @@
       <p class="text-sm text-muted-foreground mt-4"><%= t(ns + ':hero.subtitle', '') %></p>
     </div>
   </div>
+  <%# L'image de tete vient en dernier dans le code, comme sur les autres pages de test : sous le texte sur telephone, en absolu a droite sur grand ecran, ou le texte passe a gauche. %>
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
 </section>
 
 <!-- Calculateur -->

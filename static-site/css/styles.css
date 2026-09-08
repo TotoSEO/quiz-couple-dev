@@ -6313,7 +6313,10 @@ body.quiz-has-result .related-tests-section { display: none !important; }
 .quiz-count-bubble {
   display: flex; align-items: center; gap: 0.5rem;
   width: max-content; max-width: 100%;
-  margin: 1rem auto 0.25rem 0; /* own line under the intro, left-aligned */
+  /* Sur sa propre ligne sous l'intro, centree comme le reste du hero ; elle
+     ne passe a gauche que sur grand ecran, quand l'image de tete pousse le
+     texte a gauche (regle plus bas, avec les autres). */
+  margin: 1rem auto 0.25rem;
   padding: 0.5rem 1.05rem;
   border-radius: 999px;
   font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700;
@@ -6392,6 +6395,8 @@ body.quiz-has-result .related-tests-section { display: none !important; }
   .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto .breadcrumb ol { justify-content: flex-start; }
   .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto p,
   .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto p { margin-left: 0; margin-right: 0; }
+  .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto .quiz-count-bubble,
+  .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto .quiz-count-bubble { margin-left: 0; margin-right: 0; }
 }
 
 /* Banner variant: always a centered image on top (used on themed heroes) */
@@ -9678,9 +9683,9 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .quiz-saut-mobile { display: none; }
 @media (max-width: 767px) {
   .quiz-saut-mobile {
-    display: flex; justify-content: flex-start;
-    /* Le bouton suit la bulle « realise X fois », que quiz-extras.js pose
-       juste apres le dernier paragraphe du hero : meme alignement a gauche. */
+    /* Sur telephone le hero est centre : le bouton l'est aussi, comme la
+       bulle « realise X fois » que quiz-extras.js pose juste au-dessus. */
+    display: flex; justify-content: center;
     margin: 0.75rem 0 0; padding: 0;
   }
   .quiz-saut-btn {
