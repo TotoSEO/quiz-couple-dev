@@ -173,13 +173,17 @@
             <span class="hero-stat-nb" id="home-total-counter" data-total-counter data-baseline="3078">3&nbsp;078</span>
             <span class="hero-stat-txt"><%= t('home:hero.stats.totalLabel', 'quiz &amp; tests réalisés') %></span>
           </div>
+          <%# Les quatre familles du catalogue, pas deux : les tests célibataires
+              comptent avec les tests de couple, les jeux avec les quiz. Sans ça
+              le hero annonçait 31 tests et 11 quiz alors que la page en propose
+              39 et 23. %>
           <div class="hero-stat">
-            <span class="hero-stat-nb"><%= testsFiltered.length %></span>
+            <span class="hero-stat-nb"><%= testsFiltered.length + celibFiltered.length %></span>
             <span class="hero-stat-txt"><%= t('home:hero.stats.testsLabel', 'tests disponibles') %></span>
           </div>
           <div class="hero-stat">
-            <span class="hero-stat-nb"><%= quizzesFiltered.length %></span>
-            <span class="hero-stat-txt"><%= t('home:hero.stats.quizzesLabel', 'quiz disponibles') %></span>
+            <span class="hero-stat-nb"><%= quizzesFiltered.length + jeuxFiltered.length %></span>
+            <span class="hero-stat-txt"><%= t('home:hero.stats.quizzesLabel', 'quiz & jeux disponibles') %></span>
           </div>
         </div>
 
@@ -301,15 +305,32 @@
 <!-- Bandeau décoratif, posé sur la ligne de flottaison. Aucun contenu utile
      n'y est enfermé : il est masqué aux lecteurs d'écran et la piste est
      dupliquée pour que la boucle se referme sans saut visible. -->
-<% if (marqueeItems.length) { %>
+<%
+  // L'émoji de tête devient une pastille ronde, le reste du libellé le texte
+  // de la puce. Un libellé sans émoji donne une puce sans pastille.
+  const rubanPuces = marqueeItems.map(function (item) {
+    const m = String(item).match(/^([^\p{L}\p{N}\s]+)\s+(.+)$/u);
+    return m ? { emoji: m[1], texte: m[2] } : { emoji: '', texte: String(item) };
+  });
+  // La seconde piste part du milieu de la liste : deux rangs qui défilent en
+  // sens inverse avec les mêmes mots au même moment feraient répétitif.
+  const rubanMoitie = Math.ceil(rubanPuces.length / 2);
+  const rubanRangs = rubanPuces.length
+    ? [rubanPuces, rubanPuces.slice(rubanMoitie).concat(rubanPuces.slice(0, rubanMoitie))]
+    : [];
+%>
+<% if (rubanRangs.length) { %>
 <div class="ruban" aria-hidden="true">
-  <div class="ruban-piste">
-    <% for (let copie = 0; copie < 2; copie++) { %>
-      <% marqueeItems.forEach(function(item) { %>
-      <span class="ruban-item"><%= item %></span>
-      <span class="ruban-sep">•</span>
-      <% }) %>
-    <% } %>
+  <div class="ruban-rangs">
+    <% rubanRangs.forEach(function (rang, ri) { %>
+    <div class="ruban-piste<%= ri ? ' ruban-piste--retour' : '' %>">
+      <% for (let copie = 0; copie < 2; copie++) { %>
+        <% rang.forEach(function (puce) { %>
+        <span class="ruban-puce"><% if (puce.emoji) { %><span class="ruban-emoji"><%= puce.emoji %></span><% } %><span class="ruban-txt"><%= puce.texte %></span></span><span class="ruban-point"></span>
+        <% }) %>
+      <% } %>
+    </div>
+    <% }) %>
   </div>
 </div>
 <% } %>

@@ -89,6 +89,11 @@ collé de l'en-tête vient d'une sentinelle observée par IntersectionObserver
 Accessibilité : un petit texte en rose prend `hsl(var(--primary-texte))`
 (3,4:1 avec `--primary`, insuffisant sous 18 px), et le pied de page garde
 son opacité à 1.
+Le ruban de l'accueil (bande sombre entre le hero et la grille, `.ruban`)
+n'anime que des `transform` sur ses deux pistes, sans `backdrop-filter` :
+mesuré, il ne coûte rien au score. Son fondu de bord est un `mask-image`
+posé sur `.ruban-rangs`, pas sur `.ruban` : sur la bande, il ferait
+disparaître le fond aux deux extrémités.
 
 ### Familles de navigation
 
@@ -103,7 +108,11 @@ crush, amour ou amitié, amoureux de mon/ma BFF, m'aime-t-il en secret, mon ex
 pense-t-il encore à moi. Il n'y a pas de page hub pour cette famille, seulement
 l'entrée de menu. Les listes de liens sont écrites en dur
 dans chacun des quatre gabarits : une page ajoutée ou déplacée se répercute
-aux quatre endroits, dans la même famille.
+aux quatre endroits, dans la même famille. Les compteurs du hero de l'accueil
+comptent les quatre familles : « tests disponibles » additionne les tests de
+couple et les tests célibataires, « quiz & jeux disponibles » les quiz et les
+jeux. Ils n'en comptaient que deux et annonçaient 31 et 11 pour un catalogue
+de 39 et 23.
 
 ## Quiz Engine Types
 
