@@ -290,6 +290,12 @@
     // plus fermee, le score monte avec ce qui retient (r1 occasions, r4 place prise).
     'trouver-amour':  { prefix: 'trouverAmour', engine: 'solo', totalQ: 15, pool: 15, quizType: 'trouver-amour', ascending: true },
 
+    // Pourquoi je suis encore célibataire : un diagnostic à huit causes, pas
+    // un score. Vingt-deux questions en réserve pour vingt posées : deux
+    // d'entre elles dépendent d'une réponse (déjà été en couple ou pas, applis
+    // ou pas). Les poids par réponse et les conditions vivent dans gd.json.
+    'celibataire':    { prefix: 'celib', engine: 'diagnostic', totalQ: 20, pool: 22, quizType: 'celibataire' },
+
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
 
     // ── Infidelite quiz (solo scoring, ascending: more signs = higher score) ──
@@ -903,6 +909,9 @@
         break;
       case 'profile':
         initProfileQuiz(config, questions);
+        break;
+      case 'diagnostic':
+        initDiagnosticQuiz(config, questions);
         break;
       case 'piliers':
         initPiliersQuiz(config, questions);
@@ -2313,6 +2322,102 @@
       verdicts: verdicts,
       labels: { introTitle: QuizEngine.tgd(cfg.prefix + '.introTitle', '') }
     }, optionsDistance(cfg)));
+  }
+
+  // ── Diagnostic à causes (pourquoi je suis encore célibataire) ──────────
+  // Les causes du test, dans l'ordre d'affichage quand tout est à égalité, et
+  // la couleur de leur barre. Les libellés viennent de gd.json (axe_<id>), les
+  // fiches aussi (p_<id>_t, _d, _a, _c pour la phrase du second plan), avec un
+  // profil « ouvert » quand aucune cause ne se détache.
+  var DIAGNOSTIC_AXES = {
+    celib: [
+      { id: 'occasions', color: '#f59e0b' },
+      { id: 'social',    color: '#22c55e' },
+      { id: 'aborder',   color: '#6366f1' },
+      { id: 'passe',     color: '#ec4899' },
+      { id: 'filtre',    color: '#8b5cf6' },
+      { id: 'estime',    color: '#06b6d4' },
+      { id: 'priorite',  color: '#84cc16' },
+      { id: 'suite',     color: '#f43f5e' }
+    ]
+  };
+
+  // « occasions:2,social:1 » -> { occasions: 2, social: 1 }
+  function litAxes(brut) {
+    var axes = {};
+    if (typeof brut !== 'string') return axes;
+    brut.split(',').forEach(function(part) {
+      var kv = part.split(':');
+      var id = (kv[0] || '').trim();
+      var n = parseInt(kv[1], 10);
+      if (id && n > 0) axes[id] = n;
+    });
+    return axes;
+  }
+  // « 3:a » ou « 8:c,d » -> { q: 3, o: ['a'] }
+  function litCondition(brut) {
+    if (typeof brut !== 'string' || brut.indexOf(':') === -1) return null;
+    var kv = brut.split(':');
+    var q = parseInt(kv[0], 10);
+    var o = kv[1].split(',').map(function(x) { return x.trim(); }).filter(Boolean);
+    return (q > 0 && o.length) ? { q: q, o: o } : null;
+  }
+
+  function initDiagnosticQuiz(cfg, questions) {
+    // Le tirage commun mélange les questions et en écarte quand la réserve
+    // dépasse le nombre annoncé : ici l'ordre compte (les embranchements) et
+    // c'est la condition qui écarte, pas le hasard. On relit donc la réserve
+    // entière, dans l'ordre du fichier.
+    var toutes = parseGdQuestions(cfg.prefix, (cfg.pool || 30) + 10, false);
+    toutes.sort(function(a, b) { return a.id - b.id; });
+    toutes.forEach(function(q) {
+      var si = QuizEngine.tgd(cfg.prefix + '.q' + q.id + '_si', null);
+      q.si = (si && si !== cfg.prefix + '.q' + q.id + '_si') ? litCondition(si) : null;
+      q.options.forEach(function(opt) {
+        var cle = cfg.prefix + '.q' + q.id + opt.id + '_axes';
+        var brut = QuizEngine.tgd(cle, null);
+        opt.axes = (brut && brut !== cle) ? litAxes(brut) : {};
+        opt.points = 0;
+      });
+    });
+
+    var axes = DIAGNOSTIC_AXES[cfg.prefix] || [];
+    var axisLabels = {};
+    axes.forEach(function(a) { axisLabels[a.id] = QuizEngine.tgd(cfg.prefix + '.axe_' + a.id, a.id); });
+    var profils = {};
+    axes.map(function(a) { return a.id; }).concat(['ouvert']).forEach(function(id) {
+      profils[id] = {
+        title: QuizEngine.tgd(cfg.prefix + '.p_' + id + '_t', ''),
+        description: QuizEngine.tgd(cfg.prefix + '.p_' + id + '_d', ''),
+        advice: QuizEngine.tgd(cfg.prefix + '.p_' + id + '_a', ''),
+        court: QuizEngine.tgd(cfg.prefix + '.p_' + id + '_c', '')
+      };
+    });
+    function lu(cle, repli) {
+      var plein = cfg.prefix + '.' + cle;
+      var v = QuizEngine.tgd(plein, null);
+      return (v && v !== plein) ? v : repli;
+    }
+    new QuizEngine.DiagnosticQuiz({
+      container: container,
+      questions: toutes,
+      prefix: cfg.prefix,
+      lang: lang,
+      quizType: cfg.quizType || 'diagnostic',
+      totalQ: cfg.totalQ,
+      axes: axes,
+      axisLabels: axisLabels,
+      profils: profils,
+      labels: {
+        icon: lu('icone', '🔍'),
+        introTitle: lu('introTitre', ''),
+        introDesc: lu('introTexte', ''),
+        duree: lu('duree', null),
+        start: lu('bouton', null),
+        resultLabel: lu('resultatLibelle', ''),
+        secondLabel: lu('secondLibelle', '')
+      }
+    });
   }
 
   function initProfileQuiz(cfg, questions) {

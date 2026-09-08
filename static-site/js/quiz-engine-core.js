@@ -1959,6 +1959,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'amour-ami', icon: '🧡', route: 'testAmourAmi' },
     { type: 'test', key: 'ex', icon: '🕰️', route: 'testEx' },
     { type: 'test', key: 'trouver-amour', icon: '🧭', route: 'testTrouverAmour' },
+    { type: 'test', key: 'celibataire', icon: '🔍', route: 'testCelibataire' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
@@ -2049,7 +2050,8 @@ var QuizEngine = (function() {
     // Le doute sur l'ami appelle la question de l'autre, puis celle du lien.
     'amour-ami':       ['testSecret', 'testAmourAmitie', 'testCrush'],
     // Le célibat qui dure appelle la façon de s'attacher, le manque, puis l'ex.
-    'trouver-amour':   ['testAttachement', 'testDependance', 'testEx'],
+    'trouver-amour':   ['testCelibataire', 'testAttachement', 'testDependance'],
+    'celibataire':     ['testTrouverAmour', 'testAttachement', 'testSuisJeAmoureux'],
     'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
     'distance-aime':   ['testDistance', 'testAimeEncore', 'testAttachement'],
     // Le doute sur ses sentiments appelle la question du couple, puis de soi.
@@ -6022,6 +6024,238 @@ var QuizEngine = (function() {
       restart: function() { self.phase = 'intro'; self.render(); }
     });
     this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  // ═══════════════════════════════════════════════════════════
+  // DIAGNOSTIC QUIZ - pourquoi je suis encore celibataire
+  // Un test qui cherche une cause, pas un score. Chaque reponse pese sur une
+  // ou plusieurs causes (dans gd.json, q{N}{lettre}_axes vaut par exemple
+  // « occasions:2,social:1 »). Le resultat est la cause la plus chargee, en
+  // pourcentage de ce qu'elle pouvait recevoir sur les questions posees, et
+  // celle qui vient juste derriere quand elle pese presque autant. Quand
+  // aucune cause ne depasse le seuil, le verdict le dit : rien ne bloque.
+  //
+  // Deux questions changent selon une reponse precedente (q{N}_si vaut
+  // « 3:a » ou « 8:c,d ») : la reserve compte donc plus de questions qu'il
+  // n'en est pose, et tout le monde en voit le meme nombre. Les questions
+  // sont posees dans l'ordre du fichier, jamais melangees : une question qui
+  // depend d'une autre doit venir apres elle.
+  // ═══════════════════════════════════════════════════════════
+  var DIAGNOSTIC_SEUIL_PRINCIPAL = 30;   // en dessous, aucune cause ne se detache
+  var DIAGNOSTIC_PART_SECONDAIRE = 0.6;  // la seconde cause pese au moins 60 % de la premiere
+
+  function DiagnosticQuiz(config) {
+    this.container = config.container;
+    this.questions = config.questions;
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.quizType = config.quizType || 'diagnostic';
+    this.axes = config.axes || [];
+    this.axisLabels = config.axisLabels || {};
+    this.profils = config.profils || {};
+    this.labels = config.labels || {};
+    this.totalQ = Math.min(config.totalQ || this.questions.length, this.questions.length);
+    this.phase = 'intro';
+    this.reponses = {};   // identifiant de question -> lettre choisie
+    this.pile = [];       // rangs des questions deja posees, dans l'ordre
+    this.courant = this.prochaine(-1);
+    this.render();
+  }
+
+  // La prochaine question dont la condition est remplie, ou -1.
+  DiagnosticQuiz.prototype.prochaine = function(depuis) {
+    for (var i = depuis + 1; i < this.questions.length; i++) {
+      var q = this.questions[i];
+      if (!q.si) return i;
+      var rep = this.reponses[q.si.q];
+      if (rep && q.si.o.indexOf(rep) !== -1) return i;
+    }
+    return -1;
+  };
+
+  DiagnosticQuiz.prototype.render = function() {
+    this.container.innerHTML = '';
+    document.body.classList.remove('quiz-has-result');
+    if (this.phase === 'intro') this.renderIntro();
+    else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'results') this.renderResults();
+  };
+
+  DiagnosticQuiz.prototype.renderIntro = function() {
+    var self = this;
+    var ecran = ecranDepart({
+      icone: this.labels.icon || '🔍',
+      titre: this.labels.introTitle || '',
+      desc: this.labels.introDesc || '',
+      meta: pastilleMeta(this.totalQ, null, this.labels.duree || null),
+      bouton: this.labels.start || tg('playerSetup.startTest', 'Commencer le test'),
+      onStart: function() {
+        self.reponses = {};
+        self.pile = [];
+        self.courant = self.prochaine(-1);
+        self.phase = 'playing';
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(ecran.wrap);
+  };
+
+  DiagnosticQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.courant];
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+    renderProgressBar(wrap, this.pile.length, this.totalQ);
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(q.text)));
+
+    // Les reponses gardent l'ordre du fichier : elles decrivent des
+    // situations differentes, pas une echelle, et chacune pese sur ses
+    // propres causes. Il n'y a donc rien a gagner a repondre « toujours a ».
+    var optionsWrap = el('div', 'space-y-2');
+    var letters = ['A', 'B', 'C', 'D', 'E'];
+    q.options.forEach(function(opt, idx) {
+      var optBtn = el('button', 'quiz-option');
+      optBtn.type = 'button';
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (letters[idx] || '') + '</span><span>' + esc(opt.text) + '</span>';
+      optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
+        optBtn.classList.add('selected');
+        var sibs = optionsWrap.querySelectorAll('.quiz-option');
+        for (var s = 0; s < sibs.length; s++) { if (sibs[s] !== optBtn) sibs[s].style.opacity = '0.5'; sibs[s].style.pointerEvents = 'none'; }
+        self.reponses[q.id] = opt.id;
+        self.pile.push(self.courant);
+        setTimeout(function() {
+          var suivante = self.prochaine(self.courant);
+          if (suivante === -1 || self.pile.length >= self.totalQ) { self.phase = 'results'; }
+          else { self.courant = suivante; }
+          self.render();
+        }, DELAI_REPONSE);
+      });
+      optionsWrap.appendChild(optBtn);
+    });
+    wrap.appendChild(optionsWrap);
+
+    if (this.pile.length > 0) {
+      var navWrap = el('div', 'mt-6');
+      var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previousQuestion', 'Précédent'));
+      backBtn.type = 'button';
+      backBtn.addEventListener('click', function() {
+        // On revient d'une question : sa reponse est oubliee, et avec elle
+        // l'embranchement qu'elle avait pu ouvrir.
+        self.courant = self.pile.pop();
+        delete self.reponses[self.questions[self.courant].id];
+        self.render();
+      });
+      navWrap.appendChild(backBtn);
+      wrap.appendChild(navWrap);
+    }
+    this.container.appendChild(wrap);
+  };
+
+  // Le poids de chaque cause, rapporte a ce qu'elle pouvait recevoir sur les
+  // questions effectivement posees : une cause servie par cinq questions et
+  // une cause servie par trois se comparent ainsi sur la meme echelle.
+  DiagnosticQuiz.prototype.bilan = function() {
+    var self = this;
+    var tally = {}, max = {};
+    this.axes.forEach(function(a) { tally[a.id] = 0; max[a.id] = 0; });
+    for (var i = 0; i < this.pile.length; i++) {
+      var q = this.questions[this.pile[i]];
+      var choisi = this.reponses[q.id];
+      var maxQ = {};
+      q.options.forEach(function(opt) {
+        var ax = opt.axes || {};
+        for (var k in ax) {
+          if (max[k] === undefined) continue;
+          if (ax[k] > (maxQ[k] || 0)) maxQ[k] = ax[k];
+          if (opt.id === choisi) tally[k] += ax[k];
+        }
+      });
+      for (var k2 in maxQ) max[k2] += maxQ[k2];
+    }
+    var pcts = {};
+    this.axes.forEach(function(a) { pcts[a.id] = max[a.id] ? Math.round(tally[a.id] / max[a.id] * 100) : 0; });
+    var ordre = this.axes.map(function(a) { return a.id; }).sort(function(x, y) {
+      return (pcts[y] - pcts[x]) || (tally[y] - tally[x]);
+    });
+    var tete = ordre[0], second = ordre[1];
+    var principal = (tete && pcts[tete] >= DIAGNOSTIC_SEUIL_PRINCIPAL) ? tete : 'ouvert';
+    var secondaire = null;
+    if (principal !== 'ouvert' && second && pcts[second] >= DIAGNOSTIC_SEUIL_PRINCIPAL &&
+        pcts[second] >= pcts[tete] * DIAGNOSTIC_PART_SECONDAIRE) secondaire = second;
+    return { tally: tally, max: max, pcts: pcts, ordre: ordre, principal: principal, secondaire: secondaire };
+  };
+
+  // Meme enregistrement anonyme que les tests a profil : la cause obtenue,
+  // rien d'autre, une fois par navigateur.
+  DiagnosticQuiz.prototype.enregistreProfil = function(profil) {
+    var bloc = document.getElementById('pq-reviews');
+    var slug = bloc ? bloc.dataset.quizSlug : null;
+    if (!slug || !profil) return;
+    var cle = 'qc-profil-' + slug;
+    try { if (localStorage.getItem(cle)) return; localStorage.setItem(cle, profil); } catch (e) {}
+    fetch(SUPABASE_URL + '/rest/v1/profil_resultats', {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json', 'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ quiz_slug: slug, profil: profil, lang: this.lang })
+    }).catch(function () {});
+  };
+
+  DiagnosticQuiz.prototype.renderResults = function() {
+    var self = this;
+    var b = this.bilan();
+    var profil = this.profils[b.principal] || {};
+    this.enregistreProfil(b.principal);
+
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-3', this.labels.icon || '🔍'));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-1', esc(this.labels.resultLabel || '')));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-5 quiz-reveal-enter', esc(profil.title || b.principal)));
+
+    // Les causes, de la plus lourde a la plus legere : c'est la lecture qu'on
+    // attend d'un diagnostic, pas l'ordre du fichier.
+    var breakdown = el('div', 'profile-breakdown max-w-md mx-auto mb-6');
+    b.ordre.forEach(function(id) {
+      var ax = null;
+      for (var i = 0; i < self.axes.length; i++) if (self.axes[i].id === id) ax = self.axes[i];
+      var pct = b.pcts[id];
+      var row = el('div', 'profile-axis-row');
+      row.innerHTML =
+        '<div class="profile-axis-head"><span>' + esc(self.axisLabels[id] || id) + '</span>' +
+        '<span class="profile-axis-pct">' + pct + '%</span></div>' +
+        '<div class="profile-axis-bar"><div class="profile-axis-fill" data-w="' + pct + '" style="width:0%;background:' + (ax ? ax.color : '#999') + '"></div></div>';
+      breakdown.appendChild(row);
+    });
+    wrap.appendChild(breakdown);
+    setTimeout(function() {
+      var fills = wrap.querySelectorAll('.profile-axis-fill');
+      for (var i = 0; i < fills.length; i++) fills[i].style.width = fills[i].getAttribute('data-w') + '%';
+    }, 120);
+
+    if (profil.description) wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto text-left quiz-reveal-enter', escRiche(profil.description)));
+    var second = b.secondaire ? this.profils[b.secondaire] : null;
+    if (second && second.court) {
+      var sec = el('p', 'text-sm leading-relaxed max-w-lg mx-auto mb-4 text-left quiz-reveal-enter');
+      sec.innerHTML = '<strong>' + esc(this.labels.secondLabel || '') + '</strong> ' + escRiche(second.court);
+      wrap.appendChild(sec);
+    }
+    if (profil.advice) {
+      var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
+      advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(profil.advice);
+      wrap.appendChild(advice);
+    }
+
+    renderActionButtons(wrap, {
+      share: { noms: nomsPartage(this), type: 'profil', verdict: profil.title || '' },
+      restart: function() { self.phase = 'intro'; self.render(); }
+    });
+    this.container.appendChild(wrap);
+    document.body.classList.add('quiz-has-result');
     smoothScroll(wrap, 'center');
   };
 
@@ -10934,6 +11168,7 @@ var QuizEngine = (function() {
     ParentaliteQuiz: ParentaliteQuiz,
     TruefalseQuiz: TruefalseQuiz,
     ProfileQuiz: ProfileQuiz,
+    DiagnosticQuiz: DiagnosticQuiz,
     PiliersQuiz: PiliersQuiz,
     ChargeMentaleQuiz: ChargeMentaleQuiz,
     ZamoursQuiz: ZamoursQuiz,

@@ -302,6 +302,9 @@ const GD_QUESTION_PREFIXES = {
   // simplement jamais rendues en dur, donc invisibles pour un robot.
   compatibilite: ['compatibilite'], pervers: ['pervers'],
   'amour-habitude': ['habitude'], tentation: ['tentation'],
+  // Le test « pourquoi je suis encore célibataire » : sa réserve compte 22
+  // questions pour 20 posées, deux d'entre elles dépendent d'une réponse.
+  celibataire: ['celib'],
   karmique: ['karmique'], 'suis-je-amoureux': ['suisjeamoureux'],
   'distance-aime': ['distanceAime'], zamours: ['zamours'],
   // Ces deux-là déclinent leurs questions au masculin et au féminin ; le

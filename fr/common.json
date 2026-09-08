@@ -84,7 +84,9 @@
     "testEmprise": "Suis-je sous emprise ?",
     "testEmpriseDesc": "Votre liberté dans le couple, en 20 questions",
     "testTrouverAmour": "Pourquoi je ne trouve pas l'amour ?",
-    "testTrouverAmourDesc": "Quinze questions sur ce qui coince, sans juger"
+    "testTrouverAmourDesc": "Quinze questions sur ce qui coince, sans juger",
+    "testCelibataire": "Pourquoi je suis encore célibataire ?",
+    "testCelibataireDesc": "Vingt questions pour trouver la cause, pas une note"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

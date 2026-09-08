@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "badge": "Test célibataire",
+    "title": "Test pourquoi je suis célibataire : 20 questions avancées",
+    "titleHighlight": "pourquoi je suis célibataire",
+    "description": "Vous êtes célibataire, ça dure, et vous ne savez pas trop pourquoi. Ce test regarde <strong>votre quotidien, vos rencontres et ce qui se passe dans votre tête</strong> pour trouver la cause qui pèse le plus chez vous, et celle qui vient juste derrière.",
+    "subtitle": "Vingt questions, cinq minutes, et deux questions qui changent selon vos réponses",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Les principales raisons qui poussent au célibat",
+    "intro": "Quand on est célibataire depuis longtemps, on cherche souvent une seule explication. En vrai, il y en a huit qui reviennent tout le temps, et la plupart des gens en cumulent deux. Voici ces huit raisons, dans l'ordre où elles apparaissent dans une vie : d'abord ce qui empêche la rencontre, ensuite ce qui l'empêche de tenir.",
+    "sub1Title": "Vous ne croisez plus personne de nouveau",
+    "sub1P1": "C'est la raison la plus banale et la plus fréquente. Le travail, la maison, les mêmes amis, les mêmes endroits. Une semaine peut passer sans que vous échangiez trois mots avec quelqu'un que vous ne connaissiez pas. Le télétravail a rendu ça encore plus courant. Rien de grave dans cette vie-là, sauf qu'une rencontre a besoin de matière : des gens nouveaux, et si possible les mêmes plusieurs fois de suite.",
+    "sub1P2": "Le signe qui ne trompe pas : vous ne vous souvenez pas de la dernière fois où vous avez rencontré quelqu'un par hasard.",
+    "sub2Title": "Votre vie sociale s'est réduite sans que vous le décidiez",
+    "sub2P1": "Les amis se mettent en couple, ont des enfants, déménagent. Les invitations s'espacent. On ne prend pas le relais, parce qu'on est fatigué ou parce qu'on ne sait pas trop comment faire. Au bout de deux ans, le cercle se compte sur les doigts d'une main, et on se parle surtout par messages. Le célibat qui dure vient souvent de là, bien plus que d'un problème de séduction : la plupart des rencontres amoureuses arrivent par ricochet, par les amis des amis. Moins de vie sociale, c'est mécaniquement moins de rencontres.",
+    "sub3Title": "Vous n'osez pas aborder",
+    "sub3P1": "Vous voyez quelqu'un qui vous plaît, vous cherchez la phrase, vous attendez un signe, et le moment passe. Ce n'est pas seulement de la timidité. C'est la peur du rejet qui pèse plus lourd que l'envie de savoir. Beaucoup de gens très à l'aise avec leurs amis se bloquent dès qu'il y a de l'enjeu. Et comme personne ne voit ce qui ne s'est pas passé, on repart en se disant que ça n'aurait pas marché de toute façon.",
+    "sub4Title": "Votre cœur n'est pas libre",
+    "sub4P1": "On peut être seul depuis deux ans et ne pas être disponible. Un ex qu'on regarde encore de loin, une histoire qui a fait trop mal, et la place est prise. Ça se voit à un détail : tout va bien pendant trois semaines, puis on trouve des défauts, on ralentit, on s'éloigne. Ce n'est pas de la lassitude, c'est une protection. Si vous vous reconnaissez, <a href=\"/test-pourquoi-je-ne-trouve-pas-l-amour/\">ce qui se passe en vous quand une rencontre se présente</a> mérite un test à part.",
+    "sub5Title": "Votre filtre est trop serré",
+    "sub5P1": "L'âge, la taille, le métier, la ville, la façon de s'habiller, l'humour au premier message. Chaque critère se défend. Mis ensemble, ils ne laissent passer personne. Et le coup de foudre qu'on attend est rare : beaucoup de couples solides ont commencé par « pas mal, à revoir ». Une liste trop précise cache souvent autre chose, d'ailleurs. Elle décrit un ex, ou elle sert à ne prendre aucun risque.",
+    "sub6Title": "Le regard que vous portez sur vous",
+    "sub6P1": "Quand quelqu'un de bien s'intéresse à vous et que votre première pensée est « il va être déçu », vous partez perdant. Vous minimisez, vous pointez vos défauts avant qu'on les voie, vous lisez chaque silence comme une confirmation. Ce n'est pas une question de physique. C'est un regard, et il se voit. Il rend moins disponible, il fait douter l'autre, et il finit par produire ce qu'il redoutait.",
+    "sub7Title": "Le couple n'a pas de place dans votre vie",
+    "sub7P1": "Vous dites vouloir une relation, et c'est sûrement vrai. Mais votre agenda dit autre chose : le travail, le sport, les projets, les habitudes prennent tout. Quelqu'un d'autre n'aurait pas où se mettre. Ce n'est pas un défaut, c'est un choix qu'on n'a pas formulé. Le problème, c'est l'écart entre l'envie affichée et la place réelle. Les gens qu'on croise le sentent vite.",
+    "sub8Title": "Les débuts qui n'aboutissent jamais",
+    "sub8P1": "Ici, les rencontres existent. Ce qui coince, c'est après. Le premier rendez-vous sans suite, la discussion qui s'éteint, l'histoire qui s'arrête au bout de trois semaines. Le rythme est souvent en cause : trop vite, l'autre recule. Trop lent, l'autre conclut qu'il n'y a pas d'intérêt. Ou on attend que l'autre fasse tout. Ou on cherche le détail qui cloche dès le deuxième message. Là, ce n'est pas la rencontre qu'il faut travailler, c'est la façon de la laisser grandir."
+  },
+  "section2": {
+    "title": "Comment sortir du célibat le plus efficacement possible ?",
+    "p1": "La réponse tient rarement dans une application de plus ou une soirée de plus. Elle tient dans le cadre de vie. Dans l'enquête Épic de l'Ined, menée en 2013 et 2014 auprès de plus de 7 000 personnes, les couples se sont surtout formés dans les lieux où les gens se revoient : les soirées entre amis, les études, le travail, les activités. Internet arrivait loin derrière, avec moins d'un couple sur dix. Ce que ces lieux ont en commun, c'est la répétition. On revoit la même personne plusieurs semaines de suite, on se parle sans enjeu, et un jour ça bascule.",
+    "p2": "Ce n'est pas un hasard. Les psychologues l'ont mesuré depuis longtemps : plus on croise quelqu'un, plus on a de chances de l'apprécier. C'est l'effet de simple exposition, décrit par Robert Zajonc en 1968. Et dès 1950, une étude de Leon Festinger dans une résidence étudiante montrait que les amitiés se formaient d'abord entre voisins de palier, à quelques mètres près. L'amour suit à peu près la même règle : il naît de la proximité répétée, beaucoup plus que du grand soir.",
+    "p3": "Du coup, sortir du célibat efficacement, c'est changer la forme de sa semaine, pas seulement son samedi soir. Voici ce qui marche le mieux, dans l'ordre.",
+    "sub1Title": "Ajouter un lieu où l'on revoit les mêmes gens",
+    "sub1P1": "Un cours, un sport d'équipe, une association, une chorale, un bénévolat. Peu importe quoi, à condition que ce soit chaque semaine et avec les mêmes personnes. Une activité régulière fait plus pour les rencontres que dix soirées où l'on ne reverra personne. Et même si l'amour n'y est pas, c'est là que se refont les amis qui, eux, vous présenteront quelqu'un.",
+    "sub2Title": "Dire oui un peu plus souvent que d'habitude",
+    "sub2P1": "L'invitation qu'on décline parce qu'on ne connaîtra personne, le deuxième rendez-vous qu'on refuse parce qu'il n'y a pas eu d'étincelle, le collègue qui propose un verre après le travail. Pendant trois mois, dites oui à ce que vous auriez refusé par habitude. Vous ne rencontrerez pas forcément quelqu'un à chaque fois. Vous remettrez du hasard dans une vie qui n'en avait plus.",
+    "sub3Title": "Faire le premier pas, une fois par semaine",
+    "sub3P1": "Pas une déclaration. Une phrase. Une remarque à quelqu'un dans une file, un message après une soirée, un « on se revoit ? » après un rendez-vous. La plupart des histoires qui ne commencent pas ne commencent pas parce que personne n'a rien dit. Une fois par semaine suffit pour que ça devienne une habitude, et pour découvrir que la réponse est bien plus souvent oui qu'on ne le pense.",
+    "sub4Title": "Utiliser les applications pour ce qu'elles font bien",
+    "sub4P1": "Elles multiplient les premiers contacts, elles ne font rien de plus. Si vous les utilisez, fixez-vous une règle : dès qu'une discussion tient trois échanges, vous proposez un verre. Une semaine de messages ne remplace pas vingt minutes en face. Et si elles vous découragent, arrêtez sans culpabilité : la grande majorité des couples se sont rencontrés dans la vraie vie."
+  },
+  "section3": {
+    "title": "Je suis célibataire et j'ai peur de me mettre en couple : franchir la barrière mentale",
+    "p1": "Il y a un cas où changer de cadre de vie ne suffit pas : quand c'est l'idée même du couple qui fait peur. Ça se reconnaît facilement. Les rencontres se font, parfois elles se passent bien, et c'est justement là que ça se gâte. Dès que ça devient sérieux, on trouve des défauts, on répond moins, on se sent à l'étroit. De l'extérieur, ça ressemble à de l'exigence. De l'intérieur, c'est de la peur : peur de souffrir encore, peur de perdre sa liberté, peur de ne pas être à la hauteur une fois que l'autre nous connaîtra.",
+    "p2": "Cette peur a presque toujours une origine. Une histoire qui a fait très mal, des parents qui se sont déchirés, ou simplement une façon de s'attacher qui s'est installée tôt et qui se méfie de la proximité. La bonne nouvelle, c'est qu'elle ne se franchit pas d'un coup, et qu'on n'a pas à le faire. Elle se franchit par petits pas, avec quelqu'un de patient, en restant une semaine de plus à chaque fois que l'envie de partir arrive.",
+    "p3": "Concrètement, trois choses aident. D'abord, mettre un nom sur ce qui se passe : <a href=\"/test-style-attachement-couple/\">la façon dont vous vous attachez</a> explique souvent pourquoi vous reculez, et savoir qu'on est évitant ou anxieux change déjà le regard qu'on porte sur ses réactions. Ensuite, le dire à la personne concernée, tôt, simplement : « j'ai tendance à prendre de la distance quand ça devient sérieux, ce n'est pas contre toi ». Ça enlève à l'autre le poids de deviner. Enfin, séparer la peur de la décision : avoir peur ne veut pas dire que la relation est mauvaise. Ça veut dire qu'elle compte.",
+    "p4": "Si vous voulez aller plus loin sur ce point précis, <a href=\"/blog/peur-de-l-engagement/\">la peur de l'engagement</a> a ses signes, ses causes et ses façons de s'en sortir, et elle concerne bien plus de gens qu'on ne le croit."
+  },
+  "section4": {
+    "title": "Ce que notre test calcule",
+    "p1": "Ce test ne donne pas une note. Il cherche une cause. Les vingt questions portent sur huit choses précises : les occasions de rencontre dans votre semaine, votre vie sociale, la peur d'aborder, un cœur encore pris par le passé ou par la peur, un filtre trop serré, le regard que vous portez sur vous, la place réelle du couple dans votre vie, et ce qui se passe après les premiers échanges.",
+    "p2": "Chaque réponse pèse sur une ou deux de ces causes, avec un poids de un à trois points selon ce qu'elle dit. « Je réfléchis à ce que je pourrais dire, et le moment passe » pèse plus lourd sur la peur d'aborder que « ça dépend du jour ». À la fin, chaque cause est ramenée à un pourcentage de ce qu'elle pouvait recevoir, pour qu'une cause mesurée par cinq questions et une cause mesurée par trois se comparent sur la même échelle.",
+    "p3": "Deux questions changent selon vos réponses. Si vous n'avez jamais été en couple, on vous demande ce qui, selon vous, a fait que ça n'est jamais arrivé. Si vous l'avez été, on vous demande où vous en êtes avec votre dernière histoire. Même chose pour les applications : celui qui les utilise ne répond pas à la même question que celui qui n'en veut pas. Tout le monde répond à vingt questions, mais pas aux mêmes.",
+    "p4": "Le résultat affiche la cause qui pèse le plus, celle qui vient juste derrière quand elle pèse presque autant, et les huit barres pour que vous voyiez le reste. Si aucune cause ne dépasse un certain seuil, le test le dit : rien ne vous bloque, il manque surtout des occasions. Il n'y a pas de bonne réponse, et personne ne voit les vôtres. Répondez comme vous faites en vrai, pas comme vous aimeriez faire."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose"
+  },
+  "jsonLd": {
+    "about": "célibat et rencontre amoureuse",
+    "faq1Q": "Pourquoi je suis célibataire alors que je suis quelqu'un de bien ?",
+    "faq1A": "Parce qu'être quelqu'un de bien ne suffit pas à provoquer une rencontre. La plupart des célibats qui durent tiennent au cadre de vie : on ne croise plus personne de nouveau, ou le cercle d'amis s'est réduit. Les qualités n'y changent rien si personne n'est là pour les voir. C'est justement ce que ce test cherche : la cause qui pèse le plus chez vous, pour agir dessus plutôt que de douter de vous.",
+    "faq2Q": "Est-ce normal d'être célibataire depuis plusieurs années ?",
+    "faq2A": "Oui. L'âge de la première mise en couple recule, les séparations sont plus fréquentes, et beaucoup de gens vivent plusieurs périodes de célibat dans leur vie, parfois longues. Ce qui compte, ce n'est pas la durée, c'est de savoir si ce célibat vous convient ou s'il vous pèse. S'il vous pèse, il a presque toujours une cause qu'on peut nommer.",
+    "faq3Q": "Je n'ai jamais été en couple à 25 ou 30 ans, est-ce grave ?",
+    "faq3A": "Non, et vous êtes moins seul que vous ne le pensez. Ce qui aide, c'est de comprendre pourquoi ça n'est jamais arrivé : des occasions qui ont manqué, une peur d'aborder, un doute sur soi, ou simplement pas d'envie jusqu'ici. Ce test pose la question directement à ceux qui n'ont jamais été en couple, et la réponse change la suite du test.",
+    "faq4Q": "Comment savoir si le problème vient de moi ?",
+    "faq4A": "En regardant ce qui se passe à chaque étape. Si personne ne se présente, le problème est dans votre semaine, pas en vous. Si des gens se présentent et que vous n'osez pas, ou que vous les écartez vite, ou que ça s'arrête toujours au même moment, alors il y a un réflexe à travailler. Ce n'est pas la même chose qu'un défaut : un réflexe, ça se change.",
+    "faq5Q": "Le test est-il anonyme ?",
+    "faq5A": "Oui. Vos réponses restent dans votre navigateur, rien n'est envoyé avec votre nom. Seul le résultat final, sans aucune réponse ni donnée personnelle, est compté pour connaître la répartition des causes parmi les gens qui font le test."
+  }
+}
