@@ -10,7 +10,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -598,7 +598,19 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/warum-finde-ich-keine-liebe-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-perche-non-trovo-l-amore/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-pourquoi-je-ne-trouve-pas-l-amour/"/>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/test-por-que-sigo-soltero/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-pourquoi-suis-je-celibataire/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/why-am-i-still-single-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-por-que-sigo-soltero/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/warum-bin-ich-noch-single-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-perche-sono-ancora-single/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-pourquoi-suis-je-celibataire/"/>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
