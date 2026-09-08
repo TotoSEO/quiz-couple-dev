@@ -83,7 +83,9 @@
     "testEmprise": "Am I being controlled?",
     "testEmpriseDesc": "Your freedom in the relationship, in 20 questions",
     "testTrouverAmour": "Why can't I find love?",
-    "testTrouverAmourDesc": "Fifteen questions about what gets in the way, no judgement"
+    "testTrouverAmourDesc": "Fifteen questions about what gets in the way, no judgement",
+    "testCelibataire": "Why am I still single?",
+    "testCelibataireDesc": "Twenty questions to find the cause, not a mark"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

@@ -83,7 +83,9 @@
     "testEmprise": "¿Estoy bajo control?",
     "testEmpriseDesc": "Tu libertad en la pareja, en 20 preguntas",
     "testTrouverAmour": "¿Por qué no encuentro el amor?",
-    "testTrouverAmourDesc": "Quince preguntas sobre lo que falla, sin juzgar"
+    "testTrouverAmourDesc": "Quince preguntas sobre lo que falla, sin juzgar",
+    "testCelibataire": "¿Por qué sigo soltero?",
+    "testCelibataireDesc": "Veinte preguntas para encontrar la causa, no una nota"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

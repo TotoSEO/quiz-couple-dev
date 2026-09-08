@@ -97,7 +97,8 @@ plan du site (`templates/pages/sitemap.ejs`) et l'accueil (`home.ejs`) rangent
 les pages en quatre familles, chacune avec sa couleur : Tests de couple
 (`--primary`), Tests célibataires (`--celib`, turquoise), Quiz (`--secondary`)
 et Jeux. Les tests célibataires sont les pages d'avant le couple : pourquoi je
-ne trouve pas l'amour (solo, quinze questions), suis-je amoureux, amour ou
+ne trouve pas l'amour (solo, quinze questions), pourquoi je suis encore
+célibataire (diagnostic à huit causes, vingt questions), suis-je amoureux, amour ou
 crush, amour ou amitié, amoureux de mon/ma BFF, m'aime-t-il en secret, mon ex
 pense-t-il encore à moi. Il n'y a pas de page hub pour cette famille, seulement
 l'entrée de menu. Les listes de liens sont écrites en dur
@@ -117,6 +118,7 @@ aux quatre endroits, dans la même famille.
 - `MostQuiz` — 2-8 players, vote (most)
 - `ParentaliteQuiz` — 2 players, explicit point values (parentalite, emmenager)
 - `TruefalseQuiz` — True/false with answer reveal (vrai-faux)
+- `DiagnosticQuiz` — Un diagnostic à causes, pas un score (test « pourquoi je suis encore célibataire », prefix `celib`). Chaque réponse pèse sur une ou plusieurs causes via `prefix.q{N}{lettre}_axes` (« occasions:2,social:1 ») ; une question peut dépendre d'une réponse précédente via `prefix.q{N}_si` (« 3:a », « 8:c,d »), la réserve compte donc plus de questions qu'il n'en est posé (22 pour 20) et les questions ne sont jamais mélangées. Résultat = cause la plus chargée en pourcentage de son maximum sur les questions posées, seconde cause si elle pèse au moins 60 % de la première, profil `ouvert` si aucune ne dépasse 30 %. Les causes et leurs couleurs vivent dans `DIAGNOSTIC_AXES` (quiz-loader.js), les libellés (`axe_<id>`) et les fiches (`p_<id>_t/_d/_a/_c`) dans gd.json.
 - `quiz-tu-preferes.ejs` — Inline `WYRGame` (not part of quiz-loader): 15 or 30 dilemmas, two modes chosen on the setup screen and kept across replays. « Chacun son tour » (`mode='tour'`, default): both players answer on the same phone, relay banner between them, reveal after each dilemma, agreement rate at the end. « Ensemble » (`mode='ensemble'`): one answer per dilemma decided by the couple, no names, no relay, no reveal, result lists the choices with the letter picked. The setup accroche is « Tu préfères ? » (`UI.accroche`); `UI.or` is only the medallion between the two options.
 
 ### Mode à distance (`salon.js`)

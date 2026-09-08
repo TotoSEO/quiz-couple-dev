@@ -83,7 +83,9 @@
     "testEmprise": "Stehe ich unter Kontrolle?",
     "testEmpriseDesc": "Deine Freiheit in der Beziehung, in 20 Fragen",
     "testTrouverAmour": "Warum finde ich keine Liebe?",
-    "testTrouverAmourDesc": "Fünfzehn Fragen zu dem, was hakt, ohne Urteil"
+    "testTrouverAmourDesc": "Fünfzehn Fragen zu dem, was hakt, ohne Urteil",
+    "testCelibataire": "Warum bin ich noch Single?",
+    "testCelibataireDesc": "Zwanzig Fragen, die eine Ursache finden, keine Note"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

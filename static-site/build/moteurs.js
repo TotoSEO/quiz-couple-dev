@@ -27,6 +27,7 @@
 export const TABLE_MOTEURS = {
   'chargeMentale': 'ChargeMentaleQuiz',
   'coquin':        'CoquinQuiz',
+  'diagnostic':    'DiagnosticQuiz',
   'dilemme':       'DilemmeGame',
   'duo-match':     'DuoMatchQuiz',
   'duo-vote':      'DuoVoteGame',

@@ -391,5 +391,11 @@
     "shortTitle": "Pourquoi je ne trouve pas l'amour ?",
     "description": "Quinze questions sur vos rencontres, vos attentes et ce qui vous retient. Le résultat met un nom sur ce qui coince, sans juger.",
     "metaDescription": "Pourquoi vous ne trouvez pas l'amour ? Quinze questions sur vos rencontres, vos attentes et ce qui vous retient, pour comprendre ce qui coince. Test gratuit, résultat immédiat et des pistes pour la suite."
+  },
+  "testCelibataire": {
+    "title": "Pourquoi je suis encore célibataire | Test en ligne gratuit",
+    "shortTitle": "Pourquoi je suis encore célibataire ?",
+    "description": "Vingt questions sur votre quotidien, vos rencontres et ce qui se passe dans votre tête. Le résultat nomme la cause qui pèse le plus, et celle qui vient juste derrière.",
+    "metaDescription": "Pourquoi êtes-vous encore célibataire ? Vingt questions, dont deux qui changent selon vos réponses, pour trouver la cause qui pèse le plus et savoir par quoi commencer. Gratuit, sans inscription."
   }
 }
