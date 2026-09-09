@@ -111,6 +111,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/test-je-l-aime-encore/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-je-l-aime-encore/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/do-i-still-love-him-her-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-todavia-le-quiero/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/liebe-ich-ihn-sie-noch-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-lo-amo-ancora/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-je-l-aime-encore/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/test-couple-sain/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-couple-sain/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/healthy-relationship-test/"/>
