@@ -1940,6 +1940,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'crush', icon: '💘', route: 'testCrush' },
     { type: 'test', key: 'pervers', icon: '🎭', route: 'testPervers' },
     { type: 'test', key: 'amour-habitude', icon: '☕', route: 'testAmourHabitude' },
+    { type: 'test', key: 'amour-ou-attachement', icon: '🌹', route: 'testAmourAttachement' },
     { type: 'test', key: 'sain', icon: '💚', route: 'testCoupleSain' },
     { type: 'test', key: 'mariage', icon: '💒', route: 'testMariage' },
     { type: 'test', key: 'divorce', icon: '⚖️', route: 'testDivorce' },
@@ -2034,6 +2035,9 @@ var QuizEngine = (function() {
     'divorce':         ['testFinCouple', 'testAmourHabitude', 'testToxic'],
     'fin-couple':      ['testCouche', 'testToxic', 'testDivorce'],
     'amour-habitude':  ['testSuisJeAmoureux', 'testDivorce', 'testCoupleSain'],
+    // Le doute sur ce qui lie appelle l'usure du quotidien, puis ce qui se
+    // passe quand on s'accroche, puis la question de la fin.
+    'amour-ou-attachement': ['testAmourHabitude', 'testDependance', 'testFinCouple'],
 
     // ── Tests de doute et de soupçon, faits seul ────────────────────────
     // Le soupçon appelle toujours une deuxième vérification.
@@ -6440,6 +6444,202 @@ var QuizEngine = (function() {
       var parts = barre.querySelectorAll('.bal-part');
       if (parts[0]) parts[0].style.width = seul + '%';
       if (parts[1]) parts[1].style.width = couple + '%';
+    }, 120);
+
+    if (v.title) wrap.appendChild(el('h2', 'text-2xl font-bold mb-4 mt-6 quiz-reveal-enter', esc(v.title)));
+    if (v.description) wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto text-left quiz-reveal-enter', escRiche(v.description)));
+    if (v.advice) {
+      var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
+      advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(v.advice);
+      wrap.appendChild(advice);
+    }
+
+    renderActionButtons(wrap, {
+      share: { noms: nomsPartage(this), type: 'profil', verdict: v.title || '' },
+      restart: function() { self.phase = 'intro'; self.render(); }
+    });
+    this.container.appendChild(wrap);
+    document.body.classList.add('quiz-has-result');
+    smoothScroll(wrap, 'center');
+  };
+
+  // ═══════════════════════════════════════════════════════════
+  // AXES QUIZ - amour ou attachement
+  // Deux axes mesures separement, pas une note unique. L'elan vers la
+  // personne d'un cote, ce qui vous retient de l'autre : les deux peuvent
+  // etre hauts en meme temps, et c'est meme le cas des couples qui vont
+  // bien. Une seule note melangerait un lien tiede des deux cotes et un
+  // lien fort des deux cotes dans la meme tranche du milieu, alors que ce
+  // sont deux situations opposees.
+  //
+  // Le verdict ne sort donc pas d'une tranche de score mais de la FORME du
+  // profil : les deux hauts, l'un nettement au-dessus de l'autre, les deux
+  // bas, ou presque a egalite.
+  // ═══════════════════════════════════════════════════════════
+  function AxesQuiz(config) {
+    this.container = config.container;
+    this.questions = config.questions;
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.quizType = config.quizType || 'axes';
+    this.labels = config.labels || {};
+    this.profils = config.profils || {};
+    this.seuils = config.seuils || { bas: 40, haut: 60, ecart: 15 };
+    this.phase = 'intro';
+    this.currentQ = 0;
+    this.reponses = [];
+    this.render();
+  }
+
+  AxesQuiz.prototype.render = function() {
+    this.container.innerHTML = '';
+    document.body.classList.remove('quiz-has-result');
+    if (this.phase === 'intro') this.renderIntro();
+    else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'results') this.renderResults();
+  };
+
+  AxesQuiz.prototype.renderIntro = function() {
+    var self = this;
+    var ecran = ecranDepart({
+      icone: this.labels.icon || '🌹',
+      titre: this.labels.introTitle || '',
+      desc: this.labels.introDesc || '',
+      meta: pastilleMeta(this.questions.length, null, this.labels.duree || null),
+      bouton: this.labels.start || tg('playerSetup.startTest', 'Commencer le test'),
+      onStart: function() {
+        self.reponses = [];
+        self.currentQ = 0;
+        self.phase = 'playing';
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(ecran.wrap);
+  };
+
+  AxesQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+    renderProgressBar(wrap, this.currentQ, total);
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(q.text)));
+
+    // Les reponses gardent l'ordre du fichier : elles vont du plus au moins,
+    // et cette progression aide a se situer d'une question a l'autre.
+    var optionsWrap = el('div', 'space-y-2');
+    var letters = ['A', 'B', 'C', 'D', 'E'];
+    q.options.forEach(function(opt, idx) {
+      var optBtn = el('button', 'quiz-option');
+      optBtn.type = 'button';
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (letters[idx] || '') + '</span><span>' + esc(opt.text) + '</span>';
+      optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
+        optBtn.classList.add('selected');
+        var sibs = optionsWrap.querySelectorAll('.quiz-option');
+        for (var s = 0; s < sibs.length; s++) { if (sibs[s] !== optBtn) sibs[s].style.opacity = '0.5'; sibs[s].style.pointerEvents = 'none'; }
+        self.reponses[self.currentQ] = opt;
+        setTimeout(function() {
+          if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
+          else { self.phase = 'results'; }
+          self.render();
+        }, DELAI_REPONSE);
+      });
+      optionsWrap.appendChild(optBtn);
+    });
+    wrap.appendChild(optionsWrap);
+
+    if (this.currentQ > 0) {
+      var navWrap = el('div', 'mt-6');
+      var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previousQuestion', 'Précédent'));
+      backBtn.type = 'button';
+      backBtn.addEventListener('click', function() {
+        self.currentQ--;
+        self.reponses[self.currentQ] = undefined;
+        self.render();
+      });
+      navWrap.appendChild(backBtn);
+      wrap.appendChild(navWrap);
+    }
+    this.container.appendChild(wrap);
+  };
+
+  // Chaque axe est ramene a son propre maximum : les deux pourcentages sont
+  // independants et ne font pas cent a eux deux, contrairement au test
+  // couple ou celibat.
+  AxesQuiz.prototype.parts = function() {
+    var pris = {}, max = {};
+    for (var i = 0; i < this.questions.length; i++) {
+      var q = this.questions[i], axe = q.axe || 'a', m = 0;
+      for (var j = 0; j < q.options.length; j++) {
+        if ((q.options[j].points || 0) > m) m = q.options[j].points || 0;
+      }
+      max[axe] = (max[axe] || 0) + m;
+      pris[axe] = (pris[axe] || 0) + (this.reponses[i] ? (this.reponses[i].points || 0) : 0);
+    }
+    return {
+      a: max.a ? Math.round(pris.a / max.a * 100) : 0,
+      b: max.b ? Math.round(pris.b / max.b * 100) : 0
+    };
+  };
+
+  // La forme du profil, pas la hauteur du total : deux liens qui marquent
+  // 55 et 55 ne disent pas la meme chose que 20 et 90.
+  AxesQuiz.prototype.classe = function(a, b) {
+    var s = this.seuils;
+    if (a < s.bas && b < s.bas) return 'fini';
+    if (b - a >= s.ecart) return 'attachement';
+    if (a - b >= s.ecart) return 'amour';
+    if (a >= s.haut && b >= s.haut) return 'deux';
+    return 'melange';
+  };
+
+  AxesQuiz.prototype.enregistreProfil = function(profil) {
+    var bloc = document.getElementById('pq-reviews');
+    var slug = bloc ? bloc.dataset.quizSlug : null;
+    if (!slug || !profil) return;
+    var cle = 'qc-profil-' + slug;
+    try { if (localStorage.getItem(cle)) return; localStorage.setItem(cle, profil); } catch (e) {}
+    fetch(SUPABASE_URL + '/rest/v1/profil_resultats', {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json', 'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ quiz_slug: slug, profil: profil, lang: this.lang })
+    }).catch(function () {});
+  };
+
+  AxesQuiz.prototype.renderResults = function() {
+    var self = this;
+    var p = this.parts();
+    var cle = this.classe(p.a, p.b);
+    var v = this.profils[cle] || {};
+    this.enregistreProfil(cle);
+
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-3', this.labels.icon || '🌹'));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-4', esc(this.labels.resultLabel || '')));
+
+    // Deux jauges l'une sous l'autre, chacune avec son maximum : on lit
+    // d'abord la hauteur de chaque axe, puis l'ecart entre les deux.
+    var zone = el('div', 'axe-jauges');
+    [['a', this.labels.axeA, p.a], ['b', this.labels.axeB, p.b]].forEach(function(t) {
+      var bloc = el('div', 'axe-jauge axe-jauge--' + t[0]);
+      bloc.innerHTML =
+        '<div class="axe-tete"><span class="axe-lib">' + esc(t[1] || '') + '</span>'
+        + '<span class="axe-nb">' + t[2] + '<span class="axe-pct">%</span></span></div>'
+        + '<div class="axe-piste" role="img" aria-label="' + esc(t[1] || '') + ' : ' + t[2] + ' %">'
+        + '<span class="axe-part" style="width:0%"></span></div>';
+      zone.appendChild(bloc);
+    });
+    wrap.appendChild(zone);
+    setTimeout(function() {
+      var parts = zone.querySelectorAll('.axe-part');
+      if (parts[0]) parts[0].style.width = p.a + '%';
+      if (parts[1]) parts[1].style.width = p.b + '%';
     }, 120);
 
     if (v.title) wrap.appendChild(el('h2', 'text-2xl font-bold mb-4 mt-6 quiz-reveal-enter', esc(v.title)));
@@ -11370,6 +11570,7 @@ var QuizEngine = (function() {
     ProfileQuiz: ProfileQuiz,
     DiagnosticQuiz: DiagnosticQuiz,
     BalanceQuiz: BalanceQuiz,
+    AxesQuiz: AxesQuiz,
     PiliersQuiz: PiliersQuiz,
     ChargeMentaleQuiz: ChargeMentaleQuiz,
     ZamoursQuiz: ZamoursQuiz,

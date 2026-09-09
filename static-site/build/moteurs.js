@@ -25,6 +25,7 @@
 // volontairement : la construction verifie ensuite que chaque valeur presente
 // dans quiz-loader.js y figure, et que chaque constructeur nomme existe.
 export const TABLE_MOTEURS = {
+  'axes':          'AxesQuiz',
   'balance':       'BalanceQuiz',
   'chargeMentale': 'ChargeMentaleQuiz',
   'coquin':        'CoquinQuiz',

@@ -307,6 +307,8 @@ const GD_QUESTION_PREFIXES = {
   celibataire: ['celib'],
   // Couple ou célibat : vingt questions pondérées, un résultat en deux parts.
   'couple-ou-celibat': ['balance'],
+  // Amour ou attachement : deux axes, une question sur deux pour chacun.
+  'amour-ou-attachement': ['attache'],
   karmique: ['karmique'], 'suis-je-amoureux': ['suisjeamoureux'],
   'distance-aime': ['distanceAime'], zamours: ['zamours'],
   // Ces deux-là déclinent leurs questions au masculin et au féminin ; le

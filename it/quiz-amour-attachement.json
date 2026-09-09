@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Test di coppia",
+    "title": "È amore o è attaccamento? Test gratuito",
+    "titleHighlight": "amore o è attaccamento",
+    "description": "State insieme da un po' e torna sempre la stessa domanda: resto perché amo questa persona o perché ci sono attaccato? Questo test misura <strong>le due cose separatamente</strong>, in venti domande, e ti dà due barre da confrontare invece di un voto unico.",
+    "subtitle": "Venti domande, cinque minuti, due misure e cinque risultati possibili",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "La differenza fra amore e attaccamento",
+    "p1": "La differenza principale sta in quello che ti fa restare. L'amore riguarda la persona: la desideri, quello che racconta ti interessa, la sceglieresti di nuovo se la incontrassi domani. L'attaccamento riguarda il legame: gli anni passati, la casa, gli amici in comune, la paura del silenzio la sera, l'idea di ricominciare tutto.",
+    "p2": "Sono due cose diverse, ma non due cose opposte, ed è proprio questo che rende la domanda difficile da sciogliere da soli: una coppia che sta bene le ha tutte e due, e in abbondanza. Puoi amare il tuo partner e allo stesso tempo temere di ritrovarti solo. Questo non toglie niente ai tuoi sentimenti, vuol dire solo che la tua vita è intrecciata alla sua, il che è abbastanza normale dopo qualche anno!",
+    "p3": "Il problema comincia quando resta solo la seconda. Quando l'unica cosa che ti trattiene sono le conseguenze di andartene, e niente parla più della persona in sé. È questo squilibrio che il test cerca di rendere visibile."
+  },
+  "section2": {
+    "title": "Quattro segnali che distinguono le due cose",
+    "intro": "Ecco le quattro cose che le separano meglio, e su cui tornano le domande del test.",
+    "sub1Title": "Questa persona ti interessa ancora?",
+    "sub1P1": "Non se le vuoi bene: se ti interessa. Cosa ha in mente di fare quest'anno, cosa la occupa adesso, cosa pensa di un argomento di cui non avete mai parlato. Chi ama vuole sapere. Quando è da un po' che non sai rispondere a queste domande, raramente è una dimenticanza.",
+    "sub2Title": "Quello che rispondi a «se fosse da rifare»",
+    "sub2P1": "Se incontrassi questa persona oggi, a una festa, senza la storia in comune: la sceglieresti? È la domanda più dura del test e la più eloquente. Mette da parte tutto quello che si è accumulato e lascia solo la persona. Un «non lo so» è già una risposta.",
+    "sub3Title": "Quello che ti viene quando immagini il dopo",
+    "sub3P1": "Quando ti immagini senza di lui, cosa arriva per primo? Se ti manca la persona, è amore. Se è il silenzio in casa, la logistica del trasloco e quello che direbbero i tuoi amici, è altro. Anche qui le due cose possono convivere, e l'ordine in cui arrivano dice parecchio.",
+    "sub4Title": "Quello che ti ripeti per restare",
+    "sub4P1": "«Abbiamo pur sempre dieci anni alle spalle.» «Non se ne farebbe una ragione.» «Non è il momento…» Queste frasi sono argomenti di attaccamento: parlano del costo di andarsene, mai della voglia di restare. Quando tornano ogni settimana, spesso è perché <a href=\"/it/test-amore-o-abitudine/\">la routine ha preso il posto di tutto il resto</a>."
+  },
+  "section3": {
+    "title": "Come il test misura le due cose",
+    "p1": "Venti domande, dieci per lato, poste in alternanza. Dieci misurano lo slancio verso la persona: il desiderio, l'interesse, il piacere di sentirla rientrare, il modo in cui condividi una bella notizia. Dieci misurano quello che ti trattiene: la paura del vuoto, gli anni investiti, gli amici in comune, quello che perderesti andandotene.",
+    "p2": "Ogni risposta vale un numero diverso di punti, e ogni domanda ha il suo peso: quello che risponderesti a «se fosse da rifare» conta più della tua opinione sulle abitudini quotidiane. I due lati valgono cinquanta punti ciascuno, e il risultato li riporta in percentuale.",
+    "p3": "Le due percentuali non fanno cento insieme, ed è voluto. Ognuna è calcolata sul proprio massimo, quindi puoi benissimo ottenere 80 e 80. Un voto unico metterebbe un legame tiepido e un legame forte nella stessa fascia centrale, mentre sono due situazioni opposte.",
+    "p4": "Ci sono cinque risultati possibili a seconda della forma del profilo: tutti e due alti, l'amore nettamente avanti, l'attaccamento nettamente avanti, tutti e due bassi, o quasi pari. Se il lato dell'attaccamento vince di parecchio e <a href=\"/it/test-dipendenza-affettiva/\">l'idea di ritrovarti solo ti mette in uno stato che ti supera</a>, la domanda non riguarda più del tutto la coppia. E se le due barre sono a terra, <a href=\"/it/test-e-la-fine-della-mia-relazione/\">quello che resta da salvare</a> si guarda altrove."
+  },
+  "seo": {
+    "faqTitle": "Le domande che ci si pone"
+  },
+  "jsonLd": {
+    "about": "amore e attaccamento nella coppia",
+    "faq1Q": "Come capire se è amore o attaccamento?",
+    "faq1A": "Guardando di cosa parlano i motivi che ti fanno restare. Se parlano della persona, di com'è e della voglia che ne hai, è amore. Se parlano soprattutto di quello che perderesti andandotene, del tempo già passato e della paura di restare solo, è attaccamento. Le due cose spesso convivono, e conta più la distanza fra loro che il fatto che ci siano.",
+    "faq2Q": "Si può amare qualcuno ed esserne attaccati allo stesso tempo?",
+    "faq2A": "Sì, ed è il caso più frequente nelle coppie che durano. L'attaccamento si costruisce da solo quando si condividono anni, una casa e gli stessi amici. Non sostituisce l'amore, ci si aggiunge. Il segnale da tenere d'occhio non è la sua presenza, è il momento in cui resta da solo.",
+    "faq3Q": "L'attaccamento può tornare a essere amore?",
+    "faq3A": "Non torna a essere amore, ma l'amore può risalire accanto a lui. In molti casi quello che è calato non è il sentimento ma l'attenzione: si è smesso di farsi domande, di proporre cose, di guardare l'altro come qualcosa di diverso da chi svuota la lavastoviglie. Si ripara, a patto che lo vogliano entrambi.",
+    "faq4Q": "È grave restare per attaccamento?",
+    "faq4A": "Non è una colpa, e molte persone lo fanno per anni senza essere infelici. Diventa un problema il giorno in cui impedisce a entrambi di avere altro, o quando uno dei due crede ancora che l'altro lo ami come all'inizio. La domanda non è morale, è pratica: quanto tempo ci vuoi dedicare.",
+    "faq5Q": "Il test è anonimo?",
+    "faq5A": "Sì. Le tue risposte restano nel tuo browser e non viene inviato niente con il tuo nome. Solo il risultato finale, senza alcun dato personale, serve a misurare la distribuzione dei profili."
+  }
+}

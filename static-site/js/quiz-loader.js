@@ -303,6 +303,12 @@
     // dans gd.json. Les questions gardent l'ordre du fichier.
     'couple-ou-celibat': { prefix: 'balance', engine: 'balance', totalQ: 20, pool: 20, quizType: 'couple-ou-celibat', paliers: [22, 42, 58, 78] },
 
+    // Amour ou attachement : deux axes mesures separement, l'elan vers la
+    // personne (axe a) et ce qui vous retient (axe b), dix questions et
+    // cinquante points chacun. Le verdict sort de la forme du profil, pas
+    // d'une tranche de score : voir AxesQuiz.
+    'amour-ou-attachement': { prefix: 'attache', engine: 'axes', totalQ: 20, pool: 20, quizType: 'amour-ou-attachement' },
+
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
 
     // ── Infidelite quiz (solo scoring, ascending: more signs = higher score) ──
@@ -922,6 +928,9 @@
         break;
       case 'balance':
         initBalanceQuiz(config);
+        break;
+      case 'axes':
+        initAxesQuiz(config);
         break;
       case 'piliers':
         initPiliersQuiz(config, questions);
@@ -2426,6 +2435,56 @@
         start: lu('bouton', null),
         resultLabel: lu('resultatLibelle', ''),
         secondLabel: lu('secondLibelle', '')
+      }
+    });
+  }
+
+  // Les cles des cinq profils, dans l'ordre ou AxesQuiz les nomme.
+  var AXES_PROFILS = ['deux', 'amour', 'attachement', 'melange', 'fini'];
+
+  function initAxesQuiz(cfg) {
+    // Comme le diagnostic et la balance : l'ordre du fichier est celui de la
+    // lecture (les deux axes alternent une question sur deux), donc pas de
+    // tirage au sort.
+    var questions = parseGdQuestions(cfg.prefix, (cfg.pool || 20) + 5, false);
+    questions.sort(function(a, b) { return a.id - b.id; });
+    appliquePointsExplicites(cfg.prefix, questions);
+    questions.forEach(function(q) {
+      var cle = cfg.prefix + '.q' + q.id + '_axe';
+      var axe = QuizEngine.tgd(cle, null);
+      q.axe = (axe && axe !== cle) ? axe : 'a';
+    });
+
+    function lu(cle, repli) {
+      var plein = cfg.prefix + '.' + cle;
+      var v = QuizEngine.tgd(plein, null);
+      return (v && v !== plein) ? v : repli;
+    }
+    var profils = {};
+    AXES_PROFILS.forEach(function(id) {
+      profils[id] = {
+        title: lu('p_' + id + '_t', ''),
+        description: lu('p_' + id + '_d', ''),
+        advice: lu('p_' + id + '_a', '')
+      };
+    });
+    new QuizEngine.AxesQuiz({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang,
+      quizType: cfg.quizType || 'axes',
+      profils: profils,
+      seuils: cfg.seuils || { bas: 40, haut: 60, ecart: 15 },
+      labels: {
+        icon: lu('icone', '\ud83c\udf39'),
+        introTitle: lu('introTitre', ''),
+        introDesc: lu('introTexte', ''),
+        duree: lu('duree', null),
+        start: lu('bouton', null),
+        resultLabel: lu('resultatLibelle', ''),
+        axeA: lu('axeA', ''),
+        axeB: lu('axeB', '')
       }
     });
   }

@@ -53,6 +53,12 @@
     "description": "20 questions pour savoir si vous restez par amour ou par habitude.",
     "metaDescription": "Vous doutez de vos sentiments ? 20 questions pour savoir si vous restez en couple par amour ou par habitude. Test gratuit, sincère et immédiat."
   },
+  "testAmourAttachement": {
+    "title": "Amour ou attachement ? Test en ligne pour savoir",
+    "shortTitle": "Amour ou attachement ?",
+    "description": "Vingt questions qui mesurent séparément ce que vous ressentez pour votre partenaire et ce qui vous retient auprès de lui. Deux barres à comparer, cinq résultats possibles.",
+    "metaDescription": "Amour ou attachement ? Vingt questions pour mesurer séparément l'élan vers votre partenaire et ce qui vous retient, avec deux pourcentages à comparer. Test gratuit, sans inscription."
+  },
   "quizAmoureux": {
     "title": "Quiz Amoureux interactif : questionnez votre amour gratuitement",
     "shortTitle": "Quiz Amoureux",

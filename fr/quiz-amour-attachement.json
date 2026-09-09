@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Test de couple",
+    "title": "Est-ce de l'amour ou de l'attachement ? Test gratuit",
+    "titleHighlight": "amour ou de l'attachement",
+    "description": "Vous êtes en couple depuis un moment et une question revient : est-ce que je reste parce que j'aime cette personne, ou parce que je suis attaché à elle ? Ce test mesure <strong>les deux séparément</strong>, en vingt questions, et vous donne deux barres à comparer plutôt qu'une note unique.",
+    "subtitle": "Vingt questions, cinq minutes, deux mesures et cinq résultats possibles",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "La différence entre l'amour et l'attachement",
+    "p1": "La principale différence tient à ce qui vous fait rester. L'amour porte sur la personne : vous avez envie d'elle, ce qu'elle raconte vous intéresse, vous la choisiriez encore si vous la rencontriez demain. L'attachement porte sur le lien : les années passées, l'appartement, les amis communs, la peur du silence le soir, l'idée de tout recommencer.",
+    "p2": "Ce sont deux choses différentes, mais pas deux choses opposées, et c'est justement ce qui rend la question difficile à trancher tout seul : un couple qui va bien a les deux, largement. Vous pouvez très bien aimer votre partenaire et redouter en même temps de vous retrouver seul. Ça n'enlève rien à vos sentiments, ça veut juste dire que votre vie est mêlée à la sienne, ce qui est plutôt normal au bout de quelques années !",
+    "p3": "Le problème commence quand il ne reste que le second. Quand la seule chose qui vous retient, ce sont les conséquences du départ, et que plus rien ne parle de la personne elle-même. C'est ce déséquilibre-là que le test cherche à rendre visible."
+  },
+  "section2": {
+    "title": "Quatre signes qui départagent les deux",
+    "intro": "Voici les quatre choses qui séparent le mieux les deux, et sur lesquelles les questions du test reviennent.",
+    "sub1Title": "Est-ce que cette personne vous intéresse encore ?",
+    "sub1P1": "Pas est-ce que vous l'aimez bien : est-ce qu'elle vous intéresse. Ce qu'elle a prévu de faire cette année, ce qui l'occupe en ce moment, ce qu'elle pense d'un sujet dont vous n'avez jamais parlé. Quelqu'un qui aime a envie de savoir. Quand on ne sait plus répondre à ces questions-là depuis un moment, c'est rarement un oubli.",
+    "sub2Title": "Ce que vous répondez à « si c'était à refaire »",
+    "sub2P1": "Si vous rencontriez cette personne aujourd'hui, dans une soirée, sans l'histoire commune : est-ce que vous la choisiriez ? C'est la question la plus dure du test et la plus parlante. Elle met de côté tout ce qui s'est accumulé et ne laisse que la personne. Un « je ne sais pas » est déjà une réponse.",
+    "sub3Title": "Ce qui vous vient quand vous imaginez la suite",
+    "sub3P1": "Quand vous vous projetez sans elle, qu'est-ce qui arrive en premier ? Si c'est la personne qui vous manque, c'est de l'amour. Si c'est le silence dans l'appartement, la logistique du déménagement et ce que diraient vos amis, c'est autre chose. Là encore, les deux peuvent cohabiter, et l'ordre dans lequel elles arrivent en dit long.",
+    "sub4Title": "Ce que vous vous répétez pour rester",
+    "sub4P1": "« On a quand même dix ans derrière nous. » « Il ou elle ne s'en remettrait pas. » « Ce n'est pas le moment… » Ces phrases-là sont des arguments d'attachement : elles parlent du coût de partir, jamais de l'envie de rester. Quand elles reviennent toutes les semaines, c'est souvent que <a href=\"/test-amour-ou-habitude/\">le quotidien a pris la place du reste</a>."
+  },
+  "section3": {
+    "title": "Comment le test mesure les deux",
+    "p1": "Vingt questions, dix pour chaque côté, posées en alternance. Dix mesurent l'élan vers la personne : l'envie, l'intérêt, le plaisir de la voir rentrer, la façon dont vous partagez une bonne nouvelle. Dix mesurent ce qui vous retient : la peur du vide, les années investies, les amis communs, ce que vous perdriez en partant.",
+    "p2": "Chaque réponse vaut un nombre de points différent, et chaque question a son propre poids : ce que vous répondriez à « si c'était à refaire » compte plus que votre avis sur les habitudes du quotidien. Les deux côtés valent cinquante points chacun, et le résultat les ramène en pourcentage.",
+    "p3": "Les deux pourcentages ne font pas cent à eux deux, et c'est voulu. Chacun est calculé sur son propre maximum, donc vous pouvez très bien obtenir 80 et 80. Une note unique mélangerait un lien tiède des deux côtés et un lien fort des deux côtés dans la même tranche du milieu, alors que ce sont deux situations opposées.",
+    "p4": "Cinq résultats sont possibles selon la forme du profil : les deux hauts, l'amour nettement devant, l'attachement nettement devant, les deux bas, ou presque à égalité. Si le côté attachement l'emporte largement et que <a href=\"/test-dependance-affective/\">l'idée de vous retrouver seul vous met dans un état qui vous dépasse</a>, la question n'est plus tout à fait celle du couple. Et si les deux barres sont au plancher, <a href=\"/test-est-ce-la-fin-de-mon-couple/\">ce qui reste à sauver</a> se regarde ailleurs."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose"
+  },
+  "jsonLd": {
+    "about": "amour et attachement dans le couple",
+    "faq1Q": "Comment savoir si c'est de l'amour ou de l'attachement ?",
+    "faq1A": "En regardant de quoi parlent les raisons qui vous font rester. Si elles parlent de la personne, de ce qu'elle est et de l'envie que vous en avez, c'est de l'amour. Si elles parlent surtout de ce que vous perdriez en partant, du temps déjà passé et de la peur d'être seul, c'est de l'attachement. Les deux existent souvent en même temps, et c'est leur écart qui compte plus que leur présence.",
+    "faq2Q": "Peut-on aimer quelqu'un et être attaché à lui en même temps ?",
+    "faq2A": "Oui, et c'est même le cas le plus fréquent dans les couples qui durent. L'attachement se construit tout seul quand on partage des années, un logement et les mêmes amis. Il ne remplace pas l'amour, il s'ajoute. Le signal à surveiller n'est pas sa présence, c'est le moment où il reste seul.",
+    "faq3Q": "L'attachement peut-il redevenir de l'amour ?",
+    "faq3A": "Il ne redevient pas de l'amour, mais l'amour peut remonter à côté de lui. Dans beaucoup de cas, ce qui est tombé n'est pas le sentiment mais l'attention : on a arrêté de poser des questions, de proposer des choses, de regarder l'autre autrement que comme la personne qui vide le lave-vaisselle. Ça se répare, à condition que les deux le veuillent.",
+    "faq4Q": "Est-ce grave de rester par attachement ?",
+    "faq4A": "Ce n'est pas une faute, et beaucoup de gens le font pendant des années sans être malheureux. Ça devient un problème le jour où ça empêche les deux d'avoir autre chose, ou quand l'un des deux croit encore que l'autre l'aime comme au début. La question n'est pas morale, elle est pratique : combien de temps vous voulez y consacrer.",
+    "faq5Q": "Le test est-il anonyme ?",
+    "faq5A": "Oui. Vos réponses restent dans votre navigateur, rien n'est envoyé avec votre nom. Seul le résultat final, sans aucune donnée personnelle, sert à mesurer la répartition des profils."
+  }
+}

@@ -7,6 +7,8 @@
     "testToxic": "Test relazione tossica",
     "testPervers": "Test partner narcisista",
     "testAmourHabitude": "Test amore o abitudine",
+    "testAmourAttachement": "Amore o attaccamento?",
+    "testAmourAttachementDesc": "È la persona o quello che perderesti andandotene?",
     "testCoupleSain": "Test relazione sana",
     "testMariage": "Test matrimonio",
     "testDivorce": "Test divorzio",

@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Couple test",
+    "title": "Is it love or attachment? Free test",
+    "titleHighlight": "love or attachment",
+    "description": "You've been together a while and one question keeps coming back: am I staying because I love this person, or because I'm attached to them? This test measures <strong>the two separately</strong>, over twenty questions, and gives you two bars to compare rather than a single score.",
+    "subtitle": "Twenty questions, five minutes, two measures and five possible results",
+    "jumpBtn": "Take the test"
+  },
+  "section1": {
+    "title": "The difference between love and attachment",
+    "p1": "The main difference lies in what makes you stay. Love is about the person: you want them, what they say interests you, you'd choose them again if you met them tomorrow. Attachment is about the bond: the years behind you, the flat, the shared friends, the fear of the silence in the evening, the thought of starting everything over.",
+    "p2": "They're two different things, but not two opposite ones, and that's exactly what makes the question hard to settle on your own: a couple who are doing well have plenty of both. You can love your partner and at the same time dread ending up alone. That takes nothing away from your feelings, it just means your life is bound up with theirs, which is fairly normal after a few years!",
+    "p3": "The trouble starts when only the second one is left. When the only thing keeping you there is what leaving would cost, and nothing points to the person any more. That's the imbalance the test is built to make visible."
+  },
+  "section2": {
+    "title": "Four signs that tell the two apart",
+    "intro": "Here are the four things that separate them best, and the ones the test questions keep coming back to.",
+    "sub1Title": "Does this person still interest you?",
+    "sub1P1": "Not whether you're fond of them: whether they interest you. What they're planning to do this year, what's keeping them busy right now, what they think about a subject you've never discussed. Someone who loves wants to know. When you haven't been able to answer those questions for a while, it's rarely an oversight.",
+    "sub2Title": "What you answer to \"if you had to do it again\"",
+    "sub2P1": "If you met this person today, at a party, with no shared history: would you choose them? It's the hardest question in the test and the most telling. It sets aside everything that has piled up and leaves only the person. An \"I don't know\" is already an answer.",
+    "sub3Title": "What comes to you when you picture what's next",
+    "sub3P1": "When you imagine life without them, what arrives first? If it's the person you miss, that's love. If it's the silence in the flat, the logistics of moving out and what your friends would say, it's something else. Here too, both can sit side by side, and the order they arrive in says a lot.",
+    "sub4Title": "What you tell yourself in order to stay",
+    "sub4P1": "\"We've got ten years behind us, after all.\" \"They wouldn't get over it.\" \"It isn't the right time…\" Those sentences are attachment arguments: they're about the cost of leaving, never about wanting to stay. When they come round every week, it's often because <a href=\"/en/love-or-habit-test/\">the daily routine has taken the place of everything else</a>."
+  },
+  "section3": {
+    "title": "How the test measures both",
+    "p1": "Twenty questions, ten for each side, asked alternately. Ten measure the pull towards the person: the desire, the interest, the pleasure of hearing them come home, the way you share good news. Ten measure what keeps you there: the fear of the void, the years invested, the shared friends, what you'd lose by leaving.",
+    "p2": "Each answer is worth a different number of points, and each question carries its own weight: what you'd answer to \"if you had to do it again\" counts for more than your view on everyday habits. Both sides are worth fifty points each, and the result turns them into percentages.",
+    "p3": "The two percentages don't add up to a hundred, and that's deliberate. Each is worked out against its own maximum, so you can perfectly well get 80 and 80. A single score would put a lukewarm bond and a strong bond in the same middle band, when they're two opposite situations.",
+    "p4": "Five results are possible, depending on the shape of the profile: both high, love clearly ahead, attachment clearly ahead, both low, or almost level. If the attachment side wins by a long way and <a href=\"/en/emotional-dependency-test/\">the thought of ending up alone puts you in a state you can't control</a>, the question isn't quite about the relationship any more. And if both bars are on the floor, <a href=\"/en/is-my-relationship-over-test/\">what's left to save</a> is measured elsewhere."
+  },
+  "seo": {
+    "faqTitle": "The questions people ask"
+  },
+  "jsonLd": {
+    "about": "love and attachment in a relationship",
+    "faq1Q": "How do I know whether it's love or attachment?",
+    "faq1A": "By looking at what your reasons for staying are actually about. If they're about the person, who they are and how much you want them, it's love. If they're mostly about what you'd lose by leaving, the time already spent and the fear of being alone, it's attachment. The two often exist at once, and the gap between them matters more than the fact that they're there.",
+    "faq2Q": "Can you love someone and be attached to them at the same time?",
+    "faq2A": "Yes, and it's the most common case in couples who last. Attachment builds itself when you share years, a home and the same friends. It doesn't replace love, it gets added to it. The signal to watch isn't its presence, it's the moment it's left on its own.",
+    "faq3Q": "Can attachment turn back into love?",
+    "faq3A": "It doesn't turn back into love, but love can climb back up alongside it. In many cases what has dropped isn't the feeling but the attention: you stopped asking questions, stopped suggesting things, stopped seeing the other person as anything but the one who empties the dishwasher. That can be repaired, provided both of you want to.",
+    "faq4Q": "Is it bad to stay out of attachment?",
+    "faq4A": "It isn't a fault, and plenty of people do it for years without being unhappy. It becomes a problem the day it stops both of you from having anything else, or when one of you still believes the other loves them the way they did at the start. The question isn't a moral one, it's practical: how much time you want to give it.",
+    "faq5Q": "Is the test anonymous?",
+    "faq5A": "Yes. Your answers stay in your browser and nothing is sent with your name. Only the final result, with no personal data attached, is used to measure how the profiles break down."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Test de pareja",
+    "title": "¿Es amor o es apego? Test gratis",
+    "titleHighlight": "amor o es apego",
+    "description": "Lleváis un tiempo juntos y vuelve siempre la misma pregunta: ¿me quedo porque quiero a esta persona o porque estoy apegado a ella? Este test mide <strong>las dos cosas por separado</strong>, en veinte preguntas, y te da dos barras que comparar en vez de una sola nota.",
+    "subtitle": "Veinte preguntas, cinco minutos, dos medidas y cinco resultados posibles",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "La diferencia entre el amor y el apego",
+    "p1": "La principal diferencia está en lo que te hace quedarte. El amor tiene que ver con la persona: la deseas, lo que cuenta te interesa, la elegirías otra vez si la conocieras mañana. El apego tiene que ver con el vínculo: los años pasados, el piso, los amigos comunes, el miedo al silencio por la noche, la idea de empezar todo de cero.",
+    "p2": "Son dos cosas distintas, pero no dos cosas opuestas, y justamente por eso cuesta tanto decidirlo uno solo: una pareja que va bien tiene las dos, y de sobra. Puedes querer a tu pareja y a la vez temer quedarte solo. Eso no le quita nada a tus sentimientos, solo significa que tu vida está mezclada con la suya, ¡algo bastante normal al cabo de unos años!",
+    "p3": "El problema empieza cuando solo queda lo segundo. Cuando lo único que te retiene son las consecuencias de marcharte, y ya nada habla de la persona en sí. Es ese desequilibrio lo que el test intenta hacer visible."
+  },
+  "section2": {
+    "title": "Cuatro señales que separan las dos cosas",
+    "intro": "Estas son las cuatro cosas que mejor las distinguen, y sobre las que vuelven las preguntas del test.",
+    "sub1Title": "¿Esta persona te sigue interesando?",
+    "sub1P1": "No si le tienes cariño: si te interesa. Lo que ha pensado hacer este año, lo que le ocupa ahora, lo que opina de un tema del que nunca habéis hablado. Quien quiere, quiere saber. Cuando hace tiempo que no sabes responder a esas preguntas, rara vez es un despiste.",
+    "sub2Title": "Lo que respondes a «si tuvieras que volver a elegir»",
+    "sub2P1": "Si conocieras a esta persona hoy, en una fiesta, sin la historia común: ¿la elegirías? Es la pregunta más dura del test y la más reveladora. Deja de lado todo lo acumulado y solo deja a la persona. Un «no lo sé» ya es una respuesta.",
+    "sub3Title": "Lo que te viene cuando imaginas lo que sigue",
+    "sub3P1": "Cuando te proyectas sin ella, ¿qué llega primero? Si es la persona lo que echas de menos, es amor. Si es el silencio en casa, la logística de la mudanza y lo que dirían tus amigos, es otra cosa. También aquí las dos pueden convivir, y el orden en que aparecen dice mucho.",
+    "sub4Title": "Lo que te repites para quedarte",
+    "sub4P1": "«Llevamos diez años, tampoco es poco.» «No lo superaría.» «No es el momento…» Esas frases son argumentos de apego: hablan del coste de marcharse, nunca de las ganas de quedarse. Cuando vuelven cada semana, suele ser porque <a href=\"/es/test-amor-o-costumbre/\">la rutina ha ocupado el lugar de lo demás</a>."
+  },
+  "section3": {
+    "title": "Cómo mide el test las dos cosas",
+    "p1": "Veinte preguntas, diez para cada lado, alternadas. Diez miden el impulso hacia la persona: el deseo, el interés, el gusto de verla llegar, cómo compartes una buena noticia. Diez miden lo que te retiene: el miedo al vacío, los años invertidos, los amigos comunes, lo que perderías al marcharte.",
+    "p2": "Cada respuesta vale un número distinto de puntos, y cada pregunta tiene su propio peso: lo que responderías a «si tuvieras que volver a elegir» cuenta más que tu opinión sobre las costumbres del día a día. Los dos lados valen cincuenta puntos cada uno, y el resultado los pasa a porcentaje.",
+    "p3": "Los dos porcentajes no suman cien, y es a propósito. Cada uno se calcula sobre su propio máximo, así que puedes sacar perfectamente 80 y 80. Una nota única metería un vínculo tibio y un vínculo fuerte en la misma franja del medio, cuando son dos situaciones opuestas.",
+    "p4": "Hay cinco resultados posibles según la forma del perfil: los dos altos, el amor claramente por delante, el apego claramente por delante, los dos bajos, o casi empatados. Si el lado del apego gana de largo y <a href=\"/es/test-dependencia-emocional/\">la idea de quedarte solo te pone en un estado que te supera</a>, la pregunta ya no es del todo sobre la pareja. Y si las dos barras están por los suelos, <a href=\"/es/test-es-el-final-de-mi-relacion/\">lo que queda por salvar</a> se mira en otro sitio."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que nos hacemos"
+  },
+  "jsonLd": {
+    "about": "amor y apego en la pareja",
+    "faq1Q": "¿Cómo saber si es amor o apego?",
+    "faq1A": "Mirando de qué hablan las razones por las que te quedas. Si hablan de la persona, de cómo es y de las ganas que te da, es amor. Si hablan sobre todo de lo que perderías al marcharte, del tiempo ya invertido y del miedo a estar solo, es apego. Las dos cosas suelen convivir, y lo que cuenta es la distancia entre ellas más que el hecho de que estén.",
+    "faq2Q": "¿Se puede querer a alguien y estar apegado a él al mismo tiempo?",
+    "faq2A": "Sí, y es lo más frecuente en las parejas que duran. El apego se construye solo cuando se comparten años, una casa y los mismos amigos. No sustituye al amor, se le suma. La señal que hay que vigilar no es que esté, es el momento en que se queda solo.",
+    "faq3Q": "¿El apego puede volver a convertirse en amor?",
+    "faq3A": "No vuelve a convertirse en amor, pero el amor puede subir otra vez a su lado. En muchos casos lo que ha caído no es el sentimiento sino la atención: se dejó de hacer preguntas, de proponer cosas, de mirar al otro como algo más que quien vacía el lavavajillas. Eso se repara, siempre que los dos quieran.",
+    "faq4Q": "¿Es grave quedarse por apego?",
+    "faq4A": "No es ninguna falta, y mucha gente lo hace durante años sin ser infeliz. Se convierte en un problema el día en que impide a los dos tener otra cosa, o cuando uno sigue creyendo que el otro le quiere como al principio. La pregunta no es moral, es práctica: cuánto tiempo quieres dedicarle.",
+    "faq5Q": "¿El test es anónimo?",
+    "faq5A": "Sí. Tus respuestas se quedan en tu navegador y no se envía nada con tu nombre. Solo el resultado final, sin ningún dato personal, sirve para medir el reparto de los perfiles."
+  }
+}
