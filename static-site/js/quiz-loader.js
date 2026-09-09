@@ -296,6 +296,13 @@
     // ou pas). Les poids par réponse et les conditions vivent dans gd.json.
     'celibataire':    { prefix: 'celib', engine: 'diagnostic', totalQ: 20, pool: 22, quizType: 'celibataire' },
 
+    // Couple ou celibat : le resultat n'est pas un score sur 100, c'est un
+    // partage entre deux parts qui font 100 a elles deux. Chaque question
+    // porte son propre poids (2, 3, 4 ou 6 points) selon ce qu'elle dit
+    // vraiment de la vie a deux, et les points de chaque reponse sont ecrits
+    // dans gd.json. Les questions gardent l'ordre du fichier.
+    'couple-ou-celibat': { prefix: 'balance', engine: 'balance', totalQ: 20, pool: 20, quizType: 'couple-ou-celibat', paliers: [22, 42, 58, 78] },
+
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
 
     // ── Infidelite quiz (solo scoring, ascending: more signs = higher score) ──
@@ -912,6 +919,9 @@
         break;
       case 'diagnostic':
         initDiagnosticQuiz(config, questions);
+        break;
+      case 'balance':
+        initBalanceQuiz(config);
         break;
       case 'piliers':
         initPiliersQuiz(config, questions);
@@ -2416,6 +2426,50 @@
         start: lu('bouton', null),
         resultLabel: lu('resultatLibelle', ''),
         secondLabel: lu('secondLibelle', '')
+      }
+    });
+  }
+
+  function initBalanceQuiz(cfg) {
+    // Les questions ne sont pas melangees : elles vont du passe vecu au
+    // quotidien puis a la projection, et cet enchainement fait la moitie du
+    // confort de lecture. On relit donc la reserve dans l'ordre du fichier,
+    // comme le diagnostic, au lieu du tirage commun.
+    var questions = parseGdQuestions(cfg.prefix, (cfg.pool || 20) + 5, false);
+    questions.sort(function(a, b) { return a.id - b.id; });
+    appliquePointsExplicites(cfg.prefix, questions);
+
+    function lu(cle, repli) {
+      var plein = cfg.prefix + '.' + cle;
+      var v = QuizEngine.tgd(plein, null);
+      return (v && v !== plein) ? v : repli;
+    }
+    var verdicts = [];
+    for (var i = 1; i <= (cfg.paliers || []).length + 1; i++) {
+      verdicts.push({
+        cle: lu('r' + i + '_cle', 'p' + i),
+        title: lu('r' + i + '_t', ''),
+        description: lu('r' + i + '_d', ''),
+        advice: lu('r' + i + '_a', '')
+      });
+    }
+    new QuizEngine.BalanceQuiz({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang,
+      quizType: cfg.quizType || 'balance',
+      paliers: cfg.paliers || [],
+      verdicts: verdicts,
+      labels: {
+        icon: lu('icone', '\u2696\ufe0f'),
+        introTitle: lu('introTitre', ''),
+        introDesc: lu('introTexte', ''),
+        duree: lu('duree', null),
+        start: lu('bouton', null),
+        resultLabel: lu('resultatLibelle', ''),
+        coteSeul: lu('coteSeul', ''),
+        coteCouple: lu('coteCouple', '')
       }
     });
   }

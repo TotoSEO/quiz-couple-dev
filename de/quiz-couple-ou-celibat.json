@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Single-Test",
+    "title": "Test Beziehung oder Single: Welche Lebensform passt zu dir?",
+    "titleHighlight": "Beziehung oder Single",
+    "description": "Du weißt nicht, ob es dir allein oder mit jemandem besser geht, und je nach Tag klingen beide Antworten richtig. Dieser Test schaut auf <strong>deine Reflexe im Alltag</strong> statt auf die Lust eines Abends und gibt dir <strong>zwei Prozentwerte, die zusammen hundert ergeben</strong>: den einen fürs Alleinleben, den anderen fürs Leben zu zweit.",
+    "subtitle": "Zwanzig gewichtete Fragen, fünf Minuten, ein Ergebnis in zwei Anteilen",
+    "jumpBtn": "Test starten"
+  },
+  "section1": {
+    "title": "Gibt es Menschen, die fürs Alleinleben gemacht sind?",
+    "p1": "Ja, und das ist kein Trostpreis. Manchen geht es besser, wenn niemand ihre Wohnung teilt: Sie schlafen besser, arbeiten besser, sehen ihre Freunde öfter. Anderen reicht ein Abend allein zu viel, um die ganze Woche zu verderben. Beides gibt es, und keines von beiden ist ein Problem, das man lösen müsste!",
+    "p2": "Was alles durcheinanderbringt: Zwei Dinge werden verwechselt, das eigene Leben zu mögen und dafür gemacht zu sein. Man kann drei Jahre lang zufrieden allein leben und beim ersten gemeinsamen Frühstück merken, dass genau das gefehlt hat. Und man kann jahrelang von einer Beziehung träumen und dann, nach einem halben Jahr Zusammenleben, feststellen, dass man samstagmorgens niemanden im Nebenzimmer aushält…",
+    "p3": "Die Frage klärt sich also nicht dadurch, ob du heute glücklich bist. Sie klärt sich über deine Reflexe: was du mit einer guten Nachricht machst, wie lange du brauchst, um dich zu erholen, wie es sich anfühlt, Bescheid geben zu müssen, wenn es später wird."
+  },
+  "section2": {
+    "title": "Die Zeichen, die zur einen oder anderen Seite ausschlagen",
+    "intro": "Darauf schaut der Test, und darum wiegen diese vier Dinge schwerer als die Lust an einem Sonntagabend.",
+    "sub1Title": "Was du tust, wenn dir etwas passiert",
+    "sub1P1": "Das ist das verlässlichste Zeichen und das am leichtesten zu beobachtende. Eine gute Nachricht kommt: Greifst du innerhalb einer Minute zum Telefon, oder behältst du sie, bis sie irgendwann von selbst zur Sprache kommt? Wer fürs Leben zu zweit gemacht ist, teilt sofort, fast ohne nachzudenken. Das ist keine Großzügigkeit, das ist ein Reflex.",
+    "sub2Title": "Die Zeit allein, die du brauchst",
+    "sub2P1": "Nicht die, die du magst, sondern die, die du brauchst, um erträglich zu sein. Manche kommen mit einem Abend pro Woche aus, andere werden ohne mehrere Stunden am Tag gereizt. Über diese Zahl lässt sich wenig verhandeln, und oft entscheidet gerade sie, ob ein Zusammenleben hält.",
+    "sub3Title": "Was dir das Zusammenleben schon beigebracht hat",
+    "sub3P1": "Wer schon mit jemandem gewohnt hat, verfügt über eine Information, die sonst niemand hat. Nicht die Erinnerung an die Trennung, sondern die an ganz gewöhnliche Dienstagabende: War es schön, die Tür aufgehen zu hören? Wenn die Antwort nicht sofort kommt, ist auch das eine Antwort. Und wenn du diesen Schritt nie gemacht hast, zählt <a href=\"/de/warum-bin-ich-noch-single-test/\">das, was dich bisher auf Abstand gehalten hat</a>, genauso viel wie das, was du dir vorstellst.",
+    "sub4Title": "Was du bei jemand anderem aushältst",
+    "sub4P1": "Ordnung, Zeiten, Gewohnheiten, die der andere nicht ändern wird: Das sind die Themen, die Paare aufreiben, lange vor den großen Fragen. Wer antwortet „wir würden unseren Weg finden“, und wer antwortet „das würde mich zermürben“, erleben nicht im Entferntesten dasselbe erste Jahr <a href=\"/de/zusammenziehen-test-paare/\">unter einem Dach</a>."
+  },
+  "section3": {
+    "title": "Wie der Test deine beiden Prozentwerte berechnet",
+    "p1": "Das Ergebnis besteht aus zwei Anteilen, die zusammen hundert ergeben: zum Beispiel 34 % fürs Alleinleben und 66 % fürs Leben zu zweit. Beide Zahlen stammen aus derselben Rechnung, sie werden nicht getrennt gemessen.",
+    "p2": "Jede Frage hat ihr eigenes Gewicht, weil nicht alle dasselbe aussagen. Was du beim Betreten einer leeren Wohnung empfindest, wie viel Zeit allein du brauchst, wo du dich in zehn Jahren siehst und was du heute suchst, zählen je acht Punkte. Die Ordnung zählt vier, die Art, wie du Bescheid gibst, wenn es später wird, zählt drei. Insgesamt hundertein mögliche Punkte, und dein Anteil „zu zweit“ ist schlicht der Anteil, den du erreicht hast.",
+    "p3": "Danach fällt dein Wert in eine von fünf Lesarten: gut allein, eher allein, dazwischen, eher zu zweit, fürs Leben zu zweit gemacht. Der mittlere Bereich ist kein misslungenes Ergebnis: Er passt zu Menschen, die beides brauchen und in einer Beziehung sehr gut zurechtkommen, sofern sie es aussprechen.",
+    "p4": "Eine Unterscheidung noch. Jemanden zu brauchen ist nicht dasselbe, wie es schlecht zu haben, sobald der andere sich entfernt: Wenn das dein Thema ist, wird <a href=\"/de/emotionale-abhaengigkeit-test/\">das, was passiert, wenn der andere nicht antwortet</a>, woanders gemessen. Und wenn sich dein Näherkommen und Zurückweichen in jeder Geschichte wiederholt, erklärt <a href=\"/de/bindungsstil-test/\">die Art, wie du dich bindest</a>, oft mehr als dieser Test."
+  },
+  "seo": {
+    "faqTitle": "Die Fragen, die man sich stellt"
+  },
+  "jsonLd": {
+    "about": "Leben zu zweit und Single-Leben",
+    "faq1Q": "Kann man ein Leben lang allein leben und glücklich sein?",
+    "faq1A": "Ja. Ein Teil der Menschen funktioniert mit einer eigenen Wohnung, einem eigenen Rhythmus und selbst gewählten Beziehungen besser. Den Unterschied macht nicht das Alleinleben, sondern die Menschen drumherum: Freunde, die man sieht, eine Aktivität, jemand zum Reden unter der Woche. Einsamkeit, die drückt, und allein zu leben sind zwei verschiedene Dinge.",
+    "faq2Q": "Woran erkenne ich, ob ich für eine Beziehung oder fürs Single-Leben gemacht bin?",
+    "faq2A": "An deinen Reflexen, nicht an deinen Wünschen. Wie viel Zeit allein du brauchst, was du mit einer guten Nachricht machst, wie es sich anfühlt, in eine leere Wohnung zu kommen, was du bei jemand anderem im Alltag aushalten würdest. Genau das misst dieser Test, wobei jede Frage je nach Bedeutung ein anderes Gewicht bekommt.",
+    "faq3Q": "Kann sich das Ergebnis mit der Zeit ändern?",
+    "faq3A": "Ja, und zwar oft. Eine Trennung, ein Umzug, eine anstrengende Phase im Job verschieben den Wert um zehn oder zwanzig Punkte. Der Test sagt, wo du jetzt stehst, nicht, wo du in fünfzehn Jahren stehst. Mach ihn in zwei Jahren noch einmal, der Abstand sagt einiges.",
+    "faq4Q": "Ich habe 60 % „fürs Leben zu zweit gemacht“, ist das gut?",
+    "faq4A": "Es heißt, dass dir das Leben zu zweit liegt, solange du Zeit für dich behältst. Es gibt keine guten oder schlechten Werte: 15 % sagen etwas Nützliches, 90 % etwas anderes. Wichtig ist, vor dem Zusammenziehen zu wissen, was du brauchst, nicht danach.",
+    "faq5Q": "Ist der Test anonym?",
+    "faq5A": "Ja. Deine Antworten bleiben in deinem Browser, nichts wird mit deinem Namen verschickt. Nur das Endergebnis, ohne jede persönliche Angabe, dient dazu, die Verteilung der Profile zu messen."
+  }
+}

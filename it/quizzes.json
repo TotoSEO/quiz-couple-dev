@@ -385,5 +385,11 @@
     "shortTitle": "Perché sono ancora single?",
     "description": "Venti domande sulla tua quotidianità, i tuoi incontri e quello che ti passa per la testa. Il risultato dà un nome alla causa che pesa di più, e a quella subito dietro.",
     "metaDescription": "Perché sei ancora single? Venti domande, due delle quali cambiano in base alle tue risposte, per trovare la causa che pesa di più e sapere da dove cominciare. Gratis, senza registrazione."
+  },
+  "testCoupleOuCelibat": {
+    "title": "Sei fatto per stare da solo o in coppia? Test online",
+    "shortTitle": "Coppia o single?",
+    "description": "Venti domande pesate sulla tua quotidianità e sui tuoi riflessi. Il risultato dà due parti che fanno cento: quella che pende verso il vivere da solo e quella verso il vivere in due.",
+    "metaDescription": "Sei fatto per vivere da solo o in coppia? Venti domande pesate e un risultato in due percentuali che fanno cento, con quello che dice del tuo modo di vivere. Test gratuito, senza registrazione."
   }
 }

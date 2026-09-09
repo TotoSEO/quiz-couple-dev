@@ -11520,3 +11520,64 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
     max-width: min(640px, 100vw - 2 * var(--gouttiere-pub) - clamp(300px, 27vw, 480px) - 3rem);
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   COUPLE OU CELIBAT : un resultat en deux parts
+   Les deux chiffres se lisent d'un coup, face a face, et la barre en
+   dessous dit lequel l'emporte. Turquoise du cote seul (la couleur de la
+   famille des tests celibataires), rose du cote a deux.
+   ═══════════════════════════════════════════════════════════════════ */
+.bal-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  max-width: 26rem;
+  margin: 0.5rem auto 1rem;
+}
+.bal-cote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 1rem 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+}
+.bal-cote--seul { border-color: hsl(var(--celib) / 0.35); background: hsl(var(--celib) / 0.08); }
+.bal-cote--couple { border-color: hsl(var(--primary) / 0.35); background: hsl(var(--primary) / 0.08); }
+.bal-nb {
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+  font-size: clamp(2rem, 9vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1;
+}
+.bal-cote--seul .bal-nb { color: hsl(var(--celib)); }
+.bal-cote--couple .bal-nb { color: hsl(var(--primary-texte)); }
+.bal-pct { font-size: 0.5em; font-weight: 700; margin-left: 0.08em; }
+.bal-lib {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: hsl(var(--muted-foreground));
+  text-wrap: balance;
+}
+.bal-barre {
+  display: flex;
+  overflow: hidden;
+  height: 0.75rem;
+  max-width: 26rem;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: hsl(var(--muted));
+}
+.bal-part { display: block; height: 100%; transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.bal-part--seul { background: hsl(var(--celib)); }
+.bal-part--couple { background: hsl(var(--primary)); }
+@media (prefers-reduced-motion: reduce) { .bal-part { transition: none; } }
+/* Sous 360 px les deux cartes tiennent encore cote a cote : c'est la
+   comparaison qui fait le resultat, les empiler la casserait. */
+@media (max-width: 359.98px) {
+  .bal-duo { gap: 0.5rem; }
+  .bal-cote { padding: 0.75rem 0.5rem; }
+  .bal-lib { font-size: 0.75rem; }
+}

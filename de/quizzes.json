@@ -385,5 +385,11 @@
     "shortTitle": "Warum bin ich noch Single?",
     "description": "Zwanzig Fragen zu deinem Alltag, deinen Begegnungen und dem, was in deinem Kopf passiert. Das Ergebnis nennt die Ursache, die am schwersten wiegt, und die, die direkt dahinter kommt.",
     "metaDescription": "Warum bist du noch Single? Zwanzig Fragen, zwei davon ändern sich je nach deinen Antworten, um die Ursache zu finden, die am schwersten wiegt, und zu wissen, womit du anfängst. Kostenlos, ohne Anmeldung."
+  },
+  "testCoupleOuCelibat": {
+    "title": "Bist du fürs Alleinsein oder für eine Beziehung gemacht? Online-Test",
+    "shortTitle": "Beziehung oder Single?",
+    "description": "Zwanzig gewichtete Fragen zu deinem Alltag und deinen Reflexen. Das Ergebnis besteht aus zwei Anteilen, die zusammen hundert ergeben: einer fürs Alleinleben, einer fürs Leben zu zweit.",
+    "metaDescription": "Bist du fürs Alleinleben oder fürs Leben zu zweit gemacht? Zwanzig gewichtete Fragen und ein Ergebnis in zwei Prozentwerten, die zusammen hundert ergeben. Kostenloser Test, ohne Anmeldung."
   }
 }

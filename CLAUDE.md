@@ -103,7 +103,8 @@ les pages en quatre familles, chacune avec sa couleur : Tests de couple
 (`--primary`), Tests célibataires (`--celib`, turquoise), Quiz (`--secondary`)
 et Jeux. Les tests célibataires sont les pages d'avant le couple : pourquoi je
 ne trouve pas l'amour (solo, quinze questions), pourquoi je suis encore
-célibataire (diagnostic à huit causes, vingt questions), suis-je amoureux, amour ou
+célibataire (diagnostic à huit causes, vingt questions), couple ou célibat
+(deux parts qui font cent, vingt questions), suis-je amoureux, amour ou
 crush, amour ou amitié, amoureux de mon/ma BFF, m'aime-t-il en secret, mon ex
 pense-t-il encore à moi. Il n'y a pas de page hub pour cette famille, seulement
 l'entrée de menu. Les listes de liens sont écrites en dur
@@ -128,6 +129,7 @@ de 39 et 23.
 - `ParentaliteQuiz` — 2 players, explicit point values (parentalite, emmenager)
 - `TruefalseQuiz` — True/false with answer reveal (vrai-faux)
 - `DiagnosticQuiz` — Un diagnostic à causes, pas un score (test « pourquoi je suis encore célibataire », prefix `celib`). Chaque réponse pèse sur une ou plusieurs causes via `prefix.q{N}{lettre}_axes` (« occasions:2,social:1 ») ; une question peut dépendre d'une réponse précédente via `prefix.q{N}_si` (« 3:a », « 8:c,d »), la réserve compte donc plus de questions qu'il n'en est posé (22 pour 20) et les questions ne sont jamais mélangées. Résultat = cause la plus chargée en pourcentage de son maximum sur les questions posées, seconde cause si elle pèse au moins 60 % de la première, profil `ouvert` si aucune ne dépasse 30 %. Les causes et leurs couleurs vivent dans `DIAGNOSTIC_AXES` (quiz-loader.js), les libellés (`axe_<id>`) et les fiches (`p_<id>_t/_d/_a/_c`) dans gd.json.
+- `BalanceQuiz` — Un résultat en deux parts qui font cent à elles deux, pas un score sur cent (test « couple ou célibat », prefix `balance`). Chaque question porte son propre poids (2 à 8 points selon ce qu'elle dit de la vie à deux) et les points de chaque réponse sont écrits dans gd.json (`prefix.q{N}{lettre}_pts`), comme un test solo à barème explicite. La part « à deux » est le rapport entre les points pris et la somme des maximums, soit 101 points en tout ; la part « seul » est son complément, les deux font donc toujours exactement cent. Les questions ne sont pas mélangées (elles vont du passé vécu au quotidien puis à la projection) : le chargeur relit la réserve dans l'ordre du fichier, comme le diagnostic. Cinq verdicts (`r{N}_cle/_t/_d/_a` dans gd.json) découpés par `paliers: [22, 42, 58, 78]` sur le pourcentage « à deux », dans quiz-loader.js ; la clé du verdict est ce qui part dans `profil_resultats`. L'affichage (`.bal-*` dans styles.css) met les deux chiffres face à face, turquoise du côté seul et rose du côté à deux, avec la barre partagée en dessous.
 - `quiz-tu-preferes.ejs` — Inline `WYRGame` (not part of quiz-loader): 15 or 30 dilemmas, two modes chosen on the setup screen and kept across replays. « Chacun son tour » (`mode='tour'`, default): both players answer on the same phone, relay banner between them, reveal after each dilemma, agreement rate at the end. « Ensemble » (`mode='ensemble'`): one answer per dilemma decided by the couple, no names, no relay, no reveal, result lists the choices with the letter picked. The setup accroche is « Tu préfères ? » (`UI.accroche`); `UI.or` is only the medallion between the two options.
 
 ### Mode à distance (`salon.js`)

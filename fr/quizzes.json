@@ -397,5 +397,11 @@
     "shortTitle": "Pourquoi je suis encore célibataire ?",
     "description": "Vingt questions sur votre quotidien, vos rencontres et ce qui se passe dans votre tête. Le résultat nomme la cause qui pèse le plus, et celle qui vient juste derrière.",
     "metaDescription": "Pourquoi êtes-vous encore célibataire ? Vingt questions, dont deux qui changent selon vos réponses, pour trouver la cause qui pèse le plus et savoir par quoi commencer. Gratuit, sans inscription."
+  },
+  "testCoupleOuCelibat": {
+    "title": "Es-tu fait pour être seul ou en couple ? Test en ligne",
+    "shortTitle": "Couple ou célibat ?",
+    "description": "Vingt questions pondérées sur votre quotidien et vos réflexes. Le résultat donne deux parts qui font cent : celle qui penche vers la vie seul, celle qui penche vers la vie à deux.",
+    "metaDescription": "Êtes-vous fait pour vivre seul ou en couple ? Vingt questions pondérées, un résultat en deux pourcentages qui font cent, et ce que ça dit de votre façon de vivre. Test gratuit, sans inscription."
   }
 }

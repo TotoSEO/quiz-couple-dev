@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Single test",
+    "title": "Relationship or single life: which one is made for you?",
+    "titleHighlight": "Relationship or single life",
+    "description": "You don't know whether you're better off on your own or with someone, and depending on the day both answers feel true. This test looks at <strong>your everyday reflexes</strong> rather than what you happen to want tonight, and gives you <strong>two percentages that add up to a hundred</strong>: the one leaning towards living alone, the one leaning towards living together.",
+    "subtitle": "Twenty weighted questions, five minutes, a result in two shares",
+    "jumpBtn": "Take the test"
+  },
+  "section1": {
+    "title": "Is anyone made for living alone?",
+    "p1": "Yes, and it isn't a consolation prize. Some people are better off when nobody shares their home: they sleep better, work better, see their friends more often. Others only need one evening alone too many for the whole week to sink. Both ways of working exist, and neither of them is a problem to fix!",
+    "p2": "What muddles everything is that two things get mixed up: liking your current life, and being made for it. You can be perfectly happy on your own for three years and then realise, the first time you share a breakfast, that this was what was missing. And you can dream of a relationship for years, and then, six months into living together, find out that you can't stand having someone in the next room on a Saturday morning…",
+    "p3": "So the question doesn't get settled by checking whether you're happy today. It gets settled by looking at your reflexes: what you do with good news, how long you need to recharge, how it feels to have to let someone know you're running late."
+  },
+  "section2": {
+    "title": "The signs that tip the balance one way or the other",
+    "intro": "Here's what the test looks at, and why these four things count for more than what you feel like on a Sunday evening.",
+    "sub1Title": "What you do when something happens to you",
+    "sub1P1": "This is the most reliable sign, and the easiest to watch. Good news lands: do you pick up your phone within the minute, or do you keep it to yourself until it comes up on its own? People made for living together share straight away, almost without thinking. It isn't generosity, it's a reflex.",
+    "sub2Title": "How much time alone you need",
+    "sub2P1": "Not the amount you enjoy: the amount you need to be bearable. Some people manage on one evening a week, others get irritable without several hours a day. That figure isn't very negotiable, and it's often what decides whether living together will hold.",
+    "sub3Title": "What sharing a home has already taught you",
+    "sub3P1": "If you've lived with someone, you hold information nobody else has. Not the memory of the break-up, the memory of ordinary Tuesday evenings: was it good to hear the door open? If the answer doesn't come straight away, that's already an answer. And if you've never got that far, <a href=\"/en/why-am-i-still-single-test/\">what has kept you at a distance until now</a> counts as much as what you imagine.",
+    "sub4Title": "What you can put up with from someone else",
+    "sub4P1": "Tidying, schedules, the habits the other person won't change: these are the subjects that wear couples down, long before the big questions. Someone who answers \"we'd find our own way of doing things\" and someone who answers \"it would end up wearing me down\" won't have remotely the same first year <a href=\"/en/moving-in-together-test/\">under the same roof</a>."
+  },
+  "section3": {
+    "title": "How the test works out your two percentages",
+    "p1": "The result comes as two shares that add up to a hundred: 34% made for living alone and 66% made for living together, for instance. Both figures come out of the same calculation, they aren't measured separately.",
+    "p2": "Every question carries its own weight, because they don't all say the same thing. How you feel walking into an empty place, how much time alone you need, where you see yourself in ten years and what you're looking for right now are worth eight points each. Tidying is worth four, the way you let someone know you're late is worth three. A hundred and one points in all, and your \"together\" share is simply the proportion you scored.",
+    "p3": "Your score then lands in one of five readings: happy alone, mostly alone, in between, mostly together, made for life with someone. The middle band isn't a failed result: it matches people who need both, and who do very well as a couple as long as they say so.",
+    "p4": "One thing worth separating, though. Needing someone isn't the same as feeling bad the moment they move away: if that's your subject, <a href=\"/en/emotional-dependency-test/\">what happens when the other person doesn't reply</a> is measured elsewhere. And if the way you move closer and then pull back comes round in every relationship, <a href=\"/en/attachment-style-test/\">how you attach to people</a> often explains more than this test."
+  },
+  "seo": {
+    "faqTitle": "The questions people ask"
+  },
+  "jsonLd": {
+    "about": "life as a couple and single life",
+    "faq1Q": "Can you be happy living alone your whole life?",
+    "faq1A": "Yes. Some people work better with a home of their own, a rhythm of their own and relationships they choose. What makes the difference isn't living alone, it's having people around: friends you see, an activity, someone to talk to during the week. Loneliness that weighs on you and living on your own are two different things.",
+    "faq2Q": "How do I know whether I'm made for a relationship or for single life?",
+    "faq2A": "By looking at your reflexes rather than your wishes. How much time alone you need, what you do with good news, how it feels to walk into an empty place, what you'd put up with from someone else day to day. That's what this test measures, giving each question a different weight depending on how much it matters.",
+    "faq3Q": "Can the result change over time?",
+    "faq3A": "Yes, and it often does. A break-up, a move, a heavy stretch at work will shift the cursor by ten or twenty points. The test says where you are now, not what you'll be in fifteen years. Take it again in two years and the gap will tell you something.",
+    "faq4Q": "I got 60% \"made for living together\", is that good?",
+    "faq4A": "It means life with someone suits you, as long as you keep time for yourself. There's no good or bad score: a 15% says one useful thing, a 90% says another. What counts is knowing what you need before you move in with someone, not after.",
+    "faq5Q": "Is the test anonymous?",
+    "faq5A": "Yes. Your answers stay in your browser and nothing is sent with your name. Only the final result, with no personal data attached, is used to measure how the profiles break down."
+  }
+}

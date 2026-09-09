@@ -386,6 +386,7 @@
     testEmprise: 'Emprise psychologique',
     testTrouverAmour: "Pourquoi je ne trouve pas l'amour",
     testCelibataire: 'Pourquoi je suis encore célibataire',
+    testCoupleOuCelibat: 'Couple ou célibat',
     testPersonnalite: 'Personnalité amoureuse',
     // Page retiree du site : ses parties restent en base et doivent garder
     // un nom lisible, sinon la ligne s'affiche sous sa cle technique.
@@ -481,6 +482,7 @@
     'emprise': 'testEmprise',
     'trouver-amour': 'testTrouverAmour',
     'celibataire': 'testCelibataire',
+    'couple-ou-celibat': 'testCoupleOuCelibat',
     'suis-je-amoureux': 'testSuisJeAmoureux',
     'tentation': 'quizTentation',
     'tester-couple': 'testCouple',

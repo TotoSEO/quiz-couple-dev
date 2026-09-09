@@ -385,5 +385,11 @@
     "shortTitle": "Why am I still single?",
     "description": "Twenty questions about your daily life, your encounters and what goes on in your head. The result names the cause that weighs the most, and the one right behind it.",
     "metaDescription": "Why are you still single? Twenty questions, two of which change with your answers, to find the cause that weighs the most and know where to start. Free, no sign-up."
+  },
+  "testCoupleOuCelibat": {
+    "title": "Are You Made to Be Single or in a Relationship? Online Test",
+    "shortTitle": "Relationship or single life?",
+    "description": "Twenty weighted questions about your daily life and your reflexes. The result comes as two shares that add up to a hundred: one leaning towards living alone, one towards living together.",
+    "metaDescription": "Are you made for living alone or with someone? Twenty weighted questions and a result in two percentages that add up to a hundred, plus what it says about how you live. Free test, no sign-up."
   }
 }
