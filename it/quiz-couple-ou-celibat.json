@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Test per single",
+    "title": "Test coppia o single: quale stile di vita fa per te?",
+    "titleHighlight": "coppia o single",
+    "description": "Non sai se stai meglio da solo o con qualcuno, e a seconda dei giorni tutte e due le risposte ti sembrano vere. Questo test guarda <strong>i tuoi riflessi quotidiani</strong> più che la voglia del momento, e ti dà <strong>due percentuali che fanno cento</strong>: quella che pende verso il vivere da solo e quella che pende verso il vivere in due.",
+    "subtitle": "Venti domande pesate, cinque minuti, un risultato in due parti",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Esistono persone fatte per vivere da sole?",
+    "p1": "Sì, e non è un premio di consolazione. C'è chi sta meglio quando nessuno condivide la sua casa: dorme meglio, lavora meglio, vede gli amici più spesso. E c'è chi con una sera da solo di troppo si rovina la settimana intera. Tutti e due i modi di funzionare esistono, e nessuno dei due è un problema da risolvere!",
+    "p2": "Quello che confonde tutto è che si mescolano due cose: amare la propria vita di adesso ed essere fatti per quella vita. Puoi stare bene da solo da tre anni e accorgerti, la prima volta che condividi una colazione, che era proprio quello che mancava. E puoi sognare la coppia per anni, e poi, dopo sei mesi di convivenza, scoprire che non sopporti avere qualcuno nella stanza accanto il sabato mattina…",
+    "p3": "Quindi la domanda non si risolve guardando se oggi sei felice. Si risolve guardando i tuoi riflessi: che cosa fai di una bella notizia, quanto tempo ti serve per ricaricarti, che effetto ti fa dover avvisare quando fai tardi."
+  },
+  "section2": {
+    "title": "I segnali che fanno pendere da una parte o dall'altra",
+    "intro": "Ecco che cosa guarda il test, e perché queste quattro cose pesano più della voglia che si ha una domenica sera.",
+    "sub1Title": "Quello che fai quando ti succede qualcosa",
+    "sub1P1": "È il segnale più affidabile e il più facile da osservare. Arriva una bella notizia: prendi il telefono entro un minuto, oppure te la tieni finché non salta fuori da sola? Le persone fatte per la vita in due la condividono subito, quasi senza pensarci. Non è generosità, è un riflesso.",
+    "sub2Title": "Il tempo da solo di cui hai bisogno",
+    "sub2P1": "Non quello che ti piace: quello che ti serve per essere sopportabile. C'è chi se la cava con una sera a settimana e chi diventa irritabile senza diverse ore al giorno. Su quella cifra si tratta poco, ed è spesso lei a decidere se una convivenza reggerà.",
+    "sub3Title": "Quello che la convivenza ti ha già insegnato",
+    "sub3P1": "Se hai già vissuto con qualcuno, hai un'informazione che nessun altro ha. Non il ricordo della rottura, ma quello dei martedì sera qualunque: faceva piacere sentire la porta che si apriva? Se la risposta non ti viene subito, è già una risposta. E se non sei mai arrivato a quel passaggio, <a href=\"/it/test-perche-sono-ancora-single/\">quello che ti ha tenuto a distanza finora</a> conta quanto quello che immagini.",
+    "sub4Title": "Quello che sopporti di un'altra persona",
+    "sub4P1": "L'ordine, gli orari, le abitudini che l'altro non cambierà: sono i temi che logorano le coppie, molto prima delle grandi questioni. Chi risponde «troveremmo la nostra organizzazione» e chi risponde «finirebbe per logorarmi» non vivranno per niente lo stesso primo anno <a href=\"/it/test-andare-a-vivere-insieme/\">sotto lo stesso tetto</a>."
+  },
+  "section3": {
+    "title": "Come il test calcola le tue due percentuali",
+    "p1": "Il risultato dà due parti che insieme fanno cento: 34 % fatto per vivere da solo e 66 % fatto per vivere in due, per esempio. Le due cifre escono dallo stesso calcolo, non sono misurate separatamente.",
+    "p2": "Ogni domanda ha il suo peso, perché non dicono tutte la stessa cosa. Quello che senti rientrando in una casa vuota, il tempo da solo che ti serve, dove ti vedi fra dieci anni e quello che cerchi oggi valgono otto punti ciascuna. L'ordine ne vale quattro, il modo in cui avvisi quando fai tardi ne vale tre. Centouno punti possibili in tutto, e la tua parte «in due» è la proporzione che hai raggiunto.",
+    "p3": "Poi il tuo punteggio cade in una delle cinque letture: bene da solo, più da solo, a metà, più in due, fatto per la vita in due. La fascia centrale non è un risultato mancato: corrisponde alle persone che hanno bisogno di entrambe le cose e che stanno benissimo in coppia, a patto di dirlo.",
+    "p4": "Una precisazione, però. Avere bisogno di qualcuno non è la stessa cosa che stare male appena l'altro si allontana: se il tuo tema è quello, <a href=\"/it/test-dipendenza-affettiva/\">quello che succede quando l'altro non risponde</a> si misura altrove. E se il tuo modo di avvicinarti e poi tirarti indietro torna in ogni storia, <a href=\"/it/test-stile-attaccamento/\">il modo in cui ti leghi</a> spiega spesso più cose di questo test."
+  },
+  "seo": {
+    "faqTitle": "Le domande che ci si pone"
+  },
+  "jsonLd": {
+    "about": "vita di coppia e vita da single",
+    "faq1Q": "Si può essere felici vivendo da soli tutta la vita?",
+    "faq1A": "Sì. Una parte delle persone funziona meglio con una casa propria, un ritmo proprio e relazioni scelte. Quello che fa la differenza non è vivere da soli, è avere gente intorno: amici che si vedono, un'attività, qualcuno con cui parlare durante la settimana. La solitudine che pesa e il vivere da soli non sono la stessa cosa.",
+    "faq2Q": "Come faccio a sapere se sono fatto per la coppia o per stare single?",
+    "faq2A": "Guardando i tuoi riflessi più che le tue voglie. Il tempo da solo di cui hai bisogno, che cosa fai di una bella notizia, che effetto ti fa rientrare in una casa vuota, che cosa sopporteresti di un'altra persona ogni giorno. È questo che misura il test, dando a ogni domanda un peso diverso a seconda della sua importanza.",
+    "faq3Q": "Il risultato può cambiare con il tempo?",
+    "faq3A": "Sì, e spesso. Una rottura, un trasloco, un periodo di lavoro pesante spostano il cursore di dieci o venti punti. Il test dice dove sei adesso, non quello che sarai fra quindici anni. Rifallo fra due anni e la differenza ti dirà qualcosa.",
+    "faq4Q": "Ho un 60 % «fatto per vivere in due», è un buon risultato?",
+    "faq4A": "Vuol dire che la vita in due ti si addice, a patto di tenere del tempo per te. Non ci sono punteggi buoni o cattivi: un 15 % dice una cosa utile, un 90 % ne dice un'altra. Quello che conta è sapere di che cosa hai bisogno prima di andare a vivere con qualcuno, non dopo.",
+    "faq5Q": "Il test è anonimo?",
+    "faq5A": "Sì. Le tue risposte restano nel tuo browser e non viene inviato niente con il tuo nome. Solo il risultato finale, senza alcun dato personale, serve a misurare la distribuzione dei profili."
+  }
+}

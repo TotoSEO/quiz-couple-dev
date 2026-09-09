@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Test para solteros",
+    "title": "Test pareja o soltería: ¿qué forma de vida es la tuya?",
+    "titleHighlight": "pareja o soltería",
+    "description": "No sabes si estás mejor solo o con alguien, y según el día las dos respuestas te parecen ciertas. Este test mira <strong>tus reflejos del día a día</strong> más que las ganas de un momento, y te da <strong>dos porcentajes que suman cien</strong>: el que se inclina hacia vivir solo y el que se inclina hacia vivir en pareja.",
+    "subtitle": "Veinte preguntas ponderadas, cinco minutos, un resultado en dos partes",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "¿Existe la gente hecha para vivir sola?",
+    "p1": "Sí, y no es un premio de consolación. Hay personas que están mejor cuando nadie comparte su casa: duermen mejor, trabajan mejor, ven más a sus amigos. Y hay otras a las que una noche sola de más les hunde la semana entera. Las dos formas de funcionar existen, ¡y ninguna de las dos es un problema que haya que arreglar!",
+    "p2": "Lo que lo enreda todo es que se mezclan dos cosas: que te guste tu vida actual y que estés hecho para ella. Puedes llevar tres años bien solo y darte cuenta, el primer día que compartes un desayuno, de que era eso lo que faltaba. Y puedes soñar con la pareja durante años y descubrir, a los seis meses de convivencia, que no soportas tener a alguien en la habitación de al lado un sábado por la mañana…",
+    "p3": "Así que la pregunta no se resuelve mirando si eres feliz hoy. Se resuelve mirando tus reflejos: qué haces con una buena noticia, cuánto tiempo necesitas para recuperarte, qué sientes al tener que avisar cuando llegas tarde."
+  },
+  "section2": {
+    "title": "Las señales que inclinan la balanza a un lado o al otro",
+    "intro": "Esto es lo que mira el test, y por qué estas cuatro cosas pesan más que las ganas que tienes un domingo por la noche.",
+    "sub1Title": "Lo que haces cuando te pasa algo",
+    "sub1P1": "Es la señal más fiable y la más fácil de observar. Llega una buena noticia: ¿coges el móvil en un minuto o te la guardas hasta que salga sola en una conversación? La gente hecha para la vida en pareja la comparte enseguida, casi sin pensarlo. No es generosidad, es un reflejo.",
+    "sub2Title": "El tiempo a solas que necesitas",
+    "sub2P1": "No el que te gusta: el que necesitas para ser soportable. Algunos se apañan con una noche a la semana, otros se ponen de mal humor sin varias horas al día. Esa cifra no se negocia mucho, y suele ser la que decide si una convivencia aguantará.",
+    "sub3Title": "Lo que ya te ha enseñado la convivencia",
+    "sub3P1": "Si has vivido con alguien, tienes una información que no tiene nadie más. No el recuerdo de la ruptura, sino el de los martes por la noche corrientes: ¿daba gusto oír abrirse la puerta? Si la respuesta no te viene enseguida, ya es una respuesta. Y si nunca has llegado a esa fase, <a href=\"/es/test-por-que-sigo-soltero/\">lo que te ha mantenido a distancia hasta ahora</a> cuenta tanto como lo que te imaginas.",
+    "sub4Title": "Lo que aguantas de otra persona",
+    "sub4P1": "El orden, los horarios, las costumbres que el otro no va a cambiar: son los temas que desgastan a las parejas, mucho antes que las grandes cuestiones. Quien responde «ya encontraríamos nuestra manera» y quien responde «acabaría desgastándome» no van a vivir el mismo primer año <a href=\"/es/test-vivir-juntos-pareja/\">bajo el mismo techo</a>."
+  },
+  "section3": {
+    "title": "Cómo calcula el test tus dos porcentajes",
+    "p1": "El resultado da dos partes que juntas suman cien: 34 % hecho para vivir solo y 66 % hecho para vivir en pareja, por ejemplo. Las dos cifras salen del mismo cálculo, no se miden por separado.",
+    "p2": "Cada pregunta tiene su propio peso, porque no todas dicen lo mismo. Lo que sientes al llegar a una casa vacía, el tiempo a solas que necesitas, dónde te ves dentro de diez años y lo que buscas hoy valen ocho puntos cada una. El orden vale cuatro, la manera de avisar cuando llegas tarde vale tres. Ciento un puntos posibles en total, y tu parte «en pareja» es la proporción que has sacado.",
+    "p3": "Después tu puntuación cae en una de las cinco lecturas: bien solo, más bien solo, entre las dos, más bien en pareja, hecho para la vida en pareja. La franja del medio no es un resultado fallido: corresponde a la gente que necesita las dos cosas y que vive muy bien en pareja siempre que lo diga.",
+    "p4": "Un matiz, eso sí. Necesitar a alguien no es lo mismo que estar mal en cuanto el otro se aleja: si ese es tu tema, <a href=\"/es/test-dependencia-emocional/\">lo que pasa cuando el otro no contesta</a> se mide en otro sitio. Y si tu forma de acercarte y luego echarte atrás vuelve en cada historia, <a href=\"/es/test-estilo-apego/\">la manera en que te vinculas</a> explica a menudo más cosas que este test."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que nos hacemos"
+  },
+  "jsonLd": {
+    "about": "vida en pareja y soltería",
+    "faq1Q": "¿Se puede ser feliz viviendo solo toda la vida?",
+    "faq1A": "Sí. Una parte de la gente funciona mejor con una casa propia, un ritmo propio y relaciones elegidas. Lo que marca la diferencia no es vivir solo, es tener gente alrededor: amigos a los que ves, una actividad, alguien con quien hablar durante la semana. La soledad que pesa y el hecho de vivir solo no son lo mismo.",
+    "faq2Q": "¿Cómo sé si estoy hecho para la pareja o para la soltería?",
+    "faq2A": "Mirando tus reflejos más que tus ganas. El tiempo a solas que necesitas, qué haces con una buena noticia, qué sientes al llegar a una casa vacía, qué aguantarías de otra persona en el día a día. Eso es lo que mide este test, dando a cada pregunta un peso distinto según su importancia.",
+    "faq3Q": "¿El resultado puede cambiar con el tiempo?",
+    "faq3A": "Sí, y a menudo. Una ruptura, una mudanza, una temporada de mucho trabajo mueven el cursor diez o veinte puntos. El test dice dónde estás ahora, no lo que serás dentro de quince años. Repítelo dentro de dos años y la diferencia te dirá algo.",
+    "faq4Q": "Tengo un 60 % «hecho para vivir en pareja», ¿eso es bueno?",
+    "faq4A": "Significa que la vida en pareja te va, siempre que conserves tiempo para ti. No hay puntuaciones buenas ni malas: un 15 % dice una cosa útil, un 90 % dice otra. Lo que cuenta es saber qué necesitas antes de irte a vivir con alguien, no después.",
+    "faq5Q": "¿El test es anónimo?",
+    "faq5A": "Sí. Tus respuestas se quedan en tu navegador y no se envía nada con tu nombre. Solo el resultado final, sin ningún dato personal, sirve para medir el reparto de los perfiles."
+  }
+}

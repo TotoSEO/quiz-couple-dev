@@ -1960,6 +1960,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'ex', icon: '🕰️', route: 'testEx' },
     { type: 'test', key: 'trouver-amour', icon: '🧭', route: 'testTrouverAmour' },
     { type: 'test', key: 'celibataire', icon: '🔍', route: 'testCelibataire' },
+    { type: 'test', key: 'couple-ou-celibat', icon: '🛋️', route: 'testCoupleOuCelibat' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
@@ -2052,6 +2053,9 @@ var QuizEngine = (function() {
     // Le célibat qui dure appelle la façon de s'attacher, le manque, puis l'ex.
     'trouver-amour':   ['testCelibataire', 'testAttachement', 'testDependance'],
     'celibataire':     ['testTrouverAmour', 'testAttachement', 'testSuisJeAmoureux'],
+    // Savoir si on est fait pour la vie a deux appelle d'abord ce qui retient,
+    // puis la facon de s'attacher, puis le manque quand l'autre s'eloigne.
+    'couple-ou-celibat': ['testCelibataire', 'testAttachement', 'testDependance'],
     'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
     'distance-aime':   ['testDistance', 'testAimeEncore', 'testAttachement'],
     // Le doute sur ses sentiments appelle la question du couple, puis de soi.
@@ -6252,6 +6256,202 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'profil', verdict: profil.title || '' },
+      restart: function() { self.phase = 'intro'; self.render(); }
+    });
+    this.container.appendChild(wrap);
+    document.body.classList.add('quiz-has-result');
+    smoothScroll(wrap, 'center');
+  };
+
+  // ═══════════════════════════════════════════════════════════
+  // BALANCE QUIZ - fait pour vivre seul ou a deux
+  // Le resultat n'est pas un score sur cent : ce sont deux parts qui font
+  // cent ensemble. Chaque reponse vaut des points du cote « a deux », entre
+  // zero et le poids de sa question ; ce qu'elle ne prend pas va au cote
+  // « seul ». La part a deux vaut donc la somme des points sur la somme des
+  // poids, et l'autre est son complement, par construction.
+  //
+  // Les poids sont dans gd.json, un par reponse (q{N}{lettre}_pts) : une
+  // question decisive (ce qu'on ressent en rentrant chez soi, le temps seul
+  // dont on a besoin) pese six, une question de detail deux ou trois. Le
+  // poids d'une question est le maximum de ses reponses, il n'y a donc rien
+  // a declarer en plus.
+  // ═══════════════════════════════════════════════════════════
+  function BalanceQuiz(config) {
+    this.container = config.container;
+    this.questions = config.questions;
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.quizType = config.quizType || 'balance';
+    this.labels = config.labels || {};
+    this.verdicts = config.verdicts || [];
+    this.paliers = config.paliers || [];
+    this.phase = 'intro';
+    this.currentQ = 0;
+    this.reponses = [];
+    this.render();
+  }
+
+  BalanceQuiz.prototype.render = function() {
+    this.container.innerHTML = '';
+    document.body.classList.remove('quiz-has-result');
+    if (this.phase === 'intro') this.renderIntro();
+    else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'results') this.renderResults();
+  };
+
+  BalanceQuiz.prototype.renderIntro = function() {
+    var self = this;
+    var ecran = ecranDepart({
+      icone: this.labels.icon || '⚖️',
+      titre: this.labels.introTitle || '',
+      desc: this.labels.introDesc || '',
+      meta: pastilleMeta(this.questions.length, null, this.labels.duree || null),
+      bouton: this.labels.start || tg('playerSetup.startTest', 'Commencer le test'),
+      onStart: function() {
+        self.reponses = [];
+        self.currentQ = 0;
+        self.phase = 'playing';
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(ecran.wrap);
+  };
+
+  BalanceQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+    renderProgressBar(wrap, this.currentQ, total);
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(q.text)));
+
+    // Les reponses gardent l'ordre du fichier : elles vont du cote « a deux »
+    // vers le cote « seul », et cette progression aide a se situer. Les
+    // melanger ferait relire quatre fois la meme echelle en desordre.
+    var optionsWrap = el('div', 'space-y-2');
+    var letters = ['A', 'B', 'C', 'D', 'E'];
+    q.options.forEach(function(opt, idx) {
+      var optBtn = el('button', 'quiz-option');
+      optBtn.type = 'button';
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (letters[idx] || '') + '</span><span>' + esc(opt.text) + '</span>';
+      optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
+        optBtn.classList.add('selected');
+        var sibs = optionsWrap.querySelectorAll('.quiz-option');
+        for (var s = 0; s < sibs.length; s++) { if (sibs[s] !== optBtn) sibs[s].style.opacity = '0.5'; sibs[s].style.pointerEvents = 'none'; }
+        self.reponses[self.currentQ] = opt;
+        setTimeout(function() {
+          if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
+          else { self.phase = 'results'; }
+          self.render();
+        }, DELAI_REPONSE);
+      });
+      optionsWrap.appendChild(optBtn);
+    });
+    wrap.appendChild(optionsWrap);
+
+    if (this.currentQ > 0) {
+      var navWrap = el('div', 'mt-6');
+      var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previousQuestion', 'Précédent'));
+      backBtn.type = 'button';
+      backBtn.addEventListener('click', function() {
+        self.currentQ--;
+        self.reponses[self.currentQ] = undefined;
+        self.render();
+      });
+      navWrap.appendChild(backBtn);
+      wrap.appendChild(navWrap);
+    }
+    this.container.appendChild(wrap);
+  };
+
+  // La part « a deux », en pourcentage des poids des questions repondues.
+  BalanceQuiz.prototype.partCouple = function() {
+    var pris = 0, total = 0;
+    for (var i = 0; i < this.questions.length; i++) {
+      var q = this.questions[i];
+      var max = 0;
+      for (var j = 0; j < q.options.length; j++) {
+        if ((q.options[j].points || 0) > max) max = q.options[j].points || 0;
+      }
+      total += max;
+      if (this.reponses[i]) pris += (this.reponses[i].points || 0);
+    }
+    return total ? Math.round(pris / total * 100) : 50;
+  };
+
+  BalanceQuiz.prototype.verdictPour = function(pct) {
+    // Les paliers donnent la borne haute de chaque verdict sauf le dernier.
+    for (var i = 0; i < this.paliers.length; i++) {
+      if (pct <= this.paliers[i]) return this.verdicts[i] || {};
+    }
+    return this.verdicts[this.paliers.length] || {};
+  };
+
+  // Meme enregistrement anonyme que les tests a profil : le verdict obtenu,
+  // rien d'autre, une fois par navigateur.
+  BalanceQuiz.prototype.enregistreProfil = function(profil) {
+    var bloc = document.getElementById('pq-reviews');
+    var slug = bloc ? bloc.dataset.quizSlug : null;
+    if (!slug || !profil) return;
+    var cle = 'qc-profil-' + slug;
+    try { if (localStorage.getItem(cle)) return; localStorage.setItem(cle, profil); } catch (e) {}
+    fetch(SUPABASE_URL + '/rest/v1/profil_resultats', {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json', 'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ quiz_slug: slug, profil: profil, lang: this.lang })
+    }).catch(function () {});
+  };
+
+  BalanceQuiz.prototype.renderResults = function() {
+    var self = this;
+    var couple = this.partCouple();
+    var seul = 100 - couple;
+    var v = this.verdictPour(couple);
+    this.enregistreProfil(v.cle || '');
+
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-3', this.labels.icon || '⚖️'));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-4', esc(this.labels.resultLabel || '')));
+
+    // Les deux parts, face a face, avec la barre qui les separe. C'est la
+    // lecture qu'on attend d'un resultat en deux parts : les deux chiffres
+    // se voient d'un coup, et la barre dit lequel l'emporte.
+    var bal = el('div', 'bal-duo');
+    bal.innerHTML =
+      '<div class="bal-cote bal-cote--seul"><span class="bal-nb">' + seul + '<span class="bal-pct">%</span></span>'
+      + '<span class="bal-lib">' + esc(this.labels.coteSeul || '') + '</span></div>'
+      + '<div class="bal-cote bal-cote--couple"><span class="bal-nb">' + couple + '<span class="bal-pct">%</span></span>'
+      + '<span class="bal-lib">' + esc(this.labels.coteCouple || '') + '</span></div>';
+    wrap.appendChild(bal);
+
+    var barre = el('div', 'bal-barre');
+    barre.setAttribute('role', 'img');
+    barre.setAttribute('aria-label', seul + ' % ' + (this.labels.coteSeul || '') + ', ' + couple + ' % ' + (this.labels.coteCouple || ''));
+    barre.innerHTML = '<span class="bal-part bal-part--seul" style="width:0%"></span><span class="bal-part bal-part--couple" style="width:0%"></span>';
+    wrap.appendChild(barre);
+    setTimeout(function() {
+      var parts = barre.querySelectorAll('.bal-part');
+      if (parts[0]) parts[0].style.width = seul + '%';
+      if (parts[1]) parts[1].style.width = couple + '%';
+    }, 120);
+
+    if (v.title) wrap.appendChild(el('h2', 'text-2xl font-bold mb-4 mt-6 quiz-reveal-enter', esc(v.title)));
+    if (v.description) wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto text-left quiz-reveal-enter', escRiche(v.description)));
+    if (v.advice) {
+      var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
+      advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(v.advice);
+      wrap.appendChild(advice);
+    }
+
+    renderActionButtons(wrap, {
+      share: { noms: nomsPartage(this), type: 'profil', verdict: v.title || '' },
       restart: function() { self.phase = 'intro'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -11169,6 +11369,7 @@ var QuizEngine = (function() {
     TruefalseQuiz: TruefalseQuiz,
     ProfileQuiz: ProfileQuiz,
     DiagnosticQuiz: DiagnosticQuiz,
+    BalanceQuiz: BalanceQuiz,
     PiliersQuiz: PiliersQuiz,
     ChargeMentaleQuiz: ChargeMentaleQuiz,
     ZamoursQuiz: ZamoursQuiz,

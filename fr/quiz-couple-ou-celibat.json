@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Test célibataire",
+    "title": "Test couple ou célibat : quel mode de vie est fait pour toi ?",
+    "titleHighlight": "couple ou célibat",
+    "description": "Vous ne savez pas si vous êtes mieux seul ou avec quelqu'un, et selon les jours les deux réponses vous paraissent justes. Ce test regarde <strong>vos réflexes du quotidien</strong> plutôt que vos envies du moment, et vous donne <strong>deux pourcentages qui font cent</strong> : celui qui penche vers la vie seul, celui qui penche vers la vie à deux.",
+    "subtitle": "Vingt questions pondérées, cinq minutes, un résultat en deux parts",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Être fait pour vivre seul, ça existe ?",
+    "p1": "Oui, et ce n'est pas une consolation qu'on se donne. Il y a des gens qui vont mieux quand personne ne partage leur logement : ils dorment mieux, travaillent mieux, voient leurs amis plus souvent. Il y en a d'autres pour qui une soirée seul de trop suffit à plomber la semaine. Les deux fonctionnements existent, et aucun des deux n'est un problème à régler !",
+    "p2": "Ce qui embrouille tout, c'est qu'on mélange souvent deux choses : aimer sa vie actuelle, et être fait pour elle. On peut être bien seul depuis trois ans et se rendre compte, la première fois qu'on partage un petit-déjeuner, que c'est ça qui manquait. Et on peut rêver du couple pendant des années, et puis, au bout de six mois de vie commune, découvrir qu'on ne supporte pas d'avoir quelqu'un dans la pièce d'à côté le samedi matin…",
+    "p3": "Du coup, la question ne se règle pas en regardant si vous êtes heureux aujourd'hui. Elle se règle en regardant vos réflexes : ce que vous faites d'une bonne nouvelle, le temps qu'il vous faut pour récupérer, ce que ça vous fait de devoir prévenir quand vous rentrez tard."
+  },
+  "section2": {
+    "title": "Les signes qui font pencher d'un côté ou de l'autre",
+    "intro": "Voici ce que le test regarde, et pourquoi ces quatre choses-là comptent plus que l'envie qu'on a un dimanche soir.",
+    "sub1Title": "Ce que vous faites quand il vous arrive quelque chose",
+    "sub1P1": "C'est le signe le plus fiable, et le plus simple à observer. Une bonne nouvelle tombe : est-ce que vous décrochez votre téléphone dans la minute, ou est-ce que vous la gardez pour vous jusqu'au moment où ça se dit tout seul ? Les gens faits pour la vie à deux partagent tout de suite, presque sans y penser. Ce n'est pas de la générosité, c'est un réflexe.",
+    "sub2Title": "Le temps seul dont vous avez besoin",
+    "sub2P1": "Pas celui que vous aimez bien : celui dont vous avez besoin pour être vivable. Certains tiennent avec une soirée par semaine, d'autres deviennent irritables sans plusieurs heures par jour. Ce chiffre-là ne se négocie pas beaucoup, et c'est souvent lui qui décide si une vie commune tiendra.",
+    "sub3Title": "Ce que la vie commune vous a appris",
+    "sub3P1": "Si vous avez déjà vécu avec quelqu'un, vous avez une information que personne d'autre n'a. Pas le souvenir de la rupture, celui des mardis soir ordinaires : est-ce que c'était agréable, d'entendre la porte s'ouvrir ? Si la réponse ne vient pas tout de suite, c'est déjà une réponse. Et si vous n'avez jamais franchi cette étape, <a href=\"/test-pourquoi-suis-je-celibataire/\">ce qui vous a tenu à distance jusqu'ici</a> compte autant que ce que vous imaginez.",
+    "sub4Title": "Ce que vous supportez chez quelqu'un d'autre",
+    "sub4P1": "Le rangement, les horaires, les habitudes que l'autre ne changera pas : ce sont les sujets qui usent les couples, bien avant les grandes questions. Quelqu'un qui répond « on trouverait notre organisation » et quelqu'un qui répond « ça finirait par m'user » ne vivront pas du tout la même première année <a href=\"/test-habiter-vivre-ensemble/\">sous le même toit</a>."
+  },
+  "section3": {
+    "title": "Comment le test calcule vos deux pourcentages",
+    "p1": "Le résultat donne deux parts qui font cent à elles deux : 34 % fait pour vivre seul et 66 % fait pour vivre à deux, par exemple. Les deux chiffres sortent du même calcul, ils ne sont pas mesurés séparément.",
+    "p2": "Chaque question a son propre poids, parce que toutes ne disent pas la même chose. Ce que vous ressentez en rentrant dans un logement vide, le temps seul qu'il vous faut, l'endroit où vous vous voyez dans dix ans et ce que vous cherchez aujourd'hui valent huit points chacun. Le rangement en vaut quatre, la façon dont vous prévenez quand vous rentrez tard en vaut trois. Cent un points possibles en tout, et votre part « à deux » est la proportion que vous avez prise.",
+    "p3": "Ensuite, votre score tombe dans une des cinq lectures : bien seul, plutôt seul, entre les deux, plutôt à deux, fait pour la vie à deux. La tranche du milieu n'est pas un résultat raté : elle correspond aux gens qui ont besoin des deux, et qui vivent très bien en couple à condition de le dire.",
+    "p4": "Une précision, quand même. Avoir besoin de quelqu'un n'est pas la même chose qu'aller mal dès que l'autre s'éloigne : si c'est ça votre sujet, <a href=\"/test-dependance-affective/\">ce qui se passe quand l'autre ne répond pas</a> se mesure ailleurs. Et si votre façon de vous rapprocher puis de reculer revient à chaque histoire, <a href=\"/test-style-attachement-couple/\">la manière dont vous vous attachez</a> explique souvent plus de choses que ce test."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose"
+  },
+  "jsonLd": {
+    "about": "vie de couple et célibat",
+    "faq1Q": "Peut-on être heureux en vivant seul toute sa vie ?",
+    "faq1A": "Oui. Une partie des gens fonctionne mieux avec un logement à eux, un rythme à eux et des relations choisies. Ce qui fait la différence, ce n'est pas de vivre seul, c'est d'avoir du monde autour : des amis qu'on voit, une activité, des gens à qui parler dans la semaine. La solitude qui pèse et le fait de vivre seul, ce n'est pas la même chose.",
+    "faq2Q": "Comment savoir si je suis fait pour le couple ou pour le célibat ?",
+    "faq2A": "En regardant vos réflexes plutôt que vos envies. Le temps seul dont vous avez besoin, ce que vous faites d'une bonne nouvelle, ce que ça vous fait de rentrer dans un logement vide, ce que vous supporteriez chez quelqu'un d'autre au quotidien. C'est ce que mesure ce test, en donnant à chaque question un poids différent selon son importance.",
+    "faq3Q": "Est-ce que le résultat peut changer avec le temps ?",
+    "faq3A": "Oui, et souvent. Une rupture, un déménagement, une période de travail chargée déplacent le curseur de dix ou vingt points. Le test dit où vous en êtes maintenant, pas ce que vous serez dans quinze ans. Refaites-le dans deux ans, l'écart sera parlant.",
+    "faq4Q": "J'ai 60 % « fait pour vivre à deux », c'est bien ou pas ?",
+    "faq4A": "Ça veut dire que la vie à deux vous va, à condition de garder du temps à vous. Il n'y a pas de bon ni de mauvais score : un 15 % dit une chose utile, un 90 % en dit une autre. Ce qui compte, c'est de savoir ce dont vous avez besoin avant de vous installer avec quelqu'un, pas après.",
+    "faq5Q": "Le test est-il anonyme ?",
+    "faq5A": "Oui. Vos réponses restent dans votre navigateur, rien n'est envoyé avec votre nom. Seul le résultat final, sans aucune donnée personnelle, sert à mesurer la répartition des profils."
+  }
+}

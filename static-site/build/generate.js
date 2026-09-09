@@ -305,6 +305,8 @@ const GD_QUESTION_PREFIXES = {
   // Le test « pourquoi je suis encore célibataire » : sa réserve compte 22
   // questions pour 20 posées, deux d'entre elles dépendent d'une réponse.
   celibataire: ['celib'],
+  // Couple ou célibat : vingt questions pondérées, un résultat en deux parts.
+  'couple-ou-celibat': ['balance'],
   karmique: ['karmique'], 'suis-je-amoureux': ['suisjeamoureux'],
   'distance-aime': ['distanceAime'], zamours: ['zamours'],
   // Ces deux-là déclinent leurs questions au masculin et au féminin ; le
