@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Paartest",
+    "title": "Ist es Liebe oder Bindung? Kostenloser Test",
+    "titleHighlight": "Liebe oder Bindung",
+    "description": "Ihr seid seit einer Weile zusammen, und eine Frage kommt immer wieder: Bleibe ich, weil ich diesen Menschen liebe, oder weil ich an ihm hänge? Dieser Test misst <strong>beides getrennt</strong>, in zwanzig Fragen, und gibt dir zwei Balken zum Vergleichen statt einer einzigen Note.",
+    "subtitle": "Zwanzig Fragen, fünf Minuten, zwei Werte und fünf mögliche Ergebnisse",
+    "jumpBtn": "Test starten"
+  },
+  "section1": {
+    "title": "Der Unterschied zwischen Liebe und Bindung",
+    "p1": "Der wichtigste Unterschied liegt darin, was dich bleiben lässt. Liebe zielt auf den Menschen: Du willst ihn, was er erzählt interessiert dich, du würdest ihn wieder wählen, wenn du ihn morgen kennenlerntest. Bindung zielt auf die Verbindung: die vergangenen Jahre, die Wohnung, die gemeinsamen Freunde, die Angst vor der Stille am Abend, die Vorstellung, noch einmal von vorn anzufangen.",
+    "p2": "Das sind zwei verschiedene Dinge, aber keine gegensätzlichen, und genau das macht die Frage allein so schwer zu klären: Ein Paar, dem es gut geht, hat beides reichlich. Du kannst deinen Partner lieben und gleichzeitig davor zurückschrecken, allein dazustehen. Das nimmt deinen Gefühlen nichts, es heißt nur, dass dein Leben mit seinem verflochten ist, was nach ein paar Jahren ziemlich normal ist!",
+    "p3": "Schwierig wird es, wenn nur noch das Zweite übrig ist. Wenn dich nur noch die Folgen eines Weggangs halten und nichts mehr von der Person selbst spricht. Genau dieses Ungleichgewicht will der Test sichtbar machen."
+  },
+  "section2": {
+    "title": "Vier Zeichen, die beides auseinanderhalten",
+    "intro": "Das sind die vier Dinge, die beides am besten trennen, und auf die die Fragen im Test immer wieder zurückkommen.",
+    "sub1Title": "Interessiert dich dieser Mensch noch?",
+    "sub1P1": "Nicht ob du ihn magst: ob er dich interessiert. Was er dieses Jahr vorhat, was ihn gerade beschäftigt, was er über ein Thema denkt, über das ihr nie gesprochen habt. Wer liebt, will es wissen. Wenn du diese Fragen seit einer Weile nicht mehr beantworten kannst, ist das selten Vergesslichkeit.",
+    "sub2Title": "Was du auf „noch einmal von vorn“ antwortest",
+    "sub2P1": "Wenn du diesen Menschen heute treffen würdest, auf einer Feier, ohne die gemeinsame Geschichte: Würdest du ihn wählen? Das ist die härteste Frage des Tests und die aussagekräftigste. Sie legt alles Angesammelte beiseite und lässt nur die Person übrig. Ein „Ich weiß nicht“ ist bereits eine Antwort.",
+    "sub3Title": "Was dir einfällt, wenn du dir das Danach vorstellst",
+    "sub3P1": "Wenn du dich ohne ihn siehst, was kommt zuerst? Fehlt dir die Person, ist es Liebe. Ist es die Stille in der Wohnung, der Aufwand des Auszugs und das, was deine Freunde sagen würden, ist es etwas anderes. Auch hier kann beides nebeneinander stehen, und die Reihenfolge sagt einiges.",
+    "sub4Title": "Was du dir sagst, um zu bleiben",
+    "sub4P1": "„Wir haben immerhin zehn Jahre hinter uns.“ „Er oder sie käme darüber nicht hinweg.“ „Jetzt ist nicht der richtige Moment…“ Solche Sätze sind Bindungsargumente: Sie sprechen vom Preis des Gehens, nie von der Lust am Bleiben. Wenn sie jede Woche wiederkommen, liegt es oft daran, dass <a href=\"/de/liebe-oder-gewohnheit-test/\">der Alltag den Platz von allem anderen eingenommen hat</a>."
+  },
+  "section3": {
+    "title": "Wie der Test beides misst",
+    "p1": "Zwanzig Fragen, zehn pro Seite, im Wechsel gestellt. Zehn messen den Zug zur Person: das Verlangen, das Interesse, die Freude, wenn sie nach Hause kommt, die Art, wie du eine gute Nachricht teilst. Zehn messen, was dich hält: die Angst vor der Leere, die investierten Jahre, die gemeinsamen Freunde, das, was du beim Gehen verlieren würdest.",
+    "p2": "Jede Antwort ist unterschiedlich viele Punkte wert, und jede Frage hat ihr eigenes Gewicht: Was du auf „noch einmal von vorn“ antwortest, zählt mehr als deine Meinung zu den Alltagsgewohnheiten. Beide Seiten sind je fünfzig Punkte wert, und das Ergebnis rechnet sie in Prozent um.",
+    "p3": "Die beiden Prozentwerte ergeben zusammen keine hundert, und das ist Absicht. Jeder wird an seinem eigenen Maximum gemessen, du kannst also ohne Weiteres 80 und 80 bekommen. Eine einzige Note würde eine laue und eine starke Verbindung in dieselbe Mitte werfen, obwohl das zwei gegensätzliche Lagen sind.",
+    "p4": "Fünf Ergebnisse sind möglich, je nach Form des Profils: beide hoch, die Liebe deutlich vorn, die Bindung deutlich vorn, beide niedrig oder fast gleichauf. Wenn die Bindungsseite weit vorn liegt und <a href=\"/de/emotionale-abhaengigkeit-test/\">dich der Gedanke, allein dazustehen, in einen Zustand versetzt, der über dich hinausgeht</a>, geht es nicht mehr ganz um die Beziehung. Und wenn beide Balken am Boden liegen, wird <a href=\"/de/ist-meine-beziehung-am-ende-test/\">das, was noch zu retten ist</a>, anderswo gemessen."
+  },
+  "seo": {
+    "faqTitle": "Die Fragen, die man sich stellt"
+  },
+  "jsonLd": {
+    "about": "Liebe und Bindung in der Beziehung",
+    "faq1Q": "Woran erkenne ich, ob es Liebe oder Bindung ist?",
+    "faq1A": "Daran, wovon deine Gründe zu bleiben eigentlich handeln. Handeln sie von der Person, davon wie sie ist und wie sehr du sie willst, ist es Liebe. Handeln sie vor allem davon, was du beim Gehen verlieren würdest, von der schon aufgewendeten Zeit und der Angst vor dem Alleinsein, ist es Bindung. Beides besteht oft gleichzeitig, und der Abstand zwischen beiden zählt mehr als ihr bloßes Vorhandensein.",
+    "faq2Q": "Kann man jemanden lieben und zugleich an ihm hängen?",
+    "faq2A": "Ja, und das ist der häufigste Fall bei Paaren, die halten. Bindung entsteht von selbst, wenn man Jahre, eine Wohnung und dieselben Freunde teilt. Sie ersetzt die Liebe nicht, sie kommt dazu. Zu beobachten ist nicht, dass sie da ist, sondern der Moment, in dem sie allein übrig bleibt.",
+    "faq3Q": "Kann aus Bindung wieder Liebe werden?",
+    "faq3A": "Sie verwandelt sich nicht zurück in Liebe, aber die Liebe kann daneben wieder steigen. Oft ist nicht das Gefühl gesunken, sondern die Aufmerksamkeit: Man hat aufgehört, einander Fragen zu stellen, etwas vorzuschlagen, den anderen als mehr zu sehen als die Person, die die Spülmaschine ausräumt. Das lässt sich reparieren, sofern beide wollen.",
+    "faq4Q": "Ist es schlimm, aus Bindung zu bleiben?",
+    "faq4A": "Es ist kein Fehler, und viele tun es jahrelang, ohne unglücklich zu sein. Zum Problem wird es an dem Tag, an dem es beiden etwas anderes verstellt, oder wenn einer noch glaubt, der andere liebe ihn wie am Anfang. Die Frage ist keine moralische, sondern eine praktische: wie viel Zeit du dem geben willst.",
+    "faq5Q": "Ist der Test anonym?",
+    "faq5A": "Ja. Deine Antworten bleiben in deinem Browser, nichts wird mit deinem Namen verschickt. Nur das Endergebnis, ohne jede persönliche Angabe, dient dazu, die Verteilung der Profile zu messen."
+  }
+}

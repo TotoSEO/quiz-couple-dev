@@ -387,6 +387,7 @@
     testTrouverAmour: "Pourquoi je ne trouve pas l'amour",
     testCelibataire: 'Pourquoi je suis encore célibataire',
     testCoupleOuCelibat: 'Couple ou célibat',
+    testAmourAttachement: 'Amour ou attachement',
     testPersonnalite: 'Personnalité amoureuse',
     // Page retiree du site : ses parties restent en base et doivent garder
     // un nom lisible, sinon la ligne s'affiche sous sa cle technique.
@@ -483,6 +484,7 @@
     'trouver-amour': 'testTrouverAmour',
     'celibataire': 'testCelibataire',
     'couple-ou-celibat': 'testCoupleOuCelibat',
+    'amour-ou-attachement': 'testAmourAttachement',
     'suis-je-amoureux': 'testSuisJeAmoureux',
     'tentation': 'quizTentation',
     'tester-couple': 'testCouple',
