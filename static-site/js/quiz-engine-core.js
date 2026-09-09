@@ -1941,6 +1941,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'pervers', icon: '🎭', route: 'testPervers' },
     { type: 'test', key: 'amour-habitude', icon: '☕', route: 'testAmourHabitude' },
     { type: 'test', key: 'amour-ou-attachement', icon: '🌹', route: 'testAmourAttachement' },
+    { type: 'test', key: 'je-l-aime-encore', icon: '🕯️', route: 'testJeLaimeEncore' },
     { type: 'test', key: 'sain', icon: '💚', route: 'testCoupleSain' },
     { type: 'test', key: 'mariage', icon: '💒', route: 'testMariage' },
     { type: 'test', key: 'divorce', icon: '⚖️', route: 'testDivorce' },
@@ -2038,6 +2039,9 @@ var QuizEngine = (function() {
     // Le doute sur ce qui lie appelle l'usure du quotidien, puis ce qui se
     // passe quand on s'accroche, puis la question de la fin.
     'amour-ou-attachement': ['testAmourHabitude', 'testDependance', 'testFinCouple'],
+    // Douter de ses propres sentiments appelle la question miroir (les siens),
+    // puis ce qui lie encore, puis ce qui tient encore.
+    'je-l-aime-encore': ['testAimeEncore', 'testAmourAttachement', 'testFinCouple'],
 
     // ── Tests de doute et de soupçon, faits seul ────────────────────────
     // Le soupçon appelle toujours une deuxième vérification.

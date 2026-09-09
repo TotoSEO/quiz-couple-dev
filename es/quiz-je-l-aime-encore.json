@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "badge": "Test de pareja",
+    "title": "¿Todavía le quiero o no? El test para saberlo",
+    "titleHighlight": "todavía le quiero",
+    "description": "La pregunta apareció una noche y desde entonces vuelve. Este test te la hace veinte veces, desde veinte ángulos, con preguntas que no tienen la misma importancia: <strong>pensar en irse pesa más</strong> que estar molesto por un defecto. El resultado se lee en <strong>ocho niveles</strong>, del más claro al más apagado.",
+    "subtitle": "Veinte preguntas ponderadas, cinco minutos, ocho resultados posibles",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "¿Cómo saber si todavía quieres a alguien?",
+    "p1": "La respuesta no está en las grandes declaraciones, está en los reflejos. ¿Te apetece verle cuando llegas por la noche? ¿Te alegran sus logros? ¿Le defiendes cuando alguien le critica? Son cosas que no se deciden, y justamente por eso dicen la verdad.",
+    "p2": "El problema, cuando uno se hace la pregunta, es que busca tranquilizarse o condenarse de golpe, con una sola señal. Un deseo a la baja no significa nada por sí solo: les pasa a todas las parejas. Un pensamiento hacia otra persona, tampoco. Lo que cuenta es la acumulación, y sobre todo el peso de las señales graves: haber pensado en irse, en frío, varias veces, no es del mismo orden que una noche en que uno prefiere el móvil.",
+    "p3": "Por eso el test no cuenta las respuestas, las pesa. Y por eso no devuelve un «sí» o un «no», sino un nivel de ocho: entre «le quieres, y está claro» y «ya no le quieres» hay seis estados intermedios por los que pasan muchas parejas, y no todos llevan al mismo sitio."
+  },
+  "section2": {
+    "title": "Las señales que más pesan",
+    "intro": "Estas son las cuatro cosas que el test mira más de cerca, y por qué cuentan más que el resto.",
+    "sub1Title": "Haber pensado en irse",
+    "sub1P1": "Es la pregunta que más pesa. No un pensamiento en un arrebato de rabia, eso lo tiene todo el mundo. Un pensamiento en frío, una noche tranquila, que vuelve. Cuando se ha llegado ahí varias veces, algo ya se ha movido, aunque no se haya dicho nada. Al revés, no haberlo pensado nunca en serio, después de años, es una señal que se subestima.",
+    "sub2Title": "Haberse imaginado con otra persona",
+    "sub2P1": "Que alguien te resulte atractivo no es una señal. Preguntarte cómo sería la vida con esa persona, comparar, volver a ello: eso sí. La diferencia entre las dos cosas es el tiempo que le dedicas y el hecho de volver. Si ya hubo un acercamiento, aunque lo cortaras, la pregunta del test ya está en parte contestada.",
+    "sub3Title": "Lo que haría la pérdida",
+    "sub3P1": "Si te enteraras de que está viendo a otra persona, ¿qué vendría primero? ¿Hundimiento, dolor, orgullo herido o una forma de alivio? La respuesta honesta a esa pregunta suele decir más que todo lo demás, porque uno no puede engañarse a sí mismo con ella. Quien todavía quiere no responde «aliviado», ni un poco.",
+    "sub4Title": "Lo que te hace quedarte",
+    "sub4P1": "«Porque le quiero» es una respuesta. «Por los hijos», «por la casa», «ya no lo sé» son otras, y no dicen lo mismo. Mucha gente se queda años sin saber ya por qué, y no es ninguna falta. Pero cuando la razón de quedarse ya no habla de la persona, suele ser porque <a href=\"/es/test-amor-o-apego/\">el vínculo ha ocupado el lugar del sentimiento</a>."
+  },
+  "section3": {
+    "title": "Cómo calcula el test tu nivel",
+    "p1": "Veinte preguntas, cada una con su peso: de tres puntos para las señales ligeras, como tu reacción ante una crítica sobre tu pareja, a seis puntos para las dos que más pesan, haber pensado en irse y haberse imaginado en otra parte. Ochenta y nueve puntos posibles en total.",
+    "p2": "Cada respuesta vale un número de puntos distinto, de la más enamorada a la menos. Responder «lo pienso con regularidad» a la pregunta de irse quita seis puntos de golpe; responder «dejo que hablen» cuando critican a tu pareja solo quita dos. Eso es lo que permite al resultado distinguir una pareja cansada de una pareja acabada, cuando las dos marcan casillas del medio un poco por todas partes.",
+    "p3": "Tu total cae después en uno de los ocho niveles. Los límites no son tramos iguales: los dos niveles de abajo son más estrechos, porque la diferencia entre «lo que queda ya no es amor» y «ya no le quieres» se decide en pocos puntos, pero no en pocas cosas. Una puntuación de 45 sobre 89 no significa «enamorado a medias», significa que algo se ha puesto en pausa y que la dirección aún no está tomada.",
+    "p4": "Una aclaración: este test no dice nada de los sentimientos del otro. Si tu duda es sobre lo que él o ella siente por ti, <a href=\"/es/test-me-sigue-queriendo/\">las señales de que te sigue queriendo</a> se leen en otro sitio. Y si tu resultado es bajo por los dos lados, la pregunta siguiente ya no es la del sentimiento, es la de <a href=\"/es/test-es-el-final-de-mi-relacion/\">lo que todavía se sostiene en la pareja</a>."
+  },
+  "seo": { "faqTitle": "Las preguntas que nos hacemos" },
+  "jsonLd": {
+    "about": "sentimientos amorosos en la pareja",
+    "faq1Q": "¿Cómo saber si ya no quieres a tu pareja?",
+    "faq1A": "Mirando los reflejos más que las declaraciones: si te alegra su vuelta, si le defiendes, si todavía te proyectas con él o ella. Y pesando las señales graves: haber pensado en irse en frío, haberse imaginado con otra persona, sentir alivio ante la idea de una separación. Una señal aislada no dice nada; la acumulación de señales graves dice mucho.",
+    "faq2Q": "¿Es normal no sentir ya mariposas después de años?",
+    "faq2A": "Sí, del todo. Las mariposas rara vez duran más de dos años y su desaparición no dice nada del amor. Lo que cuenta después es el resto: las ganas de ver al otro, la alegría por sus logros, el hecho de seguir eligiéndole. Un amor asentado es más calmado, no es más débil.",
+    "faq3Q": "¿Se puede volver a enamorarse de la pareja?",
+    "faq3A": "Sí, cuando lo que ha bajado es la atención y no el sentimiento. Las parejas que atraviesan un bache y salen de él son las que han vuelto a hacerse preguntas, a proponer cosas, a mirarse como algo más que dos compañeros de piso. Solo funciona si las respuestas a las preguntas graves siguen del lado bueno: cuando ya se ha decidido irse con la cabeza, la vuelta es rara.",
+    "faq4Q": "¿Qué hago si el test dice que ya no le quiero?",
+    "faq4A": "Primero, no decidir nada esa misma noche: un test dice dónde estás, no toma la decisión. Después, repetirlo en unas semanas para ver si el resultado se mantiene. Si se mantiene, la cuestión ya no es si le quieres, es cómo decírselo, y cuándo. Aplazarlo no protege a nadie, y menos a él o ella.",
+    "faq5Q": "¿El test es anónimo?",
+    "faq5A": "Sí. Tus respuestas se quedan en tu navegador y no se envía nada con tu nombre. Solo el resultado final, sin ningún dato personal, sirve para medir el reparto de los niveles."
+  }
+}

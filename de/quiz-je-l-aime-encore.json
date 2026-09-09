@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "badge": "Paartest",
+    "title": "Liebe ich ihn oder sie noch? Der Test, um es herauszufinden",
+    "titleHighlight": "noch",
+    "description": "Die Frage kam an einem Abend auf, und seitdem kommt sie wieder. Dieser Test stellt sie dir zwanzigmal, aus zwanzig Blickwinkeln, mit Fragen, die nicht alle gleich viel zählen: <strong>ans Gehen zu denken wiegt schwerer</strong>, als sich über einen Fehler zu ärgern. Das Ergebnis liest sich auf <strong>acht Stufen</strong>, von der klarsten bis zur verblasstesten.",
+    "subtitle": "Zwanzig gewichtete Fragen, fünf Minuten, acht mögliche Ergebnisse",
+    "jumpBtn": "Test starten"
+  },
+  "section1": {
+    "title": "Woran merkt man, ob man jemanden noch liebt?",
+    "p1": "Die Antwort steckt nicht in großen Erklärungen, sie steckt in Reflexen. Freust du dich abends darauf, ihn oder sie zu sehen? Freuen dich seine oder ihre Erfolge? Verteidigst du ihn oder sie, wenn jemand kritisiert? Das sind Dinge, die man nicht beschließt, und genau deshalb sagen sie die Wahrheit.",
+    "p2": "Das Problem, wenn man sich die Frage stellt: Man will sich mit einem einzigen Zeichen auf einmal beruhigen oder verurteilen. Weniger Lust sagt für sich allein nichts, das passiert jedem Paar. Ein Gedanke an jemand anderen ebenso wenig. Was zählt, ist die Häufung, und vor allem das Gewicht der schweren Zeichen: mehrmals nüchtern ans Gehen gedacht zu haben, ist etwas anderes als ein Abend, an dem man lieber aufs Handy schaut.",
+    "p3": "Deshalb zählt der Test die Antworten nicht, er wiegt sie. Und deshalb gibt er kein „Ja“ oder „Nein“ zurück, sondern eine von acht Stufen: Zwischen „Du liebst ihn oder sie, und das ist eindeutig“ und „Du liebst ihn oder sie nicht mehr“ liegen sechs Zwischenzustände, die viele Paare durchlaufen, und sie führen nicht alle an denselben Ort."
+  },
+  "section2": {
+    "title": "Die Zeichen, die am schwersten wiegen",
+    "intro": "Das sind die vier Dinge, die der Test am genauesten betrachtet, und der Grund, warum sie mehr zählen als der Rest.",
+    "sub1Title": "Ans Gehen gedacht zu haben",
+    "sub1P1": "Das ist die Frage mit dem größten Gewicht. Nicht ein Gedanke im Zorn, den hat jeder. Ein nüchterner Gedanke, an einem ruhigen Abend, der wiederkommt. Wer da mehrmals war, bei dem hat sich schon etwas bewegt, auch wenn nichts gesagt wurde. Umgekehrt ist es ein unterschätztes Zeichen, nach Jahren noch nie ernsthaft daran gedacht zu haben.",
+    "sub2Title": "Sich mit jemand anderem vorgestellt zu haben",
+    "sub2P1": "Jemanden anziehend zu finden ist kein Zeichen. Sich zu fragen, wie das Leben mit diesem Menschen wäre, zu vergleichen, darauf zurückzukommen: das schon. Der Unterschied liegt in der Zeit, die man damit verbringt, und darin, dass man zurückkehrt. Wenn es schon eine Annäherung gab, auch eine abgebrochene, ist die Frage des Tests zum Teil schon beantwortet.",
+    "sub3Title": "Was der Verlust auslösen würde",
+    "sub3P1": "Wenn du erfahren würdest, dass er oder sie jemand anderen trifft, was käme zuerst? Zusammenbruch, Verletzung, Kränkung oder eine Art Erleichterung? Die ehrliche Antwort darauf sagt oft mehr als alles andere, weil man sich dabei nichts vormachen kann. Wer noch liebt, antwortet nicht „erleichtert“, auch nicht ein bisschen.",
+    "sub4Title": "Was dich bleiben lässt",
+    "sub4P1": "„Weil ich ihn oder sie liebe“ ist eine Antwort. „Wegen der Kinder“, „wegen der Wohnung“, „ich weiß es nicht mehr“ sind andere, und sie sagen nicht dasselbe. Viele bleiben lange, ohne noch zu wissen, warum, und das ist kein Fehler. Aber wenn der Grund zu bleiben nichts mehr von der Person sagt, liegt es oft daran, dass <a href=\"/de/liebe-oder-bindung-test/\">die Bindung den Platz des Gefühls eingenommen hat</a>."
+  },
+  "section3": {
+    "title": "Wie der Test deine Stufe berechnet",
+    "p1": "Zwanzig Fragen, jede mit eigenem Gewicht: von drei Punkten für die leichten Zeichen, etwa wie du auf Kritik an ihm oder ihr reagierst, bis zu sechs Punkten für die beiden schwersten, ans Gehen gedacht und sich woanders vorgestellt zu haben. Neunundachtzig mögliche Punkte insgesamt.",
+    "p2": "Jede Antwort ist unterschiedlich viele Punkte wert, von der verliebtesten bis zur am wenigsten verliebten. „Ich denke regelmäßig daran“ bei der Frage nach dem Gehen nimmt auf einmal sechs Punkte weg; „ich lasse es durchgehen“, wenn dein Partner kritisiert wird, nur zwei. Genau das erlaubt dem Ergebnis, ein müdes Paar von einem beendeten zu unterscheiden, obwohl beide fast überall Kästchen in der Mitte ankreuzen.",
+    "p3": "Deine Summe fällt dann auf eine von acht Stufen. Die Grenzen sind keine gleichen Abschnitte: Die beiden unteren Stufen sind enger, weil der Unterschied zwischen „Was bleibt, ist keine Liebe mehr“ und „Du liebst ihn oder sie nicht mehr“ an wenigen Punkten hängt, aber nicht an wenigen Dingen. 45 von 89 Punkten heißt nicht „halb verliebt“, es heißt, dass etwas in den Ruhemodus gegangen ist und die Richtung noch nicht feststeht.",
+    "p4": "Eines noch: Dieser Test sagt nichts über die Gefühle des anderen. Wenn dein Zweifel dem gilt, was er oder sie für dich empfindet, liest man <a href=\"/de/liebt-er-sie-mich-noch-test/\">die Zeichen, dass er oder sie dich noch liebt</a>, woanders. Und wenn dein Ergebnis auf beiden Seiten niedrig ist, geht es bei der nächsten Frage nicht mehr um das Gefühl, sondern um <a href=\"/de/ist-meine-beziehung-am-ende-test/\">das, was in der Beziehung noch hält</a>."
+  },
+  "seo": { "faqTitle": "Die Fragen, die man sich stellt" },
+  "jsonLd": {
+    "about": "Liebesgefühle in der Beziehung",
+    "faq1Q": "Woran erkenne ich, dass ich meinen Partner nicht mehr liebe?",
+    "faq1A": "An den Reflexen statt an den Erklärungen: ob dich seine oder ihre Rückkehr freut, ob du ihn oder sie verteidigst, ob du euch noch gemeinsam in der Zukunft siehst. Und am Gewicht der schweren Zeichen: nüchtern ans Gehen gedacht, sich mit jemand anderem vorgestellt, Erleichterung beim Gedanken an eine Trennung gespürt zu haben. Ein einzelnes Zeichen sagt nichts, die Häufung schwerer Zeichen sagt viel.",
+    "faq2Q": "Ist es normal, nach Jahren keine Schmetterlinge mehr zu spüren?",
+    "faq2A": "Ja, völlig. Schmetterlinge halten selten länger als zwei Jahre, und ihr Verschwinden sagt nichts über die Liebe. Was danach zählt, ist der Rest: die Lust, den anderen zu sehen, die Freude an seinen Erfolgen, ihn immer noch zu wählen. Eine gefestigte Liebe ist ruhiger, nicht schwächer.",
+    "faq3Q": "Kann man sich in seinen Partner neu verlieben?",
+    "faq3A": "Ja, wenn das, was gesunken ist, die Aufmerksamkeit ist und nicht das Gefühl. Die Paare, die eine Flaute durchmachen und wieder herauskommen, sind die, die wieder angefangen haben, einander Fragen zu stellen, etwas vorzuschlagen, sich anders zu sehen als zwei Mitbewohner. Das funktioniert nur, wenn die Antworten auf die schweren Fragen noch auf der richtigen Seite liegen: Wer in Gedanken schon gegangen ist, kommt selten zurück.",
+    "faq4Q": "Was tun, wenn der Test sagt, dass ich nicht mehr liebe?",
+    "faq4A": "Zuerst: am selben Abend nichts entscheiden. Ein Test sagt, wo du stehst, er trifft die Entscheidung nicht. Dann in ein paar Wochen wiederholen und schauen, ob das Ergebnis hält. Wenn es hält, geht es nicht mehr darum, ob du liebst, sondern darum, wie und wann du es sagst. Aufschieben schützt niemanden, ihn oder sie am wenigsten.",
+    "faq5Q": "Ist der Test anonym?",
+    "faq5A": "Ja. Deine Antworten bleiben in deinem Browser, nichts wird mit deinem Namen verschickt. Nur das Endergebnis, ohne jede persönliche Angabe, dient dazu, die Verteilung der Stufen zu messen."
+  }
+}
