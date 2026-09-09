@@ -388,6 +388,7 @@
     testCelibataire: 'Pourquoi je suis encore célibataire',
     testCoupleOuCelibat: 'Couple ou célibat',
     testAmourAttachement: 'Amour ou attachement',
+    testJeLaimeEncore: "Je l'aime encore ?",
     testPersonnalite: 'Personnalité amoureuse',
     // Page retiree du site : ses parties restent en base et doivent garder
     // un nom lisible, sinon la ligne s'affiche sous sa cle technique.
@@ -485,6 +486,7 @@
     'celibataire': 'testCelibataire',
     'couple-ou-celibat': 'testCoupleOuCelibat',
     'amour-ou-attachement': 'testAmourAttachement',
+    'je-l-aime-encore': 'testJeLaimeEncore',
     'suis-je-amoureux': 'testSuisJeAmoureux',
     'tentation': 'quizTentation',
     'tester-couple': 'testCouple',

@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "badge": "Couple test",
+    "title": "Do I still love them or not? The test to find out",
+    "titleHighlight": "still love them",
+    "description": "The question came up one evening, and it's been coming back since. This test asks it twenty times, from twenty angles, with questions that don't all carry the same weight: <strong>thinking about leaving weighs more</strong> than being annoyed by a flaw. The result reads on <strong>eight levels</strong>, from the clearest to the most faded.",
+    "subtitle": "Twenty weighted questions, five minutes, eight possible results",
+    "jumpBtn": "Take the test"
+  },
+  "section1": {
+    "title": "How do you know whether you still love someone?",
+    "p1": "The answer isn't in grand declarations, it's in reflexes. Do you want to see them when you get home in the evening? Do their successes make you happy? Do you defend them when someone criticises them? These are things you don't decide, and that's exactly why they tell the truth.",
+    "p2": "The trouble, when you ask yourself the question, is that you look to be reassured or condemned in one go, on a single sign. A drop in desire means nothing on its own: it happens to every couple. Neither does a thought about someone else. What counts is the accumulation, and above all the weight of the heavy signs: having thought about leaving, calmly, several times, isn't in the same league as an evening when you'd rather have your phone.",
+    "p3": "That's why the test doesn't count the answers, it weighs them. And why it doesn't hand back a \"yes\" or a \"no\", but one level out of eight: between \"you love them, and it's clear\" and \"you don't love them any more\", there are six in-between states that many couples go through, and they don't all lead to the same place."
+  },
+  "section2": {
+    "title": "The signs that weigh the most",
+    "intro": "Here are the four things the test looks at most closely, and why they count for more than the rest.",
+    "sub1Title": "Having thought about leaving",
+    "sub1P1": "This is the question that weighs the most. Not a thought in a fit of anger, everyone has those. A calm thought, on a quiet evening, that comes back. Once you've been there several times, something has already shifted, even if nothing has been said. Conversely, never having seriously thought about it, after years, is a sign people underestimate.",
+    "sub2Title": "Having pictured yourself with someone else",
+    "sub2P1": "Finding someone attractive isn't a sign. Wondering what life would be like with that person, comparing, coming back to it: that is. The difference between the two is the time you spend on it and the fact that you return to it. If something has already started, even if you cut it off, the test's question is already partly answered.",
+    "sub3Title": "What losing them would do",
+    "sub3P1": "If you found out they were seeing someone else, what would come first? Collapse, hurt, offence, or a kind of relief? The honest answer to that question is often more telling than everything else, because you can't fake it to yourself. Someone who still loves doesn't answer \"relieved\", not even a little.",
+    "sub4Title": "What makes you stay",
+    "sub4P1": "\"Because I love them\" is one answer. \"For the children\", \"for the home\", \"I don't know any more\" are others, and they don't say the same thing. Plenty of people stay for a long time without knowing why any more, and that isn't a fault. But when the reason for staying no longer speaks of the person, it's often because <a href=\"/en/love-or-attachment-test/\">the bond has taken the place of the feeling</a>."
+  },
+  "section3": {
+    "title": "How the test works out your level",
+    "p1": "Twenty questions, each with its own weight: from three points for the light signs, like how you react to a criticism of them, to six points for the two that weigh the most, having thought about leaving and having pictured yourself elsewhere. Eighty-nine points possible in all.",
+    "p2": "Each answer is worth a different number of points, from the most in love to the least. Answering \"I think about it regularly\" to the question about leaving takes six points off at once; answering \"I let it go\" when your partner is criticised only takes off two. That's what lets the result tell a tired couple from a finished one, when both tick middle boxes more or less everywhere.",
+    "p3": "Your total then lands on one of eight levels. The boundaries aren't equal slices: the two bottom levels are tighter, because the difference between \"what's left is no longer love\" and \"you don't love them any more\" comes down to few points, but not to few things. A score of 45 out of 89 doesn't mean \"half in love\", it means something has gone into standby and the direction hasn't been taken yet.",
+    "p4": "One thing to be clear about: this test says nothing about the other person's feelings. If your doubt is about what they feel for you, <a href=\"/en/does-he-she-still-love-me-test/\">the signs that they still love you</a> are read elsewhere. And if your result is low on both counts, the next question is no longer about the feeling, it's about <a href=\"/en/is-my-relationship-over-test/\">what still holds in the relationship</a>."
+  },
+  "seo": { "faqTitle": "The questions people ask" },
+  "jsonLd": {
+    "about": "feelings of love in a relationship",
+    "faq1Q": "How do you know you no longer love your partner?",
+    "faq1A": "By looking at reflexes rather than declarations: whether their coming home pleases you, whether you defend them, whether you still picture the future with them. And by weighing the heavy signs, having thought calmly about leaving, having pictured yourself with someone else, feeling relief at the idea of a separation. One sign on its own says nothing, an accumulation of heavy signs says a lot.",
+    "faq2Q": "Is it normal not to feel butterflies any more after years together?",
+    "faq2A": "Yes, completely. Butterflies rarely last more than two years and their disappearance says nothing about love. What counts afterwards is the rest: wanting to see the other person, enjoying their successes, still choosing them. A settled love is calmer, it isn't weaker.",
+    "faq3Q": "Can you fall back in love with your partner?",
+    "faq3A": "Yes, when what has dropped is the attention and not the feeling. The couples who go through a dip and come out of it are the ones who started asking each other questions again, suggesting things, seeing each other as something other than two flatmates. It only works if the answers to the heavy questions are still on the right side: once you've already decided to leave in your head, coming back is rare.",
+    "faq4Q": "What do I do if the test says I don't love them any more?",
+    "faq4A": "First, decide nothing that same evening: a test says where you stand, it doesn't make the decision. Then take it again in a few weeks to see whether the result holds. If it holds, the question is no longer whether you love them, it's how to tell them, and when. Putting it off protects nobody, least of all them.",
+    "faq5Q": "Is the test anonymous?",
+    "faq5A": "Yes. Your answers stay in your browser and nothing is sent with your name. Only the final result, with no personal data attached, is used to measure how the levels break down."
+  }
+}

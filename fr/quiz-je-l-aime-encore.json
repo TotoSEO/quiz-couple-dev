@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "Test de couple",
+    "title": "Est-ce que je l'aime encore ou pas ? Le test pour savoir",
+    "titleHighlight": "je l'aime encore",
+    "description": "La question s'est posée un soir, et depuis elle revient. Ce test vous la pose vingt fois, sous vingt angles différents, avec des questions qui n'ont pas la même importance : <strong>penser à partir pèse plus lourd</strong> qu'être agacé par un défaut. Le résultat se lit sur <strong>huit paliers</strong>, du plus net au plus estompé.",
+    "subtitle": "Vingt questions pondérées, cinq minutes, huit résultats possibles",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment savoir si on aime encore quelqu'un ?",
+    "p1": "La réponse ne se trouve pas dans les grandes déclarations, elle se trouve dans les réflexes. Est-ce que vous avez envie de le ou la retrouver le soir ? Est-ce que ses réussites vous font plaisir ? Est-ce que vous le ou la défendez quand quelqu'un le ou la critique ? Ce sont des choses qu'on ne décide pas, et c'est justement pour ça qu'elles disent la vérité.",
+    "p2": "Le problème, quand on se pose la question, c'est qu'on cherche à se rassurer ou à se condamner d'un coup, avec un seul signe. Un désir en baisse ne veut rien dire tout seul : ça arrive à tous les couples. Une pensée pour quelqu'un d'autre non plus. C'est l'accumulation qui compte, et surtout le poids des signes lourds : avoir pensé à partir, à froid, plusieurs fois, n'est pas du même ordre qu'une soirée où on préfère son téléphone.",
+    "p3": "Voilà pourquoi le test ne compte pas les réponses, il les pèse. Et pourquoi il ne rend pas un « oui » ou un « non », mais un palier sur huit : entre « vous l'aimez, et c'est net » et « vous ne l'aimez plus », il y a six états intermédiaires que beaucoup de couples traversent, et qui ne mènent pas tous au même endroit."
+  },
+  "section2": {
+    "title": "Les signes qui pèsent le plus",
+    "intro": "Voici les quatre choses que le test regarde de plus près, et pourquoi elles comptent davantage que le reste.",
+    "sub1Title": "Avoir pensé à partir",
+    "sub1P1": "C'est la question qui pèse le plus lourd. Pas une pensée sur un coup de colère, tout le monde en a. Une pensée à froid, un soir calme, qui revient. Quand on en est là plusieurs fois, quelque chose a déjà bougé, même si rien n'a été dit. À l'inverse, ne jamais y avoir pensé sérieusement, après des années, est un signe qu'on sous-estime.",
+    "sub2Title": "S'être imaginé avec quelqu'un d'autre",
+    "sub2P1": "Trouver quelqu'un attirant n'est pas un signe. Se demander ce que serait la vie avec cette personne, comparer, y revenir : ça l'est. La différence entre les deux, c'est le temps qu'on y passe et le fait d'y revenir. Si un rapprochement a déjà eu lieu, même coupé, la question du test est déjà en partie répondue.",
+    "sub3Title": "Ce que ferait la perte",
+    "sub3P1": "Si vous appreniez qu'il ou elle voit quelqu'un d'autre, qu'est-ce qui viendrait en premier ? Effondrement, blessure, vexation, ou une forme de soulagement ? La réponse honnête à cette question est souvent plus parlante que tout le reste, parce qu'on ne peut pas se la jouer à soi-même. Quelqu'un qui aime encore ne répond pas « soulagé », même un peu.",
+    "sub4Title": "Ce qui vous fait rester",
+    "sub4P1": "« Parce que je l'aime » est une réponse. « Pour les enfants », « pour le logement », « je ne sais plus » en sont d'autres, et elles ne disent pas la même chose. Beaucoup de gens restent longtemps sans plus savoir pourquoi, et ce n'est pas une faute. Mais quand la raison de rester ne parle plus de la personne, c'est souvent que <a href=\"/test-amour-ou-attachement/\">le lien a pris la place du sentiment</a>."
+  },
+  "section3": {
+    "title": "Comment le test calcule votre palier",
+    "p1": "Vingt questions, chacune avec son poids : de trois points pour les signes légers, comme la façon dont vous réagissez à une critique sur lui ou elle, à six points pour les deux qui pèsent le plus, avoir pensé à partir et s'être imaginé ailleurs. Quatre-vingt-neuf points possibles en tout.",
+    "p2": "Chaque réponse vaut un nombre de points différent, du plus amoureux au moins amoureux. Répondre « j'y pense régulièrement » à la question du départ enlève six points d'un coup ; répondre « je laisse dire » quand on critique votre partenaire n'en enlève que deux. C'est ce qui permet au résultat de distinguer un couple fatigué d'un couple fini, alors que les deux cochent des cases du milieu un peu partout.",
+    "p3": "Votre total tombe ensuite dans un des huit paliers. Les bornes ne sont pas des tranches égales : les deux paliers du bas sont plus serrés, parce que la différence entre « ce qui reste n'est plus de l'amour » et « vous ne l'aimez plus » tient à peu de points, mais pas à peu de choses. Un score de 45 sur 89 ne veut pas dire « à moitié amoureux », il veut dire que quelque chose s'est mis en veille et que la direction n'est pas encore prise.",
+    "p4": "Une précision : ce test ne dit rien des sentiments de l'autre. Si votre doute porte sur ce qu'il ou elle ressent pour vous, <a href=\"/test-m-aime-t-il-encore/\">les signes qu'il ou elle vous aime encore</a> se lisent ailleurs. Et si votre résultat est bas des deux côtés, la question suivante n'est plus celle du sentiment, c'est celle de <a href=\"/test-est-ce-la-fin-de-mon-couple/\">ce qui tient encore dans le couple</a>."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose"
+  },
+  "jsonLd": {
+    "about": "sentiments amoureux dans le couple",
+    "faq1Q": "Comment savoir si on n'aime plus son conjoint ?",
+    "faq1A": "En regardant les réflexes plutôt que les déclarations : est-ce que son retour vous fait plaisir, est-ce que vous le ou la défendez, est-ce que vous vous projetez encore avec lui ou elle. Et en pesant les signes lourds, avoir pensé à partir à froid, s'être imaginé avec quelqu'un d'autre, ressentir du soulagement à l'idée d'une séparation. Un signe isolé ne dit rien, l'accumulation des signes lourds dit beaucoup.",
+    "faq2Q": "Est-ce normal de ne plus ressentir de papillons après des années ?",
+    "faq2A": "Oui, complètement. Les papillons durent rarement plus de deux ans et leur disparition ne dit rien sur l'amour. Ce qui compte ensuite, c'est le reste : l'envie de retrouver l'autre, le plaisir de ses réussites, le fait de le ou la choisir encore. Un amour installé est plus calme, il n'est pas plus faible.",
+    "faq3Q": "Peut-on retomber amoureux de son partenaire ?",
+    "faq3A": "Oui, quand ce qui a baissé est l'attention et pas le sentiment. Les couples qui traversent un creux et en sortent sont ceux qui ont recommencé à se poser des questions, à proposer des choses, à se regarder autrement que comme deux colocataires. Ça ne marche que si les réponses aux questions lourdes sont encore du bon côté : quand on a déjà décidé de partir en pensée, le retour est rare.",
+    "faq4Q": "Que faire si le test dit que je ne l'aime plus ?",
+    "faq4A": "D'abord, ne rien décider le soir même : un test dit où vous en êtes, il ne prend pas la décision. Ensuite, refaire le test dans quelques semaines pour voir si le résultat tient. S'il tient, la question n'est plus de savoir si vous l'aimez, elle est de savoir comment le lui dire, et quand. Repousser ne protège personne, et surtout pas lui ou elle.",
+    "faq5Q": "Le test est-il anonyme ?",
+    "faq5A": "Oui. Vos réponses restent dans votre navigateur, rien n'est envoyé avec votre nom. Seul le résultat final, sans aucune donnée personnelle, sert à mesurer la répartition des paliers."
+  }
+}

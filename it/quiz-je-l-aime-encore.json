@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "badge": "Test di coppia",
+    "title": "Lo amo ancora o no? Il test per saperlo",
+    "titleHighlight": "amo ancora",
+    "description": "La domanda è arrivata una sera e da allora torna. Questo test te la fa venti volte, da venti angolazioni, con domande che non hanno la stessa importanza: <strong>pensare di andarsene pesa di più</strong> che essere irritati da un difetto. Il risultato si legge su <strong>otto livelli</strong>, dal più netto al più sbiadito.",
+    "subtitle": "Venti domande pesate, cinque minuti, otto risultati possibili",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Come capire se si ama ancora qualcuno?",
+    "p1": "La risposta non sta nelle grandi dichiarazioni, sta nei riflessi. Hai voglia di ritrovarlo la sera? I suoi successi ti fanno piacere? Lo difendi quando qualcuno lo critica? Sono cose che non si decidono, ed è proprio per questo che dicono la verità.",
+    "p2": "Il problema, quando ci si fa la domanda, è che si cerca di rassicurarsi o di condannarsi in un colpo solo, con un solo segnale. Un desiderio in calo non vuol dire niente da solo: capita a tutte le coppie. Un pensiero per qualcun altro, nemmeno. È l'accumulo che conta, e soprattutto il peso dei segnali gravi: aver pensato di andarsene, a freddo, più volte, non è dello stesso ordine di una sera in cui si preferisce il telefono.",
+    "p3": "Ecco perché il test non conta le risposte, le pesa. E perché non restituisce un «sì» o un «no», ma un livello su otto: fra «lo ami, ed è chiaro» e «non lo ami più» ci sono sei stati intermedi che molte coppie attraversano, e non portano tutti nello stesso posto."
+  },
+  "section2": {
+    "title": "I segnali che pesano di più",
+    "intro": "Ecco le quattro cose che il test guarda più da vicino, e perché contano più del resto.",
+    "sub1Title": "Aver pensato di andarsene",
+    "sub1P1": "È la domanda che pesa di più. Non un pensiero in un momento di rabbia, quello lo hanno tutti. Un pensiero a freddo, una sera tranquilla, che ritorna. Quando ci si è arrivati più volte, qualcosa si è già mosso, anche se non è stato detto niente. Al contrario, non averci mai pensato seriamente, dopo anni, è un segnale che si sottovaluta.",
+    "sub2Title": "Essersi immaginati con qualcun altro",
+    "sub2P1": "Trovare qualcuno attraente non è un segnale. Chiedersi come sarebbe la vita con quella persona, confrontare, tornarci sopra: lo è. La differenza fra le due cose è il tempo che ci si passa e il fatto di tornarci. Se un avvicinamento c'è già stato, anche interrotto, alla domanda del test si è già risposto in parte.",
+    "sub3Title": "Che effetto farebbe la perdita",
+    "sub3P1": "Se scoprissi che frequenta qualcun altro, cosa verrebbe per primo? Crollo, ferita, orgoglio ferito, o una forma di sollievo? La risposta onesta a questa domanda dice spesso più di tutto il resto, perché non ci si può raccontare storie. Chi ama ancora non risponde «sollevato», nemmeno un po'.",
+    "sub4Title": "Quello che ti fa restare",
+    "sub4P1": "«Perché lo amo» è una risposta. «Per i figli», «per la casa», «non lo so più» ne sono altre, e non dicono la stessa cosa. Molte persone restano a lungo senza più sapere perché, e non è una colpa. Ma quando il motivo per restare non parla più della persona, spesso è perché <a href=\"/it/test-amore-o-attaccamento/\">il legame ha preso il posto del sentimento</a>."
+  },
+  "section3": {
+    "title": "Come il test calcola il tuo livello",
+    "p1": "Venti domande, ciascuna con il suo peso: da tre punti per i segnali leggeri, come il modo in cui reagisci a una critica su di lui, a sei punti per i due che pesano di più, aver pensato di andarsene ed essersi immaginati altrove. Ottantanove punti possibili in tutto.",
+    "p2": "Ogni risposta vale un numero di punti diverso, dalla più innamorata alla meno. Rispondere «ci penso regolarmente» alla domanda sull'andarsene toglie sei punti in un colpo; rispondere «lascio dire» quando criticano il tuo partner ne toglie solo due. È questo che permette al risultato di distinguere una coppia stanca da una coppia finita, quando entrambe segnano caselle di mezzo un po' ovunque.",
+    "p3": "Il tuo totale cade poi in uno degli otto livelli. I confini non sono fasce uguali: i due livelli in basso sono più stretti, perché la differenza fra «quello che resta non è più amore» e «non lo ami più» si gioca su pochi punti, ma non su poche cose. Un punteggio di 45 su 89 non vuol dire «innamorato a metà», vuol dire che qualcosa si è messo in pausa e che la direzione non è ancora presa.",
+    "p4": "Una precisazione: questo test non dice niente dei sentimenti dell'altro. Se il tuo dubbio riguarda quello che lui o lei prova per te, <a href=\"/it/mi-ama-ancora-test/\">i segnali che ti ama ancora</a> si leggono altrove. E se il tuo risultato è basso su entrambi i fronti, la domanda successiva non è più quella del sentimento, è quella di <a href=\"/it/test-e-la-fine-della-mia-relazione/\">quello che tiene ancora nella coppia</a>."
+  },
+  "seo": { "faqTitle": "Le domande che ci si pone" },
+  "jsonLd": {
+    "about": "sentimenti amorosi nella coppia",
+    "faq1Q": "Come capire se non si ama più il proprio partner?",
+    "faq1A": "Guardando i riflessi più che le dichiarazioni: se il suo ritorno ti fa piacere, se lo difendi, se ti proietti ancora con lui. E pesando i segnali gravi: aver pensato a freddo di andarsene, essersi immaginati con qualcun altro, provare sollievo all'idea di una separazione. Un segnale isolato non dice niente, l'accumulo di segnali gravi dice molto.",
+    "faq2Q": "È normale non sentire più le farfalle nello stomaco dopo anni?",
+    "faq2A": "Sì, del tutto. Le farfalle durano raramente più di due anni e la loro scomparsa non dice niente sull'amore. Quello che conta dopo è il resto: la voglia di ritrovare l'altro, il piacere dei suoi successi, il fatto di sceglierlo ancora. Un amore consolidato è più calmo, non è più debole.",
+    "faq3Q": "Si può tornare a innamorarsi del proprio partner?",
+    "faq3A": "Sì, quando quello che è calato è l'attenzione e non il sentimento. Le coppie che attraversano un momento di vuoto e ne escono sono quelle che hanno ripreso a farsi domande, a proporre cose, a guardarsi in modo diverso da due coinquilini. Funziona solo se le risposte alle domande gravi stanno ancora dal lato giusto: quando col pensiero si è già deciso di andarsene, il ritorno è raro.",
+    "faq4Q": "Cosa fare se il test dice che non lo amo più?",
+    "faq4A": "Prima di tutto, non decidere niente la sera stessa: un test dice dove sei, non prende la decisione. Poi rifarlo fra qualche settimana per vedere se il risultato tiene. Se tiene, la questione non è più se lo ami, è come dirglielo, e quando. Rimandare non protegge nessuno, e meno che mai lui.",
+    "faq5Q": "Il test è anonimo?",
+    "faq5A": "Sì. Le tue risposte restano nel tuo browser e non viene inviato niente con il tuo nome. Solo il risultato finale, senza alcun dato personale, serve a misurare la distribuzione dei livelli."
+  }
+}

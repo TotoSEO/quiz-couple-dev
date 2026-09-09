@@ -59,6 +59,12 @@
     "description": "Vingt questions qui mesurent séparément ce que vous ressentez pour votre partenaire et ce qui vous retient auprès de lui. Deux barres à comparer, cinq résultats possibles.",
     "metaDescription": "Amour ou attachement ? Vingt questions pour mesurer séparément l'élan vers votre partenaire et ce qui vous retient, avec deux pourcentages à comparer. Test gratuit, sans inscription."
   },
+  "testJeLaimeEncore": {
+    "title": "Test : je l'aime encore ou pas ? Gratuit & en ligne",
+    "shortTitle": "Je l'aime encore ?",
+    "description": "Vingt questions franches et pondérées sur ce que vous ressentez aujourd'hui pour votre partenaire. Huit paliers de résultat, du plus net au plus estompé.",
+    "metaDescription": "Est-ce que je l'aime encore ? Vingt questions pondérées, où penser à partir pèse plus lourd qu'un agacement, et un résultat sur huit paliers. Test gratuit, sans inscription."
+  },
   "quizAmoureux": {
     "title": "Quiz Amoureux interactif : questionnez votre amour gratuitement",
     "shortTitle": "Quiz Amoureux",

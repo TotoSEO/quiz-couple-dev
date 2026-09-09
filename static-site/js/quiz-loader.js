@@ -309,6 +309,14 @@
     // d'une tranche de score : voir AxesQuiz.
     'amour-ou-attachement': { prefix: 'attache', engine: 'axes', totalQ: 20, pool: 20, quizType: 'amour-ou-attachement' },
 
+    // Je l'aime encore ? Un test solo a bareme explicite : les points vont au
+    // sentiment encore present (l'anneau se lit donc comme « combien il
+    // reste »), et chaque question a son poids, de 3 a 6, selon ce qu'elle
+    // dit : penser a partir pese le double d'un agacement. 89 points en tout,
+    // huit paliers poses a la main, plus serres en bas ou peu de points
+    // separent « plus de l'amour » de « plus rien ».
+    'je-l-aime-encore': { prefix: 'jeLaime', engine: 'solo', totalQ: 20, pool: 20, quizType: 'je-l-aime-encore', ptsExplicites: true, paliers: [9, 20, 32, 44, 56, 67, 78] },
+
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
 
     // ── Infidelite quiz (solo scoring, ascending: more signs = higher score) ──
