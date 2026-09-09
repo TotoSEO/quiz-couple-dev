@@ -10,7 +10,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -262,7 +262,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/zusammenziehen-test-paare/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-andare-a-vivere-insieme/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-habiter-vivre-ensemble/"/>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -610,7 +610,19 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/warum-bin-ich-noch-single-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-perche-sono-ancora-single/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-pourquoi-suis-je-celibataire/"/>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/test-couple-ou-celibat/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-couple-ou-celibat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/single-life-or-relationship-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-pareja-o-solteria/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/beziehung-oder-single-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-coppia-o-single/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-couple-ou-celibat/"/>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
