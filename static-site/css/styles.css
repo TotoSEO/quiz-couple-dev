@@ -11631,3 +11631,225 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .axe-jauge--a .axe-part { background: hsl(var(--primary)); }
 .axe-jauge--b .axe-part { background: hsl(var(--secondary)); }
 @media (prefers-reduced-motion: reduce) { .axe-part { transition: none; } }
+
+/* ═══════════════════════════════════════════════════════════════════
+   ENCART PRODUITS SUR L'ECRAN DE RESULTAT
+   Une carte faite pour le clic : image carree, prix en bulle, nom, bouton.
+   Le cadre blanc est volontaire, en clair comme en sombre : les visuels
+   produit d'Amazon sont detoures sur blanc, un fond sombre les ferait
+   flotter dans un carre gris. Plusieurs produits : une piste a defilement
+   avec aimantation, des fleches a partir de 700 px.
+   ═══════════════════════════════════════════════════════════════════ */
+.qr-produits {
+  padding: 1.25rem 1.1rem 1rem;
+  border-radius: 1.5rem;
+  border: 2.5px solid hsl(var(--primary) / .35);
+  background:
+    linear-gradient(135deg, hsl(var(--primary) / .09), hsl(var(--secondary) / .07)),
+    hsl(var(--card));
+  text-align: center;
+}
+.qr-produits-titre {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: hsl(var(--foreground));
+}
+.qr-produit {
+  display: grid;
+  gap: .85rem;
+  justify-items: center;
+  text-align: center;
+}
+/* Le lien-image : le cadre carre et la bulle du prix par-dessus. */
+.qr-produit-visuel {
+  position: relative;
+  display: block;
+  width: min(100%, 15rem);
+  border-radius: 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.qr-produit-visuel:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .qr-produit-visuel:hover { transform: translateY(-3px); box-shadow: 0 18px 36px -22px hsl(var(--primary) / .55); }
+}
+.qr-produit-cadre {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border-radius: 1.1rem;
+  background: #fff;
+  border: 1px solid hsl(var(--border));
+}
+.qr-produit-piste {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.qr-produit-piste::-webkit-scrollbar { display: none; }
+.qr-produit-piste img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  scroll-snap-align: start;
+  padding: .6rem;
+  box-sizing: border-box;
+}
+.qr-produit-prix {
+  position: absolute;
+  top: .65rem;
+  left: .65rem;
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-family: var(--font-display);
+  font-size: .95rem;
+  font-weight: 800;
+  letter-spacing: .01em;
+  box-shadow: 0 6px 16px -8px hsl(var(--primary) / .8);
+}
+/* Points de navigation entre les visuels d'un meme produit. */
+.qr-produit-points { display: flex; gap: .4rem; justify-content: center; margin-top: -.25rem; }
+.qr-produit-point {
+  width: .55rem; height: .55rem; padding: 0; border: 0; border-radius: 999px;
+  background: hsl(var(--muted-foreground) / .35); cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+.qr-produit-point.est-actif { background: hsl(var(--primary)); transform: scale(1.25); }
+.qr-produit-corps { display: grid; gap: .7rem; justify-items: center; width: 100%; }
+.qr-produit-nom {
+  display: block;
+  max-width: 22rem;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: hsl(var(--foreground));
+  text-wrap: balance;
+}
+.qr-produit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  width: min(100%, 17rem);
+  padding: .85rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 12px 28px -14px hsl(var(--primary) / .75);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.qr-produit-btn svg { width: 1.05rem; height: 1.05rem; flex: none; }
+.qr-produit-btn:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .qr-produit-btn:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 16px 32px -14px hsl(var(--primary) / .85); }
+}
+.qr-produits-mention {
+  margin: .9rem 0 0;
+  font-size: .68rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+/* Carte unique sur un ecran large : l'image a gauche, le nom et le bouton
+   a droite, alignes a gauche. */
+@media (min-width: 560px) {
+  .qr-produits:not(.qr-produits--carrousel) .qr-produit {
+    grid-template-columns: 11.5rem 1fr;
+    align-items: center;
+    justify-items: start;
+    text-align: left;
+    column-gap: 1.35rem;
+  }
+  .qr-produits:not(.qr-produits--carrousel) .qr-produit-visuel { width: 11.5rem; }
+  .qr-produits:not(.qr-produits--carrousel) .qr-produit-points { grid-column: 1; justify-self: center; }
+  .qr-produits:not(.qr-produits--carrousel) .qr-produit-corps { grid-column: 2; grid-row: 1 / span 2; justify-items: start; }
+  .qr-produits:not(.qr-produits--carrousel) .qr-produit-nom { font-size: 1.08rem; }
+}
+/* Plusieurs produits : une piste qui defile, une carte par cran. */
+.qr-produits-fenetre { position: relative; }
+.qr-produits--carrousel .qr-produits-piste {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: .25rem;
+  padding: .25rem .25rem .5rem;
+  scrollbar-width: none;
+}
+.qr-produits--carrousel .qr-produits-piste::-webkit-scrollbar { display: none; }
+.qr-produits--carrousel .qr-produit {
+  flex: 0 0 min(15rem, 82%);
+  scroll-snap-align: start;
+  gap: .65rem;
+}
+.qr-produits--carrousel .qr-produit-visuel { width: 100%; }
+.qr-produits--carrousel .qr-produit-nom { font-size: .95rem; min-height: 2.7em; }
+.qr-produits--carrousel .qr-produit-btn { width: 100%; padding: .75rem 1rem; font-size: .95rem; }
+.qr-produits-fleche {
+  display: none;
+  position: absolute;
+  top: 5.5rem;
+  width: 2.5rem; height: 2.5rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 999px;
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  box-shadow: 0 8px 20px -10px hsl(var(--foreground) / .4);
+  cursor: pointer;
+  place-items: center;
+}
+.qr-produits-fleche svg { width: 1.2rem; height: 1.2rem; }
+.qr-produits-fleche--precedent { left: -.6rem; }
+.qr-produits-fleche--suivant { right: -.6rem; }
+@media (min-width: 700px) { .qr-produits-fleche { display: grid; } }
+@media (hover: hover) and (pointer: fine) {
+  .qr-produits-fleche:hover { border-color: hsl(var(--primary) / .5); color: hsl(var(--primary)); }
+}
+/* Dans un ecran de resultat, la zone prend sa place entre le resultat et le
+   bloc de renvoi ; l'ordre des autres zones est decale d'un cran. */
+.qr-zone--produits { order: 3; }
+.qr-zone--suite    { order: 4; }
+.qr-zone--actions  { order: 5; }
+.qr-zone--story    { order: 6; }
+/* Le jeu « tu préfères » construit son propre écran : l'encart s'y pose dans
+   un creux prévu entre le score et la proposition de prolonger. */
+.wyr-produits { margin: 1.25rem 0; }
+.wyr-produits:empty { display: none; }
+/* Le texte des cartes ne doit rien heriter des titres en degrade qui les
+   entourent : -webkit-text-fill-color s'herite, et un bouton blanc sortait
+   rose sur la page astro. Chaque element repose donc sur sa propre couleur. */
+.qr-produits, .qr-produits * { -webkit-text-fill-color: currentcolor; }
+/* Carte sans visuel : un aplat de marque et un emoji, meme silhouette. */
+.qr-produit-vide {
+  flex: 0 0 100%;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+  background: linear-gradient(135deg, hsl(var(--primary) / .18), hsl(var(--secondary) / .22));
+}
+/* Les liens d'un article sont colores en rose par « article a:not(.no-underline) »,
+   plus specifique qu'une classe seule : le bouton sortait rose sur rose. Les
+   liens de la carte reprennent donc la main avec deux classes. Meme chose
+   pour le zoom et l'ombre que a[href]:hover img pose sur toute image liee. */
+.qr-produits .qr-produit-btn,
+.qr-produits .qr-produit-btn:hover,
+.qr-produits .qr-produit-btn:visited { color: #fff; text-decoration: none; }
+.qr-produits .qr-produit-visuel,
+.qr-produits .qr-produit-visuel:hover { color: inherit; text-decoration: none; }
+.qr-produits .qr-produit-visuel img,
+.qr-produits .qr-produit-visuel:hover img { filter: none; transform: none; }

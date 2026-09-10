@@ -2226,7 +2226,15 @@ var QuizEngine = (function() {
     // de la page. Sur telephone elle s'efface (display: contents) pour que le
     // bloc de renvoi garde sa place entre le resultat et les actions.
     var colonne = el('div', 'qr-colonne');
-    ['avis', 'resultat', 'actions'].forEach(function(nom) {
+    // L'encart produits se glisse entre le resultat et le reste : c'est la
+    // seule zone que le moteur ne construit pas lui-meme, elle depend de la
+    // page, pas du type de test.
+    if (!zones.produits) {
+      var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
+      var produits = encartProduits(quizEl ? quizEl.dataset.quiz : '', quizEl ? (quizEl.dataset.lang || 'fr') : 'fr');
+      if (produits) zones.produits = produits;
+    }
+    ['avis', 'resultat', 'produits', 'actions'].forEach(function(nom) {
       var z = zones[nom];
       if (!z) return;
       z.classList.add('qr-zone', 'qr-zone--' + nom);
@@ -2348,133 +2356,331 @@ var QuizEngine = (function() {
     return zone;
   }
 
-  // ── Encart partenaire ──────────────────────────────────────
-  // Posé sur les seuls écrans de fin dont le contenu est déjà pour adultes :
-  // le quiz coquin et la version hot d'action ou vérité. Ailleurs il n'aurait
-  // rien à faire.
+  // ── Encart produits sur l'ecran de resultat ─────────────────────────────
+  // Un ou plusieurs produits Amazon, poses juste sous la carte de resultat,
+  // avant le bloc de renvoi vers les autres tests. C'est le seul moment ou une
+  // proposition d'achat tombe juste : on vient de lire son verdict.
   //
-  // Le lien est un lien d'affiliation. Trois précautions, qui ne coûtent rien
-  // au taux de clic :
-  //   • rel="sponsored nofollow" : Google l'exige pour un lien rémunéré, et
-  //     sans lui c'est le référencement du site qui est exposé ;
-  //   • target="_blank" avec noopener : la partie en cours n'est pas perdue,
-  //     et celui qui revient retrouve son écran de résultat ;
-  //   • une mention visible sous le bouton. La section 8 des mentions légales
-  //     existe déjà, mais elle est à deux clics d'ici : l'information doit
-  //     être là où le lien est.
+  // La carte est faite pour le clic, rien d'autre : une image carree, le prix
+  // en bulle, le nom, et un bouton. Pas de texte d'explication. L'image et le
+  // bouton portent le meme lien, tout l'encart mene au produit.
   //
-  // Boutique française, textes français : l'encart ne sort qu'en français.
-  // Le proposer aux autres langues gâcherait l'emplacement sans rapporter.
-  var PARTENAIRES = {
-    coquin: {
-      fr: {
-        // Lien de suivi Affilae. L'adresse directe de la boutique avec les
-        // paramètres ne comptait aucun clic : c'est le redirecteur c3po.link
-        // qui enregistre le passage avant de renvoyer vers la boutique.
-        url: 'https://c3po.link/Quyean9abC',
-        // Visuels de la marque, copies chez nous a la construction. Appeler
-        // le serveur du partenaire exposerait l'encart a une image qui change
-        // ou disparait sans prevenir, et ferait fuiter la visite de nos
-        // lecteurs vers un domaine tiers avant meme qu'ils cliquent.
-        image: '/partenaires/passage-du-desir.webp',
-        imageAlt: 'Mannequin en lingerie de dentelle, campagne Le Passage du Désir',
-        logo: '/partenaires/passage-du-desir-logo.svg',
-        marque: 'Le Passage du Désir',
-        surtitre: 'Notre partenaire',
-        titre: 'Envie de découvrir les jouets pour adultes les plus discrets ? 🤭',
-        texte: 'Lingerie, jeux et accessoires : de quoi prolonger la soirée bien après la dernière question.',
-        // Deux arguments qui lèvent le frein réel de cet achat : ce qui arrive
-        // dans la boîte aux lettres, et la confiance qu'on peut faire au
-        // vendeur. Chiffre Trustpilot confirmé par l'éditeur du site ; il
-        // évolue, à revoir si l'écart devient visible.
-        atouts: [
-          { icone: '📦', texte: 'Emballage neutre et discret' },
-          { icone: '⭐', texte: '4,8/5 sur Trustpilot' }
-        ],
-        bouton: 'Voir la boutique',
-        mention: 'Lien partenaire. Le prix que vous payez reste le même.'
-      }
+  // Les liens sont des liens d'affiliation Amazon (link.amazon, qui redirige
+  // vers la fiche). Ils portent rel="sponsored nofollow noopener" comme tous
+  // les liens remuneres du site, s'ouvrent dans un nouvel onglet pour ne pas
+  // perdre l'ecran de resultat, et l'encart se ferme sur une mention discrete :
+  // le programme Partenaires Amazon impose de signaler les liens, et Google
+  // sanctionne un lien remunere non signale. Les visuels viennent de
+  // m.media-amazon.com, comme le programme le prevoit ; ils ne se chargent
+  // qu'a l'affichage du resultat, donc jamais dans le premier ecran.
+  //
+  // Francais seulement pour le moment : les fiches, les prix et les liens
+  // sont ceux d'Amazon.fr.
+  var PRODUITS = {
+    lovebox: {
+      nom: 'Lovebox : messages à distance',
+      prix: '99,99 €',
+      url: 'https://link.amazon/B07yg77Vv',
+      images: ['https://m.media-amazon.com/images/I/51KeIFuVF5L._AC_SX679_.jpg']
+    },
+    dimoi: {
+      nom: 'Dimoi, jeu de cartes pour couple',
+      prix: '19,99 €',
+      url: 'https://link.amazon/B06fYzJxd',
+      images: ['https://m.media-amazon.com/images/I/61nPGdvqA+L._AC_SL1500_.jpg',
+               'https://m.media-amazon.com/images/I/61cqNsdzQDL._AC_SL1500_.jpg']
+    },
+    quiSaitMieux: {
+      nom: 'Qui Sait Mieux Qui ? Édition couple',
+      prix: '24,99 €',
+      url: 'https://link.amazon/B0flcy3T3',
+      images: ['https://m.media-amazon.com/images/I/71SsYN7iEML._AC_SL1500_.jpg',
+               'https://m.media-amazon.com/images/I/81uUwTmUXyL._AC_SL1500_.jpg']
+    },
+    dilemmes: {
+      nom: 'Dilemmes de m*rde, le jeu (18+)',
+      prix: '15 €',
+      url: 'https://link.amazon/B09o4lmdR',
+      images: ['https://m.media-amazon.com/images/I/61c-5UZTfcL._AC_SL1500_.jpg',
+               'https://m.media-amazon.com/images/I/71PQO03GQ4L._AC_SL1476_.jpg']
+    },
+    astro: {
+      nom: 'Le grand livre des compatibilités amoureuses astrologiques',
+      prix: '32 €',
+      url: 'https://link.amazon/B01VDiOmZ',
+      images: ['https://m.media-amazon.com/images/I/61Zyl-QvHmL._SL1218_.jpg']
+    },
+    pervers: {
+      nom: 'Pervers narcissique : détecter, comprendre, se protéger',
+      prix: '28,99 €',
+      url: 'https://link.amazon/B03OHakJw',
+      images: ['https://m.media-amazon.com/images/I/61K5NCA8nzL._SL1491_.jpg']
+    },
+    manipulateurs: {
+      nom: 'Les manipulateurs sont parmi nous',
+      prix: '13,90 €',
+      url: 'https://link.amazon/B07PumVLh',
+      images: ['https://m.media-amazon.com/images/I/71nh82HV2dS._SL1164_.jpg']
+    },
+    dependance: {
+      nom: 'Vaincre la dépendance affective',
+      prix: '18,90 €',
+      url: 'https://link.amazon/B0gHqDfVz',
+      images: ['https://m.media-amazon.com/images/I/71Noh44PuhL._SL1373_.jpg']
+    },
+    jalousie: {
+      nom: "J'arrête d'être jaloux(se) ! Programme de 21 jours",
+      prix: '11,90 €',
+      url: 'https://link.amazon/B0geUNXuU',
+      images: ['https://m.media-amazon.com/images/I/7135+7tt67L._SL1400_.jpg']
+    },
+    sauver: {
+      nom: 'Sauver son couple : avec conscience',
+      prix: '19,90 €',
+      url: 'https://link.amazon/B00bHorcS',
+      images: ['https://m.media-amazon.com/images/I/61fwWSxM-kL._SL1500_.jpg']
+    },
+    autotherapie: {
+      nom: 'Auto-thérapie de couple : communication, désir, routine',
+      prix: '19,90 €',
+      url: 'https://link.amazon/B07ir65nf',
+      images: ['https://m.media-amazon.com/images/I/416CHnagJ9L.jpg']
+    },
+    divorce: {
+      nom: 'Divorce 2026 : le guide pratique',
+      prix: '26 €',
+      url: 'https://link.amazon/B01zKWpYZ',
+      images: ['https://m.media-amazon.com/images/I/71knH6ewH6L._SY466_.jpg']
+    },
+    pacte: {
+      nom: 'Le pacte des (futurs) parents',
+      prix: '14,90 €',
+      url: 'https://link.amazon/B0cQ6FpmA',
+      images: ['https://m.media-amazon.com/images/I/7115plYTqKL._SY425_.jpg']
+    },
+    cinqLangages: {
+      nom: "Les cinq langages pour trouver l'amour",
+      prix: '18 €',
+      url: 'https://link.amazon/B052KO6xs',
+      images: ['https://m.media-amazon.com/images/I/81GEPV4RRIL._SY425_.jpg']
+    },
+    nuls: {
+      nom: 'Les relations amoureuses pour les Nuls',
+      prix: '13 €',
+      url: 'https://link.amazon/B0dtxmJDG',
+      images: ['https://m.media-amazon.com/images/I/71UX007sUNL._SY385_.jpg']
+    },
+    kodak: {
+      nom: 'Mini appareil photo rétro porte-clé Kodak',
+      prix: '37,90 €',
+      url: 'https://link.amazon/B09RiyWnF',
+      images: ['https://m.media-amazon.com/images/I/81jsxJK5t3L._AC_SL1500_.jpg']
+    },
+    montgolfiere: {
+      nom: 'Vol en montgolfière à deux (Wonderbox)',
+      prix: '184 €',
+      url: 'https://link.amazon/B0i62IhLU',
+      images: ['https://m.media-amazon.com/images/I/61HasLaDFlL._AC_SL1032_.jpg']
+    },
+    insolite: {
+      nom: 'Nuits insolites en couple (Wonderbox)',
+      prix: '149,90 €',
+      url: 'https://link.amazon/B0aCVtM55',
+      images: ['https://m.media-amazon.com/images/I/61CxN9ynkJL._AC_SL1067_.jpg']
+    },
+    // Les partenaires Affilae, ramenes a des cartes comme les autres : memes
+    // liens de suivi (c3po.link compte le clic avant de renvoyer), meme
+    // visuels copies en local, mais plus de texte d'explication. Pas de prix
+    // quand le lien mene a une boutique ou a un catalogue : il n'y en a pas
+    // un seul a annoncer.
+    passageDuDesir: {
+      nom: 'Le Passage du Désir : lingerie, jeux et accessoires',
+      prix: null,
+      url: 'https://c3po.link/Quyean9abC',
+      bouton: 'Voir la boutique',
+      images: ['/partenaires/passage-du-desir.webp']
+    },
+    gleese: {
+      nom: 'Gleese, la plateforme française des couples curieux',
+      prix: null,
+      url: 'https://gleese.com/?ae=103',
+      bouton: 'Découvrir Gleese',
+      emoji: '💞',
+      images: []
+    },
+    wecandoo: {
+      nom: "Un atelier d'artisan à deux (Wecandoo)",
+      prix: null,
+      url: 'https://c3po.link/Q9Y6Z2a84u',
+      bouton: 'Voir les ateliers',
+      images: ['/partenaires/wecandoo-atelier.webp']
     }
   };
 
-  function blocPartenaire(wrap, cle, lang) {
-    var jeu = PARTENAIRES[cle];
-    var p = jeu && jeu[lang || 'fr'];
-    if (!p) return;
+  // Le ou les produits de chaque page, par cle de test (l'attribut data-quiz
+  // du moteur). Une seule cle : carte unique. Plusieurs : carrousel.
+  var COFFRETS_COUPLE = ['montgolfiere', 'insolite', 'lovebox', 'kodak', 'dimoi', 'wecandoo'];
+  var PRODUITS_PAR_TEST = {
+    'distance': ['lovebox'],
+    'distance-aime': ['lovebox'],
+    'common-points': ['dimoi'],
+    'knowledge': ['quiSaitMieux'],
+    'vrai-faux': ['quiSaitMieux'],
+    'qui-de-nous-deux': ['quiSaitMieux'],
+    'most': ['quiSaitMieux'],
+    'phrases': ['quiSaitMieux'],
+    'dilemmes': ['dilemmes'],
+    'oui-non': ['dilemmes'],
+    'tu-preferes': ['dilemmes'],
+    'jamais': ['dilemmes'],
+    'qui-pourrait': ['dilemmes'],
+    'pour-contre': ['dilemmes'],
+    'marrant': ['dilemmes'],
+    'astro-prenoms': ['astro'],
+    'pervers': ['pervers'],
+    'emprise': ['manipulateurs'],
+    'dependance': ['dependance'],
+    'jalousie1': ['jalousie'],
+    'jalousie2': ['jalousie'],
+    'fin-couple': ['sauver'],
+    'aime-encore': ['autotherapie'],
+    'divorce': ['divorce'],
+    'parentalite': ['pacte'],
+    'trouver-amour': ['cinqLangages'],
+    'celibataire': ['nuls'],
+    'amour-habitude': ['wecandoo'],
+    // Les deux ecrans dont le contenu est deja pour adultes.
+    'coquin': ['passageDuDesir', 'gleese'],
+    'action-ou-verite-coquin': ['passageDuDesir', 'gleese'],
+    'tester-couple': COFFRETS_COUPLE,
+    'compatibilite': COFFRETS_COUPLE,
+    'amoureux': COFFRETS_COUPLE,
+    'mariage': COFFRETS_COUPLE
+  };
+  var PRODUITS_TEXTES = {
+    fr: {
+      un: 'Ce produit / cadeau pourrait vous intéresser !',
+      plusieurs: 'Ces produits / cadeaux pourraient vous intéresser',
+      bouton: 'Voir sur Amazon',
+      voir: 'Voir {{nom}} sur Amazon',
+      image: 'Image {{n}} sur {{total}}',
+      precedent: 'Produits précédents',
+      suivant: 'Produits suivants',
+      mention: 'Liens sponsorisés'
+    }
+  };
+  var ICONE_LIEN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
 
-    // Toute la banniere est cliquable, pas seulement le bouton : c'est
-    // l'offre entiere qui est le lien. Un span fait office de bouton, un
-    // <button> dans un <a> ne serait pas du HTML valide.
-    // La bannière vit dans la carte de résultat, dont la largeur dépend de la
-    // présence de la colonne des tests voisins : à 1024 px de fenêtre elle ne
-    // dispose que de 520 px. Elle doit donc réagir à sa propre largeur et non
-    // à celle de l'écran, d'où le conteneur de requête. Sans prise en charge,
-    // elle reste empilée, ce qui est la disposition sûre.
-    var zone = el('div', 'partenaire-zone');
-    var a = el('a', 'partenaire-banniere');
-    a.href = p.url;
-    a.target = '_blank';
-    a.rel = 'sponsored nofollow noopener';
-    a.setAttribute('aria-label', p.titre + ' - ' + p.marque);
-    a.innerHTML =
-      '<span class="partenaire-visuel">' +
-        '<img src="' + p.image + '" alt="' + esc(p.imageAlt) + '" loading="lazy" decoding="async" width="480" height="480">' +
-      '</span>' +
-      '<span class="partenaire-corps">' +
-        '<span class="partenaire-marque">' +
-          '<img class="partenaire-logo" src="' + p.logo + '" alt="' + esc(p.marque) + '" loading="lazy" decoding="async">' +
-        '</span>' +
-        '<span class="partenaire-surtitre">' + esc(p.surtitre) + '</span>' +
-        '<span class="partenaire-titre">' + esc(p.titre) + '</span>' +
-        '<span class="partenaire-texte">' + esc(p.texte) + '</span>' +
-        (p.atouts ? '<span class="partenaire-atouts">' + p.atouts.map(function(x) {
-          return '<span class="partenaire-atout"><span aria-hidden="true">' + x.icone + '</span>' + esc(x.texte) + '</span>';
-        }).join('') + '</span>' : '') +
-        '<span class="partenaire-btn">' + esc(p.bouton) +
-          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>' +
-        '</span>' +
-        '<span class="partenaire-mention">' + esc(p.mention) + '</span>' +
-      '</span>';
-    zone.appendChild(a);
-    wrap.appendChild(zone);
+  function carteProduit(p, t) {
+    var carte = el('article', 'qr-produit');
+    var libelle = t.voir.replace('{{nom}}', p.nom);
+
+    // L'image entiere est le lien. Deux visuels ? Une piste a defilement dans
+    // le cadre carre, et des points de navigation sous le cadre, hors du lien :
+    // un bouton dans un lien ne serait pas du HTML valide.
+    var visuel = el('a', 'qr-produit-visuel');
+    visuel.href = p.url; visuel.target = '_blank'; visuel.rel = 'sponsored nofollow noopener';
+    visuel.setAttribute('aria-label', libelle);
+    var piste = el('span', 'qr-produit-piste');
+    if (!p.images.length) {
+      // Pas de visuel pour ce partenaire : le cadre porte un aplat et un
+      // emoji, pour que la carte garde la meme silhouette que ses voisines.
+      var vide = el('span', 'qr-produit-vide');
+      vide.setAttribute('aria-hidden', 'true');
+      vide.textContent = p.emoji || '🎁';
+      piste.appendChild(vide);
+    }
+    p.images.forEach(function(src, i) {
+      var img = document.createElement('img');
+      img.src = src; img.alt = p.images.length > 1 ? t.image.replace('{{n}}', i + 1).replace('{{total}}', p.images.length) : p.nom;
+      img.loading = 'lazy'; img.decoding = 'async'; img.width = 300; img.height = 300;
+      img.referrerPolicy = 'no-referrer';
+      piste.appendChild(img);
+    });
+    var cadre = el('span', 'qr-produit-cadre');
+    cadre.appendChild(piste);
+    visuel.appendChild(cadre);
+    if (p.prix) visuel.appendChild(el('span', 'qr-produit-prix', esc(p.prix)));
+    carte.appendChild(visuel);
+
+    if (p.images.length > 1) {
+      var points = el('span', 'qr-produit-points');
+      points.setAttribute('role', 'group');
+      p.images.forEach(function(_, i) {
+        var b = el('button', 'qr-produit-point' + (i === 0 ? ' est-actif' : ''));
+        b.type = 'button';
+        b.setAttribute('aria-label', t.image.replace('{{n}}', i + 1).replace('{{total}}', p.images.length));
+        b.addEventListener('click', function() {
+          piste.scrollTo({ left: piste.clientWidth * i, behavior: 'smooth' });
+        });
+        points.appendChild(b);
+      });
+      carte.appendChild(points);
+      var boutons = points.querySelectorAll('.qr-produit-point');
+      piste.addEventListener('scroll', function() {
+        var idx = Math.round(piste.scrollLeft / Math.max(1, piste.clientWidth));
+        for (var i = 0; i < boutons.length; i++) boutons[i].classList.toggle('est-actif', i === idx);
+      }, { passive: true });
+    }
+
+    var corps = el('span', 'qr-produit-corps');
+    corps.appendChild(el('span', 'qr-produit-nom', esc(p.nom)));
+    var btn = el('a', 'qr-produit-btn');
+    btn.href = p.url; btn.target = '_blank'; btn.rel = 'sponsored nofollow noopener';
+    btn.setAttribute('aria-label', libelle);
+    btn.innerHTML = '<span>' + esc(p.bouton || t.bouton) + '</span>' + ICONE_LIEN;
+    corps.appendChild(btn);
+    carte.appendChild(corps);
+    return carte;
   }
 
-  // ── Second encart partenaire ───────────────────────────────────────
-  // Gleese, plateforme française pour les couples curieux. Il vivait avant
-  // dans le corps de la page, sous le contenu éditorial : un lien affilié n'a
-  // rien à y faire, et personne ne descendait jusque-là. Sa place est ici,
-  // dans l'écran de résultat, juste après la bannière de la boutique : le
-  // lecteur vient de finir la partie, c'est le seul moment où la proposition
-  // tombe juste.
-  //
-  // Volontairement sobre à côté de la bannière qui le précède : deux blocs
-  // aussi voyants l'un que l'autre se neutraliseraient. Mêmes précautions que
-  // plus haut, rel="sponsored nofollow noopener" et mention visible.
-  var PARTENAIRES_SECOND = {
-    coquin: {
-      fr: {
-        url: 'https://gleese.com/?ae=103',
-        mention: 'Lien affilié',
-        titre: 'Envie de tester quelque chose de nouveau ?',
-        texte: "Si ce quiz vous a donné des idées et que vous voulez aller plus loin à deux, Gleese est une plateforme française dédiée aux couples curieux.",
-        bouton: 'Découvrir le libertinage avec Gleese'
-      }
+  // La zone entiere, ou null quand la page n'a rien a proposer ou n'est pas
+  // en francais. C'est ce que dispositionResultat pose sous le resultat, et ce
+  // que les pages a ecran de resultat propre (tu preferes) appellent.
+  function encartProduits(cle, lang, explicites) {
+    var t = PRODUITS_TEXTES[lang || 'fr'];
+    if (!t) return null;
+    var produits = explicites || [];
+    if (!explicites) {
+      var cles = PRODUITS_PAR_TEST[cle];
+      if (!cles) return null;
+      for (var i = 0; i < cles.length; i++) if (PRODUITS[cles[i]]) produits.push(PRODUITS[cles[i]]);
     }
-  };
+    if (!produits.length) return null;
+    var plusieurs = produits.length > 1;
 
-  function blocPartenaireSecond(wrap, cle, lang) {
-    var jeu = PARTENAIRES_SECOND[cle];
-    var p = jeu && jeu[lang || 'fr'];
-    if (!p) return;
+    var zone = el('section', 'qr-produits' + (plusieurs ? ' qr-produits--carrousel' : ''));
+    var titre = plusieurs ? t.plusieurs : t.un;
+    zone.setAttribute('aria-label', titre);
+    zone.appendChild(el('h3', 'qr-produits-titre', esc(titre)));
 
-    var bloc = el('div', 'partenaire-adulte partenaire-adulte-resultat');
-    bloc.innerHTML =
-      '<span class="partenaire-adulte-mention">' + esc(p.mention) + '</span>' +
-      '<p class="partenaire-adulte-titre">' + esc(p.titre) + '</p>' +
-      '<p class="partenaire-adulte-texte">' + esc(p.texte) + '</p>' +
-      '<a class="btn btn-cta btn-gradient" href="' + p.url + '" target="_blank" ' +
-        'rel="sponsored nofollow noopener">' + esc(p.bouton) + '</a>';
-    wrap.appendChild(bloc);
+    var piste = el('div', 'qr-produits-piste');
+    produits.forEach(function(p) { piste.appendChild(carteProduit(p, t)); });
+
+    if (plusieurs) {
+      // Deux fleches pour la souris ; au doigt, la piste defile toute seule.
+      var fenetre = el('div', 'qr-produits-fenetre');
+      fenetre.appendChild(piste);
+      [['precedent', -1], ['suivant', 1]].forEach(function(f) {
+        var b = el('button', 'qr-produits-fleche qr-produits-fleche--' + f[0]);
+        b.type = 'button';
+        b.setAttribute('aria-label', t[f[0]]);
+        b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+          (f[1] < 0 ? '<path d="M15 6l-6 6 6 6"/>' : '<path d="M9 6l6 6-6 6"/>') + '</svg>';
+        b.addEventListener('click', function() {
+          var carte = piste.firstElementChild;
+          var pas = carte ? carte.getBoundingClientRect().width + 16 : piste.clientWidth * 0.8;
+          piste.scrollBy({ left: f[1] * pas, behavior: 'smooth' });
+        });
+        fenetre.appendChild(b);
+      });
+      zone.appendChild(fenetre);
+    } else {
+      zone.appendChild(piste);
+    }
+    zone.appendChild(el('p', 'qr-produits-mention', esc(t.mention)));
+    return zone;
   }
 
   function renderActionButtons(wrap, opts) {
@@ -2535,25 +2741,14 @@ var QuizEngine = (function() {
   // Banniere, mention, texte et bouton. Le survol et le focus sont geres en
   // CSS : tout l'encart est cliquable, le bouton n'est qu'un reperage visuel.
   function encartPartenaire(p) {
-    var a = document.createElement('a');
-    a.className = 'qr-partenaire' + (p.image ? '' : ' qr-partenaire--texte');
-    a.href = p.url;
-    a.target = '_blank';
-    a.rel = 'sponsored nofollow noopener';
-    a.innerHTML =
-      (p.image
-        ? '<img class="qr-partenaire-image" src="' + esc(p.image) + '" alt="' + esc(p.alt || '') + '"' +
-          ' width="1200" height="675" loading="lazy" decoding="async">'
-        : '') +
-      '<span class="qr-partenaire-corps">' +
-        '<span class="qr-partenaire-mention">' + esc(p.mention) + '</span>' +
-        '<span class="qr-partenaire-titre">' + esc(p.titre) + '</span>' +
-        '<span class="qr-partenaire-texte">' + esc(p.texte) + '</span>' +
-        '<span class="qr-partenaire-cta">' + esc(p.bouton) +
-          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">' +
-          '<path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>' +
-      '</span>';
-    return a;
+    // Meme carte que les produits Amazon : titre, visuel, prix s'il y en a un,
+    // bouton. Le texte d'explication d'autrefois ne se lisait pas.
+    var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
+    var lang = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
+    return encartProduits(null, lang, [{
+      nom: p.titre, prix: p.prix || null, url: p.url, bouton: p.bouton,
+      images: p.image ? [p.image] : [], emoji: p.emoji
+    }]) || document.createComment('partenaire sans encart');
   }
 
   function SoloTest(config) {
@@ -3851,8 +4046,6 @@ var QuizEngine = (function() {
     wrap.appendChild(el('div', 'quiz-score-circle mx-auto mb-4', pct + '%'));
     wrap.appendChild(el('p', 'text-muted-foreground mb-6', score + '/' + jouees + ' ' + tg('coquin.goodGuesses', 'bonnes devinettes')));
 
-    blocPartenaire(wrap, 'coquin', this.lang);
-    blocPartenaireSecond(wrap, 'coquin', this.lang);
 
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'duo', pct: pct },
@@ -8233,8 +8426,6 @@ var QuizEngine = (function() {
     // Ce moteur sert aussi la version tout public d'action ou vérité, qui ne
     // doit surtout pas porter cet encart. Seul le préfixe hot le déclenche.
     if (this.prefix === 'actionVeriteHot') {
-      blocPartenaire(wrap, 'coquin', this.lang);
-      blocPartenaireSecond(wrap, 'coquin', this.lang);
     }
 
     renderActionButtons(wrap, {
@@ -11575,6 +11766,7 @@ var QuizEngine = (function() {
     DiagnosticQuiz: DiagnosticQuiz,
     BalanceQuiz: BalanceQuiz,
     AxesQuiz: AxesQuiz,
+    encartProduits: encartProduits,
     PiliersQuiz: PiliersQuiz,
     ChargeMentaleQuiz: ChargeMentaleQuiz,
     ZamoursQuiz: ZamoursQuiz,
