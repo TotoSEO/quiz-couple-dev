@@ -1,7 +1,7 @@
 {
   "hero": {
     "badge": "Zu zweit spielen 💞",
-    "title": "Liebeskompatibilitäts-Test: Passt ihr zusammen?",
+    "title": "Liebeskompatibilitäts-Test: Seid ihr füreinander gemacht?",
     "titleHighlight": "Liebeskompatibilität",
     "description": "Beantwortet jeder 20 Fragen zu dem, was wirklich zählt (Werte, Pläne, Lebensstil) und entdeckt euren <strong>Liebeskompatibilitäts-Wert</strong>. Ein echter Test für Paare, kostenlos und ohne Anmeldung.",
     "subtitle": "2 Spieler · 20 Fragen · sofortiges Ergebnis in %"
@@ -9,13 +9,13 @@
   "section1": {
     "title": "Was ist Liebeskompatibilität?",
     "p1": "<strong>Liebeskompatibilität</strong> beschreibt, wie sehr zwei Partner in den Dingen übereinstimmen, die ein gemeinsames Leben prägen: Werte, Zukunftspläne, Geld, Lebensstil, Kommunikation und Intimität. Sie ist nicht dasselbe wie Anziehung: man kann starke Chemie spüren und dennoch sehr unterschiedliche Lebensvorstellungen haben.",
-    "p2": "Zwei kompatible Menschen sind keine Klone: Sie müssen nicht alles teilen, aber ihre <strong>Grundlagen zeigen in dieselbe Richtung</strong>. Diese Übereinstimmung sagt die Beständigkeit einer Beziehung besser voraus als die anfängliche Leidenschaft.",
-    "p3": "Unser <strong>Liebeskompatibilitäts-Test</strong> misst genau diese Übereinstimmung: Ihr antwortet getrennt, dann vergleichen wir eure Antworten, um euren Wert zu berechnen."
+    "p2": "Zwei kompatible Menschen sind keine Klone: Sie müssen nicht alles teilen, aber ihre <strong>Grundlagen zeigen in dieselbe Richtung</strong>. Diese Übereinstimmung sagt, besser als die Leidenschaft der ersten Zeit, voraus, wie stabil eine Beziehung langfristig sein wird.",
+    "p3": "Unser <strong>Liebeskompatibilitäts-Test</strong> misst genau diese Übereinstimmung: Ihr antwortet jeder für sich, dann vergleichen wir eure Antworten und leiten daraus euren Kompatibilitäts-Wert ab."
   },
   "section2": {
     "title": "Wie funktioniert unser Liebeskompatibilitäts-Test?",
     "p1": "Der Test wird <strong>zu zweit</strong> gespielt. Jeder beantwortet abwechselnd dieselben 20 Fragen zu den großen Dimensionen einer Beziehung. Es gibt keine richtigen oder falschen Antworten, man muss nur ehrlich antworten.",
-    "p2": "Am Ende vergleichen wir eure Antworten. Jede übereinstimmende Antwort zeigt einen Punkt der Übereinstimmung. Euer <strong>Kompatibilitäts-Wert</strong> ist der Prozentsatz der Antworten, bei denen ihr auf einer Wellenlänge seid, mit Verdikt und Gesprächsanstößen."
+    "p2": "Am Ende vergleichen wir eure Antworten. Jede übereinstimmende Antwort zeigt einen Punkt der Übereinstimmung. Euer <strong>Kompatibilitäts-Wert</strong> ist der Prozentsatz der Antworten, bei denen ihr auf einer Wellenlänge seid, zusammen mit einem Fazit und Gesprächsanstößen."
   },
   "section3": {
     "title": "Die großen Dimensionen der Kompatibilität",
@@ -26,7 +26,7 @@
     "pillar3Title": "Lebensstil",
     "pillar3Text": "Häuslich oder feierfreudig, Rhythmus, Urlaub: Passen eure Gewohnheiten?",
     "pillar4Title": "Kommunikation",
-    "pillar4Text": "Konflikte, alles teilen oder nicht: Sprecht ihr dieselbe Sprache?",
+    "pillar4Text": "Umgang mit Konflikten, das Bedürfnis, sich alles zu sagen, oder eben nicht: Sprecht ihr dieselbe Sprache?",
     "pillar5Title": "Intimität",
     "pillar5Text": "Zärtlichkeit, Verlangen, Nähe: Treffen sich eure Erwartungen?",
     "pillar6Title": "Unabhängigkeit",
@@ -35,11 +35,11 @@
   "section4": {
     "title": "Liebeskompatibilität oder Chemie: Was ist der Unterschied?",
     "p1": "<strong>Chemie</strong> (Anziehung) ist unmittelbar, körperlich und emotional, der anfängliche Funke. <strong>Kompatibilität</strong> zeigt sich mit der Zeit, wenn Entscheidungen anstehen, der Alltag zu bewältigen ist und Kompromisse nötig sind.",
-    "p2": "Viele stark angezogene Paare trennen sich, weil ihre Grundlagen nicht passen. Umgekehrt hilft solide Kompatibilität, Stürme zu überstehen. Ideal ist beides, aber wer auf lange Sicht wetten müsste, setzt auf Kompatibilität."
+    "p2": "Viele Paare, die sich stark zueinander hingezogen fühlen, trennen sich am Ende, weil ihre Grundlagen nicht zusammenpassen. Umgekehrt hilft eine solide Kompatibilität dabei, auch Stürme zu überstehen. Ideal ist natürlich beides, aber wenn ihr auf die lange Sicht wetten müsstet, ist die Kompatibilität der beste Indikator."
   },
   "section5": {
     "title": "Kann man seine Liebeskompatibilität verbessern?",
-    "p1": "Teilweise ja. Manches ist kaum verhandelbar (etwa der <a href=\"/de/elternschafts-bereitschaftstest/\">Kinderwunsch</a>), aber viele Unterschiede lassen sich bearbeiten: Lebensrhythmus, Geld, Art zu kommunizieren oder Konflikte zu lösen.",
+    "p1": "Teilweise ja. Manches ist kaum verhandelbar (zum Beispiel, <a href=\"/de/elternschafts-bereitschaftstest/\">ob man Kinder will oder nicht</a>), aber viele Unterschiede lassen sich bearbeiten: Lebensrhythmus, Umgang mit Geld, die Art zu kommunizieren oder Konflikte zu lösen.",
     "p2": "Der Schlüssel ist nicht, identisch zu sein, sondern <strong>eure Unterschiede zu kennen und darüber zu reden</strong>. Ein mittlerer Wert ist kein Urteil: Er ist eine Karte, die zeigt, wo ihr übereinstimmt und wo das Gespräch tiefer gehen sollte."
   },
   "section6": {
@@ -52,11 +52,11 @@
     "step1Title": "Namen eingeben",
     "step1Text": "Gebt beide Vornamen ein, um den Test zu personalisieren.",
     "step2Title": "Abwechselnd antworten",
-    "step2Text": "Dieselben 20 Fragen werden jedem ehrlich gestellt.",
+    "step2Text": "Dieselben 20 Fragen werden euch nacheinander gestellt, und jeder antwortet ganz ehrlich.",
     "step3Title": "Wir vergleichen eure Antworten",
     "step3Text": "Jede übereinstimmende Antwort zeigt einen Punkt der Übereinstimmung.",
     "step4Title": "Wert entdecken",
-    "step4Text": "Erhaltet euren Kompatibilitäts-Prozentsatz, ein Verdikt und Gesprächsanstöße.",
+    "step4Text": "Erhaltet euren Kompatibilitäts-Prozentsatz, ein Fazit und Gesprächsanstöße.",
     "faqTitle": "FAQ: Liebeskompatibilitäts-Test"
   },
   "jsonLd": {
