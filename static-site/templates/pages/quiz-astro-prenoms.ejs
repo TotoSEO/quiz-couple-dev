@@ -173,6 +173,15 @@
             <p class="text-sm text-muted-foreground mt-2"><%= t(ns + ':results.overall', 'Score global') %></p>
           </div>
 
+          <%# L'encart produit vient juste sous le score, avant le detail : c'est
+              le moment ou on vient de lire son resultat. Francais seulement. %>
+          <div class="mb-8"><%- include('../partials/encart-produits', { lang, produit: {
+            nom: 'Le grand livre des compatibilités amoureuses astrologiques',
+            prix: '32 €',
+            url: 'https://link.amazon/B01VDiOmZ',
+            image: 'https://m.media-amazon.com/images/I/61Zyl-QvHmL._SL1218_.jpg'
+          } }) %></div>
+
           <!-- Breakdown -->
           <div class="grid gap-6 md:grid-cols-2 mb-8">
             <!-- Astro Score -->

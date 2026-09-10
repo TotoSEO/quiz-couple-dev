@@ -651,6 +651,9 @@
 
     // Proposition de prolonger, avant le détail : c'est la seule chose sur
     // laquelle on veut que l'œil tombe juste après le score.
+    // L'encart produits (moteur commun) prend place entre le score et la
+    // proposition de prolonger ; le creux est rempli par brancheFinDePartie.
+    html += '<div class="wyr-produits"></div>';
     html += this.blocProlonger();
 
     // Question-by-question breakdown
@@ -698,6 +701,9 @@
     html += '<p class="wyr-score-nb">' + this.limite + '</p>';
     html += '<p class="wyr-score-sub">' + UI.ensembleSub + '</p>';
 
+    // L'encart produits (moteur commun) prend place entre le score et la
+    // proposition de prolonger ; le creux est rempli par brancheFinDePartie.
+    html += '<div class="wyr-produits"></div>';
     html += this.blocProlonger();
 
     html += '<div class="wyr-detail">';
@@ -728,6 +734,11 @@
   // Les deux écrans de résultat partagent la prolongation, la relance et la
   // prise d'adresse du résultat.
   WYRGame.prototype.brancheFinDePartie = function() {
+    var creux = this.container.querySelector('.wyr-produits');
+    if (creux) {
+      var encart = QuizEngine.encartProduits ? QuizEngine.encartProduits('tu-preferes', this.container.dataset.lang || document.documentElement.lang || 'fr') : null;
+      if (encart) creux.appendChild(encart); else creux.parentNode.removeChild(creux);
+    }
     var self = this;
     this.brancheProlonger();
 

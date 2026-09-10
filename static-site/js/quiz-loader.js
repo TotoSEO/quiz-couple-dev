@@ -1744,51 +1744,10 @@
   // Le lien porte rel="sponsored nofollow noopener" comme tous les liens
   // affilies du site, et l'encart s'annonce comme tel au-dessus du titre.
   // Retirer une entree d'ici suffit a retirer l'encart du site.
+  // Les pages qui ont un encart produits (PRODUITS_PAR_TEST dans le moteur,
+  // Amazon ou partenaire Affilae) n'ont plus d'entree ici : les deux se
+  // marcheraient dessus. Ce qui reste est un brouillon sans lien de suivi.
   var PARTENAIRES_RESULTAT = {
-    'amour-habitude': {
-      langues: ['fr'],
-      url: 'https://c3po.link/Q9Y6Z2a84u',
-      image: '/partenaires/wecandoo-atelier.webp',
-      alt: "Deux mains qui façonnent un bol sur un tour de potier pendant un atelier",
-      textes: {
-        fr: {
-          mention: 'Lien affilié',
-          titre: 'Et si vous faisiez quelque chose que vous ne savez pas faire ?',
-          texte: "L'habitude s'installe quand les soirées se ressemblent. Wecandoo réunit des ateliers d'artisans à Paris, Lyon, Bordeaux, Lille et ailleurs : tour de potier, couteau, parfum, brasserie. Deux ou trois heures à fabriquer quelque chose ensemble, sans écran et sans savoir d'avance comment ça va tourner.",
-          bouton: 'Voir les ateliers près de chez vous'
-        }
-      }
-    },
-    // Test de couple : meme partenaire, meme lien de suivi, mais l'angle est
-    // celui du test (la routine comme seule vraie menace des couples solides).
-    'tester-couple': {
-      langues: ['fr'],
-      url: 'https://c3po.link/Q9Y6Z2a84u',
-      image: '/partenaires/wecandoo-atelier.webp',
-      alt: "Deux mains qui façonnent un bol sur un tour de potier pendant un atelier",
-      textes: {
-        fr: {
-          mention: 'Lien affilié',
-          titre: 'Et si votre prochaine soirée ne ressemblait pas aux autres ?',
-          texte: "Un couple s'use quand toutes les soirées se ressemblent. Wecandoo réunit des ateliers d'artisans partout en France : céramique, couteau, parfum, brasserie. Deux ou trois heures à fabriquer quelque chose à deux, et vous repartez avec l'objet.",
-          bouton: 'Voir les ateliers près de chez vous'
-        }
-      }
-    },
-    // Test a distance : les retrouvailles sont LE moment de ce public.
-    // AbracadaRoom vend des nuits insolites partout en France.
-    'distance': {
-      langues: ['fr'],
-      url: '',
-      textes: {
-        fr: {
-          mention: 'Lien affilié',
-          titre: "Vos prochaines retrouvailles méritent mieux qu'un canapé",
-          texte: "AbracadaRoom rassemble des nuits insolites partout en France : cabanes dans les arbres, bulles sous les étoiles, roulottes. Réservée à mi-chemin entre vos deux villes, une nuit comme ça transforme un simple week-end de retrouvailles en souvenir.",
-          bouton: 'Trouver une nuit insolite'
-        }
-      }
-    },
     // Couple sain : sortir du quotidien a deux. Winalist ouvre les domaines
     // viticoles (visite et degustation chez le vigneron).
     'sain': {
@@ -1803,20 +1762,6 @@
         }
       }
     },
-    // Points communs : le test mesure ce que le couple partage, l'encart
-    // propose d'en creer un de plus. Sport Decouverte vend des activites.
-    'common-points': {
-      langues: ['fr'],
-      url: '',
-      textes: {
-        fr: {
-          mention: 'Lien affilié',
-          titre: "Le meilleur point commun, c'est celui qu'on se crée",
-          texte: "Sport Découverte regroupe des activités à vivre à deux partout en France : parapente, karting, escalade, conduite sur circuit. Choisissez-en une que vous n'avez jamais faite ni l'un ni l'autre, et vous aurez une réponse commune de plus.",
-          bouton: 'Choisir votre prochaine activité'
-        }
-      }
-    }
   };
 
   function partenaireResultat(quizType) {

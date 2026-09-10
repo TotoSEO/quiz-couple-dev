@@ -377,48 +377,36 @@
   }
 
   // ─── Encart partenaire ──────────────────────────────────────────────────
-  // La banniere de la boutique deja posee sur le quiz coquin, avec le meme
-  // lien de suivi Affilae et les memes visuels copies en local. Boutique
-  // francaise : l'encart ne sort qu'en francais, les autres langues gardent
-  // leur ecran tel quel. Le lien porte rel="sponsored nofollow noopener" et
-  // la mention est visible sous le bouton, comme partout sur le site.
+  // La boutique deja proposee sur le quiz coquin, avec le meme lien de suivi
+  // Affilae et le meme visuel copie en local, au format des cartes produit
+  // du site (memes classes .qr-produit* que le moteur commun) : un titre, une
+  // image, un bouton, et la mention de liens sponsorises en pied. Boutique
+  // francaise : l'encart ne sort qu'en francais.
   function blocPartenaire() {
     // Jamais sur la version tout public : celui qui a repondu « moins de
     // 16 ans » a la porte d'age ne doit pas voir une boutique pour adultes.
     if (LANGUE !== 'fr' || !adulte) return null;
-    var titre = mode === 'solo'
-      ? 'Il te reste des cases à cocher 🤭'
-      : 'Il vous reste des cases à cocher 🤭';
-    var texte = 'Lingerie, jeux et accessoires livrés dans un emballage neutre : de quoi faire évoluer le score d\'ici au prochain test.';
-
-    var zone = el('div', 'partenaire-zone');
-    var a = document.createElement('a');
-    a.className = 'partenaire-banniere';
-    a.href = 'https://c3po.link/Quyean9abC';
-    a.target = '_blank';
-    a.rel = 'sponsored nofollow noopener';
-    a.setAttribute('aria-label', titre + ' - Le Passage du Désir');
-    a.innerHTML =
-      '<span class="partenaire-visuel">' +
-        '<img src="/partenaires/passage-du-desir.webp" alt="Mannequin en lingerie de dentelle, campagne Le Passage du Désir" loading="lazy" decoding="async" width="480" height="480">' +
-      '</span>' +
-      '<span class="partenaire-corps">' +
-        '<span class="partenaire-marque">' +
-          '<img class="partenaire-logo" src="/partenaires/passage-du-desir-logo.svg" alt="Le Passage du Désir" loading="lazy" decoding="async">' +
+    var url = 'https://c3po.link/Quyean9abC';
+    var nom = 'Le Passage du Désir : lingerie, jeux et accessoires';
+    var zone = el('section', 'qr-produits');
+    zone.setAttribute('aria-label', 'Ce produit / cadeau pourrait vous intéresser !');
+    zone.innerHTML =
+      '<h3 class="qr-produits-titre">Ce produit / cadeau pourrait vous intéresser !</h3>' +
+      '<div class="qr-produits-piste"><article class="qr-produit">' +
+        '<a class="qr-produit-visuel" href="' + url + '" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir la boutique Le Passage du Désir">' +
+          '<span class="qr-produit-cadre"><span class="qr-produit-piste">' +
+            '<img src="/partenaires/passage-du-desir.webp" alt="Mannequin en lingerie de dentelle, campagne Le Passage du Désir" width="300" height="300" loading="lazy" decoding="async">' +
+          '</span></span>' +
+        '</a>' +
+        '<span class="qr-produit-corps">' +
+          '<span class="qr-produit-nom">' + nom + '</span>' +
+          '<a class="qr-produit-btn" href="' + url + '" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir la boutique Le Passage du Désir">' +
+            '<span>Voir la boutique</span>' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>' +
+          '</a>' +
         '</span>' +
-        '<span class="partenaire-surtitre">Notre partenaire</span>' +
-        '<span class="partenaire-titre">' + titre + '</span>' +
-        '<span class="partenaire-texte">' + texte + '</span>' +
-        '<span class="partenaire-atouts">' +
-          '<span class="partenaire-atout"><span aria-hidden="true">📦</span>Emballage neutre et discret</span>' +
-          '<span class="partenaire-atout"><span aria-hidden="true">⭐</span>4,8/5 sur Trustpilot</span>' +
-        '</span>' +
-        '<span class="partenaire-btn">Voir la boutique' +
-          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>' +
-        '</span>' +
-        '<span class="partenaire-mention">Lien partenaire. Le prix que vous payez reste le même.</span>' +
-      '</span>';
-    zone.appendChild(a);
+      '</article></div>' +
+      '<p class="qr-produits-mention">Liens sponsorisés</p>';
     return zone;
   }
 

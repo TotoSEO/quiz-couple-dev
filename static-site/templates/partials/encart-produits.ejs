@@ -1,0 +1,31 @@
+<%#
+  Encart produit rendu a la construction, pour les pages dont l'ecran de
+  resultat n'est pas construit par le moteur commun (l'outil astro). Meme
+  marquage et memes classes que encartProduits() dans quiz-engine-core.js :
+  c'est la feuille de style qui fait l'unite. Un seul produit, francais
+  seulement, comme l'encart du moteur.
+  Attend : produit = { nom, prix, url, image }.
+%>
+<% if (lang === 'fr' && typeof produit !== 'undefined' && produit) { %>
+<section class="qr-produits" aria-label="Ce produit / cadeau pourrait vous intéresser !">
+  <h3 class="qr-produits-titre">Ce produit / cadeau pourrait vous intéresser !</h3>
+  <div class="qr-produits-piste">
+    <article class="qr-produit">
+      <a class="qr-produit-visuel" href="<%= produit.url %>" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir <%= produit.nom %> sur Amazon">
+        <span class="qr-produit-cadre"><span class="qr-produit-piste">
+          <img src="<%= produit.image %>" alt="<%= produit.nom %>" width="300" height="300" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+        </span></span>
+        <% if (produit.prix) { %><span class="qr-produit-prix"><%= produit.prix %></span><% } %>
+      </a>
+      <span class="qr-produit-corps">
+        <span class="qr-produit-nom"><%= produit.nom %></span>
+        <a class="qr-produit-btn" href="<%= produit.url %>" target="_blank" rel="sponsored nofollow noopener" aria-label="Voir <%= produit.nom %> sur Amazon">
+          <span>Voir sur Amazon</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        </a>
+      </span>
+    </article>
+  </div>
+  <p class="qr-produits-mention">Liens sponsorisés</p>
+</section>
+<% } %>
