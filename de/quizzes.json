@@ -136,6 +136,12 @@
     "description": "Entdecke die Liebeskompatibilität eurer Vornamen und Sternzeichen. Numerologie und Astrologie vereint.",
     "metaDescription": "Gebt eure Vornamen und Sternzeichen ein. Unser Test kombiniert Numerologie und Astrologie, um zu enthüllen, was die Sterne über eure Kompatibilität sagen."
   },
+  "calculatriceAmour": {
+    "title": "Liebesrechner: Namen-Kompatibilität in Prozent, kostenlos",
+    "shortTitle": "Liebesrechner",
+    "description": "Zwei Namen, ein Kompatibilitätswert in Prozent und die ganze Rechnung dahinter. Kostenlos, sofort, ohne Anmeldung.",
+    "metaDescription": "Kostenloser Liebesrechner: zwei Namen eingeben und euren Kompatibilitätswert in Prozent bekommen, mit den fünf Messungen dahinter. Ergebnis sofort."
+  },
   "testDateNaissance": {
     "title": "Passt ihr zusammen? Liebestest nach Geburtsdatum",
     "shortTitle": "Kompatibilität nach Geburtsdatum",

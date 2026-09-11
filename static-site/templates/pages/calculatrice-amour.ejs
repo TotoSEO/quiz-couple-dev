@@ -1,0 +1,518 @@
+<%
+  // Calculatrice de l'amour : deux prenoms, un pourcentage, et le detail du calcul.
+  // Outil autonome ecrit dans ce gabarit, comme la compatibilite astro : il ne
+  // passe pas par quiz-loader, il n'a ni question ni ecran intermediaire.
+  const ns = 'calculatrice-amour';
+  const pageTitle = t('quizzes:calculatriceAmour.title', "Calculatrice de l'amour");
+  const faqNums = [1, 2, 3, 4, 5, 6, 7];
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "WebApplication",
+      "name": t(ns + ':jsonLd.name', "Calculatrice de l'amour"),
+      "description": t('quizzes:calculatriceAmour.metaDescription', ''),
+      "applicationCategory": "EntertainmentApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "JavaScript",
+      "inLanguage": lang,
+      "isAccessibleForFree": true,
+      "about": { "@type": "Thing", "name": t(ns + ':jsonLd.about', '') },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqNums.map(function (i) {
+        return {
+          "@type": "Question", "name": t(ns + ':faq.q' + i, ''),
+          "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':faq.a' + i, '') }
+        };
+      })
+    }
+  ];
+
+  // Tout ce que le script a besoin de lire est prepare ici, dans la langue de la
+  // page seulement : le gabarit n'embarque jamais les cinq langues.
+  const donneesJs = {
+    lang: lang,
+    mot: t(ns + ':calcul.mot', 'amour'),
+    dims: ['lettres', 'mot', 'rythme', 'numero', 'longueur'].map(function (k) {
+      return { cle: k, nom: t(ns + ':dimensions.' + k + 'Nom', k), desc: t(ns + ':dimensions.' + k + 'Desc', '') };
+    }),
+    verdicts: [1, 2, 3, 4, 5, 6].map(function (i) {
+      return { titre: t(ns + ':verdicts.v' + i + 'Titre', ''), texte: t(ns + ':verdicts.v' + i + 'Texte', '') };
+    }),
+    couples: t(ns + ':couples', []),
+    dose: t(ns + ':dose', {}),
+    textes: {
+      compat: t(ns + ':resultat.compat', ''),
+      detailIntro: t(ns + ':resultat.detailIntro', ''),
+      partageTexte: t(ns + ':resultat.partageTexte', ''),
+      copie: t(ns + ':resultat.copie', ''),
+      erreur: t(ns + ':form.erreur', ''),
+      celebreTitre: t(ns + ':celebres.titre', ''),
+      chemin: t(ns + ':resultat.chemin', '')
+    }
+  };
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero + outil -->
+<section class="relative overflow-hidden hero-gradient py-12 md:py-16 calc-hero">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:calculatriceAmour.shortTitle', pageTitle) %></li>
+        </ol>
+      </nav>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <%= t(ns + ':hero.badge', '') %>
+      </span>
+      <%
+        const heroTitle = t(ns + ':hero.title', pageTitle);
+        const heroHighlight = t(ns + ':hero.titleHighlight', '');
+      %>
+      <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
+    </div>
+
+    <%# L'outil est dans le premier ecran : c'est ce que la personne est venue chercher. %>
+    <div class="mx-auto max-w-2xl mt-8 md:mt-10">
+      <div id="calc-carte" class="calc-carte">
+        <form id="calc-form" novalidate>
+          <div class="calc-champs">
+            <div class="calc-champ">
+              <label class="calc-label" for="calc-a"><%= t(ns + ':form.label1', '') %></label>
+              <input type="text" id="calc-a" class="calc-input" maxlength="24" autocomplete="off" spellcheck="false"
+                     placeholder="<%= t(ns + ':form.placeholder1', '') %>">
+            </div>
+            <div class="calc-coeur" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div class="calc-champ">
+              <label class="calc-label" for="calc-b"><%= t(ns + ':form.label2', '') %></label>
+              <input type="text" id="calc-b" class="calc-input" maxlength="24" autocomplete="off" spellcheck="false"
+                     placeholder="<%= t(ns + ':form.placeholder2', '') %>">
+            </div>
+          </div>
+          <p id="calc-erreur" class="calc-erreur" role="alert" hidden></p>
+          <button type="submit" id="calc-go" class="btn btn-cta btn-gradient calc-go"><%= t(ns + ':form.submit', '') %></button>
+          <p class="calc-aide"><%= t(ns + ':form.aide', '') %></p>
+        </form>
+
+        <div id="calc-resultat" class="calc-resultat" hidden>
+          <p id="calc-noms" class="calc-noms"></p>
+          <div class="calc-anneau">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="calc-anneau-fond" cx="60" cy="60" r="52"></circle>
+              <circle id="calc-anneau-trait" class="calc-anneau-trait" cx="60" cy="60" r="52"></circle>
+            </svg>
+            <div class="calc-anneau-texte">
+              <span id="calc-pct" class="calc-pct">0<span class="calc-pct-signe">%</span></span>
+              <span class="calc-anneau-label"><%= t(ns + ':resultat.compat', '') %></span>
+            </div>
+          </div>
+          <h2 id="calc-verdict-titre" class="calc-verdict-titre"></h2>
+          <p id="calc-verdict-texte" class="calc-verdict-texte"></p>
+
+          <div class="calc-detail">
+            <h3 class="calc-detail-titre"><%= t(ns + ':resultat.detailTitre', '') %></h3>
+            <p id="calc-detail-intro" class="calc-detail-intro"></p>
+            <ul id="calc-barres" class="calc-barres"></ul>
+          </div>
+
+          <div class="calc-actions">
+            <button type="button" id="calc-partage" class="btn btn-cta btn-gradient calc-action"><%= t(ns + ':resultat.partageBouton', '') %></button>
+            <button type="button" id="calc-rejouer" class="btn btn-outline calc-action"><%= t(ns + ':form.retry', '') %></button>
+          </div>
+          <p id="calc-copie" class="calc-copie" hidden><%= t(ns + ':resultat.copie', '') %></p>
+        </div>
+      </div>
+    </div>
+
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
+  </div>
+  <%# L'image de tete vient en dernier dans le code : sous le texte sur telephone, en absolu a droite sur grand ecran. %>
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
+</section>
+
+<!-- Renvoi vers le vrai test -->
+<section class="py-10 md:py-14">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl calc-suite">
+      <h2 class="calc-suite-titre"><%= t(ns + ':suite.titre', '') %></h2>
+      <p class="calc-suite-texte"><%- t(ns + ':suite.texte', '') %></p>
+      <a class="btn btn-cta btn-gradient" href="<%= getLocalizedUrl('testCompatibilite', lang) %>"><%= t(ns + ':suite.bouton', '') %></a>
+    </div>
+  </div>
+</section>
+
+<!-- La dose du jour -->
+<section class="py-8 md:py-12">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl calc-jour">
+      <h2 class="calc-jour-titre"><%= t(ns + ':jour.titre', '') %></h2>
+      <p class="calc-jour-intro"><%= t(ns + ':jour.intro', '') %></p>
+      <div class="calc-jour-grille">
+        <article class="calc-jour-carte">
+          <span class="calc-jour-label"><%= t(ns + ':jour.conseilLabel', '') %></span>
+          <p id="jour-conseil" class="calc-jour-texte"></p>
+        </article>
+        <article class="calc-jour-carte">
+          <span class="calc-jour-label"><%= t(ns + ':jour.questionLabel', '') %></span>
+          <p id="jour-question" class="calc-jour-texte"></p>
+        </article>
+        <article class="calc-jour-carte">
+          <span class="calc-jour-label"><%= t(ns + ':jour.defiLabel', '') %></span>
+          <p id="jour-defi" class="calc-jour-texte"></p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Contenu -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="avec-colonne">
+    <div class="avec-colonne__contenu container mx-auto px-4 max-w-3xl">
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- t(ns + ':section1.p1', '') %></p>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- t(ns + ':section1.p2', '') %></p>
+      <p class="text-muted-foreground leading-relaxed"><%- t(ns + ':section1.p3', '') %></p>
+    </section>
+
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-6"><%- t(ns + ':section2.p1', '') %></p>
+      <div class="calc-methode">
+        <% ['lettres', 'mot', 'rythme', 'numero', 'longueur'].forEach(function (k, i) { %>
+          <article class="calc-methode-carte">
+            <span class="calc-methode-num"><%= i + 1 %></span>
+            <h3 class="calc-methode-titre"><%= t(ns + ':dimensions.' + k + 'Nom', '') %></h3>
+            <p class="calc-methode-texte"><%= t(ns + ':dimensions.' + k + 'Desc', '') %></p>
+          </article>
+        <% }); %>
+      </div>
+      <p class="text-muted-foreground leading-relaxed mt-6 mb-4"><%- t(ns + ':section2.apres', '') %></p>
+      <h3 class="text-xl font-bold mb-3"><%= t(ns + ':section2.poidsTitre', '') %></h3>
+      <p class="text-muted-foreground leading-relaxed"><%- t(ns + ':section2.poidsTexte', '') %></p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- t(ns + ':section3.p1', '') %></p>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- t(ns + ':section3.p2', '') %></p>
+      <p class="text-muted-foreground leading-relaxed"><%- t(ns + ':section3.p3', '') %></p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section4.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- t(ns + ':section4.p1', '') %></p>
+      <p class="text-muted-foreground leading-relaxed"><%- t(ns + ':section4.p2', '') %></p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section5.title', '') %></h2>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- t(ns + ':section5.p1', '') %></p>
+      <p class="text-muted-foreground leading-relaxed mb-4"><%- t(ns + ':section5.p2', '') %></p>
+      <p class="text-muted-foreground leading-relaxed"><%- t(ns + ':section5.p3', '') %></p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':seo.etapesTitre', '') %></h2>
+      <div class="calc-etapes">
+        <% [1, 2, 3].forEach(function (i) { %>
+          <article class="calc-etape">
+            <span class="calc-etape-num"><%= i %></span>
+            <div>
+              <h3 class="calc-etape-titre"><%= t(ns + ':seo.e' + i + 'Titre', '') %></h3>
+              <p class="calc-etape-texte"><%= t(ns + ':seo.e' + i + 'Texte', '') %></p>
+            </div>
+          </article>
+        <% }); %>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', '') %></h2>
+      <div class="space-y-3">
+        <% faqNums.forEach(function (i) { %>
+          <details class="faq-item">
+            <summary class="faq-question"><%= t(ns + ':faq.q' + i, '') %></summary>
+            <div class="faq-answer"><%- t(ns + ':faq.a' + i, '') %></div>
+          </details>
+        <% }); %>
+      </div>
+    </section>
+
+    </div>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
+    <aside class="avec-colonne__aside"><%- include('../partials/pub', { format: 3 }) %></aside>
+    <% } %>
+  </div>
+</article>
+
+<%- include('../partials/related-tests', { routeKey, lang, t, getLocalizedUrl }) %>
+
+<script>
+(function () {
+  'use strict';
+  var D = <%- JSON.stringify(donneesJs) %>;
+  var form = document.getElementById('calc-form');
+  if (!form) return;
+
+  // ── Le calcul ──────────────────────────────────────────────────────
+  // Deterministe et symetrique : les memes prenoms donnent toujours le meme
+  // pourcentage, et A + B donne la meme chose que B + A.
+  function norm(s) {
+    return String(s || '').toLowerCase().normalize('NFD')
+      .replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
+  }
+  var VOY = 'aeiouy';
+  function borne(n) { return Math.max(0, Math.min(100, Math.round(n))); }
+
+  function dLettres(a, b) {
+    var A = {}, B = {}, union = {}, inter = 0, c;
+    a.split('').forEach(function (x) { A[x] = 1; union[x] = 1; });
+    b.split('').forEach(function (x) { B[x] = 1; union[x] = 1; });
+    for (c in A) if (B[c]) inter++;
+    var u = Object.keys(union).length || 1;
+    return borne(inter / u * 185 + 16);
+  }
+  function dMot(a, b, mot) {
+    var p = [a, b].sort(), chiffres = '', n, i, j, c;
+    for (n = 0; n < 2; n++) {
+      for (i = 0; i < mot.length; i++) {
+        c = 0;
+        for (j = 0; j < p[n].length; j++) if (p[n][j] === mot[i]) c++;
+        chiffres += String(c);
+      }
+    }
+    var d = chiffres.split('').map(Number), garde = 0;
+    while (d.length > 2 && garde++ < 40) {
+      var out = []; i = 0; j = d.length - 1;
+      while (i < j) { out.push(d[i] + d[j]); i++; j--; }
+      if (i === j) out.push(d[i]);
+      d = out.join('').split('').map(Number);
+    }
+    return borne((Number(d.join('')) || 0) * 1.9 + 4);
+  }
+  function dRythme(a, b) {
+    function r(s) {
+      if (!s.length) return 0.5;
+      var n = 0;
+      for (var i = 0; i < s.length; i++) if (VOY.indexOf(s[i]) >= 0) n++;
+      return n / s.length;
+    }
+    return borne(100 - Math.abs(r(a) - r(b)) * 225);
+  }
+  var VAL = { a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:1,k:2,l:3,m:4,n:5,o:6,p:7,q:8,r:9,s:1,t:2,u:3,v:4,w:5,x:6,y:7,z:8 };
+  function chemin(s) {
+    var t = 0;
+    for (var i = 0; i < s.length; i++) t += VAL[s[i]] || 0;
+    while (t > 9) t = String(t).split('').reduce(function (x, y) { return x + Number(y); }, 0);
+    return t || 1;
+  }
+  var GRILLE = {
+    '1_1':78,'1_2':68,'1_3':95,'1_4':52,'1_5':90,'1_6':62,'1_7':56,'1_8':82,'1_9':72,
+    '2_2':82,'2_3':86,'2_4':82,'2_5':52,'2_6':98,'2_7':52,'2_8':68,'2_9':82,
+    '3_3':78,'3_4':42,'3_5':90,'3_6':95,'3_7':56,'3_8':52,'3_9':90,
+    '4_4':72,'4_5':42,'4_6':82,'4_7':68,'4_8':90,'4_9':52,
+    '5_5':78,'5_6':52,'5_7':82,'5_8':62,'5_9':86,
+    '6_6':82,'6_7':56,'6_8':62,'6_9':98,
+    '7_7':78,'7_8':52,'7_9':68,
+    '8_8':78,'8_9':62,'9_9':86
+  };
+  function dNumero(a, b) {
+    var x = chemin(a), y = chemin(b);
+    return GRILLE[Math.min(x, y) + '_' + Math.max(x, y)] || 68;
+  }
+  function dLongueur(a, b) { return borne(100 - Math.abs(a.length - b.length) * 14); }
+
+  var POIDS = { lettres: 22, mot: 26, rythme: 16, numero: 22, longueur: 14 };
+
+  function calcule(n1, n2) {
+    var a = norm(n1), b = norm(n2);
+    if (!a || !b) return null;
+    var mot = norm(D.mot) || 'love';
+    var d = {
+      lettres: dLettres(a, b), mot: dMot(a, b, mot), rythme: dRythme(a, b),
+      numero: dNumero(a, b), longueur: dLongueur(a, b)
+    };
+    var tot = 0, p = 0, k;
+    for (k in POIDS) { tot += d[k] * POIDS[k]; p += POIDS[k]; }
+    var res = { score: borne(tot / p), d: d, chemins: [chemin(a), chemin(b)], celebre: null };
+    // Les couples celebres remplacent le score, jamais le detail : les barres
+    // continuent de montrer le vrai calcul des deux prenoms.
+    var paire = [a, b].sort().join('|');
+    for (var i = 0; i < (D.couples || []).length; i++) {
+      var c = D.couples[i];
+      if ([norm(c.a), norm(c.b)].sort().join('|') === paire) {
+        res.score = c.score; res.celebre = c.mot; break;
+      }
+    }
+    return res;
+  }
+
+  // ── L'affichage ────────────────────────────────────────────────────
+  var elA = document.getElementById('calc-a'), elB = document.getElementById('calc-b');
+  var bloc = document.getElementById('calc-resultat'), erreur = document.getElementById('calc-erreur');
+  var elPct = document.getElementById('calc-pct'), trait = document.getElementById('calc-anneau-trait');
+  var RAYON = 2 * Math.PI * 52;
+  trait.style.strokeDasharray = RAYON;
+  trait.style.strokeDashoffset = RAYON;
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function remplit(s, vals) {
+    return String(s || '').replace(/\{\{(\w+)\}\}/g, function (m, k) {
+      return vals[k] != null ? vals[k] : m;
+    });
+  }
+
+  var dernier = null;
+
+  function affiche(n1, n2, r) {
+    dernier = { a: n1, b: n2, score: r.score };
+    document.getElementById('calc-noms').textContent = n1 + ' + ' + n2;
+
+    var titre = document.getElementById('calc-verdict-titre');
+    var texte = document.getElementById('calc-verdict-texte');
+    if (r.celebre) {
+      titre.textContent = D.textes.celebreTitre;
+      texte.textContent = r.celebre;
+    } else {
+      var seuils = [40, 55, 70, 83, 93];
+      var i = 0;
+      while (i < seuils.length && r.score >= seuils[i]) i++;
+      var v = D.verdicts[i] || D.verdicts[D.verdicts.length - 1];
+      titre.textContent = v.titre;
+      texte.textContent = v.texte;
+    }
+
+    document.getElementById('calc-detail-intro').textContent =
+      remplit(D.textes.detailIntro, { a: n1, b: n2 });
+
+    var ul = document.getElementById('calc-barres');
+    ul.innerHTML = D.dims.map(function (dim) {
+      var v = r.d[dim.cle];
+      var extra = dim.cle === 'numero'
+        ? ' <span class="calc-barre-note">' + esc(remplit(D.textes.chemin, { n: r.chemins[0] })) +
+          ' / ' + esc(remplit(D.textes.chemin, { n: r.chemins[1] })) + '</span>'
+        : '';
+      return '<li class="calc-barre">' +
+        '<div class="calc-barre-tete"><span class="calc-barre-nom">' + esc(dim.nom) + extra + '</span>' +
+        '<span class="calc-barre-val">' + v + '</span></div>' +
+        '<div class="calc-barre-piste"><span class="calc-barre-jauge" style="width:' + v + '%"></span></div>' +
+        '<p class="calc-barre-desc">' + esc(dim.desc) + '</p></li>';
+    }).join('');
+
+    bloc.hidden = false;
+    document.getElementById('calc-carte').classList.add('calc-carte--resultat');
+
+    // L'anneau et le compteur montent ensemble, puis on s'arrete net sur la valeur.
+    var debut = null, duree = 900;
+    function pas(ts) {
+      if (debut === null) debut = ts;
+      var p = Math.min(1, (ts - debut) / duree);
+      var doux = 1 - Math.pow(1 - p, 3);
+      var v = Math.round(r.score * doux);
+      elPct.innerHTML = v + '<span class="calc-pct-signe">%</span>';
+      trait.style.strokeDashoffset = RAYON * (1 - (r.score / 100) * doux);
+      if (p < 1) requestAnimationFrame(pas);
+    }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      elPct.innerHTML = r.score + '<span class="calc-pct-signe">%</span>';
+      trait.style.strokeDashoffset = RAYON * (1 - r.score / 100);
+    } else {
+      requestAnimationFrame(pas);
+    }
+
+    if (bloc.scrollIntoView) bloc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var n1 = elA.value.trim(), n2 = elB.value.trim();
+    var r = calcule(n1, n2);
+    if (!r) {
+      erreur.textContent = D.textes.erreur;
+      erreur.hidden = false;
+      (norm(n1) ? elB : elA).focus();
+      return;
+    }
+    erreur.hidden = true;
+    affiche(n1, n2, r);
+    try {
+      if (window.gtag) window.gtag('event', 'calculatrice_amour', { value: r.score });
+    } catch (err) {}
+  });
+
+  document.getElementById('calc-rejouer').addEventListener('click', function () {
+    bloc.hidden = true;
+    document.getElementById('calc-carte').classList.remove('calc-carte--resultat');
+    elA.value = ''; elB.value = ''; elA.focus();
+    if (form.scrollIntoView) form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  document.getElementById('calc-partage').addEventListener('click', function () {
+    if (!dernier) return;
+    var texte = remplit(D.textes.partageTexte, { a: dernier.a, b: dernier.b, score: dernier.score });
+    var url = location.origin + location.pathname;
+    if (navigator.share) {
+      navigator.share({ title: document.title, text: texte, url: url }).catch(function () {});
+      return;
+    }
+    var plein = texte + ' ' + url;
+    function vu() {
+      var c = document.getElementById('calc-copie');
+      c.hidden = false;
+      setTimeout(function () { c.hidden = true; }, 2600);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(plein).then(vu).catch(function () {});
+    } else {
+      var z = document.createElement('textarea');
+      z.value = plein; z.setAttribute('readonly', ''); z.style.position = 'absolute'; z.style.left = '-9999px';
+      document.body.appendChild(z); z.select();
+      try { document.execCommand('copy'); vu(); } catch (err) {}
+      document.body.removeChild(z);
+    }
+  });
+
+  // ── La dose du jour ────────────────────────────────────────────────
+  // Le jour de l'annee sert d'index : tout le monde voit la meme chose le
+  // meme jour, et ca tourne sans rien demander au serveur.
+  (function () {
+    var d = new Date();
+    var debut = Date.UTC(d.getUTCFullYear(), 0, 0);
+    var jour = Math.floor((Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()) - debut) / 86400000);
+    function pose(id, liste, decalage) {
+      var el = document.getElementById(id);
+      if (!el || !liste || !liste.length) return;
+      el.textContent = liste[(jour + decalage) % liste.length];
+    }
+    pose('jour-conseil', D.dose.conseils, 0);
+    pose('jour-question', D.dose.questions, 3);
+    pose('jour-defi', D.dose.defis, 7);
+  })();
+})();
+</script>

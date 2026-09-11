@@ -142,6 +142,12 @@
     "description": "Découvrez la compatibilité amoureuse entre vos prénoms et vos signes astrologiques. Numérologie et astrologie réunies.",
     "metaDescription": "Entrez vos deux prénoms et vos signes astro : le calcul croise numérologie et astrologie et vous donne votre compatibilité amoureuse en un clic."
   },
+  "calculatriceAmour": {
+    "title": "Calculatrice de l'amour : compatibilité prénom en pourcentage",
+    "shortTitle": "Calculatrice de l'amour",
+    "description": "Deux prénoms, un pourcentage de compatibilité, et le détail du calcul. Gratuit, instantané, sans inscription.",
+    "metaDescription": "Calculatrice de l'amour gratuite : écrivez deux prénoms et obtenez votre pourcentage de compatibilité, avec le détail des cinq mesures. Résultat immédiat."
+  },
   "testDateNaissance": {
     "title": "Date de naissance | Test de compatibilité amoureuse",
     "shortTitle": "Compatibilité date de naissance",

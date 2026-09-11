@@ -136,6 +136,12 @@
     "description": "Descubre la compatibilidad amorosa entre vuestros nombres y signos zodiacales. Numerología y astrología combinadas.",
     "metaDescription": "Introduce vuestros nombres y signos zodiacales. Nuestro test combina numerología y astrología para revelar lo que las estrellas dicen de vuestra compatibilidad."
   },
+  "calculatriceAmour": {
+    "title": "Calculadora del amor: compatibilidad de nombres en porcentaje",
+    "shortTitle": "Calculadora del amor",
+    "description": "Dos nombres, un porcentaje de compatibilidad y el detalle del cálculo. Gratis, al instante, sin registro.",
+    "metaDescription": "Calculadora del amor gratis: escribe dos nombres y obtén vuestro porcentaje de compatibilidad, con las cinco medidas que lo producen. Resultado inmediato."
+  },
   "testDateNaissance": {
     "title": "Fecha de nacimiento | Test de compatibilidad amorosa",
     "shortTitle": "Compatibilidad por fecha de nacimiento",
