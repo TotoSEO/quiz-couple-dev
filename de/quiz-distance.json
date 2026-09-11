@@ -2,7 +2,7 @@
   "hero": {
     "badge": "Fernbeziehungs-Kompatibilitätstest",
     "title": "Fernbeziehung: die Fragen, die ihr euch stellen solltet, und der Test dazu",
-    "description": "20 Fragen aus 100, um Ihre Fernbeziehung einzuordnen: Kommunikation, Besuche, Vertrauen, gemeinsame Pläne. Sie antworten allein, das Ergebnis kommt sofort.",
+    "description": "20 Fragen aus 100, um deine Fernbeziehung einzuordnen: Kommunikation, Besuche, Vertrauen, gemeinsame Pläne. Du antwortest allein, das Ergebnis kommt sofort.",
     "questions": "100 Fragen",
     "players": "Einzeltest",
     "duration": "~10 Minuten",
@@ -15,8 +15,8 @@
   "section1": {
     "title": "Was ist eine Fernbeziehung?",
     "sub1Title": "Moderne Definition",
-    "sub1P1": "Vergessen Sie das Bild vom Seemann, der sechs Monate ohne Nachricht aufs Meer fährt. Im Jahr 2026 wird eine Fernbeziehung (oder LDR, Long Distance Relationship) durch zwei emotional verbundene Partner definiert, die geografisch getrennt sind durch einen Umstand, der regelmäßige körperliche Nähe verhindert.",
-    "sub1P2": "Es geht nicht mehr nur um Kilometer, sondern um die Häufigkeit der Verbindung. Mit heutiger Technik (HD-Videoanrufe, Instant Messaging, Augmented Reality) können Sie zusammen „sein“, ohne da zu sein.",
+    "sub1P1": "Vergiss das Bild vom Seemann, der sechs Monate ohne Nachricht aufs Meer fährt. Im Jahr 2026 wird eine Fernbeziehung (oder LDR, Long Distance Relationship) durch zwei emotional verbundene Partner definiert, die geografisch getrennt sind durch einen Umstand, der regelmäßige körperliche Nähe verhindert.",
+    "sub1P2": "Es geht nicht mehr nur um Kilometer, sondern um die Häufigkeit der Verbindung. Mit heutiger Technik (HD-Videoanrufe, Instant Messaging, Augmented Reality) könnt ihr zusammen „sein“, ohne da zu sein.",
     "sub2Title": "Warum dieses Phänomen wächst",
     "sub2Items": [
       "<strong>Globale Karrieren:</strong> Man zögert nicht mehr, den Traumjob in Berlin oder Singapur anzunehmen.",
@@ -70,11 +70,11 @@
       },
       {
         "title": "Bessere Kommunikation",
-        "text": "Es ist schlicht Mathematik: um zu überleben, müssen Sie Ihre Absichten kommunizieren. Diese ständige Anstrengung macht aus Ihnen herausragende Kommunikatoren."
+        "text": "Es ist schlicht Mathematik: um zu überleben, müsst ihr eure Absichten aussprechen. Diese ständige Anstrengung macht euch zu herausragenden Kommunikatoren."
       },
       {
         "title": "Rituale und Beziehungskreativität",
-        "text": "Einschränkung schafft Kreativität. Einen Film „zusammen“ schauen, sich Überraschungspakete schicken, dasselbe Rezept per Video kochen… Diese Rituale werden zum Kitt Ihrer Beziehung."
+        "text": "Einschränkung schafft Kreativität. Einen Film „zusammen“ schauen, sich Überraschungspakete schicken, dasselbe Rezept per Video kochen… Diese Rituale werden zum Kitt eurer Beziehung."
       }
     ]
   },
@@ -83,7 +83,7 @@
     "items": [
       {
         "title": "Einsamkeit und fehlender Körperkontakt",
-        "text": "Das ist Herausforderung Nr. 1. Keine Umarmung nach einem harten Tag, keine Hand, die man im Kino hält. Dieser „Hauthunger“ kann eine intensive Einsamkeit erzeugen, selbst wenn Sie virtuell verbunden sind."
+        "text": "Das ist Herausforderung Nr. 1. Keine Umarmung nach einem harten Tag, keine Hand, die man im Kino hält. Dieser „Hauthunger“ kann eine intensive Einsamkeit erzeugen, selbst wenn ihr virtuell verbunden seid."
       },
       {
         "title": "Eifersucht und Unsicherheit",
@@ -107,7 +107,7 @@
     "testimonial2Author": "Julien & Marc"
   },
   "section6": {
-    "title": "Zeichen, dass Ihre Fernbeziehung funktionieren kann",
+    "title": "Zeichen, dass eure Fernbeziehung funktionieren kann",
     "signs": [
       "<strong>Aufrichtige und regelmäßige Kommunikation</strong> - Ihr traut euch zu sagen „Ich fühle mich heute allein\"",
       "<strong>Gegenseitiges Vertrauen und Engagement</strong> - Durch Taten aufgebaut, nicht nur durch Worte",
@@ -141,15 +141,15 @@
     "errors": [
       {
         "title": "Ständig vergleichen",
-        "text": "Beneiden Sie nicht das Paar, das samstags bei IKEA streitet. Ihre Beziehung ist anders, mit ihren eigenen Superkräften. Der Vergleich ist der Dieb jeder Freude."
+        "text": "Beneide nicht das Paar, das samstags bei IKEA streitet. Eure Beziehung ist anders, mit ihren eigenen Superkräften. Der Vergleich ist der Dieb jeder Freude."
       },
       {
         "title": "Unrealistische Erwartungen an Besuche",
-        "text": "Wenn Sie darauf bestehen, sich alle zwei Wochen zu sehen, obwohl das Budget es nicht hergibt, erzeugen Sie einen finanziellen Druck, der die Beziehung umbringt. Seien Sie realistisch mit Ihrem Budget."
+        "text": "Wenn ihr darauf besteht, euch alle zwei Wochen zu sehen, obwohl das Budget es nicht hergibt, erzeugt ihr einen finanziellen Druck, der die Beziehung umbringt. Bleibt realistisch mit eurem Budget."
       },
       {
         "title": "Das persönliche Leben vernachlässigen",
-        "text": "Stellen Sie Ihr Leben nicht auf Pause. Wenn Sie Ihre Abende damit verbringen, auf einen Anruf zu warten, werden Sie abhängig und uninteressant. Leben Sie für sich selbst!"
+        "text": "Stell dein Leben nicht auf Pause. Wenn du deine Abende damit verbringst, auf einen Anruf zu warten, wirst du abhängig und uninteressant. Leb dein eigenes Leben!"
       }
     ]
   },
@@ -163,7 +163,7 @@
   "conclusion": {
     "title": "Fazit",
     "p1": "Eine Fernbeziehung ist eine kolossale Herausforderung, aber auch ein unglaublicher Beschleuniger emotionaler Reife. Die Entfernung erschöpft, aber sie erklärt nicht alles: Wenn der Zweifel die Beziehung selbst betrifft, hilft es zu erkennen, was zu einer <a href=\"/de/toxische-beziehung-test/\">toxischen Beziehung</a> gehört.",
-    "p2": "Es gibt keinen magischen Fernbeziehungstest, der Ihnen eine Note von 100 gibt, aber es gibt Ihr Gefühl. Wenn Vertrauen da ist, Kommunikation fließt und Sie ein Wiedervereinigungsprojekt haben, dann ja, <strong>es kann funktionieren</strong>. Und oft schmeckt das Wiedersehen umso besser."
+    "p2": "Es gibt keinen magischen Fernbeziehungstest, der dir eine Note von 100 gibt, aber es gibt dein Gefühl. Wenn Vertrauen da ist, die Kommunikation fließt und ihr einen Plan für ein Wiedersehen habt, dann ja, <strong>es kann funktionieren</strong>. Und oft schmeckt das Wiedersehen umso besser."
   },
   "faq": {
     "title": "FAQ - Fernbeziehungen",
@@ -178,15 +178,15 @@
       },
       {
         "q": "Wie weiß man, ob es sich lohnt?",
-        "a": "Ziehen Sie Bilanz: bringt Ihnen diese Person mehr Freude als Traurigkeit? Passen Ihre Lebenswerte zusammen? Wenn die Antwort ja lautet, ist die Distanz nur ein vorübergehendes logistisches Detail."
+        "a": "Zieh Bilanz: bringt dir diese Person mehr Freude als Traurigkeit? Passen eure Lebenswerte zusammen? Wenn die Antwort ja lautet, ist die Distanz nur ein vorübergehendes logistisches Detail."
       },
       {
         "q": "Was sind die 10 Zeichen dafür, dass eure Fernbeziehung stabil ist?",
-        "a": "Wenn Sie zusammen lachen, wenn Sie die Zukunft planen, wenn Vertrauen da ist, und wenn jeder von Ihnen ein eigenes erfülltes Sozialleben außerhalb der Beziehung hat, sind Sie auf dem richtigen Weg."
+        "a": "Wenn ihr zusammen lacht, wenn ihr die Zukunft plant, wenn Vertrauen da ist, und wenn jeder von euch ein eigenes erfülltes Sozialleben außerhalb der Beziehung hat, seid ihr auf dem richtigen Weg."
       },
       {
         "q": "Warum scheitern Fernbeziehungen (und wie vermeidet man das)?",
-        "a": "Sie scheitern oft an fehlender gemeinsamer Vision (kein Enddatum) oder an Erschöpfung (zu viele Reisen, zu wenig Budget). Dagegen hilft: sprechen Sie über Ihre Grenzen und machen Sie einen realistischen Finanz- und Zeitplan."
+        "a": "Sie scheitern oft an fehlender gemeinsamer Vision (kein Enddatum) oder an Erschöpfung (zu viele Reisen, zu wenig Budget). Dagegen hilft: sprecht über eure Grenzen und macht einen realistischen Finanz- und Zeitplan."
       }
     ]
   },
