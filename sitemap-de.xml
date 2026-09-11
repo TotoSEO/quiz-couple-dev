@@ -298,7 +298,19 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/sternzeichen-vornamen-kompatibilitaet/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/segni-zodiacali-nomi-compatibilita/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/signes-astrologiques-prenoms-compatibilite/"/>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/de/liebesrechner/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/calculatrice-de-l-amour/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/love-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/calculadora-del-amor/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/liebesrechner/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/calcolatrice-dell-amore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/calculatrice-de-l-amour/"/>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
