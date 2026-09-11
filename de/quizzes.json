@@ -1,9 +1,9 @@
 {
   "testCouple": {
-    "title": "Paar-Kompatibilitätstest - 20 Fragen Kostenlos",
+    "title": "Partnertest kostenlos: Beziehungstest in 20 Fragen",
     "shortTitle": "Paar-Test",
     "description": "Beantworte 20 Fragen, um die Stärke deiner Beziehung zu bewerten und deine Stärken zu entdecken.",
-    "metaDescription": "Kostenloser Paar-Kompatibilitätstest: 20 Fragen zur Bewertung deiner Beziehung. Entdecke eure Stärken und Verbesserungsbereiche. Ohne Anmeldung!"
+    "metaDescription": "Kostenloser Partnertest für Paare: 20 Fragen zeigen, wie stark eure Beziehung wirklich ist. Passt ihr zusammen? Ergebnis sofort, ohne Anmeldung."
   },
   "testPurete": {
     "title": "Reinheitstest für Paare | Online & kostenlos",
@@ -18,19 +18,19 @@
     "metaDescription": "Kostenloser Gemeinsamkeiten-Test für Paare mit 153 Fragen. Antwortet abwechselnd und entdeckt eure Kompatibilität. Ohne Anmeldung!"
   },
   "testCompatibilite": {
-    "title": "Liebeskompatibilität Test: euer Ergebnis in 20 Fragen",
+    "title": "Kompatibilitätstest für Paare: Passt ihr zusammen?",
     "shortTitle": "Liebeskompatibilität",
     "description": "20 Fragen zu zweit, um eure Liebeskompatibilität zu messen: Werte, Zukunftspläne, Lebensstil. Entdeckt euren Kompatibilitätswert!",
     "metaDescription": "Passt ihr in der Liebe wirklich zusammen? Beantwortet 20 Fragen zu zweit und erhaltet euren Liebeskompatibilitäts-Wert: Werte, Pläne, Alltag. Kostenlos."
   },
   "testDistance": {
-    "title": "Fernbeziehungs-Quiz - 100 Fragen Kostenlos",
+    "title": "Fernbeziehung Test: 100 Fragen für Paare, kostenlos",
     "shortTitle": "Fernbeziehungs-Quiz",
     "description": "100 Fragen zur Bewertung der Stärke deiner Fernbeziehung und zur Stärkung eurer Bindung.",
-    "metaDescription": "Kostenloses Fernbeziehungs-Quiz: 100 Fragen zum Testen eurer Verbindung und Stärken eurer Bindung über die Distanz. Sofortige Ergebnisse!"
+    "metaDescription": "Fernbeziehung auf dem Prüfstand: 100 Fragen zu Kommunikation, Besuchen, Vertrauen und gemeinsamen Plänen. Kostenlos, Ergebnis sofort."
   },
   "testToxic": {
-    "title": "Bin ich in einer toxischen Beziehung? Kostenloser Test, 25 Fragen",
+    "title": "Toxische Beziehung Test, kostenlos: 25 klare Fragen",
     "shortTitle": "Toxischer Test",
     "description": "25 Fragen zur Erkennung von Anzeichen einer toxischen Beziehung und zur Selbstfürsorge.",
     "metaDescription": "Kostenloser Test für toxische Beziehungen: 25 Fragen zur Erkennung von Warnsignalen. 100% vertraulich, sofortige Ergebnisse."
@@ -60,7 +60,7 @@
     "metaDescription": "Liebe ich ihn oder sie noch? Zwanzig gewichtete Fragen, bei denen der Gedanke ans Gehen schwerer wiegt als ein Ärgernis, und ein Ergebnis auf acht Stufen. Kostenloser Test, ohne Anmeldung."
   },
   "quizAmoureux": {
-    "title": "Interaktives Liebes-Quiz: befragt eure Liebe kostenlos",
+    "title": "Liebesquiz für Paare: 20 Fragen, antwortet ihr gleich?",
     "shortTitle": "Liebes-Quiz",
     "description": "20 Fragen zum gemeinsamen Diskutieren und Messen eurer Paar-Harmonie.",
     "metaDescription": "Liebes-Quiz zu zweit: 20 Fragen über eure Geschichte, jeder antwortet allein und das Spiel vergleicht. Kostenlos, ohne Anmeldung, auf einem Handy."
@@ -78,7 +78,7 @@
     "metaDescription": "Kostenloses lustiges Paar-Quiz: 150 Fragen für euch beide, in sechs Familien. Eure Anfänge, peinliche Momente, Geständnisse. Ohne Anmeldung."
   },
   "quizKnowledge": {
-    "title": "Wer kennt den anderen besser: Kostenloses Quiz",
+    "title": "Wer kennt wen besser? Paar-Quiz mit 100 Fragen",
     "shortTitle": "Wer kennt besser?",
     "description": "Wechselt euch mit den Fragen ab und findet heraus, wer seinen Partner am besten kennt! 100 Fragen, um eure Verbindung zu testen.",
     "metaDescription": "Interaktives Paar-Quiz: Wer kennt den Partner besser? 100 Fragen zum abwechselnden Raten. Kostenlos, lustig und perfekt für einen Date-Abend!"
@@ -102,21 +102,21 @@
     "metaDescription": "Kostenloser Test für gesunde Beziehung: 20 Fragen für Paare. Individuelle Ergebnisse und Ratschläge. Ohne Anmeldung!"
   },
   "testMariage": {
-    "title": "Kostenloser Ehe-Test: Seid ihr bereit zu heiraten?",
+    "title": "Heiraten ja oder nein? Ehe-Test für Paare, kostenlos",
     "shortTitle": "Ehe-Test",
-    "description": "30 Fragen, die Sie gemeinsam beantworten, um zu prüfen, ob Sie bereit sind zu heiraten.",
+    "description": "30 Fragen, die ihr gemeinsam beantwortet, um zu prüfen, ob ihr bereit seid zu heiraten.",
     "metaDescription": "Kostenloser Ehe-Kompatibilitätstest: 30 Fragen zu Finanzen, Kindern, Werten und Kommunikation. Ohne Anmeldung!"
   },
   "testDivorce": {
-    "title": "Soll ich mich scheiden lassen? 15 präzise Fragen, sofortiges Ergebnis",
+    "title": "Scheidung ja oder nein? Test mit 15 Fragen, kostenlos",
     "shortTitle": "Scheidungstest",
     "h1": "Kostenloser Test: Soll ich mich scheiden lassen?",
     "heroSubtitle": "Ein einfühlsames Selbstbewertungstool, um klarer zu sehen",
-    "description": "15 Fragen, die Ihnen helfen, Ihre Beziehung ehrlich zu bilanzieren.",
-    "metaDescription": "Scheidung oder ein neuer Versuch? 15 ehrliche Fragen, um Ihre Beziehung zu bilanzieren und klarer zu sehen. Sofortiges Ergebnis.",
+    "description": "15 Fragen, die dir helfen, deine Beziehung ehrlich zu bilanzieren.",
+    "metaDescription": "Scheidung oder neuer Versuch? 15 ehrliche Fragen, um deine Beziehung zu bilanzieren und klarer zu sehen. Kostenlos, Ergebnis sofort.",
     "startSubtitle": "Kostenlos, anonym, ohne E-Mail, ohne Verpflichtung",
-    "emergencyNotice": "Wenn Sie sich in einer Gefahrensituation befinden, rufen Sie das <strong>Hilfetelefon</strong> an: <strong>08000 116 016</strong> (Deutschland, kostenlos, 24/7). Im Notfall: <strong>110</strong> oder <strong>112</strong>.",
-    "emergencyResult": "Brauchen Sie Hilfe? Bei Gewalt in der Partnerschaft: <strong>Hilfetelefon 08000 116 016</strong> (Deutschland, kostenlos, 24/7). Notfall: <strong>110</strong> oder <strong>112</strong>."
+    "emergencyNotice": "Wenn du dich in einer Gefahrensituation befindest, ruf das <strong>Hilfetelefon</strong> an: <strong>08000 116 016</strong> (Deutschland, kostenlos, 24/7). Im Notfall: <strong>110</strong> oder <strong>112</strong>.",
+    "emergencyResult": "Brauchst du Hilfe? Bei Gewalt in der Partnerschaft: <strong>Hilfetelefon 08000 116 016</strong> (Deutschland, kostenlos, 24/7). Notfall: <strong>110</strong> oder <strong>112</strong>."
   },
   "quizAdo": {
     "title": "Teenager Paar-Quiz: Bleibt Ihr Zusammen?",
@@ -137,7 +137,7 @@
     "metaDescription": "Gebt eure Vornamen und Sternzeichen ein. Unser Test kombiniert Numerologie und Astrologie, um zu enthüllen, was die Sterne über eure Kompatibilität sagen."
   },
   "testDateNaissance": {
-    "title": "Geburtsdatum | Test der Liebeskompatibilität",
+    "title": "Passt ihr zusammen? Liebestest nach Geburtsdatum",
     "shortTitle": "Kompatibilität nach Geburtsdatum",
     "description": "Zwei Geburtsdaten genügen. Daraus ergeben sich eure Lebenszahlen, eure Sternzeichen und eure chinesischen Tierkreiszeichen, und alle drei werden verknüpft.",
     "metaDescription": "Passt ihr laut eurem Geburtsdatum zusammen? Lebenszahl, Sternzeichen und chinesisches Zeichen in einer Berechnung verknüpft. Kostenlos, ohne Anmeldung."
@@ -182,13 +182,13 @@
     "title": "Wahr oder falsch Quiz speziell für Paare | 100 Fragen",
     "shortTitle": "Wahr oder Falsch",
     "description": "100 Wahr-oder-Falsch-Fragen über die Paarbeziehung: Mythen, Psychologie, überraschende Zahlen und weit verbreitete Irrtümer.",
-    "metaDescription": "100 Wahr-oder-Falsch-Fragen über die Paarbeziehung: Mythen, Psychologie, überraschende Zahlen und weit verbreitete Irrtümer. Testen Sie jetzt Ihr Wissen."
+    "metaDescription": "100 Wahr-oder-Falsch-Fragen über die Paarbeziehung: Mythen, Psychologie, überraschende Zahlen und weit verbreitete Irrtümer. Teste jetzt dein Wissen."
   },
   "activities": {
     "title": "Paar-Aktivitäten in der Nähe, Date-Ideen finden | Quiz Couple",
     "shortTitle": "Paar-Aktivitäten",
-    "description": "Finden Sie Paar-Aktivitäten in Ihrer Nähe. Kostenloses geolokalisiertes Tool: filtern Sie nach Budget, Atmosphäre und Entfernung für unvergessliche Unternehmungen zu zweit.",
-    "metaDescription": "Finden Sie Paar-Aktivitäten in Ihrer Nähe. Kostenloses geolokalisiertes Tool: filtern Sie nach Budget, Atmosphäre und Entfernung für unvergessliche Unternehmungen zu zweit."
+    "description": "Finde Paar-Aktivitäten in deiner Nähe. Kostenloses geolokalisiertes Tool: filtere nach Budget, Atmosphäre und Entfernung für unvergessliche Unternehmungen zu zweit.",
+    "metaDescription": "Finde Paar-Aktivitäten in deiner Nähe. Kostenloses geolokalisiertes Tool: filtere nach Budget, Atmosphäre und Entfernung für unvergessliche Unternehmungen zu zweit."
   },
   "quizTentation": {
     "title": "Temptation Island Quiz: Würdest du widerstehen?",
@@ -251,7 +251,7 @@
     "metaDescription": "Seelenverwandtschaft oder nur eine schöne Geschichte? 20 Fragen, ein Wert und ein Ergebnis, das nicht nur schmeichelt. Kostenloser Test, allein oder zu zweit, ohne Anmeldung."
   },
   "jeuxCouple": {
-    "title": "Paarspiele online: 11 kostenlose Spiele für zu zweit",
+    "title": "Paarspiele & Beziehungsspiele: 11 kostenlose Spiele",
     "shortTitle": "Paarspiele",
     "description": "Elf Spiele für zu zweit: Ja oder Nein, Dafür oder dagegen, Wer könnte, Ich hab noch nie, Wer von uns beiden, Was würdest du lieber, die Dilemmas, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
     "metaDescription": "11 kostenlose Paarspiele auf einem Handy: Ja oder Nein, Dafür oder dagegen, Wer von uns beiden, Was würdest du lieber, die Dilemmas und Wahrheit oder Pflicht. Ohne Anmeldung."
