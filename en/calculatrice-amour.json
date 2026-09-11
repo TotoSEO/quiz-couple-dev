@@ -1,0 +1,349 @@
+{
+  "calcul": {
+    "mot": "loves"
+  },
+  "hero": {
+    "badge": "Free · instant result",
+    "title": "Love Calculator: your percentage from two names",
+    "titleHighlight": "Love Calculator",
+    "description": "Type two names, the calculator gives you a compatibility percentage and shows you where it comes from. It's a game, and we explain the whole calculation."
+  },
+  "form": {
+    "label1": "Your name",
+    "label2": "Their name",
+    "placeholder1": "e.g. Thomas",
+    "placeholder2": "e.g. Elisa",
+    "submit": "Calculate our percentage",
+    "retry": "Try two other names",
+    "erreur": "Type both names to run the calculation.",
+    "aide": "Nicknames work too. The result never changes for the same two names."
+  },
+  "resultat": {
+    "et": "+",
+    "compat": "compatibility",
+    "detailTitre": "Where this percentage comes from",
+    "detailIntro": "Five measures, each with its own weight in the total. Here is what {{a}} and {{b}} give:",
+    "partageTitre": "Show your score",
+    "partageBouton": "Share",
+    "imageBouton": "Image to post",
+    "copie": "Result copied!",
+    "partageTexte": "{{a}} + {{b}} = {{score}}% on the Quiz Couple love calculator",
+    "chemin": "life path {{n}}"
+  },
+  "dimensions": {
+    "lettresNom": "Shared letters",
+    "lettresDesc": "The share of letters found in both names, compared with all the letters the two of them use. Marie and Pierre share the r, the i and the e, so it climbs fast.",
+    "motNom": "The original method",
+    "motDesc": "The calculation the very first love calculators used. You count, in each name, the letters of the word LOVES, then you fold the digits two by two until only two are left. Those two digits are the score.",
+    "rythmeNom": "The vowel rhythm",
+    "rythmeDesc": "Each name has its own share of vowels. Lea has two out of three, Franck one out of six. When the two shares are close, the names sound good together out loud.",
+    "numeroNom": "Numerology",
+    "numeroDesc": "The Pythagorean tradition gives every letter a digit from 1 to 9. You add them up, you reduce, and each name lands on a digit between 1 and 9. A grid then says how well those two digits get along.",
+    "longueurNom": "Length balance",
+    "longueurDesc": "Two names of similar length answer each other better when you say them one after the other. The wider the gap, the lower the mark."
+  },
+  "verdicts": {
+    "v1Titre": "Not a great match, on paper",
+    "v1Texte": "Your two names don't look much alike: few shared letters, different rhythms, digits that don't get along. Good news, nobody has ever left anyone over a calculation on names. Try again with your nicknames, it changes everything.",
+    "v2Titre": "A quiet start",
+    "v2Texte": "The calculation finds a few things in common between your names, no more than that. It's the kind of score that says nothing serious, only that the magic of letters isn't doing the work for you.",
+    "v3Titre": "You answer each other well",
+    "v3Texte": "Your names have real things in common and a fairly close rhythm. It's the most common score, the one couples get when their names go well together without making a fuss.",
+    "v4Titre": "A fine match",
+    "v4Texte": "Shared letters, matching rhythms, digits that land right: your two names really do work well together. The kind of result you want to show the other person straight away.",
+    "v5Titre": "It sounds obvious",
+    "v5Texte": "Few pairs climb this high. Your names share a lot, breathe at the same rhythm and land on digits that get along. Enjoy it, that's a fine score to post.",
+    "v6Titre": "A clean sweep",
+    "v6Texte": "All five measures came out green at once, which almost never happens. If you needed a sign before making a move, let's say the letters agree."
+  },
+  "celebres": {
+    "titre": "You unlocked a famous couple",
+    "teaser": "About twenty well-known couples are hidden in the calculator, each with its own score and its own line. Try Romeo and Juliet to see, then go looking for the others."
+  },
+  "jour": {
+    "titre": "Your daily dose",
+    "intro": "Three things to try together, new every morning.",
+    "conseilLabel": "Tip of the day",
+    "questionLabel": "Tonight's question",
+    "defiLabel": "The small challenge"
+  },
+  "suite": {
+    "titre": "How about the real test?",
+    "texte": "This percentage is a game, it counts letters. If you want to measure what actually matters, we have a <a href=\"/en/love-compatibility-test/\">compatibility test in twenty questions</a> to take together: values, plans, money, everyday life. That score does mean something.",
+    "bouton": "Take the 20-question test"
+  },
+  "section1": {
+    "title": "What is a love calculator?",
+    "p1": "A love calculator is a small tool where you type two names and get a percentage. For example: you write \"Thomas\" and \"Elisa\", and the tool answers 59%. That's it. No questions to fill in, no sign-up, one second and it's done.",
+    "p2": "The idea goes back to the very first websites, back when people sent each other links by email. It has never changed: you compare the letters of two names and you get a number out of it. So it's mostly there for fun, to start a conversation, or to type your crush's name and see what comes up.",
+    "p3": "Ours does the same thing, with two differences. First it shows you the detail of the calculation instead of pulling a number out of nowhere. Second it doesn't claim to be scientific: it's a game with letters, and we say so."
+  },
+  "section2": {
+    "title": "How our love calculator works",
+    "p1": "The final score is an average of five measures, each with its own weight. Here is how our calculation engine above works:",
+    "apres": "The five marks are added up according to their weight and give the percentage on screen. Nothing is random: the same names always give exactly the same result, and \"Thomas + Elisa\" gives the same thing as \"Elisa + Thomas\".",
+    "poidsTitre": "How much each measure weighs",
+    "poidsTexte": "The original method and numerology weigh the most, because they are what makes this tool a tradition. Shared letters follow closely. The vowel rhythm and the length balance count a little less, they mostly serve to separate two pairs that are otherwise equal."
+  },
+  "section3": {
+    "title": "Does the percentage mean anything?",
+    "p1": "The honest answer is no, and that needs saying plainly. You did not choose your name, and it says nothing about how you love, how you argue or how you make plans. Two people at 38% can spend thirty years together, two people at 97% can split up in six months.",
+    "p2": "What the number does well, on the other hand, is open a conversation. You type the two names, you laugh at the result, you try the nicknames, and one thing leading to another you start talking about more serious things. That is often how <a href=\"/en/couple-questions/\">the good questions turn up in a conversation</a>, without anyone having prepared them.",
+    "p3": "If you want a number based on something real, you have to answer questions about your life together, not about your names. That is what our twenty-question test does, and it is a completely different exercise."
+  },
+  "section4": {
+    "title": "The famous couples hidden in the calculator",
+    "p1": "About twenty well-known couples have their own score, written by hand, with a line just for them. Type \"Romeo\" and \"Juliet\" to see the first one. There are tragic lovers, cartoon heroes, film duos and two or three jokes.",
+    "p2": "They change nothing about how the tool normally works: every other name goes through the five measures. It's just a wink for those who go looking."
+  },
+  "section5": {
+    "title": "Your score is low, so what?",
+    "p1": "First, try it with your nicknames. The calculator looks at letters, so \"Tom\" and \"Lisa\" don't give the same thing as \"Thomas\" and \"Elisa\". Plenty of couples find their best score with the pet names they actually use.",
+    "p2": "Then remember where the number comes from. A low score means your names don't have many letters in common and their rhythms differ. It says nothing more. If the real question is nagging at you, <a href=\"/en/love-compatibility-test/\">twenty questions about your values and your plans</a> will teach you infinitely more than a calculation on letters.",
+    "p3": "And if you want to stay on the playful side, we have two other tools in the same spirit: <a href=\"/en/zodiac-signs-names-compatibility/\">compatibility from names and star signs</a>, and <a href=\"/en/birth-date-love-compatibility/\">the crossing of your two birth dates</a>."
+  },
+  "faq": {
+    "title": "Questions people ask us",
+    "q1": "Is the love calculator free?",
+    "a1": "Yes, entirely. No sign-up, no email address, no limit on the number of tries. You can test as many pairs of names as you like.",
+    "q2": "Does the result change if I start again?",
+    "a2": "No, never. The same two names always give the same percentage, today and in six months. And the order makes no difference: \"Lea + Hugo\" gives exactly the same thing as \"Hugo + Lea\".",
+    "q3": "Can I put a nickname or a username?",
+    "a3": "Yes, and it's even recommended if you want to have fun. The calculator reads letters, so anything that can be written works: a nickname, a username, a surname. Accents and capitals make no difference to the calculation.",
+    "q4": "How do I get a higher percentage?",
+    "a4": "By trying other ways of writing your names. The pairs that climb highest share a lot of letters, have a similar share of vowels and a similar length. That's why short nicknames often give better scores than full names.",
+    "q5": "Does the score have a scientific basis?",
+    "a5": "None at all, and we would rather write that in black and white. It's a game with letters, with a bit of numerology that is a tradition and not a science. To measure real compatibility you have to ask questions about life together, which is what our twenty-question test does.",
+    "q6": "What's the difference with your love compatibility test?",
+    "a6": "Everything separates them. The calculator looks at two names and returns a number in one second. The compatibility test asks each of you twenty questions about money, children, pace of life and faithfulness, then compares your answers. One is a game, the other is a real couple's questionnaire.",
+    "q7": "Do you keep the names I type?",
+    "a7": "No. The calculation happens entirely in your browser, nothing is sent or saved anywhere. You can type your crush's name without worrying."
+  },
+  "seo": {
+    "etapesTitre": "Using the love calculator in 3 steps",
+    "e1Titre": "Write both names",
+    "e1Texte": "Yours and theirs. Nicknames work just as well.",
+    "e2Titre": "Run the calculation",
+    "e2Texte": "The percentage appears straight away, with the detail of the five measures.",
+    "e3Titre": "Share the result",
+    "e3Texte": "An image ready to post, or the link to send to the person concerned."
+  },
+  "jsonLd": {
+    "name": "Love Calculator",
+    "about": "Working out a love compatibility percentage from two first names"
+  },
+  "couples": [
+    {
+      "a": "romeo",
+      "b": "juliet",
+      "score": 99,
+      "mot": "The reference couple. Four centuries of everyone quoting them, and they lasted a few days. Enjoy your 99%, just do better than them on the long run."
+    },
+    {
+      "a": "bonnie",
+      "b": "clyde",
+      "score": 97,
+      "mot": "Inseparable to the very end, which is romantic and strongly discouraged. Keep the loyalty, leave the rest."
+    },
+    {
+      "a": "napoleon",
+      "b": "josephine",
+      "score": 72,
+      "mot": "Burning letters, an empire, and a divorce anyway. Passion wasn't enough, an heir was needed."
+    },
+    {
+      "a": "cleopatra",
+      "b": "caesar",
+      "score": 68,
+      "mot": "A political alliance that slid into a love story. Or the other way round, historians are still arguing."
+    },
+    {
+      "a": "tristan",
+      "b": "isolde",
+      "score": 95,
+      "mot": "One potion drunk by mistake and that was that. The best excuse in history for falling in love."
+    },
+    {
+      "a": "orpheus",
+      "b": "eurydice",
+      "score": 88,
+      "mot": "He went down to the underworld to find her. He just made the mistake of looking back. Don't look back."
+    },
+    {
+      "a": "adam",
+      "b": "eve",
+      "score": 100,
+      "mot": "Technically there was nobody else. Maximum compatibility through a total absence of competition."
+    },
+    {
+      "a": "lancelot",
+      "b": "guinevere",
+      "score": 64,
+      "mot": "Great love, terrible timing, and a king in the middle. An entire kingdom fell over it."
+    },
+    {
+      "a": "shrek",
+      "b": "fiona",
+      "score": 96,
+      "mot": "Proof that two people can find each other gorgeous while the rest of the world wonders."
+    },
+    {
+      "a": "mickey",
+      "b": "minnie",
+      "score": 94,
+      "mot": "Almost a hundred years together, never a raised voice. We would love to know their secret."
+    },
+    {
+      "a": "jack",
+      "b": "rose",
+      "score": 81,
+      "mot": "A door wide enough for two, a questionable decision. The debate is still not settled."
+    },
+    {
+      "a": "han",
+      "b": "leia",
+      "score": 91,
+      "mot": "\"I love you.\" \"I know.\" The most annoying and the classiest reply in the galaxy."
+    },
+    {
+      "a": "mario",
+      "b": "peach",
+      "score": 76,
+      "mot": "Eight castles visited, always the wrong address. Persistence eventually paid off."
+    },
+    {
+      "a": "aladdin",
+      "b": "jasmine",
+      "score": 89,
+      "mot": "First date on a flying carpet. Hard to follow that one."
+    },
+    {
+      "a": "belle",
+      "b": "beast",
+      "score": 92,
+      "mot": "A library given as a present. Honestly, that's the best romantic gesture on the list."
+    },
+    {
+      "a": "popeye",
+      "b": "olive",
+      "score": 79,
+      "mot": "He has been lifting boats for her since 1929. The effort is steady, we have to give him that."
+    },
+    {
+      "a": "marie",
+      "b": "pierre",
+      "score": 98,
+      "mot": "Two Nobel prizes, one laboratory, and a genuine working duo. The most productive couple on the list."
+    },
+    {
+      "a": "asterix",
+      "b": "obelix",
+      "score": 85,
+      "mot": "Not that kind of couple, but admit that the friendship is sturdier than half the love stories out there."
+    },
+    {
+      "a": "tom",
+      "b": "jerry",
+      "score": 12,
+      "mot": "Seventy years of chasing each other without ever talking. We know couples like that."
+    },
+    {
+      "a": "batman",
+      "b": "robin",
+      "score": 70,
+      "mot": "A partnership that works, a clear division of labour, zero emotional communication."
+    },
+    {
+      "a": "bella",
+      "b": "edward",
+      "score": 66,
+      "mot": "He watches her sleep, she finds it charming. We would rather not comment."
+    },
+    {
+      "a": "harry",
+      "b": "ginny",
+      "score": 87,
+      "mot": "She had been waiting since book one. Patience has its rewards."
+    },
+    {
+      "a": "ross",
+      "b": "rachel",
+      "score": 47,
+      "mot": "Ten seasons, one very poorly defined break, and an airport. You deserve something simpler."
+    },
+    {
+      "a": "sherlock",
+      "b": "watson",
+      "score": 83,
+      "mot": "One solves everything, the other puts up with everything. A balance, in its own way."
+    }
+  ],
+  "dose": {
+    "conseils": [
+      "Ask how their day went, then ask a second question about their answer. The second question is what changes everything.",
+      "Tonight, put both phones in another room during the meal. You will see the difference within ten minutes.",
+      "Say thank you for something the other does all the time and that you stopped noticing. That's often where it lands best.",
+      "If something has been bugging you for weeks, bring it up on a day when things are fine, not in the middle of an argument.",
+      "Tell a memory from your early days that the other may have forgotten. It puts things back in place.",
+      "Suggest an activity the other loves and you don't much. Once. It counts more than you think.",
+      "When the other brings up a problem, ask first: \"do you want help or do you want me to listen?\"",
+      "Write a note on a piece of paper and leave it somewhere. A real piece of paper gets kept.",
+      "Decide together on one thing to do in three months. Having a date ahead changes the mood of a week.",
+      "Pick up a habit you had at the start and dropped without ever deciding to.",
+      "Ask a question about their childhood you have never asked. There is always one left.",
+      "If you argued yesterday, come back to it today when things are calm. Arguments that don't get buried come back.",
+      "Compliment something that has nothing to do with looks. It always takes people by surprise.",
+      "Do one thing in their place today, without saying so and without waiting to be noticed.",
+      "Ask what would make them happy this week. The answer is rarely the one you imagine.",
+      "Look at a photo of the two of you that is at least two years old. Say what you remember of that day.",
+      "Talk about money for a quarter of an hour, calmly, before the subject turns up on its own one bad evening.",
+      "Say one thing you admire in the other that you have never said out loud.",
+      "Let the other choose the whole evening, without commenting on the choice.",
+      "If something moved you today, say it the same day. It goes off quickly."
+    ],
+    "questions": [
+      "What made you laugh today?",
+      "If we did our first date again, what would you change?",
+      "What would you like us to do more often?",
+      "What do I do that reassures you, without me knowing?",
+      "What were you dreaming about at fifteen?",
+      "What surprised you most about me at the start?",
+      "There is one subject we never talk about. Which one, in your view?",
+      "In ten years, where do we live, in your head?",
+      "Which moment of our story would you live again exactly as it was?",
+      "What do you not dare ask me?",
+      "When was the last time you felt proud of yourself?",
+      "What did your parents pass on that you keep, and what did you drop?",
+      "If we left tomorrow for three days anywhere, what do you say?",
+      "What do you miss most when I'm not here?",
+      "Which habit of mine do you find adorable, and which one do you put up with out of love?",
+      "Do you remember the first time you thought this was serious?",
+      "What would make you feel supported this week?",
+      "Which compliment would you like to hear more often?",
+      "Is there something you would like us to stop doing?",
+      "What did you learn from our last argument?"
+    ],
+    "defis": [
+      "Send them a message during the day for no particular reason.",
+      "Make the other's breakfast tomorrow morning, even a quick one.",
+      "Spend a whole evening with no screens, just the two of you.",
+      "Cook together a dish you ate during a good memory.",
+      "Call each other instead of texting, once today.",
+      "Tell each other your worst date from before you met.",
+      "Walk outside together for twenty minutes, with no destination.",
+      "Show them a song that makes you think of them.",
+      "Each write three things you love about the other, then swap the papers.",
+      "Watch the other's favourite film together, without sighing.",
+      "Take a photo of the two of you today. When was the last one?",
+      "Order for the other at the restaurant, without asking.",
+      "Tell each other about your day in three minutes each, without being interrupted.",
+      "Look together for an activity neither of you has ever done.",
+      "Go to sleep tonight without having looked at your phone in bed.",
+      "Make a list together of ten things to do before the end of the year.",
+      "Dig out some old photos and talk through them together.",
+      "Give them a small thing under five euros that will make them think of you.",
+      "Ask each other the most awkward question on your list, taking turns.",
+      "Turn off the light and talk for ten minutes in the dark before sleeping."
+    ]
+  }
+}

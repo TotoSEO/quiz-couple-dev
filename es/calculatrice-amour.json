@@ -1,0 +1,349 @@
+{
+  "calcul": {
+    "mot": "amor"
+  },
+  "hero": {
+    "badge": "Gratis · resultado inmediato",
+    "title": "Calculadora del amor: vuestro porcentaje con dos nombres",
+    "titleHighlight": "Calculadora del amor",
+    "description": "Escribe dos nombres, la calculadora te da un porcentaje de compatibilidad y te enseña de dónde sale. Es un juego, y te explicamos el cálculo entero."
+  },
+  "form": {
+    "label1": "Tu nombre",
+    "label2": "Su nombre",
+    "placeholder1": "Ej.: Thomas",
+    "placeholder2": "Ej.: Elisa",
+    "submit": "Calcular nuestro porcentaje",
+    "retry": "Probar con otros dos nombres",
+    "erreur": "Escribe los dos nombres para lanzar el cálculo.",
+    "aide": "Los apodos también valen. El resultado nunca cambia con los mismos nombres."
+  },
+  "resultat": {
+    "et": "+",
+    "compat": "de compatibilidad",
+    "detailTitre": "De dónde sale este porcentaje",
+    "detailIntro": "Cinco medidas, cada una con su peso en el total. Esto es lo que dan {{a}} y {{b}}:",
+    "partageTitre": "Enseña tu resultado",
+    "partageBouton": "Compartir",
+    "imageBouton": "Imagen para publicar",
+    "copie": "¡Resultado copiado!",
+    "partageTexte": "{{a}} + {{b}} = {{score}} % en la calculadora del amor de Quiz Couple",
+    "chemin": "camino de vida {{n}}"
+  },
+  "dimensions": {
+    "lettresNom": "Las letras compartidas",
+    "lettresDesc": "La parte de letras que aparecen en los dos nombres, comparada con todas las que usan entre ambos. María y Pedro comparten la r, la a y la e, así que sube rápido.",
+    "motNom": "El método original",
+    "motDesc": "El cálculo de las primeras calculadoras del amor. Se cuentan, en cada nombre, las letras de la palabra «amor», y luego se pliegan las cifras de dos en dos hasta quedarse con dos. Esas dos cifras son el resultado.",
+    "rythmeNom": "El ritmo de las vocales",
+    "rythmeDesc": "Cada nombre tiene su proporción de vocales. Lea tiene dos de tres, Franck una de seis. Cuando las dos proporciones se parecen, los nombres suenan bien juntos en voz alta.",
+    "numeroNom": "La numerología",
+    "numeroDesc": "La tradición pitagórica da una cifra a cada letra, del 1 al 9. Se suma, se reduce, y cada nombre cae en una cifra entre 1 y 9. Una tabla dice después cómo se entienden esas dos cifras.",
+    "longueurNom": "El equilibrio de longitudes",
+    "longueurDesc": "Dos nombres de longitud parecida se responden mejor cuando se dicen uno detrás de otro. Cuanto mayor es la diferencia, más baja la nota."
+  },
+  "verdicts": {
+    "v1Titre": "Sobre el papel, no encaja demasiado",
+    "v1Texte": "Vuestros dos nombres no se parecen mucho: pocas letras en común, ritmos distintos, cifras que no se entienden. La buena noticia es que nadie ha dejado nunca a nadie por un cálculo sobre nombres. Probad con vuestros apodos, cambia todo.",
+    "v2Titre": "Un comienzo discreto",
+    "v2Texte": "El cálculo encuentra algunos puntos en común entre vuestros nombres, y poco más. Es el tipo de resultado que no dice nada grave, solo que la magia de las letras no hace el trabajo por vosotros.",
+    "v3Titre": "Os respondéis bien",
+    "v3Texte": "Vuestros nombres tienen cosas en común de verdad y un ritmo bastante parecido. Es el resultado más habitual, el de las parejas cuyos nombres pegan bien sin hacer ruido.",
+    "v4Titre": "Buena sintonía",
+    "v4Texte": "Letras compartidas, ritmos acordados, cifras que caen justas: vuestros dos nombres funcionan muy bien juntos. De esos resultados que dan ganas de enseñar al otro ahora mismo.",
+    "v5Titre": "Suena a evidencia",
+    "v5Texte": "Hay pocas parejas que suban tan alto. Vuestros nombres comparten mucho, respiran al mismo ritmo y caen en cifras que se llevan bien. Aprovechadlo, es un resultado precioso para publicar.",
+    "v6Titre": "Pleno absoluto",
+    "v6Texte": "Las cinco medidas están en verde a la vez, algo que casi nunca pasa. Si necesitabais una señal para lanzaros, digamos que las letras están de acuerdo."
+  },
+  "celebres": {
+    "titre": "Habéis desbloqueado una pareja famosa",
+    "teaser": "Hay unas veinte parejas conocidas escondidas en la calculadora, cada una con su resultado y su frase. Prueba con Romeo y Julieta y luego busca las demás."
+  },
+  "jour": {
+    "titre": "Vuestra dosis del día",
+    "intro": "Tres ideas para probar en pareja, nuevas cada mañana.",
+    "conseilLabel": "El consejo del día",
+    "questionLabel": "La pregunta para esta noche",
+    "defiLabel": "El pequeño reto"
+  },
+  "suite": {
+    "titre": "¿Y si hacéis el test de verdad?",
+    "texte": "Este porcentaje es un juego, cuenta letras. Si queréis medir lo que importa de verdad, tenemos un <a href=\"/es/test-compatibilidad-amorosa/\">test de compatibilidad de veinte preguntas</a> para hacer en pareja: valores, proyectos, dinero, día a día. Ahí el resultado sí significa algo.",
+    "bouton": "Hacer el test de 20 preguntas"
+  },
+  "section1": {
+    "title": "¿Qué es una calculadora del amor?",
+    "p1": "Una calculadora del amor es una herramienta pequeña donde escribes dos nombres y obtienes un porcentaje. Por ejemplo: escribes «Thomas» y «Elisa», y la herramienta responde 59 %. Ya está. Sin preguntas que rellenar, sin registro, un segundo y listo.",
+    "p2": "La idea viene de las primerísimas webs, de cuando la gente se mandaba enlaces por correo. Nunca ha cambiado: se comparan las letras de dos nombres y sale un número. Así que sirve sobre todo para divertirse, para empezar una conversación, o para escribir el nombre de tu crush a ver qué sale.",
+    "p3": "La nuestra hace lo mismo, con dos diferencias. Primero te enseña el detalle del cálculo en lugar de sacar un número de la nada. Y segundo no dice que sea científica: es un juego de letras, y lo decimos."
+  },
+  "section2": {
+    "title": "Cómo funciona nuestra calculadora del amor",
+    "p1": "El resultado final es una media de cinco medidas, cada una con su peso. Así funciona nuestro motor de cálculo de arriba:",
+    "apres": "Las cinco notas se suman según su peso y dan el porcentaje que aparece. No hay nada al azar: los mismos nombres dan siempre exactamente el mismo resultado, y «Thomas + Elisa» da lo mismo que «Elisa + Thomas».",
+    "poidsTitre": "Cuánto pesa cada medida",
+    "poidsTexte": "El método original y la numerología son los que más pesan, porque son los que hacen la tradición de esta herramienta. Las letras compartidas van justo detrás. El ritmo de las vocales y el equilibrio de longitudes cuentan algo menos, sirven sobre todo para desempatar dos parejas que van igualadas."
+  },
+  "section3": {
+    "title": "¿El porcentaje significa algo?",
+    "p1": "La respuesta honesta es no, y hay que decirlo claro. Tu nombre no lo elegiste tú, y no dice nada de cómo quieres, cómo discutes o cómo haces planes. Dos personas con un 38 % pueden pasar treinta años juntas, dos personas con un 97 % pueden dejarlo en seis meses.",
+    "p2": "Lo que el número sí hace bien es abrir una conversación. Escribes los dos nombres, os reís del resultado, probáis con los apodos, y de una cosa se pasa a otra hasta hablar de temas más serios. Así es como suelen <a href=\"/es/preguntas-pareja/\">aparecer las buenas preguntas en una conversación</a>, sin haberlas preparado.",
+    "p3": "Si queréis un número que se apoye en algo real, hay que responder preguntas sobre vuestra vida en pareja, no sobre vuestros nombres. Es lo que hace nuestro test de veinte preguntas, y es un ejercicio completamente distinto."
+  },
+  "section4": {
+    "title": "Las parejas famosas escondidas en la calculadora",
+    "p1": "Unas veinte parejas conocidas tienen su propio resultado, escrito a mano, con una frase solo para ellas. Escribe «Romeo» y «Julieta» para ver la primera. Hay amantes de tragedia, héroes de dibujos animados, dúos de cine y dos o tres bromas.",
+    "p2": "No cambian nada del funcionamiento normal de la herramienta: todos los demás nombres pasan por el cálculo de las cinco medidas. Es solo un guiño para quien busque."
+  },
+  "section5": {
+    "title": "Vuestro resultado es bajo, ¿y qué?",
+    "p1": "Primero, probad con vuestros apodos. La calculadora mira las letras, así que «Tom» y «Lisa» no dan lo mismo que «Thomas» y «Elisa». Muchas parejas encuentran su mejor resultado con los nombres cariñosos que usan de verdad.",
+    "p2": "Después, acordaos de dónde sale el número. Un resultado bajo significa que vuestros nombres no tienen muchas letras en común y que sus ritmos se separan. No dice nada más. Si la pregunta de fondo os ronda, <a href=\"/es/test-compatibilidad-amorosa/\">veinte preguntas sobre vuestros valores y vuestros proyectos</a> os enseñarán infinitamente más que un cálculo sobre letras.",
+    "p3": "Y si queréis seguir en el terreno del juego, tenemos otras dos herramientas del mismo espíritu: la <a href=\"/es/signos-astrologicos-nombres-compatibilidad/\">compatibilidad por nombres y signos del zodiaco</a>, y el <a href=\"/es/compatibilidad-amorosa-fecha-de-nacimiento/\">cruce de las dos fechas de nacimiento</a>."
+  },
+  "faq": {
+    "title": "Las preguntas que nos hacéis",
+    "q1": "¿La calculadora del amor es gratis?",
+    "a1": "Sí, del todo. Sin registro, sin correo electrónico, sin límite de intentos. Puedes probar tantas parejas de nombres como quieras.",
+    "q2": "¿El resultado cambia si lo repito?",
+    "a2": "No, nunca. Los mismos dos nombres dan siempre el mismo porcentaje, hoy y dentro de seis meses. Y el orden no importa nada: «Lea + Hugo» da exactamente lo mismo que «Hugo + Lea».",
+    "q3": "¿Puedo poner un apodo o un usuario?",
+    "a3": "Sí, y hasta es recomendable para divertirse. La calculadora lee letras, así que vale todo lo que se escriba: un apodo, un usuario, un apellido. Los acentos y las mayúsculas no cambian nada en el cálculo.",
+    "q4": "¿Cómo consigo un porcentaje más alto?",
+    "a4": "Probando otras formas de escribir vuestros nombres. Las parejas que más suben comparten muchas letras, tienen una proporción de vocales parecida y una longitud similar. Por eso los apodos cortos suelen dar mejores resultados que los nombres completos.",
+    "q5": "¿El resultado tiene base científica?",
+    "a5": "Ninguna, y preferimos escribirlo negro sobre blanco. Es un juego de letras, con una parte de numerología que es una tradición y no una ciencia. Para medir una compatibilidad de verdad hay que hacer preguntas sobre la vida en pareja, que es lo que hace nuestro test de veinte preguntas.",
+    "q6": "¿Qué diferencia hay con vuestro test de compatibilidad amorosa?",
+    "a6": "Los separa todo. La calculadora mira dos nombres y devuelve un número en un segundo. El test de compatibilidad os hace veinte preguntas a cada uno sobre el dinero, los hijos, el ritmo de vida y la fidelidad, y luego compara vuestras respuestas. Uno es un juego, el otro es un cuestionario de pareja de verdad.",
+    "q7": "¿Guardáis los nombres que escribo?",
+    "a7": "No. El cálculo se hace entero en tu navegador, no se envía ni se guarda nada en ningún sitio. Puedes escribir el nombre de tu crush tranquilamente."
+  },
+  "seo": {
+    "etapesTitre": "Usar la calculadora del amor en 3 pasos",
+    "e1Titre": "Escribid los dos nombres",
+    "e1Texte": "El tuyo y el del otro. Los apodos valen igual de bien.",
+    "e2Titre": "Lanzad el cálculo",
+    "e2Texte": "El porcentaje aparece enseguida, con el detalle de las cinco medidas.",
+    "e3Titre": "Compartid el resultado",
+    "e3Texte": "Una imagen lista para publicar, o el enlace para mandar a la persona en cuestión."
+  },
+  "jsonLd": {
+    "name": "Calculadora del amor",
+    "about": "Cálculo de un porcentaje de compatibilidad amorosa a partir de dos nombres"
+  },
+  "couples": [
+    {
+      "a": "romeo",
+      "b": "julieta",
+      "score": 99,
+      "mot": "La pareja de referencia. Cuatro siglos citándolos y solo aguantaron unos días. Disfrutad del 99 %, pero hacedlo mejor que ellos a largo plazo."
+    },
+    {
+      "a": "bonnie",
+      "b": "clyde",
+      "score": 97,
+      "mot": "Inseparables hasta el final, algo muy romántico y muy desaconsejable. Quedaos con la lealtad y dejad el resto."
+    },
+    {
+      "a": "napoleon",
+      "b": "josefina",
+      "score": 72,
+      "mot": "Cartas ardientes, un imperio, y un divorcio igualmente. La pasión no bastaba, hacía falta un heredero."
+    },
+    {
+      "a": "cleopatra",
+      "b": "cesar",
+      "score": 68,
+      "mot": "Una alianza política que se torció hasta volverse historia de amor. O al revés, los historiadores siguen discutiéndolo."
+    },
+    {
+      "a": "tristan",
+      "b": "isolda",
+      "score": 95,
+      "mot": "Un filtro bebido por error y ya estaba todo hecho. La mejor excusa de la historia para enamorarse."
+    },
+    {
+      "a": "orfeo",
+      "b": "euridice",
+      "score": 88,
+      "mot": "Bajó a los infiernos a buscarla. Solo cometió el error de girarse. No os giréis."
+    },
+    {
+      "a": "adan",
+      "b": "eva",
+      "score": 100,
+      "mot": "Técnicamente no había nadie más. Compatibilidad máxima por ausencia total de competencia."
+    },
+    {
+      "a": "lanzarote",
+      "b": "ginebra",
+      "score": 64,
+      "mot": "Gran amor, pésimo momento, y un rey en medio. Un reino entero se vino abajo por eso."
+    },
+    {
+      "a": "shrek",
+      "b": "fiona",
+      "score": 96,
+      "mot": "La prueba de que dos personas pueden verse guapísimas mientras el resto del mundo se pregunta cosas."
+    },
+    {
+      "a": "mickey",
+      "b": "minnie",
+      "score": 94,
+      "mot": "Casi cien años juntos, nunca una palabra más alta que otra. Nos encantaría conocer su secreto."
+    },
+    {
+      "a": "jack",
+      "b": "rose",
+      "score": 81,
+      "mot": "Una puerta bastante ancha para dos, una decisión discutible. El debate sigue sin cerrarse."
+    },
+    {
+      "a": "han",
+      "b": "leia",
+      "score": 91,
+      "mot": "«Te quiero.» «Lo sé.» La respuesta más irritante y más elegante de la galaxia."
+    },
+    {
+      "a": "mario",
+      "b": "peach",
+      "score": 76,
+      "mot": "Ocho castillos visitados, siempre la dirección equivocada. La perseverancia acabó dando resultado."
+    },
+    {
+      "a": "aladdin",
+      "b": "jasmin",
+      "score": 89,
+      "mot": "Primera cita en una alfombra voladora. Difícil superar eso."
+    },
+    {
+      "a": "bella",
+      "b": "bestia",
+      "score": 92,
+      "mot": "Una biblioteca de regalo. Sinceramente, es el mejor gesto romántico de la lista."
+    },
+    {
+      "a": "popeye",
+      "b": "olivia",
+      "score": 79,
+      "mot": "Lleva levantando barcos por ella desde 1929. El esfuerzo es constante, hay que reconocerlo."
+    },
+    {
+      "a": "marie",
+      "b": "pierre",
+      "score": 98,
+      "mot": "Dos premios Nobel, un laboratorio y un dúo de trabajo de verdad. La pareja más productiva de la lista."
+    },
+    {
+      "a": "asterix",
+      "b": "obelix",
+      "score": 85,
+      "mot": "No es esa clase de pareja, pero reconoced que la amistad aguanta más que la mitad de las historias de amor."
+    },
+    {
+      "a": "tom",
+      "b": "jerry",
+      "score": 12,
+      "mot": "Setenta años persiguiéndose sin hablarse nunca. Conocemos parejas así."
+    },
+    {
+      "a": "batman",
+      "b": "robin",
+      "score": 70,
+      "mot": "Una asociación que funciona, un reparto de tareas claro, cero comunicación emocional."
+    },
+    {
+      "a": "bella",
+      "b": "edward",
+      "score": 66,
+      "mot": "Él la mira dormir, ella lo encuentra encantador. Preferimos no comentar."
+    },
+    {
+      "a": "harry",
+      "b": "ginny",
+      "score": 87,
+      "mot": "Ella lo esperaba desde el primer libro. La paciencia tiene su recompensa."
+    },
+    {
+      "a": "ross",
+      "b": "rachel",
+      "score": 47,
+      "mot": "Diez temporadas, una pausa muy mal definida y un aeropuerto. Os merecéis algo más sencillo."
+    },
+    {
+      "a": "sherlock",
+      "b": "watson",
+      "score": 83,
+      "mot": "Uno lo resuelve todo, el otro lo aguanta todo. Un equilibrio, a su manera."
+    }
+  ],
+  "dose": {
+    "conseils": [
+      "Pregunta cómo le ha ido el día y luego haz una segunda pregunta sobre su respuesta. La segunda pregunta es la que cambia todo.",
+      "Esta noche, dejad los dos móviles en otra habitación durante la cena. Notaréis la diferencia en diez minutos.",
+      "Da las gracias por algo que el otro hace siempre y que ya no notas. Suele ser donde más gusta.",
+      "Si un tema te molesta desde hace semanas, habladlo un día en que todo va bien, no en plena discusión.",
+      "Cuenta un recuerdo de vuestros inicios que el otro quizá haya olvidado. Pone las cosas en su sitio.",
+      "Propón una actividad que al otro le encanta y a ti no tanto. Una vez. Cuenta más de lo que crees.",
+      "Cuando el otro cuente un problema, pregunta antes de responder: «¿quieres que te ayude o que te escuche?»",
+      "Escribe una nota en un papel y déjala en algún sitio. Un papel de verdad se guarda.",
+      "Decidid juntos algo que hacer dentro de tres meses. Tener una fecha por delante cambia el ánimo de una semana.",
+      "Retomad una costumbre que teníais al principio y que dejasteis sin decidirlo.",
+      "Haz una pregunta sobre su infancia que nunca hayas hecho. Siempre queda alguna.",
+      "Si discutisteis ayer, volved al tema hoy en frío. Las discusiones que no se cierran vuelven.",
+      "Alaba algo que no tenga nada que ver con el físico. Siempre sorprende.",
+      "Haz hoy una cosa en su lugar, sin decirlo y sin esperar que se note.",
+      "Pregunta qué le haría ilusión esta semana. La respuesta rara vez es la que imaginas.",
+      "Mirad una foto vuestra de hace al menos dos años. Contad qué recordáis de ese día.",
+      "Hablad de dinero un cuarto de hora, con calma, antes de que el tema salga solo una mala noche.",
+      "Di algo que admiras del otro y que nunca has dicho en voz alta.",
+      "Deja que el otro elija la noche entera, sin comentar la elección.",
+      "Si algo te ha emocionado hoy, dilo el mismo día. Se pasa rápido."
+    ],
+    "questions": [
+      "¿Qué te ha hecho reír hoy?",
+      "Si repitiéramos nuestra primera cita, ¿qué cambiarías?",
+      "¿Qué te gustaría que hiciéramos más a menudo?",
+      "¿Qué hago yo que te tranquiliza, sin que yo lo sepa?",
+      "¿Con qué soñabas a los quince años?",
+      "¿Qué te sorprendió más de mí al principio?",
+      "Hay un tema del que no hablamos nunca. ¿Cuál es, según tú?",
+      "Dentro de diez años, ¿dónde vivimos, en tu cabeza?",
+      "¿Qué momento de nuestra historia repetirías tal cual?",
+      "¿Qué no te atreves a pedirme?",
+      "¿Cuándo fue la última vez que te sentiste orgulloso de ti?",
+      "¿Qué te transmitieron tus padres que conservas, y qué has dejado atrás?",
+      "Si nos fuéramos mañana tres días a cualquier sitio, ¿qué dices?",
+      "¿Qué es lo que más echas de menos cuando no estoy?",
+      "¿Qué costumbre mía te parece adorable, y cuál soportas por amor?",
+      "¿Te acuerdas de la primera vez que pensaste que esto iba en serio?",
+      "¿Qué te haría sentir apoyado esta semana?",
+      "¿Qué cumplido te gustaría oír más a menudo?",
+      "¿Hay algo que te gustaría que dejáramos de hacer?",
+      "¿Qué aprendiste de nuestra última discusión?"
+    ],
+    "defis": [
+      "Mándale un mensaje durante el día sin motivo concreto.",
+      "Prepara mañana el desayuno del otro, aunque sea rápido.",
+      "Pasad una noche entera sin pantallas, los dos solos.",
+      "Cocinad juntos un plato que comisteis en un buen recuerdo.",
+      "Llamaos en vez de escribiros, una vez hoy.",
+      "Contaos vuestra peor cita de antes de conoceros.",
+      "Caminad veinte minutos fuera juntos, sin destino.",
+      "Enséñale una canción que te recuerde a él o a ella.",
+      "Escribid cada uno tres cosas que os gustan del otro y luego intercambiad los papeles.",
+      "Ved juntos la película favorita del otro, sin suspirar.",
+      "Haceos una foto los dos hoy. ¿De cuándo es la última?",
+      "Pide por el otro en el restaurante, sin preguntar.",
+      "Contaos el día en tres minutos cada uno, sin interrupciones.",
+      "Buscad juntos una actividad que no haya hecho ninguno de los dos.",
+      "Dormid esta noche sin haber mirado el móvil en la cama.",
+      "Haced juntos una lista de diez cosas que hacer antes de fin de año.",
+      "Sacad fotos antiguas y comentadlas juntos.",
+      "Regálale algo de menos de cinco euros que le haga pensar en ti.",
+      "Haceos la pregunta más incómoda de vuestra lista, por turnos.",
+      "Apagad la luz y hablad diez minutos a oscuras antes de dormir."
+    ]
+  }
+}

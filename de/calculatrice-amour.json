@@ -1,0 +1,349 @@
+{
+  "calcul": {
+    "mot": "liebe"
+  },
+  "hero": {
+    "badge": "Kostenlos · Ergebnis sofort",
+    "title": "Liebesrechner: euer Prozentwert aus zwei Namen",
+    "titleHighlight": "Liebesrechner",
+    "description": "Schreib zwei Namen hin, der Rechner gibt dir einen Kompatibilitätswert in Prozent und zeigt dir, woher er kommt. Es ist ein Spiel, und wir erklären dir die ganze Rechnung."
+  },
+  "form": {
+    "label1": "Dein Name",
+    "label2": "Sein oder ihr Name",
+    "placeholder1": "z. B. Thomas",
+    "placeholder2": "z. B. Elisa",
+    "submit": "Unseren Prozentwert berechnen",
+    "retry": "Zwei andere Namen versuchen",
+    "erreur": "Schreib beide Namen hin, damit die Rechnung startet.",
+    "aide": "Spitznamen gehen auch. Bei denselben Namen ändert sich das Ergebnis nie."
+  },
+  "resultat": {
+    "et": "+",
+    "compat": "Kompatibilität",
+    "detailTitre": "Woher dieser Prozentwert kommt",
+    "detailIntro": "Fünf Messungen, jede mit ihrem eigenen Gewicht im Gesamtwert. Das ergeben {{a}} und {{b}}:",
+    "partageTitre": "Zeig euer Ergebnis",
+    "partageBouton": "Teilen",
+    "imageBouton": "Bild zum Posten",
+    "copie": "Ergebnis kopiert!",
+    "partageTexte": "{{a}} + {{b}} = {{score}} % im Liebesrechner von Quiz Couple",
+    "chemin": "Lebenszahl {{n}}"
+  },
+  "dimensions": {
+    "lettresNom": "Die gemeinsamen Buchstaben",
+    "lettresDesc": "Der Anteil der Buchstaben, die in beiden Namen vorkommen, verglichen mit allen, die die beiden zusammen benutzen. Marie und Pierre teilen sich das r, das i und das e, da steigt es schnell.",
+    "motNom": "Die ursprüngliche Methode",
+    "motDesc": "Die Rechnung der allerersten Liebesrechner. Man zählt in jedem Namen die Buchstaben des Wortes «Liebe», dann faltet man die Ziffern zwei mal zwei zusammen, bis nur noch zwei übrig sind. Diese zwei Ziffern sind das Ergebnis.",
+    "rythmeNom": "Der Rhythmus der Vokale",
+    "rythmeDesc": "Jeder Name hat seinen eigenen Vokalanteil. Lea hat zwei von drei, Franck einen von sechs. Wenn die beiden Anteile nah beieinander liegen, klingen die Namen laut ausgesprochen gut zusammen.",
+    "numeroNom": "Die Numerologie",
+    "numeroDesc": "Die pythagoreische Tradition gibt jedem Buchstaben eine Ziffer von 1 bis 9. Man addiert, man reduziert, und jeder Name landet auf einer Ziffer zwischen 1 und 9. Eine Tabelle sagt dann, wie gut diese beiden Ziffern miteinander auskommen.",
+    "longueurNom": "Das Gleichgewicht der Längen",
+    "longueurDesc": "Zwei Namen ähnlicher Länge antworten einander besser, wenn man sie nacheinander ausspricht. Je größer der Abstand, desto niedriger die Note."
+  },
+  "verdicts": {
+    "v1Titre": "Auf dem Papier passt das nicht besonders",
+    "v1Texte": "Eure beiden Namen ähneln sich kaum: wenige gemeinsame Buchstaben, unterschiedliche Rhythmen, Ziffern, die sich nicht verstehen. Die gute Nachricht: noch nie hat jemand wegen einer Rechnung über Namen Schluss gemacht. Versucht es mit euren Spitznamen, das ändert alles.",
+    "v2Titre": "Ein verhaltener Anfang",
+    "v2Texte": "Die Rechnung findet ein paar Gemeinsamkeiten zwischen euren Namen, mehr nicht. Das ist die Art Ergebnis, die nichts Schlimmes bedeutet, nur dass die Magie der Buchstaben euch die Arbeit nicht abnimmt.",
+    "v3Titre": "Ihr antwortet euch gut",
+    "v3Texte": "Eure Namen haben echte Gemeinsamkeiten und einen ziemlich ähnlichen Rhythmus. Das ist das häufigste Ergebnis, das der Paare, deren Namen gut zusammengehen, ohne viel Aufhebens.",
+    "v4Titre": "Schöner Einklang",
+    "v4Texte": "Gemeinsame Buchstaben, passende Rhythmen, Ziffern, die genau richtig fallen: eure beiden Namen funktionieren wirklich gut zusammen. Die Art Ergebnis, die man dem anderen sofort zeigen will.",
+    "v5Titre": "Das klingt nach einer Selbstverständlichkeit",
+    "v5Texte": "Es gibt wenige Paare, die so hoch steigen. Eure Namen teilen viel, atmen im selben Rhythmus und landen auf Ziffern, die sich gut verstehen. Genießt es, das ist ein schönes Ergebnis zum Posten.",
+    "v6Titre": "Die volle Punktzahl",
+    "v6Texte": "Alle fünf Messungen stehen gleichzeitig auf Grün, was fast nie passiert. Falls ihr ein Zeichen gebraucht habt, um loszulegen: die Buchstaben sind sich einig."
+  },
+  "celebres": {
+    "titre": "Ihr habt ein berühmtes Paar freigeschaltet",
+    "teaser": "Etwa zwanzig bekannte Paare sind im Rechner versteckt, jedes mit eigenem Ergebnis und eigenem Satz. Probiert Romeo und Julia, dann sucht die anderen."
+  },
+  "jour": {
+    "titre": "Eure Portion des Tages",
+    "intro": "Drei Ideen zum Ausprobieren zu zweit, jeden Morgen neu.",
+    "conseilLabel": "Der Tipp des Tages",
+    "questionLabel": "Die Frage für heute Abend",
+    "defiLabel": "Die kleine Aufgabe"
+  },
+  "suite": {
+    "titre": "Wie wäre es mit dem echten Test?",
+    "texte": "Dieser Prozentwert ist ein Spiel, er zählt Buchstaben. Wenn ihr messen wollt, worauf es wirklich ankommt, haben wir einen <a href=\"/de/liebeskompatibilitaet-test/\">Kompatibilitätstest mit zwanzig Fragen</a> für euch beide: Werte, Pläne, Geld, Alltag. Da bedeutet das Ergebnis etwas.",
+    "bouton": "Den Test mit 20 Fragen machen"
+  },
+  "section1": {
+    "title": "Was ist ein Liebesrechner?",
+    "p1": "Ein Liebesrechner ist ein kleines Werkzeug, in das du zwei Namen tippst und einen Prozentwert zurückbekommst. Zum Beispiel: du schreibst «Thomas» und «Elisa», und das Werkzeug antwortet 59 %. Das ist alles. Keine Fragen zum Ausfüllen, keine Anmeldung, eine Sekunde und fertig.",
+    "p2": "Die Idee stammt aus den allerersten Webseiten, aus der Zeit, als man sich Links per Mail schickte. Geändert hat sie sich nie: man vergleicht die Buchstaben zweier Namen und zieht daraus eine Zahl. Das dient also vor allem dem Spaß, dem Gesprächseinstieg, oder dazu, den Namen des eigenen Crushs einzutippen und zu schauen, was dabei herauskommt.",
+    "p3": "Unserer macht dasselbe, mit zwei Unterschieden. Zuerst zeigt er dir die Rechnung im Detail, statt eine Zahl aus dem Nichts zu ziehen. Und er behauptet nicht, wissenschaftlich zu sein: es ist ein Buchstabenspiel, und das sagen wir auch."
+  },
+  "section2": {
+    "title": "Wie unser Liebesrechner funktioniert",
+    "p1": "Das Endergebnis ist ein Durchschnitt aus fünf Messungen, jede mit ihrem Gewicht. So funktioniert unser Rechenwerk oben:",
+    "apres": "Die fünf Noten werden nach ihrem Gewicht addiert und ergeben den angezeigten Prozentwert. Nichts wird ausgelost: dieselben Namen geben immer genau dasselbe Ergebnis, und «Thomas + Elisa» ergibt dasselbe wie «Elisa + Thomas».",
+    "poidsTitre": "Wie viel jede Messung wiegt",
+    "poidsTexte": "Die ursprüngliche Methode und die Numerologie wiegen am schwersten, denn sie machen die Tradition dieses Werkzeugs aus. Die gemeinsamen Buchstaben folgen dicht dahinter. Der Vokalrhythmus und das Gleichgewicht der Längen zählen etwas weniger, sie dienen vor allem dazu, zwei gleichwertige Paare voneinander zu trennen."
+  },
+  "section3": {
+    "title": "Bedeutet der Prozentwert etwas?",
+    "p1": "Die ehrliche Antwort ist nein, und das muss man klar sagen. Deinen Namen hast du dir nicht ausgesucht, und er sagt nichts darüber, wie du liebst, wie du streitest oder wie du Pläne schmiedest. Zwei Menschen bei 38 % können dreißig Jahre zusammen verbringen, zwei Menschen bei 97 % können sich nach sechs Monaten trennen.",
+    "p2": "Was die Zahl dagegen gut kann, ist ein Gespräch eröffnen. Man tippt die beiden Namen ein, lacht über das Ergebnis, probiert die Spitznamen, und von einem zum anderen redet man plötzlich über ernstere Dinge. So tauchen <a href=\"/de/fragen-fuer-paare/\">die guten Fragen meistens in einem Gespräch auf</a>, ohne dass sie jemand vorbereitet hätte.",
+    "p3": "Wenn ihr eine Zahl wollt, die auf etwas Echtem beruht, müsst ihr Fragen zu eurem gemeinsamen Leben beantworten, nicht zu euren Namen. Genau das macht unser Test mit zwanzig Fragen, und das ist eine völlig andere Übung."
+  },
+  "section4": {
+    "title": "Die berühmten Paare im Rechner",
+    "p1": "Etwa zwanzig bekannte Paare haben ihr eigenes Ergebnis, von Hand geschrieben, mit einem Satz nur für sie. Tippt «Romeo» und «Julia» ein, um das erste zu sehen. Es gibt tragische Liebende, Zeichentrickhelden, Kinoduos und zwei oder drei Witze.",
+    "p2": "Am normalen Ablauf ändern sie nichts: alle anderen Namen laufen durch die Rechnung der fünf Messungen. Es ist nur ein Augenzwinkern für die, die suchen."
+  },
+  "section5": {
+    "title": "Euer Ergebnis ist niedrig, na und?",
+    "p1": "Versucht es zuerst mit euren Spitznamen. Der Rechner schaut auf Buchstaben, also ergeben «Tom» und «Lisa» nicht dasselbe wie «Thomas» und «Elisa». Viele Paare finden ihr bestes Ergebnis mit den Kosenamen, die sie wirklich benutzen.",
+    "p2": "Und denkt daran, woher die Zahl kommt. Ein niedriges Ergebnis heißt, dass eure Namen wenige Buchstaben teilen und dass ihre Rhythmen auseinandergehen. Mehr sagt es nicht. Wenn euch die eigentliche Frage umtreibt, bringen euch <a href=\"/de/liebeskompatibilitaet-test/\">zwanzig Fragen zu euren Werten und euren Plänen</a> unendlich viel mehr als eine Rechnung über Buchstaben.",
+    "p3": "Und wenn ihr im Spielerischen bleiben wollt, haben wir zwei weitere Werkzeuge im selben Geist: die <a href=\"/de/sternzeichen-vornamen-kompatibilitaet/\">Kompatibilität nach Vornamen und Sternzeichen</a>, und die <a href=\"/de/liebeskompatibilitaet-geburtsdatum/\">Verknüpfung eurer beiden Geburtsdaten</a>."
+  },
+  "faq": {
+    "title": "Die Fragen, die uns gestellt werden",
+    "q1": "Ist der Liebesrechner kostenlos?",
+    "a1": "Ja, vollständig. Keine Anmeldung, keine Mailadresse, keine Begrenzung der Versuche. Du kannst so viele Namenspaare testen, wie du willst.",
+    "q2": "Ändert sich das Ergebnis, wenn ich es wiederhole?",
+    "a2": "Nein, nie. Dieselben zwei Namen geben immer denselben Prozentwert, heute wie in sechs Monaten. Und die Reihenfolge spielt keine Rolle: «Lea + Hugo» ergibt genau dasselbe wie «Hugo + Lea».",
+    "q3": "Kann ich einen Spitznamen oder einen Nutzernamen eingeben?",
+    "a3": "Ja, und zum Spaß ist es sogar empfehlenswert. Der Rechner liest Buchstaben, also funktioniert alles, was sich schreiben lässt: ein Spitzname, ein Nutzername, ein Nachname. Umlaute und Großschreibung ändern nichts an der Rechnung.",
+    "q4": "Wie bekomme ich einen höheren Prozentwert?",
+    "a4": "Indem du andere Schreibweisen eurer Namen ausprobierst. Die Paare, die am höchsten steigen, teilen viele Buchstaben, haben einen ähnlichen Vokalanteil und eine ähnliche Länge. Deshalb geben kurze Spitznamen oft bessere Ergebnisse als die vollen Namen.",
+    "q5": "Hat das Ergebnis eine wissenschaftliche Grundlage?",
+    "a5": "Überhaupt keine, und das schreiben wir lieber schwarz auf weiß. Es ist ein Buchstabenspiel, mit einem Anteil Numerologie, die eine Tradition ist und keine Wissenschaft. Um echte Kompatibilität zu messen, muss man Fragen zum gemeinsamen Leben stellen, und genau das macht unser Test mit zwanzig Fragen.",
+    "q6": "Was ist der Unterschied zu eurem Liebeskompatibilitäts-Test?",
+    "a6": "Alles trennt sie. Der Rechner schaut auf zwei Namen und liefert in einer Sekunde eine Zahl. Der Kompatibilitätstest stellt euch beiden zwanzig Fragen zu Geld, Kindern, Lebensrhythmus und Treue und vergleicht dann eure Antworten. Das eine ist ein Spiel, das andere ein echter Paar-Fragebogen.",
+    "q7": "Speichert ihr die Namen, die ich eintippe?",
+    "a7": "Nein. Die Rechnung läuft vollständig in deinem Browser, nichts wird verschickt oder irgendwo gespeichert. Du kannst den Namen deines Crushs ganz beruhigt eintippen."
+  },
+  "seo": {
+    "etapesTitre": "Den Liebesrechner in 3 Schritten benutzen",
+    "e1Titre": "Schreibt beide Namen hin",
+    "e1Texte": "Deinen und den der anderen Person. Spitznamen gehen genauso gut.",
+    "e2Titre": "Startet die Rechnung",
+    "e2Texte": "Der Prozentwert erscheint sofort, mit dem Detail der fünf Messungen.",
+    "e3Titre": "Teilt das Ergebnis",
+    "e3Texte": "Ein fertiges Bild zum Posten, oder der Link zum Verschicken an die betreffende Person."
+  },
+  "jsonLd": {
+    "name": "Liebesrechner",
+    "about": "Berechnung eines Liebeskompatibilitäts-Werts in Prozent aus zwei Vornamen"
+  },
+  "couples": [
+    {
+      "a": "romeo",
+      "b": "julia",
+      "score": 99,
+      "mot": "Das Referenzpaar. Vier Jahrhunderte lang zitiert sie jeder, und gehalten haben sie ein paar Tage. Genießt eure 99 %, macht es auf Dauer nur besser als die beiden."
+    },
+    {
+      "a": "bonnie",
+      "b": "clyde",
+      "score": 97,
+      "mot": "Unzertrennlich bis zum Schluss, was romantisch ist und dringend abzuraten. Behaltet die Treue, lasst den Rest."
+    },
+    {
+      "a": "napoleon",
+      "b": "josephine",
+      "score": 72,
+      "mot": "Glühende Briefe, ein Kaiserreich, und trotzdem eine Scheidung. Leidenschaft reichte nicht, es fehlte ein Erbe."
+    },
+    {
+      "a": "kleopatra",
+      "b": "caesar",
+      "score": 68,
+      "mot": "Ein politisches Bündnis, das in eine Liebesgeschichte abrutschte. Oder umgekehrt, die Historiker streiten noch."
+    },
+    {
+      "a": "tristan",
+      "b": "isolde",
+      "score": 95,
+      "mot": "Ein versehentlich getrunkener Trank und die Sache war erledigt. Die beste Ausrede der Geschichte, sich zu verlieben."
+    },
+    {
+      "a": "orpheus",
+      "b": "eurydike",
+      "score": 88,
+      "mot": "Er stieg in die Unterwelt hinab, um sie zu holen. Er machte nur den Fehler, sich umzudrehen. Dreht euch nicht um."
+    },
+    {
+      "a": "adam",
+      "b": "eva",
+      "score": 100,
+      "mot": "Genau genommen war niemand sonst da. Maximale Kompatibilität durch völlige Abwesenheit von Konkurrenz."
+    },
+    {
+      "a": "lancelot",
+      "b": "guinevere",
+      "score": 64,
+      "mot": "Große Liebe, miserables Timing, und ein König mittendrin. Ein ganzes Königreich ist daran zerbrochen."
+    },
+    {
+      "a": "shrek",
+      "b": "fiona",
+      "score": 96,
+      "mot": "Der Beweis, dass zwei sich wunderschön finden können, während der Rest der Welt sich Fragen stellt."
+    },
+    {
+      "a": "micky",
+      "b": "minnie",
+      "score": 94,
+      "mot": "Fast hundert Jahre zusammen, nie ein lautes Wort. Wir wüssten gern, wie sie das machen."
+    },
+    {
+      "a": "jack",
+      "b": "rose",
+      "score": 81,
+      "mot": "Eine Tür, breit genug für zwei, und eine fragwürdige Entscheidung. Die Debatte ist bis heute nicht beendet."
+    },
+    {
+      "a": "han",
+      "b": "leia",
+      "score": 91,
+      "mot": "«Ich liebe dich.» «Ich weiß.» Die nervigste und eleganteste Antwort der Galaxie."
+    },
+    {
+      "a": "mario",
+      "b": "peach",
+      "score": 76,
+      "mot": "Acht Schlösser besucht, immer die falsche Adresse. Die Beharrlichkeit hat sich am Ende ausgezahlt."
+    },
+    {
+      "a": "aladdin",
+      "b": "jasmin",
+      "score": 89,
+      "mot": "Erstes Date auf einem fliegenden Teppich. Schwer zu überbieten."
+    },
+    {
+      "a": "belle",
+      "b": "biest",
+      "score": 92,
+      "mot": "Eine Bibliothek als Geschenk. Ehrlich gesagt die beste romantische Geste der ganzen Liste."
+    },
+    {
+      "a": "popeye",
+      "b": "olivia",
+      "score": 79,
+      "mot": "Er stemmt seit 1929 Schiffe für sie. Der Einsatz ist konstant, das muss man anerkennen."
+    },
+    {
+      "a": "marie",
+      "b": "pierre",
+      "score": 98,
+      "mot": "Zwei Nobelpreise, ein Labor und ein echtes Arbeitsduo. Das produktivste Paar der Liste."
+    },
+    {
+      "a": "asterix",
+      "b": "obelix",
+      "score": 85,
+      "mot": "Nicht diese Art Paar, aber gebt zu, dass die Freundschaft stabiler ist als die Hälfte aller Liebesgeschichten."
+    },
+    {
+      "a": "tom",
+      "b": "jerry",
+      "score": 12,
+      "mot": "Siebzig Jahre hinterherjagen, ohne je miteinander zu reden. Solche Paare kennen wir."
+    },
+    {
+      "a": "batman",
+      "b": "robin",
+      "score": 70,
+      "mot": "Eine Partnerschaft, die funktioniert, eine klare Aufgabenteilung, null emotionale Kommunikation."
+    },
+    {
+      "a": "bella",
+      "b": "edward",
+      "score": 66,
+      "mot": "Er schaut ihr beim Schlafen zu, sie findet das reizend. Dazu sagen wir lieber nichts."
+    },
+    {
+      "a": "harry",
+      "b": "ginny",
+      "score": 87,
+      "mot": "Sie wartete seit dem ersten Band. Geduld zahlt sich aus."
+    },
+    {
+      "a": "ross",
+      "b": "rachel",
+      "score": 47,
+      "mot": "Zehn Staffeln, eine sehr schlecht definierte Pause und ein Flughafen. Ihr habt etwas Einfacheres verdient."
+    },
+    {
+      "a": "sherlock",
+      "b": "watson",
+      "score": 83,
+      "mot": "Der eine löst alles, der andere erträgt alles. Ein Gleichgewicht, auf seine Art."
+    }
+  ],
+  "dose": {
+    "conseils": [
+      "Frag, wie der Tag war, und stell dann eine zweite Frage zur Antwort. Die zweite Frage ist die, die alles ändert.",
+      "Legt heute Abend beide Handys während des Essens in ein anderes Zimmer. Den Unterschied merkt ihr in zehn Minuten.",
+      "Bedank dich für etwas, das die andere Person ständig tut und das du nicht mehr wahrnimmst. Genau da kommt es am besten an.",
+      "Wenn dich ein Thema seit Wochen nervt, sprich es an einem guten Tag an, nicht mitten im Streit.",
+      "Erzähl eine Erinnerung aus eurer Anfangszeit, die die andere Person vielleicht vergessen hat. Das rückt einiges zurecht.",
+      "Schlag etwas vor, das die andere Person liebt und du eher nicht. Einmal. Es zählt mehr, als du denkst.",
+      "Wenn die andere Person ein Problem erzählt, frag zuerst: «willst du Hilfe oder soll ich einfach zuhören?»",
+      "Schreib eine Nachricht auf ein Blatt Papier und leg es irgendwohin. Echtes Papier hebt man auf.",
+      "Entscheidet gemeinsam eine Sache, die ihr in drei Monaten macht. Ein Datum vor Augen verändert die Stimmung einer Woche.",
+      "Nehmt eine Gewohnheit wieder auf, die ihr am Anfang hattet und irgendwann einfach habt schleifen lassen.",
+      "Stell eine Frage zur Kindheit, die du nie gestellt hast. Es bleibt immer eine übrig.",
+      "Wenn ihr gestern gestritten habt, kommt heute in Ruhe darauf zurück. Streit, den man nicht begräbt, kommt wieder.",
+      "Mach ein Kompliment, das nichts mit dem Aussehen zu tun hat. Das überrascht immer.",
+      "Erledige heute eine Sache an ihrer Stelle, ohne es zu sagen und ohne zu warten, dass es auffällt.",
+      "Frag, was ihr oder ihm diese Woche Freude machen würde. Die Antwort ist selten die, die man erwartet.",
+      "Schaut euch ein Foto von euch beiden an, das mindestens zwei Jahre alt ist. Erzählt, woran ihr euch von dem Tag erinnert.",
+      "Redet eine Viertelstunde in Ruhe über Geld, bevor das Thema an einem schlechten Abend von allein hochkommt.",
+      "Sag etwas, das du an der anderen Person bewunderst und noch nie laut gesagt hast.",
+      "Lass die andere Person den ganzen Abend aussuchen, ohne die Wahl zu kommentieren.",
+      "Wenn dich heute etwas berührt hat, sag es noch am selben Tag. Das verfällt schnell."
+    ],
+    "questions": [
+      "Worüber hast du heute gelacht?",
+      "Wenn wir unser erstes Date noch mal machen würden, was würdest du ändern?",
+      "Was würdest du gern öfter mit mir machen?",
+      "Was mache ich, das dich beruhigt, ohne dass ich es weiß?",
+      "Wovon hast du mit fünfzehn geträumt?",
+      "Was hat dich am Anfang am meisten an mir überrascht?",
+      "Es gibt ein Thema, über das wir nie reden. Welches, glaubst du?",
+      "In zehn Jahren, wo wohnen wir da, in deinem Kopf?",
+      "Welchen Moment unserer Geschichte würdest du genauso noch mal erleben?",
+      "Was traust du dich nicht, mich zu fragen?",
+      "Wann warst du das letzte Mal stolz auf dich?",
+      "Was haben dir deine Eltern mitgegeben, das du behältst, und was hast du fallen lassen?",
+      "Wenn wir morgen drei Tage irgendwohin fahren würden, was sagst du?",
+      "Was fehlt dir am meisten, wenn ich nicht da bin?",
+      "Welche Angewohnheit von mir findest du süß, und welche erträgst du aus Liebe?",
+      "Erinnerst du dich an das erste Mal, als du dachtest, das wird ernst?",
+      "Was würde dir diese Woche das Gefühl geben, unterstützt zu sein?",
+      "Welches Kompliment würdest du gern öfter hören?",
+      "Gibt es etwas, das wir deiner Meinung nach lassen sollten?",
+      "Was hast du aus unserem letzten Streit gelernt?"
+    ],
+    "defis": [
+      "Schick ihr oder ihm tagsüber eine Nachricht ohne besonderen Grund.",
+      "Mach morgen früh das Frühstück für die andere Person, auch wenn es schnell gehen muss.",
+      "Verbringt einen ganzen Abend ohne Bildschirme, nur ihr beide.",
+      "Kocht zusammen ein Gericht, das ihr bei einer schönen Erinnerung gegessen habt.",
+      "Ruft euch heute einmal an, statt zu schreiben.",
+      "Erzählt euch gegenseitig euer schlimmstes Date aus der Zeit davor.",
+      "Geht zwanzig Minuten zusammen nach draußen, ohne Ziel.",
+      "Zeig ihr oder ihm ein Lied, das dich an die Person denken lässt.",
+      "Schreibt jeder drei Dinge auf, die ihr aneinander mögt, und tauscht dann die Zettel.",
+      "Schaut zusammen den Lieblingsfilm der anderen Person, ohne zu seufzen.",
+      "Macht heute ein Foto von euch beiden. Wann war das letzte?",
+      "Bestell im Restaurant für die andere Person, ohne zu fragen.",
+      "Erzählt euch euren Tag in je drei Minuten, ohne unterbrochen zu werden.",
+      "Sucht zusammen eine Aktivität, die keiner von euch je gemacht hat.",
+      "Schlaft heute ein, ohne im Bett aufs Handy geschaut zu haben.",
+      "Schreibt zu zweit eine Liste mit zehn Dingen, die ihr bis Jahresende machen wollt.",
+      "Holt alte Fotos hervor und redet gemeinsam darüber.",
+      "Schenk ihr oder ihm eine Kleinigkeit unter fünf Euro, die an dich denken lässt.",
+      "Stellt euch abwechselnd die peinlichste Frage von eurer Liste.",
+      "Macht das Licht aus und redet zehn Minuten im Dunkeln, bevor ihr einschlaft."
+    ]
+  }
+}

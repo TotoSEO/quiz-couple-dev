@@ -11853,3 +11853,184 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 .qr-produits .qr-produit-visuel:hover { color: inherit; text-decoration: none; }
 .qr-produits .qr-produit-visuel img,
 .qr-produits .qr-produit-visuel:hover img { filter: none; transform: none; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   CALCULATRICE DE L'AMOUR
+   Deux prenoms, un pourcentage, le detail du calcul. L'outil vit dans le
+   premier ecran : la carte est posee sous le titre du hero, pas plus bas.
+   ═══════════════════════════════════════════════════════════════════ */
+
+.calc-carte {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) + 0.5rem);
+  padding: 1.5rem;
+  box-shadow: 0 10px 40px -20px hsl(var(--primary) / 0.45);
+}
+@media (min-width: 768px) { .calc-carte { padding: 2rem 2.25rem; } }
+
+.calc-champs {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: 0.75rem;
+}
+.calc-champ { min-width: 0; }
+.calc-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: 0.375rem;
+  color: hsl(var(--muted-foreground));
+}
+.calc-input {
+  width: 100%;
+  padding: 0.75rem 0.875rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  border: 1.5px solid hsl(var(--border));
+  border-radius: var(--radius);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+.calc-input:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.18);
+}
+.calc-coeur {
+  color: hsl(var(--primary));
+  padding-bottom: 0.625rem;
+  flex: 0 0 auto;
+}
+.calc-coeur svg { width: 1.5rem; height: 1.5rem; display: block; }
+
+.calc-erreur {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: hsl(var(--primary-texte, var(--primary)));
+}
+.calc-go { width: 100%; margin-top: 1.25rem; }
+.calc-aide {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* ── Le resultat ───────────────────────────────────────────────── */
+.calc-resultat { margin-top: 1.75rem; padding-top: 1.75rem; border-top: 1px solid hsl(var(--border)); text-align: center; }
+.calc-noms { font-size: 1.0625rem; font-weight: 600; color: hsl(var(--muted-foreground)); margin-bottom: 1rem; }
+
+.calc-anneau { position: relative; width: 190px; height: 190px; margin: 0 auto 1.25rem; }
+.calc-anneau svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.calc-anneau-fond { fill: none; stroke: hsl(var(--muted)); stroke-width: 9; }
+.calc-anneau-trait {
+  fill: none;
+  stroke: hsl(var(--primary));
+  stroke-width: 9;
+  stroke-linecap: round;
+}
+.calc-anneau-texte {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.calc-pct { font-family: var(--font-heading, inherit); font-size: 3rem; font-weight: 800; line-height: 1; color: hsl(var(--primary)); }
+.calc-pct-signe { font-size: 1.5rem; margin-left: 0.0625rem; }
+.calc-anneau-label { margin-top: 0.25rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(var(--muted-foreground)); }
+
+.calc-verdict-titre { font-size: 1.375rem; font-weight: 700; margin-bottom: 0.5rem; }
+.calc-verdict-texte { color: hsl(var(--muted-foreground)); line-height: 1.65; max-width: 34rem; margin: 0 auto; }
+
+.calc-detail { margin-top: 1.75rem; text-align: left; }
+.calc-detail-titre { font-size: 1.0625rem; font-weight: 700; margin-bottom: 0.375rem; }
+.calc-detail-intro { font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 1rem; }
+
+.calc-barres { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.calc-barre-tete { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.375rem; }
+.calc-barre-nom { font-size: 0.9375rem; font-weight: 600; min-width: 0; }
+.calc-barre-note { font-weight: 400; font-size: 0.8125rem; color: hsl(var(--muted-foreground)); }
+.calc-barre-val { font-variant-numeric: tabular-nums; font-weight: 700; color: hsl(var(--primary-texte, var(--primary))); flex: 0 0 auto; }
+.calc-barre-piste { height: 8px; border-radius: 999px; background: hsl(var(--muted)); overflow: hidden; }
+.calc-barre-jauge {
+  display: block; height: 100%; border-radius: 999px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+  transition: width 800ms cubic-bezier(.22,1,.36,1);
+}
+.calc-barre-desc { margin-top: 0.375rem; font-size: 0.8125rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+
+.calc-actions { margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+.calc-action { flex: 1 1 12rem; max-width: 18rem; }
+.calc-copie { margin-top: 0.75rem; font-size: 0.875rem; color: hsl(var(--primary-texte, var(--primary))); }
+
+/* ── Le renvoi vers le vrai test ───────────────────────────────── */
+.calc-suite {
+  text-align: center;
+  padding: 1.75rem 1.25rem;
+  border: 1.5px dashed hsl(var(--primary) / 0.4);
+  border-radius: calc(var(--radius) + 0.25rem);
+  background: hsl(var(--primary) / 0.05);
+}
+.calc-suite-titre { font-size: 1.375rem; font-weight: 700; margin-bottom: 0.625rem; }
+.calc-suite-texte { color: hsl(var(--muted-foreground)); line-height: 1.65; margin-bottom: 1.25rem; max-width: 38rem; margin-inline: auto; }
+
+/* ── La dose du jour ───────────────────────────────────────────── */
+.calc-jour-titre { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 0.375rem; }
+.calc-jour-intro { text-align: center; color: hsl(var(--muted-foreground)); margin-bottom: 1.5rem; }
+.calc-jour-grille { display: grid; gap: 1rem; }
+@media (min-width: 768px) { .calc-jour-grille { grid-template-columns: repeat(3, 1fr); } }
+.calc-jour-carte {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1.125rem;
+}
+.calc-jour-label {
+  display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: hsl(var(--primary-texte, var(--primary))); margin-bottom: 0.5rem;
+}
+.calc-jour-texte { font-size: 0.9375rem; line-height: 1.6; color: hsl(var(--foreground)); margin: 0; }
+
+/* ── Les cinq mesures, dans le contenu ─────────────────────────── */
+.calc-methode { display: grid; gap: 1rem; }
+@media (min-width: 640px) { .calc-methode { grid-template-columns: repeat(2, 1fr); } }
+.calc-methode-carte {
+  position: relative;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1.125rem 1.125rem 1.125rem 3.25rem;
+}
+.calc-methode-num {
+  position: absolute; left: 1rem; top: 1.125rem;
+  width: 1.75rem; height: 1.75rem; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.875rem; font-weight: 700;
+  background: hsl(var(--primary)); color: hsl(var(--primary-foreground));
+}
+.calc-methode-titre { font-size: 1rem; font-weight: 700; margin-bottom: 0.375rem; }
+.calc-methode-texte { font-size: 0.875rem; line-height: 1.6; color: hsl(var(--muted-foreground)); margin: 0; }
+
+.calc-etapes { display: grid; gap: 1rem; }
+.calc-etape { display: flex; gap: 1rem; align-items: flex-start; }
+.calc-etape-num {
+  flex: 0 0 auto; width: 2.25rem; height: 2.25rem; border-radius: 999px;
+  display: flex; align-items: center; justify-content: center; font-weight: 700;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: #fff;
+}
+.calc-etape-titre { font-size: 1.0625rem; font-weight: 700; margin-bottom: 0.25rem; }
+.calc-etape-texte { color: hsl(var(--muted-foreground)); margin: 0; }
+
+/* ── Telephone ─────────────────────────────────────────────────── */
+@media (max-width: 520px) {
+  /* Les deux chemins de vie passent sous le nom de la mesure : sur une seule
+     ligne, ils repoussaient la note et cassaient l'alignement. */
+  .calc-barre-note { display: block; margin-top: 0.125rem; }
+  .calc-champs { grid-template-columns: 1fr; gap: 0.875rem; }
+  .calc-coeur { justify-self: center; padding: 0; }
+  .calc-anneau { width: 160px; height: 160px; }
+  .calc-pct { font-size: 2.5rem; }
+  .calc-action { flex: 1 1 100%; max-width: none; }
+}
