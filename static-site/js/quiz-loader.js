@@ -22,7 +22,26 @@
     // Le test toxique a son propre pool depuis toujours en EN, ES, DE et IT ;
     // il n'etait branche nulle part et les cinq langues retombaient sur la
     // serie 'divorce', ce qui publiait deux pages aux memes 25 questions.
-    'toxic':          { prefix: 'toxic', engine: 'solo', totalQ: 25, pool: 25, quizType: 'toxic', ascending: true, resultPrefix: 'toxic' },
+    // Planchers : une seule de ces reponses porte le resultat au moins au
+    // palier indique, quel que soit le reste du test. Sans eux, quelqu'un qui
+    // declarait marcher sur des oeufs tout le temps, redouter les reactions de
+    // l'autre et voir sa vulnerabilite retournee contre lui, en repondant
+    // sainement aux vingt et une autres questions, obtenait 60 points sur 310,
+    // soit 19 %, et lisait « relation globalement saine ». Les quatre reponses
+    // qui decrivent la peur ou la cruaute deliberee portent au palier 4, le
+    // seul dont le texte donne le numero d'urgence.
+    'toxic':          { prefix: 'toxic', engine: 'solo', totalQ: 25, pool: 25, quizType: 'toxic', ascending: true, resultPrefix: 'toxic',
+                        planchers: [
+                          { q: 5,  o: 'd', palier: 4 },   // la vulnerabilite retournee contre soi, souvent et sciemment
+                          { q: 2,  o: 'd', palier: 4 },   // modifier son comportement presque tout le temps pour eviter une reaction
+                          { q: 18, o: 'd', palier: 4 },   // marcher sur des oeufs tout le temps
+                          { q: 21, o: 'd', palier: 4 },   // redouter une reaction tres souvent
+                          { q: 13, o: 'd', palier: 3 },   // le silence utilise comme punition, systematiquement
+                          { q: 19, o: 'd', palier: 3 },   // s'etre eloigne de ses proches presque completement
+                          { q: 10, o: 'd', palier: 3 },   // se vivre comme « le probleme » du couple en permanence
+                          { q: 16, o: 'd', palier: 3 },   // estime de soi nettement chutee
+                          { q: 23, o: 'd', palier: 3 }    // rester par peur, culpabilite ou espoir
+                        ] },
     'pervers':        { prefix: 'pervers', engine: 'solo', totalQ: 20, pool: 20, quizType: 'pervers', ascending: true, resultPrefix: 'pervers' },
     // Fin de couple : 24 questions dont la première ne sert qu'à situer la
     // relation. Les 23 autres n'ont pas le même poids, le barème est donc
@@ -33,7 +52,21 @@
     // ce qui est commun aux deux liens, d'où le barème explicite.
     'amour-amitie':   { prefix: 'amourAmitie', engine: 'solo', totalQ: 20, pool: 20, quizType: 'amour-amitie', ascending: true, ptsExplicites: true },
     'amour-habitude': { prefix: 'habitude', engine: 'solo', totalQ: 20, pool: 20, quizType: 'amour-habitude', ascending: true, resultPrefix: 'habitude' },
-    'divorce':        { prefix: 'divorce', engine: 'solo', totalQ: 15, pool: 25, quizType: 'divorce', hasSkip: true, ascending: true },
+    // Memes planchers ici, et pour la meme raison : « j'ai peur de lui/elle »
+    // avec des reponses saines partout ailleurs donnait 15 points sur 150 et le
+    // verdict le plus rassurant des quatre. Les deux questions de securite sont
+    // marquees s: true dans SOLO_BAREME pour que le tirage de quinze questions
+    // sur vingt-cinq les pose toutes les deux, au lieu d'en choisir une.
+    'divorce':        { prefix: 'divorce', engine: 'solo', totalQ: 15, pool: 25, quizType: 'divorce', hasSkip: true, ascending: true,
+                        planchers: [
+                          { q: 6,  o: 'd', palier: 4 },   // violences subies regulierement
+                          { q: 6,  o: 'c', palier: 4 },   // violences subies occasionnellement
+                          { q: 5,  o: 'd', palier: 4 },   // « oui, j'ai peur de lui/elle »
+                          { q: 6,  o: 'b', palier: 3 },   // « peut-etre, je ne sais pas si ca compte vraiment »
+                          { q: 5,  o: 'c', palier: 3 },   // marcher sur des oeufs souvent
+                          { q: 21, o: 'd', palier: 3 },   // ne plus se reconnaitre dans la relation
+                          { q: 17, o: 'd', palier: 3 }    // epuise, deprime, ou en perte de sens
+                        ] },
     'mariage':        { prefix: 'marriage', engine: 'solo', totalQ: 30, pool: 30, hasSkip: true, hasLocalStorage: true },
 
     // ── Duo with gender (2 players + gender selection, answer matching) ──
@@ -1274,8 +1307,8 @@
       2:  { d: 'projection',    w: 3 },
       3:  { d: 'tentatives',    w: 2 },
       4:  { d: 'climat',        w: 2 },
-      5:  { d: 'securite',      w: 3 },
-      6:  { d: 'securite',      w: 3 },
+      5:  { d: 'securite',      w: 3, s: true },
+      6:  { d: 'securite',      w: 3, s: true },
       7:  { d: 'complicite',    w: 2 },
       8:  { d: 'intimite',      w: 1 },
       9:  { d: 'respect',       w: 3 },
