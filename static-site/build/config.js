@@ -281,9 +281,18 @@ const ROUTES_JEUX = [
   'jeuOuiNon', 'jeuPhrases',
 ];
 
+// Les outils : on donne deux prenoms ou deux dates, la page rend un resultat,
+// il n'y a pas de question posee. Ils ne se reconnaissent ni a leur cle ni a
+// leur gabarit, il faut donc les nommer aussi. Sans ca, la calculatrice de
+// l'amour n'avait ni compteur, ni bloc d'avis, ni interstitiel au resultat,
+// alors que la compatibilite par date de naissance, qui marche pareil, a les
+// trois (sa cle commence par « quiz »).
+const ROUTES_OUTILS = ['calculatriceAmour'];
+
 export function estPageJouable(routeKey) {
   if (!routeKey || routeKey === 'home') return false;
-  return /^(test|quiz)/.test(routeKey) || routeKey === 'zamours' || ROUTES_JEUX.includes(routeKey);
+  return /^(test|quiz)/.test(routeKey) || routeKey === 'zamours' ||
+         ROUTES_JEUX.includes(routeKey) || ROUTES_OUTILS.includes(routeKey);
 }
 
 // Pages qui portent de la publicite. La liste dit l'inverse de la precedente :
@@ -305,6 +314,7 @@ export function pagePublicitaire(routeKey) {
 // ete realise » : le mot depend du genre de page, pas du prefixe de la cle.
 // Les Z'Amours porte la cle « zamours » mais reste un quiz.
 export function genrePageJouable(routeKey) {
+  if (ROUTES_OUTILS.includes(routeKey)) return 'outil';
   if (ROUTES_JEUX.includes(routeKey)) return 'jeu';
   if (routeKey === 'zamours' || /^quiz/.test(routeKey)) return 'quiz';
   return 'test';

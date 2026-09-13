@@ -70,7 +70,9 @@
   "suite": {
     "titre": "¿Y si hacéis el test de verdad?",
     "texte": "Este porcentaje es un juego, cuenta letras. Si queréis medir lo que importa de verdad, tenemos un <a href=\"/es/test-compatibilidad-amorosa/\">test de compatibilidad de veinte preguntas</a> para hacer en pareja: valores, proyectos, dinero, día a día. Ahí el resultado sí significa algo.",
-    "bouton": "Hacer el test de 20 preguntas"
+    "bouton": "Hacer el test de 20 preguntas",
+    "autresTitre": "También os pueden gustar estas calculadoras:",
+    "autresEtiquette": "Calculadora"
   },
   "section1": {
     "title": "¿Qué es una calculadora del amor?",

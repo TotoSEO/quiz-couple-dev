@@ -70,7 +70,9 @@
   "suite": {
     "titre": "How about the real test?",
     "texte": "This percentage is a game, it counts letters. If you want to measure what actually matters, we have a <a href=\"/en/love-compatibility-test/\">compatibility test in twenty questions</a> to take together: values, plans, money, everyday life. That score does mean something.",
-    "bouton": "Take the 20-question test"
+    "bouton": "Take the 20-question test",
+    "autresTitre": "You might also like these calculators:",
+    "autresEtiquette": "Calculator"
   },
   "section1": {
     "title": "What is a love calculator?",

@@ -109,7 +109,7 @@
           <p class="calc-aide"><%= t(ns + ':form.aide', '') %></p>
         </form>
 
-        <div id="calc-resultat" class="calc-resultat" hidden>
+        <div id="calc-resultat" class="calc-resultat" data-quiz-avis data-quiz-done hidden>
           <p id="calc-noms" class="calc-noms"></p>
           <div class="calc-anneau">
             <svg viewBox="0 0 120 120" aria-hidden="true">
@@ -135,6 +135,22 @@
             <button type="button" id="calc-rejouer" class="btn btn-outline calc-action"><%= t(ns + ':form.retry', '') %></button>
           </div>
           <p id="calc-copie" class="calc-copie" hidden><%= t(ns + ':resultat.copie', '') %></p>
+
+          <div class="result-related-section mt-10">
+            <p class="text-lg font-bold text-center mb-6"><%= t(ns + ':suite.autresTitre', '') %></p>
+            <div class="result-related-grid result-related-grid--deux">
+              <a class="result-related-card" href="<%= getLocalizedUrl('testAstroPrenoms', lang) %>">
+                <span class="result-related-emoji" aria-hidden="true">&#9800;</span>
+                <span class="result-related-name"><%= t('quizzes:testAstroPrenoms.shortTitle', '') %></span>
+                <span class="result-related-type"><%= t(ns + ':suite.autresEtiquette', '') %></span>
+              </a>
+              <a class="result-related-card" href="<%= getLocalizedUrl('testDateNaissance', lang) %>">
+                <span class="result-related-emoji" aria-hidden="true">&#127874;</span>
+                <span class="result-related-name"><%= t('quizzes:testDateNaissance.shortTitle', '') %></span>
+                <span class="result-related-type"><%= t(ns + ':suite.autresEtiquette', '') %></span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -446,7 +462,21 @@
       requestAnimationFrame(pas);
     }
 
-    if (bloc.scrollIntoView) bloc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Cet outil ne passe pas par le moteur commun : il annonce lui-meme que le
+    // resultat est la, sinon son ecran ne prendrait pas son adresse
+    // « ?resultat », ne compterait pas comme page vue et n'appellerait jamais
+    // l'interstitiel. Fichier absent ? On remonte simplement sur le resultat.
+    function versLeResultat() {
+      if (bloc.scrollIntoView) bloc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    if (window.QCResultat) {
+      window.QCResultat.arrivee(bloc, {
+        lang: document.documentElement.lang || 'fr',
+        apres: versLeResultat
+      });
+    } else {
+      versLeResultat();
+    }
   }
 
   form.addEventListener('submit', function (e) {
@@ -467,6 +497,7 @@
   });
 
   document.getElementById('calc-rejouer').addEventListener('click', function () {
+    if (window.QCResultat) window.QCResultat.retour();
     bloc.hidden = true;
     document.getElementById('calc-carte').classList.remove('calc-carte--resultat');
     elA.value = ''; elB.value = ''; elA.focus();

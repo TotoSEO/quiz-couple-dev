@@ -70,7 +70,9 @@
   "suite": {
     "titre": "E se faceste il test vero?",
     "texte": "Questa percentuale è un gioco, conta lettere. Se volete misurare quello che conta davvero, abbiamo un <a href=\"/it/test-compatibilita-amorosa/\">test di compatibilità in venti domande</a> da fare in due: valori, progetti, soldi, quotidiano. Lì il punteggio significa qualcosa.",
-    "bouton": "Fare il test in 20 domande"
+    "bouton": "Fare il test in 20 domande",
+    "autresTitre": "Potrebbero piacervi anche queste calcolatrici:",
+    "autresEtiquette": "Calcolatrice"
   },
   "section1": {
     "title": "Che cos'è una calcolatrice dell'amore?",

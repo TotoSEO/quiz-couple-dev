@@ -7091,6 +7091,22 @@ body.quiz-has-result .related-tests-section { display: none !important; }
 .qr-star.on svg { fill: #f5b301; }
 @media (prefers-reduced-motion: reduce) { .qr-rate { animation: none; } .qr-star svg { transition: none; } }
 
+/* Le raccourci de notation en tete du resultat d'un outil, et collant comme
+   celui des ecrans de resultat du moteur commun : 4.5rem le posent sous
+   l'en-tete, et son fond est opaque, sinon le resultat defilerait au travers.
+   Le collant s'arrete avec la carte qui le contient, il ne descend donc
+   jamais dans le reste de la page. */
+.qr-rate--collant {
+  position: sticky; top: 4.5rem; z-index: 3;
+  margin: 0 auto 1.5rem; max-width: none;
+  background: linear-gradient(hsl(var(--primary) / .08), hsl(var(--secondary) / .06)) hsl(var(--card));
+}
+@media (prefers-reduced-motion: reduce) { .qr-rate--collant { position: static; } }
+
+/* Deux cartes dans une grille faite pour trois laissaient un vide a droite. */
+.result-related-grid--deux { grid-template-columns: repeat(2, 1fr); max-width: 24rem; }
+@media (max-width: 640px) { .result-related-grid--deux { grid-template-columns: 1fr; max-width: 16rem; } }
+
 /* ═══════════════════════════════════════════════════════════════════
    Home: "create your own quiz" promo + most-played community quizzes
    ═══════════════════════════════════════════════════════════════════ */

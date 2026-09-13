@@ -364,6 +364,7 @@
     testEmmenager: 'Emménager ensemble',
     testAstroPrenoms: 'Compatibilité des prénoms',
     testDateNaissance: 'Compatibilité par date de naissance',
+    calculatriceAmour: "Calculatrice de l'amour",
     testJalousie: 'Jalousie',
     testKarmique: 'Relation karmique',
     testSuisJeAmoureux: 'Suis-je amoureux',
@@ -548,6 +549,7 @@
   var SANS_RATIO = {
     testAstroPrenoms: 'résultat immédiat',
     testDateNaissance: 'résultat immédiat',
+    calculatriceAmour: 'résultat immédiat',
     jeuOuiNon: 'jeu sans fin de partie',
     jeuPhrases: 'jeu sans fin de partie',
     jeuActionVerite: 'jeu sans fin de partie',

@@ -16,11 +16,11 @@
   var HJ = { apikey: KEY, 'Authorization': 'Bearer ' + KEY, 'Content-Type': 'application/json' };
 
   var UI = {
-    fr: { close: 'Fermer', rate: 'Votre avis en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot sur votre expérience (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Une erreur est survenue, réessayez.', none: 'Soyez les premiers à donner votre avis !', based: 'avis', doneTest: 'Ce test a déjà été réalisé {n} fois', playedTest: 'Ce test a déjà été joué {n} fois', doneQuiz: 'Ce quiz a déjà été joué {n} fois', doneGame: 'Ce jeu a déjà été joué {n} fois', votesTotal: '{n} votes déposés sur ces dilemmes', votesTotalPC: '{n} votes déposés sur ces propositions', votesTotalON: '{n} oui/non répondus sur ces situations' },
-    en: { close: 'Close', rate: 'Your review in 1 click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word about your experience (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Something went wrong, please retry.', none: 'Be the first to leave a review!', based: 'reviews', doneTest: 'This test has been taken {n} times', playedTest: 'This test has already been played {n} times', doneQuiz: 'This quiz has been played {n} times', doneGame: 'This game has been played {n} times', votesTotal: '{n} votes cast on these dilemmas', votesTotalPC: '{n} votes cast on these statements', votesTotalON: '{n} yes/no answered on these situations' },
-    es: { close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Unas palabras sobre tu experiencia (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Tu opinión se verá tras la validación.', err: 'Ha ocurrido un error, inténtalo de nuevo.', none: '¡Sé el primero en opinar!', based: 'opiniones', doneTest: 'Este test se ha realizado {n} veces', playedTest: 'Este test ya se ha jugado {n} veces', doneQuiz: 'Este quiz se ha jugado {n} veces', doneGame: 'Este juego se ha jugado {n} veces', votesTotal: '{n} votos emitidos en estos dilemas', votesTotalPC: '{n} votos emitidos en estas propuestas', votesTotalON: '{n} sí/no respondidos en estas situaciones' },
-    de: { close: 'Schließen', rate: 'Deine Bewertung in 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort zu deiner Erfahrung (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Deine Bewertung erscheint nach der Prüfung.', err: 'Ein Fehler ist aufgetreten, bitte erneut versuchen.', none: 'Sei der Erste mit einer Bewertung!', based: 'Bewertungen', doneTest: 'Dieser Test wurde {n} mal gemacht', playedTest: 'Dieser Test wurde schon {n} mal gespielt', doneQuiz: 'Dieses Quiz wurde {n} mal gespielt', doneGame: 'Dieses Spiel wurde {n} mal gespielt', votesTotal: '{n} abgegebene Stimmen zu diesen Dilemmata', votesTotalPC: '{n} abgegebene Stimmen zu diesen Aussagen', votesTotalON: '{n} Ja/Nein-Antworten zu diesen Situationen' },
-    it: { close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola sulla tua esperienza (facoltativo)', submit: 'Pubblica la mia recensione', thanks: 'Grazie! La recensione sarà visibile dopo la moderazione.', err: 'Si è verificato un errore, riprova.', none: 'Sii il primo a lasciare una recensione!', based: 'recensioni', doneTest: 'Questo test è stato fatto {n} volte', playedTest: 'Questo test è già stato giocato {n} volte', doneQuiz: 'Questo quiz è stato giocato {n} volte', doneGame: 'Questo gioco è stato giocato {n} volte', votesTotal: '{n} voti espressi su questi dilemmi', votesTotalPC: '{n} voti espressi su queste proposte', votesTotalON: '{n} sì/no dati su queste situazioni' }
+    fr: { close: 'Fermer', rate: 'Votre avis en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot sur votre expérience (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Une erreur est survenue, réessayez.', none: 'Soyez les premiers à donner votre avis !', based: 'avis', doneTest: 'Ce test a déjà été réalisé {n} fois', playedTest: 'Ce test a déjà été joué {n} fois', doneQuiz: 'Ce quiz a déjà été joué {n} fois', doneGame: 'Ce jeu a déjà été joué {n} fois', doneOutil: 'Cette calculatrice a déjà été utilisée {n} fois', votesTotal: '{n} votes déposés sur ces dilemmes', votesTotalPC: '{n} votes déposés sur ces propositions', votesTotalON: '{n} oui/non répondus sur ces situations' },
+    en: { close: 'Close', rate: 'Your review in 1 click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word about your experience (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Something went wrong, please retry.', none: 'Be the first to leave a review!', based: 'reviews', doneTest: 'This test has been taken {n} times', playedTest: 'This test has already been played {n} times', doneQuiz: 'This quiz has been played {n} times', doneGame: 'This game has been played {n} times', doneOutil: 'This calculator has already been used {n} times', votesTotal: '{n} votes cast on these dilemmas', votesTotalPC: '{n} votes cast on these statements', votesTotalON: '{n} yes/no answered on these situations' },
+    es: { close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Unas palabras sobre tu experiencia (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Tu opinión se verá tras la validación.', err: 'Ha ocurrido un error, inténtalo de nuevo.', none: '¡Sé el primero en opinar!', based: 'opiniones', doneTest: 'Este test se ha realizado {n} veces', playedTest: 'Este test ya se ha jugado {n} veces', doneQuiz: 'Este quiz se ha jugado {n} veces', doneGame: 'Este juego se ha jugado {n} veces', doneOutil: 'Esta calculadora ya se ha usado {n} veces', votesTotal: '{n} votos emitidos en estos dilemas', votesTotalPC: '{n} votos emitidos en estas propuestas', votesTotalON: '{n} sí/no respondidos en estas situaciones' },
+    de: { close: 'Schließen', rate: 'Deine Bewertung in 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort zu deiner Erfahrung (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Deine Bewertung erscheint nach der Prüfung.', err: 'Ein Fehler ist aufgetreten, bitte erneut versuchen.', none: 'Sei der Erste mit einer Bewertung!', based: 'Bewertungen', doneTest: 'Dieser Test wurde {n} mal gemacht', playedTest: 'Dieser Test wurde schon {n} mal gespielt', doneQuiz: 'Dieses Quiz wurde {n} mal gespielt', doneGame: 'Dieses Spiel wurde {n} mal gespielt', doneOutil: 'Dieser Rechner wurde schon {n} mal benutzt', votesTotal: '{n} abgegebene Stimmen zu diesen Dilemmata', votesTotalPC: '{n} abgegebene Stimmen zu diesen Aussagen', votesTotalON: '{n} Ja/Nein-Antworten zu diesen Situationen' },
+    it: { close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola sulla tua esperienza (facoltativo)', submit: 'Pubblica la mia recensione', thanks: 'Grazie! La recensione sarà visibile dopo la moderazione.', err: 'Si è verificato un errore, riprova.', none: 'Sii il primo a lasciare una recensione!', based: 'recensioni', doneTest: 'Questo test è stato fatto {n} volte', playedTest: 'Questo test è già stato giocato {n} volte', doneQuiz: 'Questo quiz è stato giocato {n} volte', doneGame: 'Questo gioco è stato giocato {n} volte', doneOutil: 'Questa calcolatrice è già stata usata {n} volte', votesTotal: '{n} voti espressi su questi dilemmi', votesTotalPC: '{n} voti espressi su queste proposte', votesTotalON: '{n} sì/no dati su queste situazioni' }
   };
   var t = UI[lang] || UI.fr;
   function fmt(n) { try { return Number(n).toLocaleString(lang); } catch (e) { return '' + n; } }
@@ -95,10 +95,10 @@
         var phrase, n;
         if (lances >= finis) {
           n = lances;
-          phrase = genre === 'jeu' ? t.doneGame : genre === 'quiz' ? t.doneQuiz : t.playedTest;
+          phrase = genre === 'outil' ? t.doneOutil : genre === 'jeu' ? t.doneGame : genre === 'quiz' ? t.doneQuiz : t.playedTest;
         } else {
           n = finis;
-          phrase = genre === 'jeu' ? t.doneGame : genre === 'quiz' ? t.doneQuiz : t.doneTest;
+          phrase = genre === 'outil' ? t.doneOutil : genre === 'jeu' ? t.doneGame : genre === 'quiz' ? t.doneQuiz : t.doneTest;
         }
         if (n > 0) pose(phrase.replace('{n}', fmt(n)));
       })
@@ -196,7 +196,7 @@
       setTimeout(function () { litCompteur(slug, genre); }, 1200);
     }
     check();
-    new MutationObserver(check).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class', 'style', 'data-quiz-done'] });
+    new MutationObserver(check).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class', 'style', 'hidden', 'data-quiz-done'] });
   }
 
   // ── Suivi des parties a distance ──
@@ -226,7 +226,7 @@
   // mais quatre moteurs autonomes ont leur propre racine. On les nomme ici
   // plutot que d'ecouter le document entier, sinon un clic sur le bandeau
   // cookies ou sur la FAQ passerait pour un lancement.
-  var RACINES_MOTEUR = '#quiz-engine, [data-quiz], #astro-form, #dn-outil, #vacances-racine';
+  var RACINES_MOTEUR = '#quiz-engine, [data-quiz], #astro-form, #dn-outil, #vacances-racine, #calc-carte';
 
   function watchStart(slug) {
     var cle = 'qc-start-' + slug;
@@ -347,7 +347,11 @@
       var b = row.querySelectorAll('.qr-star');
       for (var i = 0; i < b.length; i++) b[i].classList.toggle('on', (i + 1) <= n);
     }
-    function inject(card) {
+    // « collant » : le raccourci se pose en tete du resultat et suit le
+    // defilement, comme le bloc de notation des ecrans de resultat du moteur
+    // commun. Les pages qui n'ont pas ce moteur (les outils) le demandent par
+    // l'attribut data-quiz-avis, sinon le raccourci reste en bas de la carte.
+    function inject(card, collant) {
       if (card.querySelector('.qr-rate')) return;
       // Les ecrans de resultat portent deja un formulaire d'avis complet, avec
       // ses propres etoiles. Y ajouter le raccourci donnait deux blocs de
@@ -376,17 +380,22 @@
       })(i);
       row.addEventListener('mouseleave', function () { paint(row, 0); });
       box.appendChild(row);
-      card.appendChild(box);
+      if (collant) {
+        box.className = 'qr-rate qr-rate--collant';
+        card.insertBefore(box, card.firstChild);
+      } else {
+        card.appendChild(box);
+      }
     }
     // Deux cibles : l'ecran de resultat de fin de partie, et les invitations
     // qu'un moteur peut poser en cours de route (.qr-invite). Les jeux tres
     // longs n'ont sinon qu'une seule occasion de demander un avis, celle que
     // presque personne n'atteint : la toute derniere carte.
-    var SELECTEUR = '.quiz-result-card, .qr-invite';
+    var SELECTEUR = '.quiz-result-card, .qr-invite, [data-quiz-avis]';
     function injecteTout() {
       var cibles = document.querySelectorAll(SELECTEUR);
       for (var i = 0; i < cibles.length; i++) {
-        if (!cibles[i].querySelector('.qr-rate')) inject(cibles[i]);
+        if (!cibles[i].querySelector('.qr-rate')) inject(cibles[i], cibles[i].hasAttribute('data-quiz-avis'));
       }
     }
     injecteTout();
