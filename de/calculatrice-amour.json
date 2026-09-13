@@ -70,7 +70,9 @@
   "suite": {
     "titre": "Wie wäre es mit dem echten Test?",
     "texte": "Dieser Prozentwert ist ein Spiel, er zählt Buchstaben. Wenn ihr messen wollt, worauf es wirklich ankommt, haben wir einen <a href=\"/de/liebeskompatibilitaet-test/\">Kompatibilitätstest mit zwanzig Fragen</a> für euch beide: Werte, Pläne, Geld, Alltag. Da bedeutet das Ergebnis etwas.",
-    "bouton": "Den Test mit 20 Fragen machen"
+    "bouton": "Den Test mit 20 Fragen machen",
+    "autresTitre": "Diese Rechner könnten euch auch gefallen:",
+    "autresEtiquette": "Rechner"
   },
   "section1": {
     "title": "Was ist ein Liebesrechner?",

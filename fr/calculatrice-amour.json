@@ -67,7 +67,9 @@
   "suite": {
     "titre": "Et si vous faisiez le vrai test ?",
     "texte": "Ce pourcentage est un jeu, il compte des lettres. Si vous voulez mesurer ce qui compte pour de bon, on a un <a href=\"/test-compatibilite-amoureuse/\">test de compatibilité en vingt questions</a> à faire à deux : valeurs, projets, argent, quotidien. Là, le score veut dire quelque chose.",
-    "bouton": "Faire le test en 20 questions"
+    "bouton": "Faire le test en 20 questions",
+    "autresTitre": "Vous pourriez aussi aimer ces calculatrices :",
+    "autresEtiquette": "Calculatrice"
   },
   "section1": {
     "title": "Qu'est-ce qu'une calculatrice de l'amour ?",
