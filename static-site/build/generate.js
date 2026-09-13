@@ -1249,7 +1249,9 @@ function copyStaticAssets() {
   // sur le serveur du partenaire : une image distante qui change ou disparaît
   // casserait l'encart sans prévenir). Le dossier vacances porte les 200
   // photos de destinations du test « où partir en vacances ? ».
-  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances']) {
+  // « produits » porte les visuels Amazon des encarts de resultat, copies chez
+  // nous plutot qu'appeles sur le CDN d'Amazon.
+  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances', 'produits']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {
