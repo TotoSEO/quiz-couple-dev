@@ -11751,6 +11751,17 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   color: hsl(var(--foreground));
   text-wrap: balance;
 }
+/* La note relevee sur la fiche Amazon, en petit sous le nom, avec son etoile
+   doree. Le nombre d'avis n'y figure pas : fige dans le code, il serait faux
+   au bout d'une semaine. */
+.qr-produit-note {
+  display: block;
+  margin-top: .3rem;
+  font-size: .82rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+.qr-produit-etoile { color: #f5b301; margin-right: .25rem; }
 .qr-produit-btn {
   display: inline-flex;
   align-items: center;

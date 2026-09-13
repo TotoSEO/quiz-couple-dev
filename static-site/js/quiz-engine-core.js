@@ -2362,158 +2362,166 @@ var QuizEngine = (function() {
   // proposition d'achat tombe juste : on vient de lire son verdict.
   //
   // La carte est faite pour le clic, rien d'autre : une image carree, le prix
-  // en bulle, le nom, et un bouton. Pas de texte d'explication. L'image et le
-  // bouton portent le meme lien, tout l'encart mene au produit.
+  // en bulle, le nom, la note, et un bouton. Pas de texte d'explication.
+  // L'image et le bouton portent le meme lien, tout l'encart mene au produit.
   //
-  // Les liens sont des liens d'affiliation Amazon (link.amazon, qui redirige
-  // vers la fiche). Ils portent rel="sponsored nofollow noopener" comme tous
-  // les liens remuneres du site, s'ouvrent dans un nouvel onglet pour ne pas
-  // perdre l'ecran de resultat, et l'encart se ferme sur une mention discrete :
-  // le programme Partenaires Amazon impose de signaler les liens, et Google
-  // sanctionne un lien remunere non signale. Les visuels viennent de
-  // m.media-amazon.com, comme le programme le prevoit ; ils ne se chargent
-  // qu'a l'affichage du resultat, donc jamais dans le premier ecran.
+  // Les liens sont des liens d'affiliation Amazon. Ils portent
+  // rel="sponsored nofollow noopener" comme tous les liens remuneres du site,
+  // s'ouvrent dans un nouvel onglet pour ne pas perdre l'ecran de resultat, et
+  // l'encart se ferme sur une mention discrete : le programme Partenaires
+  // Amazon impose de signaler les liens, et Google sanctionne un lien remunere
+  // non signale.
   //
-  // Francais seulement pour le moment : les fiches, les prix et les liens
-  // sont ceux d'Amazon.fr.
+  // Les visuels sont copies dans public/produits/ (WebP carre de 600 px) au
+  // lieu d'etre appeles chez Amazon : un visuel retire de leur CDN laissait un
+  // trou dans la carte, et une requete vers un domaine tiers partait avant meme
+  // que la personne ait clique.
+  //
+  // Chaque produit a une entree par langue, avec le lien d'affiliation de la
+  // place de marche correspondante (amazon.fr, .com, .de, .es, .it) : un tag
+  // francais ne rapporte rien sur une vente allemande. Une langue absente de
+  // l'entree n'affiche simplement pas de carte.
   var PRODUITS = {
     lovebox: {
-      nom: 'Lovebox : messages à distance',
-      prix: '99,99 €',
-      url: 'https://link.amazon/B07yg77Vv',
-      images: ['https://m.media-amazon.com/images/I/51KeIFuVF5L._AC_SX679_.jpg']
+      fr: { nom: 'Lovebox : messages à distance', prix: '99,99 €', note: 4.0, avis: 74, url: 'https://link.amazon/B07yg77Vv', images: ['/produits/lovebox-fr-1.webp'] },
+      en: { nom: 'Lovebox Black & White Love Note Messenger', prix: '$99.99', note: 4.3, avis: 495, url: 'https://amzn.to/4gYUvy8', images: ['/produits/lovebox-en-1.webp'] },
+      de: { nom: 'Lovebox Schwarz & Weiß, der Love Note Messenger', prix: '99,99 €', note: 4.2, avis: 72, url: 'https://amzn.to/4hoHM9c', images: ['/produits/lovebox-de-1.webp'] },
+      es: { nom: 'Lovebox Negro y Blanco, caja de amor conectada', prix: '99,99 €', note: 4.1, avis: 73, url: 'https://amzn.to/4hpG5bF', images: ['/produits/lovebox-es-1.webp'] },
+      it: { nom: 'Lovebox Nero e Bianco, scatola per amore connessa', prix: '99,99 €', note: 4.1, avis: 72, url: 'https://amzn.to/4inlC8o', images: ['/produits/lovebox-it-1.webp'] }
     },
     dimoi: {
-      nom: 'Dimoi, jeu de cartes pour couple',
-      prix: '19,99 €',
-      url: 'https://link.amazon/B06fYzJxd',
-      images: ['https://m.media-amazon.com/images/I/61nPGdvqA+L._AC_SL1500_.jpg',
-               'https://m.media-amazon.com/images/I/61cqNsdzQDL._AC_SL1500_.jpg']
+      fr: { nom: 'Dimoi, jeu de cartes pour couple', prix: '19,99 €', note: 4.5, avis: 1949, url: 'https://link.amazon/B06fYzJxd', images: ['/produits/dimoi-fr-1.webp', '/produits/dimoi-fr-2.webp'] },
+      en: { nom: 'We\'re Not Really Strangers, Couples Edition', prix: '$20.00', note: 4.6, avis: 2712, url: 'https://amzn.to/46lXrQw', images: ['/produits/dimoi-en-1.webp'] },
+      de: { nom: 'Quality Time, das Spiel für Paare (240 Fragen)', prix: '17,90 €', note: 4.6, avis: 487, url: 'https://amzn.to/4xrGcbw', images: ['/produits/dimoi-de-1.webp'] },
+      es: { nom: 'Desconocidos, juego para parejas (220 cartas)', prix: '19,69 €', note: 4.4, avis: 64, url: 'https://link.amazon/B08K4o9pG', images: ['/produits/dimoi-es-1.webp'] },
+      it: { nom: 'BLABLA Pocket per coppie, carte da conversazione', prix: '14,10 €', note: 4.2, avis: 261, url: 'https://amzn.to/3VtMSZh', images: ['/produits/dimoi-it-1.webp'] }
     },
     quiSaitMieux: {
-      nom: 'Qui Sait Mieux Qui ? Édition couple',
-      prix: '24,99 €',
-      url: 'https://link.amazon/B0flcy3T3',
-      images: ['https://m.media-amazon.com/images/I/71SsYN7iEML._AC_SL1500_.jpg',
-               'https://m.media-amazon.com/images/I/81uUwTmUXyL._AC_SL1500_.jpg']
+      fr: { nom: 'Qui Sait Mieux Qui ? Édition couple', prix: '24,99 €', note: 4.5, avis: 162, url: 'https://link.amazon/B0flcy3T3', images: ['/produits/quiSaitMieux-fr-1.webp', '/produits/quiSaitMieux-fr-2.webp'] },
+      en: { nom: 'Answer This, do you really know your partner?', prix: '$23.99', note: 4.6, avis: 1128, url: 'https://amzn.to/46osP0H', images: ['/produits/quiSaitMieux-en-1.webp'] },
+      de: { nom: 'Kennst du mich? Paare, 150 Fragen', prix: '24,99 €', note: 4.2, avis: 101, url: 'https://amzn.to/3VtN0If', images: ['/produits/quiSaitMieux-de-1.webp'] },
+      es: { nom: '¿Cuánto conoces a tu pareja? 150 preguntas', prix: '24,99 €', note: 4.5, avis: 1177, url: 'https://link.amazon/B0hzwNwbR', images: ['/produits/quiSaitMieux-es-1.webp'] },
+      it: { nom: 'Quanti mi conosci? Coppie, 150 domande', prix: '24,99 €', note: 4.2, avis: 108, url: 'https://amzn.to/4xWsBKu', images: ['/produits/quiSaitMieux-it-1.webp'] }
     },
     dilemmes: {
-      nom: 'Dilemmes de m*rde, le jeu (18+)',
-      prix: '15 €',
-      url: 'https://link.amazon/B09o4lmdR',
-      images: ['https://m.media-amazon.com/images/I/61c-5UZTfcL._AC_SL1500_.jpg',
-               'https://m.media-amazon.com/images/I/71PQO03GQ4L._AC_SL1476_.jpg']
+      fr: { nom: 'Dilemmes de m*rde, le jeu (18+)', prix: '13,50 €', note: 4.5, avis: 8, url: 'https://link.amazon/B09o4lmdR', images: ['/produits/dilemmes-fr-1.webp', '/produits/dilemmes-fr-2.webp'] },
+      en: { nom: 'Pick Your Poison After Dark, adult party game', prix: '$24.95', note: 4.4, avis: 4368, url: 'https://amzn.to/4hqT6la', images: ['/produits/dilemmes-en-1.webp'] },
+      de: { nom: 'WHO? Wer von uns? Das Voting-Partyspiel', prix: '18,90 €', note: 4.5, avis: 60, url: 'https://amzn.to/46lCMMA', images: ['/produits/dilemmes-de-1.webp'] },
+      es: { nom: 'Pick Your Poison, ¿qué preferirías hacer?', prix: '27,99 €', note: 4.4, avis: 4579, url: 'https://link.amazon/B06xEltSk', images: ['/produits/dilemmes-es-1.webp'] },
+      it: { nom: 'Spietato, gioco di carte per adulti', prix: '24,90 €', note: 4.6, avis: 769, url: 'https://amzn.to/46o664Z', images: ['/produits/dilemmes-it-1.webp'] }
     },
     astro: {
-      nom: 'Le grand livre des compatibilités amoureuses astrologiques',
-      prix: '32 €',
-      url: 'https://link.amazon/B01VDiOmZ',
-      images: ['https://m.media-amazon.com/images/I/61Zyl-QvHmL._SL1218_.jpg']
+      fr: { nom: 'Le grand livre des compatibilités amoureuses astrologiques', prix: '32,00 €', note: 4.8, avis: 145, url: 'https://link.amazon/B01VDiOmZ', images: ['/produits/astro-fr-1.webp'] },
+      en: { nom: 'Linda Goodman\'s Love Signs', prix: '$13.03', note: 4.7, avis: 1091, url: 'https://amzn.to/4cGypiB', images: ['/produits/astro-en-1.webp'] },
+      de: { nom: 'Sage mir dein Sternzeichen, und ich sage dir, wie du liebst', prix: '13,00 €', note: 4.5, avis: 166, url: 'https://amzn.to/4gPlltL', images: ['/produits/astro-de-1.webp'] },
+      es: { nom: 'Escrito en las estrellas, secretos de la compatibilidad', prix: '9,45 €', note: 3.9, avis: 11, url: 'https://link.amazon/B0bcLDmeL', images: ['/produits/astro-es-1.webp'] },
+      it: { nom: 'Astrologia della relazione. Amore, sesso e compatibilità', prix: '26,60 €', note: 3.9, avis: 11, url: 'https://amzn.to/4h2eBYf', images: ['/produits/astro-it-1.webp'] }
     },
     pervers: {
-      nom: 'Pervers narcissique : détecter, comprendre, se protéger',
-      prix: '28,99 €',
-      url: 'https://link.amazon/B03OHakJw',
-      images: ['https://m.media-amazon.com/images/I/61K5NCA8nzL._SL1491_.jpg']
+      fr: { nom: 'Pervers narcissique : détecter, comprendre, se protéger', prix: '28,99 €', note: 4.4, avis: 12, url: 'https://link.amazon/B03OHakJw', images: ['/produits/pervers-fr-1.webp'] },
+      en: { nom: 'Psychopath Free (Expanded Edition)', prix: '$10.73', note: 4.7, avis: 7876, url: 'https://amzn.to/4hp9oen', images: ['/produits/pervers-en-1.webp'] },
+      de: { nom: 'Verdeckter Narzissmus in Beziehungen', prix: '24,00 €', note: 4.7, avis: 228, url: 'https://amzn.to/4AhcUPI', images: ['/produits/pervers-de-1.webp'] },
+      es: { nom: 'Hasta la vista, narcisista', prix: '18,90 €', note: 4.8, avis: 134, url: 'https://link.amazon/B03WRXEB2', images: ['/produits/pervers-es-1.webp'] },
+      it: { nom: 'Narcisista perverso, guida completa', prix: '12,99 €', note: 4.1, avis: 242, url: 'https://amzn.to/4j29tpC', images: ['/produits/pervers-it-1.webp'] }
     },
     manipulateurs: {
-      nom: 'Les manipulateurs sont parmi nous',
-      prix: '13,90 €',
-      url: 'https://link.amazon/B07PumVLh',
-      images: ['https://m.media-amazon.com/images/I/71nh82HV2dS._SL1164_.jpg']
+      fr: { nom: 'Les manipulateurs sont parmi nous', prix: '13,90 €', note: 4.6, avis: 733, url: 'https://link.amazon/B07PumVLh', images: ['/produits/manipulateurs-fr-1.webp'] },
+      en: { nom: 'The Gaslight Effect', prix: '$19.00', note: 4.5, avis: 1320, url: 'https://amzn.to/3TtT3fl', images: ['/produits/manipulateurs-en-1.webp'] },
+      de: { nom: 'Manipulationstechniken, die Macht der Manipulation', prix: '15,90 €', note: 4.3, avis: 191, url: 'https://amzn.to/4xqJOur', images: ['/produits/manipulateurs-de-1.webp'] },
+      es: { nom: 'Psicología oscura y manipulación', prix: '20,79 €', note: 4.5, avis: 18, url: 'https://link.amazon/B0dzzycBd', images: ['/produits/manipulateurs-es-1.webp'] },
+      it: { nom: 'La manipolazione affettiva nella coppia', prix: '20,00 €', note: 4.4, avis: 18, url: 'https://amzn.to/4r7qmS1', images: ['/produits/manipulateurs-it-1.webp'] }
     },
     dependance: {
-      nom: 'Vaincre la dépendance affective',
-      prix: '18,90 €',
-      url: 'https://link.amazon/B0gHqDfVz',
-      images: ['https://m.media-amazon.com/images/I/71Noh44PuhL._SL1373_.jpg']
+      fr: { nom: 'Vaincre la dépendance affective', prix: '18,90 €', note: 4.4, avis: 399, url: 'https://link.amazon/B0gHqDfVz', images: ['/produits/dependance-fr-1.webp'] },
+      en: { nom: 'Codependent No More (Revised and Updated)', prix: '$15.38', note: 4.7, avis: 19236, url: 'https://amzn.to/4yzvkcw', images: ['/produits/dependance-en-1.webp'] },
+      de: { nom: 'Mein Weg aus der emotionalen Abhängigkeit', prix: '15,90 €', note: 4.5, avis: 36, url: 'https://amzn.to/3Tr3joI', images: ['/produits/dependance-de-1.webp'] },
+      es: { nom: 'La superación de la dependencia emocional', prix: '18,00 €', note: 4.4, avis: 282, url: 'https://link.amazon/B0jdAiVqw', images: ['/produits/dependance-es-1.webp'] },
+      it: { nom: 'La dipendenza affettiva, strumenti e strategie', prix: '18,05 €', note: 4.6, avis: 14, url: 'https://amzn.to/3T1PtZC', images: ['/produits/dependance-it-1.webp'] }
     },
     jalousie: {
-      nom: "J'arrête d'être jaloux(se) ! Programme de 21 jours",
-      prix: '11,90 €',
-      url: 'https://link.amazon/B0geUNXuU',
-      images: ['https://m.media-amazon.com/images/I/7135+7tt67L._SL1400_.jpg']
+      fr: { nom: 'J\'arrête d\'être jaloux(se) ! Programme de 21 jours', prix: '11,90 €', note: 4.2, avis: 144, url: 'https://link.amazon/B0geUNXuU', images: ['/produits/jalousie-fr-1.webp'] },
+      en: { nom: 'The Overcoming Jealousy Workbook', prix: '$16.97', note: 4.2, avis: 155, url: 'https://amzn.to/4xjZrDJ', images: ['/produits/jalousie-en-1.webp'] },
+      de: { nom: 'Eifersucht: Vertrauen lernen', prix: '12,80 €', note: 4.1, avis: 591, url: 'https://amzn.to/4xn0TW4', images: ['/produits/jalousie-de-1.webp'] },
+      es: { nom: 'Celos, comprender y superar los celos', prix: '14,25 €', note: 3.3, avis: 37, url: 'https://link.amazon/B08MU6VOP', images: ['/produits/jalousie-es-1.webp'] },
+      it: { nom: 'La cura della gelosia', prix: '15,67 €', note: 4.3, avis: 246, url: 'https://amzn.to/3TtTfLB', images: ['/produits/jalousie-it-1.webp'] }
     },
     sauver: {
-      nom: 'Sauver son couple : avec conscience',
-      prix: '19,90 €',
-      url: 'https://link.amazon/B00bHorcS',
-      images: ['https://m.media-amazon.com/images/I/61fwWSxM-kL._SL1500_.jpg']
+      fr: { nom: 'Sauver son couple : avec conscience', prix: '19,90 €', note: 4.8, avis: 15, url: 'https://link.amazon/B00bHorcS', images: ['/produits/sauver-fr-1.webp'] },
+      en: { nom: 'Hold Me Tight, seven conversations for a lifetime of love', prix: '$9.43', note: 4.6, avis: 6415, url: 'https://amzn.to/3TtFxZd', images: ['/produits/sauver-en-1.webp'] },
+      de: { nom: '8 Gespräche, die jedes Paar führen sollte', prix: '14,99 €', note: 4.5, avis: 349, url: 'https://amzn.to/4Ahd21E', images: ['/produits/sauver-de-1.webp'] },
+      es: { nom: 'Crisis, no ruptura', prix: '17,95 €', note: 5.0, avis: 10, url: 'https://link.amazon/B0gDm6ePT', images: ['/produits/sauver-es-1.webp'] },
+      it: { nom: 'Se la coppia è in crisi', prix: '29,00 €', note: 4.3, avis: 60, url: 'https://amzn.to/4yFR9HH', images: ['/produits/sauver-it-1.webp'] }
     },
     autotherapie: {
-      nom: 'Auto-thérapie de couple : communication, désir, routine',
-      prix: '19,90 €',
-      url: 'https://link.amazon/B07ir65nf',
-      images: ['https://m.media-amazon.com/images/I/416CHnagJ9L.jpg']
+      fr: { nom: 'Auto-thérapie de couple : communication, désir, routine', prix: '19,90 €', note: 4.1, avis: 320, url: 'https://link.amazon/B07ir65nf', images: ['/produits/autotherapie-fr-1.webp'] },
+      en: { nom: 'Couples Therapy Workbook', prix: '$17.95', note: 4.3, avis: 319, url: 'https://amzn.to/4A2OBEO', images: ['/produits/autotherapie-en-1.webp'] },
+      de: { nom: 'Paartherapie für Zuhause, in 8 Wochen', prix: '16,95 €', note: 4.7, avis: 63, url: 'https://amzn.to/4AcQ63n', images: ['/produits/autotherapie-de-1.webp'] },
+      es: { nom: 'El amor se construye juntos', prix: '17,05 €', note: 4.5, avis: 39, url: 'https://link.amazon/B070n5HKk', images: ['/produits/autotherapie-es-1.webp'] },
+      it: { nom: 'La comunicazione nella coppia', prix: '15,57 €', note: 4.4, avis: 207, url: 'https://amzn.to/4AcQhM5', images: ['/produits/autotherapie-it-1.webp'] }
     },
     divorce: {
-      nom: 'Divorce 2026 : le guide pratique',
-      prix: '26 €',
-      url: 'https://link.amazon/B01zKWpYZ',
-      images: ['https://m.media-amazon.com/images/I/71knH6ewH6L._SY466_.jpg']
+      fr: { nom: 'Divorce 2026 : le guide pratique', prix: '26,00 €', note: 5.0, avis: 2, url: 'https://link.amazon/B01zKWpYZ', images: ['/produits/divorce-fr-1.webp'] },
+      en: { nom: 'Nolo\'s Essential Guide to Divorce', prix: '$26.68', url: 'https://amzn.to/46iTcFt', images: ['/produits/divorce-en-1.webp'] },
+      de: { nom: 'Ich will die Scheidung! Der Rechtsratgeber', prix: '21,99 €', note: 5.0, avis: 2, url: 'https://amzn.to/4dBEwFc', images: ['/produits/divorce-de-1.webp'] },
+      es: { nom: 'Los procesos de separación y divorcio', prix: '15,00 €', note: 3.5, avis: 2, url: 'https://link.amazon/B0iVDZsU9', images: ['/produits/divorce-es-1.webp'] },
+      it: { nom: 'Come superare divorzio e separazione', prix: '17,78 €', note: 3.7, avis: 60, url: 'https://amzn.to/4Aijaqn', images: ['/produits/divorce-it-1.webp'] }
     },
     pacte: {
-      nom: 'Le pacte des (futurs) parents',
-      prix: '14,90 €',
-      url: 'https://link.amazon/B0cQ6FpmA',
-      images: ['https://m.media-amazon.com/images/I/7115plYTqKL._SY425_.jpg']
+      fr: { nom: 'Le pacte des (futurs) parents', prix: '14,90 €', note: 4.5, avis: 101, url: 'https://link.amazon/B0cQ6FpmA', images: ['/produits/pacte-fr-1.webp'] },
+      en: { nom: 'And Baby Makes Three', prix: '$16.99', note: 4.5, avis: 617, url: 'https://amzn.to/4xSLoX7', images: ['/produits/pacte-en-1.webp'] },
+      de: { nom: 'Eltern werden, Partner bleiben', prix: '25,00 €', note: 3.9, avis: 13, url: 'https://amzn.to/4j27lhy', images: ['/produits/pacte-de-1.webp'] },
+      es: { nom: 'Pareja en positivo', prix: '17,00 €', note: 5.0, avis: 1, url: 'https://link.amazon/B07blM4Du', images: ['/produits/pacte-es-1.webp'] },
+      it: { nom: 'Due cuori e una famiglia', prix: '11,30 €', note: 5.0, avis: 1, url: 'https://amzn.to/4j05TMG', images: ['/produits/pacte-it-1.webp'] }
     },
     cinqLangages: {
-      nom: "Les cinq langages pour trouver l'amour",
-      prix: '18 €',
-      url: 'https://link.amazon/B052KO6xs',
-      images: ['https://m.media-amazon.com/images/I/81GEPV4RRIL._SY425_.jpg']
+      fr: { nom: 'Les cinq langages pour trouver l\'amour', prix: '18,00 €', note: 4.5, avis: 420, url: 'https://link.amazon/B052KO6xs', images: ['/produits/cinqLangages-fr-1.webp'] },
+      en: { nom: 'The 5 Love Languages, Singles Edition', prix: '$16.81', note: 4.7, avis: 1661, url: 'https://amzn.to/4gRCByD', images: ['/produits/cinqLangages-en-1.webp'] },
+      de: { nom: 'Die fünf Sprachen der Liebe für Singles', prix: '12,95 €', note: 4.6, avis: 301, url: 'https://amzn.to/4hqc0Zy', images: ['/produits/cinqLangages-de-1.webp'] },
+      es: { nom: 'Los 5 lenguajes del amor para solteros', prix: '6,17 €', note: 4.6, avis: 452, url: 'https://link.amazon/B07Sj6LE4', images: ['/produits/cinqLangages-es-1.webp'] },
+      it: { nom: 'I cinque linguaggi dell\'amore', prix: '9,50 €', note: 4.6, avis: 1501, url: 'https://amzn.to/4AcqRhs', images: ['/produits/cinqLangages-it-1.webp'] }
     },
     nuls: {
-      nom: 'Les relations amoureuses pour les Nuls',
-      prix: '13 €',
-      url: 'https://link.amazon/B0dtxmJDG',
-      images: ['https://m.media-amazon.com/images/I/71UX007sUNL._SY385_.jpg']
+      fr: { nom: 'Les relations amoureuses pour les Nuls', prix: '14,09 €', note: 3.8, avis: 47, url: 'https://link.amazon/B0dtxmJDG', images: ['/produits/nuls-fr-1.webp'] },
+      en: { nom: 'Relationships For Dummies', prix: '$19.24', note: 4.2, avis: 229, url: 'https://amzn.to/3T7IBdc', images: ['/produits/nuls-en-1.webp'] },
+      de: { nom: 'Die 7 Geheimnisse der glücklichen Ehe', prix: '14,99 €', note: 4.6, avis: 519, url: 'https://amzn.to/4AbDvNY', images: ['/produits/nuls-de-1.webp'] },
+      es: { nom: 'Corrígeme si me equivoco', prix: '9,97 €', note: 3.9, avis: 223, url: 'https://link.amazon/B058auBQg', images: ['/produits/nuls-es-1.webp'] },
+      it: { nom: 'La coppia strategica', prix: '14,25 €', note: 4.4, avis: 8, url: 'https://amzn.to/4hcgHoK', images: ['/produits/nuls-it-1.webp'] }
     },
     kodak: {
-      nom: 'Mini appareil photo rétro porte-clé Kodak',
-      prix: '37,90 €',
-      url: 'https://link.amazon/B09RiyWnF',
-      images: ['https://m.media-amazon.com/images/I/81jsxJK5t3L._AC_SL1500_.jpg']
+      fr: { nom: 'Mini appareil photo rétro porte-clé Kodak', prix: '37,90 €', note: 4.4, avis: 3808, url: 'https://link.amazon/B09RiyWnF', images: ['/produits/kodak-fr-1.webp'] },
+      en: { nom: 'Kodak Charmera, mini keychain digital camera', prix: '$34.99', note: 4.5, avis: 3923, url: 'https://amzn.to/4h9X1ln', images: ['/produits/kodak-en-1.webp'] },
+      de: { nom: 'Nano Cam G6, Mini-Kamera im Retro-Design', prix: '29,90 €', note: 3.5, avis: 10, url: 'https://amzn.to/4dy3lSo', images: ['/produits/kodak-de-1.webp'] },
+      es: { nom: 'Kodak Charmera, mini cámara digital llavero', prix: '36,00 €', note: 4.5, avis: 3808, url: 'https://link.amazon/B0iDKyGoi', images: ['/produits/kodak-es-1.webp'] },
+      it: { nom: 'Kodak Charmera, mini fotocamera portachiavi', prix: '38,99 €', note: 4.5, avis: 3809, url: 'https://amzn.to/4indrZN', images: ['/produits/kodak-it-1.webp'] }
     },
     montgolfiere: {
-      nom: 'Vol en montgolfière à deux (Wonderbox)',
-      prix: '184 €',
-      url: 'https://link.amazon/B0i62IhLU',
-      images: ['https://m.media-amazon.com/images/I/61HasLaDFlL._AC_SL1032_.jpg']
+      fr: { nom: 'Vol en montgolfière à deux (Wonderbox)', prix: '184,90 €', note: 4.4, avis: 20, url: 'https://link.amazon/B0i62IhLU', images: ['/produits/montgolfiere-fr-1.webp'] },
+      en: { nom: 'Wonderbox, Getaway for 2, one hotel night', prix: '$199.00', note: 4.0, avis: 6, url: 'https://amzn.to/4xraxam', images: ['/produits/montgolfiere-en-1.webp'] },
+      de: { nom: 'Jochen Schweizer, Geschenkbox Fliegen & Fallen', prix: '249,90 €', note: 4.6, avis: 16, url: 'https://amzn.to/4cGUfmb', images: ['/produits/montgolfiere-de-1.webp'] },
+      es: { nom: 'Smartbox, Emociones para Dos', prix: '49,90 €', note: 4.4, avis: 177, url: 'https://link.amazon/B07R0ZtHj', images: ['/produits/montgolfiere-es-1.webp'] },
+      it: { nom: 'Smartbox, Emozioni Estreme', prix: '199,90 €', note: 4.9, avis: 18, url: 'https://amzn.to/3UPF2Jo', images: ['/produits/montgolfiere-it-1.webp'] }
     },
     insolite: {
-      nom: 'Nuits insolites en couple (Wonderbox)',
-      prix: '149,90 €',
-      url: 'https://link.amazon/B0aCVtM55',
-      images: ['https://m.media-amazon.com/images/I/61CxN9ynkJL._AC_SL1067_.jpg']
+      fr: { nom: 'Nuits insolites en couple (Wonderbox)', prix: '149,90 €', note: 5.0, avis: 1, url: 'https://link.amazon/B0aCVtM55', images: ['/produits/insolite-fr-1.webp'] },
+      en: { nom: 'Wonderbox, Weekend Getaway for 2, two hotel nights', prix: '$399.00', note: 4.4, avis: 5, url: 'https://amzn.to/4gTaSO4', images: ['/produits/insolite-en-1.webp'] },
+      de: { nom: 'Jochen Schweizer, Geschenkbox Kurztrip', prix: '189,90 €', note: 4.8, avis: 18, url: 'https://amzn.to/4d2bZbV', images: ['/produits/insolite-de-1.webp'] },
+      es: { nom: 'Smartbox, 2 días con Encanto', prix: '69,90 €', note: 4.3, avis: 341, url: 'https://link.amazon/B06zB39T2', images: ['/produits/insolite-es-1.webp'] },
+      it: { nom: 'Smartbox, Città romantiche in Europa', prix: '199,90 €', note: 4.6, avis: 16, url: 'https://amzn.to/46lDKsc', images: ['/produits/insolite-it-1.webp'] }
     },
     // Les partenaires Affilae, ramenes a des cartes comme les autres : memes
     // liens de suivi (c3po.link compte le clic avant de renvoyer), meme
     // visuels copies en local, mais plus de texte d'explication. Pas de prix
     // quand le lien mene a une boutique ou a un catalogue : il n'y en a pas
-    // un seul a annoncer.
+    // un seul a annoncer. Francais seulement : ces trois-la ne vendent qu'en
+    // France.
     passageDuDesir: {
-      nom: 'Le Passage du Désir : lingerie, jeux et accessoires',
-      prix: null,
-      url: 'https://c3po.link/Quyean9abC',
-      bouton: 'Voir la boutique',
-      images: ['/partenaires/passage-du-desir.webp']
+      fr: { nom: 'Le Passage du Désir : lingerie, jeux et accessoires', prix: null, url: 'https://c3po.link/Quyean9abC', bouton: 'Voir la boutique', images: ['/partenaires/passage-du-desir.webp'] }
     },
     gleese: {
-      nom: 'Gleese, la plateforme française des couples curieux',
-      prix: null,
-      url: 'https://gleese.com/?ae=103',
-      bouton: 'Découvrir Gleese',
-      emoji: '💞',
-      images: []
+      fr: { nom: 'Gleese, la plateforme française des couples curieux', prix: null, url: 'https://gleese.com/?ae=103', bouton: 'Découvrir Gleese', emoji: '💞', images: [] }
     },
     wecandoo: {
-      nom: "Un atelier d'artisan à deux (Wecandoo)",
-      prix: null,
-      url: 'https://c3po.link/Q9Y6Z2a84u',
-      bouton: 'Voir les ateliers',
-      images: ['/partenaires/wecandoo-atelier.webp']
+      fr: { nom: "Un atelier d'artisan à deux (Wecandoo)", prix: null, url: 'https://c3po.link/Q9Y6Z2a84u', bouton: 'Voir les ateliers', images: ['/partenaires/wecandoo-atelier.webp'] }
     }
   };
 
@@ -2557,6 +2565,15 @@ var QuizEngine = (function() {
     'amoureux': COFFRETS_COUPLE,
     'mariage': COFFRETS_COUPLE
   };
+  // /en/couple-compatibility-test/ est la premiere page du site : elle recoit
+  // trois produits choisis pour ce moment-la, un souvenir et deux jeux a faire
+  // dans la foulee, plutot que le carrousel de six ou figurent des coffrets a
+  // 400 dollars. Sa cle de moteur est « tester-couple », pas
+  // « compatibilite » : les deux pages anglaises se ressemblent de nom mais ce
+  // n'est pas le meme test.
+  var PRODUITS_PAR_TEST_LANG = {
+    en: { 'tester-couple': ['kodak', 'quiSaitMieux', 'dimoi'] }
+  };
   var PRODUITS_TEXTES = {
     fr: {
       un: 'Ce produit / cadeau pourrait vous intéresser !',
@@ -2566,13 +2583,58 @@ var QuizEngine = (function() {
       image: 'Image {{n}} sur {{total}}',
       precedent: 'Produits précédents',
       suivant: 'Produits suivants',
-      mention: 'Liens sponsorisés'
+      mention: 'Liens sponsorisés',
+      noteLue: 'Note {{note}} sur 5'
+    },
+    en: {
+      un: 'This gift might be just right for you!',
+      plusieurs: 'These gifts might be just right for you',
+      bouton: 'See it on Amazon',
+      voir: 'See {{nom}} on Amazon',
+      image: 'Image {{n}} of {{total}}',
+      precedent: 'Previous products',
+      suivant: 'Next products',
+      mention: 'Sponsored links',
+      noteLue: 'Rated {{note}} out of 5'
+    },
+    es: {
+      un: '¡Este producto o regalo podría interesarte!',
+      plusieurs: 'Estos productos o regalos podrían interesarte',
+      bouton: 'Verlo en Amazon',
+      voir: 'Ver {{nom}} en Amazon',
+      image: 'Imagen {{n}} de {{total}}',
+      precedent: 'Productos anteriores',
+      suivant: 'Productos siguientes',
+      mention: 'Enlaces patrocinados',
+      noteLue: 'Valoración {{note}} sobre 5'
+    },
+    de: {
+      un: 'Dieses Geschenk könnte dir gefallen!',
+      plusieurs: 'Diese Geschenke könnten euch gefallen',
+      bouton: 'Auf Amazon ansehen',
+      voir: '{{nom}} auf Amazon ansehen',
+      image: 'Bild {{n}} von {{total}}',
+      precedent: 'Vorherige Produkte',
+      suivant: 'Nächste Produkte',
+      mention: 'Gesponserte Links',
+      noteLue: 'Bewertet mit {{note}} von 5'
+    },
+    it: {
+      un: 'Questo regalo potrebbe fare al caso vostro!',
+      plusieurs: 'Questi regali potrebbero fare al caso vostro',
+      bouton: 'Vedi su Amazon',
+      voir: 'Vedi {{nom}} su Amazon',
+      image: 'Immagine {{n}} di {{total}}',
+      precedent: 'Prodotti precedenti',
+      suivant: 'Prodotti successivi',
+      mention: 'Link sponsorizzati',
+      noteLue: 'Valutazione {{note}} su 5'
     }
   };
   var ICONE_LIEN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
     '<path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
 
-  function carteProduit(p, t) {
+  function carteProduit(p, t, lang) {
     var carte = el('article', 'qr-produit');
     var libelle = t.voir.replace('{{nom}}', p.nom);
 
@@ -2626,6 +2688,24 @@ var QuizEngine = (function() {
 
     var corps = el('span', 'qr-produit-corps');
     corps.appendChild(el('span', 'qr-produit-nom', esc(p.nom)));
+    // La note, relevee sur la fiche Amazon. Arrondie au dixieme superieur, et
+    // ecrite avec le separateur decimal de la langue : « 4.6 » en anglais,
+    // « 4,6 » partout ailleurs.
+    //
+    // Le nombre d'avis n'est pas affiche : il monte tous les jours, et le
+    // chiffre fige dans le code serait faux au bout d'une semaine. Il sert
+    // quand meme, en coulisse : sous cinq avis la note ne veut rien dire, et
+    // un « 5,0/5 » venu d'un seul acheteur a l'air fabrique. Dans ce cas la
+    // carte n'affiche pas de note du tout.
+    if (p.note && p.avis && p.avis >= 5) {
+      var n = Math.ceil(p.note * 10) / 10;
+      var nTexte = n.toFixed(1);
+      try { nTexte = n.toLocaleString(lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 }); } catch (e) {}
+      var ligne = el('span', 'qr-produit-note');
+      ligne.innerHTML = '<span class="qr-produit-etoile" aria-hidden="true">★</span>' + esc(nTexte) + '/5';
+      ligne.setAttribute('aria-label', t.noteLue.replace('{{note}}', nTexte));
+      corps.appendChild(ligne);
+    }
     var btn = el('a', 'qr-produit-btn');
     btn.href = p.url; btn.target = '_blank'; btn.rel = 'sponsored nofollow noopener';
     btn.setAttribute('aria-label', libelle);
@@ -2639,13 +2719,23 @@ var QuizEngine = (function() {
   // en francais. C'est ce que dispositionResultat pose sous le resultat, et ce
   // que les pages a ecran de resultat propre (tu preferes) appellent.
   function encartProduits(cle, lang, explicites) {
-    var t = PRODUITS_TEXTES[lang || 'fr'];
+    lang = lang || 'fr';
+    var t = PRODUITS_TEXTES[lang];
     if (!t) return null;
     var produits = explicites || [];
     if (!explicites) {
-      var cles = PRODUITS_PAR_TEST[cle];
+      // Une page peut vouloir une autre selection selon la langue : l'anglais
+      // du test de compatibilite, qui est la premiere page du site, montre
+      // trois produits choisis plutot que le carrousel complet.
+      var parLangue = PRODUITS_PAR_TEST_LANG[lang];
+      var cles = (parLangue && parLangue[cle]) || PRODUITS_PAR_TEST[cle];
       if (!cles) return null;
-      for (var i = 0; i < cles.length; i++) if (PRODUITS[cles[i]]) produits.push(PRODUITS[cles[i]]);
+      for (var i = 0; i < cles.length; i++) {
+        // Un produit sans entree dans cette langue n'a pas de lien
+        // d'affiliation qui rapporte ici : on ne montre pas la carte.
+        var variante = PRODUITS[cles[i]] && PRODUITS[cles[i]][lang];
+        if (variante) produits.push(variante);
+      }
     }
     if (!produits.length) return null;
     var plusieurs = produits.length > 1;
@@ -2656,7 +2746,7 @@ var QuizEngine = (function() {
     zone.appendChild(el('h3', 'qr-produits-titre', esc(titre)));
 
     var piste = el('div', 'qr-produits-piste');
-    produits.forEach(function(p) { piste.appendChild(carteProduit(p, t)); });
+    produits.forEach(function(p) { piste.appendChild(carteProduit(p, t, lang)); });
 
     if (plusieurs) {
       // Deux fleches pour la souris ; au doigt, la piste defile toute seule.
