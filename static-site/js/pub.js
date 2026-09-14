@@ -41,32 +41,49 @@
    proches de l'ecran sont demandes tout de suite ; l'annonce arrive une
    seconde plus tard qu'avant, sur une page deja lisible.
 
-   Le double skyrail vit dans les gouttieres a cote du contenu : il n'a de
-   sens qu'a partir de 1024 px de large. Sur un telephone, il ne s'affiche
-   jamais, mais son seul appel chargeait toute la chaine de la regie (encheres,
-   synchronisations, 3 s de processeur sur un Moto G) sur chaque page. Il
-   n'est donc demande que si la fenetre est assez large, et se pose quand
-   elle le devient.
-
    ── Rien au-dessus de la ligne de flottaison ─────────────────────────
    Aucune publicite ne doit etre visible dans le premier ecran, avant que la
    personne ait bouge. Les emplacements qui tombent dans le premier ecran au
-   chargement, et le double skyrail qui se pose dans les gouttieres a cote du
-   contenu, attendent donc le premier defilement ; les autres sont demandes
-   a l'approche comme avant. L'interstitiel ne part qu'a l'ecran de resultat
-   (resultat-url.js), sur le geste de la personne : un interstitiel a
-   l'ouverture couvrirait le premier ecran, c'est exactement ce qu'on refuse.
+   chargement, et le footer qui se colle en bas de la fenetre, attendent donc
+   le premier defilement ; les autres sont demandes a l'approche comme avant.
+   L'interstitiel ne part qu'a l'ecran de resultat (resultat-url.js), sur le
+   geste de la personne : un interstitiel a l'ouverture couvrirait le premier
+   ecran, c'est exactement ce qu'on refuse.
+
+   ── Le footer ────────────────────────────────────────────────────────
+   Le footer (format 6) est le seul format hors flux : son div n'est qu'un
+   point d'ancrage, le script de la regie ajoute lui-meme en fin de body un
+   conteneur en position fixe, colle en bas de la fenetre (728x90 sur
+   ordinateur, 320x50 ou 320x100 sur telephone), ou, quand l'enchere gagnante
+   est un 300x250, un « slide-in » colle au bord droit a mi-hauteur. Une fois
+   pose, on le surveille, pour deux raisons.
+
+   Le standard Better Ads, que Chrome applique en filtrant les annonces des
+   sites qui le violent, tolere un collant jusqu'a 30 % de la hauteur de
+   l'ecran. Un bandeau de 90 px passe partout ; un 300x250 depasse la limite
+   sur presque tous les telephones. Tout element fixe pose par la regie pour
+   ce format qui depasse la limite recoit data-pub-trop-haut, que styles.css
+   masque. La mesure est refaite quand la fenetre change de taille.
+
+   Et un bandeau colle en bas de la fenetre recouvre ce qui s'y trouve : le
+   dernier choix de reponse, le bouton d'un encart, les liens du pied de page.
+   Tant qu'il est la, sa hauteur est posee dans --pub-footer sur l'element
+   racine, que styles.css ajoute en bas du body : tout peut de nouveau etre
+   amene au-dessus du bandeau en defilant. Quand la personne le ferme (la
+   regie retire l'element), la variable est retiree.
    ═══════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
 
-  // Les formats qui se placent tout seuls, hors du flux (le double skyrail,
-  // dans les gouttieres) : la position de leur div dans le document ne dit
-  // rien de leur visibilite, on les demande des le depart.
-  var HORS_FLUX = { '4': true };
-  // La largeur a partir de laquelle un format hors flux a une gouttiere ou
-  // se poser.
-  var LARGEUR_HORS_FLUX = '(min-width: 1024px)';
+  // Les formats qui se placent tout seuls, hors du flux (le footer, colle en
+  // bas de la fenetre) : la position de leur div dans le document ne dit rien
+  // de leur visibilite, on les demande au premier defilement, sans attendre
+  // qu'ils approchent de l'ecran.
+  var HORS_FLUX = { '6': true };
+  var FORMAT_FOOTER = '6';
+  // La part de la hauteur de l'ecran qu'un element fixe de la regie peut
+  // occuper (standard Better Ads).
+  var PART_MAX_FIXE = 0.30;
 
   // La distance a laquelle un emplacement est demande avant d'entrer dans
   // l'ecran : une hauteur d'ecran, le temps pour la regie de repondre.
@@ -100,6 +117,7 @@
     var cible = hote.firstElementChild || hote;
     injecte(cible, format, site);
     if (!HORS_FLUX[format]) surveilleRemplissage(hote, cible);
+    else if (format === FORMAT_FOOTER) surveilleFooter(hote);
   }
 
   // ── Rempli ou vide ? ─────────────────────────────────────────────────
@@ -231,24 +249,107 @@
     }
   }
 
-  // Un format hors flux n'est demande que sur une fenetre assez large. Si
-  // elle s'elargit plus tard (fenetre de bureau redimensionnee), il part a ce
-  // moment-la, une seule fois.
+  // Les formats hors flux partent tous ensemble, quelle que soit la taille de
+  // la fenetre : le footer a sa place en bas de n'importe quel ecran, et ce
+  // qui serait trop haut pour l'ecran est ecarte apres coup (surveilleFooter).
   function poseHorsFlux(liste) {
-    if (!liste.length) return;
-    var media = window.matchMedia ? window.matchMedia(LARGEUR_HORS_FLUX) : null;
-    function poseTous() {
-      for (var i = 0; i < liste.length; i++) { try { pose(liste[i]); } catch (e) {} }
+    for (var i = 0; i < liste.length; i++) { try { pose(liste[i]); } catch (e) {} }
+  }
+
+  // ── Le footer : la limite des 30 % et le bas de page degage ─────────
+  // Les elements fixes que la regie pose pour ce format : ceux qu'elle ajoute
+  // en fin de body (le bandeau, le slide-in, la variante a deux bandeaux), et
+  // ce qu'elle a pu mettre en position fixe dans notre propre div.
+  function elementsFixesDuFooter(hote) {
+    var trouves = [];
+    var candidats = document.querySelectorAll('body > [id^="sas_iframe_fixed_"], body > [id^="sas-container_"]');
+    var i;
+    for (i = 0; i < candidats.length; i++) trouves.push(candidats[i]);
+    var dedans = hote.querySelectorAll('*');
+    for (i = 0; i < dedans.length; i++) {
+      var e = dedans[i];
+      if (e.tagName === 'SCRIPT' || e.tagName === 'STYLE') continue;
+      if (getComputedStyle(e).position === 'fixed') trouves.push(e);
     }
-    if (!media || media.matches) { poseTous(); return; }
-    var surChangement = function (e) {
-      if (!e.matches) return;
-      if (media.removeEventListener) media.removeEventListener('change', surChangement);
-      else if (media.removeListener) media.removeListener(surChangement);
-      poseTous();
-    };
-    if (media.addEventListener) media.addEventListener('change', surChangement);
-    else if (media.addListener) media.addListener(surChangement);
+    return trouves;
+  }
+
+  function surveilleFooter(hote) {
+    if (!('MutationObserver' in window)) return;
+    var racine = document.documentElement;
+    var prevu = false;
+
+    function mesure() {
+      prevu = false;
+      var hauteurEcran = window.innerHeight;
+      var basCouvert = 0;
+      var liste = elementsFixesDuFooter(hote);
+      // Toutes les lectures d'abord, les ecritures ensuite : une lecture de
+      // geometrie apres une ecriture force une mise en page complete.
+      var lectures = [];
+      for (var i = 0; i < liste.length; i++) {
+        var e = liste[i];
+        var retenue = parseFloat(e.getAttribute('data-pub-hauteur') || '');
+        var r = e.getBoundingClientRect();
+        var enfant = e.firstElementChild;
+        var h = r.height;
+        var haut = r.top;
+        // La regie cale la creation en bas d'un conteneur de 90 px : une
+        // creation de 100 px en deborde par le haut. C'est la boite la plus
+        // haute des deux qui compte.
+        if (enfant && enfant.tagName !== 'SCRIPT') {
+          var re = enfant.getBoundingClientRect();
+          if (re.height > 0) { h = Math.max(h, re.height); haut = Math.min(haut, re.top); }
+        }
+        // Un element qu'on a masque n'a plus de hauteur : on garde celle
+        // mesuree la premiere fois, pour pouvoir le remontrer si la fenetre
+        // grandit.
+        if (!(h > 0) && retenue > 0) h = retenue;
+        lectures.push({ e: e, h: h, r: r, haut: haut, retenue: retenue });
+      }
+      for (var j = 0; j < lectures.length; j++) {
+        var l = lectures[j];
+        if (!(l.h > 0)) continue;
+        if (!(l.retenue > 0)) l.e.setAttribute('data-pub-hauteur', String(Math.round(l.h)));
+        var tropHaut = l.h > PART_MAX_FIXE * hauteurEcran;
+        if (tropHaut) {
+          if (!l.e.hasAttribute('data-pub-trop-haut')) l.e.setAttribute('data-pub-trop-haut', '1');
+          continue;
+        }
+        if (l.e.hasAttribute('data-pub-trop-haut')) l.e.removeAttribute('data-pub-trop-haut');
+        // Colle en bas de la fenetre : c'est de cette hauteur qu'il faut
+        // degager le bas de la page. Le slide-in, a mi-hauteur, ne cache
+        // rien de ce qu'on pourrait faire defiler.
+        if (l.r.height > 0 && l.r.bottom >= hauteurEcran - 2 && l.haut > hauteurEcran / 2) {
+          basCouvert = Math.max(basCouvert, hauteurEcran - l.haut);
+        }
+      }
+      var voulu = basCouvert > 0 ? Math.ceil(basCouvert) + 'px' : '';
+      if (racine.style.getPropertyValue('--pub-footer') !== voulu) {
+        if (voulu) racine.style.setProperty('--pub-footer', voulu);
+        else racine.style.removeProperty('--pub-footer');
+      }
+    }
+
+    function planifie() {
+      if (prevu) return;
+      prevu = true;
+      window.requestAnimationFrame(mesure);
+    }
+
+    // La regie ajoute et retire ses conteneurs en fin de body ; dans notre
+    // div, elle peut passer un element en position fixe par son style.
+    new MutationObserver(planifie).observe(document.body, { childList: true });
+    new MutationObserver(planifie).observe(hote, { childList: true, subtree: true, attributes: true, attributeFilter: ['style'] });
+    window.addEventListener('resize', planifie, { passive: true });
+    if ('ResizeObserver' in window) {
+      // La hauteur d'un conteneur change quand l'annonce est remplacee.
+      var ro = new ResizeObserver(planifie);
+      new MutationObserver(function () {
+        var liste = elementsFixesDuFooter(hote);
+        for (var i = 0; i < liste.length; i++) ro.observe(liste[i]);
+      }).observe(document.body, { childList: true });
+    }
   }
 
   function lance(liste) {

@@ -387,12 +387,6 @@
   <% var avecPub = typeof pagePublicitaire !== 'undefined' && pagePublicitaire; %>
   <main class="relative z-0">
     <%- content %>
-    <%# Le megabanner de bas de page. Il est pose ici plutot que dans chaque
-        gabarit : c'est le dernier endroit commun a toutes les pages, juste
-        avant le bloc d'avis, donc apres tout le contenu utile. %>
-    <% if (avecPub) { %>
-    <%- include('partials/pub', { format: 28 }) %>
-    <% } %>
     <%# L'interstitiel de l'ecran de resultat. Le div est pose ici, vide : ses
         scripts ne partent qu'au moment ou le resultat s'affiche, sur le clic
         de la personne. C'est le bon declencheur, celui que Google decrit pour
@@ -406,14 +400,18 @@
     <% } %>
   </main>
 
-  <%# Le double skyrail vit dans les gouttieres, a cote du contenu et jamais
-      dedans. Il ne prend aucune place dans le flux et ne decale rien : c'est
-      le seul format qu'on peut poser sans rien reserver. Il se place lui-meme
-      et ne s'affiche que sur les ecrans assez larges pour l'accueillir.
-      Pas sur l'accueil : ses blocs vont d'un bord a l'autre (curseurs,
-      bandeau, grille), et le skyrail se posait par-dessus le contenu. %>
-  <% if (avecPub && routeKey !== 'home') { %>
-  <%- include('partials/pub', { format: 4 }) %>
+  <%# Le footer de la regie : un bandeau que son script colle en bas de la
+      fenetre, hors du flux, donc sans rien decaler. Ce div n'est qu'un point
+      d'ancrage et ne reserve aucune hauteur (styles.css). Il n'est demande
+      qu'au premier defilement, jamais dans le premier ecran, et pub.js le
+      surveille ensuite : un bandeau qui depasserait 30 % de la hauteur de
+      l'ecran (la limite du standard Better Ads) est masque, et le bas de la
+      page est degage de la hauteur du bandeau (--pub-footer) pour qu'aucun
+      de nos boutons ne reste cache derriere. Sur toutes les pages qui portent
+      de la publicite, l'accueil compris : contrairement au skyrail qu'il
+      remplace, il ne recouvre pas les blocs pleine largeur. %>
+  <% if (avecPub) { %>
+  <%- include('partials/pub', { format: 6 }) %>
   <% } %>
 
   <% if (routeKey !== 'admin') { %>
