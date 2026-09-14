@@ -858,11 +858,11 @@ var QuizEngine = (function() {
   // ── Phase C : partage + avis par quiz + compteur (ecran de resultat 2 colonnes) ──
   function pcLabels(lang) {
     var M = {
-      fr: { share: 'Partager', close: 'Fermer', rate: 'Votre avis sur ce test en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Erreur, réessayez.', doneT: 'Ce test a déjà été réalisé {n} fois', doneQ: 'Ce quiz a déjà été joué {n} fois' },
-      en: { share: 'Share', close: 'Close', rate: 'Rate this test in one click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Error, please retry.', doneT: 'This test has been taken {n} times', doneQ: 'This quiz has been played {n} times' },
-      es: { share: 'Compartir', close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Una palabra (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Se verá tras la validación.', err: 'Error, inténtalo de nuevo.', doneT: 'Este test se ha realizado {n} veces', doneQ: 'Este quiz se ha jugado {n} veces' },
-      de: { share: 'Teilen', close: 'Schließen', rate: 'Bewertung mit 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Erscheint nach der Prüfung.', err: 'Fehler, bitte erneut.', doneT: 'Dieser Test wurde {n} mal gemacht', doneQ: 'Dieses Quiz wurde {n} mal gespielt' },
-      it: { share: 'Condividi', close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola (facoltativo)', submit: 'Pubblica', thanks: 'Grazie! Sarà visibile dopo la moderazione.', err: 'Errore, riprova.', doneT: 'Questo test è stato fatto {n} volte', doneQ: 'Questo quiz è stato giocato {n} volte' }
+      fr: { share: 'Partager', close: 'Fermer', rate: 'Votre avis sur ce test en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Erreur, réessayez.', doneT: 'Ce test a déjà été réalisé {n} fois', doneQ: 'Ce quiz a déjà été joué {n} fois', minAvis: 'Trois étoiles ou moins ? Dites-nous ce qui n\'a pas marché, en 90 caractères au minimum.', minReste: 'Encore {n} caractères.', minPlace: 'Ce qui n\'a pas marché (90 caractères minimum)' },
+      en: { share: 'Share', close: 'Close', rate: 'Rate this test in one click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Error, please retry.', doneT: 'This test has been taken {n} times', doneQ: 'This quiz has been played {n} times', minAvis: 'Three stars or fewer? Tell us what went wrong, in at least 90 characters.', minReste: '{n} characters to go.', minPlace: 'What went wrong (90 characters minimum)' },
+      es: { share: 'Compartir', close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Una palabra (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Se verá tras la validación.', err: 'Error, inténtalo de nuevo.', doneT: 'Este test se ha realizado {n} veces', doneQ: 'Este quiz se ha jugado {n} veces', minAvis: '¿Tres estrellas o menos? Cuéntanos qué no ha funcionado, con 90 caracteres como mínimo.', minReste: 'Faltan {n} caracteres.', minPlace: 'Qué no ha funcionado (90 caracteres mínimo)' },
+      de: { share: 'Teilen', close: 'Schließen', rate: 'Bewertung mit 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Erscheint nach der Prüfung.', err: 'Fehler, bitte erneut.', doneT: 'Dieser Test wurde {n} mal gemacht', doneQ: 'Dieses Quiz wurde {n} mal gespielt', minAvis: 'Drei Sterne oder weniger? Schreib uns, was nicht gepasst hat, mit mindestens 90 Zeichen.', minReste: 'Noch {n} Zeichen.', minPlace: 'Was nicht gepasst hat (mindestens 90 Zeichen)' },
+      it: { share: 'Condividi', close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola (facoltativo)', submit: 'Pubblica', thanks: 'Grazie! Sarà visibile dopo la moderazione.', err: 'Errore, riprova.', doneT: 'Questo test è stato fatto {n} volte', doneQ: 'Questo quiz è stato giocato {n} volte', minAvis: 'Tre stelle o meno? Dicci cosa non ha funzionato, con almeno 90 caratteri.', minReste: 'Ancora {n} caratteri.', minPlace: 'Cosa non ha funzionato (minimo 90 caratteri)' }
     };
     return M[lang] || M.fr;
   }
@@ -907,6 +907,55 @@ var QuizEngine = (function() {
     if (navigator.share) { navigator.share({ title: title, url: url }).catch(function () {}); }
     else if (navigator.clipboard) { navigator.clipboard.writeText(url); }
   }
+  // ── Le frein sur les mauvaises notes ────────────────────────────────
+  // Jumeau de celui de quiz-extras.js, pour le formulaire d'avis pose dans
+  // l'ecran de resultat. Les deux fichiers ne se chargent pas toujours
+  // ensemble, le code y est donc ecrit deux fois : une modification ici en
+  // appelle une la-bas.
+  //
+  // Une note de quatre ou cinq etoiles arrive presque toujours avec un mot.
+  // Une note de trois ou moins arrive presque toujours toute seule : c'est
+  // quelqu'un qui n'a pas eu le score qu'il esperait. Sous quatre etoiles, le
+  // message devient obligatoire, avec quatre-vingt-dix caracteres au minimum.
+  var AVIS_MIN_NOTE = 3;
+  var AVIS_MIN_SIGNES = 90;
+
+  function freinAvis(champ, note) {
+    var c = (champ && champ.value ? champ.value.trim() : '');
+    if (note > AVIS_MIN_NOTE) return { ok: true, reste: 0 };
+    return { ok: c.length >= AVIS_MIN_SIGNES, reste: AVIS_MIN_SIGNES - c.length };
+  }
+
+  function brancheFrein(racine, L) {
+    var champ = racine.querySelector('.pqx-comment');
+    if (!champ) return function () {};
+    var placeholderNormal = champ.placeholder;
+    var lignesNormales = champ.rows || 2;
+    var avert = el('p', 'pqx-min');
+    avert.hidden = true;
+    avert.id = 'qr-min-' + Math.random().toString(36).slice(2, 8);
+    if (champ.parentNode) champ.parentNode.insertBefore(avert, champ.nextSibling);
+    var noteCourante = 0;
+    function rafraichis() {
+      if (noteCourante === 0 || noteCourante > AVIS_MIN_NOTE) {
+        avert.hidden = true;
+        champ.placeholder = placeholderNormal;
+        champ.removeAttribute('aria-describedby');
+        champ.rows = lignesNormales;
+        return;
+      }
+      champ.placeholder = L.minPlace;
+      champ.rows = Math.max(lignesNormales, 4);
+      champ.setAttribute('aria-describedby', avert.id);
+      var e = freinAvis(champ, noteCourante);
+      avert.hidden = false;
+      avert.classList.toggle('est-atteint', e.ok);
+      avert.textContent = e.ok ? L.minAvis : L.minAvis + ' ' + L.minReste.replace('{n}', e.reste);
+    }
+    champ.addEventListener('input', rafraichis);
+    return function (note) { noteCourante = note; rafraichis(); };
+  }
+
   function pcReviewForm(lang) {
     var box = el('div', 'qr-review');
     var cfg = pcConfig(); var L = pcLabels(lang);
@@ -921,6 +970,7 @@ var QuizEngine = (function() {
       + '<p class="pqx-msg" aria-live="polite"></p>'
       + '<button type="button" class="pqx-fermer">' + esc(L.close) + '</button></div></form>';
     var rating = 0;
+    var majFrein = brancheFrein(box, L);
     var starBtns = box.querySelectorAll('.pqx-star-btn');
     var starsWrap = box.querySelector('.pqx-input-stars');
     var more = box.querySelector('.pqx-more');
@@ -936,6 +986,7 @@ var QuizEngine = (function() {
         b.classList.add('just-picked');
         // Reveal du formulaire court : une seule etape percue
         if (more.hidden) { more.hidden = false; more.classList.add('pqx-more-reveal'); }
+        majFrein(rating);
         if (nameI) setTimeout(function () { nameI.focus({ preventScroll: true }); }, 80);
       });
     });
@@ -947,6 +998,7 @@ var QuizEngine = (function() {
     if (fermer) fermer.addEventListener('click', function () {
       rating = 0;
       paint(0);
+      majFrein(0);
       more.hidden = true;
       more.classList.remove('pqx-more-reveal');
     });
@@ -955,6 +1007,14 @@ var QuizEngine = (function() {
       var msg = box.querySelector('.pqx-msg');
       var name = nameI ? nameI.value.trim() : '';
       if (!rating || !name) { if (msg) { msg.textContent = L.err; msg.className = 'pqx-msg err'; } return; }
+      var champC = box.querySelector('.pqx-comment');
+      var frein = freinAvis(champC, rating);
+      if (!frein.ok) {
+        if (msg) { msg.textContent = L.minAvis + ' ' + L.minReste.replace('{n}', frein.reste); msg.className = 'pqx-msg err'; }
+        majFrein(rating);
+        if (champC) champC.focus({ preventScroll: true });
+        return;
+      }
       var sub = box.querySelector('.pqx-submit'); if (sub) sub.disabled = true;
       var body = { author_name: name.substring(0, 60), rating: rating, quiz_slug: cfg.slug, is_approved: false };
       var cm = box.querySelector('.pqx-comment').value.trim(); if (cm) body.comment = cm.substring(0, 200);

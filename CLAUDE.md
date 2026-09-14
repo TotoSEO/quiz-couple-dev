@@ -481,6 +481,25 @@ Exemples réels, tous validés :
   l'URL préfixée par la langue hors FR (`/en/…`, `/es/…`, `/de/…`, `/it/…`).
 - Aucun lien mort : passer le contrôle sur `dist/` après construction.
 
+## Le frein sur les mauvaises notes
+
+Une note de quatre ou cinq étoiles arrive presque toujours avec un mot. Une
+note de trois ou moins arrive presque toujours toute seule : c'est quelqu'un
+qui n'a pas eu le score qu'il espérait et qui repart. **À trois étoiles ou
+moins, le message devient obligatoire, avec 90 caractères au minimum.**
+
+Le champ passe alors de deux à quatre lignes, son texte d'invite perd le
+« (optionnel) », et un décompte s'affiche dessous, rouge tant que la longueur
+n'est pas faite, vert une fois atteinte. L'envoi est refusé en dessous.
+
+Les seuils sont `AVIS_MIN_NOTE` et `AVIS_MIN_SIGNES`. Ils sont écrits **deux
+fois**, parce que le site a deux formulaires d'avis qui ne se chargent pas
+toujours ensemble : celui du bas de page (`initReviews`, quiz-extras.js) et
+celui de l'écran de résultat (`pcReviewForm`, quiz-engine-core.js). Une
+modification dans l'un en appelle une dans l'autre. Le contrôle est côté
+navigateur : il freine, il ne verrouille pas. Les avis partent de toute façon
+en `is_approved: false` et passent par la modération.
+
 ## Typographie des listes à puces
 
 Une puce qui commence par un intitulé en gras se termine par **deux points**,
