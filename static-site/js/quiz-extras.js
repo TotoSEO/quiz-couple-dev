@@ -16,11 +16,11 @@
   var HJ = { apikey: KEY, 'Authorization': 'Bearer ' + KEY, 'Content-Type': 'application/json' };
 
   var UI = {
-    fr: { close: 'Fermer', rate: 'Votre avis en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot sur votre expérience (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Une erreur est survenue, réessayez.', none: 'Soyez les premiers à donner votre avis !', based: 'avis', doneTest: 'Ce test a déjà été réalisé {n} fois', playedTest: 'Ce test a déjà été joué {n} fois', doneQuiz: 'Ce quiz a déjà été joué {n} fois', doneGame: 'Ce jeu a déjà été joué {n} fois', doneOutil: 'Cette calculatrice a déjà été utilisée {n} fois', votesTotal: '{n} votes déposés sur ces dilemmes', votesTotalPC: '{n} votes déposés sur ces propositions', votesTotalON: '{n} oui/non répondus sur ces situations' },
-    en: { close: 'Close', rate: 'Your review in 1 click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word about your experience (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Something went wrong, please retry.', none: 'Be the first to leave a review!', based: 'reviews', doneTest: 'This test has been taken {n} times', playedTest: 'This test has already been played {n} times', doneQuiz: 'This quiz has been played {n} times', doneGame: 'This game has been played {n} times', doneOutil: 'This calculator has already been used {n} times', votesTotal: '{n} votes cast on these dilemmas', votesTotalPC: '{n} votes cast on these statements', votesTotalON: '{n} yes/no answered on these situations' },
-    es: { close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Unas palabras sobre tu experiencia (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Tu opinión se verá tras la validación.', err: 'Ha ocurrido un error, inténtalo de nuevo.', none: '¡Sé el primero en opinar!', based: 'opiniones', doneTest: 'Este test se ha realizado {n} veces', playedTest: 'Este test ya se ha jugado {n} veces', doneQuiz: 'Este quiz se ha jugado {n} veces', doneGame: 'Este juego se ha jugado {n} veces', doneOutil: 'Esta calculadora ya se ha usado {n} veces', votesTotal: '{n} votos emitidos en estos dilemas', votesTotalPC: '{n} votos emitidos en estas propuestas', votesTotalON: '{n} sí/no respondidos en estas situaciones' },
-    de: { close: 'Schließen', rate: 'Deine Bewertung in 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort zu deiner Erfahrung (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Deine Bewertung erscheint nach der Prüfung.', err: 'Ein Fehler ist aufgetreten, bitte erneut versuchen.', none: 'Sei der Erste mit einer Bewertung!', based: 'Bewertungen', doneTest: 'Dieser Test wurde {n} mal gemacht', playedTest: 'Dieser Test wurde schon {n} mal gespielt', doneQuiz: 'Dieses Quiz wurde {n} mal gespielt', doneGame: 'Dieses Spiel wurde {n} mal gespielt', doneOutil: 'Dieser Rechner wurde schon {n} mal benutzt', votesTotal: '{n} abgegebene Stimmen zu diesen Dilemmata', votesTotalPC: '{n} abgegebene Stimmen zu diesen Aussagen', votesTotalON: '{n} Ja/Nein-Antworten zu diesen Situationen' },
-    it: { close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola sulla tua esperienza (facoltativo)', submit: 'Pubblica la mia recensione', thanks: 'Grazie! La recensione sarà visibile dopo la moderazione.', err: 'Si è verificato un errore, riprova.', none: 'Sii il primo a lasciare una recensione!', based: 'recensioni', doneTest: 'Questo test è stato fatto {n} volte', playedTest: 'Questo test è già stato giocato {n} volte', doneQuiz: 'Questo quiz è stato giocato {n} volte', doneGame: 'Questo gioco è stato giocato {n} volte', doneOutil: 'Questa calcolatrice è già stata usata {n} volte', votesTotal: '{n} voti espressi su questi dilemmi', votesTotalPC: '{n} voti espressi su queste proposte', votesTotalON: '{n} sì/no dati su queste situazioni' }
+    fr: { close: 'Fermer', rate: 'Votre avis en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot sur votre expérience (optionnel)', submit: 'Publier mon avis', thanks: 'Merci ! Votre avis sera visible après validation.', err: 'Une erreur est survenue, réessayez.', none: 'Soyez les premiers à donner votre avis !', based: 'avis', doneTest: 'Ce test a déjà été réalisé {n} fois', playedTest: 'Ce test a déjà été joué {n} fois', doneQuiz: 'Ce quiz a déjà été joué {n} fois', doneGame: 'Ce jeu a déjà été joué {n} fois', doneOutil: 'Cette calculatrice a déjà été utilisée {n} fois', votesTotal: '{n} votes déposés sur ces dilemmes', votesTotalPC: '{n} votes déposés sur ces propositions', votesTotalON: '{n} oui/non répondus sur ces situations', minAvis: 'Trois étoiles ou moins ? Dites-nous ce qui n\'a pas marché, en 90 caractères au minimum.', minReste: 'Encore {n} caractères.', minPlace: 'Ce qui n\'a pas marché (90 caractères minimum)' },
+    en: { close: 'Close', rate: 'Your review in 1 click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word about your experience (optional)', submit: 'Post my review', thanks: 'Thanks! Your review will show after moderation.', err: 'Something went wrong, please retry.', none: 'Be the first to leave a review!', based: 'reviews', doneTest: 'This test has been taken {n} times', playedTest: 'This test has already been played {n} times', doneQuiz: 'This quiz has been played {n} times', doneGame: 'This game has been played {n} times', doneOutil: 'This calculator has already been used {n} times', votesTotal: '{n} votes cast on these dilemmas', votesTotalPC: '{n} votes cast on these statements', votesTotalON: '{n} yes/no answered on these situations', minAvis: 'Three stars or fewer? Tell us what went wrong, in at least 90 characters.', minReste: '{n} characters to go.', minPlace: 'What went wrong (90 characters minimum)' },
+    es: { close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Unas palabras sobre tu experiencia (opcional)', submit: 'Publicar mi opinión', thanks: '¡Gracias! Tu opinión se verá tras la validación.', err: 'Ha ocurrido un error, inténtalo de nuevo.', none: '¡Sé el primero en opinar!', based: 'opiniones', doneTest: 'Este test se ha realizado {n} veces', playedTest: 'Este test ya se ha jugado {n} veces', doneQuiz: 'Este quiz se ha jugado {n} veces', doneGame: 'Este juego se ha jugado {n} veces', doneOutil: 'Esta calculadora ya se ha usado {n} veces', votesTotal: '{n} votos emitidos en estos dilemas', votesTotalPC: '{n} votos emitidos en estas propuestas', votesTotalON: '{n} sí/no respondidos en estas situaciones', minAvis: '¿Tres estrellas o menos? Cuéntanos qué no ha funcionado, con 90 caracteres como mínimo.', minReste: 'Faltan {n} caracteres.', minPlace: 'Qué no ha funcionado (90 caracteres mínimo)' },
+    de: { close: 'Schließen', rate: 'Deine Bewertung in 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort zu deiner Erfahrung (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Danke! Deine Bewertung erscheint nach der Prüfung.', err: 'Ein Fehler ist aufgetreten, bitte erneut versuchen.', none: 'Sei der Erste mit einer Bewertung!', based: 'Bewertungen', doneTest: 'Dieser Test wurde {n} mal gemacht', playedTest: 'Dieser Test wurde schon {n} mal gespielt', doneQuiz: 'Dieses Quiz wurde {n} mal gespielt', doneGame: 'Dieses Spiel wurde {n} mal gespielt', doneOutil: 'Dieser Rechner wurde schon {n} mal benutzt', votesTotal: '{n} abgegebene Stimmen zu diesen Dilemmata', votesTotalPC: '{n} abgegebene Stimmen zu diesen Aussagen', votesTotalON: '{n} Ja/Nein-Antworten zu diesen Situationen', minAvis: 'Drei Sterne oder weniger? Schreib uns, was nicht gepasst hat, mit mindestens 90 Zeichen.', minReste: 'Noch {n} Zeichen.', minPlace: 'Was nicht gepasst hat (mindestens 90 Zeichen)' },
+    it: { close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola sulla tua esperienza (facoltativo)', submit: 'Pubblica la mia recensione', thanks: 'Grazie! La recensione sarà visibile dopo la moderazione.', err: 'Si è verificato un errore, riprova.', none: 'Sii il primo a lasciare una recensione!', based: 'recensioni', doneTest: 'Questo test è stato fatto {n} volte', playedTest: 'Questo test è già stato giocato {n} volte', doneQuiz: 'Questo quiz è stato giocato {n} volte', doneGame: 'Questo gioco è stato giocato {n} volte', doneOutil: 'Questa calcolatrice è già stata usata {n} volte', votesTotal: '{n} voti espressi su questi dilemmi', votesTotalPC: '{n} voti espressi su queste proposte', votesTotalON: '{n} sì/no dati su queste situazioni', minAvis: 'Tre stelle o meno? Dicci cosa non ha funzionato, con almeno 90 caratteri.', minReste: 'Ancora {n} caratteri.', minPlace: 'Cosa non ha funzionato (minimo 90 caratteri)' }
   };
   var t = UI[lang] || UI.fr;
   function fmt(n) { try { return Number(n).toLocaleString(lang); } catch (e) { return '' + n; } }
@@ -251,6 +251,66 @@
     document.addEventListener('keydown', lance, true);
   }
 
+  // ── Le frein sur les mauvaises notes ────────────────────────────────
+  // Une note de quatre ou cinq etoiles arrive presque toujours avec un mot.
+  // Une note de trois ou moins arrive presque toujours toute seule : c'est
+  // quelqu'un qui n'a pas eu le score qu'il esperait et qui repart. Sous
+  // quatre etoiles, le message devient donc obligatoire, avec un minimum de
+  // quatre-vingt-dix caracteres : le temps de l'ecrire suffit a faire la
+  // difference entre un agacement et un reproche qu'on peut lire.
+  //
+  // Le controle est le meme dans les deux formulaires d'avis du site, celui-ci
+  // et celui de l'ecran de resultat (pcReviewForm, quiz-engine-core.js) : les
+  // deux fichiers ne se chargent pas toujours ensemble, le code y est donc
+  // ecrit deux fois. Une modification ici en appelle une la-bas.
+  var AVIS_MIN_NOTE = 3;      // a partir de cette note et en dessous
+  var AVIS_MIN_SIGNES = 90;   // longueur exigee du message
+
+  function freinAvis(champ, note) {
+    var c = (champ && champ.value ? champ.value.trim() : '');
+    if (note > AVIS_MIN_NOTE) return { ok: true, reste: 0 };
+    return { ok: c.length >= AVIS_MIN_SIGNES, reste: AVIS_MIN_SIGNES - c.length };
+  }
+
+  // Pose ou retire l'avertissement et le decompte sous le champ. Rend la
+  // fonction qui remet le tout a jour, appelee a chaque frappe.
+  function brancheFrein(racine, textes) {
+    var champ = racine.querySelector('.pqx-comment');
+    var bloc = racine.querySelector('.pqx-more');
+    if (!champ || !bloc) return function () {};
+    var placeholderNormal = champ.placeholder;
+    var lignesNormales = champ.rows || 2;
+    var avert = racine.querySelector('.pqx-min');
+    if (!avert) {
+      avert = document.createElement('p');
+      avert.className = 'pqx-min';
+      avert.hidden = true;
+      // Juste sous le champ, la ou on vient de taper.
+      if (champ.parentNode) champ.parentNode.insertBefore(avert, champ.nextSibling);
+    }
+    var noteCourante = 0;
+    function rafraichis() {
+      if (noteCourante === 0 || noteCourante > AVIS_MIN_NOTE) {
+        avert.hidden = true;
+        champ.placeholder = placeholderNormal;
+        champ.removeAttribute('aria-describedby');
+        champ.rows = lignesNormales;
+        return;
+      }
+      champ.placeholder = textes.minPlace;
+      champ.rows = Math.max(lignesNormales, 4);
+      avert.id = avert.id || 'pqx-min-' + Math.random().toString(36).slice(2, 8);
+      champ.setAttribute('aria-describedby', avert.id);
+      var e = freinAvis(champ, noteCourante);
+      avert.hidden = false;
+      avert.classList.toggle('est-atteint', e.ok);
+      avert.textContent = e.ok ? textes.minAvis
+        : textes.minAvis + ' ' + textes.minReste.replace('{n}', e.reste);
+    }
+    champ.addEventListener('input', rafraichis);
+    return function (note) { noteCourante = note; rafraichis(); };
+  }
+
   // ── Bloc avis par quiz (liste + formulaire progressif) ──
   function initReviews(slug) {
     var root = document.getElementById('pq-reviews');
@@ -297,6 +357,7 @@
       .catch(function () { if (listEl) listEl.innerHTML = ''; });
 
     var rating = 0;
+    var majFrein = brancheFrein(root, t);
     var starBtns = root.querySelectorAll('.pqx-input-stars [data-star]');
     var starsWrap = root.querySelector('.pqx-input-stars');
     var more = root.querySelector('.pqx-more');
@@ -308,6 +369,7 @@
         paint(rating);
         b.classList.remove('just-picked'); void b.offsetWidth; b.classList.add('just-picked');
         if (more && more.hidden) { more.hidden = false; more.classList.add('pqx-more-reveal'); }
+        majFrein(rating);
         if (nameI) setTimeout(function () { nameI.focus({ preventScroll: true }); }, 80);
       });
     });
@@ -318,6 +380,7 @@
     if (fermerB) fermerB.addEventListener('click', function () {
       rating = 0;
       paint(0);
+      majFrein(0);
       if (more) { more.hidden = true; more.classList.remove('pqx-more-reveal'); }
     });
     var form = root.querySelector('.pqx-form');
@@ -326,6 +389,13 @@
       var msg = root.querySelector('.pqx-msg');
       var name = nameI ? nameI.value.trim() : '';
       if (!rating || !name) { if (msg) { msg.textContent = t.err; msg.className = 'pqx-msg err'; } return; }
+      var frein = freinAvis(commentI, rating);
+      if (!frein.ok) {
+        if (msg) { msg.textContent = t.minAvis + ' ' + t.minReste.replace('{n}', frein.reste); msg.className = 'pqx-msg err'; }
+        majFrein(rating);
+        if (commentI) commentI.focus({ preventScroll: true });
+        return;
+      }
       if (submitB) submitB.disabled = true;
       var body = { author_name: name.substring(0, 60), rating: rating, quiz_slug: slug, is_approved: false };
       var c = commentI ? commentI.value.trim() : ''; if (c) body.comment = c.substring(0, 200);

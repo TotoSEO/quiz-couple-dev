@@ -11762,6 +11762,22 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   color: hsl(var(--foreground));
 }
 .qr-produit-etoile { color: #f5b301; margin-right: .25rem; }
+/* L'avertissement sous le champ de commentaire, quand la note est de trois
+   etoiles ou moins et que le message devient obligatoire. Rouge tant que les
+   quatre-vingt-dix caracteres ne sont pas atteints, vert une fois la longueur
+   faite, pour que le decompte se lise d'un coup d'oeil sans avoir a relire. */
+.pqx-min {
+  margin: .35rem 0 0;
+  font-size: .8rem;
+  line-height: 1.4;
+  color: hsl(var(--destructive));
+}
+.pqx-min.est-atteint { color: hsl(142 55% 34%); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .pqx-min.est-atteint { color: hsl(142 50% 62%); }
+}
+:root[data-theme="dark"] .pqx-min.est-atteint { color: hsl(142 50% 62%); }
+
 .qr-produit-btn {
   display: inline-flex;
   align-items: center;
