@@ -6460,16 +6460,27 @@ body.quiz-has-result .related-tests-section { display: none !important; }
   }
   .quiz-hero-media__img { transform: rotate(4deg); }
 
+  /* Le texte commence a la meme distance du bord gauche que l'image du bord
+     droit : sans ca, entre 1200 et 1400 px, le conteneur prend toute la
+     fenetre et le titre se collait a 16 px du bord pendant que l'image
+     gardait ses 60 a 80 px. */
+  .quiz-page-hero:has(.quiz-hero-media) > .container,
+  .hero-gradient:has(.quiz-hero-media) > .container {
+    padding-left: clamp(2rem, 5vw, 5rem);
+  }
+
   /* Make room on the right: left-align and cap the hero text width.
      Conditionne a la presence de l'image : la regle detourne l'utilitaire
      .mx-auto, et sur un hero sans image a droite (creation de quiz par
-     exemple) elle decalait tout le contenu a gauche sans rien y mettre. */
+     exemple) elle decalait tout le contenu a gauche sans rien y mettre.
+     La largeur est bornee a ce qui reste entre le texte et l'image, avec
+     3 rem d'air, pour qu'ils ne se touchent jamais. */
   .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto,
   .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto {
     margin-left: 0;
     margin-right: 0;
     text-align: left;
-    max-width: 640px;
+    max-width: min(640px, 100vw - 2 * clamp(2rem, 5vw, 5rem) - clamp(380px, 34vw, 500px) - 3rem);
   }
   .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto .breadcrumb ol,
   .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto .breadcrumb ol { justify-content: flex-start; }
@@ -11507,46 +11518,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .seo-content .avec-colonne:not(.avec-colonne--sections) > .avec-colonne__contenu section:hover { box-shadow: none; }
   /* La colonne laterale demarre a la meme hauteur que l'encart. */
   .avec-colonne__aside { padding-top: 0.25rem; }
-}
-
-/* ═══════════════════════════════════════════════════════════════════
-   LES GOUTTIERES DES ANCIENS SKYRAILS
-   Ces gouttieres ont ete creusees pour le double skyrail, que la regie posait
-   a partir de 1024 px a 8 px des bords de la fenetre, sur 120 a 160 px de
-   large, et qui passait par-dessus tout ce qui est plus large que la colonne
-   de contenu (46 rem) : le hero des pages de test, le bloc d'avis, les tests
-   lies, le pied de page, l'article de blog. Une seule gouttiere,
-   --gouttiere-pub, tenait tout ca a distance : 152 px a 1024, 176 px a partir
-   de 1352. Le skyrail a ete retire (il n'etait vu qu'une fois sur trois et ne
-   rapportait rien) ; les gouttieres restent pour l'instant, parce que les
-   enlever change la largeur de tous les blocs cites sur chaque page de bureau
-   et merite sa propre verification.
-   ═══════════════════════════════════════════════════════════════════ */
-@media (min-width: 1024px) {
-  :root { --gouttiere-pub: clamp(9.5rem, 13vw, 11rem); }
-  .quiz-page-hero > .container,
-  .hero-gradient > .container,
-  .astro-hero-section > .container,
-  footer > .container {
-    padding-left: var(--gouttiere-pub);
-    padding-right: var(--gouttiere-pub);
-  }
-  .related-tests-section > .container { max-width: min(56rem, 100vw - 2 * var(--gouttiere-pub)); }
-  #pq-reviews { max-width: min(62rem, 100vw - 2 * var(--gouttiere-pub)); }
-  .blog-article { max-width: min(52rem, 100vw - 2 * var(--gouttiere-pub)); }
-  #jeux > .container { padding-left: var(--gouttiere-pub); padding-right: var(--gouttiere-pub); }
-}
-@media (min-width: 1200px) {
-  /* L'image de tete s'aligne sur la gouttiere au lieu de deborder vers le
-     bord, et le texte prend ce qui reste a sa gauche, 640 px au plus. */
-  .quiz-hero-media {
-    right: var(--gouttiere-pub);
-    width: clamp(300px, 27vw, 480px);
-  }
-  .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto,
-  .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto {
-    max-width: min(640px, 100vw - 2 * var(--gouttiere-pub) - clamp(300px, 27vw, 480px) - 3rem);
-  }
 }
 
 /* ═══════════════════════════════════════════════════════════════════
