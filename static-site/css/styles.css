@@ -9072,9 +9072,7 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    quitte à laisser un blanc quand la régie n'a rien à servir.
 
    Les numéros sont ceux des formats de The Moneytizer : 31 billboard,
-   2 pavé haut, 19 pavé bas, 28 megabanner bas, 3 grand angle, 11 in text.
-   Le double skyrail (4) n'apparaît pas : il se place tout seul dans les
-   gouttières, hors du flux, et n'a donc aucune hauteur à réserver. */
+   2 pavé haut, 3 grand angle, 11 in text, 15 interstitiel, 6 footer. */
 .pub {
   display: block;
   width: 100%;
@@ -9082,18 +9080,28 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   text-align: center;
   overflow: hidden;
 }
-.pub--31, .pub--2, .pub--19 { min-height: 250px; }
-.pub--28 { min-height: 90px; }
+.pub--31, .pub--2 { min-height: 250px; }
 .pub--3  { min-height: 600px; }
 .pub--11 { min-height: 0; }
 
 /* L'interstitiel se dessine par-dessus la page, pas dans le flux : son div
    n'est qu'un point d'ancrage. Il ne doit donc reserver aucune hauteur, sans
    quoi il laisserait un blanc de 250 px au milieu de l'ecran de resultat.
-   Le skyrail se place lui aussi tout seul : ni l'un ni l'autre ne doit etre
-   rogne par l'enveloppe. */
-.pub--15 { display: block; min-height: 0; margin: 0; }
-.pub--15, .pub--4 { overflow: visible; }
+   Le footer se colle lui aussi tout seul en bas de la fenetre : ni l'un ni
+   l'autre ne doit etre rogne par l'enveloppe. */
+.pub--15, .pub--6 { display: block; min-height: 0; margin: 0; overflow: visible; }
+
+/* ── Le footer : ses deux garde-fous ───────────────────────────────────
+   Un element fixe de la regie qui depasse 30 % de la hauteur de l'ecran (la
+   limite du standard Better Ads, que Chrome applique) recoit
+   data-pub-trop-haut de pub.js : il est masque, en !important parce que la
+   regie ecrit son affichage dans le style en ligne. Et tant qu'un bandeau est
+   colle en bas de la fenetre, pub.js pose sa hauteur dans --pub-footer : le
+   bas du body en est degage, pour qu'on puisse toujours amener le dernier
+   bouton de la page au-dessus du bandeau. Sans bandeau, la variable n'existe
+   pas et le body n'a pas de marge. */
+[data-pub-trop-haut] { display: none !important; }
+body { padding-bottom: var(--pub-footer, 0px); }
 
 /* ── Le div de la regie doit avoir une taille reelle ───────────────────
    C'est cette boite que leur script mesure pour savoir quels formats
@@ -11502,15 +11510,17 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   LA PLACE DES SKYRAILS
-   A partir de 1024 px, la regie peut poser ses deux skyrails dans les
-   gouttieres, a 8 px des bords de la fenetre, sur 120 a 160 px de large. La
-   colonne de contenu (46 rem) leur laisse la place, mais tout ce qui est plus
-   large qu'elle passait dessous : le hero des pages de test (texte a 2 rem du
-   bord, image qui deborde a droite), le bloc d'avis, les tests lies, le pied
-   de page, l'article de blog. Une seule gouttiere, --gouttiere-pub, tient
-   tout ca a distance : 152 px a 1024, 176 px a partir de 1352. Le hero garde
-   sa largeur propre, plus genereuse que la colonne de contenu.
+   LES GOUTTIERES DES ANCIENS SKYRAILS
+   Ces gouttieres ont ete creusees pour le double skyrail, que la regie posait
+   a partir de 1024 px a 8 px des bords de la fenetre, sur 120 a 160 px de
+   large, et qui passait par-dessus tout ce qui est plus large que la colonne
+   de contenu (46 rem) : le hero des pages de test, le bloc d'avis, les tests
+   lies, le pied de page, l'article de blog. Une seule gouttiere,
+   --gouttiere-pub, tenait tout ca a distance : 152 px a 1024, 176 px a partir
+   de 1352. Le skyrail a ete retire (il n'etait vu qu'une fois sur trois et ne
+   rapportait rien) ; les gouttieres restent pour l'instant, parce que les
+   enlever change la largeur de tous les blocs cites sur chaque page de bureau
+   et merite sa propre verification.
    ═══════════════════════════════════════════════════════════════════ */
 @media (min-width: 1024px) {
   :root { --gouttiere-pub: clamp(9.5rem, 13vw, 11rem); }

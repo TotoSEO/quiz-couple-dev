@@ -258,10 +258,9 @@
     </article>
 
     <%# L'in text se place tout seul entre les paragraphes, a l'endroit que la
-        regie juge le plus rentable. Le pave ferme l'article, apres la lecture. %>
+        regie juge le plus rentable. %>
     <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
     <%- include('../partials/pub', { format: 11 }) %>
-    <%- include('../partials/pub', { format: 19 }) %>
     <% } %>
     </div>
     <%# La colonne laterale n'apparait qu'au-dela de 1600 px. En dessous,
