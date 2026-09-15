@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'homme-nerveux-devant-une-femme',
   title: "Les signes qui montrent qu'un homme est nerveux devant une femme",
-  metaTitle: "Un homme nerveux devant une femme : les 12 signes | Quiz Couple",
+  metaTitle: "Un homme nerveux devant une femme : les 12 signes",
   metaDescription: "Les 12 signes qui montrent qu'un homme est nerveux devant vous, ce qui se passe dans son corps à ce moment-là, et quoi faire pour le détendre.",
   featuredImage: '/blog/homme-nerveux-devant-une-femme.webp',
   featuredImageAlt: "Jeune homme qui se frotte la nuque en souriant, un peu gêné, face à une jeune femme qui lui parle, un soir d'été en extérieur",

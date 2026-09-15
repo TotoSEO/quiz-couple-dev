@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-tauro',
   title: `Compatibilidad amorosa de Tauro: lo que los astros dicen de sus historias de amor`,
-  metaTitle: `Compatibilidad amorosa de Tauro: amor sólido o callejón sin salida`,
+  metaTitle: `Compatibilidad amorosa de Tauro: amor sólido o sin salida`,
   metaDescription: `Tauro ama profundamente, con lealtad, y a menudo durante largo tiempo. Pero no todos los signos están hechos para ese ritmo.`,
   featuredImage: '/blog/compatibilite-amoureuse-taureau.svg',
   featuredImageAlt: `Símbolo astrológico de Tauro, compatibilidad amorosa`,

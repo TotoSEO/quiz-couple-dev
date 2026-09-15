@@ -696,19 +696,19 @@ async function generatePage(routeKey, lang) {
     const blogMeta = {
       fr: { title: 'Blog couple : conseils relations amoureuses et vie à deux', description: 'Articles experts sur les relations amoureuses, la compatibilité et la vie de couple. Conseils pratiques, astrologie et psychologie.' },
       en: { title: 'Couple Blog: Tips, Advice & Relationship Insights', description: 'Expert articles on love, compatibility and relationships. Practical tips, astrology and psychology for couples.' },
-      es: { title: 'Blog Pareja: Consejos y Relaciones Amorosas', description: 'Artículos sobre relaciones, compatibilidad y vida en pareja. Consejos prácticos y psicología.' },
+      es: { title: 'Blog de pareja: consejos y relaciones amorosas', description: 'Artículos sobre relaciones, compatibilidad y vida en pareja. Consejos prácticos y psicología.' },
       de: { title: 'Paar-Blog: Tipps und Beziehungsratgeber', description: 'Fachartikel über Liebe, Kompatibilität und Beziehungen. Praktische Tipps und Psychologie für Paare.' },
-      it: { title: 'Blog Coppia: Consigli e Relazioni Amorose', description: 'Articoli su relazioni, compatibilità e vita di coppia. Consigli pratici e psicologia.' },
+      it: { title: 'Blog di coppia: consigli e relazioni amorose', description: 'Articoli su relazioni, compatibilità e vita di coppia. Consigli pratici e psicologia.' },
     };
     title = blogMeta[lang]?.title || blogMeta.fr.title;
     description = blogMeta[lang]?.description || blogMeta.fr.description;
   } else if (routeKey === 'about') {
     const aboutMeta = {
       fr: { title: 'Qui suis-je ? L\'histoire derrière Quiz Couple', description: 'Thomas, créateur de Quiz Couple. Pourquoi j\'ai créé ce site, comment je construis les tests, et ce qu\'ils valent, en toute transparence.' },
-      en: { title: 'About, The Person Behind Quiz Couple', description: 'Thomas, creator of Quiz Couple. Why I built this site, how the tests are made, and what they are worth, no sugarcoating.' },
-      es: { title: 'Quién Soy, La Persona Detrás de Quiz Couple', description: 'Thomas, creador de Quiz Couple. Por qué creé este sitio y cómo construyo los tests, sin rodeos.' },
-      de: { title: 'Über Mich, Die Person Hinter Quiz Couple', description: 'Thomas, der Gründer von Quiz Couple. Warum ich diese Seite gebaut habe und wie die Tests entstehen, ehrlich und direkt.' },
-      it: { title: 'Chi Sono, La Persona Dietro Quiz Couple', description: 'Thomas, creatore di Quiz Couple. Perché ho creato questo sito e come nascono i test, in trasparenza.' },
+      en: { title: 'About: the Person Behind Quiz Couple', description: 'Thomas, creator of Quiz Couple. Why I built this site, how the tests are made, and what they are worth, no sugarcoating.' },
+      es: { title: 'Quién soy: la persona detrás de Quiz Couple', description: 'Thomas, creador de Quiz Couple. Por qué creé este sitio y cómo construyo los tests, sin rodeos.' },
+      de: { title: 'Über mich: die Person hinter Quiz Couple', description: 'Thomas, der Gründer von Quiz Couple. Warum ich diese Seite gebaut habe und wie die Tests entstehen, ehrlich und direkt.' },
+      it: { title: 'Chi sono: la persona dietro Quiz Couple', description: 'Thomas, creatore di Quiz Couple. Perché ho creato questo sito e come nascono i test, in trasparenza.' },
     };
     title = aboutMeta[lang]?.title || aboutMeta.fr.title;
     description = aboutMeta[lang]?.description || aboutMeta.fr.description;

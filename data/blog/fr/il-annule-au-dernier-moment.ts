@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'il-annule-au-dernier-moment',
   title: "Il annule au dernier moment : ce que ça veut dire et quoi répondre",
-  metaTitle: "Il annule au dernier moment : que faire et quoi lui répondre | Quiz Couple",
+  metaTitle: "Il annule au dernier moment : que faire et quoi lui répondre",
   metaDescription: "Il vient d'annuler votre rendez-vous une heure avant. Ce que ça veut dire la plupart du temps, le seul signal à regarder, et les messages à lui envoyer.",
   featuredImage: '/blog/il-annule-au-dernier-moment.webp',
   featuredImageAlt: "Jeune femme habillée pour sortir, assise sur son lit, son téléphone à la main après avoir lu un message d'annulation",

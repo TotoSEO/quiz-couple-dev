@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'he-cancelled-last-minute',
   title: "He cancelled last minute: what it means and what to reply",
-  metaTitle: "He cancelled last minute: what it means and what to reply | Quiz Couple",
+  metaTitle: "He cancelled last minute: what it means and what to reply",
   metaDescription: "He has just called off your date an hour before. What that means most of the time, the one signal worth watching, and the messages to send him.",
   featuredImage: '/blog/il-annule-au-dernier-moment.webp',
   featuredImageAlt: "Young woman dressed to go out, sitting on her bed, phone in her hands after reading a cancellation message",

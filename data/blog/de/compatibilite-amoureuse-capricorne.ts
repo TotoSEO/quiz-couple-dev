@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-steinbock',
   title: `Liebeskompatibilität des Steinbocks: Langsam, beständig, und tiefer als gedacht`,
-  metaTitle: `Liebeskompatibilität Steinbock: Wer erreicht sein verborgenes Herz?`,
+  metaTitle: `Liebeskompatibilität Steinbock: Wer erreicht sein Herz?`,
   metaDescription: `Der Steinbock liebt leise, aber dafür auf Dauer. Erfahren Sie, welche Sternzeichen seine reservierte Art als Stärke erkennen, und welche daran verzweifeln.`,
   featuredImage: '/blog/compatibilite-amoureuse-capricorne.svg',
   featuredImageAlt: `Astrologisches Symbol des Steinbocks, Liebeskompatibilität`,

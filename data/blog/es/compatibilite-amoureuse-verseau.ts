@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'compatibilidad-amorosa-acuario',
   title: `Compatibilidad amorosa de Acuario: los signos que aman sin asfixiar`,
-  metaTitle: `Compatibilidad amorosa de Acuario: libertad y amor, ¿son compatibles?`,
+  metaTitle: `Compatibilidad amorosa de Acuario: amar sin perder la libertad`,
   metaDescription: `Acuario ama a su manera, con espacio, independencia y una mente que no para. ¿Qué signos entienden esa forma de querer sin tomárselo como indiferencia?`,
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Símbolo astrológico de Acuario, compatibilidad amorosa`,
