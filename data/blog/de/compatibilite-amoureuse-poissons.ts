@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-fische',
   title: `Liebeskompatibilität der Fische: Zwischen Traum und Wirklichkeit, wer hält sie an Land?`,
-  metaTitle: `Liebeskompatibilität Fische: Wer verdient ihre grenzenlose Hingabe?`,
+  metaTitle: `Liebeskompatibilität Fische: Wer verdient ihre Hingabe?`,
   metaDescription: `Die Fische lieben ohne Grenzen, und genau das kann zum Problem werden. Erfahren Sie, welche Sternzeichen sie tragen und welche sie untergehen lassen.`,
   featuredImage: '/blog/compatibilite-amoureuse-poissons.svg',
   featuredImageAlt: `Astrologisches Symbol der Fische, Liebeskompatibilität`,

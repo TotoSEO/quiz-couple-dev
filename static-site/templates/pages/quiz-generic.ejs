@@ -286,9 +286,19 @@
         const heroTitle = t(ns + ':hero.title', quizTitle);
         const heroHighlight = t(ns + ':hero.titleHighlight', '');
       %>
+      <%#
+        Le mot a surligner est cherche dans le titre sans tenir compte de la
+        casse : cherche a l'identique, « Marrant » ne trouvait pas « marrant »
+        et se retrouvait colle a la fin du H1 (« ...a se poser a deux
+        Marrant »), un mot-cle en double que Google reprend tel quel quand il
+        recompose un titre. Le segment surligne garde la casse du titre.
+        Quand le mot n'y est pas du tout, il complete le titre, comme avant :
+        c'est ainsi qu'une partie des pages ecrivent leur H1 en deux moitiers.
+      %>
+      <% const posSurligne = heroHighlight ? heroTitle.toLowerCase().indexOf(heroHighlight.toLowerCase()) : -1; %>
       <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-tight">
-        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
-          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% if (posSurligne >= 0) { %>
+          <%= heroTitle.slice(0, posSurligne) %><span class="text-gradient"><%= heroTitle.slice(posSurligne, posSurligne + heroHighlight.length) %></span><%= heroTitle.slice(posSurligne + heroHighlight.length) %>
         <% } else if (heroHighlight) { %>
           <%= heroTitle %> <span class="text-gradient"><%= heroHighlight %></span>
         <% } else { %>

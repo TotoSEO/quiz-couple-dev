@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'cancela-en-el-ultimo-momento',
   title: "Cancela en el último momento: qué significa y qué contestarle",
-  metaTitle: "Cancela en el último momento: qué significa y qué contestarle | Quiz Couple",
+  metaTitle: "Cancela en el último momento: qué significa y qué contestarle",
   metaDescription: "Acaba de cancelar la cita una hora antes. Qué significa la mayoría de las veces, la única señal que hay que mirar, y los mensajes que puedes enviarle.",
   featuredImage: '/blog/il-annule-au-dernier-moment.webp',
   featuredImageAlt: "Chica joven arreglada para salir, sentada en su cama, con el móvil en las manos tras leer un mensaje de cancelación",

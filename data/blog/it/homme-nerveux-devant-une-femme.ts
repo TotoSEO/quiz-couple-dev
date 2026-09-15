@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'uomo-nervoso-davanti-a-una-donna',
   title: "I segni che dimostrano che un uomo è nervoso davanti a una donna",
-  metaTitle: "Un uomo nervoso davanti a una donna: i 12 segni | Quiz Couple",
+  metaTitle: "Un uomo nervoso davanti a una donna: i 12 segni",
   metaDescription: "I 12 segni che dimostrano che un uomo è nervoso davanti a te, cosa succede nel suo corpo in quel momento, e cosa fare per farlo rilassare.",
   featuredImage: '/blog/homme-nerveux-devant-une-femme.webp',
   featuredImageAlt: "Ragazzo che si massaggia la nuca con un sorriso un po' imbarazzato, davanti a una ragazza che gli parla, una sera d'estate all'aperto",

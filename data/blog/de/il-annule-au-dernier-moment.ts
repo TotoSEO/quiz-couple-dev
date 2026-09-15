@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'er-sagt-in-letzter-minute-ab',
   title: "Er sagt in letzter Minute ab: was das heißt und was du antwortest",
-  metaTitle: "Er sagt in letzter Minute ab: was das heißt und was du antwortest | Quiz Couple",
+  metaTitle: "Er sagt in letzter Minute ab: was das heißt und was du antwortest",
   metaDescription: "Er hat das Date eine Stunde vorher abgesagt. Was das meistens bedeutet, das einzige Signal, auf das es ankommt, und die Nachrichten, die du ihm schicken kannst.",
   featuredImage: '/blog/il-annule-au-dernier-moment.webp',
   featuredImageAlt: "Junge Frau, ausgehfertig angezogen, sitzt auf ihrem Bett und hält das Handy in den Händen, nachdem sie eine Absage gelesen hat",

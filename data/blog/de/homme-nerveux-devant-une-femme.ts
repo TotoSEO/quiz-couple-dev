@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'mann-nervoes-vor-einer-frau',
   title: "Die Zeichen, die verraten, dass ein Mann vor einer Frau nervös ist",
-  metaTitle: "Ein Mann nervös vor einer Frau: die 12 Zeichen | Quiz Couple",
+  metaTitle: "Ein Mann nervös vor einer Frau: die 12 Zeichen",
   metaDescription: "Die 12 Zeichen, die verraten, dass ein Mann vor dir nervös ist, was in diesem Moment in seinem Körper passiert, und wie du ihn entspannst.",
   featuredImage: '/blog/homme-nerveux-devant-une-femme.webp',
   featuredImageAlt: "Junger Mann, der sich mit verlegenem Lächeln den Nacken reibt, gegenüber einer jungen Frau, die mit ihm spricht, an einem Sommerabend draußen",

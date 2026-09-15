@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'pervers-narcissique-amour',
   title: "Pervers narcissique en amour : reconnaître l'emprise quand on est en plein dedans",
-  metaTitle: "Pervers narcissique en couple : les signes qui ne trompent pas",
+  metaTitle: "Pervers narcissique en amour : reconnaître l'emprise",
   metaDescription: "Charmant dehors, destructeur dedans. Le cycle du pervers narcissique en couple, les signaux concrets et comment en avoir le cœur net.",
   featuredImage: '/blog/pervers-narcissique-amour.webp',
   featuredImageAlt: "Silhouette d'un couple dont l'un tire les fils de l'autre comme une marionnette",

@@ -66,7 +66,7 @@
     "metaDescription": "Est-ce que je l'aime encore ? Vingt questions pondérées, où penser à partir pèse plus lourd qu'un agacement, et un résultat sur huit paliers. Test gratuit, sans inscription."
   },
   "quizAmoureux": {
-    "title": "Quiz Amoureux interactif : questionnez votre amour gratuitement",
+    "title": "Quiz amoureux en couple : 20 questions, répondez-vous pareil ?",
     "shortTitle": "Quiz Amoureux",
     "description": "20 questions à débattre ensemble pour mesurer votre harmonie de couple.",
     "metaDescription": "Quiz amoureux à deux : 20 questions sur votre histoire, chacun répond de son côté et le jeu compare. Gratuit, sans inscription, sur un seul téléphone."
@@ -149,7 +149,7 @@
     "metaDescription": "Calculatrice de l'amour gratuite : écrivez deux prénoms et obtenez votre pourcentage de compatibilité, avec le détail des cinq mesures. Résultat immédiat."
   },
   "testDateNaissance": {
-    "title": "Date de naissance | Test de compatibilité amoureuse",
+    "title": "Compatibilité amoureuse par date de naissance : test gratuit",
     "shortTitle": "Compatibilité date de naissance",
     "description": "Deux dates de naissance suffisent. On en tire vos chemins de vie, vos signes astrologiques et vos signes chinois, puis on croise les trois lectures.",
     "metaDescription": "Êtes-vous compatibles selon vos dates de naissance ? Chemin de vie, signe astro et signe chinois croisés en un seul calcul. Gratuit et sans inscription."
@@ -359,9 +359,9 @@
     "description": "Le grand classique des soirées, réécrit pour deux : chacun répond à tour de rôle, et le résultat montre qui a le plus de choses à avouer."
   },
   "testCrush": {
-    "title": "Amour ou en Crush ? Test en ligne 35 questions",
+    "title": "Amour ou crush ? Test en ligne, 35 questions",
     "shortTitle": "Test crush",
-    "metaTitle": "Amour ou en Crush ? Test en ligne 35 questions",
+    "metaTitle": "Amour ou crush ? Test en ligne, 35 questions",
     "metaDescription": "35 questions pour savoir si tu es en crush ou si ce sont des sentiments amoureux. Les questions s'adaptent selon que ton crush est un garçon ou une fille.",
     "description": "Réponds sur ce que tu ressens, le score fait le tri entre l'attirance, le crush et les sentiments amoureux."
   },
@@ -405,7 +405,7 @@
     "metaDescription": "Suis-je amoureux(se) de mon/ma meilleur(e) ami(e) ? Quinze questions qui pèsent chacune leur poids, deux séries selon que ton ami(e) est un garçon ou une fille, et un résultat immédiat."
   },
   "testTrouverAmour": {
-    "title": "Test célibataire : Pourquoi ne trouvez-vous pas l'amour ?",
+    "title": "Pourquoi je ne trouve pas l'amour ? Test en 15 questions",
     "shortTitle": "Pourquoi je ne trouve pas l'amour ?",
     "description": "Quinze questions sur vos rencontres, vos attentes et ce qui vous retient. Le résultat met un nom sur ce qui coince, sans juger.",
     "metaDescription": "Pourquoi vous ne trouvez pas l'amour ? Quinze questions sur vos rencontres, vos attentes et ce qui vous retient, pour comprendre ce qui coince. Test gratuit, résultat immédiat et des pistes pour la suite."
@@ -417,7 +417,7 @@
     "metaDescription": "Pourquoi êtes-vous encore célibataire ? Vingt questions, dont deux qui changent selon vos réponses, pour trouver la cause qui pèse le plus et savoir par quoi commencer. Gratuit, sans inscription."
   },
   "testCoupleOuCelibat": {
-    "title": "Es-tu fait pour être seul ou en couple ? Test en ligne",
+    "title": "Couple ou célibat : es-tu fait pour vivre seul ou à deux ? Test",
     "shortTitle": "Couple ou célibat ?",
     "description": "Vingt questions pondérées sur votre quotidien et vos réflexes. Le résultat donne deux parts qui font cent : celle qui penche vers la vie seul, celle qui penche vers la vie à deux.",
     "metaDescription": "Êtes-vous fait pour vivre seul ou en couple ? Vingt questions pondérées, un résultat en deux pourcentages qui font cent, et ce que ça dit de votre façon de vivre. Test gratuit, sans inscription."

@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'liebeskompatibilitaet-wassermann',
   title: `Liebeskompatibilität des Wassermanns: Freigeist mit Herz, wenn man ihn lässt`,
-  metaTitle: `Liebeskompatibilität Wassermann: Wer versteht seinen Freiheitsdrang?`,
+  metaTitle: `Liebeskompatibilität Wassermann: Wer versteht seine Freiheit?`,
   metaDescription: `Der Wassermann liebt anders als alle anderen, unkonventionell, frei und auf seine eigene Art tief. Erfahren Sie, welche Zeichen damit umgehen können.`,
   featuredImage: '/blog/compatibilite-amoureuse-verseau.svg',
   featuredImageAlt: `Astrologisches Symbol des Wassermanns, Liebeskompatibilität`,

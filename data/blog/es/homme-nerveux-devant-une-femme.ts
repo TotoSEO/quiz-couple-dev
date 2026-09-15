@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'hombre-nervioso-delante-de-una-mujer',
   title: "Las señales que demuestran que un hombre está nervioso delante de una mujer",
-  metaTitle: "Un hombre nervioso delante de una mujer: las 12 señales | Quiz Couple",
+  metaTitle: "Un hombre nervioso delante de una mujer: las 12 señales",
   metaDescription: "Las 12 señales que demuestran que un hombre está nervioso delante de ti, qué pasa en su cuerpo en ese momento, y qué hacer para relajarlo.",
   featuredImage: '/blog/homme-nerveux-devant-une-femme.webp',
   featuredImageAlt: "Chico joven que se frota la nuca con una sonrisa algo apurada, frente a una chica que le habla, una tarde de verano al aire libre",

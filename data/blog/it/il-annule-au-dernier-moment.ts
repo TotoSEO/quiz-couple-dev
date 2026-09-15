@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'annulla-all-ultimo-momento',
   title: "Annulla all'ultimo momento: cosa significa e cosa rispondere",
-  metaTitle: "Annulla all'ultimo momento: cosa significa e cosa rispondere | Quiz Couple",
+  metaTitle: "Annulla all'ultimo momento: cosa significa e cosa rispondere",
   metaDescription: "Ha appena disdetto l'appuntamento un'ora prima. Cosa significa nella maggior parte dei casi, l'unico segnale da guardare, e i messaggi da mandargli.",
   featuredImage: '/blog/il-annule-au-dernier-moment.webp',
   featuredImageAlt: "Ragazza vestita per uscire, seduta sul letto, con il telefono in mano dopo aver letto un messaggio di disdetta",

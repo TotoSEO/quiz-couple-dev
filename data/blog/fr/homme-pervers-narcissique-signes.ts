@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'homme-pervers-narcissique-signes',
   title: "Homme pervers narcissique : 12 signes, du charme public au contrôle privé",
-  metaTitle: "Pervers narcissique homme : les symptômes typiques",
+  metaTitle: "Homme pervers narcissique : 12 signes, du charme au contrôle",
   metaDescription: "Irréprochable en société, écrasant en privé. Les 12 comportements de l'homme pervers narcissique, dans l'ordre où ils apparaissent, et quoi faire ensuite.",
   featuredImage: '/blog/homme-pervers-narcissique-signes.webp',
   featuredImageAlt: "Homme au double visage, souriant d'un côté et menaçant dans l'ombre de l'autre",

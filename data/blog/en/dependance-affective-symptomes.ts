@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'emotional-dependency-symptoms',
   title: "Symptoms of emotional dependency: examples and outcomes",
-  metaTitle: "Emotional dependency: the symptoms that should alert you",
+  metaTitle: "Symptoms of Emotional Dependency: Examples and Consequences",
   metaDescription: "The phone checked 40 times, the fear of silence, the relationship taking up all the space... The 16 symptoms of emotional dependency, area by area.",
   featuredImage: '/blog/dependance-affective-symptomes.webp',
   featuredImageAlt: "Person chained to a phone displaying a heart, waiting for a reply",

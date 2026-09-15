@@ -4,7 +4,7 @@ import { AUTHORS } from '@/data/blog/authors';
 const article: BlogArticleData = {
   slug: 'signs-a-man-is-nervous-around-you',
   title: "The signs that show a man is nervous around a woman",
-  metaTitle: "A man nervous around a woman: the 12 signs | Quiz Couple",
+  metaTitle: "A man nervous around a woman: the 12 signs",
   metaDescription: "The 12 signs that show a man is nervous around you, what is going on in his body at that moment, and what to do to put him at ease.",
   featuredImage: '/blog/homme-nerveux-devant-une-femme.webp',
   featuredImageAlt: "Young man rubbing the back of his neck with a slightly awkward smile, facing a young woman talking to him on a summer evening outdoors",
