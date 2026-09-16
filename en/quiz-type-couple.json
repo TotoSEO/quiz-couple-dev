@@ -3,15 +3,15 @@
     "badge": "Couple quiz",
     "title": "What type of couple are you? The quiz to take together",
     "titleHighlight": "type of couple",
-    "description": "Some couples do everything together, others laugh at everything, others each have their own life, and others still are building something. Fifteen everyday situations, to answer <strong>together, on the same phone</strong>, to find out which family you belong to.",
+    "description": "Inseparables, partners in crime, independents or builders? Fifteen everyday situations, to answer <strong>together, on the same phone</strong>, to find out which family you belong to. With, for each family, its strength and its weak spot.",
     "subtitle": "Fifteen questions, three minutes, to answer together",
     "jumpBtn": "Take the quiz"
   },
   "section1": {
     "title": "There isn't one right type of couple, there are four",
     "intro": "People often think a happy couple looks like something specific: lots of time together, lots of laughter, plans. In real life, the couples that last don't look alike at all.",
-    "p1": "This quiz sorts couples into four big families. There are the inseparables, who do almost everything as a pair and love it. There are the partners in crime, where everything goes through laughter. There are the independents, who each have their own life and come back to each other. And there are the builders, who are heading somewhere: a flat, a child, a project.",
-    "p2": "None of these four ways of living as a couple is better than another. Each has its strength, and each has its weak spot, the one you don't see because you're inside it. The inseparables risk smothering each other, the partners in crime dodging serious subjects, the independents turning into flatmates, and the builders forgetting to live while waiting for the project to be finished.",
+    "p1": "This quiz sorts couples into four big families. The inseparables do almost everything as a pair, and they love it. With the partners in crime, everything goes through laughter. The independents each have their own life and come back together in the evening. And the builders are heading somewhere: a flat, a child, a project.",
+    "p2": "None of these four ways of living as a couple is better than another. Each has its strength, and each has a weak spot you don't see because you're inside it. They're detailed just below.",
     "p3": "What the quiz gives you is a name for what you are, and one thing to keep an eye on. It sounds simple, but putting a word on your way of living as a couple changes quite a few things. You understand why a certain friend thinks you never see each other anymore, or why the other one needed some air last month."
   },
   "section2": {
@@ -32,20 +32,20 @@
   },
   "section3": {
     "title": "How to answer, and what the result says",
-    "p1": "You answer together, on the same phone. For each situation, four answers, one per type of couple. You pick the one that looks most like you, even if none fits perfectly. When you disagree, that's exactly where it gets interesting: talk for two minutes, and pick the answer that describes what you do, not what you'd like to do.",
+    "p1": "You answer together, on the same phone. For each situation, four answers, one per type of couple. You pick the one that looks most like you, even if none fits perfectly. When you disagree, that's exactly where it gets interesting! Talk for two minutes, then pick the answer that describes what you actually do, not what you'd like to do.",
     "p2": "The order of the answers changes with every question, so you can't answer \"always the first one\" without reading. At the end, you see the four bars and the profile that stands out. If no family clearly dominates, the quiz says so rather than deciding by a single vote: that's the chameleon couple, which changes with the period.",
     "p3": "This quiz describes your way of living as a couple. It doesn't measure <a href=\"/en/couple-compatibility-test/\">how solid your relationship is</a>, or <a href=\"/en/love-personality-test/\">the way each of you loves</a> taken separately. And if you want to know through which gestures the other feels loved, that's something else again: <a href=\"/en/love-language-test-couple/\">your partner's love language</a> is measured with a separate test."
   },
   "seo": {
     "faqTitle": "The questions people ask",
     "faq1Q": "What are the different types of couple?",
-    "faq1A": "There are as many classifications as there are books on the subject. The one in this quiz has four: the inseparables, who do almost everything together, the partners in crime, where everything goes through laughter, the independents, who each have their own life, and the builders, who are working towards a project. A fifth result, the chameleon couple, says no family dominates at yours.",
+    "faq1A": "There are as many classifications as there are books on the subject. This quiz keeps four, described above: the inseparables, the partners in crime, the independents and the builders. There's also a fifth result, the chameleon couple, for couples where no family dominates.",
     "faq2Q": "Can a couple change type over time?",
     "faq2A": "Yes, and it's even common. Many couples start out inseparable, become builders when the flat and the children arrive, then go back to being partners in crime or independents once the children grow up. Taking the quiz again a few years apart often gives a different result, and that's not a problem.",
     "faq3Q": "We don't agree on an answer, what do we do?",
-    "faq3A": "You talk, and you pick the answer that describes what you actually do, not what one of you would like. If it's stuck, take the answer of the person who most often feels that things aren't like that. And make a note of the question: a disagreement about \"what we are\" often says more than the final result.",
+    "faq3A": "You talk about it for two minutes, and you choose what happens most often at yours. If it's stuck, take the answer of the one who most often feels that things aren't like that. And make a note of the question: a disagreement about \"what we are\" often says more than the final result.",
     "faq4Q": "Is one type of couple better than the others?",
-    "faq4A": "No. All four types last, and all four types split up. What counts is that the way of living as a couple suits both of you. An independent with an inseparable will have a harder time than two independents, but it isn't the type that's at fault, it's the gap between the two.",
+    "faq4A": "No. All four types last, and all four types split up. What counts is that the way of living as a couple suits both of you. An independent with an inseparable will have a harder time than two independents together. The problem comes from the gap between the two, not from the type.",
     "faq5Q": "Is the quiz anonymous?",
     "faq5A": "Yes. Your answers stay on your phone, there's nothing to fill in or create, and the result appears right after the fifteenth question."
   },

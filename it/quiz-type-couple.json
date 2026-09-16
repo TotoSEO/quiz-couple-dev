@@ -3,15 +3,15 @@
     "badge": "Quiz di coppia",
     "title": "Che tipo di coppia siete? Il quiz da fare in due",
     "titleHighlight": "tipo di coppia",
-    "description": "Ci sono coppie che fanno tutto insieme, altre che ridono di tutto, altre in cui ognuno ha la sua vita, altre ancora che costruiscono. Quindici situazioni quotidiane, a cui rispondere <strong>insieme, sullo stesso telefono</strong>, per sapere in quale famiglia siete.",
+    "description": "Fusionali, complici, indipendenti o costruttori? Quindici situazioni quotidiane, a cui rispondere <strong>insieme, sullo stesso telefono</strong>, per sapere in quale famiglia siete. Con, per ogni famiglia, la sua forza e il suo punto debole.",
     "subtitle": "Quindici domande, tre minuti, da fare insieme",
     "jumpBtn": "Fai il quiz"
   },
   "section1": {
     "title": "Non c'è un tipo di coppia giusto, ce ne sono quattro",
     "intro": "Si crede spesso che una coppia felice somigli a qualcosa di preciso: tanto tempo insieme, tante risate, dei progetti. In realtà, le coppie che durano non si somigliano per niente.",
-    "p1": "Questo quiz divide le coppie in quattro grandi famiglie. Ci sono le coppie fusionali, che fanno quasi tutto in due e a cui piace così. Ci sono i complici, da cui tutto passa per la risata. Ci sono gli indipendenti, che hanno ognuno la propria vita e si ritrovano. E ci sono i costruttori, che avanzano verso qualcosa: un appartamento, un figlio, un progetto.",
-    "p2": "Nessuno di questi quattro modi di vivere in due vale più di un altro. Ognuno ha la sua forza, e ognuno ha il suo punto debole, quello che non si vede perché ci si sta dentro. I fusionali rischiano di soffocarsi, i complici di evitare gli argomenti seri, gli indipendenti di diventare coinquilini, e i costruttori di dimenticarsi di vivere aspettando che il progetto sia finito.",
+    "p1": "Questo quiz divide le coppie in quattro grandi famiglie. I fusionali fanno quasi tutto in due, e a loro piace così. Tra i complici, tutto passa per la risata. Gli indipendenti hanno ognuno la propria vita e si ritrovano la sera. E i costruttori avanzano verso qualcosa: un appartamento, un figlio, un progetto.",
+    "p2": "Nessuno di questi quattro modi di vivere in due vale più di un altro. Ognuno ha la sua forza, e ognuno ha un punto debole che non si vede perché ci si sta dentro. Li vediamo uno per uno qui sotto.",
     "p3": "Quello che il quiz vi dà è un nome per quello che siete, e una cosa da tenere d'occhio. Sembra semplice, ma mettere una parola sul proprio modo di vivere in due cambia parecchie cose. Si capisce perché quell'amico trova che non ci si veda più, o perché l'altro il mese scorso ha avuto bisogno d'aria."
   },
   "section2": {
@@ -32,20 +32,20 @@
   },
   "section3": {
     "title": "Come rispondere, e cosa dice il risultato",
-    "p1": "Rispondete insieme, sullo stesso telefono. A ogni situazione, quattro risposte, una per tipo di coppia. Scegliete quella che vi somiglia di più, anche se nessuna calza del tutto. Quando non siete d'accordo, è proprio lì che diventa interessante: discutete due minuti, e prendete la risposta che descrive quello che fate, non quello che vorreste fare.",
+    "p1": "Rispondete insieme, sullo stesso telefono. A ogni situazione, quattro risposte, una per tipo di coppia. Scegliete quella che vi somiglia di più, anche se nessuna calza del tutto. Quando non siete d'accordo, è proprio lì che diventa interessante! Discutete due minuti, poi prendete la risposta che descrive quello che fate davvero, non quello che vorreste fare.",
     "p2": "L'ordine delle risposte cambia a ogni domanda, perché non si possa rispondere « sempre la prima » senza leggere. Alla fine, vedete le quattro barre e il profilo che emerge. Se nessuna famiglia domina nettamente, il quiz lo dice invece di decidere per un voto di scarto: è la coppia camaleonte, che cambia a seconda del periodo.",
     "p3": "Questo quiz descrive il vostro modo di vivere in due. Non misura <a href=\"/it/test-compatibilita-coppia/\">la solidità della vostra relazione</a>, né <a href=\"/it/test-personalita-amorosa/\">il modo in cui ciascuno di voi ama</a> preso separatamente. E se volete sapere con quali gesti l'altro si sente amato, è ancora un'altra cosa: <a href=\"/it/test-linguaggio-amore-coppia/\">il linguaggio dell'amore del partner</a> si misura con un test a parte."
   },
   "seo": {
     "faqTitle": "Le domande che ci si fa",
     "faq1Q": "Quali sono i diversi tipi di coppia?",
-    "faq1A": "Ci sono tante classificazioni quanti libri sull'argomento. Quella di questo quiz ne conta quattro: i fusionali, che fanno quasi tutto insieme, i complici, da cui tutto passa per la risata, gli indipendenti, che hanno ognuno la propria vita, e i costruttori, che avanzano verso un progetto. Un quinto risultato, la coppia camaleonte, dice che da voi nessuna famiglia domina.",
+    "faq1A": "Ci sono tante classificazioni quanti libri sull'argomento. Questo quiz ne tiene quattro, descritte più in alto: i fusionali, i complici, gli indipendenti e i costruttori. C'è anche un quinto risultato, la coppia camaleonte, per le coppie in cui nessuna famiglia domina.",
     "faq2Q": "Una coppia può cambiare tipo con il tempo?",
     "faq2A": "Sì, ed è anche frequente. Molte coppie cominciano fusionali, diventano costruttrici quando arrivano l'appartamento e i figli, poi tornano complici o indipendenti quando i figli crescono. Rifare il quiz a qualche anno di distanza dà spesso un risultato diverso, e non è un problema.",
     "faq3Q": "Non siamo d'accordo su una risposta, cosa facciamo?",
-    "faq3A": "Ne discutete, e prendete la risposta che descrive quello che fate davvero, non quello che uno dei due vorrebbe. Se si blocca, prendete quella della persona che più spesso ha l'impressione che non sia così. E annotatevi la domanda: un disaccordo su « quello che siamo » dice spesso più del risultato finale.",
+    "faq3A": "Ne parlate due minuti, e scegliete quello che succede più spesso da voi. Se si blocca, prendete la risposta di chi più spesso ha l'impressione che non sia così. E annotatevi la domanda: un disaccordo su « quello che siamo » dice spesso più del risultato finale.",
     "faq4Q": "C'è un tipo di coppia migliore degli altri?",
-    "faq4A": "No. I quattro tipi durano, e i quattro tipi si separano. Quello che conta è che il modo di vivere in due vada bene a entrambi. Un indipendente in coppia con una fusionale farà più fatica di due indipendenti, ma non è il tipo a essere in causa, è la distanza tra i due.",
+    "faq4A": "No. I quattro tipi durano, e i quattro tipi si separano. Quello che conta è che il modo di vivere in due vada bene a entrambi. Un indipendente in coppia con una fusionale farà più fatica di due indipendenti insieme. Il problema viene dalla distanza tra i due, non dal tipo.",
     "faq5Q": "Il quiz è anonimo?",
     "faq5A": "Sì. Le vostre risposte restano sul vostro telefono, non c'è niente da compilare né da creare, e il risultato appare subito dopo la quindicesima domanda."
   },
