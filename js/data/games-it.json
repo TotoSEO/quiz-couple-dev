@@ -380,7 +380,9 @@
     "testCelibataire": "Test perché sono ancora single",
     "testCoupleOuCelibat": "Test coppia o single",
     "testAmourAmi": "Test innamorato del migliore amico",
-    "jeuPhrases": "Frasi da completare"
+    "jeuPhrases": "Frasi da completare",
+    "testPretRelation": "Test pronto per una nuova relazione",
+    "quizTypeCouple": "Quiz che tipo di coppia siete"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",
@@ -750,5 +752,10 @@
     "introQuestion": "Prima di cominciare:",
     "introQuote": "Rispondi come fai davvero, non come vorresti fare.",
     "disclaimer": "Questo test non dice chi sei. Guarda quello che oggi si inceppa tra te e un incontro, e questo può cambiare. Le tue risposte non vengono salvate."
+  },
+  "pret-nouvelle-relation": {
+    "introQuestion": "Prima di cominciare:",
+    "introQuote": "Rispondi su quello che vivi adesso, non sul mese dopo la rottura.",
+    "disclaimer": "Questo test non dice se incontrerai qualcuno. Guarda se il posto è libero oggi, e questo cambia da un mese all'altro. Le tue risposte non vengono salvate."
   }
 }

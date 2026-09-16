@@ -10,7 +10,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -179,6 +179,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-innamorati/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-amoureux/"/>
     <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/en/what-type-of-couple-are-you-quiz/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quel-type-de-couple-etes-vous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/what-type-of-couple-are-you-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/que-tipo-de-pareja-sois-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/welcher-paartyp-seid-ihr-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/che-tipo-di-coppia-siete-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quel-type-de-couple-etes-vous/"/>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -478,7 +490,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/liebespersoenlichkeit-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-personalita-amorosa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-personnalite-couple/"/>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -598,7 +610,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/denkt-mein-ex-noch-an-mich/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/il-mio-ex-pensa-ancora-a-me/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/mon-ex-pense-t-il-elle-encore-a-moi/"/>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -634,7 +646,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/warum-finde-ich-keine-liebe-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-perche-non-trovo-l-amore/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-pourquoi-je-ne-trouve-pas-l-amour/"/>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -659,6 +671,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-coppia-o-single/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-couple-ou-celibat/"/>
     <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/en/ready-for-a-new-relationship-test/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-pret-pour-une-nouvelle-relation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/ready-for-a-new-relationship-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-preparado-para-una-nueva-relacion/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/bereit-fuer-eine-neue-beziehung-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-pronto-per-una-nuova-relazione/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-pret-pour-une-nouvelle-relation/"/>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -862,7 +886,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/eigenes-quiz-erstellen/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/crea-il-tuo-quiz/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/creation-quiz-personnalise/"/>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
