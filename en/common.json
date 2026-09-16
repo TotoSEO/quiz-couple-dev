@@ -175,13 +175,6 @@
     "backHome": "Back to homepage",
     "seeQuestions": "See questions"
   },
-  "communityQuiz": {
-    "points": "Points quiz",
-    "trueFalse": "True or False",
-    "fun": "Fun",
-    "wouldYouRather": "Would you rather…",
-    "questionsShort": "questions"
-  },
   "jsonLd": {
     "aboutDefaut": "couple"
   }

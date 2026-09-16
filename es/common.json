@@ -175,13 +175,6 @@
     "backHome": "Volver al inicio",
     "seeQuestions": "Ver las preguntas"
   },
-  "communityQuiz": {
-    "points": "Quiz de puntos",
-    "trueFalse": "Verdadero o falso",
-    "fun": "Diversión",
-    "wouldYouRather": "¿Qué preferirías?",
-    "questionsShort": "preguntas"
-  },
   "jsonLd": {
     "aboutDefaut": "pareja"
   }

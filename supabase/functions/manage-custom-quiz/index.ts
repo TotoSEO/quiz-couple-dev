@@ -18,7 +18,6 @@ const MAX_PTS = 100;
 const MAX_EXP = 200;
 const RATE_LIMIT_PER_DAY = 15;
 const PRIVATE_TTL_DAYS = 7;
-const LIST_PAGE_SIZE = 24;
 const QUIZ_TYPES = ['points', 'truefalse', 'fun', 'wyr'];
 
 function json(body: unknown, status = 200) {
@@ -227,10 +226,10 @@ Deno.serve(async (req) => {
         .gte('created_at', since);
       if ((count ?? 0) >= RATE_LIMIT_PER_DAY) return json({ error: 'rate_limited' }, 429);
 
-      const isPublic = body.isPublic === true;
-      const expiresAt = isPublic
-        ? null
-        : new Date(Date.now() + PRIVATE_TTL_DAYS * 24 * 3600 * 1000).toISOString();
+      // Plus de quiz public depuis septembre 2026 : quoi que demande le
+      // client, un quiz est prive, accessible par son lien, et expire.
+      const isPublic = false;
+      const expiresAt = new Date(Date.now() + PRIVATE_TTL_DAYS * 24 * 3600 * 1000).toISOString();
 
       // Insert with a unique share_id (retry on the rare collision)
       let shareId = '';
@@ -273,25 +272,10 @@ Deno.serve(async (req) => {
         .eq('share_id', shareId)
         .maybeSingle();
       if (error) return json({ error: 'db_error' }, 500);
-      if (!data) return json({ error: 'not_found' }, 404);
+      // Un quiz encore marque public en base (cree avant le retrait de la
+      // fonction) n'est plus servi : pour la personne, il est introuvable.
+      if (!data || data.is_public) return json({ error: 'not_found' }, 404);
       return json({ ok: true, quiz: data });
-    }
-
-    // ── LIST PUBLIC ──────────────────────────────────────────────────
-    if (action === 'list_public') {
-      const page = Math.max(0, parseInt(String(body.page ?? '0'), 10) || 0);
-      const from = page * LIST_PAGE_SIZE;
-      const to = from + LIST_PAGE_SIZE - 1;
-      let query = supabase
-        .from('custom_quizzes')
-        .select('share_id, title, description, quiz_type, lang, question_count, plays, created_at')
-        .eq('is_public', true)
-        .order('created_at', { ascending: false })
-        .range(from, to);
-      if (['fr', 'en', 'es', 'de', 'it'].includes(body.lang)) query = query.eq('lang', body.lang);
-      const { data, error } = await query;
-      if (error) return json({ error: 'db_error' }, 500);
-      return json({ ok: true, quizzes: data ?? [], page });
     }
 
     // ── PLAY (increment counter) ─────────────────────────────────────

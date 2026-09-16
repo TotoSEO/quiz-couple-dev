@@ -176,13 +176,6 @@
     "backHome": "Retour à l'accueil",
     "seeQuestions": "Voir les questions"
   },
-  "communityQuiz": {
-    "points": "Quiz à points",
-    "trueFalse": "Vrai ou Faux",
-    "fun": "Fun",
-    "wouldYouRather": "Tu préfères…",
-    "questionsShort": "questions"
-  },
   "jsonLd": {
     "aboutDefaut": "couple"
   }
