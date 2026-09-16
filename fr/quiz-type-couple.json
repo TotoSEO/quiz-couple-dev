@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "badge": "Quiz de couple",
+    "title": "Quel type de couple êtes-vous ? Le quiz à faire à deux",
+    "titleHighlight": "type de couple",
+    "description": "Fusionnels, complices, indépendants ou bâtisseurs ? Quinze situations du quotidien, à répondre <strong>ensemble, sur le même téléphone</strong>, pour savoir dans quelle famille vous êtes. Avec, pour chaque famille, sa force et son point faible.",
+    "subtitle": "Quinze questions, trois minutes, à répondre ensemble",
+    "jumpBtn": "Faire le quiz"
+  },
+  "section1": {
+    "title": "Il n'y a pas un bon type de couple, il y en a quatre",
+    "intro": "On croit souvent qu'un couple heureux ressemble à quelque chose de précis : beaucoup de temps ensemble, beaucoup de rires, des projets. En vrai, les couples qui durent ne se ressemblent pas du tout.",
+    "p1": "Ce quiz range les couples en quatre grandes familles. Les fusionnels font presque tout à deux, et ils aiment ça. Chez les complices, tout passe par le rire. Les indépendants ont chacun leur vie et se retrouvent le soir. Et les bâtisseurs avancent vers quelque chose : un appartement, un enfant, un projet.",
+    "p2": "Aucune de ces quatre façons de vivre à deux ne vaut mieux qu'une autre. Chacune a sa force, et chacune a un point faible qu'on ne voit pas parce qu'on est dedans. On les détaille juste en dessous.",
+    "p3": "Ce que le quiz vous donne, c'est un nom pour ce que vous êtes, et une chose à surveiller. Ça paraît simple, mais mettre un mot sur sa façon de vivre à deux change pas mal de choses. On comprend pourquoi tel ami trouve qu'on ne se voit plus assez, ou pourquoi l'autre a eu besoin d'air le mois dernier."
+  },
+  "section2": {
+    "title": "Les quatre types de couple",
+    "sub1Title": "Les Fusionnels",
+    "sub1P1": "<strong>Leur force :</strong> une sécurité que peu de gens connaissent. On n'est jamais seul, on est toujours attendu quelque part. Les fusionnels se comprennent vite, parce qu'ils vivent les mêmes choses au même moment.",
+    "sub1P2": "<strong>Ce qu'il faut surveiller :</strong> le manque d'air. Quand tout est vécu à deux, il ne reste plus rien à raconter le soir. Et le jour où l'un des deux a besoin d'une soirée pour lui, l'autre peut le vivre comme un rejet alors que ce n'en est pas un.",
+    "sub2Title": "Les Complices",
+    "sub2P1": "<strong>Leur force :</strong> la légèreté. Une mauvaise journée se termine par une soirée à se moquer de tout, et les tensions ne s'installent pas. Ce sont les couples qu'on invite pour être sûr que la soirée se passera bien.",
+    "sub2P2": "<strong>Ce qu'il faut surveiller :</strong> l'humour comme cachette. Quand un sujet fait mal, une blague arrive et la conversation s'arrête. Certaines choses ont besoin d'être dites sans rire, et ça, chez les complices, ça demande un petit effort.",
+    "sub3Title": "Les Indépendants",
+    "sub3P1": "<strong>Leur force :</strong> personne n'étouffe. Chacun a ses amis, ses projets, parfois ses vacances, et ce qu'on partage est choisi. Les indépendants durent souvent longtemps, justement parce que le couple ne pèse pas.",
+    "sub3P2": "<strong>Ce qu'il faut surveiller :</strong> la colocation. À force de bien s'entendre en menant chacun sa vie, on peut se retrouver à partager un appartement plus qu'une histoire. Un rendez-vous fixe, rien qu'à deux, suffit la plupart du temps à éviter ça.",
+    "sub4Title": "Les Bâtisseurs",
+    "sub4P1": "<strong>Leur force :</strong> une direction. Ils savent où ils vont, ils parlent d'argent sans gêne, ils font des plans. Un couple qui avance vers quelque chose traverse mieux les périodes plates, parce qu'il a une raison d'attendre.",
+    "sub4P2": "<strong>Ce qu'il faut surveiller :</strong> le vide après le chantier. Quand l'appartement est acheté et que l'enfant dort, il faut qu'il reste quelque chose à se dire. Les bâtisseurs ont intérêt à garder une place pour ce qui ne sert à rien.",
+    "tip": "Beaucoup de couples sont un mélange de deux familles. Si vos deux premières barres sont proches, lisez les deux profils : c'est souvent le mélange qui vous décrit le mieux."
+  },
+  "section3": {
+    "title": "Comment répondre, et ce que dit le résultat",
+    "p1": "Vous répondez ensemble, sur le même téléphone. À chaque situation, quatre réponses, une par type de couple. Vous choisissez celle qui vous ressemble le plus, même si aucune ne colle tout à fait. Quand vous n'êtes pas d'accord, c'est justement là que ça devient intéressant ! Discutez deux minutes, puis prenez la réponse qui décrit ce que vous faites en vrai, pas ce que vous aimeriez faire.",
+    "p2": "L'ordre des réponses change à chaque question, pour qu'on ne puisse pas répondre « toujours la première » sans lire. À la fin, vous voyez les quatre barres et le profil qui ressort. Si aucune famille ne domine nettement, le quiz le dit plutôt que de trancher à une voix près : c'est le couple caméléon, qui change selon la période.",
+    "p3": "Ce quiz décrit votre façon de vivre à deux. Il ne mesure pas <a href=\"/tester-son-couple/\">la solidité de votre relation</a>, ni <a href=\"/test-personnalite-couple/\">la façon dont chacun de vous aime</a> pris séparément. Et si vous voulez savoir par quels gestes l'autre se sent aimé, c'est encore autre chose : <a href=\"/test-langage-amour-couple/\">le langage de l'amour de l'autre</a> se mesure avec un test à part."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose",
+    "faq1Q": "Quels sont les différents types de couple ?",
+    "faq1A": "Il y a autant de classements que de livres sur le sujet. Ce quiz en retient quatre, décrits plus haut : les fusionnels, les complices, les indépendants et les bâtisseurs. Il y a aussi un cinquième résultat, le couple caméléon, pour les couples chez qui aucune famille ne domine.",
+    "faq2Q": "Est-ce qu'un couple peut changer de type avec le temps ?",
+    "faq2A": "Oui, et c'est même fréquent. Beaucoup de couples commencent fusionnels, deviennent bâtisseurs quand arrivent l'appartement et les enfants, puis redeviennent complices ou indépendants quand les enfants grandissent. Refaire le quiz à quelques années d'écart donne souvent un résultat différent, et ce n'est pas un problème.",
+    "faq3Q": "On n'est pas d'accord sur une réponse, on fait quoi ?",
+    "faq3A": "Vous en parlez deux minutes, et vous choisissez ce qui se passe le plus souvent chez vous. Si ça bloque, prenez la réponse de celui qui a le plus souvent l'impression que ce n'est pas comme ça. Et notez la question : un désaccord sur « ce qu'on est » en dit souvent plus que le résultat final.",
+    "faq4Q": "Y a-t-il un type de couple meilleur que les autres ?",
+    "faq4A": "Non. Les quatre types durent, et les quatre types se séparent. Ce qui compte, c'est que la façon de vivre à deux convienne aux deux. Un indépendant en couple avec une fusionnelle aura plus de mal que deux indépendants ensemble. Le problème vient de l'écart entre les deux, pas du type.",
+    "faq5Q": "Le quiz est-il anonyme ?",
+    "faq5A": "Oui. Vos réponses restent sur votre téléphone, il n'y a rien à remplir ni à créer, et le résultat s'affiche tout de suite après la quinzième question."
+  },
+  "jsonLd": {
+    "about": "types de couple et vie à deux"
+  }
+}

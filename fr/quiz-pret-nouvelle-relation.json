@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badge": "Test célibataire",
+    "title": "Suis-je prêt(e) pour une nouvelle relation ? Le test pour le savoir",
+    "titleHighlight": "prêt(e) pour une nouvelle relation",
+    "description": "Vous êtes célibataire depuis quelques mois, ou quelques années, et quelqu'un commence à vous plaire. Est-ce le bon moment ? Ce test regarde <strong>la place que prend encore votre ex</strong>, <strong>ce que vous cherchez</strong> chez quelqu'un et <strong>la vie que vous menez aujourd'hui</strong>.",
+    "subtitle": "Vingt questions, quatre minutes, un résultat sur cinq paliers",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment savoir si on est prêt à se remettre en couple ?",
+    "intro": "La question arrive presque toujours au même moment : quand quelqu'un commence à compter, ou quand une amie vous dit « il serait temps... ». Et la réponse n'est pas évidente, parce qu'on a envie que ce soit oui.",
+    "p1": "Être prêt(e) pour une nouvelle relation, ce n'est pas avoir fini de penser à son ex. Personne ne finit tout à fait. C'est plutôt que le souvenir a changé de place : il ne décide plus de vos soirées, il ne se glisse plus dans chaque nouvelle rencontre pour comparer. Vous pouvez en parler sans que la voix change.",
+    "p2": "C'est aussi une question d'envie. Il y a une grosse différence entre vouloir quelqu'un et vouloir cette personne-là. La première envie vient du manque. Le lit est trop grand, les dimanches sont trop longs, et tout le monde autour de vous est en couple. La seconde vient de la curiosité. Quand c'est le manque qui pousse, on prend la première personne gentille qui passe. Ça a un nom, d'ailleurs : la relation pansement.",
+    "p3": "Et puis il y a votre vie à vous, celle que vous menez en ce moment. On l'oublie souvent, alors qu'elle compte autant que le reste. Quelqu'un qui a une vie pleine peut accueillir une relation. Quelqu'un dont la vie est vide va lui demander de la remplir, et c'est trop lourd pour n'importe qui."
+  },
+  "section2": {
+    "title": "Les quatre choses que le test regarde de près",
+    "sub1Title": "La place que prend encore votre ex",
+    "sub1P1": "C'est ce qui pèse le plus lourd dans le calcul. Ce n'est pas que penser à son ex soit interdit. C'est que ça abîme la relation suivante plus que tout le reste. Si vous comparez encore, si vous gardez ses messages pour les relire, si vous ne savez pas ce que vous feriez s'il ou elle revenait, la place n'est pas libre. Si <a href=\"/mon-ex-pense-t-il-elle-encore-a-moi/\">vous vous demandez encore ce que votre ex pense de vous</a>, c'est d'ailleurs souvent le signe que le chapitre n'est pas tout à fait fermé.",
+    "sub2Title": "Ce que vous cherchez, au fond",
+    "sub2P1": "Partager, ou combler ? Le test pose la question de plusieurs façons, parce qu'on répond rarement la vérité du premier coup. Celui qui veut surtout ne plus être seul le soir n'est pas au même endroit que celui qui a envie de découvrir une personne. Celui qui veut montrer quelque chose à son ex encore moins. Les deux envies sont humaines, mais elles ne donnent pas la même relation.",
+    "sub3Title": "Votre vie à vous, en ce moment",
+    "sub3P1": "Le test vous demande ce que vous faites d'un vendredi soir seul(e), si vous avez des projets qui avancent, et ce que vos proches disent de vous en ce moment. Ça paraît à côté du sujet. En fait, c'est le meilleur indice qu'on peut faire entrer quelqu'un dans sa vie sans tout lui demander.",
+    "sub4Title": "Comment vous vous attachez",
+    "sub4P1": "Deux ou trois questions regardent ce que vous faites quand quelqu'un vous plaît : vous foncez, vous attendez, ou vous coupez avant que ça commence. Et ce que vous faites du temps pour vous une fois en couple. C'est <a href=\"/test-style-attachement-couple/\">votre façon de vous attacher</a>, et elle dit beaucoup sur la manière dont la prochaine histoire va commencer."
+  },
+  "section3": {
+    "title": "Comment le test calcule votre résultat",
+    "p1": "Vingt questions, quatre réponses à chaque fois. Chaque réponse rapporte des points, et les questions n'ont pas toutes le même poids. Celles sur votre ex et sur ce que vous cherchez valent jusqu'à six points. Celles sur vos soirées ou sur vos projets en valent trois. C'est voulu. On peut très bien passer un vendredi seul(e) sans problème et ne pas être prêt(e) du tout. À l'inverse, vouloir reprendre contact avec son ex dit à peu près tout.",
+    "p2": "Le total fait 86 points. Le résultat se lit sur cinq paliers, de « pas maintenant » à « prêt(e), pour de bon », avec à chaque fois ce que vos réponses disent et une chose à faire. Personne ne voit vos réponses, et vous pouvez refaire le test dans trois mois. C'est même une bonne idée, le chiffre bouge !",
+    "p3": "Ce test parle du moment. Il ne dit pas pourquoi vos rencontres n'aboutissent pas, ni si la vie à deux est faite pour vous. Ce sont deux autres questions. Si c'est plutôt <a href=\"/test-pourquoi-je-ne-trouve-pas-l-amour/\">ce qui coince dans vos rencontres</a> qui vous préoccupe, il y a un test pour ça. Et si vous hésitez pour de bon entre <a href=\"/test-couple-ou-celibat/\">une vie à deux et une vie seul(e)</a>, il y en a un autre."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose",
+    "faq1Q": "Combien de temps attendre après une rupture avant une nouvelle relation ?",
+    "faq1A": "Il n'y a pas de délai qui marche pour tout le monde. On entend « la moitié de la durée de la relation », ou « un an », mais ce sont des repères inventés. Ce qui compte, c'est l'état dans lequel vous êtes. Est-ce que vous pouvez parler de votre ex sans que ça vous retourne ? Est-ce que l'envie vient de la curiosité, ou du manque ? Certaines personnes sont prêtes en trois mois, d'autres ont besoin de deux ans.",
+    "faq2Q": "Je pense encore à mon ex, est-ce que je peux quand même rencontrer quelqu'un ?",
+    "faq2A": "Oui, à condition de le savoir. Penser à son ex de temps en temps, tout le monde le fait, même en couple heureux. Le vrai problème arrive quand la nouvelle personne devient surtout un moyen de ne plus y penser. Dans ce cas, dites-vous la vérité sur ce que vous cherchez, et ne promettez pas plus que vous ne pouvez tenir.",
+    "faq3Q": "C'est quoi, une relation pansement ?",
+    "faq3A": "C'est une relation qu'on commence pour ne plus avoir mal, pas pour la personne. Elle fait du bien pendant quelques semaines, parce qu'elle bouche le trou laissé par l'ex. Et puis, une fois qu'on va mieux, on se rend compte qu'on n'a pas grand-chose à dire à l'autre. Celui ou celle qui sert de pansement, la plupart du temps, ne l'a pas choisi. C'est pour ça que la question « pourquoi maintenant ? » pèse lourd dans ce test.",
+    "faq4Q": "Le test me dit que je ne suis pas prêt(e). Je fais quoi ?",
+    "faq4A": "Rien de spécial, et surtout pas vous forcer. Reprenez ce que vous avez laissé de côté pendant le couple. Rangez ce qui traîne de votre ex. Voyez vos amis. Si la tristesse ne bouge pas au bout de quelques mois, parlez-en à un professionnel, ce n'est pas un aveu de faiblesse. Et refaites le test plus tard : le résultat change avec le temps, c'est une photo du moment.",
+    "faq5Q": "Le test est-il anonyme ?",
+    "faq5A": "Oui. Vos réponses restent dans votre navigateur, personne ne les voit, et il n'y a rien à créer ni à remplir. Le résultat s'affiche tout de suite à la fin des vingt questions."
+  },
+  "jsonLd": {
+    "about": "rupture et nouvelle relation"
+  }
+}

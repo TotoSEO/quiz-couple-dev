@@ -382,7 +382,9 @@
     "testCelibataire": "Test pourquoi je suis encore célibataire",
     "testCoupleOuCelibat": "Test couple ou célibat",
     "testAmourAmi": "Test amoureux de mon meilleur ami",
-    "jeuPhrases": "Phrases à compléter"
+    "jeuPhrases": "Phrases à compléter",
+    "testPretRelation": "Test prêt(e) pour une nouvelle relation",
+    "quizTypeCouple": "Quiz quel type de couple êtes-vous"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -752,5 +754,10 @@
     "introQuestion": "Avant de commencer :",
     "introQuote": "Répondez comme vous faites en vrai, pas comme vous aimeriez faire.",
     "disclaimer": "Ce test ne dit pas qui vous êtes. Il regarde ce qui coince aujourd'hui entre vous et la rencontre, et ça peut changer. Vos réponses ne sont pas enregistrées."
+  },
+  "pret-nouvelle-relation": {
+    "introQuestion": "Avant de commencer :",
+    "introQuote": "Répondez sur ce que vous vivez en ce moment, pas sur le mois qui a suivi la rupture.",
+    "disclaimer": "Ce test ne dit pas si vous allez rencontrer quelqu'un. Il regarde si la place est libre aujourd'hui, et ça bouge d'un mois à l'autre. Vos réponses ne sont pas enregistrées."
   }
 }

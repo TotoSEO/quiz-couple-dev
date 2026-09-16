@@ -69,7 +69,7 @@
     return { q: '', a: [{ t: '', c: false }, { t: '', c: false }], pts: 1 };
   }
   function newState(type) {
-    return { type: type, title: '', description: '', isPublic: false, questions: [blankQuestion(type)] };
+    return { type: type, title: '', description: '', questions: [blankQuestion(type)] };
   }
 
   // ── Router ──────────────────────────────────────────────────────────
@@ -80,7 +80,7 @@
     renderHome();
   }
 
-  // ── HOME: pattern picker + builder + public list ────────────────────
+  // ── HOME: pattern picker + builder ─────────────────────────────────
   function renderHome() {
     var y = window.scrollY; // keep the user's place when re-rendering the builder
     clear();
@@ -89,7 +89,6 @@
     } else {
       app.appendChild(renderBuilder());
     }
-    app.appendChild(renderPublicList());
     window.requestAnimationFrame(function () { window.scrollTo(0, y); });
   }
 
@@ -197,25 +196,6 @@
     wrap.appendChild(el('div', { class: 'cq-add-wrap' }, [addBtn, qCount]));
     refreshQuestions();
 
-    var pubWrap = el('div', { class: 'cq-visibility' });
-    var visCards = [];
-    function visCard(pub, icon, title, desc) {
-      var b = el('button', { type: 'button', class: 'cq-vis-card' + (state.isPublic === pub ? ' is-active' : '') }, [
-        el('span', { class: 'cq-vis-icon', text: icon }),
-        el('span', { class: 'cq-vis-title', text: title }),
-        el('span', { class: 'cq-vis-desc', text: desc })
-      ]);
-      b.addEventListener('click', function () {
-        state.isPublic = pub;
-        visCards.forEach(function (c) { c.el.classList.toggle('is-active', c.pub === state.isPublic); });
-      });
-      visCards.push({ el: b, pub: pub });
-      return b;
-    }
-    pubWrap.appendChild(visCard(false, '🔒', T('vis_private_t', 'Privé'), T('vis_private_d', 'Accessible seulement via le lien. Gardez-le ! Supprimé après 1 semaine.')));
-    pubWrap.appendChild(visCard(true, '🌍', T('vis_public_t', 'Public'), T('vis_public_d', 'Publié sur cette page pour que tout le monde puisse y jouer.')));
-    wrap.appendChild(el('h3', { class: 'cq-h3', text: T('vis_title', 'Visibilité') }));
-    wrap.appendChild(pubWrap);
 
     var msg = el('div', { class: 'cq-msg', role: 'alert' });
     var submit = el('button', { class: 'btn btn-cta btn-lg cq-submit', type: 'button', text: T('create_btn', 'Créer mon quiz') });
@@ -335,11 +315,11 @@
     btn.disabled = true; btn.textContent = T('creating', 'Création…');
     api('create', {
       quizType: state.type, title: state.title, description: state.description,
-      isPublic: state.isPublic, questions: state.questions
+      questions: state.questions
     }).then(function (res) {
       btn.disabled = false; btn.textContent = T('create_btn', 'Créer mon quiz');
       if (res.error) { msg.textContent = errMsg(res.error); msg.classList.add('is-error'); return; }
-      renderCreated(res.share_id, res.is_public);
+      renderCreated(res.share_id);
     }).catch(function () {
       btn.disabled = false; btn.textContent = T('create_btn', 'Créer mon quiz');
       msg.textContent = errMsg('generic'); msg.classList.add('is-error');
@@ -349,18 +329,15 @@
   // ── CREATED: the all-important share link ───────────────────────────
   function shareUrl(id) { return PAGE_URL + (PAGE_URL.indexOf('?') >= 0 ? '&' : '?') + 'q=' + id; }
 
-  function renderCreated(id, isPublic) {
+  function renderCreated(id) {
     clear();
     state = null;
     var url = shareUrl(id);
     var wrap = el('div', { class: 'cq-block cq-created' });
     wrap.appendChild(el('div', { class: 'cq-created-icon', text: '🎉' }));
     wrap.appendChild(el('h2', { class: 'cq-h2', text: T('created_title', 'Votre quiz est prêt !') }));
-    // The "keep this link, it's the only way back" warning only makes sense for
-    // PRIVATE quizzes. A public quiz stays online and is always in the list below.
-    if (!isPublic) {
-      wrap.appendChild(el('div', { class: 'cq-warning', html: T('created_warn', '<strong>Gardez ce lien précieusement !</strong> C\'est le seul moyen de retrouver et de partager votre quiz. Sans lui, il sera perdu.') }));
-    }
+    // Tous les quiz sont prives : le lien est le seul chemin vers le quiz.
+    wrap.appendChild(el('div', { class: 'cq-warning', html: T('created_warn', '<strong>Gardez ce lien précieusement !</strong> C\'est le seul moyen de retrouver et de partager votre quiz. Sans lui, il sera perdu.') }));
 
     var linkInput = el('input', { class: 'cq-input cq-link', type: 'text', readonly: 'readonly', value: url });
     var copyBtn = el('button', { class: 'btn btn-cta cq-copy', type: 'button', text: T('copy', 'Copier le lien') });
@@ -371,8 +348,6 @@
       else { try { document.execCommand('copy'); done(); } catch (e) {} }
     });
     wrap.appendChild(el('div', { class: 'cq-link-row' }, [linkInput, copyBtn]));
-
-    if (isPublic) wrap.appendChild(el('p', { class: 'cq-public-note', text: T('created_public', 'Votre quiz est public : il apparaît aussi dans la liste ci-dessous.') }));
 
     var actions = el('div', { class: 'cq-created-actions' }, [
       el('a', { class: 'btn btn-outline', href: url, text: T('play_now', 'Jouer maintenant') }),
@@ -502,34 +477,6 @@
     renderQ();
   }
 
-  // ── PUBLIC LIST ─────────────────────────────────────────────────────
-  function patternLabel(type) {
-    var m = { points: T('pat_points_t', 'Quiz à points'), truefalse: T('pat_tf_t', 'Vrai ou Faux'), fun: T('pat_fun_t', 'Fun'), wyr: T('pat_wyr_t', 'Tu préfères…') };
-    return m[type] || type;
-  }
-  function renderPublicList() {
-    var wrap = el('div', { class: 'cq-block cq-public' });
-    wrap.appendChild(el('h2', { class: 'cq-h2', text: T('public_title', 'Quiz publics de la communauté') }));
-    wrap.appendChild(el('p', { class: 'cq-sub', text: T('public_sub', 'Découvrez et jouez aux quiz créés par d\'autres.') }));
-    var grid = el('div', { class: 'cq-public-grid', text: '' });
-    grid.appendChild(el('p', { class: 'cq-muted', text: T('loading', 'Chargement…') }));
-    wrap.appendChild(grid);
-    api('list_public', { page: 0 }).then(function (res) {
-      grid.innerHTML = '';
-      var list = (res && res.quizzes) || [];
-      if (!list.length) { grid.appendChild(el('p', { class: 'cq-muted', text: T('public_empty', 'Aucun quiz public pour le moment. Soyez le premier !') })); return; }
-      list.forEach(function (qz) {
-        grid.appendChild(el('a', { class: 'cq-public-card', href: shareUrl(qz.share_id) }, [
-          el('span', { class: 'cq-public-badge', text: patternLabel(qz.quiz_type) }),
-          el('span', { class: 'cq-public-name', text: qz.title }),
-          qz.description ? el('span', { class: 'cq-public-desc', text: qz.description }) : null,
-          el('span', { class: 'cq-public-meta', text: qz.question_count + ' ' + T('questions_short', 'questions') + ' · ' + T('played_n', 'Joué {n} fois').replace('{n}', (qz.plays || 0)) })
-        ]));
-      });
-    }).catch(function () { grid.innerHTML = ''; grid.appendChild(el('p', { class: 'cq-muted', text: T('public_empty', 'Aucun quiz public pour le moment.') })); });
-    return wrap;
-  }
-
   // ── Compteurs communautaires du hero ────────────────────────────────
   // Ils vivent dans le gabarit, pas dans l'application : le constructeur se
   // redessine à chaque frappe, un bloc rendu ici clignoterait et referait un
@@ -537,7 +484,9 @@
   //
   // Le cumul vient de custom_quiz_totaux, alimentée par un déclencheur, et
   // non d'un comptage de custom_quizzes : les quiz privés expirent au bout
-  // d'une semaine, un comptage direct reculerait tout seul.
+  // d'une semaine, un comptage direct reculerait tout seul. La table garde
+  // deux lignes, privé et public ; on les additionne : les quiz publics
+  // n'existent plus depuis septembre 2026, mais ceux créés avant comptent.
   function chargeTotaux() {
     var boite = document.getElementById('cq-totaux');
     if (!boite || !SUPABASE_URL || !SUPABASE_KEY) return;
@@ -548,13 +497,11 @@
     }).then(function (r) { return r.ok ? r.json() : null; }).then(function (rows) {
       var d = Array.isArray(rows) ? rows[0] : rows;
       if (!d) return;
-      var prives = Number(d.prives) || 0, publics = Number(d.publics) || 0;
+      var total = (Number(d.prives) || 0) + (Number(d.publics) || 0);
       // Rien à annoncer tant que personne n'a rien créé : mieux vaut un hero
-      // plus court que deux zéros.
-      if (prives + publics <= 0) return;
-      var fmt = function (n) { return n.toLocaleString(LANG === 'en' ? 'en-GB' : LANG); };
-      document.getElementById('cq-total-prives').textContent = fmt(prives);
-      document.getElementById('cq-total-publics').textContent = fmt(publics);
+      // plus court qu'un zéro.
+      if (total <= 0) return;
+      document.getElementById('cq-total-quiz').textContent = total.toLocaleString(LANG === 'en' ? 'en-GB' : LANG);
       boite.hidden = false;
       var merci = document.getElementById('cq-merci');
       if (merci) merci.hidden = false;

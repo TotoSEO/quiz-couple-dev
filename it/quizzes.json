@@ -409,5 +409,17 @@
     "shortTitle": "Coppia o single?",
     "description": "Venti domande pesate sulla tua quotidianità e sui tuoi riflessi. Il risultato dà due parti che fanno cento: quella che pende verso il vivere da solo e quella verso il vivere in due.",
     "metaDescription": "Sei fatto per vivere da solo o in coppia? Venti domande pesate e un risultato in due percentuali che fanno cento, con quello che dice del tuo modo di vivere. Test gratuito, senza registrazione."
+  },
+  "testPretRelation": {
+    "title": "Sono pronto per una nuova relazione? Test in 20 domande",
+    "shortTitle": "Pronto per una nuova relazione?",
+    "description": "Venti domande sul tuo ex, sulla tua vita da single e su quello che ti aspetti da qualcuno. Il risultato dice se è il momento, o se è meglio aspettare ancora un po'.",
+    "metaDescription": "Sei pronto a rimetterti in coppia? Venti domande sul tuo ex, sulle tue serate e su quello che ti aspetti da qualcuno, pesate secondo la loro importanza. Test gratuito, risultato immediato su cinque livelli."
+  },
+  "quizTypeCouple": {
+    "title": "Che tipo di coppia siete? Quiz da fare in due, gratuito",
+    "shortTitle": "Che tipo di coppia siete?",
+    "description": "Quindici situazioni quotidiane a cui rispondere insieme. Alla fine, un profilo su quattro: fusionali, complici, indipendenti o costruttori, con quello che vi rende forti e quello da tenere d'occhio.",
+    "metaDescription": "Fusionali, complici, indipendenti o costruttori? Quindici domande a cui rispondere in due, sullo stesso telefono, per sapere che tipo di coppia formate. Quiz gratuito, risultato immediato, senza registrazione."
   }
 }

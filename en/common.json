@@ -92,7 +92,11 @@
     "testTrouverAmourDesc": "Fifteen questions about what gets in the way, no judgement",
     "testCelibataire": "Why am I still single?",
     "testCoupleOuCelibat": "Relationship or single life?",
-    "testCelibataireDesc": "Twenty questions to find the cause, not a mark"
+    "testCelibataireDesc": "Twenty questions to find the cause, not a mark",
+    "testPretRelation": "Ready for a new relationship?",
+    "testPretRelationDesc": "Twenty questions to know whether this is the moment",
+    "quizTypeCouple": "What type of couple are you?",
+    "quizTypeCoupleDesc": "Fifteen situations, four profiles, to answer together"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",
@@ -174,13 +178,6 @@
     "message": "Oops! The page you are looking for does not exist or has been moved. Don't worry, go back to the homepage to discover our couple quizzes.",
     "backHome": "Back to homepage",
     "seeQuestions": "See questions"
-  },
-  "communityQuiz": {
-    "points": "Points quiz",
-    "trueFalse": "True or False",
-    "fun": "Fun",
-    "wouldYouRather": "Would you rather…",
-    "questionsShort": "questions"
   },
   "jsonLd": {
     "aboutDefaut": "couple"

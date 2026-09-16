@@ -92,7 +92,11 @@
     "testTrouverAmourDesc": "Quince preguntas sobre lo que falla, sin juzgar",
     "testCelibataire": "¿Por qué sigo soltero?",
     "testCoupleOuCelibat": "¿Pareja o soltería?",
-    "testCelibataireDesc": "Veinte preguntas para encontrar la causa, no una nota"
+    "testCelibataireDesc": "Veinte preguntas para encontrar la causa, no una nota",
+    "testPretRelation": "¿Preparado para una nueva relación?",
+    "testPretRelationDesc": "Veinte preguntas para saber si es el momento",
+    "quizTypeCouple": "¿Qué tipo de pareja sois?",
+    "quizTypeCoupleDesc": "Quince situaciones, cuatro perfiles, para responder juntos"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",
@@ -174,13 +178,6 @@
     "message": "¡Ups! La página que buscas no existe o ha sido movida. No te preocupes, vuelve al inicio para descubrir nuestros quiz para parejas.",
     "backHome": "Volver al inicio",
     "seeQuestions": "Ver las preguntas"
-  },
-  "communityQuiz": {
-    "points": "Quiz de puntos",
-    "trueFalse": "Verdadero o falso",
-    "fun": "Diversión",
-    "wouldYouRather": "¿Qué preferirías?",
-    "questionsShort": "preguntas"
   },
   "jsonLd": {
     "aboutDefaut": "pareja"

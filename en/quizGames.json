@@ -380,7 +380,9 @@
     "testCelibataire": "Why am I still single test",
     "testCoupleOuCelibat": "Relationship or single life test",
     "testAmourAmi": "In love with my best friend test",
-    "jeuPhrases": "Finish the sentence"
+    "jeuPhrases": "Finish the sentence",
+    "testPretRelation": "Ready for a new relationship test",
+    "quizTypeCouple": "What type of couple are you quiz"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -750,5 +752,10 @@
     "introQuestion": "Before you start:",
     "introQuote": "Answer the way you actually do things, not the way you wish you did.",
     "disclaimer": "This test does not say who you are. It looks at what gets in the way between you and meeting someone today, and that can change. Your answers are not stored."
+  },
+  "pret-nouvelle-relation": {
+    "introQuestion": "Before you start:",
+    "introQuote": "Answer about what you're living right now, not about the month after the break-up.",
+    "disclaimer": "This test doesn't say whether you'll meet someone. It looks at whether the place is free today, and that changes from one month to the next. Your answers are not stored."
   }
 }

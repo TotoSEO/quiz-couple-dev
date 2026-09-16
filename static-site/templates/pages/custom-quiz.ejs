@@ -35,18 +35,16 @@
       </h1>
       <p class="text-lg text-muted-foreground md:text-xl leading-relaxed max-w-2xl mx-auto"><%= P('intro', 'Créez votre propre quiz, personnalisez-le et partagez-le à vos amis ou votre moitié grâce à un simple lien.') %></p>
 
-      <%# Compteurs communautaires. Masqués tant que la base n'a pas répondu :
+      <%# Compteur communautaire. Masqué tant que la base n'a pas répondu :
           un emplacement vide vaut mieux qu'un chiffre inventé. Le cumul vient
           d'une table à part, pas d'un comptage des lignes, parce que les quiz
-          privés expirent au bout d'une semaine et le total reculerait. %>
+          expirent au bout d'une semaine et le total reculerait. Il additionne
+          les quiz privés et les quiz publics d'autrefois : la création de
+          quiz publics a été retirée en septembre 2026. %>
       <div class="cq-totaux" id="cq-totaux" hidden>
         <div class="cq-total">
-          <span class="cq-total-val" id="cq-total-prives">0</span>
-          <span class="cq-total-lib"><%= P('total_prives', 'quiz privés créés') %></span>
-        </div>
-        <div class="cq-total">
-          <span class="cq-total-val" id="cq-total-publics">0</span>
-          <span class="cq-total-lib"><%= P('total_publics', 'quiz publics créés') %></span>
+          <span class="cq-total-val" id="cq-total-quiz">0</span>
+          <span class="cq-total-lib"><%= P('total_quiz', 'quiz créés par la communauté') %></span>
         </div>
       </div>
       <p class="cq-merci" id="cq-merci" hidden><%= P('total_merci', 'Merci à la communauté Quiz Couple de faire vivre le site ❤️') %></p>
@@ -54,7 +52,7 @@
   </div>
 </section>
 
-<!-- App (builder / taker / public list rendered by JS) -->
+<!-- App (builder / taker rendered by JS) -->
 <section class="custom-quiz-section py-10 md:py-14">
   <div class="container mx-auto px-4">
     <div id="custom-quiz-app"
@@ -79,7 +77,7 @@
       <p class="text-muted-foreground leading-relaxed"><%- P('seo.s1p2', '') %></p>
     </section>
     <section class="mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= P('seo.s2Title', 'Quiz privé ou public : à vous de choisir') %></h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= P('seo.s2Title', 'Un quiz privé, partagé par un simple lien') %></h2>
       <p class="text-muted-foreground leading-relaxed mb-4"><%- P('seo.s2p1', '') %></p>
       <p class="text-muted-foreground leading-relaxed"><%- P('seo.s2p2', '') %></p>
     </section>

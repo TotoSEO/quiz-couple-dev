@@ -387,12 +387,14 @@
   <% var avecPub = typeof pagePublicitaire !== 'undefined' && pagePublicitaire; %>
   <main class="relative z-0">
     <%- content %>
-    <%# L'interstitiel de l'ecran de resultat. Le div est pose ici, vide : ses
-        scripts ne partent qu'au moment ou le resultat s'affiche, sur le clic
-        de la personne. C'est le bon declencheur, celui que Google decrit pour
-        son propre interstitiel web, et non le chargement de la page, qui
-        frapperait les visiteurs arrivant depuis la recherche. %>
-    <% if (avecPub && typeof pageJouable !== 'undefined' && pageJouable) { %>
+    <%# L'interstitiel. Le div est pose ici, vide, sur toutes les pages qui
+        portent de la publicite : ses scripts ne partent que dans deux cas,
+        ceux que Google decrit pour son propre interstitiel web. A l'ecran de
+        resultat, sur le clic de la personne (resultat-url.js), et a l'arrivee
+        depuis une autre page du site, au plus une fois toutes les dix minutes
+        (pub.js). Jamais au chargement pour quelqu'un qui arrive de la
+        recherche : c'est ce que Google sanctionne. %>
+    <% if (avecPub) { %>
     <%- include('partials/pub', { format: 15, differe: true }) %>
     <% } %>
     <% if (typeof pageJouable !== 'undefined' && pageJouable) { %>

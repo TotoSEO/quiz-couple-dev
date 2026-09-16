@@ -310,6 +310,7 @@ const GD_QUESTION_PREFIXES = {
   // Amour ou attachement : deux axes, une question sur deux pour chacun.
   'amour-ou-attachement': ['attache'],
   'je-l-aime-encore': ['jeLaime'],
+  'pret-nouvelle-relation': ['pretRelation'], 'type-couple': ['typeCouple'],
   karmique: ['karmique'], 'suis-je-amoureux': ['suisjeamoureux'],
   'distance-aime': ['distanceAime'], zamours: ['zamours'],
   // Ces deux-là déclinent leurs questions au masculin et au féminin ; le

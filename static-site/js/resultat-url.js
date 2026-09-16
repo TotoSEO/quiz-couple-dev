@@ -161,20 +161,28 @@
   // Une seule fois par chargement de page. Rejouer dans la foulee ne redonne
   // pas d'interstitiel : la regie a son propre plafond de frequence, et un
   // deuxieme passage a la suite serait de toute facon de trop.
+  //
+  // La date de cet affichage est notee dans localStorage, sous la meme cle
+  // que pub.js (CLE_INTERSTITIEL, ecrite dans les deux fichiers parce qu'ils
+  // ne se chargent pas toujours ensemble) : c'est elle qui empeche
+  // l'interstitiel de navigation de repartir dans les dix minutes, par
+  // exemple au rechargement qui suit « Recommencer ».
+  var CLE_INTERSTITIEL = 'qc-interstitiel';
   var interstitielPose = false;
 
   function poseInterstitiel() {
     if (interstitielPose) return;
     var hote = document.querySelector('[data-pub-au-resultat]');
     if (!hote) return;
-    // pub.js a pu le poser des l'arrivee, quand la personne venait d'une
-    // autre page du site : le drapeau est partage, on ne le demande pas deux fois.
+    // pub.js l'a pose des l'arrivee quand la personne venait d'une autre page
+    // du site : le drapeau est partage, on ne le demande pas deux fois.
     if (hote.getAttribute('data-pub-posee')) { interstitielPose = true; return; }
     var format = hote.getAttribute('data-pub-au-resultat');
     var site = hote.getAttribute('data-pub-site');
     if (!format || !site) return;
     interstitielPose = true;
     hote.setAttribute('data-pub-posee', '1');
+    try { window.localStorage.setItem(CLE_INTERSTITIEL, String(Date.now())); } catch (e) {}
 
     var cible = hote.firstElementChild || hote;
     [

@@ -380,7 +380,9 @@
     "testCelibataire": "Test warum bin ich noch Single",
     "testCoupleOuCelibat": "Test Beziehung oder Single",
     "testAmourAmi": "Test in besten Freund verliebt",
-    "jeuPhrases": "Sätze vervollständigen"
+    "jeuPhrases": "Sätze vervollständigen",
+    "testPretRelation": "Test Bereit für eine neue Beziehung",
+    "quizTypeCouple": "Quiz Welcher Paartyp seid ihr"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -750,5 +752,10 @@
     "introQuestion": "Bevor du anfängst:",
     "introQuote": "Antworte so, wie du es wirklich machst, nicht so, wie du es gern machen würdest.",
     "disclaimer": "Dieser Test sagt nicht, wer du bist. Er schaut darauf, was heute zwischen dir und einer Begegnung hakt, und das kann sich ändern. Deine Antworten werden nicht gespeichert."
+  },
+  "pret-nouvelle-relation": {
+    "introQuestion": "Bevor du anfängst:",
+    "introQuote": "Antworte zu dem, was du gerade lebst, nicht zu dem Monat nach der Trennung.",
+    "disclaimer": "Dieser Test sagt nicht, ob du jemanden kennenlernen wirst. Er schaut, ob der Platz heute frei ist, und das ändert sich von Monat zu Monat. Deine Antworten werden nicht gespeichert."
   }
 }

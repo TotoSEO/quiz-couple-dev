@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badge": "Test para solteros",
+    "title": "¿Estoy preparado para una nueva relación? El test para saberlo",
+    "titleHighlight": "preparado para una nueva relación",
+    "description": "Llevas soltero o soltera unos meses, o unos años, y alguien empieza a gustarte. ¿Es el buen momento? Este test mira <strong>el sitio que todavía ocupa tu ex</strong>, <strong>lo que buscas</strong> en alguien y <strong>la vida que llevas hoy</strong>.",
+    "subtitle": "Veinte preguntas, cuatro minutos, un resultado en cinco niveles",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "¿Cómo saber si estás preparado para volver a tener pareja?",
+    "intro": "La pregunta llega casi siempre en el mismo momento: cuando alguien empieza a importar, o cuando una amiga te dice « ya iría siendo hora... ». Y la respuesta no es evidente, porque uno quiere que sea sí.",
+    "p1": "Estar preparado para una nueva relación no es haber dejado de pensar en tu ex. Nadie deja de hacerlo del todo. Es más bien que el recuerdo ha cambiado de sitio: ya no decide tus noches, ya no se cuela en cada encuentro nuevo para comparar. Puedes hablar de ello sin que te cambie la voz.",
+    "p2": "También es una cuestión de ganas. Hay una diferencia enorme entre querer a alguien y querer a esa persona en concreto. Las primeras ganas vienen de la falta. La cama es demasiado grande, los domingos demasiado largos, y todo el mundo a tu alrededor está en pareja. Las segundas vienen de la curiosidad. Cuando empuja la falta, uno se queda con la primera persona amable que pasa. Eso tiene nombre, por cierto: la relación tirita.",
+    "p3": "Y luego está tu propia vida, la que llevas ahora mismo. Se olvida a menudo, cuando cuenta tanto como el resto. Alguien con una vida llena puede acoger una relación. Alguien con la vida vacía va a pedirle que la llene, y eso pesa demasiado para cualquiera."
+  },
+  "section2": {
+    "title": "Las cuatro cosas que el test mira de cerca",
+    "sub1Title": "El sitio que todavía ocupa tu ex",
+    "sub1P1": "Es lo que más pesa en el cálculo. No es que pensar en tu ex esté prohibido. Es que estropea la relación siguiente más que cualquier otra cosa. Si todavía comparas, si guardas sus mensajes para releerlos, si no sabes qué harías si volviera, el sitio no está libre. Si <a href=\"/es/mi-ex-todavia-piensa-en-mi/\">todavía te preguntas qué piensa tu ex de ti</a>, suele ser la señal de que el capítulo no está del todo cerrado.",
+    "sub2Title": "Lo que buscas, en el fondo",
+    "sub2P1": "¿Compartir, o tapar? El test hace la pregunta de varias maneras, porque casi nadie responde la verdad a la primera. Quien busca sobre todo no estar solo por la noche no está en el mismo punto que quien tiene ganas de descubrir a una persona. Quien quiere demostrarle algo a su ex, todavía menos. Las dos ganas son humanas, pero no dan la misma relación.",
+    "sub3Title": "Tu propia vida, ahora mismo",
+    "sub3P1": "El test te pregunta qué haces con un viernes por la noche a solas, si tienes proyectos que avanzan, y qué dice tu gente de ti ahora mismo. Parece fuera de tema. En realidad, es la mejor señal de que se puede dejar entrar a alguien en tu vida sin pedírselo todo.",
+    "sub4Title": "Cómo te vinculas",
+    "sub4P1": "Dos o tres preguntas miran lo que haces cuando alguien te gusta: te lanzas, esperas, o lo cortas antes de que empiece. Y lo que haces con el tiempo para ti una vez en pareja. Es <a href=\"/es/test-estilo-apego/\">tu manera de vincularte</a>, y dice mucho sobre cómo va a empezar la próxima historia."
+  },
+  "section3": {
+    "title": "Cómo calcula el test tu resultado",
+    "p1": "Veinte preguntas, cuatro respuestas cada vez. Cada respuesta da puntos, y no todas las preguntas pesan lo mismo. Las que hablan de tu ex y de lo que buscas valen hasta seis puntos. Las que hablan de tus noches o de tus proyectos valen tres. Es a propósito. Se puede pasar perfectamente un viernes a solas sin problema y no estar preparado en absoluto. En cambio, querer volver a escribirle a tu ex lo dice casi todo.",
+    "p2": "El total suma 86 puntos. El resultado se lee en cinco niveles, de « ahora no » a « a punto, de verdad », cada vez con lo que dicen tus respuestas y una cosa que hacer. Nadie ve tus respuestas, y puedes repetir el test dentro de tres meses. ¡Es incluso buena idea, la cifra se mueve!",
+    "p3": "Este test habla del momento. No dice por qué tus encuentros no cuajan, ni si la vida en pareja está hecha para ti. Son otras dos preguntas. Si lo que te preocupa es más bien <a href=\"/es/test-por-que-no-encuentro-el-amor/\">lo que falla cuando conoces a alguien</a>, hay un test para eso. Y si dudas de verdad entre <a href=\"/es/test-pareja-o-solteria/\">una vida en pareja y una vida a solas</a>, hay otro."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que uno se hace",
+    "faq1Q": "¿Cuánto tiempo esperar después de una ruptura antes de una nueva relación?",
+    "faq1A": "No hay un plazo que funcione para todo el mundo. Se oye « la mitad de lo que duró la relación », o « un año », pero son referencias inventadas. Lo que cuenta es el estado en el que estás. ¿Puedes hablar de tu ex sin que te remueva? ¿Las ganas vienen de la curiosidad, o de la falta? Algunas personas están preparadas en tres meses, otras necesitan dos años.",
+    "faq2Q": "Todavía pienso en mi ex, ¿puedo conocer a alguien de todas formas?",
+    "faq2A": "Sí, con la condición de saberlo. Pensar en tu ex de vez en cuando lo hace todo el mundo, incluso en una pareja feliz. El verdadero problema llega cuando la persona nueva se convierte sobre todo en una manera de dejar de pensar en él o en ella. En ese caso, dite la verdad sobre lo que buscas, y no prometas más de lo que puedes cumplir.",
+    "faq3Q": "¿Qué es una relación tirita?",
+    "faq3A": "Es una relación que se empieza para dejar de sufrir, no por la persona. Sienta bien durante unas semanas, porque tapa el agujero que dejó el ex. Y luego, cuando uno se siente mejor, se da cuenta de que no tiene gran cosa que decirle al otro. Quien hace de tirita, la mayoría de las veces, no lo ha elegido. Por eso la pregunta « ¿por qué ahora? » pesa tanto en este test.",
+    "faq4Q": "El test me dice que no estoy preparado. ¿Qué hago?",
+    "faq4A": "Nada especial, y sobre todo no forzarte. Retoma lo que dejaste de lado durante la relación. Guarda lo que queda de tu ex. Ve a tus amigos. Si la tristeza no se mueve al cabo de unos meses, habla con un profesional, no es una muestra de debilidad. Y repite el test más adelante: el resultado cambia con el tiempo, es una foto del momento.",
+    "faq5Q": "¿El test es anónimo?",
+    "faq5A": "Sí. Tus respuestas se quedan en tu navegador, nadie las ve, y no hay nada que crear ni que rellenar. El resultado aparece en cuanto terminas las veinte preguntas."
+  },
+  "jsonLd": {
+    "about": "ruptura y nueva relación"
+  }
+}

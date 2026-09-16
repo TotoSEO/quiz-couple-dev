@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "badge": "Paar-Quiz",
+    "title": "Welcher Paartyp seid ihr? Das Quiz für zwei",
+    "titleHighlight": "Paartyp",
+    "description": "Unzertrennliche, Verbündete, Unabhängige oder Aufbauer? Fünfzehn Alltagssituationen, die ihr <strong>zusammen, am selben Handy</strong> beantwortet, um herauszufinden, zu welcher Familie ihr gehört. Dazu für jede Familie ihre Stärke und ihre schwache Stelle.",
+    "subtitle": "Fünfzehn Fragen, drei Minuten, zusammen beantworten",
+    "jumpBtn": "Quiz machen"
+  },
+  "section1": {
+    "title": "Es gibt nicht den einen richtigen Paartyp, es gibt vier",
+    "intro": "Man glaubt oft, ein glückliches Paar sähe nach etwas Bestimmtem aus: viel Zeit zusammen, viel Lachen, Pläne. In Wirklichkeit ähneln sich die Paare, die halten, überhaupt nicht.",
+    "p1": "Dieses Quiz ordnet Paare in vier große Familien. Die Unzertrennlichen machen fast alles zu zweit, und sie mögen das. Bei den Verbündeten läuft alles über das Lachen. Die Unabhängigen haben jeder ihr eigenes Leben und finden abends wieder zusammen. Und die Aufbauer gehen auf etwas zu: eine Wohnung, ein Kind, ein Projekt.",
+    "p2": "Keine dieser vier Arten, zu zweit zu leben, ist besser als eine andere. Jede hat ihre Stärke, und jede hat eine schwache Stelle, die man nicht sieht, weil man mittendrin steckt. Gleich darunter gehen wir sie durch.",
+    "p3": "Was euch das Quiz gibt, ist ein Name für das, was ihr seid, und eine Sache, auf die ihr achten solltet. Das klingt einfach, aber ein Wort für die eigene Art, zu zweit zu leben, verändert einiges. Man versteht, warum ein bestimmter Freund findet, dass man sich nicht mehr sieht, oder warum der andere letzten Monat Luft gebraucht hat."
+  },
+  "section2": {
+    "title": "Die vier Paartypen",
+    "sub1Title": "Die Unzertrennlichen",
+    "sub1P1": "<strong>Ihre Stärke:</strong> eine Sicherheit, die wenige kennen. Man ist nie allein, man wird immer irgendwo erwartet. Unzertrennliche verstehen sich schnell, weil sie dieselben Dinge im selben Moment erleben.",
+    "sub1P2": "<strong>Worauf zu achten ist:</strong> die fehlende Luft. Wenn alles zu zweit erlebt wird, bleibt abends nichts mehr zu erzählen. Und an dem Tag, an dem einer von beiden einen Abend für sich braucht, kann der andere das als Zurückweisung erleben, obwohl es keine ist.",
+    "sub2Title": "Die Verbündeten",
+    "sub2P1": "<strong>Ihre Stärke:</strong> die Leichtigkeit. Ein schlechter Tag endet mit einem Abend, an dem man sich über alles lustig macht, und Spannungen setzen sich nicht fest. Das sind die Paare, die man einlädt, um sicher zu sein, dass der Abend gut wird.",
+    "sub2P2": "<strong>Worauf zu achten ist:</strong> der Humor als Versteck. Wenn ein Thema wehtut, kommt ein Witz, und das Gespräch endet. Manche Dinge müssen ohne Lachen gesagt werden, und das kostet Verbündete ein wenig Mühe.",
+    "sub3Title": "Die Unabhängigen",
+    "sub3P1": "<strong>Ihre Stärke:</strong> niemand erstickt. Jeder hat seine Freunde, seine Projekte, manchmal seinen Urlaub, und was geteilt wird, ist gewählt. Unabhängige halten oft lange, gerade weil die Beziehung nicht drückt.",
+    "sub3P2": "<strong>Worauf zu achten ist:</strong> die Wohngemeinschaft. Wer sich gut versteht und dabei jeder sein Leben führt, kann am Ende eher eine Wohnung als eine Geschichte teilen. Ein fester Termin, nur zu zweit, reicht meistens, um das zu vermeiden.",
+    "sub4Title": "Die Aufbauer",
+    "sub4P1": "<strong>Ihre Stärke:</strong> eine Richtung. Sie wissen, wo sie hinwollen, sie reden offen über Geld, sie machen Pläne. Ein Paar, das auf etwas zugeht, kommt besser durch flache Phasen, weil es einen Grund hat zu warten.",
+    "sub4P2": "<strong>Worauf zu achten ist:</strong> die Leere nach der Baustelle. Wenn die Wohnung gekauft ist und das Kind schläft, muss noch etwas bleiben, das man sich zu sagen hat. Aufbauer tun gut daran, Platz für das zu lassen, was zu nichts nützt.",
+    "tip": "Viele Paare sind eine Mischung aus zwei Familien. Wenn eure zwei höchsten Balken nah beieinander liegen, lest beide Profile: Oft beschreibt euch die Mischung am besten."
+  },
+  "section3": {
+    "title": "Wie ihr antwortet, und was das Ergebnis sagt",
+    "p1": "Ihr antwortet zusammen, am selben Handy. Zu jeder Situation gibt es vier Antworten, eine pro Paartyp. Ihr wählt die, die euch am ähnlichsten ist, auch wenn keine ganz passt. Wenn ihr euch nicht einig seid, wird es genau da interessant! Redet zwei Minuten, dann nehmt die Antwort, die beschreibt, was ihr wirklich tut, nicht, was ihr gern tun würdet.",
+    "p2": "Die Reihenfolge der Antworten wechselt bei jeder Frage, damit man nicht „immer die erste“ antworten kann, ohne zu lesen. Am Ende seht ihr die vier Balken und das Profil, das hervorsticht. Wenn keine Familie deutlich überwiegt, sagt das Quiz das, statt mit einer Stimme Vorsprung zu entscheiden: Das ist das Chamäleon-Paar, das sich mit der Phase verändert.",
+    "p3": "Dieses Quiz beschreibt eure Art, zu zweit zu leben. Es misst nicht, <a href=\"/de/paar-kompatibilitaetstest/\">wie stabil eure Beziehung ist</a>, und auch nicht <a href=\"/de/liebespersoenlichkeit-test/\">die Art, wie jeder von euch liebt</a>, für sich genommen. Und wenn ihr wissen wollt, durch welche Gesten sich der andere geliebt fühlt, ist das noch etwas anderes: <a href=\"/de/liebessprache-test-paar/\">die Liebessprache des Partners</a> misst ein eigener Test."
+  },
+  "seo": {
+    "faqTitle": "Die Fragen, die man sich stellt",
+    "faq1Q": "Welche Paartypen gibt es?",
+    "faq1A": "Es gibt so viele Einteilungen wie Bücher zum Thema. Dieses Quiz behält vier, die oben beschrieben sind: die Unzertrennlichen, die Verbündeten, die Unabhängigen und die Aufbauer. Dazu kommt ein fünftes Ergebnis, das Chamäleon-Paar, für Paare, bei denen keine Familie überwiegt.",
+    "faq2Q": "Kann ein Paar mit der Zeit den Typ wechseln?",
+    "faq2A": "Ja, das kommt sogar häufig vor. Viele Paare beginnen unzertrennlich, werden Aufbauer, wenn Wohnung und Kinder kommen, und werden wieder Verbündete oder Unabhängige, wenn die Kinder größer sind. Das Quiz mit ein paar Jahren Abstand zu wiederholen, gibt oft ein anderes Ergebnis, und das ist kein Problem.",
+    "faq3Q": "Wir sind uns bei einer Antwort nicht einig, was machen wir?",
+    "faq3A": "Ihr redet zwei Minuten darüber und wählt das, was bei euch am häufigsten passiert. Wenn es hakt, nehmt die Antwort der Person, die häufiger den Eindruck hat, dass es nicht so ist. Und notiert euch die Frage: Eine Uneinigkeit darüber, „was wir sind“, sagt oft mehr als das Endergebnis.",
+    "faq4Q": "Gibt es einen Paartyp, der besser ist als die anderen?",
+    "faq4A": "Nein. Alle vier Typen halten, und alle vier Typen trennen sich. Was zählt, ist, dass die Art, zu zweit zu leben, beiden passt. Ein Unabhängiger mit einer Unzertrennlichen hat es schwerer als zwei Unabhängige zusammen. Das Problem kommt vom Abstand zwischen beiden, nicht vom Typ.",
+    "faq5Q": "Ist das Quiz anonym?",
+    "faq5A": "Ja. Eure Antworten bleiben auf eurem Handy, es gibt nichts auszufüllen oder anzulegen, und das Ergebnis erscheint direkt nach der fünfzehnten Frage."
+  },
+  "jsonLd": {
+    "about": "Paartypen und Leben zu zweit"
+  }
+}

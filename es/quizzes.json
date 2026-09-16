@@ -409,5 +409,17 @@
     "shortTitle": "¿Pareja o soltería?",
     "description": "Veinte preguntas ponderadas sobre tu día a día y tus reflejos. El resultado da dos partes que suman cien: la que se inclina a vivir solo y la que se inclina a vivir en pareja.",
     "metaDescription": "¿Estás hecho para vivir solo o en pareja? Veinte preguntas ponderadas y un resultado en dos porcentajes que suman cien, con lo que eso dice de tu forma de vivir. Test gratis, sin registro."
+  },
+  "testPretRelation": {
+    "title": "¿Estoy preparado para una nueva relación? Test de 20 preguntas",
+    "shortTitle": "¿Preparado para una nueva relación?",
+    "description": "Veinte preguntas sobre tu ex, tu vida de soltero y lo que esperas de alguien. El resultado dice si es el momento, o si es mejor esperar un poco.",
+    "metaDescription": "¿Estás preparado para volver a tener pareja? Veinte preguntas sobre tu ex, tus noches y lo que esperas de alguien, ponderadas según su importancia. Test gratis, resultado inmediato en cinco niveles."
+  },
+  "quizTypeCouple": {
+    "title": "¿Qué tipo de pareja sois? Quiz para hacer en pareja, gratis",
+    "shortTitle": "¿Qué tipo de pareja sois?",
+    "description": "Quince situaciones del día a día para responder juntos. Al final, un perfil entre cuatro: fusionales, cómplices, independientes o constructores, con lo que os hace fuertes y lo que hay que vigilar.",
+    "metaDescription": "¿Fusionales, cómplices, independientes o constructores? Quince preguntas para responder en pareja, en el mismo móvil, y saber qué tipo de pareja formáis. Quiz gratis, resultado inmediato, sin registro."
   }
 }
