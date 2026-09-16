@@ -46,9 +46,34 @@
    personne ait bouge. Les emplacements qui tombent dans le premier ecran au
    chargement, et le footer qui se colle en bas de la fenetre, attendent donc
    le premier defilement ; les autres sont demandes a l'approche comme avant.
-   L'interstitiel ne part qu'a l'ecran de resultat (resultat-url.js), sur le
-   geste de la personne : un interstitiel a l'ouverture couvrirait le premier
-   ecran, c'est exactement ce qu'on refuse.
+   L'interstitiel ne part jamais a l'arrivee depuis l'exterieur : un
+   interstitiel a l'ouverture, pour quelqu'un qui vient de la recherche,
+   c'est exactement ce que Google sanctionne. Il part a l'ecran de resultat
+   (resultat-url.js), sur le geste de la personne, ou a l'arrivee depuis une
+   autre page du site (ci-dessous).
+
+   ── L'interstitiel de navigation ──────────────────────────────────────
+   Un interstitiel est fait pour s'afficher entre deux pages : c'est ainsi que
+   Google definit et sert le sien, sur le clic d'un lien interne, jamais sur
+   une arrivee depuis les resultats de recherche. On fait pareil. Quand la
+   page precedente est une page du site (referrer de meme origine), le div de
+   l'interstitiel est demande au chargement complet, comme les autres
+   emplacements. Trois exclusions : une adresse qui porte deja le resultat
+   (c'est resultat-url.js qui gere), une arrivee par un lien de partie a
+   distance (la personne vient rejoindre quelqu'un), et une page sans div.
+
+   Et un plafond de frequence, le notre, en plus de celui de la regie : au
+   plus un interstitiel de navigation toutes les INTERVALLE_INTERSTITIEL, la
+   date du dernier interstitiel affiche (navigation ou resultat) etant gardee
+   dans localStorage sous CLE_INTERSTITIEL. La cle est ecrite deux fois, ici
+   et dans resultat-url.js, parce que les deux fichiers ne se chargent pas
+   toujours ensemble : une modification dans l'un en appelle une dans
+   l'autre. Sans stockage (navigation privee stricte), pas de plafond
+   possible, donc pas d'interstitiel de navigation.
+
+   Sur une page ou l'interstitiel a ete pose a l'arrivee, l'ecran de resultat
+   n'en redemande pas : le drapeau data-pub-posee est partage, et la regie
+   n'en sert de toute facon qu'un par page.
 
    ── Le footer ────────────────────────────────────────────────────────
    Le footer (format 6) est le seul format hors flux : son div n'est qu'un
@@ -84,6 +109,12 @@
   // La part de la hauteur de l'ecran qu'un element fixe de la regie peut
   // occuper (standard Better Ads).
   var PART_MAX_FIXE = 0.30;
+
+  // L'interstitiel de navigation : la cle du dernier affichage dans
+  // localStorage (ecrite aussi par resultat-url.js) et l'intervalle minimal
+  // entre deux interstitiels de navigation.
+  var CLE_INTERSTITIEL = 'qc-interstitiel';
+  var INTERVALLE_INTERSTITIEL = 10 * 60 * 1000;
 
   // La distance a laquelle un emplacement est demande avant d'entrer dans
   // l'ecran : une hauteur d'ecran, le temps pour la regie de repondre.
@@ -358,7 +389,45 @@
     else repli(liste);
   }
 
+  // ── L'interstitiel de navigation ────────────────────────────────────
+  function vientDuSite() {
+    var ref = document.referrer;
+    if (!ref) return false;
+    try { return new URL(ref).origin === window.location.origin; }
+    catch (e) { return false; }
+  }
+
+  function dernierInterstitiel() {
+    try {
+      var v = window.localStorage.getItem(CLE_INTERSTITIEL);
+      return v ? (parseInt(v, 10) || 0) : 0;
+    } catch (e) { return -1; }   // pas de stockage : on ne saura pas plafonner
+  }
+
+  function noteInterstitiel() {
+    try { window.localStorage.setItem(CLE_INTERSTITIEL, String(Date.now())); } catch (e) {}
+  }
+
+  function interstitielDeNavigation() {
+    var hote = document.querySelector('[data-pub-au-resultat]:not([data-pub-posee])');
+    if (!hote) return;
+    var recherche = window.location.search || '';
+    if (/[?&](resultat|salon)(=|&|$)/.test(recherche)) return;
+    if (!vientDuSite()) return;
+    var dernier = dernierInterstitiel();
+    if (dernier < 0) return;
+    if (dernier && Date.now() - dernier < INTERVALLE_INTERSTITIEL) return;
+    var format = hote.getAttribute('data-pub-au-resultat');
+    var site = hote.getAttribute('data-pub-site');
+    if (!format || !site) return;
+    hote.setAttribute('data-pub-posee', '1');
+    hote.setAttribute('data-pub-navigation', '1');
+    noteInterstitiel();
+    injecte(hote.firstElementChild || hote, format, site);
+  }
+
   function demarre() {
+    try { interstitielDeNavigation(); } catch (e) {}
     var tous = document.querySelectorAll('[data-pub-differee]:not([data-pub-posee])');
     var plusBas = [];       // sous la ligne de flottaison : a l'approche, comme avant
     var premierEcran = [];  // dans le premier ecran : apres le premier defilement
