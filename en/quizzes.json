@@ -409,5 +409,17 @@
     "shortTitle": "Relationship or single life?",
     "description": "Twenty weighted questions about your daily life and your reflexes. The result comes as two shares that add up to a hundred: one leaning towards living alone, one towards living together.",
     "metaDescription": "Are you made for living alone or with someone? Twenty weighted questions and a result in two percentages that add up to a hundred, plus what it says about how you live. Free test, no sign-up."
+  },
+  "testPretRelation": {
+    "title": "Am I Ready for a New Relationship? Test in 20 Questions",
+    "shortTitle": "Ready for a new relationship?",
+    "description": "Twenty questions about your ex, your single life and what you expect from someone. The result tells you whether this is the moment, or whether it's better to wait a little.",
+    "metaDescription": "Are you ready to get into a relationship again? Twenty questions about your ex, your evenings and what you expect from someone, weighted by how much they matter. Free test, instant result on five levels."
+  },
+  "quizTypeCouple": {
+    "title": "What Type of Couple Are You? Free Quiz to Take Together",
+    "shortTitle": "What type of couple are you?",
+    "description": "Fifteen everyday situations to answer together. At the end, one profile out of four: inseparables, partners in crime, independents or builders, with what makes you strong and what to keep an eye on.",
+    "metaDescription": "Inseparables, partners in crime, independents or builders? Fifteen questions to answer as a couple, on the same phone, to find out what type of couple you are. Free quiz, instant result, no signup."
   }
 }

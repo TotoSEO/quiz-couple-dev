@@ -350,6 +350,19 @@
     // separent « plus de l'amour » de « plus rien ».
     'je-l-aime-encore': { prefix: 'jeLaime', engine: 'solo', totalQ: 20, pool: 20, quizType: 'je-l-aime-encore', ptsExplicites: true, paliers: [9, 20, 32, 44, 56, 67, 78] },
 
+    // Pret(e) pour une nouvelle relation ? Test celibataire, solo a bareme
+    // explicite : les points vont a ce qui est pret, l'anneau se lit comme
+    // « a quel point vous partez les mains libres ». Chaque question pese de
+    // 3 a 6 selon ce qu'elle dit : ce qu'on ferait si l'ex revenait et la
+    // raison de vouloir quelqu'un valent 6, le trac d'un premier verre 3.
+    // 86 points, cinq paliers.
+    'pret-nouvelle-relation': { prefix: 'pretRelation', engine: 'solo', totalQ: 20, pool: 20, quizType: 'pret-nouvelle-relation', ptsExplicites: true, paliers: [25, 45, 62, 75] },
+
+    // Quel type de couple etes-vous ? Un quiz a remplir ensemble, sur un seul
+    // telephone : quinze situations, quatre facons de vivre a deux, le sens
+    // des lettres tourne d'une question a l'autre (TYPOLOGIES.typeCouple).
+    'type-couple':    { prefix: 'typeCouple', engine: 'profile', totalQ: 15, pool: 15, quizType: 'type-couple', typologie: 'typeCouple' },
+
     'confiance':      { prefix: 'confiance', engine: 'solo', totalQ: 20, pool: 20, quizType: 'confiance' },
 
     // ── Infidelite quiz (solo scoring, ascending: more signs = higher score) ──
@@ -2105,6 +2118,36 @@
   // l'axe dominant désigne le profil. L'attachement reste la typologie par
   // défaut ; le test karmique classe le lien plutôt que le style.
   var TYPOLOGIES = {
+    // Type de couple : quatre facons de vivre a deux, pour un quiz qu'on
+    // remplit ensemble. Comme la personnalite amoureuse, le sens des lettres
+    // tourne d'une question a l'autre, et le cinquieme profil dit qu'aucune
+    // facon ne domine, plutot que d'en designer une a une voix pres.
+    typeCouple: {
+      icone: '🧩',
+      axes: [
+        { id: 'fusion',     color: '#ec4899', defaut: 'Fusion' },
+        { id: 'complices',  color: '#f59e0b', defaut: 'Complicité' },
+        { id: 'libres',     color: '#6366f1', defaut: 'Indépendance' },
+        { id: 'batisseurs', color: '#22c55e', defaut: 'Construction' }
+      ],
+      profils: ['fusion', 'complices', 'libres', 'batisseurs', 'equilibre'],
+      carte: (function() {
+        var AXES = ['fusion', 'complices', 'libres', 'batisseurs'];
+        var PERMS = [[0, 1, 2, 3], [2, 3, 0, 1], [1, 0, 3, 2], [3, 2, 1, 0]];
+        return function(optId, questionId) {
+          var col = ['a', 'b', 'c', 'd'].indexOf(optId);
+          if (col < 0) return null;
+          return AXES[PERMS[(questionId - 1) % 4][col]];
+        };
+      })(),
+      classify: function(t, n) {
+        var ordre = ['fusion', 'complices', 'libres', 'batisseurs'];
+        var tries = ordre.slice().sort(function(a, b) { return (t[b] || 0) - (t[a] || 0); });
+        var tete = t[tries[0]] || 0, second = t[tries[1]] || 0;
+        if (tete < Math.ceil(n * 0.35) || tete - second <= 1) return 'equilibre';
+        return tries[0];
+      }
+    },
     attachement: {
       icone: '🔗',
       axes: [

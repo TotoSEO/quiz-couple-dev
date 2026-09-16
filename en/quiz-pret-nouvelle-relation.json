@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badge": "Singles test",
+    "title": "Am I ready for a new relationship? The test to find out",
+    "titleHighlight": "ready for a new relationship",
+    "description": "You've been single for a few months, or a few years, and someone is starting to catch your eye. This test looks at <strong>the room your ex still takes up</strong>, <strong>what you're looking for</strong> and <strong>the life you're living right now</strong>, to tell you whether this is the right moment.",
+    "subtitle": "Twenty questions, four minutes, a result on five levels",
+    "jumpBtn": "Take the test"
+  },
+  "section1": {
+    "title": "How do you know if you're ready to be in a couple again?",
+    "intro": "The question almost always comes up at the same moment: when someone starts to matter, or when a friend tells you \"it's about time\". And the answer isn't obvious, because you want it to be yes.",
+    "p1": "Being ready for a new relationship doesn't mean you've finished thinking about your ex. Nobody quite finishes. It's more that the memory has changed place: it no longer decides your evenings, it no longer slips into every new encounter to compare. You can talk about it without your voice changing.",
+    "p2": "It's also a question of what you want. There's a big difference between wanting someone and wanting this particular person. The first comes from lack: the bed that's too big, the Sundays that are too long, the couples around you. The second comes from curiosity. When it's lack that pushes, you take the first kind person who comes along, and you leave them as soon as you feel better. That has a name, by the way: the rebound relationship.",
+    "p3": "This test asks twenty questions about those two things, and about a third one people often forget: your own life, right now. Your friends, your projects, your evenings alone. Someone with a full life can welcome a relationship. Someone whose life is empty will ask the relationship to fill it, and that's too heavy for anyone."
+  },
+  "section2": {
+    "title": "The four things the test looks at closely",
+    "sub1Title": "The room your ex still takes up",
+    "sub1P1": "This is what weighs most in the calculation. Not because thinking about your ex is forbidden, but because it's what damages the next relationship most. As long as you compare, as long as you keep the messages to reread them, as long as you don't know what you'd do if the door opened again, the place isn't free. If <a href=\"/en/does-my-ex-still-think-about-me/\">you're still wondering what your ex thinks of you</a>, that's often a sign the chapter isn't quite closed.",
+    "sub2Title": "What you're looking for, deep down",
+    "sub2P1": "Sharing, or filling? The test asks the question in several ways, because people rarely answer truthfully the first time. Someone who wants to stop being alone in the evenings, or to prove something to their ex, isn't in the same place as someone who feels like getting to know a person. Both wishes are human. They don't lead to the same relationship.",
+    "sub3Title": "Your own life, right now",
+    "sub3P1": "Your evenings, your projects, what your friends and family tell you. These are questions that seem beside the point, and they count a great deal. A life that runs is the best sign that you can let someone in without asking everything of them.",
+    "sub4Title": "How you attach",
+    "sub4P1": "Two or three questions look at what you do when you like someone: you dive in, you wait, or you cut it off before it starts. And what you do with time for yourself once you're in a couple. That's <a href=\"/en/attachment-style-test/\">your way of attaching</a>, and it says a lot about how the next relationship will begin."
+  },
+  "section3": {
+    "title": "How the test works out your result",
+    "p1": "Twenty questions, four answers each time. Every answer earns points, and the questions don't all carry the same weight. Those about your ex and about what you're looking for are worth up to six points. Those about your evenings or your projects are worth three. That's deliberate: you can spend a Friday alone without any problem and not be ready at all, whereas wanting to get back in touch with your ex says just about everything.",
+    "p2": "The total comes to 86 points. The result reads on five levels, from \"not now\" to \"ready, for good\", each time with what your answers say and one thing to do. Nobody sees your answers, and you can take the test again in three months. It's even a good idea, the number moves!",
+    "p3": "This test is about timing. It doesn't say why your dates don't lead anywhere, or whether life as a couple suits you. If what worries you is more <a href=\"/en/why-cant-i-find-love-test/\">what gets in the way when you meet people</a>, or if you're hesitating between <a href=\"/en/single-life-or-relationship-test/\">a life as a couple and a life on your own</a> for good, those are two other questions, with two other tests."
+  },
+  "seo": {
+    "faqTitle": "The questions people ask",
+    "faq1Q": "How long should you wait after a break-up before a new relationship?",
+    "faq1A": "There's no waiting time that works for everyone. You hear \"half the length of the relationship\", or \"a year\", but those are made-up rules. What counts is the state you're in. Can you talk about your ex without it turning you upside down? Does the wish come from curiosity, or from lack? Some people are ready in three months, others need two years.",
+    "faq2Q": "I still think about my ex, can I still meet someone?",
+    "faq2A": "Thinking about your ex from time to time doesn't stop anything. Everyone does it, even in a happy couple. What causes problems is comparing every new person to them, keeping their messages to reread them, or not knowing what you'd do if they came back. If that's you, you can meet people, but it's better to know it and not promise more than you can keep.",
+    "faq3Q": "What is a rebound relationship?",
+    "faq3A": "It's a relationship you start so it stops hurting, not for the person. It does you good for a few weeks, because it fills the hole your ex left. And then, once you feel better, you realise you don't have much to say to the other person. The one who serves as the bandage, most of the time, didn't choose to. That's why the question \"why now?\" weighs so much in this test.",
+    "faq4Q": "The test says I'm not ready. What do I do?",
+    "faq4A": "Nothing special, and above all don't force yourself. Pick up what you set aside during the relationship. Put away what's left of your ex. See your friends. If the sadness doesn't shift after a few months, talk to a professional, it's not an admission of weakness. And take the test again later: the result isn't a label, it's a snapshot of the moment.",
+    "faq5Q": "Is the test anonymous?",
+    "faq5A": "Yes. Your answers stay in your browser, nobody sees them, and there's nothing to create or fill in. The result appears straight away at the end of the twenty questions."
+  },
+  "jsonLd": {
+    "about": "break-up and new relationship"
+  }
+}

@@ -2023,6 +2023,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'trouver-amour', icon: '🧭', route: 'testTrouverAmour' },
     { type: 'test', key: 'celibataire', icon: '🔍', route: 'testCelibataire' },
     { type: 'test', key: 'couple-ou-celibat', icon: '🛋️', route: 'testCoupleOuCelibat' },
+    { type: 'test', key: 'pret-nouvelle-relation', icon: '🌱', route: 'testPretRelation' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
@@ -2030,6 +2031,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'attachement', icon: '🔗', route: 'testAttachement' },
     { type: 'test', key: 'confiance', icon: '🤝', route: 'testConfiance' },
     { type: 'quiz', key: 'amoureux', icon: '❤️', route: 'quizAmoureux' },
+    { type: 'quiz', key: 'type-couple', icon: '🧩', route: 'quizTypeCouple' },
     { type: 'quiz', key: 'coquin', icon: '🔥', route: 'quizCoquin' },
     { type: 'quiz', key: 'marrant', icon: '😂', route: 'quizMarrant' },
     { type: 'quiz', key: 'knowledge', icon: '🧠', route: 'quizKnowledge' },
@@ -2124,6 +2126,12 @@ var QuizEngine = (function() {
     // Savoir si on est fait pour la vie a deux appelle d'abord ce qui retient,
     // puis la facon de s'attacher, puis le manque quand l'autre s'eloigne.
     'couple-ou-celibat': ['testCelibataire', 'testAttachement', 'testDependance'],
+    // Se sentir pret appelle la question de la rencontre, puis celle de l'ex,
+    // puis la facon de s'attacher qu'on emporte avec soi.
+    'pret-nouvelle-relation': ['testTrouverAmour', 'testEx', 'testAttachement'],
+    // Un type de couple appelle la facon d'aimer de chacun, puis le langage
+    // de l'autre, puis la solidite de l'ensemble.
+    'type-couple': ['testPersonnalite', 'testLangageAmour', 'testCouple'],
     'secret':          ['testSuisJeAmoureux', 'testLangageAmour', 'testAttachement'],
     'distance-aime':   ['testDistance', 'testAimeEncore', 'testAttachement'],
     // Le doute sur ses sentiments appelle la question du couple, puis de soi.
@@ -2616,6 +2624,8 @@ var QuizEngine = (function() {
     'parentalite': ['pacte'],
     'trouver-amour': ['cinqLangages'],
     'celibataire': ['nuls'],
+    'pret-nouvelle-relation': ['cinqLangages'],
+    'type-couple': ['quiSaitMieux'],
     'amour-habitude': ['wecandoo'],
     // Les deux ecrans dont le contenu est deja pour adultes.
     'coquin': ['passageDuDesir', 'gleese'],

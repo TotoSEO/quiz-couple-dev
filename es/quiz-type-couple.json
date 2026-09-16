@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "badge": "Quiz de pareja",
+    "title": "¿Qué tipo de pareja sois? El quiz para hacer en pareja",
+    "titleHighlight": "tipo de pareja",
+    "description": "Hay parejas que lo hacen todo juntas, otras que se ríen de todo, otras en las que cada uno tiene su vida, y otras que construyen. Quince situaciones del día a día, para responder <strong>juntos, en el mismo móvil</strong>, y saber en qué familia estáis.",
+    "subtitle": "Quince preguntas, tres minutos, para responder juntos",
+    "jumpBtn": "Hacer el quiz"
+  },
+  "section1": {
+    "title": "No hay un buen tipo de pareja, hay cuatro",
+    "intro": "Se suele creer que una pareja feliz se parece a algo concreto: mucho tiempo juntos, muchas risas, proyectos. En realidad, las parejas que duran no se parecen en nada.",
+    "p1": "Este quiz ordena las parejas en cuatro grandes familias. Están las parejas fusionales, que hacen casi todo a dos y les gusta. Están los cómplices, en cuya casa todo pasa por la risa. Están los independientes, que tienen cada uno su vida y se reencuentran. Y están los constructores, que avanzan hacia algo: un piso, un hijo, un proyecto.",
+    "p2": "Ninguna de estas cuatro maneras de vivir en pareja vale más que otra. Cada una tiene su fuerza, y cada una tiene su punto débil, el que no se ve porque uno está dentro. Los fusionales corren el riesgo de ahogarse, los cómplices de evitar los temas serios, los independientes de convertirse en compañeros de piso, y los constructores de olvidarse de vivir mientras esperan a que el proyecto termine.",
+    "p3": "Lo que el quiz os da es un nombre para lo que sois, y una cosa que vigilar. Parece sencillo, pero ponerle una palabra a la manera de vivir en pareja cambia bastantes cosas. Uno entiende por qué tal amigo dice que ya no os veis nunca, o por qué el otro necesitó aire el mes pasado."
+  },
+  "section2": {
+    "title": "Los cuatro tipos de pareja",
+    "sub1Title": "Los Fusionales",
+    "sub1P1": "<strong>Su fuerza:</strong> una seguridad que poca gente conoce. Nunca se está solo, siempre hay alguien esperándote en algún sitio. Los fusionales se entienden rápido, porque viven las mismas cosas en el mismo momento.",
+    "sub1P2": "<strong>Lo que hay que vigilar:</strong> la falta de aire. Cuando todo se vive a dos, no queda nada que contarse por la noche. Y el día en que uno de los dos necesita una noche para él, el otro puede vivirlo como un rechazo cuando no lo es.",
+    "sub2Title": "Los Cómplices",
+    "sub2P1": "<strong>Su fuerza:</strong> la ligereza. Un mal día termina con una noche de burlarse de todo, y las tensiones no se instalan. Son las parejas a las que se invita para estar seguro de que la noche saldrá bien.",
+    "sub2P2": "<strong>Lo que hay que vigilar:</strong> el humor como escondite. Cuando un tema duele, llega una broma y la conversación se acaba. Algunas cosas necesitan decirse sin reír, y eso, entre cómplices, pide un pequeño esfuerzo.",
+    "sub3Title": "Los Independientes",
+    "sub3P1": "<strong>Su fuerza:</strong> nadie se ahoga. Cada uno tiene sus amigos, sus proyectos, a veces sus vacaciones, y lo que se comparte es elegido. Los independientes suelen durar mucho, justamente porque la pareja no pesa.",
+    "sub3P2": "<strong>Lo que hay que vigilar:</strong> el piso compartido. A fuerza de llevarse bien mientras cada uno lleva su vida, uno puede acabar compartiendo un piso más que una historia. Una cita fija, solo los dos, basta la mayoría de las veces para evitarlo.",
+    "sub4Title": "Los Constructores",
+    "sub4P1": "<strong>Su fuerza:</strong> una dirección. Saben adónde van, hablan de dinero sin apuros, hacen planes. Una pareja que avanza hacia algo atraviesa mejor las épocas planas, porque tiene una razón para esperar.",
+    "sub4P2": "<strong>Lo que hay que vigilar:</strong> el vacío después de la obra. Cuando el piso está comprado y el niño duerme, tiene que quedar algo que decirse. A los constructores les conviene guardar un sitio para lo que no sirve para nada.",
+    "tip": "Muchas parejas son una mezcla de dos familias. Si vuestras dos primeras barras están cerca, leed los dos perfiles: a menudo es la mezcla lo que mejor os describe."
+  },
+  "section3": {
+    "title": "Cómo responder, y qué dice el resultado",
+    "p1": "Respondéis juntos, en el mismo móvil. En cada situación, cuatro respuestas, una por tipo de pareja. Elegís la que más se os parece, aunque ninguna encaje del todo. Cuando no estáis de acuerdo, justamente ahí es donde se pone interesante: discutid dos minutos, y quedaos con la respuesta que describe lo que hacéis, no lo que os gustaría hacer.",
+    "p2": "El orden de las respuestas cambia en cada pregunta, para que no se pueda responder « siempre la primera » sin leer. Al final, veis las cuatro barras y el perfil que destaca. Si ninguna familia domina claramente, el quiz lo dice en lugar de decidir por un voto de diferencia: es la pareja camaleón, que cambia según la época.",
+    "p3": "Este quiz describe vuestra manera de vivir en pareja. No mide <a href=\"/es/test-compatibilidad-pareja/\">la solidez de vuestra relación</a>, ni <a href=\"/es/test-personalidad-amorosa/\">la manera de amar de cada uno</a> por separado. Y si queréis saber con qué gestos se siente querido el otro, eso es otra cosa más: <a href=\"/es/test-lenguaje-amor-pareja/\">el lenguaje del amor de tu pareja</a> se mide con un test aparte."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que uno se hace",
+    "faq1Q": "¿Cuáles son los distintos tipos de pareja?",
+    "faq1A": "Hay tantas clasificaciones como libros sobre el tema. La de este quiz cuenta cuatro: los fusionales, que hacen casi todo juntos, los cómplices, en cuya casa todo pasa por la risa, los independientes, que tienen cada uno su vida, y los constructores, que avanzan hacia un proyecto. Un quinto resultado, la pareja camaleón, dice que ninguna familia domina en vuestro caso.",
+    "faq2Q": "¿Puede una pareja cambiar de tipo con el tiempo?",
+    "faq2A": "Sí, y es incluso frecuente. Muchas parejas empiezan fusionales, se vuelven constructoras cuando llegan el piso y los hijos, y vuelven a ser cómplices o independientes cuando los hijos crecen. Repetir el quiz con unos años de diferencia da a menudo un resultado distinto, y no es ningún problema.",
+    "faq3Q": "No estamos de acuerdo en una respuesta, ¿qué hacemos?",
+    "faq3A": "Lo habláis, y os quedáis con la respuesta que describe lo que hacéis de verdad, no lo que a uno de los dos le gustaría. Si se atasca, coged la de la persona que más a menudo siente que las cosas no son así. Y apuntad la pregunta: un desacuerdo sobre « lo que somos » dice muchas veces más que el resultado final.",
+    "faq4Q": "¿Hay un tipo de pareja mejor que los demás?",
+    "faq4A": "No. Los cuatro tipos duran, y los cuatro tipos se separan. Lo que cuenta es que la manera de vivir en pareja les convenga a los dos. Un independiente en pareja con un fusional lo tendrá más difícil que dos independientes, pero no es el tipo lo que falla, es la distancia entre los dos.",
+    "faq5Q": "¿El quiz es anónimo?",
+    "faq5A": "Sí. Vuestras respuestas se quedan en vuestro móvil, no hay nada que rellenar ni que crear, y el resultado aparece justo después de la decimoquinta pregunta."
+  },
+  "jsonLd": {
+    "about": "tipos de pareja y vida a dos"
+  }
+}
