@@ -423,15 +423,15 @@
     "metaDescription": "Êtes-vous fait pour vivre seul ou en couple ? Vingt questions pondérées, un résultat en deux pourcentages qui font cent, et ce que ça dit de votre façon de vivre. Test gratuit, sans inscription."
   },
   "testPretRelation": {
-    "title": "Suis-je prêt(e) pour une nouvelle relation ? Test en 20 questions",
+    "title": "Nouvelle relation après une rupture : suis-je prêt(e) ? Test",
     "shortTitle": "Prêt(e) pour une nouvelle relation ?",
     "description": "Vingt questions sur votre ex, votre vie de célibataire et ce que vous attendez de quelqu'un. Le résultat dit si c'est le moment, ou s'il vaut mieux attendre un peu.",
-    "metaDescription": "Êtes-vous prêt(e) à vous remettre en couple ? Vingt questions sur votre ex, vos soirées et ce que vous attendez de quelqu'un, pesées selon leur importance. Test gratuit, résultat immédiat sur cinq paliers."
+    "metaDescription": "Vingt questions sur votre ex, vos soirées et ce que vous attendez de quelqu'un. Résultat immédiat sur cinq paliers, test gratuit et anonyme."
   },
   "quizTypeCouple": {
-    "title": "Quel type de couple êtes-vous ? Quiz à faire à deux, gratuit",
+    "title": "Fusionnel, complice ou indépendant ? Quiz des types de couple",
     "shortTitle": "Quel type de couple êtes-vous ?",
     "description": "Quinze situations du quotidien à répondre ensemble. À la fin, un profil sur quatre : fusionnels, complices, indépendants ou bâtisseurs, avec ce qui fait votre force et ce qu'il faut surveiller.",
-    "metaDescription": "Fusionnels, complices, indépendants ou bâtisseurs ? Quinze questions à répondre à deux, sur le même téléphone, pour savoir quel type de couple vous formez. Quiz gratuit, résultat immédiat, sans inscription."
+    "metaDescription": "Quinze situations à répondre à deux sur le même téléphone. Fusionnels, complices, indépendants ou bâtisseurs : votre profil en trois minutes."
   }
 }

@@ -291,16 +291,33 @@
   // Les elements fixes que la regie pose pour ce format : ceux qu'elle ajoute
   // en fin de body (le bandeau, le slide-in, la variante a deux bandeaux), et
   // ce qu'elle a pu mettre en position fixe dans notre propre div.
+  //
+  // Le conteneur de l'interstitiel porte le meme prefixe (sas_iframe_fixed_
+  // suivi du numero de l'unite), et c'est un voile qui couvre tout l'ecran :
+  // 100vw sur 100vh, fond assombri, la creation centree dedans avec sa croix.
+  // Il ne doit jamais etre retenu ici. Retenu, il depassait forcement les
+  // 30 % et se retrouvait masque, croix comprise, pendant que la regie
+  // laissait son overflow:hidden sur le body : une page qu'on ne pouvait
+  // plus faire defiler ni cliquer, sans rien de visible a fermer. Un
+  // element fixe qui couvre presque tout l'ecran n'est pas un bandeau.
+  var PART_VOILE = 0.9;
+  function estUnVoile(e) {
+    var r = e.getBoundingClientRect();
+    return r.width >= PART_VOILE * window.innerWidth && r.height >= PART_VOILE * window.innerHeight;
+  }
+
   function elementsFixesDuFooter(hote) {
     var trouves = [];
     var candidats = document.querySelectorAll('body > [id^="sas_iframe_fixed_"], body > [id^="sas-container_"]');
     var i;
-    for (i = 0; i < candidats.length; i++) trouves.push(candidats[i]);
+    for (i = 0; i < candidats.length; i++) {
+      if (!estUnVoile(candidats[i])) trouves.push(candidats[i]);
+    }
     var dedans = hote.querySelectorAll('*');
     for (i = 0; i < dedans.length; i++) {
       var e = dedans[i];
       if (e.tagName === 'SCRIPT' || e.tagName === 'STYLE') continue;
-      if (getComputedStyle(e).position === 'fixed') trouves.push(e);
+      if (getComputedStyle(e).position === 'fixed' && !estUnVoile(e)) trouves.push(e);
     }
     return trouves;
   }
