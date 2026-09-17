@@ -6026,6 +6026,12 @@ h1, h2, h3, h4, h5, h6,
   font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
   color: hsl(var(--primary)); font-weight: 600;
 }
+/* Ce titre est un div depuis septembre 2026 (blog-article.ejs : le script
+   in text de la regie insere sa premiere annonce apres le premier <p> de
+   l'article). Il garde l'aspect qu'il avait en p, quand .blog-article p
+   l'emportait sur la vignette ci-dessus : taille et encre du paragraphe. */
+.blog-article .blog-quick-summary-title { font-size: 1.05rem; line-height: 1.75; margin-bottom: 1rem; color: hsl(var(--foreground) / 0.9); }
+@media (min-width: 768px) { .blog-article .blog-quick-summary-title { font-size: 1.08rem; } }
 
 /* ── Encadré "À savoir" (tip) : accent ambre ── */
 .blog-tip-box {

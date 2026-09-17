@@ -168,7 +168,10 @@
         <!-- Quick summary box -->
         <% if (article.quickSummary && article.quickSummary.length > 0) { %>
         <section class="blog-quick-summary" aria-label="<%= t('common:blog.quickSummary', 'Résumé rapide') %>">
-          <p class="blog-quick-summary-title"><%= t('common:blog.quickSummary', 'Résumé rapide') %></p>
+          <%# Un div, pas un p : le script in text de la regie insere sa premiere
+              annonce apres le premier <p> de l'article. Avec un p ici, elle
+              tombait dans l'encart du resume, entre son titre et sa liste. %>
+          <div class="blog-quick-summary-title"><%= t('common:blog.quickSummary', 'Résumé rapide') %></div>
           <ul>
             <% for (const point of article.quickSummary) { %>
             <li><%= point %></li>
