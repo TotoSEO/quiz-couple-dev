@@ -168,10 +168,7 @@
         <!-- Quick summary box -->
         <% if (article.quickSummary && article.quickSummary.length > 0) { %>
         <section class="blog-quick-summary" aria-label="<%= t('common:blog.quickSummary', 'Résumé rapide') %>">
-          <%# Un div, pas un p : le script in text de la regie insere sa premiere
-              annonce apres le premier <p> de l'article. Avec un p ici, elle
-              tombait dans l'encart du resume, entre son titre et sa liste. %>
-          <div class="blog-quick-summary-title"><%= t('common:blog.quickSummary', 'Résumé rapide') %></div>
+          <p class="blog-quick-summary-title"><%= t('common:blog.quickSummary', 'Résumé rapide') %></p>
           <ul>
             <% for (const point of article.quickSummary) { %>
             <li><%= point %></li>
@@ -260,11 +257,6 @@
         </aside>
     </article>
 
-    <%# L'in text se place tout seul entre les paragraphes, a l'endroit que la
-        regie juge le plus rentable. %>
-    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
-    <%- include('../partials/pub', { format: 11 }) %>
-    <% } %>
     </div>
     <%# La colonne laterale n'apparait qu'au-dela de 1600 px. En dessous,
         l'article retrouve la colonne unique d'avant, au pixel pres. %>

@@ -75,14 +75,6 @@
    n'en redemande pas : le drapeau data-pub-posee est partage, et la regie
    n'en sert de toute facon qu'un par page.
 
-   ── L'in text ────────────────────────────────────────────────────────
-   L'in text (format 11, article de blog) se place tout seul entre les
-   paragraphes de l'article ; son div, en fin d'article, n'est qu'un point
-   d'ancrage. Il est demande au chargement complet, sans attendre que le div
-   approche : demande a l'approche, il ne partait qu'une fois l'article lu
-   jusqu'au bout. Le premier paragraphe de l'article est sous la ligne de
-   flottaison sur tous les ecrans (voir DANS_LE_TEXTE).
-
    ── Pas de rafraichissement hors ecran ───────────────────────────────
    La table des delais de rafraichissement « invisible » de la regie est
    posee vide avant son premier script : chaque unite retombe sur « jamais »,
@@ -120,16 +112,6 @@
   // qu'ils approchent de l'ecran.
   var HORS_FLUX = { '6': true };
   var FORMAT_FOOTER = '6';
-  // Les formats qui se placent tout seuls dans le texte de la page : leur div
-  // n'est qu'un point d'ancrage, pose en fin d'article, et le script de la
-  // regie insere l'annonce entre les paragraphes (apres le premier, puis un
-  // tous les quatre selon les encheres). Demandes au chargement complet,
-  // quelle que soit la position du div : demandes a l'approche du div, ils
-  // ne partaient qu'une fois l'article lu jusqu'au bout, donc presque
-  // jamais (un appel de script sur une periode entiere). Le premier
-  // paragraphe est sous la ligne de flottaison sur tous les ecrans, l'annonce
-  // s'insere donc hors de vue, sans decaler ce que la personne lit.
-  var DANS_LE_TEXTE = { '11': true };
   // La part de la hauteur de l'ecran qu'un element fixe de la regie peut
   // occuper (standard Better Ads).
   var PART_MAX_FIXE = 0.30;
@@ -171,7 +153,6 @@
     hote.setAttribute('data-pub-posee', '1');
     var cible = hote.firstElementChild || hote;
     injecte(cible, format, site);
-    if (DANS_LE_TEXTE[format]) return;   // l'annonce se pose ailleurs, le div reste vide
     if (!HORS_FLUX[format]) surveilleRemplissage(hote, cible);
     else if (format === FORMAT_FOOTER) surveilleFooter(hote);
   }
@@ -500,17 +481,13 @@
     var plusBas = [];       // sous la ligne de flottaison : a l'approche, comme avant
     var premierEcran = [];  // dans le premier ecran : apres le premier defilement
     var horsFlux = [];
-    var dansLeTexte = [];   // tout de suite : l'annonce se place elle-meme dans l'article
     for (var i = 0; i < tous.length; i++) {
       var h = tous[i];
-      var fmt = h.getAttribute('data-pub-differee');
-      if (DANS_LE_TEXTE[fmt]) { dansLeTexte.push(h); continue; }
-      if (HORS_FLUX[fmt]) { horsFlux.push(h); continue; }
+      if (HORS_FLUX[h.getAttribute('data-pub-differee')]) { horsFlux.push(h); continue; }
       var visible = false;
       try { visible = dansLePremierEcran(h); } catch (e) {}
       (visible ? premierEcran : plusBas).push(h);
     }
-    for (var d = 0; d < dansLeTexte.length; d++) { try { pose(dansLeTexte[d]); } catch (e) {} }
     lance(plusBas);
     if (horsFlux.length || premierEcran.length) {
       auPremierDefilement(function () {
