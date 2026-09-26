@@ -625,12 +625,6 @@
     <% } %>
 
     </div>
-    <%# La colonne laterale n'existe qu'au-dela de 1600 px, la ou il reste de
-        la place a cote d'un texte qui reste centre. En dessous elle n'est pas
-        affichee du tout : le contenu garde exactement la mise en page d'avant. %>
-    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
-    <aside class="avec-colonne__aside"><%- include('../partials/pub', { format: 3 }) %></aside>
-    <% } %>
   </div>
 </article>
 
