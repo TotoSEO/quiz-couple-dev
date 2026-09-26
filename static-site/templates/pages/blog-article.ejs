@@ -258,10 +258,5 @@
     </article>
 
     </div>
-    <%# La colonne laterale n'apparait qu'au-dela de 1600 px. En dessous,
-        l'article retrouve la colonne unique d'avant, au pixel pres. %>
-    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %>
-    <aside class="avec-colonne__aside"><%- include('../partials/pub', { format: 3 }) %></aside>
-    <% } %>
   </div>
 </div>

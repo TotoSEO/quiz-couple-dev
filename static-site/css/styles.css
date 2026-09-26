@@ -8986,7 +8986,7 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
    quitte à laisser un blanc quand la régie n'a rien à servir.
 
    Les numéros sont ceux des formats de The Moneytizer : 31 billboard,
-   2 pavé haut, 3 grand angle, 15 interstitiel, 6 footer. */
+   2 pavé haut, 15 interstitiel, 6 footer. */
 .pub {
   display: block;
   width: 100%;
@@ -8995,7 +8995,6 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   overflow: hidden;
 }
 .pub--31, .pub--2 { min-height: 250px; }
-.pub--3  { min-height: 600px; }
 
 /* L'interstitiel se dessine par-dessus la page, pas dans le flux : son div
    n'est qu'un point d'ancrage. Il ne doit donc reserver aucune hauteur, sans
@@ -9058,30 +9057,16 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .seo-content [id^="142829-"], .seo-content [id^="tmt"], .seo-content [class*="moneytizer"] { max-width: 100%; }
 .seo-content .flex.items-start > div { overflow: hidden; }
 
-/* ── La colonne latérale ───────────────────────────────────────────────
-   Elle ne porte que la publicité, et seulement là où il reste de la place à
-   côté du texte. En dessous de 1280 px elle n'est pas affichée et la page
-   retrouve exactement la mise en page qu'elle avait avant : une colonne
-   unique, centrée. Le contenu reste premier dans le code, la colonne vient
-   après, donc rien ne change pour l'indexation. */
+/* ── La bande du contenu ───────────────────────────────────────────────
+   Cette grille a été posée pour accueillir une colonne publicitaire à droite
+   du texte (le grand angle 300x600, retiré le 26 septembre 2026 : la régie
+   le servait aussi en « half page », deux pavés empilés, pour presque rien
+   et un CPM qui tirait la moyenne vers le bas). Elle reste parce qu'elle
+   tient le texte exactement centré, à sa largeur d'avant, et parce que
+   l'encart de bureau (plus bas) s'appuie sur .avec-colonne__contenu. Trois
+   pistes, le texte au milieu : les deux gouttières sont égales, au pixel. */
 .avec-colonne { display: block; }
-.avec-colonne__aside { display: none; }
 
-/* La colonne latérale ne doit pas décaler le texte. Une grille à deux
-   colonnes le ferait : la colonne du texte se centrerait dans ce qui reste
-   une fois les 300 px de la publicité pris, et la page entière partirait sur
-   la gauche. La grille en a donc trois, et le texte occupe celle du milieu :
-   les deux gouttières sont égales, la publicité se pose dans celle de droite
-   et le texte reste exactement là où il était, au pixel près.
-
-   La bande déborde volontairement le conteneur et se recentre sur la page,
-   sans quoi les 1400 px du conteneur ne laisseraient jamais la place d'une
-   colonne de 300 px à côté d'un texte centré.
-
-   Le seuil se calcule : 736 px de texte, 300 px de publicité, et la même
-   gouttière des deux côtés. Il faut donc 1408 px de bande, atteints dès
-   1440 px de fenêtre. En dessous, la place n'existe pas et la page garde sa
-   colonne unique. */
 @media (min-width: 1440px) {
   .avec-colonne {
     display: grid;
@@ -9102,33 +9087,14 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .avec-colonne--conteneur-interne { --colonne-texte: 50rem; }
   .avec-colonne--large    { --colonne-texte: 52rem; }
   .avec-colonne__contenu  { grid-column: 2; min-width: 0; }
-  /* Collante : elle suit la lecture au lieu de disparaître au premier
-     défilement. La marge haute dégage l'en-tête fixe. */
-  .avec-colonne__aside {
-    grid-column: 3;
-    justify-self: start;
-    width: 300px;
-    /* Trois centimètres de garde quand la place le permet, la moitié de la
-       place libre quand elle est juste. Par construction la publicité ne
-       peut donc jamais déborder de sa gouttière, quelle que soit la
-       largeur de l'écran. */
-    margin-left: min(3rem, calc((100% - 300px) / 2));
-    display: block;
-    position: sticky;
-    top: 6rem;
-  }
-  .avec-colonne__aside .pub { margin-top: 0; }
 }
 
 /* Une colonne de texte plus large demande une page plus large : le blog
    écrit sur 832 px, les pages à sections sur 768 px. Entre 1440 et 1536 px
-   ces deux familles gardent leur colonne unique, sans quoi la publicité
-   viendrait mordre sur le texte. */
+   ces deux familles gardent leur colonne unique, comme avant la grille. */
 @media (min-width: 1440px) and (max-width: 1535.98px) {
   .avec-colonne--large,
   .avec-colonne--sections { display: block; width: auto; margin-inline: 0; }
-  .avec-colonne--large > .avec-colonne__aside,
-  .avec-colonne--sections > .avec-colonne__aside { display: none; }
 }
 
 /* ── La porte du résultat ──────────────────────────────────────────────
@@ -11379,11 +11345,11 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .stats-row--fixe { cursor: default; }
 
 /* ── Bureau : le contenu dans son encart, les publicites autour ─────────
-   Sur grand ecran, les colonnes laterales (grand angle a droite des 1440 px,
-   skyrails dans les gouttieres) partagent la meme page que le texte, et les
-   bandes pleine largeur des sections faisaient de l'ensemble une seule
-   nappe : on ne voyait plus ou finissait le contenu et ou commencait la
-   publicite. A partir de 1024 px, la colonne de texte devient un encart a
+   Sur grand ecran, les colonnes laterales de l'epoque (grand angle a droite,
+   skyrails dans les gouttieres, tous retires depuis) partageaient la page
+   avec le texte, et les bandes pleine largeur des sections faisaient de
+   l'ensemble une seule nappe : on ne voyait plus ou finissait le contenu et
+   ou commencait la publicite. L'encart est reste, il tient tout seul. A partir de 1024 px, la colonne de texte devient un encart a
    part entiere : fond de carte, bordure, coins arrondis, ombre douce. Les
    bandes alternees des sections restent, mais a l'interieur de l'encart, dont
    les coins les rognent. Sous 1024 px rien ne change : il n'y a pas de
@@ -11419,8 +11385,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
     box-shadow: none;
   }
   .seo-content .avec-colonne:not(.avec-colonne--sections) > .avec-colonne__contenu section:hover { box-shadow: none; }
-  /* La colonne laterale demarre a la meme hauteur que l'encart. */
-  .avec-colonne__aside { padding-top: 0.25rem; }
 }
 
 /* ═══════════════════════════════════════════════════════════════════
