@@ -10,7 +10,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -94,7 +94,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/liebe-oder-gewohnheit-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-amore-o-abitudine/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-amour-ou-habitude/"/>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -142,7 +142,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/ehe-kompatibilitaetstest/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-compatibilita-matrimonio/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-couple-mariage/"/>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -671,6 +671,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-coppia-o-single/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-couple-ou-celibat/"/>
     <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/de/ist-es-die-richtige-person-test/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-est-ce-le-bon-ou-la-bonne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/is-this-the-one-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-es-la-persona-adecuada/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/ist-es-die-richtige-person-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-e-la-persona-giusta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-est-ce-le-bon-ou-la-bonne/"/>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1343,6 +1355,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/donna-narcisista-segnali/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/femme-perverse-narcissique-signes/"/>
     <lastmod>2026-09-26T09:25:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/de/blog/fragen-an-deine-freundin/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/questions-a-poser-a-sa-copine/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/questions-to-ask-your-girlfriend/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/preguntas-para-tu-novia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/fragen-an-deine-freundin/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/domande-da-fare-alla-tua-ragazza/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/questions-a-poser-a-sa-copine/"/>
+    <lastmod>2026-09-29T17:24:00+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

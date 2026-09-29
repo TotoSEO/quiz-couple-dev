@@ -382,7 +382,8 @@
     "testAmourAmi": "Test in besten Freund verliebt",
     "jeuPhrases": "Sätze vervollständigen",
     "testPretRelation": "Test Bereit für eine neue Beziehung",
-    "quizTypeCouple": "Quiz Welcher Paartyp seid ihr"
+    "quizTypeCouple": "Quiz Welcher Paartyp seid ihr",
+    "testEstCeLeBon": "Test ist es die richtige Person"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",
@@ -757,5 +758,10 @@
     "introQuestion": "Bevor du anfängst:",
     "introQuote": "Antworte zu dem, was du gerade lebst, nicht zu dem Monat nach der Trennung.",
     "disclaimer": "Dieser Test sagt nicht, ob du jemanden kennenlernen wirst. Er schaut, ob der Platz heute frei ist, und das ändert sich von Monat zu Monat. Deine Antworten werden nicht gespeichert."
+  },
+  "est-ce-le-bon": {
+    "introQuestion": "Bevor du anfängst:",
+    "introQuote": "Antworte über den Menschen, wie er heute ist, nicht über den, der er hoffentlich einmal wird.",
+    "disclaimer": "Dieser Test entscheidet nicht für dich. Er legt deine Antworten nebeneinander, und oft sieht man genau dort, was man schon wusste. Deine Antworten werden nicht gespeichert."
   }
 }
