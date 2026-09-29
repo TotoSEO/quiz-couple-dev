@@ -421,5 +421,11 @@
     "shortTitle": "¿Qué tipo de pareja sois?",
     "description": "Quince situaciones del día a día para responder juntos. Al final, un perfil entre cuatro: fusionales, cómplices, independientes o constructores, con lo que os hace fuertes y lo que hay que vigilar.",
     "metaDescription": "Quince situaciones para responder juntos en el mismo móvil. Fusionales, cómplices, independientes o constructores: vuestro perfil en tres minutos."
+  },
+  "testEstCeLeBon": {
+    "title": "¿Cómo saber si es la persona indicada? Test gratis",
+    "shortTitle": "¿Es la persona adecuada?",
+    "description": "Veinte preguntas sobre cómo te sientes con esta persona, vuestras discusiones, la confianza y el futuro que imaginas. El resultado dice si tus respuestas van en la misma dirección, y cuál.",
+    "metaDescription": "Veinte preguntas sobre la confianza, las discusiones, las ganas de verle y el futuro que imaginas. Resultado inmediato, gratis y anónimo."
   }
 }

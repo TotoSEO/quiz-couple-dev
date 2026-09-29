@@ -382,7 +382,8 @@
     "testAmourAmi": "Test enamorado de mi mejor amigo",
     "jeuPhrases": "Frases para completar",
     "testPretRelation": "Test preparado para una nueva relación",
-    "quizTypeCouple": "Quiz qué tipo de pareja sois"
+    "quizTypeCouple": "Quiz qué tipo de pareja sois",
+    "testEstCeLeBon": "Test es la persona adecuada"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
@@ -757,5 +758,10 @@
     "introQuestion": "Antes de empezar:",
     "introQuote": "Responde sobre lo que vives ahora mismo, no sobre el mes que siguió a la ruptura.",
     "disclaimer": "Este test no dice si vas a conocer a alguien. Mira si el sitio está libre hoy, y eso cambia de un mes a otro. Tus respuestas no se guardan."
+  },
+  "est-ce-le-bon": {
+    "introQuestion": "Antes de empezar:",
+    "introQuote": "Responde sobre la persona tal como es hoy, no sobre la que esperas que llegue a ser.",
+    "disclaimer": "Este test no decide por ti. Pone tus respuestas una al lado de la otra, y ahí es donde muchas veces se ve lo que ya se sabía. Tus respuestas no se guardan."
   }
 }

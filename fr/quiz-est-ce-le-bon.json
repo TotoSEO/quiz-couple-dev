@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badge": "Test de couple",
+    "title": "Est-ce le bon ou la bonne ? Le test pour le savoir",
+    "titleHighlight": "le bon ou la bonne",
+    "description": "Vous êtes en couple depuis quelques mois ou quelques années, et la question revient : est-ce que c'est la bonne personne pour moi ? Ce test regarde <strong>comment vous vous sentez avec elle</strong>, <strong>ce qui se passe quand vous n'êtes pas d'accord</strong> et <strong>l'avenir que vous arrivez à imaginer</strong>. Vingt questions, un résultat sur cinq paliers, et ce que vos réponses disent.",
+    "subtitle": "Vingt questions, quatre minutes, un résultat sur cinq paliers",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment savoir si c'est le bon ou la bonne ?",
+    "intro": "On se pose la question à des moments très différents. Au bout de six mois, quand l'histoire devient sérieuse. Au bout de six ans, un soir où on se demande si on est encore heureux. Ou quand quelqu'un d'autre pose la question à notre place : « Alors, c'est le bon ? ». Et la plupart du temps, on répond « je crois », sans trop savoir sur quoi on s'appuie.",
+    "p1": "Il n'y a pas de signe magique. Ce qu'on sait, en revanche, c'est ce qui compte dans une relation qui dure : se sentir en sécurité avec l'autre, pouvoir lui dire les choses, se disputer sans se détruire, et avoir envie du même genre de vie. Ce ne sont pas des questions romantiques. Ce sont des questions de tous les jours, et c'est justement pour ça qu'elles sont fiables.",
+    "p2": "Le test ne vous demande pas si vous êtes amoureux. C'est une autre question, et si c'est celle-là qui vous travaille, il vaut mieux commencer par se demander <a href=\"/test-suis-je-amoureux/\">si ce que vous ressentez est de l'amour</a>. Ici, on regarde la personne et la relation : comment vous vous sentez avec elle, ce qui se passe quand ça coince, la place qu'elle prend dans votre tête, et l'avenir que vous arrivez à imaginer.",
+    "p3": "Un point important : le test ne compare pas votre couple à un idéal. Il compare vos réponses entre elles. Quelqu'un qui répond « apaisé(e) » à la première question et « je ne sais pas » à la dernière dit quelque chose de précis, et le résultat le lit. Si vous avez plutôt l'impression que <a href=\"/test-amour-ou-habitude/\">l'amour est devenu une habitude</a>, ça se verra aussi, dans les questions sur l'envie de se retrouver et sur les efforts de chacun."
+  },
+  "section2": {
+    "title": "Les quatre choses que le test regarde de près",
+    "sub1Title": "Comment vous vous sentez avec cette personne",
+    "sub1P1": "C'est ce qui pèse le plus lourd dans le calcul. Apaisé(e) ou sur vos gardes, libre d'être vous-même ou en train de jouer un rôle, respecté(e) dans les petites choses ou selon son humeur. Ce sont des sensations qu'on connaît bien sans jamais les formuler. Le test vous demande de le faire, une fois.",
+    "sub2Title": "Ce qui se passe quand vous n'êtes pas d'accord",
+    "sub2P1": "Tous les couples se disputent. Ce qui compte, c'est la fin de la dispute : est-ce qu'on répare, est-ce qu'on s'évite, est-ce que l'un cède toujours ? Et pouvez-vous dire ce qui vous dérange sans avoir peur de la réaction ? Un couple où ça se dit a de la marge. Un couple où ça se tait, moins.",
+    "sub3Title": "La confiance, et la place qu'il ou elle prend dans votre tête",
+    "sub3P1": "Est-ce que vous croyez ce qu'il ou elle vous dit ? À qui pensez-vous en premier quand une nouvelle tombe ? Est-ce qu'il ou elle se réjouit quand quelque chose vous réussit ? Ces trois questions disent si cette personne est votre alliée au quotidien, ou juste quelqu'un avec qui vous vivez.",
+    "sub4Title": "L'avenir que vous arrivez à imaginer",
+    "sub4P1": "Votre vie dans cinq ans, les grands sujets sur lesquels vous êtes d'accord ou pas, et la question qui pèse le plus : si c'était à refaire, en sachant tout ce que vous savez, est-ce que vous referiez pareil ? On répond très vite à celle-là. C'est bien pour ça qu'elle compte."
+  },
+  "section3": {
+    "title": "Comment le test calcule votre résultat",
+    "p1": "Vingt questions, quatre réponses à chaque fois. Chaque réponse rapporte des points, et les questions n'ont pas toutes le même poids. Celles sur ce que vous ressentez avec cette personne, sur vos disputes, sur ce que vous pouvez lui dire et sur ce que vous referiez valent jusqu'à six points. Celles sur ce qui vous agace ou sur vos histoires d'avant valent trois. C'est voulu : on peut être agacé par des broutilles et être avec la bonne personne. Avoir peur de sa réaction, c'est autre chose.",
+    "p2": "Le total fait 96 points. Le résultat se lit sur cinq paliers, de « vous le savez déjà, au fond » à « tout porte à croire que oui », avec à chaque fois ce que vos réponses disent et une chose à faire. Personne ne voit vos réponses, et vous pouvez refaire le test dans quelques mois. Le chiffre bouge, surtout après une bonne conversation !",
+    "p3": "Ce test regarde la relation telle qu'elle est aujourd'hui. Il ne dit pas si elle est en train de se terminer, ni ce qu'il reste de vos sentiments après une période difficile. Ce sont deux autres questions. Si c'est plutôt <a href=\"/test-est-ce-la-fin-de-mon-couple/\">la fin de votre couple</a> qui vous inquiète, il y a un test pour ça. Et si vous vous demandez surtout <a href=\"/test-je-l-aime-encore/\">ce qu'il reste de l'amour</a> de votre côté, il y en a un autre."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose",
+    "faq1Q": "Combien de temps faut-il pour savoir si c'est le bon ou la bonne ?",
+    "faq1A": "Il n'y a pas de délai. Certaines personnes le savent en quelques mois, d'autres se posent encore la question après dix ans. Ce qui aide, ce n'est pas le temps qui passe, c'est ce qu'on a traversé ensemble : une dispute sérieuse, une mauvaise passe, une décision à prendre à deux. Tant qu'on n'a vécu que des bons moments, on ne sait pas grand-chose. Après une vraie épreuve, on sait beaucoup.",
+    "faq2Q": "On se dispute souvent, est-ce mauvais signe ?",
+    "faq2A": "Pas forcément. La fréquence des disputes dit peu de choses. Ce qui compte, c'est comment elles finissent. Un couple qui se dispute une fois par semaine et répare le soir même va souvent mieux qu'un couple qui ne se dispute jamais parce que l'un des deux se tait. Le mauvais signe, ce n'est pas la dispute. C'est le mépris pendant, et le silence après.",
+    "faq3Q": "J'ai des doutes, est-ce que ça veut dire que ce n'est pas la bonne personne ?",
+    "faq3A": "Tout le monde a des doutes, y compris dans les couples qui durent. La différence est dans leur forme. Un doute qui arrive après une dispute et qui repart avec elle, c'est normal. Un doute qui est là en fond, tout le temps, sans raison précise, mérite qu'on s'y arrête. Le test fait la différence entre les deux, à la dixième question.",
+    "faq4Q": "Le test me dit que ce n'est pas la bonne personne. Je fais quoi ?",
+    "faq4A": "Rien dans la précipitation. Un test n'est pas une décision, c'est un miroir. Relisez les questions où vos réponses vous ont fait mal, et demandez-vous si vous les avez déjà dites à la personne concernée. Souvent non. Commencez par là. Et si dans vos réponses il y a de la peur, du contrôle ou du mépris, parlez-en à quelqu'un de confiance, ça dépasse la question du bon ou de la bonne.",
+    "faq5Q": "Le test est-il anonyme ?",
+    "faq5A": "Oui. Vos réponses restent dans votre navigateur, personne ne les voit, et il n'y a rien à créer ni à remplir. Vous pouvez le faire seul(e), ou chacun de votre côté puis comparer, ce qui donne d'ailleurs des conversations intéressantes..."
+  },
+  "jsonLd": {
+    "about": "choisir la bonne personne"
+  }
+}

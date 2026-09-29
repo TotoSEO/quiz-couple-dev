@@ -96,7 +96,9 @@
     "testPretRelation": "Ready for a new relationship?",
     "testPretRelationDesc": "Twenty questions to know whether this is the moment",
     "quizTypeCouple": "What type of couple are you?",
-    "quizTypeCoupleDesc": "Fifteen situations, four profiles, to answer together"
+    "quizTypeCoupleDesc": "Fifteen situations, four profiles, to answer together",
+    "testEstCeLeBon": "Is this the one?",
+    "testEstCeLeBonDesc": "Twenty questions to know if this is the right person"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

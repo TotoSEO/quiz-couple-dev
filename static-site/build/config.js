@@ -76,6 +76,7 @@ export const ROUTE_SLUGS = {
   testTrouverAmour: { fr: 'test-pourquoi-je-ne-trouve-pas-l-amour', en: 'why-cant-i-find-love-test', es: 'test-por-que-no-encuentro-el-amor', de: 'warum-finde-ich-keine-liebe-test', it: 'test-perche-non-trovo-l-amore' },
   testCelibataire: { fr: 'test-pourquoi-suis-je-celibataire', en: 'why-am-i-still-single-test', es: 'test-por-que-sigo-soltero', de: 'warum-bin-ich-noch-single-test', it: 'test-perche-sono-ancora-single' },
   testCoupleOuCelibat: { fr: 'test-couple-ou-celibat', en: 'single-life-or-relationship-test', es: 'test-pareja-o-solteria', de: 'beziehung-oder-single-test', it: 'test-coppia-o-single' },
+  testEstCeLeBon: { fr: 'test-est-ce-le-bon-ou-la-bonne', en: 'is-this-the-one-test', es: 'test-es-la-persona-adecuada', de: 'ist-es-die-richtige-person-test', it: 'test-e-la-persona-giusta' },
   testPretRelation: { fr: 'test-pret-pour-une-nouvelle-relation', en: 'ready-for-a-new-relationship-test', es: 'test-preparado-para-una-nueva-relacion', de: 'bereit-fuer-eine-neue-beziehung-test', it: 'test-pronto-per-una-nuova-relazione' },
   testAmourAmi: { fr: 'test-amour-meilleur-ami', en: 'in-love-with-my-best-friend-test', es: 'test-enamorado-de-mi-mejor-amigo', de: 'in-besten-freund-verliebt-test', it: 'test-innamorato-del-migliore-amico' },
   testChargeMentale: { fr: 'test-charge-mentale-couple', en: 'mental-load-test-couples', es: 'test-carga-mental-pareja', de: 'mental-load-test-paare', it: 'test-carico-mentale-coppia' },
@@ -238,6 +239,7 @@ export const ROUTE_CONFIG = {
   testTrouverAmour: { template: 'quiz-trouver-amour', namespaces: ['quiz-trouver-amour', 'quizzes', 'quizGames', 'gd', 'common'] },
   testCelibataire: { template: 'quiz-celibataire', namespaces: ['quiz-celibataire', 'quizzes', 'quizGames', 'gd', 'common'] },
   testCoupleOuCelibat: { template: 'quiz-couple-ou-celibat', namespaces: ['quiz-couple-ou-celibat', 'quizzes', 'quizGames', 'gd', 'common'] },
+  testEstCeLeBon: { template: 'quiz-est-ce-le-bon', namespaces: ['quiz-est-ce-le-bon', 'quizzes', 'quizGames', 'gd', 'common'] },
   testPretRelation: { template: 'quiz-pret-nouvelle-relation', namespaces: ['quiz-pret-nouvelle-relation', 'quizzes', 'quizGames', 'gd', 'common'] },
   testAmourAmi: { template: 'quiz-amour-ami', namespaces: ['quiz-amour-ami', 'quizzes', 'quizGames', 'gd', 'common'] },
   testChargeMentale: { template: 'quiz-charge-mentale', namespaces: ['quiz-charge-mentale', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -1378,6 +1380,7 @@ export const QUIZ_RELATED_ARTICLES = {
   // la rencontre arrive.
   testCelibataire:  ['peur-de-l-engagement', 'attachement-evitant', 'attachement-anxieux', 'dependance-affective', '36-questions-pour-tomber-amoureux'],
   testCoupleOuCelibat: ['peur-de-l-engagement', 'dependance-affective', 'attachement-evitant', 'les-phases-de-la-rupture-chez-l-homme'],
+  testEstCeLeBon: ['comment-savoir-si-cest-le-bon', 'arreter-ou-continuer-relation', 'questions-avenir-couple', 'red-flags-homme'],
   testPretRelation: ['dependance-affective', 'les-phases-de-la-rupture-chez-l-homme', 'arreter-ou-continuer-relation', 'comment-savoir-si-cest-le-bon'],
   testAmourAmi:     ['questions-a-poser-a-son-crush', 'sentiments-chez-un-homme', 'homme-nerveux-devant-une-femme', 'dependance-affective'],
   quizRencontre:    ['36-questions-pour-tomber-amoureux', 'questions-debut-de-relation', 'questions-a-poser-a-son-crush', 'il-annule-au-dernier-moment', 'homme-nerveux-devant-une-femme'],

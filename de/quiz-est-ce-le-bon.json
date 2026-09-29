@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badge": "Paartest",
+    "title": "Ist er oder sie die richtige Person? Der Test",
+    "titleHighlight": "die richtige Person",
+    "description": "Ihr seid seit ein paar Monaten oder ein paar Jahren zusammen, und die Frage kommt immer wieder: Ist das der richtige Mensch für mich? Dieser Test schaut darauf, <strong>wie du dich mit ihm oder ihr fühlst</strong>, <strong>was passiert, wenn ihr uneinig seid</strong>, und <strong>welche Zukunft du dir vorstellen kannst</strong>. Zwanzig Fragen, ein Ergebnis auf fünf Stufen, und was deine Antworten sagen.",
+    "subtitle": "Zwanzig Fragen, vier Minuten, ein Ergebnis auf fünf Stufen",
+    "jumpBtn": "Test machen"
+  },
+  "section1": {
+    "title": "Woran erkennt man, ob es die richtige Person ist?",
+    "intro": "Die Frage kommt zu sehr unterschiedlichen Zeitpunkten. Nach sechs Monaten, wenn es ernst wird. Nach sechs Jahren, an einem Abend, an dem man sich fragt, ob man noch glücklich ist. Oder wenn jemand anders die Frage für uns stellt: « Und, ist es der oder die Richtige? ». Und meistens antworten wir « ich glaube schon », ohne genau zu wissen, worauf wir uns stützen.",
+    "p1": "Ein magisches Zeichen gibt es nicht. Was man dagegen weiß, ist, was in einer Beziehung zählt, die hält: sich beim anderen sicher fühlen, ihm die Dinge sagen können, streiten, ohne sich zu zerstören, und dieselbe Art von Leben wollen. Das sind keine romantischen Fragen. Es sind Alltagsfragen, und genau deshalb sind sie verlässlich.",
+    "p2": "Der Test fragt dich nicht, ob du verliebt bist. Das ist eine andere Frage, und wenn dich die beschäftigt, fängst du besser damit an, dich zu fragen, <a href=\"/de/bin-ich-verliebt-test/\">ob das, was du fühlst, Liebe ist</a>. Hier schauen wir auf den Menschen und die Beziehung: wie du dich mit ihm oder ihr fühlst, was passiert, wenn es hakt, wie viel Platz er oder sie in deinem Kopf einnimmt, und welche Zukunft du dir vorstellen kannst.",
+    "p3": "Ein wichtiger Punkt: Der Test vergleicht deine Beziehung nicht mit einem Ideal. Er vergleicht deine Antworten miteinander. Wer bei der ersten Frage « ruhig » antwortet und bei der letzten « ich weiß es nicht », sagt etwas Genaues, und das Ergebnis liest es. Wenn du eher das Gefühl hast, dass <a href=\"/de/liebe-oder-gewohnheit-test/\">aus der Liebe Gewohnheit geworden ist</a>, zeigt sich das ebenfalls, in den Fragen zur Lust auf ein Wiedersehen und zur Mühe, die jeder gibt."
+  },
+  "section2": {
+    "title": "Die vier Dinge, die der Test genau anschaut",
+    "sub1Title": "Wie du dich mit diesem Menschen fühlst",
+    "sub1P1": "Das wiegt in der Berechnung am schwersten. Ruhig oder auf der Hut, frei, du selbst zu sein, oder in einer Rolle, respektiert in den kleinen Dingen oder je nach Laune. Das sind Empfindungen, die wir gut kennen, ohne sie je in Worte zu fassen. Der Test bittet dich, es einmal zu tun.",
+    "sub2Title": "Was passiert, wenn ihr uneinig seid",
+    "sub2P1": "Alle Paare streiten. Was zählt, ist das Ende des Streits: Repariert ihr, geht ihr euch aus dem Weg, gibt immer derselbe nach? Und kannst du sagen, was dich stört, ohne Angst vor der Reaktion? Ein Paar, bei dem so etwas gesagt wird, hat Spielraum. Ein Paar, bei dem geschwiegen wird, weniger.",
+    "sub3Title": "Das Vertrauen, und der Platz in deinem Kopf",
+    "sub3P1": "Glaubst du, was er oder sie dir erzählt? An wen denkst du zuerst, wenn eine Nachricht kommt? Freut er oder sie sich, wenn dir etwas gelingt? Diese drei Fragen sagen, ob dieser Mensch im Alltag dein Verbündeter ist, oder nur jemand, mit dem du zusammenlebst.",
+    "sub4Title": "Die Zukunft, die du dir vorstellen kannst",
+    "sub4P1": "Dein Leben in fünf Jahren, die großen Themen, bei denen ihr einig seid oder nicht, und die Frage, die am schwersten wiegt: Wenn du noch einmal anfangen müsstest, mit allem, was du weißt, würdest du es genauso machen? Die beantwortet man sehr schnell. Genau deshalb zählt sie."
+  },
+  "section3": {
+    "title": "Wie der Test dein Ergebnis berechnet",
+    "p1": "Zwanzig Fragen, jedes Mal vier Antworten. Jede Antwort bringt Punkte, und die Fragen wiegen nicht alle gleich. Die dazu, wie du dich mit diesem Menschen fühlst, zu euren Streits, zu dem, was du ihm oder ihr sagen kannst, und zu dem, was du noch einmal so machen würdest, sind bis zu sechs Punkte wert. Die dazu, was dich nervt, oder zu deinen früheren Beziehungen sind drei wert. Das ist Absicht: Man kann sich über Kleinigkeiten ärgern und trotzdem mit der richtigen Person zusammen sein. Angst vor ihrer Reaktion zu haben, ist etwas anderes.",
+    "p2": "Insgesamt sind es 96 Punkte. Das Ergebnis liest sich auf fünf Stufen, von « tief drinnen weißt du es schon » bis « alles spricht dafür », jedes Mal mit dem, was deine Antworten sagen, und einer Sache, die du tun kannst. Niemand sieht deine Antworten, und du kannst den Test in ein paar Monaten wiederholen. Die Zahl bewegt sich, vor allem nach einem guten Gespräch!",
+    "p3": "Dieser Test schaut auf die Beziehung, wie sie heute ist. Er sagt nicht, ob sie gerade zu Ende geht, und auch nicht, was nach einer schweren Zeit von deinen Gefühlen übrig ist. Das sind zwei andere Fragen. Wenn dich eher <a href=\"/de/ist-meine-beziehung-am-ende-test/\">das Ende eurer Beziehung</a> beunruhigt, gibt es dafür einen Test. Und wenn du dich vor allem fragst, <a href=\"/de/liebe-ich-ihn-sie-noch-test/\">was von der Liebe übrig ist</a> auf deiner Seite, gibt es noch einen anderen."
+  },
+  "seo": {
+    "faqTitle": "Die Fragen, die man sich stellt",
+    "faq1Q": "Wie lange dauert es, bis man weiß, ob es die richtige Person ist?",
+    "faq1A": "Eine feste Zeit gibt es nicht. Manche wissen es nach ein paar Monaten, andere fragen sich das nach zehn Jahren noch. Was hilft, ist nicht die Zeit, die vergeht, sondern das, was man zusammen durchgemacht hat: ein ernster Streit, eine schwere Phase, eine Entscheidung, die man zu zweit treffen muss. Solange man nur gute Momente erlebt hat, weiß man wenig. Nach einer echten Prüfung weiß man viel.",
+    "faq2Q": "Wir streiten oft, ist das ein schlechtes Zeichen?",
+    "faq2A": "Nicht unbedingt. Wie oft man streitet, sagt wenig. Was zählt, ist, wie die Streits enden. Ein Paar, das einmal pro Woche streitet und sich noch am selben Abend versöhnt, steht oft besser da als ein Paar, das nie streitet, weil einer von beiden schweigt. Das schlechte Zeichen ist nicht der Streit. Es ist die Verachtung währenddessen, und das Schweigen danach.",
+    "faq3Q": "Ich habe Zweifel, heißt das, es ist nicht die richtige Person?",
+    "faq3A": "Alle haben Zweifel, auch in Paaren, die halten. Der Unterschied liegt in ihrer Form. Ein Zweifel, der nach einem Streit kommt und mit ihm wieder geht, ist normal. Ein Zweifel, der ständig im Hintergrund da ist, ohne genauen Grund, verdient es, dass man sich damit beschäftigt. Der Test unterscheidet die beiden, bei der zehnten Frage.",
+    "faq4Q": "Der Test sagt mir, es ist nicht die richtige Person. Was mache ich?",
+    "faq4A": "Nichts in Eile. Ein Test ist keine Entscheidung, er ist ein Spiegel. Lies die Fragen noch einmal, bei denen deine Antworten wehgetan haben, und frag dich, ob du das der betreffenden Person je gesagt hast. Oft nicht. Fang damit an. Und wenn in deinen Antworten Angst, Kontrolle oder Verachtung stecken, sprich mit jemandem, dem du vertraust, das geht über die Frage nach der richtigen Person hinaus.",
+    "faq5Q": "Ist der Test anonym?",
+    "faq5A": "Ja. Deine Antworten bleiben in deinem Browser, niemand sieht sie, und es gibt nichts anzulegen oder auszufüllen. Du kannst ihn allein machen, oder jeder für sich und danach vergleichen, was übrigens interessante Gespräche ergibt..."
+  },
+  "jsonLd": {
+    "about": "die richtige Person wählen"
+  }
+}
