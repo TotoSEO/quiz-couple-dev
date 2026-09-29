@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badge": "Test de pareja",
+    "title": "¿Es la persona adecuada? El test para saberlo",
+    "titleHighlight": "la persona adecuada",
+    "description": "Lleváis unos meses o unos años juntos, y la pregunta vuelve: ¿es la persona adecuada para mí? Este test mira <strong>cómo te sientes con ella</strong>, <strong>qué pasa cuando no estáis de acuerdo</strong> y <strong>el futuro que consigues imaginar</strong>. Veinte preguntas, un resultado en cinco niveles, y lo que dicen tus respuestas.",
+    "subtitle": "Veinte preguntas, cuatro minutos, un resultado en cinco niveles",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "¿Cómo saber si es la persona adecuada?",
+    "intro": "La pregunta llega en momentos muy distintos. A los seis meses, cuando la historia se pone seria. A los seis años, una noche en la que uno se pregunta si sigue siendo feliz. O cuando otra persona la hace por nosotros: « ¿Y qué, es el definitivo? ». Y la mayoría de las veces respondemos « creo que sí », sin saber muy bien en qué nos apoyamos.",
+    "p1": "No hay una señal mágica. Lo que sí se sabe es qué cuenta en una relación que dura: sentirse seguro con el otro, poder decirle las cosas, discutir sin destruirse y querer el mismo tipo de vida. No son preguntas románticas. Son preguntas del día a día, y justamente por eso son fiables.",
+    "p2": "El test no te pregunta si estás enamorado/a. Esa es otra pregunta, y si es la que te da vueltas, es mejor empezar por preguntarte <a href=\"/es/test-estoy-enamorado/\">si lo que sientes es amor</a>. Aquí miramos a la persona y a la relación: cómo te sientes con ella, qué pasa cuando algo se atasca, el espacio que ocupa en tu cabeza y el futuro que consigues imaginar.",
+    "p3": "Un punto importante: el test no compara tu pareja con un ideal. Compara tus respuestas entre sí. Alguien que responde « en calma » a la primera pregunta y « no lo sé » a la última está diciendo algo preciso, y el resultado lo lee. Si más bien tienes la sensación de que <a href=\"/es/test-amor-o-costumbre/\">el amor se ha vuelto costumbre</a>, también se verá, en las preguntas sobre las ganas de veros y sobre el esfuerzo de cada uno."
+  },
+  "section2": {
+    "title": "Las cuatro cosas que el test mira de cerca",
+    "sub1Title": "Cómo te sientes con esta persona",
+    "sub1P1": "Es lo que más pesa en el cálculo. En calma o a la defensiva, libre de ser tú mismo/a o haciendo un papel, respetado/a en las pequeñas cosas o según su humor. Son sensaciones que conocemos bien sin ponerlas nunca en palabras. El test te pide hacerlo, una vez.",
+    "sub2Title": "Qué pasa cuando no estáis de acuerdo",
+    "sub2P1": "Todas las parejas discuten. Lo que cuenta es el final de la discusión: ¿se repara, os evitáis, cede siempre el mismo? ¿Y puedes decir lo que te molesta sin miedo a la reacción? Una pareja donde las cosas se dicen tiene margen. Una pareja donde se callan, menos.",
+    "sub3Title": "La confianza, y el espacio que ocupa en tu cabeza",
+    "sub3P1": "¿Te crees lo que te dice? ¿En quién piensas primero cuando llega una noticia? ¿Se alegra cuando algo te sale bien? Estas tres preguntas dicen si esta persona es tu aliada en el día a día, o solo alguien con quien vives.",
+    "sub4Title": "El futuro que consigues imaginar",
+    "sub4P1": "Tu vida dentro de cinco años, los grandes temas en los que estáis de acuerdo o no, y la pregunta que más pesa: si tuvieras que volver a empezar, sabiendo todo lo que sabes, ¿harías lo mismo? A esa se responde muy rápido. Precisamente por eso cuenta."
+  },
+  "section3": {
+    "title": "Cómo calcula el test tu resultado",
+    "p1": "Veinte preguntas, cuatro respuestas cada vez. Cada respuesta da puntos, y no todas las preguntas pesan lo mismo. Las que hablan de cómo te sientes con esta persona, de vuestras discusiones, de lo que puedes decirle y de lo que volverías a hacer valen hasta seis puntos. Las que hablan de lo que te molesta o de tus historias anteriores valen tres. Es a propósito: uno puede molestarse por tonterías y estar con la persona adecuada. Tener miedo a su reacción es otra cosa.",
+    "p2": "El total son 96 puntos. El resultado se lee en cinco niveles, desde « en el fondo, ya lo sabes » hasta « todo apunta a que sí », cada vez con lo que dicen tus respuestas y una cosa que hacer. Nadie ve tus respuestas, y puedes repetir el test dentro de unos meses. ¡La cifra se mueve, sobre todo después de una buena conversación!",
+    "p3": "Este test mira la relación tal como es hoy. No dice si se está acabando, ni qué queda de tus sentimientos después de una mala época. Son otras dos preguntas. Si lo que te preocupa es más bien <a href=\"/es/test-es-el-final-de-mi-relacion/\">el final de tu relación</a>, hay un test para eso. Y si sobre todo te preguntas <a href=\"/es/test-todavia-le-quiero/\">qué queda del amor</a> por tu parte, hay otro."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que nos hacemos",
+    "faq1Q": "¿Cuánto tiempo hace falta para saber si es la persona adecuada?",
+    "faq1A": "No hay un plazo. Algunas personas lo saben en unos meses, otras siguen preguntándoselo después de diez años. Lo que ayuda no es el tiempo que pasa, sino lo que se ha vivido juntos: una discusión seria, una mala época, una decisión que tomar a dos. Mientras solo se han vivido buenos momentos, no se sabe gran cosa. Después de una prueba de verdad, se sabe mucho.",
+    "faq2Q": "Discutimos a menudo, ¿es mala señal?",
+    "faq2A": "No necesariamente. La frecuencia de las discusiones dice poco. Lo que cuenta es cómo terminan. Una pareja que discute una vez por semana y lo arregla esa misma noche suele estar mejor que una que nunca discute porque uno de los dos se calla. La mala señal no es la discusión. Es el desprecio durante, y el silencio después.",
+    "faq3Q": "Tengo dudas, ¿significa que no es la persona adecuada?",
+    "faq3A": "Todo el mundo tiene dudas, también en las parejas que duran. La diferencia está en su forma. Una duda que llega después de una discusión y se va con ella es normal. Una duda que está de fondo, todo el tiempo, sin motivo concreto, merece que uno se detenga. El test distingue las dos, en la décima pregunta.",
+    "faq4Q": "El test me dice que no es la persona adecuada. ¿Qué hago?",
+    "faq4A": "Nada con prisas. Un test no es una decisión, es un espejo. Vuelve a leer las preguntas en las que tus respuestas te han dolido, y pregúntate si alguna vez se las has dicho a la persona en cuestión. Muchas veces no. Empieza por ahí. Y si en tus respuestas hay miedo, control o desprecio, habla con alguien de confianza, eso va más allá de la cuestión de la persona adecuada.",
+    "faq5Q": "¿El test es anónimo?",
+    "faq5A": "Sí. Tus respuestas se quedan en tu navegador, nadie las ve, y no hay nada que crear ni que rellenar. Puedes hacerlo solo/a, o cada uno por su lado y luego comparar, lo que da conversaciones interesantes, por cierto..."
+  },
+  "jsonLd": {
+    "about": "elegir a la persona adecuada"
+  }
+}

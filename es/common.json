@@ -96,7 +96,9 @@
     "testPretRelation": "¿Preparado para una nueva relación?",
     "testPretRelationDesc": "Veinte preguntas para saber si es el momento",
     "quizTypeCouple": "¿Qué tipo de pareja sois?",
-    "quizTypeCoupleDesc": "Quince situaciones, cuatro perfiles, para responder juntos"
+    "quizTypeCoupleDesc": "Quince situaciones, cuatro perfiles, para responder juntos",
+    "testEstCeLeBon": "¿Es la persona adecuada?",
+    "testEstCeLeBonDesc": "Veinte preguntas para saber si es la persona indicada"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

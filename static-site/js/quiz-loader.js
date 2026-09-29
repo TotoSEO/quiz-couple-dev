@@ -356,6 +356,13 @@
     // 3 a 6 selon ce qu'elle dit : ce qu'on ferait si l'ex revenait et la
     // raison de vouloir quelqu'un valent 6, le trac d'un premier verre 3.
     // 86 points, cinq paliers.
+    // Est-ce le bon ou la bonne ? Test de couple, solo a bareme explicite :
+    // les points vont a ce qui dit « oui ». Chaque question pese de 3 a 6
+    // selon ce qu'elle dit : se sentir apaise, la fin des disputes, pouvoir
+    // tout dire et « referiez-vous pareil » valent 6, ce qui agace et la
+    // comparaison avec les ex valent 3. 96 points, cinq paliers.
+    'est-ce-le-bon': { prefix: 'estCeLeBon', engine: 'solo', totalQ: 20, pool: 20, quizType: 'est-ce-le-bon', ptsExplicites: true, paliers: [28, 50, 68, 84] },
+
     'pret-nouvelle-relation': { prefix: 'pretRelation', engine: 'solo', totalQ: 20, pool: 20, quizType: 'pret-nouvelle-relation', ptsExplicites: true, paliers: [25, 45, 62, 75] },
 
     // Quel type de couple etes-vous ? Un quiz a remplir ensemble, sur un seul

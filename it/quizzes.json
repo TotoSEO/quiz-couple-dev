@@ -421,5 +421,11 @@
     "shortTitle": "Che tipo di coppia siete?",
     "description": "Quindici situazioni quotidiane a cui rispondere insieme. Alla fine, un profilo su quattro: fusionali, complici, indipendenti o costruttori, con quello che vi rende forti e quello da tenere d'occhio.",
     "metaDescription": "Quindici situazioni a cui rispondere in due sullo stesso telefono. Fusionali, complici, indipendenti o costruttori: il vostro profilo in tre minuti."
+  },
+  "testEstCeLeBon": {
+    "title": "Come capire se è la persona giusta: test gratuito",
+    "shortTitle": "È la persona giusta?",
+    "description": "Venti domande su come ti senti con questa persona, i vostri litigi, la fiducia e il futuro che immagini. Il risultato dice se le tue risposte vanno nella stessa direzione, e quale.",
+    "metaDescription": "Venti domande sulla fiducia, sui litigi, sulla voglia di rivederlo o rivederla e sul futuro che immagini. Risultato immediato, gratuito e anonimo."
   }
 }

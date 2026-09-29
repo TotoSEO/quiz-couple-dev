@@ -382,7 +382,8 @@
     "testAmourAmi": "In love with my best friend test",
     "jeuPhrases": "Finish the sentence",
     "testPretRelation": "Ready for a new relationship test",
-    "quizTypeCouple": "What type of couple are you quiz"
+    "quizTypeCouple": "What type of couple are you quiz",
+    "testEstCeLeBon": "Is this the one test"
   },
   "truefalse": {
     "ready": "Ready for true or false?",
@@ -757,5 +758,10 @@
     "introQuestion": "Before you start:",
     "introQuote": "Answer about what you're living right now, not about the month after the break-up.",
     "disclaimer": "This test doesn't say whether you'll meet someone. It looks at whether the place is free today, and that changes from one month to the next. Your answers are not stored."
+  },
+  "est-ce-le-bon": {
+    "introQuestion": "Before you start:",
+    "introQuote": "Answer about the person as they are today, not the one you hope they'll become.",
+    "disclaimer": "This test doesn't decide for you. It puts your answers side by side, and that's often where you see what you already knew. Your answers are not saved."
   }
 }

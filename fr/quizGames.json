@@ -384,7 +384,8 @@
     "testAmourAmi": "Test amoureux de mon meilleur ami",
     "jeuPhrases": "Phrases à compléter",
     "testPretRelation": "Test prêt(e) pour une nouvelle relation",
-    "quizTypeCouple": "Quiz quel type de couple êtes-vous"
+    "quizTypeCouple": "Quiz quel type de couple êtes-vous",
+    "testEstCeLeBon": "Test est-ce le bon ou la bonne"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",
@@ -759,5 +760,10 @@
     "introQuestion": "Avant de commencer :",
     "introQuote": "Répondez sur ce que vous vivez en ce moment, pas sur le mois qui a suivi la rupture.",
     "disclaimer": "Ce test ne dit pas si vous allez rencontrer quelqu'un. Il regarde si la place est libre aujourd'hui, et ça bouge d'un mois à l'autre. Vos réponses ne sont pas enregistrées."
+  },
+  "est-ce-le-bon": {
+    "introQuestion": "Avant de commencer :",
+    "introQuote": "Répondez sur la personne telle qu'elle est aujourd'hui, pas sur celle que vous espérez qu'elle devienne.",
+    "disclaimer": "Ce test ne décide pas à votre place. Il met vos réponses côte à côte, et c'est souvent là qu'on voit ce qu'on savait déjà. Vos réponses ne sont pas enregistrées."
   }
 }

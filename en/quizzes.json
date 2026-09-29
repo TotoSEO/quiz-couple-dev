@@ -421,5 +421,11 @@
     "shortTitle": "What type of couple are you?",
     "description": "Fifteen everyday situations to answer together. At the end, one profile out of four: inseparables, partners in crime, independents or builders, with what makes you strong and what to keep an eye on.",
     "metaDescription": "Fifteen situations to answer together on one phone. Inseparables, partners in crime, independents or builders: your profile in three minutes."
+  },
+  "testEstCeLeBon": {
+    "title": "How to Know If They're the One: Free 20-Question Test",
+    "shortTitle": "Is this the one?",
+    "description": "Twenty questions about how you feel with this person, your arguments, trust and the future you picture. The result says whether your answers point the same way, and which way.",
+    "metaDescription": "Twenty questions about trust, arguments, wanting to see them again and the future you picture. Instant result, free and anonymous."
   }
 }

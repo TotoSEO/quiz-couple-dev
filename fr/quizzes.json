@@ -433,5 +433,11 @@
     "shortTitle": "Quel type de couple êtes-vous ?",
     "description": "Quinze situations du quotidien à répondre ensemble. À la fin, un profil sur quatre : fusionnels, complices, indépendants ou bâtisseurs, avec ce qui fait votre force et ce qu'il faut surveiller.",
     "metaDescription": "Quinze situations à répondre à deux sur le même téléphone. Fusionnels, complices, indépendants ou bâtisseurs : votre profil en trois minutes."
+  },
+  "testEstCeLeBon": {
+    "title": "Comment savoir si c'est le bon ou la bonne ? Test gratuit",
+    "shortTitle": "Est-ce le bon / la bonne ?",
+    "description": "Vingt questions sur ce que vous ressentez avec cette personne, vos disputes, la confiance et l'avenir que vous imaginez. Le résultat dit si vos réponses vont dans le même sens, et lequel.",
+    "metaDescription": "Vingt questions sur la confiance, les disputes, l'envie de le ou la retrouver et l'avenir que vous imaginez. Résultat immédiat, gratuit et anonyme."
   }
 }

@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badge": "Couple test",
+    "title": "Is This the One? The Test to Find Out",
+    "titleHighlight": "the One",
+    "description": "You've been together for a few months or a few years, and the question keeps coming back: is this the right person for me? This test looks at <strong>how you feel with them</strong>, <strong>what happens when you disagree</strong> and <strong>the future you can picture</strong>. Twenty questions, a result on five levels, and what your answers say.",
+    "subtitle": "Twenty questions, four minutes, a result on five levels",
+    "jumpBtn": "Take the test"
+  },
+  "section1": {
+    "title": "How do you know if they're the one?",
+    "intro": "People ask themselves this at very different moments. After six months, when things get serious. After six years, one evening when you wonder whether you're still happy. Or when someone else asks the question for you: \"So, is this the one?\". And most of the time, the answer is \"I think so\", without quite knowing what it rests on.",
+    "p1": "There's no magic sign. What we do know is what matters in a relationship that lasts: feeling safe with the other person, being able to tell them things, arguing without destroying each other, and wanting the same kind of life. These aren't romantic questions. They're everyday questions, and that's exactly why they're reliable.",
+    "p2": "The test doesn't ask whether you're in love. That's a different question, and if that's the one on your mind, it's better to start by asking <a href=\"/en/am-i-in-love-test/\">whether what you feel is love</a>. Here, we look at the person and the relationship: how you feel with them, what happens when things go wrong, the space they take up in your head, and the future you can picture.",
+    "p3": "One important point: the test doesn't compare your relationship to an ideal. It compares your answers with each other. Someone who answers \"calm\" to the first question and \"I don't know\" to the last is saying something precise, and the result reads it. If you rather feel that <a href=\"/en/love-or-habit-test/\">love has become a habit</a>, that will show too, in the questions about wanting to see each other and about each person's effort."
+  },
+  "section2": {
+    "title": "The four things the test looks at closely",
+    "sub1Title": "How you feel with this person",
+    "sub1P1": "This weighs the most in the calculation. Calm or on your guard, free to be yourself or playing a part, respected in the small things or depending on their mood. These are feelings we know well without ever putting them into words. The test asks you to do it, once.",
+    "sub2Title": "What happens when you disagree",
+    "sub2P1": "All couples argue. What matters is how the argument ends: do you repair, do you avoid each other, does one of you always give in? And can you say what bothers you without fearing the reaction? A couple where things get said has room to move. A couple where they stay unsaid, less so.",
+    "sub3Title": "Trust, and the space they take up in your head",
+    "sub3P1": "Do you believe what they tell you? Who do you think of first when news lands? Are they happy when something goes well for you? These three questions say whether this person is your ally in everyday life, or just someone you live with.",
+    "sub4Title": "The future you can picture",
+    "sub4P1": "Your life in five years, the big topics you agree on or not, and the question that weighs the most: if you had to do it again, knowing everything you know, would you do the same? People answer that one very fast. That's exactly why it counts."
+  },
+  "section3": {
+    "title": "How the test works out your result",
+    "p1": "Twenty questions, four answers each time. Every answer earns points, and the questions don't all carry the same weight. Those about how you feel with this person, about your arguments, about what you can tell them and about what you'd do again are worth up to six points. Those about what annoys you or about your past relationships are worth three. That's deliberate: you can be annoyed by little things and be with the right person. Being afraid of their reaction is something else.",
+    "p2": "The total comes to 96 points. The result reads on five levels, from \"deep down, you already know\" to \"everything points to yes\", each time with what your answers say and one thing to do. Nobody sees your answers, and you can take the test again in a few months. The number moves, especially after a good conversation!",
+    "p3": "This test looks at the relationship as it is today. It doesn't say whether it's coming to an end, or what's left of your feelings after a rough patch. Those are two other questions. If what worries you is rather <a href=\"/en/is-my-relationship-over-test/\">the end of your relationship</a>, there's a test for that. And if you mostly wonder <a href=\"/en/do-i-still-love-him-her-test/\">what's left of the love</a> on your side, there's another one."
+  },
+  "seo": {
+    "faqTitle": "The questions people ask",
+    "faq1Q": "How long does it take to know if they're the one?",
+    "faq1A": "There's no set time. Some people know within a few months, others are still asking after ten years. What helps isn't time passing, it's what you've been through together: a serious argument, a rough patch, a decision to make as a couple. As long as you've only had good times, you don't know much. After a real test, you know a lot.",
+    "faq2Q": "We argue a lot, is that a bad sign?",
+    "faq2A": "Not necessarily. How often you argue says little. What matters is how the arguments end. A couple that argues once a week and makes up the same evening is often doing better than a couple that never argues because one of them stays silent. The bad sign isn't the argument. It's contempt during, and silence after.",
+    "faq3Q": "I have doubts, does that mean they're not the right person?",
+    "faq3A": "Everyone has doubts, including in couples that last. The difference is in their shape. A doubt that comes after an argument and leaves with it is normal. A doubt that sits in the background all the time, for no precise reason, deserves a closer look. The test tells the two apart, at the tenth question.",
+    "faq4Q": "The test tells me they're not the right person. What do I do?",
+    "faq4A": "Nothing in a rush. A test isn't a decision, it's a mirror. Reread the questions where your answers hurt, and ask yourself whether you've ever said those things to the person concerned. Often not. Start there. And if there's fear, control or contempt in your answers, talk to someone you trust, that goes beyond the question of the right person.",
+    "faq5Q": "Is the test anonymous?",
+    "faq5A": "Yes. Your answers stay in your browser, nobody sees them, and there's nothing to create or fill in. You can take it alone, or each on your own side and then compare, which makes for interesting conversations, by the way..."
+  },
+  "jsonLd": {
+    "about": "choosing the right person"
+  }
+}

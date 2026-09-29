@@ -97,7 +97,9 @@
     "testPretRelation": "Prêt(e) pour une nouvelle relation ?",
     "testPretRelationDesc": "Vingt questions pour savoir si c'est le moment",
     "quizTypeCouple": "Quel type de couple êtes-vous ?",
-    "quizTypeCoupleDesc": "Quinze situations, quatre profils, à répondre ensemble"
+    "quizTypeCoupleDesc": "Quinze situations, quatre profils, à répondre ensemble",
+    "testEstCeLeBon": "Est-ce le bon / la bonne ?",
+    "testEstCeLeBonDesc": "Vingt questions pour savoir si c'est la bonne personne"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

@@ -2024,6 +2024,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'celibataire', icon: '🔍', route: 'testCelibataire' },
     { type: 'test', key: 'couple-ou-celibat', icon: '🛋️', route: 'testCoupleOuCelibat' },
     { type: 'test', key: 'pret-nouvelle-relation', icon: '🌱', route: 'testPretRelation' },
+    { type: 'test', key: 'est-ce-le-bon', icon: '🔑', route: 'testEstCeLeBon' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
@@ -2129,6 +2130,9 @@ var QuizEngine = (function() {
     // Se sentir pret appelle la question de la rencontre, puis celle de l'ex,
     // puis la facon de s'attacher qu'on emporte avec soi.
     'pret-nouvelle-relation': ['testTrouverAmour', 'testEx', 'testAttachement'],
+    // Savoir si c'est la bonne personne appelle la solidite du couple, puis
+    // ce qui reste de l'amour, puis la question de la fin.
+    'est-ce-le-bon': ['testCoupleSain', 'testJeLaimeEncore', 'testFinCouple'],
     // Un type de couple appelle la facon d'aimer de chacun, puis le langage
     // de l'autre, puis la solidite de l'ensemble.
     'type-couple': ['testPersonnalite', 'testLangageAmour', 'testCouple'],
@@ -2625,6 +2629,7 @@ var QuizEngine = (function() {
     'trouver-amour': ['cinqLangages'],
     'celibataire': ['nuls'],
     'pret-nouvelle-relation': ['cinqLangages'],
+    'est-ce-le-bon': ['autotherapie'],
     'type-couple': ['quiSaitMieux'],
     'amour-habitude': ['wecandoo'],
     // Les deux ecrans dont le contenu est deja pour adultes.
