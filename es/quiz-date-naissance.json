@@ -13,8 +13,34 @@
     "jour": "Día",
     "moisLabel": "Mes",
     "annee": "Año",
-    "mois": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-    "moisDate": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+    "mois": [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    ],
+    "moisDate": [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre"
+    ],
     "dateAffichee": "{{j}} de {{mois}} de {{a}}",
     "lancer": "Calcular nuestra compatibilidad",
     "erreur": "Una de las dos fechas no existe. Comprobad el día y el mes elegidos.",
@@ -155,20 +181,72 @@
     "sub1Title": "Un ejemplo en treinta segundos",
     "sub1Text": "Tomemos el 14 de marzo de 1990. Se suma: 1 + 4 + 0 + 3 + 1 + 9 + 9 + 0 = 27. Se reduce: 2 + 7 = 9. Camino de vida 9. Otro ejemplo, el 29 de diciembre de 1990: 2 + 9 + 1 + 2 + 1 + 9 + 9 + 0 = 33. Ahí se para, es un número maestro.",
     "sub2Title": "Lo que busca cada camino de vida en el amor",
-    "tableHeaders": ["Camino", "Palabra clave", "Lo que espera de una relación"],
+    "tableHeaders": [
+      "Camino",
+      "Palabra clave",
+      "Lo que espera de una relación"
+    ],
     "tableRows": [
-      ["1", "El impulso", "Admiración y espacio para decidir"],
-      ["2", "La dulzura", "Presencia, ternura, pocos conflictos"],
-      ["3", "Las palabras", "Que se rían con él y le escuchen contar"],
-      ["4", "La solidez", "Promesas cumplidas y un marco claro"],
-      ["5", "El movimiento", "Novedad y, sobre todo, nada de correa"],
-      ["6", "El cuidado", "Un hogar, costumbres, alguien a quien proteger"],
-      ["7", "La reflexión", "Silencio, profundidad, nada de cháchara"],
-      ["8", "La ambición", "Una pareja que avance a la misma velocidad"],
-      ["9", "La entrega", "Sentido, generosidad, una causa común"],
-      ["11", "La intuición", "Que se tomen en serio lo que siente"],
-      ["22", "La construcción", "Un proyecto de vida, no un flirteo"],
-      ["33", "El amor dado", "Que le quieran por él, no por lo que da"]
+      [
+        "1",
+        "El impulso",
+        "Admiración y espacio para decidir"
+      ],
+      [
+        "2",
+        "La dulzura",
+        "Presencia, ternura, pocos conflictos"
+      ],
+      [
+        "3",
+        "Las palabras",
+        "Que se rían con él y le escuchen contar"
+      ],
+      [
+        "4",
+        "La solidez",
+        "Promesas cumplidas y un marco claro"
+      ],
+      [
+        "5",
+        "El movimiento",
+        "Novedad y, sobre todo, nada de correa"
+      ],
+      [
+        "6",
+        "El cuidado",
+        "Un hogar, costumbres, alguien a quien proteger"
+      ],
+      [
+        "7",
+        "La reflexión",
+        "Silencio, profundidad, nada de cháchara"
+      ],
+      [
+        "8",
+        "La ambición",
+        "Una pareja que avance a la misma velocidad"
+      ],
+      [
+        "9",
+        "La entrega",
+        "Sentido, generosidad, una causa común"
+      ],
+      [
+        "11",
+        "La intuición",
+        "Que se tomen en serio lo que siente"
+      ],
+      [
+        "22",
+        "La construcción",
+        "Un proyecto de vida, no un flirteo"
+      ],
+      [
+        "33",
+        "El amor dado",
+        "Que le quieran por él, no por lo que da"
+      ]
     ],
     "tip": "Dos caminos de vida idénticos no garantizan absolutamente nada. Dos 5 juntos son dos personas que quieren marcharse, y a veces no en la misma dirección."
   },
@@ -185,16 +263,36 @@
     "p1": "Aquí habla el año. Doce animales, uno por año, y un ciclo que vuelve a empezar. Salvo que el año chino no empieza el 1 de enero: arranca en el año nuevo lunar, que cae entre el 21 de enero y el 21 de febrero según el año. Todas las personas nacidas en enero y en la primera mitad de febrero pertenecen, por tanto, al animal del año anterior.",
     "p2": "Es el error más frecuente de las calculadoras en línea, y afecta a casi una décima parte de la población. Nuestra herramienta usa las <strong>fechas reales del año nuevo chino</strong>, año por año, de 1924 a 2043. Quien nació el 1 de enero de 2000 no es Dragón, es Conejo de Tierra.",
     "sub1Title": "Los cuatro triángulos de afinidad",
-    "tableHeaders": ["Triángulo", "Los tres signos", "Lo que los une"],
+    "tableHeaders": [
+      "Triángulo",
+      "Los tres signos",
+      "Lo que los une"
+    ],
     "tableRows": [
-      ["El triángulo de la acción", "Rata, Dragón, Mono", "La energía, la audacia, el gusto por el riesgo"],
-      ["El triángulo del método", "Buey, Serpiente, Gallo", "La paciencia, la estrategia, el detalle"],
-      ["El triángulo de la independencia", "Tigre, Caballo, Perro", "La libertad, la lealtad, la franqueza"],
-      ["El triángulo de la dulzura", "Conejo, Cabra, Cerdo", "La sensibilidad, la calma, el gusto por el confort"]
+      [
+        "El triángulo de la acción",
+        "Rata, Dragón, Mono",
+        "La energía, la audacia, el gusto por el riesgo"
+      ],
+      [
+        "El triángulo del método",
+        "Buey, Serpiente, Gallo",
+        "La paciencia, la estrategia, el detalle"
+      ],
+      [
+        "El triángulo de la independencia",
+        "Tigre, Caballo, Perro",
+        "La libertad, la lealtad, la franqueza"
+      ],
+      [
+        "El triángulo de la dulzura",
+        "Conejo, Cabra, Cerdo",
+        "La sensibilidad, la calma, el gusto por el confort"
+      ]
     ],
     "sub2Title": "¿Y el elemento en todo esto?",
     "sub2Text": "Cada animal vuelve cada doce años, pero con un elemento distinto: Madera, Fuego, Tierra, Metal o Agua. Un Dragón de Madera y un Dragón de Fuego no se parecen tanto. Estos cinco elementos se encadenan en ciclos, uno alimentando al siguiente o templándolo, y eso es lo que afina la puntuación china de vuestro resultado.",
-    "tip": "Seis parejas se consideran de armonía en la tradición china, los famosos amigos secretos: Rata y Buey, Tigre y Cerdo, Conejo y Perro, Dragón y Gallo, Serpiente y Mono, Caballo y Cabra. No están en ningún triángulo y, sin embargo, funcionan muy bien."
+    "tip": "Seis parejas se consideran de armonía en la tradición china, <a href=\"/es/compatibilidad-amorosa-signos-chinos/\">los famosos amigos secretos</a>: Rata y Buey, Tigre y Cerdo, Conejo y Perro, Dragón y Gallo, Serpiente y Mono, Caballo y Cabra. No están en ningún triángulo y, sin embargo, funcionan muy bien."
   },
   "section5": {
     "title": "Por qué cruzar tres lecturas en lugar de una sola",

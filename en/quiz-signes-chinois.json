@@ -1,0 +1,705 @@
+{
+  "hero": {
+    "badge": "Chinese astrology",
+    "title": "Are You Compatible According to Your Chinese Zodiac Signs?",
+    "highlight": "Chinese Zodiac Signs",
+    "description": "Two birth dates are enough. From them we find your animal and your partner's, each one's element, and what Chinese tradition says about your meeting: <strong>same triangle</strong>, <strong>secret friends</strong>, <strong>opposite signs</strong>... The result explains everything, with a score and a piece of advice.",
+    "subtitle": "No sign-up, no email. The result shows straight away."
+  },
+  "form": {
+    "titre": "Your two birth dates",
+    "personne1": "You",
+    "personne2": "Your partner",
+    "jour": "Day",
+    "moisLabel": "Month",
+    "annee": "Year",
+    "mois": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "moisDate": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "dateAffichee": "{{mois}} {{j}}, {{a}}",
+    "erreur": "One of the two dates does not exist. Check the day and month you picked.",
+    "lancer": "Calculate our compatibility",
+    "aide": "The year gives the animal and the element. But the Chinese year starts in late January or early February, which is why we ask for the full date."
+  },
+  "animaux": {
+    "rat": "Rat",
+    "buffle": "Ox",
+    "tigre": "Tiger",
+    "lapin": "Rabbit",
+    "dragon": "Dragon",
+    "serpent": "Snake",
+    "cheval": "Horse",
+    "chevre": "Goat",
+    "singe": "Monkey",
+    "coq": "Rooster",
+    "chien": "Dog",
+    "cochon": "Pig"
+  },
+  "elements": {
+    "bois": "Wood",
+    "feu": "Fire",
+    "terre": "Earth",
+    "metal": "Metal",
+    "eau": "Water"
+  },
+  "relations": {
+    "trine": "{{a1}} and {{a2}} belong to the same affinity triangle. In the Chinese zodiac, this is the most sought-after bond: you move at the same pace, you want more or less the same things, and you don't need long explanations to agree.",
+    "harmonie": "{{a1}} and {{a2}} form one of the six pairs of secret friends. You're not alike, and that's exactly what works: each of you is strong where the other is fragile, and it happens without effort, almost without thinking.",
+    "meme": "You are both {{a1}}. You understand each other quickly, you share the same wishes and the same flaws. It's restful, and it's also a mirror: what annoys you in the other, you probably do too.",
+    "neutre": "{{a1}} and {{a2}} have neither a special affinity nor a marked tension in Chinese tradition. Nothing carries you on its own, nothing holds you back either. What you make of it depends on the two of you, more than on your signs.",
+    "nuisance": "{{a1}} and {{a2}} are one of the six pairs tradition calls \"harmful\". It isn't an outright incompatibility. It's more of a wearing down: small irritations that keep coming back, and end up weighing if nobody names them.",
+    "opposition": "{{a1}} and {{a2}} face each other on the wheel, six signs apart. It's the tensest axis of the Chinese zodiac, and often the most attractive at first. You like each other because you're different, and that difference is what tires you over time."
+  },
+  "elementsRelation": {
+    "meme": "You share the same element, {{e1}}. You react to events with the same energy, which makes life together simpler, and bad days more intense, because nobody calms the other down.",
+    "nourrit": "Your elements get along well: in the Chinese cycle, {{de}} feeds {{vers}}. One gives the other momentum without pushing. It's a small plus that counts day to day, especially in tired periods.",
+    "controle": "Your elements clash a little: in the Chinese cycle, {{de}} controls {{vers}}. One tempers the other, which prevents excess but can feel like being held back. It gets sorted by saying when you need a push, and when you need to be left alone."
+  },
+  "paliers": {
+    "fusion": {
+      "titre": "Two signs that answer each other",
+      "texte": "Tradition is clear for {{a1}} and {{a2}}: you are made to get along. Your animals move in the same direction and your elements agree. It doesn't exempt you from anything, but you start with a head start!"
+    },
+    "belle": {
+      "titre": "A fine match, with one detail to watch",
+      "texte": "The essentials are there between {{a1}} and {{a2}}. Your signs get along well, and what lowers the score is a detail: an element that slows the other down, or a pair that asks for a bit of attention. Nothing that prevents a long story."
+    },
+    "solide": {
+      "titre": "A couple that holds, without being carried by the stars",
+      "texte": "{{a1}} and {{a2}} are neither made for each other nor made to fight, according to tradition. You're in the most common zone, the one where the couple depends on what you make of it. What the wheel says is below, and it's rather encouraging."
+    },
+    "travail": {
+      "titre": "Two temperaments that have to learn to read each other",
+      "texte": "Between {{a1}} and {{a2}}, tradition sees friction. Not an incompatibility, but habits that step on each other if nothing is said. The couples that last with this kind of score are the ones who put words on what annoys them."
+    },
+    "contraires": {
+      "titre": "Two worlds to connect",
+      "texte": "{{a1}} and {{a2}} are one of the tensest duos of the Chinese zodiac. Often, it's also one of the most attractive at first. This score says nothing about your feelings, it says you don't work the same way, and that it shows in the details of everyday life."
+    }
+  },
+  "resultat": {
+    "animal": "Chinese sign",
+    "element": "Element",
+    "polarite": "Polarity",
+    "yin": "Yin",
+    "yang": "Yang",
+    "anneeLunaire": "Chinese year",
+    "titreRoue": "{{a1}} and {{a2}}: what the wheel says",
+    "titrePortrait": "{{a}} in love",
+    "titreElements": "Your elements: {{e1}} and {{e2}}",
+    "titreConseil": "The advice for you two",
+    "refaire": "Try two other dates",
+    "avis": "Leave a review"
+  },
+  "portraits": {
+    "rat": "The Rat is quick, curious and very sociable. In love, they are attentive and generous with the people they've chosen, and rather thrifty with the rest of the world. They need to talk, to understand, to feel they matter. Their weak spot is worry: they anticipate, they check, they imagine scenarios. With someone stable who reassures them without holding them back, they become a faithful and funny partner.",
+    "buffle": "The Ox is patient, reliable and hard-working. They love few people but love them for a long time, and show their attachment through actions rather than words. They need calm, routine and trust. Their weak spot is stubbornness: once they've decided, they stop listening. They give their best with someone who knows how to wait and doesn't back them into a corner.",
+    "tigre": "The Tiger is passionate, brave and a little unpredictable. In love, they commit fully, protect their own and hate being bored. They need movement, projects and admiration. Their weak spot is impulsiveness: they speak and act fast, and sometimes regret it. They thrive with someone who follows their bursts of energy while keeping their feet on the ground.",
+    "lapin": "The Rabbit is gentle, diplomatic and attached to comfort. They avoid conflict, take care of their home and their loved ones, and prefer a quiet evening to a noisy night out. They need emotional security and tenderness. Their weak spot is flight: rather than confront, they drift away in silence. They're happy with someone considerate who never rushes them.",
+    "dragon": "The Dragon has charisma, energy and ambition. In love, they are wholehearted, generous and proud. They need to be believed in and followed at their pace, which is fast. Their weak spot is pride: they take criticism badly and rarely give in first. They give a lot to someone who knows how to admire them without fading away.",
+    "serpent": "The Snake is thoughtful, seductive and secretive. In love, they observe before committing, then attach themselves deeply. They need intellectual closeness and a bit of mystery. Their weak spot is jealousy: they keep what they love and watch over it without saying so. They're good with someone faithful who respects their silences.",
+    "cheval": "The Horse is enthusiastic, frank and independent. In love, they are warm and spontaneous, but they hate feeling caged. They need air, novelty and freedom to move. Their weak spot is inconsistency: they catch fire quickly and sometimes tire just as quickly. They last with someone who shares their wishes without trying to hold them back.",
+    "chevre": "The Goat is sensitive, creative and gentle. In love, they give a lot and need to feel protected and reassured. They avoid arguments and would rather give in than confront. Their weak spot is anxiety: they doubt, they need to hear things again. They thrive with someone solid and tender who makes the hard decisions without rushing them.",
+    "singe": "The Monkey is funny, inventive and clever. In love, they seduce with humour and imagination, and they hate routine. They need play, surprises and a partner who follows their ideas. Their weak spot is lightness: they can dodge serious conversations with a joke. They go the distance with someone who makes them laugh and knows, now and then, how to bring them back down to earth.",
+    "coq": "The Rooster is honest, precise and proud. In love, they are loyal and attentive to detail, and they say what they think, sometimes a bit too much. They need order, recognition and frankness. Their weak spot is criticism: they notice everything and let you know. They're happy with someone who takes their remarks as attention and knows how to answer back.",
+    "chien": "The Dog is loyal, fair and protective. In love, they are faithful and attentive, ready to do a lot for the people they love. They need trust and constancy. Their weak spot is worry: they imagine the worst and struggle to let go. They give their best with someone honest who reassures them through regular actions.",
+    "cochon": "The Pig is generous, easy-going and trusting. In love, they give without counting, enjoy simple pleasures and forgive easily. They need warmth, sharing and a gentle life. Their weak spot is naivety: they trust quickly and can be let down. They're happy with someone honest who takes care of them as much as they take care of others."
+  },
+  "paires": {
+    "rat-rat": {
+      "note": 7.0,
+      "texte": "Two Rats understand each other at first glance. You talk a lot, you tidy the same things, you worry about the same bills. Be careful not to reassure each other into anxiety: one of you has to be able to say \"it'll be fine\"."
+    },
+    "rat-buffle": {
+      "note": 8.4,
+      "texte": "The Rat bustles, the Ox steadies. You're secret friends: the Rat brings ideas and lightness, the Ox brings constancy and security. Each needs the other exactly where they fall short."
+    },
+    "rat-tigre": {
+      "note": 6.2,
+      "texte": "The Rat calculates, the Tiger charges. You admire and annoy each other for the same reason. It works when the Rat agrees to be swept along sometimes, and when the Tiger listens to the Rat's cautions before jumping."
+    },
+    "rat-lapin": {
+      "note": 5.8,
+      "texte": "The Rat likes company, the Rabbit likes calm. You share a taste for a well-kept home and a life without drama. The Rabbit will have to say when they need silence, the Rat will have to learn not to fill every evening."
+    },
+    "rat-dragon": {
+      "note": 9.0,
+      "texte": "One of the finest duos of the Chinese zodiac. The Rat admires the Dragon's boldness, the Dragon loves the Rat's wit. You're from the same triangle: you want to succeed, move, build, and you do it together."
+    },
+    "rat-serpent": {
+      "note": 6.4,
+      "texte": "Two sharp minds that like to observe and understand. The Rat talks, the Snake listens, and you spend hours taking the world apart. The risk is mistrust as a pair: learn to take each other's word."
+    },
+    "rat-cheval": {
+      "note": 3.6,
+      "texte": "The Rat saves, the Horse spends; the Rat plans, the Horse improvises. You're in opposition, and the early attraction comes precisely from there. To last, you have to accept that you'll never run at the same tempo."
+    },
+    "rat-chevre": {
+      "note": 4.6,
+      "texte": "The Rat needs reassurance, and so does the Goat. You're a so-called \"harmful\" pair: one's worry feeds the other's. What saves you is your shared tenderness, provided one of you dares to decide."
+    },
+    "rat-singe": {
+      "note": 8.8,
+      "texte": "Same triangle, same quickness, same humour. The Rat and the Monkey are never bored together and find a solution to everything. Just be careful not to turn everything into a joke when it's time to talk seriously."
+    },
+    "rat-coq": {
+      "note": 5.6,
+      "texte": "The Rat adapts, the Rooster holds their ground. You're two perfectionists who don't perfect the same thing. It can be very productive as long as you don't correct each other all day long."
+    },
+    "rat-chien": {
+      "note": 6.4,
+      "texte": "The Rat and the Dog share a sense of family and a deep loyalty. The Dog calms the Rat's worries, the Rat lightens the Dog's scruples. A discreet couple that often lasts longer than predicted."
+    },
+    "rat-cochon": {
+      "note": 6.8,
+      "texte": "The Rat is clever, the Pig is trusting, and one protects the other without thinking about it. You enjoy the same simple pleasures, a good meal, an evening with friends. The Rat will have to make sure not to take advantage of the Pig's generosity."
+    },
+    "buffle-buffle": {
+      "note": 6.8,
+      "texte": "Two Oxen make a solid home and well-set habits. You trust each other and work in the same direction. The risk is two stubborn heads face to face: when you disagree, nobody moves."
+    },
+    "buffle-tigre": {
+      "note": 5.6,
+      "texte": "The Ox wants stability, the Tiger wants adventure. You respect each other, but you hold each other back. It holds if the Tiger accepts a frame and the Ox agrees to step out of theirs now and then."
+    },
+    "buffle-lapin": {
+      "note": 6.6,
+      "texte": "The Ox protects, the Rabbit softens. You share a taste for a quiet home and a life without shocks. The Rabbit will have to learn to say what they want rather than wait for it, the Ox will sometimes have to ask instead of decide."
+    },
+    "buffle-dragon": {
+      "note": 5.8,
+      "texte": "Two strong characters, two ways of leading. The Ox moves step by step, the Dragon wants to go fast and far. It works when each has their own domain and nobody wants the last word on everything."
+    },
+    "buffle-serpent": {
+      "note": 8.8,
+      "texte": "Same triangle: the Ox's patience and the Snake's strategy make a formidable duo. You take your time, you build, you don't scatter. A discreet and very solid couple."
+    },
+    "buffle-cheval": {
+      "note": 4.4,
+      "texte": "The Ox settles in, the Horse wants to leave. You're a \"harmful\" pair: it's not a war, it's a permanent mismatch of pace. It takes a lot of talking so that one doesn't feel caged and the other abandoned."
+    },
+    "buffle-chevre": {
+      "note": 3.8,
+      "texte": "The Ox is concrete, the Goat is a dreamer. You're in opposition: what one finds essential, the other finds secondary. The Goat's tenderness can soften the Ox, provided he learns to reassure her with words."
+    },
+    "buffle-singe": {
+      "note": 6.2,
+      "texte": "The Ox takes everything seriously, the Monkey takes everything lightly. You can do each other a lot of good: the Monkey loosens the Ox up, the Ox settles the Monkey. Or a lot of irritation, if neither takes a step."
+    },
+    "buffle-coq": {
+      "note": 8.6,
+      "texte": "Same triangle, same sense of duty, same taste for work well done. The Ox and the Rooster form an organised couple where each knows what to do. Remember to allow yourselves moments that serve no purpose."
+    },
+    "buffle-chien": {
+      "note": 5.8,
+      "texte": "Two loyal, two faithful, two worriers. The Ox and the Dog trust each other, but they can lock themselves into caution. One of you needs to want to look elsewhere, on a trip, not in love."
+    },
+    "buffle-cochon": {
+      "note": 6.6,
+      "texte": "The Ox reassures, the Pig warms. You love home, good meals and simple people. The Pig will have to respect the Ox's need for calm, the Ox will have to open up to the Pig's friends."
+    },
+    "tigre-tigre": {
+      "note": 6.2,
+      "texte": "Two Tigers mean a lot of passion and a lot of storms. You admire each other, challenge each other, and make up with fire. To last, decide together who gives in this time, because neither of you does it naturally."
+    },
+    "tigre-lapin": {
+      "note": 6.2,
+      "texte": "The Tiger attacks, the Rabbit dodges. You complete each other provided the Tiger lowers their voice and the Rabbit dares to say what hurts them. The Rabbit brings the gentleness the Tiger needs without knowing it."
+    },
+    "tigre-dragon": {
+      "note": 7.0,
+      "texte": "Two forces of nature. The Tiger and the Dragon admire each other, drive each other on and fight over the wheel. This couple shines in public, but it has to learn to let the other win from time to time, or the home becomes an arena."
+    },
+    "tigre-serpent": {
+      "note": 4.4,
+      "texte": "The Tiger is direct, the Snake is secretive. You're a \"harmful\" pair: the Tiger doesn't understand the Snake's silences, the Snake dislikes the Tiger's outbursts. It can be worked on, with a lot of patience and few reproaches."
+    },
+    "tigre-cheval": {
+      "note": 8.8,
+      "texte": "Same triangle: two independent spirits who love action and frankness. The Tiger and the Horse give each other air, leave together and come back together. A couple that moves and laughs, provided you keep a few fixed dates."
+    },
+    "tigre-chevre": {
+      "note": 5.8,
+      "texte": "The Tiger protects, the Goat leans. It can make a tender couple, if the Tiger doesn't confuse protection with domination. The Goat will have to dare to say no, and the Tiger learn to hear it."
+    },
+    "tigre-singe": {
+      "note": 3.6,
+      "texte": "The Tiger and the Monkey face each other on the wheel. The Monkey makes fun of the Tiger's pride, the Tiger tires of the Monkey's antics. A lot of attraction, a lot of laughter at first, and a real need for clear rules afterwards."
+    },
+    "tigre-coq": {
+      "note": 5.6,
+      "texte": "Two proud ones who like to be right. The Tiger acts fast, the Rooster corrects the details, and each finds the other unbearable on bad days. It holds if you turn the competition into a team."
+    },
+    "tigre-chien": {
+      "note": 9.0,
+      "texte": "One of the safest duos of the Chinese zodiac. The Dog believes in the Tiger and the Tiger protects the Dog, in the same triangle of loyalty and freedom. You trust each other, and that's what makes you solid."
+    },
+    "tigre-cochon": {
+      "note": 8.6,
+      "texte": "Secret friends: the Tiger brings boldness, the Pig brings gentleness and warmth. The Pig calms the Tiger without restraining them, the Tiger gives the Pig the drive they lack. A generous couple that receives a lot."
+    },
+    "lapin-lapin": {
+      "note": 7.4,
+      "texte": "Two Rabbits make a cosy home, quiet evenings and very few arguments. You understand each other without talking. The risk is the unsaid: you both avoid touchy subjects, and they pile up."
+    },
+    "lapin-dragon": {
+      "note": 4.8,
+      "texte": "The Rabbit seeks calm, the Dragon makes noise. You're a \"harmful\" pair: the Dragon may find the Rabbit too reserved, the Rabbit may feel crushed. It works when the Dragon slows down and the Rabbit stands up for themselves."
+    },
+    "lapin-serpent": {
+      "note": 6.4,
+      "texte": "Two refined and slightly secretive natures. The Rabbit and the Snake love comfort, beauty and conversations for two. You guess each other more than you talk, which is charming until the day you really have to say things."
+    },
+    "lapin-cheval": {
+      "note": 6.0,
+      "texte": "The Rabbit likes to stay, the Horse likes to go. You can meet on kindness and good humour, but your rhythms of life differ. The Horse will have to give notice, the Rabbit will have to agree to leave the burrow."
+    },
+    "lapin-chevre": {
+      "note": 8.8,
+      "texte": "Same triangle: two sensitive souls who love gentleness and peace. The Rabbit and the Goat protect each other and create a warm home. One of you will have to make the decisions the other keeps putting off."
+    },
+    "lapin-singe": {
+      "note": 5.8,
+      "texte": "The Rabbit is discreet, the Monkey is loud. The Monkey amuses the Rabbit and the Rabbit soothes the Monkey, as long as the Monkey doesn't mock their reserve. Two worlds that can do each other good, without being alike."
+    },
+    "lapin-coq": {
+      "note": 3.8,
+      "texte": "The Rabbit and the Rooster are in opposition. The Rooster notices everything and says it, the Rabbit takes it to heart and closes up. The attraction exists, but the Rooster will have to soften their frankness and the Rabbit learn to answer."
+    },
+    "lapin-chien": {
+      "note": 8.6,
+      "texte": "Secret friends: the Rabbit's gentleness and the Dog's loyalty make an attentive and faithful couple. You take care of each other without counting. The only risk is worrying too much, as a pair, about the outside world."
+    },
+    "lapin-cochon": {
+      "note": 8.6,
+      "texte": "Same triangle, same taste for well-being. The Rabbit and the Pig love to eat, to host and to snuggle. You're generous with each other and rarely in conflict. Just keep an eye on the budget and the waistline."
+    },
+    "dragon-dragon": {
+      "note": 6.4,
+      "texte": "Two Dragons mean a lot of fire and two prides. You admire each other, aim high, and fight over first place. It lasts if each has their own kingdom and if you can congratulate the other without jealousy."
+    },
+    "dragon-serpent": {
+      "note": 6.8,
+      "texte": "The Dragon shines, the Snake thinks. An elegant couple, where the Snake advises and the Dragon acts. Watch out for the Snake's jealousy of the Dragon's charisma, and the Dragon's impatience with the Snake's silences."
+    },
+    "dragon-cheval": {
+      "note": 6.6,
+      "texte": "Two strong, generous energies. The Dragon and the Horse love action, parties and big projects. You drive each other on, sometimes too far. Plan quiet moments, or you'll wear yourselves out."
+    },
+    "dragon-chevre": {
+      "note": 6.0,
+      "texte": "The Dragon decides, the Goat follows, and it can work for a long time. The Goat brings gentleness to the Dragon, the Dragon gives the Goat security. The risk is that the Goat fades too much and ends up regretting it."
+    },
+    "dragon-singe": {
+      "note": 8.6,
+      "texte": "Same triangle: the Dragon's boldness and the Monkey's ingenuity, a winning team. You have ideas, energy and a sense of show. The Monkey makes the Dragon laugh, the Dragon gives the Monkey a direction."
+    },
+    "dragon-coq": {
+      "note": 8.4,
+      "texte": "Secret friends: the Dragon thinks big, the Rooster looks after the details. What could annoy becomes a strength when each respects the other's work. A couple that builds, provided the Rooster doesn't criticise every one of the Dragon's ideas."
+    },
+    "dragon-chien": {
+      "note": 3.8,
+      "texte": "The Dragon and the Dog face each other on the wheel. The Dog doubts what the Dragon asserts, the Dragon gets annoyed at the Dog's caution. Two loyal souls who attract each other but must accept not seeing the world the same way."
+    },
+    "dragon-cochon": {
+      "note": 6.4,
+      "texte": "The Dragon takes the spotlight, the Pig takes care. A warm duo where the Pig admires without jealousy and the Dragon protects with generosity. The Dragon will just have to remember to say thank you, because the Pig never asks."
+    },
+    "serpent-serpent": {
+      "note": 6.8,
+      "texte": "Two Snakes make an elegant, discreet and very faithful couple, with a share of mystery on each side. You understand each other in half-words. The risk is crossed jealousy and silences that last too long."
+    },
+    "serpent-cheval": {
+      "note": 6.0,
+      "texte": "The Snake thinks, the Horse charges. The Horse may find the Snake too slow, the Snake may find the Horse too scattered. Yet you have a lot to teach each other, if the Snake's jealousy doesn't invite itself in."
+    },
+    "serpent-chevre": {
+      "note": 6.2,
+      "texte": "Two refined natures who love beauty and tranquillity. The Snake reassures the Goat with their constancy, the Goat softens the Snake with their tenderness. A calm couple, where a little novelty sometimes has to be stirred up."
+    },
+    "serpent-singe": {
+      "note": 8.2,
+      "texte": "Secret friends: the Snake and the Monkey share a lively intelligence and a real taste for play. The Monkey loosens the Snake up, the Snake channels the Monkey. Just be careful not to manipulate each other out of habit."
+    },
+    "serpent-coq": {
+      "note": 8.6,
+      "texte": "Same triangle: two precise minds who like things done well. The Snake and the Rooster form an organised and faithful couple. The Rooster talks, the Snake listens, and you rarely make a decision lightly."
+    },
+    "serpent-chien": {
+      "note": 6.2,
+      "texte": "The Snake is secretive, the Dog needs transparency. You can reassure each other through faithfulness, provided the Snake agrees to say what they think and the Dog agrees not to know everything."
+    },
+    "serpent-cochon": {
+      "note": 4.0,
+      "texte": "The Snake and the Pig are in opposition. The Pig trusts everyone, the Snake distrusts everyone. The attraction is real, but the Pig may feel watched and the Snake may feel alone in their vigilance."
+    },
+    "cheval-cheval": {
+      "note": 6.6,
+      "texte": "Two Horses mean energy, travel and a lot of freedom. You don't cage each other, which makes you happy. The risk is running each on your own side and crossing paths without really meeting."
+    },
+    "cheval-chevre": {
+      "note": 8.6,
+      "texte": "Secret friends: the Horse brings drive, the Goat brings gentleness. The Horse protects the Goat from their anxieties, the Goat offers the Horse a place to come back to. One of the most tender duos of the zodiac."
+    },
+    "cheval-singe": {
+      "note": 6.2,
+      "texte": "Two players who love novelty and speed. The Horse and the Monkey have a lot of fun and are rarely bored. One of you will have to handle the serious things, because neither of you feels like it."
+    },
+    "cheval-coq": {
+      "note": 5.8,
+      "texte": "The Horse improvises, the Rooster organises. The Rooster may find the Horse messy, the Horse may find the Rooster rigid. It works if the Rooster leaves room for the unexpected and the Horse respects a few house rules."
+    },
+    "cheval-chien": {
+      "note": 8.6,
+      "texte": "Same triangle: two frank, two loyal, two lovers of freedom. The Horse and the Dog understand and trust each other without keeping watch. The Dog will just have to learn to worry less about the Horse's absences."
+    },
+    "cheval-cochon": {
+      "note": 6.4,
+      "texte": "The Horse leads, the Pig follows with pleasure. You love good times, friends and spontaneous plans. The Pig will have to say when they're tired, the Horse will have to remember to slow down for them."
+    },
+    "chevre-chevre": {
+      "note": 7.2,
+      "texte": "Two Goats make a gentle, artistic and caring couple, with few arguments. You understand each other on sensitivity. The risk is reassuring each other into worry and postponing decisions as a pair."
+    },
+    "chevre-singe": {
+      "note": 6.4,
+      "texte": "The Goat is sensitive, the Monkey is teasing. The Monkey makes the Goat laugh and pulls them out of their doubts, as long as they don't mock them. The Goat offers the Monkey a tenderness they don't know how to ask for."
+    },
+    "chevre-coq": {
+      "note": 5.6,
+      "texte": "The Goat needs gentleness, the Rooster says what they think without detours. This duo takes effort: the Rooster will have to choose their words, the Goat will have to hear a remark without seeing rejection in it."
+    },
+    "chevre-chien": {
+      "note": 5.8,
+      "texte": "Two worriers who need reassurance, two faithful souls who know how to give it. The Goat and the Dog protect each other well, but they can lock themselves into concern. One of you has to keep some lightness."
+    },
+    "chevre-cochon": {
+      "note": 8.8,
+      "texte": "Same triangle: the Goat and the Pig share gentleness, generosity and a taste for comfort. A warm couple where you feel good right away. Keep a bit of ambition as a pair, or comfort becomes a closed cocoon."
+    },
+    "singe-singe": {
+      "note": 7.0,
+      "texte": "Two Monkeys mean laughter, ideas and joyful chaos. You're never bored and you read each other. The risk is lightness as a pair: nobody takes things seriously, until it's too late."
+    },
+    "singe-coq": {
+      "note": 6.0,
+      "texte": "The Monkey schemes, the Rooster says everything. The Rooster may find the Monkey unreliable, the Monkey may find the Rooster too square. You can complete each other if the Monkey plays fair and the Rooster agrees to be surprised."
+    },
+    "singe-chien": {
+      "note": 6.6,
+      "texte": "The Monkey amuses, the Dog watches over. This couple works better than you'd think: the Dog gives the Monkey solid ground, the Monkey gives the Dog lightness. The Dog will just have to learn to laugh at jokes they don't get right away."
+    },
+    "singe-cochon": {
+      "note": 5.0,
+      "texte": "The Monkey and the Pig form a \"harmful\" pair. The Pig trusts, the Monkey plays, and the Pig can end up feeling fooled without the Monkey meaning it. It holds if the Monkey protects the Pig's naivety instead of using it."
+    },
+    "coq-coq": {
+      "note": 6.0,
+      "texte": "Two Roosters mean an impeccable home and firm opinions, on both sides. You respect each other, but you criticise each other. To last, agree on one subject where each of you is always right, and never mention it again."
+    },
+    "coq-chien": {
+      "note": 4.6,
+      "texte": "The Rooster and the Dog form a \"harmful\" pair. The Rooster criticises, the Dog worries, and each hurts the other without meaning to. Two honest souls who can get along very well, provided they say things gently."
+    },
+    "coq-cochon": {
+      "note": 6.2,
+      "texte": "The Rooster organises, the Pig enjoys. The Rooster may find the Pig too lax, the Pig may find the Rooster too demanding. But the Pig takes remarks better than most, and the Rooster relaxes with them."
+    },
+    "chien-chien": {
+      "note": 7.2,
+      "texte": "Two Dogs mean loyalty through thick and thin and a trust that isn't up for debate. You protect each other. The risk is worrying about everything as a pair, and forgetting to have fun."
+    },
+    "chien-cochon": {
+      "note": 6.8,
+      "texte": "The Dog watches over, the Pig enjoys, and each does the other good. The Dog brings caution to the Pig, the Pig brings joy to the Dog. A simple, warm couple, often underestimated."
+    },
+    "cochon-cochon": {
+      "note": 7.6,
+      "texte": "Two Pigs mean an open house, a full table and a lot of tenderness. You forgive each other everything. The risk is blind trust as a pair: keep an eye on the people who take advantage of your generosity."
+    }
+  },
+  "conseils": {
+    "trine": "Your understanding is a given, not a guarantee. Couples from the same triangle sometimes get bored because everything is too easy. Keep one project for two that asks something of you, and you'll keep the momentum that brought you together.",
+    "harmonie": "You work because you're different: don't try to resemble the other. Instead say, once in a while, what you admire in them that you don't have. That's what keeps secret friends together.",
+    "meme": "You know each other too well to surprise each other. Each of you, pick one habit that's like you and that the other lacks: the one who worries decides to reassure, the one who flares up decides to wait. Otherwise you double your flaws instead of correcting them.",
+    "neutre": "Nothing carries you, nothing holds you back: your couple looks like what you make of it. Choose one single thing to do better this month, the same for both of you, and you'll see the score that counts, the everyday one, rise on its own.",
+    "nuisance": "What wears your couple down is small repeated things, not big subjects. Make a list of what genuinely annoys you, without comment, and swap lists. Half the lines disappear once they're said out loud.",
+    "opposition": "You'll never run at the same pace, and that's not the goal. Decide who has the say on what: outings for one, finances for the other, for example. The opposite couples that last are the ones who stopped trying to convert each other."
+  },
+  "suite": {
+    "titre": "Go further with your full dates",
+    "texte": "The Chinese sign only looks at the year. The day and month say something else: your star sign and your life path. Our birth date test crosses all three readings.",
+    "bouton": "Take the birth date test"
+  },
+  "section1": {
+    "title": "Love compatibility by Chinese zodiac sign: how does it work?",
+    "p1": "Chinese astrology gives each year an animal: Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog and Pig, and then the cycle starts again. Each animal has a character, and for centuries tradition has said which animals get along well, which complete each other and which step on each other's toes. That's what Chinese zodiac compatibility is: a reading of your couple based on your two birth years.",
+    "p2": "Our tool does that calculation for you. You enter two dates, it finds the two animals, their element (Wood, Fire, Earth, Metal or Water) and the relationship that links them on the wheel: same affinity triangle, secret friends, opposite signs, harmful pair or nothing in particular. From that it draws a score, an explanation of each animal in love and a piece of advice for you two.",
+    "p3": "Want a broader reading? The birth date also gives your star sign and your life path, and <a href=\"/en/birth-date-love-compatibility/\">crossing the three readings</a> gives a more nuanced result. And if what interests you is your relationship as it is, with its real arguments and real plans, the <a href=\"/en/couple-compatibility-test/\">compatibility test for two</a> doesn't look at the sky, it asks you questions."
+  },
+  "section2": {
+    "title": "Finding your Chinese sign: watch out for the new year",
+    "p1": "The Chinese year doesn't start on 1 January. It begins at the lunar new year, between 21 January and 20 February depending on the year. Someone born on 15 January 1990 is not a Horse but a Snake, because the year of the Horse only began on 27 January 1990. It's the most common mistake in the tables you find online, and it affects roughly one person in ten.",
+    "p2": "Our calculator uses the real new year dates, year by year, from 1924 to 2043. The table below gives each animal's years to help you find your bearings, but if you were born in January or February, run the calculation with the full date: that's exactly why we ask for it.",
+    "tip": "The element can be read in the last digit of the Chinese year: 4 and 5 for Wood, 6 and 7 for Fire, 8 and 9 for Earth, 0 and 1 for Metal, 2 and 3 for Water. A Dragon of 2000 is a Metal Dragon, a Dragon of 2012 is a Water Dragon.",
+    "tableHeaders": [
+      "Sign",
+      "Recent years",
+      "In love"
+    ],
+    "tableRows": [
+      [
+        "Rat",
+        "1960, 1972, 1984, 1996, 2008, 2020",
+        "attentive, talkative, a little anxious"
+      ],
+      [
+        "Ox",
+        "1961, 1973, 1985, 1997, 2009, 2021",
+        "faithful, patient, stubborn"
+      ],
+      [
+        "Tiger",
+        "1962, 1974, 1986, 1998, 2010, 2022",
+        "passionate, protective, impulsive"
+      ],
+      [
+        "Rabbit",
+        "1963, 1975, 1987, 1999, 2011, 2023",
+        "gentle, discreet, avoids conflict"
+      ],
+      [
+        "Dragon",
+        "1964, 1976, 1988, 2000, 2012, 2024",
+        "wholehearted, generous, proud"
+      ],
+      [
+        "Snake",
+        "1965, 1977, 1989, 2001, 2013, 2025",
+        "deep, seductive, jealous"
+      ],
+      [
+        "Horse",
+        "1966, 1978, 1990, 2002, 2014, 2026",
+        "warm, free, inconsistent"
+      ],
+      [
+        "Goat",
+        "1967, 1979, 1991, 2003, 2015, 2027",
+        "tender, creative, anxious"
+      ],
+      [
+        "Monkey",
+        "1968, 1980, 1992, 2004, 2016, 2028",
+        "funny, inventive, light"
+      ],
+      [
+        "Rooster",
+        "1969, 1981, 1993, 2005, 2017, 2029",
+        "loyal, frank, critical"
+      ],
+      [
+        "Dog",
+        "1970, 1982, 1994, 2006, 2018, 2030",
+        "faithful, fair, worried"
+      ],
+      [
+        "Pig",
+        "1971, 1983, 1995, 2007, 2019, 2031",
+        "generous, trusting, easy-going"
+      ]
+    ]
+  },
+  "section3": {
+    "title": "The four affinity triangles",
+    "p1": "Tradition sorts the twelve animals into four groups of three, four years apart. The signs of one triangle share a way of seeing life: it's the most favourable bond for a couple, the one where you understand each other without having to explain.",
+    "p2": "Being in the same triangle doesn't mean being alike in every way. The Rat is more cautious than the Dragon, the Dog more worried than the Tiger. But when a decision has to be made, you lean the same way, and that's what counts over time.",
+    "tableHeaders": [
+      "Triangle",
+      "The three signs",
+      "What brings them together"
+    ],
+    "tableRows": [
+      [
+        "The triangle of action",
+        "Rat, Dragon, Monkey",
+        "Energy, boldness, a taste for success"
+      ],
+      [
+        "The triangle of method",
+        "Ox, Snake, Rooster",
+        "Patience, strategy, an eye for detail"
+      ],
+      [
+        "The triangle of independence",
+        "Tiger, Horse, Dog",
+        "Freedom, loyalty, frankness"
+      ],
+      [
+        "The triangle of gentleness",
+        "Rabbit, Goat, Pig",
+        "Sensitivity, calm, a taste for comfort"
+      ]
+    ]
+  },
+  "section4": {
+    "title": "Secret friends and opposite signs",
+    "p1": "Besides the triangles, tradition knows six pairs of secret friends, two animals that aren't alike but complete each other perfectly, and six pairs of opposite signs, face to face on the wheel, six years apart. The first make very solid couples, the second make couples that are very attractive at the start and harder afterwards.",
+    "p2": "There are also six so-called \"harmful\" pairs: Rat and Goat, Ox and Horse, Tiger and Snake, Rabbit and Dragon, Monkey and Pig, Rooster and Dog. It isn't an outright opposition. It's more of a wearing down, small irritations that keep coming back. The result tells you when that's your case, along with what to watch.",
+    "tip": "A couple of opposite signs is not doomed, far from it. It works differently: each keeps their own domain instead of trying to convince the other. Many couples that have lasted thirty years are made of two opposites who stopped converting each other.",
+    "tableHeaders": [
+      "Type of pair",
+      "The two signs",
+      "What tradition says"
+    ],
+    "tableRows": [
+      [
+        "Secret friends",
+        "Rat + Ox",
+        "Quick wit and quiet strength"
+      ],
+      [
+        "Secret friends",
+        "Tiger + Pig",
+        "Boldness and gentleness"
+      ],
+      [
+        "Secret friends",
+        "Rabbit + Dog",
+        "Delicacy and loyalty"
+      ],
+      [
+        "Secret friends",
+        "Dragon + Rooster",
+        "Vision and an eye for detail"
+      ],
+      [
+        "Secret friends",
+        "Snake + Monkey",
+        "Intelligence and play"
+      ],
+      [
+        "Secret friends",
+        "Horse + Goat",
+        "Drive and tenderness"
+      ],
+      [
+        "Opposite signs",
+        "Rat + Horse",
+        "Planning versus improvising"
+      ],
+      [
+        "Opposite signs",
+        "Ox + Goat",
+        "The concrete versus the dream"
+      ],
+      [
+        "Opposite signs",
+        "Tiger + Monkey",
+        "Pride versus mockery"
+      ],
+      [
+        "Opposite signs",
+        "Rabbit + Rooster",
+        "Reserve versus frankness"
+      ],
+      [
+        "Opposite signs",
+        "Dragon + Dog",
+        "Confidence versus doubt"
+      ],
+      [
+        "Opposite signs",
+        "Snake + Pig",
+        "Distrust versus trust"
+      ]
+    ]
+  },
+  "section5": {
+    "title": "The five elements, what nuances the result",
+    "p1": "Each animal returns every twelve years, but never with the same element. A Fire Tiger (1986) and a Water Tiger (1962) don't live their love the same way. The five elements follow each other in a cycle: Wood feeds Fire, Fire feeds Earth, Earth feeds Metal, Metal feeds Water, and Water feeds Wood. Two elements that follow each other get along well; two elements one step apart control each other.",
+    "p2": "In the result, the element moves the score up or down by a few points, never more. It's a nuance, not the substance. Two opposite animals with elements that feed each other remain a tense duo, with a little more gentleness on bad days.",
+    "tableHeaders": [
+      "Element",
+      "The Chinese year ends in",
+      "What it gives the couple"
+    ],
+    "tableRows": [
+      [
+        "Wood",
+        "4 ou 5",
+        "growth, generosity, a need for projects"
+      ],
+      [
+        "Fire",
+        "6 ou 7",
+        "passion, drive, anger that passes quickly"
+      ],
+      [
+        "Earth",
+        "8 ou 9",
+        "stability, patience, a taste for the concrete"
+      ],
+      [
+        "Metal",
+        "0 ou 1",
+        "rigour, loyalty, difficulty bending"
+      ],
+      [
+        "Water",
+        "2 ou 3",
+        "sensitivity, intuition, a need for reassurance"
+      ]
+    ]
+  },
+  "section6": {
+    "title": "And if the score is low?",
+    "p1": "Then nothing serious happens. This score measures the agreement between two symbolic temperaments, those of your birth years. It measures neither your feelings nor the solidity of what you've built. Thousands of couples of opposite signs live very well together, and couples from the same triangle break up.",
+    "p2": "What a low score can give you is a conversation. Read your animal's portrait and your partner's, and ask yourselves what's accurate and what isn't. Most of the time, that's where it gets interesting: you recognise yourself in one line, the other recognises themselves in another, and you talk about an irritation you'd never named.",
+    "tip": "Run the calculation together rather than each on your own. The number matters less than what you'll say to each other while reading the portraits."
+  },
+  "faq": {
+    "title": "Your questions about Chinese zodiac compatibility",
+    "q1": "How do you know if two Chinese signs are compatible?",
+    "a1": "First you look at the relationship between the two animals on the wheel: same affinity triangle (four years apart), secret friends, opposite signs (six years apart), harmful pair or no particular link. Then you refine with each one's element, which depends on the year. Our tool does both and explains the result to you.",
+    "q2": "Which Chinese signs go best together in love?",
+    "a2": "Couples from the same triangle: Rat, Dragon and Monkey with one another; Ox, Snake and Rooster; Tiger, Horse and Dog; Rabbit, Goat and Pig. And the six pairs of secret friends: Rat and Ox, Tiger and Pig, Rabbit and Dog, Dragon and Rooster, Snake and Monkey, Horse and Goat.",
+    "q3": "Which Chinese signs don't go together?",
+    "a3": "The six opposite pairs, six years apart: Rat and Horse, Ox and Goat, Tiger and Monkey, Rabbit and Rooster, Dragon and Dog, Snake and Pig. They are the tensest couples of the tradition, but also often the most attractive at first. \"Not going together\" here means \"not working the same way\", not \"not loving each other\".",
+    "q4": "I was born in January, what is my Chinese sign?",
+    "a4": "Probably the previous year's. The Chinese year starts between 21 January and 20 February, so a January birth almost always falls in the previous Chinese year. Enter your full date in the calculator, it knows the new year date for every year.",
+    "q5": "Should the element be taken into account?",
+    "a5": "Yes, but as a nuance. The animal gives the temperament, the element says how it's expressed: a Fire Horse is more hot-headed than an Earth Horse. In our calculation, the element moves the score by a few points when the two feed or clash with each other.",
+    "q6": "Are the results saved?",
+    "a6": "No. The calculation happens in your browser, the dates go nowhere and nothing is kept. You can run the calculation as many times as you like, with whoever's dates you like."
+  },
+  "jsonLd": {
+    "about": "love compatibility of Chinese zodiac signs"
+  }
+}

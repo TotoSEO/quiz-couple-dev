@@ -1,0 +1,705 @@
+{
+  "hero": {
+    "badge": "Astrología china",
+    "title": "¿Sois compatibles según vuestros signos chinos?",
+    "highlight": "signos chinos",
+    "description": "Bastan dos fechas de nacimiento. De ellas sacamos tu animal y el de tu pareja, el elemento de cada uno, y lo que la tradición china dice de vuestro encuentro: <strong>mismo triángulo</strong>, <strong>amigos secretos</strong>, <strong>signos opuestos</strong>... El resultado lo explica todo, con una puntuación y un consejo.",
+    "subtitle": "Sin registro, sin correo. El resultado aparece al momento."
+  },
+  "form": {
+    "titre": "Vuestras dos fechas de nacimiento",
+    "personne1": "Tú",
+    "personne2": "Tu pareja",
+    "jour": "Día",
+    "moisLabel": "Mes",
+    "annee": "Año",
+    "mois": [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    ],
+    "moisDate": [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre"
+    ],
+    "dateAffichee": "{{j}} de {{mois}} de {{a}}",
+    "erreur": "Una de las dos fechas no existe. Comprobad el día y el mes elegidos.",
+    "lancer": "Calcular nuestra compatibilidad",
+    "aide": "El año da el animal y el elemento. Pero el año chino empieza a finales de enero o principios de febrero, por eso pedimos la fecha completa."
+  },
+  "animaux": {
+    "rat": "Rata",
+    "buffle": "Buey",
+    "tigre": "Tigre",
+    "lapin": "Conejo",
+    "dragon": "Dragón",
+    "serpent": "Serpiente",
+    "cheval": "Caballo",
+    "chevre": "Cabra",
+    "singe": "Mono",
+    "coq": "Gallo",
+    "chien": "Perro",
+    "cochon": "Cerdo"
+  },
+  "elements": {
+    "bois": "Madera",
+    "feu": "Fuego",
+    "terre": "Tierra",
+    "metal": "Metal",
+    "eau": "Agua"
+  },
+  "relations": {
+    "trine": "{{a1}} y {{a2}} pertenecen al mismo triángulo de afinidad. En el zodiaco chino es el vínculo más buscado: avanzáis al mismo ritmo, queréis más o menos las mismas cosas y no necesitáis largas explicaciones para poneros de acuerdo.",
+    "harmonie": "{{a1}} y {{a2}} forman una de las seis parejas de amigos secretos. No os parecéis, y justamente por eso funciona: cada uno es fuerte donde el otro es frágil, y pasa sin esfuerzo, casi sin pensarlo.",
+    "meme": "Los dos sois {{a1}}. Os entendéis rápido, tenéis los mismos deseos y los mismos defectos. Es descansado, y también es un espejo: lo que te molesta del otro, probablemente tú también lo haces.",
+    "neutre": "{{a1}} y {{a2}} no tienen ni una afinidad especial ni una tensión marcada en la tradición china. Nada os empuja solo, nada os frena tampoco. Lo que hagáis con ello depende de vosotros dos, más que de vuestros signos.",
+    "nuisance": "{{a1}} y {{a2}} son una de las seis parejas que la tradición llama « de perjuicio ». No es una incompatibilidad clara. Es más bien un desgaste: pequeñas molestias que vuelven y acaban pesando si nadie les pone nombre.",
+    "opposition": "{{a1}} y {{a2}} están frente a frente en la rueda, a seis signos de distancia. Es el eje más tenso del zodiaco chino, y a menudo el más atractivo al principio. Os gustáis porque sois distintos, y esa diferencia es lo que cansa con el tiempo."
+  },
+  "elementsRelation": {
+    "meme": "Compartís el mismo elemento, {{e1}}. Reaccionáis a lo que pasa con la misma energía, lo que hace la vida en pareja más sencilla, y los días malos más intensos, porque nadie calma al otro.",
+    "nourrit": "Vuestros elementos se llevan bien: en el ciclo chino, {{de}} alimenta a {{vers}}. Uno da impulso al otro sin empujarlo. Es un pequeño plus que cuenta en el día a día, sobre todo en las épocas de cansancio.",
+    "controle": "Vuestros elementos se contrarían: en el ciclo chino, {{de}} controla a {{vers}}. Uno templa al otro, lo que evita los excesos pero puede dar la sensación de estar frenado. Se arregla diciendo cuándo uno necesita un empujón y cuándo necesita que lo dejen tranquilo."
+  },
+  "paliers": {
+    "fusion": {
+      "titre": "Dos signos que se responden",
+      "texte": "La tradición es clara para {{a1}} y {{a2}}: estáis hechos para entenderos. Vuestros animales van en la misma dirección y vuestros elementos concuerdan. No os libra de nada, ¡pero salís con ventaja!"
+    },
+    "belle": {
+      "titre": "Una buena sintonía, con un detalle que vigilar",
+      "texte": "Lo esencial está ahí entre {{a1}} y {{a2}}. Vuestros signos se llevan bien, y lo que baja la puntuación es un detalle: un elemento que frena al otro, o una pareja que pide un poco de atención. Nada que impida una larga historia."
+    },
+    "solide": {
+      "titre": "Una pareja que aguanta, sin que la lleven los astros",
+      "texte": "{{a1}} y {{a2}} no están hechos el uno para el otro ni hechos para discutir, según la tradición. Estáis en la zona más frecuente, aquella en la que la pareja depende de lo que hagáis con ella. Lo que dice la rueda está debajo, y es más bien alentador."
+    },
+    "travail": {
+      "titre": "Dos temperamentos que deben aprender a leerse",
+      "texte": "Entre {{a1}} y {{a2}}, la tradición ve roces. No una incompatibilidad, sino costumbres que se pisan si no se dice nada. Las parejas que duran con este tipo de puntuación son las que han puesto palabras a lo que molesta."
+    },
+    "contraires": {
+      "titre": "Dos mundos por unir",
+      "texte": "{{a1}} y {{a2}} son uno de los dúos más tensos del zodiaco chino. A menudo, también uno de los más atractivos al principio. Esta puntuación no dice nada de vuestros sentimientos, dice que no funcionáis igual, y que eso se nota en los detalles del día a día."
+    }
+  },
+  "resultat": {
+    "animal": "Signo chino",
+    "element": "Elemento",
+    "polarite": "Polaridad",
+    "yin": "Yin",
+    "yang": "Yang",
+    "anneeLunaire": "Año chino",
+    "titreRoue": "{{a1}} y {{a2}}: lo que dice la rueda",
+    "titrePortrait": "{{a}} en el amor",
+    "titreElements": "Vuestros elementos: {{e1}} y {{e2}}",
+    "titreConseil": "El consejo para vosotros dos",
+    "refaire": "Probar otras dos fechas",
+    "avis": "Dejar una opinión"
+  },
+  "portraits": {
+    "rat": "La Rata es viva, curiosa y muy sociable. En el amor es atenta y generosa con la gente que ha elegido, y más bien ahorradora con el resto del mundo. Necesita hablar, entender, sentir que cuenta. Su punto débil es la inquietud: anticipa, comprueba, se monta películas. Con alguien estable que la tranquilice sin cortarle las alas, se convierte en una pareja fiel y divertida.",
+    "buffle": "El Buey es paciente, fiable y trabajador. Quiere a poca gente pero la quiere durante mucho tiempo, y muestra su cariño con hechos más que con palabras. Necesita calma, rutina y confianza. Su punto débil es la cabezonería: cuando ha decidido, ya no escucha. Da lo mejor de sí con alguien que sabe esperar y que no lo arrincona.",
+    "tigre": "El Tigre es apasionado, valiente y algo imprevisible. En el amor se entrega a fondo, protege a los suyos y odia aburrirse. Necesita movimiento, proyectos y admiración. Su punto débil es la impulsividad: dice y hace rápido, y a veces se arrepiente. Florece con alguien que lo sigue en sus arranques sin perder los pies en el suelo.",
+    "lapin": "El Conejo es dulce, diplomático y apegado a su comodidad. Evita los conflictos, cuida su casa y a los suyos, y prefiere una noche tranquila a una salida ruidosa. Necesita seguridad afectiva y ternura. Su punto débil es la huida: en vez de enfrentarse, se aleja en silencio. Es feliz con alguien atento que nunca lo atosiga.",
+    "dragon": "El Dragón tiene carisma, energía y ambición. En el amor es entero, generoso y orgulloso. Necesita que crean en él y que sigan su ritmo, que es rápido. Su punto débil es el orgullo: soporta mal las críticas y raramente cede primero. Da mucho a quien sabe admirarlo sin desaparecer.",
+    "serpent": "La Serpiente es reflexiva, seductora y reservada. En el amor observa antes de comprometerse, y luego se apega profundamente. Necesita complicidad intelectual y un poco de misterio. Su punto débil son los celos: guarda lo que quiere y vigila sin decirlo. Está bien con alguien fiel que respete sus silencios.",
+    "cheval": "El Caballo es entusiasta, franco e independiente. En el amor es cálido y espontáneo, pero odia sentirse encerrado. Necesita aire, novedad y libertad de movimiento. Su punto débil es la inconstancia: se enciende rápido y a veces se cansa igual de rápido. Dura con alguien que comparte sus ganas sin intentar retenerlo.",
+    "chevre": "La Cabra es sensible, creativa y dulce. En el amor da mucho y necesita sentirse protegida y tranquilizada. Huye de las discusiones y prefiere ceder antes que enfrentarse. Su punto débil es la ansiedad: duda, necesita que le repitan las cosas. Florece con alguien sólido y tierno, que toma las decisiones difíciles sin atosigarla.",
+    "singe": "El Mono es divertido, ingenioso y listo. En el amor seduce con el humor y la imaginación, y odia la rutina. Necesita juego, sorpresas y una pareja que siga sus ideas. Su punto débil es la ligereza: puede esquivar las conversaciones serias con una broma. Aguanta la distancia con alguien que lo haga reír y que sepa, de vez en cuando, bajarlo a la tierra.",
+    "coq": "El Gallo es honesto, preciso y orgulloso. En el amor es leal y atento a los detalles, y dice lo que piensa, a veces demasiado. Necesita orden, reconocimiento y franqueza. Su punto débil es la crítica: lo nota todo y lo hace saber. Es feliz con alguien que se toma sus comentarios como atención y que sabe responderle.",
+    "chien": "El Perro es leal, justo y protector. En el amor es fiel y atento, dispuesto a mucho por la gente que quiere. Necesita confianza y constancia. Su punto débil es la inquietud: imagina lo peor, le cuesta soltar. Da lo mejor de sí con alguien honesto que lo tranquilice con gestos regulares.",
+    "cochon": "El Cerdo es generoso, vividor y confiado. En el amor da sin contar, disfruta de los placeres sencillos y perdona con facilidad. Necesita calor, compartir y una vida dulce. Su punto débil es la ingenuidad: confía rápido y puede llevarse decepciones. Es feliz con alguien honesto que lo cuide tanto como él cuida a los demás."
+  },
+  "paires": {
+    "rat-rat": {
+      "note": 7.0,
+      "texte": "Dos Ratas se entienden a la primera mirada. Habláis mucho, ordenáis las mismas cosas, os preocupáis por las mismas facturas. Cuidado con tranquilizaros el uno al otro dentro de la angustia: uno de los dos tiene que saber decir « va a salir bien »."
+    },
+    "rat-buffle": {
+      "note": 8.4,
+      "texte": "La Rata se agita, el Buey estabiliza. Sois amigos secretos: la Rata aporta las ideas y la ligereza, el Buey la constancia y la seguridad. Uno necesita al otro justo donde le falta."
+    },
+    "rat-tigre": {
+      "note": 6.2,
+      "texte": "La Rata calcula, el Tigre se lanza. Os admiráis y os molestáis por la misma razón. Funciona cuando la Rata acepta dejarse llevar a veces, y cuando el Tigre escucha las prudencias de la Rata antes de saltar."
+    },
+    "rat-lapin": {
+      "note": 5.8,
+      "texte": "A la Rata le gusta la compañía, al Conejo la calma. Tenéis en común el gusto por una casa cuidada y una vida sin dramas. El Conejo tendrá que decir cuándo necesita silencio, la Rata tendrá que aprender a no llenar cada noche."
+    },
+    "rat-dragon": {
+      "note": 9.0,
+      "texte": "Uno de los dúos más bonitos del zodiaco chino. La Rata admira la audacia del Dragón, el Dragón adora el ingenio de la Rata. Sois del mismo triángulo: queréis triunfar, moveros, construir, y lo hacéis juntos."
+    },
+    "rat-serpent": {
+      "note": 6.4,
+      "texte": "Dos mentes finas a las que les gusta observar y entender. La Rata habla, la Serpiente escucha, y pasáis horas desmontando el mundo. El riesgo es la desconfianza a dos: aprended a creeros el uno al otro."
+    },
+    "rat-cheval": {
+      "note": 3.6,
+      "texte": "La Rata ahorra, el Caballo gasta; la Rata planifica, el Caballo improvisa. Estáis en oposición, y la atracción del principio viene justo de ahí. Para durar hay que aceptar que nunca iréis al mismo ritmo."
+    },
+    "rat-chevre": {
+      "note": 4.6,
+      "texte": "La Rata necesita que la tranquilicen, y la Cabra también. Sois una pareja llamada « de perjuicio »: la inquietud de uno alimenta la del otro. Lo que os salva es vuestra ternura común, siempre que uno de los dos se atreva a decidir."
+    },
+    "rat-singe": {
+      "note": 8.8,
+      "texte": "Mismo triángulo, misma viveza, mismo humor. La Rata y el Mono nunca se aburren juntos y encuentran solución a todo. Cuidado solo con no convertirlo todo en broma cuando hay que hablar en serio."
+    },
+    "rat-coq": {
+      "note": 5.6,
+      "texte": "La Rata se adapta, el Gallo mantiene sus posiciones. Sois dos perfeccionistas que no perfeccionan lo mismo. Puede ser muy productivo siempre que no os corrijáis el uno al otro todo el día."
+    },
+    "rat-chien": {
+      "note": 6.4,
+      "texte": "La Rata y el Perro comparten el sentido de la familia y una lealtad profunda. El Perro calma las inquietudes de la Rata, la Rata aligera los escrúpulos del Perro. Una pareja discreta que a menudo dura más de lo previsto."
+    },
+    "rat-cochon": {
+      "note": 6.8,
+      "texte": "La Rata es lista, el Cerdo es confiado, y uno protege al otro sin pensarlo. Os gustan los mismos placeres sencillos, una buena comida, una noche con amigos. La Rata tendrá que cuidar de no aprovecharse de la generosidad del Cerdo."
+    },
+    "buffle-buffle": {
+      "note": 6.8,
+      "texte": "Dos Bueyes son una casa sólida y unas costumbres bien asentadas. Confiáis el uno en el otro y trabajáis en la misma dirección. El riesgo son dos cabezotas frente a frente: cuando no estáis de acuerdo, nadie se mueve."
+    },
+    "buffle-tigre": {
+      "note": 5.6,
+      "texte": "El Buey quiere estabilidad, el Tigre quiere aventura. Os respetáis, pero os frenáis mutuamente. Aguanta si el Tigre acepta un marco y si el Buey acepta salir del suyo de vez en cuando."
+    },
+    "buffle-lapin": {
+      "note": 6.6,
+      "texte": "El Buey protege, el Conejo suaviza. Compartís el gusto por un hogar tranquilo y una vida sin sacudidas. El Conejo tendrá que aprender a decir lo que quiere en vez de esperarlo, el Buey tendrá a veces que preguntar en lugar de decidir."
+    },
+    "buffle-dragon": {
+      "note": 5.8,
+      "texte": "Dos caracteres fuertes, dos maneras de dirigir. El Buey avanza paso a paso, el Dragón quiere ir rápido y lejos. Funciona cuando cada uno tiene su terreno y nadie quiere tener la última palabra en todo."
+    },
+    "buffle-serpent": {
+      "note": 8.8,
+      "texte": "Mismo triángulo: la paciencia del Buey y la estrategia de la Serpiente forman un dúo temible. Os tomáis vuestro tiempo, construís, no os dispersáis. Una pareja discreta y muy sólida."
+    },
+    "buffle-cheval": {
+      "note": 4.4,
+      "texte": "El Buey se instala, el Caballo tiene ganas de irse. Sois una pareja « de perjuicio »: no es una guerra, es un desajuste permanente de ritmo. Hace falta mucho diálogo para que uno no se sienta encerrado y el otro abandonado."
+    },
+    "buffle-chevre": {
+      "note": 3.8,
+      "texte": "El Buey es concreto, la Cabra es soñadora. Estáis en oposición: lo que uno encuentra esencial, el otro lo encuentra secundario. La ternura de la Cabra puede suavizar al Buey, siempre que él aprenda a tranquilizarla con palabras."
+    },
+    "buffle-singe": {
+      "note": 6.2,
+      "texte": "El Buey se lo toma todo en serio, el Mono se lo toma todo a la ligera. Podéis haceros mucho bien: el Mono relaja al Buey, el Buey asienta al Mono. O mucho fastidio, si ninguno de los dos da un paso."
+    },
+    "buffle-coq": {
+      "note": 8.6,
+      "texte": "Mismo triángulo, mismo sentido del deber, mismo gusto por el trabajo bien hecho. El Buey y el Gallo forman una pareja organizada donde cada uno sabe lo que tiene que hacer. Acordaos de regalaros momentos que no sirvan para nada."
+    },
+    "buffle-chien": {
+      "note": 5.8,
+      "texte": "Dos leales, dos fieles, dos inquietos. El Buey y el Perro confían el uno en el otro, pero pueden encerrarse en la prudencia. Hace falta que uno de los dos tenga ganas de mirar más allá, de viaje, no en el amor."
+    },
+    "buffle-cochon": {
+      "note": 6.6,
+      "texte": "El Buey tranquiliza, el Cerdo da calor. Os gusta la casa, las buenas comidas y la gente sencilla. El Cerdo tendrá que respetar la necesidad de calma del Buey, el Buey tendrá que abrirse a los amigos del Cerdo."
+    },
+    "tigre-tigre": {
+      "note": 6.2,
+      "texte": "Dos Tigres son mucha pasión y muchas tormentas. Os admiráis, os desafiáis, os reconciliáis con fuego. Para durar, hay que decidir juntos quién cede esta vez, porque ninguno de los dos lo hace de forma natural."
+    },
+    "tigre-lapin": {
+      "note": 6.2,
+      "texte": "El Tigre ataca, el Conejo esquiva. Os complementáis siempre que el Tigre baje la voz y el Conejo se atreva a decir lo que le duele. El Conejo aporta la dulzura que el Tigre necesita sin saberlo."
+    },
+    "tigre-dragon": {
+      "note": 7.0,
+      "texte": "Dos fuerzas de la naturaleza. El Tigre y el Dragón se admiran, se arrastran y se disputan el volante. Esta pareja brilla en público, pero tiene que aprender a dejar ganar al otro de vez en cuando, o la casa se convierte en un ring."
+    },
+    "tigre-serpent": {
+      "note": 4.4,
+      "texte": "El Tigre es directo, la Serpiente es reservada. Sois una pareja « de perjuicio »: el Tigre no entiende los silencios de la Serpiente, a la Serpiente no le gustan los arrebatos del Tigre. Se puede trabajar, con mucha paciencia y pocos reproches."
+    },
+    "tigre-cheval": {
+      "note": 8.8,
+      "texte": "Mismo triángulo: dos independientes a los que les gusta la acción y la franqueza. El Tigre y el Caballo se dejan aire, se van juntos y vuelven juntos. Una pareja que se mueve y que ríe, siempre que mantenga algunas citas fijas."
+    },
+    "tigre-chevre": {
+      "note": 5.8,
+      "texte": "El Tigre protege, la Cabra se apoya. Puede ser una pareja tierna, si el Tigre no confunde protección con dominio. La Cabra tendrá que atreverse a decir no, y el Tigre aprender a oírlo."
+    },
+    "tigre-singe": {
+      "note": 3.6,
+      "texte": "El Tigre y el Mono están frente a frente en la rueda. El Mono se divierte con el orgullo del Tigre, el Tigre se cansa de las piruetas del Mono. Mucha atracción, muchas risas al principio, y una necesidad real de reglas claras después."
+    },
+    "tigre-coq": {
+      "note": 5.6,
+      "texte": "Dos orgullosos a los que les gusta tener razón. El Tigre actúa rápido, el Gallo corrige los detalles, y cada uno encuentra al otro insoportable en sus días malos. Aguanta si convertís la competición en equipo."
+    },
+    "tigre-chien": {
+      "note": 9.0,
+      "texte": "Uno de los dúos más seguros del zodiaco chino. El Perro cree en el Tigre y el Tigre protege al Perro, en el mismo triángulo de lealtad y libertad. Confiáis el uno en el otro, y eso es lo que os hace sólidos."
+    },
+    "tigre-cochon": {
+      "note": 8.6,
+      "texte": "Amigos secretos: el Tigre aporta la audacia, el Cerdo la dulzura y el calor. El Cerdo calma al Tigre sin cortarle las alas, el Tigre da al Cerdo el impulso que le falta. Una pareja generosa que recibe mucho."
+    },
+    "lapin-lapin": {
+      "note": 7.4,
+      "texte": "Dos Conejos son una casa acogedora, noches tranquilas y muy pocas discusiones. Os entendéis sin hablar. El riesgo es lo no dicho: los dos evitáis los temas que molestan, y se acumulan."
+    },
+    "lapin-dragon": {
+      "note": 4.8,
+      "texte": "El Conejo busca la calma, el Dragón hace ruido. Sois una pareja « de perjuicio »: el Dragón puede encontrar al Conejo demasiado reservado, el Conejo puede sentirse aplastado. Funciona cuando el Dragón frena y el Conejo se afirma."
+    },
+    "lapin-serpent": {
+      "note": 6.4,
+      "texte": "Dos naturalezas finas y algo reservadas. Al Conejo y a la Serpiente les gusta la comodidad, la belleza y las conversaciones a dos. Os adivináis más de lo que os habláis, lo cual es encantador hasta el día en que de verdad hay que decirse las cosas."
+    },
+    "lapin-cheval": {
+      "note": 6.0,
+      "texte": "Al Conejo le gusta quedarse, al Caballo le gusta irse. Podéis encontraros en la amabilidad y el buen humor, pero vuestros ritmos de vida difieren. El Caballo tendrá que avisar, el Conejo tendrá que aceptar salir de su madriguera."
+    },
+    "lapin-chevre": {
+      "note": 8.8,
+      "texte": "Mismo triángulo: dos sensibles a los que les gusta la dulzura y la paz. El Conejo y la Cabra se protegen mutuamente y crean un hogar cálido. Hará falta que uno de los dos tome las decisiones que el otro va aplazando."
+    },
+    "lapin-singe": {
+      "note": 5.8,
+      "texte": "El Conejo es discreto, el Mono es ruidoso. El Mono divierte al Conejo y el Conejo calma al Mono, mientras el Mono no se burle de su reserva. Dos mundos que pueden hacerse bien, sin parecerse."
+    },
+    "lapin-coq": {
+      "note": 3.8,
+      "texte": "El Conejo y el Gallo están en oposición. El Gallo lo nota todo y lo dice, el Conejo se lo toma a pecho y se cierra. La atracción existe, pero el Gallo tendrá que suavizar su franqueza y el Conejo aprender a responder."
+    },
+    "lapin-chien": {
+      "note": 8.6,
+      "texte": "Amigos secretos: la dulzura del Conejo y la lealtad del Perro forman una pareja atenta y fiel. Os cuidáis el uno al otro sin contar. El único riesgo es preocuparos demasiado, a dos, por el mundo exterior."
+    },
+    "lapin-cochon": {
+      "note": 8.6,
+      "texte": "Mismo triángulo, mismo gusto por el bienestar. Al Conejo y al Cerdo les gusta comer, recibir y acurrucarse. Sois generosos el uno con el otro y raramente estáis en conflicto. Vigilad solo el presupuesto y los kilos."
+    },
+    "dragon-dragon": {
+      "note": 6.4,
+      "texte": "Dos Dragones son mucho fuego y dos orgullos. Os admiráis, apuntáis alto y os disputáis el primer puesto. Dura si cada uno tiene su reino y si sabéis felicitar al otro sin celos."
+    },
+    "dragon-serpent": {
+      "note": 6.8,
+      "texte": "El Dragón brilla, la Serpiente reflexiona. Una pareja elegante, donde la Serpiente aconseja y el Dragón actúa. Cuidado con los celos de la Serpiente ante el carisma del Dragón, y con la impaciencia del Dragón ante los silencios de la Serpiente."
+    },
+    "dragon-cheval": {
+      "note": 6.6,
+      "texte": "Dos energías fuertes y generosas. Al Dragón y al Caballo les gusta la acción, la fiesta y los grandes proyectos. Os arrastráis mutuamente, a veces demasiado lejos. Prevéd momentos tranquilos, si no os agotáis."
+    },
+    "dragon-chevre": {
+      "note": 6.0,
+      "texte": "El Dragón decide, la Cabra sigue, y puede funcionar mucho tiempo. La Cabra aporta dulzura al Dragón, el Dragón da seguridad a la Cabra. El riesgo es que la Cabra se borre demasiado y acabe lamentándolo."
+    },
+    "dragon-singe": {
+      "note": 8.6,
+      "texte": "Mismo triángulo: la audacia del Dragón y el ingenio del Mono, un equipo que gana. Tenéis ideas, energía y sentido del espectáculo. El Mono hace reír al Dragón, el Dragón da al Mono una dirección."
+    },
+    "dragon-coq": {
+      "note": 8.4,
+      "texte": "Amigos secretos: el Dragón ve a lo grande, el Gallo cuida los detalles. Lo que podría molestar se convierte en una fuerza cuando cada uno respeta el trabajo del otro. Una pareja que construye, siempre que el Gallo no critique cada idea del Dragón."
+    },
+    "dragon-chien": {
+      "note": 3.8,
+      "texte": "El Dragón y el Perro están frente a frente en la rueda. El Perro duda de lo que el Dragón afirma, el Dragón se irrita con la prudencia del Perro. Dos leales que se atraen pero que deben aceptar no ver el mundo igual."
+    },
+    "dragon-cochon": {
+      "note": 6.4,
+      "texte": "El Dragón toma la luz, el Cerdo cuida. Un dúo cálido en el que el Cerdo admira sin celos y el Dragón protege con generosidad. El Dragón solo tendrá que acordarse de dar las gracias, porque el Cerdo nunca reclama."
+    },
+    "serpent-serpent": {
+      "note": 6.8,
+      "texte": "Dos Serpientes son una pareja elegante, discreta y muy fiel, con una parte de misterio a cada lado. Os entendéis con medias palabras. El riesgo son los celos cruzados y los silencios que duran demasiado."
+    },
+    "serpent-cheval": {
+      "note": 6.0,
+      "texte": "La Serpiente reflexiona, el Caballo se lanza. El Caballo puede encontrar a la Serpiente demasiado lenta, la Serpiente puede encontrar al Caballo demasiado disperso. Y sin embargo tenéis mucho que enseñaros, si los celos de la Serpiente no se cuelan."
+    },
+    "serpent-chevre": {
+      "note": 6.2,
+      "texte": "Dos naturalezas refinadas a las que les gusta la belleza y la tranquilidad. La Serpiente tranquiliza a la Cabra con su constancia, la Cabra suaviza a la Serpiente con su ternura. Una pareja calmada, donde a veces hay que provocar un poco de novedad."
+    },
+    "serpent-singe": {
+      "note": 8.2,
+      "texte": "Amigos secretos: la Serpiente y el Mono comparten una inteligencia viva y un verdadero gusto por el juego. El Mono relaja a la Serpiente, la Serpiente canaliza al Mono. Cuidado solo con no manipularos el uno al otro por costumbre."
+    },
+    "serpent-coq": {
+      "note": 8.6,
+      "texte": "Mismo triángulo: dos mentes precisas a las que les gustan las cosas bien hechas. La Serpiente y el Gallo forman una pareja organizada y fiel. El Gallo habla, la Serpiente escucha, y raramente tomáis una decisión a la ligera."
+    },
+    "serpent-chien": {
+      "note": 6.2,
+      "texte": "La Serpiente es reservada, el Perro necesita transparencia. Podéis tranquilizaros el uno al otro con la fidelidad, siempre que la Serpiente acepte decir lo que piensa y el Perro acepte no saberlo todo."
+    },
+    "serpent-cochon": {
+      "note": 4.0,
+      "texte": "La Serpiente y el Cerdo están en oposición. El Cerdo confía en todo el mundo, la Serpiente desconfía de todo el mundo. La atracción es real, pero el Cerdo puede sentirse vigilado y la Serpiente puede sentirse sola en su vigilancia."
+    },
+    "cheval-cheval": {
+      "note": 6.6,
+      "texte": "Dos Caballos son energía, viajes y mucha libertad. No os encerráis el uno al otro, y eso os hace felices. El riesgo es correr cada uno por su lado y cruzaros sin encontraros."
+    },
+    "cheval-chevre": {
+      "note": 8.6,
+      "texte": "Amigos secretos: el Caballo aporta el impulso, la Cabra aporta la dulzura. El Caballo protege a la Cabra de sus angustias, la Cabra ofrece al Caballo un lugar al que volver. Uno de los dúos más tiernos del zodiaco."
+    },
+    "cheval-singe": {
+      "note": 6.2,
+      "texte": "Dos jugadores a los que les gusta la novedad y la velocidad. El Caballo y el Mono se divierten mucho y raramente se aburren. Hará falta que uno de los dos se ocupe de las cosas serias, porque ninguno tiene ganas."
+    },
+    "cheval-coq": {
+      "note": 5.8,
+      "texte": "El Caballo improvisa, el Gallo organiza. El Gallo puede encontrar al Caballo desordenado, el Caballo puede encontrar al Gallo rígido. Funciona si el Gallo deja sitio a lo imprevisto y si el Caballo respeta algunas reglas de la casa."
+    },
+    "cheval-chien": {
+      "note": 8.6,
+      "texte": "Mismo triángulo: dos francos, dos leales, dos enamorados de la libertad. El Caballo y el Perro se entienden y confían el uno en el otro sin vigilarse. El Perro solo tendrá que aprender a preocuparse menos por las ausencias del Caballo."
+    },
+    "cheval-cochon": {
+      "note": 6.4,
+      "texte": "El Caballo arrastra, el Cerdo sigue con gusto. Os gustan los buenos momentos, los amigos y los planes espontáneos. El Cerdo tendrá que decir cuándo está cansado, el Caballo tendrá que acordarse de frenar por él."
+    },
+    "chevre-chevre": {
+      "note": 7.2,
+      "texte": "Dos Cabras son una pareja dulce, artista y atenta, con pocas discusiones. Os entendéis en la sensibilidad. El riesgo es tranquilizaros dentro de la inquietud y aplazar las decisiones a dos."
+    },
+    "chevre-singe": {
+      "note": 6.4,
+      "texte": "La Cabra es sensible, el Mono es guasón. El Mono hace reír a la Cabra y la saca de sus dudas, mientras no se burle de ella. La Cabra ofrece al Mono una ternura que él no sabe pedir."
+    },
+    "chevre-coq": {
+      "note": 5.6,
+      "texte": "La Cabra necesita dulzura, el Gallo dice lo que piensa sin rodeos. Este dúo pide esfuerzo: el Gallo tendrá que elegir sus palabras, la Cabra tendrá que oír un comentario sin ver en él un rechazo."
+    },
+    "chevre-chien": {
+      "note": 5.8,
+      "texte": "Dos inquietos que necesitan que los tranquilicen, dos fieles que saben hacerlo. La Cabra y el Perro se protegen bien, pero pueden encerrarse en la preocupación. Hace falta que uno de los dos conserve algo de ligereza."
+    },
+    "chevre-cochon": {
+      "note": 8.8,
+      "texte": "Mismo triángulo: la Cabra y el Cerdo comparten la dulzura, la generosidad y el gusto por la comodidad. Una pareja cálida en la que uno se siente bien enseguida. Conservad algo de ambición a dos, si no la comodidad se convierte en un capullo cerrado."
+    },
+    "singe-singe": {
+      "note": 7.0,
+      "texte": "Dos Monos son risas, ideas y un caos alegre. Nunca os aburrís y os adivináis. El riesgo es la ligereza a dos: nadie se toma las cosas en serio, hasta que es demasiado tarde."
+    },
+    "singe-coq": {
+      "note": 6.0,
+      "texte": "El Mono se las ingenia, el Gallo lo dice todo. El Gallo puede encontrar al Mono poco fiable, el Mono puede encontrar al Gallo demasiado cuadriculado. Podéis complementaros si el Mono juega limpio y si el Gallo acepta sorprenderse."
+    },
+    "singe-chien": {
+      "note": 6.6,
+      "texte": "El Mono divierte, el Perro vela. Esta pareja funciona mejor de lo que se cree: el Perro da al Mono un suelo, el Mono da al Perro ligereza. El Perro solo tendrá que aprender a reírse de las bromas que no entiende a la primera."
+    },
+    "singe-cochon": {
+      "note": 5.0,
+      "texte": "El Mono y el Cerdo forman una pareja « de perjuicio ». El Cerdo confía, el Mono juega, y el Cerdo puede acabar sintiéndose engañado sin que el Mono lo haya querido. Aguanta si el Mono protege la ingenuidad del Cerdo en vez de aprovecharse de ella."
+    },
+    "coq-coq": {
+      "note": 6.0,
+      "texte": "Dos Gallos son una casa impecable y opiniones bien marcadas, por ambos lados. Os respetáis, pero os criticáis. Para durar, decidid un tema en el que cada uno tenga siempre la razón, y no volváis a hablar de él."
+    },
+    "coq-chien": {
+      "note": 4.6,
+      "texte": "El Gallo y el Perro forman una pareja « de perjuicio ». El Gallo critica, el Perro se inquieta, y cada uno hiere al otro sin querer. Dos honestos que pueden entenderse muy bien, siempre que se digan las cosas con suavidad."
+    },
+    "coq-cochon": {
+      "note": 6.2,
+      "texte": "El Gallo organiza, el Cerdo disfruta. El Gallo puede encontrar al Cerdo demasiado laxo, el Cerdo puede encontrar al Gallo demasiado exigente. Pero el Cerdo aguanta los comentarios mejor que otros, y el Gallo se relaja con él."
+    },
+    "chien-chien": {
+      "note": 7.2,
+      "texte": "Dos Perros son una lealtad a prueba de todo y una confianza que no se discute. Os protegéis el uno al otro. El riesgo es preocuparos a dos por todo, y olvidaros de divertiros."
+    },
+    "chien-cochon": {
+      "note": 6.8,
+      "texte": "El Perro vela, el Cerdo disfruta, y uno le hace bien al otro. El Perro aporta prudencia al Cerdo, el Cerdo aporta alegría al Perro. Una pareja sencilla y cálida, a menudo infravalorada."
+    },
+    "cochon-cochon": {
+      "note": 7.6,
+      "texte": "Dos Cerdos son una casa abierta, una mesa llena y mucha ternura. Os lo perdonáis todo. El riesgo es la confianza ciega a dos: vigilad a la gente que se aprovecha de vuestra generosidad."
+    }
+  },
+  "conseils": {
+    "trine": "Vuestra sintonía es algo dado, no una garantía. Las parejas del mismo triángulo a veces se aburren porque todo es demasiado fácil. Mantened un proyecto a dos que os exija esfuerzo, y conservaréis el impulso que os unió.",
+    "harmonie": "Funcionáis porque sois distintos: no intentéis pareceros al otro. Decid más bien, de vez en cuando, lo que admiráis en él o ella y que vosotros no tenéis. Eso es lo que mantiene unidos a los amigos secretos.",
+    "meme": "Os conocéis demasiado bien para sorprenderos. Que cada uno tome una costumbre que se le parece y que le falta al otro: el que se preocupa decide tranquilizar, el que se enciende decide esperar. Si no, dobláis vuestros defectos en vez de corregirlos.",
+    "neutre": "Nada os empuja, nada os frena: vuestra pareja se parece a lo que hagáis con ella. Elegid una sola cosa que hacer mejor este mes, la misma para los dos, y veréis subir sola la puntuación que cuenta, la del día a día.",
+    "nuisance": "Lo que desgasta vuestra pareja son pequeñas cosas repetidas, no grandes temas. Haced la lista de lo que de verdad os molesta, sin comentarios, e intercambiadla. La mitad de las líneas desaparece cuando se dicen en voz alta.",
+    "opposition": "Nunca funcionaréis al mismo ritmo, y no es el objetivo. Decidid quién manda en qué: las salidas para uno, las finanzas para el otro, por ejemplo. Las parejas opuestas que duran son las que han dejado de querer convertir al otro."
+  },
+  "suite": {
+    "titre": "Ve más allá con vuestras fechas completas",
+    "texte": "El signo chino solo mira el año. El día y el mes dicen otra cosa: tu signo astrológico y tu camino de vida. Nuestro test por fecha de nacimiento cruza las tres lecturas.",
+    "bouton": "Hacer el test por fecha de nacimiento"
+  },
+  "section1": {
+    "title": "La compatibilidad amorosa según los signos chinos, ¿cómo funciona?",
+    "p1": "La astrología china asigna un animal a cada año: Rata, Buey, Tigre, Conejo, Dragón, Serpiente, Caballo, Cabra, Mono, Gallo, Perro y Cerdo, y luego el ciclo vuelve a empezar. Cada animal tiene un carácter, y la tradición dice desde hace siglos qué animales se llevan bien, cuáles se complementan y cuáles se pisan. Eso es la compatibilidad de los signos chinos: una lectura de vuestra pareja a partir de vuestros dos años de nacimiento.",
+    "p2": "Nuestra herramienta hace ese cálculo por vosotros. Introducís dos fechas, encuentra los dos animales, su elemento (Madera, Fuego, Tierra, Metal o Agua) y la relación que los une en la rueda: mismo triángulo de afinidad, amigos secretos, signos opuestos, pareja de perjuicio o nada en particular. De ahí saca una puntuación, una explicación de cada animal en el amor y un consejo para vosotros dos.",
+    "p3": "¿Queréis una lectura más amplia? La fecha de nacimiento también da tu signo astrológico y tu camino de vida, y <a href=\"/es/compatibilidad-amorosa-fecha-de-nacimiento/\">cruzar las tres lecturas</a> da un resultado con más matices. Y si lo que os interesa es vuestra pareja tal como es, con sus discusiones reales y sus planes reales, el <a href=\"/es/test-compatibilidad-pareja/\">test de compatibilidad a dos</a> no mira al cielo, os hace preguntas."
+  },
+  "section2": {
+    "title": "Encontrar tu signo chino: cuidado con el año nuevo",
+    "p1": "El año chino no empieza el 1 de enero. Arranca con el año nuevo lunar, entre el 21 de enero y el 20 de febrero según el año. Alguien nacido el 15 de enero de 1990 no es Caballo sino Serpiente, porque el año del Caballo no empezó hasta el 27 de enero de 1990. Es el error más común de las tablas que se encuentran en internet, y afecta más o menos a una persona de cada diez.",
+    "p2": "Nuestra calculadora usa las fechas reales del año nuevo, año por año, de 1924 a 2043. La tabla de abajo da los años de cada animal para orientarte, pero si naciste en enero o febrero, haz el cálculo con la fecha completa: justamente por eso la pedimos.",
+    "tip": "El elemento se lee en la última cifra del año chino: 4 y 5 para la Madera, 6 y 7 para el Fuego, 8 y 9 para la Tierra, 0 y 1 para el Metal, 2 y 3 para el Agua. Un Dragón de 2000 es un Dragón de Metal, un Dragón de 2012 es un Dragón de Agua.",
+    "tableHeaders": [
+      "Signo",
+      "Años recientes",
+      "En el amor"
+    ],
+    "tableRows": [
+      [
+        "Rata",
+        "1960, 1972, 1984, 1996, 2008, 2020",
+        "atenta, charlatana, algo ansiosa"
+      ],
+      [
+        "Buey",
+        "1961, 1973, 1985, 1997, 2009, 2021",
+        "fiel, paciente, cabezota"
+      ],
+      [
+        "Tigre",
+        "1962, 1974, 1986, 1998, 2010, 2022",
+        "apasionado, protector, impulsivo"
+      ],
+      [
+        "Conejo",
+        "1963, 1975, 1987, 1999, 2011, 2023",
+        "dulce, discreto, huye de los conflictos"
+      ],
+      [
+        "Dragón",
+        "1964, 1976, 1988, 2000, 2012, 2024",
+        "entero, generoso, orgulloso"
+      ],
+      [
+        "Serpiente",
+        "1965, 1977, 1989, 2001, 2013, 2025",
+        "profunda, seductora, celosa"
+      ],
+      [
+        "Caballo",
+        "1966, 1978, 1990, 2002, 2014, 2026",
+        "cálido, libre, inconstante"
+      ],
+      [
+        "Cabra",
+        "1967, 1979, 1991, 2003, 2015, 2027",
+        "tierna, creativa, ansiosa"
+      ],
+      [
+        "Mono",
+        "1968, 1980, 1992, 2004, 2016, 2028",
+        "divertido, ingenioso, ligero"
+      ],
+      [
+        "Gallo",
+        "1969, 1981, 1993, 2005, 2017, 2029",
+        "leal, franco, crítico"
+      ],
+      [
+        "Perro",
+        "1970, 1982, 1994, 2006, 2018, 2030",
+        "fiel, justo, inquieto"
+      ],
+      [
+        "Cerdo",
+        "1971, 1983, 1995, 2007, 2019, 2031",
+        "generoso, confiado, vividor"
+      ]
+    ]
+  },
+  "section3": {
+    "title": "Los cuatro triángulos de afinidad",
+    "p1": "La tradición ordena los doce animales en cuatro grupos de tres, con cuatro años de diferencia. Los signos de un mismo triángulo comparten una manera de ver la vida: es el vínculo más favorable para una pareja, aquel en el que uno se entiende sin tener que explicarse.",
+    "p2": "Estar en el mismo triángulo no significa parecerse rasgo por rasgo. La Rata es más prudente que el Dragón, el Perro más inquieto que el Tigre. Pero cuando hay que tomar una decisión, os inclináis hacia el mismo lado, y eso es lo que cuenta a la larga.",
+    "tableHeaders": [
+      "Triángulo",
+      "Los tres signos",
+      "Lo que los une"
+    ],
+    "tableRows": [
+      [
+        "El triángulo de la acción",
+        "Rata, Dragón, Mono",
+        "La energía, la audacia, el gusto por triunfar"
+      ],
+      [
+        "El triángulo del método",
+        "Buey, Serpiente, Gallo",
+        "La paciencia, la estrategia, el sentido del detalle"
+      ],
+      [
+        "El triángulo de la independencia",
+        "Tigre, Caballo, Perro",
+        "La libertad, la lealtad, la franqueza"
+      ],
+      [
+        "El triángulo de la dulzura",
+        "Conejo, Cabra, Cerdo",
+        "La sensibilidad, la calma, el gusto por la comodidad"
+      ]
+    ]
+  },
+  "section4": {
+    "title": "Los amigos secretos y los signos opuestos",
+    "p1": "Además de los triángulos, la tradición conoce seis parejas de amigos secretos, dos animales que no se parecen pero se complementan a la perfección, y seis parejas de signos opuestos, frente a frente en la rueda, con seis años de diferencia. Las primeras forman parejas muy sólidas, las segundas parejas muy atractivas al principio y más difíciles después.",
+    "p2": "También existen seis parejas llamadas « de perjuicio »: Rata y Cabra, Buey y Caballo, Tigre y Serpiente, Conejo y Dragón, Mono y Cerdo, Gallo y Perro. No es una oposición clara. Es más bien un desgaste, pequeñas molestias que vuelven. El resultado te lo dice cuando es tu caso, con lo que hay que vigilar.",
+    "tip": "Una pareja de signos opuestos no está condenada, ni mucho menos. Funciona de otra manera: cada uno conserva su terreno en vez de querer convencer al otro. Muchas parejas que llevan treinta años juntas están hechas de dos opuestos que dejaron de intentar convertirse.",
+    "tableHeaders": [
+      "Tipo de pareja",
+      "Los dos signos",
+      "Lo que dice la tradición"
+    ],
+    "tableRows": [
+      [
+        "Amigos secretos",
+        "Rata + Buey",
+        "El ingenio vivo y la fuerza tranquila"
+      ],
+      [
+        "Amigos secretos",
+        "Tigre + Cerdo",
+        "La audacia y la dulzura"
+      ],
+      [
+        "Amigos secretos",
+        "Conejo + Perro",
+        "La delicadeza y la lealtad"
+      ],
+      [
+        "Amigos secretos",
+        "Dragón + Gallo",
+        "La visión y el sentido del detalle"
+      ],
+      [
+        "Amigos secretos",
+        "Serpiente + Mono",
+        "La inteligencia y el juego"
+      ],
+      [
+        "Amigos secretos",
+        "Caballo + Cabra",
+        "El impulso y la ternura"
+      ],
+      [
+        "Signos opuestos",
+        "Rata + Caballo",
+        "Planificar frente a improvisar"
+      ],
+      [
+        "Signos opuestos",
+        "Buey + Cabra",
+        "Lo concreto frente al sueño"
+      ],
+      [
+        "Signos opuestos",
+        "Tigre + Mono",
+        "El orgullo frente a la burla"
+      ],
+      [
+        "Signos opuestos",
+        "Conejo + Gallo",
+        "La reserva frente a la franqueza"
+      ],
+      [
+        "Signos opuestos",
+        "Dragón + Perro",
+        "La seguridad frente a la duda"
+      ],
+      [
+        "Signos opuestos",
+        "Serpiente + Cerdo",
+        "La desconfianza frente a la confianza"
+      ]
+    ]
+  },
+  "section5": {
+    "title": "Los cinco elementos, lo que matiza el resultado",
+    "p1": "Cada animal vuelve cada doce años, pero nunca con el mismo elemento. Un Tigre de Fuego (1986) y un Tigre de Agua (1962) no viven su amor de la misma manera. Los cinco elementos se encadenan en un ciclo: la Madera alimenta al Fuego, el Fuego alimenta a la Tierra, la Tierra alimenta al Metal, el Metal alimenta al Agua, y el Agua alimenta a la Madera. Dos elementos seguidos se llevan bien; dos elementos separados por un puesto se controlan.",
+    "p2": "En el resultado, el elemento sube o baja la puntuación unos pocos puntos, nunca más. Es un matiz, no el fondo. Dos animales opuestos con elementos que se alimentan siguen siendo un dúo tenso, con un poco más de dulzura en los días malos.",
+    "tableHeaders": [
+      "Elemento",
+      "El año chino termina en",
+      "Lo que aporta a la pareja"
+    ],
+    "tableRows": [
+      [
+        "Madera",
+        "4 ou 5",
+        "el crecimiento, la generosidad, la necesidad de proyectos"
+      ],
+      [
+        "Fuego",
+        "6 ou 7",
+        "la pasión, el impulso, los enfados que pasan rápido"
+      ],
+      [
+        "Tierra",
+        "8 ou 9",
+        "la estabilidad, la paciencia, el gusto por lo concreto"
+      ],
+      [
+        "Metal",
+        "0 ou 1",
+        "el rigor, la lealtad, la dificultad para ceder"
+      ],
+      [
+        "Agua",
+        "2 ou 3",
+        "la sensibilidad, la intuición, la necesidad de que te tranquilicen"
+      ]
+    ]
+  },
+  "section6": {
+    "title": "¿Y si la puntuación es baja?",
+    "p1": "Entonces no pasa nada grave. Esta puntuación mide el acuerdo entre dos temperamentos simbólicos, los de vuestros años de nacimiento. No mide ni vuestros sentimientos ni la solidez de lo que habéis construido. Miles de parejas de signos opuestos viven muy bien juntas, y parejas del mismo triángulo se separan.",
+    "p2": "Lo que una puntuación baja os puede aportar es una conversación. Leed el retrato de tu animal y el de tu pareja, y preguntaos qué es cierto y qué no. La mayoría de las veces, ahí es donde se pone interesante: uno se reconoce en una línea, el otro se reconoce en otra, y se habla de una molestia que nunca se había nombrado.",
+    "tip": "Haced el cálculo juntos en vez de cada uno por su lado. La cifra cuenta menos que lo que os diréis leyendo los retratos."
+  },
+  "faq": {
+    "title": "Vuestras preguntas sobre la compatibilidad de los signos chinos",
+    "q1": "¿Cómo saber si dos signos chinos son compatibles?",
+    "a1": "Primero se mira la relación entre los dos animales en la rueda: mismo triángulo de afinidad (cuatro años de diferencia), amigos secretos, signos opuestos (seis años de diferencia), pareja de perjuicio o ningún vínculo particular. Luego se afina con el elemento de cada uno, que depende del año. Nuestra herramienta hace las dos cosas y te explica el resultado.",
+    "q2": "¿Qué signos chinos van mejor juntos en el amor?",
+    "a2": "Las parejas del mismo triángulo: Rata, Dragón y Mono entre ellos; Buey, Serpiente y Gallo; Tigre, Caballo y Perro; Conejo, Cabra y Cerdo. Y las seis parejas de amigos secretos: Rata y Buey, Tigre y Cerdo, Conejo y Perro, Dragón y Gallo, Serpiente y Mono, Caballo y Cabra.",
+    "q3": "¿Qué signos chinos no van juntos?",
+    "a3": "Las seis parejas opuestas, con seis años de diferencia: Rata y Caballo, Buey y Cabra, Tigre y Mono, Conejo y Gallo, Dragón y Perro, Serpiente y Cerdo. Son las parejas más tensas de la tradición, pero también a menudo las más atractivas al principio. « No ir juntos » quiere decir aquí « no funcionar igual », no « no quererse ».",
+    "q4": "Nací en enero, ¿cuál es mi signo chino?",
+    "a4": "Probablemente el del año anterior. El año chino empieza entre el 21 de enero y el 20 de febrero, así que un nacimiento en enero cae casi siempre en el año chino anterior. Introduce tu fecha completa en la calculadora, conoce la fecha del año nuevo de cada año.",
+    "q5": "¿Hay que tener en cuenta el elemento?",
+    "a5": "Sí, pero como un matiz. El animal da el temperamento, el elemento dice cómo se expresa: un Caballo de Fuego es más arrebatado que un Caballo de Tierra. En nuestro cálculo, el elemento mueve la puntuación unos pocos puntos cuando los dos se alimentan o se contrarían.",
+    "q6": "¿Se guardan los resultados?",
+    "a6": "No. El cálculo se hace en tu navegador, las fechas no van a ninguna parte y no se conserva nada. Puedes repetir el cálculo tantas veces como quieras, con las fechas de quien quieras."
+  },
+  "jsonLd": {
+    "about": "compatibilidad amorosa de los signos del zodiaco chino"
+  }
+}

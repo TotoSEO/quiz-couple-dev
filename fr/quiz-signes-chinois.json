@@ -1,0 +1,705 @@
+{
+  "hero": {
+    "badge": "Astrologie chinoise",
+    "title": "Êtes-vous compatibles selon vos signes chinois ?",
+    "highlight": "signes chinois",
+    "description": "Deux dates de naissance suffisent. On en tire votre animal et celui de votre partenaire, l'élément de chacun, et ce que la tradition chinoise dit de votre rencontre : <strong>même triangle</strong>, <strong>amis secrets</strong>, <strong>signes opposés</strong>... Le résultat explique tout, avec un score et un conseil.",
+    "subtitle": "Aucune inscription, aucun e-mail. Le résultat s'affiche tout de suite."
+  },
+  "form": {
+    "titre": "Vos deux dates de naissance",
+    "personne1": "Vous",
+    "personne2": "Votre partenaire",
+    "jour": "Jour",
+    "moisLabel": "Mois",
+    "annee": "Année",
+    "mois": [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre"
+    ],
+    "moisDate": [
+      "janvier",
+      "février",
+      "mars",
+      "avril",
+      "mai",
+      "juin",
+      "juillet",
+      "août",
+      "septembre",
+      "octobre",
+      "novembre",
+      "décembre"
+    ],
+    "dateAffichee": "{{j}} {{mois}} {{a}}",
+    "erreur": "Une des deux dates n'existe pas. Vérifiez le jour et le mois choisis.",
+    "lancer": "Calculer notre compatibilité",
+    "aide": "L'année donne l'animal et l'élément. Mais l'année chinoise commence fin janvier ou début février, c'est pour ça qu'on demande la date complète."
+  },
+  "animaux": {
+    "rat": "Rat",
+    "buffle": "Buffle",
+    "tigre": "Tigre",
+    "lapin": "Lapin",
+    "dragon": "Dragon",
+    "serpent": "Serpent",
+    "cheval": "Cheval",
+    "chevre": "Chèvre",
+    "singe": "Singe",
+    "coq": "Coq",
+    "chien": "Chien",
+    "cochon": "Cochon"
+  },
+  "elements": {
+    "bois": "Bois",
+    "feu": "Feu",
+    "terre": "Terre",
+    "metal": "Métal",
+    "eau": "Eau"
+  },
+  "relations": {
+    "trine": "{{a1}} et {{a2}} appartiennent au même triangle d'affinité. Dans le zodiaque chinois, c'est le lien le plus recherché : vous avancez au même rythme, vous voulez à peu près les mêmes choses, et vous n'avez pas besoin de vous expliquer longtemps pour vous mettre d'accord.",
+    "harmonie": "{{a1}} et {{a2}} forment l'une des six paires d'amis secrets. Vous ne vous ressemblez pas, et c'est justement ce qui marche : chacun est fort là où l'autre est fragile, et ça se fait sans effort, presque sans y penser.",
+    "meme": "Vous êtes tous les deux {{a1}}. Vous vous comprenez vite, vous avez les mêmes envies et les mêmes défauts. C'est reposant, et c'est aussi un miroir : ce qui vous agace chez l'autre, vous le faites probablement aussi.",
+    "neutre": "{{a1}} et {{a2}} n'ont ni affinité particulière ni tension marquée dans la tradition chinoise. Rien ne vous porte tout seul, rien ne vous freine non plus. Ce que vous en faites dépend de vous deux, plus que de vos signes.",
+    "nuisance": "{{a1}} et {{a2}} font partie des six paires que la tradition appelle « de nuisance ». Ce n'est pas une incompatibilité franche. C'est plutôt une usure : des petits agacements qui reviennent, et qui finissent par peser si personne ne les nomme.",
+    "opposition": "{{a1}} et {{a2}} sont face à face sur la roue, à six signes d'écart. C'est l'axe le plus tendu du zodiaque chinois, et souvent le plus attirant au début. Vous vous plaisez parce que vous êtes différents, et c'est cette différence qui fatigue avec le temps."
+  },
+  "elementsRelation": {
+    "meme": "Vous partagez le même élément, le {{e1}}. Vous réagissez aux événements avec la même énergie, ce qui rend la vie à deux plus simple, et les mauvais jours plus intenses, parce que personne ne calme l'autre.",
+    "nourrit": "Vos éléments s'entendent bien : dans le cycle chinois, le {{de}} nourrit le {{vers}}. L'un donne de l'élan à l'autre sans le brusquer. C'est un petit plus qui compte au quotidien, surtout dans les périodes de fatigue.",
+    "controle": "Vos éléments se contrarient : dans le cycle chinois, le {{de}} contrôle le {{vers}}. L'un tempère l'autre, ce qui évite les excès mais peut donner l'impression d'être freiné. Ça se règle en disant à quel moment on a besoin d'être poussé, et à quel moment on a besoin d'être laissé tranquille."
+  },
+  "paliers": {
+    "fusion": {
+      "titre": "Deux signes qui se répondent",
+      "texte": "La tradition est nette pour {{a1}} et {{a2}} : vous êtes faits pour vous entendre. Vos animaux avancent dans le même sens et vos éléments s'accordent. Ça ne dispense de rien, mais vous partez avec de l'avance !"
+    },
+    "belle": {
+      "titre": "Une belle entente, avec un détail à surveiller",
+      "texte": "L'essentiel est là entre {{a1}} et {{a2}}. Vos signes s'entendent bien, et ce qui fait baisser le score est un détail : un élément qui freine l'autre, ou une paire qui demande un peu d'attention. Rien qui empêche une longue histoire."
+    },
+    "solide": {
+      "titre": "Un couple qui tient, sans être porté par les astres",
+      "texte": "{{a1}} et {{a2}} ne sont ni faits l'un pour l'autre ni faits pour se disputer, selon la tradition. Vous êtes dans la zone la plus fréquente, celle où le couple dépend de ce que vous en faites. Ce que dit la roue est en dessous, et c'est plutôt encourageant."
+    },
+    "travail": {
+      "titre": "Deux tempéraments qui doivent apprendre à se lire",
+      "texte": "Entre {{a1}} et {{a2}}, la tradition voit des frottements. Pas une incompatibilité, mais des habitudes qui se marchent dessus si on ne se dit rien. Les couples qui durent avec ce genre de score sont ceux qui ont mis des mots sur ce qui agace."
+    },
+    "contraires": {
+      "titre": "Deux mondes à relier",
+      "texte": "{{a1}} et {{a2}} sont l'un des duos les plus tendus du zodiaque chinois. Souvent, c'est aussi l'un des plus attirants au début. Ce score ne dit rien de vos sentiments, il dit que vous ne fonctionnez pas pareil, et que ça se voit dans les détails du quotidien."
+    }
+  },
+  "resultat": {
+    "animal": "Signe chinois",
+    "element": "Élément",
+    "polarite": "Polarité",
+    "yin": "Yin",
+    "yang": "Yang",
+    "anneeLunaire": "Année chinoise",
+    "titreRoue": "{{a1}} et {{a2}} : ce que dit la roue",
+    "titrePortrait": "{{a}} en amour",
+    "titreElements": "Vos éléments : {{e1}} et {{e2}}",
+    "titreConseil": "Le conseil pour vous deux",
+    "refaire": "Tester deux autres dates",
+    "avis": "Laisser un avis"
+  },
+  "portraits": {
+    "rat": "Le Rat est vif, curieux et très sociable. En amour, il est attentif et généreux avec les gens qu'il a choisis, et plutôt économe avec le reste du monde. Il a besoin de parler, de comprendre, de sentir qu'il compte. Son point faible, c'est l'inquiétude : il anticipe, il vérifie, il se fait des films. Avec quelqu'un de stable qui le rassure sans le brider, il devient un partenaire fidèle et drôle.",
+    "buffle": "Le Buffle est patient, fiable et travailleur. Il aime peu de gens mais il les aime longtemps, et il montre son attachement par des actes plutôt que par des mots. Il a besoin de calme, de routine et de confiance. Son point faible, c'est l'entêtement : quand il a décidé, il n'écoute plus. Il donne le meilleur de lui-même avec quelqu'un qui sait attendre et qui ne le pousse pas dans ses retranchements.",
+    "tigre": "Le Tigre est passionné, courageux et un peu imprévisible. En amour, il s'engage à fond, protège les siens et déteste s'ennuyer. Il a besoin de mouvement, de projets et d'admiration. Son point faible, c'est l'impulsivité : il dit et fait vite, et il regrette parfois. Il s'épanouit avec quelqu'un qui le suit dans ses élans tout en gardant les pieds sur terre.",
+    "lapin": "Le Lapin est doux, diplomate et attaché à son confort. Il évite les conflits, soigne son intérieur et ses proches, et préfère une soirée tranquille à une sortie bruyante. Il a besoin de sécurité affective et de tendresse. Son point faible, c'est la fuite : plutôt que d'affronter, il s'éloigne en silence. Il est heureux avec quelqu'un de prévenant qui ne le brusque jamais.",
+    "dragon": "Le Dragon a du charisme, de l'énergie et de l'ambition. En amour, il est entier, généreux et fier. Il a besoin qu'on croie en lui et qu'on suive son rythme, qui est rapide. Son point faible, c'est l'orgueil : il supporte mal la critique et cède rarement le premier. Il donne beaucoup à quelqu'un qui sait l'admirer sans s'effacer.",
+    "serpent": "Le Serpent est réfléchi, séduisant et secret. En amour, il observe avant de s'engager, puis il s'attache profondément. Il a besoin de complicité intellectuelle et d'un peu de mystère. Son point faible, c'est la jalousie : il garde ce qu'il aime et surveille sans le dire. Il est bien avec quelqu'un de fidèle qui respecte ses silences.",
+    "cheval": "Le Cheval est enthousiaste, franc et indépendant. En amour, il est chaleureux et spontané, mais il a horreur de se sentir enfermé. Il a besoin d'air, de nouveauté et de liberté de mouvement. Son point faible, c'est l'inconstance : il s'enflamme vite et se lasse parfois aussi vite. Il dure avec quelqu'un qui partage ses envies sans chercher à le retenir.",
+    "chevre": "La Chèvre est sensible, créative et douce. En amour, elle donne beaucoup et a besoin de se sentir protégée et rassurée. Elle fuit les disputes et préfère céder plutôt que d'affronter. Son point faible, c'est l'anxiété : elle doute, elle a besoin qu'on lui redise les choses. Elle s'épanouit avec quelqu'un de solide et de tendre, qui prend les décisions difficiles sans la brusquer.",
+    "singe": "Le Singe est drôle, inventif et malin. En amour, il séduit par l'humour et l'imagination, et il déteste la routine. Il a besoin de jeu, de surprises et d'un partenaire qui suit ses idées. Son point faible, c'est la légèreté : il peut fuir les conversations sérieuses par une plaisanterie. Il tient la distance avec quelqu'un qui le fait rire et qui sait, de temps en temps, le ramener sur terre.",
+    "coq": "Le Coq est honnête, précis et fier. En amour, il est loyal et attentif aux détails, et il dit ce qu'il pense, parfois un peu trop. Il a besoin d'ordre, de reconnaissance et de franchise. Son point faible, c'est la critique : il remarque tout et le fait savoir. Il est heureux avec quelqu'un qui prend ses remarques pour de l'attention et qui sait lui répondre.",
+    "chien": "Le Chien est loyal, juste et protecteur. En amour, il est fidèle et attentif, prêt à beaucoup pour les gens qu'il aime. Il a besoin de confiance et de constance. Son point faible, c'est l'inquiétude : il imagine le pire, il a du mal à lâcher prise. Il donne le meilleur de lui-même avec quelqu'un d'honnête qui le rassure par des actes réguliers.",
+    "cochon": "Le Cochon est généreux, bon vivant et confiant. En amour, il donne sans compter, aime les plaisirs simples et pardonne facilement. Il a besoin de chaleur, de partage et d'une vie douce. Son point faible, c'est la naïveté : il fait confiance vite et peut être déçu. Il est heureux avec quelqu'un d'honnête qui prend soin de lui autant qu'il prend soin des autres."
+  },
+  "paires": {
+    "rat-rat": {
+      "note": 7.0,
+      "texte": "Deux Rats se comprennent au premier regard. Vous parlez beaucoup, vous rangez les mêmes choses, vous vous inquiétez des mêmes factures. Attention à ne pas vous rassurer l'un l'autre dans l'angoisse : il faut que l'un des deux sache dire « ça va aller »."
+    },
+    "rat-buffle": {
+      "note": 8.4,
+      "texte": "Le Rat s'agite, le Buffle stabilise. Vous êtes amis secrets : le Rat apporte les idées et la légèreté, le Buffle la constance et la sécurité. L'un a besoin de l'autre exactement là où il manque."
+    },
+    "rat-tigre": {
+      "note": 6.2,
+      "texte": "Le Rat calcule, le Tigre fonce. Vous vous admirez et vous vous agacez pour la même raison. Ça marche quand le Rat accepte de se laisser embarquer parfois, et quand le Tigre écoute les prudences du Rat avant de sauter."
+    },
+    "rat-lapin": {
+      "note": 5.8,
+      "texte": "Le Rat aime la compagnie, le Lapin aime le calme. Vous avez en commun le goût d'un intérieur soigné et d'une vie sans drame. Le Lapin devra dire quand il a besoin de silence, le Rat devra apprendre à ne pas remplir chaque soirée."
+    },
+    "rat-dragon": {
+      "note": 9.0,
+      "texte": "Un des plus beaux duos du zodiaque chinois. Le Rat admire l'audace du Dragon, le Dragon adore l'esprit du Rat. Vous êtes du même triangle : vous voulez réussir, bouger, construire, et vous le faites à deux."
+    },
+    "rat-serpent": {
+      "note": 6.4,
+      "texte": "Deux esprits fins qui aiment observer et comprendre. Le Rat parle, le Serpent écoute, et vous passez des heures à décortiquer le monde. Le risque, c'est la méfiance à deux : apprenez à vous croire sur parole."
+    },
+    "rat-cheval": {
+      "note": 3.6,
+      "texte": "Le Rat économise, le Cheval dépense ; le Rat planifie, le Cheval improvise. Vous êtes en opposition, et l'attirance du début vient justement de là. Pour durer, il faut accepter que vous ne fonctionnerez jamais au même tempo."
+    },
+    "rat-chevre": {
+      "note": 4.6,
+      "texte": "Le Rat a besoin qu'on le rassure, la Chèvre aussi. Vous êtes une paire dite « de nuisance » : l'inquiétude de l'un nourrit celle de l'autre. Ce qui vous sauve, c'est votre tendresse commune, à condition que l'un des deux ose trancher."
+    },
+    "rat-singe": {
+      "note": 8.8,
+      "texte": "Même triangle, même vivacité, même humour. Le Rat et le Singe ne s'ennuient jamais ensemble et trouvent une solution à tout. Attention seulement à ne pas tout transformer en plaisanterie quand il faut parler sérieusement."
+    },
+    "rat-coq": {
+      "note": 5.6,
+      "texte": "Le Rat s'adapte, le Coq tient ses positions. Vous êtes deux perfectionnistes qui ne perfectionnent pas la même chose. Ça peut être très productif à condition de ne pas se corriger l'un l'autre à longueur de journée."
+    },
+    "rat-chien": {
+      "note": 6.4,
+      "texte": "Le Rat et le Chien partagent le sens de la famille et une loyauté profonde. Le Chien calme les inquiétudes du Rat, le Rat allège les scrupules du Chien. Un couple discret qui dure souvent plus longtemps qu'on ne le prédit."
+    },
+    "rat-cochon": {
+      "note": 6.8,
+      "texte": "Le Rat est malin, le Cochon est confiant, et l'un protège l'autre sans y penser. Vous aimez les mêmes plaisirs simples, un bon repas, une soirée entre amis. Le Rat devra veiller à ne pas profiter de la générosité du Cochon."
+    },
+    "buffle-buffle": {
+      "note": 6.8,
+      "texte": "Deux Buffles, c'est une maison solide et des habitudes bien posées. Vous vous faites confiance et vous travaillez dans le même sens. Le risque, c'est deux têtus face à face : quand vous n'êtes pas d'accord, personne ne bouge."
+    },
+    "buffle-tigre": {
+      "note": 5.6,
+      "texte": "Le Buffle veut de la stabilité, le Tigre veut de l'aventure. Vous vous respectez, mais vous vous freinez mutuellement. Ça tient si le Tigre accepte un cadre et si le Buffle accepte de sortir du sien de temps en temps."
+    },
+    "buffle-lapin": {
+      "note": 6.6,
+      "texte": "Le Buffle protège, le Lapin adoucit. Vous partagez le goût d'un foyer calme et d'une vie sans secousses. Le Lapin devra apprendre à dire ce qu'il veut plutôt que de l'attendre, le Buffle devra parfois demander au lieu de décider."
+    },
+    "buffle-dragon": {
+      "note": 5.8,
+      "texte": "Deux caractères forts, deux façons de diriger. Le Buffle avance pas à pas, le Dragon veut aller vite et loin. Ça marche quand chacun a son domaine et que personne ne veut avoir le dernier mot sur tout."
+    },
+    "buffle-serpent": {
+      "note": 8.8,
+      "texte": "Même triangle : la patience du Buffle et la stratégie du Serpent font un duo redoutable. Vous prenez votre temps, vous construisez, vous ne vous éparpillez pas. Un couple discret et très solide."
+    },
+    "buffle-cheval": {
+      "note": 4.4,
+      "texte": "Le Buffle s'installe, le Cheval a envie de partir. Vous êtes une paire « de nuisance » : ce n'est pas une guerre, c'est un décalage permanent de rythme. Il faut beaucoup de dialogue pour que l'un ne se sente pas enfermé et l'autre abandonné."
+    },
+    "buffle-chevre": {
+      "note": 3.8,
+      "texte": "Le Buffle est concret, la Chèvre est rêveuse. Vous êtes en opposition : ce que l'un trouve essentiel, l'autre trouve secondaire. La tendresse de la Chèvre peut adoucir le Buffle, à condition qu'il apprenne à la rassurer avec des mots."
+    },
+    "buffle-singe": {
+      "note": 6.2,
+      "texte": "Le Buffle prend tout au sérieux, le Singe prend tout à la légère. Vous pouvez vous faire beaucoup de bien : le Singe déride le Buffle, le Buffle pose le Singe. Ou beaucoup d'agacement, si aucun des deux ne fait un pas."
+    },
+    "buffle-coq": {
+      "note": 8.6,
+      "texte": "Même triangle, même sens du devoir, même goût du travail bien fait. Le Buffle et le Coq forment un couple organisé où chacun sait ce qu'il a à faire. Pensez à vous accorder des moments qui ne servent à rien."
+    },
+    "buffle-chien": {
+      "note": 5.8,
+      "texte": "Deux loyaux, deux fidèles, deux inquiets. Le Buffle et le Chien se font confiance, mais ils peuvent s'enfermer dans la prudence. Il faut que l'un des deux ait envie d'aller voir ailleurs, en voyage, pas en amour."
+    },
+    "buffle-cochon": {
+      "note": 6.6,
+      "texte": "Le Buffle rassure, le Cochon réchauffe. Vous aimez la maison, les bons repas et les gens simples. Le Cochon devra respecter le besoin de calme du Buffle, le Buffle devra s'ouvrir aux amis du Cochon."
+    },
+    "tigre-tigre": {
+      "note": 6.2,
+      "texte": "Deux Tigres, c'est beaucoup de passion et beaucoup d'orages. Vous vous admirez, vous vous défiez, vous vous réconciliez avec fougue. Pour durer, il faut décider ensemble qui cède cette fois-ci, parce qu'aucun de vous ne le fait naturellement."
+    },
+    "tigre-lapin": {
+      "note": 6.2,
+      "texte": "Le Tigre attaque, le Lapin esquive. Vous vous complétez à condition que le Tigre baisse la voix et que le Lapin ose dire ce qui le blesse. Le Lapin apporte la douceur dont le Tigre a besoin sans le savoir."
+    },
+    "tigre-dragon": {
+      "note": 7.0,
+      "texte": "Deux forces de la nature. Le Tigre et le Dragon s'admirent, s'entraînent et se disputent le volant. Ce couple brille en public, mais il doit apprendre à laisser l'autre gagner de temps en temps, sinon la maison devient une arène."
+    },
+    "tigre-serpent": {
+      "note": 4.4,
+      "texte": "Le Tigre est direct, le Serpent est secret. Vous êtes une paire « de nuisance » : le Tigre ne comprend pas les silences du Serpent, le Serpent n'aime pas les éclats du Tigre. Ça se travaille, avec beaucoup de patience et peu de reproches."
+    },
+    "tigre-cheval": {
+      "note": 8.8,
+      "texte": "Même triangle : deux indépendants qui aiment l'action et la franchise. Le Tigre et le Cheval se laissent de l'air, partent ensemble et reviennent ensemble. Un couple qui bouge et qui rit, à condition de garder quelques rendez-vous fixes."
+    },
+    "tigre-chevre": {
+      "note": 5.8,
+      "texte": "Le Tigre protège, la Chèvre s'appuie. Ça peut faire un couple tendre, si le Tigre ne confond pas protection et domination. La Chèvre devra oser dire non, et le Tigre apprendre à l'entendre."
+    },
+    "tigre-singe": {
+      "note": 3.6,
+      "texte": "Le Tigre et le Singe sont face à face sur la roue. Le Singe s'amuse de la fierté du Tigre, le Tigre se lasse des pirouettes du Singe. Beaucoup d'attirance, beaucoup de rires au début, et un besoin réel de règles claires ensuite."
+    },
+    "tigre-coq": {
+      "note": 5.6,
+      "texte": "Deux fiers qui aiment avoir raison. Le Tigre agit vite, le Coq corrige les détails, et chacun trouve l'autre insupportable dans ses mauvais jours. Ça tient si vous transformez la compétition en équipe."
+    },
+    "tigre-chien": {
+      "note": 9.0,
+      "texte": "L'un des duos les plus sûrs du zodiaque chinois. Le Chien croit au Tigre et le Tigre protège le Chien, dans le même triangle de loyauté et de liberté. Vous vous faites confiance, et c'est ce qui vous rend solides."
+    },
+    "tigre-cochon": {
+      "note": 8.6,
+      "texte": "Amis secrets : le Tigre apporte l'audace, le Cochon la douceur et la chaleur. Le Cochon calme le Tigre sans le brider, le Tigre donne au Cochon l'élan qui lui manque. Un couple généreux qui reçoit beaucoup."
+    },
+    "lapin-lapin": {
+      "note": 7.4,
+      "texte": "Deux Lapins, c'est un intérieur douillet, des soirées calmes et très peu de disputes. Vous vous comprenez sans parler. Le risque, c'est le non-dit : vous évitez tous les deux les sujets qui fâchent, et ils s'accumulent."
+    },
+    "lapin-dragon": {
+      "note": 4.8,
+      "texte": "Le Lapin cherche le calme, le Dragon fait du bruit. Vous êtes une paire « de nuisance » : le Dragon peut trouver le Lapin trop réservé, le Lapin peut se sentir écrasé. Ça marche quand le Dragon ralentit et que le Lapin s'affirme."
+    },
+    "lapin-serpent": {
+      "note": 6.4,
+      "texte": "Deux natures fines et un peu secrètes. Le Lapin et le Serpent aiment le confort, la beauté et les conversations à deux. Vous vous devinez plus que vous ne vous parlez, ce qui est charmant jusqu'au jour où il faudrait vraiment se dire les choses."
+    },
+    "lapin-cheval": {
+      "note": 6.0,
+      "texte": "Le Lapin aime rester, le Cheval aime partir. Vous pouvez vous rejoindre sur la gentillesse et la bonne humeur, mais vos rythmes de vie diffèrent. Le Cheval devra prévenir, le Lapin devra accepter de sortir de son terrier."
+    },
+    "lapin-chevre": {
+      "note": 8.8,
+      "texte": "Même triangle : deux sensibles qui aiment la douceur et la paix. Le Lapin et la Chèvre se protègent l'un l'autre et créent un foyer chaleureux. Il faudra que l'un des deux prenne les décisions que l'autre repousse."
+    },
+    "lapin-singe": {
+      "note": 5.8,
+      "texte": "Le Lapin est discret, le Singe est bruyant. Le Singe amuse le Lapin et le Lapin apaise le Singe, tant que le Singe ne se moque pas de sa réserve. Deux mondes qui peuvent se faire du bien, sans se ressembler."
+    },
+    "lapin-coq": {
+      "note": 3.8,
+      "texte": "Le Lapin et le Coq sont en opposition. Le Coq remarque tout et le dit, le Lapin le prend à cœur et se referme. L'attirance existe, mais le Coq devra adoucir sa franchise et le Lapin devra apprendre à répondre."
+    },
+    "lapin-chien": {
+      "note": 8.6,
+      "texte": "Amis secrets : la douceur du Lapin et la loyauté du Chien font un couple attentif et fidèle. Vous prenez soin l'un de l'autre sans compter. Le seul risque, c'est de trop vous inquiéter à deux pour le monde extérieur."
+    },
+    "lapin-cochon": {
+      "note": 8.6,
+      "texte": "Même triangle, même goût du bien-être. Le Lapin et le Cochon aiment manger, recevoir et se blottir. Vous êtes généreux l'un envers l'autre et rarement en conflit. Gardez juste un œil sur le budget et sur les kilos."
+    },
+    "dragon-dragon": {
+      "note": 6.4,
+      "texte": "Deux Dragons, c'est beaucoup de feu et deux orgueils. Vous vous admirez, vous visez haut, et vous vous disputez la première place. Ça dure si chacun a son royaume et si vous savez féliciter l'autre sans jalousie."
+    },
+    "dragon-serpent": {
+      "note": 6.8,
+      "texte": "Le Dragon brille, le Serpent réfléchit. Un couple élégant, où le Serpent conseille et le Dragon agit. Attention à la jalousie du Serpent face au charisme du Dragon, et à l'impatience du Dragon face aux silences du Serpent."
+    },
+    "dragon-cheval": {
+      "note": 6.6,
+      "texte": "Deux énergies fortes et généreuses. Le Dragon et le Cheval aiment l'action, la fête et les grands projets. Vous vous entraînez mutuellement, parfois trop loin. Prévoyez des moments calmes, sinon vous vous épuisez."
+    },
+    "dragon-chevre": {
+      "note": 6.0,
+      "texte": "Le Dragon décide, la Chèvre suit, et ça peut fonctionner longtemps. La Chèvre apporte de la douceur au Dragon, le Dragon donne de la sécurité à la Chèvre. Le risque, c'est que la Chèvre s'efface trop et finisse par le regretter."
+    },
+    "dragon-singe": {
+      "note": 8.6,
+      "texte": "Même triangle : l'audace du Dragon et l'ingéniosité du Singe, une équipe qui gagne. Vous avez des idées, de l'énergie et le sens du spectacle. Le Singe fait rire le Dragon, le Dragon donne au Singe une direction."
+    },
+    "dragon-coq": {
+      "note": 8.4,
+      "texte": "Amis secrets : le Dragon voit grand, le Coq soigne les détails. Ce qui pourrait agacer devient une force quand chacun respecte le travail de l'autre. Un couple qui construit, à condition que le Coq ne critique pas chaque idée du Dragon."
+    },
+    "dragon-chien": {
+      "note": 3.8,
+      "texte": "Le Dragon et le Chien sont face à face sur la roue. Le Chien doute de ce que le Dragon affirme, le Dragon s'agace de la prudence du Chien. Deux loyaux qui s'attirent mais qui doivent accepter de ne pas voir le monde pareil."
+    },
+    "dragon-cochon": {
+      "note": 6.4,
+      "texte": "Le Dragon prend la lumière, le Cochon prend soin. Un duo chaleureux où le Cochon admire sans jalousie et le Dragon protège avec générosité. Le Dragon devra juste penser à remercier, parce que le Cochon ne réclame jamais."
+    },
+    "serpent-serpent": {
+      "note": 6.8,
+      "texte": "Deux Serpents, c'est un couple élégant, discret et très fidèle, avec une part de mystère de chaque côté. Vous vous comprenez à demi-mot. Le risque, c'est la jalousie croisée et les silences qui durent trop longtemps."
+    },
+    "serpent-cheval": {
+      "note": 6.0,
+      "texte": "Le Serpent réfléchit, le Cheval fonce. Le Cheval peut trouver le Serpent trop lent, le Serpent peut trouver le Cheval trop dispersé. Vous avez pourtant beaucoup à vous apprendre, si la jalousie du Serpent ne s'invite pas."
+    },
+    "serpent-chevre": {
+      "note": 6.2,
+      "texte": "Deux natures raffinées qui aiment la beauté et la tranquillité. Le Serpent rassure la Chèvre par sa constance, la Chèvre adoucit le Serpent par sa tendresse. Un couple calme, où il faut parfois provoquer un peu de nouveauté."
+    },
+    "serpent-singe": {
+      "note": 8.2,
+      "texte": "Amis secrets : le Serpent et le Singe partagent une intelligence vive et un vrai goût du jeu. Le Singe déride le Serpent, le Serpent canalise le Singe. Attention seulement à ne pas vous manipuler l'un l'autre par habitude."
+    },
+    "serpent-coq": {
+      "note": 8.6,
+      "texte": "Même triangle : deux esprits précis qui aiment les choses bien faites. Le Serpent et le Coq forment un couple organisé et fidèle. Le Coq parle, le Serpent écoute, et vous prenez rarement une décision à la légère."
+    },
+    "serpent-chien": {
+      "note": 6.2,
+      "texte": "Le Serpent est secret, le Chien a besoin de transparence. Vous pouvez vous rassurer l'un l'autre par la fidélité, à condition que le Serpent accepte de dire ce qu'il pense et que le Chien accepte de ne pas tout savoir."
+    },
+    "serpent-cochon": {
+      "note": 4.0,
+      "texte": "Le Serpent et le Cochon sont en opposition. Le Cochon fait confiance à tout le monde, le Serpent se méfie de tout le monde. L'attirance est réelle, mais le Cochon peut se sentir surveillé et le Serpent peut se sentir seul dans sa vigilance."
+    },
+    "cheval-cheval": {
+      "note": 6.6,
+      "texte": "Deux Chevaux, c'est de l'énergie, des voyages et beaucoup de liberté. Vous ne vous enfermez pas l'un l'autre, ce qui vous rend heureux. Le risque, c'est de courir chacun de son côté et de vous croiser sans vous retrouver."
+    },
+    "cheval-chevre": {
+      "note": 8.6,
+      "texte": "Amis secrets : le Cheval apporte l'élan, la Chèvre apporte la douceur. Le Cheval protège la Chèvre de ses angoisses, la Chèvre offre au Cheval un endroit où revenir. Un des duos les plus tendres du zodiaque."
+    },
+    "cheval-singe": {
+      "note": 6.2,
+      "texte": "Deux joueurs qui aiment la nouveauté et la vitesse. Le Cheval et le Singe s'amusent beaucoup et s'ennuient rarement. Il faudra que l'un des deux s'occupe des choses sérieuses, parce qu'aucun n'en a envie."
+    },
+    "cheval-coq": {
+      "note": 5.8,
+      "texte": "Le Cheval improvise, le Coq organise. Le Coq peut trouver le Cheval brouillon, le Cheval peut trouver le Coq rigide. Ça marche si le Coq laisse de la place à l'imprévu et si le Cheval respecte quelques règles de la maison."
+    },
+    "cheval-chien": {
+      "note": 8.6,
+      "texte": "Même triangle : deux francs, deux loyaux, deux amoureux de la liberté. Le Cheval et le Chien se comprennent et se font confiance sans se surveiller. Le Chien devra juste apprendre à moins s'inquiéter des absences du Cheval."
+    },
+    "cheval-cochon": {
+      "note": 6.4,
+      "texte": "Le Cheval entraîne, le Cochon suit avec plaisir. Vous aimez les bons moments, les amis et les projets spontanés. Le Cochon devra dire quand il est fatigué, le Cheval devra penser à ralentir pour lui."
+    },
+    "chevre-chevre": {
+      "note": 7.2,
+      "texte": "Deux Chèvres, c'est un couple doux, artiste et attentionné, avec peu de disputes. Vous vous comprenez sur la sensibilité. Le risque, c'est de vous rassurer dans l'inquiétude et de reporter les décisions à deux."
+    },
+    "chevre-singe": {
+      "note": 6.4,
+      "texte": "La Chèvre est sensible, le Singe est taquin. Le Singe fait rire la Chèvre et la sort de ses doutes, tant qu'il ne se moque pas d'elle. La Chèvre offre au Singe une tendresse qu'il ne sait pas demander."
+    },
+    "chevre-coq": {
+      "note": 5.6,
+      "texte": "La Chèvre a besoin de douceur, le Coq dit ce qu'il pense sans détour. Ce duo demande des efforts : le Coq devra choisir ses mots, la Chèvre devra entendre une remarque sans y voir un rejet."
+    },
+    "chevre-chien": {
+      "note": 5.8,
+      "texte": "Deux inquiets qui ont besoin d'être rassurés, deux fidèles qui savent l'être. La Chèvre et le Chien se protègent bien, mais ils peuvent s'enfermer dans le souci. Il faut que l'un des deux garde de la légèreté."
+    },
+    "chevre-cochon": {
+      "note": 8.8,
+      "texte": "Même triangle : la Chèvre et le Cochon partagent la douceur, la générosité et le goût du confort. Un couple chaleureux où l'on se sent bien tout de suite. Gardez un peu d'ambition à deux, sinon le confort devient un cocon fermé."
+    },
+    "singe-singe": {
+      "note": 7.0,
+      "texte": "Deux Singes, c'est des rires, des idées et un chaos joyeux. Vous ne vous ennuyez jamais et vous vous devinez. Le risque, c'est la légèreté à deux : personne ne prend les choses au sérieux, jusqu'à ce qu'il soit trop tard."
+    },
+    "singe-coq": {
+      "note": 6.0,
+      "texte": "Le Singe ruse, le Coq dit tout. Le Coq peut trouver le Singe peu fiable, le Singe peut trouver le Coq trop carré. Vous pouvez vous compléter si le Singe joue franc et si le Coq accepte d'être surpris."
+    },
+    "singe-chien": {
+      "note": 6.6,
+      "texte": "Le Singe amuse, le Chien veille. Ce couple marche mieux qu'on ne le croit : le Chien donne au Singe un sol, le Singe donne au Chien de la légèreté. Le Chien devra juste apprendre à rire des blagues qu'il ne comprend pas tout de suite."
+    },
+    "singe-cochon": {
+      "note": 5.0,
+      "texte": "Le Singe et le Cochon forment une paire « de nuisance ». Le Cochon fait confiance, le Singe joue, et le Cochon peut finir par se sentir dupé sans que le Singe l'ait voulu. Ça tient si le Singe protège la naïveté du Cochon au lieu d'en profiter."
+    },
+    "coq-coq": {
+      "note": 6.0,
+      "texte": "Deux Coqs, c'est une maison impeccable et des opinions bien tranchées, des deux côtés. Vous vous respectez, mais vous vous critiquez. Pour durer, décidez d'un sujet sur lequel chacun a toujours raison, et n'en parlez plus."
+    },
+    "coq-chien": {
+      "note": 4.6,
+      "texte": "Le Coq et le Chien forment une paire « de nuisance ». Le Coq critique, le Chien s'inquiète, et chacun blesse l'autre sans le vouloir. Deux honnêtes qui peuvent très bien s'entendre, à condition de se dire les choses avec douceur."
+    },
+    "coq-cochon": {
+      "note": 6.2,
+      "texte": "Le Coq organise, le Cochon profite. Le Coq peut trouver le Cochon trop laxiste, le Cochon peut trouver le Coq trop exigeant. Mais le Cochon supporte les remarques mieux que d'autres, et le Coq se détend avec lui."
+    },
+    "chien-chien": {
+      "note": 7.2,
+      "texte": "Deux Chiens, c'est une loyauté à toute épreuve et une confiance qui ne se discute pas. Vous vous protégez l'un l'autre. Le risque, c'est de vous inquiéter à deux pour tout, et d'oublier de vous amuser."
+    },
+    "chien-cochon": {
+      "note": 6.8,
+      "texte": "Le Chien veille, le Cochon profite, et l'un fait du bien à l'autre. Le Chien apporte de la prudence au Cochon, le Cochon apporte de la joie au Chien. Un couple simple et chaleureux, souvent sous-estimé."
+    },
+    "cochon-cochon": {
+      "note": 7.6,
+      "texte": "Deux Cochons, c'est une maison ouverte, une table pleine et beaucoup de tendresse. Vous vous pardonnez tout. Le risque, c'est la confiance aveugle à deux : gardez un œil sur les gens qui profitent de votre générosité."
+    }
+  },
+  "conseils": {
+    "trine": "Votre entente est un acquis, pas une garantie. Les couples du même triangle s'ennuient parfois parce que tout est trop facile. Gardez un projet à deux qui vous demande un effort, et vous garderez l'élan qui vous a réunis.",
+    "harmonie": "Vous marchez parce que vous êtes différents : ne cherchez pas à ressembler à l'autre. Dites plutôt, une fois de temps en temps, ce que vous admirez chez lui ou elle et que vous n'avez pas. C'est ça qui fait tenir les amis secrets.",
+    "meme": "Vous vous connaissez trop bien pour vous surprendre. Prenez chacun une habitude qui vous ressemble et qui manque à l'autre : celui qui s'inquiète décide de rassurer, celui qui s'emporte décide d'attendre. Sinon vous doublez vos défauts au lieu de les corriger.",
+    "neutre": "Rien ne vous porte, rien ne vous freine : votre couple ressemble à ce que vous en faites. Choisissez une seule chose à faire mieux ce mois-ci, la même pour vous deux, et vous verrez le score qui compte, celui du quotidien, monter tout seul.",
+    "nuisance": "Ce qui use votre couple, ce sont des petites choses répétées, pas des grands sujets. Faites la liste de ce qui vous agace vraiment, sans commentaire, et échangez-la. La moitié des lignes disparaît quand elles sont dites à voix haute.",
+    "opposition": "Vous ne fonctionnerez jamais au même rythme, et ce n'est pas le but. Décidez de qui a la main sur quoi : les sorties à l'un, les finances à l'autre, par exemple. Les couples opposés qui durent sont ceux qui ont arrêté de vouloir convertir l'autre."
+  },
+  "suite": {
+    "titre": "Allez plus loin avec vos dates complètes",
+    "texte": "Le signe chinois ne regarde que l'année. Le jour et le mois disent autre chose : votre signe astrologique et votre chemin de vie. Notre test par date de naissance croise les trois lectures.",
+    "bouton": "Faire le test par date de naissance"
+  },
+  "section1": {
+    "title": "La compatibilité amoureuse selon les signes chinois, comment ça marche ?",
+    "p1": "L'astrologie chinoise attribue un animal à chaque année : Rat, Buffle, Tigre, Lapin, Dragon, Serpent, Cheval, Chèvre, Singe, Coq, Chien et Cochon, puis le cycle recommence. Chaque animal a un caractère, et la tradition dit depuis des siècles quels animaux s'entendent bien, lesquels se complètent et lesquels se marchent sur les pieds. C'est ça, la compatibilité des signes chinois : une lecture de votre couple à partir de vos deux années de naissance.",
+    "p2": "Notre outil fait ce calcul pour vous. Vous entrez deux dates, il trouve les deux animaux, leur élément (Bois, Feu, Terre, Métal ou Eau) et la relation qui les unit sur la roue : même triangle d'affinité, amis secrets, signes opposés, paire de nuisance ou rien de particulier. Il en tire un score, une explication pour chaque animal en amour et un conseil pour vous deux.",
+    "p3": "Vous voulez une lecture plus large ? La date de naissance dit aussi votre signe astrologique et votre chemin de vie, et <a href=\"/compatibilite-amoureuse-date-de-naissance/\">croiser les trois lectures</a> donne un résultat plus nuancé. Et si ce qui vous intéresse est votre couple tel qu'il est, avec ses vraies disputes et ses vrais projets, le <a href=\"/tester-son-couple/\">test de compatibilité à deux</a> ne regarde pas le ciel, il vous pose des questions."
+  },
+  "section2": {
+    "title": "Trouver son signe chinois : attention au nouvel an",
+    "p1": "L'année chinoise ne commence pas le 1er janvier. Elle démarre au nouvel an lunaire, entre le 21 janvier et le 20 février selon les années. Quelqu'un né le 15 janvier 1990 n'est pas Cheval mais Serpent, parce que l'année du Cheval n'a commencé que le 27 janvier 1990. C'est l'erreur la plus courante des tableaux qu'on trouve en ligne, et elle concerne à peu près une personne sur dix.",
+    "p2": "Notre calculateur utilise les vraies dates du nouvel an, année par année, de 1924 à 2043. Le tableau ci-dessous donne les années de chaque animal pour vous repérer, mais si vous êtes né en janvier ou en février, faites le calcul avec la date complète : c'est justement pour ça qu'on la demande.",
+    "tip": "L'élément se lit dans le dernier chiffre de l'année chinoise : 4 et 5 pour le Bois, 6 et 7 pour le Feu, 8 et 9 pour la Terre, 0 et 1 pour le Métal, 2 et 3 pour l'Eau. Un Dragon de 2000 est un Dragon de Métal, un Dragon de 2012 est un Dragon d'Eau.",
+    "tableHeaders": [
+      "Signe",
+      "Années récentes",
+      "En amour"
+    ],
+    "tableRows": [
+      [
+        "Rat",
+        "1960, 1972, 1984, 1996, 2008, 2020",
+        "attentif, bavard, un peu anxieux"
+      ],
+      [
+        "Buffle",
+        "1961, 1973, 1985, 1997, 2009, 2021",
+        "fidèle, patient, têtu"
+      ],
+      [
+        "Tigre",
+        "1962, 1974, 1986, 1998, 2010, 2022",
+        "passionné, protecteur, impulsif"
+      ],
+      [
+        "Lapin",
+        "1963, 1975, 1987, 1999, 2011, 2023",
+        "doux, discret, fuit les conflits"
+      ],
+      [
+        "Dragon",
+        "1964, 1976, 1988, 2000, 2012, 2024",
+        "entier, généreux, fier"
+      ],
+      [
+        "Serpent",
+        "1965, 1977, 1989, 2001, 2013, 2025",
+        "profond, séduisant, jaloux"
+      ],
+      [
+        "Cheval",
+        "1966, 1978, 1990, 2002, 2014, 2026",
+        "chaleureux, libre, inconstant"
+      ],
+      [
+        "Chèvre",
+        "1967, 1979, 1991, 2003, 2015, 2027",
+        "tendre, créative, anxieuse"
+      ],
+      [
+        "Singe",
+        "1968, 1980, 1992, 2004, 2016, 2028",
+        "drôle, inventif, léger"
+      ],
+      [
+        "Coq",
+        "1969, 1981, 1993, 2005, 2017, 2029",
+        "loyal, franc, critique"
+      ],
+      [
+        "Chien",
+        "1970, 1982, 1994, 2006, 2018, 2030",
+        "fidèle, juste, inquiet"
+      ],
+      [
+        "Cochon",
+        "1971, 1983, 1995, 2007, 2019, 2031",
+        "généreux, confiant, bon vivant"
+      ]
+    ]
+  },
+  "section3": {
+    "title": "Les quatre triangles d'affinité",
+    "p1": "La tradition range les douze animaux en quatre groupes de trois, à quatre ans d'écart. Les signes d'un même triangle partagent une manière de voir la vie : c'est le lien le plus favorable pour un couple, celui où l'on se comprend sans avoir à s'expliquer.",
+    "p2": "Être dans le même triangle ne veut pas dire se ressembler trait pour trait. Le Rat est plus prudent que le Dragon, le Chien plus inquiet que le Tigre. Mais quand il faut prendre une décision, vous penchez du même côté, et c'est ce qui compte dans la durée.",
+    "tableHeaders": [
+      "Triangle",
+      "Les trois signes",
+      "Ce qui les réunit"
+    ],
+    "tableRows": [
+      [
+        "Le triangle de l'action",
+        "Rat, Dragon, Singe",
+        "L'énergie, l'audace, le goût de réussir"
+      ],
+      [
+        "Le triangle de la méthode",
+        "Buffle, Serpent, Coq",
+        "La patience, la stratégie, le sens du détail"
+      ],
+      [
+        "Le triangle de l'indépendance",
+        "Tigre, Cheval, Chien",
+        "La liberté, la loyauté, la franchise"
+      ],
+      [
+        "Le triangle de la douceur",
+        "Lapin, Chèvre, Cochon",
+        "La sensibilité, le calme, le goût du confort"
+      ]
+    ]
+  },
+  "section4": {
+    "title": "Les amis secrets et les signes opposés",
+    "p1": "En plus des triangles, la tradition connaît six paires d'amis secrets, deux animaux qui ne se ressemblent pas mais qui se complètent parfaitement, et six paires de signes opposés, face à face sur la roue, à six ans d'écart. Les premières font des couples très solides, les secondes des couples très attirants au départ et plus difficiles ensuite.",
+    "p2": "Il existe aussi six paires dites « de nuisance » : Rat et Chèvre, Buffle et Cheval, Tigre et Serpent, Lapin et Dragon, Singe et Cochon, Coq et Chien. Ce n'est pas une opposition franche. C'est plutôt une usure, des petits agacements qui reviennent. Le résultat vous le dit quand c'est votre cas, avec ce qu'il y a à surveiller.",
+    "tip": "Un couple de signes opposés n'est pas condamné, loin de là. Il fonctionne autrement : chacun garde son domaine au lieu de vouloir convaincre l'autre. Beaucoup de couples qui durent depuis trente ans sont faits de deux opposés qui ont arrêté de se convertir.",
+    "tableHeaders": [
+      "Type de paire",
+      "Les deux signes",
+      "Ce que dit la tradition"
+    ],
+    "tableRows": [
+      [
+        "Amis secrets",
+        "Rat + Buffle",
+        "L'esprit vif et la force tranquille"
+      ],
+      [
+        "Amis secrets",
+        "Tigre + Cochon",
+        "L'audace et la douceur"
+      ],
+      [
+        "Amis secrets",
+        "Lapin + Chien",
+        "La délicatesse et la loyauté"
+      ],
+      [
+        "Amis secrets",
+        "Dragon + Coq",
+        "La vision et le sens du détail"
+      ],
+      [
+        "Amis secrets",
+        "Serpent + Singe",
+        "L'intelligence et le jeu"
+      ],
+      [
+        "Amis secrets",
+        "Cheval + Chèvre",
+        "L'élan et la tendresse"
+      ],
+      [
+        "Signes opposés",
+        "Rat + Cheval",
+        "Prévoir contre improviser"
+      ],
+      [
+        "Signes opposés",
+        "Buffle + Chèvre",
+        "Le concret contre le rêve"
+      ],
+      [
+        "Signes opposés",
+        "Tigre + Singe",
+        "La fierté contre la moquerie"
+      ],
+      [
+        "Signes opposés",
+        "Lapin + Coq",
+        "La réserve contre la franchise"
+      ],
+      [
+        "Signes opposés",
+        "Dragon + Chien",
+        "L'assurance contre le doute"
+      ],
+      [
+        "Signes opposés",
+        "Serpent + Cochon",
+        "La méfiance contre la confiance"
+      ]
+    ]
+  },
+  "section5": {
+    "title": "Les cinq éléments, ce qui nuance le résultat",
+    "p1": "Chaque animal revient tous les douze ans, mais jamais avec le même élément. Un Tigre de Feu (1986) et un Tigre d'Eau (1962) ne vivent pas leur amour de la même façon. Les cinq éléments s'enchaînent en cycle : le Bois nourrit le Feu, le Feu nourrit la Terre, la Terre nourrit le Métal, le Métal nourrit l'Eau, et l'Eau nourrit le Bois. Deux éléments qui se suivent s'entendent bien ; deux éléments séparés d'un rang se contrôlent.",
+    "p2": "Dans le résultat, l'élément fait monter ou baisser le score de quelques points, jamais plus. C'est une nuance, pas le fond. Deux animaux opposés avec des éléments qui se nourrissent restent un duo tendu, avec un peu plus de douceur dans les mauvais jours.",
+    "tableHeaders": [
+      "Élément",
+      "L'année chinoise se termine par",
+      "Ce qu'il donne au couple"
+    ],
+    "tableRows": [
+      [
+        "Bois",
+        "4 ou 5",
+        "la croissance, la générosité, le besoin de projets"
+      ],
+      [
+        "Feu",
+        "6 ou 7",
+        "la passion, l'élan, les colères vite passées"
+      ],
+      [
+        "Terre",
+        "8 ou 9",
+        "la stabilité, la patience, le goût du concret"
+      ],
+      [
+        "Métal",
+        "0 ou 1",
+        "la rigueur, la loyauté, la difficulté à plier"
+      ],
+      [
+        "Eau",
+        "2 ou 3",
+        "la sensibilité, l'intuition, le besoin d'être rassuré"
+      ]
+    ]
+  },
+  "section6": {
+    "title": "Et si le score est bas ?",
+    "p1": "Alors il ne se passe rien de grave. Ce score mesure l'accord entre deux tempéraments symboliques, celui de vos années de naissance. Il ne mesure ni vos sentiments, ni la solidité de ce que vous avez construit. Des milliers de couples de signes opposés vivent très bien ensemble, et des couples du même triangle se séparent.",
+    "p2": "Ce que le score bas peut vous apporter, c'est une conversation. Lisez le portrait de votre animal et celui de votre partenaire, et demandez-vous ce qui est juste et ce qui ne l'est pas. La plupart du temps, c'est là que ça devient intéressant : on se reconnaît dans une ligne, l'autre se reconnaît dans une autre, et on parle d'un agacement qu'on n'avait jamais nommé.",
+    "tip": "Faites le calcul à deux plutôt que chacun de son côté. Le chiffre compte moins que ce que vous vous direz en lisant les portraits."
+  },
+  "faq": {
+    "title": "Vos questions sur la compatibilité des signes chinois",
+    "q1": "Comment savoir si deux signes chinois sont compatibles ?",
+    "a1": "On regarde d'abord la relation entre les deux animaux sur la roue : même triangle d'affinité (quatre ans d'écart), amis secrets, signes opposés (six ans d'écart), paire de nuisance ou aucun lien particulier. Puis on affine avec l'élément de chacun, qui dépend de l'année. Notre outil fait les deux et vous explique le résultat.",
+    "q2": "Quels signes chinois vont le mieux ensemble en amour ?",
+    "a2": "Les couples du même triangle : Rat, Dragon et Singe entre eux ; Buffle, Serpent et Coq ; Tigre, Cheval et Chien ; Lapin, Chèvre et Cochon. Et les six paires d'amis secrets : Rat et Buffle, Tigre et Cochon, Lapin et Chien, Dragon et Coq, Serpent et Singe, Cheval et Chèvre.",
+    "q3": "Quels signes chinois ne vont pas ensemble ?",
+    "a3": "Les six paires opposées, à six ans d'écart : Rat et Cheval, Buffle et Chèvre, Tigre et Singe, Lapin et Coq, Dragon et Chien, Serpent et Cochon. Ce sont les couples les plus tendus de la tradition, mais aussi souvent les plus attirants au début. « Ne pas aller ensemble » veut dire ici « ne pas fonctionner pareil », pas « ne pas s'aimer ».",
+    "q4": "Je suis né en janvier, quel est mon signe chinois ?",
+    "a4": "Probablement celui de l'année précédente. L'année chinoise commence entre le 21 janvier et le 20 février, donc une naissance en janvier tombe presque toujours dans l'année chinoise d'avant. Entrez votre date complète dans le calculateur, il connaît la date du nouvel an de chaque année.",
+    "q5": "Faut-il tenir compte de l'élément ?",
+    "a5": "Oui, mais comme une nuance. L'animal donne le tempérament, l'élément dit comment il s'exprime : un Cheval de Feu est plus emporté qu'un Cheval de Terre. Dans notre calcul, l'élément déplace le score de quelques points quand les deux se nourrissent ou se contrarient.",
+    "q6": "Les résultats sont-ils enregistrés ?",
+    "a6": "Non. Le calcul se fait dans votre navigateur, les dates ne partent nulle part et rien n'est conservé. Vous pouvez refaire le calcul autant de fois que vous voulez, avec les dates de qui vous voulez."
+  },
+  "jsonLd": {
+    "about": "compatibilité amoureuse des signes du zodiaque chinois"
+  }
+}

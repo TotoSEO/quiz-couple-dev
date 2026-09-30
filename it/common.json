@@ -98,7 +98,9 @@
     "quizTypeCouple": "Che tipo di coppia siete?",
     "quizTypeCoupleDesc": "Quindici situazioni, quattro profili, da fare insieme",
     "testEstCeLeBon": "È la persona giusta?",
-    "testEstCeLeBonDesc": "Venti domande per capire se è la persona giusta"
+    "testEstCeLeBonDesc": "Venti domande per capire se è la persona giusta",
+    "testSignesChinois": "Compatibilità segni cinesi",
+    "testSignesChinoisDesc": "Due date, due animali, un verdetto"
   },
   "footer": {
     "brandDescription": "Metti alla prova la tua compatibilità e scopri la tua connessione amorosa con i nostri quiz gratuiti per coppie.",

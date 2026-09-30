@@ -226,7 +226,7 @@
   // mais quatre moteurs autonomes ont leur propre racine. On les nomme ici
   // plutot que d'ecouter le document entier, sinon un clic sur le bandeau
   // cookies ou sur la FAQ passerait pour un lancement.
-  var RACINES_MOTEUR = '#quiz-engine, [data-quiz], #astro-form, #dn-outil, #vacances-racine, #calc-carte';
+  var RACINES_MOTEUR = '#quiz-engine, [data-quiz], #astro-form, #dn-outil, #sc-outil, #vacances-racine, #calc-carte';
 
   function watchStart(slug) {
     var cle = 'qc-start-' + slug;
@@ -495,7 +495,7 @@
     try { history.scrollRestoration = 'auto'; } catch (e) {}
     var debut = Date.now();
     (function attends() {
-      var m = document.querySelector('#quiz-engine, [data-quiz], #astro-form, #dn-outil, #vacances-racine');
+      var m = document.querySelector('#quiz-engine, [data-quiz], #astro-form, #dn-outil, #sc-outil, #vacances-racine');
       if (m && (m.textContent || '').trim().length > 20) {
         m.scrollIntoView({ block: 'start' });
         return;

@@ -98,7 +98,9 @@
     "quizTypeCouple": "Welcher Paartyp seid ihr?",
     "quizTypeCoupleDesc": "Fünfzehn Situationen, vier Profile, zusammen beantworten",
     "testEstCeLeBon": "Ist es die richtige Person?",
-    "testEstCeLeBonDesc": "Zwanzig Fragen, um zu wissen, ob es der oder die Richtige ist"
+    "testEstCeLeBonDesc": "Zwanzig Fragen, um zu wissen, ob es der oder die Richtige ist",
+    "testSignesChinois": "Chinesische Sternzeichen",
+    "testSignesChinoisDesc": "Zwei Daten, zwei Tiere, ein Urteil"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",

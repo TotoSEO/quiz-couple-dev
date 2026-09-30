@@ -13,8 +13,34 @@
     "jour": "Tag",
     "moisLabel": "Monat",
     "annee": "Jahr",
-    "mois": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
-    "moisDate": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+    "mois": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "moisDate": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
     "dateAffichee": "{{j}}. {{mois}} {{a}}",
     "lancer": "Unsere Übereinstimmung berechnen",
     "erreur": "Eines der beiden Daten gibt es nicht. Prüft den gewählten Tag und Monat.",
@@ -155,20 +181,72 @@
     "sub1Title": "Ein Beispiel in dreißig Sekunden",
     "sub1Text": "Nehmen wir den 14. März 1990. Addieren: 1 + 4 + 0 + 3 + 1 + 9 + 9 + 0 = 27. Reduzieren: 2 + 7 = 9. Lebenszahl 9. Noch ein Beispiel, der 29. Dezember 1990: 2 + 9 + 1 + 2 + 1 + 9 + 9 + 0 = 33. Hier hört man auf, es ist eine Meisterzahl.",
     "sub2Title": "Was jede Lebenszahl in der Liebe sucht",
-    "tableHeaders": ["Zahl", "Schlüsselwort", "Was sie von einer Beziehung erwartet"],
+    "tableHeaders": [
+      "Zahl",
+      "Schlüsselwort",
+      "Was sie von einer Beziehung erwartet"
+    ],
     "tableRows": [
-      ["1", "Antrieb", "Bewunderung und Raum zum Entscheiden"],
-      ["2", "Sanftheit", "Nähe, Zärtlichkeit, wenig Konflikte"],
-      ["3", "Worte", "Dass man mitlacht und beim Erzählen zuhört"],
-      ["4", "Verlässlichkeit", "Gehaltene Versprechen und einen klaren Rahmen"],
-      ["5", "Bewegung", "Neues, und bloß keine Leine"],
-      ["6", "Fürsorge", "Ein Zuhause, Gewohnheiten, jemanden zum Beschützen"],
-      ["7", "Nachdenken", "Stille, Tiefe, kein Geplauder"],
-      ["8", "Ehrgeiz", "Jemanden, der im selben Tempo vorangeht"],
-      ["9", "Hingabe", "Sinn, Großzügigkeit, eine gemeinsame Sache"],
-      ["11", "Intuition", "Dass man ihr Empfinden ernst nimmt"],
-      ["22", "Aufbau", "Ein Lebensprojekt, keinen Flirt"],
-      ["33", "Gegebene Liebe", "Für sich selbst geliebt zu werden, nicht für das Geben"]
+      [
+        "1",
+        "Antrieb",
+        "Bewunderung und Raum zum Entscheiden"
+      ],
+      [
+        "2",
+        "Sanftheit",
+        "Nähe, Zärtlichkeit, wenig Konflikte"
+      ],
+      [
+        "3",
+        "Worte",
+        "Dass man mitlacht und beim Erzählen zuhört"
+      ],
+      [
+        "4",
+        "Verlässlichkeit",
+        "Gehaltene Versprechen und einen klaren Rahmen"
+      ],
+      [
+        "5",
+        "Bewegung",
+        "Neues, und bloß keine Leine"
+      ],
+      [
+        "6",
+        "Fürsorge",
+        "Ein Zuhause, Gewohnheiten, jemanden zum Beschützen"
+      ],
+      [
+        "7",
+        "Nachdenken",
+        "Stille, Tiefe, kein Geplauder"
+      ],
+      [
+        "8",
+        "Ehrgeiz",
+        "Jemanden, der im selben Tempo vorangeht"
+      ],
+      [
+        "9",
+        "Hingabe",
+        "Sinn, Großzügigkeit, eine gemeinsame Sache"
+      ],
+      [
+        "11",
+        "Intuition",
+        "Dass man ihr Empfinden ernst nimmt"
+      ],
+      [
+        "22",
+        "Aufbau",
+        "Ein Lebensprojekt, keinen Flirt"
+      ],
+      [
+        "33",
+        "Gegebene Liebe",
+        "Für sich selbst geliebt zu werden, nicht für das Geben"
+      ]
     ],
     "tip": "Zwei identische Lebenszahlen garantieren überhaupt nichts. Zwei Fünfen zusammen, das sind zwei Menschen, die losziehen wollen, und manchmal nicht in dieselbe Richtung."
   },
@@ -185,16 +263,36 @@
     "p1": "Hier spricht das Jahr. Zwölf Tiere, eines pro Jahr, und ein Zyklus, der von vorn beginnt. Nur beginnt das chinesische Jahr nicht am 1. Januar: Es startet am Mondneujahr, das je nach Jahr zwischen dem 21. Januar und dem 21. Februar liegt. Alle im Januar und in der ersten Februarhälfte Geborenen gehören daher zum Tier des Vorjahres.",
     "p2": "Das ist der häufigste Fehler von Online-Rechnern, und er betrifft fast ein Zehntel der Bevölkerung. Unser Werkzeug nutzt die <strong>echten Daten des chinesischen Neujahrs</strong>, Jahr für Jahr, von 1924 bis 2043. Wer am 1. Januar 2000 geboren wurde, ist kein Drache, sondern ein Hase mit dem Element Erde.",
     "sub1Title": "Die vier Dreiecke der Verbundenheit",
-    "tableHeaders": ["Dreieck", "Die drei Zeichen", "Was sie verbindet"],
+    "tableHeaders": [
+      "Dreieck",
+      "Die drei Zeichen",
+      "Was sie verbindet"
+    ],
     "tableRows": [
-      ["Das Dreieck der Tat", "Ratte, Drache, Affe", "Energie, Wagemut, Lust am Risiko"],
-      ["Das Dreieck der Methode", "Büffel, Schlange, Hahn", "Geduld, Strategie, Sinn fürs Detail"],
-      ["Das Dreieck der Unabhängigkeit", "Tiger, Pferd, Hund", "Freiheit, Treue, Offenheit"],
-      ["Das Dreieck der Sanftheit", "Hase, Ziege, Schwein", "Feinfühligkeit, Ruhe, Sinn für Behaglichkeit"]
+      [
+        "Das Dreieck der Tat",
+        "Ratte, Drache, Affe",
+        "Energie, Wagemut, Lust am Risiko"
+      ],
+      [
+        "Das Dreieck der Methode",
+        "Büffel, Schlange, Hahn",
+        "Geduld, Strategie, Sinn fürs Detail"
+      ],
+      [
+        "Das Dreieck der Unabhängigkeit",
+        "Tiger, Pferd, Hund",
+        "Freiheit, Treue, Offenheit"
+      ],
+      [
+        "Das Dreieck der Sanftheit",
+        "Hase, Ziege, Schwein",
+        "Feinfühligkeit, Ruhe, Sinn für Behaglichkeit"
+      ]
     ],
     "sub2Title": "Und wo bleibt das Element?",
     "sub2Text": "Jedes Tier kehrt alle zwölf Jahre wieder, aber mit einem anderen Element: Holz, Feuer, Erde, Metall oder Wasser. Ein Drache mit Holz und ein Drache mit Feuer ähneln sich kaum. Diese fünf Elemente greifen in Zyklen ineinander, eines nährt das nächste oder bremst es, und genau das verfeinert die chinesische Wertung in eurem Ergebnis.",
-    "tip": "Sechs Paare gelten in der chinesischen Tradition als Harmoniepaare, die berühmten heimlichen Freunde: Ratte und Büffel, Tiger und Schwein, Hase und Hund, Drache und Hahn, Schlange und Affe, Pferd und Ziege. Sie stehen in keinem Dreieck und funktionieren trotzdem hervorragend."
+    "tip": "Sechs Paare gelten in der chinesischen Tradition als Harmoniepaare, <a href=\"/de/chinesische-sternzeichen-liebeskompatibilitaet/\">die berühmten heimlichen Freunde</a>: Ratte und Büffel, Tiger und Schwein, Hase und Hund, Drache und Hahn, Schlange und Affe, Pferd und Ziege. Sie stehen in keinem Dreieck und funktionieren trotzdem hervorragend."
   },
   "section5": {
     "title": "Warum drei Lesarten statt einer einzigen",
