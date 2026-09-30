@@ -13,8 +13,34 @@
     "jour": "Jour",
     "moisLabel": "Mois",
     "annee": "Année",
-    "mois": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
-    "moisDate": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+    "mois": [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre"
+    ],
+    "moisDate": [
+      "janvier",
+      "février",
+      "mars",
+      "avril",
+      "mai",
+      "juin",
+      "juillet",
+      "août",
+      "septembre",
+      "octobre",
+      "novembre",
+      "décembre"
+    ],
     "dateAffichee": "{{j}} {{mois}} {{a}}",
     "lancer": "Calculer notre compatibilité",
     "erreur": "Une des deux dates n'existe pas. Vérifiez le jour et le mois choisis.",
@@ -155,20 +181,72 @@
     "sub1Title": "Un exemple en trente secondes",
     "sub1Text": "Prenons le 14 mars 1990. On additionne : 1 + 4 + 0 + 3 + 1 + 9 + 9 + 0 = 27. On réduit : 2 + 7 = 9. Chemin de vie 9. Autre exemple, le 29 décembre 1990 : 2 + 9 + 1 + 2 + 1 + 9 + 9 + 0 = 33. On s'arrête, c'est un nombre maître.",
     "sub2Title": "Ce que chaque chemin de vie cherche en amour",
-    "tableHeaders": ["Chemin", "Mot-clé", "Ce qu'il attend d'une relation"],
+    "tableHeaders": [
+      "Chemin",
+      "Mot-clé",
+      "Ce qu'il attend d'une relation"
+    ],
     "tableRows": [
-      ["1", "L'élan", "De l'admiration et de l'espace pour décider"],
-      ["2", "La douceur", "De la présence, de la tendresse, peu de conflits"],
-      ["3", "Les mots", "Qu'on rie avec lui et qu'on l'écoute raconter"],
-      ["4", "La solidité", "Des promesses tenues et un cadre clair"],
-      ["5", "Le mouvement", "De la nouveauté et surtout pas de laisse"],
-      ["6", "Le soin", "Un foyer, des habitudes, quelqu'un à protéger"],
-      ["7", "La réflexion", "Du silence, de la profondeur, pas de bavardage"],
-      ["8", "L'ambition", "Un partenaire qui avance à la même vitesse"],
-      ["9", "Le don", "Du sens, de la générosité, une cause commune"],
-      ["11", "L'intuition", "Qu'on prenne ses ressentis au sérieux"],
-      ["22", "La construction", "Un projet de vie à long terme, pas un flirt"],
-      ["33", "L'amour donné", "Qu'on l'aime pour lui, pas pour ce qu'il donne"]
+      [
+        "1",
+        "L'élan",
+        "De l'admiration et de l'espace pour décider"
+      ],
+      [
+        "2",
+        "La douceur",
+        "De la présence, de la tendresse, peu de conflits"
+      ],
+      [
+        "3",
+        "Les mots",
+        "Qu'on rie avec lui et qu'on l'écoute raconter"
+      ],
+      [
+        "4",
+        "La solidité",
+        "Des promesses tenues et un cadre clair"
+      ],
+      [
+        "5",
+        "Le mouvement",
+        "De la nouveauté et surtout pas de laisse"
+      ],
+      [
+        "6",
+        "Le soin",
+        "Un foyer, des habitudes, quelqu'un à protéger"
+      ],
+      [
+        "7",
+        "La réflexion",
+        "Du silence, de la profondeur, pas de bavardage"
+      ],
+      [
+        "8",
+        "L'ambition",
+        "Un partenaire qui avance à la même vitesse"
+      ],
+      [
+        "9",
+        "Le don",
+        "Du sens, de la générosité, une cause commune"
+      ],
+      [
+        "11",
+        "L'intuition",
+        "Qu'on prenne ses ressentis au sérieux"
+      ],
+      [
+        "22",
+        "La construction",
+        "Un projet de vie à long terme, pas un flirt"
+      ],
+      [
+        "33",
+        "L'amour donné",
+        "Qu'on l'aime pour lui, pas pour ce qu'il donne"
+      ]
     ],
     "tip": "Deux chemins de vie identiques ne garantissent rien du tout. Deux 5 ensemble, c'est deux personnes qui veulent partir, et parfois pas dans la même direction."
   },
@@ -185,16 +263,36 @@
     "p1": "Ici, c'est l'année qui parle. Douze animaux, un par année, et un cycle qui recommence. Sauf que l'année chinoise ne commence pas le 1er janvier : elle démarre au nouvel an lunaire, qui tombe entre le 21 janvier et le 21 février selon les années. Toutes les personnes nées en janvier et dans la première moitié de février appartiennent donc à l'animal de l'année précédente.",
     "p2": "C'est l'erreur la plus fréquente des calculateurs en ligne, et elle concerne près d'un dixième de la population. Notre outil utilise les <strong>vraies dates du nouvel an chinois</strong>, année par année, de 1924 à 2043. Quelqu'un né le 1er janvier 2000 n'est pas Dragon, il est Lapin de Terre.",
     "sub1Title": "Les quatre triangles d'affinité",
-    "tableHeaders": ["Triangle", "Les trois signes", "Ce qui les réunit"],
+    "tableHeaders": [
+      "Triangle",
+      "Les trois signes",
+      "Ce qui les réunit"
+    ],
     "tableRows": [
-      ["Le triangle de l'action", "Rat, Dragon, Singe", "L'énergie, l'audace, le goût du risque"],
-      ["Le triangle de la méthode", "Buffle, Serpent, Coq", "La patience, la stratégie, le sens du détail"],
-      ["Le triangle de l'indépendance", "Tigre, Cheval, Chien", "La liberté, la loyauté, la franchise"],
-      ["Le triangle de la douceur", "Lapin, Chèvre, Cochon", "La sensibilité, le calme, le goût du confort"]
+      [
+        "Le triangle de l'action",
+        "Rat, Dragon, Singe",
+        "L'énergie, l'audace, le goût du risque"
+      ],
+      [
+        "Le triangle de la méthode",
+        "Buffle, Serpent, Coq",
+        "La patience, la stratégie, le sens du détail"
+      ],
+      [
+        "Le triangle de l'indépendance",
+        "Tigre, Cheval, Chien",
+        "La liberté, la loyauté, la franchise"
+      ],
+      [
+        "Le triangle de la douceur",
+        "Lapin, Chèvre, Cochon",
+        "La sensibilité, le calme, le goût du confort"
+      ]
     ],
     "sub2Title": "Et l'élément dans tout ça ?",
     "sub2Text": "Chaque animal revient tous les douze ans, mais avec un élément différent : Bois, Feu, Terre, Métal ou Eau. Un Dragon de Bois et un Dragon de Feu ne se ressemblent pas vraiment. Ces cinq éléments s'enchaînent en cycles, l'un nourrissant le suivant ou le tempérant, et c'est ce qui affine le score chinois de votre résultat.",
-    "tip": "Six paires sont dites d'harmonie dans la tradition chinoise, les fameux amis secrets : Rat et Buffle, Tigre et Cochon, Lapin et Chien, Dragon et Coq, Serpent et Singe, Cheval et Chèvre. Elles ne sont dans aucun triangle, et elles fonctionnent pourtant très bien."
+    "tip": "Six paires sont dites d'harmonie dans la tradition chinoise, <a href=\"/compatibilite-amoureuse-signes-chinois/\">les fameux amis secrets</a> : Rat et Buffle, Tigre et Cochon, Lapin et Chien, Dragon et Coq, Serpent et Singe, Cheval et Chèvre. Elles ne sont dans aucun triangle, et elles fonctionnent pourtant très bien."
   },
   "section5": {
     "title": "Pourquoi croiser trois lectures au lieu d'une seule",

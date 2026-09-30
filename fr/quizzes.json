@@ -439,5 +439,17 @@
     "shortTitle": "Est-ce le bon / la bonne ?",
     "description": "Vingt questions sur ce que vous ressentez avec cette personne, vos disputes, la confiance et l'avenir que vous imaginez. Le résultat dit si vos réponses vont dans le même sens, et lequel.",
     "metaDescription": "Vingt questions sur la confiance, les disputes, l'envie de le ou la retrouver et l'avenir que vous imaginez. Résultat immédiat, gratuit et anonyme."
+  },
+  "testSignesChinois": {
+    "title": "Compatibilité des signes chinois en amour : calcul gratuit",
+    "shortTitle": "Compatibilité signes chinois",
+    "description": "Deux dates de naissance, vos deux animaux et leur élément, et ce que la tradition chinoise dit de votre couple : triangle, amis secrets ou signes opposés.",
+    "metaDescription": "Deux dates de naissance, vos deux animaux et leur élément, et ce que la tradition chinoise dit de votre couple. Résultat immédiat, gratuit et anonyme."
+  },
+  "compteurCouple": {
+    "title": "Compteur de couple : nos jours ensemble et les dates à fêter",
+    "shortTitle": "Compteur de couple",
+    "description": "La date du début, et le compteur vous dit combien de jours vous êtes ensemble, la durée exacte et les prochaines dates à fêter.",
+    "metaDescription": "Compteur de couple gratuit : entrez votre date de début et voyez vos jours ensemble, la durée exacte, les prochains anniversaires et caps à fêter."
   }
 }

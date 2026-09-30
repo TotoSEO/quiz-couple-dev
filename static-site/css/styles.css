@@ -11925,3 +11925,50 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .calc-pct { font-size: 2.5rem; }
   .calc-action { flex: 1 1 100%; max-width: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Compteur de couple (compteur-couple.ejs, js/compteur-couple.js).
+   Une date de début, les jours ensemble en grand, six tuiles, puis les
+   prochaines dates à fêter. Tout le reste vient des classes astro-* et dn-*
+   des outils par date.
+   ═══════════════════════════════════════════════════════════════════ */
+.cc-prenoms { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+@media (max-width: 420px) { .cc-prenoms { grid-template-columns: 1fr; } }
+.cc-carte { padding-bottom: 1.25rem; }
+.cc-noms { margin: 0 0 0.25rem; font-size: 1.0625rem; font-weight: 700; }
+.cc-depuis { margin: 0 0 1.25rem; font-size: 0.95rem; color: hsl(var(--muted-foreground)); }
+.cc-grand { margin: 0 0 0.6rem; line-height: 1; }
+.cc-grand-nombre {
+  display: block; font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: clamp(3rem, 13vw, 4.75rem); font-weight: 800; letter-spacing: -0.02em;
+  color: hsl(var(--primary)); font-variant-numeric: tabular-nums;
+}
+.cc-grand-unite { display: block; margin-top: 0.4rem; font-size: 1.15rem; font-weight: 700; }
+.cc-duree { margin: 0; color: hsl(var(--muted-foreground)); }
+.cc-fete {
+  display: inline-block; margin: 1rem auto 0; padding: 0.55rem 1.1rem; border-radius: 9999px;
+  font-weight: 700; font-size: 0.95rem;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.14), hsl(var(--secondary) / 0.16));
+}
+.cc-tuiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1.5rem; }
+@media (max-width: 520px) { .cc-tuiles { grid-template-columns: repeat(2, 1fr); } }
+.cc-tuile {
+  padding: 0.9rem 0.6rem; text-align: center; border-radius: var(--radius);
+  border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+}
+.cc-tuile-nombre {
+  display: block; font-family: 'Poppins', 'Inter', sans-serif; font-size: 1.3rem; font-weight: 800;
+  line-height: 1.1; font-variant-numeric: tabular-nums; overflow-wrap: anywhere;
+}
+.cc-tuile-libelle { display: block; margin-top: 0.25rem; font-size: 0.78rem; color: hsl(var(--muted-foreground)); }
+.cc-etapes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.85rem; }
+.cc-etape { display: grid; grid-template-columns: auto 1fr; gap: 0.85rem; align-items: start; }
+.cc-etape-quand {
+  display: inline-grid; place-items: center; min-width: 6rem; padding: 0.4rem 0.65rem; border-radius: 9999px;
+  font-size: 0.8rem; font-weight: 700; text-align: center;
+  color: hsl(var(--primary-texte, var(--primary))); background: hsl(var(--primary) / 0.1);
+}
+.cc-etape-quoi { display: block; font-weight: 700; color: hsl(var(--foreground)); }
+.cc-etape-detail, .cc-etape-date { display: block; font-size: 0.85rem; color: hsl(var(--muted-foreground)); }
+.cc-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 0.5rem; }
+.cc-copie { margin: 0.75rem 0 0; text-align: center; font-size: 0.875rem; color: hsl(var(--primary-texte, var(--primary))); }

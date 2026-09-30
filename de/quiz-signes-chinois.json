@@ -1,0 +1,705 @@
+{
+  "hero": {
+    "badge": "Chinesische Astrologie",
+    "title": "Passt ihr laut euren chinesischen Sternzeichen zusammen?",
+    "highlight": "chinesischen Sternzeichen",
+    "description": "Zwei Geburtsdaten genügen. Daraus lesen wir dein Tier und das deines Partners, das Element von jedem, und was die chinesische Tradition über eure Begegnung sagt: <strong>gleiches Dreieck</strong>, <strong>heimliche Freunde</strong>, <strong>gegenüberliegende Zeichen</strong>... Das Ergebnis erklärt alles, mit einer Punktzahl und einem Rat.",
+    "subtitle": "Keine Anmeldung, keine E-Mail. Das Ergebnis erscheint sofort."
+  },
+  "form": {
+    "titre": "Eure beiden Geburtsdaten",
+    "personne1": "Du",
+    "personne2": "Dein Partner",
+    "jour": "Tag",
+    "moisLabel": "Monat",
+    "annee": "Jahr",
+    "mois": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "moisDate": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "dateAffichee": "{{j}}. {{mois}} {{a}}",
+    "erreur": "Eines der beiden Daten gibt es nicht. Prüft den gewählten Tag und Monat.",
+    "lancer": "Unsere Übereinstimmung berechnen",
+    "aide": "Das Jahr ergibt das Tier und das Element. Aber das chinesische Jahr beginnt Ende Januar oder Anfang Februar, deshalb fragen wir nach dem vollständigen Datum."
+  },
+  "animaux": {
+    "rat": "Ratte",
+    "buffle": "Büffel",
+    "tigre": "Tiger",
+    "lapin": "Hase",
+    "dragon": "Drache",
+    "serpent": "Schlange",
+    "cheval": "Pferd",
+    "chevre": "Ziege",
+    "singe": "Affe",
+    "coq": "Hahn",
+    "chien": "Hund",
+    "cochon": "Schwein"
+  },
+  "elements": {
+    "bois": "Holz",
+    "feu": "Feuer",
+    "terre": "Erde",
+    "metal": "Metall",
+    "eau": "Wasser"
+  },
+  "relations": {
+    "trine": "{{a1}} und {{a2}} gehören zum selben Affinitätsdreieck. Im chinesischen Tierkreis ist das die gesuchteste Verbindung: Ihr geht im selben Tempo voran, wollt ungefähr dasselbe und braucht keine langen Erklärungen, um euch einig zu werden.",
+    "harmonie": "{{a1}} und {{a2}} bilden eines der sechs Paare heimlicher Freunde. Ihr seid euch nicht ähnlich, und genau das funktioniert: Jeder ist stark, wo der andere verletzlich ist, und das geschieht ohne Anstrengung, fast ohne Nachdenken.",
+    "meme": "Ihr seid beide {{a1}}. Ihr versteht euch schnell, habt dieselben Wünsche und dieselben Schwächen. Das ist erholsam, und es ist auch ein Spiegel: Was dich am anderen stört, machst du wahrscheinlich auch.",
+    "neutre": "{{a1}} und {{a2}} haben in der chinesischen Tradition weder eine besondere Affinität noch eine ausgeprägte Spannung. Nichts trägt euch von allein, nichts bremst euch aber auch. Was ihr daraus macht, hängt von euch beiden ab, mehr als von euren Zeichen.",
+    "nuisance": "{{a1}} und {{a2}} gehören zu den sechs Paaren, die die Tradition « schädigend » nennt. Das ist keine klare Unverträglichkeit. Es ist eher eine Abnutzung: kleine Ärgernisse, die wiederkommen und schwer werden, wenn niemand sie benennt.",
+    "opposition": "{{a1}} und {{a2}} stehen sich auf dem Rad gegenüber, sechs Zeichen voneinander entfernt. Das ist die spannungsreichste Achse des chinesischen Tierkreises, und am Anfang oft die anziehendste. Ihr mögt euch, weil ihr verschieden seid, und genau dieser Unterschied ermüdet mit der Zeit."
+  },
+  "elementsRelation": {
+    "meme": "Ihr teilt dasselbe Element, {{e1}}. Ihr reagiert auf Ereignisse mit derselben Energie, was das Leben zu zweit einfacher macht, und die schlechten Tage intensiver, weil niemand den anderen beruhigt.",
+    "nourrit": "Eure Elemente vertragen sich gut: Im chinesischen Zyklus nährt {{de}} {{vers}}. Einer gibt dem anderen Schwung, ohne zu drängen. Ein kleines Plus, das im Alltag zählt, besonders in müden Phasen.",
+    "controle": "Eure Elemente reiben sich: Im chinesischen Zyklus kontrolliert {{de}} {{vers}}. Einer mäßigt den anderen, was Übertreibungen verhindert, sich aber wie eine Bremse anfühlen kann. Das regelt sich, indem man sagt, wann man einen Schubs braucht und wann man in Ruhe gelassen werden will."
+  },
+  "paliers": {
+    "fusion": {
+      "titre": "Zwei Zeichen, die einander antworten",
+      "texte": "Die Tradition ist eindeutig für {{a1}} und {{a2}}: Ihr seid dafür gemacht, euch zu verstehen. Eure Tiere gehen in dieselbe Richtung und eure Elemente passen zusammen. Das befreit von nichts, aber ihr startet mit Vorsprung!"
+    },
+    "belle": {
+      "titre": "Ein schönes Einvernehmen, mit einem Detail im Blick",
+      "texte": "Das Wesentliche ist da zwischen {{a1}} und {{a2}}. Eure Zeichen verstehen sich gut, und was die Punktzahl senkt, ist ein Detail: ein Element, das das andere bremst, oder ein Paar, das ein wenig Aufmerksamkeit verlangt. Nichts, was einer langen Geschichte im Weg steht."
+    },
+    "solide": {
+      "titre": "Ein Paar, das hält, ohne von den Sternen getragen zu werden",
+      "texte": "{{a1}} und {{a2}} sind laut Tradition weder füreinander gemacht noch zum Streiten. Ihr seid in der häufigsten Zone, der, in der das Paar davon abhängt, was ihr daraus macht. Was das Rad sagt, steht unten, und es ist eher ermutigend."
+    },
+    "travail": {
+      "titre": "Zwei Temperamente, die lernen müssen, einander zu lesen",
+      "texte": "Zwischen {{a1}} und {{a2}} sieht die Tradition Reibung. Keine Unverträglichkeit, aber Gewohnheiten, die sich gegenseitig auf die Füße treten, wenn nichts gesagt wird. Die Paare, die mit so einer Punktzahl halten, sind die, die in Worte gefasst haben, was sie stört."
+    },
+    "contraires": {
+      "titre": "Zwei Welten, die zu verbinden sind",
+      "texte": "{{a1}} und {{a2}} sind eines der spannungsreichsten Duos des chinesischen Tierkreises. Oft auch eines der anziehendsten am Anfang. Diese Punktzahl sagt nichts über eure Gefühle, sie sagt, dass ihr nicht gleich funktioniert, und dass sich das in den Details des Alltags zeigt."
+    }
+  },
+  "resultat": {
+    "animal": "Chinesisches Zeichen",
+    "element": "Element",
+    "polarite": "Polarität",
+    "yin": "Yin",
+    "yang": "Yang",
+    "anneeLunaire": "Chinesisches Jahr",
+    "titreRoue": "{{a1}} und {{a2}}: Was das Rad sagt",
+    "titrePortrait": "{{a}} in der Liebe",
+    "titreElements": "Eure Elemente: {{e1}} und {{e2}}",
+    "titreConseil": "Der Rat für euch beide",
+    "refaire": "Zwei andere Daten testen",
+    "avis": "Bewertung abgeben"
+  },
+  "portraits": {
+    "rat": "Die Ratte ist wach, neugierig und sehr gesellig. In der Liebe ist sie aufmerksam und großzügig zu den Menschen, die sie sich ausgesucht hat, und eher sparsam mit dem Rest der Welt. Sie braucht Gespräche, Verständnis und das Gefühl, wichtig zu sein. Ihre Schwäche ist die Sorge: Sie sieht voraus, sie prüft, sie malt sich Dinge aus. Mit jemandem, der stabil ist und sie beruhigt, ohne sie einzuengen, wird sie ein treuer und witziger Partner.",
+    "buffle": "Der Büffel ist geduldig, zuverlässig und fleißig. Er liebt wenige Menschen, aber die lange, und zeigt seine Zuneigung mit Taten statt mit Worten. Er braucht Ruhe, Routine und Vertrauen. Seine Schwäche ist der Starrsinn: Hat er entschieden, hört er nicht mehr zu. Er gibt sein Bestes mit jemandem, der warten kann und ihn nicht in die Ecke drängt.",
+    "tigre": "Der Tiger ist leidenschaftlich, mutig und ein wenig unberechenbar. In der Liebe gibt er alles, beschützt die Seinen und hasst Langeweile. Er braucht Bewegung, Projekte und Bewunderung. Seine Schwäche ist die Impulsivität: Er redet und handelt schnell und bereut es manchmal. Er blüht auf mit jemandem, der seinen Schwung mitgeht und dabei auf dem Boden bleibt.",
+    "lapin": "Der Hase ist sanft, diplomatisch und hängt an seiner Gemütlichkeit. Er meidet Konflikte, kümmert sich um sein Zuhause und seine Lieben und zieht einen ruhigen Abend einem lauten Ausgehen vor. Er braucht Geborgenheit und Zärtlichkeit. Seine Schwäche ist die Flucht: Statt sich zu stellen, entfernt er sich schweigend. Er ist glücklich mit jemandem, der rücksichtsvoll ist und ihn nie hetzt.",
+    "dragon": "Der Drache hat Charisma, Energie und Ehrgeiz. In der Liebe ist er ganz, großzügig und stolz. Er braucht jemanden, der an ihn glaubt und sein Tempo mitgeht, und das ist schnell. Seine Schwäche ist der Stolz: Kritik erträgt er schlecht, und er gibt selten als Erster nach. Er gibt viel für jemanden, der ihn bewundern kann, ohne dabei zu verschwinden.",
+    "serpent": "Die Schlange ist nachdenklich, verführerisch und verschwiegen. In der Liebe beobachtet sie, bevor sie sich bindet, und hängt dann tief. Sie braucht geistige Nähe und ein wenig Geheimnis. Ihre Schwäche ist die Eifersucht: Sie hält fest, was sie liebt, und wacht darüber, ohne es zu sagen. Ihr geht es gut mit jemandem, der treu ist und ihr Schweigen respektiert.",
+    "cheval": "Das Pferd ist begeisterungsfähig, offen und unabhängig. In der Liebe ist es warm und spontan, aber es hasst das Gefühl, eingesperrt zu sein. Es braucht Luft, Neues und Bewegungsfreiheit. Seine Schwäche ist die Unbeständigkeit: Es entflammt schnell und ermüdet manchmal ebenso schnell. Es hält mit jemandem, der seine Wünsche teilt, ohne es festhalten zu wollen.",
+    "chevre": "Die Ziege ist feinfühlig, kreativ und sanft. In der Liebe gibt sie viel und muss sich beschützt und beruhigt fühlen. Sie flieht vor Streit und gibt lieber nach, als sich zu stellen. Ihre Schwäche ist die Angst: Sie zweifelt, sie braucht es, Dinge noch einmal zu hören. Sie blüht auf mit jemandem, der fest und zärtlich ist und die schweren Entscheidungen trifft, ohne sie zu drängen.",
+    "singe": "Der Affe ist witzig, erfinderisch und clever. In der Liebe verführt er mit Humor und Fantasie, und er hasst Routine. Er braucht Spiel, Überraschungen und einen Partner, der seinen Ideen folgt. Seine Schwäche ist die Leichtigkeit: Ernsten Gesprächen kann er mit einem Scherz ausweichen. Er hält durch mit jemandem, der ihn zum Lachen bringt und ihn hin und wieder auf den Boden zurückholt.",
+    "coq": "Der Hahn ist ehrlich, genau und stolz. In der Liebe ist er loyal und achtet auf Details, und er sagt, was er denkt, manchmal ein wenig zu viel. Er braucht Ordnung, Anerkennung und Offenheit. Seine Schwäche ist die Kritik: Er bemerkt alles und lässt es wissen. Er ist glücklich mit jemandem, der seine Bemerkungen als Aufmerksamkeit nimmt und ihm antworten kann.",
+    "chien": "Der Hund ist loyal, gerecht und beschützend. In der Liebe ist er treu und aufmerksam, bereit zu vielem für die Menschen, die er liebt. Er braucht Vertrauen und Beständigkeit. Seine Schwäche ist die Sorge: Er stellt sich das Schlimmste vor und kann schwer loslassen. Er gibt sein Bestes mit jemandem, der ehrlich ist und ihn durch regelmäßige Taten beruhigt.",
+    "cochon": "Das Schwein ist großzügig, lebensfroh und vertrauensvoll. In der Liebe gibt es, ohne zu zählen, liebt die einfachen Freuden und vergibt leicht. Es braucht Wärme, Teilen und ein sanftes Leben. Seine Schwäche ist die Naivität: Es vertraut schnell und kann enttäuscht werden. Es ist glücklich mit jemandem, der ehrlich ist und sich so um es kümmert, wie es sich um andere kümmert."
+  },
+  "paires": {
+    "rat-rat": {
+      "note": 7.0,
+      "texte": "Zwei Ratten verstehen sich auf den ersten Blick. Ihr redet viel, räumt dieselben Dinge auf, sorgt euch um dieselben Rechnungen. Passt auf, dass ihr euch nicht gegenseitig in die Angst hineinberuhigt: Einer von euch muss sagen können « das wird schon »."
+    },
+    "rat-buffle": {
+      "note": 8.4,
+      "texte": "Die Ratte wuselt, der Büffel gibt Halt. Ihr seid heimliche Freunde: Die Ratte bringt Ideen und Leichtigkeit, der Büffel Beständigkeit und Sicherheit. Jeder braucht den anderen genau dort, wo er selbst zu kurz kommt."
+    },
+    "rat-tigre": {
+      "note": 6.2,
+      "texte": "Die Ratte rechnet, der Tiger stürmt los. Ihr bewundert und nervt euch aus demselben Grund. Es funktioniert, wenn die Ratte sich manchmal mitreißen lässt und der Tiger vor dem Sprung auf die Vorsicht der Ratte hört."
+    },
+    "rat-lapin": {
+      "note": 5.8,
+      "texte": "Die Ratte liebt Gesellschaft, der Hase liebt Ruhe. Gemeinsam habt ihr die Freude an einem gepflegten Zuhause und einem Leben ohne Drama. Der Hase muss sagen, wann er Stille braucht, die Ratte muss lernen, nicht jeden Abend zu füllen."
+    },
+    "rat-dragon": {
+      "note": 9.0,
+      "texte": "Eines der schönsten Duos des chinesischen Tierkreises. Die Ratte bewundert den Mut des Drachen, der Drache liebt den Witz der Ratte. Ihr seid aus demselben Dreieck: Ihr wollt Erfolg, Bewegung, Aufbau, und ihr macht es zu zweit."
+    },
+    "rat-serpent": {
+      "note": 6.4,
+      "texte": "Zwei feine Köpfe, die gern beobachten und verstehen. Die Ratte redet, die Schlange hört zu, und ihr verbringt Stunden damit, die Welt zu zerlegen. Das Risiko ist das Misstrauen zu zweit: Lernt, euch beim Wort zu nehmen."
+    },
+    "rat-cheval": {
+      "note": 3.6,
+      "texte": "Die Ratte spart, das Pferd gibt aus; die Ratte plant, das Pferd improvisiert. Ihr steht in Opposition, und genau daher kommt die Anziehung am Anfang. Um zu halten, müsst ihr akzeptieren, dass ihr nie im selben Tempo laufen werdet."
+    },
+    "rat-chevre": {
+      "note": 4.6,
+      "texte": "Die Ratte braucht Beruhigung, die Ziege auch. Ihr seid ein sogenanntes « schädigendes » Paar: Die Sorge des einen nährt die des anderen. Was euch rettet, ist eure gemeinsame Zärtlichkeit, sofern einer von euch sich traut zu entscheiden."
+    },
+    "rat-singe": {
+      "note": 8.8,
+      "texte": "Gleiches Dreieck, gleiche Wachheit, gleicher Humor. Ratte und Affe langweilen sich nie zusammen und finden für alles eine Lösung. Passt nur auf, nicht alles in einen Scherz zu verwandeln, wenn ernst geredet werden muss."
+    },
+    "rat-coq": {
+      "note": 5.6,
+      "texte": "Die Ratte passt sich an, der Hahn bleibt bei seinen Positionen. Ihr seid zwei Perfektionisten, die nicht dasselbe perfektionieren. Das kann sehr produktiv sein, solange ihr euch nicht den ganzen Tag gegenseitig korrigiert."
+    },
+    "rat-chien": {
+      "note": 6.4,
+      "texte": "Ratte und Hund teilen den Familiensinn und eine tiefe Loyalität. Der Hund beruhigt die Sorgen der Ratte, die Ratte nimmt dem Hund seine Skrupel leichter. Ein unauffälliges Paar, das oft länger hält, als man vorhersagt."
+    },
+    "rat-cochon": {
+      "note": 6.8,
+      "texte": "Die Ratte ist clever, das Schwein vertraut, und einer beschützt den anderen, ohne nachzudenken. Ihr liebt dieselben einfachen Freuden, ein gutes Essen, einen Abend mit Freunden. Die Ratte muss darauf achten, die Großzügigkeit des Schweins nicht auszunutzen."
+    },
+    "buffle-buffle": {
+      "note": 6.8,
+      "texte": "Zwei Büffel, das ist ein solides Haus und fest gesetzte Gewohnheiten. Ihr vertraut euch und arbeitet in dieselbe Richtung. Das Risiko sind zwei Dickköpfe Stirn an Stirn: Wenn ihr uneinig seid, bewegt sich niemand."
+    },
+    "buffle-tigre": {
+      "note": 5.6,
+      "texte": "Der Büffel will Stabilität, der Tiger will Abenteuer. Ihr respektiert euch, aber ihr bremst euch gegenseitig. Es hält, wenn der Tiger einen Rahmen akzeptiert und der Büffel ab und zu aus seinem heraustritt."
+    },
+    "buffle-lapin": {
+      "note": 6.6,
+      "texte": "Der Büffel beschützt, der Hase macht weich. Ihr teilt die Freude an einem ruhigen Zuhause und einem Leben ohne Erschütterungen. Der Hase muss lernen zu sagen, was er will, statt darauf zu warten, der Büffel muss manchmal fragen statt entscheiden."
+    },
+    "buffle-dragon": {
+      "note": 5.8,
+      "texte": "Zwei starke Charaktere, zwei Arten zu führen. Der Büffel geht Schritt für Schritt, der Drache will schnell und weit. Es funktioniert, wenn jeder seinen Bereich hat und niemand bei allem das letzte Wort haben will."
+    },
+    "buffle-serpent": {
+      "note": 8.8,
+      "texte": "Gleiches Dreieck: Die Geduld des Büffels und die Strategie der Schlange ergeben ein starkes Duo. Ihr nehmt euch Zeit, ihr baut, ihr verzettelt euch nicht. Ein unauffälliges und sehr solides Paar."
+    },
+    "buffle-cheval": {
+      "note": 4.4,
+      "texte": "Der Büffel richtet sich ein, das Pferd will los. Ihr seid ein « schädigendes » Paar: kein Krieg, sondern eine ständige Verschiebung im Tempo. Es braucht viel Gespräch, damit sich der eine nicht eingesperrt und der andere nicht verlassen fühlt."
+    },
+    "buffle-chevre": {
+      "note": 3.8,
+      "texte": "Der Büffel ist konkret, die Ziege träumt. Ihr steht in Opposition: Was der eine wesentlich findet, findet der andere nebensächlich. Die Zärtlichkeit der Ziege kann den Büffel weich machen, sofern er lernt, sie mit Worten zu beruhigen."
+    },
+    "buffle-singe": {
+      "note": 6.2,
+      "texte": "Der Büffel nimmt alles ernst, der Affe nimmt alles leicht. Ihr könnt euch viel Gutes tun: Der Affe lockert den Büffel, der Büffel erdet den Affen. Oder viel Ärger, wenn keiner von beiden einen Schritt macht."
+    },
+    "buffle-coq": {
+      "note": 8.6,
+      "texte": "Gleiches Dreieck, gleicher Pflichtsinn, gleiche Freude an gut gemachter Arbeit. Büffel und Hahn bilden ein organisiertes Paar, in dem jeder weiß, was er zu tun hat. Denkt daran, euch Momente zu gönnen, die zu nichts nützen."
+    },
+    "buffle-chien": {
+      "note": 5.8,
+      "texte": "Zwei Loyale, zwei Treue, zwei Sorgenvolle. Büffel und Hund vertrauen sich, können sich aber in Vorsicht einschließen. Einer von euch muss Lust haben, woanders hinzuschauen, auf Reisen, nicht in der Liebe."
+    },
+    "buffle-cochon": {
+      "note": 6.6,
+      "texte": "Der Büffel beruhigt, das Schwein wärmt. Ihr liebt das Zuhause, gutes Essen und einfache Menschen. Das Schwein muss das Ruhebedürfnis des Büffels respektieren, der Büffel muss sich den Freunden des Schweins öffnen."
+    },
+    "tigre-tigre": {
+      "note": 6.2,
+      "texte": "Zwei Tiger, das ist viel Leidenschaft und viele Gewitter. Ihr bewundert euch, fordert euch heraus und versöhnt euch feurig. Um zu halten, entscheidet gemeinsam, wer diesmal nachgibt, denn keiner von euch tut es von Natur aus."
+    },
+    "tigre-lapin": {
+      "note": 6.2,
+      "texte": "Der Tiger greift an, der Hase weicht aus. Ihr ergänzt euch, sofern der Tiger die Stimme senkt und der Hase sich traut zu sagen, was ihn verletzt. Der Hase bringt die Sanftheit, die der Tiger braucht, ohne es zu wissen."
+    },
+    "tigre-dragon": {
+      "note": 7.0,
+      "texte": "Zwei Naturgewalten. Tiger und Drache bewundern sich, treiben sich an und streiten sich ums Steuer. Dieses Paar glänzt in der Öffentlichkeit, muss aber lernen, den anderen manchmal gewinnen zu lassen, sonst wird das Zuhause zur Arena."
+    },
+    "tigre-serpent": {
+      "note": 4.4,
+      "texte": "Der Tiger ist direkt, die Schlange verschwiegen. Ihr seid ein « schädigendes » Paar: Der Tiger versteht das Schweigen der Schlange nicht, die Schlange mag die Ausbrüche des Tigers nicht. Daran lässt sich arbeiten, mit viel Geduld und wenig Vorwürfen."
+    },
+    "tigre-cheval": {
+      "note": 8.8,
+      "texte": "Gleiches Dreieck: zwei Unabhängige, die Aktion und Offenheit lieben. Tiger und Pferd lassen sich Luft, gehen zusammen los und kommen zusammen zurück. Ein Paar, das sich bewegt und lacht, sofern ihr ein paar feste Verabredungen behaltet."
+    },
+    "tigre-chevre": {
+      "note": 5.8,
+      "texte": "Der Tiger beschützt, die Ziege lehnt sich an. Das kann ein zärtliches Paar werden, wenn der Tiger Schutz nicht mit Herrschaft verwechselt. Die Ziege muss sich trauen, Nein zu sagen, und der Tiger lernen, es zu hören."
+    },
+    "tigre-singe": {
+      "note": 3.6,
+      "texte": "Tiger und Affe stehen sich auf dem Rad gegenüber. Der Affe amüsiert sich über den Stolz des Tigers, der Tiger wird der Kapriolen des Affen müde. Viel Anziehung, viel Lachen am Anfang, und danach ein echtes Bedürfnis nach klaren Regeln."
+    },
+    "tigre-coq": {
+      "note": 5.6,
+      "texte": "Zwei Stolze, die gern Recht haben. Der Tiger handelt schnell, der Hahn korrigiert die Details, und jeder findet den anderen an schlechten Tagen unerträglich. Es hält, wenn ihr den Wettbewerb in ein Team verwandelt."
+    },
+    "tigre-chien": {
+      "note": 9.0,
+      "texte": "Eines der sichersten Duos des chinesischen Tierkreises. Der Hund glaubt an den Tiger und der Tiger beschützt den Hund, im selben Dreieck aus Loyalität und Freiheit. Ihr vertraut euch, und das macht euch stark."
+    },
+    "tigre-cochon": {
+      "note": 8.6,
+      "texte": "Heimliche Freunde: Der Tiger bringt den Mut, das Schwein die Sanftheit und die Wärme. Das Schwein beruhigt den Tiger, ohne ihn einzuengen, der Tiger gibt dem Schwein den Schwung, der ihm fehlt. Ein großzügiges Paar, das viel zurückbekommt."
+    },
+    "lapin-lapin": {
+      "note": 7.4,
+      "texte": "Zwei Hasen, das ist ein gemütliches Zuhause, ruhige Abende und sehr wenig Streit. Ihr versteht euch ohne Worte. Das Risiko ist das Ungesagte: Ihr meidet beide die heiklen Themen, und sie stapeln sich."
+    },
+    "lapin-dragon": {
+      "note": 4.8,
+      "texte": "Der Hase sucht Ruhe, der Drache macht Lärm. Ihr seid ein « schädigendes » Paar: Der Drache kann den Hasen zu zurückhaltend finden, der Hase kann sich erdrückt fühlen. Es funktioniert, wenn der Drache langsamer wird und der Hase sich behauptet."
+    },
+    "lapin-serpent": {
+      "note": 6.4,
+      "texte": "Zwei feine, etwas verschwiegene Naturen. Hase und Schlange lieben Gemütlichkeit, Schönheit und Gespräche zu zweit. Ihr erahnt euch mehr, als ihr miteinander redet, was reizend ist, bis zu dem Tag, an dem man sich wirklich etwas sagen müsste."
+    },
+    "lapin-cheval": {
+      "note": 6.0,
+      "texte": "Der Hase bleibt gern, das Pferd geht gern. Ihr könnt euch bei Freundlichkeit und guter Laune treffen, aber eure Lebensrhythmen unterscheiden sich. Das Pferd muss Bescheid geben, der Hase muss akzeptieren, seinen Bau zu verlassen."
+    },
+    "lapin-chevre": {
+      "note": 8.8,
+      "texte": "Gleiches Dreieck: zwei Feinfühlige, die Sanftheit und Frieden lieben. Hase und Ziege beschützen einander und schaffen ein warmes Zuhause. Einer von euch muss die Entscheidungen treffen, die der andere aufschiebt."
+    },
+    "lapin-singe": {
+      "note": 5.8,
+      "texte": "Der Hase ist zurückhaltend, der Affe ist laut. Der Affe amüsiert den Hasen und der Hase beruhigt den Affen, solange der Affe sich nicht über seine Zurückhaltung lustig macht. Zwei Welten, die sich guttun können, ohne sich zu ähneln."
+    },
+    "lapin-coq": {
+      "note": 3.8,
+      "texte": "Hase und Hahn stehen in Opposition. Der Hahn bemerkt alles und sagt es, der Hase nimmt es sich zu Herzen und macht zu. Die Anziehung ist da, aber der Hahn muss seine Offenheit abmildern und der Hase lernen zu antworten."
+    },
+    "lapin-chien": {
+      "note": 8.6,
+      "texte": "Heimliche Freunde: Die Sanftheit des Hasen und die Loyalität des Hundes ergeben ein aufmerksames und treues Paar. Ihr kümmert euch umeinander, ohne zu zählen. Das einzige Risiko ist, sich zu zweit zu viele Sorgen um die Außenwelt zu machen."
+    },
+    "lapin-cochon": {
+      "note": 8.6,
+      "texte": "Gleiches Dreieck, gleiche Freude am Wohlbefinden. Hase und Schwein lieben Essen, Gäste und Kuscheln. Ihr seid großzügig zueinander und selten im Streit. Behaltet nur das Budget und die Kilos im Auge."
+    },
+    "dragon-dragon": {
+      "note": 6.4,
+      "texte": "Zwei Drachen, das ist viel Feuer und zwei Stolze. Ihr bewundert euch, zielt hoch und streitet euch um den ersten Platz. Es hält, wenn jeder sein Reich hat und ihr dem anderen ohne Eifersucht gratulieren könnt."
+    },
+    "dragon-serpent": {
+      "note": 6.8,
+      "texte": "Der Drache glänzt, die Schlange denkt nach. Ein elegantes Paar, in dem die Schlange rät und der Drache handelt. Achtung vor der Eifersucht der Schlange angesichts des Charismas des Drachen, und vor der Ungeduld des Drachen angesichts des Schweigens der Schlange."
+    },
+    "dragon-cheval": {
+      "note": 6.6,
+      "texte": "Zwei starke, großzügige Energien. Drache und Pferd lieben Aktion, Feste und große Projekte. Ihr treibt euch gegenseitig an, manchmal zu weit. Plant ruhige Momente ein, sonst erschöpft ihr euch."
+    },
+    "dragon-chevre": {
+      "note": 6.0,
+      "texte": "Der Drache entscheidet, die Ziege folgt, und das kann lange funktionieren. Die Ziege bringt dem Drachen Sanftheit, der Drache gibt der Ziege Sicherheit. Das Risiko ist, dass die Ziege sich zu sehr zurücknimmt und es irgendwann bereut."
+    },
+    "dragon-singe": {
+      "note": 8.6,
+      "texte": "Gleiches Dreieck: der Mut des Drachen und der Einfallsreichtum des Affen, ein Team, das gewinnt. Ihr habt Ideen, Energie und Sinn fürs Spektakel. Der Affe bringt den Drachen zum Lachen, der Drache gibt dem Affen eine Richtung."
+    },
+    "dragon-coq": {
+      "note": 8.4,
+      "texte": "Heimliche Freunde: Der Drache denkt groß, der Hahn pflegt die Details. Was nerven könnte, wird zur Stärke, wenn jeder die Arbeit des anderen respektiert. Ein Paar, das aufbaut, sofern der Hahn nicht jede Idee des Drachen kritisiert."
+    },
+    "dragon-chien": {
+      "note": 3.8,
+      "texte": "Drache und Hund stehen sich auf dem Rad gegenüber. Der Hund zweifelt an dem, was der Drache behauptet, der Drache ärgert sich über die Vorsicht des Hundes. Zwei Loyale, die sich anziehen, aber akzeptieren müssen, die Welt nicht gleich zu sehen."
+    },
+    "dragon-cochon": {
+      "note": 6.4,
+      "texte": "Der Drache nimmt das Licht, das Schwein kümmert sich. Ein warmes Duo, in dem das Schwein ohne Eifersucht bewundert und der Drache großzügig beschützt. Der Drache muss nur daran denken, Danke zu sagen, denn das Schwein fordert nie."
+    },
+    "serpent-serpent": {
+      "note": 6.8,
+      "texte": "Zwei Schlangen, das ist ein elegantes, unauffälliges und sehr treues Paar, mit einem Stück Geheimnis auf jeder Seite. Ihr versteht euch mit halben Worten. Das Risiko ist gegenseitige Eifersucht und Schweigen, das zu lange dauert."
+    },
+    "serpent-cheval": {
+      "note": 6.0,
+      "texte": "Die Schlange denkt nach, das Pferd stürmt los. Das Pferd kann die Schlange zu langsam finden, die Schlange das Pferd zu zerstreut. Trotzdem habt ihr euch viel beizubringen, wenn die Eifersucht der Schlange sich nicht einmischt."
+    },
+    "serpent-chevre": {
+      "note": 6.2,
+      "texte": "Zwei verfeinerte Naturen, die Schönheit und Ruhe lieben. Die Schlange beruhigt die Ziege durch ihre Beständigkeit, die Ziege macht die Schlange durch ihre Zärtlichkeit weich. Ein ruhiges Paar, in dem man manchmal ein bisschen Neues anstoßen muss."
+    },
+    "serpent-singe": {
+      "note": 8.2,
+      "texte": "Heimliche Freunde: Schlange und Affe teilen eine wache Intelligenz und echte Freude am Spiel. Der Affe lockert die Schlange, die Schlange lenkt den Affen. Passt nur auf, euch nicht aus Gewohnheit gegenseitig zu manipulieren."
+    },
+    "serpent-coq": {
+      "note": 8.6,
+      "texte": "Gleiches Dreieck: zwei genaue Köpfe, die gut gemachte Dinge lieben. Schlange und Hahn bilden ein organisiertes und treues Paar. Der Hahn redet, die Schlange hört zu, und ihr trefft selten eine Entscheidung leichtfertig."
+    },
+    "serpent-chien": {
+      "note": 6.2,
+      "texte": "Die Schlange ist verschwiegen, der Hund braucht Transparenz. Ihr könnt euch durch Treue beruhigen, sofern die Schlange bereit ist zu sagen, was sie denkt, und der Hund bereit ist, nicht alles zu wissen."
+    },
+    "serpent-cochon": {
+      "note": 4.0,
+      "texte": "Schlange und Schwein stehen in Opposition. Das Schwein vertraut allen, die Schlange misstraut allen. Die Anziehung ist echt, aber das Schwein kann sich überwacht fühlen und die Schlange allein in ihrer Wachsamkeit."
+    },
+    "cheval-cheval": {
+      "note": 6.6,
+      "texte": "Zwei Pferde, das ist Energie, Reisen und viel Freiheit. Ihr sperrt euch nicht gegenseitig ein, und das macht euch glücklich. Das Risiko ist, jeder für sich zu laufen und sich zu kreuzen, ohne sich wirklich zu treffen."
+    },
+    "cheval-chevre": {
+      "note": 8.6,
+      "texte": "Heimliche Freunde: Das Pferd bringt den Schwung, die Ziege die Sanftheit. Das Pferd schützt die Ziege vor ihren Ängsten, die Ziege bietet dem Pferd einen Ort, an den es zurückkommt. Eines der zärtlichsten Duos des Tierkreises."
+    },
+    "cheval-singe": {
+      "note": 6.2,
+      "texte": "Zwei Spieler, die Neues und Tempo lieben. Pferd und Affe haben viel Spaß und langweilen sich selten. Einer von euch muss sich um die ernsten Dinge kümmern, denn keiner hat Lust dazu."
+    },
+    "cheval-coq": {
+      "note": 5.8,
+      "texte": "Das Pferd improvisiert, der Hahn organisiert. Der Hahn kann das Pferd chaotisch finden, das Pferd den Hahn starr. Es funktioniert, wenn der Hahn dem Unvorhergesehenen Platz lässt und das Pferd ein paar Hausregeln respektiert."
+    },
+    "cheval-chien": {
+      "note": 8.6,
+      "texte": "Gleiches Dreieck: zwei Offene, zwei Loyale, zwei Freiheitsliebende. Pferd und Hund verstehen und vertrauen sich, ohne sich zu überwachen. Der Hund muss nur lernen, sich weniger um die Abwesenheiten des Pferdes zu sorgen."
+    },
+    "cheval-cochon": {
+      "note": 6.4,
+      "texte": "Das Pferd zieht mit, das Schwein folgt gern. Ihr liebt gute Momente, Freunde und spontane Pläne. Das Schwein muss sagen, wann es müde ist, das Pferd muss daran denken, für es langsamer zu werden."
+    },
+    "chevre-chevre": {
+      "note": 7.2,
+      "texte": "Zwei Ziegen, das ist ein sanftes, künstlerisches und fürsorgliches Paar mit wenig Streit. Ihr versteht euch in der Feinfühligkeit. Das Risiko ist, euch gegenseitig in die Sorge hineinzuberuhigen und Entscheidungen zu zweit aufzuschieben."
+    },
+    "chevre-singe": {
+      "note": 6.4,
+      "texte": "Die Ziege ist feinfühlig, der Affe ist ein Spötter. Der Affe bringt die Ziege zum Lachen und holt sie aus ihren Zweifeln, solange er sich nicht über sie lustig macht. Die Ziege bietet dem Affen eine Zärtlichkeit, um die er nicht zu bitten weiß."
+    },
+    "chevre-coq": {
+      "note": 5.6,
+      "texte": "Die Ziege braucht Sanftheit, der Hahn sagt ohne Umwege, was er denkt. Dieses Duo verlangt Mühe: Der Hahn muss seine Worte wählen, die Ziege muss eine Bemerkung hören können, ohne darin eine Zurückweisung zu sehen."
+    },
+    "chevre-chien": {
+      "note": 5.8,
+      "texte": "Zwei Sorgenvolle, die Beruhigung brauchen, zwei Treue, die sie geben können. Ziege und Hund beschützen sich gut, können sich aber in Sorge einschließen. Einer von euch muss die Leichtigkeit bewahren."
+    },
+    "chevre-cochon": {
+      "note": 8.8,
+      "texte": "Gleiches Dreieck: Ziege und Schwein teilen Sanftheit, Großzügigkeit und die Freude an Gemütlichkeit. Ein warmes Paar, in dem man sich sofort wohlfühlt. Behaltet ein bisschen Ehrgeiz zu zweit, sonst wird die Gemütlichkeit zum geschlossenen Kokon."
+    },
+    "singe-singe": {
+      "note": 7.0,
+      "texte": "Zwei Affen, das ist Lachen, Ideen und fröhliches Chaos. Ihr langweilt euch nie und erratet euch. Das Risiko ist die Leichtigkeit zu zweit: Niemand nimmt die Dinge ernst, bis es zu spät ist."
+    },
+    "singe-coq": {
+      "note": 6.0,
+      "texte": "Der Affe trickst, der Hahn sagt alles. Der Hahn kann den Affen unzuverlässig finden, der Affe den Hahn zu eckig. Ihr könnt euch ergänzen, wenn der Affe fair spielt und der Hahn sich überraschen lässt."
+    },
+    "singe-chien": {
+      "note": 6.6,
+      "texte": "Der Affe amüsiert, der Hund wacht. Dieses Paar funktioniert besser, als man denkt: Der Hund gibt dem Affen Boden, der Affe gibt dem Hund Leichtigkeit. Der Hund muss nur lernen, über Witze zu lachen, die er nicht sofort versteht."
+    },
+    "singe-cochon": {
+      "note": 5.0,
+      "texte": "Affe und Schwein bilden ein « schädigendes » Paar. Das Schwein vertraut, der Affe spielt, und das Schwein kann sich am Ende getäuscht fühlen, ohne dass der Affe es wollte. Es hält, wenn der Affe die Naivität des Schweins beschützt, statt sie auszunutzen."
+    },
+    "coq-coq": {
+      "note": 6.0,
+      "texte": "Zwei Hähne, das ist ein tadelloses Zuhause und klare Meinungen, auf beiden Seiten. Ihr respektiert euch, aber ihr kritisiert euch. Um zu halten, einigt euch auf ein Thema, bei dem jeder immer Recht hat, und redet nicht mehr darüber."
+    },
+    "coq-chien": {
+      "note": 4.6,
+      "texte": "Hahn und Hund bilden ein « schädigendes » Paar. Der Hahn kritisiert, der Hund sorgt sich, und jeder verletzt den anderen, ohne es zu wollen. Zwei Ehrliche, die sich sehr gut verstehen können, sofern sie die Dinge sanft sagen."
+    },
+    "coq-cochon": {
+      "note": 6.2,
+      "texte": "Der Hahn organisiert, das Schwein genießt. Der Hahn kann das Schwein zu lax finden, das Schwein den Hahn zu anspruchsvoll. Aber das Schwein verträgt Bemerkungen besser als andere, und der Hahn entspannt sich bei ihm."
+    },
+    "chien-chien": {
+      "note": 7.2,
+      "texte": "Zwei Hunde, das ist Loyalität durch alles hindurch und ein Vertrauen, das nicht zur Debatte steht. Ihr beschützt einander. Das Risiko ist, sich zu zweit um alles zu sorgen und zu vergessen, Spaß zu haben."
+    },
+    "chien-cochon": {
+      "note": 6.8,
+      "texte": "Der Hund wacht, das Schwein genießt, und einer tut dem anderen gut. Der Hund bringt dem Schwein Vorsicht, das Schwein bringt dem Hund Freude. Ein einfaches, warmes Paar, oft unterschätzt."
+    },
+    "cochon-cochon": {
+      "note": 7.6,
+      "texte": "Zwei Schweine, das ist ein offenes Haus, ein voller Tisch und viel Zärtlichkeit. Ihr verzeiht euch alles. Das Risiko ist blindes Vertrauen zu zweit: Behaltet die Leute im Auge, die eure Großzügigkeit ausnutzen."
+    }
+  },
+  "conseils": {
+    "trine": "Euer Einvernehmen ist ein Geschenk, keine Garantie. Paare aus demselben Dreieck langweilen sich manchmal, weil alles zu leicht ist. Behaltet ein Projekt zu zweit, das euch Mühe abverlangt, und ihr behaltet den Schwung, der euch zusammengebracht hat.",
+    "harmonie": "Ihr funktioniert, weil ihr verschieden seid: Versucht nicht, dem anderen zu ähneln. Sagt lieber hin und wieder, was ihr an ihm oder ihr bewundert und selbst nicht habt. Das ist es, was heimliche Freunde zusammenhält.",
+    "meme": "Ihr kennt euch zu gut, um euch zu überraschen. Nehmt euch jeder eine Gewohnheit vor, die euch ähnlich ist und dem anderen fehlt: Wer sich sorgt, entscheidet sich, zu beruhigen, wer aufbraust, entscheidet sich, zu warten. Sonst verdoppelt ihr eure Schwächen, statt sie zu korrigieren.",
+    "neutre": "Nichts trägt euch, nichts bremst euch: Euer Paar sieht so aus, wie ihr es macht. Wählt eine einzige Sache, die ihr diesen Monat besser machen wollt, dieselbe für euch beide, und ihr werdet sehen, wie die Punktzahl steigt, die zählt, die des Alltags.",
+    "nuisance": "Was euer Paar abnutzt, sind kleine, wiederholte Dinge, keine großen Themen. Schreibt auf, was euch wirklich stört, ohne Kommentar, und tauscht die Listen. Die Hälfte der Zeilen verschwindet, sobald sie laut ausgesprochen ist.",
+    "opposition": "Ihr werdet nie im selben Tempo laufen, und das ist nicht das Ziel. Entscheidet, wer bei was das Sagen hat: die Ausflüge dem einen, die Finanzen dem anderen, zum Beispiel. Die gegensätzlichen Paare, die halten, sind die, die aufgehört haben, den anderen umerziehen zu wollen."
+  },
+  "suite": {
+    "titre": "Geht weiter mit euren vollständigen Daten",
+    "texte": "Das chinesische Zeichen schaut nur auf das Jahr. Tag und Monat sagen etwas anderes: dein Sternzeichen und deine Lebenszahl. Unser Test nach Geburtsdatum kreuzt die drei Lesarten.",
+    "bouton": "Den Test nach Geburtsdatum machen"
+  },
+  "section1": {
+    "title": "Liebeskompatibilität nach chinesischen Sternzeichen: Wie funktioniert das?",
+    "p1": "Die chinesische Astrologie gibt jedem Jahr ein Tier: Ratte, Büffel, Tiger, Hase, Drache, Schlange, Pferd, Ziege, Affe, Hahn, Hund und Schwein, dann beginnt der Zyklus von vorn. Jedes Tier hat einen Charakter, und die Tradition sagt seit Jahrhunderten, welche Tiere sich gut verstehen, welche sich ergänzen und welche sich gegenseitig auf die Füße treten. Das ist die Kompatibilität der chinesischen Sternzeichen: eine Lesart eures Paares anhand eurer beiden Geburtsjahre.",
+    "p2": "Unser Werkzeug macht diese Berechnung für euch. Ihr gebt zwei Daten ein, es findet die beiden Tiere, ihr Element (Holz, Feuer, Erde, Metall oder Wasser) und die Beziehung, die sie auf dem Rad verbindet: gleiches Affinitätsdreieck, heimliche Freunde, gegenüberliegende Zeichen, schädigendes Paar oder nichts Besonderes. Daraus zieht es eine Punktzahl, eine Erklärung zu jedem Tier in der Liebe und einen Rat für euch beide.",
+    "p3": "Ihr wollt eine breitere Lesart? Das Geburtsdatum verrät auch dein Sternzeichen und deine Lebenszahl, und <a href=\"/de/liebeskompatibilitaet-geburtsdatum/\">die drei Lesarten zu kreuzen</a> ergibt ein nuancierteres Ergebnis. Und wenn euch euer Paar so interessiert, wie es ist, mit seinen echten Streits und echten Plänen, schaut der <a href=\"/de/paar-kompatibilitaetstest/\">Kompatibilitätstest zu zweit</a> nicht in den Himmel, er stellt euch Fragen."
+  },
+  "section2": {
+    "title": "Das eigene chinesische Zeichen finden: Vorsicht beim Neujahr",
+    "p1": "Das chinesische Jahr beginnt nicht am 1. Januar. Es startet mit dem Mondneujahr, je nach Jahr zwischen dem 21. Januar und dem 20. Februar. Wer am 15. Januar 1990 geboren ist, ist kein Pferd, sondern Schlange, weil das Jahr des Pferdes erst am 27. Januar 1990 begann. Das ist der häufigste Fehler in den Tabellen, die man online findet, und er betrifft ungefähr jeden zehnten Menschen.",
+    "p2": "Unser Rechner nutzt die echten Neujahrsdaten, Jahr für Jahr, von 1924 bis 2043. Die Tabelle unten nennt die Jahre jedes Tieres zur Orientierung, aber wenn du im Januar oder Februar geboren bist, rechne mit dem vollständigen Datum: Genau deshalb fragen wir danach.",
+    "tip": "Das Element liest man an der letzten Ziffer des chinesischen Jahres ab: 4 und 5 für Holz, 6 und 7 für Feuer, 8 und 9 für Erde, 0 und 1 für Metall, 2 und 3 für Wasser. Ein Drache von 2000 ist ein Metall-Drache, ein Drache von 2012 ein Wasser-Drache.",
+    "tableHeaders": [
+      "Zeichen",
+      "Jüngere Jahre",
+      "In der Liebe"
+    ],
+    "tableRows": [
+      [
+        "Ratte",
+        "1960, 1972, 1984, 1996, 2008, 2020",
+        "aufmerksam, redselig, etwas ängstlich"
+      ],
+      [
+        "Büffel",
+        "1961, 1973, 1985, 1997, 2009, 2021",
+        "treu, geduldig, starrköpfig"
+      ],
+      [
+        "Tiger",
+        "1962, 1974, 1986, 1998, 2010, 2022",
+        "leidenschaftlich, beschützend, impulsiv"
+      ],
+      [
+        "Hase",
+        "1963, 1975, 1987, 1999, 2011, 2023",
+        "sanft, zurückhaltend, meidet Konflikte"
+      ],
+      [
+        "Drache",
+        "1964, 1976, 1988, 2000, 2012, 2024",
+        "ganz, großzügig, stolz"
+      ],
+      [
+        "Schlange",
+        "1965, 1977, 1989, 2001, 2013, 2025",
+        "tief, verführerisch, eifersüchtig"
+      ],
+      [
+        "Pferd",
+        "1966, 1978, 1990, 2002, 2014, 2026",
+        "warm, frei, unbeständig"
+      ],
+      [
+        "Ziege",
+        "1967, 1979, 1991, 2003, 2015, 2027",
+        "zärtlich, kreativ, ängstlich"
+      ],
+      [
+        "Affe",
+        "1968, 1980, 1992, 2004, 2016, 2028",
+        "witzig, erfinderisch, leicht"
+      ],
+      [
+        "Hahn",
+        "1969, 1981, 1993, 2005, 2017, 2029",
+        "loyal, offen, kritisch"
+      ],
+      [
+        "Hund",
+        "1970, 1982, 1994, 2006, 2018, 2030",
+        "treu, gerecht, besorgt"
+      ],
+      [
+        "Schwein",
+        "1971, 1983, 1995, 2007, 2019, 2031",
+        "großzügig, vertrauensvoll, lebensfroh"
+      ]
+    ]
+  },
+  "section3": {
+    "title": "Die vier Affinitätsdreiecke",
+    "p1": "Die Tradition ordnet die zwölf Tiere in vier Gruppen von drei, jeweils vier Jahre auseinander. Die Zeichen eines Dreiecks teilen eine Sicht auf das Leben: Das ist die günstigste Verbindung für ein Paar, die, in der man sich versteht, ohne sich erklären zu müssen.",
+    "p2": "Im selben Dreieck zu sein heißt nicht, sich in jedem Zug zu ähneln. Die Ratte ist vorsichtiger als der Drache, der Hund besorgter als der Tiger. Aber wenn eine Entscheidung ansteht, neigt ihr zur selben Seite, und das ist es, was auf Dauer zählt.",
+    "tableHeaders": [
+      "Dreieck",
+      "Die drei Zeichen",
+      "Was sie verbindet"
+    ],
+    "tableRows": [
+      [
+        "Das Dreieck der Tat",
+        "Ratte, Drache, Affe",
+        "Energie, Mut, Freude am Erfolg"
+      ],
+      [
+        "Das Dreieck der Methode",
+        "Büffel, Schlange, Hahn",
+        "Geduld, Strategie, Sinn fürs Detail"
+      ],
+      [
+        "Das Dreieck der Unabhängigkeit",
+        "Tiger, Pferd, Hund",
+        "Freiheit, Loyalität, Offenheit"
+      ],
+      [
+        "Das Dreieck der Sanftheit",
+        "Hase, Ziege, Schwein",
+        "Feinfühligkeit, Ruhe, Freude an Gemütlichkeit"
+      ]
+    ]
+  },
+  "section4": {
+    "title": "Heimliche Freunde und gegenüberliegende Zeichen",
+    "p1": "Neben den Dreiecken kennt die Tradition sechs Paare heimlicher Freunde, zwei Tiere, die sich nicht ähneln, sich aber perfekt ergänzen, und sechs Paare gegenüberliegender Zeichen, Angesicht zu Angesicht auf dem Rad, sechs Jahre auseinander. Die ersten ergeben sehr solide Paare, die zweiten Paare, die am Anfang sehr anziehend und danach schwieriger sind.",
+    "p2": "Es gibt auch sechs sogenannte « schädigende » Paare: Ratte und Ziege, Büffel und Pferd, Tiger und Schlange, Hase und Drache, Affe und Schwein, Hahn und Hund. Das ist keine klare Opposition. Es ist eher eine Abnutzung, kleine Ärgernisse, die wiederkommen. Das Ergebnis sagt es dir, wenn das euer Fall ist, mit dem, worauf zu achten ist.",
+    "tip": "Ein Paar aus gegenüberliegenden Zeichen ist nicht verloren, ganz im Gegenteil. Es funktioniert anders: Jeder behält seinen Bereich, statt den anderen überzeugen zu wollen. Viele Paare, die seit dreißig Jahren halten, bestehen aus zwei Gegensätzen, die aufgehört haben, sich umzuerziehen.",
+    "tableHeaders": [
+      "Art des Paares",
+      "Die beiden Zeichen",
+      "Was die Tradition sagt"
+    ],
+    "tableRows": [
+      [
+        "Heimliche Freunde",
+        "Ratte + Büffel",
+        "Wacher Geist und ruhige Kraft"
+      ],
+      [
+        "Heimliche Freunde",
+        "Tiger + Schwein",
+        "Mut und Sanftheit"
+      ],
+      [
+        "Heimliche Freunde",
+        "Hase + Hund",
+        "Feingefühl und Loyalität"
+      ],
+      [
+        "Heimliche Freunde",
+        "Drache + Hahn",
+        "Weitblick und Sinn fürs Detail"
+      ],
+      [
+        "Heimliche Freunde",
+        "Schlange + Affe",
+        "Intelligenz und Spiel"
+      ],
+      [
+        "Heimliche Freunde",
+        "Pferd + Ziege",
+        "Schwung und Zärtlichkeit"
+      ],
+      [
+        "Gegenüberliegende Zeichen",
+        "Ratte + Pferd",
+        "Planen gegen Improvisieren"
+      ],
+      [
+        "Gegenüberliegende Zeichen",
+        "Büffel + Ziege",
+        "Das Konkrete gegen den Traum"
+      ],
+      [
+        "Gegenüberliegende Zeichen",
+        "Tiger + Affe",
+        "Stolz gegen Spott"
+      ],
+      [
+        "Gegenüberliegende Zeichen",
+        "Hase + Hahn",
+        "Zurückhaltung gegen Offenheit"
+      ],
+      [
+        "Gegenüberliegende Zeichen",
+        "Drache + Hund",
+        "Selbstsicherheit gegen Zweifel"
+      ],
+      [
+        "Gegenüberliegende Zeichen",
+        "Schlange + Schwein",
+        "Misstrauen gegen Vertrauen"
+      ]
+    ]
+  },
+  "section5": {
+    "title": "Die fünf Elemente, was das Ergebnis nuanciert",
+    "p1": "Jedes Tier kehrt alle zwölf Jahre wieder, aber nie mit demselben Element. Ein Feuer-Tiger (1986) und ein Wasser-Tiger (1962) leben ihre Liebe nicht gleich. Die fünf Elemente folgen einander im Zyklus: Holz nährt Feuer, Feuer nährt Erde, Erde nährt Metall, Metall nährt Wasser, und Wasser nährt Holz. Zwei aufeinanderfolgende Elemente verstehen sich gut; zwei Elemente mit einem Rang Abstand kontrollieren sich.",
+    "p2": "Im Ergebnis bewegt das Element die Punktzahl um ein paar Punkte nach oben oder unten, nie mehr. Es ist eine Nuance, nicht der Kern. Zwei gegenüberliegende Tiere mit Elementen, die sich nähren, bleiben ein spannungsreiches Duo, mit etwas mehr Sanftheit an schlechten Tagen.",
+    "tableHeaders": [
+      "Element",
+      "Das chinesische Jahr endet auf",
+      "Was es dem Paar gibt"
+    ],
+    "tableRows": [
+      [
+        "Holz",
+        "4 ou 5",
+        "Wachstum, Großzügigkeit, das Bedürfnis nach Projekten"
+      ],
+      [
+        "Feuer",
+        "6 ou 7",
+        "Leidenschaft, Schwung, Wut, die schnell verfliegt"
+      ],
+      [
+        "Erde",
+        "8 ou 9",
+        "Stabilität, Geduld, Freude am Konkreten"
+      ],
+      [
+        "Metall",
+        "0 ou 1",
+        "Strenge, Loyalität, Schwierigkeit nachzugeben"
+      ],
+      [
+        "Wasser",
+        "2 ou 3",
+        "Feinfühligkeit, Intuition, das Bedürfnis nach Beruhigung"
+      ]
+    ]
+  },
+  "section6": {
+    "title": "Und wenn die Punktzahl niedrig ist?",
+    "p1": "Dann passiert nichts Schlimmes. Diese Punktzahl misst die Übereinstimmung zweier symbolischer Temperamente, die eurer Geburtsjahre. Sie misst weder eure Gefühle noch die Festigkeit dessen, was ihr aufgebaut habt. Tausende Paare aus gegenüberliegenden Zeichen leben sehr gut zusammen, und Paare aus demselben Dreieck trennen sich.",
+    "p2": "Was eine niedrige Punktzahl euch bringen kann, ist ein Gespräch. Lest das Porträt deines Tieres und das deines Partners, und fragt euch, was stimmt und was nicht. Meistens wird es genau dort interessant: Man erkennt sich in einer Zeile, der andere erkennt sich in einer anderen, und man spricht über ein Ärgernis, das man nie benannt hatte.",
+    "tip": "Macht die Berechnung zu zweit statt jeder für sich. Die Zahl zählt weniger als das, was ihr euch beim Lesen der Porträts sagen werdet."
+  },
+  "faq": {
+    "title": "Eure Fragen zur Kompatibilität der chinesischen Sternzeichen",
+    "q1": "Woran erkennt man, ob zwei chinesische Zeichen zusammenpassen?",
+    "a1": "Zuerst schaut man auf die Beziehung der beiden Tiere auf dem Rad: gleiches Affinitätsdreieck (vier Jahre Abstand), heimliche Freunde, gegenüberliegende Zeichen (sechs Jahre Abstand), schädigendes Paar oder keine besondere Verbindung. Dann verfeinert man mit dem Element von jedem, das vom Jahr abhängt. Unser Werkzeug macht beides und erklärt dir das Ergebnis.",
+    "q2": "Welche chinesischen Zeichen passen in der Liebe am besten zusammen?",
+    "a2": "Die Paare aus demselben Dreieck: Ratte, Drache und Affe untereinander; Büffel, Schlange und Hahn; Tiger, Pferd und Hund; Hase, Ziege und Schwein. Und die sechs Paare heimlicher Freunde: Ratte und Büffel, Tiger und Schwein, Hase und Hund, Drache und Hahn, Schlange und Affe, Pferd und Ziege.",
+    "q3": "Welche chinesischen Zeichen passen nicht zusammen?",
+    "a3": "Die sechs gegenüberliegenden Paare, sechs Jahre auseinander: Ratte und Pferd, Büffel und Ziege, Tiger und Affe, Hase und Hahn, Drache und Hund, Schlange und Schwein. Das sind die spannungsreichsten Paare der Tradition, aber oft auch die anziehendsten am Anfang. « Nicht zusammenpassen » heißt hier « nicht gleich funktionieren », nicht « sich nicht lieben ».",
+    "q4": "Ich bin im Januar geboren, welches chinesische Zeichen habe ich?",
+    "a4": "Wahrscheinlich das des Vorjahres. Das chinesische Jahr beginnt zwischen dem 21. Januar und dem 20. Februar, eine Geburt im Januar fällt also fast immer ins vorherige chinesische Jahr. Gib dein vollständiges Datum in den Rechner ein, er kennt das Neujahrsdatum jedes Jahres.",
+    "q5": "Muss man das Element berücksichtigen?",
+    "a5": "Ja, aber als Nuance. Das Tier gibt das Temperament, das Element sagt, wie es sich ausdrückt: Ein Feuer-Pferd ist hitziger als ein Erde-Pferd. In unserer Berechnung verschiebt das Element die Punktzahl um ein paar Punkte, wenn die beiden sich nähren oder sich reiben.",
+    "q6": "Werden die Ergebnisse gespeichert?",
+    "a6": "Nein. Die Berechnung läuft in deinem Browser, die Daten gehen nirgendwohin und nichts wird aufbewahrt. Du kannst die Berechnung so oft wiederholen, wie du willst, mit den Daten von wem du willst."
+  },
+  "jsonLd": {
+    "about": "Liebeskompatibilität der chinesischen Sternzeichen"
+  }
+}

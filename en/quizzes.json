@@ -427,5 +427,17 @@
     "shortTitle": "Is this the one?",
     "description": "Twenty questions about how you feel with this person, your arguments, trust and the future you picture. The result says whether your answers point the same way, and which way.",
     "metaDescription": "Twenty questions about trust, arguments, wanting to see them again and the future you picture. Instant result, free and anonymous."
+  },
+  "testSignesChinois": {
+    "title": "Chinese Zodiac Compatibility in Love: Free Calculator",
+    "shortTitle": "Chinese zodiac compatibility",
+    "description": "Two birth dates, your two animals and their element, and what Chinese tradition says about your couple: triangle, secret friends or opposite signs.",
+    "metaDescription": "Two birth dates, your two animals and their element, and what Chinese tradition says about your couple. Instant result, free and anonymous."
+  },
+  "compteurCouple": {
+    "title": "Relationship Counter: Days Together and Dates to Celebrate",
+    "shortTitle": "Relationship counter",
+    "description": "Enter the day it all started and see how many days you have been together, the exact length, and the next dates worth celebrating.",
+    "metaDescription": "Free relationship counter: enter your start date and see your days together, the exact time, your next anniversaries and day milestones to celebrate."
   }
 }

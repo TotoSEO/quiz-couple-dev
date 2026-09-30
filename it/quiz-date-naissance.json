@@ -13,8 +13,34 @@
     "jour": "Giorno",
     "moisLabel": "Mese",
     "annee": "Anno",
-    "mois": ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"],
-    "moisDate": ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
+    "mois": [
+      "Gennaio",
+      "Febbraio",
+      "Marzo",
+      "Aprile",
+      "Maggio",
+      "Giugno",
+      "Luglio",
+      "Agosto",
+      "Settembre",
+      "Ottobre",
+      "Novembre",
+      "Dicembre"
+    ],
+    "moisDate": [
+      "gennaio",
+      "febbraio",
+      "marzo",
+      "aprile",
+      "maggio",
+      "giugno",
+      "luglio",
+      "agosto",
+      "settembre",
+      "ottobre",
+      "novembre",
+      "dicembre"
+    ],
     "dateAffichee": "{{j}} {{mois}} {{a}}",
     "lancer": "Calcola la nostra compatibilità",
     "erreur": "Una delle due date non esiste. Controllate il giorno e il mese scelti.",
@@ -155,20 +181,72 @@
     "sub1Title": "Un esempio in trenta secondi",
     "sub1Text": "Prendiamo il 14 marzo 1990. Si somma: 1 + 4 + 0 + 3 + 1 + 9 + 9 + 0 = 27. Si riduce: 2 + 7 = 9. Cammino di vita 9. Altro esempio, il 29 dicembre 1990: 2 + 9 + 1 + 2 + 1 + 9 + 9 + 0 = 33. Ci si ferma, è un numero maestro.",
     "sub2Title": "Che cosa cerca in amore ogni cammino di vita",
-    "tableHeaders": ["Cammino", "Parola chiave", "Che cosa si aspetta da una relazione"],
+    "tableHeaders": [
+      "Cammino",
+      "Parola chiave",
+      "Che cosa si aspetta da una relazione"
+    ],
     "tableRows": [
-      ["1", "Lo slancio", "Ammirazione e spazio per decidere"],
-      ["2", "La dolcezza", "Presenza, tenerezza, pochi conflitti"],
-      ["3", "Le parole", "Che si rida con lui e che lo si ascolti raccontare"],
-      ["4", "La solidità", "Promesse mantenute e una cornice chiara"],
-      ["5", "Il movimento", "Novità e soprattutto nessun guinzaglio"],
-      ["6", "La cura", "Una casa, abitudini, qualcuno da proteggere"],
-      ["7", "La riflessione", "Silenzio, profondità, niente chiacchiere"],
-      ["8", "L'ambizione", "Un partner che avanzi alla stessa velocità"],
-      ["9", "Il dono", "Senso, generosità, una causa comune"],
-      ["11", "L'intuizione", "Che si prendano sul serio le sue sensazioni"],
-      ["22", "La costruzione", "Un progetto di vita, non un flirt"],
-      ["33", "L'amore dato", "Essere amato per sé, non per ciò che dà"]
+      [
+        "1",
+        "Lo slancio",
+        "Ammirazione e spazio per decidere"
+      ],
+      [
+        "2",
+        "La dolcezza",
+        "Presenza, tenerezza, pochi conflitti"
+      ],
+      [
+        "3",
+        "Le parole",
+        "Che si rida con lui e che lo si ascolti raccontare"
+      ],
+      [
+        "4",
+        "La solidità",
+        "Promesse mantenute e una cornice chiara"
+      ],
+      [
+        "5",
+        "Il movimento",
+        "Novità e soprattutto nessun guinzaglio"
+      ],
+      [
+        "6",
+        "La cura",
+        "Una casa, abitudini, qualcuno da proteggere"
+      ],
+      [
+        "7",
+        "La riflessione",
+        "Silenzio, profondità, niente chiacchiere"
+      ],
+      [
+        "8",
+        "L'ambizione",
+        "Un partner che avanzi alla stessa velocità"
+      ],
+      [
+        "9",
+        "Il dono",
+        "Senso, generosità, una causa comune"
+      ],
+      [
+        "11",
+        "L'intuizione",
+        "Che si prendano sul serio le sue sensazioni"
+      ],
+      [
+        "22",
+        "La costruzione",
+        "Un progetto di vita, non un flirt"
+      ],
+      [
+        "33",
+        "L'amore dato",
+        "Essere amato per sé, non per ciò che dà"
+      ]
     ],
     "tip": "Due cammini di vita identici non garantiscono proprio nulla. Due 5 insieme sono due persone che vogliono partire, e a volte non nella stessa direzione."
   },
@@ -185,16 +263,36 @@
     "p1": "Qui parla l'anno. Dodici animali, uno per anno, e un ciclo che ricomincia. Solo che l'anno cinese non comincia il 1° gennaio: parte dal capodanno lunare, che cade tra il 21 gennaio e il 21 febbraio a seconda degli anni. Tutte le persone nate a gennaio e nella prima metà di febbraio appartengono quindi all'animale dell'anno precedente.",
     "p2": "È l'errore più frequente dei calcolatori online, e riguarda quasi un decimo della popolazione. Il nostro strumento usa le <strong>vere date del capodanno cinese</strong>, anno per anno, dal 1924 al 2043. Chi è nato il 1° gennaio 2000 non è Drago, è Coniglio di Terra.",
     "sub1Title": "I quattro triangoli di affinità",
-    "tableHeaders": ["Triangolo", "I tre segni", "Che cosa li unisce"],
+    "tableHeaders": [
+      "Triangolo",
+      "I tre segni",
+      "Che cosa li unisce"
+    ],
     "tableRows": [
-      ["Il triangolo dell'azione", "Topo, Drago, Scimmia", "L'energia, l'audacia, il gusto del rischio"],
-      ["Il triangolo del metodo", "Bufalo, Serpente, Gallo", "La pazienza, la strategia, il senso del dettaglio"],
-      ["Il triangolo dell'indipendenza", "Tigre, Cavallo, Cane", "La libertà, la lealtà, la franchezza"],
-      ["Il triangolo della dolcezza", "Coniglio, Capra, Maiale", "La sensibilità, la calma, il gusto della comodità"]
+      [
+        "Il triangolo dell'azione",
+        "Topo, Drago, Scimmia",
+        "L'energia, l'audacia, il gusto del rischio"
+      ],
+      [
+        "Il triangolo del metodo",
+        "Bufalo, Serpente, Gallo",
+        "La pazienza, la strategia, il senso del dettaglio"
+      ],
+      [
+        "Il triangolo dell'indipendenza",
+        "Tigre, Cavallo, Cane",
+        "La libertà, la lealtà, la franchezza"
+      ],
+      [
+        "Il triangolo della dolcezza",
+        "Coniglio, Capra, Maiale",
+        "La sensibilità, la calma, il gusto della comodità"
+      ]
     ],
     "sub2Title": "E l'elemento in tutto questo?",
     "sub2Text": "Ogni animale torna ogni dodici anni, ma con un elemento diverso: Legno, Fuoco, Terra, Metallo o Acqua. Un Drago di Legno e un Drago di Fuoco non si somigliano davvero. Questi cinque elementi si concatenano in cicli, uno che nutre il successivo o lo tempera, ed è questo che affina il punteggio cinese del vostro risultato.",
-    "tip": "Sei coppie sono dette di armonia nella tradizione cinese, i famosi amici segreti: Topo e Bufalo, Tigre e Maiale, Coniglio e Cane, Drago e Gallo, Serpente e Scimmia, Cavallo e Capra. Non stanno in nessun triangolo, eppure funzionano benissimo."
+    "tip": "Sei coppie sono dette di armonia nella tradizione cinese, <a href=\"/it/compatibilita-amorosa-segni-cinesi/\">i famosi amici segreti</a>: Topo e Bufalo, Tigre e Maiale, Coniglio e Cane, Drago e Gallo, Serpente e Scimmia, Cavallo e Capra. Non stanno in nessun triangolo, eppure funzionano benissimo."
   },
   "section5": {
     "title": "Perché incrociare tre letture invece di una sola",

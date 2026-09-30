@@ -99,7 +99,11 @@
     "quizTypeCouple": "Quel type de couple êtes-vous ?",
     "quizTypeCoupleDesc": "Quinze situations, quatre profils, à répondre ensemble",
     "testEstCeLeBon": "Est-ce le bon / la bonne ?",
-    "testEstCeLeBonDesc": "Vingt questions pour savoir si c'est la bonne personne"
+    "testEstCeLeBonDesc": "Vingt questions pour savoir si c'est la bonne personne",
+    "testSignesChinois": "Compatibilité signes chinois",
+    "testSignesChinoisDesc": "Deux dates, deux animaux, un verdict",
+    "compteurCouple": "Compteur de couple",
+    "compteurCoupleDesc": "Vos jours ensemble, les dates à fêter"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

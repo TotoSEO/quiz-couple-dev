@@ -1,0 +1,473 @@
+{
+  "hero": {
+    "badge": "Herramienta gratuita",
+    "title": "Contador de pareja: ¿cuánto tiempo lleváis juntos?",
+    "highlight": "Contador de pareja",
+    "description": "Escribid la fecha de vuestro primer día en pareja. El contador os da <strong>el número de días juntos</strong>, la duración exacta en años, meses y días, y las próximas fechas que celebrar: aniversario, meses redondos, la meta de los 1.000 días... Con un enlace para guardar y volver a ver cómo sube la cifra.",
+    "subtitle": "Sin registro. La fecha se queda en vuestro teléfono, no se envía nada."
+  },
+  "form": {
+    "titre": "Vuestro contador",
+    "dateTitre": "El día en que empezó todo",
+    "dateAide": "El primer beso, la primera cita o el día en que dijisteis «estamos juntos»: tomad la fecha que ya celebráis, o la que cuenta para los dos.",
+    "jour": "Día",
+    "moisLabel": "Mes",
+    "annee": "Año",
+    "mois": [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    ],
+    "moisDate": [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre"
+    ],
+    "dateAffichee": "{{j}} de {{mois}} de {{a}}",
+    "joursSemaine": [
+      "domingo",
+      "lunes",
+      "martes",
+      "miércoles",
+      "jueves",
+      "viernes",
+      "sábado"
+    ],
+    "dateAvecJour": "{{js}} {{date}}",
+    "prenomsTitre": "Vuestros nombres (opcional)",
+    "prenom1": "Tu nombre",
+    "prenom2": "Su nombre",
+    "prenom1Ex": "Ej.: Tomás",
+    "prenom2Ex": "Ej.: Elisa",
+    "lancer": "Contar nuestros días juntos",
+    "aide": "El contador se actualiza solo cada día. Añadid la página a favoritos o copiad el enlace para volver a encontrarlo.",
+    "erreurVide": "Elegid el día, el mes y el año en que empezasteis.",
+    "erreur": "Esa fecha no existe. Comprobad el día y el mes.",
+    "erreurFutur": "Esa fecha aún está por llegar. El contador cuenta los días que ya habéis pasado juntos."
+  },
+  "unites": {
+    "jour": [
+      "día",
+      "días"
+    ],
+    "semaine": [
+      "semana",
+      "semanas"
+    ],
+    "mois": [
+      "mes",
+      "meses"
+    ],
+    "an": [
+      "año",
+      "años"
+    ],
+    "heure": [
+      "hora",
+      "horas"
+    ],
+    "minute": [
+      "minuto",
+      "minutos"
+    ],
+    "valentin": [
+      "San Valentín juntos",
+      "San Valentín juntos"
+    ],
+    "dimanche": [
+      "domingo juntos",
+      "domingos juntos"
+    ]
+  },
+  "et": " y ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "hoy",
+    "demain": "mañana",
+    "hier": "ayer",
+    "dans": "en {{n}} días",
+    "ilya": "hace {{n}} días"
+  },
+  "etapes": {
+    "anniversaire": "{{n}} {{ans}} juntos",
+    "mois": "{{n}} meses juntos",
+    "capJours": "La meta de los {{n}} días",
+    "capHeures": "{{n}} horas juntos",
+    "capMinutes": "{{n}} minutos juntos",
+    "noces": "las {{noces}}",
+    "capDetail": "o sea, {{n}} días"
+  },
+  "fete": {
+    "anniversaire": "¡Feliz aniversario! Hoy {{n}} {{ans}} juntos",
+    "mois": "Hoy {{n}} meses juntos, ¡eso se celebra!",
+    "cap": "¡{{cap}} es hoy!"
+  },
+  "noces": [
+    {
+      "an": 1,
+      "nom": "bodas de papel"
+    },
+    {
+      "an": 2,
+      "nom": "bodas de algodón"
+    },
+    {
+      "an": 3,
+      "nom": "bodas de cuero"
+    },
+    {
+      "an": 4,
+      "nom": "bodas de lino"
+    },
+    {
+      "an": 5,
+      "nom": "bodas de madera"
+    },
+    {
+      "an": 6,
+      "nom": "bodas de hierro"
+    },
+    {
+      "an": 7,
+      "nom": "bodas de lana"
+    },
+    {
+      "an": 8,
+      "nom": "bodas de bronce"
+    },
+    {
+      "an": 9,
+      "nom": "bodas de cerámica"
+    },
+    {
+      "an": 10,
+      "nom": "bodas de estaño"
+    },
+    {
+      "an": 11,
+      "nom": "bodas de acero"
+    },
+    {
+      "an": 12,
+      "nom": "bodas de seda"
+    },
+    {
+      "an": 13,
+      "nom": "bodas de encaje"
+    },
+    {
+      "an": 14,
+      "nom": "bodas de marfil"
+    },
+    {
+      "an": 15,
+      "nom": "bodas de cristal"
+    },
+    {
+      "an": 20,
+      "nom": "bodas de porcelana"
+    },
+    {
+      "an": 25,
+      "nom": "bodas de plata"
+    },
+    {
+      "an": 30,
+      "nom": "bodas de perla"
+    },
+    {
+      "an": 35,
+      "nom": "bodas de coral"
+    },
+    {
+      "an": 40,
+      "nom": "bodas de rubí"
+    },
+    {
+      "an": 45,
+      "nom": "bodas de zafiro"
+    },
+    {
+      "an": 50,
+      "nom": "bodas de oro"
+    },
+    {
+      "an": 60,
+      "nom": "bodas de diamante"
+    }
+  ],
+  "resultat": {
+    "noms": "{{a}} & {{b}}",
+    "vous": "tú",
+    "vousDeux": "Vosotros dos",
+    "depuis": "juntos desde el {{date}}",
+    "joursEnsemble": "{{jours}} juntos",
+    "soit": "o sea, {{duree}}",
+    "titreEtapes": "Las próximas fechas que celebrar",
+    "titreDernierCap": "La última meta superada",
+    "dernierCap": "{{cap}} ya quedó atrás: fue el {{date}}, {{quand}}.",
+    "titreGarder": "Guardad este contador a mano",
+    "garder": "La fecha queda guardada en este navegador: al volver a la página, vuestro contador aparecerá solo, al día. Para tenerlo en otro teléfono o mandárselo a tu media naranja, copiad el enlace de abajo. Contiene la fecha y vuestros nombres, nada más.",
+    "modifier": "Cambiar la fecha",
+    "avis": "Dejar una opinión"
+  },
+  "partage": {
+    "bouton": "Compartir",
+    "lienBouton": "Copiar el enlace del contador",
+    "texte": "{{noms}}: juntos desde hace {{jours}} {{unite}}, o sea, {{duree}}. Próxima fecha que celebrar: {{etape}}, el {{date}}.",
+    "copieTexte": "¡Texto y enlace copiados!",
+    "copieLien": "¡Enlace copiado!"
+  },
+  "suite": {
+    "titre": "¿Y más allá de las cifras?",
+    "texte": "Un contador dice cuánto tiempo. No dice cómo va la cosa. Si os preguntáis si sigue siendo amor o ya es costumbre, tenemos un test para eso: veinte preguntas y una respuesta honesta.",
+    "bouton": "Hacer el test amor o costumbre"
+  },
+  "section1": {
+    "title": "¿Qué es un contador de pareja?",
+    "p1": "Un contador de pareja es una herramienta muy sencilla: escribís la fecha en que empezó vuestra historia y os dice cuánto tiempo lleváis juntos. No cuenta solo en años, como respondemos cuando nos lo preguntan, sino en días, en semanas, en meses e incluso en horas. Por ejemplo, una pareja que empezó el 14 de mayo de 2023 pasa de los 1.200 días juntos en otoño de 2026. Dicho así, suena bastante distinto a «tres años y algo».",
+    "p2": "La idea existe desde hace tiempo en las aplicaciones de pareja, donde la cifra aparece en la pantalla de inicio y sube un punto cada mañana. Aquí es lo mismo, sin instalar nada: la página guarda vuestra fecha en el navegador y, en cada visita, el contador está al día. También podéis copiar un enlace que lleva la fecha y vuestros nombres, ponerlo en favoritos o enviárselo al otro.",
+    "p3": "Y como una cifra sola no hace gran cosa, el contador también os dice lo que viene: el próximo aniversario con el nombre de las bodas que le corresponde, el próximo mes redondo y las metas de días que nunca se ven venir, los 500 días, los 1.000 días, las 10.000 horas. Da ocasiones para celebrar algo fuera de las fechas de siempre, ¡y muchas veces son esas las que se recuerdan!"
+  },
+  "section2": {
+    "title": "Cómo funciona el contador de arriba",
+    "p1": "Esto es lo que hace el contador una vez que le habéis dado vuestra fecha:",
+    "points": [
+      "<strong>Cuenta los días:</strong> el número exacto de días entre vuestra fecha de inicio y hoy, años bisiestos incluidos. Es la cifra grande de arriba de la tarjeta.",
+      "<strong>Lo traduce en años, meses y días:</strong> «3 años, 4 meses y 16 días», por ejemplo. El mes se cuenta como en un calendario, de un 14 al 14 siguiente, tenga el mes los días que tenga.",
+      "<strong>Añade algunas cifras que hacen sonreír:</strong> las semanas, los meses, las horas y los minutos pasados juntos, cuántos San Valentín habéis compartido ya y cuántos domingos habéis pasado en pareja.",
+      "<strong>Mira hacia delante:</strong> el próximo aniversario (con las bodas del año: papel, algodón, cuero...), el próximo mes redondo y las dos próximas metas de días, cada una con su fecha y los días que faltan."
+    ],
+    "p2": "El día en que cae una de esas fechas, la tarjeta lo dice arriba, en grande. Si abrís el contador el día de vuestros 1.000 días, lo sabréis al momento, así que merece la pena ponerlo en favoritos y echarle un ojo por la mañana.",
+    "tip": "El contador solo conoce la fecha de vuestro teléfono. Si lo abrís justo después de medianoche, ya ha avanzado un día."
+  },
+  "section3": {
+    "title": "¿Desde cuándo se cuenta? La cuestión del primer día",
+    "p1": "La principal dificultad, la mayoría de las veces, no es el cálculo, es la fecha. ¿Se cuenta desde la primera cita, desde el primer beso, desde la noche en que uno dijo «te quiero» o desde el día en que decidisteis que estabais oficialmente juntos? No hay una respuesta correcta y, por cierto, los dos miembros de una pareja no siempre tienen la misma en la cabeza.",
+    "p2": "Nuestro consejo: tomad la fecha que ya celebráis, la que os viene cuando os lo preguntan. Si no tenéis ninguna, elegidla juntos, ahora, y zanjadlo de una vez. Muchas parejas se quedan con el primer beso, porque es un momento preciso, mientras que «empezamos a salir» suele ser más difuso. Los que se conocieron en una aplicación a veces toman la fecha del primer mensaje, lo que alarga el contador unas semanas, y nadie se queja.",
+    "p3": "Algunas parejas cuentan más bien desde el día en que <a href=\"/es/test-vivir-juntos-pareja/\">metieron las cajas en el mismo piso</a>: para ellas, ahí es donde empezó de verdad la vida en pareja. Si os separasteis y volvisteis, vosotros decidís: unos vuelven a empezar de cero, otros conservan la primera fecha porque ahí empezó todo. El contador no juzga, cuenta. Y cuando se duda entre dos fechas, quizá sea porque ya no se sabe muy bien <a href=\"/es/test-amor-o-costumbre/\">si sigue siendo amor o ya es costumbre</a>... que es otra pregunta, y para esa tenemos un test.",
+    "tip": "Apuntad la fecha elegida en algún sitio, en el contador para empezar. Dentro de diez años, el recuerdo de los comienzos será menos nítido, y la cifra seguirá ahí."
+  },
+  "section4": {
+    "title": "Las metas que celebrar: 100 días, 1 año, 1.000 días...",
+    "p1": "Un aniversario al año es poco. Las metas de días dan otras ocasiones y, como nadie las espera, suelen gustar más. Estas son las que el contador vigila por vosotros, con una idea para cada una:",
+    "tableHeaders": [
+      "La meta",
+      "Lo que representa",
+      "Una idea para celebrarla"
+    ],
+    "tableRows": [
+      [
+        "100 días",
+        "Algo más de tres meses. La época en que todavía os estáis descubriendo.",
+        "Repetir la primera cita, en el mismo sitio si se puede."
+      ],
+      [
+        "365 días",
+        "Un año. Las cuatro estaciones pasadas juntos.",
+        "Escribiros cada uno una carta, para abrirla a los 730 días."
+      ],
+      [
+        "500 días",
+        "Dieciséis meses y medio. Ya os sabéis las costumbres del otro de memoria.",
+        "Una noche <a href=\"/es/quiz-quien-conoce-mejor-pareja/\">para comprobar quién conoce mejor al otro</a>: quien pierde paga el postre."
+      ],
+      [
+        "1.000 días",
+        "Dos años y nueve meses. La meta que todo el mundo quiere celebrar.",
+        "Un fin de semana en algún sitio donde nunca hayáis estado."
+      ],
+      [
+        "10.000 horas",
+        "Unos 417 días. El tiempo que, dicen, hace falta para ser experto en algo.",
+        "Hacer una lista de diez cosas que habéis aprendido del otro."
+      ],
+      [
+        "Un millón de minutos",
+        "Unos 695 días, algo menos de dos años.",
+        "Una cena sin móviles, con una sola pregunta en la carta: ¿qué hacemos con los próximos diez años?"
+      ],
+      [
+        "3.650 días",
+        "Diez años. Las bodas de estaño.",
+        "Recuperar las fotos del primer año y mirarlas juntos."
+      ],
+      [
+        "10.000 días",
+        "Algo más de 27 años.",
+        "Una fiesta, con la gente que estaba allí al principio."
+      ]
+    ],
+    "p2": "El contador solo muestra las dos próximas metas, para no ahogar las fechas que importan. Cuando superáis una, pasa a ser «la última meta superada», con su fecha, para poder decir «fue hace 34 días» sin calcular. Y si la meta cae una noche de entre semana sin nada previsto, <a href=\"/es/juegos-para-parejas/\">un juego para dos en el sofá</a> cumple de sobra."
+  },
+  "section5": {
+    "title": "Las bodas: el nombre de cada año juntos",
+    "p1": "En España, cada aniversario lleva el nombre de un material, desde el papel del primer año hasta las bodas de oro de los cincuenta. En origen la lista era solo para el matrimonio, pero hoy las parejas la usan para todos los aniversarios, casadas o no. El contador muestra el nombre que corresponde a vuestro próximo aniversario. Aquí va la lista completa, con una idea de regalo o de detalle para cada año:",
+    "tableHeaders": [
+      "Año",
+      "Las bodas",
+      "Una idea"
+    ],
+    "tableRows": [
+      [
+        "1",
+        "Bodas de papel",
+        "Una carta escrita a mano, o un libro que los dos queráis leer."
+      ],
+      [
+        "2",
+        "Bodas de algodón",
+        "Una camiseta o unas sábanas bordadas con vuestros dos nombres."
+      ],
+      [
+        "3",
+        "Bodas de cuero",
+        "Un cuaderno de cuero para apuntar los recuerdos del año."
+      ],
+      [
+        "4",
+        "Bodas de lino",
+        "Un mantel nuevo y una cena cocinada a cuatro manos."
+      ],
+      [
+        "5",
+        "Bodas de madera",
+        "Plantar un árbol, o un marco de madera con vuestra foto favorita."
+      ],
+      [
+        "6",
+        "Bodas de hierro",
+        "Una sartén de hierro y una receta que nunca hayáis probado."
+      ],
+      [
+        "7",
+        "Bodas de lana",
+        "Una manta para las noches de sofá del invierno."
+      ],
+      [
+        "8",
+        "Bodas de bronce",
+        "Un candelabro y una noche a la luz de las velas."
+      ],
+      [
+        "9",
+        "Bodas de cerámica",
+        "Dos cuencos hechos a mano, en un taller de cerámica."
+      ],
+      [
+        "10",
+        "Bodas de estaño",
+        "Vuestra fecha grabada en un objeto de metal."
+      ],
+      [
+        "11",
+        "Bodas de acero",
+        "Un reloj, o un fin de semana junto al mar."
+      ],
+      [
+        "12",
+        "Bodas de seda",
+        "Un pañuelo, o unas sábanas de seda."
+      ],
+      [
+        "13",
+        "Bodas de encaje",
+        "Algo con encaje, o una noche en un hotel bonito."
+      ],
+      [
+        "14",
+        "Bodas de marfil",
+        "El marfil no se regala, así que un juego de mesa para las noches de invierno."
+      ],
+      [
+        "15",
+        "Bodas de cristal",
+        "Dos copas de cristal y una botella muy buena."
+      ],
+      [
+        "20",
+        "Bodas de porcelana",
+        "Un juego de té y una tarde para estrenarlo."
+      ],
+      [
+        "25",
+        "Bodas de plata",
+        "Una joya de plata, o repetir el viaje de vuestros comienzos."
+      ],
+      [
+        "30",
+        "Bodas de perla",
+        "Un collar de perlas, o una cena frente al mar."
+      ],
+      [
+        "35",
+        "Bodas de coral",
+        "Un viaje a un sitio cálido donde nunca hayáis estado."
+      ],
+      [
+        "40",
+        "Bodas de rubí",
+        "Una piedra roja, o un jardín plantado entre los dos."
+      ],
+      [
+        "45",
+        "Bodas de zafiro",
+        "Una fiesta con los hijos y los nietos."
+      ],
+      [
+        "50",
+        "Bodas de oro",
+        "Una fiesta con todos los que os vieron conoceros."
+      ],
+      [
+        "60",
+        "Bodas de diamante",
+        "Dicen que son las más raras de todas. Merecen una foto de familia al completo."
+      ]
+    ],
+    "p2": "Los nombres cambian un poco de un país a otro: en Francia, el primer año es el del algodón y el segundo el del cuero. Da igual la lista, la idea es la misma: dar un tema a cada año, para no regalar lo mismo que el año anterior. Y para los que se acercan a la boda, <a href=\"/es/test-compatibilidad-matrimonio/\">tenemos con qué comprobar si estáis preparados</a> antes de empezar a contar las bodas de verdad."
+  },
+  "section6": {
+    "title": "Por qué contar los días le sienta bien a la pareja",
+    "p1": "Se podría pensar que contar los días es cosa de principio de relación, cuando todavía se celebra el primer mes. En realidad, es más bien al revés. Al cabo de unos años, las fechas se funden con el día a día, y una cifra que sube cada mañana recuerda que ese día a día, justamente, lleváis 1.500 días construyéndolo. No es poca cosa.",
+    "p2": "El contador también da pretextos. Un mes redondo, una meta de días, es una razón para decir «¿sabes que hoy hacemos 900 días?» y hacer algo distinto esa noche, aunque sea pequeño, <a href=\"/es/test-lenguaje-amor-pareja/\">en el lenguaje que el otro entiende mejor</a>. Las parejas que duran rara vez son las de las grandes declaraciones. Son más bien las que tienen <a href=\"/es/test-relacion-sana/\">pequeños gestos regulares el uno con el otro</a>, y una fecha que celebrar cada cien días ayuda a no olvidarlos.",
+    "tip": "Poned el contador en favoritos en vuestros dos teléfonos, con el mismo enlace. Quien vea la meta primero se gana el derecho a elegir el restaurante."
+  },
+  "faq": {
+    "title": "Vuestras preguntas sobre el contador de pareja",
+    "q1": "¿El contador de pareja es gratis?",
+    "a1": "Sí, del todo, sin registro ni correo electrónico. Podéis usarlo tantas veces como queráis, para vuestra pareja o para la de vuestros padres, por curiosidad.",
+    "q2": "¿Dónde se guarda nuestra fecha?",
+    "a2": "Solo en vuestro navegador, en el aparato que estáis usando. No se envía nada a ningún servidor. Si borráis los datos de navegación, la fecha se va con ellos: de ahí el enlace para copiar, que la contiene y permite recuperarla en cualquier sitio.",
+    "q3": "¿Cómo comparto el contador con mi pareja?",
+    "a3": "Pulsad «Copiar el enlace del contador» y enviadlo. Al abrirlo, el otro verá el mismo contador, con la fecha y vuestros nombres ya rellenados, y podrá ponerlo en favoritos por su parte. El botón «Compartir» envía además un texto corto con la cifra del día.",
+    "q4": "¿Cómo calcula los meses el contador?",
+    "a4": "Como un calendario: de un 14 del mes al 14 del mes siguiente, sean los que sean los días que haya entre medias. Si empezasteis un 31, los meses de treinta días dan un mes redondo el 30. Los años bisiestos se tienen en cuenta en el total de días.",
+    "q5": "¿Qué metas de días se muestran?",
+    "a5": "Las centenas hasta 1.000 (100, 200, 300, 365, 400...), luego 1.500, 2.000, 2.500, 3.000, y así hasta los 30.000 días. Hemos añadido cuatro metas insólitas: 10.000 horas, un millón de minutos, 100.000 horas y diez millones de minutos. El contador muestra las dos próximas y la última que habéis superado.",
+    "q6": "¿Se puede usar el contador para algo que no sea una pareja?",
+    "a6": "Claro. Una amistad, una boda, el día en que llegó una mascota a casa, el día en que dejasteis de fumar... Cuenta días desde una fecha, el resto depende de lo que pongáis. ¡Las bodas y los San Valentín simplemente tendrán menos sentido!"
+  },
+  "jsonLd": {
+    "name": "Contador de pareja",
+    "about": "Número de días pasados juntos desde una fecha de inicio, y próximas fechas que celebrar"
+  }
+}

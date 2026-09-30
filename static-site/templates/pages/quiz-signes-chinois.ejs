@@ -1,0 +1,295 @@
+<%
+  // Compatibilité amoureuse des signes chinois : deux dates de naissance, deux
+  // animaux avec leur élément, et ce que la tradition dit de leur rencontre.
+  // Outil autonome (js/signes-chinois.js), hors quiz-loader, bâti sur le même
+  // gabarit que la compatibilité par date de naissance : mêmes classes, même
+  // carte de formulaire, même écran de résultat.
+  const ns = 'quiz-signes-chinois';
+  const quizTitle = t('quizzes:testSignesChinois.title', 'Compatibilité amoureuse des signes chinois');
+  // Tout ce que le calculateur doit pouvoir afficher, dans la langue de la page.
+  const scI18n = {
+    form: {
+      mois: t(ns + ':form.mois', []),
+      moisDate: t(ns + ':form.moisDate', []),
+      dateAffichee: t(ns + ':form.dateAffichee', '{{j}} {{mois}} {{a}}'),
+      erreur: t(ns + ':form.erreur', ''),
+    },
+    animaux: t(ns + ':animaux', {}),
+    elements: t(ns + ':elements', {}),
+    relations: t(ns + ':relations', {}),
+    elementsRelation: t(ns + ':elementsRelation', {}),
+    paliers: t(ns + ':paliers', {}),
+    resultat: t(ns + ':resultat', {}),
+    portraits: t(ns + ':portraits', {}),
+    paires: t(ns + ':paires', {}),
+    conseils: t(ns + ':conseils', {}),
+  };
+
+  const faqEntrees = [];
+  for (let i = 1; i <= 6; i++) {
+    const q = t(ns + ':faq.q' + i, '');
+    const a = t(ns + ':faq.a' + i, '');
+    if (q && a) faqEntrees.push({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } });
+  }
+
+  // Balisage Quiz sans hasPart : la page ne pose pas de questions à choix, elle
+  // demande deux dates et calcule.
+  const baseUrl = 'https://quiz-couple.com';
+  const imageSC = (typeof featuredImage !== 'undefined' && featuredImage) ? baseUrl + featuredImage : baseUrl + '/og-image.webp';
+  const quizSC = {
+    '@context': 'https://schema.org', '@type': 'Quiz',
+    name: quizTitle,
+    description: t('quizzes:testSignesChinois.metaDescription', t('quizzes:testSignesChinois.description', '')),
+    inLanguage: lang,
+    url: canonical,
+    isAccessibleForFree: true,
+    datePublished: '2026-09-30',
+    learningResourceType: 'Quiz',
+    interactivityType: 'active',
+    image: imageSC,
+    author: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl },
+    publisher: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl, logo: { '@type': 'ImageObject', url: baseUrl + '/apple-touch-icon.png' } },
+    about: { '@type': 'Thing', name: t(ns + ':jsonLd.about', 'couple') },
+    additionalProperty: [
+      { '@type': 'PropertyValue', name: 'audience', value: 'couples' },
+      { '@type': 'PropertyValue', name: 'input', value: 'two birth dates' },
+      { '@type': 'PropertyValue', name: 'method', value: 'Chinese zodiac: animal, element, traditional relations between the twelve signs' }
+    ]
+  };
+%>
+<script type="application/ld+json"><%- JSON.stringify(quizSC) %></script>
+<% if (faqEntrees.length) { %>
+<script type="application/ld+json"><%- JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqEntrees }) %></script>
+<% } %>
+
+<!-- Hero -->
+<section class="quiz-page-hero relative overflow-hidden astro-hero-section">
+  <div class="astro-stars" aria-hidden="true">
+    <% for (let i = 1; i <= 20; i++) { %><div class="astro-star astro-star-<%= i %>"></div><% } %>
+  </div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= quizTitle %></li>
+        </ol>
+      </nav>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        <%= t(ns + ':hero.badge', '') %>
+      </span>
+      <%
+        const heroTitle = t(ns + ':hero.title', quizTitle);
+        const heroHighlight = t(ns + ':hero.highlight', '');
+      %>
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
+      <p class="text-sm text-muted-foreground mt-4"><%= t(ns + ':hero.subtitle', '') %></p>
+    </div>
+  </div>
+  <%# L'image de tête vient en dernier dans le code, comme sur les autres pages de test. %>
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '', featuredImageSrcset: typeof featuredImageSrcset !== 'undefined' ? featuredImageSrcset : '' }) %>
+</section>
+
+<!-- Calculateur -->
+<section class="py-12 md:py-16">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-2xl">
+      <div id="sc-outil" class="astro-form-card rounded-2xl p-6 md:p-10" data-lang="<%= lang %>">
+
+        <div id="sc-formulaire">
+          <h2 class="text-xl md:text-2xl font-bold text-center mb-6"><%= t(ns + ':form.titre', '') %></h2>
+
+          <% const personnes = [{ n: '1', cle: 'personne1' }, { n: '2', cle: 'personne2' }]; %>
+          <% personnes.forEach(function (p, idx) { %>
+          <% if (idx === 1) { %>
+          <div class="astro-heart-divider">
+            <div class="astro-heart-line"></div>
+            <span class="astro-heart-icon">&#10084;&#65039;</span>
+            <div class="astro-heart-line"></div>
+          </div>
+          <% } %>
+          <div class="dn-personne">
+            <p class="dn-personne-titre"><span class="dn-personne-num dn-personne-num-<%= p.n %>"><%= p.n %></span><%= t(ns + ':form.' + p.cle, '') %></p>
+            <div class="dn-champs">
+              <div class="astro-field">
+                <label class="astro-field-label" for="sc-jour<%= p.n %>"><%= t(ns + ':form.jour', 'Jour') %></label>
+                <div class="astro-select-wrap"><select id="sc-jour<%= p.n %>" class="astro-input astro-select"></select></div>
+              </div>
+              <div class="astro-field">
+                <label class="astro-field-label" for="sc-mois<%= p.n %>"><%= t(ns + ':form.moisLabel', 'Mois') %></label>
+                <div class="astro-select-wrap"><select id="sc-mois<%= p.n %>" class="astro-input astro-select"></select></div>
+              </div>
+              <div class="astro-field">
+                <label class="astro-field-label" for="sc-annee<%= p.n %>"><%= t(ns + ':form.annee', 'Année') %></label>
+                <div class="astro-select-wrap"><select id="sc-annee<%= p.n %>" class="astro-input astro-select"></select></div>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+
+          <p id="sc-erreur" class="dn-erreur hidden" role="alert"></p>
+
+          <div class="mt-8 text-center">
+            <button id="sc-lancer" type="button" class="btn btn-cta btn-gradient astro-submit-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <%= t(ns + ':form.lancer', '') %>
+            </button>
+            <p class="text-sm text-muted-foreground mt-4"><%= t(ns + ':form.aide', '') %></p>
+          </div>
+        </div>
+
+        <div id="sc-resultat" class="hidden"></div>
+
+        <div id="sc-suite" class="hidden">
+          <div class="dn-suite-carte">
+            <h3 class="dn-suite-titre"><%= t(ns + ':suite.titre', '') %></h3>
+            <p class="dn-suite-texte"><%= t(ns + ':suite.texte', '') %></p>
+            <a class="btn btn-cta btn-gradient" href="<%= getLocalizedUrl('testDateNaissance', lang) %>">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              <%= t(ns + ':suite.bouton', '') %>
+            </a>
+          </div>
+          <div class="text-center mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <button id="sc-refaire" type="button" class="btn btn-outline px-8 py-3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              <%= t(ns + ':resultat.refaire', '') %>
+            </button>
+            <a href="#pq-reviews" class="btn btn-outline px-6 py-2.5 text-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <%= t(ns + ':resultat.avis', '') %>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# Sous le moteur, jamais au-dessus. %>
+<% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Contenu SEO -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="avec-colonne">
+    <div class="avec-colonne__contenu container mx-auto px-4 max-w-3xl">
+
+    <%
+      // Un tableau par section quand la section en déclare un : en-têtes et
+      // lignes viennent du fichier de langue, le gabarit ne sait rien des signes.
+      function tableau(cle) {
+        const h = t(ns + ':' + cle + '.tableHeaders', []);
+        const rows = t(ns + ':' + cle + '.tableRows', []);
+        if (!h.length || !rows.length) return '';
+        let out = '<div class="overflow-x-auto mb-6"><table class="quiz-table"><thead><tr>';
+        for (const x of h) out += '<th>' + x + '</th>';
+        out += '</tr></thead><tbody>';
+        for (const row of rows) {
+          out += '<tr>';
+          for (let ci = 0; ci < row.length; ci++) out += '<td class="' + (ci === 0 ? 'font-medium' : 'text-sm text-muted-foreground') + '">' + row[ci] + '</td>';
+          out += '</tr>';
+        }
+        return out + '</tbody></table></div>';
+      }
+    %>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section1.p1') %></p>
+        <p><%- t(ns + ':section1.p2') %></p>
+        <p><%- t(ns + ':section1.p3') %></p>
+      </div>
+    </section>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed mb-6">
+        <p><%- t(ns + ':section2.p1') %></p>
+        <p><%- t(ns + ':section2.p2') %></p>
+      </div>
+      <%- tableau('section2') %>
+      <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+        <p class="text-sm text-muted-foreground"><%- t(ns + ':section2.tip') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed mb-6">
+        <p><%- t(ns + ':section3.p1') %></p>
+      </div>
+      <%- tableau('section3') %>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section3.p2') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section4.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed mb-6">
+        <p><%- t(ns + ':section4.p1') %></p>
+      </div>
+      <%- tableau('section4') %>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section4.p2') %></p>
+      </div>
+      <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+        <p class="text-sm text-muted-foreground"><%- t(ns + ':section4.tip') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section5.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed mb-6">
+        <p><%- t(ns + ':section5.p1') %></p>
+      </div>
+      <%- tableau('section5') %>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section5.p2') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section6.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- t(ns + ':section6.p1') %></p>
+        <p><%- t(ns + ':section6.p2') %></p>
+      </div>
+      <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+        <p class="text-sm text-muted-foreground"><%- t(ns + ':section6.tip') %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', 'FAQ') %></h2>
+      <div class="space-y-3">
+        <% for (let i = 1; i <= 6; i++) { %>
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= t(ns + ':faq.q' + i) %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%- t(ns + ':faq.a' + i) %></div>
+        </details>
+        <% } %>
+      </div>
+    </section>
+
+    </div>
+  </div>
+</article>
+
+<%- include('../partials/related-tests', { routeKey, lang, t, getLocalizedUrl }) %>
+
+<script>window.SC_I18N = <%- JSON.stringify(scI18n) %>;</script>
+<script src="/js/signes-chinois.js" defer></script>
