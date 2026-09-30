@@ -1,0 +1,473 @@
+{
+  "hero": {
+    "badge": "Kostenloses Werkzeug",
+    "title": "Beziehungszähler: wie lange seid ihr schon zusammen?",
+    "highlight": "Beziehungszähler",
+    "description": "Gebt das Datum eures ersten Tages als Paar ein. Der Zähler zeigt euch <strong>eure Tage zusammen</strong>, die genaue Dauer in Jahren, Monaten und Tagen, und die nächsten Daten zum Feiern: Jahrestag, runde Monate, die 1.000-Tage-Marke... Mit einem Link zum Aufheben, um wiederzukommen und der Zahl beim Wachsen zuzusehen.",
+    "subtitle": "Keine Anmeldung. Das Datum bleibt auf eurem Handy, nichts wird verschickt."
+  },
+  "form": {
+    "titre": "Euer Zähler",
+    "dateTitre": "Der Tag, an dem alles begann",
+    "dateAide": "Der erste Kuss, das erste Date oder der Tag, an dem ihr gesagt habt: „Wir sind zusammen“. Nehmt das Datum, das ihr schon feiert, oder das, das für euch beide zählt.",
+    "jour": "Tag",
+    "moisLabel": "Monat",
+    "annee": "Jahr",
+    "mois": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "moisDate": [
+      "Januar",
+      "Februar",
+      "März",
+      "April",
+      "Mai",
+      "Juni",
+      "Juli",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "Dezember"
+    ],
+    "dateAffichee": "{{j}}. {{mois}} {{a}}",
+    "joursSemaine": [
+      "Sonntag",
+      "Montag",
+      "Dienstag",
+      "Mittwoch",
+      "Donnerstag",
+      "Freitag",
+      "Samstag"
+    ],
+    "dateAvecJour": "{{js}}, {{date}}",
+    "prenomsTitre": "Eure Vornamen (freiwillig)",
+    "prenom1": "Dein Vorname",
+    "prenom2": "Sein oder ihr Vorname",
+    "prenom1Ex": "z. B. Thomas",
+    "prenom2Ex": "z. B. Lena",
+    "lancer": "Unsere Tage zusammen zählen",
+    "aide": "Der Zähler aktualisiert sich jeden Tag von selbst. Speichert die Seite als Lesezeichen oder kopiert den Link, um sie wiederzufinden.",
+    "erreurVide": "Wählt Tag, Monat und Jahr eures Anfangs.",
+    "erreur": "Dieses Datum gibt es nicht. Prüft Tag und Monat.",
+    "erreurFutur": "Dieses Datum liegt noch vor euch. Der Zähler zählt die Tage, die ihr schon zusammen verbracht habt."
+  },
+  "unites": {
+    "jour": [
+      "Tag",
+      "Tage"
+    ],
+    "semaine": [
+      "Woche",
+      "Wochen"
+    ],
+    "mois": [
+      "Monat",
+      "Monate"
+    ],
+    "an": [
+      "Jahr",
+      "Jahre"
+    ],
+    "heure": [
+      "Stunde",
+      "Stunden"
+    ],
+    "minute": [
+      "Minute",
+      "Minuten"
+    ],
+    "valentin": [
+      "Valentinstag zusammen",
+      "Valentinstage zusammen"
+    ],
+    "dimanche": [
+      "Sonntag zu zweit",
+      "Sonntage zu zweit"
+    ]
+  },
+  "et": " und ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "heute",
+    "demain": "morgen",
+    "hier": "gestern",
+    "dans": "in {{n}} Tagen",
+    "ilya": "vor {{n}} Tagen"
+  },
+  "etapes": {
+    "anniversaire": "{{n}} {{ans}} zusammen",
+    "mois": "{{n}} Monate zusammen",
+    "capJours": "Die {{n}}-Tage-Marke",
+    "capHeures": "{{n}} Stunden zusammen",
+    "capMinutes": "{{n}} Minuten zusammen",
+    "noces": "die {{noces}}",
+    "capDetail": "also {{n}} Tage"
+  },
+  "fete": {
+    "anniversaire": "Alles Gute zum Jahrestag! Heute {{n}} {{ans}} zusammen",
+    "mois": "Heute {{n}} Monate zusammen, das muss gefeiert werden!",
+    "cap": "{{cap}} ist heute!"
+  },
+  "noces": [
+    {
+      "an": 1,
+      "nom": "Papierhochzeit"
+    },
+    {
+      "an": 2,
+      "nom": "Baumwollhochzeit"
+    },
+    {
+      "an": 3,
+      "nom": "Lederhochzeit"
+    },
+    {
+      "an": 4,
+      "nom": "Seidenhochzeit"
+    },
+    {
+      "an": 5,
+      "nom": "Holzhochzeit"
+    },
+    {
+      "an": 6,
+      "nom": "Zuckerhochzeit"
+    },
+    {
+      "an": 7,
+      "nom": "Kupferhochzeit"
+    },
+    {
+      "an": 8,
+      "nom": "Blechhochzeit"
+    },
+    {
+      "an": 9,
+      "nom": "Keramikhochzeit"
+    },
+    {
+      "an": 10,
+      "nom": "Rosenhochzeit"
+    },
+    {
+      "an": 11,
+      "nom": "Stahlhochzeit"
+    },
+    {
+      "an": 12,
+      "nom": "Nickelhochzeit"
+    },
+    {
+      "an": 13,
+      "nom": "Veilchenhochzeit"
+    },
+    {
+      "an": 14,
+      "nom": "Elfenbeinhochzeit"
+    },
+    {
+      "an": 15,
+      "nom": "Kristallhochzeit"
+    },
+    {
+      "an": 20,
+      "nom": "Porzellanhochzeit"
+    },
+    {
+      "an": 25,
+      "nom": "Silberhochzeit"
+    },
+    {
+      "an": 30,
+      "nom": "Perlenhochzeit"
+    },
+    {
+      "an": 35,
+      "nom": "Leinwandhochzeit"
+    },
+    {
+      "an": 40,
+      "nom": "Rubinhochzeit"
+    },
+    {
+      "an": 45,
+      "nom": "Messinghochzeit"
+    },
+    {
+      "an": 50,
+      "nom": "Goldene Hochzeit"
+    },
+    {
+      "an": 60,
+      "nom": "Diamantene Hochzeit"
+    }
+  ],
+  "resultat": {
+    "noms": "{{a}} & {{b}}",
+    "vous": "du",
+    "vousDeux": "Ihr beide",
+    "depuis": "zusammen seit {{date}}",
+    "joursEnsemble": "{{jours}} zusammen",
+    "soit": "also {{duree}}",
+    "titreEtapes": "Die nächsten Daten zum Feiern",
+    "titreDernierCap": "Die letzte Marke, die ihr geknackt habt",
+    "dernierCap": "{{cap}} liegt hinter euch: das war am {{date}}, {{quand}}.",
+    "titreGarder": "Behaltet diesen Zähler griffbereit",
+    "garder": "Das Datum ist in diesem Browser gespeichert: wenn ihr auf die Seite zurückkommt, erscheint euer Zähler von selbst, auf dem neuesten Stand. Um ihn auf einem anderen Handy zu haben oder eurer besseren Hälfte zu schicken, kopiert den Link unten. Er enthält das Datum und eure Vornamen, sonst nichts.",
+    "modifier": "Datum ändern",
+    "avis": "Bewertung abgeben"
+  },
+  "partage": {
+    "bouton": "Teilen",
+    "lienBouton": "Link zum Zähler kopieren",
+    "texte": "{{noms}}: seit {{jours}} {{unite}} zusammen, also {{duree}}. Nächstes Datum zum Feiern: {{etape}}, am {{date}}.",
+    "copieTexte": "Text und Link kopiert!",
+    "copieLien": "Link kopiert!"
+  },
+  "suite": {
+    "titre": "Und jenseits der Zahlen?",
+    "texte": "Ein Zähler sagt, wie lange. Er sagt nicht, wie es läuft. Wenn ihr euch fragt, ob es noch Liebe ist oder schon Gewohnheit, haben wir einen Test dafür: zwanzig Fragen und eine ehrliche Antwort.",
+    "bouton": "Den Test Liebe oder Gewohnheit machen"
+  },
+  "section1": {
+    "title": "Was ist ein Beziehungszähler?",
+    "p1": "Ein Beziehungszähler ist ein ganz einfaches Werkzeug: ihr gebt das Datum ein, an dem eure Geschichte begonnen hat, und er sagt euch, wie lange ihr schon zusammen seid. Er zählt nicht nur in Jahren, wie man antwortet, wenn man gefragt wird, sondern in Tagen, Wochen, Monaten und sogar Stunden. Ein Paar, das am 14. Mai 2023 zusammengekommen ist, überschreitet zum Beispiel im Herbst 2026 die 1.200 Tage zusammen. So gesagt klingt das gleich ganz anders als „drei Jahre und ein bisschen“.",
+    "p2": "Die Idee gibt es schon lange in Paar-Apps, wo die Zahl auf dem Startbildschirm steht und jeden Morgen um eins hochgeht. Hier ist es dasselbe, ohne etwas zu installieren: die Seite behält euer Datum im Browser, und bei jedem Besuch ist der Zähler auf dem neuesten Stand. Ihr könnt auch einen Link kopieren, der das Datum und eure Vornamen enthält, ihn als Lesezeichen speichern oder dem anderen schicken.",
+    "p3": "Und weil eine Zahl allein nicht viel bringt, sagt euch der Zähler auch, was kommt: den nächsten Jahrestag mit dem Namen der Hochzeit, die dazugehört, den nächsten runden Monat und die Tage-Marken, die niemand kommen sieht, 500 Tage, 1.000 Tage, 10.000 Stunden. Das gibt Anlässe, etwas außerhalb der üblichen Daten zu feiern, und oft sind es genau die, die man behält!"
+  },
+  "section2": {
+    "title": "So funktioniert der Zähler oben",
+    "p1": "Das macht der Zähler, sobald ihr ihm euer Datum gegeben habt:",
+    "points": [
+      "<strong>Er zählt die Tage:</strong> die genaue Zahl der Tage zwischen eurem Startdatum und heute, Schaltjahre eingerechnet. Das ist die große Zahl oben auf der Karte.",
+      "<strong>Er übersetzt in Jahre, Monate und Tage:</strong> „3 Jahre, 4 Monate und 16 Tage“ zum Beispiel. Der Monat wird wie im Kalender gezählt, vom 14. bis zum nächsten 14., egal wie viele Tage der Monat hat.",
+      "<strong>Er ergänzt ein paar Zahlen, die zum Schmunzeln bringen:</strong> die Wochen, Monate, Stunden und Minuten, die ihr zusammen verbracht habt, wie viele Valentinstage ihr schon geteilt habt und wie viele Sonntage zu zweit.",
+      "<strong>Er schaut nach vorn:</strong> den nächsten Jahrestag (mit der Hochzeit des Jahres: Papier, Baumwolle, Leder...), den nächsten runden Monat und die zwei nächsten Tage-Marken, jede mit ihrem Datum und den Tagen, die noch fehlen."
+    ],
+    "p2": "An dem Tag, an dem eines dieser Daten fällt, steht es oben auf der Karte, in groß. Wenn ihr den Zähler am Tag eurer 1.000 Tage öffnet, wisst ihr es sofort. Es lohnt sich also, ihn als Lesezeichen zu speichern und morgens kurz draufzuschauen.",
+    "tip": "Der Zähler kennt nur das Datum eures Handys. Öffnet ihr ihn kurz nach Mitternacht, ist er schon einen Tag weiter."
+  },
+  "section3": {
+    "title": "Ab wann zählt man? Die Frage nach dem ersten Tag",
+    "p1": "Die größte Schwierigkeit ist meistens nicht das Rechnen, sondern das Datum. Zählt man ab dem ersten Date, dem ersten Kuss, dem Abend, an dem einer „ich liebe dich“ gesagt hat, oder ab dem Tag, an dem ihr beschlossen habt, offiziell zusammen zu sein? Es gibt keine richtige Antwort, und die beiden in einem Paar haben übrigens nicht immer dieselbe im Kopf.",
+    "p2": "Unser Rat: nehmt das Datum, das ihr schon feiert, das euch einfällt, wenn man euch fragt. Habt ihr keins, wählt es zusammen, jetzt, und macht ein für alle Mal einen Haken dran. Viele Paare nehmen den ersten Kuss, weil das ein genauer Moment ist, während „wir sind zusammengekommen“ oft schwammiger ist. Wer sich über eine App kennengelernt hat, nimmt manchmal das Datum der ersten Nachricht, was den Zähler um ein paar Wochen verlängert, und niemand beschwert sich.",
+    "p3": "Manche Paare zählen lieber ab dem Tag, an dem sie <a href=\"/de/zusammenziehen-test-paare/\">ihre Kartons in dieselbe Wohnung getragen haben</a>: für sie hat das Leben zu zweit erst da richtig angefangen. Wenn ihr getrennt wart und wieder zusammengekommen seid, ist es eure Sache: manche fangen bei null an, andere behalten das erste Datum, weil dort alles begonnen hat. Der Zähler urteilt nicht, er zählt. Und wer zwischen zwei Daten schwankt, weiß vielleicht nicht mehr so genau, <a href=\"/de/liebe-oder-gewohnheit-test/\">ob es noch Liebe ist oder schon Gewohnheit</a>... das ist eine andere Frage, und dafür haben wir einen Test.",
+    "tip": "Schreibt das gewählte Datum irgendwo auf, im Zähler zum Beispiel. In zehn Jahren ist die Erinnerung an die Anfänge weniger scharf, und die Zahl ist immer noch da."
+  },
+  "section4": {
+    "title": "Die Marken zum Feiern: 100 Tage, 1 Jahr, 1.000 Tage...",
+    "p1": "Ein Jahrestag pro Jahr ist wenig. Tage-Marken geben andere Anlässe, und weil niemand mit ihnen rechnet, machen sie oft mehr Freude. Das sind die, auf die der Zähler für euch achtet, mit einer Idee für jede:",
+    "tableHeaders": [
+      "Die Marke",
+      "Was sie bedeutet",
+      "Eine Idee zum Feiern"
+    ],
+    "tableRows": [
+      [
+        "100 Tage",
+        "Etwas mehr als drei Monate. Die Zeit, in der ihr euch noch entdeckt.",
+        "Das erste Date wiederholen, wenn möglich am selben Ort."
+      ],
+      [
+        "365 Tage",
+        "Ein Jahr. Vier Jahreszeiten zusammen.",
+        "Jeder schreibt dem anderen einen Brief, zu öffnen bei 730 Tagen."
+      ],
+      [
+        "500 Tage",
+        "Sechzehneinhalb Monate. Ihr kennt die Gewohnheiten des anderen auswendig.",
+        "Ein Abend, <a href=\"/de/wer-kennt-partner-besser-quiz/\">um zu prüfen, wer den anderen besser kennt</a>: wer verliert, zahlt den Nachtisch."
+      ],
+      [
+        "1.000 Tage",
+        "Zwei Jahre und neun Monate. Die Marke, die alle feiern wollen.",
+        "Ein Wochenende an einem Ort, an dem ihr noch nie wart."
+      ],
+      [
+        "10.000 Stunden",
+        "Etwa 417 Tage. Die Zeit, die man angeblich braucht, um Experte in etwas zu werden.",
+        "Zehn Dinge auflisten, die ihr über den anderen gelernt habt."
+      ],
+      [
+        "Eine Million Minuten",
+        "Etwa 695 Tage, knapp zwei Jahre.",
+        "Ein Abendessen ohne Handys, mit einer einzigen Frage auf der Karte: was machen wir mit den nächsten zehn Jahren?"
+      ],
+      [
+        "3.650 Tage",
+        "Zehn Jahre. Die Rosenhochzeit.",
+        "Die Fotos aus dem ersten Jahr heraussuchen und zusammen anschauen."
+      ],
+      [
+        "10.000 Tage",
+        "Etwas mehr als 27 Jahre.",
+        "Ein Fest, mit den Leuten, die am Anfang dabei waren."
+      ]
+    ],
+    "p2": "Der Zähler zeigt nur die zwei nächsten Marken, damit die Daten, die zählen, nicht untergehen. Habt ihr eine geknackt, wird sie zur „letzten Marke“, mit ihrem Datum, damit ihr „das war vor 34 Tagen“ sagen könnt, ohne zu rechnen. Und fällt eine Marke auf einen Wochentagabend ohne Pläne, tut es <a href=\"/de/paarspiele/\">ein Spiel zu zweit auf dem Sofa</a> ganz gut."
+  },
+  "section5": {
+    "title": "Die Hochzeitsnamen: wie jedes Jahr zusammen heißt",
+    "p1": "Im deutschsprachigen Raum trägt jeder Jahrestag den Namen eines Materials, von der Papierhochzeit im ersten Jahr bis zur Goldenen Hochzeit nach fünfzig. Ursprünglich galt die Liste nur für Ehepaare, heute nutzen Paare sie für alle Jahrestage, verheiratet oder nicht. Der Zähler zeigt den Namen, der zu eurem nächsten Jahrestag passt. Hier die vollständige Liste, mit einer Geschenk- oder Aufmerksamkeitsidee für jedes Jahr:",
+    "tableHeaders": [
+      "Jahr",
+      "Die Hochzeit",
+      "Eine Idee"
+    ],
+    "tableRows": [
+      [
+        "1",
+        "Papierhochzeit",
+        "Ein handgeschriebener Brief, oder ein Buch, das ihr beide lesen wollt."
+      ],
+      [
+        "2",
+        "Baumwollhochzeit",
+        "Ein T-Shirt oder Bettwäsche, bestickt mit euren beiden Vornamen."
+      ],
+      [
+        "3",
+        "Lederhochzeit",
+        "Ein Ledernotizbuch für die Erinnerungen des Jahres."
+      ],
+      [
+        "4",
+        "Seidenhochzeit",
+        "Ein Seidentuch, oder ein Abend im Lieblingsrestaurant."
+      ],
+      [
+        "5",
+        "Holzhochzeit",
+        "Einen Baum pflanzen, oder ein Holzrahmen mit eurem Lieblingsfoto."
+      ],
+      [
+        "6",
+        "Zuckerhochzeit",
+        "Ein Kuchen, den ihr zusammen backt, auch wenn er schief wird."
+      ],
+      [
+        "7",
+        "Kupferhochzeit",
+        "Ein Kupfertopf und ein Rezept, das ihr noch nie probiert habt."
+      ],
+      [
+        "8",
+        "Blechhochzeit",
+        "Eine Blechdose voller Zettel mit euren schönsten Momenten."
+      ],
+      [
+        "9",
+        "Keramikhochzeit",
+        "Zwei handgemachte Schalen aus einem Töpferkurs."
+      ],
+      [
+        "10",
+        "Rosenhochzeit",
+        "Zehn Rosen, eine für jedes Jahr."
+      ],
+      [
+        "11",
+        "Stahlhochzeit",
+        "Eine Uhr, oder ein Wochenende am Meer."
+      ],
+      [
+        "12",
+        "Nickelhochzeit",
+        "Ein Ausflug mit dem Zug, irgendwohin, spontan."
+      ],
+      [
+        "13",
+        "Veilchenhochzeit",
+        "Ein Veilchenstrauß, oder ein Spaziergang dort, wo alles begann."
+      ],
+      [
+        "14",
+        "Elfenbeinhochzeit",
+        "Elfenbein schenkt man nicht, also ein Brettspiel für Winterabende."
+      ],
+      [
+        "15",
+        "Kristallhochzeit",
+        "Zwei Kristallgläser und eine sehr gute Flasche."
+      ],
+      [
+        "20",
+        "Porzellanhochzeit",
+        "Ein Teeservice und ein Nachmittag, um es einzuweihen."
+      ],
+      [
+        "25",
+        "Silberhochzeit",
+        "Ein Silberschmuck, oder die Reise eurer Anfänge noch einmal machen."
+      ],
+      [
+        "30",
+        "Perlenhochzeit",
+        "Eine Perlenkette, oder ein Abendessen mit Blick aufs Meer."
+      ],
+      [
+        "35",
+        "Leinwandhochzeit",
+        "Ein gemaltes Bild von euch, oder ein Fotobuch der letzten 35 Jahre."
+      ],
+      [
+        "40",
+        "Rubinhochzeit",
+        "Ein roter Stein, oder ein gemeinsam gepflanzter Garten."
+      ],
+      [
+        "45",
+        "Messinghochzeit",
+        "Ein Fest mit Kindern und Enkeln."
+      ],
+      [
+        "50",
+        "Goldene Hochzeit",
+        "Ein Fest mit allen, die damals dabei waren, als ihr euch kennengelernt habt."
+      ],
+      [
+        "60",
+        "Diamantene Hochzeit",
+        "Man sagt, sie sei die seltenste von allen. Das verdient ein komplettes Familienfoto."
+      ]
+    ],
+    "p2": "Die Namen unterscheiden sich ein wenig von Land zu Land: in Frankreich ist das erste Jahr die Baumwolle und das zweite das Leder. Egal welche Liste, die Idee bleibt dieselbe: jedem Jahr ein Thema geben, damit man nicht dasselbe schenkt wie im Jahr davor. Und wer sich der Hochzeit nähert, <a href=\"/de/ehe-kompatibilitaetstest/\">kann bei uns prüfen, ob ihr bereit seid</a>, bevor ihr die Hochzeitsjahre wirklich zu zählen beginnt."
+  },
+  "section6": {
+    "title": "Warum Tage zählen dem Paar guttut",
+    "p1": "Man könnte meinen, Tage zählen sei etwas für den Anfang einer Beziehung, wenn man noch den ersten Monat feiert. In Wirklichkeit ist es eher umgekehrt. Nach ein paar Jahren gehen die Daten im Alltag unter, und eine Zahl, die jeden Morgen steigt, erinnert daran, dass ihr genau diesen Alltag seit 1.500 Tagen aufbaut. Das ist nicht nichts.",
+    "p2": "Der Zähler liefert auch Vorwände. Ein runder Monat, eine Tage-Marke, das ist ein Grund zu sagen: „Weißt du, dass es heute 900 Tage sind?“ und an dem Abend etwas anders zu machen, und sei es klein, <a href=\"/de/liebessprache-test-paar/\">in der Sprache, die der andere am besten versteht</a>. Paare, die halten, sind selten die mit den großen Erklärungen. Es sind eher die mit <a href=\"/de/gesunde-beziehung-test/\">kleinen, regelmäßigen Gesten füreinander</a>, und ein Datum zum Feiern alle hundert Tage hilft, sie nicht zu vergessen.",
+    "tip": "Speichert den Zähler auf beiden Handys als Lesezeichen, mit demselben Link. Wer die Marke zuerst bemerkt, darf das Restaurant aussuchen."
+  },
+  "faq": {
+    "title": "Eure Fragen zum Beziehungszähler",
+    "q1": "Ist der Beziehungszähler kostenlos?",
+    "a1": "Ja, komplett, ohne Anmeldung und ohne E-Mail-Adresse. Ihr könnt ihn so oft nutzen, wie ihr wollt, für euer Paar oder aus Neugier für das eurer Eltern.",
+    "q2": "Wo wird unser Datum gespeichert?",
+    "a2": "Nur in eurem Browser, auf dem Gerät, das ihr gerade nutzt. Nichts wird an einen Server geschickt. Löscht ihr eure Browserdaten, geht das Datum mit: deshalb der Link zum Kopieren, der es enthält und euch überall wiederfinden lässt.",
+    "q3": "Wie teile ich den Zähler mit meinem Partner oder meiner Partnerin?",
+    "a3": "Tippt auf „Link zum Zähler kopieren“ und schickt ihn. Beim Öffnen sieht der andere denselben Zähler, mit Datum und Vornamen schon ausgefüllt, und kann ihn auf seiner Seite als Lesezeichen speichern. Der Button „Teilen“ schickt zusätzlich einen kurzen Text mit der Zahl des Tages.",
+    "q4": "Wie berechnet der Zähler die Monate?",
+    "a4": "Wie ein Kalender: vom 14. eines Monats bis zum 14. des nächsten, egal wie viele Tage dazwischen liegen. Seid ihr an einem 31. zusammengekommen, ergeben Monate mit dreißig Tagen einen runden Monat am 30. Schaltjahre sind in der Gesamtzahl der Tage berücksichtigt.",
+    "q5": "Welche Tage-Marken werden angezeigt?",
+    "a5": "Die Hunderter bis 1.000 (100, 200, 300, 365, 400...), dann 1.500, 2.000, 2.500, 3.000 und so weiter bis 30.000 Tage. Dazu kommen vier ungewöhnliche Marken: 10.000 Stunden, eine Million Minuten, 100.000 Stunden und zehn Millionen Minuten. Der Zähler zeigt die zwei nächsten und die letzte, die ihr geknackt habt.",
+    "q6": "Kann man den Zähler für etwas anderes als ein Paar nutzen?",
+    "a6": "Natürlich. Eine Freundschaft, eine Ehe, den Tag, an dem ein Haustier eingezogen ist, den Tag, an dem ihr mit dem Rauchen aufgehört habt... Er zählt Tage seit einem Datum, der Rest hängt davon ab, was ihr hineinlegt. Die Hochzeitsnamen und die Valentinstage haben dann einfach weniger Sinn!"
+  },
+  "jsonLd": {
+    "name": "Beziehungszähler",
+    "about": "Zahl der gemeinsam verbrachten Tage seit einem Startdatum und die nächsten Daten zum Feiern"
+  }
+}

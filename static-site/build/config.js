@@ -45,6 +45,7 @@ export const ROUTE_SLUGS = {
   testEmmenager: { fr: 'test-habiter-vivre-ensemble', en: 'moving-in-together-test', es: 'test-vivir-juntos-pareja', de: 'zusammenziehen-test-paare', it: 'test-andare-a-vivere-insieme' },
   testAstroPrenoms: { fr: 'signes-astrologiques-prenoms-compatibilite', en: 'zodiac-signs-names-compatibility', es: 'signos-astrologicos-nombres-compatibilidad', de: 'sternzeichen-vornamen-kompatibilitaet', it: 'segni-zodiacali-nomi-compatibilita' },
   calculatriceAmour: { fr: 'calculatrice-de-l-amour', en: 'love-calculator', es: 'calculadora-del-amor', de: 'liebesrechner', it: 'calcolatrice-dell-amore' },
+  compteurCouple: { fr: 'compteur-de-couple', en: 'relationship-counter', es: 'contador-de-pareja', de: 'beziehungszaehler', it: 'contatore-di-coppia' },
   testSignesChinois: { fr: 'compatibilite-amoureuse-signes-chinois', en: 'chinese-zodiac-love-compatibility', es: 'compatibilidad-amorosa-signos-chinos', de: 'chinesische-sternzeichen-liebeskompatibilitaet', it: 'compatibilita-amorosa-segni-cinesi' },
   testDateNaissance: { fr: 'compatibilite-amoureuse-date-de-naissance', en: 'birth-date-love-compatibility', es: 'compatibilidad-amorosa-fecha-de-nacimiento', de: 'liebeskompatibilitaet-geburtsdatum', it: 'compatibilita-amorosa-data-di-nascita' },
   testJalousie: { fr: 'test-jalousie-couple', en: 'jealousy-test-couple', es: 'test-celos-pareja', de: 'eifersucht-test-paar', it: 'test-gelosia-coppia' },
@@ -131,6 +132,7 @@ export const QUIZ_FEATURED = {
   testParentalite:   { file: 'baby-shoes-toys',          old: 'test-parentalite',    alt: { fr: 'Petits chaussons de bébé et jouets en bois sur une couverture', en: 'Tiny baby shoes and wooden toys on a blanket', es: 'Pequeños zapatos de bebé y juguetes de madera sobre una manta', de: 'Winzige Babyschuhe und Holzspielzeug auf einer Decke', it: 'Scarpine da neonato e giochi di legno su una coperta' } },
   testEmmenager:     { file: 'moving-in-boxes',          old: null,                  alt: { fr: 'Cartons de déménagement dans un appartement lumineux et vide', en: 'Moving boxes in a bright empty apartment', es: 'Cajas de mudanza en un apartamento luminoso y vacío', de: 'Umzugskartons in einer hellen leeren Wohnung', it: 'Scatole per il trasloco in un appartamento luminoso e vuoto' } },
   calculatriceAmour: { file: 'love-calculator-hearts', old: null, alt: {"fr": "Petite machine à calculer ancienne sur une nappe de lin, un ruban de papier terminé par un cœur rose", "en": "A small vintage adding machine on a linen tablecloth, its paper ribbon ending in a pink paper heart", "es": "Pequeña máquina de calcular antigua sobre un mantel de lino, con una cinta de papel que termina en un corazón rosa", "de": "Kleine alte Rechenmaschine auf einer Leinendecke, deren Papierstreifen in einem rosa Herz endet", "it": "Piccola macchina da calcolo d'epoca su una tovaglia di lino, con un nastro di carta che termina in un cuore rosa"} },
+  compteurCouple: { file: 'couple-day-counter', old: null, alt: {"fr": "Un grand bocal en verre rempli de centaines de petits cœurs en papier rose et lilas, quelques-uns tombés sur la nappe de lin, deux tasses de café côte à côte", "en": "A tall glass jar filled with hundreds of tiny pink and lilac paper hearts, a few spilled on the linen tablecloth, two coffee cups side by side", "es": "Un gran tarro de cristal lleno de cientos de pequeños corazones de papel rosa y lila, algunos caídos sobre el mantel de lino, dos tazas de café juntas", "de": "Ein hohes Glas voll mit hunderten kleinen Papierherzen in Rosa und Lila, ein paar auf die Leinentischdecke gefallen, zwei Kaffeetassen nebeneinander", "it": "Un grande barattolo di vetro pieno di centinaia di piccoli cuori di carta rosa e lilla, alcuni caduti sulla tovaglia di lino, due tazzine da caffè affiancate"} },
   testAstroPrenoms:  { file: 'zodiac-astrology',          old: 'test-astro-prenoms',  alt: { fr: 'Carte astrologique avec les constellations dorées du zodiaque', en: 'Astrology chart with golden zodiac constellations', es: 'Carta astrológica con constelaciones doradas del zodiaco', de: 'Astrologie-Karte mit goldenen Sternzeichen-Konstellationen', it: 'Carta astrologica con costellazioni dorate dello zodiaco' } },
   testSignesChinois: { file: 'chinese-zodiac-wheel',    old: null,                  alt: { fr: "Sur une soie rouge, une roue du zodiaque chinois en bois sculpté avec ses douze animaux, deux petits jetons de laque rouge reliés par un fil rouge posés au centre, quelques pétales de prunier", en: "On red silk, a carved wooden Chinese zodiac wheel with its twelve animals, two small red lacquer tokens tied together by a red thread resting at the centre, a few plum blossom petals", es: "Sobre una seda roja, una rueda del zodiaco chino de madera tallada con sus doce animales, dos pequeñas fichas de laca roja unidas por un hilo rojo en el centro, algunos pétalos de ciruelo", de: "Auf roter Seide ein geschnitztes Holzrad des chinesischen Tierkreises mit seinen zwölf Tieren, in der Mitte zwei kleine rote Lackplättchen, durch einen roten Faden verbunden, ein paar Pflaumenblütenblätter", it: "Su una seta rossa, una ruota dello zodiaco cinese in legno intagliato con i suoi dodici animali, due piccoli gettoni di lacca rossa legati da un filo rosso posati al centro, qualche petalo di pruno" } },
   testDateNaissance: { file: 'birth-date-compatibility', old: null,                  alt: { fr: 'Deux calendriers ouverts côte à côte, une date entourée sur chacun, reliées par un fil rouge', en: 'Two open calendars side by side, a circled date on each, linked by a red thread', es: 'Dos calendarios abiertos uno al lado del otro, una fecha rodeada en cada uno, unidos por un hilo rojo', de: 'Zwei aufgeschlagene Kalender nebeneinander, je ein eingekreistes Datum, verbunden durch einen roten Faden', it: 'Due calendari aperti affiancati, una data cerchiata su ciascuno, uniti da un filo rosso' } },
@@ -213,6 +215,7 @@ export const ROUTE_CONFIG = {
   testEmmenager: { template: 'quiz-emmenager', namespaces: ['quiz-emmenager', 'quizzes', 'quizGames', 'gd', 'common'] },
   testAstroPrenoms: { template: 'quiz-astro-prenoms', namespaces: ['quiz-astro-prenoms', 'quizzes', 'common'] },
   calculatriceAmour: { template: 'calculatrice-amour', namespaces: ['calculatrice-amour', 'quizzes', 'common'] },
+  compteurCouple: { template: 'compteur-couple', namespaces: ['compteur-couple', 'quizzes', 'common'] },
   testDateNaissance: { template: 'quiz-date-naissance', namespaces: ['quiz-date-naissance', 'quizzes', 'common'] },
   testSignesChinois: { template: 'quiz-signes-chinois', namespaces: ['quiz-signes-chinois', 'quizzes', 'common'] },
   testJalousie: { template: 'quiz-jalousie', namespaces: ['quiz-jalousie', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -299,7 +302,7 @@ const ROUTES_JEUX = [
 // l'amour n'avait ni compteur, ni bloc d'avis, ni interstitiel au resultat,
 // alors que la compatibilite par date de naissance, qui marche pareil, a les
 // trois (sa cle commence par « quiz »).
-const ROUTES_OUTILS = ['calculatriceAmour'];
+const ROUTES_OUTILS = ['calculatriceAmour', 'compteurCouple'];
 
 export function estPageJouable(routeKey) {
   if (!routeKey || routeKey === 'home') return false;
@@ -1351,6 +1354,7 @@ export const QUIZ_RELATED_ARTICLES = {
   testInfidelite:   ['red-flags-homme', 'red-flags-femme', 'choses-pas-accepter-couple'],
   testAstroPrenoms: ['compatibilite-amoureuse-belier', 'compatibilite-amoureuse-lion', 'compatibilite-amoureuse-scorpion'],
   calculatriceAmour: ['questions-a-poser-a-son-crush', '36-questions-pour-tomber-amoureux', 'questions-debut-de-relation'],
+  compteurCouple: ['questions-avenir-couple', 'questions-pour-mieux-se-connaitre-en-couple', '5-langages-de-l-amour', 'activites-couple-ete'],
   quizAmoureux:     ['comment-savoir-si-cest-le-bon', 'sauver-son-couple'],
   quizTypeCouple: ['disputes-couple', 'manque-communication-couple', 'charge-mentale-couple', 'activites-couple-ete'],
   quizCoquin:       ['comment-savoir-si-cest-le-bon', 'manque-communication-couple'],

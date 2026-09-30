@@ -384,7 +384,8 @@
     "testPretRelation": "Test Bereit für eine neue Beziehung",
     "quizTypeCouple": "Quiz Welcher Paartyp seid ihr",
     "testEstCeLeBon": "Test ist es die richtige Person",
-    "testSignesChinois": "Kompatibilität chinesische Sternzeichen"
+    "testSignesChinois": "Kompatibilität chinesische Sternzeichen",
+    "compteurCouple": "Beziehungszähler"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",

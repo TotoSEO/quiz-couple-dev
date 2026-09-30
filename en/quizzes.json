@@ -433,5 +433,11 @@
     "shortTitle": "Chinese zodiac compatibility",
     "description": "Two birth dates, your two animals and their element, and what Chinese tradition says about your couple: triangle, secret friends or opposite signs.",
     "metaDescription": "Two birth dates, your two animals and their element, and what Chinese tradition says about your couple. Instant result, free and anonymous."
+  },
+  "compteurCouple": {
+    "title": "Relationship Counter: Days Together and Dates to Celebrate",
+    "shortTitle": "Relationship counter",
+    "description": "Enter the day it all started and see how many days you have been together, the exact length, and the next dates worth celebrating.",
+    "metaDescription": "Free relationship counter: enter your start date and see your days together, the exact time, your next anniversaries and day milestones to celebrate."
   }
 }

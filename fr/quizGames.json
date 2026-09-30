@@ -386,7 +386,8 @@
     "testPretRelation": "Test prêt(e) pour une nouvelle relation",
     "quizTypeCouple": "Quiz quel type de couple êtes-vous",
     "testEstCeLeBon": "Test est-ce le bon ou la bonne",
-    "testSignesChinois": "Compatibilité signes chinois"
+    "testSignesChinois": "Compatibilité signes chinois",
+    "compteurCouple": "Compteur de couple"
   },
   "truefalse": {
     "ready": "Prêt pour le vrai ou faux ?",

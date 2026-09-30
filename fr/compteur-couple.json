@@ -1,0 +1,473 @@
+{
+  "hero": {
+    "badge": "Outil gratuit",
+    "title": "Compteur de couple : depuis combien de temps êtes-vous ensemble ?",
+    "highlight": "Compteur de couple",
+    "description": "Entrez la date de votre premier jour à deux. Le compteur vous donne <strong>le nombre de jours ensemble</strong>, la durée en années, mois et jours, et les prochaines dates à fêter : anniversaire, mois ronds, cap des 1 000 jours... Avec un lien à garder pour revenir voir le chiffre monter.",
+    "subtitle": "Aucune inscription. La date reste dans votre téléphone, rien n'est envoyé."
+  },
+  "form": {
+    "titre": "Votre compteur",
+    "dateTitre": "Le jour où tout a commencé",
+    "dateAide": "Le premier baiser, le premier rendez-vous ou le jour où vous vous êtes dit « on est ensemble » : prenez la date que vous fêtez déjà, ou celle qui compte pour vous deux.",
+    "jour": "Jour",
+    "moisLabel": "Mois",
+    "annee": "Année",
+    "mois": [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre"
+    ],
+    "moisDate": [
+      "janvier",
+      "février",
+      "mars",
+      "avril",
+      "mai",
+      "juin",
+      "juillet",
+      "août",
+      "septembre",
+      "octobre",
+      "novembre",
+      "décembre"
+    ],
+    "dateAffichee": "{{j}} {{mois}} {{a}}",
+    "joursSemaine": [
+      "dimanche",
+      "lundi",
+      "mardi",
+      "mercredi",
+      "jeudi",
+      "vendredi",
+      "samedi"
+    ],
+    "dateAvecJour": "{{js}} {{date}}",
+    "prenomsTitre": "Vos prénoms (facultatif)",
+    "prenom1": "Votre prénom",
+    "prenom2": "Son prénom",
+    "prenom1Ex": "Ex : Thomas",
+    "prenom2Ex": "Ex : Elisa",
+    "lancer": "Compter nos jours ensemble",
+    "aide": "Le compteur se met à jour tout seul chaque jour. Ajoutez la page à vos favoris ou copiez le lien pour le retrouver.",
+    "erreurVide": "Choisissez le jour, le mois et l'année de votre début.",
+    "erreur": "Cette date n'existe pas. Vérifiez le jour et le mois.",
+    "erreurFutur": "Cette date est encore devant vous. Le compteur compte les jours déjà passés à deux."
+  },
+  "unites": {
+    "jour": [
+      "jour",
+      "jours"
+    ],
+    "semaine": [
+      "semaine",
+      "semaines"
+    ],
+    "mois": [
+      "mois",
+      "mois"
+    ],
+    "an": [
+      "an",
+      "ans"
+    ],
+    "heure": [
+      "heure",
+      "heures"
+    ],
+    "minute": [
+      "minute",
+      "minutes"
+    ],
+    "valentin": [
+      "Saint-Valentin ensemble",
+      "Saint-Valentin ensemble"
+    ],
+    "dimanche": [
+      "dimanche à deux",
+      "dimanches à deux"
+    ]
+  },
+  "et": " et ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "aujourd'hui",
+    "demain": "demain",
+    "hier": "hier",
+    "dans": "dans {{n}} jours",
+    "ilya": "il y a {{n}} jours"
+  },
+  "etapes": {
+    "anniversaire": "{{n}} {{ans}} ensemble",
+    "mois": "{{n}} mois ensemble",
+    "capJours": "Le cap des {{n}} jours",
+    "capHeures": "{{n}} heures à deux",
+    "capMinutes": "{{n}} minutes à deux",
+    "noces": "les {{noces}}",
+    "capDetail": "soit {{n}} jours"
+  },
+  "fete": {
+    "anniversaire": "Joyeux anniversaire ! {{n}} {{ans}} ensemble aujourd'hui",
+    "mois": "{{n}} mois ensemble aujourd'hui, ça se fête !",
+    "cap": "{{cap}}, c'est aujourd'hui !"
+  },
+  "noces": [
+    {
+      "an": 1,
+      "nom": "noces de coton"
+    },
+    {
+      "an": 2,
+      "nom": "noces de cuir"
+    },
+    {
+      "an": 3,
+      "nom": "noces de froment"
+    },
+    {
+      "an": 4,
+      "nom": "noces de cire"
+    },
+    {
+      "an": 5,
+      "nom": "noces de bois"
+    },
+    {
+      "an": 6,
+      "nom": "noces de chypre"
+    },
+    {
+      "an": 7,
+      "nom": "noces de laine"
+    },
+    {
+      "an": 8,
+      "nom": "noces de coquelicot"
+    },
+    {
+      "an": 9,
+      "nom": "noces de faïence"
+    },
+    {
+      "an": 10,
+      "nom": "noces d'étain"
+    },
+    {
+      "an": 11,
+      "nom": "noces de corail"
+    },
+    {
+      "an": 12,
+      "nom": "noces de soie"
+    },
+    {
+      "an": 13,
+      "nom": "noces de muguet"
+    },
+    {
+      "an": 14,
+      "nom": "noces de plomb"
+    },
+    {
+      "an": 15,
+      "nom": "noces de cristal"
+    },
+    {
+      "an": 20,
+      "nom": "noces de porcelaine"
+    },
+    {
+      "an": 25,
+      "nom": "noces d'argent"
+    },
+    {
+      "an": 30,
+      "nom": "noces de perle"
+    },
+    {
+      "an": 35,
+      "nom": "noces de rubis"
+    },
+    {
+      "an": 40,
+      "nom": "noces d'émeraude"
+    },
+    {
+      "an": 45,
+      "nom": "noces de vermeil"
+    },
+    {
+      "an": 50,
+      "nom": "noces d'or"
+    },
+    {
+      "an": 60,
+      "nom": "noces de diamant"
+    }
+  ],
+  "resultat": {
+    "noms": "{{a}} & {{b}}",
+    "vous": "vous",
+    "vousDeux": "Vous deux",
+    "depuis": "ensemble depuis le {{date}}",
+    "joursEnsemble": "{{jours}} ensemble",
+    "soit": "soit {{duree}}",
+    "titreEtapes": "Les prochaines dates à fêter",
+    "titreDernierCap": "Le dernier cap franchi",
+    "dernierCap": "{{cap}} est derrière vous : c'était le {{date}}, {{quand}}.",
+    "titreGarder": "Gardez ce compteur sous la main",
+    "garder": "La date est enregistrée dans ce navigateur : en revenant sur la page, votre compteur s'affichera tout seul, à jour. Pour le retrouver sur un autre téléphone ou l'envoyer à votre moitié, copiez le lien ci-dessous. Il contient la date et vos prénoms, rien d'autre.",
+    "modifier": "Changer la date",
+    "avis": "Laisser un avis"
+  },
+  "partage": {
+    "bouton": "Partager",
+    "lienBouton": "Copier le lien du compteur",
+    "texte": "{{noms}} : ensemble depuis {{jours}} {{unite}}, soit {{duree}}. Prochaine date à fêter : {{etape}}, le {{date}}.",
+    "copieTexte": "Texte et lien copiés !",
+    "copieLien": "Lien copié !"
+  },
+  "suite": {
+    "titre": "Et après les chiffres ?",
+    "texte": "Un compteur dit combien de temps. Il ne dit pas comment ça va. Si vous vous demandez si c'est encore de l'amour ou déjà une habitude, on a un test pour ça : vingt questions et un résultat honnête.",
+    "bouton": "Faire le test amour ou habitude"
+  },
+  "section1": {
+    "title": "Qu'est-ce qu'un compteur de couple ?",
+    "p1": "Un compteur de couple, c'est un outil tout simple : vous entrez la date à laquelle votre histoire a commencé, et il vous dit depuis combien de temps vous êtes ensemble. Il ne compte pas seulement en années, comme on répond quand on nous pose la question, mais en jours, en semaines, en mois, et même en heures. Par exemple, un couple qui s'est formé le 14 mai 2023 passe les 1 200 jours ensemble à l'automne 2026. Dit comme ça, ça fait tout de suite autre chose que « trois ans et quelques ».",
+    "p2": "Le principe existe depuis longtemps sur les applications de couple, où le chiffre s'affiche sur l'écran d'accueil et monte d'un cran chaque matin. Ici, c'est la même chose, sans rien installer : la page garde votre date dans votre navigateur, et à chaque visite le compteur est à jour. Vous pouvez aussi copier un lien qui contient la date et vos prénoms, le mettre en favori ou l'envoyer à l'autre.",
+    "p3": "Et comme un chiffre tout seul ne fait pas grand-chose, le compteur vous dit aussi ce qui arrive : le prochain anniversaire avec le nom des noces qui va avec, le prochain mois rond, et les caps de jours qu'on ne voit jamais venir, les 500 jours, les 1 000 jours, les 10 000 heures. Ça donne des occasions de fêter quelque chose en dehors des dates habituelles, et c'est souvent celles-là qu'on retient !"
+  },
+  "section2": {
+    "title": "Comment fonctionne le compteur ci-dessus",
+    "p1": "Voici ce que fait le compteur une fois que vous lui avez donné votre date :",
+    "points": [
+      "<strong>Il compte les jours :</strong> le nombre exact de jours écoulés entre votre date de début et aujourd'hui, années bissextiles comprises. C'est le grand chiffre en haut de la carte.",
+      "<strong>Il traduit en années, mois et jours :</strong> « 3 ans, 4 mois et 16 jours », par exemple. Le mois est compté comme sur un calendrier, d'un 14 au 14 suivant, quel que soit le nombre de jours du mois.",
+      "<strong>Il ajoute quelques chiffres qui font sourire :</strong> les semaines, les mois, les heures et les minutes passés ensemble, le nombre de Saint-Valentin que vous avez déjà partagées et le nombre de dimanches à deux.",
+      "<strong>Il regarde devant :</strong> la prochaine date d'anniversaire (avec les noces de l'année, coton, cuir, froment...), le prochain mois rond et les deux prochains caps de jours, chacun avec sa date et le nombre de jours qui restent."
+    ],
+    "p2": "Le jour où l'une de ces dates tombe, la carte le dit en haut, en gros. Si vous ouvrez le compteur le jour de vos 1 000 jours, vous le saurez tout de suite, du coup ça vaut le coup de le mettre en favori et d'y jeter un œil le matin.",
+    "tip": "Le compteur ne connaît que la date du jour de votre téléphone. Si vous l'ouvrez juste après minuit, il a déjà avancé d'un jour."
+  },
+  "section3": {
+    "title": "Depuis quand compte-t-on ? La question du premier jour",
+    "p1": "La principale difficulté, la plupart du temps, ce n'est pas le calcul, c'est la date. Est-ce qu'on compte à partir du premier rendez-vous, du premier baiser, du soir où l'un a dit « je t'aime », ou du jour où on a décidé qu'on était officiellement ensemble ? Il n'y a pas de bonne réponse, et les deux membres d'un couple n'ont d'ailleurs pas toujours la même en tête.",
+    "p2": "Notre conseil : prenez la date que vous fêtez déjà, celle qui vous vient quand on vous pose la question. Si vous n'en avez pas, choisissez-la ensemble, maintenant, et tranchez une bonne fois. Beaucoup de couples retiennent le premier baiser, parce que c'est un moment précis, alors que « on s'est mis ensemble » est souvent plus flou. Ceux qui se sont rencontrés sur une appli prennent parfois la date du premier message, ce qui rallonge le compteur de quelques semaines, et personne ne s'en plaint.",
+    "p3": "Certains couples comptent plutôt à partir du jour où ils ont <a href=\"/test-habiter-vivre-ensemble/\">posé leurs cartons dans le même appartement</a> : pour eux, c'est là que la vie à deux a commencé pour de bon. Si vous vous êtes séparés puis remis ensemble, à vous de voir : certains repartent de zéro, d'autres gardent la première date parce que c'est là que tout a commencé. Le compteur ne juge pas, il compte. Et quand on hésite entre deux dates, c'est peut-être qu'on ne sait plus très bien <a href=\"/test-amour-ou-habitude/\">si c'est encore de l'amour ou déjà une habitude</a>... ce qui est une autre question, et on a un test pour ça.",
+    "tip": "Notez la date choisie quelque part, dans le compteur pour commencer. Dans dix ans, le souvenir des débuts sera moins net, et le chiffre sera toujours là."
+  },
+  "section4": {
+    "title": "Les caps à fêter : 100 jours, 1 an, 1 000 jours...",
+    "p1": "Un anniversaire par an, c'est peu. Les caps de jours donnent d'autres occasions, et comme personne ne les attend, ils font souvent plus plaisir. Voici ceux que le compteur surveille pour vous, avec une idée pour chacun :",
+    "tableHeaders": [
+      "Le cap",
+      "Ce que ça représente",
+      "Une idée pour le fêter"
+    ],
+    "tableRows": [
+      [
+        "100 jours",
+        "Un peu plus de trois mois. La période où on se découvre encore.",
+        "Refaire le premier rendez-vous, au même endroit si possible."
+      ],
+      [
+        "365 jours",
+        "Un an. Les quatre saisons passées ensemble.",
+        "S'écrire chacun une lettre, à ouvrir aux 730 jours."
+      ],
+      [
+        "500 jours",
+        "Seize mois et demi. On connaît les habitudes de l'autre par cœur.",
+        "Une soirée <a href=\"/quiz-qui-connait-mieux-partenaire/\">pour vérifier qui connaît le mieux l'autre</a> : le perdant paie le dessert."
+      ],
+      [
+        "1 000 jours",
+        "Deux ans et neuf mois. Le cap que tout le monde a envie de fêter.",
+        "Un week-end quelque part où vous n'êtes jamais allés."
+      ],
+      [
+        "10 000 heures",
+        "Environ 417 jours. Le temps qu'il faudrait, dit-on, pour devenir expert de quelque chose.",
+        "Lister dix choses que vous avez apprises sur l'autre."
+      ],
+      [
+        "Un million de minutes",
+        "Environ 695 jours, un peu moins de deux ans.",
+        "Un dîner sans téléphone, avec une seule question à la carte : qu'est-ce qu'on fait des dix prochaines années ?"
+      ],
+      [
+        "3 650 jours",
+        "Dix ans. Les noces d'étain.",
+        "Retrouver les photos de la première année et les regarder à deux."
+      ],
+      [
+        "10 000 jours",
+        "Un peu plus de 27 ans.",
+        "Une fête, avec les gens qui étaient là au début."
+      ]
+    ],
+    "p2": "Le compteur n'affiche que les deux prochains caps, pour ne pas noyer les dates qui comptent. Quand vous en passez un, il devient « le dernier cap franchi », avec sa date, histoire de pouvoir dire « c'était il y a 34 jours » sans calculer. Et si le cap tombe un soir de semaine sans rien de prévu, <a href=\"/jeux-de-couple/\">un jeu à deux sur le canapé</a> fait très bien l'affaire."
+  },
+  "section5": {
+    "title": "Les noces : le nom de chaque année ensemble",
+    "p1": "En France, chaque anniversaire porte un nom de matière, du coton de la première année aux noces d'or des cinquante ans. À l'origine, la liste était réservée au mariage, mais les couples s'en servent aujourd'hui pour tous les anniversaires, mariés ou pas. Le compteur affiche le nom qui correspond à votre prochain anniversaire. Voici la liste complète, avec une idée de cadeau ou d'attention pour chaque année :",
+    "tableHeaders": [
+      "Année",
+      "Les noces",
+      "Une idée"
+    ],
+    "tableRows": [
+      [
+        "1",
+        "Noces de coton",
+        "Un tee-shirt ou un drap brodé à vos deux prénoms."
+      ],
+      [
+        "2",
+        "Noces de cuir",
+        "Un carnet en cuir pour écrire vos souvenirs de l'année."
+      ],
+      [
+        "3",
+        "Noces de froment",
+        "Un petit-déjeuner au lit, pain frais et confiture maison."
+      ],
+      [
+        "4",
+        "Noces de cire",
+        "Une bougie parfumée et une soirée sans lumière électrique."
+      ],
+      [
+        "5",
+        "Noces de bois",
+        "Planter un arbre, ou un cadre en bois avec votre photo préférée."
+      ],
+      [
+        "6",
+        "Noces de chypre",
+        "Un parfum, ou un voyage à Chypre pour les plus motivés !"
+      ],
+      [
+        "7",
+        "Noces de laine",
+        "Un plaid pour les soirées canapé de l'hiver."
+      ],
+      [
+        "8",
+        "Noces de coquelicot",
+        "Un pique-nique dans un champ, ou un bouquet tout simple."
+      ],
+      [
+        "9",
+        "Noces de faïence",
+        "Deux bols faits à la main, dans un atelier de poterie."
+      ],
+      [
+        "10",
+        "Noces d'étain",
+        "Votre date gravée sur un objet en métal."
+      ],
+      [
+        "11",
+        "Noces de corail",
+        "Un week-end au bord de la mer."
+      ],
+      [
+        "12",
+        "Noces de soie",
+        "Un foulard, ou des draps en soie."
+      ],
+      [
+        "13",
+        "Noces de muguet",
+        "Un brin de muguet, même si ce n'est pas le 1er mai."
+      ],
+      [
+        "14",
+        "Noces de plomb",
+        "Un jeu de société pour les soirs d'hiver, parce que le plomb, ça ne s'offre pas."
+      ],
+      [
+        "15",
+        "Noces de cristal",
+        "Deux verres en cristal et une très bonne bouteille."
+      ],
+      [
+        "20",
+        "Noces de porcelaine",
+        "Un service à thé et une après-midi pour l'inaugurer."
+      ],
+      [
+        "25",
+        "Noces d'argent",
+        "Un bijou en argent, ou refaire le voyage de vos débuts."
+      ],
+      [
+        "30",
+        "Noces de perle",
+        "Un collier de perles, ou un dîner face à la mer."
+      ],
+      [
+        "35",
+        "Noces de rubis",
+        "Une pierre rouge, ou un séjour dans un pays où vous n'êtes jamais allés."
+      ],
+      [
+        "40",
+        "Noces d'émeraude",
+        "Un bijou vert, ou un jardin planté à deux."
+      ],
+      [
+        "45",
+        "Noces de vermeil",
+        "Une fête avec les enfants et les petits-enfants."
+      ],
+      [
+        "50",
+        "Noces d'or",
+        "Une fête avec tous ceux qui vous ont vus vous rencontrer."
+      ],
+      [
+        "60",
+        "Noces de diamant",
+        "On dit que ce sont les plus rares de toutes. Ça mérite une photo de famille au complet."
+      ]
+    ],
+    "p2": "Les noms varient un peu d'un pays à l'autre : en anglais, la première année est celle du papier et la deuxième celle du coton. Peu importe la liste, l'idée reste la même : donner un thème à chaque année, pour ne pas offrir la même chose que l'année d'avant. Et pour ceux qui approchent du mariage, <a href=\"/test-couple-mariage/\">on a de quoi vérifier si vous êtes prêts</a> avant de commencer à compter les noces pour de vrai."
+  },
+  "section6": {
+    "title": "Pourquoi compter les jours fait du bien au couple",
+    "p1": "On pourrait croire que compter les jours, c'est un truc de début de relation, quand on en est encore à fêter le premier mois. En réalité, c'est plutôt l'inverse. Au bout de quelques années, les dates se fondent dans le quotidien, et un chiffre qui monte tous les matins rappelle que ce quotidien, justement, ça fait 1 500 jours qu'on le construit. Ce n'est pas rien.",
+    "p2": "Le compteur donne aussi des prétextes. Un mois rond, un cap de jours, c'est une raison de dire « tu sais que ça fait 900 jours aujourd'hui ? » et de faire quelque chose de différent ce soir-là, même tout petit, <a href=\"/test-langage-amour-couple/\">dans le langage que l'autre entend le mieux</a>. Les couples qui tiennent sont rarement ceux qui font de grandes déclarations. Ce sont plutôt ceux qui ont <a href=\"/test-couple-sain/\">des petits gestes réguliers l'un pour l'autre</a>, et une date à fêter tous les cent jours, ça aide à ne pas les oublier.",
+    "tip": "Mettez le compteur en favori sur vos deux téléphones, avec le même lien. Celui qui remarque le cap le premier a gagné le droit de choisir le restaurant."
+  },
+  "faq": {
+    "title": "Vos questions sur le compteur de couple",
+    "q1": "Le compteur de couple est-il gratuit ?",
+    "a1": "Oui, entièrement, sans inscription ni adresse e-mail. Vous pouvez le refaire autant de fois que vous voulez, pour votre couple ou pour celui de vos parents, par curiosité.",
+    "q2": "Où est enregistrée notre date ?",
+    "a2": "Dans votre navigateur seulement, sur l'appareil que vous utilisez. Rien n'est envoyé sur un serveur. Si vous effacez les données de navigation, la date part avec : d'où le lien à copier, qui la contient et vous permet de la retrouver n'importe où.",
+    "q3": "Comment partager le compteur avec mon ou ma partenaire ?",
+    "a3": "Appuyez sur « Copier le lien du compteur » et envoyez-le. En l'ouvrant, l'autre verra le même compteur, avec la date et vos prénoms déjà remplis, et pourra le mettre en favori de son côté. Le bouton « Partager » envoie en plus un petit texte avec le chiffre du jour.",
+    "q4": "Comment le compteur calcule-t-il les mois ?",
+    "a4": "Comme un calendrier : d'un 14 du mois au 14 du mois suivant, quel que soit le nombre de jours entre les deux. Si vous vous êtes mis ensemble un 31, les mois de trente jours donnent un mois rond le 30. Les années bissextiles sont prises en compte dans le total des jours.",
+    "q5": "Quels sont les caps de jours affichés ?",
+    "a5": "Les centaines jusqu'à 1 000 (100, 200, 300, 365, 400...), puis 1 500, 2 000, 2 500, 3 000, et ainsi de suite jusqu'à 30 000 jours. On y a ajouté quatre caps insolites : 10 000 heures, un million de minutes, 100 000 heures et dix millions de minutes. Le compteur montre les deux prochains, et le dernier que vous avez passé.",
+    "q6": "Peut-on utiliser le compteur pour autre chose qu'un couple ?",
+    "a6": "Bien sûr. Une amitié, un mariage, la date d'arrivée d'un animal à la maison, le jour où vous avez arrêté de fumer... Il compte des jours depuis une date, le reste dépend de ce que vous y mettez. Les noces et la Saint-Valentin auront simplement moins de sens !"
+  },
+  "jsonLd": {
+    "name": "Compteur de couple",
+    "about": "Nombre de jours passés ensemble depuis une date de début, et prochaines dates à fêter"
+  }
+}

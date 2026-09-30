@@ -1,0 +1,473 @@
+{
+  "hero": {
+    "badge": "Free tool",
+    "title": "Relationship counter: how long have you been together?",
+    "highlight": "Relationship counter",
+    "description": "Enter the date of your first day as a couple. The counter gives you <strong>your number of days together</strong>, the exact length in years, months and days, and the next dates to celebrate: anniversary, round months, the 1,000-day mark... With a link to keep, so you can come back and watch the number grow.",
+    "subtitle": "No sign-up. The date stays on your phone, nothing is sent anywhere."
+  },
+  "form": {
+    "titre": "Your counter",
+    "dateTitre": "The day it all started",
+    "dateAide": "First kiss, first date or the day you said \"we're together\": take the date you already celebrate, or the one that matters to the two of you.",
+    "jour": "Day",
+    "moisLabel": "Month",
+    "annee": "Year",
+    "mois": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "moisDate": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "dateAffichee": "{{mois}} {{j}}, {{a}}",
+    "joursSemaine": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "dateAvecJour": "{{js}}, {{date}}",
+    "prenomsTitre": "Your first names (optional)",
+    "prenom1": "Your first name",
+    "prenom2": "Their first name",
+    "prenom1Ex": "E.g. Thomas",
+    "prenom2Ex": "E.g. Emma",
+    "lancer": "Count our days together",
+    "aide": "The counter updates itself every day. Bookmark the page or copy the link to find it again.",
+    "erreurVide": "Pick the day, month and year you started.",
+    "erreur": "That date does not exist. Check the day and month.",
+    "erreurFutur": "That date is still ahead of you. The counter counts the days you have already spent together."
+  },
+  "unites": {
+    "jour": [
+      "day",
+      "days"
+    ],
+    "semaine": [
+      "week",
+      "weeks"
+    ],
+    "mois": [
+      "month",
+      "months"
+    ],
+    "an": [
+      "year",
+      "years"
+    ],
+    "heure": [
+      "hour",
+      "hours"
+    ],
+    "minute": [
+      "minute",
+      "minutes"
+    ],
+    "valentin": [
+      "Valentine's Day together",
+      "Valentine's Days together"
+    ],
+    "dimanche": [
+      "Sunday together",
+      "Sundays together"
+    ]
+  },
+  "et": " and ",
+  "virgule": ", ",
+  "quand": {
+    "aujourdhui": "today",
+    "demain": "tomorrow",
+    "hier": "yesterday",
+    "dans": "in {{n}} days",
+    "ilya": "{{n}} days ago"
+  },
+  "etapes": {
+    "anniversaire": "{{n}} {{ans}} together",
+    "mois": "{{n}} months together",
+    "capJours": "The {{n}}-day mark",
+    "capHeures": "{{n}} hours together",
+    "capMinutes": "{{n}} minutes together",
+    "noces": "your {{noces}}",
+    "capDetail": "that is {{n}} days"
+  },
+  "fete": {
+    "anniversaire": "Happy anniversary! {{n}} {{ans}} together today",
+    "mois": "{{n}} months together today, that calls for a celebration!",
+    "cap": "{{cap}} is today!"
+  },
+  "noces": [
+    {
+      "an": 1,
+      "nom": "paper anniversary"
+    },
+    {
+      "an": 2,
+      "nom": "cotton anniversary"
+    },
+    {
+      "an": 3,
+      "nom": "leather anniversary"
+    },
+    {
+      "an": 4,
+      "nom": "linen anniversary"
+    },
+    {
+      "an": 5,
+      "nom": "wood anniversary"
+    },
+    {
+      "an": 6,
+      "nom": "iron anniversary"
+    },
+    {
+      "an": 7,
+      "nom": "wool anniversary"
+    },
+    {
+      "an": 8,
+      "nom": "bronze anniversary"
+    },
+    {
+      "an": 9,
+      "nom": "pottery anniversary"
+    },
+    {
+      "an": 10,
+      "nom": "tin anniversary"
+    },
+    {
+      "an": 11,
+      "nom": "steel anniversary"
+    },
+    {
+      "an": 12,
+      "nom": "silk anniversary"
+    },
+    {
+      "an": 13,
+      "nom": "lace anniversary"
+    },
+    {
+      "an": 14,
+      "nom": "ivory anniversary"
+    },
+    {
+      "an": 15,
+      "nom": "crystal anniversary"
+    },
+    {
+      "an": 20,
+      "nom": "china anniversary"
+    },
+    {
+      "an": 25,
+      "nom": "silver anniversary"
+    },
+    {
+      "an": 30,
+      "nom": "pearl anniversary"
+    },
+    {
+      "an": 35,
+      "nom": "coral anniversary"
+    },
+    {
+      "an": 40,
+      "nom": "ruby anniversary"
+    },
+    {
+      "an": 45,
+      "nom": "sapphire anniversary"
+    },
+    {
+      "an": 50,
+      "nom": "golden anniversary"
+    },
+    {
+      "an": 60,
+      "nom": "diamond anniversary"
+    }
+  ],
+  "resultat": {
+    "noms": "{{a}} & {{b}}",
+    "vous": "you",
+    "vousDeux": "The two of you",
+    "depuis": "together since {{date}}",
+    "joursEnsemble": "{{jours}} together",
+    "soit": "that is {{duree}}",
+    "titreEtapes": "The next dates to celebrate",
+    "titreDernierCap": "The last mark you passed",
+    "dernierCap": "{{cap}} is behind you: it was on {{date}}, {{quand}}.",
+    "titreGarder": "Keep this counter close",
+    "garder": "The date is saved in this browser: when you come back to the page, your counter will show up on its own, up to date. To find it on another phone or send it to your other half, copy the link below. It holds the date and your first names, nothing else.",
+    "modifier": "Change the date",
+    "avis": "Leave a review"
+  },
+  "partage": {
+    "bouton": "Share",
+    "lienBouton": "Copy the counter link",
+    "texte": "{{noms}}: together for {{jours}} {{unite}}, that is {{duree}}. Next date to celebrate: {{etape}}, on {{date}}.",
+    "copieTexte": "Text and link copied!",
+    "copieLien": "Link copied!"
+  },
+  "suite": {
+    "titre": "And beyond the numbers?",
+    "texte": "A counter tells you how long. It does not tell you how things are going. If you are wondering whether it is still love or already a habit, we have a test for that: twenty questions and an honest answer.",
+    "bouton": "Take the love or habit test"
+  },
+  "section1": {
+    "title": "What is a relationship counter?",
+    "p1": "A relationship counter is a very simple tool: you enter the date your story began, and it tells you how long you have been together. It does not count only in years, the way we answer when someone asks, but in days, weeks, months and even hours. For example, a couple who got together on 14 May 2023 passes the 1,200-day mark in the autumn of 2026. Said like that, it sounds quite different from \"three years and a bit\".",
+    "p2": "The idea has been around for a long time on couple apps, where the number sits on the home screen and goes up by one every morning. This is the same thing, with nothing to install: the page keeps your date in your browser, and every time you visit, the counter is up to date. You can also copy a link that holds the date and your first names, bookmark it or send it to the other person.",
+    "p3": "And since a number on its own does not do much, the counter also tells you what is coming: the next anniversary with the name of the year that goes with it, the next round month, and the day milestones nobody sees coming, 500 days, 1,000 days, 10,000 hours. It gives you reasons to celebrate outside the usual dates, and those are often the ones you remember!"
+  },
+  "section2": {
+    "title": "How the counter above works",
+    "p1": "Here is what the counter does once you have given it your date:",
+    "points": [
+      "<strong>It counts the days:</strong> the exact number of days between your start date and today, leap years included. That is the big number at the top of the card.",
+      "<strong>It translates into years, months and days:</strong> \"3 years, 4 months and 16 days\", for example. A month is counted like on a calendar, from the 14th to the next 14th, whatever the length of the month.",
+      "<strong>It adds a few numbers that make you smile:</strong> the weeks, months, hours and minutes spent together, how many Valentine's Days you have already shared and how many Sundays you have spent as a couple.",
+      "<strong>It looks ahead:</strong> your next anniversary (with the traditional name of the year: paper, cotton, leather...), the next round month and the next two day milestones, each with its date and the number of days left."
+    ],
+    "p2": "On the day one of these dates falls, the card says so at the top, in big letters. If you open the counter on your 1,000th day, you will know straight away, so it is worth bookmarking it and having a look in the morning.",
+    "tip": "The counter only knows the date on your phone. If you open it just after midnight, it has already moved on by one day."
+  },
+  "section3": {
+    "title": "When do you start counting? The question of day one",
+    "p1": "Most of the time, the hard part is not the maths, it is the date. Do you count from the first date, the first kiss, the evening one of you said \"I love you\", or the day you decided you were officially together? There is no right answer, and the two people in a couple do not always have the same one in mind, by the way.",
+    "p2": "Our advice: take the date you already celebrate, the one that comes to mind when someone asks. If you do not have one, pick it together, now, and settle it once and for all. Many couples go with the first kiss, because it is a precise moment, whereas \"we got together\" is often blurrier. Those who met on an app sometimes take the date of the first message, which makes the counter a few weeks longer, and nobody complains.",
+    "p3": "Some couples count from the day they <a href=\"/en/moving-in-together-test/\">moved their boxes into the same flat</a>: for them, that is when life as a couple began for good. If you broke up and got back together, it is up to you: some start again from zero, others keep the first date because that is where it all started. The counter does not judge, it counts. And when you hesitate between two dates, maybe it is because you are no longer quite sure <a href=\"/en/love-or-habit-test/\">whether it is still love or already a habit</a>... which is another question, and we have a test for that.",
+    "tip": "Write the chosen date down somewhere, in the counter for a start. In ten years, the memory of the early days will be less sharp, and the number will still be there."
+  },
+  "section4": {
+    "title": "The milestones to celebrate: 100 days, 1 year, 1,000 days...",
+    "p1": "One anniversary a year is not much. Day milestones give you other occasions, and since nobody expects them, they often bring more joy. Here are the ones the counter watches for you, with an idea for each:",
+    "tableHeaders": [
+      "The milestone",
+      "What it stands for",
+      "An idea to celebrate it"
+    ],
+    "tableRows": [
+      [
+        "100 days",
+        "A little over three months. You are still discovering each other.",
+        "Redo the first date, in the same place if you can."
+      ],
+      [
+        "365 days",
+        "One year. Four seasons spent together.",
+        "Each write the other a letter, to be opened at 730 days."
+      ],
+      [
+        "500 days",
+        "Sixteen and a half months. You know each other's habits by heart.",
+        "An evening <a href=\"/en/who-knows-partner-best-quiz/\">to find out who knows the other best</a>: the loser buys dessert."
+      ],
+      [
+        "1,000 days",
+        "Two years and nine months. The mark everyone wants to celebrate.",
+        "A weekend somewhere you have never been."
+      ],
+      [
+        "10,000 hours",
+        "About 417 days. The time it supposedly takes to become an expert at something.",
+        "List ten things you have learnt about each other."
+      ],
+      [
+        "One million minutes",
+        "About 695 days, just under two years.",
+        "A dinner without phones, with a single question on the menu: what do we do with the next ten years?"
+      ],
+      [
+        "3,650 days",
+        "Ten years. The tin anniversary.",
+        "Dig out the photos from the first year and look at them together."
+      ],
+      [
+        "10,000 days",
+        "A little over 27 years.",
+        "A party, with the people who were there at the start."
+      ]
+    ],
+    "p2": "The counter only shows the next two milestones, so the dates that matter do not get lost. Once you pass one, it becomes \"the last mark you passed\", with its date, so you can say \"that was 34 days ago\" without doing the sum. And if a milestone lands on a weekday evening with nothing planned, <a href=\"/en/couple-games/\">a game for two on the sofa</a> does the job very well."
+  },
+  "section5": {
+    "title": "Anniversary names: what each year together is called",
+    "p1": "In English-speaking countries, each anniversary has a traditional material, from paper in the first year to gold at fifty. The list was originally for weddings, but couples now use it for every anniversary, married or not. The counter shows the name that goes with your next anniversary. Here is the full list, with a gift or gesture idea for each year:",
+    "tableHeaders": [
+      "Year",
+      "The anniversary",
+      "An idea"
+    ],
+    "tableRows": [
+      [
+        "1",
+        "Paper anniversary",
+        "A handwritten letter, or a book you both want to read."
+      ],
+      [
+        "2",
+        "Cotton anniversary",
+        "A T-shirt or bedsheets embroidered with your two names."
+      ],
+      [
+        "3",
+        "Leather anniversary",
+        "A leather notebook to write down the year's memories."
+      ],
+      [
+        "4",
+        "Linen anniversary",
+        "New table linen and a dinner cooked together."
+      ],
+      [
+        "5",
+        "Wood anniversary",
+        "Plant a tree, or a wooden frame with your favourite photo."
+      ],
+      [
+        "6",
+        "Iron anniversary",
+        "A cast-iron pan and a recipe you have never tried."
+      ],
+      [
+        "7",
+        "Wool anniversary",
+        "A blanket for the winter sofa evenings."
+      ],
+      [
+        "8",
+        "Bronze anniversary",
+        "A bronze candle holder and an evening by candlelight."
+      ],
+      [
+        "9",
+        "Pottery anniversary",
+        "Two handmade bowls, from a pottery workshop."
+      ],
+      [
+        "10",
+        "Tin anniversary",
+        "Your date engraved on something metal."
+      ],
+      [
+        "11",
+        "Steel anniversary",
+        "A watch, or a weekend by the sea."
+      ],
+      [
+        "12",
+        "Silk anniversary",
+        "A scarf, or silk sheets."
+      ],
+      [
+        "13",
+        "Lace anniversary",
+        "Something with a lace trim, or a night in a beautiful hotel."
+      ],
+      [
+        "14",
+        "Ivory anniversary",
+        "Ivory is off the table, so a board game for winter evenings instead."
+      ],
+      [
+        "15",
+        "Crystal anniversary",
+        "Two crystal glasses and a very good bottle."
+      ],
+      [
+        "20",
+        "China anniversary",
+        "A tea set and an afternoon to christen it."
+      ],
+      [
+        "25",
+        "Silver anniversary",
+        "A piece of silver jewellery, or redoing the trip from your early days."
+      ],
+      [
+        "30",
+        "Pearl anniversary",
+        "A pearl necklace, or a dinner facing the sea."
+      ],
+      [
+        "35",
+        "Coral anniversary",
+        "A trip somewhere warm you have never been."
+      ],
+      [
+        "40",
+        "Ruby anniversary",
+        "A red stone, or a garden planted together."
+      ],
+      [
+        "45",
+        "Sapphire anniversary",
+        "A party with the children and grandchildren."
+      ],
+      [
+        "50",
+        "Golden anniversary",
+        "A party with everyone who saw you meet."
+      ],
+      [
+        "60",
+        "Diamond anniversary",
+        "They say it is the rarest of all. It deserves a full family photo."
+      ]
+    ],
+    "p2": "The names vary a little from one country to another: in France, the first year is cotton and the second is leather. Whatever the list, the idea stays the same: give each year a theme, so you do not give the same thing as the year before. And for those getting close to marriage, <a href=\"/en/marriage-compatibility-test/\">we have a way to check whether you are ready</a> before you start counting anniversaries for real."
+  },
+  "section6": {
+    "title": "Why counting the days does a couple good",
+    "p1": "You might think counting days is an early-relationship thing, back when you still celebrate one month together. In fact, it is rather the opposite. After a few years, dates blend into daily life, and a number that goes up every morning reminds you that this daily life, precisely, is something you have been building for 1,500 days. That is not nothing.",
+    "p2": "The counter also gives you excuses. A round month, a day milestone, is a reason to say \"did you know it's 900 days today?\" and to do something different that evening, however small, <a href=\"/en/love-language-test-couple/\">in the language the other person hears best</a>. Couples that last are rarely the ones who make grand declarations. They are more often the ones who have <a href=\"/en/healthy-relationship-test/\">small regular gestures for each other</a>, and a date to celebrate every hundred days helps you not to forget them.",
+    "tip": "Bookmark the counter on both your phones, with the same link. Whoever spots the milestone first wins the right to pick the restaurant."
+  },
+  "faq": {
+    "title": "Your questions about the relationship counter",
+    "q1": "Is the relationship counter free?",
+    "a1": "Yes, completely, with no sign-up and no email address. You can use it as many times as you like, for your own couple or your parents', out of curiosity.",
+    "q2": "Where is our date stored?",
+    "a2": "In your browser only, on the device you are using. Nothing is sent to a server. If you clear your browsing data, the date goes with it: hence the link to copy, which contains it and lets you find it again anywhere.",
+    "q3": "How do I share the counter with my partner?",
+    "a3": "Tap \"Copy the counter link\" and send it. When they open it, they will see the same counter, with the date and your first names already filled in, and can bookmark it on their side. The \"Share\" button also sends a short text with today's number.",
+    "q4": "How does the counter work out the months?",
+    "a4": "Like a calendar: from the 14th of one month to the 14th of the next, whatever the number of days in between. If you got together on a 31st, thirty-day months give a round month on the 30th. Leap years are included in the total number of days.",
+    "q5": "Which day milestones are shown?",
+    "a5": "The hundreds up to 1,000 (100, 200, 300, 365, 400...), then 1,500, 2,000, 2,500, 3,000, and so on up to 30,000 days. We added four unusual ones: 10,000 hours, one million minutes, 100,000 hours and ten million minutes. The counter shows the next two, and the last one you passed.",
+    "q6": "Can the counter be used for something other than a couple?",
+    "a6": "Of course. A friendship, a wedding, the day a pet arrived at home, the day you quit smoking... It counts days since a date, the rest depends on what you put into it. The anniversary names and Valentine's Days will simply make less sense!"
+  },
+  "jsonLd": {
+    "name": "Relationship counter",
+    "about": "Number of days spent together since a start date, and the next dates to celebrate"
+  }
+}

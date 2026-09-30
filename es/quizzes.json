@@ -433,5 +433,11 @@
     "shortTitle": "Compatibilidad signos chinos",
     "description": "Dos fechas de nacimiento, vuestros dos animales y su elemento, y lo que la tradición china dice de vuestra pareja: triángulo, amigos secretos o signos opuestos.",
     "metaDescription": "Dos fechas de nacimiento, vuestros dos animales y lo que la tradición china dice de vuestra pareja. Resultado inmediato, gratis y anónimo."
+  },
+  "compteurCouple": {
+    "title": "Contador de pareja: días juntos y fechas que celebrar",
+    "shortTitle": "Contador de pareja",
+    "description": "Escribid la fecha en que empezó todo y el contador os dice cuántos días lleváis juntos, la duración exacta y las próximas fechas que celebrar.",
+    "metaDescription": "Contador de pareja gratis: escribid vuestra fecha de inicio y ved los días juntos, la duración exacta, próximos aniversarios y metas que celebrar."
   }
 }

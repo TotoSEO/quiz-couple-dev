@@ -384,7 +384,8 @@
     "testPretRelation": "Ready for a new relationship test",
     "quizTypeCouple": "What type of couple are you quiz",
     "testEstCeLeBon": "Is this the one test",
-    "testSignesChinois": "Chinese zodiac compatibility"
+    "testSignesChinois": "Chinese zodiac compatibility",
+    "compteurCouple": "Relationship counter"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

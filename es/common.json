@@ -100,7 +100,9 @@
     "testEstCeLeBon": "¿Es la persona adecuada?",
     "testEstCeLeBonDesc": "Veinte preguntas para saber si es la persona indicada",
     "testSignesChinois": "Compatibilidad signos chinos",
-    "testSignesChinoisDesc": "Dos fechas, dos animales, un veredicto"
+    "testSignesChinoisDesc": "Dos fechas, dos animales, un veredicto",
+    "compteurCouple": "Contador de pareja",
+    "compteurCoupleDesc": "Vuestros días juntos, fechas que celebrar"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

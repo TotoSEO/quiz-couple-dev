@@ -384,7 +384,8 @@
     "testPretRelation": "Test preparado para una nueva relación",
     "quizTypeCouple": "Quiz qué tipo de pareja sois",
     "testEstCeLeBon": "Test es la persona adecuada",
-    "testSignesChinois": "Compatibilidad signos chinos"
+    "testSignesChinois": "Compatibilidad signos chinos",
+    "compteurCouple": "Contador de pareja"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",
