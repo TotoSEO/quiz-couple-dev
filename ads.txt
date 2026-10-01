@@ -912,7 +912,7 @@ admanmedia.com, 2063, RESELLER
 datawrkz.com, 2639, DIRECT
 appnexus.com, 2741, RESELLER, f5ab79cb980f11d1
 xandr.com, 2741, RESELLER, f5ab79cb980f11d1
-blueroostermedia.com, 1022, DIRECT,
+blueroostermedia.com, 1022, DIRECT
 lijit.com, 539909, RESELLER, fafdf38b16bf6b2b
 programmaticx.ai, 656343, DIRECT, b42d42eb28400efa
 targetbetter.com, T6343, DIRECT
