@@ -64,6 +64,8 @@
 
     <!-- Tirage au sort, alimente par la liste ci-dessous -->
     <div id="questions-container"></div>
+    <%# Entre le tirage et la liste : la colonne (896 px) n'a pas la place d'un billboard, le pave s'y tient. %>
+    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
 
     <%
       // Les 120 questions sont ecrites dans le HTML, pas chargees en

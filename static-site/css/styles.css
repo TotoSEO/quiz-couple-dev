@@ -11712,6 +11712,12 @@ body { padding-bottom: var(--pub-footer, 0px); }
 /* Dans un ecran de resultat, la zone prend sa place entre le resultat et le
    bloc de renvoi ; l'ordre des autres zones est decale d'un cran. */
 .qr-zone--produits { order: 3; }
+/* Le pave de la regie, remonte dans le resultat par dispositionResultat :
+   meme rang que les produits, et avant eux dans le DOM, donc juste sous la
+   carte du verdict. La marge du .pub ordinaire est celle du texte courant ;
+   dans la carte, l'espacement est celui du plan. */
+.qr-zone--pub { order: 3; }
+.qr-plan .pub { margin: 0; }
 .qr-zone--suite    { order: 4; }
 .qr-zone--actions  { order: 5; }
 .qr-zone--story    { order: 6; }
