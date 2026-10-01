@@ -10,11 +10,16 @@
    s'affiche et le moteur se lance sans rien devoir a la regie.
 
    Et un emplacement dans le flux n'est demande que lorsqu'il approche de
-   l'ecran, environ une hauteur d'ecran avant. Chaque emplacement coute trois
-   fichiers a la regie, dont un de 270 Ko a analyser ; sur une page de test,
-   trois des quatre sont a plus de 2 500 px du haut, et la plupart des visites
-   ne descendent jamais jusque la. Les demander au chargement ne servait qu'a
-   ralentir la page, PageSpeed les comptait dans le JavaScript inutilise.
+   l'ecran, 300 px avant. Chaque emplacement coute trois fichiers a la regie,
+   dont un de 270 Ko a analyser ; sur une page de test, trois des quatre sont
+   a plus de 2 500 px du haut, et la plupart des visites ne descendent jamais
+   jusque la. Les demander au chargement ne servait qu'a ralentir la page,
+   PageSpeed les comptait dans le JavaScript inutilise. La marge a longtemps
+   ete d'une hauteur d'ecran (800 px) : sur telephone, le billboard pose juste
+   sous le moteur etait alors demande des le chargement, compte comme une
+   impression, et jamais vu par qui repond au test sans faire defiler la
+   page. Une impression servie hors de l'ecran fait baisser la visibilite
+   mesuree par la regie, donc les encheres sur tout le domaine.
 
    « async = false » sur une balise creee en JavaScript garde l'ordre
    d'execution entre les deux fichiers, ce dont la regie a besoin : c'est le
@@ -45,7 +50,13 @@
    Aucune publicite ne doit etre visible dans le premier ecran, avant que la
    personne ait bouge. Les emplacements qui tombent dans le premier ecran au
    chargement, et le footer qui se colle en bas de la fenetre, attendent donc
-   le premier defilement ; les autres sont demandes a l'approche comme avant.
+   le premier geste : un defilement, ou un clic dans la page (dans <main>,
+   donc ni l'en-tete, ni le menu, ni le bandeau de consentement), la premiere
+   reponse a un test par exemple. Le defilement seul laissait sans footer
+   tous ceux qui jouent un test en tapant leurs reponses sans jamais faire
+   defiler la page, alors que c'est le format le mieux vu sur telephone.
+   PageSpeed, qui ne clique pas, ne voit rien de plus. Les autres
+   emplacements sont demandes a l'approche comme avant.
    L'interstitiel ne part jamais a l'arrivee depuis l'exterieur : un
    interstitiel a l'ouverture, pour quelqu'un qui vient de la recherche,
    c'est exactement ce que Google sanctionne. Il part a l'ecran de resultat
@@ -123,14 +134,26 @@
   var INTERVALLE_INTERSTITIEL = 10 * 60 * 1000;
 
   // La distance a laquelle un emplacement est demande avant d'entrer dans
-  // l'ecran : une hauteur d'ecran, le temps pour la regie de repondre.
-  var MARGE = '800px 0px';
+  // l'ecran. Une a trois secondes de reponse pour la regie, le temps de
+  // faire defiler 300 px au doigt ; une hauteur d'ecran faisait servir le
+  // billboard sous le moteur a des gens qui ne descendaient jamais jusqu'a lui.
+  var MARGE = '300px 0px';
 
   // Le temps laisse a la regie pour remplir un emplacement demande, avant de
   // le considerer vide. Leurs encheres prennent une a trois secondes ; huit
   // laissent de la marge aux connexions lentes.
   var DELAI_VIDE = 8000;
   var PAS_SURVEILLANCE = 500;
+
+  // A l'evenement load, la mise en page n'est pas finie : le moteur dessine
+  // son premier ecran une fois ses textes recus, et pousse de plusieurs
+  // centaines de pixels les emplacements qui le suivent. Mesures a cet
+  // instant, le billboard sous le moteur paraissait a portee de l'ecran et
+  // etait demande, puis repousse hors de vue : une impression servie pour
+  // personne. On laisse donc la page se poser avant de regarder ou sont les
+  // emplacements du flux. Le footer, l'interstitiel et le premier geste ne
+  // dependent pas de la mise en page et n'attendent pas.
+  var ATTENTE_MISE_EN_PAGE = 800;
 
   function injecte(cible, format, site) {
     var sources = [
@@ -230,22 +253,35 @@
     }
   }
 
-  // ── Le premier defilement ───────────────────────────────────────────
-  // Appelle fn une seule fois, au premier defilement reel de la page. Une
-  // page rechargee a mi-hauteur a deja defile : l'appel part tout de suite.
-  function auPremierDefilement(fn) {
+  // ── Le premier geste ────────────────────────────────────────────────
+  // Appelle fn une seule fois, au premier geste reel dans la page : un
+  // defilement, ou un clic dans <main> (une reponse a un test, « Commencer »,
+  // un lien du texte). Un clic dans l'en-tete, le menu ou le bandeau de
+  // consentement, qui vivent hors de <main>, n'en est pas un : on n'a rien
+  // lu ni rien joue. Le clic est ecoute en phase de capture, parce que les
+  // moteurs arretent parfois la propagation de leurs propres clics. Une page
+  // rechargee a mi-hauteur a deja defile : l'appel part tout de suite.
+  function auPremierGeste(fn) {
     var fait = false;
     function declenche() {
       if (fait) return;
       fait = true;
       window.removeEventListener('scroll', surDefilement);
+      document.removeEventListener('click', surClic, true);
       fn();
     }
     function surDefilement() {
       if ((window.scrollY || document.documentElement.scrollTop || 0) > 0) declenche();
     }
+    function surClic(e) {
+      var cible = e.target;
+      if (!cible || !cible.closest) return;
+      if (!cible.closest('main')) return;
+      declenche();
+    }
     if ((window.scrollY || document.documentElement.scrollTop || 0) > 0) { declenche(); return; }
     window.addEventListener('scroll', surDefilement, { passive: true });
+    document.addEventListener('click', surClic, true);
   }
 
   // Un emplacement est « dans le premier ecran » si son haut est au-dessus du
@@ -478,23 +514,37 @@
     coupeRafraichissementInvisible();
     try { interstitielDeNavigation(); } catch (e) {}
     var tous = document.querySelectorAll('[data-pub-differee]:not([data-pub-posee])');
-    var plusBas = [];       // sous la ligne de flottaison : a l'approche, comme avant
-    var premierEcran = [];  // dans le premier ecran : apres le premier defilement
+    var dansLeFlux = [];
     var horsFlux = [];
     for (var i = 0; i < tous.length; i++) {
       var h = tous[i];
-      if (HORS_FLUX[h.getAttribute('data-pub-differee')]) { horsFlux.push(h); continue; }
-      var visible = false;
-      try { visible = dansLePremierEcran(h); } catch (e) {}
-      (visible ? premierEcran : plusBas).push(h);
+      (HORS_FLUX[h.getAttribute('data-pub-differee')] ? horsFlux : dansLeFlux).push(h);
     }
-    lance(plusBas);
-    if (horsFlux.length || premierEcran.length) {
-      auPremierDefilement(function () {
-        try { poseHorsFlux(horsFlux); } catch (e) {}
-        lance(premierEcran);
-      });
-    }
+    if (!dansLeFlux.length && !horsFlux.length) return;
+
+    // Les emplacements du premier ecran attendent le premier geste ; la liste
+    // n'est connue qu'une fois la mise en page posee (ci-dessous). Si le geste
+    // vient avant, elle est vide ici, et ces emplacements partiront a
+    // l'approche comme les autres.
+    var gesteFait = false;
+    var premierEcran = [];
+    auPremierGeste(function () {
+      gesteFait = true;
+      try { poseHorsFlux(horsFlux); } catch (e) {}
+      lance(premierEcran);
+    });
+
+    setTimeout(function () {
+      var plusBas = [];   // sous la ligne de flottaison : a l'approche
+      for (var j = 0; j < dansLeFlux.length; j++) {
+        var e = dansLeFlux[j];
+        if (e.getAttribute('data-pub-posee')) continue;
+        var visible = false;
+        try { visible = dansLePremierEcran(e); } catch (x) {}
+        (visible && !gesteFait ? premierEcran : plusBas).push(e);
+      }
+      lance(plusBas);
+    }, ATTENTE_MISE_EN_PAGE);
   }
 
   // Au chargement complet de la page, jamais avant (voir en tete).

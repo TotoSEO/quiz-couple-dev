@@ -185,6 +185,7 @@
         <% } %>
 
         <!-- Sections -->
+        <% let _pubBlog = false; %>
         <% if (article.sections && article.sections.length > 0) { %>
         <% for (const section of article.sections) { %>
         <section id="<%= section.id %>" class="mb-12 scroll-mt-24">
@@ -211,6 +212,11 @@
           </aside>
           <% } %>
         </section>
+        <%# Un seul pave dans le texte, apres la premiere section : la lecture
+            est commencee, et la colonne de 52rem n'a pas la place d'un
+            billboard. Le format video « in text » de la regie a ete retire
+            en septembre 2026 ; celui-ci est un pave ordinaire. %>
+        <% if (!_pubBlog && typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { _pubBlog = true; %><%- include('../partials/pub', { format: 2 }) %><% } %>
         <% } %>
         <% } %>
 
@@ -260,3 +266,7 @@
     </div>
   </div>
 </div>
+
+<%# Le billboard en pleine largeur, sous l'article : la colonne du texte est
+    trop etroite pour lui. %>
+<div class="container mx-auto px-4"><% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %></div>
