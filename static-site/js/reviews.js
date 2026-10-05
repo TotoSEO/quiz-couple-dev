@@ -32,7 +32,6 @@
       reviews: 'avis',
       anonymous: 'Anonyme',
       noReviews: 'Soyez le premier à donner votre avis !',
-      timeAgo: { now: "À l'instant", minutes: 'Il y a {n} min', hours: 'Il y a {n}h', days: 'Il y a {n}j', weeks: 'Il y a {n} sem', months: 'Il y a {n} mois' },
       chars: 'caractères'
     },
     en: {
@@ -56,7 +55,6 @@
       reviews: 'reviews',
       anonymous: 'Anonymous',
       noReviews: 'Be the first to leave a review!',
-      timeAgo: { now: 'Just now', minutes: '{n}m ago', hours: '{n}h ago', days: '{n}d ago', weeks: '{n}w ago', months: '{n}mo ago' },
       chars: 'characters'
     },
     es: {
@@ -80,7 +78,6 @@
       reviews: 'opiniones',
       anonymous: 'Anónimo',
       noReviews: '¡Sé el primero en dar tu opinión!',
-      timeAgo: { now: 'Ahora', minutes: 'Hace {n} min', hours: 'Hace {n}h', days: 'Hace {n}d', weeks: 'Hace {n} sem', months: 'Hace {n} meses' },
       chars: 'caracteres'
     },
     de: {
@@ -104,7 +101,6 @@
       reviews: 'Bewertungen',
       anonymous: 'Anonym',
       noReviews: 'Sei der Erste, der eine Bewertung abgibt!',
-      timeAgo: { now: 'Gerade', minutes: 'Vor {n} Min', hours: 'Vor {n}h', days: 'Vor {n}T', weeks: 'Vor {n} Wo', months: 'Vor {n} Mon' },
       chars: 'Zeichen'
     },
     it: {
@@ -128,25 +124,11 @@
       reviews: 'recensioni',
       anonymous: 'Anonimo',
       noReviews: 'Sii il primo a lasciare una recensione!',
-      timeAgo: { now: 'Adesso', minutes: '{n} min fa', hours: '{n}h fa', days: '{n}g fa', weeks: '{n} sett fa', months: '{n} mesi fa' },
       chars: 'caratteri'
     }
   };
 
   function t(key) { return (UI[lang] || UI.fr)[key] || UI.fr[key] || key; }
-
-  function timeAgo(dateStr) {
-    var ta = t('timeAgo');
-    var now = Date.now();
-    var date = new Date(dateStr).getTime();
-    var diff = Math.floor((now - date) / 1000);
-    if (diff < 60) return ta.now;
-    if (diff < 3600) return ta.minutes.replace('{n}', Math.floor(diff / 60));
-    if (diff < 86400) return ta.hours.replace('{n}', Math.floor(diff / 3600));
-    if (diff < 604800) return ta.days.replace('{n}', Math.floor(diff / 86400));
-    if (diff < 2592000) return ta.weeks.replace('{n}', Math.floor(diff / 604800));
-    return ta.months.replace('{n}', Math.floor(diff / 2592000));
-  }
 
   function esc(s) { return s ? String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;') : ''; }
 
@@ -178,6 +160,12 @@
   }
 
   // ── Load approved reviews ──
+  //
+  // Aucune date sur les cartes. Elles affichaient « Il y a 2h », « Il y a 3j » :
+  // Google exécute ce script, lit ce texte et peut le prendre pour la date de
+  // la page d'accueil, qui ressortait « il y a X heures » dans les résultats
+  // juste après la validation d'un avis. Une date qui bouge sans que le
+  // contenu change ressemble à une fraîcheur fabriquée.
   //
   // Deux requetes, et pas une seule, parce qu'elles ne servent pas a la meme
   // chose. La premiere ramene les vingt derniers avis a afficher. La seconde
@@ -219,7 +207,7 @@
     // avis : celui du build est plus juste.
     stats.then(function (s) { if (s) updateHero(s.avg, s.total); });
 
-    fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&is_approved=eq.true&order=created_at.desc&limit=20', {
+    fetch(SUPABASE_URL + '/rest/v1/reviews?select=author_name,rating,comment&is_approved=eq.true&order=created_at.desc&limit=20', {
       headers: entetes
     })
     .then(function (res) { return res.json(); })
@@ -254,7 +242,6 @@
         html += '<div class="review-card glass-card rounded-2xl p-5 space-y-3">';
         html += '<div class="flex items-center justify-between">';
         html += '<span class="font-semibold text-foreground text-sm">' + esc(r.author_name || t('anonymous')) + '</span>';
-        html += '<span class="text-xs text-muted-foreground">' + timeAgo(r.created_at) + '</span>';
         html += '</div>';
         html += '<div class="flex items-center gap-0.5">' + starsHtml(r.rating, 'sm') + '</div>';
         if (r.comment) {
