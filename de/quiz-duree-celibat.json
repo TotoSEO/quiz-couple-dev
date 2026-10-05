@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "badge": "Test für Singles",
+    "title": "Test: Wie lange bleibst du noch Single?",
+    "titleHighlight": "noch Single",
+    "description": "Dieser Test schätzt, wie lange es noch dauert, bis du jemanden kennenlernst. Er schaut auf dein Alter, deinen Job, deine Abende, deine Freunde und darauf, was du tust, wenn dir jemand gefällt. Das Ergebnis ist eine Dauer in Monaten, und was sie verkürzen könnte.",
+    "subtitle": "Zwanzig Fragen, fünf Minuten, eine Schätzung in Monaten",
+    "jumpBtn": "Zum Test"
+  },
+  "section1": {
+    "title": "So schätzt der Test, wie lange du noch Single bist",
+    "p1": "Dieser Test schätzt, wie lange du noch Single bleibst. Er liest nicht die Zukunft. Er schaut auf deinen Alltag und berechnet deine Chancen, im Laufe eines Monats jemanden kennenzulernen.",
+    "p2": "Nehmen wir zwei Beispiele. Wer ohne Arbeit ist, selten ausgeht und keinen Freundeskreis hat, <a href=\"/de/warum-bin-ich-noch-single-test/\">begegnet kaum neuen Menschen</a>. Bei ihm kann es lange dauern. Wer dreißig ist, arbeitet, dreimal im Monat ausgeht und zu ein oder zwei Freundeskreisen gehört, lernt Leute kennen, ohne darüber nachzudenken. Er hat gute Chancen, noch im selben Jahr jemanden zu finden.",
+    "p3": "Der Test macht diese Rechnung mit deinen zwanzig Antworten. Das Ergebnis ist eine Dauer in Monaten, eine Spanne und ein ungefähres Datum. Er zeigt auch, was für dich spricht, was dich bremst und womit du am meisten Zeit gewinnen würdest.",
+    "pillar1Title": "Deine Situation",
+    "pillar1Text": "Dein Alter, womit du deine Tage verbringst, wo du wohnst und wie viel Freizeit dir bleibt.",
+    "pillar2Title": "Dein Sozialleben",
+    "pillar2Text": "Deine Abende, deine Freunde, die neuen Menschen, die du kennenlernst, und deine Gruppenaktivitäten.",
+    "pillar3Title": "Deine Reflexe",
+    "pillar3Text": "Was du tust, wenn dir jemand gefällt, nach einem guten Date oder wenn etwas anfängt.",
+    "pillar4Title": "Wo du gerade stehst",
+    "pillar4Text": "<a href=\"/de/bereit-fuer-eine-neue-beziehung-test/\">Deine letzte Beziehung</a>, deine Lust auf eine Beziehung, deine Ansprüche und dein Selbstvertrauen."
+  },
+  "section2": {
+    "title": "Wie man die Liebe meistens findet",
+    "intro": "Die meisten Paare lernen sich nicht durch puren Zufall kennen. Sie begegnen sich dort, wo beide ohnehin Zeit verbringen.",
+    "p1": "Jemanden kennenzulernen ist zuerst eine Frage der Zahl. Je mehr neuen Menschen du begegnest, desto größer ist die Chance, dass dir jemand gefällt, dem du auch gefällst.",
+    "p2": "Dann braucht es Zeit. Liebe auf den ersten Blick ist selten. Man sieht die Person wieder, redet jedes Mal ein bisschen mehr, und eines Tages merkt man, dass man sich schon auf das nächste Treffen freut...",
+    "p3": "Deshalb sind die häufigsten Orte, an denen man sich kennenlernt, auch die einfachsten. Hier die wichtigsten, mit dem, was hilft, und der Falle, die man vermeiden sollte.",
+    "headerScore": "Wo",
+    "headerLevel": "Was hilft",
+    "headerAnalysis": "Die Falle",
+    "row1Score": "Freunde von Freunden",
+    "row1Level": "Jemand hat schon vorsortiert, man kommt mit Vertrauen",
+    "row1Analysis": "Immer nur dieselben Freunde treffen",
+    "row2Score": "Arbeit oder Studium",
+    "row2Level": "Man sieht sich oft und lernt sich ohne Druck kennen",
+    "row2Analysis": "Nur über die Arbeit reden",
+    "row3Score": "Gruppenaktivitäten",
+    "row3Level": "Man teilt schon ein Hobby, das Gespräch kommt von selbst",
+    "row3Analysis": "Nur zum Flirten hingehen",
+    "row4Score": "Partys und Bars",
+    "row4Level": "Viele Leute in kurzer Zeit",
+    "row4Analysis": "Warten, bis die andere Person auf dich zukommt",
+    "row5Score": "Dating-Apps",
+    "row5Level": "Leute, die auch jemanden suchen",
+    "row5Analysis": "Endlos schreiben, ohne sich je zu treffen",
+    "tip": "Eine Party, auf der du nur eine einzige Person kennst, bringt oft mehr als drei Abende mit denselben Freunden. Genau dort triffst du neue Gesichter."
+  },
+  "section3": {
+    "title": "Was hilft, jemanden kennenzulernen",
+    "intro": "Vier Dinge machen den Unterschied. Für keines davon musst du dein Leben umkrempeln.",
+    "sub1Title": "Ausgehen und Leute sehen",
+    "sub1P1": "Das ist der erste Hebel, und der einfachste. Drei Abende im Monat ändern schon viel. Es müssen keine Partys sein. Ein Sportverein, ein Ehrenamt, ein Abendkurs oder ein Chor funktionieren genauso gut.",
+    "sub2Title": "Einen echten Freundeskreis pflegen",
+    "sub2P1": "Deine Freunde nehmen dich an Orte mit, an die du allein nicht gehen würdest. Sie stellen dir auch Leute vor. Wenn dein Umfeld nicht weiß, dass du offen für jemanden bist, sag es einfach. Viele Paare lernen sich über gemeinsame Freunde kennen.",
+    "sub3Title": "Den ersten Schritt wagen",
+    "sub3P1": "Wenn dir in einer Bar jemand gefällt, führt Warten, bis die Person sich in dich verguckt, selten zu etwas. Vielleicht hat sie dich gar nicht bemerkt. Vielleicht ist sie genauso schüchtern wie du. Manchmal muss man es einfach versuchen. Sprich sie an, ein banaler Satz reicht.",
+    "sub4Title": "Natürlich bleiben",
+    "sub4P1": "Je mehr du nachdenkst, desto gestresster bist du. Und je gestresster du bist, desto weniger natürlich wirkst du. Jemanden kennenzulernen ist keine Prüfung. Wenn es nicht funkt, hast du nichts verloren und mit jemand Neuem gesprochen."
+  },
+  "section4": {
+    "title": "Warum es selten klappt, wenn man es erzwingt",
+    "p1": "Wenn man unbedingt <a href=\"/de/warum-finde-ich-keine-liebe-test/\">die Liebe finden</a> will, klappt es selten. Man geht mit nur einem Gedanken im Kopf aus. Man sieht in jeder Person einen möglichen Kandidaten. Die anderen merken das sofort.",
+    "p2": "Es ist einfach nicht natürlich. Man versucht zu gefallen, statt man selbst zu sein, und gefällt dadurch weniger...",
+    "p3": "Oft erlebt man die schönsten Überraschungen, wenn man am wenigsten sucht. Man geht aus, um Freunde zu sehen, meldet sich zu einem Kurs an, weil er Spaß macht, und die Begegnung passiert nebenbei. Aber Vorsicht: Weniger suchen heißt nicht, zu Hause zu sitzen und zu warten. Du musst weiter ausgehen und Einladungen annehmen."
+  },
+  "section5": {
+    "title": "Dating-Apps: für wen sie funktionieren",
+    "p1": "Dating-Apps funktionieren für manche Menschen. Jeden Tag entstehen dort Paare, das stimmt.",
+    "p2": "Aber nur sehr wenige Nutzer finden dort eine echte Beziehung. Viele Gespräche enden nach drei Nachrichten. Manche reihen Date an Date, aus denen nichts wird, und sind irgendwann erschöpft.",
+    "p3": "Eine App kann ein Sozialleben ergänzen. Ersetzen kann sie es selten. Wenn du nichts anderes mehr machst, leg eine Pause von einem Monat ein und geh mehr aus. Meistens bringt das mehr als ein neues Profil."
+  },
+  "seo": {
+    "faqTitle": "Die Fragen, die man sich stellt"
+  },
+  "jsonLd": {
+    "about": "Single-Leben und Kennenlernen",
+    "faq1Q": "Kann man wissen, wie lange man noch Single bleibt?",
+    "faq1A": "Nicht sicher, aber man kann es schätzen. Am meisten zählt, wie vielen neuen Menschen du begegnest und was du tust, wenn dir jemand gefällt. Davon geht der Test aus, um eine Dauer in Monaten zu nennen.",
+    "faq2Q": "Warum bin ich noch Single, obwohl ich viel ausgehe?",
+    "faq2A": "Ausgehen reicht nicht immer. Wenn du immer mit denselben Leuten ausgehst oder wartest, bis die andere Person den ersten Schritt macht, ziehen die Gelegenheiten vorbei. Schau auch auf deine letzte Beziehung. Wenn sie noch viel Platz einnimmt, hat jemand Neues es schwer.",
+    "faq3Q": "Sparen Dating-Apps Zeit?",
+    "faq3A": "Manchen ja. Vielen nicht. Sie bringen Kontakte, aber wenige echte Beziehungen. Sie funktionieren besser als Ergänzung zu einem Sozialleben als an seiner Stelle.",
+    "faq4Q": "Ändert das Alter etwas?",
+    "faq4A": "Ein bisschen. Mit den Jahren lernt man weniger neue Leute kennen, vor allem mit Kindern oder einem fordernden Job. Aber das Alter zählt weniger als das Ausgehen, die Freunde und die Art, auf andere zuzugehen.",
+    "faq5Q": "Ist der Test anonym?",
+    "faq5A": "Ja. Deine Antworten bleiben in deinem Browser. Nur die Art des Ergebnisses, ohne persönliche Daten, dient dazu zu messen, wie der Test genutzt wird."
+  }
+}

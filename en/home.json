@@ -150,10 +150,29 @@
     "jeuxEyebrow": "The games"
   },
   "customQuizPromo": {
-    "badge": "New",
-    "title": "Create your own quiz",
-    "sub": "Make up your own questions, pick the format, and share your quiz with your friends or your partner in one link. 100% free, no sign-up.",
-    "cta": "Create my quiz"
+    "eyebrow": "Custom quiz",
+    "title": "Create your",
+    "titleHighlight": "own quiz",
+    "sub": "You write your questions, choose the type of quiz, and we give you a link to send to your partner or your friends. They play on their phone, with no sign-up, and it's free!",
+    "modeles": [
+      "Points quiz",
+      "True or false",
+      "Would you rather",
+      "Just for fun"
+    ],
+    "note": "The quiz stays private, only people who have the link can play it.",
+    "cta": "Create my quiz",
+    "demo": {
+      "titre": "How well do you know me?",
+      "num": "Question 2/10",
+      "question": "My favourite dessert?",
+      "reponses": [
+        "Tiramisu",
+        "Pancakes",
+        "Chocolate lava cake"
+      ],
+      "lien": "Link copied ✓"
+    }
   },
   "marquee": {
     "item1": "💕 Test your relationship",

@@ -439,5 +439,11 @@
     "shortTitle": "Beziehungszähler",
     "description": "Gebt den Tag ein, an dem alles begann, und der Zähler sagt euch, wie viele Tage ihr zusammen seid, die genaue Dauer und die nächsten Daten zum Feiern.",
     "metaDescription": "Kostenloser Beziehungszähler: Startdatum eingeben und eure Tage zusammen sehen, die genaue Dauer, die nächsten Jahrestage und Tage-Marken zum Feiern."
+  },
+  "testDureeCelibat": {
+    "title": "Wie lange bleibe ich noch Single? Online-Test",
+    "shortTitle": "Wie lange bleibe ich noch Single?",
+    "description": "Zwanzig Fragen zu deinem Alltag und eine Schätzung in Monaten, wie lange es noch dauert, bis du jemanden kennenlernst.",
+    "metaDescription": "Wie lange bleibst du noch Single? Zwanzig Fragen zu deinem Alter, deinen Abenden, deinen Freunden und deinen Gewohnheiten, und eine Schätzung in Monaten. Kostenloser, anonymer Test."
   }
 }

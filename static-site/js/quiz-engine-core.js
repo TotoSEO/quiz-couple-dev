@@ -2038,6 +2038,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'celibataire', icon: '🔍', route: 'testCelibataire' },
     { type: 'test', key: 'couple-ou-celibat', icon: '🛋️', route: 'testCoupleOuCelibat' },
     { type: 'test', key: 'pret-nouvelle-relation', icon: '🌱', route: 'testPretRelation' },
+    { type: 'test', key: 'duree-celibat', icon: '⏳', route: 'testDureeCelibat' },
     { type: 'test', key: 'est-ce-le-bon', icon: '🔑', route: 'testEstCeLeBon' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
@@ -6882,6 +6883,325 @@ var QuizEngine = (function() {
 
     renderActionButtons(wrap, {
       share: { noms: nomsPartage(this), type: 'profil', verdict: v.title || '' },
+      restart: function() { self.phase = 'intro'; self.render(); }
+    });
+    this.container.appendChild(wrap);
+    document.body.classList.add('quiz-has-result');
+    smoothScroll(wrap, 'center');
+  };
+
+  // ═══════════════════════════════════════════════════════════
+  // DUREE QUIZ - combien de temps vais-je rester celibataire ?
+  // Une estimation en mois, pas un score. Chaque reponse multiplie la chance
+  // de commencer une histoire dans le mois (table `facteurs` du chargeur, la
+  // meme dans les cinq langues). La somme de leurs logarithmes, amortie par
+  // `pente`, donne cette chance mensuelle p, et la duree affichee est la
+  // mediane d'une attente a chance constante : ln 2 / -ln(1 - p). La
+  // fourchette va du 30e au 70e centile de la meme attente.
+  //
+  // Le resultat dit aussi ce qui joue pour et contre la personne (les
+  // reponses qui pesent le plus dans un sens ou dans l'autre) et le levier
+  // qui ferait gagner le plus de temps : parmi les questions marquees
+  // `levier`, celle dont la meilleure reponse raccourcirait le plus
+  // l'estimation. L'age, la ville ou l'anciennete du celibat ne sont jamais
+  // proposes comme levier.
+  // ═══════════════════════════════════════════════════════════
+  function DureeQuiz(config) {
+    this.container = config.container;
+    this.questions = config.questions;
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.quizType = config.quizType || 'duree';
+    this.labels = config.labels || {};
+    this.verdicts = config.verdicts || [];
+    this.paliers = config.paliers || [];
+    this.base = config.base || 0.0445;
+    this.pente = config.pente || 0.45;
+    this.plafond = config.plafond || 120;
+    this.phase = 'intro';
+    this.currentQ = 0;
+    this.reponses = [];
+    this.render();
+  }
+
+  DureeQuiz.prototype.render = function() {
+    this.container.innerHTML = '';
+    document.body.classList.remove('quiz-has-result');
+    if (this.phase === 'intro') this.renderIntro();
+    else if (this.phase === 'playing') this.renderQuestion();
+    else if (this.phase === 'results') this.renderResults();
+  };
+
+  DureeQuiz.prototype.renderIntro = function() {
+    var self = this;
+    var ecran = ecranDepart({
+      icone: this.labels.icon || '⏳',
+      titre: this.labels.introTitle || '',
+      desc: this.labels.introDesc || '',
+      meta: pastilleMeta(this.questions.length, null, this.labels.duree || null),
+      bouton: this.labels.start || tg('playerSetup.startTest', 'Commencer le test'),
+      onStart: function() {
+        self.reponses = [];
+        self.currentQ = 0;
+        self.phase = 'playing';
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(ecran.wrap);
+  };
+
+  DureeQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+    renderProgressBar(wrap, this.currentQ, total);
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(q.text)));
+
+    // Les reponses gardent l'ordre du fichier : ce sont des echelles (l'age,
+    // le nombre de sorties par mois), les melanger les rendrait illisibles.
+    var optionsWrap = el('div', 'space-y-2');
+    var letters = ['A', 'B', 'C', 'D', 'E'];
+    q.options.forEach(function(opt, idx) {
+      var optBtn = el('button', 'quiz-option');
+      optBtn.type = 'button';
+      optBtn.innerHTML = '<span class="quiz-option-letter">' + (letters[idx] || '') + '</span><span>' + esc(opt.text) + '</span>';
+      optBtn.style.animationDelay = (idx * 60) + 'ms';
+      optBtn.addEventListener('click', function() {
+        if (!answerLock(self)) return;
+        optBtn.classList.add('selected');
+        var sibs = optionsWrap.querySelectorAll('.quiz-option');
+        for (var s = 0; s < sibs.length; s++) { if (sibs[s] !== optBtn) sibs[s].style.opacity = '0.5'; sibs[s].style.pointerEvents = 'none'; }
+        self.reponses[self.currentQ] = opt;
+        setTimeout(function() {
+          if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
+          else { self.phase = 'results'; }
+          self.render();
+        }, DELAI_REPONSE);
+      });
+      optionsWrap.appendChild(optBtn);
+    });
+    wrap.appendChild(optionsWrap);
+
+    if (this.currentQ > 0) {
+      var navWrap = el('div', 'mt-6');
+      var backBtn = el('button', 'btn btn-ghost text-sm', '&larr; ' + tg('question.previousQuestion', 'Précédent'));
+      backBtn.type = 'button';
+      backBtn.addEventListener('click', function() {
+        self.currentQ--;
+        self.reponses[self.currentQ] = undefined;
+        self.render();
+      });
+      navWrap.appendChild(backBtn);
+      wrap.appendChild(navWrap);
+    }
+    this.container.appendChild(wrap);
+  };
+
+  // La duree mediane, en mois, pour une serie de reponses.
+  DureeQuiz.prototype.moisPour = function(reponses) {
+    var somme = 0;
+    for (var i = 0; i < this.questions.length; i++) {
+      var o = reponses[i];
+      if (o && o.mult > 0) somme += Math.log(o.mult);
+    }
+    var p = Math.min(0.5, this.base * Math.exp(this.pente * somme));
+    return Math.log(2) / -Math.log(1 - p);
+  };
+
+  // « 7 mois », « 1 an et 4 mois », « 5 ans ». Au-dela de quatre ans, le
+  // mois pres ne veut plus rien dire : on arrondit a l'annee.
+  // `apres` : la duree suit une preposition (« entre », « a », « au lieu
+  // de »). L'allemand y met le datif (« zwischen 5 und 17 Monaten ») : la
+  // langue donne alors moisNApres et anNApres, les autres gardent la forme
+  // ordinaire.
+  DureeQuiz.prototype.texteDuree = function(mois, apres) {
+    var L = this.labels;
+    var moisN = (apres && L.moisNApres) || L.moisN, anN = (apres && L.anNApres) || L.anN;
+    function unite(n, un, plusieurs) { return n === 1 ? (un || '1') : (plusieurs || '{{n}}').replace('{{n}}', n); }
+    var m = Math.max(1, Math.round(mois));
+    if (m < 24) return unite(m, L.moisUn, moisN);
+    if (m >= 48) return unite(Math.round(m / 12), L.anUn, anN);
+    var ans = Math.floor(m / 12), reste = m % 12;
+    var t = unite(ans, L.anUn, anN);
+    return reste ? t + (L.et || ' + ') + unite(reste, L.moisUn, moisN) : t;
+  };
+
+  // La fourchette : « entre 5 et 17 mois », l'unite une seule fois quand
+  // les deux bornes la partagent (mois sous deux ans, annees au-dela).
+  DureeQuiz.prototype.texteFourchette = function(bas, haut) {
+    var L = this.labels;
+    var moisN = L.moisNApres || L.moisN, anN = L.anNApres || L.anN;
+    function borne(mois) {
+      var m = Math.max(1, Math.round(mois));
+      if (m < 24) return { n: m, enMois: true, texte: m === 1 ? (L.moisUn || '1') : (moisN || '{{n}}').replace('{{n}}', m) };
+      var a = Math.round(m / 12);
+      return { n: a, enMois: false, texte: a === 1 ? (L.anUn || '1') : (anN || '{{n}}').replace('{{n}}', a) };
+    }
+    var a = borne(bas), b = borne(haut);
+    var debut = (a.enMois === b.enMois && a.n !== 1) ? String(a.n) : a.texte;
+    return (L.fourchette || '').replace('{{a}}', debut).replace('{{b}}', b.texte);
+  };
+
+  DureeQuiz.prototype.verdictPour = function(mois) {
+    for (var i = 0; i < this.paliers.length; i++) {
+      if (mois <= this.paliers[i]) return this.verdicts[i] || {};
+    }
+    return this.verdicts[this.paliers.length] || {};
+  };
+
+  DureeQuiz.prototype.enregistreProfil = function(profil) {
+    var bloc = document.getElementById('pq-reviews');
+    var slug = bloc ? bloc.dataset.quizSlug : null;
+    if (!slug || !profil) return;
+    var cle = 'qc-profil-' + slug;
+    try { if (localStorage.getItem(cle)) return; localStorage.setItem(cle, profil); } catch (e) {}
+    fetch(SUPABASE_URL + '/rest/v1/profil_resultats', {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json', 'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ quiz_slug: slug, profil: profil, lang: this.lang })
+    }).catch(function () {});
+  };
+
+  // Le levier le plus fort : la question marquee `levier` dont la meilleure
+  // reponse ferait gagner le plus de mois. Au-dessus du plafond, un seul
+  // changement ne se voit pas (« plus de 10 ans au lieu de plus de 10 ans ») :
+  // on cumule alors les meilleurs, quatre au plus, jusqu'a repasser dessous.
+  // Rien sous un mois de gain, rien si quatre changements ne suffisent pas.
+  DureeQuiz.prototype.meilleurLevier = function(mois) {
+    var reponses = this.reponses.slice(), choix = [], courant = mois;
+    for (var tour = 0; tour < 4; tour++) {
+      var meilleur = null;
+      for (var i = 0; i < this.questions.length; i++) {
+        var q = this.questions[i], actuelle = reponses[i];
+        if (!q.levier || !actuelle) continue;
+        var mieux = null;
+        for (var j = 0; j < q.options.length; j++) {
+          if (!mieux || q.options[j].mult > mieux.mult) mieux = q.options[j];
+        }
+        if (!mieux || mieux.mult <= actuelle.mult) continue;
+        var essai = reponses.slice();
+        essai[i] = mieux;
+        var apres = this.moisPour(essai);
+        if (courant - apres >= 1 && (!meilleur || apres < meilleur.apres)) {
+          meilleur = { i: i, q: q, reponse: mieux, apres: apres };
+        }
+      }
+      if (!meilleur) break;
+      reponses[meilleur.i] = meilleur.reponse;
+      choix.push(meilleur);
+      courant = meilleur.apres;
+      if (courant <= this.plafond) break;
+    }
+    if (!choix.length || courant > this.plafond) return null;
+    return { choix: choix, apres: courant };
+  };
+
+  DureeQuiz.prototype.renderResults = function() {
+    var self = this;
+    var L = this.labels;
+    var mois = this.moisPour(this.reponses);
+    var auDela = mois > this.plafond;
+    var v = this.verdictPour(mois);
+    this.enregistreProfil(v.cle || '');
+    var duree = auDela
+      ? (L.plusDe || '{{duree}}').replace('{{duree}}', this.texteDuree(this.plafond))
+      : (L.environ || '{{duree}}').replace('{{duree}}', this.texteDuree(mois));
+
+    var wrap = el('div', 'quiz-engine quiz-result-card text-center');
+    wrap.appendChild(el('div', 'text-5xl mb-3', L.icon || '⏳'));
+    wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-2', esc(L.resultLabel || '')));
+    wrap.appendChild(el('p', 'dur-chiffre', esc(duree)));
+
+    if (!auDela) {
+      wrap.appendChild(el('p', 'dur-fourchette', esc(this.texteFourchette(mois * 0.5146, mois * 1.737))));
+      // La date approximative, au mois pres sous trois ans, a l'annee au-dela.
+      if (L.vers && mois <= 60) {
+        var d = new Date();
+        d.setDate(1);
+        d.setMonth(d.getMonth() + Math.round(mois));
+        var auMois = mois <= 36;
+        var format = auMois ? { month: 'long', year: 'numeric' } : { year: 'numeric' };
+        var date = '';
+        try { date = new Intl.DateTimeFormat(this.lang, format).format(d); } catch (e) { date = String(d.getFullYear()); }
+        // « im Juli 2027 » mais « ungefähr 2029 » : une langue peut avoir sa
+        // tournure pour l'année seule (versAn).
+        var modele = (!auMois && L.versAn) ? L.versAn : L.vers;
+        wrap.appendChild(el('p', 'dur-date', esc(modele.replace('{{date}}', date))));
+      }
+    }
+
+    if (v.title) wrap.appendChild(el('h2', 'text-2xl font-bold mb-4 mt-6 quiz-reveal-enter', esc(v.title)));
+    if (v.description) wrap.appendChild(el('p', 'text-muted-foreground leading-relaxed mb-4 max-w-lg mx-auto text-left quiz-reveal-enter', escRiche(v.description)));
+
+    // Ce qui joue pour et contre : les trois reponses qui pesent le plus dans
+    // chaque sens, avec une barre proportionnelle a leur poids.
+    var poids = [];
+    for (var i = 0; i < this.questions.length; i++) {
+      var o = this.reponses[i];
+      if (o && o.mult > 0) poids.push({ q: this.questions[i], o: o, c: Math.log(o.mult) });
+    }
+    var pour = poids.filter(function(x) { return x.c > 0.04; }).sort(function(a, b) { return b.c - a.c; }).slice(0, 3);
+    var contre = poids.filter(function(x) { return x.c < -0.04; }).sort(function(a, b) { return a.c - b.c; }).slice(0, 3);
+    var plusFort = 0;
+    pour.concat(contre).forEach(function(x) { if (Math.abs(x.c) > plusFort) plusFort = Math.abs(x.c); });
+    function liste(titre, items, sens) {
+      if (!items.length) return '';
+      var h = '<div class="dur-col dur-col--' + sens + '"><p class="dur-col-titre">' + esc(titre) + '</p><ul>';
+      items.forEach(function(x) {
+        var largeur = plusFort ? Math.max(12, Math.round(Math.abs(x.c) / plusFort * 100)) : 50;
+        h += '<li><span class="dur-facteur">' + esc(x.q.facteur || x.q.text) + '</span>'
+          + '<span class="dur-reponse">' + esc(x.o.text) + '</span>'
+          + '<span class="dur-jauge"><span style="width:' + largeur + '%"></span></span></li>';
+      });
+      return h + '</ul></div>';
+    }
+    var colonnes = liste(L.atouts || '', pour, 'pour') + liste(L.freins || '', contre, 'contre');
+    if (colonnes) {
+      var bloc = el('div', 'dur-facteurs quiz-reveal-enter');
+      bloc.innerHTML = colonnes;
+      wrap.appendChild(bloc);
+    }
+
+    var levier = this.meilleurLevier(mois);
+    if (levier && L.levierTexte) {
+      var apres = this.texteDuree(levier.apres, true);
+      var avant = auDela ? (L.plusDe || '{{duree}}').replace('{{duree}}', this.texteDuree(this.plafond, true)) : this.texteDuree(mois, true);
+      var lv = el('div', 'dur-levier quiz-reveal-enter');
+      var h = '<strong class="dur-levier-titre">' + esc(L.levierTitre || '') + '</strong>';
+      if (levier.choix.length === 1 || !L.levierTexteMulti) {
+        var c = levier.choix[0];
+        h += '<p>' + esc(L.levierTexte
+          .replace('{{facteur}}', c.q.facteur || c.q.text)
+          .replace('{{reponse}}', c.reponse.text)
+          .replace('{{apres}}', apres)
+          .replace('{{avant}}', avant)) + '</p>';
+      } else {
+        h += '<p>' + esc(L.levierTexteMulti
+          .replace('{{n}}', levier.choix.length)
+          .replace('{{apres}}', apres)
+          .replace('{{avant}}', avant)) + '</p><ul>';
+        levier.choix.forEach(function(c) {
+          h += '<li><strong>' + esc(c.q.facteur || c.q.text) + '</strong> ' + esc(c.reponse.text) + '</li>';
+        });
+        h += '</ul>';
+      }
+      lv.innerHTML = h;
+      wrap.appendChild(lv);
+    }
+
+    if (v.advice) {
+      var advice = el('div', 'text-sm text-foreground bg-primary/5 border border-primary/20 rounded-xl p-5 mt-4 text-left max-w-lg mx-auto quiz-reveal-enter');
+      advice.innerHTML = '<strong class="block mb-2">' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(v.advice);
+      wrap.appendChild(advice);
+    }
+
+    renderActionButtons(wrap, {
+      share: { noms: nomsPartage(this), type: 'profil', verdict: (L.partage || '{{duree}}').replace('{{duree}}', duree) },
       restart: function() { self.phase = 'intro'; self.render(); }
     });
     this.container.appendChild(wrap);
@@ -11994,6 +12314,7 @@ var QuizEngine = (function() {
     ProfileQuiz: ProfileQuiz,
     DiagnosticQuiz: DiagnosticQuiz,
     BalanceQuiz: BalanceQuiz,
+    DureeQuiz: DureeQuiz,
     AxesQuiz: AxesQuiz,
     encartProduits: encartProduits,
     PiliersQuiz: PiliersQuiz,

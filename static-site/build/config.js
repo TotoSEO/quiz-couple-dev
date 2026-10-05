@@ -80,6 +80,7 @@ export const ROUTE_SLUGS = {
   testCoupleOuCelibat: { fr: 'test-couple-ou-celibat', en: 'single-life-or-relationship-test', es: 'test-pareja-o-solteria', de: 'beziehung-oder-single-test', it: 'test-coppia-o-single' },
   testEstCeLeBon: { fr: 'test-est-ce-le-bon-ou-la-bonne', en: 'is-this-the-one-test', es: 'test-es-la-persona-adecuada', de: 'ist-es-die-richtige-person-test', it: 'test-e-la-persona-giusta' },
   testPretRelation: { fr: 'test-pret-pour-une-nouvelle-relation', en: 'ready-for-a-new-relationship-test', es: 'test-preparado-para-una-nueva-relacion', de: 'bereit-fuer-eine-neue-beziehung-test', it: 'test-pronto-per-una-nuova-relazione' },
+  testDureeCelibat: { fr: 'combien-de-temps-je-vais-rester-celibataire', en: 'how-long-will-i-be-single-test', es: 'test-cuanto-tiempo-voy-a-estar-soltero', de: 'wie-lange-bleibe-ich-noch-single-test', it: 'test-quanto-tempo-restero-single' },
   testAmourAmi: { fr: 'test-amour-meilleur-ami', en: 'in-love-with-my-best-friend-test', es: 'test-enamorado-de-mi-mejor-amigo', de: 'in-besten-freund-verliebt-test', it: 'test-innamorato-del-migliore-amico' },
   testChargeMentale: { fr: 'test-charge-mentale-couple', en: 'mental-load-test-couples', es: 'test-carga-mental-pareja', de: 'mental-load-test-paare', it: 'test-carico-mentale-coppia' },
   quizRencontre: { fr: 'questions-premier-rendez-vous', en: 'first-date-questions-game', es: 'preguntas-primera-cita', de: 'fragen-erstes-date', it: 'domande-primo-appuntamento' },
@@ -163,6 +164,7 @@ export const QUIZ_FEATURED = {
   testCoupleOuCelibat: { file: 'couple-ou-celibat',           old: null,                  alt: { fr: "Un fauteuil en velours rose à une place et un canapé lavande à deux places posés côte à côte devant une grande fenêtre, dans une pièce claire", en: 'A rose-pink velvet armchair for one and a lavender two-seater sofa side by side in front of a large window, in a bright room', es: 'Un sillón de terciopelo rosa para una persona y un sofá lavanda de dos plazas, uno al lado del otro delante de un gran ventanal, en una habitación luminosa', de: 'Ein rosa Samtsessel für eine Person und ein lavendelfarbenes Zweisitzersofa nebeneinander vor einem großen Fenster, in einem hellen Raum', it: "Una poltrona di velluto rosa a un posto e un divano lavanda a due posti, uno accanto all'altro davanti a una grande finestra, in una stanza luminosa" } },
   testEstCeLeBon:    { file: 'right-person-key',         old: null,                  alt: { fr: "Sur une table en bois clair, un trousseau de vieilles clés en laiton posé en désordre à gauche et, à droite, une seule clé glissée dans la serrure d'une petite porte peinte en bleu pâle, entrouverte, d'où passe une lumière chaude", en: "On a light wooden table, a bunch of old brass keys lying in a tangle on the left and, on the right, a single key in the lock of a small pale blue painted door, slightly ajar, with warm light coming through", es: "Sobre una mesa de madera clara, un manojo de viejas llaves de latón desordenado a la izquierda y, a la derecha, una sola llave metida en la cerradura de una pequeña puerta pintada de azul pálido, entreabierta, por la que pasa una luz cálida", de: "Auf einem hellen Holztisch links ein Bund alter Messingschlüssel in einem Durcheinander und rechts ein einzelner Schlüssel im Schloss einer kleinen, hellblau gestrichenen Tür, die einen Spalt offen steht und warmes Licht durchlässt", it: "Su un tavolo di legno chiaro, a sinistra un mazzo di vecchie chiavi d'ottone in disordine e, a destra, una sola chiave infilata nella serratura di una piccola porta dipinta di azzurro pallido, socchiusa, da cui passa una luce calda" } },
   testPretRelation:  { file: 'new-relationship-sprout',  old: null,                  alt: { fr: "Sur un rebord de fenêtre, un vieil album photo fermé à gauche et, à droite, une jeune pousse verte dans un pot en terre cuite, une petite clé en laiton posée à côté", en: "On a windowsill, an old closed photo album on the left and, on the right, a fresh green sprout in a terracotta pot with a small brass key beside it", es: "En el alféizar de una ventana, un viejo álbum de fotos cerrado a la izquierda y, a la derecha, un brote verde en una maceta de barro con una pequeña llave de latón al lado", de: "Auf einer Fensterbank links ein altes, geschlossenes Fotoalbum und rechts ein frischer grüner Trieb in einem Terrakottatopf, daneben ein kleiner Messingschlüssel", it: "Su un davanzale, a sinistra un vecchio album di foto chiuso e, a destra, un germoglio verde in un vaso di terracotta con una piccola chiave d'ottone accanto" } },
+  testDureeCelibat:  { file: 'single-hourglass-cafe',    old: null,                  alt: {"fr": "Sur une petite table de café en marbre, un sablier en laiton au sable rose à moitié écoulé, un cappuccino et un cœur en papier plié, face à une chaise vide, dans la lumière dorée d'une fin d'après-midi", "en": "On a small marble cafe table, a brass hourglass with pink sand half run through, a cappuccino and a folded paper heart, facing an empty chair, in golden late-afternoon light", "es": "Sobre una mesita de mármol de una terraza, un reloj de arena de latón con arena rosa a medio caer, un capuchino y un corazón de papel doblado, frente a una silla vacía, con la luz dorada del final de la tarde", "de": "Auf einem kleinen Marmortisch eines Cafés eine Sanduhr aus Messing mit halb durchgelaufenem rosa Sand, ein Cappuccino und ein gefaltetes Papierherz, gegenüber ein leerer Stuhl, im goldenen Licht des späten Nachmittags", "it": "Su un tavolino di marmo di un caffè, una clessidra d'ottone con la sabbia rosa a metà, un cappuccino e un cuore di carta piegato, davanti a una sedia vuota, nella luce dorata del tardo pomeriggio"} },
   testAmourAmi:      { file: 'friendship-bracelets-heart',  old: null,                  alt: { fr: "Deux bracelets d'amitié tressés, un rose et un lavande, entrelacés en forme de cœur sur une table en bois", en: 'Two braided friendship bracelets, one pink and one lavender, intertwined into a heart on a wooden table', es: 'Dos pulseras de la amistad trenzadas, una rosa y otra lavanda, entrelazadas en forma de corazón sobre una mesa de madera', de: 'Zwei geflochtene Freundschaftsbändchen, eines rosa und eines lavendelblau, herzförmig verschlungen auf einem Holztisch', it: "Due braccialetti dell'amicizia intrecciati, uno rosa e uno lavanda, uniti a forma di cuore su un tavolo di legno" } },
   testChargeMentale: { file: 'sticky-notes-fridge',        old: null,                  alt: { fr: "Une porte de réfrigérateur couverte de listes et de pense-bêtes qui se chevauchent", en: 'A fridge door covered in overlapping lists and reminder notes', es: 'Una puerta de nevera cubierta de listas y notas recordatorias superpuestas', de: 'Eine Kühlschranktür voller sich überlappender Listen und Merkzettel', it: "Una porta di frigorifero coperta di liste e promemoria sovrapposti" } },
   quizRencontre:      { file: 'bistro-table-two-chairs',     old: null,                  alt: { fr: "Une petite table de bistrot en terrasse avec deux chaises vides face à face, une fleur dans un vase fin, des guirlandes lumineuses floues derrière", en: "A small bistro table on a terrace with two empty chairs facing each other, a flower in a slim vase, blurred string lights behind", es: "Una pequeña mesa de bistró en una terraza con dos sillas vacías frente a frente, una flor en un jarrón fino y luces de guirnalda desenfocadas detrás", de: "Ein kleiner Bistrotisch auf einer Terrasse mit zwei leeren Stühlen einander gegenüber, eine Blume in einer schmalen Vase, dahinter unscharfe Lichterketten", it: "Un tavolino da bistrot su una terrazza con due sedie vuote una di fronte all'altra, un fiore in un vaso sottile e ghirlande luminose sfocate dietro" } },
@@ -248,6 +250,7 @@ export const ROUTE_CONFIG = {
   testCoupleOuCelibat: { template: 'quiz-couple-ou-celibat', namespaces: ['quiz-couple-ou-celibat', 'quizzes', 'quizGames', 'gd', 'common'] },
   testEstCeLeBon: { template: 'quiz-est-ce-le-bon', namespaces: ['quiz-est-ce-le-bon', 'quizzes', 'quizGames', 'gd', 'common'] },
   testPretRelation: { template: 'quiz-pret-nouvelle-relation', namespaces: ['quiz-pret-nouvelle-relation', 'quizzes', 'quizGames', 'gd', 'common'] },
+  testDureeCelibat: { template: 'quiz-duree-celibat', namespaces: ['quiz-duree-celibat', 'quizzes', 'quizGames', 'gd', 'common'] },
   testAmourAmi: { template: 'quiz-amour-ami', namespaces: ['quiz-amour-ami', 'quizzes', 'quizGames', 'gd', 'common'] },
   testChargeMentale: { template: 'quiz-charge-mentale', namespaces: ['quiz-charge-mentale', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizRencontre: { template: 'quiz-rencontre', namespaces: ['quiz-rencontre', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -295,6 +298,45 @@ const ROUTES_JEUX = [
   'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais', 'jeuQuiPourrait',
   'jeuOuiNon', 'jeuPhrases',
 ];
+
+// Les quatre familles de navigation, dans l'ordre d'affichage. C'est la seule
+// liste : le menu (header.ejs), les carrousels de l'accueil (home.ejs), le
+// pied de page (footer.ejs) et le plan du site (sitemap.ejs) la lisent tous.
+// Écrites à la main dans chaque gabarit, les quatre copies avaient dérivé :
+// pas le même ordre, le test de pureté et celui des vacances sur l'accueil
+// mais pas dans le menu, quatre tests absents du plan du site. Une page
+// réservée au français disparaît d'elle-même ailleurs, getLocalizedUrl ne lui
+// donnant pas d'adresse. Le libellé de chaque lien est `nav.<clé>` dans
+// common.json, le même partout.
+export const FAMILLES_NAV = {
+  tests: [
+    'testCouple', 'testCommonPoints', 'testCompatibilite', 'testDistance',
+    'testFinCouple', 'testToxic', 'testPervers', 'testEmprise',
+    'testAmourHabitude', 'testAmourAttachement', 'testEstCeLeBon',
+    'testJeLaimeEncore', 'testCoupleSain', 'testMariage', 'testDivorce',
+    'testParentalite', 'testEmmenager', 'calculatriceAmour', 'compteurCouple',
+    'testAstroPrenoms', 'testDateNaissance', 'testSignesChinois',
+    'testJalousie', 'testLangageAmour', 'testPersonnalite', 'testAttachement',
+    'testConfiance', 'testDependance', 'testAmeSoeur', 'testKarmique',
+    'testInfidelite', 'testCouche', 'testAimeEncore', 'testDistanceAime',
+    'testChargeMentale', 'testPurete', 'testVacances',
+  ],
+  celib: [
+    'testTrouverAmour', 'testCelibataire', 'testDureeCelibat', 'testCoupleOuCelibat',
+    'testPretRelation', 'testSuisJeAmoureux', 'testCrush', 'testAmourAmitie',
+    'testAmourAmi', 'testSecret', 'testEx',
+  ],
+  quiz: [
+    'quizAmoureux', 'quizTypeCouple', 'quizRencontre', 'quizCoquin',
+    'quizMarrant', 'quizKnowledge', 'quizMost', 'quizAdo', 'quizGenant',
+    'quizVraiFaux', 'zamours', 'quizTentation',
+  ],
+  jeux: [
+    'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
+    'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais',
+    'jeuQuiPourrait', 'jeuOuiNon', 'jeuPhrases',
+  ],
+};
 
 // Les outils : on donne deux prenoms ou deux dates, la page rend un resultat,
 // il n'y a pas de question posee. Ils ne se reconnaissent ni a leur cle ni a
@@ -1390,6 +1432,7 @@ export const QUIZ_RELATED_ARTICLES = {
   testCoupleOuCelibat: ['peur-de-l-engagement', 'dependance-affective', 'attachement-evitant', 'les-phases-de-la-rupture-chez-l-homme'],
   testEstCeLeBon: ['comment-savoir-si-cest-le-bon', 'arreter-ou-continuer-relation', 'questions-avenir-couple', 'red-flags-homme'],
   testPretRelation: ['dependance-affective', 'les-phases-de-la-rupture-chez-l-homme', 'arreter-ou-continuer-relation', 'comment-savoir-si-cest-le-bon'],
+  testDureeCelibat: ['homme-nerveux-devant-une-femme', 'questions-a-poser-a-son-crush', 'sentiments-chez-un-homme', 'lexique-relations-2026'],
   testAmourAmi:     ['questions-a-poser-a-son-crush', 'sentiments-chez-un-homme', 'homme-nerveux-devant-une-femme', 'dependance-affective'],
   quizRencontre:    ['36-questions-pour-tomber-amoureux', 'questions-debut-de-relation', 'questions-a-poser-a-son-crush', 'il-annule-au-dernier-moment', 'homme-nerveux-devant-une-femme'],
   testFinCouple:    ['arreter-ou-continuer-relation', 'les-phases-de-la-rupture-chez-l-homme', 'sauver-son-couple'],

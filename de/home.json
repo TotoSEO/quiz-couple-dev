@@ -150,10 +150,29 @@
     "jeuxEyebrow": "Die Spiele"
   },
   "customQuizPromo": {
-    "badge": "Neu",
-    "title": "Erstelle dein eigenes Quiz",
-    "sub": "Denk dir eigene Fragen aus, wähle das Format und teile dein Quiz mit einem Link mit Freunden oder deinem Partner. 100% kostenlos, ohne Anmeldung.",
-    "cta": "Mein Quiz erstellen"
+    "eyebrow": "Eigenes Quiz",
+    "title": "Erstelle dein",
+    "titleHighlight": "eigenes Quiz",
+    "sub": "Du schreibst deine Fragen, wählst die Art des Quiz, und wir geben dir einen Link, den du deinem Partner oder deinen Freunden schickst. Sie spielen am Handy, ohne Anmeldung, und es ist kostenlos!",
+    "modeles": [
+      "Punkte-Quiz",
+      "Wahr oder falsch",
+      "Was ist dir lieber",
+      "Einfach zum Spaß"
+    ],
+    "note": "Das Quiz bleibt privat, nur wer den Link hat, kann mitspielen.",
+    "cta": "Mein Quiz erstellen",
+    "demo": {
+      "titre": "Wie gut kennst du mich?",
+      "num": "Frage 2/10",
+      "question": "Mein Lieblingsdessert?",
+      "reponses": [
+        "Tiramisu",
+        "Pfannkuchen",
+        "Schokoladenküchlein"
+      ],
+      "lien": "Link kopiert ✓"
+    }
   },
   "marquee": {
     "item1": "💕 Testet eure Beziehung",

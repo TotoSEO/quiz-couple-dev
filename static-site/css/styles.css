@@ -67,6 +67,10 @@
    variante claire en mode sombre. */
 :root { --primary-texte: 338 65% 42%; }
 .dark { --primary-texte: 338 85% 76%; }
+/* Même paire pour le turquoise des tests célibataires : --celib tel quel
+   reste foncé en thème sombre, trop peu lisible en petit texte. */
+:root { --celib-texte: 186 70% 29%; }
+.dark { --celib-texte: 186 55% 62%; }
 :root { --secondary-texte: 265 55% 45%; }
 .dark { --secondary-texte: 265 75% 78%; }
 
@@ -7087,29 +7091,82 @@ body.quiz-has-result .related-tests-section { display: none !important; }
 .result-related-grid--deux { grid-template-columns: repeat(2, 1fr); max-width: 24rem; }
 @media (max-width: 640px) { .result-related-grid--deux { grid-template-columns: 1fr; max-width: 16rem; } }
 
-/* ═══════════════════════════════════════════════════════════════════
-   Home: "create your own quiz" promo + most-played community quizzes
-   ═══════════════════════════════════════════════════════════════════ */
-.home-cq-card { position: relative; overflow: hidden; display: grid; gap: 1.25rem; align-items: center;
-  padding: 2.25rem; border-radius: 1.75rem; color: #fff;
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-  box-shadow: 0 20px 45px -22px hsl(var(--primary) / .65); }
-@media (min-width: 820px) { .home-cq-card { grid-template-columns: 1.5fr 1fr; padding: 2.75rem 3rem; } }
-.home-cq-badge { display: inline-block; font-weight: 700; font-size: .8rem; padding: .3rem .85rem; border-radius: 999px;
-  background: rgba(255,255,255,.22); margin-bottom: .9rem; }
-.home-cq-title { font-family: 'Poppins','Inter',sans-serif; font-size: clamp(1.5rem,3.5vw,2.1rem); font-weight: 800; margin: 0 0 .6rem; color: #fff; }
-.home-cq-sub { margin: 0 0 1.4rem; font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,.92); max-width: 42rem; }
-.home-cq-cta { background: #fff !important; color: hsl(var(--primary)) !important; font-weight: 800; border: none !important; }
-.home-cq-cta:hover { transform: translateY(-2px); }
-.home-cq-visual { position: relative; min-height: 130px; display: none; }
-@media (min-width: 820px) { .home-cq-visual { display: block; } }
-.home-cq-emoji { position: absolute; font-size: 2.7rem; filter: drop-shadow(0 6px 10px rgba(0,0,0,.22)); animation: cqFloat 4s ease-in-out infinite; }
-.home-cq-emoji--1 { top: 2%; left: 16%; }
-.home-cq-emoji--2 { top: 44%; left: 58%; animation-delay: .6s; }
-.home-cq-emoji--3 { top: 8%; left: 66%; animation-delay: 1.2s; }
-.home-cq-emoji--4 { top: 56%; left: 10%; animation-delay: 1.8s; }
-@keyframes cqFloat { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-12px) rotate(4deg); } }
-@media (prefers-reduced-motion: reduce) { .home-cq-emoji { animation: none; } }
+/* ── Accueil : créer son propre quiz ─────────────────────────────────
+   Une carte claire aux couleurs du site : le texte et les quatre modèles à
+   gauche, à droite l'aperçu d'un quiz en cours de partie avec son lien de
+   partage (décoratif, aria-hidden). Sur téléphone, l'aperçu passe sous le
+   texte. Aucune animation : la section est loin sous la ligne de flottaison. */
+.home-cq-carte {
+  position: relative; display: grid; gap: 2.25rem; align-items: center;
+  max-width: 72rem; margin: 0 auto; padding: 1.75rem 1.25rem 2rem;
+  border: 1px solid hsl(var(--border)); border-radius: 1.75rem; overflow: hidden;
+  background:
+    radial-gradient(110% 85% at 100% 0%, hsl(var(--secondary) / .14), transparent 62%),
+    radial-gradient(90% 80% at 0% 100%, hsl(var(--primary) / .12), transparent 62%),
+    hsl(var(--card));
+  box-shadow: 0 28px 60px -36px hsl(var(--primary) / .5);
+}
+@media (min-width: 768px) { .home-cq-carte { padding: 2.5rem; } }
+@media (min-width: 960px) { .home-cq-carte { grid-template-columns: 1.15fr 1fr; gap: 3rem; padding: 3rem 3.5rem; } }
+.home-cq-pastille {
+  display: inline-flex; align-items: center; gap: .4rem; padding: .3rem .8rem;
+  border-radius: 999px; background: hsl(var(--primary) / .1);
+  color: hsl(var(--primary-texte)); font-size: .8rem; font-weight: 700;
+}
+.home-cq-pastille svg { width: .95rem; height: .95rem; flex-shrink: 0; }
+.home-cq-titre {
+  margin: 1rem 0 .75rem; font-size: clamp(1.6rem, 3.6vw, 2.35rem);
+  font-weight: 800; line-height: 1.15; color: hsl(var(--foreground));
+}
+.home-cq-sous { margin: 0 0 1.25rem; max-width: 36rem; font-size: 1rem; line-height: 1.65; color: hsl(var(--muted-foreground)); }
+.home-cq-modeles { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.75rem; padding: 0; list-style: none; }
+.home-cq-modeles li {
+  display: inline-flex; align-items: center; gap: .45rem; padding: .4rem .8rem;
+  border: 1px solid hsl(var(--border)); border-radius: 999px;
+  background: hsl(var(--background) / .75);
+  font-size: .85rem; font-weight: 600; color: hsl(var(--foreground));
+}
+.home-cq-modeles svg { width: 1rem; height: 1rem; flex-shrink: 0; color: hsl(var(--primary)); }
+.home-cq-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .85rem 1.25rem; }
+.home-cq-actions .btn svg { width: 1.05rem; height: 1.05rem; transition: transform .2s ease; }
+.home-cq-actions .btn:hover svg { transform: translateX(3px); }
+.home-cq-note { display: inline-flex; align-items: center; gap: .4rem; font-size: .82rem; color: hsl(var(--muted-foreground)); }
+.home-cq-note svg { width: .95rem; height: .95rem; flex-shrink: 0; }
+
+/* L'aperçu : un écran de quiz posé sur une carte aux couleurs de la marque. */
+.home-cq-apercu { position: relative; justify-self: center; width: 100%; max-width: 20rem; padding-bottom: 1.6rem; }
+.home-cq-apercu::before {
+  content: ''; position: absolute; inset: .9rem -.5rem 2.4rem .9rem; border-radius: 1.4rem;
+  background: linear-gradient(135deg, hsl(var(--primary) / .55), hsl(var(--secondary) / .55));
+  transform: rotate(5deg);
+}
+.home-cq-ecran {
+  position: relative; padding: 1.1rem 1.1rem 1.2rem;
+  border: 1px solid hsl(var(--border)); border-radius: 1.4rem;
+  background: hsl(var(--background));
+  box-shadow: 0 22px 44px -24px hsl(var(--foreground) / .35);
+  transform: rotate(-2deg);
+}
+.home-cq-ecran-tete { display: flex; align-items: center; justify-content: space-between; gap: .5rem; font-size: .75rem; font-weight: 700; color: hsl(var(--muted-foreground)); }
+.home-cq-ecran-titre { color: hsl(var(--foreground)); }
+.home-cq-barre { height: .3rem; margin: .65rem 0 1rem; border-radius: 999px; background: hsl(var(--muted)); overflow: hidden; }
+.home-cq-barre span { display: block; width: 20%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary))); }
+.home-cq-question { margin: 0 0 .75rem; font-weight: 700; font-size: 1.05rem; line-height: 1.3; color: hsl(var(--foreground)); }
+.home-cq-reponse {
+  display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+  margin-top: .45rem; padding: .6rem .8rem;
+  border: 1px solid hsl(var(--border)); border-radius: .8rem;
+  background: hsl(var(--card)); font-size: .88rem; color: hsl(var(--foreground));
+}
+.home-cq-reponse--bonne { border-color: hsl(var(--primary) / .6); background: hsl(var(--primary) / .1); font-weight: 600; }
+.home-cq-reponse svg { width: 1.05rem; height: 1.05rem; flex-shrink: 0; color: hsl(var(--primary)); }
+.home-cq-lien {
+  position: absolute; right: -.35rem; bottom: 0;
+  display: inline-flex; align-items: center; gap: .4rem; padding: .55rem .95rem;
+  border-radius: 999px; background: hsl(var(--foreground)); color: hsl(var(--background));
+  font-size: .8rem; font-weight: 700; box-shadow: 0 12px 26px -12px hsl(var(--foreground) / .55);
+}
+.home-cq-lien svg { width: .95rem; height: .95rem; flex-shrink: 0; }
 /* ═══════════════════════════════════════════════════════════════════
    LES Z'AMOURS — TV game-show engine skin (self-contained dark "plateau")
    ═══════════════════════════════════════════════════════════════════ */
@@ -9484,27 +9541,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .va-option, .va-carte, .va-partenaire { transition: none; }
 }
 
-/* Rangée vedette en tête du sous-menu Tests : le test des vacances. */
-.nav-megamenu-avant {
-  position: relative; display: flex; align-items: center; gap: 0.6rem;
-  margin: 0.7rem 0.7rem 0; padding: 0.65rem 0.8rem;
-  border-radius: 0.8rem;
-  background: linear-gradient(120deg, hsl(var(--primary) / 0.12), hsl(27 90% 52% / 0.12));
-  border: 1px solid hsl(var(--primary) / 0.25);
-  font-size: 0.875rem; font-weight: 700; color: hsl(var(--foreground));
-  transition: border-color 0.2s ease, transform 0.15s ease;
-}
-.nav-megamenu-avant:hover { border-color: hsl(var(--primary) / 0.5); transform: translateY(-1px); }
-.nav-megamenu-avant-emoji { font-size: 1.15rem; line-height: 1; }
-.nav-megamenu-avant-texte { flex: 1 1 auto; min-width: 0; }
-.nav-megamenu-avant-badge {
-  flex-shrink: 0; padding: 0.2rem 0.55rem; border-radius: 9999px;
-  font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(27 90% 52%));
-  color: hsl(var(--primary-foreground));
-}
-.nav-megamenu-avant--mobile { margin: 0.6rem 0.5rem 0.1rem; }
-
 /* ── Test des 5 langages de l'amour : définition et statistiques ────────
    La définition courte répond au H2 en quarante mots, dans un encadré qui
    se distingue du corps de texte : c'est le format que les moteurs
@@ -11386,6 +11422,46 @@ body { padding-bottom: var(--pub-footer, 0px); }
   }
   .seo-content .avec-colonne:not(.avec-colonne--sections) > .avec-colonne__contenu section:hover { box-shadow: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   COMBIEN DE TEMPS VAIS-JE RESTER CELIBATAIRE (DureeQuiz)
+   La duree en grand, sa fourchette et la date approximative, puis deux
+   colonnes : ce qui joue pour (turquoise de la famille celibataire) et ce
+   qui freine (rose), chaque reponse avec une jauge de son poids, et
+   l'encadre du levier qui ferait gagner le plus de temps.
+   ═══════════════════════════════════════════════════════════════════ */
+.dur-chiffre {
+  margin: .25rem 0 .4rem; font-size: clamp(2.2rem, 7vw, 3.1rem); font-weight: 800; line-height: 1.05;
+  background: linear-gradient(120deg, hsl(var(--celib)), hsl(var(--primary)));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.dur-fourchette { margin: 0; font-size: .95rem; color: hsl(var(--muted-foreground)); }
+.dur-date {
+  display: inline-block; margin: .8rem 0 0; padding: .3rem .9rem; border-radius: 999px;
+  background: hsl(var(--celib) / .12); color: hsl(var(--celib-texte)); font-size: .85rem; font-weight: 700;
+}
+.dur-facteurs { display: grid; gap: 1rem; max-width: 40rem; margin: 1.5rem auto 0; text-align: left; }
+@media (min-width: 640px) { .dur-facteurs { grid-template-columns: 1fr 1fr; } }
+.dur-col { padding: 1rem 1.1rem; border: 1px solid hsl(var(--border)); border-radius: 1rem; background: hsl(var(--card)); }
+.dur-col-titre { margin: 0 0 .65rem; font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.dur-col--pour .dur-col-titre { color: hsl(var(--celib-texte)); }
+.dur-col--contre .dur-col-titre { color: hsl(var(--primary-texte)); }
+.dur-col ul { display: grid; gap: .75rem; margin: 0; padding: 0; list-style: none; }
+.dur-facteur { display: block; font-size: .9rem; font-weight: 700; color: hsl(var(--foreground)); }
+.dur-reponse { display: block; font-size: .8rem; line-height: 1.4; color: hsl(var(--muted-foreground)); }
+.dur-jauge { display: block; height: .3rem; margin-top: .35rem; border-radius: 999px; background: hsl(var(--muted)); overflow: hidden; }
+.dur-jauge span { display: block; height: 100%; border-radius: inherit; }
+.dur-col--pour .dur-jauge span { background: hsl(var(--celib)); }
+.dur-col--contre .dur-jauge span { background: hsl(var(--primary)); }
+.dur-levier {
+  max-width: 40rem; margin: 1rem auto 0; padding: 1rem 1.15rem; text-align: left;
+  border: 1px dashed hsl(var(--celib) / .6); border-radius: 1rem; background: hsl(var(--celib) / .07);
+}
+.dur-levier-titre { display: block; margin-bottom: .3rem; font-size: .9rem; color: hsl(var(--foreground)); }
+.dur-levier p { margin: 0; font-size: .9rem; line-height: 1.55; color: hsl(var(--muted-foreground)); }
+.dur-levier ul { display: grid; gap: .45rem; margin: .65rem 0 0; padding: 0; list-style: none; }
+.dur-levier li { font-size: .85rem; color: hsl(var(--muted-foreground)); }
+.dur-levier li strong { display: block; color: hsl(var(--foreground)); }
 
 /* ═══════════════════════════════════════════════════════════════════
    COUPLE OU CELIBAT : un resultat en deux parts

@@ -19,87 +19,89 @@
   }
 
   // Quiz grid data
-  const tests = [
-    { routeKey: 'testCouple', key: 'testCouple', icon: '💕', img: 'test-couple' },
-    { routeKey: 'testCommonPoints', key: 'testCommonPoints', icon: '🎯', img: 'test-common-points' },
-    { routeKey: 'testCompatibilite', key: 'testCompatibilite', icon: '💘', img: 'quiz-amoureux' },
-    { routeKey: 'testDistance', key: 'testDistance', icon: '🌍', img: 'test-distance' },
-    { routeKey: 'testToxic', key: 'testToxic', icon: '⚠️', img: 'test-toxic' },
-    { routeKey: 'testPervers', key: 'testPervers', icon: '🎭', img: 'test-toxic' },
-    { routeKey: 'testEmprise', key: 'testEmprise', icon: '🔒', img: 'test-toxic' },
-    { routeKey: 'testAmourHabitude', key: 'testAmourHabitude', icon: '☕', img: 'test-couple' },
-    { routeKey: 'testAmourAttachement', key: 'testAmourAttachement', icon: '🌹', img: 'test-couple' },
-    { routeKey: 'testEstCeLeBon', key: 'testEstCeLeBon', icon: '🔑', img: 'test-couple' },
-    { routeKey: 'testJeLaimeEncore', key: 'testJeLaimeEncore', icon: '🕯️', img: 'test-couple' },
-    { routeKey: 'testCoupleSain', key: 'testCoupleSain', icon: '💚', img: 'test-couple-sain' },
-    { routeKey: 'testMariage', key: 'testMariage', icon: '💒', img: 'test-mariage' },
-    { routeKey: 'testDivorce', key: 'testDivorce', icon: '⚖️', img: 'test-divorce' },
-    { routeKey: 'testFinCouple', key: 'testFinCouple', icon: '🪢', img: 'test-divorce' },
-    { routeKey: 'testParentalite', key: 'testParentalite', icon: '👶', img: 'test-parentalite' },
-    { routeKey: 'testEmmenager', key: 'testEmmenager', icon: '🏠', img: 'test-couple' },
-    { routeKey: 'calculatriceAmour', key: 'calculatriceAmour', icon: '🧮', img: 'test-astro-prenoms' },
-    { routeKey: 'compteurCouple', key: 'compteurCouple', icon: '📆', img: 'test-couple' },
-    { routeKey: 'testAstroPrenoms', key: 'testAstroPrenoms', icon: '♈', img: 'test-astro-prenoms' },
-    { routeKey: 'testDateNaissance', key: 'testDateNaissance', icon: '📅', img: 'test-astro-prenoms' },
-    { routeKey: 'testSignesChinois', key: 'testSignesChinois', icon: '🐉', img: 'test-astro-prenoms' },
-    { routeKey: 'testKarmique', key: 'testKarmique', icon: '🔮', img: 'test-astro-prenoms' },
-    { routeKey: 'testAmeSoeur', key: 'testAmeSoeur', icon: '💫', img: 'quiz-amoureux' },
-    { routeKey: 'testJalousie', key: 'testJalousie', icon: '🫣', img: 'test-jalousie' },
-    { routeKey: 'testInfidelite', key: 'testInfidelite', icon: '💔', img: 'test-jalousie' },
-    { routeKey: 'testCouche', key: 'testCouche', icon: '🛏️', img: 'test-jalousie' },
-    { routeKey: 'testAimeEncore', key: 'testAimeEncore', icon: '💞', img: 'quiz-amoureux' },
-    { routeKey: 'testDistanceAime', key: 'testDistanceAime', icon: '📞', img: 'test-distance' },
-    { routeKey: 'testChargeMentale', key: 'testChargeMentale', icon: '🧠', img: 'test-couple-sain' },
-    { routeKey: 'testLangageAmour', key: 'testLangageAmour', icon: '💬', img: 'test-langage-amour' },
-    { routeKey: 'testPersonnalite', key: 'testPersonnalite', icon: '💘', img: 'test-langage-amour' },
-    { routeKey: 'testAttachement', key: 'testAttachement', icon: '🔗', img: 'test-attachement' },
-    { routeKey: 'testDependance', key: 'testDependance', icon: '⚓', img: 'test-attachement' },
-    { routeKey: 'testConfiance', key: 'testConfiance', icon: '🤝', img: 'test-confiance' },
-    { routeKey: 'testPurete', key: 'testPurete', icon: '🌡️', img: 'quiz-coquin' },
-    { routeKey: 'testVacances', key: 'testVacances', icon: '✈️', img: 'test-couple' },
-  ];
-  // Les tests d'avant le couple, même liste que dans header.ejs.
-  const celib = [
-    { routeKey: 'testTrouverAmour', key: 'testTrouverAmour', icon: '🧭', img: 'quiz-amoureux' },
-    { routeKey: 'testCelibataire', key: 'testCelibataire', icon: '🔍', img: 'quiz-amoureux' },
-    { routeKey: 'testCoupleOuCelibat', key: 'testCoupleOuCelibat', icon: '🛋️', img: 'quiz-amoureux' },
-    { routeKey: 'testPretRelation', key: 'testPretRelation', icon: '🌱', img: 'quiz-amoureux' },
-    { routeKey: 'testSuisJeAmoureux', key: 'testSuisJeAmoureux', icon: '💗', img: 'quiz-amoureux' },
-    { routeKey: 'testCrush', key: 'testCrush', icon: '💘', img: 'quiz-amoureux' },
-    { routeKey: 'testAmourAmitie', key: 'testAmourAmitie', icon: '🧭', img: 'quiz-amoureux' },
-    { routeKey: 'testAmourAmi', key: 'testAmourAmi', icon: '🧡', img: 'quiz-amoureux' },
-    { routeKey: 'testSecret', key: 'testSecret', icon: '💌', img: 'quiz-amoureux' },
-    { routeKey: 'testEx', key: 'testEx', icon: '🕰️', img: 'quiz-amoureux' },
-  ];
-  const quizzes = [
-    { routeKey: 'quizAmoureux', key: 'quizAmoureux', icon: '❤️', img: 'quiz-amoureux' },
-    { routeKey: 'quizTypeCouple', key: 'quizTypeCouple', icon: '🧩', img: 'quiz-amoureux' },
-    { routeKey: 'quizRencontre', key: 'quizRencontre', icon: '💬', img: 'quiz-amoureux' },
-    { routeKey: 'quizCoquin', key: 'quizCoquin', icon: '🔥', img: 'quiz-coquin' },
-    { routeKey: 'quizMarrant', key: 'quizMarrant', icon: '😂', img: 'quiz-marrant' },
-    { routeKey: 'quizKnowledge', key: 'quizKnowledge', icon: '🧠', img: 'quiz-knowledge' },
-    { routeKey: 'quizMost', key: 'quizMost', icon: '🏆', img: 'quiz-most' },
-    { routeKey: 'quizAdo', key: 'quizAdo', icon: '🌟', img: 'quiz-ado' },
-    { routeKey: 'quizGenant', key: 'quizGenant', icon: '😳', img: 'quiz-genant' },
-    { routeKey: 'quizVraiFaux', key: 'quizVraiFaux', icon: '✅', img: 'quiz-vrai-faux' },
-    { routeKey: 'zamours', key: 'zamours', icon: '📺', img: 'quiz-knowledge' },
-    { routeKey: 'quizTentation', key: 'quizTentation', icon: '🏝️', img: 'quiz-coquin' },
-  ];
-  // Les jeux forment leur propre categorie, distincte des quiz, et renvoient au hub.
-  const jeux = [
-    { routeKey: 'quizTuPreferes', key: 'quizTuPreferes', icon: '🤔', img: 'quiz-tu-preferes' },
-    { routeKey: 'jeuActionVerite', key: 'jeuActionVerite', icon: '🎲', img: 'quiz-marrant' },
-    { routeKey: 'jeuActionVeriteHot', key: 'jeuActionVeriteHot', icon: '🌶️', img: 'quiz-coquin' },
-    { routeKey: 'jeuGages', key: 'jeuGages', icon: '🎡', img: 'quiz-most' },
-    { routeKey: 'jeuPlateau', key: 'jeuPlateau', icon: '🎲', img: 'test-common-points' },
-    { routeKey: 'jeuQuiDeNous', key: 'jeuQuiDeNous', icon: '👀', img: 'quiz-most' },
-    { routeKey: 'jeuDilemmes', key: 'jeuDilemmes', icon: '⚖️', img: 'quiz-most' },
-    { routeKey: 'pourContre', key: 'pourContre', icon: '👍', img: 'quiz-most' },
-    { routeKey: 'jeuJamais', key: 'jeuJamais', icon: '🙊', img: 'quiz-most' },
-    { routeKey: 'jeuQuiPourrait', key: 'jeuQuiPourrait', icon: '🏆', img: 'quiz-most' },
-    { routeKey: 'jeuOuiNon', key: 'jeuOuiNon', icon: '✅', img: 'quiz-couple-sain' },
-    { routeKey: 'jeuPhrases', key: 'jeuPhrases', icon: '💬', img: 'quiz-most' },
-  ];
+  // Les quatre carrousels suivent FAMILLES_NAV (config.js), la liste du menu,
+  // du pied de page et du plan du site : mêmes pages, même ordre. Chaque carte
+  // garde ici sa pastille et son image de repli (quand la page n'a pas
+  // d'image de tête dans QUIZ_FEATURED).
+  const VISUELS = {
+    testCouple: { icon: '💕', img: 'test-couple' },
+    testCommonPoints: { icon: '🎯', img: 'test-common-points' },
+    testCompatibilite: { icon: '💘', img: 'quiz-amoureux' },
+    testDistance: { icon: '🌍', img: 'test-distance' },
+    testToxic: { icon: '⚠️', img: 'test-toxic' },
+    testPervers: { icon: '🎭', img: 'test-toxic' },
+    testEmprise: { icon: '🔒', img: 'test-toxic' },
+    testAmourHabitude: { icon: '☕', img: 'test-couple' },
+    testAmourAttachement: { icon: '🌹', img: 'test-couple' },
+    testEstCeLeBon: { icon: '🔑', img: 'test-couple' },
+    testJeLaimeEncore: { icon: '🕯️', img: 'test-couple' },
+    testCoupleSain: { icon: '💚', img: 'test-couple-sain' },
+    testMariage: { icon: '💒', img: 'test-mariage' },
+    testDivorce: { icon: '⚖️', img: 'test-divorce' },
+    testFinCouple: { icon: '🪢', img: 'test-divorce' },
+    testParentalite: { icon: '👶', img: 'test-parentalite' },
+    testEmmenager: { icon: '🏠', img: 'test-couple' },
+    calculatriceAmour: { icon: '🧮', img: 'test-astro-prenoms' },
+    compteurCouple: { icon: '📆', img: 'test-couple' },
+    testAstroPrenoms: { icon: '♈', img: 'test-astro-prenoms' },
+    testDateNaissance: { icon: '📅', img: 'test-astro-prenoms' },
+    testSignesChinois: { icon: '🐉', img: 'test-astro-prenoms' },
+    testKarmique: { icon: '🔮', img: 'test-astro-prenoms' },
+    testAmeSoeur: { icon: '💫', img: 'quiz-amoureux' },
+    testJalousie: { icon: '🫣', img: 'test-jalousie' },
+    testInfidelite: { icon: '💔', img: 'test-jalousie' },
+    testCouche: { icon: '🛏️', img: 'test-jalousie' },
+    testAimeEncore: { icon: '💞', img: 'quiz-amoureux' },
+    testDistanceAime: { icon: '📞', img: 'test-distance' },
+    testChargeMentale: { icon: '🧠', img: 'test-couple-sain' },
+    testLangageAmour: { icon: '💬', img: 'test-langage-amour' },
+    testPersonnalite: { icon: '🪞', img: 'test-langage-amour' },
+    testAttachement: { icon: '🔗', img: 'test-attachement' },
+    testDependance: { icon: '⚓', img: 'test-attachement' },
+    testConfiance: { icon: '🤝', img: 'test-confiance' },
+    testPurete: { icon: '🌡️', img: 'quiz-coquin' },
+    testVacances: { icon: '🌴', img: 'test-couple' },
+    testTrouverAmour: { icon: '🧭', img: 'quiz-amoureux' },
+    testCelibataire: { icon: '🔍', img: 'quiz-amoureux' },
+    testDureeCelibat: { icon: '⏳', img: 'quiz-amoureux' },
+    testCoupleOuCelibat: { icon: '🛋️', img: 'quiz-amoureux' },
+    testPretRelation: { icon: '🌱', img: 'quiz-amoureux' },
+    testSuisJeAmoureux: { icon: '💗', img: 'quiz-amoureux' },
+    testCrush: { icon: '💘', img: 'quiz-amoureux' },
+    testAmourAmitie: { icon: '👫', img: 'quiz-amoureux' },
+    testAmourAmi: { icon: '🧡', img: 'quiz-amoureux' },
+    testSecret: { icon: '💌', img: 'quiz-amoureux' },
+    testEx: { icon: '🕰️', img: 'quiz-amoureux' },
+    quizAmoureux: { icon: '❤️', img: 'quiz-amoureux' },
+    quizTypeCouple: { icon: '🧩', img: 'quiz-amoureux' },
+    quizRencontre: { icon: '💬', img: 'quiz-amoureux' },
+    quizCoquin: { icon: '🔥', img: 'quiz-coquin' },
+    quizMarrant: { icon: '😂', img: 'quiz-marrant' },
+    quizKnowledge: { icon: '🧠', img: 'quiz-knowledge' },
+    quizMost: { icon: '🏆', img: 'quiz-most' },
+    quizAdo: { icon: '🌟', img: 'quiz-ado' },
+    quizGenant: { icon: '😳', img: 'quiz-genant' },
+    quizVraiFaux: { icon: '✅', img: 'quiz-vrai-faux' },
+    zamours: { icon: '📺', img: 'quiz-knowledge' },
+    quizTentation: { icon: '🏝️', img: 'quiz-coquin' },
+    quizTuPreferes: { icon: '🤔', img: 'quiz-tu-preferes' },
+    jeuActionVerite: { icon: '🎲', img: 'quiz-marrant' },
+    jeuActionVeriteHot: { icon: '🌶️', img: 'quiz-coquin' },
+    jeuGages: { icon: '🎡', img: 'quiz-most' },
+    jeuPlateau: { icon: '♟️', img: 'test-common-points' },
+    jeuQuiDeNous: { icon: '👀', img: 'quiz-most' },
+    jeuDilemmes: { icon: '⚖️', img: 'quiz-most' },
+    pourContre: { icon: '👍', img: 'quiz-most' },
+    jeuJamais: { icon: '🙊', img: 'quiz-most' },
+    jeuQuiPourrait: { icon: '🏆', img: 'quiz-most' },
+    jeuOuiNon: { icon: '✅', img: 'quiz-couple-sain' },
+    jeuPhrases: { icon: '💬', img: 'quiz-most' },
+  };
+  const versCartes = (cles) => cles.map((k) => ({ routeKey: k, key: k, icon: (VISUELS[k] || {}).icon || '💞', img: (VISUELS[k] || {}).img || 'test-couple' }));
+  const tests = versCartes(famillesNav.tests);
+  const celib = versCartes(famillesNav.celib);
+  const quizzes = versCartes(famillesNav.quiz);
+  const jeux = versCartes(famillesNav.jeux);
 
   // Filter out tests/quizzes not available in current language
   const testsFiltered = tests.filter(item => getLocalizedUrl(item.routeKey, lang));
@@ -376,7 +378,7 @@
           <div class="quiz-slider__track" data-slider-track>
           <% for (let ti = 0; ti < testsFiltered.length; ti++) { const item = testsFiltered[ti];
              const _f = quizFeatured && quizFeatured[item.routeKey];
-             const tTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key));
+             const tTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : tTitle; %>
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
@@ -430,7 +432,7 @@
           <div class="quiz-slider__track" data-slider-track>
           <% for (let ci = 0; ci < celibFiltered.length; ci++) { const item = celibFiltered[ci];
              const _f = quizFeatured && quizFeatured[item.routeKey];
-             const cTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key));
+             const cTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : cTitle; %>
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
@@ -485,7 +487,7 @@
           <div class="quiz-slider__track" data-slider-track>
           <% for (let qi = 0; qi < quizzesFiltered.length; qi++) { const item = quizzesFiltered[qi];
              const _f = quizFeatured && quizFeatured[item.routeKey];
-             const qTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key));
+             const qTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : qTitle; %>
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
@@ -540,7 +542,7 @@
           <div class="quiz-slider__track" data-slider-track>
           <% jeuxFiltered.forEach(function(item) {
              const _f = quizFeatured && quizFeatured[item.routeKey];
-             const jTitle = t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key));
+             const jTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : jTitle;
              const accents = { quizTuPreferes: '270 45% 58%', jeuActionVerite: '340 65% 62%', jeuActionVeriteHot: '12 78% 56%', jeuGages: '190 60% 45%', jeuPlateau: '160 50% 42%', jeuQuiDeNous: '210 60% 52%', jeuDilemmes: '38 85% 52%', pourContre: '338 72% 58%', jeuJamais: '288 55% 52%', jeuQuiPourrait: '152 55% 40%', jeuOuiNon: '0 62% 52%', jeuPhrases: '256 50% 56%' }; %>
@@ -577,21 +579,48 @@
   </div>
 </section>
 
-<!-- Custom Quiz Promo -->
-<section class="section-padding home-cq-promo">
+<!-- Créer son propre quiz -->
+<%
+  // Les quatre modèles sont ceux de la page de création, dans le même ordre.
+  const cqModeles = t('home:customQuizPromo.modeles', []);
+  const cqIcones = [
+    '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>',
+    '<circle cx="12" cy="12" r="9"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+    '<path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M21 3l-7.5 7.5V21"/><path d="M3 3l7.5 7.5"/>',
+    '<circle cx="12" cy="12" r="9"/><path d="M8.5 14.5s1.3 2 3.5 2 3.5-2 3.5-2"/><path d="M9 9.5h.01M15 9.5h.01"/>',
+  ];
+  const cqDemo = t('home:customQuizPromo.demo', {});
+  const cqReponses = Array.isArray(cqDemo.reponses) ? cqDemo.reponses : [];
+%>
+<section class="section-padding home-cq">
   <div class="container mx-auto px-4">
-    <div class="home-cq-card">
-      <div class="home-cq-text">
-        <span class="home-cq-badge">✨ <%= t('home:customQuizPromo.badge', 'Nouveau') %></span>
-        <h2 class="home-cq-title"><%= t('home:customQuizPromo.title', 'Créez votre propre quiz') %></h2>
-        <p class="home-cq-sub"><%= t('home:customQuizPromo.sub', 'Inventez vos questions, choisissez le format, et partagez votre quiz à vos amis ou votre moitié en un lien. 100% gratuit, sans inscription.') %></p>
-        <a href="<%= getLocalizedUrl('customQuiz', lang) %>" class="btn btn-cta btn-lg home-cq-cta"><%= t('home:customQuizPromo.cta', 'Créer mon quiz') %></a>
+    <div class="home-cq-carte">
+      <div class="home-cq-texte">
+        <span class="home-cq-pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><%= t('home:customQuizPromo.eyebrow', 'Quiz personnalisé') %></span>
+        <h2 class="home-cq-titre"><%= t('home:customQuizPromo.title', 'Créez votre') %> <span class="text-gradient"><%= t('home:customQuizPromo.titleHighlight', 'propre quiz') %></span></h2>
+        <p class="home-cq-sous"><%= t('home:customQuizPromo.sub', '') %></p>
+        <% if (Array.isArray(cqModeles) && cqModeles.length) { %>
+        <ul class="home-cq-modeles">
+          <% cqModeles.forEach(function (m, i) { %>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><%- cqIcones[i % cqIcones.length] %></svg><%= m %></li>
+          <% }) %>
+        </ul>
+        <% } %>
+        <div class="home-cq-actions">
+          <a href="<%= getLocalizedUrl('customQuiz', lang) %>" class="btn btn-cta btn-lg"><%= t('home:customQuizPromo.cta', 'Créer mon quiz') %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+          <span class="home-cq-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><%= t('home:customQuizPromo.note', '') %></span>
+        </div>
       </div>
-      <div class="home-cq-visual" aria-hidden="true">
-        <span class="home-cq-emoji home-cq-emoji--1">🎯</span>
-        <span class="home-cq-emoji home-cq-emoji--2">✅</span>
-        <span class="home-cq-emoji home-cq-emoji--3">🎉</span>
-        <span class="home-cq-emoji home-cq-emoji--4">🤔</span>
+      <div class="home-cq-apercu" aria-hidden="true">
+        <div class="home-cq-ecran">
+          <div class="home-cq-ecran-tete"><span class="home-cq-ecran-titre"><%= cqDemo.titre %></span><span><%= cqDemo.num %></span></div>
+          <div class="home-cq-barre"><span></span></div>
+          <p class="home-cq-question"><%= cqDemo.question %></p>
+          <% cqReponses.forEach(function (r, i) { %>
+          <div class="home-cq-reponse<%= i === 0 ? ' home-cq-reponse--bonne' : '' %>"><span><%= r %></span><% if (i === 0) { %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><% } %></div>
+          <% }) %>
+        </div>
+        <span class="home-cq-lien"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><%= cqDemo.lien %></span>
       </div>
     </div>
   </div>

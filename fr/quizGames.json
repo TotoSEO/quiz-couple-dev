@@ -320,6 +320,7 @@
     "gapWarning": "Il y a un écart significatif entre vos deux scores. C'est souvent dans ces écarts que se trouvent les discussions les plus importantes à avoir."
   },
   "quizNames": {
+    "testDureeCelibat": "Combien de temps encore célibataire ?",
     "testCouple": "Test de couple",
     "testCommonPoints": "Test Points Communs",
     "testDistance": "Test Distance",
