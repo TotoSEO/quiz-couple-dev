@@ -77,6 +77,10 @@
 .adm-login-erreur{font-size:.82rem;color:hsl(var(--destructive));margin:0 0 .6rem;}
 .adm-login-erreur.hidden{display:none;}
 .adm-login .btn{width:100%;height:2.9rem;font-weight:700;}
+.adm-login-retour{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.1rem;font-size:.85rem;font-weight:600;
+  color:var(--adm-ink-2);text-decoration:none;border-radius:.5rem;padding:.3rem .5rem;}
+.adm-login-retour:hover{color:hsl(var(--primary-texte));background:hsl(var(--primary)/.08);}
+.adm-login-retour svg{width:1rem;height:1rem;}
 
 /* ── La coquille ───────────────────────────────────────────────────── */
 .adm-shell{display:grid;grid-template-columns:16.5rem minmax(0,1fr);min-height:100vh;background:var(--adm-plane);}
@@ -107,13 +111,15 @@
 .adm-nav .admin-pastille.hidden{display:none;}
 
 .adm-side-pied{display:flex;flex-direction:column;gap:.55rem;padding-top:.85rem;border-top:1px solid var(--adm-line);}
-.adm-publier{
-  display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;height:2.6rem;border:none;border-radius:.8rem;
-  background:linear-gradient(135deg,hsl(var(--primary)),hsl(var(--secondary)));color:#fff;font-weight:700;font-size:.86rem;cursor:pointer;
-  box-shadow:0 10px 22px -14px hsl(var(--primary)/.9);transition:transform .15s,box-shadow .15s;
+/* Retour au site : la place de l'ancien bouton de publication, en sortie
+   discrete plutot qu'en action principale. */
+.adm-retour-site{
+  display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;height:2.6rem;border-radius:.8rem;
+  border:1px solid var(--adm-line);background:transparent;color:var(--adm-ink);font-weight:700;font-size:.86rem;text-decoration:none;
+  transition:background .15s,border-color .15s,color .15s;
 }
-.adm-publier:hover{transform:translateY(-1px);box-shadow:0 14px 26px -14px hsl(var(--primary)/.95);}
-.adm-publier svg{width:1rem;height:1rem;}
+.adm-retour-site:hover{background:hsl(var(--primary)/.08);border-color:hsl(var(--primary)/.45);color:hsl(var(--primary-texte));}
+.adm-retour-site svg{width:1rem;height:1rem;}
 .adm-side-actions{display:flex;gap:.5rem;}
 .adm-ico-btn{
   flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;height:2.3rem;border-radius:.7rem;
@@ -147,14 +153,6 @@
 .adm-rafraichir.tourne svg{animation:spin .8s linear infinite;}
 .adm-puce--fraicheur[hidden]{display:none;}
 
-/* Bandeau de publication */
-#deploy-banner{margin:0 0 1.25rem;padding:.8rem 1rem;border-radius:.9rem;border:1px solid hsl(var(--primary)/.3);background:hsl(var(--primary)/.06);}
-#deploy-banner.hidden{display:none;}
-.adm-bandeau-int{display:flex;align-items:center;gap:.75rem;}
-.adm-bandeau-int svg{width:1.2rem;height:1.2rem;flex:0 0 auto;}
-.adm-bandeau-int .hidden{display:none;}
-#deploy-spinner{width:1.1rem;height:1.1rem;border:2px solid hsl(var(--primary)/.3);border-top-color:hsl(var(--primary));border-radius:50%;animation:spin .6s linear infinite;flex:0 0 auto;}
-#deploy-message{font-size:.85rem;font-weight:600;margin:0;}
 
 /* Barre d'outils d'un onglet : filtres a gauche, actions a droite */
 .adm-toolbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.1rem;}
@@ -258,8 +256,8 @@
   .adm-brand{flex:1 1 auto;padding:.15rem .25rem;}
   .adm-brand-sub{display:none;}
   .adm-side-pied{order:2;flex-direction:row;align-items:center;gap:.4rem;padding-top:0;border-top:none;}
-  .adm-publier{width:auto;height:2.15rem;padding:0 .8rem;font-size:.78rem;}
-  .adm-publier span{display:none;}
+  .adm-retour-site{width:2.15rem;height:2.15rem;padding:0;flex:0 0 auto;}
+  .adm-retour-site span{display:none;}
   .adm-side-actions{gap:.4rem;}
   .adm-ico-btn{flex:0 0 auto;width:2.15rem;height:2.15rem;padding:0;}
   .adm-ico-btn span{display:none;}
@@ -293,7 +291,7 @@
   .adm .stats-tetes,.adm .trafic-kpis{grid-template-columns:1fr;}
   .adm-puce{display:none;}
 }
-@media (prefers-reduced-motion:reduce){.adm-publier{transition:none;}}
+@media (prefers-reduced-motion:reduce){.adm-retour-site{transition:none;}}
 
 /* ═══ Le socle repris de l'ancien tableau de bord ═══════════════════════
    Listes, lignes, cellules, tops et flops, onglet Trafic, Blog, Affiliation

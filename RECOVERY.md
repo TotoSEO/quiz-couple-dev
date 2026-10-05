@@ -72,7 +72,7 @@ supabase functions deploy <nom>   # une par une, ou toutes celles à garder
 
 **Fonctions à déployer** (celles des fonctionnalités conservées) :
 `ebook-verify`, `admin-leads`, `contact-message`, `admin-messages`, `admin-reviews`,
-`get-client-ip`, `manage-ado-session`, `search-activities`, `verify-admin`, `trigger-deploy`.
+`get-client-ip`, `manage-ado-session`, `search-activities`, `verify-admin`.
 
 **Fonctions désormais obsolètes** (le blog est dans le repo) — inutile de les déployer :
 `admin-blog`, `blog-og`.
@@ -85,13 +85,9 @@ Puis configure les **secrets** (Dashboard → Edge Functions → Secrets, ou CLI
 | `SUPABASE_SERVICE_ROLE_KEY` | toutes (accès admin) | fourni automatiquement par Supabase |
 | `ADMIN_PASSWORD` | `verify-admin`, `admin-*` | **redéfinir** un mot de passe admin |
 | `RESEND_API_KEY` | `ebook-verify` | **nouvelle clé Resend** (voir §5) |
-| `GITHUB_REPO_OWNER` | `trigger-deploy` | `TotoSEO` |
-| `GITHUB_REPO_NAME` | `trigger-deploy` | `quiz-couple-dev` |
-| `GITHUB_DEPLOY_TOKEN` | `trigger-deploy` | **nouveau** token GitHub (déclenche le workflow de déploiement) |
 
 ```bash
-supabase secrets set ADMIN_PASSWORD='…' RESEND_API_KEY='…' \
-  GITHUB_REPO_OWNER='TotoSEO' GITHUB_REPO_NAME='quiz-couple-dev' GITHUB_DEPLOY_TOKEN='…'
+supabase secrets set ADMIN_PASSWORD='…' RESEND_API_KEY='…'
 ```
 
 ---
