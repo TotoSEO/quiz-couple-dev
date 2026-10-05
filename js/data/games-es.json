@@ -320,6 +320,8 @@
     "gapWarning": "Hay una diferencia significativa entre vuestras dos puntuaciones. A menudo, en estas diferencias se encuentran las conversaciones más importantes que aún debéis tener."
   },
   "quizNames": {
+    "testDureeCelibat": "¿Cuánto tiempo seguiré soltero?",
+    "testPurete": "Test de pureza",
     "testCouple": "Test de Pareja",
     "testCommonPoints": "Test Puntos Comunes",
     "testDistance": "Test Distancia",

@@ -442,7 +442,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/paarspiele/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/giochi-di-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeux-de-couple/"/>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -682,7 +682,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/warum-bin-ich-noch-single-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-perche-sono-ancora-single/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-pourquoi-suis-je-celibataire/"/>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -719,6 +719,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-pronto-per-una-nuova-relazione/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-pret-pour-une-nouvelle-relation/"/>
     <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/combien-de-temps-je-vais-rester-celibataire/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/combien-de-temps-je-vais-rester-celibataire/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/how-long-will-i-be-single-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-cuanto-tiempo-voy-a-estar-soltero/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/wie-lange-bleibe-ich-noch-single-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-quanto-tempo-restero-single/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/combien-de-temps-je-vais-rester-celibataire/"/>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
