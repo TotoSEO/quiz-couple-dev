@@ -176,9 +176,49 @@
     if (!format || !site) return;
     hote.setAttribute('data-pub-posee', '1');
     var cible = hote.firstElementChild || hote;
+    rapatrie(hote, format);
     injecte(cible, format, site);
     if (!HORS_FLUX[format]) surveilleRemplissage(hote, cible);
     else if (format === FORMAT_FOOTER) surveilleFooter(hote);
+  }
+
+  // ── L'annonce reste dans son emplacement ────────────────────────────
+  // Sur telephone, le script du pave (format 2) ignore le div qu'on lui
+  // prepare : il prend tous les <p> de la page, regarde ceux qui tombent
+  // entre 10 % et 20 % de la liste, et glisse son conteneur (sas_26300) dans
+  // le plus long ; avec moins de cinq paragraphes, dans le div a 10 % de la
+  // liste des div. C'est un reglage de leur cote (« 2 == 2 && 1 == 1 &&
+  // deviceType == 0 » dans leur script). Mesure le 6 octobre 2026 : au
+  // resultat d'un test, l'annonce atterrissait dans le texte, 1 500 a
+  // 2 400 px sous l'ecran, jamais vue ; et notre encart, reste blanc, se
+  // repliait huit secondes plus tard, ce qui faisait sauter la page.
+  //
+  // Leur script cree le conteneur et l'insere d'un seul tenant, puis attend
+  // les encheres (une a trois secondes) avant de rendre l'annonce dedans, en
+  // le retrouvant par son identifiant. Un MutationObserver pose avant
+  // l'injection voit l'insertion dans la microtache qui suit, et ramene le
+  // conteneur dans notre encart avant tout rendu. Un conteneur qui porte deja
+  // un cadre n'est jamais deplace : le deplacer rechargerait l'annonce.
+  // L'observateur de visibilite de la regie suit l'element lui-meme, il
+  // continue donc de le suivre a sa nouvelle place.
+  var CONTENEURS = { '2': 'sas_26300', '31': 'sas_39287' };
+  var DUREE_RAPATRIEMENT = 15000;
+
+  function rapatrie(hote, format) {
+    var id = CONTENEURS[format];
+    if (!id || !('MutationObserver' in window)) return;
+    var cible = hote.firstElementChild || hote;
+    var mo = new MutationObserver(function () {
+      var el = document.getElementById(id);
+      if (!el) return;
+      mo.disconnect();
+      if (hote.contains(el) || el.querySelector('iframe')) return;
+      var ancien = el.parentElement;
+      cible.appendChild(el);
+      if (ancien && ancien.classList) ancien.classList.remove('aBigClassNameToAvoidCollision' + format);
+    });
+    mo.observe(document.documentElement, { childList: true, subtree: true });
+    setTimeout(function () { mo.disconnect(); }, DUREE_RAPATRIEMENT);
   }
 
   // ── Rempli ou vide ? ─────────────────────────────────────────────────
@@ -200,16 +240,54 @@
     return r.bottom <= 0 || r.top >= window.innerHeight;
   }
 
+  // Le premier element qui suit l'emplacement dans le document : c'est sa
+  // position qui dit de combien le contenu a bouge.
+  function elementSuivant(n) {
+    while (n && n !== document.body) {
+      if (n.nextElementSibling) return n.nextElementSibling;
+      n = n.parentElement;
+    }
+    return null;
+  }
+
+  // Applique le changement de hauteur sans que rien ne bouge sous les yeux.
+  // En dessous de l'ecran, il n'y a rien a faire : seul ce qui suit bouge,
+  // et rien de ce qui suit n'est visible. Au-dessus, tout ce qu'on lit
+  // remonterait de 250 px. Chrome compense tout seul (ancrage du
+  // defilement), Safari non : un iPhone voyait la page sauter. On coupe donc
+  // l'ancrage le temps du changement, on mesure de combien le contenu a
+  // bouge, et on fait defiler d'autant, ce qui donne le meme resultat
+  // partout. Lecture, ecriture, lecture : une seule mise en page forcee.
+  function sansSaut(hote, action) {
+    var r = hote.getBoundingClientRect();
+    var repere = r.bottom <= 0 ? elementSuivant(hote) : null;
+    if (!repere) { action(); return; }
+    var racine = document.documentElement, corps = document.body;
+    var avant = repere.getBoundingClientRect().top;
+    var ancrages = [racine.style.overflowAnchor, corps.style.overflowAnchor];
+    racine.style.overflowAnchor = 'none';
+    corps.style.overflowAnchor = 'none';
+    action();
+    var decalage = repere.getBoundingClientRect().top - avant;
+    if (decalage) window.scrollBy(0, decalage);
+    window.requestAnimationFrame(function () {
+      racine.style.overflowAnchor = ancrages[0];
+      corps.style.overflowAnchor = ancrages[1];
+    });
+  }
+
   // Applique un changement de mise en page a l'emplacement quand il n'est pas
   // a l'ecran : tout de suite s'il est deja hors champ, sinon a sa sortie.
+  // Jamais sous les yeux de la personne, et sans saut (sansSaut).
   function quandHorsEcran(hote, action) {
-    if (horsEcran(hote)) { action(); return; }
+    function applique() { sansSaut(hote, action); }
+    if (horsEcran(hote)) { applique(); return; }
     if (!('IntersectionObserver' in window)) return;
     var obs = new IntersectionObserver(function (entrees) {
       for (var i = 0; i < entrees.length; i++) {
         if (entrees[i].isIntersecting) continue;
         obs.disconnect();
-        action();
+        applique();
         return;
       }
     });
@@ -526,9 +604,31 @@
   var PAS_BRIDE = 1000;
   var unitesBridees = [];   // objets deja traites, quelques-uns par page
 
+  // Le footer est un cas a part. Son annonce s'affiche dans un bandeau fixe
+  // que la regie ajoute en fin de body (sas_iframe_fixed_26328), mais son
+  // observateur de visibilite suit le conteneur sas_26328, pose dans notre
+  // ancre du bas de page, de hauteur nulle, et qu'elle masque elle-meme au
+  // rendu. Pour elle, le footer est donc toujours « hors de vue » : il se
+  // rafraichissait au delai invisible (45 s) alors qu'il est sous les yeux en
+  // permanence. Sa visibilite est donc lue sur le bandeau lui-meme : affiche,
+  // ni masque par la limite des 30 % (data-pub-trop-haut), ni ferme. Le
+  // rythme reste celui que la regie lui donne, 45 s.
+  var UNITE_FOOTER = 26328;
+
+  function footerAffiche() {
+    var liste = document.querySelectorAll('[id^="sas_iframe_fixed_' + UNITE_FOOTER + '"]');
+    for (var i = 0; i < liste.length; i++) {
+      var e = liste[i];
+      if (e.hasAttribute('data-pub-trop-haut')) continue;
+      if (e.offsetWidth > 0 && e.offsetHeight > 0 && !estUnVoile(e)) return true;
+    }
+    return false;
+  }
+
   function bloquee(u) {
     if (document.visibilityState === 'hidden') return true;
     if (u.forceVisibility === true) return false;
+    if (Number(u.formatId) === UNITE_FOOTER) return !footerAffiche();
     return u.isVisible !== true;
   }
 
