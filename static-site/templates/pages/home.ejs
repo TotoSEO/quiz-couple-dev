@@ -834,9 +834,8 @@
         <div class="space-y-4 max-h-[500px] overflow-y-auto pr-2 scrollbar-thin" id="reviews-grid">
           <%
             // Même tri et même limite que reviews.js, qui remplacera ce bloc
-            // dès que la requête aboutit. Aucune date, ici comme dans le
-            // script : un « il y a 2 h » serait lu par Google comme la date de
-            // la page d'accueil (voir reviews.js).
+            // dès que la requête aboutit. L'horodatage relatif est laissé au
+            // client : il périmerait entre deux constructions.
           %>
           <% reviewsRecents.forEach(function (avis) { %>
           <div class="review-card glass-card rounded-2xl p-5 space-y-3">

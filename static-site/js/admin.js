@@ -2764,7 +2764,7 @@
       }
     })
     .catch(function () {
-      fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&order=created_at.desc&limit=100', {
+      fetch(SUPABASE_URL + '/rest/v1/reviews?select=id,author_name,rating,comment,is_approved,created_at,quiz_slug&order=created_at.desc&limit=100', {
         headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
       })
       .then(function (res) { return res.json(); })
