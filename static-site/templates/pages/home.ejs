@@ -198,9 +198,12 @@
 
         <%/* Note moyenne du site, juste sous les compteurs. Les valeurs sont
              celles calculées à la construction, les mêmes que la section avis
-             plus bas : rien n'est ajouté après coup par du script, pour que la
-             note soit dans le HTML servi. Le bloc disparaît tant qu'aucun avis
-             n'est publié plutôt que d'afficher un zéro. */%>
+             plus bas, pour que la note soit dans le HTML servi. reviews.js
+             (updateHero) la reprend ensuite avec les chiffres exacts, comme la
+             section du bas : un avis validé entre deux constructions compte
+             tout de suite. Les classes et le format du libellé
+             (« … : 4,8/5, 258 avis ») sont lus par ce script. Le bloc disparaît
+             tant qu'aucun avis n'est publié plutôt que d'afficher un zéro. */%>
         <%
           var noteHero = parseFloat(reviewStats.avg) || 0;
           var nbAvisHero = parseInt(reviewStats.count, 10) || 0;

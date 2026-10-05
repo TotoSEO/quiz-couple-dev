@@ -3557,57 +3557,6 @@
     });
   }
 
-  // ── Deploy ──
-  function triggerDeploy() {
-    var banner = document.getElementById('deploy-banner');
-    var spinner = document.getElementById('deploy-spinner');
-    var iconSuccess = document.getElementById('deploy-icon-success');
-    var iconError = document.getElementById('deploy-icon-error');
-    var message = document.getElementById('deploy-message');
-    var deployBtn = document.getElementById('admin-deploy');
-
-    banner.classList.remove('hidden');
-    spinner.classList.remove('hidden');
-    iconSuccess.classList.add('hidden');
-    iconError.classList.add('hidden');
-    message.textContent = 'Deploiement en cours...';
-    deployBtn.disabled = true;
-
-    fetch(SUPABASE_URL + '/functions/v1/trigger-deploy', {
-      method: 'POST',
-      headers: {
-        'Authorization': 'Bearer ' + SUPABASE_KEY,
-        'Content-Type': 'application/json',
-        'x-admin-token': adminToken
-      },
-      body: JSON.stringify({})
-    })
-    .then(function (res) { return res.json(); })
-    .then(function (data) {
-      spinner.classList.add('hidden');
-      deployBtn.disabled = false;
-      if (data.success) {
-        iconSuccess.classList.remove('hidden');
-        message.textContent = data.message || 'Deploiement lance ! Le site sera mis a jour dans 1-2 minutes.';
-        banner.style.borderColor = 'hsl(142 71% 45% / 0.3)';
-        banner.style.background = 'hsl(142 71% 45% / 0.05)';
-      } else {
-        iconError.classList.remove('hidden');
-        message.textContent = 'Erreur: ' + (data.error || 'Deploiement echoue');
-        banner.style.borderColor = 'hsl(var(--destructive) / 0.3)';
-        banner.style.background = 'hsl(var(--destructive) / 0.05)';
-      }
-    })
-    .catch(function (err) {
-      spinner.classList.add('hidden');
-      deployBtn.disabled = false;
-      iconError.classList.remove('hidden');
-      message.textContent = 'Erreur: ' + (err.message || 'Connexion echouee');
-      banner.style.borderColor = 'hsl(var(--destructive) / 0.3)';
-      banner.style.background = 'hsl(var(--destructive) / 0.05)';
-    });
-  }
-
   function updateCharCounts() {
     var metaTitleEl = document.getElementById('article-field-meta-title');
     var metaDescEl = document.getElementById('article-field-meta-description');
@@ -3700,10 +3649,6 @@
         renderMessages();
       });
     });
-
-    // Deploy button
-    var deployBtn = document.getElementById('admin-deploy');
-    if (deployBtn) deployBtn.addEventListener('click', triggerDeploy);
 
     // Actualiser : on vide la memoire des lectures et on recharge l'onglet
     // ouvert. Les autres onglets se rechargeront a leur prochaine ouverture.

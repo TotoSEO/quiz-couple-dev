@@ -33,8 +33,5 @@ verify_jwt = false
 [functions.admin-messages]
 verify_jwt = false
 
-[functions.trigger-deploy]
-verify_jwt = false
-
 [functions.ebook-verify]
 verify_jwt = false
