@@ -320,6 +320,8 @@
     "gapWarning": "There's a significant gap between your two scores. It's often in these gaps that the most important conversations lie."
   },
   "quizNames": {
+    "testDureeCelibat": "How long will I stay single?",
+    "testPurete": "Purity test",
     "testCouple": "Couple Test",
     "testCommonPoints": "Common Points Test",
     "testDistance": "Distance Test",

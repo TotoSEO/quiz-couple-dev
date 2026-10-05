@@ -439,5 +439,11 @@
     "shortTitle": "Contador de pareja",
     "description": "Escribid la fecha en que empezó todo y el contador os dice cuántos días lleváis juntos, la duración exacta y las próximas fechas que celebrar.",
     "metaDescription": "Contador de pareja gratis: escribid vuestra fecha de inicio y ved los días juntos, la duración exacta, próximos aniversarios y metas que celebrar."
+  },
+  "testDureeCelibat": {
+    "title": "¿Cuánto tiempo voy a estar soltero? Test online",
+    "shortTitle": "¿Cuánto tiempo seguiré soltero?",
+    "description": "Veinte preguntas sobre tu día a día y una estimación en meses del tiempo que te queda antes de conocer a alguien.",
+    "metaDescription": "¿Cuánto tiempo vas a seguir soltero? Veinte preguntas sobre tu edad, tus salidas, tus amigos y tus reflejos, y una estimación en meses. Test gratis y anónimo."
   }
 }

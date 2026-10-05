@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "badge": "Test para solteros",
+    "title": "Test para saber cuánto tiempo vas a seguir soltero",
+    "titleHighlight": "seguir soltero",
+    "description": "Este test calcula cuánto tiempo te queda antes de conocer a alguien. Mira tu edad, tu trabajo, tus salidas, tus amigos y lo que haces cuando alguien te gusta. El resultado da una duración en meses y lo que podría acortarla.",
+    "subtitle": "Veinte preguntas, cinco minutos, una estimación en meses",
+    "jumpBtn": "Hacer el test"
+  },
+  "section1": {
+    "title": "Cómo calcula el test la duración de tu soltería",
+    "p1": "Este test calcula cuánto tiempo vas a seguir soltero. No lee el futuro. Mira tu día a día y calcula tus posibilidades de conocer a alguien cada mes.",
+    "p2": "Pongamos dos ejemplos. Una persona sin trabajo, que sale poco y no tiene grupo de amigos, <a href=\"/es/test-por-que-sigo-soltero/\">se cruza con muy poca gente</a>. Para ella, puede ir para largo. Una persona de treinta años que trabaja, sale tres veces al mes y forma parte de uno o dos grupos de amigos conoce gente sin pensarlo. Tiene muchas posibilidades de encontrar a alguien en el año.",
+    "p3": "El test hace ese cálculo con tus veinte respuestas. El resultado da una duración en meses, un intervalo y una fecha aproximada. También muestra lo que juega a tu favor, lo que te frena y lo que te haría ganar más tiempo.",
+    "pillar1Title": "Tu situación",
+    "pillar1Text": "Tu edad, lo que llena tus días, el lugar donde vives y el tiempo libre que te queda.",
+    "pillar2Title": "Tu vida social",
+    "pillar2Text": "Tus salidas, tus amigos, las personas nuevas que conoces y tus actividades en grupo.",
+    "pillar3Title": "Tus reflejos",
+    "pillar3Text": "Lo que haces cuando alguien te gusta, después de una buena cita o cuando empieza una historia.",
+    "pillar4Title": "En qué punto estás",
+    "pillar4Text": "<a href=\"/es/test-preparado-para-una-nueva-relacion/\">Tu última relación</a>, tus ganas de tener pareja, tus criterios y tu confianza."
+  },
+  "section2": {
+    "title": "Cómo se encuentra el amor, la mayoría de las veces",
+    "intro": "La mayoría de las parejas no se conocen por pura casualidad. Se conocen allí donde cada uno ya pasa tiempo.",
+    "p1": "Conocer a alguien es ante todo una cuestión de números. Cuanta más gente nueva conoces, más posibilidades tienes de dar con alguien que te guste y a quien gustes.",
+    "p2": "Después hace falta tiempo. Pocas veces nos enamoramos a primera vista. Vuelves a ver a la persona, habláis un poco más cada vez y un día te sorprendes esperando el próximo momento juntos...",
+    "p3": "Por eso los lugares más habituales para conocer a alguien son también los más sencillos. Estos son los principales, con lo que ayuda y la trampa que hay que evitar.",
+    "headerScore": "Dónde",
+    "headerLevel": "Lo que ayuda",
+    "headerAnalysis": "La trampa que hay que evitar",
+    "row1Score": "Los amigos de amigos",
+    "row1Level": "Alguien ya ha hecho la selección y llegas con confianza",
+    "row1Analysis": "Ver siempre a los mismos amigos",
+    "row2Score": "El trabajo o los estudios",
+    "row2Level": "Os veis a menudo y os conocéis sin presión",
+    "row2Analysis": "Hablar solo de trabajo",
+    "row3Score": "Las actividades en grupo",
+    "row3Level": "Ya compartís una afición y la conversación sale sola",
+    "row3Analysis": "Ir solo para ligar",
+    "row4Score": "Las fiestas y los bares",
+    "row4Level": "Mucha gente en poco tiempo",
+    "row4Analysis": "Esperar a que el otro venga a hablarte",
+    "row5Score": "Las aplicaciones de citas",
+    "row5Level": "Gente que también busca a alguien",
+    "row5Analysis": "Encadenar conversaciones sin veros nunca",
+    "tip": "Una fiesta en la que solo conoces a una persona vale a menudo más que tres salidas con los mismos amigos. Ahí es donde aparecen caras nuevas."
+  },
+  "section3": {
+    "title": "Lo que ayuda a conocer a alguien",
+    "intro": "Cuatro cosas marcan la diferencia. Ninguna exige cambiar de vida.",
+    "sub1Title": "Salir y ver a gente",
+    "sub1P1": "Es la primera palanca, y la más sencilla. Tres salidas al mes ya cambian mucho. No hace falta que sean fiestas. Un club deportivo, una asociación, una clase por la tarde o un coro funcionan muy bien también.",
+    "sub2Title": "Cuidar tu grupo de amigos",
+    "sub2P1": "Tus amigos te llevan a sitios a los que no irías solo. También te presentan a gente. Si tu entorno no sabe que estás abierto a conocer a alguien, díselo sin más. Muchas parejas se conocen gracias a un amigo en común.",
+    "sub3Title": "Atreverse a dar el primer paso",
+    "sub3P1": "Si alguien te gusta en un bar, esperar a que esa persona se fije en ti tiene pocas posibilidades de salir bien. Puede que ni te haya visto. Puede que sea tan tímida como tú. A veces solo hay que intentarlo. Ve a hablarle, cualquier frase sencilla vale.",
+    "sub4Title": "Ser natural",
+    "sub4P1": "Cuanto más le das vueltas, más te estresas. Y cuanto más estresado estás, menos natural eres. Conocer a alguien no es un examen. Si no sale, no has perdido nada y has hablado con alguien nuevo."
+  },
+  "section4": {
+    "title": "Por qué forzar las cosas casi nunca funciona",
+    "p1": "Cuando te empeñas en <a href=\"/es/test-por-que-no-encuentro-el-amor/\">encontrar el amor</a>, casi nunca funciona. Sales con una sola idea en la cabeza. Miras a cada persona como una candidata posible. Los demás lo notan enseguida.",
+    "p2": "Simplemente, no es natural. Intentas gustar en lugar de ser tú mismo, y al final gustas menos...",
+    "p3": "A menudo es cuando menos buscas cuando llegan las mejores sorpresas. Sales para ver a tus amigos, te apuntas a una clase porque te apetece, y el encuentro llega al lado. Eso sí, buscar menos no quiere decir quedarse en casa esperando. Hay que seguir saliendo y diciendo que sí a las invitaciones."
+  },
+  "section5": {
+    "title": "Las aplicaciones de citas: para quién funcionan",
+    "p1": "Las aplicaciones funcionan para algunas personas. Cada día se forman parejas en ellas, es verdad.",
+    "p2": "Pero muy pocos usuarios encuentran ahí una historia de verdad. Muchas conversaciones se acaban a los tres mensajes. Algunos encadenan citas sin futuro y acaban cansados.",
+    "p3": "Una aplicación puede completar una vida social. Pocas veces la sustituye. Si ya no haces otra cosa, tómate un mes de descanso y sal más. La mayoría de las veces, eso cambia más que un perfil nuevo."
+  },
+  "seo": {
+    "faqTitle": "Las preguntas que nos hacemos"
+  },
+  "jsonLd": {
+    "about": "soltería y encuentros amorosos",
+    "faq1Q": "¿Se puede saber cuánto tiempo vas a seguir soltero?",
+    "faq1A": "No con certeza, pero se puede estimar. Lo que más cuenta es cuánta gente nueva conoces y lo que haces cuando alguien te gusta. El test parte de ahí para dar una duración en meses.",
+    "faq2Q": "¿Por qué sigo soltero si salgo mucho?",
+    "faq2A": "Salir no siempre basta. Si sales siempre con las mismas personas, o si esperas a que el otro dé el primer paso, las ocasiones pasan. Mira también tu última relación. Si todavía ocupa mucho sitio, a alguien nuevo le cuesta hacerse un hueco.",
+    "faq3Q": "¿Las aplicaciones de citas hacen ganar tiempo?",
+    "faq3A": "A algunos sí. A muchos no. Aportan contactos, pero pocas historias de verdad. Funcionan mejor como complemento de una vida social que en su lugar.",
+    "faq4Q": "¿La edad cambia las cosas?",
+    "faq4A": "Un poco. Con los años se conoce a menos gente nueva, sobre todo con hijos o con un trabajo exigente. Pero la edad pesa menos que las salidas, los amigos y la forma de acercarse a los demás.",
+    "faq5Q": "¿El test es anónimo?",
+    "faq5A": "Sí. Tus respuestas se quedan en tu navegador. Solo el tipo de resultado, sin ningún dato personal, sirve para medir cómo se usa el test."
+  }
+}

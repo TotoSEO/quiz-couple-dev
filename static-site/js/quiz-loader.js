@@ -336,6 +336,43 @@
     // dans gd.json. Les questions gardent l'ordre du fichier.
     'couple-ou-celibat': { prefix: 'balance', engine: 'balance', totalQ: 20, pool: 20, quizType: 'couple-ou-celibat', paliers: [22, 42, 58, 78] },
 
+    // Combien de temps vais-je rester celibataire : une estimation en mois,
+    // pas un score (DureeQuiz). Chaque reponse multiplie la chance mensuelle
+    // de commencer une histoire. Les multiplicateurs vivent ici et pas dans
+    // gd.json : ce sont les memes dans les cinq langues, une seule table a
+    // regler. facteurs[i] suit la question i + 1 de gd.json et `m` l'ordre de
+    // ses reponses (a, b, c...). `levier` : la question peut etre proposee
+    // comme ce qui ferait gagner le plus de temps (jamais l'age, la ville,
+    // l'activite ou l'anciennete du celibat). Calage du 5 octobre 2026 : un
+    // profil type (trentaine, un travail, trois sorties par mois, un groupe
+    // d'amis) donne 10 mois, le plus sociable 3 mois, une personne sans
+    // emploi et sans vie sociale autour de six ans ; au-dela de dix ans
+    // (`plafond`), le resultat dit « plus de 10 ans ».
+    'duree-celibat': { prefix: 'dureeCelib', engine: 'duree', totalQ: 20, pool: 20, quizType: 'duree-celibat',
+      paliers: [4, 9, 18, 36], base: 0.0445, pente: 0.45, plafond: 120,
+      facteurs: [
+        { m: [1.10, 1.15, 1.0, 0.85, 0.72] },             // 1  age
+        { m: [1.0, 1.05, 0.85, 0.7, 0.8] },               // 2  celibataire depuis
+        { m: [1.15, 1.25, 0.92, 0.72, 0.85] },            // 3  activite
+        { m: [1.1, 1.0, 0.9, 0.75] },                     // 4  lieu de vie
+        { m: [1.05, 1.05, 0.9, 0.75] },                   // 5  temps libre
+        { m: [0.5, 0.85, 1.15, 1.35], levier: true },     // 6  sorties par mois
+        { m: [0.6, 0.85, 1.1, 1.3], levier: true },       // 7  amis
+        { m: [0.6, 0.95, 1.2, 1.35], levier: true },      // 8  nouvelles personnes
+        { m: [0.85, 1.0, 1.15, 1.25], levier: true },     // 9  activite en groupe
+        { m: [1.2, 1.0, 0.8, 0.65], levier: true },       // 10 invitation inconnue
+        { m: [1.2, 1.0, 0.9, 0.8], levier: true },        // 11 entourage
+        { m: [0.65, 0.82, 1.2, 1.35], levier: true },     // 12 quelqu'un vous plait
+        { m: [1.0, 1.0, 1.12, 0.9], levier: true },       // 13 applications
+        { m: [1.25, 1.05, 0.85, 0.7] },                   // 14 dernier premier rendez-vous
+        { m: [1.15, 0.85, 0.9, 0.7], levier: true },      // 15 apres une bonne rencontre
+        { m: [1.15, 0.85, 0.65, 0.85], levier: true },    // 16 quand une histoire commence
+        { m: [1.1, 1.0, 0.8, 0.55, 1.0], levier: true },  // 17 l'ex
+        { m: [0.5, 1.05, 1.15, 0.85], levier: true },     // 18 l'envie
+        { m: [1.15, 1.0, 0.75, 0.9], levier: true },      // 19 les criteres
+        { m: [1.15, 1.0, 0.85, 0.7], levier: true }       // 20 la confiance
+      ] },
+
     // Amour ou attachement : deux axes mesures separement, l'elan vers la
     // personne (axe a) et ce qui vous retient (axe b), dix questions et
     // cinquante points chacun. Le verdict sort de la forme du profil, pas
@@ -989,6 +1026,9 @@
         break;
       case 'balance':
         initBalanceQuiz(config);
+        break;
+      case 'duree':
+        initDureeQuiz(config);
         break;
       case 'axes':
         initAxesQuiz(config);
@@ -2521,6 +2561,80 @@
         resultLabel: lu('resultatLibelle', ''),
         axeA: lu('axeA', ''),
         axeB: lu('axeB', '')
+      }
+    });
+  }
+
+  function initDureeQuiz(cfg) {
+    // Les questions ne sont pas melangees : elles vont de la situation (age,
+    // travail, lieu) a la vie sociale, puis aux rencontres et a ce qu'on
+    // ressent. On relit la reserve dans l'ordre du fichier.
+    var questions = parseGdQuestions(cfg.prefix, (cfg.pool || 20) + 5, false);
+    questions.sort(function(a, b) { return a.id - b.id; });
+    var facteurs = cfg.facteurs || [];
+    var lettres = 'abcde';
+
+    function lu(cle, repli) {
+      var plein = cfg.prefix + '.' + cle;
+      var v = QuizEngine.tgd(plein, null);
+      return (v && v !== plein) ? v : repli;
+    }
+    questions = questions.filter(function(q) { return !!facteurs[q.id - 1]; });
+    questions.forEach(function(q) {
+      var f = facteurs[q.id - 1];
+      q.levier = !!f.levier;
+      q.facteur = lu('q' + q.id + '_facteur', '');
+      q.options.forEach(function(o) {
+        var k = lettres.indexOf(o.id);
+        o.mult = (k >= 0 && f.m[k]) ? f.m[k] : 1;
+      });
+    });
+
+    var verdicts = [];
+    for (var i = 1; i <= (cfg.paliers || []).length + 1; i++) {
+      verdicts.push({
+        cle: lu('r' + i + '_cle', 'p' + i),
+        title: lu('r' + i + '_t', ''),
+        description: lu('r' + i + '_d', ''),
+        advice: lu('r' + i + '_a', '')
+      });
+    }
+    new QuizEngine.DureeQuiz({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang,
+      quizType: cfg.quizType || 'duree',
+      paliers: cfg.paliers || [],
+      verdicts: verdicts,
+      base: cfg.base,
+      pente: cfg.pente,
+      plafond: cfg.plafond,
+      labels: {
+        icon: lu('icone', '\u23f3'),
+        introTitle: lu('introTitre', ''),
+        introDesc: lu('introTexte', ''),
+        duree: lu('duree', null),
+        start: lu('bouton', null),
+        resultLabel: lu('resultatLibelle', ''),
+        environ: lu('environ', '{{duree}}'),
+        plusDe: lu('plusDe', '{{duree}}'),
+        fourchette: lu('fourchette', ''),
+        vers: lu('vers', ''),
+        versAn: lu('versAn', ''),
+        moisUn: lu('moisUn', ''),
+        moisN: lu('moisN', ''),
+        anUn: lu('anUn', ''),
+        anN: lu('anN', ''),
+        moisNApres: lu('moisNApres', ''),
+        anNApres: lu('anNApres', ''),
+        et: lu('et', ' '),
+        atouts: lu('atouts', ''),
+        freins: lu('freins', ''),
+        levierTitre: lu('levierTitre', ''),
+        levierTexte: lu('levierTexte', ''),
+        levierTexteMulti: lu('levierTexteMulti', ''),
+        partage: lu('partage', '{{duree}}')
       }
     });
   }

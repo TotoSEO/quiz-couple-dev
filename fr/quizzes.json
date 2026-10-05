@@ -451,5 +451,11 @@
     "shortTitle": "Compteur de couple",
     "description": "La date du début, et le compteur vous dit combien de jours vous êtes ensemble, la durée exacte et les prochaines dates à fêter.",
     "metaDescription": "Compteur de couple gratuit : entrez votre date de début et voyez vos jours ensemble, la durée exacte, les prochains anniversaires et caps à fêter."
+  },
+  "testDureeCelibat": {
+    "title": "Combien de temps vais-je rester célibataire ? Test en ligne",
+    "shortTitle": "Combien de temps encore célibataire ?",
+    "description": "Vingt questions sur votre vie de tous les jours, et une estimation en mois du temps qu'il vous reste avant de rencontrer quelqu'un.",
+    "metaDescription": "Combien de temps allez-vous encore rester célibataire ? Vingt questions sur votre âge, vos sorties, vos amis et vos réflexes, et une estimation en mois. Test gratuit et anonyme."
   }
 }

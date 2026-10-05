@@ -439,5 +439,11 @@
     "shortTitle": "Relationship counter",
     "description": "Enter the day it all started and see how many days you have been together, the exact length, and the next dates worth celebrating.",
     "metaDescription": "Free relationship counter: enter your start date and see your days together, the exact time, your next anniversaries and day milestones to celebrate."
+  },
+  "testDureeCelibat": {
+    "title": "How long will I be single? Online test",
+    "shortTitle": "How long will I stay single?",
+    "description": "Twenty questions about your everyday life, and an estimate in months of how long you have left before you meet someone.",
+    "metaDescription": "How long will you stay single? Twenty questions about your age, your nights out, your friends and your habits, and an estimate in months. Free and anonymous test."
   }
 }

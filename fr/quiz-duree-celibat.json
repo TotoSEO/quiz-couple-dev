@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "badge": "Test célibataire",
+    "title": "Test pour savoir combien de temps vous allez rester célibataire",
+    "titleHighlight": "rester célibataire",
+    "description": "Ce test estime combien de temps il vous reste avant de rencontrer quelqu'un. Il regarde votre âge, votre travail, vos sorties, vos amis et ce que vous faites quand quelqu'un vous plaît. Le résultat donne une durée en mois, et ce qui pourrait la raccourcir.",
+    "subtitle": "Vingt questions, cinq minutes, une estimation en mois",
+    "jumpBtn": "Faire le test"
+  },
+  "section1": {
+    "title": "Comment le test estime la durée de votre célibat",
+    "p1": "Ce test estime combien de temps vous allez encore rester célibataire. Il ne lit pas l'avenir. Il regarde votre vie de tous les jours et calcule vos chances de faire une rencontre dans le mois.",
+    "p2": "Prenons deux exemples. Une personne sans emploi, qui sort rarement et n'a pas de groupe d'amis, <a href=\"/test-pourquoi-suis-je-celibataire/\">croise très peu de monde</a>. Pour elle, ça risque d'être long. Une personne de trente ans qui travaille, sort trois fois par mois et fait partie d'un ou deux groupes d'amis croise du monde sans même y penser. Elle a de bonnes chances de rencontrer quelqu'un dans l'année.",
+    "p3": "Le test fait ce calcul avec vos vingt réponses. Le résultat donne une durée en mois, une fourchette et une date approximative. Il montre aussi ce qui joue pour vous, ce qui vous freine, et le point qui vous ferait gagner le plus de temps.",
+    "pillar1Title": "Votre situation",
+    "pillar1Text": "Votre âge, ce qui occupe vos journées, l'endroit où vous vivez et le temps libre qu'il vous reste.",
+    "pillar2Title": "Votre vie sociale",
+    "pillar2Text": "Vos sorties, vos amis, les nouvelles personnes que vous croisez et vos activités en groupe.",
+    "pillar3Title": "Vos réflexes",
+    "pillar3Text": "Ce que vous faites quand quelqu'un vous plaît, après un bon rendez-vous ou quand une histoire commence.",
+    "pillar4Title": "Où vous en êtes",
+    "pillar4Text": "<a href=\"/test-pret-pour-une-nouvelle-relation/\">Votre dernière histoire</a>, votre envie d'être en couple, vos critères et votre confiance en vous."
+  },
+  "section2": {
+    "title": "Comment on trouve l'amour, la plupart du temps",
+    "intro": "La plupart des couples ne se rencontrent pas par un pur hasard. Ils se rencontrent là où chacun passe déjà du temps.",
+    "p1": "Une rencontre, c'est d'abord une question de nombre. Plus vous croisez de gens nouveaux, plus vous avez de chances de tomber sur quelqu'un qui vous plaît et à qui vous plaisez.",
+    "p2": "Ensuite, il faut du temps. On tombe rarement amoureux au premier regard. On revoit la personne, on discute un peu plus à chaque fois, et un jour on se surprend à attendre le prochain moment ensemble...",
+    "p3": "C'est pour ça que les lieux de rencontre les plus courants sont aussi les plus simples. Voici les principaux, avec ce qui aide et le piège à éviter.",
+    "headerScore": "Où",
+    "headerLevel": "Ce qui aide",
+    "headerAnalysis": "Le piège à éviter",
+    "row1Score": "Les amis d'amis",
+    "row1Level": "Quelqu'un a déjà fait le tri, on arrive en confiance",
+    "row1Analysis": "Voir toujours les mêmes amis",
+    "row2Score": "Le travail ou les études",
+    "row2Level": "On se voit souvent et on apprend à se connaître sans pression",
+    "row2Analysis": "Ne parler que de travail",
+    "row3Score": "Les activités en groupe",
+    "row3Level": "On partage déjà une passion, la conversation vient toute seule",
+    "row3Analysis": "Y aller seulement pour draguer",
+    "row4Score": "Les soirées et les bars",
+    "row4Level": "Beaucoup de monde en peu de temps",
+    "row4Analysis": "Attendre que l'autre vienne vous parler",
+    "row5Score": "Les applications de rencontre",
+    "row5Level": "Des gens qui cherchent aussi quelqu'un",
+    "row5Analysis": "Enchaîner les conversations sans jamais se voir",
+    "tip": "Une soirée où vous ne connaissez qu'une seule personne vaut souvent mieux que trois soirées avec les mêmes amis. C'est là qu'on croise des têtes nouvelles."
+  },
+  "section3": {
+    "title": "Ce qui aide à rencontrer quelqu'un",
+    "intro": "Quatre choses font la différence. Aucune ne demande de changer de vie.",
+    "sub1Title": "Sortir et voir du monde",
+    "sub1P1": "C'est le premier levier, et le plus simple. Trois sorties par mois changent déjà beaucoup de choses. Pas besoin que ce soit des soirées. Un club de sport, une association, un cours du soir ou une chorale, ça marche très bien aussi.",
+    "sub2Title": "Garder un vrai cercle d'amis",
+    "sub2P1": "Vos amis vous emmènent là où vous n'iriez pas seul(e). Ils vous présentent aussi des gens. Si votre entourage ne sait pas que vous êtes ouvert(e) à une rencontre, dites-le simplement. Beaucoup de couples se forment grâce à un ami commun.",
+    "sub3Title": "Oser faire le premier pas",
+    "sub3P1": "Si quelqu'un vous plaît dans un bar, attendre que la personne flashe sur vous a peu de chances d'aboutir. Elle ne vous a peut-être pas remarqué(e). Elle est peut-être aussi timide que vous. Des fois, il faut juste tenter. Allez lui parler, une phrase banale suffit.",
+    "sub4Title": "Rester naturel",
+    "sub4P1": "Plus on se pose de questions, plus on stresse. Et plus on stresse, moins on est naturel. Une rencontre n'est pas un examen. Si ça ne prend pas, vous n'avez rien perdu, et vous avez parlé à quelqu'un de nouveau."
+  },
+  "section4": {
+    "title": "Pourquoi forcer les choses marche rarement",
+    "p1": "Quand on force pour <a href=\"/test-pourquoi-je-ne-trouve-pas-l-amour/\">trouver l'amour</a>, ça fonctionne rarement. On sort avec une seule idée en tête. On regarde chaque personne comme un candidat possible. Les autres le sentent tout de suite.",
+    "p2": "Ce n'est pas naturel, tout simplement. On cherche à plaire au lieu d'être soi-même, et du coup on plaît moins...",
+    "p3": "C'est souvent quand on cherche le moins qu'on a les plus belles surprises. On sort pour voir des amis, on s'inscrit à un cours pour le plaisir, et la rencontre arrive à côté. Attention, chercher moins ne veut pas dire rester chez soi à attendre. Il faut continuer à sortir et à dire oui aux invitations."
+  },
+  "section5": {
+    "title": "Les applications de rencontre, pour qui ça marche",
+    "p1": "Les applications fonctionnent pour certaines personnes. Des couples s'y forment chaque jour, c'est vrai.",
+    "p2": "Mais très peu d'utilisateurs y trouvent une vraie histoire. Beaucoup de conversations s'arrêtent au bout de trois messages. Certains enchaînent les rendez-vous sans lendemain et finissent par se lasser.",
+    "p3": "Une application peut compléter une vie sociale. Elle la remplace rarement. Si vous ne faites plus que ça, faites une pause d'un mois et sortez davantage. La plupart du temps, ça change plus de choses qu'un nouveau profil."
+  },
+  "seo": {
+    "faqTitle": "Les questions qu'on se pose"
+  },
+  "jsonLd": {
+    "about": "célibat et rencontre amoureuse",
+    "faq1Q": "Peut-on savoir combien de temps on va rester célibataire ?",
+    "faq1A": "Pas avec certitude, mais on peut l'estimer. Ce qui compte le plus, c'est le nombre de personnes nouvelles que vous croisez et ce que vous faites quand quelqu'un vous plaît. Le test part de là pour donner une durée en mois.",
+    "faq2Q": "Pourquoi je reste célibataire alors que je sors beaucoup ?",
+    "faq2A": "Sortir ne suffit pas toujours. Si vous sortez toujours avec les mêmes personnes, ou si vous attendez que l'autre fasse le premier pas, les occasions passent. Regardez aussi votre dernière histoire. Si elle prend encore beaucoup de place, une nouvelle rencontre a du mal à s'en faire une.",
+    "faq3Q": "Les applications de rencontre font-elles gagner du temps ?",
+    "faq3A": "Pour certains, oui. Pour beaucoup, non. Elles apportent des contacts, mais peu de vraies histoires. Elles marchent mieux en plus d'une vie sociale qu'à sa place.",
+    "faq4Q": "Est-ce que l'âge change les choses ?",
+    "faq4A": "Un peu. On croise moins de monde nouveau avec les années, surtout avec des enfants ou un travail prenant. Mais l'âge pèse moins que les sorties, les amis et la façon d'aller vers les autres.",
+    "faq5Q": "Le test est-il anonyme ?",
+    "faq5A": "Oui. Vos réponses restent dans votre navigateur. Seul le type de résultat, sans aucune donnée personnelle, sert à mesurer comment le test est utilisé."
+  }
+}

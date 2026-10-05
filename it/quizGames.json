@@ -320,6 +320,8 @@
     "gapWarning": "C'è un divario significativo tra i vostri due punteggi. Spesso è in questi divari che si trovano le conversazioni più importanti da avere."
   },
   "quizNames": {
+    "testDureeCelibat": "Quanto tempo resterò single?",
+    "testPurete": "Test di purezza",
     "testCouple": "Test di Coppia",
     "testCommonPoints": "Test Punti Comuni",
     "testDistance": "Test Distanza",

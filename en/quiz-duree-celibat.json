@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "badge": "Singles test",
+    "title": "A test to find out how long you'll stay single",
+    "titleHighlight": "stay single",
+    "description": "This test estimates how long you have left before you meet someone. It looks at your age, your job, your nights out, your friends and what you do when someone catches your eye. The result gives you a number of months, and what could make it shorter.",
+    "subtitle": "Twenty questions, five minutes, an estimate in months",
+    "jumpBtn": "Take the test"
+  },
+  "section1": {
+    "title": "How the test estimates how long you'll be single",
+    "p1": "This test estimates how much longer you'll stay single. It doesn't read the future. It looks at your everyday life and works out your chances of meeting someone each month.",
+    "p2": "Take two examples. Someone who's out of work, rarely goes out and has no group of friends <a href=\"/en/why-am-i-still-single-test/\">hardly crosses paths with anyone</a>. For them, it could take a long time. A thirty-year-old who works, goes out three times a month and belongs to one or two groups of friends meets people without even thinking about it. They have a good chance of meeting someone within the year.",
+    "p3": "The test does that calculation with your twenty answers. The result gives you a number of months, a range and a rough date. It also shows what works in your favour, what's holding you back, and the one thing that would save you the most time.",
+    "pillar1Title": "Your situation",
+    "pillar1Text": "Your age, what fills your days, where you live and how much free time you have left.",
+    "pillar2Title": "Your social life",
+    "pillar2Text": "Your nights out, your friends, the new people you meet and your group activities.",
+    "pillar3Title": "Your reflexes",
+    "pillar3Text": "What you do when someone catches your eye, after a good date or when something starts.",
+    "pillar4Title": "Where you're at",
+    "pillar4Text": "<a href=\"/en/ready-for-a-new-relationship-test/\">Your last relationship</a>, how much you want to be with someone, what you're looking for and your self-confidence."
+  },
+  "section2": {
+    "title": "How people find love, most of the time",
+    "intro": "Most couples don't meet by pure chance. They meet in places where both of them already spend time.",
+    "p1": "Meeting someone is first a numbers game. The more new people you come across, the better your chances of finding someone you like who likes you back.",
+    "p2": "Then it takes time. People rarely fall in love at first sight. You see the person again, you talk a little more each time, and one day you catch yourself looking forward to the next time...",
+    "p3": "That's why the most common places to meet are also the simplest. Here are the main ones, with what helps and the trap to avoid.",
+    "headerScore": "Where",
+    "headerLevel": "What helps",
+    "headerAnalysis": "The trap to avoid",
+    "row1Score": "Friends of friends",
+    "row1Level": "Someone has already done the sorting, so you arrive feeling at ease",
+    "row1Analysis": "Always seeing the same friends",
+    "row2Score": "Work or studies",
+    "row2Level": "You see each other often and get to know each other without pressure",
+    "row2Analysis": "Only ever talking about work",
+    "row3Score": "Group activities",
+    "row3Level": "You already share an interest, so the conversation comes easily",
+    "row3Analysis": "Going only to flirt",
+    "row4Score": "Parties and bars",
+    "row4Level": "Lots of people in a short time",
+    "row4Analysis": "Waiting for the other person to come to you",
+    "row5Score": "Dating apps",
+    "row5Level": "People who are looking too",
+    "row5Analysis": "Chatting endlessly without ever meeting",
+    "tip": "A party where you only know one person is often worth more than three nights out with the same friends. That's where you meet new faces."
+  },
+  "section3": {
+    "title": "What helps you meet someone",
+    "intro": "Four things make the difference. None of them means changing your whole life.",
+    "sub1Title": "Going out and seeing people",
+    "sub1P1": "It's the first lever, and the simplest one. Three nights out a month already change a lot. They don't have to be parties. A sports club, a volunteer group, an evening class or a choir work very well too.",
+    "sub2Title": "Keeping a real circle of friends",
+    "sub2P1": "Your friends take you places you wouldn't go alone. They also introduce you to people. If the people around you don't know you're open to meeting someone, just tell them. Lots of couples meet through a mutual friend.",
+    "sub3Title": "Daring to make the first move",
+    "sub3P1": "If someone catches your eye in a bar, waiting for them to fall for you is unlikely to lead anywhere. They may not even have noticed you. They may be just as shy as you are. Sometimes you just have to give it a go. Go and talk to them, any ordinary sentence will do.",
+    "sub4Title": "Staying natural",
+    "sub4P1": "The more you overthink, the more stressed you get. And the more stressed you are, the less natural you are. Meeting someone isn't an exam. If it doesn't click, you've lost nothing, and you've talked to someone new."
+  },
+  "section4": {
+    "title": "Why forcing things rarely works",
+    "p1": "When you force yourself to <a href=\"/en/why-cant-i-find-love-test/\">find love</a>, it rarely works. You go out with only one idea in your head. You look at everyone as a possible match. Other people pick up on it straight away.",
+    "p2": "It just isn't natural. You try to be liked instead of being yourself, and so people like you less...",
+    "p3": "It's often when you're looking the least that you get the nicest surprises. You go out to see friends, you sign up for a class because you enjoy it, and the meeting happens alongside. Careful though, looking less doesn't mean staying at home and waiting. You need to keep going out and saying yes to invitations."
+  },
+  "section5": {
+    "title": "Dating apps: who they work for",
+    "p1": "Dating apps work for some people. Couples form on them every day, that's true.",
+    "p2": "But very few users find a real relationship there. Lots of conversations stop after three messages. Some people go on date after date that leads nowhere and end up worn out.",
+    "p3": "An app can add to a social life. It rarely replaces one. If it's all you do, take a month off and go out more. Most of the time, that changes more than a new profile would."
+  },
+  "seo": {
+    "faqTitle": "The questions people ask"
+  },
+  "jsonLd": {
+    "about": "being single and meeting someone",
+    "faq1Q": "Can you know how long you'll stay single?",
+    "faq1A": "Not for certain, but you can estimate it. What matters most is how many new people you come across and what you do when someone catches your eye. The test starts from there to give a number of months.",
+    "faq2Q": "Why am I still single when I go out a lot?",
+    "faq2A": "Going out isn't always enough. If you always go out with the same people, or wait for the other person to make the first move, chances slip by. Look at your last relationship too. If it still takes up a lot of room, a new person struggles to find a place.",
+    "faq3Q": "Do dating apps save time?",
+    "faq3A": "For some people, yes. For many, no. They bring contacts but few real relationships. They work better on top of a social life than instead of one.",
+    "faq4Q": "Does age change things?",
+    "faq4A": "A little. You meet fewer new people as the years go by, especially with children or a demanding job. But age matters less than going out, having friends and how you approach people.",
+    "faq5Q": "Is the test anonymous?",
+    "faq5A": "Yes. Your answers stay in your browser. Only the type of result, with no personal data, is used to measure how the test is used."
+  }
+}

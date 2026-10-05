@@ -67,6 +67,10 @@
    variante claire en mode sombre. */
 :root { --primary-texte: 338 65% 42%; }
 .dark { --primary-texte: 338 85% 76%; }
+/* Même paire pour le turquoise des tests célibataires : --celib tel quel
+   reste foncé en thème sombre, trop peu lisible en petit texte. */
+:root { --celib-texte: 186 70% 29%; }
+.dark { --celib-texte: 186 55% 62%; }
 :root { --secondary-texte: 265 55% 45%; }
 .dark { --secondary-texte: 265 75% 78%; }
 
@@ -11418,6 +11422,46 @@ body { padding-bottom: var(--pub-footer, 0px); }
   }
   .seo-content .avec-colonne:not(.avec-colonne--sections) > .avec-colonne__contenu section:hover { box-shadow: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   COMBIEN DE TEMPS VAIS-JE RESTER CELIBATAIRE (DureeQuiz)
+   La duree en grand, sa fourchette et la date approximative, puis deux
+   colonnes : ce qui joue pour (turquoise de la famille celibataire) et ce
+   qui freine (rose), chaque reponse avec une jauge de son poids, et
+   l'encadre du levier qui ferait gagner le plus de temps.
+   ═══════════════════════════════════════════════════════════════════ */
+.dur-chiffre {
+  margin: .25rem 0 .4rem; font-size: clamp(2.2rem, 7vw, 3.1rem); font-weight: 800; line-height: 1.05;
+  background: linear-gradient(120deg, hsl(var(--celib)), hsl(var(--primary)));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.dur-fourchette { margin: 0; font-size: .95rem; color: hsl(var(--muted-foreground)); }
+.dur-date {
+  display: inline-block; margin: .8rem 0 0; padding: .3rem .9rem; border-radius: 999px;
+  background: hsl(var(--celib) / .12); color: hsl(var(--celib-texte)); font-size: .85rem; font-weight: 700;
+}
+.dur-facteurs { display: grid; gap: 1rem; max-width: 40rem; margin: 1.5rem auto 0; text-align: left; }
+@media (min-width: 640px) { .dur-facteurs { grid-template-columns: 1fr 1fr; } }
+.dur-col { padding: 1rem 1.1rem; border: 1px solid hsl(var(--border)); border-radius: 1rem; background: hsl(var(--card)); }
+.dur-col-titre { margin: 0 0 .65rem; font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.dur-col--pour .dur-col-titre { color: hsl(var(--celib-texte)); }
+.dur-col--contre .dur-col-titre { color: hsl(var(--primary-texte)); }
+.dur-col ul { display: grid; gap: .75rem; margin: 0; padding: 0; list-style: none; }
+.dur-facteur { display: block; font-size: .9rem; font-weight: 700; color: hsl(var(--foreground)); }
+.dur-reponse { display: block; font-size: .8rem; line-height: 1.4; color: hsl(var(--muted-foreground)); }
+.dur-jauge { display: block; height: .3rem; margin-top: .35rem; border-radius: 999px; background: hsl(var(--muted)); overflow: hidden; }
+.dur-jauge span { display: block; height: 100%; border-radius: inherit; }
+.dur-col--pour .dur-jauge span { background: hsl(var(--celib)); }
+.dur-col--contre .dur-jauge span { background: hsl(var(--primary)); }
+.dur-levier {
+  max-width: 40rem; margin: 1rem auto 0; padding: 1rem 1.15rem; text-align: left;
+  border: 1px dashed hsl(var(--celib) / .6); border-radius: 1rem; background: hsl(var(--celib) / .07);
+}
+.dur-levier-titre { display: block; margin-bottom: .3rem; font-size: .9rem; color: hsl(var(--foreground)); }
+.dur-levier p { margin: 0; font-size: .9rem; line-height: 1.55; color: hsl(var(--muted-foreground)); }
+.dur-levier ul { display: grid; gap: .45rem; margin: .65rem 0 0; padding: 0; list-style: none; }
+.dur-levier li { font-size: .85rem; color: hsl(var(--muted-foreground)); }
+.dur-levier li strong { display: block; color: hsl(var(--foreground)); }
 
 /* ═══════════════════════════════════════════════════════════════════
    COUPLE OU CELIBAT : un resultat en deux parts

@@ -307,6 +307,8 @@ const GD_QUESTION_PREFIXES = {
   celibataire: ['celib'],
   // Couple ou célibat : vingt questions pondérées, un résultat en deux parts.
   'couple-ou-celibat': ['balance'],
+  // Combien de temps vais-je rester célibataire : vingt questions, une durée.
+  'duree-celibat': ['dureeCelib'],
   // Amour ou attachement : deux axes, une question sur deux pour chacun.
   'amour-ou-attachement': ['attache'],
   'je-l-aime-encore': ['jeLaime'],

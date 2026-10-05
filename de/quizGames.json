@@ -320,6 +320,8 @@
     "gapWarning": "Es gibt einen deutlichen Unterschied zwischen euren beiden Scores. Oft liegen in diesen Unterschieden die wichtigsten Gespräche, die noch geführt werden müssen."
   },
   "quizNames": {
+    "testDureeCelibat": "Wie lange bleibe ich noch Single?",
+    "testPurete": "Reinheitstest",
     "testCouple": "Paar-Test",
     "testCommonPoints": "Gemeinsamkeiten-Test",
     "testDistance": "Fernbeziehung-Test",
