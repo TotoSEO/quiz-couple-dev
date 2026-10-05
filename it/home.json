@@ -150,10 +150,29 @@
     "jeuxEyebrow": "I giochi"
   },
   "customQuizPromo": {
-    "badge": "Nuovo",
-    "title": "Crea il tuo quiz",
-    "sub": "Inventa le tue domande, scegli il formato e condividi il tuo quiz con gli amici o il partner con un solo link. 100% gratis, senza registrazione.",
-    "cta": "Crea il mio quiz"
+    "eyebrow": "Quiz personalizzato",
+    "title": "Crea il tuo",
+    "titleHighlight": "quiz personalizzato",
+    "sub": "Scrivi le tue domande, scegli il tipo di quiz e ti diamo un link da mandare al partner o agli amici. Giocano dal telefono, senza registrazione, ed è gratis!",
+    "modeles": [
+      "Quiz a punti",
+      "Vero o falso",
+      "Preferisci",
+      "Solo per ridere"
+    ],
+    "note": "Il quiz resta privato, può giocare solo chi ha il link.",
+    "cta": "Crea il mio quiz",
+    "demo": {
+      "titre": "Quanto mi conosci?",
+      "num": "Domanda 2/10",
+      "question": "Il mio dolce preferito?",
+      "reponses": [
+        "Il tiramisù",
+        "Le crêpe",
+        "Il tortino al cioccolato"
+      ],
+      "lien": "Link copiato ✓"
+    }
   },
   "marquee": {
     "item1": "💕 Testate la vostra coppia",

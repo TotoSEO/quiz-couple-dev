@@ -296,6 +296,45 @@ const ROUTES_JEUX = [
   'jeuOuiNon', 'jeuPhrases',
 ];
 
+// Les quatre familles de navigation, dans l'ordre d'affichage. C'est la seule
+// liste : le menu (header.ejs), les carrousels de l'accueil (home.ejs), le
+// pied de page (footer.ejs) et le plan du site (sitemap.ejs) la lisent tous.
+// Écrites à la main dans chaque gabarit, les quatre copies avaient dérivé :
+// pas le même ordre, le test de pureté et celui des vacances sur l'accueil
+// mais pas dans le menu, quatre tests absents du plan du site. Une page
+// réservée au français disparaît d'elle-même ailleurs, getLocalizedUrl ne lui
+// donnant pas d'adresse. Le libellé de chaque lien est `nav.<clé>` dans
+// common.json, le même partout.
+export const FAMILLES_NAV = {
+  tests: [
+    'testCouple', 'testCommonPoints', 'testCompatibilite', 'testDistance',
+    'testFinCouple', 'testToxic', 'testPervers', 'testEmprise',
+    'testAmourHabitude', 'testAmourAttachement', 'testEstCeLeBon',
+    'testJeLaimeEncore', 'testCoupleSain', 'testMariage', 'testDivorce',
+    'testParentalite', 'testEmmenager', 'calculatriceAmour', 'compteurCouple',
+    'testAstroPrenoms', 'testDateNaissance', 'testSignesChinois',
+    'testJalousie', 'testLangageAmour', 'testPersonnalite', 'testAttachement',
+    'testConfiance', 'testDependance', 'testAmeSoeur', 'testKarmique',
+    'testInfidelite', 'testCouche', 'testAimeEncore', 'testDistanceAime',
+    'testChargeMentale', 'testPurete', 'testVacances',
+  ],
+  celib: [
+    'testTrouverAmour', 'testCelibataire', 'testCoupleOuCelibat',
+    'testPretRelation', 'testSuisJeAmoureux', 'testCrush', 'testAmourAmitie',
+    'testAmourAmi', 'testSecret', 'testEx',
+  ],
+  quiz: [
+    'quizAmoureux', 'quizTypeCouple', 'quizRencontre', 'quizCoquin',
+    'quizMarrant', 'quizKnowledge', 'quizMost', 'quizAdo', 'quizGenant',
+    'quizVraiFaux', 'zamours', 'quizTentation',
+  ],
+  jeux: [
+    'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
+    'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais',
+    'jeuQuiPourrait', 'jeuOuiNon', 'jeuPhrases',
+  ],
+};
+
 // Les outils : on donne deux prenoms ou deux dates, la page rend un resultat,
 // il n'y a pas de question posee. Ils ne se reconnaissent ni a leur cle ni a
 // leur gabarit, il faut donc les nommer aussi. Sans ca, la calculatrice de

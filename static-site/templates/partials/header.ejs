@@ -1,93 +1,18 @@
 <%
-  // Navigation link definitions with icons
-  const testLinks = [
-    { routeKey: 'testCouple', labelKey: 'nav.testCouple', icon: '💕', descKey: 'nav.testCoupleDesc' },
-    { routeKey: 'testCommonPoints', labelKey: 'nav.testCommonPoints', icon: '🎯', descKey: 'nav.testCommonPointsDesc' },
-    { routeKey: 'testCompatibilite', labelKey: 'nav.testCompatibilite', icon: '💘', descKey: 'nav.testCompatibiliteDesc' },
-    { routeKey: 'testDistance', labelKey: 'nav.testDistance', icon: '🌍', descKey: 'nav.testDistanceDesc' },
-    { routeKey: 'testFinCouple', labelKey: 'nav.testFinCouple', icon: '🪢', descKey: 'nav.testFinCoupleDesc' },
-    { routeKey: 'testToxic', labelKey: 'nav.testToxic', icon: '⚠️', descKey: 'nav.testToxicDesc' },
-    { routeKey: 'testPervers', labelKey: 'nav.testPervers', icon: '🎭', descKey: 'nav.testPerversDesc' },
-    { routeKey: 'testEmprise', labelKey: 'nav.testEmprise', icon: '🔒', descKey: 'nav.testEmpriseDesc' },
-    { routeKey: 'testAmourHabitude', labelKey: 'nav.testAmourHabitude', icon: '☕', descKey: 'nav.testAmourHabitudeDesc' },
-    { routeKey: 'testAmourAttachement', labelKey: 'nav.testAmourAttachement', icon: '🌹', descKey: 'nav.testAmourAttachementDesc' },
-    { routeKey: 'testEstCeLeBon', labelKey: 'nav.testEstCeLeBon', icon: '🔑', descKey: 'nav.testEstCeLeBonDesc' },
-    { routeKey: 'testJeLaimeEncore', labelKey: 'nav.testJeLaimeEncore', icon: '🕯️', descKey: 'nav.testJeLaimeEncoreDesc' },
-    { routeKey: 'testCoupleSain', labelKey: 'nav.testCoupleSain', icon: '💚', descKey: 'nav.testCoupleSainDesc' },
-    { routeKey: 'testMariage', labelKey: 'nav.testMariage', icon: '💒', descKey: 'nav.testMariageDesc' },
-    { routeKey: 'testDivorce', labelKey: 'nav.testDivorce', icon: '⚖️', descKey: 'nav.testDivorceDesc' },
-    { routeKey: 'testParentalite', labelKey: 'nav.testParentalite', icon: '👶', descKey: 'nav.testParentaliteDesc' },
-    { routeKey: 'testEmmenager', labelKey: 'nav.testEmmenager', icon: '🏠', descKey: 'nav.testEmmenagerDesc' },
-    { routeKey: 'calculatriceAmour', labelKey: 'nav.calculatriceAmour', icon: '🧮', descKey: 'nav.calculatriceAmourDesc' },
-    { routeKey: 'compteurCouple', labelKey: 'nav.compteurCouple', icon: '📆', descKey: 'nav.compteurCoupleDesc' },
-    { routeKey: 'testAstroPrenoms', labelKey: 'nav.testAstroPrenoms', icon: '♈', descKey: 'nav.testAstroPrenomsDesc' },
-    { routeKey: 'testDateNaissance', labelKey: 'nav.testDateNaissance', icon: '📅', descKey: 'nav.testDateNaissanceDesc' },
-    { routeKey: 'testSignesChinois', labelKey: 'nav.testSignesChinois', icon: '🐉', descKey: 'nav.testSignesChinoisDesc' },
-    { routeKey: 'testJalousie', labelKey: 'nav.testJalousie', icon: '🫣', descKey: 'nav.testJalousieDesc' },
-    { routeKey: 'testLangageAmour', labelKey: 'nav.testLangageAmour', icon: '💬', descKey: 'nav.testLangageAmourDesc' },
-    { routeKey: 'testPersonnalite', labelKey: 'nav.testPersonnalite', icon: '💘', descKey: 'nav.testPersonnaliteDesc' },
-    { routeKey: 'testAttachement', labelKey: 'nav.testAttachement', icon: '🔗', descKey: 'nav.testAttachementDesc' },
-    { routeKey: 'testConfiance', labelKey: 'nav.testConfiance', icon: '🤝', descKey: 'nav.testConfianceDesc' },
-    { routeKey: 'testDependance', labelKey: 'nav.testDependance', icon: '⚓', descKey: 'nav.testDependanceDesc' },
-    { routeKey: 'testAmeSoeur', labelKey: 'nav.testAmeSoeur', icon: '💫', descKey: 'nav.testAmeSoeurDesc' },
-    { routeKey: 'testKarmique', labelKey: 'nav.testKarmique', icon: '🔮', descKey: 'nav.testKarmiqueDesc' },
-    { routeKey: 'testInfidelite', labelKey: 'nav.testInfidelite', icon: '💔', descKey: 'nav.testInfideliteDesc' },
-    { routeKey: 'testCouche', labelKey: 'nav.testCouche', icon: '🛏️', descKey: 'nav.testCoucheDesc' },
-    { routeKey: 'testAimeEncore', labelKey: 'nav.testAimeEncore', icon: '💞', descKey: 'nav.testAimeEncoreDesc' },
-    { routeKey: 'testDistanceAime', labelKey: 'nav.testDistanceAime', icon: '📞', descKey: 'nav.testDistanceAimeDesc' },
-    { routeKey: 'testChargeMentale', labelKey: 'nav.testChargeMentale', icon: '🧠', descKey: 'nav.testChargeMentaleDesc' },
-  ];
-  // Les tests d'avant le couple : un crush, un ex, un ami un peu trop proche.
-  // Ils ont leur propre famille, pour que le menu des tests de couple ne les
-  // noie pas et que la personne célibataire trouve tout de suite sa porte.
-  // La même liste vit dans footer.ejs, sitemap.ejs et home.ejs.
-  const celibLinks = [
-    { routeKey: 'testTrouverAmour', labelKey: 'nav.testTrouverAmour' },
-    { routeKey: 'testCelibataire', labelKey: 'nav.testCelibataire' },
-    { routeKey: 'testCoupleOuCelibat', labelKey: 'nav.testCoupleOuCelibat' },
-    { routeKey: 'testPretRelation', labelKey: 'nav.testPretRelation' },
-    { routeKey: 'testSuisJeAmoureux', labelKey: 'nav.testSuisJeAmoureux' },
-    { routeKey: 'testCrush', labelKey: 'nav.testCrush' },
-    { routeKey: 'testAmourAmitie', labelKey: 'nav.testAmourAmitie' },
-    { routeKey: 'testAmourAmi', labelKey: 'nav.testAmourAmi' },
-    { routeKey: 'testSecret', labelKey: 'nav.testSecret' },
-    { routeKey: 'testEx', labelKey: 'nav.testEx' },
-  ];
-  const quizLinks = [
-    { routeKey: 'quizAmoureux', labelKey: 'nav.quizAmoureux', icon: '❤️', descKey: 'nav.quizAmoureuxDesc' },
-    { routeKey: 'quizTypeCouple', labelKey: 'nav.quizTypeCouple', icon: '🧩', descKey: 'nav.quizTypeCoupleDesc' },
-    { routeKey: 'quizRencontre', labelKey: 'nav.quizRencontre', icon: '💬', descKey: 'nav.quizRencontreDesc' },
-    { routeKey: 'quizCoquin', labelKey: 'nav.quizCoquin', icon: '🔥', descKey: 'nav.quizCoquinDesc' },
-    { routeKey: 'quizMarrant', labelKey: 'nav.quizMarrant', icon: '😂', descKey: 'nav.quizMarrantDesc' },
-    { routeKey: 'quizKnowledge', labelKey: 'nav.quizKnowledge', icon: '🧠', descKey: 'nav.quizKnowledgeDesc' },
-    { routeKey: 'quizMost', labelKey: 'nav.quizMost', icon: '🏆', descKey: 'nav.quizMostDesc' },
-    { routeKey: 'quizAdo', labelKey: 'nav.quizAdo', icon: '🌟', descKey: 'nav.quizAdoDesc' },
-    { routeKey: 'quizGenant', labelKey: 'nav.quizGenant', icon: '😳', descKey: 'nav.quizGenantDesc' },
-    { routeKey: 'quizVraiFaux', labelKey: 'nav.quizVraiFaux', icon: '✅', descKey: 'nav.quizVraiFauxDesc' },
-    { routeKey: 'zamours', labelKey: 'nav.zamours', icon: '📺', descKey: 'nav.zamoursDesc' },
-    { routeKey: 'quizTentation', labelKey: 'nav.quizTentation', icon: '🏝️', descKey: 'nav.quizTentationDesc' },
-  ];
-  // Les jeux, dans l'ordre du hub. Le lien direct vers le hub ne suffisait
-  // pas : personne n'ouvrait la page, donc personne ne trouvait les jeux.
-  const jeuLinks = [
-    { routeKey: 'quizTuPreferes', labelKey: 'nav.quizTuPreferes' },
-    { routeKey: 'jeuActionVerite', labelKey: 'nav.jeuActionVerite' },
-    { routeKey: 'jeuActionVeriteHot', labelKey: 'nav.jeuActionVeriteHot' },
-    { routeKey: 'jeuGages', labelKey: 'nav.jeuGages' },
-    { routeKey: 'jeuPlateau', labelKey: 'nav.jeuPlateau' },
-    { routeKey: 'jeuQuiDeNous', labelKey: 'nav.jeuQuiDeNous' },
-    { routeKey: 'jeuDilemmes', labelKey: 'nav.jeuDilemmes' },
-    { routeKey: 'pourContre', labelKey: 'nav.pourContre' },
-    { routeKey: 'jeuJamais', labelKey: 'nav.jeuJamais' },
-    { routeKey: 'jeuQuiPourrait', labelKey: 'nav.jeuQuiPourrait' },
-    { routeKey: 'jeuOuiNon', labelKey: 'nav.jeuOuiNon' },
-    { routeKey: 'jeuPhrases', labelKey: 'nav.jeuPhrases' },
-  ];
+  // Les quatre familles viennent de FAMILLES_NAV (config.js), la liste que
+  // lisent aussi l'accueil, le pied de page et le plan du site : un ajout ou un
+  // déplacement se fait là, une seule fois. Le libellé est nav.<clé>.
+  const versLiens = (cles) => cles.map((routeKey) => ({ routeKey, labelKey: 'nav.' + routeKey }));
+  const testLinks = versLiens(famillesNav.tests);
+  const celibLinks = versLiens(famillesNav.celib);
+  const quizLinks = versLiens(famillesNav.quiz);
+  const jeuLinks = versLiens(famillesNav.jeux);
   const directLinks = [
     // Le test de pureté vise un mot-clé très concurrentiel : il lui faut une
-    // entrée de premier niveau, pas une ligne perdue dans le menu des tests.
-    // « vedette » lui donne en plus un traitement à part, distinct du bouton
-    // des activités pour qu'on ne lise pas deux fois le même appel à l'action.
+    // entrée de premier niveau, en plus de sa ligne dans la liste des tests
+    // (qui montre les mêmes pages que l'accueil). « vedette » lui donne un
+    // traitement à part, distinct du bouton des activités pour qu'on ne lise
+    // pas deux fois le même appel à l'action.
     { routeKey: 'testPurete', labelKey: 'nav.testPurete', vedette: true, emoji: '🌡️' },
     { routeKey: 'customQuiz', labelKey: 'nav.customQuiz' },
     { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
@@ -136,6 +61,17 @@
     testLangageAmour: _svg('<path d="M21 11.5a8 8 0 0 1-8 8H7l-4 3V11.5a8 8 0 0 1 8-8 8 8 0 0 1 10 8z"/><path d="M9 11h.01M13 11h.01"/>'),
     testPersonnalite: _svg('<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/><path d="M12 8v5"/><path d="M9.5 10.5h5"/>'),
     testAttachement: _svg('<path d="M9 12a3 3 0 0 1 0-4l2-2a3 3 0 0 1 4 4l-1 1"/><path d="M15 12a3 3 0 0 1 0 4l-2 2a3 3 0 0 1-4-4l1-1"/>'),
+    testDependance: _svg('<circle cx="12" cy="5" r="3"/><path d="M12 22V8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/>'),
+    testPurete: _svg('<path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/><path d="M12 9v7"/>'),
+    testVacances: _svg('<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>'),
+    testAmourAttachement: _svg('<path d="M12 22v-7"/><path d="M12 15a5 5 0 0 0 5-5V5l-2.5 1.5L12 3 9.5 6.5 7 5v5a5 5 0 0 0 5 5z"/><path d="M12 19c-1.5-1.8-3.5-2.2-5-2 .2 1.6 1.8 3 5 2z"/>'),
+    testJeLaimeEncore: _svg('<path d="M8 22h8"/><rect x="9" y="10" width="6" height="12" rx="1"/><path d="M12 10V8"/><path d="M12 8c-1.3-1-1.3-2.7 0-4.5 1.3 1.8 1.3 3.5 0 4.5z"/>'),
+    testTrouverAmour: _svg('<path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><path d="M12 12.6s-2.4-1.5-2.4-3.1a1.2 1.2 0 0 1 2.4-.6 1.2 1.2 0 0 1 2.4.6c0 1.6-2.4 3.1-2.4 3.1z"/>'),
+    testCelibataire: _svg('<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>'),
+    testCoupleOuCelibat: _svg('<circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" fill-opacity=".25" stroke="none"/>'),
+    testPretRelation: _svg('<path d="M12 22V12"/><path d="M12 12C12 8 9 5 4 5c0 4 3 7 8 7z"/><path d="M12 14c0-3.5 2.5-6 7-6 0 3.5-2.5 6-7 6z"/>'),
+    quizTypeCouple: _svg('<path d="M4 8V5a1 1 0 0 1 1-1h4a2 2 0 1 1 4 0h4a1 1 0 0 1 1 1v4a2 2 0 1 1 0 4v4a1 1 0 0 1-1 1h-4a2 2 0 1 0-4 0H5a1 1 0 0 1-1-1v-4a2 2 0 1 0 0-4z"/>'),
+    jeuOuiNon: _svg('<rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="16" cy="12" r="3"/>'),
     testConfiance: _svg('<path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/>'),
     testAmeSoeur: _svg('<path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/><path d="M12 8.4V21"/>'),
     testKarmique: _svg('<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18 4.5 4.5 0 0 1 0-9 4.5 4.5 0 0 0 0-9z"/>'),
@@ -263,13 +199,6 @@
               </button>
               <div class="nav-megamenu nav-megamenu--tests nav-dropdown-content hidden">
                 <div class="nav-megamenu-inner">
-                  <% if (getLocalizedUrl('testVacances', lang)) { %>
-                  <a href="<%= getLocalizedUrl('testVacances', lang) %>" class="nav-megamenu-avant">
-                    <span class="nav-megamenu-avant-emoji" aria-hidden="true">🌴</span>
-                    <span class="nav-megamenu-avant-texte">Test où partir en vacances en couple ?</span>
-                    <span class="nav-megamenu-avant-badge">Nouveau</span>
-                  </a>
-                  <% } %>
                   <div class="nav-megamenu-grid">
                     <% for (const link of testLinksFiltered) { %>
                     <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item">
@@ -398,13 +327,6 @@
               <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             </button>
             <div class="mobile-accordion-content hidden">
-              <% if (getLocalizedUrl('testVacances', lang)) { %>
-              <a href="<%= getLocalizedUrl('testVacances', lang) %>" class="nav-megamenu-avant nav-megamenu-avant--mobile">
-                <span class="nav-megamenu-avant-emoji" aria-hidden="true">🌴</span>
-                <span class="nav-megamenu-avant-texte">Test où partir en vacances en couple ?</span>
-                <span class="nav-megamenu-avant-badge">Nouveau</span>
-              </a>
-              <% } %>
               <div class="mobile-nav-grid">
                 <% for (const link of testLinksFiltered) { %>
                 <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item">

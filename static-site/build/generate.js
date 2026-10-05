@@ -15,7 +15,7 @@ import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomD
 import {
   BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
-  QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
+  QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, FAMILLES_NAV, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable, pagePublicitaire,
 } from './config.js';
@@ -987,6 +987,7 @@ async function generatePage(routeKey, lang) {
     translations,
     // Helpers
     getLocalizedUrl,
+    famillesNav: FAMILLES_NAV,
     getLocalizedPath,
     escapeHtml,
     JSON,
@@ -1764,6 +1765,7 @@ async function generateBlogArticle(articleMeta, lang) {
     t,
     translations,
     getLocalizedUrl,
+    famillesNav: FAMILLES_NAV,
     getLocalizedPath,
     escapeHtml,
     JSON,
@@ -1850,6 +1852,7 @@ async function generate404Pages() {
       tgd,
       translations,
       getLocalizedUrl,
+      famillesNav: FAMILLES_NAV,
       getLocalizedPath,
       escapeHtml,
       JSON,

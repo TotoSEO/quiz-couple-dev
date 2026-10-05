@@ -113,9 +113,18 @@ célibataire (diagnostic à huit causes, vingt questions), couple ou célibat
 crush, amour ou amitié, amoureux de mon/ma BFF, m'aime-t-il en secret, mon ex
 pense-t-il encore à moi, suis-je prêt(e) pour une nouvelle relation (solo à
 barème explicite, vingt questions). Il n'y a pas de page hub pour cette famille, seulement
-l'entrée de menu. Les listes de liens sont écrites en dur
-dans chacun des quatre gabarits : une page ajoutée ou déplacée se répercute
-aux quatre endroits, dans la même famille. Les compteurs du hero de l'accueil
+l'entrée de menu. Les quatre listes, et leur ordre, vivent à un seul endroit :
+`FAMILLES_NAV` dans `build/config.js`, lu par le menu (bureau et mobile), les
+carrousels de l'accueil, le pied de page et le plan du site. Une page ajoutée
+ou déplacée se règle là, une seule fois. Le libellé est `nav.<clé>` de
+common.json partout, cartes de l'accueil comprises, et deux pages d'une même
+famille n'ont jamais le même libellé. Le menu dessine une icône par clé
+(`navIcons` dans header.ejs, une icône générique sinon) et l'accueil une
+pastille par carte (`VISUELS` dans home.ejs). Écrites à la main dans chaque
+gabarit jusqu'en octobre 2026, les copies avaient dérivé : ordre différent,
+pureté et vacances sur l'accueil seulement, quatre tests absents du plan du
+site. Le pied de page ajoute les questions de couple aux quiz et le hub aux
+jeux ; le menu garde en plus le test de pureté en entrée vedette. Les compteurs du hero de l'accueil
 comptent les quatre familles : « tests disponibles » additionne les tests de
 couple et les tests célibataires, « quiz & jeux disponibles » les quiz et les
 jeux. Ils n'en comptaient que deux et annonçaient 31 et 11 pour un catalogue
