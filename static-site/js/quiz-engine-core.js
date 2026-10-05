@@ -1066,6 +1066,9 @@ var QuizEngine = (function() {
   // d'apparaître se trouve complètement en dehors du champ de vision.
   function smoothScroll(node, block) {
     if (!node) return;
+    // Un resultat qui a pris son adresse a deja son propre defilement
+    // (defileVersLeVerdict) : le centrer ici l'emmenait sous le verdict.
+    if (node.getAttribute && node.getAttribute('data-arrivee')) return;
     try {
       var r = node.getBoundingClientRect();
       var h = window.innerHeight || document.documentElement.clientHeight;
@@ -1721,7 +1724,16 @@ var QuizEngine = (function() {
         slides[j].setAttribute('aria-selected', j === i ? 'true' : 'false');
         pastilles[j].classList.toggle('est-actif', j === i);
       }
-      try { slides[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' }); } catch (e) {}
+      // Centrer la vignette dans le carrousel, a l'horizontale seulement.
+      // scrollIntoView faisait aussi defiler la page jusqu'au carrousel, en
+      // bas de l'ecran de resultat : appele a la construction, il emmenait
+      // tout le monde sous son verdict (et sous le pave place juste apres).
+      try {
+        var cr = carrousel.getBoundingClientRect(), sr = slides[i].getBoundingClientRect();
+        if (!cr.width) return;
+        var ecart = (sr.left + sr.width / 2) - (cr.left + cr.width / 2);
+        if (Math.abs(ecart) > 1) carrousel.scrollBy({ left: ecart, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
+      } catch (e) {}
     }
 
     for (var i = 0; i < STORY_VISUELS.length; i++) {
@@ -2354,17 +2366,52 @@ var QuizEngine = (function() {
   // lui, il n'y a rien a recalculer a son ouverture, seulement a remonter
   // dessus. Le fichier n'a pas ete charge ? Le resultat s'affiche comme
   // avant, il ne prend simplement pas d'adresse a lui.
+  //
+  // L'arrivee amene le haut du resultat sous l'en-tete collant. Deux pieges,
+  // mesures le 6 octobre 2026 : on est appele avant que le moteur ait insere
+  // la carte dans la page, et un scrollIntoView sur un element detache ne
+  // fait rien (sur ordinateur, la page ne bougeait pas, le verdict restait
+  // sous la ligne de flottaison) ; et chaque moteur appelle ensuite
+  // smoothScroll(wrap, 'center') sur tout le plan de resultat, haut de
+  // plusieurs ecrans, ce qui posait le telephone au milieu, sous le verdict
+  // et sous le pave qui le suit. On attend donc que la carte soit dans la
+  // page, et data-arrivee dit a smoothScroll de s'effacer.
   function arriveeAuResultat(wrap) {
     if (!window.QCResultat) return;
     var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
+    if (wrap && wrap.setAttribute) wrap.setAttribute('data-arrivee', '1');
     window.QCResultat.arrivee(wrap, {
       lang: quizEl ? (quizEl.dataset.lang || 'fr') : 'fr',
-      apres: function () {
-        if (wrap && wrap.scrollIntoView) {
-          try { wrap.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-          catch (e) { wrap.scrollIntoView(); }
-        }
-      }
+      apres: function () { defileVersLeVerdict(wrap, 0); }
+    });
+  }
+
+  function defileVersLeVerdict(wrap, essai) {
+    if (!wrap) return;
+    if (!wrap.isConnected) {
+      if (essai < 30) window.requestAnimationFrame(function () { defileVersLeVerdict(wrap, essai + 1); });
+      return;
+    }
+    // Une image de plus pour que la carte ait sa taille definitive.
+    window.requestAnimationFrame(function () {
+      try {
+        // Le haut du plan, pas celui de la carte : le plan commence par le
+        // bloc de notation, collant, qui recouvrait l'anneau du score quand
+        // on visait la carte. Vise ici, il prend sa place au-dessus d'elle.
+        var entete = document.querySelector('header');
+        var marge = (entete && getComputedStyle(entete).position === 'sticky' ? entete.offsetHeight : 0) + 12;
+        // La position de mise en page, pas celle de getBoundingClientRect : le
+        // plan entre avec une animation d'echelle (quizResultPop, de 0,9 a 1),
+        // et le rectangle mesure pendant l'animation remontait de 5 % de sa
+        // hauteur, soit 133 px sur telephone. offsetTop ignore les transformations.
+        var haut = 0;
+        for (var n = wrap; n; n = n.offsetParent) haut += n.offsetTop;
+        var surEcran = haut - window.pageYOffset;
+        // Deja bien place : le haut du plan est visible, dans le premier
+        // tiers de l'ecran. On ne bouge rien.
+        if (surEcran >= marge - 4 && surEcran <= window.innerHeight / 3) return;
+        window.scrollTo({ top: Math.max(0, haut - marge), behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
+      } catch (e) {}
     });
   }
 

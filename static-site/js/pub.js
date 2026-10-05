@@ -86,11 +86,12 @@
    n'en redemande pas : le drapeau data-pub-posee est partage, et la regie
    n'en sert de toute facon qu'un par page.
 
-   ── Pas de rafraichissement hors ecran ───────────────────────────────
-   La table des delais de rafraichissement « invisible » de la regie est
-   posee vide avant son premier script : chaque unite retombe sur « jamais »,
-   le rafraichissement visible reste le sien (voir
-   coupeRafraichissementInvisible).
+   ── Pas de rafraichissement hors de la vue ────────────────────────────
+   La regie recharge chaque emplacement a intervalle regulier, a l'ecran
+   comme hors de l'ecran, et jusque dans un onglet passe en arriere-plan.
+   On ne la laisse rafraichir qu'un emplacement vu, dans un onglet affiche,
+   et seulement apres un delai complet passe sous les yeux de la personne
+   (voir brideRafraichissement).
 
    ── Le footer ────────────────────────────────────────────────────────
    Le footer (format 6) est le seul format hors flux : son div n'est qu'un
@@ -175,9 +176,49 @@
     if (!format || !site) return;
     hote.setAttribute('data-pub-posee', '1');
     var cible = hote.firstElementChild || hote;
+    rapatrie(hote, format);
     injecte(cible, format, site);
     if (!HORS_FLUX[format]) surveilleRemplissage(hote, cible);
     else if (format === FORMAT_FOOTER) surveilleFooter(hote);
+  }
+
+  // ── L'annonce reste dans son emplacement ────────────────────────────
+  // Sur telephone, le script du pave (format 2) ignore le div qu'on lui
+  // prepare : il prend tous les <p> de la page, regarde ceux qui tombent
+  // entre 10 % et 20 % de la liste, et glisse son conteneur (sas_26300) dans
+  // le plus long ; avec moins de cinq paragraphes, dans le div a 10 % de la
+  // liste des div. C'est un reglage de leur cote (« 2 == 2 && 1 == 1 &&
+  // deviceType == 0 » dans leur script). Mesure le 6 octobre 2026 : au
+  // resultat d'un test, l'annonce atterrissait dans le texte, 1 500 a
+  // 2 400 px sous l'ecran, jamais vue ; et notre encart, reste blanc, se
+  // repliait huit secondes plus tard, ce qui faisait sauter la page.
+  //
+  // Leur script cree le conteneur et l'insere d'un seul tenant, puis attend
+  // les encheres (une a trois secondes) avant de rendre l'annonce dedans, en
+  // le retrouvant par son identifiant. Un MutationObserver pose avant
+  // l'injection voit l'insertion dans la microtache qui suit, et ramene le
+  // conteneur dans notre encart avant tout rendu. Un conteneur qui porte deja
+  // un cadre n'est jamais deplace : le deplacer rechargerait l'annonce.
+  // L'observateur de visibilite de la regie suit l'element lui-meme, il
+  // continue donc de le suivre a sa nouvelle place.
+  var CONTENEURS = { '2': 'sas_26300', '31': 'sas_39287' };
+  var DUREE_RAPATRIEMENT = 15000;
+
+  function rapatrie(hote, format) {
+    var id = CONTENEURS[format];
+    if (!id || !('MutationObserver' in window)) return;
+    var cible = hote.firstElementChild || hote;
+    var mo = new MutationObserver(function () {
+      var el = document.getElementById(id);
+      if (!el) return;
+      mo.disconnect();
+      if (hote.contains(el) || el.querySelector('iframe')) return;
+      var ancien = el.parentElement;
+      cible.appendChild(el);
+      if (ancien && ancien.classList) ancien.classList.remove('aBigClassNameToAvoidCollision' + format);
+    });
+    mo.observe(document.documentElement, { childList: true, subtree: true });
+    setTimeout(function () { mo.disconnect(); }, DUREE_RAPATRIEMENT);
   }
 
   // ── Rempli ou vide ? ─────────────────────────────────────────────────
@@ -199,16 +240,54 @@
     return r.bottom <= 0 || r.top >= window.innerHeight;
   }
 
+  // Le premier element qui suit l'emplacement dans le document : c'est sa
+  // position qui dit de combien le contenu a bouge.
+  function elementSuivant(n) {
+    while (n && n !== document.body) {
+      if (n.nextElementSibling) return n.nextElementSibling;
+      n = n.parentElement;
+    }
+    return null;
+  }
+
+  // Applique le changement de hauteur sans que rien ne bouge sous les yeux.
+  // En dessous de l'ecran, il n'y a rien a faire : seul ce qui suit bouge,
+  // et rien de ce qui suit n'est visible. Au-dessus, tout ce qu'on lit
+  // remonterait de 250 px. Chrome compense tout seul (ancrage du
+  // defilement), Safari non : un iPhone voyait la page sauter. On coupe donc
+  // l'ancrage le temps du changement, on mesure de combien le contenu a
+  // bouge, et on fait defiler d'autant, ce qui donne le meme resultat
+  // partout. Lecture, ecriture, lecture : une seule mise en page forcee.
+  function sansSaut(hote, action) {
+    var r = hote.getBoundingClientRect();
+    var repere = r.bottom <= 0 ? elementSuivant(hote) : null;
+    if (!repere) { action(); return; }
+    var racine = document.documentElement, corps = document.body;
+    var avant = repere.getBoundingClientRect().top;
+    var ancrages = [racine.style.overflowAnchor, corps.style.overflowAnchor];
+    racine.style.overflowAnchor = 'none';
+    corps.style.overflowAnchor = 'none';
+    action();
+    var decalage = repere.getBoundingClientRect().top - avant;
+    if (decalage) window.scrollBy(0, decalage);
+    window.requestAnimationFrame(function () {
+      racine.style.overflowAnchor = ancrages[0];
+      corps.style.overflowAnchor = ancrages[1];
+    });
+  }
+
   // Applique un changement de mise en page a l'emplacement quand il n'est pas
   // a l'ecran : tout de suite s'il est deja hors champ, sinon a sa sortie.
+  // Jamais sous les yeux de la personne, et sans saut (sansSaut).
   function quandHorsEcran(hote, action) {
-    if (horsEcran(hote)) { action(); return; }
+    function applique() { sansSaut(hote, action); }
+    if (horsEcran(hote)) { applique(); return; }
     if (!('IntersectionObserver' in window)) return;
     var obs = new IntersectionObserver(function (entrees) {
       for (var i = 0; i < entrees.length; i++) {
         if (entrees[i].isIntersecting) continue;
         obs.disconnect();
-        action();
+        applique();
         return;
       }
     });
@@ -485,33 +564,122 @@
     injecte(hote.firstElementChild || hote, format, site);
   }
 
-  // ── Pas de rafraichissement hors ecran ──────────────────────────────
+  // ── Pas de rafraichissement hors de la vue ──────────────────────────
   // La regie recharge chaque emplacement a intervalle regulier, meme quand il
-  // n'est pas a l'ecran : dans son script, un delai « visible » (19 a 27 s
-  // selon l'unite) et un delai « invisible » (36 a 62 s). Sur une page de
-  // test, ou l'on reste plusieurs minutes dans le moteur, les emplacements
-  // plus bas produisaient ainsi deux a trois impressions par appel, toutes
-  // hors de vue : un taux de remplissage de 300 %, une visibilite qui baisse,
-  // et un CPM qui baisse avec elle sur tout le domaine.
+  // n'est pas a l'ecran : un delai « visible » (18,5 s pour le pave, 19,5 s
+  // pour le billboard, 25 s pour le footer) et un delai « invisible » (37,
+  // 60 et 45 s), jusqu'a cinquante fois par page. Une page de resultat reste
+  // souvent ouverte : le pave remonte dans le resultat produisait alors une
+  // impression toutes les 37 s, hors de vue, vendue presque rien. Ces
+  // impressions comptent comme monetisables, mais elles font chuter la
+  // visibilite mesuree, et le CPM du domaine avec elle (0,30 a 0,20 € du 1er au
+  // 4 octobre 2026).
   //
-  // Son script lit les deux tables de delais sur l'objet global tmzrToolbox
-  // et ne les cree que si elles n'existent pas encore (c'est ainsi que ses
-  // formats partagent l'objet). Une table « invisible » vide, posee avant
-  // son premier fichier, fait retomber chaque unite sur sa propre valeur par
-  // defaut, qui vaut « jamais ». Le delai visible n'est pas touche : un
-  // emplacement qui revient a l'ecran reprend son rythme normal, la regie
-  // recalcule le delai a chaque changement de visibilite. Si la regie change
-  // la structure de son script, le pire cas est que ceci n'ait plus d'effet.
-  function coupeRafraichissementInvisible() {
+  // La premiere parade, en septembre 2026, posait vide la table des delais
+  // « invisibles » de l'objet tmzrToolbox avant le premier script de la
+  // regie. Elle n'a jamais eu d'effet : leur script lit bien la table, puis
+  // ecrase la valeur en dur a la ligne suivante (« invisibleRefreshRate =
+  // 37000 »). Et pour certains encherisseurs dits lents (teads, sharethrough,
+  // richaudience...), il ignore meme ce delai et en prend un fixe de 30 a
+  // 60 s, visible ou non.
+  //
+  // Le seul point de passage commun est la boucle qui decide : toutes les
+  // deux secondes, pour chaque unite de window.tmzrLocalToolbox.adUnits,
+  // elle rafraichit si « refreshTimer + delai < maintenant ». On remplace
+  // donc refreshTimer, sur chaque unite, par une propriete calculee : tant
+  // que l'unite est hors de vue (isVisible, que la regie tient a jour avec
+  // son propre IntersectionObserver, au-dela de 50 % visible) ou que
+  // l'onglet est cache, elle vaut « maintenant », et la condition ne peut
+  // jamais etre vraie, quel que soit le delai. Une fois l'unite revenue sous
+  // les yeux, elle vaut l'instant de ce retour : le rafraichissement
+  // n'arrive qu'apres un delai visible complet. La regie ecrit refreshTimer a
+  // chaque rafraichissement ; l'ecriture est conservee telle quelle.
+  //
+  // Les unites forcees visibles par la regie (forceVisibility, des formats
+  // que nous ne posons pas) gardent leur rythme, onglet cache excepte.
+  // Les unites apparaissent au fil des demandes, et la regie peut en
+  // recreer une : le registre est relu chaque seconde, chaque objet n'est
+  // traite qu'une fois. Si la regie change la structure de son script, le
+  // pire cas est que ceci n'ait plus d'effet ; aucune erreur ne remonte.
+  var PAS_BRIDE = 1000;
+  var unitesBridees = [];   // objets deja traites, quelques-uns par page
+
+  // Le footer est un cas a part. Son annonce s'affiche dans un bandeau fixe
+  // que la regie ajoute en fin de body (sas_iframe_fixed_26328), mais son
+  // observateur de visibilite suit le conteneur sas_26328, pose dans notre
+  // ancre du bas de page, de hauteur nulle, et qu'elle masque elle-meme au
+  // rendu. Pour elle, le footer est donc toujours « hors de vue » : il se
+  // rafraichissait au delai invisible (45 s) alors qu'il est sous les yeux en
+  // permanence. Sa visibilite est donc lue sur le bandeau lui-meme : affiche,
+  // ni masque par la limite des 30 % (data-pub-trop-haut), ni ferme. Le
+  // rythme reste celui que la regie lui donne, 45 s.
+  var UNITE_FOOTER = 26328;
+
+  function footerAffiche() {
+    var liste = document.querySelectorAll('[id^="sas_iframe_fixed_' + UNITE_FOOTER + '"]');
+    for (var i = 0; i < liste.length; i++) {
+      var e = liste[i];
+      if (e.hasAttribute('data-pub-trop-haut')) continue;
+      if (e.offsetWidth > 0 && e.offsetHeight > 0 && !estUnVoile(e)) return true;
+    }
+    return false;
+  }
+
+  function bloquee(u) {
+    if (document.visibilityState === 'hidden') return true;
+    if (u.forceVisibility === true) return false;
+    if (Number(u.formatId) === UNITE_FOOTER) return !footerAffiche();
+    return u.isVisible !== true;
+  }
+
+  function brideUnite(u) {
+    if (!u || typeof u !== 'object' || unitesBridees.indexOf(u) !== -1) return;
+    unitesBridees.push(u);
+    var minuteur = typeof u.refreshTimer === 'number' ? u.refreshTimer : Date.now();
+    // L'instant ou l'unite a ete vue bloquee pour la derniere fois.
+    var dernierBlocage = 0;
     try {
-      var t = window.tmzrToolbox;
-      if (typeof t !== 'object' || t === null) { t = {}; window.tmzrToolbox = t; }
-      if (typeof t.defaultRefreshTimeTableInvisible === 'undefined') t.defaultRefreshTimeTableInvisible = {};
+      Object.defineProperty(u, 'refreshTimer', {
+        configurable: true,
+        enumerable: true,
+        get: function () {
+          var maintenant = Date.now();
+          if (bloquee(u)) { dernierBlocage = maintenant; return maintenant; }
+          return Math.max(minuteur, dernierBlocage);
+        },
+        set: function (v) { minuteur = v; }
+      });
+      // Au retour sur un onglet cache, la boucle de la regie, ralentie en
+      // arriere-plan, n'a peut-etre pas relu l'unite depuis une minute : le
+      // retour compte comme le dernier blocage.
+      u.__qcReveil = function () { dernierBlocage = Date.now(); };
     } catch (e) {}
   }
 
+  function brideRafraichissement() {
+    function passe() {
+      var registre;
+      try { registre = window.tmzrLocalToolbox && window.tmzrLocalToolbox.adUnits; } catch (e) { return; }
+      if (!registre || typeof registre !== 'object') return;
+      var cles = Object.keys(registre);
+      for (var i = 0; i < cles.length; i++) {
+        try { brideUnite(registre[cles[i]]); } catch (e) {}
+      }
+    }
+    passe();
+    setInterval(passe, PAS_BRIDE);
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState !== 'visible') return;
+      for (var i = 0; i < unitesBridees.length; i++) {
+        try { if (typeof unitesBridees[i].__qcReveil === 'function') unitesBridees[i].__qcReveil(); } catch (e) {}
+      }
+    });
+  }
+
   function demarre() {
-    coupeRafraichissementInvisible();
+    if (document.querySelector('[data-pub-differee], [data-pub-au-resultat]')) {
+      try { brideRafraichissement(); } catch (e) {}
+    }
     try { interstitielDeNavigation(); } catch (e) {}
     var tous = document.querySelectorAll('[data-pub-differee]:not([data-pub-posee])');
     var dansLeFlux = [];
