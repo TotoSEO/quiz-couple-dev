@@ -86,11 +86,12 @@
    n'en redemande pas : le drapeau data-pub-posee est partage, et la regie
    n'en sert de toute facon qu'un par page.
 
-   ── Pas de rafraichissement hors ecran ───────────────────────────────
-   La table des delais de rafraichissement « invisible » de la regie est
-   posee vide avant son premier script : chaque unite retombe sur « jamais »,
-   le rafraichissement visible reste le sien (voir
-   coupeRafraichissementInvisible).
+   ── Pas de rafraichissement hors de la vue ────────────────────────────
+   La regie recharge chaque emplacement a intervalle regulier, a l'ecran
+   comme hors de l'ecran, et jusque dans un onglet passe en arriere-plan.
+   On ne la laisse rafraichir qu'un emplacement vu, dans un onglet affiche,
+   et seulement apres un delai complet passe sous les yeux de la personne
+   (voir brideRafraichissement).
 
    ── Le footer ────────────────────────────────────────────────────────
    Le footer (format 6) est le seul format hors flux : son div n'est qu'un
@@ -485,33 +486,100 @@
     injecte(hote.firstElementChild || hote, format, site);
   }
 
-  // ── Pas de rafraichissement hors ecran ──────────────────────────────
+  // ── Pas de rafraichissement hors de la vue ──────────────────────────
   // La regie recharge chaque emplacement a intervalle regulier, meme quand il
-  // n'est pas a l'ecran : dans son script, un delai « visible » (19 a 27 s
-  // selon l'unite) et un delai « invisible » (36 a 62 s). Sur une page de
-  // test, ou l'on reste plusieurs minutes dans le moteur, les emplacements
-  // plus bas produisaient ainsi deux a trois impressions par appel, toutes
-  // hors de vue : un taux de remplissage de 300 %, une visibilite qui baisse,
-  // et un CPM qui baisse avec elle sur tout le domaine.
+  // n'est pas a l'ecran : un delai « visible » (18,5 s pour le pave, 19,5 s
+  // pour le billboard, 25 s pour le footer) et un delai « invisible » (37,
+  // 60 et 45 s), jusqu'a cinquante fois par page. Une page de resultat reste
+  // souvent ouverte : le pave remonte dans le resultat produisait alors une
+  // impression toutes les 37 s, hors de vue, vendue presque rien. Ces
+  // impressions comptent comme monetisables, mais elles font chuter la
+  // visibilite mesuree, et le CPM du domaine avec elle (0,30 a 0,20 € du 1er au
+  // 4 octobre 2026).
   //
-  // Son script lit les deux tables de delais sur l'objet global tmzrToolbox
-  // et ne les cree que si elles n'existent pas encore (c'est ainsi que ses
-  // formats partagent l'objet). Une table « invisible » vide, posee avant
-  // son premier fichier, fait retomber chaque unite sur sa propre valeur par
-  // defaut, qui vaut « jamais ». Le delai visible n'est pas touche : un
-  // emplacement qui revient a l'ecran reprend son rythme normal, la regie
-  // recalcule le delai a chaque changement de visibilite. Si la regie change
-  // la structure de son script, le pire cas est que ceci n'ait plus d'effet.
-  function coupeRafraichissementInvisible() {
+  // La premiere parade, en septembre 2026, posait vide la table des delais
+  // « invisibles » de l'objet tmzrToolbox avant le premier script de la
+  // regie. Elle n'a jamais eu d'effet : leur script lit bien la table, puis
+  // ecrase la valeur en dur a la ligne suivante (« invisibleRefreshRate =
+  // 37000 »). Et pour certains encherisseurs dits lents (teads, sharethrough,
+  // richaudience...), il ignore meme ce delai et en prend un fixe de 30 a
+  // 60 s, visible ou non.
+  //
+  // Le seul point de passage commun est la boucle qui decide : toutes les
+  // deux secondes, pour chaque unite de window.tmzrLocalToolbox.adUnits,
+  // elle rafraichit si « refreshTimer + delai < maintenant ». On remplace
+  // donc refreshTimer, sur chaque unite, par une propriete calculee : tant
+  // que l'unite est hors de vue (isVisible, que la regie tient a jour avec
+  // son propre IntersectionObserver, au-dela de 50 % visible) ou que
+  // l'onglet est cache, elle vaut « maintenant », et la condition ne peut
+  // jamais etre vraie, quel que soit le delai. Une fois l'unite revenue sous
+  // les yeux, elle vaut l'instant de ce retour : le rafraichissement
+  // n'arrive qu'apres un delai visible complet. La regie ecrit refreshTimer a
+  // chaque rafraichissement ; l'ecriture est conservee telle quelle.
+  //
+  // Les unites forcees visibles par la regie (forceVisibility, des formats
+  // que nous ne posons pas) gardent leur rythme, onglet cache excepte.
+  // Les unites apparaissent au fil des demandes, et la regie peut en
+  // recreer une : le registre est relu chaque seconde, chaque objet n'est
+  // traite qu'une fois. Si la regie change la structure de son script, le
+  // pire cas est que ceci n'ait plus d'effet ; aucune erreur ne remonte.
+  var PAS_BRIDE = 1000;
+  var unitesBridees = [];   // objets deja traites, quelques-uns par page
+
+  function bloquee(u) {
+    if (document.visibilityState === 'hidden') return true;
+    if (u.forceVisibility === true) return false;
+    return u.isVisible !== true;
+  }
+
+  function brideUnite(u) {
+    if (!u || typeof u !== 'object' || unitesBridees.indexOf(u) !== -1) return;
+    unitesBridees.push(u);
+    var minuteur = typeof u.refreshTimer === 'number' ? u.refreshTimer : Date.now();
+    // L'instant ou l'unite a ete vue bloquee pour la derniere fois.
+    var dernierBlocage = 0;
     try {
-      var t = window.tmzrToolbox;
-      if (typeof t !== 'object' || t === null) { t = {}; window.tmzrToolbox = t; }
-      if (typeof t.defaultRefreshTimeTableInvisible === 'undefined') t.defaultRefreshTimeTableInvisible = {};
+      Object.defineProperty(u, 'refreshTimer', {
+        configurable: true,
+        enumerable: true,
+        get: function () {
+          var maintenant = Date.now();
+          if (bloquee(u)) { dernierBlocage = maintenant; return maintenant; }
+          return Math.max(minuteur, dernierBlocage);
+        },
+        set: function (v) { minuteur = v; }
+      });
+      // Au retour sur un onglet cache, la boucle de la regie, ralentie en
+      // arriere-plan, n'a peut-etre pas relu l'unite depuis une minute : le
+      // retour compte comme le dernier blocage.
+      u.__qcReveil = function () { dernierBlocage = Date.now(); };
     } catch (e) {}
   }
 
+  function brideRafraichissement() {
+    function passe() {
+      var registre;
+      try { registre = window.tmzrLocalToolbox && window.tmzrLocalToolbox.adUnits; } catch (e) { return; }
+      if (!registre || typeof registre !== 'object') return;
+      var cles = Object.keys(registre);
+      for (var i = 0; i < cles.length; i++) {
+        try { brideUnite(registre[cles[i]]); } catch (e) {}
+      }
+    }
+    passe();
+    setInterval(passe, PAS_BRIDE);
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState !== 'visible') return;
+      for (var i = 0; i < unitesBridees.length; i++) {
+        try { if (typeof unitesBridees[i].__qcReveil === 'function') unitesBridees[i].__qcReveil(); } catch (e) {}
+      }
+    });
+  }
+
   function demarre() {
-    coupeRafraichissementInvisible();
+    if (document.querySelector('[data-pub-differee], [data-pub-au-resultat]')) {
+      try { brideRafraichissement(); } catch (e) {}
+    }
     try { interstitielDeNavigation(); } catch (e) {}
     var tous = document.querySelectorAll('[data-pub-differee]:not([data-pub-posee])');
     var dansLeFlux = [];
