@@ -214,6 +214,11 @@
       });
     }).catch(function () { return null; });
 
+    // La note du hero suit les chiffres exacts dès qu'ils arrivent, sans
+    // attendre la liste des avis. Jamais avec le calcul de secours sur vingt
+    // avis : celui du build est plus juste.
+    stats.then(function (s) { if (s) updateHero(s.avg, s.total); });
+
     fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&is_approved=eq.true&order=created_at.desc&limit=20', {
       headers: entetes
     })
@@ -230,10 +235,14 @@
         return;
       }
 
-      // Si la requete de statistiques echoue, on retombe sur l'ancien calcul
-      // plutot que de n'afficher aucune note.
+      // Si la requete de statistiques echoue, on garde les chiffres du build,
+      // comme le hero : une moyenne sur les vingt derniers avis et « 20 avis »
+      // contrediraient la note du haut. L'ancien calcul ne sert que si le
+      // build n'avait aucun avis à afficher.
       stats.then(function (s) {
         if (s) return updateStats(s.avg, s.total);
+        var avgEl = document.getElementById('reviews-avg');
+        if (avgEl && avgEl.textContent.trim() !== '-') return;
         var sum = 0;
         reviews.forEach(function (r) { sum += r.rating || 0; });
         updateStats((sum / reviews.length).toFixed(1), reviews.length);
@@ -270,6 +279,36 @@
     if (starsEl) starsEl.innerHTML = starsHtml(Math.round(parseFloat(avg) || 0), 'sm');
     // Update JSON-LD AggregateRating with real data
     updateJsonLdRating(avg, total);
+  }
+
+  // La note moyenne du hero de l'accueil (.note-site). Elle est écrite au
+  // build, comme la section du bas, mais rien ne la reprenait ensuite : un
+  // avis validé dans l'admin apparaissait en bas tout de suite et en haut
+  // seulement à la reconstruction suivante, jusqu'à dix heures plus tard la
+  // nuit. Le HTML servi garde la valeur du build ; ici on ne réécrit que si
+  // la note ou le nombre a changé, pour ne rien repeindre pour rien.
+  function updateHero(avg, total) {
+    var bloc = document.querySelector('.note-site');
+    var note = parseFloat(avg);
+    if (!bloc || !total || isNaN(note)) return;
+    var texte = note.toFixed(1).replace('.', lang.indexOf('en') === 0 ? '.' : ',');
+    var valeur = bloc.querySelector('.note-site-valeur');
+    var sur = bloc.querySelector('.note-site-sur');
+    var nombre = sur ? parseInt((sur.textContent.match(/\d+/) || [])[0], 10) : NaN;
+    if (valeur && valeur.textContent.trim() === texte && nombre === total) return;
+
+    if (valeur) valeur.textContent = texte;
+    // Le libellé est traduit au build, seul le nombre change.
+    if (sur) sur.textContent = sur.textContent.replace(/\d+/, total);
+    // Même remplissage partiel qu'au build : 4,3 donne quatre étoiles pleines
+    // et une remplie à 30 %.
+    var etoiles = bloc.querySelectorAll('.note-site-etoile');
+    for (var i = 0; i < etoiles.length; i++) {
+      var plein = Math.max(0, Math.min(1, note - i));
+      etoiles[i].style.setProperty('--plein', (plein * 100).toFixed(0) + '%');
+    }
+    var libelle = bloc.getAttribute('aria-label');
+    if (libelle) bloc.setAttribute('aria-label', libelle.replace(/[\d.,]+\/5, \d+/, texte + '/5, ' + total));
   }
 
   // ── IP check ──
