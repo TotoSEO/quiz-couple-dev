@@ -2,12 +2,14 @@
 
 Document de référence du projet « réseaux sociaux ». Il décrit comment les
 posts sont conçus, fabriqués, stockés, publiés, mesurés et suivis depuis
-l'admin. Rédigé le 6 octobre 2026, avant toute ligne de code : chaque choix
-ci-dessous est à valider avant la mise en place.
+l'admin. Rédigé le 6 octobre 2026, avant toute ligne de code, et validé le
+même jour par Thomas ; ses choix sont en partie 1.2.
 
 ---
 
 ## 1. Les décisions en bref
+
+### 1.1 L'architecture
 
 1. **Un post est une recette, pas un fichier.** On stocke la description du
    post (gabarit, textes, musique, photo choisie...) dans Supabase. La vidéo ou
@@ -33,6 +35,30 @@ ci-dessous est à valider avant la mise en place.
    GitHub Actions (gratuit, dépôt public), Supabase gratuit, API Instagram
    gratuite, Pexels et Freesound gratuits. Les options payantes sont listées
    et restent facultatives.
+
+### 1.2 Les choix de Thomas (6 octobre 2026)
+
+- **Un seul compte pour commencer : l'anglais.** Les posts sont écrits
+  directement en anglais, avec les règles de ton du site transposées. Les
+  quatre autres langues restent prévues dans les tables et s'ouvriront d'un
+  interrupteur.
+- **Compte Entreprise.** C'est le type de compte que l'API de publication
+  d'Instagram prend en charge le plus complètement (publication, statistiques,
+  commentaires). Sa seule limite, une bibliothèque musicale réduite dans
+  l'appli, ne nous concerne pas : la musique est mixée dans la vidéo.
+- **Aucune validation humaine.** Un post qui passe les six contrôles qualité
+  (partie 8) est publié tout seul. L'admin garde de quoi suspendre un post
+  ou tout mettre en pause.
+- **Trois posts par jour**, à une heure tirée au sort dans trois créneaux,
+  à l'heure de New York (le plus gros public anglophone ; Londres les voit
+  cinq heures plus tard, ce qui tombe encore bien) :
+  - le matin entre 6 h et 8 h ;
+  - le midi entre 11 h et 13 h ;
+  - l'après-midi entre 16 h et 18 h.
+- **Le mélange de la semaine :** un reel le matin et un reel l'après-midi
+  tous les jours ; le midi, une image ou un carrousel six jours sur sept, et
+  un reel le dimanche. Soit 15 reels et 6 posts par semaine, à peu près le
+  7 pour 3 voulu.
 
 ---
 
@@ -71,7 +97,7 @@ Ce que ça change concrètement :
 
 ```
             TOI (admin)                     CLAUDE CODE (routines, abonnement Max)
-   idées, validation, planning        planifie · écrit · traduit · vérifie les aperçus
+     idées, suivi, pause              planifie · écrit · traduit · vérifie les aperçus
                  │                                       │
                  ▼                                       ▼
         ┌───────────────────────── SUPABASE ─────────────────────────┐
@@ -83,7 +109,7 @@ Ce que ça change concrètement :
                        │                              ▼
               GITHUB ACTIONS (gratuit, sans IA, tous les jours)
      studio : fabrique vidéos et images depuis les recettes, contrôle qualité
-     publication : API Instagram, toutes les 15 min, aux heures prévues
+     publication : API Instagram, toutes les 10 min, aux heures tirées
      entretien : jetons, ménage du stockage, statistiques, alertes
                        │
                        ▼
@@ -95,8 +121,8 @@ Le cycle d'un post :
 | Quand | Étape | Qui |
 |---|---|---|
 | J-21 à J-14 | Le planning réserve un créneau : date, format, thème, gabarit. | Routine « planning » (Claude, une fois par semaine) |
-| J-14 à J-3 | Écriture en français, déclinaison dans les langues actives, choix de la musique, des sons et du fond, aperçus vérifiés. | Routine « création » (Claude, chaque jour) |
-| J-14 à J-2 | Validation dans l'admin (au début) ou validation automatique (plus tard). | Toi, ou personne |
+| J-14 à J-3 | Écriture dans la langue de chaque compte actif (l'anglais pour commencer), choix de la musique, des sons et du fond, aperçus vérifiés. | Routine « création » (Claude, chaque jour) |
+| J-14 à J-2 | Validation automatique dès que les contrôles qualité sont passés. | Personne |
 | J-1, la nuit | Fabrication des fichiers définitifs, contrôle qualité, envoi dans Supabase. | GitHub Actions |
 | Jour J, à l'heure prévue | Publication sur chaque compte actif. | GitHub Actions |
 | J+1 | Suppression des fichiers lourds, une vignette est gardée pour l'admin. | GitHub Actions |
@@ -278,14 +304,13 @@ enrichie au fil du temps.
    Si nos reels tournent, d'autres créateurs réutilisent notre son, ce qui
    fait de la visibilité gratuite.
 3. **La musique tendance, à la main, pour les posts que tu veux pousser.**
+   Possible, mais pas prévu : tu as choisi de ne rien faire à la main.
    Dans l'admin, un post peut passer en « publication manuelle » : tu
    télécharges la vidéo sans musique, tu la publies depuis ton téléphone et tu
    ajoutes le son tendance dans l'appli. Le planning la compte quand même.
    - Bon à savoir : un compte **Entreprise** n'a accès qu'à la bibliothèque
-     libre de droits de Meta. Un compte **Créateur** voit toute la
-     bibliothèque musicale. Si tu veux utiliser des sons tendance à la main,
-     les comptes Créateur sont préférables, et ils fonctionnent avec l'API de
-     publication.
+     libre de droits de Meta quand on publie depuis l'appli. Ça ne change
+     rien à nos publications automatiques, qui portent leur propre musique.
 
 ### 5.2 Les bruitages
 
@@ -372,9 +397,9 @@ transfert sortant par mois.
 | Automate | Où | Quand | Rôle |
 |---|---|---|---|
 | **Planning** | Routine Claude Code | Une fois par semaine | Remplit les créneaux des 2 à 3 semaines suivantes en respectant les règles (part des formats, variété des thèmes, pas deux fois le même gabarit d'affilée, événements du calendrier), en piochant d'abord dans tes idées. |
-| **Création** | Routine Claude Code | Une fois par jour | Écrit les posts en attente : textes français, déclinaison dans les langues actives (adaptation, pas traduction mot à mot), légendes, hashtags, choix de la musique, des sons et du fond. Rend des aperçus et les regarde, corrige ce qui ne va pas, puis passe le post en « aperçu prêt ». |
+| **Création** | Routine Claude Code | Une fois par jour | Écrit les posts en attente dans la langue de chaque compte actif (adaptation, pas traduction mot à mot), légendes, hashtags, choix de la musique, des sons et du fond. Rend des aperçus et les regarde, corrige ce qui ne va pas, puis passe le post en « validé » : aucune validation humaine. |
 | **Rendu** | GitHub Actions | Chaque nuit | Fabrique les fichiers définitifs des posts du lendemain, passe le contrôle qualité, envoie les fichiers dans Supabase. |
-| **Publication** | GitHub Actions | Toutes les 15 min | Publie ce qui est dû : crée le conteneur, attend la fin du traitement de la vidéo, publie, enregistre le lien. |
+| **Publication** | GitHub Actions | Toutes les 10 min | Publie ce qui est dû : crée le conteneur, attend la fin du traitement de la vidéo, publie, enregistre le lien. |
 | **Entretien** | GitHub Actions | Chaque jour | Renouvelle les jetons Instagram, fait le ménage du stockage, relève les statistiques, envoie les alertes. |
 
 ### 7.2 Les routines Claude et ton abonnement
@@ -398,9 +423,12 @@ transfert sortant par mois.
 
 ### 7.4 La publication, dans le détail
 
-- **Créneaux** : chaque compte a ses heures de publication, dans son fuseau
-  (heure de Paris pour le compte français, etc.). Le passage à l'heure d'été
-  est géré, puisque les heures sont stockées en heure locale.
+- **Créneaux** : chaque compte a ses créneaux, dans son fuseau (New York
+  pour le compte anglais) : 6 h-8 h, 11 h-13 h, 16 h-18 h. Quand le planning
+  place un post, il tire au sort sa minute de publication entre le début du
+  créneau et 25 minutes avant sa fin : même avec le retard habituel des
+  tâches programmées de GitHub, le post sort dans le créneau. L'heure d'été
+  est gérée, puisque les créneaux sont stockés en heure locale.
 - **Reels** : le conteneur est créé une heure avant. Instagram traite la
   vidéo (on vérifie l'état toutes les 30 s), puis on publie à l'heure prévue.
 - **Jamais deux fois le même post** : avant de publier, la ligne passe en
@@ -521,9 +549,10 @@ accident.
   catégorie, statut). Pour chaque post : date et heure, format, gabarit,
   statut par langue, vignette, lien publié, vues.
 - **Fiche d'un post** : aperçu (vidéo ou pages), textes et légendes par
-  langue, musique et sons, historique. Actions : valider, refuser avec un
-  motif (relu par Claude à la création suivante), refaire, déplacer, publier
-  maintenant, passer en publication manuelle, annuler.
+  langue, musique et sons, historique. Rien à valider : les actions servent
+  à corriger le tir si besoin (suspendre, refuser avec un motif relu par
+  Claude à la création suivante, refaire, déplacer, publier maintenant,
+  annuler).
 - **Idées** : un champ pour noter une idée de post en une phrase. Le planning
   les place en priorité.
 - **Santé** : jours de réserve, publications des 7 derniers jours, échecs,
@@ -538,25 +567,15 @@ accident.
 ## 12. Combien de comptes, et quel rythme
 
 L'architecture gère cinq comptes dès le départ, chacun s'active d'un
-interrupteur. La question est de savoir par où commencer.
+interrupteur.
 
-- **Ma recommandation : français et anglais en parallèle pendant 8 semaines.**
-  Le français, parce que c'est ton marché principal sur le site et que tu peux
-  juger toi-même la qualité de chaque post. L'anglais, parce que c'est le plus
-  grand public. Une langue de plus ne coûte presque rien dans ce système (une
-  traduction et un rendu de plus), alors qu'elle double les chances de
-  trouver le bon format.
-- **Rythme** : 1 reel par jour les deux premières semaines (le temps que les
-  comptes neufs prennent leurs marques), puis 2 posts par jour, avec
-  7 reels pour 3 posts image ou carrousel. Trois posts par jour diluent la
-  qualité et le quota Claude : ce n'est pas un objectif de départ.
+- **Départ : le compte anglais seul**, à trois posts par jour (partie 1.2).
 - **Ensuite** : on regarde les statistiques. Si un format décolle, il prend
-  plus de place. Si les deux comptes prennent, on ouvre l'espagnol,
+  plus de place. Si le compte prend, on ouvre le français, l'espagnol,
   l'allemand et l'italien, sans aucun développement de plus.
-- **Premiers jours d'un compte** : bio, photo et quelques posts faits à la
-  main avant la première publication automatique, et aucune action
-  automatisée en dehors de la publication (pas d'abonnements ni de « j'aime »
-  automatiques).
+- **Premiers jours d'un compte** : nom, bio, photo et lien remplis avant la
+  première publication automatique, et aucune action automatisée en dehors
+  de la publication (pas d'abonnements ni de « j'aime » automatiques).
 
 ---
 
@@ -579,22 +598,18 @@ interrupteur. La question est de savoir par où commencer.
 
 ## 14. La mise en place, dans l'ordre
 
-**Étape 0, de ton côté**
-- Créer les comptes Instagram (Créateur ou Entreprise, voir 5.1), au moins
-  français et anglais pour commencer.
-- Créer l'appli sur developers.facebook.com, y ajouter les comptes comme
-  testeurs (je te guiderai pas à pas).
-- Valider le design system « Quiz Couple Social » : poses des mascottes,
-  police des citations, fleurs.
-- Créer les clés gratuites Pexels et Freesound.
+**Étape 0, de ton côté** (voir partie 15)
+- Le compte Instagram anglais, en compte Entreprise.
+- L'appli Meta qui autorise la publication (je te guiderai écran par écran).
+- Plus tard, la clé gratuite Pexels pour les reels sur photo.
 
 **Étape 1 : le socle**
+- Le studio : charte, polices, mascottes, premiers gabarits (R2 citation,
+  R7 quiz chrono, P1 image, C1 carrousel), contrôles qualité.
 - Tables et bucket Supabase, fonctions serveur, onglet « Réseaux » de
-  l'admin (lecture et validation).
-- Le studio : charte, polices, 3 premiers gabarits (R2 citation, R7 quiz
-  chrono, C1 carrousel), contrôles qualité.
-- Rendu et publication sur GitHub Actions, testés sur un compte Instagram de
-  test.
+  l'admin (suivi, suspension, pause).
+- Rendu et publication sur GitHub Actions, testés à blanc, puis sur le
+  compte anglais.
 
 **Étape 2 : l'animation**
 - Les mascottes articulées dans le studio (neuf poses déjà dessinées), les
@@ -604,25 +619,30 @@ interrupteur. La question est de savoir par où commencer.
 - Les gabarits restants.
 
 **Étape 3 : l'automatisation**
-- Les routines planning et création, la banque d'idées, la validation.
-- Démarrage des deux premiers comptes à 1 reel par jour.
+- Les routines planning et création, la banque d'idées.
+- Démarrage du compte anglais à trois posts par jour.
 
 **Étape 4 : apprendre et étendre**
 - Statistiques et retour dans le planning, page « lien en bio ».
-- Ouverture des autres langues si les premiers comptes prennent.
+- Ouverture des autres langues si le compte anglais prend.
 
 ---
 
-## 15. Ce qu'il me faut pour démarrer
+## 15. Ce qu'il te reste à faire
 
-1. **Le design system** : les poses des mascottes, la police des citations
-   et les fleurs te conviennent ?
-2. **Les comptes** : on part sur français et anglais, ou anglais seul ?
-3. **Le type de compte** : Créateur (accès aux musiques tendance quand tu
-   publies à la main) ou Entreprise ?
-4. **La validation** : tu valides chaque post les premières semaines (je le
-   recommande), ou publication automatique tout de suite ?
-5. **Les heures de publication** souhaitées pour chaque compte.
+Tout le reste est automatique ; ces trois choses demandent ton identité et
+ne peuvent pas être faites à ta place :
+
+1. **Créer le compte Instagram anglais**, le passer en compte professionnel,
+   type **Entreprise**, puis remplir le nom, la photo (le logo du site), la
+   bio et le lien (`quiz-couple.com/en/` en attendant la page « lien en
+   bio »).
+2. **Créer l'appli Meta** sur developers.facebook.com avec ton compte
+   Facebook, y ajouter le produit Instagram et le compte anglais comme
+   testeur, puis accepter l'invitation dans l'appli Instagram. Une dizaine de
+   minutes ; je te guiderai écran par écran le moment venu.
+3. **Plus tard**, créer un compte gratuit sur Pexels pour obtenir sa clé
+   d'API (reels sur photo et vidéo).
 
 ---
 
