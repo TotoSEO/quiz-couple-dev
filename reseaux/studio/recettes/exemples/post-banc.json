@@ -1,0 +1,20 @@
+{
+  "gabarit": "image",
+  "langue": "en",
+  "theme": "light",
+  "style": "citation",
+  "texte": "Home is wherever you are",
+  "scene": {
+    "t": 1.5,
+    "plan": {
+      "description": "Coucher de soleil, les deux assis sur le banc, jambes qui pendent, serrés l'un contre l'autre, des cœurs au-dessus.",
+      "duree": 2,
+      "decor": "dehors",
+      "moment": "soir",
+      "persos": [
+        { "qui": "rose", "a": "banc-gauche", "premier": true, "gestes": [ { "geste": "calin", "avec": "violet", "de": -1, "a": 2 } ] },
+        { "qui": "violet", "a": "banc-droite", "gestes": [ { "geste": "calin", "avec": "rose", "de": -1, "a": 2 } ] }
+      ]
+    }
+  }
+}

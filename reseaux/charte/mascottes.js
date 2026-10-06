@@ -10,7 +10,14 @@
      saut     hauteur du saut en pixels (le corps monte, l'ombre reste)
      penche   rotation du corps en degrés
      coeurs   true : deux petits cœurs au-dessus de la tête
-     couleurs 'jetons' (var(--rose)...) ou 'hex' (fichiers exportés) */
+     couleurs 'jetons' (var(--rose)...) ou 'hex' (fichiers exportés)
+   Pour l'animation (studio) :
+     devant       [gauche, droit] : le bras passe devant le corps (vue de face)
+     jambesAngles [a, b] en degrés : remplace 'jambes' (pas de marche)
+     rougit       true : joues pleines et plus larges
+     yeux 'clin'  un œil fermé, l'autre ouvert ; bouche 'bisou'
+   mains(nom, options) donne la position des deux mains dans le dessin
+   (pour y accrocher un objet tenu). */
 (function (racine) {
   var HEX = {
     rose: '#e17398', 'rose-ombre': '#c9557c', 'rose-lumiere': '#e892af',
@@ -51,6 +58,7 @@
     var regard = o.regard || [0, 0];
     var bouche = o.bouche || 'sourire';
     var saut = o.saut || 0;
+    var devant = o.devant || [false, false];
     var id = 'qc-' + nom + '-' + (++n);
     var b = p.boite;
     var out = [];
@@ -74,9 +82,9 @@
       return '<rect x="' + (hx - w / 2) + '" y="' + hy + '" width="' + w + '" height="' + h + '" rx="' + (w / 2 - 1) + '" fill="' + C(p.ombre) +
         '" transform="rotate(' + angle + ' ' + hx + ' ' + (hy + 4) + ')"/>';
     }
-    function oeil(x, y) {
+    function oeil(x, y, cote) {
       var r = p.rayonOeil;
-      if (yeux === 'heureux') return '<path d="M' + (x - 12) + ' ' + (y + 5) + ' Q' + x + ' ' + (y - 12) + ' ' + (x + 12) + ' ' + (y + 5) + '" fill="none" stroke="' + C('pupille') + '" stroke-width="5.5" stroke-linecap="round"/>';
+      if (yeux === 'heureux' || (yeux === 'clin' && cote === 0)) return '<path d="M' + (x - 12) + ' ' + (y + 5) + ' Q' + x + ' ' + (y - 12) + ' ' + (x + 12) + ' ' + (y + 5) + '" fill="none" stroke="' + C('pupille') + '" stroke-width="5.5" stroke-linecap="round"/>';
       if (yeux === 'fermes') return '<path d="M' + (x - 12) + ' ' + (y - 2) + ' Q' + x + ' ' + (y + 10) + ' ' + (x + 12) + ' ' + (y - 2) + '" fill="none" stroke="' + C('pupille') + '" stroke-width="5.5" stroke-linecap="round"/>';
       if (yeux === 'plats') return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + C('blanc') + '"/><path d="M' + (x - r) + ' ' + y + ' A' + r + ' ' + r + ' 0 0 1 ' + (x + r) + ' ' + y + ' Z" fill="' + C(p.teinte) + '"/><circle cx="' + (x + regard[0]) + '" cy="' + (y + 7) + '" r="' + (p.rayonPupille - 1) + '" fill="' + C('pupille') + '"/><path d="M' + (x - r) + ' ' + y + ' L' + (x + r) + ' ' + y + '" stroke="' + C('pupille') + '" stroke-width="4" stroke-linecap="round"/>';
       var s = '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + C('blanc') + '"/>';
@@ -92,36 +100,42 @@
       if (bouche === 'rire') return '<path d="M' + (x - h) + ' ' + (y - 4) + ' C' + (x - h) + ' ' + (y + 24 * k) + ' ' + (x + h) + ' ' + (y + 24 * k) + ' ' + (x + h) + ' ' + (y - 4) + ' Z" fill="' + C('pupille') + '"/>' +
         '<ellipse cx="' + x + '" cy="' + (y + 11 * k) + '" rx="' + (h * 0.5) + '" ry="' + (5 * k) + '" fill="' + C(p.ombre) + '"/>';
       if (bouche === 'plate') return '<path d="M' + (x - h * 0.6) + ' ' + (y + 4) + ' L' + (x + h * 0.6) + ' ' + (y + 4) + '" stroke="' + C('pupille') + '" stroke-width="5" stroke-linecap="round"/>';
+      if (bouche === 'bisou') return '<ellipse cx="' + (x + 2 * k) + '" cy="' + (y + 4) + '" rx="' + (7 * k) + '" ry="' + (9 * k) + '" fill="none" stroke="' + C('pupille') + '" stroke-width="5"/>';
       if (bouche === 'triste') return '<path d="M' + (x - h * 0.7) + ' ' + (y + 10) + ' Q' + x + ' ' + (y - 4) + ' ' + (x + h * 0.7) + ' ' + (y + 10) + '" fill="none" stroke="' + C('pupille') + '" stroke-width="5" stroke-linecap="round"/>';
       return '<path d="M' + (x - h) + ' ' + (y - 3) + ' C' + (x - h * 0.55) + ' ' + (y + 15 * k) + ' ' + (x + h * 0.55) + ' ' + (y + 15 * k) + ' ' + (x + h) + ' ' + (y - 3) + ' C' + (x + h * 0.55) + ' ' + (y + 6 * k) + ' ' + (x - h * 0.55) + ' ' + (y + 6 * k) + ' ' + (x - h) + ' ' + (y - 3) + ' Z" fill="' + C('pupille') + '"/>';
     }
     function joue(x, y, k) {
-      return '<ellipse cx="' + x + '" cy="' + y + '" rx="' + (13 * k) + '" ry="7" fill="' + C('joue') + '" opacity="' + (o.coeurs ? 1 : p.jouesOpacite) + '"/>';
+      var g = o.rougit ? 1.35 : 1;
+      return '<ellipse cx="' + x + '" cy="' + y + '" rx="' + (13 * k * g) + '" ry="' + (7 * g) + '" fill="' + C('joue') + '" opacity="' + (o.coeurs || o.rougit ? 1 : p.jouesOpacite) + '"/>';
     }
 
     if (vue === 'profil') {
       var q = p.profil, mj = o.jambes === 'debout' ? 0 : 22;
-      out.push(uneJambe(q.hanches[0][0], q.hanches[0][1], mj));
-      out.push(uneJambe(q.hanches[1][0], q.hanches[1][1], -mj));
+      var ja = o.jambesAngles || [mj, -mj];
+      out.push(uneJambe(q.hanches[0][0], q.hanches[0][1], ja[0]));
+      out.push(uneJambe(q.hanches[1][0], q.hanches[1][1], ja[1]));
       out.push('<path d="' + p.corps() + '" fill="url(#' + id + ')"/>');
-      out.push(oeil(q.oeil[0], q.oeil[1]));
+      out.push(oeil(q.oeil[0], q.oeil[1], 1));
       out.push(joue(q.joue[0], q.joue[1], 0.8));
       out.push(laBouche(q.bouche[0], q.bouche[1], 0.6));
       out.push(unBras(q.epaule[0], q.epaule[1], bras[0], -1));
     } else {
-      out.push(unBras(p.epaules[0][0], p.epaules[0][1], bras[0], 1));
-      out.push(unBras(p.epaules[1][0], p.epaules[1][1], bras[1], -1));
+      if (!devant[0]) out.push(unBras(p.epaules[0][0], p.epaules[0][1], bras[0], 1));
+      if (!devant[1]) out.push(unBras(p.epaules[1][0], p.epaules[1][1], bras[1], -1));
       var mf = o.jambes === 'marche' ? 10 : 0;
-      out.push(uneJambe(p.hanches[0][0], p.hanches[0][1], mf));
-      out.push(uneJambe(p.hanches[1][0], p.hanches[1][1], mf));
+      var jf = o.jambesAngles || [mf, mf];
+      out.push(uneJambe(p.hanches[0][0], p.hanches[0][1], jf[0]));
+      out.push(uneJambe(p.hanches[1][0], p.hanches[1][1], jf[1]));
       out.push('<path d="' + p.corps() + '" fill="url(#' + id + ')"/>');
       if (vue === 'face') {
-        out.push(oeil(p.yeux[0][0], p.yeux[0][1]));
-        out.push(oeil(p.yeux[1][0], p.yeux[1][1]));
+        out.push(oeil(p.yeux[0][0], p.yeux[0][1], 0));
+        out.push(oeil(p.yeux[1][0], p.yeux[1][1], 1));
         out.push(joue(p.joues[0][0], p.joues[0][1], 1));
         out.push(joue(p.joues[1][0], p.joues[1][1], 1));
         out.push(laBouche(p.bouche[0], p.bouche[1], 1));
       }
+      if (devant[0]) out.push(unBras(p.epaules[0][0], p.epaules[0][1], bras[0], 1));
+      if (devant[1]) out.push(unBras(p.epaules[1][0], p.epaules[1][1], bras[1], -1));
     }
     out.push('</g>');
     if (o.coeurs) {
@@ -133,6 +147,39 @@
     }
     out.push('</svg>');
     return out.join('');
+  }
+
+  // Position des mains dans le dessin : le bout de chaque bras, après
+  // l'inclinaison et le saut du corps. Vue de profil : la main visible, deux fois.
+  function mains(nom, o) {
+    o = o || {};
+    var p = PERSOS[nom];
+    var vue = o.vue || 'face';
+    var bras = o.bras || [10, 10];
+    var w = p.bras[0], h = p.bras[1], L = h - 6 - w / 2;
+    function bout(px, py, angle, cote) {
+      var leve = Math.max(0, Math.min(1, (angle - 90) / 60));
+      py -= 34 * leve;
+      var t = (cote * angle * Math.PI) / 180;
+      return [px - L * Math.sin(t), py + L * Math.cos(t)];
+    }
+    var r = (o.penche || 0) * Math.PI / 180, cx = p.centre, cy = p.sol, s = o.saut || 0;
+    function corps(pt) {
+      var dx = pt[0] - cx, dy = pt[1] - cy;
+      return [cx + dx * Math.cos(r) - dy * Math.sin(r), cy + dx * Math.sin(r) + dy * Math.cos(r) - s];
+    }
+    if (vue === 'profil') {
+      var m = corps(bout(p.profil.epaule[0], p.profil.epaule[1], bras[0], -1));
+      return [m, m];
+    }
+    return [corps(bout(p.epaules[0][0], p.epaules[0][1], bras[0], 1)), corps(bout(p.epaules[1][0], p.epaules[1][1], bras[1], -1))];
+  }
+
+  // Repères utiles à l'animation, dans le dessin : boîte, ligne du sol,
+  // centre, milieu des yeux.
+  function reperes(nom) {
+    var p = PERSOS[nom];
+    return { boite: p.boite, sol: p.sol, centre: p.centre, yeux: [(p.yeux[0][0] + p.yeux[1][0]) / 2, p.yeux[0][1]], haut: nom === 'rose' ? 64 : 26 };
   }
 
   var POSES = {
@@ -148,6 +195,8 @@
   };
 
   racine.mascotte = mascotte;
+  racine.mainsMascotte = mains;
+  racine.reperesMascotte = reperes;
   racine.POSES_MASCOTTES = POSES;
-  if (typeof module !== 'undefined') module.exports = { mascotte: mascotte, POSES: POSES };
+  if (typeof module !== 'undefined') module.exports = { mascotte: mascotte, mains: mains, reperes: reperes, POSES: POSES };
 })(typeof window !== 'undefined' ? window : globalThis);

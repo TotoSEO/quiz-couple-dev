@@ -4,7 +4,7 @@ import { BaseMemoire } from './memoire.mjs';
 import { etat, menage, renouvelerJetons, reserve } from '../entretien.mjs';
 
 const T0 = new Date('2026-10-12T15:00:00Z');
-const melange = { matin: 'reel', soir: 'reel', midi: { 1: 'image', 2: 'carrousel', 3: 'image', 4: 'carrousel', 5: 'image', 6: 'carrousel', 7: 'reel' } };
+const melange = { matin: 'pov', midi: { 1: 'connais-tu', 2: 'tu-preferes', 3: 'connais-tu', 4: 'statique', 5: 'connais-tu', 6: 'tu-preferes', 7: 'statique' }, soir: { 1: 'pov', 2: 'pov', 3: 'pov', 4: 'pov', 5: 'coquin', 6: 'phrase', 7: 'phrase' } };
 
 const posts = (jours) =>
   jours.flatMap((jour, i) => ['matin', 'midi', 'soir'].map((creneau, k) => ({ id: `p${i}${k}`, jour, creneau, statut: 'valide', format: 'reel', gabarit: 'citation' })));
@@ -14,18 +14,18 @@ test('la réserve compte les jours complets consécutifs', async () => {
   assert.equal(await reserve(b, { maintenant: T0 }), 2);
 });
 
-test('l\'état liste les créneaux à remplir avec leur format', async () => {
+test('l\'état liste les créneaux à remplir avec leur catégorie', async () => {
   const b = new BaseMemoire({
-    social_comptes: [{ id: 'c', langue: 'en', fuseau: 'America/New_York' }],
+    social_comptes: [{ id: 'c', langue: 'en', fuseau: 'Europe/Paris' }],
     social_reglages: [{ cle: 'melange', valeur: melange }],
     social_posts: posts(['2026-10-14']),
   });
   const e = await etat(b, { maintenant: T0, horizon: 3 });
   assert.equal(e.aujourdhui, '2026-10-12');
   assert.deepEqual(e.a_remplir, [
-    { jour: '2026-10-15', creneau: 'matin', format: 'reel' },
-    { jour: '2026-10-15', creneau: 'midi', format: 'carrousel' },
-    { jour: '2026-10-15', creneau: 'soir', format: 'reel' },
+    { jour: '2026-10-15', creneau: 'matin', categorie: 'pov' },
+    { jour: '2026-10-15', creneau: 'midi', categorie: 'statique' },
+    { jour: '2026-10-15', creneau: 'soir', categorie: 'pov' },
   ]);
 });
 

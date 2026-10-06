@@ -44,6 +44,30 @@ const verifier = (racine: HTMLElement): string[] | null => {
     const max = Number(el.dataset.lignesMax || 0);
     if (max && lignes.length > max) fautes.push(`${nom} : ${lignes.length} lignes pour ${max} au plus`);
   });
+  // animations : chaque visage reste dans l'image (hors des bandeaux
+  // d'Instagram) et n'est jamais caché par un texte
+  const textes = [...racine.querySelectorAll<HTMLElement>('[data-verif]')].filter((el) => !el.hasAttribute('data-sans-lignes'));
+  racine.querySelectorAll<HTMLElement>('[data-tete]').forEach((el) => {
+    if (el.dataset.horsChamp) return;
+    const r = el.getBoundingClientRect();
+    const x = r.left + r.width / 2 - cadre.left;
+    const y = r.top + r.height / 2 - cadre.top;
+    if (x < 30 || x > 1050 || y < 220 || y > 1500) fautes.push(`visage de ${el.dataset.tete} hors de l'image (${Math.round(x)}, ${Math.round(y)})`);
+    for (const t of textes) {
+      const b = t.getBoundingClientRect();
+      if (x > b.left - cadre.left && x < b.right - cadre.left && y > b.top - cadre.top && y < b.bottom - cadre.top) {
+        fautes.push(`visage de ${el.dataset.tete} sous le texte « ${t.dataset.verif} »`);
+      }
+    }
+  });
+  const separes = [...racine.querySelectorAll<HTMLElement>('[data-sans-chevauchement]')].map((el) => ({ nom: el.dataset.verif, r: el.getBoundingClientRect() }));
+  for (let i = 0; i < separes.length; i++) {
+    for (let j = i + 1; j < separes.length; j++) {
+      const a = separes[i].r;
+      const b = separes[j].r;
+      if (a.left < b.right - 2 && b.left < a.right - 2 && a.top < b.bottom - 2 && b.top < a.bottom - 2) fautes.push(`« ${separes[i].nom} » et « ${separes[j].nom} » se chevauchent`);
+    }
+  }
   return fautes;
 };
 

@@ -6,10 +6,14 @@ import React from 'react';
 import '../../../charte/mascottes.js';
 import type { OptionsMascotte } from '../../../charte/mascottes.js';
 
-type Dessin = { mascotte: (nom: 'rose' | 'violet', o?: OptionsMascotte) => string; POSES_MASCOTTES: Record<string, OptionsMascotte> };
-const { mascotte, POSES_MASCOTTES: POSES } = window as unknown as Dessin;
+type Dessin = {
+  mascotte: (nom: 'rose' | 'violet', o?: OptionsMascotte) => string;
+  mainsMascotte: (nom: 'rose' | 'violet', o?: OptionsMascotte) => [[number, number], [number, number]];
+  POSES_MASCOTTES: Record<string, OptionsMascotte>;
+};
+const { mascotte, mainsMascotte, POSES_MASCOTTES: POSES } = window as unknown as Dessin;
 
-export { POSES };
+export { POSES, mascotte, mainsMascotte };
 export type { OptionsMascotte };
 
 // Largeurs d'affichage qui gardent le rapport de taille de la planche

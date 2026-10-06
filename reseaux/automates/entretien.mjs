@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { Instagram, renouvelerJeton } from './lib/instagram.mjs';
-import { ajouterJours, aujourdhui, formatAttendu } from './lib/calendrier.mjs';
+import { ajouterJours, aujourdhui, categorieAttendue } from './lib/calendrier.mjs';
 
 const JOUR = 86400000;
 const CRENEAUX = ['matin', 'midi', 'soir'];
@@ -77,7 +77,7 @@ export async function statistiques(base, { maintenant = new Date(), instagramPou
 
 // Jours d'avance : jours consécutifs, à partir d'aujourd'hui, dont les trois
 // créneaux ont un post validé.
-export async function reserve(base, { maintenant = new Date(), fuseau = 'America/New_York' } = {}) {
+export async function reserve(base, { maintenant = new Date(), fuseau = 'Europe/Paris' } = {}) {
   const debut = aujourdhui(fuseau, maintenant);
   const posts = await base.select('social_posts', `select=jour,creneau,statut&jour=gte.${debut}&statut=eq.valide`);
   let jours = 0;
@@ -94,7 +94,7 @@ export async function reserve(base, { maintenant = new Date(), fuseau = 'America
 // marche, les recettes refusées à corriger.
 export async function etat(base, { maintenant = new Date(), horizon = 21 } = {}) {
   const [compte] = await base.select('social_comptes', 'select=langue,fuseau,actif&order=langue.asc&limit=1');
-  const fuseau = compte?.fuseau || 'America/New_York';
+  const fuseau = compte?.fuseau || 'Europe/Paris';
   const debut = aujourdhui(fuseau, maintenant);
   const melange = await base.reglage('melange');
   const posts = await base.select('social_posts', `select=id,jour,creneau,format,gabarit,categorie,statut&jour=gte.${ajouterJours(debut, -30)}&order=jour.asc`);
@@ -106,7 +106,7 @@ export async function etat(base, { maintenant = new Date(), horizon = 21 } = {})
     const jour = ajouterJours(debut, i);
     for (const creneau of CRENEAUX) {
       if (!posts.some((p) => p.jour === jour && p.creneau === creneau && p.statut !== 'annule')) {
-        aRemplir.push({ jour, creneau, format: formatAttendu(melange, jour, creneau) });
+        aRemplir.push({ jour, creneau, categorie: categorieAttendue(melange, jour, creneau) });
       }
     }
   }

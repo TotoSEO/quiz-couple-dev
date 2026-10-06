@@ -1,10 +1,11 @@
 import React from 'react';
-import { Composition, Still } from 'remotion';
+import { AbsoluteFill, Composition, Freeze, Still } from 'remotion';
 import { FPS } from './charte/charte';
 import { typographier } from './charte/libelles';
 import { Bruitages, Musique } from './charte/Son';
 import { Citation } from './gabarits/Citation';
-import { QuizChrono } from './gabarits/QuizChrono';
+import { Jeu } from './gabarits/QuizChrono';
+import { Pov } from './gabarits/Pov';
 import { ImageFixe } from './gabarits/ImageFixe';
 import { PageCarrousel } from './gabarits/Carrousel';
 import { planifier, type Plan } from './plan';
@@ -12,20 +13,20 @@ import type { RecetteFixe, RecetteReel } from './recette';
 import exempleCitation from '../recettes/exemples/citation.json';
 import exempleImage from '../recettes/exemples/image.json';
 
-type PropsReel = { recette: RecetteReel; plan?: Plan; verification?: boolean };
+type PropsReel = { recette: RecetteReel; plan?: Plan; verification?: boolean; silencieux?: boolean };
 type PropsImage = { recette: RecetteFixe; page?: number; verification?: boolean };
 
-const Reel: React.FC<PropsReel> = ({ recette: brute, plan, verification }) => {
+const Reel: React.FC<PropsReel> = ({ recette: brute, plan, verification, silencieux }) => {
   const recette = typographier(brute, brute.langue);
   const p = plan ?? planifier(recette);
   return (
     <>
-      {recette.gabarit === 'citation' ? (
-        <Citation recette={recette} plan={p} verification={verification} />
-      ) : (
-        <QuizChrono recette={recette} plan={p} verification={verification} />
+      {recette.gabarit === 'citation' && <Citation recette={recette} plan={p} verification={verification} />}
+      {(recette.gabarit === 'quiz-chrono' || recette.gabarit === 'connais-tu' || recette.gabarit === 'tu-preferes') && (
+        <Jeu recette={recette} plan={p} verification={verification} />
       )}
-      {!verification && (
+      {recette.gabarit === 'pov' && <Pov recette={recette} plan={p} verification={verification} />}
+      {!verification && !silencieux && (
         <>
           <Musique fichier={p.musique} debut={recette.musiqueDebut} duree={p.duree} sons={p.sons} />
           <Bruitages sons={p.sons} />
@@ -44,6 +45,30 @@ const Image: React.FC<PropsImage> = ({ recette: brute, page = 0, verification })
   );
 };
 
+// Planche de contrôle : plusieurs images d'un reel côte à côte, en petit,
+// pour relire une animation d'un coup d'œil (scripts/planche.mjs).
+type PropsPlanche = { recette: RecetteReel; images: number[]; colonnes: number };
+const L_VIGNETTE = 270;
+const Planche: React.FC<PropsPlanche> = ({ recette, images, colonnes }) => {
+  const plan = planifier(typographier(recette, recette.langue));
+  return (
+    <AbsoluteFill style={{ background: '#777', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', alignContent: 'flex-start', gap: 8, padding: 8, width: colonnes * (L_VIGNETTE + 8) + 8 }}>
+      {images.map((n) => (
+        <div key={n} style={{ position: 'relative', width: L_VIGNETTE, height: (L_VIGNETTE * 1920) / 1080 + 26, overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', width: 1080, height: 1920, transform: `scale(${L_VIGNETTE / 1080})`, transformOrigin: '0 0', overflow: 'hidden' }}>
+            <Freeze frame={n}>
+              <Reel recette={recette} plan={plan} verification={false} silencieux />
+            </Freeze>
+          </div>
+          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 26, font: '600 16px sans-serif', color: '#fff', textAlign: 'center' }}>
+            {n} · {(n / FPS).toFixed(2)} s
+          </div>
+        </div>
+      ))}
+    </AbsoluteFill>
+  );
+};
+
 export const Racine: React.FC = () => (
   <>
     <Composition
@@ -57,6 +82,22 @@ export const Racine: React.FC = () => (
       calculateMetadata={({ props }) => {
         const plan = planifier(props.recette);
         return { durationInFrames: plan.duree, props: { ...props, plan } };
+      }}
+    />
+    {/* une composition et non une image fixe : useCurrentFrame est borné
+        à la durée, il faut celle du reel pour que Freeze aille partout */}
+    <Composition
+      id="planche"
+      component={Planche}
+      fps={FPS}
+      durationInFrames={300}
+      width={6 * (L_VIGNETTE + 8) + 8}
+      height={2 * ((L_VIGNETTE * 1920) / 1080 + 34) + 8}
+      defaultProps={{ recette: exempleCitation as RecetteReel, images: [0], colonnes: 6 } as PropsPlanche}
+      calculateMetadata={({ props }) => {
+        const lignes = Math.ceil(props.images.length / props.colonnes);
+        const duree = planifier(props.recette).duree;
+        return { durationInFrames: duree, width: props.colonnes * (L_VIGNETTE + 8) + 8, height: lignes * ((L_VIGNETTE * 1920) / 1080 + 34) + 8 };
       }}
     />
     <Still

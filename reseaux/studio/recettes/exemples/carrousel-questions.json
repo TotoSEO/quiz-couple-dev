@@ -1,0 +1,23 @@
+{
+  "gabarit": "carrousel",
+  "langue": "en",
+  "theme": "light",
+  "pages": [
+    { "type": "couverture", "etiquette": "For tonight", "accroche": "8 questions for you two",
+      "scene": { "t": 1.4, "plan": { "description": "Les deux dans le canapé le soir, la rose tient une tasse, le violet lui sourit.", "duree": 2, "decor": "salon", "moment": "soir",
+        "persos": [ { "qui": "rose", "a": "canape-gauche", "gestes": [ { "geste": "tient", "objet": "tasse", "main": "gauche", "de": 0, "a": 2 } ] },
+                    { "qui": "violet", "a": "canape-droite", "gestes": [ { "geste": "regarde", "cible": "rose", "de": 0, "a": 2 }, { "geste": "visage", "yeux": "heureux", "bouche": "sourire", "de": 0, "a": 2 } ] } ] } } },
+    { "type": "page", "numero": "1", "question": "What was your very first impression of me?" },
+    { "type": "page", "numero": "2", "question": "Which moment of our story would you live again?" },
+    { "type": "page", "numero": "3", "question": "What's one small thing I do that makes your day?" },
+    { "type": "page", "numero": "4", "question": "Where would you take me if we left tomorrow?" },
+    { "type": "page", "numero": "5", "question": "What's a song that makes you think of us?" },
+    { "type": "page", "numero": "6", "question": "When did you know you liked me?" },
+    { "type": "page", "numero": "7", "question": "What do you want us to do more often?" },
+    { "type": "page", "numero": "8", "question": "What's your favorite thing about us?" },
+    { "type": "fin", "texte": "Want more questions for tonight?", "bouton": "Link in bio",
+      "scene": { "t": 1.4, "plan": { "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.", "duree": 2, "decor": "ligne",
+        "persos": [ { "qui": "rose", "a": "gauche", "gestes": [ { "geste": "salue", "de": 0, "a": 2 } ] },
+                    { "qui": "violet", "a": "droite", "gestes": [ { "geste": "joie", "de": 0, "a": 2 } ] } ] } } }
+  ]
+}

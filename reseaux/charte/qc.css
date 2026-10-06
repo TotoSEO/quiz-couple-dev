@@ -51,6 +51,16 @@
   justify-content: center;
   text-align: center;
 }
+/* Post ou page avec une scène dessinée : le texte dans le haut, la scène
+   dessous (la scène occupe la moitié basse de l'image). */
+.qc-canevas.is-post > .qc-utile.is-haut { bottom: 640px; }
+.qc-canevas.is-post > .qc-utile.is-haut.is-carte {
+  top: calc(var(--zone-post-marge) + var(--pas-2));
+  bottom: 690px;
+  border: 4px solid var(--trait);
+  border-radius: var(--rayon-carte);
+  background: color-mix(in srgb, var(--papier) 95%, transparent);
+}
 /* Zone utile d'un post ou d'une page de carrousel. */
 .qc-canevas.is-post > .qc-utile {
   top: var(--zone-post-marge);
@@ -321,6 +331,8 @@
    L'écran d'un quiz se lit en cinq secondes : on remplit la zone utile. */
 
 .qc-canevas.is-quiz .qc-utile { gap: var(--pas-6); }
+/* Intro des jeux : le texte en haut, les mascottes en grand dessous. */
+.qc-canevas.is-quiz .qc-utile.is-haut { bottom: 960px; }
 .qc-canevas.is-quiz .qc-etiquette { font-size: 40px; }
 .qc-canevas.is-quiz .qc-question { font-size: 72px; line-height: 1.1; }
 .qc-canevas.is-quiz .qc-carte { padding: var(--pas-6) var(--pas-6) var(--pas-8); gap: var(--pas-4); }
@@ -330,6 +342,28 @@
 .qc-canevas.is-quiz .qc-chrono-temps { font-size: 64px; }
 .qc-canevas.is-quiz .qc-accroche { font-size: 136px; }
 .qc-canevas.is-quiz .qc-texte { font-size: 48px; }
+.qc-canevas.is-quiz .qc-carte.is-seule { padding: var(--pas-9) var(--pas-6); gap: var(--pas-6); }
+.qc-canevas.is-quiz .qc-question.is-grande { font-size: 96px; line-height: 1.08; }
+/* Tu préfères : les deux choix, et « ou » entre les deux. */
+.qc-option > span:last-child { text-wrap: balance; }
+.qc-option-lettre.is-violet { background: var(--violet); color: var(--sur-violet); }
+.qc-canevas.is-quiz .qc-option.is-choix { font-size: 54px; }
+.qc-ou {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  min-width: 96px;
+  height: 64px;
+  margin: calc(-1 * var(--pas-2)) 0;
+  padding: 0 var(--pas-3);
+  border-radius: var(--rayon-pilule);
+  background: var(--encre);
+  color: var(--fond);
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
 
 /* ── Bulles des mascottes ─────────────────────────────────────────
    « ! » pendant le chrono, « Yay! » à la réponse. */
@@ -362,3 +396,96 @@
   color: var(--sur-violet);
   font-size: 56px;
 }
+
+/* ── Animations (POV, mini messages) ──────────────────────────────
+   Les textes sont posés par-dessus l'image, dans la zone utile, et ne
+   suivent jamais le zoom de la caméra. */
+
+.qc-utile.pov-calque { display: block; }
+.pov-calque > * { position: absolute; margin: 0; }
+.pov-pile {
+  top: var(--pas-2);
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--pas-3);
+}
+.pov-pile > * { margin: 0; }
+.pov-titre {
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: var(--pas-3) var(--pas-6);
+  border: 4px solid var(--trait);
+  border-radius: var(--rayon-carte);
+  background: color-mix(in srgb, var(--papier) 94%, transparent);
+  font-family: var(--font-display);
+  font-size: 60px;
+  line-height: 1.12;
+  font-weight: 600;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--encre);
+}
+.pov-titre.is-nu { border-color: transparent; background: none; }
+.pov-legende {
+  width: fit-content;
+  padding: var(--pas-1) var(--pas-6);
+  border-radius: var(--rayon-pilule);
+  background: var(--violet);
+  color: var(--sur-violet);
+  font-family: var(--font-display);
+  font-size: 52px;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.pov-message {
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--encre);
+}
+.pov-message.is-phrase { font-family: var(--font-display); font-size: 84px; line-height: 1.1; font-weight: 600; }
+.pov-message.is-plume { font-family: var(--font-plume); font-size: 80px; line-height: 1.18; font-weight: 500; font-style: italic; }
+.pov-bulle {
+  box-sizing: border-box;
+  padding: var(--pas-2) var(--pas-4);
+  border: 5px solid var(--decor-trait);
+  border-radius: var(--rayon-carte);
+  background: var(--fond);
+  font-family: var(--font-display);
+  font-size: 46px;
+  line-height: 1.15;
+  font-weight: 600;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--encre);
+}
+.pov-bulle::after {
+  content: '';
+  position: absolute;
+  left: calc(var(--pointe, 50%) - 16px);
+  bottom: -27px;
+  width: 26px;
+  height: 26px;
+  background: var(--fond);
+  border-right: 5px solid var(--decor-trait);
+  border-bottom: 5px solid var(--decor-trait);
+  transform: rotate(45deg);
+}
+.pov-signature {
+  left: 0;
+  right: 0;
+  bottom: var(--pas-2);
+  width: fit-content;
+  margin: 0 auto;
+  padding: var(--pas-1) var(--pas-3) var(--pas-1) var(--pas-1);
+  border-radius: var(--rayon-pilule);
+  background: color-mix(in srgb, var(--fond) 80%, transparent);
+}
+.pov-signature img { width: 56px; height: 56px; }

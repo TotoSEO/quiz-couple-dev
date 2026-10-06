@@ -1,0 +1,41 @@
+{
+  "gabarit": "tu-preferes",
+  "langue": "en",
+  "theme": "light",
+  "etiquette": "6 dilemmas",
+  "accroche": "Would you rather: couple edition",
+  "consigne": "Pick fast, then compare with your partner!",
+  "amorce": "Would you rather...",
+  "secondes": 5,
+  "dilemmes": [
+    {
+      "a": "Cook together every night",
+      "b": "Takeout every night"
+    },
+    {
+      "a": "Read each other's texts",
+      "b": "Share one phone forever"
+    },
+    {
+      "a": "A trip to the mountains",
+      "b": "A week by the sea"
+    },
+    {
+      "a": "Always say I love you first",
+      "b": "Always get the last hug"
+    },
+    {
+      "a": "Breakfast in bed",
+      "b": "Dinner under the stars"
+    },
+    {
+      "a": "Know all their secrets",
+      "b": "Keep a few of yours"
+    }
+  ],
+  "fin": {
+    "question": "Did you pick the same? Comment your A and B!",
+    "bouton": "Send this to your partner",
+    "signature": "More dilemmas on quiz-couple.com"
+  }
+}

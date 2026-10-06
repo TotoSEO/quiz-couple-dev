@@ -2,6 +2,7 @@ import React from 'react';
 import { Canevas, Signature } from '../charte/Canevas';
 import { LIBELLES } from '../charte/libelles';
 import type { RecetteCarrousel } from '../recette';
+import { DECORS_CALMES, SceneFixe } from '../pov/Scene';
 
 const bas: React.CSSProperties = {
   position: 'absolute',
@@ -23,7 +24,15 @@ export const PageCarrousel: React.FC<{ recette: RecetteCarrousel; page: number; 
   const total = r.pages.length;
   return (
     <Canevas theme={r.theme} format="post" verification={verification}>
-      <div className="qc-utile" style={{ gap: 'var(--pas-6)' }}>
+      {(p.type === 'couverture' || p.type === 'fin') && p.scene && <SceneFixe plan={p.scene.plan} t={p.scene.t} haut={p.scene.haut} />}
+      <div
+        className={
+          'qc-utile' +
+          ((p.type === 'couverture' || p.type === 'fin') && p.scene ? ' is-haut' : '') +
+          ((p.type === 'couverture' || p.type === 'fin') && p.scene && !DECORS_CALMES.has(p.scene.plan.decor) ? ' is-carte' : '')
+        }
+        style={{ gap: 'var(--pas-6)' }}
+      >
         {p.type === 'couverture' && (
           <>
             <div className="qc-etiquette" data-verif="etiquette">{p.etiquette}</div>

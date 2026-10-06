@@ -2,12 +2,12 @@
 // Tout le reste (questions, phrases, appels) vient de la recette.
 export type Langue = 'en' | 'fr' | 'es' | 'de' | 'it';
 
-export const LIBELLES: Record<Langue, { question: string; reponse: string; glisse: string; site: string; joie: string }> = {
-  en: { question: 'Question {n} of {total}', reponse: 'Answer', glisse: 'Swipe →', site: 'quiz-couple.com', joie: 'Yay!' },
-  fr: { question: 'Question {n} sur {total}', reponse: 'Réponse', glisse: 'Fais glisser →', site: 'quiz-couple.com', joie: 'Youpi\u202f!' },
-  es: { question: 'Pregunta {n} de {total}', reponse: 'Respuesta', glisse: 'Desliza →', site: 'quiz-couple.com', joie: '¡Bien!' },
-  de: { question: 'Frage {n} von {total}', reponse: 'Antwort', glisse: 'Wischen →', site: 'quiz-couple.com', joie: 'Juhu!' },
-  it: { question: 'Domanda {n} di {total}', reponse: 'Risposta', glisse: 'Scorri →', site: 'quiz-couple.com', joie: 'Evviva!' },
+export const LIBELLES: Record<Langue, { question: string; reponse: string; glisse: string; site: string; joie: string; ou: string }> = {
+  en: { question: 'Question {n} of {total}', reponse: 'Answer', glisse: 'Swipe →', site: 'quiz-couple.com', joie: 'Yay!', ou: 'or' },
+  fr: { question: 'Question {n} sur {total}', reponse: 'Réponse', glisse: 'Fais glisser →', site: 'quiz-couple.com', joie: 'Youpi\u202f!', ou: 'ou' },
+  es: { question: 'Pregunta {n} de {total}', reponse: 'Respuesta', glisse: 'Desliza →', site: 'quiz-couple.com', joie: '¡Bien!', ou: 'o' },
+  de: { question: 'Frage {n} von {total}', reponse: 'Antwort', glisse: 'Wischen →', site: 'quiz-couple.com', joie: 'Juhu!', ou: 'oder' },
+  it: { question: 'Domanda {n} di {total}', reponse: 'Risposta', glisse: 'Scorri →', site: 'quiz-couple.com', joie: 'Evviva!', ou: 'o' },
 };
 
 export const remplir = (modele: string, valeurs: Record<string, string | number>) =>

@@ -2,8 +2,26 @@
 // pousser un post, puis par la synchro avant de l'écrire dans Supabase.
 // Renvoie la liste des fautes (vide si tout va bien).
 
+import { controlerPov } from './pov.mjs';
+
 const CRENEAUX = ['matin', 'midi', 'soir'];
-const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', image: 'image', carrousel: 'carrousel' };
+const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', image: 'image', carrousel: 'carrousel' };
+// Les catégories de la ligne éditoriale (reseaux/atelier/LIGNE-EDITORIALE.md)
+// et le gabarit qui les fabrique.
+export const CATEGORIES = {
+  pov: 'pov',
+  coquin: 'pov',
+  statique: 'pov',
+  'connais-tu': 'connais-tu',
+  'tu-preferes': 'tu-preferes',
+  phrase: 'citation',
+  post: 'image',
+  carrousel: 'carrousel',
+};
+// Les jeux renvoient vers le site ; les animations et les phrases jamais
+// (seule la mention quiz-couple.com dans l'image).
+const RENVOI_AU_SITE = /quiz-couple\.com|link in bio|lien en bio/i;
+const SANS_RENVOI = ['pov', 'coquin', 'statique', 'phrase'];
 const THEMES = ['light', 'dark', 'marque'];
 const LANGUES = ['en', 'fr', 'es', 'de', 'it'];
 
@@ -24,7 +42,8 @@ const chaines = (v, out = []) => {
 };
 
 const titres = (r) => {
-  if (r.gabarit === 'quiz-chrono') return [r.etiquette, r.accroche, r.fin?.question];
+  if (['quiz-chrono', 'connais-tu', 'tu-preferes'].includes(r.gabarit)) return [r.etiquette, r.accroche, r.fin?.question];
+  if (r.gabarit === 'pov') return [r.titre, ...(r.plans ?? []).map((p) => p.legende)];
   if (r.gabarit === 'carrousel') return r.pages.flatMap((p) => [p.etiquette, p.accroche, p.question]);
   return [];
 };
@@ -46,6 +65,27 @@ export function controlerRecette(r, langue) {
     if (r.texte && r.texte.length > 220) f.push('texte trop long (220 signes au plus)');
   }
   if (r.gabarit === 'image' && !['citation', 'phrase'].includes(r.style)) f.push(`style d'image inconnu : ${r.style}`);
+  if (['quiz-chrono', 'connais-tu', 'tu-preferes'].includes(r.gabarit)) {
+    if (!r.etiquette?.trim() || !r.accroche?.trim() || !r.consigne?.trim()) f.push('intro incomplète (etiquette, accroche, consigne)');
+    if (!r.fin?.question || !r.fin?.bouton || !r.fin?.signature) f.push('écran de fin incomplet');
+    if (r.secondes && (r.secondes < 3 || r.secondes > 10)) f.push('chrono de 3 à 10 secondes');
+  }
+  if (r.gabarit === 'connais-tu') {
+    if (!Array.isArray(r.questions) || r.questions.length < 4 || r.questions.length > 10) f.push('de 4 à 10 questions');
+    (r.questions || []).forEach((q, i) => {
+      if (typeof q !== 'string' || !q.trim()) f.push(`question ${i + 1} vide`);
+      else if (q.length > 70) f.push(`question ${i + 1} : 70 signes au plus`);
+    });
+  }
+  if (r.gabarit === 'tu-preferes') {
+    if (!r.amorce?.trim()) f.push("l'amorce (« Would you rather... ») manque");
+    if (!Array.isArray(r.dilemmes) || r.dilemmes.length < 3 || r.dilemmes.length > 8) f.push('de 3 à 8 dilemmes');
+    (r.dilemmes || []).forEach((d, i) => {
+      if (!d?.a?.trim() || !d?.b?.trim()) f.push(`dilemme ${i + 1} : deux choix`);
+      else if (d.a.length > 45 || d.b.length > 45) f.push(`dilemme ${i + 1} : 45 signes au plus par choix`);
+    });
+  }
+  if (r.gabarit === 'pov') f.push(...controlerPov(r));
   if (r.gabarit === 'quiz-chrono') {
     if (!Array.isArray(r.questions) || r.questions.length < 4 || r.questions.length > 8) f.push('un quiz chrono a de 4 à 8 questions');
     (r.questions || []).forEach((q, i) => {
@@ -53,8 +93,6 @@ export function controlerRecette(r, langue) {
       if (!Array.isArray(q.reponses) || q.reponses.length < 2 || q.reponses.length > 4) f.push(`question ${i + 1} : 2 à 4 réponses`);
       if (!(Number.isInteger(q.bonne) && q.bonne >= 0 && q.bonne < (q.reponses || []).length)) f.push(`question ${i + 1} : bonne réponse invalide`);
     });
-    if (!r.fin?.question || !r.fin?.bouton || !r.fin?.signature) f.push('écran de fin incomplet');
-    if (r.secondes && (r.secondes < 3 || r.secondes > 10)) f.push('chrono de 3 à 10 secondes');
   }
   if (r.gabarit === 'carrousel') {
     const p = r.pages || [];
@@ -70,6 +108,11 @@ export function controlerPost(post) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(post.jour || '')) f.push(`jour invalide : ${post.jour}`);
   if (!CRENEAUX.includes(post.creneau)) f.push(`créneau invalide : ${post.creneau}`);
   if (FORMAT_DU_GABARIT[post.gabarit] !== post.format) f.push(`le gabarit ${post.gabarit} ne donne pas un ${post.format}`);
+  if (!CATEGORIES[post.categorie]) f.push(`catégorie inconnue : ${post.categorie} (${Object.keys(CATEGORIES).join(', ')})`);
+  else if (CATEGORIES[post.categorie] !== post.gabarit) f.push(`la catégorie ${post.categorie} se fait avec le gabarit ${CATEGORIES[post.categorie]}`);
+  if (post.categorie === 'statique' && post.variantes) {
+    for (const v of Object.values(post.variantes)) if ((v.recette?.plans ?? []).length !== 1) f.push('un reel statique a un seul plan');
+  }
   const variantes = Object.entries(post.variantes || {});
   if (!variantes.length) f.push('aucune déclinaison');
   for (const [langue, v] of variantes) {
@@ -84,6 +127,7 @@ export function controlerPost(post) {
     if (hashtags.length < 1 || hashtags.length > 5) f.push(`${langue} : 1 à 5 hashtags`);
     for (const h of hashtags) if (!/^#[\p{L}\p{N}_]+$/u.test(h)) f.push(`${langue} : hashtag invalide « ${h} »`);
     if (legendeFinale(v).length > 2200) f.push(`${langue} : légende de plus de 2 200 signes`);
+    if (SANS_RENVOI.includes(post.categorie) && RENVOI_AU_SITE.test(legende)) f.push(`${langue} : pas de renvoi vers le site dans un post « ${post.categorie} » (seulement dans les jeux)`);
   }
   return f;
 }

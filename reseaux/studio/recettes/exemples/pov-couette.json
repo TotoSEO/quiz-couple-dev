@@ -1,0 +1,57 @@
+{
+  "gabarit": "pov",
+  "langue": "en",
+  "theme": "light",
+  "idee": "Coquin en clin d'œil : la même scène sous la couette le matin, le midi et le soir, sans jamais rien montrer.",
+  "titre": "POV: what I want in the morning, at noon and at night",
+  "musique": "inventing-flight.mp3",
+  "plans": [
+    {
+      "description": "La chambre au matin (soleil bas dans la fenêtre), étiquette « Morning ». Personne en vue : la couette gonfle et sursaute toute seule. Des cœurs sortent du milieu de la couette, une chaussette s'envole vers le haut à droite en tournant.",
+      "duree": 2.4,
+      "decor": "chambre",
+      "moment": "matin",
+      "couette": "bouge",
+      "legende": "Morning",
+      "effets": [ { "effet": "coeurs", "de": 0.3, "a": 2.4, "x": 540, "y": 1120 } ],
+      "objets": [ { "objet": "chaussette", "x": 480, "y": 1200, "de": 0.7, "entree": "aucune", "vol": { "de": 0.8, "a": 1.7, "dx": 520, "dy": -900, "tours": 2 } } ],
+      "camera": [ { "a": 1.0, "secousse": 10 } ]
+    },
+    {
+      "description": "La chambre en plein jour (soleil haut), étiquette « Noon ». Même chose, la couette bouge encore plus, cette fois c'est un oreiller qui s'envole vers le haut à gauche.",
+      "duree": 2.4,
+      "decor": "chambre",
+      "moment": "midi",
+      "couette": "bouge",
+      "legende": "Noon",
+      "effets": [ { "effet": "coeurs", "de": 0.2, "a": 2.4, "x": 540, "y": 1120 } ],
+      "objets": [ { "objet": "oreiller", "x": 600, "y": 1200, "de": 0.6, "entree": "aucune", "vol": { "de": 0.7, "a": 1.6, "dx": -640, "dy": -880, "tours": 1 } } ],
+      "camera": [ { "a": 0.9, "secousse": 12 } ]
+    },
+    {
+      "description": "La chambre la nuit (lune et étoiles, lampe allumée), étiquette « Night ». La couette bouge, des cœurs montent, la caméra tremble deux fois.",
+      "duree": 2.4,
+      "decor": "chambre",
+      "moment": "nuit",
+      "couette": "bouge",
+      "legende": "Night",
+      "effets": [ { "effet": "coeurs", "de": 0.1, "a": 2.4, "x": 540, "y": 1120 } ],
+      "camera": [ { "a": 0.8, "secousse": 12 }, { "a": 1.6, "secousse": 10 } ]
+    },
+    {
+      "description": "Toujours la nuit. La couette se calme ; les deux sortent la tête de dessous, l'un après l'autre, avec leurs petites mains sur le bord. La rose fait un clin d'œil, joues rouges ; le violet sourit, gêné, des cœurs au-dessus de lui.",
+      "duree": 2.6,
+      "decor": "chambre",
+      "moment": "nuit",
+      "persos": [
+        { "qui": "rose", "a": "lit-gauche", "gestes": [
+          { "geste": "apparait", "depuis": "bas", "de": 0.2, "a": 0.7 },
+          { "geste": "visage", "yeux": "clin", "bouche": "sourire", "rougit": true, "de": 0.9, "a": 2.6 } ] },
+        { "qui": "violet", "a": "lit-droite", "gestes": [
+          { "geste": "apparait", "depuis": "bas", "de": 0.45, "a": 0.95 },
+          { "geste": "visage", "yeux": "heureux", "bouche": "sourire", "rougit": true, "de": 1.0, "a": 2.6 },
+          { "geste": "effet", "effet": "coeurs", "de": 1.2, "a": 2.6 } ] }
+      ]
+    }
+  ]
+}

@@ -1,89 +1,238 @@
 {
-  "jour": "2026-10-20",
+  "jour": "2026-10-19",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "quiz-chrono",
-  "categorie": "quiz",
-  "theme": "langages de l'amour",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-001",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "quiz-chrono",
+        "gabarit": "pov",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Love quiz",
-        "accroche": "6 questions about love",
-        "consigne": "5 seconds per question. Answer in your head!",
-        "secondes": 5,
-        "questions": [
+        "idee": "Le classique du partenaire qui « n'a pas faim » et finit les frites de l'autre.",
+        "titre": "POV: your partner says they're not hungry",
+        "musique": "ukulele-song.mp3",
+        "plans": [
           {
-            "question": "Which love language fits someone who lives for hugs?",
-            "reponses": [
-              "Words of affirmation",
-              "Physical touch",
-              "Receiving gifts"
+            "description": "Plan large du salon, le soir. Les deux sont assis dans le canapé. La rose tient un cornet de frites dans sa main gauche et regarde le violet. Le violet parle, une bulle dit « I'm not hungry. »",
+            "duree": 2.6,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "objet": "frites",
+                    "main": "gauche",
+                    "de": 0,
+                    "a": 2.6
+                  },
+                  {
+                    "geste": "regarde",
+                    "cible": "violet",
+                    "de": 0,
+                    "a": 2.6
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "parle",
+                    "de": 0.3,
+                    "a": 1.3
+                  }
+                ]
+              }
             ],
-            "bonne": 1
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.3,
+                "a": 2.5,
+                "texte": "I'm not hungry."
+              }
+            ]
           },
           {
-            "question": "Which love language fits someone who loves a surprise present?",
-            "reponses": [
-              "Receiving gifts",
-              "Quality time",
-              "Acts of service"
+            "description": "Gros plan qui zoome vite sur le visage du violet : ses yeux glissent vers les frites, la bouche s'ouvre, trois petits points apparaissent au-dessus de sa tête.",
+            "duree": 1.8,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "objet": "frites",
+                    "main": "gauche",
+                    "de": 0,
+                    "a": 1.8
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "cible": "rose",
+                    "de": 0.2,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "visage",
+                    "bouche": "o",
+                    "de": 0.5,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "points",
+                    "de": 0.7,
+                    "a": 1.8
+                  }
+                ]
+              }
             ],
-            "bonne": 0
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.45,
+                "zoom": 2.1,
+                "cible": "violet"
+              }
+            ]
           },
           {
-            "question": "Your partner does the dishes so you can rest. That's...",
-            "reponses": [
-              "Quality time",
-              "Acts of service",
-              "Words of affirmation"
-            ],
-            "bonne": 1
+            "description": "Retour au plan large. Les frites sont maintenant dans les mains du violet, qui mange en fermant les yeux de plaisir. La rose se tourne vers lui, les yeux à moitié fermés, un « ! » au-dessus de la tête.",
+            "duree": 2.2,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "yeux": "plats",
+                    "bouche": "plate",
+                    "de": 0.3,
+                    "a": 2.2
+                  },
+                  {
+                    "geste": "regarde",
+                    "cible": "violet",
+                    "de": 0.3,
+                    "a": 2.2
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "exclamation",
+                    "de": 0.6,
+                    "a": 2.2
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "mange",
+                    "objet": "frites",
+                    "de": 0,
+                    "a": 2.2
+                  }
+                ]
+              }
+            ]
           },
           {
-            "question": "Which flower is the classic symbol of love?",
-            "reponses": [
-              "Daisy",
-              "Tulip",
-              "Red rose"
+            "description": "La rose boude et dit « Not hungry, huh? » dans une bulle ; le violet rit, gêné, avec une goutte sur le côté de la tête. La caméra se rapproche doucement des deux.",
+            "duree": 2.4,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "boude",
+                    "de": 0,
+                    "a": 2.4
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "objet": "frites",
+                    "main": "droite",
+                    "de": 0,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 0.5,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "goutte",
+                    "de": 0.6,
+                    "a": 2.4
+                  }
+                ]
+              }
             ],
-            "bonne": 2
-          },
-          {
-            "question": "On which date is Valentine's Day?",
-            "reponses": [
-              "February 14",
-              "March 14",
-              "February 4"
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 0.1,
+                "a": 2.3,
+                "texte": "Not hungry, huh?"
+              }
             ],
-            "bonne": 0
-          },
-          {
-            "question": "Phones away, a long walk, just the two of you. That's...",
-            "reponses": [
-              "Receiving gifts",
-              "Quality time",
-              "Physical touch"
-            ],
-            "bonne": 1
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 2.4,
+                "zoom": 1.15,
+                "y": 1050
+              }
+            ]
           }
-        ],
-        "fin": {
-          "question": "Would your partner have answered the same?",
-          "bouton": "Send them this reel",
-          "signature": "More tests on quiz-couple.com"
-        }
+        ]
       },
-      "legende": "How well do you know the 5 love languages? Answer in your head, then send this to your partner and compare!\n\nThe full love language test is on quiz-couple.com (link in bio).",
+      "legende": "They're never hungry... until you get fries.\n\nSend this to your partner!",
       "hashtags": [
         "#quizcouple",
-        "#lovelanguages",
-        "#couplequiz",
-        "#relationshipgoals"
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation"
       ]
     }
   }

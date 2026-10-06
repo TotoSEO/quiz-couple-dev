@@ -13,7 +13,10 @@
 
   var CRENEAUX = { matin: 'Matin', midi: 'Midi', soir: 'Après-midi' };
   var FORMATS = { reel: 'Reel', image: 'Image', carrousel: 'Carrousel' };
-  var GABARITS = { citation: 'Citation', 'quiz-chrono': 'Quiz chrono', image: 'Image', carrousel: 'Carrousel' };
+  var GABARITS = { citation: 'Citation', 'quiz-chrono': 'Quiz chrono', 'connais-tu': 'Connais-tu ton partenaire', 'tu-preferes': 'Tu préfères', pov: 'Animation', image: 'Image', carrousel: 'Carrousel' };
+  // les catégories de la ligne éditoriale, plus parlantes que le gabarit
+  var CATEGORIES = { pov: 'Animation POV', coquin: 'Animation coquine', statique: 'Reel statique', 'connais-tu': 'Connais-tu ton partenaire', 'tu-preferes': 'Tu préfères', phrase: 'Phrase tendre', post: 'Post', carrousel: 'Carrousel' };
+  function nomDuPost(p) { return CATEGORIES[p.categorie] || GABARITS[p.gabarit] || p.gabarit; }
   var STATUTS = {
     a_rendre: ['À rendre', 'attente'],
     rendu: ['Prêt', 'pret'],
@@ -35,9 +38,9 @@
     });
   }
 
-  function heureNY(iso, avecJour) {
+  function heureParis(iso, avecJour) {
     if (!iso) return '';
-    var o = { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit' };
+    var o = { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit' };
     if (avecJour) { o.weekday = 'short'; o.day = 'numeric'; o.month = 'short'; }
     return new Date(iso).toLocaleString('fr-FR', o);
   }
@@ -84,8 +87,8 @@
     });
     prochaines.sort(function (a, b) { return new Date(a.v.publier_a) - new Date(b.v.publier_a); });
     if (prochaines.length) {
-      $('rsx-prochain').textContent = heureNY(prochaines[0].v.publier_a, false);
-      $('rsx-prochain-sub').textContent = heureNY(prochaines[0].v.publier_a, true) + ' à New York, ' + (GABARITS[prochaines[0].p.gabarit] || prochaines[0].p.gabarit).toLowerCase();
+      $('rsx-prochain').textContent = heureParis(prochaines[0].v.publier_a, false);
+      $('rsx-prochain-sub').textContent = heureParis(prochaines[0].v.publier_a, true) + ', ' + nomDuPost(prochaines[0].p).toLowerCase();
     } else {
       $('rsx-prochain').textContent = '-';
       $('rsx-prochain-sub').textContent = 'aucun post prévu';
@@ -133,7 +136,7 @@
   }
 
   function libelleFormat(p) {
-    var f = FORMATS[p.format] || p.format, g = GABARITS[p.gabarit] || p.gabarit;
+    var f = FORMATS[p.format] || p.format, g = nomDuPost(p);
     return f === g ? f : f + ' · ' + g;
   }
 
@@ -154,7 +157,7 @@
         statut = statut || [p.statut, 'attente'];
         return '<div class="rsx-ligne">' +
           '<div class="rsx-vignette">' + (v && v.vignette ? '<img src="' + esc(v.vignette) + '" alt="" loading="lazy">' : '<span>' + esc((FORMATS[p.format] || '').slice(0, 1)) + '</span>') + '</div>' +
-          '<div class="rsx-quand"><strong>' + esc(v && v.publier_a ? heureNY(v.publier_a) : '-') + '</strong><span>' + esc(CRENEAUX[p.creneau] || p.creneau) + '</span></div>' +
+          '<div class="rsx-quand"><strong>' + esc(v && v.publier_a ? heureParis(v.publier_a) : '-') + '</strong><span>' + esc(CRENEAUX[p.creneau] || p.creneau) + '</span></div>' +
           '<div class="rsx-quoi"><span class="rsx-format">' + esc(libelleFormat(p)) + '</span>' +
           '<span class="rsx-texte">' + esc(v ? v.texte : '') + '</span>' +
           (v && v.erreur ? '<span class="rsx-erreur">' + esc(v.erreur) + '</span>' : '') + '</div>' +

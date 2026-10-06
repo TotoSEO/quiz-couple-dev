@@ -25,78 +25,99 @@ export NAVIGATEUR=$(ls /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/h
 Les outils (studio, contrôles) se lancent depuis `main` ; les posts
 s'écrivent dans `../atelier/reseaux/atelier/posts/`.
 
-## 2. Lire l'état
+## 2. Lire l'état et la ligne éditoriale
 
-`../atelier/reseaux/atelier/etat.json`, écrit chaque matin par l'entretien :
+Avant d'écrire quoi que ce soit, lis `reseaux/atelier/LIGNE-EDITORIALE.md`
+(le compte, les deux publics, la semaine type, ce que fait chaque catégorie)
+et `reseaux/atelier/sujets.json` (la banque de sujets).
+
+Puis `../atelier/reseaux/atelier/etat.json`, écrit chaque matin par
+l'entretien :
 
 - `a_corriger` : posts dont le rendu ou la publication a échoué, avec
-  l'erreur. On les corrige en premier (en général : texte trop long, mot
-  seul en dernière ligne).
-- `a_remplir` : les créneaux vides de J+2 à J+21, avec le format attendu.
+  l'erreur. On les corrige en premier.
+- `a_remplir` : les créneaux vides de J+2 à J+21, avec leur `categorie`.
 - `recents_et_prevus` : ce qui est passé et prévu, pour ne jamais répéter
-  une phrase, une question ou un thème de la semaine.
-- `idees` : les idées de Thomas. Elles passent avant tout le reste ; le post
+  une phrase, une question ou une scène de la semaine.
+- `idees` : les idées de Thomas. Elles passent avant la banque ; le post
   qui en reprend une porte son `idee_id`.
-- `statistiques_j7` : ce qui a marché. On donne un peu plus de place aux
-  gabarits et thèmes qui ont le plus de partages et d'enregistrements.
+- `statistiques_j7` : ce qui a marché. On choisit un peu plus souvent les
+  piliers et les décors qui ont le plus de partages et d'enregistrements.
 
-Sans `etat.json` (premier jour), on remplit de J+2 à J+14 en suivant le
-mélange ci-dessous, en sautant les fichiers déjà présents dans `posts/`.
+Sans `etat.json` (premier jour), on remplit de J+2 à J+14 en suivant la
+semaine type, en sautant les fichiers déjà présents dans `posts/`.
 
-## 3. Le mélange de la semaine
+## 3. Choisir le sujet
 
-| Créneau (heure de New York) | Format |
-|---|---|
-| Matin, 6 h-8 h | reel |
-| Midi, 11 h-13 h | image le lundi, mercredi, vendredi ; carrousel le mardi, jeudi, samedi ; reel le dimanche |
-| Après-midi, 16 h-18 h | reel |
+Pour chaque créneau à remplir, dans l'ordre des dates :
 
-Pour un reel : `quiz-chrono` ou `citation`, en alternance, jamais deux fois
-le même gabarit d'affilée sur une journée. Pour une image : `image` (style
-`citation` pour une phrase tendre, `phrase` pour une phrase drôle). Pour un
-carrousel : `carrousel`.
+1. s'il existe un sujet daté (`saison.sujets`) pour ce jour et ce créneau,
+   c'est lui ;
+2. sinon une idée de Thomas qui va avec la catégorie ;
+3. sinon le premier sujet de la catégorie qui n'apparaît dans aucun post de
+   `posts/` (champ `sujet`).
 
 **Au plus 12 posts par passage**, les créneaux les plus proches d'abord.
 
 ## 4. Écrire un post
 
 Un fichier par créneau : `posts/AAAA-MM-JJ-creneau.json`, au format de
-`reseaux/atelier/exemple-post.json`. La recette suit les exemples de
-`reseaux/studio/recettes/exemples/`.
+`reseaux/atelier/exemple-post.json` : `categorie`, `sujet`, `format`,
+`gabarit`, puis la déclinaison anglaise (`recette`, `legende`, `hashtags`).
+Les recettes de `reseaux/studio/recettes/exemples/` sont les modèles, une
+par catégorie : `pov-frites` et `pov-fleurs` (pov), `pov-couette` (coquin),
+`statique-calin` (statique), `connais-tu`, `tu-preferes`, `citation`
+(phrase).
 
-Le compte est en **anglais** : on écrit directement en anglais, pour des
-couples anglophones (États-Unis d'abord), avec les règles de ton du site
-transposées :
+### Les animations (pov, coquin, statique)
 
-- simple, parlé, tutoiement (« you »), une phrase courte ;
-- jamais de tiret cadratin, jamais « really », « actually », « in short »
-  dans un titre, pas de formules d'IA (triades, renversements, chutes) ;
-- un « ! » ou des « ... » par visuel au plus ;
-- jamais de score ni de points : Instagram n'est pas interactif ;
-- les phrases émotives vont en `citation` (police plume, fleurs), l'humour
-  en `phrase`.
+Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
 
-**Quiz chrono** : six questions de culture amoureuse dont la bonne réponse
-est vraie et vérifiable (langages de l'amour, symboles, traditions, dates,
-chiffres connus), trois réponses courtes (moins de 28 signes), une seule
-bonne, placée au hasard. Rien de vexant, rien de faux, aucune question
-« d'opinion » déguisée en question à réponse.
+- `idee` : le sujet en une phrase.
+- Chaque plan a une `description` en français qui raconte l'image comme à
+  un dessinateur : le décor et le moment, où est chaque personnage, ce qu'il
+  fait et quand, ce qu'il tient, son expression, chaque mouvement de caméra
+  (« zoom rapide sur le visage du violet à 0,4 s »), chaque texte. Puis les
+  champs le font exactement : `persos` et leurs `gestes`, `objets`,
+  `effets`, `bulles`, `textes`, `camera`.
+- On n'utilise que le vocabulaire de `reseaux/studio/src/pov/vocabulaire.json`
+  (décors et leurs spots, objets, gestes, effets, sons). Un mot inconnu est
+  refusé par le contrôle.
+- **L'accroche** : dès la première image, les personnages sont dans l'image
+  et un geste part tout de suite (pas d'entrée dans une image vide).
+- **Simple** : un décor, deux personnages au plus, un ou deux objets, 6 à
+  14 secondes. Les mini messages (un personnage, un geste vers la caméra,
+  une phrase mot à mot) sont les plus faciles à réussir.
+- Les places : `lit-*` (sous la couette, la tête et les mains dépassent),
+  `canape-*` et `table-*` (assis), `banc-*` (assis, jambes qui pendent),
+  `evier` et `comptoir-*` (derrière le plan de travail). Assis ou couché,
+  on ne marche pas : on se penche, on tourne la tête, on change de visage.
+- Une bulle : 60 signes au plus, une à la fois si possible. Un titre « POV:
+  ... » : 90 signes au plus, trois lignes. Pas d'emoji à l'écran (la police
+  ne les dessine pas) ; « <3 » est permis.
+- Les bruitages se posent tout seuls (pas, sauts, bulles, cœurs, zooms,
+  couette) ; la musique se choisit dans
+  `reseaux/studio/public/musique/bibliotheque.json`.
+- Statique : un seul plan, 6 à 8 s, un câlin ou une pose tendre, un texte
+  mot à mot au milieu, caméra fixe un peu rapprochée.
+- Coquin : jamais rien de montré (voir la ligne éditoriale).
 
-**Citation** : une phrase écrite par nous, jamais une citation d'auteur
-(droits et attributions douteuses). Quatre lignes au plus à l'écran.
+### Les jeux (connais-tu, tu-preferes)
 
-**Carrousel** : couverture, 4 à 8 pages, page finale. Questions à se poser à
-deux, « green flags », idées de rendez-vous, etc.
+Huit questions ou six dilemmes, au format des exemples. Les questions sont
+simples et personnelles ; la première dit « your partner's », les suivantes
+« their ». Les choix d'un dilemme visent 30 signes. Jamais de score.
 
-**Légende** : la première ligne reprend l'accroche ; une ou deux lignes ;
-un appel (« Send this to your partner », « Tell us in the comments ») ;
-« link in bio » quand on renvoie vers un test du site. Les hashtags vont dans
-`hashtags`, de 3 à 5, en anglais, `#quizcouple` en premier, les autres
-choisis pour le sujet et variés d'un post à l'autre.
+### La phrase tendre
 
-**Musique** : facultative ; sinon le studio choisit (ukulélé pour les quiz,
-piano pour les citations). Les morceaux sont dans
-`reseaux/studio/public/musique/bibliotheque.json`.
+Gabarit `citation`, une phrase de la banque `phrase`, quatre lignes au plus.
+
+### Légende et hashtags
+
+Voir la ligne éditoriale. Les animations et les phrases ne renvoient jamais
+vers le site dans la légende (le contrôle le refuse) ; les jeux peuvent
+(« More quizzes: link in bio »). Tout en anglais simple, sans tiret
+cadratin.
 
 ## 5. Vérifier, puis regarder
 
@@ -106,17 +127,20 @@ Pour chaque post écrit :
 node reseaux/automates/controler.mjs ../atelier/reseaux/atelier/posts/<fichier>.json
 # extraire la recette (variantes.en.recette) dans un fichier, puis :
 node reseaux/studio/scripts/rendre.mjs --verifier <recette.json> /tmp/verif
+node reseaux/studio/scripts/planche.mjs <recette.json> /tmp/planche.png --toutes 0.5
 ```
 
-Le second contrôle refuse un texte qui sort de la zone utile, qui déborde,
-qui finit sur un mot seul ou qui dépasse son nombre de lignes : on
-raccourcit la phrase, on ne touche jamais aux tailles.
+Le premier contrôle refuse un mot hors du vocabulaire, un temps hors de son
+plan, une catégorie qui ne va pas au créneau, un sujet déjà pris. Le second
+refuse un texte hors de la zone utile, qui déborde, qui finit sur un mot
+seul, un visage hors de l'image ou caché par un texte, deux textes qui se
+chevauchent : on raccourcit ou on déplace, on ne touche jamais aux tailles.
 
-Puis on regarde vraiment : `node reseaux/studio/scripts/apercu.mjs` sur
-quelques images d'un reel (l'intro, une question, la réponse, la fin), ou un
-rendu complet d'une image ou d'un carrousel, et on lit les images produites.
-On corrige tout ce qui gêne : coupure de ligne laide, répétition, faute,
-réponse ambiguë.
+Puis **on regarde la planche** (une image toutes les demi-secondes) : la
+première image montre-t-elle déjà les personnages ? Chaque plan se
+comprend-il sans le son ? Un objet flotte-t-il, un geste tombe-t-il à côté,
+une bulle part-elle trop tôt ? On corrige et on refait la planche jusqu'à ce
+que tout soit juste.
 
 ## 6. Pousser
 

@@ -1,0 +1,93 @@
+{
+  "gabarit": "pov",
+  "langue": "en",
+  "theme": "light",
+  "idee": "Mini animation toute simple : la rose arrive et tend un bouquet à la personne qui regarde.",
+  "musique": "romantic-inspiration.mp3",
+  "plans": [
+    {
+      "description": "Fond papier avec un seul trait de sol. La rose est déjà dans l'image à droite et marche jusqu'au centre, le bouquet dans la main, penché vers l'avant. Au-dessus, les mots « I saw these flowers... » apparaissent un à un.",
+      "duree": 3,
+      "decor": "ligne",
+      "persos": [
+        {
+          "qui": "rose",
+          "a": 900,
+          "gestes": [
+            {
+              "geste": "tient",
+              "objet": "bouquet",
+              "main": "gauche",
+              "de": 0,
+              "a": 3
+            },
+            {
+              "geste": "marche",
+              "vers": "centre",
+              "de": 0,
+              "a": 1.3
+            },
+            {
+              "geste": "regarde",
+              "cible": "camera",
+              "de": 1.7,
+              "a": 3
+            }
+          ]
+        }
+      ],
+      "textes": [
+        {
+          "de": 0.1,
+          "texte": "I saw these flowers...",
+          "motAMot": true,
+          "place": "milieu"
+        }
+      ]
+    },
+    {
+      "description": "Même décor, coupe franche. La rose tend le bouquet vers la caméra, bras en avant, les joues qui rougissent. La caméra s'approche lentement d'elle. Le texte « and thought of you » apparaît mot à mot, puis des cœurs montent.",
+      "duree": 3.6,
+      "decor": "ligne",
+      "persos": [
+        {
+          "qui": "rose",
+          "a": "centre",
+          "gestes": [
+            {
+              "geste": "offre",
+              "objet": "bouquet",
+              "de": 0,
+              "a": 3.6
+            },
+            {
+              "geste": "effet",
+              "effet": "coeurs",
+              "de": 1.6,
+              "a": 3.6
+            }
+          ]
+        }
+      ],
+      "textes": [
+        {
+          "de": 0.3,
+          "texte": "and thought of you",
+          "motAMot": true,
+          "place": "milieu"
+        }
+      ],
+      "camera": [
+        {
+          "a": 0,
+          "zoom": 1
+        },
+        {
+          "a": 3.6,
+          "zoom": 1.18,
+          "cible": "rose"
+        }
+      ]
+    }
+  ]
+}

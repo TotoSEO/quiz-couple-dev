@@ -64,7 +64,8 @@ const normaliser = (entree, sortieFichier) => {
   return mesure;
 };
 
-if (recette.gabarit === 'citation' || recette.gabarit === 'quiz-chrono') {
+const REELS = ['citation', 'quiz-chrono', 'connais-tu', 'tu-preferes', 'pov'];
+if (REELS.includes(recette.gabarit)) {
   const composition = await choisir('reel', { recette });
   const { plan } = composition.props;
   await verifier('reel', { recette }, plan.verifs);

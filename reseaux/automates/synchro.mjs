@@ -9,7 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { controlerPost } from './lib/controle.mjs';
-import { aujourdhui, formatAttendu } from './lib/calendrier.mjs';
+import { aujourdhui, categorieAttendue } from './lib/calendrier.mjs';
 
 const MODIFIABLES = ['a_rendre', 'rendu', 'echec'];
 
@@ -20,13 +20,13 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
   for (const { fichier, post } of posts) {
     const fautes = controlerPost(post);
     const compte = comptes.find((c) => post.variantes && c.langue in post.variantes);
-    const fuseau = compte?.fuseau || 'America/New_York';
+    const fuseau = compte?.fuseau || 'Europe/Paris';
     if (post.jour && post.jour < aujourdhui(fuseau, maintenant)) {
       bilan.ignores++;
       continue; // un post passé n'est plus touché
     }
-    const attendu = formatAttendu(melange, post.jour, post.creneau);
-    if (attendu && attendu !== post.format) fautes.push(`le créneau ${post.creneau} du ${post.jour} attend un ${attendu}, pas un ${post.format}`);
+    const attendu = categorieAttendue(melange, post.jour, post.creneau);
+    if (attendu && attendu !== post.categorie) fautes.push(`le créneau ${post.creneau} du ${post.jour} attend la catégorie ${attendu}, pas ${post.categorie}`);
     for (const langue of Object.keys(post.variantes || {})) {
       if (!comptes.some((c) => c.langue === langue)) fautes.push(`aucun compte pour la langue ${langue}`);
     }

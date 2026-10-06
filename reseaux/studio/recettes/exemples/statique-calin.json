@@ -1,0 +1,58 @@
+{
+  "gabarit": "pov",
+  "langue": "en",
+  "theme": "light",
+  "idee": "Reel statique : les deux se font un câlin, une phrase, une musique. Presque rien ne bouge.",
+  "musique": "romantic-inspiration.mp3",
+  "plans": [
+    {
+      "description": "Fond papier avec un trait de sol. Les deux mascottes se serrent dans les bras, au centre, yeux fermés de bonheur, joues roses ; des petits cœurs montent doucement. Au-dessus, « I love you forever <3 » s'écrit mot à mot. La caméra reste fixe, un peu rapprochée.",
+      "duree": 7,
+      "decor": "ligne",
+      "persos": [
+        {
+          "qui": "rose",
+          "a": 430,
+          "premier": true,
+          "gestes": [
+            {
+              "geste": "calin",
+              "avec": "violet",
+              "de": -1,
+              "a": 7
+            }
+          ]
+        },
+        {
+          "qui": "violet",
+          "a": 650,
+          "gestes": [
+            {
+              "geste": "calin",
+              "avec": "rose",
+              "de": -1,
+              "a": 7
+            }
+          ]
+        }
+      ],
+      "textes": [
+        {
+          "de": 0.5,
+          "texte": "I love you forever <3",
+          "motAMot": true,
+          "place": "milieu",
+          "style": "plume"
+        }
+      ],
+      "camera": [
+        {
+          "a": 0,
+          "zoom": 1.3,
+          "x": 540,
+          "y": 1080
+        }
+      ]
+    }
+  ]
+}

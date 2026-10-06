@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { BaseMemoire } from './memoire.mjs';
 import { publier } from '../publication.mjs';
 
-const T0 = new Date('2026-10-12T10:30:00Z'); // 6 h 30 à New York
+const T0 = new Date('2026-10-12T10:30:00Z'); // 12 h 30 à Paris
 const plus = (min) => new Date(T0.getTime() + min * 60000);
 
 const base = ({ actif = true, format = 'reel', publierA = plus(30), pause = false } = {}) =>

@@ -16,7 +16,7 @@ create table if not exists public.social_comptes (
   nom text,
   ig_user_id text,
   actif boolean not null default false,
-  fuseau text not null default 'America/New_York',
+  fuseau text not null default 'Europe/Paris',
   creneaux jsonb not null default '[
     {"cle": "matin", "debut": "06:00", "fin": "08:00"},
     {"cle": "midi",  "debut": "11:00", "fin": "13:00"},
@@ -145,13 +145,14 @@ create table if not exists public.social_reglages (
 insert into public.social_reglages (cle, valeur) values
   ('pause', 'false'::jsonb),
   ('reserve_cible_jours', '14'::jsonb),
-  -- formats de chaque créneau, du lundi (1) au dimanche (7) : 15 reels et
-  -- 6 images ou carrousels par semaine
-  ('melange', '{"matin": "reel", "soir": "reel", "midi": {"1": "image", "2": "carrousel", "3": "image", "4": "carrousel", "5": "image", "6": "carrousel", "7": "reel"}}'::jsonb)
+  -- catégorie de chaque créneau, du lundi (1) au dimanche (7) : 12 animations
+  -- (dont une coquine), 3 « connais-tu ton partenaire », 2 « tu préfères »,
+  -- 2 reels statiques, 2 phrases tendres (reseaux/atelier/LIGNE-EDITORIALE.md)
+  ('melange', '{"matin": "pov", "midi": {"1": "connais-tu", "2": "tu-preferes", "3": "connais-tu", "4": "statique", "5": "connais-tu", "6": "tu-preferes", "7": "statique"}, "soir": {"1": "pov", "2": "pov", "3": "pov", "4": "pov", "5": "coquin", "6": "phrase", "7": "phrase"}}'::jsonb)
 on conflict (cle) do nothing;
 
 insert into public.social_comptes (langue, actif, fuseau)
-values ('en', false, 'America/New_York')
+values ('en', false, 'Europe/Paris')
 on conflict (langue) do nothing;
 
 -- 6. La minute de publication, tirée au sort dans le créneau du compte,

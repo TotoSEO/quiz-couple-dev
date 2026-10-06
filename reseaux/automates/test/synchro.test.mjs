@@ -12,19 +12,20 @@ const MAINTENANT = new Date('2026-10-06T15:00:00Z');
 
 const base = () =>
   new BaseMemoire({
-    social_comptes: [{ id: 'c-en', langue: 'en', fuseau: 'America/New_York', actif: false }],
+    social_comptes: [{ id: 'c-en', langue: 'en', fuseau: 'Europe/Paris', actif: false }],
     social_reglages: [
-      { cle: 'melange', valeur: { matin: 'reel', soir: 'reel', midi: { 1: 'image', 2: 'carrousel', 3: 'image', 4: 'carrousel', 5: 'image', 6: 'carrousel', 7: 'reel' } } },
+      { cle: 'melange', valeur: { matin: 'pov', midi: { 1: 'connais-tu', 2: 'tu-preferes', 3: 'connais-tu', 4: 'statique', 5: 'connais-tu', 6: 'tu-preferes', 7: 'statique' }, soir: { 1: 'pov', 2: 'pov', 3: 'pov', 4: 'pov', 5: 'coquin', 6: 'phrase', 7: 'phrase' } } },
     ],
   });
 
+// une animation POV : la catégorie du matin et des après-midi en semaine
 const postQuiz = (jour = '2026-10-12', creneau = 'matin') => ({
   jour,
   creneau,
   format: 'reel',
-  gabarit: 'quiz-chrono',
-  categorie: 'quiz',
-  variantes: { en: { recette: exemple('quiz-chrono'), legende: 'How well do you know love languages?', hashtags: ['#couplequiz', '#lovelanguages'] } },
+  gabarit: 'pov',
+  categorie: 'pov',
+  variantes: { en: { recette: exemple('pov-frites'), legende: 'Not hungry, they said.', hashtags: ['#quizcouple', '#couplegoals'] } },
 });
 
 test('un post valide est écrit, sa déclinaison attend le rendu', async () => {
@@ -36,11 +37,11 @@ test('un post valide est écrit, sa déclinaison attend le rendu', async () => {
   assert.equal(b.tables.social_variantes[0].statut, 'a_rendre');
 });
 
-test('un format qui ne suit pas le mélange de la semaine est refusé', async () => {
+test('une catégorie qui ne suit pas le mélange de la semaine est refusée', async () => {
   const b = base();
   const bilan = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') }], { maintenant: MAINTENANT });
   assert.equal(bilan.refuses, 1);
-  assert.match(JSON.stringify(b.tables.social_journal), /attend un image/);
+  assert.match(JSON.stringify(b.tables.social_journal), /attend la catégorie connais-tu/);
 });
 
 test('un post dans le passé est ignoré', async () => {

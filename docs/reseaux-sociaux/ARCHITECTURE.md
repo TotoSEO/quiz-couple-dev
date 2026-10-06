@@ -38,10 +38,16 @@ même jour par Thomas ; ses choix sont en partie 1.2.
 
 ### 1.2 Les choix de Thomas (6 octobre 2026)
 
-- **Un seul compte pour commencer : l'anglais.** Les posts sont écrits
+- **Un seul compte pour commencer : l'anglais**, pour être compris partout
+  (un Espagnol ou un Français comprend un anglais simple), pas pour viser
+  les États-Unis : aucune fête ni référence d'un seul pays, jamais
+  d'actualité, seulement Noël et le Nouvel An. Les posts sont écrits
   directement en anglais, avec les règles de ton du site transposées. Les
   quatre autres langues restent prévues dans les tables et s'ouvriront d'un
   interrupteur.
+- **Deux publics, toujours en couple** : les 13-17 ans (mignon sans
+  infantiliser) et les 18-25 ans. La ligne éditoriale complète est dans
+  `reseaux/atelier/LIGNE-EDITORIALE.md`.
 - **Compte Entreprise.** C'est le type de compte que l'API de publication
   d'Instagram prend en charge le plus complètement (publication, statistiques,
   commentaires). Sa seule limite, une bibliothèque musicale réduite dans
@@ -50,15 +56,15 @@ même jour par Thomas ; ses choix sont en partie 1.2.
   (partie 8) est publié tout seul. L'admin garde de quoi suspendre un post
   ou tout mettre en pause.
 - **Trois posts par jour**, à une heure tirée au sort dans trois créneaux,
-  à l'heure de New York (le plus gros public anglophone ; Londres les voit
-  cinq heures plus tard, ce qui tombe encore bien) :
+  à l'heure de Paris :
   - le matin entre 6 h et 8 h ;
   - le midi entre 11 h et 13 h ;
   - l'après-midi entre 16 h et 18 h.
-- **Le mélange de la semaine :** un reel le matin et un reel l'après-midi
-  tous les jours ; le midi, une image ou un carrousel six jours sur sept, et
-  un reel le dimanche. Soit 15 reels et 6 posts par semaine, à peu près le
-  7 pour 3 voulu.
+- **Le mélange de la semaine :** 12 animations avec les mascottes (57 %,
+  dont une coquine le vendredi), 3 « Connais-tu ton partenaire ? », 2 « Tu
+  préfères », 2 reels statiques, 2 phrases tendres. Tout en reels, tout
+  dessiné, aucune photo. 273 posts sur les trois premiers mois, avec une
+  banque de sujets (`reseaux/atelier/sujets.json`).
 
 ---
 
@@ -166,6 +172,15 @@ tu valides les formats, et l'automate les décline.
 
 ### 4.3 Les gabarits
 
+> **Octobre 2026, ce qui est retenu.** Thomas a écarté les photos et les
+> vidéos de fond (R3, R4) : tout est dessiné. Les formats en service sont
+> l'animation (`pov` : POV, mini messages, scènes coquines, reels
+> statiques), « Connais-tu ton partenaire ? » (`connais-tu`), « Tu
+> préfères » (`tu-preferes`), la phrase tendre (`citation`, ex-R2), le post
+> 4:5 avec une scène dessinée (`image`) et le carrousel (`carrousel`). Le
+> quiz chrono à bonne réponse (`quiz-chrono`, R7) reste disponible hors de
+> la semaine type. Le tableau ci-dessous est le plan de départ.
+
 Un gabarit est un format réutilisable : sa mise en page, ses animations, ses
 sons et la liste des champs à remplir (avec leurs longueurs maximales). La
 recette d'un post choisit un gabarit et remplit ses champs. Peu de gabarits,
@@ -232,13 +247,23 @@ une lettre...) suivent la même règle : une bibliothèque de dessins SVG au mê
 trait, épaisseur de ligne, couleurs et style d'yeux que les mascottes,
 enrichie au fil du temps.
 
-> C'est commencé : à partir de la planche que tu as envoyée, les deux
-> mascottes sont redessinées en pièces séparées, avec neuf poses de départ
-> (repos, salut, joie, surprise, profil, dos, amoureux, boude, dort). Elles
-> sont dans le design system « Quiz Couple Social » (https://claude.ai/artifact/2EQe4VPFYhMazvenJ3fqDX), à valider avant
-> toute animation.
+> **C'est fait (octobre 2026)** : le moteur d'animation du studio
+> (`reseaux/studio/src/pov/`) joue un scénario plan par plan. Son
+> vocabulaire (`vocabulaire.json`) : 9 décors au trait (papier, trait de
+> sol, mur, chambre, cuisine, salon, table de restaurant, extérieur avec
+> banc, Noël), 30 objets, 11 effets, 24 gestes (marcher, courir, sauter,
+> saluer, câlin, bisou, tendre un objet, tenir, manger, faire la vaisselle,
+> téléphone, dormir, entrer et sortir...), une caméra (zoom, cible,
+> secousse), des bulles et des textes mot à mot. Les personnages respirent
+> et clignent des yeux tout seuls ; ils s'assoient dans le canapé et sur le
+> banc (jambes qui pendent), se couchent sous la couette (la tête et les
+> petites mains dépassent), se tiennent derrière le plan de travail. Le
+> contrôle refuse un visage hors de l'image ou caché par un texte.
 
 ### 4.5 Photos et vidéos de fond
+
+> **Abandonné (octobre 2026)** : Thomas veut que tout soit dessiné. Plus de
+> photo ni de vidéo de fond, plus de clé Pexels à créer.
 
 - **[Pexels](https://www.pexels.com/api/documentation/)** : photos et vidéos
   gratuites pour un usage commercial, sans attribution obligatoire, API
@@ -626,7 +651,6 @@ interrupteur.
 **Étape 0, de ton côté** (voir partie 15)
 - Le compte Instagram anglais, en compte Entreprise.
 - L'appli Meta qui autorise la publication (je te guiderai écran par écran).
-- Plus tard, la clé gratuite Pexels pour les reels sur photo.
 
 **Étape 1 : le socle (fait le 6 octobre 2026)**
 - Le studio : charte, polices, mascottes, quatre gabarits (R2 citation,
@@ -645,12 +669,15 @@ interrupteur.
   l'onglet Réseaux de l'admin et les automates programmés. Tant que le
   compte n'est pas branché, rien n'est rendu ni publié.
 
-**Étape 2 : l'animation**
-- Les mascottes articulées dans le studio (neuf poses déjà dessinées), les
-  poses qui manquent (assis, câlin, qui court...), les décors, les gabarits
-  R5 et R6.
-- Les bibliothèques de bruitages et de musique, le mixage, le jingle.
-- Les gabarits restants.
+**Étape 2 : l'animation et la ligne éditoriale (faites en octobre 2026)**
+- Le moteur d'animation (décors, objets, gestes, caméra, bulles, textes
+  mot à mot), les jeux « Connais-tu ton partenaire ? » et « Tu préfères »
+  avec une accroche animée, le post et le carrousel avec une scène
+  dessinée, les bruitages d'animation (pas, saut, froissement, bisou...).
+- La ligne éditoriale, la semaine type à l'heure de Paris, la banque de
+  273 sujets (dont Noël et le Nouvel An).
+- Un exemple de chaque format, à valider par Thomas avant de lancer la
+  routine.
 
 **Étape 3 : le démarrage**
 - Le compte anglais connecté dans l'admin, la publication activée.
@@ -664,7 +691,7 @@ interrupteur.
 
 ## 15. Ce qu'il te reste à faire
 
-Tout le reste est automatique ; ces trois choses demandent ton identité et
+Tout le reste est automatique ; ces deux choses demandent ton identité et
 ne peuvent pas être faites à ta place :
 
 1. **Créer le compte Instagram anglais**, le passer en compte professionnel,
@@ -678,8 +705,6 @@ ne peuvent pas être faites à ta place :
    Le jeton obtenu se colle dans l'admin, onglet Réseaux, bouton
    « Connecter » ; on active ensuite la publication du compte au même
    endroit.
-3. **Plus tard**, créer un compte gratuit sur Pexels pour obtenir sa clé
-   d'API (reels sur photo et vidéo).
 
 ---
 

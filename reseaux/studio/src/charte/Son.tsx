@@ -14,6 +14,17 @@ export const VOLUMES = {
   joie: 0.35,
   fin: 0.4,
   signature: 0.3,
+  // animations (Kenney, packs Interface, Digital, RPG et Impact, CC0)
+  pop: 0.3,
+  saut: 0.3,
+  pas: 0.2,
+  zoom: 0.25,
+  glisse: 0.25,
+  coeur: 0.3,
+  bisou: 0.35,
+  froissement: 0.3,
+  porte: 0.35,
+  tictac: 0.3,
 } as const;
 export type NomSon = keyof typeof VOLUMES;
 export type EvenementSonore = { nom: NomSon; a: number; volume?: number };
