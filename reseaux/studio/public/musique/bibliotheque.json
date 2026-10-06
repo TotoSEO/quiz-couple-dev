@@ -1,0 +1,11 @@
+{
+  "note": "Morceaux du domaine public (CC0), catalogue FreePD.com, copiés depuis ses miroirs d'Internet Archive (archive.org/details/freepd et archive.org/details/abook-music-freepd-cc0). Coupés à 90 s et ramenés à -16 LUFS pour que la balance avec les bruitages soit la même d'un morceau à l'autre. Un morceau qui reçoit une réclamation de droits sort de la liste.",
+  "morceaux": [
+    { "fichier": "ukulele-song.mp3", "titre": "Ukulele Song", "ambiance": ["joyeux", "quiz", "jeu"], "source": "FreePD, upbeat" },
+    { "fichier": "inspiration.mp3", "titre": "Inspiration", "ambiance": ["joyeux", "quiz", "liste"], "source": "FreePD, upbeat" },
+    { "fichier": "inventing-flight.mp3", "titre": "Inventing Flight", "ambiance": ["léger", "quiz", "jeu"], "source": "FreePD, upbeat" },
+    { "fichier": "romantic-inspiration.mp3", "titre": "Romantic Inspiration", "ambiance": ["romantique", "citation", "doux"], "source": "FreePD, romantic" },
+    { "fichier": "parhelion.mp3", "titre": "Parhelion", "ambiance": ["romantique", "citation", "nuit"], "source": "FreePD, romantic" },
+    { "fichier": "pina-colada.mp3", "titre": "Pina Colada", "ambiance": ["romantique", "léger", "été"], "source": "FreePD, romantic" }
+  ]
+}

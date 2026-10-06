@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <title>Marguerite au trait</title>
+  <g fill="none" stroke="#e17398" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M100 130 C99 160 93 186 84 212"/>
+    <path d="M96 172 C116 156 136 156 148 164 C134 178 114 180 96 172 Z"/>
+    <path d="M110 168 L136 165"/>
+    <g>
+      <path d="M100 64 C93 50 93 34 100 22 C107 34 107 50 100 64 Z"/>
+      <path d="M100 64 C93 50 93 34 100 22 C107 34 107 50 100 64 Z" transform="rotate(45 100 76)"/>
+      <path d="M100 64 C93 50 93 34 100 22 C107 34 107 50 100 64 Z" transform="rotate(90 100 76)"/>
+      <path d="M100 64 C93 50 93 34 100 22 C107 34 107 50 100 64 Z" transform="rotate(135 100 76)"/>
+      <path d="M100 64 C93 50 93 34 100 22 C107 34 107 50 100 64 Z" transform="rotate(180 100 76)"/>
+      <path d="M100 64 C93 50 93 34 100 22 C107 34 107 50 100 64 Z" transform="rotate(225 100 76)"/>
+      <path d="M100 64 C93 50 93 34 100 22 C107 34 107 50 100 64 Z" transform="rotate(270 100 76)"/>
+      <path d="M100 64 C93 50 93 34 100 22 C107 34 107 50 100 64 Z" transform="rotate(315 100 76)"/>
+    </g>
+    <circle cx="100" cy="76" r="9"/>
+  </g>
+</svg>

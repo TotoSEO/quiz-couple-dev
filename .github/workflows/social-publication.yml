@@ -1,0 +1,30 @@
+name: Réseaux · publication
+
+# Toutes les 10 minutes : publie sur Instagram ce qui est dû (heure tirée au
+# sort dans chaque créneau). Sans compte actif ni jeton, ne fait rien.
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: social-publication
+  cancel-in-progress: false
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: reseaux/automates
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Publier
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+        run: node reseaux/automates/publication.mjs

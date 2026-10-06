@@ -1,0 +1,15 @@
+{
+  "gabarit": "carrousel",
+  "langue": "en",
+  "theme": "light",
+  "pages": [
+    { "type": "couverture", "etiquette": "For tonight", "accroche": "6 questions for your partner" },
+    { "type": "page", "numero": "1", "question": "What was your very first impression of me?", "texte": "Take turns, and no fake answers." },
+    { "type": "page", "numero": "2", "question": "Which moment of our story would you live again tomorrow?", "texte": "Answer fast, without thinking too much." },
+    { "type": "page", "numero": "3", "question": "What's one small thing I do that makes your day better?" },
+    { "type": "page", "numero": "4", "question": "Where would you take me if we left tomorrow?" },
+    { "type": "page", "numero": "5", "question": "What's a song that makes you think of us?" },
+    { "type": "page", "numero": "6", "question": "What do you want us to do more of this year?" },
+    { "type": "fin", "texte": "More couple tests on quiz-couple.com", "bouton": "Link in bio" }
+  ]
+}

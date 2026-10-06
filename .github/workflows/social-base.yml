@@ -1,0 +1,31 @@
+name: Réseaux · base Supabase
+
+# Applique la migration des tables social_* (idempotente) par l'API de
+# gestion de Supabase, avec les secrets déjà utilisés pour les fonctions :
+# SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF. Rien à faire à la main.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/migrations/20261007120000_reseaux_sociaux.sql'
+      - '.github/workflows/social-base.yml'
+  workflow_dispatch:
+
+jobs:
+  migration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Appliquer la migration
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+        run: |
+          jq -Rs '{query: .}' supabase/migrations/20261007120000_reseaux_sociaux.sql > requete.json
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json)
+          echo "réponse $code"
+          if [ "$code" -ge 300 ]; then head -c 600 reponse.json; exit 1; fi

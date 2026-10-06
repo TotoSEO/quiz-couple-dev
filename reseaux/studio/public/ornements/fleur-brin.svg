@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="200" height="300">
+  <title>Brin fleuri au trait</title>
+  <g fill="none" stroke="#e17398" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M100 292 C95 236 112 178 101 120 C98 100 100 74 100 56"/>
+    <path d="M98 246 C72 238 60 218 63 200 C82 206 95 224 98 246 Z"/>
+    <path d="M80 223 L96 240"/>
+    <path d="M104 204 C128 194 141 174 138 158 C120 163 107 182 104 204 Z"/>
+    <path d="M122 180 L106 198"/>
+    <path d="M101 150 C80 143 70 126 72 112 C88 117 99 132 101 150 Z"/>
+    <ellipse cx="100" cy="24" rx="11" ry="16"/>
+    <ellipse cx="100" cy="24" rx="11" ry="16" transform="rotate(72 100 48)"/>
+    <ellipse cx="100" cy="24" rx="11" ry="16" transform="rotate(144 100 48)"/>
+    <ellipse cx="100" cy="24" rx="11" ry="16" transform="rotate(216 100 48)"/>
+    <ellipse cx="100" cy="24" rx="11" ry="16" transform="rotate(288 100 48)"/>
+    <circle cx="100" cy="48" r="7"/>
+  </g>
+</svg>

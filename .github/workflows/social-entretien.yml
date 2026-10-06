@@ -1,0 +1,49 @@
+name: Réseaux · entretien
+
+# Chaque jour : renouvelle les jetons Instagram, fait le ménage du stockage,
+# relève les statistiques, puis écrit l'état du planning (créneaux à remplir,
+# posts récents, idées, statistiques) sur la branche reseaux-atelier, où la
+# routine Claude le lit avant d'écrire.
+
+on:
+  schedule:
+    - cron: '41 7 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: social-entretien
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  entretien:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Entretien
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+        run: node reseaux/automates/entretien.mjs --etat "$RUNNER_TEMP/etat.json"
+      - name: État pour l'atelier
+        run: |
+          git config user.name 'quiz-couple-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git ls-remote --exit-code --heads origin reseaux-atelier >/dev/null; then
+            git checkout -B reseaux-atelier origin/reseaux-atelier
+          else
+            git checkout -B reseaux-atelier
+          fi
+          mkdir -p reseaux/atelier/posts
+          cp "$RUNNER_TEMP/etat.json" reseaux/atelier/etat.json
+          git add reseaux/atelier/etat.json
+          git diff --cached --quiet || git commit -m "Atelier : état du planning"
+          git push origin reseaux-atelier
