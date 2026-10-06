@@ -636,7 +636,14 @@ interrupteur.
   l'admin (compte, planning, suspension, pause, idées, journal).
 - Synchro, rendu, publication et entretien sur GitHub Actions, testés sur
   une base en mémoire ; la publication réelle attend le compte anglais.
-- La routine « atelier » et ses consignes.
+- La routine « atelier » et ses consignes. Elle s'appelle « Instagram Quiz
+  Couple : atelier du jour », tourne chaque jour à 10 h 47 (heure de Paris)
+  et se voit dans claude.ai, menu Routines, où on peut la mettre en pause.
+  Elle n'envoie aucune notification.
+- À la fusion de la PR sur main, tout se met en place seul : la migration
+  (`social-base.yml`), la fonction `admin-social` (`deploy-functions.yml`),
+  l'onglet Réseaux de l'admin et les automates programmés. Tant que le
+  compte n'est pas branché, rien n'est rendu ni publié.
 
 **Étape 2 : l'animation**
 - Les mascottes articulées dans le studio (neuf poses déjà dessinées), les
@@ -668,6 +675,9 @@ ne peuvent pas être faites à ta place :
    Facebook, y ajouter le produit Instagram et le compte anglais comme
    testeur, puis accepter l'invitation dans l'appli Instagram. Une dizaine de
    minutes ; je te guiderai écran par écran le moment venu.
+   Le jeton obtenu se colle dans l'admin, onglet Réseaux, bouton
+   « Connecter » ; on active ensuite la publication du compte au même
+   endroit.
 3. **Plus tard**, créer un compte gratuit sur Pexels pour obtenir sa clé
    d'API (reels sur photo et vidéo).
 
