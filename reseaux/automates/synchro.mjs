@@ -59,6 +59,8 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
         continue;
       }
     }
+    // une idée de Thomas reprise par ce post n'est plus proposée
+    if (post.idee_id) await base.update('social_idees', `id=eq.${post.idee_id}`, { utilisee_le: new Date().toISOString(), post_id: ligne.id });
     bilan.ecrits++;
   }
   await base.journal('info', 'synchro', `${bilan.ecrits} posts écrits, ${bilan.refuses} refusés, ${bilan.ignores} passés ignorés`);

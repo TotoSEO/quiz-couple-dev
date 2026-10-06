@@ -1,0 +1,90 @@
+{
+  "jour": "2026-10-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "quiz-chrono",
+  "categorie": "quiz",
+  "theme": "langages de l'amour",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "quiz-chrono",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Love quiz",
+        "accroche": "6 questions about love",
+        "consigne": "5 seconds per question. Answer in your head!",
+        "secondes": 5,
+        "questions": [
+          {
+            "question": "Which love language fits someone who lives for hugs?",
+            "reponses": [
+              "Words of affirmation",
+              "Physical touch",
+              "Receiving gifts"
+            ],
+            "bonne": 1
+          },
+          {
+            "question": "Which love language fits someone who loves a surprise present?",
+            "reponses": [
+              "Receiving gifts",
+              "Quality time",
+              "Acts of service"
+            ],
+            "bonne": 0
+          },
+          {
+            "question": "Your partner does the dishes so you can rest. That's...",
+            "reponses": [
+              "Quality time",
+              "Acts of service",
+              "Words of affirmation"
+            ],
+            "bonne": 1
+          },
+          {
+            "question": "Which flower is the classic symbol of love?",
+            "reponses": [
+              "Daisy",
+              "Tulip",
+              "Red rose"
+            ],
+            "bonne": 2
+          },
+          {
+            "question": "On which date is Valentine's Day?",
+            "reponses": [
+              "February 14",
+              "March 14",
+              "February 4"
+            ],
+            "bonne": 0
+          },
+          {
+            "question": "Phones away, a long walk, just the two of you. That's...",
+            "reponses": [
+              "Receiving gifts",
+              "Quality time",
+              "Physical touch"
+            ],
+            "bonne": 1
+          }
+        ],
+        "fin": {
+          "question": "Would your partner have answered the same?",
+          "bouton": "Send them this reel",
+          "signature": "More tests on quiz-couple.com"
+        }
+      },
+      "legende": "How well do you know the 5 love languages? Answer in your head, then send this to your partner and compare!\n\nThe full love language test is on quiz-couple.com (link in bio).",
+      "hashtags": [
+        "#quizcouple",
+        "#lovelanguages",
+        "#couplequiz",
+        "#relationshipgoals"
+      ]
+    }
+  }
+}

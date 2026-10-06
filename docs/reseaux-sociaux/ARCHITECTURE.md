@@ -180,14 +180,16 @@ complexité.
 | R4 | Reel liste | « 6 questions à poser à ton partenaire » sur une vidéo de coucher de soleil, une question à la fois. | 15 à 25 s | Vidéo Pexels |
 | R5 | Reel mascottes « POV » | Une mini-histoire de 8 à 12 s avec les mascottes, en dessin animé très simple sur fond blanc. | 8 à 12 s | Blanc + décor au trait |
 | R6 | Reel « avant / maintenant » | La même petite animation deux fois, avec deux légendes (« nous au début », « nous maintenant »). | 6 à 10 s | Blanc |
-| R7 | Reel quiz chrono | Intro de 3 s, 6 questions de 10 s avec un minuteur qui passe du vert à l'orange puis au rouge (les secondes sont écrites), la bonne réponse 2 s, puis l'écran de fin (« Ton partenaire aurait répondu pareil ? », « plus de tests sur quiz-couple.com »). Ni points ni score : Instagram n'est pas interactif, on répond dans sa tête. | 30 à 40 s | Blanc ou nuit |
+| R7 | Reel quiz chrono | Intro de 3 s, 6 questions de 5 s avec un minuteur qui passe du vert à l'orange puis au rouge (les secondes sont écrites), la bonne réponse 2 s, puis l'écran de fin (« Ton partenaire aurait répondu pareil ? », « plus de tests sur quiz-couple.com »). Fond texturé, textes grands, réponses alignées à gauche, les mascottes attendent sous la carte avec un « ! » puis sautent de joie (« Yay! ») à la réponse. Ni points ni score : Instagram n'est pas interactif, on répond dans sa tête. | 48 s | Papier texturé |
 | R8 | Reel jeu du site | Tu préfères, dilemmes, qui de nous deux, je n'ai jamais : 5 questions, « réponds en commentaire ». | 20 à 30 s | Couleurs de la marque |
 | R9 | Reel « post classique » | Fond blanc, une phrase, une musique : l'équivalent animé d'un post texte. | 6 à 8 s | Blanc |
 | P1 | Image | Fond blanc ou couleur, une phrase qui donne envie de partager. | | |
 | C1 | Carrousel | Couverture, 5 à 8 pages (questions, signes, quiz avec réponse à la fin), page finale avec l'appel vers le site. | | |
 
-Trois règles valent pour tous les formats : tout est centré ; il n'y a jamais
-de score ; les mascottes ne jouent que dans les reels d'animation (R5 et R6).
+Trois règles valent pour tous les formats : tout est centré (sauf les
+réponses d'un quiz, alignées à gauche) ; il n'y a jamais de score ; les
+mascottes ne jouent que dans les reels d'animation (R5 et R6) et dans le
+quiz chrono, où elles attendent la réponse puis s'en réjouissent.
 Les phrases émotives (R1, R2, R3, R9 et les posts du même ton) sont en police
 plume, les quiz, jeux et phrases drôles en Fredoka.
 
@@ -272,8 +274,9 @@ enrichie au fil du temps.
   (Noto Color Emoji). Sinon ils s'affichent en carrés vides selon la machine.
 - **Zones de sécurité des reels** : l'interface d'Instagram recouvre le haut
   (nom du compte), le bas (légende, son) et le bord droit (boutons). Le texte
-  important reste dans le cadre central d'environ 900 × 1 100 px, et le
-  contrôle qualité le vérifie.
+  important reste dans la zone utile : 220 px libres en haut, 420 en bas,
+  120 à droite, 60 à gauche, soit 900 × 1 280 px. Le contrôle qualité le
+  vérifie sur chaque écran avant le rendu.
 
 ### 4.7 Format des fichiers produits
 
@@ -293,9 +296,12 @@ enrichie au fil du temps.
 1. **Une bibliothèque musicale maison** : 60 à 100 morceaux libres de droits,
    choisis une fois et classés (ambiance : doux, joyeux, romantique, mignon,
    suspense de quiz ; tempo ; énergie ; durée). Pour chaque morceau, on garde
-   la licence, la source et l'attribution éventuelle. Sources : morceaux sous
-   licence CC0, Pixabay Music, Free Music Archive (CC BY), Kevin MacLeod
-   (CC BY).
+   la licence, la source et l'attribution éventuelle. Source retenue : le
+   catalogue FreePD (domaine public, CC0, aucune attribution), dont le site a
+   fermé mais qui reste copié sur Internet Archive. Six morceaux pour
+   commencer (trois joyeux pour les quiz, trois au piano pour les
+   citations), coupés à 90 s et ramenés au même volume ; la liste est dans
+   `reseaux/studio/public/musique/bibliotheque.json`.
    - Prudence : certains morceaux « libres » sont déclarés auprès des systèmes
      de détection de droits et déclenchent des réclamations. Un morceau qui en
      reçoit une est retiré de la bibliothèque, et l'admin le signale.
@@ -314,11 +320,13 @@ enrichie au fil du temps.
 
 ### 5.2 Les bruitages
 
-- Source : **[Freesound](https://freesound.org/docs/api/)**, avec le filtre
-  licence CC0 (aucune attribution, usage commercial libre).
-- On constitue une fois une bibliothèque d'une quarantaine de sons : pop,
-  whoosh, bisou, porte qui s'ouvre, pas, ding, tic-tac, buzzer, bonne
-  réponse, applaudissements, cœur, rire léger... Les fichiers sont petits et
+- Source : les packs de **[Kenney](https://kenney.nl)** (« Interface
+  Sounds »), licence CC0 : aucune attribution, usage commercial libre,
+  téléchargés une fois, sans compte ni clé. Freesound reste possible pour
+  des sons plus rares (porte, bisou, rire), avec son filtre CC0.
+- Neuf sons pour commencer (`reseaux/studio/public/sons/`) : intro,
+  apparition d'une question, réponse, bulle « ! », tic du chrono, révélation
+  de la bonne réponse, joie, fin, signature. Les fichiers sont petits et
   versionnés dans le dépôt : aucune dépendance au moment du rendu.
 - Les gabarits posent les sons sur des événements de l'animation (« la porte
   s'ouvre » joue le son de porte), donc la synchronisation est exacte à
@@ -357,9 +365,12 @@ programmé, publié, échec, manuel, annulé.
 
 **Sécurité** : aucune de ces tables n'est lisible avec la clé publique du
 site. L'admin passe par une fonction serveur protégée par ton mot de passe,
-comme pour les avis. Les routines Claude passent par une autre fonction
-serveur, avec un jeton qui ne permet que d'écrire des recettes : elles n'ont
-jamais la clé maîtresse de Supabase.
+comme pour les avis. La routine Claude n'a aucun accès à Supabase : elle
+écrit les posts en fichiers JSON sur une branche du dépôt
+(`reseaux-atelier`), et c'est GitHub Actions qui les contrôle puis les écrit
+dans la base. Les automates obtiennent la clé de service par l'API de
+gestion de Supabase, avec les deux secrets que le dépôt avait déjà
+(`SUPABASE_ACCESS_TOKEN`, `SUPABASE_PROJECT_REF`) : aucun secret à ajouter.
 
 ### 6.2 Le stockage, et sa suppression automatique
 
@@ -396,11 +407,11 @@ transfert sortant par mois.
 
 | Automate | Où | Quand | Rôle |
 |---|---|---|---|
-| **Planning** | Routine Claude Code | Une fois par semaine | Remplit les créneaux des 2 à 3 semaines suivantes en respectant les règles (part des formats, variété des thèmes, pas deux fois le même gabarit d'affilée, événements du calendrier), en piochant d'abord dans tes idées. |
-| **Création** | Routine Claude Code | Une fois par jour | Écrit les posts en attente dans la langue de chaque compte actif (adaptation, pas traduction mot à mot), légendes, hashtags, choix de la musique, des sons et du fond. Rend des aperçus et les regarde, corrige ce qui ne va pas, puis passe le post en « validé » : aucune validation humaine. |
-| **Rendu** | GitHub Actions | Chaque nuit | Fabrique les fichiers définitifs des posts du lendemain, passe le contrôle qualité, envoie les fichiers dans Supabase. |
-| **Publication** | GitHub Actions | Toutes les 10 min | Publie ce qui est dû : crée le conteneur, attend la fin du traitement de la vidéo, publie, enregistre le lien. |
-| **Entretien** | GitHub Actions | Chaque jour | Renouvelle les jetons Instagram, fait le ménage du stockage, relève les statistiques, envoie les alertes. |
+| **Atelier** | Routine Claude Code | Une fois par jour | Lit l'état du planning (`etat.json`), corrige les posts refusés, remplit jusqu'à 12 créneaux vides en piochant d'abord dans tes idées, écrit textes, légendes et hashtags, passe les contrôles, regarde les aperçus, puis pousse les fichiers sur la branche `reseaux-atelier`. Ses consignes : `reseaux/atelier/CONSIGNES.md`. |
+| **Synchro et rendu** | GitHub Actions (`social-rendu.yml`) | Toutes les 3 heures | Relit la branche de l'atelier, contrôle chaque post et l'écrit dans Supabase, puis fabrique les fichiers des posts des 30 prochaines heures, passe le contrôle qualité, envoie les fichiers dans le stockage. |
+| **Publication** | GitHub Actions (`social-publication.yml`) | Toutes les 10 min | Publie ce qui est dû : crée le conteneur, attend la fin du traitement de la vidéo, publie, enregistre le lien. |
+| **Entretien** | GitHub Actions (`social-entretien.yml`) | Chaque jour | Renouvelle les jetons Instagram, fait le ménage du stockage, relève les statistiques, écrit les alertes et l'état du planning pour l'atelier. |
+| **Base** | GitHub Actions (`social-base.yml`) | À la fusion | Applique la migration des tables `social_*` par l'API de gestion de Supabase. |
 
 ### 7.2 Les routines Claude et ton abonnement
 
@@ -408,8 +419,8 @@ transfert sortant par mois.
   facture d'API. Elles consomment le même quota que tes sessions normales, et
   le Max en autorise un nombre limité par jour (15 selon les annonces
   d'Anthropic, à vérifier dans ton compte).
-- Le projet en utilise deux : planning (1 par semaine) et création (1 par
-  jour). Ça laisse de la marge pour ton travail sur le site.
+- Le projet en utilise une seule, l'atelier, une fois par jour. Ça laisse
+  de la marge pour ton travail sur le site.
 - Chaque routine reprend là où la précédente s'est arrêtée : tout passe par
   les statuts, donc une routine coupée en plein travail ne perd rien.
 
@@ -596,6 +607,18 @@ interrupteur.
 
 ---
 
+## 13 bis. Où vit le code
+
+| Dossier | Contenu |
+|---|---|
+| `reseaux/charte/` | La charte du design system (`tokens.json`, `qc.css`) et le dessin des mascottes (`mascottes.js`) |
+| `reseaux/studio/` | Le studio Remotion : gabarits, polices, sons, musiques, script de rendu et de contrôle |
+| `reseaux/automates/` | Synchro, rendu, publication, entretien, sans dépendance ; tests avec `npm test` |
+| `reseaux/atelier/` | Consignes de la routine Claude et exemple de post ; sur la branche `reseaux-atelier`, les posts et `etat.json` |
+| `supabase/migrations/20261007120000_reseaux_sociaux.sql` | Les tables `social_*`, la minute tirée au sort, le stockage privé |
+| `supabase/functions/admin-social/` | La fonction de l'onglet Réseaux |
+| `static-site/js/admin-reseaux.js` | L'onglet Réseaux de l'admin |
+
 ## 14. La mise en place, dans l'ordre
 
 **Étape 0, de ton côté** (voir partie 15)
@@ -603,13 +626,15 @@ interrupteur.
 - L'appli Meta qui autorise la publication (je te guiderai écran par écran).
 - Plus tard, la clé gratuite Pexels pour les reels sur photo.
 
-**Étape 1 : le socle**
-- Le studio : charte, polices, mascottes, premiers gabarits (R2 citation,
-  R7 quiz chrono, P1 image, C1 carrousel), contrôles qualité.
-- Tables et bucket Supabase, fonctions serveur, onglet « Réseaux » de
-  l'admin (suivi, suspension, pause).
-- Rendu et publication sur GitHub Actions, testés à blanc, puis sur le
-  compte anglais.
+**Étape 1 : le socle (fait le 6 octobre 2026)**
+- Le studio : charte, polices, mascottes, quatre gabarits (R2 citation,
+  R7 quiz chrono, P1 image, C1 carrousel), contrôles qualité, bruitages et
+  musique, son à -14 LUFS.
+- Tables et bucket Supabase, fonction serveur, onglet « Réseaux » de
+  l'admin (compte, planning, suspension, pause, idées, journal).
+- Synchro, rendu, publication et entretien sur GitHub Actions, testés sur
+  une base en mémoire ; la publication réelle attend le compte anglais.
+- La routine « atelier » et ses consignes.
 
 **Étape 2 : l'animation**
 - Les mascottes articulées dans le studio (neuf poses déjà dessinées), les
@@ -618,9 +643,9 @@ interrupteur.
 - Les bibliothèques de bruitages et de musique, le mixage, le jingle.
 - Les gabarits restants.
 
-**Étape 3 : l'automatisation**
-- Les routines planning et création, la banque d'idées.
-- Démarrage du compte anglais à trois posts par jour.
+**Étape 3 : le démarrage**
+- Le compte anglais connecté dans l'admin, la publication activée.
+- Trois posts par jour, la réserve monte à 14 jours.
 
 **Étape 4 : apprendre et étendre**
 - Statistiques et retour dans le planning, page « lien en bio ».
