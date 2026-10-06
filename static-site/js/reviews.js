@@ -219,7 +219,7 @@
     // avis : celui du build est plus juste.
     stats.then(function (s) { if (s) updateHero(s.avg, s.total); });
 
-    fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&is_approved=eq.true&order=created_at.desc&limit=20', {
+    fetch(SUPABASE_URL + '/rest/v1/reviews?select=author_name,rating,comment,created_at&is_approved=eq.true&order=created_at.desc&limit=20', {
       headers: entetes
     })
     .then(function (res) { return res.json(); })
@@ -322,13 +322,17 @@
       clientIp = data.ip || null;
       if (!clientIp) return false;
 
-      // Check if this IP already submitted
-      return fetch(SUPABASE_URL + '/rest/v1/reviews?ip_address=eq.' + encodeURIComponent(clientIp) + '&limit=1', {
-        headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+      // La colonne ip_address n'est plus lisible avec la clé publique
+      // (migration 20261006120000) : la fonction avis_deja_depose répond
+      // seulement oui ou non pour cette adresse.
+      return fetch(SUPABASE_URL + '/rest/v1/rpc/avis_deja_depose', {
+        method: 'POST',
+        headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ p_ip: clientIp })
       })
-      .then(function (res) { return res.json(); })
-      .then(function (existing) {
-        return existing && existing.length > 0;
+      .then(function (res) { return res.ok ? res.json() : false; })
+      .then(function (deja) {
+        return deja === true;
       });
     })
     .catch(function () { return false; });

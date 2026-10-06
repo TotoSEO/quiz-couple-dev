@@ -518,6 +518,13 @@ modification dans l'un en appelle une dans l'autre. Le contrôle est côté
 navigateur : il freine, il ne verrouille pas. Les avis partent de toute façon
 en `is_approved: false` et passent par la modération.
 
+La clé publique ne lit pas la colonne `ip_address` de `reviews` (migration
+`20261006120000_avis_ip_privee.sql`) : le site demande ses colonnes une à
+une, jamais `select=*` (refusé), et la question « cette adresse a-t-elle déjà
+laissé un avis ? » passe par la fonction `avis_deja_depose(p_ip)`, qui répond
+oui ou non. Un dépôt public avec `is_approved: true` est refusé par la règle
+d'insertion. L'admin lit tout par la fonction serveur `admin-reviews`.
+
 ## Typographie des listes à puces
 
 Une puce qui commence par un intitulé en gras se termine par **deux points**,
