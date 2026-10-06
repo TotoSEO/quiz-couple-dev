@@ -698,3 +698,51 @@
     .stats-infobulle.est-cachee,.stats-repere.est-cachee{display:none;}
     .stats-infobulle-date{color:hsl(var(--muted-foreground));font-size:.7rem;}
     .stats-infobulle-val{color:hsl(var(--foreground));font-weight:700;}
+
+/* ── Onglet Réseaux (admin-reseaux.js) ─────────────────────────────── */
+.rsx-tete{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.rsx-pause{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;color:var(--adm-ink);cursor:pointer;white-space:nowrap;}
+.rsx-pause input{width:1.05rem;height:1.05rem;accent-color:hsl(var(--primary));}
+.rsx-connexion{display:flex;gap:.75rem;align-items:flex-end;flex-wrap:wrap;}
+.rsx-champ{display:flex;flex-direction:column;gap:.35rem;flex:1 1 22rem;font-size:.8rem;color:var(--adm-ink-2);}
+.rsx-compte-ligne{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.rsx-gris{color:var(--adm-ink-2);font-weight:400;}
+.rsx-vide{padding:1.5rem 0;text-align:center;color:var(--adm-ink-2);font-size:.9rem;}
+.rsx-jour{margin-bottom:1.1rem;}
+.rsx-jour h3{font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--adm-ink-2);margin:0 0 .5rem;}
+.rsx-ligne{display:grid;grid-template-columns:3.2rem 5.5rem minmax(0,1fr) auto auto;gap:.85rem;align-items:center;padding:.6rem .7rem;border:1px solid var(--adm-line);border-radius:.8rem;margin-bottom:.45rem;}
+.rsx-vignette{width:3.2rem;height:4rem;border-radius:.5rem;overflow:hidden;background:hsl(var(--muted)/.7);display:grid;place-items:center;font-weight:800;color:var(--adm-ink-2);}
+.rsx-vignette img{width:100%;height:100%;object-fit:cover;display:block;}
+.rsx-quand{display:flex;flex-direction:column;font-size:.78rem;color:var(--adm-ink-2);}
+.rsx-quand strong{font-size:1.05rem;color:var(--adm-ink);font-variant-numeric:tabular-nums;}
+.rsx-quoi{display:flex;flex-direction:column;gap:.15rem;min-width:0;}
+.rsx-format{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--adm-ink-2);}
+.rsx-texte{font-size:.9rem;color:var(--adm-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.rsx-erreur{font-size:.78rem;color:var(--adm-mauvais);}
+.rsx-etat{display:flex;flex-direction:column;align-items:flex-end;gap:.25rem;font-size:.78rem;}
+.rsx-etat a{color:hsl(var(--primary-texte));font-weight:600;}
+.rsx-statut{padding:.15rem .55rem;border-radius:999px;font-size:.72rem;font-weight:700;white-space:nowrap;background:hsl(var(--muted)/.8);color:var(--adm-ink-2);}
+.rsx-statut--pret{background:hsl(var(--secondary)/.14);color:hsl(var(--secondary-texte));}
+.rsx-statut--publie{background:color-mix(in srgb,var(--adm-bon) 14%,transparent);color:var(--adm-bon);}
+.rsx-statut--echec{background:color-mix(in srgb,var(--adm-mauvais) 12%,transparent);color:var(--adm-mauvais);}
+.rsx-statut--suspendu{background:hsl(var(--accent)/.18);color:hsl(var(--accent-foreground));}
+.rsx-actions{display:flex;gap:.35rem;flex-wrap:wrap;justify-content:flex-end;}
+.rsx-btn{font-size:.75rem;font-weight:600;padding:.3rem .6rem;border-radius:.55rem;border:1px solid var(--adm-line);background:var(--adm-card);color:var(--adm-ink);cursor:pointer;}
+.rsx-btn:hover{border-color:hsl(var(--primary));}
+.rsx-btn--danger{color:var(--adm-mauvais);}
+.rsx-idee-form{display:flex;gap:.6rem;margin-bottom:.8rem;}
+.rsx-idee-form .input{flex:1;}
+.rsx-idees,.rsx-journal{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem;}
+.rsx-idees li{display:flex;justify-content:space-between;align-items:center;gap:.6rem;font-size:.88rem;padding:.45rem .6rem;border:1px solid var(--adm-line);border-radius:.6rem;}
+.rsx-journal{max-height:22rem;overflow:auto;}
+.rsx-journal li{display:grid;grid-template-columns:6.5rem 5.5rem minmax(0,1fr);gap:.5rem;font-size:.78rem;color:var(--adm-ink-2);padding:.3rem 0;border-bottom:1px solid var(--adm-line);}
+.rsx-journal li span:last-child{color:var(--adm-ink);}
+.rsx-journal .rsx-j--erreur span:last-child{color:var(--adm-mauvais);}
+.rsx-journal .rsx-j--alerte span:last-child{color:hsl(var(--accent-foreground));}
+@media (max-width: 720px){
+  .rsx-ligne{grid-template-columns:3.2rem minmax(0,1fr) auto;}
+  .rsx-quand{grid-column:2;}
+  .rsx-quoi{grid-column:1/-1;}
+  .rsx-etat{grid-column:3;grid-row:1;}
+  .rsx-actions{grid-column:1/-1;justify-content:flex-start;}
+}

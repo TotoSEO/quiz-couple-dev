@@ -2663,7 +2663,8 @@
     reviews: ['Avis', 'Modération des avis laissés sur les pages'],
     leads: ['Leads', 'Les demandes reçues par le formulaire'],
     messages: ['Messagerie', 'Les messages du formulaire de contact'],
-    affiliation: ['Affiliation', 'Clics, conversions et commissions Affilae']
+    affiliation: ['Affiliation', 'Clics, conversions et commissions Affilae'],
+    reseaux: ['Réseaux', 'Planning et publication des posts Instagram']
   };
   function majTitre(tab) {
     var t = TITRES_ONGLETS[tab];
@@ -2681,6 +2682,15 @@
     else if (tab === 'leads') { allLeads = []; loadLeads(); }
     else if (tab === 'messages') { allMessages = []; loadMessages(); }
     else if (tab === 'affiliation' && window.AdminAffiliation && window.AdminAffiliation.ouvrir) window.AdminAffiliation.ouvrir();
+    else if (tab === 'reseaux') ouvrirReseaux();
+  }
+
+  // L'onglet Réseaux vit dans son propre module (admin-reseaux.js) : il reçoit
+  // l'adresse du projet et le jeton admin, et parle à la fonction admin-social.
+  function ouvrirReseaux() {
+    if (window.AdminReseaux && window.AdminReseaux.ouvrir) {
+      window.AdminReseaux.ouvrir({ url: SUPABASE_URL, cle: SUPABASE_KEY, jeton: adminToken });
+    }
   }
 
   function switchTab(tab) {
@@ -2703,6 +2713,9 @@
     if (diTab) diTab.classList.toggle('hidden', tab !== 'distance');
     var blTab = document.getElementById('admin-blog-tab');
     if (blTab) blTab.classList.toggle('hidden', tab !== 'blog');
+    var rsTab = document.getElementById('admin-reseaux-tab');
+    if (rsTab) rsTab.classList.toggle('hidden', tab !== 'reseaux');
+    if (tab === 'reseaux') ouvrirReseaux();
 
     if (tab === 'stats') {
       loadStats();
