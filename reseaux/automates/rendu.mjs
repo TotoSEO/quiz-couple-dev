@@ -39,8 +39,15 @@ export async function rendre(base, { heures = 30, maintenant = new Date(), rendr
     'social_variantes',
     `select=id,post_id,langue,recette,publier_a,essais&statut=eq.a_rendre&publier_a=lte.${limite}&order=publier_a.asc`,
   );
-  const bilan = { rendues: 0, echecs: 0 };
+  const bilan = { rendues: 0, echecs: 0, enAttente: 0 };
+  // tant qu'un compte n'est pas actif, ses posts ne sont pas rendus : les
+  // fichiers rempliraient le stockage sans jamais partir
+  const actifs = new Set((await base.select('social_comptes', 'select=langue&actif=is.true')).map((c) => c.langue));
   for (const v of variantes) {
+    if (!actifs.has(v.langue)) {
+      bilan.enAttente++;
+      continue;
+    }
     const [post] = await base.select('social_posts', `select=jour,statut,format&id=eq.${v.post_id}`);
     if (!post || post.statut !== 'valide') continue;
     const dossier = fs.mkdtempSync(path.join(os.tmpdir(), 'rendu-'));
@@ -94,5 +101,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const i = process.argv.indexOf('--heures');
   const heures = i > 0 ? Number(process.argv[i + 1]) : 30;
   const base = await connexion();
-  console.log(await rendre(base, { heures }));
+  const bilan = await rendre(base, { heures });
+  if (bilan.enAttente) console.log(`${bilan.enAttente} posts en attente d'un compte actif, non rendus`);
+  console.log(bilan);
 }

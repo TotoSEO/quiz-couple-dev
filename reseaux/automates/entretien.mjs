@@ -36,8 +36,14 @@ export async function menage(base, { maintenant = new Date() } = {}) {
   const avant = (ms) => new Date(maintenant.getTime() - ms).toISOString();
   const publiees = await base.select('social_variantes', `select=id,fichiers&statut=eq.publie&publie_le=lt.${avant(JOUR)}&fichiers_supprimes_le=is.null`);
   const echouees = await base.select('social_variantes', `select=id,fichiers&statut=eq.echec&updated_at=lt.${avant(7 * JOUR)}&fichiers_supprimes_le=is.null`);
+  // filet : un post rendu mais jamais parti (compte coupé, pause) depuis plus
+  // d'un jour passe en échec et libère le stockage
+  const oubliees = await base.select('social_variantes', `select=id,fichiers&statut=in.(rendu,conteneur)&publier_a=lt.${avant(JOUR)}`);
+  for (const v of oubliees) {
+    await base.update('social_variantes', `id=eq.${v.id}`, { statut: 'echec', erreur: 'créneau passé sans publication' });
+  }
   let n = 0;
-  for (const v of [...publiees, ...echouees]) {
+  for (const v of [...publiees, ...echouees, ...oubliees]) {
     const chemins = [v.fichiers?.reel, v.fichiers?.couverture, v.fichiers?.image, ...(v.fichiers?.pages || [])].filter(Boolean);
     await base.effacer(chemins);
     await base.update('social_variantes', `id=eq.${v.id}`, { fichiers: {}, fichiers_supprimes_le: maintenant.toISOString() });

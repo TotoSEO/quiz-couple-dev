@@ -410,6 +410,8 @@ transfert sortant par mois.
 | **Atelier** | Routine Claude Code | Une fois par jour | Lit l'état du planning (`etat.json`), corrige les posts refusés, remplit jusqu'à 12 créneaux vides en piochant d'abord dans tes idées, écrit textes, légendes et hashtags, passe les contrôles, regarde les aperçus, puis pousse les fichiers sur la branche `reseaux-atelier`. Ses consignes : `reseaux/atelier/CONSIGNES.md`. |
 | **Synchro et rendu** | GitHub Actions (`social-rendu.yml`) | Toutes les 3 heures | Relit la branche de l'atelier, contrôle chaque post et l'écrit dans Supabase, puis fabrique les fichiers des posts des 30 prochaines heures, passe le contrôle qualité, envoie les fichiers dans le stockage. |
 | **Publication** | GitHub Actions (`social-publication.yml`) | Toutes les 10 min | Publie ce qui est dû : crée le conteneur, attend la fin du traitement de la vidéo, publie, enregistre le lien. |
+
+Tant qu'un compte n'est pas actif (pas encore branché, ou coupé dans l'admin), ses posts ne sont ni rendus ni comptés en échec : la publication tourne « à blanc » et l'entretien passe en échec, fichiers effacés, tout post rendu dont le créneau est dépassé d'un jour. Le stockage gratuit ne se remplit donc pas de vidéos qui ne partiront jamais.
 | **Entretien** | GitHub Actions (`social-entretien.yml`) | Chaque jour | Renouvelle les jetons Instagram, fait le ménage du stockage, relève les statistiques, écrit les alertes et l'état du planning pour l'atelier. |
 | **Base** | GitHub Actions (`social-base.yml`) | À la fusion | Applique la migration des tables `social_*` par l'API de gestion de Supabase. |
 

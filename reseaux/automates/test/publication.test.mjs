@@ -110,6 +110,13 @@ test('trois échecs : la déclinaison passe en échec, avec alerte', async () =>
   assert.ok(b.tables.social_journal.some((j) => j.niveau === 'erreur'));
 });
 
+test("compte inactif : un post en retard n'est pas compté en échec", async () => {
+  const b = base({ actif: false, publierA: plus(-180) });
+  const r = await publier(b, { maintenant: T0, instagramPour: () => faux() });
+  assert.equal(r.echecs, 0);
+  assert.equal(b.tables.social_variantes[0].statut, 'rendu');
+});
+
 test('créneau dépassé de plus de 90 minutes : pas de publication', async () => {
   const b = base({ publierA: plus(-120) });
   const ig = faux();

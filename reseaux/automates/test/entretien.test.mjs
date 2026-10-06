@@ -52,3 +52,13 @@ test('le jeton est renouvelé une fois par semaine', async () => {
   assert.equal(b.tables.social_comptes[0].jeton_expire_le, '2026-12-11T00:00:00Z');
   await renouvelerJetons(b, { maintenant: T0, renouveler: async () => { throw new Error('ne doit pas être appelé'); } });
 });
+
+test('le ménage libère un post rendu mais jamais parti', async () => {
+  const b = new BaseMemoire({
+    social_variantes: [{ id: 'v', statut: 'rendu', publier_a: '2026-10-10T11:00:00Z', fichiers: { reel: 'c/reel.mp4', couverture: 'c/couverture.jpg' }, fichiers_supprimes_le: null }],
+  });
+  ['c/reel.mp4', 'c/couverture.jpg'].forEach((f) => b.fichiers.set(f, 'x'));
+  await menage(b, { maintenant: T0 });
+  assert.equal(b.tables.social_variantes[0].statut, 'echec');
+  assert.equal(b.fichiers.size, 0);
+});

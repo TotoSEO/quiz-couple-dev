@@ -36,19 +36,20 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
     const [post] = await base.select('social_posts', `select=format,statut,jour,creneau&id=eq.${v.post_id}`);
     if (!post || post.statut !== 'valide') continue;
     const due = new Date(v.publier_a) <= maintenant;
-    const enRetard = maintenant - new Date(v.publier_a) > minutes(RETARD_MAX_MIN);
-    if (enRetard) {
-      await base.update('social_variantes', `id=eq.${v.id}`, { statut: 'echec', erreur: 'créneau dépassé sans publication' });
-      await base.journal('erreur', 'publication', `${post.jour} ${post.creneau} ${v.langue} : créneau dépassé`, null, v.id);
-      bilan.echecs++;
-      continue;
-    }
     const [jeton] = compte ? await base.select('social_jetons', `select=jeton&compte_id=eq.${compte.id}`) : [];
+    // compte pas encore branché : rien ne part, et rien n'est compté en échec
     if (aBlanc || !compte?.actif || !compte?.ig_user_id || !jeton) {
       if (due) {
         bilan.aBlanc++;
         console.log(`à blanc : ${post.jour} ${post.creneau} ${v.langue} (${post.format}) aurait été publié`);
       }
+      continue;
+    }
+    const enRetard = maintenant - new Date(v.publier_a) > minutes(RETARD_MAX_MIN);
+    if (enRetard) {
+      await base.update('social_variantes', `id=eq.${v.id}`, { statut: 'echec', erreur: 'créneau dépassé sans publication' });
+      await base.journal('erreur', 'publication', `${post.jour} ${post.creneau} ${v.langue} : créneau dépassé`, null, v.id);
+      bilan.echecs++;
       continue;
     }
     const ig = instagramPour ? instagramPour(jeton.jeton, compte.ig_user_id) : new Instagram(jeton.jeton, compte.ig_user_id);

@@ -96,3 +96,14 @@ test('les exemples du studio passent le contrôle de recette', async () => {
     assert.deepEqual(controlerRecette(exemple(nom), 'en'), [], nom);
   }
 });
+
+test('le rendu attend un compte actif', async () => {
+  const { rendre } = await import('../rendu.mjs');
+  const b = base();
+  await synchroniser(b, [{ fichier: 'a.json', post: postQuiz() }], { maintenant: MAINTENANT });
+  b.tables.social_variantes[0].publier_a = '2026-10-12T10:30:00Z';
+  let appels = 0;
+  const bilan = await rendre(b, { maintenant: new Date('2026-10-12T00:00:00Z'), rendreFn: () => { appels++; return []; } });
+  assert.equal(bilan.enAttente, 1);
+  assert.equal(appels, 0);
+});
