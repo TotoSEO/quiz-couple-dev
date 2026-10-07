@@ -100,6 +100,30 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   refusé par le contrôle.
 - **L'accroche** : dès la première image, les personnages sont dans l'image
   et un geste part tout de suite (pas d'entrée dans une image vide).
+- **Un brief riche, et le contrôle le vérifie** (règle de Thomas : les
+  briefs des vidéos animées sont très détaillés, avec les zooms, les
+  expressions et les mouvements). Un scénario où il ne se passe rien est
+  refusé par `controler.mjs`, avec le plan et les secondes en cause :
+  - la `description` de chaque plan fait 100 signes au moins et raconte,
+    dans l'ordre et avec les secondes, le décor et la lumière, où est chaque
+    personnage, chaque geste, chaque expression (yeux, bouche, joues),
+    chaque mouvement de caméra et chaque texte ;
+  - **la caméra bouge au moins deux fois par reel** (zoom, secousse ou
+    déplacement : une image clé `camera` qui change le cadrage), et tout
+    plan de plus de 4 s a son mouvement de caméra. Un zoom rapide sur un
+    visage à la chute, un lent rapprochement sur un câlin : c'est ce qui
+    fait le rythme ;
+  - **chaque personnage change d'expression** au moins deux fois par reel,
+    et au moins une fois toutes les six secondes où il est à l'écran
+    (gestes `visage`, `regarde`, `rit`, `boude`, `pleure`, `fache`,
+    `mignon`, `parle`, `mange`, `offre`, `bisou`, `dort`, `joie`) ;
+  - **jamais plus de 1,5 s sans rien de nouveau** dans un plan : un geste
+    anime 2,5 s puis devient une pose tenue (`tient` et `telephone` ne
+    comptent jamais), un effet, une bulle ou un mouvement de caméra
+    couvrent leur durée. Le premier geste d'un plan part avant 0,6 s, et
+    avant 0,5 s au premier plan.
+  Les modèles `pov-frites`, `pov-fleurs`, `pov-couette` et `statique-calin`
+  passent ces règles : copie leur densité, pas seulement leur forme.
 - **Simple** : un décor, deux personnages au plus, un ou deux objets, 10 à
   15 secondes (le contrôle refuse moins de 10). Les mini messages (un personnage, un geste vers la caméra,
   une phrase mot à mot) sont les plus faciles à réussir.
@@ -255,6 +279,13 @@ git add reseaux/atelier/posts
 git commit -m "Atelier : <n> posts du <premier jour> au <dernier jour>"
 git push origin HEAD:reseaux-atelier
 ```
+
+**On pousse au fil de l'eau, pas seulement à la fin** : dès que six posts
+sont écrits et passés au premier contrôle (`controler.mjs`), on les
+committe et on les pousse, puis on continue. Une session qui s'arrête en
+route (limite de temps ou d'usage) laisse ainsi des posts derrière elle,
+et le rendu peut déjà travailler. Les corrections venues de la planche
+partent dans un commit suivant.
 
 En cas de refus parce que la branche a bougé (l'entretien y écrit
 `etat.json`) : `git pull --rebase origin reseaux-atelier` puis on repousse.

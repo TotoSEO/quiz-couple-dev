@@ -29,13 +29,36 @@ test('un scénario qui sort du vocabulaire est refusé', () => {
   assert.match(f, /pas d'emoji/);
 });
 
+test('un scénario où il ne se passe rien est refusé : caméra immobile, visages figés, trous, départ tardif', () => {
+  const r = exemple('pov-frites');
+  for (const p of r.plans) delete p.camera;
+  // le premier plan ne démarre qu'à 1,2 s
+  r.plans[0].persos[0].gestes[1].de = 1.2;
+  r.plans[0].persos[1].gestes[0].de = 1.2;
+  r.plans[0].bulles[0].de = 1.2;
+  // le violet ne change plus jamais de visage : il tient les frites, c'est tout
+  r.plans[1].persos[1].gestes = [{ geste: 'effet', effet: 'points', de: 0.7, a: 2.2 }];
+  r.plans[2].persos[1].gestes = [{ geste: 'tient', objet: 'frites', main: 'droite', de: 0, a: 2.8 }];
+  r.plans[3].persos[1].gestes = [{ geste: 'tient', objet: 'frites', main: 'droite', de: 0, a: 5 }];
+  // un dernier plan long où plus rien ne bouge après la bulle
+  r.plans[3].duree = 5;
+  r.plans[3].bulles[0].a = 1.0;
+  const f = controlerPov(r).join('\n');
+  assert.match(f, /plan 1 : le premier geste part à 1,2 s, il doit partir avant 0,5 s/);
+  assert.match(f, /plan 4 : rien ne se passe de 2,5 à 5,0 s/);
+  assert.match(f, /plan 4 : un plan de plus de 4 s a un mouvement de caméra/);
+  assert.match(f, /caméra : 0 mouvement, il en faut au moins 2/);
+  assert.match(f, /violet : 1 changement d'expression pour 13,0 s à l'écran, il en faut au moins 3/);
+  assert.doesNotMatch(f, /rose : \d+ changement/);
+});
+
 test('un câlin sans partenaire et un plan sans description sont refusés', () => {
   const r = exemple('statique-calin');
   r.plans[0].persos = [r.plans[0].persos[0]];
   r.plans[0].description = 'câlin';
   const f = controlerPov(r).join('\n');
   assert.match(f, /« avec » doit nommer l'autre personnage/);
-  assert.match(f, /la description doit dire ce qu'on voit/);
+  assert.match(f, /la description doit raconter ce qu'on voit/);
 });
 
 const post = (categorie, gabarit, recette, legende = 'Sweet.') => ({

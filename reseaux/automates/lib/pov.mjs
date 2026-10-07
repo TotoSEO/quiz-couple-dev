@@ -15,7 +15,99 @@ const BOUCHES = ['sourire', 'o', 'rire', 'plate', 'triste', 'bisou', 'chat', 'gr
 const QUI = ['rose', 'violet'];
 const EMOJI = /\p{Extended_Pictographic}/u;
 
+// Richesse d'une animation (Thomas, 7 octobre 2026 : des briefs très
+// détaillés, avec les zooms, les expressions et les mouvements). Le contrôle
+// refuse un scénario où il ne se passe rien : chaque plan est couvert par des
+// événements (un geste anime VIE_GESTE secondes puis devient une pose tenue ;
+// un effet, une bulle, un mouvement de caméra couvrent leur durée), le
+// premier part tout de suite, chaque personnage change de visage
+// régulièrement, et la caméra bouge au moins deux fois par reel.
+const TENUS = ['tient', 'telephone'];
+const EXPRESSIFS = ['visage', 'regarde', 'rit', 'boude', 'pleure', 'fache', 'mignon', 'joie', 'dort', 'bisou', 'parle', 'mange', 'offre'];
+const VIE_GESTE = 2.5;
+const TROU_MAX = 1.5;
+const DEBUT_MAX = 0.6;
+const DEBUT_MAX_PREMIER_PLAN = 0.5;
+const CAMERA_MIN = 2;
+const PLAN_LONG = 4;
+const SECONDES_PAR_EXPRESSION = 6;
+const EXPRESSIONS_MIN = 2;
+const DESCRIPTION_MIN = 100;
+
 const nombre = (v) => typeof v === 'number' && Number.isFinite(v);
+const s = (v) => v.toFixed(1).replace('.', ',');
+
+// Les trous d'un plan : la part de [0, duree] qu'aucun événement ne couvre.
+function trous(intervalles, duree) {
+  const tri = intervalles.filter(([de, a]) => a > de).sort((x, y) => x[0] - y[0]);
+  const out = [];
+  let fin = 0;
+  for (const [de, a] of tri) {
+    if (de > fin) out.push([fin, de]);
+    fin = Math.max(fin, a);
+  }
+  if (fin < duree) out.push([fin, duree]);
+  return out;
+}
+
+function controlerRichesse(plans, f) {
+  let cameras = 0;
+  const presence = {};
+  const expressions = {};
+  plans.forEach((p, i) => {
+    const ou = `plan ${i + 1}`;
+    const d = nombre(p.duree) ? p.duree : 0;
+    if (!d) return;
+    const couverts = [];
+    const evenement = (de, a) => {
+      if (!nombre(de)) return;
+      couverts.push([Math.max(0, de), Math.min(d, nombre(a) ? a : de + VIE_GESTE)]);
+    };
+    for (const x of p.persos ?? []) {
+      if (!QUI.includes(x.qui)) continue;
+      presence[x.qui] = (presence[x.qui] || 0) + d;
+      for (const g of x.gestes ?? []) {
+        if (TENUS.includes(g.geste) || !nombre(g.de)) continue;
+        evenement(g.de, Math.min(nombre(g.a) ? g.a : g.de + VIE_GESTE, g.de + VIE_GESTE));
+        if (EXPRESSIFS.includes(g.geste)) expressions[x.qui] = (expressions[x.qui] || 0) + 1;
+      }
+    }
+    for (const e of p.effets ?? []) evenement(e.de, e.a);
+    for (const b of p.bulles ?? []) evenement(b.de, b.a);
+    for (const o of p.objets ?? []) evenement(o.de ?? 0, (o.de ?? 0) + 1);
+    // la caméra : une image clé est un mouvement quand elle change le cadrage
+    // depuis la précédente (zoom, x, y) ou secoue l'image
+    let avant = { a: 0, zoom: 1, x: undefined, y: undefined };
+    let camPlan = 0;
+    for (const c of p.camera ?? []) {
+      if (!nombre(c.a)) continue;
+      if ('secousse' in c) {
+        camPlan++;
+        evenement(c.a, c.a + 0.5);
+      } else {
+        const zoom = c.zoom ?? avant.zoom;
+        if (c.a > avant.a && (zoom !== avant.zoom || c.x !== avant.x || c.y !== avant.y)) {
+          camPlan++;
+          evenement(avant.a, c.a);
+        }
+        avant = { a: c.a, zoom, x: c.x, y: c.y };
+      }
+    }
+    cameras += camPlan;
+    if (d > PLAN_LONG && !camPlan) f.push(`${ou} : un plan de plus de ${PLAN_LONG} s a un mouvement de caméra (zoom, secousse ou déplacement)`);
+    for (const [de, a] of trous(couverts, d)) {
+      const debutMax = i === 0 ? DEBUT_MAX_PREMIER_PLAN : DEBUT_MAX;
+      if (de === 0 && a > debutMax) f.push(`${ou} : le premier geste part à ${s(a)} s, il doit partir avant ${s(debutMax)} s${i === 0 ? " (l'accroche est dans la première image)" : ''}`);
+      else if (de > 0 && a - de > TROU_MAX) f.push(`${ou} : rien ne se passe de ${s(de)} à ${s(a)} s : ajoute un geste, un changement de visage, un effet, une bulle ou un mouvement de caméra`);
+    }
+  });
+  if (cameras < CAMERA_MIN) f.push(`caméra : ${cameras} mouvement${cameras > 1 ? 's' : ''}, il en faut au moins ${CAMERA_MIN} par reel (zoom, secousse ou déplacement)`);
+  for (const [qui, duree] of Object.entries(presence)) {
+    const requis = Math.max(EXPRESSIONS_MIN, Math.ceil(duree / SECONDES_PAR_EXPRESSION));
+    const n = expressions[qui] || 0;
+    if (n < requis) f.push(`${qui} : ${n} changement${n > 1 ? 's' : ''} d'expression pour ${s(duree)} s à l'écran, il en faut au moins ${requis} (gestes visage, regarde, rit, boude, mignon, parle...)`);
+  }
+}
 
 export function controlerPov(r) {
   const f = [];
@@ -37,7 +129,7 @@ export function controlerPov(r) {
   plans.forEach((p, i) => {
     const ou = `plan ${i + 1}`;
     const d = p.duree;
-    if (typeof p.description !== 'string' || p.description.trim().length < 30) f.push(`${ou} : la description doit dire ce qu'on voit (30 signes au moins)`);
+    if (typeof p.description !== 'string' || p.description.trim().length < DESCRIPTION_MIN) f.push(`${ou} : la description doit raconter ce qu'on voit comme à un dessinateur, décor, personnages, gestes, expressions, caméra, textes (${DESCRIPTION_MIN} signes au moins)`);
     if (!nombre(d) || d < 0.8 || d > 14) f.push(`${ou} : durée de 0,8 à 14 s`);
     const decor = V.decors[p.decor];
     if (!decor) {
@@ -140,5 +232,6 @@ export function controlerPov(r) {
       if (!nombre(s.a) || s.a < 0 || s.a >= d) f.push(`${ou} : son hors du plan`);
     }
   });
+  controlerRichesse(plans, f);
   return f;
 }
