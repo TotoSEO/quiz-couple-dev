@@ -85,10 +85,18 @@ Chaque post porte une `categorie`, qui impose son gabarit.
 
 ### `pov` : animation avec les mascottes (gabarit `pov`)
 
-Humour de couple (« POV: your partner says they're not hungry »), moments
+Humour de couple (« POV: he says he's not hungry »), moments
 tendres, et mini messages faits comme les petits chats d'Instagram (un
 personnage, un geste vers la personne qui regarde, une phrase qui s'écrit
 mot à mot : « I saw these flowers... and thought of you »).
+
+Dans une animation, le partenaire est « he » ou « she », selon la mascotte
+qui agit (le violet est le garçon, la rose la fille), jamais « they »,
+« their » ni « them » : titre, bulles, textes à l'écran et légende (« Tag
+your partner », pas « Tag them »). Règle de Thomas du 7 octobre 2026. Les
+idées de la banque, écrites avec « they », se transposent au moment
+d'écrire le post. Les jeux gardent « their » et « they », forme naturelle
+d'un quiz en anglais.
 
 Quatre piliers dans la banque (`pilier` du sujet) : `humour`, `tendre`,
 `mini` (un personnage en grand qui parle à la personne qui regarde :
