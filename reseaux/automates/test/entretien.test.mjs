@@ -20,13 +20,24 @@ test('l\'état liste les créneaux à remplir avec leur catégorie', async () =>
     social_reglages: [{ cle: 'melange', valeur: melange }],
     social_posts: posts(['2026-10-14']),
   });
+  // 17 h à Paris : plus aucun créneau d'aujourd'hui ne laisse trois heures ;
+  // demain est vide, après-demain est rempli, le jour d'après est vide
   const e = await etat(b, { maintenant: T0, horizon: 3 });
   assert.equal(e.aujourdhui, '2026-10-12');
   assert.deepEqual(e.a_remplir, [
+    { jour: '2026-10-13', creneau: 'matin', categorie: 'pov' },
+    { jour: '2026-10-13', creneau: 'midi', categorie: 'tu-preferes' },
+    { jour: '2026-10-13', creneau: 'soir', categorie: 'pov' },
     { jour: '2026-10-15', creneau: 'matin', categorie: 'pov' },
     { jour: '2026-10-15', creneau: 'midi', categorie: 'statique' },
     { jour: '2026-10-15', creneau: 'soir', categorie: 'pov' },
   ]);
+  // 7 h 40 à Paris : le matin (6 h) est passé, midi (11 h) et l'après-midi (16 h) restent à remplir aujourd'hui
+  const tot = await etat(b, { maintenant: new Date('2026-10-12T05:40:00Z'), horizon: 0 });
+  assert.deepEqual(tot.a_remplir.map((x) => x.creneau), ['midi', 'soir']);
+  // 8 h 05 : midi commence dans moins de trois heures, seul l'après-midi reste
+  const tard = await etat(b, { maintenant: new Date('2026-10-12T06:05:00Z'), horizon: 0 });
+  assert.deepEqual(tard.a_remplir.map((x) => x.creneau), ['soir']);
 });
 
 test('le ménage efface les fichiers lourds 24 h après publication, garde la vignette', async () => {
