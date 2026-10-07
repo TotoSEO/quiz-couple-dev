@@ -61,6 +61,16 @@ critique garde la feuille bloquante.
   arrivent avec la feuille complète : un style indispensable dès le premier
   écran doit correspondre à des éléments présents au chargement.
 
+Les avis d'une page (douze derniers, note moyenne, nombre) sont cuits dans
+le HTML à la construction (`avisCuitsPour` dans generate.js, bloc
+`#pqx-avis-cuits` dans quiz-reviews.ejs, lu par `initReviews`) depuis le
+7 octobre 2026 : chaque page vue demandait à la base la liste et jusqu'à
+mille notes, le plus gros poste de sortie de Supabase (1,4 Go en dix jours
+sur les 5 Go du plan gratuit). Seul l'envoi d'un avis reste en direct ; un
+avis approuvé paraît à la reconstruction suivante, sept par jour. Les avis
+se lisent par pages de mille (le plafond de PostgREST), et sans chargement
+réussi au build, le bloc manque et la page redemande à la base comme avant.
+
 Le reste de la règle : rien de tiers avant l'affichage. `pub.js` ne demande
 les emplacements qu'à l'événement `load`, jamais dans le premier écran avant
 un geste (défilement ou clic dans la page), le footer compris, et l'interstitiel seulement au résultat ou à l'arrivée depuis une autre page du site ; le fichier de la plateforme de consentement part après
