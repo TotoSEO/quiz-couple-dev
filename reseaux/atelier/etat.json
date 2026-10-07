@@ -1,0 +1,342 @@
+{
+  "genere_le": "2026-10-07T05:47:45.630Z",
+  "fuseau": "Europe/Paris",
+  "aujourdhui": "2026-10-07",
+  "reserve_jours": 0,
+  "a_remplir": [
+    {
+      "jour": "2026-10-07",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-08",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-08",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-10-08",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-09",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-09",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-10-09",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-10-10",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-10",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-10-10",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-10-11",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-11",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-10-11",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-10-12",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-12",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-10-12",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-13",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-13",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-10-13",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-14",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-14",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-10-14",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-15",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-15",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-10-15",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-16",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-16",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-10-16",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-10-17",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-17",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-10-17",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-10-18",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-18",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-10-18",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-10-19",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-19",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-10-19",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-20",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-20",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-10-20",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-21",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-21",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-10-21",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-22",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-22",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-10-22",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-23",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-23",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-10-23",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-10-24",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-24",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-10-24",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-10-25",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-25",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-10-25",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-10-26",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-26",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-10-26",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-27",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-27",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-10-27",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "soir",
+      "categorie": "pov"
+    }
+  ],
+  "a_corriger": [],
+  "recents_et_prevus": [
+    {
+      "jour": "2026-10-07",
+      "creneau": "midi",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    }
+  ],
+  "idees": [],
+  "statistiques_j7": []
+}
