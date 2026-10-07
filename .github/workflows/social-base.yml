@@ -62,3 +62,26 @@ jobs:
           rm -f requete.json
           echo "jeton de l'horloge : réponse $code"
           if [ "$code" -ge 300 ]; then head -c 300 reponse.json; exit 1; fi
+      # Un vrai départ de la publication par l'horloge, puis la réponse de
+      # GitHub lue dans la table de pg_net : 204 = la clé marche. Un départ de
+      # plus est sans effet (la publication est idempotente).
+      - name: Essai de l'horloge
+        env:
+          WORKFLOWS_TOKEN: ${{ secrets.WORKFLOWS_TOKEN }}
+        run: |
+          if [ -z "$WORKFLOWS_TOKEN" ]; then exit 0; fi
+          requete() {
+            jq -n --arg q "$1" '{query: $q}' > requete.json
+            curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json
+          }
+          code=$(requete "select public.social_declencher_workflow('social-publication.yml') as id")
+          id=$(jq -r '.[0].id // empty' reponse.json)
+          if [ "$code" -ge 300 ] || [ -z "$id" ]; then echo "déclenchement refusé ($code)"; head -c 300 reponse.json; exit 1; fi
+          sleep 8
+          code=$(requete "select status_code, left(coalesce(content, ''), 200) as content, error_msg from net._http_response where id = $id")
+          statut=$(jq -r '.[0].status_code // empty' reponse.json)
+          echo "réponse de GitHub au déclenchement : ${statut:-aucune} $(jq -r '.[0].error_msg // ""' reponse.json)"
+          if [ "$statut" != "204" ]; then head -c 300 reponse.json; echo; echo "la clé WORKFLOWS_TOKEN ne déclenche pas les workflows (jeton expiré, révoqué, ou sans la permission Actions en écriture)"; exit 1; fi
