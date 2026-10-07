@@ -96,6 +96,9 @@ export type PlanPov = {
   couette?: 'calme' | 'bouge';
   // l'instant où la couette se met à bouger (après un plongeon), sinon dès le début
   couetteDe?: number;
+  // le lit sonore du plan : une ambiance du vocabulaire, ou « aucune » ;
+  // sans ce champ, celle du décor (vocabulaire.json) selon le moment
+  ambiance?: string;
   legende?: string;
   textes?: TextePov[];
   persos?: PersoPov[];

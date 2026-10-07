@@ -54,6 +54,10 @@ dessin et dans le texte.
 5. **La rose porte un nœud**, et c'est le violet qui offre.
 6. Les textes en minuscules et en langage de message pour les minis, les
    statiques et les bulles (« u », « ur », « rn », « bc », « <3 », « !!! »).
+7. **Pas de dialogue.** Aucune de ces vidéos ne fait parler ses personnages
+   dans des bulles : un texte posé, une situation, une réaction. Nos
+   animations suivent (Thomas, 7 octobre 2026) : au plus une bulle par plan,
+   deux par reel, et le plus souvent aucune.
 
 ### Ce qu'on ne reprend pas
 

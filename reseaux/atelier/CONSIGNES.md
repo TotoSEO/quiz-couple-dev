@@ -112,9 +112,10 @@ une heure précise (un soir où le créneau est déjà passé, par exemple) : le
 post porte alors `publier_a`, une date ISO avec fuseau
 (`"2026-10-07T19:45:00Z"`), et la synchro la garde telle quelle.
 Les recettes de `reseaux/studio/recettes/exemples/` sont les modèles, une
-par catégorie : `pov-frites` et `pov-fleurs` (pov), `pov-couette` (coquin),
-`statique-calin` (statique), `connais-tu`, `tu-preferes`, `citation`
-(phrase).
+par catégorie : `pov-frites`, `pov-fleurs` et `pov-cafe` (pov ; le café est
+le modèle d'une situation jouée sans aucune bulle, dans un des nouveaux
+décors), `pov-couette` (coquin), `statique-calin` (statique), `connais-tu`,
+`tu-preferes`, `citation` (phrase).
 
 ### Les animations (pov, coquin, statique)
 
@@ -154,23 +155,71 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
     comptent jamais), un effet, une bulle ou un mouvement de caméra
     couvrent leur durée. Le premier geste d'un plan part avant 0,6 s, et
     avant 0,5 s au premier plan.
-  Les modèles `pov-frites`, `pov-fleurs`, `pov-couette` et `statique-calin`
-  passent ces règles : copie leur densité, pas seulement leur forme.
+  Les modèles `pov-frites`, `pov-fleurs`, `pov-cafe`, `pov-couette` et
+  `statique-calin` passent ces règles : copie leur densité, pas seulement
+  leur forme.
 - **Simple** : un décor, deux personnages au plus, un ou deux objets, 10 à
   15 secondes (le contrôle refuse moins de 10). Les mini messages (un personnage, un geste vers la caméra,
   une phrase mot à mot) sont les plus faciles à réussir.
+- **Montrer, pas dire** (règle de Thomas du 7 octobre 2026, après le reel
+  « we need to talk » : « enfantin, blague pas drôle ; sans dialogue, juste
+  une situation, ça fonctionne aussi bien »). Un POV, c'est une situation
+  de couple que tout le monde reconnaît, jouée par les corps : le titre pose
+  la situation, l'image fait la chute. **Au plus une bulle par plan et deux
+  par reel, et la plupart des reels n'en ont aucune.** Jamais de gag qui ne
+  marche que si on lit la bulle, jamais de fausse frayeur résolue par un jeu
+  de mots (« we need to talk... about dinner »), jamais de blague « de
+  cour de récré ». Ce qui marche chez les comptes qui marchent : une petite
+  vérité du quotidien (il n'a jamais faim jusqu'aux frites, elle met deux
+  heures à se préparer, il s'endort devant le film qu'il a choisi), grossie
+  par les expressions (yeux plats, boude, saute, dort, pleure) et par le
+  temps qui passe (légendes « 10 PM », « 40 min later »), avec un seul
+  retournement dans le dernier plan. Si tu hésites, enlève la bulle et
+  regarde la planche : si la scène se comprend encore, c'est la bonne. Le
+  modèle sans aucune bulle est `pov-cafe` (le premier rendez-vous).
+- **Varier les décors.** Le studio en a quinze : `uni`, `ligne`, `mur`,
+  `chambre`, `cuisine`, `salon`, `table`, `dehors` (le parc), `noel`, et
+  depuis le 7 octobre 2026 `foret`, `rue`, `cafe`, `plage`, `voiture` et
+  `cinema` (Thomas : « multiplier les scènes et les ambiances »). Le décor
+  écrit dans l'idée du sujet est un point de départ : **jamais le même décor
+  deux animations de suite**, et sur les onze animations d'une semaine,
+  quatre au moins dans la rue, la forêt, le café, la plage, la voiture ou le
+  cinéma. `recents_et_prevus` dit les décors des derniers posts. Chaque
+  décor a sa description dans `vocabulaire.json` (ce qu'on y voit, à quoi
+  il sert) ; la rue et la plage suivent le `moment` (lampadaire et fenêtres
+  allumés le soir, soleil couchant), le cinéma reste sombre.
 - Les places : `lit-*` (sous la couette, la tête et les mains dépassent),
-  `canape-*` et `table-*` (assis), `banc-*` (assis, jambes qui pendent),
-  `evier` et `comptoir-*` (derrière le plan de travail). Assis ou couché,
-  on ne marche pas : on se penche, on tourne la tête, on change de visage.
-- Une bulle : 60 signes au plus, une à la fois si possible. Un titre « POV:
+  `canape-*`, `table-*` (café et restaurant), `fauteuil-*` (cinéma) et
+  `sable-*` (plage, assis dans le sable), `banc-*` et `tronc-*` (parc et
+  forêt, assis, jambes qui pendent), `evier` et `comptoir-*` (derrière le
+  plan de travail), `volant` et `passager` (voiture, jusqu'à la taille),
+  `lampadaire` et `porte` (rue). Assis ou couché, on ne marche pas : on se
+  penche, on tourne la tête, on change de visage.
+- Une bulle : 60 signes au plus, une à la fois. Un titre « POV:
   ... » : 90 signes au plus, trois lignes. Pas d'emoji à l'écran (la police
   ne les dessine pas) ; « <3 » est permis.
-- Les bruitages se posent tout seuls (pas, sauts, bulles, cœurs, zooms,
-  couette), doux et variés. **Pas de musique dans la recette** : le reel
-  est rendu avec ses seuls bruitages, et la publication lui attache un son
-  de la bibliothèque Instagram (Audio API). Ne mets ni `musique` ni
-  `ambiance` à la racine de la recette.
+- **Les bruitages se posent tout seuls**, doux et variés : pas (dans
+  l'herbe dehors), sauts, bulles, cœurs, zooms, couette, et depuis le
+  7 octobre 2026 les réactions des mascottes (Thomas : « des bruits de tout
+  type, bruits d'ambiance, cri, pleure ») : `pleure` fait pleurer, `rit`
+  rire, `fache` grogner, `boude` soupirer, `dort` ronfler, `mange` croquer,
+  `bisou` fait un vrai petit bisou, un « ! » au-dessus de quelqu'un au
+  téléphone fait une notification, une entrée par le bord dans une pièce
+  fait la porte (la clochette au café, la portière en voiture), un `reveil`
+  posé sonne, une assiette ou une tasse qui apparaît se pose. Chaque décor
+  a son **lit sonore** (oiseaux au parc et en forêt le jour, grillons la
+  nuit, circulation dans la rue, vagues à la plage, brouhaha au café et au
+  restaurant, moteur en voiture, projecteur au cinéma ; rien dans les
+  pièces de la maison) : un plan peut le remplacer par `"ambiance":
+  "pluie"` (ou `vent`, `horloge`, `feu`...) ou le couper avec `"aucune"`.
+  Pour un son précis à un instant précis, `sons` : `[{ "a": 2.1, "son":
+  "cri" }]`, avec `cri`, `sursaut`, `baille`, `eternue`, `aie`, `klaxon`,
+  `tonnerre`, `sonnette`, `applaudit`, `trombone`, `tambour`, `battement`
+  (la liste `sons` de `vocabulaire.json`). **Pas de musique dans la
+  recette** : le reel est rendu avec ses seuls bruitages, et la publication
+  lui attache un son de la bibliothèque Instagram (Audio API). Ne mets ni
+  `musique` ni `ambiance` à la racine de la recette (le champ `ambiance`
+  d'un plan, lui, est un bruit de fond, pas une musique).
 - **Chaque reel dit l'ambiance de son son** (règle de Thomas du 7 octobre
   2026 : un son tendance tiré au hasard ne collait pas à l'image) :
   `"son": {"ambiance": "..."}` dans la recette, avec une de ces valeurs :
@@ -233,7 +282,9 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   légendés, un décor et un geste chacun, transitions `coupe`.
 - **Faux échange de messages** : des bulles qui alternent entre les deux
   personnages, une à la fois, 60 signes au plus chacune ; la chute est la
-  dernière bulle, et le visage change avec elle.
+  dernière bulle, et le visage change avec elle. C'est la seule mécanique
+  où les bulles dépassent deux par reel : elles sont le format, pas un
+  dialogue ; quatre au plus.
 - **Contraste** (« us: ... ») : les deux dans le même plan, chacun dans son
   état (l'une tremble sous la couette, l'autre a les yeux plats), avec les
   légendes « me » et « them » si besoin.
@@ -320,9 +371,10 @@ chevauchent : on raccourcit ou on déplace, on ne touche jamais aux tailles.
 
 Puis **on regarde la planche** (une image toutes les demi-secondes) : la
 première image montre-t-elle déjà les personnages ? Chaque plan se
-comprend-il sans le son ? Un objet flotte-t-il, un geste tombe-t-il à côté,
-une bulle part-elle trop tôt ? On corrige et on refait la planche jusqu'à ce
-que tout soit juste.
+comprend-il sans le son, et sans lire les bulles ? Un objet flotte-t-il, un
+geste tombe-t-il à côté, une bulle part-elle trop tôt ? Le décor est-il
+différent de celui de l'animation précédente ? On corrige et on refait la
+planche jusqu'à ce que tout soit juste.
 
 ## 6. Pousser
 

@@ -72,6 +72,13 @@
     var bouche = o.bouche || 'sourire';
     var saut = o.saut || 0;
     var devant = o.devant || [false, false];
+    // brasVisibles [gauche, droit] : un bras qu'on ne dessine pas du tout.
+    // Au lit, le corps est enfoncé jusqu'à la bouche mais les épaules restent
+    // au-dessus du bord de la couette : les bras de base dépassaient à côté
+    // des deux petites mains posées sur la couette, quatre bras en tout
+    // (Thomas, 7 octobre 2026). Le studio ne garde alors que les bras levés
+    // ou occupés, et cache la petite main du même côté.
+    var visibles = o.brasVisibles || [true, true];
     var id = 'qc-' + nom + '-' + (++n);
     var b = p.boite;
     // l'encre du trait est celle des décors (claire sur le fond de nuit, où
@@ -198,11 +205,11 @@
       out.push(larme(q.oeil[0], q.oeil[1], 1));
       out.push(joue(q.joue[0], q.joue[1], 0.8));
       out.push(laBouche(q.bouche[0], q.bouche[1], 0.6));
-      out.push(unBras(q.epaule[0], q.epaule[1], bras[0], -1));
+      if (visibles[0]) out.push(unBras(q.epaule[0], q.epaule[1], bras[0], -1));
       if (q.noeud) out.push(noeud(q.noeud[0], q.noeud[1], q.noeud[2]));
     } else {
-      if (!devant[0]) out.push(unBras(p.epaules[0][0], p.epaules[0][1], bras[0], 1));
-      if (!devant[1]) out.push(unBras(p.epaules[1][0], p.epaules[1][1], bras[1], -1));
+      if (visibles[0] && !devant[0]) out.push(unBras(p.epaules[0][0], p.epaules[0][1], bras[0], 1));
+      if (visibles[1] && !devant[1]) out.push(unBras(p.epaules[1][0], p.epaules[1][1], bras[1], -1));
       var mf = o.jambes === 'marche' ? 10 : 0;
       var jf = o.jambesAngles || [mf, mf];
       out.push(uneJambe(p.hanches[0][0], p.hanches[0][1], jf[0]));
@@ -219,8 +226,8 @@
         out.push(joue(p.joues[1][0], p.joues[1][1], 1));
         out.push(laBouche(p.bouche[0], p.bouche[1], 1));
       }
-      if (devant[0]) out.push(unBras(p.epaules[0][0], p.epaules[0][1], bras[0], 1));
-      if (devant[1]) out.push(unBras(p.epaules[1][0], p.epaules[1][1], bras[1], -1));
+      if (visibles[0] && devant[0]) out.push(unBras(p.epaules[0][0], p.epaules[0][1], bras[0], 1));
+      if (visibles[1] && devant[1]) out.push(unBras(p.epaules[1][0], p.epaules[1][1], bras[1], -1));
       if (p.noeud) out.push(noeud(vue === 'dos' ? p.boite[2] - p.noeud[0] : p.noeud[0], p.noeud[1], vue === 'dos' ? -p.noeud[2] : p.noeud[2]));
     }
     out.push('</g>');

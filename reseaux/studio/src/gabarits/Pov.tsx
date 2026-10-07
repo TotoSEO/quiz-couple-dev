@@ -21,7 +21,13 @@ const VOILES: Record<Moment, string | null> = {
   soir: 'rgba(255, 158, 120, 0.3)',
   nuit: 'rgba(58, 66, 140, 0.52)',
 };
-const Lumiere: React.FC<{ plan: PlanPov; cam: Camera }> = ({ plan, cam }) => {
+const Lumiere: React.FC<{ plan: PlanPov; cam: Camera; t: number }> = ({ plan, cam, t }) => {
+  // au cinéma, la salle est noire quel que soit le moment : la lueur de
+  // l'écran (devant eux, donc derrière la caméra) tremble sur les visages
+  if (plan.decor === 'cinema') {
+    const lueur = 0.16 + 0.05 * Math.sin(t * 9) + 0.03 * Math.sin(t * 23);
+    return <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 50% 60%, rgba(196, 214, 255, ${lueur}) 0, rgba(196, 214, 255, 0) 70%)`, mixBlendMode: 'screen' }} />;
+  }
   if (!plan.moment || NUS.has(plan.decor)) return null;
   const voile = VOILES[plan.moment];
   if (!voile) return null;
@@ -79,12 +85,12 @@ export const Pov: React.FC<{ recette: RecettePov; plan: Plan; verification?: boo
       {pPrec && (
         <div style={{ position: 'absolute', inset: 0, transform: glisse ? `translateX(${-douce(q) * 1080}px)` : undefined }}>
           <Etage plan={pPrec} t={tPrec} id={`p${i - 1}`} image={imagePrec!} />
-          <Lumiere plan={pPrec} cam={imagePrec!.cam} />
+          <Lumiere plan={pPrec} cam={imagePrec!.cam} t={tPrec} />
         </div>
       )}
       <div style={{ position: 'absolute', inset: 0, opacity: enTransition && !glisse ? q : 1, transform: enTransition && glisse ? `translateX(${(1 - douce(q)) * 1080}px)` : undefined, background: 'var(--fond)' }}>
         <Etage plan={p} t={fPlan / FPS} id={`p${i}`} image={image} />
-        <Lumiere plan={p} cam={image.cam} />
+        <Lumiere plan={p} cam={image.cam} t={fPlan / FPS} />
       </div>
       {noir > 0 && <div style={{ position: 'absolute', inset: 0, background: '#0d0b14', opacity: noir }} />}
       <Calque recette={r} plan={p} fPlan={fPlan} etats={image.etats} cam={image.cam} nu={NUS.has(p.decor)} />

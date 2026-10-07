@@ -2,7 +2,7 @@
 // Le script de rendu le relit (props.plan) pour savoir quelles images
 // vérifier et laquelle sert de couverture.
 import { enImages, FPS, TEMPO } from './charte/charte';
-import type { EvenementSonore } from './charte/Son';
+import type { EvenementAmbiance, EvenementSonore } from './charte/Son';
 import type { RecetteCitation, RecetteConnaisTu, RecetteJeu, RecetteQuizChrono, RecetteReel, RecetteTuPreferes } from './recette';
 import { planPov } from './pov/plan';
 
@@ -27,6 +27,8 @@ export type Plan = {
   verifs: number[];
   scenes: Scene[];
   sons: EvenementSonore[];
+  // les lits sonores des décors (oiseaux, vagues, rue...), animations seulement
+  ambiances?: EvenementAmbiance[];
   // la musique de fond, seulement si la recette en nomme une : par défaut un
   // reel part avec ses seuls bruitages, le son tendance s'attache à la publication
   musique?: string;

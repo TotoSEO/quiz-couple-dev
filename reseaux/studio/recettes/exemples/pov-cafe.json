@@ -1,0 +1,72 @@
+{
+  "gabarit": "pov",
+  "langue": "en",
+  "theme": "light",
+  "idee": "Le premier rendez-vous au café : les deux sont gênés, personne n'ose parler, puis un fou rire partagé et un bisou par-dessus la table. Une situation jouée sans aucune bulle : le modèle « montrer, pas dire ».",
+  "titre": "POV: first date",
+  "son": { "ambiance": "tendre" },
+  "plans": [
+    {
+      "description": "Plan large du café, en plein jour : l'étagère de tasses, l'ardoise, le comptoir et sa machine qui fume, la lampe suspendue. La rose et le violet sont assis face à face à la petite table ronde, chacun devant sa tasse. Dès la première image, la rose rougit et baisse les yeux vers sa tasse, qu'elle tient à deux mains ; une goutte de gêne glisse sur sa tempe à 0,3 s. Le violet, lui, regarde le plafond avec une goutte de gêne lui aussi (0,2 s). À 2,6 s, les deux relèvent les yeux en même temps et se regardent ; le violet ouvre la bouche en « o » et rougit (3 s). La caméra s'approche doucement des deux visages à partir de 4 s (zoom 1,3).",
+      "duree": 5,
+      "decor": "cafe",
+      "moment": "midi",
+      "persos": [
+        {
+          "qui": "rose",
+          "a": "table-gauche",
+          "gestes": [
+            { "geste": "visage", "de": 0, "a": 5, "rougit": true },
+            { "geste": "effet", "effet": "goutte", "de": 0.3, "a": 2 },
+            { "geste": "regarde", "cible": "bas", "de": 0, "a": 2.5 },
+            { "geste": "tient", "objet": "tasse", "main": "droite", "de": 0, "a": 5 },
+            { "geste": "regarde", "cible": "violet", "de": 2.6, "a": 5 }
+          ]
+        },
+        {
+          "qui": "violet",
+          "a": "table-droite",
+          "gestes": [
+            { "geste": "effet", "effet": "goutte", "de": 0.2, "a": 2 },
+            { "geste": "regarde", "cible": "haut", "de": 0, "a": 2.5 },
+            { "geste": "regarde", "cible": "rose", "de": 2.6, "a": 5 },
+            { "geste": "visage", "de": 3, "a": 5, "rougit": true, "bouche": "o" }
+          ]
+        }
+      ],
+      "camera": [
+        { "a": 0, "zoom": 1 },
+        { "a": 4, "zoom": 1.3 }
+      ]
+    },
+    {
+      "description": "Même cadre, en fondu. Le silence se casse : à 0,2 s la rose éclate de rire, le corps secoué, et le violet la suit à 0,4 s, les deux rient aux éclats pendant deux secondes. À 3,2 s ils se penchent l'un vers l'autre par-dessus la table, yeux fermés, bouche en bisou, et un petit cœur sort entre eux. La caméra se rapproche sur le bisou à partir de 3 s (zoom 1,5). Aucune bulle : on a compris sans un mot.",
+      "duree": 5.5,
+      "decor": "cafe",
+      "moment": "midi",
+      "transition": "fondu",
+      "persos": [
+        {
+          "qui": "rose",
+          "a": "table-gauche",
+          "gestes": [
+            { "geste": "rit", "de": 0.2, "a": 2.4 },
+            { "geste": "bisou", "avec": "violet", "de": 3.2, "a": 5.5 }
+          ]
+        },
+        {
+          "qui": "violet",
+          "a": "table-droite",
+          "gestes": [
+            { "geste": "rit", "de": 0.4, "a": 2.4 },
+            { "geste": "bisou", "avec": "rose", "de": 3.2, "a": 5.5 }
+          ]
+        }
+      ],
+      "camera": [
+        { "a": 0, "zoom": 1 },
+        { "a": 3, "zoom": 1.5 }
+      ]
+    }
+  ]
+}

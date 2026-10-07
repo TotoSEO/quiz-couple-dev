@@ -279,9 +279,11 @@ enrichie au fil du temps.
 
 > **C'est fait (octobre 2026)** : le moteur d'animation du studio
 > (`reseaux/studio/src/pov/`) joue un scénario plan par plan. Son
-> vocabulaire (`vocabulaire.json`) : 9 décors au trait (papier, trait de
+> vocabulaire (`vocabulaire.json`) : 15 décors au trait (papier, trait de
 > sol, mur, chambre, cuisine, salon, table de restaurant, extérieur avec
-> banc, Noël), 30 objets, 11 effets, 24 gestes (marcher, courir, sauter,
+> banc, Noël, et depuis le 7 octobre 2026 la forêt, la rue, le café, la
+> plage, l'intérieur d'une voiture et la salle de cinéma, chacun avec son
+> ambiance sonore), 30 objets, 11 effets, 24 gestes (marcher, courir, sauter,
 > saluer, câlin, bisou, tendre un objet, tenir, manger, faire la vaisselle,
 > téléphone, dormir, entrer et sortir...), une caméra (zoom, cible,
 > secousse), des bulles et des textes mot à mot. Les personnages respirent
@@ -391,14 +393,35 @@ son comme n'importe quel reel fait dans l'appli.
 
 ### 5.2 Les bruitages
 
-- Source : les packs de **[Kenney](https://kenney.nl)** (« Interface
-  Sounds »), licence CC0 : aucune attribution, usage commercial libre,
-  téléchargés une fois, sans compte ni clé. Freesound reste possible pour
-  des sons plus rares (porte, bisou, rire), avec son filtre CC0.
-- Neuf sons pour commencer (`reseaux/studio/public/sons/`) : intro,
-  apparition d'une question, réponse, bulle « ! », tic du chrono, révélation
-  de la bonne réponse, joie, fin, signature. Les fichiers sont petits et
-  versionnés dans le dépôt : aucune dépendance au moment du rendu.
+- Deux sources. Les packs de **[Kenney](https://kenney.nl)** (« Interface
+  Sounds », « Digital Audio », « RPG Audio », « Impact »), licence CC0 :
+  aucune attribution, usage commercial libre, fichiers petits et versionnés
+  dans le dépôt (`reseaux/studio/public/sons/`) : intro, apparition,
+  réponse, bulle, tic du chrono, révélation, joie, fin, signature, pop,
+  saut, pas, zoom, glisse, cœur, froissement de couette, porte. Et depuis
+  le 7 octobre 2026 (Thomas : « des bruits de tout type, bruits d'ambiance,
+  cri, pleure »), **[Mixkit](https://mixkit.co/free-sound-effects/)**
+  (Sound Effects Free License : usage libre, commercial compris, sans
+  attribution, mais pas de redistribution du fichier seul) pour les
+  réactions des mascottes (pleurs, rires, cri, sursaut, ronflement,
+  bâillement, soupir, grognement, croque, aspire, éternue, aïe, bisou,
+  applaudissements, boing, splat, trombone, roulement de tambour), les
+  objets et les lieux (notification, sonnerie, réveil, vaisselle posée,
+  verres qui tintent, portière, clochette de café, sonnette, klaxon,
+  démarrage, pas dans l'herbe, oiseau, grillon, hibou, tonnerre, battement
+  de cœur, coussin, clavier) et les ambiances (oiseaux, forêt, grillons,
+  circulation, rue la nuit, vagues, brouhaha, pluie, vent, moteur,
+  projecteur de cinéma, feu, horloge) : 78 fichiers listés dans
+  `public/sons/bibliotheque.json`, téléchargés et préparés par
+  `scripts/sons.mjs` (réactions coupées de leur silence de tête et crêtées à
+  -1 dBTP, ambiances de 45 s à -23 LUFS, en MP3 parce que le ffmpeg de
+  Remotion n'encode pas le Vorbis), jamais commités, gardés en cache par le
+  workflow de rendu comme les musiques.
+- Les réactions se déduisent des gestes (`plan.ts` : pleurer, rire, se
+  fâcher, bouder, dormir, manger, bisou, un « ! » au téléphone, une entrée
+  par le bord qui passe une porte, un réveil posé, un objet qui se pose) ou
+  s'écrivent dans `sons` ; chaque décor porte son lit sonore (`ambiance`
+  dans `vocabulaire.json`, selon le moment), qu'un plan remplace ou coupe.
 - Les gabarits posent les sons sur des événements de l'animation (« la porte
   s'ouvre » joue le son de porte), donc la synchronisation est exacte à
   l'image près.
@@ -481,7 +504,7 @@ transfert sortant par mois.
 | **Atelier** | Routine Claude Code | Une fois par jour, 5 h 44 heure de Paris | Lit l'état du planning (`etat.json`), corrige les posts refusés, remplit jusqu'à 24 créneaux vides en piochant d'abord dans tes idées, écrit textes, légendes et hashtags, passe les contrôles, regarde les aperçus, puis pousse les fichiers sur la branche `reseaux-atelier`, par lots de six. Elle travaille dans le dépôt même, sur cette branche mise à jour avec `main` (pas de dossier à côté), et tient un journal de chaque passage dans `reseaux/atelier/journal/`, poussé dès l'ouverture : c'est là qu'on lit ce qu'elle a fait, ou ce qui l'a bloquée. Ses consignes : `reseaux/atelier/CONSIGNES.md`. |
 | **Synchro et rendu** | GitHub Actions (`social-rendu.yml`) | Toutes les heures | Relit la branche de l'atelier, contrôle chaque post et l'écrit dans Supabase (un fichier inchangé ne touche à rien, un fichier modifié refait le rendu, un rendu en échec est retenté trois fois), puis fabrique les fichiers des posts des 48 prochaines heures, passe le contrôle qualité, envoie les fichiers dans le stockage. |
 | **Publication** | GitHub Actions (`social-publication.yml`) | Toutes les 10 min | Publie ce qui est dû : crée le conteneur, attend la fin du traitement de la vidéo, publie, enregistre le lien. |
-| **Horloge** | pg_cron dans Supabase (migration `20261008140000_horloge_workflows.sql`) | Toutes les 10 min, toutes les heures, chaque jour | Déclenche les trois workflows par l'API de GitHub (`workflow_dispatch`), avec un jeton d'accès personnel rangé dans le Vault de Supabase. GitHub n'honore qu'une petite part des « schedule » de ce dépôt (le 7 octobre 2026 : une publication en neuf heures, un rendu en neuf heures, l'entretien de 7 h 41 parti à 14 h 44) ; les « schedule » restent écrits dans les workflows, en secours. Sans jeton dans le Vault, l'horloge ne fait rien. |
+| **Horloge** | pg_cron dans Supabase (migration `20261008140000_horloge_workflows.sql`) | Toutes les 10 min, toutes les heures, chaque jour | Déclenche les trois workflows par l'API de GitHub (`workflow_dispatch`), avec un jeton d'accès personnel rangé dans le Vault de Supabase. GitHub n'honore qu'une petite part des « schedule » de ce dépôt (le 7 octobre 2026 : une publication en neuf heures, un rendu en neuf heures, l'entretien de 7 h 41 parti à 14 h 44) ; les « schedule » restent écrits dans les workflows, en secours. Sans jeton dans le Vault, l'horloge ne fait rien. Depuis le 7 octobre 2026 au soir (migration `20261008180000_horloge_site_et_controle.sql`), elle lance aussi la reconstruction du site (sept départs par jour), passe l'entretien à 3 h 11 UTC pour qu'il précède la routine, et vérifie chaque heure que GitHub a bien répondu 204 à chaque déclenchement : sinon, alerte « horloge » dans le journal de l'admin (jeton expiré ou révoqué). |
 
 Tant qu'un compte n'est pas actif (pas encore branché, ou coupé dans l'admin), ses posts ne sont ni rendus ni comptés en échec : la publication tourne « à blanc » et l'entretien passe en échec, fichiers effacés, tout post rendu dont le créneau est dépassé d'un jour. Le stockage gratuit ne se remplit donc pas de vidéos qui ne partiront jamais.
 | **Entretien** | GitHub Actions (`social-entretien.yml`) | Chaque jour | Vérifie le jeton de Page chaque semaine, fait le ménage du stockage, relève les statistiques, écrit les alertes et l'état du planning pour l'atelier. |
