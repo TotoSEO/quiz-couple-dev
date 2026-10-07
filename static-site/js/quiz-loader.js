@@ -67,7 +67,10 @@
                           { q: 21, o: 'd', palier: 3 },   // ne plus se reconnaitre dans la relation
                           { q: 17, o: 'd', palier: 3 }    // epuise, deprime, ou en perte de sens
                         ] },
-    'mariage':        { prefix: 'marriage', engine: 'solo', totalQ: 30, pool: 30, hasSkip: true, hasLocalStorage: true },
+    // 20 questions tirees parmi 30 depuis le 7 octobre 2026 : a 30, un tiers
+    // seulement allait au bout (admin, septembre 2026). La reprise locale est
+    // retiree avec : un tirage different a chaque visite ne se reprend pas.
+    'mariage':        { prefix: 'marriage', engine: 'solo', totalQ: 20, pool: 30, hasSkip: true },
 
     // ── Duo with gender (2 players + gender selection, answer matching) ──
     // Test de couple : pool 'testerC' qui lui est propre dans les 5 langues,
@@ -132,7 +135,9 @@
     // paliers dormaient dans gd.json sans que personne ne les lise.
     // Pas de ascending : les reponses vont de la plus saine a la pire, le
     // score monte donc vers le bon palier (r1 le plus dur, r4 le meilleur).
-    'distance':       { prefix: 'distance', engine: 'solo', totalQ: 20, pool: 100, quizType: 'distance' },
+    // 15 questions tirees parmi 100 depuis le 7 octobre 2026 (un tiers des
+    // parties allait au bout a 20, admin, septembre 2026).
+    'distance':       { prefix: 'distance', engine: 'solo', totalQ: 15, pool: 100, quizType: 'distance' },
 
     // ── Coquin quiz (guess & reveal mechanic) ──
     'coquin':         { prefix: 'coquin', engine: 'coquin', totalQ: 30, pool: 60 },
