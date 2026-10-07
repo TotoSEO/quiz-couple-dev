@@ -1,0 +1,349 @@
+{
+  "jour": "2026-10-07",
+  "creneau": "soir",
+  "publier_a": "2026-10-07T19:45:00Z",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-031",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il dit « we need to talk », elle panique trois secondes, et c'était pour savoir quoi manger ce soir.",
+        "titre": "POV: he says \"we need to talk\"",
+        "plans": [
+          {
+            "description": "Plan large devant le mur crème, le soir. Le violet, à gauche, prend un air sérieux, bouche plate, et dit dans une bulle « we need to talk. ». La rose, à droite, le regardait tranquillement : à 0,9 s sa bouche s'ouvre en « o » et un « ! » surgit au-dessus de sa tête. La caméra avance un peu vers eux.",
+            "duree": 3.0,
+            "decor": "mur",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "violet",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "de": 0,
+                    "a": 3.0
+                  },
+                  {
+                    "geste": "regarde",
+                    "cible": "rose",
+                    "de": 0,
+                    "a": 3.0
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.2,
+                    "a": 1.6
+                  }
+                ]
+              },
+              {
+                "qui": "rose",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "cible": "violet",
+                    "de": 0,
+                    "a": 3.0
+                  },
+                  {
+                    "geste": "visage",
+                    "yeux": "ouverts",
+                    "bouche": "sourire",
+                    "de": 0,
+                    "a": 0.9
+                  },
+                  {
+                    "geste": "visage",
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "de": 0.9,
+                    "a": 3.0
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "exclamation",
+                    "de": 1.0,
+                    "a": 3.0
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.2,
+                "a": 2.9,
+                "texte": "we need to talk."
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.0,
+                "zoom": 1.18,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "La caméra zoome d'un coup sur la rose, qui tremble de la tête aux pieds : yeux brillants, sourcils tristes, bouche triste, une goutte de panique sur le côté de la tête, puis trois petits points au-dessus d'elle, ses pensées qui s'emballent. L'image tremble avec elle à 1,6 s.",
+            "duree": 2.8,
+            "decor": "mur",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "violet",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "de": 0,
+                    "a": 2.8
+                  },
+                  {
+                    "geste": "regarde",
+                    "cible": "rose",
+                    "de": 0,
+                    "a": 2.8
+                  }
+                ]
+              },
+              {
+                "qui": "rose",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "tremble",
+                    "de": 0,
+                    "a": 2.8
+                  },
+                  {
+                    "geste": "visage",
+                    "yeux": "brillants",
+                    "bouche": "triste",
+                    "sourcils": "tristes",
+                    "de": 0,
+                    "a": 2.8
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "goutte",
+                    "de": 0.3,
+                    "a": 1.5
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "points",
+                    "de": 1.4,
+                    "a": 2.8
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.35,
+                "zoom": 2.0,
+                "cible": "rose"
+              },
+              {
+                "a": 1.6,
+                "secousse": 6
+              }
+            ]
+          },
+          {
+            "description": "Retour au plan large. Le violet, tout sourire, finit sa phrase dans une bulle « ...what do you want for dinner? », un « ? » au-dessus de la tête. La rose arrête de trembler, et à 1,3 s ses yeux deviennent plats, bouche plate : c'était ça. La caméra avance lentement vers eux.",
+            "duree": 3.4,
+            "decor": "mur",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "violet",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "de": 0,
+                    "a": 3.4
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.2,
+                    "a": 2.2
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "question",
+                    "de": 0.8,
+                    "a": 3.4
+                  },
+                  {
+                    "geste": "regarde",
+                    "cible": "rose",
+                    "de": 0,
+                    "a": 3.4
+                  }
+                ]
+              },
+              {
+                "qui": "rose",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "yeux": "brillants",
+                    "bouche": "o",
+                    "de": 0,
+                    "a": 1.3
+                  },
+                  {
+                    "geste": "visage",
+                    "yeux": "plats",
+                    "bouche": "plate",
+                    "de": 1.3,
+                    "a": 3.4
+                  },
+                  {
+                    "geste": "regarde",
+                    "cible": "violet",
+                    "de": 0,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "regarde",
+                    "cible": "camera",
+                    "de": 2.4,
+                    "a": 3.4
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.2,
+                "a": 3.3,
+                "texte": "...what do you want for dinner?"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.4,
+                "zoom": 1.14,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Plan large. La rose souffle de soulagement, yeux fermés et petit sourire, une goutte qui glisse, puis à 1,4 s elle boude pour de faux et lance dans une bulle « never do that again. ». Le violet éclate de rire, des étincelles autour de la tête. La caméra recule doucement pour les cadrer tous les deux.",
+            "duree": 3.6,
+            "decor": "mur",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "violet",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "rit",
+                    "de": 0.3,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "etincelles",
+                    "de": 0.8,
+                    "a": 3.6
+                  }
+                ]
+              },
+              {
+                "qui": "rose",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "de": 0,
+                    "a": 1.4
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "goutte",
+                    "de": 0.2,
+                    "a": 1.4
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 1.4,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "coeurs",
+                    "de": 2.4,
+                    "a": 3.6
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 1.5,
+                "a": 3.5,
+                "texte": "never do that again."
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.3,
+                "cible": "rose"
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.0
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "He said \"we need to talk\" and my whole life flashed before my eyes... it was about dinner.\n\nTag your partner if he does this.",
+      "hashtags": [
+        "#quizcouple",
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation"
+      ]
+    }
+  }
+}
