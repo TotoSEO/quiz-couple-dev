@@ -1,7 +1,8 @@
 # Consignes de la routine « atelier »
 
-Cette routine Claude tourne une fois par jour. Elle écrit les posts Instagram
-des prochains jours, les vérifie, et les pousse sur la branche
+Cette routine Claude tourne toutes les deux heures le temps de remplir la
+réserve, puis une fois par jour. Elle écrit les posts Instagram des
+prochains jours, les vérifie, et les pousse sur la branche
 `reseaux-atelier`. Elle ne touche à rien d'autre : ni `main`, ni Supabase,
 ni Instagram. GitHub Actions s'occupe du reste (synchro, rendu,
 publication).
@@ -12,18 +13,27 @@ rédaction » de `CLAUDE.md`.
 
 ## 1. Préparer
 
+Tout se passe dans le dépôt lui-même, sur la branche `reseaux-atelier`,
+qu'on met à jour avec `main` pour avoir les outils du jour (la fusion n'a
+jamais de conflit : `main` ne touche ni aux posts ni à `etat.json`). Pas de
+dossier à côté, pas de worktree.
+
 ```bash
 git fetch origin main reseaux-atelier || git fetch origin main
-# l'atelier dans un dossier à part ; on le crée depuis main s'il n'existe pas
-git worktree add ../atelier origin/reseaux-atelier 2>/dev/null \
-  || git worktree add -b reseaux-atelier ../atelier origin/main
+git checkout -B reseaux-atelier origin/reseaux-atelier 2>/dev/null \
+  || git checkout -B reseaux-atelier origin/main
+git merge --no-edit origin/main
 cd reseaux/studio && npm ci && cd -
 # Chromium déjà installé dans l'environnement, sinon Remotion télécharge le sien
 export NAVIGATEUR=$(ls /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell 2>/dev/null | head -1)
 ```
 
-Les outils (studio, contrôles) se lancent depuis `main` ; les posts
-s'écrivent dans `../atelier/reseaux/atelier/posts/`.
+Puis, **avant toute autre chose, ouvre le journal du passage et pousse-le**
+(voir « 7. Le journal ») : un passage qui s'arrête en route doit avoir
+laissé une trace lisible dans le dépôt.
+
+Les posts s'écrivent dans `reseaux/atelier/posts/`, le journal dans
+`reseaux/atelier/journal/`.
 
 ## 2. Lire l'état et la ligne éditoriale
 
@@ -31,8 +41,7 @@ Avant d'écrire quoi que ce soit, lis `reseaux/atelier/LIGNE-EDITORIALE.md`
 (le compte, les deux publics, la semaine type, ce que fait chaque catégorie)
 et `reseaux/atelier/sujets.json` (la banque de sujets).
 
-Puis `../atelier/reseaux/atelier/etat.json`, écrit chaque matin par
-l'entretien :
+Puis `reseaux/atelier/etat.json`, écrit chaque matin par l'entretien :
 
 - `a_corriger` : posts dont le rendu ou la publication a échoué, avec
   l'erreur. On les corrige en premier.
@@ -253,7 +262,7 @@ in bio »). Tout en anglais simple, sans tiret cadratin.
 Pour chaque post écrit :
 
 ```bash
-node reseaux/automates/controler.mjs ../atelier/reseaux/atelier/posts/<fichier>.json
+node reseaux/automates/controler.mjs reseaux/atelier/posts/<fichier>.json
 # extraire la recette (variantes.en.recette) dans un fichier, puis :
 node reseaux/studio/scripts/rendre.mjs --verifier <recette.json> /tmp/verif
 node reseaux/studio/scripts/planche.mjs <recette.json> /tmp/planche.png --toutes 0.5
@@ -274,8 +283,7 @@ que tout soit juste.
 ## 6. Pousser
 
 ```bash
-cd ../atelier
-git add reseaux/atelier/posts
+git add reseaux/atelier/posts reseaux/atelier/journal
 git commit -m "Atelier : <n> posts du <premier jour> au <dernier jour>"
 git push origin HEAD:reseaux-atelier
 ```
@@ -289,9 +297,32 @@ partent dans un commit suivant.
 
 En cas de refus parce que la branche a bougé (l'entretien y écrit
 `etat.json`) : `git pull --rebase origin reseaux-atelier` puis on repousse.
-Jamais de push sur une autre branche, jamais de PR, jamais de `--force`.
+Si le push est refusé pour une autre raison, on l'écrit dans le journal
+avec le message exact, et on réessaie une fois. Jamais de push sur une
+autre branche, jamais de PR, jamais de `--force`.
 
-## 7. Terminer
+## 7. Le journal
 
-Un court bilan : posts écrits (jour, créneau, gabarit), posts corrigés,
-contrôles refusés et pourquoi. S'il n'y a rien à remplir, on s'arrête là.
+Chaque passage écrit `reseaux/atelier/journal/AAAA-MM-JJ-HHMM.md` (heure de
+Paris), et le pousse **dès l'ouverture**, avant d'écrire le moindre post :
+
+```markdown
+# Passage du 7 octobre 2026, 18 h 44
+
+- outils : node 22, studio installé en 48 s, Chromium trouvé
+- état : 93 créneaux à remplir, 0 à corriger
+```
+
+Puis on y ajoute une ligne à chaque étape qui compte (un post écrit et
+contrôlé, un contrôle refusé et pourquoi, une commande qui échoue avec son
+message exact, un push), et on le repousse avec chaque lot de posts. En
+fin de passage, le bilan : posts écrits (jour, créneau, gabarit), posts
+corrigés, contrôles refusés et pourquoi, ce qui n'a pas pu être fait.
+Ce journal est la seule façon pour Thomas et pour les sessions suivantes de
+savoir ce qui s'est passé : on y écrit même quand tout va bien, et surtout
+quand ça va mal. Les journaux de plus de trente jours se suppriment au
+passage.
+
+S'il n'y a rien à remplir, le journal le dit en une ligne, on le pousse,
+et on s'arrête là. Le bilan de fin de session reprend le journal en cinq
+lignes au plus.
