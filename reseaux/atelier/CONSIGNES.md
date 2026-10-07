@@ -185,6 +185,25 @@ simples et personnelles ; la première dit « your partner's », les suivantes
 
 Gabarit `citation`, une phrase de la banque `phrase`, quatre lignes au plus.
 
+### Le carrousel (jeudi soir)
+
+Gabarit `carrousel`, au format de `recettes/exemples/carrousel-questions.json`
+et un sujet de la banque `carrousel` : la couverture porte l'`etiquette` et
+l'`accroche` du sujet, puis huit pages `{ "type": "page", "numero": "1",
+"question": "..." }` (les exemples du sujet en donnent trois, tu écris les
+cinq autres dans le même esprit, 90 signes au plus), puis la page finale
+`{ "type": "fin", "texte": "Want more questions for tonight?", "bouton":
+"Link in bio" }`. Une petite scène dessinée sur la couverture et la page
+finale (un plan simple, même vocabulaire que les animations), ou rien : le
+gabarit pose alors le duo. Légende : une accroche avec un mot-clé (« date
+night », « couple questions »), puis « Save this for your next date
+night » ; le renvoi vers le site est permis (« More questions: link in
+bio »). Hashtags : `#couplequestions`, `#datenight`, `#couplegoals`,
+`#quizcouple`. Le format du post : `"format": "carrousel"`.
+
+La story du matin n'est pas ton travail : l'automate reprend le reel du
+matin en story après sa publication.
+
 ### Légende et hashtags
 
 Voir la ligne éditoriale, partie « Légendes et hashtags » : la première

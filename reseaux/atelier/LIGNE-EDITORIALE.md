@@ -67,14 +67,17 @@ refuse un post qui ne la suit pas.
 | Lundi | POV | Connais-tu | POV |
 | Mardi | POV | Tu préfères | POV |
 | Mercredi | POV | Connais-tu | POV |
-| Jeudi | POV | Statique | POV |
+| Jeudi | POV | Statique | Carrousel |
 | Vendredi | POV | Connais-tu | Coquin |
 | Samedi | POV | Tu préfères | Phrase tendre |
 | Dimanche | POV | Statique | Phrase tendre |
 
-Par semaine : 12 animations (57 %, dont une coquine), 3 « Connais-tu ton
-partenaire ? », 2 « Tu préfères », 2 reels statiques, 2 phrases tendres.
-Sur 13 semaines : 273 posts.
+Par semaine : 11 animations (dont une coquine), 3 « Connais-tu ton
+partenaire ? », 2 « Tu préfères », 2 reels statiques, 2 phrases tendres et
+1 carrousel de questions (le jeudi soir, depuis le 7 octobre 2026 : c'est le
+format qui se garde, « Save this for your next date night »). Sur 13
+semaines : 273 posts. Et chaque jour, une **story** reprend le reel du matin
+(voir plus bas).
 
 ## Les catégories
 
@@ -167,11 +170,33 @@ fleurs au trait. Quatre lignes au plus. Le son tendance du moment lui va
 rarement : la recette peut demander une recherche douce à la place
 (`"son": {"recherche": "soft piano"}`).
 
-### `post` et `carrousel`
+### `carrousel` : le carrousel de questions du jeudi soir (gabarit `carrousel`)
 
-Gabarits prêts (post 4:5 avec une scène dessinée, carrousel de questions
-avec les mascottes en couverture), hors de la semaine type tant que Thomas
-ne les y a pas mis.
+Dix pages : une couverture avec l'**étiquette de l'édition** (« For
+tonight », « Deep talk », « Firsts », « Never have I ever »...) et
+l'accroche (« 8 questions for you two »), huit pages numérotées avec une
+question chacune (90 signes au plus, en anglais simple, à la deuxième
+personne ou en « we »), et une page finale (« Want more questions for
+tonight? », bouton « Link in bio »). Les mascottes sont sur la couverture et
+la page finale (une petite scène dessinée, ou le duo), et en tout petit
+dans le coin de chaque page. C'est le format qui fait le plus
+d'enregistrements : la légende dit « Save this for your next date night »,
+et peut renvoyer vers le site. Pas de musique (un carrousel d'images n'en
+a pas par l'API). Treize éditions dans la banque (`carrousel`).
+
+### `post`
+
+Gabarit prêt (post 4:5 avec une scène dessinée), hors de la semaine type
+tant que Thomas ne l'y a pas mis.
+
+## La story du matin
+
+Chaque jour, le reel du matin repart **en story** juste après sa
+publication : même vidéo, 24 heures, sans légende ni son ajouté. C'est une
+deuxième surface pour le même travail, et c'est l'automate qui s'en occupe
+(`publierStories` dans `publication.mjs`) : la routine n'a rien à écrire.
+Un reel de plus de 60 secondes ne peut pas devenir une story ; le matin
+étant toujours une animation de 10 à 15 secondes, ça ne se produit pas.
 
 ## Le son
 

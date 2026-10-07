@@ -3,6 +3,9 @@
 //     (Instagram met quelques minutes à traiter la vidéo), avec un son
 //     tendance de la bibliothèque Instagram attaché (Audio API).
 //  2. À l'heure prévue, vérifie que le conteneur est prêt et publie.
+//  3. Le reel du matin est repris en story (media_type STORIES) : le conteneur
+//     part juste après la publication du reel, la story est publiée au passage
+//     suivant, quand Instagram a traité la vidéo (publierStories).
 // Une image ou un carrousel se prépare et se publie dans le même passage.
 // Rien ne part si la pause générale est active, si le compte n'est pas
 // actif ou s'il n'a pas de jeton : la déclinaison attend, sans erreur.
@@ -148,8 +151,10 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
           statut: 'publie',
           ig_media_id: media.id,
           permalien: lien,
-          publie_le: new Date().toISOString(),
+          publie_le: maintenant.toISOString(),
           erreur: null,
+          // le reel du matin est repris en story
+          story_statut: post.format === 'reel' && post.creneau === 'matin' ? 'a_faire' : null,
         });
         bilan.publies++;
         const son = v.recette?.son?.id ? `, son « ${v.recette.son.titre}${v.recette.son.artiste ? ` » de ${v.recette.son.artiste}` : ' »'}` : '';
@@ -167,6 +172,58 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
       });
       await base.journal(definitif ? 'erreur' : 'alerte', 'publication', `${post.jour} ${post.creneau} ${v.langue} : ${e.message}`, { essais }, v.id);
       if (definitif) bilan.echecs++;
+    }
+  }
+  bilan.stories = await publierStories(base, { maintenant, instagramPour });
+  return bilan;
+}
+
+// La story du matin : le reel publié le matin repart tel quel en story (24 h),
+// deuxième surface sans rien écrire de plus. Un reel de plus de 60 s ne peut
+// pas devenir une story ; les autres créneaux n'en ont pas.
+export async function publierStories(base, { maintenant = new Date(), instagramPour } = {}) {
+  const bilan = { conteneurs: 0, publiees: 0, attente: 0, echecs: 0 };
+  const depuis = new Date(maintenant.getTime() - 24 * 3600 * 1000).toISOString();
+  const lignes = await base.select(
+    'social_variantes',
+    `select=id,langue,fichiers,story_statut,story_conteneur_id,publie_le&story_statut=in.(a_faire,conteneur)&publie_le=gte.${depuis}`,
+  );
+  if (!lignes.length) return bilan;
+  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id,actif');
+  for (const v of lignes) {
+    const compte = comptes.find((c) => c.langue === v.langue);
+    const [jeton] = compte ? await base.select('social_jetons', `select=jeton&compte_id=eq.${compte.id}`) : [];
+    if (!compte?.actif || !compte?.ig_user_id || !jeton) continue;
+    const ig = instagramPour ? instagramPour(jeton.jeton, compte.ig_user_id) : new Instagram(jeton.jeton, compte.ig_user_id);
+    try {
+      if (v.story_statut === 'a_faire') {
+        if (!v.fichiers?.reel) throw new Error('fichier du reel absent');
+        if (Number(v.fichiers.duree) > 60) throw new Error(`reel de ${v.fichiers.duree} s, une story dure 60 s au plus`);
+        const pris = await base.update('social_variantes', `id=eq.${v.id}&story_statut=eq.a_faire`, { story_statut: 'conteneur' });
+        if (!pris.length) continue;
+        const c = await ig.conteneurStory({ videoUrl: await base.signer(v.fichiers.reel) });
+        await base.update('social_variantes', `id=eq.${v.id}`, { story_conteneur_id: c.id });
+        bilan.conteneurs++;
+        continue; // Instagram traite la vidéo : la story part au passage suivant
+      }
+      if (v.story_statut === 'conteneur' && v.story_conteneur_id) {
+        const etat = await ig.etat(v.story_conteneur_id);
+        if (etat.code === 'IN_PROGRESS') {
+          bilan.attente++;
+          continue;
+        }
+        if (etat.code !== 'FINISHED') throw new Error(`conteneur ${etat.code} : ${etat.detail || ''}`);
+        const pris = await base.update('social_variantes', `id=eq.${v.id}&story_statut=eq.conteneur`, { story_statut: 'publication' });
+        if (!pris.length) continue;
+        const media = await ig.publier(v.story_conteneur_id);
+        await base.update('social_variantes', `id=eq.${v.id}`, { story_statut: 'publie', story_media_id: media.id, story_publie_le: maintenant.toISOString() });
+        bilan.publiees++;
+        await base.journal('info', 'publication', `story du matin publiée (${v.langue})`, { media: media.id }, v.id);
+      }
+    } catch (e) {
+      await base.update('social_variantes', `id=eq.${v.id}`, { story_statut: 'echec' });
+      await base.journal('alerte', 'publication', `story du matin non publiée : ${e.message}`, null, v.id);
+      bilan.echecs++;
     }
   }
   return bilan;

@@ -60,11 +60,13 @@ même jour par Thomas ; ses choix sont en partie 1.2.
   - le matin entre 6 h et 8 h ;
   - le midi entre 11 h et 13 h ;
   - l'après-midi entre 16 h et 18 h.
-- **Le mélange de la semaine :** 12 animations avec les mascottes (57 %,
-  dont une coquine le vendredi), 3 « Connais-tu ton partenaire ? », 2 « Tu
-  préfères », 2 reels statiques, 2 phrases tendres. Tout en reels, tout
-  dessiné, aucune photo. 273 posts sur les trois premiers mois, avec une
-  banque de sujets (`reseaux/atelier/sujets.json`).
+- **Le mélange de la semaine :** 11 animations avec les mascottes (dont
+  une coquine le vendredi), 3 « Connais-tu ton partenaire ? », 2 « Tu
+  préfères », 2 reels statiques, 2 phrases tendres et, le jeudi soir, 1
+  carrousel de questions (le format qui se garde). Tout dessiné, aucune
+  photo. 273 posts sur les trois premiers mois, avec une banque de sujets
+  (`reseaux/atelier/sujets.json`). Et chaque jour, le reel du matin repart
+  en story juste après sa publication.
 
 ---
 
@@ -80,6 +82,7 @@ Ces contraintes viennent de la documentation Meta et des guides à jour
 | Musique | Depuis le 1er juin 2026, l'**Audio API** attache un son de la bibliothèque Instagram au reel à sa création : `GET /ig_audio?audio_type=music&user_id=…` donne les tendances du moment (ou le résultat d'une `search_query`), et le conteneur reçoit `audio_configuration` (`audio_id`, `audio_volume` et `video_volume` de 0 à 100). Seulement avec la connexion Facebook (`graph.facebook.com`), et seulement les sons « autorisés pour les tiers », une sélection plus courte que dans l'appli. Sans ça, le son contenu dans le fichier est publié comme « son original ». | Choisir l'instant du morceau (il part du début), un son de la bibliothèque sur une image, la connexion Instagram (`graph.instagram.com`) pour l'Audio API. Une appli ne peut pas avoir les deux connexions. |
 | Image | JPEG, ratio entre 4:5 et 1,91:1. On fera du 1080 × 1350 (4:5). | Une image avec musique (l'API ne met pas de son sur une image). |
 | Carrousel | Jusqu'à 10 éléments (images ou vidéos), un seul post au compteur. | De la musique sur un carrousel d'images. |
+| Stories | `media_type=STORIES`, une image ou une vidéo de 60 s au plus, publiée comme un reel (conteneur, traitement, publication) ; la story du matin reprend le reel du matin (`publierStories`, colonnes `story_*` de `social_variantes`). | Une légende, un sticker lien ou un son ajouté par l'API. |
 | Légende | 2 200 caractères. **5 hashtags maximum** depuis décembre 2025. | Modifier la légende après publication par l'API. |
 | Programmation | On crée un « conteneur », on attend qu'Instagram ait traité la vidéo, puis on publie. | Programmer un reel à l'avance chez Instagram : il faut notre propre planificateur. |
 | Volume | 100 publications par 24 h et par compte. | |
@@ -140,6 +143,7 @@ Le cycle d'un post :
 | J-1, la nuit | Fabrication des fichiers définitifs, contrôle qualité, envoi dans Supabase. | GitHub Actions |
 | Jour J, une heure avant | Choix d'un son tendance de la bibliothèque Instagram, création du conteneur. | GitHub Actions |
 | Jour J, à l'heure prévue | Publication sur chaque compte actif. | GitHub Actions |
+| Jour J, après le reel du matin | Le reel du matin repart en story (conteneur, puis publication au passage suivant). | GitHub Actions |
 | J+1 | Suppression des fichiers lourds, une vignette est gardée pour l'admin. | GitHub Actions |
 | J+1 et J+7 | Relevé des statistiques. | GitHub Actions |
 
