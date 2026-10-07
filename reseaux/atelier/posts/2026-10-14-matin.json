@@ -246,7 +246,10 @@
               }
             ]
           }
-        ]
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
       },
       "legende": "He laughs at his own jokes before he even finishes them.\n\nTag your partner.",
       "hashtags": [

@@ -342,7 +342,10 @@
               }
             ]
           }
-        ]
+        ],
+        "son": {
+          "ambiance": "coquin"
+        }
       },
       "legende": "My partner in the morning, at noon and at night... no comment.\n\nTag your partner.",
       "hashtags": [

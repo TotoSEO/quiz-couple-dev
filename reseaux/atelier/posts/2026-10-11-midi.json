@@ -138,7 +138,10 @@
               }
             ]
           }
-        ]
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
       },
       "legende": "Sunset, a bench, and you.\n\nTag your partner.",
       "hashtags": [

@@ -47,6 +47,9 @@
           "question": "Did you pick the same? Comment your A and B!",
           "bouton": "Send this to your partner",
           "signature": "More dilemmas on quiz-couple.com"
+        },
+        "son": {
+          "ambiance": "jeu"
         }
       },
       "legende": "Would you rather, travel edition: where are you two going next?\n\nComment your A and B!",

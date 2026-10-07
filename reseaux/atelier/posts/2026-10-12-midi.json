@@ -30,6 +30,9 @@
           "question": "How many did you get? Comment your score!",
           "bouton": "Send this to your partner",
           "signature": "More couple quizzes on quiz-couple.com"
+        },
+        "son": {
+          "ambiance": "jeu"
         }
       },
       "legende": "Firsts edition: 8 questions about your partner, 5 seconds each. First date, first job, first crush...\n\nComment your score!",

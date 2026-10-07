@@ -328,7 +328,10 @@
               }
             ]
           }
-        ]
+        ],
+        "son": {
+          "ambiance": "coquin"
+        }
       },
       "legende": "A nap, they said. Two hours later...\n\nSend this to your partner!",
       "hashtags": [

@@ -293,7 +293,10 @@
               }
             ]
           }
-        ]
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
       },
       "legende": "Waiting all day just for this hug.\n\nSend this to your partner!",
       "hashtags": [
