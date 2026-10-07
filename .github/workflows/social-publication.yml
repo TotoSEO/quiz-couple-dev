@@ -17,9 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      # tout le dossier reseaux : les automates lisent le vocabulaire du studio
+      # (src/pov/vocabulaire.json), la bibliothèque musicale et la banque de
+      # sujets ; limité à reseaux/automates, le script tombait sur ENOENT au
+      # chargement et aucune publication n'est partie le 7 octobre 2026
       - uses: actions/checkout@v4
         with:
-          sparse-checkout: reseaux/automates
+          sparse-checkout: reseaux
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
