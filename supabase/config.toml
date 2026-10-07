@@ -35,3 +35,6 @@ verify_jwt = false
 
 [functions.ebook-verify]
 verify_jwt = false
+
+[functions.admin-social]
+verify_jwt = false

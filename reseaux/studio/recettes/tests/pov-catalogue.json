@@ -1,0 +1,25 @@
+{
+  "gabarit": "pov",
+  "langue": "en",
+  "theme": "light",
+  "idee": "Catalogue de contrôle : chaque décor, chaque façon de se placer.",
+  "titre": "POV: test of every scene",
+  "plans": [
+    { "description": "Banc dehors : les deux assis, jambes qui pendent, cœurs.", "duree": 2, "decor": "dehors", "moment": "soir",
+      "persos": [ { "qui": "rose", "a": "banc-gauche", "gestes": [ { "geste": "effet", "effet": "coeurs", "de": 0.3, "a": 2 } ] }, { "qui": "violet", "a": "banc-droite", "gestes": [ { "geste": "regarde", "cible": "rose", "de": 0, "a": 2 } ] } ] },
+    { "description": "Lit : sous la couette, tête et mains qui dépassent.", "duree": 2, "decor": "chambre", "moment": "nuit",
+      "persos": [ { "qui": "rose", "a": "lit-gauche" }, { "qui": "violet", "a": "lit-droite", "gestes": [ { "geste": "dort", "de": 0, "a": 2 } ] } ] },
+    { "description": "Canapé : assis, jambes cachées.", "duree": 2, "decor": "salon", "moment": "soir",
+      "persos": [ { "qui": "rose", "a": "canape-gauche", "gestes": [ { "geste": "tient", "objet": "popcorn", "main": "droite", "de": 0, "a": 2 } ] }, { "qui": "violet", "a": "canape-droite", "gestes": [ { "geste": "rit", "de": 0.5, "a": 2 } ] } ] },
+    { "description": "Cuisine : vaisselle derrière le plan de travail.", "duree": 2, "decor": "cuisine", "moment": "matin",
+      "persos": [ { "qui": "violet", "a": "evier", "gestes": [ { "geste": "vaisselle", "de": 0, "a": 2 } ] } ] },
+    { "description": "Restaurant : à table, bisou.", "duree": 2.5, "decor": "table", "moment": "soir",
+      "persos": [ { "qui": "rose", "a": "table-gauche", "gestes": [ { "geste": "bisou", "avec": "violet", "de": 0.3, "a": 2.5 } ] }, { "qui": "violet", "a": "table-droite", "gestes": [ { "geste": "bisou", "avec": "rose", "de": 0.3, "a": 2.5 } ] } ] },
+    { "description": "Ligne : la rose offre un bouquet à la caméra.", "duree": 2, "decor": "ligne",
+      "persos": [ { "qui": "rose", "a": "centre", "gestes": [ { "geste": "offre", "objet": "bouquet", "de": 0.2, "a": 2 } ] } ] },
+    { "description": "Mur : câlin.", "duree": 2.5, "decor": "mur",
+      "persos": [ { "qui": "rose", "a": "gauche", "premier": true, "gestes": [ { "geste": "calin", "avec": "violet", "de": 0.2, "a": 2.5 } ] }, { "qui": "violet", "a": "droite", "gestes": [ { "geste": "calin", "avec": "rose", "de": 0.2, "a": 2.5 } ] } ] },
+    { "description": "Noël : bonnets, marche.", "duree": 2.5, "decor": "noel", "effets": [ { "effet": "flocons", "de": 0, "a": 2.5 } ],
+      "persos": [ { "qui": "rose", "a": "gauche", "porte": "bonnet", "gestes": [ { "geste": "marche", "vers": 420, "de": 0.2, "a": 1.6 }, { "geste": "salue", "de": 1.7, "a": 2.5 } ] }, { "qui": "violet", "a": "centre", "porte": "bonnet", "gestes": [ { "geste": "saute", "fois": 2, "de": 0.3, "a": 1.8 } ] } ] }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "gabarit": "pov",
+  "langue": "en",
+  "theme": "light",
+  "idee": "Reel statique : un seul plan, une phrase, une musique douce. Les deux arrivent chacun d'un bord de l'écran, se rejoignent au milieu et se font un câlin, puis les cœurs montent.",
+  "plans": [
+    {
+      "description": "Fond papier avec un trait de sol. Dès la première image, la rose entre par le bord gauche et le violet par le bord droit, ils marchent l'un vers l'autre en se regardant. Ils se rejoignent au milieu et se serrent dans les bras, yeux fermés de bonheur, joues roses ; des petits cœurs montent doucement. La caméra se rapproche lentement pendant que « i love u forever <3 » s'écrit mot à mot au-dessus d'eux.",
+      "duree": 11,
+      "decor": "ligne",
+      "persos": [
+        {
+          "qui": "rose",
+          "a": 40,
+          "premier": true,
+          "gestes": [
+            {
+              "geste": "marche",
+              "vers": 400,
+              "de": 0,
+              "a": 2.2
+            },
+            {
+              "geste": "calin",
+              "avec": "violet",
+              "de": 2.2,
+              "a": 11
+            },
+            {
+              "geste": "effet",
+              "effet": "coeurs",
+              "de": 3,
+              "a": 11
+            }
+          ]
+        },
+        {
+          "qui": "violet",
+          "a": 1040,
+          "gestes": [
+            {
+              "geste": "marche",
+              "vers": 680,
+              "de": 0,
+              "a": 2.2
+            },
+            {
+              "geste": "calin",
+              "avec": "rose",
+              "de": 2.2,
+              "a": 11
+            }
+          ]
+        }
+      ],
+      "textes": [
+        {
+          "de": 3.2,
+          "texte": "i love u forever <3",
+          "motAMot": true,
+          "place": "haut",
+          "style": "plume"
+        }
+      ],
+      "camera": [
+        {
+          "a": 2.4,
+          "zoom": 1
+        },
+        {
+          "a": 6,
+          "zoom": 1.12,
+          "x": 540,
+          "y": 1120
+        }
+      ]
+    }
+  ]
+}

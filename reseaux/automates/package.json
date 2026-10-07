@@ -1,0 +1,9 @@
+{
+  "name": "quiz-couple-automates",
+  "private": true,
+  "description": "Automates des réseaux sociaux : synchro de l'atelier, rendu, publication Instagram, entretien. Aucune dépendance : Node 20 et fetch suffisent.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  }
+}

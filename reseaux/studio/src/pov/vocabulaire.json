@@ -1,0 +1,574 @@
+{
+  "note": "Tout ce qu'un scénario d'animation peut nommer. Le studio sait dessiner et animer ces mots-là, rien d'autre ; le contrôle (reseaux/automates/lib/pov.mjs) refuse le reste. Coordonnées en pixels du canevas (1080 x 1920). Un spot dit où se tient un personnage : debout (sol = ligne des pieds), couche (dans le lit, la couette arrive sous la bouche, les mains dépassent), taille (caché à partir de la taille par un plan de travail ou une table), assis (sur le coussin d'un canapé, jambes cachées), assis-jambes (sur un banc, jambes qui pendent). ligne = le bord qui cache ou sur lequel on s'assoit. taille = taille des personnages dans ce décor.",
+  "decors": {
+    "uni": {
+      "description": "Le papier seul, rien d'autre. Pour un message tout simple, comme les petits chats d'Instagram.",
+      "spots": {
+        "gauche": {
+          "x": 330,
+          "sol": 1360
+        },
+        "centre": {
+          "x": 540,
+          "sol": 1360
+        },
+        "droite": {
+          "x": 750,
+          "sol": 1360
+        }
+      },
+      "taille": 2.0
+    },
+    "ligne": {
+      "description": "Le papier et un seul trait de sol, d'un bord à l'autre. Les objets se posent dessus.",
+      "spots": {
+        "gauche": {
+          "x": 330,
+          "sol": 1360
+        },
+        "centre": {
+          "x": 540,
+          "sol": 1360
+        },
+        "droite": {
+          "x": 750,
+          "sol": 1360
+        }
+      },
+      "taille": 2.0
+    },
+    "mur": {
+      "description": "Un mur crème et un sol beige séparés par un trait. Intérieur neutre.",
+      "spots": {
+        "gauche": {
+          "x": 330,
+          "sol": 1400
+        },
+        "centre": {
+          "x": 540,
+          "sol": 1400
+        },
+        "droite": {
+          "x": 750,
+          "sol": 1400
+        }
+      },
+      "taille": 1.8
+    },
+    "chambre": {
+      "description": "Un grand lit vu de face avec sa couette, une fenêtre (le ciel suit le moment), une lampe de chevet, un cadre au mur. Dans le lit, on ne voit que le haut des personnages.",
+      "spots": {
+        "lit-gauche": {
+          "x": 410,
+          "mode": "couche",
+          "ligne": 1180
+        },
+        "lit-droite": {
+          "x": 670,
+          "mode": "couche",
+          "ligne": 1180
+        },
+        "devant-gauche": {
+          "x": 300,
+          "sol": 1490
+        },
+        "devant-droite": {
+          "x": 780,
+          "sol": 1490
+        }
+      },
+      "taille": 1.45
+    },
+    "cuisine": {
+      "description": "Un plan de travail d'un bord à l'autre avec un évier au milieu, des étagères, une fenêtre. Derrière le plan de travail, on voit les personnages jusqu'à la taille.",
+      "spots": {
+        "evier": {
+          "x": 540,
+          "mode": "taille",
+          "ligne": 1172
+        },
+        "comptoir-gauche": {
+          "x": 300,
+          "mode": "taille",
+          "ligne": 1172
+        },
+        "comptoir-droite": {
+          "x": 780,
+          "mode": "taille",
+          "ligne": 1172
+        },
+        "devant-gauche": {
+          "x": 300,
+          "sol": 1490
+        },
+        "devant-droite": {
+          "x": 780,
+          "sol": 1490
+        }
+      },
+      "taille": 1.45
+    },
+    "salon": {
+      "description": "Un canapé vu de face (la caméra est la télé), une lampe, une plante, un cadre. Assis dans le canapé, les jambes sont cachées par le coussin.",
+      "spots": {
+        "canape-gauche": {
+          "x": 400,
+          "mode": "assis",
+          "ligne": 1262
+        },
+        "canape-droite": {
+          "x": 680,
+          "mode": "assis",
+          "ligne": 1262
+        },
+        "devant-gauche": {
+          "x": 300,
+          "sol": 1490
+        },
+        "devant-droite": {
+          "x": 780,
+          "sol": 1490
+        }
+      },
+      "taille": 1.4
+    },
+    "table": {
+      "description": "Une petite table de restaurant avec nappe et bougie, une fenêtre derrière. Assis à table, on voit les personnages jusqu'à la poitrine.",
+      "spots": {
+        "table-gauche": {
+          "x": 320,
+          "mode": "taille",
+          "ligne": 1250
+        },
+        "table-droite": {
+          "x": 760,
+          "mode": "taille",
+          "ligne": 1250
+        }
+      },
+      "taille": 1.4
+    },
+    "dehors": {
+      "description": "Le ciel (il suit le moment), un sol d'herbe, un arbre, un banc, des nuages qui passent.",
+      "spots": {
+        "gauche": {
+          "x": 330,
+          "sol": 1420
+        },
+        "centre": {
+          "x": 540,
+          "sol": 1420
+        },
+        "droite": {
+          "x": 750,
+          "sol": 1420
+        },
+        "banc-gauche": {
+          "x": 445,
+          "mode": "assis-jambes",
+          "ligne": 1244
+        },
+        "banc-droite": {
+          "x": 675,
+          "mode": "assis-jambes",
+          "ligne": 1244
+        }
+      },
+      "taille": 1.35
+    },
+    "noel": {
+      "description": "Un intérieur de Noël : sapin décoré à droite avec ses cadeaux, guirlande au mur, fenêtre où il neige.",
+      "spots": {
+        "gauche": {
+          "x": 260,
+          "sol": 1430
+        },
+        "centre": {
+          "x": 500,
+          "sol": 1430
+        },
+        "devant-sapin": {
+          "x": 700,
+          "sol": 1480
+        }
+      },
+      "taille": 1.4
+    }
+  },
+  "moments": [
+    "matin",
+    "midi",
+    "soir",
+    "nuit"
+  ],
+  "objets": {
+    "bouquet": {
+      "largeur": 230,
+      "prise": "bas",
+      "description": "Bouquet de trois roses dans son papier"
+    },
+    "fleur": {
+      "largeur": 90,
+      "prise": "bas",
+      "description": "Une rose avec sa tige"
+    },
+    "tournesol": {
+      "largeur": 130,
+      "prise": "bas",
+      "description": "Un tournesol avec sa tige"
+    },
+    "vase-marguerites": {
+      "largeur": 150,
+      "prise": "bas",
+      "pose": true,
+      "description": "Vase rose avec deux marguerites"
+    },
+    "vase-rose": {
+      "largeur": 110,
+      "prise": "bas",
+      "pose": true,
+      "description": "Vase fin bleu avec une rose rouge"
+    },
+    "vase-tournesol": {
+      "largeur": 150,
+      "prise": "bas",
+      "pose": true,
+      "description": "Pot rose avec un tournesol"
+    },
+    "coeur": {
+      "largeur": 120,
+      "prise": "centre",
+      "description": "Un cœur plein"
+    },
+    "ballon-coeur": {
+      "largeur": 150,
+      "prise": "bas",
+      "description": "Ballon en cœur au bout d'une ficelle"
+    },
+    "cadeau": {
+      "largeur": 170,
+      "prise": "centre",
+      "pose": true,
+      "description": "Boîte cadeau avec un nœud"
+    },
+    "lettre": {
+      "largeur": 160,
+      "prise": "centre",
+      "description": "Enveloppe fermée par un cœur"
+    },
+    "tasse": {
+      "largeur": 120,
+      "prise": "centre",
+      "description": "Tasse fumante"
+    },
+    "telephone": {
+      "largeur": 80,
+      "prise": "centre",
+      "description": "Téléphone à l'écran allumé"
+    },
+    "assiette": {
+      "largeur": 170,
+      "prise": "centre",
+      "description": "Assiette"
+    },
+    "eponge": {
+      "largeur": 90,
+      "prise": "centre",
+      "description": "Éponge avec des bulles"
+    },
+    "pizza": {
+      "largeur": 140,
+      "prise": "bas",
+      "description": "Part de pizza"
+    },
+    "frites": {
+      "largeur": 120,
+      "prise": "bas",
+      "description": "Cornet de frites"
+    },
+    "popcorn": {
+      "largeur": 140,
+      "prise": "centre",
+      "description": "Pot de pop-corn"
+    },
+    "gateau": {
+      "largeur": 200,
+      "prise": "bas",
+      "pose": true,
+      "description": "Gâteau avec une bougie allumée"
+    },
+    "livre": {
+      "largeur": 130,
+      "prise": "centre",
+      "description": "Livre ouvert"
+    },
+    "manette": {
+      "largeur": 140,
+      "prise": "centre",
+      "description": "Manette de jeu"
+    },
+    "oreiller": {
+      "largeur": 220,
+      "prise": "centre",
+      "description": "Oreiller"
+    },
+    "chaussette": {
+      "largeur": 100,
+      "prise": "centre",
+      "description": "Une chaussette (elle peut s'envoler de sous la couette)"
+    },
+    "reveil": {
+      "largeur": 130,
+      "prise": "bas",
+      "pose": true,
+      "description": "Réveil qui sonne"
+    },
+    "parapluie": {
+      "largeur": 260,
+      "prise": "bas",
+      "description": "Parapluie ouvert"
+    },
+    "glace": {
+      "largeur": 80,
+      "prise": "bas",
+      "description": "Cornet de glace"
+    },
+    "coupe": {
+      "largeur": 70,
+      "prise": "bas",
+      "description": "Coupe de champagne"
+    },
+    "chocolats": {
+      "largeur": 170,
+      "prise": "centre",
+      "description": "Boîte de chocolats en cœur"
+    },
+    "plante": {
+      "largeur": 160,
+      "prise": "bas",
+      "pose": true,
+      "description": "Plante en pot"
+    },
+    "bonnet": {
+      "largeur": 170,
+      "prise": "centre",
+      "description": "Bonnet de Noël (se porte sur la tête)"
+    },
+    "sapin": {
+      "largeur": 300,
+      "prise": "bas",
+      "pose": true,
+      "description": "Petit sapin décoré"
+    }
+  },
+  "effets": {
+    "coeurs": "Des cœurs qui montent au-dessus de la tête",
+    "zzz": "Des Z qui montent (quelqu'un dort)",
+    "etincelles": "Petites étoiles qui scintillent autour de la tête",
+    "notes": "Notes de musique qui montent",
+    "goutte": "Une goutte de gêne sur le côté de la tête",
+    "exclamation": "Un « ! » au-dessus de la tête",
+    "question": "Un « ? » au-dessus de la tête",
+    "points": "Trois points « ... » au-dessus de la tête",
+    "flocons": "Neige qui tombe sur toute l'image",
+    "confettis": "Confettis qui tombent sur toute l'image",
+    "feux": "Feux d'artifice dans le ciel"
+  },
+  "poses": [
+    "mignon",
+    "triste",
+    "colere",
+    "gene",
+    "fatigue",
+    "supplie",
+    "rire",
+    "repos",
+    "salut",
+    "joie",
+    "surprise",
+    "profil",
+    "dos",
+    "amoureux",
+    "boude",
+    "dort"
+  ],
+  "gestes": {
+    "marche": {
+      "params": {
+        "vers": "x en pixels ou nom d'un spot du décor"
+      },
+      "description": "Marche de profil jusqu'au point, jambes et bras qui balancent"
+    },
+    "court": {
+      "params": {
+        "vers": "x ou spot"
+      },
+      "description": "Comme marche, plus vite et plus sautillant"
+    },
+    "saute": {
+      "params": {
+        "fois": "1 à 3"
+      },
+      "description": "Saute sur place, avec écrasement à l'atterrissage"
+    },
+    "salue": {
+      "params": {
+        "main": "gauche ou droite"
+      },
+      "description": "Fait coucou de la main"
+    },
+    "joie": {
+      "params": {},
+      "description": "Bras en l'air, yeux plissés, petits bonds"
+    },
+    "danse": {
+      "params": {},
+      "description": "Se balance de gauche à droite, bras qui alternent"
+    },
+    "rit": {
+      "params": {},
+      "description": "Rit aux éclats, le corps secoué"
+    },
+    "parle": {
+      "params": {},
+      "description": "La bouche s'ouvre et se ferme (avec une bulle de dialogue)"
+    },
+    "tourne": {
+      "params": {
+        "vue": "face, profil ou dos",
+        "sens": "gauche ou droite"
+      },
+      "description": "Se tourne, avec un petit écrasement"
+    },
+    "regarde": {
+      "params": {
+        "cible": "camera, gauche, droite, haut, bas, rose ou violet"
+      },
+      "description": "Les yeux regardent ailleurs"
+    },
+    "visage": {
+      "params": {
+        "yeux": "ouverts, heureux, coeur, plats, fermes, clin, brillants",
+        "bouche": "sourire, o, rire, plate, triste, bisou, chat, grogne",
+        "sourcils": "tristes, faches, hauts (facultatif)",
+        "larmes": "true ou false",
+        "rougit": "true ou false"
+      },
+      "description": "Change l'expression : les yeux, la bouche, les sourcils, les larmes, les joues. « chat » est la petite bouche en ω des moments mignons, « grogne » le zigzag de la colère, « brillants » les grands yeux humides qui supplient"
+    },
+    "pleure": {
+      "params": {},
+      "description": "Pleure : sourcils tristes, bouche triste, des larmes qui coulent, les épaules qui tressautent"
+    },
+    "fache": {
+      "params": {},
+      "description": "Se fâche : sourcils froncés, bouche en zigzag, joues rouges, bras écartés, le corps qui tremble de colère"
+    },
+    "mignon": {
+      "params": {},
+      "description": "Fait le mignon : yeux fermés de bonheur, petite bouche de chat, grosses joues, un léger balancement"
+    },
+    "calin": {
+      "params": {
+        "avec": "rose ou violet"
+      },
+      "description": "Se rapproche de l'autre et le serre, les deux s'inclinent l'un vers l'autre"
+    },
+    "bisou": {
+      "params": {
+        "avec": "rose ou violet"
+      },
+      "description": "Se penche vers l'autre, bouche en bisou, un petit cœur sort"
+    },
+    "offre": {
+      "params": {
+        "objet": "nom d'un objet"
+      },
+      "description": "Tend un objet vers la caméra, bras devant, rougit"
+    },
+    "tient": {
+      "params": {
+        "objet": "nom d'un objet",
+        "main": "gauche ou droite"
+      },
+      "description": "Tient un objet dans une main"
+    },
+    "mange": {
+      "params": {
+        "objet": "nom d'un objet"
+      },
+      "description": "Porte la nourriture à la bouche, mâche"
+    },
+    "vaisselle": {
+      "params": {},
+      "description": "Frotte une assiette des deux mains, bras devant"
+    },
+    "telephone": {
+      "params": {},
+      "description": "Tient le téléphone et le regarde, tête baissée"
+    },
+    "tremble": {
+      "params": {},
+      "description": "Tremble (froid, peur, impatience)"
+    },
+    "boude": {
+      "params": {},
+      "description": "Bras le long du corps, yeux plats, tourne un peu la tête"
+    },
+    "dort": {
+      "params": {},
+      "description": "Yeux fermés, respiration lente, des Z montent"
+    },
+    "plonge": {
+      "params": {
+        "vers": "un spot du lit (lit-gauche, lit-droite)"
+      },
+      "description": "Depuis le sol devant le lit, prend son élan, saute en arc dans le lit et passe sous la couette ; la tête et les petites mains ressortent, et il reste couché jusqu'à la fin du plan. Pour revenir dans le lit à chaque moment de la journée"
+    },
+    "apparait": {
+      "params": {
+        "depuis": "bas, gauche, droite ou pop"
+      },
+      "description": "Entre dans l'image"
+    },
+    "disparait": {
+      "params": {
+        "vers": "bas, gauche, droite ou pop"
+      },
+      "description": "Sort de l'image"
+    },
+    "effet": {
+      "params": {
+        "effet": "nom d'un effet"
+      },
+      "description": "Un effet au-dessus du personnage (cœurs, Z, !, ?...)"
+    }
+  },
+  "sons": [
+    "apparition",
+    "bulle",
+    "pop",
+    "saut",
+    "pas",
+    "zoom",
+    "glisse",
+    "coeur",
+    "bisou",
+    "froissement",
+    "porte",
+    "tictac",
+    "joie",
+    "fin",
+    "signature",
+    "intro",
+    "reponse",
+    "revelation",
+    "tic"
+  ],
+  "transitions": [
+    "coupe",
+    "fondu",
+    "glisse",
+    "noir"
+  ]
+}

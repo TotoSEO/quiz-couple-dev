@@ -1,0 +1,517 @@
+/* Quiz Couple Social : briques des visuels Instagram.
+   Toutes les mesures sont en pixels de canevas (images de 1080 px de large).
+   Un canevas se dessine à sa taille réelle, puis .qc-vignette le réduit
+   pour l'affichage : le studio de rendu utilise les mêmes classes sans
+   vignette. */
+
+/* ── Canevas et vignettes ─────────────────────────────────────────── */
+
+.qc-vignette {
+  --s: 0.2;
+  position: relative;
+  flex: none;
+  width: calc(1080px * var(--s));
+  height: calc(1920px * var(--s));
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px var(--trait);
+}
+.qc-vignette.is-post { height: calc(1350px * var(--s)); }
+.qc-vignette > .qc-canevas { transform: scale(var(--s)); transform-origin: 0 0; }
+
+.qc-canevas {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+  background: var(--fond);
+  color: var(--encre);
+  font-family: var(--font-texte);
+}
+.qc-canevas.is-post { height: 1350px; }
+
+/* Dégradé de marque : rose-ombre vers violet. Texte en sur-violet,
+   titres seulement (4,1:1 au départ rose). */
+.qc-canevas.is-marque {
+  background: linear-gradient(160deg, var(--rose-ombre) 0%, var(--violet) 100%);
+  color: var(--sur-violet);
+}
+
+/* Zone utile d'un reel : tout ce qui se lit est à l'intérieur, et tout
+   y est centré, dans les deux sens. */
+.qc-utile {
+  position: absolute;
+  top: var(--zone-reel-haut);
+  bottom: var(--zone-reel-bas);
+  left: var(--zone-reel-gauche);
+  right: var(--zone-reel-droite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Post ou page avec une scène dessinée : le texte dans le haut, la scène
+   dessous (la scène occupe la moitié basse de l'image). */
+.qc-canevas.is-post > .qc-utile.is-haut { bottom: 640px; }
+.qc-canevas.is-post > .qc-utile.is-haut.is-carte {
+  top: calc(var(--zone-post-marge) + var(--pas-2));
+  bottom: 690px;
+  border: 4px solid var(--trait);
+  border-radius: var(--rayon-carte);
+  background: color-mix(in srgb, var(--papier) 95%, transparent);
+}
+/* Zone utile d'un post ou d'une page de carrousel. */
+.qc-canevas.is-post > .qc-utile {
+  top: var(--zone-post-marge);
+  bottom: var(--zone-post-marge);
+  left: calc(var(--zone-post-marge) + var(--zone-grille-post));
+  right: calc(var(--zone-post-marge) + var(--zone-grille-post));
+}
+
+/* Repères de documentation : zones recouvertes par Instagram et
+   recadrage de la grille. Jamais dans un rendu publié. */
+.qc-reperes { position: absolute; inset: 0; pointer-events: none; }
+.qc-repere {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: repeating-linear-gradient(135deg, var(--rose) 0 6px, transparent 6px 22px);
+  opacity: 0.35;
+}
+.qc-repere.is-haut { top: 0; height: var(--zone-reel-haut); }
+.qc-repere.is-bas { bottom: 0; height: var(--zone-reel-bas); }
+.qc-repere.is-droite { top: 0; bottom: 0; left: auto; width: var(--zone-reel-droite); }
+.qc-repere-grille {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--zone-grille-reel);
+  bottom: var(--zone-grille-reel);
+  border-top: 6px dashed var(--violet-texte);
+  border-bottom: 6px dashed var(--violet-texte);
+}
+.qc-canevas.is-post .qc-repere-grille {
+  top: 0;
+  bottom: 0;
+  left: var(--zone-grille-post);
+  right: var(--zone-grille-post);
+  border: 0;
+  border-left: 6px dashed var(--violet-texte);
+  border-right: 6px dashed var(--violet-texte);
+}
+.qc-repere-utile {
+  position: absolute;
+  top: var(--zone-reel-haut);
+  bottom: var(--zone-reel-bas);
+  left: var(--zone-reel-gauche);
+  right: var(--zone-reel-droite);
+  border: 6px solid var(--rose-texte);
+  border-radius: var(--rayon-carte);
+}
+
+/* ── Texte ────────────────────────────────────────────────────────── */
+
+.qc-etiquette {
+  font-family: var(--font-texte);
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--rose-texte);
+}
+.qc-phrase {
+  font-family: var(--font-display);
+  font-size: 88px;
+  line-height: 1.08;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.qc-citation {
+  margin: 0;
+  font-family: var(--font-plume);
+  font-size: 84px;
+  line-height: 1.18;
+  font-weight: 500;
+  font-style: italic;
+  text-wrap: balance;
+}
+.qc-citation.is-longue { font-size: 64px; line-height: 1.22; }
+.qc-question {
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 1.12;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.qc-accroche {
+  font-family: var(--font-display);
+  font-size: 120px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.qc-texte {
+  font-family: var(--font-texte);
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 500;
+  text-wrap: balance;
+}
+.qc-mention {
+  font-family: var(--font-texte);
+  font-size: 34px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--encre-douce);
+}
+.qc-rose { color: var(--rose-texte); }
+.qc-violet { color: var(--violet-texte); }
+
+/* ── Carte de question et réponses ────────────────────────────────── */
+
+.qc-carte {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--pas-6);
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--pas-6);
+  background: var(--papier);
+  border: 4px solid var(--trait);
+  border-radius: var(--rayon-carte);
+  text-align: center;
+}
+.qc-options { display: flex; flex-direction: column; gap: var(--pas-3); }
+.qc-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--pas-4);
+  padding: var(--pas-3) var(--pas-6) var(--pas-3) var(--pas-3);
+  background: var(--fond);
+  text-align: left;
+  border: 4px solid var(--trait);
+  border-radius: var(--rayon-pilule);
+  font-family: var(--font-display);
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--encre);
+}
+.qc-option-lettre {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: var(--rayon-pilule);
+  background: var(--rose);
+  color: var(--sur-rose);
+  font-size: 44px;
+  font-weight: 700;
+}
+.qc-option.is-bonne { border-color: var(--chrono-vert); border-width: 6px; }
+.qc-option.is-bonne .qc-option-lettre { background: var(--chrono-vert); color: var(--sur-chrono); }
+
+/* ── Chrono ───────────────────────────────────────────────────────── */
+
+.qc-chrono { display: flex; align-items: center; gap: var(--pas-4); width: 100%; }
+.qc-chrono-piste {
+  flex: 1;
+  height: 32px;
+  border-radius: var(--rayon-pilule);
+  background: var(--trait);
+  overflow: hidden;
+}
+.qc-chrono-jauge {
+  width: var(--reste, 100%);
+  height: 100%;
+  border-radius: var(--rayon-pilule);
+  background: var(--chrono-vert);
+}
+.qc-chrono-temps {
+  flex: none;
+  min-width: 96px;
+  padding: var(--pas-2) var(--pas-4);
+  border-radius: var(--rayon-pilule);
+  background: var(--chrono-vert);
+  color: var(--sur-chrono);
+  font-family: var(--font-display);
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 700;
+}
+.qc-chrono.is-orange .qc-chrono-jauge,
+.qc-chrono.is-orange .qc-chrono-temps { background: var(--chrono-orange); }
+.qc-chrono.is-rouge .qc-chrono-jauge,
+.qc-chrono.is-rouge .qc-chrono-temps { background: var(--chrono-rouge); }
+
+/* ── Grand chiffre et bouton d'appel ─────────────────────────────── */
+
+.qc-chiffre {
+  font-family: var(--font-display);
+  font-size: 200px;
+  line-height: 0.9;
+  font-weight: 700;
+  color: var(--rose-texte);
+}
+.qc-bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--pas-4) var(--pas-8);
+  border-radius: var(--rayon-pilule);
+  background: var(--violet);
+  color: var(--sur-violet);
+  font-family: var(--font-display);
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ── Signature ────────────────────────────────────────────────────── */
+
+.qc-signature {
+  display: flex;
+  align-items: center;
+  gap: var(--pas-3);
+  font-family: var(--font-texte);
+  font-size: 34px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--encre-douce);
+}
+.qc-signature img { width: 72px; height: 72px; }
+.is-marque .qc-signature { color: var(--sur-violet); }
+
+/* ── Fleurs au trait (citations seulement) ─────────────────────────
+   Un dessin léger qui texture le fond, jamais sous le texte : deux
+   fleurs au plus, dans deux coins opposés, à opacite-fleurs. */
+
+.qc-fleur {
+  position: absolute;
+  height: auto;
+  opacity: var(--opacite-fleurs);
+  pointer-events: none;
+}
+.qc-fleur.is-haut-gauche { top: 300px; left: 24px; width: 220px; transform: rotate(-18deg); }
+.qc-fleur.is-bas-droite { bottom: 600px; right: 110px; width: 200px; transform: rotate(14deg); }
+.qc-fleur.is-haut-droite { top: 290px; right: 120px; width: 300px; transform: rotate(8deg); }
+.qc-fleur.is-bas-gauche { bottom: 610px; left: 40px; width: 300px; transform: rotate(186deg); }
+.qc-canevas.is-post .qc-fleur.is-haut-gauche { top: 60px; left: 40px; }
+.qc-canevas.is-post .qc-fleur.is-bas-droite { bottom: 60px; right: 60px; }
+.qc-canevas.is-post .qc-fleur.is-haut-droite { top: 60px; right: 50px; }
+.qc-canevas.is-post .qc-fleur.is-bas-gauche { bottom: 60px; left: 50px; }
+
+/* ── Mascottes ────────────────────────────────────────────────────── */
+
+.qc-mascotte { display: block; height: auto; }
+.qc-duo { display: flex; align-items: flex-end; justify-content: center; gap: var(--pas-6); }
+
+/* ── Fond texturé ──────────────────────────────────────────────────
+   Pour les quiz : le papier du site, deux halos doux aux coins opposés et
+   une trame de petits cœurs et de points. La trame est un dessin à couleurs
+   fixes (celles de rose et violet) à 10 % au plus. */
+
+.qc-canevas.is-texture {
+  background-color: var(--papier);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='%23e17398' fill-opacity='0.14'%3E%3Cpath d='M42 52c-7-8-20-3-20 7 0 9 12 15 20 22 8-7 20-13 20-22 0-10-13-15-20-7z' transform='rotate(-12 42 60)'/%3E%3Ccircle cx='132' cy='44' r='5'/%3E%3Ccircle cx='96' cy='150' r='3.5'/%3E%3C/g%3E%3Cg fill='%237f4db3' fill-opacity='0.11'%3E%3Cpath d='M138 118c-5-6-14-2-14 5 0 6 8 10 14 15 6-5 14-9 14-15 0-7-9-11-14-5z' transform='rotate(14 138 125)'/%3E%3Ccircle cx='28' cy='146' r='4.5'/%3E%3Ccircle cx='86' cy='22' r='3'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(1100px 900px at 0% 0%, color-mix(in srgb, var(--rose-lumiere) 26%, transparent), transparent 70%),
+    radial-gradient(1100px 1000px at 100% 100%, color-mix(in srgb, var(--violet-lumiere) 22%, transparent), transparent 70%);
+  background-size: 180px 180px, auto, auto;
+}
+[data-theme="dark"].qc-canevas.is-texture { background-color: var(--fond); }
+
+/* ── Le petit duo ─────────────────────────────────────────────────
+   La rose et le violet serrés l'un contre l'autre, en petit, sur les
+   visuels sans scène dessinée (phrases tendres, posts, pages de carrousel). */
+
+.qc-duo-mini { display: flex; align-items: flex-end; justify-content: center; }
+.qc-duo-mini .qc-perso { position: relative; }
+.qc-duo-mini .qc-perso svg { display: block; width: 100%; height: auto; overflow: visible; }
+.qc-duo-mini.is-coin { position: absolute; right: calc(var(--zone-post-marge) + var(--zone-grille-post)); bottom: calc(var(--zone-post-marge) - 12px); }
+
+/* ── Grain de papier ───────────────────────────────────────────────
+   Pour les posts et les carrousels : un grain très léger et de grandes
+   nuances, comme une feuille de papier, posé en voile sur toute l'image
+   (décor compris). On doit le sentir sans le voir. */
+
+.qc-canevas.is-papier::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.33 0 0 0 0 0.27 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23g)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1080' height='1350'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.004 0.006' numOctaves='2' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0.55 0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0.1 0'/%3E%3C/filter%3E%3Crect width='1080' height='1350' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 320px 320px, 100% 100%;
+}
+
+/* ── Quiz chrono : textes plus grands ─────────────────────────────
+   L'écran d'un quiz se lit en cinq secondes : on remplit la zone utile. */
+
+.qc-canevas.is-quiz .qc-utile { gap: var(--pas-6); }
+/* Intro des jeux : le texte en haut, les mascottes en grand dessous. */
+.qc-canevas.is-quiz .qc-utile.is-haut { bottom: 960px; }
+.qc-canevas.is-quiz .qc-etiquette { font-size: 40px; }
+.qc-canevas.is-quiz .qc-question { font-size: 72px; line-height: 1.1; }
+.qc-canevas.is-quiz .qc-carte { padding: var(--pas-6) var(--pas-6) var(--pas-8); gap: var(--pas-4); }
+.qc-canevas.is-quiz .qc-option { font-size: 50px; padding: var(--pas-3) var(--pas-6) var(--pas-3) var(--pas-3); }
+.qc-canevas.is-quiz .qc-option-lettre { width: 88px; height: 88px; font-size: 48px; }
+.qc-canevas.is-quiz .qc-chrono-piste { height: 40px; }
+.qc-canevas.is-quiz .qc-chrono-temps { font-size: 64px; }
+.qc-canevas.is-quiz .qc-accroche { font-size: 118px; }
+.qc-canevas.is-quiz .qc-texte { font-size: 48px; }
+.qc-canevas.is-quiz .qc-carte.is-seule { padding: var(--pas-9) var(--pas-6); gap: var(--pas-6); }
+.qc-canevas.is-quiz .qc-question.is-grande { font-size: 96px; line-height: 1.08; }
+/* Tu préfères : les deux choix, et « ou » entre les deux. */
+.qc-option > span:last-child { text-wrap: balance; }
+.qc-option-lettre.is-violet { background: var(--violet); color: var(--sur-violet); }
+.qc-canevas.is-quiz .qc-option.is-choix { font-size: 54px; }
+.qc-ou {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  min-width: 96px;
+  height: 64px;
+  margin: calc(-1 * var(--pas-2)) 0;
+  padding: 0 var(--pas-3);
+  border-radius: var(--rayon-pilule);
+  background: var(--encre);
+  color: var(--fond);
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ── Bulles des mascottes ─────────────────────────────────────────
+   « ! » pendant le chrono, « Yay! » à la réponse. */
+
+.qc-scene-mascottes { position: relative; display: flex; align-items: flex-end; justify-content: center; gap: var(--pas-8); width: 100%; }
+.qc-scene-mascottes .qc-perso { position: relative; }
+.qc-scene-mascottes .qc-perso svg { display: block; width: 100%; height: auto; overflow: visible; }
+.qc-bulle {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+.qc-bulle.is-exclamation {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--rayon-pilule);
+  background: var(--rose);
+  color: var(--sur-rose);
+  font-size: 52px;
+}
+.qc-bulle.is-violet { background: var(--violet); color: var(--sur-violet); }
+.qc-bulle.is-joie {
+  padding: var(--pas-2) var(--pas-6);
+  border-radius: var(--rayon-pilule);
+  background: var(--violet);
+  color: var(--sur-violet);
+  font-size: 56px;
+}
+
+/* ── Animations (POV, mini messages) ──────────────────────────────
+   Les textes sont posés par-dessus l'image, dans la zone utile, et ne
+   suivent jamais le zoom de la caméra. */
+
+.qc-utile.pov-calque { display: block; }
+.pov-calque > * { position: absolute; margin: 0; }
+.pov-pile {
+  top: var(--pas-2);
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--pas-3);
+}
+.pov-pile > * { margin: 0; }
+.pov-titre {
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: var(--pas-3) var(--pas-6);
+  border: 4px solid var(--trait);
+  border-radius: var(--rayon-carte);
+  background: color-mix(in srgb, var(--papier) 94%, transparent);
+  font-family: var(--font-display);
+  font-size: 60px;
+  line-height: 1.12;
+  font-weight: 600;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--encre);
+}
+.pov-titre.is-nu { border-color: transparent; background: none; }
+.pov-legende {
+  width: fit-content;
+  padding: var(--pas-1) var(--pas-6);
+  border-radius: var(--rayon-pilule);
+  background: var(--violet);
+  color: var(--sur-violet);
+  font-family: var(--font-display);
+  font-size: 52px;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.pov-message {
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--encre);
+}
+.pov-message.is-phrase { font-family: var(--font-display); font-size: 84px; line-height: 1.1; font-weight: 600; }
+.pov-message.is-plume { font-family: var(--font-plume); font-size: 80px; line-height: 1.18; font-weight: 500; font-style: italic; }
+.pov-bulle {
+  box-sizing: border-box;
+  padding: var(--pas-2) var(--pas-4);
+  border: 5px solid var(--decor-trait);
+  border-radius: var(--rayon-carte);
+  background: var(--fond);
+  font-family: var(--font-display);
+  font-size: 46px;
+  line-height: 1.15;
+  font-weight: 600;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--encre);
+}
+.pov-bulle::after {
+  content: '';
+  position: absolute;
+  left: calc(var(--pointe, 50%) - 16px);
+  bottom: -27px;
+  width: 26px;
+  height: 26px;
+  background: var(--fond);
+  border-right: 5px solid var(--decor-trait);
+  border-bottom: 5px solid var(--decor-trait);
+  transform: rotate(45deg);
+}
+.pov-signature {
+  left: 0;
+  right: 0;
+  bottom: var(--pas-2);
+  width: fit-content;
+  margin: 0 auto;
+  padding: var(--pas-1) var(--pas-3) var(--pas-1) var(--pas-1);
+  border-radius: var(--rayon-pilule);
+  background: color-mix(in srgb, var(--fond) 80%, transparent);
+}
+.pov-signature img { width: 56px; height: 56px; }

@@ -1,0 +1,5 @@
+node_modules/
+sorties/
+.verif.png
+# morceaux Mixkit, préparés par scripts/musiques.mjs (jamais redistribués seuls)
+public/musique/mx-*.mp3

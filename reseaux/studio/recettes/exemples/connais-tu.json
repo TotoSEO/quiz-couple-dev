@@ -1,0 +1,24 @@
+{
+  "gabarit": "connais-tu",
+  "langue": "en",
+  "theme": "light",
+  "etiquette": "Couple quiz",
+  "accroche": "How well do you know your partner?",
+  "consigne": "8 questions, 5 seconds each. Count your right answers!",
+  "secondes": 5,
+  "questions": [
+    "What's your partner's favorite color?",
+    "Their birthday?",
+    "What's their go-to snack?",
+    "What's their biggest fear?",
+    "What was their first job?",
+    "What's their favorite movie?",
+    "Coffee or tea in the morning?",
+    "What's their dream trip?"
+  ],
+  "fin": {
+    "question": "How many did you get? Comment your score!",
+    "bouton": "Send this to your partner",
+    "signature": "More couple quizzes on quiz-couple.com"
+  }
+}

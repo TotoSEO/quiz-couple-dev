@@ -1,0 +1,1947 @@
+{
+  "note": "Banque de sujets des trois premiers mois (13 semaines, 273 posts). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque, à leur date et à leur créneau. Format d'un sujet d'animation : « ce qui s'écrit à l'écran | ce qu'on voit (décor, gestes) ». Le texte anglais est une base : la routine peut l'ajuster pour tenir à l'écran, jamais le sens.",
+  "pov": [
+    {
+      "id": "pov-001",
+      "pilier": "humour",
+      "idee": "POV: your partner says they're not hungry | salon : la rose a des frites, le violet dit « I'm not hungry », zoom sur ses yeux, les frites changent de main, la rose boude"
+    },
+    {
+      "id": "pov-002",
+      "pilier": "mini",
+      "idee": "i saw these flowers... and thought of you | ligne : le violet entre avec un bouquet et le tend à la caméra, cœurs"
+    },
+    {
+      "id": "pov-003",
+      "pilier": "humour",
+      "idee": "POV: they took the whole blanket again | chambre, nuit : le violet dort (Z), la rose tremble dans le lit, une goutte de gêne, elle regarde la caméra"
+    },
+    {
+      "id": "pov-004",
+      "pilier": "humour",
+      "idee": "POV: \"just one more episode\" | salon, trois plans « 10 PM », « 1 AM », « 3 AM » : popcorn, puis yeux plats, puis les deux dorment assis"
+    },
+    {
+      "id": "pov-005",
+      "pilier": "humour",
+      "idee": "POV: deciding where to eat | mur : bulles « Where do you want to eat? » « I don't know, you pick » en boucle, les deux de plus en plus plats, « ? » au-dessus des têtes"
+    },
+    {
+      "id": "pov-006",
+      "pilier": "humour",
+      "idee": "POV: their feet are always cold | chambre, nuit : sous la couette, la rose sursaute (surprise, « ! »), secousse de caméra, le violet sourit innocent"
+    },
+    {
+      "id": "pov-007",
+      "pilier": "tendre",
+      "idee": "POV: they come home after a long day | mur : la rose attend, boude un peu ; le violet entre par la droite, elle saute, court vers lui, câlin, cœurs"
+    },
+    {
+      "id": "pov-008",
+      "pilier": "humour",
+      "idee": "POV: \"I'm fine\" | mur : la rose boude avec « ... », le violet arrive avec une boîte de chocolats, elle saute de joie"
+    },
+    {
+      "id": "pov-009",
+      "pilier": "humour",
+      "idee": "POV: texting each other from the same sofa | salon : les deux au téléphone, cœurs qui sortent, ils se regardent et rient"
+    },
+    {
+      "id": "pov-010",
+      "pilier": "humour",
+      "idee": "POV: they laugh at their own joke | mur : le violet rit aux éclats (bulle « Get it? »), la rose a les yeux plats, puis finit par rire aussi"
+    },
+    {
+      "id": "pov-011",
+      "pilier": "humour",
+      "idee": "POV: \"can I try a bite?\" | table : la rose a une glace, le violet demande, il mange presque tout, la rose regarde la caméra"
+    },
+    {
+      "id": "pov-012",
+      "pilier": "tendre",
+      "idee": "POV: doing the dishes together | cuisine : le violet fait la vaisselle, la rose danse derrière le comptoir, il se met à danser aussi, notes de musique"
+    },
+    {
+      "id": "pov-013",
+      "pilier": "humour",
+      "idee": "POV: \"I'm not even sleepy\" | salon, soir : bulle « I'm not sleepy », coupe, le violet dort déjà, Z, la rose rit"
+    },
+    {
+      "id": "pov-014",
+      "pilier": "humour",
+      "idee": "POV: they send you 40 videos a day | salon : la rose au téléphone, « ! » en rafale, le violet rit à côté en envoyant encore"
+    },
+    {
+      "id": "pov-015",
+      "pilier": "humour",
+      "idee": "POV: morning person vs night owl | chambre, matin : la rose saute de joie avec une tasse, le violet dort sous la couette, Z"
+    },
+    {
+      "id": "pov-016",
+      "pilier": "tendre",
+      "idee": "POV: goodnight kiss number 12 | chambre, nuit : bisou, coupe, encore un bisou, légende « Goodnight », « Ok last one », « Really last one »"
+    },
+    {
+      "id": "pov-017",
+      "pilier": "humour",
+      "idee": "POV: you miss them after 5 minutes | mur : la rose seule, boude, regarde à gauche, à droite ; le violet revient, elle saute"
+    },
+    {
+      "id": "pov-018",
+      "pilier": "humour",
+      "idee": "POV: someone says \"pizza?\" | salon : bulle « Pizza? », les deux sautent en même temps, pizza qui tombe du haut"
+    },
+    {
+      "id": "pov-019",
+      "pilier": "humour",
+      "idee": "POV: the last slice of pizza | table : les deux regardent la pizza posée, zoom sur l'un, puis sur l'autre, secousse, ils partagent"
+    },
+    {
+      "id": "pov-020",
+      "pilier": "mini",
+      "idee": "you deserve this... and this... and this | ligne : trois vases de fleurs arrivent l'un après l'autre en glissant, le violet apparaît derrière le dernier"
+    },
+    {
+      "id": "pov-021",
+      "pilier": "tendre",
+      "idee": "POV: they bring you coffee in bed | chambre, matin : la rose dans le lit, le violet arrive devant le lit avec une tasse, elle a les yeux en cœur"
+    },
+    {
+      "id": "pov-022",
+      "pilier": "humour",
+      "idee": "POV: you said \"5 more minutes\" | chambre, matin : réveil qui sonne, légendes « 7:00 », « 7:05 », « 7:40 », les deux dorment de plus en plus"
+    },
+    {
+      "id": "pov-023",
+      "pilier": "humour",
+      "idee": "POV: they're getting ready \"in 2 minutes\" | mur : la rose tape du pied (tremble), légendes « 2 min later », « 40 min later », le violet arrive avec un bonnet"
+    },
+    {
+      "id": "pov-024",
+      "pilier": "tendre",
+      "idee": "POV: slow dance in the kitchen | cuisine : les deux devant le comptoir dansent doucement, notes de musique, cœurs"
+    },
+    {
+      "id": "pov-025",
+      "pilier": "humour",
+      "idee": "POV: they steal your seat the second you get up | salon : la rose se lève (marche vers la droite), le violet glisse à sa place, elle revient, yeux plats"
+    },
+    {
+      "id": "pov-026",
+      "pilier": "tendre",
+      "idee": "POV: watching the sunset together | dehors, soir : les deux sur le banc, jambes qui pendent, câlin, la caméra s'approche lentement"
+    },
+    {
+      "id": "pov-027",
+      "pilier": "humour",
+      "idee": "POV: \"who ate my chocolate?\" | mur : la rose cherche (« ? »), le violet regarde ailleurs, goutte de gêne, il rit"
+    },
+    {
+      "id": "pov-028",
+      "pilier": "mini",
+      "idee": "just a reminder: you're my favorite person | uni : le violet fait coucou à la caméra, le texte s'écrit mot à mot, cœurs"
+    },
+    {
+      "id": "pov-029",
+      "pilier": "humour",
+      "idee": "POV: they hear their favorite song | salon : notes de musique, le violet saute du canapé et danse, la rose rit"
+    },
+    {
+      "id": "pov-030",
+      "pilier": "tendre",
+      "idee": "POV: the first date nerves | table : les deux assis, gouttes de gêne, ils se regardent, rougissent, cœurs"
+    },
+    {
+      "id": "pov-031",
+      "pilier": "humour",
+      "idee": "POV: they say \"we need to talk\" | mur : la rose a peur (tremble, « ! »), bulle du violet « ...what do you want for dinner? », elle souffle"
+    },
+    {
+      "id": "pov-032",
+      "pilier": "humour",
+      "idee": "POV: you both reach for the remote | salon : les deux regardent vers la caméra, zoom rapide sur l'un puis l'autre, secousse"
+    },
+    {
+      "id": "pov-033",
+      "pilier": "tendre",
+      "idee": "POV: a love letter on your pillow | chambre : une lettre apparaît sur l'oreiller, la rose la tient, yeux en cœur"
+    },
+    {
+      "id": "pov-034",
+      "pilier": "humour",
+      "idee": "POV: \"I'll just have a bite of yours\" | table : le violet commande « just a salad », puis mange la pizza de la rose"
+    },
+    {
+      "id": "pov-035",
+      "pilier": "tendre",
+      "idee": "POV: they're your safe place | ligne : la rose triste, le violet arrive, câlin, la rose sourit, texte mot à mot « You're my safe place »"
+    },
+    {
+      "id": "pov-036",
+      "pilier": "humour",
+      "idee": "POV: arguing about who said \"love you\" first | mur : bulles « I said it first! » « No, me! », puis bisou"
+    },
+    {
+      "id": "pov-037",
+      "pilier": "humour",
+      "idee": "POV: the hungry version of them | cuisine : le violet boude, yeux plats ; la rose lui tend une part de pizza, il saute de joie"
+    },
+    {
+      "id": "pov-038",
+      "pilier": "mini",
+      "idee": "this is for you <3 | uni : le violet tend un cœur à la caméra, rougit"
+    },
+    {
+      "id": "pov-039",
+      "pilier": "humour",
+      "idee": "POV: they fall asleep during the movie they picked | salon, nuit : le violet dort (Z), la rose regarde la caméra, yeux plats"
+    },
+    {
+      "id": "pov-040",
+      "pilier": "tendre",
+      "idee": "POV: rainy day plans | salon : tasses de thé, les deux dans le canapé, câlin, la caméra s'approche"
+    },
+    {
+      "id": "pov-041",
+      "pilier": "humour",
+      "idee": "POV: \"guess what I bought\" | mur : la rose montre un cadeau, le violet saute, c'est un cadeau pour la rose elle-même, il boude"
+    },
+    {
+      "id": "pov-042",
+      "pilier": "humour",
+      "idee": "POV: they want to cook for you | cuisine : le violet très fier, secousse, « ! », la rose rit, puis pizza commandée"
+    },
+    {
+      "id": "pov-043",
+      "pilier": "tendre",
+      "idee": "POV: holding the umbrella for them | dehors, matin : le violet tient le parapluie au-dessus de la rose, elle rougit"
+    },
+    {
+      "id": "pov-044",
+      "pilier": "humour",
+      "idee": "POV: the \"I'm cold\" hint | dehors, soir : la rose tremble, le violet lui donne... un câlin, cœurs"
+    },
+    {
+      "id": "pov-045",
+      "pilier": "humour",
+      "idee": "POV: when they finally reply | salon : la rose fixe son téléphone, « ... », puis cœurs et saut de joie"
+    },
+    {
+      "id": "pov-046",
+      "pilier": "tendre",
+      "idee": "POV: breakfast for two | table, matin : deux tasses, les deux sourient, bisou"
+    },
+    {
+      "id": "pov-047",
+      "pilier": "humour",
+      "idee": "POV: the dramatic goodbye before work | mur : le violet part (marche vers la droite), revient en courant, câlin, repart, revient"
+    },
+    {
+      "id": "pov-048",
+      "pilier": "mini",
+      "idee": "hey you... yes, you. i'm proud of you | uni : la rose fait coucou, puis joie, étincelles"
+    },
+    {
+      "id": "pov-049",
+      "pilier": "humour",
+      "idee": "POV: they hog the whole bed | chambre : le violet dort au milieu, la rose devant le lit avec un oreiller, yeux plats"
+    },
+    {
+      "id": "pov-050",
+      "pilier": "tendre",
+      "idee": "POV: stargazing together | dehors, nuit : banc, les deux regardent en haut, câlin, étincelles"
+    },
+    {
+      "id": "pov-051",
+      "pilier": "humour",
+      "idee": "POV: \"we're only buying milk\" | mur : légendes « The plan », « What happened », les deux avec cadeau, popcorn, plante"
+    },
+    {
+      "id": "pov-052",
+      "pilier": "humour",
+      "idee": "POV: they can't keep a surprise | mur : le violet cache un cadeau derrière lui, goutte, bulle « Don't look in the kitchen! »"
+    },
+    {
+      "id": "pov-053",
+      "pilier": "tendre",
+      "idee": "POV: you're sick and they take care of you | chambre : la rose dans le lit, le violet arrive avec une tasse fumante, cœurs"
+    },
+    {
+      "id": "pov-054",
+      "pilier": "humour",
+      "idee": "POV: the cutest fight ever | mur : les deux boudent dos à dos (tourne dos), puis se retournent et se font un câlin"
+    },
+    {
+      "id": "pov-055",
+      "pilier": "humour",
+      "idee": "POV: \"no gifts this year\" | mur : les deux cachent un cadeau, se regardent, « ! », rient"
+    },
+    {
+      "id": "pov-056",
+      "pilier": "mini",
+      "idee": "sending you a hug | uni : le violet ouvre les bras face à la caméra, cœurs, texte mot à mot"
+    },
+    {
+      "id": "pov-057",
+      "pilier": "tendre",
+      "idee": "POV: the way they look at you | table, soir : zoom lent sur le violet aux yeux en cœur, la rose rougit"
+    },
+    {
+      "id": "pov-058",
+      "pilier": "humour",
+      "idee": "POV: \"I'll be ready in 5\" (the sequel) | chambre : la rose saute du lit, légendes, elle revient avec bonnet, le violet dort"
+    },
+    {
+      "id": "pov-059",
+      "pilier": "humour",
+      "idee": "POV: they eat the last cookie and look at you | cuisine : le violet mange, regarde la caméra, goutte"
+    },
+    {
+      "id": "pov-060",
+      "pilier": "tendre",
+      "idee": "POV: a picnic for no reason | dehors, midi : les deux sur le banc avec un gâteau, joie"
+    },
+    {
+      "id": "pov-061",
+      "pilier": "humour",
+      "idee": "POV: the 2 AM snack run | cuisine, nuit : les deux derrière le comptoir avec frites et glace, rires"
+    },
+    {
+      "id": "pov-062",
+      "pilier": "humour",
+      "idee": "POV: when they say \"trust me\" | dehors : bulle « Trust me, it's this way », légende « 2 hours later », les deux perdus, « ? »"
+    },
+    {
+      "id": "pov-063",
+      "pilier": "tendre",
+      "idee": "POV: they remembered the little things | mur : la rose reçoit un livre de son auteur préféré, yeux en cœur, câlin"
+    },
+    {
+      "id": "pov-064",
+      "pilier": "mini",
+      "idee": "good morning to my favorite person | ligne, matin : la rose arrive avec deux tasses, en tend une à la caméra"
+    },
+    {
+      "id": "pov-065",
+      "pilier": "humour",
+      "idee": "POV: they try to be romantic | table : le violet tend une rose, elle tombe, goutte, la rose rit et fait un bisou quand même"
+    },
+    {
+      "id": "pov-066",
+      "pilier": "humour",
+      "idee": "POV: \"is that my hoodie?\" | mur : la rose sourit innocente, étincelles, le violet yeux plats puis rit"
+    },
+    {
+      "id": "pov-067",
+      "pilier": "tendre",
+      "idee": "POV: falling asleep on the phone together | chambre, nuit : la rose dans le lit au téléphone, dort, Z, cœurs"
+    },
+    {
+      "id": "pov-068",
+      "pilier": "humour",
+      "idee": "POV: they want to pet every dog they see | dehors : le violet court à droite, la rose le cherche, « ? »"
+    },
+    {
+      "id": "pov-069",
+      "pilier": "tendre",
+      "idee": "POV: dancing in the living room | salon : les deux devant le canapé dansent, notes, cœurs"
+    },
+    {
+      "id": "pov-070",
+      "pilier": "humour",
+      "idee": "POV: the \"what are we\" talk | table : bulles « So... what are we? », « ...hungry? », rire"
+    },
+    {
+      "id": "pov-071",
+      "pilier": "humour",
+      "idee": "POV: they pretend to sleep so you'll carry them | salon : le violet dort trop fort (Z géants), la rose rit"
+    },
+    {
+      "id": "pov-072",
+      "pilier": "mini",
+      "idee": "you make everything better | ligne : la rose triste avec « ... », le violet apparaît, elle sourit, joie"
+    },
+    {
+      "id": "pov-073",
+      "pilier": "tendre",
+      "idee": "POV: a surprise birthday cake | mur : la rose arrive avec un gâteau, le violet saute de joie, confettis"
+    },
+    {
+      "id": "pov-074",
+      "pilier": "humour",
+      "idee": "POV: their alarm rings 9 times | chambre, matin : réveil, secousse à chaque fois, le violet dort toujours"
+    },
+    {
+      "id": "pov-075",
+      "pilier": "humour",
+      "idee": "POV: you both say \"I don't mind\" | mur : bulles ping-pong, les deux « ... », légende « Still deciding »"
+    },
+    {
+      "id": "pov-076",
+      "pilier": "tendre",
+      "idee": "POV: they hold your hand in the cold | dehors, matin, flocons : câlin, cœurs"
+    },
+    {
+      "id": "pov-077",
+      "pilier": "humour",
+      "idee": "POV: \"I'm not jealous\" | mur : le violet regarde ailleurs (« ... »), la rose rit, bisou, il rougit"
+    },
+    {
+      "id": "pov-078",
+      "pilier": "mini",
+      "idee": "i'm so lucky it's you | uni : les deux se tiennent côte à côte, la rose saute, texte mot à mot"
+    },
+    {
+      "id": "pov-079",
+      "pilier": "humour",
+      "idee": "POV: they read the menu for 20 minutes | table : légendes « 1 min », « 10 min », « 20 min », le violet dit « Pizza »"
+    },
+    {
+      "id": "pov-080",
+      "pilier": "tendre",
+      "idee": "POV: they write you a little note | mur : le violet tend une lettre, la rose l'ouvre, yeux en cœur"
+    },
+    {
+      "id": "pov-081",
+      "pilier": "humour",
+      "idee": "POV: you start a sentence and they finish it | mur : bulles qui s'enchaînent, « ! », les deux rient"
+    },
+    {
+      "id": "pov-082",
+      "pilier": "humour",
+      "idee": "POV: \"just a small snack\" | salon : popcorn, pizza, frites, glace arrivent un par un sur le canapé"
+    },
+    {
+      "id": "pov-083",
+      "pilier": "tendre",
+      "idee": "POV: the forehead kiss | ligne : le violet se penche, bisou, la rose rougit, cœurs"
+    },
+    {
+      "id": "pov-084",
+      "pilier": "humour",
+      "idee": "POV: the passive aggressive \"ok\" | mur : bulle « ok. », le violet tremble, goutte, apporte des chocolats"
+    },
+    {
+      "id": "pov-085",
+      "pilier": "mini",
+      "idee": "today i'm grateful for you | ligne, matin : le violet tient une fleur et la tend"
+    },
+    {
+      "id": "pov-086",
+      "pilier": "humour",
+      "idee": "POV: they open the fridge 6 times | cuisine : légendes « 1 », « 3 », « 6 », toujours « ? »"
+    },
+    {
+      "id": "pov-087",
+      "pilier": "tendre",
+      "idee": "POV: rainy evening on the sofa | salon, soir : câlin dans le canapé, tasse, cœurs"
+    },
+    {
+      "id": "pov-088",
+      "pilier": "humour",
+      "idee": "POV: taking a photo together | dehors : la rose prend la photo (téléphone), le violet saute dans le cadre au dernier moment"
+    },
+    {
+      "id": "pov-089",
+      "pilier": "humour",
+      "idee": "POV: they say they'll only stay 10 minutes | salon, soir : légendes « 10 min », « 3 hours », les deux dorment"
+    },
+    {
+      "id": "pov-090",
+      "pilier": "tendre",
+      "idee": "POV: they wake up before you to make breakfast | chambre, matin : le violet arrive avec gâteau et tasse, la rose sort de sous la couette"
+    },
+    {
+      "id": "pov-091",
+      "pilier": "mini",
+      "idee": "hi, it's me. i just wanted to say i love you | uni : le violet entre en marchant, fait coucou, rougit"
+    },
+    {
+      "id": "pov-092",
+      "pilier": "humour",
+      "idee": "POV: the silent treatment lasts 4 seconds | mur : la rose boude dos tourné, légendes « 1 », « 2 », « 3 », elle saute dans ses bras"
+    },
+    {
+      "id": "pov-093",
+      "pilier": "humour",
+      "idee": "POV: they let you win (not) | salon : manettes, la rose saute, le violet boude, puis rit"
+    },
+    {
+      "id": "pov-094",
+      "pilier": "tendre",
+      "idee": "POV: they listen to your whole story | table : la rose parle (bulle « and then... »), le violet l'écoute yeux en cœur"
+    },
+    {
+      "id": "pov-095",
+      "pilier": "humour",
+      "idee": "POV: \"you look tired\" | mur : bulle, la rose yeux plats, « ! », le violet tend des chocolats en courant"
+    },
+    {
+      "id": "pov-096",
+      "pilier": "humour",
+      "idee": "POV: cooking together goes wrong | cuisine : secousse, « ! », les deux rient, pizza commandée"
+    },
+    {
+      "id": "pov-097",
+      "pilier": "tendre",
+      "idee": "POV: the hug that fixes everything | mur : les deux tristes « ... », câlin, cœurs, sourires"
+    },
+    {
+      "id": "pov-098",
+      "pilier": "mini",
+      "idee": "psst... you're doing great | uni : la rose apparaît en pop, fait un clin d'œil, étincelles"
+    },
+    {
+      "id": "pov-099",
+      "pilier": "humour",
+      "idee": "POV: they ask \"are you asleep?\" at 2 AM | chambre, nuit : la rose dort, le violet bulle « Are you asleep? », la rose yeux plats"
+    },
+    {
+      "id": "pov-100",
+      "pilier": "humour",
+      "idee": "POV: \"I bought you something\" (it's food) | mur : cadeau, la rose saute, c'est une pizza, elle saute encore plus"
+    },
+    {
+      "id": "pov-101",
+      "pilier": "tendre",
+      "idee": "POV: an ordinary Sunday with them | salon, midi : livres, tasses, câlin, cœurs lents"
+    },
+    {
+      "id": "pov-102",
+      "pilier": "humour",
+      "idee": "POV: you both lie about not being hungry | table : bulles « Not hungry », « Me neither », puis les deux mangent pizza et frites"
+    },
+    {
+      "id": "pov-103",
+      "pilier": "humour",
+      "idee": "POV: they put their cold hands on you | mur : la rose sursaute, secousse, le violet rit"
+    },
+    {
+      "id": "pov-104",
+      "pilier": "tendre",
+      "idee": "POV: dinner by candlelight | table, soir : bougie, bisou, cœurs"
+    },
+    {
+      "id": "pov-105",
+      "pilier": "mini",
+      "idee": "you + me = my favorite thing | ligne : les deux arrivent l'un vers l'autre et se font un câlin"
+    },
+    {
+      "id": "pov-106",
+      "pilier": "humour",
+      "idee": "POV: you show them a funny video and they don't laugh | salon : la rose rit, le violet yeux plats, puis la rose rit encore plus"
+    },
+    {
+      "id": "pov-107",
+      "pilier": "humour",
+      "idee": "POV: \"what do you want for your birthday?\" \"nothing\" | mur : légende « Gets nothing », la rose boude, le violet sort un gâteau"
+    },
+    {
+      "id": "pov-108",
+      "pilier": "tendre",
+      "idee": "POV: a walk with no plans | dehors, soir : les deux marchent ensemble de gauche à droite, cœurs"
+    },
+    {
+      "id": "pov-109",
+      "pilier": "humour",
+      "idee": "POV: they steal the fries \"to check if they're hot\" | table : le violet prend une frite, puis toutes, la rose « ! »"
+    },
+    {
+      "id": "pov-110",
+      "pilier": "humour",
+      "idee": "POV: the first time you meet their family | mur : la rose tremble, gouttes, le violet lui fait un câlin"
+    },
+    {
+      "id": "pov-111",
+      "pilier": "tendre",
+      "idee": "POV: they save you the last bite | table : le violet tend la dernière part de gâteau, la rose yeux en cœur"
+    },
+    {
+      "id": "pov-112",
+      "pilier": "mini",
+      "idee": "missing you a little bit. Ok, a lot | uni : la rose boude, puis le texte change, elle saute, cœurs"
+    },
+    {
+      "id": "pov-113",
+      "pilier": "humour",
+      "idee": "POV: \"I'll do it later\" (they never do) | cuisine : légendes « Later », « Later », « Much later », la vaisselle attend"
+    },
+    {
+      "id": "pov-114",
+      "pilier": "humour",
+      "idee": "POV: they get excited about snow | dehors, flocons : le violet saute, court, joie, la rose rit"
+    },
+    {
+      "id": "pov-115",
+      "pilier": "tendre",
+      "idee": "POV: falling asleep on their shoulder | salon, nuit : la rose dort appuyée, le violet sourit, Z, cœurs"
+    },
+    {
+      "id": "pov-116",
+      "pilier": "humour",
+      "idee": "POV: your plans vs their plans | mur : légende « My plan: go out », « Their plan: », les deux dans le canapé"
+    },
+    {
+      "id": "pov-117",
+      "pilier": "humour",
+      "idee": "POV: \"wake up, I made pancakes\" | chambre, matin : bulle, la rose sort de la couette en pop, saute"
+    },
+    {
+      "id": "pov-118",
+      "pilier": "tendre",
+      "idee": "POV: the way they say your name | mur : bulle, la rose rougit très fort, étincelles"
+    },
+    {
+      "id": "pov-119",
+      "pilier": "mini",
+      "idee": "hold on, a hug is coming | uni : le violet court depuis la droite, ouvre les bras"
+    },
+    {
+      "id": "pov-120",
+      "pilier": "humour",
+      "idee": "POV: they help you cook (they eat everything) | cuisine : le violet mange, la rose yeux plats, puis rit"
+    },
+    {
+      "id": "pov-121",
+      "pilier": "humour",
+      "idee": "POV: one blanket, two people | salon, soir : les deux tremblent, se rapprochent, câlin, cœurs"
+    },
+    {
+      "id": "pov-122",
+      "pilier": "tendre",
+      "idee": "POV: your favorite place is next to them | dehors, midi : banc, câlin, texte mot à mot"
+    },
+    {
+      "id": "pov-123",
+      "pilier": "humour",
+      "idee": "POV: they come back with snacks you didn't ask for | salon : le violet arrive chargé, popcorn, chocolats, la rose saute"
+    },
+    {
+      "id": "pov-124",
+      "pilier": "humour",
+      "idee": "POV: guessing what they're thinking | table : « ? » au-dessus de la rose, « ... » au-dessus du violet, puis bulles « Pizza? » « Pizza! »"
+    },
+    {
+      "id": "pov-125",
+      "pilier": "mini",
+      "idee": "me waiting for you to text back | ligne : la rose avec le téléphone, « ... », légende qui avance, cœurs à la fin"
+    },
+    {
+      "id": "pov-126",
+      "pilier": "tendre",
+      "idee": "POV: the little dance when they see you | mur : le violet arrive, la rose danse, ils dansent ensemble"
+    },
+    {
+      "id": "pov-127",
+      "pilier": "humour",
+      "idee": "POV: they hide when you come home | mur : la rose entre, « ? », le violet apparaît en pop et saute, « ! »"
+    },
+    {
+      "id": "pov-128",
+      "pilier": "humour",
+      "idee": "POV: sharing headphones | dehors : notes de musique, les deux bougent la tête ensemble"
+    },
+    {
+      "id": "pov-129",
+      "pilier": "tendre",
+      "idee": "POV: a heart balloon for no reason | ligne : le violet arrive avec un ballon cœur, la rose saute"
+    },
+    {
+      "id": "pov-130",
+      "pilier": "humour",
+      "idee": "POV: the 10-minute goodbye on the phone | chambre, nuit : bulles « You hang up », « No, you », Z"
+    },
+    {
+      "id": "pov-131",
+      "pilier": "mini",
+      "idee": "if nobody told you today: you're loved | uni : les deux font coucou, étincelles"
+    },
+    {
+      "id": "pov-132",
+      "pilier": "humour",
+      "idee": "POV: they open your gift before you | mur : cadeau, le violet l'ouvre, « ! », la rose boude puis rit"
+    },
+    {
+      "id": "pov-133",
+      "pilier": "tendre",
+      "idee": "POV: they make you laugh on a bad day | mur : la rose triste « ... », le violet danse, elle rit"
+    },
+    {
+      "id": "pov-134",
+      "pilier": "humour",
+      "idee": "POV: a game night gets serious | salon : manettes, secousse, « ! », les deux boudent, puis câlin"
+    },
+    {
+      "id": "pov-135",
+      "pilier": "humour",
+      "idee": "POV: \"we should go to bed early\" | chambre, nuit : légendes « 10 PM », « 2 AM », les deux au téléphone dans le lit"
+    },
+    {
+      "id": "pov-136",
+      "pilier": "tendre",
+      "idee": "POV: you see them across the room | mur : zoom lent sur la rose, yeux en cœur, étincelles"
+    },
+    {
+      "id": "pov-137",
+      "pilier": "mini",
+      "idee": "just checking: did you drink water today? | uni : la rose tend une tasse à la caméra"
+    },
+    {
+      "id": "pov-138",
+      "pilier": "humour",
+      "idee": "POV: they can't wait to give you their gift | mur : le violet tremble d'impatience, tend le cadeau trop tôt"
+    },
+    {
+      "id": "pov-139",
+      "pilier": "humour",
+      "idee": "POV: the \"one bite\" of ice cream | dehors : la glace de la rose, le violet croque, il n'en reste plus"
+    },
+    {
+      "id": "pov-140",
+      "pilier": "tendre",
+      "idee": "POV: a quiet morning together | table, matin : tasses, sourires, cœurs lents"
+    },
+    {
+      "id": "pov-141",
+      "pilier": "mini",
+      "idee": "sending flowers your way | ligne : un vase arrive, puis deux, le violet apparaît derrière"
+    },
+    {
+      "id": "pov-142",
+      "pilier": "humour",
+      "idee": "POV: you both pretend you're not tired | salon, nuit : bulles « Not tired », Z qui montent quand même"
+    },
+    {
+      "id": "pov-143",
+      "pilier": "tendre",
+      "idee": "POV: the hug when they get back from a trip | mur : la rose court de la gauche, le violet arrive de la droite, câlin au milieu, confettis"
+    },
+    {
+      "id": "pov-144",
+      "pilier": "humour",
+      "idee": "POV: they guess the ending of every movie | salon : bulle « I knew it! », la rose yeux plats"
+    },
+    {
+      "id": "pov-145",
+      "pilier": "tendre",
+      "idee": "POV: you're their favorite notification | salon : le violet regarde son téléphone, cœurs, sourire"
+    },
+    {
+      "id": "pov-146",
+      "pilier": "mini",
+      "idee": "this little guy wanted to say hi | uni : le violet entre en pop, fait coucou, saute"
+    },
+    {
+      "id": "pov-147",
+      "pilier": "humour",
+      "idee": "POV: they read your messages over your shoulder | salon : la rose au téléphone, le violet se penche, « ! », rire"
+    },
+    {
+      "id": "pov-148",
+      "pilier": "tendre",
+      "idee": "POV: an umbrella for two | dehors : parapluie, les deux dessous, câlin"
+    },
+    {
+      "id": "pov-149",
+      "pilier": "humour",
+      "idee": "POV: the \"are you mad?\" check every 5 minutes | mur : bulles « Are you mad? », la rose de plus en plus plate, puis rit"
+    },
+    {
+      "id": "pov-150",
+      "pilier": "mini",
+      "idee": "good night, sleep tight | chambre, nuit : la rose sous la couette fait coucou, puis dort, Z"
+    }
+  ],
+  "coquin": [
+    {
+      "id": "coq-001",
+      "idee": "POV: what I want in the morning, at noon and at night | chambre : couette qui bouge, légendes Morning / Noon / Night, chaussette puis oreiller qui s'envolent, les deux sortent la tête, clin d'œil"
+    },
+    {
+      "id": "coq-002",
+      "idee": "POV: \"let's just take a nap\" | chambre, midi : légende « The nap », couette qui bouge, cœurs, légende « 2 hours later », les deux sortent la tête, rougissent"
+    },
+    {
+      "id": "coq-003",
+      "idee": "POV: when the weekend finally starts | chambre : réveil qui sonne, coupe, couette qui bouge, le réveil s'envole"
+    },
+    {
+      "id": "coq-004",
+      "idee": "POV: they wear that perfume | mur : la rose passe, le violet yeux en cœur, rougit, cœurs, secousse"
+    },
+    {
+      "id": "coq-005",
+      "idee": "POV: \"we'll watch the movie, I promise\" | salon : popcorn, coupe vers la chambre, couette qui bouge, légende « The movie: » rien"
+    },
+    {
+      "id": "coq-006",
+      "idee": "POV: Sunday morning plans | chambre, matin : légende « Plans: », couette qui bouge, cœurs"
+    },
+    {
+      "id": "coq-007",
+      "idee": "POV: you say \"I'm cold\" | chambre, nuit : la rose tremble, le violet ouvre les bras, couette qui bouge"
+    },
+    {
+      "id": "coq-008",
+      "idee": "POV: date night ends early | table, soir : les deux se regardent, clin d'œil, coupe : chambre, couette qui bouge"
+    },
+    {
+      "id": "coq-009",
+      "idee": "POV: the look across the room | mur : zoom sur le violet, clin d'œil, la rose rougit, étincelles"
+    },
+    {
+      "id": "coq-010",
+      "idee": "POV: \"I'll be quick in the shower\" | mur : légende « 5 min », « 45 min », les deux rougissent, cœurs"
+    },
+    {
+      "id": "coq-011",
+      "idee": "POV: going to bed at 8 PM \"because we're tired\" | chambre, soir : réveil 8 PM, couette qui bouge, cœurs"
+    },
+    {
+      "id": "coq-012",
+      "idee": "POV: what we say vs what we mean | mur : bulle « Netflix? », clin d'œil, coupe chambre, couette qui bouge"
+    },
+    {
+      "id": "coq-013",
+      "idee": "POV: rainy day plans (again) | chambre, midi : couette qui bouge, chaussettes qui volent, cœurs"
+    },
+    {
+      "id": "coq-014",
+      "idee": "POV: the hotel room on holiday | chambre, matin : légende « Day 1 of sightseeing », couette qui bouge"
+    },
+    {
+      "id": "coq-015",
+      "idee": "POV: \"just one kiss before work\" | mur : bisou, légende « 1 hour later », les deux sous la couette, rire"
+    }
+  ],
+  "statique": [
+    {
+      "id": "sta-001",
+      "texte": "i love you forever <3",
+      "scene": "ligne : les deux se font un câlin, cœurs"
+    },
+    {
+      "id": "sta-002",
+      "texte": "you're my favorite person",
+      "scene": "dehors, soir : banc, câlin"
+    },
+    {
+      "id": "sta-003",
+      "texte": "home is wherever you are",
+      "scene": "salon, soir : canapé, tasse, câlin"
+    },
+    {
+      "id": "sta-004",
+      "texte": "still choosing you, every day",
+      "scene": "ligne : le violet tend un bouquet à la rose"
+    },
+    {
+      "id": "sta-005",
+      "texte": "my safe place is you",
+      "scene": "chambre, nuit : les deux sous la couette, yeux fermés, Z"
+    },
+    {
+      "id": "sta-006",
+      "texte": "you and me, always",
+      "scene": "dehors, nuit : banc, étoiles, câlin"
+    },
+    {
+      "id": "sta-007",
+      "texte": "thank you for being mine",
+      "scene": "uni : bisou, cœurs"
+    },
+    {
+      "id": "sta-008",
+      "texte": "forever sounds good with you",
+      "scene": "ligne : les deux côte à côte, la rose yeux en cœur"
+    },
+    {
+      "id": "sta-009",
+      "texte": "my heart is yours",
+      "scene": "uni : le violet tend un cœur à la rose"
+    },
+    {
+      "id": "sta-010",
+      "texte": "you make my world softer",
+      "scene": "salon : canapé, les deux dorment appuyés"
+    },
+    {
+      "id": "sta-011",
+      "texte": "lucky me, i have you",
+      "scene": "ligne : câlin, étincelles"
+    },
+    {
+      "id": "sta-012",
+      "texte": "every love song is about you",
+      "scene": "salon : notes de musique, les deux sourient"
+    },
+    {
+      "id": "sta-013",
+      "texte": "with you, i'm home",
+      "scene": "mur : câlin, cœurs"
+    },
+    {
+      "id": "sta-014",
+      "texte": "you're my sunshine",
+      "scene": "dehors, matin : banc, soleil, câlin"
+    },
+    {
+      "id": "sta-015",
+      "texte": "i'd choose you again",
+      "scene": "uni : les deux se tiennent, rougissent"
+    },
+    {
+      "id": "sta-016",
+      "texte": "just you and me",
+      "scene": "table, soir : bougie, sourires"
+    },
+    {
+      "id": "sta-017",
+      "texte": "my favorite hello",
+      "scene": "ligne : la rose fait coucou, le violet sourit"
+    },
+    {
+      "id": "sta-018",
+      "texte": "i like us",
+      "scene": "salon : canapé, câlin"
+    },
+    {
+      "id": "sta-019",
+      "texte": "love you more",
+      "scene": "uni : bisou, cœurs"
+    },
+    {
+      "id": "sta-020",
+      "texte": "you're my best decision",
+      "scene": "dehors, soir : banc, câlin"
+    },
+    {
+      "id": "sta-021",
+      "texte": "two hearts, one home",
+      "scene": "mur : câlin, cœurs"
+    },
+    {
+      "id": "sta-022",
+      "texte": "every day with you is a good day",
+      "scene": "table, matin : tasses, sourires"
+    },
+    {
+      "id": "sta-023",
+      "texte": "you're my calm",
+      "scene": "chambre, nuit : sous la couette, yeux fermés"
+    },
+    {
+      "id": "sta-024",
+      "texte": "my person, always",
+      "scene": "ligne : câlin, étincelles"
+    },
+    {
+      "id": "sta-025",
+      "texte": "you make me smile",
+      "scene": "uni : la rose rit, le violet rougit"
+    },
+    {
+      "id": "sta-026",
+      "texte": "here's to us",
+      "scene": "table, soir : deux coupes, sourires"
+    },
+    {
+      "id": "sta-027",
+      "texte": "soft days with you",
+      "scene": "salon : livres, câlin"
+    },
+    {
+      "id": "sta-028",
+      "texte": "yours, always",
+      "scene": "dehors, nuit : étoiles, banc, câlin"
+    }
+  ],
+  "connais-tu": [
+    {
+      "id": "ct-001",
+      "theme": "The basics",
+      "exemples": [
+        "What's your partner's favorite color?",
+        "Their birthday?",
+        "What's their go-to snack?"
+      ]
+    },
+    {
+      "id": "ct-002",
+      "theme": "Food edition",
+      "exemples": [
+        "What's their favorite pizza topping?",
+        "Sweet or salty breakfast?",
+        "What food do they hate?"
+      ]
+    },
+    {
+      "id": "ct-003",
+      "theme": "Firsts",
+      "exemples": [
+        "Where was your first date?",
+        "What did they wear that day?",
+        "Who texted first?"
+      ]
+    },
+    {
+      "id": "ct-004",
+      "theme": "Music edition",
+      "exemples": [
+        "What's their favorite song right now?",
+        "Which artist would they see live?",
+        "What song do they sing in the shower?"
+      ]
+    },
+    {
+      "id": "ct-005",
+      "theme": "Childhood",
+      "exemples": [
+        "What was their favorite cartoon?",
+        "What did they want to be as a kid?",
+        "What was their first pet?"
+      ]
+    },
+    {
+      "id": "ct-006",
+      "theme": "Dreams",
+      "exemples": [
+        "Where do they dream of living?",
+        "What's their dream job?",
+        "Which country would they visit first?"
+      ]
+    },
+    {
+      "id": "ct-007",
+      "theme": "Habits",
+      "exemples": [
+        "Morning person or night owl?",
+        "How many alarms do they set?",
+        "What do they do first when they wake up?"
+      ]
+    },
+    {
+      "id": "ct-008",
+      "theme": "Movies and shows",
+      "exemples": [
+        "What's their comfort movie?",
+        "Which show did they watch twice?",
+        "Which character are they most like?"
+      ]
+    },
+    {
+      "id": "ct-009",
+      "theme": "Fears",
+      "exemples": [
+        "What's their biggest fear?",
+        "Which animal scares them?",
+        "Spiders or heights?"
+      ]
+    },
+    {
+      "id": "ct-010",
+      "theme": "Our story",
+      "exemples": [
+        "What did they first notice about you?",
+        "When did they say I love you first?",
+        "What's their favorite memory of you two?"
+      ]
+    },
+    {
+      "id": "ct-011",
+      "theme": "Little things",
+      "exemples": [
+        "How do they take their coffee or tea?",
+        "What's their favorite emoji?",
+        "What's their phone wallpaper?"
+      ]
+    },
+    {
+      "id": "ct-012",
+      "theme": "Gifts",
+      "exemples": [
+        "What's the best gift you gave them?",
+        "Flowers or chocolate?",
+        "What would they buy with 100 euros?"
+      ]
+    },
+    {
+      "id": "ct-013",
+      "theme": "Friends and family",
+      "exemples": [
+        "Who's their best friend?",
+        "What's their mom's or dad's name?",
+        "Who do they call when they're sad?"
+      ]
+    },
+    {
+      "id": "ct-014",
+      "theme": "Comfort",
+      "exemples": [
+        "What makes them feel better after a bad day?",
+        "Their favorite cozy outfit?",
+        "Their go-to comfort food?"
+      ]
+    },
+    {
+      "id": "ct-015",
+      "theme": "Travel",
+      "exemples": [
+        "Beach or mountains?",
+        "Their dream road trip?",
+        "What do they always forget to pack?"
+      ]
+    },
+    {
+      "id": "ct-016",
+      "theme": "School days",
+      "exemples": [
+        "What was their favorite subject?",
+        "Their worst subject?",
+        "Who was their favorite teacher?"
+      ]
+    },
+    {
+      "id": "ct-017",
+      "theme": "Weird facts",
+      "exemples": [
+        "What's their weirdest habit?",
+        "What's their hidden talent?",
+        "Which word do they say all the time?"
+      ]
+    },
+    {
+      "id": "ct-018",
+      "theme": "Love languages",
+      "exemples": [
+        "Do they prefer hugs or kind words?",
+        "How do they show they care?",
+        "What makes them feel the most loved?"
+      ]
+    },
+    {
+      "id": "ct-019",
+      "theme": "Sweet tooth",
+      "exemples": [
+        "Their favorite dessert?",
+        "Their favorite ice cream flavor?",
+        "Cake or cookies?"
+      ]
+    },
+    {
+      "id": "ct-020",
+      "theme": "Phone edition",
+      "exemples": [
+        "Which app do they open first?",
+        "Who do they text the most?",
+        "How many unread messages do they have?"
+      ]
+    },
+    {
+      "id": "ct-021",
+      "theme": "Would they",
+      "exemples": [
+        "Would they rather be invisible or fly?",
+        "Would they eat a bug for 100 euros?",
+        "Would they go skydiving?"
+      ]
+    },
+    {
+      "id": "ct-022",
+      "theme": "Home",
+      "exemples": [
+        "Which side of the bed do they sleep on?",
+        "Their favorite room?",
+        "Do they make the bed every day?"
+      ]
+    },
+    {
+      "id": "ct-023",
+      "theme": "Mood",
+      "exemples": [
+        "What makes them angry fast?",
+        "What always makes them laugh?",
+        "What do they do when they're stressed?"
+      ]
+    },
+    {
+      "id": "ct-024",
+      "theme": "Favorites, part 2",
+      "exemples": [
+        "Their favorite season?",
+        "Their favorite animal?",
+        "Their favorite day of the week?"
+      ]
+    },
+    {
+      "id": "ct-025",
+      "theme": "Christmas edition",
+      "exemples": [
+        "Their favorite Christmas movie?",
+        "Do they open gifts on the 24th or 25th?",
+        "Their dream Christmas gift?"
+      ]
+    },
+    {
+      "id": "ct-026",
+      "theme": "Clothes",
+      "exemples": [
+        "Their favorite shoes?",
+        "Hoodie or jacket?",
+        "Which of your clothes do they steal?"
+      ]
+    },
+    {
+      "id": "ct-027",
+      "theme": "Games",
+      "exemples": [
+        "Their favorite board game?",
+        "Do they cheat at cards?",
+        "Their favorite video game?"
+      ]
+    },
+    {
+      "id": "ct-028",
+      "theme": "Social media",
+      "exemples": [
+        "Their most used app?",
+        "Do they post stories every day?",
+        "Their favorite type of reels?"
+      ]
+    },
+    {
+      "id": "ct-029",
+      "theme": "Secret skills",
+      "exemples": [
+        "Can they cook a real meal?",
+        "Can they whistle?",
+        "Can they dance?"
+      ]
+    },
+    {
+      "id": "ct-030",
+      "theme": "Mornings",
+      "exemples": [
+        "Coffee or tea?",
+        "Shower in the morning or at night?",
+        "Breakfast or no breakfast?"
+      ]
+    },
+    {
+      "id": "ct-031",
+      "theme": "Nights",
+      "exemples": [
+        "What time do they fall asleep?",
+        "Do they sleep with socks?",
+        "Do they talk in their sleep?"
+      ]
+    },
+    {
+      "id": "ct-032",
+      "theme": "Future",
+      "exemples": [
+        "How many kids do they want?",
+        "Their dream house?",
+        "City or countryside later?"
+      ]
+    },
+    {
+      "id": "ct-033",
+      "theme": "Pet peeves",
+      "exemples": [
+        "What annoys them the most?",
+        "Loud chewing or late people?",
+        "What makes them roll their eyes?"
+      ]
+    },
+    {
+      "id": "ct-034",
+      "theme": "Spending",
+      "exemples": [
+        "What do they spend too much on?",
+        "Saver or spender?",
+        "Their last impulse buy?"
+      ]
+    },
+    {
+      "id": "ct-035",
+      "theme": "Romance",
+      "exemples": [
+        "Their idea of a perfect date?",
+        "Candles or picnic?",
+        "The most romantic thing you did for them?"
+      ]
+    },
+    {
+      "id": "ct-036",
+      "theme": "Body clock",
+      "exemples": [
+        "Do they nap?",
+        "How long do they take to get ready?",
+        "Are they always late?"
+      ]
+    },
+    {
+      "id": "ct-037",
+      "theme": "Talents",
+      "exemples": [
+        "What are they proud of?",
+        "What are they best at?",
+        "What would they like to learn?"
+      ]
+    },
+    {
+      "id": "ct-038",
+      "theme": "New Year edition",
+      "exemples": [
+        "Their goal for next year?",
+        "Their favorite moment of this year?",
+        "Where do they want to be at midnight?"
+      ]
+    },
+    {
+      "id": "ct-039",
+      "theme": "Mixed bag",
+      "exemples": [
+        "Their shoe size?",
+        "Their middle name?",
+        "Their favorite number?"
+      ]
+    },
+    {
+      "id": "ct-040",
+      "theme": "Who are they with you",
+      "exemples": [
+        "What nickname do they call you?",
+        "What's their favorite photo of you two?",
+        "What do they love most about you?"
+      ]
+    }
+  ],
+  "tu-preferes": [
+    {
+      "id": "tp-001",
+      "theme": "Couple edition",
+      "exemples": [
+        [
+          "Cook together every night",
+          "Takeout every night"
+        ],
+        [
+          "Breakfast in bed",
+          "Dinner under the stars"
+        ]
+      ]
+    },
+    {
+      "id": "tp-002",
+      "theme": "Date night",
+      "exemples": [
+        [
+          "Movie at home",
+          "Movie at the cinema"
+        ],
+        [
+          "Picnic in the park",
+          "Fancy restaurant"
+        ]
+      ]
+    },
+    {
+      "id": "tp-003",
+      "theme": "Travel",
+      "exemples": [
+        [
+          "A week by the sea",
+          "A week in the mountains"
+        ],
+        [
+          "Road trip",
+          "Plane trip"
+        ]
+      ]
+    },
+    {
+      "id": "tp-004",
+      "theme": "Texting",
+      "exemples": [
+        [
+          "Only voice notes",
+          "Only texts"
+        ],
+        [
+          "Good morning text",
+          "Good night text"
+        ]
+      ]
+    },
+    {
+      "id": "tp-005",
+      "theme": "Food",
+      "exemples": [
+        [
+          "Share a pizza",
+          "Share a dessert"
+        ],
+        [
+          "Their cooking",
+          "Your cooking"
+        ]
+      ]
+    },
+    {
+      "id": "tp-006",
+      "theme": "Superpowers",
+      "exemples": [
+        [
+          "Read their mind",
+          "Teleport to them"
+        ],
+        [
+          "Pause time together",
+          "Rewind your best day"
+        ]
+      ]
+    },
+    {
+      "id": "tp-007",
+      "theme": "Home life",
+      "exemples": [
+        [
+          "Always do the dishes",
+          "Always do the laundry"
+        ],
+        [
+          "Big bed",
+          "Big sofa"
+        ]
+      ]
+    },
+    {
+      "id": "tp-008",
+      "theme": "Gifts",
+      "exemples": [
+        [
+          "A handwritten letter",
+          "A surprise gift"
+        ],
+        [
+          "Flowers every week",
+          "One big trip a year"
+        ]
+      ]
+    },
+    {
+      "id": "tp-009",
+      "theme": "Weekend",
+      "exemples": [
+        [
+          "Lazy Sunday in bed",
+          "Adventure all day"
+        ],
+        [
+          "Sleep in",
+          "Watch the sunrise"
+        ]
+      ]
+    },
+    {
+      "id": "tp-010",
+      "theme": "Honesty",
+      "exemples": [
+        [
+          "Know all their secrets",
+          "Keep a few of yours"
+        ],
+        [
+          "Always hear the truth",
+          "Always hear compliments"
+        ]
+      ]
+    },
+    {
+      "id": "tp-011",
+      "theme": "Romance",
+      "exemples": [
+        [
+          "Slow dance in the kitchen",
+          "Kiss in the rain"
+        ],
+        [
+          "Love letter",
+          "Love song"
+        ]
+      ]
+    },
+    {
+      "id": "tp-012",
+      "theme": "Pets",
+      "exemples": [
+        [
+          "A dog together",
+          "A cat together"
+        ],
+        [
+          "Many plants",
+          "One pet"
+        ]
+      ]
+    },
+    {
+      "id": "tp-013",
+      "theme": "Arguments",
+      "exemples": [
+        [
+          "Always say sorry first",
+          "Always get the last word"
+        ],
+        [
+          "Talk it out now",
+          "Sleep on it"
+        ]
+      ]
+    },
+    {
+      "id": "tp-014",
+      "theme": "Christmas edition",
+      "exemples": [
+        [
+          "Matching pajamas",
+          "Matching sweaters"
+        ],
+        [
+          "Gifts on the 24th",
+          "Gifts on the 25th"
+        ]
+      ]
+    },
+    {
+      "id": "tp-015",
+      "theme": "Social life",
+      "exemples": [
+        [
+          "Double dates",
+          "Just the two of you"
+        ],
+        [
+          "Party together",
+          "Stay in together"
+        ]
+      ]
+    },
+    {
+      "id": "tp-016",
+      "theme": "Seasons",
+      "exemples": [
+        [
+          "Summer love",
+          "Winter love"
+        ],
+        [
+          "Snow day together",
+          "Beach day together"
+        ]
+      ]
+    },
+    {
+      "id": "tp-017",
+      "theme": "Music",
+      "exemples": [
+        [
+          "Same playlist forever",
+          "Never the same song twice"
+        ],
+        [
+          "Sing together",
+          "Dance together"
+        ]
+      ]
+    },
+    {
+      "id": "tp-018",
+      "theme": "Sleep",
+      "exemples": [
+        [
+          "Big spoon",
+          "Little spoon"
+        ],
+        [
+          "Fall asleep on the phone",
+          "Fall asleep in their arms"
+        ]
+      ]
+    },
+    {
+      "id": "tp-019",
+      "theme": "Movies",
+      "exemples": [
+        [
+          "Rom-com",
+          "Horror movie"
+        ],
+        [
+          "Rewatch your favorite",
+          "Try something new"
+        ]
+      ]
+    },
+    {
+      "id": "tp-020",
+      "theme": "Future",
+      "exemples": [
+        [
+          "Live in a big city",
+          "Live in a small town"
+        ],
+        [
+          "Tiny house by the sea",
+          "Big house in the forest"
+        ]
+      ]
+    },
+    {
+      "id": "tp-021",
+      "theme": "Hard mode",
+      "exemples": [
+        [
+          "No phone for a week",
+          "No sweets for a month"
+        ],
+        [
+          "Always hungry",
+          "Always sleepy"
+        ]
+      ]
+    },
+    {
+      "id": "tp-022",
+      "theme": "Little gestures",
+      "exemples": [
+        [
+          "Forehead kisses",
+          "Hand holding"
+        ],
+        [
+          "They play with your hair",
+          "They make you tea"
+        ]
+      ]
+    },
+    {
+      "id": "tp-023",
+      "theme": "Fun",
+      "exemples": [
+        [
+          "Game night",
+          "Karaoke night"
+        ],
+        [
+          "Theme park",
+          "Escape room"
+        ]
+      ]
+    },
+    {
+      "id": "tp-024",
+      "theme": "New Year edition",
+      "exemples": [
+        [
+          "Party at midnight",
+          "Cozy at home at midnight"
+        ],
+        [
+          "Fireworks",
+          "Stars"
+        ]
+      ]
+    },
+    {
+      "id": "tp-025",
+      "theme": "Mornings",
+      "exemples": [
+        [
+          "Coffee in bed",
+          "Breakfast out"
+        ],
+        [
+          "Wake up early together",
+          "Sleep in together"
+        ]
+      ]
+    },
+    {
+      "id": "tp-026",
+      "theme": "Memories",
+      "exemples": [
+        [
+          "Relive your first date",
+          "Skip to your next trip"
+        ],
+        [
+          "A photo album",
+          "A video of your story"
+        ]
+      ]
+    },
+    {
+      "id": "tp-027",
+      "theme": "Silly edition",
+      "exemples": [
+        [
+          "Talk like a pirate for a day",
+          "Sing every sentence"
+        ],
+        [
+          "Swap phones for a day",
+          "Swap clothes for a day"
+        ]
+      ]
+    },
+    {
+      "id": "tp-028",
+      "theme": "Comfort",
+      "exemples": [
+        [
+          "Hug that lasts an hour",
+          "100 short hugs"
+        ],
+        [
+          "Rainy day inside",
+          "Sunny day outside"
+        ]
+      ]
+    }
+  ],
+  "phrase": [
+    {
+      "id": "ph-001",
+      "texte": "I didn't know how quiet my heart could feel until I met you."
+    },
+    {
+      "id": "ph-002",
+      "texte": "With you, even ordinary days feel like a small celebration."
+    },
+    {
+      "id": "ph-003",
+      "texte": "You're the first thing I want to tell good news to."
+    },
+    {
+      "id": "ph-004",
+      "texte": "Some people feel like home. You're one of them."
+    },
+    {
+      "id": "ph-005",
+      "texte": "I love the way you make the world feel a little softer."
+    },
+    {
+      "id": "ph-006",
+      "texte": "Of all the places I could be, next to you is my favorite."
+    },
+    {
+      "id": "ph-007",
+      "texte": "You don't have to be perfect. You just have to be you, with me."
+    },
+    {
+      "id": "ph-008",
+      "texte": "I still smile when I see your name on my phone."
+    },
+    {
+      "id": "ph-009",
+      "texte": "Loving you is the easiest thing I've ever done."
+    },
+    {
+      "id": "ph-010",
+      "texte": "You're my favorite part of every day, even the hard ones."
+    },
+    {
+      "id": "ph-011",
+      "texte": "I hope you know how much calmer I am when you're near."
+    },
+    {
+      "id": "ph-012",
+      "texte": "Every song makes sense since you."
+    },
+    {
+      "id": "ph-013",
+      "texte": "If I had to choose again, I'd still choose you, every time."
+    },
+    {
+      "id": "ph-014",
+      "texte": "Thank you for staying on the days I'm hard to love."
+    },
+    {
+      "id": "ph-015",
+      "texte": "You make me want to be a softer, braver version of me."
+    },
+    {
+      "id": "ph-016",
+      "texte": "My favorite place is wherever your hand is holding mine."
+    },
+    {
+      "id": "ph-017",
+      "texte": "I fall for you a little more in the small moments."
+    },
+    {
+      "id": "ph-018",
+      "texte": "Being loved by you feels like being understood."
+    },
+    {
+      "id": "ph-019",
+      "texte": "You're the reason I believe in slow, gentle love."
+    },
+    {
+      "id": "ph-020",
+      "texte": "When I'm with you, I don't need to pretend anything."
+    },
+    {
+      "id": "ph-021",
+      "texte": "I hope we keep laughing like this when we're old."
+    },
+    {
+      "id": "ph-022",
+      "texte": "You turned my favorite places into our favorite places."
+    },
+    {
+      "id": "ph-023",
+      "texte": "Your laugh is my favorite sound in the whole world."
+    },
+    {
+      "id": "ph-024",
+      "texte": "I love you in a quiet, every day, always kind of way."
+    },
+    {
+      "id": "ph-025",
+      "texte": "You're proof that good things happen when I least expect them."
+    },
+    {
+      "id": "ph-026",
+      "texte": "Some days I just want to hold your hand and say nothing."
+    },
+    {
+      "id": "ph-027",
+      "texte": "You make my heart feel safe enough to be soft."
+    },
+    {
+      "id": "ph-028",
+      "texte": "Of everything I have, our little life together is my favorite."
+    }
+  ],
+  "saison": {
+    "note": "Noël et Nouvel An, les seules fêtes du calendrier (universelles). À ces dates et créneaux, le sujet daté remplace celui de la banque ; la catégorie reste celle de la semaine type. Décor « noel », bonnets, flocons, cadeaux, sapin ; au Nouvel An, coupes, feux d'artifice, confettis.",
+    "sujets": [
+      {
+        "id": "noel-01",
+        "jour": "2026-12-19",
+        "creneau": "matin",
+        "categorie": "pov",
+        "idee": "POV: decorating the tree together | noel : le violet accroche l'étoile en sautant, la rose rit, flocons dans la fenêtre"
+      },
+      {
+        "id": "noel-02",
+        "jour": "2026-12-20",
+        "creneau": "midi",
+        "categorie": "statique",
+        "texte": "All I want for Christmas is you",
+        "scene": "noel : câlin devant le sapin, bonnets, flocons"
+      },
+      {
+        "id": "noel-03",
+        "jour": "2026-12-21",
+        "creneau": "midi",
+        "categorie": "connais-tu",
+        "theme": "ct-025"
+      },
+      {
+        "id": "noel-04",
+        "jour": "2026-12-22",
+        "creneau": "midi",
+        "categorie": "tu-preferes",
+        "theme": "tp-014"
+      },
+      {
+        "id": "noel-05",
+        "jour": "2026-12-23",
+        "creneau": "soir",
+        "categorie": "pov",
+        "idee": "POV: wrapping their gift without them seeing | noel : la rose cache un cadeau, le violet arrive, « ! », elle le cache derrière elle"
+      },
+      {
+        "id": "noel-06",
+        "jour": "2026-12-24",
+        "creneau": "matin",
+        "categorie": "pov",
+        "idee": "POV: matching hats on Christmas Eve | noel : les deux avec un bonnet, danse, flocons"
+      },
+      {
+        "id": "noel-07",
+        "jour": "2026-12-24",
+        "creneau": "soir",
+        "categorie": "pov",
+        "idee": "POV: Christmas Eve dinner | table, nuit : bougie, bonnets, bisou, flocons"
+      },
+      {
+        "id": "noel-08",
+        "jour": "2026-12-25",
+        "creneau": "matin",
+        "categorie": "pov",
+        "idee": "POV: opening gifts on Christmas morning | noel : cadeaux, le violet saute, la rose tend un cadeau, confettis"
+      },
+      {
+        "id": "noel-09",
+        "jour": "2026-12-25",
+        "creneau": "soir",
+        "categorie": "coquin",
+        "idee": "POV: Christmas night under the blanket | chambre, nuit : bonnet qui s'envole de sous la couette, cœurs"
+      },
+      {
+        "id": "noel-10",
+        "jour": "2026-12-26",
+        "creneau": "soir",
+        "categorie": "phrase",
+        "texte": "This year, my favorite gift was you, again."
+      },
+      {
+        "id": "an-01",
+        "jour": "2026-12-30",
+        "creneau": "midi",
+        "categorie": "connais-tu",
+        "theme": "ct-038"
+      },
+      {
+        "id": "an-02",
+        "jour": "2026-12-31",
+        "creneau": "matin",
+        "categorie": "pov",
+        "idee": "POV: getting ready for New Year's Eve | mur : légendes « 6 PM », « 9 PM », « 11:59 PM », le violet attend, la rose arrive enfin"
+      },
+      {
+        "id": "an-03",
+        "jour": "2026-12-31",
+        "creneau": "soir",
+        "categorie": "pov",
+        "idee": "POV: the countdown kiss | dehors, nuit : légendes « 3 », « 2 », « 1 », bisou, feux d'artifice"
+      },
+      {
+        "id": "an-04",
+        "jour": "2027-01-01",
+        "creneau": "matin",
+        "categorie": "pov",
+        "idee": "POV: January 1st, same favorite person | chambre, matin : les deux sortent de sous la couette, confettis"
+      },
+      {
+        "id": "an-05",
+        "jour": "2027-01-01",
+        "creneau": "midi",
+        "categorie": "connais-tu",
+        "theme_libre": "Our year edition : leur meilleur moment de l'année, le plus drôle, la plus grosse surprise, le voyage, la chanson de l'année..."
+      },
+      {
+        "id": "an-06",
+        "jour": "2027-01-02",
+        "creneau": "soir",
+        "categorie": "phrase",
+        "texte": "Wherever the new year takes us, I want to go there with you."
+      }
+    ]
+  }
+}

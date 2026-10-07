@@ -59,6 +59,8 @@
             <button class="admin-tab" data-tab="reviews" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><span>Avis</span><span class="admin-pastille hidden" data-notif="reviews">!</span></button>
             <button class="admin-tab" data-tab="leads" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg><span>Leads</span><span class="admin-pastille hidden" data-notif="leads">!</span></button>
             <button class="admin-tab" data-tab="messages" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><span>Messagerie</span><span class="admin-pastille hidden" data-notif="messages">!</span></button>
+        <p class="adm-nav-titre">Publication</p>
+            <button class="admin-tab" data-tab="reseaux" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg><span>Réseaux</span><span class="admin-pastille hidden" data-notif="reseaux">!</span></button>
         <p class="adm-nav-titre">Revenus</p>
             <button class="admin-tab" data-tab="affiliation" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18M7 6h1v4"/><path d="M16.71 13.88l.7.71-2.82 2.82"/></svg><span>Affiliation</span></button>
       </nav>
@@ -505,6 +507,73 @@
         </div>
 
         <!-- ═══ Affiliation ═══ -->
+        <!-- ═══ Réseaux ═══ -->
+        <div id="admin-reseaux-tab" class="hidden">
+          <div class="stats-tetes">
+            <div class="stats-tete stats-tete--lances">
+              <p class="stats-tete-titre">Compte anglais</p>
+              <p class="stats-tete-jour" id="rsx-compte">-</p>
+              <p class="stats-tete-sub" id="rsx-compte-sub"></p>
+            </div>
+            <div class="stats-tete stats-tete--finis">
+              <p class="stats-tete-titre">Réserve</p>
+              <p class="stats-tete-jour" id="rsx-reserve">-</p>
+              <p class="stats-tete-sub">jours d'avance, les trois créneaux remplis</p>
+            </div>
+            <div class="stats-tete stats-tete--ratio">
+              <p class="stats-tete-titre">Prochaine publication</p>
+              <p class="stats-tete-jour" id="rsx-prochain">-</p>
+              <p class="stats-tete-sub" id="rsx-prochain-sub"></p>
+            </div>
+          </div>
+
+          <div class="stats-panel" id="rsx-compte-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Compte Instagram</h2>
+                <p class="stats-panel-sub">Le jeton Facebook longue durée se colle ici : le serveur en tire le jeton de la Page, le range et le vérifie chaque semaine. Meta coupe l'accès 90 jours après la dernière connexion : le journal prévient dix jours avant, et on recolle un jeton. La publication ne démarre que quand le compte est actif ; chaque reel part avec un son tendance de la bibliothèque Instagram.</p>
+              </div>
+            </div>
+            <div id="rsx-compte-corps"></div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head rsx-tete">
+              <div>
+                <h2 class="stats-panel-title">Planning</h2>
+                <p class="stats-panel-sub">Les heures sont celles de Paris, tirées au sort dans chaque créneau. Rien à valider : un post qui a passé les contrôles part tout seul. Suspendre un post l'empêche de partir, la pause générale arrête tout.</p>
+              </div>
+              <label class="rsx-pause"><input type="checkbox" id="rsx-pause"> <span>Pause générale</span></label>
+            </div>
+            <div id="rsx-planning" class="rsx-planning"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <div class="adm-duo">
+            <div class="stats-panel">
+              <div class="stats-panel-head">
+                <div>
+                  <h2 class="stats-panel-title">Idées de posts</h2>
+                  <p class="stats-panel-sub">Une phrase suffit. Claude les place en priorité dans le planning.</p>
+                </div>
+              </div>
+              <form id="rsx-idee-form" class="rsx-idee-form">
+                <input type="text" id="rsx-idee" class="input" maxlength="500" placeholder="POV : quand il rentre avec des fleurs" autocomplete="off">
+                <button type="submit" class="btn btn-primary">Ajouter</button>
+              </form>
+              <ul id="rsx-idees" class="rsx-idees"></ul>
+            </div>
+            <div class="stats-panel">
+              <div class="stats-panel-head">
+                <div>
+                  <h2 class="stats-panel-title">Journal</h2>
+                  <p class="stats-panel-sub">Ce que font les automates : rendus, publications, alertes.</p>
+                </div>
+              </div>
+              <ul id="rsx-journal" class="rsx-journal"></ul>
+            </div>
+          </div>
+        </div>
+
         <div id="admin-affiliation-tab" class="hidden">
 
           <!-- Saisie du jeton. Il n'est jamais écrit dans le dépôt : le site
@@ -637,3 +706,4 @@
 
 <script src="/js/admin.js" defer></script>
 <script src="/js/admin-affiliation.js" defer></script>
+<script src="/js/admin-reseaux.js" defer></script>
