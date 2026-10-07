@@ -227,7 +227,7 @@
             ]
           },
           {
-            "description": "La chambre la nuit, lumière bleue, la lune dans la fenêtre, lampe de chevet allumée. Les deux sont dans le lit, la tête et les petites mains qui dépassent de la couette, les joues encore rouges. Le violet tourne la tête vers la rose et demande « Another nap tomorrow? » dans une bulle, les yeux brillants ; la rose éclate de rire, cache son visage derrière ses mains et répond d'un clin d'œil. Des cœurs montent à la fin, zoom doux.",
+            "description": "La chambre la nuit, lumière bleue, la lune dans la fenêtre, lampe de chevet allumée. Les deux sont dans le lit, la tête et les petites mains qui dépassent de la couette, les joues encore rouges. Le violet tourne la tête vers la rose et demande « Nap again tomorrow? » dans une bulle, les yeux brillants ; la rose éclate de rire, cache son visage derrière ses mains et répond d'un clin d'œil. Des cœurs montent à la fin, zoom doux.",
             "duree": 3.6,
             "decor": "chambre",
             "moment": "nuit",
@@ -312,7 +312,7 @@
                 "qui": "violet",
                 "de": 0.5,
                 "a": 2.2,
-                "texte": "Another nap tomorrow?"
+                "texte": "Nap again tomorrow?"
               }
             ],
             "camera": [

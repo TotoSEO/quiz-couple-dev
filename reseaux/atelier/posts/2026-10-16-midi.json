@@ -17,14 +17,14 @@
         "consigne": "8 questions, 5 seconds each. Count your right answers!",
         "secondes": 5,
         "questions": [
-          "What was your partner's favorite cartoon?",
+          "What cartoon did your partner love as a kid?",
           "What did they want to be as a kid?",
           "Where did they grow up?",
           "Who was their best friend at school?",
           "What toy did they love the most?",
           "Their favorite subject at school?",
           "What scared them the most as a kid?",
-          "Their favorite childhood snack?"
+          "What snack did they love as a kid?"
         ],
         "fin": {
           "question": "How many did you get? Comment your score!",
