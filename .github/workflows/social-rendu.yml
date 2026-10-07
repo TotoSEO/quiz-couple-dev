@@ -1,12 +1,13 @@
 name: Réseaux · synchro et rendu
 
-# Toutes les 3 heures : relit les posts écrits par la routine Claude sur la
+# Toutes les heures : relit les posts écrits par la routine Claude sur la
 # branche reseaux-atelier, les écrit dans Supabase, puis rend les fichiers des
-# posts publiés dans les 30 prochaines heures (studio Remotion).
+# posts publiés dans les 30 prochaines heures (studio Remotion). Un post
+# écrit pour le jour même est ainsi rendu dans l'heure.
 
 on:
   schedule:
-    - cron: '23 */3 * * *'
+    - cron: '23 * * * *'
   workflow_dispatch:
 
 concurrency:

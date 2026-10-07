@@ -10,6 +10,20 @@ import { ajouterJours, aujourdhui, categorieAttendue } from './lib/calendrier.mj
 
 const JOUR = 86400000;
 const CRENEAUX = ['matin', 'midi', 'soir'];
+// Un créneau d'aujourd'hui n'est proposé à la routine que s'il commence dans
+// plus de trois heures : le temps d'écrire le post et de le rendre (le rendu
+// passe toutes les heures).
+const MARGE_MIN = 180;
+const DEBUTS_DEFAUT = { matin: '06:00', midi: '11:00', soir: '16:00' };
+
+const enMinutes = (hhmm) => { const [h, m] = String(hhmm).split(':').map(Number); return h * 60 + m; };
+// l'heure qu'il est dans le fuseau du compte, en minutes depuis minuit
+const minutesLocales = (fuseau, maintenant) => {
+  const p = new Intl.DateTimeFormat('en-GB', { timeZone: fuseau, hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(maintenant);
+  const lire = (type) => Number(p.find((x) => x.type === type)?.value ?? 0);
+  return (lire('hour') % 24) * 60 + lire('minute');
+};
+const debutCreneau = (compte, creneau) => enMinutes((compte?.creneaux || []).find((c) => c.cle === creneau)?.debut || DEBUTS_DEFAUT[creneau]);
 
 // Le jeton de Page (connexion Facebook) n'expire pas : on vérifie une fois
 // par semaine qu'il marche encore, et on alerte dès qu'il ne répond plus,
@@ -96,18 +110,21 @@ export async function reserve(base, { maintenant = new Date(), fuseau = 'Europe/
 // qui est déjà passé ou prévu (pour varier), les idées de Thomas, ce qui
 // marche, les recettes refusées à corriger.
 export async function etat(base, { maintenant = new Date(), horizon = 21 } = {}) {
-  const [compte] = await base.select('social_comptes', 'select=langue,fuseau,actif&order=langue.asc&limit=1');
+  const [compte] = await base.select('social_comptes', 'select=langue,fuseau,actif,creneaux&order=langue.asc&limit=1');
   const fuseau = compte?.fuseau || 'Europe/Paris';
   const debut = aujourdhui(fuseau, maintenant);
+  const minutesMaintenant = minutesLocales(fuseau, maintenant);
   const melange = await base.reglage('melange');
   const posts = await base.select('social_posts', `select=id,jour,creneau,format,gabarit,categorie,statut&jour=gte.${ajouterJours(debut, -30)}&order=jour.asc`);
   const variantes = posts.length
     ? await base.select('social_variantes', `select=post_id,langue,statut,legende,recette,erreur&post_id=in.(${posts.map((p) => p.id).join(',')})`)
     : [];
+  // dès aujourd'hui, pour les créneaux qui laissent le temps d'écrire et de rendre
   const aRemplir = [];
-  for (let i = 2; i <= horizon; i++) {
+  for (let i = 0; i <= horizon; i++) {
     const jour = ajouterJours(debut, i);
     for (const creneau of CRENEAUX) {
+      if (i === 0 && debutCreneau(compte, creneau) < minutesMaintenant + MARGE_MIN) continue;
       if (!posts.some((p) => p.jour === jour && p.creneau === creneau && p.statut !== 'annule')) {
         aRemplir.push({ jour, creneau, categorie: categorieAttendue(melange, jour, creneau) });
       }

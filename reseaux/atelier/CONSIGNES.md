@@ -36,7 +36,9 @@ l'entretien :
 
 - `a_corriger` : posts dont le rendu ou la publication a échoué, avec
   l'erreur. On les corrige en premier.
-- `a_remplir` : les créneaux vides de J+2 à J+21, avec leur `categorie`.
+- `a_remplir` : les créneaux vides d'aujourd'hui (seulement ceux qui
+  commencent dans plus de trois heures, heure de Paris) à J+21, avec leur
+  `categorie`. On remplit dans l'ordre des dates : aujourd'hui d'abord.
 - `recents_et_prevus` : ce qui est passé et prévu, pour ne jamais répéter
   une phrase, une question ou une scène de la semaine.
 - `idees` : les idées de Thomas. Elles passent avant la banque ; le post
@@ -44,7 +46,8 @@ l'entretien :
 - `statistiques_j7` : ce qui a marché. On choisit un peu plus souvent les
   piliers et les décors qui ont le plus de partages et d'enregistrements.
 
-Sans `etat.json` (premier jour), on remplit de J+2 à J+14 en suivant la
+Sans `etat.json` (premier jour), on remplit d'aujourd'hui (créneaux qui
+commencent dans plus de trois heures, heure de Paris) à J+14 en suivant la
 semaine type, en sautant les fichiers déjà présents dans `posts/`.
 
 ## 3. Choisir le sujet
