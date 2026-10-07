@@ -749,6 +749,67 @@
     }).then(function (r) { return r.json(); });
   }
 
+  // ── Export (Thomas, 7 octobre 2026) ──────────────────────────────────────
+  // Un fichier JSON avec tout ce que l'admin sait sur trente jours : parties
+  // lancées et finies par test, trafic par jour, par page et par source,
+  // blog, mode à distance, clics vers Instagram. Il sert à analyser ailleurs
+  // (et à décider ce que l'admin doit garder). Les lectures passent par la
+  // même mémoire de session que les onglets : un export après une visite
+  // des onglets n'ajoute presque aucun appel à la base. Une fonction absente
+  // (migration pas passée) laisse son erreur dans le fichier, telle quelle.
+  function exporterTout() {
+    var btn = document.getElementById('admin-export');
+    var texteBouton = btn ? btn.innerHTML : '';
+    var tz = fuseau();
+    var n = 30;
+    if (btn) { btn.disabled = true; btn.querySelector('span').textContent = 'Export...'; }
+    var lots = {
+      parties_finies_total: statsRpc('get_quiz_total'),
+      parties_finies_par_test: statsRpc('get_quiz_counts'),
+      lancements_total: statsRpc('get_quiz_starts_total'),
+      lancements_par_test: statsRpc('get_quiz_starts_counts'),
+      parties_finies_par_jour: statsRpc('get_quiz_daily_total', { p_days: n, p_tz: tz }),
+      trafic_resume: statsRpc('get_trafic_resume', { p_days: n, p_tz: tz }),
+      trafic_par_jour: statsRpc('get_trafic_daily', { p_days: n, p_tz: tz }),
+      trafic_pages: statsRpcPages('get_trafic_pages', { p_days: n, p_tz: tz }),
+      trafic_sources: statsRpc('get_trafic_sources', { p_days: n, p_tz: tz }),
+      trafic_profondeur: statsRpc('get_trafic_profondeur', { p_days: n, p_tz: tz }),
+      trafic_entonnoir: statsRpc('get_trafic_entonnoir', { p_days: n, p_tz: tz }),
+      blog_articles: statsRpc('get_blog_articles', { p_days: n, p_tz: tz }),
+      sources_google_clics: statsRpc('get_source_pref_clics', { p_days: n, p_tz: tz }),
+      distance_par_jour: statsRpc('get_salon_daily', { p_days: n + 1, p_tz: tz }),
+      distance_depuis_le_debut: statsRpc('get_salon_counts_depuis', { p_depuis: DEBUT_DISTANCE, p_tz: tz }),
+      instagram_clics: statsRpc('get_instagram_clics')
+    };
+    var cles = Object.keys(lots);
+    Promise.all(cles.map(function (k) {
+      return Promise.resolve(lots[k]).catch(function (e) { return { erreur: String((e && e.message) || e) }; });
+    })).then(function (valeurs) {
+      var donnees = {};
+      cles.forEach(function (k, i) { donnees[k] = valeurs[i]; });
+      var fichier = {
+        exporte_le: new Date().toISOString(),
+        periode_jours: n,
+        fuseau: tz,
+        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : pages vues, visites, pages, sources, profondeur et entonnoir sur la période. blog_articles : lectures par article. distance_* : mode à distance. instagram_clics : clics vers Instagram depuis le site. Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
+        donnees: donnees
+      };
+      var blob = new Blob([JSON.stringify(fichier, null, 2)], { type: 'application/json' });
+      var lien = document.createElement('a');
+      var adresse = window.URL.createObjectURL(blob);
+      lien.href = adresse;
+      lien.download = 'quiz-couple-admin-' + new Date().toISOString().slice(0, 10) + '.json';
+      document.body.appendChild(lien);
+      lien.click();
+      lien.remove();
+      setTimeout(function () { window.URL.revokeObjectURL(adresse); }, 2000);
+    }).catch(function (e) {
+      alert('Export impossible : ' + ((e && e.message) || e));
+    }).then(function () {
+      if (btn) { btn.disabled = false; btn.innerHTML = texteBouton; }
+    });
+  }
+
   // Detect the date field of an RPC row and return a YYYY-MM-DD key.
   function rowDateKey(row) {
     var keys = ['day', 'd', 'date', 'created_at', 'created_day', 'jour'];
@@ -3623,6 +3684,10 @@
     // Refresh reviews
     var refreshBtn = document.getElementById('admin-refresh');
     if (refreshBtn) refreshBtn.addEventListener('click', loadReviews);
+
+    // Export de tout ce que l'admin sait, sur trente jours
+    var exportBtn = document.getElementById('admin-export');
+    if (exportBtn) exportBtn.addEventListener('click', exporterTout);
 
     // Review Filters
     document.querySelectorAll('.admin-filter').forEach(function (btn) {

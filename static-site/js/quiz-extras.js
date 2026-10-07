@@ -339,7 +339,18 @@
     // des que le quiz depasse ce nombre. On demande donc a part la colonne
     // note pour tous les avis de ce quiz, avec le total exact renvoye par
     // PostgREST dans l'en-tete Content-Range.
-    var stats = fetch(URL + '/rest/v1/reviews?select=rating&is_approved=eq.true&quiz_slug=eq.' + encodeURIComponent(slug) + '&limit=1000',
+    //
+    // Depuis le 7 octobre 2026, ces deux lectures sont cuites dans la page a
+    // la construction du site (#pqx-avis-cuits, sept reconstructions par
+    // jour) : elles etaient le plus gros poste de sortie de Supabase. Sans
+    // ce bloc (construction sans reseau), on redemande a la base comme avant.
+    var cuits = null;
+    var noeudCuits = root.querySelector('#pqx-avis-cuits');
+    if (noeudCuits) { try { cuits = JSON.parse(noeudCuits.textContent || ''); } catch (e0) { cuits = null; } }
+    if (cuits && !Array.isArray(cuits.rows)) cuits = null;
+
+    var stats = cuits ? Promise.resolve(cuits.total > 0 ? { total: cuits.total, avg: cuits.avg } : null)
+      : fetch(URL + '/rest/v1/reviews?select=rating&is_approved=eq.true&quiz_slug=eq.' + encodeURIComponent(slug) + '&limit=1000',
       { headers: { apikey: KEY, 'Authorization': 'Bearer ' + KEY, 'Prefer': 'count=exact' } })
       .then(function (r) {
         var plage = r.headers.get('Content-Range') || '';
@@ -351,8 +362,10 @@
         });
       }).catch(function () { return null; });
 
-    fetch(URL + '/rest/v1/reviews?select=author_name,rating,comment,created_at&is_approved=eq.true&quiz_slug=eq.' + encodeURIComponent(slug) + '&order=created_at.desc&limit=12', { headers: H })
-      .then(function (r) { return r.json(); })
+    var liste = cuits ? Promise.resolve(cuits.rows)
+      : fetch(URL + '/rest/v1/reviews?select=author_name,rating,comment,created_at&is_approved=eq.true&quiz_slug=eq.' + encodeURIComponent(slug) + '&order=created_at.desc&limit=12', { headers: H })
+      .then(function (r) { return r.json(); });
+    liste
       .then(function (rows) {
         if (!Array.isArray(rows) || rows.length === 0) { if (listEl) listEl.innerHTML = '<p class="pqx-none">' + t.none + '</p>'; return; }
         stats.then(function (s) {
