@@ -52,14 +52,26 @@ const son = (nom) => parseFloat(tokens.son.tokens.find((t) => t.name === nom).va
 const outils = path.dirname(createRequire(import.meta.url).resolve(`@remotion/compositor-${process.platform}-${process.arch}${process.platform === 'linux' ? '-gnu' : ''}/package.json`));
 const env = { ...process.env, LD_LIBRARY_PATH: outils };
 const ffmpeg = (args) => execFileSync(path.join(outils, 'ffmpeg'), args, { env, stdio: ['ignore', 'pipe', 'pipe'] });
-const normaliser = (entree, sortieFichier) => {
+// avecMusique : la normalisation à son-final n'a de sens qu'avec une musique
+// continue ; sur des bruitages isolés, elle les remonterait de 15 dB. Sans
+// musique, on garde le volume des bruitages tel quel et on ne fait que
+// rabattre les crêtes sous son-crete si elles dépassent.
+const normaliser = (entree, sortieFichier, avecMusique) => {
   // un demi-décibel de marge sous la crête visée : l'encodage AAC la dépasse un peu
-  const cible = `I=${son('son-final')}:TP=${son('son-crete') - 0.5}:LRA=11`;
+  const crete = son('son-crete') - 0.5;
+  const cible = `I=${son('son-final')}:TP=${crete}:LRA=11`;
   // loudnorm écrit sa mesure sur la sortie d'erreur
   const r = spawnSync(path.join(outils, 'ffmpeg'), ['-hide_banner', '-i', entree, '-vn', '-af', `loudnorm=${cible}:print_format=json`, '-f', 'null', '-'], { env, encoding: 'utf8' });
   if (r.status !== 0) throw new Error('mesure du volume impossible : ' + r.stderr.slice(-300));
   const mesure = JSON.parse(r.stderr.slice(r.stderr.lastIndexOf('{'), r.stderr.lastIndexOf('}') + 1));
-  const filtre = `loudnorm=${cible}:measured_I=${mesure.input_i}:measured_TP=${mesure.input_tp}:measured_LRA=${mesure.input_lra}:measured_thresh=${mesure.input_thresh}:offset=${mesure.target_offset}:linear=true`;
+  let filtre;
+  if (avecMusique) {
+    filtre = `loudnorm=${cible}:measured_I=${mesure.input_i}:measured_TP=${mesure.input_tp}:measured_LRA=${mesure.input_lra}:measured_thresh=${mesure.input_thresh}:offset=${mesure.target_offset}:linear=true`;
+  } else {
+    const tp = parseFloat(mesure.input_tp);
+    const baisse = Number.isFinite(tp) && tp > crete ? crete - tp : 0;
+    filtre = `volume=${baisse.toFixed(2)}dB`;
+  }
   ffmpeg(['-v', 'error', '-y', '-i', entree, '-c:v', 'copy', '-af', filtre, '-ar', '48000', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', sortieFichier]);
   return mesure;
 };
@@ -85,9 +97,9 @@ if (REELS.includes(recette.gabarit)) {
     enforceAudioTrack: true,
     outputLocation: path.join(sortie, '.brut.mp4'),
   });
-  const mesure = normaliser(path.join(sortie, '.brut.mp4'), path.join(sortie, 'reel.mp4'));
+  const mesure = normaliser(path.join(sortie, '.brut.mp4'), path.join(sortie, 'reel.mp4'), !!plan.musique);
   fs.rmSync(path.join(sortie, '.brut.mp4'), { force: true });
-  console.log(`son : ${mesure.input_i} LUFS mesurés, ramenés à ${son('son-final')} LUFS`);
+  console.log(plan.musique ? `son : ${mesure.input_i} LUFS mesurés, ramenés à ${son('son-final')} LUFS` : `son : bruitages seuls, crête ${mesure.input_tp} dBTP, pas de musique`);
   await renderStill({ ...commun, ...jpeg, serveUrl, composition, frame: plan.couverture, output: path.join(sortie, 'couverture.jpg') });
   console.log(`reel : ${(composition.durationInFrames / composition.fps).toFixed(1)} s, ${plan.verifs.length} écrans vérifiés`);
 } else if (recette.gabarit === 'image') {

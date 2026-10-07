@@ -48,8 +48,12 @@
     return new Date(jour + 'T12:00:00Z').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' });
   }
 
+  function compteEn() { return (donnees && donnees.comptes || []).find(function (x) { return x.langue === 'en'; }) || {}; }
+  function modeManuel() { return compteEn().mode === 'manuel'; }
+  function jourMoins(n) { return new Date(Date.now() - n * 86400000).toISOString().slice(0, 10); }
+
   function appel(methode, corps) {
-    return fetch(ctx.url + '/functions/v1/admin-social' + (methode === 'GET' ? '?jours=16' : ''), {
+    return fetch(ctx.url + '/functions/v1/admin-social' + (methode === 'GET' ? '?jours=23&debut=' + jourMoins(7) : ''), {
       method: methode,
       headers: {
         'Authorization': 'Bearer ' + ctx.cle,
@@ -86,7 +90,11 @@
       });
     });
     prochaines.sort(function (a, b) { return new Date(a.v.publier_a) - new Date(b.v.publier_a); });
-    if (prochaines.length) {
+    var aPublier = listeAPublier();
+    if (modeManuel() && aPublier.length) {
+      $('rsx-prochain').textContent = String(aPublier.length) + (aPublier.length > 1 ? ' reels' : ' reel');
+      $('rsx-prochain-sub').textContent = 'à publier à la main depuis l\'appli';
+    } else if (prochaines.length) {
       $('rsx-prochain').textContent = heureParis(prochaines[0].v.publier_a, false);
       $('rsx-prochain-sub').textContent = heureParis(prochaines[0].v.publier_a, true) + ', ' + nomDuPost(prochaines[0].p).toLowerCase();
     } else {
@@ -96,7 +104,80 @@
     $('rsx-pause').checked = donnees.reglages && donnees.reglages.pause === true;
     var pastille = document.querySelector('[data-notif="reseaux"]');
     var echecs = (donnees.posts || []).some(function (p) { return (p.variantes || []).some(function (v) { return v.statut === 'echec'; }); });
-    if (pastille) pastille.classList.toggle('hidden', !echecs && (donnees.reserve || 0) >= 7);
+    var enRetard = aPublier.some(function (x) { return new Date(x.v.publier_a) < new Date(); });
+    if (pastille) pastille.classList.toggle('hidden', !echecs && !enRetard && (donnees.reserve || 0) >= 7);
+  }
+
+  // Les reels prêts d'un compte en mode manuel : à publier depuis l'appli.
+  function listeAPublier() {
+    if (!modeManuel()) return [];
+    var l = [];
+    (donnees.posts || []).forEach(function (p) {
+      if (p.format !== 'reel' || p.statut !== 'valide') return;
+      (p.variantes || []).forEach(function (v) {
+        if (v.langue === 'en' && v.statut === 'rendu') l.push({ p: p, v: v });
+      });
+    });
+    l.sort(function (a, b) { return new Date(a.v.publier_a) - new Date(b.v.publier_a); });
+    return l;
+  }
+
+  function legendeComplete(v) {
+    return ((v.legende || '').trim() + '\n\n' + (v.hashtags || []).join(' ')).trim();
+  }
+
+  function copier(texte, bouton) {
+    var fini = function () {
+      var t = bouton.textContent;
+      bouton.textContent = 'Copiée !';
+      setTimeout(function () { bouton.textContent = t; }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texte).then(fini, function () { copierAncien(texte); fini(); });
+    } else { copierAncien(texte); fini(); }
+  }
+  function copierAncien(texte) {
+    var z = document.createElement('textarea');
+    z.value = texte; z.setAttribute('readonly', ''); z.style.position = 'fixed'; z.style.opacity = '0';
+    document.body.appendChild(z); z.select(); try { document.execCommand('copy'); } catch (e) { /* tant pis */ }
+    document.body.removeChild(z);
+  }
+
+  var ouverte = null;
+  function rendreAPublier() {
+    var panneau = $('rsx-main-panel');
+    var el = $('rsx-main');
+    if (!panneau || !el) return;
+    var manuel = modeManuel();
+    panneau.classList.toggle('hidden', !manuel);
+    if (!manuel) return;
+    var l = listeAPublier();
+    if (!l.length) {
+      el.innerHTML = '<p class="rsx-vide">Rien à publier pour le moment : les reels apparaissent ici dès qu\'ils sont rendus, la veille au soir.</p>';
+      return;
+    }
+    var maintenant = new Date();
+    el.innerHTML = l.map(function (x) {
+      var p = x.p, v = x.v;
+      var retard = v.publier_a && new Date(v.publier_a) < maintenant;
+      var ouvert = ouverte === v.id;
+      var nomFichier = 'quiz-couple-' + p.jour + '-' + p.creneau + '.mp4';
+      return '<article class="rsx-carte' + (ouvert ? ' is-ouverte' : '') + (retard ? ' is-retard' : '') + '" data-carte="' + esc(v.id) + '">' +
+        '<button type="button" class="rsx-carte-tete" data-ouvrir="' + esc(v.id) + '" aria-expanded="' + (ouvert ? 'true' : 'false') + '">' +
+        '<div class="rsx-vignette">' + (v.vignette ? '<img src="' + esc(v.vignette) + '" alt="" loading="lazy">' : '<span>R</span>') + '</div>' +
+        '<div class="rsx-carte-titre"><strong>' + esc(v.texte || nomDuPost(p)) + '</strong>' +
+        '<span>' + esc(nomDuPost(p)) + ' · prévu ' + esc(heureParis(v.publier_a, true)) + (retard ? ' · <b>en retard</b>' : '') + '</span></div>' +
+        '<span class="rsx-carte-fleche" aria-hidden="true">›</span></button>' +
+        '<div class="rsx-carte-corps">' +
+        '<div>' + (v.video ? '<video controls playsinline preload="none"' + (v.couverture ? ' poster="' + esc(v.couverture) + '"' : '') + ' src="' + esc(v.video) + '"></video>' : '<p class="rsx-aide">Vidéo indisponible (fichier supprimé).</p>') + '</div>' +
+        '<div><pre class="rsx-legende">' + esc((v.legende || '').trim()) + '\n\n<span class="rsx-tags">' + esc((v.hashtags || []).join(' ')) + '</span></pre>' +
+        '<div class="rsx-carte-actions">' +
+        (v.video ? '<a class="btn btn-primary" href="' + esc(v.video) + '" download="' + esc(nomFichier) + '" target="_blank" rel="noopener">Enregistrer la vidéo</a>' +
+          '<p class="rsx-aide">Sur iPhone : la vidéo s\'ouvre, appuie sur Partager puis « Enregistrer la vidéo ». Le fichier est l\'original en 1080 × 1920.</p>' : '') +
+        '<button type="button" class="rsx-btn" data-copier="' + esc(v.id) + '">Copier la légende et les hashtags</button>' +
+        '<button type="button" class="rsx-btn rsx-btn--publie" data-act="publie_main" data-variante="' + esc(v.id) + '">Publié !</button>' +
+        '</div></div></div></article>';
+    }).join('');
   }
 
   function rendreCompte() {
@@ -116,11 +197,22 @@
       });
       return;
     }
+    var manuel = c.mode === 'manuel';
     corps.innerHTML =
       '<div class="rsx-compte-ligne"><div><strong>@' + esc(c.nom) + '</strong><span class="rsx-gris"> · identifiant ' + esc(c.ig_user_id) + '</span></div>' +
-      '<label class="rsx-pause"><input type="checkbox" id="rsx-actif"' + (c.actif ? ' checked' : '') + '> <span>Publication active</span></label></div>';
+      '<label class="rsx-pause"><input type="checkbox" id="rsx-actif"' + (c.actif ? ' checked' : '') + '> <span>Publication active</span></label></div>' +
+      '<div class="rsx-compte-ligne" style="margin-top:.8rem"><div><strong>Les reels</strong><span class="rsx-gris"> · les images et les carrousels partent toujours tout seuls</span></div>' +
+      '<div class="rsx-mode" role="radiogroup">' +
+      '<label><input type="radio" name="rsx-mode" value="auto"' + (manuel ? '' : ' checked') + '> Automatique (API, notre musique)</label>' +
+      '<label><input type="radio" name="rsx-mode" value="manuel"' + (manuel ? ' checked' : '') + '> À la main (son tendance dans l\'appli)</label>' +
+      '</div></div>';
     $('rsx-actif').addEventListener('change', function () {
       action({ action: 'activer', langue: 'en', actif: this.checked });
+    });
+    corps.querySelectorAll('input[name="rsx-mode"]').forEach(function (r) {
+      r.addEventListener('change', function () {
+        if (this.checked) action({ action: 'mode', langue: 'en', mode: this.value });
+      });
     });
   }
 
@@ -155,6 +247,8 @@
         var v = (p.variantes || []).find(function (x) { return x.langue === 'en'; }) || (p.variantes || [])[0];
         var statut = p.statut !== 'valide' ? STATUTS[p.statut] : STATUTS[v ? v.statut : 'planifie'];
         statut = statut || [p.statut, 'attente'];
+        if (v && v.statut === 'rendu' && p.format === 'reel' && modeManuel()) statut = ['À publier', 'attente'];
+        if (v && v.statut === 'publie' && v.publie_main) statut = ['Publié (appli)', 'publie'];
         return '<div class="rsx-ligne">' +
           '<div class="rsx-vignette">' + (v && v.vignette ? '<img src="' + esc(v.vignette) + '" alt="" loading="lazy">' : '<span>' + esc((FORMATS[p.format] || '').slice(0, 1)) + '</span>') + '</div>' +
           '<div class="rsx-quand"><strong>' + esc(v && v.publier_a ? heureParis(v.publier_a) : '-') + '</strong><span>' + esc(CRENEAUX[p.creneau] || p.creneau) + '</span></div>' +
@@ -189,6 +283,7 @@
   function rendre() {
     rendreTuiles();
     rendreCompte();
+    rendreAPublier();
     rendrePlanning();
     rendreIdees();
     rendreJournal();
@@ -218,10 +313,26 @@
       action({ action: 'idee', texte: t });
     });
     $('admin-reseaux-tab').addEventListener('click', function (e) {
+      var o = e.target.closest('[data-ouvrir]');
+      if (o) {
+        var id = o.getAttribute('data-ouvrir');
+        ouverte = ouverte === id ? null : id;
+        rendreAPublier();
+        return;
+      }
+      var c = e.target.closest('[data-copier]');
+      if (c) {
+        var vid = c.getAttribute('data-copier');
+        var trouve = listeAPublier().find(function (x) { return x.v.id === vid; });
+        if (trouve) copier(legendeComplete(trouve.v), c);
+        return;
+      }
       var b = e.target.closest('[data-act]');
       if (!b || b.id === 'rsx-pause') return;
       var act = b.getAttribute('data-act');
       if (act === 'annuler' && !confirm('Annuler ce post ? Il ne sera pas publié.')) return;
+      if (act === 'publie_main' && !confirm('Ce reel est publié sur Instagram ?')) return;
+      if (act === 'publie_main') ouverte = null;
       action({ action: act, post_id: b.getAttribute('data-post'), variante_id: b.getAttribute('data-variante'), id: b.getAttribute('data-id') });
     });
   }

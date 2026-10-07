@@ -28,7 +28,7 @@ const Reel: React.FC<PropsReel> = ({ recette: brute, plan, verification, silenci
       {recette.gabarit === 'pov' && <Pov recette={recette} plan={p} verification={verification} />}
       {!verification && !silencieux && (
         <>
-          <Musique fichier={p.musique} debut={recette.musiqueDebut} duree={p.duree} sons={p.sons} />
+          {p.musique && <Musique fichier={p.musique} debut={recette.musiqueDebut} duree={p.duree} sons={p.sons} />}
           <Bruitages sons={p.sons} />
         </>
       )}

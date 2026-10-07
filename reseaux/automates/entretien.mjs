@@ -37,8 +37,12 @@ export async function menage(base, { maintenant = new Date() } = {}) {
   const publiees = await base.select('social_variantes', `select=id,fichiers&statut=eq.publie&publie_le=lt.${avant(JOUR)}&fichiers_supprimes_le=is.null`);
   const echouees = await base.select('social_variantes', `select=id,fichiers&statut=eq.echec&updated_at=lt.${avant(7 * JOUR)}&fichiers_supprimes_le=is.null`);
   // filet : un post rendu mais jamais parti (compte coupé, pause) depuis plus
-  // d'un jour passe en échec et libère le stockage
-  const oubliees = await base.select('social_variantes', `select=id,fichiers&statut=in.(rendu,conteneur)&publier_a=lt.${avant(JOUR)}`);
+  // d'un jour passe en échec et libère le stockage ; en mode manuel, un reel
+  // attend Thomas sept jours
+  const manuels = new Set((await base.select('social_comptes', 'select=langue&mode=eq.manuel')).map((c) => c.langue));
+  const oubliees = (await base.select('social_variantes', `select=id,fichiers,langue,publier_a,statut&statut=in.(rendu,conteneur)&publier_a=lt.${avant(JOUR)}`)).filter(
+    (v) => !(manuels.has(v.langue) && v.statut === 'rendu' && v.publier_a >= avant(7 * JOUR)),
+  );
   for (const v of oubliees) {
     await base.update('social_variantes', `id=eq.${v.id}`, { statut: 'echec', erreur: 'créneau passé sans publication' });
   }
@@ -50,6 +54,41 @@ export async function menage(base, { maintenant = new Date() } = {}) {
     n += chemins.length;
   }
   if (n) await base.journal('info', 'entretien', `${n} fichiers supprimés du stockage`);
+  return n;
+}
+
+// Un post publié à la main depuis l'appli n'a pas d'identifiant Instagram :
+// on le retrouve dans les derniers médias du compte par sa légende (la
+// première ligne) et son heure (six heures autour du « Publié » de l'admin).
+export async function rapprocher(base, { maintenant = new Date(), instagramPour } = {}) {
+  const attente = await base.select('social_variantes', `select=id,langue,legende,publie_le&statut=eq.publie&publie_main=is.true&ig_media_id=is.null&publie_le=gte.${new Date(maintenant - 3 * JOUR).toISOString()}`);
+  if (!attente.length) return 0;
+  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id');
+  let n = 0;
+  for (const langue of new Set(attente.map((v) => v.langue))) {
+    const compte = comptes.find((c) => c.langue === langue);
+    const [j] = compte ? await base.select('social_jetons', `select=jeton&compte_id=eq.${compte.id}`) : [];
+    if (!j || !compte.ig_user_id) continue;
+    const ig = instagramPour ? instagramPour(j.jeton, compte.ig_user_id) : new Instagram(j.jeton, compte.ig_user_id);
+    let medias;
+    try {
+      medias = await ig.medias(25);
+    } catch (e) {
+      await base.journal('alerte', 'entretien', `rapprochement impossible : ${e.message}`);
+      continue;
+    }
+    const pris = new Set();
+    for (const v of attente.filter((x) => x.langue === langue)) {
+      const ligne = (v.legende || '').trim().split('\n')[0].trim().toLowerCase();
+      const quand = new Date(v.publie_le).getTime();
+      const m = medias.find((x) => !pris.has(x.id) && Math.abs(new Date(x.timestamp).getTime() - quand) < 6 * 3600 * 1000 && (x.caption || '').trim().toLowerCase().startsWith(ligne.slice(0, 40)));
+      if (!m) continue;
+      pris.add(m.id);
+      await base.update('social_variantes', `id=eq.${v.id}`, { ig_media_id: m.id, permalien: m.permalink || null, publie_le: m.timestamp || v.publie_le });
+      await base.journal('info', 'entretien', `post publié à la main retrouvé : ${m.permalink || m.id}`, null, v.id);
+      n++;
+    }
+  }
   return n;
 }
 
@@ -142,6 +181,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const base = await connexion();
   await renouvelerJetons(base);
   await menage(base);
+  await rapprocher(base);
   await statistiques(base);
   const e = await etat(base);
   if (e.reserve_jours < 7) await base.journal('alerte', 'entretien', `réserve de ${e.reserve_jours} jours seulement`);

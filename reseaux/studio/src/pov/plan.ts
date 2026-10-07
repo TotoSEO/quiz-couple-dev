@@ -108,7 +108,7 @@ export const planPov = (r: RecettePov): Plan => {
     verifs: uniques,
     scenes,
     sons: sons.sort((x, y) => x.a - y.a),
-    musique: r.musique ?? 'ukulele-song.mp3',
+    musique: r.musique,
     detail: {},
   };
 };

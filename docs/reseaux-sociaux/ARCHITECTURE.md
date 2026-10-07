@@ -89,8 +89,17 @@ Ces contraintes viennent de la documentation Meta et des guides à jour
 
 Ce que ça change concrètement :
 
-- **Pas de musique tendance automatique avec la connexion Instagram.** Voir
-  la partie 5 pour ce qu'on fait à la place, et la voie de l'Audio API.
+- **Pas de musique tendance automatique avec la connexion Instagram.** D'où
+  le **mode « à la main »** du compte (7 octobre 2026) : les reels sont
+  rendus sans musique et attendent dans la liste « À publier » de l'onglet
+  Réseaux ; Thomas enregistre la vidéo sur son téléphone, copie la légende,
+  publie depuis l'appli Instagram avec un son tendance, puis appuie sur
+  « Publié ! ». Les images et les carrousels, sans musique, partent toujours
+  par l'API. L'entretien retrouve ensuite le post publié (première ligne de
+  la légende, six heures autour du « Publié ») pour lui donner son
+  identifiant Instagram et relever ses statistiques. Un reel attend sept
+  jours dans la liste avant d'être abandonné. `social_comptes.mode`,
+  `social_variantes.publie_main` (migration `20261008120000`).
 - **Un « post classique avec musique » sera un reel** : une image animée de
   10 à 12 secondes avec sa musique. Les vrais posts image et les carrousels
   sont publiés sans musique.
@@ -325,6 +334,15 @@ enrichie au fil du temps.
 ## 5. Le son : musique, bruitages et mixage
 
 ### 5.1 Ce qu'on fait à la place des musiques tendance
+
+**Depuis le 7 octobre 2026, les reels sont rendus sans musique** : les
+bruitages seuls, doux (volumes de 0,10 à 0,24) et variés (plusieurs
+variantes d'un même son, tirées de l'instant), et le rendu ne les remonte
+pas (sans musique, la normalisation à -14 LUFS les aurait poussés de 15 dB ;
+elle ne fait plus que rabattre les crêtes sous -1 dBTP). Thomas ajoute le
+son tendance dans l'appli (mode « à la main »). Ce qui suit reste vrai pour
+le jour où on repasserait en automatique : une recette qui porte `ambiance`
+reçoit un morceau.
 
 1. **Une bibliothèque musicale maison** : 55 morceaux libres de droits
    (octobre 2026), dans `reseaux/studio/public/musique/bibliotheque.json`,

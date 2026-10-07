@@ -4,28 +4,55 @@ import { FPS } from './charte';
 
 // Bruitages (public/sons, pack CC0 de Kenney) et leur volume de départ.
 // Le volume final du reel est ramené à -14 LUFS au montage (rendre.mjs).
+// Les bruitages partent doucement (Thomas, octobre 2026 : « moins forts ») :
+// tous les fichiers de Kenney crêtent près de 0 dBTP, ce volume est la seule
+// atténuation, et il n'y a plus de musique en dessous pour les couvrir.
 export const VOLUMES = {
-  intro: 0.4,
-  apparition: 0.3,
-  reponse: 0.22,
-  bulle: 0.28,
-  tic: 0.25,
-  revelation: 0.45,
-  joie: 0.35,
-  fin: 0.4,
-  signature: 0.3,
+  intro: 0.22,
+  apparition: 0.16,
+  reponse: 0.12,
+  bulle: 0.15,
+  tic: 0.12,
+  revelation: 0.24,
+  joie: 0.2,
+  fin: 0.22,
+  signature: 0.16,
   // animations (Kenney, packs Interface, Digital, RPG et Impact, CC0)
-  pop: 0.3,
-  saut: 0.3,
-  pas: 0.2,
-  zoom: 0.25,
-  glisse: 0.25,
-  coeur: 0.3,
-  bisou: 0.35,
-  froissement: 0.3,
-  porte: 0.35,
-  tictac: 0.3,
+  pop: 0.16,
+  saut: 0.16,
+  pas: 0.1,
+  zoom: 0.13,
+  glisse: 0.13,
+  coeur: 0.14,
+  bisou: 0.18,
+  froissement: 0.18,
+  porte: 0.2,
+  tictac: 0.16,
 } as const;
+// Nombre de variantes d'un même son (pop.ogg, pop-2.ogg, pop-3.ogg...) :
+// la variante est tirée de l'instant du son, le même reel donne toujours le
+// même rendu, et deux « pop » qui se suivent ne sonnent pas pareil.
+export const VARIANTES: Partial<Record<keyof typeof VOLUMES, number>> = {
+  pop: 3,
+  saut: 3,
+  pas: 4,
+  coeur: 3,
+  bulle: 3,
+  glisse: 3,
+  froissement: 4,
+  zoom: 2,
+  bisou: 2,
+  joie: 2,
+};
+export const fichierSon = (nom: keyof typeof VOLUMES, a: number) => {
+  const n = VARIANTES[nom] ?? 1;
+  if (n <= 1) return `sons/${nom}.ogg`;
+  // un pseudo-hasard stable sur l'instant (en images) et le nom
+  let h = 2166136261;
+  for (const c of `${nom}${a}`) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
+  const k = (h >>> 0) % n;
+  return k === 0 ? `sons/${nom}.ogg` : `sons/${nom}-${k + 1}.ogg`;
+};
 export type NomSon = keyof typeof VOLUMES;
 export type EvenementSonore = { nom: NomSon; a: number; volume?: number };
 
@@ -33,7 +60,7 @@ export const Bruitages: React.FC<{ sons: EvenementSonore[] }> = ({ sons }) => (
   <>
     {sons.map((s, i) => (
       <Sequence key={i} from={s.a} durationInFrames={2 * FPS} layout="none">
-        <Audio src={staticFile(`sons/${s.nom}.ogg`)} volume={s.volume ?? VOLUMES[s.nom]} />
+        <Audio src={staticFile(fichierSon(s.nom, s.a))} volume={s.volume ?? VOLUMES[s.nom]} />
       </Sequence>
     ))}
   </>

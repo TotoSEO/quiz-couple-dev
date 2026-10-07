@@ -20,12 +20,12 @@ const RETARD_MAX_MIN = 90;
 const minutes = (n) => n * 60 * 1000;
 
 export async function publier(base, { maintenant = new Date(), aBlanc = false, instagramPour } = {}) {
-  const bilan = { conteneurs: 0, publies: 0, attente: 0, echecs: 0, aBlanc: 0 };
+  const bilan = { conteneurs: 0, publies: 0, attente: 0, echecs: 0, aBlanc: 0, manuel: 0 };
   if ((await base.reglage('pause')) === true) {
     console.log('pause générale : rien ne part');
     return bilan;
   }
-  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id,actif');
+  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id,actif,mode');
   const horizon = new Date(maintenant.getTime() + minutes(AVANCE_REEL_MIN)).toISOString();
   const candidates = await base.select(
     'social_variantes',
@@ -36,6 +36,13 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
     const [post] = await base.select('social_posts', `select=format,statut,jour,creneau&id=eq.${v.post_id}`);
     if (!post || post.statut !== 'valide') continue;
     const due = new Date(v.publier_a) <= maintenant;
+    // mode manuel : le reel reste « rendu » et attend Thomas dans l'admin (il
+    // y met un son tendance depuis l'appli) ; une image ou un carrousel, sans
+    // musique, part tout seul
+    if (compte?.mode === 'manuel' && post.format === 'reel' && v.statut === 'rendu') {
+      if (due) bilan.manuel++;
+      continue;
+    }
     const [jeton] = compte ? await base.select('social_jetons', `select=jeton&compte_id=eq.${compte.id}`) : [];
     // compte pas encore branché : rien ne part, et rien n'est compté en échec
     if (aBlanc || !compte?.actif || !compte?.ig_user_id || !jeton) {

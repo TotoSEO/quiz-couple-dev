@@ -57,8 +57,14 @@ test('seuls les fichiers présents sont choisis, et rien si aucun ne l\'est', ()
   assert.equal(choisirMusique({ ambiance: 'fetes', gabarit: 'pov', disponible: () => false }), null);
 });
 
-test('le choix est écrit dans la recette, et un morceau déjà nommé est gardé', async () => {
-  const b = new BaseMemoire({ social_variantes: [{ id: 'v1', langue: 'en', statut: 'a_rendre', publier_a: '2026-10-12T10:00:00Z', recette: { gabarit: 'pov' } }] });
+test('sans ambiance ni morceau, un reel part sans musique (le son tendance se met dans l\'appli)', async () => {
+  const b = new BaseMemoire({ social_variantes: [{ id: 'v0', langue: 'en', statut: 'a_rendre', recette: { gabarit: 'pov' } }] });
+  const r = await avecMusique(b, b.tables.social_variantes[0], 'coquin', tous);
+  assert.equal(r.musique, undefined);
+});
+
+test('le choix est écrit dans la recette quand elle demande une ambiance, et un morceau déjà nommé est gardé', async () => {
+  const b = new BaseMemoire({ social_variantes: [{ id: 'v1', langue: 'en', statut: 'a_rendre', publier_a: '2026-10-12T10:00:00Z', recette: { gabarit: 'pov', ambiance: 'sensuel' } }] });
   const r = await avecMusique(b, b.tables.social_variantes[0], 'coquin', tous);
   assert.ok(BIBLIOTHEQUE.morceaux.find((m) => m.fichier === r.musique).ambiance.includes('sensuel'));
   assert.equal(b.tables.social_variantes[0].recette.musique, r.musique);

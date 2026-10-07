@@ -27,7 +27,9 @@ export type Plan = {
   verifs: number[];
   scenes: Scene[];
   sons: EvenementSonore[];
-  musique: string;
+  // la musique de fond, seulement si la recette en nomme une : par défaut un
+  // reel part avec ses seuls bruitages, le son tendance s'ajoute dans l'appli
+  musique?: string;
   detail: Record<string, number>;
 };
 
@@ -54,7 +56,7 @@ export const planCitation = (r: RecetteCitation): Plan => {
     verifs: [visible],
     scenes: [],
     sons: [{ nom: 'signature', a: signature }],
-    musique: r.musique ?? 'romantic-inspiration.mp3',
+    musique: r.musique,
     detail: { debut, pas, finTexte, signature, sortieDebut: duree - sortie },
   };
 };
@@ -112,7 +114,7 @@ export const planJeu = (r: RecetteJeu): Plan => {
     verifs,
     scenes,
     sons,
-    musique: r.musique ?? 'ukulele-song.mp3',
+    musique: r.musique,
     detail: { s, apres },
   };
 };

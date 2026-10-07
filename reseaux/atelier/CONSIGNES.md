@@ -96,12 +96,11 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   ... » : 90 signes au plus, trois lignes. Pas d'emoji à l'écran (la police
   ne les dessine pas) ; « <3 » est permis.
 - Les bruitages se posent tout seuls (pas, sauts, bulles, cœurs, zooms,
-  couette). La musique aussi : ne nomme pas de morceau, le rendu en prend un
-  dans l'ambiance de la catégorie, jamais un morceau entendu récemment
-  (`pov` : `leger`, `coquin` : `sensuel`, `statique` et `phrase` : `doux`,
-  jeux : `jeu`). Pour un autre ton, mets `"ambiance"` dans la recette :
-  `doux` pour une animation tendre, `sensuel` pour un statique du soir,
-  `fetes` pour Noël et le Nouvel An.
+  couette), doux et variés. **Pas de musique** : depuis le 7 octobre 2026,
+  Thomas publie les reels depuis l'appli Instagram et y met lui-même un son
+  tendance, le reel part donc avec ses seuls bruitages. Ne mets ni
+  `musique` ni `ambiance` dans une recette (la bibliothèque reste là pour un
+  jour où on repasserait en automatique : `"ambiance": "doux"` la rappelle).
 - Statique : un seul plan, 10 à 12 s, un câlin ou une pose tendre, un
   texte mot à mot au milieu. Il bouge quand même : pour un câlin, chacun
   entre par son bord (`"a": -150` et `"a": 1230` avec un geste `marche` dès

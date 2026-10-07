@@ -61,6 +61,12 @@ export class Instagram {
     return this.appel('POST', `/${this.id}/media_publish`, { creation_id: conteneurId });
   }
 
+  // Les derniers posts du compte, pour retrouver ceux publiés depuis l'appli.
+  async medias(limite = 25) {
+    const r = await this.appel('GET', `/${this.id}/media`, { fields: 'id,caption,timestamp,permalink,media_type', limit: String(limite) });
+    return r.data || [];
+  }
+
   async lien(mediaId) {
     const r = await this.appel('GET', `/${mediaId}`, { fields: 'permalink' });
     return r.permalink;

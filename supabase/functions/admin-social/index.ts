@@ -48,7 +48,7 @@ serve(async (req) => {
       const fin = jourIso(new Date(new Date(debut + 'T12:00:00Z').getTime() + jours * 86400000));
 
       const [comptes, jetons, reglages, posts, journal, idees] = await Promise.all([
-        db.from('social_comptes').select('id,langue,nom,ig_user_id,actif,fuseau,creneaux,jeton_expire_le').order('langue'),
+        db.from('social_comptes').select('id,langue,nom,ig_user_id,actif,mode,fuseau,creneaux,jeton_expire_le').order('langue'),
         db.from('social_jetons').select('compte_id,obtenu_le,renouvele_le'),
         db.from('social_reglages').select('cle,valeur'),
         db.from('social_posts').select('id,jour,creneau,format,gabarit,categorie,statut,motif').gte('jour', debut).lt('jour', fin).order('jour').order('creneau'),
@@ -59,14 +59,21 @@ serve(async (req) => {
 
       const ids = (posts.data || []).map((p) => p.id);
       const variantes = ids.length
-        ? await db.from('social_variantes').select('id,post_id,langue,statut,publier_a,legende,hashtags,permalien,erreur,vignette,essais,recette').in('post_id', ids)
+        ? await db.from('social_variantes').select('id,post_id,langue,statut,publier_a,legende,hashtags,permalien,erreur,vignette,essais,recette,fichiers,publie_main,publie_le').in('post_id', ids)
         : { data: [], error: null };
       if (variantes.error) throw variantes.error;
 
-      const vignettes = (variantes.data || []).map((v) => v.vignette).filter(Boolean);
+      // vignettes, et les fichiers des reels à publier à la main (mode manuel) :
+      // des adresses signées valables une heure, à ouvrir depuis le téléphone
+      const manuels = new Set((comptes.data || []).filter((c) => c.mode === 'manuel').map((c) => c.langue));
+      const aSigner = (variantes.data || []).flatMap((v) => {
+        const l = v.vignette ? [v.vignette] : [];
+        if (manuels.has(v.langue) && v.statut === 'rendu' && v.fichiers?.reel) l.push(v.fichiers.reel, v.fichiers.couverture);
+        return l.filter(Boolean);
+      });
       const signees: Record<string, string> = {};
-      if (vignettes.length) {
-        const s = await db.storage.from('social-medias').createSignedUrls(vignettes, 3600);
+      if (aSigner.length) {
+        const s = await db.storage.from('social-medias').createSignedUrls([...new Set(aSigner)], 3600);
         for (const x of s.data || []) if (x.signedUrl && x.path) signees[x.path] = x.signedUrl;
       }
 
@@ -90,7 +97,15 @@ serve(async (req) => {
           ...p,
           variantes: (variantes.data || [])
             .filter((v) => v.post_id === p.id)
-            .map((v) => ({ ...v, vignette: v.vignette ? signees[v.vignette] || null : null, texte: v.recette?.texte || v.recette?.accroche || v.recette?.pages?.[0]?.accroche || '', recette: undefined })),
+            .map((v) => ({
+              ...v,
+              vignette: v.vignette ? signees[v.vignette] || null : null,
+              video: v.fichiers?.reel ? signees[v.fichiers.reel] || null : null,
+              couverture: v.fichiers?.couverture ? signees[v.fichiers.couverture] || null : null,
+              texte: v.recette?.texte || v.recette?.accroche || v.recette?.pages?.[0]?.accroche || v.recette?.titre || v.recette?.idee || '',
+              recette: undefined,
+              fichiers: undefined,
+            })),
         })),
         journal: journal.data,
         idees: idees.data,
@@ -131,6 +146,31 @@ serve(async (req) => {
       if (action === 'supprimer_idee') {
         const { error } = await db.from('social_idees').delete().eq('id', corps.id);
         if (error) throw error;
+        return json({ success: true });
+      }
+
+      if (action === 'mode') {
+        // auto : l'API publie ; manuel : les reels attendent Thomas dans « À publier »
+        const mode = corps.mode === 'manuel' ? 'manuel' : 'auto';
+        const { error } = await db.from('social_comptes').update({ mode }).eq('langue', corps.langue);
+        if (error) throw error;
+        await db.from('social_journal').insert({ niveau: 'info', source: 'admin', message: `compte ${corps.langue} en publication ${mode === 'manuel' ? 'à la main' : 'automatique'}` });
+        return json({ success: true });
+      }
+
+      if (action === 'publie_main') {
+        // Thomas a publié le reel depuis l'appli : on le note publié, l'entretien
+        // retrouvera l'identifiant Instagram pour les statistiques
+        const permalien = String(corps.permalien || '').trim();
+        const { data, error } = await db
+          .from('social_variantes')
+          .update({ statut: 'publie', publie_main: true, publie_le: new Date().toISOString(), permalien: permalien || null, erreur: null })
+          .eq('id', corps.variante_id)
+          .eq('statut', 'rendu')
+          .select('id');
+        if (error) throw error;
+        if (!data?.length) return json({ success: false, error: 'Ce post n\'est plus en attente' }, 409);
+        await db.from('social_journal').insert({ niveau: 'info', source: 'admin', message: 'reel publié à la main depuis l\'appli', variante_id: corps.variante_id });
         return json({ success: true });
       }
 

@@ -98,8 +98,7 @@ mot à mot : « I saw these flowers... and thought of you »).
 - Le titre « POV: ... » en haut, ou un message mot à mot, rarement les deux.
 - La mention quiz-couple.com est dans l'image ; **la légende ne renvoie
   jamais vers le site.**
-- Musique : choisie au rendu dans l'ambiance `leger` (humour) ; une
-  animation tendre demande `"ambiance": "doux"`.
+- Musique : aucune (voir « Le son »), les bruitages suffisent.
 
 ### `coquin` : l'animation coquine de la semaine (gabarit `pov`)
 
@@ -113,7 +112,7 @@ c'est appuyé, moins c'est vu.
 
 Les deux mascottes dans une pose tendre (câlin, banc au coucher du soleil,
 sous la couette, dans le canapé), une phrase courte qui s'écrit mot à mot
-(« I love you forever <3 »), une musique douce. Un seul plan et une seule
+(« i love u forever <3 »). Un seul plan et une seule
 idée, mais qui bouge : pour un câlin, les deux arrivent chacun d'un bord de
 l'écran, se rejoignent au milieu et s'enlacent, puis les cœurs montent.
 10 à 12 secondes.
@@ -144,39 +143,20 @@ Gabarits prêts (post 4:5 avec une scène dessinée, carrousel de questions
 avec les mascottes en couverture), hors de la semaine type tant que Thomas
 ne les y a pas mis.
 
-## La musique
+## Le son
 
-Le rendu choisit le morceau tout seul, dans l'ambiance de la catégorie :
-`leger` pour l'humour, `sensuel` (R&B et lo-fi doux) pour le coquin, `doux`
-(piano, guitare) pour les statiques et les phrases, `jeu` pour les jeux,
-`fetes` pour Noël et le Nouvel An. Une recette peut demander une autre
-ambiance (`"ambiance": "doux"` pour une animation tendre). Un morceau ne
-revient pas avant que toute son ambiance soit passée, et il ne part pas
-toujours de la première seconde. 55 morceaux libres de droits (Mixkit et
-FreePD) : la bibliothèque musicale d'Instagram n'est pas accessible à une
+**Les reels partent sans musique.** Thomas les publie depuis l'appli
+Instagram et y ajoute un son tendance à la main (mode « à la main » de
+l'admin) : c'est la musique qui fait percer un post, et seule l'appli donne
+accès aux tendances. Le reel ne porte que ses bruitages, doux et variés
+(pas, sauts, bulles, cœurs, couette...).
+
+La bibliothèque de 55 morceaux libres de droits (Mixkit et FreePD) reste
+dans le studio en cinq ambiances (`leger`, `doux`, `sensuel`, `jeu`,
+`fetes`), pour le jour où on repasserait en automatique : une recette qui
+porte `"ambiance"` reçoit un morceau au rendu, jamais un morceau entendu
+récemment. La bibliothèque musicale d'Instagram n'est pas accessible à une
 publication par l'API avec la connexion Instagram.
-
-## Les textes à l'écran
-
-Ce qui marche chez les références (voir `REFERENCES.md`), c'est un texte
-qui ressemble à un message qu'on envoie à son partenaire, pas à une phrase
-écrite pour un visuel.
-
-- **Les mini messages, les statiques et les bulles sont en minuscules**,
-  parlés, courts : « i saw these flowers... and thought of u <3 »,
-  « ur my favorite person », « thinking of u rn », « bc u stole my heart!! »,
-  « i love u forever <3 ». Deux à six mots par ligne.
-- Les abréviations de message sont permises et bienvenues : « u », « ur »,
-  « rn », « bc », « im », « tho », « :3 », « <3 », « !!! » (un par visuel).
-  Jamais d'emoji à l'écran : la police ne les dessine pas.
-- Le texte parle à la personne qui regarde (« u »), pour qu'elle l'envoie à
-  l'autre. C'est ce qui fait partager.
-- **Les titres « POV: » gardent une vraie phrase** après « POV: », en
-  minuscules (« POV: your partner says they're not hungry »).
-- **Les phrases tendres (gabarit citation) gardent leur ponctuation
-  normale** : police plume, majuscule au début, quatre lignes au plus.
-- Les jeux restent en anglais simple et correct : une question doit se lire
-  en une seconde.
 
 ## Légendes et hashtags
 

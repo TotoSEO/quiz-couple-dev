@@ -44,10 +44,13 @@ async function musiquesRecentes(base, langue) {
   return lignes.filter((l) => l.recette?.musique).map((l) => ({ musique: l.recette.musique, musiqueDebut: l.recette.musiqueDebut }));
 }
 
-// Un reel sans morceau nommé en reçoit un, écrit dans sa recette.
+// Depuis le 7 octobre 2026, un reel part sans musique : Thomas ajoute un son
+// tendance dans l'appli Instagram. Une recette qui veut une musique de la
+// bibliothèque le demande (une ambiance, ou un morceau), et le choix est
+// écrit dans la recette.
 export async function avecMusique(base, v, categorie, disponible = present) {
   const r = v.recette;
-  if (!AVEC_MUSIQUE.includes(r.gabarit) || (r.musique && disponible(r.musique))) return r;
+  if (!AVEC_MUSIQUE.includes(r.gabarit) || !(r.ambiance || r.musique) || (r.musique && disponible(r.musique))) return r;
   const choix = choisirMusique({ ambiance: ambianceDe(r, categorie), gabarit: r.gabarit, recentes: await musiquesRecentes(base, v.langue), graine: v.id, disponible });
   if (!choix) return r;
   const recette = { ...r, ...choix };

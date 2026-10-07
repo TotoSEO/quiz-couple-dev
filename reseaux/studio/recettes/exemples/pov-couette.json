@@ -4,8 +4,6 @@
   "theme": "light",
   "idee": "Coquin en clin d'œil : le matin, le midi et le soir, les deux plongent dans le lit et la couette se met à bouger, sans jamais rien montrer. Un écran noir entre chaque moment, la lumière de la chambre change.",
   "titre": "POV: what I want in the morning, at noon and at night",
-  "musique": "mx-sleepy-cat.mp3",
-  "musiqueDebut": 0,
   "plans": [
     {
       "description": "La chambre au matin, lumière douce et chaude, soleil bas dans la fenêtre, étiquette « Morning ». Les deux sont debout devant le lit dès la première image ; la rose fait un clin d'œil au violet, les joues rouges. Ils prennent leur élan et plongent dans le lit l'un après l'autre, puis disparaissent sous la couette, qui se met à bouger. Une chaussette s'envole vers le haut à droite en tournant, des cœurs sortent du milieu, la caméra tremble.",
@@ -16,19 +14,96 @@
       "couetteDe": 2.3,
       "legende": "Morning",
       "persos": [
-        { "qui": "rose", "a": "devant-gauche", "gestes": [
-          { "geste": "regarde", "cible": "violet", "de": 0, "a": 0.6 },
-          { "geste": "visage", "yeux": "clin", "bouche": "sourire", "rougit": true, "de": 0.1, "a": 0.7 },
-          { "geste": "plonge", "vers": "lit-gauche", "de": 0.7, "a": 1.5 },
-          { "geste": "disparait", "vers": "bas", "de": 1.9, "a": 2.3 } ] },
-        { "qui": "violet", "a": "devant-droite", "gestes": [
-          { "geste": "visage", "yeux": "heureux", "bouche": "sourire", "rougit": true, "de": 0.3, "a": 0.9 },
-          { "geste": "plonge", "vers": "lit-droite", "de": 0.9, "a": 1.7 },
-          { "geste": "disparait", "vers": "bas", "de": 2.0, "a": 2.35 } ] }
+        {
+          "qui": "rose",
+          "a": "devant-gauche",
+          "gestes": [
+            {
+              "geste": "regarde",
+              "cible": "violet",
+              "de": 0,
+              "a": 0.6
+            },
+            {
+              "geste": "visage",
+              "yeux": "clin",
+              "bouche": "sourire",
+              "rougit": true,
+              "de": 0.1,
+              "a": 0.7
+            },
+            {
+              "geste": "plonge",
+              "vers": "lit-gauche",
+              "de": 0.7,
+              "a": 1.5
+            },
+            {
+              "geste": "disparait",
+              "vers": "bas",
+              "de": 1.9,
+              "a": 2.3
+            }
+          ]
+        },
+        {
+          "qui": "violet",
+          "a": "devant-droite",
+          "gestes": [
+            {
+              "geste": "visage",
+              "yeux": "heureux",
+              "bouche": "sourire",
+              "rougit": true,
+              "de": 0.3,
+              "a": 0.9
+            },
+            {
+              "geste": "plonge",
+              "vers": "lit-droite",
+              "de": 0.9,
+              "a": 1.7
+            },
+            {
+              "geste": "disparait",
+              "vers": "bas",
+              "de": 2.0,
+              "a": 2.35
+            }
+          ]
+        }
       ],
-      "effets": [ { "effet": "coeurs", "de": 2.5, "a": 3.8, "x": 540, "y": 1120 } ],
-      "objets": [ { "objet": "chaussette", "x": 480, "y": 1200, "de": 2.7, "entree": "aucune", "vol": { "de": 2.75, "a": 3.6, "dx": 520, "dy": -900, "tours": 2 } } ],
-      "camera": [ { "a": 2.9, "secousse": 10 } ]
+      "effets": [
+        {
+          "effet": "coeurs",
+          "de": 2.5,
+          "a": 3.8,
+          "x": 540,
+          "y": 1120
+        }
+      ],
+      "objets": [
+        {
+          "objet": "chaussette",
+          "x": 480,
+          "y": 1200,
+          "de": 2.7,
+          "entree": "aucune",
+          "vol": {
+            "de": 2.75,
+            "a": 3.6,
+            "dx": 520,
+            "dy": -900,
+            "tours": 2
+          }
+        }
+      ],
+      "camera": [
+        {
+          "a": 2.9,
+          "secousse": 10
+        }
+      ]
     },
     {
       "description": "Écran noir, puis la chambre se rallume en plein jour (lumière neutre, soleil haut), étiquette « Noon ». Les deux sont de nouveau debout devant le lit, ils replongent dedans et disparaissent sous la couette, qui bouge encore plus. Cette fois c'est un oreiller qui s'envole vers le haut à gauche.",
@@ -40,16 +115,74 @@
       "couetteDe": 1.8,
       "legende": "Noon",
       "persos": [
-        { "qui": "rose", "a": "devant-gauche", "gestes": [
-          { "geste": "plonge", "vers": "lit-gauche", "de": 0.55, "a": 1.25 },
-          { "geste": "disparait", "vers": "bas", "de": 1.45, "a": 1.8 } ] },
-        { "qui": "violet", "a": "devant-droite", "gestes": [
-          { "geste": "plonge", "vers": "lit-droite", "de": 0.65, "a": 1.35 },
-          { "geste": "disparait", "vers": "bas", "de": 1.5, "a": 1.85 } ] }
+        {
+          "qui": "rose",
+          "a": "devant-gauche",
+          "gestes": [
+            {
+              "geste": "plonge",
+              "vers": "lit-gauche",
+              "de": 0.55,
+              "a": 1.25
+            },
+            {
+              "geste": "disparait",
+              "vers": "bas",
+              "de": 1.45,
+              "a": 1.8
+            }
+          ]
+        },
+        {
+          "qui": "violet",
+          "a": "devant-droite",
+          "gestes": [
+            {
+              "geste": "plonge",
+              "vers": "lit-droite",
+              "de": 0.65,
+              "a": 1.35
+            },
+            {
+              "geste": "disparait",
+              "vers": "bas",
+              "de": 1.5,
+              "a": 1.85
+            }
+          ]
+        }
       ],
-      "effets": [ { "effet": "coeurs", "de": 2.0, "a": 3.2, "x": 540, "y": 1120 } ],
-      "objets": [ { "objet": "oreiller", "x": 600, "y": 1200, "de": 2.1, "entree": "aucune", "vol": { "de": 2.15, "a": 3.0, "dx": -640, "dy": -880, "tours": 1 } } ],
-      "camera": [ { "a": 2.3, "secousse": 12 } ]
+      "effets": [
+        {
+          "effet": "coeurs",
+          "de": 2.0,
+          "a": 3.2,
+          "x": 540,
+          "y": 1120
+        }
+      ],
+      "objets": [
+        {
+          "objet": "oreiller",
+          "x": 600,
+          "y": 1200,
+          "de": 2.1,
+          "entree": "aucune",
+          "vol": {
+            "de": 2.15,
+            "a": 3.0,
+            "dx": -640,
+            "dy": -880,
+            "tours": 1
+          }
+        }
+      ],
+      "camera": [
+        {
+          "a": 2.3,
+          "secousse": 12
+        }
+      ]
     },
     {
       "description": "Écran noir, puis la chambre la nuit : lumière bleue, lune et étoiles dans la fenêtre, la lampe de chevet allumée fait un halo chaud, étiquette « Night ». Les deux replongent dans le lit et disparaissent sous la couette, qui bouge fort ; des cœurs montent, la caméra tremble deux fois.",
@@ -61,15 +194,62 @@
       "couetteDe": 1.85,
       "legende": "Night",
       "persos": [
-        { "qui": "rose", "a": "devant-gauche", "gestes": [
-          { "geste": "plonge", "vers": "lit-gauche", "de": 0.55, "a": 1.25 },
-          { "geste": "disparait", "vers": "bas", "de": 1.5, "a": 1.85 } ] },
-        { "qui": "violet", "a": "devant-droite", "gestes": [
-          { "geste": "plonge", "vers": "lit-droite", "de": 0.6, "a": 1.3 },
-          { "geste": "disparait", "vers": "bas", "de": 1.55, "a": 1.9 } ] }
+        {
+          "qui": "rose",
+          "a": "devant-gauche",
+          "gestes": [
+            {
+              "geste": "plonge",
+              "vers": "lit-gauche",
+              "de": 0.55,
+              "a": 1.25
+            },
+            {
+              "geste": "disparait",
+              "vers": "bas",
+              "de": 1.5,
+              "a": 1.85
+            }
+          ]
+        },
+        {
+          "qui": "violet",
+          "a": "devant-droite",
+          "gestes": [
+            {
+              "geste": "plonge",
+              "vers": "lit-droite",
+              "de": 0.6,
+              "a": 1.3
+            },
+            {
+              "geste": "disparait",
+              "vers": "bas",
+              "de": 1.55,
+              "a": 1.9
+            }
+          ]
+        }
       ],
-      "effets": [ { "effet": "coeurs", "de": 2.0, "a": 3.4, "x": 540, "y": 1120 } ],
-      "camera": [ { "a": 2.3, "secousse": 12 }, { "a": 2.9, "secousse": 10 } ]
+      "effets": [
+        {
+          "effet": "coeurs",
+          "de": 2.0,
+          "a": 3.4,
+          "x": 540,
+          "y": 1120
+        }
+      ],
+      "camera": [
+        {
+          "a": 2.3,
+          "secousse": 12
+        },
+        {
+          "a": 2.9,
+          "secousse": 10
+        }
+      ]
     },
     {
       "description": "Toujours la nuit, coupe franche. La couette se calme ; les deux sortent la tête de dessous, l'un après l'autre, avec leurs petites mains sur le bord. La rose fait un clin d'œil, joues rouges ; le violet sourit, gêné, des cœurs au-dessus de lui.",
@@ -77,13 +257,52 @@
       "decor": "chambre",
       "moment": "nuit",
       "persos": [
-        { "qui": "rose", "a": "lit-gauche", "gestes": [
-          { "geste": "apparait", "depuis": "bas", "de": 0.2, "a": 0.7 },
-          { "geste": "visage", "yeux": "clin", "bouche": "sourire", "rougit": true, "de": 0.9, "a": 2.6 } ] },
-        { "qui": "violet", "a": "lit-droite", "gestes": [
-          { "geste": "apparait", "depuis": "bas", "de": 0.45, "a": 0.95 },
-          { "geste": "visage", "yeux": "heureux", "bouche": "sourire", "rougit": true, "de": 1.0, "a": 2.6 },
-          { "geste": "effet", "effet": "coeurs", "de": 1.2, "a": 2.6 } ] }
+        {
+          "qui": "rose",
+          "a": "lit-gauche",
+          "gestes": [
+            {
+              "geste": "apparait",
+              "depuis": "bas",
+              "de": 0.2,
+              "a": 0.7
+            },
+            {
+              "geste": "visage",
+              "yeux": "clin",
+              "bouche": "sourire",
+              "rougit": true,
+              "de": 0.9,
+              "a": 2.6
+            }
+          ]
+        },
+        {
+          "qui": "violet",
+          "a": "lit-droite",
+          "gestes": [
+            {
+              "geste": "apparait",
+              "depuis": "bas",
+              "de": 0.45,
+              "a": 0.95
+            },
+            {
+              "geste": "visage",
+              "yeux": "heureux",
+              "bouche": "sourire",
+              "rougit": true,
+              "de": 1.0,
+              "a": 2.6
+            },
+            {
+              "geste": "effet",
+              "effet": "coeurs",
+              "de": 1.2,
+              "a": 2.6
+            }
+          ]
+        }
       ]
     }
   ]
