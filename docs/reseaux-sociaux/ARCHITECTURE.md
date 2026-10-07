@@ -84,7 +84,7 @@ Ces contraintes viennent de la documentation Meta et des guides à jour
 | Programmation | On crée un « conteneur », on attend qu'Instagram ait traité la vidéo, puis on publie. | Programmer un reel à l'avance chez Instagram : il faut notre propre planificateur. |
 | Volume | 100 publications par 24 h et par compte. | |
 | Médias | Instagram télécharge lui-même le fichier depuis une adresse web qu'on lui donne. | Envoyer le fichier directement. |
-| Accès | Un jeton d'utilisateur Facebook longue durée (60 jours) donne le **jeton de la Page**, qui n'a pas de date d'expiration : c'est lui qui est rangé et utilisé. | Un jeton de Page peut quand même être invalidé (mot de passe changé, appli retirée, Page déliée) : l'entretien le vérifie chaque semaine et alerte, il faut alors en recoller un dans l'admin. |
+| Accès | Un jeton d'utilisateur Facebook longue durée (60 jours) donne le **jeton de la Page**, qui n'a pas de date d'expiration : c'est lui qui est rangé et utilisé. | L'accès aux données de Meta s'arrête 90 jours après la dernière connexion (`data_access_expires_at`, vérifié le 7 octobre 2026 : 5 janvier 2027 pour un jeton du 7 octobre) : l'admin garde cette date, l'entretien prévient dix jours avant, et on recolle un jeton (trois minutes dans l'Explorateur de l'API Graph). Un jeton de Page peut aussi être invalidé (mot de passe changé, appli retirée, Page déliée) : vérifié chaque semaine, alerte. |
 | Statistiques | Vues, portée, j'aime, commentaires, partages, enregistrements par post. | |
 
 Ce que ça change concrètement :

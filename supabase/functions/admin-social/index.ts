@@ -172,13 +172,18 @@ serve(async (req) => {
         const v = await fetch(`${GRAPH}/${ig.id}?fields=id,username&access_token=${encodeURIComponent(page.access_token)}`);
         const moi = await v.json();
         if (!v.ok || moi.error) return json({ success: false, error: `Le jeton de la Page ne lit pas le compte Instagram : ${moi.error?.message || v.status}` }, 400);
-        // date d'expiration du jeton de Page : aucune s'il vient d'un jeton
-        // longue durée ; un jeton court (une heure) est refusé tout de suite
+        // fin de validité du jeton de Page : il n'expire pas lui-même quand il
+        // vient d'un jeton longue durée (expires_at à 0), mais l'accès aux
+        // données de Meta s'arrête 90 jours après la dernière connexion
+        // (data_access_expires_at) : on garde la plus proche des deux dates,
+        // l'entretien prévient dix jours avant, et Thomas recolle un jeton.
+        // Un jeton court (une heure) est refusé tout de suite.
         let expireLe: string | null = null;
         try {
           const d = await fetch(`${GRAPH}/debug_token?input_token=${encodeURIComponent(page.access_token)}&access_token=${encodeURIComponent(jeton)}`);
           const info = (await d.json())?.data;
-          if (info?.expires_at) expireLe = new Date(info.expires_at * 1000).toISOString();
+          const fins = [info?.expires_at, info?.data_access_expires_at].filter((t: unknown) => typeof t === 'number' && t > 0) as number[];
+          if (fins.length) expireLe = new Date(Math.min(...fins) * 1000).toISOString();
         } catch (_) { /* sans réponse, la vérification hebdomadaire veille */ }
         if (expireLe && new Date(expireLe).getTime() - Date.now() < 7 * 86400000) {
           return json({ success: false, error: `Ce jeton expire le ${expireLe.slice(0, 10)} : colle un jeton longue durée (bouton « Étendre le jeton d'accès » dans l'outil de jetons de Meta).` }, 400);

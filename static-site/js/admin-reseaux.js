@@ -77,7 +77,7 @@
     var c = compteEn();
     $('rsx-compte').textContent = c.connecte ? (c.actif ? 'Actif' : 'En pause') : 'Non connecté';
     $('rsx-compte-sub').textContent = c.connecte
-      ? '@' + (c.nom || '?') + (c.jeton_expire_le ? ', jeton valable jusqu\'au ' + new Date(c.jeton_expire_le).toLocaleDateString('fr-FR') : ', jeton de Page sans date d\'expiration')
+      ? '@' + (c.nom || '?') + (c.jeton_expire_le ? ', accès valable jusqu\'au ' + new Date(c.jeton_expire_le).toLocaleDateString('fr-FR') : ', jeton de Page sans date d\'expiration')
       : 'les posts se préparent, rien ne part';
     $('rsx-reserve').textContent = String(donnees.reserve || 0);
     var prochaines = [];
