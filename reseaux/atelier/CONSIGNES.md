@@ -106,6 +106,11 @@ on s'arrête tout de suite.
 Un fichier par créneau : `posts/AAAA-MM-JJ-creneau.json`, au format de
 `reseaux/atelier/exemple-post.json` : `categorie`, `sujet`, `format`,
 `gabarit`, puis la déclinaison anglaise (`recette`, `legende`, `hashtags`).
+L'heure de publication est tirée au sort dans le créneau : on ne l'écrit
+pas. Un seul cas fait exception, quand Thomas demande qu'un post parte à
+une heure précise (un soir où le créneau est déjà passé, par exemple) : le
+post porte alors `publier_a`, une date ISO avec fuseau
+(`"2026-10-07T19:45:00Z"`), et la synchro la garde telle quelle.
 Les recettes de `reseaux/studio/recettes/exemples/` sont les modèles, une
 par catégorie : `pov-frites` et `pov-fleurs` (pov), `pov-couette` (coquin),
 `statique-calin` (statique), `connais-tu`, `tu-preferes`, `citation`
