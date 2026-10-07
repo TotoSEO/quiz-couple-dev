@@ -214,5 +214,12 @@
     "finTitre": "Ihr seid auf einer Wellenlänge!",
     "finTexte": "3 von 4 Antworten gleich",
     "finCta": "Jetzt seid ihr dran"
+  },
+  "instagram": {
+    "title": "Unsere neuesten Beiträge",
+    "titleHighlight": "auf Instagram",
+    "intro": "Jeden Tag drei kleine Animationen mit unseren beiden Maskottchen: Paar-Quiz, Dilemmas und zärtliche Momente zum Weiterschicken.",
+    "follow": "@quiz_couple_official folgen",
+    "voir": "Auf Instagram ansehen"
   }
 }

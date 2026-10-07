@@ -214,5 +214,12 @@
     "finTitre": "¡Estáis en la misma onda!",
     "finTexte": "3 respuestas de 4 en común",
     "finCta": "Os toca jugar"
+  },
+  "instagram": {
+    "title": "Nuestras últimas publicaciones",
+    "titleHighlight": "en Instagram",
+    "intro": "Cada día, tres pequeñas animaciones con nuestras dos mascotas: quiz de pareja, dilemas y momentos tiernos para enviar a tu pareja.",
+    "follow": "Seguir a @quiz_couple_official",
+    "voir": "Ver en Instagram"
   }
 }

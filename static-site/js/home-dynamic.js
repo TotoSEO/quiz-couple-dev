@@ -59,4 +59,36 @@
     }
   }
 
+  // ── Dernières publications Instagram ─────────────────────────────
+  // Nos propres affiches (bucket public social-public, déposées au rendu),
+  // pas le script d'Instagram : rien de tiers, rien à consentir, et le rendu
+  // est le nôtre. La section reste masquée tant qu'il n'y a rien à montrer.
+  var igSection = document.getElementById('instagram-recents');
+  if (igSection && SB_URL) {
+    var igGrille = igSection.querySelector('.ig-grille');
+    var igTexte = { fr: 'Voir sur Instagram', en: 'View on Instagram', es: 'Ver en Instagram', de: 'Auf Instagram ansehen', it: 'Guarda su Instagram' }[lang] || 'View on Instagram';
+    var igIcone = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>';
+    var igCarte = function (p) {
+      var image = SB_URL + '/storage/v1/object/public/social-public/' + p.affiche;
+      var son = p.son_titre ? '\u266a ' + esc(p.son_titre) + (p.son_artiste ? ' \u00b7 ' + esc(p.son_artiste) : '') : '';
+      return '<a class="ig-carte" href="' + esc(p.permalien) + '" target="_blank" rel="noopener" aria-label="' + esc(igTexte) + '">' +
+        '<img src="' + esc(image) + '" alt="' + esc(p.legende || '') + '" loading="lazy" decoding="async" width="540" height="960">' +
+        '<span class="ig-tag">' + igIcone + (p.format === 'reel' ? 'Reel' : 'Post') + '</span>' +
+        (p.legende ? '<span class="ig-legende">' + esc(p.legende) + '</span>' : '') +
+        (son ? '<span class="ig-son">' + son + '</span>' : '') +
+        '</a>';
+    };
+    fetch(SB_URL + '/rest/v1/rpc/get_instagram_recents', {
+      method: 'POST',
+      headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ p_limit: 3 })
+    })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (posts) {
+        if (!Array.isArray(posts) || !posts.length || !igGrille) return;
+        igGrille.innerHTML = posts.map(igCarte).join('');
+        igSection.style.display = '';
+      })
+      .catch(function () { /* sans Supabase, la section reste masquée */ });
+  }
 })();

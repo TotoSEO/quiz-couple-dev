@@ -7,8 +7,8 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { connexion } from './lib/supabase.mjs';
-import { controlerImage, controlerReel, dureeVideo, vignette } from './lib/fichier.mjs';
+import { BUCKET_PUBLIC, connexion } from './lib/supabase.mjs';
+import { affiche, controlerImage, controlerReel, dureeVideo, vignette } from './lib/fichier.mjs';
 import { AVEC_MUSIQUE, ambianceDe, choisirMusique, present } from './lib/musique.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
@@ -59,7 +59,7 @@ export async function avecMusique(base, v, categorie, disponible = present) {
   return recette;
 }
 
-export async function rendre(base, { heures = 30, maintenant = new Date(), rendreFn = rendreRecette, controles = { controlerReel, controlerImage, vignette, dureeVideo }, disponible = present } = {}) {
+export async function rendre(base, { heures = 30, maintenant = new Date(), rendreFn = rendreRecette, controles = { controlerReel, controlerImage, vignette, dureeVideo, affiche }, disponible = present } = {}) {
   const limite = new Date(maintenant.getTime() + heures * 3600 * 1000).toISOString();
   const variantes = await base.select(
     'social_variantes',
@@ -96,6 +96,14 @@ export async function rendre(base, { heures = 30, maintenant = new Date(), rendr
       for (const f of [...produits, 'vignette.jpg']) {
         await base.televerser(`${racine}/${f}`, fs.readFileSync(path.join(dossier, f)), TYPES[f.split('.').pop()]);
       }
+      // l'affiche de l'accueil (dernières publications Instagram) : la
+      // couverture en 540 px dans le bucket public, que le ménage n'efface pas
+      let cheminAffiche = null;
+      if (controles.affiche) {
+        controles.affiche(path.join(dossier, premier), path.join(dossier, 'affiche.jpg'));
+        cheminAffiche = `${racine}/affiche.jpg`;
+        await base.televerser(cheminAffiche, fs.readFileSync(path.join(dossier, 'affiche.jpg')), 'image/jpeg', { bucket: BUCKET_PUBLIC, cache: '31536000' });
+      }
       if (produits.includes('reel.mp4')) {
         fichiers.reel = `${racine}/reel.mp4`;
         fichiers.couverture = `${racine}/couverture.jpg`;
@@ -110,6 +118,7 @@ export async function rendre(base, { heures = 30, maintenant = new Date(), rendr
         statut: 'rendu',
         fichiers,
         vignette: `${racine}/vignette.jpg`,
+        affiche: cheminAffiche,
         rendu_le: new Date().toISOString(),
         erreur: null,
       });
