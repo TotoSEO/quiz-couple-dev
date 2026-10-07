@@ -650,6 +650,39 @@ interrupteur.
 
 ---
 
+## 12 bis. Les dernières publications sur l'accueil du site
+
+Depuis le 7 octobre 2026, l'accueil de quiz-couple.com (cinq langues)
+montre les trois dernières publications Instagram, sans le script
+d'Instagram (lourd, et il poserait des cookies avant tout consentement) :
+
+- au rendu, l'automate fabrique une **affiche** (la couverture du reel, ou
+  l'image du post, ramenée à 540 px de large en JPEG : le ffmpeg de Remotion
+  n'encode pas le WebP) et la dépose dans le bucket **public**
+  `social-public` (`<jour>/<id>/affiche.jpg`, cache d'un an), chemin gardé
+  dans `social_variantes.affiche` ; le ménage n'efface que le bucket privé ;
+- la fonction SQL **`get_instagram_recents(p_limit)`** (migration
+  `20261008120000_instagram_accueil.sql`, security definer, ouverte à la
+  clé publique) rend les derniers posts publiés : lien Instagram, première
+  ligne de la légende, affiche, date, son attaché, format. Les tables
+  restent fermées ;
+- `home-dynamic.js` l'appelle après le chargement et remplit la section
+  `#instagram-recents` de `home.ejs` (cartes 9:16 avec l'affiche, la
+  légende, le son, un lien vers le post ; grille de trois sur bureau,
+  défilement horizontal avec accroche sur téléphone ; bouton « Suivre
+  @quiz_couple_official »). Sans publication, la section reste masquée.
+  Ses styles sont dans le gabarit, pas dans `styles.css` : rien n'est
+  visible au chargement, les feuilles critiques ne bougent pas.
+
+Les envois de fichiers vers Supabase (`lib/supabase.mjs`, `televerser`)
+passent par le protocole de reprise de Supabase (TUS, morceaux de 6 Mo)
+au-delà de 6 Mo, avec trois essais sur une erreur réseau : le premier reel
+de jeu, 15 Mo envoyés d'un bloc, est tombé sur « fetch failed » le
+7 octobre 2026. La cause réseau (ECONNRESET...) est désormais écrite dans
+le journal.
+
+---
+
 ## 13. Risques et garde-fous
 
 | Risque | Garde-fou |

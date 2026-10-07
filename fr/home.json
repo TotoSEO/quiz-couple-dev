@@ -214,5 +214,12 @@
     "finTitre": "Vous êtes sur la même longueur d'onde !",
     "finTexte": "3 réponses sur 4 en commun",
     "finCta": "À vous de jouer"
+  },
+  "instagram": {
+    "title": "Nos dernières publications",
+    "titleHighlight": "sur Instagram",
+    "intro": "Chaque jour, trois petites animations avec nos deux mascottes : des quiz de couple, des dilemmes et des moments tendres à envoyer à l'autre.",
+    "follow": "Suivre @quiz_couple_official",
+    "voir": "Voir sur Instagram"
   }
 }

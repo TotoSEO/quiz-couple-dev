@@ -93,7 +93,7 @@ export class BaseMemoire {
   async journal(niveau, source, message, details = null, varianteId = null) {
     this.t('social_journal').push({ niveau, source, message, details, variante_id: varianteId, at: new Date().toISOString() });
   }
-  async televerser(chemin, contenu) { this.fichiers.set(chemin, contenu); }
+  async televerser(chemin, contenu, type, { bucket } = {}) { this.fichiers.set(bucket ? `${bucket}:${chemin}` : chemin, contenu); }
   async signer(chemin) { return `${this.url}/storage/v1/object/sign/social-medias/${chemin}?token=x`; }
   async effacer(chemins) { chemins.forEach((c) => this.fichiers.delete(c)); return chemins; }
   async lister() { return [...this.fichiers.keys()].map((name) => ({ name })); }
