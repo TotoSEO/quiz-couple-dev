@@ -1,0 +1,342 @@
+{
+  "jour": "2026-10-16",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "coquin",
+  "sujet": "coq-002",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Coquin en clin d'œil : « on fait juste une sieste », la couette bouge, deux heures plus tard les deux sortent la tête en rougissant, et la nuit le violet redemande.",
+        "titre": "POV: 'let's just take a nap'",
+        "plans": [
+          {
+            "description": "La chambre à midi, lumière claire, soleil haut dans la fenêtre, étiquette « The nap ». Dès la première image les deux sont debout devant le lit : la rose bâille, la bouche ronde, puis fait un clin d'œil au violet en disant « Let's just take a nap. ». Le violet rougit, les yeux brillants, hoche la tête. À 1,6 s ils plongent dans le lit l'un après l'autre et disparaissent sous la couette, qui se met à bouger ; des cœurs sortent et une chaussette s'envole en tournant, la caméra tremble.",
+            "duree": 4.4,
+            "decor": "chambre",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "devant-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.2,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.5,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.5,
+                    "a": 1.5
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.6,
+                    "a": 1.5,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "plonge",
+                    "de": 1.6,
+                    "a": 2.3,
+                    "vers": "lit-gauche"
+                  },
+                  {
+                    "geste": "disparait",
+                    "de": 2.6,
+                    "a": 3.0,
+                    "vers": "bas"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.7,
+                    "yeux": "brillants",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "plonge",
+                    "de": 1.8,
+                    "a": 2.5,
+                    "vers": "lit-droite"
+                  },
+                  {
+                    "geste": "disparait",
+                    "de": 2.7,
+                    "a": 3.1,
+                    "vers": "bas"
+                  }
+                ]
+              }
+            ],
+            "couette": "bouge",
+            "couetteDe": 3.0,
+            "legende": "The nap",
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 0.5,
+                "a": 1.7,
+                "texte": "Let's just take a nap."
+              }
+            ],
+            "effets": [
+              {
+                "effet": "coeurs",
+                "de": 3.2,
+                "a": 4.4,
+                "x": 540,
+                "y": 1120
+              }
+            ],
+            "objets": [
+              {
+                "objet": "chaussette",
+                "x": 480,
+                "y": 1200,
+                "de": 3.3,
+                "entree": "aucune",
+                "vol": {
+                  "de": 3.35,
+                  "a": 4.3,
+                  "dx": 520,
+                  "dy": -900,
+                  "tours": 2
+                }
+              }
+            ],
+            "camera": [
+              {
+                "a": 3.4,
+                "secousse": 10
+              }
+            ]
+          },
+          {
+            "description": "Écran noir, puis la chambre se rallume : la lumière du soir, soleil bas orangé dans la fenêtre, étiquette « 2 hours later ». Les deux sont dans le lit, la tête et les petites mains qui dépassent de la couette. La rose a les yeux fermés et un sourire fatigué, les joues rouges ; le violet ouvre des yeux ronds vers la caméra, la bouche en « o », puis fait un clin d'œil. Des cœurs montent doucement, la caméra se rapproche.",
+            "duree": 4.0,
+            "decor": "chambre",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.0,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 4.0,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.0,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 4.0,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.0,
+                    "a": 4.0,
+                    "effet": "etincelles"
+                  }
+                ]
+              }
+            ],
+            "transition": "noir",
+            "couette": "calme",
+            "legende": "2 hours later",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.3,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "La chambre la nuit, lumière bleue, la lune dans la fenêtre, lampe de chevet allumée. Les deux sont dans le lit, la tête et les petites mains qui dépassent de la couette, les joues encore rouges. Le violet tourne la tête vers la rose et demande « Another nap tomorrow? » dans une bulle, les yeux brillants ; la rose éclate de rire, cache son visage derrière ses mains et répond d'un clin d'œil. Des cœurs montent à la fin, zoom doux.",
+            "duree": 3.6,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.2,
+                    "a": 1.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.7,
+                    "a": 3.0
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 3.6,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.2,
+                    "a": 3.6,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.5,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.5,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.6,
+                    "a": 3.6,
+                    "yeux": "brillants",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "transition": "fondu",
+            "couette": "calme",
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.5,
+                "a": 2.2,
+                "texte": "Another nap tomorrow?"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "A nap, they said. Two hours later...\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

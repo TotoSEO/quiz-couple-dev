@@ -1,0 +1,268 @@
+{
+  "jour": "2026-10-16",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-013",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le « je n'ai pas sommeil » : le violet se redresse, bâille, puis s'endort, et la rose rit.",
+        "titre": "POV: 'I'm not even sleepy'",
+        "plans": [
+          {
+            "description": "Le salon, le soir, lumière chaude de la lampe. Dès la première image les deux sont dans le canapé devant la télé : le violet est bien droit, les yeux grands ouverts, et dit « I'm not sleepy. » dans une bulle ; la rose le regarde, un sourire en coin. À 2 s le violet fait un grand sourire sûr de lui, les joues roses, et la rose lève un sourcil.",
+            "duree": 3.6,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.9,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "hauts"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.9,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.2,
+                    "a": 1.6
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 3.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.2,
+                "a": 1.9,
+                "texte": "I'm not sleepy."
+              }
+            ]
+          },
+          {
+            "description": "Le même canapé, la nuit, lumière bleue. Zoom lent sur le violet : ses paupières sont lourdes, ses yeux sont plats, sa tête penche un peu. À 0,8 s il se redresse d'un coup et dit « I'm totally awake. » ; à 2,2 s ses yeux se ferment presque et il bâille, la bouche ronde. La rose le regarde en souriant, la main sur la bouche pour ne pas rire.",
+            "duree": 4.0,
+            "decor": "salon",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.0,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.8,
+                    "a": 4.0
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.7,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.8,
+                    "a": 2.0
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 3.0,
+                    "yeux": "fermes",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 4.0,
+                    "yeux": "fermes",
+                    "bouche": "plate"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.8,
+                "a": 2.2,
+                "texte": "I'm totally awake."
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.35,
+                "cible": "violet"
+              }
+            ]
+          },
+          {
+            "description": "Plan large, la nuit. Le violet dort profondément, la tête penchée sur le coussin, la bouche ouverte, des Z qui montent. La rose rit sans bruit, les épaules secouées, puis se tourne vers la caméra à 1,6 s, les yeux heureux, et pose le doigt devant sa bouche : une bulle dit « Not sleepy, huh? ». Des petits cœurs flottent au-dessus d'elle à 3 s.",
+            "duree": 4.2,
+            "decor": "salon",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "rit",
+                    "de": 0,
+                    "a": 1.6
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 4.2,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 4.2,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 1.8,
+                    "a": 3.0
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 4.2
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 4.2,
+                    "effet": "zzz"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 1.7,
+                "a": 3.9,
+                "texte": "Not sleepy, huh?"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "'I'm not sleepy,' he said, 4 minutes before this.\n\nTag your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

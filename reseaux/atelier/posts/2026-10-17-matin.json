@@ -1,0 +1,286 @@
+{
+  "jour": "2026-10-17",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-014",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Les 40 vidéos par jour : la rose reçoit des notifications en rafale, le violet en envoie encore, elle finit par rire.",
+        "titre": "POV: he sends you 40 videos a day",
+        "plans": [
+          {
+            "description": "Le salon, le soir. Dès la première image la rose, à gauche, tient son téléphone et le regarde, tête baissée ; des « ! » apparaissent au-dessus d'elle en rafale. Le violet, à droite, sourit en tapant sur son propre téléphone et dit « Look at this one! » dans une bulle. La rose lève les yeux vers lui, les yeux ronds.",
+            "duree": 3.6,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "telephone",
+                    "de": 0,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 3.6,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "telephone",
+                    "de": 0,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.3,
+                    "a": 1.6
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "yeux": "heureux",
+                    "bouche": "rire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "cible": "rose"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.3,
+                "a": 1.7,
+                "texte": "Look at this one!"
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur le visage de la rose, qui regarde l'écran, les yeux plats et la bouche plate. Trois points flottent au-dessus d'elle. Sa bulle dit « That's video number 40. » ; à 2,4 s une goutte de gêne apparaît sur le côté de sa tête. Derrière, le violet continue de taper sur son téléphone en riant.",
+            "duree": 3.8,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "telephone",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.5,
+                    "a": 1.9
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 2.3,
+                    "effet": "points"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.4,
+                    "a": 3.8,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "telephone",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 0.4,
+                    "a": 3.8
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 0.5,
+                "a": 2.4,
+                "texte": "That's video number 40."
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.7,
+                "cible": "rose"
+              }
+            ]
+          },
+          {
+            "description": "Retour au plan large. Le téléphone de la rose fait « ping » : un « ! » apparaît au-dessus d'elle, ses yeux deviennent grands. Elle se tourne vers la caméra, la bouche pincée, puis regarde l'écran et éclate de rire à 2 s malgré elle. Le violet lève les bras, triomphant, et une bulle dit « Worth it! ». Des cœurs montent à la fin.",
+            "duree": 4.2,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "telephone",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.9,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 1.4,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.0,
+                    "a": 2.0,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 2.0,
+                    "a": 4.2
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.2,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "joie",
+                    "de": 0.5,
+                    "a": 2.0
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 2.1,
+                    "a": 3.4
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.4,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 2.1,
+                "a": 3.9,
+                "texte": "Worth it!"
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "40 videos a day and you watch every single one.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

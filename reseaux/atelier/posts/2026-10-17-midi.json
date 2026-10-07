@@ -1,0 +1,61 @@
+{
+  "jour": "2026-10-17",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-003",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Travel edition",
+        "accroche": "Would you rather: travel?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "dilemmes": [
+          {
+            "a": "A week by the sea",
+            "b": "A week in the mountains"
+          },
+          {
+            "a": "Road trip",
+            "b": "Plane trip"
+          },
+          {
+            "a": "Big city",
+            "b": "Quiet village"
+          },
+          {
+            "a": "Camping under the stars",
+            "b": "A cozy hotel"
+          },
+          {
+            "a": "Plan every single day",
+            "b": "Decide on the spot"
+          },
+          {
+            "a": "One big trip a year",
+            "b": "Weekend trips all year"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, travel edition: where are you two going next?\n\nComment your A and B!",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

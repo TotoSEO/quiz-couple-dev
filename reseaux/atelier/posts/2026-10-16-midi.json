@@ -1,0 +1,45 @@
+{
+  "jour": "2026-10-16",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-005",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Childhood edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "questions": [
+          "What was your partner's favorite cartoon?",
+          "What did they want to be as a kid?",
+          "Where did they grow up?",
+          "Who was their best friend at school?",
+          "What toy did they love the most?",
+          "Their favorite subject at school?",
+          "What scared them the most as a kid?",
+          "Their favorite childhood snack?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Childhood edition: 8 questions about your partner as a kid. Cartoons, toys, snacks...\n\nComment your score!",
+      "hashtags": [
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

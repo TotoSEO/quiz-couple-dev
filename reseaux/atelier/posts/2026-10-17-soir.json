@@ -1,0 +1,30 @@
+{
+  "jour": "2026-10-17",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "ph-003",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "You're the first thing I want to tell good news to.",
+        "fleurs": "brin-marguerite",
+        "son": {
+          "recherche": "soft piano"
+        }
+      },
+      "legende": "For the person you call first.\n\nTag your partner.",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
