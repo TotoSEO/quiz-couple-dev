@@ -120,7 +120,8 @@
     "sourcePrefAria": "Add Quiz Couple to your Google preferred sources",
     "sourcePrefAide": "A Google setting: the sites you add appear higher in your results and in AI answers. It is tied to your Google account and can be removed at any time.",
     "sourcePrefAideAria": "What is a preferred source?",
-    "cookiePrefs": "Manage cookies"
+    "cookiePrefs": "Manage cookies",
+    "instagram": "Follow us on Instagram"
   },
   "buttons": {
     "start": "Start",

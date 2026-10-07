@@ -398,7 +398,7 @@
     <%- include('partials/pub', { format: 15, differe: true }) %>
     <% } %>
     <% if (typeof pageJouable !== 'undefined' && pageJouable) { %>
-    <%- include('partials/quiz-reviews', { lang: lang, t: t, routeKey: routeKey, genrePage: (typeof genrePage !== 'undefined' ? genrePage : 'test'), supabaseUrl: supabaseUrl, supabaseKey: supabaseKey }) %>
+    <%- include('partials/quiz-reviews', { lang: lang, t: t, routeKey: routeKey, genrePage: (typeof genrePage !== 'undefined' ? genrePage : 'test'), supabaseUrl: supabaseUrl, supabaseKey: supabaseKey, avisCuitsJson: (typeof avisCuitsJson !== 'undefined' ? avisCuitsJson : '') }) %>
     <% } %>
   </main>
 

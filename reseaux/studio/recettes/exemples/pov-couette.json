@@ -106,7 +106,7 @@
       ]
     },
     {
-      "description": "Écran noir, puis la chambre se rallume en plein jour (lumière neutre, soleil haut), étiquette « Noon ». Les deux sont de nouveau debout devant le lit, ils replongent dedans et disparaissent sous la couette, qui bouge encore plus. Cette fois c'est un oreiller qui s'envole vers le haut à gauche.",
+      "description": "Écran noir, puis la chambre se rallume en plein jour (lumière neutre, soleil haut), étiquette « Noon ». Les deux sont de nouveau debout devant le lit ; dès la première image le violet a les yeux brillants et la bouche ronde d'impatience, la rose le regarde. Ils replongent dans le lit l'un après l'autre et disparaissent sous la couette, qui bouge encore plus ; des cœurs sortent du milieu. Cette fois c'est un oreiller qui s'envole vers le haut à gauche, et la caméra tremble.",
       "duree": 3.2,
       "decor": "chambre",
       "moment": "midi",
@@ -119,6 +119,12 @@
           "qui": "rose",
           "a": "devant-gauche",
           "gestes": [
+            {
+              "geste": "regarde",
+              "cible": "violet",
+              "de": 0,
+              "a": 0.55
+            },
             {
               "geste": "plonge",
               "vers": "lit-gauche",
@@ -137,6 +143,14 @@
           "qui": "violet",
           "a": "devant-droite",
           "gestes": [
+            {
+              "geste": "visage",
+              "yeux": "brillants",
+              "bouche": "o",
+              "rougit": true,
+              "de": 0.05,
+              "a": 0.65
+            },
             {
               "geste": "plonge",
               "vers": "lit-droite",
@@ -185,7 +199,7 @@
       ]
     },
     {
-      "description": "Écran noir, puis la chambre la nuit : lumière bleue, lune et étoiles dans la fenêtre, la lampe de chevet allumée fait un halo chaud, étiquette « Night ». Les deux replongent dans le lit et disparaissent sous la couette, qui bouge fort ; des cœurs montent, la caméra tremble deux fois.",
+      "description": "Écran noir, puis la chambre la nuit : lumière bleue, lune et étoiles dans la fenêtre, la lampe de chevet allumée fait un halo chaud, étiquette « Night ». Dès la première image la rose a les yeux fermés et un sourire de fatigue heureuse, le violet rit. Les deux replongent dans le lit et disparaissent sous la couette, qui bouge fort ; des cœurs montent, la caméra tremble deux fois.",
       "duree": 3.4,
       "decor": "chambre",
       "moment": "nuit",
@@ -198,6 +212,14 @@
           "qui": "rose",
           "a": "devant-gauche",
           "gestes": [
+            {
+              "geste": "visage",
+              "yeux": "fermes",
+              "bouche": "sourire",
+              "rougit": true,
+              "de": 0.05,
+              "a": 0.55
+            },
             {
               "geste": "plonge",
               "vers": "lit-gauche",
@@ -216,6 +238,11 @@
           "qui": "violet",
           "a": "devant-droite",
           "gestes": [
+            {
+              "geste": "rit",
+              "de": 0.05,
+              "a": 0.6
+            },
             {
               "geste": "plonge",
               "vers": "lit-droite",

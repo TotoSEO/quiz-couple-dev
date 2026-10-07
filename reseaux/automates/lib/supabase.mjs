@@ -6,6 +6,10 @@
 // peut aussi fournir SUPABASE_URL et SUPABASE_SERVICE_ROLE_KEY.
 
 const BUCKET = 'social-medias';
+// Les affiches de l'accueil : petites images lisibles par tous, jamais effacées.
+export const BUCKET_PUBLIC = 'social-public';
+// Taille des morceaux du protocole de reprise de Supabase (imposée : 6 Mo).
+const MORCEAU = 6 * 1024 * 1024;
 
 const masquer = (valeur) => {
   if (valeur && process.env.GITHUB_ACTIONS) console.log(`::add-mask::${valeur}`);
@@ -42,8 +46,21 @@ export class Base {
     return { apikey: this.cle, Authorization: `Bearer ${this.cle}`, ...extra };
   }
 
+  // Un échec réseau de fetch ne dit que « fetch failed » : on remonte la
+  // cause (ECONNRESET, ETIMEDOUT, UND_ERR_...) pour que le journal serve.
+  async brut(chemin, options = {}) {
+    try {
+      return await fetch(this.url + chemin, { ...options, headers: this.entetes(options.headers) });
+    } catch (e) {
+      const cause = e.cause ? ` (${e.cause.code || e.cause.message || e.cause})` : '';
+      const err = new Error(`Supabase ${options.method || 'GET'} ${chemin.split('?')[0]} : ${e.message}${cause}`);
+      err.reseau = true;
+      throw err;
+    }
+  }
+
   async requete(chemin, options = {}) {
-    const r = await fetch(this.url + chemin, { ...options, headers: this.entetes(options.headers) });
+    const r = await this.brut(chemin, options);
     const texte = await r.text();
     if (!r.ok) throw new Error(`Supabase ${options.method || 'GET'} ${chemin.split('?')[0]} : ${r.status} ${texte.slice(0, 300)}`);
     return texte ? JSON.parse(texte) : null;
@@ -101,13 +118,69 @@ export class Base {
     }
   }
 
-  // Stockage des fichiers en transit (bucket privé).
-  async televerser(chemin, contenu, type) {
-    return this.requete(`/storage/v1/object/${BUCKET}/${chemin}`, {
-      method: 'POST',
-      headers: { 'Content-Type': type, 'x-upsert': 'true', 'cache-control': '3600' },
-      body: contenu,
+  // Stockage des fichiers en transit (bucket privé), ou d'une affiche dans le
+  // bucket public (cache long : le chemin porte l'identifiant du post).
+  // Au-delà de 6 Mo, l'envoi passe par le protocole de reprise de Supabase
+  // (TUS, morceaux de 6 Mo) : le premier reel de jeu, une trentaine de Mo
+  // envoyés d'un bloc, est tombé sur « fetch failed » le 7 octobre 2026.
+  // Chaque requête est réessayée trois fois sur une erreur réseau.
+  async televerser(chemin, contenu, type, { bucket = BUCKET, cache = '3600' } = {}) {
+    const octets = Buffer.isBuffer(contenu) ? contenu : Buffer.from(contenu);
+    if (octets.length > MORCEAU) return this.televerserParMorceaux(chemin, octets, type, { bucket, cache });
+    return this.reessayer(() =>
+      this.requete(`/storage/v1/object/${bucket}/${chemin}`, {
+        method: 'POST',
+        headers: { 'Content-Type': type, 'x-upsert': 'true', 'cache-control': cache },
+        body: octets,
+      }),
+    );
+  }
+
+  async televerserParMorceaux(chemin, octets, type, { bucket, cache }) {
+    const b64 = (v) => Buffer.from(String(v)).toString('base64');
+    const meta = `bucketName ${b64(bucket)},objectName ${b64(chemin)},contentType ${b64(type)},cacheControl ${b64(cache)}`;
+    const creation = await this.reessayer(async () => {
+      const r = await this.brut('/storage/v1/upload/resumable', {
+        method: 'POST',
+        headers: { 'Tus-Resumable': '1.0.0', 'Upload-Length': String(octets.length), 'Upload-Metadata': meta, 'x-upsert': 'true' },
+      });
+      if (r.status !== 201) throw new Error(`Supabase upload/resumable : ${r.status} ${(await r.text()).slice(0, 300)}`);
+      return r.headers.get('location');
     });
+    if (!creation) throw new Error('Supabase upload/resumable : pas d\'adresse de reprise');
+    // l'adresse peut être absolue ou relative au projet
+    const adresse = creation.startsWith('http') ? creation.slice(this.url.length) : creation;
+    let offset = 0;
+    while (offset < octets.length) {
+      const morceau = octets.subarray(offset, Math.min(offset + MORCEAU, octets.length));
+      const depart = offset;
+      offset = await this.reessayer(async () => {
+        const r = await this.brut(adresse, {
+          method: 'PATCH',
+          headers: { 'Tus-Resumable': '1.0.0', 'Upload-Offset': String(depart), 'Content-Type': 'application/offset+octet-stream' },
+          body: morceau,
+        });
+        if (r.status !== 204) throw new Error(`Supabase upload/resumable : ${r.status} ${(await r.text()).slice(0, 300)}`);
+        return Number(r.headers.get('upload-offset')) || depart + morceau.length;
+      });
+    }
+    return { Key: `${bucket}/${chemin}` };
+  }
+
+  // Trois essais sur une erreur réseau ou une réponse 5xx, en attendant 2 s puis 6 s.
+  async reessayer(fn, essais = 3) {
+    let derniere;
+    for (let i = 0; i < essais; i++) {
+      try {
+        return await fn();
+      } catch (e) {
+        derniere = e;
+        const passagere = e.reseau || /: 5\d\d /.test(e.message);
+        if (!passagere || i === essais - 1) throw e;
+        await new Promise((r) => setTimeout(r, i === 0 ? 2000 : 6000));
+      }
+    }
+    throw derniere;
   }
 
   async signer(chemin, secondes = 86400) {

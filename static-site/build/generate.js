@@ -13,7 +13,7 @@ import { minify as minifyJs } from 'terser';
 import CleanCSS from 'clean-css';
 import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomDuPaquet, ecrisPaquets, TABLE_MOTEURS } from './moteurs.js';
 import {
-  BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
+  BASE_URL, INSTAGRAM_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, FAMILLES_NAV, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
@@ -264,6 +264,30 @@ let reviewStatsByQuiz = {};
 // n'existait que dans le balisage, le corps de page ne montrant qu'un tiret et
 // deux conteneurs vides remplis après coup par reviews.js.
 let reviewsRecents = [];
+// Les douze derniers avis de chaque page, et le fait que le chargement a
+// réussi : voir avisCuitsPour.
+let reviewsParQuiz = {};
+let reviewsCharges = false;
+
+// Les avis d'une page, cuits dans son HTML (7 octobre 2026). Jusque-là, chaque
+// page vue demandait à la base la liste des avis et jusqu'à mille notes pour
+// la moyenne : le plus gros poste de sortie de Supabase, à dix mille pages
+// vues par jour. Le site étant reconstruit sept fois par jour, un avis
+// approuvé paraît dans les trois heures. Sans chargement réussi, on ne rend
+// rien et quiz-extras.js redemande à la base comme avant : rien ne casse.
+function avisCuitsPour(slug) {
+  if (!reviewsCharges) return null;
+  const stats = reviewStatsByQuiz[slug];
+  return { total: stats ? Number(stats.count) : 0, avg: stats ? stats.avg : '0', rows: reviewsParQuiz[slug] || [] };
+}
+// Le JSON prêt pour une balise <script type="application/json"> : « < »
+// échappé pour qu'aucun commentaire ne ferme la balise, et les deux
+// séparateurs de ligne Unicode que JSON laisse passer. Fait ici plutôt que
+// dans le gabarit : EJS ne sait pas lire une expression régulière.
+function jsonPourScript(valeur) {
+  if (valeur === null || valeur === undefined) return '';
+  return JSON.stringify(valeur).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
+}
 
 // Article SEO overrides fetched from Supabase at build time
 // Map: "internalSlug-lang" → { title, metaTitle, metaDescription, featuredImageAlt, excerpt }
@@ -503,12 +527,32 @@ function injectStaticQuestions(html, tgd, lang) {
 
 async function fetchReviewStats() {
   try {
-    const res = await fetch(
-      `${SUPABASE_URL}/rest/v1/reviews?select=rating,quiz_slug&is_approved=eq.true`,
-      { headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` } }
-    );
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const reviews = await res.json();
+    // Tous les avis approuvés, du plus récent au plus ancien, par pages de
+    // mille (le plafond de PostgREST : une seule demande sans borne
+    // s'arrêtait là en silence). Ils donnent la note du site, la note de
+    // chaque page et, depuis le 7 octobre 2026, les douze derniers avis de
+    // chaque page, cuits dans le HTML (avisCuitsPour).
+    const entetes = { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` };
+    const reviews = [];
+    for (let depart = 0; ; depart += 1000) {
+      const res = await fetch(
+        `${SUPABASE_URL}/rest/v1/reviews?select=rating,quiz_slug,author_name,comment,created_at&is_approved=eq.true&order=created_at.desc`,
+        { headers: { ...entetes, Range: `${depart}-${depart + 999}` }, signal: AbortSignal.timeout(20000) }
+      );
+      if (res.status === 416) break;
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const lot = await res.json();
+      if (!Array.isArray(lot)) throw new Error('réponse inattendue');
+      reviews.push(...lot);
+      if (lot.length < 1000) break;
+    }
+    reviewsParQuiz = {};
+    for (const r of reviews) {
+      if (!r.quiz_slug) continue;
+      const liste = (reviewsParQuiz[r.quiz_slug] = reviewsParQuiz[r.quiz_slug] || []);
+      if (liste.length < 12) liste.push({ author_name: r.author_name, rating: r.rating, comment: r.comment || undefined, created_at: r.created_at });
+    }
+    reviewsCharges = true;
     if (reviews.length === 0) return;
     // Global aggregate (toutes les pages confondues) → note du site, page d'accueil
     const sum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
@@ -854,6 +898,7 @@ async function generatePage(routeKey, lang) {
       logo: { '@type': 'ImageObject', url: `${BASE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
       image: `${BASE_URL}/og-image.webp`,
       description: description,
+      sameAs: [INSTAGRAM_URL],
     });
     // AggregateRating, only include if we have real review data.
     // `url` vaut l'adresse de la page décrite, pas la racine du site : les cinq
@@ -990,6 +1035,8 @@ async function generatePage(routeKey, lang) {
     // Helpers
     getLocalizedUrl,
     famillesNav: FAMILLES_NAV,
+    instagramUrl: INSTAGRAM_URL,
+    avisCuitsJson: jsonPourScript(avisCuitsPour(routeKey)),
     getLocalizedPath,
     escapeHtml,
     JSON,
@@ -1724,6 +1771,7 @@ async function generateBlogArticle(articleMeta, lang) {
           name: 'Quiz Couple',
           url: BASE_URL,
           logo: { '@type': 'ImageObject', url: `${BASE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
+          sameAs: [INSTAGRAM_URL],
         },
         mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
       };
@@ -1768,6 +1816,7 @@ async function generateBlogArticle(articleMeta, lang) {
     translations,
     getLocalizedUrl,
     famillesNav: FAMILLES_NAV,
+    instagramUrl: INSTAGRAM_URL,
     getLocalizedPath,
     escapeHtml,
     JSON,
@@ -1855,6 +1904,7 @@ async function generate404Pages() {
       translations,
       getLocalizedUrl,
       famillesNav: FAMILLES_NAV,
+      instagramUrl: INSTAGRAM_URL,
       getLocalizedPath,
       escapeHtml,
       JSON,

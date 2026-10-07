@@ -6,12 +6,12 @@ import { publier } from '../publication.mjs';
 const T0 = new Date('2026-10-12T10:30:00Z'); // 12 h 30 à Paris
 const plus = (min) => new Date(T0.getTime() + min * 60000);
 
-const base = ({ actif = true, format = 'reel', publierA = plus(30), pause = false, recette, autres = [] } = {}) =>
+const base = ({ actif = true, format = 'reel', publierA = plus(30), pause = false, recette, autres = [], creneau = 'matin', duree = 12 } = {}) =>
   new BaseMemoire({
     social_comptes: [{ id: 'c', langue: 'en', ig_user_id: '178', actif }],
     social_jetons: [{ compte_id: 'c', jeton: 'J' }],
     social_reglages: [{ cle: 'pause', valeur: pause }],
-    social_posts: [{ id: 'p', jour: '2026-10-12', creneau: 'matin', format, statut: 'valide' }],
+    social_posts: [{ id: 'p', jour: '2026-10-12', creneau, format, statut: 'valide' }],
     social_variantes: [
       {
         id: 'v',
@@ -23,7 +23,7 @@ const base = ({ actif = true, format = 'reel', publierA = plus(30), pause = fals
         hashtags: ['#couplequiz'],
         essais: 0,
         recette,
-        fichiers: format === 'reel' ? { reel: 'a/reel.mp4', couverture: 'a/couverture.jpg', duree: 12 } : format === 'image' ? { image: 'a/image.jpg' } : { pages: ['a/page-1.jpg', 'a/page-2.jpg'] },
+        fichiers: format === 'reel' ? { reel: 'a/reel.mp4', couverture: 'a/couverture.jpg', duree } : format === 'image' ? { image: 'a/image.jpg' } : { pages: ['a/page-1.jpg', 'a/page-2.jpg'] },
       },
       ...autres,
     ],
@@ -47,6 +47,7 @@ const faux = (etats = ['FINISHED'], { echoue = false, sons = async () => TENDANC
       return { id: 'C1' };
     },
     conteneurImage: async (p) => { appels.push(['image', p]); return { id: 'C2' }; },
+    conteneurStory: async (p) => { appels.push(['story', p]); return { id: 'S1' }; },
     conteneurElement: async (p) => { appels.push(['element', p]); return { id: `E${appels.length}` }; },
     conteneurCarrousel: async (p) => { appels.push(['carrousel', p]); return { id: 'C3' }; },
     etat: async () => ({ code: etats[Math.min(i++, etats.length - 1)] }),
@@ -207,4 +208,39 @@ test('recette avec une musique mixée dans la vidéo : pas de son Instagram par-
   const ig = faux();
   await publier(b, { maintenant: T0, instagramPour: () => ig });
   assert.equal(ig.appels[0][1].son, null);
+});
+
+test('la story du matin : conteneur juste après le reel, publiée au passage suivant', async () => {
+  const b = base();
+  const ig = faux();
+  await publier(b, { maintenant: T0, instagramPour: () => ig });
+  const r = await publier(b, { maintenant: plus(31), instagramPour: () => ig });
+  const v = b.tables.social_variantes[0];
+  assert.equal(v.statut, 'publie');
+  assert.equal(r.stories.conteneurs, 1);
+  assert.equal(v.story_statut, 'conteneur');
+  assert.equal(v.story_conteneur_id, 'S1');
+  assert.ok(ig.appels.some((a) => a[0] === 'story' && /a\/reel\.mp4/.test(a[1].videoUrl)));
+  const r2 = await publier(b, { maintenant: plus(41), instagramPour: () => ig });
+  assert.equal(r2.stories.publiees, 1);
+  assert.equal(v.story_statut, 'publie');
+  assert.equal(v.story_media_id, 'M1');
+  assert.ok(b.tables.social_journal.some((j) => /story du matin publiée/.test(j.message)));
+});
+
+test("pas de story pour un reel de midi, ni pour un reel de plus de 60 s", async () => {
+  const b = base({ creneau: 'midi' });
+  const ig = faux();
+  await publier(b, { maintenant: T0, instagramPour: () => ig });
+  await publier(b, { maintenant: plus(31), instagramPour: () => ig });
+  assert.equal(b.tables.social_variantes[0].story_statut, null);
+  assert.ok(!ig.appels.some((a) => a[0] === 'story'));
+  const b2 = base({ duree: 69.1 });
+  const ig2 = faux();
+  await publier(b2, { maintenant: T0, instagramPour: () => ig2 });
+  const r = await publier(b2, { maintenant: plus(31), instagramPour: () => ig2 });
+  assert.equal(r.stories.echecs, 1);
+  assert.equal(b2.tables.social_variantes[0].story_statut, 'echec');
+  assert.ok(b2.tables.social_journal.some((j) => /60 s au plus/.test(j.message)));
+  assert.ok(!ig2.appels.some((a) => a[0] === 'story'));
 });

@@ -60,11 +60,13 @@ même jour par Thomas ; ses choix sont en partie 1.2.
   - le matin entre 6 h et 8 h ;
   - le midi entre 11 h et 13 h ;
   - l'après-midi entre 16 h et 18 h.
-- **Le mélange de la semaine :** 12 animations avec les mascottes (57 %,
-  dont une coquine le vendredi), 3 « Connais-tu ton partenaire ? », 2 « Tu
-  préfères », 2 reels statiques, 2 phrases tendres. Tout en reels, tout
-  dessiné, aucune photo. 273 posts sur les trois premiers mois, avec une
-  banque de sujets (`reseaux/atelier/sujets.json`).
+- **Le mélange de la semaine :** 11 animations avec les mascottes (dont
+  une coquine le vendredi), 3 « Connais-tu ton partenaire ? », 2 « Tu
+  préfères », 2 reels statiques, 2 phrases tendres et, le jeudi soir, 1
+  carrousel de questions (le format qui se garde). Tout dessiné, aucune
+  photo. 273 posts sur les trois premiers mois, avec une banque de sujets
+  (`reseaux/atelier/sujets.json`). Et chaque jour, le reel du matin repart
+  en story juste après sa publication.
 
 ---
 
@@ -80,6 +82,7 @@ Ces contraintes viennent de la documentation Meta et des guides à jour
 | Musique | Depuis le 1er juin 2026, l'**Audio API** attache un son de la bibliothèque Instagram au reel à sa création : `GET /ig_audio?audio_type=music&user_id=…` donne les tendances du moment (ou le résultat d'une `search_query`), et le conteneur reçoit `audio_configuration` (`audio_id`, `audio_volume` et `video_volume` de 0 à 100). Seulement avec la connexion Facebook (`graph.facebook.com`), et seulement les sons « autorisés pour les tiers », une sélection plus courte que dans l'appli. Sans ça, le son contenu dans le fichier est publié comme « son original ». | Choisir l'instant du morceau (il part du début), un son de la bibliothèque sur une image, la connexion Instagram (`graph.instagram.com`) pour l'Audio API. Une appli ne peut pas avoir les deux connexions. |
 | Image | JPEG, ratio entre 4:5 et 1,91:1. On fera du 1080 × 1350 (4:5). | Une image avec musique (l'API ne met pas de son sur une image). |
 | Carrousel | Jusqu'à 10 éléments (images ou vidéos), un seul post au compteur. | De la musique sur un carrousel d'images. |
+| Stories | `media_type=STORIES`, une image ou une vidéo de 60 s au plus, publiée comme un reel (conteneur, traitement, publication) ; la story du matin reprend le reel du matin (`publierStories`, colonnes `story_*` de `social_variantes`). | Une légende, un sticker lien ou un son ajouté par l'API. |
 | Légende | 2 200 caractères. **5 hashtags maximum** depuis décembre 2025. | Modifier la légende après publication par l'API. |
 | Programmation | On crée un « conteneur », on attend qu'Instagram ait traité la vidéo, puis on publie. | Programmer un reel à l'avance chez Instagram : il faut notre propre planificateur. |
 | Volume | 100 publications par 24 h et par compte. | |
@@ -140,6 +143,7 @@ Le cycle d'un post :
 | J-1, la nuit | Fabrication des fichiers définitifs, contrôle qualité, envoi dans Supabase. | GitHub Actions |
 | Jour J, une heure avant | Choix d'un son tendance de la bibliothèque Instagram, création du conteneur. | GitHub Actions |
 | Jour J, à l'heure prévue | Publication sur chaque compte actif. | GitHub Actions |
+| Jour J, après le reel du matin | Le reel du matin repart en story (conteneur, puis publication au passage suivant). | GitHub Actions |
 | J+1 | Suppression des fichiers lourds, une vignette est gardée pour l'admin. | GitHub Actions |
 | J+1 et J+7 | Relevé des statistiques. | GitHub Actions |
 
@@ -465,13 +469,14 @@ transfert sortant par mois.
 
 | Automate | Où | Quand | Rôle |
 |---|---|---|---|
-| **Atelier** | Routine Claude Code | Une fois par jour | Lit l'état du planning (`etat.json`), corrige les posts refusés, remplit jusqu'à 12 créneaux vides en piochant d'abord dans tes idées, écrit textes, légendes et hashtags, passe les contrôles, regarde les aperçus, puis pousse les fichiers sur la branche `reseaux-atelier`. Ses consignes : `reseaux/atelier/CONSIGNES.md`. |
-| **Synchro et rendu** | GitHub Actions (`social-rendu.yml`) | Toutes les 3 heures | Relit la branche de l'atelier, contrôle chaque post et l'écrit dans Supabase, puis fabrique les fichiers des posts des 30 prochaines heures, passe le contrôle qualité, envoie les fichiers dans le stockage. |
+| **Atelier** | Routine Claude Code | Toutes les deux heures le temps de remplir la réserve, puis une fois par jour | Lit l'état du planning (`etat.json`), corrige les posts refusés, remplit jusqu'à 24 créneaux vides en piochant d'abord dans tes idées, écrit textes, légendes et hashtags, passe les contrôles, regarde les aperçus, puis pousse les fichiers sur la branche `reseaux-atelier`, par lots de six. Elle travaille dans le dépôt même, sur cette branche mise à jour avec `main` (pas de dossier à côté), et tient un journal de chaque passage dans `reseaux/atelier/journal/`, poussé dès l'ouverture : c'est là qu'on lit ce qu'elle a fait, ou ce qui l'a bloquée. Ses consignes : `reseaux/atelier/CONSIGNES.md`. |
+| **Synchro et rendu** | GitHub Actions (`social-rendu.yml`) | Toutes les heures | Relit la branche de l'atelier, contrôle chaque post et l'écrit dans Supabase, puis fabrique les fichiers des posts des 48 prochaines heures, passe le contrôle qualité, envoie les fichiers dans le stockage. |
 | **Publication** | GitHub Actions (`social-publication.yml`) | Toutes les 10 min | Publie ce qui est dû : crée le conteneur, attend la fin du traitement de la vidéo, publie, enregistre le lien. |
+| **Horloge** | pg_cron dans Supabase (migration `20261008140000_horloge_workflows.sql`) | Toutes les 10 min, toutes les heures, chaque jour | Déclenche les trois workflows par l'API de GitHub (`workflow_dispatch`), avec un jeton d'accès personnel rangé dans le Vault de Supabase. GitHub n'honore qu'une petite part des « schedule » de ce dépôt (le 7 octobre 2026 : une publication en neuf heures, un rendu en neuf heures, l'entretien de 7 h 41 parti à 14 h 44) ; les « schedule » restent écrits dans les workflows, en secours. Sans jeton dans le Vault, l'horloge ne fait rien. |
 
 Tant qu'un compte n'est pas actif (pas encore branché, ou coupé dans l'admin), ses posts ne sont ni rendus ni comptés en échec : la publication tourne « à blanc » et l'entretien passe en échec, fichiers effacés, tout post rendu dont le créneau est dépassé d'un jour. Le stockage gratuit ne se remplit donc pas de vidéos qui ne partiront jamais.
 | **Entretien** | GitHub Actions (`social-entretien.yml`) | Chaque jour | Vérifie le jeton de Page chaque semaine, fait le ménage du stockage, relève les statistiques, écrit les alertes et l'état du planning pour l'atelier. |
-| **Base** | GitHub Actions (`social-base.yml`) | À la fusion | Applique la migration des tables `social_*` par l'API de gestion de Supabase. |
+| **Base** | GitHub Actions (`social-base.yml`) | À la fusion | Applique les migrations des tables `social_*` par l'API de gestion de Supabase, puis recopie le secret GitHub `WORKFLOWS_TOKEN` du dépôt dans le Vault de Supabase (`social_definir_jeton_github`) pour l'horloge. Changer le jeton : changer le secret, puis « Run workflow ». |
 
 ### 7.2 Les routines Claude et ton abonnement
 
@@ -647,6 +652,39 @@ interrupteur.
 - **Premiers jours d'un compte** : nom, bio, photo et lien remplis avant la
   première publication automatique, et aucune action automatisée en dehors
   de la publication (pas d'abonnements ni de « j'aime » automatiques).
+
+---
+
+## 12 bis. Les dernières publications sur l'accueil du site
+
+Depuis le 7 octobre 2026, l'accueil de quiz-couple.com (cinq langues)
+montre les trois dernières publications Instagram, sans le script
+d'Instagram (lourd, et il poserait des cookies avant tout consentement) :
+
+- au rendu, l'automate fabrique une **affiche** (la couverture du reel, ou
+  l'image du post, ramenée à 540 px de large en JPEG : le ffmpeg de Remotion
+  n'encode pas le WebP) et la dépose dans le bucket **public**
+  `social-public` (`<jour>/<id>/affiche.jpg`, cache d'un an), chemin gardé
+  dans `social_variantes.affiche` ; le ménage n'efface que le bucket privé ;
+- la fonction SQL **`get_instagram_recents(p_limit)`** (migration
+  `20261008120000_instagram_accueil.sql`, security definer, ouverte à la
+  clé publique) rend les derniers posts publiés : lien Instagram, première
+  ligne de la légende, affiche, date, son attaché, format. Les tables
+  restent fermées ;
+- `home-dynamic.js` l'appelle après le chargement et remplit la section
+  `#instagram-recents` de `home.ejs` (cartes 9:16 avec l'affiche, la
+  légende, le son, un lien vers le post ; grille de trois sur bureau,
+  défilement horizontal avec accroche sur téléphone ; bouton « Suivre
+  @quiz_couple_official »). Sans publication, la section reste masquée.
+  Ses styles sont dans le gabarit, pas dans `styles.css` : rien n'est
+  visible au chargement, les feuilles critiques ne bougent pas.
+
+Les envois de fichiers vers Supabase (`lib/supabase.mjs`, `televerser`)
+passent par le protocole de reprise de Supabase (TUS, morceaux de 6 Mo)
+au-delà de 6 Mo, avec trois essais sur une erreur réseau : le premier reel
+de jeu, 15 Mo envoyés d'un bloc, est tombé sur « fetch failed » le
+7 octobre 2026. La cause réseau (ECONNRESET...) est désormais écrite dans
+le journal.
 
 ---
 

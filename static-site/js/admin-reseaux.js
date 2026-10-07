@@ -186,6 +186,8 @@
           libelleSon(v) +
           (v && v.erreur ? '<span class="rsx-erreur">' + esc(v.erreur) + '</span>' : '') + '</div>' +
           '<div class="rsx-etat"><span class="rsx-statut rsx-statut--' + statut[1] + '">' + esc(statut[0]) + '</span>' +
+          (v && v.story_statut === 'publie' ? '<span class="rsx-statut rsx-statut--publie" title="Le reel du matin a aussi été publié en story">+ story</span>' : '') +
+          (v && v.story_statut === 'echec' ? '<span class="rsx-statut rsx-statut--echec" title="La story du matin n\'est pas partie (voir le journal)">story ✕</span>' : '') +
           (v && v.permalien ? '<a href="' + esc(v.permalien) + '" target="_blank" rel="noopener">Voir</a>' : '') + '</div>' +
           '<div class="rsx-actions">' + boutonsPost(p, v) + '</div>' +
           '</div>';
@@ -218,7 +220,28 @@
     rendreJournal();
   }
 
+  // Les clics vers Instagram depuis le site : un total, tous boutons
+  // confondus (Thomas, 7 octobre 2026), lu par la fonction publique
+  // get_instagram_clics (migration 20261008150000), comme les statistiques
+  // de trafic, avec la clé publique.
+  function chargerClics() {
+    return fetch(ctx.url + '/rest/v1/rpc/get_instagram_clics', {
+      method: 'POST',
+      headers: { 'apikey': ctx.cle, 'Authorization': 'Bearer ' + ctx.cle, 'Content-Type': 'application/json' },
+      body: '{}'
+    }).then(function (r) { return r.json(); }).then(function (r) {
+      var c = Array.isArray(r) ? r[0] : r;
+      if (!c || c.total == null) throw new Error('vide');
+      $('rsx-clics').textContent = String(c.total);
+      $('rsx-clics-sub').textContent = c.jours7 + ' sur sept jours, ' + c.aujourdhui + ' aujourd\'hui, depuis le site, tous boutons confondus';
+    }).catch(function () {
+      $('rsx-clics').textContent = '-';
+      $('rsx-clics-sub').textContent = 'migration instagram_clics à appliquer dans Supabase';
+    });
+  }
+
   function charger() {
+    chargerClics();
     return appel('GET').then(function (d) {
       donnees = d;
       rendre();

@@ -755,6 +755,47 @@
   </div>
 </section>
 
+<%# Les trois dernières publications Instagram : nos propres affiches (bucket
+    public rempli au rendu), lues par home-dynamic.js après le chargement.
+    Pas le script d'Instagram : rien de tiers, rien à consentir. La section
+    reste masquée tant qu'il n'y a rien à montrer. Ses styles sont ici, pas
+    dans styles.css : rien n'est visible au chargement, et les feuilles
+    critiques n'ont pas à bouger. %>
+<section class="section-padding" id="instagram-recents" style="display:none" data-suivre="<%= instagramUrl %>">
+  <style>
+    .ig-grille { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; max-width: 54rem; margin: 0 auto; }
+    .ig-carte { position: relative; display: block; aspect-ratio: 9 / 16; border-radius: 1.25rem; overflow: hidden; background: hsl(var(--muted)); box-shadow: 0 14px 34px -14px hsl(var(--primary) / 0.45); text-decoration: none; color: #fff; transition: transform 0.25s ease; }
+    .ig-carte:hover { transform: translateY(-4px); }
+    .ig-carte img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .ig-carte:hover img { transform: scale(1.04); }
+    .ig-carte::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 58%; background: linear-gradient(to top, rgba(20, 10, 20, 0.78), rgba(20, 10, 20, 0)); }
+    .ig-tag { position: absolute; top: 0.75rem; left: 0.75rem; z-index: 1; display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.6rem; border-radius: 999px; background: rgba(255, 255, 255, 0.92); color: #22141c; font-size: 0.72rem; font-weight: 700; }
+    .ig-tag svg { width: 0.85rem; height: 0.85rem; }
+    .ig-legende { position: absolute; left: 0.9rem; right: 0.9rem; bottom: 2.2rem; z-index: 1; font-weight: 700; font-size: 0.95rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+    .ig-son { position: absolute; left: 0.9rem; right: 0.9rem; bottom: 0.85rem; z-index: 1; font-size: 0.75rem; opacity: 0.92; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .ig-suivre { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .ig-suivre svg { width: 1.1rem; height: 1.1rem; }
+    @media (max-width: 767.98px) {
+      .ig-grille { display: flex; gap: 0.9rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0.25rem 1rem 1rem; margin: 0 -1rem; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+      .ig-grille::-webkit-scrollbar { display: none; }
+      .ig-carte { flex: 0 0 72%; scroll-snap-align: center; }
+    }
+  </style>
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4"><%= t('home:instagram.title', 'Nos dernières publications') %> <span class="text-gradient"><%= t('home:instagram.titleHighlight', 'sur Instagram') %></span></h2>
+      <p class="text-muted-foreground max-w-3xl mx-auto text-base md:text-lg leading-relaxed"><%= t('home:instagram.intro', '') %></p>
+    </div>
+    <div class="ig-grille" aria-live="polite"></div>
+    <div class="text-center mt-8">
+      <a href="<%= instagramUrl %>" class="btn btn-cta ig-suivre" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        <%= t('home:instagram.follow', 'Suivre @quiz_couple_official') %>
+      </a>
+    </div>
+  </div>
+</section>
+
 <%# Un seul encart sur l'accueil, apres les articles et avant les avis. %>
 <div class="container mx-auto px-4"><% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %></div>
 

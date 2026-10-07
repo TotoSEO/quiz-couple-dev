@@ -214,5 +214,12 @@
     "finTitre": "You are on the same wavelength!",
     "finTexte": "3 answers out of 4 in common",
     "finCta": "Your turn to play"
+  },
+  "instagram": {
+    "title": "Our latest posts",
+    "titleHighlight": "on Instagram",
+    "intro": "Every day, three little animations with our two mascots: couple quizzes, dilemmas and tender moments to send to your partner.",
+    "follow": "Follow @quiz_couple_official",
+    "voir": "View on Instagram"
   }
 }

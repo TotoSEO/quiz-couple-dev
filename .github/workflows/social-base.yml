@@ -1,31 +1,88 @@
 name: Réseaux · base Supabase
 
-# Applique la migration des tables social_* (idempotente) par l'API de
+# Applique les migrations des réseaux sociaux (idempotentes) par l'API de
 # gestion de Supabase, avec les secrets déjà utilisés pour les fonctions :
-# SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF. Rien à faire à la main.
+# SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF. Puis recopie dans le Vault
+# de Supabase le jeton GitHub WORKFLOWS_TOKEN : c'est lui que pg_cron utilise
+# pour déclencher les workflows à l'heure (migration 20261008140000), GitHub
+# sautant la plupart des départs programmés de ce dépôt. Pour changer le
+# jeton : changer le secret, puis « Run workflow ». Rien à faire à la main.
 
 on:
   push:
     branches: [main]
     paths:
       - 'supabase/migrations/20261007120000_reseaux_sociaux.sql'
+      - 'supabase/migrations/20261008120000_instagram_accueil.sql'
+      - 'supabase/migrations/20261008130000_carrousel_et_story.sql'
+      - 'supabase/migrations/20261008140000_horloge_workflows.sql'
+      - 'supabase/migrations/20261008150000_instagram_clics.sql'
       - '.github/workflows/social-base.yml'
   workflow_dispatch:
 
 jobs:
   migration:
     runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
     steps:
       - uses: actions/checkout@v4
-      - name: Appliquer la migration
-        env:
-          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+      - name: Appliquer les migrations
         run: |
-          jq -Rs '{query: .}' supabase/migrations/20261007120000_reseaux_sociaux.sql > requete.json
+          for f in supabase/migrations/20261007120000_reseaux_sociaux.sql supabase/migrations/20261008120000_instagram_accueil.sql supabase/migrations/20261008130000_carrousel_et_story.sql supabase/migrations/20261008140000_horloge_workflows.sql supabase/migrations/20261008150000_instagram_clics.sql; do
+            jq -Rs '{query: .}' "$f" > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo "$f : réponse $code"
+            if [ "$code" -ge 300 ]; then head -c 600 reponse.json; exit 1; fi
+          done
+      # Le jeton part dans le Vault par la fonction de la migration, qui en
+      # contrôle la forme ; il est encadré de $jeton$ (un jeton à grain fin ne
+      # contient que lettres, chiffres et soulignés). Sans secret, l'horloge
+      # reste sur les « schedule » de GitHub et le workflow le dit.
+      - name: Jeton de l'horloge
+        env:
+          WORKFLOWS_TOKEN: ${{ secrets.WORKFLOWS_TOKEN }}
+        run: |
+          if [ -z "$WORKFLOWS_TOKEN" ]; then
+            echo "WORKFLOWS_TOKEN absent : l'horloge pg_cron ne déclenchera rien, les workflows restent sur leur schedule"
+            exit 0
+          fi
+          case "$WORKFLOWS_TOKEN" in
+            github_pat_*) ;;
+            *) echo "WORKFLOWS_TOKEN n'a pas la forme d'un jeton à grain fin (github_pat_...)"; exit 1 ;;
+          esac
+          printf 'select public.social_definir_jeton_github($jeton$%s$jeton$);' "$WORKFLOWS_TOKEN" | jq -Rs '{query: .}' > requete.json
           code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
             "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
             -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
             --data @requete.json)
-          echo "réponse $code"
-          if [ "$code" -ge 300 ]; then head -c 600 reponse.json; exit 1; fi
+          rm -f requete.json
+          echo "jeton de l'horloge : réponse $code"
+          if [ "$code" -ge 300 ]; then head -c 300 reponse.json; exit 1; fi
+      # Un vrai départ de la publication par l'horloge, puis la réponse de
+      # GitHub lue dans la table de pg_net : 204 = la clé marche. Un départ de
+      # plus est sans effet (la publication est idempotente).
+      - name: Essai de l'horloge
+        env:
+          WORKFLOWS_TOKEN: ${{ secrets.WORKFLOWS_TOKEN }}
+        run: |
+          if [ -z "$WORKFLOWS_TOKEN" ]; then exit 0; fi
+          requete() {
+            jq -n --arg q "$1" '{query: $q}' > requete.json
+            curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json
+          }
+          code=$(requete "select public.social_declencher_workflow('social-publication.yml') as id")
+          id=$(jq -r '.[0].id // empty' reponse.json)
+          if [ "$code" -ge 300 ] || [ -z "$id" ]; then echo "déclenchement refusé ($code)"; head -c 300 reponse.json; exit 1; fi
+          sleep 8
+          code=$(requete "select status_code, left(coalesce(content, ''), 200) as content, error_msg from net._http_response where id = $id")
+          statut=$(jq -r '.[0].status_code // empty' reponse.json)
+          echo "réponse de GitHub au déclenchement : ${statut:-aucune} $(jq -r '.[0].error_msg // ""' reponse.json)"
+          if [ "$statut" != "204" ]; then head -c 300 reponse.json; echo; echo "la clé WORKFLOWS_TOKEN ne déclenche pas les workflows (jeton expiré, révoqué, ou sans la permission Actions en écriture)"; exit 1; fi

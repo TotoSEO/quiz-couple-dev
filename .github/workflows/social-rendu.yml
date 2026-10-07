@@ -1,12 +1,16 @@
 name: Réseaux · synchro et rendu
 
-# Toutes les 3 heures : relit les posts écrits par la routine Claude sur la
+# Toutes les heures : relit les posts écrits par la routine Claude sur la
 # branche reseaux-atelier, les écrit dans Supabase, puis rend les fichiers des
-# posts publiés dans les 30 prochaines heures (studio Remotion).
+# posts publiés dans les 48 prochaines heures (studio Remotion). Un post
+# écrit pour le jour même est ainsi rendu dans l'heure. Deux jours d'avance
+# plutôt qu'un : GitHub saute la plupart des départs programmés de ce dépôt
+# (une exécution en neuf heures le 7 octobre 2026), l'horloge fiable est
+# pg_cron (migration 20261008140000), et ce « schedule » n'est qu'un secours.
 
 on:
   schedule:
-    - cron: '23 */3 * * *'
+    - cron: '23 * * * *'
   workflow_dispatch:
 
 concurrency:
@@ -50,4 +54,4 @@ jobs:
         if: steps.atelier.outputs.present == 'true'
         run: node reseaux/automates/synchro.mjs atelier/reseaux/atelier/posts
       - name: Rendu
-        run: node reseaux/automates/rendu.mjs --heures 30
+        run: node reseaux/automates/rendu.mjs --heures 48

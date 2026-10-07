@@ -1,7 +1,8 @@
 # Consignes de la routine « atelier »
 
-Cette routine Claude tourne une fois par jour. Elle écrit les posts Instagram
-des prochains jours, les vérifie, et les pousse sur la branche
+Cette routine Claude tourne toutes les deux heures le temps de remplir la
+réserve, puis une fois par jour. Elle écrit les posts Instagram des
+prochains jours, les vérifie, et les pousse sur la branche
 `reseaux-atelier`. Elle ne touche à rien d'autre : ni `main`, ni Supabase,
 ni Instagram. GitHub Actions s'occupe du reste (synchro, rendu,
 publication).
@@ -12,18 +13,27 @@ rédaction » de `CLAUDE.md`.
 
 ## 1. Préparer
 
+Tout se passe dans le dépôt lui-même, sur la branche `reseaux-atelier`,
+qu'on met à jour avec `main` pour avoir les outils du jour (la fusion n'a
+jamais de conflit : `main` ne touche ni aux posts ni à `etat.json`). Pas de
+dossier à côté, pas de worktree.
+
 ```bash
 git fetch origin main reseaux-atelier || git fetch origin main
-# l'atelier dans un dossier à part ; on le crée depuis main s'il n'existe pas
-git worktree add ../atelier origin/reseaux-atelier 2>/dev/null \
-  || git worktree add -b reseaux-atelier ../atelier origin/main
+git checkout -B reseaux-atelier origin/reseaux-atelier 2>/dev/null \
+  || git checkout -B reseaux-atelier origin/main
+git merge --no-edit origin/main
 cd reseaux/studio && npm ci && cd -
 # Chromium déjà installé dans l'environnement, sinon Remotion télécharge le sien
 export NAVIGATEUR=$(ls /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell 2>/dev/null | head -1)
 ```
 
-Les outils (studio, contrôles) se lancent depuis `main` ; les posts
-s'écrivent dans `../atelier/reseaux/atelier/posts/`.
+Puis, **avant toute autre chose, ouvre le journal du passage et pousse-le**
+(voir « 7. Le journal ») : un passage qui s'arrête en route doit avoir
+laissé une trace lisible dans le dépôt.
+
+Les posts s'écrivent dans `reseaux/atelier/posts/`, le journal dans
+`reseaux/atelier/journal/`.
 
 ## 2. Lire l'état et la ligne éditoriale
 
@@ -31,12 +41,16 @@ Avant d'écrire quoi que ce soit, lis `reseaux/atelier/LIGNE-EDITORIALE.md`
 (le compte, les deux publics, la semaine type, ce que fait chaque catégorie)
 et `reseaux/atelier/sujets.json` (la banque de sujets).
 
-Puis `../atelier/reseaux/atelier/etat.json`, écrit chaque matin par
-l'entretien :
+Puis `reseaux/atelier/etat.json`, écrit chaque matin par l'entretien :
 
 - `a_corriger` : posts dont le rendu ou la publication a échoué, avec
   l'erreur. On les corrige en premier.
-- `a_remplir` : les créneaux vides de J+2 à J+21, avec leur `categorie`.
+- `a_remplir` : les créneaux vides d'aujourd'hui (seulement ceux qui
+  commencent dans plus de trois heures, heure de Paris) à J+100, avec leur
+  `categorie`. On remplit dans l'ordre des dates : aujourd'hui d'abord.
+  L'horizon est long exprès : la réserve s'écrit d'avance, pour que le
+  compte continue à publier même quand la routine ne tourne pas (le rendu et
+  la publication n'ont pas besoin d'elle).
 - `recents_et_prevus` : ce qui est passé et prévu, pour ne jamais répéter
   une phrase, une question ou une scène de la semaine.
 - `idees` : les idées de Thomas. Elles passent avant la banque ; le post
@@ -44,7 +58,8 @@ l'entretien :
 - `statistiques_j7` : ce qui a marché. On choisit un peu plus souvent les
   piliers et les décors qui ont le plus de partages et d'enregistrements.
 
-Sans `etat.json` (premier jour), on remplit de J+2 à J+14 en suivant la
+Sans `etat.json` (premier jour), on remplit d'aujourd'hui (créneaux qui
+commencent dans plus de trois heures, heure de Paris) à J+100 en suivant la
 semaine type, en sautant les fichiers déjà présents dans `posts/`.
 
 ## 3. Choisir le sujet
@@ -55,9 +70,26 @@ Pour chaque créneau à remplir, dans l'ordre des dates :
    c'est lui ;
 2. sinon une idée de Thomas qui va avec la catégorie ;
 3. sinon le premier sujet de la catégorie qui n'apparaît dans aucun post de
-   `posts/` (champ `sujet`).
+   `posts/` (champ `sujet`) ni dans `deja_publies.sujets` de `sujets.json`
+   (les posts partis sur le compte en dehors de l'atelier, comme le reel
+   d'essai des fleurs du 7 octobre 2026) : **jamais de doublon**, ni de
+   sujet, ni de scène, ni de phrase déjà vue dans `recents_et_prevus` ;
+4. sinon (la banque de la catégorie est épuisée, elle couvre treize
+   semaines) tu inventes un sujet dans le même esprit que ceux de la
+   banque, avec un identifiant neuf (`pov-274`, `connais-tu-40`...), sans
+   reprendre une situation vue dans `recents_et_prevus` ni dans les
+   soixante derniers posts de `posts/`. La publication ne s'arrête jamais
+   faute de sujet.
 
-**Au plus 12 posts par passage**, les créneaux les plus proches d'abord.
+**Un créneau dont le fichier existe déjà dans `posts/` n'est jamais réécrit**,
+même s'il figure encore dans `a_remplir` (l'état est calculé sur ce qui est
+déjà passé dans Supabase, un post poussé depuis peut y manquer) : on passe
+au suivant.
+
+**Au plus 24 posts par passage**, les créneaux les plus proches d'abord.
+Chaque post est contrôlé et regardé (planche) avant d'être poussé : on ne
+sacrifie pas la vérification à la quantité. S'il ne reste rien à remplir,
+on s'arrête tout de suite.
 
 ## 4. Écrire un post
 
@@ -85,6 +117,30 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   refusé par le contrôle.
 - **L'accroche** : dès la première image, les personnages sont dans l'image
   et un geste part tout de suite (pas d'entrée dans une image vide).
+- **Un brief riche, et le contrôle le vérifie** (règle de Thomas : les
+  briefs des vidéos animées sont très détaillés, avec les zooms, les
+  expressions et les mouvements). Un scénario où il ne se passe rien est
+  refusé par `controler.mjs`, avec le plan et les secondes en cause :
+  - la `description` de chaque plan fait 100 signes au moins et raconte,
+    dans l'ordre et avec les secondes, le décor et la lumière, où est chaque
+    personnage, chaque geste, chaque expression (yeux, bouche, joues),
+    chaque mouvement de caméra et chaque texte ;
+  - **la caméra bouge au moins deux fois par reel** (zoom, secousse ou
+    déplacement : une image clé `camera` qui change le cadrage), et tout
+    plan de plus de 4 s a son mouvement de caméra. Un zoom rapide sur un
+    visage à la chute, un lent rapprochement sur un câlin : c'est ce qui
+    fait le rythme ;
+  - **chaque personnage change d'expression** au moins deux fois par reel,
+    et au moins une fois toutes les six secondes où il est à l'écran
+    (gestes `visage`, `regarde`, `rit`, `boude`, `pleure`, `fache`,
+    `mignon`, `parle`, `mange`, `offre`, `bisou`, `dort`, `joie`) ;
+  - **jamais plus de 1,5 s sans rien de nouveau** dans un plan : un geste
+    anime 2,5 s puis devient une pose tenue (`tient` et `telephone` ne
+    comptent jamais), un effet, une bulle ou un mouvement de caméra
+    couvrent leur durée. Le premier geste d'un plan part avant 0,6 s, et
+    avant 0,5 s au premier plan.
+  Les modèles `pov-frites`, `pov-fleurs`, `pov-couette` et `statique-calin`
+  passent ces règles : copie leur densité, pas seulement leur forme.
 - **Simple** : un décor, deux personnages au plus, un ou deux objets, 10 à
   15 secondes (le contrôle refuse moins de 10). Les mini messages (un personnage, un geste vers la caméra,
   une phrase mot à mot) sont les plus faciles à réussir.
@@ -110,6 +166,15 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   0 s), ils se rejoignent au milieu, puis `calin`.
 - Rose = la fille (elle a un nœud), violet = le garçon. Les fleurs, le
   bouquet, les vases : c'est toujours le violet qui les apporte.
+- **« He » ou « she », jamais « they »** (règle de Thomas du 7 octobre
+  2026) : dans un titre, une bulle, un texte à l'écran ou une légende
+  d'animation, le partenaire est « he » ou « she » selon la mascotte qui
+  agit (« POV: he took the whole blanket again », « He's never hungry...
+  until you get fries »), jamais « they », « their » ni « them ». Les idées
+  de la banque sont écrites avec « they » : tu les transposes. Dans la
+  légende, « Tag your partner » plutôt que « Tag them ». Les jeux, eux,
+  gardent « their » et « they » (voir plus bas) : c'est la forme naturelle
+  d'un quiz en anglais, et Thomas l'a validée.
 - Varie les humeurs : au moins un post par jour où une mascotte n'est pas
   simplement souriante. Poses `mignon`, `triste`, `colere`, `gene`,
   `fatigue`, `supplie`, `rire` ; gestes `pleure` (larmes qui coulent,
@@ -127,6 +192,27 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   reviennent dans le lit à chaque plan (geste `plonge` : ils sautent sous la
   couette).
 - Coquin : jamais rien de montré (voir la ligne éditoriale).
+- **Phrase à finir** (pilier `participatif`) : un personnage en grand qui
+  regarde la caméra, un effet `question` au-dessus de la tête, le texte en
+  haut mot à mot : « finish the sentence: my partner always ___ » (les trois
+  tirets bas restent affichés). La légende demande la réponse (« Finish it
+  in the comments »). 10 à 12 secondes, la fin tient sur le texte complet.
+- **Échelle de réaction** : des légendes de plan qui se suivent
+  (« 'hey' », « 'hey :)' », « 'hey <3' », « 'im outside' »), un plan par
+  palier, le même personnage dont le visage monte d'un cran à chaque fois
+  (`repos`, `mignon`, `amoureux`, puis `saute`/`joie`) ; la plus grosse
+  réaction en dernier, jamais avant.
+- **Routines** (« once a day / once a week / once a month ») : trois plans
+  légendés, un décor et un geste chacun, transitions `coupe`.
+- **Faux échange de messages** : des bulles qui alternent entre les deux
+  personnages, une à la fois, 60 signes au plus chacune ; la chute est la
+  dernière bulle, et le visage change avec elle.
+- **Contraste** (« us: ... ») : les deux dans le même plan, chacun dans son
+  état (l'une tremble sous la couette, l'autre a les yeux plats), avec les
+  légendes « me » et « them » si besoin.
+- **Retrouvailles** : deux plans, « 5 minutes » puis « 5 days » ; dans le
+  second, les deux entrent par les bords (`marche` ou `court` dès 0 s) et
+  finissent en `calin`, cœurs.
 
 ### Les jeux (connais-tu, tu-preferes)
 
@@ -134,23 +220,66 @@ Huit questions ou six dilemmes, au format des exemples. Les questions sont
 simples et personnelles ; la première dit « your partner's », les suivantes
 « their ». Les choix d'un dilemme visent 30 signes. Jamais de score.
 
+- **L'étiquette (`etiquette`) porte l'édition**, en vingt-deux signes au
+  plus : le `theme` du sujet, tourné en nom d'édition (« Food edition »,
+  « Firsts edition », « Hard edition », « Music edition »). C'est elle
+  qu'on voit sur la couverture et dans la grille du compte. L'accroche
+  reste « How well do you know your partner? » (le mot-clé que les gens
+  cherchent), la consigne dit le nombre de questions et les secondes.
+- **« Who's more likely? »** (sujets avec `"mode": "pointe"`) : étiquette
+  « Who's more likely? » ou l'édition du sujet (« Food edition »), accroche
+  « Who's more likely to...? », consigne « Point at your partner. No
+  talking! », huit situations qui commencent par « ...to » et finissent par
+  « ? » (« ...to fall asleep during a movie? »), `fin.question` « Who got
+  pointed at the most? Comment it! », `fin.bouton` « Send this to your
+  partner ». Rien dans la vidéo ne donne la réponse.
+- **Éditions « Hard » et « Impossible »** : des questions qu'on rate
+  (« Their blood type? », « The last song they played? »), c'est fait
+  pour ; la fin reste « How many did you get? Comment your score! ».
+
 ### La phrase tendre
 
 Gabarit `citation`, une phrase de la banque `phrase`, quatre lignes au plus.
 
+### Le carrousel (jeudi soir)
+
+Gabarit `carrousel`, au format de `recettes/exemples/carrousel-questions.json`
+et un sujet de la banque `carrousel` : la couverture porte l'`etiquette` et
+l'`accroche` du sujet, puis huit pages `{ "type": "page", "numero": "1",
+"question": "..." }` (les exemples du sujet en donnent trois, tu écris les
+cinq autres dans le même esprit, 90 signes au plus), puis la page finale
+`{ "type": "fin", "texte": "Want more questions for tonight?", "bouton":
+"Link in bio" }`. Une petite scène dessinée sur la couverture et la page
+finale (un plan simple, même vocabulaire que les animations), ou rien : le
+gabarit pose alors le duo. Légende : une accroche avec un mot-clé (« date
+night », « couple questions »), puis « Save this for your next date
+night » ; le renvoi vers le site est permis (« More questions: link in
+bio »). Hashtags : `#couplequestions`, `#datenight`, `#couplegoals`,
+`#quizcouple`. Le format du post : `"format": "carrousel"`.
+
+La story du matin n'est pas ton travail : l'automate reprend le reel du
+matin en story après sa publication.
+
 ### Légende et hashtags
 
-Voir la ligne éditoriale. Les animations et les phrases ne renvoient jamais
-vers le site dans la légende (le contrôle le refuse) ; les jeux peuvent
-(« More quizzes: link in bio »). Tout en anglais simple, sans tiret
-cadratin.
+Voir la ligne éditoriale, partie « Légendes et hashtags » : la première
+ligne accroche avec un mot-clé naturel (« couple quiz », « my partner »,
+« boyfriend », « girlfriend », « date night »), une ligne de contexte au
+plus, puis **un seul appel**, choisi selon le geste voulu (envoyer pour les
+animations, les minis et les phrases tendres ; commenter pour les jeux et
+les phrases à finir ; enregistrer de temps en temps pour ce qui se garde).
+Les trois posts d'une journée ne portent pas le même appel. Hashtags : la
+liste de la catégorie dans la ligne éditoriale, 3 à 5, `#quizcouple`
+dedans. Les animations et les phrases ne renvoient jamais vers le site dans
+la légende (le contrôle le refuse) ; les jeux peuvent (« More quizzes: link
+in bio »). Tout en anglais simple, sans tiret cadratin.
 
 ## 5. Vérifier, puis regarder
 
 Pour chaque post écrit :
 
 ```bash
-node reseaux/automates/controler.mjs ../atelier/reseaux/atelier/posts/<fichier>.json
+node reseaux/automates/controler.mjs reseaux/atelier/posts/<fichier>.json
 # extraire la recette (variantes.en.recette) dans un fichier, puis :
 node reseaux/studio/scripts/rendre.mjs --verifier <recette.json> /tmp/verif
 node reseaux/studio/scripts/planche.mjs <recette.json> /tmp/planche.png --toutes 0.5
@@ -171,17 +300,46 @@ que tout soit juste.
 ## 6. Pousser
 
 ```bash
-cd ../atelier
-git add reseaux/atelier/posts
+git add reseaux/atelier/posts reseaux/atelier/journal
 git commit -m "Atelier : <n> posts du <premier jour> au <dernier jour>"
 git push origin HEAD:reseaux-atelier
 ```
 
+**On pousse au fil de l'eau, pas seulement à la fin** : dès que six posts
+sont écrits et passés au premier contrôle (`controler.mjs`), on les
+committe et on les pousse, puis on continue. Une session qui s'arrête en
+route (limite de temps ou d'usage) laisse ainsi des posts derrière elle,
+et le rendu peut déjà travailler. Les corrections venues de la planche
+partent dans un commit suivant.
+
 En cas de refus parce que la branche a bougé (l'entretien y écrit
 `etat.json`) : `git pull --rebase origin reseaux-atelier` puis on repousse.
-Jamais de push sur une autre branche, jamais de PR, jamais de `--force`.
+Si le push est refusé pour une autre raison, on l'écrit dans le journal
+avec le message exact, et on réessaie une fois. Jamais de push sur une
+autre branche, jamais de PR, jamais de `--force`.
 
-## 7. Terminer
+## 7. Le journal
 
-Un court bilan : posts écrits (jour, créneau, gabarit), posts corrigés,
-contrôles refusés et pourquoi. S'il n'y a rien à remplir, on s'arrête là.
+Chaque passage écrit `reseaux/atelier/journal/AAAA-MM-JJ-HHMM.md` (heure de
+Paris), et le pousse **dès l'ouverture**, avant d'écrire le moindre post :
+
+```markdown
+# Passage du 7 octobre 2026, 18 h 44
+
+- outils : node 22, studio installé en 48 s, Chromium trouvé
+- état : 93 créneaux à remplir, 0 à corriger
+```
+
+Puis on y ajoute une ligne à chaque étape qui compte (un post écrit et
+contrôlé, un contrôle refusé et pourquoi, une commande qui échoue avec son
+message exact, un push), et on le repousse avec chaque lot de posts. En
+fin de passage, le bilan : posts écrits (jour, créneau, gabarit), posts
+corrigés, contrôles refusés et pourquoi, ce qui n'a pas pu être fait.
+Ce journal est la seule façon pour Thomas et pour les sessions suivantes de
+savoir ce qui s'est passé : on y écrit même quand tout va bien, et surtout
+quand ça va mal. Les journaux de plus de trente jours se suppriment au
+passage.
+
+S'il n'y a rien à remplir, le journal le dit en une ligne, on le pousse,
+et on s'arrête là. Le bilan de fin de session reprend le journal en cinq
+lignes au plus.

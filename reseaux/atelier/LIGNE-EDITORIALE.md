@@ -67,14 +67,17 @@ refuse un post qui ne la suit pas.
 | Lundi | POV | Connais-tu | POV |
 | Mardi | POV | Tu préfères | POV |
 | Mercredi | POV | Connais-tu | POV |
-| Jeudi | POV | Statique | POV |
+| Jeudi | POV | Statique | Carrousel |
 | Vendredi | POV | Connais-tu | Coquin |
 | Samedi | POV | Tu préfères | Phrase tendre |
 | Dimanche | POV | Statique | Phrase tendre |
 
-Par semaine : 12 animations (57 %, dont une coquine), 3 « Connais-tu ton
-partenaire ? », 2 « Tu préfères », 2 reels statiques, 2 phrases tendres.
-Sur 13 semaines : 273 posts.
+Par semaine : 11 animations (dont une coquine), 3 « Connais-tu ton
+partenaire ? », 2 « Tu préfères », 2 reels statiques, 2 phrases tendres et
+1 carrousel de questions (le jeudi soir, depuis le 7 octobre 2026 : c'est le
+format qui se garde, « Save this for your next date night »). Sur 13
+semaines : 273 posts. Et chaque jour, une **story** reprend le reel du matin
+(voir plus bas).
 
 ## Les catégories
 
@@ -82,10 +85,31 @@ Chaque post porte une `categorie`, qui impose son gabarit.
 
 ### `pov` : animation avec les mascottes (gabarit `pov`)
 
-Humour de couple (« POV: your partner says they're not hungry »), moments
+Humour de couple (« POV: he says he's not hungry »), moments
 tendres, et mini messages faits comme les petits chats d'Instagram (un
 personnage, un geste vers la personne qui regarde, une phrase qui s'écrit
 mot à mot : « I saw these flowers... and thought of you »).
+
+Dans une animation, le partenaire est « he » ou « she », selon la mascotte
+qui agit (le violet est le garçon, la rose la fille), jamais « they »,
+« their » ni « them » : titre, bulles, textes à l'écran et légende (« Tag
+your partner », pas « Tag them »). Règle de Thomas du 7 octobre 2026. Les
+idées de la banque, écrites avec « they », se transposent au moment
+d'écrire le post. Les jeux gardent « their » et « they », forme naturelle
+d'un quiz en anglais.
+
+Quatre piliers dans la banque (`pilier` du sujet) : `humour`, `tendre`,
+`mini` (un personnage en grand qui parle à la personne qui regarde :
+« thinking of u rn », « this is your sign to text them rn ») et
+`participatif` (une phrase à finir : « finish the sentence: my partner
+always ___ », la réponse se donne en commentaire). Et des mécaniques
+reprises des formats qui marchent en 2026 (voir `REFERENCES.md`) :
+l'échelle de réaction (le visage monte à chaque palier, le plus fort en
+dernier), les routines (« once a day / once a week / once a month », un
+plan par palier), le faux échange de messages (des bulles qui alternent,
+la chute dans la dernière), le contraste (« us: one is always cold, one is
+always hot ») et les retrouvailles (« after 5 minutes apart vs after 5 days
+apart »). Chaque mécanique vient avec ses sujets dans la banque.
 
 - **L'accroche est dans la première seconde** : les personnages sont dans
   l'image dès la première image et bougent tout de suite. Jamais d'image
@@ -127,6 +151,20 @@ réponse affichée : la fin dit « How many did you get? Comment your score! ».
 Les mascottes ouvrent le reel en grand et bougent dès la première image.
 La légende peut renvoyer vers le site (« More quizzes: link in bio »).
 
+**Chaque quiz a une édition, et l'édition est sur la couverture** : c'est
+l'étiquette au-dessus de l'accroche (« Food edition », « Hard edition »,
+« Impossible edition », « Childhood edition »), vingt-deux signes au plus.
+Les comptes de quiz qui marchent vivent de ça : on sait ce qu'on va avoir,
+et on cherche les autres éditions. Les éditions « Hard » et « Impossible »
+sont faites pour faire rater, et donc commenter.
+
+**« Who's more likely to... ? », le quiz qui se joue à deux en se montrant
+du doigt** (sujets marqués `mode: pointe`). Même gabarit, l'accroche « Who's
+more likely to...? », la consigne « Point at your partner. No talking! »,
+huit situations qui commencent par « ...to » (« ...to fall asleep during a
+movie? »), et la fin demande « Who got pointed at the most? Comment it! ».
+La vidéo ne donne jamais la réponse : c'est le couple qui rit.
+
 ### `tu-preferes` : Tu préfères (gabarit `tu-preferes`)
 
 Six dilemmes de couple, les deux choix aussi tentants l'un que l'autre,
@@ -140,11 +178,33 @@ fleurs au trait. Quatre lignes au plus. Le son tendance du moment lui va
 rarement : la recette peut demander une recherche douce à la place
 (`"son": {"recherche": "soft piano"}`).
 
-### `post` et `carrousel`
+### `carrousel` : le carrousel de questions du jeudi soir (gabarit `carrousel`)
 
-Gabarits prêts (post 4:5 avec une scène dessinée, carrousel de questions
-avec les mascottes en couverture), hors de la semaine type tant que Thomas
-ne les y a pas mis.
+Dix pages : une couverture avec l'**étiquette de l'édition** (« For
+tonight », « Deep talk », « Firsts », « Never have I ever »...) et
+l'accroche (« 8 questions for you two »), huit pages numérotées avec une
+question chacune (90 signes au plus, en anglais simple, à la deuxième
+personne ou en « we »), et une page finale (« Want more questions for
+tonight? », bouton « Link in bio »). Les mascottes sont sur la couverture et
+la page finale (une petite scène dessinée, ou le duo), et en tout petit
+dans le coin de chaque page. C'est le format qui fait le plus
+d'enregistrements : la légende dit « Save this for your next date night »,
+et peut renvoyer vers le site. Pas de musique (un carrousel d'images n'en
+a pas par l'API). Treize éditions dans la banque (`carrousel`).
+
+### `post`
+
+Gabarit prêt (post 4:5 avec une scène dessinée), hors de la semaine type
+tant que Thomas ne l'y a pas mis.
+
+## La story du matin
+
+Chaque jour, le reel du matin repart **en story** juste après sa
+publication : même vidéo, 24 heures, sans légende ni son ajouté. C'est une
+deuxième surface pour le même travail, et c'est l'automate qui s'en occupe
+(`publierStories` dans `publication.mjs`) : la routine n'a rien à écrire.
+Un reel de plus de 60 secondes ne peut pas devenir une story ; le matin
+étant toujours une animation de 10 à 15 secondes, ça ne se produit pas.
 
 ## Le son
 
@@ -171,21 +231,61 @@ sert pas sans raison.
 
 ## Légendes et hashtags
 
-- Première ligne : l'accroche, sans répéter mot pour mot le texte de
-  l'image. Une ou deux lignes de plus au maximum.
-- Un appel simple : « Send this to your partner », « Tag them », « Comment
-  your score! », « A or B? ».
-- 3 à 5 hashtags, `#quizcouple` en premier, puis des hashtags de couple
-  variés (`#couplegoals`, `#couplecomedy`, `#relationshiphumor`,
-  `#lovequotes`, `#cuteanimation`, `#couplequiz`, `#wouldyourather`...).
+Instagram lit la légende et le texte à l'écran comme un moteur de
+recherche, et ce sont les envois et les enregistrements qui font la portée
+d'un reel. La légende sert donc à deux choses : dire de quoi il s'agit avec
+les mots que les gens tapent, et donner envie d'un geste précis.
+
+- **Première ligne : l'accroche**, sans répéter mot pour mot le texte de
+  l'image, et avec un mot-clé posé naturellement (« couple quiz »,
+  « boyfriend », « girlfriend », « my partner », « relationship », « date
+  night », « would you rather »). Une ou deux lignes de plus au maximum.
+- **Un appel, et un seul, choisi pour le geste qu'on veut** :
+  - envoyer, pour les animations, les minis et les phrases tendres :
+    « Send this to your partner », « Send this to them without
+    explaining », « Tag them » ;
+  - commenter, pour les jeux et les phrases à finir : « Comment your
+    score! », « Comment your A and B! », « Finish it in the comments »,
+    « Who got pointed at the most? » ;
+  - enregistrer, de temps en temps, pour ce qui se garde : « Save this for
+    your next date night » (dilemmes, questions).
+  Les trois posts d'une même journée ne portent pas tous le même appel.
+- **3 à 5 hashtags, précis**, par catégorie, `#quizcouple` dans le lot :
+  - animations, coquin, statique : `#couplegoals`, `#relationshiphumor`,
+    `#couplecomedy`, `#cuteanimation`, `#quizcouple` ;
+  - minis et phrases à finir : `#couplequestions`, `#relationshipgoals`,
+    `#couplegoals`, `#quizcouple` ;
+  - connais-tu : `#couplequiz`, `#howwelldoyouknowyourpartner`,
+    `#boyfriendquiz`, `#girlfriendquiz`, `#quizcouple` ;
+  - who's more likely : `#whosmorelikely`, `#couplequiz`,
+    `#couplechallenge`, `#quizcouple` ;
+  - tu préfères : `#wouldyourather`, `#couplequestions`, `#couplequiz`,
+    `#quizcouple` ;
+  - phrases tendres : `#lovequotes`, `#relationshipquotes`,
+    `#couplegoals`, `#quizcouple`.
 - Pas de tiret cadratin, pas de « really », « actually », « in short » dans
   un titre, pas de formules d'IA (triades, renversements, chutes travaillées).
 
 ## Les sujets
 
-`sujets.json` : 150 animations, 15 coquines, 28 statiques, 40 thèmes de
-« Connais-tu », 28 de « Tu préfères », 28 phrases, plus 16 sujets datés de
-Noël et du Nouvel An. La routine prend le premier sujet libre de la
+`sujets.json` : 173 animations (95 d'humour, 47 tendres, 25 minis, 6
+phrases à finir, après l'ajout du 7 octobre 2026), 15 coquines, 28
+statiques, 51 thèmes de « Connais-tu » (dont 8 « Who's more likely? » et 3
+éditions difficiles), 28 de « Tu préfères », 28 phrases, plus 16 sujets
+datés de Noël et du Nouvel An. La routine prend le premier sujet libre de la
 catégorie et écrit son id dans le champ `sujet` du post ; un sujet déjà
 utilisé dans `posts/` n'est jamais repris. Les sujets datés passent avant
 la banque, à leur date et à leur créneau.
+
+## Ce qu'on regarde dans les statistiques
+
+Les relevés à J+7 de l'admin (`statistiques_j7` dans l'état lu par la
+routine) servent à deux choses :
+
+- choisir un peu plus souvent les piliers, les éditions et les mécaniques
+  qui font le plus d'envois et d'enregistrements (ce sont les deux signaux
+  qui comptent pour la portée, avant les j'aime) ;
+- surveiller la portée par post. Trois reels par jour, c'est plus que ce
+  que les guides conseillent à un compte qui démarre ; si la portée par post
+  baisse nettement après deux semaines, on passe à deux par jour, et c'est
+  Thomas qui décide.

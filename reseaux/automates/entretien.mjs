@@ -10,6 +10,20 @@ import { ajouterJours, aujourdhui, categorieAttendue } from './lib/calendrier.mj
 
 const JOUR = 86400000;
 const CRENEAUX = ['matin', 'midi', 'soir'];
+// Un créneau d'aujourd'hui n'est proposé à la routine que s'il commence dans
+// plus de trois heures : le temps d'écrire le post et de le rendre (le rendu
+// passe toutes les heures).
+const MARGE_MIN = 180;
+const DEBUTS_DEFAUT = { matin: '06:00', midi: '11:00', soir: '16:00' };
+
+const enMinutes = (hhmm) => { const [h, m] = String(hhmm).split(':').map(Number); return h * 60 + m; };
+// l'heure qu'il est dans le fuseau du compte, en minutes depuis minuit
+const minutesLocales = (fuseau, maintenant) => {
+  const p = new Intl.DateTimeFormat('en-GB', { timeZone: fuseau, hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(maintenant);
+  const lire = (type) => Number(p.find((x) => x.type === type)?.value ?? 0);
+  return (lire('hour') % 24) * 60 + lire('minute');
+};
+const debutCreneau = (compte, creneau) => enMinutes((compte?.creneaux || []).find((c) => c.cle === creneau)?.debut || DEBUTS_DEFAUT[creneau]);
 
 // Le jeton de Page (connexion Facebook) n'expire pas : on vérifie une fois
 // par semaine qu'il marche encore, et on alerte dès qu'il ne répond plus,
@@ -79,12 +93,13 @@ export async function statistiques(base, { maintenant = new Date(), instagramPou
 }
 
 // Jours d'avance : jours consécutifs, à partir d'aujourd'hui, dont les trois
-// créneaux ont un post validé.
+// créneaux ont un post validé (jusqu'à 120 jours : la réserve peut couvrir
+// toute la banque, écrite d'un coup).
 export async function reserve(base, { maintenant = new Date(), fuseau = 'Europe/Paris' } = {}) {
   const debut = aujourdhui(fuseau, maintenant);
   const posts = await base.select('social_posts', `select=jour,creneau,statut&jour=gte.${debut}&statut=eq.valide`);
   let jours = 0;
-  for (let i = 0; i < 60; i++) {
+  for (let i = 0; i < 120; i++) {
     const jour = ajouterJours(debut, i);
     if (CRENEAUX.every((c) => posts.some((p) => p.jour === jour && p.creneau === c))) jours++;
     else break;
@@ -95,19 +110,25 @@ export async function reserve(base, { maintenant = new Date(), fuseau = 'Europe/
 // Ce que la routine Claude lit avant d'écrire : les créneaux à remplir, ce
 // qui est déjà passé ou prévu (pour varier), les idées de Thomas, ce qui
 // marche, les recettes refusées à corriger.
-export async function etat(base, { maintenant = new Date(), horizon = 21 } = {}) {
-  const [compte] = await base.select('social_comptes', 'select=langue,fuseau,actif&order=langue.asc&limit=1');
+// L'horizon est long (100 jours) depuis le 7 octobre 2026 : la routine écrit
+// toute la réserve d'avance, pour que le compte continue à publier même si
+// elle ne tourne plus (le rendu et la publication n'ont pas besoin d'elle).
+export async function etat(base, { maintenant = new Date(), horizon = 100 } = {}) {
+  const [compte] = await base.select('social_comptes', 'select=langue,fuseau,actif,creneaux&order=langue.asc&limit=1');
   const fuseau = compte?.fuseau || 'Europe/Paris';
   const debut = aujourdhui(fuseau, maintenant);
+  const minutesMaintenant = minutesLocales(fuseau, maintenant);
   const melange = await base.reglage('melange');
   const posts = await base.select('social_posts', `select=id,jour,creneau,format,gabarit,categorie,statut&jour=gte.${ajouterJours(debut, -30)}&order=jour.asc`);
   const variantes = posts.length
     ? await base.select('social_variantes', `select=post_id,langue,statut,legende,recette,erreur&post_id=in.(${posts.map((p) => p.id).join(',')})`)
     : [];
+  // dès aujourd'hui, pour les créneaux qui laissent le temps d'écrire et de rendre
   const aRemplir = [];
-  for (let i = 2; i <= horizon; i++) {
+  for (let i = 0; i <= horizon; i++) {
     const jour = ajouterJours(debut, i);
     for (const creneau of CRENEAUX) {
+      if (i === 0 && debutCreneau(compte, creneau) < minutesMaintenant + MARGE_MIN) continue;
       if (!posts.some((p) => p.jour === jour && p.creneau === creneau && p.statut !== 'annule')) {
         aRemplir.push({ jour, creneau, categorie: categorieAttendue(melange, jour, creneau) });
       }

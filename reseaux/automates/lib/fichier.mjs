@@ -52,6 +52,14 @@ export function controlerImage(fichier, largeur = 1080, hauteur = 1350) {
   return fautes;
 }
 
+// Affiche de 540 px de large (JPEG, le ffmpeg de Remotion n'encode pas le
+// WebP) : la couverture du post, déposée dans le bucket public pour les
+// dernières publications Instagram de l'accueil.
+export function affiche(source, cible) {
+  lancer('ffmpeg', ['-v', 'error', '-y', '-i', source, '-vf', 'scale=540:-2', '-q:v', '5', cible]);
+  return cible;
+}
+
 // Vignette de 270 px de large, gardée pour l'admin après la publication.
 export function vignette(source, cible) {
   lancer('ffmpeg', ['-v', 'error', '-y', '-i', source, '-vf', 'scale=270:-2', '-q:v', '4', cible]);

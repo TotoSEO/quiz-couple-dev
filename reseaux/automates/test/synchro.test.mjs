@@ -98,6 +98,35 @@ test('les exemples du studio passent le contrôle de recette', async () => {
   }
 });
 
+test("le rendu dépose l'affiche publique de l'accueil et la note sur la déclinaison", async () => {
+  const { rendre } = await import('../rendu.mjs');
+  const b = base();
+  b.tables.social_comptes[0].actif = true;
+  await synchroniser(b, [{ fichier: 'a.json', post: postQuiz() }], { maintenant: MAINTENANT });
+  const v = b.tables.social_variantes[0];
+  v.publier_a = '2026-10-12T10:30:00Z';
+  const ecrire = (dossier, nom) => { fs.writeFileSync(path.join(dossier, nom), nom); return nom; };
+  const controles = {
+    controlerReel: () => [],
+    controlerImage: () => [],
+    dureeVideo: () => 58.2,
+    vignette: (src, cible) => fs.writeFileSync(cible, 'v'),
+    affiche: (src, cible) => fs.writeFileSync(cible, 'affiche de ' + path.basename(src)),
+  };
+  const bilan = await rendre(b, {
+    maintenant: new Date('2026-10-12T00:00:00Z'),
+    rendreFn: (recette, dossier) => ['reel.mp4', 'couverture.jpg'].map((n) => ecrire(dossier, n)),
+    controles,
+  });
+  assert.equal(bilan.rendues, 1);
+  assert.equal(v.statut, 'rendu');
+  assert.equal(v.fichiers.duree, 58.2);
+  assert.equal(v.affiche, `2026-10-12/${v.id}/affiche.jpg`);
+  assert.equal(String(b.fichiers.get(`social-public:2026-10-12/${v.id}/affiche.jpg`)), 'affiche de couverture.jpg');
+  // les fichiers lourds, eux, sont dans le bucket privé
+  assert.ok(b.fichiers.has(`2026-10-12/${v.id}/reel.mp4`));
+});
+
 test('le rendu attend un compte actif', async () => {
   const { rendre } = await import('../rendu.mjs');
   const b = base();

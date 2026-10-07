@@ -141,6 +141,9 @@
           </div>
 
           <div class="entete-actions">
+            <!-- Instagram : lien direct vers le compte, demandé par Thomas (7 octobre 2026) -->
+            <a href="<%= instagramUrl %>" class="nav-action-btn" target="_blank" rel="noopener" aria-label="Instagram"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+
             <!-- Langue -->
             <div class="nav-dropdown relative">
               <%# Le nom accessible doit contenir le texte visible du bouton (le code de
@@ -409,6 +412,8 @@
           </div>
 
           <div class="mobile-nav-divider"></div>
+
+          <a href="<%= instagramUrl %>" class="mobile-nav-link" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:.5rem"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><%= t('common:footer.instagram', 'Suivez-nous sur Instagram') %></a>
 
           <% for (const link of directLinksFiltered) { %>
           <% if (link.vedette) { %>

@@ -69,7 +69,7 @@
     "testSecret": "M'aime-t-il en secret ?",
     "testDistanceAime": "M'aime-t-il encore à distance ?",
     "testPurete": "Test de pureté",
-    "testVacances": "Où partir en vacances\u00a0?",
+    "testVacances": "Où partir en vacances ?",
     "pourContre": "Pour ou contre",
     "testFinCouple": "Fin de couple ?",
     "testFinCoupleDesc": "Où en est vraiment votre relation",
@@ -122,7 +122,8 @@
     "sourcePrefAria": "Ajouter Quiz Couple aux sources préférées de Google",
     "sourcePrefAide": "Une option de Google : les sites que vous ajoutez remontent plus haut dans vos résultats et dans les réponses IA. Le réglage est lié à votre compte Google et se retire à tout moment.",
     "sourcePrefAideAria": "Qu'est-ce qu'une source préférée ?",
-    "cookiePrefs": "Gérer mes cookies"
+    "cookiePrefs": "Gérer mes cookies",
+    "instagram": "Suivez-nous sur Instagram"
   },
   "buttons": {
     "start": "Commencer",

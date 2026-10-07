@@ -32,6 +32,12 @@
   <div class="container mx-auto px-4">
     <div id="reviews-config" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>" class="hidden"></div>
     <div id="pq-reviews" data-quiz-slug="<%= routeKey %>" data-quiz-kind="<%= _genre %>">
+<% if (typeof avisCuitsJson !== 'undefined' && avisCuitsJson) { %>
+      <%# Les avis de la page, cuits a la construction (total, moyenne, douze
+          derniers), JSON deja echappe par generate.js : quiz-extras.js les lit
+          ici au lieu de les demander a la base. %>
+      <script type="application/json" id="pqx-avis-cuits"><%- avisCuitsJson %></script>
+<% } %>
 
       <p id="quiz-done-count" class="pqx-done" style="display:none"></p>
 

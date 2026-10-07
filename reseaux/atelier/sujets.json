@@ -1,5 +1,5 @@
 {
-  "note": "Banque de sujets des trois premiers mois (13 semaines, 273 posts). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque, à leur date et à leur créneau. Format d'un sujet d'animation : « ce qui s'écrit à l'écran | ce qu'on voit (décor, gestes) ». Le texte anglais est une base : la routine peut l'ajuster pour tenir à l'écran, jamais le sens.",
+  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine.",
   "pov": [
     {
       "id": "pov-001",
@@ -750,6 +750,121 @@
       "id": "pov-150",
       "pilier": "mini",
       "idee": "good night, sleep tight | chambre, nuit : la rose sous la couette fait coucou, puis dort, Z"
+    },
+    {
+      "id": "pov-151",
+      "pilier": "participatif",
+      "idee": "finish the sentence: my partner always ___ | ligne : la rose en grand regarde la caméra, sourcils hauts, « ? » au-dessus, texte en haut mot à mot ; légende : « Finish it in the comments »"
+    },
+    {
+      "id": "pov-152",
+      "pilier": "participatif",
+      "idee": "finish the sentence: the first thing they do when they wake up is ___ | chambre, matin : le violet sort la tête de la couette, fatigue, « ? »"
+    },
+    {
+      "id": "pov-153",
+      "pilier": "participatif",
+      "idee": "finish the sentence: our first date was ___ | ligne : les deux côte à côte, amoureux, cœurs discrets"
+    },
+    {
+      "id": "pov-154",
+      "pilier": "participatif",
+      "idee": "finish the sentence: they always steal my ___ | ligne : le violet en grand tient une chaussette, mignon ; légende : « Finish it in the comments »"
+    },
+    {
+      "id": "pov-155",
+      "pilier": "participatif",
+      "idee": "finish the sentence: the song that reminds me of them is ___ | ligne : la rose en grand, yeux fermés, notes de musique"
+    },
+    {
+      "id": "pov-156",
+      "pilier": "participatif",
+      "idee": "finish the sentence: they can't live without ___ | ligne : le violet en grand hausse les sourcils, « ? »"
+    },
+    {
+      "id": "pov-157",
+      "pilier": "mini",
+      "idee": "this is your sign to text them rn | ligne : la rose en grand tend le téléphone vers la caméra, cœurs"
+    },
+    {
+      "id": "pov-158",
+      "pilier": "mini",
+      "idee": "this is your sign to say sorry first | ligne : le violet en grand, gêné, puis mignon, un cœur"
+    },
+    {
+      "id": "pov-159",
+      "pilier": "mini",
+      "idee": "this is your sign to plan the date u keep talking about | table : les deux, un téléphone posé, le violet saute de joie"
+    },
+    {
+      "id": "pov-160",
+      "pilier": "mini",
+      "idee": "this is your sign to hug them a little longer today | ligne : les deux arrivent des bords, câlin long, cœurs qui montent"
+    },
+    {
+      "id": "pov-161",
+      "pilier": "humour",
+      "idee": "my reaction when they text: 'hey' / 'hey :)' / 'hey <3' / 'im outside' | mur : quatre légendes qui se suivent, la rose en grand passe de repos à mignon, amoureux, puis saute de joie ; l'échelle monte à chaque palier"
+    },
+    {
+      "id": "pov-162",
+      "pilier": "humour",
+      "idee": "my reaction to: 'we need to talk' / '...about dinner' / '...i booked the restaurant' | mur : le violet surprise avec une goutte, puis soulagé, puis joie, légendes successives"
+    },
+    {
+      "id": "pov-163",
+      "pilier": "humour",
+      "idee": "how fast i walk when they say: 'come here' / 'i made food' / 'i have a surprise' | ligne : la rose marche, puis court, puis saute vers le bord, légendes successives, le violet attend avec une assiette puis un cadeau"
+    },
+    {
+      "id": "pov-164",
+      "pilier": "tendre",
+      "idee": "once a day / once a week / once a month | trois plans légendés : bisou du matin (cuisine, matin), soirée film (salon, soir, popcorn), sortie à deux (dehors, parapluie ou glace)"
+    },
+    {
+      "id": "pov-165",
+      "pilier": "humour",
+      "idee": "once a day: 'what do you want to eat?' / once a week: 'we should sleep early' / once a month: 'let's go to the gym tomorrow' | mur : bulles légendées, les deux de plus en plus plats, rire à la fin"
+    },
+    {
+      "id": "pov-166",
+      "pilier": "tendre",
+      "idee": "every morning / every night / every day | tasse tendue (cuisine, matin), les deux sous la couette (chambre, nuit), puis « i love u » mot à mot (ligne), cœurs"
+    },
+    {
+      "id": "pov-167",
+      "pilier": "humour",
+      "idee": "'where are you?' 'home.' 'your location says the bakery' '...exactly.' | mur : bulles qui alternent entre les deux, la rose tient un gâteau, rougit, rire"
+    },
+    {
+      "id": "pov-168",
+      "pilier": "tendre",
+      "idee": "'where are you?' 'home.' 'you're at my place' 'exactly <3' | canapé : bulles, puis câlin, cœurs"
+    },
+    {
+      "id": "pov-169",
+      "pilier": "humour",
+      "idee": "us: one is always cold, one is always hot | chambre, nuit : la rose sous la couette qui tremble, le violet au-dessus de la couette yeux plats, goutte, légendes « me » / « them »"
+    },
+    {
+      "id": "pov-170",
+      "pilier": "humour",
+      "idee": "us: one plans everything, one 'sees how it goes' | table : la rose avec un livre ouvert (la liste), le violet au téléphone, elle le regarde, il rit"
+    },
+    {
+      "id": "pov-171",
+      "pilier": "humour",
+      "idee": "us: one falls asleep in 2 seconds, one is still awake at 2 AM | chambre, nuit : le violet dort (Z), la rose yeux ouverts, légende « 2 AM », elle le regarde, mignon"
+    },
+    {
+      "id": "pov-172",
+      "pilier": "tendre",
+      "idee": "after 5 minutes apart vs after 5 days apart | ligne : plan 1 légende « 5 minutes », petit salut tranquille ; plan 2 légende « 5 days », les deux courent des bords, câlin, cœurs"
+    },
+    {
+      "id": "pov-173",
+      "pilier": "tendre",
+      "idee": "when they come back from the kitchen (after 3 minutes) | salon : la rose saute du canapé, court vers le violet qui arrive avec une tasse, câlin, il rit"
     }
   ],
   "coquin": [
@@ -1315,6 +1430,113 @@
         "What nickname do they call you?",
         "What's their favorite photo of you two?",
         "What do they love most about you?"
+      ]
+    },
+    {
+      "id": "ct-041",
+      "theme": "Who's more likely? · Point at them",
+      "mode": "pointe",
+      "exemples": [
+        "...to fall asleep during a movie?",
+        "...to forget where the keys are?",
+        "...to cry at a sad ad?"
+      ]
+    },
+    {
+      "id": "ct-042",
+      "theme": "Who's more likely? · Food edition",
+      "mode": "pointe",
+      "exemples": [
+        "...to steal fries from the other's plate?",
+        "...to say 'I'm not hungry' then eat half?",
+        "...to order dessert first?"
+      ]
+    },
+    {
+      "id": "ct-043",
+      "theme": "Who's more likely? · Lazy Sunday",
+      "mode": "pointe",
+      "exemples": [
+        "...to stay in pajamas all day?",
+        "...to cancel plans to stay in bed?",
+        "...to take a 3-hour nap?"
+      ]
+    },
+    {
+      "id": "ct-044",
+      "theme": "Who's more likely? · Drama edition",
+      "mode": "pointe",
+      "exemples": [
+        "...to start a tickle fight?",
+        "...to sulk after losing a game?",
+        "...to say sorry first?"
+      ]
+    },
+    {
+      "id": "ct-045",
+      "theme": "Who's more likely? · Phone edition",
+      "mode": "pointe",
+      "exemples": [
+        "...to leave the other on read?",
+        "...to send 10 texts in a row?",
+        "...to check the other's location?"
+      ]
+    },
+    {
+      "id": "ct-046",
+      "theme": "Who's more likely? · Travel edition",
+      "mode": "pointe",
+      "exemples": [
+        "...to pack the night before?",
+        "...to get lost with the map?",
+        "...to fall asleep on the plane first?"
+      ]
+    },
+    {
+      "id": "ct-047",
+      "theme": "Who's more likely? · Romance edition",
+      "mode": "pointe",
+      "exemples": [
+        "...to plan a surprise date?",
+        "...to remember the anniversary?",
+        "...to say 'I love you' first in the morning?"
+      ]
+    },
+    {
+      "id": "ct-048",
+      "theme": "Who's more likely? · Chaos edition",
+      "mode": "pointe",
+      "exemples": [
+        "...to lose the TV remote?",
+        "...to burn the toast?",
+        "...to laugh at their own joke?"
+      ]
+    },
+    {
+      "id": "ct-049",
+      "theme": "Hard edition",
+      "exemples": [
+        "Their blood type?",
+        "Their first teacher's name?",
+        "What time were they born?"
+      ]
+    },
+    {
+      "id": "ct-050",
+      "theme": "Impossible edition",
+      "exemples": [
+        "Their best friend's birthday?",
+        "The last song they played?",
+        "How many cousins do they have?"
+      ]
+    },
+    {
+      "id": "ct-051",
+      "theme": "Hard edition · Childhood",
+      "exemples": [
+        "The street they grew up on?",
+        "Their first stuffed animal's name?",
+        "Their childhood best friend's name?"
       ]
     }
   ],
@@ -1942,6 +2164,144 @@
         "categorie": "phrase",
         "texte": "Wherever the new year takes us, I want to go there with you."
       }
+    ]
+  },
+  "carrousel": [
+    {
+      "id": "car-001",
+      "etiquette": "For tonight",
+      "accroche": "8 questions for you two",
+      "exemples": [
+        "What was your very first impression of me?",
+        "Which moment of our story would you live again?",
+        "What do you want us to do more often?"
+      ]
+    },
+    {
+      "id": "car-002",
+      "etiquette": "Deep talk",
+      "accroche": "8 questions you've never asked each other",
+      "exemples": [
+        "What are you most afraid of losing?",
+        "When do you feel the most loved by me?",
+        "What's something you've never told anyone?"
+      ]
+    },
+    {
+      "id": "car-003",
+      "etiquette": "Firsts",
+      "accroche": "8 questions about our first days",
+      "exemples": [
+        "When did you know you liked me?",
+        "What did you think after our first date?",
+        "Who said 'I love you' first, and where?"
+      ]
+    },
+    {
+      "id": "car-004",
+      "etiquette": "The future",
+      "accroche": "8 questions about what's next for us",
+      "exemples": [
+        "Where do you see us in five years?",
+        "What's one trip we have to take?",
+        "What tradition do you want us to start?"
+      ]
+    },
+    {
+      "id": "car-005",
+      "etiquette": "Childhood",
+      "accroche": "8 questions about little you",
+      "exemples": [
+        "What did you want to be as a kid?",
+        "What was your favorite game?",
+        "Who was your hero?"
+      ]
+    },
+    {
+      "id": "car-006",
+      "etiquette": "Favorites",
+      "accroche": "8 favorites to guess about each other",
+      "exemples": [
+        "My favorite way to spend a Sunday?",
+        "My favorite thing you cook?",
+        "My favorite memory of us?"
+      ]
+    },
+    {
+      "id": "car-007",
+      "etiquette": "Would you rather",
+      "accroche": "8 dilemmas to settle tonight",
+      "exemples": [
+        "Breakfast in bed or dinner under the stars?",
+        "Relive our first date or skip to our next trip?",
+        "A week by the sea or a week in the mountains?"
+      ]
+    },
+    {
+      "id": "car-008",
+      "etiquette": "Never have I ever",
+      "accroche": "8 confessions, couple edition",
+      "exemples": [
+        "Never have I ever pretended to like your gift.",
+        "Never have I ever fallen asleep during our movie.",
+        "Never have I ever eaten your snack in secret."
+      ]
+    },
+    {
+      "id": "car-009",
+      "etiquette": "Memories",
+      "accroche": "8 moments to remember together",
+      "exemples": [
+        "The hardest we've ever laughed?",
+        "Our best day so far?",
+        "A small moment you think about a lot?"
+      ]
+    },
+    {
+      "id": "car-010",
+      "etiquette": "Love languages",
+      "accroche": "8 questions to know how they feel loved",
+      "exemples": [
+        "Words or hugs, which one do you need more?",
+        "What's a little gesture that means a lot to you?",
+        "When was the last time you felt really seen?"
+      ]
+    },
+    {
+      "id": "car-011",
+      "etiquette": "Silly edition",
+      "accroche": "8 questions that make no sense (and that's the point)",
+      "exemples": [
+        "If I were a snack, which one?",
+        "Which cartoon couple are we?",
+        "What would our couple's theme song be?"
+      ]
+    },
+    {
+      "id": "car-012",
+      "etiquette": "Missing you",
+      "accroche": "8 questions for when you're apart",
+      "exemples": [
+        "What's the first thing you'll do when we're together again?",
+        "What do you miss the most right now?",
+        "What should I send you tonight?"
+      ]
+    },
+    {
+      "id": "car-013",
+      "etiquette": "Dreams",
+      "accroche": "8 questions about the life we want",
+      "exemples": [
+        "What does a perfect ordinary day look like for us?",
+        "Which dream of yours can I help with?",
+        "What would you do if nothing could go wrong?"
+      ]
+    }
+  ],
+  "deja_publies": {
+    "note": "Sujets déjà partis sur le compte avant ou en dehors de l'atelier : jamais repris, comme un sujet présent dans posts/. pov-002 (les fleurs) : reel d'essai publié à la main le 7 octobre 2026, le premier du compte.",
+    "sujets": [
+      "pov-002"
     ]
   }
 }
