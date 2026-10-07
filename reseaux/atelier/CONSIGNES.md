@@ -78,6 +78,11 @@ Pour chaque créneau à remplir, dans l'ordre des dates :
    soixante derniers posts de `posts/`. La publication ne s'arrête jamais
    faute de sujet.
 
+**Un créneau dont le fichier existe déjà dans `posts/` n'est jamais réécrit**,
+même s'il figure encore dans `a_remplir` (l'état est calculé sur ce qui est
+déjà passé dans Supabase, un post poussé depuis peut y manquer) : on passe
+au suivant.
+
 **Au plus 24 posts par passage**, les créneaux les plus proches d'abord.
 Chaque post est contrôlé et regardé (planche) avant d'être poussé : on ne
 sacrifie pas la vérification à la quantité. S'il ne reste rien à remplir,
