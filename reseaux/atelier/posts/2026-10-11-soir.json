@@ -1,0 +1,30 @@
+{
+  "jour": "2026-10-11",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "ph-002",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "With you, even ordinary days feel like a small celebration.",
+        "fleurs": "feuillage",
+        "son": {
+          "recherche": "soft piano"
+        }
+      },
+      "legende": "For a quiet Sunday with your person.\n\nSave this for a day you need it.",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

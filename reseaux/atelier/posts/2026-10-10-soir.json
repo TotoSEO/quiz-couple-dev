@@ -1,0 +1,30 @@
+{
+  "jour": "2026-10-10",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "ph-001",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "I didn't know how quiet my heart could feel until I met you.",
+        "fleurs": "brin-marguerite",
+        "son": {
+          "recherche": "soft piano"
+        }
+      },
+      "legende": "A little note for the one who makes everything calm.\n\nSend this to your partner.",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

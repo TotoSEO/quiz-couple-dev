@@ -1,0 +1,302 @@
+{
+  "jour": "2026-10-10",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-004",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le « encore un épisode » : à 22 h ils regardent, à 1 h ils ont les yeux plats, à 3 h ils dorment assis.",
+        "titre": "POV: 'just one more episode'",
+        "plans": [
+          {
+            "description": "Le salon, le soir, lumière chaude de la lampe. Dès la première image les deux sont dans le canapé : la rose à gauche tient un pot de pop-corn et sourit, le violet à droite se tourne vers elle, les yeux brillants, et une bulle dit « Just one more episode? ». À 1,6 s elle rit, le violet sourit et ses yeux deviennent des cœurs, de petites étincelles passent au-dessus de sa tête.",
+            "duree": 4.0,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4,
+                    "objet": "popcorn",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.6,
+                    "a": 4.0
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.4,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.2,
+                    "a": 1.5
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 2.8,
+                    "yeux": "coeur",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.0,
+                    "a": 4.0,
+                    "effet": "etincelles"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.8,
+                    "a": 4.0,
+                    "yeux": "heureux",
+                    "bouche": "rire"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.2,
+                "a": 2.4,
+                "texte": "Just one more episode?"
+              }
+            ],
+            "legende": "10 PM"
+          },
+          {
+            "description": "Le même canapé, en pleine nuit, lumière bleue. Le pot de pop-corn est toujours sur les genoux de la rose, qui a les yeux plats et la bouche plate. Le violet, les yeux plats aussi, dit « Just one more. » en pointant l'écran du regard. À 1,8 s la rose se tourne vers la caméra, sourcils tristes, une goutte de gêne sur le côté de la tête ; trois petits points flottent au-dessus du violet. La caméra se rapproche des deux d'un seul mouvement.",
+            "duree": 4.0,
+            "decor": "salon",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4,
+                    "objet": "popcorn",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.7,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 4.0,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.9,
+                    "a": 4.0,
+                    "yeux": "plats",
+                    "bouche": "triste",
+                    "sourcils": "tristes"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.2,
+                    "a": 4.0,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.5,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.5,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.9,
+                    "a": 3.0,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.1,
+                    "a": 4.0,
+                    "effet": "points"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 4.0,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.5,
+                "a": 2.0,
+                "texte": "Just one more."
+              }
+            ],
+            "legende": "1 AM",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Le salon à 3 h du matin, nuit noire. Les deux dorment assis dans le canapé, la tête penchée l'un vers l'autre, des Z qui montent au-dessus de chacun, le pot de pop-corn vide posé de travers sur la rose. À 1 s le violet marmonne dans son sommeil « ...one more... ». À 3 s la rose ouvre un œil, la bouche ronde, puis regarde la caméra avec une goutte de gêne. Zoom doux sur la rose jusqu'à la fin.",
+            "duree": 4.4,
+            "decor": "salon",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.4,
+                    "objet": "popcorn",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 2.9
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 4.4,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 3.4,
+                    "a": 4.4,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.7,
+                    "a": 4.4,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 4.4
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 1.0,
+                    "a": 2.2
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.4,
+                    "a": 4.4,
+                    "effet": "zzz"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 1.0,
+                "a": 2.6,
+                "texte": "...one more..."
+              }
+            ],
+            "legende": "3 AM",
+            "camera": [
+              {
+                "a": 2.8,
+                "zoom": 1
+              },
+              {
+                "a": 4.4,
+                "zoom": 1.5,
+                "cible": "rose"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "'Just one more episode,' he said. It's 3am now.\n\nTag your partner who always says it.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

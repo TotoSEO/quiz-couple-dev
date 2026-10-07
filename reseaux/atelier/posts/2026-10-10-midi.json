@@ -1,0 +1,61 @@
+{
+  "jour": "2026-10-10",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-001",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Couple edition",
+        "accroche": "Would you rather: A or B?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "dilemmes": [
+          {
+            "a": "Cook together every night",
+            "b": "Takeout every night"
+          },
+          {
+            "a": "Breakfast in bed",
+            "b": "Dinner under the stars"
+          },
+          {
+            "a": "A surprise trip",
+            "b": "A trip we plan for months"
+          },
+          {
+            "a": "Slow dance in the kitchen",
+            "b": "Dance wildly at a party"
+          },
+          {
+            "a": "One big gift a year",
+            "b": "Small gifts all year"
+          },
+          {
+            "a": "Hug at home all day",
+            "b": "Hold hands all day outside"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, couple edition: which one is yours?\n\nComment your A and B!",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

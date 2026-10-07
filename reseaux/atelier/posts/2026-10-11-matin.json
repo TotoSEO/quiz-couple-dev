@@ -1,0 +1,323 @@
+{
+  "jour": "2026-10-11",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-005",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le « où est-ce qu'on mange ? » : la même question en boucle, les deux de plus en plus plats, jusqu'à la pizza.",
+        "titre": "POV: deciding where to eat",
+        "plans": [
+          {
+            "description": "Un mur crème et un sol beige, en plein jour. La rose est debout à gauche, le violet à droite, ils se font face dès la première image. La rose parle avec une grande bulle « Where do you want to eat? ». À 2 s le violet hausse les épaules et répond « I don't know, you pick. » ; un point d'interrogation apparaît au-dessus de la rose, bouche ronde.",
+            "duree": 3.6,
+            "decor": "mur",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.1,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.3,
+                    "a": 3.6,
+                    "effet": "question"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.9,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 2.0,
+                    "a": 3.4
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 0.1,
+                "a": 1.9,
+                "texte": "Where do you want to eat?"
+              },
+              {
+                "qui": "violet",
+                "de": 2.0,
+                "a": 3.5,
+                "texte": "I don't know, you pick."
+              }
+            ]
+          },
+          {
+            "description": "Même mur, même place : la conversation tourne en boucle. Le violet dit « I'm fine with anything. » les yeux plats ; à 1,8 s la rose répond « No, you pick! » en croisant les bras du regard, puis boude à 2,8 s, la bouche pincée. Trois petits points montent au-dessus du violet à 3 s. La caméra se rapproche doucement des deux.",
+            "duree": 4.0,
+            "decor": "mur",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.7,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.7,
+                    "yeux": "ouverts",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 1.8,
+                    "a": 2.8
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 2.8,
+                    "a": 4.0
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.4,
+                    "a": 1.7
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 2.9,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.9,
+                    "a": 4.0,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.0,
+                    "effet": "points"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.4,
+                "a": 1.7,
+                "texte": "I'm fine with anything."
+              },
+              {
+                "qui": "rose",
+                "de": 1.8,
+                "a": 3.6,
+                "texte": "No, you pick!"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Le même mur, la lumière du soir. Les deux ont les yeux plats et les bras ballants, des points au-dessus de leurs têtes. À 0,8 s la rose se tourne vers la caméra et murmure « ...pizza? » ; à 2,2 s le violet ouvre grand les yeux, lève les bras, et les deux sautent de joie en disant « Pizza. Always pizza. » Zoom rapide sur eux à 2,2 s, cœurs qui montent à la fin.",
+            "duree": 4.4,
+            "decor": "mur",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.8,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.1,
+                    "a": 1.0,
+                    "effet": "points"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.8,
+                    "a": 1.8,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.9,
+                    "a": 2.0
+                  },
+                  {
+                    "geste": "joie",
+                    "de": 2.3,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.8,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.1,
+                    "a": 1.0,
+                    "effet": "points"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.0,
+                    "a": 2.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 3.0,
+                    "yeux": "brillants",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "saute",
+                    "de": 2.4,
+                    "a": 3.6,
+                    "fois": 2
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 3.6,
+                    "a": 4.4
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 0.9,
+                "a": 2.1,
+                "texte": "...pizza?"
+              },
+              {
+                "qui": "violet",
+                "de": 2.3,
+                "a": 4.2,
+                "texte": "Pizza. Always pizza."
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.1,
+                "zoom": 1
+              },
+              {
+                "a": 2.5,
+                "zoom": 1.3,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Deciding where to eat should not take this long.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

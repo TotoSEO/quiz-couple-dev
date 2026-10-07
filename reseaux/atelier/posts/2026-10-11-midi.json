@@ -1,0 +1,152 @@
+{
+  "jour": "2026-10-11",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "statique",
+  "sujet": "sta-002",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Reel statique : les deux sur un banc au coucher du soleil, un câlin, une phrase tendre qui s'écrit.",
+        "plans": [
+          {
+            "description": "Dehors, au coucher du soleil : ciel orangé, un arbre, un banc. Dès la première image les deux sont assis sur le banc, jambes qui pendent, la rose à gauche et le violet à droite, et se regardent en souriant. À 1 s la rose se rapproche et le serre dans ses bras ; à 1,6 s les deux ferment les yeux de bonheur, joues roses, et de petits cœurs montent doucement. « you're my favorite person » s'écrit mot à mot en haut à partir de 2,6 s. Vers 6 s la rose fait sa petite bouche de chat, le violet rouvre des yeux heureux. La caméra se rapproche lentement jusqu'à la fin.",
+            "duree": 11,
+            "decor": "dehors",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "banc-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.0,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 1.0,
+                    "a": 11,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 6.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 6.0,
+                    "a": 11,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.2,
+                    "a": 11,
+                    "effet": "coeurs"
+                  }
+                ],
+                "premier": true
+              },
+              {
+                "qui": "violet",
+                "a": "banc-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.0,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.1,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 1.1,
+                    "a": 11,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.7,
+                    "a": 6.5,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 6.5,
+                    "a": 11,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 2.6,
+                "texte": "you're my favorite person",
+                "motAMot": true,
+                "place": "haut",
+                "style": "plume"
+              }
+            ],
+            "camera": [
+              {
+                "a": 1.0,
+                "zoom": 1
+              },
+              {
+                "a": 5.0,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 11,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Sunset, a bench, and you.\n\nTag your partner.",
+      "hashtags": [
+        "#couplegoals",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
