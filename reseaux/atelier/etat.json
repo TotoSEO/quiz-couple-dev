@@ -1,15 +1,10 @@
 {
-  "genere_le": "2026-10-07T05:47:45.630Z",
+  "genere_le": "2026-10-07T14:45:29.719Z",
   "fuseau": "Europe/Paris",
   "aujourdhui": "2026-10-07",
   "reserve_jours": 0,
   "a_remplir": [
     {
-      "jour": "2026-10-07",
-      "creneau": "soir",
-      "categorie": "pov"
-    },
-    {
       "jour": "2026-10-08",
       "creneau": "matin",
       "categorie": "pov"
@@ -22,7 +17,7 @@
     {
       "jour": "2026-10-08",
       "creneau": "soir",
-      "categorie": "pov"
+      "categorie": "carrousel"
     },
     {
       "jour": "2026-10-09",
@@ -127,7 +122,7 @@
     {
       "jour": "2026-10-15",
       "creneau": "soir",
-      "categorie": "pov"
+      "categorie": "carrousel"
     },
     {
       "jour": "2026-10-16",
@@ -232,7 +227,7 @@
     {
       "jour": "2026-10-22",
       "creneau": "soir",
-      "categorie": "pov"
+      "categorie": "carrousel"
     },
     {
       "jour": "2026-10-23",
@@ -332,7 +327,7 @@
       "creneau": "midi",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "How well do you know your partner?",
       "erreur": null
     }
