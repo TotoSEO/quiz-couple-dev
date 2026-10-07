@@ -61,7 +61,7 @@ serve(async (req) => {
 
       const ids = (posts.data || []).map((p) => p.id);
       const variantes = ids.length
-        ? await db.from('social_variantes').select('id,post_id,langue,statut,publier_a,legende,hashtags,permalien,erreur,vignette,essais,recette').in('post_id', ids)
+        ? await db.from('social_variantes').select('id,post_id,langue,statut,publier_a,legende,hashtags,permalien,erreur,vignette,essais,recette,story_statut').in('post_id', ids)
         : { data: [], error: null };
       if (variantes.error) throw variantes.error;
 

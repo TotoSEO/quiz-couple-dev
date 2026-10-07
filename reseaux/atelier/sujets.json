@@ -1,5 +1,5 @@
 {
-  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md).",
+  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine.",
   "pov": [
     {
       "id": "pov-001",
@@ -2165,5 +2165,137 @@
         "texte": "Wherever the new year takes us, I want to go there with you."
       }
     ]
-  }
+  },
+  "carrousel": [
+    {
+      "id": "car-001",
+      "etiquette": "For tonight",
+      "accroche": "8 questions for you two",
+      "exemples": [
+        "What was your very first impression of me?",
+        "Which moment of our story would you live again?",
+        "What do you want us to do more often?"
+      ]
+    },
+    {
+      "id": "car-002",
+      "etiquette": "Deep talk",
+      "accroche": "8 questions you've never asked each other",
+      "exemples": [
+        "What are you most afraid of losing?",
+        "When do you feel the most loved by me?",
+        "What's something you've never told anyone?"
+      ]
+    },
+    {
+      "id": "car-003",
+      "etiquette": "Firsts",
+      "accroche": "8 questions about our first days",
+      "exemples": [
+        "When did you know you liked me?",
+        "What did you think after our first date?",
+        "Who said 'I love you' first, and where?"
+      ]
+    },
+    {
+      "id": "car-004",
+      "etiquette": "The future",
+      "accroche": "8 questions about what's next for us",
+      "exemples": [
+        "Where do you see us in five years?",
+        "What's one trip we have to take?",
+        "What tradition do you want us to start?"
+      ]
+    },
+    {
+      "id": "car-005",
+      "etiquette": "Childhood",
+      "accroche": "8 questions about little you",
+      "exemples": [
+        "What did you want to be as a kid?",
+        "What was your favorite game?",
+        "Who was your hero?"
+      ]
+    },
+    {
+      "id": "car-006",
+      "etiquette": "Favorites",
+      "accroche": "8 favorites to guess about each other",
+      "exemples": [
+        "My favorite way to spend a Sunday?",
+        "My favorite thing you cook?",
+        "My favorite memory of us?"
+      ]
+    },
+    {
+      "id": "car-007",
+      "etiquette": "Would you rather",
+      "accroche": "8 dilemmas to settle tonight",
+      "exemples": [
+        "Breakfast in bed or dinner under the stars?",
+        "Relive our first date or skip to our next trip?",
+        "A week by the sea or a week in the mountains?"
+      ]
+    },
+    {
+      "id": "car-008",
+      "etiquette": "Never have I ever",
+      "accroche": "8 confessions, couple edition",
+      "exemples": [
+        "Never have I ever pretended to like your gift.",
+        "Never have I ever fallen asleep during our movie.",
+        "Never have I ever eaten your snack in secret."
+      ]
+    },
+    {
+      "id": "car-009",
+      "etiquette": "Memories",
+      "accroche": "8 moments to remember together",
+      "exemples": [
+        "The hardest we've ever laughed?",
+        "Our best day so far?",
+        "A small moment you think about a lot?"
+      ]
+    },
+    {
+      "id": "car-010",
+      "etiquette": "Love languages",
+      "accroche": "8 questions to know how they feel loved",
+      "exemples": [
+        "Words or hugs, which one do you need more?",
+        "What's a little gesture that means a lot to you?",
+        "When was the last time you felt really seen?"
+      ]
+    },
+    {
+      "id": "car-011",
+      "etiquette": "Silly edition",
+      "accroche": "8 questions that make no sense (and that's the point)",
+      "exemples": [
+        "If I were a snack, which one?",
+        "Which cartoon couple are we?",
+        "What would our couple's theme song be?"
+      ]
+    },
+    {
+      "id": "car-012",
+      "etiquette": "Missing you",
+      "accroche": "8 questions for when you're apart",
+      "exemples": [
+        "What's the first thing you'll do when we're together again?",
+        "What do you miss the most right now?",
+        "What should I send you tonight?"
+      ]
+    },
+    {
+      "id": "car-013",
+      "etiquette": "Dreams",
+      "accroche": "8 questions about the life we want",
+      "exemples": [
+        "What does a perfect ordinary day look like for us?",
+        "Which dream of yours can I help with?",
+        "What would you do if nothing could go wrong?"
+      ]
+    }
+  ]
 }

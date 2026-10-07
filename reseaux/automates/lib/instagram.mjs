@@ -64,6 +64,15 @@ export class Instagram {
     return this.appel('POST', `/${this.id}/media`, p);
   }
 
+  // Une story (24 h) : la vidéo du reel, 60 s au plus, sans légende ni son
+  // ajouté ; Instagram la traite comme un reel avant publication.
+  conteneurStory({ videoUrl, imageUrl }) {
+    const p = { media_type: 'STORIES' };
+    if (videoUrl) p.video_url = videoUrl;
+    else p.image_url = imageUrl;
+    return this.appel('POST', `/${this.id}/media`, p);
+  }
+
   conteneurImage({ imageUrl, legende }) {
     return this.appel('POST', `/${this.id}/media`, { image_url: imageUrl, caption: legende });
   }

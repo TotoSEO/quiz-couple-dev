@@ -186,6 +186,8 @@
           libelleSon(v) +
           (v && v.erreur ? '<span class="rsx-erreur">' + esc(v.erreur) + '</span>' : '') + '</div>' +
           '<div class="rsx-etat"><span class="rsx-statut rsx-statut--' + statut[1] + '">' + esc(statut[0]) + '</span>' +
+          (v && v.story_statut === 'publie' ? '<span class="rsx-statut rsx-statut--publie" title="Le reel du matin a aussi été publié en story">+ story</span>' : '') +
+          (v && v.story_statut === 'echec' ? '<span class="rsx-statut rsx-statut--echec" title="La story du matin n\'est pas partie (voir le journal)">story ✕</span>' : '') +
           (v && v.permalien ? '<a href="' + esc(v.permalien) + '" target="_blank" rel="noopener">Voir</a>' : '') + '</div>' +
           '<div class="rsx-actions">' + boutonsPost(p, v) + '</div>' +
           '</div>';
