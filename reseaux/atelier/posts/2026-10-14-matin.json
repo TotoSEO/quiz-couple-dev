@@ -12,23 +12,30 @@
         "gabarit": "pov",
         "langue": "en",
         "theme": "light",
-        "idee": "Le violet rit de sa propre blague, la rose a les yeux plats, puis elle finit par rire aussi.",
+        "idee": "Le violet raconte une blague au café et en rit tout seul, la rose a les yeux plats devant sa tasse, puis elle finit par rire aussi. Aucune bulle : la blague ne se lit pas, c'est la réaction qui fait le reel.",
         "titre": "POV: he laughs at his own joke",
         "plans": [
           {
-            "description": "Un mur crème, la lumière du jour. Dès la première image la rose est debout à gauche, les bras ballants, le regard tourné vers le violet, les yeux plats. Le violet à droite se redresse, très fier, et dit « Why don't eggs tell jokes? » dans une bulle. À 2 s un point d'interrogation apparaît au-dessus de la rose, qui penche la tête.",
-            "duree": 3.4,
-            "decor": "mur",
+            "description": "Le café en plein jour : l'étagère de tasses, l'ardoise, le comptoir et sa machine, la lampe suspendue. Dès la première image les deux sont assis face à face à la table ronde ; la rose, à gauche, tient sa tasse de la main droite et regarde le violet, les yeux plats. Le violet, à droite, se redresse très fier, les yeux heureux, et raconte sa blague (la bouche bouge de 0,2 à 1,8 s, pas de bulle). À 1,9 s il rougit et des étincelles brillent autour de sa tête ; à 2 s la rose hausse les sourcils, la bouche plate.",
+            "duree": 3.6,
+            "decor": "cafe",
             "moment": "midi",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": "table-gauche",
                 "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "tasse",
+                    "main": "droite"
+                  },
                   {
                     "geste": "regarde",
                     "de": 0,
-                    "a": 3.4,
+                    "a": 3.6,
                     "cible": "violet"
                   },
                   {
@@ -41,26 +48,21 @@
                   {
                     "geste": "visage",
                     "de": 2.0,
-                    "a": 3.4,
-                    "yeux": "ouverts",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.2,
-                    "a": 3.4,
-                    "effet": "question"
+                    "a": 3.6,
+                    "yeux": "plats",
+                    "bouche": "plate",
+                    "sourcils": "hauts"
                   }
                 ]
               },
               {
                 "qui": "violet",
-                "a": "droite",
+                "a": "table-droite",
                 "gestes": [
                   {
                     "geste": "regarde",
                     "de": 0,
-                    "a": 3.4,
+                    "a": 3.6,
                     "cible": "rose"
                   },
                   {
@@ -72,83 +74,75 @@
                   },
                   {
                     "geste": "parle",
-                    "de": 0.3,
+                    "de": 0.2,
                     "a": 1.8
                   },
                   {
                     "geste": "visage",
                     "de": 1.9,
-                    "a": 3.4,
+                    "a": 3.6,
                     "yeux": "heureux",
                     "bouche": "sourire",
                     "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.9,
+                    "a": 3.6,
+                    "effet": "etincelles"
                   }
                 ]
-              }
-            ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 0.3,
-                "a": 2.1,
-                "texte": "Why don't eggs tell jokes?"
               }
             ]
           },
           {
-            "description": "Zoom rapide à 0,3 s sur le violet. Il lâche la chute « They'd crack up! » dans une bulle, puis éclate de rire à 1,8 s : les yeux fermés, la bouche grande ouverte, le corps secoué. Derrière, la rose le regarde, les yeux plats, la bouche plate, une goutte de gêne sur le côté de la tête.",
-            "duree": 3.6,
-            "decor": "mur",
+            "description": "Zoom rapide à 0,3 s sur le violet (1,7) : il éclate de rire de sa propre blague, les yeux fermés, la bouche grande ouverte, le corps secoué pendant trois secondes. Derrière lui on devine la rose qui ne bouge pas. À 1 s une goutte de gêne glisse sur la tempe de la rose, qui garde les yeux plats et la bouche plate, sa tasse à la main.",
+            "duree": 3.8,
+            "decor": "cafe",
             "moment": "midi",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": "table-gauche",
                 "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "tasse",
+                    "main": "droite"
+                  },
                   {
                     "geste": "regarde",
                     "de": 0,
-                    "a": 3.6,
+                    "a": 3.8,
                     "cible": "violet"
                   },
                   {
                     "geste": "visage",
                     "de": 0,
-                    "a": 3.6,
+                    "a": 3.8,
                     "yeux": "plats",
                     "bouche": "plate"
                   },
                   {
                     "geste": "effet",
                     "de": 1.0,
-                    "a": 3.6,
+                    "a": 3.8,
                     "effet": "goutte"
                   }
                 ]
               },
               {
                 "qui": "violet",
-                "a": "droite",
+                "a": "table-droite",
                 "gestes": [
                   {
-                    "geste": "parle",
-                    "de": 0.1,
-                    "a": 1.7
-                  },
-                  {
                     "geste": "rit",
-                    "de": 1.8,
-                    "a": 3.6
+                    "de": 0.4,
+                    "a": 3.8
                   }
                 ]
-              }
-            ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 0.3,
-                "a": 1.8,
-                "texte": "They'd crack up!"
               }
             ],
             "camera": [
@@ -164,82 +158,86 @@
             ]
           },
           {
-            "description": "Retour au plan large. Le violet rit toujours et demande « Get it? » en essuyant une larme. La rose garde les yeux plats un moment, puis à 2 s le coin de sa bouche se relève malgré elle, ses joues rosissent, et à 2,6 s elle éclate de rire à son tour, en secouant la tête. Des cœurs montent au-dessus du violet à la fin.",
-            "duree": 4.4,
-            "decor": "mur",
+            "description": "Retour au plan large de la table. Le violet rit encore (0 à 1,6 s) puis garde les yeux heureux et la bouche en rire. La rose garde les yeux plats un moment ; à 1,8 s le coin de sa bouche se relève malgré elle et ses joues rosissent, et à 2,4 s elle éclate de rire à son tour, le corps secoué. Des cœurs montent au-dessus du violet à 3,2 s. La caméra se rapproche doucement des deux à partir de 2,4 s (zoom 1,2).",
+            "duree": 4.6,
+            "decor": "cafe",
             "moment": "midi",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": "table-gauche",
                 "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.6,
+                    "objet": "tasse",
+                    "main": "droite"
+                  },
                   {
                     "geste": "visage",
                     "de": 0,
-                    "a": 2.0,
+                    "a": 1.8,
                     "yeux": "plats",
                     "bouche": "plate"
                   },
                   {
                     "geste": "visage",
-                    "de": 2.0,
-                    "a": 2.6,
+                    "de": 1.8,
+                    "a": 2.4,
                     "yeux": "plats",
                     "bouche": "sourire",
                     "rougit": true
                   },
                   {
                     "geste": "rit",
-                    "de": 2.6,
-                    "a": 4.4
+                    "de": 2.4,
+                    "a": 4.6
                   }
                 ]
               },
               {
                 "qui": "violet",
-                "a": "droite",
+                "a": "table-droite",
                 "gestes": [
                   {
                     "geste": "rit",
                     "de": 0,
-                    "a": 1.3
-                  },
-                  {
-                    "geste": "parle",
-                    "de": 1.4,
-                    "a": 2.4
+                    "a": 1.6
                   },
                   {
                     "geste": "visage",
-                    "de": 2.4,
-                    "a": 4.4,
+                    "de": 1.6,
+                    "a": 4.6,
                     "yeux": "heureux",
                     "bouche": "rire"
                   },
                   {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 4.6,
+                    "cible": "rose"
+                  },
+                  {
                     "geste": "effet",
-                    "de": 3.0,
-                    "a": 4.4,
+                    "de": 3.2,
+                    "a": 4.6,
                     "effet": "coeurs"
                   }
                 ]
               }
             ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 0.2,
-                "a": 1.9,
-                "texte": "Get it?"
-              }
-            ],
             "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
               {
                 "a": 2.4,
                 "zoom": 1
               },
               {
-                "a": 4.4,
+                "a": 4.6,
                 "zoom": 1.2,
                 "x": 540,
                 "y": 1150

@@ -12,79 +12,89 @@
         "gabarit": "pov",
         "langue": "en",
         "theme": "light",
-        "idee": "Le « I'm fine » : la rose boude et se fâche, le violet arrive avec des chocolats, elle avoue et saute de joie.",
+        "idee": "Le « I'm fine » : la rose fait la vaisselle en fulminant, une seule bulle « I'm fine. », le violet n'ose pas approcher, puis il arrive avec une boîte de chocolats et elle fond. Le reste se joue sur les visages.",
         "titre": "POV: 'I'm fine'",
         "plans": [
           {
-            "description": "Un mur crème, la lumière du jour. Dès la première image la rose est debout à gauche, les bras croisés du regard, les sourcils froncés, les yeux plats et la bouche plate ; une bulle dit « I'm fine. ». Le violet, à droite, la regarde, une goutte de gêne sur le côté de la tête, et trois petits points flottent au-dessus de lui à 1,4 s. À 2,4 s il murmure « ...are you? » et la rose tourne la tête de l'autre côté.",
+            "description": "La cuisine en plein jour : le plan de travail d'un bord à l'autre, l'évier au milieu, les étagères, la fenêtre. Dès la première image la rose est derrière l'évier et frotte une assiette à grands gestes, sourcils froncés, yeux plats, bouche plate ; une seule bulle dit « I'm fine. » (0,2 à 1,8 s). Le violet, derrière le comptoir à droite, la regarde avec la bouche ronde, une goutte de gêne à 0,5 s, puis trois points au-dessus de la tête à 1,6 s. À 2,6 s la rose lui jette un regard en coin, il regarde le plafond.",
             "duree": 4.0,
-            "decor": "mur",
+            "decor": "cuisine",
             "moment": "midi",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": "evier",
                 "gestes": [
+                  {
+                    "geste": "vaisselle",
+                    "de": 0,
+                    "a": 4.0
+                  },
                   {
                     "geste": "visage",
                     "de": 0,
-                    "a": 2.3,
+                    "a": 2.5,
                     "yeux": "plats",
                     "bouche": "plate",
                     "sourcils": "faches"
                   },
                   {
-                    "geste": "parle",
-                    "de": 0.1,
-                    "a": 1.2
-                  },
-                  {
-                    "geste": "tourne",
+                    "geste": "regarde",
                     "de": 2.6,
-                    "a": 3.4,
-                    "vue": "profil",
-                    "sens": "gauche"
+                    "a": 4.0,
+                    "cible": "violet"
                   },
                   {
-                    "geste": "boude",
-                    "de": 3.4,
-                    "a": 4.0
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.0,
+                    "yeux": "plats",
+                    "bouche": "grogne",
+                    "sourcils": "faches"
                   }
                 ]
               },
               {
                 "qui": "violet",
-                "a": "droite",
+                "a": "comptoir-droite",
                 "gestes": [
                   {
                     "geste": "regarde",
                     "de": 0,
-                    "a": 4.0,
+                    "a": 2.5,
                     "cible": "rose"
                   },
                   {
                     "geste": "visage",
                     "de": 0,
-                    "a": 2.4,
+                    "a": 2.5,
                     "yeux": "ouverts",
                     "bouche": "o"
                   },
                   {
                     "geste": "effet",
                     "de": 0.5,
-                    "a": 2.0,
+                    "a": 1.6,
                     "effet": "goutte"
                   },
                   {
                     "geste": "effet",
-                    "de": 1.4,
+                    "de": 1.6,
                     "a": 3.0,
                     "effet": "points"
                   },
                   {
-                    "geste": "parle",
-                    "de": 2.4,
-                    "a": 3.6
+                    "geste": "regarde",
+                    "de": 2.6,
+                    "a": 4.0,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.0,
+                    "yeux": "ouverts",
+                    "bouche": "plate"
                   }
                 ]
               }
@@ -92,27 +102,21 @@
             "bulles": [
               {
                 "qui": "rose",
-                "de": 0.1,
-                "a": 1.9,
+                "de": 0.2,
+                "a": 1.8,
                 "texte": "I'm fine."
-              },
-              {
-                "qui": "violet",
-                "de": 2.4,
-                "a": 3.9,
-                "texte": "...are you?"
               }
             ]
           },
           {
-            "description": "Zoom rapide à 0,4 s sur le visage de la rose : elle se fâche pour de bon, sourcils froncés, bouche en zigzag, joues rouges, le corps qui tremble. Une bulle dit « I said I'm FINE. ». À 2,6 s elle croise le regard de la caméra, les yeux plats, comme pour nous demander de la comprendre. Derrière elle le violet se fait tout petit.",
+            "description": "Zoom rapide à 0,4 s sur le visage de la rose (1,9) : elle se fâche pour de bon, sourcils froncés, bouche en zigzag, joues rouges, le corps qui tremble de colère pendant deux secondes. À 2,6 s elle croise le regard de la caméra, les yeux plats, et souffle. Hors champ, le violet tremble derrière son comptoir.",
             "duree": 3.8,
-            "decor": "mur",
+            "decor": "cuisine",
             "moment": "midi",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": "evier",
                 "gestes": [
                   {
                     "geste": "fache",
@@ -137,7 +141,7 @@
               },
               {
                 "qui": "violet",
-                "a": "droite",
+                "a": "comptoir-droite",
                 "gestes": [
                   {
                     "geste": "regarde",
@@ -160,14 +164,6 @@
                 ]
               }
             ],
-            "bulles": [
-              {
-                "qui": "rose",
-                "de": 0.5,
-                "a": 2.4,
-                "texte": "I said I'm FINE."
-              }
-            ],
             "camera": [
               {
                 "a": 0,
@@ -181,14 +177,14 @@
             ]
           },
           {
-            "description": "Retour au plan large. À 0,2 s le violet entre dans l'image et s'approche de la rose en tenant une boîte de chocolats en cœur à bout de bras, les joues rouges. À 1,2 s les yeux de la rose deviennent brillants, sa bouche s'ouvre ; à 1,8 s elle saute de joie et des cœurs montent. Une bulle dit « Okay, I wasn't fine <3 ».",
+            "description": "Retour au plan large de la cuisine. Le violet se tourne vers la rose et lui tend une boîte de chocolats en cœur, les joues rouges, dès 0,3 s. À 1,2 s les yeux de la rose deviennent brillants et sa bouche s'ouvre ; à 1,8 s elle fait sa petite bouche de chat, les joues roses, et à 2,6 s elle saute de joie derrière l'évier, bras en l'air. Des cœurs montent au-dessus d'elle à partir de 2,2 s. La caméra se rapproche des deux à partir de 1,6 s (zoom 1,3).",
             "duree": 4.4,
-            "decor": "mur",
+            "decor": "cuisine",
             "moment": "midi",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": "evier",
                 "gestes": [
                   {
                     "geste": "visage",
@@ -198,6 +194,12 @@
                     "bouche": "plate"
                   },
                   {
+                    "geste": "regarde",
+                    "de": 0.3,
+                    "a": 4.4,
+                    "cible": "violet"
+                  },
+                  {
                     "geste": "visage",
                     "de": 1.2,
                     "a": 1.8,
@@ -205,62 +207,73 @@
                     "bouche": "o"
                   },
                   {
-                    "geste": "joie",
-                    "de": 1.8,
-                    "a": 3.0
-                  },
-                  {
                     "geste": "visage",
-                    "de": 3.0,
-                    "a": 4.4,
-                    "yeux": "fermes",
+                    "de": 1.8,
+                    "a": 2.6,
+                    "yeux": "heureux",
                     "bouche": "chat",
                     "rougit": true
+                  },
+                  {
+                    "geste": "joie",
+                    "de": 2.6,
+                    "a": 4.0
                   },
                   {
                     "geste": "effet",
                     "de": 2.2,
                     "a": 4.4,
                     "effet": "coeurs"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 4.0,
+                    "a": 4.4,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
                   }
                 ]
               },
               {
                 "qui": "violet",
-                "a": "droite",
+                "a": "comptoir-droite",
                 "gestes": [
                   {
-                    "geste": "marche",
-                    "de": 0,
-                    "a": 1.0,
-                    "vers": "droite"
+                    "geste": "tient",
+                    "de": 0.3,
+                    "a": 4.4,
+                    "objet": "chocolats",
+                    "main": "gauche"
                   },
                   {
-                    "geste": "offre",
-                    "de": 1.0,
+                    "geste": "regarde",
+                    "de": 0,
                     "a": 4.4,
-                    "objet": "chocolats"
+                    "cible": "rose"
                   },
                   {
                     "geste": "visage",
-                    "de": 1.2,
+                    "de": 0.3,
                     "a": 4.4,
                     "yeux": "heureux",
                     "bouche": "sourire",
                     "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.4,
+                    "effet": "coeurs"
                   }
                 ]
               }
             ],
-            "bulles": [
-              {
-                "qui": "rose",
-                "de": 1.9,
-                "a": 4.2,
-                "texte": "Okay, I wasn't fine <3"
-              }
-            ],
             "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
               {
                 "a": 1.6,
                 "zoom": 1
@@ -269,7 +282,7 @@
                 "a": 4.4,
                 "zoom": 1.3,
                 "x": 540,
-                "y": 1150
+                "y": 1100
               }
             ]
           }

@@ -12,175 +12,172 @@
         "gabarit": "pov",
         "langue": "en",
         "theme": "light",
-        "idee": "Le « où est-ce qu'on mange ? » : la même question en boucle, les deux de plus en plus plats, jusqu'à la pizza.",
+        "idee": "Le « où est-ce qu'on mange ? » : les deux marchent dans la rue, s'arrêtent devant un restaurant, repartent, s'arrêtent encore, de plus en plus plats ; à la nuit tombée, la pizza les sauve. Aucune bulle, la boucle se voit.",
         "titre": "POV: deciding where to eat",
         "plans": [
           {
-            "description": "Un mur crème et un sol beige, en plein jour. La rose est debout à gauche, le violet à droite, ils se font face dès la première image. La rose parle avec une grande bulle « Where do you want to eat? ». À 2 s le violet hausse les épaules et répond « I don't know, you pick. » ; un point d'interrogation apparaît au-dessus de la rose, bouche ronde.",
-            "duree": 3.6,
-            "decor": "mur",
-            "moment": "midi",
+            "description": "La rue au coucher du soleil : trois façades, un auvent rayé au-dessus d'une porte, le lampadaire encore éteint, une petite voiture qui passe en bas. Dès la première image la rose (à 150) et le violet (à 320) marchent côte à côte vers la droite, de profil, et s'arrêtent devant la porte du restaurant à 2 s. Ils se tournent l'un vers l'autre à 2,2 s ; un « ? » apparaît au-dessus de chacun à 2,6 s. La rose hausse les sourcils, le violet ouvre la bouche en « o ». La caméra se rapproche d'eux à partir de 3 s (zoom 1,25).",
+            "duree": 4.2,
+            "decor": "rue",
+            "moment": "soir",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": 150,
                 "gestes": [
                   {
-                    "geste": "regarde",
+                    "geste": "marche",
                     "de": 0,
-                    "a": 3.6,
+                    "a": 2.0,
+                    "vers": 430
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.2,
+                    "a": 4.2,
                     "cible": "violet"
                   },
                   {
-                    "geste": "parle",
-                    "de": 0.1,
-                    "a": 1.8
-                  },
-                  {
                     "geste": "visage",
-                    "de": 2.0,
-                    "a": 3.6,
-                    "yeux": "ouverts",
-                    "bouche": "o"
+                    "de": 2.3,
+                    "a": 4.2,
+                    "sourcils": "hauts",
+                    "bouche": "plate"
                   },
                   {
                     "geste": "effet",
-                    "de": 2.3,
-                    "a": 3.6,
+                    "de": 2.6,
+                    "a": 4.2,
                     "effet": "question"
                   }
                 ]
               },
               {
                 "qui": "violet",
-                "a": "droite",
+                "a": 320,
                 "gestes": [
                   {
-                    "geste": "regarde",
+                    "geste": "marche",
                     "de": 0,
-                    "a": 3.6,
+                    "a": 2.0,
+                    "vers": 640
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.2,
+                    "a": 4.2,
                     "cible": "rose"
                   },
                   {
                     "geste": "visage",
-                    "de": 0,
-                    "a": 1.9,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
+                    "de": 2.4,
+                    "a": 4.2,
+                    "bouche": "o"
                   },
                   {
-                    "geste": "parle",
-                    "de": 2.0,
-                    "a": 3.4
+                    "geste": "effet",
+                    "de": 2.7,
+                    "a": 4.2,
+                    "effet": "question"
                   }
                 ]
               }
             ],
-            "bulles": [
+            "camera": [
               {
-                "qui": "rose",
-                "de": 0.1,
-                "a": 1.9,
-                "texte": "Where do you want to eat?"
+                "a": 0,
+                "zoom": 1
               },
               {
-                "qui": "violet",
-                "de": 2.0,
-                "a": 3.5,
-                "texte": "I don't know, you pick."
+                "a": 3,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1150
               }
             ]
           },
           {
-            "description": "Même mur, même place : la conversation tourne en boucle. Le violet dit « I'm fine with anything. » les yeux plats ; à 1,8 s la rose répond « No, you pick! » en croisant les bras du regard, puis boude à 2,8 s, la bouche pincée. Trois petits points montent au-dessus du violet à 3 s. La caméra se rapproche doucement des deux.",
+            "description": "Même rue, même lumière du soir, la légende dit « 20 min later ». Les deux reviennent de la droite vers la gauche (ils repassent devant la porte), s'arrêtent au milieu du trottoir à 1,8 s, les bras ballants. Yeux plats et bouche plate pour les deux, trois points au-dessus de la rose à 2 s et au-dessus du violet à 2,4 s. À 3 s le violet regarde la rose, elle regarde ailleurs, à gauche. Petit zoom sur les deux à partir de 2,2 s (1,2).",
             "duree": 4.0,
-            "decor": "mur",
-            "moment": "midi",
+            "decor": "rue",
+            "moment": "soir",
+            "transition": "coupe",
+            "legende": "20 min later",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": 700,
                 "gestes": [
                   {
-                    "geste": "regarde",
+                    "geste": "marche",
                     "de": 0,
-                    "a": 1.7,
-                    "cible": "violet"
+                    "a": 1.8,
+                    "vers": 460
                   },
                   {
                     "geste": "visage",
-                    "de": 0,
-                    "a": 1.7,
-                    "yeux": "ouverts",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "parle",
-                    "de": 1.8,
-                    "a": 2.8
-                  },
-                  {
-                    "geste": "boude",
-                    "de": 2.8,
-                    "a": 4.0
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "droite",
-                "gestes": [
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 0.4,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "parle",
-                    "de": 0.4,
-                    "a": 1.7
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.8,
-                    "a": 2.9,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.9,
+                    "de": 1.9,
                     "a": 4.0,
                     "yeux": "plats",
                     "bouche": "plate"
                   },
                   {
                     "geste": "effet",
-                    "de": 3.0,
+                    "de": 2.0,
                     "a": 4.0,
                     "effet": "points"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 3.0,
+                    "a": 4.0,
+                    "cible": "gauche"
                   }
                 ]
-              }
-            ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 0.4,
-                "a": 1.7,
-                "texte": "I'm fine with anything."
               },
               {
-                "qui": "rose",
-                "de": 1.8,
-                "a": 3.6,
-                "texte": "No, you pick!"
+                "qui": "violet",
+                "a": 900,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 1.8,
+                    "vers": 640
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.9,
+                    "a": 4.0,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.4,
+                    "a": 4.0,
+                    "effet": "points"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 3.0,
+                    "a": 4.0,
+                    "cible": "rose"
+                  }
+                ]
               }
             ],
             "camera": [
               {
                 "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 2.2,
                 "zoom": 1
               },
               {
@@ -192,120 +189,133 @@
             ]
           },
           {
-            "description": "Le même mur, la lumière du soir. Les deux ont les yeux plats et les bras ballants, des points au-dessus de leurs têtes. À 0,8 s la rose se tourne vers la caméra et murmure « ...pizza? » ; à 2,2 s le violet ouvre grand les yeux, lève les bras, et les deux sautent de joie en disant « Pizza. Always pizza. » Zoom rapide sur eux à 2,2 s, cœurs qui montent à la fin.",
-            "duree": 4.4,
-            "decor": "mur",
-            "moment": "soir",
+            "description": "La nuit est tombée (écran noir puis lumière) : lampadaire allumé, fenêtres jaunes, la légende dit « 1 hour later ». Les deux sont sous le lampadaire, toujours au même endroit, les yeux plats, trois points au-dessus de leurs têtes dès 0,1 s. À 1,2 s le violet tourne la tête vers la rose, les yeux brillants, la bouche en « o » ; à 1,5 s elle le regarde aussi, et ses yeux s'ouvrent grand. À 2,4 s une part de pizza apparaît en pop au-dessus d'eux, devant, entre leurs deux têtes (c'est la réponse) et les deux sautent de joie en même temps, bras en l'air, des cœurs montent. Zoom rapide sur la pizza à 2,4 s (1,35).",
+            "duree": 4.8,
+            "decor": "rue",
+            "moment": "nuit",
+            "transition": "noir",
+            "legende": "1 hour later",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": 460,
                 "gestes": [
                   {
                     "geste": "visage",
                     "de": 0,
-                    "a": 0.8,
+                    "a": 1.4,
                     "yeux": "plats",
                     "bouche": "plate"
                   },
                   {
                     "geste": "effet",
                     "de": 0.1,
-                    "a": 1.0,
+                    "a": 1.4,
                     "effet": "points"
                   },
                   {
                     "geste": "regarde",
-                    "de": 0.8,
-                    "a": 1.8,
-                    "cible": "camera"
+                    "de": 1.5,
+                    "a": 2.4,
+                    "cible": "violet"
                   },
                   {
-                    "geste": "parle",
-                    "de": 0.9,
-                    "a": 2.0
+                    "geste": "visage",
+                    "de": 1.5,
+                    "a": 2.4,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "sourcils": "hauts"
                   },
                   {
                     "geste": "joie",
-                    "de": 2.3,
-                    "a": 3.6
+                    "de": 2.5,
+                    "a": 4.0
                   },
                   {
                     "geste": "effet",
                     "de": 3.0,
-                    "a": 4.4,
+                    "a": 4.8,
                     "effet": "coeurs"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 4.0,
+                    "a": 4.8,
+                    "yeux": "heureux",
+                    "bouche": "rire"
                   }
                 ]
               },
               {
                 "qui": "violet",
-                "a": "droite",
+                "a": 640,
                 "gestes": [
                   {
                     "geste": "visage",
                     "de": 0,
-                    "a": 0.8,
+                    "a": 1.2,
                     "yeux": "plats",
                     "bouche": "plate"
                   },
                   {
                     "geste": "effet",
                     "de": 0.1,
-                    "a": 1.0,
+                    "a": 1.2,
                     "effet": "points"
                   },
                   {
                     "geste": "regarde",
-                    "de": 1.0,
-                    "a": 2.2,
+                    "de": 1.2,
+                    "a": 2.4,
                     "cible": "rose"
                   },
                   {
                     "geste": "visage",
-                    "de": 2.2,
-                    "a": 3.0,
+                    "de": 1.2,
+                    "a": 2.4,
                     "yeux": "brillants",
                     "bouche": "o"
                   },
                   {
-                    "geste": "saute",
-                    "de": 2.4,
-                    "a": 3.6,
-                    "fois": 2
+                    "geste": "joie",
+                    "de": 2.5,
+                    "a": 4.0
                   },
                   {
-                    "geste": "rit",
-                    "de": 3.6,
-                    "a": 4.4
+                    "geste": "visage",
+                    "de": 4.0,
+                    "a": 4.8,
+                    "yeux": "heureux",
+                    "bouche": "rire"
                   }
                 ]
               }
             ],
-            "bulles": [
+            "objets": [
               {
-                "qui": "rose",
-                "de": 0.9,
-                "a": 2.1,
-                "texte": "...pizza?"
-              },
-              {
-                "qui": "violet",
-                "de": 2.3,
-                "a": 4.2,
-                "texte": "Pizza. Always pizza."
+                "objet": "pizza",
+                "x": 550,
+                "y": 1020,
+                "de": 2.4,
+                "entree": "pop",
+                "devant": true
               }
             ],
             "camera": [
               {
-                "a": 2.1,
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 2.0,
                 "zoom": 1
               },
               {
                 "a": 2.5,
-                "zoom": 1.3,
+                "zoom": 1.35,
                 "x": 540,
-                "y": 1100
+                "y": 1150
               }
             ]
           }

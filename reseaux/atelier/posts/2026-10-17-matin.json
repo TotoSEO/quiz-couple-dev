@@ -12,11 +12,11 @@
         "gabarit": "pov",
         "langue": "en",
         "theme": "light",
-        "idee": "Les 40 vidéos par jour : la rose reçoit des notifications en rafale, le violet en envoie encore, elle finit par rire.",
+        "idee": "Les 40 vidéos par jour : la rose reçoit des notifications en rafale sur son téléphone, le violet en envoie encore en riant à côté d'elle, elle finit par rire. Aucune bulle : les « ! » et les visages racontent tout.",
         "titre": "POV: he sends you 40 videos a day",
         "plans": [
           {
-            "description": "Le salon, le soir. Dès la première image la rose, à gauche, tient son téléphone et le regarde, tête baissée ; des « ! » apparaissent au-dessus d'elle en rafale. Le violet, à droite, sourit en tapant sur son propre téléphone et dit « Look at this one! » dans une bulle. La rose lève les yeux vers lui, les yeux ronds.",
+            "description": "Le salon, le soir, lumière chaude de la lampe. Dès la première image la rose, à gauche du canapé, tient son téléphone et le regarde, tête baissée ; des « ! » apparaissent au-dessus d'elle en rafale (une notification à chaque fois) dès 0,3 s. Le violet, à droite, tape sur son propre téléphone en souriant, puis à 1,8 s il rit aux éclats en la regardant. À 1,8 s la rose lève la tête vers lui, la bouche ronde.",
             "duree": 3.6,
             "decor": "salon",
             "moment": "soir",
@@ -33,7 +33,13 @@
                   {
                     "geste": "effet",
                     "de": 0.3,
-                    "a": 3.6,
+                    "a": 1.2,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 1.8,
                     "effet": "exclamation"
                   },
                   {
@@ -61,17 +67,16 @@
                     "a": 1.8
                   },
                   {
-                    "geste": "parle",
-                    "de": 0.3,
-                    "a": 1.6
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.7,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
                   },
                   {
-                    "geste": "visage",
+                    "geste": "rit",
                     "de": 1.8,
-                    "a": 3.6,
-                    "yeux": "heureux",
-                    "bouche": "rire",
-                    "rougit": true
+                    "a": 3.6
                   },
                   {
                     "geste": "regarde",
@@ -81,18 +86,10 @@
                   }
                 ]
               }
-            ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 0.3,
-                "a": 1.7,
-                "texte": "Look at this one!"
-              }
             ]
           },
           {
-            "description": "Zoom rapide à 0,3 s sur le visage de la rose, qui regarde l'écran, les yeux plats et la bouche plate. Trois points flottent au-dessus d'elle. Sa bulle dit « That's video number 40. » ; à 2,4 s une goutte de gêne apparaît sur le côté de sa tête. Derrière, le violet continue de taper sur son téléphone en riant.",
+            "description": "Zoom rapide à 0,3 s sur le visage de la rose (1,7), qui regarde l'écran, les yeux plats et la bouche plate. Trois points flottent au-dessus d'elle de 0,3 à 2,3 s, puis une goutte de gêne apparaît à 2,4 s : encore une vidéo. À côté, le violet rit toujours, le nez sur son téléphone.",
             "duree": 3.8,
             "decor": "salon",
             "moment": "soir",
@@ -109,16 +106,17 @@
                     "main": "droite"
                   },
                   {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "bas"
+                  },
+                  {
                     "geste": "visage",
                     "de": 0,
                     "a": 3.8,
                     "yeux": "plats",
                     "bouche": "plate"
-                  },
-                  {
-                    "geste": "parle",
-                    "de": 0.5,
-                    "a": 1.9
                   },
                   {
                     "geste": "effet",
@@ -151,14 +149,6 @@
                 ]
               }
             ],
-            "bulles": [
-              {
-                "qui": "rose",
-                "de": 0.5,
-                "a": 2.4,
-                "texte": "That's video number 40."
-              }
-            ],
             "camera": [
               {
                 "a": 0,
@@ -172,7 +162,7 @@
             ]
           },
           {
-            "description": "Retour au plan large. Le téléphone de la rose fait « ping » : un « ! » apparaît au-dessus d'elle, ses yeux deviennent grands. Elle se tourne vers la caméra, la bouche pincée, puis regarde l'écran et éclate de rire à 2 s malgré elle. Le violet lève les bras, triomphant, et une bulle dit « Worth it! ». Des cœurs montent à la fin.",
+            "description": "Retour au plan large du canapé. Le téléphone de la rose fait « ping » : un « ! » apparaît au-dessus d'elle à 0,2 s, ses yeux s'ouvrent grand. Elle regarde la caméra à 1 s, la bouche pincée, puis baisse les yeux sur l'écran et éclate de rire à 2 s malgré elle ; des cœurs montent à 3,2 s. Le violet, lui, saute de joie sur le canapé dès 0,5 s (il a gagné), puis sourit en rougissant. La caméra se rapproche des deux à partir de 2 s (zoom 1,2).",
             "duree": 4.2,
             "decor": "salon",
             "moment": "soir",
@@ -182,18 +172,9 @@
                 "a": "canape-gauche",
                 "gestes": [
                   {
-                    "geste": "tient",
+                    "geste": "telephone",
                     "de": 0,
-                    "a": 4.2,
-                    "objet": "telephone",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 0.9,
-                    "yeux": "ouverts",
-                    "bouche": "o"
+                    "a": 1.0
                   },
                   {
                     "geste": "effet",
@@ -202,10 +183,24 @@
                     "effet": "exclamation"
                   },
                   {
+                    "geste": "visage",
+                    "de": 0.2,
+                    "a": 0.9,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
                     "geste": "regarde",
                     "de": 1.0,
                     "a": 2.0,
                     "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.0,
+                    "a": 2.0,
+                    "yeux": "plats",
+                    "bouche": "plate"
                   },
                   {
                     "geste": "rit",
@@ -236,30 +231,27 @@
                     "a": 2.0
                   },
                   {
-                    "geste": "parle",
-                    "de": 2.1,
-                    "a": 3.4
-                  },
-                  {
                     "geste": "visage",
-                    "de": 3.4,
+                    "de": 2.0,
                     "a": 4.2,
                     "yeux": "heureux",
                     "bouche": "sourire",
                     "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "effet": "etincelles"
                   }
                 ]
               }
             ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 2.1,
-                "a": 3.9,
-                "texte": "Worth it!"
-              }
-            ],
             "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
               {
                 "a": 2.0,
                 "zoom": 1

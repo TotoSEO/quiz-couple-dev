@@ -12,18 +12,18 @@
         "gabarit": "pov",
         "langue": "en",
         "theme": "light",
-        "idee": "Le retour à la maison après une longue journée : la rose attend en boudant, le violet entre, elle court, câlin et cœurs.",
+        "idee": "Le retour à la maison après une longue journée : la rose attend debout dans le salon en boudant, la porte s'ouvre, le violet entre fatigué, elle saute, court vers lui, câlin et cœurs. Aucune bulle.",
         "titre": "POV: he comes home after a long day",
         "plans": [
           {
-            "description": "Un mur crème, la lumière du soir. Dès la première image la rose est debout à gauche, les bras ballants, bouche en moue et yeux plats : elle attend. Des points flottent au-dessus de sa tête. À 1,6 s le violet entre par le bord droit en marchant lentement, l'air fatigué ; à 2,2 s la rose le voit, ses yeux s'écarquillent et un « ! » apparaît. À 2,6 s une bulle du violet dit « I'm home. ».",
+            "description": "Le salon, le soir, la lampe allumée, le canapé vide derrière. Dès la première image la rose est debout à gauche devant le canapé, les bras ballants, bouche en moue et yeux plats : elle attend, trois points au-dessus de la tête. À 1,6 s la porte s'ouvre (bruit de porte) et le violet entre par le bord droit en glissant jusqu'à sa place à droite (2,4 s), les yeux plats de fatigue, les épaules basses. À 1,8 s la rose tourne la tête vers lui, la bouche ronde, un « ! » au-dessus d'elle à 2,3 s ; à 3 s il la voit et sourit.",
             "duree": 4.0,
-            "decor": "mur",
+            "decor": "salon",
             "moment": "soir",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": "devant-gauche",
                 "gestes": [
                   {
                     "geste": "boude",
@@ -59,25 +59,26 @@
               },
               {
                 "qui": "violet",
-                "a": "droite",
+                "a": "devant-droite",
                 "gestes": [
                   {
-                    "geste": "marche",
-                    "de": 0,
-                    "a": 3.0,
-                    "vers": "droite"
+                    "geste": "apparait",
+                    "de": 1.6,
+                    "a": 2.4,
+                    "depuis": "droite"
                   },
                   {
                     "geste": "visage",
-                    "de": 0.2,
-                    "a": 2.6,
+                    "de": 1.6,
+                    "a": 2.9,
                     "yeux": "plats",
                     "bouche": "plate"
                   },
                   {
-                    "geste": "parle",
-                    "de": 2.6,
-                    "a": 3.8
+                    "geste": "regarde",
+                    "de": 3.0,
+                    "a": 4.0,
+                    "cible": "rose"
                   },
                   {
                     "geste": "visage",
@@ -88,25 +89,17 @@
                   }
                 ]
               }
-            ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 2.6,
-                "a": 3.9,
-                "texte": "I'm home."
-              }
             ]
           },
           {
-            "description": "Même mur. La rose bondit de joie : deux sauts sur place avec les bras en l'air, puis elle court vers le violet qui ouvre les bras. Une bulle de la rose dit « Finally! ». Ils se rejoignent au milieu à 2 s et se serrent fort, des cœurs montent au-dessus d'eux, le violet ferme les yeux de soulagement.",
+            "description": "Même salon. La rose bondit de joie : deux sauts sur place avec les bras en l'air (0 à 1,2 s), puis elle court vers le violet qui lui ouvre les bras. Ils se rejoignent au milieu à 2 s et se serrent fort, les yeux fermés et les joues roses ; des cœurs montent au-dessus d'eux à partir de 2,4 s. La caméra se rapproche d'eux à partir de 1,8 s (zoom 1,25).",
             "duree": 4.2,
-            "decor": "mur",
+            "decor": "salon",
             "moment": "soir",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": "devant-gauche",
                 "gestes": [
                   {
                     "geste": "saute",
@@ -125,7 +118,7 @@
                     "geste": "court",
                     "de": 1.2,
                     "a": 2.0,
-                    "vers": 470
+                    "vers": 600
                   },
                   {
                     "geste": "calin",
@@ -151,7 +144,7 @@
               },
               {
                 "qui": "violet",
-                "a": "droite",
+                "a": "devant-droite",
                 "gestes": [
                   {
                     "geste": "regarde",
@@ -183,15 +176,11 @@
                 ]
               }
             ],
-            "bulles": [
-              {
-                "qui": "rose",
-                "de": 0.2,
-                "a": 1.6,
-                "texte": "Finally!"
-              }
-            ],
             "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
               {
                 "a": 1.8,
                 "zoom": 1
@@ -205,14 +194,14 @@
             ]
           },
           {
-            "description": "Le câlin continue, la caméra se rapproche doucement d'eux. À 0,5 s la rose fait sa petite bouche de chat, les joues très roses, les yeux fermés ; à 1,5 s le violet rouvre les yeux, heureux, la fatigue a disparu. Des cœurs continuent de monter jusqu'à la fin et une bulle du violet dit « Best part of my day. ».",
+            "description": "Le câlin continue, la caméra se rapproche doucement d'eux (de 1,2 à 1,5). À 0,5 s la rose fait sa petite bouche de chat, les joues très roses, les yeux fermés ; à 1,5 s le violet rouvre les yeux, heureux, la fatigue a disparu, et à 2,6 s il ferme les yeux de bonheur à son tour. Des cœurs continuent de monter pendant tout le plan.",
             "duree": 4.0,
-            "decor": "mur",
+            "decor": "salon",
             "moment": "soir",
             "persos": [
               {
                 "qui": "rose",
-                "a": "gauche",
+                "a": "devant-gauche",
                 "gestes": [
                   {
                     "geste": "calin",
@@ -238,7 +227,7 @@
               },
               {
                 "qui": "violet",
-                "a": "droite",
+                "a": "devant-droite",
                 "gestes": [
                   {
                     "geste": "calin",
@@ -257,25 +246,20 @@
                   {
                     "geste": "visage",
                     "de": 1.5,
-                    "a": 4.0,
+                    "a": 2.6,
                     "yeux": "heureux",
                     "bouche": "sourire",
                     "rougit": true
                   },
                   {
-                    "geste": "parle",
-                    "de": 2.0,
-                    "a": 3.4
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
                   }
                 ]
-              }
-            ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 2.0,
-                "a": 3.8,
-                "texte": "Best part of my day."
               }
             ],
             "camera": [

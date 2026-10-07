@@ -12,17 +12,17 @@
         "gabarit": "pov",
         "langue": "en",
         "theme": "light",
-        "idee": "Reel statique : les deux sur un banc au coucher du soleil, un câlin, une phrase tendre qui s'écrit.",
+        "idee": "Reel statique : les deux assis dans le sable au coucher du soleil, un câlin, une phrase tendre qui s'écrit. Les vagues avancent derrière eux.",
         "plans": [
           {
-            "description": "Dehors, au coucher du soleil : ciel orangé, un arbre, un banc. Dès la première image les deux sont assis sur le banc, jambes qui pendent, la rose à gauche et le violet à droite, et se regardent en souriant. À 1 s la rose se rapproche et le serre dans ses bras ; à 1,6 s les deux ferment les yeux de bonheur, joues roses, et de petits cœurs montent doucement. « you're my favorite person » s'écrit mot à mot en haut à partir de 2,6 s. Vers 6 s la rose fait sa petite bouche de chat, le violet rouvre des yeux heureux. La caméra se rapproche lentement jusqu'à la fin.",
+            "description": "La plage au coucher du soleil : ciel orangé, la mer et ses vagues qui avancent, un voilier au loin, le parasol rayé à gauche, le château de sable à droite. Dès la première image les deux sont assis dans le sable, la rose à gauche et le violet à droite, et se regardent en souriant. À 1 s la rose se rapproche et pose la tête contre lui (câlin), les deux ferment les yeux de bonheur, joues roses, des cœurs montent à partir de 2,2 s. Le texte « you're my favorite person » s'écrit mot à mot en haut à partir de 2,6 s. À 6 s la rose fait sa petite bouche de chat, le violet rouvre les yeux, heureux. La caméra se rapproche très lentement pendant tout le plan (1 à 1,2).",
             "duree": 11,
-            "decor": "dehors",
+            "decor": "plage",
             "moment": "soir",
             "persos": [
               {
                 "qui": "rose",
-                "a": "banc-gauche",
+                "a": "sable-gauche",
                 "gestes": [
                   {
                     "geste": "regarde",
@@ -65,12 +65,11 @@
                     "a": 11,
                     "effet": "coeurs"
                   }
-                ],
-                "premier": true
+                ]
               },
               {
                 "qui": "violet",
-                "a": "banc-droite",
+                "a": "sable-droite",
                 "gestes": [
                   {
                     "geste": "regarde",
@@ -114,9 +113,8 @@
               {
                 "de": 2.6,
                 "texte": "you're my favorite person",
-                "motAMot": true,
                 "place": "haut",
-                "style": "plume"
+                "motAMot": true
               }
             ],
             "camera": [
@@ -143,7 +141,7 @@
           "ambiance": "tendre"
         }
       },
-      "legende": "Sunset, a bench, and you.\n\nTag your partner.",
+      "legende": "Sunset, the sea, and you.\n\nTag your partner.",
       "hashtags": [
         "#couplegoals",
         "#relationshiphumor",

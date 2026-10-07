@@ -12,35 +12,41 @@
         "gabarit": "pov",
         "langue": "en",
         "theme": "light",
-        "idee": "Le « je n'ai pas sommeil » : le violet se redresse, bâille, puis s'endort, et la rose rit.",
+        "idee": "Le « je n'ai pas sommeil » en voiture : le passager jure qu'il est réveillé, se redresse, lutte, et s'endort en ronflant ; la rose conduit et rit. Aucune bulle, le titre dit la phrase.",
         "titre": "POV: 'I'm not even sleepy'",
         "plans": [
           {
-            "description": "Le salon, le soir, lumière chaude de la lampe. Dès la première image les deux sont dans le canapé devant la télé : le violet est bien droit, les yeux grands ouverts, et dit « I'm not sleepy. » dans une bulle ; la rose le regarde, un sourire en coin. À 2 s le violet fait un grand sourire sûr de lui, les joues roses, et la rose lève un sourcil.",
+            "description": "L'intérieur de la voiture au coucher du soleil : la lunette arrière où défilent les arbres, le petit sapin qui se balance au rétroviseur, le tableau de bord et le volant. Dès la première image la rose conduit (à gauche, au volant), les yeux sur la route (vers la caméra), le sourire tranquille. Le violet, passager à droite, est bien droit, les yeux grands ouverts, et parle (la bouche bouge de 0,2 à 1,4 s) en la regardant : il n'a pas sommeil, c'est sûr. À 1,8 s la rose lui jette un coup d'œil, les sourcils hauts ; à 2 s il rougit et sourit, très fier.",
             "duree": 3.6,
-            "decor": "salon",
+            "decor": "voiture",
             "moment": "soir",
             "persos": [
               {
                 "qui": "rose",
-                "a": "canape-gauche",
+                "a": "volant",
                 "gestes": [
                   {
                     "geste": "regarde",
                     "de": 0,
+                    "a": 1.7,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.7,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
                     "a": 3.6,
                     "cible": "violet"
                   },
                   {
                     "geste": "visage",
-                    "de": 0,
-                    "a": 1.9,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.0,
+                    "de": 1.8,
                     "a": 3.6,
                     "yeux": "ouverts",
                     "bouche": "plate",
@@ -50,8 +56,14 @@
               },
               {
                 "qui": "violet",
-                "a": "canape-droite",
+                "a": "passager",
                 "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "rose"
+                  },
                   {
                     "geste": "visage",
                     "de": 0,
@@ -62,13 +74,7 @@
                   {
                     "geste": "parle",
                     "de": 0.2,
-                    "a": 1.6
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.8,
-                    "a": 3.6,
-                    "cible": "camera"
+                    "a": 1.4
                   },
                   {
                     "geste": "visage",
@@ -80,25 +86,17 @@
                   }
                 ]
               }
-            ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 0.2,
-                "a": 1.9,
-                "texte": "I'm not sleepy."
-              }
             ]
           },
           {
-            "description": "Le même canapé, la nuit, lumière bleue. Zoom lent sur le violet : ses paupières sont lourdes, ses yeux sont plats, sa tête penche un peu. À 0,8 s il se redresse d'un coup et dit « I'm totally awake. » ; à 2,2 s ses yeux se ferment presque et il bâille, la bouche ronde. La rose le regarde en souriant, la main sur la bouche pour ne pas rire.",
+            "description": "Même voiture, la nuit : les fenêtres passent au bleu nuit. Zoom lent sur le violet pendant tout le plan (1,35) : ses yeux sont plats, sa tête penche ; à 0,8 s il se redresse d'un coup, les yeux grands ouverts et les sourcils hauts, un « ! » au-dessus de la tête ; à 2,2 s ses yeux se ferment et sa bouche s'ouvre en « o » ; à 3 s il dort pour de bon. La rose le regarde du coin de l'œil et commence à rire à 1,8 s.",
             "duree": 4.0,
-            "decor": "salon",
+            "decor": "voiture",
             "moment": "nuit",
             "persos": [
               {
                 "qui": "rose",
-                "a": "canape-gauche",
+                "a": "volant",
                 "gestes": [
                   {
                     "geste": "regarde",
@@ -122,7 +120,7 @@
               },
               {
                 "qui": "violet",
-                "a": "canape-droite",
+                "a": "passager",
                 "gestes": [
                   {
                     "geste": "visage",
@@ -132,9 +130,18 @@
                     "bouche": "plate"
                   },
                   {
-                    "geste": "parle",
+                    "geste": "visage",
                     "de": 0.8,
-                    "a": 2.0
+                    "a": 2.1,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "hauts"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.8,
+                    "a": 2.0,
+                    "effet": "exclamation"
                   },
                   {
                     "geste": "visage",
@@ -153,14 +160,6 @@
                 ]
               }
             ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 0.8,
-                "a": 2.2,
-                "texte": "I'm totally awake."
-              }
-            ],
             "camera": [
               {
                 "a": 0,
@@ -174,14 +173,14 @@
             ]
           },
           {
-            "description": "Plan large, la nuit. Le violet dort profondément, la tête penchée sur le coussin, la bouche ouverte, des Z qui montent. La rose rit sans bruit, les épaules secouées, puis se tourne vers la caméra à 1,6 s, les yeux heureux, et pose le doigt devant sa bouche : une bulle dit « Not sleepy, huh? ». Des petits cœurs flottent au-dessus d'elle à 3 s.",
+            "description": "Plan large de la voiture, la nuit. Le violet dort profondément contre son appuie-tête, la bouche ouverte, des Z qui montent et un ronflement. La rose rit sans bruit, les épaules secouées (0 à 1,6 s), puis regarde la route (la caméra) à 1,6 s avec un clin d'œil et les joues roses ; des cœurs montent au-dessus d'elle à 3 s. La caméra se rapproche doucement des deux (zoom 1,2).",
             "duree": 4.2,
-            "decor": "salon",
+            "decor": "voiture",
             "moment": "nuit",
             "persos": [
               {
                 "qui": "rose",
-                "a": "canape-gauche",
+                "a": "volant",
                 "gestes": [
                   {
                     "geste": "rit",
@@ -203,11 +202,6 @@
                     "rougit": true
                   },
                   {
-                    "geste": "parle",
-                    "de": 1.8,
-                    "a": 3.0
-                  },
-                  {
                     "geste": "effet",
                     "de": 3.0,
                     "a": 4.2,
@@ -217,28 +211,14 @@
               },
               {
                 "qui": "violet",
-                "a": "canape-droite",
+                "a": "passager",
                 "gestes": [
                   {
                     "geste": "dort",
                     "de": 0,
                     "a": 4.2
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.3,
-                    "a": 4.2,
-                    "effet": "zzz"
                   }
                 ]
-              }
-            ],
-            "bulles": [
-              {
-                "qui": "rose",
-                "de": 1.7,
-                "a": 3.9,
-                "texte": "Not sleepy, huh?"
               }
             ],
             "camera": [
@@ -250,7 +230,7 @@
                 "a": 4.2,
                 "zoom": 1.2,
                 "x": 540,
-                "y": 1150
+                "y": 1100
               }
             ]
           }

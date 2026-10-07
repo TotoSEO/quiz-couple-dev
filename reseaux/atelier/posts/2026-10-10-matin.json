@@ -12,14 +12,15 @@
         "gabarit": "pov",
         "langue": "en",
         "theme": "light",
-        "idee": "Le « encore un épisode » : à 22 h ils regardent, à 1 h ils ont les yeux plats, à 3 h ils dorment assis.",
+        "idee": "Le « encore un épisode » : à 22 h ils regardent avec le pop-corn, à 1 h ils ont les yeux plats, à 3 h ils dorment assis. Trois légendes, aucune bulle.",
         "titre": "POV: 'just one more episode'",
         "plans": [
           {
-            "description": "Le salon, le soir, lumière chaude de la lampe. Dès la première image les deux sont dans le canapé : la rose à gauche tient un pot de pop-corn et sourit, le violet à droite se tourne vers elle, les yeux brillants, et une bulle dit « Just one more episode? ». À 1,6 s elle rit, le violet sourit et ses yeux deviennent des cœurs, de petites étincelles passent au-dessus de sa tête.",
+            "description": "Le salon, le soir, lumière chaude de la lampe, la légende dit « 10 PM ». Dès la première image les deux sont dans le canapé face à la télé (la caméra) : la rose à gauche tient un pot de pop-corn et sourit, le violet à droite se tourne vers elle à 0,2 s, les yeux brillants, et lui demande d'un geste (la bouche bouge, pas de bulle) encore un épisode. À 1,6 s elle rit, à 1,6 s il a les yeux en cœur et des étincelles autour de la tête, puis à 2,8 s il rit aussi.",
             "duree": 4.0,
             "decor": "salon",
             "moment": "soir",
+            "legende": "10 PM",
             "persos": [
               {
                 "qui": "rose",
@@ -31,6 +32,12 @@
                     "a": 4,
                     "objet": "popcorn",
                     "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4,
+                    "cible": "violet"
                   },
                   {
                     "geste": "visage",
@@ -85,21 +92,29 @@
                 ]
               }
             ],
-            "bulles": [
+            "camera": [
               {
-                "qui": "violet",
-                "de": 0.2,
+                "a": 0,
+                "zoom": 1
+              },
+              {
                 "a": 2.4,
-                "texte": "Just one more episode?"
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1150
               }
-            ],
-            "legende": "10 PM"
+            ]
           },
           {
-            "description": "Le même canapé, en pleine nuit, lumière bleue. Le pot de pop-corn est toujours sur les genoux de la rose, qui a les yeux plats et la bouche plate. Le violet, les yeux plats aussi, dit « Just one more. » en pointant l'écran du regard. À 1,8 s la rose se tourne vers la caméra, sourcils tristes, une goutte de gêne sur le côté de la tête ; trois petits points flottent au-dessus du violet. La caméra se rapproche des deux d'un seul mouvement.",
+            "description": "Le même canapé, en pleine nuit, lumière bleue, la légende dit « 1 AM ». Le pot de pop-corn est toujours sur les genoux de la rose, qui a les yeux plats et la bouche plate. Le violet, les yeux plats aussi, lève le regard vers l'écran à 0,5 s et pointe du menton (la bouche bouge, pas de bulle) : encore un. À 1,8 s la rose regarde la caméra, les sourcils tristes, une goutte de gêne à 2,2 s ; trois points au-dessus du violet à 2,1 s. La caméra se rapproche d'eux (zoom 1,25).",
             "duree": 4.0,
             "decor": "salon",
             "moment": "nuit",
+            "legende": "1 AM",
             "persos": [
               {
                 "qui": "rose",
@@ -153,15 +168,15 @@
                     "bouche": "plate"
                   },
                   {
+                    "geste": "regarde",
+                    "de": 0.5,
+                    "a": 3.0,
+                    "cible": "haut"
+                  },
+                  {
                     "geste": "parle",
                     "de": 0.5,
                     "a": 1.8
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.9,
-                    "a": 3.0,
-                    "cible": "haut"
                   },
                   {
                     "geste": "effet",
@@ -179,15 +194,6 @@
                 ]
               }
             ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 0.5,
-                "a": 2.0,
-                "texte": "Just one more."
-              }
-            ],
-            "legende": "1 AM",
             "camera": [
               {
                 "a": 0,
@@ -202,10 +208,11 @@
             ]
           },
           {
-            "description": "Le salon à 3 h du matin, nuit noire. Les deux dorment assis dans le canapé, la tête penchée l'un vers l'autre, des Z qui montent au-dessus de chacun, le pot de pop-corn vide posé de travers sur la rose. À 1 s le violet marmonne dans son sommeil « ...one more... ». À 3 s la rose ouvre un œil, la bouche ronde, puis regarde la caméra avec une goutte de gêne. Zoom doux sur la rose jusqu'à la fin.",
+            "description": "Le salon à 3 h du matin, nuit noire, la légende dit « 3 AM ». Les deux dorment assis dans le canapé, la tête penchée, des Z qui montent au-dessus de chacun, le pot de pop-corn vide posé de travers sur la rose. À 3 s la rose ouvre un œil, la bouche ronde, regarde la caméra à 3,4 s, et une goutte de gêne apparaît à 3,7 s : elle a compris l'heure. Le violet ronfle. Zoom rapide sur la rose à 2,8 s (1,5).",
             "duree": 4.4,
             "decor": "salon",
             "moment": "nuit",
+            "legende": "3 AM",
             "persos": [
               {
                 "qui": "rose",
@@ -252,37 +259,21 @@
                     "geste": "dort",
                     "de": 0,
                     "a": 4.4
-                  },
-                  {
-                    "geste": "parle",
-                    "de": 1.0,
-                    "a": 2.2
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.4,
-                    "a": 4.4,
-                    "effet": "zzz"
                   }
                 ]
               }
             ],
-            "bulles": [
-              {
-                "qui": "violet",
-                "de": 1.0,
-                "a": 2.6,
-                "texte": "...one more..."
-              }
-            ],
-            "legende": "3 AM",
             "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
               {
                 "a": 2.8,
                 "zoom": 1
               },
               {
-                "a": 4.4,
+                "a": 3.2,
                 "zoom": 1.5,
                 "cible": "rose"
               }

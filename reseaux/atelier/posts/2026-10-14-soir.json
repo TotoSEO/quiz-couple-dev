@@ -12,18 +12,18 @@
         "gabarit": "pov",
         "langue": "en",
         "theme": "light",
-        "idee": "Le « je peux goûter ? » : la rose partage sa glace, le violet la mange presque entière, elle prend la caméra à témoin.",
+        "idee": "Le « je peux goûter ? » à la plage : la rose a une glace, le violet la regarde avec des yeux brillants, elle la lui tend, il la mange presque entière, elle prend la caméra à témoin. Aucune bulle, le titre dit la question.",
         "titre": "POV: 'can I try a bite?'",
         "plans": [
           {
-            "description": "Une petite table de restaurant avec une bougie, la lumière du soir. Dès la première image la rose, à gauche, tient un cornet de glace et le lèche, les yeux heureux. Le violet, en face, la regarde avec des yeux brillants et dit « Can I try a bite? ». À 1,8 s la rose sourit et répond « Sure! », les yeux en cœur.",
+            "description": "La plage au coucher du soleil : la mer et ses vagues, un voilier au loin, le parasol rayé, le château de sable. Dès la première image les deux sont assis dans le sable, la rose à gauche avec un cornet de glace qu'elle lèche, les yeux heureux ; le violet, à droite, la regarde avec des yeux brillants et la bouche de chat, et il parle (0,2 à 1,4 s) : il veut goûter. À 1,6 s la rose le regarde, les yeux en cœur, et lui tend la glace. Zoom léger sur les deux à partir de 2 s (1,15).",
             "duree": 3.6,
-            "decor": "table",
+            "decor": "plage",
             "moment": "soir",
             "persos": [
               {
                 "qui": "rose",
-                "a": "table-gauche",
+                "a": "sable-gauche",
                 "gestes": [
                   {
                     "geste": "tient",
@@ -35,7 +35,7 @@
                   {
                     "geste": "mange",
                     "de": 0,
-                    "a": 1.6,
+                    "a": 1.5,
                     "objet": "glace"
                   },
                   {
@@ -55,7 +55,7 @@
               },
               {
                 "qui": "violet",
-                "a": "table-droite",
+                "a": "sable-droite",
                 "gestes": [
                   {
                     "geste": "regarde",
@@ -68,12 +68,13 @@
                     "de": 0,
                     "a": 1.7,
                     "yeux": "brillants",
-                    "bouche": "sourire"
+                    "bouche": "chat",
+                    "rougit": true
                   },
                   {
                     "geste": "parle",
                     "de": 0.2,
-                    "a": 1.6
+                    "a": 1.4
                   },
                   {
                     "geste": "visage",
@@ -86,30 +87,32 @@
                 ]
               }
             ],
-            "bulles": [
+            "camera": [
               {
-                "qui": "violet",
-                "de": 0.2,
-                "a": 1.7,
-                "texte": "Can I try a bite?"
+                "a": 0,
+                "zoom": 1
               },
               {
-                "qui": "rose",
-                "de": 1.9,
-                "a": 3.4,
-                "texte": "Sure!"
+                "a": 2,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1150
               }
             ]
           },
           {
-            "description": "Zoom rapide à 0,3 s sur le violet : la glace est maintenant dans sa main et il la mange à grandes bouchées, les yeux fermés de plaisir. La rose le regarde, la bouche ronde, un « ! » au-dessus de la tête à 1 s, puis elle boude à 2,2 s, les bras ballants. Elle penche légèrement la tête.",
+            "description": "Zoom rapide à 0,3 s sur le violet (1,6) : la glace est maintenant dans sa main et il la mange à grandes bouchées, les yeux fermés de plaisir, une bouchée après l'autre. Au bord du cadre, la rose le regarde la bouche ronde, un « ! » au-dessus de la tête à 1 s, puis elle boude à 2,2 s, les yeux plats.",
             "duree": 3.8,
-            "decor": "table",
+            "decor": "plage",
             "moment": "soir",
             "persos": [
               {
                 "qui": "rose",
-                "a": "table-gauche",
+                "a": "sable-gauche",
                 "gestes": [
                   {
                     "geste": "regarde",
@@ -139,7 +142,7 @@
               },
               {
                 "qui": "violet",
-                "a": "table-droite",
+                "a": "sable-droite",
                 "gestes": [
                   {
                     "geste": "tient",
@@ -178,14 +181,14 @@
             ]
           },
           {
-            "description": "Retour au plan large. Il ne reste qu'un bout de cornet dans la main du violet, qui sourit innocent, la bouche de chat et les joues rouges. La rose se tourne vers la caméra, les yeux plats, et dit « That was one bite? » dans une bulle ; une goutte de gêne apparaît sur le côté de sa tête. Le violet fait un petit clin d'œil. Lent rapprochement sur les deux.",
+            "description": "Retour au plan large de la plage. Il ne reste qu'un bout de cornet dans la main du violet, qui sourit innocent, bouche de chat et joues rouges, puis fait un clin d'œil à 2 s. La rose regarde la caméra, les yeux plats, la bouche plate, et une goutte de gêne glisse sur sa tempe à 1,2 s ; à 3 s elle hausse les sourcils, toujours vers la caméra. La caméra se rapproche doucement (zoom 1,3).",
             "duree": 4.2,
-            "decor": "table",
+            "decor": "plage",
             "moment": "soir",
             "persos": [
               {
                 "qui": "rose",
-                "a": "table-gauche",
+                "a": "sable-gauche",
                 "gestes": [
                   {
                     "geste": "regarde",
@@ -196,26 +199,29 @@
                   {
                     "geste": "visage",
                     "de": 0,
-                    "a": 4.2,
+                    "a": 3.0,
                     "yeux": "plats",
                     "bouche": "plate"
                   },
                   {
-                    "geste": "parle",
-                    "de": 0.4,
-                    "a": 1.6
-                  },
-                  {
                     "geste": "effet",
-                    "de": 1.8,
+                    "de": 1.2,
                     "a": 4.2,
                     "effet": "goutte"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 4.2,
+                    "yeux": "plats",
+                    "bouche": "plate",
+                    "sourcils": "hauts"
                   }
                 ]
               },
               {
                 "qui": "violet",
-                "a": "table-droite",
+                "a": "sable-droite",
                 "gestes": [
                   {
                     "geste": "tient",
@@ -223,6 +229,12 @@
                     "a": 4.2,
                     "objet": "glace",
                     "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.2,
+                    "cible": "camera"
                   },
                   {
                     "geste": "visage",
@@ -241,14 +253,6 @@
                     "rougit": true
                   }
                 ]
-              }
-            ],
-            "bulles": [
-              {
-                "qui": "rose",
-                "de": 0.4,
-                "a": 2.6,
-                "texte": "That was one bite?"
               }
             ],
             "camera": [
