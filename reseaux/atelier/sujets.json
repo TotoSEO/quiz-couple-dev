@@ -2297,5 +2297,11 @@
         "What would you do if nothing could go wrong?"
       ]
     }
-  ]
+  ],
+  "deja_publies": {
+    "note": "Sujets déjà partis sur le compte avant ou en dehors de l'atelier : jamais repris, comme un sujet présent dans posts/. pov-002 (les fleurs) : reel d'essai publié à la main le 7 octobre 2026, le premier du compte.",
+    "sujets": [
+      "pov-002"
+    ]
+  }
 }

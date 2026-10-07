@@ -70,13 +70,21 @@ Pour chaque créneau à remplir, dans l'ordre des dates :
    c'est lui ;
 2. sinon une idée de Thomas qui va avec la catégorie ;
 3. sinon le premier sujet de la catégorie qui n'apparaît dans aucun post de
-   `posts/` (champ `sujet`) ;
+   `posts/` (champ `sujet`) ni dans `deja_publies.sujets` de `sujets.json`
+   (les posts partis sur le compte en dehors de l'atelier, comme le reel
+   d'essai des fleurs du 7 octobre 2026) : **jamais de doublon**, ni de
+   sujet, ni de scène, ni de phrase déjà vue dans `recents_et_prevus` ;
 4. sinon (la banque de la catégorie est épuisée, elle couvre treize
    semaines) tu inventes un sujet dans le même esprit que ceux de la
    banque, avec un identifiant neuf (`pov-274`, `connais-tu-40`...), sans
    reprendre une situation vue dans `recents_et_prevus` ni dans les
    soixante derniers posts de `posts/`. La publication ne s'arrête jamais
    faute de sujet.
+
+**Un créneau dont le fichier existe déjà dans `posts/` n'est jamais réécrit**,
+même s'il figure encore dans `a_remplir` (l'état est calculé sur ce qui est
+déjà passé dans Supabase, un post poussé depuis peut y manquer) : on passe
+au suivant.
 
 **Au plus 24 posts par passage**, les créneaux les plus proches d'abord.
 Chaque post est contrôlé et regardé (planche) avant d'être poussé : on ne
@@ -158,6 +166,15 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   0 s), ils se rejoignent au milieu, puis `calin`.
 - Rose = la fille (elle a un nœud), violet = le garçon. Les fleurs, le
   bouquet, les vases : c'est toujours le violet qui les apporte.
+- **« He » ou « she », jamais « they »** (règle de Thomas du 7 octobre
+  2026) : dans un titre, une bulle, un texte à l'écran ou une légende
+  d'animation, le partenaire est « he » ou « she » selon la mascotte qui
+  agit (« POV: he took the whole blanket again », « He's never hungry...
+  until you get fries »), jamais « they », « their » ni « them ». Les idées
+  de la banque sont écrites avec « they » : tu les transposes. Dans la
+  légende, « Tag your partner » plutôt que « Tag them ». Les jeux, eux,
+  gardent « their » et « they » (voir plus bas) : c'est la forme naturelle
+  d'un quiz en anglais, et Thomas l'a validée.
 - Varie les humeurs : au moins un post par jour où une mascotte n'est pas
   simplement souriante. Poses `mignon`, `triste`, `colere`, `gene`,
   `fatigue`, `supplie`, `rire` ; gestes `pleure` (larmes qui coulent,
