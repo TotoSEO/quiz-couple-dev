@@ -92,16 +92,25 @@ Ces contraintes viennent de la documentation Meta et des guides à jour
 
 Ce que ça change concrètement :
 
-- **Les reels partent avec un son tendance, tout seuls.** Le rendu fait la
-  vidéo avec ses seuls bruitages ; une heure avant l'heure prévue, la
-  publication lit les tendances du moment (`ig_audio`), écarte les sons
-  déjà posés sur le compte, prend un son au moins aussi long que le reel
-  (sinon il boucle), l'écrit dans la recette (`son`) et l'attache au
-  conteneur (musique à 70, bruitages à 100). Une recette peut demander une
-  recherche à la place des tendances (`"son": {"recherche": "cute
-  piano"}`). Si l'API ne répond pas ou refuse le son, le reel part avec ses
-  bruitages plutôt que de manquer son créneau, et le journal le dit.
-  (`automates/lib/son.mjs`, `publication.mjs`.)
+- **Les reels partent avec un son qui va avec l'image, tout seuls.** Le
+  rendu fait la vidéo avec ses seuls bruitages ; une heure avant l'heure
+  prévue, la publication cherche dans la bibliothèque Instagram (`ig_audio`
+  avec `search_query`) avec les mots de l'ambiance du post (`son.ambiance`
+  dans la recette : `drole`, `tendre`, `triste`, `coquin`, `jeu`, `noel`,
+  `nouvel-an` ; à défaut la catégorie du post décide ; `tendance` lit les
+  tendances du moment comme avant le 7 octobre 2026, où un gros titre tiré
+  au hasard tombait sur n'importe quelle scène), écarte les sons déjà posés
+  sur le compte, prend un son au moins aussi long que le reel (sinon il
+  boucle), l'écrit dans la recette (`son`) et l'attache au conteneur
+  (musique à 70, bruitages à 100). Les résultats d'une recherche sont des
+  morceaux de catalogue (piano, acoustique, R&B, rythmes de jeu), pas des
+  tubes : c'est ce qui les fait coller à l'image. Une recette peut écrire
+  sa recherche en toutes lettres (`"son": {"recherche": "cute piano"}`). Si
+  l'API ne répond pas ou refuse le son, le reel part avec ses bruitages
+  plutôt que de manquer son créneau, et le journal le dit. Le son ne change
+  rien au fichier rendu : la synchro pose une ambiance nouvelle sans
+  refaire le rendu. (`automates/lib/son.mjs`, `publication.mjs`,
+  `synchro.mjs`.)
 - **Un « post classique avec musique » sera un reel** : une image animée de
   10 à 12 secondes, avec son son tendance. Les vrais posts image et les
   carrousels sont publiés sans musique.

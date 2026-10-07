@@ -160,7 +160,8 @@
   // le son tendance posé à la publication (Audio API)
   function libelleSon(v) {
     if (!v || !v.son || !v.son.titre) return '';
-    return '<span class="rsx-son" title="Son de la bibliothèque Instagram">♪ ' + esc(v.son.titre) + (v.son.artiste ? ' · ' + esc(v.son.artiste) : '') + '</span>';
+    var bulle = 'Son de la bibliothèque Instagram' + (v.son.ambiance ? ', ambiance ' + v.son.ambiance : '') + (v.son.recherche ? ', recherche « ' + v.son.recherche + ' »' : '');
+    return '<span class="rsx-son" title="' + esc(bulle) + '">♪ ' + esc(v.son.titre) + (v.son.artiste ? ' · ' + esc(v.son.artiste) : '') + '</span>';
   }
 
   function rendrePlanning() {

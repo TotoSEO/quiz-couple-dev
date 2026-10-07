@@ -4,6 +4,7 @@
 
 import { controlerPov } from './pov.mjs';
 import { AMBIANCES, BIBLIOTHEQUE } from './musique.mjs';
+import { AMBIANCES_SON } from './son.mjs';
 
 const CRENEAUX = ['matin', 'midi', 'soir'];
 const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', image: 'image', carrousel: 'carrousel' };
@@ -66,6 +67,16 @@ export function controlerRecette(r, langue) {
     if (r.texte && r.texte.length > 220) f.push('texte trop long (220 signes au plus)');
   }
   if (r.ambiance !== undefined && !AMBIANCES.includes(r.ambiance)) f.push(`ambiance musicale inconnue : ${r.ambiance} (${AMBIANCES.join(', ')})`);
+  // Le son Instagram du reel : une ambiance de la liste, ou une recherche en
+  // deux ou trois mots. Le reste (id, titre, artiste) est écrit par la
+  // publication, pas par l'atelier.
+  if (r.son !== undefined) {
+    if (!r.son || typeof r.son !== 'object' || Array.isArray(r.son)) f.push('son : un objet { ambiance } ou { recherche } attendu');
+    else {
+      if (r.son.ambiance !== undefined && !(r.son.ambiance in AMBIANCES_SON)) f.push(`ambiance de son inconnue : ${r.son.ambiance} (${Object.keys(AMBIANCES_SON).join(', ')})`);
+      if (r.son.recherche !== undefined && (typeof r.son.recherche !== 'string' || !r.son.recherche.trim() || r.son.recherche.length > 40)) f.push('son.recherche : deux ou trois mots anglais, 40 signes au plus');
+    }
+  }
   if (r.musique !== undefined && !BIBLIOTHEQUE.morceaux.some((m) => m.fichier === r.musique)) f.push(`morceau absent de la bibliothèque : ${r.musique}`);
   if (r.gabarit === 'image' && !['citation', 'phrase'].includes(r.style)) f.push(`style d'image inconnu : ${r.style}`);
   if (['quiz-chrono', 'connais-tu', 'tu-preferes'].includes(r.gabarit)) {

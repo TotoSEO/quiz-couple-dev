@@ -20,15 +20,18 @@ const ESSAIS_RENDU_MAX = 3;
 // clés triées, pas dans l'ordre du fichier.
 const trier = (x) => (Array.isArray(x) ? x.map(trier) : x && typeof x === 'object' ? Object.fromEntries(Object.keys(x).sort().map((k) => [k, trier(x[k])])) : x);
 const canon = (x) => JSON.stringify(trier(x) ?? null);
-// Le son tendance d'un reel est choisi par la publication et écrit dans la
-// recette (id, titre, artiste) : ce n'est pas un changement de l'atelier.
-const sansChoixDeSon = (r) => {
-  if (!r?.son?.id) return r;
+// Le son d'un reel ne change rien au fichier rendu : l'atelier écrit une
+// demande (ambiance, recherche), la publication y ajoute son choix (id,
+// titre, artiste). On compare donc les recettes sans leur `son`, et une
+// demande qui change se pose sur la déclinaison sans refaire le rendu.
+const sansSon = (r) => {
+  if (!r?.son) return r;
   const { son, ...reste } = r;
-  return son.recherche ? { ...reste, son: { recherche: son.recherche } } : reste;
+  return reste;
 };
+const demandeSon = (r) => ({ ambiance: r?.son?.ambiance ?? null, recherche: r?.son?.recherche ?? null });
 const memeContenu = (a, b) =>
-  canon(sansChoixDeSon(a.recette)) === canon(sansChoixDeSon(b.recette)) && (a.legende || '') === (b.legende || '') && canon(a.hashtags || []) === canon(b.hashtags || []);
+  canon(sansSon(a.recette)) === canon(sansSon(b.recette)) && (a.legende || '') === (b.legende || '') && canon(a.hashtags || []) === canon(b.hashtags || []);
 const memeInstant = (a, b) => Date.parse(a) === Date.parse(b);
 
 export async function synchroniser(base, posts, { maintenant = new Date() } = {}) {
@@ -84,6 +87,14 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
           // et le rendu refaisait chaque heure tous les posts des 48 h à venir.
           if (valeurs.publier_a && !memeInstant(valeurs.publier_a, existante.publier_a)) {
             await base.update('social_variantes', `id=eq.${existante.id}`, { publier_a: valeurs.publier_a });
+            change = true;
+          }
+          // La demande de son a changé (une ambiance posée ou corrigée) : on
+          // la remplace telle quelle, un choix fait pour l'ancienne demande
+          // n'a plus cours ; le fichier rendu, lui, reste bon.
+          if (canon(demandeSon(existante.recette)) !== canon(demandeSon(v.recette))) {
+            const recette = v.recette?.son ? { ...sansSon(existante.recette), son: v.recette.son } : sansSon(existante.recette);
+            await base.update('social_variantes', `id=eq.${existante.id}`, { recette });
             change = true;
           }
           continue;

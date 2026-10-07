@@ -169,12 +169,24 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
 - Les bruitages se posent tout seuls (pas, sauts, bulles, cœurs, zooms,
   couette), doux et variés. **Pas de musique dans la recette** : le reel
   est rendu avec ses seuls bruitages, et la publication lui attache un son
-  tendance de la bibliothèque Instagram (Audio API). Ne mets ni `musique`
-  ni `ambiance`. Si un post appelle autre chose que la tendance du moment
-  (phrase tendre, scène coquine), tu peux demander une recherche à la
-  place : `"son": {"recherche": "soft piano"}` (deux ou trois mots anglais,
-  jamais un titre ou un artiste précis : seuls les sons autorisés pour les
-  applis sont servis).
+  de la bibliothèque Instagram (Audio API). Ne mets ni `musique` ni
+  `ambiance` à la racine de la recette.
+- **Chaque reel dit l'ambiance de son son** (règle de Thomas du 7 octobre
+  2026 : un son tendance tiré au hasard ne collait pas à l'image) :
+  `"son": {"ambiance": "..."}` dans la recette, avec une de ces valeurs :
+  `drole` (un gag, une petite manie, le POV qui fait sourire), `tendre`
+  (un câlin, un retour à la maison, une phrase douce, une statique),
+  `triste` (une dispute, des larmes, « we need to talk »), `coquin` (la
+  scène coquine du vendredi soir), `jeu` (connais-tu, tu préfères), `noel`
+  et `nouvel-an` pour les deux seules fêtes, `tendance` si n'importe quel
+  gros titre du moment convient. La publication cherche alors dans la
+  bibliothèque avec des mots qui décrivent l'ambiance (piano doux, R&B
+  lent, rythme de jeu...). Sans `son`, la catégorie du post décide : POV
+  drôle, statique et phrase tendres, coquin coquin, jeux rythmés ; on
+  écrit donc toujours l'ambiance d'un POV qui n'est pas drôle. Pour un
+  besoin précis, `"son": {"recherche": "soft piano"}` (deux ou trois mots
+  anglais, jamais un titre ou un artiste : seuls les sons autorisés pour
+  les applis sont servis) remplace les mots de l'ambiance.
 - Statique : un seul plan, 10 à 12 s, un câlin ou une pose tendre, un
   texte mot à mot au milieu. Il bouge quand même : pour un câlin, chacun
   entre par son bord (`"a": -150` et `"a": 1230` avec un geste `marche` dès
