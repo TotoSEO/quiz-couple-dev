@@ -53,7 +53,6 @@
         <p class="adm-nav-titre">Mesure</p>
             <button class="admin-tab active" data-tab="trafic" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Trafic</span></button>
             <button class="admin-tab" data-tab="stats" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-5 4 3 5-7"/></svg><span>Parties</span></button>
-            <button class="admin-tab" data-tab="blog" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg><span>Blog</span></button>
             <button class="admin-tab" data-tab="distance" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg><span>À distance</span></button>
         <p class="adm-nav-titre">Gestion</p>
             <button class="admin-tab" data-tab="reviews" type="button"><svg class="adm-nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><span>Avis</span><span class="admin-pastille hidden" data-notif="reviews">!</span></button>
@@ -325,41 +324,6 @@
             </div>
             <div id="trafic-pages" class="stats-list"><p class="stats-movers-vide">Chargement...</p></div>
           </div>
-        </div>
-
-        <!-- ═══ Blog ═══ -->
-        <div id="admin-blog-tab" class="hidden">
-          <div class="adm-toolbar">
-            <div class="stats-comp stats-comp--periode" role="group" aria-label="Période">
-              <button class="stats-comp-btn" data-blog-periode="7" type="button">7 j</button>
-              <button class="stats-comp-btn active" data-blog-periode="30" type="button">30 j</button>
-              <button class="stats-comp-btn" data-blog-periode="90" type="button">90 j</button>
-              <button class="stats-comp-btn" data-blog-periode="365" type="button">1 an</button>
-            </div>
-          </div>
-
-          <div class="trafic-kpis">
-            <div class="stats-tete trafic-kpi--visites">
-              <p class="stats-tete-titre">Lectures</p>
-              <p class="stats-tete-jour" id="blog-lectures-total">-</p>
-              <p class="stats-tete-sub" id="blog-lectures-sub">sur la période</p>
-            </div>
-            <div class="stats-tete trafic-kpi--vues">
-              <p class="stats-tete-titre">Ouvertures</p>
-              <p class="stats-tete-jour" id="blog-ouvertures-total">-</p>
-              <p class="stats-tete-sub">visites qui ont affiché un article</p>
-            </div>
-            <div class="stats-tete trafic-kpi--profondeur">
-              <p class="stats-tete-titre">Taux de lecture</p>
-              <p class="stats-tete-jour" id="blog-taux-total">-</p>
-              <p class="stats-tete-sub">des ouvertures vont jusqu'à la lecture</p>
-            </div>
-            <div class="stats-tete trafic-kpi--rebond">
-              <p class="stats-tete-titre">Arrivées directes</p>
-              <p class="stats-tete-jour" id="blog-entrees-total">-</p>
-              <p class="stats-tete-sub">des ouvertures viennent d'un moteur ou d'un lien</p>
-            </div>
-          </div>
 
           <div class="stats-panel">
             <div class="stats-panel-head">
@@ -371,23 +335,6 @@
             <div class="stats-legende" id="blog-sourcepref-legende" role="group" aria-label="Courbes affichées"></div>
             <canvas id="blog-sourcepref-chart" class="stats-canvas adm-canvas--sec"></canvas>
             <p class="blog-sourcepref-note" id="blog-sourcepref-note"></p>
-          </div>
-
-          <div class="stats-panel">
-            <div class="stats-panel-head">
-              <div>
-                <h2 class="stats-panel-title">Les articles les plus lus</h2>
-                <p class="stats-panel-sub">Une <strong>lecture</strong> est une visite qui est restée sur l'article un quart du temps de lecture estimé, onglet au premier plan, et qui a fait défiler au-delà de la moitié. Une <strong>ouverture</strong> est une visite qui a simplement affiché la page. « Directes » compte les ouvertures qui ont commencé sur l'article, donc arrivées d'un moteur ou d'un lien externe. « Total » est le compteur affiché au lecteur sous le titre, en lectures et depuis toujours.</p>
-              </div>
-            </div>
-            <div class="stats-entetes blog-entetes">
-              <span class="stats-entete-nom">Article</span>
-              <button class="stats-tri" data-tri-blog="lectures" style="--col:var(--adm-s-visites);" type="button">Lectures <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-blog="ouvertures" style="--col:hsl(var(--muted-foreground));" type="button">Ouvertures <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-blog="entrees" style="--col:var(--adm-s-lances);" type="button">Directes <span class="stats-tri-fleche">▾</span></button>
-              <button class="stats-tri" data-tri-blog="total" style="--col:var(--adm-s-finis);" type="button">Total <span class="stats-tri-fleche">▾</span></button>
-            </div>
-            <div id="blog-articles" class="stats-list"><p class="stats-movers-vide">Chargement...</p></div>
           </div>
         </div>
 

@@ -43,13 +43,18 @@ jobs:
       # elle reste en ligne, et appelable, chez Supabase. trigger-deploy, qui
       # lancait une publication du site depuis l'admin avec un jeton GitHub, a
       # ete retiree le 7 octobre 2026 : on la supprime donc aussi chez
-      # Supabase, avec les trois secrets qui ne servaient qu'a elle. Les deux
+      # Supabase, avec les trois secrets qui ne servaient qu'a elle. Le meme
+      # jour, admin-blog (l'ancien editeur d'articles de l'admin, sans plus
+      # aucun ecran dans le gabarit) et blog-og (images de partage de l'ancien
+      # blog dynamique, le blog vit dans le depot) ont ete retirees aussi. Les
       # commandes ne font rien si c'est deja fait, et une erreur ne bloque pas
       # le deploiement : cette etape peut etre retiree une fois passee.
-      - name: Retirer trigger-deploy et ses secrets (supprimés du dépôt)
+      - name: Retirer trigger-deploy, admin-blog, blog-og et les secrets (supprimés du dépôt)
         run: |
-          supabase functions delete trigger-deploy --project-ref "$SUPABASE_PROJECT_REF" < /dev/null \
-            || echo "trigger-deploy : déjà absente"
+          for f in trigger-deploy admin-blog blog-og; do
+            supabase functions delete "$f" --project-ref "$SUPABASE_PROJECT_REF" < /dev/null \
+              || echo "$f : déjà absente"
+          done
           supabase secrets unset GITHUB_DEPLOY_TOKEN GITHUB_REPO_OWNER GITHUB_REPO_NAME --project-ref "$SUPABASE_PROJECT_REF" < /dev/null \
             || echo "secrets GITHUB_* : déjà absents"
         env:

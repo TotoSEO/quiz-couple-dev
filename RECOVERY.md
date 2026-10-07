@@ -74,8 +74,7 @@ supabase functions deploy <nom>   # une par une, ou toutes celles à garder
 `ebook-verify`, `admin-leads`, `contact-message`, `admin-messages`, `admin-reviews`,
 `get-client-ip`, `manage-ado-session`, `search-activities`, `verify-admin`.
 
-**Fonctions désormais obsolètes** (le blog est dans le repo) — inutile de les déployer :
-`admin-blog`, `blog-og`.
+**Fonctions retirées du dépôt le 7 octobre 2026** (le blog est dans le repo, l'admin n'a plus d'éditeur d'articles) : `admin-blog`, `blog-og`, `trigger-deploy`. Le workflow de déploiement les supprime aussi chez Supabase.
 
 Puis configure les **secrets** (Dashboard → Edge Functions → Secrets, ou CLI) :
 

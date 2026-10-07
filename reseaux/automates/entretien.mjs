@@ -134,6 +134,7 @@ export async function etat(base, { maintenant = new Date(), horizon = 100 } = {}
       }
     }
   }
+  const encorePubliable = (p) => p.jour > debut || (p.jour === debut && debutCreneau(compte, p.creneau) >= minutesMaintenant + MARGE_MIN);
   const resume = (p) => {
     const v = variantes.find((x) => x.post_id === p.id);
     const r = v?.recette || {};
@@ -155,7 +156,11 @@ export async function etat(base, { maintenant = new Date(), horizon = 100 } = {}
     aujourdhui: debut,
     reserve_jours: await reserve(base, { maintenant, fuseau }),
     a_remplir: aRemplir,
-    a_corriger: posts.filter((p) => variantes.some((v) => v.post_id === p.id && v.statut === 'echec')).map(resume),
+    // seulement ce qui peut encore partir : un post dont le créneau est passé
+    // ne sera plus publié quoi qu'on en fasse (la publication refuse tout
+    // retard de plus de 90 min), la routine ne doit pas le retravailler
+    // chaque matin pendant trente jours
+    a_corriger: posts.filter((p) => variantes.some((v) => v.post_id === p.id && v.statut === 'echec') && encorePubliable(p)).map(resume),
     recents_et_prevus: posts.map(resume),
     idees,
     statistiques_j7: stats,
