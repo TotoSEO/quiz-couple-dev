@@ -37,8 +37,11 @@ l'entretien :
 - `a_corriger` : posts dont le rendu ou la publication a échoué, avec
   l'erreur. On les corrige en premier.
 - `a_remplir` : les créneaux vides d'aujourd'hui (seulement ceux qui
-  commencent dans plus de trois heures, heure de Paris) à J+21, avec leur
+  commencent dans plus de trois heures, heure de Paris) à J+100, avec leur
   `categorie`. On remplit dans l'ordre des dates : aujourd'hui d'abord.
+  L'horizon est long exprès : la réserve s'écrit d'avance, pour que le
+  compte continue à publier même quand la routine ne tourne pas (le rendu et
+  la publication n'ont pas besoin d'elle).
 - `recents_et_prevus` : ce qui est passé et prévu, pour ne jamais répéter
   une phrase, une question ou une scène de la semaine.
 - `idees` : les idées de Thomas. Elles passent avant la banque ; le post
@@ -47,7 +50,7 @@ l'entretien :
   piliers et les décors qui ont le plus de partages et d'enregistrements.
 
 Sans `etat.json` (premier jour), on remplit d'aujourd'hui (créneaux qui
-commencent dans plus de trois heures, heure de Paris) à J+14 en suivant la
+commencent dans plus de trois heures, heure de Paris) à J+100 en suivant la
 semaine type, en sautant les fichiers déjà présents dans `posts/`.
 
 ## 3. Choisir le sujet
@@ -66,7 +69,10 @@ Pour chaque créneau à remplir, dans l'ordre des dates :
    soixante derniers posts de `posts/`. La publication ne s'arrête jamais
    faute de sujet.
 
-**Au plus 12 posts par passage**, les créneaux les plus proches d'abord.
+**Au plus 24 posts par passage**, les créneaux les plus proches d'abord.
+Chaque post est contrôlé et regardé (planche) avant d'être poussé : on ne
+sacrifie pas la vérification à la quantité. S'il ne reste rien à remplir,
+on s'arrête tout de suite.
 
 ## 4. Écrire un post
 

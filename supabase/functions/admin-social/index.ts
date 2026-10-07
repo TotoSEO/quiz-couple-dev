@@ -77,7 +77,7 @@ serve(async (req) => {
       const aujourdhui = jourIso(new Date());
       const valides = await db.from('social_posts').select('jour,creneau').eq('statut', 'valide').gte('jour', aujourdhui);
       let reserve = 0;
-      for (let i = 0; i < 60; i++) {
+      for (let i = 0; i < 120; i++) {
         const j = jourIso(new Date(new Date(aujourdhui + 'T12:00:00Z').getTime() + i * 86400000));
         const n = (valides.data || []).filter((p) => p.jour === j).length;
         if (n >= 3) reserve++;
