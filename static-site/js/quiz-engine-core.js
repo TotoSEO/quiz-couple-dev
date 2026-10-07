@@ -2332,21 +2332,10 @@ var QuizEngine = (function() {
       var produits = encartProduits(quizEl ? quizEl.dataset.quiz : '', quizEl ? (quizEl.dataset.lang || 'fr') : 'fr');
       if (produits) zones.produits = produits;
     }
-    // L'encart publicitaire du texte (le pave, format 2) remonte dans le
-    // resultat, juste sous la carte du verdict. Il etait pose apres la
-    // premiere section du texte, que presque personne n'atteint, alors que
-    // l'ecran de resultat est lu longuement par la moitie des gens qui
-    // lancent un test. Il est deplace, pas copie : la regie ne sert jamais
-    // deux fois le meme format sur une page. Et seulement s'il n'a pas encore
-    // ete demande (quelqu'un a pu descendre jusqu'au texte avant de finir) :
-    // une annonce deja servie ne survit pas a un deplacement dans le DOM.
-    // Sans resultat, il reste a sa place dans le texte ; pub.js, qui
-    // l'observe depuis le chargement, le demandera a son approche ou il soit.
-    if (!zones.pub) {
-      var encart = document.querySelector('.pub[data-pub-differee="2"]:not([data-pub-posee])');
-      if (encart) zones.pub = encart;
-    }
-    ['avis', 'resultat', 'pub', 'produits', 'actions'].forEach(function(nom) {
+    // Le pave de la regie (format 2) reste dans le texte, apres la premiere
+    // section : du 1er au 7 octobre 2026 il etait remonte ici, sous le
+    // verdict, et le CPM du domaine a chute (voir CLAUDE.md, publicite).
+    ['avis', 'resultat', 'produits', 'actions'].forEach(function(nom) {
       var z = zones[nom];
       if (!z) return;
       z.classList.add('qr-zone', 'qr-zone--' + nom);
