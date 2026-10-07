@@ -7,7 +7,9 @@ name: Réseaux · entretien
 
 on:
   schedule:
-    - cron: '41 7 * * *'
+    # Secours seulement : l'horloge réelle est pg_cron (3 h 11 UTC, avant la
+    # routine Claude de 5 h 44 à Paris, qui lit l'état écrit ici).
+    - cron: '11 3 * * *'
   workflow_dispatch:
 
 concurrency:
