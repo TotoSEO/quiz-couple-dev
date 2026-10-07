@@ -28,7 +28,7 @@ export type Plan = {
   scenes: Scene[];
   sons: EvenementSonore[];
   // la musique de fond, seulement si la recette en nomme une : par défaut un
-  // reel part avec ses seuls bruitages, le son tendance s'ajoute dans l'appli
+  // reel part avec ses seuls bruitages, le son tendance s'attache à la publication
   musique?: string;
   detail: Record<string, number>;
 };

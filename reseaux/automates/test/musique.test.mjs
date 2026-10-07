@@ -57,7 +57,7 @@ test('seuls les fichiers présents sont choisis, et rien si aucun ne l\'est', ()
   assert.equal(choisirMusique({ ambiance: 'fetes', gabarit: 'pov', disponible: () => false }), null);
 });
 
-test('sans ambiance ni morceau, un reel part sans musique (le son tendance se met dans l\'appli)', async () => {
+test('sans ambiance ni morceau, un reel est rendu sans musique (le son tendance s\'attache à la publication)', async () => {
   const b = new BaseMemoire({ social_variantes: [{ id: 'v0', langue: 'en', statut: 'a_rendre', recette: { gabarit: 'pov' } }] });
   const r = await avecMusique(b, b.tables.social_variantes[0], 'coquin', tous);
   assert.equal(r.musique, undefined);

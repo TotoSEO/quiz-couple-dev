@@ -1,6 +1,6 @@
 name: Réseaux · entretien
 
-# Chaque jour : renouvelle les jetons Instagram, fait le ménage du stockage,
+# Chaque jour : vérifie le jeton de la Page Facebook, fait le ménage du stockage,
 # relève les statistiques, puis écrit l'état du planning (créneaux à remplir,
 # posts récents, idées, statistiques) sur la branche reseaux-atelier, où la
 # routine Claude le lit avant d'écrire.

@@ -1,6 +1,7 @@
 // Publication : passe toutes les 10 minutes (GitHub Actions).
 //  1. Une heure avant l'heure prévue, crée le conteneur Instagram d'un reel
-//     (Instagram met quelques minutes à traiter la vidéo).
+//     (Instagram met quelques minutes à traiter la vidéo), avec un son
+//     tendance de la bibliothèque Instagram attaché (Audio API).
 //  2. À l'heure prévue, vérifie que le conteneur est prêt et publie.
 // Une image ou un carrousel se prépare et se publie dans le même passage.
 // Rien ne part si la pause générale est active, si le compte n'est pas
@@ -11,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { Instagram } from './lib/instagram.mjs';
 import { legendeFinale } from './lib/controle.mjs';
+import { VOLUME_MUSIQUE, VOLUME_VIDEO, choisirSon, sonsRecents } from './lib/son.mjs';
 
 const AVANCE_REEL_MIN = 60;
 const ESSAIS_MAX = 3;
@@ -19,30 +21,55 @@ const RETARD_MAX_MIN = 90;
 
 const minutes = (n) => n * 60 * 1000;
 
+// Le son d'un reel : celui déjà choisi (reprise après un échec passager),
+// sinon un son tendance du moment, jamais un son posé récemment sur le
+// compte. Une recette qui porte une musique mixée dans la vidéo n'en reçoit
+// pas de second. Sans son (API en panne, liste vide), le reel part avec ses
+// seuls bruitages : on ne rate pas un créneau pour une musique.
+async function sonDuReel(ig, base, v, tendances) {
+  const r = v.recette || {};
+  if (r.musique) return null;
+  if (r.son?.id) return r.son;
+  const recherche = String(r.son?.recherche || '').trim();
+  const cle = `${v.langue}|${recherche}`;
+  if (!tendances.has(cle)) tendances.set(cle, ig.sons(recherche ? { recherche } : {}));
+  let candidats;
+  try {
+    candidats = await tendances.get(cle);
+  } catch (e) {
+    await base.journal('alerte', 'publication', `sons tendance indisponibles, reel envoyé avec ses bruitages : ${e.message}`, null, v.id);
+    return null;
+  }
+  const son = choisirSon({ candidats, recents: await sonsRecents(base, v.langue), dureeS: Number(v.fichiers?.duree) || 0, graine: v.id });
+  if (!son) {
+    await base.journal('alerte', 'publication', 'aucun son tendance disponible, reel envoyé avec ses bruitages', null, v.id);
+    return null;
+  }
+  const choisi = recherche ? { ...son, recherche } : son;
+  v.recette = { ...r, son: choisi };
+  await base.update('social_variantes', `id=eq.${v.id}`, { recette: v.recette });
+  return choisi;
+}
+
 export async function publier(base, { maintenant = new Date(), aBlanc = false, instagramPour } = {}) {
-  const bilan = { conteneurs: 0, publies: 0, attente: 0, echecs: 0, aBlanc: 0, manuel: 0 };
+  const bilan = { conteneurs: 0, publies: 0, attente: 0, echecs: 0, aBlanc: 0 };
   if ((await base.reglage('pause')) === true) {
     console.log('pause générale : rien ne part');
     return bilan;
   }
-  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id,actif,mode');
+  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id,actif');
   const horizon = new Date(maintenant.getTime() + minutes(AVANCE_REEL_MIN)).toISOString();
   const candidates = await base.select(
     'social_variantes',
     `select=id,post_id,langue,fichiers,legende,hashtags,publier_a,statut,ig_conteneur_id,essais,recette&statut=in.(rendu,conteneur)&publier_a=lte.${horizon}&order=publier_a.asc`,
   );
+  // les tendances sont lues une fois par passage et par compte
+  const tendances = new Map();
   for (const v of candidates) {
     const compte = comptes.find((c) => c.langue === v.langue);
     const [post] = await base.select('social_posts', `select=format,statut,jour,creneau&id=eq.${v.post_id}`);
     if (!post || post.statut !== 'valide') continue;
     const due = new Date(v.publier_a) <= maintenant;
-    // mode manuel : le reel reste « rendu » et attend Thomas dans l'admin (il
-    // y met un son tendance depuis l'appli) ; une image ou un carrousel, sans
-    // musique, part tout seul
-    if (compte?.mode === 'manuel' && post.format === 'reel' && v.statut === 'rendu') {
-      if (due) bilan.manuel++;
-      continue;
-    }
     const [jeton] = compte ? await base.select('social_jetons', `select=jeton&compte_id=eq.${compte.id}`) : [];
     // compte pas encore branché : rien ne part, et rien n'est compté en échec
     if (aBlanc || !compte?.actif || !compte?.ig_user_id || !jeton) {
@@ -68,12 +95,24 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
         const legende = legendeFinale(v);
         let conteneur;
         if (post.format === 'reel') {
-          conteneur = await ig.conteneurReel({
+          const son = await sonDuReel(ig, base, v, tendances);
+          const params = {
             videoUrl: await base.signer(v.fichiers.reel),
             couvertureUrl: await base.signer(v.fichiers.couverture),
             legende,
             nomDuSon: v.recette?.nomDuSon || 'Quiz Couple',
-          });
+          };
+          try {
+            conteneur = await ig.conteneurReel({ ...params, son: son && { id: son.id, volume: VOLUME_MUSIQUE, volumeVideo: VOLUME_VIDEO, boucle: son.boucle } });
+          } catch (e) {
+            if (!son) throw e;
+            // le son n'est plus autorisé, ou l'API le refuse : le reel part
+            // avec ses bruitages plutôt que de manquer son créneau
+            await base.journal('alerte', 'publication', `son « ${son.titre} » refusé, reel envoyé avec ses bruitages : ${e.message}`, null, v.id);
+            v.recette = { ...v.recette, son: son.recherche ? { recherche: son.recherche } : undefined };
+            await base.update('social_variantes', `id=eq.${v.id}`, { recette: v.recette });
+            conteneur = await ig.conteneurReel(params);
+          }
         } else if (post.format === 'image') {
           if (!due) {
             await base.update('social_variantes', `id=eq.${v.id}`, { statut: 'rendu' });
@@ -113,7 +152,8 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
           erreur: null,
         });
         bilan.publies++;
-        await base.journal('info', 'publication', `${post.jour} ${post.creneau} ${v.langue} publié`, { lien }, v.id);
+        const son = v.recette?.son?.id ? `, son « ${v.recette.son.titre}${v.recette.son.artiste ? ` » de ${v.recette.son.artiste}` : ' »'}` : '';
+        await base.journal('info', 'publication', `${post.jour} ${post.creneau} ${v.langue} publié${son}`, { lien, son: v.recette?.son || null }, v.id);
       }
     } catch (e) {
       const essais = (v.essais || 0) + 1;

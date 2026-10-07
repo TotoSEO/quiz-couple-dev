@@ -8,7 +8,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
-import { controlerImage, controlerReel, vignette } from './lib/fichier.mjs';
+import { controlerImage, controlerReel, dureeVideo, vignette } from './lib/fichier.mjs';
 import { AVEC_MUSIQUE, ambianceDe, choisirMusique, present } from './lib/musique.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
@@ -44,10 +44,11 @@ async function musiquesRecentes(base, langue) {
   return lignes.filter((l) => l.recette?.musique).map((l) => ({ musique: l.recette.musique, musiqueDebut: l.recette.musiqueDebut }));
 }
 
-// Depuis le 7 octobre 2026, un reel part sans musique : Thomas ajoute un son
-// tendance dans l'appli Instagram. Une recette qui veut une musique de la
-// bibliothèque le demande (une ambiance, ou un morceau), et le choix est
-// écrit dans la recette.
+// Un reel est rendu sans musique : la publication lui attache un son
+// tendance de la bibliothèque Instagram (lib/son.mjs). Une recette qui veut
+// malgré tout une musique de notre bibliothèque le demande (une ambiance, ou
+// un morceau), le choix est écrit dans la recette, et elle ne reçoit alors
+// pas de son Instagram.
 export async function avecMusique(base, v, categorie, disponible = present) {
   const r = v.recette;
   if (!AVEC_MUSIQUE.includes(r.gabarit) || !(r.ambiance || r.musique) || (r.musique && disponible(r.musique))) return r;
@@ -58,7 +59,7 @@ export async function avecMusique(base, v, categorie, disponible = present) {
   return recette;
 }
 
-export async function rendre(base, { heures = 30, maintenant = new Date(), rendreFn = rendreRecette, controles = { controlerReel, controlerImage, vignette }, disponible = present } = {}) {
+export async function rendre(base, { heures = 30, maintenant = new Date(), rendreFn = rendreRecette, controles = { controlerReel, controlerImage, vignette, dureeVideo }, disponible = present } = {}) {
   const limite = new Date(maintenant.getTime() + heures * 3600 * 1000).toISOString();
   const variantes = await base.select(
     'social_variantes',
@@ -98,6 +99,8 @@ export async function rendre(base, { heures = 30, maintenant = new Date(), rendr
       if (produits.includes('reel.mp4')) {
         fichiers.reel = `${racine}/reel.mp4`;
         fichiers.couverture = `${racine}/couverture.jpg`;
+        // la durée sert au choix du son à la publication
+        fichiers.duree = controles.dureeVideo ? controles.dureeVideo(path.join(dossier, 'reel.mp4')) : 0;
       } else if (produits.includes('image.jpg')) {
         fichiers.image = `${racine}/image.jpg`;
       } else {

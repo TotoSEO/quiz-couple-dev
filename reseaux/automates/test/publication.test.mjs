@@ -6,7 +6,7 @@ import { publier } from '../publication.mjs';
 const T0 = new Date('2026-10-12T10:30:00Z'); // 12 h 30 à Paris
 const plus = (min) => new Date(T0.getTime() + min * 60000);
 
-const base = ({ actif = true, format = 'reel', publierA = plus(30), pause = false } = {}) =>
+const base = ({ actif = true, format = 'reel', publierA = plus(30), pause = false, recette, autres = [] } = {}) =>
   new BaseMemoire({
     social_comptes: [{ id: 'c', langue: 'en', ig_user_id: '178', actif }],
     social_jetons: [{ compte_id: 'c', jeton: 'J' }],
@@ -22,17 +22,30 @@ const base = ({ actif = true, format = 'reel', publierA = plus(30), pause = fals
         legende: 'Hello',
         hashtags: ['#couplequiz'],
         essais: 0,
-        fichiers: format === 'reel' ? { reel: 'a/reel.mp4', couverture: 'a/couverture.jpg' } : format === 'image' ? { image: 'a/image.jpg' } : { pages: ['a/page-1.jpg', 'a/page-2.jpg'] },
+        recette,
+        fichiers: format === 'reel' ? { reel: 'a/reel.mp4', couverture: 'a/couverture.jpg', duree: 12 } : format === 'image' ? { image: 'a/image.jpg' } : { pages: ['a/page-1.jpg', 'a/page-2.jpg'] },
       },
+      ...autres,
     ],
   });
 
-const faux = (etats = ['FINISHED'], { echoue = false } = {}) => {
+const TENDANCES = [
+  { id: 'S1', titre: 'Song one', artiste: 'A', dureeMs: 30000 },
+  { id: 'S2', titre: 'Song two', artiste: 'B', dureeMs: 30000 },
+];
+
+const faux = (etats = ['FINISHED'], { echoue = false, sons = async () => TENDANCES, refuseSon = false } = {}) => {
   const appels = [];
   let i = 0;
   const ig = {
     appels,
-    conteneurReel: async (p) => { appels.push(['reel', p]); if (echoue) throw new Error('boom'); return { id: 'C1' }; },
+    sons,
+    conteneurReel: async (p) => {
+      appels.push(['reel', p]);
+      if (echoue) throw new Error('boom');
+      if (refuseSon && p.son) throw new Error('Instagram /178/media : audio not available');
+      return { id: 'C1' };
+    },
     conteneurImage: async (p) => { appels.push(['image', p]); return { id: 'C2' }; },
     conteneurElement: async (p) => { appels.push(['element', p]); return { id: `E${appels.length}` }; },
     conteneurCarrousel: async (p) => { appels.push(['carrousel', p]); return { id: 'C3' }; },
@@ -123,4 +136,75 @@ test('créneau dépassé de plus de 90 minutes : pas de publication', async () =
   const r = await publier(b, { maintenant: T0, instagramPour: () => ig });
   assert.equal(r.echecs, 1);
   assert.equal(ig.appels.length, 0);
+});
+
+test('reel : un son tendance est attaché au conteneur et écrit dans la recette', async () => {
+  const b = base();
+  const ig = faux();
+  await publier(b, { maintenant: T0, instagramPour: () => ig });
+  const p = ig.appels[0][1];
+  assert.ok(['S1', 'S2'].includes(p.son.id));
+  assert.equal(p.son.volume, 70);
+  assert.equal(p.son.volumeVideo, 100);
+  assert.equal(p.son.boucle, false);
+  const v = b.tables.social_variantes[0];
+  assert.equal(v.recette.son.id, p.son.id);
+  assert.ok(v.recette.son.titre);
+  // à la publication, le journal nomme le son
+  await publier(b, { maintenant: plus(31), instagramPour: () => ig });
+  assert.ok(b.tables.social_journal.some((j) => /publié, son « Song/.test(j.message)));
+});
+
+test('reel : un son posé récemment sur le compte n\'est pas repris', async () => {
+  const b = base({ autres: [{ id: 'w', post_id: 'q', langue: 'en', statut: 'publie', publier_a: plus(-600).toISOString(), recette: { son: { id: 'S1', titre: 'Song one' } }, fichiers: {} }] });
+  const ig = faux();
+  await publier(b, { maintenant: T0, instagramPour: () => ig });
+  assert.equal(ig.appels[0][1].son.id, 'S2');
+});
+
+test('reel : le son déjà choisi est repris après un échec passager, et les tendances ne sont lues qu\'une fois', async () => {
+  const b = base({ recette: { gabarit: 'pov', son: { id: 'S9', titre: 'Kept' } } });
+  let lectures = 0;
+  const ig = faux(['FINISHED'], { sons: async () => { lectures++; return TENDANCES; } });
+  await publier(b, { maintenant: T0, instagramPour: () => ig });
+  assert.equal(ig.appels[0][1].son.id, 'S9');
+  assert.equal(lectures, 0);
+});
+
+test('reel : une recette qui demande une recherche de son la transmet, et la garde', async () => {
+  const b = base({ recette: { gabarit: 'pov', son: { recherche: 'cute piano' } } });
+  const demandes = [];
+  const ig = faux(['FINISHED'], { sons: async (o) => { demandes.push(o.recherche); return TENDANCES; } });
+  await publier(b, { maintenant: T0, instagramPour: () => ig });
+  assert.deepEqual(demandes, ['cute piano']);
+  assert.equal(b.tables.social_variantes[0].recette.son.recherche, 'cute piano');
+});
+
+test('sons indisponibles : le reel part avec ses seuls bruitages, sans échec', async () => {
+  const b = base();
+  const ig = faux(['FINISHED'], { sons: async () => { throw new Error('(#10) permission'); } });
+  const r = await publier(b, { maintenant: T0, instagramPour: () => ig });
+  assert.equal(r.conteneurs, 1);
+  assert.equal(ig.appels[0][1].son, null);
+  assert.equal(ig.appels[0][1].nomDuSon, 'Quiz Couple');
+  assert.ok(b.tables.social_journal.some((j) => j.niveau === 'alerte' && /sons tendance indisponibles/.test(j.message)));
+});
+
+test('son refusé par Instagram : second essai sans son, dans le même passage', async () => {
+  const b = base();
+  const ig = faux(['FINISHED'], { refuseSon: true });
+  const r = await publier(b, { maintenant: T0, instagramPour: () => ig });
+  assert.equal(r.conteneurs, 1);
+  assert.deepEqual(ig.appels.map((a) => a[0]), ['reel', 'reel']);
+  assert.ok(ig.appels[0][1].son);
+  assert.equal(ig.appels[1][1].son, undefined);
+  assert.equal(b.tables.social_variantes[0].recette.son, undefined);
+  assert.ok(b.tables.social_journal.some((j) => /refusé, reel envoyé avec ses bruitages/.test(j.message)));
+});
+
+test('recette avec une musique mixée dans la vidéo : pas de son Instagram par-dessus', async () => {
+  const b = base({ recette: { gabarit: 'pov', musique: 'fp-doux-1.mp3' } });
+  const ig = faux();
+  await publier(b, { maintenant: T0, instagramPour: () => ig });
+  assert.equal(ig.appels[0][1].son, null);
 });

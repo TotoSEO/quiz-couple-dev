@@ -98,7 +98,8 @@ mot à mot : « I saw these flowers... and thought of you »).
 - Le titre « POV: ... » en haut, ou un message mot à mot, rarement les deux.
 - La mention quiz-couple.com est dans l'image ; **la légende ne renvoie
   jamais vers le site.**
-- Musique : aucune (voir « Le son »), les bruitages suffisent.
+- Musique : rien dans la recette, le son tendance est posé à la publication
+  (voir « Le son »).
 
 ### `coquin` : l'animation coquine de la semaine (gabarit `pov`)
 
@@ -135,7 +136,9 @@ Comment your A and B! ». Renvoi vers le site possible, comme les jeux.
 ### `phrase` : phrase tendre (gabarit `citation`)
 
 Une phrase écrite par nous (jamais une citation d'auteur), police plume,
-fleurs au trait, piano. Quatre lignes au plus.
+fleurs au trait. Quatre lignes au plus. Le son tendance du moment lui va
+rarement : la recette peut demander une recherche douce à la place
+(`"son": {"recherche": "soft piano"}`).
 
 ### `post` et `carrousel`
 
@@ -145,18 +148,26 @@ ne les y a pas mis.
 
 ## Le son
 
-**Les reels partent sans musique.** Thomas les publie depuis l'appli
-Instagram et y ajoute un son tendance à la main (mode « à la main » de
-l'admin) : c'est la musique qui fait percer un post, et seule l'appli donne
-accès aux tendances. Le reel ne porte que ses bruitages, doux et variés
-(pas, sauts, bulles, cœurs, couette...).
+**Les reels sont rendus sans musique et publiés avec un son tendance de la
+bibliothèque Instagram.** C'est la musique qui fait percer un post : au
+moment de publier, l'automate lit les tendances du moment (Audio API de
+Meta, connexion Facebook), écarte les sons déjà posés sur le compte, prend
+un son au moins aussi long que le reel et l'attache ; le reel apparaît sous
+ce son comme n'importe quel reel fait dans l'appli. Le fichier ne porte que
+ses bruitages, doux et variés (pas, sauts, bulles, cœurs, couette...), qui
+restent audibles sous la musique.
+
+La routine ne choisit pas le son. Elle peut seulement, pour un post qui le
+demande (une phrase tendre, une scène coquine), remplacer les tendances
+par une recherche : `"son": {"recherche": "soft piano"}`. Le morceau part
+du début, c'est l'API qui veut ça. Si l'API ne répond pas, le reel part
+avec ses bruitages plutôt que de manquer son créneau.
 
 La bibliothèque de 55 morceaux libres de droits (Mixkit et FreePD) reste
 dans le studio en cinq ambiances (`leger`, `doux`, `sensuel`, `jeu`,
-`fetes`), pour le jour où on repasserait en automatique : une recette qui
-porte `"ambiance"` reçoit un morceau au rendu, jamais un morceau entendu
-récemment. La bibliothèque musicale d'Instagram n'est pas accessible à une
-publication par l'API avec la connexion Instagram.
+`fetes`) : une recette qui porte `"ambiance"` reçoit un morceau mixé dans
+la vidéo au rendu, et alors pas de son Instagram par-dessus. On ne s'en
+sert pas sans raison.
 
 ## Légendes et hashtags
 

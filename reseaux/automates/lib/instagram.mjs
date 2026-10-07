@@ -1,9 +1,14 @@
-// API Instagram (connexion Instagram, compte professionnel) : publication,
-// état des conteneurs, statistiques, renouvellement du jeton.
+// API Instagram par la connexion Facebook : le compte professionnel est relié
+// à une Page Facebook, et on parle à graph.facebook.com avec le jeton de la
+// Page. C'est la seule connexion qui donne l'Audio API, donc les sons
+// tendance de la bibliothèque Instagram attachés à un reel au moment de la
+// publication (le fichier, lui, ne porte que ses bruitages).
 // https://developers.facebook.com/docs/instagram-platform/content-publishing/
+//
+// Publication, sons, état des conteneurs, statistiques, vérification du jeton.
 
 export const VERSION = 'v23.0';
-const RACINE = `https://graph.instagram.com/${VERSION}`;
+const RACINE = `https://graph.facebook.com/${VERSION}`;
 
 export class Instagram {
   constructor(jeton, igUserId, { fetch: f = fetch } = {}) {
@@ -27,15 +32,35 @@ export class Instagram {
     return donnees;
   }
 
-  moi() {
-    return this.appel('GET', '/me', { fields: 'user_id,username' });
+  // Le compte lui-même : la preuve que le jeton marche encore.
+  async moi() {
+    const r = await this.appel('GET', `/${this.id}`, { fields: 'id,username' });
+    return { user_id: r.id, username: r.username };
+  }
+
+  // Les sons de la bibliothèque Instagram qu'une appli a le droit de poser
+  // sur un reel (« autorisés pour les tiers ») : sans recherche, les
+  // tendances du moment. La réponse arrive sous la clé `audio`.
+  async sons({ recherche } = {}) {
+    const p = { audio_type: 'music', user_id: this.id };
+    if (recherche) p.search_query = recherche;
+    const r = await this.appel('GET', '/ig_audio', p);
+    return (r.audio || r.data || [])
+      .filter((s) => s.audio_id)
+      .map((s) => ({ id: String(s.audio_id), titre: s.title || '', artiste: s.display_artist || '', dureeMs: Number(s.duration_in_ms) || 0 }));
   }
 
   // Conteneurs : un reel, une image, un élément de carrousel, un carrousel.
-  conteneurReel({ videoUrl, couvertureUrl, legende, nomDuSon }) {
+  // son : { id, volume, volumeVideo, boucle } attache un son de la
+  // bibliothèque (volumes de 0 à 100) ; sinon nomDuSon nomme le son original.
+  conteneurReel({ videoUrl, couvertureUrl, legende, nomDuSon, son }) {
     const p = { media_type: 'REELS', video_url: videoUrl, caption: legende, share_to_feed: 'true' };
     if (couvertureUrl) p.cover_url = couvertureUrl;
-    if (nomDuSon) p.audio_name = nomDuSon;
+    if (son?.id) {
+      const c = { audio_id: String(son.id), audio_volume: son.volume ?? 70, video_volume: son.volumeVideo ?? 100 };
+      if (son.boucle) c.should_loop_audio = true;
+      p.audio_configuration = JSON.stringify(c);
+    } else if (nomDuSon) p.audio_name = nomDuSon;
     return this.appel('POST', `/${this.id}/media`, p);
   }
 
@@ -61,20 +86,13 @@ export class Instagram {
     return this.appel('POST', `/${this.id}/media_publish`, { creation_id: conteneurId });
   }
 
-  // Les derniers posts du compte, pour retrouver ceux publiés depuis l'appli.
-  async medias(limite = 25) {
-    const r = await this.appel('GET', `/${this.id}/media`, { fields: 'id,caption,timestamp,permalink,media_type', limit: String(limite) });
-    return r.data || [];
-  }
-
   async lien(mediaId) {
     const r = await this.appel('GET', `/${mediaId}`, { fields: 'permalink' });
     return r.permalink;
   }
 
-  async statistiques(mediaId, reel) {
-    const metriques = reel ? 'views,reach,likes,comments,shares,saved' : 'views,reach,likes,comments,shares,saved';
-    const r = await this.appel('GET', `/${mediaId}/insights`, { metric: metriques });
+  async statistiques(mediaId) {
+    const r = await this.appel('GET', `/${mediaId}/insights`, { metric: 'views,reach,likes,comments,shares,saved' });
     const v = Object.fromEntries((r.data || []).map((m) => [m.name, m.values?.[0]?.value ?? m.total_value?.value ?? null]));
     return {
       vues: v.views ?? null,
@@ -87,10 +105,11 @@ export class Instagram {
   }
 }
 
-// Jeton longue durée (60 jours), renouvelable dès qu'il a 24 heures.
-export async function renouvelerJeton(jeton, f = fetch) {
-  const r = await f(`https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${encodeURIComponent(jeton)}`);
-  const d = await r.json().catch(() => ({}));
-  if (!r.ok || !d.access_token) throw new Error(`Renouvellement du jeton refusé : ${d.error?.message || r.status}`);
-  return { jeton: d.access_token, expireLe: new Date(Date.now() + (d.expires_in || 5184000) * 1000).toISOString() };
+// Le jeton de Page tiré d'un jeton d'utilisateur longue durée n'a pas de
+// date d'expiration : il n'y a rien à renouveler, seulement à vérifier qu'il
+// marche encore (mot de passe changé, appli retirée, Page déliée...).
+export async function verifierJeton(jeton, igUserId, f = fetch) {
+  const moi = await new Instagram(jeton, igUserId, { fetch: f }).moi();
+  if (!moi.user_id) throw new Error('le compte ne répond pas');
+  return moi;
 }

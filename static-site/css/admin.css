@@ -730,32 +730,8 @@
 .rsx-btn{font-size:.75rem;font-weight:600;padding:.3rem .6rem;border-radius:.55rem;border:1px solid var(--adm-line);background:var(--adm-card);color:var(--adm-ink);cursor:pointer;}
 .rsx-btn:hover{border-color:hsl(var(--primary));}
 .rsx-btn--danger{color:var(--adm-mauvais);}
-/* À publier à la main : des cartes larges, faites pour le pouce */
-.rsx-main{display:flex;flex-direction:column;gap:.6rem;}
-.rsx-carte{border:1px solid var(--adm-line);border-radius:1rem;overflow:hidden;background:var(--adm-card);}
-.rsx-carte.is-retard{border-color:color-mix(in srgb,var(--adm-mauvais) 45%,var(--adm-line));}
-.rsx-carte-tete{display:grid;grid-template-columns:3.6rem minmax(0,1fr) auto;gap:.85rem;align-items:center;width:100%;padding:.7rem .8rem;border:0;background:none;text-align:left;cursor:pointer;color:var(--adm-ink);font:inherit;min-height:4.5rem;}
-.rsx-carte-tete .rsx-vignette{width:3.6rem;height:4.5rem;}
-.rsx-carte-titre{display:flex;flex-direction:column;gap:.15rem;min-width:0;}
-.rsx-carte-titre strong{font-size:.95rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.rsx-carte-titre span{font-size:.8rem;color:var(--adm-ink-2);}
-.rsx-carte-fleche{font-size:1.1rem;color:var(--adm-ink-2);transition:transform .2s;}
-.rsx-carte.is-ouverte .rsx-carte-fleche{transform:rotate(90deg);}
-.rsx-carte-corps{display:none;padding:0 .8rem .9rem;border-top:1px solid var(--adm-line);}
-.rsx-carte.is-ouverte .rsx-carte-corps{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:1rem;padding-top:.9rem;}
-.rsx-carte video{width:100%;aspect-ratio:9/16;border-radius:.8rem;background:#000;display:block;}
-.rsx-legende{white-space:pre-wrap;font-size:.9rem;line-height:1.45;color:var(--adm-ink);background:hsl(var(--muted)/.5);border-radius:.8rem;padding:.75rem .9rem;margin:0 0 .75rem;max-height:16rem;overflow:auto;}
-.rsx-legende .rsx-tags{color:hsl(var(--primary-texte));font-weight:600;}
-.rsx-carte-actions{display:flex;flex-direction:column;gap:.5rem;}
-.rsx-carte-actions .btn,.rsx-carte-actions .rsx-btn{min-height:2.9rem;display:inline-flex;align-items:center;justify-content:center;font-size:.92rem;text-decoration:none;}
-.rsx-aide{font-size:.76rem;color:var(--adm-ink-2);margin:0;}
-.rsx-btn--publie{background:var(--adm-bon);color:#fff;border-color:var(--adm-bon);font-weight:700;}
-.rsx-btn--publie:hover{border-color:var(--adm-bon);filter:brightness(1.05);}
-.rsx-mode{display:flex;gap:.4rem;flex-wrap:wrap;}
-.rsx-mode label{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .7rem;border:1px solid var(--adm-line);border-radius:999px;font-size:.82rem;font-weight:600;cursor:pointer;}
-.rsx-mode label:has(input:checked){border-color:hsl(var(--primary));background:hsl(var(--primary)/.08);}
-.rsx-mode input{accent-color:hsl(var(--primary));}
-@media (max-width:640px){.rsx-carte.is-ouverte .rsx-carte-corps{grid-template-columns:1fr;}.rsx-carte video{max-width:14rem;margin:0 auto;}}
+.rsx-son{font-size:.76rem;color:hsl(var(--secondary-texte));overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.rsx-reconnexion{margin-top:.8rem;}
 .rsx-idee-form{display:flex;gap:.6rem;margin-bottom:.8rem;}
 .rsx-idee-form .input{flex:1;}
 .rsx-idees,.rsx-journal{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem;}

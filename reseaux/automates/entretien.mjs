@@ -1,31 +1,34 @@
-// Entretien quotidien : jetons Instagram, ménage du stockage, statistiques,
+// Entretien quotidien : jeton Instagram, ménage du stockage, statistiques,
 // réserve, et l'état que lit la routine Claude (reseaux/atelier/etat.json).
 //
 //   node reseaux/automates/entretien.mjs [--etat <fichier>]
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
-import { Instagram, renouvelerJeton } from './lib/instagram.mjs';
+import { Instagram, verifierJeton } from './lib/instagram.mjs';
 import { ajouterJours, aujourdhui, categorieAttendue } from './lib/calendrier.mjs';
 
 const JOUR = 86400000;
 const CRENEAUX = ['matin', 'midi', 'soir'];
 
-export async function renouvelerJetons(base, { maintenant = new Date(), renouveler = renouvelerJeton } = {}) {
-  const comptes = await base.select('social_comptes', 'select=id,langue,jeton_expire_le');
+// Le jeton de Page (connexion Facebook) n'expire pas : on vérifie une fois
+// par semaine qu'il marche encore, et on alerte dès qu'il ne répond plus,
+// pour que Thomas reconnecte le compte dans l'admin avant le prochain post.
+export async function verifierJetons(base, { maintenant = new Date(), verifier = verifierJeton } = {}) {
+  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id,jeton_expire_le');
   for (const c of comptes) {
     const [j] = await base.select('social_jetons', `select=jeton,obtenu_le,renouvele_le&compte_id=eq.${c.id}`);
-    if (!j) continue;
-    const dernier = new Date(j.renouvele_le || j.obtenu_le);
-    if (maintenant - dernier < 7 * JOUR) continue; // une fois par semaine suffit (jeton de 60 jours)
+    if (!j || !c.ig_user_id) continue;
+    const reste = c.jeton_expire_le ? Math.floor((new Date(c.jeton_expire_le) - maintenant) / JOUR) : null;
+    if (reste !== null && reste < 10) await base.journal('erreur', 'entretien', `jeton ${c.langue} : ${reste} jours restants, à reconnecter dans l'admin`);
+    const derniere = new Date(j.renouvele_le || j.obtenu_le);
+    if (maintenant - derniere < 7 * JOUR) continue;
     try {
-      const r = await renouveler(j.jeton);
-      await base.update('social_jetons', `compte_id=eq.${c.id}`, { jeton: r.jeton, renouvele_le: maintenant.toISOString() });
-      await base.update('social_comptes', `id=eq.${c.id}`, { jeton_expire_le: r.expireLe });
-      await base.journal('info', 'entretien', `jeton ${c.langue} renouvelé jusqu'au ${r.expireLe.slice(0, 10)}`);
+      const moi = await verifier(j.jeton, c.ig_user_id);
+      await base.update('social_jetons', `compte_id=eq.${c.id}`, { renouvele_le: maintenant.toISOString() });
+      await base.journal('info', 'entretien', `jeton ${c.langue} vérifié : @${moi.username || '?'} répond`);
     } catch (e) {
-      const reste = c.jeton_expire_le ? Math.floor((new Date(c.jeton_expire_le) - maintenant) / JOUR) : null;
-      await base.journal(reste !== null && reste < 10 ? 'erreur' : 'alerte', 'entretien', `jeton ${c.langue} non renouvelé (${reste ?? '?'} jours restants) : ${e.message}`);
+      await base.journal('erreur', 'entretien', `jeton ${c.langue} refusé par Meta, à reconnecter dans l'admin : ${e.message}`);
     }
   }
 }
@@ -37,12 +40,8 @@ export async function menage(base, { maintenant = new Date() } = {}) {
   const publiees = await base.select('social_variantes', `select=id,fichiers&statut=eq.publie&publie_le=lt.${avant(JOUR)}&fichiers_supprimes_le=is.null`);
   const echouees = await base.select('social_variantes', `select=id,fichiers&statut=eq.echec&updated_at=lt.${avant(7 * JOUR)}&fichiers_supprimes_le=is.null`);
   // filet : un post rendu mais jamais parti (compte coupé, pause) depuis plus
-  // d'un jour passe en échec et libère le stockage ; en mode manuel, un reel
-  // attend Thomas sept jours
-  const manuels = new Set((await base.select('social_comptes', 'select=langue&mode=eq.manuel')).map((c) => c.langue));
-  const oubliees = (await base.select('social_variantes', `select=id,fichiers,langue,publier_a,statut&statut=in.(rendu,conteneur)&publier_a=lt.${avant(JOUR)}`)).filter(
-    (v) => !(manuels.has(v.langue) && v.statut === 'rendu' && v.publier_a >= avant(7 * JOUR)),
-  );
+  // d'un jour passe en échec et libère le stockage
+  const oubliees = await base.select('social_variantes', `select=id,fichiers&statut=in.(rendu,conteneur)&publier_a=lt.${avant(JOUR)}`);
   for (const v of oubliees) {
     await base.update('social_variantes', `id=eq.${v.id}`, { statut: 'echec', erreur: 'créneau passé sans publication' });
   }
@@ -54,41 +53,6 @@ export async function menage(base, { maintenant = new Date() } = {}) {
     n += chemins.length;
   }
   if (n) await base.journal('info', 'entretien', `${n} fichiers supprimés du stockage`);
-  return n;
-}
-
-// Un post publié à la main depuis l'appli n'a pas d'identifiant Instagram :
-// on le retrouve dans les derniers médias du compte par sa légende (la
-// première ligne) et son heure (six heures autour du « Publié » de l'admin).
-export async function rapprocher(base, { maintenant = new Date(), instagramPour } = {}) {
-  const attente = await base.select('social_variantes', `select=id,langue,legende,publie_le&statut=eq.publie&publie_main=is.true&ig_media_id=is.null&publie_le=gte.${new Date(maintenant - 3 * JOUR).toISOString()}`);
-  if (!attente.length) return 0;
-  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id');
-  let n = 0;
-  for (const langue of new Set(attente.map((v) => v.langue))) {
-    const compte = comptes.find((c) => c.langue === langue);
-    const [j] = compte ? await base.select('social_jetons', `select=jeton&compte_id=eq.${compte.id}`) : [];
-    if (!j || !compte.ig_user_id) continue;
-    const ig = instagramPour ? instagramPour(j.jeton, compte.ig_user_id) : new Instagram(j.jeton, compte.ig_user_id);
-    let medias;
-    try {
-      medias = await ig.medias(25);
-    } catch (e) {
-      await base.journal('alerte', 'entretien', `rapprochement impossible : ${e.message}`);
-      continue;
-    }
-    const pris = new Set();
-    for (const v of attente.filter((x) => x.langue === langue)) {
-      const ligne = (v.legende || '').trim().split('\n')[0].trim().toLowerCase();
-      const quand = new Date(v.publie_le).getTime();
-      const m = medias.find((x) => !pris.has(x.id) && Math.abs(new Date(x.timestamp).getTime() - quand) < 6 * 3600 * 1000 && (x.caption || '').trim().toLowerCase().startsWith(ligne.slice(0, 40)));
-      if (!m) continue;
-      pris.add(m.id);
-      await base.update('social_variantes', `id=eq.${v.id}`, { ig_media_id: m.id, permalien: m.permalink || null, publie_le: m.timestamp || v.publie_le });
-      await base.journal('info', 'entretien', `post publié à la main retrouvé : ${m.permalink || m.id}`, null, v.id);
-      n++;
-    }
-  }
   return n;
 }
 
@@ -179,9 +143,8 @@ export async function etat(base, { maintenant = new Date(), horizon = 21 } = {})
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const base = await connexion();
-  await renouvelerJetons(base);
+  await verifierJetons(base);
   await menage(base);
-  await rapprocher(base);
   await statistiques(base);
   const e = await etat(base);
   if (e.reserve_jours < 7) await base.journal('alerte', 'entretien', `réserve de ${e.reserve_jours} jours seulement`);

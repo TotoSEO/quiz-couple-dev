@@ -48,10 +48,10 @@ même jour par Thomas ; ses choix sont en partie 1.2.
 - **Deux publics, toujours en couple** : les 13-17 ans (mignon sans
   infantiliser) et les 18-25 ans. La ligne éditoriale complète est dans
   `reseaux/atelier/LIGNE-EDITORIALE.md`.
-- **Compte Entreprise.** C'est le type de compte que l'API de publication
-  d'Instagram prend en charge le plus complètement (publication, statistiques,
-  commentaires). Sa seule limite, une bibliothèque musicale réduite dans
-  l'appli, ne nous concerne pas : la musique est mixée dans la vidéo.
+- **Compte professionnel relié à une Page Facebook, connexion Facebook.**
+  C'est la connexion qui donne l'Audio API : chaque reel part avec un son
+  tendance de la bibliothèque Instagram, posé par l'automate au moment de la
+  publication. Le fichier vidéo, lui, ne porte que ses bruitages.
 - **Aucune validation humaine.** Un post qui passe les six contrôles qualité
   (partie 8) est publié tout seul. L'admin garde de quoi suspendre un post
   ou tout mettre en pause.
@@ -75,34 +75,33 @@ Ces contraintes viennent de la documentation Meta et des guides à jour
 
 | Sujet | Ce qui est possible | Ce qui ne l'est pas |
 |---|---|---|
-| Compte | Compte professionnel (Entreprise ou Créateur), relié à une appli Meta en mode développement. Tes propres comptes ajoutés comme « testeurs » suffisent : **pas de validation Meta (App Review) à passer**. | Compte personnel. |
+| Compte | Compte professionnel (Entreprise ou Créateur) **relié à une Page Facebook**, appli Meta « API Instagram avec connexion Facebook » en mode développement. Tes propres comptes suffisent : **pas de validation Meta (App Review) à passer**. | Compte personnel ; compte sans Page. |
 | Reels | MP4 ou MOV, H.264, son AAC 48 kHz, 9:16, **5 à 90 secondes** par l'API, image de couverture personnalisable (`cover_url`), nom du son personnalisable (`audio_name`). | Plus de 90 s par l'API. |
-| Musique | Le son **contenu dans le fichier vidéo**, publié comme « son original » et réutilisable par d'autres. Depuis le 1er juin 2026, l'Audio API de Meta attache aussi un son de la bibliothèque (`audio_configuration` : `audio_id`, `audio_volume`, `video_volume`), tendances comprises, mais **seulement avec la connexion Facebook** (compte relié à une Page, `graph.facebook.com`) et seulement les sons autorisés pour la publication par des applis. | **Une musique de la bibliothèque Instagram avec la connexion Instagram**, celle qu'on utilise (`graph.instagram.com`) : la doc de Meta l'exclut. Et une appli ne peut pas avoir les deux connexions. |
+| Musique | Depuis le 1er juin 2026, l'**Audio API** attache un son de la bibliothèque Instagram au reel à sa création : `GET /ig_audio?audio_type=music&user_id=…` donne les tendances du moment (ou le résultat d'une `search_query`), et le conteneur reçoit `audio_configuration` (`audio_id`, `audio_volume` et `video_volume` de 0 à 100). Seulement avec la connexion Facebook (`graph.facebook.com`), et seulement les sons « autorisés pour les tiers », une sélection plus courte que dans l'appli. Sans ça, le son contenu dans le fichier est publié comme « son original ». | Choisir l'instant du morceau (il part du début), un son de la bibliothèque sur une image, la connexion Instagram (`graph.instagram.com`) pour l'Audio API. Une appli ne peut pas avoir les deux connexions. |
 | Image | JPEG, ratio entre 4:5 et 1,91:1. On fera du 1080 × 1350 (4:5). | Une image avec musique (l'API ne met pas de son sur une image). |
 | Carrousel | Jusqu'à 10 éléments (images ou vidéos), un seul post au compteur. | De la musique sur un carrousel d'images. |
 | Légende | 2 200 caractères. **5 hashtags maximum** depuis décembre 2025. | Modifier la légende après publication par l'API. |
 | Programmation | On crée un « conteneur », on attend qu'Instagram ait traité la vidéo, puis on publie. | Programmer un reel à l'avance chez Instagram : il faut notre propre planificateur. |
 | Volume | 100 publications par 24 h et par compte. | |
 | Médias | Instagram télécharge lui-même le fichier depuis une adresse web qu'on lui donne. | Envoyer le fichier directement. |
-| Accès | Jeton valable 60 jours, renouvelable dès qu'il a 24 h. | Un jeton non renouvelé à temps : il faut se reconnecter à la main. |
+| Accès | Un jeton d'utilisateur Facebook longue durée (60 jours) donne le **jeton de la Page**, qui n'a pas de date d'expiration : c'est lui qui est rangé et utilisé. | Un jeton de Page peut quand même être invalidé (mot de passe changé, appli retirée, Page déliée) : l'entretien le vérifie chaque semaine et alerte, il faut alors en recoller un dans l'admin. |
 | Statistiques | Vues, portée, j'aime, commentaires, partages, enregistrements par post. | |
 
 Ce que ça change concrètement :
 
-- **Pas de musique tendance automatique avec la connexion Instagram.** D'où
-  le **mode « à la main »** du compte (7 octobre 2026) : les reels sont
-  rendus sans musique et attendent dans la liste « À publier » de l'onglet
-  Réseaux ; Thomas enregistre la vidéo sur son téléphone, copie la légende,
-  publie depuis l'appli Instagram avec un son tendance, puis appuie sur
-  « Publié ! ». Les images et les carrousels, sans musique, partent toujours
-  par l'API. L'entretien retrouve ensuite le post publié (première ligne de
-  la légende, six heures autour du « Publié ») pour lui donner son
-  identifiant Instagram et relever ses statistiques. Un reel attend sept
-  jours dans la liste avant d'être abandonné. `social_comptes.mode`,
-  `social_variantes.publie_main` (migration `20261008120000`).
+- **Les reels partent avec un son tendance, tout seuls.** Le rendu fait la
+  vidéo avec ses seuls bruitages ; une heure avant l'heure prévue, la
+  publication lit les tendances du moment (`ig_audio`), écarte les sons
+  déjà posés sur le compte, prend un son au moins aussi long que le reel
+  (sinon il boucle), l'écrit dans la recette (`son`) et l'attache au
+  conteneur (musique à 70, bruitages à 100). Une recette peut demander une
+  recherche à la place des tendances (`"son": {"recherche": "cute
+  piano"}`). Si l'API ne répond pas ou refuse le son, le reel part avec ses
+  bruitages plutôt que de manquer son créneau, et le journal le dit.
+  (`automates/lib/son.mjs`, `publication.mjs`.)
 - **Un « post classique avec musique » sera un reel** : une image animée de
-  10 à 12 secondes avec sa musique. Les vrais posts image et les carrousels
-  sont publiés sans musique.
+  10 à 12 secondes, avec son son tendance. Les vrais posts image et les
+  carrousels sont publiés sans musique.
 - **Tout doit être parfait avant publication**, puisqu'on ne peut plus rien
   corriger ensuite par l'API.
 
@@ -136,9 +135,10 @@ Le cycle d'un post :
 | Quand | Étape | Qui |
 |---|---|---|
 | J-21 à J-14 | Le planning réserve un créneau : date, format, thème, gabarit. | Routine « planning » (Claude, une fois par semaine) |
-| J-14 à J-3 | Écriture dans la langue de chaque compte actif (l'anglais pour commencer), choix de la musique, des sons et du fond, aperçus vérifiés. | Routine « création » (Claude, chaque jour) |
+| J-14 à J-3 | Écriture dans la langue de chaque compte actif (l'anglais pour commencer), scénario, bruitages et fond, aperçus vérifiés. | Routine « création » (Claude, chaque jour) |
 | J-14 à J-2 | Validation automatique dès que les contrôles qualité sont passés. | Personne |
 | J-1, la nuit | Fabrication des fichiers définitifs, contrôle qualité, envoi dans Supabase. | GitHub Actions |
+| Jour J, une heure avant | Choix d'un son tendance de la bibliothèque Instagram, création du conteneur. | GitHub Actions |
 | Jour J, à l'heure prévue | Publication sur chaque compte actif. | GitHub Actions |
 | J+1 | Suppression des fichiers lourds, une vignette est gardée pour l'admin. | GitHub Actions |
 | J+1 et J+7 | Relevé des statistiques. | GitHub Actions |
@@ -333,56 +333,48 @@ enrichie au fil du temps.
 
 ## 5. Le son : musique, bruitages et mixage
 
-### 5.1 Ce qu'on fait à la place des musiques tendance
+### 5.1 La musique : un son tendance de la bibliothèque Instagram
 
-**Depuis le 7 octobre 2026, les reels sont rendus sans musique** : les
-bruitages seuls, doux (volumes de 0,10 à 0,24) et variés (plusieurs
-variantes d'un même son, tirées de l'instant), et le rendu ne les remonte
-pas (sans musique, la normalisation à -14 LUFS les aurait poussés de 15 dB ;
-elle ne fait plus que rabattre les crêtes sous -1 dBTP). Thomas ajoute le
-son tendance dans l'appli (mode « à la main »). Ce qui suit reste vrai pour
-le jour où on repasserait en automatique : une recette qui porte `ambiance`
-reçoit un morceau.
+**Les reels sont rendus sans musique** : les bruitages seuls, doux (volumes
+de 0,10 à 0,24) et variés (plusieurs variantes d'un même son, tirées de
+l'instant), et le rendu ne les remonte pas (sans musique, la normalisation
+à -14 LUFS les aurait poussés de 15 dB ; elle ne fait plus que rabattre les
+crêtes sous -1 dBTP). La musique arrive à la publication, par l'Audio API
+de Meta (connexion Facebook) : c'est la musique qui fait percer un post, et
+un reel publié sous un son de la bibliothèque apparaît dans la page de ce
+son comme n'importe quel reel fait dans l'appli.
 
-1. **Une bibliothèque musicale maison** : 55 morceaux libres de droits
-   (octobre 2026), dans `reseaux/studio/public/musique/bibliotheque.json`,
-   rangés en cinq ambiances : `leger` (humour, ukulélé, guitare), `doux`
-   (piano, guitare acoustique), `sensuel` (R&B et lo-fi doux, pour le coquin
-   et les statiques du soir), `jeu` (connais-tu, tu préfères) et `fetes`
-   (Noël, Nouvel An). Six viennent du catalogue FreePD (domaine public, CC0)
-   et sont dans le dépôt ; 49 viennent de Mixkit (licence gratuite, usage
-   commercial et réseaux sociaux sans attribution) et ne sont jamais dans le
-   dépôt : `scripts/musiques.mjs` les télécharge, les coupe à 85 s et les
-   ramène à -16 LUFS, et le workflow de rendu les garde en cache.
-   - **Le choix est automatique** (`automates/lib/musique.mjs`, au rendu) :
-     l'ambiance vient de la catégorie (`pov` léger, `coquin` sensuel,
-     `statique` et `phrase` doux, jeux `jeu`) ou du champ `ambiance` de la
-     recette ; on prend d'abord un morceau jamais entendu sur le compte, puis
-     un de la moitié la moins récemment entendue, et on part d'un de ses
-     points de départ (`departs`, le début d'une partie du morceau) pour ne
-     pas toujours entendre la même entrée. Le choix est écrit dans la
-     recette.
-   - **La vraie musique tendance** passe par l'Audio API (voir le tableau de
-     la partie 2) : il faudrait refaire la connexion de l'appli Meta avec la
-     connexion Facebook et une Page reliée au compte. Le rendu ferait alors
-     la vidéo avec ses seuls bruitages, et la publication attacherait un son
-     tendance autorisé (`audio_volume` pour la musique, `video_volume` pour
-     nos bruitages).
-   - Prudence : certains morceaux « libres » sont déclarés auprès des systèmes
-     de détection de droits et déclenchent des réclamations. Un morceau qui en
-     reçoit une est retiré de la bibliothèque, et l'admin le signale.
-2. **Un son de marque** : un petit jingle Quiz Couple et quelques boucles
-   maison, publiés avec un nom choisi (`audio_name` : « Quiz Couple · doux »).
-   Si nos reels tournent, d'autres créateurs réutilisent notre son, ce qui
-   fait de la visibilité gratuite.
-3. **La musique tendance, à la main, pour les posts que tu veux pousser.**
-   Possible, mais pas prévu : tu as choisi de ne rien faire à la main.
-   Dans l'admin, un post peut passer en « publication manuelle » : tu
-   télécharges la vidéo sans musique, tu la publies depuis ton téléphone et tu
-   ajoutes le son tendance dans l'appli. Le planning la compte quand même.
-   - Bon à savoir : un compte **Entreprise** n'a accès qu'à la bibliothèque
-     libre de droits de Meta quand on publie depuis l'appli. Ça ne change
-     rien à nos publications automatiques, qui portent leur propre musique.
+1. **Le choix du son** (`automates/lib/son.mjs`, à la publication) : la
+   liste des tendances du moment (`GET /ig_audio?audio_type=music`, sans
+   recherche), lue une fois par passage ; on écarte les sons déjà posés sur
+   le compte (les soixante dernières déclinaisons), on préfère un son au
+   moins aussi long que le reel (la durée est relevée au rendu dans
+   `fichiers.duree` ; un son plus court boucle, `should_loop_audio`), on
+   tire parmi les douze premiers restants, de façon reproductible pour une
+   même déclinaison. Le choix est écrit dans la recette (`son` : `id`,
+   `titre`, `artiste`), donc une publication reprise après un échec passager
+   garde son morceau, et l'admin l'affiche sous le post. Volumes :
+   `audio_volume` 70, `video_volume` 100 (les bruitages restent devant).
+   Une recette peut demander une recherche à la place des tendances
+   (`"son": {"recherche": "cute piano"}`) ; une recette qui porte `musique`
+   (un morceau de notre bibliothèque mixé dans la vidéo) ne reçoit pas de
+   second morceau.
+2. **Les replis** : API en panne ou liste vide, le reel part avec ses
+   bruitages et le journal l'écrit en alerte ; son refusé à la création du
+   conteneur (plus autorisé), second essai sans son dans le même passage.
+   On ne manque jamais un créneau pour une musique.
+3. **Ce que l'API ne donne pas** : l'instant du morceau (il part du début),
+   les sons enregistrés dans l'appli, et la sélection complète de l'appli
+   (seuls les sons « autorisés pour les tiers » sont servis). On ne peut pas
+   non plus lire le son d'un reel d'un autre compte.
+4. **Notre bibliothèque de 55 morceaux libres de droits** (octobre 2026,
+   `reseaux/studio/public/musique/bibliotheque.json`, cinq ambiances
+   `leger`, `doux`, `sensuel`, `jeu`, `fetes` ; six FreePD dans le dépôt,
+   49 Mixkit téléchargés par `scripts/musiques.mjs`, jamais commités) reste
+   là pour une recette qui demande `ambiance` ou `musique` : le morceau est
+   alors mixé dans la vidéo (`automates/lib/musique.mjs`, sans répétition,
+   à -14 LUFS, baisse de 6 dB sous chaque bruitage) et le reel part sans son
+   Instagram. La routine ne le fait pas d'elle-même.
 
 ### 5.2 Les bruitages
 
@@ -417,7 +409,7 @@ Fait par le studio, toujours de la même façon :
 
 | Table | Contenu |
 |---|---|
-| `social_comptes` | Un compte par langue : identifiant Instagram, @nom, langue, actif ou non, fuseau horaire, créneaux de publication, date d'expiration du jeton. Le jeton lui-même vit dans une table lisible uniquement par le serveur (`social_jetons`). |
+| `social_comptes` | Un compte par langue : identifiant Instagram, @nom, langue, actif ou non, fuseau horaire, créneaux de publication, date d'expiration du jeton (vide pour un jeton de Page, qui n'en a pas). Le jeton de Page lui-même vit dans une table lisible uniquement par le serveur (`social_jetons`). |
 | `social_posts` | La recette commune : date et créneau, format, catégorie, gabarit, version de la charte graphique, scène et paramètres, musique, sons, fond, statut, motif d'un refus. |
 | `social_variantes` | Une ligne par post et par langue : textes à l'écran traduits, légende, hashtags, statut de rendu et de publication, fichier en transit, identifiants Instagram (conteneur, média), lien publié, erreur, nombre d'essais. |
 | `social_bibliotheque` | Musiques, bruitages, illustrations, poses : nom, type, ambiance, licence, source, attribution, durée, volume mesuré, exclusions (réclamation reçue). |
@@ -427,7 +419,7 @@ Fait par le studio, toujours de la même façon :
 | `social_reglages` | Les règles du planning (part des formats, rythme, pause générale, validation automatique ou non). |
 
 **Statuts d'un post** : idée, brouillon, aperçu prêt, validé, rendu,
-programmé, publié, échec, manuel, annulé.
+programmé, publié, échec, annulé.
 
 **Sécurité** : aucune de ces tables n'est lisible avec la clé publique du
 site. L'admin passe par une fonction serveur protégée par ton mot de passe,
@@ -478,7 +470,7 @@ transfert sortant par mois.
 | **Publication** | GitHub Actions (`social-publication.yml`) | Toutes les 10 min | Publie ce qui est dû : crée le conteneur, attend la fin du traitement de la vidéo, publie, enregistre le lien. |
 
 Tant qu'un compte n'est pas actif (pas encore branché, ou coupé dans l'admin), ses posts ne sont ni rendus ni comptés en échec : la publication tourne « à blanc » et l'entretien passe en échec, fichiers effacés, tout post rendu dont le créneau est dépassé d'un jour. Le stockage gratuit ne se remplit donc pas de vidéos qui ne partiront jamais.
-| **Entretien** | GitHub Actions (`social-entretien.yml`) | Chaque jour | Renouvelle les jetons Instagram, fait le ménage du stockage, relève les statistiques, écrit les alertes et l'état du planning pour l'atelier. |
+| **Entretien** | GitHub Actions (`social-entretien.yml`) | Chaque jour | Vérifie le jeton de Page chaque semaine, fait le ménage du stockage, relève les statistiques, écrit les alertes et l'état du planning pour l'atelier. |
 | **Base** | GitHub Actions (`social-base.yml`) | À la fusion | Applique la migration des tables `social_*` par l'API de gestion de Supabase. |
 
 ### 7.2 Les routines Claude et ton abonnement
@@ -528,8 +520,8 @@ Tant qu'un compte n'est pas actif (pas encore branché, ou coupé dans l'admin),
 ### 7.5 Alertes
 
 Par e-mail (le site utilise déjà Resend) et en pastille dans l'admin :
-réserve sous 7 jours, échec de publication, jeton qui expire dans moins de
-10 jours ou dont le renouvellement a échoué, stockage au-delà de 700 Mo,
+réserve sous 7 jours, échec de publication, jeton refusé par Meta (ou qui
+expire dans moins de 10 jours), son tendance indisponible, stockage au-delà de 700 Mo,
 réclamation de droits sur un morceau, routine qui n'est pas passée depuis
 48 h.
 
@@ -663,8 +655,9 @@ interrupteur.
 | Risque | Garde-fou |
 |---|---|
 | Réclamation de droits sur une musique | Licences gardées, morceau exclu à la première réclamation, son de marque. |
-| Jeton expiré | Renouvellement automatique chaque semaine, alerte à 10 jours. |
-| Meta change son API | La publication est isolée dans un seul module, et la publication manuelle reste possible à tout moment. |
+| Jeton invalidé | Vérification automatique chaque semaine, alerte dans le journal et sur la tuile du compte ; un nouveau jeton se colle dans l'admin (« Changer le jeton »). |
+| Son tendance indisponible | Le reel part avec ses bruitages, le journal le dit ; un son refusé est réessayé sans son dans le même passage. |
+| Meta change son API | La publication est isolée dans un seul module (`automates/lib/instagram.mjs`). |
 | Quota Claude épuisé | Réserve de 14 jours, réserve de secours, reprise automatique. |
 | Stockage plein | Fichiers en transit seulement, balayeur, alerte à 700 Mo, solution de repli Cloudflare R2. |
 | DA qui dérive | Charte versionnée, mascottes et dessins réutilisés, tests sur les gabarits. |
@@ -755,8 +748,8 @@ ne peuvent pas être faites à ta place :
   https://developers.facebook.com/docs/instagram-platform/content-publishing/
 - Meta, référence des médias :
   https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media/
-- Meta, renouvellement des jetons :
-  https://developers.facebook.com/documentation/instagram-platform/reference/refresh_access_token
+- Meta, l'Audio API (sons de la bibliothèque sur un reel, connexion Facebook) :
+  https://developers.facebook.com/docs/instagram-platform/content-publishing/audio-api/
 - Limites des reels par API :
   https://postproxy.dev/blog/instagram-reels-api-publishing-guide/
 - Musique et publication par des outils tiers :

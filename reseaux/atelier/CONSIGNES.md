@@ -96,11 +96,14 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   ... » : 90 signes au plus, trois lignes. Pas d'emoji à l'écran (la police
   ne les dessine pas) ; « <3 » est permis.
 - Les bruitages se posent tout seuls (pas, sauts, bulles, cœurs, zooms,
-  couette), doux et variés. **Pas de musique** : depuis le 7 octobre 2026,
-  Thomas publie les reels depuis l'appli Instagram et y met lui-même un son
-  tendance, le reel part donc avec ses seuls bruitages. Ne mets ni
-  `musique` ni `ambiance` dans une recette (la bibliothèque reste là pour un
-  jour où on repasserait en automatique : `"ambiance": "doux"` la rappelle).
+  couette), doux et variés. **Pas de musique dans la recette** : le reel
+  est rendu avec ses seuls bruitages, et la publication lui attache un son
+  tendance de la bibliothèque Instagram (Audio API). Ne mets ni `musique`
+  ni `ambiance`. Si un post appelle autre chose que la tendance du moment
+  (phrase tendre, scène coquine), tu peux demander une recherche à la
+  place : `"son": {"recherche": "soft piano"}` (deux ou trois mots anglais,
+  jamais un titre ou un artiste précis : seuls les sons autorisés pour les
+  applis sont servis).
 - Statique : un seul plan, 10 à 12 s, un câlin ou une pose tendre, un
   texte mot à mot au milieu. Il bouge quand même : pour un câlin, chacun
   entre par son bord (`"a": -150` et `"a": 1230` avec un geste `marche` dès

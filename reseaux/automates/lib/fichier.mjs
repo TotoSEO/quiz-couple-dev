@@ -38,6 +38,11 @@ export function controlerReel(fichier) {
   return fautes;
 }
 
+// Durée d'une vidéo en secondes, pour choisir un son au moins aussi long.
+export function dureeVideo(fichier) {
+  return Math.round(parseFloat(sonder(fichier).format.duration) * 10) / 10 || 0;
+}
+
 export function controlerImage(fichier, largeur = 1080, hauteur = 1350) {
   const s = sonder(fichier);
   const v = s.streams[0];

@@ -42,7 +42,7 @@ Le son du reel fini est ramené à -14 LUFS et -1 dBTP (jetons `son-*`).
 | `connais-tu` | reel.mp4 + couverture.jpg | « Connais-tu ton partenaire ? » : accroche animée, 8 questions sans réponse, lecture puis chrono, « Comment your score! » |
 | `tu-preferes` | reel.mp4 + couverture.jpg | Tu préfères : accroche animée, dilemmes A ou B (alignés à gauche), lecture puis chrono |
 | `quiz-chrono` | reel.mp4 + couverture.jpg | Quiz à bonne réponse : lecture, réponses, chrono, réponse, fin |
-| `citation` | reel.mp4 + couverture.jpg | Phrase en police plume, mot à mot, fleurs au trait, le petit duo des mascottes, musique douce, 10 à 14 s |
+| `citation` | reel.mp4 + couverture.jpg | Phrase en police plume, mot à mot, fleurs au trait, le petit duo des mascottes, 10 à 14 s |
 | `image` | image.jpg | Post 4:5 : phrase émotive (plume, fleurs) ou drôle (Fredoka), avec une scène dessinée (`scene`) ou le petit duo |
 | `carrousel` | page-1.jpg... | Couverture et page finale (scène dessinée ou duo), pages numérotées avec le duo en tout petit dans le coin |
 
@@ -70,8 +70,10 @@ feux d'artifice), les bulles de dialogue, les textes qui s'écrivent mot à
 mot, la caméra (zoom sur un personnage, secousse), une légende par plan et
 une transition (`coupe`, `fondu`, `glisse`, `noir` : l'image s'éteint puis se
 rallume, pour passer d'un moment de la journée à l'autre ; la lumière de la
-pièce suit `moment`). Les bruitages se déduisent des gestes, la musique est
-choisie au rendu (`automates/lib/musique.mjs`). Un reel dure 10 s au moins.
+pièce suit `moment`). Les bruitages se déduisent des gestes ; la musique
+n'est pas dans le fichier, c'est un son tendance de la bibliothèque
+Instagram attaché à la publication (`automates/lib/son.mjs`). Un reel dure
+10 s au moins.
 
 - `temps.ts` : l'état de chaque personnage et de la caméra à un instant
   (fonctions pures). Respiration et clignement sont automatiques.
@@ -85,7 +87,9 @@ Le contrôle du scénario avant rendu est dans
 
 ## Sons
 
-Bruitages CC0 de Kenney, packs Interface, Digital Audio, RPG Audio et Impact (`studio/public/sons/LICENCES.md`). Musiques :
+Bruitages CC0 de Kenney, packs Interface, Digital Audio, RPG Audio et Impact (`studio/public/sons/LICENCES.md`), doux
+(volumes 0,10 à 0,24) et variés. Pas de musique dans le fichier : la publication attache un son tendance de la bibliothèque
+Instagram (Audio API, connexion Facebook ; `automates/lib/son.mjs`, choix sans répétition écrit dans la recette, `son`).
+Une recette qui demande `ambiance` ou `musique` reçoit malgré tout un morceau de notre bibliothèque mixé dans la vidéo :
 55 morceaux en cinq ambiances (`studio/public/musique/bibliotheque.json`), six FreePD (CC0) dans le dépôt et 49 Mixkit
-préparés par `node scripts/musiques.mjs` (à lancer une fois avant un rendu en local). Le rendu choisit le morceau tout seul
-(`automates/lib/musique.mjs`).
+préparés par `node scripts/musiques.mjs` (à lancer une fois avant un rendu en local), choix dans `automates/lib/musique.mjs`.
