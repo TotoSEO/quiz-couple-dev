@@ -136,6 +136,27 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   reviennent dans le lit à chaque plan (geste `plonge` : ils sautent sous la
   couette).
 - Coquin : jamais rien de montré (voir la ligne éditoriale).
+- **Phrase à finir** (pilier `participatif`) : un personnage en grand qui
+  regarde la caméra, un effet `question` au-dessus de la tête, le texte en
+  haut mot à mot : « finish the sentence: my partner always ___ » (les trois
+  tirets bas restent affichés). La légende demande la réponse (« Finish it
+  in the comments »). 10 à 12 secondes, la fin tient sur le texte complet.
+- **Échelle de réaction** : des légendes de plan qui se suivent
+  (« 'hey' », « 'hey :)' », « 'hey <3' », « 'im outside' »), un plan par
+  palier, le même personnage dont le visage monte d'un cran à chaque fois
+  (`repos`, `mignon`, `amoureux`, puis `saute`/`joie`) ; la plus grosse
+  réaction en dernier, jamais avant.
+- **Routines** (« once a day / once a week / once a month ») : trois plans
+  légendés, un décor et un geste chacun, transitions `coupe`.
+- **Faux échange de messages** : des bulles qui alternent entre les deux
+  personnages, une à la fois, 60 signes au plus chacune ; la chute est la
+  dernière bulle, et le visage change avec elle.
+- **Contraste** (« us: ... ») : les deux dans le même plan, chacun dans son
+  état (l'une tremble sous la couette, l'autre a les yeux plats), avec les
+  légendes « me » et « them » si besoin.
+- **Retrouvailles** : deux plans, « 5 minutes » puis « 5 days » ; dans le
+  second, les deux entrent par les bords (`marche` ou `court` dès 0 s) et
+  finissent en `calin`, cœurs.
 
 ### Les jeux (connais-tu, tu-preferes)
 
@@ -143,16 +164,40 @@ Huit questions ou six dilemmes, au format des exemples. Les questions sont
 simples et personnelles ; la première dit « your partner's », les suivantes
 « their ». Les choix d'un dilemme visent 30 signes. Jamais de score.
 
+- **L'étiquette (`etiquette`) porte l'édition**, en vingt-deux signes au
+  plus : le `theme` du sujet, tourné en nom d'édition (« Food edition »,
+  « Firsts edition », « Hard edition », « Music edition »). C'est elle
+  qu'on voit sur la couverture et dans la grille du compte. L'accroche
+  reste « How well do you know your partner? » (le mot-clé que les gens
+  cherchent), la consigne dit le nombre de questions et les secondes.
+- **« Who's more likely? »** (sujets avec `"mode": "pointe"`) : étiquette
+  « Who's more likely? » ou l'édition du sujet (« Food edition »), accroche
+  « Who's more likely to...? », consigne « Point at your partner. No
+  talking! », huit situations qui commencent par « ...to » et finissent par
+  « ? » (« ...to fall asleep during a movie? »), `fin.question` « Who got
+  pointed at the most? Comment it! », `fin.bouton` « Send this to your
+  partner ». Rien dans la vidéo ne donne la réponse.
+- **Éditions « Hard » et « Impossible »** : des questions qu'on rate
+  (« Their blood type? », « The last song they played? »), c'est fait
+  pour ; la fin reste « How many did you get? Comment your score! ».
+
 ### La phrase tendre
 
 Gabarit `citation`, une phrase de la banque `phrase`, quatre lignes au plus.
 
 ### Légende et hashtags
 
-Voir la ligne éditoriale. Les animations et les phrases ne renvoient jamais
-vers le site dans la légende (le contrôle le refuse) ; les jeux peuvent
-(« More quizzes: link in bio »). Tout en anglais simple, sans tiret
-cadratin.
+Voir la ligne éditoriale, partie « Légendes et hashtags » : la première
+ligne accroche avec un mot-clé naturel (« couple quiz », « my partner »,
+« boyfriend », « girlfriend », « date night »), une ligne de contexte au
+plus, puis **un seul appel**, choisi selon le geste voulu (envoyer pour les
+animations, les minis et les phrases tendres ; commenter pour les jeux et
+les phrases à finir ; enregistrer de temps en temps pour ce qui se garde).
+Les trois posts d'une journée ne portent pas le même appel. Hashtags : la
+liste de la catégorie dans la ligne éditoriale, 3 à 5, `#quizcouple`
+dedans. Les animations et les phrases ne renvoient jamais vers le site dans
+la légende (le contrôle le refuse) ; les jeux peuvent (« More quizzes: link
+in bio »). Tout en anglais simple, sans tiret cadratin.
 
 ## 5. Vérifier, puis regarder
 

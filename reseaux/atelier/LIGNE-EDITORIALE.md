@@ -87,6 +87,19 @@ tendres, et mini messages faits comme les petits chats d'Instagram (un
 personnage, un geste vers la personne qui regarde, une phrase qui s'écrit
 mot à mot : « I saw these flowers... and thought of you »).
 
+Quatre piliers dans la banque (`pilier` du sujet) : `humour`, `tendre`,
+`mini` (un personnage en grand qui parle à la personne qui regarde :
+« thinking of u rn », « this is your sign to text them rn ») et
+`participatif` (une phrase à finir : « finish the sentence: my partner
+always ___ », la réponse se donne en commentaire). Et des mécaniques
+reprises des formats qui marchent en 2026 (voir `REFERENCES.md`) :
+l'échelle de réaction (le visage monte à chaque palier, le plus fort en
+dernier), les routines (« once a day / once a week / once a month », un
+plan par palier), le faux échange de messages (des bulles qui alternent,
+la chute dans la dernière), le contraste (« us: one is always cold, one is
+always hot ») et les retrouvailles (« after 5 minutes apart vs after 5 days
+apart »). Chaque mécanique vient avec ses sujets dans la banque.
+
 - **L'accroche est dans la première seconde** : les personnages sont dans
   l'image dès la première image et bougent tout de suite. Jamais d'image
   vide au début.
@@ -126,6 +139,20 @@ première question dit « your partner's », les suivantes « their ». Pas de
 réponse affichée : la fin dit « How many did you get? Comment your score! ».
 Les mascottes ouvrent le reel en grand et bougent dès la première image.
 La légende peut renvoyer vers le site (« More quizzes: link in bio »).
+
+**Chaque quiz a une édition, et l'édition est sur la couverture** : c'est
+l'étiquette au-dessus de l'accroche (« Food edition », « Hard edition »,
+« Impossible edition », « Childhood edition »), vingt-deux signes au plus.
+Les comptes de quiz qui marchent vivent de ça : on sait ce qu'on va avoir,
+et on cherche les autres éditions. Les éditions « Hard » et « Impossible »
+sont faites pour faire rater, et donc commenter.
+
+**« Who's more likely to... ? », le quiz qui se joue à deux en se montrant
+du doigt** (sujets marqués `mode: pointe`). Même gabarit, l'accroche « Who's
+more likely to...? », la consigne « Point at your partner. No talking! »,
+huit situations qui commencent par « ...to » (« ...to fall asleep during a
+movie? »), et la fin demande « Who got pointed at the most? Comment it! ».
+La vidéo ne donne jamais la réponse : c'est le couple qui rit.
 
 ### `tu-preferes` : Tu préfères (gabarit `tu-preferes`)
 
@@ -171,21 +198,61 @@ sert pas sans raison.
 
 ## Légendes et hashtags
 
-- Première ligne : l'accroche, sans répéter mot pour mot le texte de
-  l'image. Une ou deux lignes de plus au maximum.
-- Un appel simple : « Send this to your partner », « Tag them », « Comment
-  your score! », « A or B? ».
-- 3 à 5 hashtags, `#quizcouple` en premier, puis des hashtags de couple
-  variés (`#couplegoals`, `#couplecomedy`, `#relationshiphumor`,
-  `#lovequotes`, `#cuteanimation`, `#couplequiz`, `#wouldyourather`...).
+Instagram lit la légende et le texte à l'écran comme un moteur de
+recherche, et ce sont les envois et les enregistrements qui font la portée
+d'un reel. La légende sert donc à deux choses : dire de quoi il s'agit avec
+les mots que les gens tapent, et donner envie d'un geste précis.
+
+- **Première ligne : l'accroche**, sans répéter mot pour mot le texte de
+  l'image, et avec un mot-clé posé naturellement (« couple quiz »,
+  « boyfriend », « girlfriend », « my partner », « relationship », « date
+  night », « would you rather »). Une ou deux lignes de plus au maximum.
+- **Un appel, et un seul, choisi pour le geste qu'on veut** :
+  - envoyer, pour les animations, les minis et les phrases tendres :
+    « Send this to your partner », « Send this to them without
+    explaining », « Tag them » ;
+  - commenter, pour les jeux et les phrases à finir : « Comment your
+    score! », « Comment your A and B! », « Finish it in the comments »,
+    « Who got pointed at the most? » ;
+  - enregistrer, de temps en temps, pour ce qui se garde : « Save this for
+    your next date night » (dilemmes, questions).
+  Les trois posts d'une même journée ne portent pas tous le même appel.
+- **3 à 5 hashtags, précis**, par catégorie, `#quizcouple` dans le lot :
+  - animations, coquin, statique : `#couplegoals`, `#relationshiphumor`,
+    `#couplecomedy`, `#cuteanimation`, `#quizcouple` ;
+  - minis et phrases à finir : `#couplequestions`, `#relationshipgoals`,
+    `#couplegoals`, `#quizcouple` ;
+  - connais-tu : `#couplequiz`, `#howwelldoyouknowyourpartner`,
+    `#boyfriendquiz`, `#girlfriendquiz`, `#quizcouple` ;
+  - who's more likely : `#whosmorelikely`, `#couplequiz`,
+    `#couplechallenge`, `#quizcouple` ;
+  - tu préfères : `#wouldyourather`, `#couplequestions`, `#couplequiz`,
+    `#quizcouple` ;
+  - phrases tendres : `#lovequotes`, `#relationshipquotes`,
+    `#couplegoals`, `#quizcouple`.
 - Pas de tiret cadratin, pas de « really », « actually », « in short » dans
   un titre, pas de formules d'IA (triades, renversements, chutes travaillées).
 
 ## Les sujets
 
-`sujets.json` : 150 animations, 15 coquines, 28 statiques, 40 thèmes de
-« Connais-tu », 28 de « Tu préfères », 28 phrases, plus 16 sujets datés de
-Noël et du Nouvel An. La routine prend le premier sujet libre de la
+`sujets.json` : 173 animations (95 d'humour, 47 tendres, 25 minis, 6
+phrases à finir, après l'ajout du 7 octobre 2026), 15 coquines, 28
+statiques, 51 thèmes de « Connais-tu » (dont 8 « Who's more likely? » et 3
+éditions difficiles), 28 de « Tu préfères », 28 phrases, plus 16 sujets
+datés de Noël et du Nouvel An. La routine prend le premier sujet libre de la
 catégorie et écrit son id dans le champ `sujet` du post ; un sujet déjà
 utilisé dans `posts/` n'est jamais repris. Les sujets datés passent avant
 la banque, à leur date et à leur créneau.
+
+## Ce qu'on regarde dans les statistiques
+
+Les relevés à J+7 de l'admin (`statistiques_j7` dans l'état lu par la
+routine) servent à deux choses :
+
+- choisir un peu plus souvent les piliers, les éditions et les mécaniques
+  qui font le plus d'envois et d'enregistrements (ce sont les deux signaux
+  qui comptent pour la portée, avant les j'aime) ;
+- surveiller la portée par post. Trois reels par jour, c'est plus que ce
+  que les guides conseillent à un compte qui démarre ; si la portée par post
+  baisse nettement après deux semaines, on passe à deux par jour, et c'est
+  Thomas qui décide.
