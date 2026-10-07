@@ -55,7 +55,13 @@ Pour chaque créneau à remplir, dans l'ordre des dates :
    c'est lui ;
 2. sinon une idée de Thomas qui va avec la catégorie ;
 3. sinon le premier sujet de la catégorie qui n'apparaît dans aucun post de
-   `posts/` (champ `sujet`).
+   `posts/` (champ `sujet`) ;
+4. sinon (la banque de la catégorie est épuisée, elle couvre treize
+   semaines) tu inventes un sujet dans le même esprit que ceux de la
+   banque, avec un identifiant neuf (`pov-274`, `connais-tu-40`...), sans
+   reprendre une situation vue dans `recents_et_prevus` ni dans les
+   soixante derniers posts de `posts/`. La publication ne s'arrête jamais
+   faute de sujet.
 
 **Au plus 12 posts par passage**, les créneaux les plus proches d'abord.
 
