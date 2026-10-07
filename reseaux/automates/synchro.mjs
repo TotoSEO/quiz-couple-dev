@@ -12,9 +12,27 @@ import { controlerPost } from './lib/controle.mjs';
 import { aujourdhui, categorieAttendue } from './lib/calendrier.mjs';
 
 const MODIFIABLES = ['a_rendre', 'rendu', 'echec'];
+// Un rendu en échec est retenté par les synchros suivantes, trois fois en
+// tout ; au-delà, la déclinaison reste en échec et l'atelier la corrige.
+const ESSAIS_RENDU_MAX = 3;
+
+// Même contenu à l'ordre des clés près : PostgREST rend le jsonb avec ses
+// clés triées, pas dans l'ordre du fichier.
+const trier = (x) => (Array.isArray(x) ? x.map(trier) : x && typeof x === 'object' ? Object.fromEntries(Object.keys(x).sort().map((k) => [k, trier(x[k])])) : x);
+const canon = (x) => JSON.stringify(trier(x) ?? null);
+// Le son tendance d'un reel est choisi par la publication et écrit dans la
+// recette (id, titre, artiste) : ce n'est pas un changement de l'atelier.
+const sansChoixDeSon = (r) => {
+  if (!r?.son?.id) return r;
+  const { son, ...reste } = r;
+  return son.recherche ? { ...reste, son: { recherche: son.recherche } } : reste;
+};
+const memeContenu = (a, b) =>
+  canon(sansChoixDeSon(a.recette)) === canon(sansChoixDeSon(b.recette)) && (a.legende || '') === (b.legende || '') && canon(a.hashtags || []) === canon(b.hashtags || []);
+const memeInstant = (a, b) => Date.parse(a) === Date.parse(b);
 
 export async function synchroniser(base, posts, { maintenant = new Date() } = {}) {
-  const bilan = { ecrits: 0, refuses: 0, ignores: 0 };
+  const bilan = { ecrits: 0, inchanges: 0, refuses: 0, ignores: 0 };
   const melange = await base.reglage('melange');
   const comptes = await base.select('social_comptes', 'select=langue,fuseau');
   for (const { fichier, post } of posts) {
@@ -46,8 +64,9 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
       [{ jour: post.jour, creneau: post.creneau, format: post.format, gabarit: post.gabarit, categorie: post.categorie ?? null, theme: post.theme ?? null, statut: 'valide', notes: post.notes ?? {} }],
       { conflit: 'jour,creneau' },
     );
+    let change = false;
     for (const [langue, v] of Object.entries(post.variantes)) {
-      const [existante] = await base.select('social_variantes', `select=id,statut&post_id=eq.${ligne.id}&langue=eq.${langue}`);
+      const [existante] = await base.select('social_variantes', `select=id,statut,recette,legende,hashtags,publier_a,essais&post_id=eq.${ligne.id}&langue=eq.${langue}`);
       const valeurs = { recette: v.recette, legende: v.legende, hashtags: v.hashtags };
       // Une heure de publication écrite dans le post remplace la minute tirée
       // au sort dans le créneau (déclencheur social_variante_heure, qui ne
@@ -56,9 +75,22 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
       if (post.publier_a) valeurs.publier_a = new Date(post.publier_a).toISOString();
       if (!existante) {
         await base.insert('social_variantes', [{ post_id: ligne.id, langue, ...valeurs }]);
+        change = true;
       } else if (MODIFIABLES.includes(existante.statut)) {
-        // la recette change : il faut refaire le rendu
-        await base.update('social_variantes', `id=eq.${existante.id}`, { ...valeurs, statut: 'a_rendre', fichiers: {}, erreur: null, essais: 0 });
+        const aRetenter = existante.statut === 'echec' && (existante.essais || 0) < ESSAIS_RENDU_MAX;
+        if (memeContenu(existante, v) && !aRetenter) {
+          // Le fichier n'a pas changé : le rendu reste bon. Jusqu'au 7 octobre
+          // 2026, chaque synchro remettait toutes les déclinaisons en a_rendre
+          // et le rendu refaisait chaque heure tous les posts des 48 h à venir.
+          if (valeurs.publier_a && !memeInstant(valeurs.publier_a, existante.publier_a)) {
+            await base.update('social_variantes', `id=eq.${existante.id}`, { publier_a: valeurs.publier_a });
+            change = true;
+          }
+          continue;
+        }
+        // la recette change (ou un rendu en échec est retenté) : il faut refaire le rendu
+        await base.update('social_variantes', `id=eq.${existante.id}`, { ...valeurs, statut: 'a_rendre', fichiers: {}, erreur: null, essais: aRetenter ? existante.essais || 0 : 0 });
+        change = true;
       } else {
         await base.journal('alerte', 'synchro', `${fichier} (${langue}) déjà ${existante.statut}, laissé tel quel`, null, existante.id);
         continue;
@@ -66,9 +98,10 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
     }
     // une idée de Thomas reprise par ce post n'est plus proposée
     if (post.idee_id) await base.update('social_idees', `id=eq.${post.idee_id}`, { utilisee_le: new Date().toISOString(), post_id: ligne.id });
-    bilan.ecrits++;
+    if (change) bilan.ecrits++;
+    else bilan.inchanges++;
   }
-  await base.journal('info', 'synchro', `${bilan.ecrits} posts écrits, ${bilan.refuses} refusés, ${bilan.ignores} passés ignorés`);
+  await base.journal('info', 'synchro', `${bilan.ecrits} posts écrits, ${bilan.inchanges} inchangés, ${bilan.refuses} refusés, ${bilan.ignores} passés ignorés`);
   return bilan;
 }
 

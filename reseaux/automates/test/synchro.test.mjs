@@ -31,7 +31,7 @@ const postQuiz = (jour = '2026-10-12', creneau = 'matin') => ({
 test('un post valide est écrit, sa déclinaison attend le rendu', async () => {
   const b = base();
   const bilan = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz() }], { maintenant: MAINTENANT });
-  assert.deepEqual(bilan, { ecrits: 1, refuses: 0, ignores: 0 });
+  assert.deepEqual(bilan, { ecrits: 1, inchanges: 0, refuses: 0, ignores: 0 });
   assert.equal(b.tables.social_posts[0].statut, 'valide');
   assert.equal(b.tables.social_variantes.length, 1);
   assert.equal(b.tables.social_variantes[0].statut, 'a_rendre');
@@ -154,4 +154,68 @@ test('une heure de publication sans fuseau ou illisible est refusée', async () 
   const bilan = await synchroniser(b, [{ fichier: 'a.json', post: p }], { maintenant: MAINTENANT });
   assert.equal(bilan.refuses, 1);
   assert.match(JSON.stringify(b.tables.social_journal), /publier_a invalide/);
+});
+
+// Les clés d'un jsonb reviennent triées de PostgREST : on simule ce désordre.
+const clesTriees = (x) => (Array.isArray(x) ? x.map(clesTriees) : x && typeof x === 'object' ? Object.fromEntries(Object.keys(x).sort().map((k) => [k, clesTriees(x[k])])) : x);
+
+test('relire le même fichier ne refait pas le rendu (clés du jsonb dans un autre ordre, son choisi par la publication)', async () => {
+  const b = base();
+  await synchroniser(b, [{ fichier: 'a.json', post: postQuiz() }], { maintenant: MAINTENANT });
+  const v = b.tables.social_variantes[0];
+  v.statut = 'rendu';
+  v.fichiers = { reel: 'en/x.mp4', duree: 12 };
+  v.recette = { ...clesTriees(v.recette), son: { id: '42', titre: 'Soft', artiste: 'X' } };
+  const bilan = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz() }], { maintenant: MAINTENANT });
+  assert.deepEqual(bilan, { ecrits: 0, inchanges: 1, refuses: 0, ignores: 0 });
+  assert.equal(b.tables.social_variantes[0].statut, 'rendu');
+  assert.deepEqual(b.tables.social_variantes[0].fichiers, { reel: 'en/x.mp4', duree: 12 });
+});
+
+test('un fichier modifié refait le rendu', async () => {
+  const b = base();
+  await synchroniser(b, [{ fichier: 'a.json', post: postQuiz() }], { maintenant: MAINTENANT });
+  const v = b.tables.social_variantes[0];
+  v.statut = 'rendu';
+  v.fichiers = { reel: 'en/x.mp4' };
+  const p = postQuiz();
+  p.variantes.en.legende = 'He said he was not hungry...';
+  const bilan = await synchroniser(b, [{ fichier: 'a.json', post: p }], { maintenant: MAINTENANT });
+  assert.equal(bilan.ecrits, 1);
+  assert.equal(b.tables.social_variantes[0].statut, 'a_rendre');
+  assert.deepEqual(b.tables.social_variantes[0].fichiers, {});
+  assert.equal(b.tables.social_variantes[0].legende, 'He said he was not hungry...');
+});
+
+test('un rendu en échec est retenté trois fois, puis laissé à l\'atelier', async () => {
+  const b = base();
+  await synchroniser(b, [{ fichier: 'a.json', post: postQuiz() }], { maintenant: MAINTENANT });
+  const v = b.tables.social_variantes[0];
+  v.statut = 'echec';
+  v.essais = 1;
+  await synchroniser(b, [{ fichier: 'a.json', post: postQuiz() }], { maintenant: MAINTENANT });
+  assert.equal(b.tables.social_variantes[0].statut, 'a_rendre');
+  assert.equal(b.tables.social_variantes[0].essais, 1);
+  b.tables.social_variantes[0].statut = 'echec';
+  b.tables.social_variantes[0].essais = 3;
+  const bilan = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz() }], { maintenant: MAINTENANT });
+  assert.equal(bilan.inchanges, 1);
+  assert.equal(b.tables.social_variantes[0].statut, 'echec');
+});
+
+test("une heure explicite qui change est posée sans refaire le rendu", async () => {
+  const b = base();
+  await synchroniser(b, [{ fichier: 'a.json', post: postQuiz() }], { maintenant: MAINTENANT });
+  const v = b.tables.social_variantes[0];
+  v.statut = 'rendu';
+  v.fichiers = { reel: 'en/x.mp4' };
+  v.publier_a = '2026-10-12T05:30:00+00:00';
+  const p = postQuiz();
+  p.publier_a = '2026-10-12T07:12:00+02:00';
+  const bilan = await synchroniser(b, [{ fichier: 'a.json', post: p }], { maintenant: MAINTENANT });
+  assert.equal(bilan.ecrits, 1);
+  assert.equal(b.tables.social_variantes[0].statut, 'rendu');
+  assert.equal(b.tables.social_variantes[0].publier_a, '2026-10-12T05:12:00.000Z');
+  const encore = await synchroniser(b, [{ fichier: 'a.json', post: p }], { maintenant: MAINTENANT });
+  assert.equal(encore.inchanges, 1);
 });
