@@ -219,3 +219,27 @@ test("une heure explicite qui change est posée sans refaire le rendu", async ()
   const encore = await synchroniser(b, [{ fichier: 'a.json', post: p }], { maintenant: MAINTENANT });
   assert.equal(encore.inchanges, 1);
 });
+
+test("une ambiance de son posée ou changée se pose sans refaire le rendu ; une ambiance inconnue est refusée", async () => {
+  const b = base();
+  const p = postQuiz();
+  await synchroniser(b, [{ fichier: 'a.json', post: p }], { maintenant: MAINTENANT });
+  const v = b.tables.social_variantes[0];
+  // rendu fait, et la publication a déjà choisi un son pour l'ancienne demande
+  Object.assign(v, { statut: 'rendu', fichiers: { reel: 'x/reel.mp4' }, recette: { ...v.recette, son: { id: 'S1', titre: 'Song', ambiance: 'jeu', recherche: 'fun game show' } } });
+  const p2 = structuredClone(p);
+  p2.variantes.en.recette.son = { ambiance: 'tendre' };
+  const bilan = await synchroniser(b, [{ fichier: 'a.json', post: p2 }], { maintenant: MAINTENANT });
+  assert.equal(bilan.ecrits, 1);
+  assert.equal(v.statut, 'rendu', 'le rendu reste bon');
+  assert.deepEqual(v.recette.son, { ambiance: 'tendre' }, 'le choix fait pour l\'ancienne demande est oublié');
+  // relire le même fichier ne change plus rien
+  const encore = await synchroniser(b, [{ fichier: 'a.json', post: p2 }], { maintenant: MAINTENANT });
+  assert.equal(encore.inchanges, 1);
+  // une ambiance hors liste est refusée
+  const p3 = structuredClone(p);
+  p3.variantes.en.recette.son = { ambiance: 'disco' };
+  const refus = await synchroniser(b, [{ fichier: 'a.json', post: p3 }], { maintenant: MAINTENANT });
+  assert.equal(refus.refuses, 1);
+  assert.ok(b.tables.social_journal.some((j) => j.details && j.details.fautes.some((f) => /ambiance de son inconnue/.test(f))));
+});

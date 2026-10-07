@@ -55,3 +55,27 @@ test('les sons récents du compte se lisent dans les recettes, du plus récent a
   });
   assert.deepEqual(await sonsRecents(b, 'en'), ['8', '7']);
 });
+
+test("l'ambiance vient de la recette, sinon de la catégorie, sinon des tendances", async () => {
+  const { ambianceDuReel, requetePour, AMBIANCES_SON } = await import('../lib/son.mjs');
+  assert.equal(ambianceDuReel({ son: { ambiance: 'triste' } }, 'pov'), 'triste');
+  assert.equal(ambianceDuReel({}, 'pov'), 'drole');
+  assert.equal(ambianceDuReel({}, 'statique'), 'tendre');
+  assert.equal(ambianceDuReel({}, 'phrase'), 'tendre');
+  assert.equal(ambianceDuReel({}, 'coquin'), 'coquin');
+  assert.equal(ambianceDuReel({}, 'connais-tu'), 'jeu');
+  assert.equal(ambianceDuReel({}, 'tu-preferes'), 'jeu');
+  assert.equal(ambianceDuReel({ son: { ambiance: 'inconnue' } }, 'carrousel'), 'tendance');
+  assert.equal(ambianceDuReel(null, undefined), 'tendance');
+  // chaque ambiance a ses mots, « tendance » n'en a pas
+  for (const [a, mots] of Object.entries(AMBIANCES_SON)) {
+    const q = requetePour(a, 'v1');
+    if (a === 'tendance') assert.equal(q, '');
+    else assert.ok(mots.includes(q), `${a} : ${q}`);
+  }
+  // reproductible par variante, et la liste tourne d'une variante à l'autre
+  assert.equal(requetePour('tendre', 'v-42'), requetePour('tendre', 'v-42'));
+  const vues = new Set(Array.from({ length: 40 }, (_, i) => requetePour('tendre', `v${i}`)));
+  assert.ok(vues.size >= 3, [...vues].join(', '));
+  assert.equal(requetePour('rien', 'v'), '');
+});
