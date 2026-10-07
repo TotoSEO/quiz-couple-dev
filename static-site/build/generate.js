@@ -13,7 +13,7 @@ import { minify as minifyJs } from 'terser';
 import CleanCSS from 'clean-css';
 import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomDuPaquet, ecrisPaquets, TABLE_MOTEURS } from './moteurs.js';
 import {
-  BASE_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
+  BASE_URL, INSTAGRAM_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, FAMILLES_NAV, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
@@ -854,6 +854,7 @@ async function generatePage(routeKey, lang) {
       logo: { '@type': 'ImageObject', url: `${BASE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
       image: `${BASE_URL}/og-image.webp`,
       description: description,
+      sameAs: [INSTAGRAM_URL],
     });
     // AggregateRating, only include if we have real review data.
     // `url` vaut l'adresse de la page décrite, pas la racine du site : les cinq
@@ -990,6 +991,7 @@ async function generatePage(routeKey, lang) {
     // Helpers
     getLocalizedUrl,
     famillesNav: FAMILLES_NAV,
+    instagramUrl: INSTAGRAM_URL,
     getLocalizedPath,
     escapeHtml,
     JSON,
@@ -1724,6 +1726,7 @@ async function generateBlogArticle(articleMeta, lang) {
           name: 'Quiz Couple',
           url: BASE_URL,
           logo: { '@type': 'ImageObject', url: `${BASE_URL}/apple-touch-icon.png`, width: 180, height: 180 },
+          sameAs: [INSTAGRAM_URL],
         },
         mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
       };
@@ -1768,6 +1771,7 @@ async function generateBlogArticle(articleMeta, lang) {
     translations,
     getLocalizedUrl,
     famillesNav: FAMILLES_NAV,
+    instagramUrl: INSTAGRAM_URL,
     getLocalizedPath,
     escapeHtml,
     JSON,
@@ -1855,6 +1859,7 @@ async function generate404Pages() {
       translations,
       getLocalizedUrl,
       famillesNav: FAMILLES_NAV,
+      instagramUrl: INSTAGRAM_URL,
       getLocalizedPath,
       escapeHtml,
       JSON,

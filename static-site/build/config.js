@@ -3,6 +3,8 @@
  */
 
 export const BASE_URL = 'https://quiz-couple.com';
+// Le compte Instagram du site : menu, pied de page, JSON-LD (sameAs), merci après un avis.
+export const INSTAGRAM_URL = 'https://www.instagram.com/quiz_couple_official/';
 export const LANGUAGES = ['fr', 'en', 'es', 'de', 'it'];
 export const DEFAULT_LANG = 'fr';
 
