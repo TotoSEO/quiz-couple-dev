@@ -2,7 +2,7 @@ import React from 'react';
 import { AbsoluteFill, Composition, Freeze, Still } from 'remotion';
 import { FPS } from './charte/charte';
 import { typographier } from './charte/libelles';
-import { Bruitages, Musique } from './charte/Son';
+import { Ambiances, Bruitages, Musique } from './charte/Son';
 import { Citation } from './gabarits/Citation';
 import { Jeu } from './gabarits/QuizChrono';
 import { Pov } from './gabarits/Pov';
@@ -30,6 +30,7 @@ const Reel: React.FC<PropsReel> = ({ recette: brute, plan, verification, silenci
         <>
           {p.musique && <Musique fichier={p.musique} debut={recette.musiqueDebut} duree={p.duree} sons={p.sons} />}
           <Bruitages sons={p.sons} />
+          {p.ambiances && p.ambiances.length > 0 && <Ambiances ambiances={p.ambiances} />}
         </>
       )}
     </>

@@ -3,7 +3,7 @@
 // React : le studio les appelle à chaque image, le contrôle les rejoue.
 import type { OptionsMascotte } from '../../../charte/mascottes.js';
 import vocabulaire from './vocabulaire.json';
-import type { ClePov, Geste, NomEffet, NomObjet, PersoPov, PlanPov, Qui, SecoussePov } from './scenario';
+import type { ClePov, Geste, Moment, NomEffet, NomObjet, PersoPov, PlanPov, Qui, SecoussePov } from './scenario';
 
 export const TAILLE = 1.6;
 const PI2 = Math.PI * 2;
@@ -31,8 +31,17 @@ const ressort = (p: number) => {
 
 export type Mode = 'debout' | 'couche' | 'taille' | 'assis' | 'assis-jambes';
 type Spot = { x: number; sol?: number; mode?: Mode; ligne?: number };
-type Decor = { taille: number; spots: Record<string, Spot> };
-const DECORS = vocabulaire.decors as unknown as Record<string, Decor>;
+type Decor = { taille: number; spots: Record<string, Spot>; ambiance?: string | { jour: string; nuit: string } };
+export const DECORS = vocabulaire.decors as unknown as Record<string, Decor>;
+
+// Le lit sonore d'un décor à un moment : les oiseaux le jour, les grillons
+// la nuit (le soir compte comme le jour), rien dans une pièce fermée.
+export const ambianceDecor = (decor: string, moment: Moment | undefined): string | undefined => {
+  const a = DECORS[decor]?.ambiance;
+  if (!a) return undefined;
+  if (typeof a === 'string') return a;
+  return moment === 'nuit' ? a.nuit : a.jour;
+};
 
 // Un personnage placé : son spot résolu, sa taille, sa couche.
 export type Place = { qui: Qui; x: number; sol: number; taille: number; couche: 'derriere' | 'devant'; mode: Mode; ligne: number; sens: 1 | -1; perso: PersoPov };

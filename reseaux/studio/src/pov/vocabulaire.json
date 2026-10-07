@@ -1,5 +1,5 @@
 {
-  "note": "Tout ce qu'un scénario d'animation peut nommer. Le studio sait dessiner et animer ces mots-là, rien d'autre ; le contrôle (reseaux/automates/lib/pov.mjs) refuse le reste. Coordonnées en pixels du canevas (1080 x 1920). Un spot dit où se tient un personnage : debout (sol = ligne des pieds), couche (dans le lit, la couette arrive sous la bouche, les mains dépassent), taille (caché à partir de la taille par un plan de travail ou une table), assis (sur le coussin d'un canapé, jambes cachées), assis-jambes (sur un banc, jambes qui pendent). ligne = le bord qui cache ou sur lequel on s'assoit. taille = taille des personnages dans ce décor.",
+  "note": "Tout ce qu'un scénario d'animation peut nommer. Le studio sait dessiner et animer ces mots-là, rien d'autre ; le contrôle (reseaux/automates/lib/pov.mjs) refuse le reste. Coordonnées en pixels du canevas (1080 x 1920). Un spot dit où se tient un personnage : debout (sol = ligne des pieds), couche (dans le lit, la couette arrive sous la bouche, les mains dépassent), taille (caché à partir de la taille par un plan de travail ou une table), assis (sur le coussin d'un canapé, jambes cachées), assis-jambes (sur un banc, jambes qui pendent). ligne = le bord qui cache ou sur lequel on s'assoit. taille = taille des personnages dans ce décor. ambiance = le lit sonore du décor (un son de « ambiances »), ou { jour, nuit } quand il change avec le moment ; un plan peut le remplacer par son champ ambiance (ou « aucune »).",
   "decors": {
     "uni": {
       "description": "Le papier seul, rien d'autre. Pour un message tout simple, comme les petits chats d'Instagram.",
@@ -146,7 +146,8 @@
           "ligne": 1250
         }
       },
-      "taille": 1.4
+      "taille": 1.4,
+      "ambiance": "brouhaha"
     },
     "dehors": {
       "description": "Le ciel (il suit le moment), un sol d'herbe, un arbre, un banc, des nuages qui passent.",
@@ -174,7 +175,11 @@
           "ligne": 1244
         }
       },
-      "taille": 1.35
+      "taille": 1.35,
+      "ambiance": {
+        "jour": "oiseaux",
+        "nuit": "grillons"
+      }
     },
     "noel": {
       "description": "Un intérieur de Noël : sapin décoré à droite avec ses cadeaux, guirlande au mur, fenêtre où il neige.",
@@ -193,6 +198,156 @@
         }
       },
       "taille": 1.4
+    },
+    "foret": {
+      "description": "Une forêt : de grands troncs sur les bords, des arbres plus clairs au fond, le ciel entre les cimes (il suit le moment), un sentier, des fougères et des champignons, un tronc couché sur lequel on s'assoit (jambes qui pendent). Le jour, des rayons de lumière ; la nuit, des lucioles. On y marche, on s'y assoit, on s'y perd, on s'y retrouve.",
+      "spots": {
+        "gauche": {
+          "x": 300,
+          "sol": 1420
+        },
+        "centre": {
+          "x": 540,
+          "sol": 1420
+        },
+        "droite": {
+          "x": 780,
+          "sol": 1420
+        },
+        "tronc-gauche": {
+          "x": 445,
+          "mode": "assis-jambes",
+          "ligne": 1244
+        },
+        "tronc-droite": {
+          "x": 675,
+          "mode": "assis-jambes",
+          "ligne": 1244
+        }
+      },
+      "taille": 1.35,
+      "ambiance": {
+        "jour": "foret",
+        "nuit": "grillons"
+      }
+    },
+    "rue": {
+      "description": "Une rue de ville : trois façades d'immeubles aux fenêtres allumées le soir, une porte et un auvent rayé au milieu, un lampadaire à gauche (allumé la nuit), un panneau à droite, le trottoir où l'on se tient, et la route en bas où une petite voiture passe de temps en temps. Pour attendre quelqu'un, se retrouver, marcher ensemble, s'embrasser sous le lampadaire.",
+      "spots": {
+        "gauche": {
+          "x": 300,
+          "sol": 1420
+        },
+        "centre": {
+          "x": 540,
+          "sol": 1420
+        },
+        "droite": {
+          "x": 780,
+          "sol": 1420
+        },
+        "lampadaire": {
+          "x": 260,
+          "sol": 1420
+        },
+        "porte": {
+          "x": 560,
+          "sol": 1420
+        }
+      },
+      "taille": 1.35,
+      "ambiance": {
+        "jour": "circulation",
+        "nuit": "rue-nuit"
+      }
+    },
+    "cafe": {
+      "description": "Un café : une étagère de tasses à gauche, une ardoise au mur à droite, le comptoir du fond avec sa machine, une lampe suspendue, et devant, une table ronde pour deux avec deux tasses et une petite fleur. Assis à la table (table-gauche, table-droite), on voit les personnages jusqu'à la poitrine ; devant-gauche et devant-droite sont debout devant la table. Premier rendez-vous, pause, retrouvailles, dispute à voix basse.",
+      "spots": {
+        "table-gauche": {
+          "x": 320,
+          "mode": "taille",
+          "ligne": 1250
+        },
+        "table-droite": {
+          "x": 760,
+          "mode": "taille",
+          "ligne": 1250
+        },
+        "devant-gauche": {
+          "x": 260,
+          "sol": 1490
+        },
+        "devant-droite": {
+          "x": 820,
+          "sol": 1490
+        }
+      },
+      "taille": 1.4,
+      "ambiance": "brouhaha"
+    },
+    "plage": {
+      "description": "Une plage : le ciel (il suit le moment), la mer avec ses vagues qui avancent et un voilier au loin, le sable, un parasol rayé à gauche, un château de sable et des coquillages à droite. Debout sur le sable, ou assis dedans (sable-gauche, sable-droite : une petite dune cache les jambes). Vacances, coucher de soleil, se courir après, s'enterrer les pieds.",
+      "spots": {
+        "gauche": {
+          "x": 300,
+          "sol": 1430
+        },
+        "centre": {
+          "x": 540,
+          "sol": 1430
+        },
+        "droite": {
+          "x": 780,
+          "sol": 1430
+        },
+        "sable-gauche": {
+          "x": 420,
+          "mode": "assis",
+          "ligne": 1262
+        },
+        "sable-droite": {
+          "x": 660,
+          "mode": "assis",
+          "ligne": 1262
+        }
+      },
+      "taille": 1.35,
+      "ambiance": "vagues"
+    },
+    "voiture": {
+      "description": "L'intérieur d'une voiture vu depuis le pare-brise : les deux sièges avec leurs appuie-tête, la lunette arrière où le paysage défile (ciel du moment, arbres qui passent), le rétroviseur avec un petit sapin qui se balance, et devant, le tableau de bord avec le volant à gauche (volant) et le siège passager à droite (passager). On voit les personnages jusqu'à la taille ; ils ne marchent pas. Road trip, embouteillage, celui qui chante, celui qui dort.",
+      "spots": {
+        "volant": {
+          "x": 360,
+          "mode": "taille",
+          "ligne": 1250
+        },
+        "passager": {
+          "x": 720,
+          "mode": "taille",
+          "ligne": 1250
+        }
+      },
+      "taille": 1.3,
+      "ambiance": "moteur"
+    },
+    "cinema": {
+      "description": "Une salle de cinéma dans le noir, vue depuis l'écran : la fenêtre du projecteur et son faisceau qui tremble, des rangées de fauteuils derrière, les lumières de l'allée, et devant, les deux fauteuils où l'on est assis (fauteuil-gauche, fauteuil-droite), avec les accoudoirs. Toujours sombre, quel que soit le moment. Celui qui s'endort, celui qui pleure au film, le pop-corn qu'on se dispute, le bisou dans le noir.",
+      "spots": {
+        "fauteuil-gauche": {
+          "x": 400,
+          "mode": "assis",
+          "ligne": 1262
+        },
+        "fauteuil-droite": {
+          "x": 680,
+          "mode": "assis",
+          "ligne": 1262
+        }
+      },
+      "taille": 1.4,
+      "ambiance": "cinema"
     }
   },
   "moments": [
@@ -563,7 +718,59 @@
     "intro",
     "reponse",
     "revelation",
-    "tic"
+    "tic",
+    "pleure",
+    "rire",
+    "cri",
+    "sursaut",
+    "ronfle",
+    "baille",
+    "soupir",
+    "grogne",
+    "croque",
+    "aspire",
+    "miam",
+    "eternue",
+    "aie",
+    "applaudit",
+    "smack",
+    "boing",
+    "splat",
+    "trombone",
+    "tambour",
+    "notification",
+    "sonne",
+    "reveil",
+    "pose",
+    "tinte",
+    "portiere",
+    "clochette",
+    "sonnette",
+    "klaxon",
+    "demarre",
+    "pas-herbe",
+    "oiseau",
+    "grillon",
+    "hibou",
+    "tonnerre",
+    "battement",
+    "coussin",
+    "tape"
+  ],
+  "ambiances": [
+    "oiseaux",
+    "foret",
+    "grillons",
+    "circulation",
+    "rue-nuit",
+    "vagues",
+    "brouhaha",
+    "pluie",
+    "vent",
+    "moteur",
+    "cinema",
+    "feu",
+    "horloge"
   ],
   "transitions": [
     "coupe",

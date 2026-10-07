@@ -50,6 +50,15 @@ jobs:
           restore-keys: musiques-
       - name: Musiques
         run: cd reseaux/studio && node scripts/musiques.mjs
+      # bruitages Mixkit (réactions des mascottes, ambiances des décors) :
+      # même principe, un cache tant que la bibliothèque ne change pas
+      - uses: actions/cache@v4
+        with:
+          path: reseaux/studio/public/sons/mx-*.mp3
+          key: bruitages-${{ hashFiles('reseaux/studio/public/sons/bibliotheque.json') }}
+          restore-keys: bruitages-
+      - name: Bruitages
+        run: cd reseaux/studio && node scripts/sons.mjs
       - name: Synchro
         if: steps.atelier.outputs.present == 'true'
         run: node reseaux/automates/synchro.mjs atelier/reseaux/atelier/posts

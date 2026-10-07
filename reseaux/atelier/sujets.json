@@ -1,5 +1,5 @@
 {
-  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine.",
+  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau.",
   "pov": [
     {
       "id": "pov-001",
@@ -24,7 +24,7 @@
     {
       "id": "pov-005",
       "pilier": "humour",
-      "idee": "POV: deciding where to eat | mur : bulles « Where do you want to eat? » « I don't know, you pick » en boucle, les deux de plus en plus plats, « ? » au-dessus des têtes"
+      "idee": "POV: deciding where to eat | rue, soir : les deux marchent côte à côte, s'arrêtent devant la porte (un restaurant), « ? » au-dessus des deux, repartent, s'arrêtent encore, légende « 1 hour later » sous le lampadaire allumé, yeux plats ; aucune bulle, la boucle se voit"
     },
     {
       "id": "pov-006",
@@ -49,7 +49,7 @@
     {
       "id": "pov-010",
       "pilier": "humour",
-      "idee": "POV: they laugh at their own joke | mur : le violet rit aux éclats (bulle « Get it? »), la rose a les yeux plats, puis finit par rire aussi"
+      "idee": "POV: he laughs at his own joke | cafe : le violet rit aux éclats tout seul (rit, le corps secoué), la rose yeux plats boit sa tasse et le regarde, il rit encore plus, elle finit par rire aussi ; aucune bulle, la blague ne se lit pas, c'est la réaction qui fait le reel"
     },
     {
       "id": "pov-011",
@@ -84,7 +84,7 @@
     {
       "id": "pov-017",
       "pilier": "humour",
-      "idee": "POV: you miss them after 5 minutes | mur : la rose seule, boude, regarde à gauche, à droite ; le violet revient, elle saute"
+      "idee": "POV: you miss them after 5 minutes | cafe : la rose seule à la table, soupire, regarde à gauche, à droite, légende « 5 minutes later », le violet revient avec une tasse (clochette de la porte), elle saute de joie"
     },
     {
       "id": "pov-018",
@@ -114,7 +114,7 @@
     {
       "id": "pov-023",
       "pilier": "humour",
-      "idee": "POV: they're getting ready \"in 2 minutes\" | mur : la rose tape du pied (tremble), légendes « 2 min later », « 40 min later », le violet arrive avec un bonnet"
+      "idee": "POV: they're getting ready \"in 2 minutes\" | rue, soir : la rose attend sous le lampadaire, tape du pied (tremble), légendes « 2 min later », « 40 min later » (nuit, lampadaire allumé), le violet arrive en courant avec un bonnet"
     },
     {
       "id": "pov-024",
@@ -129,12 +129,12 @@
     {
       "id": "pov-026",
       "pilier": "tendre",
-      "idee": "POV: watching the sunset together | dehors, soir : les deux sur le banc, jambes qui pendent, câlin, la caméra s'approche lentement"
+      "idee": "POV: watching the sunset together | plage, soir : assis dans le sable, la rose pose la tête contre le violet (câlin), les vagues avancent, la caméra s'approche lentement"
     },
     {
       "id": "pov-027",
       "pilier": "humour",
-      "idee": "POV: \"who ate my chocolate?\" | mur : la rose cherche (« ? »), le violet regarde ailleurs, goutte de gêne, il rit"
+      "idee": "POV: \"who ate my chocolate?\" | cuisine : la rose cherche derrière le comptoir (« ? »), le violet regarde ailleurs, goutte de gêne, il rit"
     },
     {
       "id": "pov-028",
@@ -149,7 +149,7 @@
     {
       "id": "pov-030",
       "pilier": "tendre",
-      "idee": "POV: the first date nerves | table : les deux assis, gouttes de gêne, ils se regardent, rougissent, cœurs"
+      "idee": "POV: the first date nerves | cafe : les deux assis à la table, gouttes de gêne, chacun regarde ailleurs, puis ils se regardent, rougissent, cœurs"
     },
     {
       "id": "pov-031",
@@ -179,7 +179,7 @@
     {
       "id": "pov-036",
       "pilier": "humour",
-      "idee": "POV: arguing about who said \"love you\" first | mur : bulles « I said it first! » « No, me! », puis bisou"
+      "idee": "POV: arguing about who said \"love you\" first | plage, soir : assis dans le sable, chacun se désigne du bras, l'autre grogne (fache court), légende « who said it first? », puis bisou ; une bulle au plus"
     },
     {
       "id": "pov-037",
@@ -194,7 +194,7 @@
     {
       "id": "pov-039",
       "pilier": "humour",
-      "idee": "POV: they fall asleep during the movie they picked | salon, nuit : le violet dort (Z), la rose regarde la caméra, yeux plats"
+      "idee": "POV: they fall asleep during the movie they picked | cinema : le violet dort (Z, ronfle), le pop-corn penche, la rose regarde la caméra, yeux plats"
     },
     {
       "id": "pov-040",
@@ -219,7 +219,7 @@
     {
       "id": "pov-044",
       "pilier": "humour",
-      "idee": "POV: the \"I'm cold\" hint | dehors, soir : la rose tremble, le violet lui donne... un câlin, cœurs"
+      "idee": "POV: the \"I'm cold\" hint | foret, soir : la rose tremble sur le tronc, regarde le violet, il lui donne... un câlin, cœurs"
     },
     {
       "id": "pov-045",
@@ -234,7 +234,7 @@
     {
       "id": "pov-047",
       "pilier": "humour",
-      "idee": "POV: the dramatic goodbye before work | mur : le violet part (marche vers la droite), revient en courant, câlin, repart, revient"
+      "idee": "POV: the dramatic goodbye before work | rue, matin : la rose sur le pas de la porte, le violet part (marche vers la droite), revient en courant, câlin, repart, revient encore"
     },
     {
       "id": "pov-048",
@@ -254,7 +254,7 @@
     {
       "id": "pov-051",
       "pilier": "humour",
-      "idee": "POV: \"we're only buying milk\" | mur : légendes « The plan », « What happened », les deux avec cadeau, popcorn, plante"
+      "idee": "POV: \"we're only buying milk\" | rue : légende « The plan » (les deux marchent légers vers la droite), coupe, légende « What happened » (les deux reviennent chargés : cadeau, popcorn, plante)"
     },
     {
       "id": "pov-052",
@@ -269,7 +269,7 @@
     {
       "id": "pov-054",
       "pilier": "humour",
-      "idee": "POV: the cutest fight ever | mur : les deux boudent dos à dos (tourne dos), puis se retournent et se font un câlin"
+      "idee": "POV: the cutest fight ever | voiture : les deux boudent, tournés chacun vers sa vitre (tourne dos), le sapin du rétroviseur se balance, puis ils se retournent en même temps, rient, bisou"
     },
     {
       "id": "pov-055",
@@ -309,12 +309,12 @@
     {
       "id": "pov-062",
       "pilier": "humour",
-      "idee": "POV: when they say \"trust me\" | dehors : bulle « Trust me, it's this way », légende « 2 hours later », les deux perdus, « ? »"
+      "idee": "POV: when they say \"trust me\" | foret : le violet marche devant, sûr de lui (une bulle « Trust me, it's this way »), légende « 2 hours later », nuit, lucioles, les deux assis sur le tronc, « ? », la rose yeux plats"
     },
     {
       "id": "pov-063",
       "pilier": "tendre",
-      "idee": "POV: they remembered the little things | mur : la rose reçoit un livre de son auteur préféré, yeux en cœur, câlin"
+      "idee": "POV: they remembered the little things | cafe : le violet pose un livre sur la table (celui de son auteur préféré), la rose yeux en cœur, ils se penchent l'un vers l'autre (câlin), cœurs"
     },
     {
       "id": "pov-064",
@@ -339,7 +339,7 @@
     {
       "id": "pov-068",
       "pilier": "humour",
-      "idee": "POV: they want to pet every dog they see | dehors : le violet court à droite, la rose le cherche, « ? »"
+      "idee": "POV: they want to pet every dog they see | rue : le violet court vers la droite et sort du cadre, la rose le cherche (« ? »), il revient, cœurs, repart"
     },
     {
       "id": "pov-069",
@@ -349,7 +349,7 @@
     {
       "id": "pov-070",
       "pilier": "humour",
-      "idee": "POV: the \"what are we\" talk | table : bulles « So... what are we? », « ...hungry? », rire"
+      "idee": "POV: the \"what are we\" talk | cafe : gouttes de gêne, la rose parle (bulle « So... what are we? »), le violet répond (bulle « ...hungry? »), rire des deux"
     },
     {
       "id": "pov-071",
@@ -374,7 +374,7 @@
     {
       "id": "pov-075",
       "pilier": "humour",
-      "idee": "POV: you both say \"I don't mind\" | mur : bulles ping-pong, les deux « ... », légende « Still deciding »"
+      "idee": "POV: you both say \"I don't mind\" | voiture : à l'arrêt, une seule bulle « I don't mind » au début, puis « ? » au-dessus des deux, chacun regarde l'autre, légende « 20 minutes later », toujours là, yeux plats"
     },
     {
       "id": "pov-076",
@@ -384,7 +384,7 @@
     {
       "id": "pov-077",
       "pilier": "humour",
-      "idee": "POV: \"I'm not jealous\" | mur : le violet regarde ailleurs (« ... »), la rose rit, bisou, il rougit"
+      "idee": "POV: \"I'm not jealous\" | cafe : la rose rit avec sa tasse en regardant son téléphone, le violet regarde ailleurs (« ... »), joues rouges, elle le remarque, bisou, il rougit"
     },
     {
       "id": "pov-078",
@@ -394,7 +394,7 @@
     {
       "id": "pov-079",
       "pilier": "humour",
-      "idee": "POV: they read the menu for 20 minutes | table : légendes « 1 min », « 10 min », « 20 min », le violet dit « Pizza »"
+      "idee": "POV: they read the menu for 20 minutes | cafe : légendes « 1 min », « 10 min », « 20 min », la rose de plus en plus plate avec sa tasse, le violet le nez dans un livre (le menu), et il finit par dire « Pizza » (une bulle)"
     },
     {
       "id": "pov-080",
@@ -404,7 +404,7 @@
     {
       "id": "pov-081",
       "pilier": "humour",
-      "idee": "POV: you start a sentence and they finish it | mur : bulles qui s'enchaînent, « ! », les deux rient"
+      "idee": "POV: you start a sentence and they finish it | cafe : la rose parle (bulle « So I was thinking... »), le violet finit (bulle « ...pizza tonight? »), « ! », les deux rient ; deux bulles, pas plus"
     },
     {
       "id": "pov-082",
@@ -439,7 +439,7 @@
     {
       "id": "pov-088",
       "pilier": "humour",
-      "idee": "POV: taking a photo together | dehors : la rose prend la photo (téléphone), le violet saute dans le cadre au dernier moment"
+      "idee": "POV: taking a photo together | plage : la rose tient le téléphone à bout de bras, le violet saute dans le cadre au dernier moment, secousse, rire"
     },
     {
       "id": "pov-089",
@@ -484,7 +484,7 @@
     {
       "id": "pov-097",
       "pilier": "tendre",
-      "idee": "POV: the hug that fixes everything | mur : les deux tristes « ... », câlin, cœurs, sourires"
+      "idee": "POV: the hug that fixes everything | foret, soir : les deux tristes sur le tronc, « ... » au-dessus de chacun, ils se tournent l'un vers l'autre, câlin, cœurs, sourires"
     },
     {
       "id": "pov-098",
@@ -549,7 +549,7 @@
     {
       "id": "pov-110",
       "pilier": "humour",
-      "idee": "POV: the first time you meet their family | mur : la rose tremble, gouttes, le violet lui fait un câlin"
+      "idee": "POV: the first time you meet their family | rue : devant la porte, la rose tremble, gouttes de gêne, le violet lui fait un câlin, puis il appuie sur la sonnette"
     },
     {
       "id": "pov-111",
@@ -579,7 +579,7 @@
     {
       "id": "pov-116",
       "pilier": "humour",
-      "idee": "POV: your plans vs their plans | mur : légende « My plan: go out », « Their plan: », les deux dans le canapé"
+      "idee": "POV: your plans vs their plans | rue, soir : légende « My plan: go out », la rose prête sous le lampadaire ; coupe, salon : légende « His plan: », le violet dans le canapé, Z"
     },
     {
       "id": "pov-117",
@@ -619,7 +619,7 @@
     {
       "id": "pov-124",
       "pilier": "humour",
-      "idee": "POV: guessing what they're thinking | table : « ? » au-dessus de la rose, « ... » au-dessus du violet, puis bulles « Pizza? » « Pizza! »"
+      "idee": "POV: guessing what they're thinking | cafe : « ? » au-dessus de la rose, « ... » au-dessus du violet, zoom sur lui, puis une seule bulle « Pizza? » et il saute"
     },
     {
       "id": "pov-125",
@@ -629,7 +629,7 @@
     {
       "id": "pov-126",
       "pilier": "tendre",
-      "idee": "POV: the little dance when they see you | mur : le violet arrive, la rose danse, ils dansent ensemble"
+      "idee": "POV: the little dance when they see you | rue : le violet arrive au bout du trottoir, la rose danse sur place, il court, ils dansent ensemble, notes de musique"
     },
     {
       "id": "pov-127",
@@ -639,7 +639,7 @@
     {
       "id": "pov-128",
       "pilier": "humour",
-      "idee": "POV: sharing headphones | dehors : notes de musique, les deux bougent la tête ensemble"
+      "idee": "POV: sharing headphones | voiture : notes de musique, les deux bougent la tête ensemble, le passager chante (parle, yeux fermés), le conducteur rit"
     },
     {
       "id": "pov-129",
@@ -679,7 +679,7 @@
     {
       "id": "pov-136",
       "pilier": "tendre",
-      "idee": "POV: you see them across the room | mur : zoom lent sur la rose, yeux en cœur, étincelles"
+      "idee": "POV: you see them across the room | cafe : zoom lent sur la rose à la table, elle regarde vers la porte, yeux en cœur, étincelles, le violet entre (clochette)"
     },
     {
       "id": "pov-137",
@@ -694,7 +694,7 @@
     {
       "id": "pov-139",
       "pilier": "humour",
-      "idee": "POV: the \"one bite\" of ice cream | dehors : la glace de la rose, le violet croque, il n'en reste plus"
+      "idee": "POV: the \"one bite\" of ice cream | plage : la rose a une glace, le violet croque, encore, il n'en reste plus, la rose regarde la caméra, « ! »"
     },
     {
       "id": "pov-140",
@@ -714,12 +714,12 @@
     {
       "id": "pov-143",
       "pilier": "tendre",
-      "idee": "POV: the hug when they get back from a trip | mur : la rose court de la gauche, le violet arrive de la droite, câlin au milieu, confettis"
+      "idee": "POV: the hug when they get back from a trip | rue : la rose court de la gauche, le violet arrive de la droite, câlin au milieu du trottoir, confettis"
     },
     {
       "id": "pov-144",
       "pilier": "humour",
-      "idee": "POV: they guess the ending of every movie | salon : bulle « I knew it! », la rose yeux plats"
+      "idee": "POV: they guess the ending of every movie | cinema : le violet se penche vers la rose (une bulle « I knew it! »), la rose yeux plats, le pop-corn entre les deux"
     },
     {
       "id": "pov-145",
@@ -744,7 +744,7 @@
     {
       "id": "pov-149",
       "pilier": "humour",
-      "idee": "POV: the \"are you mad?\" check every 5 minutes | mur : bulles « Are you mad? », la rose de plus en plus plate, puis rit"
+      "idee": "POV: the \"are you mad?\" check every 5 minutes | voiture : une seule bulle « are you mad? » au premier plan, puis légendes « 5 min », « 10 min », « 15 min » : le violet se tourne vers la rose à chaque fois avec « ? », elle de plus en plus plate, puis elle rit"
     },
     {
       "id": "pov-150",
@@ -824,7 +824,7 @@
     {
       "id": "pov-165",
       "pilier": "humour",
-      "idee": "once a day: 'what do you want to eat?' / once a week: 'we should sleep early' / once a month: 'let's go to the gym tomorrow' | mur : bulles légendées, les deux de plus en plus plats, rire à la fin"
+      "idee": "once a day: 'what do you want to eat?' / once a week: 'we should sleep early' / once a month: 'let's go to the gym tomorrow' | trois plans, trois décors : cuisine (une bulle, « ? »), chambre la nuit (une bulle, Z), rue le matin (une bulle, le violet en bonnet bâille) ; les deux de plus en plus plats"
     },
     {
       "id": "pov-166",
@@ -849,7 +849,7 @@
     {
       "id": "pov-170",
       "pilier": "humour",
-      "idee": "us: one plans everything, one 'sees how it goes' | table : la rose avec un livre ouvert (la liste), le violet au téléphone, elle le regarde, il rit"
+      "idee": "us: one plans everything, one 'sees how it goes' | cafe : la rose avec un livre ouvert (la liste), le violet au téléphone, elle le regarde, il rit, légendes « me » / « him »"
     },
     {
       "id": "pov-171",
@@ -938,7 +938,7 @@
     {
       "id": "sta-002",
       "texte": "you're my favorite person",
-      "scene": "dehors, soir : banc, câlin"
+      "scene": "plage, soir : assis dans le sable, câlin, les vagues"
     },
     {
       "id": "sta-003",
@@ -968,7 +968,7 @@
     {
       "id": "sta-008",
       "texte": "forever sounds good with you",
-      "scene": "ligne : les deux côte à côte, la rose yeux en cœur"
+      "scene": "foret, soir : assis sur le tronc, câlin, lucioles"
     },
     {
       "id": "sta-009",
@@ -983,7 +983,7 @@
     {
       "id": "sta-011",
       "texte": "lucky me, i have you",
-      "scene": "ligne : câlin, étincelles"
+      "scene": "cinema : les deux dans leurs fauteuils, la rose la tête contre le violet (câlin), pop-corn"
     },
     {
       "id": "sta-012",
@@ -998,7 +998,7 @@
     {
       "id": "sta-014",
       "texte": "you're my sunshine",
-      "scene": "dehors, matin : banc, soleil, câlin"
+      "scene": "rue, nuit : sous le lampadaire allumé, câlin, cœurs"
     },
     {
       "id": "sta-015",
@@ -1013,7 +1013,7 @@
     {
       "id": "sta-017",
       "texte": "my favorite hello",
-      "scene": "ligne : la rose fait coucou, le violet sourit"
+      "scene": "voiture, soir : le passager la tête contre le conducteur (câlin), le sapin du rétroviseur"
     },
     {
       "id": "sta-018",
@@ -1028,7 +1028,7 @@
     {
       "id": "sta-020",
       "texte": "you're my best decision",
-      "scene": "dehors, soir : banc, câlin"
+      "scene": "cafe : les deux à la table, penchés l'un vers l'autre (câlin), deux tasses"
     },
     {
       "id": "sta-021",
@@ -1043,7 +1043,7 @@
     {
       "id": "sta-023",
       "texte": "you're my calm",
-      "scene": "chambre, nuit : sous la couette, yeux fermés"
+      "scene": "plage, nuit : assis dans le sable sous les étoiles, câlin, la mer"
     },
     {
       "id": "sta-024",

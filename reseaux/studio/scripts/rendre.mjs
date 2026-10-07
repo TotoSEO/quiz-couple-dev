@@ -76,6 +76,16 @@ const normaliser = (entree, sortieFichier, avecMusique) => {
   return mesure;
 };
 
+// Les bruitages Mixkit (public/sons/mx-*.mp3) ne sont pas dans le dépôt :
+// un fichier absent fait échouer le rendu dans le navigateur avec une erreur
+// obscure, autant le dire avant, avec la commande qui le prépare.
+const bibliothequeSons = JSON.parse(fs.readFileSync(path.join(ici, '..', 'public', 'sons', 'bibliotheque.json'), 'utf8'));
+const mixkit = new Set(bibliothequeSons.sons.map((s) => s.nom.replace(/-\d+$/, '')));
+const bruitagesManquants = (plan) => {
+  const noms = new Set([...(plan.sons || []).map((s) => s.nom), ...(plan.ambiances || []).map((s) => s.nom)]);
+  return [...noms].filter((n) => mixkit.has(n) && !fs.existsSync(path.join(ici, '..', 'public', 'sons', `mx-${n}.mp3`)));
+};
+
 const REELS = ['citation', 'quiz-chrono', 'connais-tu', 'tu-preferes', 'pov'];
 if (REELS.includes(recette.gabarit)) {
   const composition = await choisir('reel', { recette });
@@ -85,6 +95,8 @@ if (REELS.includes(recette.gabarit)) {
     console.log(`contrôle réussi : ${plan.verifs.length} écrans`);
     process.exit(0);
   }
+  const manquants = bruitagesManquants(plan);
+  if (manquants.length) throw new Error(`bruitages absents : ${manquants.join(', ')}. Lance « node scripts/sons.mjs » dans reseaux/studio.`);
   await renderMedia({
     ...commun,
     serveUrl,

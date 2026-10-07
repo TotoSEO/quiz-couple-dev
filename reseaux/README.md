@@ -59,7 +59,10 @@ Les exemples de `studio/recettes/exemples/` montrent chaque champ.
 ## Le moteur d'animation (`studio/src/pov/`)
 
 Un scénario `pov` est une suite de plans. Chaque plan a un décor
-(`vocabulaire.json` : décors et leurs spots, objets, effets, gestes, sons),
+(`vocabulaire.json` : quinze décors et leurs spots, objets, effets, gestes,
+sons, ambiances ; depuis le 7 octobre 2026 la forêt, la rue, le café, la
+plage, l'intérieur d'une voiture et la salle de cinéma s'ajoutent aux
+intérieurs et au parc, pour varier les scènes),
 des personnages placés sur un spot (« lit-gauche », « canape-droite »,
 « banc-gauche »...) ou à une abscisse, et une ligne de temps de gestes
 (`marche`, `saute`, `salue`, `calin`, `bisou`, `offre`, `tient`, `mange`,
@@ -87,8 +90,19 @@ Le contrôle du scénario avant rendu est dans
 
 ## Sons
 
-Bruitages CC0 de Kenney, packs Interface, Digital Audio, RPG Audio et Impact (`studio/public/sons/LICENCES.md`), doux
-(volumes 0,10 à 0,24) et variés. Pas de musique dans le fichier : la publication attache un son tendance de la bibliothèque
+Deux sources, toutes deux doux (volumes 0,10 à 0,24) et variés (`VARIANTES`, Son.tsx) :
+les sons d'interface et de gestes de Kenney (CC0, packs Interface, Digital Audio, RPG Audio et Impact, dans le dépôt,
+`studio/public/sons/LICENCES.md`), et depuis le 7 octobre 2026 les réactions des mascottes et les ambiances des décors,
+tirées de Mixkit (`studio/public/sons/bibliotheque.json`, 78 fichiers `mx-*.mp3` préparés par `node scripts/sons.mjs`,
+jamais commités, en cache dans le workflow de rendu ; `rendre.mjs` refuse de rendre si l'un manque). Les réactions se
+déduisent des gestes (`pleure` fait pleurer, `rit` rire, `fache` grogner, `boude` soupirer, `dort` ronfler, `mange`
+croquer, `bisou` fait un vrai petit bisou, un « ! » au-dessus de quelqu'un au téléphone fait une notification, une entrée
+par le bord dans une pièce fait la porte, la clochette du café ou la portière de la voiture, un réveil posé sonne, un objet
+qui se pose fait un bruit de vaisselle) ou se posent à la main dans `sons` (cri, sursaut, klaxon, tonnerre, trombone...).
+Chaque décor a son lit sonore (`ambiance` dans vocabulaire.json : oiseaux dehors et en forêt le jour, grillons la nuit,
+circulation dans la rue, vagues à la plage, brouhaha au café et au restaurant, moteur en voiture, projecteur au cinéma),
+qu'un plan peut remplacer (`"ambiance": "pluie"`) ou couper (`"aucune"`) ; les pièces fermées n'en ont pas.
+Pas de musique dans le fichier : la publication attache un son tendance de la bibliothèque
 Instagram (Audio API, connexion Facebook ; `automates/lib/son.mjs`, choix sans répétition écrit dans la recette, `son`).
 Une recette qui demande `ambiance` ou `musique` reçoit malgré tout un morceau de notre bibliothèque mixé dans la vidéo :
 55 morceaux en cinq ambiances (`studio/public/musique/bibliotheque.json`), six FreePD (CC0) dans le dépôt et 49 Mixkit

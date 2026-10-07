@@ -119,6 +119,20 @@ apart »). Chaque mécanique vient avec ses sujets dans la banque.
 - **Très simple et minimaliste** : un décor, deux personnages au plus, un
   ou deux objets. Les références de Thomas marchent parce qu'elles sont
   simples.
+- **Une situation, pas un dialogue** (Thomas, 7 octobre 2026, après le reel
+  « we need to talk » : enfantin, blague pas drôle). Le titre pose la
+  situation que tout couple reconnaît, les corps la jouent, l'image fait la
+  chute. Au plus une bulle par plan et deux par reel, et la plupart des
+  animations n'en ont aucune ; jamais de gag qui ne marche qu'en lisant,
+  jamais de jeu de mots, jamais de fausse frayeur. Les comptes qui marchent
+  n'ont pas de dialogue : une petite vérité du quotidien, grossie par les
+  expressions et le temps qui passe (« 10 PM », « 40 min later »).
+- **Des décors qui changent** : quinze dans le studio, dont, depuis le
+  7 octobre 2026, la forêt, la rue, le café, la plage, l'intérieur d'une
+  voiture et la salle de cinéma, chacun avec son ambiance sonore (oiseaux,
+  circulation, brouhaha, vagues, moteur, projecteur). Jamais le même décor
+  deux animations de suite ; quatre animations par semaine au moins hors de
+  la maison.
 - Le titre « POV: ... » en haut, ou un message mot à mot, rarement les deux.
 - La mention quiz-couple.com est dans l'image ; **la légende ne renvoie
   jamais vers le site.**
@@ -214,8 +228,11 @@ moment de publier, l'automate lit les tendances du moment (Audio API de
 Meta, connexion Facebook), écarte les sons déjà posés sur le compte, prend
 un son au moins aussi long que le reel et l'attache ; le reel apparaît sous
 ce son comme n'importe quel reel fait dans l'appli. Le fichier ne porte que
-ses bruitages, doux et variés (pas, sauts, bulles, cœurs, couette...), qui
-restent audibles sous la musique.
+ses bruitages, doux et variés (pas, sauts, bulles, cœurs, couette, et depuis
+le 7 octobre 2026 les réactions des mascottes : pleurs, rires, cris,
+ronflements, soupirs, bisous, plus le bruit de fond du décor : oiseaux,
+grillons, vagues, rue, café, moteur, projecteur), qui restent audibles sous
+la musique.
 
 La routine ne choisit pas le son. Elle peut seulement, pour un post qui le
 demande (une phrase tendre, une scène coquine), remplacer les tendances
@@ -269,7 +286,10 @@ les mots que les gens tapent, et donner envie d'un geste précis.
 ## Les sujets
 
 `sujets.json` : 173 animations (95 d'humour, 47 tendres, 25 minis, 6
-phrases à finir, après l'ajout du 7 octobre 2026), 15 coquines, 28
+phrases à finir, après l'ajout du 7 octobre 2026 ; le même jour, une
+quarantaine de scènes ont quitté le mur nu pour la rue, le café, la forêt,
+la plage, la voiture et le cinéma, et les gags à bulles ont été réécrits en
+situations), 15 coquines, 28
 statiques, 51 thèmes de « Connais-tu » (dont 8 « Who's more likely? » et 3
 éditions difficiles), 28 de « Tu préfères », 28 phrases, plus 16 sujets
 datés de Noël et du Nouvel An. La routine prend le premier sujet libre de la

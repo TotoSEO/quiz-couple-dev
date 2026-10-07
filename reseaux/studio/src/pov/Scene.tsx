@@ -442,7 +442,7 @@ export const Etage: React.FC<{ plan: PlanPov; t: number; id: string; image: Imag
 
 // Les décors où le texte se pose directement sur le fond ; ailleurs (une
 // fenêtre, un cadre derrière), il prend une carte de papier.
-export const DECORS_CALMES = new Set(['uni', 'ligne', 'mur', 'dehors']);
+export const DECORS_CALMES = new Set(['uni', 'ligne', 'mur', 'dehors', 'plage']);
 
 // Un plan figé à l'instant t, recadré pour une image 4:5 : on garde la
 // bande du décor qui va de « haut » à haut + 1350.
