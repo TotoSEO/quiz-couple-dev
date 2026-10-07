@@ -1,0 +1,137 @@
+{
+  "jour": "2026-10-08",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "statique",
+  "sujet": "sta-001",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Reel statique : un seul plan, une phrase, une musique douce. Les deux arrivent chacun d'un bord de l'écran, se rejoignent au milieu et se font un câlin, puis les cœurs montent.",
+        "plans": [
+          {
+            "description": "Fond papier avec un trait de sol. Dès la première image, la rose entre par le bord gauche et le violet par le bord droit, ils marchent l'un vers l'autre en se regardant. Ils se rejoignent au milieu à 2,2 s et se serrent dans les bras ; à 2,4 s les deux ferment les yeux de bonheur, joues roses, et des petits cœurs montent doucement au-dessus d'eux. La caméra commence à se rapprocher à 2,4 s, lentement, et ne s'arrête plus jusqu'à la fin. « i love u forever <3 » s'écrit mot à mot en haut à partir de 3,2 s. Vers 6,5 s la rose fait sa petite bouche de chat, les joues encore plus roses ; à 7 s le violet rouvre des yeux heureux.",
+            "duree": 11,
+            "decor": "ligne",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": 40,
+                "premier": true,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "vers": 400,
+                    "de": 0,
+                    "a": 2.2
+                  },
+                  {
+                    "geste": "calin",
+                    "avec": "violet",
+                    "de": 2.2,
+                    "a": 11
+                  },
+                  {
+                    "geste": "visage",
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true,
+                    "de": 2.4,
+                    "a": 6.5
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "coeurs",
+                    "de": 3,
+                    "a": 11
+                  },
+                  {
+                    "geste": "visage",
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true,
+                    "de": 6.5,
+                    "a": 11
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": 1040,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "vers": 680,
+                    "de": 0,
+                    "a": 2.2
+                  },
+                  {
+                    "geste": "calin",
+                    "avec": "rose",
+                    "de": 2.2,
+                    "a": 11
+                  },
+                  {
+                    "geste": "visage",
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true,
+                    "de": 2.4,
+                    "a": 7
+                  },
+                  {
+                    "geste": "visage",
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true,
+                    "de": 7,
+                    "a": 11
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 3.2,
+                "texte": "i love u forever <3",
+                "motAMot": true,
+                "place": "haut",
+                "style": "plume"
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.4,
+                "zoom": 1
+              },
+              {
+                "a": 6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1120
+              },
+              {
+                "a": 11,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1120
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "For my partner, just because <3\n\nTag your partner.",
+      "hashtags": [
+        "#couplegoals",
+        "#relationshipgoals",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

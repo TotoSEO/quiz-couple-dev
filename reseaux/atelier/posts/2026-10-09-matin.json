@@ -1,0 +1,255 @@
+{
+  "jour": "2026-10-09",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-003",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le classique de la couette volée : la nuit, le violet dort roulé dans toute la couette, la rose grelotte à côté, regarde la caméra, récupère la couette d'un coup, et c'est lui qui a froid.",
+        "titre": "POV: he took the whole blanket again",
+        "plans": [
+          {
+            "description": "La chambre la nuit, lumière bleue, lune dans la fenêtre, lampe de chevet éteinte. Dès la première image les deux sont dans le lit : le violet à droite dort profondément, yeux fermés, des Z qui montent au-dessus de lui ; la rose à gauche a les yeux plats, la bouche triste, les sourcils tristes, et elle tremble de froid dès 0,2 s. La caméra se rapproche très lentement d'eux pendant tout le plan.",
+            "duree": 3.6,
+            "decor": "chambre",
+            "moment": "nuit",
+            "couette": "calme",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "yeux": "plats",
+                    "bouche": "triste",
+                    "sourcils": "tristes",
+                    "de": 0,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "tremble",
+                    "de": 0.2,
+                    "a": 3.6
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 3.6
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.1
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,4 s sur le visage de la rose, qui tremble toujours. À 0,2 s ses yeux se tournent vers la caméra, à 0,3 s sa bouche se pince, sourcils tristes, et à 0,6 s une goutte de gêne apparaît sur le côté de sa tête : elle nous prend à témoin. Derrière, le violet dort toujours, ses Z continuent de monter.",
+            "duree": 3,
+            "decor": "chambre",
+            "moment": "nuit",
+            "couette": "calme",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "tremble",
+                    "de": 0,
+                    "a": 3
+                  },
+                  {
+                    "geste": "regarde",
+                    "cible": "camera",
+                    "de": 0.2,
+                    "a": 3
+                  },
+                  {
+                    "geste": "visage",
+                    "yeux": "plats",
+                    "bouche": "plate",
+                    "sourcils": "tristes",
+                    "de": 0.3,
+                    "a": 3
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "goutte",
+                    "de": 0.6,
+                    "a": 3
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 3
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.4,
+                "zoom": 2,
+                "cible": "rose"
+              }
+            ]
+          },
+          {
+            "description": "Retour au plan large. À 0,2 s la rose se fâche, sourcils froncés, bouche en zigzag, joues rouges, et tire la couette vers elle : à 1,4 s la couette se met à bouger et la caméra tremble d'un coup. À 1,6 s la rose ferme les yeux et sourit, enfin au chaud, et de petits cœurs montent au-dessus d'elle à partir de 2 s. Le violet dort encore, sans rien remarquer.",
+            "duree": 3.2,
+            "decor": "chambre",
+            "moment": "nuit",
+            "couette": "bouge",
+            "couetteDe": 1.4,
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "fache",
+                    "de": 0.2,
+                    "a": 1.4
+                  },
+                  {
+                    "geste": "visage",
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true,
+                    "de": 1.6,
+                    "a": 3.2
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "coeurs",
+                    "de": 2,
+                    "a": 3.2
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 3.2
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 1.4,
+                "secousse": 12
+              }
+            ]
+          },
+          {
+            "description": "Même plan large, coupe franche. À 0,1 s le violet ouvre les yeux, bouche ronde de surprise : il n'a plus de couette. À 0,3 s il se met à trembler de froid, à 0,6 s une goutte apparaît sur sa tête, et à 1 s une bulle dit « ...it's cold now ». La rose dort maintenant à poings fermés, des Z au-dessus d'elle. La caméra se rapproche doucement du violet jusqu'à la fin.",
+            "duree": 2.8,
+            "decor": "chambre",
+            "moment": "nuit",
+            "couette": "calme",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 2.8
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "de": 0.1,
+                    "a": 1
+                  },
+                  {
+                    "geste": "tremble",
+                    "de": 0.3,
+                    "a": 2.8
+                  },
+                  {
+                    "geste": "effet",
+                    "effet": "goutte",
+                    "de": 0.6,
+                    "a": 2.8
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 1,
+                "a": 2.7,
+                "texte": "...it's cold now"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 2.8,
+                "zoom": 1.15,
+                "cible": "violet"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "When your partner steals the whole blanket at 3am... again.\n\nSend this to your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
