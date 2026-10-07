@@ -469,7 +469,7 @@ transfert sortant par mois.
 
 | Automate | Où | Quand | Rôle |
 |---|---|---|---|
-| **Atelier** | Routine Claude Code | Toutes les deux heures le temps de remplir la réserve, puis une fois par jour | Lit l'état du planning (`etat.json`), corrige les posts refusés, remplit jusqu'à 24 créneaux vides en piochant d'abord dans tes idées, écrit textes, légendes et hashtags, passe les contrôles, regarde les aperçus, puis pousse les fichiers sur la branche `reseaux-atelier`, par lots de six. Elle travaille dans le dépôt même, sur cette branche mise à jour avec `main` (pas de dossier à côté), et tient un journal de chaque passage dans `reseaux/atelier/journal/`, poussé dès l'ouverture : c'est là qu'on lit ce qu'elle a fait, ou ce qui l'a bloquée. Ses consignes : `reseaux/atelier/CONSIGNES.md`. |
+| **Atelier** | Routine Claude Code | Une fois par jour, 5 h 44 heure de Paris | Lit l'état du planning (`etat.json`), corrige les posts refusés, remplit jusqu'à 24 créneaux vides en piochant d'abord dans tes idées, écrit textes, légendes et hashtags, passe les contrôles, regarde les aperçus, puis pousse les fichiers sur la branche `reseaux-atelier`, par lots de six. Elle travaille dans le dépôt même, sur cette branche mise à jour avec `main` (pas de dossier à côté), et tient un journal de chaque passage dans `reseaux/atelier/journal/`, poussé dès l'ouverture : c'est là qu'on lit ce qu'elle a fait, ou ce qui l'a bloquée. Ses consignes : `reseaux/atelier/CONSIGNES.md`. |
 | **Synchro et rendu** | GitHub Actions (`social-rendu.yml`) | Toutes les heures | Relit la branche de l'atelier, contrôle chaque post et l'écrit dans Supabase, puis fabrique les fichiers des posts des 48 prochaines heures, passe le contrôle qualité, envoie les fichiers dans le stockage. |
 | **Publication** | GitHub Actions (`social-publication.yml`) | Toutes les 10 min | Publie ce qui est dû : crée le conteneur, attend la fin du traitement de la vidéo, publie, enregistre le lien. |
 | **Horloge** | pg_cron dans Supabase (migration `20261008140000_horloge_workflows.sql`) | Toutes les 10 min, toutes les heures, chaque jour | Déclenche les trois workflows par l'API de GitHub (`workflow_dispatch`), avec un jeton d'accès personnel rangé dans le Vault de Supabase. GitHub n'honore qu'une petite part des « schedule » de ce dépôt (le 7 octobre 2026 : une publication en neuf heures, un rendu en neuf heures, l'entretien de 7 h 41 parti à 14 h 44) ; les « schedule » restent écrits dans les workflows, en secours. Sans jeton dans le Vault, l'horloge ne fait rien. |
@@ -488,6 +488,15 @@ Tant qu'un compte n'est pas actif (pas encore branché, ou coupé dans l'admin),
   de la marge pour ton travail sur le site.
 - Chaque routine reprend là où la précédente s'est arrêtée : tout passe par
   les statuts, donc une routine coupée en plein travail ne perd rien.
+- La routine ne crée pas une session neuve à chaque passage : son
+  déclencheur envoie le message dans une session Claude Code permanente,
+  créée une fois avec le dépôt comme source et `reseaux-atelier` comme
+  branche de sortie. Une session neuve devait attacher le dépôt elle-même et
+  n'y arrivait pas : six passages des 6 et 7 octobre 2026 se sont arrêtés
+  en trois minutes sans rien laisser, pas même le journal. Avec le dépôt
+  déjà là, le premier journal est parti en vingt secondes. Si cette session
+  est archivée ou supprimée, on en recrée une de la même façon et on refait
+  le déclencheur dessus.
 
 ### 7.3 Quand il n'y a plus de crédit Claude
 

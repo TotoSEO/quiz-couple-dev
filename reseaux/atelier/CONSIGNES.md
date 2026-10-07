@@ -1,9 +1,8 @@
 # Consignes de la routine « atelier »
 
-Cette routine Claude tourne toutes les deux heures le temps de remplir la
-réserve, puis une fois par jour. Elle écrit les posts Instagram des
-prochains jours, les vérifie, et les pousse sur la branche
-`reseaux-atelier`. Elle ne touche à rien d'autre : ni `main`, ni Supabase,
+Cette routine Claude tourne une fois par jour, à 5 h 44, heure de Paris.
+Elle écrit les posts Instagram des prochains jours, les vérifie, et les
+pousse sur la branche `reseaux-atelier`. Elle ne touche à rien d'autre : ni `main`, ni Supabase,
 ni Instagram. GitHub Actions s'occupe du reste (synchro, rendu,
 publication).
 
@@ -13,10 +12,21 @@ rédaction » de `CLAUDE.md`.
 
 ## 1. Préparer
 
+Le dépôt est déjà dans la session : elle a été créée une fois pour toutes
+avec `TotoSEO/quiz-couple-dev` comme source et `reseaux-atelier` comme
+branche de sortie, et le déclencheur quotidien lui envoie son message. On
+n'appelle donc pas `add_repo`, on ne clone rien (une session neuve qui
+devait attacher le dépôt elle-même n'y arrivait pas : six passages des 6 et
+7 octobre 2026 se sont arrêtés sans rien laisser). Comme la session dure
+d'un passage à l'autre, chaque passage repart de `origin/reseaux-atelier`
+sans rien garder du précédent.
+
 Tout se passe dans le dépôt lui-même, sur la branche `reseaux-atelier`,
 qu'on met à jour avec `main` pour avoir les outils du jour (la fusion n'a
 jamais de conflit : `main` ne touche ni aux posts ni à `etat.json`). Pas de
-dossier à côté, pas de worktree.
+dossier à côté, pas de worktree. Le studio (`reseaux/studio`) s'installe avec
+`npm ci` ; les automates (`reseaux/automates`) n'ont aucune dépendance, rien
+à installer.
 
 ```bash
 git fetch origin main reseaux-atelier || git fetch origin main
