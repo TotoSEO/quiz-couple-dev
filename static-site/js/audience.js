@@ -267,6 +267,44 @@
   }
   document.addEventListener('click', clicSourcePref, true);
 
+  // ── Clics vers Instagram ────────────────────────────────────────────────
+  // Thomas (7 octobre 2026) veut un seul total, tous boutons confondus :
+  // l'icône du menu, le lien du menu mobile, le pied de page, « Suivre » et
+  // les vignettes des dernières publications sur l'accueil, le « Suivez-nous
+  // sur Instagram » qui suit un avis. Tout lien vers instagram.com compte.
+  // L'emplacement est noté quand même, l'admin n'affiche que le total.
+  function clicInstagram(e) {
+    var lien = e.target && e.target.closest ? e.target.closest('a[href*="instagram.com/"]') : null;
+    if (!lien) return;
+    if (ignorer()) return;
+    var ou = lien.classList.contains('pqx-insta') ? 'resultat'
+      : lien.classList.contains('nav-action-btn') ? 'menu'
+      : lien.classList.contains('mobile-nav-link') ? 'menu-mobile'
+      : lien.closest('footer') ? 'pied'
+      : lien.classList.contains('ig-suivre') ? 'accueil-suivre'
+      : lien.closest('#instagram-recents') ? 'accueil-post' : 'autre';
+    var corps = {
+      visite_id: visite(false),
+      emplacement: ou,
+      lang: document.documentElement.lang || 'fr',
+      path: chemin()
+    };
+    try {
+      fetch(URL_SB + '/rest/v1/instagram_clics', {
+        method: 'POST',
+        keepalive: true,
+        headers: {
+          'apikey': KEY_SB,
+          'Authorization': 'Bearer ' + KEY_SB,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify(corps)
+      }).catch(function () {});
+    } catch (e2) {}
+  }
+  document.addEventListener('click', clicInstagram, true);
+
   // ── Départ ──────────────────────────────────────────────────────────────
   // Chrome précharge les liens qu'il juge probables. Compter un préchargement
   // inventerait des visites qui n'ont jamais eu lieu : on attend que la page
