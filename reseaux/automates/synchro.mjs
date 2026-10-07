@@ -49,6 +49,11 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
     for (const [langue, v] of Object.entries(post.variantes)) {
       const [existante] = await base.select('social_variantes', `select=id,statut&post_id=eq.${ligne.id}&langue=eq.${langue}`);
       const valeurs = { recette: v.recette, legende: v.legende, hashtags: v.hashtags };
+      // Une heure de publication écrite dans le post remplace la minute tirée
+      // au sort dans le créneau (déclencheur social_variante_heure, qui ne
+      // joue que si publier_a est nul) : pour un post qu'on veut voir partir
+      // à une heure précise, par exemple un soir où le créneau est déjà passé.
+      if (post.publier_a) valeurs.publier_a = new Date(post.publier_a).toISOString();
       if (!existante) {
         await base.insert('social_variantes', [{ post_id: ligne.id, langue, ...valeurs }]);
       } else if (MODIFIABLES.includes(existante.statut)) {

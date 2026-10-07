@@ -137,3 +137,21 @@ test('le rendu attend un compte actif', async () => {
   assert.equal(bilan.enAttente, 1);
   assert.equal(appels, 0);
 });
+
+test("une heure de publication écrite dans le post passe dans sa déclinaison", async () => {
+  const b = base();
+  const p = postQuiz('2026-10-12', 'matin');
+  p.publier_a = '2026-10-12T05:12:00+02:00';
+  const bilan = await synchroniser(b, [{ fichier: 'a.json', post: p }], { maintenant: MAINTENANT });
+  assert.equal(bilan.ecrits, 1);
+  assert.equal(b.tables.social_variantes[0].publier_a, '2026-10-12T03:12:00.000Z');
+});
+
+test('une heure de publication sans fuseau ou illisible est refusée', async () => {
+  const b = base();
+  const p = postQuiz();
+  p.publier_a = '2026-10-12 05:12';
+  const bilan = await synchroniser(b, [{ fichier: 'a.json', post: p }], { maintenant: MAINTENANT });
+  assert.equal(bilan.refuses, 1);
+  assert.match(JSON.stringify(b.tables.social_journal), /publier_a invalide/);
+});

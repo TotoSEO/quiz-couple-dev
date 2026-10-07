@@ -110,6 +110,9 @@ export function controlerPost(post) {
   const f = [];
   if (!/^\d{4}-\d{2}-\d{2}$/.test(post.jour || '')) f.push(`jour invalide : ${post.jour}`);
   if (!CRENEAUX.includes(post.creneau)) f.push(`créneau invalide : ${post.creneau}`);
+  if (post.publier_a !== undefined && (typeof post.publier_a !== 'string' || Number.isNaN(Date.parse(post.publier_a)) || !/(Z|[+-]\d{2}:?\d{2})$/.test(post.publier_a))) {
+    f.push(`publier_a invalide : ${post.publier_a} (date ISO avec fuseau, ex. 2026-10-07T19:45:00Z)`);
+  }
   if (FORMAT_DU_GABARIT[post.gabarit] !== post.format) f.push(`le gabarit ${post.gabarit} ne donne pas un ${post.format}`);
   if (!CATEGORIES[post.categorie]) f.push(`catégorie inconnue : ${post.categorie} (${Object.keys(CATEGORIES).join(', ')})`);
   else if (CATEGORIES[post.categorie] !== post.gabarit) f.push(`la catégorie ${post.categorie} se fait avec le gabarit ${CATEGORIES[post.categorie]}`);
