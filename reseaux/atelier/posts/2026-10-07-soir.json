@@ -100,7 +100,7 @@
             ]
           },
           {
-            "description": "La caméra zoome d'un coup sur la rose, qui tremble de la tête aux pieds : yeux brillants, sourcils tristes, bouche triste, une goutte de panique sur le côté de la tête, puis trois petits points au-dessus d'elle, ses pensées qui s'emballent. L'image tremble avec elle à 1,6 s.",
+            "description": "La caméra zoome d'un coup sur la rose (zoom 1,7, pour que ses pensées restent sous le titre), qui tremble de la tête aux pieds : yeux brillants, sourcils tristes, bouche triste, une goutte de panique sur le côté de la tête, puis trois petits points au-dessus d'elle, ses pensées qui s'emballent. L'image tremble avec elle à 1,6 s.",
             "duree": 2.8,
             "decor": "mur",
             "moment": "soir",
@@ -163,7 +163,7 @@
               },
               {
                 "a": 0.35,
-                "zoom": 2.0,
+                "zoom": 1.7,
                 "cible": "rose"
               },
               {
