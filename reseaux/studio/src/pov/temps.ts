@@ -582,6 +582,17 @@ export const etatPerso = (plan: PlanPov, place: Place, t: number, places: Place[
     e.options.coeurs = false;
     e.effets.push({ effet: 'coeurs', depuis: 0 });
   }
+  // Au lit, le corps est enfoncé jusqu'à la bouche mais les épaules restent
+  // au-dessus du bord de la couette : les bras de base y dépassaient, à
+  // côté des deux petites mains posées sur la couette, quatre bras en tout
+  // (Thomas, 7 octobre 2026). On ne garde que les bras qui sortent vraiment
+  // de la couette, levés (60° et plus) ou occupés (devant) ; la petite main
+  // du même côté s'efface (MainsSurLaCouette).
+  if (e.mode === 'couche') {
+    const b = e.options.bras ?? [10, 10];
+    const dv = e.options.devant ?? [false, false];
+    e.options.brasVisibles = [dv[0] || b[0] >= 60, dv[1] || b[1] >= 60];
+  }
   return e;
 };
 

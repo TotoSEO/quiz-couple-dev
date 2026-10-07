@@ -5,6 +5,7 @@ declare module '*mascottes.js' {
     jambes?: 'debout' | 'marche';
     jambesAngles?: [number, number];
     devant?: [boolean, boolean];
+    brasVisibles?: [boolean, boolean];
     yeux?: 'ouverts' | 'heureux' | 'coeur' | 'plats' | 'fermes' | 'clin' | 'brillants';
     regard?: [number, number];
     sourcils?: 'tristes' | 'faches' | 'hauts';

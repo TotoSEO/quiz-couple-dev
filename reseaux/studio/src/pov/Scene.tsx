@@ -111,9 +111,13 @@ const MainsSurLaCouette: React.FC<{ e: EtatPerso; t: number; force: number }> = 
   const l = g.bras * k;
   const h = l * 1.15;
   const couleur = e.qui === 'rose' ? 'var(--rose-ombre)' : 'var(--violet-ombre)';
+  // un bras de la mascotte qui sort de la couette (levé ou occupé) tient
+  // lieu de main de ce côté : pas de petite main en plus
+  const visibles = e.options.brasVisibles ?? [false, false];
   return (
     <>
       {[-1, 1].map((c) => {
+        if (visibles[c === -1 ? 0 : 1]) return null;
         const x = e.x + e.dx + c * g.largeur * 0.3 * k;
         const y = bordCouette(x, t, force);
         return (
