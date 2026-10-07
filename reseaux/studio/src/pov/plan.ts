@@ -11,6 +11,10 @@ const enImages = (s: number) => Math.round(s * FPS);
 
 // Images de transition entre deux plans (fondu, glisse).
 export const TRANSITION = 9;
+// Transition « noir » : l'image s'éteint sur les dernières images du plan
+// d'avant, reste noire trois images, puis se rallume.
+export const NOIR_SORTIE = 10;
+export const NOIR_ENTREE = 16;
 
 export const planPov = (r: RecettePov): Plan => {
   const scenes: Scene[] = [];
@@ -62,6 +66,10 @@ export const planPov = (r: RecettePov): Plan => {
           case 'joie':
             son('joie', g.de, 0.25);
             break;
+          case 'plonge':
+            son('saut', g.de + 0.2 * d);
+            son('froissement', g.a, 0.4);
+            break;
         }
       }
     }
@@ -71,7 +79,7 @@ export const planPov = (r: RecettePov): Plan => {
     }
     for (const b of p.bulles ?? []) son('bulle', b.de);
     for (const tx of p.textes ?? []) son('apparition', tx.de, 0.18);
-    if (p.couette === 'bouge') for (let s = 0.2; s < p.duree; s += 0.75) son('froissement', s, 0.3);
+    if (p.couette === 'bouge') for (let s = (p.couetteDe ?? 0) + 0.2; s < p.duree; s += 0.75) son('froissement', s, 0.3);
     // un zoom rapide (plus de 30 % en moins d'une seconde) fait « whoosh »
     const cles = (p.camera ?? []).filter((c) => !('secousse' in c)) as { a: number; zoom?: number }[];
     let z = 1;
@@ -85,7 +93,7 @@ export const planPov = (r: RecettePov): Plan => {
     for (const s of p.sons ?? []) son(s.son as NomSon, s.a, s.volume);
     // contrôle : le plan installé, puis la fin du plan, puis chaque bulle et
     // chaque message une fois écrit en entier
-    verifs.push(debut + Math.min(duree - 1, Math.max(TRANSITION + 1, Math.round(duree * 0.45))), debut + duree - 2);
+    verifs.push(debut + Math.min(duree - 1, Math.max(p.transition === 'noir' ? NOIR_ENTREE + 1 : TRANSITION + 1, Math.round(duree * 0.45))), debut + duree - 2);
     for (const b of p.bulles ?? []) verifs.push(a(Math.min(b.a - 0.05, b.de + 0.5)));
     for (const tx of p.textes ?? []) {
       const ecrit = tx.de + (tx.motAMot ? tx.texte.trim().split(/\s+/).length * PAS_MOT : 0) + 0.3;

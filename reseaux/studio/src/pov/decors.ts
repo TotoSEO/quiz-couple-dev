@@ -4,6 +4,7 @@
 // cache le bas des personnages placés dans un spot « derriere ».
 import type { Moment, NomDecor } from './scenario';
 import { coeurChemin, svgObjet, TRAIT } from './objets';
+import { bordCouette } from './temps';
 
 const T = TRAIT;
 const W = 1080;
@@ -75,23 +76,10 @@ const objet = (nom: Parameters<typeof svgObjet>[0], t: number, largeur: number, 
 
 // La couette : un bord du haut qui ondule ; « bouge » la fait gonfler et
 // sursauter par endroits, sans jamais rien montrer d'autre.
-const couette = (t: number, bouge: boolean) => {
-  const haut = 1180;
-  const bosses = bouge
-    ? [
-        { x: 420, a: 46 + 34 * Math.max(0, Math.sin(t * 7.3)) + 16 * Math.sin(t * 13.1) },
-        { x: 660, a: 40 + 30 * Math.max(0, Math.sin(t * 6.1 + 1.3)) + 14 * Math.sin(t * 11.7 + 0.5) },
-      ]
-    : [
-        { x: 420, a: 14 },
-        { x: 660, a: 14 },
-      ];
+// force : 0 la couette est calme, 1 elle bouge (temps.ts, bordCouette)
+const couette = (t: number, force: number) => {
   const pts: string[] = [];
-  for (let x = 110; x <= 970; x += 20) {
-    let y = haut + Math.sin(x / 70) * 4;
-    for (const b of bosses) y -= b.a * Math.exp(-((x - b.x) ** 2) / (2 * 95 ** 2));
-    pts.push(`${x} ${y.toFixed(1)}`);
-  }
+  for (let x = 110; x <= 970; x += 20) pts.push(`${x} ${bordCouette(x, t, force).toFixed(1)}`);
   const bord = `M110 1260 L${pts.join(' L')} L970 1260`;
   const corps = `${bord} L986 1560 C986 1584 970 1600 946 1600 L134 1600 C110 1600 94 1584 94 1560 Z`;
   let s = `<path d="${corps}" fill="var(--rose-lumiere)" ${T}/>`;
@@ -105,7 +93,7 @@ const couette = (t: number, bouge: boolean) => {
 
 type Couches = { fond: string; devant: string };
 
-export const dessinDecor = (decor: NomDecor, moment: Moment, t: number, id: string, opts: { couette?: 'calme' | 'bouge' } = {}): Couches => {
+export const dessinDecor = (decor: NomDecor, moment: Moment, t: number, id: string, opts: { force?: number } = {}): Couches => {
   switch (decor) {
     case 'uni':
       return { fond: '', devant: '' };
@@ -125,7 +113,7 @@ export const dessinDecor = (decor: NomDecor, moment: Moment, t: number, id: stri
       fond += `<rect x="950" y="1110" width="150" height="150" rx="10" fill="var(--decor-bois)" ${T}/>`;
       fond += `<path d="M1010 1110 L1010 1040" ${T}/><path d="M960 1040 L1060 1040 L1040 960 L980 960 Z" fill="var(--decor-jaune)" ${T}/>`;
       if (moment === 'nuit' || moment === 'soir') fond += `<circle cx="1010" cy="1010" r="120" fill="var(--decor-jaune)" opacity="0.18"/>`;
-      return { fond, devant: couette(t, opts.couette === 'bouge') };
+      return { fond, devant: couette(t, opts.force ?? 0) };
     }
     case 'cuisine': {
       let fond = murEtSol(1250);

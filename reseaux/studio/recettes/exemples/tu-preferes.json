@@ -37,5 +37,7 @@
     "question": "Did you pick the same? Comment your A and B!",
     "bouton": "Send this to your partner",
     "signature": "More dilemmas on quiz-couple.com"
-  }
+  },
+  "musique": "mx-smile.mp3",
+  "musiqueDebut": 0
 }

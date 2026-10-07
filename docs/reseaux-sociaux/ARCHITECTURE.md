@@ -77,7 +77,7 @@ Ces contraintes viennent de la documentation Meta et des guides à jour
 |---|---|---|
 | Compte | Compte professionnel (Entreprise ou Créateur), relié à une appli Meta en mode développement. Tes propres comptes ajoutés comme « testeurs » suffisent : **pas de validation Meta (App Review) à passer**. | Compte personnel. |
 | Reels | MP4 ou MOV, H.264, son AAC 48 kHz, 9:16, **5 à 90 secondes** par l'API, image de couverture personnalisable (`cover_url`), nom du son personnalisable (`audio_name`). | Plus de 90 s par l'API. |
-| Musique | Le son **contenu dans le fichier vidéo**, publié comme « son original » et réutilisable par d'autres. | **Ajouter une musique de la bibliothèque Instagram, et donc une musique tendance.** Aucune API officielle ne le permet, à cause des licences. |
+| Musique | Le son **contenu dans le fichier vidéo**, publié comme « son original » et réutilisable par d'autres. Depuis le 1er juin 2026, l'Audio API de Meta attache aussi un son de la bibliothèque (`audio_configuration` : `audio_id`, `audio_volume`, `video_volume`), tendances comprises, mais **seulement avec la connexion Facebook** (compte relié à une Page, `graph.facebook.com`) et seulement les sons autorisés pour la publication par des applis. | **Une musique de la bibliothèque Instagram avec la connexion Instagram**, celle qu'on utilise (`graph.instagram.com`) : la doc de Meta l'exclut. Et une appli ne peut pas avoir les deux connexions. |
 | Image | JPEG, ratio entre 4:5 et 1,91:1. On fera du 1080 × 1350 (4:5). | Une image avec musique (l'API ne met pas de son sur une image). |
 | Carrousel | Jusqu'à 10 éléments (images ou vidéos), un seul post au compteur. | De la musique sur un carrousel d'images. |
 | Légende | 2 200 caractères. **5 hashtags maximum** depuis décembre 2025. | Modifier la légende après publication par l'API. |
@@ -89,10 +89,10 @@ Ces contraintes viennent de la documentation Meta et des guides à jour
 
 Ce que ça change concrètement :
 
-- **Pas de musique tendance automatique.** Voir la partie 5 pour ce qu'on
-  fait à la place, et la voie manuelle pour les posts que tu veux pousser.
-- **Un « post classique avec musique » sera un reel** : une image fixe de
-  7 à 10 secondes avec sa musique. Les vrais posts image et les carrousels
+- **Pas de musique tendance automatique avec la connexion Instagram.** Voir
+  la partie 5 pour ce qu'on fait à la place, et la voie de l'Audio API.
+- **Un « post classique avec musique » sera un reel** : une image animée de
+  10 à 12 secondes avec sa musique. Les vrais posts image et les carrousels
   sont publiés sans musique.
 - **Tout doit être parfait avant publication**, puisqu'on ne peut plus rien
   corriger ensuite par l'API.
@@ -193,18 +193,20 @@ complexité.
 | R2 | Reel citation | Une phrase émotive en police plume (« si tu savais combien de fois je pense à toi... ») et deux fleurs au trait très légères. Le texte apparaît ligne à ligne. | 7 à 12 s | Blanc, nuit, dégradé de la marque |
 | R3 | Reel photo | Une photo réelle (couple dos à la mer) et une phrase émotive. Zoom lent. | 7 à 10 s | Photo Pexels |
 | R4 | Reel liste | « 6 questions à poser à ton partenaire » sur une vidéo de coucher de soleil, une question à la fois. | 15 à 25 s | Vidéo Pexels |
-| R5 | Reel mascottes « POV » | Une mini-histoire de 8 à 12 s avec les mascottes, en dessin animé très simple sur fond blanc. | 8 à 12 s | Blanc + décor au trait |
+| R5 | Reel mascottes « POV » | Une mini-histoire de 10 à 15 s avec les mascottes, en dessin animé très simple, au trait de feutre. | 10 à 15 s | Papier + décor au trait |
 | R6 | Reel « avant / maintenant » | La même petite animation deux fois, avec deux légendes (« nous au début », « nous maintenant »). | 6 à 10 s | Blanc |
 | R7 | Reel quiz chrono | Intro de 3 s, 6 questions de 5 s avec un minuteur qui passe du vert à l'orange puis au rouge (les secondes sont écrites), la bonne réponse 2 s, puis l'écran de fin (« Ton partenaire aurait répondu pareil ? », « plus de tests sur quiz-couple.com »). Fond texturé, textes grands, réponses alignées à gauche, les mascottes attendent sous la carte avec un « ! » puis sautent de joie (« Yay! ») à la réponse. Ni points ni score : Instagram n'est pas interactif, on répond dans sa tête. | 48 s | Papier texturé |
 | R8 | Reel jeu du site | Tu préfères, dilemmes, qui de nous deux, je n'ai jamais : 5 questions, « réponds en commentaire ». | 20 à 30 s | Couleurs de la marque |
-| R9 | Reel « post classique » | Fond blanc, une phrase, une musique : l'équivalent animé d'un post texte. | 6 à 8 s | Blanc |
+| R9 | Reel « post classique » | Fond blanc, une phrase, une musique : l'équivalent animé d'un post texte. | 10 à 12 s | Blanc |
 | P1 | Image | Fond blanc ou couleur, une phrase qui donne envie de partager. | | |
 | C1 | Carrousel | Couverture, 5 à 8 pages (questions, signes, quiz avec réponse à la fin), page finale avec l'appel vers le site. | | |
 
 Trois règles valent pour tous les formats : tout est centré (sauf les
 réponses d'un quiz, alignées à gauche) ; il n'y a jamais de score ; les
-mascottes ne jouent que dans les reels d'animation (R5 et R6) et dans le
-quiz chrono, où elles attendent la réponse puis s'en réjouissent.
+mascottes sont sur tous les visuels, en grand dans les animations et les
+jeux (où elles attendent la réponse puis s'en réjouissent), en petit sur
+les phrases tendres, les posts et chaque page de carrousel (règle de Thomas,
+octobre 2026).
 Les phrases émotives (R1, R2, R3, R9 et les posts du même ton) sont en police
 plume, les quiz, jeux et phrases drôles en Fredoka.
 
@@ -215,10 +217,16 @@ peuvent y puiser directement, et renvoyer vers la page du jeu complet.
 
 ### 4.4 Les mascottes : la clé de la DA
 
-Les mascottes ne jouent que dans les reels d'animation (R5 et R6), et elles y
-bougent : de face, de profil, de dos, bras en l'air, qui saluent, surprises,
-amoureuses, qui boudent, qui dorment. Aucune ne garde la même pose ni la même
-expression d'un plan à l'autre.
+Les mascottes sont sur tous les visuels, et elles bougent : de face, de
+profil, de dos, bras en l'air, qui saluent, surprises, amoureuses, qui
+boudent, qui dorment, qui pleurent, qui se fâchent, qui font les mignonnes.
+Aucune ne garde la même pose ni la même expression d'un plan à l'autre. La
+rose est la fille (elle porte un nœud), le violet le garçon. Depuis le
+7 octobre 2026 elles sont **dessinées**, plus plates : un trait d'encre épais
+et tremblé qui vit d'une image à l'autre, des aplats, un reflet et des joues
+estompés, un grain de papier sur toute l'image, les décors au même trait.
+C'est ce que font les petits comptes de dessin qui marchent sur Instagram
+(analyse de nub dans `reseaux/atelier/REFERENCES.md`).
 
 Elles sont redessinées une seule fois en SVG **articulé** : corps, yeux,
 bouche, joues, bras, jambes, accessoires (palette, fleur, téléphone...) en
@@ -318,15 +326,30 @@ enrichie au fil du temps.
 
 ### 5.1 Ce qu'on fait à la place des musiques tendance
 
-1. **Une bibliothèque musicale maison** : 60 à 100 morceaux libres de droits,
-   choisis une fois et classés (ambiance : doux, joyeux, romantique, mignon,
-   suspense de quiz ; tempo ; énergie ; durée). Pour chaque morceau, on garde
-   la licence, la source et l'attribution éventuelle. Source retenue : le
-   catalogue FreePD (domaine public, CC0, aucune attribution), dont le site a
-   fermé mais qui reste copié sur Internet Archive. Six morceaux pour
-   commencer (trois joyeux pour les quiz, trois au piano pour les
-   citations), coupés à 90 s et ramenés au même volume ; la liste est dans
-   `reseaux/studio/public/musique/bibliotheque.json`.
+1. **Une bibliothèque musicale maison** : 55 morceaux libres de droits
+   (octobre 2026), dans `reseaux/studio/public/musique/bibliotheque.json`,
+   rangés en cinq ambiances : `leger` (humour, ukulélé, guitare), `doux`
+   (piano, guitare acoustique), `sensuel` (R&B et lo-fi doux, pour le coquin
+   et les statiques du soir), `jeu` (connais-tu, tu préfères) et `fetes`
+   (Noël, Nouvel An). Six viennent du catalogue FreePD (domaine public, CC0)
+   et sont dans le dépôt ; 49 viennent de Mixkit (licence gratuite, usage
+   commercial et réseaux sociaux sans attribution) et ne sont jamais dans le
+   dépôt : `scripts/musiques.mjs` les télécharge, les coupe à 85 s et les
+   ramène à -16 LUFS, et le workflow de rendu les garde en cache.
+   - **Le choix est automatique** (`automates/lib/musique.mjs`, au rendu) :
+     l'ambiance vient de la catégorie (`pov` léger, `coquin` sensuel,
+     `statique` et `phrase` doux, jeux `jeu`) ou du champ `ambiance` de la
+     recette ; on prend d'abord un morceau jamais entendu sur le compte, puis
+     un de la moitié la moins récemment entendue, et on part d'un de ses
+     points de départ (`departs`, le début d'une partie du morceau) pour ne
+     pas toujours entendre la même entrée. Le choix est écrit dans la
+     recette.
+   - **La vraie musique tendance** passe par l'Audio API (voir le tableau de
+     la partie 2) : il faudrait refaire la connexion de l'appli Meta avec la
+     connexion Facebook et une Page reliée au compte. Le rendu ferait alors
+     la vidéo avec ses seuls bruitages, et la publication attacherait un son
+     tendance autorisé (`audio_volume` pour la musique, `video_volume` pour
+     nos bruitages).
    - Prudence : certains morceaux « libres » sont déclarés auprès des systèmes
      de détection de droits et déclenchent des réclamations. Un morceau qui en
      reçoit une est retiré de la bibliothèque, et l'admin le signale.
@@ -542,8 +565,8 @@ https://claude.ai/artifact/2EQe4VPFYhMazvenJ3fqDX
   Display italique (citations), tailles fixées par format, rien sous 34 px ;
 - **mise en page** : zones de sécurité des reels, recadrage 3:4 de la grille,
   tout centré ;
-- **mascottes** : pièces séparées, poses et expressions, couleurs fixes, sans
-  contour ; seulement dans les reels d'animation ;
+- **mascottes** : pièces séparées, seize poses et humeurs, couleurs fixes,
+  trait d'encre tremblé, le nœud de la rose ; sur tous les visuels ;
 - **ornements** : fleurs au trait à 30 % d'opacité, seulement sur les
   citations, deux au plus, jamais sous le texte ;
 - **mouvement** : courbes d'animation communes, durées courtes (200 à 700 ms),

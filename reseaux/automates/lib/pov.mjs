@@ -9,8 +9,9 @@ import { fileURLToPath } from 'node:url';
 const ici = path.dirname(fileURLToPath(import.meta.url));
 export const VOCABULAIRE = JSON.parse(fs.readFileSync(path.join(ici, '..', '..', 'studio', 'src', 'pov', 'vocabulaire.json'), 'utf8'));
 
-const YEUX = ['ouverts', 'heureux', 'coeur', 'plats', 'fermes', 'clin'];
-const BOUCHES = ['sourire', 'o', 'rire', 'plate', 'triste', 'bisou'];
+const YEUX = ['ouverts', 'heureux', 'coeur', 'plats', 'fermes', 'clin', 'brillants'];
+const SOURCILS = ['tristes', 'faches', 'hauts'];
+const BOUCHES = ['sourire', 'o', 'rire', 'plate', 'triste', 'bisou', 'chat', 'grogne'];
 const QUI = ['rose', 'violet'];
 const EMOJI = /\p{Extended_Pictographic}/u;
 
@@ -25,7 +26,8 @@ export function controlerPov(r) {
   const plans = Array.isArray(r.plans) ? r.plans : [];
   if (plans.length < 1 || plans.length > 8) f.push('une animation a de 1 à 8 plans');
   const total = plans.reduce((s, p) => s + (nombre(p.duree) ? p.duree : 0), 0);
-  if (total < 4 || total > 20) f.push(`durée totale de 4 à 20 s (ici ${total.toFixed(1)} s)`);
+  // un reel de moins de 10 s passe trop vite pour être compris (Thomas)
+  if (total < 10 || total > 20) f.push(`durée totale de 10 à 20 s (ici ${total.toFixed(1)} s)`);
   const texte = (t, ou, max) => {
     if (typeof t !== 'string' || !t.trim()) return f.push(`${ou} : texte vide`);
     if (t.length > max) f.push(`${ou} : ${max} signes au plus`);
@@ -36,7 +38,7 @@ export function controlerPov(r) {
     const ou = `plan ${i + 1}`;
     const d = p.duree;
     if (typeof p.description !== 'string' || p.description.trim().length < 30) f.push(`${ou} : la description doit dire ce qu'on voit (30 signes au moins)`);
-    if (!nombre(d) || d < 0.8 || d > 8) f.push(`${ou} : durée de 0,8 à 8 s`);
+    if (!nombre(d) || d < 0.8 || d > 14) f.push(`${ou} : durée de 0,8 à 14 s`);
     const decor = V.decors[p.decor];
     if (!decor) {
       f.push(`${ou} : décor inconnu « ${p.decor} »`);
@@ -45,6 +47,8 @@ export function controlerPov(r) {
     if (p.moment !== undefined && !V.moments.includes(p.moment)) f.push(`${ou} : moment inconnu « ${p.moment} »`);
     if (p.transition !== undefined && !V.transitions.includes(p.transition)) f.push(`${ou} : transition inconnue « ${p.transition} »`);
     if (p.couette !== undefined && (!['calme', 'bouge'].includes(p.couette) || p.decor !== 'chambre')) f.push(`${ou} : couette « calme » ou « bouge », dans la chambre seulement`);
+    if (p.couetteDe !== undefined && (p.couette !== 'bouge' || !nombre(p.couetteDe) || p.couetteDe < 0 || p.couetteDe >= d)) f.push(`${ou} : couetteDe demande une couette qui bouge, et un instant dans le plan`);
+    if (p.transition === 'noir' && i === 0) f.push(`${ou} : le premier plan ne commence pas dans le noir (l'accroche est dans la première image)`);
     if (p.legende !== undefined) texte(p.legende, `${ou}, légende`, 20);
     const dansLePlan = (de, a, quoi) => {
       if (!nombre(de) || !nombre(a) || a <= de) return f.push(`${ou}, ${quoi} : temps de/a invalides`);
@@ -77,12 +81,18 @@ export function controlerPov(r) {
         }
         dansLePlan(g.de, g.a, quoi);
         if (['marche', 'court'].includes(g.geste)) spotOuX(g.vers, quoi, true);
+        if (g.geste === 'plonge') {
+          if (decor.spots[g.vers]?.mode !== 'couche') f.push(`${ou}, ${quoi} : « vers » doit nommer une place dans le lit (${Object.keys(decor.spots).filter((k) => decor.spots[k].mode === 'couche').join(', ') || 'aucune dans ce décor'})`);
+          if (typeof x.a === 'string' && decor.spots[x.a]?.mode && decor.spots[x.a].mode !== 'debout') f.push(`${ou}, ${quoi} : on plonge depuis le sol (une place debout), pas depuis ${x.a}`);
+        }
         if (['calin', 'bisou'].includes(g.geste) && (!presents.includes(g.avec) || g.avec === x.qui)) f.push(`${ou}, ${quoi} : « avec » doit nommer l'autre personnage, présent dans le plan`);
         if (['offre', 'tient', 'mange'].includes(g.geste) && !V.objets[g.objet]) f.push(`${ou}, ${quoi} : objet inconnu « ${g.objet} »`);
         if (g.geste === 'effet' && !V.effets[g.effet]) f.push(`${ou}, ${quoi} : effet inconnu « ${g.effet} »`);
         if (g.geste === 'visage') {
           if (g.yeux !== undefined && !YEUX.includes(g.yeux)) f.push(`${ou}, ${quoi} : yeux inconnus « ${g.yeux} »`);
           if (g.bouche !== undefined && !BOUCHES.includes(g.bouche)) f.push(`${ou}, ${quoi} : bouche inconnue « ${g.bouche} »`);
+          if (g.sourcils !== undefined && !SOURCILS.includes(g.sourcils)) f.push(`${ou}, ${quoi} : sourcils inconnus « ${g.sourcils} »`);
+          if (g.larmes !== undefined && typeof g.larmes !== 'boolean') f.push(`${ou}, ${quoi} : larmes true ou false`);
         }
         if (g.geste === 'tourne' && g.vue !== undefined && !['face', 'profil', 'dos'].includes(g.vue)) f.push(`${ou}, ${quoi} : vue inconnue`);
         if (g.geste === 'regarde' && g.cible !== undefined && !['camera', 'gauche', 'droite', 'haut', 'bas', ...QUI].includes(g.cible)) f.push(`${ou}, ${quoi} : cible inconnue`);

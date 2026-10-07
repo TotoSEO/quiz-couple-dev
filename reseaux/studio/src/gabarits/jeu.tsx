@@ -81,8 +81,8 @@ export const MascottesDuJeu: React.FC<{ f: number; sc: Scene; s: number; joie: s
   if (f >= finChrono) {
     return (
       <div className="qc-scene-mascottes" style={vite(f, 2 * PAS)}>
-        <Mascotte nom="rose" echelle={echelle} options={{ bras: [160, 160], yeux: 'heureux', bouche: 'rire', saut: saut(f, finChrono) }} />
-        <Mascotte nom="violet" echelle={echelle} options={{ bras: [155, 155], yeux: 'heureux', bouche: 'rire', saut: saut(f, finChrono + 4) }} />
+        <Mascotte nom="rose" echelle={echelle} options={{ tremble: Math.floor(f / 4), bras: [160, 160], yeux: 'heureux', bouche: 'rire', saut: saut(f, finChrono) }} />
+        <Mascotte nom="violet" echelle={echelle} options={{ tremble: Math.floor(f / 4), bras: [155, 155], yeux: 'heureux', bouche: 'rire', saut: saut(f, finChrono + 4) }} />
         <div className="qc-bulle is-joie" style={{ top: -56, left: '50%', opacity: yay.opacity, transform: `translateX(-50%) ${yay.transform}` }}>
           {joie}
         </div>
@@ -95,7 +95,7 @@ export const MascottesDuJeu: React.FC<{ f: number; sc: Scene; s: number; joie: s
       <Mascotte
         nom="rose"
         echelle={echelle}
-        options={lit ? { bras: [12, 12], yeux: 'ouverts', regard: [2, -5], bouche: 'sourire' } : { bras: [22, 22], yeux: 'ouverts', regard: [3, -4], bouche: 'o' }}
+        options={{ tremble: Math.floor(f / 4), ...(lit ? { bras: [12, 12], yeux: 'ouverts', regard: [2, -5], bouche: 'sourire' } : { bras: [22, 22], yeux: 'ouverts', regard: [3, -4], bouche: 'o' }) }}
         style={{ transform: `translateY(${attente(f, 0)}px)` }}
       >
         {!lit && <Exclamation f={f} debut={chrono} presse={presse} cote="droite" />}
@@ -103,7 +103,7 @@ export const MascottesDuJeu: React.FC<{ f: number; sc: Scene; s: number; joie: s
       <Mascotte
         nom="violet"
         echelle={echelle}
-        options={lit ? { bras: [6, 6], yeux: 'ouverts', regard: [-2, -5], bouche: 'sourire' } : { bras: [6, 6], yeux: 'ouverts', regard: [-3, -4], bouche: 'plate' }}
+        options={{ tremble: Math.floor(f / 4) + 1, ...(lit ? { bras: [6, 6], yeux: 'ouverts', regard: [-2, -5], bouche: 'sourire' } : { bras: [6, 6], yeux: 'ouverts', regard: [-3, -4], bouche: 'plate' }) }}
         style={{ transform: `translateY(${attente(f, 1.7)}px)` }}
       >
         {!lit && <Exclamation f={f} debut={chrono + 2 * PAS} couleur="violet" presse={presse} cote="gauche" />}

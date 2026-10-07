@@ -12,9 +12,10 @@ export type NomObjet = keyof typeof vocabulaire.objets;
 export type NomEffet = keyof typeof vocabulaire.effets;
 export type NomGeste = keyof typeof vocabulaire.gestes;
 export type Moment = 'matin' | 'midi' | 'soir' | 'nuit';
-export type Transition = 'coupe' | 'fondu' | 'glisse';
-export type Yeux = 'ouverts' | 'heureux' | 'coeur' | 'plats' | 'fermes' | 'clin';
-export type Bouche = 'sourire' | 'o' | 'rire' | 'plate' | 'triste' | 'bisou';
+export type Transition = 'coupe' | 'fondu' | 'glisse' | 'noir';
+export type Yeux = 'ouverts' | 'heureux' | 'coeur' | 'plats' | 'fermes' | 'clin' | 'brillants';
+export type Bouche = 'sourire' | 'o' | 'rire' | 'plate' | 'triste' | 'bisou' | 'chat' | 'grogne';
+export type Sourcils = 'tristes' | 'faches' | 'hauts';
 export type Position = number | string;
 
 export type Geste = {
@@ -29,6 +30,8 @@ export type Geste = {
   cible?: string;
   yeux?: Yeux;
   bouche?: Bouche;
+  sourcils?: Sourcils;
+  larmes?: boolean;
   rougit?: boolean;
   avec?: Qui;
   objet?: NomObjet;
@@ -91,6 +94,8 @@ export type PlanPov = {
   transition?: Transition;
   // la couette bouge toute seule (scènes coquines, sans jamais rien montrer)
   couette?: 'calme' | 'bouge';
+  // l'instant où la couette se met à bouger (après un plongeon), sinon dès le début
+  couetteDe?: number;
   legende?: string;
   textes?: TextePov[];
   persos?: PersoPov[];
@@ -116,6 +121,7 @@ export type RecettePov = {
   signature?: boolean;
   musique?: string;
   musiqueDebut?: number;
+  ambiance?: string;
 };
 
 export { vocabulaire };

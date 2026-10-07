@@ -42,9 +42,14 @@ Le son du reel fini est ramené à -14 LUFS et -1 dBTP (jetons `son-*`).
 | `connais-tu` | reel.mp4 + couverture.jpg | « Connais-tu ton partenaire ? » : accroche animée, 8 questions sans réponse, lecture puis chrono, « Comment your score! » |
 | `tu-preferes` | reel.mp4 + couverture.jpg | Tu préfères : accroche animée, dilemmes A ou B (alignés à gauche), lecture puis chrono |
 | `quiz-chrono` | reel.mp4 + couverture.jpg | Quiz à bonne réponse : lecture, réponses, chrono, réponse, fin |
-| `citation` | reel.mp4 + couverture.jpg | Phrase en police plume, mot à mot, fleurs au trait, musique douce |
-| `image` | image.jpg | Post 4:5 : phrase émotive (plume, fleurs) ou drôle (Fredoka), avec ou sans scène dessinée (`scene`) |
-| `carrousel` | page-1.jpg... | Couverture et page finale (avec ou sans scène dessinée), pages numérotées |
+| `citation` | reel.mp4 + couverture.jpg | Phrase en police plume, mot à mot, fleurs au trait, le petit duo des mascottes, musique douce, 10 à 14 s |
+| `image` | image.jpg | Post 4:5 : phrase émotive (plume, fleurs) ou drôle (Fredoka), avec une scène dessinée (`scene`) ou le petit duo |
+| `carrousel` | page-1.jpg... | Couverture et page finale (scène dessinée ou duo), pages numérotées avec le duo en tout petit dans le coin |
+
+Les mascottes sont sur tous les visuels (`Duo.tsx` quand il n'y a pas de
+scène). Elles sont dessinées : trait d'encre tremblé (`charte/mascottes.js`,
+option `tremble`), aplats, joues estompées, le nœud de la rose, seize poses
+et humeurs ; un grain de papier léger (`is-papier`) couvre toute l'image.
 
 Dans les jeux, la question entre seule et reste le temps d'être lue (0,7 s
 plus 0,3 s par mot, de 1,2 à 3,5 s) avant que le chrono parte.
@@ -58,11 +63,15 @@ Un scénario `pov` est une suite de plans. Chaque plan a un décor
 des personnages placés sur un spot (« lit-gauche », « canape-droite »,
 « banc-gauche »...) ou à une abscisse, et une ligne de temps de gestes
 (`marche`, `saute`, `salue`, `calin`, `bisou`, `offre`, `tient`, `mange`,
-`vaisselle`, `telephone`, `dort`, `apparait`...). S'y ajoutent les objets
+`vaisselle`, `telephone`, `dort`, `pleure`, `fache`, `mignon`, `plonge`,
+`apparait`...). S'y ajoutent les objets
 posés ou qui s'envolent, les effets (cœurs, Z, « ! », flocons, confettis,
 feux d'artifice), les bulles de dialogue, les textes qui s'écrivent mot à
-mot, la caméra (zoom sur un personnage, secousse) et une légende par plan.
-Les bruitages se déduisent des gestes.
+mot, la caméra (zoom sur un personnage, secousse), une légende par plan et
+une transition (`coupe`, `fondu`, `glisse`, `noir` : l'image s'éteint puis se
+rallume, pour passer d'un moment de la journée à l'autre ; la lumière de la
+pièce suit `moment`). Les bruitages se déduisent des gestes, la musique est
+choisie au rendu (`automates/lib/musique.mjs`). Un reel dure 10 s au moins.
 
 - `temps.ts` : l'état de chaque personnage et de la caméra à un instant
   (fonctions pures). Respiration et clignement sont automatiques.
@@ -76,5 +85,7 @@ Le contrôle du scénario avant rendu est dans
 
 ## Sons
 
-Bruitages CC0 de Kenney, packs Interface, Digital Audio, RPG Audio et Impact (`studio/public/sons/LICENCES.md`), musiques du
-domaine public du catalogue FreePD (`studio/public/musique/bibliotheque.json`).
+Bruitages CC0 de Kenney, packs Interface, Digital Audio, RPG Audio et Impact (`studio/public/sons/LICENCES.md`). Musiques :
+55 morceaux en cinq ambiances (`studio/public/musique/bibliotheque.json`), six FreePD (CC0) dans le dépôt et 49 Mixkit
+préparés par `node scripts/musiques.mjs` (à lancer une fois avant un rendu en local). Le rendu choisit le morceau tout seul
+(`automates/lib/musique.mjs`).

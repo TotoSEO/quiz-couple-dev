@@ -37,6 +37,15 @@ jobs:
           cache-dependency-path: reseaux/studio/package-lock.json
       - name: Studio
         run: cd reseaux/studio && npm ci && npx remotion browser ensure
+      # morceaux Mixkit : téléchargés une fois, gardés en cache tant que la
+      # bibliothèque ne change pas ; le script ne refait que ce qui manque
+      - uses: actions/cache@v4
+        with:
+          path: reseaux/studio/public/musique/mx-*.mp3
+          key: musiques-${{ hashFiles('reseaux/studio/public/musique/bibliotheque.json') }}
+          restore-keys: musiques-
+      - name: Musiques
+        run: cd reseaux/studio && node scripts/musiques.mjs
       - name: Synchro
         if: steps.atelier.outputs.present == 'true'
         run: node reseaux/automates/synchro.mjs atelier/reseaux/atelier/posts

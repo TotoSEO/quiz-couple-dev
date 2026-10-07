@@ -13,7 +13,7 @@ export const GABARITS: Record<
   Qui,
   { l: number; h: number; sol: number; centre: number; yeux: [number, number]; haut: number; bas: number; bouche: number; hanches: number; largeur: number; bras: number }
 > = {
-  rose: { l: 260, h: 280, sol: 270, centre: 130, yeux: [130, 136], haut: 64, bas: 238, bouche: 178, hanches: 214, largeur: 168, bras: 26 },
+  rose: { l: 260, h: 280, sol: 270, centre: 130, yeux: [130, 136], haut: 48, bas: 238, bouche: 178, hanches: 214, largeur: 168, bras: 26 },
   violet: { l: 220, h: 300, sol: 290, centre: 110, yeux: [110, 106], haut: 26, bas: 264, bouche: 152, hanches: 237, largeur: 140, bras: 24 },
 };
 
@@ -37,18 +37,29 @@ const DECORS = vocabulaire.decors as unknown as Record<string, Decor>;
 // Un personnage placé : son spot résolu, sa taille, sa couche.
 export type Place = { qui: Qui; x: number; sol: number; taille: number; couche: 'derriere' | 'devant'; mode: Mode; ligne: number; sens: 1 | -1; perso: PersoPov };
 
+// Ce qu'un personnage couché doit descendre pour que le haut de sa tête
+// passe sous le bord de la couette.
+const sousLaCouette = (qui: Qui, x: number, sol: number, taille: number) => {
+  const g = GABARITS[qui];
+  return bordCouette(x) - (sol - (g.sol - g.haut) * taille) + 30;
+};
+
+// La couette d'un plan à l'instant t : 0 calme, 1 qui bouge.
+export const forceCouette = (plan: PlanPov, t: number) => {
+  if (plan.couette !== 'bouge') return 0;
+  if (plan.couetteDe === undefined) return 1;
+  return bornes((t - plan.couetteDe) / 0.35);
+};
+
 // Le bord haut de la couette, au repos, là où se tient un personnage couché
 // (decors.ts dessine la même courbe).
-export const bordCouette = (x: number, t = 0, bouge = false) => {
-  const bosses = bouge
-    ? [
-        { x: 420, a: 46 + 34 * Math.max(0, Math.sin(t * 7.3)) + 16 * Math.sin(t * 13.1) },
-        { x: 660, a: 40 + 30 * Math.max(0, Math.sin(t * 6.1 + 1.3)) + 14 * Math.sin(t * 11.7 + 0.5) },
-      ]
-    : [
-        { x: 420, a: 14 },
-        { x: 660, a: 14 },
-      ];
+// force : de 0 (calme) à 1 (la couette bouge), pour qu'elle se mette à
+// bouger en douceur à l'instant voulu (couetteDe)
+export const bordCouette = (x: number, t = 0, force = 0) => {
+  const bosses = [
+    { x: 420, a: 14 + force * (32 + 34 * Math.max(0, Math.sin(t * 7.3)) + 16 * Math.sin(t * 13.1)) },
+    { x: 660, a: 14 + force * (26 + 30 * Math.max(0, Math.sin(t * 6.1 + 1.3)) + 14 * Math.sin(t * 11.7 + 0.5)) },
+  ];
   let y = 1180 + Math.sin(x / 70) * 4;
   for (const b of bosses) y -= b.a * Math.exp(-((x - b.x) ** 2) / (2 * 95 ** 2));
   return y;
@@ -158,6 +169,13 @@ const POSES: Record<string, OptionsMascotte> = {
   amoureux: { vue: 'face', bras: [6, 6], yeux: 'coeur', bouche: 'sourire', coeurs: true },
   boude: { vue: 'face', bras: [-4, -4], yeux: 'plats', regard: [-5, 0], bouche: 'triste', penche: -4 },
   dort: { vue: 'face', bras: [4, 4], yeux: 'fermes', bouche: 'plate', penche: 5 },
+  mignon: { vue: 'face', bras: [6, 6], yeux: 'heureux', bouche: 'chat', rougit: true },
+  triste: { vue: 'face', bras: [-4, -4], yeux: 'ouverts', regard: [0, 5], sourcils: 'tristes', bouche: 'triste', larmes: true, penche: 3 },
+  colere: { vue: 'face', bras: [38, 38], yeux: 'ouverts', sourcils: 'faches', bouche: 'grogne', rougit: true },
+  gene: { vue: 'face', bras: [14, 14], yeux: 'ouverts', regard: [6, 2], sourcils: 'tristes', bouche: 'plate', rougit: true, penche: -3 },
+  fatigue: { vue: 'face', bras: [-2, -2], yeux: 'plats', regard: [0, 2], bouche: 'plate', penche: 4 },
+  supplie: { vue: 'face', bras: [40, 40], devant: [true, true], yeux: 'brillants', bouche: 'chat', rougit: true },
+  rire: { vue: 'face', bras: [30, 30], yeux: 'fermes', bouche: 'rire', penche: -5 },
 };
 
 const regardVers = (cible: string | undefined, moi: number, places: Place[], plan: PlanPov, t: number): [number, number] => {
@@ -319,6 +337,8 @@ export const etatPerso = (plan: PlanPov, place: Place, t: number, places: Place[
       case 'visage':
         if (g.yeux) o.yeux = g.yeux as OptionsMascotte['yeux'];
         if (g.bouche) o.bouche = g.bouche as OptionsMascotte['bouche'];
+        if (g.sourcils) o.sourcils = g.sourcils;
+        if (g.larmes !== undefined) o.larmes = g.larmes;
         if (g.rougit !== undefined) e.options.rougit = g.rougit;
         visage = true;
         break;
@@ -414,6 +434,43 @@ export const etatPerso = (plan: PlanPov, place: Place, t: number, places: Place[
         e.tenus.push({ objet: 'telephone', main: 1, rot: -8, echelle: 1, devant: true, dx: -20, dy: -30 });
         break;
       }
+      case 'pleure': {
+        // les larmes coulent (une descente qui recommence), les épaules tressautent
+        o.sourcils = 'tristes';
+        o.bouche = 'triste';
+        o.yeux = 'ouverts';
+        o.regard = [0, 5];
+        o.larmes = 4 + ((u * 26) % 22);
+        o.bras = [-6, -6];
+        const sanglot = Math.max(0, Math.sin(PI2 * 2.6 * u));
+        e.sy *= 1 - 0.035 * sanglot;
+        e.sx *= 1 + 0.02 * sanglot;
+        e.rot += 2 * Math.sin(PI2 * 1.3 * u);
+        visage = true;
+        break;
+      }
+      case 'fache': {
+        // sourcils froncés, bouche en zigzag, joues rouges, et le corps qui vibre
+        o.sourcils = 'faches';
+        o.bouche = 'grogne';
+        o.yeux = 'ouverts';
+        o.rougit = true;
+        o.bras = [36 + 6 * Math.sin(PI2 * 5 * u), 36 - 6 * Math.sin(PI2 * 5 * u)];
+        e.dx += 3 * Math.sin(PI2 * 14 * u);
+        e.sy *= 1.03;
+        visage = true;
+        break;
+      }
+      case 'mignon': {
+        // yeux fermés de bonheur, petite bouche de chat, joues pleines, un balancement
+        o.yeux = 'heureux';
+        o.bouche = 'chat';
+        o.rougit = true;
+        o.bras = [8, 8];
+        e.rot += 5 * Math.sin(PI2 * 0.6 * u);
+        visage = true;
+        break;
+      }
       case 'tremble':
         e.dx += 5 * Math.sin(PI2 * 17 * u);
         o.bras = [4, 4];
@@ -434,7 +491,7 @@ export const etatPerso = (plan: PlanPov, place: Place, t: number, places: Place[
       case 'apparait': {
         const r = ressort(bornes(q));
         const depuis = g.depuis ?? 'pop';
-        const h = GABARITS[place.qui].h * place.taille;
+        const h = place.mode === 'couche' ? sousLaCouette(place.qui, x, place.sol, place.taille) / 0.9 : GABARITS[place.qui].h * place.taille;
         if (depuis === 'bas') e.dy += (1 - r) * h * 0.9;
         else if (depuis === 'gauche') e.dx -= (1 - sortie(q)) * (x + 400);
         else if (depuis === 'droite') e.dx += (1 - sortie(q)) * (1480 - x);
@@ -445,7 +502,9 @@ export const etatPerso = (plan: PlanPov, place: Place, t: number, places: Place[
       case 'disparait': {
         const r = douce(q);
         const vers = g.vers ?? 'pop';
-        const h = GABARITS[place.qui].h * place.taille;
+        // au lit, il descend juste assez pour passer sous la couette : plus
+        // bas, ses pieds sortiraient sous le lit
+        const h = place.mode === 'couche' ? sousLaCouette(place.qui, x, place.sol, place.taille) / 0.95 : GABARITS[place.qui].h * place.taille;
         if (vers === 'bas') e.dy += r * h * 0.95;
         else if (vers === 'gauche') e.dx -= r * (x + 400);
         else if (vers === 'droite') e.dx += r * (1480 - x);
@@ -465,6 +524,49 @@ export const etatPerso = (plan: PlanPov, place: Place, t: number, places: Place[
       x.echelle *= 0.85;
       x.dx = (x.dx ?? 0) + 24;
       x.dy = (x.dy ?? 0) + 18;
+    }
+  }
+  // plonge : depuis le sol, il saute dans le lit et passe sous la couette,
+  // puis y reste jusqu'à la fin du plan, la tête et les mains dehors
+  const plonge = gestes.find((g) => g.geste === 'plonge');
+  const lit = plonge && typeof plonge.vers === 'string' ? DECORS[plan.decor].spots[plonge.vers] : undefined;
+  if (plonge && lit?.mode === 'couche' && t >= plonge.de) {
+    const g = GABARITS[place.qui];
+    const solLit = bordCouette(lit.x) - 26 + (g.sol - g.bouche) * place.taille;
+    const x0 = abscisse(plan, place, plonge.de, places);
+    const q = (t - plonge.de) / Math.max(0.01, plonge.a - plonge.de);
+    const cote = Math.sign(lit.x - x0) || 1;
+    if (q >= 1) {
+      e.mode = 'couche';
+      e.couche = 'derriere';
+      e.x = lit.x;
+      e.sol = solLit;
+      e.rot = 0;
+      e.options.vue = 'face';
+      e.options.jambesAngles = undefined;
+      // il s'enfonce sous la couette, puis la tête et les mains ressortent
+      const r = (t - plonge.a) / 0.4;
+      if (r < 1) e.dy += 55 * (1 - douce(r));
+      const sous = gestes.find((h) => h.geste === 'disparait' && (h.vers ?? 'pop') === 'bas' && t >= h.de);
+      if (sous) e.dy = douce((t - sous.de) / Math.max(0.01, sous.a - sous.de)) * sousLaCouette(place.qui, lit.x, solLit, place.taille);
+    } else if (q < 0.2) {
+      // l'élan : il se ramasse
+      const r = Math.sin((Math.PI * q) / 0.2);
+      e.sy *= 1 - 0.16 * r;
+      e.sx *= 1 + 0.1 * r;
+      e.sens = cote as 1 | -1;
+    } else {
+      const s = (q - 0.2) / 0.8;
+      e.x = x0 + (lit.x - x0) * s;
+      e.sol = place.sol + (solLit + 40 - place.sol) * s - 320 * Math.sin(Math.PI * Math.min(1, s * 1.1));
+      e.rot = cote * 22 * Math.sin(Math.PI * s);
+      e.sens = cote as 1 | -1;
+      e.options.bras = [70, 70];
+      e.options.yeux = 'heureux';
+      e.options.bouche = 'rire';
+      e.options.jambesAngles = [-28, 28];
+      // il passe derrière le bord de la couette dès qu'il redescend
+      if (s > 0.5) e.couche = 'derriere';
     }
   }
   // assis sur un banc : les jambes pendent et se balancent doucement
@@ -506,8 +608,10 @@ export const camera = (plan: PlanPov, t: number, etats: EtatPerso[]): Camera => 
   const vise = (c: ClePov) => {
     const e = c.cible ? etats.find((x) => x.qui === c.cible) : undefined;
     if (e) {
+      // la caméra vise la tête au repos : elle ne saute pas avec le personnage
       const [hx, hy] = tete(e);
-      return { zoom: c.zoom ?? 1, x: c.x ?? hx, y: c.y ?? hy };
+      const repos = hy + (e.options.saut ?? 0) * e.taille * e.echelle;
+      return { zoom: c.zoom ?? 1, x: c.x ?? hx, y: c.y ?? repos };
     }
     return { zoom: c.zoom ?? 1, x: c.x ?? 540, y: c.y ?? 960 };
   };

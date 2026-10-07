@@ -22,6 +22,40 @@ post doit faire. Il reprend les choix de Thomas (octobre 2026) ; la routine
 - **Jamais de score affiché.** Dans les jeux, c'est la personne qui compte
   ses réponses et l'écrit en commentaire.
 
+## Les personnages
+
+La mascotte **rose est la fille** (elle porte un petit nœud rose), la
+**violette est le garçon**. Les scénarios suivent les gestes qu'on attend
+de chacun dans un couple classique : c'est le violet qui offre les fleurs,
+qui tend le bouquet ou qui apparaît derrière les vases. Les gestes neutres
+(tendre une tasse, partager des frites, faire la vaisselle) vont à l'un ou à
+l'autre. C'est le genre de détail qui se voit tout de suite.
+
+**Elles sont dessinées, pas plates.** Un trait d'encre épais et un peu
+tremblé, qui vit d'une image à l'autre, des aplats, un reflet et des joues
+estompés comme à l'aérographe, un grain de papier sur toute l'image. Les
+décors sont au même trait. C'est le style des petits dessins qui marchent
+sur Instagram (voir `REFERENCES.md`), pas celui d'une icône vectorielle.
+
+**Elles ont des humeurs, et on les varie.** Mignonne (yeux fermés de
+bonheur, petite bouche de chat, grosses joues), triste (sourcils, larmes),
+en colère (sourcils froncés, bouche en zigzag, joues rouges), gênée,
+fatiguée, suppliante (grands yeux humides), morte de rire, amoureuse,
+boudeuse, endormie. Une semaine où elles ne font que sourire est une semaine
+ratée : l'expression est le contenu. Poses `mignon`, `triste`, `colere`,
+`gene`, `fatigue`, `supplie`, `rire` et gestes `pleure`, `fache`, `mignon`.
+
+**Elles sont sur tous les posts.** Dans les animations et les jeux en
+grand ; sur les phrases tendres, les posts et chaque page de carrousel en
+petit (le duo serré l'un contre l'autre, posé par le gabarit, la routine n'a
+rien à faire). Dans un mini message, le personnage est **en grand**, au
+centre, et parle à la personne qui regarde.
+
+**On anime dès qu'on peut.** Un câlin commence par les deux qui arrivent
+chacun de son côté de l'écran ; une scène au lit qui change de moment de la
+journée passe par un écran noir, la lumière change et les deux reviennent
+dans le lit. Une image qui ne bouge pas est un reel qu'on fait défiler.
+
 ## La semaine type (heure de Paris)
 
 Trois posts par jour, à une minute tirée au sort dans 6 h-8 h, 11 h-13 h et
@@ -56,7 +90,7 @@ mot à mot : « I saw these flowers... and thought of you »).
 - **L'accroche est dans la première seconde** : les personnages sont dans
   l'image dès la première image et bougent tout de suite. Jamais d'image
   vide au début.
-- Une seule idée, 6 à 14 secondes, 1 à 5 plans. Une chute à la fin
+- Une seule idée, 10 à 15 secondes (jamais moins de 10), 1 à 5 plans. Une chute à la fin
   (réaction, rire, cœurs, câlin).
 - **Très simple et minimaliste** : un décor, deux personnages au plus, un
   ou deux objets. Les références de Thomas marchent parce qu'elles sont
@@ -64,8 +98,8 @@ mot à mot : « I saw these flowers... and thought of you »).
 - Le titre « POV: ... » en haut, ou un message mot à mot, rarement les deux.
 - La mention quiz-couple.com est dans l'image ; **la légende ne renvoie
   jamais vers le site.**
-- Musique : `ukulele-song` ou `inventing-flight` pour l'humour,
-  `romantic-inspiration` ou `parhelion` pour le tendre.
+- Musique : choisie au rendu dans l'ambiance `leger` (humour) ; une
+  animation tendre demande `"ambiance": "doux"`.
 
 ### `coquin` : l'animation coquine de la semaine (gabarit `pov`)
 
@@ -79,8 +113,10 @@ c'est appuyé, moins c'est vu.
 
 Les deux mascottes dans une pose tendre (câlin, banc au coucher du soleil,
 sous la couette, dans le canapé), une phrase courte qui s'écrit mot à mot
-(« I love you forever <3 »), une musique douce. Presque rien ne bouge : la
-respiration, les clignements, quelques cœurs. 6 à 8 secondes.
+(« I love you forever <3 »), une musique douce. Un seul plan et une seule
+idée, mais qui bouge : pour un câlin, les deux arrivent chacun d'un bord de
+l'écran, se rejoignent au milieu et s'enlacent, puis les cœurs montent.
+10 à 12 secondes.
 
 ### `connais-tu` : Connais-tu ton partenaire ? (gabarit `connais-tu`)
 
@@ -107,6 +143,40 @@ fleurs au trait, piano. Quatre lignes au plus.
 Gabarits prêts (post 4:5 avec une scène dessinée, carrousel de questions
 avec les mascottes en couverture), hors de la semaine type tant que Thomas
 ne les y a pas mis.
+
+## La musique
+
+Le rendu choisit le morceau tout seul, dans l'ambiance de la catégorie :
+`leger` pour l'humour, `sensuel` (R&B et lo-fi doux) pour le coquin, `doux`
+(piano, guitare) pour les statiques et les phrases, `jeu` pour les jeux,
+`fetes` pour Noël et le Nouvel An. Une recette peut demander une autre
+ambiance (`"ambiance": "doux"` pour une animation tendre). Un morceau ne
+revient pas avant que toute son ambiance soit passée, et il ne part pas
+toujours de la première seconde. 55 morceaux libres de droits (Mixkit et
+FreePD) : la bibliothèque musicale d'Instagram n'est pas accessible à une
+publication par l'API avec la connexion Instagram.
+
+## Les textes à l'écran
+
+Ce qui marche chez les références (voir `REFERENCES.md`), c'est un texte
+qui ressemble à un message qu'on envoie à son partenaire, pas à une phrase
+écrite pour un visuel.
+
+- **Les mini messages, les statiques et les bulles sont en minuscules**,
+  parlés, courts : « i saw these flowers... and thought of u <3 »,
+  « ur my favorite person », « thinking of u rn », « bc u stole my heart!! »,
+  « i love u forever <3 ». Deux à six mots par ligne.
+- Les abréviations de message sont permises et bienvenues : « u », « ur »,
+  « rn », « bc », « im », « tho », « :3 », « <3 », « !!! » (un par visuel).
+  Jamais d'emoji à l'écran : la police ne les dessine pas.
+- Le texte parle à la personne qui regarde (« u »), pour qu'elle l'envoie à
+  l'autre. C'est ce qui fait partager.
+- **Les titres « POV: » gardent une vraie phrase** après « POV: », en
+  minuscules (« POV: your partner says they're not hungry »).
+- **Les phrases tendres (gabarit citation) gardent leur ponctuation
+  normale** : police plume, majuscule au début, quatre lignes au plus.
+- Les jeux restent en anglais simple et correct : une question doit se lire
+  en une seconde.
 
 ## Légendes et hashtags
 

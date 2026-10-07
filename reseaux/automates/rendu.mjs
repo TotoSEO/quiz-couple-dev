@@ -9,6 +9,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { controlerImage, controlerReel, vignette } from './lib/fichier.mjs';
+import { AVEC_MUSIQUE, ambianceDe, choisirMusique, present } from './lib/musique.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
 const studio = path.join(ici, '..', 'studio');
@@ -33,7 +34,28 @@ export function rendreRecette(recette, dossier) {
 
 const TYPES = { mp4: 'video/mp4', jpg: 'image/jpeg' };
 
-export async function rendre(base, { heures = 30, maintenant = new Date(), rendreFn = rendreRecette, controles = { controlerReel, controlerImage, vignette } } = {}) {
+// Les musiques déjà choisies sur le compte, de la plus récente à la plus
+// ancienne, pour ne pas reprendre un morceau entendu il y a peu.
+async function musiquesRecentes(base, langue) {
+  const lignes = await base.select(
+    'social_variantes',
+    `select=publier_a,recette&langue=eq.${langue}&statut=in.(a_rendre,rendu,conteneur,publication,publie)&order=publier_a.desc.nullslast&limit=60`,
+  );
+  return lignes.filter((l) => l.recette?.musique).map((l) => ({ musique: l.recette.musique, musiqueDebut: l.recette.musiqueDebut }));
+}
+
+// Un reel sans morceau nommé en reçoit un, écrit dans sa recette.
+export async function avecMusique(base, v, categorie, disponible = present) {
+  const r = v.recette;
+  if (!AVEC_MUSIQUE.includes(r.gabarit) || (r.musique && disponible(r.musique))) return r;
+  const choix = choisirMusique({ ambiance: ambianceDe(r, categorie), gabarit: r.gabarit, recentes: await musiquesRecentes(base, v.langue), graine: v.id, disponible });
+  if (!choix) return r;
+  const recette = { ...r, ...choix };
+  await base.update('social_variantes', `id=eq.${v.id}`, { recette });
+  return recette;
+}
+
+export async function rendre(base, { heures = 30, maintenant = new Date(), rendreFn = rendreRecette, controles = { controlerReel, controlerImage, vignette }, disponible = present } = {}) {
   const limite = new Date(maintenant.getTime() + heures * 3600 * 1000).toISOString();
   const variantes = await base.select(
     'social_variantes',
@@ -48,11 +70,12 @@ export async function rendre(base, { heures = 30, maintenant = new Date(), rendr
       bilan.enAttente++;
       continue;
     }
-    const [post] = await base.select('social_posts', `select=jour,statut,format&id=eq.${v.post_id}`);
+    const [post] = await base.select('social_posts', `select=jour,statut,format,categorie&id=eq.${v.post_id}`);
     if (!post || post.statut !== 'valide') continue;
     const dossier = fs.mkdtempSync(path.join(os.tmpdir(), 'rendu-'));
     try {
-      const produits = rendreFn(v.recette, dossier);
+      const recette = await avecMusique(base, v, post.categorie, disponible);
+      const produits = rendreFn(recette, dossier);
       const fautes = [];
       for (const f of produits) {
         const chemin = path.join(dossier, f);

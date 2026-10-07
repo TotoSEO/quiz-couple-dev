@@ -5,14 +5,14 @@
 import React from 'react';
 import { Img, staticFile } from 'remotion';
 import { entree } from '../charte/animation';
-import { FPS, TEMPO } from '../charte/charte';
+import { FPS, TEMPO, ZONE } from '../charte/charte';
 import { LIBELLES } from '../charte/libelles';
 import type { PlanPov, RecettePov } from './scenario';
 import { aLEcran, hautDeTete, type Camera, type EtatPerso } from './temps';
 
-const HAUT = 220;
-const GAUCHE = 60;
-const LARGEUR = 900;
+const HAUT = ZONE.haut;
+const GAUCHE = ZONE.gauche;
+const LARGEUR = 1080 - ZONE.gauche - ZONE.droite;
 const bornes = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 const enImages = (s: number) => Math.round(s * FPS);
 

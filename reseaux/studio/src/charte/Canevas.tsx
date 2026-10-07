@@ -99,6 +99,16 @@ export const Canevas: React.FC<{
     <AbsoluteFill>
       <style>{CSS_JETONS}</style>
       <div ref={ref} className={classes} data-theme={theme === 'dark' ? 'dark' : 'light'}>
+        {/* le trait tremblé d'une scène fixe (posts, carrousels) : un filtre
+            partagé, filter: url(#qc-tremble) sur le calque de la scène, jamais
+            sur un texte. En vidéo, trop lent plein cadre : seules les
+            mascottes tremblent, par leur option tremble */}
+        <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
+          <filter id="qc-tremble" x="-4%" y="-4%" width="108%" height="108%" colorInterpolationFilters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed={Math.floor(frame / 4) % 1000} result="n" />
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </svg>
         {children}
       </div>
     </AbsoluteFill>

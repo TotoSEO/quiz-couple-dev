@@ -1,5 +1,6 @@
 import React from 'react';
 import { Canevas, Signature } from '../charte/Canevas';
+import { Duo } from '../charte/Duo';
 import { Fleurs } from '../charte/Fleurs';
 import { LIBELLES } from '../charte/libelles';
 import type { RecetteImage } from '../recette';
@@ -17,7 +18,7 @@ const bas: React.CSSProperties = {
 // P1 : une phrase centrée, la signature en bas. Émotive : police plume et
 // fleurs. Drôle : Fredoka, sans fleurs.
 export const ImageFixe: React.FC<{ recette: RecetteImage; verification?: boolean }> = ({ recette: r, verification }) => (
-  <Canevas theme={r.theme} format="post" verification={verification}>
+  <Canevas theme={r.theme} format="post" verification={verification} classes="is-papier">
     {r.scene && <SceneFixe plan={r.scene.plan} t={r.scene.t} haut={r.scene.haut} />}
     {r.style === 'citation' && !r.scene && <Fleurs choix={r.fleurs} />}
     <div className={'qc-utile' + (r.scene ? ' is-haut' : '') + (r.scene && !DECORS_CALMES.has(r.scene.plan.decor) ? ' is-carte' : '')}>
@@ -30,6 +31,7 @@ export const ImageFixe: React.FC<{ recette: RecetteImage; verification?: boolean
           {r.texte}
         </p>
       )}
+      {!r.scene && <Duo echelle={0.8} verif="mascottes" style={{ marginTop: 'var(--pas-8)' }} />}
     </div>
     <div style={bas}>
       <Signature texte={LIBELLES[r.langue].site} style={r.scene ? { padding: '8px 24px 8px 8px', borderRadius: 999, background: 'color-mix(in srgb, var(--fond) 82%, transparent)' } : undefined} />

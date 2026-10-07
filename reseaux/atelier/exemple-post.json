@@ -14,11 +14,11 @@
         "theme": "light",
         "idee": "Le classique du partenaire qui « n'a pas faim » et finit les frites de l'autre.",
         "titre": "POV: your partner says they're not hungry",
-        "musique": "ukulele-song.mp3",
+        "ambiance": "leger",
         "plans": [
           {
             "description": "Plan large du salon, le soir. Les deux sont assis dans le canapé. La rose tient un cornet de frites dans sa main gauche et regarde le violet. Le violet parle, une bulle dit « I'm not hungry. »",
-            "duree": 2.6,
+            "duree": 3.0,
             "decor": "salon",
             "moment": "soir",
             "persos": [
@@ -31,13 +31,13 @@
                     "objet": "frites",
                     "main": "gauche",
                     "de": 0,
-                    "a": 2.6
+                    "a": 3.0
                   },
                   {
                     "geste": "regarde",
                     "cible": "violet",
                     "de": 0,
-                    "a": 2.6
+                    "a": 3.0
                   }
                 ]
               },
@@ -57,14 +57,14 @@
               {
                 "qui": "violet",
                 "de": 0.3,
-                "a": 2.5,
+                "a": 2.9,
                 "texte": "I'm not hungry."
               }
             ]
           },
           {
             "description": "Gros plan qui zoome vite sur le visage du violet : ses yeux glissent vers les frites, la bouche s'ouvre, trois petits points apparaissent au-dessus de sa tête.",
-            "duree": 1.8,
+            "duree": 2.2,
             "decor": "salon",
             "moment": "soir",
             "persos": [
@@ -77,7 +77,7 @@
                     "objet": "frites",
                     "main": "gauche",
                     "de": 0,
-                    "a": 1.8
+                    "a": 2.2
                   }
                 ]
               },
@@ -89,19 +89,19 @@
                     "geste": "regarde",
                     "cible": "rose",
                     "de": 0.2,
-                    "a": 1.8
+                    "a": 2.2
                   },
                   {
                     "geste": "visage",
                     "bouche": "o",
                     "de": 0.5,
-                    "a": 1.8
+                    "a": 2.2
                   },
                   {
                     "geste": "effet",
                     "effet": "points",
                     "de": 0.7,
-                    "a": 1.8
+                    "a": 2.2
                   }
                 ]
               }
@@ -120,7 +120,7 @@
           },
           {
             "description": "Retour au plan large. Les frites sont maintenant dans les mains du violet, qui mange en fermant les yeux de plaisir. La rose se tourne vers lui, les yeux à moitié fermés, un « ! » au-dessus de la tête.",
-            "duree": 2.2,
+            "duree": 2.8,
             "decor": "salon",
             "moment": "soir",
             "persos": [
@@ -133,19 +133,19 @@
                     "yeux": "plats",
                     "bouche": "plate",
                     "de": 0.3,
-                    "a": 2.2
+                    "a": 2.8
                   },
                   {
                     "geste": "regarde",
                     "cible": "violet",
                     "de": 0.3,
-                    "a": 2.2
+                    "a": 2.8
                   },
                   {
                     "geste": "effet",
                     "effet": "exclamation",
                     "de": 0.6,
-                    "a": 2.2
+                    "a": 2.8
                   }
                 ]
               },
@@ -157,7 +157,7 @@
                     "geste": "mange",
                     "objet": "frites",
                     "de": 0,
-                    "a": 2.2
+                    "a": 2.8
                   }
                 ]
               }
@@ -165,7 +165,7 @@
           },
           {
             "description": "La rose boude et dit « Not hungry, huh? » dans une bulle ; le violet rit, gêné, avec une goutte sur le côté de la tête. La caméra se rapproche doucement des deux.",
-            "duree": 2.4,
+            "duree": 3.4,
             "decor": "salon",
             "moment": "soir",
             "persos": [
@@ -176,7 +176,7 @@
                   {
                     "geste": "boude",
                     "de": 0,
-                    "a": 2.4
+                    "a": 3.4
                   }
                 ]
               },
@@ -189,18 +189,18 @@
                     "objet": "frites",
                     "main": "droite",
                     "de": 0,
-                    "a": 2.4
+                    "a": 3.4
                   },
                   {
                     "geste": "rit",
                     "de": 0.5,
-                    "a": 2.4
+                    "a": 3.4
                   },
                   {
                     "geste": "effet",
                     "effet": "goutte",
                     "de": 0.6,
-                    "a": 2.4
+                    "a": 3.4
                   }
                 ]
               }
@@ -209,7 +209,7 @@
               {
                 "qui": "rose",
                 "de": 0.1,
-                "a": 2.3,
+                "a": 3.3,
                 "texte": "Not hungry, huh?"
               }
             ],
@@ -219,7 +219,7 @@
                 "zoom": 1
               },
               {
-                "a": 2.4,
+                "a": 3.4,
                 "zoom": 1.15,
                 "y": 1050
               }

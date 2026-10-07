@@ -7,7 +7,7 @@ import { dessinDecor } from './decors';
 import { dessinObjet, svgObjet, coeurChemin } from './objets';
 import type { ObjetPov, PlanPov } from './scenario';
 import vocabulaire from './vocabulaire.json';
-import { aLEcran, bordCouette, camera, etatPerso, GABARITS, hautDeTete, placer, TAILLE, type Camera, type EffetActif, type EtatPerso } from './temps';
+import { aLEcran, bordCouette, camera, etatPerso, forceCouette, GABARITS, hautDeTete, placer, TAILLE, type Camera, type EffetActif, type EtatPerso } from './temps';
 
 const PI2 = Math.PI * 2;
 const bornes = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
@@ -50,7 +50,8 @@ const Tenu: React.FC<{ e: EtatPerso; t: number; quoi: EtatPerso['tenus'][number]
   );
 };
 
-export const PersoDessin: React.FC<{ e: EtatPerso; t: number }> = ({ e, t }) => {
+// tremble : la graine du trait tremblé (absente sur une scène fixe, qui passe par le filtre du calque)
+export const PersoDessin: React.FC<{ e: EtatPerso; t: number; tremble?: number }> = ({ e, t, tremble }) => {
   if (e.opacite <= 0) return null;
   const g = GABARITS[e.qui];
   const k = e.taille;
@@ -86,7 +87,8 @@ export const PersoDessin: React.FC<{ e: EtatPerso; t: number }> = ({ e, t }) => 
       {derriere.map((x, i) => (
         <Tenu key={'d' + i} e={e} t={t} quoi={x} />
       ))}
-      <div style={{ position: 'absolute', inset: 0 }} dangerouslySetInnerHTML={{ __html: mascotte(e.qui, e.options).replace('<svg ', '<svg style="width:100%;height:100%;display:block" ') }} />
+      {/* un bonnet sur la tête : la rose range son nœud */}
+      <div style={{ position: 'absolute', inset: 0 }} dangerouslySetInnerHTML={{ __html: mascotte(e.qui, { ...e.options, noeud: !e.porte, tremble }).replace('<svg ', '<svg style="width:100%;height:100%;display:block;overflow:visible" ') }} />
       {bonnet}
       {devant.map((x, i) => (
         <Tenu key={'v' + i} e={e} t={t} quoi={x} />
@@ -99,7 +101,7 @@ export const PersoDessin: React.FC<{ e: EtatPerso; t: number }> = ({ e, t }) => 
 
 // Couché sous la couette : seules la tête et les deux petites mains
 // dépassent ; les mains tiennent le bord et suivent ses mouvements.
-const MainsSurLaCouette: React.FC<{ e: EtatPerso; t: number; bouge: boolean }> = ({ e, t, bouge }) => {
+const MainsSurLaCouette: React.FC<{ e: EtatPerso; t: number; force: number }> = ({ e, t, force }) => {
   if (e.opacite <= 0 || e.mode !== 'couche') return null;
   const g = GABARITS[e.qui];
   const k = e.taille * e.echelle;
@@ -113,7 +115,7 @@ const MainsSurLaCouette: React.FC<{ e: EtatPerso; t: number; bouge: boolean }> =
     <>
       {[-1, 1].map((c) => {
         const x = e.x + e.dx + c * g.largeur * 0.3 * k;
-        const y = bordCouette(x, t, bouge);
+        const y = bordCouette(x, t, force);
         return (
           <div
             key={c}
@@ -390,13 +392,18 @@ export const calculer = (plan: PlanPov, t: number): ImagePlan => {
 
 export const Etage: React.FC<{ plan: PlanPov; t: number; id: string; image: ImagePlan }> = ({ plan, t, id, image }) => {
   const { etats, cam } = image;
-  const couches = dessinDecor(plan.decor, plan.moment ?? 'midi', t, id, { couette: plan.couette });
+  const force = forceCouette(plan, t);
+  const couches = dessinDecor(plan.decor, plan.moment ?? 'midi', t, id, { force });
   // ordre d'empilement : décor, objets, personnages derrière, devant du
   // décor, personnages devant ; à couche égale, « premier » passe dessus
   const tri = (a: EtatPerso, b: EtatPerso) => Number(a.premier) - Number(b.premier);
   const derriere = etats.filter((e) => e.couche === 'derriere').sort(tri);
   const devant = etats.filter((e) => e.couche === 'devant').sort(tri);
   const objets = plan.objets ?? [];
+  // le trait des mascottes tremble (une graine toutes les quatre images) ;
+  // un filtre sur tout le calque coûtait 1,3 s par image contre 0,45, donc
+  // il ne sert que sur les scènes fixes des posts (SceneFixe)
+  const tremble = id === 'fixe' ? undefined : Math.floor((t * 30) / 4);
   return (
     <div
       className="pov-etage"
@@ -411,14 +418,14 @@ export const Etage: React.FC<{ plan: PlanPov; t: number; id: string; image: Imag
         <ObjetScene key={'o' + i} o={o} t={t} />
       ))}
       {derriere.map((e) => (
-        <PersoDessin key={e.qui} e={e} t={t} />
+        <PersoDessin key={e.qui} e={e} t={t} tremble={tremble} />
       ))}
       <Svg contenu={couches.devant} />
       {derriere.map((e) => (
-        <MainsSurLaCouette key={'m' + e.qui} e={e} t={t} bouge={plan.couette === 'bouge'} />
+        <MainsSurLaCouette key={'m' + e.qui} e={e} t={t} force={force} />
       ))}
       {devant.map((e) => (
-        <PersoDessin key={e.qui} e={e} t={t} />
+        <PersoDessin key={e.qui} e={e} t={t} tremble={tremble} />
       ))}
       {objets.filter((o) => o.devant).map((o, i) => (
         <ObjetScene key={'v' + i} o={o} t={t} />
@@ -436,7 +443,7 @@ export const DECORS_CALMES = new Set(['uni', 'ligne', 'mur', 'dehors']);
 // Un plan figé à l'instant t, recadré pour une image 4:5 : on garde la
 // bande du décor qui va de « haut » à haut + 1350.
 export const SceneFixe: React.FC<{ plan: PlanPov; t?: number; haut?: number }> = ({ plan, t = 1.2, haut = 240 }) => (
-  <div style={{ position: 'absolute', left: 0, top: -haut, width: 1080, height: 1920 }}>
+  <div style={{ position: 'absolute', left: 0, top: -haut, width: 1080, height: 1920, filter: 'url(#qc-tremble)' }}>
     <Etage plan={plan} t={t} id="fixe" image={calculer(plan, t)} />
   </div>
 );

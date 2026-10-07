@@ -15,6 +15,7 @@ export type RecetteCitation = {
   fleurs?: Fleurs;
   musique?: string;
   musiqueDebut?: number;
+  ambiance?: string;
 };
 
 export type QuestionQuiz = { question: string; reponses: string[]; bonne: number };
@@ -31,6 +32,7 @@ type Jeu = {
   fin: { question: string; bouton: string; signature: string };
   musique?: string;
   musiqueDebut?: number;
+  ambiance?: string;
 };
 
 // Quiz de culture amoureuse : une bonne réponse, montrée après le chrono.

@@ -70,3 +70,10 @@ export const TEMPO = {
 };
 export const COURBE = { douce: courbe('courbe-douce'), rebond: courbe('courbe-rebond') };
 export const OPACITE_FLEURS = parseFloat(jeton('opacite-fleurs'));
+// La zone utile d'un reel, en pixels (zones de tokens.json).
+export const ZONE = {
+  haut: parseFloat(jeton('zone-reel-haut')),
+  bas: parseFloat(jeton('zone-reel-bas')),
+  gauche: parseFloat(jeton('zone-reel-gauche')),
+  droite: parseFloat(jeton('zone-reel-droite')),
+};

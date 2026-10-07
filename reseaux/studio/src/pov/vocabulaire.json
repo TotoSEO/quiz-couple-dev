@@ -17,7 +17,7 @@
           "sol": 1360
         }
       },
-      "taille": 1.6
+      "taille": 2.0
     },
     "ligne": {
       "description": "Le papier et un seul trait de sol, d'un bord à l'autre. Les objets se posent dessus.",
@@ -35,7 +35,7 @@
           "sol": 1360
         }
       },
-      "taille": 1.6
+      "taille": 2.0
     },
     "mur": {
       "description": "Un mur crème et un sol beige séparés par un trait. Intérieur neutre.",
@@ -53,7 +53,7 @@
           "sol": 1400
         }
       },
-      "taille": 1.6
+      "taille": 1.8
     },
     "chambre": {
       "description": "Un grand lit vu de face avec sa couette, une fenêtre (le ciel suit le moment), une lampe de chevet, un cadre au mur. Dans le lit, on ne voit que le haut des personnages.",
@@ -375,6 +375,13 @@
     "feux": "Feux d'artifice dans le ciel"
   },
   "poses": [
+    "mignon",
+    "triste",
+    "colere",
+    "gene",
+    "fatigue",
+    "supplie",
+    "rire",
     "repos",
     "salut",
     "joie",
@@ -441,11 +448,25 @@
     },
     "visage": {
       "params": {
-        "yeux": "ouverts, heureux, coeur, plats, fermes, clin",
-        "bouche": "sourire, o, rire, plate, triste, bisou",
+        "yeux": "ouverts, heureux, coeur, plats, fermes, clin, brillants",
+        "bouche": "sourire, o, rire, plate, triste, bisou, chat, grogne",
+        "sourcils": "tristes, faches, hauts (facultatif)",
+        "larmes": "true ou false",
         "rougit": "true ou false"
       },
-      "description": "Change l'expression"
+      "description": "Change l'expression : les yeux, la bouche, les sourcils, les larmes, les joues. « chat » est la petite bouche en ω des moments mignons, « grogne » le zigzag de la colère, « brillants » les grands yeux humides qui supplient"
+    },
+    "pleure": {
+      "params": {},
+      "description": "Pleure : sourcils tristes, bouche triste, des larmes qui coulent, les épaules qui tressautent"
+    },
+    "fache": {
+      "params": {},
+      "description": "Se fâche : sourcils froncés, bouche en zigzag, joues rouges, bras écartés, le corps qui tremble de colère"
+    },
+    "mignon": {
+      "params": {},
+      "description": "Fait le mignon : yeux fermés de bonheur, petite bouche de chat, grosses joues, un léger balancement"
     },
     "calin": {
       "params": {
@@ -498,6 +519,12 @@
       "params": {},
       "description": "Yeux fermés, respiration lente, des Z montent"
     },
+    "plonge": {
+      "params": {
+        "vers": "un spot du lit (lit-gauche, lit-droite)"
+      },
+      "description": "Depuis le sol devant le lit, prend son élan, saute en arc dans le lit et passe sous la couette ; la tête et les petites mains ressortent, et il reste couché jusqu'à la fin du plan. Pour revenir dans le lit à chaque moment de la journée"
+    },
     "apparait": {
       "params": {
         "depuis": "bas, gauche, droite ou pop"
@@ -541,6 +568,7 @@
   "transitions": [
     "coupe",
     "fondu",
-    "glisse"
+    "glisse",
+    "noir"
   ]
 }

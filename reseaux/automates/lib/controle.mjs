@@ -3,6 +3,7 @@
 // Renvoie la liste des fautes (vide si tout va bien).
 
 import { controlerPov } from './pov.mjs';
+import { AMBIANCES, BIBLIOTHEQUE } from './musique.mjs';
 
 const CRENEAUX = ['matin', 'midi', 'soir'];
 const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', image: 'image', carrousel: 'carrousel' };
@@ -64,6 +65,8 @@ export function controlerRecette(r, langue) {
     if (!r.texte?.trim()) f.push('texte vide');
     if (r.texte && r.texte.length > 220) f.push('texte trop long (220 signes au plus)');
   }
+  if (r.ambiance !== undefined && !AMBIANCES.includes(r.ambiance)) f.push(`ambiance musicale inconnue : ${r.ambiance} (${AMBIANCES.join(', ')})`);
+  if (r.musique !== undefined && !BIBLIOTHEQUE.morceaux.some((m) => m.fichier === r.musique)) f.push(`morceau absent de la bibliothèque : ${r.musique}`);
   if (r.gabarit === 'image' && !['citation', 'phrase'].includes(r.style)) f.push(`style d'image inconnu : ${r.style}`);
   if (['quiz-chrono', 'connais-tu', 'tu-preferes'].includes(r.gabarit)) {
     if (!r.etiquette?.trim() || !r.accroche?.trim() || !r.consigne?.trim()) f.push('intro incomplète (etiquette, accroche, consigne)');

@@ -7,7 +7,7 @@ import type { NomObjet } from './scenario';
 
 export type Dessin = { vb: [number, number]; svg: string; base: [number, number]; prise: [number, number] };
 
-export const TRAIT = 'stroke="var(--decor-trait)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"';
+export const TRAIT = 'stroke="var(--decor-trait)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"';
 const T = TRAIT;
 const F = (c: string) => `fill="${c}"`;
 const ROSE = 'var(--rose)';

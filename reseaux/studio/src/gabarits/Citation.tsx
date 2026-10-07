@@ -2,6 +2,7 @@ import React from 'react';
 import { useCurrentFrame } from 'remotion';
 import { entree, fondu } from '../charte/animation';
 import { Canevas, Signature } from '../charte/Canevas';
+import { Duo } from '../charte/Duo';
 import { Fleurs } from '../charte/Fleurs';
 import { LIBELLES } from '../charte/libelles';
 import type { Plan } from '../plan';
@@ -22,7 +23,7 @@ export const Citation: React.FC<{ recette: RecetteCitation; plan: Plan; verifica
   return (
     <Canevas theme={r.theme} format="reel" verification={verification}>
       <Fleurs choix={r.fleurs} />
-      <div className="qc-utile" style={{ gap: 'var(--pas-12)', opacity: sortie }}>
+      <div className="qc-utile" style={{ gap: 'var(--pas-8)', opacity: sortie }}>
         <p className={'qc-citation' + (r.longue ? ' is-longue' : '')} data-verif="citation" data-lignes-max={r.longue ? 7 : 4}>
           {mots.map((mot, i) => (
             <React.Fragment key={i}>
@@ -31,6 +32,7 @@ export const Citation: React.FC<{ recette: RecetteCitation; plan: Plan; verifica
             </React.Fragment>
           ))}
         </p>
+        <Duo echelle={0.72} f={frame} verif="mascottes" />
         <Signature texte={LIBELLES[r.langue].site} style={entree(frame, signature)} />
       </div>
     </Canevas>

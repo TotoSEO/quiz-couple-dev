@@ -327,6 +327,32 @@
 }
 [data-theme="dark"].qc-canevas.is-texture { background-color: var(--fond); }
 
+/* ── Le petit duo ─────────────────────────────────────────────────
+   La rose et le violet serrés l'un contre l'autre, en petit, sur les
+   visuels sans scène dessinée (phrases tendres, posts, pages de carrousel). */
+
+.qc-duo-mini { display: flex; align-items: flex-end; justify-content: center; }
+.qc-duo-mini .qc-perso { position: relative; }
+.qc-duo-mini .qc-perso svg { display: block; width: 100%; height: auto; overflow: visible; }
+.qc-duo-mini.is-coin { position: absolute; right: calc(var(--zone-post-marge) + var(--zone-grille-post)); bottom: calc(var(--zone-post-marge) - 12px); }
+
+/* ── Grain de papier ───────────────────────────────────────────────
+   Pour les posts et les carrousels : un grain très léger et de grandes
+   nuances, comme une feuille de papier, posé en voile sur toute l'image
+   (décor compris). On doit le sentir sans le voir. */
+
+.qc-canevas.is-papier::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.33 0 0 0 0 0.27 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23g)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1080' height='1350'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.004 0.006' numOctaves='2' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0.55 0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0.1 0'/%3E%3C/filter%3E%3Crect width='1080' height='1350' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 320px 320px, 100% 100%;
+}
+
 /* ── Quiz chrono : textes plus grands ─────────────────────────────
    L'écran d'un quiz se lit en cinq secondes : on remplit la zone utile. */
 
@@ -370,7 +396,7 @@
 
 .qc-scene-mascottes { position: relative; display: flex; align-items: flex-end; justify-content: center; gap: var(--pas-8); width: 100%; }
 .qc-scene-mascottes .qc-perso { position: relative; }
-.qc-scene-mascottes .qc-perso svg { display: block; width: 100%; height: auto; }
+.qc-scene-mascottes .qc-perso svg { display: block; width: 100%; height: auto; overflow: visible; }
 .qc-bulle {
   position: absolute;
   display: grid;

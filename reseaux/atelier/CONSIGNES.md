@@ -85,8 +85,8 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   refusé par le contrôle.
 - **L'accroche** : dès la première image, les personnages sont dans l'image
   et un geste part tout de suite (pas d'entrée dans une image vide).
-- **Simple** : un décor, deux personnages au plus, un ou deux objets, 6 à
-  14 secondes. Les mini messages (un personnage, un geste vers la caméra,
+- **Simple** : un décor, deux personnages au plus, un ou deux objets, 10 à
+  15 secondes (le contrôle refuse moins de 10). Les mini messages (un personnage, un geste vers la caméra,
   une phrase mot à mot) sont les plus faciles à réussir.
 - Les places : `lit-*` (sous la couette, la tête et les mains dépassent),
   `canape-*` et `table-*` (assis), `banc-*` (assis, jambes qui pendent),
@@ -96,10 +96,33 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   ... » : 90 signes au plus, trois lignes. Pas d'emoji à l'écran (la police
   ne les dessine pas) ; « <3 » est permis.
 - Les bruitages se posent tout seuls (pas, sauts, bulles, cœurs, zooms,
-  couette) ; la musique se choisit dans
-  `reseaux/studio/public/musique/bibliotheque.json`.
-- Statique : un seul plan, 6 à 8 s, un câlin ou une pose tendre, un texte
-  mot à mot au milieu, caméra fixe un peu rapprochée.
+  couette). La musique aussi : ne nomme pas de morceau, le rendu en prend un
+  dans l'ambiance de la catégorie, jamais un morceau entendu récemment
+  (`pov` : `leger`, `coquin` : `sensuel`, `statique` et `phrase` : `doux`,
+  jeux : `jeu`). Pour un autre ton, mets `"ambiance"` dans la recette :
+  `doux` pour une animation tendre, `sensuel` pour un statique du soir,
+  `fetes` pour Noël et le Nouvel An.
+- Statique : un seul plan, 10 à 12 s, un câlin ou une pose tendre, un
+  texte mot à mot au milieu. Il bouge quand même : pour un câlin, chacun
+  entre par son bord (`"a": -150` et `"a": 1230` avec un geste `marche` dès
+  0 s), ils se rejoignent au milieu, puis `calin`.
+- Rose = la fille (elle a un nœud), violet = le garçon. Les fleurs, le
+  bouquet, les vases : c'est toujours le violet qui les apporte.
+- Varie les humeurs : au moins un post par jour où une mascotte n'est pas
+  simplement souriante. Poses `mignon`, `triste`, `colere`, `gene`,
+  `fatigue`, `supplie`, `rire` ; gestes `pleure` (larmes qui coulent,
+  épaules qui tressautent), `fache` (sourcils, zigzag, tremble de colère),
+  `mignon` (yeux fermés, bouche de chat, joues) ; `visage` accepte aussi
+  `sourcils` (tristes, faches, hauts), `larmes` et les yeux `brillants`.
+- Mini message : un seul personnage, en grand (décor `ligne` ou `uni`, taille
+  2 par défaut), au centre, qui regarde la caméra. Le texte au-dessus,
+  en minuscules, comme un message : « thinking of u rn », « ur my favorite
+  person ». Vois `LIGNE-EDITORIALE.md`, « Les textes à l'écran ».
+- Chambre et moments de la journée : pour passer du matin au soir, un plan
+  par moment (`"moment": "matin"`, `"jour"`, `"soir"`, `"nuit"`) avec
+  `"transition": "noir"` (écran noir, la lumière change), et les deux
+  reviennent dans le lit à chaque plan (geste `plonge` : ils sautent sous la
+  couette).
 - Coquin : jamais rien de montré (voir la ligne éditoriale).
 
 ### Les jeux (connais-tu, tu-preferes)

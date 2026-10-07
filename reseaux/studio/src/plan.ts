@@ -47,7 +47,7 @@ export const planCitation = (r: RecetteCitation): Plan => {
   const visible = signature + TEMPO.moyen;
   const lire = enImages(1000 + TEMPO.lectureParMot * mots);
   const sortie = enImages(600);
-  const duree = borne(visible + lire + sortie, 7 * FPS, 12 * FPS);
+  const duree = borne(visible + lire + sortie, 10 * FPS, 14 * FPS);
   return {
     duree,
     couverture: visible,
