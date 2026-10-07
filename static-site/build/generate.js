@@ -1480,51 +1480,6 @@ function copyCss() {
 
 // ── JS copy ─────────────────────────────────────────────────────────────
 
-function buildSeedArticles() {
-  const langs = ['fr', 'en', 'es', 'de', 'it'];
-  const seed = [];
-
-  for (const meta of BLOG_ARTICLES) {
-    const entry = {
-      internal_slug: meta.internalSlug,
-      featured_image_url: '',
-      author_id: 'thomas',
-      status: 'published',
-      published_at: meta.publishedAt,
-      translations: [],
-    };
-
-    // Read FR article to get author_id and featured_image_url
-    const frData = parseArticleTs(path.resolve(__dirname, '../../data/blog/fr', `${meta.internalSlug}.ts`));
-    if (frData) {
-      // Only set featured_image_url if the TS file has a real value;
-      // empty string would cause the seed to overwrite admin-uploaded images
-      if (frData.featuredImage) entry.featured_image_url = frData.featuredImage;
-      if (frData.author && frData.author.id) entry.author_id = frData.author.id;
-    }
-
-    for (const lang of langs) {
-      const tsPath = path.resolve(__dirname, '../../data/blog', lang, `${meta.internalSlug}.ts`);
-      const data = parseArticleTs(tsPath);
-      if (data) {
-        entry.translations.push({
-          lang,
-          slug: meta.slugs[lang] || meta.internalSlug,
-          title: data.title || '',
-          meta_title: data.metaTitle || '',
-          meta_description: data.metaDescription || '',
-          featured_image_alt: data.featuredImageAlt || '',
-          excerpt: data.excerpt || '',
-        });
-      }
-    }
-
-    seed.push(entry);
-  }
-
-  return JSON.stringify(seed);
-}
-
 async function copyJs() {
   const jsDir = path.resolve(__dirname, '../js');
   const destDir = path.join(DIST_DIR, 'js');
@@ -1574,18 +1529,6 @@ async function copyJs() {
     console.warn(`[moteurs] decoupage abandonne : ${e.message}`);
   }
 
-
-  // Inject SEED_ARTICLES into admin.js at build time
-  const adminJsPath = path.join(destDir, 'admin.js');
-  if (fs.existsSync(adminJsPath)) {
-    let content = fs.readFileSync(adminJsPath, 'utf-8');
-    if (content.includes('/*__SEED_ARTICLES__*/')) {
-      const seedJson = buildSeedArticles();
-      content = content.replace(/\/\*__SEED_ARTICLES__\*\/\[[\s\S]*?\n  \];/, seedJson + ';');
-      fs.writeFileSync(adminJsPath, content, 'utf-8');
-      console.log(`[js] Injected ${BLOG_ARTICLES.length} articles into admin.js SEED_ARTICLES`);
-    }
-  }
 
   // Inject the Supabase URL + anon key (resolved from config.js, itself driven by the
   // SUPABASE_URL / SUPABASE_ANON_KEY GitHub secrets) into the client JS files that hardcode

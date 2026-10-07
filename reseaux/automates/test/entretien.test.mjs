@@ -77,3 +77,28 @@ test('le ménage libère un post rendu mais jamais parti', async () => {
   assert.equal(b.tables.social_variantes[0].statut, 'echec');
   assert.equal(b.fichiers.size, 0);
 });
+
+test('à corriger : seulement les posts en échec dont le créneau peut encore partir', async () => {
+  const b = new BaseMemoire({
+    social_comptes: [{ id: 'c', langue: 'en', fuseau: 'Europe/Paris' }],
+    social_reglages: [{ cle: 'melange', valeur: melange }],
+    social_posts: [
+      { id: 'hier', jour: '2026-10-11', creneau: 'midi', statut: 'valide', format: 'reel', gabarit: 'connais-tu' },
+      { id: 'cematin', jour: '2026-10-12', creneau: 'matin', statut: 'valide', format: 'reel', gabarit: 'pov' },
+      { id: 'cesoir', jour: '2026-10-12', creneau: 'soir', statut: 'valide', format: 'reel', gabarit: 'pov' },
+      { id: 'demain', jour: '2026-10-13', creneau: 'midi', statut: 'valide', format: 'reel', gabarit: 'tu-preferes' },
+    ],
+    social_variantes: [
+      { id: 'v1', post_id: 'hier', langue: 'en', statut: 'echec', erreur: 'Supabase upload/resumable : 409', recette: {} },
+      { id: 'v2', post_id: 'cematin', langue: 'en', statut: 'echec', erreur: 'créneau dépassé sans publication', recette: {} },
+      { id: 'v3', post_id: 'cesoir', langue: 'en', statut: 'echec', erreur: 'Contrôle du fichier : texte hors zone', recette: {} },
+      { id: 'v4', post_id: 'demain', langue: 'en', statut: 'echec', erreur: 'Contrôle du fichier : texte hors zone', recette: {} },
+    ],
+  });
+  // 9 h 00 à Paris le 12 : hier et ce matin sont perdus, ce soir (16 h) et demain restent corrigeables
+  const e = await etat(b, { maintenant: new Date('2026-10-12T07:00:00Z'), horizon: 1 });
+  assert.deepEqual(e.a_corriger.map((p) => [p.jour, p.creneau]), [['2026-10-12', 'soir'], ['2026-10-13', 'midi']]);
+  // 14 h 00 : ce soir commence dans moins de trois heures, il ne reste que demain
+  const tard = await etat(b, { maintenant: new Date('2026-10-12T12:00:00Z'), horizon: 1 });
+  assert.deepEqual(tard.a_corriger.map((p) => p.jour), ['2026-10-13']);
+});

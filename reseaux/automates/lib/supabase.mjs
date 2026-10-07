@@ -124,6 +124,12 @@ export class Base {
   // (TUS, morceaux de 6 Mo) : le premier reel de jeu, une trentaine de Mo
   // envoyés d'un bloc, est tombé sur « fetch failed » le 7 octobre 2026.
   // Chaque requête est réessayée trois fois sur une erreur réseau.
+  // L'en-tête x-upsert part sur CHAQUE requête du protocole, pas seulement
+  // sur la création : Supabase relit cet en-tête sur le dernier morceau, au
+  // moment d'écrire l'objet, et sans lui un fichier déjà présent (un reel
+  // rendu une seconde fois) finissait en « 409 The resource already exists »
+  // (le reel de midi du 7 octobre 2026). Le client officiel tus-js-client
+  // envoie ses en-têtes sur toutes les requêtes, c'est ce qu'on imite.
   async televerser(chemin, contenu, type, { bucket = BUCKET, cache = '3600' } = {}) {
     const octets = Buffer.isBuffer(contenu) ? contenu : Buffer.from(contenu);
     if (octets.length > MORCEAU) return this.televerserParMorceaux(chemin, octets, type, { bucket, cache });
@@ -157,7 +163,7 @@ export class Base {
       offset = await this.reessayer(async () => {
         const r = await this.brut(adresse, {
           method: 'PATCH',
-          headers: { 'Tus-Resumable': '1.0.0', 'Upload-Offset': String(depart), 'Content-Type': 'application/offset+octet-stream' },
+          headers: { 'Tus-Resumable': '1.0.0', 'Upload-Offset': String(depart), 'Content-Type': 'application/offset+octet-stream', 'x-upsert': 'true' },
           body: morceau,
         });
         if (r.status !== 204) throw new Error(`Supabase upload/resumable : ${r.status} ${(await r.text()).slice(0, 300)}`);
