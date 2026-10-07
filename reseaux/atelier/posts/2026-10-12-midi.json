@@ -1,0 +1,45 @@
+{
+  "jour": "2026-10-12",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-003",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Firsts edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "questions": [
+          "Your partner's first thought about you?",
+          "Where was your first date?",
+          "What outfit did they wear that day?",
+          "Who sent the very first text?",
+          "Their first pet?",
+          "What was the first job they ever had?",
+          "Their first celebrity crush?",
+          "The first song you danced to?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Firsts edition: 8 questions about your partner, 5 seconds each. First date, first job, first crush...\n\nComment your score!",
+      "hashtags": [
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

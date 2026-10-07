@@ -1,0 +1,307 @@
+{
+  "jour": "2026-10-12",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-007",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le retour à la maison après une longue journée : la rose attend en boudant, le violet entre, elle court, câlin et cœurs.",
+        "titre": "POV: he comes home after a long day",
+        "plans": [
+          {
+            "description": "Un mur crème, la lumière du soir. Dès la première image la rose est debout à gauche, les bras ballants, bouche en moue et yeux plats : elle attend. Des points flottent au-dessus de sa tête. À 1,6 s le violet entre par le bord droit en marchant lentement, l'air fatigué ; à 2,2 s la rose le voit, ses yeux s'écarquillent et un « ! » apparaît. À 2,6 s une bulle du violet dit « I'm home. ».",
+            "duree": 4.0,
+            "decor": "mur",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "boude",
+                    "de": 0,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 1.8,
+                    "effet": "points"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 4.0,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.1,
+                    "a": 4.0,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.3,
+                    "a": 4.0,
+                    "effet": "exclamation"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 3.0,
+                    "vers": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.2,
+                    "a": 2.6,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 2.6,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 4.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 2.6,
+                "a": 3.9,
+                "texte": "I'm home."
+              }
+            ]
+          },
+          {
+            "description": "Même mur. La rose bondit de joie : deux sauts sur place avec les bras en l'air, puis elle court vers le violet qui ouvre les bras. Une bulle de la rose dit « Finally! ». Ils se rejoignent au milieu à 2 s et se serrent fort, des cœurs montent au-dessus d'eux, le violet ferme les yeux de soulagement.",
+            "duree": 4.2,
+            "decor": "mur",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "saute",
+                    "de": 0,
+                    "a": 1.2,
+                    "fois": 2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "heureux",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "court",
+                    "de": 1.2,
+                    "a": 2.0,
+                    "vers": 470
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.0,
+                    "a": 4.2,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.0,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.0,
+                    "a": 4.2,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 0.2,
+                "a": 1.6,
+                "texte": "Finally!"
+              }
+            ],
+            "camera": [
+              {
+                "a": 1.8,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Le câlin continue, la caméra se rapproche doucement d'eux. À 0,5 s la rose fait sa petite bouche de chat, les joues très roses, les yeux fermés ; à 1,5 s le violet rouvre les yeux, heureux, la fatigue a disparu. Des cœurs continuent de monter jusqu'à la fin et une bulle du violet dit « Best part of my day. ».",
+            "duree": 4.0,
+            "decor": "mur",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.0,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.5,
+                    "a": 4.0,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 4.0,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.0,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.5,
+                    "a": 4.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 2.0,
+                    "a": 3.4
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 2.0,
+                "a": 3.8,
+                "texte": "Best part of my day."
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.5,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Waiting all day just for this hug.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

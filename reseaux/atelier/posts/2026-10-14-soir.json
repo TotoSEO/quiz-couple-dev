@@ -1,0 +1,278 @@
+{
+  "jour": "2026-10-14",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-011",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le « je peux goûter ? » : la rose partage sa glace, le violet la mange presque entière, elle prend la caméra à témoin.",
+        "titre": "POV: 'can I try a bite?'",
+        "plans": [
+          {
+            "description": "Une petite table de restaurant avec une bougie, la lumière du soir. Dès la première image la rose, à gauche, tient un cornet de glace et le lèche, les yeux heureux. Le violet, en face, la regarde avec des yeux brillants et dit « Can I try a bite? ». À 1,8 s la rose sourit et répond « Sure! », les yeux en cœur.",
+            "duree": 3.6,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "glace",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 1.6,
+                    "objet": "glace"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "yeux": "coeur",
+                    "bouche": "sourire"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.7,
+                    "yeux": "brillants",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.2,
+                    "a": 1.6
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.2,
+                "a": 1.7,
+                "texte": "Can I try a bite?"
+              },
+              {
+                "qui": "rose",
+                "de": 1.9,
+                "a": 3.4,
+                "texte": "Sure!"
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur le violet : la glace est maintenant dans sa main et il la mange à grandes bouchées, les yeux fermés de plaisir. La rose le regarde, la bouche ronde, un « ! » au-dessus de la tête à 1 s, puis elle boude à 2,2 s, les bras ballants. Elle penche légèrement la tête.",
+            "duree": 3.8,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.1,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 3.0,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 2.2,
+                    "a": 3.8
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "glace",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "glace"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.3,
+                    "a": 3.8,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.6,
+                "cible": "violet"
+              }
+            ]
+          },
+          {
+            "description": "Retour au plan large. Il ne reste qu'un bout de cornet dans la main du violet, qui sourit innocent, la bouche de chat et les joues rouges. La rose se tourne vers la caméra, les yeux plats, et dit « That was one bite? » dans une bulle ; une goutte de gêne apparaît sur le côté de sa tête. Le violet fait un petit clin d'œil. Lent rapprochement sur les deux.",
+            "duree": 4.2,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.2,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 4.2,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.4,
+                    "a": 1.6
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 4.2,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "glace",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.0,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 4.2,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 0.4,
+                "a": 2.6,
+                "texte": "That was one bite?"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.05
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.3,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "He only wanted one bite. The ice cream is gone.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

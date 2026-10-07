@@ -1,0 +1,268 @@
+{
+  "jour": "2026-10-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-006",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Les pieds glacés : la rose dort, le violet glisse ses pieds froids contre elle, elle sursaute, se fâche, puis lui pardonne.",
+        "titre": "POV: his feet are always cold",
+        "plans": [
+          {
+            "description": "La chambre la nuit, lumière bleue, la lune dans la fenêtre. Dès la première image les deux sont dans le lit : la rose à gauche dort paisiblement, des Z montent au-dessus d'elle ; le violet à droite a les yeux ouverts, un petit sourire en coin, et son regard glisse vers le bas du lit. À 2 s il fait un clin d'œil silencieux à la caméra, les joues roses. La caméra se rapproche lentement des deux.",
+            "duree": 3.6,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 3.6,
+                    "effet": "zzz"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.0,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.3,
+                    "a": 1.8,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 3.6,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.0,
+                    "a": 3.6,
+                    "cible": "camera"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12
+              }
+            ]
+          },
+          {
+            "description": "Même plan large de la chambre. À 0,6 s la couette se met à bouger côté violet et la rose se réveille d'un coup : les yeux grands ouverts, la bouche ronde, un « ! » au-dessus de sa tête, et la caméra tremble fort à 0,8 s. Le violet, lui, regarde la caméra avec un grand sourire innocent, les joues rouges, comme si de rien n'était.",
+            "duree": 3.2,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 0.7
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.8,
+                    "a": 3.2,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.9,
+                    "a": 3.2,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.4,
+                    "a": 3.2,
+                    "cible": "bas"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.2,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.2,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "couette": "bouge",
+            "couetteDe": 0.6,
+            "camera": [
+              {
+                "a": 0.8,
+                "secousse": 14
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur les deux visages. La rose se fâche, sourcils froncés et bouche en zigzag, et dit « Your feet are ICE! » dans une bulle ; à 2 s le violet, tout mignon, les yeux fermés et la bouche de chat, répond « ...sorry <3 ». À 3,2 s la rose soupire, les yeux plats, puis fait un petit sourire malgré elle ; des cœurs montent à la fin.",
+            "duree": 4.2,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "fache",
+                    "de": 0.2,
+                    "a": 1.9
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 3.2,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.2,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.4,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.9,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "mignon",
+                    "de": 2.0,
+                    "a": 4.2
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "effet": "etincelles"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 0.3,
+                "a": 1.9,
+                "texte": "Your feet are ICE!"
+              },
+              {
+                "qui": "violet",
+                "de": 2.0,
+                "a": 3.7,
+                "texte": "...sorry <3"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 540,
+                "y": 1100
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.6,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Cold feet in bed: the ultimate test of love.\n\nTag your partner with ice feet.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

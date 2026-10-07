@@ -1,0 +1,61 @@
+{
+  "jour": "2026-10-13",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-002",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Date night edition",
+        "accroche": "Would you rather: date night?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "dilemmes": [
+          {
+            "a": "Movie at home",
+            "b": "Movie at the cinema"
+          },
+          {
+            "a": "Picnic in the park",
+            "b": "Fancy restaurant"
+          },
+          {
+            "a": "Dance all night",
+            "b": "Talk all night"
+          },
+          {
+            "a": "A surprise date",
+            "b": "A date we plan together"
+          },
+          {
+            "a": "A sunset walk",
+            "b": "A sunrise walk"
+          },
+          {
+            "a": "Cook together at home",
+            "b": "Order food and cuddle"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, date night edition: which one is your perfect evening?\n\nSave this for your next date night.",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

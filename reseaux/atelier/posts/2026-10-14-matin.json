@@ -1,0 +1,260 @@
+{
+  "jour": "2026-10-14",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-010",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le violet rit de sa propre blague, la rose a les yeux plats, puis elle finit par rire aussi.",
+        "titre": "POV: he laughs at his own joke",
+        "plans": [
+          {
+            "description": "Un mur crème, la lumière du jour. Dès la première image la rose est debout à gauche, les bras ballants, le regard tourné vers le violet, les yeux plats. Le violet à droite se redresse, très fier, et dit « Why don't eggs tell jokes? » dans une bulle. À 2 s un point d'interrogation apparaît au-dessus de la rose, qui penche la tête.",
+            "duree": 3.4,
+            "decor": "mur",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.4,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.9,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 3.4,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.2,
+                    "a": 3.4,
+                    "effet": "question"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.4,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.3,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.9,
+                    "a": 3.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.3,
+                "a": 2.1,
+                "texte": "Why don't eggs tell jokes?"
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur le violet. Il lâche la chute « They'd crack up! » dans une bulle, puis éclate de rire à 1,8 s : les yeux fermés, la bouche grande ouverte, le corps secoué. Derrière, la rose le regarde, les yeux plats, la bouche plate, une goutte de gêne sur le côté de la tête.",
+            "duree": 3.6,
+            "decor": "mur",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 3.6,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "parle",
+                    "de": 0.1,
+                    "a": 1.7
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.8,
+                    "a": 3.6
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.3,
+                "a": 1.8,
+                "texte": "They'd crack up!"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.7,
+                "cible": "violet"
+              }
+            ]
+          },
+          {
+            "description": "Retour au plan large. Le violet rit toujours et demande « Get it? » en essuyant une larme. La rose garde les yeux plats un moment, puis à 2 s le coin de sa bouche se relève malgré elle, ses joues rosissent, et à 2,6 s elle éclate de rire à son tour, en secouant la tête. Des cœurs montent au-dessus du violet à la fin.",
+            "duree": 4.4,
+            "decor": "mur",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.0,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 2.6,
+                    "yeux": "plats",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 2.6,
+                    "a": 4.4
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "rit",
+                    "de": 0,
+                    "a": 1.3
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 1.4,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.4,
+                    "yeux": "heureux",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.2,
+                "a": 1.9,
+                "texte": "Get it?"
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.4,
+                "zoom": 1
+              },
+              {
+                "a": 4.4,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "He laughs at his own jokes before he even finishes them.\n\nTag your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

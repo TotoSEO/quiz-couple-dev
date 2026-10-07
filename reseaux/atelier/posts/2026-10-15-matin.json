@@ -1,0 +1,280 @@
+{
+  "jour": "2026-10-15",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-012",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "La vaisselle à deux : le violet frotte les assiettes, la rose danse derrière le plan de travail, il se met à danser aussi.",
+        "titre": "POV: doing the dishes together",
+        "plans": [
+          {
+            "description": "Une cuisine, le matin, lumière douce par la fenêtre. Dès la première image le violet est derrière l'évier au milieu, une éponge à bulles dans la main, et frotte une assiette ; la rose est derrière le plan de travail à gauche et danse en balançant les bras, des notes de musique qui montent au-dessus d'elle. Le violet la regarde du coin de l'œil en souriant.",
+            "duree": 4.0,
+            "decor": "cuisine",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "danse",
+                    "de": 0,
+                    "a": 4.0
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 4.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 4.0,
+                    "effet": "notes"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "evier",
+                "gestes": [
+                  {
+                    "geste": "vaisselle",
+                    "de": 0,
+                    "a": 2.0
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.8,
+                    "a": 4.0,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.8,
+                    "a": 3.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 4.0,
+                    "yeux": "coeur",
+                    "bouche": "sourire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "eponge",
+                "x": 540,
+                "y": 1090,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Gros plan sur le violet qui pose son éponge et lève les yeux vers la rose. À 0,6 s il se met à se balancer lui aussi, les yeux fermés, la bouche en grand sourire ; à 1,6 s il danse pour de bon, les bras qui alternent, et des notes de musique sortent de sa tête. La rose le voit, éclate de rire et danse plus fort.",
+            "duree": 4.0,
+            "decor": "cuisine",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 0.5,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "danse",
+                    "de": 1.8,
+                    "a": 4.0
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.0,
+                    "a": 4.0,
+                    "effet": "notes"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "evier",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 0.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.6,
+                    "a": 1.7,
+                    "yeux": "fermes",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "danse",
+                    "de": 1.6,
+                    "a": 4.0
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 4.0,
+                    "effet": "notes"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 4.0,
+                    "yeux": "heureux",
+                    "bouche": "rire"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.1
+              },
+              {
+                "a": 0.4,
+                "zoom": 1.5,
+                "cible": "violet"
+              }
+            ]
+          },
+          {
+            "description": "Plan large de la cuisine. Les deux dansent côte à côte derrière le plan de travail, des notes de musique et des bulles de savon dans l'air. À 2,4 s la rose se tourne vers le violet, les yeux heureux, la bouche de chat, et à 3 s des cœurs montent entre eux. La caméra se rapproche doucement jusqu'à la fin.",
+            "duree": 4.2,
+            "decor": "cuisine",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "danse",
+                    "de": 0,
+                    "a": 2.3
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "evier",
+                "gestes": [
+                  {
+                    "geste": "danse",
+                    "de": 0,
+                    "a": 2.6
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.7,
+                    "a": 4.2,
+                    "yeux": "coeur",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 2.6,
+                    "effet": "notes"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "The dishes are never boring when you dance.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "jour": "2026-10-15",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "carrousel",
+  "categorie": "carrousel",
+  "sujet": "car-002",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "carrousel",
+        "langue": "en",
+        "theme": "light",
+        "pages": [
+          {
+            "type": "couverture",
+            "etiquette": "Deep talk",
+            "accroche": "8 questions you've never asked each other",
+            "scene": {
+              "t": 1.4,
+              "plan": {
+                "description": "Les deux assis sur un banc au crépuscule, côte à côte, la rose pensive regarde le violet qui lui sourit doucement.",
+                "duree": 2,
+                "decor": "dehors",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "banc-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "banc-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "page",
+            "numero": "1",
+            "question": "What are you most afraid of losing?"
+          },
+          {
+            "type": "page",
+            "numero": "2",
+            "question": "When do you feel the most loved by me?"
+          },
+          {
+            "type": "page",
+            "numero": "3",
+            "question": "What's something you've never told anyone?"
+          },
+          {
+            "type": "page",
+            "numero": "4",
+            "question": "What did you need most when you were a child?"
+          },
+          {
+            "type": "page",
+            "numero": "5",
+            "question": "What's one thing you wish I understood better about you?"
+          },
+          {
+            "type": "page",
+            "numero": "6",
+            "question": "What part of our future scares you the most?"
+          },
+          {
+            "type": "page",
+            "numero": "7",
+            "question": "When did you last feel truly proud of yourself?"
+          },
+          {
+            "type": "page",
+            "numero": "8",
+            "question": "What would make our relationship even stronger?"
+          },
+          {
+            "type": "fin",
+            "texte": "Want more questions for tonight?",
+            "bouton": "Link in bio",
+            "scene": {
+              "t": 1.4,
+              "plan": {
+                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
+                "duree": 2,
+                "decor": "ligne",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "salue",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "joie",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "legende": "Deep talk night: 8 questions you've never asked each other. Take turns and listen.\n\nSave this for your next deep talk. More questions: link in bio",
+      "hashtags": [
+        "#couplequestions",
+        "#datenight",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
