@@ -11,39 +11,150 @@
       "duree": 4,
       "decor": "ligne",
       "persos": [
-        { "qui": "violet", "a": 920, "gestes": [
-          { "geste": "tient", "objet": "bouquet", "main": "gauche", "de": 0, "a": 4 },
-          { "geste": "marche", "vers": "centre", "de": 0, "a": 1.6 },
-          { "geste": "regarde", "cible": "camera", "de": 2.0, "a": 4 },
-          { "geste": "visage", "yeux": "heureux", "bouche": "sourire", "rougit": true, "de": 2.4, "a": 4 } ] }
+        {
+          "qui": "violet",
+          "a": 920,
+          "gestes": [
+            {
+              "geste": "tient",
+              "objet": "bouquet",
+              "main": "gauche",
+              "de": 0,
+              "a": 4
+            },
+            {
+              "geste": "marche",
+              "vers": "centre",
+              "de": 0,
+              "a": 1.6
+            },
+            {
+              "geste": "regarde",
+              "cible": "camera",
+              "de": 2.0,
+              "a": 4
+            },
+            {
+              "geste": "visage",
+              "yeux": "heureux",
+              "bouche": "sourire",
+              "rougit": true,
+              "de": 2.4,
+              "a": 4
+            }
+          ]
+        }
       ],
-      "textes": [ { "de": 0.2, "texte": "i saw these flowers...", "motAMot": true, "place": "milieu" } ]
+      "textes": [
+        {
+          "de": 0.2,
+          "texte": "i saw these flowers...",
+          "motAMot": true,
+          "place": "haut"
+        }
+      ]
     },
     {
       "description": "Même décor, coupe franche. Le violet tend le bouquet vers la caméra, bras en avant, les joues qui rougissent. La caméra s'approche lentement de lui. Le texte « and thought of u <3 » apparaît mot à mot, puis des cœurs montent.",
       "duree": 3.8,
       "decor": "ligne",
       "persos": [
-        { "qui": "violet", "a": "centre", "gestes": [
-          { "geste": "offre", "objet": "bouquet", "de": 0, "a": 3.8 },
-          { "geste": "effet", "effet": "coeurs", "de": 1.8, "a": 3.8 } ] }
+        {
+          "qui": "violet",
+          "a": "centre",
+          "gestes": [
+            {
+              "geste": "offre",
+              "objet": "bouquet",
+              "de": 0,
+              "a": 3.8
+            },
+            {
+              "geste": "effet",
+              "effet": "coeurs",
+              "de": 1.8,
+              "a": 3.8
+            }
+          ]
+        }
       ],
-      "textes": [ { "de": 0.3, "texte": "and thought of u <3", "motAMot": true, "place": "milieu" } ],
-      "camera": [ { "a": 0, "zoom": 1 }, { "a": 3.8, "zoom": 1.18, "cible": "violet" } ]
+      "textes": [
+        {
+          "de": 0.3,
+          "texte": "and thought of u <3",
+          "motAMot": true,
+          "place": "haut"
+        }
+      ],
+      "camera": [
+        {
+          "a": 0,
+          "zoom": 1
+        },
+        {
+          "a": 3.8,
+          "zoom": 1.18,
+          "cible": "violet"
+        }
+      ]
     },
     {
       "description": "Toujours rapproché, le violet tient le bouquet tendu, les yeux en cœur, et sautille deux fois sur place de joie ; une pluie de cœurs autour de lui. La caméra recule doucement.",
       "duree": 2.6,
       "decor": "ligne",
       "persos": [
-        { "qui": "violet", "a": "centre", "gestes": [
-          { "geste": "offre", "objet": "bouquet", "de": 0, "a": 2.6 },
-          { "geste": "visage", "yeux": "coeur", "bouche": "sourire", "rougit": true, "de": 0, "a": 2.6 },
-          { "geste": "saute", "fois": 2, "de": 0.3, "a": 1.5 },
-          { "geste": "effet", "effet": "coeurs", "de": 0.2, "a": 2.6 } ] }
+        {
+          "qui": "violet",
+          "a": "centre",
+          "gestes": [
+            {
+              "geste": "offre",
+              "objet": "bouquet",
+              "de": 0,
+              "a": 2.6
+            },
+            {
+              "geste": "visage",
+              "yeux": "coeur",
+              "bouche": "sourire",
+              "rougit": true,
+              "de": 0,
+              "a": 2.6
+            },
+            {
+              "geste": "saute",
+              "fois": 2,
+              "de": 0.3,
+              "a": 1.5
+            },
+            {
+              "geste": "effet",
+              "effet": "coeurs",
+              "de": 0.2,
+              "a": 2.6
+            }
+          ]
+        }
       ],
-      "textes": [ { "de": 0, "texte": "and thought of u <3", "place": "milieu" } ],
-      "camera": [ { "a": 0, "zoom": 1.18, "cible": "violet" }, { "a": 2.6, "zoom": 1.05, "cible": "violet" } ]
+      "textes": [
+        {
+          "de": 0,
+          "texte": "and thought of u <3",
+          "place": "haut"
+        }
+      ],
+      "camera": [
+        {
+          "a": 0,
+          "zoom": 1.18,
+          "cible": "violet"
+        },
+        {
+          "a": 2.6,
+          "zoom": 1.05,
+          "cible": "violet"
+        }
+      ]
     }
   ]
 }

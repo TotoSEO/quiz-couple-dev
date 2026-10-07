@@ -115,8 +115,9 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   `mignon` (yeux fermés, bouche de chat, joues) ; `visage` accepte aussi
   `sourcils` (tristes, faches, hauts), `larmes` et les yeux `brillants`.
 - Mini message : un seul personnage, en grand (décor `ligne` ou `uni`, taille
-  2 par défaut), au centre, qui regarde la caméra. Le texte au-dessus,
-  en minuscules, comme un message : « thinking of u rn », « ur my favorite
+  2 par défaut), au centre, qui regarde la caméra. Le texte en haut
+  (`"place": "haut"`, jamais `milieu` avec un personnage en grand : il
+  saute dedans), en minuscules, comme un message : « thinking of u rn », « ur my favorite
   person ». Vois `LIGNE-EDITORIALE.md`, « Les textes à l'écran ».
 - Chambre et moments de la journée : pour passer du matin au soir, un plan
   par moment (`"moment": "matin"`, `"jour"`, `"soir"`, `"nuit"`) avec
