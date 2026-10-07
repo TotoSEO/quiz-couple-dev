@@ -121,7 +121,7 @@ l'écran, se rejoignent au milieu et s'enlacent, puis les cœurs montent.
 ### `connais-tu` : Connais-tu ton partenaire ? (gabarit `connais-tu`)
 
 Huit questions simples sur l'autre (« What's your partner's favorite
-color? », « When is their birthday, exactly? »), cinq secondes chacune. La
+color? », « Their birthday? »), cinq secondes chacune. La
 première question dit « your partner's », les suivantes « their ». Pas de
 réponse affichée : la fin dit « How many did you get? Comment your score! ».
 Les mascottes ouvrent le reel en grand et bougent dès la première image.

@@ -366,7 +366,7 @@
 .qc-canevas.is-quiz .qc-option-lettre { width: 88px; height: 88px; font-size: 48px; }
 .qc-canevas.is-quiz .qc-chrono-piste { height: 40px; }
 .qc-canevas.is-quiz .qc-chrono-temps { font-size: 64px; }
-.qc-canevas.is-quiz .qc-accroche { font-size: 136px; }
+.qc-canevas.is-quiz .qc-accroche { font-size: 118px; }
 .qc-canevas.is-quiz .qc-texte { font-size: 48px; }
 .qc-canevas.is-quiz .qc-carte.is-seule { padding: var(--pas-9) var(--pas-6); gap: var(--pas-6); }
 .qc-canevas.is-quiz .qc-question.is-grande { font-size: 96px; line-height: 1.08; }
