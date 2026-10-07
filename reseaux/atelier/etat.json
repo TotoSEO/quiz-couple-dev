@@ -1,40 +1,10 @@
 {
-  "genere_le": "2026-10-07T14:45:29.719Z",
+  "genere_le": "2026-10-07T16:08:44.489Z",
   "fuseau": "Europe/Paris",
   "aujourdhui": "2026-10-07",
   "reserve_jours": 0,
   "a_remplir": [
     {
-      "jour": "2026-10-08",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-10-08",
-      "creneau": "midi",
-      "categorie": "statique"
-    },
-    {
-      "jour": "2026-10-08",
-      "creneau": "soir",
-      "categorie": "carrousel"
-    },
-    {
-      "jour": "2026-10-09",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-10-09",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2026-10-09",
-      "creneau": "soir",
-      "categorie": "coquin"
-    },
-    {
       "jour": "2026-10-10",
       "creneau": "matin",
       "categorie": "pov"
@@ -318,6 +288,1191 @@
       "jour": "2026-10-28",
       "creneau": "soir",
       "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-03",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-03",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-11-03",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-04",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-04",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-04",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-05",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-05",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-11-05",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2026-11-06",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-06",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-06",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-11-07",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-07",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-11-07",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-11-08",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-08",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-11-08",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-11-09",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-09",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-09",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-10",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-10",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-11-10",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-11",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-11",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-11",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-12",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-12",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-11-12",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2026-11-13",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-13",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-13",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-11-14",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-14",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-11-14",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-11-15",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-15",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-11-15",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-11-16",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-16",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-16",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-18",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-18",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-18",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-19",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-19",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-11-19",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2026-11-20",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-20",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-20",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-11-21",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-21",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-11-21",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-11-22",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-22",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-11-22",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-11-23",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-23",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-23",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-24",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-24",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-11-24",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-25",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-25",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-25",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-26",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-26",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-11-26",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2026-11-27",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-27",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-27",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-11-28",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-28",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-11-28",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-11-29",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-29",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-11-29",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-11-30",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-11-30",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-11-30",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-01",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-01",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-12-01",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-02",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-02",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-02",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-03",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-03",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-12-03",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2026-12-04",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-04",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-04",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-12-05",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-05",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-12-05",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-12-06",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-06",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-12-06",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-12-07",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-07",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-07",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-08",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-08",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-12-08",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-09",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-09",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-09",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-10",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-10",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-12-10",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2026-12-11",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-11",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-11",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-12-12",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-12",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-12-12",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-12-13",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-13",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-12-13",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-12-14",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-14",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-14",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-15",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-15",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-12-15",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-16",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-16",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-16",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-17",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-17",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-12-17",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2026-12-18",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-18",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-18",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-12-19",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-19",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-12-19",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-12-20",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-20",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-12-20",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-12-21",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-21",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-21",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-22",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-22",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-12-22",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-23",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-23",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-23",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-24",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-24",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-12-24",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2026-12-25",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-25",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-25",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2026-12-26",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-26",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-12-26",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-12-27",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-27",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-12-27",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2026-12-28",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-28",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-28",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-29",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-29",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2026-12-29",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-30",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-30",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2026-12-30",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-31",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2026-12-31",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2026-12-31",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2027-01-01",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-01",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2027-01-01",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2027-01-02",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-02",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2027-01-02",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2027-01-03",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-03",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2027-01-03",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2027-01-04",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-04",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2027-01-04",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-05",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-05",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2027-01-05",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-06",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-06",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2027-01-06",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-07",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-07",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2027-01-07",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2027-01-08",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-08",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2027-01-08",
+      "creneau": "soir",
+      "categorie": "coquin"
+    },
+    {
+      "jour": "2027-01-09",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-09",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2027-01-09",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2027-01-10",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-10",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2027-01-10",
+      "creneau": "soir",
+      "categorie": "phrase"
+    },
+    {
+      "jour": "2027-01-11",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-11",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2027-01-11",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-12",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-12",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2027-01-12",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-13",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-13",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2027-01-13",
+      "creneau": "soir",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-14",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-14",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2027-01-14",
+      "creneau": "soir",
+      "categorie": "carrousel"
+    },
+    {
+      "jour": "2027-01-15",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-15",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2027-01-15",
+      "creneau": "soir",
+      "categorie": "coquin"
     }
   ],
   "a_corriger": [],
@@ -327,8 +1482,62 @@
       "creneau": "midi",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "rendu",
+      "statut": "a_rendre",
       "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-08",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-08",
+      "creneau": "midi",
+      "gabarit": "pov",
+      "categorie": "statique",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-08",
+      "creneau": "soir",
+      "gabarit": "carrousel",
+      "categorie": "carrousel",
+      "statut": "a_rendre",
+      "texte": "8 questions for you two",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-09",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-09",
+      "creneau": "midi",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-09",
+      "creneau": "soir",
+      "gabarit": "pov",
+      "categorie": "coquin",
+      "statut": "a_rendre",
+      "texte": null,
       "erreur": null
     }
   ],
