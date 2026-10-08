@@ -158,6 +158,7 @@ function bilanCritique() {
 // Reste a null si le fichier ne se presente pas comme attendu : chaque page
 // garde alors le moteur entier.
 let DECOUPE = null;
+let MASCOTTES_SERVIES = false;
 
 
 // Ajoute l'empreinte aux ressources internes d'une page. Les adresses
@@ -638,10 +639,20 @@ function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
 }
 
+// Les mascottes partent juste avant le moteur, dans l'ordre des scripts
+// differes : le moteur les trouve en place a son premier rendu. Seules les
+// pages qui chargent le moteur commun les recoivent, 4 Ko compresses.
+function ajouteLesMascottes(html) {
+  if (!MASCOTTES_SERVIES || html.indexOf('<script src="/js/quiz-engine-core.js"') === -1) return html;
+  return html.replace('<script src="/js/quiz-engine-core.js"',
+    '<script src="/js/mascottes.js" defer></script>\n<script src="/js/quiz-engine-core.js"');
+}
+
 // Remplace le moteur entier par le paquet qui correspond aux moteurs que la
 // page peut atteindre. En cas de doute, on ne touche a rien : la page garde
 // le fichier complet, donc le comportement d'aujourd'hui.
 function choisitLePaquetMoteur(html) {
+  html = ajouteLesMascottes(html);
   if (!DECOUPE) return html;
   if (html.indexOf('/js/quiz-engine-core.js') === -1) return html;
   let noms;
@@ -1529,6 +1540,20 @@ async function copyJs() {
     console.warn(`[moteurs] decoupage abandonne : ${e.message}`);
   }
 
+
+  // Les mascottes de la charte (reseaux/charte/mascottes.js) sont servies
+  // telles quelles en /js/mascottes.js : un seul dessin pour les reels et
+  // pour le site. Copiees ici pour passer par la minification comme les
+  // autres fichiers. Absentes (depot incomplet), les pages gardent leurs
+  // ecrans sans personnages et le build le dit.
+  const srcMascottes = path.join(REPO_ROOT, 'reseaux', 'charte', 'mascottes.js');
+  if (fs.existsSync(srcMascottes)) {
+    fs.copyFileSync(srcMascottes, path.join(destDir, 'mascottes.js'));
+    MASCOTTES_SERVIES = true;
+    console.log('[js] mascottes.js copie depuis reseaux/charte');
+  } else {
+    console.warn('[js] reseaux/charte/mascottes.js introuvable : pages sans mascottes');
+  }
 
   // Inject the Supabase URL + anon key (resolved from config.js, itself driven by the
   // SUPABASE_URL / SUPABASE_ANON_KEY GitHub secrets) into the client JS files that hardcode

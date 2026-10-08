@@ -3,7 +3,7 @@
     "badge": "Gratis • Ohne Anmeldung • Hier gewinnt jemand",
     "title": "Das Brettspiel für Paare, auf einem einzigen Handy",
     "titleHighlight": "für Paare",
-    "description": "Vierzig Felder, ein Würfel, zwei Figuren mit euren Vornamen. Wer zuerst ankommt, gewinnt… und der Verlierer zieht ein Pfand."
+    "description": "Vierzig Felder, ein Würfel, zwei kleine Figuren mit euren Vornamen. Wer zuerst ankommt, gewinnt… und wer verliert, wählt die letzte Karte: Wahrheit oder Pflicht."
   },
   "cases": {
     "veriteNom": "Wahrheit",
@@ -14,8 +14,8 @@
     "duelDesc": "Eine Frage, die mit \"wer von euch beiden\" beginnt. Ihr zeigt gleichzeitig: Seid ihr euch einig, rückt der Spieler am Zug zwei Felder vor.",
     "souvenirNom": "Erinnerung",
     "souvenirDesc": "Hier wird erzählt. Eine erste Reise, ein erster Streit, ein Lachanfall. Das Feld, das die Partie bremst, und oft das, an das man sich erinnert.",
-    "gageNom": "Strafe",
-    "gageDesc": "Auf diesem Feld gibt es kein Entkommen: Die Strafe fällt und wird ausgeführt. Sie stammt aus den hundertvierzig Strafen unseres Rades.",
+    "choixNom": "Wahrheit oder Pflicht",
+    "choixDesc": "Das Feld, auf dem man wählt. Eine Frage oder eine Aufgabe, was einem lieber ist, und dann dieselbe Regel wie überall: geschafft heißt ein Feld vor, gepasst ein Feld zurück.",
     "chanceNom": "Glück",
     "chanceDesc": "Das Ereignis, das alles umwirft: drei vor, zwei zurück, noch einmal würfeln oder die beiden Figuren tauschen."
   },
@@ -35,31 +35,31 @@
     "title": "Die Regeln in vier Punkten",
     "intro": "Sie sind in einer Minute gelesen, um den Rest kümmert sich das Spiel.",
     "regle1Titre": "Tragt eure Vornamen ein und würfelt",
-    "regle1Texte": "Jeder seine Figur, jeder seinen Zug. Das Spiel sagt an, wer dran ist, und schiebt die Figur von selbst bis auf das gewürfelte Feld.",
+    "regle1Texte": "Jeder seine Figur, jeder seinen Zug. Das Spiel sagt an, wer dran ist, und lässt die Figur von selbst Feld für Feld bis auf das gewürfelte Feld laufen.",
     "regle2Titre": "Jedes Feld löst eine Aufgabe aus",
-    "regle2Texte": "Wahrheit, Pflicht, Duell, Erinnerung, Pfand oder Glücksfall. Die Karte entdeckt ihr, sobald die Figur steht, nie vorher.",
+    "regle2Texte": "Wahrheit, Pflicht, Duell, Erinnerung, Wahrheit oder Pflicht nach Wahl oder ein Glücksfall. Die Karte entdeckt ihr, sobald die Figur steht, nie vorher.",
     "regle3Titre": "Wer besteht, rückt vor, wer ablehnt, geht zurück",
     "regle3Texte": "Eine bestandene Wahrheit oder Pflicht bringt euch ein Feld weiter. Ablehnen kostet eines. Genau das macht Ablehnen möglich, ohne es umsonst zu machen.",
     "regle4Titre": "Wer zuerst im Ziel ist, gewinnt",
-    "regle4Texte": "Die genaue Zahl braucht es nicht: das letzte Feld zu erreichen oder zu überschreiten genügt. Der Verlierer zieht dann ein letztes Pfand, und das war's."
+    "regle4Texte": "Die genaue Zahl braucht es nicht: das letzte Feld zu erreichen oder zu überschreiten genügt. Wer verliert, wählt dann eine letzte Karte, Wahrheit oder Pflicht, und das war's."
   },
   "faq": {
     "title": "Häufige Fragen",
     "q1": "Wie lange dauert eine Partie?",
     "a1": "In der Regel zwanzig bis dreißig Minuten. Die Zahl der Züge hängt von den Würfeln ab, vor allem aber von euch: ein Erinnerungsfeld kann in fünfzehn Sekunden erledigt sein… oder ein zehnminütiges Gespräch auslösen.",
     "q2": "Muss man etwas ausdrucken?",
-    "a2": "Nein! Das Brett ist auf dem Bildschirm und die Figuren bewegen sich von allein. Ein Handy zwischen euch beiden reicht, nichts zu installieren und nichts anzulegen.",
+    "a2": "Nein! Das Brett ist auf dem Bildschirm und die Figuren laufen von allein. Ein Handy zwischen euch beiden reicht, nichts zu installieren und nichts anzulegen.",
     "q3": "Woher kommen die Karten?",
-    "a3": "Die Wahrheiten und Pflichten stammen aus unserem <a href=\"/de/wahrheit-oder-pflicht-paar/\">Wahrheit-oder-Pflicht-Spiel</a>, die Pfänder aus dem <a href=\"/de/pfaender-fuer-paare/\">Pfänderrad</a>. Die Erinnerungen, die Duelle und die Glücksfelder wurden eigens für das Brett geschrieben.",
+    "a3": "Die Wahrheiten und Pflichten stammen aus unserem <a href=\"/de/wahrheit-oder-pflicht-paar/\">Wahrheit-oder-Pflicht-Spiel</a>, und dieselben Karten kommen auf dem Wahlfeld ins Spiel. Die Erinnerungen, die Duelle und die Glücksfelder wurden eigens für das Brett geschrieben.",
     "q4": "Kann man schummeln oder eine Aufgabe überspringen?",
-    "a4": "Aussetzen ist vorgesehen und kostet ein Feld, außer auf einem Pfandfeld, wo es kein Entkommen gibt. Ansonsten ist es ein Spiel zu zweit ohne Schiedsrichter: niemand prüft nach, ob ihr wirklich geantwortet habt…",
+    "a4": "Aussetzen ist vorgesehen und kostet ein Feld, bei jeder Karte. Ansonsten ist es ein Spiel zu zweit ohne Schiedsrichter: niemand prüft nach, ob ihr wirklich geantwortet habt…",
     "q5": "Kann man zu mehr als zweit spielen?",
     "a5": "Das Brett ist für zwei Figuren und zwei Vornamen gebaut. Zu mehreren spielt ihr am einfachsten in Zweierteams und reicht das Handy jede Runde weiter."
   },
   "section4": {
     "title": "Warum ein Spielbrett alles ändert",
     "p1": "Nicht der Inhalt lässt einen Spieleabend dauern, sondern der Einsatz. Dieselbe Frage, zufällig gestellt, ist vergessen; drei Felder vor dem Ziel gestellt, während der andere aufholt, wird sie zu einem Moment. Mehr macht das Brett nicht: es gibt euch einen Grund weiterzumachen.",
-    "p2": "Und am Ziel bleiben ein Gewinner, ein Verlierer und ein letztes Pfand. Fast nichts… und genau das fehlt den meisten Paarspielen im Netz.",
+    "p2": "Und am Ziel bleiben ein Gewinner, ein Verlierer und eine letzte Karte, die der Verlierer selbst aussucht. Fast nichts… und genau das fehlt den meisten Paarspielen im Netz.",
     "cta": "Alle unsere Paarspiele ansehen"
   },
   "jsonLd": {

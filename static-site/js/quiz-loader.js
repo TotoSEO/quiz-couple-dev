@@ -238,9 +238,10 @@
     'gage-couple':             { prefix: 'gageRoue', engine: 'roue', totalQ: 0, pool: 0, textOnly: true, segments: ['bisou', 'massage', 'show', 'aveu', 'grimace', 'photo', 'douceur'] },
 
     // ── Le plateau : le seul jeu qui se gagne. Il pioche dans ses propres
-    // cases et dans les paquets deja ecrits pour les cartes et pour la roue,
-    // d'ou les prefixes supplementaires a charger.
-    'plateau-couple':          { prefix: 'plateau', engine: 'plateau', totalQ: 0, pool: 0, textOnly: true, prefixesExtra: ['actionVerite', 'gageRoue'] },
+    // cases et dans le paquet deja ecrit pour action ou verite, d'ou le
+    // prefixe supplementaire a charger. Les gages de la roue ne servent plus
+    // depuis octobre 2026 : la case gage est devenue une case au choix.
+    'plateau-couple':          { prefix: 'plateau', engine: 'plateau', totalQ: 0, pool: 0, textOnly: true, prefixesExtra: ['actionVerite'] },
     // ── Qui de nous deux : vote secret de chacun puis revelation commune.
     'qui-de-nous-deux':        { prefix: 'quiDeNous', engine: 'duo-vote', totalQ: 0, pool: 0, textOnly: true, distance: true },
 

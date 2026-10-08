@@ -3,7 +3,7 @@
     "badge": "Free • No sign-up • Someone actually wins",
     "title": "The couple board game you play on one phone",
     "titleHighlight": "board game",
-    "description": "Forty squares, a dice, two pawns with your names on them. First to the finish wins… and the loser draws a forfeit."
+    "description": "Forty squares, a dice, two little figures with your names on them. First to the finish wins… and the loser picks their last card: truth or dare."
   },
   "cases": {
     "veriteNom": "Truth",
@@ -14,8 +14,8 @@
     "duelDesc": "A question starting with \"which of you\". You both point at the same time: if you agree, the player whose turn it is moves two squares.",
     "souvenirNom": "Memory",
     "souvenirDesc": "You have to tell the story. A first trip, a first argument, a fit of laughter. The square that slows the game down, and often the one you remember.",
-    "gageNom": "Forfeit",
-    "gageDesc": "No way out on this one: the forfeit drops and it has to be done. It comes from the hundred and forty forfeits on our wheel.",
+    "choixNom": "Truth or dare",
+    "choixDesc": "The square where you choose. A question or a dare, whichever you prefer, then the same rule as everywhere else: done and you move forward one square, passed and you move back one.",
     "chanceNom": "Luck",
     "chanceDesc": "The event that turns everything around: move three forward, two back, roll again, or swap the two pawns."
   },
@@ -35,31 +35,31 @@
     "title": "The rules, in four points",
     "intro": "You can read them in a minute, and the game handles the rest.",
     "regle1Titre": "Enter your names and roll the dice",
-    "regle1Texte": "One pawn each, one turn each. The game announces who's playing and moves the pawn on its own to the square you rolled.",
+    "regle1Texte": "One little figure each, one turn each. The game announces who's playing and walks the figure on its own, square by square, to the one you rolled.",
     "regle2Titre": "Every square triggers a challenge",
-    "regle2Texte": "Truth, dare, duel, memory, forfeit or a stroke of luck. You discover the card once the pawn has landed, never before.",
+    "regle2Texte": "Truth, dare, duel, memory, truth or dare of your choice, or a stroke of luck. You discover the card once the figure has landed, never before.",
     "regle3Titre": "Succeed and you move up, refuse and you move back",
     "regle3Texte": "A truth or a dare taken on gives you one extra square. Refusing costs you one. That's what makes refusing possible without making it free.",
     "regle4Titre": "First to the finish wins",
-    "regle4Texte": "No exact count needed: reaching or passing the last square is enough. The loser then draws one final forfeit, and that's that."
+    "regle4Texte": "No exact count needed: reaching or passing the last square is enough. The loser then picks one last card, truth or dare, and that's that."
   },
   "faq": {
     "title": "Frequently asked questions",
     "q1": "How long does a game last?",
     "a1": "Between twenty and thirty minutes as a rule. The number of turns depends on the dice, but mostly on you: a memory square can be dealt with in fifteen seconds… or start a ten-minute conversation.",
     "q2": "Do I need to print anything?",
-    "a2": "No! The board is on screen and the pawns move by themselves. One phone between the two of you is all it takes, nothing to install and nothing to create.",
+    "a2": "No! The board is on screen and the little figures move by themselves. One phone between the two of you is all it takes, nothing to install and nothing to create.",
     "q3": "Where do the cards come from?",
-    "a3": "The truths and dares come from our <a href=\"/en/truth-or-dare-couple-game/\">truth or dare</a> game, the forfeits from the <a href=\"/en/couple-forfeits-wheel/\">forfeit wheel</a>. The memories, the duels and the luck squares were written specially for the board.",
+    "a3": "The truths and dares come from our <a href=\"/en/truth-or-dare-couple-game/\">truth or dare</a> game, and the same cards are used on the choice square. The memories, the duels and the luck squares were written specially for the board.",
     "q4": "Can you cheat or skip a challenge?",
-    "a4": "Skipping is built in and costs one square, except on a forfeit square where there's no way out. Beyond that it's a two-player game with no referee: nobody is going to check whether you really answered…",
+    "a4": "Skipping is built in and costs one square, on every card. Beyond that it's a two-player game with no referee: nobody is going to check whether you really answered…",
     "q5": "Can more than two people play?",
     "a5": "The board is built for two pawns and two first names. With more of you, the simplest thing is to play in teams of two and pass the phone each turn."
   },
   "section4": {
     "title": "Why a board changes everything",
     "p1": "It isn't the content that makes a game night last, it's the stake. The same question asked at random is forgotten; asked three squares from the finish, with your partner catching up, it becomes a moment. The board does nothing more than that: it gives you a reason to carry on.",
-    "p2": "And at the finish there's a winner, a loser and one last forfeit. Next to nothing… and it's exactly what most online couple games are missing.",
+    "p2": "And at the finish there's a winner, a loser and one last card that the loser picks for themselves. Next to nothing… and it's exactly what most online couple games are missing.",
     "cta": "See all our couple games"
   },
   "jsonLd": {
