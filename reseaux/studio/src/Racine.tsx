@@ -8,6 +8,7 @@ import { Jeu } from './gabarits/QuizChrono';
 import { Pov } from './gabarits/Pov';
 import { ImageFixe } from './gabarits/ImageFixe';
 import { PageCarrousel } from './gabarits/Carrousel';
+import { Bd, PageBd } from './gabarits/Bd';
 import { planifier, type Plan } from './plan';
 import type { RecetteFixe, RecetteReel } from './recette';
 import exempleCitation from '../recettes/exemples/citation.json';
@@ -39,11 +40,12 @@ const Reel: React.FC<PropsReel> = ({ recette: brute, plan, verification, silenci
 
 const Image: React.FC<PropsImage> = ({ recette: brute, page = 0, verification }) => {
   const recette = typographier(brute, brute.langue);
-  return recette.gabarit === 'image' ? (
-    <ImageFixe recette={recette} verification={verification} />
-  ) : (
-    <PageCarrousel recette={recette} page={page} verification={verification} />
-  );
+  if (recette.gabarit === 'image') return <ImageFixe recette={recette} verification={verification} />;
+  // la BD : les quatre cases en grille, ou une case par page en carrousel
+  if (recette.gabarit === 'bd') {
+    return recette.sortie === 'carrousel' ? <PageBd recette={recette} page={page} verification={verification} /> : <Bd recette={recette} verification={verification} />;
+  }
+  return <PageCarrousel recette={recette} page={page} verification={verification} />;
 };
 
 // Planche de contrôle : plusieurs images d'un reel côte à côte, en petit,

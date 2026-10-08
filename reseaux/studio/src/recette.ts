@@ -49,7 +49,9 @@ export type RecetteJeu = RecetteQuizChrono | RecetteConnaisTu | RecetteTuPrefere
 
 // Une scène dessinée avec les mascottes, figée, en bas d'un post ou d'une
 // page de carrousel (même scénario qu'une animation, un seul plan).
-export type SceneFixe = { plan: PlanPov; t?: number; haut?: number };
+// echelle : agrandissement de la scène dans une case de BD (1 par défaut),
+// pour cadrer plus serré sur les personnages.
+export type SceneFixe = { plan: PlanPov; t?: number; haut?: number; echelle?: number };
 
 export type RecetteImage = {
   gabarit: 'image';
@@ -74,7 +76,25 @@ export type RecetteCarrousel = {
   pages: PageCarrousel[];
 };
 
+// Une bande dessinée en quatre cases (octobre 2026, d'après les planches à
+// quatre cases qui marchent sur Instagram) : une scène figée par case, jouée
+// avec le vocabulaire des animations, et au plus deux répliques courtes en
+// haut de la case, du côté de celui qui parle. La chute est dans la
+// dernière case. Post 4:5 en grille 2 x 2 par défaut ; « sortie:
+// carrousel » donne une case par page, en grand.
+export type RepliqueBd = { texte: string; cote?: 'gauche' | 'droite' | 'centre' };
+export type CaseBd = { scene: SceneFixe; repliques?: RepliqueBd[] };
+export type RecetteBd = {
+  gabarit: 'bd';
+  langue: Langue;
+  theme: Theme;
+  // l'idée en une phrase, pour l'admin et la relecture (jamais affichée)
+  idee: string;
+  cases: CaseBd[];
+  sortie?: 'image' | 'carrousel';
+};
+
 export type { RecettePov };
 export type RecetteReel = RecetteCitation | RecetteJeu | RecettePov;
-export type RecetteFixe = RecetteImage | RecetteCarrousel;
+export type RecetteFixe = RecetteImage | RecetteCarrousel | RecetteBd;
 export type Recette = RecetteReel | RecetteFixe;

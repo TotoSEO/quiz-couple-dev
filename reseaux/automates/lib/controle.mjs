@@ -2,12 +2,15 @@
 // pousser un post, puis par la synchro avant de l'écrire dans Supabase.
 // Renvoie la liste des fautes (vide si tout va bien).
 
-import { controlerPov } from './pov.mjs';
+import { controlerPov, VOCABULAIRE } from './pov.mjs';
 import { AMBIANCES, BIBLIOTHEQUE } from './musique.mjs';
 import { AMBIANCES_SON } from './son.mjs';
 
 const CRENEAUX = ['matin', 'midi', 'soir'];
-const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', image: 'image', carrousel: 'carrousel' };
+const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', image: 'image', carrousel: 'carrousel', bd: 'image' };
+// Le format que donne un gabarit : une image, sauf la BD rendue en carrousel
+// (une case par page) quand sa recette le demande.
+export const formatDuGabarit = (gabarit, recette) => (gabarit === 'bd' && recette?.sortie === 'carrousel' ? 'carrousel' : FORMAT_DU_GABARIT[gabarit]);
 // Les catégories de la ligne éditoriale (reseaux/atelier/LIGNE-EDITORIALE.md)
 // et le gabarit qui les fabrique.
 export const CATEGORIES = {
@@ -19,11 +22,12 @@ export const CATEGORIES = {
   phrase: 'citation',
   post: 'image',
   carrousel: 'carrousel',
+  bd: 'bd',
 };
 // Les jeux renvoient vers le site ; les animations et les phrases jamais
 // (seule la mention quiz-couple.com dans l'image).
 const RENVOI_AU_SITE = /quiz-couple\.com|link in bio|lien en bio/i;
-const SANS_RENVOI = ['pov', 'coquin', 'statique', 'phrase'];
+const SANS_RENVOI = ['pov', 'coquin', 'statique', 'phrase', 'bd'];
 const THEMES = ['light', 'dark', 'marque'];
 const LANGUES = ['en', 'fr', 'es', 'de', 'it'];
 
@@ -114,6 +118,60 @@ export function controlerRecette(r, langue) {
     if (p[0]?.type !== 'couverture') f.push('la première page est la couverture');
     if (p[p.length - 1]?.type !== 'fin') f.push('la dernière page est la page finale');
   }
+  if (r.gabarit === 'bd') f.push(...controlerBd(r));
+  return f;
+}
+
+// La bande dessinée : quatre cases, chacune une scène figée (un plan du
+// vocabulaire des animations, sans les règles de richesse d'un reel : rien
+// ne bouge) et au plus deux répliques courtes. Pas d'emoji à l'écran.
+const COTES = ['gauche', 'droite', 'centre'];
+export function controlerBd(r) {
+  const f = [];
+  const V = VOCABULAIRE;
+  if (typeof r.idee !== 'string' || r.idee.trim().length < 10) f.push("l'idée de la BD manque (champ idee)");
+  if (r.sortie !== undefined && !['image', 'carrousel'].includes(r.sortie)) f.push(`sortie inconnue : ${r.sortie} (image ou carrousel)`);
+  const cases = Array.isArray(r.cases) ? r.cases : [];
+  if (cases.length !== 4) f.push(`une BD a quatre cases (ici ${cases.length})`);
+  let repliques = 0;
+  cases.forEach((c, i) => {
+    const ou = `case ${i + 1}`;
+    const plan = c?.scene?.plan;
+    if (!plan || typeof plan !== 'object') {
+      f.push(`${ou} : scène absente (scene.plan)`);
+      return;
+    }
+    if (typeof plan.description !== 'string' || plan.description.trim().length < 60) f.push(`${ou} : la description raconte l'image comme à un dessinateur (60 signes au moins)`);
+    if (!V.decors[plan.decor]) f.push(`${ou} : décor inconnu « ${plan.decor} »`);
+    if (plan.moment !== undefined && !V.moments.includes(plan.moment)) f.push(`${ou} : moment inconnu « ${plan.moment} »`);
+    const persos = Array.isArray(plan.persos) ? plan.persos : [];
+    if (!persos.length) f.push(`${ou} : au moins un personnage`);
+    if (persos.length > 2) f.push(`${ou} : deux personnages au plus`);
+    for (const p of persos) {
+      if (!['rose', 'violet'].includes(p.qui)) f.push(`${ou} : personnage inconnu « ${p.qui} »`);
+      if (typeof p.a === 'string' && V.decors[plan.decor] && !V.decors[plan.decor].spots[p.a]) f.push(`${ou} : spot « ${p.a} » absent du décor ${plan.decor}`);
+      if (p.porte !== undefined && !V.objets[p.porte]) f.push(`${ou} : objet porté inconnu « ${p.porte} »`);
+      for (const g of p.gestes || []) {
+        if (!V.gestes[g.geste]) f.push(`${ou} : geste inconnu « ${g.geste} »`);
+        if (g.objet !== undefined && !V.objets[g.objet]) f.push(`${ou} : objet inconnu « ${g.objet} »`);
+        if (g.effet !== undefined && !V.effets[g.effet]) f.push(`${ou} : effet inconnu « ${g.effet} »`);
+      }
+    }
+    if (c.scene.echelle !== undefined && (typeof c.scene.echelle !== 'number' || c.scene.echelle < 1 || c.scene.echelle > 1.6)) f.push(`${ou} : echelle de 1 à 1,6`);
+    const reps = Array.isArray(c.repliques) ? c.repliques : [];
+    if (reps.length > 2) f.push(`${ou} : deux répliques au plus`);
+    reps.forEach((rep, j) => {
+      const ouR = `${ou}, réplique ${j + 1}`;
+      if (typeof rep?.texte !== 'string' || !rep.texte.trim()) f.push(`${ouR} : texte vide`);
+      else {
+        if (rep.texte.length > 40) f.push(`${ouR} : 40 signes au plus`);
+        if (/\p{Extended_Pictographic}/u.test(rep.texte)) f.push(`${ouR} : pas d'emoji à l'écran (la police ne les dessine pas)`);
+      }
+      if (rep?.cote !== undefined && !COTES.includes(rep.cote)) f.push(`${ouR} : côté inconnu « ${rep.cote} » (gauche, droite, centre)`);
+      repliques++;
+    });
+  });
+  if (repliques > 5) f.push(`${repliques} répliques pour quatre cases : la BD se lit en images, cinq répliques au plus`);
   return f;
 }
 
@@ -124,7 +182,8 @@ export function controlerPost(post) {
   if (post.publier_a !== undefined && (typeof post.publier_a !== 'string' || Number.isNaN(Date.parse(post.publier_a)) || !/(Z|[+-]\d{2}:?\d{2})$/.test(post.publier_a))) {
     f.push(`publier_a invalide : ${post.publier_a} (date ISO avec fuseau, ex. 2026-10-07T19:45:00Z)`);
   }
-  if (FORMAT_DU_GABARIT[post.gabarit] !== post.format) f.push(`le gabarit ${post.gabarit} ne donne pas un ${post.format}`);
+  const premiere = Object.values(post.variantes || {})[0]?.recette;
+  if (formatDuGabarit(post.gabarit, premiere) !== post.format) f.push(`le gabarit ${post.gabarit} ne donne pas un ${post.format}`);
   if (!CATEGORIES[post.categorie]) f.push(`catégorie inconnue : ${post.categorie} (${Object.keys(CATEGORIES).join(', ')})`);
   else if (CATEGORIES[post.categorie] !== post.gabarit) f.push(`la catégorie ${post.categorie} se fait avec le gabarit ${CATEGORIES[post.categorie]}`);
   if (post.categorie === 'statique' && post.variantes) {

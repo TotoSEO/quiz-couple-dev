@@ -45,6 +45,7 @@ Le son du reel fini est ramené à -14 LUFS et -1 dBTP (jetons `son-*`).
 | `citation` | reel.mp4 + couverture.jpg | Phrase en police plume, mot à mot, fleurs au trait, le petit duo des mascottes, 10 à 14 s |
 | `image` | image.jpg | Post 4:5 : phrase émotive (plume, fleurs) ou drôle (Fredoka), avec une scène dessinée (`scene`) ou le petit duo |
 | `carrousel` | page-1.jpg... | Couverture et page finale (scène dessinée ou duo), pages numérotées avec le duo en tout petit dans le coin |
+| `bd` | image.jpg (ou page-1.jpg... avec `sortie: carrousel`) | Bande dessinée en quatre cases : une scène figée par case (vocabulaire des animations), bordée d'un trait d'encre, répliques courtes en haut du côté de celui qui parle, chute dans la dernière case |
 
 Les mascottes sont sur tous les visuels (`Duo.tsx` quand il n'y a pas de
 scène). Elles sont dessinées : trait d'encre tremblé (`charte/mascottes.js`,

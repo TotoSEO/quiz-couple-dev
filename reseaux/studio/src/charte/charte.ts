@@ -46,7 +46,7 @@ for (const f of tokens.type.fonts) {
   });
 }
 
-const jeton = (nom: string): string => {
+export const jeton = (nom: string): string => {
   for (const f of familles) {
     const t = ((tokens[f] as { tokens: Jeton[] }).tokens ?? []).find((x) => x.name === nom);
     if (t) return String(t.value);

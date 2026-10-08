@@ -199,7 +199,10 @@ tu valides les formats, et l'automate les décline.
 > l'animation (`pov` : POV, mini messages, scènes coquines, reels
 > statiques), « Connais-tu ton partenaire ? » (`connais-tu`), « Tu
 > préfères » (`tu-preferes`), la phrase tendre (`citation`, ex-R2), le post
-> 4:5 avec une scène dessinée (`image`) et le carrousel (`carrousel`). Le
+> 4:5 avec une scène dessinée (`image`), le carrousel (`carrousel`) et,
+> depuis le 8 octobre 2026, la bande dessinée en quatre cases (`bd` : quatre
+> scènes figées en grille, répliques courtes, chute dans la dernière case,
+> en post ou en carrousel). Le
 > quiz chrono à bonne réponse (`quiz-chrono`, R7) reste disponible hors de
 > la semaine type. Le tableau ci-dessous est le plan de départ.
 
