@@ -205,11 +205,15 @@ on raccourcit le texte, jamais la taille.
   c'est bien). Chaque plan a une `description` de 60 signes au moins qui
   raconte l'image comme à un dessinateur, dans l'ordre et avec les secondes.
 - Chaque personnage a ses `etapes`, chacune à l'instant `a` (secondes
-  depuis le début du plan) : `x`, `y`, `angle`, `taille` s'interpolent
-  d'une étape à l'autre (le déplacement est linéaire, la rotation douce) ;
-  `expression`, `pose`, `bras`, `pattes`, `signes`, `miroir`, `vers`,
-  `visible` changent d'un coup à l'étape qui les écrit et restent jusqu'à
-  la suivante. La première étape dit où il est (`x`). **Un personnage
+  depuis le début du plan) : `x`, `y`, `taille` s'interpolent d'une
+  écriture à la suivante (le déplacement est linéaire) ; `expression`,
+  `pose`, `bras`, `pattes`, `signes`, `miroir`, `vers`, `visible` changent
+  d'un coup à l'étape qui les écrit et restent jusqu'à la suivante. `angle`
+  est à part : il tient sa valeur jusqu'à l'étape qui précède celle qui
+  l'écrit, et la rotation se fait dans ce dernier segment, en douceur. On ne
+  se tourne jamais en courant : si le personnage bouge encore, la rotation
+  attend la fin de sa course, et après une course il marque un arrêt de
+  0,2 s puis se tourne d'un petit saut (0,25 à 0,4 s). La première étape dit où il est (`x`). **Un personnage
   apparaît à sa première étape** : pour qu'il arrive à 3 s, sa première
   étape est à `a: 3`.
 - La scène est agrandie 2,2 fois : on voit la boîte de x = 75 à x = 565.
@@ -221,9 +225,13 @@ on raccourcit le texte, jamais la taille.
   `arrive` : le cycle des pattes et le balancement des bras suivent la
   distance parcourue, le corps rebondit. Un personnage qui se déplace vers
   la gauche se retourne de lui-même (miroir). De profil (`angle: 90`), le
-  visage reste lisible. **À l'arrivée, une étape remet `pose: "debout"`**
-  (sinon il garde les pattes écartées), puis une autre, 0,4 s plus tard,
-  `angle: 0` pour qu'il se tourne vers nous.
+  visage reste lisible. L'angle de la marche (`angle: 90`) s'écrit dans
+  l'étape de départ, jamais dans celle d'arrivée. **À l'arrivée, une étape
+  remet `pose: "debout"`** (à l'arrêt, une pose de course se dessine debout
+  de toute façon), puis une autre, 0,4 à 0,5 s plus tard, `angle: 0` : il
+  s'arrête de profil, puis se tourne vers nous d'un petit saut. Un `angle`
+  écrit dans l'étape d'arrivée donne la même chose, le saut vient alors
+  0,2 s après l'arrivée.
 - `objets` : `{ "objet": "coeur", "x", "y", "echelle", "de": 0.6, "a": 3,
   "flotte": true, "derriere": false, "etapes": [{ "a", "x", "y", "echelle" }] }`
   : visible de `de` à `a`, entre en grossissant, flotte s'il le demande (les

@@ -52,6 +52,19 @@ test('un reel animé trop court ou sans texte est refusé', () => {
   assert.ok(controlerMipaps(sansTexte).some((x) => x.includes('au moins un texte')));
 });
 
+test('un personnage qui marche de face est refusé, de profil il passe', () => {
+  const r = exemple('mipaps-reel');
+  const lui = r.plans[0].persos.find((x) => x.perso === 'lui');
+  delete lui.etapes[0].angle;
+  assert.ok(controlerMipaps(r).some((x) => x.includes('il marche de face')), controlerMipaps(r).join(' | '));
+  lui.etapes[0].angle = -90;
+  assert.ok(!controlerMipaps(r).some((x) => x.includes('il marche de face')), controlerMipaps(r).join(' | '));
+  // un angle écrit à l'arrivée ne compte pas pour la marche : le moteur l'applique après l'arrêt
+  lui.etapes[0].angle = 90;
+  lui.etapes[1].angle = 0;
+  assert.ok(!controlerMipaps(r).some((x) => x.includes('il marche de face')), controlerMipaps(r).join(' | '));
+});
+
 test('deux textes affichés en même temps au même endroit sont refusés', () => {
   const r = exemple('mipaps-reel');
   r.plans[0].textes = [

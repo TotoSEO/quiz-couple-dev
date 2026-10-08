@@ -89,7 +89,8 @@ Une situation jouée, 10 à 20 secondes, un à quatre plans. Les personnages
 bougent pour de vrai : ils arrivent de loin, courent, se dépassent, se
 retournent, sautent, s'endorment ; les étapes de chaque personnage
 (position, angle, taille, expression, pose, bras) s'interpolent, le cycle de
-marche suit la distance parcourue. Un texte en haut, posé dès la première
+marche suit la distance parcourue, et personne ne se tourne en courant : on
+finit sa course, on s'arrête, on se tourne d'un petit saut. Un texte en haut, posé dès la première
 seconde (« quand il me voit de loin »), la chute dans le dernier plan, parfois
 une deuxième ligne qui s'écrit mot à mot (« mais il revient toujours <3 »).
 Pas de bulle, pas de dialogue : la situation se comprend sans le son.
