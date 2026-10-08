@@ -15,7 +15,7 @@ import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { Instagram } from './lib/instagram.mjs';
 import { legendeFinale } from './lib/controle.mjs';
-import { VOLUME_MUSIQUE, VOLUME_VIDEO, choisirSon, sonsRecents } from './lib/son.mjs';
+import { VOLUME_MUSIQUE, VOLUME_VIDEO, ambianceDuReel, choisirSon, requetePour, sonsRecents } from './lib/son.mjs';
 
 const AVANCE_REEL_MIN = 60;
 const ESSAIS_MAX = 3;
@@ -25,30 +25,43 @@ const RETARD_MAX_MIN = 90;
 const minutes = (n) => n * 60 * 1000;
 
 // Le son d'un reel : celui déjà choisi (reprise après un échec passager),
-// sinon un son tendance du moment, jamais un son posé récemment sur le
-// compte. Une recette qui porte une musique mixée dans la vidéo n'en reçoit
-// pas de second. Sans son (API en panne, liste vide), le reel part avec ses
-// seuls bruitages : on ne rate pas un créneau pour une musique.
-async function sonDuReel(ig, base, v, tendances) {
+// sinon un son de la bibliothèque Instagram qui va avec l'image : la
+// recette dit une ambiance (ou la catégorie du post en donne une), et on
+// cherche dans la bibliothèque avec les mots de cette ambiance ; une
+// recherche écrite en toutes lettres dans la recette l'emporte ; l'ambiance
+// « tendance » lit les tendances du moment. Jamais un son posé récemment
+// sur le compte. Une recette qui porte une musique mixée dans la vidéo n'en
+// reçoit pas de second. Sans son (API en panne, liste vide), le reel part
+// avec ses seuls bruitages : on ne rate pas un créneau pour une musique.
+async function sonDuReel(ig, base, v, tendances, categorie) {
   const r = v.recette || {};
   if (r.musique) return null;
   if (r.son?.id) return r.son;
-  const recherche = String(r.son?.recherche || '').trim();
-  const cle = `${v.langue}|${recherche}`;
-  if (!tendances.has(cle)) tendances.set(cle, ig.sons(recherche ? { recherche } : {}));
+  const ambiance = ambianceDuReel(r, categorie);
+  const recherche = String(r.son?.recherche || '').trim() || requetePour(ambiance, v.id);
+  const lire = (q) => {
+    const cle = `${v.langue}|${q}`;
+    if (!tendances.has(cle)) tendances.set(cle, ig.sons(q ? { recherche: q } : {}));
+    return tendances.get(cle);
+  };
   let candidats;
   try {
-    candidats = await tendances.get(cle);
+    candidats = await lire(recherche);
+    // la recherche ne rend rien : les tendances plutôt qu'aucun son
+    if (recherche && !candidats.length) {
+      await base.journal('alerte', 'publication', `aucun son pour « ${recherche} » (${ambiance}), tendances à la place`, null, v.id);
+      candidats = await lire('');
+    }
   } catch (e) {
-    await base.journal('alerte', 'publication', `sons tendance indisponibles, reel envoyé avec ses bruitages : ${e.message}`, null, v.id);
+    await base.journal('alerte', 'publication', `sons indisponibles, reel envoyé avec ses bruitages : ${e.message}`, null, v.id);
     return null;
   }
   const son = choisirSon({ candidats, recents: await sonsRecents(base, v.langue), dureeS: Number(v.fichiers?.duree) || 0, graine: v.id });
   if (!son) {
-    await base.journal('alerte', 'publication', 'aucun son tendance disponible, reel envoyé avec ses bruitages', null, v.id);
+    await base.journal('alerte', 'publication', 'aucun son disponible, reel envoyé avec ses bruitages', null, v.id);
     return null;
   }
-  const choisi = recherche ? { ...son, recherche } : son;
+  const choisi = { ...son, ambiance, ...(recherche ? { recherche } : {}) };
   v.recette = { ...r, son: choisi };
   await base.update('social_variantes', `id=eq.${v.id}`, { recette: v.recette });
   return choisi;
@@ -70,7 +83,7 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
   const tendances = new Map();
   for (const v of candidates) {
     const compte = comptes.find((c) => c.langue === v.langue);
-    const [post] = await base.select('social_posts', `select=format,statut,jour,creneau&id=eq.${v.post_id}`);
+    const [post] = await base.select('social_posts', `select=format,statut,jour,creneau,categorie&id=eq.${v.post_id}`);
     if (!post || post.statut !== 'valide') continue;
     const due = new Date(v.publier_a) <= maintenant;
     const [jeton] = compte ? await base.select('social_jetons', `select=jeton&compte_id=eq.${compte.id}`) : [];
@@ -98,7 +111,7 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
         const legende = legendeFinale(v);
         let conteneur;
         if (post.format === 'reel') {
-          const son = await sonDuReel(ig, base, v, tendances);
+          const son = await sonDuReel(ig, base, v, tendances, post.categorie);
           const params = {
             videoUrl: await base.signer(v.fichiers.reel),
             couvertureUrl: await base.signer(v.fichiers.couverture),

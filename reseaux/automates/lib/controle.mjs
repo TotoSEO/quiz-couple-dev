@@ -4,6 +4,7 @@
 
 import { controlerPov } from './pov.mjs';
 import { AMBIANCES, BIBLIOTHEQUE } from './musique.mjs';
+import { AMBIANCES_SON } from './son.mjs';
 
 const CRENEAUX = ['matin', 'midi', 'soir'];
 const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', image: 'image', carrousel: 'carrousel' };
@@ -66,6 +67,16 @@ export function controlerRecette(r, langue) {
     if (r.texte && r.texte.length > 220) f.push('texte trop long (220 signes au plus)');
   }
   if (r.ambiance !== undefined && !AMBIANCES.includes(r.ambiance)) f.push(`ambiance musicale inconnue : ${r.ambiance} (${AMBIANCES.join(', ')})`);
+  // Le son Instagram du reel : une ambiance de la liste, ou une recherche en
+  // deux ou trois mots. Le reste (id, titre, artiste) est écrit par la
+  // publication, pas par l'atelier.
+  if (r.son !== undefined) {
+    if (!r.son || typeof r.son !== 'object' || Array.isArray(r.son)) f.push('son : un objet { ambiance } ou { recherche } attendu');
+    else {
+      if (r.son.ambiance !== undefined && !(r.son.ambiance in AMBIANCES_SON)) f.push(`ambiance de son inconnue : ${r.son.ambiance} (${Object.keys(AMBIANCES_SON).join(', ')})`);
+      if (r.son.recherche !== undefined && (typeof r.son.recherche !== 'string' || !r.son.recherche.trim() || r.son.recherche.length > 40)) f.push('son.recherche : deux ou trois mots anglais, 40 signes au plus');
+    }
+  }
   if (r.musique !== undefined && !BIBLIOTHEQUE.morceaux.some((m) => m.fichier === r.musique)) f.push(`morceau absent de la bibliothèque : ${r.musique}`);
   if (r.gabarit === 'image' && !['citation', 'phrase'].includes(r.style)) f.push(`style d'image inconnu : ${r.style}`);
   if (['quiz-chrono', 'connais-tu', 'tu-preferes'].includes(r.gabarit)) {
@@ -110,6 +121,9 @@ export function controlerPost(post) {
   const f = [];
   if (!/^\d{4}-\d{2}-\d{2}$/.test(post.jour || '')) f.push(`jour invalide : ${post.jour}`);
   if (!CRENEAUX.includes(post.creneau)) f.push(`créneau invalide : ${post.creneau}`);
+  if (post.publier_a !== undefined && (typeof post.publier_a !== 'string' || Number.isNaN(Date.parse(post.publier_a)) || !/(Z|[+-]\d{2}:?\d{2})$/.test(post.publier_a))) {
+    f.push(`publier_a invalide : ${post.publier_a} (date ISO avec fuseau, ex. 2026-10-07T19:45:00Z)`);
+  }
   if (FORMAT_DU_GABARIT[post.gabarit] !== post.format) f.push(`le gabarit ${post.gabarit} ne donne pas un ${post.format}`);
   if (!CATEGORIES[post.categorie]) f.push(`catégorie inconnue : ${post.categorie} (${Object.keys(CATEGORIES).join(', ')})`);
   else if (CATEGORIES[post.categorie] !== post.gabarit) f.push(`la catégorie ${post.categorie} se fait avec le gabarit ${CATEGORIES[post.categorie]}`);

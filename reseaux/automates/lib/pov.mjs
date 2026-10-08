@@ -137,6 +137,7 @@ export function controlerPov(r) {
       return;
     }
     if (p.moment !== undefined && !V.moments.includes(p.moment)) f.push(`${ou} : moment inconnu « ${p.moment} »`);
+    if (p.ambiance !== undefined && p.ambiance !== 'aucune' && !V.ambiances.includes(p.ambiance)) f.push(`${ou} : ambiance inconnue « ${p.ambiance} » (aucune, ${V.ambiances.join(', ')})`);
     if (p.transition !== undefined && !V.transitions.includes(p.transition)) f.push(`${ou} : transition inconnue « ${p.transition} »`);
     if (p.couette !== undefined && (!['calme', 'bouge'].includes(p.couette) || p.decor !== 'chambre')) f.push(`${ou} : couette « calme » ou « bouge », dans la chambre seulement`);
     if (p.couetteDe !== undefined && (p.couette !== 'bouge' || !nombre(p.couetteDe) || p.couetteDe < 0 || p.couetteDe >= d)) f.push(`${ou} : couetteDe demande une couette qui bouge, et un instant dans le plan`);

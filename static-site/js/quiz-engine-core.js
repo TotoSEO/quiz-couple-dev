@@ -858,11 +858,11 @@ var QuizEngine = (function() {
   // ── Phase C : partage + avis par quiz + compteur (ecran de resultat 2 colonnes) ──
   function pcLabels(lang) {
     var M = {
-      fr: { share: 'Partager', close: 'Fermer', rate: 'Votre avis sur ce test en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot (optionnel)', submit: 'Publier mon avis', thanks: 'Votre avis sera visible après validation.', merci: 'Merci infiniment de votre soutien !', insta: 'Suivez-nous sur Instagram ❤️', err: 'Erreur, réessayez.', doneT: 'Ce test a déjà été réalisé {n} fois', doneQ: 'Ce quiz a déjà été joué {n} fois', minAvis: 'Trois étoiles ou moins ? Dites-nous ce qui n\'a pas marché, en 90 caractères au minimum.', minReste: 'Encore {n} caractères.', minPlace: 'Ce qui n\'a pas marché (90 caractères minimum)' },
-      en: { share: 'Share', close: 'Close', rate: 'Rate this test in one click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word (optional)', submit: 'Post my review', thanks: 'Your review will show after moderation.', merci: 'Thank you so much for your support!', insta: 'Follow us on Instagram ❤️', err: 'Error, please retry.', doneT: 'This test has been taken {n} times', doneQ: 'This quiz has been played {n} times', minAvis: 'Three stars or fewer? Tell us what went wrong, in at least 90 characters.', minReste: '{n} characters to go.', minPlace: 'What went wrong (90 characters minimum)' },
-      es: { share: 'Compartir', close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Una palabra (opcional)', submit: 'Publicar mi opinión', thanks: 'Tu opinión se verá tras la validación.', merci: '¡Muchísimas gracias por tu apoyo!', insta: 'Síguenos en Instagram ❤️', err: 'Error, inténtalo de nuevo.', doneT: 'Este test se ha realizado {n} veces', doneQ: 'Este quiz se ha jugado {n} veces', minAvis: '¿Tres estrellas o menos? Cuéntanos qué no ha funcionado, con 90 caracteres como mínimo.', minReste: 'Faltan {n} caracteres.', minPlace: 'Qué no ha funcionado (90 caracteres mínimo)' },
-      de: { share: 'Teilen', close: 'Schließen', rate: 'Bewertung mit 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Deine Bewertung erscheint nach der Prüfung.', merci: 'Vielen, vielen Dank für deine Unterstützung!', insta: 'Folge uns auf Instagram ❤️', err: 'Fehler, bitte erneut.', doneT: 'Dieser Test wurde {n} mal gemacht', doneQ: 'Dieses Quiz wurde {n} mal gespielt', minAvis: 'Drei Sterne oder weniger? Schreib uns, was nicht gepasst hat, mit mindestens 90 Zeichen.', minReste: 'Noch {n} Zeichen.', minPlace: 'Was nicht gepasst hat (mindestens 90 Zeichen)' },
-      it: { share: 'Condividi', close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola (facoltativo)', submit: 'Pubblica', thanks: 'La recensione sarà visibile dopo la moderazione.', merci: 'Grazie infinite per il tuo sostegno!', insta: 'Seguici su Instagram ❤️', err: 'Errore, riprova.', doneT: 'Questo test è stato fatto {n} volte', doneQ: 'Questo quiz è stato giocato {n} volte', minAvis: 'Tre stelle o meno? Dicci cosa non ha funzionato, con almeno 90 caratteri.', minReste: 'Ancora {n} caratteri.', minPlace: 'Cosa non ha funzionato (minimo 90 caratteri)' }
+      fr: { share: 'Partager', close: 'Fermer', rate: 'Votre avis sur ce test en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot (optionnel)', submit: 'Publier mon avis', thanks: 'Votre avis sera visible après validation.', merci: 'Merci infiniment de votre soutien !', insta: 'Suivez-nous sur Instagram ❤️', err: 'Erreur, réessayez.', doneT: 'Ce test a déjà été réalisé {n} fois', doneQ: 'Ce quiz a déjà été joué {n} fois', minAvis: 'Trois étoiles ou moins ? Dites-nous ce qui n\'a pas marché, en 90 caractères au minimum.', minReste: 'Encore {n} caractères.', minPlace: 'Ce qui n\'a pas marché (90 caractères minimum)', nomRegle: 'Votre prénom doit faire de 3 à 60 caractères, espaces compris.' },
+      en: { share: 'Share', close: 'Close', rate: 'Rate this test in one click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word (optional)', submit: 'Post my review', thanks: 'Your review will show after moderation.', merci: 'Thank you so much for your support!', insta: 'Follow us on Instagram ❤️', err: 'Error, please retry.', doneT: 'This test has been taken {n} times', doneQ: 'This quiz has been played {n} times', minAvis: 'Three stars or fewer? Tell us what went wrong, in at least 90 characters.', minReste: '{n} characters to go.', minPlace: 'What went wrong (90 characters minimum)', nomRegle: 'Your first name must be 3 to 60 characters long, spaces included.' },
+      es: { share: 'Compartir', close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Una palabra (opcional)', submit: 'Publicar mi opinión', thanks: 'Tu opinión se verá tras la validación.', merci: '¡Muchísimas gracias por tu apoyo!', insta: 'Síguenos en Instagram ❤️', err: 'Error, inténtalo de nuevo.', doneT: 'Este test se ha realizado {n} veces', doneQ: 'Este quiz se ha jugado {n} veces', minAvis: '¿Tres estrellas o menos? Cuéntanos qué no ha funcionado, con 90 caracteres como mínimo.', minReste: 'Faltan {n} caracteres.', minPlace: 'Qué no ha funcionado (90 caracteres mínimo)', nomRegle: 'Tu nombre debe tener entre 3 y 60 caracteres, espacios incluidos.' },
+      de: { share: 'Teilen', close: 'Schließen', rate: 'Bewertung mit 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Deine Bewertung erscheint nach der Prüfung.', merci: 'Vielen, vielen Dank für deine Unterstützung!', insta: 'Folge uns auf Instagram ❤️', err: 'Fehler, bitte erneut.', doneT: 'Dieser Test wurde {n} mal gemacht', doneQ: 'Dieses Quiz wurde {n} mal gespielt', minAvis: 'Drei Sterne oder weniger? Schreib uns, was nicht gepasst hat, mit mindestens 90 Zeichen.', minReste: 'Noch {n} Zeichen.', minPlace: 'Was nicht gepasst hat (mindestens 90 Zeichen)', nomRegle: 'Dein Vorname muss 3 bis 60 Zeichen lang sein, Leerzeichen eingeschlossen.' },
+      it: { share: 'Condividi', close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola (facoltativo)', submit: 'Pubblica', thanks: 'La recensione sarà visibile dopo la moderazione.', merci: 'Grazie infinite per il tuo sostegno!', insta: 'Seguici su Instagram ❤️', err: 'Errore, riprova.', doneT: 'Questo test è stato fatto {n} volte', doneQ: 'Questo quiz è stato giocato {n} volte', minAvis: 'Tre stelle o meno? Dicci cosa non ha funzionato, con almeno 90 caratteri.', minReste: 'Ancora {n} caratteri.', minPlace: 'Cosa non ha funzionato (minimo 90 caratteri)', nomRegle: 'Il tuo nome deve avere da 3 a 60 caratteri, spazi inclusi.' }
     };
     return M[lang] || M.fr;
   }
@@ -919,6 +919,15 @@ var QuizEngine = (function() {
   // message devient obligatoire, avec quatre-vingt-dix caracteres au minimum.
   var AVIS_MIN_NOTE = 3;
   var AVIS_MIN_SIGNES = 90;
+  // Le prenom : de trois a soixante caracteres, espaces compris (Thomas,
+  // 7 octobre 2026). Jumeau de quiz-extras.js, comme le reste.
+  var AVIS_NOM_MIN = 3;
+  var AVIS_NOM_MAX = 60;
+
+  function nomAvis(champ) {
+    var nom = (champ && champ.value ? champ.value : '').trim();
+    return { nom: nom, ok: nom.length >= AVIS_NOM_MIN && nom.length <= AVIS_NOM_MAX };
+  }
 
   function freinAvis(champ, note) {
     var c = (champ && champ.value ? champ.value.trim() : '');
@@ -975,7 +984,7 @@ var QuizEngine = (function() {
     for (var s = 1; s <= 5; s++) starsHtml += '<button type="button" class="pqx-star-btn" data-star="' + s + '" aria-label="' + s + '"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></button>';
     box.innerHTML = '<p class="qr-review-title">' + esc(L.rate) + '</p><div class="pqx-input-stars">' + starsHtml + '</div>'
       + '<form class="pqx-form"><div class="pqx-more" hidden><p class="pqx-more-msg">' + esc(L.more) + '</p>'
-      + '<input type="text" class="pqx-name input" maxlength="60" placeholder="' + esc(L.name) + '" autocomplete="off">'
+      + '<input type="text" class="pqx-name input" maxlength="' + AVIS_NOM_MAX + '" placeholder="' + esc(L.name) + '" autocomplete="off">'
       + '<textarea class="pqx-comment textarea" rows="2" maxlength="200" placeholder="' + esc(L.comment) + '"></textarea>'
       + '<button type="submit" class="pqx-submit btn btn-cta">' + esc(L.submit) + '</button>'
       + '<p class="pqx-msg" aria-live="polite"></p>'
@@ -1016,8 +1025,15 @@ var QuizEngine = (function() {
     box.querySelector('.pqx-form').addEventListener('submit', function (e) {
       e.preventDefault();
       var msg = box.querySelector('.pqx-msg');
-      var name = nameI ? nameI.value.trim() : '';
-      if (!rating || !name) { if (msg) { msg.textContent = L.err; msg.className = 'pqx-msg err'; } return; }
+      var nom = nomAvis(nameI);
+      var name = nom.nom;
+      if (!rating) { if (msg) { msg.textContent = L.err; msg.className = 'pqx-msg err'; } return; }
+      if (!nom.ok) {
+        if (msg) { msg.textContent = L.nomRegle; msg.className = 'pqx-msg err'; }
+        if (nameI) { nameI.setAttribute('aria-invalid', 'true'); nameI.focus({ preventScroll: true }); }
+        return;
+      }
+      if (nameI) nameI.removeAttribute('aria-invalid');
       var champC = box.querySelector('.pqx-comment');
       var frein = freinAvis(champC, rating);
       if (!frein.ok) {
@@ -1027,7 +1043,7 @@ var QuizEngine = (function() {
         return;
       }
       var sub = box.querySelector('.pqx-submit'); if (sub) sub.disabled = true;
-      var body = { author_name: name.substring(0, 60), rating: rating, quiz_slug: cfg.slug, is_approved: false };
+      var body = { author_name: name.substring(0, AVIS_NOM_MAX), rating: rating, quiz_slug: cfg.slug, is_approved: false };
       var cm = box.querySelector('.pqx-comment').value.trim(); if (cm) body.comment = cm.substring(0, 200);
       fetch(cfg.url + '/rest/v1/reviews', { method: 'POST', headers: { 'Content-Type': 'application/json', 'apikey': cfg.key, 'Authorization': 'Bearer ' + cfg.key, 'Prefer': 'return=minimal' }, body: JSON.stringify(body) })
         .then(function (r) { if (r.ok || r.status === 201) { box.querySelector('.pqx-form').innerHTML = merciAvis(L); } else throw new Error('x'); })
@@ -2332,21 +2348,10 @@ var QuizEngine = (function() {
       var produits = encartProduits(quizEl ? quizEl.dataset.quiz : '', quizEl ? (quizEl.dataset.lang || 'fr') : 'fr');
       if (produits) zones.produits = produits;
     }
-    // L'encart publicitaire du texte (le pave, format 2) remonte dans le
-    // resultat, juste sous la carte du verdict. Il etait pose apres la
-    // premiere section du texte, que presque personne n'atteint, alors que
-    // l'ecran de resultat est lu longuement par la moitie des gens qui
-    // lancent un test. Il est deplace, pas copie : la regie ne sert jamais
-    // deux fois le meme format sur une page. Et seulement s'il n'a pas encore
-    // ete demande (quelqu'un a pu descendre jusqu'au texte avant de finir) :
-    // une annonce deja servie ne survit pas a un deplacement dans le DOM.
-    // Sans resultat, il reste a sa place dans le texte ; pub.js, qui
-    // l'observe depuis le chargement, le demandera a son approche ou il soit.
-    if (!zones.pub) {
-      var encart = document.querySelector('.pub[data-pub-differee="2"]:not([data-pub-posee])');
-      if (encart) zones.pub = encart;
-    }
-    ['avis', 'resultat', 'pub', 'produits', 'actions'].forEach(function(nom) {
+    // Le pave de la regie (format 2) reste dans le texte, apres la premiere
+    // section : du 1er au 7 octobre 2026 il etait remonte ici, sous le
+    // verdict, et le CPM du domaine a chute (voir CLAUDE.md, publicite).
+    ['avis', 'resultat', 'produits', 'actions'].forEach(function(nom) {
       var z = zones[nom];
       if (!z) return;
       z.classList.add('qr-zone', 'qr-zone--' + nom);

@@ -3,7 +3,7 @@
 // React : le studio les appelle à chaque image, le contrôle les rejoue.
 import type { OptionsMascotte } from '../../../charte/mascottes.js';
 import vocabulaire from './vocabulaire.json';
-import type { ClePov, Geste, NomEffet, NomObjet, PersoPov, PlanPov, Qui, SecoussePov } from './scenario';
+import type { ClePov, Geste, Moment, NomEffet, NomObjet, PersoPov, PlanPov, Qui, SecoussePov } from './scenario';
 
 export const TAILLE = 1.6;
 const PI2 = Math.PI * 2;
@@ -31,8 +31,17 @@ const ressort = (p: number) => {
 
 export type Mode = 'debout' | 'couche' | 'taille' | 'assis' | 'assis-jambes';
 type Spot = { x: number; sol?: number; mode?: Mode; ligne?: number };
-type Decor = { taille: number; spots: Record<string, Spot> };
-const DECORS = vocabulaire.decors as unknown as Record<string, Decor>;
+type Decor = { taille: number; spots: Record<string, Spot>; ambiance?: string | { jour: string; nuit: string } };
+export const DECORS = vocabulaire.decors as unknown as Record<string, Decor>;
+
+// Le lit sonore d'un décor à un moment : les oiseaux le jour, les grillons
+// la nuit (le soir compte comme le jour), rien dans une pièce fermée.
+export const ambianceDecor = (decor: string, moment: Moment | undefined): string | undefined => {
+  const a = DECORS[decor]?.ambiance;
+  if (!a) return undefined;
+  if (typeof a === 'string') return a;
+  return moment === 'nuit' ? a.nuit : a.jour;
+};
 
 // Un personnage placé : son spot résolu, sa taille, sa couche.
 export type Place = { qui: Qui; x: number; sol: number; taille: number; couche: 'derriere' | 'devant'; mode: Mode; ligne: number; sens: 1 | -1; perso: PersoPov };
@@ -581,6 +590,17 @@ export const etatPerso = (plan: PlanPov, place: Place, t: number, places: Place[
   if (e.options.coeurs) {
     e.options.coeurs = false;
     e.effets.push({ effet: 'coeurs', depuis: 0 });
+  }
+  // Au lit, le corps est enfoncé jusqu'à la bouche mais les épaules restent
+  // au-dessus du bord de la couette : les bras de base y dépassaient, à
+  // côté des deux petites mains posées sur la couette, quatre bras en tout
+  // (Thomas, 7 octobre 2026). On ne garde que les bras qui sortent vraiment
+  // de la couette, levés (60° et plus) ou occupés (devant) ; la petite main
+  // du même côté s'efface (MainsSurLaCouette).
+  if (e.mode === 'couche') {
+    const b = e.options.bras ?? [10, 10];
+    const dv = e.options.devant ?? [false, false];
+    e.options.brasVisibles = [dv[0] || b[0] >= 60, dv[1] || b[1] >= 60];
   }
   return e;
 };

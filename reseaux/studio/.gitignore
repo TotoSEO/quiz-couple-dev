@@ -3,3 +3,5 @@ sorties/
 .verif.png
 # morceaux Mixkit, préparés par scripts/musiques.mjs (jamais redistribués seuls)
 public/musique/mx-*.mp3
+# bruitages Mixkit, préparés par scripts/sons.mjs (jamais redistribués seuls)
+public/sons/mx-*.mp3

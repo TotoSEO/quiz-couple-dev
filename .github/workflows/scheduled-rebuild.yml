@@ -1,6 +1,13 @@
 name: Scheduled site rebuild
 
 on:
+  # Le « schedule » de GitHub saute la plupart des départs sur ce dépôt
+  # (relevé du 1er au 7 octobre 2026 : trois départs par jour sur sept, jusqu'à
+  # quatre heures de retard). L'horloge réelle est pg_cron, dans Supabase, qui
+  # lance ce workflow par workflow_dispatch aux mêmes sept heures (migration
+  # 20261008180000_horloge_site_et_controle.sql, tâche site-reconstruction).
+  # Le « schedule » reste en secours ; un double départ ne fait qu'un second
+  # build identique.
   schedule:
     # Every 2 hours from 7h to 19h (UTC: 5h-17h for CET, 6h-18h for CEST)
     # Using CET (winter) times, adjust if needed for summer

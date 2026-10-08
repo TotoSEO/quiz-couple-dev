@@ -48,6 +48,9 @@ test('un gros fichier passe par le protocole de reprise : création puis morceau
     assert.equal(morceaux.length, 3);
     assert.deepEqual(morceaux.map((m) => [m.methode, m.headers['Upload-Offset'], m.taille]), [['PATCH', '0', 6 * MO], ['PATCH', String(6 * MO), 6 * MO], ['PATCH', String(12 * MO), 3 * MO + 7]]);
     assert.ok(morceaux.every((m) => m.url === 'https://p.supabase.co/storage/v1/upload/resumable/abc' && m.headers['Content-Type'] === 'application/offset+octet-stream'));
+    // l'écrasement se décide sur le dernier morceau : l'en-tête doit être partout
+    assert.equal(creation.headers['x-upsert'], 'true');
+    assert.ok(morceaux.every((m) => m.headers['x-upsert'] === 'true'), 'x-upsert sur chaque morceau');
   } finally { f.retablir(); }
 });
 

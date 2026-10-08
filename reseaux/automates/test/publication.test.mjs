@@ -188,7 +188,7 @@ test('sons indisponibles : le reel part avec ses seuls bruitages, sans échec', 
   assert.equal(r.conteneurs, 1);
   assert.equal(ig.appels[0][1].son, null);
   assert.equal(ig.appels[0][1].nomDuSon, 'Quiz Couple');
-  assert.ok(b.tables.social_journal.some((j) => j.niveau === 'alerte' && /sons tendance indisponibles/.test(j.message)));
+  assert.ok(b.tables.social_journal.some((j) => j.niveau === 'alerte' && /sons indisponibles/.test(j.message)));
 });
 
 test('son refusé par Instagram : second essai sans son, dans le même passage', async () => {
@@ -243,4 +243,48 @@ test("pas de story pour un reel de midi, ni pour un reel de plus de 60 s", async
   assert.equal(b2.tables.social_variantes[0].story_statut, 'echec');
   assert.ok(b2.tables.social_journal.some((j) => /60 s au plus/.test(j.message)));
   assert.ok(!ig2.appels.some((a) => a[0] === 'story'));
+});
+
+test("reel : sans ambiance dans la recette, la catégorie du post choisit les mots de la recherche", async () => {
+  const b = base({ recette: { gabarit: 'pov' } });
+  b.tables.social_posts[0].categorie = 'pov';
+  const demandes = [];
+  const ig = faux(['FINISHED'], { sons: async (o) => { demandes.push(o.recherche || ''); return TENDANCES; } });
+  await publier(b, { maintenant: T0, instagramPour: () => ig });
+  assert.deepEqual(demandes.length, 1);
+  assert.ok(['funny upbeat', 'happy whistle', 'cute ukulele'].includes(demandes[0]), demandes[0]);
+  const son = b.tables.social_variantes[0].recette.son;
+  assert.equal(son.ambiance, 'drole');
+  assert.equal(son.recherche, demandes[0]);
+  assert.ok(['S1', 'S2'].includes(son.id));
+});
+
+test("reel : l'ambiance écrite dans la recette l'emporte sur la catégorie", async () => {
+  const b = base({ recette: { gabarit: 'pov', son: { ambiance: 'triste' } } });
+  b.tables.social_posts[0].categorie = 'pov';
+  const demandes = [];
+  const ig = faux(['FINISHED'], { sons: async (o) => { demandes.push(o.recherche || ''); return TENDANCES; } });
+  await publier(b, { maintenant: T0, instagramPour: () => ig });
+  assert.ok(['sad piano', 'emotional piano'].includes(demandes[0]), demandes[0]);
+  assert.equal(b.tables.social_variantes[0].recette.son.ambiance, 'triste');
+});
+
+test("reel : l'ambiance « tendance » lit les tendances, sans recherche", async () => {
+  const b = base({ recette: { gabarit: 'pov', son: { ambiance: 'tendance' } } });
+  const demandes = [];
+  const ig = faux(['FINISHED'], { sons: async (o) => { demandes.push(o.recherche || ''); return TENDANCES; } });
+  await publier(b, { maintenant: T0, instagramPour: () => ig });
+  assert.deepEqual(demandes, ['']);
+  assert.equal(b.tables.social_variantes[0].recette.son.recherche, undefined);
+});
+
+test('reel : une recherche qui ne rend rien retombe sur les tendances, avec une alerte', async () => {
+  const b = base({ recette: { gabarit: 'pov', son: { ambiance: 'coquin' } } });
+  const demandes = [];
+  const ig = faux(['FINISHED'], { sons: async (o) => { demandes.push(o.recherche || ''); return o.recherche ? [] : TENDANCES; } });
+  await publier(b, { maintenant: T0, instagramPour: () => ig });
+  assert.equal(demandes.length, 2);
+  assert.equal(demandes[1], '');
+  assert.ok(['S1', 'S2'].includes(ig.appels[0][1].son.id));
+  assert.ok(b.tables.social_journal.some((j) => j.niveau === 'alerte' && /tendances à la place/.test(j.message)));
 });

@@ -134,7 +134,13 @@
   };
 
   // ── Ce qu'on ne compte pas ──────────────────────────────────────────────
-  var ROBOTS = /bot|crawl|spider|slurp|headless|phantom|puppeteer|playwright|lighthouse|pagespeed|gtmetrix|pingdom|uptime|monitor|preview|scrape|curl|wget|python-requests|axios|node-fetch|facebookexternalhit|embedly|quora link preview|whatsapp|telegram|discord|slackbot/i;
+  // « bot », « crawl » et « spider » attrapent presque tout (Googlebot,
+  // Bingbot, GPTBot, ClaudeBot, Bytespider...). Les robots de Google qui ne
+  // portent pas « bot » dans leur nom et qui exécutent le JavaScript sont
+  // nommés à part : l'outil d'inspection de la Search Console, GoogleOther,
+  // le robot publicitaire Mediapartners ; même chose pour celui de Meta et
+  // les aperçus de liens (Iframely, Skype).
+  var ROBOTS = /bot|crawl|spider|slurp|headless|phantom|puppeteer|playwright|lighthouse|pagespeed|gtmetrix|pingdom|uptime|monitor|preview|scrape|curl|wget|python-requests|axios|node-fetch|facebookexternalhit|embedly|quora link preview|whatsapp|telegram|discord|slackbot|google-inspectiontool|googleother|mediapartners|meta-externalagent|iframely|skypeuripreview/i;
 
   function ignorer() {
     if (exclu()) return true;
@@ -309,16 +315,35 @@
   // Chrome précharge les liens qu'il juge probables. Compter un préchargement
   // inventerait des visites qui n'ont jamais eu lieu : on attend que la page
   // soit réellement affichée.
+  //
+  // Même règle pour une page chargée sans être visible (7 octobre 2026) :
+  // Safari précharge le premier résultat pendant qu'on tape une adresse, un
+  // lien ouvert dans un onglet d'arrière-plan se charge avant d'être lu.
+  // Tant que l'onglet est caché, personne n'a vu la page : la page vue part
+  // au premier passage au premier plan, et jamais si l'onglet est fermé
+  // avant. Le numéro de visite est tiré à ce moment-là, pas au chargement,
+  // pour qu'un onglet rouvert une heure plus tard compte comme une nouvelle
+  // visite et pas comme la suite de l'ancienne.
+  function quandVisible(fn) {
+    if (document.visibilityState !== 'hidden') { fn(); return; }
+    document.addEventListener('visibilitychange', function once() {
+      if (document.visibilityState === 'hidden') return;
+      document.removeEventListener('visibilitychange', once);
+      fn();
+    });
+  }
+  function premierePageVue() { envoie(); }
+
   if (document.prerendering) {
-    document.addEventListener('prerenderingchange', envoie, { once: true });
+    document.addEventListener('prerenderingchange', function () { quandVisible(premierePageVue); }, { once: true });
   } else if (document.visibilityState === 'prerender') {
     document.addEventListener('visibilitychange', function once() {
       if (document.visibilityState !== 'prerender') {
         document.removeEventListener('visibilitychange', once);
-        envoie();
+        quandVisible(premierePageVue);
       }
     });
   } else {
-    envoie();
+    quandVisible(premierePageVue);
   }
 })();

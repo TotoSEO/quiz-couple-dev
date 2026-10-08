@@ -141,9 +141,6 @@
   </div>
 </section>
 
-<%# Sous le plateau des jeux, jamais au-dessus : la page est d'abord un choix de jeu. %>
-<div class="container mx-auto px-4"><% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 31 }) %><% } %></div>
-
 <%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
 
 <!-- Contenu -->
@@ -160,7 +157,6 @@
       </div>
     </section>
 
-    <% if (typeof pagePublicitaire !== 'undefined' && pagePublicitaire) { %><%- include('../partials/pub', { format: 2 }) %><% } %>
     <section class="mb-16">
       <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title', '') %></h2>
       <p class="text-muted-foreground leading-relaxed mb-8"><%- t(ns + ':section2.intro', '') %></p>
