@@ -243,6 +243,12 @@ const BRAS = {
   oreilles_bouchees: () => [bras(G, -60, EY - 6, 50, 0.9), bras(D, 60, EY - 6, 50, 0.9)],
   applaudit: () => [bras(G, -14, CY + 10, 78, 0.6), bras(D, 14, CY + 10, 78, 0.6)],
   tend_haut_d: () => [nub(-RX * 0.98, BY, -25), bras(D, 112, CY - 40, 0, 0.1)],
+  // la course : un bras en arrière, un bras en avant, dans la profondeur ;
+  // de profil on voit celui qui est devant le corps balancer, de face les
+  // deux. Le cycle de marche les échange (cycleBras). Posé par les poses
+  // qui courent : des bras levés sur un personnage de profil se projetaient
+  // en un tube vertical au-dessus de la tête (Thomas, 8 octobre 2026).
+  course: () => [bras(G, -44, CY + 30, -58, 0.25), bras(D, 50, CY + 22, 66, 0.25)],
   aucun: () => [],
 };
 
@@ -289,9 +295,9 @@ const PANCARTE = () => plein(`M${f(CX + 118)},${f(CY - 60)} V${f(BAS - 2)}`, 'no
 // echelle : [x, y] autour du bas du personnage.
 const POSES = {
   debout: { pattes: 'debout' },
-  marche: { pattes: 'marche', rot: 6, lignes: ['poussiere_petite'] },
-  court: { pattes: 'court', rot: 16, lignes: ['vitesse', 'poussiere'] },
-  sprint: { pattes: 'sprint', rot: 26, dy: -12, lignes: ['vitesse_forte', 'poussiere'], signes: ['sueur'] },
+  marche: { pattes: 'marche', rot: 6, bras: 'course', lignes: ['poussiere_petite'] },
+  court: { pattes: 'court', rot: 16, bras: 'course', lignes: ['vitesse', 'poussiere'] },
+  sprint: { pattes: 'sprint', rot: 26, dy: -12, bras: 'course', lignes: ['vitesse_forte', 'poussiere'], signes: ['sueur'] },
   saut: { pattes: 'repli', dy: -40, lignes: ['saut'] },
   assis: { pattes: 'assis', echelle: [1.06, 0.92], lignes: ['sol'] },
   allonge: { pattes: 'allonge', echelle: [1.16, 0.76], lignes: ['sol'] },
@@ -312,7 +318,7 @@ const POSES = {
   visiere: { pattes: 'debout', bras: 'visiere' },
   plante: { pattes: 'marche', rot: 4, bras: 'pancarte', lignes: ['impact_pancarte'], pancarte: true },
   porte_haut: { pattes: 'debout', bras: 'porte_haut', echelle: [0.96, 1.06] },
-  arrive: { pattes: 'court', rot: 12, lignes: ['poussiere_petite'] },
+  arrive: { pattes: 'court', rot: 12, bras: 'course', lignes: ['poussiere_petite'] },
 };
 
 // ── le catalogue des expressions ────────────────────────────────────────
@@ -443,6 +449,14 @@ function cycle(pattes, foulee) {
   return [vers(pattes[0], pattes[1]), vers(pattes[1], pattes[0])];
 }
 
+// Les deux bras d'une course échangent leur avance comme les pattes.
+function cycleBras(liste, foulee) {
+  if (foulee === undefined || liste.length !== 2 || liste.some((b) => b.nub)) return liste;
+  const t = (1 - Math.cos(foulee * Math.PI * 2)) / 2;
+  const vers = (p, q) => ({ ...p, dy: p.dy + (q.dy - p.dy) * t, dz: p.dz + (q.dz - p.dz) * t });
+  return [vers(liste[0], liste[1]), vers(liste[1], liste[0])];
+}
+
 // ── le personnage ───────────────────────────────────────────────────────
 // perso : 'lui' (le Gribouillou, bleu) ou 'elle' (la Gribouillette, rose).
 // marqueur (elle) : 'fleur' (par défaut), 'noeud', 'meche'.
@@ -472,6 +486,18 @@ export function mipap(o = {}) {
   const d = patate(CX, CY, RX, RY, seed);
   const F = (k) => `url(#${k}${id})`;
   const P = (dx, dy, dz) => projette(dx, dy, dz, angle);
+  // La triche du dessin animé : le visage ne tourne jamais au-delà de 62°,
+  // il glisse jusqu'au bord avant du corps et reste lisible quand le corps
+  // est de profil (de face à 90°, les yeux et la bouche disparaissaient sur
+  // la tranche : un personnage qui court n'avait plus de visage). Entre 100°
+  // et 150°, le visage file vers l'arrière et s'efface : le tour reste doux.
+  const angleVisage = (() => {
+    const a = Math.abs(angle);
+    if (a <= 62) return angle;
+    const u = Math.min(1, Math.max(0, (a - 100) / 50));
+    return Math.sign(angle) * (62 + 88 * u * u * (3 - 2 * u));
+  })();
+  const PV = (dx, dy, dz) => projette(dx, dy, dz, angleVisage);
   const avecTrait = (el) => el.replace(/\/>$/, ` fill="${corpsCouleur}" stroke="${E}" stroke-width="6" stroke-linejoin="round"/>`);
   const secondPasse = (el) => el.replace(/\/>$/, ` fill="none" stroke="${E}" stroke-width="3.6" stroke-linejoin="round" opacity="0.85"/>`);
   const taille = (z) => 1 + z / 420; // ce qui est proche est un peu plus grand
@@ -485,7 +511,7 @@ export function mipap(o = {}) {
 
   // ─ les bras : derrière ou devant selon leur profondeur ─
   const brasDessines = [];
-  for (const b of (o.dos ? [] : BRAS[brasNom]())) {
+  for (const b of (o.dos ? [] : cycleBras(BRAS[brasNom](), brasNom === 'course' ? o.foulee : undefined))) {
     if (b.nub) {
       const q = P(b.dx, b.dy, b.dz);
       if (q.vis < -0.6) continue; // un bout caché derrière le corps
@@ -513,9 +539,9 @@ export function mipap(o = {}) {
 
   // ─ le visage : chaque trait projeté sur la surface avant, écrasé en largeur quand il tourne ─
   const face = [];
-  const visage = P(...surface(0, MY));
+  const visage = PV(...surface(0, MY));
   const posee = (dx, dy, dessin, x0, y0, mini = 0.5) => {
-    const q = P(...surface(dx, dy));
+    const q = PV(...surface(dx, dy));
     if (q.vis <= 0.04) return '';
     // de profil, le trait se tasse en largeur mais reste lisible (mini)
     return `<g transform="translate(${f(q.x)} ${f(q.y)}) scale(${f(Math.max(mini, q.vis))} 1) translate(${f(-x0)} ${f(-y0)})">${dessin}</g>`;
@@ -532,7 +558,7 @@ export function mipap(o = {}) {
     }
   }
   // les joues, estompées
-  const joues = [-46, 46].map((dx) => { const q = P(...surface(dx, MY - 4)); return q.vis > 0.04 ? `<ellipse cx="${f(q.x)}" cy="${f(q.y)}" rx="${f(13 * Math.max(0.3, q.vis))}" ry="13" fill="${COULEURS.joue}" opacity="${ex.joues === 1 ? 0.95 : 0.8}"/>` : ''; }).join('');
+  const joues = [-46, 46].map((dx) => { const q = PV(...surface(dx, MY - 4)); return q.vis > 0.04 ? `<ellipse cx="${f(q.x)}" cy="${f(q.y)}" rx="${f(13 * Math.max(0.3, q.vis))}" ry="13" fill="${COULEURS.joue}" opacity="${ex.joues === 1 ? 0.95 : 0.8}"/>` : ''; }).join('');
   const jo = ex.joues === 0 || !joues ? '' : `<g filter="${F('fl')}">${joues}</g>`;
 
   // ─ le marqueur d'elle, sur l'oreille droite ─

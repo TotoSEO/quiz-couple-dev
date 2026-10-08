@@ -10,8 +10,12 @@ import { DUOS, MEUBLES } from '../../mipaps/charte/scenes.mjs';
 // des mipaps (reseaux/mipaps/atelier/LIGNE-EDITORIALE.md) qui le fabrique.
 export const GABARITS_MIPAPS = { 'mipaps-reel': 'reel', 'mipaps-statique': 'reel', 'mipaps-carrousel': 'carrousel', 'mipaps-post': 'image' };
 export const CATEGORIES_MIPAPS = { 'mipaps-anime': 'mipaps-reel', 'mipaps-statique': 'mipaps-statique', 'mipaps-histoire': 'mipaps-carrousel', 'mipaps-post': 'mipaps-post' };
-// Les bruitages qu'un plan peut demander (studio/src/charte/Son.tsx).
-export const SONS_MIPAPS = ['pop', 'saut', 'pas', 'glisse', 'coeur', 'bisou', 'smack', 'rire', 'pleure', 'cri', 'sursaut', 'ronfle', 'baille', 'soupir', 'grogne', 'croque', 'aspire', 'miam', 'eternue', 'aie', 'applaudit', 'boing', 'splat', 'trombone', 'tambour', 'notification', 'sonne', 'reveil', 'pose', 'tinte', 'portiere', 'clochette', 'sonnette', 'klaxon', 'demarre', 'tonnerre', 'battement', 'coussin', 'tape', 'joie', 'froissement', 'porte', 'tictac'];
+// Les bruitages qu'un plan peut demander (studio/src/charte/Son.tsx) : des
+// sons d'ambiance et d'objets seulement, jamais de voix (rires, pleurs,
+// cris : « ils font limite peur », Thomas, 8 octobre 2026).
+export const SONS_MIPAPS = ['pop', 'saut', 'pas', 'glisse', 'coeur', 'boing', 'splat', 'tape', 'tinte', 'pose', 'notification', 'sonne', 'reveil', 'portiere', 'clochette', 'sonnette', 'klaxon', 'demarre', 'tonnerre', 'coussin', 'froissement', 'porte', 'tictac', 'battement', 'pas-herbe', 'oiseau', 'grillon', 'hibou'];
+// Les lits sonores d'un plan.
+export const AMBIANCES_MIPAPS = ['oiseaux', 'foret', 'grillons', 'circulation', 'rue-nuit', 'vagues', 'brouhaha', 'pluie', 'vent', 'moteur', 'cinema', 'feu', 'horloge'];
 const PERSOS = ['lui', 'elle'];
 const MARQUEURS = ['fleur', 'noeud', 'meche'];
 const STYLES_POST = ['mini', 'declaration', 'schema'];
@@ -189,6 +193,7 @@ const controlerPlan = (p, n, f) => {
     if (!SONS_MIPAPS.includes(sn?.nom)) f.push(`${ou}, son ${i + 1} : bruitage inconnu « ${sn?.nom} »`);
     if (!nombre(sn?.a, 0, p.duree ?? 0)) f.push(`${ou}, son ${i + 1} : instant a dans le plan`);
   }
+  if (p.ambiance !== undefined && !AMBIANCES_MIPAPS.includes(p.ambiance)) f.push(`${ou} : ambiance inconnue « ${p.ambiance} » (${AMBIANCES_MIPAPS.join(', ')})`);
   if (p.zoom !== undefined && !(Array.isArray(p.zoom) && p.zoom.length === 2 && p.zoom.every((z) => nombre(z, 0.7, 1.6)))) f.push(`${ou} : zoom = [début, fin] entre 0,7 et 1,6`);
   if (p.transition !== undefined && !TRANSITIONS.includes(p.transition)) f.push(`${ou} : transition coupe ou fondu`);
 };

@@ -117,6 +117,8 @@ export type PlanMipaps = {
   objets?: ObjetAnime[];
   textes?: TexteAnime[];
   sons?: { nom: string; a: number }[];
+  // un lit sonore sous tout le plan (oiseaux, pluie, vagues...), jamais de voix
+  ambiance?: string;
   zoom?: [number, number];
   transition?: 'coupe' | 'fondu';
 };

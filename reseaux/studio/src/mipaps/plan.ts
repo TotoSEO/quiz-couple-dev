@@ -3,7 +3,7 @@
 // expressions et des poses au moment où elles changent, et des pas quand un
 // personnage marche ; la recette peut en ajouter (sons du plan).
 import { FPS } from '../charte/charte';
-import type { EvenementSonore, NomSon } from '../charte/Son';
+import type { EvenementAmbiance, EvenementSonore, NomSon } from '../charte/Son';
 import type { Plan, Scene } from '../plan';
 import { etatPerso } from './mouvement';
 import type { PlanMipaps, RecetteMipapsReel, RecetteMipapsStatique } from './recette';
@@ -13,39 +13,13 @@ const s = (secondes: number) => Math.round(secondes * FPS);
 export const PAS_MOT = 0.26;
 const nbMots = (t: string) => t.trim().split(/\s+/).filter(Boolean).length;
 
+// Jamais de voix (rires, pleurs, cris : « ils font limite peur », Thomas,
+// 8 octobre 2026) : seulement des bruitages d'ambiance, des pas, des cœurs,
+// un objet qui tombe. Les expressions ne déclenchent qu'un cœur ou un tintement.
 const SON_EXPRESSION: Record<string, NomSon> = {
-  rire: 'rire',
-  mort_de_rire: 'rire',
-  ricane: 'rire',
-  pleure: 'pleure',
-  sanglote: 'pleure',
-  triste: 'pleure',
-  coeur_brise: 'pleure',
-  pleure_de_joie: 'pleure',
-  bisou: 'smack',
-  surpris: 'sursaut',
-  choque: 'sursaut',
-  panique: 'cri',
-  peur: 'cri',
-  furieux: 'grogne',
-  colere: 'grogne',
-  agace: 'grogne',
-  dodo: 'ronfle',
-  baille: 'baille',
-  blase: 'soupir',
-  fatigue: 'soupir',
-  essouffle: 'soupir',
-  deprime: 'soupir',
-  miam: 'miam',
-  gourmand: 'miam',
-  joie: 'joie',
-  triomphe: 'joie',
   amour: 'coeur',
   transi: 'coeur',
   calin: 'coeur',
-  ko: 'aie',
-  etourdi: 'aie',
-  bravo: 'applaudit',
   idee: 'tinte',
 };
 const SON_POSE: Record<string, NomSon> = { saut: 'saut', tombe: 'splat', plante: 'tape', roule: 'boing', vole: 'glisse' };
@@ -103,12 +77,15 @@ const epurer = (sons: EvenementSonore[]) => {
 export const planMipapsReel = (r: RecetteMipapsReel): Plan => {
   const scenes: Scene[] = [];
   const sons: EvenementSonore[] = [];
+  const ambiances: EvenementAmbiance[] = [];
   const verifs: number[] = [];
   let t = 0;
   let couverture = -1;
   for (const p of r.plans) {
     const d = s(p.duree);
     scenes.push({ type: 'plan', debut: t, duree: d });
+    // le lit sonore du plan (oiseaux, pluie, rue...), s'il en demande un
+    if (p.ambiance) ambiances.push({ nom: p.ambiance as NomSon, a: t, duree: d });
     for (const x of p.textes ?? []) {
       const de = t + s(x.de);
       const fin = t + s(x.a ?? p.duree);
@@ -127,6 +104,7 @@ export const planMipapsReel = (r: RecetteMipapsReel): Plan => {
     verifs: [...new Set(verifs)].sort((a, b) => a - b),
     scenes,
     sons: epurer(sons),
+    ambiances,
     detail: {},
   };
 };
