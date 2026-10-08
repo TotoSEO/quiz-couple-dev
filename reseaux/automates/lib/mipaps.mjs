@@ -25,7 +25,7 @@ const STYLES_TEXTE = ['message', 'titre'];
 const TRANSITIONS = ['coupe', 'fondu'];
 // Les longueurs : un texte de post ou de page tient en cinq lignes de
 // Shantell Sans sur 868 px, un message de reel en quatre lignes sur 840.
-export const LONGUEURS = { post: 110, declaration: 170, schema: 70, page: 110, appel: 50, reel: 100, titre: 60, etiquette: 26, ligne: 40 };
+export const LONGUEURS = { post: 110, declaration: 170, schema: 70, page: 110, appel: 50, reel: 100, titre: 60, bas: 40, etiquette: 26, ligne: 40 };
 // Un reel des mipaps dure de 10 à 40 secondes (Instagram privilégie les
 // reels courts regardés en entier ; sous 10 s, règle de Thomas, jamais).
 export const DUREE_REEL = { min: 10, max: 40 };
@@ -172,7 +172,8 @@ const controlerPlan = (p, n, f) => {
   if (textes.length > 3) f.push(`${ou} : trois textes au plus`);
   textes.forEach((x, i) => {
     const ouT = `${ou}, texte ${i + 1}`;
-    controlerTexte(x?.texte, x?.style === 'titre' ? LONGUEURS.titre : LONGUEURS.reel, ouT, f);
+    // en bas, une seule ligne tient entre le sol de la scène et la bande d'Instagram
+    controlerTexte(x?.texte, x?.place === 'bas' ? LONGUEURS.bas : x?.style === 'titre' ? LONGUEURS.titre : LONGUEURS.reel, ouT, f);
     if (!nombre(x?.de, 0, p.duree ?? 0)) f.push(`${ouT} : de dans le plan`);
     if (x?.a !== undefined && !(nombre(x.a, 0, p.duree ?? 0) && x.a > x.de)) f.push(`${ouT} : a après de, dans le plan`);
     if (x?.place !== undefined && !PLACES.includes(x.place)) f.push(`${ouT} : place haut ou bas`);

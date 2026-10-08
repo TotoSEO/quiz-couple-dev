@@ -1,7 +1,7 @@
 # Les mipaps : la charte du Gribouillou et de la Gribouillette
 
-Le compte Instagram « Les mipaps » (français, posts en BD et carrousels à
-faire défiler, quelques minis et reels) est dessiné avec deux personnages :
+Le compte Instagram « Les mipaps » (français : reels animés, reels statiques,
+carrousels-histoires et posts) est dessiné avec deux personnages :
 le Gribouillou (bleu pâle) et la Gribouillette (rose pâle, deux cils et une
 fleur sur l'oreille). Ce sont les noms de travail du code (`perso: 'lui'` et
 `perso: 'elle'`). Dans le lore du compte (la bio Instagram, les légendes qui
@@ -21,8 +21,8 @@ https://claude.ai/artifact/DYX3xFtQBrV4jDUerw8LDH (privé, Thomas).
   d'elle `#ffd9e6`, le rose des joues `#ffa6c1`, le rose des cœurs et de la
   fleur `#ff7fa7`, et le blanc. Rien d'autre, jamais de dégradé.
 - Une émotion par image. Texte court, en minuscules, comme un message
-  envoyé à l'autre, en Shantell Sans (Google Fonts), 700 pour les posts,
-  500 pour les cases de BD.
+  envoyé à l'autre, en Shantell Sans (Google Fonts), 700 pour les textes,
+  500 pour la signature et les mentions.
 - Les textes ne se chevauchent jamais : une page ou une case est une
   colonne, le texte en haut en flux, le dessin en dessous qui prend la place
   qui reste. Aucun texte posé en absolu (une phrase sur deux lignes recule
@@ -64,11 +64,23 @@ https://claude.ai/artifact/DYX3xFtQBrV4jDUerw8LDH (privé, Thomas).
 - `planches.mjs` : fabrique les douze planches du canevas (`canevas/`,
   ignoré par git) et un aperçu local `canevas/apercu.html`.
 
-## Ce qui reste à faire pour le compte
+## Le compte, branché (8 octobre 2026)
 
-Le studio Remotion (`reseaux/studio/`) ne connaît pas encore ces
-personnages : il faudra un gabarit `mipaps-bd` (quatre cases, ou une case
-par page pour le carrousel) et un gabarit `mipaps-mini` qui appellent
-`gribouillou.mjs`, une banque de sujets en français (`../atelier/`), et la
-duplication de la chaîne de publication (second compte dans `social_*`). Les
-références et la banque d'idées sont dans `../REFERENCES.md`.
+Le studio Remotion (`reseaux/studio/src/mipaps/`) rend quatre gabarits avec
+ces personnages, importés tels quels depuis `gribouillou.mjs` et
+`scenes.mjs` : `mipaps-post` (mini, déclaration, schéma de bureau),
+`mipaps-carrousel` (l'histoire page par page), `mipaps-statique` (le dessin
+qui respire) et `mipaps-reel` (l'animation : étapes interpolées, cycle de
+marche, rotation continue). Pas de BD : Thomas n'en veut pas. Le compte est
+la langue `fr` des tables `social_*` (migration `20261009110000`), avec sa
+semaine type ; l'atelier (`../atelier/`) porte la ligne éditoriale, les
+consignes de la routine, la banque de sujets et les posts, sur la branche
+`mipaps-atelier`. Le contrôle des recettes (`reseaux/automates/lib/mipaps.mjs`)
+lit les listes de ce rig : `LISTE_POSES`, `LISTE_BRAS`, `LISTE_PATTES`,
+`LISTE_SIGNES`, `LISTE_PROPS`, `EXPRESSIONS`, `DUOS`, `MEUBLES`.
+
+Pour l'animation, `mipap()` prend `foulee` (0 à 1) : le cycle des pattes et
+le balancement des bras de course suivent la distance parcourue ; les poses
+qui courent posent des bras de course d'elles-mêmes. Le visage ne tourne
+jamais au-delà de 62° (il glisse au bord avant du corps et reste lisible de
+profil), puis s'efface entre 100° et 150°.

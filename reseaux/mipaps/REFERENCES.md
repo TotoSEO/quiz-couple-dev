@@ -1,7 +1,6 @@
 # Les mipaps : les trois comptes de référence, et ce qu'on en reprend
 
-Relevé du 8 octobre 2026, pour le compte « Les mipaps » (français, BD et
-carrousels dessinés avec le Gribouillou et la Gribouillette, fond blanc).
+Relevé du 8 octobre 2026, pour le compte « Les mipaps » (français : reels animés, reels statiques, carrousels-histoires et posts, trois par jour).
 Le compte est en français : les mécaniques et les situations des comptes
 anglophones se reprennent telles quelles, avec notre DA et nos mots. On ne
 recopie jamais un dessin ni un texte, on reprend l'idée.
@@ -169,18 +168,20 @@ les deux sous la couette, elle timide qui rougit, les deux côte à côte.
    et Toh vivent dans la bio et le lore du compte). Textes courts, en
    minuscules, comme un message. Pas de hashtag dans l'image, trois à cinq
    dans la légende.
-2. **Cinq formats, un par jour.**
-   - Le **mini** (texte + un personnage) : la machine de nub et de
-     bom.seeat, la version sticker possible.
-   - La **BD en quatre cases** : le gag en un souffle, la chute dans la
-     dernière (la BD du bouton de nub, les « scenarios » de story.sketchers).
-   - Le **carrousel** : une situation qui se déroule page par page, la
-     première accroche (« petit message pour toi »), la dernière dit
-     « envoie ça à ta personne ».
-   - Le **dessin de bureau** : diagramme de Venn, liste, tableau,
-     « moi quand », avec les mipaps dedans (bom.seeat).
-   - Le **reel court** quand le studio saura les animer : une scène de
-     7 à 15 secondes, musique douce, texte en haut.
+2. **Quatre formats, trois posts par jour** (Thomas, 8 octobre 2026 : pas de
+   BD). La grille est dans `atelier/LIGNE-EDITORIALE.md`.
+   - Le **reel animé** du matin : une situation jouée, 10 à 20 secondes, les
+     personnages qui arrivent, courent, se retournent ; le texte en haut, la
+     chute dans le dernier plan.
+   - Le **post** de midi : le **mini** (texte + un personnage, la machine de
+     nub et de bom.seeat), la **déclaration** (la phrase qu'on se dédie, en
+     grand) ou le **dessin de bureau** (diagramme de Venn, liste, courbe,
+     barres, camembert).
+   - Le **carrousel-histoire** : une situation qui se déroule page par page,
+     la première accroche, la dernière est la chute et dit « envoie ça à ta
+     personne ».
+   - Le **reel statique** : un dessin qui respire, une phrase mot à mot,
+     musique tendre.
 3. **Les trois piliers** de story.sketchers, qui sont aussi ceux de
    bom.seeat : la tendresse du quotidien, le manque, les contrastes elle et
    lui. Et une ligne « déclaration » par semaine, la phrase qu'on se dédie
@@ -205,7 +206,7 @@ drôle.
 3. « t'as encore oublié le pain… » : elle, blasée, vers lui hors champ.
 4. « (mais je dis rien) » : lui, sourire forcé (nerveux), sueur.
 5. « j'ai froid, viens » : elle, frigorifiée, flocons, bras croisés.
-6. « je gère » puis rien : lui, fier, hanches (sert d'accroche de BD).
+6. « je gère » puis rien : lui, fier, hanches (sert d'accroche d'histoire).
 7. « t'es où » : lui, inquiet, téléphone à la patte.
 8. « encore cinq minutes » : elle, dodo, couette.
 9. « j'ai faim mais je veux pas choisir » : lui, hésite, menu de pizza et de burger.
@@ -216,7 +217,7 @@ drôle.
 14. « j'ai rien fait » : elle, innocente, auréole.
 15. « on y va ? » puis « deux minutes » : les deux, lui attend, pose tremble.
 
-### BD en quatre cases
+### Situations en quatre temps (des carrousels-histoires, ou des reels animés)
 
 16. **Le bouton** (nub) : « laisse-moi le percer stp » / « non » / « stp stp stp » / « bon… » / le bouton percé, elle ravie, lui défait.
 17. **L'au revoir interminable** (story.sketchers) : « bon j'y vais » / câlin / « j'y vais vraiment » / il est encore là une heure après, pattes qui dépassent de la porte.
@@ -260,7 +261,7 @@ drôle.
 49. Le ticket de caisse : « soirée pizza : 0 €, toi : inestimable ».
 50. Le calendrier : chaque jour un cœur, un seul jour un nuage, « le lundi ».
 
-### Reels courts (pour plus tard)
+### Reels animés
 
 51. La boucle du câlin : les deux arrivent chacun de leur bord et se cognent doucement.
 52. Il court vers elle de loin (sprint, poussière), la rate, revient.

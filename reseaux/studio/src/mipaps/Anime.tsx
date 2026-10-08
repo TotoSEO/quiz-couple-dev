@@ -63,7 +63,7 @@ export const MipapsAnime: React.FC<{ recette: RecetteMipapsReel; plan: Plan; ver
             className={`mp-message is-${x.place ?? 'haut'}` + (x.style === 'titre' ? ' is-titre' : classeTaille(x.texte))}
             style={entree(fPlan, Math.round(x.de * FPS), TEMPO.moyen, 18)}
             data-verif={`plan ${i + 1}, texte ${j + 1}`}
-            data-lignes-max={x.style === 'titre' ? 3 : 4}
+            data-lignes-max={(x.place ?? 'haut') === 'bas' ? 1 : x.style === 'titre' ? 3 : 4}
             data-sans-chevauchement
           >
             <Mots texte={x.texte} f={fPlan} debut={Math.round(x.de * FPS)} motAMot={x.motAMot} />

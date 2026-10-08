@@ -81,7 +81,9 @@
   text-wrap: balance;
 }
 .mp-message.is-haut { top: 140px; }
-.mp-message.is-bas { bottom: 72px; }
+/* en bas : sous le sol de la scène (1340), une seule ligne tient entre le sol et la bande d'Instagram */
+.mp-message.is-bas { bottom: 0; font-size: 60px; line-height: 1.15; }
+.mp-message.is-bas.is-grand, .mp-message.is-bas.is-petit, .mp-message.is-bas.is-titre { font-size: 60px; }
 .mp-message.is-titre { font-size: 80px; line-height: 1.1; }
 .mp-message.is-grand { font-size: 80px; line-height: 1.1; }
 .mp-message.is-petit { font-size: 58px; line-height: 1.2; }
