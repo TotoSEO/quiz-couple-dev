@@ -1,10 +1,10 @@
 {
-  "jour": "2026-10-20",
+  "jour": "2026-10-24",
   "creneau": "midi",
   "format": "reel",
   "gabarit": "tu-preferes",
   "categorie": "tu-preferes",
-  "sujet": "tp-004",
+  "sujet": "tp-005",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,8 +12,8 @@
         "gabarit": "tu-preferes",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Texting edition",
-        "accroche": "Would you rather: texting?",
+        "etiquette": "Food edition",
+        "accroche": "Would you rather: food?",
         "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
         "amorce": "Would you rather...",
         "secondes": 5,
@@ -22,28 +22,28 @@
         },
         "dilemmes": [
           {
-            "a": "Only voice notes",
-            "b": "Only texts"
+            "a": "Share a pizza",
+            "b": "Share a dessert"
           },
           {
-            "a": "Good morning text",
-            "b": "Good night text"
+            "a": "Their cooking",
+            "b": "Your cooking"
           },
           {
-            "a": "Instant replies",
-            "b": "Slow but sweet replies"
+            "a": "Breakfast for dinner",
+            "b": "Dinner for breakfast"
           },
           {
-            "a": "Emojis only",
-            "b": "Words only"
+            "a": "Always sweet",
+            "b": "Always salty"
           },
           {
-            "a": "A call every night",
-            "b": "Texts all day"
+            "a": "Cook a new recipe together",
+            "b": "Try a new restaurant"
           },
           {
-            "a": "Send selfies",
-            "b": "Send memes"
+            "a": "Ice cream in winter",
+            "b": "Hot chocolate in summer"
           }
         ],
         "fin": {
@@ -52,7 +52,7 @@
           "signature": "More dilemmas on quiz-couple.com"
         }
       },
-      "legende": "Would you rather, texting edition: how do you two like to talk?\n\nComment your A and B!",
+      "legende": "Would you rather, food edition: which one would you two pick?\n\nComment your A and B!",
       "hashtags": [
         "#wouldyourather",
         "#couplequestions",

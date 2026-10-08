@@ -1,0 +1,30 @@
+{
+  "jour": "2026-10-25",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "ph-006",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "Of all the places I could be, next to you is my favorite.",
+        "fleurs": "feuillage",
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "A little note for the person you love sitting next to.\n\nSave this for a day you need it.",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "jour": "2026-10-25",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "statique",
+  "sujet": "sta-006",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Reel statique : les deux regardent les étoiles sur un banc la nuit, la rose pose la tête contre le violet, une phrase tendre s'écrit.",
+        "plans": [
+          {
+            "description": "Un parc la nuit : ciel étoilé, un arbre, un banc. Dès la première image les deux sont assis sur le banc, jambes qui pendent, un peu éloignés, et regardent le ciel avec les yeux grands ouverts, des étincelles qui scintillent au-dessus d'eux. À 2 s la rose tourne la tête vers le violet, sourit, et à 2,6 s elle se rapproche et pose la tête contre lui : câlin, les deux ferment les yeux, joues roses, des cœurs montent. « you and me, always » s'écrit mot à mot en haut à partir de 3 s. À 7 s le violet rouvre des yeux heureux. La caméra se rapproche lentement.",
+            "duree": 11,
+            "decor": "dehors",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "banc-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.0,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.0,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 3.0,
+                    "effet": "etincelles"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.0,
+                    "a": 2.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 2.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.6,
+                    "a": 11,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.2,
+                    "a": 7.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 7.0,
+                    "a": 11,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.4,
+                    "a": 11,
+                    "effet": "coeurs"
+                  }
+                ],
+                "premier": true
+              },
+              {
+                "qui": "violet",
+                "a": "banc-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.2,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.6,
+                    "a": 11,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.2,
+                    "a": 7.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 7.0,
+                    "a": 11,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 3.0,
+                "texte": "you and me, always",
+                "motAMot": true,
+                "place": "haut",
+                "style": "plume"
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.6,
+                "zoom": 1
+              },
+              {
+                "a": 6,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 11,
+                "zoom": 1.22,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Under the stars, always you.\n\nSend this to your partner.",
+      "hashtags": [
+        "#couplegoals",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "jour": "2026-10-25",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-021",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le café au lit : la rose dort, le violet arrive sur la pointe des pieds avec une tasse, elle ouvre les yeux, les yeux en cœur, il lui donne un bisou. Aucune bulle.",
+        "titre": "POV: he brings you coffee in bed",
+        "plans": [
+          {
+            "description": "La chambre le matin, lumière douce, soleil bas dans la fenêtre. Dès la première image la rose dort dans le lit à gauche, la couette jusqu'au menton, des Z qui montent, la bouche entrouverte. Le violet entre par le bord droit en marchant tout doucement, une tasse fumante dans la main gauche, sur la pointe des pieds, les joues roses. Il s'arrête devant le lit à 2,4 s et sourit. La caméra se rapproche lentement.",
+            "duree": 3.8,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 3.8,
+                    "effet": "zzz"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": 1100,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 2.4,
+                    "vers": "devant-droite"
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.0,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Gros plan sur le visage de la rose, qui renifle l'air : le nez bouge, un œil s'entrouvre, puis les deux s'ouvrent grand. À 1,4 s elle voit la tasse et ses yeux deviennent des cœurs, la bouche s'ouvre en « o » de bonheur ; des cœurs montent au-dessus de sa tête. Le violet, derrière, lui tend la tasse en souriant. Zoom rapide à 0,3 s sur elle.",
+            "duree": 3.8,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 0.6
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.7,
+                    "a": 1.4,
+                    "yeux": "ouverts",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 2.6,
+                    "yeux": "coeur",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "effet": "coeurs"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 3.8,
+                    "yeux": "coeur",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "offre",
+                    "de": 2.0,
+                    "a": 3.8,
+                    "objet": "tasse"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.6,
+                "cible": "rose"
+              }
+            ]
+          },
+          {
+            "description": "Plan large de la chambre. La rose est assise sous la couette, la tasse entre les mains, les yeux fermés de plaisir, la bouche de chat. Le violet se penche vers elle et lui donne un petit bisou sur la joue, un cœur sort ; la rose rougit encore plus et sourit. Des cœurs montent doucement, la caméra recule lentement.",
+            "duree": 4.2,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 1.6,
+                    "a": 3.0,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.2,
+                "zoom": 1,
+                "x": 540,
+                "y": 1050
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Coffee in bed, no words needed.\n\nTag your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

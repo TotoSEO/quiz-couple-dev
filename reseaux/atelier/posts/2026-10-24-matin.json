@@ -1,0 +1,311 @@
+{
+  "jour": "2026-10-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-025",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il prend sa place dès qu'elle se lève : la rose part chercher du pop-corn, le violet s'étale à sa place, elle revient les yeux plats, puis ils partagent. Aucune bulle.",
+        "titre": "POV: he steals your seat the second you get up",
+        "plans": [
+          {
+            "description": "Le salon, le soir, lumière chaude de la lampe. Dès la première image les deux sont assis chacun à un bout du canapé : la rose à gauche, sa tasse à la main, enroulée dans l'ambiance du film ; le violet à droite, les yeux sur l'écran. À 1,2 s la rose pose un regard vers la cuisine, se lève et sort de l'image par la gauche. Le violet la regarde partir, un sourcil haut, puis jette un œil à sa place vide.",
+            "duree": 3.4,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 1.2,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.8,
+                    "a": 1.4,
+                    "cible": "gauche"
+                  },
+                  {
+                    "geste": "disparait",
+                    "de": 1.2,
+                    "a": 1.9,
+                    "vers": "gauche"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.5,
+                    "a": 2.6,
+                    "cible": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.4,
+                    "yeux": "ouverts",
+                    "bouche": "sourire",
+                    "sourcils": "hauts"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.6,
+                    "a": 3.4,
+                    "cible": "bas"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.4,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même canapé. Le violet est maintenant à la place de la rose, au milieu des coussins, étalé, les yeux fermés de plaisir et la bouche de chat, un petit sourire de vainqueur. À 1,6 s la rose revient par la gauche, un pot de pop-corn dans les mains, et s'arrête devant le canapé : ses yeux deviennent plats, la bouche plate, une goutte de gêne sur la tempe. Zoom rapide sur son visage à 1,8 s.",
+            "duree": 3.8,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "violet",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "mignon",
+                    "de": 0.2,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.2,
+                    "a": 3.8,
+                    "cible": "haut"
+                  }
+                ]
+              },
+              {
+                "qui": "rose",
+                "a": "devant-gauche",
+                "gestes": [
+                  {
+                    "geste": "apparait",
+                    "de": 1.4,
+                    "a": 2.0,
+                    "depuis": "gauche"
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "popcorn",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.0,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.8,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.4,
+                    "a": 3.8,
+                    "effet": "goutte"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 1.8,
+                "zoom": 1
+              },
+              {
+                "a": 2.2,
+                "zoom": 1.6,
+                "cible": "rose"
+              }
+            ]
+          },
+          {
+            "description": "Plan large, la rose est maintenant assise à l'autre bout du canapé, le pop-corn sur les genoux, les bras ballants, boudeuse ; le violet est resté au milieu, le sourire en coin, et regarde le plafond comme si de rien n'était. À 1,6 s il lui tend le pop-corn en riant, la rose prend une poignée, rougit malgré elle, et les deux rient ensemble, des cœurs montent à la fin.",
+            "duree": 4.2,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "popcorn",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 0,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 2.8,
+                    "yeux": "plats",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 2.8,
+                    "a": 4.2
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.2,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.6,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 4.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.7,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 2.8,
+                    "a": 4.2
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "She left for 30 seconds. He took the whole spot.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

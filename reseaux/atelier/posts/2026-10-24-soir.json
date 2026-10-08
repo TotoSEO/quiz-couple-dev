@@ -1,0 +1,30 @@
+{
+  "jour": "2026-10-24",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "ph-005",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "I love the way you make the world feel a little softer.",
+        "fleurs": "brin-marguerite",
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "For the one who softens everything.\n\nTag your partner.",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
