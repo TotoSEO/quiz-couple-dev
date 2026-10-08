@@ -1,0 +1,166 @@
+{
+  "jour": "2026-10-22",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "statique",
+  "sujet": "sta-005",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Reel statique : dans la forêt la nuit, la rose a peur, le violet la prend dans ses bras, elle se calme, une phrase tendre s'écrit.",
+        "plans": [
+          {
+            "description": "Une forêt la nuit : grands troncs sur les bords, lucioles qui flottent, ciel étoilé entre les cimes, un tronc couché au milieu. Dès la première image les deux sont assis sur le tronc, jambes qui pendent. La rose tremble, les yeux grands ouverts et la bouche ronde, elle regarde en haut puis à droite ; le violet, à côté, la regarde. À 1,8 s il la prend dans ses bras, la rose arrête de trembler ; à 3 s elle ferme les yeux de bonheur, joues roses, des cœurs montent. « my safe place is you » s'écrit mot à mot en haut à partir de 3,2 s. À 7 s la rose fait sa bouche de chat. La caméra se rapproche lentement.",
+            "duree": 11,
+            "decor": "foret",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "tronc-gauche",
+                "gestes": [
+                  {
+                    "geste": "tremble",
+                    "de": 0,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.3,
+                    "a": 1.2,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.2,
+                    "a": 1.9,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 1.8,
+                    "a": 11,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 7.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 7.0,
+                    "a": 11,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.4,
+                    "a": 11,
+                    "effet": "coeurs"
+                  }
+                ],
+                "premier": true
+              },
+              {
+                "qui": "violet",
+                "a": "tronc-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 1.8,
+                    "a": 11,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 8.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 8.0,
+                    "a": 11,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 3.2,
+                "texte": "my safe place is you",
+                "motAMot": true,
+                "place": "haut",
+                "style": "plume"
+              }
+            ],
+            "camera": [
+              {
+                "a": 1.8,
+                "zoom": 1
+              },
+              {
+                "a": 6,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 11,
+                "zoom": 1.22,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Some arms feel like the safest place.\n\nTag your partner.",
+      "hashtags": [
+        "#couplegoals",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

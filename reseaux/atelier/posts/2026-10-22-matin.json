@@ -1,0 +1,268 @@
+{
+  "jour": "2026-10-22",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-026",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Regarder le coucher de soleil à deux : assis dans le sable, la rose pose la tête contre le violet, les vagues avancent, un bisou sur le front. Aucune bulle.",
+        "titre": "POV: watching the sunset together",
+        "plans": [
+          {
+            "description": "Une plage au coucher du soleil : ciel orange et rose, la mer et ses vagues qui avancent, un voilier au loin, un parasol rayé à gauche. Dès la première image les deux sont assis dans le sable côte à côte, la rose à gauche, le violet à droite, et regardent l'horizon avec un petit sourire. À 2,2 s le violet tourne les yeux vers la rose, les joues roses, des petites étincelles scintillent autour d'eux. La caméra se rapproche lentement.",
+            "duree": 4.0,
+            "decor": "plage",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "sable-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.0,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 4.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.0,
+                    "a": 4.0,
+                    "effet": "etincelles"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "sable-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.2,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.2,
+                    "a": 4.0,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 4.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même plage, le soleil descend. La rose se rapproche du violet et pose la tête contre son épaule : câlin, les deux ferment les yeux de bonheur, joues roses. Les vagues avancent et reculent derrière eux, des petits cœurs montent doucement. La caméra continue de se rapprocher, très lentement.",
+            "duree": 4.2,
+            "decor": "plage",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "sable-gauche",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.6,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.2,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "sable-droite",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.6,
+                    "a": 2.6,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.3,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Dernier plan, le ciel devient rose foncé. Les deux restent serrés l'un contre l'autre, immobiles. À 1,2 s le violet tourne la tête et dépose un petit bisou sur le front de la rose, un cœur sort ; la rose rouvre des yeux heureux et sa bouche fait un petit chat. La caméra recule doucement pour montrer toute la plage.",
+            "duree": 4.2,
+            "decor": "plage",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "sable-gauche",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.3,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "sable-droite",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 1.2,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 1.2,
+                    "a": 2.6,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.6,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.3,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.2,
+                "zoom": 1,
+                "x": 540,
+                "y": 1000
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Nothing to say. Just the sunset and you.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

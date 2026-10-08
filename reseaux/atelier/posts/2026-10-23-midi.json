@@ -1,10 +1,10 @@
 {
-  "jour": "2026-10-19",
+  "jour": "2026-10-23",
   "creneau": "midi",
   "format": "reel",
   "gabarit": "connais-tu",
   "categorie": "connais-tu",
-  "sujet": "ct-006",
+  "sujet": "ct-008",
   "idee_id": null,
   "variantes": {
     "en": {
@@ -12,7 +12,7 @@
         "gabarit": "connais-tu",
         "langue": "en",
         "theme": "light",
-        "etiquette": "Dreams edition",
+        "etiquette": "Movies edition",
         "accroche": "How well do you know your partner?",
         "consigne": "8 questions, 5 seconds each. Count your right answers!",
         "secondes": 5,
@@ -20,14 +20,14 @@
           "ambiance": "jeu"
         },
         "questions": [
-          "Where does your partner dream of living?",
-          "What's their dream job?",
-          "Which country would they visit first?",
-          "City or countryside: where would they live?",
-          "What would they buy first after a lottery win?",
-          "What skill do they dream of learning?",
-          "Which famous person would they love to meet?",
-          "What do they want to be doing in ten years?"
+          "What's your partner's comfort movie?",
+          "Which show did they watch twice?",
+          "Which character are they most like?",
+          "What is their favorite movie genre?",
+          "What movie made them cry?",
+          "What snack do they need at the movies?",
+          "Who is their favorite actor?",
+          "Movie night: cinema or couch?"
         ],
         "fin": {
           "question": "How many did you get? Comment your score!",
@@ -35,7 +35,7 @@
           "signature": "More couple quizzes on quiz-couple.com"
         }
       },
-      "legende": "Dreams edition: 8 questions about your partner's biggest dreams. Do you know them?\n\nComment your score!",
+      "legende": "Movies edition: 8 questions about your partner's favorite films and shows. Popcorn ready?\n\nComment your score!",
       "hashtags": [
         "#couplequiz",
         "#howwelldoyouknowyourpartner",

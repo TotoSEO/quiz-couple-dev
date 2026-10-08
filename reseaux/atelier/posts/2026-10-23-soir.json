@@ -1,0 +1,304 @@
+{
+  "jour": "2026-10-23",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "coquin",
+  "sujet": "coq-003",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Coquin en clin d'œil : le réveil du lundi fait grogner, celui du samedi fait sourire, la couette bouge et le réveil s'envole.",
+        "titre": "POV: when the weekend finally starts",
+        "plans": [
+          {
+            "description": "La chambre le matin, lumière grise, légende « Monday ». Un réveil sonne sur la table de chevet. Dès la première image les deux sont dans le lit, la couette jusqu'au menton : la rose a les yeux plats et la bouche plate, le violet grogne, les sourcils froncés. À 1,4 s le violet pose un doigt sur le réveil du regard et grimace ; la rose se tourne de l'autre côté et soupire. La caméra se rapproche doucement.",
+            "duree": 3.8,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 1.5,
+                    "a": 3.8
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "ouverts",
+                    "bouche": "grogne",
+                    "sourcils": "faches"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "fache",
+                    "de": 1.4,
+                    "a": 3.8
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "legende": "Monday",
+            "objets": [
+              {
+                "objet": "reveil",
+                "x": 540,
+                "y": 1040,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Écran noir, puis la chambre en pleine lumière, soleil doré dans la fenêtre, légende « Saturday ». Le même réveil sonne. Cette fois les deux ouvrent les yeux d'un coup, grands et brillants, un grand sourire aux lèvres, et se regardent. À 1,6 s ils échangent un clin d'œil, les joues rouges. Zoom rapide sur leurs visages à 0,3 s.",
+            "duree": 4.0,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "brillants",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.3,
+                    "a": 4.0,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 4.0,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "brillants",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.3,
+                    "a": 4.0,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 4.0,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "transition": "noir",
+            "couette": "calme",
+            "legende": "Saturday",
+            "objets": [
+              {
+                "objet": "reveil",
+                "x": 540,
+                "y": 1040,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même chambre. La couette se met à bouger à 0,6 s, les deux têtes disparaissent dessous, des cœurs sortent du milieu et la caméra tremble. Le réveil s'envole en tournant vers le haut à droite. À 2,6 s les deux ressortent la tête, les joues très rouges, les yeux heureux, la bouche de chat, et se regardent en riant.",
+            "duree": 3.8,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.6,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "disparait",
+                    "de": 0.6,
+                    "a": 1.0,
+                    "vers": "bas"
+                  },
+                  {
+                    "geste": "apparait",
+                    "de": 2.6,
+                    "a": 3.0,
+                    "depuis": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.8,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.6,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "disparait",
+                    "de": 0.7,
+                    "a": 1.1,
+                    "vers": "bas"
+                  },
+                  {
+                    "geste": "apparait",
+                    "de": 2.7,
+                    "a": 3.1,
+                    "depuis": "bas"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 3.0,
+                    "a": 3.8
+                  }
+                ]
+              }
+            ],
+            "couette": "bouge",
+            "couetteDe": 0.6,
+            "effets": [
+              {
+                "effet": "coeurs",
+                "de": 1.2,
+                "a": 3.8,
+                "x": 540,
+                "y": 1120
+              }
+            ],
+            "objets": [
+              {
+                "objet": "reveil",
+                "x": 540,
+                "y": 1040,
+                "de": 0,
+                "entree": "aucune",
+                "vol": {
+                  "de": 1.0,
+                  "a": 2.4,
+                  "dx": 420,
+                  "dy": -800,
+                  "tours": 2
+                }
+              }
+            ],
+            "camera": [
+              {
+                "a": 0.6,
+                "secousse": 10
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "coquin"
+        }
+      },
+      "legende": "Monday alarm vs Saturday alarm.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

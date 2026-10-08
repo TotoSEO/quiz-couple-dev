@@ -1,0 +1,271 @@
+{
+  "jour": "2026-10-23",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-020",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Mini message : trois vases de fleurs arrivent l'un après l'autre, puis le violet tend un bouquet à la caméra.",
+        "plans": [
+          {
+            "description": "Fond papier avec un trait de sol. Dès la première image le violet est debout au centre, de face, et regarde la caméra avec un sourire timide, les joues roses. À 0,3 s un vase rose avec deux marguerites glisse depuis le bord gauche et se pose à ses pieds ; le texte « you deserve this... » s'écrit mot à mot en haut. À 2 s le violet fait un petit clin d'œil. La caméra se rapproche doucement.",
+            "duree": 4.0,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "violet",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.0,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 4.0,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "vase-marguerites",
+                "x": 200,
+                "y": 1360,
+                "de": 0.3,
+                "entree": "glisse-gauche"
+              }
+            ],
+            "textes": [
+              {
+                "de": 0.2,
+                "texte": "you deserve this...",
+                "motAMot": true,
+                "place": "haut"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même fond. Un deuxième vase, mince et bleu avec une rose rouge, glisse depuis le bord droit et se pose à côté du violet ; « ...and this... » s'écrit en haut. Le violet ouvre les yeux, la bouche en « o », rougit encore plus et regarde le vase, puis la caméra. Un « ! » apparaît au-dessus de sa tête à 1,2 s. Zoom rapide sur son visage à 0,3 s.",
+            "duree": 3.6,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "violet",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.2,
+                    "a": 3.6,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.4,
+                    "a": 3.6,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.5,
+                    "a": 3.6,
+                    "yeux": "brillants",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "vase-marguerites",
+                "x": 200,
+                "y": 1360,
+                "de": 0,
+                "entree": "aucune"
+              },
+              {
+                "objet": "vase-rose",
+                "x": 880,
+                "y": 1360,
+                "de": 0.2,
+                "entree": "glisse-droite"
+              }
+            ],
+            "textes": [
+              {
+                "de": 0.2,
+                "texte": "...and this...",
+                "motAMot": true,
+                "place": "haut"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même fond, les deux vases à gauche et à droite. Un troisième vase, un pot rose avec un tournesol, tombe du haut devant le violet ; « ...and this <3 » s'écrit en haut. À 1 s le violet sort un bouquet de roses et le tend vers la caméra, tout rouge, les yeux brillants. Des cœurs montent autour de lui jusqu'à la fin, la caméra se rapproche.",
+            "duree": 4.4,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "violet",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.0,
+                    "yeux": "ouverts",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.0,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "offre",
+                    "de": 1.0,
+                    "a": 4.4,
+                    "objet": "bouquet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.0,
+                    "a": 4.4,
+                    "yeux": "brillants",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.6,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "vase-marguerites",
+                "x": 200,
+                "y": 1360,
+                "de": 0,
+                "entree": "aucune"
+              },
+              {
+                "objet": "vase-rose",
+                "x": 880,
+                "y": 1360,
+                "de": 0,
+                "entree": "aucune"
+              },
+              {
+                "objet": "vase-tournesol",
+                "x": 360,
+                "y": 1360,
+                "de": 0.2,
+                "entree": "tombe"
+              }
+            ],
+            "textes": [
+              {
+                "de": 0.2,
+                "texte": "...and this <3",
+                "motAMot": true,
+                "place": "haut"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.4,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Flowers for the one who reads this.\n\nSend this to your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

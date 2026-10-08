@@ -1,0 +1,160 @@
+{
+  "jour": "2026-10-22",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "carrousel",
+  "categorie": "carrousel",
+  "sujet": "car-003",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "carrousel",
+        "langue": "en",
+        "theme": "light",
+        "pages": [
+          {
+            "type": "couverture",
+            "etiquette": "Firsts",
+            "accroche": "8 questions about our first days",
+            "scene": {
+              "t": 1.4,
+              "plan": {
+                "description": "Un café, deux tasses sur une petite table ronde : la rose et le violet se regardent en souriant, gênés, les joues roses, comme au premier rendez-vous.",
+                "duree": 2,
+                "decor": "cafe",
+                "moment": "midi",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "table-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire",
+                        "rougit": true
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "table-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire",
+                        "rougit": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "page",
+            "numero": "1",
+            "question": "When did you know you liked me?"
+          },
+          {
+            "type": "page",
+            "numero": "2",
+            "question": "What did you think after our first date?"
+          },
+          {
+            "type": "page",
+            "numero": "3",
+            "question": "Who said 'I love you' first, and where?"
+          },
+          {
+            "type": "page",
+            "numero": "4",
+            "question": "What was the first thing you noticed about me?"
+          },
+          {
+            "type": "page",
+            "numero": "5",
+            "question": "What was your biggest worry before we got together?"
+          },
+          {
+            "type": "page",
+            "numero": "6",
+            "question": "What's your favorite memory from our first month?"
+          },
+          {
+            "type": "page",
+            "numero": "7",
+            "question": "When did you first picture a future with me?"
+          },
+          {
+            "type": "page",
+            "numero": "8",
+            "question": "What made you laugh the most about me at first?"
+          },
+          {
+            "type": "fin",
+            "texte": "Want more questions for tonight?",
+            "bouton": "Link in bio",
+            "scene": {
+              "t": 1.4,
+              "plan": {
+                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
+                "duree": 2,
+                "decor": "ligne",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "salue",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "joie",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "legende": "Firsts: 8 questions about how your story started. Ask them one by one and see how different your memories are.\n\nSave this for your next date night. More questions: link in bio",
+      "hashtags": [
+        "#couplequestions",
+        "#datenight",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
