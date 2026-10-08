@@ -514,6 +514,16 @@
       "prise": "bas",
       "pose": true,
       "description": "Petit sapin décoré"
+    },
+    "compresse": {
+      "largeur": 150,
+      "prise": "centre",
+      "description": "Compresse froide pliée (se porte sur le front : « porte », comme le bonnet sur la tête)"
+    },
+    "mouchoir": {
+      "largeur": 90,
+      "prise": "centre",
+      "description": "Mouchoir en papier froissé"
     }
   },
   "effets": {

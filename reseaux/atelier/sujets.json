@@ -1,5 +1,5 @@
 {
-  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau.",
+  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau. La banque « bd » (8 octobre 2026) : des planches en quatre cases, une situation, une chute dans la dernière case ; chaque idée découpe les quatre images et donne les répliques.",
   "pov": [
     {
       "id": "pov-001",
@@ -2296,6 +2296,78 @@
         "Which dream of yours can I help with?",
         "What would you do if nothing could go wrong?"
       ]
+    }
+  ],
+  "bd": [
+    {
+      "id": "bd-001",
+      "pilier": "tendresse",
+      "idee": "Elle est malade au lit, compresse sur le front | 1 il la rassure « you'll be fine… » | 2 elle : « don't you dare. », lui : « just one kiss » | 3 il grimpe dans le lit et l'embrasse, « ! » | 4 les deux au lit avec une compresse, elle : « told u. »"
+    },
+    {
+      "id": "bd-002",
+      "pilier": "humour",
+      "idee": "La couette, la nuit | 1 les deux dorment sous la couette | 2 il tire la couette, elle est découverte, yeux plats | 3 elle tire tout, il grelotte dehors | 4 chacun roulé dans sa moitié, dos à dos, elle : « night. »"
+    },
+    {
+      "id": "bd-003",
+      "pilier": "tendresse",
+      "idee": "Il fait froid dans la rue, l'hiver | 1 elle tremble, lui a un bonnet | 2 il lui met son bonnet | 3 elle sourit sous le bonnet, lui tremble maintenant | 4 elle le serre dans ses bras : « better? »"
+    },
+    {
+      "id": "bd-004",
+      "pilier": "humour",
+      "idee": "La dernière part de pizza, salon | 1 l'assiette entre eux, une part | 2 les deux la regardent, yeux brillants | 3 elle la coupe en deux | 4 il mange sa moitié et la sienne, elle yeux plats : « seriously. »"
+    },
+    {
+      "id": "bd-005",
+      "pilier": "tendresse",
+      "idee": "Le réveil, la chambre, le matin | 1 le réveil sonne, les deux dorment | 2 il se lève, elle dort encore | 3 il revient avec deux tasses | 4 elle, yeux fermés, sourire : « 5 more minutes »"
+    },
+    {
+      "id": "bd-006",
+      "pilier": "humour",
+      "idee": "La photo à la plage | 1 il la prend en photo au téléphone | 2 elle pose, fière, yeux brillants | 3 il lui montre la photo : elle, sourcils hauts, « ! » | 4 elle lui court après, il rit : « it's cute!! »"
+    },
+    {
+      "id": "bd-007",
+      "pilier": "tendresse",
+      "idee": "Le pop-corn au cinéma | 1 les deux assis, le pop-corn au milieu | 2 il mange, elle regarde l'écran | 3 elle regarde le pot vide, sourcils fâchés | 4 il lui tend le dernier grain, cœurs : « for u »"
+    },
+    {
+      "id": "bd-008",
+      "pilier": "tendresse",
+      "idee": "La pluie dans la rue | 1 elle sous le parapluie, lui trempé à côté | 2 elle pousse le parapluie vers lui | 3 lui au sec, elle trempée, yeux plats | 4 les deux serrés sous le parapluie : « we fit. »"
+    },
+    {
+      "id": "bd-009",
+      "pilier": "humour",
+      "idee": "Le cadeau, salon | 1 il cache un cadeau derrière lui, elle yeux brillants | 2 elle ouvre, bouche en o | 3 c'est une chaussette, une seule, elle sourcils hauts | 4 il est gêné, joues roses : « the other one is coming »"
+    },
+    {
+      "id": "bd-010",
+      "pilier": "humour",
+      "idee": "Les ronflements, la nuit | 1 il ronfle (zzz), elle yeux plats | 2 elle le pousse | 3 il se tourne, silence, elle ferme les yeux | 4 c'est elle qui ronfle (zzz), lui yeux plats"
+    },
+    {
+      "id": "bd-011",
+      "pilier": "humour",
+      "idee": "Qui cuisine, la cuisine | 1 il cuisine, de la fumée | 2 elle sent, bouche en o | 3 l'assiette, toute noire, les deux la regardent | 4 ils mangent une pizza sur le canapé, heureux : « our recipe »"
+    },
+    {
+      "id": "bd-012",
+      "pilier": "tendresse",
+      "idee": "La longue journée, salon, le soir | 1 elle rentre, yeux plats, épaules basses | 2 il lui tend une tasse | 3 elle s'affale contre lui | 4 les deux endormis sur le canapé, zzz, pas un mot"
+    },
+    {
+      "id": "bd-013",
+      "pilier": "tendresse",
+      "idee": "Il a oublié, au café | 1 il regarde son téléphone, elle attend | 2 elle : « u forgot, didn't u » | 3 il tourne le téléphone vers elle : une réservation | 4 elle fond, cœurs : « ok u didn't »"
+    },
+    {
+      "id": "bd-014",
+      "pilier": "tendresse",
+      "idee": "Réviser à deux, la table | 1 les deux lisent, sérieux | 2 elle s'ennuie et le regarde | 3 elle pose la tête sur son épaule | 4 il lit toujours, mais il sourit, un cœur"
     }
   ],
   "deja_publies": {

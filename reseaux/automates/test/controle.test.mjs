@@ -3,14 +3,14 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { controlerPost, controlerRecette } from '../lib/controle.mjs';
+import { controlerBd, controlerPost, controlerRecette } from '../lib/controle.mjs';
 import { controlerPov } from '../lib/pov.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
 const exemple = (nom) => JSON.parse(fs.readFileSync(path.join(ici, '..', '..', 'studio', 'recettes', 'exemples', `${nom}.json`), 'utf8'));
 
 test('les recettes d\'exemple passent le contrôle', () => {
-  for (const nom of ['pov-frites', 'pov-fleurs', 'pov-couette', 'statique-calin', 'connais-tu', 'tu-preferes', 'citation', 'post-banc', 'carrousel-questions']) {
+  for (const nom of ['pov-frites', 'pov-fleurs', 'pov-couette', 'statique-calin', 'connais-tu', 'tu-preferes', 'citation', 'post-banc', 'carrousel-questions', 'bd-malade']) {
     assert.deepEqual(controlerRecette(exemple(nom), 'en'), [], nom);
   }
 });
@@ -79,4 +79,29 @@ test('la catégorie impose son gabarit, un reel statique a un seul plan', () => 
   assert.match(controlerPost(post('phrase', 'pov', exemple('pov-frites'))).join('\n'), /se fait avec le gabarit citation/);
   assert.match(controlerPost(post('statique', 'pov', exemple('pov-frites'))).join('\n'), /un seul plan/);
   assert.deepEqual(controlerPost(post('statique', 'pov', exemple('statique-calin'))), []);
+});
+
+test('une BD a quatre cases, des scènes du vocabulaire et des répliques courtes', () => {
+  const r = exemple('bd-malade');
+  assert.deepEqual(controlerRecette(r, 'en'), []);
+  // une BD donne une image ; en carrousel (une case par page), le post doit dire « carrousel »
+  assert.deepEqual(controlerPost({ ...post('bd', 'bd', r), format: 'image' }), []);
+  assert.match(controlerPost(post('bd', 'bd', r)).join('\n'), /ne donne pas un reel/);
+  const c = { ...r, sortie: 'carrousel' };
+  assert.match(controlerPost({ ...post('bd', 'bd', c), format: 'image' }).join('\n'), /ne donne pas un image/);
+  assert.deepEqual(controlerPost({ ...post('bd', 'bd', c), format: 'carrousel' }), []);
+  const m = exemple('bd-malade');
+  m.cases.pop();
+  m.cases[0].scene.plan.decor = 'piscine';
+  m.cases[0].scene.plan.persos[0].porte = 'casque';
+  m.cases[1].repliques = [{ texte: 'a' }, { texte: 'b' }, { texte: 'c 🍟' }];
+  m.cases[2].repliques = [{ texte: 'x'.repeat(41), cote: 'haut' }];
+  const f = controlerBd(m).join('\n');
+  assert.match(f, /quatre cases \(ici 3\)/);
+  assert.match(f, /décor inconnu « piscine »/);
+  assert.match(f, /objet porté inconnu « casque »/);
+  assert.match(f, /deux répliques au plus/);
+  assert.match(f, /pas d'emoji/);
+  assert.match(f, /40 signes au plus/);
+  assert.match(f, /côté inconnu « haut »/);
 });

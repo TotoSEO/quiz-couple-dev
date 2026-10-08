@@ -5,7 +5,9 @@
 // tout seul (fumée, flamme, réveil).
 import type { NomObjet } from './scenario';
 
-export type Dessin = { vb: [number, number]; svg: string; base: [number, number]; prise: [number, number] };
+// pose : quand l'objet se porte sur la tête, de combien il descend sur le
+// front, en pixels du dessin de la mascotte (le bonnet reste au sommet).
+export type Dessin = { vb: [number, number]; svg: string; base: [number, number]; prise: [number, number]; pose?: number };
 
 export const TRAIT = 'stroke="var(--decor-trait)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"';
 const T = TRAIT;
@@ -302,6 +304,26 @@ const D: Record<NomObjet, (t: number) => Dessin> = {
       `<path d="M28 116 C40 60 90 18 150 30 C170 34 172 60 160 74 C140 70 132 90 152 116 Z" ${F(ROSE_F)} ${T}/>` +
       `<circle cx="160" cy="72" r="18" ${F(BLANC)} ${T}/>` +
       `<rect x="14" y="108" width="152" height="34" rx="17" ${F(BLANC)} ${T}/>`,
+  }),
+  // une compresse froide pliée sur le front (se porte comme le bonnet, mais
+  // descend sur le front) : un linge bleu pâle, une bande plus claire
+  compresse: () => ({
+    vb: [180, 44],
+    base: [90, 42],
+    prise: [90, 22],
+    pose: 44,
+    svg:
+      `<rect x="10" y="6" width="160" height="34" rx="12" ${F(CIEL)} ${T} stroke-width="5"/>` +
+      `<rect x="26" y="13" width="128" height="8" rx="4" ${F(BLANC)} opacity="0.85"/>`,
+  }),
+  // un mouchoir en papier froissé, à tenir
+  mouchoir: () => ({
+    vb: [120, 110],
+    base: [60, 104],
+    prise: [60, 70],
+    svg:
+      `<path d="M18 92 C8 60 30 40 40 24 C52 6 72 10 84 24 C100 40 116 62 100 92 C86 108 34 108 18 92 Z" ${F(BLANC)} ${T}/>` +
+      `<path d="M44 40 C54 56 66 52 76 38" fill="none" ${T} stroke-width="4" opacity="0.6"/>`,
   }),
   sapin: () => ({
     vb: [300, 420],

@@ -115,7 +115,7 @@ Les recettes de `reseaux/studio/recettes/exemples/` sont les modèles, une
 par catégorie : `pov-frites`, `pov-fleurs` et `pov-cafe` (pov ; le café est
 le modèle d'une situation jouée sans aucune bulle, dans un des nouveaux
 décors), `pov-couette` (coquin), `statique-calin` (statique), `connais-tu`,
-`tu-preferes`, `citation` (phrase).
+`tu-preferes`, `citation` (phrase), `bd-malade` (bd).
 
 ### Les animations (pov, coquin, statique)
 
@@ -334,6 +334,30 @@ night », « couple questions »), puis « Save this for your next date
 night » ; le renvoi vers le site est permis (« More questions: link in
 bio »). Hashtags : `#couplequestions`, `#datenight`, `#couplegoals`,
 `#quizcouple`. Le format du post : `"format": "carrousel"`.
+
+### La BD en quatre cases (mardi soir)
+
+Gabarit `bd`, au format de `recettes/exemples/bd-malade.json` et un sujet de
+la banque `bd` : quatre `cases`, chacune avec une `scene` (un seul plan, le
+même vocabulaire que les animations : `decor`, `moment`, `persos` avec leur
+spot, leurs `gestes` de visage et d'effet, un objet `porte` sur la tête
+comme la `compresse`) et au plus deux `repliques` (`texte` de 40 signes au
+plus, en minuscules façon message, `cote` gauche ou droite du côté de celui
+qui parle). La scène est figée à l'instant `t` : seule l'image compte, pas
+la richesse d'un reel ; `haut` et `echelle` cadrent la case (420 et 1,25
+dans l'exemple, pour voir le lit de près). La description de chaque case
+raconte l'image comme à un dessinateur (60 signes au moins).
+
+Ce qui fait la planche : une situation reconnaissable, montrée plus que
+dite ; la case 3 est souvent muette, c'est l'image qui fait rire ; la
+dernière réplique a le dernier mot. Cinq répliques au plus sur les quatre
+cases, les mascottes dans chaque case, jamais de score, jamais d'emoji à
+l'écran. Légende sans renvoi vers le site (un appel à identifier ou à
+envoyer à l'autre), hashtags `#couplecomics`, `#relationshipcomics`,
+`#couplegoals`, `#quizcouple`. Le format du post : `"format": "image"`
+(`"carrousel"` seulement si la recette porte `"sortie": "carrousel"`).
+Le contrôle, c'est `--verifier` sur la recette, puis on regarde l'image
+rendue (`image.jpg`) : les quatre cases se lisent-elles sans le texte ?
 
 La story du matin n'est pas ton travail : l'automate reprend le reel du
 matin en story après sa publication.
