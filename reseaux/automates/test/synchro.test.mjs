@@ -37,11 +37,21 @@ test('un post valide est écrit, sa déclinaison attend le rendu', async () => {
   assert.equal(b.tables.social_variantes[0].statut, 'a_rendre');
 });
 
-test('une catégorie qui ne suit pas le mélange de la semaine est refusée', async () => {
+test('une catégorie qui ne suit pas le mélange de la semaine est acceptée, avec une alerte une seule fois', async () => {
+  // la grille a pu changer après l'écriture du post (le mardi soir est passé
+  // de pov à bd le 8 octobre 2026) : refuser laissait le créneau vide pour de bon
   const b = base();
   const bilan = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') }], { maintenant: MAINTENANT });
-  assert.equal(bilan.refuses, 1);
-  assert.match(JSON.stringify(b.tables.social_journal), /attend la catégorie connais-tu/);
+  assert.deepEqual(bilan, { ecrits: 1, inchanges: 0, refuses: 0, ignores: 0 });
+  assert.equal(b.tables.social_posts[0].categorie, 'pov');
+  const alertes = b.tables.social_journal.filter((j) => j.niveau === 'alerte');
+  assert.equal(alertes.length, 1);
+  assert.match(alertes[0].message, /a\.json : le créneau midi du 2026-10-12 attend la catégorie connais-tu, pov accepté/);
+  assert.deepEqual(alertes[0].details, { fichier: 'a.json', attendue: 'connais-tu', categorie: 'pov' });
+  // le même fichier relu une heure plus tard ne répète pas l'alerte
+  const encore = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') }], { maintenant: MAINTENANT });
+  assert.equal(encore.inchanges, 1);
+  assert.equal(b.tables.social_journal.filter((j) => j.niveau === 'alerte').length, 1);
 });
 
 test('un post dans le passé est ignoré', async () => {
@@ -58,9 +68,13 @@ test('tiret cadratin et plus de cinq hashtags sont refusés', async () => {
   p.variantes.en.hashtags = ['#a', '#b', '#c', '#d', '#e', '#f'];
   const bilan = await synchroniser(b, [{ fichier: 'a.json', post: p }], { maintenant: MAINTENANT });
   assert.equal(bilan.refuses, 1);
-  const fautes = b.tables.social_journal.find((j) => j.niveau === 'erreur').details.fautes.join(' | ');
+  const erreur = b.tables.social_journal.find((j) => j.niveau === 'erreur');
+  const fautes = erreur.details.fautes.join(' | ');
   assert.match(fautes, /tiret cadratin/);
   assert.match(fautes, /1 à 5 hashtags/);
+  // le message dit le fichier et les fautes : le journal du workflow suffit à comprendre
+  assert.equal(erreur.details.fichier, 'a.json');
+  assert.match(erreur.message, /^a\.json refusé : .*tiret cadratin.*1 à 5 hashtags/);
 });
 
 test('une recette modifiée repart au rendu, une publiée ne bouge pas', async () => {

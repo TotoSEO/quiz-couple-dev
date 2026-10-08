@@ -61,6 +61,15 @@ Puis `reseaux/atelier/etat.json`, écrit chaque matin par l'entretien :
   L'horizon est long exprès : la réserve s'écrit d'avance, pour que le
   compte continue à publier même quand la routine ne tourne pas (le rendu et
   la publication n'ont pas besoin d'elle).
+- `hors_grille` : posts déjà en base dont la catégorie ne suit plus la
+  semaine type (la grille a changé après leur écriture, comme le mardi soir
+  devenu BD le 8 octobre 2026). Ils partiront tels quels si on n'y touche
+  pas : on les réécrit dans la catégorie `attendue`, après les créneaux
+  vides, en remplaçant le fichier existant.
+- `refuses` : fichiers que la synchro a refusés dans les dernières
+  24 heures, avec leurs `fautes`. Le fichier existe sur la branche mais rien
+  n'est en base, donc rien ne partira : on le réécrit en entier, en
+  corrigeant les fautes, et on le repasse au contrôle.
 - `recents_et_prevus` : ce qui est passé et prévu, pour ne jamais répéter
   une phrase, une question ou une scène de la semaine.
 - `idees` : les idées de Thomas. Elles passent avant la banque ; le post
@@ -94,7 +103,8 @@ Pour chaque créneau à remplir, dans l'ordre des dates :
 **Un créneau dont le fichier existe déjà dans `posts/` n'est jamais réécrit**,
 même s'il figure encore dans `a_remplir` (l'état est calculé sur ce qui est
 déjà passé dans Supabase, un post poussé depuis peut y manquer) : on passe
-au suivant.
+au suivant. Deux exceptions, et deux seulement : les fichiers listés dans
+`refuses` et dans `hors_grille`, qu'on réécrit (voir plus haut).
 
 **Au plus 24 posts par passage**, les créneaux les plus proches d'abord.
 Chaque post est contrôlé et regardé (planche) avant d'être poussé : on ne

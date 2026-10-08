@@ -40,6 +40,33 @@ test('l\'état liste les créneaux à remplir avec leur catégorie', async () =>
   assert.deepEqual(tard.a_remplir.map((x) => x.creneau), ['soir']);
 });
 
+test('l\'état signale les posts hors grille et les fichiers refusés par la synchro', async () => {
+  const b = new BaseMemoire({
+    social_comptes: [{ id: 'c', langue: 'en', fuseau: 'Europe/Paris' }],
+    social_reglages: [{ cle: 'melange', valeur: melange }],
+    social_posts: [
+      // mardi 13 midi : la grille attend tu-preferes, la synchro a accepté un pov
+      { id: 'hg', jour: '2026-10-13', creneau: 'midi', statut: 'valide', format: 'reel', gabarit: 'pov', categorie: 'pov' },
+      // dans la grille
+      { id: 'ok', jour: '2026-10-13', creneau: 'matin', statut: 'valide', format: 'reel', gabarit: 'pov', categorie: 'pov' },
+      // hors grille mais déjà passé : plus rien à faire
+      { id: 'passe', jour: '2026-10-11', creneau: 'midi', statut: 'valide', format: 'reel', gabarit: 'pov', categorie: 'pov' },
+    ],
+    social_journal: [
+      { niveau: 'erreur', source: 'synchro', message: '2026-10-14-soir.json refusé : tiret cadratin', details: { fichier: '2026-10-14-soir.json', fautes: ['tiret cadratin'] }, at: '2026-10-12T03:23:00.000Z' },
+      // le dernier refus du même fichier fait foi
+      { niveau: 'erreur', source: 'synchro', message: '2026-10-14-soir.json refusé : tiret cadratin ; 1 à 5 hashtags', details: { fichier: '2026-10-14-soir.json', fautes: ['tiret cadratin', '1 à 5 hashtags'] }, at: '2026-10-12T04:23:00.000Z' },
+      // une autre source, une alerte, un refus vieux de deux jours : hors liste
+      { niveau: 'erreur', source: 'rendu', message: 'autre chose', details: null, at: '2026-10-12T04:30:00.000Z' },
+      { niveau: 'alerte', source: 'synchro', message: 'a.json : le créneau midi du 2026-10-13 attend la catégorie tu-preferes, pov accepté', details: { fichier: 'a.json' }, at: '2026-10-12T04:23:00.000Z' },
+      { niveau: 'erreur', source: 'synchro', message: 'vieux.json refusé : x', details: { fichier: 'vieux.json', fautes: ['x'] }, at: '2026-10-10T00:00:00.000Z' },
+    ],
+  });
+  const e = await etat(b, { maintenant: T0, horizon: 1 });
+  assert.deepEqual(e.hors_grille, [{ jour: '2026-10-13', creneau: 'midi', categorie: 'pov', attendue: 'tu-preferes' }]);
+  assert.deepEqual(e.refuses, [{ fichier: '2026-10-14-soir.json', fautes: ['tiret cadratin', '1 à 5 hashtags'] }]);
+});
+
 test('le ménage efface les fichiers lourds 24 h après publication, garde la vignette', async () => {
   const b = new BaseMemoire({
     social_variantes: [

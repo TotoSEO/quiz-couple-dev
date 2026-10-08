@@ -107,9 +107,26 @@ export async function reserve(base, { maintenant = new Date(), fuseau = 'Europe/
   return jours;
 }
 
+// Les fichiers que la synchro a refusés ces dernières 24 h (journal), un par
+// fichier, le dernier refus faisant foi. La routine ne réécrit jamais un
+// fichier existant, sauf ceux-là : sans cette liste, un fichier refusé
+// restait refusé à chaque passage et son créneau ne partait jamais.
+async function refusesSynchro(base, maintenant) {
+  const depuis = new Date(maintenant.getTime() - 24 * 3600 * 1000).toISOString();
+  const lignes = await base.select('social_journal', `select=message,details,at&source=eq.synchro&niveau=eq.erreur&at=gte.${depuis}&order=at.desc&limit=200`);
+  const parFichier = new Map();
+  for (const l of lignes) {
+    const fichier = l.details?.fichier || (l.message.match(/^(\S+\.json)/) || [])[1];
+    if (!fichier || parFichier.has(fichier)) continue;
+    parFichier.set(fichier, { fichier, fautes: l.details?.fautes || [l.message] });
+  }
+  return [...parFichier.values()];
+}
+
 // Ce que la routine Claude lit avant d'écrire : les créneaux à remplir, ce
 // qui est déjà passé ou prévu (pour varier), les idées de Thomas, ce qui
-// marche, les recettes refusées à corriger.
+// marche, les recettes refusées à corriger, les posts hors grille et les
+// fichiers refusés par la synchro.
 // L'horizon est long (100 jours) depuis le 7 octobre 2026 : la routine écrit
 // toute la réserve d'avance, pour que le compte continue à publier même si
 // elle ne tourne plus (le rendu et la publication n'ont pas besoin d'elle).
@@ -161,6 +178,17 @@ export async function etat(base, { maintenant = new Date(), horizon = 100 } = {}
     // retard de plus de 90 min), la routine ne doit pas le retravailler
     // chaque matin pendant trente jours
     a_corriger: posts.filter((p) => variantes.some((v) => v.post_id === p.id && v.statut === 'echec') && encorePubliable(p)).map(resume),
+    // posts acceptés par la synchro mais dont la catégorie ne suit plus la
+    // grille (elle a changé après leur écriture, comme le mardi soir devenu
+    // BD le 8 octobre 2026) : ils partiront tels quels si la routine ne les
+    // réécrit pas dans la catégorie attendue
+    hors_grille: posts
+      .filter((p) => p.statut === 'valide' && p.categorie && encorePubliable(p))
+      .map((p) => ({ jour: p.jour, creneau: p.creneau, categorie: p.categorie, attendue: categorieAttendue(melange, p.jour, p.creneau) }))
+      .filter((p) => p.attendue && p.attendue !== p.categorie),
+    // fichiers refusés par la synchro ces dernières 24 h, avec leurs fautes :
+    // le fichier existe sur la branche mais rien n'est en base
+    refuses: await refusesSynchro(base, maintenant),
     recents_et_prevus: posts.map(resume),
     idees,
     statistiques_j7: stats,
@@ -176,5 +204,5 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   if (e.reserve_jours < 7) await base.journal('alerte', 'entretien', `réserve de ${e.reserve_jours} jours seulement`);
   const i = process.argv.indexOf('--etat');
   if (i > 0) fs.writeFileSync(process.argv[i + 1], JSON.stringify(e, null, 2) + '\n');
-  console.log(`réserve : ${e.reserve_jours} jours, ${e.a_remplir.length} créneaux à remplir, ${e.a_corriger.length} à corriger`);
+  console.log(`réserve : ${e.reserve_jours} jours, ${e.a_remplir.length} créneaux à remplir, ${e.a_corriger.length} à corriger, ${e.hors_grille.length} hors grille, ${e.refuses.length} fichiers refusés`);
 }
