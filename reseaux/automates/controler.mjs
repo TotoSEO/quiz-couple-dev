@@ -1,16 +1,24 @@
 // Contrôle des posts de l'atelier avant de les pousser (routine Claude).
 //   node reseaux/automates/controler.mjs reseaux/atelier/posts/2026-10-20-matin.json [...]
+//   node reseaux/automates/controler.mjs reseaux/mipaps/atelier/posts/2026-10-20-matin.json [...]
 // Sortie 0 si tout va bien, 1 sinon, avec la liste des fautes par fichier.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { controlerPost } from './lib/controle.mjs';
-import { categorieAttendue, MELANGE_DEFAUT } from './lib/calendrier.mjs';
+import { categorieAttendue, MELANGE_DEFAUT, MELANGE_MIPAPS } from './lib/calendrier.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
-const SUJETS = JSON.parse(fs.readFileSync(path.join(ici, '..', 'atelier', 'sujets.json'), 'utf8'));
-const datés = SUJETS.saison.sujets;
-const banque = (categorie) => SUJETS[categorie] ?? [];
+// Deux ateliers, chacun sa banque et sa grille : un fichier sous
+// reseaux/mipaps/ est un post des mipaps (reseaux/mipaps/atelier/sujets.json,
+// MELANGE_MIPAPS), sinon un post de Quiz Couple.
+const estMipaps = (fichier) => /(^|[\\/])mipaps[\\/]/.test(path.resolve(fichier));
+const banques = new Map();
+const sujetsDe = (fichier) => {
+  const dossier = estMipaps(fichier) ? path.join(ici, '..', 'mipaps', 'atelier') : path.join(ici, '..', 'atelier');
+  if (!banques.has(dossier)) banques.set(dossier, JSON.parse(fs.readFileSync(path.join(dossier, 'sujets.json'), 'utf8')));
+  return banques.get(dossier);
+};
 
 // Les sujets déjà pris par les autres posts du même dossier.
 const prisAilleurs = (fichier) => {
@@ -34,7 +42,10 @@ for (const fichier of process.argv.slice(2)) {
   try {
     const post = JSON.parse(fs.readFileSync(fichier, 'utf8'));
     fautes = controlerPost(post);
-    const attendu = categorieAttendue(MELANGE_DEFAUT, post.jour, post.creneau);
+    const SUJETS = sujetsDe(fichier);
+    const datés = SUJETS.saison?.sujets ?? [];
+    const banque = (categorie) => SUJETS[categorie] ?? [];
+    const attendu = categorieAttendue(estMipaps(fichier) ? MELANGE_MIPAPS : MELANGE_DEFAUT, post.jour, post.creneau);
     if (attendu && attendu !== post.categorie) fautes.push(`le créneau attend la catégorie ${attendu}`);
     const nom = `${post.jour}-${post.creneau}.json`;
     if (path.basename(fichier) !== nom) fautes.push(`le fichier doit s'appeler ${nom}`);

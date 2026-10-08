@@ -163,3 +163,44 @@ test('à corriger : seulement les posts en échec dont le créneau peut encore p
   const tard = await etat(b, { maintenant: new Date('2026-10-12T12:00:00Z'), horizon: 1 });
   assert.deepEqual(tard.a_corriger.map((p) => p.jour), ['2026-10-13']);
 });
+
+test("l'état des mipaps (fr) suit la grille du compte, ses posts et ses idées, sans ceux de Quiz Couple", async () => {
+  const { etat } = await import('../entretien.mjs');
+  const grille = { matin: 'mipaps-anime', midi: 'mipaps-post', soir: { 1: 'mipaps-histoire', 2: 'mipaps-statique', 3: 'mipaps-histoire', 4: 'mipaps-statique', 5: 'mipaps-histoire', 6: 'mipaps-statique', 7: 'mipaps-histoire' } };
+  const b = new BaseMemoire({
+    social_comptes: [
+      { id: 'c', langue: 'en', fuseau: 'Europe/Paris' },
+      { id: 'm', langue: 'fr', nom: 'Les mipaps', fuseau: 'Europe/Paris', melange: grille },
+    ],
+    social_reglages: [{ cle: 'melange', valeur: melange }],
+    social_posts: [
+      { id: 'qc', langue: 'en', jour: '2026-10-13', creneau: 'matin', gabarit: 'pov', categorie: 'pov', statut: 'valide' },
+      { id: 'mp', langue: 'fr', jour: '2026-10-13', creneau: 'matin', gabarit: 'mipaps-reel', categorie: 'mipaps-anime', statut: 'valide' },
+    ],
+    social_variantes: [
+      { id: 'v1', post_id: 'qc', langue: 'en', statut: 'rendu', recette: {} },
+      { id: 'v2', post_id: 'mp', langue: 'fr', statut: 'a_rendre', recette: { idee: 'il court vers elle' } },
+    ],
+    social_idees: [
+      { id: 'i1', langue: 'en', texte: 'une idée QC', source: 'thomas', categorie: 'pov', created_at: '2026-10-10T10:00:00Z' },
+      { id: 'i2', langue: 'fr', texte: 'une idée mipaps', source: 'thomas', categorie: 'mipaps-post', created_at: '2026-10-10T10:00:00Z' },
+    ],
+  });
+  const e = await etat(b, { maintenant: new Date('2026-10-12T03:11:00Z'), horizon: 1, langue: 'fr' });
+  assert.equal(e.langue, 'fr');
+  assert.equal(e.compte.nom, 'Les mipaps');
+  assert.deepEqual(e.melange, grille);
+  // le lundi 12 à 5 h 11 : midi et soir (le matin commence dans moins de trois heures) ;
+  // le mardi 13 : midi et soir (le matin est pris par le post des mipaps)
+  assert.deepEqual(e.a_remplir.map((c) => `${c.jour} ${c.creneau} ${c.categorie}`), [
+    '2026-10-12 midi mipaps-post', '2026-10-12 soir mipaps-histoire',
+    '2026-10-13 midi mipaps-post', '2026-10-13 soir mipaps-statique',
+  ]);
+  assert.deepEqual(e.recents_et_prevus.map((p) => p.gabarit), ['mipaps-reel']);
+  assert.deepEqual(e.idees.map((i) => i.id), ['i2']);
+  assert.deepEqual(Object.keys(e.prochain_creneau), ['mipaps-anime', 'mipaps-statique', 'mipaps-histoire', 'mipaps-post']);
+  // l'état de Quiz Couple, lui, ne voit que ses posts
+  const qc = await etat(b, { maintenant: new Date('2026-10-12T03:11:00Z'), horizon: 1, langue: 'en' });
+  assert.deepEqual(qc.recents_et_prevus.map((p) => p.gabarit), ['pov']);
+  assert.deepEqual(qc.idees.map((i) => i.id), ['i1']);
+});

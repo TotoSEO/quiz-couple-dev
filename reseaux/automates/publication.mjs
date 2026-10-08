@@ -67,6 +67,9 @@ async function sonDuReel(ig, base, v, tendances, categorie) {
   return choisi;
 }
 
+// Le nom du son original d'un reel sans musique, selon le compte.
+const NOM_DU_SON = { fr: 'Les mipaps' };
+
 export async function publier(base, { maintenant = new Date(), aBlanc = false, instagramPour } = {}) {
   const bilan = { conteneurs: 0, publies: 0, attente: 0, echecs: 0, aBlanc: 0 };
   if ((await base.reglage('pause')) === true) {
@@ -116,7 +119,7 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
             videoUrl: await base.signer(v.fichiers.reel),
             couvertureUrl: await base.signer(v.fichiers.couverture),
             legende,
-            nomDuSon: v.recette?.nomDuSon || 'Quiz Couple',
+            nomDuSon: v.recette?.nomDuSon || NOM_DU_SON[v.langue] || 'Quiz Couple',
           };
           try {
             conteneur = await ig.conteneurReel({ ...params, son: son && { id: son.id, volume: VOLUME_MUSIQUE, volumeVideo: VOLUME_VIDEO, boucle: son.boucle } });

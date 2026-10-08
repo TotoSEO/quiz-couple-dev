@@ -196,6 +196,7 @@ export function controlerPost(post) {
   }
   const variantes = Object.entries(post.variantes || {});
   if (!variantes.length) f.push('aucune déclinaison');
+  if (post.langue !== undefined && !(post.variantes || {})[post.langue]) f.push(`la langue du post (${post.langue}) n'a pas de déclinaison`);
   for (const [langue, v] of variantes) {
     if (!LANGUES.includes(langue)) f.push(`langue inconnue : ${langue}`);
     if (v.recette?.gabarit !== post.gabarit) f.push(`${langue} : gabarit de la recette différent du post`);

@@ -34,18 +34,26 @@ jobs:
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
           SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
-        run: node reseaux/automates/entretien.mjs --etat "$RUNNER_TEMP/etat.json"
-      - name: État pour l'atelier
+        run: node reseaux/automates/entretien.mjs --etat "$RUNNER_TEMP/etat.json" --etat-fr "$RUNNER_TEMP/etat-fr.json"
+      # Un état par atelier, chacun sur sa branche : reseaux-atelier pour
+      # Quiz Couple, mipaps-atelier pour Les mipaps (créée ici si besoin).
+      - name: État pour les ateliers
         run: |
           git config user.name 'quiz-couple-bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          if git ls-remote --exit-code --heads origin reseaux-atelier >/dev/null; then
-            git checkout -B reseaux-atelier origin/reseaux-atelier
-          else
-            git checkout -B reseaux-atelier
-          fi
-          mkdir -p reseaux/atelier/posts
-          cp "$RUNNER_TEMP/etat.json" reseaux/atelier/etat.json
-          git add reseaux/atelier/etat.json
-          git diff --cached --quiet || git commit -m "Atelier : état du planning"
-          git push origin reseaux-atelier
+          deposer() {
+            branche="$1"; source="$2"; cible="$3"
+            [ -f "$source" ] || return 0
+            if git ls-remote --exit-code --heads origin "$branche" >/dev/null; then
+              git checkout -B "$branche" "origin/$branche"
+            else
+              git checkout -B "$branche"
+            fi
+            mkdir -p "$(dirname "$cible")/posts"
+            cp "$source" "$cible"
+            git add "$cible"
+            git diff --cached --quiet || git commit -m "Atelier : état du planning"
+            git push origin "$branche"
+          }
+          deposer reseaux-atelier "$RUNNER_TEMP/etat.json" reseaux/atelier/etat.json
+          deposer mipaps-atelier "$RUNNER_TEMP/etat-fr.json" reseaux/mipaps/atelier/etat.json

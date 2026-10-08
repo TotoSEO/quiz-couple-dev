@@ -3,13 +3,13 @@
 // script les contrôle puis les écrit dans Supabase. Claude n'a ainsi jamais
 // de clé Supabase : il pousse des fichiers, GitHub Actions fait le reste.
 //
-//   node reseaux/automates/synchro.mjs <dossier des posts>
+//   node reseaux/automates/synchro.mjs <dossier des posts> [<autre dossier>...]
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { controlerPost } from './lib/controle.mjs';
-import { aujourdhui, categorieAttendue } from './lib/calendrier.mjs';
+import { aujourdhui, categorieAttendue, melangeDuCompte } from './lib/calendrier.mjs';
 
 const MODIFIABLES = ['a_rendre', 'rendu', 'echec'];
 // Un rendu en échec est retenté par les synchros suivantes, trois fois en
@@ -36,12 +36,16 @@ const memeInstant = (a, b) => Date.parse(a) === Date.parse(b);
 
 export async function synchroniser(base, posts, { maintenant = new Date() } = {}) {
   const bilan = { ecrits: 0, inchanges: 0, refuses: 0, ignores: 0 };
-  const melange = await base.reglage('melange');
-  const comptes = await base.select('social_comptes', 'select=langue,fuseau');
+  const melangeGlobal = await base.reglage('melange');
+  const comptes = await base.select('social_comptes', 'select=langue,fuseau,melange');
   for (const { fichier, post } of posts) {
     const fautes = controlerPost(post);
-    const compte = comptes.find((c) => post.variantes && c.langue in post.variantes);
+    // le compte du post : celui de sa déclinaison (Quiz Couple écrit en, Les
+    // mipaps fr) ; chaque compte a sa grille et son planning
+    const langue = post.langue || Object.keys(post.variantes || {})[0];
+    const compte = comptes.find((c) => c.langue === langue);
     const fuseau = compte?.fuseau || 'Europe/Paris';
+    const melange = melangeDuCompte(compte, melangeGlobal);
     if (post.jour && post.jour < aujourdhui(fuseau, maintenant)) {
       bilan.ignores++;
       continue; // un post passé n'est plus touché
@@ -62,10 +66,10 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
       bilan.refuses++;
       // les fautes dans le message : le journal du workflow les montre sans
       // ouvrir l'admin, et l'entretien les remet à la routine (`refuses`)
-      await base.journal('erreur', 'synchro', `${fichier} refusé : ${fautes.join(' ; ')}`, { fichier, fautes });
+      await base.journal('erreur', 'synchro', `${fichier} refusé : ${fautes.join(' ; ')}`, { fichier, fautes, langue });
       continue;
     }
-    const [deja] = await base.select('social_posts', `select=id,statut&jour=eq.${post.jour}&creneau=eq.${post.creneau}`);
+    const [deja] = await base.select('social_posts', `select=id,statut&langue=eq.${langue}&jour=eq.${post.jour}&creneau=eq.${post.creneau}`);
     if (deja && ['suspendu', 'annule'].includes(deja.statut)) {
       bilan.ignores++;
       await base.journal('alerte', 'synchro', `${fichier} : post ${deja.statut} dans l'admin, laissé tel quel`);
@@ -73,8 +77,8 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
     }
     const [ligne] = await base.insert(
       'social_posts',
-      [{ jour: post.jour, creneau: post.creneau, format: post.format, gabarit: post.gabarit, categorie: post.categorie ?? null, theme: post.theme ?? null, statut: 'valide', notes: post.notes ?? {} }],
-      { conflit: 'jour,creneau' },
+      [{ langue, jour: post.jour, creneau: post.creneau, format: post.format, gabarit: post.gabarit, categorie: post.categorie ?? null, theme: post.theme ?? null, statut: 'valide', notes: post.notes ?? {} }],
+      { conflit: 'langue,jour,creneau' },
     );
     let change = false;
     for (const [langue, v] of Object.entries(post.variantes)) {
@@ -143,9 +147,13 @@ export function lirePosts(dossier) {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const dossier = process.argv[2] || 'reseaux/atelier/posts';
+  // un dossier par atelier : celui de Quiz Couple et celui des mipaps
+  // (reseaux/mipaps/atelier/posts, branche mipaps-atelier) ; un dossier
+  // absent est simplement vide
+  const dossiers = process.argv.slice(2);
+  if (!dossiers.length) dossiers.push('reseaux/atelier/posts');
   const base = await connexion();
-  const bilan = await synchroniser(base, lirePosts(dossier));
+  const bilan = await synchroniser(base, dossiers.flatMap(lirePosts));
   console.log(bilan);
   // Un fichier refusé est une erreur de contenu, journalisée (pastille de
   // l'onglet Réseaux, liste `refuses` de etat.json pour la routine) : il ne

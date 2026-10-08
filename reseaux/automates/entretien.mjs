@@ -1,14 +1,14 @@
 // Entretien quotidien : jeton Instagram, ménage du stockage, statistiques,
 // réserve, et l'état que lit la routine Claude (reseaux/atelier/etat.json).
 //
-//   node reseaux/automates/entretien.mjs [--etat <fichier>]
+//   node reseaux/automates/entretien.mjs [--etat <fichier>] [--etat-fr <fichier>]
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { Instagram, verifierJeton } from './lib/instagram.mjs';
-import { ajouterJours, aujourdhui, categorieAttendue } from './lib/calendrier.mjs';
-import { viserCreneaux } from './lib/idees.mjs';
+import { ajouterJours, aujourdhui, categorieAttendue, melangeDuCompte } from './lib/calendrier.mjs';
+import { categoriesIdee, viserCreneaux } from './lib/idees.mjs';
 
 const JOUR = 86400000;
 const CRENEAUX = ['matin', 'midi', 'soir'];
@@ -97,9 +97,9 @@ export async function statistiques(base, { maintenant = new Date(), instagramPou
 // Jours d'avance : jours consécutifs, à partir d'aujourd'hui, dont les trois
 // créneaux ont un post validé (jusqu'à 120 jours : la réserve peut couvrir
 // toute la banque, écrite d'un coup).
-export async function reserve(base, { maintenant = new Date(), fuseau = 'Europe/Paris' } = {}) {
+export async function reserve(base, { maintenant = new Date(), fuseau = 'Europe/Paris', langue = 'en' } = {}) {
   const debut = aujourdhui(fuseau, maintenant);
-  const posts = await base.select('social_posts', `select=jour,creneau,statut&jour=gte.${debut}&statut=eq.valide`);
+  const posts = await base.select('social_posts', `select=jour,creneau,statut&langue=eq.${langue}&jour=gte.${debut}&statut=eq.valide`);
   let jours = 0;
   for (let i = 0; i < 120; i++) {
     const jour = ajouterJours(debut, i);
@@ -113,11 +113,13 @@ export async function reserve(base, { maintenant = new Date(), fuseau = 'Europe/
 // fichier, le dernier refus faisant foi. La routine ne réécrit jamais un
 // fichier existant, sauf ceux-là : sans cette liste, un fichier refusé
 // restait refusé à chaque passage et son créneau ne partait jamais.
-async function refusesSynchro(base, maintenant) {
+async function refusesSynchro(base, maintenant, langue = 'en') {
   const depuis = new Date(maintenant.getTime() - 24 * 3600 * 1000).toISOString();
   const lignes = await base.select('social_journal', `select=message,details,at&source=eq.synchro&niveau=eq.erreur&at=gte.${depuis}&order=at.desc&limit=200`);
   const parFichier = new Map();
   for (const l of lignes) {
+    // chaque atelier ne reçoit que ses fichiers (un refus sans langue est de Quiz Couple)
+    if ((l.details?.langue || 'en') !== langue) continue;
     const fichier = l.details?.fichier || (l.message.match(/^(\S+\.json)/) || [])[1];
     if (!fichier || parFichier.has(fichier)) continue;
     parFichier.set(fichier, { fichier, fautes: l.details?.fautes || [l.message] });
@@ -127,9 +129,12 @@ async function refusesSynchro(base, maintenant) {
 
 // Les sujets datés (Noël, Nouvel An) de la banque du dépôt : une idée de
 // Thomas ne prend jamais leur créneau. Sans le fichier, aucune date.
-function sujetsDates() {
+// La banque de chaque atelier : reseaux/atelier pour Quiz Couple,
+// reseaux/mipaps/atelier pour Les mipaps.
+export const dossierAtelier = (langue) => path.join(path.dirname(fileURLToPath(import.meta.url)), '..', ...(langue === 'fr' ? ['mipaps', 'atelier'] : ['atelier']));
+function sujetsDates(langue = 'en') {
   try {
-    const chemin = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'atelier', 'sujets.json');
+    const chemin = path.join(dossierAtelier(langue), 'sujets.json');
     return (JSON.parse(fs.readFileSync(chemin, 'utf8')).saison?.sujets || []).map((s) => ({ jour: s.jour, creneau: s.creneau }));
   } catch {
     return [];
@@ -143,13 +148,16 @@ function sujetsDates() {
 // L'horizon est long (100 jours) depuis le 7 octobre 2026 : la routine écrit
 // toute la réserve d'avance, pour que le compte continue à publier même si
 // elle ne tourne plus (le rendu et la publication n'ont pas besoin d'elle).
-export async function etat(base, { maintenant = new Date(), horizon = 100 } = {}) {
-  const [compte] = await base.select('social_comptes', 'select=langue,fuseau,actif,creneaux&order=langue.asc&limit=1');
+// Un état par compte : Quiz Couple (en, reseaux/atelier/etat.json) et Les
+// mipaps (fr, reseaux/mipaps/atelier/etat.json), chacun avec sa grille, ses
+// posts, ses idées et sa banque.
+export async function etat(base, { maintenant = new Date(), horizon = 100, langue = 'en' } = {}) {
+  const [compte] = await base.select('social_comptes', `select=langue,nom,fuseau,actif,creneaux,melange&langue=eq.${langue}`);
   const fuseau = compte?.fuseau || 'Europe/Paris';
   const debut = aujourdhui(fuseau, maintenant);
   const minutesMaintenant = minutesLocales(fuseau, maintenant);
-  const melange = await base.reglage('melange');
-  const posts = await base.select('social_posts', `select=id,jour,creneau,format,gabarit,categorie,statut&jour=gte.${ajouterJours(debut, -30)}&order=jour.asc`);
+  const melange = melangeDuCompte(compte, await base.reglage('melange'));
+  const posts = await base.select('social_posts', `select=id,jour,creneau,format,gabarit,categorie,statut&langue=eq.${langue}&jour=gte.${ajouterJours(debut, -30)}&order=jour.asc`);
   const variantes = posts.length
     ? await base.select('social_variantes', `select=post_id,langue,statut,legende,recette,erreur&post_id=in.(${posts.map((p) => p.id).join(',')})`)
     : [];
@@ -181,17 +189,20 @@ export async function etat(base, { maintenant = new Date(), horizon = 100 } = {}
   // les idées de Thomas, dans l'ordre où il les a notées, chacune avec le
   // créneau le plus proche de sa catégorie (lib/idees.mjs) ; une idée sans
   // catégorie laisse la routine choisir, prochain_creneau lui dit où
-  const idees = await base.select('social_idees', 'select=id,texte,source,categorie,created_at&utilisee_le=is.null&order=created_at.asc');
+  const idees = await base.select('social_idees', `select=id,texte,source,categorie,created_at&langue=eq.${langue}&utilisee_le=is.null&order=created_at.asc`);
   const { vises, prochain } = viserCreneaux(idees, {
-    melange, posts, variantes, dates: sujetsDates(), debut, horizon,
+    melange, posts, variantes, dates: sujetsDates(langue), debut, horizon, categories: categoriesIdee(langue),
     ouvert: (jour, creneau, i) => i > 0 || debutCreneau(compte, creneau) >= minutesMaintenant + MARGE_MIN,
   });
   const stats = await base.select('social_stats', 'select=variante_id,releve,vues,partages,enregistrements&releve=eq.j7');
   return {
     genere_le: maintenant.toISOString(),
+    langue,
+    compte: compte ? { nom: compte.nom || null, actif: !!compte.actif } : null,
     fuseau,
     aujourdhui: debut,
-    reserve_jours: await reserve(base, { maintenant, fuseau }),
+    melange,
+    reserve_jours: await reserve(base, { maintenant, fuseau, langue }),
     a_remplir: aRemplir,
     // seulement ce qui peut encore partir : un post dont le créneau est passé
     // ne sera plus publié quoi qu'on en fasse (la publication refuse tout
@@ -208,7 +219,7 @@ export async function etat(base, { maintenant = new Date(), horizon = 100 } = {}
       .filter((p) => p.attendue && p.attendue !== p.categorie),
     // fichiers refusés par la synchro ces dernières 24 h, avec leurs fautes :
     // le fichier existe sur la branche mais rien n'est en base
-    refuses: await refusesSynchro(base, maintenant),
+    refuses: await refusesSynchro(base, maintenant, langue),
     recents_et_prevus: posts.map(resume),
     idees: idees.map((i) => ({ ...i, creneau_vise: vises.get(i.id) ?? null })),
     prochain_creneau: prochain,
@@ -221,9 +232,14 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   await verifierJetons(base);
   await menage(base);
   await statistiques(base);
-  const e = await etat(base);
-  if (e.reserve_jours < 7) await base.journal('alerte', 'entretien', `réserve de ${e.reserve_jours} jours seulement`);
-  const i = process.argv.indexOf('--etat');
-  if (i > 0) fs.writeFileSync(process.argv[i + 1], JSON.stringify(e, null, 2) + '\n');
-  console.log(`réserve : ${e.reserve_jours} jours, ${e.a_remplir.length} créneaux à remplir, ${e.a_corriger.length} à corriger, ${e.hors_grille.length} hors grille, ${e.refuses.length} fichiers refusés, ${e.idees.length} idées de Thomas`);
+  // un état par compte : --etat <fichier> pour Quiz Couple (en), --etat-fr
+  // <fichier> pour Les mipaps ; un compte sans fichier est quand même compté
+  const comptes = await base.select('social_comptes', 'select=langue&order=langue.asc');
+  for (const { langue } of comptes.length ? comptes : [{ langue: 'en' }]) {
+    const e = await etat(base, { langue });
+    if (e.reserve_jours < 7) await base.journal('alerte', 'entretien', `réserve ${langue} de ${e.reserve_jours} jours seulement`);
+    const i = process.argv.indexOf(langue === 'en' ? '--etat' : `--etat-${langue}`);
+    if (i > 0) fs.writeFileSync(process.argv[i + 1], JSON.stringify(e, null, 2) + '\n');
+    console.log(`${langue} : réserve de ${e.reserve_jours} jours, ${e.a_remplir.length} créneaux à remplir, ${e.a_corriger.length} à corriger, ${e.hors_grille.length} hors grille, ${e.refuses.length} fichiers refusés, ${e.idees.length} idées de Thomas`);
+  }
 }
