@@ -1,0 +1,28 @@
+{
+  "jour": "2026-10-11",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-015",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Déclaration : la phrase qu'on se dédie, en grand, et le petit duo main dans la main dessous. Reprise de « same team, even on the days we disagree ».",
+        "style": "declaration",
+        "texte": "on est dans la même équipe. même les jours où on n'est pas d'accord. surtout ces jours-là."
+      },
+      "legende": "surtout ces jours-là.\n\ngarde ça pour un soir où ça va pas",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#couplegoals"
+      ]
+    }
+  }
+}

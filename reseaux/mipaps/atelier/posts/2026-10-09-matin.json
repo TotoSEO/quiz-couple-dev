@@ -1,0 +1,207 @@
+{
+  "jour": "2026-10-09",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-001",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Il la voit de loin, sprinte vers elle, ne freine pas à temps et la dépasse, revient essoufflé, et câlin. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4.5,
+            "description": "Elle attend au milieu droit, les bras croisés, elle tapote du pied. Il surgit du bord gauche en courant de profil, les bras en l'air de joie, de la poussière derrière lui ; il passe au sprint et la dépasse sans freiner, il sort par la droite. Elle le suit des yeux, surprise, puis perplexe.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 2.3,
+                    "expression": "surpris",
+                    "vers": 1
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "perplexe"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 300,
+                    "pose": "sprint",
+                    "expression": "energique"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 820
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand il me voit de loin",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il revient du bord droit en courant, essoufflé, s'arrête devant elle, se tourne vers nous en soufflant, puis devient tout timide. Elle rit, puis fond complètement.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "expression": "perplexe"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "rire"
+                  },
+                  {
+                    "a": 3,
+                    "expression": "transi"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 820,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "essouffle"
+                  },
+                  {
+                    "a": 1.7,
+                    "x": 290,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.2,
+                    "angle": 0
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "timide"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "il freine jamais à temps",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Les deux se font un câlin au milieu, yeux fermés, et trois petits cœurs flottent au-dessus d'eux pendant que la phrase s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "calin",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "transi",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 250,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 1.1,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 1.5,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "mais il revient toujours <3",
+                "de": 0.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "il freine jamais. il revient toujours.\n\nenvoie ça à celui qui court vers toi",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

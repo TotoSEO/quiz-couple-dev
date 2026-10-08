@@ -1,0 +1,80 @@
+{
+  "jour": "2026-10-11",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-002",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Petit message pour toi : une histoire tendre en six pages, avec une pointe de taquinerie au milieu, et le câlin pour finir.",
+        "pages": [
+          {
+            "texte": "petit message pour toi",
+            "dessin": {
+              "elements": [
+                { "perso": "elle", "expression": "timide", "bras": "tient", "x": 320, "taille": 270 },
+                { "objet": "lettre", "x": 350, "y": 352, "echelle": 0.6 }
+              ]
+            }
+          },
+          {
+            "texte": "j'aime bien quand t'es là.",
+            "dessin": {
+              "elements": [
+                { "perso": "elle", "expression": "content", "x": 250, "taille": 250 },
+                { "perso": "lui", "expression": "content", "x": 400, "taille": 250 }
+              ]
+            }
+          },
+          {
+            "texte": "même quand tu dis rien.",
+            "dessin": {
+              "elements": [
+                { "perso": "elle", "expression": "amour", "vers": 1, "x": 240, "taille": 250 },
+                { "perso": "lui", "expression": "zen", "pose": "assis", "x": 410, "taille": 250 }
+              ]
+            }
+          },
+          {
+            "texte": "surtout quand tu dis rien, en vrai.",
+            "dessin": {
+              "elements": [
+                { "perso": "elle", "expression": "moqueur", "x": 250, "taille": 250 },
+                { "perso": "lui", "expression": "vexe", "x": 410, "taille": 250 }
+              ]
+            }
+          },
+          {
+            "texte": "non mais je rigole. viens là.",
+            "dessin": {
+              "elements": [
+                { "perso": "lui", "expression": "calin", "bras": "tend_d", "pose": "penche_d", "x": 270, "taille": 260 },
+                { "perso": "elle", "expression": "transi", "bras": "tend_g", "pose": "penche_g", "x": 385, "taille": 252 },
+                { "objet": "coeur", "x": 330, "y": 160, "echelle": 0.45 }
+              ]
+            }
+          },
+          {
+            "texte": "voilà. c'est tout.",
+            "dessin": {
+              "elements": [
+                { "perso": "lui", "expression": "content", "bras": "tend_d", "x": 250, "taille": 250 },
+                { "perso": "elle", "expression": "joie", "bras": "tend_g", "x": 410, "taille": 250 },
+                { "objet": "coeur", "x": 330, "y": 230, "echelle": 0.35 }
+              ]
+            },
+            "appel": "envoie ça à ta personne"
+          }
+        ]
+      },
+      "legende": "voilà. c'est tout.\n\nenvoie ça à ta personne",
+      "hashtags": ["#lesmipaps", "#couple", "#amour", "#mignon"]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "jour": "2026-10-10",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-020",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Dessin de bureau : le diagramme de Venn de bom.seeat (1 100 partages), ce qui me calme, ce qui me stresse, et toi au milieu.",
+        "style": "schema",
+        "texte": "comment tu fais pour être les deux en même temps ?",
+        "schema": {
+          "type": "venn",
+          "gauche": "ce qui me calme",
+          "droite": "ce qui me stresse",
+          "milieu": "toi"
+        }
+      },
+      "legende": "les deux. en même temps. tous les jours.\n\nc'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

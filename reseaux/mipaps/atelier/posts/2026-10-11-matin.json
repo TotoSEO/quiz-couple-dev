@@ -1,0 +1,302 @@
+{
+  "jour": "2026-10-11",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-006",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Elle lui vole son pull : elle arrive, le prend, s'en va ravie ; lui reste frigorifié ; elle revient se blottir contre lui, dans le pull, et on partage.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Lui au milieu droit, content, son pull sur les pattes. Le texte « quand il a un pull et que j'ai froid » se pose à 0,2 s. Elle entre par la gauche à 0,3 s en marchant, de profil, et s'arrête devant lui à 2,1 s, se tourne vers nous avec un air malicieux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "curieux"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": -140,
+                    "pose": "marche",
+                    "angle": 90,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.1,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.5,
+                    "angle": 0,
+                    "expression": "malicieux"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pull",
+                "x": 420,
+                "y": 352,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand il a un pull et que j'ai froid",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Elle tend la patte vers le pull à 0,2 s ; le pull glisse de ses pattes à lui vers elle entre 0,4 et 1 s ; lui est surpris à 0,6 s. À 1 s elle est ravie, et dès 1,4 s elle repart vers la gauche en marchant, le pull avec elle, jusqu'au bord à 3,2 s. Le texte « (c'est le mien maintenant) » en haut à 1,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "expression": "curieux",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "surpris",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "bouche_bee"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 0.2,
+                    "bras": "pointe"
+                  },
+                  {
+                    "a": 1,
+                    "expression": "joie",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 300,
+                    "pose": "marche",
+                    "angle": 90
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 130
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pull",
+                "x": 420,
+                "y": 352,
+                "echelle": 0.8,
+                "etapes": [
+                  {
+                    "a": 0.4,
+                    "x": 420,
+                    "y": 352
+                  },
+                  {
+                    "a": 1,
+                    "x": 300,
+                    "y": 352
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 300
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 130
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "(c'est le mien maintenant, merci)",
+                "de": 1.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 2.5,
+            "transition": "fondu",
+            "description": "Lui tout seul au milieu, frigorifié : en boule, bras croisés, des flocons autour, il tremble. Le texte « lui, deux minutes plus tard » en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "expression": "froid"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "lui, deux minutes plus tard",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Elle revient par la gauche en marchant avec le pull dès 0,2 s, s'arrête contre lui à 1,6 s et se tourne vers nous pour un câlin ; à 1,8 s il fond, les bras tendus vers elle ; trois cœurs flottent à partir de 2 s. « bon. on partage. <3 » s'écrit mot à mot en haut à partir de 1,9 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "expression": "froid"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "transi",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": 130,
+                    "pose": "marche",
+                    "angle": 90,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 300,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 1.9,
+                    "angle": 0,
+                    "expression": "calin",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pull",
+                "x": 130,
+                "y": 352,
+                "echelle": 0.8,
+                "a": 1.9,
+                "etapes": [
+                  {
+                    "a": 0.2,
+                    "x": 130
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 300
+                  }
+                ]
+              },
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 2,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 250,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 2.4,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 445,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 2.8,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "bon. on partage. <3",
+                "de": 1.9,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "il a froid, j'ai le pull, tout le monde est content.\n\ntague celle qui te vole tes pulls",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

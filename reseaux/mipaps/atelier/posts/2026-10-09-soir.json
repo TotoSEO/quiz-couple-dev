@@ -1,0 +1,147 @@
+{
+  "jour": "2026-10-09",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-001",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Histoire en six pages : ce qu'elle imagine quand il ne répond pas, de « il conduit » aux extraterrestres, et la chute : il dormait. D'après le reel de story.sketchers (44 600 vues).",
+        "pages": [
+          {
+            "texte": "ce que j'imagine quand tu réponds pas",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "attend",
+                  "bras": "tient",
+                  "x": 320,
+                  "taille": 270
+                },
+                {
+                  "objet": "telephone",
+                  "x": 350,
+                  "y": 352,
+                  "echelle": 0.6
+                }
+              ]
+            }
+          },
+          {
+            "texte": "10 min : il conduit, c'est normal.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "pensif",
+                  "x": 262,
+                  "taille": 250
+                },
+                {
+                  "objet": "voiture",
+                  "x": 440,
+                  "y": 342,
+                  "echelle": 0.9
+                }
+              ]
+            }
+          },
+          {
+            "texte": "30 min : il a plus de batterie. sûrement.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "hesite",
+                  "x": 292,
+                  "taille": 250
+                },
+                {
+                  "objet": "telephone",
+                  "x": 420,
+                  "y": 348,
+                  "echelle": 0.65
+                }
+              ]
+            }
+          },
+          {
+            "texte": "1 h : il m'en veut ?? j'ai dit quoi ??",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "inquiet",
+                  "signes": [
+                    "nuage_noir"
+                  ],
+                  "x": 320,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "2 h : il a été enlevé par des extraterrestres. c'est la seule explication.",
+            "dessin": {
+              "elements": [
+                {
+                  "objet": "etoiles",
+                  "x": 186,
+                  "y": 196,
+                  "echelle": 0.9
+                },
+                {
+                  "objet": "lune",
+                  "x": 470,
+                  "y": 176,
+                  "echelle": 0.8
+                },
+                {
+                  "perso": "elle",
+                  "expression": "panique",
+                  "x": 320,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "il dormait.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "x": 300,
+                  "taille": 260
+                },
+                {
+                  "objet": "telephone",
+                  "x": 452,
+                  "y": 362,
+                  "echelle": 0.55
+                }
+              ]
+            },
+            "appel": "envoie ça à celui qui répond jamais"
+          }
+        ]
+      },
+      "legende": "2 h plus tard il dormait. évidemment.\n\nenvoie ça à celui qui répond jamais",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

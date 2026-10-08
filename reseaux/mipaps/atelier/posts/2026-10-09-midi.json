@@ -1,0 +1,50 @@
+{
+  "jour": "2026-10-09",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-001",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : lui, amoureux, des cœurs autour, et un message envoyé comme un texto. Le « c'est tout. » fait le ton.",
+        "style": "mini",
+        "texte": "j'pense à toi là. c'est tout.",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "amour",
+              "x": 320,
+              "taille": 290
+            },
+            {
+              "objet": "coeur",
+              "x": 196,
+              "y": 178,
+              "echelle": 0.42
+            },
+            {
+              "objet": "coeur",
+              "x": 458,
+              "y": 150,
+              "echelle": 0.3
+            }
+          ]
+        }
+      },
+      "legende": "(c'est tout, mais c'est beaucoup)\n\nenvoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}
