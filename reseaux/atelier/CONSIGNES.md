@@ -72,8 +72,12 @@ Puis `reseaux/atelier/etat.json`, écrit chaque matin par l'entretien :
   corrigeant les fautes, et on le repasse au contrôle.
 - `recents_et_prevus` : ce qui est passé et prévu, pour ne jamais répéter
   une phrase, une question ou une scène de la semaine.
-- `idees` : les idées de Thomas. Elles passent avant la banque ; le post
-  qui en reprend une porte son `idee_id`.
+- `idees` : les idées de Thomas, dans l'ordre où il les a notées, chacune
+  avec sa `categorie` (ou `null` s'il a laissé le choix) et son
+  `creneau_vise` : le créneau le plus proche de cette catégorie où rien
+  n'est encore parti. Elles passent avant tout le reste, voir « Les idées de
+  Thomas, avant tout le reste » plus bas. `prochain_creneau` donne, par
+  catégorie, le premier créneau encore libre, pour une idée sans catégorie.
 - `statistiques_j7` : ce qui a marché. On choisit un peu plus souvent les
   piliers et les décors qui ont le plus de partages et d'enregistrements.
 
@@ -81,19 +85,50 @@ Sans `etat.json` (premier jour), on remplit d'aujourd'hui (créneaux qui
 commencent dans plus de trois heures, heure de Paris) à J+100 en suivant la
 semaine type, en sautant les fichiers déjà présents dans `posts/`.
 
+## Les idées de Thomas, avant tout le reste
+
+Une idée notée dans l'admin est une phrase, parfois deux : la situation, et
+la chute s'il l'a. Elle prend le `creneau_vise` que donne `etat.json`, le
+créneau le plus proche de sa catégorie, **même si un post y est déjà
+écrit** : on remplace le fichier `posts/<jour>-<créneau>.json` (c'est une des
+trois exceptions à la règle « jamais réécrit »), et le sujet du post remplacé
+retourne de lui-même dans la banque, puisqu'il n'est plus dans `posts/`. Le
+nouveau post porte `idee_id` (l'`id` de l'idée) et `sujet: "idee-<les huit
+premiers caractères de l'id>"` ; le contrôle l'accepte ainsi, et la synchro
+marque l'idée « utilisée » dans l'admin.
+
+On développe l'idée comme n'importe quel sujet de la banque, dans la même
+ligne (décor, mascottes, rythme, légende), mais on garde ce que Thomas a
+écrit : sa situation, sa chute, et une phrase entre guillemets est reprise
+telle quelle (traduite fidèlement en anglais si elle est en français). Si
+l'idée dit déjà beaucoup (décor, enchaînement, texte), on la suit ; si elle
+tient en six mots, on invente le reste. Le champ `idee` de la recette reprend
+sa phrase.
+
+Sans `categorie`, on la déduit du texte : une situation à jouer → `pov`
+(coquine → `coquin`) ; une question à poser au couple → `connais-tu` ; un
+dilemme → `tu-preferes` ; une phrase douce → `phrase` ; un gag en quatre
+temps → `bd` ; un dessin et une phrase → `statique`. Puis on prend
+`prochain_creneau[categorie]` ; pour une deuxième idée sans catégorie qui
+tomberait dans la même catégorie, le créneau suivant de cette catégorie dans
+la semaine type, en vérifiant dans `recents_et_prevus` que rien n'y est parti.
+
+L'état ne vise jamais un créneau à sujet daté (Noël, Nouvel An) ni un créneau
+dont le post est déjà parti (publié, ou conteneur créé). On écrit chaque idée
+traitée dans le journal du passage : le créneau pris, le post remplacé.
+
 ## 3. Choisir le sujet
 
 Pour chaque créneau à remplir, dans l'ordre des dates :
 
 1. s'il existe un sujet daté (`saison.sujets`) pour ce jour et ce créneau,
    c'est lui ;
-2. sinon une idée de Thomas qui va avec la catégorie ;
-3. sinon le premier sujet de la catégorie qui n'apparaît dans aucun post de
+2. sinon le premier sujet de la catégorie qui n'apparaît dans aucun post de
    `posts/` (champ `sujet`) ni dans `deja_publies.sujets` de `sujets.json`
    (les posts partis sur le compte en dehors de l'atelier, comme le reel
    d'essai des fleurs du 7 octobre 2026) : **jamais de doublon**, ni de
    sujet, ni de scène, ni de phrase déjà vue dans `recents_et_prevus` ;
-4. sinon (la banque de la catégorie est épuisée, elle couvre treize
+3. sinon (la banque de la catégorie est épuisée, elle couvre treize
    semaines) tu inventes un sujet dans le même esprit que ceux de la
    banque, avec un identifiant neuf (`pov-274`, `connais-tu-40`...), sans
    reprendre une situation vue dans `recents_et_prevus` ni dans les
@@ -103,8 +138,9 @@ Pour chaque créneau à remplir, dans l'ordre des dates :
 **Un créneau dont le fichier existe déjà dans `posts/` n'est jamais réécrit**,
 même s'il figure encore dans `a_remplir` (l'état est calculé sur ce qui est
 déjà passé dans Supabase, un post poussé depuis peut y manquer) : on passe
-au suivant. Deux exceptions, et deux seulement : les fichiers listés dans
-`refuses` et dans `hors_grille`, qu'on réécrit (voir plus haut).
+au suivant. Trois exceptions, et trois seulement : les fichiers listés dans
+`refuses` et dans `hors_grille`, qu'on réécrit (voir plus haut), et le
+`creneau_vise` d'une idée de Thomas (section suivante).
 
 **Au plus 24 posts par passage**, les créneaux les plus proches d'abord.
 Chaque post est contrôlé et regardé (planche) avant d'être poussé : on ne

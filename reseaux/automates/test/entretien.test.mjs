@@ -67,6 +67,40 @@ test('l\'état signale les posts hors grille et les fichiers refusés par la syn
   assert.deepEqual(e.refuses, [{ fichier: '2026-10-14-soir.json', fautes: ['tiret cadratin', '1 à 5 hashtags'] }]);
 });
 
+test('l\'état donne à chaque idée de Thomas le créneau qu\'elle vise, et le prochain créneau libre par catégorie', async () => {
+  const b = new BaseMemoire({
+    social_comptes: [{ id: 'c', langue: 'en', fuseau: 'Europe/Paris' }],
+    // la grille avec la BD du mardi soir (8 octobre 2026)
+    social_reglages: [{ cle: 'melange', valeur: { ...melange, soir: { ...melange.soir, 2: 'bd' } } }],
+    social_posts: [
+      { id: 'lundi-matin', jour: '2026-10-12', creneau: 'matin', statut: 'valide', format: 'reel', gabarit: 'pov', categorie: 'pov' },
+      { id: 'lundi-soir', jour: '2026-10-12', creneau: 'soir', statut: 'valide', format: 'reel', gabarit: 'pov', categorie: 'pov' },
+      { id: 'mardi-soir', jour: '2026-10-13', creneau: 'soir', statut: 'valide', format: 'image', gabarit: 'bd', categorie: 'bd' },
+    ],
+    social_variantes: [
+      { id: 'v1', post_id: 'lundi-matin', langue: 'en', statut: 'publie', recette: {} },
+      { id: 'v2', post_id: 'lundi-soir', langue: 'en', statut: 'rendu', recette: {} },
+      { id: 'v3', post_id: 'mardi-soir', langue: 'en', statut: 'rendu', recette: {} },
+    ],
+    social_idees: [
+      { id: 'i-bd', texte: 'BD : elle a froid, il donne son pull, il a froid', categorie: 'bd', source: 'thomas', utilisee_le: null, created_at: '2026-10-12T02:00:00Z' },
+      { id: 'i-pov', texte: 'POV : il rentre avec des fleurs', categorie: 'pov', source: 'thomas', utilisee_le: null, created_at: '2026-10-12T02:10:00Z' },
+      { id: 'i-libre', texte: 'un truc sur la jalousie', categorie: null, source: 'thomas', utilisee_le: null, created_at: '2026-10-12T02:20:00Z' },
+      { id: 'i-faite', texte: 'déjà prise', categorie: 'pov', source: 'thomas', utilisee_le: '2026-10-11T08:00:00Z', created_at: '2026-10-10T02:00:00Z' },
+    ],
+  });
+  // 5 h 11 à Paris le lundi 12 : le matin (6 h) est trop proche, le soir du 12 (rendu, pas parti) peut être remplacé
+  const e = await etat(b, { maintenant: new Date('2026-10-12T03:11:00Z'), horizon: 10 });
+  assert.deepEqual(e.idees.map((i) => [i.id, i.categorie, i.creneau_vise]), [
+    ['i-bd', 'bd', { jour: '2026-10-13', creneau: 'soir' }],
+    ['i-pov', 'pov', { jour: '2026-10-12', creneau: 'soir' }],
+    ['i-libre', null, null],
+  ]);
+  assert.deepEqual(e.prochain_creneau.pov, { jour: '2026-10-13', creneau: 'matin' }, 'après le soir du 12 pris par une idée');
+  assert.deepEqual(e.prochain_creneau.bd, { jour: '2026-10-20', creneau: 'soir' });
+  assert.deepEqual(e.prochain_creneau.phrase, { jour: '2026-10-17', creneau: 'soir' });
+});
+
 test('le ménage efface les fichiers lourds 24 h après publication, garde la vignette', async () => {
   const b = new BaseMemoire({
     social_variantes: [

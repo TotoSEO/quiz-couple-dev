@@ -509,12 +509,25 @@
               <div class="stats-panel-head">
                 <div>
                   <h2 class="stats-panel-title">Idées de posts</h2>
-                  <p class="stats-panel-sub">Une phrase suffit. Claude les place en priorité dans le planning.</p>
+                  <p class="stats-panel-sub">Une phrase suffit : la situation, et la chute si tu l'as. Claude écrit le scénario, les textes et la légende, et prend le créneau le plus proche de la catégorie. Une phrase entre guillemets est reprise telle quelle.</p>
                 </div>
               </div>
               <form id="rsx-idee-form" class="rsx-idee-form">
-                <input type="text" id="rsx-idee" class="input" maxlength="500" placeholder="POV : quand il rentre avec des fleurs" autocomplete="off">
-                <button type="submit" class="btn btn-primary">Ajouter</button>
+                <textarea id="rsx-idee" class="input" rows="2" maxlength="1000" placeholder="POV : il rentre avec des fleurs, elle croit qu'il a fait une bêtise" autocomplete="off"></textarea>
+                <div class="rsx-idee-ligne">
+                  <select id="rsx-idee-categorie" class="rsx-select" aria-label="Catégorie">
+                    <option value="">Claude choisit la catégorie</option>
+                    <option value="pov">Animation POV (matin et soir)</option>
+                    <option value="bd">BD en quatre cases (mardi soir)</option>
+                    <option value="connais-tu">Connais-tu ton partenaire ? (midi)</option>
+                    <option value="tu-preferes">Tu préfères (midi)</option>
+                    <option value="statique">Reel statique, dessin et phrase (midi)</option>
+                    <option value="phrase">Phrase tendre (week-end soir)</option>
+                    <option value="coquin">Animation coquine (vendredi soir)</option>
+                    <option value="carrousel">Carrousel de questions (jeudi soir)</option>
+                  </select>
+                  <button type="submit" class="btn btn-primary">Ajouter</button>
+                </div>
               </form>
               <ul id="rsx-idees" class="rsx-idees"></ul>
             </div>

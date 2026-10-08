@@ -3,10 +3,12 @@
 //
 //   node reseaux/automates/entretien.mjs [--etat <fichier>]
 import fs from 'node:fs';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { Instagram, verifierJeton } from './lib/instagram.mjs';
 import { ajouterJours, aujourdhui, categorieAttendue } from './lib/calendrier.mjs';
+import { viserCreneaux } from './lib/idees.mjs';
 
 const JOUR = 86400000;
 const CRENEAUX = ['matin', 'midi', 'soir'];
@@ -123,10 +125,21 @@ async function refusesSynchro(base, maintenant) {
   return [...parFichier.values()];
 }
 
+// Les sujets datés (Noël, Nouvel An) de la banque du dépôt : une idée de
+// Thomas ne prend jamais leur créneau. Sans le fichier, aucune date.
+function sujetsDates() {
+  try {
+    const chemin = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'atelier', 'sujets.json');
+    return (JSON.parse(fs.readFileSync(chemin, 'utf8')).saison?.sujets || []).map((s) => ({ jour: s.jour, creneau: s.creneau }));
+  } catch {
+    return [];
+  }
+}
+
 // Ce que la routine Claude lit avant d'écrire : les créneaux à remplir, ce
-// qui est déjà passé ou prévu (pour varier), les idées de Thomas, ce qui
-// marche, les recettes refusées à corriger, les posts hors grille et les
-// fichiers refusés par la synchro.
+// qui est déjà passé ou prévu (pour varier), les idées de Thomas avec le
+// créneau que chacune vise, ce qui marche, les recettes refusées à
+// corriger, les posts hors grille et les fichiers refusés par la synchro.
 // L'horizon est long (100 jours) depuis le 7 octobre 2026 : la routine écrit
 // toute la réserve d'avance, pour que le compte continue à publier même si
 // elle ne tourne plus (le rendu et la publication n'ont pas besoin d'elle).
@@ -165,7 +178,14 @@ export async function etat(base, { maintenant = new Date(), horizon = 100 } = {}
       erreur: v?.erreur || null,
     };
   };
-  const idees = await base.select('social_idees', 'select=id,texte,source,created_at&utilisee_le=is.null&order=created_at.asc');
+  // les idées de Thomas, dans l'ordre où il les a notées, chacune avec le
+  // créneau le plus proche de sa catégorie (lib/idees.mjs) ; une idée sans
+  // catégorie laisse la routine choisir, prochain_creneau lui dit où
+  const idees = await base.select('social_idees', 'select=id,texte,source,categorie,created_at&utilisee_le=is.null&order=created_at.asc');
+  const { vises, prochain } = viserCreneaux(idees, {
+    melange, posts, variantes, dates: sujetsDates(), debut, horizon,
+    ouvert: (jour, creneau, i) => i > 0 || debutCreneau(compte, creneau) >= minutesMaintenant + MARGE_MIN,
+  });
   const stats = await base.select('social_stats', 'select=variante_id,releve,vues,partages,enregistrements&releve=eq.j7');
   return {
     genere_le: maintenant.toISOString(),
@@ -190,7 +210,8 @@ export async function etat(base, { maintenant = new Date(), horizon = 100 } = {}
     // le fichier existe sur la branche mais rien n'est en base
     refuses: await refusesSynchro(base, maintenant),
     recents_et_prevus: posts.map(resume),
-    idees,
+    idees: idees.map((i) => ({ ...i, creneau_vise: vises.get(i.id) ?? null })),
+    prochain_creneau: prochain,
     statistiques_j7: stats,
   };
 }
@@ -204,5 +225,5 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   if (e.reserve_jours < 7) await base.journal('alerte', 'entretien', `réserve de ${e.reserve_jours} jours seulement`);
   const i = process.argv.indexOf('--etat');
   if (i > 0) fs.writeFileSync(process.argv[i + 1], JSON.stringify(e, null, 2) + '\n');
-  console.log(`réserve : ${e.reserve_jours} jours, ${e.a_remplir.length} créneaux à remplir, ${e.a_corriger.length} à corriger, ${e.hors_grille.length} hors grille, ${e.refuses.length} fichiers refusés`);
+  console.log(`réserve : ${e.reserve_jours} jours, ${e.a_remplir.length} créneaux à remplir, ${e.a_corriger.length} à corriger, ${e.hors_grille.length} hors grille, ${e.refuses.length} fichiers refusés, ${e.idees.length} idées de Thomas`);
 }
