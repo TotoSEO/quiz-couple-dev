@@ -46,14 +46,23 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
       bilan.ignores++;
       continue; // un post passé n'est plus touché
     }
+    // La grille de la semaine (réglage « melange ») peut changer après
+    // l'écriture d'un post : le 8 octobre 2026 le mardi soir est passé de pov
+    // à bd, et deux POV déjà écrits pour les 13 et 20 octobre ont été refusés
+    // à chaque passage, donc jamais rendus ni publiés, la routine ne
+    // réécrivant pas un fichier existant. Un post hors grille est accepté
+    // avec une alerte ; l'entretien le signale à la routine (`hors_grille`
+    // dans etat.json) pour qu'elle le réécrive dans la bonne catégorie.
     const attendu = categorieAttendue(melange, post.jour, post.creneau);
-    if (attendu && attendu !== post.categorie) fautes.push(`le créneau ${post.creneau} du ${post.jour} attend la catégorie ${attendu}, pas ${post.categorie}`);
+    const horsGrille = attendu && attendu !== post.categorie ? `le créneau ${post.creneau} du ${post.jour} attend la catégorie ${attendu}, ${post.categorie} accepté en attendant sa réécriture` : null;
     for (const langue of Object.keys(post.variantes || {})) {
       if (!comptes.some((c) => c.langue === langue)) fautes.push(`aucun compte pour la langue ${langue}`);
     }
     if (fautes.length) {
       bilan.refuses++;
-      await base.journal('erreur', 'synchro', `${fichier} refusé`, { fautes });
+      // les fautes dans le message : le journal du workflow les montre sans
+      // ouvrir l'admin, et l'entretien les remet à la routine (`refuses`)
+      await base.journal('erreur', 'synchro', `${fichier} refusé : ${fautes.join(' ; ')}`, { fichier, fautes });
       continue;
     }
     const [deja] = await base.select('social_posts', `select=id,statut&jour=eq.${post.jour}&creneau=eq.${post.creneau}`);
@@ -111,6 +120,8 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
     if (post.idee_id) await base.update('social_idees', `id=eq.${post.idee_id}`, { utilisee_le: new Date().toISOString(), post_id: ligne.id });
     if (change) bilan.ecrits++;
     else bilan.inchanges++;
+    // une fois par écriture, pas à chaque passage horaire sur un fichier inchangé
+    if (horsGrille && change) await base.journal('alerte', 'synchro', `${fichier} : ${horsGrille}`, { fichier, attendue: attendu, categorie: post.categorie });
   }
   await base.journal('info', 'synchro', `${bilan.ecrits} posts écrits, ${bilan.inchanges} inchangés, ${bilan.refuses} refusés, ${bilan.ignores} passés ignorés`);
   return bilan;
@@ -136,5 +147,9 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const base = await connexion();
   const bilan = await synchroniser(base, lirePosts(dossier));
   console.log(bilan);
-  if (bilan.refuses) process.exitCode = 1;
+  // Un fichier refusé est une erreur de contenu, journalisée (pastille de
+  // l'onglet Réseaux, liste `refuses` de etat.json pour la routine) : il ne
+  // fait pas échouer le workflow. Jusqu'au 8 octobre 2026 le code de sortie
+  // passait à 1 et l'étape de rendu qui suit ne tournait pas : deux fichiers
+  // refusés ont arrêté le rendu de toute la réserve pendant une matinée.
 }

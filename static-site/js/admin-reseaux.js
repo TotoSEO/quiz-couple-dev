@@ -197,10 +197,22 @@
     }).join('');
   }
 
+  var CATEGORIES_IDEE = { pov: 'Animation POV', bd: 'BD', 'connais-tu': 'Connais-tu', 'tu-preferes': 'Tu préfères', statique: 'Reel statique', phrase: 'Phrase tendre', coquin: 'Coquin', carrousel: 'Carrousel' };
+  function quand(c) { return jourLong(c.jour) + ', ' + (CRENEAUX[c.creneau] || c.creneau).toLowerCase(); }
+  // Ce que l'idée devient : la fonction d'admin calcule le créneau visé avec
+  // la règle de la routine (le plus proche de sa catégorie, rien d'encore
+  // parti), puis la synchro la marque utilisée avec le post qui la porte.
+  function etatIdee(i) {
+    if (i.utilisee_le) return i.post ? 'utilisée : post du ' + quand(i.post) : 'utilisée';
+    if (i.visee) return 'visée : ' + quand(i.visee) + ' (Claude l\'écrit à son passage de 5 h 44)';
+    if (!i.categorie) return 'Claude choisit la catégorie à son prochain passage (5 h 44), puis le créneau le plus proche';
+    return 'aucun créneau libre trouvé pour cette catégorie dans les cinq prochaines semaines';
+  }
   function rendreIdees() {
     var idees = donnees.idees || [];
     $('rsx-idees').innerHTML = idees.length ? idees.map(function (i) {
-      return '<li><span>' + esc(i.texte) + (i.utilisee_le ? ' <em class="rsx-gris">(utilisée)</em>' : '') + '</span>' +
+      return '<li><span>' + (i.categorie ? '<small class="rsx-idee-cat">' + esc(CATEGORIES_IDEE[i.categorie] || i.categorie) + '</small>' : '') +
+        '<span>' + esc(i.texte) + '</span><small class="rsx-idee-etat">' + esc(etatIdee(i)) + '</small></span>' +
         '<button class="rsx-btn rsx-btn--danger" data-act="supprimer_idee" data-id="' + i.id + '" aria-label="Supprimer">✕</button></li>';
     }).join('') : '<li class="rsx-gris">Aucune idée en attente.</li>';
   }
@@ -262,8 +274,10 @@
       e.preventDefault();
       var t = $('rsx-idee').value.trim();
       if (!t) return;
+      var categorie = $('rsx-idee-categorie').value || null;
       $('rsx-idee').value = '';
-      action({ action: 'idee', texte: t });
+      $('rsx-idee-categorie').value = '';
+      action({ action: 'idee', texte: t, categorie: categorie });
     });
     $('admin-reseaux-tab').addEventListener('click', function (e) {
       var b = e.target.closest('[data-act]');

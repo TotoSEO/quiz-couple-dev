@@ -41,7 +41,10 @@ for (const fichier of process.argv.slice(2)) {
     // le sujet : celui du jour s'il est daté, sinon un sujet libre de la banque
     const date = datés.find((s) => s.jour === post.jour && s.creneau === post.creneau);
     if (date && post.sujet !== date.id) fautes.push(`ce créneau a un sujet daté : ${date.id}`);
-    if (!date && !banque(post.categorie).some((s) => s.id === post.sujet)) fautes.push(`sujet « ${post.sujet} » absent de la banque ${post.categorie} (sujets.json)`);
+    // une idée de Thomas (admin) tient lieu de sujet : le post porte idee_id
+    // et un sujet « idee-<début de l'identifiant> », hors banque
+    if (post.idee_id && !/^idee-[0-9a-f]{8}$/.test(post.sujet || '')) fautes.push(`un post tiré d'une idée porte le sujet idee-<huit premiers caractères de idee_id>, pas « ${post.sujet} »`);
+    if (!date && !post.idee_id && !banque(post.categorie).some((s) => s.id === post.sujet)) fautes.push(`sujet « ${post.sujet} » absent de la banque ${post.categorie} (sujets.json)`);
     const deja = prisAilleurs(fichier).get(post.sujet);
     if (post.sujet && deja) fautes.push(`sujet ${post.sujet} déjà utilisé dans ${deja}`);
   } catch (e) {
