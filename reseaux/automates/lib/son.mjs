@@ -51,6 +51,9 @@ export const AMBIANCE_PAR_CATEGORIE = {
   coquin: 'coquin',
   'connais-tu': 'jeu',
   'tu-preferes': 'jeu',
+  // Les mipaps : les animations font rire, les dessins qui respirent attendrissent
+  'mipaps-anime': 'drole',
+  'mipaps-statique': 'tendre',
 };
 
 export function ambianceDuReel(recette, categorie) {

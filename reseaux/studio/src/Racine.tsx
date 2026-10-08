@@ -9,6 +9,10 @@ import { Pov } from './gabarits/Pov';
 import { ImageFixe } from './gabarits/ImageFixe';
 import { PageCarrousel } from './gabarits/Carrousel';
 import { Bd, PageBd } from './gabarits/Bd';
+import { MipapsAnime } from './mipaps/Anime';
+import { MipapsStatique } from './mipaps/Statique';
+import { MipapsPost } from './mipaps/Post';
+import { MipapsPage } from './mipaps/Histoire';
 import { planifier, type Plan } from './plan';
 import type { RecetteFixe, RecetteReel } from './recette';
 import exempleCitation from '../recettes/exemples/citation.json';
@@ -27,9 +31,11 @@ const Reel: React.FC<PropsReel> = ({ recette: brute, plan, verification, silenci
         <Jeu recette={recette} plan={p} verification={verification} />
       )}
       {recette.gabarit === 'pov' && <Pov recette={recette} plan={p} verification={verification} />}
+      {recette.gabarit === 'mipaps-reel' && <MipapsAnime recette={recette} plan={p} verification={verification} />}
+      {recette.gabarit === 'mipaps-statique' && <MipapsStatique recette={recette} plan={p} verification={verification} />}
       {!verification && !silencieux && (
         <>
-          {p.musique && <Musique fichier={p.musique} debut={recette.musiqueDebut} duree={p.duree} sons={p.sons} />}
+          {p.musique && <Musique fichier={p.musique} debut={'musiqueDebut' in recette ? recette.musiqueDebut : undefined} duree={p.duree} sons={p.sons} />}
           <Bruitages sons={p.sons} />
           {p.ambiances && p.ambiances.length > 0 && <Ambiances ambiances={p.ambiances} />}
         </>
@@ -41,6 +47,9 @@ const Reel: React.FC<PropsReel> = ({ recette: brute, plan, verification, silenci
 const Image: React.FC<PropsImage> = ({ recette: brute, page = 0, verification }) => {
   const recette = typographier(brute, brute.langue);
   if (recette.gabarit === 'image') return <ImageFixe recette={recette} verification={verification} />;
+  // les mipaps : le post et la page du carrousel-histoire
+  if (recette.gabarit === 'mipaps-post') return <MipapsPost recette={recette} verification={verification} />;
+  if (recette.gabarit === 'mipaps-carrousel') return <MipapsPage recette={recette} page={page} verification={verification} />;
   // la BD : les quatre cases en grille, ou une case par page en carrousel
   if (recette.gabarit === 'bd') {
     return recette.sortie === 'carrousel' ? <PageBd recette={recette} page={page} verification={verification} /> : <Bd recette={recette} verification={verification} />;

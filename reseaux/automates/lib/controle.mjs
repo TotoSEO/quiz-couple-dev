@@ -5,9 +5,10 @@
 import { controlerPov, VOCABULAIRE } from './pov.mjs';
 import { AMBIANCES, BIBLIOTHEQUE } from './musique.mjs';
 import { AMBIANCES_SON } from './son.mjs';
+import { CATEGORIES_MIPAPS, controlerMipaps, GABARITS_MIPAPS } from './mipaps.mjs';
 
 const CRENEAUX = ['matin', 'midi', 'soir'];
-const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', image: 'image', carrousel: 'carrousel', bd: 'image' };
+const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', image: 'image', carrousel: 'carrousel', bd: 'image', ...GABARITS_MIPAPS };
 // Le format que donne un gabarit : une image, sauf la BD rendue en carrousel
 // (une case par page) quand sa recette le demande.
 export const formatDuGabarit = (gabarit, recette) => (gabarit === 'bd' && recette?.sortie === 'carrousel' ? 'carrousel' : FORMAT_DU_GABARIT[gabarit]);
@@ -23,11 +24,14 @@ export const CATEGORIES = {
   post: 'image',
   carrousel: 'carrousel',
   bd: 'bd',
+  // le second compte, Les mipaps (reseaux/mipaps) : ses quatre formats
+  ...CATEGORIES_MIPAPS,
 };
 // Les jeux renvoient vers le site ; les animations et les phrases jamais
 // (seule la mention quiz-couple.com dans l'image).
 const RENVOI_AU_SITE = /quiz-couple\.com|link in bio|lien en bio/i;
-const SANS_RENVOI = ['pov', 'coquin', 'statique', 'phrase', 'bd'];
+// Les mipaps n'ont pas de site : jamais de renvoi, dans aucune catégorie.
+const SANS_RENVOI = ['pov', 'coquin', 'statique', 'phrase', 'bd', ...Object.keys(CATEGORIES_MIPAPS)];
 const THEMES = ['light', 'dark', 'marque'];
 const LANGUES = ['en', 'fr', 'es', 'de', 'it'];
 
@@ -104,6 +108,7 @@ export function controlerRecette(r, langue) {
     });
   }
   if (r.gabarit === 'pov') f.push(...controlerPov(r));
+  if (String(r.gabarit).startsWith('mipaps-')) f.push(...controlerMipaps(r));
   if (r.gabarit === 'quiz-chrono') {
     if (!Array.isArray(r.questions) || r.questions.length < 4 || r.questions.length > 8) f.push('un quiz chrono a de 4 à 8 questions');
     (r.questions || []).forEach((q, i) => {

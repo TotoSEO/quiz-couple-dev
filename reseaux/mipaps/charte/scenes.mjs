@@ -11,7 +11,7 @@ const plein = (d, w = 5) => `<path d="${d}" fill="${B}" stroke="${E}" stroke-wid
 const trait = (d, w = 3.4) => `<path d="${d}" fill="none" stroke="${E}" stroke-width="${w}" stroke-linejoin="round" stroke-linecap="round"/>`;
 // Les meubles vus de trois quarts, un peu par-dessus : un bord proche plus
 // large que le bord lointain, et une face avant. Dessinés dans la scène.
-const MEUBLES = {
+export const MEUBLES = {
   lit_fond: () => plein('M128,146 Q128,112 160,112 H480 Q512,112 512,146 V236 H128 Z') + trait('M160,140 V210 M320,132 V208 M480,140 V210', 3) +
     plein('M136,236 H504 L556,384 H84 Z') +
     plein('M186,232 Q190,214 212,212 L300,214 Q318,216 316,236 L312,262 Q302,274 284,272 L198,268 Q180,266 180,250 Z', 4.2) +

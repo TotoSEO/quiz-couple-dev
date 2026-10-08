@@ -6,7 +6,8 @@
 // rose pâle pour elle), des joues estompées, et rien d'autre. Les objets du
 // décor suivent le même trait, blancs à l'intérieur.
 //
-//   mipap({ perso, expression, pose, bras, marqueur, seed }) → { svg, defs }
+//   mipap({ perso, expression, pose, bras, marqueur, angle, foulee, seed }) → { svg, defs }
+//   LISTE_POSES, LISTE_BRAS, LISTE_PATTES, LISTE_SIGNES, LISTE_PROPS : les noms admis
 //   EXPRESSIONS : le catalogue, par famille
 //   PROPS       : les objets gribouillés, prop(nom, x, y, echelle)
 //   document(contenu, { w, h, defs }) → un fichier SVG complet
@@ -416,12 +417,30 @@ export const EXPRESSIONS = {
 
 export const FAMILLES_EXPRESSIONS = ['bonne humeur', 'amour', 'surprise et peur', 'chagrin', 'colère', 'fatigue', 'réflexion', 'effort', 'nuances'];
 export const LISTE_POSES = Object.keys(POSES);
+export const LISTE_BRAS = Object.keys(BRAS);
+export const LISTE_PATTES = Object.keys(PATTES);
+export const LISTE_SIGNES = Object.keys(SIGNES);
+// les repères du personnage dans sa boîte de 300 x 300, pour placer
+// quelque chose sur lui depuis l'extérieur (la tête, le sol)
+export const REPERES = { CX, CY, RX, RY, TOP, BAS, EY, MY };
 
 // ── les filtres ─────────────────────────────────────────────────────────
 export function defs(id = '', seed = 7) {
   return `<filter id="tr${id}" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="${seed}" result="b"/><feDisplacementMap in="SourceGraphic" in2="b" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter>` +
     `<filter id="tr2${id}" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="2" seed="${seed + 50}" result="b"/><feDisplacementMap in="SourceGraphic" in2="b" scale="3.4" xChannelSelector="R" yChannelSelector="G"/></filter>` +
     `<filter id="fl${id}" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4"/></filter>`;
+}
+
+// ── le cycle de marche ──────────────────────────────────────────────────
+// foulee va de 0 à 1 : à 0 les pattes sont celles de la pose, à 0,5 chacune
+// a pris l'avance de l'autre (en gardant son côté), à 1 le tour est fait.
+// Interpolé en cosinus pour que rien ne saute d'une image à l'autre : en
+// animation, foulee = distance parcourue / longueur d'une foulée.
+function cycle(pattes, foulee) {
+  if (foulee === undefined || pattes.length !== 2) return pattes;
+  const t = (1 - Math.cos(foulee * Math.PI * 2)) / 2;
+  const vers = (p, q) => ({ dx: p.dx, dy: p.dy + (q.dy - p.dy) * t, dz: p.dz + (q.dz - p.dz) * t, rot: p.rot + (q.rot - p.rot) * t, rx: p.rx, ry: p.ry });
+  return [vers(pattes[0], pattes[1]), vers(pattes[1], pattes[0])];
 }
 
 // ── le personnage ───────────────────────────────────────────────────────
@@ -460,7 +479,7 @@ export function mipap(o = {}) {
   // ─ les oreilles : deux bosses sur la crête, derrière le corps ─
   const oreilles = [-46, 46].map((dx) => { const q = P(dx, TOP + 10, 0); return { z: q.z, el: `<circle cx="${f(q.x)}" cy="${f(q.y)}" r="${f(18 * (1 + q.z / 900))}"/>` }; }).sort((a, b) => a.z - b.z);
   // ─ les pattes, derrière le corps ─
-  const pattes = PATTES[o.pattes || pose.pattes || 'debout']().map((p) => { const q = P(p.dx, p.dy, p.dz); const k = taille(q.z); const rot = p.rot * (Math.cos((angle * Math.PI) / 180) >= 0 ? 1 : -1); return { z: q.z, el: `<ellipse cx="${f(q.x)}" cy="${f(q.y)}" rx="${f(p.rx * k)}" ry="${f(p.ry * k)}" transform="rotate(${f(rot)} ${f(q.x)} ${f(q.y)})"/>` }; }).sort((a, b) => a.z - b.z);
+  const pattes = cycle(PATTES[o.pattes || pose.pattes || 'debout'](), o.foulee).map((p) => { const q = P(p.dx, p.dy, p.dz); const k = taille(q.z); const rot = p.rot * (Math.cos((angle * Math.PI) / 180) >= 0 ? 1 : -1); return { z: q.z, el: `<ellipse cx="${f(q.x)}" cy="${f(q.y)}" rx="${f(p.rx * k)}" ry="${f(p.ry * k)}" transform="rotate(${f(rot)} ${f(q.x)} ${f(q.y)})"/>` }; }).sort((a, b) => a.z - b.z);
   // ─ la queue en pompon, au milieu du dos ─
   const queue = (() => { const q = P(6, BAS - 10, -RX + 6); return q.vis > -0.35 ? { z: q.z, el: `<circle cx="${f(q.x)}" cy="${f(q.y)}" r="${f(12 * taille(q.z))}"/>` } : null; })();
 
@@ -657,6 +676,8 @@ export function prop(nom, x, y, echelle = 1, id = '') {
   if (!dessin) throw new Error(`objet inconnu : ${nom}`);
   return `<g transform="translate(${f(x - 50 * echelle)} ${f(y - 50 * echelle)}) scale(${f(echelle)})" filter="url(#tr${id})">${dessin()}</g>`;
 }
+
+export const LISTE_PROPS = Object.keys(PROPS);
 
 // ── un fichier SVG complet ──────────────────────────────────────────────
 export function document(contenu, { w = 300, h = 300, defs: d = defs(), fond = COULEURS.blanc, viewBox } = {}) {
