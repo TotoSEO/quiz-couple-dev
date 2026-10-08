@@ -530,7 +530,10 @@
     "refuse": "Ich passe, ich gehe zurück",
     "victoire": "{{nom}} gewinnt die Partie!",
     "victoireTexte": "Ziel erreicht in {{n}} Runden.",
-    "gagePerdant": "Die Strafe des Verlierers",
+    "choixTitre": "Wahrheit oder Pflicht?",
+    "choixDesc": "Eine Frage oder eine Aufgabe, nach Wahl. Geschafft heißt ein Feld vor, gepasst ein Feld zurück.",
+    "finChoix": "{{nom}} hat verloren: Wahrheit oder Pflicht?",
+    "finChoixDesc": "Keine Strafe von oben: Wer verliert, wählt die letzte Karte, und wer gewinnt, liest sie vor.",
     "casesMot": "Felder"
   },
   "roue": {

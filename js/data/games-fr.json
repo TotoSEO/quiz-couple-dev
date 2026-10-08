@@ -531,7 +531,10 @@
     "refuse": "Je passe, je recule",
     "victoire": "{{nom}} gagne la partie !",
     "victoireTexte": "Arrivée atteinte en {{n}} tours.",
-    "gagePerdant": "Le gage du perdant",
+    "choixTitre": "Vérité ou défi ?",
+    "choixDesc": "Une question ou un défi, au choix. Relevé, c'est une case de plus ; passé, c'est une case de moins.",
+    "finChoix": "{{nom}} a perdu : vérité ou défi ?",
+    "finChoixDesc": "Pas de gage imposé : le perdant choisit sa dernière carte, et le gagnant la lui lit.",
     "casesMot": "cases"
   },
   "roue": {

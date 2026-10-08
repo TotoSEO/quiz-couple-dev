@@ -530,7 +530,10 @@
     "refuse": "Passo, torno indietro",
     "victoire": "{{nom}} vince la partita!",
     "victoireTexte": "Arrivo raggiunto in {{n}} turni.",
-    "gagePerdant": "La penitenza del perdente",
+    "choixTitre": "Verità o obbligo?",
+    "choixDesc": "Una domanda o una sfida, a scelta. Fatta, una casella in più; passata, una casella in meno.",
+    "finChoix": "{{nom}} ha perso: verità o obbligo?",
+    "finChoixDesc": "Nessuna penitenza imposta: chi perde sceglie l'ultima carta e chi vince gliela legge.",
     "casesMot": "caselle"
   },
   "roue": {
