@@ -33,7 +33,7 @@
                   { "a": 0.5, "x": 410, "pose": "marche", "angle": 90 },
                   { "a": 2.2, "x": 600, "pose": "debout" },
                   { "a": 2.6, "angle": 0, "expression": "pensif" },
-                  { "a": 2.8, "x": 600, "pose": "marche", "expression": "calin" },
+                  { "a": 2.8, "x": 600, "pose": "marche", "angle": 90, "expression": "calin" },
                   { "a": 3.9, "x": 390, "pose": "debout" }
                 ]
               }
@@ -72,7 +72,7 @@
                   { "a": 0.3, "x": 400, "pose": "marche", "angle": 90 },
                   { "a": 2, "x": 600, "pose": "debout" },
                   { "a": 2.4, "angle": 0, "expression": "triste" },
-                  { "a": 2.6, "x": 600, "pose": "marche", "expression": "supplie" },
+                  { "a": 2.6, "x": 600, "pose": "marche", "angle": 90, "expression": "supplie" },
                   { "a": 3.4, "x": 420, "pose": "debout" }
                 ]
               }
