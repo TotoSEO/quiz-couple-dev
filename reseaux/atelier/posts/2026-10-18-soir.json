@@ -1,0 +1,30 @@
+{
+  "jour": "2026-10-18",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "ph-004",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "Some people feel like home. You're one of them.",
+        "fleurs": "feuillage",
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "For your home person.\n\nSave this for a day you need it.",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "jour": "2026-10-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-017",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Elle s'ennuie de lui au bout de cinq minutes : le violet quitte la table du café, la rose attend en soupirant, il revient avec deux tasses et elle saute de joie. Aucune bulle.",
+        "titre": "POV: she misses him after 5 minutes",
+        "plans": [
+          {
+            "description": "Un café en plein jour : l'étagère de tasses, l'ardoise, le comptoir et sa lampe suspendue. Les deux sont assis face à face à la petite table ronde, chacun devant sa tasse, dès la première image, et se sourient. À 1,2 s le violet se lève et sort du plan par la droite en faisant un signe de la main, la clochette de la porte tinte ; la rose lui répond d'un signe et garde un sourire heureux jusqu'à 3 s.",
+            "duree": 3.6,
+            "decor": "cafe",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.3,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "salue",
+                    "de": 1.3,
+                    "a": 2.5,
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.5,
+                    "a": 3.6,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "plate"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "salue",
+                    "de": 1.0,
+                    "a": 1.8,
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "disparait",
+                    "de": 1.2,
+                    "a": 2.0,
+                    "vers": "droite"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même café, légende « 5 minutes later ». La rose est seule à la table, le menton dans la main, les yeux plats et la bouche en moue. À 0,8 s elle regarde à gauche, à 1,6 s à droite, vers la porte, et soupire ; à 2,2 s elle prend la tasse du violet, la regarde, la repose. Trois points flottent au-dessus de sa tête, la caméra se rapproche d'un coup sur son visage.",
+            "duree": 4.0,
+            "decor": "cafe",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 4.0,
+                    "yeux": "plats",
+                    "bouche": "triste"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.8,
+                    "a": 1.6,
+                    "cible": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 2.8,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.8,
+                    "a": 4.0,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 4.0,
+                    "effet": "points"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 2.2,
+                    "a": 4.0
+                  }
+                ]
+              }
+            ],
+            "legende": "5 minutes later",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.4,
+                "zoom": 1.5,
+                "cible": "rose"
+              }
+            ]
+          },
+          {
+            "description": "Plan large du café. À 0,3 s le violet revient par la droite, deux tasses fumantes dans les mains, la clochette tinte et il s'assoit en face de la rose. À 0,8 s les yeux de la rose s'éclairent, elle bondit de joie, les bras en l'air, des cœurs montent au-dessus d'elle. Le violet sourit, les joues rouges, et lui tend une tasse ; la caméra se rapproche des deux.",
+            "duree": 4.4,
+            "decor": "cafe",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.7,
+                    "yeux": "plats",
+                    "bouche": "triste"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.8,
+                    "a": 1.6,
+                    "yeux": "brillants",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "joie",
+                    "de": 1.0,
+                    "a": 2.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.6,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.8,
+                    "a": 4.4,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "apparait",
+                    "de": 0.2,
+                    "a": 0.9,
+                    "depuis": "droite"
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.4,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.9,
+                    "a": 4.4,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.9,
+                    "a": 2.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.8,
+                    "a": 4.4,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.4,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Five minutes apart and she already misses him.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

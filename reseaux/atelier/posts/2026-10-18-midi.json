@@ -1,0 +1,175 @@
+{
+  "jour": "2026-10-18",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "statique",
+  "sujet": "sta-004",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Reel statique : le violet arrive avec un bouquet, la rose saute de joie, ils se serrent dans les bras, une phrase tendre s'écrit.",
+        "plans": [
+          {
+            "description": "Un trait de sol sur le papier. Dès la première image la rose est debout à gauche et sourit, les mains jointes ; le violet entre par le bord droit en marchant, un bouquet de roses dans la main gauche, un peu timide. À 2,3 s il s'arrête près d'elle et lui sourit, les joues rouges ; à 3 s les yeux de la rose deviennent brillants, sa bouche s'ouvre, elle saute de joie. À 6 s elle le serre dans ses bras et des cœurs montent. « still choosing you, every day » s'écrit mot à mot en haut à partir de 2,6 s. La caméra se rapproche lentement.",
+            "duree": 11,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.6,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 3.6,
+                    "yeux": "brillants",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "saute",
+                    "de": 3.6,
+                    "a": 5.2,
+                    "fois": 2
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 6.0,
+                    "a": 11,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 6.2,
+                    "a": 11,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 6.4,
+                    "a": 11,
+                    "effet": "coeurs"
+                  }
+                ],
+                "premier": true
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 2.3,
+                    "vers": 700
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 6.0,
+                    "objet": "bouquet",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.2,
+                    "a": 3.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.3,
+                    "a": 6.0,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 6.0,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 6.0,
+                    "a": 11,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 6.2,
+                    "a": 11,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 2.6,
+                "texte": "still choosing you, every day",
+                "motAMot": true,
+                "place": "haut",
+                "style": "plume"
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.3,
+                "zoom": 1
+              },
+              {
+                "a": 6,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 11,
+                "zoom": 1.22,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Flowers for no reason, just because.\n\nTag your partner.",
+      "hashtags": [
+        "#couplegoals",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

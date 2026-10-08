@@ -1,0 +1,283 @@
+{
+  "jour": "2026-10-18",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-015",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Morning person contre oiseau de nuit : le matin la rose danse avec sa tasse et le violet se cache sous la couette ; le soir, c'est lui qui est survolté pendant qu'elle dort.",
+        "titre": "POV: morning person vs night owl",
+        "plans": [
+          {
+            "description": "La chambre le matin, lumière claire et chaude, soleil dans la fenêtre, légende « 7 AM ». Dès la première image la rose est debout devant le lit, une tasse fumante dans la main gauche, et elle saute de joie deux fois, les yeux heureux et un grand sourire ; le violet est couché à droite, la couette jusqu'au menton, il dort, des Z montent. À 2,4 s la rose fait quelques pas de danse, des notes de musique montent autour d'elle. La caméra se rapproche doucement.",
+            "duree": 3.8,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "devant-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "saute",
+                    "de": 0.1,
+                    "a": 1.5,
+                    "fois": 2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.1,
+                    "a": 2.4,
+                    "yeux": "heureux",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "danse",
+                    "de": 2.4,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.5,
+                    "a": 3.8,
+                    "effet": "notes"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 3.8,
+                    "effet": "zzz"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "legende": "7 AM",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur le violet : un œil s'entrouvre, puis la bouche fait la grimace du grognon, les sourcils froncés. La rose continue de danser derrière lui, tasse en main, toujours ravie. À 2 s le violet tire la couette au-dessus de sa tête, qui se met à bouger d'un coup, et la rose s'arrête, les yeux plats, une goutte de gêne sur la tempe.",
+            "duree": 3.8,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "devant-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "danse",
+                    "de": 0,
+                    "a": 2.0
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 3.8,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.3,
+                    "a": 3.8,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 0.5
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.5,
+                    "a": 2.0,
+                    "yeux": "ouverts",
+                    "bouche": "grogne",
+                    "sourcils": "faches"
+                  },
+                  {
+                    "geste": "fache",
+                    "de": 2.0,
+                    "a": 3.8
+                  }
+                ]
+              }
+            ],
+            "couette": "bouge",
+            "couetteDe": 2.0,
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.7,
+                "cible": "violet"
+              }
+            ]
+          },
+          {
+            "description": "Écran noir, puis la même chambre, en pleine nuit : lumière bleue, lune et étoiles dans la fenêtre, légende « 11 PM ». C'est la rose qui est dans le lit, endormie, la couette jusqu'au menton, des Z qui montent. Le violet, lui, est debout devant le lit, une manette dans la main, les yeux grands ouverts, et il saute de joie et danse, plus réveillé que jamais. À 2,6 s la rose ouvre un œil, les yeux plats, la bouche plate, et trois points flottent au-dessus de sa tête. Zoom rapide sur son visage.",
+            "duree": 4.4,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 2.5
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 2.5,
+                    "effet": "zzz"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.7,
+                    "a": 4.4,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.4,
+                    "effet": "points"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.4,
+                    "objet": "manette",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "saute",
+                    "de": 0.1,
+                    "a": 1.4,
+                    "fois": 2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.1,
+                    "a": 2.0,
+                    "yeux": "brillants",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "danse",
+                    "de": 1.5,
+                    "a": 4.4
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 4.4,
+                    "effet": "etincelles"
+                  }
+                ]
+              }
+            ],
+            "transition": "noir",
+            "couette": "calme",
+            "legende": "11 PM",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 2.6,
+                "zoom": 1
+              },
+              {
+                "a": 3.0,
+                "zoom": 1.5,
+                "cible": "rose"
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "She wakes up singing. He plays games at midnight.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

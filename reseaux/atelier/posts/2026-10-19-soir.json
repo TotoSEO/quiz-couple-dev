@@ -1,0 +1,254 @@
+{
+  "jour": "2026-10-19",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-023",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "« Je suis prêt dans deux minutes » : la rose attend sous le lampadaire, la nuit tombe, quarante minutes plus tard le violet arrive en courant avec son bonnet.",
+        "titre": "POV: he's ready 'in 2 minutes'",
+        "plans": [
+          {
+            "description": "Une rue de ville, la fin d'après-midi, légende « 2 minutes ». Dès la première image la rose est debout devant la porte, le dos au lampadaire, son téléphone à la main : elle le regarde, tête baissée, puis regarde vers la droite, sourire en coin, impatience tranquille. À 1,8 s elle lève les yeux vers la droite, la bouche ronde, puis recommence à regarder son téléphone. La caméra se rapproche doucement.",
+            "duree": 3.6,
+            "decor": "rue",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lampadaire",
+                "gestes": [
+                  {
+                    "geste": "telephone",
+                    "de": 0,
+                    "a": 1.7
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  }
+                ]
+              }
+            ],
+            "legende": "2 minutes",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "La même rue, mais la nuit : le ciel est noir, le lampadaire est allumé et les fenêtres des immeubles brillent, légende « 40 minutes later ». La rose n'a pas bougé, mais elle tremble de froid, les yeux plats, la bouche plate et les sourcils tristes ; elle regarde à gauche, à droite, en haut, puis boude, les bras ballants. Trois points flottent au-dessus de sa tête. Zoom rapide sur son visage.",
+            "duree": 4.0,
+            "decor": "rue",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lampadaire",
+                "gestes": [
+                  {
+                    "geste": "tremble",
+                    "de": 0,
+                    "a": 4.0
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 4.0,
+                    "yeux": "plats",
+                    "bouche": "plate",
+                    "sourcils": "tristes"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.4,
+                    "a": 1.2,
+                    "cible": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.2,
+                    "a": 2.0,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.0,
+                    "a": 2.8,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 2.8,
+                    "a": 4.0
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 4.0,
+                    "effet": "points"
+                  }
+                ]
+              }
+            ],
+            "transition": "noir",
+            "legende": "40 minutes later",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.6,
+                "cible": "rose"
+              }
+            ]
+          },
+          {
+            "description": "Plan large, toujours la nuit sous le lampadaire. À 0,3 s le violet arrive en courant par le bord droit, un bonnet sur la tête, essoufflé, les joues rouges, et se plante devant la rose. Elle le regarde, les yeux plats, une goutte de gêne sur la tempe. À 2,2 s le violet lui tend un petit cœur avec un grand sourire, les yeux brillants ; la rose ferme les yeux, soupire, puis sourit malgré elle, des cœurs montent. La caméra se rapproche des deux.",
+            "duree": 4.6,
+            "decor": "rue",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lampadaire",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.2,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.2,
+                    "a": 2.4,
+                    "effet": "goutte"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 3.4,
+                    "yeux": "fermes",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.4,
+                    "a": 4.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.4,
+                    "a": 4.6,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": 1100,
+                "gestes": [
+                  {
+                    "geste": "court",
+                    "de": 0,
+                    "a": 1.2,
+                    "vers": 560
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.2,
+                    "a": 4.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.7,
+                    "a": 4.6,
+                    "yeux": "brillants",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 2.2,
+                    "a": 4.6,
+                    "objet": "coeur",
+                    "main": "gauche"
+                  }
+                ],
+                "porte": "bonnet"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.6,
+                "zoom": 1.3,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Two minutes, he said. It's been forty.\n\nTag your partner who is never on time.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
