@@ -1,0 +1,64 @@
+{
+  "jour": "2026-10-20",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-004",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Texting edition",
+        "accroche": "Would you rather: texting?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Only voice notes",
+            "b": "Only texts"
+          },
+          {
+            "a": "Good morning text",
+            "b": "Good night text"
+          },
+          {
+            "a": "Instant replies",
+            "b": "Long thoughtful replies"
+          },
+          {
+            "a": "Emojis only",
+            "b": "Words only"
+          },
+          {
+            "a": "A call every night",
+            "b": "Texts all day"
+          },
+          {
+            "a": "Send selfies",
+            "b": "Send memes"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, texting edition: how do you two like to talk?\n\nComment your A and B!",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

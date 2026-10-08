@@ -1,0 +1,329 @@
+{
+  "jour": "2026-10-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-018",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Quelqu'un dit « pizza ? » en voiture : les deux sautent en même temps sur leurs sièges, klaxon, et une pizza tombe du ciel.",
+        "titre": "POV: someone says 'pizza?'",
+        "plans": [
+          {
+            "description": "L'intérieur d'une voiture en plein jour, vue depuis le pare-brise : le paysage défile dans la lunette arrière, le petit sapin du rétroviseur se balance. Dès la première image le violet tient le volant à gauche, les yeux plats, la bouche plate ; la rose, à droite sur le siège passager, bâille et regarde par la vitre, la tête appuyée. Long trajet, rien ne se passe. À 2 s la rose tourne la tête vers le violet, les yeux grands ouverts, et lance « Pizza? » dans une bulle.",
+            "duree": 3.6,
+            "decor": "voiture",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "passager",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.9,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.9,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 3.6,
+                    "yeux": "brillants",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 2.0,
+                    "a": 3.4
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "volant",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.0,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.0,
+                    "a": 3.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 2.0,
+                "a": 3.5,
+                "texte": "Pizza?"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          },
+          {
+            "description": "Même voiture. Les yeux du violet deviennent brillants, un « ! » apparaît au-dessus de sa tête et au-dessus de celle de la rose en même temps. Ils sautent tous les deux sur leur siège, les bras en l'air, et le violet appuie par accident sur le klaxon à 1,2 s ; la caméra tremble d'un coup. Ils rient aux éclats.",
+            "duree": 3.4,
+            "decor": "voiture",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "passager",
+                "gestes": [
+                  {
+                    "geste": "saute",
+                    "de": 0.2,
+                    "a": 1.6,
+                    "fois": 2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.2,
+                    "a": 1.8,
+                    "yeux": "brillants",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 1.6,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.8,
+                    "a": 3.4
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "volant",
+                "gestes": [
+                  {
+                    "geste": "saute",
+                    "de": 0.2,
+                    "a": 1.6,
+                    "fois": 2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.2,
+                    "a": 1.8,
+                    "yeux": "brillants",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 1.7,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.8,
+                    "a": 3.4
+                  }
+                ]
+              }
+            ],
+            "sons": [
+              {
+                "a": 1.2,
+                "son": "klaxon"
+              }
+            ],
+            "camera": [
+              {
+                "a": 1.2,
+                "secousse": 12
+              }
+            ]
+          },
+          {
+            "description": "Même voiture. Une part de pizza tombe du haut de l'image et se pose sur le tableau de bord, entre les deux. Les deux la regardent en même temps, bouche ronde, puis se tournent l'un vers l'autre avec un grand sourire. La rose attrape la pizza, le violet fait un clin d'œil, des cœurs montent. Zoom lent sur eux deux.",
+            "duree": 4.2,
+            "decor": "voiture",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "passager",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.4,
+                    "a": 4.2,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 2.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 2.0,
+                    "a": 4.2,
+                    "objet": "pizza",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 2.8,
+                    "a": 4.2,
+                    "objet": "pizza"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "volant",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.4,
+                    "a": 4.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 2.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "yeux": "clin",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.2,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pizza",
+                "x": 540,
+                "y": 1330,
+                "de": 0.3,
+                "entree": "tombe"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "One word and the whole car wakes up.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

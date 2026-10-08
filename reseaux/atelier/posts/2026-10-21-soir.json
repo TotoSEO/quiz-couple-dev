@@ -1,0 +1,324 @@
+{
+  "jour": "2026-10-21",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-016",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le bisou de bonne nuit numéro douze : « Goodnight », « Ok last one », « Seriously last one », jusqu'à ce que les deux s'endorment.",
+        "titre": "POV: goodnight kiss number 12",
+        "plans": [
+          {
+            "description": "La chambre la nuit, lumière bleue, lune dans la fenêtre, lampe de chevet allumée, légende « Goodnight ». Dès la première image les deux sont dans le lit, la couette jusqu'au menton, et se sourient. À 1,5 s ils se penchent l'un vers l'autre pour un petit bisou, un cœur sort, puis les deux ferment les yeux de bonheur, joues roses. La caméra se rapproche lentement.",
+            "duree": 4.0,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 1.5,
+                    "a": 3.2,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.3,
+                    "a": 4.0,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 1.5,
+                    "a": 3.2,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.3,
+                    "a": 4.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.0,
+                    "a": 4.0,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "legende": "Goodnight",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même chambre, légende « Ok last one ». Le violet rouvre les yeux d'un coup et fait un clin d'œil à la rose, qui rit en secouant la tête ; à 1,5 s ils se penchent encore pour un bisou, des cœurs montent. Le violet garde un sourire malicieux, la rose a les joues très roses. Zoom rapide sur leurs visages à 0,4 s.",
+            "duree": 4.0,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.2,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 1.5,
+                    "a": 3.0,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 4.0,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.6,
+                    "yeux": "fermes",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.6,
+                    "a": 1.4,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.6,
+                    "a": 1.5,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 1.5,
+                    "a": 3.0,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.0,
+                    "a": 4.0,
+                    "effet": "coeurs"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 4.0,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "legende": "Ok last one",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.4,
+                "zoom": 1.5,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même chambre, légende « Seriously last one ». La rose a les yeux à moitié fermés et rit, fatiguée, le violet la regarde avec des yeux brillants. À 2,2 s ils se donnent un dernier bisou, des cœurs montent, puis à 3,4 s les deux s'endorment d'un coup, des Z qui flottent au-dessus de leurs têtes. La caméra recule doucement sur l'image paisible.",
+            "duree": 4.4,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.0,
+                    "yeux": "plats",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.0,
+                    "a": 2.2
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 2.2,
+                    "a": 3.4,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "dort",
+                    "de": 3.4,
+                    "a": 4.4
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.6,
+                    "a": 4.4,
+                    "effet": "zzz"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.0,
+                    "yeux": "brillants",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 2.2,
+                    "a": 3.4,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "dort",
+                    "de": 3.4,
+                    "a": 4.4
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.3,
+                    "a": 3.6,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "legende": "Seriously last one",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1100
+              },
+              {
+                "a": 4.4,
+                "zoom": 1,
+                "x": 540,
+                "y": 1000
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Goodnight. Ok, last one. Seriously, last one.\n\nSave this for a quiet night.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

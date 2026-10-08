@@ -1,0 +1,334 @@
+{
+  "jour": "2026-10-20",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-019",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "La dernière part de pizza : deux regards qui se défient, zoom sur l'un puis sur l'autre, et on la partage en deux.",
+        "titre": "POV: the last slice of pizza",
+        "plans": [
+          {
+            "description": "Une petite table de restaurant avec nappe et bougie, le soir. Dès la première image la rose et le violet sont assis face à face, et entre eux, sur la nappe, il reste une seule part de pizza. Les deux la regardent sans bouger, les yeux grands ouverts, la bouche ronde. À 1,6 s ils lèvent les yeux en même temps et se regardent ; trois petits points flottent au-dessus de chaque tête.",
+            "duree": 3.4,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 3.4,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.7,
+                    "a": 3.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 3.4,
+                    "effet": "points"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 3.4,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.7,
+                    "a": 3.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.9,
+                    "a": 3.4,
+                    "effet": "points"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pizza",
+                "x": 540,
+                "y": 1215,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.4,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur le visage de la rose : sourcils froncés, regard fixe, bouche pincée, elle ne cligne pas des yeux. À 1,8 s coupe sur le violet, même regard déterminé, la sueur d'une goutte de gêne sur la tempe. À 2,8 s la caméra tremble fort, les deux se penchent vers la pizza en même temps.",
+            "duree": 3.6,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "fache",
+                    "de": 0.2,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "faches"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "ouverts",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.5,
+                    "a": 1.8,
+                    "effet": "goutte"
+                  },
+                  {
+                    "geste": "fache",
+                    "de": 1.9,
+                    "a": 3.6
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pizza",
+                "x": 540,
+                "y": 1215,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.7,
+                "cible": "rose"
+              },
+              {
+                "a": 1.8,
+                "zoom": 1.7,
+                "cible": "violet"
+              },
+              {
+                "a": 2.8,
+                "secousse": 14
+              }
+            ]
+          },
+          {
+            "description": "Retour au plan large. La pizza est coupée en deux : chacun en tient une moitié dans la main et la mange, les yeux fermés de plaisir. À 1,6 s ils se regardent, rient, et le violet fait un clin d'œil. Des cœurs montent au-dessus d'eux à la fin, la caméra se rapproche doucement.",
+            "duree": 4.2,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "pizza",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 1.6,
+                    "objet": "pizza"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.2,
+                    "a": 1.6,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.7,
+                    "a": 3.2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.2,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "pizza",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 1.6,
+                    "objet": "pizza"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.2,
+                    "a": 1.6,
+                    "yeux": "fermes",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.7,
+                    "a": 3.2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.2,
+                    "a": 4.2,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Some negotiations are serious.\n\nTag your partner who always wants the last slice.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

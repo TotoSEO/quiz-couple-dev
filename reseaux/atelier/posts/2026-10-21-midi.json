@@ -1,0 +1,48 @@
+{
+  "jour": "2026-10-21",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-007",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Habits edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "Is your partner a morning person or a night owl?",
+          "How many alarms do they set?",
+          "What do they do first when they wake up?",
+          "What time do they usually go to bed?",
+          "How do they take their coffee or tea?",
+          "Their go-to way to relax?",
+          "A habit they can't quit?",
+          "What do they always forget?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Habits edition: 8 questions about your partner's daily routine. Alarms, coffee, bedtime...\n\nComment your score!",
+      "hashtags": [
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
