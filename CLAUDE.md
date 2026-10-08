@@ -97,6 +97,26 @@ le fondu se termine. Un fondu `main > section:first-child` de 0,6 s donnait
 un LCP de 14 s sur mobile et « NO_LCP » sur bureau. Même chose pour les
 décors en absolu par-dessus le hero (taches floutées, trame en `::after`) :
 ils sont des dégradés du fond de `.hero-home`, pas des éléments.
+La colonne droite du hero (`.hero-visual`, home.ejs) est la scène des
+mascottes depuis le 8 octobre 2026 : la rose et le violet, en grand, jouent
+une partie à deux en boucle (une question de test où ils répondent la même
+chose, un « tu préfères » où ils ne sont pas d'accord, le résultat à 87 %),
+à la place de l'ancienne carte « même réponse » (hero-duel.js, supprimé).
+Tout est en CSS, sans script : une boucle de 14 s qui n'anime que
+`transform` et `opacity` (`.scene-*` dans styles.css, les repères de la
+boucle en tête du bloc). Les quatre poses de chaque mascotte sont dessinées
+à la construction par `mascotteSvg` (generate.js, qui charge
+`reseaux/charte/mascottes.js` en CommonJS) et empilées : on ne change que
+leur opacité. L'anneau du résultat (trait, non composé) est le seul autre
+réglage animé, posé directement à sa valeur sous 768 px. Les tailles sont en
+em et l'em suit la largeur de la colonne (`100cqw`, repli sur `100vw`) :
+sous 1200 px la carte est au-dessus des mascottes (téléphone compris, la
+scène s'affiche sous le texte), au-dessus elles sont de part et d'autre.
+Sans animation (`prefers-reduced-motion`), l'écran de résultat reste
+affiché avec les deux mascottes contentes : c'est l'état de base de chaque
+règle. Les textes sont `heroScene` dans `{lang}/home.json` ; les SVG en
+ligne ne sont pas candidats au LCP, et la scène n'a aucun fondu depuis
+l'opacité 0 au chargement (le premier écran apparaît en 0,4 s).
 Sous 768 px, les animations infinies qui n'animent ni `transform` ni
 `opacity` (reflet des boutons, halo de la carte d'avis, LED du bouton sources
 Google, point du compteur) sont coupées dans le bloc `@media (max-width:

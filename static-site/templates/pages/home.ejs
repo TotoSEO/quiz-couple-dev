@@ -229,86 +229,91 @@
         <% } %>
       </div>
 
-      <!-- Colonne de droite : la démo « même réponse ». Décorative, masquée
-           aux lecteurs d'écran ; le seul lien qu'elle porte est retiré de
-           l'ordre de tabulation, les appels à l'action du hero suffisent. -->
+      <!-- Colonne de droite : les deux mascottes jouent un quiz à deux, en
+           boucle (un test, un « tu préfères », le résultat). Scène décorative
+           en CSS seul, transform et opacity, masquée aux lecteurs d'écran ;
+           les textes viennent de home.json et les personnages sont dessinés
+           à la construction (mascotteSvg). -->
       <%
-        const duel = {
-          joueur1: t('home:heroDuel.joueur1', 'Léa'),
-          joueur2: t('home:heroDuel.joueur2', 'Tom'),
-          question: t('home:heroDuel.question', 'Question'),
-          jauge: t('home:heroDuel.jauge', 'complicité'),
-          match: t('home:heroDuel.match', 'Même réponse !'),
-          rate: t('home:heroDuel.rate', 'Pas cette fois...'),
-          finEtiquette: t('home:heroDuel.finEtiquette', 'Résultat'),
-          finTitre: t('home:heroDuel.finTitre', ''),
-          finTexte: t('home:heroDuel.finTexte', ''),
-          finCta: t('home:heroDuel.finCta', ''),
-          manches: []
+        const sc = {
+          etiquette: t('home:heroScene.etiquette', 'Test de couple'),
+          progression: t('home:heroScene.progression', 'Question 12/20'),
+          question: t('home:heroScene.question', ''),
+          a: t('home:heroScene.a', ''),
+          b: t('home:heroScene.b', ''),
+          c: t('home:heroScene.c', ''),
+          match: t('home:heroScene.match', 'Même réponse !'),
+          jeu: t('home:heroScene.jeu', 'Tu préfères…'),
+          ou: t('home:heroScene.ou', 'ou'),
+          choixA: t('home:heroScene.choixA', ''),
+          choixB: t('home:heroScene.choixB', ''),
+          desaccord: t('home:heroScene.desaccord', 'Pas d\'accord !'),
+          resultat: t('home:heroScene.resultat', 'Votre résultat'),
+          pct: t('home:heroScene.pct', '87'),
+          verdict: t('home:heroScene.verdict', ''),
+          detail: t('home:heroScene.detail', '')
         };
-        for (let dm = 1; dm <= 6; dm++) {
-          const dq = t('home:heroDuel.m' + dm + 'q', '');
-          if (!dq) break;
-          duel.manches.push({ q: dq, a: t('home:heroDuel.m' + dm + 'a', ''), b: t('home:heroDuel.m' + dm + 'b', '') });
-        }
-        const duelOrbes = [
-          { emoji: '💕', prof: 0.35 }, { emoji: '🔥', prof: 0.7 }, { emoji: '🧠', prof: 0.25 }, { emoji: '💍', prof: 0.85 }
-        ];
+        const anneauPct = Math.max(0, Math.min(100, parseInt(sc.pct, 10) || 87));
+        // circonference du cercle de rayon 42 : 2 * pi * 42
+        const anneauOffset = (263.9 * (1 - anneauPct / 100)).toFixed(1);
       %>
       <div class="hero-visual" aria-hidden="true">
-        <div class="duel-scene" id="hero-duel">
-          <% duelOrbes.forEach(function(o, oi) { %>
-          <div class="duel-orbe duel-orbe--<%= oi + 1 %>" data-prof="<%= o.prof %>"><span class="duel-orbe-int"><%= o.emoji %></span></div>
-          <% }); %>
-          <div class="duel-flotteur">
-            <div class="duel-carte">
-              <div class="duel-reflet"></div>
-              <div class="duel-tete">
-                <div class="duel-joueur duel-joueur--a"><span class="duel-avatar">👩</span><span class="duel-nom"><%= duel.joueur1 %></span></div>
-                <div class="duel-centre">
-                <div class="duel-jauge">
-                  <svg viewBox="0 0 64 64">
-                    <defs>
-                      <linearGradient id="duel-degrade" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0" style="stop-color: hsl(var(--primary))"/>
-                        <stop offset="1" style="stop-color: hsl(var(--secondary))"/>
-                      </linearGradient>
-                    </defs>
-                    <circle class="duel-jauge-fond" cx="32" cy="32" r="27"/>
-                    <circle class="duel-jauge-arc" cx="32" cy="32" r="27"/>
-                  </svg>
-                  <span class="duel-jauge-nb"><b>0</b>%</span>
-                </div>
-                <span class="duel-jauge-legende"><%= duel.jauge %></span>
-                </div>
-                <div class="duel-joueur duel-joueur--b"><span class="duel-avatar">👨</span><span class="duel-nom"><%= duel.joueur2 %></span></div>
+        <div class="scene" style="--scene-anneau: <%= anneauOffset %>">
+          <div class="scene-perso scene-perso--rose">
+            <%- mascotteSvg('rose', 'repos', { regard: [7, 1] }, 'scene-pose scene-pose--a') %>
+            <%- mascotteSvg('rose', 'amoureux', {}, 'scene-pose scene-pose--b') %>
+            <%- mascotteSvg('rose', 'boude', {}, 'scene-pose scene-pose--c') %>
+            <%- mascotteSvg('rose', 'joie', {}, 'scene-pose scene-pose--d') %>
+          </div>
+          <div class="scene-carte">
+            <div class="scene-ecran scene-ecran--test">
+              <div class="scene-tete">
+                <span class="scene-pilule"><%= sc.etiquette %></span>
+                <span class="scene-pilule scene-pilule--pct"><%= sc.progression %></span>
               </div>
-              <div class="duel-manches">
-                <% duel.manches.forEach(function(m, mi) { %>
-                <div class="duel-manche<%= mi === 0 ? ' est-active' : '' %>" data-ok="<%= m.a === m.b ? 1 : 0 %>">
-                  <p class="duel-etiquette"><%= duel.question %> <%= mi + 1 %>/<%= duel.manches.length %></p>
-                  <p class="duel-question"><%= m.q %></p>
-                  <div class="duel-reponses">
-                    <span class="duel-bulle duel-bulle--a"><%= m.a %></span>
-                    <span class="duel-bulle duel-bulle--b"><%= m.b %></span>
-                  </div>
-                  <p class="duel-verdict"><span class="duel-verdict-ok">💞 <%= duel.match %></span><span class="duel-verdict-ko">🤭 <%= duel.rate %></span></p>
-                </div>
-                <% }); %>
-                <div class="duel-manche duel-manche--fin" data-ok="1">
-                  <p class="duel-etiquette"><%= duel.finEtiquette %></p>
-                  <p class="duel-question"><%= duel.finTitre %></p>
-                  <p class="duel-fin-texte"><%= duel.finTexte %></p>
-                  <% if (duel.finCta) { %>
-                  <a class="duel-cta" href="<%= getLocalizedUrl('testCouple', lang) %>" tabindex="-1">
-                    <span><%= duel.finCta %></span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-                  </a>
-                  <% } %>
-                </div>
-              </div>
-              <div class="duel-coeurs"></div>
+              <div class="scene-barre"><span class="scene-barre-fill"></span></div>
+              <p class="scene-question"><%= sc.question %></p>
+              <ul class="scene-options">
+                <li class="scene-option"><span class="scene-lettre">A</span><span class="scene-option-txt"><%= sc.a %></span></li>
+                <li class="scene-option scene-option--choisie"><span class="scene-lettre">B</span><span class="scene-option-txt"><%= sc.b %></span><span class="scene-coche scene-coche--rose"></span><span class="scene-coche scene-coche--violet"></span></li>
+                <li class="scene-option"><span class="scene-lettre">C</span><span class="scene-option-txt"><%= sc.c %></span></li>
+              </ul>
+              <span class="scene-badge scene-badge--ok">💞 <%= sc.match %></span>
             </div>
+            <div class="scene-ecran scene-ecran--jeu">
+              <div class="scene-tete scene-tete--centre"><span class="scene-pilule scene-pilule--jeu"><%= sc.jeu %></span></div>
+              <div class="scene-choix">
+                <div class="scene-choix-carte scene-choix-carte--a"><span class="scene-choix-emoji">🎬</span><span class="scene-choix-txt"><%= sc.choixA %></span></div>
+                <span class="scene-ou"><%= sc.ou %></span>
+                <div class="scene-choix-carte scene-choix-carte--b"><span class="scene-choix-emoji">🍝</span><span class="scene-choix-txt"><%= sc.choixB %></span></div>
+              </div>
+              <span class="scene-badge scene-badge--ko">🤭 <%= sc.desaccord %></span>
+            </div>
+            <div class="scene-ecran scene-ecran--resultat">
+              <div class="scene-tete scene-tete--centre"><span class="scene-pilule"><%= sc.resultat %></span></div>
+              <div class="scene-anneau">
+                <svg viewBox="0 0 100 100">
+                  <defs>
+                    <linearGradient id="scene-degrade" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" style="stop-color: hsl(var(--primary))"/>
+                      <stop offset="1" style="stop-color: hsl(var(--secondary))"/>
+                    </linearGradient>
+                  </defs>
+                  <circle class="scene-anneau-fond" cx="50" cy="50" r="42"/>
+                  <circle class="scene-anneau-fill" cx="50" cy="50" r="42"/>
+                </svg>
+                <span class="scene-anneau-nb"><%= anneauPct %><small>%</small></span>
+              </div>
+              <p class="scene-verdict"><%= sc.verdict %></p>
+              <p class="scene-detail"><%= sc.detail %></p>
+            </div>
+            <div class="scene-coeurs"><span>💗</span><span>💕</span><span>💖</span><span>💗</span><span>💕</span></div>
+          </div>
+          <div class="scene-perso scene-perso--violet">
+            <%- mascotteSvg('violet', 'repos', { regard: [-7, 1] }, 'scene-pose scene-pose--a') %>
+            <%- mascotteSvg('violet', 'amoureux', {}, 'scene-pose scene-pose--b') %>
+            <%- mascotteSvg('violet', 'surprise', {}, 'scene-pose scene-pose--c') %>
+            <%- mascotteSvg('violet', 'joie', {}, 'scene-pose scene-pose--d') %>
           </div>
         </div>
       </div>
@@ -949,4 +954,3 @@
 })();
 </script>
 <script src="/js/home-dynamic.js" defer></script>
-<script src="/js/hero-duel.js" defer></script>

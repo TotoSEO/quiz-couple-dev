@@ -7,6 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
 import ejs from 'ejs';
 import { minify } from 'html-minifier-terser';
 import { minify as minifyJs } from 'terser';
@@ -26,6 +27,30 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TEMPLATES_DIR = path.resolve(__dirname, '../templates');
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const REPO_ROOT = path.resolve(__dirname, '../..');
+
+// Les mascottes de la charte, dessinees a la construction pour la scene du
+// hero de l'accueil : le meme fichier que les reels et que le moteur des
+// quiz (reseaux/charte/mascottes.js), charge en CommonJS. Couleurs en hexa
+// (la page n'a pas les jetons de la charte) ; la balise garde la taille du
+// dessin, la feuille de style la redimensionne. Sans le module, la scene
+// est dessinee sans personnages et le build le dit.
+const MASCOTTES = (() => {
+  try {
+    return createRequire(import.meta.url)(path.join(REPO_ROOT, 'reseaux', 'charte', 'mascottes.js'));
+  } catch (e) {
+    console.warn(`[mascottes] module de la charte introuvable : ${e.message}`);
+    return null;
+  }
+})();
+const BOITES_MASCOTTES = { rose: [260, 280], violet: [220, 300] };
+function mascotteSvg(nom, pose, extra = {}, classe = '') {
+  if (!MASCOTTES) return '';
+  const o = { ...(MASCOTTES.POSES[pose] || MASCOTTES.POSES.repos), couleurs: 'hex', ...extra };
+  const [l, h] = BOITES_MASCOTTES[nom] || BOITES_MASCOTTES.rose;
+  return MASCOTTES.mascotte(nom, o)
+    .replace(/^<svg /, `<svg class="${classe}" aria-hidden="true" focusable="false" `)
+    .replace(/ width="\d+" height="\d+"/, ` width="${l}" height="${h}"`);
+}
 
 // ── Publication différée ─────────────────────────────────────────────────────
 // Un article dont publishedAt est dans le futur n'existe nulle part dans le
@@ -1045,6 +1070,7 @@ async function generatePage(routeKey, lang) {
     translations,
     // Helpers
     getLocalizedUrl,
+    mascotteSvg,
     famillesNav: FAMILLES_NAV,
     instagramUrl: INSTAGRAM_URL,
     avisCuitsJson: jsonPourScript(avisCuitsPour(routeKey)),

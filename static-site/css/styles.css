@@ -645,6 +645,9 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
   .gsource-btn::before, .gsource-g::before { animation: none; }
   .quiz-count-bubble .qcb-dot { animation: none; }
   .btn-purete::before, .btn-purete:hover::before { animation: none; --nv-angle: 60deg; }
+  /* L'anneau du résultat de la scène du hero (trait, non composé) : posé
+     directement à sa valeur, la scène garde ses fondus et ses sauts. */
+  .scene-anneau-fill { animation: none; }
 }
 @media (min-width: 1024px) { .hero-title { font-size: 4.25rem; line-height: 1.05; } }
 .hero-desc {
@@ -815,158 +818,268 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 }
 
 /* ═══════════════════════════════════════════════════════════
-   HERO ACCUEIL : LA DÉMO « MÊME RÉPONSE »
-   Une carte en relief joue une partie à deux sous les yeux du
-   visiteur : la question, les deux réponses qui arrivent chacune
-   de son côté, la jauge de complicité qui monte quand elles se
-   ressemblent, les cœurs qui partent. La carte s'incline sous la
-   souris et les pastilles autour bougent en parallaxe
-   (hero-duel.js). Tout tient en CSS et en transformations, sans
-   image ni bibliothèque. Sous 768px la colonne n'existe pas,
-   comme avant.
+   HERO ACCUEIL : LES MASCOTTES JOUENT UN QUIZ À DEUX
+   La rose et le violet, en grand, font une partie sous les yeux
+   du visiteur : une question de test où ils répondent la même
+   chose, un « tu préfères » où ils ne sont pas d'accord, puis le
+   résultat, et ça recommence. Tout est en CSS, sans script : une
+   boucle de 14 s qui n'anime que transform et opacity. Les quatre
+   poses de chaque mascotte sont dessinées à la construction
+   (mascotteSvg, generate.js) et empilées : on ne fait que changer
+   leur opacité. Le seul autre réglage animé est le trait de
+   l'anneau du résultat, coupé sur téléphone plus bas.
+   Les tailles sont en em et l'em suit la largeur de la colonne
+   (unités de conteneur, repli sur la largeur de l'écran) : sous
+   1200px la carte est au-dessus des mascottes, au-dessus elles
+   sont de part et d'autre. Sans animation (prefers-reduced-motion)
+   l'écran de résultat reste affiché, les deux mascottes contentes :
+   c'est l'état de base de chaque règle, les animations ne font
+   que passer dessus.
+   Repères de la boucle (en % des 14 s) : écran test 0-33, la rose
+   répond à 10, le violet à 17, « même réponse » à 20 ; écran
+   « tu préfères » 33-67, réponses à 42 et 49, « pas d'accord » à
+   52 ; résultat 67-100, anneau à 71-79, sauts de joie 78-88.
    ═══════════════════════════════════════════════════════════ */
-.hero-visual { display: none; position: relative; height: 470px; }
-@media (min-width: 768px) { .hero-visual { display: block; } }
-.duel-scene {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  perspective: 1100px;
+.hero-visual { position: relative; container-type: inline-size; }
+.scene {
+  /* le geste vers la carte : un petit saut quand elle est au-dessus */
+  --tx: 0em; --ty: -1em;
+  position: relative; width: 26em; height: 27.5em; margin: 0 auto;
+  font-size: clamp(8px, (100vw - 2rem) / 26, 16px);
+  font-size: clamp(8px, 100cqw / 26, 16px);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.3;
 }
-/* La largeur se pose sur le flotteur : la carte est dans une boite flex, un
-   pourcentage sur elle-meme n'aurait rien a mesurer. */
-.duel-flotteur { width: min(304px, 100%); transform-style: preserve-3d; animation: duelFlotte 7s ease-in-out infinite; }
-@keyframes duelFlotte { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-.duel-carte {
-  --reflet-x: 50%; --reflet-y: 35%;
-  position: relative; width: 100%;
-  padding: 1.1rem 1.1rem 1.2rem;
-  border-radius: 1.6rem;
-  background: hsl(var(--card) / .92);
+.scene-perso {
+  position: absolute; bottom: 0; z-index: 2;
+  transform-origin: 50% 100%;
+  animation: 14s ease-in-out infinite;
+}
+.scene-perso--rose { left: .2em; width: 9.75em; height: 10.5em; --tr: 4deg; animation-name: scenePersoRose; }
+.scene-perso--violet { right: .2em; width: 8.25em; height: 11.25em; --tr: -4deg; animation-name: scenePersoViolet; }
+.scene-pose { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; animation: 14s linear infinite; }
+.scene-pose--d { opacity: 1; }
+.scene-pose--a { animation-name: scenePoseA; }
+.scene-pose--b { animation-name: scenePoseB; }
+.scene-pose--c { animation-name: scenePoseC; }
+.scene-pose--d { animation-name: scenePoseD; }
+
+/* La carte, un écran de test comme ceux du site */
+.scene-carte {
+  position: absolute; left: 0; right: 0; top: 0; height: 18.5em; z-index: 1;
+  border-radius: 1.4em;
+  background: hsl(var(--card) / .94);
   border: 1px solid hsl(var(--border) / .85);
   box-shadow:
-    0 36px 70px -30px hsl(var(--primary) / .55),
-    0 18px 40px -22px rgba(0, 0, 0, .28),
-    inset 0 1px 0 hsl(0 0% 100% / .65);
-  transform-style: preserve-3d;
-  will-change: transform;
+    0 2.2em 4.4em -2em hsl(var(--primary) / .5),
+    0 1.1em 2.4em -1.4em rgba(0, 0, 0, .26),
+    inset 0 1px 0 hsl(0 0% 100% / .6);
 }
-.dark .duel-carte {
-  background: hsl(var(--card) / .94);
-  box-shadow: 0 36px 70px -30px hsl(var(--primary) / .4), 0 18px 40px -22px rgba(0, 0, 0, .6), inset 0 1px 0 hsl(0 0% 100% / .08);
+.dark .scene-carte {
+  box-shadow: 0 2.2em 4.4em -2em hsl(var(--primary) / .35), 0 1.1em 2.4em -1.4em rgba(0, 0, 0, .6), inset 0 1px 0 hsl(0 0% 100% / .08);
 }
-/* Le reflet suit la souris : c'est lui qui donne l'impression de matière. */
-.duel-reflet {
-  position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
-  background: radial-gradient(circle at var(--reflet-x) var(--reflet-y), hsl(0 0% 100% / .55), transparent 42%);
-  opacity: .75;
+.scene-ecran {
+  position: absolute; inset: 0; padding: 1.1em 1.1em 1em;
+  display: flex; flex-direction: column;
+  opacity: 0; animation: 14s linear infinite;
 }
-.dark .duel-reflet { opacity: .16; }
+.scene-ecran--resultat { opacity: 1; }
+.scene-ecran--test { animation-name: sceneEcranTest; }
+.scene-ecran--jeu { animation-name: sceneEcranJeu; justify-content: center; padding-bottom: 3.4em; }
+.scene-ecran--resultat { animation-name: sceneEcranResultat; justify-content: center; }
+.scene-tete { display: flex; align-items: center; justify-content: space-between; gap: .4em; }
+.scene-tete--centre { justify-content: center; }
+.scene-pilule {
+  font-size: .58em; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; line-height: 1.2;
+  color: hsl(var(--primary-texte)); padding: .5em .85em; border-radius: 999px;
+  white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis;
+  background: hsl(var(--primary) / .1); border: 1px solid hsl(var(--primary) / .22);
+}
+.scene-pilule--pct { color: hsl(var(--muted-foreground)); background: hsl(var(--muted) / .7); border-color: hsl(var(--border)); }
+.scene-pilule--jeu { color: hsl(var(--secondary-texte)); background: hsl(var(--secondary) / .1); border-color: hsl(var(--secondary) / .22); }
+.scene-barre { height: .4em; border-radius: 999px; background: hsl(var(--muted)); margin: .8em 0 .85em; overflow: hidden; }
+.scene-barre-fill {
+  display: block; height: 100%; width: 100%; border-radius: inherit;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+  transform: scaleX(.6); transform-origin: left center;
+}
+.scene-question {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 700; font-size: 1em; line-height: 1.3;
+  color: hsl(var(--foreground)); margin: 0 0 .75em;
+}
+.scene-options { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .4em; }
+.scene-option {
+  position: relative; isolation: isolate;
+  display: flex; align-items: center; gap: .55em;
+  padding: .45em .6em; border-radius: .75em;
+  background: hsl(var(--muted) / .55); border: 1px solid hsl(var(--border) / .8);
+  color: hsl(var(--foreground));
+}
+.scene-lettre {
+  flex: 0 0 auto; width: 1.55em; height: 1.55em; border-radius: 50%;
+  display: grid; place-items: center; font-size: .72em; font-weight: 800; line-height: 1;
+  background: hsl(var(--card)); border: 1px solid hsl(var(--border)); color: hsl(var(--muted-foreground));
+}
+.scene-option-txt { font-size: .78em; font-weight: 600; line-height: 1.25; }
+/* La réponse choisie : un liseré rose sous le texte (z-index négatif dans
+   le contexte isolé de la ligne, donc au-dessus de son fond seulement) */
+.scene-option--choisie::before {
+  content: ''; position: absolute; inset: -1px; z-index: -1; border-radius: inherit; pointer-events: none;
+  border: .14em solid hsl(var(--primary)); background: hsl(var(--primary) / .08);
+  opacity: 0; animation: sceneChoisie 14s linear infinite;
+}
+/* Les deux pastilles « qui a choisi quoi », aux couleurs des mascottes */
+.scene-coche {
+  flex: 0 0 auto; width: .95em; height: .95em; border-radius: 50%;
+  box-shadow: 0 0 0 .14em hsl(var(--card));
+  opacity: 0; transform: scale(.3); animation: 14s ease-out infinite;
+}
+.scene-coche--rose { margin-left: auto; background: hsl(var(--primary)); animation-name: sceneCocheRose; }
+.scene-coche--violet { margin-left: -.25em; background: hsl(var(--secondary)); animation-name: sceneCocheViolet; }
+.scene-badge {
+  position: absolute; left: 0; right: 0; bottom: .9em; z-index: 1;
+  margin: 0 auto; width: max-content; max-width: calc(100% - 2em);
+  padding: .5em 1.05em; border-radius: 999px; text-align: center;
+  font-weight: 800; font-size: .8em; line-height: 1.2; color: #fff;
+  opacity: 0; transform: scale(.6); animation: 14s ease-out infinite;
+}
+.scene-badge--ok { background: linear-gradient(135deg, hsl(var(--mint)), hsl(165 70% 46%)); box-shadow: 0 .7em 1.4em -.7em hsl(var(--mint) / .9); animation-name: sceneBadgeOk; }
+.scene-badge--ko { background: linear-gradient(135deg, hsl(25 95% 60%), hsl(var(--primary))); box-shadow: 0 .7em 1.4em -.7em hsl(25 95% 50% / .9); animation-name: sceneBadgeKo; }
 
-/* L'en-tête : les deux joueurs, la jauge entre eux */
-.duel-tete { position: relative; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .5rem; }
-.duel-joueur { display: flex; flex-direction: column; align-items: center; gap: .35rem; font-size: .78rem; font-weight: 700; color: hsl(var(--muted-foreground)); }
-.duel-avatar {
-  width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
-  font-size: 1.45rem; line-height: 1; background: hsl(var(--muted) / .85);
-  box-shadow: 0 0 0 3px hsl(var(--card)), 0 0 0 5px var(--duel-teinte);
+/* Deuxième écran : le « tu préfères » */
+.scene-choix { display: flex; flex-direction: column; align-items: center; gap: .35em; margin-top: .85em; }
+.scene-choix-carte {
+  position: relative; width: 100%; display: flex; align-items: center; gap: .65em;
+  padding: .7em .85em; border-radius: .9em;
+  background: hsl(var(--muted) / .55); border: 1px solid hsl(var(--border) / .8);
 }
-.duel-joueur--a { --duel-teinte: #ec4899; }
-.duel-joueur--b { --duel-teinte: #3b82f6; }
-.duel-jauge { position: relative; width: 68px; height: 68px; display: grid; place-items: center; }
-.duel-jauge svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); overflow: visible; }
-.duel-jauge circle { fill: none; stroke-width: 6; }
-.duel-jauge-fond { stroke: hsl(var(--muted)); }
-.duel-jauge-arc { stroke: url(#duel-degrade); stroke-linecap: round; transition: stroke-dashoffset .9s cubic-bezier(.22, 1, .36, 1); }
-.duel-centre { display: flex; flex-direction: column; align-items: center; gap: .2rem; }
-.duel-jauge-nb {
-  position: relative;
-  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 1rem; line-height: 1; color: hsl(var(--foreground));
+.scene-choix-emoji { flex: 0 0 auto; font-size: 1.45em; line-height: 1; }
+.scene-choix-txt { font-size: .82em; font-weight: 700; line-height: 1.25; color: hsl(var(--foreground)); }
+.scene-choix-carte::after {
+  content: ''; position: absolute; inset: -1px; border-radius: inherit; pointer-events: none;
+  border: .16em solid var(--teinte); opacity: 0; animation: 14s linear infinite;
 }
-/* La legende vit sous le cercle : dedans, l'arc la rognait des qu'il se remplissait. */
-.duel-jauge-legende { font-size: .55rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: hsl(var(--muted-foreground)); }
-
-/* Les manches, empilées : une seule est visible à la fois */
-.duel-manches { position: relative; height: 222px; margin-top: 1rem; }
-.duel-manche {
-  position: absolute; inset: 0; display: flex; flex-direction: column;
-  opacity: 0; transform: translateY(14px); pointer-events: none;
-  transition: opacity .45s ease, transform .45s cubic-bezier(.22, 1, .36, 1);
-}
-.duel-manche.est-active { opacity: 1; transform: none; pointer-events: auto; }
-.duel-etiquette { font-size: .66rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: hsl(var(--primary)); margin: 0 0 .3rem; }
-.duel-question { font-family: 'Poppins', 'Inter', sans-serif; font-weight: 700; font-size: 1.05rem; line-height: 1.3; color: hsl(var(--foreground)); margin: 0 0 .85rem; }
-.duel-reponses { display: flex; flex-direction: column; gap: .5rem; }
-.duel-bulle {
-  max-width: 80%; padding: .5rem .8rem; border-radius: 1rem; font-size: .85rem; font-weight: 600; line-height: 1.3;
-  opacity: 0; transition: opacity .4s ease, transform .55s cubic-bezier(.34, 1.4, .64, 1), box-shadow .3s ease;
-}
-.duel-bulle--a { align-self: flex-start; background: #fce7f3; color: #9d174d; border-bottom-left-radius: .3rem; transform: translateX(-28px) scale(.92); }
-.duel-bulle--b { align-self: flex-end; background: #dbeafe; color: #1e40af; border-bottom-right-radius: .3rem; transform: translateX(28px) scale(.92); }
-.dark .duel-bulle--a { background: #831843; color: #fbcfe8; }
-.dark .duel-bulle--b { background: #1e3a8a; color: #bfdbfe; }
-.duel-manche.a-repondu .duel-bulle--a,
-.duel-manche.a-repondu-b .duel-bulle--b { opacity: 1; transform: none; }
-.duel-manche.est-revelee[data-ok="1"] .duel-bulle { box-shadow: 0 0 0 2px hsl(var(--mint) / .6), 0 10px 20px -12px hsl(var(--mint) / .9); }
-.duel-manche.est-revelee[data-ok="0"] .duel-bulle { opacity: .7; }
-.duel-verdict {
-  margin: auto 0 0; font-size: .85rem; font-weight: 800;
-  opacity: 0; transform: scale(.85); transform-origin: left center;
-  transition: opacity .35s ease, transform .45s cubic-bezier(.34, 1.56, .64, 1);
-}
-.duel-manche.est-revelee .duel-verdict { opacity: 1; transform: none; }
-.duel-verdict span { display: none; }
-.duel-manche[data-ok="1"] .duel-verdict-ok { display: inline; color: hsl(var(--mint)); }
-.duel-manche[data-ok="0"] .duel-verdict-ko { display: inline; color: hsl(var(--muted-foreground)); }
-.duel-manches.secoue { animation: duelSecoue .5s ease; }
-@keyframes duelSecoue { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-6px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(4px); } }
-
-/* L'écran de fin, puis on rejoue */
-.duel-manche--fin .duel-question { font-size: 1.15rem; margin-bottom: .35rem; }
-.duel-fin-texte { font-size: .85rem; color: hsl(var(--muted-foreground)); margin: 0 0 1rem; }
-.duel-cta {
-  align-self: flex-start; display: inline-flex; align-items: center; gap: .4rem;
-  padding: .62rem 1.1rem; border-radius: 999px; text-decoration: none;
-  font-weight: 700; font-size: .85rem; color: #fff;
-  background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
-  box-shadow: 0 10px 22px -12px hsl(var(--primary) / .9);
-  opacity: 0; transform: translateY(8px);
-  transition: opacity .4s ease .25s, transform .4s ease .25s, box-shadow .2s ease;
-}
-.duel-manche--fin.est-revelee .duel-cta { opacity: 1; transform: none; }
-.duel-cta:hover { box-shadow: 0 14px 28px -12px hsl(var(--primary)); color: #fff; }
-.duel-cta svg { width: 1rem; height: 1rem; }
-
-/* Les cœurs qui partent quand les réponses se ressemblent */
-.duel-coeurs { position: absolute; left: 0; right: 0; top: 48%; height: 0; pointer-events: none; }
-.duel-coeur { position: absolute; top: 0; font-size: 1.15rem; line-height: 1; animation: duelCoeur var(--dur, 1.2s) cubic-bezier(.2, .7, .3, 1) forwards; }
-@keyframes duelCoeur {
-  0% { transform: translate(0, 0) scale(.5) rotate(0); opacity: 0; }
-  15% { opacity: 1; }
-  100% { transform: translate(var(--dx), var(--dy)) scale(1.15) rotate(var(--rot)); opacity: 0; }
+.scene-choix-carte--a { --teinte: hsl(var(--primary)); }
+.scene-choix-carte--a::after { animation-name: sceneChoixA; }
+.scene-choix-carte--b { --teinte: hsl(var(--secondary)); }
+.scene-choix-carte--b::after { animation-name: sceneChoixB; }
+.scene-ou {
+  font-size: .62em; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; line-height: 1.2;
+  color: hsl(var(--muted-foreground)); padding: .35em .9em; border-radius: 999px;
+  background: hsl(var(--card)); border: 1px solid hsl(var(--border));
 }
 
-/* Les pastilles autour, à des profondeurs différentes */
-.duel-orbe { position: absolute; z-index: 2; will-change: transform; }
-.duel-orbe-int {
-  display: grid; place-items: center; width: 56px; height: 56px; border-radius: 18px; font-size: 1.6rem; line-height: 1;
-  background: hsl(var(--card) / .78); border: 1px solid hsl(var(--border) / .7);
-  box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .3), inset 0 1px 0 hsl(0 0% 100% / .55);
-  animation: duelOrbe 6s ease-in-out infinite;
+/* Troisième écran : le résultat, l'anneau comme sur les pages de test */
+.scene-anneau { position: relative; width: 8.4em; height: 8.4em; margin: .8em auto 0; }
+.scene-anneau svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); overflow: visible; }
+.scene-anneau circle { fill: none; stroke-width: 8; }
+.scene-anneau-fond { stroke: hsl(var(--muted)); }
+.scene-anneau-fill {
+  stroke: url(#scene-degrade); stroke-linecap: round;
+  stroke-dasharray: 263.9; stroke-dashoffset: var(--scene-anneau);
+  animation: sceneAnneau 14s linear infinite;
 }
-.dark .duel-orbe-int { box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .7), inset 0 1px 0 hsl(0 0% 100% / .06); }
-.duel-orbe--1 { top: 5%; left: 3%; }
-.duel-orbe--1 .duel-orbe-int { animation-delay: -1s; }
-.duel-orbe--2 { top: 13%; right: 1%; }
-.duel-orbe--2 .duel-orbe-int { animation-delay: -3s; width: 48px; height: 48px; font-size: 1.35rem; border-radius: 15px; }
-.duel-orbe--3 { bottom: 11%; left: 0; }
-.duel-orbe--3 .duel-orbe-int { animation-delay: -2s; width: 50px; height: 50px; font-size: 1.4rem; border-radius: 16px; }
-.duel-orbe--4 { bottom: 4%; right: 7%; }
-.duel-orbe--4 .duel-orbe-int { animation-delay: -4.5s; }
-@keyframes duelOrbe { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-10px) rotate(3deg); } }
-@media (max-width: 1023px) { .duel-orbe { display: none; } }
+.scene-anneau-nb {
+  position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%);
+  text-align: center; font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 2.1em; line-height: 1;
+  color: hsl(var(--foreground)); animation: sceneNb 14s ease-out infinite;
+}
+.scene-anneau-nb small { font-size: .5em; font-weight: 800; margin-left: .08em; }
+.scene-verdict {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 700; font-size: 1.1em; line-height: 1.25; text-align: center;
+  color: hsl(var(--foreground)); margin: .7em 0 .2em; animation: sceneVerdict 14s ease-out infinite;
+}
+.scene-detail { font-size: .78em; text-align: center; color: hsl(var(--muted-foreground)); margin: 0; animation: sceneDetail 14s ease-out infinite; }
+
+/* Les cœurs partent du milieu de la carte, à « même réponse » et au résultat */
+.scene-coeurs { position: absolute; left: 50%; top: 55%; width: 0; height: 0; pointer-events: none; z-index: 3; }
+.scene-coeurs span {
+  position: absolute; left: 0; top: 0; margin: -.5em 0 0 -.5em;
+  font-size: 1.3em; line-height: 1; opacity: 0;
+  animation: sceneCoeur 14s linear infinite;
+}
+.scene-coeurs span:nth-child(1) { --dx: -4.5em; --dy: -5.5em; --rot: -20deg; }
+.scene-coeurs span:nth-child(2) { --dx: -1.8em; --dy: -7em; --rot: 10deg; animation-delay: -.15s; }
+.scene-coeurs span:nth-child(3) { --dx: 1em; --dy: -7.5em; --rot: -8deg; animation-delay: -.3s; }
+.scene-coeurs span:nth-child(4) { --dx: 3.6em; --dy: -6em; --rot: 18deg; animation-delay: -.08s; }
+.scene-coeurs span:nth-child(5) { --dx: 5.4em; --dy: -4em; --rot: 28deg; animation-delay: -.22s; }
+
+/* De part et d'autre de la carte dès que la colonne est assez large */
+@media (min-width: 1200px) {
+  .scene {
+    width: 38em; height: 22em; --ty: -.3em;
+    font-size: clamp(8px, (100vw - 5rem) * .45 / 38, 16px);
+    font-size: clamp(8px, 100cqw / 38, 16px);
+  }
+  .scene-perso--rose { left: 0; width: 13em; height: 14em; --tx: 1.2em; --tr: 6deg; }
+  .scene-perso--violet { right: 0; width: 11em; height: 15em; --tx: -1.2em; --tr: -6deg; }
+  .scene-carte { left: 10.2em; right: 9.8em; top: .4em; height: 19.6em; }
+}
+
+@keyframes scenePoseA { 0%, 19% { opacity: 1; } 20%, 31% { opacity: 0; } 32%, 51% { opacity: 1; } 52%, 64% { opacity: 0; } 65%, 77% { opacity: 1; } 78%, 97% { opacity: 0; } 98%, 100% { opacity: 1; } }
+@keyframes scenePoseB { 0%, 19% { opacity: 0; } 20%, 31% { opacity: 1; } 32%, 100% { opacity: 0; } }
+@keyframes scenePoseC { 0%, 51% { opacity: 0; } 52%, 64% { opacity: 1; } 65%, 100% { opacity: 0; } }
+@keyframes scenePoseD { 0%, 77% { opacity: 0; } 78%, 97% { opacity: 1; } 98%, 100% { opacity: 0; } }
+@keyframes scenePersoRose {
+  0%, 8% { transform: none; }
+  10% { transform: translate(var(--tx), var(--ty)) rotate(var(--tr)); }
+  12%, 40% { transform: none; }
+  42% { transform: translate(var(--tx), var(--ty)) rotate(var(--tr)); }
+  44%, 78% { transform: none; animation-timing-function: ease-out; }
+  79.5% { transform: translateY(-1.1em); animation-timing-function: ease-in; }
+  81% { transform: none; animation-timing-function: ease-out; }
+  82.5% { transform: translateY(-1.1em); animation-timing-function: ease-in; }
+  84% { transform: none; animation-timing-function: ease-out; }
+  85.5% { transform: translateY(-.8em); animation-timing-function: ease-in; }
+  87%, 100% { transform: none; }
+}
+@keyframes scenePersoViolet {
+  0%, 15% { transform: none; }
+  17% { transform: translate(var(--tx), var(--ty)) rotate(var(--tr)); }
+  19%, 47% { transform: none; }
+  49% { transform: translate(var(--tx), var(--ty)) rotate(var(--tr)); }
+  51%, 79% { transform: none; animation-timing-function: ease-out; }
+  80.5% { transform: translateY(-1.1em); animation-timing-function: ease-in; }
+  82% { transform: none; animation-timing-function: ease-out; }
+  83.5% { transform: translateY(-1.1em); animation-timing-function: ease-in; }
+  85% { transform: none; animation-timing-function: ease-out; }
+  86.5% { transform: translateY(-.8em); animation-timing-function: ease-in; }
+  88%, 100% { transform: none; }
+}
+@keyframes sceneEcranTest { 0% { opacity: 0; transform: translateY(.6em); } 3%, 30% { opacity: 1; transform: none; } 33%, 100% { opacity: 0; transform: translateY(-.6em); } }
+@keyframes sceneEcranJeu {
+  0%, 33% { opacity: 0; transform: translateY(.6em); }
+  36%, 52% { opacity: 1; transform: none; }
+  52.6% { transform: translateX(-.35em); }
+  53.2% { transform: translateX(.35em); }
+  53.8% { transform: translateX(-.25em); }
+  54.4% { transform: translateX(.2em); }
+  55%, 64% { opacity: 1; transform: none; }
+  67%, 100% { opacity: 0; transform: translateY(-.6em); }
+}
+@keyframes sceneEcranResultat { 0%, 67% { opacity: 0; transform: translateY(.6em); } 70%, 97% { opacity: 1; transform: none; } 100% { opacity: 0; transform: translateY(-.6em); } }
+@keyframes sceneChoisie { 0%, 9% { opacity: 0; } 10%, 33% { opacity: 1; } 34%, 100% { opacity: 0; } }
+@keyframes sceneCocheRose { 0%, 9% { opacity: 0; transform: scale(.3); } 10.5% { opacity: 1; transform: scale(1.2); } 12%, 33% { opacity: 1; transform: none; } 34%, 100% { opacity: 0; transform: scale(.3); } }
+@keyframes sceneCocheViolet { 0%, 16% { opacity: 0; transform: scale(.3); } 17.5% { opacity: 1; transform: scale(1.2); } 19%, 33% { opacity: 1; transform: none; } 34%, 100% { opacity: 0; transform: scale(.3); } }
+@keyframes sceneBadgeOk { 0%, 19.5% { opacity: 0; transform: scale(.6); } 21% { opacity: 1; transform: scale(1.1); } 22.5%, 32% { opacity: 1; transform: none; } 33%, 100% { opacity: 0; transform: scale(.6); } }
+@keyframes sceneBadgeKo { 0%, 51.5% { opacity: 0; transform: scale(.6); } 53% { opacity: 1; transform: scale(1.1); } 54.5%, 64% { opacity: 1; transform: none; } 65%, 100% { opacity: 0; transform: scale(.6); } }
+@keyframes sceneChoixA { 0%, 41% { opacity: 0; } 42%, 66% { opacity: 1; } 67%, 100% { opacity: 0; } }
+@keyframes sceneChoixB { 0%, 48% { opacity: 0; } 49%, 66% { opacity: 1; } 67%, 100% { opacity: 0; } }
+@keyframes sceneAnneau { 0%, 71% { stroke-dashoffset: 263.9; animation-timing-function: cubic-bezier(.22, 1, .36, 1); } 79%, 100% { stroke-dashoffset: var(--scene-anneau); } }
+@keyframes sceneNb { 0%, 72% { opacity: 0; transform: translateY(-50%) scale(.6); } 74% { opacity: 1; transform: translateY(-50%) scale(1.1); } 75.5%, 100% { opacity: 1; transform: translateY(-50%); } }
+@keyframes sceneVerdict { 0%, 76% { opacity: 0; transform: translateY(.5em); } 78%, 100% { opacity: 1; transform: none; } }
+@keyframes sceneDetail { 0%, 78% { opacity: 0; transform: translateY(.5em); } 80%, 100% { opacity: 1; transform: none; } }
+@keyframes sceneCoeur {
+  0%, 19.5% { opacity: 0; transform: translate(0, 0) scale(.4); }
+  21% { opacity: 1; }
+  30% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1.1) rotate(var(--rot)); }
+  30.1%, 79.5% { opacity: 0; transform: translate(0, 0) scale(.4); }
+  81% { opacity: 1; }
+  91% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1.1) rotate(var(--rot)); }
+  91.1%, 100% { opacity: 0; transform: translate(0, 0) scale(.4); }
+}
 @media (prefers-reduced-motion: reduce) {
-  .duel-flotteur, .duel-orbe-int, .duel-manches.secoue, .duel-coeur { animation: none; }
-  .duel-manche, .duel-bulle, .duel-verdict, .duel-cta, .duel-jauge-arc { transition: none; }
+  .scene, .scene * { animation: none !important; }
 }
 
 /* Les anciennes taches floutees du hero (.hero-blob) sont devenues des degrades
