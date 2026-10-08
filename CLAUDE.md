@@ -530,6 +530,14 @@ modification dans l'un en appelle une dans l'autre. Le contrôle est côté
 navigateur : il freine, il ne verrouille pas. Les avis partent de toute façon
 en `is_approved: false` et passent par la modération.
 
+Le prénom suit la même mécanique depuis le 7 octobre 2026 (Thomas : des avis
+signés d'une seule lettre, d'autres d'un prénom interminable) : **de 3 à 60
+caractères, espaces compris**, après retrait des espaces des deux bouts
+(`AVIS_NOM_MIN`, `AVIS_NOM_MAX`, `nomAvis`, écrits deux fois eux aussi). Le
+champ garde son `maxlength="60"` ; la borne basse et le message (`nomRegle`,
+cinq langues) sont dans le script, dans la langue de la page, pas dans la
+bulle du navigateur, et le champ fautif reçoit `aria-invalid` et le focus.
+
 La clé publique ne lit pas la colonne `ip_address` de `reviews` (migration
 `20261006120000_avis_ip_privee.sql`) : le site demande ses colonnes une à
 une, jamais `select=*` (refusé), et la question « cette adresse a-t-elle déjà
