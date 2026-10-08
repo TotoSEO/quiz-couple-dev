@@ -86,7 +86,7 @@ planche('Main.dc.html', 'Les mipaps', 3600, 620, 0, 0,
     <div style="display: flex; flex-direction: column; gap: 16px; width: 1060px; flex-shrink: 0">
       ${titre('Les mipaps', 96)}
       ${para(`Le Gribouillou et la Gribouillette : deux petites créatures au feutre, un gros trait noir qui tremble, un aplat pâle, des joues, deux points pour les yeux. Tout le compte se dessine avec eux, sur fond blanc, et rien d'autre que ce qu'il faut.`, 24)}
-      ${para(`<strong>Les prénoms restent à choisir.</strong> Pistes : Pim &amp; Lou, Bibou &amp; Mia, Pouf &amp; Nina. « Gribouillou » et « Gribouillette » sont les noms de travail.`, 19)}
+      ${para(`<strong>Elle s'appelle Eli, lui Toh.</strong> Les prénoms servent au lore du compte (la bio, les légendes) ; dans les posts ils restent « mon amoureux » et « ma personne », pour que chacun s'y mette. « Gribouillou » et « Gribouillette » sont les noms de travail du code.`, 19)}
     </div>
     <div style="display: flex; flex-direction: column; gap: 14px; flex-grow: 1; min-width: 0">
       ${sousTitre('Les quatre règles du compte')}

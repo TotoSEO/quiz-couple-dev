@@ -3,8 +3,11 @@
 Le compte Instagram « Les mipaps » (français, posts en BD et carrousels à
 faire défiler, quelques minis et reels) est dessiné avec deux personnages :
 le Gribouillou (bleu pâle) et la Gribouillette (rose pâle, deux cils et une
-fleur sur l'oreille). Noms de travail, en attendant les prénoms choisis par
-Thomas. Le canevas de référence, avec les 86 expressions, les 25 poses, les
+fleur sur l'oreille). Ce sont les noms de travail du code (`perso: 'lui'` et
+`perso: 'elle'`). Dans le lore du compte (la bio Instagram, les légendes qui
+les nomment), elle s'appelle **Eli** et lui **Toh** (Thomas, 8 octobre
+2026) ; les posts eux-mêmes parlent de « mon amoureux » et « ma personne »
+pour que chacun s'y mette. Le canevas de référence, avec les 86 expressions, les 25 poses, les
 18 scènes à deux, les 80 objets et trois exemples de posts :
 https://claude.ai/artifact/DYX3xFtQBrV4jDUerw8LDH (privé, Thomas).
 

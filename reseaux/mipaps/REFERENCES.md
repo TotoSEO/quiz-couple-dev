@@ -165,7 +165,8 @@ les deux sous la couette, elle timide qui rougit, les deux côte à côte.
 ## Ce qu'on reprend pour Les mipaps
 
 1. **La voix.** Première personne, tutoiement, « mon amoureux » ou « ma
-   personne » (pas de prénom pour que chacun s'y mette). Textes courts, en
+   personne » (pas de prénom dans les posts pour que chacun s'y mette ; Eli
+   et Toh vivent dans la bio et le lore du compte). Textes courts, en
    minuscules, comme un message. Pas de hashtag dans l'image, trois à cinq
    dans la légende.
 2. **Cinq formats, un par jour.**
