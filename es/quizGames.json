@@ -530,7 +530,10 @@
     "refuse": "Paso, retrocedo",
     "victoire": "¡{{nom}} gana la partida!",
     "victoireTexte": "Meta alcanzada en {{n}} turnos.",
-    "gagePerdant": "La prenda del perdedor",
+    "choixTitre": "¿Verdad o reto?",
+    "choixDesc": "Una pregunta o un reto, a elegir. Cumplido, una casilla más; pasado, una casilla menos.",
+    "finChoix": "{{nom}} ha perdido: ¿verdad o reto?",
+    "finChoixDesc": "Sin prenda obligatoria: quien pierde elige su última carta y quien gana se la lee.",
     "casesMot": "casillas"
   },
   "roue": {

@@ -7966,7 +7966,10 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   align-items: center; justify-content: center; gap: 0.1rem;
   border-radius: 0.75rem;
   border: 1px solid hsl(var(--border));
-  background: hsl(var(--muted) / 0.5);
+  /* Opaque, posée sur le chemin : la couleur de la famille est un voile
+     par-dessus le fond de carte, pas une transparence. */
+  background-color: hsl(var(--card));
+  background-image: linear-gradient(hsl(var(--muted) / 0.5), hsl(var(--muted) / 0.5));
 }
 .plateau-case-emoji { font-size: 1.15rem; line-height: 1; }
 @media (min-width: 480px) { .plateau-case-emoji { font-size: 1.45rem; } }
@@ -7974,42 +7977,72 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   font-size: 0.5rem; font-weight: 700;
   color: hsl(var(--muted-foreground));
 }
-.plateau-case--verite   { background: hsl(var(--primary) / 0.14);   border-color: hsl(var(--primary) / 0.3); }
-.plateau-case--defi     { background: hsl(var(--secondary) / 0.16); border-color: hsl(var(--secondary) / 0.3); }
-.plateau-case--duel     { background: hsl(190 60% 45% / 0.16);      border-color: hsl(190 60% 45% / 0.35); }
-.plateau-case--souvenir { background: hsl(38 85% 55% / 0.18);       border-color: hsl(38 85% 55% / 0.35); }
-.plateau-case--gage     { background: hsl(12 78% 56% / 0.16);       border-color: hsl(12 78% 56% / 0.35); }
-.plateau-case--chance   { background: hsl(160 50% 45% / 0.16);      border-color: hsl(160 50% 45% / 0.35); }
+.plateau-case--verite   { background-image: linear-gradient(hsl(var(--primary) / 0.14), hsl(var(--primary) / 0.14));     border-color: hsl(var(--primary) / 0.3); }
+.plateau-case--defi     { background-image: linear-gradient(hsl(var(--secondary) / 0.16), hsl(var(--secondary) / 0.16)); border-color: hsl(var(--secondary) / 0.3); }
+.plateau-case--duel     { background-image: linear-gradient(hsl(190 60% 45% / 0.16), hsl(190 60% 45% / 0.16));           border-color: hsl(190 60% 45% / 0.35); }
+.plateau-case--souvenir { background-image: linear-gradient(hsl(38 85% 55% / 0.18), hsl(38 85% 55% / 0.18));             border-color: hsl(38 85% 55% / 0.35); }
+.plateau-case--choix    { background-image: linear-gradient(hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.16));    border-color: hsl(var(--secondary) / 0.35); }
+.plateau-case--chance   { background-image: linear-gradient(hsl(160 50% 45% / 0.16), hsl(160 50% 45% / 0.16));           border-color: hsl(160 50% 45% / 0.35); }
 .plateau-case--depart,
 .plateau-case--arrivee {
-  background: linear-gradient(135deg, hsl(var(--primary) / 0.3), hsl(var(--secondary) / 0.3));
+  background-image: linear-gradient(135deg, hsl(var(--primary) / 0.3), hsl(var(--secondary) / 0.3));
   border-color: hsl(var(--primary) / 0.5);
 }
 
-.plateau-pion {
+/* Le chemin : une bande douce qui relie les centres des cases dans l'ordre
+   du serpentin, visible entre les cases. Tracée par le moteur (placerPions)
+   une fois les cases mesurées. */
+.plateau-grille { position: relative; z-index: 1; }
+.plateau-chemin { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: visible; }
+.plateau-chemin polyline { fill: none; stroke: hsl(var(--primary) / 0.28); stroke-linejoin: round; stroke-linecap: round; }
+.dark .plateau-chemin polyline { stroke: hsl(var(--primary) / 0.34); }
+
+/* Les figurines : la mascotte de chacun sur un petit socle, posée sur sa
+   case et déplacée en transform. Celle de celui qui joue respire
+   doucement (transform seulement) ; pendant un déplacement elle saute d'une
+   case à la suivante, tournée dans le sens de la marche. */
+.plateau-figurine {
+  --fig: 38px;
   position: absolute; top: 0; left: 0; z-index: 3;
-  display: grid; place-items: center;
-  width: 26px; height: 26px; border-radius: 50%;
-  font-size: 0.75rem; font-weight: 800; color: #fff;
-  border: 2px solid hsl(var(--card));
-  box-shadow: 0 3px 8px -2px hsl(0 0% 0% / 0.4);
+  width: calc(var(--fig) * 1.15); height: var(--fig);
+  display: grid; place-items: end center;
+  pointer-events: none;
   transition: transform 0.55s cubic-bezier(0.34, 1.2, 0.5, 1);
 }
-.plateau-pion--1 { background: hsl(var(--primary)); }
-.plateau-pion--2 { background: hsl(var(--secondary)); }
-/* Le pion de celui qui joue : un halo qui bat doucement, pour retrouver son
-   tour d'un coup d'oeil au plateau sans relire l'entête. */
-.plateau-pion--actif {
-  z-index: 4;
-  box-shadow: 0 3px 8px -2px hsl(0 0% 0% / 0.4), 0 0 0 3px hsl(var(--card)), 0 0 0 5px currentColor;
-  animation: plateauPionActif 1.8s ease-in-out infinite;
+@media (min-width: 640px) { .plateau-figurine { --fig: 46px; } }
+.plateau-figurine--actif { z-index: 4; }
+.plateau-figurine--marche { transition: transform 0.19s ease-in-out; }
+.plateau-figurine-socle {
+  position: absolute; left: 50%; bottom: -3px;
+  width: calc(var(--fig) * 0.9); height: calc(var(--fig) * 0.28);
+  transform: translateX(-50%); border-radius: 50%;
+  background: hsl(var(--card)); border: 2px solid hsl(var(--primary) / 0.45);
+  box-shadow: 0 2px 6px -2px hsl(0 0% 0% / 0.35);
 }
-.plateau-pion--1.plateau-pion--actif { color: hsl(var(--primary)); }
-.plateau-pion--2.plateau-pion--actif { color: hsl(var(--secondary)); }
-@keyframes plateauPionActif {
-  0%, 100% { box-shadow: 0 3px 8px -2px hsl(0 0% 0% / 0.4), 0 0 0 3px hsl(var(--card)), 0 0 0 5px currentColor; }
-  50%      { box-shadow: 0 3px 8px -2px hsl(0 0% 0% / 0.4), 0 0 0 3px hsl(var(--card)), 0 0 0 9px transparent; }
+.plateau-figurine--violet .plateau-figurine-socle { border-color: hsl(var(--secondary) / 0.5); }
+.plateau-figurine--actif .plateau-figurine-socle { border-width: 3px; border-color: hsl(var(--primary)); }
+.plateau-figurine--violet.plateau-figurine--actif .plateau-figurine-socle { border-color: hsl(var(--secondary)); }
+.plateau-figurine-perso { position: relative; display: block; line-height: 0; transform-origin: 50% 100%; }
+.plateau-figurine-perso .qc-masc { height: var(--fig); width: calc(var(--fig) * 0.93); }
+.plateau-figurine--violet .plateau-figurine-perso .qc-masc { width: calc(var(--fig) * 0.74); }
+.plateau-figurine--gauche .plateau-figurine-perso { transform: scaleX(-1); }
+.plateau-figurine--actif .plateau-figurine-perso { animation: plateauFigRespire 1.6s ease-in-out infinite; }
+.plateau-figurine--marche .plateau-figurine-perso { animation: plateauFigSaut 0.19s ease-in-out infinite; }
+.plateau-figurine--marche.plateau-figurine--gauche .plateau-figurine-perso { animation-name: plateauFigSautGauche; }
+@keyframes plateauFigRespire { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-2px) scale(1.03, 0.98); } }
+@keyframes plateauFigSaut { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+@keyframes plateauFigSautGauche { 0%, 100% { transform: translateY(0) scaleX(-1); } 50% { transform: translateY(-7px) scaleX(-1); } }
+/* Sans le module des mascottes : le pion rond à l'initiale d'avant. */
+.plateau-figurine--pion {
+  width: 26px; height: 26px; border-radius: 50%; place-items: center;
+  font-size: 0.75rem; font-weight: 800; color: #fff;
+  background: hsl(var(--primary));
+  border: 2px solid hsl(var(--card));
+  box-shadow: 0 3px 8px -2px hsl(0 0% 0% / 0.4);
 }
+.plateau-figurine--2.plateau-figurine--pion { background: hsl(var(--secondary)); }
+.plateau-figurine--pion.plateau-figurine--actif { box-shadow: 0 3px 8px -2px hsl(0 0% 0% / 0.4), 0 0 0 3px hsl(var(--card)), 0 0 0 5px currentColor; color: hsl(var(--primary)); }
+.plateau-figurine--2.plateau-figurine--pion.plateau-figurine--actif { color: hsl(var(--secondary)); }
 
 /* Règles dépliables depuis le jeu */
 .plateau-regles {
@@ -8055,17 +8088,22 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 
 .plateau-epreuve { margin-top: 0.5rem; }
-.plateau-gage-final {
-  margin: 1.25rem auto 0; max-width: 26rem; padding: 1.25rem;
-  border-radius: var(--radius);
-  background: hsl(12 78% 56% / 0.1);
-  border: 1px solid hsl(12 78% 56% / 0.3);
-}
+.plateau-epreuve .party-choix { margin-top: 1rem; }
+/* La case au choix et le dernier mot du perdant : la question, une aide en
+   petit, puis les deux boutons d'action ou vérité. */
+.party-carte--choix { background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.12)); }
+.plateau-choix-aide { margin: 0.6rem 0 0; font-size: 0.9rem; line-height: 1.5; color: hsl(var(--muted-foreground)); text-wrap: pretty; }
+.plateau-fin-trophee { display: flex; justify-content: center; margin-bottom: 0.75rem; }
+.plateau-fin-coupe { font-size: 3rem; line-height: 1; padding: 0.25rem 0.5rem 0; }
+.plateau-fin-choix { margin: 1.25rem auto 0; max-width: 28rem; }
+.plateau-fin-choix .party-demande { margin: 0 0 0.25rem; }
+.plateau-fin-choix .party-choix { margin-top: 1rem; }
 
 @media (prefers-reduced-motion: reduce) {
-  .plateau-pion { transition: none; }
+  .plateau-figurine { transition: none; }
   .plateau-de--roule { animation: none; }
-  .plateau-pion--actif { animation: none; }
+  .plateau-figurine--actif .plateau-figurine-perso,
+  .plateau-figurine--marche .plateau-figurine-perso { animation: none; }
   .plateau-regles { animation: none; }
 }
 
@@ -12054,3 +12092,102 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .cc-etape-detail, .cc-etape-date { display: block; font-size: 0.85rem; color: hsl(var(--muted-foreground)); }
 .cc-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 0.5rem; }
 .cc-copie { margin: 0.75rem 0 0; text-align: center; font-size: 0.875rem; color: hsl(var(--primary-texte, var(--primary))); }
+
+/* ─────────────────────────────────────────────
+   Les mascottes dans les moteurs (octobre 2026)
+   Le dessin vient de /js/mascottes.js (le fichier de la charte) ; ici
+   seulement la place qu'il prend et ses mouvements, en transform et en
+   opacity, et rien d'infini en dehors du plateau.
+   ───────────────────────────────────────────── */
+.qc-masc { display: block; overflow: visible; }
+
+/* L'écran de départ : le duo remplace le carré en dégradé, à la même
+   hauteur à peu près pour que rien ne bouge autour. Le flottement du badge
+   (setupIconFloat, un translateY) est gardé. */
+.quiz-setup-icon--mascottes,
+.quiz-setup-screen .quiz-setup-icon--mascottes {
+  width: auto; height: 92px; padding: 0;
+  background: none; box-shadow: none !important; border: 0 !important; border-radius: 0;
+  display: flex; align-items: flex-end; justify-content: center; gap: 4px;
+  color: inherit; transform: none;
+  animation: setupIconFloat 3.2s ease-in-out infinite !important;
+}
+/* Largeur et hauteur écrites toutes les deux : un svg en « width: auto »
+   dans une boîte sans largeur tombe à zéro. Les rapports sont ceux des
+   dessins (260/280 pour la rose, 220/300 pour le violet). */
+.quiz-setup-icon--mascottes .qc-masc { transform: none; }
+.quiz-setup-icon--mascottes .qc-masc--rose { height: 84px; width: 78px; }
+.quiz-setup-icon--mascottes .qc-masc--violet { height: 92px; width: 67px; }
+@media (max-width: 640px) {
+  .quiz-setup-screen .quiz-setup-icon--mascottes { width: auto; height: 72px; border-radius: 0; }
+  .quiz-setup-screen .quiz-setup-icon--mascottes .qc-masc--rose { height: 64px; width: 59px; }
+  .quiz-setup-screen .quiz-setup-icon--mascottes .qc-masc--violet { height: 72px; width: 53px; }
+}
+
+/* La barre : celui qui joue marche jusqu'à sa progression, l'autre attend
+   au bout. La voie est réservée au-dessus de la barre, sous les pastilles,
+   pour que personne ne monte sur le texte. Le marcheur glisse (left) d'une
+   question à l'autre et ses deux dessins de jambes alternent en chemin. */
+.qc-masc-piste { position: relative; height: 40px; margin: 0.1rem 0 -4px; pointer-events: none; }
+.qc-masc-marcheur {
+  position: absolute; left: 0; bottom: 0; z-index: 2;
+  width: 40px; height: 40px; transform: translateX(-50%);
+  transition: left 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.qc-masc-marcheur .qc-masc { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); }
+.qc-masc-pas--b { opacity: 0; }
+.qc-masc-marcheur--bouge .qc-masc-pas--a { animation: qcMascPasA 0.32s steps(1, end) infinite; }
+.qc-masc-marcheur--bouge .qc-masc-pas--b { animation: qcMascPasB 0.32s steps(1, end) infinite; }
+@keyframes qcMascPasA { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes qcMascPasB { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+.qc-masc-attend { position: absolute; right: -4px; bottom: 0; z-index: 1; line-height: 0; }
+
+/* Le résultat : les deux persos de part et d'autre du compteur, qui
+   sautillent cinq fois à l'arrivée puis restent là. Les tailles suivent la
+   largeur de l'écran pour tenir dans la carte dès 320 px. */
+.qc-fete { position: relative; display: inline-flex; justify-content: center; vertical-align: top; }
+/* Posés hors du compteur par un translateX et non par « right: 100% » : à
+   droite de 100 %, la largeur disponible d'une boîte absolue est négative et
+   Chromium lui donne zéro. */
+.qc-masc-fete { position: absolute; bottom: 4px; line-height: 0; }
+.qc-masc-fete--g { left: -2px; right: auto; transform: translateX(-100%); }
+.qc-masc-fete--d { right: -2px; left: auto; transform: translateX(100%); }
+.qc-masc-fete .qc-masc { transform-origin: 50% 100%; animation: qcMascYey 0.6s cubic-bezier(0.3, 0.6, 0.4, 1) 0.25s 5 both; }
+/* Hauteur et largeur écrites toutes les deux, en clamp() sur la largeur de
+   l'écran : un svg en « width: auto » dans une boîte sans largeur tombe à
+   zéro, et un calc() sur la variable aussi. Rapports des dessins : 0,929
+   pour la rose, 0,733 pour le violet ; le côté droit est un peu plus grand. */
+.qc-masc-fete--g .qc-masc--rose   { height: clamp(36px, 12.5vw, 64px); width: clamp(33.4px, 11.6vw, 59.5px); }
+.qc-masc-fete--g .qc-masc--violet { height: clamp(36px, 12.5vw, 64px); width: clamp(26.4px, 9.2vw, 46.9px); }
+.qc-masc-fete--d .qc-masc--rose   { height: clamp(40px, 13.5vw, 70px); width: clamp(37.2px, 12.5vw, 65px); }
+.qc-masc-fete--d .qc-masc--violet { height: clamp(40px, 13.5vw, 70px); width: clamp(29.3px, 9.9vw, 51.3px); }
+.qc-masc-fete--d .qc-masc { animation-delay: 0.42s; }
+.qc-masc-fete--calme .qc-masc { animation: none; }
+@keyframes qcMascYey {
+  0%, 100% { transform: translateY(0) scale(1); }
+  35% { transform: translateY(-15px) scale(1.04, 1.06); }
+  55% { transform: translateY(0) scale(1.03, 0.95); }
+}
+
+/* Le relais « À X de répondre ! » : le perso du joueur surgit au coin bas
+   droit de la carte, en pendant du macaron. Le texte garde la place des
+   deux côtés pour rester centré, et la jauge s'arrête avant lui. */
+.qc-relais--perso .qc-relais-note,
+.qc-relais--perso .qc-relais-etape { padding: 0 3rem; }
+.qc-relais--perso .qc-relais-piste { margin-right: 3.6rem; }
+.qc-relais-perso {
+  position: absolute; right: -0.5rem; bottom: -0.35rem; line-height: 0;
+  transform-origin: 50% 100%;
+  animation: qcMascSurgit 0.42s cubic-bezier(0.34, 1.4, 0.64, 1) 0.1s both;
+}
+@keyframes qcMascSurgit { from { opacity: 0; transform: translateY(18px) scale(0.6); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .qc-masc-marcheur { transition: none; }
+  .qc-masc-marcheur--bouge .qc-masc-pas--a,
+  .qc-masc-marcheur--bouge .qc-masc-pas--b,
+  .qc-masc-fete .qc-masc,
+  .qc-relais-perso { animation: none; }
+  .quiz-setup-icon--mascottes,
+  .quiz-setup-screen .quiz-setup-icon--mascottes { animation: none !important; }
+}

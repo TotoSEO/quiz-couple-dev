@@ -237,9 +237,7 @@ var QuizEngine = (function() {
 
   function ecranDepart(o) {
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
-    var badge = el('div', 'quiz-setup-icon' + (o.iconeSvg ? '' : ' quiz-setup-icon--emoji') + ' mx-auto mb-6');
-    badge.innerHTML = o.iconeSvg || esc(o.icone || '📝');
-    wrap.appendChild(badge);
+    wrap.appendChild(badgeDepart(o.iconeSvg, o.icone || '📝', 'mb-6', o.poses));
     wrap.appendChild(titreSurligne(o.titre));
     if (o.desc) wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(o.desc)));
     (o.corps || []).forEach(function(n) { if (n) wrap.appendChild(n); });
@@ -296,9 +294,7 @@ var QuizEngine = (function() {
   //   onChoix      : recoit l'identifiant du mode retenu
   function ecranModes(o) {
     var wrap = el('div', 'quiz-engine quiz-setup-screen quiz-modes animate-fade-in');
-    var badge = el('div', 'quiz-setup-icon quiz-setup-icon--emoji mx-auto mb-6');
-    badge.innerHTML = esc(o.icone || '🎲');
-    wrap.appendChild(badge);
+    wrap.appendChild(badgeDepart(null, o.icone || '🎲', 'mb-6'));
     wrap.appendChild(titreSurligne(o.titre));
     if (o.desc) wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(o.desc)));
 
@@ -347,7 +343,12 @@ var QuizEngine = (function() {
 
   // Les deux cartes de prenoms des tests a deux, reutilisees par les jeux qui
   // se contentaient de deux champs de saisie alignes.
-  function cartesDeuxJoueurs(idPrefixe) {
+  //   options.genre : deux boutons de genre sous chaque prenom, aucun choisi
+  //   d'avance et rien d'obligatoire ; grille.lireGenres() les rend. Le
+  //   plateau s'en sert pour choisir la figurine de chacun.
+  function cartesDeuxJoueurs(idPrefixe, options) {
+    var o = options || {};
+    var genres = [null, null];
     var grille = el('div', 'quiz-setup-grid max-w-lg mx-auto');
     [0, 1].forEach(function(i) {
       var carte = el('div', 'quiz-player-card');
@@ -364,8 +365,22 @@ var QuizEngine = (function() {
       champ.placeholder = tg('playerSetup.firstName', 'Prénom');
       carte.appendChild(libelle);
       carte.appendChild(champ);
+      if (o.genre) {
+        carte.appendChild(el('label', 'block text-sm font-semibold mt-4 mb-2 text-center', esc(tg('playerSetup.gender', 'Genre'))));
+        var gWrap = el('div', 'flex gap-3 justify-center');
+        var h = el('button', 'gender-btn', '👨');
+        var f = el('button', 'gender-btn', '👩');
+        h.type = 'button'; f.type = 'button';
+        h.setAttribute('aria-label', tg('playerSetup.male', 'Homme')); h.title = tg('playerSetup.male', 'Homme');
+        f.setAttribute('aria-label', tg('playerSetup.female', 'Femme')); f.title = tg('playerSetup.female', 'Femme');
+        h.addEventListener('click', function () { genres[i] = 'homme'; h.className = 'gender-btn gender-btn-selected gender-btn-male'; f.className = 'gender-btn'; });
+        f.addEventListener('click', function () { genres[i] = 'femme'; f.className = 'gender-btn gender-btn-selected gender-btn-female'; h.className = 'gender-btn'; });
+        gWrap.appendChild(h); gWrap.appendChild(f);
+        carte.appendChild(gWrap);
+      }
       grille.appendChild(carte);
     });
+    grille.lireGenres = function () { return genres.slice(); };
     return grille;
   }
 
@@ -658,6 +673,9 @@ var QuizEngine = (function() {
     this.moi = o.moi;
     this.noms = o.noms;
     this.couleurs = o.couleurs || ['badge-pink', 'badge-blue'];
+    // Les mascottes des deux, d'apres les joueurs du moteur quand il en a
+    // (genre choisi), sinon rose pour le createur et violet pour l'autre.
+    this.persos = o.persos || persosDe(o.moteur.players);
     this.total = o.total;
     this.question = o.question;
     this.progression = o.progression || null;
@@ -746,7 +764,8 @@ var QuizEngine = (function() {
 
     var libelle = this.progression ? this.progression(idx)
       : (tg('question.question', 'Question') + ' ' + (idx + 1) + '/' + total);
-    renderProgressBar(wrap, this.repondues(), total * 2, libelle);
+    renderProgressBar(wrap, this.repondues(), total * 2, libelle,
+      { marche: this.persos[this.moi], attend: this.persos[1 - this.moi] });
 
     var couleur = this.couleurs[this.moi];
     var badge = el('div', 'text-center mb-4');
@@ -1869,6 +1888,124 @@ var QuizEngine = (function() {
   // sur une réponse et la valide à la place du joueur.
   var RELAIS_GARDE = 280;
 
+  // ─── Les mascottes ────────────────────────────────────────
+  // Les deux personnages de la charte (reseaux/charte/mascottes.js, copie en
+  // /js/mascottes.js par le build et charge juste avant le moteur) : la rose
+  // est la fille, le violet le garcon. Le module n'est pas indispensable :
+  // sans lui, chaque fonction d'ici rend une chaine vide ou null, et les
+  // ecrans gardent leur forme d'avant (badge en degrade, barre nue, anneau
+  // seul). Tout ce qui bouge le fait en transform et en opacity.
+  var MASCOTTE_BOITES = { rose: [260, 280], violet: [220, 300] };
+  function mascottesDispo() {
+    return typeof window.mascotte === 'function' && !!window.POSES_MASCOTTES;
+  }
+  // Le personnage d'un joueur : son genre quand le test le demande (femme :
+  // rose, homme : violet), sinon son rang (le premier rose, le second violet).
+  function mascotteDe(joueur, rang) {
+    var g = joueur && (joueur.gender || joueur.genre);
+    if (g === 'homme') return 'violet';
+    if (g === 'femme') return 'rose';
+    return rang === 1 ? 'violet' : 'rose';
+  }
+  // Les deux personnages d'un test a deux, dans l'ordre des joueurs.
+  function persosDe(joueurs) {
+    return [mascotteDe(joueurs && joueurs[0], 0), mascotteDe(joueurs && joueurs[1], 1)];
+  }
+  // Pour la barre : celui qui joue marche, l'autre attend au bout.
+  function persosBarre(joueurs, courant) {
+    var c = courant === 1 ? 1 : 0;
+    var p = persosDe(joueurs);
+    return { marche: p[c], attend: p[1 - c] };
+  }
+  // Une mascotte en SVG a la hauteur voulue, en pixels. La largeur suit les
+  // proportions du dessin et les deux sont ecrites dans la balise : la taille
+  // est juste des le premier rendu, avant meme la feuille de style.
+  function mascotteSvg(nom, pose, hauteur, extra, classe) {
+    if (!mascottesDispo()) return '';
+    var base = window.POSES_MASCOTTES[pose] || window.POSES_MASCOTTES.repos || {};
+    var o = { couleurs: 'hex' }, k;
+    for (k in base) o[k] = base[k];
+    for (k in (extra || {})) o[k] = extra[k];
+    var boite = MASCOTTE_BOITES[nom] || MASCOTTE_BOITES.rose;
+    var largeur = Math.round(hauteur * boite[0] / boite[1]);
+    var svg;
+    try { svg = window.mascotte(nom, o); } catch (e) { return ''; }
+    return svg
+      .replace(/^<svg /, '<svg class="qc-masc qc-masc--' + nom + (classe ? ' ' + classe : '') + '" aria-hidden="true" focusable="false" ')
+      .replace(/ width="\d+" height="\d+"/, ' width="' + largeur + '" height="' + hauteur + '"');
+  }
+  // Le duo de l'ecran de depart, a la place du badge a emoji : la rose
+  // salue, le violet fait le mignon. Le quiz coquin les montre amoureux.
+  function duoDepart(poses, classes) {
+    if (!mascottesDispo()) return null;
+    var p = poses || ['salut', 'mignon'];
+    var d = el('div', 'quiz-setup-icon quiz-setup-icon--mascottes' + (classes ? ' ' + classes : ''));
+    d.setAttribute('aria-hidden', 'true');
+    d.innerHTML = mascotteSvg('rose', p[0], 84) + mascotteSvg('violet', p[1], 92);
+    return d;
+  }
+  // Le badge d'un ecran de depart : le duo quand les mascottes sont la, sinon
+  // l'icone ou l'emoji d'avant dans son carre en degrade.
+  function badgeDepart(iconeSvg, icone, marge, poses, classeBadge) {
+    var m = marge || 'mb-6';
+    var duo = duoDepart(poses, 'mx-auto ' + m);
+    if (duo) return duo;
+    var badge = el('div', 'quiz-setup-icon' + (iconeSvg ? '' : ' quiz-setup-icon--emoji') +
+      (classeBadge ? ' ' + classeBadge : '') + ' mx-auto ' + m);
+    badge.innerHTML = iconeSvg || esc(icone || '📝');
+    return badge;
+  }
+  // Les deux mascottes de part et d'autre d'un compteur de resultat (anneau,
+  // cercle, trophee), qui sautillent a l'arrivee puis restent la.
+  //   persos : [gauche, droite], poses : [gauche, droite] (joie des deux
+  //   cotes par defaut ; une autre pose ne sautille pas).
+  function feteAutour(html, persos, poses) {
+    if (!mascottesDispo()) return html;
+    var p = persos || ['rose', 'violet'];
+    var q = poses || ['joie', 'joie'];
+    var cote = function (c, nom, pose, h) {
+      return '<span class="qc-masc-fete qc-masc-fete--' + c + (pose === 'joie' ? '' : ' qc-masc-fete--calme') + '">' +
+        mascotteSvg(nom, pose, h) + '</span>';
+    };
+    return '<div class="qc-fete">' + html + cote('g', p[0], q[0], 64) + cote('d', p[1], q[1], 70) + '</div>';
+  }
+  // Sur la barre de progression : le personnage de celui qui joue marche
+  // jusqu'a sa progression, l'autre attend au bout. La barre est redessinee
+  // a chaque question, donc le marcheur part de sa position precedente,
+  // gardee ici, et glisse vers la nouvelle une fois dans la page.
+  var _marcheurPct = null;
+  function mascottesSurLaBarre(progressWrap, header, progress, current, persos) {
+    if (!mascottesDispo()) return;
+    var p = persos || {};
+    var marche = p.marche || 'rose';
+    var attend = p.attend || (marche === 'rose' ? 'violet' : 'rose');
+    var piste = el('div', 'qc-masc-piste');
+    piste.setAttribute('aria-hidden', 'true');
+    // Deux dessins du marcheur, une jambe devant puis l'autre : pendant le
+    // trajet ils alternent, a l'arret seul le premier reste visible.
+    var marcheur = el('span', 'qc-masc-marcheur');
+    marcheur.innerHTML = mascotteSvg(marche, 'profil', 40, { jambesAngles: [22, -22] }, 'qc-masc-pas qc-masc-pas--a') +
+      mascotteSvg(marche, 'profil', 40, { jambesAngles: [-22, 22] }, 'qc-masc-pas qc-masc-pas--b');
+    var depuis = (_marcheurPct === null || current === 0 || prefersReducedMotion()) ? progress : _marcheurPct;
+    marcheur.style.left = depuis + '%';
+    piste.appendChild(marcheur);
+    var qui = el('span', 'qc-masc-attend');
+    qui.innerHTML = mascotteSvg(attend, 'repos', 36, { regard: [-6, 0] });
+    piste.appendChild(qui);
+    progressWrap.insertBefore(piste, header.nextSibling);
+    _marcheurPct = progress;
+    if (depuis !== progress) {
+      marcheur.classList.add('qc-masc-marcheur--bouge');
+      var fin = function () { marcheur.classList.remove('qc-masc-marcheur--bouge'); };
+      marcheur.addEventListener('transitionend', fin, { once: true });
+      setTimeout(fin, 900);
+      // Deux images plus tard, le dessin est dans la page : le marcheur part.
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () { marcheur.style.left = progress + '%'; });
+      });
+    }
+  }
+
   function relaisJoueur(moteur, options) {
     var opts = options || {};
     var suite = opts.suite || function () {};
@@ -1905,6 +2042,16 @@ var QuizEngine = (function() {
     piste.appendChild(jauge);
     carte.appendChild(piste);
 
+    // Le personnage de celui qui va repondre surgit au coin bas droit, en
+    // pendant du macaron. Les moteurs a genre passent le sien (mascotteDe).
+    if (opts.perso && mascottesDispo()) {
+      var perso = el('span', 'qc-relais-perso');
+      perso.setAttribute('aria-hidden', 'true');
+      perso.innerHTML = mascotteSvg(opts.perso, 'salut', 84);
+      carte.appendChild(perso);
+      carte.classList.add('qc-relais--perso');
+    }
+
     // La couleur du joueur teinte le prénom et la jauge, pas le macaron : ce
     // dégradé est celui de la charte, et l'écran de question qui suit reprend
     // la même couleur sur son badge, donc l'association reste lisible.
@@ -1933,7 +2080,9 @@ var QuizEngine = (function() {
     return carte;
   }
 
-  function renderProgressBar(wrap, current, total, label) {
+  // persos : { marche, attend }, les mascottes de celui qui joue et de
+  // l'autre (voir persosBarre). Sans lui, la rose marche et le violet attend.
+  function renderProgressBar(wrap, current, total, label, persos) {
     var progress = Math.round((current / total) * 100);
     var progressWrap = el('div', 'quiz-progress-wrapper');
     var header = el('div', 'quiz-progress-header');
@@ -1949,6 +2098,7 @@ var QuizEngine = (function() {
     barOuter.appendChild(barInner);
     progressWrap.appendChild(header);
     progressWrap.appendChild(barOuter);
+    mascottesSurLaBarre(progressWrap, header, progress, current, persos);
     wrap.appendChild(progressWrap);
     return progressWrap;
   }
@@ -1967,7 +2117,9 @@ var QuizEngine = (function() {
 
   // celebrate : force ou interdit les confettis. Sans lui, le seuil fixe de
   // 70 % arrose de confettis des paliers que le verdict, lui, ne celebre pas.
-  function renderScoreRing(pct, size, celebrate) {
+  // persos : [gauche, droite], les mascottes qui fetent le score de part et
+  // d'autre du grand anneau (jamais du petit). Rose et violet par defaut.
+  function renderScoreRing(pct, size, celebrate, persos) {
     ensureScoreGradient();
     var circumference = 283; // 2 * PI * 45
     var offset = circumference - (circumference * pct / 100);
@@ -1986,7 +2138,7 @@ var QuizEngine = (function() {
     var startVal = prefersReducedMotion() ? pct : 0;
     // Count the value up after it's in the DOM
     setTimeout(function() { animateCountUp(valId, pct); }, 80);
-    return '<div class="score-ring-wrap' + sizeClass + '">' +
+    var anneau = '<div class="score-ring-wrap' + sizeClass + '">' +
       (confetti ? '<div class="confetti-container" aria-hidden="true">' + confetti + '</div>' : '') +
       '<svg viewBox="0 0 100 100" class="score-ring" aria-hidden="true">' +
         '<circle cx="50" cy="50" r="45" class="score-ring-bg"/>' +
@@ -1994,6 +2146,7 @@ var QuizEngine = (function() {
       '</svg>' +
       '<span class="score-ring-value" id="' + valId + '">' + startVal + '%</span>' +
     '</div>';
+    return size === 'sm' ? anneau : feteAutour(anneau, persos);
   }
 
   function renderPlayerBadge(wrap, name, color) {
@@ -3465,9 +3618,7 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
-    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-6');
-    iconWrap.innerHTML = ICONS.users;
-    wrap.appendChild(iconWrap);
+    wrap.appendChild(badgeDepart(ICONS.users, null, 'mb-6'));
 
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center',
       esc(tg('playerSetup.soloReady', 'Prêts, tous les deux ?'))));
@@ -3493,9 +3644,7 @@ var QuizEngine = (function() {
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
     // Icon in gradient circle
-    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-6');
-    iconWrap.innerHTML = ICONS.users;
-    wrap.appendChild(iconWrap);
+    wrap.appendChild(badgeDepart(ICONS.users, null, 'mb-6'));
 
     var title = el('h2', 'text-2xl font-bold mb-3 text-center', this.setupTitle || tg('playerSetup.readyToPlay', 'Prêts à jouer ensemble ?'));
     var desc = el('p', 'text-muted-foreground mb-8 text-center', this.setupDesc || tg('playerSetup.enterNames', 'Entrez vos prénoms et commencez le quiz à deux !'));
@@ -3618,6 +3767,7 @@ var QuizEngine = (function() {
 
     this.container.appendChild(relaisJoueur(this, {
       nom: player.name,
+      perso: mascotteDe(player, this.currentPlayer),
       couleur: color ? color.bg : null,
       etape: tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + this.questions.length,
       suite: function() { self.phase = 'playing'; self.render(); }
@@ -3638,7 +3788,8 @@ var QuizEngine = (function() {
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
 
-    renderProgressBar(wrap, answered, totalNeeded, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total);
+    renderProgressBar(wrap, answered, totalNeeded, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
+      persosBarre(this.players, this.modeSolo ? 0 : this.currentPlayer));
 
     // Player indicator with color. En solo personne n'a de tour : pas de badge.
     if (!this.modeSolo) {
@@ -3750,7 +3901,7 @@ var QuizEngine = (function() {
     var hero = el('div', 'duo-result-hero duo-result-hero--' + tier);
     hero.appendChild(el('div', 'duo-result-emoji', tier === 'high' ? '🎉' : tier === 'mid' ? '😊' : '🤔'));
     var ringWrap = el('div', 'duo-result-ring');
-    ringWrap.innerHTML = renderScoreRing(pct, null, tier === 'high');
+    ringWrap.innerHTML = renderScoreRing(pct, null, tier === 'high', persosDe(this.players));
     hero.appendChild(ringWrap);
     hero.appendChild(el('div', 'duo-result-match', matchCount + '/' + total + ' ' + tg('result.identicalAnswers', 'réponses identiques')));
     if (result) {
@@ -3849,7 +4000,7 @@ var QuizEngine = (function() {
     var verdict = el('div', 'duo-verdict');
     verdict.appendChild(el('p', 'duo-verdict-label', esc(cl.heading || 'Niveau de votre couple')));
     var gRing = el('div', 'duo-verdict-ring');
-    gRing.innerHTML = renderScoreRing(pctG);
+    gRing.innerHTML = renderScoreRing(pctG, null, undefined, persosDe(this.players));
     verdict.appendChild(gRing);
     verdict.appendChild(el('span', 'duo-tag duo-tag--global', esc(bG.tag || '')));
     verdict.appendChild(el('h3', 'duo-verdict-title', esc(bG.title || '')));
@@ -3970,9 +4121,7 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
-    var iconWrap = el('div', 'quiz-setup-icon quiz-setup-icon-coquin mx-auto mb-4');
-    iconWrap.innerHTML = ICONS.flame;
-    wrap.appendChild(iconWrap);
+    wrap.appendChild(badgeDepart(ICONS.flame, null, 'mb-4', ['amoureux', 'amoureux'], 'quiz-setup-icon-coquin'));
 
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('coquin.readyToSpice', 'Prêts à pimenter ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', tg('coquin.enterNamesSpicy', 'Entrez vos prénoms')));
@@ -4066,7 +4215,8 @@ var QuizEngine = (function() {
     var target = this.players[round.target];
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
-    renderProgressBar(wrap, this.currentRound, this.limite, tg('question.roundXofY', 'Manche {{current}} sur {{total}}').replace('{{current}}', this.currentRound + 1).replace('{{total}}', this.limite));
+    renderProgressBar(wrap, this.currentRound, this.limite, tg('question.roundXofY', 'Manche {{current}} sur {{total}}').replace('{{current}}', this.currentRound + 1).replace('{{total}}', this.limite),
+      persosBarre(this.players, round.guesser));
 
     wrap.appendChild(el('div', 'text-center mb-2 text-sm text-muted-foreground', esc(guesser.name) + ' ' + tg('coquin.guessFor', 'devine pour') + ' ' + esc(target.name)));
     renderPlayerBadge(wrap, guesser.name + ' ' + tg('question.itsYourTurnToGuess', 'c\'est à toi de deviner !'));
@@ -4112,7 +4262,8 @@ var QuizEngine = (function() {
     var target = this.players[round.target];
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
-    renderProgressBar(wrap, this.currentRound, this.limite, tg('question.roundXofY', 'Manche {{current}} sur {{total}}').replace('{{current}}', this.currentRound + 1).replace('{{total}}', this.limite));
+    renderProgressBar(wrap, this.currentRound, this.limite, tg('question.roundXofY', 'Manche {{current}} sur {{total}}').replace('{{current}}', this.currentRound + 1).replace('{{total}}', this.limite),
+      persosBarre(this.players, round.guesser));
 
     wrap.appendChild(el('div', 'text-center mb-2', '📱 ' + tg('coquin.passPhone', 'Passez le téléphone à') + ' ' + esc(target.name)));
     renderPlayerBadge(wrap, target.name + ', ' + tg('coquin.revealAnswer', 'révèle ta vraie réponse !'));
@@ -4273,7 +4424,9 @@ var QuizEngine = (function() {
 
     wrap.appendChild(el('div', 'text-5xl mb-4', '🔥'));
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('coquin.resultsOf', 'Résultats de') + ' ' + esc(this.players[0].name) + ' & ' + esc(this.players[1].name)));
-    wrap.appendChild(el('div', 'quiz-score-circle mx-auto mb-4', pct + '%'));
+    var cercle = el('div', 'mb-4');
+    cercle.innerHTML = feteAutour('<div class="quiz-score-circle">' + pct + '%</div>', persosDe(this.players));
+    wrap.appendChild(cercle);
     wrap.appendChild(el('p', 'text-muted-foreground mb-6', score + '/' + jouees + ' ' + tg('coquin.goodGuesses', 'bonnes devinettes')));
 
 
@@ -4314,9 +4467,7 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
-    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-4');
-    iconWrap.innerHTML = ICONS.users;
-    wrap.appendChild(iconWrap);
+    wrap.appendChild(badgeDepart(ICONS.users, null, 'mb-4'));
 
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.whoKnowsBest', 'Qui connait l\'autre par cœur ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', tg('playerSetup.discoverWhoKnows', 'Découvrez qui connait mieux l\'autre !')));
@@ -4369,7 +4520,7 @@ var QuizEngine = (function() {
     var target = this.players[targetIdx];
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
-    renderProgressBar(wrap, this.currentQ, total);
+    renderProgressBar(wrap, this.currentQ, total, null, persosBarre(this.players, guesserIdx));
 
     // Qui fait quoi. Deux lignes de petit texte gris ne suffisaient pas : on
     // ne savait pas qui devait parler, et la question elle-meme ne disait pas
@@ -4754,9 +4905,7 @@ var QuizEngine = (function() {
     this.players = [{ name: '', letter: 'A' }, { name: '', letter: 'B' }];
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
-    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-4');
-    iconWrap.innerHTML = ICONS.users;
-    wrap.appendChild(iconWrap);
+    wrap.appendChild(badgeDepart(ICONS.users, null, 'mb-4'));
 
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.whoParticipates', 'Qui participe au quiz ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', tg('playerSetup.addPlayers', 'Ajoutez entre 2 et 8 joueurs')));
@@ -5280,9 +5429,7 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
-    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-6');
-    iconWrap.innerHTML = ICONS.users;
-    wrap.appendChild(iconWrap);
+    wrap.appendChild(badgeDepart(ICONS.users, null, 'mb-6'));
 
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center',
       tg('sainMode.titre', 'Comment voulez-vous passer le test ?')));
@@ -5338,9 +5485,7 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
-    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-6');
-    iconWrap.innerHTML = ICONS.users;
-    wrap.appendChild(iconWrap);
+    wrap.appendChild(badgeDepart(ICONS.users, null, 'mb-6'));
 
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center', tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-8 text-center', tg('playerSetup.enterNames', 'Entrez vos prénoms et commencez le test à deux !')));
@@ -5421,6 +5566,7 @@ var QuizEngine = (function() {
 
     this.container.appendChild(relaisJoueur(this, {
       nom: player.name,
+      perso: mascotteDe(player, this.currentPlayer),
       couleur: color.bg,
       etape: tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + this.questions.length,
       suite: function() { self.phase = 'playing'; self.render(); }
@@ -5436,7 +5582,8 @@ var QuizEngine = (function() {
     var answeredCount = solo ? this.reponses[0].length : (this.reponses[0].length + this.reponses[1].length);
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
-    renderProgressBar(wrap, answeredCount, totalAnswers, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total);
+    renderProgressBar(wrap, answeredCount, totalAnswers, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
+      persosBarre(this.players, this.currentPlayer));
 
     if (solo) {
       var badgeSolo = el('div', 'text-center mb-4');
@@ -5553,7 +5700,7 @@ var QuizEngine = (function() {
       solo ? tg('result.coupleScore', 'Score de votre couple')
            : tg('result.coupleAverage', 'Moyenne de votre couple')));
     var mainRingDiv = el('div', '');
-    mainRingDiv.innerHTML = renderScoreRing(pct);
+    mainRingDiv.innerHTML = renderScoreRing(pct, null, undefined, persosDe(this.players));
     wrap.appendChild(mainRingDiv);
 
     if (!solo) {
@@ -5667,9 +5814,7 @@ var QuizEngine = (function() {
     var self = this;
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
 
-    var iconWrap = el('div', 'quiz-setup-icon mx-auto mb-4');
-    iconWrap.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
-    wrap.appendChild(iconWrap);
+    wrap.appendChild(badgeDepart('<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>', null, 'mb-4'));
 
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
     wrap.appendChild(el('p', 'text-muted-foreground mb-2 text-center', tg('parentalite.setupDesc', 'Répondez chacun de votre côté aux mêmes 20 questions.')));
@@ -5761,6 +5906,7 @@ var QuizEngine = (function() {
 
     this.container.appendChild(relaisJoueur(this, {
       nom: player.name,
+      perso: mascotteDe(player, this.currentPlayer),
       couleur: colors[this.currentPlayer],
       etape: tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + this.questions.length,
       suite: function() { self.phase = 'playing'; self.render(); }
@@ -5778,7 +5924,8 @@ var QuizEngine = (function() {
     var color = colors[this.currentPlayer];
 
     var wrap = el('div', 'quiz-engine quiz-question-enter');
-    renderProgressBar(wrap, answeredCount, totalAnswers, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total);
+    renderProgressBar(wrap, answeredCount, totalAnswers, tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
+      persosBarre(this.players, this.currentPlayer));
 
     var badge = el('div', 'text-center mb-4');
     badge.innerHTML = '<span class="badge" style="background:' + color.bg + ';color:' + color.text + '">' + esc(player.name) + '</span>';
@@ -5887,7 +6034,7 @@ var QuizEngine = (function() {
     // Combined score header
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', tg('parentalite.combinedScore', 'Score global du couple')));
     var mainRingP = el('div', '');
-    mainRingP.innerHTML = renderScoreRing(pct);
+    mainRingP.innerHTML = renderScoreRing(pct, null, undefined, persosDe(this.players));
     wrap.appendChild(mainRingP);
     wrap.appendChild(el('p', 'text-sm text-muted-foreground mb-6 quiz-reveal-enter', totalScore + '/' + maxTotal));
 
@@ -7556,6 +7703,7 @@ var QuizEngine = (function() {
     var self = this;
     this.container.appendChild(relaisJoueur(this, {
       nom: this.joueurs[this.courant],
+      perso: mascotteDe(null, this.courant),
       emoji: '💫',
       note: tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard'),
       suite: function() { self.phase = 'playing'; self.render(); }
@@ -7568,7 +7716,7 @@ var QuizEngine = (function() {
     var total = this.questions.length;
     var wrap = el('div', 'quiz-engine quiz-question-enter');
 
-    renderProgressBar(wrap, this.currentQ, total);
+    renderProgressBar(wrap, this.currentQ, total, null, persosBarre(null, this.duo ? this.courant : 0));
     if (this.duo) renderPlayerBadge(wrap, this.joueurs[this.courant], this.courant === 0 ? 'badge-pink' : 'badge-blue');
 
     var texte = this.prenom(tgd(this.prefix + '.q' + q.id, q.text));
@@ -7911,6 +8059,7 @@ var QuizEngine = (function() {
     var self = this;
     this.container.appendChild(relaisJoueur(this, {
       nom: this.joueurs[this.courant],
+      perso: mascotteDe(null, this.courant),
       emoji: '🧠',
       note: tg('question.passPhoneOrLookAway', 'Passez le téléphone ou détournez le regard'),
       suite: function() { self.phase = 'playing'; self.render(); }
@@ -7926,7 +8075,8 @@ var QuizEngine = (function() {
     // En duo chacun repond aux vingt taches : la barre compte quarante pas.
     var faits = this.duo ? (this.courant * total + this.currentQ) : this.currentQ;
     renderProgressBar(wrap, faits, this.duo ? total * 2 : total,
-      tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total);
+      tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
+      persosBarre(null, this.duo ? this.courant : 0));
     if (this.duo) renderPlayerBadge(wrap, this.joueurs[this.courant], this.courant === 0 ? 'badge-pink' : 'badge-blue');
 
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center',
@@ -9188,46 +9338,65 @@ var QuizEngine = (function() {
 
   // ═══════════════════════════════════════════════════════════
   // BOARD GAME - le plateau du couple
-  // Le seul de nos jeux qui se gagne : deux pions, un de, quarante cases et
-  // une arrivee. Chaque case declenche une epreuve (verite, defi, gage,
-  // souvenir, duel) ou un evenement qui deplace les pions. Les cartes et les
-  // gages viennent des paquets deja ecrits pour les autres jeux, le plateau
-  // n'apporte que ses souvenirs, ses duels et ses cases chance.
+  // Le seul de nos jeux qui se gagne : deux figurines, un de, quarante cases
+  // et une arrivee. Chaque case declenche une epreuve (verite, defi, verite
+  // ou defi au choix, souvenir, duel) ou un coup de chance. Les cartes
+  // viennent du paquet d'action ou verite, le plateau n'apporte que ses
+  // souvenirs, ses duels et ses coups de chance.
+  // Depuis octobre 2026, plus aucun gage impose : les quatre cases gage sont
+  // devenues « action ou verite », ou celui qui joue choisit sa carte, et le
+  // perdant choisit aussi la derniere a l'arrivee. Et la case chance ne fait
+  // plus jamais reculer ni echanger les pions : un avis a une etoile venait
+  // de quelqu'un renvoye six cases en arriere par un echange de place, sur
+  // une case qui s'appelle « chance ».
   // ═══════════════════════════════════════════════════════════
   var PLATEAU_CASES = [
     'depart',   'verite', 'defi',     'souvenir', 'duel',
-    'chance',   'verite', 'defi',     'gage',     'souvenir',
+    'chance',   'verite', 'defi',     'choix',    'souvenir',
     'duel',     'verite', 'defi',     'chance',   'souvenir',
-    'verite',   'duel',   'defi',     'gage',     'verite',
+    'verite',   'duel',   'defi',     'choix',    'verite',
     'souvenir', 'defi',   'chance',   'verite',   'duel',
-    'defi',     'souvenir', 'verite', 'gage',     'chance',
+    'defi',     'souvenir', 'verite', 'choix',    'chance',
     'defi',     'duel',   'verite',   'souvenir', 'defi',
-    'verite',   'gage',   'duel',     'souvenir', 'arrivee'
+    'verite',   'choix',  'duel',     'souvenir', 'arrivee'
   ];
+  // L'ordre de la legende et des regles.
+  var PLATEAU_TYPES = ['verite', 'defi', 'duel', 'souvenir', 'choix', 'chance'];
   var PLATEAU_EMOJIS = {
     depart: '🚩', arrivee: '🏁', verite: '💬', defi: '🎯',
-    gage: '😈', souvenir: '💭', duel: '⚔️', chance: '🍀'
+    choix: '🎭', souvenir: '💭', duel: '⚔️', chance: '🍀'
   };
-  // Chaque evenement de la case chance a son effet et son texte.
+  // Les coups de chance : tous font avancer ou rejouer. Le rattrapage amene
+  // sur la case de l'autre quand on est derriere ; devant, il devient deux
+  // cases de plus (voir ouvrirCase).
   var PLATEAU_CHANCES = [
     { id: 'avance3', pas: 3 },
     { id: 'avance2', pas: 2 },
-    { id: 'recule2', pas: -2 },
-    { id: 'recule1', pas: -1 },
+    { id: 'avance1', pas: 1 },
     { id: 'rejoue', pas: 0, rejoue: true },
-    { id: 'echange', pas: 0, echange: true }
+    { id: 'rattrape', pas: 0, rattrape: true }
   ];
+  // Duree d'un pas de figurine : on la voit avancer, ou reculer, case par
+  // case, plutot que glisser d'un trait a travers le plateau.
+  var PLATEAU_PAS_MS = 210;
+  // Hauteur du dessin d'une figurine, en pixels (la feuille de style la
+  // redimensionne ensuite selon l'ecran).
+  var PLATEAU_FIGURINE = 40;
 
   function BoardGame(config) {
     this.container = config.container;
     this.prefix = config.prefix || 'plateau';
     this.prefixCartes = config.prefixCartes || 'actionVerite';
-    this.prefixGages = config.prefixGages || 'gageRoue';
     this.lang = config.lang || 'fr';
     this.cases = PLATEAU_CASES;
     this.phase = 'setup';
     this.noms = ['', ''];
+    this.genres = [null, null];
+    this.persos = ['rose', 'violet'];
     this.pos = [0, 0];
+    // La case ou chaque figurine est dessinee : pendant un deplacement elle
+    // rattrape la vraie position pas a pas.
+    this.affiche = [0, 0];
     this.tour = 0;
     this.tours = 0;
     this.de = null;
@@ -9264,18 +9433,10 @@ var QuizEngine = (function() {
       var source;
       if (type === 'verite') source = this.lireCartes('q');
       else if (type === 'defi') source = this.lireCartes('d');
-      else if (type === 'gage') source = this.lireGages();
       else source = this.lire(this.prefix, type);
       this.piles[type] = shuffleArray(source);
     }
     return this.piles[type].pop() || null;
-  };
-
-  BoardGame.prototype.lireGages = function() {
-    var familles = ['bisou', 'massage', 'show', 'aveu', 'grimace', 'photo', 'douceur'];
-    var out = [];
-    for (var i = 0; i < familles.length; i++) out = out.concat(this.lire(this.prefixGages, familles[i]));
-    return out;
   };
 
   BoardGame.prototype.joueur = function(i) {
@@ -9299,7 +9460,9 @@ var QuizEngine = (function() {
 
   BoardGame.prototype.renderSetup = function() {
     var self = this;
-    var grille = cartesDeuxJoueurs('plateau-nom');
+    // Le genre ne sert qu'a choisir la figurine (mascotteDe) : on ne le
+    // demande que si les mascottes sont la, et personne n'est oblige de repondre.
+    var grille = cartesDeuxJoueurs('plateau-nom', { genre: mascottesDispo() });
     var ecran = ecranDepart({
       icone: '🎲',
       titre: tg('plateau.setupTitre', 'Qui prend le départ ?'),
@@ -9312,7 +9475,9 @@ var QuizEngine = (function() {
           grille.querySelector('#plateau-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
           grille.querySelector('#plateau-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
         ];
-        self.pos = [0, 0]; self.tour = 0; self.tours = 0;
+        self.genres = grille.lireGenres ? grille.lireGenres() : [null, null];
+        self.persos = [mascotteDe({ gender: self.genres[0] }, 0), mascotteDe({ gender: self.genres[1] }, 1)];
+        self.pos = [0, 0]; self.affiche = [0, 0]; self.tour = 0; self.tours = 0;
         self.piles = {}; self.de = null; self.epreuve = null; self.gagnant = null;
         self.phase = 'jeu';
         self.render();
@@ -9324,6 +9489,9 @@ var QuizEngine = (function() {
 
   BoardGame.prototype.renderPlateau = function() {
     var self = this;
+    // Un rendu n'arrive qu'entre deux deplacements : les figurines sont la
+    // ou sont vraiment les joueurs.
+    this.affiche = [this.pos[0], this.pos[1]];
     var wrap = el('div', 'quiz-engine plateau-jeu');
 
     // barre de tour
@@ -9346,6 +9514,13 @@ var QuizEngine = (function() {
     // serpentin devient une colonne interminable a faire defiler.
     var cols = this.colonnes = window.innerWidth >= 640 ? 8 : 5;
     var scene = el('div', 'plateau-scene');
+    // Le chemin : une bande qui relie les cases dans l'ordre du serpentin,
+    // dessinee sous elles une fois les cases mesurees (placerPions).
+    var chemin = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    chemin.setAttribute('class', 'plateau-chemin');
+    chemin.setAttribute('aria-hidden', 'true');
+    chemin.appendChild(document.createElementNS('http://www.w3.org/2000/svg', 'polyline'));
+    scene.appendChild(chemin);
     var grille = el('div', 'plateau-grille');
     grille.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
     this.cases.forEach(function(type, i) {
@@ -9359,19 +9534,12 @@ var QuizEngine = (function() {
       grille.appendChild(c);
     });
     scene.appendChild(grille);
-    [0, 1].forEach(function(j) {
-      // Le pion de celui qui joue est cercle : c'est le second rappel du tour,
-      // celui qu'on lit sur le plateau sans remonter a l'entete.
-      var pion = el('span', 'plateau-pion plateau-pion--' + (j + 1) + (j === self.tour ? ' plateau-pion--actif' : ''));
-      pion.textContent = (self.noms[j] || '?').charAt(0).toUpperCase();
-      pion.title = self.joueur(j);
-      scene.appendChild(pion);
-    });
+    [0, 1].forEach(function(j) { scene.appendChild(self.figurine(j)); });
     wrap.appendChild(scene);
 
     // legende
     var legende = el('ul', 'plateau-legende');
-    ['verite', 'defi', 'duel', 'souvenir', 'gage', 'chance'].forEach(function(t) {
+    PLATEAU_TYPES.forEach(function(t) {
       var li = el('li', 'plateau-legende-item');
       li.innerHTML = '<span aria-hidden="true">' + PLATEAU_EMOJIS[t] + '</span> ' + esc(tgd(self.prefix + '.type_' + t, t));
       legende.appendChild(li);
@@ -9402,6 +9570,28 @@ var QuizEngine = (function() {
     this.suivreRedimensionnement();
   };
 
+  // La figurine d'un joueur : sa mascotte sur un petit socle, celle de celui
+  // qui joue respire doucement. Sans le module des mascottes, le pion rond a
+  // l'initiale d'avant.
+  BoardGame.prototype.figurine = function(j) {
+    var fig = el('div', 'plateau-figurine plateau-figurine--' + (j + 1) + (j === this.tour ? ' plateau-figurine--actif' : ''));
+    fig.title = this.joueur(j);
+    if (mascottesDispo()) {
+      fig.classList.add('plateau-figurine--' + this.persos[j]);
+      fig.innerHTML = '<span class="plateau-figurine-socle"></span>' +
+        '<span class="plateau-figurine-perso">' + mascotteSvg(this.persos[j], 'repos', PLATEAU_FIGURINE) + '</span>';
+    } else {
+      fig.classList.add('plateau-figurine--pion');
+      fig.textContent = (this.noms[j] || '?').charAt(0).toUpperCase();
+    }
+    return fig;
+  };
+
+  BoardGame.prototype.poserPerso = function(fig, j, pose) {
+    var span = fig.querySelector('.plateau-figurine-perso');
+    if (span) span.innerHTML = mascotteSvg(this.persos[j], pose, PLATEAU_FIGURINE);
+  };
+
   // Les regles sont deja ecrites et traduites dans la page : le bouton
   // devoile ce bloc au lieu d'en dupliquer une version dans le moteur.
   BoardGame.prototype.basculerRegles = function(bouton) {
@@ -9415,55 +9605,115 @@ var QuizEngine = (function() {
     bouton.setAttribute('aria-expanded', ouvert ? 'false' : 'true');
   };
 
-  // Les pions sont positionnes en pixels : il faut les replacer quand la
-  // largeur change, et refaire le plateau si le nombre de colonnes bascule.
+  // Les figurines et le chemin sont positionnes en pixels : il faut les
+  // replacer quand la largeur change, et refaire le plateau si le nombre de
+  // colonnes bascule.
   BoardGame.prototype.suivreRedimensionnement = function() {
     var self = this;
     if (this._resize) return;
     this._resize = function() {
       if (self.phase === 'setup' || self.phase === 'fin') return;
       var cols = window.innerWidth >= 640 ? 8 : 5;
-      if (cols !== self.colonnes) self.render(); else self.placerPions();
+      if (cols !== self.colonnes) self.render(); else self.placerPions(true);
     };
     window.addEventListener('resize', this._resize);
   };
 
-  // immediat : place sans animer. Un pion vient d'etre recree par un rendu,
-  // il doit apparaitre a sa place et non y glisser depuis le coin du plateau.
+  // Pose chaque figurine sur sa case affichee et trace le chemin.
+  // immediat : sans glissement, pour une figurine qui vient d'etre recreee
+  // par un rendu et doit apparaitre a sa place.
   BoardGame.prototype.placerPions = function(immediat) {
     var self = this;
     var grille = this.container.querySelector('.plateau-grille');
-    if (!grille) return;
-    // Deux pions sur la meme case se cotoient sans se recouvrir ; un pion seul
-    // reste centre, sinon il parait toujours decale par rapport a sa case.
-    var ensemble = this.pos[0] === this.pos[1];
-    [0, 1].forEach(function(j) {
-      var pion = self.container.querySelector('.plateau-pion--' + (j + 1));
-      var c = grille.children[Math.min(self.pos[j], self.cases.length - 1)];
-      if (!pion || !c) return;
-      var ecart = ensemble ? (j === 0 ? -14 : 14) : 0;
-      var dx = c.offsetLeft + c.offsetWidth / 2 - 13 + ecart;
-      var dy = c.offsetTop + c.offsetHeight / 2 - 13;
-      if (immediat) pion.style.transition = 'none';
-      pion.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
-      if (immediat) { void pion.offsetWidth; pion.style.transition = ''; }
+    if (!grille || !grille.children.length) return;
+    var cases = grille.children;
+    // Toute la geometrie est lue d'abord, puis tout est ecrit : une lecture
+    // apres une ecriture force une mise en page complete.
+    var centres = [];
+    for (var i = 0; i < cases.length; i++) {
+      centres.push([cases[i].offsetLeft + cases[i].offsetWidth / 2, cases[i].offsetTop + cases[i].offsetHeight / 2]);
+    }
+    var largeurCase = cases[0].offsetWidth;
+    var largeurGrille = grille.offsetWidth, hauteurGrille = grille.offsetHeight;
+    var figs = [0, 1].map(function(j) {
+      var f = self.container.querySelector('.plateau-figurine--' + (j + 1));
+      return f ? { el: f, w: f.offsetWidth, h: f.offsetHeight } : null;
+    });
+    var trace = this.container.querySelector('.plateau-chemin polyline');
+    if (trace) {
+      var svg = trace.ownerSVGElement;
+      svg.setAttribute('viewBox', '0 0 ' + largeurGrille + ' ' + hauteurGrille);
+      svg.setAttribute('preserveAspectRatio', 'none');
+      trace.setAttribute('points', centres.map(function(c) { return Math.round(c[0]) + ',' + Math.round(c[1]); }).join(' '));
+      trace.setAttribute('stroke-width', String(Math.max(8, Math.round(largeurCase * 0.5))));
+    }
+    // Deux figurines sur la meme case se cotoient sans se recouvrir ; une
+    // figurine seule reste centree.
+    var ensemble = this.affiche[0] === this.affiche[1];
+    figs.forEach(function(f, j) {
+      if (!f) return;
+      var c = centres[Math.max(0, Math.min(self.affiche[j], centres.length - 1))];
+      var ecart = ensemble ? (j === 0 ? -0.2 : 0.2) * largeurCase : 0;
+      var dx = c[0] - f.w / 2 + ecart;
+      // Les pieds un peu sous le centre de la case : la figurine parait
+      // posee dessus plutot que flottante.
+      var dy = c[1] - f.h * 0.72;
+      if (immediat) f.el.style.transition = 'none';
+      f.el.style.transform = 'translate(' + Math.round(dx) + 'px, ' + Math.round(dy) + 'px)';
+      if (immediat) { void f.el.offsetWidth; f.el.style.transition = ''; }
     });
   };
 
-  // Le pion doit finir de bouger tant que c'est encore le tour de celui qui
-  // joue. Le bonus d'une epreuve etait applique en meme temps que le passage
-  // de main : on voyait donc son pion arriver sur l'ecran du joueur suivant.
-  BoardGame.prototype.deplacerPuis = function(bouge, suite) {
-    if (!bouge) return suite();
-    this.placerPions();
-    var doux = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setTimeout(suite, doux ? 60 : 620);
+  // Mene la figurine de j, case par case, jusqu'a sa vraie position, puis
+  // appelle suite. Chaque pas est un petit saut vers la case voisine, et la
+  // mascotte se tourne dans le sens de la marche : on la voit avancer, ou
+  // reculer. Mouvement reduit : elle est posee directement.
+  BoardGame.prototype.animerFigurine = function(j, suite) {
+    var self = this;
+    var cible = Math.max(0, Math.min(this.cases.length - 1, this.pos[j]));
+    var fig = this.container.querySelector('.plateau-figurine--' + (j + 1));
+    if (!fig || this.affiche[j] === cible) {
+      this.affiche[j] = cible;
+      this.placerPions();
+      setTimeout(suite, 0);
+      return;
+    }
+    if (prefersReducedMotion()) {
+      this.affiche[j] = cible;
+      this.placerPions(true);
+      setTimeout(suite, 60);
+      return;
+    }
+    var sens = cible > this.affiche[j] ? 1 : -1;
+    var grille = this.container.querySelector('.plateau-grille');
+    fig.classList.add('plateau-figurine--marche');
+    this.poserPerso(fig, j, 'profil');
+    var pas = function() {
+      var avant = self.affiche[j], apres = avant + sens;
+      // Tournee vers la gauche quand la case suivante est plus a gauche a
+      // l'ecran : une ligne sur deux du serpentin, et tous les reculs.
+      var ca = grille && grille.children[avant], cb = grille && grille.children[apres];
+      if (ca && cb) fig.classList.toggle('plateau-figurine--gauche', cb.offsetLeft < ca.offsetLeft);
+      self.affiche[j] = apres;
+      self.placerPions();
+      if (apres === cible) {
+        setTimeout(function() {
+          fig.classList.remove('plateau-figurine--marche');
+          fig.classList.remove('plateau-figurine--gauche');
+          self.poserPerso(fig, j, 'repos');
+          suite();
+        }, PLATEAU_PAS_MS + 80);
+      } else {
+        setTimeout(pas, PLATEAU_PAS_MS);
+      }
+    };
+    pas();
   };
 
-  // Pendant ce deplacement la carte reste a l'ecran : sans cela, un deuxieme
+  // Pendant un deplacement la carte reste a l'ecran : sans cela, un deuxieme
   // clic sur « relevé » relancerait la resolution une fois le verrou expire.
   BoardGame.prototype.figerActions = function() {
-    var b = this.container.querySelectorAll('.party-actions button');
+    var b = this.container.querySelectorAll('.party-actions button, .party-choix button');
     for (var i = 0; i < b.length; i++) b[i].disabled = true;
   };
 
@@ -9481,7 +9731,7 @@ var QuizEngine = (function() {
   BoardGame.prototype.lancerDe = function(bouton, deAff) {
     var self = this;
     bouton.disabled = true;
-    var doux = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var doux = prefersReducedMotion();
     var valeur = 1 + Math.floor(Math.random() * 6);
     var tours = doux ? 0 : 8, n = 0;
     deAff.classList.add('plateau-de--roule');
@@ -9502,19 +9752,23 @@ var QuizEngine = (function() {
     var self = this;
     var j = this.tour;
     this.pos[j] = Math.max(0, Math.min(this.cases.length - 1, this.pos[j] + pas));
-    this.placerPions();
-    var doux = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setTimeout(function() {
+    this.animerFigurine(j, function() {
       if (self.pos[j] >= self.cases.length - 1) { self.gagnant = j; self.phase = 'fin'; self.render(); return; }
       self.ouvrirCase();
-    }, doux ? 60 : 620);
+    });
   };
 
   BoardGame.prototype.ouvrirCase = function() {
     var type = this.cases[this.pos[this.tour]];
     if (type === 'chance') {
       var ev = PLATEAU_CHANCES[Math.floor(Math.random() * PLATEAU_CHANCES.length)];
+      // Rattraper l'autre n'a de sens que derriere lui : devant, le coup de
+      // chance devient deux cases de plus.
+      if (ev.rattrape && this.pos[this.tour] >= this.pos[1 - this.tour]) ev = PLATEAU_CHANCES[1];
       this.epreuve = { type: 'chance', evenement: ev, texte: tgd(this.prefix + '.chance_' + ev.id, '') };
+    } else if (type === 'choix') {
+      // La carte n'est tiree qu'une fois le paquet choisi (carteEpreuve).
+      this.epreuve = { type: 'choix' };
     } else {
       this.epreuve = { type: type, texte: this.piocher(type) };
     }
@@ -9522,15 +9776,54 @@ var QuizEngine = (function() {
     this.render();
   };
 
+  // La carte d'une epreuve : son type et son texte.
+  BoardGame.prototype.carteTexte = function(type, texte) {
+    var carte = el('div', 'party-carte party-carte--' + (type === 'defi' ? 'defi' : 'question'));
+    carte.innerHTML = '<span class="party-carte-type">' + PLATEAU_EMOJIS[type] + ' ' +
+      esc(tgd(this.prefix + '.type_' + type, type)) + '</span>' +
+      '<p class="party-carte-texte">' + esc(texte || '') + '</p>';
+    return carte;
+  };
+
+  // Les deux boutons « verite » / « defi », comme dans action ou verite.
+  // surChoix recoit le type retenu.
+  BoardGame.prototype.boutonsChoix = function(surChoix) {
+    var self = this;
+    var choix = el('div', 'party-choix');
+    [{ type: 'verite', cle: 'question' }, { type: 'defi', cle: 'defi' }].forEach(function(o) {
+      var b = el('button', 'party-choix-btn party-choix-btn--' + o.cle);
+      b.type = 'button';
+      b.innerHTML = '<span class="party-choix-emoji">' + PLATEAU_EMOJIS[o.type] + '</span>' +
+        '<span class="party-choix-nom">' + esc(tgd(self.prefix + '.type_' + o.type, o.type)) + '</span>';
+      b.addEventListener('click', function() { surChoix(o.type); });
+      choix.appendChild(b);
+    });
+    return choix;
+  };
+
   BoardGame.prototype.carteEpreuve = function() {
     var self = this;
     var e = this.epreuve;
     var bloc = el('div', 'plateau-epreuve');
-    var carte = el('div', 'party-carte party-carte--' + (e.type === 'defi' ? 'defi' : e.type === 'gage' ? 'gage' : 'question'));
-    carte.innerHTML = '<span class="party-carte-type">' + PLATEAU_EMOJIS[e.type] + ' ' +
-      esc(tgd(this.prefix + '.type_' + e.type, e.type)) + '</span>' +
-      '<p class="party-carte-texte">' + esc(e.texte || '') + '</p>';
-    bloc.appendChild(carte);
+
+    // La case au choix : d'abord « verite ou defi ? », puis la carte tiree
+    // dans le paquet choisi, qui se joue comme n'importe quelle autre.
+    if (e.type === 'choix') {
+      var question = el('div', 'party-carte party-carte--choix');
+      question.innerHTML = '<span class="party-carte-type">' + PLATEAU_EMOJIS.choix + ' ' +
+        esc(tgd(this.prefix + '.type_choix', 'Action ou vérité')) + '</span>' +
+        '<p class="party-carte-texte">' + esc(tg('plateau.choixTitre', 'Vérité ou défi ?')) + '</p>' +
+        '<p class="plateau-choix-aide">' + esc(tg('plateau.choixDesc', '')) + '</p>';
+      bloc.appendChild(question);
+      bloc.appendChild(this.boutonsChoix(function(type) {
+        if (self.verrouille()) return;
+        self.epreuve = { type: type, texte: self.piocher(type), choisi: true };
+        self.render();
+      }));
+      return bloc;
+    }
+
+    bloc.appendChild(this.carteTexte(e.type, e.texte));
 
     var actions = el('div', 'party-actions');
     if (e.type === 'chance') {
@@ -9544,10 +9837,6 @@ var QuizEngine = (function() {
       desaccord.addEventListener('click', function() { self.finTour(0); });
       actions.appendChild(accord);
       actions.appendChild(desaccord);
-    } else if (e.type === 'gage') {
-      var fini = el('button', 'btn btn-cta btn-lg', tg('jeu.gageFait', 'Gage accompli !'));
-      fini.addEventListener('click', function() { self.finTour(0); });
-      actions.appendChild(fini);
     } else {
       var fait = el('button', 'btn btn-cta btn-lg', tg('plateau.releve', 'Relevé, j\'avance'));
       fait.addEventListener('click', function() { self.finTour(1); });
@@ -9564,14 +9853,12 @@ var QuizEngine = (function() {
     if (this.verrouille()) return;
     var self = this;
     var j = this.tour;
-    var avant = [this.pos[0], this.pos[1]];
-    if (ev.echange) { var t = this.pos[0]; this.pos[0] = this.pos[1]; this.pos[1] = t; }
+    if (ev.rattrape) this.pos[j] = this.pos[1 - j];
     else if (ev.pas) this.pos[j] = Math.max(0, Math.min(this.cases.length - 1, this.pos[j] + ev.pas));
     this.tours++;
     this.figerActions();
-    this.deplacerPuis(this.pos[0] !== avant[0] || this.pos[1] !== avant[1], function() {
+    this.animerFigurine(j, function() {
       if (self.pos[j] >= self.cases.length - 1) { self.gagnant = j; self.phase = 'fin'; self.render(); return; }
-      if (self.pos[1 - j] >= self.cases.length - 1) { self.gagnant = 1 - j; self.phase = 'fin'; self.render(); return; }
       if (!ev.rejoue) self.tour = 1 - self.tour;
       self.de = null;
       self.phase = 'jeu';
@@ -9579,16 +9866,17 @@ var QuizEngine = (function() {
     });
   };
 
-  // bonus : nombre de cases gagnees (ou perdues) une fois l'epreuve resolue
+  // bonus : nombre de cases gagnees (ou perdues) une fois l'epreuve resolue.
+  // La figurine finit de bouger tant que c'est encore le tour de celui qui
+  // joue : le passage de main n'arrive qu'apres.
   BoardGame.prototype.finTour = function(bonus) {
     if (this.verrouille()) return;
     var self = this;
     var j = this.tour;
-    var avant = this.pos[j];
     if (bonus) this.pos[j] = Math.max(0, Math.min(this.cases.length - 1, this.pos[j] + bonus));
     this.tours++;
     this.figerActions();
-    this.deplacerPuis(this.pos[j] !== avant, function() {
+    this.animerFigurine(j, function() {
       if (self.pos[j] >= self.cases.length - 1) { self.gagnant = j; self.phase = 'fin'; self.render(); return; }
       self.tour = 1 - self.tour;
       self.de = null;
@@ -9601,24 +9889,33 @@ var QuizEngine = (function() {
     var self = this;
     var g = this.gagnant, p = 1 - this.gagnant;
     var wrap = el('div', 'quiz-engine quiz-result-card text-center');
-    wrap.appendChild(el('div', 'text-5xl mb-3', '🏆'));
+    // Les deux figurines autour du trophee, dans l'ordre des joueurs : le
+    // gagnant saute de joie, le perdant boude.
+    var trophee = el('div', 'plateau-fin-trophee');
+    trophee.innerHTML = feteAutour('<div class="plateau-fin-coupe">🏆</div>', this.persos,
+      [g === 0 ? 'joie' : 'boude', g === 1 ? 'joie' : 'boude']);
+    wrap.appendChild(trophee);
     wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', esc(
       tg('plateau.victoire', '{{nom}} gagne la partie !').replace('{{nom}}', this.joueur(g)))));
     wrap.appendChild(el('p', 'text-lg mb-4', esc(
       tg('plateau.victoireTexte', 'Arrivée atteinte en {{n}} tours.').replace('{{n}}', this.tours))));
 
-    var gage = this.piocher('gage');
-    if (gage) {
-      var bloc = el('div', 'plateau-gage-final');
-      bloc.innerHTML = '<span class="party-carte-type">😈 ' +
-        esc(tg('plateau.gagePerdant', 'Le gage du perdant').replace('{{nom}}', this.joueur(p))) + '</span>' +
-        '<p class="party-carte-texte">' + esc(gage) + '</p>';
-      wrap.appendChild(bloc);
-    }
+    // Le dernier mot revient au perdant : une verite ou un defi, a son
+    // choix, que le gagnant lui lit. Plus de gage tire au sort.
+    var fin = el('div', 'plateau-fin-choix');
+    fin.appendChild(el('p', 'party-demande', esc(
+      tg('plateau.finChoix', '{{nom}} a perdu : vérité ou défi ?').replace('{{nom}}', this.joueur(p)))));
+    fin.appendChild(el('p', 'plateau-choix-aide', esc(tg('plateau.finChoixDesc', ''))));
+    fin.appendChild(this.boutonsChoix(function(type) {
+      var texte = self.piocher(type);
+      fin.innerHTML = '';
+      fin.appendChild(self.carteTexte(type, texte));
+    }));
+    wrap.appendChild(fin);
 
     var rejouer = el('button', 'btn btn-cta btn-lg mt-6 mb-2', tg('jeu.rejouer', 'Rejouer'));
     rejouer.addEventListener('click', function() {
-      self.pos = [0, 0]; self.tour = 0; self.tours = 0; self.piles = {};
+      self.pos = [0, 0]; self.affiche = [0, 0]; self.tour = 0; self.tours = 0; self.piles = {};
       self.de = null; self.epreuve = null; self.gagnant = null;
       self.phase = 'jeu'; self.render(); smoothScroll(self.container, 'start');
     });
@@ -9954,6 +10251,7 @@ var QuizEngine = (function() {
     wrap.appendChild(this.barre());
     wrap.appendChild(relaisJoueur(this, {
       nom: this.joueur(1),
+      perso: mascotteDe(null, 1),
       // Pas d'étape ici : le bandeau du jeu, juste au-dessus, affiche déjà le
       // numéro de manche.
       note: tg('quiDeNous.passeDesc', 'Pas de triche : le vote reste caché jusqu\'à la révélation.'),
@@ -11212,7 +11510,8 @@ var QuizEngine = (function() {
     var wrap = el('div', 'quiz-engine jnj-jeu quiz-question-enter');
     renderProgressBar(wrap, this.idx, this.limite,
       this.jtg('questionSur', 'Question {{n}} / {{total}}')
-        .replace('{{n}}', this.idx + 1).replace('{{total}}', this.limite));
+        .replace('{{n}}', this.idx + 1).replace('{{total}}', this.limite),
+      persosBarre(null, repondant));
 
     var carte = el('div', 'jnj-carte');
     carte.innerHTML = '<p class="jnj-enonce">' + esc(q.texte) + '</p>';

@@ -530,7 +530,10 @@
     "refuse": "I pass, I move back",
     "victoire": "{{nom}} wins the game!",
     "victoireTexte": "Finish line reached in {{n}} turns.",
-    "gagePerdant": "The loser's forfeit",
+    "choixTitre": "Truth or dare?",
+    "choixDesc": "A question or a dare, your pick. Done, that's one square forward; passed, one square back.",
+    "finChoix": "{{nom}} lost: truth or dare?",
+    "finChoixDesc": "No forced forfeit: the loser picks their last card, and the winner reads it out.",
     "casesMot": "squares"
   },
   "roue": {

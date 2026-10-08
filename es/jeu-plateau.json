@@ -3,7 +3,7 @@
     "badge": "Gratis • Sin registro • Aquí se gana",
     "title": "El juego de mesa para parejas, en un solo móvil",
     "titleHighlight": "para parejas",
-    "description": "Cuarenta casillas, un dado, dos fichas con vuestros nombres. Gana el primero en llegar… y el que pierde saca una prenda."
+    "description": "Cuarenta casillas, un dado, dos figuritas con vuestros nombres. Gana el primero en llegar… y el que pierde elige su última carta: verdad o reto."
   },
   "cases": {
     "veriteNom": "Verdad",
@@ -14,8 +14,8 @@
     "duelDesc": "Una pregunta que empieza por «quién de los dos». Señaláis a la vez: si coincidís, el que juega avanza dos casillas.",
     "souvenirNom": "Recuerdo",
     "souvenirDesc": "Hay que contarlo. Un primer viaje, una primera discusión, un ataque de risa. Es la casilla que frena la partida, y a menudo la que se recuerda.",
-    "gageNom": "Prenda",
-    "gageDesc": "Aquí no hay escapatoria: cae la prenda y hay que cumplirla. Sale de las ciento cuarenta prendas de nuestra ruleta.",
+    "choixNom": "Verdad o reto",
+    "choixDesc": "Es la casilla en la que se elige. Una pregunta o un reto, lo que prefieras, y después la misma regla que en las demás: cumplido, avanzas una casilla; pasado, retrocedes una.",
     "chanceNom": "Suerte",
     "chanceDesc": "El acontecimiento que lo cambia todo: avanzar tres, retroceder dos, volver a tirar o intercambiar las dos fichas."
   },
@@ -35,31 +35,31 @@
     "title": "Las reglas, en cuatro puntos",
     "intro": "Se leen en un minuto, y del resto se encarga el juego.",
     "regle1Titre": "Escribid vuestros nombres y tirad el dado",
-    "regle1Texte": "Cada uno con su ficha, cada uno con su turno. El juego anuncia quién juega y mueve la ficha solo hasta la casilla que ha salido.",
+    "regle1Texte": "Cada uno con su figurita, cada uno con su turno. El juego anuncia quién juega y mueve la figurita solo, casilla a casilla, hasta la que ha salido.",
     "regle2Titre": "Cada casilla lanza una prueba",
-    "regle2Texte": "Verdad, reto, duelo, recuerdo, prenda o golpe de suerte. Descubrís la carta una vez colocada la ficha, nunca antes.",
+    "regle2Texte": "Verdad, reto, duelo, recuerdo, verdad o reto a elegir, o golpe de suerte. Descubrís la carta una vez colocada la figurita, nunca antes.",
     "regle3Titre": "Cumplir hace avanzar, rechazar hace retroceder",
     "regle3Texte": "Una verdad o un reto cumplido os da una casilla más. Rechazarlo cuesta una. Es lo que hace que rechazar sea posible sin que salga gratis.",
     "regle4Titre": "El primero en llegar gana",
-    "regle4Texte": "No hace falta la cuenta exacta: basta con alcanzar o pasar la última casilla. El que pierde saca entonces una última prenda, y se acabó."
+    "regle4Texte": "No hace falta la cuenta exacta: basta con alcanzar o pasar la última casilla. El que pierde elige entonces una última carta, verdad o reto, y se acabó."
   },
   "faq": {
     "title": "Preguntas frecuentes",
     "q1": "¿Cuánto dura una partida?",
     "a1": "Entre veinte y treinta minutos por lo general. El número de turnos depende de los dados, pero sobre todo de vosotros: una casilla de recuerdo se puede resolver en quince segundos… o abrir una conversación de diez minutos.",
     "q2": "¿Hay que imprimir algo?",
-    "a2": "¡No! El tablero está en pantalla y las fichas se mueven solas. Basta con un móvil entre los dos, nada que instalar ni que crear.",
+    "a2": "¡No! El tablero está en pantalla y las figuritas se mueven solas. Basta con un móvil entre los dos, nada que instalar ni que crear.",
     "q3": "¿De dónde salen las cartas?",
-    "a3": "Las verdades y los retos están sacados del juego de <a href=\"/es/juego-verdad-o-reto-pareja/\">verdad o reto</a>, las prendas vienen de la <a href=\"/es/prendas-para-parejas/\">ruleta de prendas</a>. Los recuerdos, los duelos y las casillas de suerte se escribieron especialmente para el tablero.",
+    "a3": "Las verdades y los retos están sacados del juego de <a href=\"/es/juego-verdad-o-reto-pareja/\">verdad o reto</a>, y son las mismas cartas las que salen en la casilla de elección. Los recuerdos, los duelos y las casillas de suerte se escribieron especialmente para el tablero.",
     "q4": "¿Se puede hacer trampa o saltarse una prueba?",
-    "a4": "Pasar está previsto y cuesta una casilla, salvo en una casilla de prenda, donde no hay escapatoria. Por lo demás es un juego de dos sin árbitro: nadie va a comprobar si habéis respondido de verdad…",
+    "a4": "Pasar está previsto y cuesta una casilla, en todas las cartas. Por lo demás es un juego de dos sin árbitro: nadie va a comprobar si habéis respondido de verdad…",
     "q5": "¿Se puede jugar entre más de dos?",
     "a5": "El tablero está hecho para dos fichas y dos nombres. Si sois más, lo más sencillo es jugar por parejas e ir pasándoos el móvil en cada turno."
   },
   "section4": {
     "title": "Por qué un tablero lo cambia todo",
     "p1": "Lo que hace que una noche de juego dure no es el contenido, es lo que está en juego. La misma pregunta hecha al azar se olvida; hecha a tres casillas de la meta, con el otro pisándote los talones, se convierte en un momento. El tablero no hace nada más que eso: da una razón para seguir.",
-    "p2": "Y al final queda un ganador, un perdedor y una última prenda. Poca cosa… y es exactamente lo que le falta a la mayoría de juegos de pareja online.",
+    "p2": "Y al final queda un ganador, un perdedor y una última carta que el perdedor elige él mismo. Poca cosa… y es exactamente lo que le falta a la mayoría de juegos de pareja online.",
     "cta": "Ver todos nuestros juegos para parejas"
   },
   "jsonLd": {

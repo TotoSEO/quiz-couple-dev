@@ -87,7 +87,7 @@
       </ol>
       <h3 class="plateau-regles-titre plateau-regles-titre--sous"><%= t(ns + ':section2.title', '') %></h3>
       <ul class="plateau-regles-cases">
-        <% for (const c of ['verite', 'defi', 'duel', 'souvenir', 'gage', 'chance']) { %>
+        <% for (const c of ['verite', 'defi', 'duel', 'souvenir', 'choix', 'chance']) { %>
         <li>
           <strong><%= t(ns + ':cases.' + c + 'Nom', '') %></strong>
           <span><%= t(ns + ':cases.' + c + 'Desc', '') %></span>
@@ -127,7 +127,7 @@
             </tr>
           </thead>
           <tbody>
-            <% ['verite', 'defi', 'duel', 'souvenir', 'gage', 'chance'].forEach(function(c) { %>
+            <% ['verite', 'defi', 'duel', 'souvenir', 'choix', 'chance'].forEach(function(c) { %>
             <tr>
               <th scope="row"><%= t(ns + ':cases.' + c + 'Nom', '') %></th>
               <td><%= t(ns + ':cases.' + c + 'Desc', '') %></td>
