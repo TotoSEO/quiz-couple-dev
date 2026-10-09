@@ -96,13 +96,7 @@
                 ]
               }
             ],
-            "textes": [
-              {
-                "texte": "et là c'est le jackpot",
-                "de": 0.3,
-                "place": "haut"
-              }
-            ]
+            "textes": []
           },
           {
             "duree": 4,
@@ -160,18 +154,11 @@
                 "flotte": true
               }
             ],
-            "textes": [
-              {
-                "texte": "c'est ça, rentrer <3",
-                "de": 0.4,
-                "place": "haut",
-                "motAMot": true
-              }
-            ]
+            "textes": []
           }
         ]
       },
-      "legende": "rentrer, c'est ça.\n\nenvoie ça à ta personne",
+      "legende": "18 h 02. tous les jours.\n\ntague-le",
       "hashtags": [
         "#lesmipaps",
         "#couple",

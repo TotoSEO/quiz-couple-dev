@@ -138,7 +138,8 @@
                 ]
               }
             ],
-            "ambiance": "pluie"
+            "ambiance": "pluie",
+            "textes": []
           },
           {
             "duree": 4,
@@ -194,19 +195,12 @@
                 "flotte": true
               }
             ],
-            "textes": [
-              {
-                "texte": "serrés sous le même parapluie <3",
-                "de": 0.4,
-                "place": "haut",
-                "motAMot": true
-              }
-            ],
+            "textes": [],
             "ambiance": "pluie"
           }
         ]
       },
-      "legende": "il a mis le parapluie au-dessus d'elle. et il s'est mouillé.\n\ntague celui qui se mouille pour toi",
+      "legende": "il est rentré trempé d'un seul côté.\n\ntague-le",
       "hashtags": [
         "#lesmipaps",
         "#couple",

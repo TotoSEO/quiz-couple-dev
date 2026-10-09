@@ -14,7 +14,7 @@
         "theme": "light",
         "idee": "Dessin de bureau : le diagramme de Venn de bom.seeat (1 100 partages), ce qui me calme, ce qui me stresse, et toi au milieu.",
         "style": "schema",
-        "texte": "comment tu fais pour être les deux en même temps ?",
+        "texte": "j'ai fait un schéma",
         "schema": {
           "type": "venn",
           "gauche": "ce qui me calme",
@@ -22,7 +22,7 @@
           "milieu": "toi"
         }
       },
-      "legende": "les deux. en même temps. tous les jours.\n\nc'est qui chez vous ?",
+      "legende": "il est au milieu depuis 3 ans.\n\nc'est qui chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

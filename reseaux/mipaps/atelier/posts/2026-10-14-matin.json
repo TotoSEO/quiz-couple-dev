@@ -147,7 +147,7 @@
             ],
             "textes": [
               {
-                "texte": "j'ai juste goûté.",
+                "texte": "j'ai juste goûté",
                 "de": 1.5,
                 "place": "haut"
               }
@@ -186,18 +186,11 @@
                 ]
               }
             ],
-            "textes": [
-              {
-                "texte": "le cornet est vide. elle est innocente.",
-                "de": 0.4,
-                "place": "haut",
-                "motAMot": true
-              }
-            ]
+            "textes": []
           }
         ]
       },
-      "legende": "on est deux. mais y a qu'une personne qui mange.\n\ntague celui qui te pique tes frites",
+      "legende": "il en a eu trois.\n\ntague-la",
       "hashtags": [
         "#lesmipaps",
         "#couple",

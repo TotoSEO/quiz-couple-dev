@@ -89,7 +89,7 @@
             }
           },
           {
-            "texte": "« je t'aime. » / je t'aime.",
+            "texte": "« c'est pas grave. » / c'est grave.",
             "dessin": {
               "elements": [
                 {
@@ -103,11 +103,11 @@
                 }
               ]
             },
-            "appel": "dis-moi laquelle c'est chez toi"
+            "appel": "c'est laquelle chez vous ?"
           }
         ]
       },
-      "legende": "la dernière, c'est la seule qui change pas.\n\nc'est laquelle chez vous ?",
+      "legende": "la 3 c'est tous les soirs.\n\nc'est laquelle chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

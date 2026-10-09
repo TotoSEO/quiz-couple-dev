@@ -137,7 +137,7 @@
             }
           },
           {
-            "texte": "le film est fini depuis une heure. personne sait la fin. c'était parfait.",
+            "texte": "le film est fini depuis une heure. personne sait la fin.",
             "dessin": {
               "elements": [
                 {
@@ -172,7 +172,7 @@
           }
         ]
       },
-      "legende": "on sait jamais la fin du film. c'est pas grave.\n\ntague ta personne",
+      "legende": "on a jamais vu la fin d'un film.\n\ntague ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",

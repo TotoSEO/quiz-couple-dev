@@ -159,7 +159,7 @@
             ],
             "textes": [
               {
-                "texte": "lui : « j'ai pas froid. » (il a froid)",
+                "texte": "lui : « j'ai pas froid. »",
                 "de": 0.5,
                 "place": "haut",
                 "motAMot": true
@@ -168,7 +168,7 @@
           }
         ]
       },
-      "legende": "il a donné sa couverture. il a eu froid. il est resté.\n\nenvoie ça à celui qui te réchauffe",
+      "legende": "il avait froid.\n\nenvoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",

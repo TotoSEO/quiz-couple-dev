@@ -160,7 +160,7 @@
             ],
             "textes": [
               {
-                "texte": "(c'est le mien maintenant, merci)",
+                "texte": "c'est le mien.",
                 "de": 1.2,
                 "place": "haut"
               }
@@ -182,13 +182,7 @@
                 ]
               }
             ],
-            "textes": [
-              {
-                "texte": "lui, deux minutes plus tard",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
+            "textes": []
           },
           {
             "duree": 3.5,
@@ -279,18 +273,11 @@
                 "flotte": true
               }
             ],
-            "textes": [
-              {
-                "texte": "bon. on partage. <3",
-                "de": 1.9,
-                "place": "haut",
-                "motAMot": true
-              }
-            ]
+            "textes": []
           }
         ]
       },
-      "legende": "il a froid, j'ai le pull, tout le monde est content.\n\ntague celle qui te vole tes pulls",
+      "legende": "il a 12 pulls. j'en ai 12.\n\ntague-la",
       "hashtags": [
         "#lesmipaps",
         "#couple",

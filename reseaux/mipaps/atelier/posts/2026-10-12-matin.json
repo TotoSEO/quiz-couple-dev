@@ -210,18 +210,11 @@
                 "flotte": true
               }
             ],
-            "textes": [
-              {
-                "texte": "il arrive. elle dort. il reste.",
-                "de": 2.2,
-                "place": "haut",
-                "motAMot": true
-              }
-            ]
+            "textes": []
           }
         ]
       },
-      "legende": "« 2 min » c'est jamais 2 min.\n\ntague celui qui dit « j'arrive » en sortant de la douche",
+      "legende": "ses 2 min durent 2 h.\n\ntague-le",
       "hashtags": [
         "#lesmipaps",
         "#couple",

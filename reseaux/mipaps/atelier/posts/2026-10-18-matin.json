@@ -94,13 +94,7 @@
                 ]
               }
             ],
-            "textes": [
-              {
-                "texte": "c'est tout. juste ça.",
-                "de": 0.4,
-                "place": "haut"
-              }
-            ]
+            "textes": []
           },
           {
             "duree": 4.5,
@@ -166,7 +160,7 @@
           }
         ]
       },
-      "legende": "un compliment, et il rame encore.\n\nenvoie ça à celui qui rougit pour rien",
+      "legende": "il y pense encore.\n\ntague-le",
       "hashtags": [
         "#lesmipaps",
         "#couple",

@@ -149,7 +149,8 @@
                 "de": 2.2,
                 "flotte": true
               }
-            ]
+            ],
+            "textes": []
           },
           {
             "duree": 3.5,
@@ -188,18 +189,11 @@
                 "flotte": true
               }
             ],
-            "textes": [
-              {
-                "texte": "et ça repart.",
-                "de": 0.4,
-                "place": "haut",
-                "motAMot": true
-              }
-            ]
+            "textes": []
           }
         ]
       },
-      "legende": "personne boude plus de 4 minutes. on a essayé.\n\nc'est qui qui craque en premier chez vous ?",
+      "legende": "record de bouderie : 4 minutes.\n\nc'est qui chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

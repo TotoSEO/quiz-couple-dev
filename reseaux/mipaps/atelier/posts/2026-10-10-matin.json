@@ -13,7 +13,9 @@
         "langue": "fr",
         "theme": "light",
         "idee": "L'au revoir interminable : il part, revient pour un câlin, repart « vraiment », revient encore ; une heure plus tard il est toujours là. D'après le reel de story.sketchers (112 000 vues).",
-        "son": { "ambiance": "drole" },
+        "son": {
+          "ambiance": "drole"
+        },
         "plans": [
           {
             "duree": 4,
@@ -22,37 +24,121 @@
               {
                 "perso": "elle",
                 "etapes": [
-                  { "a": 0, "x": 280, "expression": "content" },
-                  { "a": 2.4, "expression": "malicieux" }
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "malicieux"
+                  }
                 ]
               },
               {
                 "perso": "lui",
                 "etapes": [
-                  { "a": 0, "x": 410, "expression": "content" },
-                  { "a": 0.5, "x": 410, "pose": "marche", "angle": 90 },
-                  { "a": 2.2, "x": 600, "pose": "debout" },
-                  { "a": 2.6, "angle": 0, "expression": "pensif" },
-                  { "a": 2.8, "x": 600, "pose": "marche", "angle": 90, "expression": "calin" },
-                  { "a": 3.9, "x": 390, "pose": "debout" }
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.5,
+                    "x": 410,
+                    "pose": "marche",
+                    "angle": 90
+                  },
+                  {
+                    "a": 2.2,
+                    "x": 600,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.6,
+                    "angle": 0,
+                    "expression": "pensif"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 600,
+                    "pose": "marche",
+                    "angle": 90,
+                    "expression": "calin"
+                  },
+                  {
+                    "a": 3.9,
+                    "x": 390,
+                    "pose": "debout"
+                  }
                 ]
               }
             ],
-            "textes": [{ "texte": "bon, j'y vais", "de": 0.2, "place": "haut", "style": "titre" }]
+            "textes": [
+              {
+                "texte": "bon j'y vais",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
           },
           {
             "duree": 3.5,
             "description": "Le câlin : elle à gauche, lui à droite, serrés, les yeux fermés, trois petits cœurs qui flottent au-dessus d'eux à partir de 0,6 s. Le texte « (câlin de 4 minutes) » en haut dès 0,3 s. Rien ne bouge d'autre : c'est long exprès.",
             "persos": [
-              { "perso": "elle", "etapes": [{ "a": 0, "x": 290, "expression": "transi", "bras": "tend_d", "pose": "penche_d" }] },
-              { "perso": "lui", "etapes": [{ "a": 0, "x": 400, "expression": "calin", "bras": "tend_g", "pose": "penche_g" }] }
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "transi",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "calin",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              }
             ],
             "objets": [
-              { "objet": "coeur", "x": 345, "y": 150, "echelle": 0.5, "de": 0.6, "flotte": true },
-              { "objet": "coeur", "x": 250, "y": 190, "echelle": 0.32, "de": 1.1, "flotte": true },
-              { "objet": "coeur", "x": 440, "y": 200, "echelle": 0.36, "de": 1.5, "flotte": true }
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 250,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 1.1,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 1.5,
+                "flotte": true
+              }
             ],
-            "textes": [{ "texte": "(câlin de 4 minutes)", "de": 0.3, "place": "haut" }]
+            "textes": []
           },
           {
             "duree": 3.5,
@@ -61,41 +147,115 @@
               {
                 "perso": "elle",
                 "etapes": [
-                  { "a": 0, "x": 290, "expression": "content" },
-                  { "a": 2, "expression": "blase" }
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2,
+                    "expression": "blase"
+                  }
                 ]
               },
               {
                 "perso": "lui",
                 "etapes": [
-                  { "a": 0, "x": 400, "expression": "determine" },
-                  { "a": 0.3, "x": 400, "pose": "marche", "angle": 90 },
-                  { "a": 2, "x": 600, "pose": "debout" },
-                  { "a": 2.4, "angle": 0, "expression": "triste" },
-                  { "a": 2.6, "x": 600, "pose": "marche", "angle": 90, "expression": "supplie" },
-                  { "a": 3.4, "x": 420, "pose": "debout" }
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "determine"
+                  },
+                  {
+                    "a": 0.3,
+                    "x": 400,
+                    "pose": "marche",
+                    "angle": 90
+                  },
+                  {
+                    "a": 2,
+                    "x": 600,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.4,
+                    "angle": 0,
+                    "expression": "triste"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 600,
+                    "pose": "marche",
+                    "angle": 90,
+                    "expression": "supplie"
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 420,
+                    "pose": "debout"
+                  }
                 ]
               }
             ],
-            "textes": [{ "texte": "j'y vais vraiment", "de": 0.2, "place": "haut", "style": "titre" }]
+            "textes": [
+              {
+                "texte": "j'y vais vraiment",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
           },
           {
             "duree": 3.5,
             "transition": "fondu",
             "description": "Une heure plus tard : les deux assis par terre, côte à côte. Elle blasée, lui tout content d'être encore là. Le texte « une heure plus tard. » en haut dès 0,2 s, puis « il est toujours là. <3 » s'écrit mot à mot en bas à partir de 1 s.",
             "persos": [
-              { "perso": "elle", "etapes": [{ "a": 0, "x": 290, "expression": "blase", "pose": "assis" }] },
-              { "perso": "lui", "etapes": [{ "a": 0, "x": 410, "expression": "content", "pose": "assis" }, { "a": 1.8, "expression": "transi" }] }
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "expression": "blase",
+                    "pose": "assis"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "expression": "content",
+                    "pose": "assis"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "transi"
+                  }
+                ]
+              }
             ],
             "textes": [
-              { "texte": "une heure plus tard.", "de": 0.2, "place": "haut", "style": "titre" },
-              { "texte": "il est toujours là. <3", "de": 1, "place": "bas", "motAMot": true }
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
             ]
           }
         ]
       },
-      "legende": "on a jamais réussi à se dire au revoir en moins d'une heure.\n\ntague celui qui part jamais vraiment",
-      "hashtags": ["#lesmipaps", "#couple", "#amour", "#humour"]
+      "legende": "il part à 19 h. il est 20 h 30.\n\ntague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
     }
   }
 }

@@ -13,7 +13,7 @@
         "langue": "fr",
         "theme": "light",
         "idee": "Reel statique : le câlin, les cœurs qui flottent, et la phrase qui s'écrit mot à mot. Musique douce à la publication.",
-        "texte": "j'aime bien quand t'es là. même quand tu dis rien.",
+        "texte": "j'aime bien quand t'es là et qu'on fait rien",
         "duree": 11,
         "son": {
           "ambiance": "tendre"
@@ -57,7 +57,7 @@
           ]
         }
       },
-      "legende": "même quand tu dis rien.\n\nenvoie ça à ta personne",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
