@@ -554,6 +554,23 @@ Tant qu'un compte n'est pas actif (pas encore branché, ou coupé dans l'admin),
 - **Jamais deux fois le même post** : avant de publier, la ligne passe en
   « publication en cours » par une mise à jour conditionnelle. Un deuxième
   passage en parallèle ne trouve plus rien à publier.
+- **La Page Facebook aussi** (9 octobre 2026) : le partage automatique
+  d'Instagram vers Facebook ne joue pas pour un contenu publié par l'API,
+  alors ce qui vient de partir sur Instagram part aussi sur la Page reliée
+  (`publierFacebook`, `lib/facebook.mjs`), avec le même jeton de Page, qui
+  doit porter `pages_manage_posts` et `publish_video` : un reel devient un
+  reel Facebook (session d'envoi `video_reels`, adresse du fichier donnée au
+  serveur d'envoi, publication avec la légende), une image une photo, un
+  carrousel une publication à plusieurs photos, et le reel du matin repart
+  aussi en story de la Page. Sans son ajouté : le reel Facebook part avec
+  les bruitages de son fichier. Interrupteur par compte dans l'admin
+  (`social_comptes.facebook`, à vrai par défaut), identifiant de la Page
+  relevé à la connexion (`page_id`, `page_nom` : un compte connecté avant
+  cette date doit recoller son jeton pour le remplir). Suivi par
+  déclinaison (`fb_statut`, `fb_id`, `fb_lien`, `fb_story_id`,
+  `fb_erreur`, `fb_essais`, migration `20261009120000`), trois essais puis
+  « echec » ; un échec Facebook ne touche jamais la publication Instagram,
+  déjà faite.
 - **Erreurs** : trois essais espacés, puis « échec » avec le message
   d'Instagram dans le journal et une alerte dans l'admin. Le post se relance
   d'un clic.

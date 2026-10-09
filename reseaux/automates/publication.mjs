@@ -7,6 +7,9 @@
 //     part juste après la publication du reel, la story est publiée au passage
 //     suivant, quand Instagram a traité la vidéo (publierStories).
 // Une image ou un carrousel se prépare et se publie dans le même passage.
+//  4. Ce qui vient d'être publié sur Instagram part aussi sur la Page Facebook
+//     reliée, si le compte le demande (publierFacebook) : le partage
+//     automatique d'Instagram vers Facebook ne joue pas pour l'API.
 // Rien ne part si la pause générale est active, si le compte n'est pas
 // actif ou s'il n'a pas de jeton : la déclinaison attend, sans erreur.
 //
@@ -14,6 +17,7 @@
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { Instagram } from './lib/instagram.mjs';
+import { PageFacebook } from './lib/facebook.mjs';
 import { legendeFinale } from './lib/controle.mjs';
 import { VOLUME_MUSIQUE, VOLUME_VIDEO, ambianceDuReel, choisirSon, requetePour, sonsRecents } from './lib/son.mjs';
 
@@ -70,13 +74,13 @@ async function sonDuReel(ig, base, v, tendances, categorie) {
 // Le nom du son original d'un reel sans musique, selon le compte.
 const NOM_DU_SON = { fr: 'Les mipaps' };
 
-export async function publier(base, { maintenant = new Date(), aBlanc = false, instagramPour } = {}) {
+export async function publier(base, { maintenant = new Date(), aBlanc = false, instagramPour, facebookPour } = {}) {
   const bilan = { conteneurs: 0, publies: 0, attente: 0, echecs: 0, aBlanc: 0 };
   if ((await base.reglage('pause')) === true) {
     console.log('pause générale : rien ne part');
     return bilan;
   }
-  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id,actif');
+  const comptes = await base.select('social_comptes', 'select=id,langue,ig_user_id,actif,facebook,page_id');
   const horizon = new Date(maintenant.getTime() + minutes(AVANCE_REEL_MIN)).toISOString();
   const candidates = await base.select(
     'social_variantes',
@@ -171,6 +175,10 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
           erreur: null,
           // le reel du matin est repris en story
           story_statut: post.format === 'reel' && post.creneau === 'matin' ? 'a_faire' : null,
+          // et tout part aussi sur la Page Facebook reliée, si le compte le demande
+          fb_statut: compte.facebook && compte.page_id ? 'a_faire' : null,
+          fb_erreur: null,
+          fb_essais: 0,
         });
         bilan.publies++;
         const son = v.recette?.son?.id ? `, son « ${v.recette.son.titre}${v.recette.son.artiste ? ` » de ${v.recette.son.artiste}` : ' »'}` : '';
@@ -191,6 +199,7 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
     }
   }
   bilan.stories = await publierStories(base, { maintenant, instagramPour });
+  bilan.facebook = aBlanc ? { publies: 0, echecs: 0 } : await publierFacebook(base, { maintenant, facebookPour });
   return bilan;
 }
 
@@ -240,6 +249,68 @@ export async function publierStories(base, { maintenant = new Date(), instagramP
       await base.update('social_variantes', `id=eq.${v.id}`, { story_statut: 'echec' });
       await base.journal('alerte', 'publication', `story du matin non publiée : ${e.message}`, null, v.id);
       bilan.echecs++;
+    }
+  }
+  return bilan;
+}
+
+// La Page Facebook : ce qui vient d'être publié sur Instagram part aussi sur
+// la Page reliée, avec le même jeton de Page (il lui faut pages_manage_posts
+// et publish_video). Reel en reel Facebook, image en photo, carrousel en
+// publication à plusieurs photos, et le reel du matin aussi en story de la
+// Page. Jamais au détriment d'Instagram : la publication Instagram est déjà
+// faite quand on arrive ici, et un échec Facebook ne la touche pas. Trois
+// essais, un par passage, puis « echec » et une erreur au journal.
+const FB_ESSAIS_MAX = 3;
+export async function publierFacebook(base, { maintenant = new Date(), facebookPour } = {}) {
+  const bilan = { publies: 0, stories: 0, echecs: 0 };
+  const depuis = new Date(maintenant.getTime() - 24 * 3600 * 1000).toISOString();
+  const lignes = await base.select(
+    'social_variantes',
+    `select=id,post_id,langue,fichiers,legende,hashtags,fb_statut,fb_essais,publie_le&fb_statut=eq.a_faire&publie_le=gte.${depuis}`,
+  );
+  if (!lignes.length) return bilan;
+  const comptes = await base.select('social_comptes', 'select=id,langue,actif,facebook,page_id');
+  for (const v of lignes) {
+    const compte = comptes.find((c) => c.langue === v.langue);
+    const [jeton] = compte ? await base.select('social_jetons', `select=jeton&compte_id=eq.${compte.id}`) : [];
+    if (!compte?.actif || !compte.facebook || !compte.page_id || !jeton) continue;
+    const [post] = await base.select('social_posts', `select=format,jour,creneau&id=eq.${v.post_id}`);
+    if (!post) continue;
+    const fb = facebookPour ? facebookPour(jeton.jeton, compte.page_id) : new PageFacebook(jeton.jeton, compte.page_id);
+    const pris = await base.update('social_variantes', `id=eq.${v.id}&fb_statut=eq.a_faire`, { fb_statut: 'en_cours' });
+    if (!pris.length) continue;
+    const ou = `${post.jour} ${post.creneau} ${v.langue}`;
+    try {
+      const legende = legendeFinale(v);
+      let r;
+      if (post.format === 'reel') r = await fb.reel({ videoUrl: await base.signer(v.fichiers.reel), legende });
+      else if (post.format === 'image') r = await fb.photo({ imageUrl: await base.signer(v.fichiers.image), legende });
+      else {
+        const imageUrls = [];
+        for (const p of v.fichiers.pages) imageUrls.push(await base.signer(p));
+        r = await fb.album({ imageUrls, legende });
+      }
+      await base.update('social_variantes', `id=eq.${v.id}`, { fb_statut: 'publie', fb_id: r.id, fb_lien: r.lien, fb_erreur: null, fb_publie_le: maintenant.toISOString() });
+      bilan.publies++;
+      await base.journal('info', 'publication', `${ou} publié sur la Page Facebook`, { lien: r.lien }, v.id);
+      // le reel du matin repart aussi en story de la Page ; un échec ici ne
+      // remet pas le reel en jeu, il est déjà publié
+      if (post.format === 'reel' && post.creneau === 'matin' && Number(v.fichiers?.duree) <= 60) {
+        try {
+          const st = await fb.story({ videoUrl: await base.signer(v.fichiers.reel) });
+          await base.update('social_variantes', `id=eq.${v.id}`, { fb_story_id: st.id });
+          bilan.stories++;
+        } catch (e) {
+          await base.journal('alerte', 'publication', `${ou} : story Facebook non publiée : ${e.message}`, null, v.id);
+        }
+      }
+    } catch (e) {
+      const essais = (v.fb_essais || 0) + 1;
+      const definitif = essais >= FB_ESSAIS_MAX;
+      await base.update('social_variantes', `id=eq.${v.id}`, { fb_statut: definitif ? 'echec' : 'a_faire', fb_erreur: e.message, fb_essais: essais });
+      await base.journal(definitif ? 'erreur' : 'alerte', 'publication', `${ou} : Page Facebook : ${e.message}`, { essais }, v.id);
+      if (definitif) bilan.echecs++;
     }
   }
   return bilan;
