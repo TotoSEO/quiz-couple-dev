@@ -1,5 +1,5 @@
 {
-  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau. La banque « bd » (8 octobre 2026) : des planches en quatre cases, une situation, une chute dans la dernière case ; chaque idée découpe les quatre images et donne les répliques.",
+  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau. La banque « bd » (8 octobre 2026) : des planches en quatre cases, une situation, une chute dans la dernière case ; chaque idée découpe les quatre images et donne les répliques. Le 9 octobre 2026, les 28 phrases tendres ont été réécrites en phrases concrètes qu'une personne écrirait vraiment à l'autre (« I love how you say my name when you're half asleep. ») à la place des maximes sur l'amour (« You're the reason I believe in slow, gentle love. »), et les chutes des planches qui commentaient la scène ont été remplacées par ce que le personnage dirait pour de vrai : voir « La chute, et ce qui sonne machine » dans LIGNE-EDITORIALE.md.",
   "pov": [
     {
       "id": "pov-001",
@@ -1937,11 +1937,11 @@
   "phrase": [
     {
       "id": "ph-001",
-      "texte": "I didn't know how quiet my heart could feel until I met you."
+      "texte": "I love how you say my name when you're half asleep."
     },
     {
       "id": "ph-002",
-      "texte": "With you, even ordinary days feel like a small celebration."
+      "texte": "I'd pick a random Tuesday with you over any party."
     },
     {
       "id": "ph-003",
@@ -1949,91 +1949,91 @@
     },
     {
       "id": "ph-004",
-      "texte": "Some people feel like home. You're one of them."
+      "texte": "I still get excited when your name pops up on my phone."
     },
     {
       "id": "ph-005",
-      "texte": "I love the way you make the world feel a little softer."
+      "texte": "You're the only person I'd share my fries with."
     },
     {
       "id": "ph-006",
-      "texte": "Of all the places I could be, next to you is my favorite."
+      "texte": "The best part of going out is coming home to you after."
     },
     {
       "id": "ph-007",
-      "texte": "You don't have to be perfect. You just have to be you, with me."
+      "texte": "You've seen me at my worst and you still make me coffee."
     },
     {
       "id": "ph-008",
-      "texte": "I still smile when I see your name on my phone."
+      "texte": "Falling asleep on you is my favorite way to end a day."
     },
     {
       "id": "ph-009",
-      "texte": "Loving you is the easiest thing I've ever done."
+      "texte": "I love that you laugh at my jokes before I finish them."
     },
     {
       "id": "ph-010",
-      "texte": "You're my favorite part of every day, even the hard ones."
+      "texte": "I love coming home and hearing you in the kitchen."
     },
     {
       "id": "ph-011",
-      "texte": "I hope you know how much calmer I am when you're near."
+      "texte": "I sleep better when you're on your side of the bed."
     },
     {
       "id": "ph-012",
-      "texte": "Every song makes sense since you."
+      "texte": "I love you even when you steal all the blanket."
     },
     {
       "id": "ph-013",
-      "texte": "If I had to choose again, I'd still choose you, every time."
+      "texte": "If I had to pick again, I'd pick you. Faster this time."
     },
     {
       "id": "ph-014",
-      "texte": "Thank you for staying on the days I'm hard to love."
+      "texte": "Thanks for staying on the days I'm a lot."
     },
     {
       "id": "ph-015",
-      "texte": "You make me want to be a softer, braver version of me."
+      "texte": "You make me want to be nicer to everyone. Even my brother."
     },
     {
       "id": "ph-016",
-      "texte": "My favorite place is wherever your hand is holding mine."
+      "texte": "My favorite place is your side of the couch."
     },
     {
       "id": "ph-017",
-      "texte": "I fall for you a little more in the small moments."
+      "texte": "I fall for you again every time you laugh at your own joke."
     },
     {
       "id": "ph-018",
-      "texte": "Being loved by you feels like being understood."
+      "texte": "You get my jokes. Nobody gets my jokes."
     },
     {
       "id": "ph-019",
-      "texte": "You're the reason I believe in slow, gentle love."
+      "texte": "You never rushed me. I noticed."
     },
     {
       "id": "ph-020",
-      "texte": "When I'm with you, I don't need to pretend anything."
+      "texte": "With you I don't have to pretend I like the movie."
     },
     {
       "id": "ph-021",
-      "texte": "I hope we keep laughing like this when we're old."
+      "texte": "I hope we're still laughing at the same dumb stuff at 80."
     },
     {
       "id": "ph-022",
-      "texte": "You turned my favorite places into our favorite places."
+      "texte": "I can't go to that café without thinking of you now."
     },
     {
       "id": "ph-023",
-      "texte": "Your laugh is my favorite sound in the whole world."
+      "texte": "Your laugh is my favorite sound. Your snoring is second."
     },
     {
       "id": "ph-024",
-      "texte": "I love you in a quiet, every day, always kind of way."
+      "texte": "I love you in a 'did you eat?' kind of way."
     },
     {
       "id": "ph-025",
-      "texte": "You're proof that good things happen when I least expect them."
+      "texte": "I almost didn't go out that night. I'm so glad I did."
     },
     {
       "id": "ph-026",
@@ -2041,11 +2041,11 @@
     },
     {
       "id": "ph-027",
-      "texte": "You make my heart feel safe enough to be soft."
+      "texte": "I can cry in front of you. That's rare for me."
     },
     {
       "id": "ph-028",
-      "texte": "Of everything I have, our little life together is my favorite."
+      "texte": "I like our little life."
     }
   ],
   "saison": {
@@ -2337,7 +2337,7 @@
     {
       "id": "bd-008",
       "pilier": "tendresse",
-      "idee": "La pluie dans la rue | 1 elle sous le parapluie, lui trempé à côté | 2 elle pousse le parapluie vers lui | 3 lui au sec, elle trempée, yeux plats | 4 les deux serrés sous le parapluie : « we fit. »"
+      "idee": "La pluie dans la rue | 1 elle sous le parapluie, lui trempé à côté | 2 elle pousse le parapluie vers lui | 3 lui au sec, elle trempée, yeux plats | 4 les deux serrés sous le parapluie : « scoot. »"
     },
     {
       "id": "bd-009",
@@ -2352,7 +2352,7 @@
     {
       "id": "bd-011",
       "pilier": "humour",
-      "idee": "Qui cuisine, la cuisine | 1 il cuisine, de la fumée | 2 elle sent, bouche en o | 3 l'assiette, toute noire, les deux la regardent | 4 ils mangent une pizza sur le canapé, heureux : « our recipe »"
+      "idee": "Qui cuisine, la cuisine | 1 il cuisine, de la fumée | 2 elle sent, bouche en o | 3 l'assiette, toute noire, les deux la regardent | 4 ils mangent une pizza sur le canapé, heureux : « don't tell my mom. »"
     },
     {
       "id": "bd-012",

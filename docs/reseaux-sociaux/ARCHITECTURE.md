@@ -609,6 +609,16 @@ réussi la précédente.
 | 5 | La validation | Tu valides dans l'admin : tous les posts les 4 à 6 premières semaines, puis un échantillon, ou plus rien si tout est fiable. | Toi |
 | 6 | Après publication | Le lien publié répond, le post est visible, les statistiques arrivent. Un post qui fait anormalement peu de vues est signalé. | Programme |
 
+**Le style des textes** (9 octobre 2026) : avant le premier contrôle, à la
+porte de l'atelier (`controler.mjs`, jamais dans la synchro), `lib/style.mjs`
+refuse ce qui sonne « écrit par une machine » : une fin qui commente la
+scène (« that's love », « c'est tout »), une légende qui répète l'image, un
+appel hors de la liste ou inventé, plus d'un « <3 » par post, un texte entier
+entre parenthèses, trois phrases courtes à la suite. La règle de fond, la
+chute dans l'image et la légende en un détail vrai, est dans les lignes
+éditoriales des deux comptes ; les routines revoient leur réserve six posts
+par passage.
+
 **Contre le flou**, à la source :
 
 - rendu directement en 1080 × 1920, jamais d'agrandissement ;
