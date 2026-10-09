@@ -199,7 +199,10 @@ tu valides les formats, et l'automate les décline.
 > l'animation (`pov` : POV, mini messages, scènes coquines, reels
 > statiques), « Connais-tu ton partenaire ? » (`connais-tu`), « Tu
 > préfères » (`tu-preferes`), la phrase tendre (`citation`, ex-R2), le post
-> 4:5 avec une scène dessinée (`image`) et le carrousel (`carrousel`). Le
+> 4:5 avec une scène dessinée (`image`), le carrousel (`carrousel`) et,
+> depuis le 8 octobre 2026, la bande dessinée en quatre cases (`bd` : quatre
+> scènes figées en grille, répliques courtes, chute dans la dernière case,
+> en post ou en carrousel). Le
 > quiz chrono à bonne réponse (`quiz-chrono`, R7) reste disponible hors de
 > la semaine type. Le tableau ci-dessous est le plan de départ.
 
@@ -670,8 +673,13 @@ accident.
   à corriger le tir si besoin (suspendre, refuser avec un motif relu par
   Claude à la création suivante, refaire, déplacer, publier maintenant,
   annuler).
-- **Idées** : un champ pour noter une idée de post en une phrase. Le planning
-  les place en priorité.
+- **Idées** : une phrase suffit (la situation, et la chute si tu l'as), avec
+  la catégorie si tu la connais. Claude écrit le scénario, les textes et la
+  légende, et prend le créneau le plus proche de cette catégorie : le post
+  prévu à cette place, pas encore parti, est remplacé, son sujet retourne
+  dans la banque. L'admin affiche la date visée dès la saisie, puis le post
+  une fois l'idée utilisée. Une phrase entre guillemets est reprise telle
+  quelle.
 - **Santé** : jours de réserve, publications des 7 derniers jours, échecs,
   jetons (jours restants), stockage occupé, dernier passage des routines, et
   l'interrupteur de pause.

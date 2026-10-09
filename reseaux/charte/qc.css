@@ -515,3 +515,71 @@
   background: color-mix(in srgb, var(--fond) 80%, transparent);
 }
 .pov-signature img { width: 56px; height: 56px; }
+
+/* ── La bande dessinée en quatre cases (gabarit bd) ───────────────────
+   Quatre cases en grille 2 x 2 dans la zone utile d'un post, chacune une
+   scène figée bordée d'un trait d'encre, avec ses répliques en haut, du
+   côté de celui qui parle. En carrousel, une case par page : la scène en
+   grand et les mêmes bulles, plus grandes, dans la zone utile du haut. */
+.bd-cases {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.bd-case {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 6px solid var(--decor-trait);
+  border-radius: var(--rayon-carte);
+  background: var(--fond);
+}
+.bd-bulle {
+  position: absolute;
+  box-sizing: border-box;
+  max-width: calc(100% - 36px);
+  padding: 8px 20px 10px;
+  border: 5px solid var(--decor-trait);
+  border-radius: 26px;
+  background: var(--fond);
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 1.15;
+  font-weight: 600;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--encre);
+}
+.bd-bulle.is-gauche { left: 18px; --pointe: 28%; }
+.bd-bulle.is-droite { right: 18px; --pointe: 72%; }
+.bd-bulle.is-centre { left: 50%; transform: translateX(-50%); --pointe: 50%; }
+/* la petite pointe vers celui qui parle */
+.bd-bulle::after {
+  content: '';
+  position: absolute;
+  left: calc(var(--pointe, 50%) - 11px);
+  bottom: -17px;
+  width: 20px;
+  height: 20px;
+  background: var(--fond);
+  border-right: 5px solid var(--decor-trait);
+  border-bottom: 5px solid var(--decor-trait);
+  transform: rotate(45deg);
+}
+.bd-bulle.is-page {
+  position: relative;
+  max-width: 82%;
+  padding: 14px 34px 18px;
+  border-radius: var(--rayon-carte);
+  font-size: 56px;
+  line-height: 1.12;
+}
+.bd-bulle.is-page.is-gauche { left: auto; align-self: flex-start; }
+.bd-bulle.is-page.is-droite { right: auto; align-self: flex-end; }
+.bd-bulle.is-page.is-centre { left: auto; transform: none; align-self: center; }
+.bd-bulle.is-page::after { bottom: -21px; width: 26px; height: 26px; left: calc(var(--pointe, 50%) - 14px); }
+.bd-pagination {
+  padding: 8px 24px;
+  border-radius: var(--rayon-pilule);
+  background: color-mix(in srgb, var(--fond) 82%, transparent);
+}

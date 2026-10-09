@@ -65,17 +65,18 @@ refuse un post qui ne la suit pas.
 | | Matin | Midi | Après-midi |
 |---|---|---|---|
 | Lundi | POV | Connais-tu | POV |
-| Mardi | POV | Tu préfères | POV |
+| Mardi | POV | Tu préfères | BD en quatre cases |
 | Mercredi | POV | Connais-tu | POV |
 | Jeudi | POV | Statique | Carrousel |
 | Vendredi | POV | Connais-tu | Coquin |
 | Samedi | POV | Tu préfères | Phrase tendre |
 | Dimanche | POV | Statique | Phrase tendre |
 
-Par semaine : 11 animations (dont une coquine), 3 « Connais-tu ton
-partenaire ? », 2 « Tu préfères », 2 reels statiques, 2 phrases tendres et
+Par semaine : 10 animations (dont une coquine), 3 « Connais-tu ton
+partenaire ? », 2 « Tu préfères », 2 reels statiques, 2 phrases tendres,
 1 carrousel de questions (le jeudi soir, depuis le 7 octobre 2026 : c'est le
-format qui se garde, « Save this for your next date night »). Sur 13
+format qui se garde, « Save this for your next date night ») et 1 bande
+dessinée en quatre cases (le mardi soir, depuis le 8 octobre 2026). Sur 13
 semaines : 273 posts. Et chaque jour, une **story** reprend le reel du matin
 (voir plus bas).
 
@@ -205,6 +206,29 @@ dans le coin de chaque page. C'est le format qui fait le plus
 d'enregistrements : la légende dit « Save this for your next date night »,
 et peut renvoyer vers le site. Pas de musique (un carrousel d'images n'en
 a pas par l'API). Treize éditions dans la banque (`carrousel`).
+
+### `bd` : la bande dessinée en quatre cases du mardi soir (gabarit `bd`)
+
+Le format des planches à quatre cases qui tournent sur Instagram (Amity
+Comics et les comptes du même genre, montrés par Thomas le 8 octobre 2026) :
+une situation de couple en quatre images, les mêmes deux personnages d'une
+case à l'autre, une ou deux répliques courtes par case en haut, et la
+chute dans la dernière case. Le studio dessine chaque case comme une scène
+d'animation figée (mêmes décors, poses, gestes et objets), bordée d'un trait
+d'encre, en grille 2 x 2 sur un post 4:5. La même recette peut sortir en
+carrousel, une case par page en grand (`"sortie": "carrousel"`) : on
+garde le post pour l'instant, le carrousel servira si le format marche.
+
+Ce qui fait une bonne planche : une situation que tout le monde reconnaît
+(elle est malade, il la rassure, il l'embrasse quand même, les deux malades
+au lit), montrée plus que dite ; la case 3 est souvent sans texte, c'est
+l'image qui fait rire ; la dernière réplique a le dernier mot (« told
+u. »). Textes en minuscules façon message, 40 signes au plus, cinq
+répliques au plus sur la planche. Les mascottes sont dans chaque case,
+jamais en petit dans un coin. Ni musique ni son : c'est une image. Légende
+sans renvoi vers le site, comme les animations (un appel à identifier ou à
+envoyer à l'autre). Hashtags : `#couplecomics`, `#relationshipcomics`,
+`#couplegoals`, `#quizcouple`. Quatorze planches dans la banque (`bd`).
 
 ### `post`
 

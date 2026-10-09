@@ -35,6 +35,75 @@ const json = (data: unknown, status = 200) =>
 
 const jourIso = (d: Date) => d.toISOString().slice(0, 10);
 
+// ── Les idées de Thomas : le créneau visé ────────────────────────────────
+// Même règle que reseaux/automates/lib/idees.mjs, dont la routine se sert
+// pour écrire le post : une modification ici en appelle une là-bas. L'admin
+// l'applique pour afficher la date visée dès la saisie. Il ignore les sujets
+// datés (Noël, Nouvel An), qui vivent dans le dépôt : à ces deux dates près,
+// l'estimation est celle de la routine.
+const CATEGORIES_IDEE = ['pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd'];
+const CRENEAUX = ['matin', 'midi', 'soir'];
+// une déclinaison dans un de ces états peut encore être réécrite par la synchro
+const MODIFIABLES = ['a_rendre', 'rendu', 'echec'];
+const DEBUTS_DEFAUT: Record<string, string> = { matin: '06:00', midi: '11:00', soir: '16:00' };
+// la routine passe à 5 h 44 (heure du compte) et lit un état écrit à 5 h 11 :
+// une idée notée après 5 h 11 attend le passage du lendemain ; un créneau du
+// jour du passage n'est pris que s'il commence trois heures après (écrire, rendre)
+const HEURE_ETAT = 5 * 60 + 11;
+const HEURE_ROUTINE = 5 * 60 + 44;
+const MARGE_MIN = 180;
+const ajouterJours = (jour: string, n: number) => { const d = new Date(`${jour}T12:00:00Z`); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+const jourDeSemaine = (jour: string) => ((new Date(`${jour}T12:00:00Z`).getUTCDay() + 6) % 7) + 1;
+const categorieAttendue = (melange: any, jour: string, creneau: string): string | null => {
+  const r = melange?.[creneau];
+  if (!r) return null;
+  return typeof r === 'string' ? r : r[String(jourDeSemaine(jour))] ?? null;
+};
+const jourLocal = (fuseau: string, d: Date) => new Intl.DateTimeFormat('en-CA', { timeZone: fuseau, year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
+const minutesLocales = (fuseau: string, d: Date) => {
+  const p = new Intl.DateTimeFormat('en-GB', { timeZone: fuseau, hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(d);
+  const lire = (type: string) => Number(p.find((x) => x.type === type)?.value ?? 0);
+  return (lire('hour') % 24) * 60 + lire('minute');
+};
+const enMinutes = (hhmm: string) => { const [h, m] = String(hhmm).split(':').map(Number); return h * 60 + m; };
+
+type Creneau = { jour: string; creneau: string };
+type IdeeEnAttente = { id: string; categorie: string | null; created_at: string };
+function viserCreneaux(
+  idees: IdeeEnAttente[],
+  { melange, posts, variantes, debut, ouvert, horizon }: { melange: any; posts: any[]; variantes: any[]; debut: string; ouvert: (creneau: string, i: number) => boolean; horizon: number },
+): Map<string, Creneau | null> {
+  const parCreneau = new Map<string, any>(posts.map((p) => [`${p.jour}|${p.creneau}`, p]));
+  const parPost = new Map<string, any[]>();
+  for (const v of variantes) {
+    if (!parPost.has(v.post_id)) parPost.set(v.post_id, []);
+    parPost.get(v.post_id)!.push(v);
+  }
+  // vide, ou un post valide dont aucune déclinaison n'est partie
+  const disponible = (post: any) => !post || (post.statut === 'valide' && (parPost.get(post.id) ?? []).every((v) => MODIFIABLES.includes(v.statut)));
+  const pris = new Set<string>();
+  const premier = (categorie: string): Creneau | null => {
+    for (let i = 0; i <= horizon; i++) {
+      const jour = ajouterJours(debut, i);
+      for (const creneau of CRENEAUX) {
+        if (categorieAttendue(melange, jour, creneau) !== categorie) continue;
+        const cle = `${jour}|${creneau}`;
+        if (pris.has(cle) || !ouvert(creneau, i) || !disponible(parCreneau.get(cle))) continue;
+        return { jour, creneau };
+      }
+    }
+    return null;
+  };
+  const vises = new Map<string, Creneau | null>();
+  for (const idee of [...idees].sort((a, b) => String(a.created_at).localeCompare(String(b.created_at)))) {
+    if (!idee.categorie) continue;
+    const c = premier(idee.categorie);
+    if (c) pris.add(`${c.jour}|${c.creneau}`);
+    vises.set(idee.id, c);
+  }
+  return vises;
+}
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response(null, { headers: corsHeaders });
   const adminToken = req.headers.get('x-admin-token');
@@ -55,7 +124,7 @@ serve(async (req) => {
         db.from('social_reglages').select('cle,valeur'),
         db.from('social_posts').select('id,jour,creneau,format,gabarit,categorie,statut,motif').gte('jour', debut).lt('jour', fin).order('jour').order('creneau'),
         db.from('social_journal').select('at,niveau,source,message').order('at', { ascending: false }).limit(40),
-        db.from('social_idees').select('id,texte,source,utilisee_le,created_at').order('created_at', { ascending: false }).limit(50),
+        db.from('social_idees').select('id,texte,source,categorie,utilisee_le,created_at,post:social_posts(jour,creneau)').order('created_at', { ascending: false }).limit(50),
       ]);
       for (const r of [comptes, jetons, reglages, posts, journal, idees]) if (r.error) throw r.error;
 
@@ -72,6 +141,23 @@ serve(async (req) => {
         const s = await db.storage.from('social-medias').createSignedUrls([...new Set(aSigner)], 3600);
         for (const x of s.data || []) if (x.signedUrl && x.path) signees[x.path] = x.signedUrl;
       }
+
+      // les idées en attente : le créneau que chacune vise, affiché dès la saisie
+      const compte0: any = (comptes.data || [])[0];
+      const fuseau: string = compte0?.fuseau || 'Europe/Paris';
+      const maintenant = new Date();
+      const jourPassage = minutesLocales(fuseau, maintenant) < HEURE_ETAT ? jourLocal(fuseau, maintenant) : ajouterJours(jourLocal(fuseau, maintenant), 1);
+      const debutCreneau = (creneau: string) => enMinutes((compte0?.creneaux || []).find((c: any) => c.cle === creneau)?.debut || DEBUTS_DEFAUT[creneau]);
+      const aVenir = await db.from('social_posts').select('id,jour,creneau,statut').gte('jour', jourPassage).lte('jour', ajouterJours(jourPassage, 35));
+      if (aVenir.error) throw aVenir.error;
+      const idsAVenir = (aVenir.data || []).map((p) => p.id);
+      const statutsAVenir = idsAVenir.length ? await db.from('social_variantes').select('post_id,statut').in('post_id', idsAVenir) : { data: [], error: null };
+      if (statutsAVenir.error) throw statutsAVenir.error;
+      const melange = (reglages.data || []).find((r) => r.cle === 'melange')?.valeur;
+      const vises = viserCreneaux((idees.data || []).filter((i: any) => !i.utilisee_le) as IdeeEnAttente[], {
+        melange, posts: aVenir.data || [], variantes: statutsAVenir.data || [], debut: jourPassage, horizon: 35,
+        ouvert: (creneau, i) => i > 0 || debutCreneau(creneau) >= HEURE_ROUTINE + MARGE_MIN,
+      });
 
       // jours d'avance : jours consécutifs à partir d'aujourd'hui dont les trois créneaux sont validés
       const aujourdhui = jourIso(new Date());
@@ -103,7 +189,7 @@ serve(async (req) => {
             })),
         })),
         journal: journal.data,
-        idees: idees.data,
+        idees: (idees.data || []).map((i: any) => ({ ...i, visee: i.utilisee_le ? null : vises.get(i.id) ?? null })),
       });
     }
 
@@ -131,9 +217,11 @@ serve(async (req) => {
       }
 
       if (action === 'idee') {
-        const texte = String(corps.texte || '').trim().slice(0, 500);
+        const texte = String(corps.texte || '').trim().slice(0, 1000);
         if (!texte) return json({ success: false, error: 'Idée vide' }, 400);
-        const { error } = await db.from('social_idees').insert({ texte, source: 'thomas' });
+        // la catégorie, si Thomas l'a choisie ; sinon la routine la déduit du texte
+        const categorie = CATEGORIES_IDEE.includes(corps.categorie) ? corps.categorie : null;
+        const { error } = await db.from('social_idees').insert({ texte, source: 'thomas', categorie });
         if (error) throw error;
         return json({ success: true });
       }

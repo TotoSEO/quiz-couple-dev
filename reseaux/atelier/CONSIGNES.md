@@ -61,10 +61,23 @@ Puis `reseaux/atelier/etat.json`, écrit chaque matin par l'entretien :
   L'horizon est long exprès : la réserve s'écrit d'avance, pour que le
   compte continue à publier même quand la routine ne tourne pas (le rendu et
   la publication n'ont pas besoin d'elle).
+- `hors_grille` : posts déjà en base dont la catégorie ne suit plus la
+  semaine type (la grille a changé après leur écriture, comme le mardi soir
+  devenu BD le 8 octobre 2026). Ils partiront tels quels si on n'y touche
+  pas : on les réécrit dans la catégorie `attendue`, après les créneaux
+  vides, en remplaçant le fichier existant.
+- `refuses` : fichiers que la synchro a refusés dans les dernières
+  24 heures, avec leurs `fautes`. Le fichier existe sur la branche mais rien
+  n'est en base, donc rien ne partira : on le réécrit en entier, en
+  corrigeant les fautes, et on le repasse au contrôle.
 - `recents_et_prevus` : ce qui est passé et prévu, pour ne jamais répéter
   une phrase, une question ou une scène de la semaine.
-- `idees` : les idées de Thomas. Elles passent avant la banque ; le post
-  qui en reprend une porte son `idee_id`.
+- `idees` : les idées de Thomas, dans l'ordre où il les a notées, chacune
+  avec sa `categorie` (ou `null` s'il a laissé le choix) et son
+  `creneau_vise` : le créneau le plus proche de cette catégorie où rien
+  n'est encore parti. Elles passent avant tout le reste, voir « Les idées de
+  Thomas, avant tout le reste » plus bas. `prochain_creneau` donne, par
+  catégorie, le premier créneau encore libre, pour une idée sans catégorie.
 - `statistiques_j7` : ce qui a marché. On choisit un peu plus souvent les
   piliers et les décors qui ont le plus de partages et d'enregistrements.
 
@@ -72,19 +85,50 @@ Sans `etat.json` (premier jour), on remplit d'aujourd'hui (créneaux qui
 commencent dans plus de trois heures, heure de Paris) à J+100 en suivant la
 semaine type, en sautant les fichiers déjà présents dans `posts/`.
 
+## Les idées de Thomas, avant tout le reste
+
+Une idée notée dans l'admin est une phrase, parfois deux : la situation, et
+la chute s'il l'a. Elle prend le `creneau_vise` que donne `etat.json`, le
+créneau le plus proche de sa catégorie, **même si un post y est déjà
+écrit** : on remplace le fichier `posts/<jour>-<créneau>.json` (c'est une des
+trois exceptions à la règle « jamais réécrit »), et le sujet du post remplacé
+retourne de lui-même dans la banque, puisqu'il n'est plus dans `posts/`. Le
+nouveau post porte `idee_id` (l'`id` de l'idée) et `sujet: "idee-<les huit
+premiers caractères de l'id>"` ; le contrôle l'accepte ainsi, et la synchro
+marque l'idée « utilisée » dans l'admin.
+
+On développe l'idée comme n'importe quel sujet de la banque, dans la même
+ligne (décor, mascottes, rythme, légende), mais on garde ce que Thomas a
+écrit : sa situation, sa chute, et une phrase entre guillemets est reprise
+telle quelle (traduite fidèlement en anglais si elle est en français). Si
+l'idée dit déjà beaucoup (décor, enchaînement, texte), on la suit ; si elle
+tient en six mots, on invente le reste. Le champ `idee` de la recette reprend
+sa phrase.
+
+Sans `categorie`, on la déduit du texte : une situation à jouer → `pov`
+(coquine → `coquin`) ; une question à poser au couple → `connais-tu` ; un
+dilemme → `tu-preferes` ; une phrase douce → `phrase` ; un gag en quatre
+temps → `bd` ; un dessin et une phrase → `statique`. Puis on prend
+`prochain_creneau[categorie]` ; pour une deuxième idée sans catégorie qui
+tomberait dans la même catégorie, le créneau suivant de cette catégorie dans
+la semaine type, en vérifiant dans `recents_et_prevus` que rien n'y est parti.
+
+L'état ne vise jamais un créneau à sujet daté (Noël, Nouvel An) ni un créneau
+dont le post est déjà parti (publié, ou conteneur créé). On écrit chaque idée
+traitée dans le journal du passage : le créneau pris, le post remplacé.
+
 ## 3. Choisir le sujet
 
 Pour chaque créneau à remplir, dans l'ordre des dates :
 
 1. s'il existe un sujet daté (`saison.sujets`) pour ce jour et ce créneau,
    c'est lui ;
-2. sinon une idée de Thomas qui va avec la catégorie ;
-3. sinon le premier sujet de la catégorie qui n'apparaît dans aucun post de
+2. sinon le premier sujet de la catégorie qui n'apparaît dans aucun post de
    `posts/` (champ `sujet`) ni dans `deja_publies.sujets` de `sujets.json`
    (les posts partis sur le compte en dehors de l'atelier, comme le reel
    d'essai des fleurs du 7 octobre 2026) : **jamais de doublon**, ni de
    sujet, ni de scène, ni de phrase déjà vue dans `recents_et_prevus` ;
-4. sinon (la banque de la catégorie est épuisée, elle couvre treize
+3. sinon (la banque de la catégorie est épuisée, elle couvre treize
    semaines) tu inventes un sujet dans le même esprit que ceux de la
    banque, avec un identifiant neuf (`pov-274`, `connais-tu-40`...), sans
    reprendre une situation vue dans `recents_et_prevus` ni dans les
@@ -94,7 +138,9 @@ Pour chaque créneau à remplir, dans l'ordre des dates :
 **Un créneau dont le fichier existe déjà dans `posts/` n'est jamais réécrit**,
 même s'il figure encore dans `a_remplir` (l'état est calculé sur ce qui est
 déjà passé dans Supabase, un post poussé depuis peut y manquer) : on passe
-au suivant.
+au suivant. Trois exceptions, et trois seulement : les fichiers listés dans
+`refuses` et dans `hors_grille`, qu'on réécrit (voir plus haut), et le
+`creneau_vise` d'une idée de Thomas (section suivante).
 
 **Au plus 24 posts par passage**, les créneaux les plus proches d'abord.
 Chaque post est contrôlé et regardé (planche) avant d'être poussé : on ne
@@ -115,7 +161,7 @@ Les recettes de `reseaux/studio/recettes/exemples/` sont les modèles, une
 par catégorie : `pov-frites`, `pov-fleurs` et `pov-cafe` (pov ; le café est
 le modèle d'une situation jouée sans aucune bulle, dans un des nouveaux
 décors), `pov-couette` (coquin), `statique-calin` (statique), `connais-tu`,
-`tu-preferes`, `citation` (phrase).
+`tu-preferes`, `citation` (phrase), `bd-malade` (bd).
 
 ### Les animations (pov, coquin, statique)
 
@@ -334,6 +380,30 @@ night », « couple questions »), puis « Save this for your next date
 night » ; le renvoi vers le site est permis (« More questions: link in
 bio »). Hashtags : `#couplequestions`, `#datenight`, `#couplegoals`,
 `#quizcouple`. Le format du post : `"format": "carrousel"`.
+
+### La BD en quatre cases (mardi soir)
+
+Gabarit `bd`, au format de `recettes/exemples/bd-malade.json` et un sujet de
+la banque `bd` : quatre `cases`, chacune avec une `scene` (un seul plan, le
+même vocabulaire que les animations : `decor`, `moment`, `persos` avec leur
+spot, leurs `gestes` de visage et d'effet, un objet `porte` sur la tête
+comme la `compresse`) et au plus deux `repliques` (`texte` de 40 signes au
+plus, en minuscules façon message, `cote` gauche ou droite du côté de celui
+qui parle). La scène est figée à l'instant `t` : seule l'image compte, pas
+la richesse d'un reel ; `haut` et `echelle` cadrent la case (420 et 1,25
+dans l'exemple, pour voir le lit de près). La description de chaque case
+raconte l'image comme à un dessinateur (60 signes au moins).
+
+Ce qui fait la planche : une situation reconnaissable, montrée plus que
+dite ; la case 3 est souvent muette, c'est l'image qui fait rire ; la
+dernière réplique a le dernier mot. Cinq répliques au plus sur les quatre
+cases, les mascottes dans chaque case, jamais de score, jamais d'emoji à
+l'écran. Légende sans renvoi vers le site (un appel à identifier ou à
+envoyer à l'autre), hashtags `#couplecomics`, `#relationshipcomics`,
+`#couplegoals`, `#quizcouple`. Le format du post : `"format": "image"`
+(`"carrousel"` seulement si la recette porte `"sortie": "carrousel"`).
+Le contrôle, c'est `--verifier` sur la recette, puis on regarde l'image
+rendue (`image.jpg`) : les quatre cases se lisent-elles sans le texte ?
 
 La story du matin n'est pas ton travail : l'automate reprend le reel du
 matin en story après sa publication.

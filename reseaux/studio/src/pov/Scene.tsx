@@ -65,7 +65,7 @@ export const PersoDessin: React.FC<{ e: EtatPerso; t: number; tremble?: number }
     const h = (largeur * d.vb[1]) / d.vb[0];
     bonnet = (
       <div
-        style={{ position: 'absolute', left: g.centre * k - largeur / 2, top: (g.haut + 22) * k - h - (e.options.saut ?? 0) * k, width: largeur, transform: `rotate(${(e.options.penche ?? 0) - 6}deg)` }}
+        style={{ position: 'absolute', left: g.centre * k - largeur / 2, top: (g.haut + 22 + (d.pose ?? 0)) * k - h - (e.options.saut ?? 0) * k, width: largeur, transform: `rotate(${(e.options.penche ?? 0) - (d.pose ? 2 : 6)}deg)` }}
         dangerouslySetInnerHTML={{ __html: svgObjet(e.porte, t, largeur) }}
       />
     );
