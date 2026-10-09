@@ -1,119 +1,9 @@
 {
-  "genere_le": "2026-10-09T03:12:24.803Z",
+  "genere_le": "2026-10-09T10:28:37.999Z",
   "fuseau": "Europe/Paris",
   "aujourdhui": "2026-10-09",
-  "reserve_jours": 17,
+  "reserve_jours": 24,
   "a_remplir": [
-    {
-      "jour": "2026-10-26",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-10-26",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2026-10-26",
-      "creneau": "soir",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-10-27",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-10-27",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2026-10-27",
-      "creneau": "soir",
-      "categorie": "bd"
-    },
-    {
-      "jour": "2026-10-28",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-10-28",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2026-10-28",
-      "creneau": "soir",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-10-29",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-10-29",
-      "creneau": "midi",
-      "categorie": "statique"
-    },
-    {
-      "jour": "2026-10-29",
-      "creneau": "soir",
-      "categorie": "carrousel"
-    },
-    {
-      "jour": "2026-10-30",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-10-30",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2026-10-30",
-      "creneau": "soir",
-      "categorie": "coquin"
-    },
-    {
-      "jour": "2026-10-31",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-10-31",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2026-10-31",
-      "creneau": "soir",
-      "categorie": "phrase"
-    },
-    {
-      "jour": "2026-11-01",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-11-01",
-      "creneau": "midi",
-      "categorie": "statique"
-    },
-    {
-      "jour": "2026-11-01",
-      "creneau": "soir",
-      "categorie": "phrase"
-    },
-    {
-      "jour": "2026-11-02",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
     {
       "jour": "2026-11-02",
       "creneau": "midi",
@@ -1266,34 +1156,8 @@
     }
   ],
   "a_corriger": [],
-  "hors_grille": [
-    {
-      "jour": "2026-10-13",
-      "creneau": "soir",
-      "categorie": "pov",
-      "attendue": "bd"
-    },
-    {
-      "jour": "2026-10-20",
-      "creneau": "soir",
-      "categorie": "pov",
-      "attendue": "bd"
-    }
-  ],
-  "refuses": [
-    {
-      "fichier": "2026-10-20-soir.json",
-      "fautes": [
-        "le créneau soir du 2026-10-20 attend la catégorie bd, pas pov"
-      ]
-    },
-    {
-      "fichier": "2026-10-13-soir.json",
-      "fautes": [
-        "le créneau soir du 2026-10-13 attend la catégorie bd, pas pov"
-      ]
-    }
-  ],
+  "hors_grille": [],
+  "refuses": [],
   "recents_et_prevus": [
     {
       "jour": "2026-10-07",
@@ -1315,15 +1179,6 @@
     },
     {
       "jour": "2026-10-08",
-      "creneau": "soir",
-      "gabarit": "carrousel",
-      "categorie": "carrousel",
-      "statut": "publie",
-      "texte": "8 questions for you two",
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-08",
       "creneau": "midi",
       "gabarit": "pov",
       "categorie": "statique",
@@ -1333,19 +1188,19 @@
     },
     {
       "jour": "2026-10-08",
+      "creneau": "soir",
+      "gabarit": "carrousel",
+      "categorie": "carrousel",
+      "statut": "publie",
+      "texte": "8 questions for you two",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-08",
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
       "statut": "publie",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-09",
-      "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -1363,17 +1218,26 @@
       "creneau": "midi",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "rendu",
+      "statut": "conteneur",
       "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
-      "jour": "2026-10-10",
+      "jour": "2026-10-09",
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-10",
+      "creneau": "soir",
+      "gabarit": "citation",
+      "categorie": "phrase",
+      "statut": "rendu",
+      "texte": "I didn't know how quiet my heart could feel until I met you.",
       "erreur": null
     },
     {
@@ -1387,11 +1251,11 @@
     },
     {
       "jour": "2026-10-10",
-      "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
       "statut": "rendu",
-      "texte": "I didn't know how quiet my heart could feel until I met you.",
+      "texte": null,
       "erreur": null
     },
     {
@@ -1405,6 +1269,15 @@
     },
     {
       "jour": "2026-10-11",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "rendu",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-11",
       "creneau": "midi",
       "gabarit": "pov",
       "categorie": "statique",
@@ -1413,12 +1286,12 @@
       "erreur": null
     },
     {
-      "jour": "2026-10-11",
-      "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
+      "jour": "2026-10-12",
+      "creneau": "midi",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1440,12 +1313,12 @@
       "erreur": null
     },
     {
-      "jour": "2026-10-12",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "jour": "2026-10-13",
+      "creneau": "soir",
+      "gabarit": "bd",
+      "categorie": "bd",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": null,
       "erreur": null
     },
     {
@@ -1467,7 +1340,16 @@
       "erreur": null
     },
     {
-      "jour": "2026-10-13",
+      "jour": "2026-10-14",
+      "creneau": "midi",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-14",
       "creneau": "soir",
       "gabarit": "pov",
       "categorie": "pov",
@@ -1482,24 +1364,6 @@
       "categorie": "pov",
       "statut": "a_rendre",
       "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-14",
-      "creneau": "soir",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "a_rendre",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-14",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
-      "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1531,11 +1395,11 @@
     },
     {
       "jour": "2026-10-16",
-      "creneau": "soir",
-      "gabarit": "pov",
-      "categorie": "coquin",
+      "creneau": "midi",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
       "statut": "a_rendre",
-      "texte": null,
+      "texte": "How well do you know your partner?",
       "erreur": null
     },
     {
@@ -1549,11 +1413,20 @@
     },
     {
       "jour": "2026-10-16",
-      "creneau": "midi",
-      "gabarit": "connais-tu",
-      "categorie": "connais-tu",
+      "creneau": "soir",
+      "gabarit": "pov",
+      "categorie": "coquin",
       "statut": "a_rendre",
-      "texte": "How well do you know your partner?",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-17",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
       "erreur": null
     },
     {
@@ -1575,7 +1448,16 @@
       "erreur": null
     },
     {
-      "jour": "2026-10-17",
+      "jour": "2026-10-18",
+      "creneau": "midi",
+      "gabarit": "pov",
+      "categorie": "statique",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-18",
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
@@ -1593,35 +1475,8 @@
       "erreur": null
     },
     {
-      "jour": "2026-10-18",
-      "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "a_rendre",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-18",
-      "creneau": "midi",
-      "gabarit": "pov",
-      "categorie": "statique",
-      "statut": "a_rendre",
-      "texte": null,
-      "erreur": null
-    },
-    {
       "jour": "2026-10-19",
       "creneau": "soir",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "a_rendre",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-19",
-      "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
       "statut": "a_rendre",
@@ -1638,17 +1493,8 @@
       "erreur": null
     },
     {
-      "jour": "2026-10-20",
+      "jour": "2026-10-19",
       "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "a_rendre",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-20",
-      "creneau": "soir",
       "gabarit": "pov",
       "categorie": "pov",
       "statut": "a_rendre",
@@ -1662,6 +1508,24 @@
       "categorie": "tu-preferes",
       "statut": "a_rendre",
       "texte": "Would you rather: texting?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-20",
+      "creneau": "soir",
+      "gabarit": "bd",
+      "categorie": "bd",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-20",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
       "erreur": null
     },
     {
@@ -1702,27 +1566,18 @@
     },
     {
       "jour": "2026-10-22",
-      "creneau": "midi",
+      "creneau": "matin",
       "gabarit": "pov",
-      "categorie": "statique",
+      "categorie": "pov",
       "statut": "a_rendre",
       "texte": null,
       "erreur": null
     },
     {
       "jour": "2026-10-22",
-      "creneau": "matin",
+      "creneau": "midi",
       "gabarit": "pov",
-      "categorie": "pov",
-      "statut": "a_rendre",
-      "texte": null,
-      "erreur": null
-    },
-    {
-      "jour": "2026-10-23",
-      "creneau": "matin",
-      "gabarit": "pov",
-      "categorie": "pov",
+      "categorie": "statique",
       "statut": "a_rendre",
       "texte": null,
       "erreur": null
@@ -1746,12 +1601,12 @@
       "erreur": null
     },
     {
-      "jour": "2026-10-24",
-      "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "jour": "2026-10-23",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
       "statut": "a_rendre",
-      "texte": "I love the way you make the world feel a little softer.",
+      "texte": null,
       "erreur": null
     },
     {
@@ -1773,12 +1628,30 @@
       "erreur": null
     },
     {
+      "jour": "2026-10-24",
+      "creneau": "soir",
+      "gabarit": "citation",
+      "categorie": "phrase",
+      "statut": "a_rendre",
+      "texte": "I love the way you make the world feel a little softer.",
+      "erreur": null
+    },
+    {
       "jour": "2026-10-25",
       "creneau": "soir",
       "gabarit": "citation",
       "categorie": "phrase",
       "statut": "a_rendre",
       "texte": "Of all the places I could be, next to you is my favorite.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-25",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
       "erreur": null
     },
     {
@@ -1791,7 +1664,196 @@
       "erreur": null
     },
     {
-      "jour": "2026-10-25",
+      "jour": "2026-10-26",
+      "creneau": "midi",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-26",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-26",
+      "creneau": "soir",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-27",
+      "creneau": "soir",
+      "gabarit": "bd",
+      "categorie": "bd",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-27",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-27",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: powers?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "midi",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "soir",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "soir",
+      "gabarit": "carrousel",
+      "categorie": "carrousel",
+      "statut": "a_rendre",
+      "texte": "8 questions about what's next for us",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "midi",
+      "gabarit": "pov",
+      "categorie": "statique",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "midi",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "soir",
+      "gabarit": "pov",
+      "categorie": "coquin",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "soir",
+      "gabarit": "citation",
+      "categorie": "phrase",
+      "statut": "a_rendre",
+      "texte": "You don't have to be perfect. You just have to be you, with me.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: at home?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "soir",
+      "gabarit": "citation",
+      "categorie": "phrase",
+      "statut": "a_rendre",
+      "texte": "I still smile when I see your name on my phone.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "midi",
+      "gabarit": "pov",
+      "categorie": "statique",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-02",
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
@@ -1800,23 +1862,14 @@
       "erreur": null
     }
   ],
-  "idees": [
-    {
-      "id": "6e6893e8-ad8b-4f3b-af57-70277cd0c63d",
-      "texte": "Un carroussel qui a pour première image : POV : My gf without any reason, about 3 times per month : - donc là c'est le personnage garçon qui est affiché.\n\nLa seconde image, on voit le personnage homme dans un canapé sur son téléphone tranquille. \n\nLa troisièeme, la même image mais une s'affiche et pointe le contour de l'image avec dedans Babe ? - comme si la fille l'appelait depius l'autre bout de la pièce\n\nQuatrième image : le garçon répond oui ?\n\nCinquième image, on voit la fille qui se pointe devant lui sans rien dire, avec juste une bulle avec ... dedans\n\nSixième image : La bulle affiche I think i'm gonna wash my hair today\n\nSeptieme carroussel : Tu t'es reconnu dans cette situation ? Partage lui !",
-      "source": "thomas",
-      "categorie": null,
-      "created_at": "2026-10-08T05:36:44.572722+00:00",
-      "creneau_vise": null
-    }
-  ],
+  "idees": [],
   "prochain_creneau": {
     "pov": {
       "jour": "2026-10-10",
       "creneau": "matin"
     },
     "connais-tu": {
-      "jour": "2026-10-09",
+      "jour": "2026-10-12",
       "creneau": "midi"
     },
     "tu-preferes": {
