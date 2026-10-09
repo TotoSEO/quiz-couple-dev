@@ -1,0 +1,158 @@
+{
+  "jour": "2026-10-29",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "carrousel",
+  "categorie": "carrousel",
+  "sujet": "car-004",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "carrousel",
+        "langue": "en",
+        "theme": "light",
+        "pages": [
+          {
+            "type": "couverture",
+            "etiquette": "The future",
+            "accroche": "8 questions about what's next for us",
+            "scene": {
+              "t": 1.4,
+              "plan": {
+                "description": "L'intérieur d'une voiture en plein jour, le paysage qui défile : la rose et le violet assis côte à côte, sourire aux lèvres, regardent droit devant eux, comme au départ d'un grand voyage.",
+                "duree": 2,
+                "decor": "voiture",
+                "moment": "midi",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "passager",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "camera"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "volant",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "camera"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "page",
+            "numero": "1",
+            "question": "Where do you see us in five years?"
+          },
+          {
+            "type": "page",
+            "numero": "2",
+            "question": "What's one trip we have to take?"
+          },
+          {
+            "type": "page",
+            "numero": "3",
+            "question": "What tradition do you want us to start?"
+          },
+          {
+            "type": "page",
+            "numero": "4",
+            "question": "What would our dream home look like?"
+          },
+          {
+            "type": "page",
+            "numero": "5",
+            "question": "What's one habit we should build together?"
+          },
+          {
+            "type": "page",
+            "numero": "6",
+            "question": "What are you most excited about for us?"
+          },
+          {
+            "type": "page",
+            "numero": "7",
+            "question": "What scares you a little about the future?"
+          },
+          {
+            "type": "page",
+            "numero": "8",
+            "question": "What do you want us to do when we're old?"
+          },
+          {
+            "type": "fin",
+            "texte": "Want more questions for tonight?",
+            "bouton": "Link in bio",
+            "scene": {
+              "t": 1.4,
+              "plan": {
+                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
+                "duree": 2,
+                "decor": "ligne",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "salue",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "joie",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "legende": "The future: 8 questions about what comes next for you two. Take turns and dream out loud.\n\nSave this for your next date night. More questions: link in bio",
+      "hashtags": [
+        "#couplequestions",
+        "#datenight",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

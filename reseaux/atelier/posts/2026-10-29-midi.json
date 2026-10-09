@@ -1,0 +1,163 @@
+{
+  "jour": "2026-10-29",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "statique",
+  "sujet": "sta-007",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Reel statique : les deux arrivent chacun de leur bord, le violet donne un bisou à la rose, des cœurs montent, une phrase tendre s'écrit.",
+        "plans": [
+          {
+            "description": "Fond papier, rien d'autre qu'un petit trait de sol. Dès la première image la rose entre par le bord gauche en marchant, un grand sourire aux lèvres, et le violet par le bord droit : ils marchent l'un vers l'autre en se regardant, les joues roses. Ils se rejoignent au milieu à 2,4 s ; à 3 s le violet se penche et lui donne un bisou sur la joue, un cœur sort, la rose ferme les yeux de bonheur. « thank you for being mine » s'écrit mot à mot en haut à partir de 3,4 s ; des cœurs montent jusqu'à la fin. À 7 s les deux rouvrent des yeux heureux et se sourient. La caméra se rapproche lentement.",
+            "duree": 11,
+            "decor": "uni",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": 40,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 2.4,
+                    "vers": 450
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 7.0,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 7.0,
+                    "a": 11,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 7.0,
+                    "a": 11,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.2,
+                    "a": 11,
+                    "effet": "coeurs"
+                  }
+                ],
+                "premier": true
+              },
+              {
+                "qui": "violet",
+                "a": 1040,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 2.4,
+                    "vers": 640
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 3.0,
+                    "a": 4.4,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 4.4,
+                    "a": 7.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 7.0,
+                    "a": 11,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 7.0,
+                    "a": 11,
+                    "cible": "rose"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 3.4,
+                "texte": "thank you for being mine",
+                "motAMot": true,
+                "place": "haut",
+                "style": "plume"
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.4,
+                "zoom": 1
+              },
+              {
+                "a": 6,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 11,
+                "zoom": 1.22,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Thank you for being mine.\n\nTag your partner.",
+      "hashtags": [
+        "#couplegoals",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

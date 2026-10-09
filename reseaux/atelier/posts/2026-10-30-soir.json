@@ -1,0 +1,283 @@
+{
+  "jour": "2026-10-30",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "coquin",
+  "sujet": "coq-004",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Coquin en clin d'œil : la rose passe, le violet sent son parfum, yeux en cœur, il manque de tomber quand elle lui fait coucou.",
+        "titre": "POV: he smells that perfume",
+        "plans": [
+          {
+            "description": "Un mur crème et un sol beige, la lumière du soir. Dès la première image le violet est debout à droite, les bras ballants, les yeux plats, l'air tranquille de quelqu'un qui n'attend rien. À 0,3 s la rose entre par le bord gauche en marchant, d'un pas léger, et des petites étincelles scintillent autour d'elle comme un parfum qui flotte. La caméra se rapproche doucement.",
+            "duree": 3.4,
+            "decor": "mur",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": -150,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 2.4,
+                    "vers": 400
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 3.4,
+                    "effet": "etincelles"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.4,
+                    "a": 3.4,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 3.4,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.4,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même mur. La rose passe tout près du violet et continue vers la droite jusqu'à sortir de l'image. Le violet la suit des yeux, la tête qui tourne, les yeux en forme de cœur, la bouche ouverte, les joues très rouges, et des cœurs sortent de sa tête. Il tremble légèrement et la caméra tremble avec lui à 1 s. Zoom rapide sur son visage à 0,3 s.",
+            "duree": 3.6,
+            "decor": "mur",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": 400,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 1.8,
+                    "vers": 1230
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "coeur",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.5,
+                    "a": 3.6,
+                    "effet": "coeurs"
+                  },
+                  {
+                    "geste": "tremble",
+                    "de": 1.0,
+                    "a": 3.6
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "cible": "violet"
+              },
+              {
+                "a": 1.0,
+                "secousse": 10
+              }
+            ]
+          },
+          {
+            "description": "Plan large. Le violet est seul, les yeux encore en cœur, la tête qui tourne doucement, des cœurs et des étincelles autour de lui. À 2 s la rose réapparaît par la gauche, fait un clin d'œil et lui adresse un petit coucou de la main ; le violet devient tout rouge et manque de tomber, un « ! » apparaît au-dessus de sa tête. La caméra se rapproche d'un coup.",
+            "duree": 4.2,
+            "decor": "mur",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": -150,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 2.4,
+                    "vers": 330
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "salue",
+                    "de": 2.6,
+                    "a": 4.0,
+                    "main": "droite"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.0,
+                    "yeux": "coeur",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "mignon",
+                    "de": 0.2,
+                    "a": 2.0
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 2.0,
+                    "effet": "etincelles"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.1,
+                    "a": 4.2,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.2,
+                    "a": 4.2,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "tremble",
+                    "de": 2.2,
+                    "a": 4.2
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 2.4,
+                "zoom": 1
+              },
+              {
+                "a": 2.8,
+                "zoom": 1.35,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "coquin"
+        }
+      },
+      "legende": "One walk past and he forgets his own name.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

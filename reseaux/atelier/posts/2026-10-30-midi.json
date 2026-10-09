@@ -1,0 +1,48 @@
+{
+  "jour": "2026-10-30",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-011",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Little things edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "How does your partner take their coffee or tea?",
+          "What's their favorite emoji?",
+          "What is on their phone wallpaper?",
+          "Which side of the bed do they sleep on?",
+          "What do they always order at a restaurant?",
+          "What color do they wear the most?",
+          "What is their shoe size?",
+          "Which song is on repeat for them?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Little things edition: 8 small questions about your partner. The tiny details count!\n\nComment your score!",
+      "hashtags": [
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

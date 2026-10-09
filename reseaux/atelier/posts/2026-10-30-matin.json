@@ -1,0 +1,261 @@
+{
+  "jour": "2026-10-30",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-039",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il s'endort pendant le film qu'il a choisi : le violet est surexcité, puis ronfle, et la rose prend la caméra à témoin. Aucune bulle.",
+        "titre": "POV: he falls asleep during the movie he picked",
+        "plans": [
+          {
+            "description": "Une salle de cinéma dans le noir, vue depuis l'écran : le faisceau du projecteur, les rangées de fauteuils. Dès la première image les deux sont assis côte à côte dans leurs fauteuils : le violet, qui a choisi le film, est bien droit, les yeux écarquillés, la bouche ouverte d'excitation ; la rose tient un pot de pop-corn sur ses genoux et grignote, l'air content. La lumière du projecteur danse sur leurs visages.",
+            "duree": 3.6,
+            "decor": "cinema",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "fauteuil-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "popcorn",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 0.2,
+                    "a": 2.0,
+                    "objet": "popcorn"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "camera"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "fauteuil-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.6,
+                    "yeux": "brillants",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.5,
+                    "a": 3.6,
+                    "effet": "etincelles"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même salle, le film dure depuis longtemps. Les paupières du violet sont lourdes : ses yeux se ferment à moitié, puis se ferment tout à fait à 1,2 s, sa tête penche, la bouche s'ouvre et des Z montent au-dessus de lui. Il ronfle. La rose continue de regarder l'écran sans se douter de rien, un sourire aux lèvres. Zoom lent sur le violet endormi.",
+            "duree": 4.0,
+            "decor": "cinema",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "fauteuil-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.0,
+                    "objet": "popcorn",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.0,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 4.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "fauteuil-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.2,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "dort",
+                    "de": 1.2,
+                    "a": 4.0
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.4,
+                    "a": 4.0,
+                    "effet": "zzz"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.3,
+                "x": 640,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Plan large. Un ronflement sonore remplit la salle et fait trembler le pot de pop-corn, qui penche. La rose tourne lentement la tête vers le violet, les yeux plats, la bouche plate, puis regarde la caméra, une goutte de gêne sur la tempe : elle nous prend à témoin. Le violet dort toujours, des Z au-dessus de sa tête. La caméra se rapproche doucement de la rose.",
+            "duree": 4.2,
+            "decor": "cinema",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "fauteuil-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "popcorn",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.4,
+                    "a": 2.0,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.6,
+                    "a": 4.2,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.0,
+                    "a": 4.2,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "fauteuil-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 4.2
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 4.2,
+                    "effet": "zzz"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.3,
+                "x": 420,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "He picked the movie. He lasted twenty minutes.\n\nTag your partner who always falls asleep.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

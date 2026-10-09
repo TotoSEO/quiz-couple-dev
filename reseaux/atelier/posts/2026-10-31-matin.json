@@ -1,0 +1,286 @@
+{
+  "jour": "2026-10-31",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-044",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "L'allusion « j'ai froid » : la rose grelotte sur le tronc, le violet siffle en regardant les arbres, elle insiste du regard, il comprend enfin et la prend dans ses bras. Aucune bulle.",
+        "titre": "POV: the 'I'm cold' hint",
+        "plans": [
+          {
+            "description": "Une forêt au soir : grands troncs sur les bords, rayons dorés entre les feuilles, un tronc couché au milieu. Dès la première image les deux sont assis sur le tronc, jambes qui pendent. La rose frissonne, les épaules qui tremblent, les yeux plats et la bouche triste, elle se frotte les bras ; le violet, à côté, regarde les arbres en sifflotant, des notes de musique au-dessus de lui, content, sans rien remarquer.",
+            "duree": 3.8,
+            "decor": "foret",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "tronc-gauche",
+                "gestes": [
+                  {
+                    "geste": "tremble",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "plats",
+                    "bouche": "triste",
+                    "sourcils": "tristes"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "tronc-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 3.8,
+                    "effet": "notes"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur la rose, qui tremble de plus belle, les dents qui claquent, et regarde le violet de côté, les sourcils tristes, avec insistance. À 1,6 s elle lui lance un regard encore plus appuyé et une goutte de gêne glisse sur sa tempe. Le violet, tout sourire, se tourne vers elle, la bouche en « ah ? », et ne comprend toujours rien.",
+            "duree": 3.8,
+            "decor": "foret",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "tronc-gauche",
+                "gestes": [
+                  {
+                    "geste": "tremble",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.3,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "plats",
+                    "bouche": "triste",
+                    "sourcils": "tristes"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "yeux": "brillants",
+                    "bouche": "triste",
+                    "sourcils": "tristes"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 3.8,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "tronc-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.4,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "sourire",
+                    "sourcils": "hauts"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "cible": "rose"
+              }
+            ]
+          },
+          {
+            "description": "Plan large de la forêt. Le violet comprend enfin : ses yeux s'écarquillent, un « ! » apparaît au-dessus de sa tête, il rougit. Il se rapproche et prend la rose dans ses bras : câlin, elle arrête de trembler et ferme les yeux de bonheur, joues roses ; des cœurs montent. La caméra se rapproche lentement des deux.",
+            "duree": 4.4,
+            "decor": "foret",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "tronc-gauche",
+                "gestes": [
+                  {
+                    "geste": "tremble",
+                    "de": 0,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "plats",
+                    "bouche": "triste"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.0,
+                    "a": 4.4,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 4.4,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.6,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "tronc-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.0,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.0,
+                    "a": 2.0,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 2.2,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.0,
+                    "a": 4.4,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 4.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.4,
+                "zoom": 1.3,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "She shivered for ten minutes. He finally got the hint.\n\nTag your partner who never gets the hint.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
