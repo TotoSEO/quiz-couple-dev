@@ -1,0 +1,315 @@
+{
+  "jour": "2026-11-01",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-047",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "L'adieu dramatique avant le travail : le violet part, revient en courant pour un câlin, repart, revient encore. Aucune bulle.",
+        "titre": "POV: the dramatic goodbye before work",
+        "plans": [
+          {
+            "description": "Une rue de ville le matin, lumière douce, légende « Goodbye ». Dès la première image la rose est debout à gauche, devant la porte de l'immeuble, et le violet à côté d'elle, sac sur l'épaule, l'air de partir au travail. Il lui fait un grand signe de la main et s'éloigne en marchant vers la droite ; la rose lui répond d'un signe, un petit sourire. Il disparaît du plan à 3 s, la rose reste seule, les yeux tendres. La caméra se rapproche doucement.",
+            "duree": 3.8,
+            "decor": "rue",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "salue",
+                    "de": 0,
+                    "a": 2.6,
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.6,
+                    "a": 3.8,
+                    "cible": "droite"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "porte",
+                "gestes": [
+                  {
+                    "geste": "salue",
+                    "de": 0,
+                    "a": 0.8,
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "marche",
+                    "de": 0.8,
+                    "a": 3.0,
+                    "vers": 1230
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  }
+                ]
+              }
+            ],
+            "legende": "Goodbye",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même rue, légende « Goodbye again ». La rose est toujours devant la porte quand le violet revient en courant par la droite, les bras ouverts, la bouche ronde, un « ! » au-dessus de sa tête. Elle lui ouvre les bras et ils se serrent très fort, les yeux fermés, des cœurs montent ; puis il s'éloigne à nouveau en marchant à reculons vers la droite, la main levée.",
+            "duree": 4.2,
+            "decor": "rue",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.2,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.2,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 1.6,
+                    "a": 3.2,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 3.4,
+                    "effet": "coeurs"
+                  },
+                  {
+                    "geste": "salue",
+                    "de": 3.4,
+                    "a": 4.2,
+                    "main": "droite"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": 1180,
+                "gestes": [
+                  {
+                    "geste": "court",
+                    "de": 0,
+                    "a": 1.6,
+                    "vers": 430
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 1.4,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 1.6,
+                    "a": 3.2,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "marche",
+                    "de": 3.4,
+                    "a": 4.2,
+                    "vers": 900
+                  }
+                ]
+              }
+            ],
+            "legende": "Goodbye again",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 1.6,
+                "zoom": 1
+              },
+              {
+                "a": 2.0,
+                "zoom": 1.3,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même rue, légende « Ok, last goodbye ». Le violet est parti pour de bon, la rose fait un dernier signe de la main, un sourire attendri. Mais à 2,6 s il réapparaît en courant par la droite, essoufflé, les joues rouges, la bouche ronde, un cœur dans la main. La rose éclate de rire, les bras en l'air, et saute de joie ; des cœurs montent à la fin. La caméra recule doucement.",
+            "duree": 4.4,
+            "decor": "rue",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "salue",
+                    "de": 0,
+                    "a": 1.8,
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 4.4,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 2.8,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "joie",
+                    "de": 3.6,
+                    "a": 4.4
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.2,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": 900,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 1.8,
+                    "vers": 1230
+                  },
+                  {
+                    "geste": "court",
+                    "de": 2.4,
+                    "a": 3.4,
+                    "vers": 600
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 2.6,
+                    "a": 4.4,
+                    "objet": "coeur",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.4,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "legende": "Ok, last goodbye",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.4,
+                "zoom": 1,
+                "x": 540,
+                "y": 1050
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Goodbye. Goodbye again. Ok, last goodbye.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

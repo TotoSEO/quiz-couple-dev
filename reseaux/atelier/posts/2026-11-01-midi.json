@@ -1,0 +1,180 @@
+{
+  "jour": "2026-11-01",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "statique",
+  "sujet": "sta-008",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Reel statique : les deux regardent les étoiles sur la plage la nuit, la rose pose la tête contre le violet, une phrase tendre s'écrit.",
+        "plans": [
+          {
+            "description": "Une plage de nuit : ciel étoilé, la mer calme et ses vagues qui brillent, un parasol, le sable. Dès la première image les deux sont assis dans le sable côte à côte, la rose à gauche, le violet à droite, et regardent les étoiles, les yeux grands ouverts, des étincelles qui scintillent au-dessus d'eux. À 2 s le violet tourne la tête vers la rose et sourit ; à 2,6 s elle pose la tête contre son épaule : câlin, les deux ferment les yeux, joues roses, des cœurs montent. « forever sounds good with you » s'écrit mot à mot en haut à partir de 3 s. À 7 s le violet rouvre des yeux heureux. La caméra se rapproche lentement.",
+            "duree": 11,
+            "decor": "plage",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "sable-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.2,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.2,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 3.0,
+                    "effet": "etincelles"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.2,
+                    "a": 2.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 2.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.6,
+                    "a": 11,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.2,
+                    "a": 7.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 7.0,
+                    "a": 11,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.4,
+                    "a": 11,
+                    "effet": "coeurs"
+                  }
+                ],
+                "premier": true
+              },
+              {
+                "qui": "violet",
+                "a": "sable-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.0,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.0,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.0,
+                    "a": 2.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.6,
+                    "a": 11,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.2,
+                    "a": 7.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 7.0,
+                    "a": 11,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 3.0,
+                "texte": "forever sounds good with you",
+                "motAMot": true,
+                "place": "haut",
+                "style": "plume"
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.6,
+                "zoom": 1
+              },
+              {
+                "a": 6,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 11,
+                "zoom": 1.22,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Forever sounds good with you.\n\nTag your partner.",
+      "hashtags": [
+        "#couplegoals",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

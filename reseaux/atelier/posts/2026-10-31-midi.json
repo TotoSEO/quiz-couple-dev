@@ -1,0 +1,64 @@
+{
+  "jour": "2026-10-31",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-007",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Home life edition",
+        "accroche": "Would you rather: at home?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Always do the dishes",
+            "b": "Always do the laundry"
+          },
+          {
+            "a": "A big bed",
+            "b": "A big sofa"
+          },
+          {
+            "a": "A cozy night in",
+            "b": "A fun night out"
+          },
+          {
+            "a": "A cat",
+            "b": "A dog"
+          },
+          {
+            "a": "A perfectly tidy home",
+            "b": "A cozy messy home"
+          },
+          {
+            "a": "Wake up early",
+            "b": "Stay up late"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, home life edition: who wins the house rules?\n\nComment your A and B!",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

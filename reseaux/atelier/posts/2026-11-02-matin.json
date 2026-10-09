@@ -1,0 +1,295 @@
+{
+  "jour": "2026-11-02",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-054",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "La plus mignonne des disputes : chacun boude en regardant sa vitre, ils se jettent des regards en douce, puis se croisent, rient et s'embrassent. Aucune bulle.",
+        "titre": "POV: the cutest fight ever",
+        "plans": [
+          {
+            "description": "L'intérieur d'une voiture en plein jour, le paysage défile dans la lunette arrière et le petit sapin du rétroviseur se balance, légende « the silent treatment ». Dès la première image le violet tient le volant à gauche et la rose est assise à droite : chacun boude, le nez tourné vers sa vitre, les bras ballants, les yeux plats et la bouche en moue. Trois petits points flottent entre eux. La caméra se rapproche doucement.",
+            "duree": 3.8,
+            "decor": "voiture",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "passager",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 3.8,
+                    "effet": "points"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "volant",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "gauche"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.8,
+                    "a": 3.8,
+                    "effet": "points"
+                  }
+                ]
+              }
+            ],
+            "legende": "the silent treatment",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          },
+          {
+            "description": "Même voiture, zoom rapide à 0,3 s. À 0,8 s la rose jette un coup d'œil discret vers le violet, qui regarde toujours sa vitre ; elle détourne aussitôt les yeux. À 1,8 s c'est le violet qui lance un regard vers la rose, qui regarde sa vitre à son tour. Une goutte de gêne glisse sur la tempe de chacun, les joues rosissent, les yeux plats se radoucissent un peu.",
+            "duree": 3.8,
+            "decor": "voiture",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "passager",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 0.8,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.8,
+                    "a": 1.4,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.4,
+                    "a": 3.8,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "plats",
+                    "bouche": "plate",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.2,
+                    "a": 3.8,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "volant",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.8,
+                    "cible": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 2.5,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.5,
+                    "a": 3.8,
+                    "cible": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "plats",
+                    "bouche": "plate",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.2,
+                    "a": 3.8,
+                    "effet": "goutte"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          },
+          {
+            "description": "Même voiture. Les deux se tournent l'un vers l'autre exactement au même moment et leurs regards se croisent : les yeux s'écarquillent, les bouches s'ouvrent en « o », puis ils éclatent de rire en même temps. La rose se penche et le violet lui donne un petit bisou sur la joue ; des cœurs montent, le sapin du rétroviseur se balance. La caméra recule doucement.",
+            "duree": 4.4,
+            "decor": "voiture",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "passager",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.4,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.0,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.0,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.4,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "volant",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.4,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.0,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.0,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 2.4,
+                    "a": 3.6,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.6,
+                    "a": 4.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1200
+              },
+              {
+                "a": 4.4,
+                "zoom": 1,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "The cutest fights end exactly like this.\n\nTag your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

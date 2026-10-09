@@ -1,0 +1,30 @@
+{
+  "jour": "2026-10-31",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "ph-007",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "You don't have to be perfect. You just have to be you, with me.",
+        "fleurs": "brin-marguerite",
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "A reminder for your person, from you.\n\nSend this to your partner.",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
