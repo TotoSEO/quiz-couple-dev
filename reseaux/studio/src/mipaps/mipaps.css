@@ -1,0 +1,90 @@
+/* Les mipaps : fond blanc, encre, Shantell Sans. Les mesures sont en pixels
+   de canevas (1080 de large). Les classes qc-canevas et qc-utile viennent de
+   la charte du studio ; is-mipaps n'en change que le fond et la police. */
+
+.qc-canevas.is-mipaps {
+  background: #ffffff;
+  color: #17171a;
+  font-family: 'Shantell Sans', 'Fredoka', ui-rounded, system-ui, sans-serif;
+}
+.qc-canevas.is-mipaps::after { content: none; }
+
+/* ── Post et page de carrousel : une colonne ───────────────────────
+   Le texte en haut, en flux ; le dessin dessous prend la place qui reste.
+   Aucun texte en absolu : une phrase sur deux lignes recule le dessin au
+   lieu d'écraser la ligne suivante. */
+.qc-canevas.is-mipaps > .qc-utile.mp-colonne {
+  justify-content: flex-start;
+  gap: 40px;
+}
+.qc-canevas.is-mipaps.is-post > .qc-utile.mp-colonne { bottom: calc(var(--zone-post-marge) + 64px); }
+/* en reel (statique), la colonne s'arrête au-dessus de la signature et le
+   dessin déborde de la zone utile sur les côtés : il n'est pas un texte */
+.qc-canevas.is-mipaps:not(.is-post) > .qc-utile.mp-colonne { bottom: calc(var(--zone-reel-bas) + 56px); gap: 48px; }
+.mp-dessin.is-large { width: calc(100% + 200px); margin: 0 -100px; }
+.qc-canevas.is-mipaps > .qc-utile.mp-colonne.is-centre { justify-content: center; gap: 56px; }
+.mp-texte {
+  margin: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+.mp-texte.is-grand { font-size: 86px; line-height: 1.08; }
+.mp-texte.is-petit { font-size: 60px; line-height: 1.2; }
+.mp-texte.is-declaration { font-size: 66px; line-height: 1.24; font-weight: 600; }
+.mp-dessin {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+}
+.mp-dessin > svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.mp-duo { width: 100%; height: 360px; flex: none; }
+.mp-duo > svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.mp-appel { margin: 0; font-weight: 700; font-size: 46px; line-height: 1.2; }
+.mp-bas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: var(--zone-post-marge);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mp-signature { font-weight: 500; font-size: 34px; line-height: 1.3; opacity: 0.55; }
+.mp-mention { font-weight: 600; font-size: 36px; line-height: 1.3; opacity: 0.75; }
+.mp-pagination {
+  position: absolute;
+  right: calc(var(--zone-post-marge) + var(--zone-grille-post));
+  bottom: var(--zone-post-marge);
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.3;
+  opacity: 0.55;
+}
+
+/* ── Reel : le texte en haut de la zone utile, la scène dessous ──── */
+.qc-canevas.is-mipaps > .qc-utile.mp-reel { display: block; }
+.mp-message {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 66px;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+.mp-message.is-haut { top: 140px; }
+/* en bas : sous le sol de la scène (1340), une seule ligne tient entre le sol et la bande d'Instagram */
+.mp-message.is-bas { bottom: 0; font-size: 60px; line-height: 1.15; }
+.mp-message.is-bas.is-grand, .mp-message.is-bas.is-petit, .mp-message.is-bas.is-titre { font-size: 60px; }
+.mp-message.is-titre { font-size: 80px; line-height: 1.1; }
+.mp-message.is-grand { font-size: 80px; line-height: 1.1; }
+.mp-message.is-petit { font-size: 58px; line-height: 1.2; }
+.mp-signature.is-reel { position: absolute; right: var(--zone-reel-droite); bottom: var(--zone-reel-bas); }

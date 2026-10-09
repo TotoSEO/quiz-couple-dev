@@ -1,0 +1,28 @@
+{
+  "jour": "2026-10-20",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-005",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle, frigorifiée, flocons et bras croisés, demande un câlin comme on envoie un texto.",
+        "style": "mini",
+        "texte": "j'ai froid. viens.",
+        "dessin": {
+          "elements": [
+            { "perso": "elle", "expression": "froid", "x": 320, "taille": 290 }
+          ]
+        }
+      },
+      "legende": "la couverture c'est bien. toi c'est mieux.\n\nenvoie ça à ta personne",
+      "hashtags": ["#lesmipaps", "#couple", "#amour", "#mignon"]
+    }
+  }
+}

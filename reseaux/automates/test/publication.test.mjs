@@ -6,9 +6,9 @@ import { publier } from '../publication.mjs';
 const T0 = new Date('2026-10-12T10:30:00Z'); // 12 h 30 à Paris
 const plus = (min) => new Date(T0.getTime() + min * 60000);
 
-const base = ({ actif = true, format = 'reel', publierA = plus(30), pause = false, recette, autres = [], creneau = 'matin', duree = 12 } = {}) =>
+const base = ({ actif = true, format = 'reel', publierA = plus(30), pause = false, recette, autres = [], creneau = 'matin', duree = 12, facebook } = {}) =>
   new BaseMemoire({
-    social_comptes: [{ id: 'c', langue: 'en', ig_user_id: '178', actif }],
+    social_comptes: [{ id: 'c', langue: 'en', ig_user_id: '178', actif, ...(facebook ? { facebook: true, page_id: '99' } : {}) }],
     social_jetons: [{ compte_id: 'c', jeton: 'J' }],
     social_reglages: [{ cle: 'pause', valeur: pause }],
     social_posts: [{ id: 'p', jour: '2026-10-12', creneau, format, statut: 'valide' }],
@@ -56,6 +56,86 @@ const faux = (etats = ['FINISHED'], { echoue = false, sons = async () => TENDANC
   };
   return ig;
 };
+
+// une fausse Page Facebook qui note ses appels
+const fauxFacebook = ({ echoue = false, storyEchoue = false } = {}) => {
+  const appels = [];
+  return {
+    appels,
+    reel: async (p) => { appels.push(['reel', p]); if (echoue) throw new Error('(#200) Permissions error'); return { id: 'F1', lien: 'https://www.facebook.com/reel/F1' }; },
+    story: async (p) => { appels.push(['story', p]); if (storyEchoue) throw new Error('story boom'); return { id: '99_s' }; },
+    photo: async (p) => { appels.push(['photo', p]); return { id: '99_2', lien: 'https://www.facebook.com/99_2' }; },
+    album: async (p) => { appels.push(['album', p]); return { id: '99_3', lien: 'https://www.facebook.com/99_3' }; },
+  };
+};
+
+test('Facebook : le reel du matin part aussi sur la Page, puis en story de la Page', async () => {
+  const b = base({ facebook: true, publierA: plus(0) });
+  const ig = faux();
+  const fb = fauxFacebook();
+  const r = await publier(b, { maintenant: T0, instagramPour: () => ig, facebookPour: () => fb });
+  assert.equal(r.publies, 1);
+  assert.deepEqual(r.facebook, { publies: 1, stories: 1, echecs: 0 });
+  const v = b.tables.social_variantes[0];
+  assert.equal(v.statut, 'publie');
+  assert.equal(v.fb_statut, 'publie');
+  assert.equal(v.fb_id, 'F1');
+  assert.equal(v.fb_lien, 'https://www.facebook.com/reel/F1');
+  assert.equal(v.fb_story_id, '99_s');
+  assert.deepEqual(fb.appels.map((a) => a[0]), ['reel', 'story']);
+  assert.match(fb.appels[0][1].legende, /Hello\n\n#couplequiz/);
+  assert.match(fb.appels[0][1].videoUrl, /a\/reel\.mp4/);
+});
+
+test('Facebook : une image devient une photo, un carrousel une publication à plusieurs photos, sans story', async () => {
+  for (const [format, attendu] of [['image', 'photo'], ['carrousel', 'album']]) {
+    const b = base({ facebook: true, format, publierA: plus(0), creneau: 'midi' });
+    const fb = fauxFacebook();
+    await publier(b, { maintenant: T0, instagramPour: () => faux(), facebookPour: () => fb });
+    assert.deepEqual(fb.appels.map((a) => a[0]), [attendu], format);
+    assert.equal(b.tables.social_variantes[0].fb_statut, 'publie');
+  }
+  const b = base({ facebook: true, format: 'carrousel', publierA: plus(0), creneau: 'midi' });
+  const fb = fauxFacebook();
+  await publier(b, { maintenant: T0, instagramPour: () => faux(), facebookPour: () => fb });
+  assert.equal(fb.appels[0][1].imageUrls.length, 2);
+});
+
+test('Facebook : un échec ne touche pas la publication Instagram ; trois essais puis échec signalé', async () => {
+  const b = base({ facebook: true, publierA: plus(0) });
+  const ig = faux();
+  const fb = fauxFacebook({ echoue: true });
+  for (let k = 0; k < 3; k++) await publier(b, { maintenant: plus(k * 10), instagramPour: () => ig, facebookPour: () => fb });
+  const v = b.tables.social_variantes[0];
+  assert.equal(v.statut, 'publie');
+  assert.equal(v.fb_statut, 'echec');
+  assert.equal(v.fb_essais, 3);
+  assert.match(v.fb_erreur, /Permissions error/);
+  assert.equal(fb.appels.length, 3);
+  assert.ok(b.tables.social_journal.some((j) => j.niveau === 'erreur' && /Page Facebook/.test(j.message)));
+});
+
+test('Facebook : une story manquée laisse le reel publié sur la Page, avec une alerte', async () => {
+  const b = base({ facebook: true, publierA: plus(0) });
+  const fb = fauxFacebook({ storyEchoue: true });
+  const r = await publier(b, { maintenant: T0, instagramPour: () => faux(), facebookPour: () => fb });
+  assert.deepEqual(r.facebook, { publies: 1, stories: 0, echecs: 0 });
+  assert.equal(b.tables.social_variantes[0].fb_statut, 'publie');
+  assert.ok(b.tables.social_journal.some((j) => j.niveau === 'alerte' && /story Facebook/.test(j.message)));
+});
+
+test('Facebook : rien sans Page reliée ni quand le compte ne le demande pas', async () => {
+  const b = base({ publierA: plus(0) });
+  const fb = fauxFacebook();
+  await publier(b, { maintenant: T0, instagramPour: () => faux(), facebookPour: () => fb });
+  assert.equal(b.tables.social_variantes[0].fb_statut, null);
+  assert.equal(fb.appels.length, 0);
+  const c = base({ facebook: true, publierA: plus(0) });
+  c.tables.social_comptes[0].facebook = false;
+  await publier(c, { maintenant: T0, instagramPour: () => faux(), facebookPour: () => fb });
+  assert.equal(c.tables.social_variantes[0].fb_statut, null);
+  assert.equal(fb.appels.length, 0);
+});
 
 test('reel : conteneur une heure avant, publication à l\'heure', async () => {
   const b = base();

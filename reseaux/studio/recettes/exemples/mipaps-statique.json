@@ -1,0 +1,18 @@
+{
+  "gabarit": "mipaps-statique",
+  "langue": "fr",
+  "theme": "light",
+  "idee": "Reel statique : le câlin, les cœurs qui flottent, et la phrase qui s'écrit mot à mot. Musique douce à la publication.",
+  "texte": "j'aime bien quand t'es là. même quand tu dis rien.",
+  "duree": 11,
+  "son": { "ambiance": "tendre" },
+  "dessin": {
+    "elements": [
+      { "perso": "lui", "expression": "calin", "bras": "tend_d", "pose": "penche_d", "x": 262, "taille": 270 },
+      { "perso": "elle", "expression": "transi", "bras": "tend_g", "pose": "penche_g", "x": 380, "taille": 262 },
+      { "objet": "coeur", "x": 330, "y": 140, "echelle": 0.5 },
+      { "objet": "coeur", "x": 236, "y": 186, "echelle": 0.32 },
+      { "objet": "coeur", "x": 436, "y": 196, "echelle": 0.36 }
+    ]
+  }
+}

@@ -4,7 +4,7 @@
 import { randomUUID } from 'node:crypto';
 
 const UNIQUES = {
-  social_posts: ['jour', 'creneau'],
+  social_posts: ['langue', 'jour', 'creneau'],
   social_variantes: ['post_id', 'langue'],
   social_comptes: ['langue'],
   social_reglages: ['cle'],
@@ -49,9 +49,14 @@ const filtrer = (lignes, requete) => {
   return out;
 };
 
+// Comme la base : un post ou une idée sans langue est de Quiz Couple (en).
+const DEFAUTS = { social_posts: { langue: 'en' }, social_idees: { langue: 'en' } };
+const completer = (table, ligne) => (DEFAUTS[table] ? { ...DEFAUTS[table], ...ligne } : ligne);
+
 export class BaseMemoire {
   constructor(tables = {}) {
     this.tables = { social_journal: [], ...structuredClone(tables) };
+    for (const [table, lignes] of Object.entries(this.tables)) if (DEFAUTS[table]) this.tables[table] = lignes.map((l) => completer(table, l));
     this.fichiers = new Map();
     this.url = 'https://exemple.supabase.co';
   }
@@ -59,7 +64,8 @@ export class BaseMemoire {
   async select(table, requete = 'select=*') { return structuredClone(filtrer(this.t(table), requete)); }
   async insert(table, lignes, { conflit, ignorer } = {}) {
     const out = [];
-    for (const brute of lignes) {
+    for (const brute0 of lignes) {
+      const brute = completer(table, brute0);
       const cles = conflit ? conflit.split(',') : UNIQUES[table];
       const existante = cles && this.t(table).find((l) => cles.every((c) => String(l[c]) === String(brute[c])));
       if (existante) {

@@ -554,6 +554,25 @@ Tant qu'un compte n'est pas actif (pas encore branché, ou coupé dans l'admin),
 - **Jamais deux fois le même post** : avant de publier, la ligne passe en
   « publication en cours » par une mise à jour conditionnelle. Un deuxième
   passage en parallèle ne trouve plus rien à publier.
+- **La Page Facebook aussi** (9 octobre 2026) : le partage automatique
+  d'Instagram vers Facebook ne joue pas pour un contenu publié par l'API,
+  alors ce qui vient de partir sur Instagram part aussi sur la Page reliée
+  (`publierFacebook`, `lib/facebook.mjs`), avec le même jeton de Page, qui
+  doit porter `pages_manage_posts` (avec `pages_read_engagement` et
+  `pages_show_list`, les trois autorisations que la documentation des reels
+  demande ; `publish_video` n'est pas requis) : un reel devient un
+  reel Facebook (session d'envoi `video_reels`, adresse du fichier donnée au
+  serveur d'envoi, publication avec la légende), une image une photo, un
+  carrousel une publication à plusieurs photos, et le reel du matin repart
+  aussi en story de la Page. Sans son ajouté : le reel Facebook part avec
+  les bruitages de son fichier. Interrupteur par compte dans l'admin
+  (`social_comptes.facebook`, à vrai par défaut), identifiant de la Page
+  relevé à la connexion (`page_id`, `page_nom` : un compte connecté avant
+  cette date doit recoller son jeton pour le remplir). Suivi par
+  déclinaison (`fb_statut`, `fb_id`, `fb_lien`, `fb_story_id`,
+  `fb_erreur`, `fb_essais`, migration `20261009120000`), trois essais puis
+  « echec » ; un échec Facebook ne touche jamais la publication Instagram,
+  déjà faite.
 - **Erreurs** : trois essais espacés, puis « échec » avec le message
   d'Instagram dans le journal et une alerte dans l'admin. Le post se relance
   d'un clic.
@@ -857,3 +876,39 @@ ne peuvent pas être faites à ta place :
   https://claude.com/blog/introducing-routines-in-claude-code
 - Claude Design et animations :
   https://www.mindstudio.ai/blog/what-is-claude-design-anthropic-visual-prototyping
+
+## 12. Le second compte : Les mipaps (8 octobre 2026)
+
+Un second compte Instagram, en français, sans lien avec quiz-couple.com,
+publie trois fois par jour avec deux personnages dessinés, le Gribouillou et
+la Gribouillette (`reseaux/mipaps/`). Il partage toute la chaîne de Quiz
+Couple :
+
+- **Les tables** : c'est le compte `fr` de `social_comptes`. Les posts et
+  les idées portent leur langue (`social_posts.langue`, `social_idees.langue`),
+  l'unicité d'un créneau est (langue, jour, créneau), et chaque compte a sa
+  semaine type (colonne `melange`, sinon le réglage global). L'accueil du
+  site ne lit que les publications `en` (migration `20261009110000`).
+- **Le studio** rend ses quatre formats (`reseaux/studio/src/mipaps/`) :
+  reel animé (`mipaps-reel`), reel statique (`mipaps-statique`),
+  carrousel-histoire (`mipaps-carrousel`), post (`mipaps-post` : mini,
+  déclaration, schéma de bureau). Pas de BD. Les recettes sont contrôlées
+  par `reseaux/automates/lib/mipaps.mjs` contre les listes du rig.
+- **Les automates** : la synchro lit les deux dossiers de posts (branche
+  `reseaux-atelier` pour Quiz Couple, `mipaps-atelier` pour Les mipaps),
+  rattache chaque post à son compte et à sa grille ; le rendu et la
+  publication travaillent par déclinaison, donc par compte, sans rien de
+  particulier ; l'entretien écrit un `etat.json` par compte
+  (`reseaux/mipaps/atelier/etat.json` sur la branche `mipaps-atelier`) ;
+  la publication nomme le son original « Les mipaps ».
+- **La routine** « atelier mipaps » (6 h 12, heure de Paris) suit
+  `reseaux/mipaps/atelier/CONSIGNES.md` dans sa propre session permanente,
+  et ne pousse que sur `mipaps-atelier`.
+- **L'admin** : l'onglet Réseaux choisit le compte (barre en tête), montre
+  le planning en grille serrée (un jour par rangée, dix jours sans
+  défiler), les publiés à part et à la demande, et le jeton de chaque
+  compte ; un jeton Facebook qui relie les deux Pages fait choisir le
+  compte Instagram.
+- **Le son** : jamais de voix dans les bruitages (rires, pleurs, cris
+  retirés) ; la musique Instagram à la publication, drôle pour une
+  animation, tendre pour un statique.

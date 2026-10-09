@@ -26,12 +26,20 @@ jobs:
       SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
     steps:
       - uses: actions/checkout@v4
-      - name: Posts de l'atelier
+      # Deux ateliers, une branche chacun : reseaux-atelier (Quiz Couple,
+      # reseaux/atelier/posts) et mipaps-atelier (Les mipaps,
+      # reseaux/mipaps/atelier/posts). Un dossier absent est vide.
+      - name: Posts des ateliers
         id: atelier
         run: |
           if git ls-remote --exit-code --heads origin reseaux-atelier >/dev/null; then
             git fetch --depth 1 origin reseaux-atelier
             mkdir -p atelier && git --work-tree=atelier checkout FETCH_HEAD -- reseaux/atelier || true
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          fi
+          if git ls-remote --exit-code --heads origin mipaps-atelier >/dev/null; then
+            git fetch --depth 1 origin mipaps-atelier
+            mkdir -p mipaps && git --work-tree=mipaps checkout FETCH_HEAD -- reseaux/mipaps/atelier || true
             echo "present=true" >> "$GITHUB_OUTPUT"
           fi
       - uses: actions/setup-node@v4
@@ -61,6 +69,6 @@ jobs:
         run: cd reseaux/studio && node scripts/sons.mjs
       - name: Synchro
         if: steps.atelier.outputs.present == 'true'
-        run: node reseaux/automates/synchro.mjs atelier/reseaux/atelier/posts
+        run: node reseaux/automates/synchro.mjs atelier/reseaux/atelier/posts mipaps/reseaux/mipaps/atelier/posts
       - name: Rendu
         run: node reseaux/automates/rendu.mjs --heures 48
