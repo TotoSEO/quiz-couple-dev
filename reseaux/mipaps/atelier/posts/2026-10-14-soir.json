@@ -1,0 +1,145 @@
+{
+  "jour": "2026-10-14",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-012",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Sa colère contre ma colère : lui fait de la vapeur, elle fait le silence ; il demande si ça va, elle dit que oui.",
+        "pages": [
+          {
+            "texte": "sa colère vs ma colère",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "colere",
+                  "x": 230,
+                  "taille": 250
+                },
+                {
+                  "perso": "elle",
+                  "expression": "blase",
+                  "x": 420,
+                  "taille": 250
+                }
+              ]
+            }
+          },
+          {
+            "texte": "sa colère : tout le monde l'entend.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "furieux",
+                  "signes": [
+                    "vapeur",
+                    "flammes"
+                  ],
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "ma colère : un silence. un regard. rien d'autre.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "blase",
+                  "signes": [
+                    "points"
+                  ],
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "lui : « ça va ? »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "inquiet",
+                  "x": 230,
+                  "taille": 250
+                },
+                {
+                  "perso": "elle",
+                  "expression": "blase",
+                  "x": 420,
+                  "taille": 250
+                }
+              ]
+            }
+          },
+          {
+            "texte": "moi : « ça va. » (ça va pas)",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "boude",
+                  "signes": [
+                    "nuage_noir"
+                  ],
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "2 h plus tard : il a compris. il a ramené des frites. je note.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "zen",
+                  "signes": [
+                    "etincelles"
+                  ],
+                  "x": 250,
+                  "taille": 250
+                },
+                {
+                  "perso": "lui",
+                  "expression": "timide",
+                  "bras": "tient",
+                  "x": 420,
+                  "taille": 250
+                },
+                {
+                  "objet": "frites",
+                  "x": 420,
+                  "y": 338,
+                  "echelle": 0.6
+                }
+              ]
+            },
+            "appel": "c'est qui chez vous ?"
+          }
+        ]
+      },
+      "legende": "ma colère est silencieuse. celle des autres, bruyante.\n\ngarde ça pour la prochaine dispute",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

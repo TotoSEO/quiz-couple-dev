@@ -1,0 +1,209 @@
+{
+  "jour": "2026-10-14",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-007",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Les frites volées une par une : il compte, elle fait l'innocente, le cornet finit vide. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Il est au milieu gauche avec son cornet de frites, gourmand, les pattes en avant. Elle est à droite, l'air innocent, une auréole au-dessus de la tête. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "gourmand",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.5,
+                    "expression": "miam"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "frites",
+                "x": 250,
+                "y": 338,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "les frites quand on est deux",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle tend la patte vers le cornet à 0,6 s et une frite change de main, elle goûte, ravie, à 1,4 s. Lui regarde ailleurs, il n'a rien vu. À 2,4 s il se tourne, pensif, des points de suspension au-dessus de lui ; elle reprend son air d'ange.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "gourmand",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.4,
+                    "expression": "pensif",
+                    "signes": [
+                      "points"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "malicieux",
+                    "bras": "tend_g",
+                    "signes": []
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "miam",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "ange",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "frites",
+                "x": 250,
+                "y": 338,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 0.5,
+                    "x": 250,
+                    "y": 338
+                  },
+                  {
+                    "a": 1.3,
+                    "x": 250,
+                    "y": 338
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "j'ai juste goûté.",
+                "de": 1.5,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Le cornet est vide, posé au milieu. Lui est choqué, les yeux grands, la bouche ouverte. Elle est toujours innocente, l'auréole bien en place, un petit cœur au-dessus d'elle. La chute s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "ange",
+                    "signes": [
+                      "halo",
+                      "coeurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le cornet est vide. elle est innocente.",
+                "de": 0.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "on est deux. mais y a qu'une personne qui mange.\n\ntague celui qui te pique tes frites",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

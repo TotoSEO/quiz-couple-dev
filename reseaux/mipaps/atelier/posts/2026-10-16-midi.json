@@ -1,0 +1,48 @@
+{
+  "jour": "2026-10-16",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-014",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle, innocente, auréole, les mains jointes, un cornet de frites vide à côté.",
+        "style": "mini",
+        "texte": "j'ai rien fait",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "ange",
+              "bras": "priere",
+              "signes": [
+                "halo"
+              ],
+              "x": 290,
+              "taille": 280
+            },
+            {
+              "objet": "frites",
+              "x": 470,
+              "y": 340,
+              "echelle": 0.6
+            }
+          ]
+        }
+      },
+      "legende": "(le cornet était déjà vide)\n\ntague celui qui te vole tes frites",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "jour": "2026-10-17",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-014",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : elle fatiguée, en pyjama, lui qui lui tend un cœur ; « même fatiguée, même énervée, même en pyjama : je t'aime ».",
+        "texte": "même fatiguée, même énervée, même en pyjama : je t'aime",
+        "duree": 12,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "content",
+              "bras": "tend_d",
+              "x": 240,
+              "taille": 265
+            },
+            {
+              "perso": "elle",
+              "expression": "fatigue",
+              "x": 420,
+              "taille": 270
+            },
+            {
+              "objet": "coeur",
+              "x": 335,
+              "y": 230,
+              "echelle": 0.45,
+              "flotte": true
+            }
+          ]
+        }
+      },
+      "legende": "même en pyjama. surtout en pyjama.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

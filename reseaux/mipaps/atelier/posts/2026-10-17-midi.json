@@ -1,0 +1,49 @@
+{
+  "jour": "2026-10-17",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-023",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Schéma de bureau : un état des lieux en barres, patience au plus bas, envie de pizza et amour au plus haut.",
+        "style": "schema",
+        "texte": "état des lieux",
+        "schema": {
+          "type": "barres",
+          "barres": [
+            {
+              "texte": "patience",
+              "valeur": 12
+            },
+            {
+              "texte": "envie de pizza",
+              "valeur": 100
+            },
+            {
+              "texte": "amour",
+              "valeur": 100
+            },
+            {
+              "texte": "sommeil",
+              "valeur": 30
+            }
+          ]
+        }
+      },
+      "legende": "la patience, ça varie. l'amour, ça bouge pas.\n\nc'est quoi ton état des lieux ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

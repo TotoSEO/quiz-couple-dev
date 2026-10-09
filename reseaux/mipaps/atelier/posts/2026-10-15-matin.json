@@ -1,0 +1,180 @@
+{
+  "jour": "2026-10-15",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-010",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Elle a froid, il arrive en courant avec la couverture et la pose sur elle ; il a froid à son tour. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Elle est seule au milieu, en boule, frigorifiée, des flocons autour d'elle ; elle tremble. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 340,
+                    "expression": "froid",
+                    "signes": [
+                      "flocons"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand j'ai froid et qu'il est loin",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Il surgit du bord gauche en courant de profil, une couverture sur le bras. Il arrive devant elle à 2 s, s'arrête, se tourne vers nous. À 2,4 s il pose la couverture sur ses épaules à elle, qui relève la tête, surprise.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "energique"
+                  },
+                  {
+                    "a": 2,
+                    "x": 230,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.3,
+                    "angle": 0,
+                    "expression": "content",
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 340,
+                    "expression": "froid",
+                    "signes": [
+                      "flocons"
+                    ]
+                  },
+                  {
+                    "a": 2.5,
+                    "expression": "surpris",
+                    "signes": []
+                  },
+                  {
+                    "a": 3.3,
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": -140,
+                "y": 362,
+                "echelle": 0.7,
+                "etapes": [
+                  {
+                    "a": 0.01,
+                    "x": -140,
+                    "y": 362
+                  },
+                  {
+                    "a": 2,
+                    "x": 230,
+                    "y": 362
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 340,
+                    "y": 352
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Les deux sont côte à côte sous la couverture, elle contente, lui qui grelotte. La phrase s'écrit mot à mot à partir de 0,5 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 370,
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "froid",
+                    "signes": [
+                      "flocons"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couverture",
+                "x": 320,
+                "y": 358,
+                "echelle": 1.0
+              }
+            ],
+            "textes": [
+              {
+                "texte": "lui : « j'ai pas froid. » (il a froid)",
+                "de": 0.5,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "il a donné sa couverture. il a eu froid. il est resté.\n\nenvoie ça à celui qui te réchauffe",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

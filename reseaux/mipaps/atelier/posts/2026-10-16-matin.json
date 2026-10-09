@@ -1,0 +1,211 @@
+{
+  "jour": "2026-10-16",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-018",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Le pardon : dos à dos, boudeurs ; il se retourne et supplie ; elle regarde en coin ; il lui tend un cœur et ça repart. Quatre plans, 15 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Les deux sont de dos, chacun de son côté, les bras croisés, boudeurs. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 240,
+                    "angle": 180,
+                    "expression": "boude",
+                    "bras": "croises"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "angle": 180,
+                    "expression": "boude",
+                    "bras": "croises"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "après la dispute",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Lui se retourne lentement à 0,8 s, les pattes jointes, et supplie du regard. Elle reste de dos, les bras croisés, sans bouger. Le texte à 0,3 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 240,
+                    "angle": 180,
+                    "expression": "boude",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 0.8,
+                    "angle": 0,
+                    "expression": "supplie",
+                    "bras": "priere"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "angle": 180,
+                    "expression": "boude",
+                    "bras": "croises"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "c'est lui qui craque en premier",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle tourne la tête de profil à 1 s et jette un regard en coin, vexée. Il lui tend un cœur de la patte à 2,2 s. Elle ne dit rien, mais ses yeux brillent.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 240,
+                    "expression": "supplie",
+                    "bras": "priere"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "timide",
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "angle": 180,
+                    "expression": "boude",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 1,
+                    "angle": 90,
+                    "expression": "vexe"
+                  },
+                  {
+                    "a": 3,
+                    "expression": "emu"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 365,
+                "y": 330,
+                "echelle": 0.35,
+                "de": 2.2,
+                "flotte": true
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Les deux sont face à nous, côte à côte, main dans la main, un petit cœur au-dessus d'eux. Le texte s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 285,
+                    "expression": "content",
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 395,
+                    "expression": "joie",
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 340,
+                "y": 165,
+                "echelle": 0.45,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "et ça repart.",
+                "de": 0.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "personne boude plus de 4 minutes. on a essayé.\n\nc'est qui qui craque en premier chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

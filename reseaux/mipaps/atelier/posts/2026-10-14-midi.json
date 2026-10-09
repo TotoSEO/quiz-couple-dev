@@ -1,0 +1,46 @@
+{
+  "jour": "2026-10-14",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-021",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Schéma de bureau : l'humeur d'une journée normale, qui descend toute la journée et remonte d'un coup quand l'autre rentre.",
+        "style": "schema",
+        "texte": "mon humeur, un jour normal",
+        "schema": {
+          "type": "courbe",
+          "etiquettes": [
+            "réveil",
+            "tu rentres"
+          ],
+          "points": [
+            70,
+            55,
+            45,
+            35,
+            30,
+            28,
+            25,
+            100
+          ],
+          "repere": "tu rentres"
+        }
+      },
+      "legende": "ça remonte toujours d'un coup.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

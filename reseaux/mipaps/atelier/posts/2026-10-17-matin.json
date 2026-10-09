@@ -1,0 +1,218 @@
+{
+  "jour": "2026-10-17",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-022",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "La pluie : elle est seule, trempée, il arrive en courant avec le parapluie, le tient au-dessus d'elle et reste sous la pluie ; elle le tire sous le parapluie. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Il pleut. Elle est seule au milieu, frigorifiée, les bras serrés, un petit nuage de pluie au-dessus d'elle. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 340,
+                    "expression": "froid",
+                    "signes": [
+                      "flocons"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pluie",
+                "x": 340,
+                "y": 120,
+                "echelle": 1.3
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand il pleut et que t'as pas de parapluie",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "ambiance": "pluie"
+          },
+          {
+            "duree": 4.5,
+            "description": "Il surgit du bord gauche en courant de profil, un parapluie à la patte. À 2 s il arrive à côté d'elle, se tourne vers nous et lève le parapluie au-dessus d'elle. Lui reste sous la pluie, trempé, mais content ; elle le regarde, surprise.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "energique"
+                  },
+                  {
+                    "a": 2,
+                    "x": 240,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.3,
+                    "angle": 0,
+                    "expression": "content",
+                    "bras": "tend_haut_d"
+                  },
+                  {
+                    "a": 3.3,
+                    "expression": "froid"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 370,
+                    "expression": "froid",
+                    "signes": [
+                      "flocons"
+                    ]
+                  },
+                  {
+                    "a": 2.5,
+                    "expression": "surpris",
+                    "signes": []
+                  },
+                  {
+                    "a": 3.4,
+                    "expression": "emu"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pluie",
+                "x": 300,
+                "y": 120,
+                "echelle": 1.4
+              },
+              {
+                "objet": "parapluie",
+                "x": -140,
+                "y": 300,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 0.01,
+                    "x": -140,
+                    "y": 300
+                  },
+                  {
+                    "a": 2,
+                    "x": 240,
+                    "y": 250
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 370,
+                    "y": 150
+                  }
+                ]
+              }
+            ],
+            "ambiance": "pluie"
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Elle attrape sa patte et le tire sous le parapluie. Les deux sont serrés l'un contre l'autre, au sec, des cœurs au-dessus. La phrase s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "transi",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "expression": "content",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "parapluie",
+                "x": 345,
+                "y": 150,
+                "echelle": 1.6
+              },
+              {
+                "objet": "coeur",
+                "x": 345,
+                "y": 90,
+                "echelle": 0.5,
+                "de": 0.8,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 250,
+                "y": 130,
+                "echelle": 0.32,
+                "de": 1.2000000000000002,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "serrés sous le même parapluie <3",
+                "de": 0.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ],
+            "ambiance": "pluie"
+          }
+        ]
+      },
+      "legende": "il a mis le parapluie au-dessus d'elle. et il s'est mouillé.\n\ntague celui qui se mouille pour toi",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

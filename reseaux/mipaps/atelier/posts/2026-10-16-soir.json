@@ -1,0 +1,125 @@
+{
+  "jour": "2026-10-16",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-008",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Le manuel d'utilisation de lui et d'elle : quoi faire quand il a faim, quand elle boude, quand il dort, quand elle a froid. En cas de doute : câlin.",
+        "pages": [
+          {
+            "texte": "ton manuel d'utilisation, par ta personne",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "bras": "pointe",
+                  "x": 280,
+                  "taille": 260
+                },
+                {
+                  "objet": "livre",
+                  "x": 470,
+                  "y": 330,
+                  "echelle": 0.9
+                }
+              ]
+            }
+          },
+          {
+            "texte": "quand il a faim : ne pas lui parler. le nourrir.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "gourmand",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "quand je boude : attendre. apporter des frites.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "boude",
+                  "x": 290,
+                  "taille": 260
+                },
+                {
+                  "objet": "frites",
+                  "x": 470,
+                  "y": 338,
+                  "echelle": 0.7
+                }
+              ]
+            }
+          },
+          {
+            "texte": "quand il dort : rien à faire. c'est fini pour aujourd'hui.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "signes": [
+                    "zzz"
+                  ],
+                  "x": 320,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "quand j'ai froid : le pull. tout de suite.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "froid",
+                  "signes": [
+                    "flocons"
+                  ],
+                  "x": 290,
+                  "taille": 260
+                },
+                {
+                  "objet": "pull",
+                  "x": 470,
+                  "y": 340,
+                  "echelle": 0.8
+                }
+              ]
+            }
+          },
+          {
+            "texte": "en cas de doute : câlin.",
+            "dessin": {
+              "duo": "calin"
+            },
+            "appel": "envoie ça à ta personne pour qu'elle apprenne"
+          }
+        ]
+      },
+      "legende": "il manquait que ça sur nos frigos.\n\nenvoie ça à ta personne pour qu'elle apprenne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amour"
+      ]
+    }
+  }
+}

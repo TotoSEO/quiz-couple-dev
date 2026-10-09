@@ -1,0 +1,70 @@
+{
+  "jour": "2026-10-15",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-004",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : il dort, elle le regarde, des cœurs flottent ; la phrase qu'on dit tout bas.",
+        "texte": "dors bien mon amoureux <3",
+        "duree": 12,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "meuble": "lit_fond"
+            },
+            {
+              "perso": "lui",
+              "expression": "dodo",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "signes": [
+                "zzz"
+              ],
+              "x": 248,
+              "taille": 200
+            },
+            {
+              "perso": "elle",
+              "expression": "amour",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "x": 394,
+              "taille": 200
+            },
+            {
+              "meuble": "lit_couette"
+            },
+            {
+              "objet": "coeur",
+              "x": 394,
+              "y": 120,
+              "echelle": 0.4
+            }
+          ]
+        }
+      },
+      "legende": "(elle l'a regardé dormir. c'est tout.)\n\nenvoie ça à ta personne avant de dormir",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}
