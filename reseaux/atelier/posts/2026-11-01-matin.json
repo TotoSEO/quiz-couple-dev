@@ -59,13 +59,19 @@
                   {
                     "geste": "marche",
                     "de": 0.8,
+                    "a": 2.4,
+                    "vers": 880
+                  },
+                  {
+                    "geste": "disparait",
+                    "de": 2.4,
                     "a": 3.0,
-                    "vers": 1230
+                    "vers": "droite"
                   },
                   {
                     "geste": "visage",
                     "de": 0,
-                    "a": 3.0,
+                    "a": 2.4,
                     "yeux": "heureux",
                     "bouche": "sourire"
                   }
@@ -243,23 +249,23 @@
               },
               {
                 "qui": "violet",
-                "a": 900,
+                "a": 800,
                 "gestes": [
                   {
                     "geste": "marche",
                     "de": 0,
                     "a": 1.8,
-                    "vers": 1230
+                    "vers": 960
                   },
                   {
                     "geste": "court",
-                    "de": 2.4,
+                    "de": 2.2,
                     "a": 3.4,
                     "vers": 600
                   },
                   {
                     "geste": "tient",
-                    "de": 2.6,
+                    "de": 2.2,
                     "a": 4.4,
                     "objet": "coeur",
                     "main": "gauche"
@@ -267,13 +273,13 @@
                   {
                     "geste": "visage",
                     "de": 0,
-                    "a": 2.4,
+                    "a": 2.2,
                     "yeux": "heureux",
                     "bouche": "sourire"
                   },
                   {
                     "geste": "visage",
-                    "de": 2.6,
+                    "de": 2.4,
                     "a": 4.4,
                     "yeux": "ouverts",
                     "bouche": "o",
