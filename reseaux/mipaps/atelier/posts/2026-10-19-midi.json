@@ -1,0 +1,51 @@
+{
+  "jour": "2026-10-19",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-028",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : lui veut un câlin, les bras tendus, des cœurs.",
+        "style": "mini",
+        "texte": "j'ai trop hâte de me blottir",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "calin",
+              "bras": "tend",
+              "x": 320,
+              "taille": 290
+            },
+            {
+              "objet": "coeur",
+              "x": 200,
+              "y": 176,
+              "echelle": 0.4
+            },
+            {
+              "objet": "coeur",
+              "x": 450,
+              "y": 160,
+              "echelle": 0.3
+            }
+          ]
+        }
+      },
+      "legende": "ce soir. sous la couette.\n\ntague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

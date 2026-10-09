@@ -1,0 +1,178 @@
+{
+  "jour": "2026-10-18",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-017",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Elle lui dit « t'es beau » ; il surprend, s'émeut, fond et n'arrive plus à bouger ; elle repart, il reste figé. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Elle est à gauche, de face, le bras pointé vers lui, un sourire en coin. Lui est à droite, content, ne se doute de rien. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "malicieux",
+                    "bras": "pointe"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2,
+                    "expression": "curieux"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "elle : « t'es beau »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Lui reçoit la phrase : surpris à 0,3 s, les yeux grands, puis ému à 1,5 s, les pattes sur les joues, puis fou amoureux à 2,7 s, des cœurs autour de lui. Elle le regarde, fière d'elle.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "expression": "fier",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 1.5,
+                    "expression": "emu",
+                    "bras": "joues"
+                  },
+                  {
+                    "a": 2.7,
+                    "expression": "transi",
+                    "signes": [
+                      "coeurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "c'est tout. juste ça.",
+                "de": 0.4,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Elle s'en va en marchant vers la gauche et sort du cadre à 3,5 s, sereine. Lui reste figé au même endroit, les pattes sur les joues, des cœurs qui flottent. La chute s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "marche",
+                    "angle": -90,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.5,
+                    "x": -140
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "expression": "transi",
+                    "bras": "joues",
+                    "signes": [
+                      "coeurs"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 160,
+                "echelle": 0.4,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 380,
+                "y": 190,
+                "echelle": 0.3,
+                "de": 0.5,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "il est resté là 10 minutes",
+                "de": 1.2,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "un compliment, et il rame encore.\n\nenvoie ça à celui qui rougit pour rien",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "jour": "2026-10-18",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-016",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Déclaration : la phrase qu'on se dédie, en grand, et le petit duo du câlin dessous.",
+        "style": "declaration",
+        "texte": "on se dispute. on parle. on écoute. on rit. on s'aime. et malgré tout... on reste."
+      },
+      "legende": "malgré tout... on reste.\n\ngarde ça pour un soir où ça va pas",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#couplegoals"
+      ]
+    }
+  }
+}

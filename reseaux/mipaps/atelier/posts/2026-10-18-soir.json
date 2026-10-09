@@ -1,0 +1,184 @@
+{
+  "jour": "2026-10-18",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-004",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Une soirée parfaite : le film choisi par lui, la couette, elle qui s'endort sur lui puis lui aussi ; personne ne connaît la fin.",
+        "pages": [
+          {
+            "texte": "notre soirée parfaite, heure par heure",
+            "dessin": {
+              "duo": "canape"
+            }
+          },
+          {
+            "texte": "20 h : il a choisi le film. j'ai dit oui.",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "canape_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "rire",
+                  "y": 318,
+                  "pose": "assis",
+                  "x": 226,
+                  "taille": 210
+                },
+                {
+                  "perso": "elle",
+                  "expression": "blase",
+                  "y": 318,
+                  "pose": "assis",
+                  "x": 414,
+                  "taille": 210
+                }
+              ]
+            }
+          },
+          {
+            "texte": "21 h : la couette arrive.",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "canape_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "y": 318,
+                  "pose": "assis",
+                  "x": 226,
+                  "taille": 210
+                },
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "y": 318,
+                  "pose": "assis",
+                  "x": 414,
+                  "taille": 210
+                },
+                {
+                  "objet": "couette",
+                  "x": 320,
+                  "y": 300,
+                  "echelle": 1.5
+                }
+              ]
+            }
+          },
+          {
+            "texte": "22 h : je m'endors sur toi.",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "canape_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "amour",
+                  "y": 318,
+                  "pose": "assis",
+                  "x": 250,
+                  "taille": 210
+                },
+                {
+                  "perso": "elle",
+                  "expression": "dodo",
+                  "y": 318,
+                  "pose": "assis",
+                  "signes": [
+                    "zzz"
+                  ],
+                  "x": 350,
+                  "taille": 210
+                }
+              ]
+            }
+          },
+          {
+            "texte": "23 h : toi aussi.",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "canape_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "y": 318,
+                  "pose": "assis",
+                  "signes": [
+                    "zzz"
+                  ],
+                  "x": 250,
+                  "taille": 210
+                },
+                {
+                  "perso": "elle",
+                  "expression": "dodo",
+                  "y": 318,
+                  "pose": "assis",
+                  "x": 350,
+                  "taille": 210
+                }
+              ]
+            }
+          },
+          {
+            "texte": "le film est fini depuis une heure. personne sait la fin. c'était parfait.",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "canape_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "y": 318,
+                  "pose": "assis",
+                  "x": 250,
+                  "taille": 210
+                },
+                {
+                  "perso": "elle",
+                  "expression": "dodo",
+                  "y": 318,
+                  "pose": "assis",
+                  "x": 350,
+                  "taille": 210
+                },
+                {
+                  "objet": "coeur",
+                  "x": 320,
+                  "y": 110,
+                  "echelle": 0.45,
+                  "flotte": true
+                }
+              ]
+            },
+            "appel": "tague ta personne"
+          }
+        ]
+      },
+      "legende": "on sait jamais la fin du film. c'est pas grave.\n\ntague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

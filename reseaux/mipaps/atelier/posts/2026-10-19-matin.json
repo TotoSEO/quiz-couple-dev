@@ -1,0 +1,189 @@
+{
+  "jour": "2026-10-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-030",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "« On sort ? » : elle est prête, il dit 2 min ; elle attend, s'assoit, s'endort ; il arrive tout fier. Quatre plans, 14 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Elle est debout à droite, prête, contente, les bras le long du corps. Lui est assis à gauche, pas du tout prêt, qui lève une patte : deux minutes. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2,
+                    "expression": "attend"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "pose": "assis",
+                    "expression": "content",
+                    "bras": "leve_d"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« j'suis prêt dans 2 min »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3,
+            "transition": "fondu",
+            "description": "Elle seule au milieu droit, qui attend en tremblant, les bras croisés, puis s'assoit par terre à 2 s. Le texte « 20 min plus tard » à 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "expression": "attend",
+                    "bras": "croises",
+                    "signes": [
+                      "tremblement"
+                    ]
+                  },
+                  {
+                    "a": 2,
+                    "pose": "assis",
+                    "expression": "ennui",
+                    "signes": []
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "20 min plus tard",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3,
+            "transition": "fondu",
+            "description": "Elle dort assise, la tête qui penche, des petits zzz. Le texte « 1 h plus tard » à 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Lui arrive en marchant du bord gauche, prêt, tout fier, un bras sur la hanche, et s'arrête devant elle à 1,8 s. Elle dort toujours. Il la regarde, un peu penaud. La phrase s'écrit mot à mot à partir de 1,8 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.1,
+                    "angle": 0,
+                    "bras": "hanches",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 3.3,
+                    "expression": "gene",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "et c'est moi qui suis longue, hein.",
+                "de": 1.8,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "« 2 min », version lui.\n\nenvoie ça à celui qui est jamais prêt",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

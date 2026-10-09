@@ -1,0 +1,119 @@
+{
+  "jour": "2026-10-19",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-014",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Ce que je dis contre ce que je pense : « ça va » / ça va pas, jusqu'à « je t'aime » / je t'aime.",
+        "pages": [
+          {
+            "texte": "ce que je dis / ce que je pense",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« ça va. » / ça va pas.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "blase",
+                  "signes": [
+                    "nuage_noir"
+                  ],
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« fais comme tu veux. » / fais pas ça.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "boude",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« j'ai pas faim. » / je vais manger les tiennes.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "malicieux",
+                  "x": 290,
+                  "taille": 260
+                },
+                {
+                  "objet": "frites",
+                  "x": 460,
+                  "y": 340,
+                  "echelle": 0.7
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« je suis pas jalouse. » / c'est qui elle ?",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "jaloux",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« je t'aime. » / je t'aime.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "amour",
+                  "signes": [
+                    "coeurs"
+                  ],
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            },
+            "appel": "dis-moi laquelle c'est chez toi"
+          }
+        ]
+      },
+      "legende": "la dernière, c'est la seule qui change pas.\n\nc'est laquelle chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
