@@ -13,8 +13,10 @@
 // publié par l'API part avec la bande son de son fichier.
 // https://developers.facebook.com/docs/video-api/guides/reels-publishing/
 // https://developers.facebook.com/docs/page-stories-api/
-// Permissions du jeton : pages_show_list, pages_read_engagement,
-// pages_manage_posts, publish_video.
+// Permissions du jeton : pages_show_list, pages_read_engagement et
+// pages_manage_posts, les trois que la documentation des reels et de l'API
+// vidéo demande pour publier sur une Page (publish_video, cité d'abord, ne
+// figure pas dans le cas d'usage « Gérez des Pages » et n'est pas requis).
 
 export const VERSION = 'v23.0';
 const RACINE = `https://graph.facebook.com/${VERSION}`;

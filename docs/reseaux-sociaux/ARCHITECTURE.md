@@ -558,7 +558,9 @@ Tant qu'un compte n'est pas actif (pas encore branché, ou coupé dans l'admin),
   d'Instagram vers Facebook ne joue pas pour un contenu publié par l'API,
   alors ce qui vient de partir sur Instagram part aussi sur la Page reliée
   (`publierFacebook`, `lib/facebook.mjs`), avec le même jeton de Page, qui
-  doit porter `pages_manage_posts` et `publish_video` : un reel devient un
+  doit porter `pages_manage_posts` (avec `pages_read_engagement` et
+  `pages_show_list`, les trois autorisations que la documentation des reels
+  demande ; `publish_video` n'est pas requis) : un reel devient un
   reel Facebook (session d'envoi `video_reels`, adresse du fichier donnée au
   serveur d'envoi, publication avec la légende), une image une photo, un
   carrousel une publication à plusieurs photos, et le reel du matin repart
