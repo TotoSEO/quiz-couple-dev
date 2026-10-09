@@ -1,0 +1,300 @@
+{
+  "jour": "2026-10-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-027",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "« Qui a mangé mon chocolat ? » : la rose trouve la boîte vide, le violet regarde ailleurs, puis il rit et sort une nouvelle boîte. Aucune bulle.",
+        "titre": "POV: 'who ate my chocolate?'",
+        "plans": [
+          {
+            "description": "Une cuisine en plein jour, lumière claire par la fenêtre. Dès la première image la rose est derrière le plan de travail à gauche et tient une boîte de chocolats en cœur entièrement vide, les yeux grands ouverts, la bouche ronde ; un point d'interrogation apparaît au-dessus de sa tête à 0,6 s. Le violet, à droite derrière le plan de travail, regarde le plafond, les mains dans le dos, l'air de rien, une goutte de gêne sur la tempe.",
+            "duree": 3.6,
+            "decor": "cuisine",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "chocolats",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 3.6,
+                    "effet": "question"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.8,
+                    "a": 3.6,
+                    "effet": "goutte"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur le visage du violet, qui sifflote en regardant ailleurs : les yeux glissent vers la rose puis reviennent au plafond, la bouche fait un petit sourire coupable, les joues rosissent. À 2,2 s ses yeux croisent ceux de la rose qui le fixe, les yeux plats, la bouche plate, et il se fige. Une goutte de gêne grossit sur sa tempe.",
+            "duree": 3.8,
+            "decor": "cuisine",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "chocolats",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "ouverts",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.9,
+                    "a": 3.8,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.0,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.0,
+                    "a": 1.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 2.2,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.2,
+                    "yeux": "ouverts",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.2,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 3.8,
+                    "effet": "goutte"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.6,
+                "cible": "violet"
+              },
+              {
+                "a": 2.2,
+                "zoom": 1.6,
+                "cible": "violet"
+              }
+            ]
+          },
+          {
+            "description": "Plan large de la cuisine. Le violet éclate de rire, les yeux fermés, puis sort de derrière son dos une nouvelle boîte de chocolats qu'il tend à la rose, les joues rouges. Les yeux de la rose deviennent brillants, elle pousse un petit cri de joie et des cœurs montent au-dessus d'elle. La caméra se rapproche doucement des deux.",
+            "duree": 4.2,
+            "decor": "cuisine",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 1.2,
+                    "objet": "chocolats",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.2,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.5,
+                    "a": 2.6,
+                    "yeux": "brillants",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "joie",
+                    "de": 2.0,
+                    "a": 4.2
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "rit",
+                    "de": 0,
+                    "a": 1.4
+                  },
+                  {
+                    "geste": "offre",
+                    "de": 1.4,
+                    "a": 4.2,
+                    "objet": "chocolats"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.5,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Someone ate the chocolates. He knows exactly who.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

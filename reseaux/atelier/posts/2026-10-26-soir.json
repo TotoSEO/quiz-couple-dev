@@ -1,0 +1,257 @@
+{
+  "jour": "2026-10-26",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-022",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "« Encore cinq minutes » : le réveil sonne à 7 h, les deux se rendorment, et à 7 h 40 ils se réveillent d'un coup. Aucune bulle.",
+        "titre": "POV: you said '5 more minutes'",
+        "plans": [
+          {
+            "description": "La chambre le matin, lumière grise du petit jour, légende « 7:00 ». Un réveil sonne à plein volume sur la table de chevet. Dès la première image les deux sont dans le lit, la couette jusqu'au menton, et ouvrent un œil en même temps : les yeux plats, la bouche en grimace, les sourcils froncés. À 1,6 s la rose retourne la tête dans l'oreiller et le violet fait de même. La caméra se rapproche doucement.",
+            "duree": 3.6,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "plats",
+                    "bouche": "grogne",
+                    "sourcils": "faches"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 1.6,
+                    "a": 3.6
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "plats",
+                    "bouche": "grogne",
+                    "sourcils": "faches"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.2,
+                    "a": 1.5,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "fache",
+                    "de": 1.6,
+                    "a": 3.6
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "legende": "7:00",
+            "objets": [
+              {
+                "objet": "reveil",
+                "x": 540,
+                "y": 1040,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même chambre, légende « 7:05 ». Le réveil s'est tu. Les deux dorment déjà de nouveau, les yeux fermés, un petit sourire de bonheur, des Z qui montent au-dessus de chaque tête. La couette se soulève doucement au rythme de leur respiration. Zoom lent sur leurs visages endormis.",
+            "duree": 4.0,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 4.0
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 4.0,
+                    "effet": "zzz"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 4.0
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 4.0,
+                    "effet": "zzz"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "legende": "7:05",
+            "objets": [
+              {
+                "objet": "reveil",
+                "x": 540,
+                "y": 1040,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même chambre, légende « 7:40 », plein soleil dans la fenêtre. Les deux dorment encore, la bouche ouverte, des Z qui montent. À 1,6 s les yeux de la rose s'ouvrent d'un coup, grands, la bouche ronde, un « ! » au-dessus de sa tête ; à 2 s ceux du violet aussi, il regarde le réveil, une goutte de gêne sur la tempe. La caméra tremble d'un coup à 1,6 s.",
+            "duree": 4.2,
+            "decor": "chambre",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 1.6
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.7,
+                    "a": 4.2,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 4.2,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.9,
+                    "a": 4.2,
+                    "cible": "bas"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 1.9
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 4.2,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.0,
+                    "a": 4.2,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "effet": "goutte"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "legende": "7:40",
+            "objets": [
+              {
+                "objet": "reveil",
+                "x": 540,
+                "y": 1040,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 1.6,
+                "secousse": 12
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "7:00. 7:05. 7:40. We said five more minutes.\n\nTag your partner who snoozes the alarm.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

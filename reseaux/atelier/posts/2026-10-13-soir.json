@@ -1,309 +1,291 @@
 {
   "jour": "2026-10-13",
   "creneau": "soir",
-  "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-009",
-  "idee_id": null,
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "idee-6e6893e8",
+  "idee_id": "6e6893e8-ad8b-4f3b-af57-70277cd0c63d",
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "bd",
         "langue": "en",
         "theme": "light",
-        "idee": "Le couple qui se parle par messages depuis le même canapé : « come cuddle me », puis un vrai câlin.",
-        "titre": "POV: texting each other from the same sofa",
-        "plans": [
+        "idee": "POV : My gf without any reason, about 3 times per month. Il est tranquille sur son canapé, elle l'appelle, il répond, elle arrive devant lui sans rien dire, puis annonce qu'elle va se laver les cheveux (idée de Thomas).",
+        "cases": [
           {
-            "description": "Le salon, le soir, lumière chaude. Dès la première image les deux sont assis aux extrémités du canapé, chacun le nez dans son téléphone, à un coussin l'un de l'autre. Une bulle de la rose dit « come cuddle me » comme un message. À 2,2 s le violet lève les yeux, la bouche ronde, et des cœurs sortent de sa tête ; la rose reste penchée sur son écran, un petit sourire en coin.",
-            "duree": 3.8,
-            "decor": "salon",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "canape-gauche",
-                "gestes": [
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Le salon, le soir. Le violet est installé tranquillement dans le canapé à droite, son téléphone à la main, les yeux heureux, la bouche en sourire détendu. La rose est debout à gauche, un peu loin, elle le regarde de côté, un petit sourire en coin ; elle l'appelle de l'autre bout de la pièce.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
                   {
-                    "geste": "telephone",
-                    "de": 0,
-                    "a": 2.4
+                    "qui": "violet",
+                    "a": "canape-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "telephone",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
                   },
                   {
-                    "geste": "parle",
-                    "de": 0.2,
-                    "a": 1.4
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.6,
-                    "a": 3.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "canape-droite",
-                "gestes": [
-                  {
-                    "geste": "telephone",
-                    "de": 0,
-                    "a": 2.0
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 2.2,
-                    "a": 3.8,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.2,
-                    "a": 3.0,
-                    "yeux": "ouverts",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.6,
-                    "a": 3.8,
-                    "effet": "coeurs"
+                    "qui": "rose",
+                    "a": "devant-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire",
+                        "rougit": true
+                      }
+                    ]
                   }
                 ]
               }
-            ],
-            "bulles": [
+            },
+            "repliques": [
               {
-                "qui": "rose",
-                "de": 0.2,
-                "a": 1.9,
-                "texte": "come cuddle me"
+                "texte": "babe?",
+                "cote": "gauche"
               }
             ]
           },
           {
-            "description": "Gros plan qui se rapproche des deux. Le violet répond par message avec une bulle « u could just say it », les yeux plats, un sourcil haut ; la rose lève la tête vers lui et répond « im too comfy » en haussant les épaules, les joues roses. Ils se regardent et se mettent à rire, chacun avec son téléphone dans la main.",
-            "duree": 4.0,
-            "decor": "salon",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "canape-gauche",
-                "gestes": [
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salon. Le violet lève les yeux de son téléphone et se tourne vers la rose, les yeux grands ouverts, la bouche ronde, étonné mais gentil. La rose, toujours debout à gauche, lui sourit, immobile.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
                   {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.0,
-                    "objet": "telephone",
-                    "main": "droite"
+                    "qui": "violet",
+                    "a": "canape-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "telephone",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "o"
+                      }
+                    ]
                   },
                   {
-                    "geste": "regarde",
-                    "de": 0.2,
-                    "a": 4.0,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.2,
-                    "a": 1.8,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "parle",
-                    "de": 1.9,
-                    "a": 3.0
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 3.0,
-                    "a": 4.0
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "canape-droite",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.0,
-                    "objet": "telephone",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 0.6,
-                    "yeux": "ouverts",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "parle",
-                    "de": 0.6,
-                    "a": 1.8
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.4,
-                    "a": 1.8,
-                    "yeux": "plats",
-                    "bouche": "plate",
-                    "sourcils": "hauts"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.9,
-                    "a": 4.0,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 3.0,
-                    "a": 4.0
+                    "qui": "rose",
+                    "a": "devant-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire"
+                      }
+                    ]
                   }
                 ]
               }
-            ],
-            "bulles": [
+            },
+            "repliques": [
               {
-                "qui": "violet",
-                "de": 0.4,
-                "a": 1.8,
-                "texte": "u could just say it"
-              },
-              {
-                "qui": "rose",
-                "de": 2.0,
-                "a": 3.6,
-                "texte": "im too comfy"
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 4.0,
-                "zoom": 1.25,
-                "x": 540,
-                "y": 1150
+                "texte": "yes?",
+                "cote": "droite"
               }
             ]
           },
           {
-            "description": "Le canapé, même lumière. Les deux posent leurs téléphones et se rapprochent au milieu du canapé pour un câlin, la tête de la rose contre l'épaule du violet. À 0,6 s ils ferment les yeux de bonheur, joues roses ; des cœurs montent à partir de 1 s. La caméra se rapproche doucement jusqu'à la fin et une dernière bulle dit « ok that was better <3 ».",
-            "duree": 4.2,
-            "decor": "salon",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "canape-gauche",
-                "gestes": [
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salon, la rose s'est approchée et se tient maintenant juste devant le canapé, face au violet, sans rien dire. Elle le fixe avec un grand sourire figé et des yeux grands ouverts. Le violet, le téléphone encore à la main, a un petit recul : une goutte de gêne glisse sur sa tempe et trois points flottent au-dessus de lui.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
                   {
-                    "geste": "calin",
-                    "de": 0,
-                    "a": 4.2,
-                    "avec": "violet"
+                    "qui": "violet",
+                    "a": "canape-droite",
+                    "gestes": [
+                      {
+                        "geste": "tient",
+                        "de": 0,
+                        "a": 2,
+                        "objet": "telephone",
+                        "main": "gauche"
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "plate"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "goutte"
+                      }
+                    ]
                   },
                   {
-                    "geste": "visage",
-                    "de": 0.6,
-                    "a": 2.5,
-                    "yeux": "fermes",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.5,
-                    "a": 4.2,
-                    "yeux": "fermes",
-                    "bouche": "chat",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "parle",
-                    "de": 2.4,
-                    "a": 3.4
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "canape-droite",
-                "gestes": [
-                  {
-                    "geste": "calin",
-                    "de": 0,
-                    "a": 4.2,
-                    "avec": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.6,
-                    "a": 2.8,
-                    "yeux": "fermes",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.8,
-                    "a": 4.2,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.0,
-                    "a": 4.2,
-                    "effet": "coeurs"
+                    "qui": "rose",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "sourire"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "points"
+                      }
+                    ]
                   }
                 ]
               }
-            ],
-            "bulles": [
+            },
+            "repliques": [
               {
-                "qui": "rose",
-                "de": 2.4,
-                "a": 4.0,
-                "texte": "ok that was better <3"
+                "texte": "...",
+                "cote": "gauche"
               }
-            ],
-            "camera": [
+            ]
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même salon. La rose, toujours debout devant le canapé, tourne un peu la tête et annonce d'un air très sérieux, les sourcils hauts. Le violet a posé son téléphone sur ses genoux : les yeux plats, la bouche plate, résigné, il regarde la caméra comme pour nous prendre à témoin.",
+                "duree": 2,
+                "decor": "salon",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "violet",
+                    "a": "canape-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "camera"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "rose",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "sourire",
+                        "sourcils": "hauts"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
               {
-                "a": 0,
-                "zoom": 1.05
-              },
-              {
-                "a": 4.2,
-                "zoom": 1.35,
-                "x": 540,
-                "y": 1170
+                "texte": "i think i'm gonna wash my hair today",
+                "cote": "gauche"
               }
             ]
           }
-        ],
-        "son": {
-          "ambiance": "drole"
-        }
+        ]
       },
-      "legende": "Texting from the same sofa is a love language.\n\nTag your partner.",
+      "legende": "POV: my girlfriend, for no reason, about 3 times a month.\n\nSend this to your partner!",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

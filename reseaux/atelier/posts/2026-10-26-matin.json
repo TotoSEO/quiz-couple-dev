@@ -1,0 +1,311 @@
+{
+  "jour": "2026-10-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-009",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le couple qui se parle par messages depuis le même canapé : « come cuddle me », puis un vrai câlin.",
+        "titre": "POV: texting each other from the same sofa",
+        "plans": [
+          {
+            "description": "Le salon, le soir, lumière chaude. Dès la première image les deux sont assis aux extrémités du canapé, chacun le nez dans son téléphone, à un coussin l'un de l'autre. Une bulle de la rose dit « come cuddle me » comme un message. À 2,2 s le violet lève les yeux, la bouche ronde, et des cœurs sortent de sa tête ; la rose reste penchée sur son écran, un petit sourire en coin.",
+            "duree": 3.8,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "telephone",
+                    "de": 0,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.2,
+                    "a": 1.4
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "telephone",
+                    "de": 0,
+                    "a": 2.0
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.2,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 3.0,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.6,
+                    "a": 3.8,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 0.2,
+                "a": 1.9,
+                "texte": "come cuddle me"
+              }
+            ]
+          },
+          {
+            "description": "Gros plan qui se rapproche des deux. Le violet répond par message avec une bulle « u could just say it », les yeux plats, un sourcil haut ; la rose lève la tête vers lui et répond « im too comfy » en haussant les épaules, les joues roses. Ils se regardent et se mettent à rire, chacun avec son téléphone dans la main.",
+            "duree": 4.0,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.0,
+                    "objet": "telephone",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.2,
+                    "a": 4.0,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.2,
+                    "a": 1.8,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 1.9,
+                    "a": 3.0
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 3.0,
+                    "a": 4.0
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.0,
+                    "objet": "telephone",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.6,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.6,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.4,
+                    "a": 1.8,
+                    "yeux": "plats",
+                    "bouche": "plate",
+                    "sourcils": "hauts"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.9,
+                    "a": 4.0,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 3.0,
+                    "a": 4.0
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.4,
+                "a": 1.8,
+                "texte": "u could just say it"
+              },
+              {
+                "qui": "rose",
+                "de": 2.0,
+                "a": 3.6,
+                "texte": "im too comfy"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Le canapé, même lumière. Les deux posent leurs téléphones et se rapprochent au milieu du canapé pour un câlin, la tête de la rose contre l'épaule du violet. À 0,6 s ils ferment les yeux de bonheur, joues roses ; des cœurs montent à partir de 1 s. La caméra se rapproche doucement jusqu'à la fin et une dernière bulle dit « ok that was better <3 ».",
+            "duree": 4.2,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.6,
+                    "a": 2.5,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.5,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 2.4,
+                    "a": 3.4
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.6,
+                    "a": 2.8,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.8,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "rose",
+                "de": 2.4,
+                "a": 4.0,
+                "texte": "ok that was better <3"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.05
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.35,
+                "x": 540,
+                "y": 1170
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Texting from the same sofa is a love language.\n\nTag your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

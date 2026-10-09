@@ -1,0 +1,48 @@
+{
+  "jour": "2026-10-26",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "connais-tu",
+  "categorie": "connais-tu",
+  "sujet": "ct-009",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "connais-tu",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Fears edition",
+        "accroche": "How well do you know your partner?",
+        "consigne": "8 questions, 5 seconds each. Count your right answers!",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "questions": [
+          "What's your partner's biggest fear?",
+          "Which animal scares them the most?",
+          "Spiders or heights: which is worse?",
+          "What movie scared them the most?",
+          "What are they afraid to lose?",
+          "Do they get scared in the dark?",
+          "What makes them nervous in public?",
+          "What is the one thing they never try?"
+        ],
+        "fin": {
+          "question": "How many did you get? Comment your score!",
+          "bouton": "Send this to your partner",
+          "signature": "More couple quizzes on quiz-couple.com"
+        }
+      },
+      "legende": "Fears edition: 8 questions about what scares your partner. Do you know their biggest fear?\n\nComment your score!",
+      "hashtags": [
+        "#couplequiz",
+        "#howwelldoyouknowyourpartner",
+        "#boyfriendquiz",
+        "#girlfriendquiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}
