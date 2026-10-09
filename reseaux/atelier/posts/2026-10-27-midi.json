@@ -1,0 +1,64 @@
+{
+  "jour": "2026-10-27",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-006",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Superpowers edition",
+        "accroche": "Would you rather: powers?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Read their mind",
+            "b": "Teleport to them"
+          },
+          {
+            "a": "Pause time together",
+            "b": "Rewind your best day"
+          },
+          {
+            "a": "Fly together",
+            "b": "Be invisible together"
+          },
+          {
+            "a": "Talk to animals",
+            "b": "Speak every language"
+          },
+          {
+            "a": "Never need sleep",
+            "b": "Never get hungry"
+          },
+          {
+            "a": "See the future",
+            "b": "Change the past"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, superpowers edition: which power would you two pick?\n\nComment your A and B!",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

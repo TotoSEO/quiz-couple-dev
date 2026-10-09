@@ -1,0 +1,265 @@
+{
+  "jour": "2026-10-27",
+  "creneau": "soir",
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "bd-001",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "bd",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Elle est malade au lit avec une compresse : il la rassure, elle le prévient de ne pas l'approcher, il l'embrasse quand même, et les deux finissent malades.",
+        "cases": [
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "La chambre, le soir. La rose est couchée dans le lit à gauche, une compresse sur le front, les yeux plats et la bouche plate : elle est malade. Le violet est debout à droite du lit, les sourcils tristes, inquiet, et la regarde avec tendresse.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      }
+                    ],
+                    "porte": "compresse"
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "plate",
+                        "sourcils": "tristes"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "you'll be fine...",
+                "cote": "droite"
+              }
+            ]
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même chambre. La rose, couchée avec sa compresse, ouvre grand les yeux, sourcils hauts, bouche en o : elle a compris ce qu'il veut faire. Le violet s'est approché du lit, les joues roses, les yeux heureux, la bouche en bisou.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "o",
+                        "sourcils": "hauts"
+                      }
+                    ],
+                    "porte": "compresse"
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "devant-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "bisou",
+                        "rougit": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "don't you dare.",
+                "cote": "gauche"
+              },
+              {
+                "texte": "just one kiss",
+                "cote": "droite"
+              }
+            ]
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Le violet a grimpé dans le lit à droite et embrasse la rose sur la joue, les yeux fermés. La rose, compresse sur le front, a les yeux ronds et un point d'exclamation au-dessus de la tête ; des petits cœurs montent entre eux.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "o",
+                        "rougit": true
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0.2,
+                        "a": 2,
+                        "effet": "exclamation"
+                      }
+                    ],
+                    "porte": "compresse"
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "lit-droite",
+                    "gestes": [
+                      {
+                        "geste": "bisou",
+                        "de": 0,
+                        "a": 2,
+                        "avec": "rose"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0.4,
+                        "a": 2,
+                        "effet": "coeurs"
+                      }
+                    ],
+                    "premier": true
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "La nuit. Les deux sont couchés dans le lit, chacun avec une compresse sur le front. La rose a les yeux plats et un petit sourire en coin, elle regarde le violet. Le violet, pâle, les yeux plats et la bouche plate, fixe le plafond.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "sourire"
+                      }
+                    ],
+                    "porte": "compresse"
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "lit-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "haut"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      }
+                    ],
+                    "porte": "compresse"
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "told u.",
+                "cote": "gauche"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Told him not to kiss me. He did it anyway.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

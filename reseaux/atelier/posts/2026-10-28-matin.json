@@ -1,0 +1,271 @@
+{
+  "jour": "2026-10-28",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-036",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "« Qui a dit je t'aime en premier ? » : sur la plage chacun est sûr d'avoir parlé le premier, ils se fâchent, se tournent le dos, puis rient et s'embrassent. Aucune bulle.",
+        "titre": "POV: arguing about who said 'love you' first",
+        "plans": [
+          {
+            "description": "Une plage au coucher du soleil, ciel orange, vagues qui avancent, légende « who said it first? ». Dès la première image les deux sont assis dans le sable côte à côte, la rose à gauche, le violet à droite, et se tournent l'un vers l'autre, les sourcils froncés, la bouche en moue : chacun est certain d'avoir dit « I love you » en premier. À 1,8 s les deux croisent les bras du regard, boudeurs. La caméra se rapproche lentement.",
+            "duree": 3.8,
+            "decor": "plage",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "sable-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "faches"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "sable-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "faches"
+                  }
+                ]
+              }
+            ],
+            "legende": "who said it first?",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même plage. Les deux se fâchent en même temps, bouche en zigzag, joues rouges, le corps qui tremble, un « ! » au-dessus de chaque tête. À 1,8 s ils se tournent le dos d'un coup, le nez en l'air, et la caméra tremble. Zoom rapide sur leurs deux visages boudeurs à 0,3 s.",
+            "duree": 3.6,
+            "decor": "plage",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "sable-gauche",
+                "gestes": [
+                  {
+                    "geste": "fache",
+                    "de": 0,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 1.8,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 1.8,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "cible": "gauche"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "sable-droite",
+                "gestes": [
+                  {
+                    "geste": "fache",
+                    "de": 0,
+                    "a": 1.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 1.8,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 1.8,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "cible": "droite"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.4,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 1.8,
+                "secousse": 10
+              }
+            ]
+          },
+          {
+            "description": "Même plage, le ciel devient rose. Les deux jettent un œil l'un vers l'autre, puis éclatent de rire en même temps. La rose se rapproche et le violet lui donne un petit bisou sur la joue : des cœurs montent, les deux ferment les yeux de bonheur. La caméra recule doucement sur la mer.",
+            "duree": 4.2,
+            "decor": "plage",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "sable-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.4,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "sable-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.4,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 2.4,
+                    "a": 3.6,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.6,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.2,
+                "zoom": 1,
+                "x": 540,
+                "y": 1050
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "We still argue about who said it first.\n\nTag your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

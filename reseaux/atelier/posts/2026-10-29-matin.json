@@ -1,0 +1,294 @@
+{
+  "jour": "2026-10-29",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-030",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le trac du premier rendez-vous au café : chacun regarde ailleurs, ils boivent en même temps, leurs regards se croisent, ils rougissent puis rient et s'embrassent. Aucune bulle.",
+        "titre": "POV: the first date nerves",
+        "plans": [
+          {
+            "description": "Un café en plein jour : l'étagère de tasses, l'ardoise, le comptoir et sa lampe suspendue. Les deux sont assis face à face à la petite table ronde, chacun tenant sa tasse à deux mains, dès la première image. Ils regardent chacun ailleurs : la rose vers le bas, le violet vers le haut. Une goutte de gêne glisse sur la tempe de chacun, leurs joues sont roses.",
+            "duree": 3.6,
+            "decor": "cafe",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "tasse",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 3.6,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 3.6,
+                    "effet": "goutte"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même café. Les deux boivent une gorgée de leur tasse exactement en même temps, puis les reposent en même temps. À 1,6 s ils tournent la tête l'un vers l'autre au même instant et leurs regards se croisent : les yeux s'agrandissent, les bouches s'ouvrent en « o », un « ! » apparaît au-dessus de chaque tête. La caméra se rapproche d'un coup sur les deux visages.",
+            "duree": 3.8,
+            "decor": "cafe",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 1.5,
+                    "objet": "tasse"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 3.8,
+                    "effet": "exclamation"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 1.5,
+                    "objet": "tasse"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.9,
+                    "a": 3.8,
+                    "effet": "exclamation"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 1.6,
+                "zoom": 1
+              },
+              {
+                "a": 1.9,
+                "zoom": 1.5,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Plan large du café. Les deux se regardent en souriant, de plus en plus rouges, puis éclatent de rire ensemble, les yeux plissés. La rose se penche par-dessus la table et le violet lui donne un petit bisou ; des cœurs montent au-dessus d'eux. La caméra recule doucement pour montrer tout le café.",
+            "duree": 4.4,
+            "decor": "cafe",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.4,
+                    "a": 2.8
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 2.8,
+                    "a": 4.0,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 4.0,
+                    "a": 4.4,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.4,
+                    "a": 2.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.8,
+                    "a": 4.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1100
+              },
+              {
+                "a": 4.4,
+                "zoom": 1,
+                "x": 540,
+                "y": 1000
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "First date nerves never really go away.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

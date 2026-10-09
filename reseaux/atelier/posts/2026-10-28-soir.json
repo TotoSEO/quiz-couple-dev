@@ -1,0 +1,267 @@
+{
+  "jour": "2026-10-28",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-029",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il entend sa chanson préférée : des notes montent, il saute du canapé et danse, la rose rit puis le rejoint. Aucune bulle.",
+        "titre": "POV: he hears his favorite song",
+        "plans": [
+          {
+            "description": "Le salon, le soir, lumière chaude de la lampe. Dès la première image les deux sont assis chacun à un bout du canapé, la rose le nez dans un livre, le violet le regard dans le vide, l'air endormi. À 1 s des notes de musique montent au-dessus du violet : ses yeux deviennent brillants, sa bouche s'ouvre, il a reconnu sa chanson préférée. La rose lève les yeux de son livre, un sourcil haut.",
+            "duree": 3.6,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "livre",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.2,
+                    "yeux": "ouverts",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.2,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "sourire",
+                    "sourcils": "hauts"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.0,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.8,
+                    "a": 3.6,
+                    "effet": "notes"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.0,
+                    "a": 3.6,
+                    "yeux": "brillants",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "danse",
+                    "de": 2.0,
+                    "a": 3.6
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur le violet, maintenant debout devant le canapé : il danse à fond, les bras qui alternent, les yeux fermés, un énorme sourire, des notes de musique tout autour de lui. Derrière lui, la rose, restée assise, le regarde et éclate de rire, la main devant la bouche.",
+            "duree": 3.8,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 0.3,
+                    "a": 3.8
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "danse",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 3.8,
+                    "effet": "notes"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 640,
+                "y": 1300
+              }
+            ]
+          },
+          {
+            "description": "Plan large du salon. La rose pose son livre, se lève et vient danser à côté du violet, les bras en l'air, les yeux heureux ; les deux dansent côte à côte en riant, des notes de musique et des cœurs montent. À 3 s ils se regardent, la rose fait un clin d'œil. La caméra se rapproche doucement.",
+            "duree": 4.2,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "devant-gauche",
+                "gestes": [
+                  {
+                    "geste": "apparait",
+                    "de": 0,
+                    "a": 0.5,
+                    "depuis": "pop"
+                  },
+                  {
+                    "geste": "danse",
+                    "de": 0.5,
+                    "a": 4.2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.5,
+                    "a": 3.0,
+                    "yeux": "heureux",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.0,
+                    "a": 4.2,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.8,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "danse",
+                    "de": 0,
+                    "a": 4.2
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.8,
+                    "a": 4.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.8,
+                    "yeux": "heureux",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 2.8,
+                    "effet": "notes"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1300
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "The second his favorite song comes on, he is gone.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
