@@ -211,6 +211,14 @@ test("compte inactif : un post en retard n'est pas compté en échec", async () 
   assert.equal(b.tables.social_variantes[0].statut, 'rendu');
 });
 
+test('créneau dépassé : les essais sont au maximum, la synchro ne retente pas le rendu', async () => {
+  const b = base({ publierA: plus(-120) });
+  await publier(b, { maintenant: T0, instagramPour: () => faux() });
+  const v = b.tables.social_variantes[0];
+  assert.equal(v.statut, 'echec');
+  assert.equal(v.essais, 3);
+});
+
 test('créneau dépassé de plus de 90 minutes : pas de publication', async () => {
   const b = base({ publierA: plus(-120) });
   const ig = faux();

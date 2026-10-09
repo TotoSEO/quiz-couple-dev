@@ -104,7 +104,11 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
     }
     const enRetard = maintenant - new Date(v.publier_a) > minutes(RETARD_MAX_MIN);
     if (enRetard) {
-      await base.update('social_variantes', `id=eq.${v.id}`, { statut: 'echec', erreur: 'créneau dépassé sans publication' });
+      // un créneau dépassé n'est pas un échec de rendu : les essais sont mis
+      // au maximum pour que la synchro ne remette pas la déclinaison en
+      // a_rendre à chaque passage (le 9 octobre 2026, trois posts manqués
+      // auraient été re-rendus toutes les heures jusqu'à minuit)
+      await base.update('social_variantes', `id=eq.${v.id}`, { statut: 'echec', erreur: 'créneau dépassé sans publication', essais: ESSAIS_MAX });
       await base.journal('erreur', 'publication', `${post.jour} ${post.creneau} ${v.langue} : créneau dépassé`, null, v.id);
       bilan.echecs++;
       continue;
