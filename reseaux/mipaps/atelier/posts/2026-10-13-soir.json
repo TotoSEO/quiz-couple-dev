@@ -1,0 +1,34 @@
+{
+  "jour": "2026-10-13",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-005",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : le bisou sur la joue, un gros cœur, la phrase qui s'écrit mot à mot.",
+        "texte": "je te choisis. tous les jours.",
+        "duree": 11,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "duo": "bisou"
+        }
+      },
+      "legende": "tous les jours.\n\ngarde ça pour un soir où ça va pas",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

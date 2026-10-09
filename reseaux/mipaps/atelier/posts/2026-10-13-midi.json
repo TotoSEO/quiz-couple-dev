@@ -1,0 +1,42 @@
+{
+  "jour": "2026-10-13",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-006",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : il gère, fier, les mains sur les hanches ; la légende dit que non.",
+        "style": "mini",
+        "texte": "je gère.",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "fier",
+              "bras": "hanches",
+              "signes": [
+                "etincelles"
+              ],
+              "x": 320,
+              "taille": 290
+            }
+          ]
+        }
+      },
+      "legende": "(il gérait pas)\n\nc'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "jour": "2026-10-12",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-002",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle supplie, les mains jointes, un petit tremblement ; le texto qu'on envoie quand l'autre est parti.",
+        "style": "mini",
+        "texte": "reviens vite stp",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "supplie",
+              "bras": "priere",
+              "signes": [
+                "tremblement"
+              ],
+              "x": 320,
+              "taille": 290
+            }
+          ]
+        }
+      },
+      "legende": "il est parti depuis 4 minutes.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

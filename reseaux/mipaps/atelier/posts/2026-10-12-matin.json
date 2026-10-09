@@ -1,0 +1,233 @@
+{
+  "jour": "2026-10-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-005",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "« j'arrive dans 2 min » : il arrive en courant, plante un panneau, repart ; elle attend, s'assoit, s'endort ; il revient et reste à côté d'elle. Quatre plans, 16 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4.5,
+            "description": "Elle attend au milieu droit, contente, les bras le long du corps. Il surgit du bord gauche en courant de profil, joyeux, jusqu'à elle à 1,7 s où il plante un panneau d'un geste fier. À 3 s il repart en courant vers la gauche et sort du cadre à 4,3 s. Elle le suit des yeux, un peu perplexe.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.6,
+                    "expression": "perplexe"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.7,
+                    "x": 330,
+                    "pose": "plante",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 3,
+                    "x": 330,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "energique"
+                  },
+                  {
+                    "a": 4.3,
+                    "x": -140
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "il a dit « j'arrive dans 2 min »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle seule au milieu droit. Elle attend en tremblant un peu, les yeux au ciel. À 1,6 s elle s'ennuie, la tête basse, puis à 2,6 s elle s'assoit par terre, les bras autour des genoux.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "expression": "attend",
+                    "signes": [
+                      "points"
+                    ]
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "ennui",
+                    "signes": []
+                  },
+                  {
+                    "a": 2.6,
+                    "pose": "assis",
+                    "expression": "deprime"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "10 min plus tard",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle dort assise, la tête qui penche, des petits zzz au-dessus d'elle, très calme. Le texte « 2 h plus tard » en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 h plus tard",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Il arrive en marchant du bord gauche, à bout de souffle, s'arrête à côté d'elle à 1,8 s, se tourne vers nous, gêné. Elle dort toujours. À 3 s il s'assoit près d'elle, content, les deux côte à côte, des cœurs. La phrase s'écrit mot à mot à partir de 2,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "expression": "amour",
+                    "signes": [
+                      "coeurs"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "essouffle"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 310,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.1,
+                    "angle": 0,
+                    "expression": "gene"
+                  },
+                  {
+                    "a": 3,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 375,
+                "y": 160,
+                "echelle": 0.5,
+                "de": 3.2,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 280,
+                "y": 200,
+                "echelle": 0.32,
+                "de": 3.6,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "il arrive. elle dort. il reste.",
+                "de": 2.2,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "« 2 min » c'est jamais 2 min.\n\ntague celui qui dit « j'arrive » en sortant de la douche",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

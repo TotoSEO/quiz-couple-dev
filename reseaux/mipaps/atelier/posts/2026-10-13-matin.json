@@ -1,0 +1,183 @@
+{
+  "jour": "2026-10-13",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-016",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Il l'attend assis, elle arrive en courant de loin, saute dans ses bras ; câlin et cœurs. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3,
+            "description": "Il est assis au milieu droit, content, les pattes sur les genoux. Il jette un coup d'œil vers la gauche à 1,6 s, l'air d'attendre quelqu'un. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.6,
+                    "expression": "attend"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand je rentre et qu'il est là",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Elle surgit du bord gauche en courant, joyeuse, les bras de course. À 2,1 s elle est près de lui et prend son élan. À 2,3 s elle saute. Lui se lève, surpris, les bras ouverts.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 2,
+                    "x": 300,
+                    "pose": "saut",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 3,
+                    "x": 320,
+                    "pose": "saut",
+                    "expression": "emerveille"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "pose": "assis",
+                    "expression": "attend"
+                  },
+                  {
+                    "a": 1.8,
+                    "pose": "debout",
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.5,
+                    "bras": "tend_g",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "et là c'est le jackpot",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Les deux se serrent fort au milieu, yeux fermés, les bras autour de l'autre. Trois cœurs flottent au-dessus d'eux et la phrase s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "expression": "calin",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 280,
+                    "expression": "transi",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 340,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 245,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 1.4,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "c'est ça, rentrer <3",
+                "de": 0.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "rentrer, c'est ça.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "jour": "2026-10-12",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-003",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Cinq aveux qu'on ne dit pas à voix haute, de « j'ai froid exprès » à « j'ai pas hâte de vieillir, sauf avec toi ».",
+        "pages": [
+          {
+            "texte": "5 trucs que je te dirai jamais à voix haute",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "timide",
+                  "signes": [
+                    "rougeur_pleine"
+                  ],
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "1 : je fais exprès d'avoir froid.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "malicieux",
+                  "bras": "croises",
+                  "x": 280,
+                  "taille": 260
+                },
+                {
+                  "objet": "flocon",
+                  "x": 455,
+                  "y": 210,
+                  "echelle": 0.7
+                },
+                {
+                  "objet": "pull",
+                  "x": 430,
+                  "y": 350,
+                  "echelle": 0.7
+                }
+              ]
+            }
+          },
+          {
+            "texte": "2 : la dernière part, c'était pas le chat.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "ange",
+                  "signes": [
+                    "halo"
+                  ],
+                  "x": 270,
+                  "taille": 260
+                },
+                {
+                  "objet": "chat",
+                  "x": 430,
+                  "y": 338,
+                  "echelle": 0.9
+                },
+                {
+                  "objet": "gateau",
+                  "x": 500,
+                  "y": 356,
+                  "echelle": 0.5
+                }
+              ]
+            }
+          },
+          {
+            "texte": "3 : je t'écoute ronfler pour m'endormir.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "x": 270,
+                  "taille": 250
+                },
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "signes": [
+                    "zzz"
+                  ],
+                  "x": 410,
+                  "taille": 250
+                }
+              ]
+            }
+          },
+          {
+            "texte": "4 : je t'ai gardé la meilleure frite.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "bras": "tient",
+                  "x": 290,
+                  "taille": 260
+                },
+                {
+                  "objet": "frites",
+                  "x": 320,
+                  "y": 330,
+                  "echelle": 0.7
+                }
+              ]
+            }
+          },
+          {
+            "texte": "5 : j'ai pas hâte de vieillir. sauf avec toi.",
+            "dessin": {
+              "duo": "calin"
+            },
+            "appel": "garde ça pour un soir où ça va pas"
+          }
+        ]
+      },
+      "legende": "le 4 c'est le plus vrai.\n\ngarde ça pour un soir où ça va pas",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#relation"
+      ]
+    }
+  }
+}
