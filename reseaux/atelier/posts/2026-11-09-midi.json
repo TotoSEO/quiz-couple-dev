@@ -20,14 +20,14 @@
           "ambiance": "jeu"
         },
         "questions": [
-          "Does your partner prefer beach or mountains?",
+          "Would your partner pick the beach or the mountains?",
           "What is their dream road trip?",
           "What do they always forget to pack?",
           "Window seat or aisle seat?",
           "Which country would they live in?",
           "What souvenir do they always buy?",
           "Hotel or camping: what do they pick?",
-          "What is their best travel memory?"
+          "Their best memory from a trip?"
         ],
         "fin": {
           "question": "How many did you get? Comment your score!",

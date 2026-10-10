@@ -21,13 +21,13 @@
         },
         "questions": [
           "What gift would your partner love the most?",
-          "Do they prefer flowers or chocolate?",
+          "Flowers or chocolate: which one?",
           "What would they buy with a surprise 100?",
           "What is the best gift you gave them?",
           "Do they love surprises or hate them?",
           "Wrapped gift or gift bag?",
-          "What gift did they secretly dislike?",
-          "What would they never want to receive?"
+          "Which gift did they secretly not like?",
+          "What gift would they never want to get?"
         ],
         "fin": {
           "question": "How many did you get? Comment your score!",
