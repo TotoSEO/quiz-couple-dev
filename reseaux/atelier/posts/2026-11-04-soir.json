@@ -1,0 +1,271 @@
+{
+  "jour": "2026-11-04",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-037",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "La version affamée de lui : le violet boude, yeux plats, la rose lui tend une part de pizza, il saute de joie. Aucune bulle.",
+        "titre": "POV: the hungry version of him",
+        "plans": [
+          {
+            "description": "Une cuisine en fin d'après-midi, lumière dorée par la fenêtre. Dès la première image le violet est derrière le plan de travail à droite, les bras ballants, les yeux plats, la bouche en moue, les sourcils faches : il a faim et il boude. Un petit nuage de points flotte au-dessus de sa tête. La rose, à gauche, le regarde de côté, un sourcil haut, une goutte de gêne sur la tempe.",
+            "duree": 3.6,
+            "decor": "cuisine",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "hauts"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 3.6,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "boude",
+                    "de": 0,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "plats",
+                    "bouche": "grogne",
+                    "sourcils": "faches"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 3.6,
+                    "effet": "points"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          },
+          {
+            "description": "Même cuisine. La rose se baisse sous le plan de travail et ressort avec une part de pizza chaude qu'elle tend vers le violet, un sourire malicieux. Zoom rapide à 0,3 s sur le visage du violet : les yeux plats s'écarquillent, deviennent brillants, la bouche s'ouvre en grand, des étincelles scintillent autour de sa tête.",
+            "duree": 3.6,
+            "decor": "cuisine",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "offre",
+                    "de": 0.4,
+                    "a": 3.6,
+                    "objet": "pizza"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "boude",
+                    "de": 0,
+                    "a": 0.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.8,
+                    "a": 3.6,
+                    "yeux": "brillants",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 3.6,
+                    "effet": "etincelles"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.6,
+                    "a": 3.6,
+                    "cible": "rose"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 700,
+                "y": 1200
+              }
+            ]
+          },
+          {
+            "description": "Plan large de la cuisine. Le violet saute de joie deux fois, les bras en l'air, puis prend la part de pizza et la mange, les yeux fermés de plaisir, les joues gonflées. La rose éclate de rire, la main devant la bouche, et des cœurs montent au-dessus d'eux. La caméra se rapproche doucement.",
+            "duree": 4.2,
+            "decor": "cuisine",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "rit",
+                    "de": 0,
+                    "a": 4.2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.6,
+                    "yeux": "fermes",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.8,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "saute",
+                    "de": 0,
+                    "a": 1.5,
+                    "fois": 2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "brillants",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 1.4,
+                    "a": 4.2,
+                    "objet": "pizza",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 1.6,
+                    "a": 4.2,
+                    "objet": "pizza"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Hungry him vs fed him. Two different people.\n\nTag your partner who turns into a grump when hungry.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

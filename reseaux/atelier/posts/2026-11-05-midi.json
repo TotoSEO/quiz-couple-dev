@@ -1,0 +1,182 @@
+{
+  "jour": "2026-11-05",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "statique",
+  "sujet": "sta-009",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Reel statique : le violet arrive avec un cœur, le tend à la rose, elle le prend, ils se serrent dans les bras, une phrase tendre s'écrit.",
+        "plans": [
+          {
+            "description": "Fond papier, rien d'autre. Dès la première image la rose est debout à gauche, les mains jointes, un sourire doux ; le violet entre par le bord droit en marchant, un cœur rouge dans la main, timide, les joues roses. À 2,4 s il s'arrête devant elle ; les yeux de la rose deviennent brillants. À 4 s il lui tend le cœur, la rose le prend à deux mains, les yeux fermés de bonheur, des petites étincelles scintillent. À 6,4 s les deux se serrent dans les bras, des cœurs montent. « my heart is yours » s'écrit mot à mot en haut à partir de 2,8 s. La caméra se rapproche lentement.",
+            "duree": 11,
+            "decor": "uni",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.4,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.0,
+                    "yeux": "brillants",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 4.0,
+                    "a": 6.4,
+                    "objet": "coeur",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 4.0,
+                    "a": 6.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 4.2,
+                    "a": 6.4,
+                    "effet": "etincelles"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 6.4,
+                    "a": 11,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 6.6,
+                    "a": 11,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 6.8,
+                    "a": 11,
+                    "effet": "coeurs"
+                  }
+                ],
+                "premier": true
+              },
+              {
+                "qui": "violet",
+                "a": 1100,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 2.4,
+                    "vers": 650
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.0,
+                    "objet": "coeur",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.4,
+                    "a": 11,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 6.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 6.4,
+                    "a": 11,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 6.6,
+                    "a": 11,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 2.8,
+                "texte": "my heart is yours",
+                "motAMot": true,
+                "place": "haut",
+                "style": "plume"
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.4,
+                "zoom": 1
+              },
+              {
+                "a": 6,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 11,
+                "zoom": 1.22,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "My heart is yours.\n\nTag your partner.",
+      "hashtags": [
+        "#couplegoals",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

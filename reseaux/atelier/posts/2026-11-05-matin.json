@@ -1,0 +1,277 @@
+{
+  "jour": "2026-11-05",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-033",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Une lettre d'amour sur l'oreiller : la rose se réveille, trouve l'enveloppe, la lit, les yeux en cœur, et le violet fait semblant de dormir. Aucune bulle.",
+        "titre": "POV: a love letter on your pillow",
+        "plans": [
+          {
+            "description": "La chambre le matin, lumière douce, soleil bas dans la fenêtre. Dès la première image la rose est dans le lit à gauche, la couette jusqu'au menton, et s'étire en bâillant, les yeux à moitié fermés. Le violet, à droite, dort, des Z au-dessus de sa tête. À 1,6 s une enveloppe fermée par un cœur apparaît sur l'oreiller de la rose ; elle ouvre grand les yeux et la regarde, la bouche ronde.",
+            "duree": 3.6,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "plats",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.0,
+                    "a": 3.6,
+                    "effet": "exclamation"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 3.6,
+                    "effet": "zzz"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "objets": [
+              {
+                "objet": "lettre",
+                "x": 410,
+                "y": 1085,
+                "de": 1.6,
+                "entree": "pop"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Gros plan sur la rose, qui tient l'enveloppe à deux mains et la lit, tête baissée. Zoom rapide à 0,3 s sur son visage : ses yeux deviennent des cœurs, sa bouche s'ouvre en un grand sourire, ses joues rosissent, et des cœurs montent au-dessus de sa tête. À 2,6 s elle serre la lettre contre elle, les yeux fermés de bonheur.",
+            "duree": 3.8,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "lettre",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.0,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.8,
+                    "a": 2.6,
+                    "yeux": "coeur",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 3.8,
+                    "effet": "coeurs"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 3.8,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 3.8
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.6,
+                "cible": "rose"
+              }
+            ]
+          },
+          {
+            "description": "Plan large de la chambre. La rose se tourne vers le violet : il dort toujours, mais à 1,4 s il ouvre un œil, fait un clin d'œil à la rose avec un sourire timide, les joues rouges, puis referme les yeux en faisant semblant de dormir. La rose éclate de rire, la lettre contre le cœur, et des cœurs montent. La caméra se rapproche doucement des deux.",
+            "duree": 4.2,
+            "decor": "chambre",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "lettre",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.2,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "coeur",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.8,
+                    "a": 3.2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.2,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.0,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 1.3
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 2.2,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "He left a letter and pretended to sleep.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

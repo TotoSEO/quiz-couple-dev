@@ -1,0 +1,290 @@
+{
+  "jour": "2026-11-06",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-041",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "« Devine ce que j'ai acheté » : la rose montre un cadeau, le violet saute de joie, c'est pour elle, il boude, puis elle sort un deuxième cadeau pour lui. Aucune bulle.",
+        "titre": "POV: 'guess what I bought'",
+        "plans": [
+          {
+            "description": "Un mur crème et un sol beige, en plein jour. Dès la première image la rose est debout à gauche et tient devant elle un joli cadeau avec un nœud, un sourire malicieux, les joues roses. Le violet, à droite, la regarde, les yeux brillants, la bouche en grand sourire, les mains jointes d'impatience. Une goutte d'excitation et des étincelles flottent au-dessus de lui.",
+            "duree": 3.6,
+            "decor": "mur",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "cadeau",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "brillants",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.5,
+                    "a": 3.6,
+                    "effet": "etincelles"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          },
+          {
+            "description": "Même mur. Le violet saute de joie deux fois, les bras en l'air, les yeux brillants, un « ! » au-dessus de la tête. La rose attend qu'il se calme, puis serre le cadeau contre elle, les yeux fermés de bonheur, la bouche de chat, et fait non de la tête. Le violet s'arrête net en plein saut : ses yeux deviennent plats. Zoom rapide sur lui à 2,6 s.",
+            "duree": 4.0,
+            "decor": "mur",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.0,
+                    "objet": "cadeau",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "clin",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "mignon",
+                    "de": 1.8,
+                    "a": 4.0
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "saute",
+                    "de": 0,
+                    "a": 2.0,
+                    "fois": 2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.2,
+                    "yeux": "brillants",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 2.2,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.2,
+                    "a": 4.0,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 4.0,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 2.6,
+                "zoom": 1
+              },
+              {
+                "a": 2.9,
+                "zoom": 1.5,
+                "cible": "violet"
+              }
+            ]
+          },
+          {
+            "description": "Plan large. Le violet boude, les bras croisés du regard, les yeux plats, la bouche en moue, une goutte de gêne sur la tempe. La rose éclate de rire, puis sort de derrière son dos un deuxième petit cadeau et le tend au violet. Ses yeux deviennent brillants, il saute de joie, et des cœurs montent au-dessus d'eux. La caméra se rapproche doucement.",
+            "duree": 4.4,
+            "decor": "mur",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 2.0,
+                    "objet": "cadeau",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 0,
+                    "a": 2.0
+                  },
+                  {
+                    "geste": "offre",
+                    "de": 2.0,
+                    "a": 4.4,
+                    "objet": "cadeau"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 4.4,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "boude",
+                    "de": 0,
+                    "a": 2.0
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.0,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 2.0,
+                    "effet": "goutte"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.2,
+                    "a": 4.4,
+                    "yeux": "brillants",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "joie",
+                    "de": 2.6,
+                    "a": 4.4
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.4,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "She bought a gift and let him get excited first.\n\nTag your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
