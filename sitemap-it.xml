@@ -1430,4 +1430,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://quiz-couple.com/it/blog/domande-per-conoscersi-meglio/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/blog/questions-pour-mieux-se-connaitre-en-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/blog/questions-to-get-to-know-each-other/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/blog/preguntas-para-conoceros-mejor/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/blog/fragen-um-sich-besser-kennenzulernen/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/blog/domande-per-conoscersi-meglio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/blog/questions-pour-mieux-se-connaitre-en-couple/"/>
+    <lastmod>2026-10-10T13:37:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
