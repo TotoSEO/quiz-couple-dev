@@ -1,0 +1,176 @@
+{
+  "jour": "2026-11-08",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "statique",
+  "sujet": "sta-011",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Reel statique : au cinéma, la rose pose la tête contre le violet, le pop-corn sur les genoux, une phrase tendre s'écrit.",
+        "plans": [
+          {
+            "description": "Une salle de cinéma dans le noir, le faisceau du projecteur qui tremble. Dès la première image les deux sont assis côte à côte dans leurs fauteuils, un pot de pop-corn sur les genoux de la rose, les yeux fixés sur l'écran, la lumière du film sur leurs visages. À 2 s la rose tourne la tête vers le violet et sourit ; à 2,8 s elle pose la tête contre son épaule : câlin, les deux ferment les yeux de bonheur, joues roses, des cœurs montent. « lucky me, i have you » s'écrit mot à mot en haut à partir de 3,2 s. À 7 s le violet rouvre des yeux heureux. La caméra se rapproche lentement.",
+            "duree": 11,
+            "decor": "cinema",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "fauteuil-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 2.8,
+                    "objet": "popcorn",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.0,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.0,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.0,
+                    "a": 2.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 2.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.8,
+                    "a": 11,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.2,
+                    "a": 7.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 7.0,
+                    "a": 11,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.4,
+                    "a": 11,
+                    "effet": "coeurs"
+                  }
+                ],
+                "premier": true
+              },
+              {
+                "qui": "violet",
+                "a": "fauteuil-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.2,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.8,
+                    "a": 11,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.2,
+                    "a": 7.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 7.0,
+                    "a": 11,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 3.2,
+                "texte": "lucky me, i have you",
+                "motAMot": true,
+                "place": "haut",
+                "style": "plume"
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.8,
+                "zoom": 1
+              },
+              {
+                "a": 6,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 11,
+                "zoom": 1.22,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Movie night, my favorite person.\n\nTag your partner.",
+      "hashtags": [
+        "#couplegoals",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

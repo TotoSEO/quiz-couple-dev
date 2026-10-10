@@ -1,0 +1,315 @@
+{
+  "jour": "2026-11-09",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-034",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "« Je prendrai juste une bouchée du tien » : le violet commande une salade, prend une bouchée de la pizza de la rose, puis toute la part, et elle prend la caméra à témoin. Aucune bulle.",
+        "titre": "POV: 'I'll just have a bite of yours'",
+        "plans": [
+          {
+            "description": "Une petite table de restaurant avec nappe et bougie, le soir, légende « just a salad ». Dès la première image la rose est assise à gauche devant une part de pizza fumante ; le violet, en face, lève la main comme pour commander et sourit fièrement, les joues roses : il ne prend qu'une salade, c'est décidé. À 1,8 s la rose le regarde, un sourcil haut. La caméra se rapproche doucement.",
+            "duree": 3.6,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "hauts"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.8,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "cible": "rose"
+                  }
+                ]
+              }
+            ],
+            "legende": "just a salad",
+            "objets": [
+              {
+                "objet": "pizza",
+                "x": 400,
+                "y": 1230,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même table, légende « just one bite ». Le violet regarde la pizza de la rose, puis ailleurs, puis la pizza de nouveau, les yeux brillants, une goutte de gêne sur la tempe. À 1,6 s il tend la main et prend une bouchée, les yeux fermés de plaisir. La rose le regarde, la bouche ronde. Zoom rapide sur le violet à 0,3 s.",
+            "duree": 3.8,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 0.8,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.8,
+                    "a": 1.4,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.4,
+                    "a": 1.8,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "brillants",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 1.6,
+                    "effet": "goutte"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "objet": "pizza"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.8,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "legende": "just one bite",
+            "objets": [
+              {
+                "objet": "pizza",
+                "x": 400,
+                "y": 1230,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 640,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même table, légende « the whole slice ». Le violet tient maintenant la part de pizza entière et finit les dernières bouchées, les joues gonflées, l'air innocent. La rose, les mains vides, les yeux plats et la bouche plate, se tourne vers la caméra, une goutte de gêne sur la tempe : elle nous prend à témoin. Le violet lui fait un petit clin d'œil. Lent rapprochement sur la rose.",
+            "duree": 4.2,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 4.2,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.0,
+                    "a": 4.2,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "pizza",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 2.4,
+                    "objet": "pizza"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "legende": "the whole slice",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.3,
+                "x": 400,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Just a salad, he said. Then he ate the pizza.\n\nTag your partner who always steals food.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

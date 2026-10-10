@@ -1,0 +1,227 @@
+{
+  "jour": "2026-11-09",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-048",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Mini message : la rose fait coucou à la caméra, « hey you... yes, you. i'm proud of you », saute de joie, des étincelles et des cœurs.",
+        "plans": [
+          {
+            "description": "Fond papier avec un petit trait de sol. Dès la première image la rose est debout au centre, de face, en grand, et fait un grand coucou de la main à la caméra, les yeux heureux, un sourire doux. Le texte « hey you... » s'écrit mot à mot en haut à partir de 0,2 s. La caméra se rapproche doucement.",
+            "duree": 3.6,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "salue",
+                    "de": 0,
+                    "a": 3.0,
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 3.6,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 0.2,
+                "texte": "hey you...",
+                "motAMot": true,
+                "place": "haut"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même fond. Le texte « yes, you. » s'écrit en haut. La rose fait un petit clin d'œil à la caméra et lève les sourcils, comme pour dire « oui, toi », puis ses joues rosissent et son sourire s'agrandit. Zoom rapide sur son visage à 0,3 s.",
+            "duree": 3.4,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.4,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.2,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "sourcils": "hauts"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.2,
+                    "a": 3.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "mignon",
+                    "de": 1.8,
+                    "a": 3.4
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 0.2,
+                "texte": "yes, you.",
+                "motAMot": true,
+                "place": "haut"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.4,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même fond. Le texte « i'm proud of you <3 » s'écrit mot à mot en haut. La rose lève les bras en l'air, saute de joie deux fois, des étincelles scintillent autour d'elle puis des petits cœurs montent doucement. À 2,4 s elle se pose une main sur le cœur, les yeux fermés de bonheur. La caméra recule lentement.",
+            "duree": 4.6,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "joie",
+                    "de": 0,
+                    "a": 1.6
+                  },
+                  {
+                    "geste": "saute",
+                    "de": 1.0,
+                    "a": 2.4,
+                    "fois": 2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "heureux",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 2.6,
+                    "effet": "etincelles"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.6,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.6,
+                    "a": 4.6,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 0.2,
+                "texte": "i'm proud of you <3",
+                "motAMot": true,
+                "place": "haut"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.6,
+                "zoom": 1,
+                "x": 540,
+                "y": 1050
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "A little reminder for whoever needs it today.\n\nSend this to your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
