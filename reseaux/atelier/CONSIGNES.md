@@ -85,13 +85,33 @@ Sans `etat.json` (premier jour), on remplit d'aujourd'hui (créneaux qui
 commencent dans plus de trois heures, heure de Paris) à J+100 en suivant la
 semaine type, en sautant les fichiers déjà présents dans `posts/`.
 
+## Revoir la réserve pour le style
+
+Les posts écrits avant le 9 octobre 2026 ont été relus à la main jusqu'au
+13 octobre. Le reste de la réserve se revoit au fil des passages. Au début
+de chaque passage, après le journal :
+
+    node reseaux/automates/controler.mjs reseaux/atelier/posts/*.json
+
+liste les fichiers `KO` avec leurs fautes de style (`lib/style.mjs` : une
+fin qui commente la scène, une légende qui répète l'image, un appel hors
+liste, un « <3 » de trop, un texte entre parenthèses). Parmi eux, ceux dont
+le créneau commence dans plus de trois heures (heure de Paris), du plus
+proche au plus lointain, **six par passage au plus** : on réécrit le post
+selon « La chute, et ce qui sonne machine » (ligne éditoriale), pas
+seulement la ligne fautive (le contrôle ne voit que les tics mécaniques ;
+la chute dans l'image, c'est à relire soi-même), on repasse les deux
+contrôles, on remplace le fichier (une des quatre exceptions à « jamais
+réécrit »). Ça passe avant les créneaux vides tant qu'il reste des `KO`,
+et le journal dit lesquels ont été revus.
+
 ## Les idées de Thomas, avant tout le reste
 
 Une idée notée dans l'admin est une phrase, parfois deux : la situation, et
 la chute s'il l'a. Elle prend le `creneau_vise` que donne `etat.json`, le
 créneau le plus proche de sa catégorie, **même si un post y est déjà
 écrit** : on remplace le fichier `posts/<jour>-<créneau>.json` (c'est une des
-trois exceptions à la règle « jamais réécrit »), et le sujet du post remplacé
+quatre exceptions à la règle « jamais réécrit »), et le sujet du post remplacé
 retourne de lui-même dans la banque, puisqu'il n'est plus dans `posts/`. Le
 nouveau post porte `idee_id` (l'`id` de l'idée) et `sujet: "idee-<les huit
 premiers caractères de l'id>"` ; le contrôle l'accepte ainsi, et la synchro
@@ -223,6 +243,16 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   retournement dans le dernier plan. Si tu hésites, enlève la bulle et
   regarde la planche : si la scène se comprend encore, c'est la bonne. Le
   modèle sans aucune bulle est `pov-cafe` (le premier rendez-vous).
+- **La chute est dans l'image, jamais dans une phrase qui la commente**
+  (Thomas, 9 octobre 2026 : « les chutes sont nulles, c'est de l'humour à
+  l'IA »). Le dernier plan montre ce qui arrive et s'arrête là ; le texte
+  qui s'y écrit, s'il y en a un, est un détail vrai (« 3 AM », « 48 photos
+  later ») ou ce que le personnage dit pour de vrai, jamais un bilan
+  (« that's love », « he knew better », « every single time »). La légende
+  suit la même règle : un détail vrai ou l'appel seul, un appel de la liste
+  de `lib/style.mjs`, jamais inventé. Les règles complètes et les deux
+  tests (l'oral, l'ami) sont dans la ligne éditoriale, « La chute, et ce
+  qui sonne machine » ; les phrases vraies à imiter dans `REFERENCES.md`.
 - **Varier les décors.** Le studio en a quinze : `uni`, `ligne`, `mur`,
   `chambre`, `cuisine`, `salon`, `table`, `dehors` (le parc), `noel`, et
   depuis le 7 octobre 2026 `foret`, `rue`, `cafe`, `plage`, `voiture` et
@@ -411,11 +441,15 @@ matin en story après sa publication.
 ### Légende et hashtags
 
 Voir la ligne éditoriale, partie « Légendes et hashtags » : la première
-ligne accroche avec un mot-clé naturel (« couple quiz », « my partner »,
-« boyfriend », « girlfriend », « date night »), une ligne de contexte au
-plus, puis **un seul appel**, choisi selon le geste voulu (envoyer pour les
-animations, les minis et les phrases tendres ; commenter pour les jeux et
-les phrases à finir ; enregistrer de temps en temps pour ce qui se garde).
+ligne est un détail vrai (« It's 3am. », « 6 dilemmas, 5 seconds each. »),
+avec un mot-clé quand il vient naturellement (« couple quiz », « my
+partner », « boyfriend », « girlfriend », « date night »), ou rien du tout,
+puis **un seul appel**, pris tel quel dans la liste `APPELS` de
+`reseaux/automates/lib/style.mjs` et choisi selon le geste voulu (envoyer
+pour les animations, les minis et les phrases tendres ; commenter pour les
+jeux et les phrases à finir ; enregistrer de temps en temps pour ce qui se
+garde). Jamais la légende qui répète ou résume l'image, jamais une phrase
+qui commente la scène, jamais un appel inventé.
 Les trois posts d'une journée ne portent pas le même appel. Hashtags : la
 liste de la catégorie dans la ligne éditoriale, 3 à 5, `#quizcouple`
 dedans. Les animations et les phrases ne renvoient jamais vers le site dans
@@ -434,7 +468,10 @@ node reseaux/studio/scripts/planche.mjs <recette.json> /tmp/planche.png --toutes
 ```
 
 Le premier contrôle refuse un mot hors du vocabulaire, un temps hors de son
-plan, une catégorie qui ne va pas au créneau, un sujet déjà pris. Le second
+plan, une catégorie qui ne va pas au créneau, un sujet déjà pris, et depuis
+le 9 octobre 2026 le style (`lib/style.mjs`) : une fin qui commente la
+scène, une légende qui répète l'image, un appel hors liste, un « <3 » de
+trop ou en fin de texte de reel, un texte entier entre parenthèses. Le second
 refuse un texte hors de la zone utile, qui déborde, qui finit sur un mot
 seul, un visage hors de l'image ou caché par un texte, deux textes qui se
 chevauchent : on raccourcit ou on déplace, on ne touche jamais aux tailles.

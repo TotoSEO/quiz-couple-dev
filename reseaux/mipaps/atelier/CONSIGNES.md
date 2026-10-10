@@ -79,12 +79,32 @@ Sans `etat.json` (premier jour), on remplit d'aujourd'hui (créneaux qui
 commencent dans plus de trois heures) à J+100 en suivant la semaine type,
 en sautant les fichiers déjà présents dans `posts/`.
 
+## Revoir la réserve pour le style
+
+Les posts écrits avant le 9 octobre 2026 ont été relus à la main jusqu'au
+19 octobre. Le reste de la réserve se revoit au fil des passages. Au début
+de chaque passage, après le journal :
+
+    node reseaux/automates/controler.mjs reseaux/mipaps/atelier/posts/*.json
+
+liste les fichiers `KO` avec leurs fautes de style (`lib/style.mjs` : une
+fin qui commente la scène, une légende qui répète le dessin, un appel hors
+liste, un « <3 » de trop, un texte entre parenthèses). Parmi eux, ceux dont
+le créneau commence dans plus de trois heures (heure de Paris), du plus
+proche au plus lointain, **six par passage au plus** : on réécrit le post
+selon « La chute, et ce qui sonne machine » (ligne éditoriale), pas
+seulement la ligne fautive (le contrôle ne voit que les tics mécaniques ;
+la chute dans le dessin, c'est à relire soi-même), on repasse les deux
+contrôles, on remplace le fichier (une des quatre exceptions à « jamais
+réécrit »). Ça passe avant les créneaux vides tant qu'il reste des `KO`,
+et le journal dit lesquels ont été revus.
+
 ## Les idées de Thomas, avant tout le reste
 
 Une idée notée dans l'admin (compte Les mipaps) est une phrase, parfois
 deux : la situation, et la chute s'il l'a. Elle prend le `creneau_vise` que
 donne `etat.json`, **même si un post y est déjà écrit** : on remplace le
-fichier `posts/<jour>-<créneau>.json` (une des trois exceptions à la règle
+fichier `posts/<jour>-<créneau>.json` (une des quatre exceptions à la règle
 « jamais réécrit »), et le sujet du post remplacé retourne de lui-même dans
 la banque. Le nouveau post porte `idee_id` (l'`id` de l'idée) et
 `sujet: "idee-<les huit premiers caractères de l'id>"`.
@@ -184,14 +204,29 @@ droite est à `x + 116 x k`, `y - 42 x k`.
 
 ### Les textes, pour tous les formats
 
-Minuscules, voix du message (« j'pense », « t'es », « stp », « c'est
-tout. »), « <3 » en lettres, jamais d'emoji ni de hashtag dans l'image,
+Minuscules, voix du message (« j'pense », « t'es », « stp », « bon... »),
+« <3 » en lettres, jamais d'emoji ni de hashtag dans l'image,
 jamais de tiret cadratin. Un mini : 2 à 12 mots. Les longueurs que le
 contrôle accepte : post et page d'histoire 110 signes, déclaration 170,
 titre de schéma 70, texte de reel 100 (60 pour un texte `titre`), appel
 50, étiquette de schéma 26, ligne de liste 40. Le contrôle de mise en page
 refuse ensuite un texte qui dépasse 4 lignes dans un reel, 5 dans un post :
 on raccourcit le texte, jamais la taille.
+
+**La chute est dans le dessin, jamais dans une phrase qui la commente**
+(Thomas, 9 octobre 2026 : « les chutes sont nulles, c'est de l'humour à
+l'IA »). La dernière image montre ce qui arrive et s'arrête là ; le texte
+qui l'accompagne, s'il y en a un, est un détail vrai (« 1 h plus tard »,
+« il a 12 pulls ») ou ce que le personnage dit pour de vrai (« bon. viens
+là. »), jamais un bilan (« c'est tout. », « je note. », « et ça repart. »,
+« comme d'hab. »). La légende suit la même règle : un détail vrai ou
+l'appel seul, un appel pris tel quel dans la liste `APPELS` de
+`lib/style.mjs`, jamais inventé avec « celui qui ». Un seul « <3 » par
+post, jamais en fin de texte de reel ; pas de texte entier entre
+parenthèses ; pas de triade. Les règles complètes et les deux tests
+(l'oral, l'ami) sont dans la ligne éditoriale, « La chute, et ce qui sonne
+machine » ; les phrases vraies à imiter dans `reseaux/mipaps/REFERENCES.md`,
+« Les vraies répliques ».
 
 ### `mipaps-reel` : le reel animé
 
@@ -240,7 +275,10 @@ on raccourcit le texte, jamais la taille.
   "message" | "titre", "motAMot": true }`. Trois au plus par plan, jamais
   deux en même temps au même endroit. En bas, une seule ligne de 40 signes
   (elle tient entre le sol de la scène et la bande d'Instagram). Le premier plan porte son texte dès
-  0,2 s ; la chute du dernier plan s'écrit mot à mot. **Au moins un texte
+  0,2 s ; dans le dernier plan la chute est le dessin, et le texte qui s'y
+  écrit mot à mot, s'il y en a un, est un détail vrai (« 1 h plus tard »,
+  « 7 h 45 »), jamais une phrase qui commente (« c'est tout. », « je
+  note. »). **Au moins un texte
   dans le reel.** Pas de bulle, pas de dialogue : la situation se montre.
 - `transition`: `"coupe"` (défaut) ou `"fondu"` (le plan d'avant s'éteint
   vers le blanc). `zoom`: `[1, 1.15]` rapproche doucement sur la durée du
@@ -294,8 +332,10 @@ on raccourcit le texte, jamais la taille.
 
 - Trois à dix pages ; chaque page a un `texte` et/ou un `dessin` ; la
   première a toujours un texte (l'accroche, qui donne envie de glisser) ;
-  la dernière est la chute et porte l'`appel` (50 signes ; sans lui,
-  « envoie ça à ta personne »). Le studio écrit « fais glisser → » sur la
+  la dernière est la chute (dans le dessin ; son texte, s'il y en a un,
+  est ce que le personnage dit pour de vrai) et porte l'`appel`, un de la
+  liste de `lib/style.mjs` (50 signes ; sans lui, « envoie ça à ta
+  personne »). Le studio écrit « fais glisser → » sur la
   première page et la pagination sur les suivantes.
 - Le cadre est commun à toutes les pages (les personnages gardent leur
   taille) : garde des compositions voisines d'une page à l'autre, les
@@ -318,9 +358,10 @@ on raccourcit le texte, jamais la taille.
 
 ### Légende et hashtags
 
-Voir la ligne éditoriale : une ligne qui prolonge l'image, en minuscules,
-puis **un seul appel** (envoyer, taguer, commenter ou garder), choisi selon
-le geste voulu ; les trois posts d'une journée ne portent pas le même appel.
+Voir la ligne éditoriale : une ligne qui ajoute un détail vrai (« il part
+à 19 h. il est 20 h 30. »), ou rien, en minuscules, puis **un seul appel**,
+pris tel quel dans la liste `APPELS` de `lib/style.mjs` (envoyer, taguer,
+commenter ou garder), choisi selon le geste voulu ; les trois posts d'une journée ne portent pas le même appel.
 `hashtags` : trois à cinq, avec `#lesmipaps` et `#couple`, jamais dans la
 légende. Jamais de lien, jamais « lien en bio » : le compte n'a pas de
 site, et le contrôle refuse toute mention de quiz-couple.com.
@@ -341,7 +382,10 @@ node reseaux/studio/scripts/rendre.mjs <recette.json> /tmp/rendu
 
 Le premier contrôle refuse un nom hors du rig, un texte trop long, un
 emoji, une catégorie qui ne va pas au créneau, un sujet déjà pris, un reel
-trop court, deux textes en même temps au même endroit. Le second refuse un
+trop court, deux textes en même temps au même endroit, et depuis le
+9 octobre 2026 le style (`lib/style.mjs`) : une fin qui commente la scène,
+une légende qui répète le dessin, un appel hors liste, un « <3 » de trop ou
+en fin de texte de reel, un texte entier entre parenthèses. Le second refuse un
 texte hors de la zone utile, qui déborde, qui finit sur un mot seul, un
 visage hors de l'image ou sous un texte : on raccourcit ou on déplace, on
 ne touche jamais aux tailles.
