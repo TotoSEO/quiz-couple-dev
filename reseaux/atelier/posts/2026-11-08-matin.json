@@ -1,0 +1,264 @@
+{
+  "jour": "2026-11-08",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-042",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il veut cuisiner pour elle : le violet très fier, un grand bruit et la mine défaite, la rose rit, et la pizza finit par régler le problème. Aucune bulle.",
+        "titre": "POV: he wants to cook for you",
+        "plans": [
+          {
+            "description": "Une cuisine en fin de journée, lumière chaude. Dès la première image le violet est derrière le plan de travail à droite, très fier de lui, le torse bombé, un grand sourire, les yeux brillants, des étincelles autour de sa tête : il va cuisiner pour elle. La rose, à gauche, le regarde, touchée, les mains jointes, un petit sourire.",
+            "duree": 3.6,
+            "decor": "cuisine",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "joie",
+                    "de": 0,
+                    "a": 1.6
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "brillants",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 3.6,
+                    "effet": "etincelles"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          },
+          {
+            "description": "Même cuisine, un peu plus tard. À 0,6 s la caméra tremble fort : le violet a les yeux grands ouverts, la bouche ronde, un « ! » au-dessus de la tête et une goutte de gêne sur la tempe ; quelque chose a mal tourné. La rose, derrière lui, a les yeux plats et la bouche plate, puis éclate de rire, la main devant la bouche. Zoom rapide sur le violet à 0,3 s.",
+            "duree": 3.8,
+            "decor": "cuisine",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.4,
+                    "a": 3.8
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 3.8,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.2,
+                    "a": 3.8,
+                    "effet": "goutte"
+                  },
+                  {
+                    "geste": "tremble",
+                    "de": 0.6,
+                    "a": 3.8
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 700,
+                "y": 1200
+              },
+              {
+                "a": 0.6,
+                "secousse": 14
+              }
+            ]
+          },
+          {
+            "description": "Plan large de la cuisine. Les deux sont maintenant devant le plan de travail, chacun une part de pizza dans la main, qu'ils mangent en riant, les yeux plissés. Le violet, un peu gêné, les joues roses, hausse les épaules ; la rose lui fait un petit clin d'œil et des cœurs montent au-dessus d'eux. La caméra se rapproche doucement.",
+            "duree": 4.2,
+            "decor": "cuisine",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "pizza",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 2.0,
+                    "objet": "pizza"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 2.0,
+                    "a": 3.2
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.2,
+                    "a": 4.2,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "pizza",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 2.0,
+                    "objet": "pizza"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 2.0,
+                    "a": 4.2
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "He wanted to cook. We ordered pizza.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

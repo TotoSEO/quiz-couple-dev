@@ -1,0 +1,309 @@
+{
+  "jour": "2026-11-06",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "coquin",
+  "sujet": "coq-005",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Coquin en clin d'œil : « on regarde le film, promis » : le cinéma, la chambre, le pop-corn qui s'envole, la couette qui bouge, et zéro minute de film regardée.",
+        "titre": "POV: 'we'll watch the movie, I promise'",
+        "plans": [
+          {
+            "description": "Une salle de cinéma dans le noir, légende « The plan ». Dès la première image les deux sont assis côte à côte dans leurs fauteuils, un pot de pop-corn entre eux, les yeux grands ouverts fixés sur l'écran. À 1,4 s la rose tourne la tête vers le violet et lui fait un clin d'œil, les joues rouges ; le violet rougit à son tour, la bouche ronde. La caméra se rapproche doucement.",
+            "duree": 3.6,
+            "decor": "cinema",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "fauteuil-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "popcorn",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.4,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 3.6,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "fauteuil-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.6,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 3.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "legende": "The plan",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Écran noir, puis la chambre le soir, lumière chaude, légende « The movie: ». Les deux sont debout devant le lit, les joues rouges ; la rose a un sourire malicieux, le violet les yeux brillants. Ils prennent leur élan et plongent dans le lit l'un après l'autre, puis disparaissent sous la couette. Un pot de pop-corn s'envoie en l'air et tourne, des cœurs sortent du milieu et la caméra tremble.",
+            "duree": 3.8,
+            "decor": "chambre",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "devant-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 0.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.7,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "plonge",
+                    "de": 0.7,
+                    "a": 1.5,
+                    "vers": "lit-gauche"
+                  },
+                  {
+                    "geste": "disparait",
+                    "de": 1.9,
+                    "a": 2.3,
+                    "vers": "bas"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 0.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.9,
+                    "yeux": "brillants",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "plonge",
+                    "de": 0.9,
+                    "a": 1.7,
+                    "vers": "lit-droite"
+                  },
+                  {
+                    "geste": "disparait",
+                    "de": 2.0,
+                    "a": 2.4,
+                    "vers": "bas"
+                  }
+                ]
+              }
+            ],
+            "transition": "noir",
+            "couette": "bouge",
+            "couetteDe": 2.3,
+            "legende": "The movie:",
+            "effets": [
+              {
+                "effet": "coeurs",
+                "de": 2.5,
+                "a": 3.8,
+                "x": 540,
+                "y": 1120
+              }
+            ],
+            "objets": [
+              {
+                "objet": "popcorn",
+                "x": 540,
+                "y": 1150,
+                "de": 2.6,
+                "entree": "aucune",
+                "vol": {
+                  "de": 2.65,
+                  "a": 3.7,
+                  "dx": -420,
+                  "dy": -800,
+                  "tours": 2
+                }
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.8,
+                "secousse": 10
+              }
+            ]
+          },
+          {
+            "description": "Même chambre, la nuit, légende « 0 minutes watched ». Les deux sont couchés dans le lit, la tête et les petites mains qui dépassent de la couette, les joues très rouges, les yeux heureux et la bouche de chat. À 1,4 s le violet fait un clin d'œil à la rose qui rit, les yeux fermés. Des cœurs flottent doucement au-dessus du lit. La caméra se rapproche lentement.",
+            "duree": 3.8,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.4,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 3.8,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 3.8,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "transition": "fondu",
+            "couette": "calme",
+            "legende": "0 minutes watched",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.25,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "coquin"
+        }
+      },
+      "legende": "We were going to watch the movie.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

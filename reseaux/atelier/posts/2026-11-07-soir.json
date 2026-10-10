@@ -1,0 +1,30 @@
+{
+  "jour": "2026-11-07",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "ph-009",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "Loving you is the easiest thing I've ever done.",
+        "fleurs": "brin-marguerite",
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Easy, simple, and true.\n\nSend this to your partner.",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

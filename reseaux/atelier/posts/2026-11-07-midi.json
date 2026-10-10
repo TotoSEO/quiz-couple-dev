@@ -1,0 +1,64 @@
+{
+  "jour": "2026-11-07",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-009",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Weekend edition",
+        "accroche": "Would you rather: weekend?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "Lazy Sunday in bed",
+            "b": "Adventure all day"
+          },
+          {
+            "a": "Sleep in",
+            "b": "Watch the sunrise"
+          },
+          {
+            "a": "Brunch out",
+            "b": "Brunch at home"
+          },
+          {
+            "a": "A long walk",
+            "b": "A long nap"
+          },
+          {
+            "a": "Game night",
+            "b": "Movie night"
+          },
+          {
+            "a": "See family",
+            "b": "Stay just us two"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, weekend edition: what is your perfect Saturday?\n\nComment your A and B!",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "jour": "2026-11-07",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-040",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Les plans d'un jour de pluie : deux tasses de thé sur le canapé, la rose frissonne, câlin, un bisou sur le front pendant que la pluie tombe. Aucune bulle.",
+        "titre": "POV: rainy day plans",
+        "plans": [
+          {
+            "description": "Le salon un jour de pluie, le ciel gris dans la fenêtre, la lampe allumée qui donne une lumière chaude. Dès la première image les deux sont assis chacun à un bout du canapé, une tasse de thé fumante dans les mains, et regardent la pluie tomber, les yeux doux. À 1,6 s la rose frissonne un peu, les épaules qui tremblent. La caméra se rapproche doucement.",
+            "duree": 3.6,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.6,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "tremble",
+                    "de": 1.6,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "triste"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "tasse",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.8,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "ambiance": "pluie",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même salon, la pluie continue. Le violet lève un bras et la rose se glisse contre lui : câlin, les deux tasses de thé toujours en main, les yeux fermés de bonheur, les joues roses. Des petites vapeurs montent des tasses et des cœurs flottent au-dessus d'eux. La caméra se rapproche lentement.",
+            "duree": 4.2,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.4,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.2,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "tasse",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.4,
+                    "a": 2.6,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "ambiance": "pluie",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.3,
+                "x": 540,
+                "y": 1170
+              }
+            ]
+          },
+          {
+            "description": "Dernier plan, la pluie tombe toujours doucement. Les deux s'endorment à moitié, la tête de la rose sur l'épaule du violet, les yeux presque fermés. À 2 s le violet dépose un petit bisou sur son front, un cœur sort, et la rose sourit dans son sommeil. La caméra recule doucement pour montrer la fenêtre et la pluie.",
+            "duree": 4.2,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 2.0,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 2.0,
+                    "a": 3.4,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.2,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.4,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "ambiance": "pluie",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.3,
+                "x": 540,
+                "y": 1170
+              },
+              {
+                "a": 4.2,
+                "zoom": 1,
+                "x": 540,
+                "y": 1050
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Rainy days were made for this.\n\nTag your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
