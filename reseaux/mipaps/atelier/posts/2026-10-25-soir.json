@@ -1,0 +1,136 @@
+{
+  "jour": "2026-10-25",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-006",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "La distance : deux lits, un compte à rebours, le train, la gare, puis le câlin des retrouvailles.",
+        "pages": [
+          {
+            "texte": "quand t'es loin",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "triste",
+                  "bras": "tient",
+                  "x": 320,
+                  "taille": 270
+                },
+                {
+                  "objet": "telephone",
+                  "x": 358,
+                  "y": 344,
+                  "echelle": 0.5
+                }
+              ]
+            }
+          },
+          {
+            "texte": "deux téléphones. deux lits. un seul sujet : toi.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "signes": [
+                    "zzz"
+                  ],
+                  "x": 250,
+                  "taille": 240
+                },
+                {
+                  "perso": "elle",
+                  "expression": "triste",
+                  "bras": "tient",
+                  "x": 410,
+                  "taille": 240
+                },
+                {
+                  "objet": "telephone",
+                  "x": 444,
+                  "y": 326,
+                  "echelle": 0.4
+                }
+              ]
+            }
+          },
+          {
+            "texte": "le compte à rebours : 47 jours.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "x": 270,
+                  "taille": 260
+                },
+                {
+                  "objet": "calendrier",
+                  "x": 460,
+                  "y": 300,
+                  "echelle": 1.0
+                }
+              ]
+            }
+          },
+          {
+            "texte": "le train : 3 h de retard. évidemment.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "blase",
+                  "x": 280,
+                  "taille": 260
+                },
+                {
+                  "objet": "valise",
+                  "x": 450,
+                  "y": 344,
+                  "echelle": 0.6
+                }
+              ]
+            }
+          },
+          {
+            "texte": "la gare : il attend, avec sa pancarte.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "bras": "pancarte",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "ça valait chaque kilomètre. chaque heure d'attente.",
+            "dessin": {
+              "duo": "calin"
+            },
+            "appel": "tague ta personne, même loin"
+          }
+        ]
+      },
+      "legende": "chaque kilomètre.\n\ntague ta personne, même loin",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#relation"
+      ]
+    }
+  }
+}

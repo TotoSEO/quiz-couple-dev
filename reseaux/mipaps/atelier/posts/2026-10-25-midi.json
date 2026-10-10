@@ -1,0 +1,28 @@
+{
+  "jour": "2026-10-25",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-019",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Déclaration : j'ai pas peur du reste du monde, juste du monde sans toi.",
+        "style": "declaration",
+        "texte": "j'ai pas peur du reste du monde. j'ai juste peur du monde sans toi."
+      },
+      "legende": "(c'est tout)\n\ngarde ça pour un soir où ça va pas",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#couplegoals"
+      ]
+    }
+  }
+}

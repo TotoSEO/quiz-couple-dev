@@ -1,0 +1,213 @@
+{
+  "jour": "2026-10-25",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-023",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Le dimanche : le canapé, le popcorn ; elle s'endort doucement sur lui ; il n'ose plus bouger ; il s'endort aussi. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Les deux sont assis sur le canapé, côte à côte, contents, un bol de popcorn entre eux. Elle regarde l'écran, lui aussi. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.5,
+                    "expression": "fatigue"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "popcorn",
+                "x": 320,
+                "y": 290,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "dimanche, 15 h",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Elle glisse doucement vers lui, les yeux qui se ferment, et pose sa tête sur lui. Lui n'ose plus bouger : il serre les dents, une goutte de sueur. Le popcorn est resté hors de portée, de l'autre côté.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "gene",
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fatigue"
+                  },
+                  {
+                    "a": 0.4,
+                    "x": 414
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 290,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "popcorn",
+                "x": 480,
+                "y": 290,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "il n'ose plus bouger.",
+                "de": 0.5,
+                "place": "haut"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Les deux dorment sur le canapé, la tête de l'un contre l'autre, un petit cœur flotte. La chute s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 320,
+                "y": 100,
+                "echelle": 0.45,
+                "de": 0.5,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 h sans bouger. aucun regret.",
+                "de": 0.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          }
+        ]
+      },
+      "legende": "le dimanche, c'est sacré.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

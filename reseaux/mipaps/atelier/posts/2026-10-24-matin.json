@@ -1,0 +1,226 @@
+{
+  "jour": "2026-10-24",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-024",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Quand elle boude : elle est de dos ; il lui tend un cœur, puis une fleur, rien ; il revient avec des frites et elle se retourne d'un coup. Trois plans, 13 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Elle est de dos à droite, les bras croisés, elle boude. Il arrive du bord gauche en marchant de profil, s'arrête à 1,6 s, se tourne vers nous à 2,1 s et lui tend un petit cœur, l'air suppliant. Elle ne bouge pas.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "angle": 180,
+                    "expression": "boude",
+                    "bras": "croises"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 230,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.1,
+                    "angle": 0,
+                    "expression": "supplie",
+                    "bras": "tend_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 338,
+                "y": 334,
+                "echelle": 0.35,
+                "de": 2.2
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand elle boude",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Le cœur est devenu une fleur dans sa patte. Il la tend, plein d'espoir. Elle est toujours de dos, immobile, les bras croisés. Il baisse doucement les yeux, un peu gêné.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "angle": 180,
+                    "expression": "boude",
+                    "bras": "croises"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "supplie",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2,
+                    "expression": "gene"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "fleur",
+                "x": 338,
+                "y": 334,
+                "echelle": 0.4
+              }
+            ],
+            "textes": [
+              {
+                "texte": "un cœur : rien. une fleur : rien.",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 5,
+            "transition": "fondu",
+            "description": "Il se tourne vers la gauche et part en courant, sort du cadre à 1,4 s. Elle ne bouge toujours pas. Il revient en courant à 2 s, des frites à la patte, s'arrête devant elle à 3 s. Elle se retourne d'un coup à 3,4 s, ravie, les yeux brillants. La phrase s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "angle": 180,
+                    "expression": "boude",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 3.4,
+                    "angle": 0,
+                    "expression": "joie",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "gene"
+                  },
+                  {
+                    "a": 0.3,
+                    "x": 230,
+                    "angle": -90,
+                    "pose": "court"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": -140
+                  },
+                  {
+                    "a": 1.5,
+                    "x": -140,
+                    "angle": 90
+                  },
+                  {
+                    "a": 3,
+                    "x": 230,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 3.4,
+                    "angle": 0,
+                    "expression": "content",
+                    "bras": "tend_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "frites",
+                "x": -140,
+                "y": 352,
+                "echelle": 0.6,
+                "etapes": [
+                  {
+                    "a": 1.5,
+                    "x": -140,
+                    "y": 352
+                  },
+                  {
+                    "a": 3,
+                    "x": 330,
+                    "y": 338
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "puis : des frites.",
+                "de": 0.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "le cœur, la fleur, rien. les frites : elle revient.\n\ntague celle qui boude jusqu'aux frites",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

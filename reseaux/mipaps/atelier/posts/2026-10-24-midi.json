@@ -1,0 +1,48 @@
+{
+  "jour": "2026-10-24",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-035",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Schéma de bureau : une liste à faire aujourd'hui, penser à toi, repenser à toi, arrêter d'y penser (pas coché).",
+        "style": "schema",
+        "texte": "à faire aujourd'hui",
+        "schema": {
+          "type": "liste",
+          "lignes": [
+            {
+              "texte": "penser à toi",
+              "coche": true
+            },
+            {
+              "texte": "repenser à toi",
+              "coche": true
+            },
+            {
+              "texte": "arrêter d'y penser"
+            },
+            {
+              "texte": "t'envoyer ça",
+              "coche": true
+            }
+          ]
+        }
+      },
+      "legende": "(la case 3, j'y arrive pas)\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}
