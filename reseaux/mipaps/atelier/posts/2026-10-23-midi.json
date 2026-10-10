@@ -1,0 +1,45 @@
+{
+  "jour": "2026-10-23",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-007",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : lui, inquiet, le téléphone à la patte, qui cherche où elle est.",
+        "style": "mini",
+        "texte": "t'es où ?",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "inquiet",
+              "bras": "tient",
+              "x": 300,
+              "taille": 290
+            },
+            {
+              "objet": "telephone",
+              "x": 338,
+              "y": 346,
+              "echelle": 0.5
+            }
+          ]
+        }
+      },
+      "legende": "(elle était à 2 mètres)\n\ntu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

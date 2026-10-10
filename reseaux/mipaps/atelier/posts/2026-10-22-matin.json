@@ -1,0 +1,253 @@
+{
+  "jour": "2026-10-22",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-014",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "« C'est à 5 minutes » : ils partent confiants, marchent encore, courent, et arrivent essoufflés devant une pancarte. Quatre plans, 14 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Ils entrent du bord gauche en marchant de profil, côte à côte, confiants et contents, et traversent l'écran jusqu'à sortir à droite. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 3.3,
+                    "x": 760
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -40,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.3,
+                    "x": 860
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« c'est à 5 minutes »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Même traversée, mais plus lente et plus lourde : ils marchent la tête basse, des gouttes de sueur, les yeux fatigués. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "effort",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 3.3,
+                    "x": 760
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -40,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "fatigue",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 3.3,
+                    "x": 860
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "10 minutes plus tard",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3,
+            "transition": "fondu",
+            "description": "Ils traversent en courant, de profil, les bras de course, essoufflés, toujours côte à côte. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "essouffle",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 760
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -40,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "panique",
+                    "signes": [
+                      "sueur"
+                    ]
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 860
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "toujours pas arrivés",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "description": "Ils arrivent en courant devant une pancarte, s'arrêtent, se tournent vers nous, épuisés, trempés de sueur. La chute s'écrit mot à mot à partir de 2,4 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "essouffle"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 270,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.3,
+                    "angle": 0,
+                    "expression": "ko",
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -40,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "essouffle"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 380,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.3,
+                    "angle": 0,
+                    "expression": "ko",
+                    "signes": [
+                      "sueur"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "panneau_fleche",
+                "x": 480,
+                "y": 300,
+                "echelle": 0.9
+              }
+            ],
+            "textes": [
+              {
+                "texte": "c'était 5 minutes en voiture.",
+                "de": 2.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "on s'est trompés d'unité. comme toujours.\n\ntague celui qui dit « c'est tout près »",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

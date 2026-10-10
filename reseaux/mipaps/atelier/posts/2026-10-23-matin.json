@@ -1,0 +1,169 @@
+{
+  "jour": "2026-10-23",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-031",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Les retrouvailles : elle attend avec sa valise, il arrive de très loin, tout petit, et grandit en courant ; elle court aussi ; câlin et cœurs. Deux plans, 11 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 6,
+            "description": "Elle attend à droite, inquiète, sa valise à côté d'elle. À 1 s elle repère quelqu'un de très loin : surprise. Il surgit du bord gauche, tout petit, en courant de profil, et grandit à chaque pas. Elle pose sa valise, se tourne vers lui à 1,5 s et court à sa rencontre. Ils se rejoignent au milieu à 4,5 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "expression": "inquiet"
+                  },
+                  {
+                    "a": 1,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 1.5,
+                    "x": 450,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 4.5,
+                    "x": 350
+                  },
+                  {
+                    "a": 4.7,
+                    "pose": "debout"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "taille": 120,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 4.5,
+                    "x": 260,
+                    "taille": 260
+                  },
+                  {
+                    "a": 4.7,
+                    "pose": "debout"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "valise",
+                "x": 470,
+                "y": 348,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand il revient de loin",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Les deux se serrent fort au milieu, les yeux fermés. Des cœurs flottent. La phrase s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 285,
+                    "expression": "calin",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 395,
+                    "expression": "transi",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 340,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 245,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 1.4,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "enfin.",
+                "de": 0.5,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "ça valait chaque kilomètre.\n\nenvoie ça à ta personne, où qu'elle soit",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

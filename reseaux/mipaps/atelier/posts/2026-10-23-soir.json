@@ -1,0 +1,103 @@
+{
+  "jour": "2026-10-23",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-007",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "On n'est pas d'accord, et pourtant : la dispute, le dos à dos, lui qui craque, elle qui boude en coin, puis la main dans la main.",
+        "pages": [
+          {
+            "texte": "on n'est pas d'accord. et pourtant.",
+            "dessin": {
+              "duo": "dispute"
+            }
+          },
+          {
+            "texte": "elle : « j'ai raison. »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "determine",
+                  "bras": "hanches",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "lui : « non, c'est moi. »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "determine",
+                  "bras": "hanches",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "après : dos à dos. 10 minutes de silence.",
+            "dessin": {
+              "duo": "dos_a_dos"
+            }
+          },
+          {
+            "texte": "le premier qui craque : lui. toujours lui.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "supplie",
+                  "bras": "priere",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "elle fait semblant de bouder. elle regarde en coin.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "vexe",
+                  "angle": 60,
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "main dans la main. comme avant la dispute.",
+            "dessin": {
+              "duo": "main_dans_la_main"
+            },
+            "appel": "garde ça pour la prochaine dispute"
+          }
+        ]
+      },
+      "legende": "toujours les mêmes disputes. toujours la même fin.\n\ngarde ça pour la prochaine dispute",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#relation"
+      ]
+    }
+  }
+}

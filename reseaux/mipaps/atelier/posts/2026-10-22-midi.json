@@ -1,0 +1,61 @@
+{
+  "jour": "2026-10-22",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-012",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : au lit, elle les yeux grands ouverts, lui qui dort à côté ; le message de minuit.",
+        "style": "mini",
+        "texte": "tu dors ?",
+        "dessin": {
+          "elements": [
+            {
+              "meuble": "lit_fond"
+            },
+            {
+              "perso": "lui",
+              "expression": "dodo",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "signes": [
+                "zzz"
+              ],
+              "x": 248,
+              "taille": 200
+            },
+            {
+              "perso": "elle",
+              "expression": "attend",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "x": 394,
+              "taille": 200
+            },
+            {
+              "meuble": "lit_couette"
+            }
+          ]
+        }
+      },
+      "legende": "(il dormait)\n\ntu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

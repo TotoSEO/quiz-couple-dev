@@ -1,0 +1,34 @@
+{
+  "jour": "2026-10-22",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-008",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : les deux gourmands autour du cornet de frites.",
+        "texte": "j'ai pas besoin de grand-chose. juste toi. et des frites.",
+        "duree": 11,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "duo": "frites"
+        }
+      },
+      "legende": "toi et des frites. c'est tout.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}
