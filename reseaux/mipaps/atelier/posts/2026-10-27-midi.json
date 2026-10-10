@@ -1,0 +1,50 @@
+{
+  "jour": "2026-10-27",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-009",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : lui hésite entre une pizza et un burger.",
+        "style": "mini",
+        "texte": "j'ai faim mais je veux pas choisir",
+        "dessin": {
+          "elements": [
+            {
+              "objet": "pizza",
+              "x": 170,
+              "y": 336,
+              "echelle": 0.8
+            },
+            {
+              "perso": "lui",
+              "expression": "hesite",
+              "x": 320,
+              "taille": 270
+            },
+            {
+              "objet": "burger",
+              "x": 470,
+              "y": 336,
+              "echelle": 0.8
+            }
+          ]
+        }
+      },
+      "legende": "(il a pris les deux)\n\nc'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

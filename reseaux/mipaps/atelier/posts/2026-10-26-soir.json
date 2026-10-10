@@ -1,0 +1,130 @@
+{
+  "jour": "2026-10-26",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-010",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Les petits trucs qui disent « je t'aime » : le café prêt, la place côté mur, la main dans la poche, la dernière frite gardée.",
+        "pages": [
+          {
+            "texte": "les petits trucs qui disent « je t'aime »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "amour",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "le café déjà prêt le matin.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "bras": "tient",
+                  "x": 270,
+                  "taille": 260
+                },
+                {
+                  "objet": "tasse",
+                  "x": 440,
+                  "y": 348,
+                  "echelle": 0.6
+                }
+              ]
+            }
+          },
+          {
+            "texte": "la place côté mur, toujours pour moi.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "x": 270,
+                  "taille": 260
+                },
+                {
+                  "objet": "oreiller",
+                  "x": 450,
+                  "y": 344,
+                  "echelle": 0.7
+                }
+              ]
+            }
+          },
+          {
+            "texte": "ta main dans ma poche quand j'ai froid.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "froid",
+                  "signes": [
+                    "flocons"
+                  ],
+                  "x": 260,
+                  "taille": 260
+                },
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "bras": "tend_g",
+                  "x": 400,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "la dernière frite gardée.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "timide",
+                  "bras": "tient",
+                  "x": 280,
+                  "taille": 260
+                },
+                {
+                  "objet": "frites",
+                  "x": 320,
+                  "y": 330,
+                  "echelle": 0.7
+                }
+              ]
+            }
+          },
+          {
+            "texte": "c'est ça, l'amour. en vrai.",
+            "dessin": {
+              "duo": "calin"
+            },
+            "appel": "envoie ça sans rien dire"
+          }
+        ]
+      },
+      "legende": "pas de grands gestes. juste ça.\n\nenvoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

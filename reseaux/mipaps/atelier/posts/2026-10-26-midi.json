@@ -1,0 +1,50 @@
+{
+  "jour": "2026-10-26",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-031",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle, gourmande, un cornet de frites à côté, des cœurs.",
+        "style": "mini",
+        "texte": "je t'aime plus que les frites. et c'est beaucoup.",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "gourmand",
+              "x": 290,
+              "taille": 280
+            },
+            {
+              "objet": "frites",
+              "x": 470,
+              "y": 340,
+              "echelle": 0.7
+            },
+            {
+              "objet": "coeur",
+              "x": 200,
+              "y": 176,
+              "echelle": 0.4
+            }
+          ]
+        }
+      },
+      "legende": "elle a hésité. un peu.\n\nc'est quoi ton plat préféré après lui ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

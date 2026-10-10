@@ -1,0 +1,216 @@
+{
+  "jour": "2026-10-26",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-015",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Le selfie : ils prennent la pose, encore une pose, encore une ; 48 photos plus tard il est KO ; elle choisit la première. Quatre plans, 14 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Les deux posent face à nous, lui tient le téléphone à bout de bras, elle fait un clin d'œil. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 262,
+                    "expression": "joie",
+                    "bras": "pointe"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 392,
+                    "expression": "clin",
+                    "bras": "bas"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 364,
+                "y": 252,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le selfie",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Nouvelle pose : elle prend un air malicieux, lui fait le fier. Puis encore une autre à 1,8 s : elle fait sa timide, lui rit.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 262,
+                    "expression": "fier",
+                    "bras": "pointe"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "rire"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 392,
+                    "expression": "malicieux",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "timide"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 364,
+                "y": 252,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nouvelle pose. nouvelle pose.",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "48 photos plus tard : lui est allongé par terre, épuisé, les yeux en croix. Elle est toujours là, fraîche, le téléphone à la patte, prête pour une de plus.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "allonge",
+                    "expression": "ko"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "expression": "clin",
+                    "bras": "tient"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 444,
+                "y": 346,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "48 photos plus tard",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Elle regarde l'écran, choisit, et lève la patte en l'air, ravie. Lui, toujours à terre, lève un pouce fatigué. La phrase s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "allonge",
+                    "expression": "ko"
+                  },
+                  {
+                    "a": 2,
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "joie",
+                    "bras": "leves"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "elle choisit la première.",
+                "de": 0.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "48 photos. elle prend la première.\n\ntague celui qui pose pour dix",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

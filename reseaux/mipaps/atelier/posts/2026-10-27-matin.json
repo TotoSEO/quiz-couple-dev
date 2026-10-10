@@ -1,0 +1,203 @@
+{
+  "jour": "2026-10-27",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-032",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Le câlin qui arrive des deux côtés : elle entre par la gauche, lui par la droite ; ils se voient, accélèrent, se cognent doucement au milieu, étourdis ; câlin quand même. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Elle entre par la gauche en marchant de profil, lui par la droite en marchant de profil aussi, chacun content, chacun vers l'autre. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 170
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 780,
+                    "angle": -90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 470
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand on rentre en même temps",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Ils se voient et accélèrent, les bras de course, les yeux brillants, chacun vers le milieu. À 1,8 s ils se cognent doucement, des étoiles autour de leurs têtes, et s'arrêtent, étourdis.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 170,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 290,
+                    "pose": "debout",
+                    "expression": "etourdi",
+                    "signes": [
+                      "etoiles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 470,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 380,
+                    "pose": "debout",
+                    "expression": "etourdi",
+                    "signes": [
+                      "etoiles"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "on se cogne. à chaque fois.",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "tape",
+                "a": 1.8
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Les deux se font un câlin quand même, les yeux fermés, des cœurs au-dessus d'eux. La phrase s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 285,
+                    "expression": "transi",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 395,
+                    "expression": "calin",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 340,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 245,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 1.4,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "on recommence demain <3",
+                "de": 0.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "on se cogne. on se serre. on recommence.\n\ntague celui qui te fonce dedans",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}
