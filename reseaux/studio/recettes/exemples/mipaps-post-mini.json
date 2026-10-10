@@ -1,0 +1,30 @@
+{
+  "gabarit": "mipaps-post",
+  "langue": "fr",
+  "theme": "light",
+  "idee": "Mini : lui, amoureux, des cœurs autour, et un message envoyé comme un texto. Le « c'est tout. » fait le ton.",
+  "style": "mini",
+  "texte": "j'pense à toi là. c'est tout.",
+  "dessin": {
+    "elements": [
+      {
+        "perso": "lui",
+        "expression": "amour",
+        "x": 320,
+        "taille": 290
+      },
+      {
+        "objet": "coeur",
+        "x": 196,
+        "y": 178,
+        "echelle": 0.42
+      },
+      {
+        "objet": "coeur",
+        "x": 458,
+        "y": 150,
+        "echelle": 0.3
+      }
+    ]
+  }
+}

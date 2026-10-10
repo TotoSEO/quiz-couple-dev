@@ -29,3 +29,17 @@ export const categorieAttendue = (melange, jour, creneau) => {
   if (!r) return null;
   return typeof r === 'string' ? r : r[String(jourDeSemaine(jour))] ?? null;
 };
+
+// La semaine type des mipaps (reseaux/mipaps/atelier/LIGNE-EDITORIALE.md), la
+// même que la colonne melange du compte fr posée par la migration
+// 20261009110000 : trois posts par jour, un reel animé le matin, un post à
+// midi, le soir un carrousel-histoire ou un reel statique en alternance.
+export const MELANGE_MIPAPS = {
+  matin: 'mipaps-anime',
+  midi: 'mipaps-post',
+  soir: { 1: 'mipaps-histoire', 2: 'mipaps-statique', 3: 'mipaps-histoire', 4: 'mipaps-statique', 5: 'mipaps-histoire', 6: 'mipaps-statique', 7: 'mipaps-histoire' },
+};
+
+// La grille d'un compte : la sienne (colonne melange de social_comptes, Les
+// mipaps) ou la grille globale (réglage « melange », Quiz Couple).
+export const melangeDuCompte = (compte, global) => compte?.melange || global || MELANGE_DEFAUT;

@@ -11,6 +11,9 @@
 import { ajouterJours, categorieAttendue } from './calendrier.mjs';
 
 export const CATEGORIES_IDEE = ['pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd'];
+// celles des mipaps (compte fr), pour le même calcul
+export const CATEGORIES_IDEE_MIPAPS = ['mipaps-anime', 'mipaps-statique', 'mipaps-histoire', 'mipaps-post'];
+export const categoriesIdee = (langue) => (langue === 'fr' ? CATEGORIES_IDEE_MIPAPS : CATEGORIES_IDEE);
 const CRENEAUX = ['matin', 'midi', 'soir'];
 // une déclinaison dans un de ces états peut encore être réécrite par la synchro
 const MODIFIABLES = ['a_rendre', 'rendu', 'echec'];
@@ -34,7 +37,7 @@ export function creneauDisponible({ post, variantes = [], date = false }) {
 //              datés { jour, creneau }), debut (le jour du passage de la
 //              routine), ouvert(jour, creneau, i) (faux pour un créneau du
 //              jour même qui ne laisse pas le temps d'écrire), horizon en jours
-export function viserCreneaux(idees, { melange, posts = [], variantes = [], dates = [], debut, ouvert = () => true, horizon = 100 }) {
+export function viserCreneaux(idees, { melange, posts = [], variantes = [], dates = [], debut, ouvert = () => true, horizon = 100, categories = CATEGORIES_IDEE }) {
   const parCreneau = new Map(posts.map((p) => [`${p.jour}|${p.creneau}`, p]));
   const parPost = new Map();
   for (const v of variantes) {
@@ -64,6 +67,6 @@ export function viserCreneaux(idees, { melange, posts = [], variantes = [], date
     if (c) pris.add(`${c.jour}|${c.creneau}`);
     vises.set(idee.id, c);
   }
-  const prochain = Object.fromEntries(CATEGORIES_IDEE.map((c) => [c, premier(c)]));
+  const prochain = Object.fromEntries(categories.map((c) => [c, premier(c)]));
   return { vises, prochain };
 }

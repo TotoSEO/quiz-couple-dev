@@ -2,6 +2,8 @@
 //   node scripts/rendre.mjs <recette.json> <dossier de sortie>
 // Reel : reel.mp4 + couverture.jpg. Image : image.jpg. Carrousel : page-1.jpg...
 // BD : image.jpg (les quatre cases), ou page-1.jpg... avec « sortie: carrousel ».
+// Les mipaps (mipaps-post, mipaps-carrousel, mipaps-statique, mipaps-reel)
+// suivent les mêmes sorties que le post, le carrousel et le reel.
 // Avant tout rendu, chaque écran passe le contrôle de mise en page (texte
 // dans la zone utile, pas de débordement, pas de mot seul, 34 px au moins).
 // NAVIGATEUR : chemin d'un Chromium déjà installé (sinon Remotion télécharge
@@ -87,7 +89,7 @@ const bruitagesManquants = (plan) => {
   return [...noms].filter((n) => mixkit.has(n) && !fs.existsSync(path.join(ici, '..', 'public', 'sons', `mx-${n}.mp3`)));
 };
 
-const REELS = ['citation', 'quiz-chrono', 'connais-tu', 'tu-preferes', 'pov'];
+const REELS = ['citation', 'quiz-chrono', 'connais-tu', 'tu-preferes', 'pov', 'mipaps-reel', 'mipaps-statique'];
 if (REELS.includes(recette.gabarit)) {
   const composition = await choisir('reel', { recette });
   const { plan } = composition.props;
@@ -115,7 +117,7 @@ if (REELS.includes(recette.gabarit)) {
   console.log(plan.musique ? `son : ${mesure.input_i} LUFS mesurés, ramenés à ${son('son-final')} LUFS` : `son : bruitages seuls, crête ${mesure.input_tp} dBTP, pas de musique`);
   await renderStill({ ...commun, ...jpeg, serveUrl, composition, frame: plan.couverture, output: path.join(sortie, 'couverture.jpg') });
   console.log(`reel : ${(composition.durationInFrames / composition.fps).toFixed(1)} s, ${plan.verifs.length} écrans vérifiés`);
-} else if (recette.gabarit === 'image') {
+} else if (recette.gabarit === 'image' || recette.gabarit === 'mipaps-post') {
   await verifier('image', { recette }, [0]);
   if (seulementVerifier) process.exit(0);
   const composition = await choisir('image', { recette });
@@ -130,7 +132,7 @@ if (REELS.includes(recette.gabarit)) {
     await renderStill({ ...commun, ...jpeg, serveUrl, composition, output: path.join(sortie, pages === 1 ? 'image.jpg' : `page-${page + 1}.jpg`) });
   }
   console.log(pages === 1 ? 'bd : une image de quatre cases vérifiée' : `bd : ${pages} pages vérifiées`);
-} else if (recette.gabarit === 'carrousel') {
+} else if (recette.gabarit === 'carrousel' || recette.gabarit === 'mipaps-carrousel') {
   for (let page = 0; page < recette.pages.length; page++) {
     await verifier('image', { recette, page }, [0]);
     if (seulementVerifier) continue;

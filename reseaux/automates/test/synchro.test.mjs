@@ -10,9 +10,14 @@ const ici = path.dirname(fileURLToPath(import.meta.url));
 const exemple = (nom) => JSON.parse(fs.readFileSync(path.join(ici, '..', '..', 'studio', 'recettes', 'exemples', `${nom}.json`), 'utf8'));
 const MAINTENANT = new Date('2026-10-06T15:00:00Z');
 
+const MELANGE_MIPAPS = { matin: 'mipaps-anime', midi: 'mipaps-post', soir: { 1: 'mipaps-histoire', 2: 'mipaps-statique', 3: 'mipaps-histoire', 4: 'mipaps-statique', 5: 'mipaps-histoire', 6: 'mipaps-statique', 7: 'mipaps-histoire' } };
 const base = () =>
   new BaseMemoire({
-    social_comptes: [{ id: 'c-en', langue: 'en', fuseau: 'Europe/Paris', actif: false }],
+    social_comptes: [
+      { id: 'c-en', langue: 'en', fuseau: 'Europe/Paris', actif: false },
+      // Les mipaps : le compte fr, avec sa propre grille
+      { id: 'c-fr', langue: 'fr', nom: 'Les mipaps', fuseau: 'Europe/Paris', actif: false, melange: MELANGE_MIPAPS },
+    ],
     social_reglages: [
       { cle: 'melange', valeur: { matin: 'pov', midi: { 1: 'connais-tu', 2: 'tu-preferes', 3: 'connais-tu', 4: 'statique', 5: 'connais-tu', 6: 'tu-preferes', 7: 'statique' }, soir: { 1: 'pov', 2: 'pov', 3: 'pov', 4: 'pov', 5: 'coquin', 6: 'phrase', 7: 'phrase' } } },
     ],
@@ -35,6 +40,43 @@ test('un post valide est écrit, sa déclinaison attend le rendu', async () => {
   assert.equal(b.tables.social_posts[0].statut, 'valide');
   assert.equal(b.tables.social_variantes.length, 1);
   assert.equal(b.tables.social_variantes[0].statut, 'a_rendre');
+});
+
+// un post des mipaps : la déclinaison fr, la grille du compte fr
+const postMipaps = (jour = '2026-10-12', creneau = 'midi') => ({
+  jour,
+  creneau,
+  format: 'image',
+  gabarit: 'mipaps-post',
+  categorie: 'mipaps-post',
+  variantes: { fr: { recette: exemple('mipaps-post-mini'), legende: "j'pense à toi là. c'est tout.", hashtags: ['#couple', '#amour'] } },
+});
+
+test('les deux comptes publient le même jour au même créneau, chacun avec sa grille', async () => {
+  const b = base();
+  const bilan = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') }, { fichier: 'b.json', post: postMipaps('2026-10-12', 'midi') }], { maintenant: MAINTENANT });
+  assert.deepEqual(bilan, { ecrits: 2, inchanges: 0, refuses: 0, ignores: 0 });
+  assert.deepEqual(b.tables.social_posts.map((p) => [p.langue, p.jour, p.creneau, p.gabarit]), [['en', '2026-10-12', 'midi', 'pov'], ['fr', '2026-10-12', 'midi', 'mipaps-post']]);
+  // le post des mipaps suit la grille des mipaps (midi = post) : aucune alerte hors grille pour lui
+  const alertes = b.tables.social_journal.filter((j) => j.niveau === 'alerte');
+  assert.equal(alertes.length, 1);
+  assert.match(alertes[0].message, /^a\.json/);
+  // relus, les deux sont inchangés
+  const encore = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') }, { fichier: 'b.json', post: postMipaps('2026-10-12', 'midi') }], { maintenant: MAINTENANT });
+  assert.equal(encore.inchanges, 2);
+});
+
+test('un post des mipaps hors de sa grille est accepté avec une alerte, et un refus porte sa langue', async () => {
+  const b = base();
+  await synchroniser(b, [{ fichier: 'c.json', post: postMipaps('2026-10-12', 'matin') }], { maintenant: MAINTENANT });
+  const alerte = b.tables.social_journal.find((j) => j.niveau === 'alerte');
+  assert.match(alerte.message, /attend la catégorie mipaps-anime, mipaps-post accepté/);
+  const p = postMipaps();
+  p.variantes.fr.recette.texte = 'x'.repeat(130);
+  const bilan = await synchroniser(b, [{ fichier: 'd.json', post: p }], { maintenant: MAINTENANT });
+  assert.equal(bilan.refuses, 1);
+  const erreur = b.tables.social_journal.find((j) => j.niveau === 'erreur');
+  assert.equal(erreur.details.langue, 'fr');
 });
 
 test('une catégorie qui ne suit pas le mélange de la semaine est acceptée, avec une alerte une seule fois', async () => {

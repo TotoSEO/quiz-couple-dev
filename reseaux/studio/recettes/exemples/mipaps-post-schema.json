@@ -1,0 +1,14 @@
+{
+  "gabarit": "mipaps-post",
+  "langue": "fr",
+  "theme": "light",
+  "idee": "Dessin de bureau : le diagramme de Venn de bom.seeat (1 100 partages), ce qui me calme, ce qui me stresse, et toi au milieu.",
+  "style": "schema",
+  "texte": "comment tu fais pour être les deux en même temps ?",
+  "schema": {
+    "type": "venn",
+    "gauche": "ce qui me calme",
+    "droite": "ce qui me stresse",
+    "milieu": "toi"
+  }
+}

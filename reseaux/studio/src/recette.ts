@@ -2,6 +2,7 @@
 // tout ce qui s'affiche vient d'ici ou des libellés de la langue.
 import type { Langue } from './charte/libelles';
 import type { PlanPov, RecettePov } from './pov/scenario';
+import type { RecetteMipapsCarrousel, RecetteMipapsPost, RecetteMipapsReel, RecetteMipapsStatique } from './mipaps/recette';
 
 export type Theme = 'light' | 'dark' | 'marque';
 export type Fleurs = 'brin-marguerite' | 'feuillage' | 'aucune';
@@ -95,6 +96,9 @@ export type RecetteBd = {
 };
 
 export type { RecettePov };
-export type RecetteReel = RecetteCitation | RecetteJeu | RecettePov;
-export type RecetteFixe = RecetteImage | RecetteCarrousel | RecetteBd;
+// Les mipaps (second compte, reseaux/mipaps) : leurs quatre gabarits sont
+// décrits dans mipaps/recette.ts et passent par les mêmes compositions.
+export type { RecetteMipapsCarrousel, RecetteMipapsPost, RecetteMipapsReel, RecetteMipapsStatique };
+export type RecetteReel = RecetteCitation | RecetteJeu | RecettePov | RecetteMipapsReel | RecetteMipapsStatique;
+export type RecetteFixe = RecetteImage | RecetteCarrousel | RecetteBd | RecetteMipapsPost | RecetteMipapsCarrousel;
 export type Recette = RecetteReel | RecetteFixe;
