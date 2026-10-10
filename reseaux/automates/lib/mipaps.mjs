@@ -46,6 +46,9 @@ const controlerTexte = (t, max, ou, f, { obligatoire = true } = {}) => {
 };
 
 // Ce qu'un personnage ou une étape peut porter.
+// Les poses qui marchent : le cycle des pattes suit la distance parcourue.
+const COURSES = ['marche', 'court', 'sprint', 'arrive'];
+
 const controlerAllure = (p, ou, f) => {
   if (p.expression !== undefined && !EXPRESSIONS[p.expression]) f.push(`${ou} : expression inconnue « ${p.expression} »`);
   if (p.pose !== undefined && !LISTE_POSES.includes(p.pose)) f.push(`${ou} : pose inconnue « ${p.pose} »`);
@@ -155,6 +158,32 @@ const controlerPlan = (p, n, f) => {
       precedent = e.a;
       if (e.visible !== undefined && typeof e.visible !== 'boolean') f.push(`${ouE} : visible vaut true ou false`);
       controlerAllure(e, ouE, f);
+    });
+    // Un déplacement en marchant se fait de profil : l'angle en vigueur au
+    // départ vaut 45 à 135 en valeur absolue. Comme dans le moteur, un angle
+    // écrit à l'arrêt vaut dès l'étape qui l'écrit ; écrit pendant une course
+    // (à une arrivée d'où l'on repart), il ne vaut qu'une fois la course finie.
+    const xs = etapes.map((e, i) => ({ e, i })).filter(({ e }) => typeof e.x === 'number');
+    let angle = 0;
+    let ecrit;
+    let pose;
+    let lu = 0;
+    let enCourse = false;
+    xs.forEach(({ e, i }, k) => {
+      for (; lu <= i; lu++) {
+        if (typeof etapes[lu].angle === 'number') ecrit = etapes[lu].angle;
+        if (etapes[lu].pose !== undefined) pose = etapes[lu].pose;
+      }
+      if (!enCourse && ecrit !== undefined) {
+        angle = ecrit;
+        ecrit = undefined;
+      }
+      const suivant = xs[k + 1];
+      const bouge = suivant !== undefined && suivant.e.x !== e.x;
+      if (bouge && COURSES.includes(pose) && !(Math.abs(angle) >= 45 && Math.abs(angle) <= 135)) {
+        f.push(`${ouP}, étapes ${i + 1} à ${suivant.i + 1} : il marche de face ; un déplacement en marchant se fait de profil (angle 90 ou -90 écrit dans l'étape de départ)`);
+      }
+      enCourse = bouge;
     });
   });
   const objets = p.objets ?? [];

@@ -153,7 +153,7 @@ serve(async (req) => {
         const limite = Math.min(120, Math.max(1, Number(url.searchParams.get('limite') || 60)));
         const variantes = await db
           .from('social_variantes')
-          .select('id,post_id,langue,statut,publie_le,permalien,vignette,legende,recette,story_statut')
+          .select('id,post_id,langue,statut,publie_le,permalien,vignette,legende,recette,story_statut,fb_statut,fb_lien,fb_erreur')
           .eq('langue', langue)
           .eq('statut', 'publie')
           .order('publie_le', { ascending: false })
@@ -188,7 +188,7 @@ serve(async (req) => {
       const fin = jourIso(new Date(new Date(debut + 'T12:00:00Z').getTime() + jours * 86400000));
 
       const [comptes, jetons, reglages, posts, journal, idees] = await Promise.all([
-        db.from('social_comptes').select('id,langue,nom,ig_user_id,actif,fuseau,creneaux,jeton_expire_le,melange').order('langue'),
+        db.from('social_comptes').select('id,langue,nom,ig_user_id,actif,fuseau,creneaux,jeton_expire_le,melange,facebook,page_id,page_nom').order('langue'),
         db.from('social_jetons').select('compte_id,obtenu_le,renouvele_le'),
         db.from('social_reglages').select('cle,valeur'),
         db.from('social_posts').select('id,langue,jour,creneau,format,gabarit,categorie,statut,motif').eq('langue', langue).gte('jour', debut).lt('jour', fin).order('jour').order('creneau'),
@@ -199,7 +199,7 @@ serve(async (req) => {
 
       const ids = (posts.data || []).map((p) => p.id);
       const variantes = ids.length
-        ? await db.from('social_variantes').select('id,post_id,langue,statut,publier_a,legende,hashtags,permalien,erreur,vignette,essais,recette,story_statut,publie_le').in('post_id', ids)
+        ? await db.from('social_variantes').select('id,post_id,langue,statut,publier_a,legende,hashtags,permalien,erreur,vignette,essais,recette,story_statut,publie_le,fb_statut,fb_lien,fb_erreur').in('post_id', ids)
         : { data: [], error: null };
       if (variantes.error) throw variantes.error;
       const signees = await signer(variantes.data || []);
@@ -299,6 +299,15 @@ serve(async (req) => {
         return json({ success: true });
       }
 
+      // publier aussi sur la Page Facebook reliée (le partage automatique
+      // d'Instagram vers Facebook ne joue pas pour un contenu publié par l'API)
+      if (action === 'facebook') {
+        const { error } = await db.from('social_comptes').update({ facebook: !!corps.facebook }).eq('langue', langue);
+        if (error) throw error;
+        await db.from('social_journal').insert({ niveau: 'info', source: 'admin', message: `compte ${langue} : publication sur la Page Facebook ${corps.facebook ? 'activée' : 'coupée'}` });
+        return json({ success: true });
+      }
+
       if (action === 'connecter') {
         // Jeton d'utilisateur Facebook longue durée (Graph API Explorer, puis
         // « Étendre » dans l'outil de jetons de Meta). On cherche la Page reliée
@@ -357,7 +366,7 @@ serve(async (req) => {
         }
         const { data: compte, error } = await db
           .from('social_comptes')
-          .update({ ig_user_id: String(moi.id), nom: moi.username, jeton_expire_le: expireLe })
+          .update({ ig_user_id: String(moi.id), nom: moi.username, jeton_expire_le: expireLe, page_id: String(page.id), page_nom: page.name })
           .eq('langue', langue)
           .select('id')
           .single();

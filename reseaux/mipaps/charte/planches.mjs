@@ -128,13 +128,13 @@ planche('07-da.dc.html', 'La direction artistique', 1700, 1060, 1880, 1080,
       ${para(`<strong>Le personnage prend la moitié ou les deux tiers de l'image</strong>, centré, et il regarde la personne. À deux, ils se touchent presque.`, 16)}
       ${para(`<strong>Un objet, pas un décor.</strong> Une tasse, un téléphone, un parapluie, un canapé vu de trois quarts, un trait de sol. Tout au même trait tremblé, blanc dedans.`, 16)}
       ${para(`<strong>Le texte en minuscules, court, comme un message</strong> envoyé à l'autre : « j'pense à toi là », « reviens vite stp », « t'as encore oublié ». Deux à huit mots, en haut ou au milieu, jamais sur le personnage. Les majuscules quand on crie : « JE T'AIME !!! ».`, 16)}
-      ${para(`<strong>Une émotion par image.</strong> Dans une BD, une case = une émotion = un geste.`, 16)}
+      ${para(`<strong>Une émotion par image.</strong> Dans un post comme sur une page d'histoire, une image = une émotion = un geste.`, 16)}
       ${sousTitre('Ce qu\'on ne fait pas')}
       ${para(`Pas de dégradé, pas d'ombre portée, pas de couleur en plus (le jaune, le vert, le bleu vif n'existent pas). Pas de décor complet, pas de photo, pas de texture. Pas de bulle de dialogue, ou une seule par planche. Pas d'emoji dans l'image.`, 16)}
     </div>
     <div style="display: flex; flex-direction: column; gap: 16px; flex-grow: 1; min-width: 0">
       ${sousTitre('La typo : Shantell Sans')}
-      ${para(`Une écriture au feutre, dessinée pour aller avec des gribouillis, lisible à 34 px sur un téléphone. Graisse 700 pour les textes des posts, 500 pour les cases de BD, l'italique pour une pensée.`, 15)}
+      ${para(`Une écriture au feutre, dessinée pour aller avec des gribouillis, lisible à 34 px sur un téléphone. Graisse 700 pour les textes des posts et des reels, 500 pour les pages d'une histoire et les légendes, l'italique pour une pensée.`, 15)}
       <div style="display: flex; flex-direction: column; gap: 10px; padding: 22px 26px; border: 4px solid ${ENCRE}; border-radius: 22px">
         ${exempleTexte('j\'pense à toi là', 54)}
         ${exempleTexte('t\'as encore oublié le pain...', 40, 500)}
@@ -142,7 +142,7 @@ planche('07-da.dc.html', 'La direction artistique', 1700, 1060, 1880, 1080,
         ${exempleTexte('ENVOIE ÇA À TA PERSONNE !!!', 34)}
       </div>
       ${sousTitre('Les formats')}
-      ${para(`<strong>Le post :</strong> 1080 × 1350, un personnage ou les deux, une phrase. <strong>La BD :</strong> quatre cases en 2 × 2, bordées d'un trait, la chute dans la dernière. <strong>Le carrousel :</strong> une case par page, la première accroche, la dernière dit « envoie ça à ta personne ». <strong>Le reel :</strong> les mêmes dessins qui bougent.`, 15)}
+      ${para(`<strong>Le reel animé :</strong> une situation jouée en 10 à 20 secondes, les personnages arrivent, courent, se retournent, le texte en haut. <strong>Le post :</strong> 1080 × 1350, un personnage ou les deux, une phrase (ou une déclaration en grand, ou un schéma de bureau). <strong>Le carrousel-histoire :</strong> un moment par page, on fait glisser et l'histoire avance, la dernière page dit « envoie ça à ta personne ». <strong>Le reel statique :</strong> un dessin qui respire et cligne, une phrase qui s'écrit mot à mot.`, 15)}
       ${sousTitre('Pour l\'animation')}
       ${para(`Le personnage est un rig, pas une pile d'images : angle de rotation continu, poses en trois dimensions (une foulée s'écrit en profondeur), bras et pattes placés par des coordonnées, expressions qui se combinent avec tout. Une animation interpole l'angle, la position et la pose d'une image à l'autre, sans saut ; seul le trait est redessiné (nouvelle graine toutes les quatre images, à 24 images par seconde) pour garder la main qui tremble. Changer d'expression se fait sur une image, comme un clignement, c'est le code du dessin animé.`, 15)}
     </div>
@@ -199,26 +199,32 @@ planche('07-da.dc.html', 'La direction artistique', 1700, 1060, 1880, 1080,
   planche('06-objets.dc.html', 'Les objets', 1960, 1900, 2080, 6900, corps);
 }
 
-// ── 08 : une BD en quatre cases ─────────────────────────────────────────
+// ── 08 : les deux reels (animé, statique), deux images de téléphone ─────
+// Pas de BD (Thomas, 8 octobre 2026) : les quatre formats sont le reel animé,
+// le post, le carrousel-histoire et le reel statique. Cette planche montre
+// une image de chacun des deux reels, telle que le studio la rend
+// (reseaux/studio/src/mipaps/) : le texte en haut, la scène en grand, la
+// signature en bas, dans la zone utile d'Instagram.
 const cadre = (contenu, w, h) => `<div style="position: relative; width: ${w}px; height: ${h}px; box-sizing: border-box; border: 5px solid ${ENCRE}; border-radius: 18px; overflow: hidden; background: #fff">${contenu}</div>`;
-const legende = (t, taille = 34, haut = true) => `<p style="position: absolute; left: 24px; right: 24px; ${haut ? 'top: 22px' : 'bottom: 22px'}; margin: 0; ${MAIN}; font-weight: 500; font-size: ${taille}px; line-height: 1.15; text-align: center; color: ${ENCRE}">${esc(t)}</p>`;
 const dansCase = (svg, x, y, w, h) => `<div style="position: absolute; left: ${x}px; top: ${y}px; width: ${w}px; height: ${h}px">${svg}</div>`;
 {
-  const w = 1080, h = 1350, cw = 468, ch = 520;
-  const cases = [
-    cadre(legende('t\'inquiète, je gère le dîner') + dansCase(perso({ perso: 'lui', expression: 'fier' }, 360, '-30 -20 360 340'), 54, 120, 360, 360), cw, ch),
-    cadre(legende('...') + dansCase(perso({ perso: 'lui', expression: 'panique', signes: ['vapeur'] }, 360, '-30 -60 360 380'), 54, 110, 360, 360), cw, ch),
-    cadre(legende('(elle a rien dit)') + dansCase(perso({ perso: 'elle', expression: 'blase', vers: -1 }, 360, '-30 -20 360 340'), 54, 120, 360, 360), cw, ch),
-    cadre(legende('frites. comme d\'hab.') + dansCase(duo('frites', 500, 328), -16, 140, 500, 328), cw, ch),
-  ];
-  const corps = `<div style="display: flex; flex-direction: column; gap: 18px; height: 100%; justify-content: center">
-    <p style="margin: 0 0 6px; ${MAIN}; font-weight: 700; font-size: 54px; line-height: 1.1; text-align: center">quand il dit « je gère »</p>
-    <div style="display: grid; grid-template-columns: repeat(2, ${cw}px); gap: 28px; justify-content: center">${cases.join('')}</div>
-    <p style="margin: 6px 0 0; ${MAIN}; font-weight: 500; font-size: 26px; text-align: center; color: ${GRIS}">envoie ça à ta personne</p>
+  const w = 540, h = 960; // un reel 1080 x 1920 à l'échelle 1/2
+  const texteReel = (t, taille, top) => `<p style="position: absolute; left: 60px; right: 60px; top: ${top}px; margin: 0; ${MAIN}; font-weight: 700; font-size: ${taille}px; line-height: 1.12; text-align: center; color: ${ENCRE}">${esc(t)}</p>`;
+  const signature = `<p style="position: absolute; right: 60px; bottom: 214px; margin: 0; ${MAIN}; font-weight: 500; font-size: 17px; color: ${GRIS}">les mipaps</p>`;
+  const anime = cadre(texteReel('quand il me voit de loin', 40, 180) +
+    dansCase(perso({ perso: 'elle', expression: 'surpris', vers: 1 }, 300, '-20 -40 340 360'), 240, 410, 300, 300) +
+    dansCase(perso({ perso: 'lui', expression: 'joie', pose: 'sprint', angle: 90, foulee: 0.3 }, 300, '-70 -40 400 360'), 0, 410, 300, 300) +
+    signature, w, h);
+  const statique = cadre(texteReel('j\'aime bien quand t\'es là. même quand tu dis rien.', 34, 180) +
+    dansCase(duo('calin', 520, 341), 10, 400, 520, 341) + signature, w, h);
+  const corps = `<div style="display: flex; flex-direction: column; gap: 22px; height: 100%; justify-content: center">
+    <p style="margin: 0 0 6px; ${MAIN}; font-weight: 700; font-size: 44px; line-height: 1.1; text-align: center">les deux reels : animé le matin, statique le soir</p>
+    <div style="display: flex; gap: 40px; justify-content: center">${anime}${statique}</div>
+    <p style="margin: 6px 0 0; ${MAIN}; font-weight: 500; font-size: 24px; text-align: center; color: ${GRIS}">10 à 20 secondes, pas de voix dans les bruitages, la musique Instagram à la publication</p>
   </div>`;
-  planches['08-bd.dc.html'] = artboard('Une BD en quatre cases', w, h, corps).replace('padding: 40px 48px;', 'padding: 36px 40px;');
-  boards['08-bd.dc.html'] = { x: 0, y: 9220, w, h, title: 'Une BD en quatre cases' };
-  order.push('08-bd.dc.html');
+  planches['08-reels.dc.html'] = artboard('Les deux reels', 1180, 1350, corps).replace('padding: 40px 48px;', 'padding: 36px 40px;');
+  boards['08-reels.dc.html'] = { x: 0, y: 9220, w: 1180, h: 1350, title: 'Les deux reels, animé et statique' };
+  order.push('08-reels.dc.html');
 }
 
 // ── 09 : un carrousel de trois pages ────────────────────────────────────
@@ -227,12 +233,12 @@ const dansCase = (svg, x, y, w, h) => `<div style="position: absolute; left: ${x
   const page = (contenu) => `<div style="position: relative; width: ${w}px; height: ${h}px; background: #fff; border-radius: 28px; overflow: hidden; flex-shrink: 0">${contenu}</div>`;
   const texte = (t, taille, top) => `<p style="position: absolute; left: 80px; right: 80px; top: ${top}px; margin: 0; ${MAIN}; font-weight: 700; font-size: ${taille}px; line-height: 1.15; text-align: center; color: ${ENCRE}">${esc(t)}</p>`;
   const petit = (t, bottom) => `<p style="position: absolute; left: 80px; right: 80px; bottom: ${bottom}px; margin: 0; ${MAIN}; font-weight: 500; font-size: 30px; line-height: 1.2; text-align: center; color: ${GRIS}">${esc(t)}</p>`;
-  const p1 = page(texte('petit message pour toi', 80, 130) + dansCase(perso({ perso: 'lui', expression: 'timide' }, 760, '-30 -30 360 360'), 160, 360, 760, 760) + petit('(fais défiler)', 90));
+  const p1 = page(texte('petit message pour toi', 80, 130) + dansCase(perso({ perso: 'lui', expression: 'timide' }, 760, '-30 -30 360 360'), 160, 360, 760, 760) + petit('fais glisser →', 90));
   const p2 = page(texte('j\'aime bien quand t\'es là', 72, 120) + texte('même quand tu dis rien', 52, 330) + dansCase(duo('calin', 920, 604), 80, 500, 920, 604));
-  const p3 = page(texte('envoie ça à ta personne', 80, 150) + dansCase(duo('main_dans_la_main', 920, 604), 80, 400, 920, 604) + petit('@lesmipaps', 90));
+  const p3 = page(texte('envoie ça à ta personne', 80, 150) + dansCase(duo('main_dans_la_main', 920, 604), 80, 400, 920, 604) + petit('les mipaps', 90));
   const corps = `<div style="display: flex; gap: 60px; align-items: center; height: 100%">${p1}${p2}${p3}</div>`;
   planches['09-carrousel.dc.html'] = artboard('Un carrousel de trois pages', 3420, 1430, corps).replace('padding: 40px 48px;', 'padding: 40px 60px;').replace(`background: ${FOND};`, 'background: #efe9e3;');
-  boards['09-carrousel.dc.html'] = { x: 1160, y: 9220, w: 3420, h: 1430, title: 'Un carrousel de trois pages' };
+  boards['09-carrousel.dc.html'] = { x: 1260, y: 9220, w: 3420, h: 1430, title: 'Un carrousel de trois pages' };
   order.push('09-carrousel.dc.html');
 }
 
@@ -244,7 +250,7 @@ const dansCase = (svg, x, y, w, h) => `<div style="position: absolute; left: ${x
     ${dansCase(perso({ perso: 'elle', expression: 'supplie' }, 820, '-40 -30 380 360'), 130, 380, 820, 820)}
   </div>`;
   planches['10-mini.dc.html'] = artboard('Un mini', w, h, corps).replace('padding: 40px 48px;', 'padding: 0;');
-  boards['10-mini.dc.html'] = { x: 4660, y: 9220, w, h, title: 'Un mini, le format sticker' };
+  boards['10-mini.dc.html'] = { x: 4760, y: 9220, w, h, title: 'Un mini, le format sticker' };
   order.push('10-mini.dc.html');
 }
 

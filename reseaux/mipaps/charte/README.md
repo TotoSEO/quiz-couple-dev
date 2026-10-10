@@ -8,7 +8,8 @@ fleur sur l'oreille). Ce sont les noms de travail du code (`perso: 'lui'` et
 les nomment), elle s'appelle **Eli** et lui **Toh** (Thomas, 8 octobre
 2026) ; les posts eux-mêmes parlent de « mon amoureux » et « ma personne »
 pour que chacun s'y mette. Le canevas de référence, avec les 86 expressions, les 25 poses, les
-18 scènes à deux, les 80 objets et trois exemples de posts :
+18 scènes à deux, les 80 objets, la table de rotation et un exemple de
+chaque format (les deux reels, une page de carrousel, un mini) :
 https://claude.ai/artifact/DYX3xFtQBrV4jDUerw8LDH (privé, Thomas).
 
 ## La direction artistique

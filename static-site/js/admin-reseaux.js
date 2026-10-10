@@ -246,9 +246,14 @@
       '<div class="rsx-compte-ligne"><div><strong>@' + esc(c.nom) + '</strong><span class="rsx-gris"> · identifiant ' + esc(c.ig_user_id) + ' · connexion Facebook</span></div>' +
       '<div class="rsx-actions"><label class="rsx-pause"><input type="checkbox" id="rsx-actif"' + (c.actif ? ' checked' : '') + '> <span>Publication active</span></label>' +
       '<button type="button" class="rsx-btn" id="rsx-changer-jeton">Changer le jeton</button></div></div>' +
+      '<div class="rsx-compte-ligne"><div><span class="rsx-gris">' + (c.page_id ? 'Page Facebook « ' + esc(c.page_nom || c.page_id) + ' »' : 'Page Facebook : recolle le jeton pour la relier') + '</span></div>' +
+      '<div class="rsx-actions"><label class="rsx-pause"><input type="checkbox" id="rsx-facebook"' + (c.facebook !== false ? ' checked' : '') + '> <span>Publier aussi sur la Page Facebook</span></label></div></div>' +
       '<div id="rsx-reconnexion" class="rsx-reconnexion hidden">' + formulaireJeton() + '</div>';
     $('rsx-actif').addEventListener('change', function () {
       action({ action: 'activer', actif: this.checked });
+    });
+    $('rsx-facebook').addEventListener('change', function () {
+      action({ action: 'facebook', facebook: this.checked });
     });
     $('rsx-changer-jeton').addEventListener('click', function () {
       $('rsx-reconnexion').classList.toggle('hidden');
@@ -290,13 +295,16 @@
       '<div class="rsx-case-haut"><strong>' + esc(v && v.publier_a ? heureParis(v.publier_a) : '-') + '</strong>' +
       '<span class="rsx-statut rsx-statut--' + statut[1] + '">' + esc(statut[0]) + '</span>' +
       (v && v.story_statut === 'publie' ? '<span class="rsx-statut rsx-statut--publie" title="Le reel du matin a aussi été publié en story">+ story</span>' : '') +
-      (v && v.story_statut === 'echec' ? '<span class="rsx-statut rsx-statut--echec" title="La story du matin n\'est pas partie (voir le journal)">story ✕</span>' : '') + '</div>' +
+      (v && v.story_statut === 'echec' ? '<span class="rsx-statut rsx-statut--echec" title="La story du matin n\'est pas partie (voir le journal)">story ✕</span>' : '') +
+      (v && v.fb_statut === 'publie' ? '<span class="rsx-statut rsx-statut--publie" title="Publié aussi sur la Page Facebook">+ Facebook</span>' : '') +
+      (v && v.fb_statut === 'echec' ? '<span class="rsx-statut rsx-statut--echec" title="' + esc('Pas publié sur la Page Facebook : ' + (v.fb_erreur || 'voir le journal')) + '">Facebook ✕</span>' : '') + '</div>' +
       '<div class="rsx-case-cat">' + esc(nomDuPost(p)) + '</div>' +
       '<div class="rsx-case-texte" title="' + esc(v ? v.texte : '') + '">' + esc(v ? v.texte : '') + '</div>' +
       libelleSon(v) +
       (v && v.erreur ? '<div class="rsx-erreur" title="' + esc(v.erreur) + '">' + esc(v.erreur) + '</div>' : '') +
       '</div>' +
-      '<div class="rsx-case-actions">' + boutonsPost(p, v) + (v && v.permalien ? '<a class="rsx-ico" href="' + esc(v.permalien) + '" target="_blank" rel="noopener" title="Voir sur Instagram" aria-label="Voir">↗</a>' : '') + '</div>' +
+      '<div class="rsx-case-actions">' + boutonsPost(p, v) + (v && v.permalien ? '<a class="rsx-ico" href="' + esc(v.permalien) + '" target="_blank" rel="noopener" title="Voir sur Instagram" aria-label="Voir sur Instagram">↗</a>' : '') +
+      (v && v.fb_lien ? '<a class="rsx-ico" href="' + esc(v.fb_lien) + '" target="_blank" rel="noopener" title="Voir sur Facebook" aria-label="Voir sur Facebook">f</a>' : '') + '</div>' +
       '</div>';
   }
   function caseVide(jour, creneau) {
@@ -347,10 +355,11 @@
         (v.vignette ? '<img src="' + esc(v.vignette) + '" alt="" loading="lazy">' : '<span>' + esc((FORMATS[p.format] || '').slice(0, 1)) + '</span>') +
         (v.permalien ? '</a>' : '</div>') +
         '<div class="rsx-pub-corps"><strong>' + esc(heureParis(v.publie_le, true)) + '</strong>' +
-        '<span class="rsx-case-cat">' + esc(nomDuPost(p)) + (v.story_statut === 'publie' ? ' · + story' : '') + '</span>' +
+        '<span class="rsx-case-cat">' + esc(nomDuPost(p)) + (v.story_statut === 'publie' ? ' · + story' : '') + (v.fb_statut === 'publie' ? ' · + Facebook' : '') + (v.fb_statut === 'echec' ? ' · Facebook ✕' : '') + '</span>' +
         '<p title="' + esc(v.texte) + '">' + esc(v.texte) + '</p>' +
         (chiffres ? '<small>' + esc(chiffres) + '</small>' : '<small class="rsx-gris">statistiques à J+1 et J+7</small>') +
-        libelleSon(v) + '</div></article>';
+        libelleSon(v) +
+        (v.fb_lien ? '<small><a href="' + esc(v.fb_lien) + '" target="_blank" rel="noopener">Voir sur Facebook ↗</a></small>' : '') + '</div></article>';
     }).join('') + '</div>';
   }
   function chargerPublies(force) {
