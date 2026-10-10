@@ -1,0 +1,51 @@
+{
+  "jour": "2026-10-20",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-002",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : elle, triste, le téléphone à la patte, une petite larme ; il est parti depuis quatre minutes.",
+        "texte": "tu me manques déjà et t'es parti depuis 4 minutes",
+        "duree": 11,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "triste",
+              "bras": "tient",
+              "signes": [
+                "larme"
+              ],
+              "x": 320,
+              "taille": 280
+            },
+            {
+              "objet": "telephone",
+              "x": 360,
+              "y": 340,
+              "echelle": 0.5
+            }
+          ]
+        }
+      },
+      "legende": "4 minutes. j'ai compté.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#relation"
+      ]
+    }
+  }
+}

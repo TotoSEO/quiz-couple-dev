@@ -1,0 +1,192 @@
+{
+  "jour": "2026-10-21",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-025",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Café d'abord : elle, fatiguée, sa tasse ; il arrive plein d'énergie et parle ; elle lève une patte, chut ; elle boit, sourit : maintenant il peut parler. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Elle est à droite, fatiguée, la tasse à la patte, les yeux mi-clos. Il arrive du bord gauche en courant de profil, plein d'énergie, s'arrête devant elle à 1,6 s et se tourne vers nous à 2,1 s, les bras en l'air.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "expression": "fatigue",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "energique"
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 260,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.1,
+                    "angle": 0,
+                    "bras": "leves",
+                    "expression": "joie"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tasse",
+                "x": 440,
+                "y": 352,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le matin, avant le café",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Il gesticule, les bras en l'air, tout content, il a mille choses à dire. Elle lève une patte devant lui, les yeux plats : chut. Il s'arrête, un point d'exclamation au-dessus de lui.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "expression": "joie",
+                    "bras": "leves"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "surpris",
+                    "bras": "bas",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "expression": "fatigue",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.5,
+                    "expression": "exaspere",
+                    "bras": "pointe_devant"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tasse",
+                "x": 440,
+                "y": 352,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« café d'abord. »",
+                "de": 1.4,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Elle boit sa gorgée, les yeux fermés, puis sourit enfin. Lui attend, sage, les pattes jointes. La chute s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "expression": "zen",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 260,
+                    "expression": "attend",
+                    "bras": "priere"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tasse",
+                "x": 440,
+                "y": 352,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "maintenant tu peux parler.",
+                "de": 1.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "avant le café, c'est un autre être humain.\n\ntague celle qui parle pas avant son café",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

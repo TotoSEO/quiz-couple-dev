@@ -1,0 +1,119 @@
+{
+  "jour": "2026-10-21",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-009",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "24 h avec toi : du lit au café, aux frites à deux, au retour, au canapé et au dodo à deux.",
+        "pages": [
+          {
+            "texte": "24 h avec toi",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "signes": [
+                    "coeurs"
+                  ],
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "7 h : tu dors. moi non.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "signes": [
+                    "zzz"
+                  ],
+                  "x": 250,
+                  "taille": 250
+                },
+                {
+                  "perso": "elle",
+                  "expression": "attend",
+                  "x": 410,
+                  "taille": 250
+                }
+              ]
+            }
+          },
+          {
+            "texte": "9 h : café. t'as pas besoin de parler.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "fatigue",
+                  "bras": "tient",
+                  "x": 280,
+                  "taille": 260
+                },
+                {
+                  "objet": "tasse",
+                  "x": 440,
+                  "y": 350,
+                  "echelle": 0.6
+                }
+              ]
+            }
+          },
+          {
+            "texte": "13 h : frites à deux.",
+            "dessin": {
+              "duo": "frites"
+            }
+          },
+          {
+            "texte": "18 h : tu rentres. je cours.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "joie",
+                  "pose": "saut",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "22 h : canapé, couette, toi.",
+            "dessin": {
+              "duo": "canape"
+            }
+          },
+          {
+            "texte": "minuit : dodo à deux. et demain pareil.",
+            "dessin": {
+              "duo": "couette"
+            },
+            "appel": "tague celui avec qui tu veux refaire ça demain"
+          }
+        ]
+      },
+      "legende": "une journée normale. la meilleure.\n\ntague celui avec qui tu veux refaire ça demain",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

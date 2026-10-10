@@ -1,0 +1,265 @@
+{
+  "jour": "2026-10-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-027",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "La porte : elle part, revient pour un bisou, repart, revient pour les clés, repart, revient pour un câlin. « bon, à ce soir. (vraiment) ». Quatre plans, 16 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Il est à gauche, content, il lui fait coucou de la patte. Elle est debout à côté de lui. À 1 s elle se tourne de profil et s'en va en marchant vers la droite, sort du cadre à 3,4 s. Il la suit des yeux, un petit cœur au-dessus de lui.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "content",
+                    "bras": "coucou"
+                  },
+                  {
+                    "a": 3,
+                    "expression": "amour",
+                    "bras": "bas"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1,
+                    "x": 330,
+                    "angle": 90,
+                    "pose": "marche"
+                  },
+                  {
+                    "a": 3.4,
+                    "x": 820
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« à ce soir »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "description": "Elle revient en courant de la droite, joyeuse, elle s'arrête devant lui à 1,6 s, se tourne vers nous à 2,1 s et lui fait un bisou. Il fond, des cœurs flottent. Le texte arrive à 0,3 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "surpris"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "transi",
+                    "signes": [
+                      "coeurs"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 820,
+                    "angle": 90,
+                    "pose": "court",
+                    "expression": "joie",
+                    "miroir": true
+                  },
+                  {
+                    "a": 1.6,
+                    "x": 330,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.1,
+                    "angle": 0,
+                    "expression": "bisou"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "elle revient pour un bisou",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Elle repart en marchant vers la droite, puis revient en courant. Lui lui tend les clés qu'elle avait oubliées. Elle rit, les prend, repart. Le texte arrive à 0,3 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "content",
+                    "bras": "tend_d"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "pose": "marche",
+                    "angle": 90,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 820
+                  },
+                  {
+                    "a": 1.3,
+                    "x": 820,
+                    "angle": -90,
+                    "pose": "court",
+                    "expression": "essouffle"
+                  },
+                  {
+                    "a": 2.8,
+                    "x": 330,
+                    "pose": "debout"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "cle",
+                "x": 345,
+                "y": 340,
+                "echelle": 0.4,
+                "de": 2.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "elle revient pour les clés",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Elle revient une dernière fois, se jette dans ses bras, câlin les yeux fermés. Trois cœurs flottent. La chute s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "expression": "calin",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 285,
+                    "expression": "transi",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 340,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 245,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 1.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 1.4,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "bon, à ce soir. pour de vrai.",
+                "de": 0.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "on s'est dit au revoir trois fois. ça compte pas.\n\nenvoie ça à celui qui part jamais vraiment",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}
