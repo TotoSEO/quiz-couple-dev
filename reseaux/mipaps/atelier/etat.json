@@ -1,0 +1,1713 @@
+{
+  "genere_le": "2026-10-10T03:12:07.865Z",
+  "langue": "fr",
+  "compte": {
+    "nom": "mipaps_stories",
+    "actif": true
+  },
+  "fuseau": "Europe/Paris",
+  "aujourdhui": "2026-10-10",
+  "melange": {
+    "midi": "mipaps-post",
+    "soir": {
+      "1": "mipaps-histoire",
+      "2": "mipaps-statique",
+      "3": "mipaps-histoire",
+      "4": "mipaps-statique",
+      "5": "mipaps-histoire",
+      "6": "mipaps-statique",
+      "7": "mipaps-histoire"
+    },
+    "matin": "mipaps-anime"
+  },
+  "reserve_jours": 10,
+  "a_remplir": [
+    {
+      "jour": "2026-10-20",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-20",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-20",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-10-21",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-21",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-21",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-10-22",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-22",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-22",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-10-23",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-23",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-23",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-10-24",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-24",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-24",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-10-25",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-25",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-25",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-10-26",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-26",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-26",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-10-27",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-27",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-27",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-03",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-03",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-03",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-04",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-04",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-04",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-05",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-05",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-05",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-06",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-06",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-06",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-07",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-07",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-07",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-08",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-08",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-08",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-09",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-09",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-09",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-10",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-10",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-10",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-11",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-11",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-11",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-12",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-12",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-12",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-13",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-13",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-13",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-14",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-14",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-14",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-15",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-15",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-15",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-16",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-16",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-16",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-18",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-18",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-18",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-19",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-19",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-19",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-20",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-20",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-20",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-21",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-21",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-21",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-22",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-22",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-22",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-23",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-23",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-23",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-24",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-24",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-24",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-25",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-25",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-25",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-26",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-26",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-26",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-27",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-27",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-27",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-28",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-28",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-28",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-11-29",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-29",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-29",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-11-30",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-11-30",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-11-30",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-01",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-01",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-01",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-02",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-02",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-02",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-03",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-03",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-03",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-04",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-04",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-04",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-05",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-05",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-05",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-06",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-06",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-06",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-07",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-07",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-07",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-08",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-08",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-08",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-09",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-09",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-09",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-10",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-10",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-10",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-11",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-11",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-11",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-12",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-12",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-12",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-13",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-13",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-13",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-14",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-14",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-14",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-15",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-15",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-15",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-16",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-16",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-16",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-17",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-17",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-17",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-18",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-18",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-18",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-19",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-19",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-19",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-20",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-20",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-20",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-21",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-21",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-21",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-22",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-22",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-22",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-23",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-23",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-23",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-24",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-24",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-24",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-25",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-25",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-25",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-26",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-26",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-26",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-27",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-27",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-27",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-28",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-28",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-28",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-29",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-29",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-29",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2026-12-30",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-30",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-30",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2026-12-31",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2026-12-31",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2026-12-31",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-01",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-01",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-01",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-02",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-02",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-02",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-03",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-03",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-03",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-04",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-04",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-04",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-05",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-05",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-05",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-06",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-06",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-06",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-07",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-07",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-07",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-08",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-08",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-08",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-09",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-09",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-09",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-10",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-10",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-10",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-11",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-11",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-11",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-12",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-12",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-12",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-13",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-13",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-13",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-14",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-14",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-14",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-15",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-15",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-15",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-16",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-16",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-16",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-17",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-17",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-17",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-18",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-18",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-18",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
+    }
+  ],
+  "a_corriger": [],
+  "hors_grille": [],
+  "refuses": [],
+  "recents_et_prevus": [
+    {
+      "jour": "2026-10-09",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "echec",
+      "texte": null,
+      "erreur": "créneau dépassé sans publication"
+    },
+    {
+      "jour": "2026-10-09",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "echec",
+      "texte": "j'pense à toi là. c'est tout.",
+      "erreur": "créneau dépassé sans publication"
+    },
+    {
+      "jour": "2026-10-09",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "publie",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-10",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "rendu",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-10",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "rendu",
+      "texte": "j'ai fait un schéma",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-10",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "rendu",
+      "texte": "j'aime bien quand t'es là et qu'on fait rien",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-11",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "rendu",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-11",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "rendu",
+      "texte": "même quand on est pas d'accord, on est dans la même équipe.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-11",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "rendu",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-12",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-12",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "reviens vite stp",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-12",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-13",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-13",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "je gère.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-13",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "je te choisis encore. même avec ta vaisselle.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-14",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-14",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "mon humeur, un jour normal",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-14",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-15",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-15",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "t'as encore oublié le pain...",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-15",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "dors bien mon amoureux <3",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-16",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-16",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "j'ai rien fait",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-16",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-17",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-17",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "état des lieux",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-17",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "je t'aime en pyjama troué aussi",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-18",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-18",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "on s'engueule pour la vaisselle. on s'endort collés.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-18",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-19",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-19",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "j'ai trop hâte de me blottir",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-19",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    }
+  ],
+  "idees": [],
+  "prochain_creneau": {
+    "mipaps-anime": {
+      "jour": "2026-10-11",
+      "creneau": "matin"
+    },
+    "mipaps-statique": {
+      "jour": "2026-10-10",
+      "creneau": "soir"
+    },
+    "mipaps-histoire": {
+      "jour": "2026-10-11",
+      "creneau": "soir"
+    },
+    "mipaps-post": {
+      "jour": "2026-10-10",
+      "creneau": "midi"
+    }
+  },
+  "statistiques_j7": []
+}
