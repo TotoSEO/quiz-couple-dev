@@ -1,0 +1,282 @@
+{
+  "jour": "2026-11-03",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-043",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il tient le parapluie pour elle : la rose grelotte sous la pluie, le violet arrive avec un parapluie, il s'en sert pour elle et finit mouillé, câlin sous le parapluie. Aucune bulle.",
+        "titre": "POV: holding the umbrella for her",
+        "plans": [
+          {
+            "description": "Une rue de ville en matinée, ciel gris, la pluie tombe. Dès la première image la rose est debout au milieu du trottoir, sans parapluie, les épaules rentrées, les yeux plats, la bouche triste, et elle frissonne ; trois petits points flottent au-dessus de sa tête. À 1 s le violet entre par le bord droit en marchant, un grand parapluie ouvert à la main. La caméra se rapproche doucement.",
+            "duree": 3.8,
+            "decor": "rue",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "tremble",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "plats",
+                    "bouche": "triste",
+                    "sourcils": "tristes"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 2.4,
+                    "effet": "points"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": 1100,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 3.2,
+                    "vers": 700
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "parapluie",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.0,
+                    "a": 3.8,
+                    "cible": "rose"
+                  }
+                ]
+              }
+            ],
+            "ambiance": "pluie",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.15,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même rue sous la pluie. Le violet se tient maintenant juste à côté de la rose et tient le parapluie au-dessus de sa tête. Les yeux de la rose s'écarquillent, ses joues rosissent, elle lève les yeux vers lui et sourit timidement ; elle arrête de trembler. Le violet, lui, se retrouve à moitié sous la pluie et une goutte de gêne glisse sur sa tempe, mais il garde un grand sourire. Zoom rapide sur leurs visages à 0,3 s.",
+            "duree": 3.8,
+            "decor": "rue",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "tremble",
+                    "de": 0,
+                    "a": 0.6
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.3,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.2,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.2,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": 700,
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "parapluie",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "effet": "goutte"
+                  }
+                ]
+              }
+            ],
+            "ambiance": "pluie",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 620,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Plan large sous la pluie. La rose se rapproche et pose la tête contre l'épaule du violet : câlin, les deux ferment les yeux de bonheur, joues roses, le parapluie au-dessus d'eux ; des cœurs montent. Le violet rouvre les yeux à 2,4 s, tout heureux, la bouche de chat. La caméra recule doucement pour montrer la rue mouillée.",
+            "duree": 4.2,
+            "decor": "rue",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.4,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": 700,
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "parapluie",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.4,
+                    "a": 2.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "chat",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "ambiance": "pluie",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.15,
+                "x": 620,
+                "y": 1100
+              },
+              {
+                "a": 4.2,
+                "zoom": 1,
+                "x": 540,
+                "y": 1050
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "He got wet so she could stay dry.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

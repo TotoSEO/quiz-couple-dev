@@ -1,0 +1,64 @@
+{
+  "jour": "2026-11-03",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "tu-preferes",
+  "categorie": "tu-preferes",
+  "sujet": "tp-008",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "tu-preferes",
+        "langue": "en",
+        "theme": "light",
+        "etiquette": "Gifts edition",
+        "accroche": "Would you rather: gifts?",
+        "consigne": "6 dilemmas. Pick fast, then compare with your partner!",
+        "amorce": "Would you rather...",
+        "secondes": 5,
+        "son": {
+          "ambiance": "jeu"
+        },
+        "dilemmes": [
+          {
+            "a": "A handwritten letter",
+            "b": "A surprise gift"
+          },
+          {
+            "a": "Flowers every week",
+            "b": "One big trip a year"
+          },
+          {
+            "a": "A gift they made",
+            "b": "A gift they bought"
+          },
+          {
+            "a": "A surprise party",
+            "b": "A quiet dinner"
+          },
+          {
+            "a": "A framed photo of us",
+            "b": "A playlist of our songs"
+          },
+          {
+            "a": "A gift on your birthday",
+            "b": "A gift for no reason"
+          }
+        ],
+        "fin": {
+          "question": "Did you pick the same? Comment your A and B!",
+          "bouton": "Send this to your partner",
+          "signature": "More dilemmas on quiz-couple.com"
+        }
+      },
+      "legende": "Would you rather, gifts edition: which one would melt you?\n\nSave this for your next date night.",
+      "hashtags": [
+        "#wouldyourather",
+        "#couplequestions",
+        "#couplequiz",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "jour": "2026-11-02",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-032",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Les deux se jettent sur la même manette : regards qui se défient, zoom sur l'un puis l'autre, la rose gagne, le violet boude, elle la lui rend. Aucune bulle.",
+        "titre": "POV: you both reach for the remote",
+        "plans": [
+          {
+            "description": "Le salon, le soir, lumière chaude de la lampe. Dès la première image les deux sont assis dans le canapé, la rose à gauche, le violet à droite, les yeux fixés sur l'écran ; une manette de jeu est posée sur le coussin entre eux. À 1,6 s les deux baissent les yeux vers la manette en même temps, la bouche ronde, et un « ! » apparaît au-dessus de chaque tête. La caméra se rapproche doucement.",
+            "duree": 3.4,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 3.4,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.4,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 3.4,
+                    "effet": "exclamation"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 3.4,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.4,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.9,
+                    "a": 3.4,
+                    "effet": "exclamation"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "manette",
+                "x": 540,
+                "y": 1215,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.4,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur le visage de la rose : sourcils froncés, regard fixe, bouche pincée. À 1,5 s coupe sur le violet, le même regard déterminé, une goutte de gêne sur la tempe. À 2,6 s les deux se jettent sur la manette en même temps et la caméra tremble fort.",
+            "duree": 3.6,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "fache",
+                    "de": 0.2,
+                    "a": 1.5
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.5,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "faches"
+                  },
+                  {
+                    "geste": "fache",
+                    "de": 2.6,
+                    "a": 3.6
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.5,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.5,
+                    "yeux": "ouverts",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 1.5,
+                    "effet": "goutte"
+                  },
+                  {
+                    "geste": "fache",
+                    "de": 1.6,
+                    "a": 3.6
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "manette",
+                "x": 540,
+                "y": 1215,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.6,
+                "x": 400,
+                "y": 1150
+              },
+              {
+                "a": 1.5,
+                "zoom": 1.6,
+                "x": 680,
+                "y": 1150
+              },
+              {
+                "a": 2.6,
+                "secousse": 14
+              }
+            ]
+          },
+          {
+            "description": "Plan large. La rose tient la manette à deux mains, les yeux fermés de plaisir, un grand sourire de victoire, des étincelles autour d'elle. Le violet, les bras ballants, les yeux plats et la bouche en moue, boude en regardant le plafond, un petit nuage de points au-dessus de sa tête. À 2,6 s la rose lui tend la manette en riant ; il se tourne vers elle, les yeux brillants. La caméra se rapproche des deux.",
+            "duree": 4.2,
+            "decor": "salon",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "canape-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "manette",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 2.4,
+                    "effet": "etincelles"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 2.4,
+                    "a": 4.2
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "canape-droite",
+                "gestes": [
+                  {
+                    "geste": "boude",
+                    "de": 0,
+                    "a": 2.5
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 2.5,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.5,
+                    "a": 2.5,
+                    "effet": "points"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "yeux": "brillants",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Two hands, one remote, zero mercy.\n\nTag your partner.",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

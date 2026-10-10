@@ -1,0 +1,303 @@
+{
+  "jour": "2026-11-04",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-046",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Le petit déjeuner à deux : la rose bâille à la table du café, le violet arrive avec deux tasses, elle s'illumine, ils déjeunent en riant et s'embrassent. Aucune bulle.",
+        "titre": "POV: breakfast for two",
+        "plans": [
+          {
+            "description": "Un café le matin, lumière douce, la machine du comptoir qui fume. Dès la première image la rose est assise à la petite table ronde, à gauche, le menton dans la main, les yeux à moitié fermés, la bouche qui bâille. À 1,2 s le violet entre par le bord droit en marchant, deux tasses fumantes dans les mains, un grand sourire, les joues roses ; la clochette de la porte tinte. Il s'assoit en face d'elle à 2,6 s.",
+            "duree": 3.8,
+            "decor": "cafe",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 0,
+                    "a": 1.4
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.2,
+                    "a": 2.6,
+                    "cible": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.5,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": 1150,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 2.4,
+                    "vers": 760
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.2,
+                    "a": 3.8,
+                    "cible": "rose"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même café. Le violet pose une assiette au milieu de la petite table et tend une des deux tasses à la rose. Les yeux de la rose deviennent brillants, ses joues rosissent, sa bouche s'ouvre en un grand sourire. Des petites étincelles scintillent au-dessus de la table. Zoom rapide sur son visage à 0,3 s.",
+            "duree": 3.6,
+            "decor": "cafe",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "tasse",
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.8,
+                    "yeux": "ouverts",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.8,
+                    "a": 3.6,
+                    "yeux": "brillants",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 3.6,
+                    "effet": "etincelles"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 1.6,
+                    "objet": "assiette",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "offre",
+                    "de": 1.6,
+                    "a": 3.6,
+                    "objet": "tasse"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 420,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Plan large du café. Les deux mangent et boivent en se souriant, les joues roses, puis la rose rit, les yeux plissés. À 2,4 s elle se penche par-dessus la table et le violet lui donne un petit bisou ; des cœurs montent. La caméra recule doucement sur le petit déjeuner à deux.",
+            "duree": 4.4,
+            "decor": "cafe",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 1.4,
+                    "objet": "tasse"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.4,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 2.4,
+                    "a": 3.8,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 3.8,
+                    "a": 4.4,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.8,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 1.4,
+                    "objet": "tasse"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 1.4,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1100
+              },
+              {
+                "a": 4.4,
+                "zoom": 1,
+                "x": 540,
+                "y": 1000
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Breakfast tastes better when it is shared.\n\nSend this to your partner!",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
