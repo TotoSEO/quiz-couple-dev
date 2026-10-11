@@ -566,12 +566,14 @@
 
           <!-- Saisie du jeton. Il n'est jamais écrit dans le dépôt : le site
                est statique et public, tout ce qui est construit est lisible
-               par n'importe qui. Il reste dans ce navigateur. -->
+               par n'importe qui. Depuis le 11 octobre 2026, il est rangé côté
+               serveur (table fermée admin_reglages, fonction admin-reglages),
+               plus dans le localStorage du domaine. -->
           <div id="afl-gate" class="afl-gate hidden">
             <div class="afl-gate-card">
               <span class="afl-gate-icon" aria-hidden="true">🔑</span>
               <h2 class="afl-gate-title">Connecter Affilae</h2>
-              <p class="afl-gate-text">Collez votre jeton d'API Affilae. Il est enregistré dans ce navigateur uniquement, jamais sur le site.</p>
+              <p class="afl-gate-text">Collez votre jeton d'API Affilae. Il est rangé dans la base, dans une table fermée (comme les jetons Instagram), jamais dans le site ni dans ce navigateur.</p>
               <input type="password" id="afl-token-input" class="input w-full" placeholder="eyJhbGciOi..." autocomplete="off" spellcheck="false">
               <p id="afl-gate-error" class="afl-gate-error hidden"></p>
               <button id="afl-token-save" class="btn btn-primary w-full">Connecter</button>
