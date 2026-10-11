@@ -171,7 +171,16 @@ function chevauche(plages, debut, fin) {
 // les proprietes enregistrees, et les variables de la racine.
 const TOUJOURS = /^(@import|@charset|@namespace|@font-face|@property|:root\b|html\b)/;
 
-function selectionne(css, noeuds, plages) {
+// Ce qu'une page peut afficher des le chargement sans que la couverture le
+// voie : le compteur de duree en couple s'ouvre directement sur son resultat
+// au retour sur la page ou par un lien partage. Ces regles etaient recopiees
+// a la main apres chaque releve ; oubliees le 8 octobre 2026, elles sont
+// gardees ici, a leur place dans la feuille.
+const GARDER_PAR_CLE = {
+  compteurCouple: /\.(cc-[a-z]|dn-verdict|dn-bloc)/,
+};
+
+function selectionne(css, noeuds, plages, garderAussi) {
   const garde = new Set();
   const animations = new Set();
   const keyframes = [];
@@ -192,7 +201,7 @@ function selectionne(css, noeuds, plages) {
     for (const nd of liste) {
       if (nd.enfants) { passe1(nd.enfants); continue; }
       if (/^@(-webkit-)?keyframes\s+/.test(nd.prelude)) { keyframes.push(nd); continue; }
-      if (TOUJOURS.test(nd.prelude) || chevauche(plages, nd.debut, nd.fin)) marque(nd);
+      if (TOUJOURS.test(nd.prelude) || (garderAussi && garderAussi.test(nd.prelude)) || chevauche(plages, nd.debut, nd.fin)) marque(nd);
     }
   }
   passe1(noeuds);
@@ -308,7 +317,7 @@ async function main() {
         const { plages, texte } = await releve(browser, p.chemin);
         if (texte === null) throw new Error('styles.css jamais chargee sur ' + p.chemin);
         if (texte.length !== cssDist.length) throw new Error('la feuille servie ne correspond pas a dist/css/styles.css (' + texte.length + ' vs ' + cssDist.length + ')');
-        const css = selectionne(cssDist, arbre, plages);
+        const css = selectionne(cssDist, arbre, plages, GARDER_PAR_CLE[p.cle]);
         // Pas de date dans l'en-tete : deux releves identiques doivent donner le meme fichier.
         const entete = `/*! critique ${p.cle} styles=${empreinte} */\n`;
         fs.writeFileSync(path.join(DOSSIER, `${p.cle}.css`), entete + css, 'utf-8');
