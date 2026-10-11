@@ -314,7 +314,7 @@
     "enregistree": "Immagine salvata! Apri Instagram, TikTok, Snapchat o Facebook e aggiungila alla tua storia."
   },
   "parentalite": {
-    "setupDesc": "Entrambi rispondete separatamente alle stesse 20 domande.",
+    "setupDesc": "Entrambi rispondete separatamente alle stesse {{n}} domande.",
     "scoreOn60": "Punteggio su 60 per persona",
     "combinedScore": "Punteggio globale della coppia",
     "gapWarning": "C'è un divario significativo tra i vostri due punteggi. Spesso è in questi divari che si trovano le conversazioni più importanti da avere."
