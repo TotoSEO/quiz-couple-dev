@@ -115,8 +115,9 @@ apart »). Chaque mécanique vient avec ses sujets dans la banque.
 - **L'accroche est dans la première seconde** : les personnages sont dans
   l'image dès la première image et bougent tout de suite. Jamais d'image
   vide au début.
-- Une seule idée, 10 à 15 secondes (jamais moins de 10), 1 à 5 plans. Une chute à la fin
-  (réaction, rire, cœurs, câlin).
+- Une seule idée, 10 à 15 secondes (jamais moins de 10), 1 à 5 plans. Une
+  chute à la fin, dans l'image (réaction, rire, cœurs, câlin), jamais dans
+  une phrase qui la commente (voir « La chute, et ce qui sonne machine »).
 - **Très simple et minimaliste** : un décor, deux personnages au plus, un
   ou deux objets. Les références de Thomas marchent parce qu'elles sont
   simples.
@@ -189,7 +190,11 @@ Comment your A and B! ». Renvoi vers le site possible, comme les jeux.
 ### `phrase` : phrase tendre (gabarit `citation`)
 
 Une phrase écrite par nous (jamais une citation d'auteur), police plume,
-fleurs au trait. Quatre lignes au plus. Le son tendance du moment lui va
+fleurs au trait. Quatre lignes au plus. Une phrase qu'une personne écrirait
+vraiment à l'autre, avec un détail dedans (« I love how you say my name
+when you're half asleep. », « You get my jokes. Nobody gets my jokes. »),
+pas une maxime sur l'amour (« Being loved by you feels like being
+understood. ») : la banque a été réécrite dans ce sens le 9 octobre 2026. Le son tendance du moment lui va
 rarement : la recette peut demander une recherche douce à la place
 (`"son": {"recherche": "soft piano"}`).
 
@@ -270,6 +275,53 @@ dans le studio en cinq ambiances (`leger`, `doux`, `sensuel`, `jeu`,
 la vidéo au rendu, et alors pas de son Instagram par-dessus. On ne s'en
 sert pas sans raison.
 
+## La chute, et ce qui sonne machine
+
+Thomas, le 9 octobre 2026, sur les premiers posts des deux comptes : « les
+chutes sont vraiment nulles, elles sont pas naturelles, c'est de l'humour
+à l'IA, pas humain ». Ce qui les trahissait se repère, et `controler.mjs`
+le refuse depuis (`reseaux/automates/lib/style.mjs`, à la porte de
+l'atelier, pas dans la synchro) :
+
+- **La chute est dans l'image, jamais dans une phrase qui la commente.**
+  Un humain poste l'image et s'arrête. « That's love. », « He knew
+  better. », « Every single time. », « And that's okay. », « Plot twist »,
+  « Spoiler » : c'est le narrateur qui explique la blague, et c'est
+  interdit, dans un texte à l'écran comme dans une légende. Si un texte
+  accompagne la dernière image, c'est un détail vrai (« 3 AM », « 1 hour
+  later », « 48 photos later ») ou ce que le personnage dit pour de vrai
+  (« ...sorry »), jamais un bilan.
+- **La légende ajoute un détail vrai, ou se tait.** « It's 3am. »,
+  « Every night since 2023. », « 1 hour of 'I don't know, you pick.' We
+  got pizza. » Elle ne répète pas le texte de l'image (« Would you rather,
+  date night edition » sous un reel qui dit « Would you rather: date
+  night? »), elle ne le résume pas (« Cold feet in bed: the ultimate test
+  of love. »), elle n'explique pas entre parenthèses. L'appel seul est une
+  légende.
+- **L'appel est un de la liste, tel quel** (`APPELS` dans `lib/style.mjs`) :
+  « Send this to your partner », « Send this to him », « Send this to
+  her », « Send this with no context », « Tag your partner », « Tag him »,
+  « Tag her », « Comment your score », « Comment your A and B », « Finish
+  it in the comments », « Which one are you? », « Save this for your next
+  date night », « Save this for later ». Jamais un appel inventé en
+  « who » (« Tag your partner who always says it », « Tag your partner
+  with ice feet ») : personne n'écrit ça.
+- **Un « <3 » par post au plus**, jamais à la fin d'un texte de reel
+  (« ...sorry <3 » devient « ...sorry »).
+- **Pas de texte entier entre parenthèses**, pas de triade (« Sunset, the
+  sea, and you. »), pas trois phrases de trois mots à la suite, pas de
+  maxime sur l'amour à la place d'une phrase qu'une personne écrirait
+  (« You're the reason I believe in slow, gentle love. » est devenu « You
+  never rushed me. I noticed. »).
+- **Deux tests avant de garder une ligne.** À l'oral : est-ce que quelqu'un
+  dirait ça à voix haute, comme ça ? L'ami : est-ce que tu enverrais ce
+  post à ta personne sans avoir un peu honte ? Si l'un des deux dit non,
+  on coupe la phrase et on garde l'image.
+- **Piocher dans les vraies répliques** : `REFERENCES.md`, partie « Les
+  vraies répliques », des phrases écrites par des gens en couple, à
+  reprendre telles quelles ou à transposer. On s'en sert comme d'une
+  oreille : le ton juste, c'est celui-là.
+
 ## Légendes et hashtags
 
 Instagram lit la légende et le texte à l'écran comme un moteur de
@@ -277,20 +329,29 @@ recherche, et ce sont les envois et les enregistrements qui font la portée
 d'un reel. La légende sert donc à deux choses : dire de quoi il s'agit avec
 les mots que les gens tapent, et donner envie d'un geste précis.
 
-- **Première ligne : l'accroche**, sans répéter mot pour mot le texte de
-  l'image, et avec un mot-clé posé naturellement (« couple quiz »,
-  « boyfriend », « girlfriend », « my partner », « relationship », « date
-  night », « would you rather »). Une ou deux lignes de plus au maximum.
+- **Première ligne : un détail vrai**, ou rien (« It's 3am. », « Every
+  night since 2023. », « 6 dilemmas, 5 seconds each. »), avec un mot-clé
+  quand il vient naturellement (« couple quiz », « boyfriend »,
+  « girlfriend », « my partner », « relationship », « date night », « would
+  you rather »). Jamais le texte de l'image répété ni résumé, jamais une
+  phrase qui commente la scène ; l'appel seul est une légende (voir « La
+  chute, et ce qui sonne machine »).
 - **Un appel, et un seul, choisi pour le geste qu'on veut** :
   - envoyer, pour les animations, les minis et les phrases tendres :
-    « Send this to your partner », « Send this to them without
-    explaining », « Tag them » ;
+    « Send this to your partner », « Send this to him », « Send this to
+    her », « Send this with no context », « Tag your partner », « Tag
+    him », « Tag her » ;
   - commenter, pour les jeux et les phrases à finir : « Comment your
     score! », « Comment your A and B! », « Finish it in the comments »,
-    « Who got pointed at the most? » ;
+    « Who got pointed at the most? », « Which one are you? » ;
   - enregistrer, de temps en temps, pour ce qui se garde : « Save this for
-    your next date night » (dilemmes, questions).
-  Les trois posts d'une même journée ne portent pas tous le même appel.
+    your next date night », « Save this for later » (dilemmes, questions) ;
+    les jeux et les carrousels peuvent finir par « More quizzes: link in
+    bio » sur sa propre ligne.
+  La liste entière est `APPELS` dans `reseaux/automates/lib/style.mjs`, et
+  un appel qui n'y est pas est refusé : jamais d'appel inventé (« Tag your
+  partner who always says it »). Les trois posts d'une même journée ne
+  portent pas tous le même appel.
 - **3 à 5 hashtags, précis**, par catégorie, `#quizcouple` dans le lot :
   - animations, coquin, statique : `#couplegoals`, `#relationshiphumor`,
     `#couplecomedy`, `#cuteanimation`, `#quizcouple` ;

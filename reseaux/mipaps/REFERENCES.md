@@ -284,3 +284,72 @@ drôle.
   bibliothèque Instagram à la publication, comme pour Quiz Couple.
 - Le décor coloré et la mise en page chargée de story.sketchers : fond
   blanc, un objet, c'est la règle.
+
+## Les vraies répliques (octobre 2026)
+
+Thomas, le 9 octobre 2026, sur les premiers posts des mipaps : « les chutes
+sont vraiment nulles, elles sont pas naturelles, c'est de l'humour à l'IA,
+pas humain ». D'où cette banque, relue avant d'écrire un texte, une page
+d'histoire ou une légende : des phrases écrites par des gens en couple, en
+français (sélections Topito, devenu 10h26 : « Top 12 des couples qui n'ont
+pas perdu leur sens de l'humour », « Top 30 des meilleures blagues à faire
+quand t'es en couple » ; Demotivateur, « 50 phrases drôles d'amour »), et
+des tweets de couples relevés par HuffPost et Yahoo, transposés en
+français. On s'en sert comme d'une oreille : le ton juste, c'est celui-là.
+Une réplique se reprend telle quelle ou se transpose aux deux personnages ;
+on ne la « cisèle » pas.
+
+### Ce qu'elles ont en commun, et que nos textes n'avaient pas
+
+1. **Un détail précis à la place d'un adjectif** : une heure, un chiffre,
+   un objet, ce qu'il a dit mot pour mot (« la moitié de son Twix », « 45
+   minutes », « les gros pots », « 16 ans et trois enfants »).
+2. **La chute est un fait, pas un commentaire.** La phrase s'arrête sur ce
+   qui s'est passé (« Elle croit que c'est un jeu. », « Je sais. ») ;
+   personne n'écrit « c'est ça l'amour » après.
+3. **Le dialogue réel en deux répliques** (« Mon amour, tu peux tondre la
+   pelouse ? » « Oui. »), chacun dans son rôle, et le décalage fait tout.
+4. **L'autodérision** : celui qui écrit est souvent le ridicule de
+   l'histoire.
+
+### Les répliques en français (reprises telles quelles)
+
+- Ma femme m'a demandé si je voulais la moitié de son Twix. Elle croit que c'est un jeu.
+- Arrête de chier, tu me manques. (un petit mot laissé sur la porte des toilettes)
+- Je compte les jours jusqu'au retour de mon copain.
+- C'est bon j'ai fait la vaisselle. (une assiette lavée, le reste de l'évier plein)
+- Mon amour tu peux tondre la pelouse ? / Oui. (deux jours plus tard, la pelouse)
+- Ma copine m'a demandé si elle pouvait manger un morceau de ma glace, j'ai répondu oui. (il reste le cornet)
+- Ma femme n'a toujours pas remarqué.
+- Je t'aime. / Je sais.
+- Tu me manques... enfin, pas comme le chocolat depuis que je suis au régime, mais quand même un peu.
+- C'est tellement génial de trouver une personne spéciale que l'on veut ennuyer pour le reste de sa vie.
+- Il ne peut y avoir que deux solutions : soit j'ai raison, soit tu as tort.
+- Cherche CDI : câlins à durée indéterminée.
+- L'amour, c'est être stupide ensemble.
+- Être capable de transformer une phrase en une dispute de six heures, ça relève du talent.
+- Quand tu testes ton rouge à lèvres sur ton mec pour voir s'il est bien.
+- Quand tu t'ennuies car ton mari n'est toujours pas rentré...
+
+### Les tweets de couples, transposés en français
+
+- il a appelé le magasin pour demander s'il était ouvert. je serai jamais aussi courageuse.
+- elle veut pas un poème. elle veut des frites.
+- on a croisé sa copine en balade. j'ai regardé un lampadaire pendant 45 minutes.
+- il m'a dit d'arrêter de tout prendre au sérieux. j'ai arrêté de faire la vaisselle au sérieux. il avait raison, c'est génial.
+- « faut qu'on parle. » moi, en panique : quoi ? elle : faut qu'on prenne les gros pots de pâte à tartiner.
+- j'ai mis mon nouveau pull et j'ai demandé si j'étais mignonne. il a dit « bah c'est un pull ». il apprend.
+- il m'a appelée depuis l'étage parce qu'il avait plus de papier toilette. on faisait comment avant les téléphones ?
+- on est le 28 février et elle a déjà demandé ce qu'on offre à noël.
+- « pourquoi tes mains saignent ? » 20 minutes sur une pistache. « j'apprends la guitare. »
+- la tête qu'elle fait quand elle ouvre un tiroir au hasard et trouve exactement ce qu'elle cherchait.
+- d'après lui, c'est le seul sur la route qui sait conduire.
+- « tu peux allumer le four ? » moi, en train de danser devant le four. elle : pourquoi. pour tout. pourquoi.
+- il m'a demandé si je voulais un massage. j'ai dit « ok mais pas de bêtises ». je voulais des bêtises.
+- je viens de découvrir que c'est son fond d'écran depuis 3 ans. (elle qui dort, la bouche ouverte)
+- « en couple et heureuse » dans la bio ? non. « j'ai quelqu'un et il me supporte bien. »
+- elle me raconte sa journée depuis 40 minutes. j'écoute depuis 40 minutes. je sais pas ce qui s'est passé.
+- il a dit « encore un épisode » à 22 h. il est 3 h.
+- 1 h de « je sais pas, choisis toi ». on a pris une pizza.
+- il part à 19 h. il est 20 h 30. (il est toujours là)
+- « c'est pas grave. » / c'est grave.

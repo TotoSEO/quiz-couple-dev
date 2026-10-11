@@ -42,7 +42,7 @@ refuse tout nom qui n'existe pas.
 
 Première personne, tutoiement, comme un message envoyé à l'autre. Tout en
 minuscules, sauf quand on crie (« JE T'AIME !!! »). Les tournures de
-l'oral : « j'pense », « t'es », « stp », « bon... », « c'est tout. ». Les
+l'oral : « j'pense », « t'es », « stp », « bon... ». Les
 points de suspension quand une phrase reste en l'air, un ou deux « !!! »
 quand on déborde, « <3 » en lettres (jamais d'emoji dans l'image : la
 police ne les dessine pas).
@@ -50,6 +50,48 @@ police ne les dessine pas).
 Deux à douze mots pour un mini, une phrase ou deux pour une déclaration,
 jamais un paragraphe. Ce qui se dit en une image ne s'explique pas en
 dessous.
+
+## La chute, et ce qui sonne machine
+
+Thomas, le 9 octobre 2026, sur les premiers posts des deux comptes : « les
+chutes sont vraiment nulles, elles sont pas naturelles, c'est de l'humour
+à l'IA, pas humain ». Ce qui les trahissait se repère, et `controler.mjs`
+le refuse depuis (`reseaux/automates/lib/style.mjs`, à la porte de
+l'atelier, pas dans la synchro) :
+
+- **La chute est dans le dessin, jamais dans une phrase qui la commente.**
+  Un humain poste l'image et s'arrête. « c'est tout. », « je note. », « et
+  ça repart. », « c'était parfait. », « comme d'hab. », « c'est ça,
+  l'amour » : c'est le narrateur qui explique la blague, et c'est interdit,
+  dans un texte à l'écran comme dans une légende. Si un texte accompagne la
+  dernière image, c'est un détail vrai (« 1 h plus tard », « 7 h 45 »,
+  « il a 12 pulls ») ou ce que le personnage dit pour de vrai (« bon.
+  viens là. »), jamais un bilan.
+- **La légende ajoute un détail vrai, ou se tait.** Elle ne répète pas le
+  texte de l'image, elle ne le résume pas, elle n'explique pas entre
+  parenthèses. « il part à 19 h. il est 20 h 30. » puis l'appel ; ou
+  l'appel seul.
+- **L'appel est un de la liste, tel quel** (`APPELS` dans `lib/style.mjs`) :
+  « envoie-lui ça », « envoie ça sans rien dire », « envoie ça à ta
+  personne », « tague-le », « tague-la », « tague ta personne », « tague ton
+  amoureux », « c'est qui chez vous ? », « c'est laquelle chez vous ? »,
+  « tu fais ça aussi ? », « garde ça pour un soir où ça va pas », « garde ça
+  pour la prochaine dispute ». Jamais un appel inventé avec « celui qui »
+  (« tague celle qui te vole tes pulls ») : personne n'écrit ça.
+- **Un « <3 » par post au plus**, jamais à la fin d'un texte de reel.
+- **Pas de texte entier entre parenthèses**, pas de triade (« on se
+  dispute. on parle. on s'aime. »), pas trois phrases de trois mots à la
+  suite, pas de renversement d'aphorisme (« j'ai pas peur du monde, j'ai
+  peur du monde sans toi »).
+- **Deux tests avant de garder une ligne.** À l'oral : est-ce que quelqu'un
+  dirait ça à voix haute, comme ça ? L'ami : est-ce que tu enverrais ce
+  post à ta personne sans avoir un peu honte ? Si l'un des deux dit non,
+  on coupe la phrase et on garde le dessin.
+- **Piocher dans les vraies répliques** : `reseaux/mipaps/REFERENCES.md`,
+  partie « Les vraies répliques », des phrases écrites par des gens en
+  couple, en français ou transposées, à reprendre telles quelles ou à
+  adapter aux deux personnages. On s'en sert comme d'une oreille : le ton
+  juste, c'est celui-là.
 
 ## Les trois piliers, et la déclaration de la semaine
 
@@ -64,8 +106,7 @@ dessous.
    rétroactive, le régime face au gâteau.
 
 Et chaque semaine, une **déclaration** : la phrase qu'on se dédie, posée en
-grand (« on est dans la même équipe. même les jours où on n'est pas
-d'accord. surtout ces jours-là. »). C'est ce qui fait le plus de j'aime et
+grand (« même quand on est pas d'accord, on est dans la même équipe. »). C'est ce qui fait le plus de j'aime et
 de republications ; les anecdotes du couple font les envois en privé.
 
 ## La semaine type (heure de Paris)
@@ -91,8 +132,9 @@ retournent, sautent, s'endorment ; les étapes de chaque personnage
 (position, angle, taille, expression, pose, bras) s'interpolent, le cycle de
 marche suit la distance parcourue, et personne ne se tourne en courant : on
 finit sa course, on s'arrête, on se tourne d'un petit saut. Un texte en haut, posé dès la première
-seconde (« quand il me voit de loin »), la chute dans le dernier plan, parfois
-une deuxième ligne qui s'écrit mot à mot (« mais il revient toujours <3 »).
+seconde (« quand il me voit de loin »), la chute dans le dernier plan, dans
+le dessin ; si une deuxième ligne s'y écrit mot à mot, c'est un détail vrai
+(« 1 h plus tard »), jamais une phrase qui commente la scène.
 Pas de bulle, pas de dialogue : la situation se comprend sans le son.
 
 Bruitages d'ambiance seulement : des pas, un pop quand quelque chose
@@ -110,7 +152,7 @@ Le modèle : `reseaux/studio/recettes/exemples/mipaps-reel.json`.
 Une image 1080 x 1350, trois styles, à varier dans la semaine :
 
 - **mini** : un texte court en haut et un personnage en grand (une émotion
-  par image, comme chez nub) : « j'pense à toi là. c'est tout. », « j'ai
+  par image, comme chez nub) : « j'pense à toi là. », « j'ai
   froid, viens. », « t'as encore oublié le pain... ».
 - **declaration** : le texte d'abord, en grand, et le câlin des deux en
   petit dessous. Une par semaine, le dimanche ou le lundi.
@@ -127,7 +169,7 @@ Chaque page est un moment d'une histoire complète : on fait glisser,
 l'histoire avance. De trois à dix pages ; la première accroche (« ce que
 j'imagine quand tu réponds pas »), les suivantes déroulent (« 10 min : il
 conduit, c'est normal. »), la dernière est la chute (« il dormait. ») et
-porte l'appel (« envoie ça à celui qui répond jamais »). Même cadre sur
+porte l'appel (« envoie-lui ça »). Même cadre sur
 toutes les pages : les personnages gardent leur taille d'une page à l'autre.
 C'est le format qui se garde et se renvoie.
 
@@ -150,16 +192,22 @@ Chaque jour, le reel du matin repart en story juste après sa publication
 
 ## Légendes et hashtags
 
-La légende est courte : une ligne qui prolonge l'image (pas qui la répète),
-en minuscules, puis un seul appel, choisi selon le geste voulu :
+La légende est courte : une ligne qui ajoute un détail vrai (une heure, un
+chiffre, ce qu'il a dit), ou rien, en minuscules, puis un seul appel, pris
+tel quel dans la liste `APPELS` de `reseaux/automates/lib/style.mjs` et
+choisi selon le geste voulu :
 
-- envoyer : « envoie ça à ta personne », « envoie ça à celui qui répond
-  jamais », « envoie ça sans rien dire » (animations, minis, statiques) ;
-- taguer : « tague ton amoureux », « tague celle qui te vole ton pull » ;
-- commenter : « c'est qui chez vous ? », « tu fais ça aussi ? » (contrastes,
-  schémas) ;
-- enregistrer : « garde ça pour un soir où ça va pas » (histoires,
-  déclarations).
+- envoyer : « envoie-lui ça », « envoie ça sans rien dire », « envoie ça à
+  ta personne » (animations, minis, statiques) ;
+- taguer : « tague-le », « tague-la », « tague ta personne », « tague ton
+  amoureux » ;
+- commenter : « c'est qui chez vous ? », « c'est laquelle chez vous ? »,
+  « tu fais ça aussi ? » (contrastes, schémas) ;
+- enregistrer : « garde ça pour un soir où ça va pas », « garde ça pour la
+  prochaine dispute » (histoires, déclarations).
+
+Jamais un appel inventé (« tague celle qui te vole ton pull ») : le
+contrôle le refuse, et personne n'écrit ça.
 
 Les trois posts d'une journée ne portent pas le même appel. Jamais de lien,
 jamais de « lien en bio » : le compte n'a pas de site. Hashtags, trois à
@@ -188,6 +236,9 @@ identifiant neuf, et l'écrit dans le journal.
   d'emoji dans l'image, pas de hashtag dans l'image.
 - Pas de rire ni de cri en bruitage, pas de dialogue en bulles : la
   situation se montre.
+- Pas de phrase de fin qui commente la scène (« c'est tout. », « je
+  note. »), pas de légende qui répète le dessin, pas d'appel inventé : voir
+  « La chute, et ce qui sonne machine ».
 - Pas de décor plein cadre, pas de couleur hors des cinq de la charte.
 
 ## Ce qu'on regarde dans les statistiques
