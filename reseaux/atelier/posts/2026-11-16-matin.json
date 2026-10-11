@@ -1,0 +1,272 @@
+{
+  "jour": "2026-11-16",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-053",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Elle est malade, il prend soin d'elle : la rose frissonne avec une compresse, le violet arrive avec une tasse fumante, elle s'endort et il la borde. Aucune bulle.",
+        "titre": "POV: you're sick and he takes care of you",
+        "plans": [
+          {
+            "description": "La chambre le soir, lumière chaude de la lampe de chevet. Dès la première image la rose est couchée dans le lit à gauche, les joues rouges de fièvre, les yeux plats et la bouche triste, elle frissonne sous la couette. À 1,2 s le violet entre par le bord droit en marchant avec précaution, une tasse fumante dans les mains, les sourcils tristes d'inquiétude, et s'arrête devant le lit à 2,6 s.",
+            "duree": 3.8,
+            "decor": "chambre",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "plats",
+                    "bouche": "triste"
+                  },
+                  {
+                    "geste": "tremble",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 3.8,
+                    "effet": "goutte"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": 1150,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 2.6,
+                    "vers": "devant-droite"
+                  },
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "tristes"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.6,
+                    "a": 3.8,
+                    "cible": "rose"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même chambre. Le violet tend la tasse fumante à la rose, qui ouvre les yeux, voit la tasse et sourit faiblement : ses yeux deviennent brillants, ses joues rosissent, des petits cœurs montent. Il lui sourit en retour, rassuré. Zoom rapide sur son visage à 0,3 s.",
+            "duree": 3.6,
+            "decor": "chambre",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0.8,
+                    "a": 3.6,
+                    "objet": "tasse",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.8,
+                    "yeux": "plats",
+                    "bouche": "triste"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.8,
+                    "a": 3.6,
+                    "yeux": "brillants",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.2,
+                    "a": 3.6,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "offre",
+                    "de": 0,
+                    "a": 0.8,
+                    "objet": "tasse"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 470,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même chambre, la lampe de chevet baisse. La rose a fini son thé, les yeux presque fermés, et s'endort doucement, des Z qui montent au-dessus d'elle. Le violet tire la couette jusqu'à son menton, la borde, puis reste là à la regarder dormir, un petit sourire tendre, et des cœurs montent. La caméra recule lentement.",
+            "duree": 4.4,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "plats",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "dort",
+                    "de": 1.4,
+                    "a": 4.4
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 4.4,
+                    "effet": "zzz"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.4,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 4.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.4,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "transition": "fondu",
+            "couette": "bouge",
+            "couetteDe": 0.8,
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.4,
+                "zoom": 1.0,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

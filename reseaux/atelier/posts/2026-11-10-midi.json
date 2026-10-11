@@ -27,7 +27,7 @@
           },
           {
             "a": "Always hear the truth",
-            "b": "Always hear compliments"
+            "b": "Only hear compliments"
           },
           {
             "a": "A white lie to be kind",
@@ -35,7 +35,7 @@
           },
           {
             "a": "Share every password",
-            "b": "Keep your phone private"
+            "b": "Keep your phone locked"
           },
           {
             "a": "Know your gift in advance",
@@ -43,7 +43,7 @@
           },
           {
             "a": "Say sorry right away",
-            "b": "Never admit you were wrong"
+            "b": "Never say I was wrong"
           }
         ],
         "fin": {

@@ -1,0 +1,30 @@
+{
+  "jour": "2026-11-14",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "citation",
+  "categorie": "phrase",
+  "sujet": "ph-011",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "citation",
+        "langue": "en",
+        "theme": "light",
+        "texte": "I sleep better when you're on your side of the bed.",
+        "fleurs": "brin-marguerite",
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#lovequotes",
+        "#relationshipquotes",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

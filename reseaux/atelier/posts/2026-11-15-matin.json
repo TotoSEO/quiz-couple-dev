@@ -1,0 +1,205 @@
+{
+  "jour": "2026-11-15",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-056",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Mini message : le violet fait coucou à la caméra, « sending you a hug », ouvre grand les bras, des cœurs, un clin d'œil.",
+        "plans": [
+          {
+            "description": "Fond papier avec un petit trait de sol. Dès la première image le violet est debout au centre, en grand, de face, et fait un grand coucou de la main à la caméra, un sourire doux, les joues roses. Le texte « sending you a hug » s'écrit mot à mot en haut à partir de 0,2 s. La caméra se rapproche doucement.",
+            "duree": 3.8,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "violet",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "salue",
+                    "de": 0,
+                    "a": 3.2,
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 0.2,
+                "texte": "sending you a hug",
+                "motAMot": true,
+                "place": "haut"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même fond. Le violet lève les deux bras en l'air puis les ouvre grand devant lui, les yeux fermés de bonheur, la bouche de chat ; le texte « a long one » s'écrit en haut. Il se balance doucement de gauche à droite et des petits cœurs montent autour de lui. Zoom rapide sur son visage à 0,3 s.",
+            "duree": 3.8,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "violet",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "joie",
+                    "de": 0,
+                    "a": 1.6
+                  },
+                  {
+                    "geste": "mignon",
+                    "de": 1.6,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 3.8,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 0.2,
+                "texte": "a long one",
+                "motAMot": true,
+                "place": "haut"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.4,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même fond. Le violet rouvre les yeux, regarde droit vers la caméra, rougit un peu et fait un petit clin d'œil, la bouche en sourire timide. Des étincelles scintillent autour de lui puis des cœurs flottent doucement jusqu'à la fin. La caméra recule lentement.",
+            "duree": 3.6,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "violet",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "ouverts",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 3.6,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 3.6,
+                    "effet": "etincelles"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1100
+              },
+              {
+                "a": 3.6,
+                "zoom": 1,
+                "x": 540,
+                "y": 1050
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
