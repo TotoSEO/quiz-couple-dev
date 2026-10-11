@@ -387,7 +387,9 @@
     "quizTypeCouple": "Quiz qué tipo de pareja sois",
     "testEstCeLeBon": "Test es la persona adecuada",
     "testSignesChinois": "Compatibilidad signos chinos",
-    "compteurCouple": "Contador de tiempo en pareja"
+    "compteurCouple": "Contador de tiempo en pareja",
+    "jeuDixMais": "Es un 10, pero...",
+    "testCompatSexuelle": "Test de compatibilidad sexual"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",

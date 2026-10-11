@@ -1,0 +1,113 @@
+{
+  "jsonLd": {
+    "name": "È un 10, ma..., il gioco di coppia"
+  },
+  "hero": {
+    "badge": "Gioco a due • 60 carte",
+    "title": "È un 10, ma...: il gioco da fare in coppia",
+    "titleHighlight": "È un 10, ma...",
+    "description": "Una persona perfetta e un difetto. Ognuno dà il suo nuovo voto da 0 a 10, poi confrontate. 60 carte da giocare in segreto, faccia a faccia o a distanza."
+  },
+  "section1": {
+    "title": "Cos'è «È un 10, ma...»?",
+    "p1": "«È un 10, ma...» è un gioco che si può fare tra amici o in coppia. Si immagina una persona perfetta, un 10 su 10, e le si aggiunge un difetto. Per esempio: «È un 10, ma mette il ketchup sulla carbonara». Poi ognuno dice che voto le darebbe adesso.",
+    "p2": "Se tieni il 10, vuol dire che il difetto non ti dà nessun fastidio. Se scendi a 2, vuol dire che ti rovina parecchio la persona... e se dai 0, è inaccettabile e non c'è più niente da salvare! L'idea viene da un trend di TikTok in inglese, «He's a 10 but...», che ha fatto il giro dei social. In due diventa uno di quei <a href=\"/it/giochi-di-coppia/\">giochi da fare in coppia</a>: si scopre cosa l'altro sopporta e cosa lo fa impazzire, e quasi sempre si finisce a discutere.",
+    "p3": "Il gioco qui sopra funziona nel browser, senza registrazione e senza installare niente. Basta un telefono, o due se siete lontani."
+  },
+  "section2": {
+    "title": "Come si gioca",
+    "intro": "Ecco come funziona il nostro gioco qui sopra. Prima di cominciare scegliete tre cose: chi è il 10 (un uomo, una donna o a caso da una carta all'altra), quante carte (15, 30 o tutte e 60) e come volete giocare.",
+    "modeSecretEmoji": "🤫",
+    "modeSecretTitre": "In segreto",
+    "modeSecretTexte": "Ognuno vota per conto suo, senza vedere il voto dell'altro. Il telefono passa di mano in mano e, quando avete votato tutti e due, i due voti compaiono insieme. È la versione più sincera, perché nessuno può adeguarsi all'altro.",
+    "modeFaceEmoji": "👀",
+    "modeFaceTitre": "Faccia a faccia",
+    "modeFaceTexte": "I due voti si danno sullo stesso schermo, una fila a testa. È più veloce e non c'è niente da nascondere: vedete arrivare il voto dell'altro e la discussione parte subito.",
+    "modeDistanceEmoji": "📱",
+    "modeDistanceTitre": "A distanza",
+    "modeDistanceTexte": "Ognuno gioca sul proprio telefono. Uno crea la partita e manda il codice o il link all'altro, votate ognuno dalla propria parte e i due voti compaiono su entrambi gli schermi. Comodo durante una videochiamata o quando vivete lontani.",
+    "apres": "Dopo ogni carta il gioco mostra la differenza tra i vostri due voti. Alla fine vedete su quante carte eravate d'accordo con al massimo un punto di differenza, chi di voi due vota in modo più severo, i vostri disaccordi più grandi e i difetti che sono inaccettabili per tutti e due."
+  },
+  "section3": {
+    "title": "Le 60 carte del gioco",
+    "intro": "Ecco tutte le carte, divise per tema. Nel gioco vengono mescolate e, se scegliete «a caso», una carta su due parla di una donna. Alcune sono lì per ridere, altre sono veri temi di coppia, ed è proprio questo mix a rendere divertente la partita.",
+    "groupes": [
+      {
+        "titre": "Nella vita di tutti i giorni",
+        "de": 1,
+        "a": 12
+      },
+      {
+        "titre": "A tavola",
+        "de": 13,
+        "a": 22
+      },
+      {
+        "titre": "Al telefono",
+        "de": 23,
+        "a": 34
+      },
+      {
+        "titre": "In coppia",
+        "de": 35,
+        "a": 48
+      },
+      {
+        "titre": "Le vere red flag",
+        "de": 49,
+        "a": 60
+      }
+    ],
+    "apres": "Se vi piace prendere posizione, ci sono anche <a href=\"/it/gioco-si-o-no-coppia/\">situazioni di coppia da giudicare con un sì o con un no</a>, con i voti di tutti gli altri giocatori dopo ogni risposta."
+  },
+  "section4": {
+    "title": "Come dare il voto",
+    "intro": "Non esiste una regola ufficiale. Quasi tutti votano più o meno così:",
+    "entetes": [
+      "Voto",
+      "Cosa vuol dire"
+    ],
+    "bareme": [
+      [
+        "10",
+        "Non cambia niente, anzi, è quasi carino."
+      ],
+      [
+        "Da 7 a 9",
+        "Dà un po' fastidio, ma ci si convive benissimo."
+      ],
+      [
+        "Da 4 a 6",
+        "Dipende. Dal resto della persona e dall'umore del giorno."
+      ],
+      [
+        "Da 1 a 3",
+        "Grossi dubbi. Il resto dovrebbe compensare parecchio."
+      ],
+      [
+        "0",
+        "Inaccettabile. Neanche un 10 si riprende da questo."
+      ]
+    ],
+    "apres": "La cosa più interessante, di solito, è la differenza tra i vostri due voti. Quando uno dà 9 e l'altro 1 alla stessa carta, c'è di sicuro una storia dietro... o almeno una spiegazione da dare!"
+  },
+  "section5": {
+    "title": "Piccolo difetto o vera red flag?",
+    "p1": "Il gioco mescola le due cose. Il ketchup sulla pasta o i calzini in giro sono il tipo di difetto di cui si ride, anche quando dà fastidio. Frugare nel telefono dell'altro o non sopportare i suoi amici è un'altra cosa: sono <a href=\"/it/blog/red-flag-in-un-uomo/\">segnali d'allarme che è meglio riconoscere presto</a>, in un uomo come in una donna.",
+    "p2": "Quando i vostri voti sono molto lontani su una carta del genere, vale la pena parlarne con calma a fine partita. Ognuno ha <a href=\"/it/blog/cose-non-accettare-coppia/\">cose che non accetta in una coppia</a>, ed è più facile conoscerle prima di trovarsi nella situazione.",
+    "p3": "Per tutto il resto, giocate con leggerezza. È un gioco, e nessuno deve sentirsi giudicato per aver dato 3 all'ananas sulla pizza!"
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "q1": "Da dove viene «È un 10, ma»?",
+    "a1": "Da un trend di TikTok in inglese, «He's a 10 but...». L'idea è stata ripresa un po' ovunque, in italiano come in altre lingue: si descrive una persona perfetta, si aggiunge un difetto e ognuno dà il suo voto.",
+    "q2": "Si può giocare in più di due?",
+    "a2": "Il gioco online conta i voti di due persone. Tra amici, però, niente vi impedisce di leggere le carte ad alta voce e dare i vostri voti a turno, funziona benissimo a una festa.",
+    "q3": "Quanto dura una partita?",
+    "a3": "Una decina di minuti per 15 carte faccia a faccia, un po' di più in segreto perché il telefono passa di mano in mano. Tutte e 60 le carte riempiono una serata intera, soprattutto se discutete ogni voto.",
+    "q4": "Perché scegliere tra un uomo e una donna?",
+    "a4": "Le carte sono scritte per tutti e due. In base a quello che scegliete, la carta dice «Lui è un 10, ma...» o «Lei è un 10, ma...». A caso, cambia da una carta all'altra, ed è spesso divertente vedere se il voto cambia a seconda che sia un uomo o una donna.",
+    "q5": "I nostri voti vengono salvati?",
+    "a5": "No. I voti restano sul vostro telefono per tutta la partita e spariscono quando lasciate la pagina. A distanza passano da un telefono all'altro senza essere salvati da nessuna parte."
+  }
+}

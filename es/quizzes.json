@@ -257,10 +257,10 @@
     "metaDescription": "¿Alma gemela o solo una bonita historia? 20 preguntas, un índice y un veredicto que no se limita a halagar. Test gratis, solo o en pareja, sin registro."
   },
   "jeuxCouple": {
-    "title": "Juegos para parejas online: 11 juegos gratis para jugar en pareja",
+    "title": "Juegos para parejas online: 13 juegos gratis para jugar en pareja",
     "shortTitle": "Juegos para parejas",
-    "description": "Once juegos para jugar en pareja: el sí o no, a favor o en contra, quién podría, yo nunca, quién de los dos, preferirías, los dilemas, verdad o reto, su versión picante, la ruleta de prendas y el tablero.",
-    "metaDescription": "11 juegos para parejas gratis en un solo móvil: sí o no, a favor o en contra, quién de los dos, preferirías, los dilemas, verdad o reto y la ruleta de prendas. Sin registro."
+    "description": "Trece juegos para jugar en pareja: es un 10 pero, las frases para completar, el sí o no, a favor o en contra, quién podría, yo nunca, quién de los dos, preferirías, los dilemas, verdad o reto, su versión picante, la ruleta de prendas y el tablero.",
+    "metaDescription": "13 juegos para parejas gratis en un solo móvil: sí o no, a favor o en contra, quién de los dos, preferirías, los dilemas, verdad o reto y la ruleta de prendas. Sin registro."
   },
   "jeuGages": {
     "title": "Prendas para parejas: el juego de la ruleta, 140 prendas",
@@ -445,5 +445,17 @@
     "shortTitle": "¿Cuánto tiempo seguiré soltero?",
     "description": "Veinte preguntas sobre tu día a día y una estimación en meses del tiempo que te queda antes de conocer a alguien.",
     "metaDescription": "¿Cuánto tiempo vas a seguir soltero? Veinte preguntas sobre tu edad, tus salidas, tus amigos y tus reflejos, y una estimación en meses. Test gratis y anónimo."
+  },
+  "jeuDixMais": {
+    "title": "Es un 10, pero... | El juego para parejas (60 cartas)",
+    "shortTitle": "Es un 10, pero...",
+    "metaDescription": "El juego «Es un 10, pero...» en pareja: una persona perfecta, un defecto, y cada uno da su nueva nota del 0 al 10. 60 cartas, en secreto o a distancia. Gratis.",
+    "description": "Una persona perfecta y un defecto: cada uno da su nueva nota del 0 al 10 y luego comparáis."
+  },
+  "testCompatSexuelle": {
+    "title": "Test de compatibilidad sexual en pareja: 20 preguntas para dos",
+    "shortTitle": "Test de compatibilidad sexual",
+    "metaDescription": "Test de compatibilidad sexual en pareja: 20 preguntas sobre deseo, ternura, novedades y ritmo, con una puntuación por dimensión. Gratis.",
+    "description": "Veinte preguntas para dos sobre el deseo, la ternura y la forma de hablarlo, para ver dónde coincidís."
   }
 }

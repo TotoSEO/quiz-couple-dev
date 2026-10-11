@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Test in due • Solo per adulti",
+    "title": "Test di compatibilità sessuale: siete sulla stessa lunghezza d'onda?",
+    "titleHighlight": "compatibilità sessuale",
+    "description": "Venti domande sul desiderio, la tenerezza, il modo di parlarne, le novità e il ritmo. Ognuno risponde per conto suo, poi scoprite il vostro punteggio, il dettaglio per dimensione e le vostre risposte una accanto all'altra.",
+    "subtitle": "20 domande • 10 minuti • su un telefono o ognuno sul suo",
+    "jumpBtn": "Fai il test"
+  },
+  "section1": {
+    "title": "Come funziona il test",
+    "intro": "Il test di compatibilità sessuale si fa in due. Ognuno risponde alle stesse venti domande senza vedere le risposte dell'altro, e il risultato confronta le vostre due serie di risposte.",
+    "p1": "Le domande parlano di quello che conta nella vita intima di una coppia: quanto spesso vorreste fare l'amore, il posto della tenerezza, se riuscite a dire cosa vi piace, la voglia di novità, o anche il momento migliore della giornata. Per esempio: «Idealmente, vorresti fare l'amore... quasi tutti i giorni, due o tre volte a settimana, circa una volta a settimana o qualche volta al mese?»",
+    "p2": "Su un solo telefono, il primo risponde a tutta la serie, poi passa il telefono e l'altro risponde a sua volta. Le risposte del primo restano nascoste fino al risultato. Se preferite, la modalità a distanza permette a ognuno di rispondere sul proprio telefono, e allora vedete le vostre due risposte dopo ogni domanda.",
+    "p3": "Le domande non sono esplicite e non ci sono risposte giuste. Il test non giudica la vostra sessualità, guarda solo se i vostri desideri vanno nella stessa direzione."
+  },
+  "section2": {
+    "title": "Le cinque cose che il test confronta",
+    "intro": "Le venti domande sono divise in cinque dimensioni, quattro domande ciascuna. È questo che dà il dettaglio per dimensione alla fine del test.",
+    "sub1Title": "Il desiderio",
+    "sub1P1": "Quanto spesso vorreste fare l'amore, che posto ha nella vostra idea di coppia e come vivete un periodo senza. Spesso è lì che le differenze creano più tensioni, perché si ha subito l'impressione che l'altro chieda troppo, o troppo poco.",
+    "sub2Title": "La tenerezza",
+    "sub2P1": "Le coccole durante il giorno, il tempo che vi prendete, quello che succede subito dopo. Per alcuni la tenerezza è indispensabile, per altri conta la passione. Del resto, <a href=\"/it/blog/5-linguaggi-dell-amore/\">il contatto fisico è un linguaggio dell'amore a tutti gli effetti</a>, e non tutti lo parlano allo stesso modo.",
+    "sub3Title": "Parlarne",
+    "sub3P1": "Dire cosa vi piace, parlare delle vostre fantasie, dire quando qualcosa non vi piace. È la dimensione che aiuta a sistemare tutte le altre: quando si riesce a parlarne, le differenze si recuperano molto più facilmente.",
+    "sub4Title": "Le novità",
+    "sub4P1": "La voglia di provare cose nuove, di cambiare posto, i giocattoli, o al contrario la comodità di ciò che si conosce. Nessuna risposta è migliore di un'altra, quello che conta è che i vostri desideri si incontrino, o che possiate parlarne.",
+    "sub5Title": "Il ritmo",
+    "sub5P1": "Il momento migliore della giornata, spontaneo o programmato, chi fa il primo passo e come si fa capire che si ha voglia. Sembrano dettagli, ma spesso sono proprio loro a creare i malintesi di tutti i giorni."
+  },
+  "section3": {
+    "title": "Come si calcola il punteggio",
+    "p1": "Ogni domanda propone quattro risposte ordinate da un estremo all'altro, per esempio da «quasi tutti i giorni» a «qualche volta al mese». Se avete dato la stessa risposta, la domanda conta per intero. A una casella di distanza conta ancora per due terzi, a due caselle per un terzo, e a tre caselle per niente.",
+    "p2": "Una domanda si legge al contrario: «Idealmente, chi fa il primo passo?». Se uno risponde «io» e l'altro «l'altra persona», siete perfettamente d'accordo, perché vi completate. Se rispondete «io» tutti e due, è lì che c'è la differenza.",
+    "p3": "Il punteggio generale è la media delle venti domande, e ogni dimensione ha la sua percentuale. Il risultato si legge su cinque livelli, da «due ritmi diversi» a «sulla stessa lunghezza d'onda»."
+  },
+  "section4": {
+    "title": "Quando i vostri desideri non sono gli stessi",
+    "p1": "Succede alla maggior parte delle coppie, e non vuol dire che non possa funzionare. I desideri cambiano con l'età, la stanchezza, il lavoro, l'arrivo di un figlio... Quello che conta è poterne parlare senza che uno dei due si senta giudicato o messo sotto pressione.",
+    "p2": "Per cominciare, scegliete un momento tranquillo, fuori dalla camera da letto, e partite dalle vostre risposte: «Vedo che non abbiamo risposto uguale sulla frequenza, tu cosa immagini?». Se fate fatica a trovare le parole, <a href=\"/it/blog/domande-intime-di-coppia/\">qualche domanda più intima da farsi in due</a> aiuta spesso ad avviare la conversazione. Anche un gioco può dare una mano: con <a href=\"/it/obbligo-o-verita-piccante-coppia/\">carte di obbligo o verità un po' più audaci</a>, ognuno può passare quando una domanda va troppo in là.",
+    "p3": "La vostra coppia non si riduce a quello che succede a letto: i valori, i progetti e il modo di comunicare contano anche loro, ed è quello che misura <a href=\"/it/test-compatibilita-amorosa/\">la compatibilità amorosa in senso più ampio</a>. E quando una differenza fa soffrire uno dei due da tanto tempo, parlarne con un sessuologo o con un terapeuta di coppia aiuta spesso più di quanto si pensi."
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Cos'è la compatibilità sessuale?",
+    "faq1A": "È avere desideri che vanno nella stessa direzione: più o meno la stessa voglia, lo stesso posto per la tenerezza, lo stesso modo di parlarne. Non vuol dire che vi piaccia tutto allo stesso modo. Due persone molto diverse possono essere molto compatibili se riescono a parlarsi e a farsi spazio.",
+    "faq2Q": "Si può fare il test da soli?",
+    "faq2A": "No, confronta due serie di risposte. Se la persona con cui state non è accanto a voi, la modalità a distanza permette a ognuno di rispondere sul proprio telefono, anche a chilometri di distanza.",
+    "faq3Q": "L'altra persona vedrà le mie risposte?",
+    "faq3A": "Sì, alla fine, ed è voluto: il risultato mette le vostre risposte una accanto all'altra perché possiate parlarne. Durante il test su un solo telefono, le risposte del primo restano nascoste mentre l'altro risponde. A distanza, le due risposte compaiono dopo ogni domanda.",
+    "faq4Q": "Un punteggio basso è grave?",
+    "faq4A": "No. Un punteggio basso vuol dire che i vostri desideri oggi sono diversi, non che la vostra coppia non funzionerà. Molte coppie hanno differenze sul desiderio o sul ritmo, e ci si può lavorare, soprattutto parlandone. Cominciate dalla dimensione con la differenza più grande.",
+    "faq5Q": "Le nostre risposte vengono salvate?",
+    "faq5A": "No. Le risposte restano sul vostro telefono e spariscono quando lasciate la pagina. Non viene conservato niente, nemmeno in modalità a distanza, dove passano direttamente da un telefono all'altro."
+  },
+  "jsonLd": {
+    "about": "compatibilità sessuale"
+  }
+}

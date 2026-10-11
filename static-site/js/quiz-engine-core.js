@@ -664,7 +664,15 @@ var QuizEngine = (function() {
   //   total       : nombre de questions
   //   question    : rang -> { texte, options: [{ id, texte }], sur }
   //   progression : rang -> libelle de la barre (facultatif)
+  //   verdict     : (ma reponse, sa reponse, rang) -> { texte, accord } :
+  //                 la phrase sous les deux reponses et sa couleur (accord :
+  //                 vert). Facultatif : « meme reponse » ou non sinon. Une
+  //                 question lue a l'envers chez l'autre (« qui fait le
+  //                 premier pas ») a la meme lettre des deux cotes sans accord.
   //   surFin      : (reponses du createur, reponses du rejoignant) -> rien
+  // Une question peut aussi porter grille: true (une note a donner, de 0 a
+  // 10 par exemple) : les options deviennent une grille de pastilles sans
+  // lettre, et bornes: [gauche, droite] nomme les deux bouts dessous.
   function TourParTour(o) {
     var self = this;
     this.moteur = o.moteur;
@@ -679,6 +687,7 @@ var QuizEngine = (function() {
     this.total = o.total;
     this.question = o.question;
     this.progression = o.progression || null;
+    this.verdict = o.verdict || null;
     this.surFin = o.surFin;
     this.reponses = [new Array(this.total).fill(null), new Array(this.total).fill(null)];
     // Jusqu'a quelle question chacun a appuye sur « suivant ».
@@ -777,9 +786,9 @@ var QuizEngine = (function() {
     if (q.sur) wrap.appendChild(el('p', 'salon-question-sur', esc(q.sur)));
     wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(q.texte)));
 
-    var optionsWrap = el('div', 'space-y-2');
+    var optionsWrap = q.grille ? this.grille(q, idx, etape, maRep, saRep) : el('div', 'space-y-2');
     var optLetters = ['A', 'B', 'C', 'D', 'E', 'F'];
-    q.options.forEach(function (opt, k) {
+    (q.grille ? [] : q.options).forEach(function (opt, k) {
       var optBtn = el('button', 'quiz-option');
       optBtn.type = 'button';
       var noms = '';
@@ -825,8 +834,13 @@ var QuizEngine = (function() {
       pied.appendChild(attente(S.avec(tg('salon.attenteDe', 'Dans l\'attente de {{nom}}…'), { nom: nomAutre })));
     } else {
       var pareil = maRep === saRep;
-      pied.appendChild(el('p', 'salon-verdict-question' + (pareil ? ' est-pareil' : ''),
-        esc(pareil ? tg('salon.pareil', 'Vous avez répondu la même chose !') : tg('salon.different', 'Pas la même réponse. On en parle ?'))));
+      var dit = pareil ? tg('salon.pareil', 'Vous avez répondu la même chose !') : tg('salon.different', 'Pas la même réponse. On en parle ?');
+      if (this.verdict) {
+        var v = this.verdict(maRep, saRep, idx) || {};
+        dit = v.texte || '';
+        pareil = !!v.accord;
+      }
+      pied.appendChild(el('p', 'salon-verdict-question' + (pareil ? ' est-pareil' : ''), esc(dit)));
       var dernier = idx >= total - 1;
       var suivant = el('button', 'btn btn-cta btn-gradient salon-suivant',
         esc(dernier ? tg('salon.voirResultats', 'Voir nos résultats') : tg('salon.suivant', 'Suivant')));
@@ -846,6 +860,55 @@ var QuizEngine = (function() {
     }
     wrap.appendChild(pied);
     this.container.appendChild(wrap);
+  };
+
+  // La version en grille d'une question a distance : des pastilles sans
+  // lettre (les notes de 0 a 10 du « c'est un 10 mais »). A la revelation,
+  // la pastille de chacun prend sa couleur et les deux notes s'ecrivent en
+  // clair dessous, avec les prenoms : une pastille ne porte pas de nom.
+  TourParTour.prototype.grille = function (q, idx, etape, maRep, saRep) {
+    var self = this;
+    var revele = etape === 'reveal' || etape === 'attenteSuivant';
+    var bloc = el('div', 'notes-bloc');
+    var grille = el('div', 'notes-grille' + (revele ? ' notes-grille--revelee' : ''));
+    grille.setAttribute('role', 'group');
+    grille.setAttribute('aria-label', q.texte || '');
+    q.options.forEach(function (opt) {
+      var b = el('button', 'notes-btn', esc(opt.texte));
+      b.type = 'button';
+      var moi = maRep === opt.id, autre = saRep === opt.id;
+      if (moi && (revele || etape === 'attenteReponse')) b.classList.add('notes-btn--moi');
+      if (autre && revele) b.classList.add('notes-btn--autre');
+      if (etape === 'repondre') {
+        b.addEventListener('click', function () {
+          if (!answerLock(self.moteur)) return;
+          self.reponses[self.moi][idx] = opt.id;
+          self.envoyerReponses();
+          self.render();
+        });
+      } else {
+        b.disabled = true;
+      }
+      grille.appendChild(b);
+    });
+    bloc.appendChild(grille);
+    if (q.bornes) {
+      var bornes = el('p', 'notes-bornes');
+      bornes.innerHTML = '<span>' + esc(q.bornes[0] || '') + '</span><span>' + esc(q.bornes[1] || '') + '</span>';
+      bloc.appendChild(bornes);
+    }
+    if (revele) {
+      var texte = function (id) {
+        for (var i = 0; i < q.options.length; i++) if (q.options[i].id === id) return q.options[i].texte;
+        return '';
+      };
+      var duo = el('div', 'notes-duo');
+      duo.innerHTML =
+        '<span class="notes-duo-item notes-duo-item--moi">' + esc(this.noms[this.moi]) + ' <b>' + esc(texte(maRep)) + '</b></span>' +
+        '<span class="notes-duo-item notes-duo-item--autre">' + esc(this.noms[1 - this.moi]) + ' <b>' + esc(texte(saRep)) + '</b></span>';
+      bloc.appendChild(duo);
+    }
+    return bloc;
   };
 
   // ─── Utility ──────────────────────────────────────────────
@@ -2220,6 +2283,7 @@ var QuizEngine = (function() {
     { type: 'test', key: 'pret-nouvelle-relation', icon: '🌱', route: 'testPretRelation' },
     { type: 'test', key: 'duree-celibat', icon: '⏳', route: 'testDureeCelibat' },
     { type: 'test', key: 'est-ce-le-bon', icon: '🔑', route: 'testEstCeLeBon' },
+    { type: 'test', key: 'compatibilite-sexuelle', icon: '🔥', route: 'testCompatSexuelle' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
@@ -2250,6 +2314,7 @@ var QuizEngine = (function() {
     { type: 'jeu', key: 'qui-pourrait', icon: '🏆', route: 'jeuQuiPourrait' },
     { type: 'jeu', key: 'oui-non', icon: '✅', route: 'jeuOuiNon' },
     { type: 'jeu', key: 'phrases', icon: '💬', route: 'jeuPhrases' },
+    { type: 'jeu', key: 'dix-mais', icon: '🔟', route: 'jeuDixMais' },
   ];
 
   // Suggestions de fin de partie, choisies une par une pour chaque page.
@@ -2359,7 +2424,8 @@ var QuizEngine = (function() {
     // ── Le fil chaud ────────────────────────────────────────────────────
     // Deux personnes seules, l'ambiance est montée d'un cran. C'est le
     // moment où elles sont le plus disposées à enchaîner : on garde le ton.
-    'coquin':                  ['jeuActionVeriteHot', 'jeuGages', 'quizTentation'],
+    'coquin':                  ['jeuActionVeriteHot', 'testCompatSexuelle', 'jeuGages'],
+    'compatibilite-sexuelle':  ['quizCoquin', 'jeuActionVeriteHot', 'testCompatibilite'],
     'action-ou-verite-coquin': ['quizCoquin', 'jeuGages', 'quizTentation'],
     'tentation':               ['testInfidelite', 'quizCoquin', 'testConfiance'],
 
@@ -2373,6 +2439,7 @@ var QuizEngine = (function() {
     'dilemmes':         ['pourContre', 'quizTuPreferes', 'jeuQuiDeNous'],
     'pour-contre':      ['jeuDilemmes', 'quizTuPreferes', 'jeuQuiDeNous'],
     'phrases':          ['jeuQuiDeNous', 'jeuJamais', 'quizKnowledge'],
+    'dix-mais':         ['jeuOuiNon', 'jeuDilemmes', 'quizTuPreferes'],
   };
 
   function getRelatedQuizUrl(routeKey, lang) {
@@ -2842,6 +2909,7 @@ var QuizEngine = (function() {
     'qui-de-nous-deux': ['quiSaitMieux'],
     'most': ['quiSaitMieux'],
     'phrases': ['quiSaitMieux'],
+    'dix-mais': ['dilemmes'],
     'dilemmes': ['dilemmes'],
     'oui-non': ['dilemmes'],
     'tu-preferes': ['dilemmes'],
@@ -2868,6 +2936,7 @@ var QuizEngine = (function() {
     'amour-habitude': ['wecandoo'],
     // Les deux ecrans dont le contenu est deja pour adultes.
     'coquin': ['passageDuDesir', 'gleese'],
+    'compatibilite-sexuelle': ['passageDuDesir', 'gleese'],
     'action-ou-verite-coquin': ['passageDuDesir', 'gleese'],
     'tester-couple': COFFRETS_COUPLE,
     'compatibilite': COFFRETS_COUPLE,
@@ -12611,6 +12680,822 @@ var QuizEngine = (function() {
     smoothScroll(wrap, 'center');
   };
 
+  // ═══════════════════════════════════════════════════════════
+  // C'EST UN 10 MAIS... : une personne parfaite, un defaut
+  // Chacun redonne une note, de 0 (redhibitoire) a 10 (ca ne change rien),
+  // puis on compare. Trois facons de jouer :
+  //   secret : chacun note sans voir l'autre, le telephone passe de main en
+  //            main, et les deux notes s'affichent ensemble ;
+  //   face   : une rangee de notes par joueur, sur le meme ecran ;
+  //   a distance : chacun sur son telephone, par le tour par tour commun.
+  // Les cartes sont ecrites une seule fois pour les deux genres, la variante
+  // entre accolades : « {il|elle} est {jaloux|jalouse} ». Le choix de depart
+  // (un homme, une femme, au hasard) fixe la forme de chaque carte au tirage,
+  // et le mode a distance la transmet dans l'identifiant (id * 10 + forme).
+  // ═══════════════════════════════════════════════════════════
+  function DixMaisGame(config) {
+    this.container = config.container;
+    this.prefix = config.prefix || 'dixMais';
+    this.lang = config.lang || 'fr';
+    this.pool = config.cartes || [];
+    this.quizType = config.quizType || 'dix-mais';
+    this.distance = !!config.distance;
+    this.phase = 'setup';
+    this.noms = ['', ''];
+    this.mode = 'secret';
+    this.qui = 'hasard';
+    this.limite = 15;
+    this.questions = [];
+    this.idx = 0;
+    this.tour = 0;
+    this.notes = [[], []];
+    this.dejaVues = {};
+    this.aDistance = false;
+    this.carteRendue = -1;
+    if (reprendrePartieRejointe(this, config)) return;
+    this.render();
+  }
+
+  // Les libelles vivent dans gd.json a cote des cartes : tgd les lit dans la
+  // langue de la page, tg servirait le repli francais.
+  DixMaisGame.prototype.dtg = function(cle, repli) {
+    return tgd(this.prefix + '.' + cle, repli);
+  };
+
+  DixMaisGame.prototype.joueur = function(i) {
+    return this.noms[i] || tg('playerSetup.player' + (i + 1), 'Joueur ' + (i + 1));
+  };
+
+  // « {il|elle} met ses pieds froids sur toi » : g vaut 0 pour la premiere
+  // forme, 1 pour la seconde.
+  DixMaisGame.prototype.forme = function(texte, g) {
+    return String(texte || '').replace(/\{([^{}|]*)\|([^{}]*)\}/g, function(_, m, f) { return g ? f : m; });
+  };
+
+  DixMaisGame.prototype.accroche = function(g) {
+    return g ? this.dtg('accrocheElle', 'C\'est une 10 mais...') : this.dtg('accrocheIl', 'C\'est un 10 mais...');
+  };
+
+  DixMaisGame.prototype.total = function() {
+    return Math.min(this.limite, this.questions.length);
+  };
+
+  // Le tirage : les cartes pas encore vues d'abord. Au hasard, une carte sur
+  // deux parle d'un homme et l'autre d'une femme, dans le desordre, et le
+  // compte tombe juste sur les cartes jouees (8 et 7 sur 15), pas seulement
+  // sur le paquet entier.
+  DixMaisGame.prototype.tirer = function() {
+    var self = this;
+    var fraiches = this.pool.filter(function(q) { return !self.dejaVues[q.id]; });
+    var revues = this.pool.filter(function(q) { return self.dejaVues[q.id]; });
+    var ordre = shuffleArray(fraiches).concat(shuffleArray(revues));
+    var melange = function(k) {
+      var depart = Math.random() < 0.5 ? 0 : 1, f = [];
+      for (var i = 0; i < k; i++) f.push((i + depart) % 2);
+      return shuffleArray(f);
+    };
+    var jouees = Math.min(this.limite, ordre.length);
+    var formes = melange(jouees).concat(melange(ordre.length - jouees));
+    this.questions = ordre.map(function(q, i) {
+      var g = self.qui === 'il' ? 0 : (self.qui === 'elle' ? 1 : formes[i]);
+      return { id: q.id, texte: q.texte, g: g };
+    });
+  };
+
+  // A distance : le createur tire et n'envoie que les cartes de la longueur
+  // choisie, la forme de chacune collee a son numero.
+  DixMaisGame.prototype.idsDepart = function() {
+    this.tirer();
+    return this.questions.slice(0, this.total()).map(function(q) { return q.id * 10 + q.g; });
+  };
+  DixMaisGame.prototype.appliquerTirage = function(ids) {
+    var parId = {};
+    this.pool.forEach(function(q) { parId[q.id] = q; });
+    var liste = [];
+    for (var i = 0; i < ids.length; i++) {
+      var n = Number(ids[i]), q = parId[Math.floor(n / 10)], g = n % 10;
+      if (!q || (g !== 0 && g !== 1)) return false;
+      liste.push({ id: q.id, texte: q.texte, g: g });
+    }
+    if (!liste.length) return false;
+    this.questions = liste;
+    this.limite = liste.length;
+    return true;
+  };
+
+  DixMaisGame.prototype.demarrerADistance = function(salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    var joueurs = joueursDuSalon(moi, moiInfo, partenaireInfo);
+    this.noms = [joueurs[0].name, joueurs[1].name];
+    this.aDistance = true;
+    this.phase = 'jeu';
+    var total = this.total();
+    var notes = [];
+    for (var n = 0; n <= 10; n++) notes.push({ id: n, texte: String(n) });
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi, noms: this.noms.slice(),
+      total: total,
+      question: function(idx) {
+        var q = self.questions[idx];
+        return {
+          sur: self.accroche(q.g), texte: self.forme(q.texte, q.g), options: notes, grille: true,
+          bornes: [self.dtg('borne0', '0 : rédhibitoire'), self.dtg('borne10', '10 : toujours un 10')]
+        };
+      },
+      verdict: function(a, b) { return { texte: self.verdictCarte(a, b), accord: Math.abs(a - b) <= 1 }; },
+      progression: function(idx) {
+        return self.dtg('carteSur', 'Carte {{n}} / {{total}}').replace('{{n}}', idx + 1).replace('{{total}}', total);
+      },
+      surFin: function(a, b) {
+        self.notes = [a, b];
+        self.idx = total;
+        self.phase = 'resultats';
+        self.render();
+      }
+    });
+  };
+
+  DixMaisGame.prototype.render = function() {
+    if (this.__relaisTimer) { clearTimeout(this.__relaisTimer); this.__relaisTimer = null; }
+    this.container.innerHTML = '';
+    if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'relais') this.renderRelais();
+    else if (this.phase === 'resultats') this.renderResultats();
+    else this.renderJeu();
+  };
+
+  // Un choix a boutons de l'ecran de depart : qui est le 10, combien de
+  // cartes, comment on joue. La valeur retenue part dans onChange.
+  DixMaisGame.prototype.choix = function(id, titre, options, valeur, onChange) {
+    var bloc = el('div', 'dixm-choix dixm-choix--' + id);
+    var t = el('p', 'dixm-choix-titre', esc(titre));
+    t.id = 'dixm-choix-' + id;
+    bloc.appendChild(t);
+    var rang = el('div', 'dixm-choix-boutons dixm-choix-boutons--' + options.length);
+    rang.setAttribute('role', 'group');
+    rang.setAttribute('aria-labelledby', t.id);
+    options.forEach(function(o) {
+      var b = el('button', 'dixm-choix-btn' + (o.valeur === valeur ? ' active' : ''));
+      b.type = 'button';
+      b.setAttribute('aria-pressed', o.valeur === valeur ? 'true' : 'false');
+      b.innerHTML = (o.nb !== undefined ? '<span class="dixm-choix-nb">' + esc(String(o.nb)) + '</span>' : '') +
+        (o.emoji ? '<span class="dixm-choix-emoji" aria-hidden="true">' + o.emoji + '</span>' : '') +
+        '<span class="dixm-choix-nom">' + esc(o.nom) + '</span>' +
+        (o.sous ? '<span class="dixm-choix-sous">' + esc(o.sous) + '</span>' : '');
+      b.addEventListener('click', function() {
+        rang.querySelectorAll('.dixm-choix-btn').forEach(function(x) {
+          x.classList.remove('active'); x.setAttribute('aria-pressed', 'false');
+        });
+        b.classList.add('active'); b.setAttribute('aria-pressed', 'true');
+        onChange(o.valeur);
+      });
+      rang.appendChild(b);
+    });
+    bloc.appendChild(rang);
+    return bloc;
+  };
+
+  DixMaisGame.prototype.renderSetup = function() {
+    var self = this;
+    var grille = cartesDeuxJoueurs('dixm-nom');
+    var qui = this.choix('qui', this.dtg('quiTitre', 'Le 10, c\'est...'), [
+      { valeur: 'il', emoji: '👨', nom: this.dtg('quiIl', 'Un homme') },
+      { valeur: 'elle', emoji: '👩', nom: this.dtg('quiElle', 'Une femme') },
+      { valeur: 'hasard', emoji: '🎲', nom: this.dtg('quiHasard', 'Au hasard') }
+    ], this.qui, function(v) { self.qui = v; });
+
+    // Les longueurs proposees : 15, 30, puis tout le paquet.
+    var tout = this.pool.length;
+    var longueurs = [15, 30].filter(function(n) { return n < tout; }).concat([tout]);
+    if (longueurs.indexOf(this.limite) < 0) this.limite = longueurs[0];
+    var longueur = this.choix('longueur', this.dtg('longueurTitre', 'Combien de cartes ?'), longueurs.map(function(n, i) {
+      return {
+        valeur: n, nb: n,
+        nom: self.dtg('longueurMot', 'cartes'),
+        sous: self.dtg(i === longueurs.length - 1 ? 'longueurTout' : 'longueur' + n, '')
+      };
+    }), this.limite, function(v) { self.limite = v; });
+
+    var mode = this.choix('mode', this.dtg('modeTitre', 'Comment vous jouez ?'), [
+      { valeur: 'secret', emoji: '🤫', nom: this.dtg('modeSecret', 'En secret'), sous: this.dtg('modeSecretSous', '') },
+      { valeur: 'face', emoji: '👀', nom: this.dtg('modeFace', 'Face à face'), sous: this.dtg('modeFaceSous', '') }
+    ], this.mode, function(v) { self.mode = v; });
+
+    var ecran = ecranDepart({
+      icone: '🔟',
+      titre: this.dtg('setupTitre', 'C\'est un 10 mais...'),
+      desc: this.dtg('setupDesc', ''),
+      corps: [grille, qui, longueur, mode],
+      bouton: this.dtg('commencer', 'On commence !'),
+      onStart: function() {
+        self.noms = [
+          grille.querySelector('#dixm-nom1').value.trim() || tg('playerSetup.player1', 'Joueur 1'),
+          grille.querySelector('#dixm-nom2').value.trim() || tg('playerSetup.player2', 'Joueur 2')
+        ];
+        self.nouvellePartie();
+      }
+    });
+    // A distance, chacun note sur son telephone : la facon de jouer a un
+    // seul ecran n'a plus de sens, elle s'efface avec les prenoms.
+    if (this.distance) ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: [grille, mode], bouton: ecran.bouton }), ecran.bouton);
+    this.container.appendChild(ecran.wrap);
+  };
+
+  DixMaisGame.prototype.nouvellePartie = function() {
+    this.tirer();
+    this.idx = 0;
+    this.tour = 0;
+    this.notes = [[], []];
+    this.carteRendue = -1;
+    this.phase = this.mode === 'secret' ? 'relais' : 'jeu';
+    this.render();
+    smoothScroll(this.container, 'start');
+  };
+
+  // En secret, celui qui note en premier change a chaque carte : personne ne
+  // donne toujours sa note avant l'autre.
+  DixMaisGame.prototype.repondant = function() {
+    var premier = this.idx % 2;
+    return this.tour === 0 ? premier : 1 - premier;
+  };
+
+  DixMaisGame.prototype.libelleCarte = function() {
+    return this.dtg('carteSur', 'Carte {{n}} / {{total}}')
+      .replace('{{n}}', this.idx + 1).replace('{{total}}', this.total());
+  };
+
+  // « A Lea de noter » : le telephone change de main, l'autre detourne le
+  // regard. Le bandeau s'efface seul, comme dans les tests a deux.
+  DixMaisGame.prototype.renderRelais = function() {
+    var self = this;
+    var j = this.repondant();
+    this.container.appendChild(relaisJoueur(this, {
+      nom: this.joueur(j),
+      emoji: '🤫',
+      perso: mascotteDe(null, j),
+      note: this.dtg('relaisNote', 'Passez le téléphone, et l\'autre ne regarde pas la note !'),
+      etape: this.libelleCarte(),
+      suite: function() { self.phase = 'jeu'; self.render(); }
+    }));
+  };
+
+  DixMaisGame.prototype.carteEl = function(q) {
+    var carte = el('div', 'dixm-carte');
+    carte.innerHTML = '<p class="dixm-accroche">' + esc(this.accroche(q.g)) + '</p>' +
+      '<p class="dixm-defaut">' + esc(this.forme(q.texte, q.g)) + '</p>';
+    return carte;
+  };
+
+  // Les onze notes. choisie : la note deja donnee (face a face), classe :
+  // la couleur du joueur, onNote : ce qu'on fait d'une note.
+  DixMaisGame.prototype.grilleNotes = function(o) {
+    var grille = el('div', 'notes-grille' + (o.classe ? ' ' + o.classe : ''));
+    grille.setAttribute('role', 'group');
+    if (o.titre) grille.setAttribute('aria-label', o.titre);
+    for (var n = 0; n <= 10; n++) {
+      (function(n) {
+        var b = el('button', 'notes-btn' + (o.choisie === n ? ' notes-btn--choisie' : ''), String(n));
+        b.type = 'button';
+        b.setAttribute('aria-pressed', o.choisie === n ? 'true' : 'false');
+        if (o.fige) b.disabled = true;
+        else b.addEventListener('click', function() { o.onNote(n, b, grille); });
+        grille.appendChild(b);
+      })(n);
+    }
+    return grille;
+  };
+
+  DixMaisGame.prototype.bornes = function() {
+    var p = el('p', 'notes-bornes');
+    p.innerHTML = '<span>' + esc(this.dtg('borne0', '0 : rédhibitoire')) + '</span>' +
+      '<span>' + esc(this.dtg('borne10', '10 : toujours un 10')) + '</span>';
+    return p;
+  };
+
+  DixMaisGame.prototype.renderJeu = function() {
+    var self = this;
+    var q = this.questions[this.idx];
+    var nouvelle = this.carteRendue !== this.idx;
+    this.carteRendue = this.idx;
+    var wrap = el('div', 'quiz-engine dixm-jeu' + (nouvelle ? ' quiz-question-enter' : ''));
+    var enSecret = this.mode === 'secret';
+    var j = enSecret && this.tour < 2 ? this.repondant() : 0;
+    renderProgressBar(wrap, this.idx, this.total(), this.libelleCarte(), persosBarre(null, j));
+    wrap.appendChild(this.carteEl(q));
+
+    if (enSecret) {
+      if (this.tour < 2) {
+        var bandeau = el('div', 'dixm-bandeau');
+        bandeau.innerHTML = badgeDeTour(this.joueur(j), this.dtg('taNote', '{{nom}}, ta note ?').replace('{{nom}}', this.joueur(j)), j);
+        wrap.appendChild(bandeau);
+        wrap.appendChild(this.grilleNotes({
+          titre: this.dtg('taNote', '{{nom}}, ta note ?').replace('{{nom}}', this.joueur(j)),
+          classe: 'notes-grille--j' + (j + 1),
+          onNote: function(n, b, grille) {
+            if (!answerLock(self, 450)) return;
+            self.notes[j][self.idx] = n;
+            b.classList.add('notes-btn--choisie');
+            grille.classList.add('notes-grille--verrouillee');
+            setTimeout(function() {
+              self.tour++;
+              // Apres la premiere note, le telephone change de main ; apres
+              // la seconde, les deux regardent la revelation ensemble.
+              self.phase = self.tour === 1 ? 'relais' : 'jeu';
+              self.render();
+            }, 380);
+          }
+        }));
+        wrap.appendChild(this.bornes());
+      } else {
+        wrap.appendChild(this.revelation());
+      }
+    } else {
+      var a = this.notes[0][this.idx], b = this.notes[1][this.idx];
+      var deux = a != null && b != null;
+      [0, 1].forEach(function(k) {
+        var rangee = el('div', 'dixm-rangee dixm-rangee--j' + (k + 1));
+        rangee.innerHTML = badgeDeTour(self.joueur(k), self.joueur(k), k);
+        rangee.appendChild(self.grilleNotes({
+          titre: self.dtg('taNote', '{{nom}}, ta note ?').replace('{{nom}}', self.joueur(k)),
+          classe: 'notes-grille--j' + (k + 1),
+          choisie: self.notes[k][self.idx],
+          fige: deux,
+          onNote: function(n) {
+            self.notes[k][self.idx] = n;
+            self.render();
+          }
+        }));
+        wrap.appendChild(rangee);
+      });
+      wrap.appendChild(this.bornes());
+      if (deux) wrap.appendChild(this.revelation());
+    }
+    this.container.appendChild(wrap);
+    if (nouvelle && this.idx > 0) smoothScroll(wrap, 'start');
+  };
+
+  // Ce que dit l'ecart entre les deux notes d'une carte.
+  DixMaisGame.prototype.verdictCarte = function(a, b) {
+    var e = Math.abs(a - b);
+    if (a === 10 && b === 10) return this.dtg('deuxDix', 'Toujours un 10 pour vous deux !');
+    if (a <= 2 && b <= 2) return this.dtg('deuxRedhib', 'Rédhibitoire pour vous deux.');
+    if (e === 0) return this.dtg('ecart0', 'Exactement la même note !');
+    if (e <= 2) return this.dtg('ecartPetit', 'Presque d\'accord.');
+    if (e <= 4) return this.dtg('ecartMoyen', 'Pas tout à fait d\'accord... On en parle ?');
+    return this.dtg('ecartGros', 'Gros désaccord ! Chacun explique sa note.');
+  };
+
+  // Une petite mascotte qui reagit a la note : boudeuse en dessous de 3,
+  // genee jusqu'a 5, mignonne jusqu'a 8, amoureuse au-dela.
+  DixMaisGame.prototype.poseDeNote = function(n) {
+    return n <= 2 ? 'boude' : (n <= 5 ? 'gene' : (n <= 8 ? 'mignon' : 'amoureux'));
+  };
+
+  DixMaisGame.prototype.revelation = function() {
+    var self = this;
+    var a = this.notes[0][this.idx], b = this.notes[1][this.idx];
+    var bloc = el('div', 'dixm-revele');
+    var duo = el('div', 'dixm-duo');
+    [0, 1].forEach(function(k) {
+      var v = k ? b : a;
+      var perso = mascotteDe(null, k);
+      var d = el('div', 'dixm-note dixm-note--j' + (k + 1));
+      d.innerHTML = '<span class="dixm-note-perso" aria-hidden="true">' + mascotteSvg(perso, self.poseDeNote(v), 56) + '</span>' +
+        '<span class="dixm-note-nom">' + esc(self.joueur(k)) + '</span>' +
+        '<span class="dixm-note-val">' + v + '<small>/10</small></span>';
+      duo.appendChild(d);
+    });
+    bloc.appendChild(duo);
+    bloc.appendChild(el('p', 'dixm-verdict' + (Math.abs(a - b) <= 1 ? ' est-pareil' : ''), esc(this.verdictCarte(a, b))));
+    var dernier = this.idx >= this.total() - 1;
+    var suivant = el('button', 'btn btn-cta btn-gradient dixm-suivant',
+      esc(dernier ? this.dtg('voirResultats', 'Voir les résultats') : this.dtg('suivante', 'Carte suivante')));
+    suivant.type = 'button';
+    suivant.addEventListener('click', function() {
+      if (!answerLock(self, 450)) return;
+      self.dejaVues[self.questions[self.idx].id] = true;
+      if (dernier) { self.phase = 'resultats'; self.render(); return; }
+      self.idx++;
+      self.tour = 0;
+      self.phase = self.mode === 'secret' ? 'relais' : 'jeu';
+      self.render();
+    });
+    bloc.appendChild(suivant);
+    return bloc;
+  };
+
+  // Un nombre a une decimale, ecrit comme dans la langue de la page.
+  DixMaisGame.prototype.decimal = function(x) {
+    try { return x.toLocaleString(this.lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 }); }
+    catch (e) { return x.toFixed(1); }
+  };
+
+  DixMaisGame.prototype.ligneCarte = function(q, a, b) {
+    var li = el('li', 'dixm-liste-item');
+    li.innerHTML = '<span class="dixm-liste-texte"><span class="dixm-liste-accroche">' + esc(this.accroche(q.g)) + '</span> ' +
+      esc(this.forme(q.texte, q.g)) + '</span>' +
+      '<span class="dixm-liste-notes">' +
+        '<span class="dixm-pastille dixm-pastille--j1">' + esc(this.joueur(0)) + ' <b>' + a + '</b></span>' +
+        '<span class="dixm-pastille dixm-pastille--j2">' + esc(this.joueur(1)) + ' <b>' + b + '</b></span>' +
+      '</span>';
+    return li;
+  };
+
+  DixMaisGame.prototype.renderResultats = function() {
+    var self = this;
+    var jouees = [];
+    for (var i = 0; i < this.questions.length; i++) {
+      var a = this.notes[0][i], b = this.notes[1][i];
+      if (a == null || b == null) continue;
+      jouees.push({ q: this.questions[i], a: a, b: b, e: Math.abs(a - b) });
+    }
+    var total = jouees.length;
+    var proches = jouees.filter(function(x) { return x.e <= 1; }).length;
+    var pct = total ? Math.round(proches / total * 100) : 0;
+    var moy = [0, 1].map(function(k) {
+      return total ? jouees.reduce(function(s, x) { return s + (k ? x.b : x.a); }, 0) / total : 0;
+    });
+
+    var niveau = pct >= 70 ? 'haut' : (pct >= 45 ? 'milieu' : 'bas');
+    var wrap = el('div', 'quiz-engine quiz-result-card dixm-resultats text-center');
+    wrap.appendChild(el('p', 'dixm-res-sur', esc(this.dtg('resSur', 'Sur les {{total}} cartes jouées').replace('{{total}}', total))));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', esc(this.dtg('res_' + niveau + '_t', ''))));
+    var anneau = el('div', 'dixm-anneau');
+    anneau.innerHTML = renderScoreRing(pct, null, pct >= 70, persosDe(null));
+    wrap.appendChild(anneau);
+    wrap.appendChild(el('p', 'dixm-anneau-legende', esc(this.dtg('accordLegende', 'de cartes notées à un point près'))));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6', esc(this.dtg('res_' + niveau + '_d', ''))));
+
+    // Les deux moyennes, et qui pardonne le plus.
+    var moyennes = el('div', 'dixm-moyennes');
+    [0, 1].forEach(function(k) {
+      var d = el('div', 'dixm-moyenne dixm-moyenne--j' + (k + 1));
+      d.innerHTML = '<span class="dixm-moyenne-nom">' + esc(self.joueur(k)) + '</span>' +
+        '<span class="dixm-moyenne-val">' + esc(self.decimal(moy[k])) + '</span>' +
+        '<span class="dixm-moyenne-mot">' + esc(self.dtg('moyenneMot', 'de moyenne')) + '</span>';
+      moyennes.appendChild(d);
+    });
+    wrap.appendChild(moyennes);
+    var phrase;
+    if (Math.abs(moy[0] - moy[1]) < 0.5) phrase = this.dtg('memeExigence', '');
+    else {
+      var severe = moy[0] < moy[1] ? 0 : 1;
+      phrase = this.dtg('plusSevere', '')
+        .replace('{{nom}}', this.joueur(severe))
+        .replace('{{a}}', this.decimal(moy[severe]))
+        .replace('{{b}}', this.decimal(moy[1 - severe]))
+        .replace('{{autre}}', this.joueur(1 - severe));
+    }
+    if (phrase) wrap.appendChild(el('p', 'dixm-phrase', esc(phrase)));
+
+    // Les plus gros ecarts, puis ce qui est redhibitoire pour les deux et ce
+    // qui ne derange personne. Une liste vide ne s'affiche pas.
+    function liste(titre, items) {
+      if (!items.length) return;
+      var bloc = el('div', 'dixm-bloc');
+      bloc.appendChild(el('h3', 'dixm-bloc-titre', esc(titre)));
+      var ul = el('ul', 'dixm-liste');
+      items.forEach(function(x) { ul.appendChild(self.ligneCarte(x.q, x.a, x.b)); });
+      bloc.appendChild(ul);
+      wrap.appendChild(bloc);
+    }
+    liste(this.dtg('blocDesaccords', 'Vos plus gros désaccords'),
+      jouees.filter(function(x) { return x.e >= 3; }).sort(function(x, y) { return y.e - x.e; }).slice(0, 3));
+    liste(this.dtg('blocRedhib', 'Rédhibitoire pour vous deux'),
+      jouees.filter(function(x) { return x.a <= 2 && x.b <= 2; }).sort(function(x, y) { return (x.a + x.b) - (y.a + y.b); }).slice(0, 5));
+    liste(this.dtg('blocPardon', 'Ça ne vous dérange pas du tout'),
+      jouees.filter(function(x) { return x.a >= 8 && x.b >= 8; }).sort(function(x, y) { return (y.a + y.b) - (x.a + x.b); }).slice(0, 5));
+
+    var rejouer = el('button', 'btn btn-cta btn-lg mt-6 mb-2', esc(this.dtg('rejouer', 'Rejouer avec d\'autres cartes')));
+    rejouer.type = 'button';
+    rejouer.addEventListener('click', function() {
+      // Une partie a distance est finie pour de bon : on repart de la page.
+      if (self.aDistance) { location.reload(); return; }
+      self.nouvellePartie();
+    });
+    wrap.appendChild(rejouer);
+
+    renderActionButtons(wrap, {
+      share: { noms: nomsPartage(this), type: 'duo', pct: pct, verdict: this.dtg('res_' + niveau + '_t', '') },
+      restart: function() { self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  // ═══════════════════════════════════════════════════════════
+  // ECHELLE QUIZ : deux joueurs, des reponses rangees sur une echelle
+  // (test de compatibilite sexuelle). Chaque question propose des reponses
+  // qui vont d'un bout a l'autre d'une echelle (« presque tous les jours »
+  // ... « quelques fois par mois »). La compatibilite d'une question vaut
+  // 1 - ecart / (nombre de reponses - 1) : la meme reponse vaut tout, une
+  // case d'ecart en vaut les deux tiers sur quatre reponses. Une question
+  // marquee `miroir` se lit a l'envers chez l'autre (« qui fait le premier
+  // pas » : « moi » d'un cote et « l'autre » de l'autre, c'est d'accord).
+  // Le score est la moyenne des questions, et chaque dimension (axes) a le
+  // sien. Chacun repond a toute la serie de son cote : le telephone ne
+  // change de main qu'une fois, et rien ne s'affiche avant la fin.
+  // ═══════════════════════════════════════════════════════════
+  function EchelleQuiz(config) {
+    this.container = config.container;
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.questions = config.questions || [];
+    this.pool = config.pool || this.questions.slice();
+    this.quizType = config.quizType || 'echelle';
+    this.axes = config.axes || [];
+    this.paliers = config.paliers || [55, 70, 80, 90];
+    this.distance = !!config.distance;
+    this.phase = 'setup';
+    this.players = [{ name: '', gender: null }, { name: '', gender: null }];
+    this.joueurCourant = 0;
+    this.currentQ = 0;
+    this.answers = { p1: [], p2: [] };
+    this.aDistance = false;
+    if (reprendrePartieRejointe(this, config)) return;
+    this.render();
+  }
+
+  EchelleQuiz.prototype.etg = function(cle, repli) {
+    return tgd(this.prefix + '.' + cle, repli);
+  };
+
+  EchelleQuiz.prototype.texteQuestion = function(q) {
+    return tgd(this.prefix + '.q' + q.id, q.text);
+  };
+  EchelleQuiz.prototype.texteOption = function(q, opt) {
+    return tgd(this.prefix + '.q' + q.id + opt.id, opt.text);
+  };
+
+  // La proximite de deux reponses, de 0 a 1 (null si l'une manque).
+  EchelleQuiz.prototype.proximite = function(q, a, b) {
+    var ids = q.options.map(function(o) { return o.id; });
+    var n = ids.length, i = ids.indexOf(a), j = ids.indexOf(b);
+    if (n < 2 || i < 0 || j < 0) return null;
+    if (q.miroir) j = n - 1 - j;
+    return 1 - Math.abs(i - j) / (n - 1);
+  };
+
+  EchelleQuiz.prototype.couleur = function(rang) {
+    return getPlayerColor(this.players[rang], this.players[1 - rang], rang);
+  };
+
+  EchelleQuiz.prototype.render = function() {
+    if (this.__relaisTimer) { clearTimeout(this.__relaisTimer); this.__relaisTimer = null; }
+    this.container.innerHTML = '';
+    if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'relais') this.renderRelais();
+    else if (this.phase === 'results') this.renderResults();
+    else this.renderQuestion();
+  };
+
+  EchelleQuiz.prototype.renderSetup = function() {
+    var self = this;
+    var grille = cartesDeuxJoueurs('ech-nom', { genre: true });
+    var avert = el('p', 'ech-avert', esc(this.etg('avertissement', '')));
+    var ecran = ecranDepart({
+      icone: '🔥',
+      poses: ['amoureux', 'amoureux'],
+      titre: this.etg('setupTitre', 'Êtes-vous compatibles ?'),
+      desc: this.etg('setupDesc', ''),
+      corps: [grille, avert],
+      meta: pastilleMeta(this.questions.length, null, this.etg('duree', '10 min')),
+      bouton: this.etg('commencer', 'Commencer le test'),
+      onStart: function() {
+        var genres = grille.lireGenres();
+        self.players = [0, 1].map(function(i) {
+          return {
+            name: grille.querySelector('#ech-nom' + (i + 1)).value.trim() || tg('playerSetup.player' + (i + 1), 'Joueur ' + (i + 1)),
+            gender: genres[i] || null
+          };
+        });
+        var total = self.questions.length;
+        self.answers = { p1: new Array(total).fill(null), p2: new Array(total).fill(null) };
+        self.joueurCourant = 0;
+        self.currentQ = 0;
+        self.phase = 'relais';
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    if (this.distance) ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: grille, bouton: ecran.bouton, meta: ecran.meta, needsGender: true }), ecran.bouton);
+    this.container.appendChild(ecran.wrap);
+  };
+
+  // Le relais : au depart pour le premier, puis une seule fois, quand le
+  // premier a fini toute sa serie.
+  EchelleQuiz.prototype.renderRelais = function() {
+    var self = this;
+    var j = this.joueurCourant;
+    var joueur = this.players[j];
+    this.container.appendChild(relaisJoueur(this, {
+      nom: joueur.name,
+      emoji: '🤫',
+      perso: mascotteDe(joueur, j),
+      couleur: this.couleur(j).bg,
+      note: j === 0 ? this.etg('relaisDebut', '') : this.etg('relaisSuite', '').replace('{{nom}}', this.players[0].name),
+      etape: this.etg('relaisEtape', '{{n}} questions').replace('{{n}}', this.questions.length),
+      suite: function() { self.phase = 'playing'; self.render(); }
+    }));
+  };
+
+  EchelleQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var j = this.joueurCourant;
+    var cle = j === 0 ? 'p1' : 'p2';
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+    renderProgressBar(wrap, this.currentQ, total,
+      tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
+      persosBarre(this.players, j));
+
+    var c = this.couleur(j);
+    var badge = el('div', 'text-center mb-4');
+    badge.innerHTML = '<span class="badge" style="background:' + c.bg + ';color:' + c.text + '">' + esc(this.players[j].name) + '</span>';
+    wrap.appendChild(badge);
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(this.texteQuestion(q))));
+
+    var liste = el('div', 'space-y-2');
+    var lettres = ['A', 'B', 'C', 'D', 'E'];
+    q.options.forEach(function(opt, k) {
+      var b = el('button', 'quiz-option');
+      b.type = 'button';
+      b.innerHTML = '<span class="quiz-option-letter">' + (lettres[k] || '') + '</span><span>' + esc(self.texteOption(q, opt)) + '</span>';
+      b.style.animationDelay = (k * 60) + 'ms';
+      b.addEventListener('click', function() {
+        if (!answerLock(self)) return;
+        b.classList.add('selected');
+        liste.querySelectorAll('.quiz-option').forEach(function(x) {
+          if (x !== b) x.style.opacity = '0.5';
+          x.style.pointerEvents = 'none';
+        });
+        setTimeout(function() {
+          self.answers[cle][self.currentQ] = opt.id;
+          if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
+          else if (j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'relais'; }
+          else { self.phase = 'results'; }
+          self.render();
+        }, DELAI_REPONSE);
+      });
+      liste.appendChild(b);
+    });
+    wrap.appendChild(liste);
+    this.container.appendChild(wrap);
+  };
+
+  // A distance : le tour par tour commun pose chaque question aux deux, et
+  // montre les deux reponses avant la suivante.
+  EchelleQuiz.prototype.demarrerADistance = function(salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    this.players = joueursDuSalon(moi, moiInfo, partenaireInfo);
+    this.aDistance = true;
+    this.phase = 'playing';
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi,
+      noms: [this.players[0].name, this.players[1].name],
+      couleurs: [this.couleur(0), this.couleur(1)],
+      total: this.questions.length,
+      question: function(idx) {
+        var q = self.questions[idx];
+        return {
+          texte: self.texteQuestion(q),
+          options: q.options.map(function(o) { return { id: o.id, texte: self.texteOption(q, o) }; })
+        };
+      },
+      verdict: function(a, b, idx) {
+        var q = self.questions[idx];
+        return { texte: self.verdictQuestion(q, a, b), accord: self.proximite(q, a, b) === 1 };
+      },
+      surFin: function(a, b) {
+        self.answers = { p1: a, p2: b };
+        self.phase = 'results';
+        self.render();
+      }
+    });
+  };
+
+  EchelleQuiz.prototype.verdictQuestion = function(q, a, b) {
+    var p = this.proximite(q, a, b);
+    if (p === null) return '';
+    if (p === 1) return q.miroir ? this.etg('verdictMiroir', 'Vous vous complétez !') : this.etg('verdictPareil', 'Même réponse !');
+    if (p >= 0.6) return this.etg('verdictProche', 'Presque pareil.');
+    return this.etg('verdictLoin', 'Pas pareil... On en parle ?');
+  };
+
+  // Le score general et celui de chaque dimension, en pourcentage.
+  EchelleQuiz.prototype.calcul = function() {
+    var self = this;
+    var parAxe = {}, somme = 0, n = 0, details = [];
+    this.axes.forEach(function(a) { parAxe[a] = { somme: 0, n: 0 }; });
+    this.questions.forEach(function(q, i) {
+      var a = self.answers.p1[i], b = self.answers.p2[i];
+      var p = self.proximite(q, a, b);
+      details.push({ q: q, a: a, b: b, p: p });
+      if (p === null) return;
+      somme += p; n++;
+      if (parAxe[q.axe]) { parAxe[q.axe].somme += p; parAxe[q.axe].n++; }
+    });
+    var axes = this.axes.filter(function(a) { return parAxe[a].n; }).map(function(a) {
+      return { id: a, pct: Math.round(parAxe[a].somme / parAxe[a].n * 100) };
+    });
+    return { pct: n ? Math.round(somme / n * 100) : 0, axes: axes, details: details };
+  };
+
+  EchelleQuiz.prototype.niveau = function(pct) {
+    var r = 1;
+    for (var i = 0; i < this.paliers.length; i++) if (pct >= this.paliers[i]) r = i + 2;
+    return r;
+  };
+
+  EchelleQuiz.prototype.renderResults = function() {
+    var self = this;
+    var res = this.calcul();
+    var r = this.niveau(res.pct);
+    var titre = this.etg('r' + r + '_t', '');
+    var persos = persosDe(this.players);
+    var wrap = el('div', 'quiz-engine quiz-result-card ech-resultat text-center');
+    wrap.appendChild(el('p', 'ech-res-noms', esc(this.players[0].name + ' & ' + this.players[1].name)));
+    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2', esc(titre)));
+    var anneau = el('div', 'ech-anneau');
+    anneau.innerHTML = renderScoreRing(res.pct, null, res.pct >= 80, persos);
+    wrap.appendChild(anneau);
+    wrap.appendChild(el('p', 'ech-anneau-legende', esc(this.etg('scoreLegende', 'de compatibilité'))));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6', escRiche(this.etg('r' + r + '_d', ''))));
+
+    // Une jauge par dimension, de la plus accordee a la moins accordee.
+    var triees = res.axes.slice().sort(function(x, y) { return y.pct - x.pct; });
+    var bloc = el('div', 'ech-axes');
+    bloc.appendChild(el('h3', 'ech-bloc-titre', esc(this.etg('axesTitre', 'Dimension par dimension'))));
+    triees.forEach(function(a) {
+      var ligne = el('div', 'ech-axe');
+      ligne.innerHTML = '<div class="ech-axe-tete"><span class="ech-axe-nom">' + esc(self.etg('axe_' + a.id, a.id)) + '</span>' +
+        '<span class="ech-axe-pct">' + a.pct + ' %</span></div>' +
+        '<div class="ech-axe-piste" aria-hidden="true"><span class="ech-axe-plein" style="width:' + a.pct + '%"></span></div>';
+      bloc.appendChild(ligne);
+    });
+    wrap.appendChild(bloc);
+
+    // Ce qui vous rapproche le plus, et ce dont il faudrait parler.
+    if (triees.length >= 2) {
+      var fort = triees[0], faible = triees[triees.length - 1];
+      var pistes = el('div', 'ech-pistes');
+      var piste = function(classe, titre, axe, texte) {
+        return '<div class="ech-piste ech-piste--' + classe + '"><p class="ech-piste-titre">' + esc(titre) + '</p>' +
+          '<p class="ech-piste-axe">' + esc(self.etg('axe_' + axe, axe)) + '</p><p>' + escRiche(texte) + '</p></div>';
+      };
+      pistes.innerHTML = piste('fort', this.etg('fortTitre', 'Là où vous vous rejoignez'), fort.id, this.etg('axe_' + fort.id + '_fort', '')) +
+        (faible.pct < 100 ? piste('parler', this.etg('parlerTitre', 'Là où il y a le plus à se dire'), faible.id, this.etg('axe_' + faible.id + '_parler', '')) : '');
+      wrap.appendChild(pistes);
+    }
+
+    // Les plus grands ecarts, en clair, puis toutes les reponses repliees.
+    var ecarts = res.details.filter(function(d) { return d.p !== null && d.p < 0.6; })
+      .sort(function(x, y) { return x.p - y.p; }).slice(0, 4);
+    if (ecarts.length) {
+      var be = el('div', 'ech-ecarts');
+      be.appendChild(el('h3', 'ech-bloc-titre', esc(this.etg('ecartsTitre', 'Vos plus grands écarts'))));
+      be.appendChild(this.listeReponses(ecarts));
+      wrap.appendChild(be);
+    }
+    var tout = el('details', 'ech-tout');
+    tout.appendChild(el('summary', 'ech-tout-titre', esc(this.etg('toutTitre', 'Toutes vos réponses, côte à côte'))));
+    tout.appendChild(this.listeReponses(res.details));
+    wrap.appendChild(tout);
+
+    renderActionButtons(wrap, {
+      share: { noms: nomsPartage(this), type: 'duo', pct: res.pct, verdict: titre },
+      restart: function() {
+        if (self.aDistance) { location.reload(); return; }
+        self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  EchelleQuiz.prototype.listeReponses = function(details) {
+    var self = this;
+    var ul = el('ul', 'ech-liste');
+    details.forEach(function(d) {
+      var opt = function(id) {
+        for (var i = 0; i < d.q.options.length; i++) if (d.q.options[i].id === id) return self.texteOption(d.q, d.q.options[i]);
+        return '';
+      };
+      var classe = d.p === null ? '' : (d.p === 1 ? 'pareil' : (d.p >= 0.6 ? 'proche' : 'loin'));
+      var li = el('li', 'ech-liste-item' + (classe ? ' ech-liste-item--' + classe : ''));
+      // Le prenom prend la couleur du personnage de chacun : rose ou violet
+      // selon le genre donne, comme sur l'anneau et la barre.
+      var ligne = function(k, rep) {
+        return '<p class="ech-liste-r"><b class="ech-nom--' + mascotteDe(self.players[k], k) + '">' +
+          esc(self.players[k].name) + '</b> ' + esc(opt(rep)) + '</p>';
+      };
+      li.innerHTML = '<p class="ech-liste-q">' + esc(self.texteQuestion(d.q)) + '</p>' + ligne(0, d.a) + ligne(1, d.b);
+      ul.appendChild(li);
+    });
+    return ul;
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -12646,6 +13531,8 @@ var QuizEngine = (function() {
     QuiPourraitGame: QuiPourraitGame,
     OuiNonGame: OuiNonGame,
     PhrasesGame: PhrasesGame,
+    DixMaisGame: DixMaisGame,
+    EchelleQuiz: EchelleQuiz,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

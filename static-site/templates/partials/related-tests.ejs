@@ -12,7 +12,7 @@
     // Tests à faire à deux, ambiance posée
     testCouple:       ['testCompatibilite', 'quizKnowledge', 'testCoupleSain', 'testCommonPoints'],
     testCommonPoints: ['jeuQuiDeNous', 'quizKnowledge', 'testCompatibilite', 'testCouple'],
-    testCompatibilite:['testCouple', 'testMariage', 'testEmmenager', 'testCommonPoints'],
+    testCompatibilite:['testCouple', 'testCompatSexuelle', 'testMariage', 'testEmmenager'],
     testCoupleSain:   ['testConfiance', 'testCouple', 'testCompatibilite', 'testLangageAmour'],
     testDistance:     ['testDistanceAime', 'quizKnowledge', 'testCouple', 'testConfiance'],
 
@@ -53,6 +53,7 @@
     testPretRelation: ['testTrouverAmour', 'testEx', 'testAttachement', 'testCoupleOuCelibat'],
     testDureeCelibat: ['testCelibataire', 'testTrouverAmour', 'testPretRelation', 'testCoupleOuCelibat'],
     testEstCeLeBon:   ['testCoupleSain', 'testJeLaimeEncore', 'testAmourHabitude', 'testFinCouple'],
+    testCompatSexuelle: ['testCompatibilite', 'quizCoquin', 'jeuActionVeriteHot', 'testPurete'],
     testLangageAmour: ['testPersonnalite', 'testAttachement', 'testCouple', 'quizKnowledge'],
     testAttachement:  ['testPersonnalite', 'testDependance', 'testLangageAmour', 'testConfiance'],
 
@@ -75,8 +76,8 @@
 
     // Le fil chaud : le quiz coquin ne proposait ni action ou vérité coquin
     // ni la roue des gages, c'était le trou le plus visible de la table.
-    quizCoquin:       ['jeuActionVeriteHot', 'jeuGages', 'quizTentation', 'quizGenant'],
-    jeuActionVeriteHot:['quizCoquin', 'jeuGages', 'quizTentation', 'jeuActionVerite'],
+    quizCoquin:       ['jeuActionVeriteHot', 'testCompatSexuelle', 'jeuGages', 'quizTentation'],
+    jeuActionVeriteHot:['quizCoquin', 'testCompatSexuelle', 'jeuGages', 'jeuActionVerite'],
     quizTentation:    ['testInfidelite', 'quizCoquin', 'testConfiance', 'testJalousie'],
 
     // Jeux
@@ -89,21 +90,22 @@
     pourContre:       ['jeuDilemmes', 'quizTuPreferes', 'jeuQuiDeNous', 'testCommonPoints'],
     jeuJamais:        ['jeuActionVerite', 'quizGenant', 'quizCoquin', 'quizTuPreferes'],
     jeuQuiPourrait:   ['jeuQuiDeNous', 'jeuJamais', 'quizTuPreferes', 'quizMost'],
-    jeuOuiNon:        ['jeuDilemmes', 'pourContre', 'jeuQuiDeNous', 'quizTuPreferes'],
+    jeuOuiNon:        ['jeuDilemmes', 'jeuDixMais', 'pourContre', 'jeuQuiDeNous'],
     jeuPhrases:       ['jeuQuiDeNous', 'jeuJamais', 'quizKnowledge', 'jeuQuiPourrait'],
+    jeuDixMais:       ['jeuOuiNon', 'jeuDilemmes', 'jeuJamais', 'quizTuPreferes'],
   };
 
   const _relatedIcons = {
     testCouple: '💕', testCommonPoints: '🎯', testDistance: '🌍', testToxic: '⚠️',
     testCoupleSain: '💚', testMariage: '💒', testDivorce: '⚖️', testParentalite: '👶',
     testEmmenager: '🏠', testAstroPrenoms: '♈', testDateNaissance: '📅', testSignesChinois: '🐉', testJalousie: '🫣', testLangageAmour: '💬',
-    testAttachement: '🔗', testConfiance: '🤝', testCompatibilite: '💘', testPervers: '🎭', testAmourHabitude: '☕', testEstCeLeBon: '🔑', compteurCouple: '📆',
+    testAttachement: '🔗', testConfiance: '🤝', testCompatibilite: '💘', testPervers: '🎭', testAmourHabitude: '☕', testEstCeLeBon: '🔑', compteurCouple: '📆', testCompatSexuelle: '🔥',
     testAmeSoeur: '💫', testFinCouple: '🪢', testAmourAmitie: '🧭', testCrush: '💘', testAmourAmi: '🧡', testKarmique: '🔮', testInfidelite: '💔', testCouche: '🛏️', testSecret: '💌', testAimeEncore: '💞', testEmprise: '🔒', testDistanceAime: '📞', testEx: '🕰️', testChargeMentale: '🧠', quizRencontre: '💬', testSuisJeAmoureux: '💗',
     quizAmoureux: '❤️', quizCoquin: '🔥', quizMarrant: '😂', quizKnowledge: '🧠',
     quizMost: '🏆', quizAdo: '🌟', quizGenant: '😳', quizTuPreferes: '🤔', quizVraiFaux: '✅',
     zamours: '📺', quizTentation: '🏝️',
     jeuActionVerite: '🎲', jeuActionVeriteHot: '🌶️', jeuGages: '🎡',
-    jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊', jeuQuiPourrait: '🏆', jeuOuiNon: '✅', jeuPhrases: '💬',
+    jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊', jeuQuiPourrait: '🏆', jeuOuiNon: '✅', jeuPhrases: '💬', jeuDixMais: '🔟',
   };
 
   const _relatedKeys = (_relatedMap[routeKey] || []).filter(function(k) {

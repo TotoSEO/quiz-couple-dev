@@ -387,7 +387,9 @@
     "quizTypeCouple": "What type of couple are you quiz",
     "testEstCeLeBon": "Is this the one test",
     "testSignesChinois": "Chinese zodiac compatibility",
-    "compteurCouple": "Relationship duration counter"
+    "compteurCouple": "Relationship duration counter",
+    "jeuDixMais": "He's a 10 but...",
+    "testCompatSexuelle": "Sexual compatibility test"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

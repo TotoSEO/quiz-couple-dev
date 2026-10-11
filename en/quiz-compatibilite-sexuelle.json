@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Test for two • Adults only",
+    "title": "Sexual compatibility test: are you on the same wavelength?",
+    "titleHighlight": "Sexual compatibility test",
+    "description": "Twenty questions about desire, tenderness, how you talk about it, trying new things and rhythm. You each answer on your own, then you get your score, the breakdown by dimension and your answers side by side.",
+    "subtitle": "20 questions • 10 minutes • on one phone or one each",
+    "jumpBtn": "Take the test"
+  },
+  "section1": {
+    "title": "How the test works",
+    "intro": "The sexual compatibility test is taken by two people. You each answer the same twenty questions without seeing the other's answers, and the result compares your two sets of answers.",
+    "p1": "The questions cover what matters in a couple's intimate life: how often you'd like to make love, the place of tenderness, whether you manage to say what you like, the urge to try new things, or the best time of day. For example: \"Ideally, you'd like to make love... almost every day, two or three times a week, about once a week, or a few times a month?\"",
+    "p2": "On a single phone, the first person answers the whole series, then passes the phone and the other answers in turn. The first person's answers stay hidden until the result. If you prefer, long-distance mode lets you each answer on your own phone, and you then see both answers after each question.",
+    "p3": "The questions aren't explicit, and there's no right answer. The test doesn't judge your sex life, it only looks at whether your desires go the same way."
+  },
+  "section2": {
+    "title": "The five things the test compares",
+    "intro": "The twenty questions are split into five dimensions, four questions each. That's what gives you the breakdown by dimension at the end of the test.",
+    "sub1Title": "Desire",
+    "sub1P1": "How often you'd like to make love, how much room it takes in your idea of a relationship, and how you handle a dry spell. That's often where gaps create the most tension, because it's easy to feel the other person wants too much, or not enough.",
+    "sub2Title": "Tenderness",
+    "sub2P1": "Cuddles during the day, taking your time, what happens right after. For some people tenderness is essential, for others passion is what counts. By the way, <a href=\"/en/blog/5-love-languages/\">touch is a love language in its own right</a>, and not everyone speaks it as much.",
+    "sub3Title": "Talking about it",
+    "sub3P1": "Saying what you like, talking about your fantasies, saying when something doesn't feel right. It's the dimension that helps with all the others: when you can talk about it, gaps are much easier to close.",
+    "sub4Title": "Trying new things",
+    "sub4P1": "Wanting to try things, change places, toys, or on the contrary the comfort of what you know. No answer is better than another, what matters is that your desires meet, or that you can talk about it.",
+    "sub5Title": "Rhythm",
+    "sub5P1": "The best time of day, spontaneous or planned, who makes the first move and how you show you're in the mood. They look like details, but they're often what causes everyday misunderstandings."
+  },
+  "section3": {
+    "title": "How the score is calculated",
+    "p1": "Each question offers four answers ranked from one end to the other, for example from \"almost every day\" to \"a few times a month\". If you gave the same answer, the question counts in full. One step apart, it still counts for two thirds, two steps apart for one third, and three steps apart for nothing.",
+    "p2": "One question works the other way round: \"Ideally, who makes the first move?\". If one of you answers \"me\" and the other \"my partner\", you agree perfectly, since you complete each other. If you both answer \"me\", that's where the gap is.",
+    "p3": "The overall score is the average of the twenty questions, and each dimension gets its own percentage. The result falls into five levels, from \"two different rhythms\" to \"on the same wavelength\"."
+  },
+  "section4": {
+    "title": "When your desires don't match",
+    "p1": "That's the case for most couples, and it doesn't mean things can't work. Desires change with age, tiredness, work, a new baby... What matters is being able to talk about it without either of you feeling judged or pressured.",
+    "p2": "To get started, pick a calm moment outside the bedroom and start from your answers: \"I see we didn't answer the same about how often, what do you have in mind?\". If you struggle to find the words, <a href=\"/en/blog/intimate-questions-for-couples/\">more intimate questions to ask each other</a> often help get the conversation going. A game can make it easier too: with <a href=\"/en/dirty-truth-or-dare-couples/\">slightly bolder truth or dare cards</a>, either of you can skip a card when a question goes too far.",
+    "p3": "Your relationship isn't just about what happens in bed: values, plans and the way you communicate count too, and that's what <a href=\"/en/love-compatibility-test/\">love compatibility in the broader sense</a> measures. And when a gap has been hurting one of you for a long time, talking to a sex therapist or a couples therapist often helps more than you'd think."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "What is sexual compatibility?",
+    "faq1A": "It means having desires that go the same way: roughly the same level of desire, the same place for tenderness, the same way of talking about it. It doesn't mean liking everything the same. Two very different people can be very compatible if they manage to talk and make room for each other.",
+    "faq2Q": "Can I take the test alone?",
+    "faq2A": "No, it compares two sets of answers. If your partner isn't next to you, long-distance mode lets you each answer on your own phone, even miles apart.",
+    "faq3Q": "Will my partner see my answers?",
+    "faq3A": "Yes, at the end, and that's the point: the result puts your answers side by side so you can talk about them. During the test on a single phone, the first person's answers stay hidden while the other answers. In long-distance mode, both answers show up after each question.",
+    "faq4Q": "Is a low score bad news?",
+    "faq4A": "No. A low score means your desires are different right now, not that your relationship won't work. Lots of couples have gaps on desire or rhythm, and they can be worked on, especially by talking. Start with the dimension where the gap is biggest.",
+    "faq5Q": "Are our answers saved?",
+    "faq5A": "No. Your answers stay on your phone and disappear when you leave the page. Nothing is kept, even in long-distance mode, where they go straight from one phone to the other."
+  },
+  "jsonLd": {
+    "about": "sexual compatibility"
+  }
+}

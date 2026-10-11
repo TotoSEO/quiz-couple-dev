@@ -1,0 +1,113 @@
+{
+  "jsonLd": {
+    "name": "C'est un 10 mais..., le jeu à faire en couple"
+  },
+  "hero": {
+    "badge": "Jeu à deux • 60 cartes",
+    "title": "C'est un 10 mais... : le jeu à faire en couple",
+    "titleHighlight": "C'est un 10 mais...",
+    "description": "Une personne parfaite, un défaut. Chacun redonne sa note de 0 à 10, puis vous comparez. 60 cartes à jouer en secret, face à face ou à distance."
+  },
+  "section1": {
+    "title": "« C'est un 10 mais... », c'est quoi ?",
+    "p1": "« C'est un 10 mais... » est un jeu qu'on peut faire entre amis ou en couple. On imagine une personne parfaite, notée 10 sur 10, et on lui ajoute un défaut. Par exemple : « C'est un 10 mais il met du ketchup sur ses pâtes carbonara ». Chacun dit ensuite quelle note il lui donne maintenant.",
+    "p2": "Si vous gardez 10, c'est que le défaut ne vous dérange pas du tout. Si vous descendez à 2, c'est que ça vous gâche pas mal la personne... et si vous mettez 0, c'est rédhibitoire, il n'y a plus rien à sauver ! L'idée vient d'une tendance TikTok en anglais, « He's a 10 but... », qui a fait le tour des réseaux. À deux, ça devient un vrai <a href=\"/jeux-de-couple/\">jeu à faire en couple</a> : on découvre ce que l'autre supporte et ce qui l'agace, et la plupart du temps ça part en débat.",
+    "p3": "Le jeu ci-dessus se joue dans le navigateur, sans inscription et sans rien installer. Un seul téléphone suffit, ou deux si vous êtes loin l'un de l'autre."
+  },
+  "section2": {
+    "title": "Comment on joue",
+    "intro": "Voici comment fonctionne notre jeu ci-dessus. Avant de commencer, vous choisissez trois choses : qui est le 10 (un homme, une femme, ou au hasard d'une carte à l'autre), le nombre de cartes (15, 30 ou les 60), et la façon de jouer.",
+    "modeSecretEmoji": "🤫",
+    "modeSecretTitre": "En secret",
+    "modeSecretTexte": "Chacun note de son côté, sans voir la note de l'autre. Le téléphone passe de main en main, et quand les deux ont noté, les deux notes s'affichent en même temps. C'est la version la plus honnête, puisque personne ne peut s'aligner sur l'autre.",
+    "modeFaceEmoji": "👀",
+    "modeFaceTitre": "Face à face",
+    "modeFaceTexte": "Les deux notes se donnent sur le même écran, une rangée chacun. C'est plus rapide et pas besoin de se cacher : vous voyez la note de l'autre arriver, et la discussion commence tout de suite.",
+    "modeDistanceEmoji": "📱",
+    "modeDistanceTitre": "À distance",
+    "modeDistanceTexte": "Chacun joue sur son téléphone. L'un crée la partie et envoie le code ou le lien à l'autre, vous notez chacun de votre côté, et les deux notes s'affichent sur vos deux écrans. Pratique pendant un appel vidéo, ou quand on vit loin l'un de l'autre.",
+    "apres": "Après chaque carte, le jeu affiche l'écart entre vos deux notes. À la fin, vous voyez sur combien de cartes vous étiez d'accord à un point près, qui de vous deux note le plus sévèrement, vos plus gros désaccords, et les défauts qui sont rédhibitoires pour vous deux."
+  },
+  "section3": {
+    "title": "Les 60 cartes du jeu",
+    "intro": "Voici toutes les cartes, rangées par thème. Dans le jeu elles sont mélangées, et si vous choisissez « au hasard », une carte sur deux parle d'une femme. Certaines sont là pour rire, d'autres sont de vrais sujets de couple, et c'est justement le mélange qui rend la partie drôle.",
+    "groupes": [
+      {
+        "titre": "Au quotidien",
+        "de": 1,
+        "a": 12
+      },
+      {
+        "titre": "À table",
+        "de": 13,
+        "a": 22
+      },
+      {
+        "titre": "Au téléphone",
+        "de": 23,
+        "a": 34
+      },
+      {
+        "titre": "En couple",
+        "de": 35,
+        "a": 48
+      },
+      {
+        "titre": "Les vrais red flags",
+        "de": 49,
+        "a": 60
+      }
+    ],
+    "apres": "Si vous aimez trancher, il y a aussi <a href=\"/jeu-oui-non-couple/\">des situations de couple à juger par oui ou par non</a>, avec les votes de tous les autres joueurs affichés après chaque réponse."
+  },
+  "section4": {
+    "title": "Comment donner sa note",
+    "intro": "Il n'y a pas de règle officielle. La plupart des gens notent à peu près comme ça :",
+    "entetes": [
+      "Note",
+      "Ce que ça veut dire"
+    ],
+    "bareme": [
+      [
+        "10",
+        "Ça ne change rien, c'est même plutôt mignon."
+      ],
+      [
+        "7 à 9",
+        "Ça agace un peu, mais on vit très bien avec."
+      ],
+      [
+        "4 à 6",
+        "Ça se discute. Tout dépend du reste, et de l'humeur du jour."
+      ],
+      [
+        "1 à 3",
+        "Gros doute. Il faudrait vraiment que le reste compense."
+      ],
+      [
+        "0",
+        "Rédhibitoire. Même un 10 ne s'en remet pas."
+      ]
+    ],
+    "apres": "Le plus intéressant reste l'écart entre vos deux notes. Quand l'un met 9 et l'autre 1 à la même carte, il y a forcément une histoire derrière... ou au moins une explication à donner !"
+  },
+  "section5": {
+    "title": "Petit défaut ou vrai red flag ?",
+    "p1": "Le jeu mélange les deux. Le ketchup sur les pâtes ou les chaussettes qui traînent, c'est le genre de défaut dont on rit, même quand ça agace. Fouiller dans le téléphone de l'autre ou ne pas supporter ses amis, c'est autre chose : ce sont <a href=\"/blog/red-flags-homme/\">des signaux d'alerte qu'il vaut mieux repérer tôt</a>, chez un homme comme chez une femme.",
+    "p2": "Quand vos notes s'écartent beaucoup sur une carte de ce genre, ça vaut le coup d'en reparler au calme, une fois la partie finie. Chacun a <a href=\"/blog/choses-pas-accepter-couple/\">ce qu'il refuse d'accepter dans un couple</a>, et c'est plus simple de le savoir avant de se retrouver dans la situation.",
+    "p3": "Pour le reste, gardez le jeu léger. C'est un jeu, et personne ne doit se sentir jugé pour avoir mis 3 à l'ananas sur la pizza !"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "D'où vient « C'est un 10 mais » ?",
+    "a1": "D'une tendance née sur TikTok en anglais, « He's a 10 but... ». Le principe a été repris un peu partout, en français comme dans d'autres langues : on décrit une personne parfaite, on ajoute un défaut, et chacun donne sa note.",
+    "q2": "On peut y jouer à plus de deux ?",
+    "a2": "Le jeu en ligne compte les notes de deux personnes. Entre amis, rien n'empêche de lire les cartes à voix haute et de donner vos notes chacun votre tour, ça marche très bien en soirée.",
+    "q3": "Combien de temps dure une partie ?",
+    "a3": "Une dizaine de minutes pour 15 cartes en face à face, un peu plus en secret puisque le téléphone passe de main en main. Les 60 cartes, c'est plutôt une soirée entière, surtout si vous débattez de chaque note.",
+    "q4": "Pourquoi choisir entre un homme et une femme ?",
+    "a4": "Les cartes sont écrites pour les deux. Selon votre choix, la carte dit « C'est un 10 mais il... » ou « C'est une 10 mais elle... ». Au hasard, le jeu change d'une carte à l'autre, et c'est souvent drôle de voir si la note bouge selon que c'est un homme ou une femme.",
+    "q5": "Nos notes sont-elles enregistrées ?",
+    "a5": "Non. Les notes restent sur votre téléphone le temps de la partie et disparaissent quand vous quittez la page. À distance, elles passent d'un téléphone à l'autre sans être gardées nulle part."
+  }
+}

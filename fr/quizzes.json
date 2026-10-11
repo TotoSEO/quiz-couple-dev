@@ -269,10 +269,10 @@
     "metaDescription": "Âme sœur ou belle histoire ? 20 questions, un indice et un verdict qui ne se contente pas de flatter. Test gratuit, seul ou à deux, sans inscription."
   },
   "jeuxCouple": {
-    "title": "Jeux de couple en ligne : 11 jeux gratuits à jouer à deux",
+    "title": "Jeux de couple en ligne : 13 jeux gratuits à jouer à deux",
     "shortTitle": "Jeux de couple",
-    "description": "Onze jeux à jouer à deux : le oui ou non, pour ou contre, qui pourrait, je n'ai jamais, qui de nous deux, tu préfères, les dilemmes, action ou vérité, sa version coquine, la roue des gages et le plateau.",
-    "metaDescription": "11 jeux de couple gratuits sur un seul téléphone : oui ou non, pour ou contre, qui de nous deux, tu préfères, les dilemmes, action ou vérité et la roue des gages. Sans inscription."
+    "description": "Treize jeux à jouer à deux : c'est un 10 mais, les phrases à compléter, le oui ou non, pour ou contre, qui pourrait, je n'ai jamais, qui de nous deux, tu préfères, les dilemmes, action ou vérité, sa version coquine, la roue des gages et le plateau.",
+    "metaDescription": "13 jeux de couple gratuits sur un seul téléphone : oui ou non, pour ou contre, qui de nous deux, tu préfères, les dilemmes, action ou vérité et la roue des gages. Sans inscription."
   },
   "jeuGages": {
     "title": "Gage couple : le jeu de la roue, 140 gages tirés au hasard",
@@ -457,5 +457,17 @@
     "shortTitle": "Combien de temps encore célibataire ?",
     "description": "Vingt questions sur votre vie de tous les jours, et une estimation en mois du temps qu'il vous reste avant de rencontrer quelqu'un.",
     "metaDescription": "Combien de temps allez-vous encore rester célibataire ? Vingt questions sur votre âge, vos sorties, vos amis et vos réflexes, et une estimation en mois. Test gratuit et anonyme."
+  },
+  "jeuDixMais": {
+    "title": "C'est un 10 mais... : le jeu à faire en couple (60 cartes)",
+    "shortTitle": "C'est un 10 mais...",
+    "metaDescription": "Le jeu « C'est un 10 mais... » en couple : une personne parfaite, un défaut, et chacun redonne sa note de 0 à 10. 60 cartes, en secret ou à distance.",
+    "description": "Une personne parfaite, un défaut : chacun redonne sa note de 0 à 10, puis vous comparez."
+  },
+  "testCompatSexuelle": {
+    "title": "Test de compatibilité sexuelle en couple : 20 questions à deux",
+    "shortTitle": "Test de compatibilité sexuelle",
+    "metaDescription": "Test de compatibilité sexuelle à deux : 20 questions sur le désir, la tendresse, la nouveauté et le rythme, avec un score par dimension. Gratuit.",
+    "description": "Vingt questions à deux sur le désir, la tendresse et la façon d'en parler, pour voir où vous vous rejoignez."
   }
 }
