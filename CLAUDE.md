@@ -78,10 +78,24 @@ Le reste de la règle : rien de tiers avant l'affichage. `pub.js` ne demande
 les emplacements qu'à l'événement `load`, jamais dans le premier écran avant
 le premier défilement, le footer compris, et l'interstitiel seulement au résultat ou à l'arrivée depuis une autre page du site ; le fichier de la plateforme de consentement part après
 `DOMContentLoaded` (le talon `__tcfapi` reste en tête) ; GA part au `load`.
-Les images de tête ont deux largeurs (`720/` et 1200 px) et les cartes de
-l'accueil les déclarent en `srcset`. Sur mobile, les animations qui
-repeignent à chaque image (dégradé du titre, halo du bouton pureté) sont
-coupées. Toute lecture de géométrie (`getBoundingClientRect`, `clientWidth`,
+Les images ont des variantes réduites versionnées à côté de l'original :
+720 et 880 px pour les images de tête (`public/quiz/featured/`, originaux de
+1200 px), 720 et 1080 px pour les couvertures du blog (`public/blog/`,
+jusqu'à 1536 px et 132 Ko en moyenne). `srcsetImage` (generate.js) écrit le
+`srcset` avec les seules variantes présentes et la vraie largeur de
+l'original, lue dans l'en-tête WebP ; il sert les cartes et les derniers
+articles de l'accueil, l'image de tête des tests (et son préchargement dans
+base.ejs, qui doit garder les mêmes candidats), la liste du blog, la tête
+d'article (l'image du LCP), les images écrites dans le corps des articles
+(`srcsetImagesArticle`, passée sur le rendu de chaque article) et les
+vignettes du plan du site. Une nouvelle
+image reçoit ses variantes par `build/variantes-images.cjs` (sharp installé
+hors du dépôt, mode d'emploi en tête du fichier) ; sans elles, elle n'a
+qu'un fichier et pèse simplement plus lourd. Le `sizes` de chaque image
+donne sa largeur affichée relevée dans Chromium : jusqu'au 11 octobre 2026,
+les cartes de l'accueil annonçaient 82vw (320 px sur un écran de 390) pour
+259 px réels, et un téléphone x3 tirait les originaux, 1,8 Mo d'images pour
+la page parcourue contre 700 Ko depuis. Toute lecture de géométrie (`getBoundingClientRect`, `clientWidth`,
 `scrollY`) après une écriture dans le DOM force une mise en page complète :
 lire d'abord, écrire ensuite, comme dans `quiz-slider.js`.
 Dans un gabarit de test ou de jeu, l'include `partials/quiz-featured` (l'image
@@ -119,10 +133,22 @@ règle. Les textes sont `heroScene` dans `{lang}/home.json` ; les SVG en
 ligne ne sont pas candidats au LCP, et la scène n'a aucun fondu depuis
 l'opacité 0 au chargement (le premier écran apparaît en 0,4 s).
 Sous 768 px, les animations infinies qui n'animent ni `transform` ni
-`opacity` (reflet des boutons, halo de la carte d'avis, LED du bouton sources
-Google, point du compteur) sont coupées dans le bloc `@media (max-width:
-767.98px)` de styles.css : elles repeignent à chaque image et PageSpeed les
-compte. Pas de `:has()` sur `body` (le moteur pose `quiz-has-result`). L'état
+`opacity` (dégradé du titre, reflet des boutons, anneaux néon du bouton
+pureté et du bouton sources Google, fond de la carte finale de l'accueil,
+anneau de la scène du hero, halo de la carte d'avis et vague des étoiles,
+point du compteur) sont coupées par le bloc `@media (max-width: 767.98px)`
+qui **ferme styles.css et doit rester le dernier du fichier** : à
+spécificité égale, la dernière règle gagne. Écrit plus haut, sous le titre
+du hero, il ne coupait que le dégradé du titre, et jusqu'au 11 octobre 2026
+tout le reste tournait : au repos, l'accueil occupait le fil principal d'un
+téléphone moyen 9,7 s sur 10 (390 px, processeur ralenti 4x), 13 ms une
+fois le bloc déplacé. Une animation infinie ajoutée qui n'anime ni
+`transform` ni `opacity` y reçoit sa ligne. Au bureau, ces animations
+tournent toujours et coûtent un tiers d'un cœur au repos (2,9 s sur 10
+dès le 5 octobre, 3,3 s depuis la scène du hero) : tant qu'une seule tourne,
+le navigateur refait toute l'image à chaque trame, en couper une ne change
+rien, il faudrait les arrêter ou les recomposer toutes, l'anneau néon du
+menu collé en haut compris. Pas de `:has()` sur `body` (le moteur pose `quiz-has-result`). L'état
 collé de l'en-tête vient d'une sentinelle observée par IntersectionObserver
 (mobile-menu.js), jamais d'une lecture de `scrollY` au chargement.
 Accessibilité : un petit texte en rose prend `hsl(var(--primary-texte))`
