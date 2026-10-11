@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-10T09:46:35.561Z",
+  "genere_le": "2026-10-11T03:12:37.475Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-10",
+  "aujourdhui": "2026-10-11",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 18,
+  "reserve_jours": 17,
   "a_remplir": [
     {
       "jour": "2026-10-28",
@@ -1266,6 +1266,21 @@
       "jour": "2027-01-18",
       "creneau": "soir",
       "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-19",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-19",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-19",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
     }
   ],
   "a_corriger": [],
@@ -1322,7 +1337,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "j'aime bien quand t'es là et qu'on fait rien",
       "erreur": null
     },
@@ -1376,7 +1391,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -1789,11 +1804,11 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-11",
+      "jour": "2026-10-12",
       "creneau": "matin"
     },
     "mipaps-statique": {
-      "jour": "2026-10-10",
+      "jour": "2026-10-13",
       "creneau": "soir"
     },
     "mipaps-histoire": {
