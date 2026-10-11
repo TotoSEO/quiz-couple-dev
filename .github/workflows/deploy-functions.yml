@@ -46,12 +46,16 @@ jobs:
       # Supabase, avec les trois secrets qui ne servaient qu'a elle. Le meme
       # jour, admin-blog (l'ancien editeur d'articles de l'admin, sans plus
       # aucun ecran dans le gabarit) et blog-og (images de partage de l'ancien
-      # blog dynamique, le blog vit dans le depot) ont ete retirees aussi. Les
-      # commandes ne font rien si c'est deja fait, et une erreur ne bloque pas
-      # le deploiement : cette etape peut etre retiree une fois passee.
-      - name: Retirer trigger-deploy, admin-blog, blog-og et les secrets (supprimés du dépôt)
+      # blog dynamique, le blog vit dans le depot) ont ete retirees aussi. Le
+      # 11 octobre 2026, manage-ado-session : elle creait les parties de
+      # l'ancien quiz ado multijoueur dans la table quiz_ado_sessions, alors
+      # que le quiz ado passe depuis par des canaux Realtime sans table ; plus
+      # rien ne l'appelait, mais elle restait une porte ouverte sur la base.
+      # Les commandes ne font rien si c'est deja fait, et une erreur ne bloque
+      # pas le deploiement : cette etape peut etre retiree une fois passee.
+      - name: Retirer trigger-deploy, admin-blog, blog-og, manage-ado-session et les secrets (supprimés du dépôt)
         run: |
-          for f in trigger-deploy admin-blog blog-og; do
+          for f in trigger-deploy admin-blog blog-og manage-ado-session; do
             supabase functions delete "$f" --project-ref "$SUPABASE_PROJECT_REF" < /dev/null \
               || echo "$f : déjà absente"
           done

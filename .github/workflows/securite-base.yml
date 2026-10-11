@@ -1,0 +1,110 @@
+name: Sécurité · base Supabase
+
+# Applique les migrations du 11 octobre 2026 par l'API de gestion de Supabase,
+# comme social-base.yml, avec les secrets déjà là pour les fonctions
+# (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Rien à faire à la main.
+#
+#  1. Tout de suite : 20261011110000 (le compteur de lectures sous les
+#     articles du blog, cassé depuis le 8 octobre) et 20261011120000 (ce que
+#     la clé publique peut écrire ou lancer). Rien de ce qu'elles ferment ne
+#     sert au site.
+#  2. Ensuite seulement : 20261011130000, qui retire les statistiques de
+#     l'admin à la clé publique. L'admin encore servi par le site les lisait
+#     avec elle : fermées trop tôt, il resterait sans chiffres. Le second job
+#     attend donc que le site publié serve le nouvel admin.js (celui qui passe
+#     par admin-stats) et que admin-stats réussisse son contrôle de santé
+#     (jeton fabriqué et vérifié, puis un vrai appel relayé), jusqu'à
+#     45 minutes chacun. Sans ces deux signaux, il échoue sans rien fermer :
+#     relancer le workflow (« Run workflow ») une fois le site et les
+#     fonctions déployés.
+#
+# Le relancer est toujours sans risque : les migrations sont idempotentes.
+# C'est aussi ce qu'il faut faire si une migration supprime puis recrée l'une
+# des fonctions de statistiques de l'admin (Supabase rouvre à la clé publique
+# toute fonction créée dans public).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/migrations/20261011110000_compteur_lectures_articles.sql'
+      - 'supabase/migrations/20261011120000_securite_ecritures_publiques.sql'
+      - 'supabase/migrations/20261011130000_stats_admin_privees.sql'
+      - '.github/workflows/securite-base.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: securite-base
+  cancel-in-progress: false
+
+jobs:
+  ecritures:
+    name: Écritures publiques et compteur des articles
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      # La dernière requête de chaque migration rend un bilan (ce que la clé
+      # publique peut encore écrire) : il est affiché dans le journal.
+      - name: Appliquer les migrations
+        run: |
+          for f in supabase/migrations/20261011110000_compteur_lectures_articles.sql supabase/migrations/20261011120000_securite_ecritures_publiques.sql; do
+            jq -Rs '{query: .}' "$f" > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo "$f : réponse $code"
+            head -c 800 reponse.json; echo
+            if [ "$code" -ge 300 ]; then exit 1; fi
+          done
+
+  stats-admin:
+    name: Statistiques de l'admin fermées à la clé publique
+    needs: ecritures
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      # Le paramètre en plus contourne le cache de GitHub Pages (dix minutes).
+      - name: Attendre le nouvel admin sur le site
+        run: |
+          for i in $(seq 1 90); do
+            if curl -sfL "https://quiz-couple.com/js/admin.js?securite=$(date +%s)" | grep -q 'functions/v1/admin-stats'; then
+              echo "admin.js publié passe par admin-stats"
+              exit 0
+            fi
+            sleep 30
+          done
+          echo "::error::Le site publié sert encore l'ancien admin.js après 45 minutes : rien n'est fermé. Relancer ce workflow une fois le site déployé."
+          exit 1
+      - name: Attendre que admin-stats marche
+        run: |
+          reponse=''
+          for i in $(seq 1 90); do
+            reponse=$(curl -s -X POST "https://$SUPABASE_PROJECT_REF.supabase.co/functions/v1/admin-stats?sante=1" \
+              -H 'Content-Type: application/json' -d '{}' || true)
+            if echo "$reponse" | jq -e '.sante == "ok"' >/dev/null 2>&1; then
+              echo "admin-stats : contrôle de santé réussi"
+              exit 0
+            fi
+            sleep 30
+          done
+          echo "::error::admin-stats ne passe pas son contrôle de santé après 45 minutes (dernière réponse : ${reponse:0:200}) : rien n'est fermé. Vérifier le workflow « Deploy Supabase Edge Functions », puis relancer celui-ci."
+          exit 1
+      - name: Fermer les statistiques de l'admin à la clé publique
+        run: |
+          f=supabase/migrations/20261011130000_stats_admin_privees.sql
+          jq -Rs '{query: .}' "$f" > requete.json
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json)
+          echo "$f : réponse $code"
+          head -c 800 reponse.json; echo
+          if [ "$code" -ge 300 ]; then exit 1; fi

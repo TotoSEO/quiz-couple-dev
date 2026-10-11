@@ -30,7 +30,7 @@ npm run build          # Main site → dist/
 - `static-site/js/salon.js` — Mode à distance (chacun sur son téléphone) : codes de partie, QR code, présence, chargé à la demande ; le moteur commun l'appelle via `QuizEngine.chargerSalon`
 - `reseaux/mipaps/` : le second compte Instagram, « Les mipaps » (français, fond blanc, aucun lien avec le site), en place depuis le 8 octobre 2026. `charte/gribouillou.mjs` dessine les deux personnages (le Gribouillou bleu, la Gribouillette rose à fleur ; Eli et Toh dans le lore seulement) en SVG : un rig paramétrique (86 expressions, 25 poses, 30 positions de mains, 80 objets, angle de rotation continu de face à de dos, chaque trait placé en trois dimensions sur le corps, cycle de marche par `foulee`, bras de course sur les poses qui courent, visage qui reste lisible de profil), `charte/scenes.mjs` les scènes à deux et les meubles en perspective, `charte/planches.mjs` le canevas de design (https://claude.ai/artifact/DYX3xFtQBrV4jDUerw8LDH). Règles de DA dans `charte/README.md`, analyse de story.sketchers, nub et bom.seeat et banque d'idées dans `REFERENCES.md`. **Quatre formats, pas de BD** (Thomas) : le studio les rend dans `reseaux/studio/src/mipaps/` (`mipaps-reel` animé par étapes interpolées, où l'angle tient jusqu'à l'étape qui précède son écriture et où un perso ne se tourne jamais en courant : fin de course, arrêt de 0,2 s, puis un petit saut pour se tourner, `rotation` dans `mouvement.ts` ; `mipaps-statique`, `mipaps-carrousel` l'histoire page par page, `mipaps-post` mini, déclaration ou schéma de bureau ; Shantell Sans, cadre automatique sur ce qui est dessiné, bruitages sans aucune voix : rires, pleurs et cris retirés à la demande de Thomas). Le contrôle des recettes est `reseaux/automates/lib/mipaps.mjs` (chaque nom vérifié contre le rig). Le compte est la langue `fr` des tables `social_*` (migration `20261009110000` : posts et idées portent leur langue, unicité (langue, jour, créneau), colonne `melange` par compte, l'accueil du site ne lit que `en`) ; semaine type `MELANGE_MIPAPS` (matin reel animé, midi post, soir histoire ou statique en alternance). L'atelier est `reseaux/mipaps/atelier/` (LIGNE-EDITORIALE, CONSIGNES, `sujets.json`, `exemple-post.json`) ; ses posts vivent sur la branche `mipaps-atelier` (`reseaux/mipaps/atelier/posts/`), lue par social-rendu.yml à côté de `reseaux-atelier`, l'entretien y dépose `etat.json` (`--etat-fr`), et la routine Claude « atelier mipaps » tourne à 6 h 12 (heure de Paris) dans sa propre session permanente. L'onglet Réseaux de l'admin a une barre de comptes (Quiz Couple, Les mipaps) et deux vues (planning en grille serrée, dix jours sans défiler ; publiés à part, lus à la demande), avec mémoire de session par compte. `controler.mjs` reconnaît un post des mipaps à son chemin (`/mipaps/`) et lui applique le même contrôle de style que Quiz Couple (`lib/style.mjs`, appels et fins en français).
 - `static-site/css/styles.css` — Main stylesheet
-- `static-site/templates/pages/admin.ejs`, `static-site/js/admin.js`, `static-site/css/admin.css` — Tableau de bord d'administration (`/admin/`) : coquille plein écran à barre latérale, tuiles, grands graphiques sur canvas, lectures RPC mises en mémoire de session (bouton « Actualiser »). L'onglet ouvert à la connexion est Trafic, premier du menu : `currentTab` dans admin.js, la classe `active` et le panneau visible dans le gabarit disent la même chose. Ses deux premières tuiles portent l'écart avec la période précédente (hier en vue du jour, les sept jours d'avant en vue à sept jours), calculé sur la série quotidienne déjà chargée pour la courbe ; au-delà elle ne remonte pas assez loin et l'étiquette disparaît. Les identifiants du gabarit sont le contrat du script, on ne les renomme pas ; base.ejs n'y met ni en-tête ni pied de page. Un lien « Retour au site » mène à l'accueil de la langue de la page, sous le bouton de connexion et en bas de la barre latérale (réduit à son icône sous 960 px). Au-dessus de lui, le bouton « Exporter » (`exporterTout`, admin.js, 7 octobre 2026) télécharge un JSON de tout ce que l'admin sait sur trente jours (parties finies et lancements par test, trafic par jour, page et source, blog, mode à distance, clics Instagram), en relisant la mémoire de session : Thomas l'envoie pour analyse, le fichier dit lui-même comment se lire, et une fonction absente y laisse son erreur. Le bouton de déploiement manuel a été retiré le 7 octobre 2026, avec la fonction `trigger-deploy` et les secrets `GITHUB_DEPLOY_TOKEN`, `GITHUB_REPO_OWNER`, `GITHUB_REPO_NAME` (une étape de deploy-functions.yml les efface de Supabase) : le site se publie au push sur main et aux reconstructions programmées (scheduled-rebuild.yml), et le bouton « Run workflow » de GitHub Actions reste là pour relancer un build à la main. Le même jour, l'onglet Blog a disparu (Thomas n'avait pas l'usage du classement « Les articles les plus lus ») : la courbe des clics « source préférée » Google a rejoint la fin de l'onglet Trafic, suit sa période et se charge avec ses six agrégats (ids `blog-sourcepref-*` gardés, le script en dépend) ; la fonction `get_blog_articles` et ses deux aides sont retirées de la base par la migration `20261008170000`, le compteur de lectures sous le titre d'un article (`blog-lectures.js`, table `article_lectures`) reste. L'ancien éditeur d'articles de l'admin (fonctions `admin-blog` et `blog-og`, `SEED_ARTICLES` injecté au build) n'avait plus aucun écran dans le gabarit depuis que le blog vit dans le dépôt : son code a été retiré, et deploy-functions.yml supprime les deux fonctions chez Supabase. Mesure : les onglets sont Trafic, Parties et À distance ; l'onglet À distance lit les comptes par page par `chargeSalonParPage`, qui se replie sur `get_salon_counts()` (sans borne de date, la table n'existant que depuis la mise en service du mode) quand `get_salon_counts_depuis` ne répond pas : le 7 octobre 2026 elle dépassait les trois secondes du rôle anon (erreur 57014) et l'onglet restait vide ; la migration `20261008160000_salon_rapide.sql` la rend rapide (borne indexable, et `trafic_fuseau` valide le fuseau en tentant la conversion au lieu de parcourir `pg_timezone_names`, pour toutes les fonctions de trafic).
+- `static-site/templates/pages/admin.ejs`, `static-site/js/admin.js`, `static-site/css/admin.css` — Tableau de bord d'administration (`/admin/`) : coquille plein écran à barre latérale, tuiles, grands graphiques sur canvas, lectures RPC mises en mémoire de session (bouton « Actualiser »), par la fonction serveur `admin-stats` depuis le 11 octobre 2026 (voir « Sécurité de la base »). L'onglet ouvert à la connexion est Trafic, premier du menu : `currentTab` dans admin.js, la classe `active` et le panneau visible dans le gabarit disent la même chose. Ses deux premières tuiles portent l'écart avec la période précédente (hier en vue du jour, les sept jours d'avant en vue à sept jours), calculé sur la série quotidienne déjà chargée pour la courbe ; au-delà elle ne remonte pas assez loin et l'étiquette disparaît. Les identifiants du gabarit sont le contrat du script, on ne les renomme pas ; base.ejs n'y met ni en-tête ni pied de page. Un lien « Retour au site » mène à l'accueil de la langue de la page, sous le bouton de connexion et en bas de la barre latérale (réduit à son icône sous 960 px). Au-dessus de lui, le bouton « Exporter » (`exporterTout`, admin.js, 7 octobre 2026) télécharge un JSON de tout ce que l'admin sait sur trente jours (parties finies et lancements par test, trafic par jour, page et source, blog, mode à distance, clics Instagram), en relisant la mémoire de session : Thomas l'envoie pour analyse, le fichier dit lui-même comment se lire, et une fonction absente y laisse son erreur. Le bouton de déploiement manuel a été retiré le 7 octobre 2026, avec la fonction `trigger-deploy` et les secrets `GITHUB_DEPLOY_TOKEN`, `GITHUB_REPO_OWNER`, `GITHUB_REPO_NAME` (une étape de deploy-functions.yml les efface de Supabase) : le site se publie au push sur main et aux reconstructions programmées (scheduled-rebuild.yml), et le bouton « Run workflow » de GitHub Actions reste là pour relancer un build à la main. Le même jour, l'onglet Blog a disparu (Thomas n'avait pas l'usage du classement « Les articles les plus lus ») : la courbe des clics « source préférée » Google a rejoint la fin de l'onglet Trafic, suit sa période et se charge avec ses six agrégats (ids `blog-sourcepref-*` gardés, le script en dépend) ; la fonction `get_blog_articles` et ses deux aides sont retirées de la base par la migration `20261008170000`, le compteur de lectures sous le titre d'un article (`blog-lectures.js`, table `article_lectures`) reste. L'ancien éditeur d'articles de l'admin (fonctions `admin-blog` et `blog-og`, `SEED_ARTICLES` injecté au build) n'avait plus aucun écran dans le gabarit depuis que le blog vit dans le dépôt : son code a été retiré, et deploy-functions.yml supprime les deux fonctions chez Supabase. Mesure : les onglets sont Trafic, Parties et À distance ; l'onglet À distance lit les comptes par page par `chargeSalonParPage`, qui se replie sur `get_salon_counts()` (sans borne de date, la table n'existant que depuis la mise en service du mode) quand `get_salon_counts_depuis` ne répond pas : le 7 octobre 2026 elle dépassait les trois secondes du rôle anon (erreur 57014) et l'onglet restait vide ; la migration `20261008160000_salon_rapide.sql` la rend rapide (borne indexable, et `trafic_fuseau` valide le fuseau en tentant la conversion au lieu de parcourir `pg_timezone_names`, pour toutes les fonctions de trafic).
 - `static-site/js/audience.js`, `supabase/migrations/20260822120000_page_views.sql`, `supabase/migrations/20260929120000_trafic_agregats.sql` : mesure d'audience maison (une ligne par page vue dans `page_views`, 10 000 par jour fin septembre 2026). **Ce que les chiffres veulent dire** (relu le 7 octobre 2026 à la demande de Thomas) : une visite est un numéro tiré au hasard dans le navigateur, partagé entre les onglets par localStorage, renouvelé après trente minutes sans page vue ou six heures au total, jamais reconduit : « 5 600 visites le 6 octobre » = 5 600 numéros distincts ayant au moins une page vue ce jour-là, heure de Paris ; c'est une visite, pas une personne (trois passages dans la semaine font trois visites, deux téléphones en mode à distance font deux visites), et une visite à cheval sur minuit compte dans les deux journées. Ne sont pas comptés : les robots (`ROBOTS` sur le user agent, `navigator.webdriver`, donc aussi nos propres passages Playwright), les pages dans une iframe (régie, aperçus), `/admin/`, le propriétaire sur les navigateurs où le drapeau `qc-no-track` est posé (automatique à la connexion à l'admin, `?qc-notrack=1` ailleurs), les préchargements de Chrome, et depuis le 7 octobre 2026 toute page chargée dans un onglet caché tant qu'il n'est pas passé au premier plan (préchargement de Safari, onglet d'arrière-plan jamais lu). « Pages vues » compte aussi l'écran de résultat d'un test, enregistré sous `/<page>/resultat/` par resultat-url.js : les pages par visite et la part « une seule page » s'en ressentent, pas les visites. Ce qui manque plutôt que de gonfler : les navigateurs sans JavaScript ou sans stockage (alors chaque page devient une visite), et les envois perdus. Depuis le 29 septembre 2026, les lignes brutes ne sont gardées que 35 jours (`trafic_jours_bruts()`, une seule constante à changer) : une tâche pg_cron (`trafic-entretien`, 2 h 20 UTC, fonction `trafic_entretien()`) condense chaque journée close dans cinq tables `trafic_jour*` (résumé, pages, sources, profondeur, entonnoir, treize mois), puis purge le brut, jamais avant condensation. Les six `get_trafic_*` et `get_blog_articles` lisent les agrégats pour les jours clos et le brut pour la journée en cours, avec les mêmes signatures : admin.js n'a pas changé. Leur paramètre `p_tz` n'est plus lu, les journées sont découpées en Europe/Paris (`trafic_fuseau_agregats()`), et une visite à cheval sur minuit compte dans les deux journées, comme dans la série quotidienne. Le calcul brut vit dans les fonctions `trafic_brut_*` (intervalle `[debut, fin[`), une seule écriture pour la condensation et la lecture. Toutes les bornes de dates comparent `created_at` à un instant calculé une fois : la forme `(created_at AT TIME ZONE tz)::date > jour0` empêche l'index de servir et faisait relire toute la table à chaque appel, jusqu'au dépassement des trois secondes du rôle anon. Les migrations de ce dossier s'appliquent à la main dans Supabase > SQL Editor (le workflow deploy-db.yml n'en applique que quatre anciennes) ; elles sont idempotentes.
 - `fr/*.json` — French translations (quizzes.json, common.json, home.json, gd.json, quiz-*.json)
 - `static-site/templates/pages/custom-quiz.ejs`, `static-site/js/custom-quiz.js`, `supabase/functions/manage-custom-quiz/index.ts` : création de quiz personnalisés (`/creation-quiz-personnalise/`). Depuis septembre 2026, **privés seulement** : un quiz se partage par son lien et expire au bout d'une semaine. La création de quiz publics a été retirée partout (choix de visibilité, liste de la communauté sur la page et sur l'accueil, action `list_public` de la fonction serveur, qui force aussi `is_public` à false et ne sert plus un quiz encore marqué public). La table garde la colonne `is_public` ; le compteur du hero additionne les deux lignes de `custom_quiz_totaux`, les quiz publics d'autrefois comptent dans l'historique.
@@ -237,6 +237,93 @@ confirmation et annule pour les deux.
   code en « Mode DUO ».
 - Les essais sans réseau passent par `window.__QCSalonTransport`, une doublure
   du canal sur `BroadcastChannel` (voir la PR d'origine).
+
+## Sécurité de la base (11 octobre 2026)
+
+Suite de l'audit du 10 octobre 2026. Le site est statique et la clé publique
+(anon) est dans chaque page : tout ce qu'elle peut faire, n'importe qui peut
+le faire. Ce qu'elle peut faire aujourd'hui, et rien d'autre :
+
+- **Écrire** dans les tables de mesure (`page_views`, `quiz_starts`,
+  `quiz_completions`, `salon_parties`, `article_lectures`, `source_pref_clics`,
+  `instagram_clics`), les votes (`oui_non_votes`, `pour_contre_votes`,
+  `dilemme_votes`), `profil_resultats`, `purete_scores` et `reviews` (jamais
+  approuvé d'office). Chaque colonne texte a une borne de taille (contraintes
+  `<table>_<colonne>_taille`, NOT VALID : seules les nouvelles lignes sont
+  contrôlées), loin au-dessus de ce que le site envoie, et le score de pureté
+  est borné (`purete_scores_bornes`). Un nouveau champ écrit par le site
+  reçoit sa borne dans une migration, sinon un seul envoi peut écrire des
+  mégaoctets (plan gratuit : 500 Mo, base pleine = lecture seule).
+- **Lire** les fonctions des pages publiques : `get_quiz_counts`,
+  `get_quiz_total`, `get_quiz_starts_counts`, `get_dilemme_*`,
+  `get_oui_non_counts`, `get_pour_contre_*`, `get_profil_stats`,
+  `get_purete_stats`, `get_custom_quiz_totaux`, `get_article_lectures`,
+  `get_instagram_recents`, `avis_deja_depose`.
+
+Les **statistiques de l'admin** (`get_trafic_*`, `get_quiz_daily*`,
+`get_quiz_starts_total`, `get_quiz_starts_daily_par_quiz`, `get_salon_*`,
+`get_source_pref_*`, `get_instagram_clics`) ne répondent plus à la clé
+publique (migration `20261011130000_stats_admin_privees.sql`) : l'admin les lit
+par la fonction serveur `admin-stats`, qui vérifie le jeton admin et relaie
+l'appel à PostgREST avec la clé de service, réponse comprise telle quelle
+(corps, code, `Content-Range`). Côté navigateur, `appelStats` (admin.js) et
+`chargerClics` (admin-reseaux.js) retombent sur l'appel direct d'avant quand
+`admin-stats` ne répond pas (réponse sans l'en-tête `x-admin-stats`, ou 401).
+Ajouter une statistique à l'admin : l'inscrire dans `FONCTIONS` de
+`admin-stats/index.ts`, ne pas la donner à anon (Supabase accorde EXECUTE à
+anon sur toute fonction créée dans `public` : `REVOKE ... FROM PUBLIC, anon,
+authenticated` dans sa migration) et l'ajouter à la liste de
+`20261011130000`. Une migration qui supprime puis recrée l'une de ces
+fonctions la rouvre (un CREATE OR REPLACE garde les droits) : relancer
+`securite-base.yml`. `20261008150000_instagram_clics.sql`, rejouée par
+social-base.yml à chaque nouvelle migration des réseaux, ne donne plus
+`get_instagram_clics` à anon.
+
+**Application** : `securite-base.yml` applique à la fusion, par l'API de
+gestion de Supabase comme social-base.yml, `20261011110000` et
+`20261011120000` tout de suite, puis `20261011130000` seulement quand le site
+publié sert le nouvel `admin.js` (celui qui appelle `admin-stats`) et que
+`admin-stats?sante=1` répond `ok` (il fabrique un jeton comme verify-admin, le
+vérifie, puis relaie un vrai appel). Sans ces deux signaux en 45 minutes, le
+job échoue sans rien fermer ; le relancer (« Run workflow ») est toujours sans
+risque.
+
+Le reste de ce qui a changé ce jour-là :
+
+- `quiz_ado_sessions` et `quiz_sessions` n'ont plus de règle ni de droit pour
+  anon (lecture, création et modification des parties de l'ancien quiz ado,
+  prénoms, réponses et adresses IP compris) : le quiz ado passe par des canaux
+  Realtime `ado-<code>`, sans table. La fonction `manage-ado-session` est
+  retirée du dépôt et supprimée chez Supabase par deploy-functions.yml.
+- `leads` : plus d'insertion par la clé publique, tout passe par
+  `ebook-verify`, qui contrôle le prénom (60 signes) et l'adresse, limite à dix
+  demandes par heure et par adresse IP, n'envoie pas de second e-mail à la
+  même adresse avant dix minutes (`leads.verification_sent_at`) et garde le
+  même lien d'un e-mail à l'autre (un double clic rendait le premier lien
+  inutilisable).
+- `verify-admin` compte les essais ratés en base (`admin_connexions_ratees` :
+  cinq par adresse en quinze minutes, cent en tout), en plus de la limite en
+  mémoire, qui repartait de zéro à chaque redémarrage. Sans la table, la
+  limite en mémoire reste seule. Le vrai rempart reste un mot de passe long et
+  tiré au hasard (secret `ADMIN_PASSWORD` de Supabase).
+- Le jeton Affilae de l'onglet Affiliation est rangé côté serveur
+  (`admin_reglages`, fonction `admin-reglages`) et non plus dans le
+  `localStorage` du domaine, que lisent les scripts de la régie et de la mesure
+  sur les pages publiques. L'admin ne le garde qu'en mémoire ; un jeton resté
+  dans un navigateur part au serveur à la première ouverture de l'onglet.
+- Les purges (`cleanup_*`, `purge_*`) et `increment_quiz_plays` sont fermées à
+  la clé publique. Un `REVOKE ... FROM anon, authenticated` sans `PUBLIC` ne
+  ferme rien : anon hérite de PUBLIC.
+- `get_article_lectures` (le compteur sous le titre d'un article) répondait
+  une erreur depuis `20261008170000`, qui avait supprimé `est_article_blog`,
+  qu'elle appelait : une fonction SQL n'enregistre pas les fonctions qu'elle
+  appelle comme des dépendances, le DROP passe sans rien dire. Le test est
+  désormais écrit dans la fonction (`20261011110000`). Avant de supprimer une
+  fonction : `select proname from pg_proc where prosrc ilike '%nom%'`.
+- Quelques objets n'existent qu'en production, créés à la main : les tables
+  `quiz_completions` et `dilemme_votes`, les fonctions `get_quiz_counts`,
+  `get_quiz_total`, `get_dilemme_counts`, `get_dilemme_total`. Ils ne sont
+  dans aucun fichier du dépôt (voir RECOVERY.md avant une restauration).
 
 ## UI/UX Design Guidelines
 

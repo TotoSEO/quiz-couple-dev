@@ -419,15 +419,24 @@
   }
 
   // Les clics vers Instagram depuis le site : un total, tous boutons
-  // confondus (Thomas, 7 octobre 2026), lu par la fonction publique
-  // get_instagram_clics (migration 20261008150000), comme les statistiques
-  // de trafic, avec la clé publique. Quiz Couple seulement : le site est le sien.
+  // confondus (Thomas, 7 octobre 2026), lu par la fonction
+  // get_instagram_clics (migration 20261008150000). Depuis le 11 octobre
+  // 2026, elle passe par la fonction serveur admin-stats avec le jeton admin,
+  // comme les statistiques de trafic : la clé publique ne la lit plus
+  // (migration 20261011130000). Tant que admin-stats manque, l'appel direct
+  // d'avant sert de repli (voir appelStats dans admin.js). Quiz Couple
+  // seulement : le site est le sien.
   function chargerClics() {
-    return fetch(ctx.url + '/rest/v1/rpc/get_instagram_clics', {
+    var entetes = { 'apikey': ctx.cle, 'Authorization': 'Bearer ' + ctx.cle, 'Content-Type': 'application/json' };
+    function direct() {
+      return fetch(ctx.url + '/rest/v1/rpc/get_instagram_clics', { method: 'POST', headers: entetes, body: '{}' });
+    }
+    var demande = !ctx.jeton ? direct() : fetch(ctx.url + '/functions/v1/admin-stats?fn=get_instagram_clics', {
       method: 'POST',
-      headers: { 'apikey': ctx.cle, 'Authorization': 'Bearer ' + ctx.cle, 'Content-Type': 'application/json' },
+      headers: Object.assign({ 'x-admin-token': ctx.jeton }, entetes),
       body: '{}'
-    }).then(function (r) { return r.json(); }).then(function (r) {
+    }).then(function (r) { return r.headers.get('x-admin-stats') && r.status !== 401 ? r : direct(); }, direct);
+    return demande.then(function (r) { return r.json(); }).then(function (r) {
       var c = Array.isArray(r) ? r[0] : r;
       if (!c || c.total == null) throw new Error('vide');
       $('rsx-clics').textContent = String(c.total);
