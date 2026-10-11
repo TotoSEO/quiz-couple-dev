@@ -1,0 +1,260 @@
+{
+  "jour": "2026-10-28",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-013",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "La couette : elle la tire à elle, il a froid ; il la reprend, c'est elle qui a froid ; au matin les deux sont serrés sous le même coin. Quatre plans, 13 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Les deux sont allongés côte à côte, une grande couette sur eux, contents, les yeux mi-clos. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "allonge",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "allonge",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couette",
+                "x": 325,
+                "y": 352,
+                "echelle": 1.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "la couette. à deux.",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3,
+            "transition": "fondu",
+            "description": "Elle tire la couette de son côté d'un coup à 0,6 s : elle se retrouve bien au chaud, tout sourire. Lui est découvert, en boule, des flocons autour de lui. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "allonge",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "froid",
+                    "signes": [
+                      "flocons"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "allonge",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "malicieux"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couette",
+                "x": 325,
+                "y": 352,
+                "echelle": 1.7,
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": 325,
+                    "y": 352
+                  },
+                  {
+                    "a": 0.7,
+                    "x": 400,
+                    "y": 352
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 h du matin",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3,
+            "transition": "fondu",
+            "description": "Il tire à son tour la couette de son côté à 0,6 s. C'est elle qui est découverte, les bras croisés, qui grelotte. Lui, sous la couette, soulagé. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "allonge",
+                    "expression": "froid",
+                    "signes": [
+                      "flocons"
+                    ]
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "zen",
+                    "signes": []
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "allonge",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "froid",
+                    "signes": [
+                      "flocons"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couette",
+                "x": 400,
+                "y": 352,
+                "echelle": 1.7,
+                "etapes": [
+                  {
+                    "a": 0.3,
+                    "x": 400,
+                    "y": 352
+                  },
+                  {
+                    "a": 0.7,
+                    "x": 250,
+                    "y": 352
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 h 10",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Au matin, les deux dorment collés l'un contre l'autre sous un tout petit coin de couette, des petits zzz. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 370,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couette",
+                "x": 335,
+                "y": 352,
+                "echelle": 1.2
+              }
+            ],
+            "textes": [
+              {
+                "texte": "7 h",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "on a un lit de 160.\n\nenvoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

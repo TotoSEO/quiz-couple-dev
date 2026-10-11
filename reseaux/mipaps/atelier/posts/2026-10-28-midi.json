@@ -1,0 +1,42 @@
+{
+  "jour": "2026-10-28",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-013",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : lui, gêné, la patte sur la bouche, les joues rouges ; l'aveu.",
+        "style": "mini",
+        "texte": "ok j'avoue c'était moi",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "gene",
+              "bras": "bouche",
+              "signes": [
+                "rougeur_pleine"
+              ],
+              "x": 320,
+              "taille": 290
+            }
+          ]
+        }
+      },
+      "legende": "c'était la dernière part.\n\nc'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

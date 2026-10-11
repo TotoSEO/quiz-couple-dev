@@ -1,0 +1,64 @@
+{
+  "jour": "2026-10-29",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-011",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : il dort, elle le supplie de rester encore un peu, sous la couette.",
+        "texte": "reste encore un peu",
+        "duree": 11,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "meuble": "lit_fond"
+            },
+            {
+              "perso": "lui",
+              "expression": "dodo",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "signes": [
+                "zzz"
+              ],
+              "x": 248,
+              "taille": 200
+            },
+            {
+              "perso": "elle",
+              "expression": "supplie",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "x": 394,
+              "taille": 200
+            },
+            {
+              "meuble": "lit_couette"
+            }
+          ]
+        }
+      },
+      "legende": "sieste de 14 h. il est 17 h.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}
