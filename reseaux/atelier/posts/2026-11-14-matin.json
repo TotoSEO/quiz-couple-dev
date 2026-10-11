@@ -1,0 +1,266 @@
+{
+  "jour": "2026-11-14",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-057",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "La façon dont il te regarde : le violet fixe la rose avec des cœurs dans les yeux, elle le sent, leurs regards se croisent, elle rougit. Aucune bulle.",
+        "titre": "POV: the way he looks at you",
+        "plans": [
+          {
+            "description": "Une petite table de restaurant avec nappe et bougie, le soir. Dès la première image la rose, à gauche, mange tranquillement, les yeux baissés vers son assiette ; le violet, en face, ne mange pas : il la regarde, les yeux en forme de cœur, un grand sourire rêveur, les joues roses. Des petits cœurs montent doucement au-dessus de sa tête. La caméra se rapproche lentement de lui.",
+            "duree": 4.0,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 4.0,
+                    "objet": "assiette"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.0,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 4.0,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.0,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 4.0,
+                    "yeux": "coeur",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 4.0,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.0,
+                "zoom": 1.35,
+                "x": 760,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même table. La rose sent qu'on la regarde : à 0,8 s elle relève lentement les yeux, la fourchette en l'air. Leurs regards se croisent, les yeux de la rose s'écarquillent, ses joues rosissent, sa bouche s'ouvre en « o ». Le violet, lui, ne détourne pas les yeux, toujours des cœurs dans les yeux. Zoom rapide sur le visage de la rose à 0,3 s.",
+            "duree": 3.8,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 0.8,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0.8,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.8,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "coeur",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 3.8,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.35,
+                "x": 760,
+                "y": 1150
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 380,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Plan large de la table. La rose sourit, les joues très roses, baisse les yeux puis les relève, timide ; elle tend la main par-dessus la table et le violet la prend. Des cœurs montent au-dessus des deux. La bougie vacille. La caméra recule doucement.",
+            "duree": 4.2,
+            "decor": "table",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "ouverts",
+                    "bouche": "o",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 4.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 4.2,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.0,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 4.2,
+                    "yeux": "coeur",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.2,
+                    "a": 2.0,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.2,
+                "zoom": 1,
+                "x": 540,
+                "y": 1050
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Tag her",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

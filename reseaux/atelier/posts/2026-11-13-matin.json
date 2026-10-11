@@ -1,0 +1,281 @@
+{
+  "jour": "2026-11-13",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-052",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il ne sait pas garder un secret : le violet cache un cadeau, se trahit avec une phrase, la rose rit. Une seule bulle.",
+        "titre": "POV: he can't keep a surprise",
+        "plans": [
+          {
+            "description": "Un mur crème et un sol beige, en plein jour. Dès la première image le violet est debout à droite, les mains dans le dos, un cadeau avec un nœud qui dépasse derrière lui, les yeux au plafond, une goutte de gêne sur la tempe : il essaie de faire l'innocent. La rose, à gauche, les bras croisés du regard, un sourcil haut, le dévisage.",
+            "duree": 3.6,
+            "decor": "mur",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "hauts"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "cadeau",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 3.6,
+                    "effet": "goutte"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur le violet. Il se dandine, siffle, puis lâche d'un coup « Don't look in the kitchen! » dans une bulle, la bouche ronde, les yeux écarquillés : il vient de se trahir. Une goutte de gêne grossit sur sa tempe et un « ! » apparaît au-dessus de sa tête à 1,8 s.",
+            "duree": 3.4,
+            "decor": "mur",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.4,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.0,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "hauts"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.0,
+                    "a": 3.4,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.4,
+                    "objet": "cadeau",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 0.8,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "parle",
+                    "de": 0.8,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.8,
+                    "a": 3.4,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 3.4,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 3.4,
+                    "effet": "goutte"
+                  }
+                ]
+              }
+            ],
+            "bulles": [
+              {
+                "qui": "violet",
+                "de": 0.8,
+                "a": 3.2,
+                "texte": "Don't look in the kitchen!"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.6,
+                "x": 700,
+                "y": 1200
+              }
+            ]
+          },
+          {
+            "description": "Plan large. La rose éclate de rire, la main devant la bouche, les yeux plissés ; le violet, tout rouge, cache son visage derrière le cadeau et boude, les épaules rentrées. À 2,4 s la rose se calme, fait un clin d'œil au violet et lui adresse un petit sourire tendre. Des cœurs montent à la fin. La caméra se rapproche doucement.",
+            "duree": 4.2,
+            "decor": "mur",
+            "moment": "midi",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "rit",
+                    "de": 0,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 4.2,
+                    "objet": "cadeau",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "boude",
+                    "de": 0,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "plats",
+                    "bouche": "plate",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.2,
+                    "yeux": "ouverts",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 4.2,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Tag him",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
