@@ -257,7 +257,7 @@
     testDateNaissance: 'Compatibilité par date de naissance',
     testSignesChinois: 'Compatibilité signes chinois',
     calculatriceAmour: "Calculatrice de l'amour",
-    compteurCouple: 'Compteur de couple',
+    compteurCouple: 'Compteur de durée en couple',
     testJalousie: 'Jalousie',
     testKarmique: 'Relation karmique',
     testSuisJeAmoureux: 'Suis-je amoureux',

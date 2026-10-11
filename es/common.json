@@ -102,7 +102,7 @@
     "testEstCeLeBonDesc": "Veinte preguntas para saber si es la persona indicada",
     "testSignesChinois": "Compatibilidad signos chinos",
     "testSignesChinoisDesc": "Dos fechas, dos animales, un veredicto",
-    "compteurCouple": "Contador de pareja",
+    "compteurCouple": "Contador de tiempo en pareja",
     "compteurCoupleDesc": "Vuestros días juntos, fechas que celebrar"
   },
   "footer": {
