@@ -1,0 +1,251 @@
+{
+  "jour": "2026-11-11",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-049",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il prend tout le lit : le violet dort en étoile, la rose se couche tout au bord, il la pousse dans son sommeil et elle tombe du lit. Aucune bulle.",
+        "titre": "POV: he hogs the whole bed",
+        "plans": [
+          {
+            "description": "La chambre la nuit, lumière bleue, la lune dans la fenêtre. Dès la première image le violet est couché en travers du lit, les bras et les jambes écartés, la couette tirée sur lui, les yeux fermés, des Z qui montent ; la rose est debout devant le lit à droite, un oreiller sous le bras, les yeux plats, la bouche plate, et le regarde sans bouger. La caméra se rapproche doucement.",
+            "duree": 3.6,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.6,
+                    "objet": "oreiller",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.6,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 3.6
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 3.6,
+                    "effet": "zzz"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.6,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Zoom rapide à 0,3 s sur le visage de la rose : elle regarde la caméra, les yeux plats, la bouche en moue, une goutte de gêne sur la tempe. À 1,4 s elle prend son élan avec l'oreiller sous le bras et se prépare à sauter dans le lit. Derrière elle, le violet ronfle, des Z qui montent.",
+            "duree": 3.8,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "oreiller",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 1.8,
+                    "effet": "goutte"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.4,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "plate",
+                    "sourcils": "faches"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 3.8,
+                    "effet": "zzz"
+                  }
+                ]
+              }
+            ],
+            "couette": "calme",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.6,
+                "x": 700,
+                "y": 1250
+              }
+            ]
+          },
+          {
+            "description": "Même chambre. La rose plonge dans le lit à droite et se retrouve couchée tout au bord, la tête et les petites mains qui dépassent de la couette, les yeux plats. À 1,6 s le violet, toujours endormi, étend un bras et la pousse : la rose écarquille les yeux, un « ! » apparaît au-dessus de sa tête, et à 2,4 s elle glisse hors du lit et disparaît vers le bas de l'image, l'oreiller derrière elle. Le violet dort toujours, les bras en croix. La caméra tremble au moment de la chute.",
+            "duree": 4.2,
+            "decor": "chambre",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "devant-droite",
+                "gestes": [
+                  {
+                    "geste": "plonge",
+                    "de": 0,
+                    "a": 1.0,
+                    "vers": "lit-droite"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.0,
+                    "a": 1.8,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 4.2,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 4.2,
+                    "effet": "exclamation"
+                  },
+                  {
+                    "geste": "disparait",
+                    "de": 2.4,
+                    "a": 3.0,
+                    "vers": "bas"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "lit-gauche",
+                "gestes": [
+                  {
+                    "geste": "dort",
+                    "de": 0,
+                    "a": 4.2
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 4.2,
+                    "effet": "zzz"
+                  }
+                ]
+              }
+            ],
+            "couette": "bouge",
+            "couetteDe": 1.6,
+            "camera": [
+              {
+                "a": 2.4,
+                "secousse": 12
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "jour": "2026-11-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-050",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Regarder les étoiles à deux : les deux la tête en l'air, des étincelles, il la regarde, elle le regarde, câlin. Aucune bulle.",
+        "titre": "POV: stargazing together",
+        "plans": [
+          {
+            "description": "Un parc la nuit, ciel étoilé, un arbre. Dès la première image les deux sont debout côte à côte sur l'herbe, la tête levée vers le ciel, la bouche ouverte, les yeux brillants, des étincelles qui scintillent au-dessus d'eux comme des étoiles. À 1,6 s la rose se rapproche du violet et lui prend le bras du regard. La caméra monte doucement avec leurs yeux.",
+            "duree": 3.8,
+            "decor": "dehors",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "brillants",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 3.8,
+                    "effet": "etincelles"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "brillants",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 3.8,
+                    "effet": "etincelles"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même parc. Le violet baisse les yeux vers la rose, qui regarde encore le ciel, les yeux brillants et la bouche entrouverte ; il sourit, les joues roses. Elle sent son regard et se tourne vers lui, les joues roses elle aussi. Ils se regardent un moment. Zoom lent sur leurs deux visages.",
+            "duree": 3.8,
+            "decor": "dehors",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.6,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "brillants",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.5,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même parc. Les deux se rapprochent et se serrent dans les bras debout sur l'herbe, les yeux fermés de bonheur, joues roses, pendant que des étincelles continuent de scintiller au-dessus d'eux et que des cœurs montent. À 2,6 s la rose rouvre un œil et regarde les étoiles par-dessus l'épaule du violet. La caméra recule doucement.",
+            "duree": 4.2,
+            "decor": "dehors",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "gauche",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.4,
+                    "a": 2.6,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "yeux": "brillants",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 2.6,
+                    "a": 4.2,
+                    "cible": "haut"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "droite",
+                "gestes": [
+                  {
+                    "geste": "calin",
+                    "de": 0,
+                    "a": 4.2,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.4,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.4,
+                    "a": 4.2,
+                    "effet": "etincelles"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.5,
+                "x": 540,
+                "y": 1100
+              },
+              {
+                "a": 4.2,
+                "zoom": 1,
+                "x": 540,
+                "y": 1000
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

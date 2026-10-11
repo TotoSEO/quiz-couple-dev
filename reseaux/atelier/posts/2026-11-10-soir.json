@@ -1,0 +1,258 @@
+{
+  "jour": "2026-11-10",
+  "creneau": "soir",
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "bd-003",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "bd",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il fait froid dans la rue : elle tremble, il lui donne son bonnet, c'est lui qui tremble, elle le serre dans ses bras.",
+        "cases": [
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Une rue de ville en hiver, le soir, le lampadaire allumé. La rose est debout à gauche, les épaules rentrées, les dents qui claquent, les yeux plats et la bouche triste. Le violet, à droite, porte un bonnet de Noël bien enfoncé sur la tête et la regarde, les sourcils tristes, inquiet.",
+                "duree": 2,
+                "decor": "rue",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "tremble",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "triste",
+                        "sourcils": "tristes"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "plate",
+                        "sourcils": "tristes"
+                      }
+                    ],
+                    "porte": "bonnet"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même rue. Le violet retire son bonnet et le pose sur la tête de la rose, les joues roses, un petit sourire. La rose, surprise, a les yeux grands ouverts et la bouche ronde.",
+                "duree": 2,
+                "decor": "rue",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "o",
+                        "rougit": true
+                      }
+                    ],
+                    "porte": "bonnet"
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire",
+                        "rougit": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même rue. La rose sourit sous le bonnet, les yeux fermés de bonheur, la bouche de chat, les joues roses. Le violet, sans bonnet, a maintenant les épaules qui tremblent et les yeux plats, la bouche en moue ; une goutte de gêne sur sa tempe.",
+                "duree": 2,
+                "decor": "rue",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "mignon",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ],
+                    "porte": "bonnet"
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "tremble",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "triste"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0.3,
+                        "a": 2,
+                        "effet": "goutte"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même rue. La rose, le bonnet sur la tête, serre le violet dans ses bras, les yeux heureux, un grand sourire. Le violet a fermé les yeux de soulagement, les joues roses, des petits cœurs montent entre eux.",
+                "duree": 2,
+                "decor": "rue",
+                "moment": "soir",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "calin",
+                        "de": 0,
+                        "a": 2,
+                        "avec": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "heureux",
+                        "bouche": "sourire",
+                        "rougit": true
+                      }
+                    ],
+                    "porte": "bonnet"
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "calin",
+                        "de": 0,
+                        "a": 2,
+                        "avec": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "fermes",
+                        "bouche": "sourire",
+                        "rougit": true
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0.3,
+                        "a": 2,
+                        "effet": "coeurs"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "better?",
+                "cote": "gauche"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Tag him",
+      "hashtags": [
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
