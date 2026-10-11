@@ -46,7 +46,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/liebeskompatibilitaet-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-compatibilita-amorosa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-compatibilite-amoureuse/"/>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -202,7 +202,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/pikantes-paar-quiz/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-coppia-piccante/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-couple-coquin/"/>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -394,7 +394,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/bin-ich-verliebt-test/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-sono-innamorato/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-suis-je-amoureux/"/>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -699,6 +699,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://quiz-couple.com/test-compatibilite-sexuelle/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-compatibilite-sexuelle/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/sexual-compatibility-test/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/test-compatibilidad-sexual/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/sexuelle-kompatibilitaet-test/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/test-compatibilita-sessuale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/test-compatibilite-sexuelle/"/>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://quiz-couple.com/test-est-ce-le-bon-ou-la-bonne/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/test-est-ce-le-bon-ou-la-bonne/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/is-this-the-one-test/"/>
@@ -891,6 +903,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/frasi-da-completare-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/phrases-a-completer-couple/"/>
     <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/jeu-c-est-un-10-mais/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/jeu-c-est-un-10-mais/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/hes-a-10-but-game/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/juego-es-un-10-pero/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/er-ist-eine-10-aber-spiel/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/gioco-e-un-10-ma/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeu-c-est-un-10-mais/"/>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
