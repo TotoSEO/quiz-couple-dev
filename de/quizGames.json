@@ -387,7 +387,9 @@
     "quizTypeCouple": "Quiz Welcher Paartyp seid ihr",
     "testEstCeLeBon": "Test ist es die richtige Person",
     "testSignesChinois": "Kompatibilität chinesische Sternzeichen",
-    "compteurCouple": "Beziehungsdauer-Zähler"
+    "compteurCouple": "Beziehungsdauer-Zähler",
+    "jeuDixMais": "Er ist eine 10, aber...",
+    "testCompatSexuelle": "Test sexuelle Kompatibilität"
   },
   "truefalse": {
     "ready": "Bereit für Richtig oder Falsch?",

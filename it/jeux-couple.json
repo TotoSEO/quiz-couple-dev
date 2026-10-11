@@ -1,14 +1,14 @@
 {
   "hero": {
-    "badge": "12 giochi • Gratis • Senza registrazione",
+    "badge": "13 giochi • Gratis • Senza registrazione",
     "title": "I nostri giochi da fare in due, pronti con un tocco",
     "titleHighlight": "da fare in due",
-    "description": "Dodici giochi che partono su un solo telefono fra voi due, senza account e senza installare nulla."
+    "description": "Tredici giochi che partono su un solo telefono fra voi due, senza account e senza installare nulla."
   },
   "stats": {
-    "jeux": "12",
+    "jeux": "13",
     "jeuxLabel": "giochi in due",
-    "cartes": "410",
+    "cartes": "470",
     "cartesLabel": "carte, penitenze e dilemmi",
     "compte": "0",
     "compteLabel": "account da creare"
@@ -79,13 +79,18 @@
     "phrasesTagline": "Frasi lasciate a metà, ognuno con il suo finale",
     "phrasesContenu": "20 frasi da completare a voce alta, con calma o tutti e due insieme dopo un conto alla rovescia",
     "phrasesDuree": "10 a 15 min",
-    "phrasesJoueurs": "2 giocatori"
+    "phrasesJoueurs": "2 giocatori",
+    "dixMaisNom": "È un 10, ma...",
+    "dixMaisTagline": "Una persona perfetta, un difetto, e ognuno dà il suo nuovo voto",
+    "dixMaisContenu": "60 difetti da votare da 0 a 10, in segreto, faccia a faccia o a distanza, poi i vostri voti a confronto",
+    "dixMaisDuree": "10-30 min",
+    "dixMaisJoueurs": "2 giocatori"
   },
   "section1": {
     "title": "Che cosa cambia un gioco in due in una serata",
     "p1": "Un <strong class=\"text-foreground\">gioco di coppia</strong> sembra una sciocchezza. Eppure risolve un problema molto concreto: in due si finisce sempre per girare attorno agli stessi argomenti. La giornata, il lavoro, cosa si mangia stasera… Un gioco impone una cornice, e quella cornice dà il permesso di fare domande che di punto in bianco non si farebbero mai.",
     "p2": "È anche il motivo per cui un gioco funziona meglio di un film quando volete davvero ritrovarvi. Davanti a uno schermo siete due persone affiancate che guardano altrove. Attorno a un gioco siete due persone che si guardano. La differenza si sente dopo dieci minuti.",
-    "p3": "I dodici giochi di questa pagina si giocano online, gratis, su un solo telefono. Niente da creare, niente da installare, niente da preparare."
+    "p3": "I tredici giochi di questa pagina si giocano online, gratis, su un solo telefono. Niente da creare, niente da installare, niente da preparare."
   },
   "section2": {
     "title": "Quale gioco scegliere a seconda del momento",
@@ -116,7 +121,9 @@
     "row11Moment": "Una pausa di cinque minuti, con un caffè in mano",
     "row11Pourquoi": "Ogni situazione si decide con un sì o con un no, e vedete subito come hanno votato gli altri visitatori. Potete fermarvi dopo tre domande e funziona lo stesso.",
     "row12Moment": "Un anniversario di coppia o una serata di ricordi",
-    "row12Pourquoi": "Ognuno finisce la frase a modo suo, per esempio «Il piatto che ordiniamo ogni volta è…». Con il conto alla rovescia rispondete nello stesso momento, e quando le due versioni non coincidono, di solito si finisce a ridere."
+    "row12Pourquoi": "Ognuno finisce la frase a modo suo, per esempio «Il piatto che ordiniamo ogni volta è…». Con il conto alla rovescia rispondete nello stesso momento, e quando le due versioni non coincidono, di solito si finisce a ridere.",
+    "row13Moment": "Una serata tra amici, o in due sul divano",
+    "row13Pourquoi": "Ogni carta descrive una persona perfetta con un difetto, e ognuno dà il suo nuovo voto da 0 a 10. Si ride delle piccole manie e, già che ci siete, scoprite cosa è inaccettabile per l'altro."
   },
   "section3": {
     "title": "Come far funzionare una serata di giochi in due",

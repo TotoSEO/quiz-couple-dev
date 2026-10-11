@@ -80,6 +80,7 @@ export const ROUTE_SLUGS = {
   testTrouverAmour: { fr: 'test-pourquoi-je-ne-trouve-pas-l-amour', en: 'why-cant-i-find-love-test', es: 'test-por-que-no-encuentro-el-amor', de: 'warum-finde-ich-keine-liebe-test', it: 'test-perche-non-trovo-l-amore' },
   testCelibataire: { fr: 'test-pourquoi-suis-je-celibataire', en: 'why-am-i-still-single-test', es: 'test-por-que-sigo-soltero', de: 'warum-bin-ich-noch-single-test', it: 'test-perche-sono-ancora-single' },
   testCoupleOuCelibat: { fr: 'test-couple-ou-celibat', en: 'single-life-or-relationship-test', es: 'test-pareja-o-solteria', de: 'beziehung-oder-single-test', it: 'test-coppia-o-single' },
+  testCompatSexuelle: { fr: 'test-compatibilite-sexuelle', en: 'sexual-compatibility-test', es: 'test-compatibilidad-sexual', de: 'sexuelle-kompatibilitaet-test', it: 'test-compatibilita-sessuale' },
   testEstCeLeBon: { fr: 'test-est-ce-le-bon-ou-la-bonne', en: 'is-this-the-one-test', es: 'test-es-la-persona-adecuada', de: 'ist-es-die-richtige-person-test', it: 'test-e-la-persona-giusta' },
   testPretRelation: { fr: 'test-pret-pour-une-nouvelle-relation', en: 'ready-for-a-new-relationship-test', es: 'test-preparado-para-una-nueva-relacion', de: 'bereit-fuer-eine-neue-beziehung-test', it: 'test-pronto-per-una-nuova-relazione' },
   testDureeCelibat: { fr: 'combien-de-temps-je-vais-rester-celibataire', en: 'how-long-will-i-be-single-test', es: 'test-cuanto-tiempo-voy-a-estar-soltero', de: 'wie-lange-bleibe-ich-noch-single-test', it: 'test-quanto-tempo-restero-single' },
@@ -97,6 +98,7 @@ export const ROUTE_SLUGS = {
   jeuQuiPourrait: { fr: 'qui-pourrait-couple', en: 'who-could-couples-game', es: 'quien-podria-juego-pareja', de: 'wer-koennte-paar-spiel', it: 'chi-potrebbe-gioco-coppia' },
   jeuOuiNon: { fr: 'jeu-oui-non-couple', en: 'yes-or-no-couples-game', es: 'juego-si-o-no-pareja', de: 'ja-oder-nein-paar-spiel', it: 'gioco-si-o-no-coppia' },
   jeuPhrases: { fr: 'phrases-a-completer-couple', en: 'finish-the-sentence-couples-game', es: 'frases-para-completar-pareja', de: 'satz-vervollstaendigen-paarspiel', it: 'frasi-da-completare-coppia' },
+  jeuDixMais: { fr: 'jeu-c-est-un-10-mais', en: 'hes-a-10-but-game', es: 'juego-es-un-10-pero', de: 'er-ist-eine-10-aber-spiel', it: 'gioco-e-un-10-ma' },
   quizTentation: { fr: 'quiz-ile-de-la-tentation', en: 'temptation-island-quiz', es: 'quiz-la-isla-de-las-tentaciones', de: 'temptation-island-quiz', it: 'quiz-temptation-island' },
   admin: { fr: 'admin', en: 'admin', es: 'admin', de: 'admin', it: 'admin' },
   activities: { fr: 'activites-autours-de-moi', en: 'couple-activities-near-me', es: 'actividades-en-pareja-cerca', de: 'paar-aktivitaeten-in-der-naehe', it: 'attivita-di-coppia-vicino' },
@@ -164,6 +166,7 @@ export const QUIZ_FEATURED = {
   testTrouverAmour:   { file: 'compass-heart-map',           old: null,                  alt: { fr: "Une boussole en laiton ouverte sur une nappe en lin, l'aiguille remplacée par un petit cœur rose, à côté d'une carte pliée et d'un brin de lavande", en: "An open brass compass on a linen tablecloth, its needle replaced by a small pink heart, next to a folded map and a sprig of lavender", es: "Una brújula de latón abierta sobre un mantel de lino, con la aguja sustituida por un pequeño corazón rosa, junto a un mapa doblado y una ramita de lavanda", de: "Ein geöffneter Messingkompass auf einer Leinentischdecke, die Nadel durch ein kleines rosa Herz ersetzt, neben einer gefalteten Karte und einem Lavendelzweig", it: "Una bussola di ottone aperta su una tovaglia di lino, con l'ago sostituito da un piccolo cuore rosa, accanto a una mappa piegata e a un rametto di lavanda" } },
   testCelibataire:    { file: 'magnifier-paper-heart',       old: null,                  alt: { fr: "Une loupe ancienne à manche en bois posée sur une nappe en lin, sa lentille au-dessus d'un petit cœur en papier rose, à côté d'un carnet lavande fermé et d'un crayon", en: 'An old magnifying glass with a wooden handle on a linen tablecloth, its lens over a small pink paper heart, next to a closed lavender notebook and a pencil', es: 'Una lupa antigua con mango de madera sobre un mantel de lino, con la lente sobre un pequeño corazón de papel rosa, junto a un cuaderno lavanda cerrado y un lápiz', de: 'Eine alte Lupe mit Holzgriff auf einer Leinentischdecke, die Linse über einem kleinen rosa Papierherz, daneben ein geschlossenes lavendelfarbenes Notizbuch und ein Bleistift', it: "Una vecchia lente d'ingrandimento con manico di legno su una tovaglia di lino, la lente sopra un piccolo cuore di carta rosa, accanto a un quaderno lavanda chiuso e a una matita" } },
   testCoupleOuCelibat: { file: 'couple-ou-celibat',           old: null,                  alt: { fr: "Un fauteuil en velours rose à une place et un canapé lavande à deux places posés côte à côte devant une grande fenêtre, dans une pièce claire", en: 'A rose-pink velvet armchair for one and a lavender two-seater sofa side by side in front of a large window, in a bright room', es: 'Un sillón de terciopelo rosa para una persona y un sofá lavanda de dos plazas, uno al lado del otro delante de un gran ventanal, en una habitación luminosa', de: 'Ein rosa Samtsessel für eine Person und ein lavendelfarbenes Zweisitzersofa nebeneinander vor einem großen Fenster, in einem hellen Raum', it: "Una poltrona di velluto rosa a un posto e un divano lavanda a due posti, uno accanto all'altro davanti a una grande finestra, in una stanza luminosa" } },
+  testCompatSexuelle: { file: 'rubans-noues-draps',   old: null,                  alt: { fr: "Deux rubans de soie, un rose et un lavande, noués ensemble au milieu de draps de lin froissés, deux oreillers flous à l'arrière-plan dans la lumière du matin", en: 'Two silk ribbons, one pink and one lavender, knotted together in the middle of rumpled linen sheets, two blurred pillows in the background in the morning light', es: 'Dos cintas de seda, una rosa y otra lavanda, anudadas en medio de unas sábanas de lino arrugadas, con dos almohadas desenfocadas al fondo en la luz de la mañana', de: 'Zwei Seidenbänder, ein rosafarbenes und ein lavendelfarbenes, in der Mitte zerwühlter Leinenlaken miteinander verknotet, im Hintergrund zwei unscharfe Kissen im Morgenlicht', it: "Due nastri di seta, uno rosa e uno lavanda, annodati insieme in mezzo a lenzuola di lino stropicciate, con due cuscini sfocati sullo sfondo nella luce del mattino" } },
   testEstCeLeBon:    { file: 'right-person-key',         old: null,                  alt: { fr: "Sur une table en bois clair, un trousseau de vieilles clés en laiton posé en désordre à gauche et, à droite, une seule clé glissée dans la serrure d'une petite porte peinte en bleu pâle, entrouverte, d'où passe une lumière chaude", en: "On a light wooden table, a bunch of old brass keys lying in a tangle on the left and, on the right, a single key in the lock of a small pale blue painted door, slightly ajar, with warm light coming through", es: "Sobre una mesa de madera clara, un manojo de viejas llaves de latón desordenado a la izquierda y, a la derecha, una sola llave metida en la cerradura de una pequeña puerta pintada de azul pálido, entreabierta, por la que pasa una luz cálida", de: "Auf einem hellen Holztisch links ein Bund alter Messingschlüssel in einem Durcheinander und rechts ein einzelner Schlüssel im Schloss einer kleinen, hellblau gestrichenen Tür, die einen Spalt offen steht und warmes Licht durchlässt", it: "Su un tavolo di legno chiaro, a sinistra un mazzo di vecchie chiavi d'ottone in disordine e, a destra, una sola chiave infilata nella serratura di una piccola porta dipinta di azzurro pallido, socchiusa, da cui passa una luce calda" } },
   testPretRelation:  { file: 'new-relationship-sprout',  old: null,                  alt: { fr: "Sur un rebord de fenêtre, un vieil album photo fermé à gauche et, à droite, une jeune pousse verte dans un pot en terre cuite, une petite clé en laiton posée à côté", en: "On a windowsill, an old closed photo album on the left and, on the right, a fresh green sprout in a terracotta pot with a small brass key beside it", es: "En el alféizar de una ventana, un viejo álbum de fotos cerrado a la izquierda y, a la derecha, un brote verde en una maceta de barro con una pequeña llave de latón al lado", de: "Auf einer Fensterbank links ein altes, geschlossenes Fotoalbum und rechts ein frischer grüner Trieb in einem Terrakottatopf, daneben ein kleiner Messingschlüssel", it: "Su un davanzale, a sinistra un vecchio album di foto chiuso e, a destra, un germoglio verde in un vaso di terracotta con una piccola chiave d'ottone accanto" } },
   testDureeCelibat:  { file: 'single-hourglass-cafe',    old: null,                  alt: {"fr": "Sur une petite table de café en marbre, un sablier en laiton au sable rose à moitié écoulé, un cappuccino et un cœur en papier plié, face à une chaise vide, dans la lumière dorée d'une fin d'après-midi", "en": "On a small marble cafe table, a brass hourglass with pink sand half run through, a cappuccino and a folded paper heart, facing an empty chair, in golden late-afternoon light", "es": "Sobre una mesita de mármol de una terraza, un reloj de arena de latón con arena rosa a medio caer, un capuchino y un corazón de papel doblado, frente a una silla vacía, con la luz dorada del final de la tarde", "de": "Auf einem kleinen Marmortisch eines Cafés eine Sanduhr aus Messing mit halb durchgelaufenem rosa Sand, ein Cappuccino und ein gefaltetes Papierherz, gegenüber ein leerer Stuhl, im goldenen Licht des späten Nachmittags", "it": "Su un tavolino di marmo di un caffè, una clessidra d'ottone con la sabbia rosa a metà, un cappuccino e un cuore di carta piegato, davanti a una sedia vuota, nella luce dorata del tardo pomeriggio"} },
@@ -185,6 +188,7 @@ export const QUIZ_FEATURED = {
   jeuQuiPourrait:     { file: 'two-cards-face-off',          old: null,                  alt: { fr: "Deux cartes vierges posées face à face sur une petite table ronde en bois, une verte et une jaune, comme prêtes à être retournées", en: "Two blank cards lying face to face on a small round wooden table, one green and one yellow, as if about to be flipped", es: "Dos cartas en blanco frente a frente sobre una pequeña mesa redonda de madera, una verde y otra amarilla, como a punto de darse la vuelta", de: "Zwei leere Karten liegen sich auf einem kleinen runden Holztisch gegenüber, eine grün und eine gelb, als würden sie gleich umgedreht", it: "Due carte bianche una di fronte all'altra su un tavolino rotondo di legno, una verde e una gialla, come pronte a essere girate" } },
   jeuOuiNon:         { file: 'oui-non-vote',           old: null,                  alt: { fr: 'Deux cartes de vote face à face, une verte pour le oui et une rouge pour le non', en: 'Two voting cards facing each other, a green one for yes and a red one for no', es: 'Dos tarjetas de voto frente a frente, una verde para el sí y una roja para el no', de: 'Zwei Abstimmungskarten einander gegenüber, eine grüne für Ja und eine rote für Nein', it: 'Due carte per votare una di fronte all\'altra, una verde per il sì e una rossa per il no' } },
   jeuPhrases:        { file: 'deux-bulles-phrase',    old: null,                  alt: { fr: 'Deux bulles de conversation, une rose et une violette, qui finissent chacune par trois points de suspension', en: 'Two speech bubbles, one pink and one purple, each ending in three dots', es: 'Dos bocadillos de conversación, uno rosa y otro morado, que terminan con tres puntos suspensivos', de: 'Zwei Sprechblasen, eine rosa und eine violette, die beide mit drei Punkten enden', it: 'Due fumetti, uno rosa e uno viola, che finiscono entrambi con tre puntini' } },
+  jeuDixMais:        { file: 'macaron-fendu',         old: null,                  alt: { fr: "Une boîte de macarons pastel roses et lilas, tous parfaits sauf un, fendu en deux, quelques miettes tombées sur la nappe en lin à côté d'un ruban rose", en: 'A box of pastel pink and lilac macarons, all flawless except one cracked in half, a few crumbs on the linen tablecloth next to a pink ribbon', es: 'Una caja de macarons pastel rosas y lilas, todos perfectos menos uno, partido por la mitad, con unas migas sobre el mantel de lino junto a una cinta rosa', de: 'Eine Schachtel pastellrosa und lila Macarons, alle makellos bis auf einen, der in der Mitte gebrochen ist, daneben ein paar Krümel auf der Leinentischdecke und ein rosa Band', it: 'Una scatola di macaron pastello rosa e lilla, tutti perfetti tranne uno, spezzato a metà, con qualche briciola sulla tovaglia di lino accanto a un nastro rosa' } },
   quizTentation:     { file: 'island-bonfire',            old: null,                  alt: { fr: 'Feu de camp sur une plage tropicale la nuit, avec palmiers et pleine lune', en: 'Bonfire on a tropical beach at night, with palm trees and a full moon', es: 'Hoguera en una playa tropical de noche, con palmeras y luna llena', de: 'Lagerfeuer an einem tropischen Strand bei Nacht, mit Palmen und Vollmond', it: 'Falò su una spiaggia tropicale di notte, con palme e luna piena' } },
 };
 
@@ -250,6 +254,7 @@ export const ROUTE_CONFIG = {
   testTrouverAmour: { template: 'quiz-trouver-amour', namespaces: ['quiz-trouver-amour', 'quizzes', 'quizGames', 'gd', 'common'] },
   testCelibataire: { template: 'quiz-celibataire', namespaces: ['quiz-celibataire', 'quizzes', 'quizGames', 'gd', 'common'] },
   testCoupleOuCelibat: { template: 'quiz-couple-ou-celibat', namespaces: ['quiz-couple-ou-celibat', 'quizzes', 'quizGames', 'gd', 'common'] },
+  testCompatSexuelle: { template: 'quiz-compatibilite-sexuelle', namespaces: ['quiz-compatibilite-sexuelle', 'quizzes', 'quizGames', 'gd', 'common'] },
   testEstCeLeBon: { template: 'quiz-est-ce-le-bon', namespaces: ['quiz-est-ce-le-bon', 'quizzes', 'quizGames', 'gd', 'common'] },
   testPretRelation: { template: 'quiz-pret-nouvelle-relation', namespaces: ['quiz-pret-nouvelle-relation', 'quizzes', 'quizGames', 'gd', 'common'] },
   testDureeCelibat: { template: 'quiz-duree-celibat', namespaces: ['quiz-duree-celibat', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -267,6 +272,7 @@ export const ROUTE_CONFIG = {
   jeuQuiPourrait: { template: 'jeu-qui-pourrait', namespaces: ['jeu-qui-pourrait', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuOuiNon: { template: 'jeu-oui-non', namespaces: ['jeu-oui-non', 'quizzes', 'quizGames', 'gd', 'common'] },
   jeuPhrases: { template: 'jeu-phrases', namespaces: ['jeu-phrases', 'quizzes', 'quizGames', 'gd', 'common'] },
+  jeuDixMais: { template: 'jeu-dix-mais', namespaces: ['jeu-dix-mais', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizTentation: { template: 'quiz-tentation', namespaces: ['quiz-tentation', 'quizzes', 'quizGames', 'gd', 'common'] },
   testPurete: { template: 'test-purete', namespaces: ['test-purete', 'quizzes', 'common'] },
   admin: { template: 'admin', namespaces: ['common'] },
@@ -298,7 +304,7 @@ export const GA_ID = 'G-XZV8V6FEK5';
 const ROUTES_JEUX = [
   'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
   'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais', 'jeuQuiPourrait',
-  'jeuOuiNon', 'jeuPhrases',
+  'jeuOuiNon', 'jeuPhrases', 'jeuDixMais',
 ];
 
 // Les quatre familles de navigation, dans l'ordre d'affichage. C'est la seule
@@ -312,7 +318,7 @@ const ROUTES_JEUX = [
 // common.json, le même partout.
 export const FAMILLES_NAV = {
   tests: [
-    'testCouple', 'testCommonPoints', 'testCompatibilite', 'testDistance',
+    'testCouple', 'testCommonPoints', 'testCompatibilite', 'testCompatSexuelle', 'testDistance',
     'testFinCouple', 'testToxic', 'testPervers', 'testEmprise',
     'testAmourHabitude', 'testAmourAttachement', 'testEstCeLeBon',
     'testJeLaimeEncore', 'testCoupleSain', 'testMariage', 'testDivorce',
@@ -336,7 +342,7 @@ export const FAMILLES_NAV = {
   jeux: [
     'quizTuPreferes', 'jeuActionVerite', 'jeuActionVeriteHot', 'jeuGages',
     'jeuPlateau', 'jeuQuiDeNous', 'jeuDilemmes', 'pourContre', 'jeuJamais',
-    'jeuQuiPourrait', 'jeuOuiNon', 'jeuPhrases',
+    'jeuQuiPourrait', 'jeuOuiNon', 'jeuPhrases', 'jeuDixMais',
   ],
 };
 
@@ -1432,6 +1438,9 @@ export const QUIZ_RELATED_ARTICLES = {
   // la rencontre arrive.
   testCelibataire:  ['peur-de-l-engagement', 'attachement-evitant', 'attachement-anxieux', 'dependance-affective', '36-questions-pour-tomber-amoureux'],
   testCoupleOuCelibat: ['peur-de-l-engagement', 'dependance-affective', 'attachement-evitant', 'les-phases-de-la-rupture-chez-l-homme'],
+  // Compatibilité sexuelle : se parler de ce qu'on aime, la tendresse comme
+  // langage, et les questions intimes à se poser.
+  testCompatSexuelle: ['questions-intimes-couple', '5-langages-de-l-amour', 'manque-communication-couple', 'questions-pour-mieux-se-connaitre-en-couple'],
   testEstCeLeBon: ['comment-savoir-si-cest-le-bon', 'arreter-ou-continuer-relation', 'questions-avenir-couple', 'red-flags-homme'],
   testPretRelation: ['dependance-affective', 'les-phases-de-la-rupture-chez-l-homme', 'arreter-ou-continuer-relation', 'comment-savoir-si-cest-le-bon'],
   testDureeCelibat: ['homme-nerveux-devant-une-femme', 'questions-a-poser-a-son-crush', 'sentiments-chez-un-homme', 'lexique-relations-2026'],
@@ -1457,6 +1466,9 @@ export const QUIZ_RELATED_ARTICLES = {
   jeuOuiNon:        ['choses-pas-accepter-couple', 'questions-pour-mieux-se-connaitre-en-couple'],
   jeuGages:         ['activites-couple-ete', 'comment-savoir-si-cest-le-bon'],
   jeuPhrases:       ['questions-pour-mieux-se-connaitre-en-couple', 'questions-intimes-couple'],
+  // C'est un 10 mais : les défauts qu'on pardonne et ceux qu'on ne pardonne
+  // pas, donc les red flags et ce qu'on n'accepte pas.
+  jeuDixMais:       ['red-flags-homme', 'red-flags-femme', 'choses-pas-accepter-couple', 'il-annule-au-dernier-moment'],
 };
 // Ajouts sur des entrées déjà existantes : on complète sans réécrire la table,
 // pour que la liste d'origine reste lisible telle qu'elle a été pensée. Le

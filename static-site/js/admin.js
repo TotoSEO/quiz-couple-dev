@@ -284,6 +284,7 @@
     testPretRelation: 'Prêt(e) pour une nouvelle relation',
     testDureeCelibat: 'Combien de temps je vais rester célibataire',
     testEstCeLeBon: 'Est-ce le bon / la bonne',
+    testCompatSexuelle: 'Compatibilité sexuelle',
     quizTypeCouple: 'Quel type de couple êtes-vous',
     testAmourAttachement: 'Amour ou attachement',
     testJeLaimeEncore: "Je l'aime encore ?",
@@ -299,6 +300,7 @@
     jeuQuiPourrait: 'Qui pourrait',
     jeuOuiNon: 'Oui ou non',
     jeuPhrases: 'Phrases à compléter',
+    jeuDixMais: "C'est un 10 mais",
     testCrush: 'Amour ou crush',
     testAmourAmi: 'Amoureux de mon meilleur ami',
     quizTentation: 'Tentation',
@@ -367,6 +369,7 @@
     'most': 'quizMost',
     'oui-non': 'jeuOuiNon',
     'phrases': 'jeuPhrases',
+    'dix-mais': 'jeuDixMais',
     'parentalite': 'testParentalite',
     'pervers': 'testPervers',
     'plateau-couple': 'jeuPlateau',
@@ -386,6 +389,7 @@
     'pret-nouvelle-relation': 'testPretRelation',
     'duree-celibat': 'testDureeCelibat',
     'est-ce-le-bon': 'testEstCeLeBon',
+    'compatibilite-sexuelle': 'testCompatSexuelle',
     'type-couple': 'quizTypeCouple',
     'amour-ou-attachement': 'testAmourAttachement',
     'je-l-aime-encore': 'testJeLaimeEncore',
@@ -417,7 +421,7 @@
           'jeuDilemmes', 'pourContre', 'quizTuPreferes', 'jeuJamais',
           'action-ou-verite', 'action-ou-verite-coquin', 'gage-couple', 'plateau-couple',
           'qui-de-nous-deux', 'dilemmes', 'pour-contre', 'tu-preferes', 'jamais',
-          'jeuPhrases', 'phrases'],
+          'jeuPhrases', 'phrases', 'jeuDixMais', 'dix-mais'],
     quiz: ['zamours', 'amoureux', 'coquin', 'genant', 'knowledge', 'marrant', 'most',
            'vrai-faux', 'ado', 'tentation', 'rencontre']
   };
@@ -784,7 +788,7 @@
   // elle, l'onglet le dit et la ligne sous les lances reste vide.
   var PAGES_DISTANCE = ['testCouple', 'testCommonPoints', 'testCompatibilite', 'quizAmoureux',
     'testCoupleSain', 'testParentalite', 'testEmmenager', 'testAmeSoeur', 'testChargeMentale',
-    'jeuJamais', 'jeuQuiDeNous', 'jeuQuiPourrait'];
+    'jeuJamais', 'jeuQuiDeNous', 'jeuQuiPourrait', 'jeuDixMais', 'testCompatSexuelle'];
   var DEBUT_DISTANCE = (typeof window !== 'undefined' && window.__ADM_DEBUT_DISTANCE) || '2026-09-07';
   var distanceCouchesVues = { lances: true, distance: true, part: true };
   var _distanceCouches = null;

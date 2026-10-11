@@ -1,0 +1,113 @@
+{
+  "jsonLd": {
+    "name": "Er ist eine 10, aber..., das Spiel für Paare"
+  },
+  "hero": {
+    "badge": "Spiel zu zweit • 60 Karten",
+    "title": "Er ist eine 10, aber...: das Spiel für Paare",
+    "titleHighlight": "Er ist eine 10, aber...",
+    "description": "Ein perfekter Mensch mit einer Macke. Jeder gibt seine neue Note von 0 bis 10, dann vergleicht ihr. 60 Karten, geheim, zusammen oder auf Distanz gespielt."
+  },
+  "section1": {
+    "title": "Was ist „Er ist eine 10, aber...“?",
+    "p1": "„Er ist eine 10, aber...“ ist ein Spiel, das man mit Freunden oder als Paar spielen kann. Man stellt sich einen perfekten Menschen vor, eine glatte 10 von 10, und gibt ihm eine Macke. Zum Beispiel: „Er ist eine 10, aber er isst Spaghetti Carbonara mit Ketchup.“ Dann sagt jeder, welche Note er ihm jetzt noch gibt.",
+    "p2": "Wer bei der 10 bleibt, den stört die Macke überhaupt nicht. Wer auf eine 2 runtergeht, dem verdirbt sie die Person ziemlich... und wer eine 0 gibt, für den ist es ein absolutes No-Go, da ist nichts mehr zu retten! Die Idee kommt von einem englischen TikTok-Trend, „He's a 10 but...“, der durch alle sozialen Netzwerke gegangen ist. Zu zweit wird daraus eines dieser <a href=\"/de/paarspiele/\">Spiele, die man als Paar spielen kann</a>: Man erfährt, was der andere aushält und was ihn auf die Palme bringt, und meistens wird daraus eine Diskussion.",
+    "p3": "Das Spiel oben läuft im Browser, ohne Anmeldung und ohne Installation. Ein Handy reicht, oder zwei, wenn ihr nicht am selben Ort seid."
+  },
+  "section2": {
+    "title": "So wird gespielt",
+    "intro": "So funktioniert unser Spiel oben. Bevor es losgeht, wählt ihr drei Dinge aus: wer die 10 ist (ein Mann, eine Frau oder gemischt von Karte zu Karte), wie viele Karten (15, 30 oder alle 60) und wie ihr spielen wollt.",
+    "modeSecretEmoji": "🤫",
+    "modeSecretTitre": "Geheim",
+    "modeSecretTexte": "Jeder bewertet für sich, ohne die Note des anderen zu sehen. Das Handy wandert hin und her, und wenn beide bewertet haben, erscheinen beide Noten gleichzeitig. Das ist die ehrlichste Variante, weil sich keiner nach dem anderen richten kann.",
+    "modeFaceEmoji": "👀",
+    "modeFaceTitre": "Zusammen",
+    "modeFaceTexte": "Beide Noten werden auf demselben Bildschirm vergeben, jeder hat seine eigene Reihe. Das geht schneller und man muss nichts verstecken: Ihr seht die Note des anderen kommen, und die Diskussion beginnt sofort.",
+    "modeDistanceEmoji": "📱",
+    "modeDistanceTitre": "Auf Distanz",
+    "modeDistanceTexte": "Jeder spielt auf seinem eigenen Handy. Einer erstellt das Spiel und schickt dem anderen den Code oder den Link, ihr bewertet jeder für sich, und beide Noten erscheinen auf beiden Bildschirmen. Praktisch beim Videoanruf oder in einer Fernbeziehung.",
+    "apres": "Nach jeder Karte zeigt das Spiel den Unterschied zwischen euren beiden Noten. Am Ende seht ihr, bei wie vielen Karten ihr höchstens einen Punkt auseinanderlagt, wer von euch strenger bewertet, eure größten Unterschiede und die Macken, die für euch beide ein No-Go sind."
+  },
+  "section3": {
+    "title": "Die 60 Karten des Spiels",
+    "intro": "Hier sind alle Karten, nach Themen sortiert. Im Spiel werden sie gemischt, und wenn ihr „Gemischt“ wählt, geht es bei jeder zweiten Karte um eine Frau. Manche sind nur zum Lachen da, andere sind echte Beziehungsthemen, und genau diese Mischung macht das Spiel lustig.",
+    "groupes": [
+      {
+        "titre": "Im Alltag",
+        "de": 1,
+        "a": 12
+      },
+      {
+        "titre": "Beim Essen",
+        "de": 13,
+        "a": 22
+      },
+      {
+        "titre": "Am Handy",
+        "de": 23,
+        "a": 34
+      },
+      {
+        "titre": "In der Beziehung",
+        "de": 35,
+        "a": 48
+      },
+      {
+        "titre": "Die echten Red Flags",
+        "de": 49,
+        "a": 60
+      }
+    ],
+    "apres": "Wenn ihr gern Position bezieht, gibt es auch <a href=\"/de/ja-oder-nein-paar-spiel/\">Beziehungssituationen, die man mit Ja oder Nein beurteilt</a>, mit den Stimmen aller anderen Spieler nach jeder Antwort."
+  },
+  "section4": {
+    "title": "So vergebt ihr eure Note",
+    "intro": "Eine offizielle Regel gibt es nicht. Die meisten bewerten ungefähr so:",
+    "entetes": [
+      "Note",
+      "Was sie bedeutet"
+    ],
+    "bareme": [
+      [
+        "10",
+        "Ändert gar nichts, ist eigentlich sogar süß."
+      ],
+      [
+        "7 bis 9",
+        "Nervt ein bisschen, aber damit lebt man gut."
+      ],
+      [
+        "4 bis 6",
+        "Kommt drauf an. Auf den Rest der Person und auf die Laune des Tages."
+      ],
+      [
+        "1 bis 3",
+        "Große Zweifel. Der Rest müsste das schon ordentlich ausgleichen."
+      ],
+      [
+        "0",
+        "Absolutes No-Go. Davon erholt sich nicht mal eine 10."
+      ]
+    ],
+    "apres": "Am spannendsten ist meistens der Unterschied zwischen euren beiden Noten. Wenn einer einer Karte eine 9 gibt und der andere eine 1, steckt garantiert eine Geschichte dahinter... oder zumindest eine Erklärung!"
+  },
+  "section5": {
+    "title": "Kleine Macke oder echte Red Flag?",
+    "p1": "Das Spiel mischt beides. Ketchup auf Nudeln oder herumliegende Socken sind Macken, über die man lacht, auch wenn sie nerven. Das Handy des anderen durchsuchen oder seine Freunde nicht ausstehen können, ist etwas anderes: Das sind <a href=\"/de/blog/red-flags-bei-einem-mann/\">Warnsignale, die man besser früh erkennt</a>, bei einem Mann genauso wie bei einer Frau.",
+    "p2": "Wenn eure Noten bei so einer Karte weit auseinanderliegen, lohnt es sich, nach dem Spiel in Ruhe darüber zu reden. Jeder hat <a href=\"/de/blog/grenzen-beziehung-nicht-akzeptieren/\">Dinge, die er in einer Beziehung nicht akzeptiert</a>, und es ist einfacher, sie zu kennen, bevor man in der Situation steckt.",
+    "p3": "Für alles andere gilt: Bleibt locker. Es ist ein Spiel, und niemand soll sich verurteilt fühlen, weil er Ananas auf Pizza eine 3 gegeben hat!"
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Woher kommt „Er ist eine 10, aber“?",
+    "a1": "Von einem englischen TikTok-Trend, „He's a 10 but...“. Die Idee wurde überall aufgegriffen, auf Deutsch genauso wie in anderen Sprachen: Man beschreibt einen perfekten Menschen, gibt ihm eine Macke, und jeder sagt seine Note.",
+    "q2": "Kann man auch mit mehr als zwei Personen spielen?",
+    "a2": "Das Online-Spiel zählt die Noten von zwei Personen. Mit Freunden könnt ihr die Karten aber einfach laut vorlesen und eure Noten nacheinander sagen, das funktioniert auf jeder Party.",
+    "q3": "Wie lange dauert eine Runde?",
+    "a3": "Etwa zehn Minuten für 15 Karten im Modus „Zusammen“, etwas länger im geheimen Modus, weil das Handy hin- und hergeht. Alle 60 Karten füllen eher einen ganzen Abend, vor allem wenn ihr über jede Note diskutiert.",
+    "q4": "Warum wählt man zwischen Mann und Frau?",
+    "a4": "Die Karten sind für beide geschrieben. Je nach Auswahl heißt es „Er ist eine 10, aber er...“ oder „Sie ist eine 10, aber sie...“. Bei „Gemischt“ wechselt es von Karte zu Karte, und es ist oft lustig zu sehen, ob sich die Note ändert, je nachdem, ob es ein Mann oder eine Frau ist.",
+    "q5": "Werden unsere Noten gespeichert?",
+    "a5": "Nein. Die Noten bleiben während des Spiels auf eurem Handy und verschwinden, wenn ihr die Seite verlasst. Auf Distanz gehen sie von einem Handy zum anderen, ohne irgendwo gespeichert zu werden."
+  }
+}

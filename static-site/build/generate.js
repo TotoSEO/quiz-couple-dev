@@ -359,6 +359,8 @@ const GD_QUESTION_PREFIXES = {
   'couple-ou-celibat': ['balance'],
   // Combien de temps vais-je rester célibataire : vingt questions, une durée.
   'duree-celibat': ['dureeCelib'],
+  // Compatibilité sexuelle : vingt questions à deux, réponses sur une échelle.
+  'compatibilite-sexuelle': ['compatSex'],
   // Amour ou attachement : deux axes, une question sur deux pour chacun.
   'amour-ou-attachement': ['attache'],
   'je-l-aime-encore': ['jeLaime'],
