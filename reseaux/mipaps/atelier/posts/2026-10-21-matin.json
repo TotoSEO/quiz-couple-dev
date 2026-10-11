@@ -171,7 +171,7 @@
             ],
             "textes": [
               {
-                "texte": "maintenant tu peux parler.",
+                "texte": "« vas-y, je t'écoute. »",
                 "de": 1.4,
                 "place": "haut",
                 "motAMot": true
@@ -180,7 +180,7 @@
           }
         ]
       },
-      "legende": "avant le café, c'est un autre être humain.\n\ntague celle qui parle pas avant son café",
+      "legende": "il est debout depuis 6 h.\n\ntague-la",
       "hashtags": [
         "#lesmipaps",
         "#couple",

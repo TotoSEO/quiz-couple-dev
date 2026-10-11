@@ -244,7 +244,7 @@
             ],
             "textes": [
               {
-                "texte": "bon, à ce soir. pour de vrai.",
+                "texte": "elle part à 8 h. il est 8 h 40.",
                 "de": 0.4,
                 "place": "haut",
                 "motAMot": true
@@ -253,7 +253,7 @@
           }
         ]
       },
-      "legende": "on s'est dit au revoir trois fois. ça compte pas.\n\nenvoie ça à celui qui part jamais vraiment",
+      "legende": "troisième fois qu'elle revient.\n\nenvoie ça sans rien dire",
       "hashtags": [
         "#lesmipaps",
         "#couple",

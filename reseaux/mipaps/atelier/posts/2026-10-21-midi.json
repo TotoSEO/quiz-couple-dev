@@ -12,7 +12,7 @@
         "gabarit": "mipaps-post",
         "langue": "fr",
         "theme": "light",
-        "idee": "Schéma de bureau : une liste de courses où un câlin est barré, puis réécrit.",
+        "idee": "Schéma de bureau : une liste de courses qui dérape vers les chips, la vraie liste de deux personnes.",
         "style": "schema",
         "texte": "liste de courses",
         "schema": {
@@ -27,16 +27,15 @@
               "coche": true
             },
             {
-              "texte": "un câlin",
-              "barre": true
+              "texte": "un truc pour le dîner"
             },
             {
-              "texte": "un câlin (le vrai)"
+              "texte": "des chips (pas les siennes)"
             }
           ]
         }
       },
-      "legende": "le pain et le lait, ça va. le câlin, jamais assez.\n\nc'est quoi sur ta liste ?",
+      "legende": "ça fait 40 minutes qu'on est au rayon chips.\n\nc'est qui chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
