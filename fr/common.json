@@ -104,7 +104,7 @@
     "testEstCeLeBonDesc": "Vingt questions pour savoir si c'est la bonne personne",
     "testSignesChinois": "Compatibilité signes chinois",
     "testSignesChinoisDesc": "Deux dates, deux animaux, un verdict",
-    "compteurCouple": "Compteur de couple",
+    "compteurCouple": "Compteur de durée en couple",
     "compteurCoupleDesc": "Vos jours ensemble, les dates à fêter"
   },
   "footer": {

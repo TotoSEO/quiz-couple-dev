@@ -660,6 +660,81 @@ function imageDispo(chemin) {
   return fs.existsSync(path.join(PUBLIC_DIR, chemin.replace(/^\//, '')));
 }
 
+// Largeur d'une image lue dans son en-tête : WebP (avec perte, sans perte,
+// étendu), JPEG et PNG, car deux couvertures du blog sont des JPEG nommés
+// .webp. 0 si le fichier manque ou n'est pas reconnu (alors pas de srcset).
+function largeurImage(fichier) {
+  let b;
+  try {
+    const fd = fs.openSync(fichier, 'r');
+    b = Buffer.alloc(65536);
+    const lus = fs.readSync(fd, b, 0, b.length, 0);
+    fs.closeSync(fd);
+    b = b.subarray(0, lus);
+  } catch (e) { return 0; }
+  if (b.length >= 30 && b.toString('ascii', 0, 4) === 'RIFF' && b.toString('ascii', 8, 12) === 'WEBP') {
+    const bloc = b.toString('ascii', 12, 16);
+    if (bloc === 'VP8 ') return b.readUInt16LE(26) & 0x3fff;
+    if (bloc === 'VP8L') return 1 + (((b[22] & 0x3f) << 8) | b[21]);
+    if (bloc === 'VP8X') return 1 + b.readUIntLE(24, 3);
+    return 0;
+  }
+  if (b.length >= 24 && b.readUInt32BE(0) === 0x89504e47) return b.readUInt32BE(16);
+  if (b.length >= 4 && b[0] === 0xff && b[1] === 0xd8) {
+    // Segments jusqu'au premier SOF : FF Cn, longueur, précision, hauteur, largeur.
+    let i = 2;
+    while (i + 9 < b.length) {
+      if (b[i] !== 0xff) { i++; continue; }
+      const marqueur = b[i + 1];
+      if (marqueur === 0xff) { i++; continue; }
+      if (marqueur === 0x01 || (marqueur >= 0xd0 && marqueur <= 0xd8)) { i += 2; continue; }
+      if (marqueur >= 0xc0 && marqueur <= 0xcf && marqueur !== 0xc4 && marqueur !== 0xc8 && marqueur !== 0xcc) return b.readUInt16BE(i + 7);
+      i += 2 + b.readUInt16BE(i + 2);
+    }
+  }
+  return 0;
+}
+
+// Le srcset d'une image de tête (/quiz/featured/) ou d'une couverture du blog
+// (/blog/) : les variantes réduites présentes à côté de l'original, dans
+// 720/, 880/ ou 1080/ (produites par build/variantes-images.cjs), puis
+// l'original à sa vraie largeur. Une variante absente n'est pas déclarée,
+// une image sans aucune variante n'a pas de srcset (null), et une URL
+// absolue non plus. Calculé une fois par image.
+const LARGEURS_VARIANTES = { '/quiz/featured/': [720, 880], '/blog/': [720, 1080] };
+const srcsetsImages = new Map();
+function srcsetImage(src) {
+  if (typeof src !== 'string') return null;
+  if (srcsetsImages.has(src)) return srcsetsImages.get(src);
+  let srcset = null;
+  const m = src.match(/^(\/(?:quiz\/featured|blog)\/)([^/]+\.webp)$/);
+  if (m) {
+    const largeur = largeurImage(path.join(PUBLIC_DIR, src));
+    const candidats = LARGEURS_VARIANTES[m[1]]
+      .filter((w) => w < largeur && fs.existsSync(path.join(PUBLIC_DIR, m[1], String(w), m[2])))
+      .map((w) => `${m[1]}${w}/${m[2]} ${w}w`);
+    if (candidats.length) srcset = candidats.concat(`${src} ${largeur}w`).join(', ');
+  }
+  srcsetsImages.set(src, srcset);
+  return srcset;
+}
+
+// Les images du corps d'un article (1536 px, écrites en dur dans les
+// articles) reçoivent le même srcset que leur couverture. Largeurs relevées
+// dans la colonne de l'article : la page moins 32 px sous 640 px, puis 480,
+// 600 et 720 px. Une balise qui a déjà un srcset (la tête d'article) ou dont
+// l'image n'a pas de variante reste telle quelle.
+const TAILLES_CORPS_ARTICLE = '(min-width: 1024px) 720px, (min-width: 768px) 600px, (min-width: 640px) 480px, calc(100vw - 32px)';
+function srcsetImagesArticle(html) {
+  return html.replace(/<img\b[^>]*>/g, (balise) => {
+    if (/\ssrcset=/.test(balise)) return balise;
+    const m = balise.match(/\ssrc="([^"]+)"/);
+    const srcset = m && srcsetImage(m[1]);
+    if (!srcset) return balise;
+    return balise.replace(/^<img\b/, `<img srcset="${srcset}" sizes="${TAILLES_CORPS_ARTICLE}"`);
+  });
+}
+
 function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
 }
@@ -1040,14 +1115,12 @@ async function generatePage(routeKey, lang) {
     ogImage: featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : `${BASE_URL}/og-image.webp`,
     featuredImage: featured ? `/quiz/featured/${featured.file}.webp` : null,
     featuredImageAlt: featured ? (featured.alt[lang] || featured.alt.fr) : '',
-    // La variante reduite de l'image de tete, quand elle existe dans le
-    // dossier 720/ : sur telephone, l'original de 1200 px etait affiche a
-    // 390 px de large, et PageSpeed comptait les octets en trop. Une image
-    // sans variante garde son seul fichier : rien ne casse, elle pese juste
-    // plus lourd. Les variantes sont produites une fois pour toutes et
-    // versionnees, la construction n'a besoin d'aucun outil d'image.
-    featuredImageSrcset: featured && fs.existsSync(path.join(PUBLIC_DIR, 'quiz', 'featured', '720', `${featured.file}.webp`))
-      ? `/quiz/featured/720/${featured.file}.webp 720w, /quiz/featured/${featured.file}.webp 1200w` : null,
+    // Les variantes reduites de l'image de tete (720/ et 880/), quand elles
+    // existent : sur telephone, l'original de 1200 px etait affiche a 390 px
+    // de large, et PageSpeed comptait les octets en trop. Une image sans
+    // variante garde son seul fichier : rien ne casse, elle pese juste plus
+    // lourd. Le prechargement de base.ejs reprend ce srcset tel quel.
+    featuredImageSrcset: featured ? srcsetImage(`/quiz/featured/${featured.file}.webp`) : null,
     // L'illustration heritee n'est declaree que si son fichier existe : un
     // `old` pointant dans le vide afficherait un cadre d'image cassee.
     contentImage: featured && featured.old && fs.existsSync(path.join(PUBLIC_DIR, 'quiz', `${featured.old}.webp`))
@@ -1076,6 +1149,7 @@ async function generatePage(routeKey, lang) {
     avisCuitsJson: jsonPourScript(avisCuitsPour(routeKey)),
     getLocalizedPath,
     escapeHtml,
+    srcsetImage,
     JSON,
     // Structured data
     jsonLdHtml,
@@ -1813,6 +1887,7 @@ async function generateBlogArticle(articleMeta, lang) {
     instagramUrl: INSTAGRAM_URL,
     getLocalizedPath,
     escapeHtml,
+    srcsetImage,
     JSON,
     jsonLdHtml,
     // Article-specific
@@ -1827,7 +1902,7 @@ async function generateBlogArticle(articleMeta, lang) {
   };
 
   try {
-    const pageHtml = await renderTemplate('pages/blog-article', data);
+    const pageHtml = srcsetImagesArticle(await renderTemplate('pages/blog-article', data));
     const fullHtml = stripFutureLinks(await renderTemplate('base', { ...data, content: pageHtml }));
     const minified = await minifyHtml(fullHtml);
     const outputPath = path.join(DIST_DIR, pagePath, 'index.html');

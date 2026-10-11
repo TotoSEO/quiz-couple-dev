@@ -625,30 +625,6 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
   100% { background-position: 0% center; }
 }
 @media (min-width: 768px) { .hero-title { font-size: 3.25rem; } }
-/* Sur un telephone, les animations qui repeignent a chaque image (le degrade
-   qui glisse dans le titre et sous le bouton du test de purete, la position
-   du fond) tournent sur le fil principal pendant tout le chargement, alors
-   que le processeur y est deja quatre fois plus lent qu'au bureau. Le degrade
-   reste, il ne bouge plus. Les taches de couleur floutees et la trame du
-   fond, elles, sont composees par la carte graphique : elles gardent leur
-   mouvement. */
-@media (max-width: 767.98px) {
-  .hero-title .text-gradient, .text-gradient { animation: none; background-position: 30% center; }
-  /* Les autres animations infinies qui repeignent a chaque image (elles
-     n'animent ni transform ni opacity) : reflet des boutons, halo de la carte
-     d'avis et vague des etoiles, LED du bouton sources Google, point du
-     compteur. PageSpeed les compte parmi les « animations non composees » et
-     elles occupent le fil principal pendant tout le chargement. */
-  .btn-cta::after { animation: none; }
-  .pqx-form-wrap { animation: none; }
-  .pqx-input-stars:not(:hover):not(:has(.on)) .pqx-star-btn svg { animation: none; }
-  .gsource-btn::before, .gsource-g::before { animation: none; }
-  .quiz-count-bubble .qcb-dot { animation: none; }
-  .btn-purete::before, .btn-purete:hover::before { animation: none; --nv-angle: 60deg; }
-  /* L'anneau du résultat de la scène du hero (trait, non composé) : posé
-     directement à sa valeur, la scène garde ses fondus et ses sauts. */
-  .scene-anneau-fill { animation: none; }
-}
 @media (min-width: 1024px) { .hero-title { font-size: 4.25rem; line-height: 1.05; } }
 .hero-desc {
   font-size: 1.1rem; color: hsl(var(--muted-foreground));
@@ -12303,4 +12279,38 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .qc-relais-perso { animation: none; }
   .quiz-setup-icon--mascottes,
   .quiz-setup-screen .quiz-setup-icon--mascottes { animation: none !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Téléphone : les animations infinies qui repeignent à chaque image
+   ═══════════════════════════════════════════════════════════════════
+   Elles n'animent ni transform ni opacity : dégradé qui glisse dans le
+   titre, reflet des boutons, anneau néon du bouton pureté, LED et anneau du
+   bouton sources Google, fond de la carte finale de l'accueil, anneau du
+   résultat de la scène du hero, halo de la carte d'avis et vague des
+   étoiles, point du compteur. Chacune recalcule le style et repeint à
+   chaque image, sur le fil principal, du chargement jusqu'au départ. Sur un
+   téléphone moyen (processeur quatre fois plus lent qu'au bureau, 390 px),
+   l'accueil occupait ainsi le fil principal 9,7 s sur 10 au repos, contre
+   8 ms sans elles (mesure du 11 octobre 2026) : défilement haché, appuis
+   lents, LCP retardé. Le dessin reste, il ne bouge plus. Les animations
+   composées (taches floutées, trame, ruban, scène des mascottes) gardent
+   leur mouvement.
+
+   Ce bloc reste le DERNIER du fichier : à spécificité égale, la dernière
+   règle gagne. Écrit plus haut, sous le titre du hero, il ne coupait que le
+   dégradé du titre, déclaré avant lui ; toutes les autres animations,
+   déclarées plus bas, tournaient quand même. */
+@media (max-width: 767.98px) {
+  .hero-title .text-gradient, .text-gradient { animation: none; background-position: 30% center; }
+  .btn-cta::after { animation: none; display: none; }
+  .btn-purete::before, .btn-purete:hover::before { animation: none; --nv-angle: 60deg; }
+  .gsource-btn::before, .gsource-g::before { animation: none; }
+  .final-cta-card { animation: none; background-position: 50% 50%; }
+  /* L'anneau du résultat de la scène du hero : posé directement à sa
+     valeur, la scène garde ses fondus et ses sauts. */
+  .scene-anneau-fill { animation: none; }
+  .pqx-form-wrap { animation: none; }
+  .pqx-input-stars:not(:hover):not(:has(.on)) .pqx-star-btn svg { animation: none; }
+  .quiz-count-bubble .qcb-dot { animation: none; }
 }

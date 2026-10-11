@@ -217,7 +217,7 @@ const toolLinksDispo = _dispo(toolLinks);
         <% for (const article of blogArticlesList) { %>
         <a href="<%= article.url %>" class="group rounded-xl border border-border bg-card p-4 no-underline transition-all hover:border-primary/30 hover:shadow-sm flex gap-4 items-start">
           <% if (article.featuredImage) { %>
-          <img src="<%= article.featuredImage %>" alt="<%= article.featuredImageAlt %>" class="w-16 h-16 rounded-lg object-cover shrink-0" width="64" height="64" loading="lazy">
+          <img src="<%= article.featuredImage %>"<% if (srcsetImage(article.featuredImage)) { %> srcset="<%= srcsetImage(article.featuredImage) %>" sizes="64px"<% } %> alt="<%= article.featuredImageAlt %>" class="w-16 h-16 rounded-lg object-cover shrink-0" width="64" height="64" loading="lazy">
           <% } %>
           <div class="min-w-0">
             <% if (article.categoryLabel) { %>

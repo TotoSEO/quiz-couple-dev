@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "Free tool",
-    "title": "Relationship counter: how long have you been together?",
-    "highlight": "Relationship counter",
+    "title": "Relationship duration counter: how long have you been together?",
+    "highlight": "Relationship duration counter",
     "description": "Enter the date of your first day as a couple. The counter gives you <strong>your number of days together</strong>, the exact length in years, months and days, and the next dates to celebrate: anniversary, round months, the 1,000-day mark... With a link to keep, so you can come back and watch the number grow.",
     "subtitle": "No sign-up. The date stays on your phone, nothing is sent anywhere."
   },
@@ -242,8 +242,8 @@
     "bouton": "Take the love or habit test"
   },
   "section1": {
-    "title": "What is a relationship counter?",
-    "p1": "A relationship counter is a very simple tool: you enter the date your story began, and it tells you how long you have been together. It does not count only in years, the way we answer when someone asks, but in days, weeks, months and even hours. For example, a couple who got together on 14 May 2023 passes the 1,200-day mark in the autumn of 2026. Said like that, it sounds quite different from \"three years and a bit\".",
+    "title": "What is a relationship duration counter?",
+    "p1": "A relationship duration counter is a very simple tool: you enter the date your story began, and it tells you how long you have been together. It does not count only in years, the way we answer when someone asks, but in days, weeks, months and even hours. For example, a couple who got together on 14 May 2023 passes the 1,200-day mark in the autumn of 2026. Said like that, it sounds quite different from \"three years and a bit\".",
     "p2": "The idea has been around for a long time on couple apps, where the number sits on the home screen and goes up by one every morning. This is the same thing, with nothing to install: the page keeps your date in your browser, and every time you visit, the counter is up to date. You can also copy a link that holds the date and your first names, bookmark it or send it to the other person.",
     "p3": "And since a number on its own does not do much, the counter also tells you what is coming: the next anniversary with the name of the year that goes with it, the next round month, and the day milestones nobody sees coming, 500 days, 1,000 days, 10,000 hours. It gives you reasons to celebrate outside the usual dates, and those are often the ones you remember!"
   },
@@ -452,8 +452,8 @@
     "tip": "Bookmark the counter on both your phones, with the same link. Whoever spots the milestone first wins the right to pick the restaurant."
   },
   "faq": {
-    "title": "Your questions about the relationship counter",
-    "q1": "Is the relationship counter free?",
+    "title": "Your questions about the relationship duration counter",
+    "q1": "Is the relationship duration counter free?",
     "a1": "Yes, completely, with no sign-up and no email address. You can use it as many times as you like, for your own couple or your parents', out of curiosity.",
     "q2": "Where is our date stored?",
     "a2": "In your browser only, on the device you are using. Nothing is sent to a server. If you clear your browsing data, the date goes with it: hence the link to copy, which contains it and lets you find it again anywhere.",
@@ -467,7 +467,7 @@
     "a6": "Of course. A friendship, a wedding, the day a pet arrived at home, the day you quit smoking... It counts days since a date, the rest depends on what you put into it. The anniversary names and Valentine's Days will simply make less sense!"
   },
   "jsonLd": {
-    "name": "Relationship counter",
+    "name": "Relationship duration counter",
     "about": "Number of days spent together since a start date, and the next dates to celebrate"
   }
 }

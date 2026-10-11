@@ -102,7 +102,7 @@
     "testEstCeLeBonDesc": "Zwanzig Fragen, um zu wissen, ob es der oder die Richtige ist",
     "testSignesChinois": "Chinesische Sternzeichen",
     "testSignesChinoisDesc": "Zwei Daten, zwei Tiere, ein Urteil",
-    "compteurCouple": "Beziehungszähler",
+    "compteurCouple": "Beziehungsdauer-Zähler",
     "compteurCoupleDesc": "Eure Tage zusammen, Daten zum Feiern"
   },
   "footer": {

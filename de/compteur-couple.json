@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "Kostenloses Werkzeug",
-    "title": "Beziehungszähler: wie lange seid ihr schon zusammen?",
-    "highlight": "Beziehungszähler",
+    "title": "Beziehungs\u00addauer-Zähler: wie lange seid ihr schon zusammen?",
+    "highlight": "Beziehungs\u00addauer-Zähler",
     "description": "Gebt das Datum eures ersten Tages als Paar ein. Der Zähler zeigt euch <strong>eure Tage zusammen</strong>, die genaue Dauer in Jahren, Monaten und Tagen, und die nächsten Daten zum Feiern: Jahrestag, runde Monate, die 1.000-Tage-Marke... Mit einem Link zum Aufheben, um wiederzukommen und der Zahl beim Wachsen zuzusehen.",
     "subtitle": "Keine Anmeldung. Das Datum bleibt auf eurem Handy, nichts wird verschickt."
   },
@@ -242,8 +242,8 @@
     "bouton": "Den Test Liebe oder Gewohnheit machen"
   },
   "section1": {
-    "title": "Was ist ein Beziehungszähler?",
-    "p1": "Ein Beziehungszähler ist ein ganz einfaches Werkzeug: ihr gebt das Datum ein, an dem eure Geschichte begonnen hat, und er sagt euch, wie lange ihr schon zusammen seid. Er zählt nicht nur in Jahren, wie man antwortet, wenn man gefragt wird, sondern in Tagen, Wochen, Monaten und sogar Stunden. Ein Paar, das am 14. Mai 2023 zusammengekommen ist, überschreitet zum Beispiel im Herbst 2026 die 1.200 Tage zusammen. So gesagt klingt das gleich ganz anders als „drei Jahre und ein bisschen“.",
+    "title": "Was ist ein Beziehungsdauer-Zähler?",
+    "p1": "Ein Beziehungsdauer-Zähler ist ein ganz einfaches Werkzeug: ihr gebt das Datum ein, an dem eure Geschichte begonnen hat, und er sagt euch, wie lange ihr schon zusammen seid. Er zählt nicht nur in Jahren, wie man antwortet, wenn man gefragt wird, sondern in Tagen, Wochen, Monaten und sogar Stunden. Ein Paar, das am 14. Mai 2023 zusammengekommen ist, überschreitet zum Beispiel im Herbst 2026 die 1.200 Tage zusammen. So gesagt klingt das gleich ganz anders als „drei Jahre und ein bisschen“.",
     "p2": "Die Idee gibt es schon lange in Paar-Apps, wo die Zahl auf dem Startbildschirm steht und jeden Morgen um eins hochgeht. Hier ist es dasselbe, ohne etwas zu installieren: die Seite behält euer Datum im Browser, und bei jedem Besuch ist der Zähler auf dem neuesten Stand. Ihr könnt auch einen Link kopieren, der das Datum und eure Vornamen enthält, ihn als Lesezeichen speichern oder dem anderen schicken.",
     "p3": "Und weil eine Zahl allein nicht viel bringt, sagt euch der Zähler auch, was kommt: den nächsten Jahrestag mit dem Namen der Hochzeit, die dazugehört, den nächsten runden Monat und die Tage-Marken, die niemand kommen sieht, 500 Tage, 1.000 Tage, 10.000 Stunden. Das gibt Anlässe, etwas außerhalb der üblichen Daten zu feiern, und oft sind es genau die, die man behält!"
   },
@@ -452,8 +452,8 @@
     "tip": "Speichert den Zähler auf beiden Handys als Lesezeichen, mit demselben Link. Wer die Marke zuerst bemerkt, darf das Restaurant aussuchen."
   },
   "faq": {
-    "title": "Eure Fragen zum Beziehungszähler",
-    "q1": "Ist der Beziehungszähler kostenlos?",
+    "title": "Eure Fragen zum Beziehungsdauer-Zähler",
+    "q1": "Ist der Beziehungsdauer-Zähler kostenlos?",
     "a1": "Ja, komplett, ohne Anmeldung und ohne E-Mail-Adresse. Ihr könnt ihn so oft nutzen, wie ihr wollt, für euer Paar oder aus Neugier für das eurer Eltern.",
     "q2": "Wo wird unser Datum gespeichert?",
     "a2": "Nur in eurem Browser, auf dem Gerät, das ihr gerade nutzt. Nichts wird an einen Server geschickt. Löscht ihr eure Browserdaten, geht das Datum mit: deshalb der Link zum Kopieren, der es enthält und euch überall wiederfinden lässt.",
@@ -467,7 +467,7 @@
     "a6": "Natürlich. Eine Freundschaft, eine Ehe, den Tag, an dem ein Haustier eingezogen ist, den Tag, an dem ihr mit dem Rauchen aufgehört habt... Er zählt Tage seit einem Datum, der Rest hängt davon ab, was ihr hineinlegt. Die Hochzeitsnamen und die Valentinstage haben dann einfach weniger Sinn!"
   },
   "jsonLd": {
-    "name": "Beziehungszähler",
+    "name": "Beziehungsdauer-Zähler",
     "about": "Zahl der gemeinsam verbrachten Tage seit einem Startdatum und die nächsten Daten zum Feiern"
   }
 }

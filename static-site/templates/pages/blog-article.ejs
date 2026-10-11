@@ -128,7 +128,12 @@
       <!-- Featured image -->
       <% if (article.featuredImage) { %>
       <div class="blog-img-wrap blog-img-wrap--hero">
-        <img src="<%= article.featuredImage %>" alt="<%= escapeHtml(article.featuredImageAlt || article.title) %>" fetchpriority="high" width="1200" height="675">
+        <%# L'image du LCP : sur telephone, la variante de 1080 px (34 Ko en
+            moyenne) au lieu de l'original de 1536 px. Largeurs relevees :
+            la colonne moins 34 px sous 640 px, puis 558, 678 et 766 px. Aucun
+            prechargement ne la tire en double (base.ejs ne precharge que
+            l'image de tete des tests). %>
+        <img src="<%= article.featuredImage %>"<% if (srcsetImage(article.featuredImage)) { %> srcset="<%= srcsetImage(article.featuredImage) %>" sizes="(min-width: 1024px) 766px, (min-width: 768px) 678px, (min-width: 640px) 558px, calc(100vw - 34px)"<% } %> alt="<%= escapeHtml(article.featuredImageAlt || article.title) %>" fetchpriority="high" width="1200" height="675">
       </div>
       <% } %>
     </div>

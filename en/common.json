@@ -102,7 +102,7 @@
     "testEstCeLeBonDesc": "Twenty questions to know if this is the right person",
     "testSignesChinois": "Chinese zodiac compatibility",
     "testSignesChinoisDesc": "Two dates, two animals, one verdict",
-    "compteurCouple": "Relationship counter",
+    "compteurCouple": "Relationship duration counter",
     "compteurCoupleDesc": "Your days together, dates to celebrate"
   },
   "footer": {
