@@ -59,7 +59,11 @@ critique garde la feuille bloquante.
   build prévient quand l'empreinte de `styles.css` inscrite en tête des
   fichiers n'est plus la bonne ; une feuille périmée ne casse rien (la feuille
   complète corrige tout dans la seconde), elle peut seulement faire manquer
-  une règle récente au premier rendu.
+  une règle récente au premier rendu. Sauf dans un cas : une règle retirée de
+  `styles.css` qui portait `!important` reste dans la feuille critique,
+  écrite dans la page, et l'emporte sur la nouvelle règle pour de bon (le
+  11 octobre 2026, les cartes de prénoms gardaient leur cadre à l'encre). Après
+  avoir retiré des `!important`, on régénère avant de publier.
 - Les états que la couverture ne voit pas (survol, écrans suivants du moteur)
   arrivent avec la feuille complète : un style indispensable dès le premier
   écran doit correspondre à des éléments présents au chargement.
@@ -222,6 +226,51 @@ de 39 et 23.
 - `compteur-couple.ejs`, `js/compteur-couple.js`, `{lang}/compteur-couple.json` : compteur de durée en couple (« Compteur de couple » jusqu'au 11 octobre 2026, Thomas : « compteur de couple ne veut rien dire » ; le nom est le même dans le H1, le title, la meta, le JSON-LD, le fil d'Ariane, le menu et les deux premiers titres de la page : Relationship duration counter, Contador de tiempo en pareja, Beziehungsdauer-Zähler, Contatore della durata di coppia ; les adresses n'ont pas changé ; le H1 allemand porte une césure conditionnelle, `Beziehungs\u00addauer`, sans quoi un écran de 320 px coupait avant le trait d'union) (route `compteurCouple`, famille Tests de couple, déclaré dans `ROUTES_OUTILS` comme la calculatrice). Outil autonome hors moteur, sur le gabarit et les classes (`astro-*`, `dn-*`) des outils par date : une date de début (trois listes, pas de valeur par défaut), deux prénoms facultatifs, et la carte donne les jours ensemble en grand, la durée en années, mois et jours (le mois se compte de quantième à quantième, `decomposer`, le 31 devient le 30 ou le 28), six tuiles (semaines, mois, heures, minutes, Saint-Valentin partagées, dimanches), les quatre prochaines dates à fêter triées par proximité (anniversaire avec le nom des noces de la langue, `noces` dans le JSON ; prochain mois rond ; deux prochains caps de `CAPS`, centaines puis milliers jusqu'à 30 000 jours plus quatre caps insolites en heures et en minutes) et le dernier cap franchi. Le jour d'une de ces dates, la carte l'annonce (`fete`). Tous les écarts se comptent en UTC sur des dates à minuit. La date et les prénoms sont gardés dans localStorage (`qc-compteur`) et dans le lien `?depuis=AAAA-MM-JJ&a=&b=` que copie le bouton dédié : au retour ou à l'ouverture du lien, le compteur s'affiche tout seul, sans adresse de résultat ni défilement (`silencieux`), le lien l'emportant sur la mémoire. La racine `#cc-outil` est dans `RACINES_MOTEUR` (quiz-extras.js) et la carte porte `quiz-result-card`. Les styles propres sont les `.cc-*` en fin de styles.css ; comme le compteur peut être déjà affiché au chargement (retour ou lien), les règles du résultat (`.cc-*`, `.dn-verdict`, `.dn-bloc`) sont gardées par `npm run critique` lui-même (`GARDER_PAR_CLE` dans `build/critique.mjs`), la couverture ne les voyant pas : recopiées à la main jusqu'au 11 octobre 2026, elles avaient été oubliées dans une régénération du 8 octobre. Aucun encart produit (les outils hors moteur n'en affichent pas).
 - `quiz-tu-preferes.ejs` — Inline `WYRGame` (not part of quiz-loader): 15 or 30 dilemmas, two modes chosen on the setup screen and kept across replays. « Chacun son tour » (`mode='tour'`, default): both players answer on the same phone, relay banner between them, reveal after each dilemma, agreement rate at the end. « Ensemble » (`mode='ensemble'`): one answer per dilemma decided by the couple, no names, no relay, no reveal, result lists the choices with the letter picked. The setup accroche is « Tu préfères ? » (`UI.accroche`); `UI.or` is only the medallion between the two options.
 
+### L'écran de départ des tests et des jeux à deux
+
+Revu le 11 octobre 2026 après la remarque de Thomas sur la compatibilité
+sexuelle : « c'est de la superposition constante, les marges externes sont
+mal gérées et trop courtes », valable pour tous les écrans de prénoms.
+Chaque niveau portait un cadre à l'encre et une ombre portée (l'écran, la
+carte du joueur, la pastille du numéro, le champ, les boutons de genre, la
+pastille du nombre de questions), les cartes étaient inclinées, et sous
+480 px la grille sortait du rembourrage du moteur par des marges négatives
+pour ne garder que 4 px contre son bord.
+
+- **Une seule carte de prénom :** `cartePrenom(o)` (quiz-engine-core.js), en
+  tête la pastille du numéro et le libellé, dessous le champ et, à côté,
+  les deux boutons de genre (`aria-pressed`). Elle sert `cartesDeuxJoueurs`,
+  la carte « moi » du mode à distance (`carteMoi`), DuoMatch, couple sain,
+  parentalité et emménager, coquin, connaissance, et âme sœur et charge
+  mentale à deux ; le quiz ado écrit la même structure en HTML
+  (`carteJoueur`, quiz-ado-multiplayer.js), et « Qui est le plus » ses
+  lignes `.most-joueur` dans le même aplat. Une nouvelle page à deux passe
+  par là, jamais par des cartes écrites à la main.
+- **L'encre reste au cadre :** le contour épais et l'ombre portée sont pour
+  le moteur et le bouton de départ. Dedans, tout est à plat : cartes
+  teintées (rose pour le joueur 1, violet pour le joueur 2, comme les deux
+  personnages), pastille du nombre de questions en aplat rose, encart de
+  mise en garde et interrupteur à distance en aplat neutre. Le champ et les
+  boutons de genre gardent seuls un contour, et le bouton de genre non
+  retenu s'efface quand l'autre est choisi.
+- **Le même ordre partout :** personnages, titre, description, pastille
+  « N questions • M min », mise en garde ou ligne d'aide éventuelle, cartes,
+  options (longueur, façon de jouer), interrupteur à distance, bouton.
+  `ecranDepart` pose la pastille sous la description ; un moteur qui ajoute
+  l'interrupteur l'insère avant `ecran.bouton`, pas avant la pastille.
+  Allumer le mode à distance ne masque plus la pastille.
+- **Les marges :** une colonne sous 720 px, dans le rembourrage du moteur
+  (1,25 rem sous 640 px), deux colonnes au-delà. Plus aucune marge négative.
+- **Les champs :** texte en 16 px (en dessous, Safari sur iPhone zoome la
+  page à la saisie). La règle est écrite `.quiz-engine input.quiz-player-champ`
+  pour l'emporter sur `.quiz-engine input[type="text"]`, qui impose sinon le
+  trait à l'encre et l'ombre au focus.
+- **La ponctuation :** `insecables()` colle « ? ! : ; » à leur mot dans le
+  titre et la description de l'écran de départ (le site écrit une espace
+  ordinaire, et le « ? » d'un titre passait seul à la ligne à 360 px).
+- Styles : section « Écran de départ à deux » en fin de styles.css, juste
+  avant le bloc des animations sur téléphone, qui reste le dernier.
+
 ### Mode à distance (`salon.js`)
 
 Par défaut, un test à deux se joue sur un seul téléphone qu'on se passe. Les
@@ -253,7 +302,7 @@ confirmation et annule pour les deux.
   sa configuration, faire passer `optionsDistance(cfg, pool)` au constructeur
   (chargeur), appeler `reprendrePartieRejointe(this, config)` dans le
   constructeur, poser `zoneDistancePour(this, { formulaire, bouton, meta })`
-  sur l'écran des prénoms, et écrire `demarrerADistance(salon, moi, moiInfo,
+  sur l'écran des prénoms (inséré avant le bouton de départ), et écrire `demarrerADistance(salon, moi, moiInfo,
   partenaireInfo)` qui construit un `TourParTour` avec `question(idx)` (texte
   et options `{ id, texte }`) et `surFin(a, b)` (ranger les deux séries puis
   afficher le résultat). Un moteur qui tire ses questions autrement fournit
