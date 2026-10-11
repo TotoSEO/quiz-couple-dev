@@ -2,10 +2,14 @@
 //   node reseaux/automates/controler.mjs reseaux/atelier/posts/2026-10-20-matin.json [...]
 //   node reseaux/automates/controler.mjs reseaux/mipaps/atelier/posts/2026-10-20-matin.json [...]
 // Sortie 0 si tout va bien, 1 sinon, avec la liste des fautes par fichier.
+// En plus du contrôle de la synchro (controlerPost), le style des textes
+// (lib/style.mjs) : ce qui sonne « écrit par une machine » est refusé ici,
+// avant de pousser, et seulement ici.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { controlerPost } from './lib/controle.mjs';
+import { controlerStylePost } from './lib/style.mjs';
 import { categorieAttendue, MELANGE_DEFAUT, MELANGE_MIPAPS } from './lib/calendrier.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
@@ -42,6 +46,9 @@ for (const fichier of process.argv.slice(2)) {
   try {
     const post = JSON.parse(fs.readFileSync(fichier, 'utf8'));
     fautes = controlerPost(post);
+    // le style des textes (chutes qui commentent, légende qui répète l'image,
+    // appels inventés...) : la porte de l'atelier, pas celle de la synchro
+    fautes.push(...controlerStylePost(post));
     const SUJETS = sujetsDe(fichier);
     const datés = SUJETS.saison?.sujets ?? [];
     const banque = (categorie) => SUJETS[categorie] ?? [];

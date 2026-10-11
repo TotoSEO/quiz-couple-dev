@@ -161,3 +161,87 @@ pas de référence à une série).
 | « Girlhood » (course l'un vers l'autre) | une boucle de retrouvailles, un texte qui change | `pov-172`, `pov-173` : « after 5 minutes apart vs after 5 days apart » |
 | « This is your sign » | une injonction douce à la deuxième personne | `pov-157` à `pov-160` |
 | « Be OK » (corps joyeux, légende qui dit le contraire) | le décalage entre l'image et le texte | déjà dans l'esprit des minis : un personnage qui danse avec « i miss u sm » |
+
+## Les vraies répliques (octobre 2026)
+
+Thomas, le 9 octobre 2026, sur les premiers posts : « les chutes sont
+vraiment nulles, elles sont pas naturelles, c'est de l'humour à l'IA, pas
+humain. [...] piocher directement dans leur contenu ». D'où cette banque :
+des phrases écrites par des gens en couple, relevées dans les sélections
+hebdomadaires de HuffPost (« 24 Of The Funniest Tweets From Couples This
+Week », 27 août au 2 septembre 2025) et de Yahoo (« 20 Of The Funniest
+Tweets About Married Life », 27 février au 4 mars 2024). On s'en sert comme
+d'une oreille avant d'écrire un titre, une bulle ou une légende : le ton
+juste, c'est celui-là. Une réplique se reprend telle quelle dans une légende
+ou se transpose à nos deux mascottes ; on ne la « cisèle » pas.
+
+### Ce qu'elles ont en commun, et que nos textes n'avaient pas
+
+1. **Un détail précis à la place d'un adjectif** : une heure, un chiffre,
+   un objet, ce qu'il a dit mot pour mot (« a rotisserie chicken », « 45
+   minutes », « the big jars of peanut butter », « 16 years and three
+   kids »). Jamais « the ultimate test of love ».
+2. **La chute est un fait, pas un commentaire.** La phrase s'arrête sur ce
+   qui s'est passé (« He was right, this is great. », « I'm learning how to
+   play guitar. ») ; personne n'écrit « and that's love » après.
+3. **Le dialogue réel en deux répliques** (« Wife: ... Me: ... »), chacun
+   dans son rôle, et le décalage fait tout.
+4. **L'autodérision** : celui qui écrit est souvent le ridicule de
+   l'histoire (« braver than I will ever be », « Vengeance is mine. »).
+
+### Les répliques
+
+- It's like my husband doesn't even care how much his big old recliner messes up the whole feng shui of our living room.
+- My husband just called a business directly to ask if they were open, so he is braver than I will ever be
+- Stop overthinking romance. She doesn't want poetry, she wants a rotisserie chicken.
+- When my wife sees a spider.....
+- asked wife if she wanted a massage and she said "yes but no funny business" but she did want funny business. women are a peculiar species
+- recently found out this has been my husband's phone wallpaper for several years
+- My husband told me to stop taking things so seriously, so I stopped cleaning the house so seriously and making dinner so seriously and paying bills so seriously. He was right, this is great.
+- I wish I loved anything as much as my wife and daughters love "fall vibes."
+- Snuck up behind my husband at the pharmacy and sweetly put my head on his shoulder. He turned around with a straight face and said, "Ma'am, please respect my personal space. I won't ask again." The whole line glared at me. He thought it was hilarious. Vengeance is mine.
+- My husband just pointed out that college freshmen were born in 2007 and why would he attack me like that
+- When my wife says I'm not a good communicator I remind her of the time she had me order her a salad with seven changes to the menu description and I nailed it.
+- Get your millennial boyfriend excited for chores by telling him it's a "side quest" instead of a "to do" list
+- Just over heard my husband telling the dog that he wants nothing more in life than to pet him, so I guess that was 16 years and three kids well spent
+- We ran into my wife's close friend on our neighborhood walk which allowed me 45 minutes to stare at a fire hydrant.
+- Please don't write happily married in your social media bio. Be realistic. "I have a spouse and they like me well enough."
+- My wife has close friends whose husbands are notably worse than me and I highly recommend this arrangement
+- the smug way my wife walks into the kitchen, casually opens a drawer, and pulls out the exact item she needs on the first try
+- Wife: Can you turn on the oven? Me: [starts dancing seductively in front of oven] Wife: why for everything
+- Wife: We need to talk Me, absolutely panicking: What Wife: We need to start buying the big jars of peanut butter
+- Husband: Why are your hands bleeding? *flashback to me struggling to open a pistachio for 20 minutes* Me: I'm learning how to play guitar.
+- Wife: Babe, why in the world are the windows open? Me: It's spring! Wife: It's 49 degrees! Me: You're right, I should open more windows.
+- Husband: I thought you said you had therapy. Me: Yes? Husband: You're parked in the driveway listening to a book and scrolling your phone. Me: And I have 23 minutes left in my session.
+- My husband called me from upstairs because he needed tp and what did we do before cell phones
+- Almost made it to the end of February before my wife made the first mention of what we could gift people for Christmas this year. Maybe next year will be the year we make it to March
+- my wife: you put more time and energy into our son's little league team than you do our marriage. me: well yeah our marriage doesn't end in a championship tournament.
+- I got a new sweatshirt and put it on and asked if I look cute and he said "well, it sure is a sweatshirt!" which is obviously not the right answer and he needs to do better.
+- According to my husband he's the only person on the road who knows how to drive. The eye-roll is implied.
+- wife: [stressed and busy] me: [not working] let me help and I can do the grocery shopping wife: I don't want you to do that.
+
+### Transposées à nos mascottes (titres, bulles ou légendes prêtes à l'emploi)
+
+Les mêmes mécaniques, dans la voix du compte (minuscules, « he » ou
+« she », un détail vrai, la chute qui s'arrête sur le fait) :
+
+- POV: he called the restaurant to ask if they were open. / braver than i'll ever be.
+- she doesn't want a poem. she wants fries. (légende : i brought fries.)
+- we ran into her friend on our walk. / i looked at a lamppost for 45 minutes.
+- he told me to stop taking things so seriously. / so i stopped doing the dishes so seriously. / he was right, this is great.
+- 'we need to talk.' / me: ... / her: we need to buy the big jar of nutella.
+- i asked if i looked cute. he said 'well, it's a sweatshirt.' / he's learning.
+- he called me from upstairs because he ran out of toilet paper. / what did we do before phones.
+- it's february 28th and she already asked what we're getting people for christmas.
+- 'why are your hands bleeding?' / 20 minutes on one pistachio. / 'i'm learning guitar.'
+- the face she makes when she opens a random drawer and finds exactly what she needs.
+- according to him, he's the only person on the road who knows how to drive.
+- 'can you turn on the oven?' / me, dancing in front of the oven / her: why. for everything. why.
+- he asked if i wanted a massage. i said 'ok but no funny business'. / i wanted funny business.
+- found out this has been his wallpaper for 3 years. (une photo d'elle qui dort, bouche ouverte)
+- 'i have a boyfriend and he likes me well enough.' (à la place de « couple goals » dans une bio)
+- she's been talking about her day for 40 minutes. / i've been listening for 40 minutes. / i don't know what happened.
+- he said 'just one more episode' at 10pm. it's 3am.
+- 1 hour of 'i don't know, you pick.' we got pizza.
+- every night since 2023. (légende d'un reel sur ses pieds gelés)
+- 'i'm fine' means figure out what you did.
