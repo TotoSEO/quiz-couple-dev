@@ -230,32 +230,45 @@ var QuizEngine = (function() {
   // ou le fond se decoupe ligne par ligne (box-decoration-break: clone).
   function titreSurligne(texte) {
     var h = el('h2', 'text-2xl font-bold mb-3 text-center');
-    var t = el('span', 'quiz-setup-h2-txt', esc(texte || ''));
+    var t = el('span', 'quiz-setup-h2-txt', esc(insecables(texte || '')));
     h.appendChild(t);
     return h;
+  }
+
+  // Le site ecrit une espace ordinaire avant « ? ! : ; » : sur un ecran de
+  // 360 px, le point d'interrogation d'un titre passait seul a la ligne.
+  // L'espace devient insecable, le signe reste avec son mot.
+  function insecables(texte) {
+    return String(texte).replace(/ ([?!:;»])/g, '\u00a0$1').replace(/« /g, '«\u00a0');
   }
 
   function ecranDepart(o) {
     var wrap = el('div', 'quiz-engine quiz-setup-screen animate-fade-in');
     wrap.appendChild(badgeDepart(o.iconeSvg, o.icone || '📝', 'mb-6', o.poses));
     wrap.appendChild(titreSurligne(o.titre));
-    if (o.desc) wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(o.desc)));
-    (o.corps || []).forEach(function(n) { if (n) wrap.appendChild(n); });
+    if (o.desc) wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(insecables(o.desc))));
+    // La pastille « N questions, M min » se lit avec la description : sous
+    // elle, le formulaire mene droit au bouton de depart.
     var metaEl = null;
     if (o.meta) { metaEl = el('div', 'quiz-setup-meta', o.meta); wrap.appendChild(metaEl); }
+    (o.corps || []).forEach(function(n) { if (n) wrap.appendChild(n); });
     var btn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', esc(o.bouton || ''));
     btn.type = 'button';
     if (o.onStart) btn.addEventListener('click', o.onStart);
     wrap.appendChild(btn);
-    // Les jeux saisissaient leurs prenoms dans un <form> : la touche Entree
-    // lancait la partie. L'ecran commun n'a pas de formulaire, on rebranche
-    // donc le raccourci sur chaque champ.
+    brancherEntree(wrap, btn);
+    return { wrap: wrap, bouton: btn, meta: metaEl };
+  }
+
+  // Les jeux saisissaient leurs prenoms dans un <form> : la touche Entree
+  // lancait la partie. Les ecrans de depart n'ont pas de formulaire, on
+  // rebranche donc le raccourci sur chaque champ de prenom.
+  function brancherEntree(wrap, bouton) {
     wrap.querySelectorAll('input[type="text"]').forEach(function(champ) {
       champ.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') { e.preventDefault(); btn.click(); }
+        if (e.key === 'Enter' && !bouton.hidden) { e.preventDefault(); bouton.click(); }
       });
     });
-    return { wrap: wrap, bouton: btn, meta: metaEl };
   }
 
   // Pastille « N questions • 5 min », commune a tous les ecrans de depart.
@@ -341,44 +354,94 @@ var QuizEngine = (function() {
     return wrap;
   }
 
-  // Les deux cartes de prenoms des tests a deux, reutilisees par les jeux qui
-  // se contentaient de deux champs de saisie alignes.
-  //   options.genre : deux boutons de genre sous chaque prenom, aucun choisi
-  //   d'avance et rien d'obligatoire ; grille.lireGenres() les rend. Le
+  // Une carte de prenom, la meme pour tous les ecrans de depart a deux. En
+  // tete, la pastille du numero (rose pour le premier joueur, violet pour le
+  // second, comme les deux personnages) et le libelle ; dessous, le champ,
+  // et a cote du champ les deux boutons de genre quand le test les demande.
+  // La carte est un aplat teinte, sans trait ni ombre : dans le cadre a
+  // l'encre du moteur, seuls le champ et les boutons gardent un contour.
+  //   o.rang        : 0 ou 1 (numero et couleur) ; null : sans numero
+  //   o.id          : identifiant du champ
+  //   o.libelle     : « Joueur 1 » par defaut
+  //   o.placeholder : « Prenom » par defaut
+  //   o.maxLength   : 20 par defaut ; o.valeur : texte de depart
+  //   o.genre       : les deux boutons de genre, aucun choisi d'avance
+  //   o.genreChoisi : 'homme' ou 'femme' deja retenu
+  //   o.surGenre    : recoit 'homme' ou 'femme' au clic
+  //   o.classe      : une classe de plus sur la carte
+  function cartePrenom(o) {
+    var numero = o.rang === 0 || o.rang === 1;
+    var carte = el('div', 'quiz-player-card' +
+      (numero ? ' quiz-player-card--j' + (o.rang + 1) : '') +
+      (o.genre ? ' quiz-player-card--genre' : '') +
+      (o.classe ? ' ' + o.classe : ''));
+    var tete = el('div', 'quiz-player-tete');
+    if (numero) {
+      var pastille = el('span', 'quiz-player-number', String(o.rang + 1));
+      pastille.setAttribute('aria-hidden', 'true');
+      tete.appendChild(pastille);
+    }
+    var libelle = el('label', 'quiz-player-libelle',
+      esc(o.libelle || tg('playerSetup.player' + ((o.rang || 0) + 1), 'Joueur ' + ((o.rang || 0) + 1))));
+    libelle.setAttribute('for', o.id);
+    tete.appendChild(libelle);
+    carte.appendChild(tete);
+
+    var ligne = el('div', 'quiz-player-ligne');
+    var champ = el('input', 'input quiz-player-champ');
+    champ.type = 'text';
+    champ.id = o.id;
+    champ.maxLength = o.maxLength || 20;
+    champ.autocomplete = o.autocomplete || 'off';
+    champ.placeholder = o.placeholder || tg('playerSetup.firstName', 'Prénom');
+    if (o.valeur) champ.value = o.valeur;
+    ligne.appendChild(champ);
+
+    if (o.genre) {
+      var groupe = el('div', 'quiz-player-genre');
+      groupe.setAttribute('role', 'group');
+      groupe.setAttribute('aria-label', tg('playerSetup.gender', 'Genre'));
+      var boutons = {};
+      var choisir = function (genre) {
+        ['homme', 'femme'].forEach(function (k) {
+          var oui = k === genre;
+          boutons[k].className = 'gender-btn' + (oui ? ' gender-btn-selected gender-btn-' + (k === 'homme' ? 'male' : 'female') : '');
+          boutons[k].setAttribute('aria-pressed', oui ? 'true' : 'false');
+        });
+      };
+      [['homme', '👨', 'playerSetup.male', 'Homme'], ['femme', '👩', 'playerSetup.female', 'Femme']].forEach(function (g) {
+        var b = el('button', 'gender-btn', g[1]);
+        var nom = tg(g[2], g[3]);
+        b.type = 'button';
+        b.setAttribute('aria-label', nom);
+        b.title = nom;
+        b.addEventListener('click', function () {
+          choisir(g[0]);
+          if (o.surGenre) o.surGenre(g[0]);
+        });
+        boutons[g[0]] = b;
+        groupe.appendChild(b);
+      });
+      choisir(o.genreChoisi || null);
+      ligne.appendChild(groupe);
+    }
+    carte.appendChild(ligne);
+    return { el: carte, champ: champ };
+  }
+
+  // Les deux cartes de prenoms des tests a deux.
+  //   options.genre : deux boutons de genre a cote de chaque prenom, aucun
+  //   choisi d'avance et rien d'obligatoire ; grille.lireGenres() les rend. Le
   //   plateau s'en sert pour choisir la figurine de chacun.
   function cartesDeuxJoueurs(idPrefixe, options) {
     var o = options || {};
     var genres = [null, null];
-    var grille = el('div', 'quiz-setup-grid max-w-lg mx-auto');
+    var grille = el('div', 'quiz-setup-grid');
     [0, 1].forEach(function(i) {
-      var carte = el('div', 'quiz-player-card');
-      var numero = el('div', 'quiz-player-number', String(i + 1));
-      carte.appendChild(numero);
-      var libelle = el('label', 'block text-sm font-semibold mb-2 text-center',
-        esc(tg('playerSetup.player' + (i + 1), 'Joueur ' + (i + 1))));
-      libelle.setAttribute('for', idPrefixe + (i + 1));
-      var champ = el('input', 'input w-full');
-      champ.type = 'text';
-      champ.id = idPrefixe + (i + 1);
-      champ.maxLength = 20;
-      champ.autocomplete = 'off';
-      champ.placeholder = tg('playerSetup.firstName', 'Prénom');
-      carte.appendChild(libelle);
-      carte.appendChild(champ);
-      if (o.genre) {
-        carte.appendChild(el('label', 'block text-sm font-semibold mt-4 mb-2 text-center', esc(tg('playerSetup.gender', 'Genre'))));
-        var gWrap = el('div', 'flex gap-3 justify-center');
-        var h = el('button', 'gender-btn', '👨');
-        var f = el('button', 'gender-btn', '👩');
-        h.type = 'button'; f.type = 'button';
-        h.setAttribute('aria-label', tg('playerSetup.male', 'Homme')); h.title = tg('playerSetup.male', 'Homme');
-        f.setAttribute('aria-label', tg('playerSetup.female', 'Femme')); f.title = tg('playerSetup.female', 'Femme');
-        h.addEventListener('click', function () { genres[i] = 'homme'; h.className = 'gender-btn gender-btn-selected gender-btn-male'; f.className = 'gender-btn'; });
-        f.addEventListener('click', function () { genres[i] = 'femme'; f.className = 'gender-btn gender-btn-selected gender-btn-female'; h.className = 'gender-btn'; });
-        gWrap.appendChild(h); gWrap.appendChild(f);
-        carte.appendChild(gWrap);
-      }
-      grille.appendChild(carte);
+      grille.appendChild(cartePrenom({
+        rang: i, id: idPrefixe + (i + 1), genre: !!o.genre,
+        surGenre: function (g) { genres[i] = g; }
+      }).el);
     });
     grille.lireGenres = function () { return genres.slice(); };
     return grille;
@@ -418,32 +481,19 @@ var QuizEngine = (function() {
   // s'en sert. Servie a l'ecran des prenoms et au formulaire de celui qui
   // rejoint, pour que les deux se ressemblent.
   function carteMoi(needsGender, valeurs) {
-    var carte = el('div', 'quiz-player-card salon-moi');
-    var label = el('label', 'block text-sm font-semibold mb-2 text-center', esc(tg('salon.votrePrenom', 'Votre prénom')));
-    label.setAttribute('for', 'salon-prenom');
-    var champ = el('input', 'input w-full');
-    champ.type = 'text'; champ.id = 'salon-prenom'; champ.maxLength = 20; champ.autocomplete = 'given-name';
-    champ.placeholder = tg('playerSetup.firstName', 'Prénom');
-    if (valeurs && valeurs.nom) champ.value = valeurs.nom;
-    carte.appendChild(label); carte.appendChild(champ);
     var genre = (valeurs && valeurs.genre) || null;
-    if (needsGender) {
-      carte.appendChild(el('label', 'block text-sm font-semibold mt-4 mb-2 text-center', esc(tg('playerSetup.gender', 'Genre'))));
-      var gWrap = el('div', 'flex gap-3 justify-center');
-      var h = el('button', 'gender-btn' + (genre === 'homme' ? ' gender-btn-selected gender-btn-male' : ''), '👨');
-      var f = el('button', 'gender-btn' + (genre === 'femme' ? ' gender-btn-selected gender-btn-female' : ''), '👩');
-      h.type = 'button'; f.type = 'button';
-      h.setAttribute('aria-label', tg('playerSetup.male', 'Homme'));
-      f.setAttribute('aria-label', tg('playerSetup.female', 'Femme'));
-      h.addEventListener('click', function () { genre = 'homme'; h.className = 'gender-btn gender-btn-selected gender-btn-male'; f.className = 'gender-btn'; });
-      f.addEventListener('click', function () { genre = 'femme'; f.className = 'gender-btn gender-btn-selected gender-btn-female'; h.className = 'gender-btn'; });
-      gWrap.appendChild(h); gWrap.appendChild(f);
-      carte.appendChild(gWrap);
-    }
+    var c = cartePrenom({
+      rang: null, id: 'salon-prenom', classe: 'salon-moi',
+      libelle: tg('salon.votrePrenom', 'Votre prénom'),
+      autocomplete: 'given-name',
+      valeur: valeurs && valeurs.nom,
+      genre: !!needsGender, genreChoisi: genre,
+      surGenre: function (g) { genre = g; }
+    });
     return {
-      el: carte,
-      champ: champ,
-      lire: function () { return { nom: champ.value.trim(), genre: genre }; }
+      el: c.el,
+      champ: c.champ,
+      lire: function () { return { nom: c.champ.value.trim(), genre: genre }; }
     };
   }
 
@@ -452,7 +502,8 @@ var QuizEngine = (function() {
   // bouton de depart restent tels quels. Allume, il les remplace par une
   // seule carte (moi) et deux sorties : creer la partie, ou rejoindre avec
   // un code. Le module reseau n'est charge qu'au clic sur l'une des deux.
-  //   o.formulaire, o.bouton, o.meta : ce qu'il masque quand il est allume
+  //   o.formulaire, o.bouton        : ce qu'il masque quand il est allume
+  //   o.meta                        : la pastille, qui reste affichee
   //   o.needsGender                 : demander le genre
   //   o.creer(moi, Salon)           : { nom, genre } saisis
   //   o.rejoindre(moi, code, Salon)
@@ -485,7 +536,7 @@ var QuizEngine = (function() {
     var detail = el('div', 'salon-detail');
     detail.hidden = true;
     var carte = carteMoi(!!o.needsGender);
-    var grille = el('div', 'quiz-setup-grid quiz-setup-grid--seul max-w-lg mx-auto');
+    var grille = el('div', 'quiz-setup-grid quiz-setup-grid--seul');
     grille.appendChild(carte.el);
     detail.appendChild(grille);
 
@@ -552,7 +603,9 @@ var QuizEngine = (function() {
         if (Array.isArray(x)) x.forEach(function (n) { if (n) n.hidden = on; });
         else x.hidden = on;
       };
-      cache(o.formulaire); cache(o.bouton); cache(o.meta);
+      // La pastille reste : elle est sous la description, et le nombre de
+      // questions est le meme a distance.
+      cache(o.formulaire); cache(o.bouton);
       detail.hidden = !on;
       if (on) setTimeout(function () { try { carte.champ.focus({ preventScroll: true }); } catch (e) {} }, 60);
     });
@@ -3731,60 +3784,19 @@ var QuizEngine = (function() {
     // Icon in gradient circle
     wrap.appendChild(badgeDepart(ICONS.users, null, 'mb-6'));
 
-    var title = el('h2', 'text-2xl font-bold mb-3 text-center', this.setupTitle || tg('playerSetup.readyToPlay', 'Prêts à jouer ensemble ?'));
-    var desc = el('p', 'text-muted-foreground mb-8 text-center', this.setupDesc || tg('playerSetup.enterNames', 'Entrez vos prénoms et commencez le quiz à deux !'));
+    var title = titreSurligne(this.setupTitle || tg('playerSetup.readyToPlay', 'Prêts à jouer ensemble ?'));
+    var desc = el('p', 'text-muted-foreground mb-6 text-center', esc(this.setupDesc || tg('playerSetup.enterNames', 'Entrez vos prénoms et commencez le quiz à deux !')));
 
-    var form = el('div', 'quiz-setup-grid max-w-lg mx-auto');
-
+    var form = el('div', 'quiz-setup-grid');
     var genders = ['', ''];
+    [0, 1].forEach(function(idx) {
+      form.appendChild(cartePrenom({
+        rang: idx, id: 'player-input-' + idx, genre: !!self.needsGender,
+        surGenre: function (g) { genders[idx] = g; }
+      }).el);
+    });
 
-    function createPlayerCard(idx) {
-      var card = el('div', 'quiz-player-card');
-      var numCircle = el('div', 'quiz-player-number');
-      numCircle.textContent = (idx + 1);
-      card.appendChild(numCircle);
-      var label = el('label', 'block text-sm font-semibold mb-2 text-center', tg('playerSetup.player' + (idx + 1), 'Joueur ' + (idx + 1)));
-      var input = el('input', 'input w-full');
-      input.type = 'text';
-      input.placeholder = tg('playerSetup.firstName', 'Prénom');
-      input.maxLength = 20;
-      input.id = 'player-input-' + idx;
-      card.appendChild(label);
-      card.appendChild(input);
-
-      if (self.needsGender) {
-        var gLabel = el('label', 'block text-sm font-semibold mt-4 mb-2 text-center', tg('playerSetup.gender', 'Genre'));
-        card.appendChild(gLabel);
-        var gWrap = el('div', 'flex gap-3 justify-center');
-        var maleLabel = tg('playerSetup.male', 'Homme');
-        var femaleLabel = tg('playerSetup.female', 'Femme');
-        // L'emoji seul : le libelle reste pour les lecteurs d'ecran et l'infobulle.
-        var maleBtn = el('button', 'gender-btn', '👨');
-        maleBtn.setAttribute('aria-label', maleLabel); maleBtn.title = maleLabel;
-        var femaleBtn = el('button', 'gender-btn', '👩');
-        femaleBtn.setAttribute('aria-label', femaleLabel); femaleBtn.title = femaleLabel;
-        maleBtn.addEventListener('click', function() {
-          genders[idx] = 'homme';
-          maleBtn.className = 'gender-btn gender-btn-selected gender-btn-male';
-          femaleBtn.className = 'gender-btn';
-        });
-        femaleBtn.addEventListener('click', function() {
-          genders[idx] = 'femme';
-          femaleBtn.className = 'gender-btn gender-btn-selected gender-btn-female';
-          maleBtn.className = 'gender-btn';
-        });
-        gWrap.appendChild(maleBtn);
-        gWrap.appendChild(femaleBtn);
-        card.appendChild(gWrap);
-      }
-      return card;
-    }
-
-    form.appendChild(createPlayerCard(0));
-    form.appendChild(createPlayerCard(1));
-
-    var info = el('div', 'quiz-setup-meta', '📝 ' + this.questions.length + ' ' +
-      tg('meta.questionsWord', 'questions') + ' &bull; ⏱ ' + tg('meta.duration', '5 min'));
+    var info = el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length));
 
     var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startQuiz', 'Commencer le quiz'));
     startBtn.addEventListener('click', function() {
@@ -3804,10 +3816,11 @@ var QuizEngine = (function() {
 
     wrap.appendChild(title);
     wrap.appendChild(desc);
+    wrap.appendChild(info);
     wrap.appendChild(form);
     if (this.distance) wrap.appendChild(zoneDistancePour(this, { formulaire: form, bouton: startBtn, meta: info, needsGender: this.needsGender }));
-    wrap.appendChild(info);
     wrap.appendChild(startBtn);
+    brancherEntree(wrap, startBtn);
     this.container.appendChild(wrap);
   };
 
@@ -4208,25 +4221,17 @@ var QuizEngine = (function() {
 
     wrap.appendChild(badgeDepart(ICONS.flame, null, 'mb-4', ['amoureux', 'amoureux'], 'quiz-setup-icon-coquin'));
 
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('coquin.readyToSpice', 'Prêts à pimenter ?')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', tg('coquin.enterNamesSpicy', 'Entrez vos prénoms')));
+    wrap.appendChild(titreSurligne(tg('coquin.readyToSpice', 'Prêts à pimenter ?')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(tg('coquin.enterNamesSpicy', 'Entrez vos prénoms'))));
 
-    var form = el('div', 'space-y-4 max-w-md mx-auto');
-    for (var i = 0; i < 2; i++) {
-      (function(idx) {
-        var card = el('div', 'glass-card rounded-xl p-4');
-        var labelWrap = el('div', 'flex items-center gap-2 mb-2');
-        labelWrap.appendChild(el('span', 'text-sm font-medium', idx === 0 ? tg('coquin.firstName1', 'Premier prénom') : tg('coquin.firstName2', 'Deuxième prénom')));
-        card.appendChild(labelWrap);
-        var input = el('input', 'input w-full');
-        input.type = 'text';
-        input.placeholder = idx === 0 ? tg('coquin.yourFirstName', 'Votre prénom...') : tg('coquin.theirFirstName', 'Son prénom...');
-        input.maxLength = 20;
-        input.id = 'coquin-player-' + idx;
-        card.appendChild(input);
-        form.appendChild(card);
-      })(i);
-    }
+    var form = el('div', 'quiz-setup-grid');
+    [0, 1].forEach(function(idx) {
+      form.appendChild(cartePrenom({
+        rang: idx, id: 'coquin-player-' + idx,
+        libelle: idx === 0 ? tg('coquin.firstName1', 'Premier prénom') : tg('coquin.firstName2', 'Deuxième prénom'),
+        placeholder: idx === 0 ? tg('coquin.yourFirstName', 'Votre prénom...') : tg('coquin.theirFirstName', 'Son prénom...')
+      }).el);
+    });
 
     // La pastille annonçait les trente questions du réservoir alors qu'on en
     // joue quinze par défaut. Elle suit maintenant le choix.
@@ -4261,7 +4266,6 @@ var QuizEngine = (function() {
       boutonsWrap.appendChild(b);
     });
     choixWrap.appendChild(boutonsWrap);
-    form.appendChild(choixWrap);
 
     var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', '🔥 ' + tg('coquin.lightTheFlame', 'Allumer la flamme'));
     startBtn.addEventListener('click', function() {
@@ -4272,8 +4276,10 @@ var QuizEngine = (function() {
       self.phase = 'guessing'; self.render();
     });
     wrap.appendChild(metaEl);
-    form.appendChild(startBtn);
     wrap.appendChild(form);
+    wrap.appendChild(choixWrap);
+    wrap.appendChild(startBtn);
+    brancherEntree(wrap, startBtn);
     this.container.appendChild(wrap);
   };
 
@@ -4554,28 +4560,15 @@ var QuizEngine = (function() {
 
     wrap.appendChild(badgeDepart(ICONS.users, null, 'mb-4'));
 
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.whoKnowsBest', 'Qui connait l\'autre par cœur ?')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', tg('playerSetup.discoverWhoKnows', 'Découvrez qui connait mieux l\'autre !')));
+    wrap.appendChild(titreSurligne(tg('playerSetup.whoKnowsBest', 'Qui connait l\'autre par cœur ?')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(tg('playerSetup.discoverWhoKnows', 'Découvrez qui connait mieux l\'autre !'))));
 
-    var form = el('div', 'space-y-4 max-w-md mx-auto');
-    for (var i = 0; i < 2; i++) {
-      (function(idx) {
-        var card = el('div', 'glass-card rounded-xl p-4');
-        var labelWrap = el('div', 'flex items-center gap-2 mb-2');
-        var heartSpan = el('span', idx === 0 ? 'text-pink-500' : 'text-blue-500');
-        heartSpan.innerHTML = ICONS.heart;
-        labelWrap.appendChild(heartSpan);
-        labelWrap.appendChild(el('span', 'text-sm font-medium', tg('playerSetup.player' + (idx + 1), 'Joueur ' + (idx + 1))));
-        card.appendChild(labelWrap);
-        var input = el('input', 'input w-full');
-        input.type = 'text'; input.placeholder = tg('playerSetup.firstName', 'Prénom'); input.maxLength = 20;
-        input.id = 'knowledge-player-' + idx;
-        card.appendChild(input);
-        form.appendChild(card);
-      })(i);
-    }
+    var form = el('div', 'quiz-setup-grid');
+    [0, 1].forEach(function(idx) {
+      form.appendChild(cartePrenom({ rang: idx, id: 'knowledge-player-' + idx }).el);
+    });
 
-    var info = el('p', 'text-xs text-muted-foreground text-center mt-3', tg('playerSetup.questionsCount', '20 questions • Répondez chacun votre tour • Résultats individuels'));
+    var info = el('p', 'quiz-setup-aide', esc(tg('playerSetup.questionsCount', '20 questions • Répondez chacun votre tour • Résultats individuels')));
 
     var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startQuiz', 'Commencer le quiz'));
     startBtn.addEventListener('click', function() {
@@ -4585,10 +4578,11 @@ var QuizEngine = (function() {
       self.currentQ = 0; self.scores = [0, 0];
       self.phase = 'question'; self.render();
     });
-    form.appendChild(info);
     wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
-    form.appendChild(startBtn);
+    wrap.appendChild(info);
     wrap.appendChild(form);
+    wrap.appendChild(startBtn);
+    brancherEntree(wrap, startBtn);
     this.container.appendChild(wrap);
   };
 
@@ -4992,30 +4986,37 @@ var QuizEngine = (function() {
 
     wrap.appendChild(badgeDepart(ICONS.users, null, 'mb-4'));
 
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.whoParticipates', 'Qui participe au quiz ?')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', tg('playerSetup.addPlayers', 'Ajoutez entre 2 et 8 joueurs')));
+    wrap.appendChild(titreSurligne(tg('playerSetup.whoParticipates', 'Qui participe au quiz ?')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(tg('playerSetup.addPlayers', 'Ajoutez entre 2 et 8 joueurs'))));
+    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
 
-    var playersContainer = el('div', 'space-y-3 max-w-md mx-auto');
+    // Une ligne par joueur, dans le meme aplat que les cartes de prenoms des
+    // tests a deux : la lettre, le champ, et la corbeille au-dela de deux.
+    var playersContainer = el('div', 'most-joueurs');
     playersContainer.id = 'most-players-list';
 
     function renderPlayersList() {
       playersContainer.innerHTML = '';
       self.players.forEach(function(p, idx) {
-        var card = el('div', 'glass-card rounded-xl p-3 flex items-center gap-3');
-        var letter = el('div', 'quiz-player-letter');
-        letter.textContent = String.fromCharCode(65 + idx);
+        var card = el('div', 'most-joueur');
+        var lettre = String.fromCharCode(65 + idx);
+        var letter = el('span', 'quiz-player-letter', lettre);
+        letter.setAttribute('aria-hidden', 'true');
         card.appendChild(letter);
-        var input = el('input', 'input flex-1');
+        var input = el('input', 'input quiz-player-champ');
         input.type = 'text';
         input.placeholder = tg('playerSetup.playerName', 'Prénom du joueur');
+        input.setAttribute('aria-label', tg('playerSetup.playerName', 'Prénom du joueur') + ' ' + lettre);
         input.maxLength = 20;
         input.value = p.name;
         input.addEventListener('input', function() { self.players[idx].name = this.value; });
         card.appendChild(input);
         if (self.players.length > 2) {
-          var removeBtn = el('button', 'btn-icon text-red-400 hover:text-red-500');
+          var removeBtn = el('button', 'btn-icon most-joueur-retirer');
+          removeBtn.type = 'button';
           removeBtn.innerHTML = ICONS.trash;
           removeBtn.title = tg('playerSetup.removePlayer', 'Supprimer');
+          removeBtn.setAttribute('aria-label', tg('playerSetup.removePlayer', 'Supprimer') + ' ' + lettre);
           removeBtn.addEventListener('click', function() {
             self.players.splice(idx, 1);
             renderPlayersList();
@@ -5028,6 +5029,7 @@ var QuizEngine = (function() {
       // Add player button
       if (self.players.length < 8) {
         var addBtn = el('button', 'quiz-add-player-btn');
+        addBtn.type = 'button';
         addBtn.innerHTML = ICONS.plus + ' <span>' + tg('playerSetup.addPlayer', 'Ajouter un joueur') + '</span> <span class="text-muted-foreground text-xs">(' + self.players.length + '/8)</span>';
         addBtn.addEventListener('click', function() {
           self.players.push({ name: '', letter: String.fromCharCode(65 + self.players.length) });
@@ -5066,7 +5068,6 @@ var QuizEngine = (function() {
     });
 
     wrap.appendChild(playersContainer);
-    wrap.appendChild(el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length)));
     wrap.appendChild(startBtn);
     this.container.appendChild(wrap);
   };
@@ -5572,51 +5573,19 @@ var QuizEngine = (function() {
 
     wrap.appendChild(badgeDepart(ICONS.users, null, 'mb-6'));
 
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-3 text-center', tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-8 text-center', tg('playerSetup.enterNames', 'Entrez vos prénoms et commencez le test à deux !')));
+    wrap.appendChild(titreSurligne(tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center', esc(tg('playerSetup.enterNames', 'Entrez vos prénoms et commencez le test à deux !'))));
+    var meta = el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length));
+    wrap.appendChild(meta);
 
-    var form = el('div', 'quiz-setup-grid max-w-lg mx-auto');
+    var form = el('div', 'quiz-setup-grid');
     var genders = ['', ''];
-
-    for (var i = 0; i < 2; i++) {
-      (function(idx) {
-        var card = el('div', 'quiz-player-card');
-        var numCircle = el('div', 'quiz-player-number');
-        numCircle.textContent = (idx + 1);
-        card.appendChild(numCircle);
-        var label = el('label', 'block text-sm font-semibold mb-2 text-center', tg('playerSetup.player' + (idx + 1), 'Joueur ' + (idx + 1)));
-        var input = el('input', 'input w-full');
-        input.type = 'text'; input.placeholder = tg('playerSetup.firstName', 'Prénom'); input.maxLength = 20;
-        input.id = 'healthy-player-' + idx;
-        card.appendChild(label);
-        card.appendChild(input);
-
-        var gLabel = el('label', 'block text-sm font-semibold mt-4 mb-2 text-center', tg('playerSetup.gender', 'Genre'));
-        card.appendChild(gLabel);
-        var gWrap = el('div', 'flex gap-3 justify-center');
-        var maleLabel = tg('playerSetup.male', 'Homme');
-        var femaleLabel = tg('playerSetup.female', 'Femme');
-        // L'emoji seul : le libelle reste pour les lecteurs d'ecran et l'infobulle.
-        var maleBtn = el('button', 'gender-btn', '👨');
-        maleBtn.setAttribute('aria-label', maleLabel); maleBtn.title = maleLabel;
-        var femaleBtn = el('button', 'gender-btn', '👩');
-        femaleBtn.setAttribute('aria-label', femaleLabel); femaleBtn.title = femaleLabel;
-        maleBtn.addEventListener('click', function() {
-          genders[idx] = 'homme';
-          maleBtn.className = 'gender-btn gender-btn-selected gender-btn-male';
-          femaleBtn.className = 'gender-btn';
-        });
-        femaleBtn.addEventListener('click', function() {
-          genders[idx] = 'femme';
-          femaleBtn.className = 'gender-btn gender-btn-selected gender-btn-female';
-          maleBtn.className = 'gender-btn';
-        });
-        gWrap.appendChild(maleBtn);
-        gWrap.appendChild(femaleBtn);
-        card.appendChild(gWrap);
-        form.appendChild(card);
-      })(i);
-    }
+    [0, 1].forEach(function(idx) {
+      form.appendChild(cartePrenom({
+        rang: idx, id: 'healthy-player-' + idx, genre: true,
+        surGenre: function (g) { genders[idx] = g; }
+      }).el);
+    });
 
     var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startTest', 'Commencer le test'));
     startBtn.addEventListener('click', function() {
@@ -5631,10 +5600,9 @@ var QuizEngine = (function() {
     });
 
     wrap.appendChild(form);
-    var meta = el('div', 'quiz-setup-meta', pastilleMeta(this.questions.length));
     if (this.distance) wrap.appendChild(zoneDistancePour(this, { formulaire: form, bouton: startBtn, meta: meta, needsGender: true }));
-    wrap.appendChild(meta);
     wrap.appendChild(startBtn);
+    brancherEntree(wrap, startBtn);
 
     var retour = el('button', 'quiz-modes-retour', '← ' + tg('sainMode.retour', 'Changer de mode'));
     retour.type = 'button';
@@ -5901,31 +5869,21 @@ var QuizEngine = (function() {
 
     wrap.appendChild(badgeDepart('<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>', null, 'mb-4'));
 
-    wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 text-center', tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
-    wrap.appendChild(el('p', 'text-muted-foreground mb-2 text-center', tg('parentalite.setupDesc', 'Répondez chacun de votre côté aux mêmes 20 questions.')));
+    wrap.appendChild(titreSurligne(tg('playerSetup.readyForTest', 'Prêts pour le test ?')));
+    // La description disait « 20 questions » pour les trois formats (douze,
+    // vingt-quatre, vingt) : elle prend maintenant le nombre de la partie.
+    wrap.appendChild(el('p', 'text-muted-foreground mb-6 text-center',
+      esc(tg('parentalite.setupDesc', 'Répondez chacun de votre côté aux mêmes {{n}} questions.').replace('{{n}}', this.limiteInitiale))));
     var minutes = Math.max(3, Math.round(this.limiteInitiale * 25 / 60));
     var meta = el('div', 'quiz-setup-meta',
       '📝 ' + this.limiteInitiale + ' ' + esc(tg('meta.questionsWord', 'questions')) + ' &bull; ⏱ ' +
       minutes + ' min');
     wrap.appendChild(meta);
 
-    var form = el('div', 'quiz-setup-grid max-w-lg mx-auto');
-
-    for (var i = 0; i < 2; i++) {
-      (function(idx) {
-        var card = el('div', 'glass-card rounded-xl p-5');
-        var numCircle = el('div', 'quiz-player-number');
-        numCircle.textContent = (idx + 1);
-        card.appendChild(numCircle);
-        var label = el('label', 'block text-sm font-medium mb-2', tg('playerSetup.player' + (idx + 1), 'Joueur ' + (idx + 1)));
-        var input = el('input', 'input w-full');
-        input.type = 'text'; input.placeholder = tg('playerSetup.firstName', 'Prénom'); input.maxLength = 20;
-        input.id = 'parentalite-player-' + idx;
-        card.appendChild(label);
-        card.appendChild(input);
-        form.appendChild(card);
-      })(i);
-    }
+    var form = el('div', 'quiz-setup-grid');
+    [0, 1].forEach(function(idx) {
+      form.appendChild(cartePrenom({ rang: idx, id: 'parentalite-player-' + idx }).el);
+    });
 
     var startBtn = el('button', 'btn btn-cta btn-gradient quiz-setup-start-btn', tg('playerSetup.startTest', 'Commencer le test'));
     startBtn.addEventListener('click', function() {
@@ -5939,6 +5897,7 @@ var QuizEngine = (function() {
     wrap.appendChild(form);
     if (this.distance) wrap.appendChild(zoneDistancePour(this, { formulaire: form, bouton: startBtn, meta: meta }));
     wrap.appendChild(startBtn);
+    brancherEntree(wrap, startBtn);
     this.container.appendChild(wrap);
   };
 
@@ -7705,25 +7664,28 @@ var QuizEngine = (function() {
   PiliersQuiz.prototype.renderSetup = function() {
     var self = this;
     var corps = [], champs = [];
-    var etiquettes = this.duo
-      ? [tg('playerSetup.player1', 'Joueur 1'), tg('playerSetup.player2', 'Joueur 2')]
-      : [tg('ui.yourName', 'Prénom de votre partenaire')];
-
-    for (var i = 0; i < etiquettes.length; i++) {
-      (function(idx) {
-        var bloc = el('div', 'quiz-setup-nom');
-        var lab = el('label', 'quiz-setup-nom-label', etiquettes[idx]);
-        var champ = el('input', 'input');
-        champ.type = 'text';
-        champ.placeholder = tg('playerSetup.firstName', 'Prénom');
-        champ.maxLength = 30;
-        champ.id = 'piliers-nom-' + idx;
-        lab.setAttribute('for', champ.id);
-        bloc.appendChild(lab);
-        bloc.appendChild(champ);
-        corps.push(bloc);
-        champs.push(champ);
-      })(i);
+    if (this.duo) {
+      // A deux : les deux cartes de prenoms communes aux tests a deux.
+      var grille = el('div', 'quiz-setup-grid');
+      [0, 1].forEach(function (idx) {
+        var c = cartePrenom({ rang: idx, id: 'piliers-nom-' + idx, maxLength: 30 });
+        grille.appendChild(c.el);
+        champs.push(c.champ);
+      });
+      corps.push(grille);
+    } else {
+      var bloc = el('div', 'quiz-setup-nom');
+      var lab = el('label', 'quiz-setup-nom-label', esc(tg('ui.yourName', 'Prénom de votre partenaire')));
+      var champ = el('input', 'input');
+      champ.type = 'text';
+      champ.placeholder = tg('playerSetup.firstName', 'Prénom');
+      champ.maxLength = 30;
+      champ.id = 'piliers-nom-0';
+      lab.setAttribute('for', champ.id);
+      bloc.appendChild(lab);
+      bloc.appendChild(champ);
+      corps.push(bloc);
+      champs.push(champ);
     }
 
     var ecran = ecranDepart({
@@ -7746,7 +7708,7 @@ var QuizEngine = (function() {
       }
     });
     if (this.distance) {
-      ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: corps, bouton: ecran.bouton, meta: ecran.meta }), ecran.meta || ecran.bouton);
+      ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: corps, bouton: ecran.bouton, meta: ecran.meta }), ecran.bouton);
     }
     this.container.appendChild(ecran.wrap);
   };
@@ -8061,25 +8023,28 @@ var QuizEngine = (function() {
   ChargeMentaleQuiz.prototype.renderSetup = function() {
     var self = this;
     var corps = [], champs = [];
-    var etiquettes = this.duo
-      ? [tg('playerSetup.player1', 'Joueur 1'), tg('playerSetup.player2', 'Joueur 2')]
-      : [this.txt('nomPartenaire', 'Prénom de votre partenaire')];
-
-    for (var i = 0; i < etiquettes.length; i++) {
-      (function(idx) {
-        var bloc = el('div', 'quiz-setup-nom');
-        var champ = el('input', 'input');
-        champ.type = 'text';
-        champ.placeholder = tg('playerSetup.firstName', 'Prénom');
-        champ.maxLength = 30;
-        champ.id = 'cm-nom-' + idx;
-        var lab = el('label', 'quiz-setup-nom-label', etiquettes[idx]);
-        lab.setAttribute('for', champ.id);
-        bloc.appendChild(lab);
-        bloc.appendChild(champ);
-        corps.push(bloc);
-        champs.push(champ);
-      })(i);
+    if (this.duo) {
+      // A deux : les deux cartes de prenoms communes aux tests a deux.
+      var grille = el('div', 'quiz-setup-grid');
+      [0, 1].forEach(function (idx) {
+        var c = cartePrenom({ rang: idx, id: 'cm-nom-' + idx, maxLength: 30 });
+        grille.appendChild(c.el);
+        champs.push(c.champ);
+      });
+      corps.push(grille);
+    } else {
+      var bloc = el('div', 'quiz-setup-nom');
+      var champ = el('input', 'input');
+      champ.type = 'text';
+      champ.placeholder = tg('playerSetup.firstName', 'Prénom');
+      champ.maxLength = 30;
+      champ.id = 'cm-nom-0';
+      var lab = el('label', 'quiz-setup-nom-label', esc(this.txt('nomPartenaire', 'Prénom de votre partenaire')));
+      lab.setAttribute('for', champ.id);
+      bloc.appendChild(lab);
+      bloc.appendChild(champ);
+      corps.push(bloc);
+      champs.push(champ);
     }
 
     var ecran = ecranDepart({
@@ -8104,7 +8069,7 @@ var QuizEngine = (function() {
       }
     });
     if (this.distance) {
-      ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: corps, bouton: ecran.bouton, meta: ecran.meta }), ecran.meta || ecran.bouton);
+      ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: corps, bouton: ecran.bouton, meta: ecran.meta }), ecran.bouton);
     }
     this.container.appendChild(ecran.wrap);
   };
@@ -10164,7 +10129,7 @@ var QuizEngine = (function() {
         self.render();
       }
     });
-    if (this.distance) ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: grille, bouton: ecran.bouton, meta: ecran.meta }), ecran.meta || ecran.bouton);
+    if (this.distance) ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: grille, bouton: ecran.bouton, meta: ecran.meta }), ecran.bouton);
     this.container.appendChild(ecran.wrap);
   };
 
@@ -13258,7 +13223,7 @@ var QuizEngine = (function() {
       poses: ['amoureux', 'amoureux'],
       titre: this.etg('setupTitre', 'Êtes-vous compatibles ?'),
       desc: this.etg('setupDesc', ''),
-      corps: [grille, avert],
+      corps: [avert, grille],
       meta: pastilleMeta(this.questions.length, null, this.etg('duree', '10 min')),
       bouton: this.etg('commencer', 'Commencer le test'),
       onStart: function() {

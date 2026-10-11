@@ -314,7 +314,7 @@
     "enregistree": "Bild gespeichert! Öffne Instagram, TikTok, Snapchat oder Facebook und füge es deiner Story hinzu."
   },
   "parentalite": {
-    "setupDesc": "Beantwortet beide getrennt die gleichen 20 Fragen.",
+    "setupDesc": "Beantwortet beide getrennt die gleichen {{n}} Fragen.",
     "scoreOn60": "Punktzahl von 60 pro Person",
     "combinedScore": "Gesamtscore des Paares",
     "gapWarning": "Es gibt einen deutlichen Unterschied zwischen euren beiden Scores. Oft liegen in diesen Unterschieden die wichtigsten Gespräche, die noch geführt werden müssen."

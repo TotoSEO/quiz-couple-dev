@@ -314,7 +314,7 @@
     "enregistree": "Image saved! Open Instagram, TikTok, Snapchat or Facebook and add it to your story."
   },
   "parentalite": {
-    "setupDesc": "Both of you answer the same 20 questions separately.",
+    "setupDesc": "Both of you answer the same {{n}} questions separately.",
     "scoreOn60": "Score out of 60 per person",
     "combinedScore": "Combined couple score",
     "gapWarning": "There's a significant gap between your two scores. It's often in these gaps that the most important conversations lie."
