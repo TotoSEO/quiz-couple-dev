@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-11T03:12:37.475Z",
+  "genere_le": "2026-10-11T09:57:12.944Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -20,38 +20,8 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 17,
+  "reserve_jours": 19,
   "a_remplir": [
-    {
-      "jour": "2026-10-28",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-10-28",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-10-28",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-10-29",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-10-29",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-10-29",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
     {
       "jour": "2026-10-30",
       "creneau": "matin",
@@ -1346,7 +1316,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1400,7 +1370,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -1799,6 +1769,60 @@
       "statut": "a_rendre",
       "texte": "ma maison, c'est là où t'es",
       "erreur": null
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "ok j'avoue c'était moi",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-28",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "bon. je vais te faire confiance sur ce coup-là.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-29",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "reste encore un peu",
+      "erreur": null
     }
   ],
   "idees": [],
@@ -1816,7 +1840,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-11",
+      "jour": "2026-10-12",
       "creneau": "midi"
     }
   },
