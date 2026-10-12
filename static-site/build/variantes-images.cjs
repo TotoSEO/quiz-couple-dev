@@ -6,10 +6,12 @@
 // une image de tête, 1536 px et 132 Ko en moyenne pour une couverture).
 // Largeurs choisies pour les téléphones x3 : 880 couvre une carte jusqu'à un
 // écran de 430 px, 1080 une couverture jusqu'à 360 px ; 720 sert les écrans
-// x2 et le bureau.
+// x2 et le bureau. 480 (12 octobre 2026) sert les petites cartes : celles du
+// bas des pages de test s'affichent en 171 à 263 px, et sans elle un
+// ordinateur ou un téléphone x2 tirait la 720, deux à trois fois trop grande.
 //
-//   public/quiz/featured/<nom>.webp  →  720/<nom>.webp, 880/<nom>.webp
-//   public/blog/<nom>.webp           →  720/<nom>.webp, 1080/<nom>.webp
+//   public/quiz/featured/<nom>.webp  →  480/, 720/, 880/<nom>.webp
+//   public/blog/<nom>.webp           →  480/, 720/, 1080/<nom>.webp
 //
 // Qualité WebP 80, celle des variantes 720 d'origine. Une variante n'est
 // produite que si l'original est plus large qu'elle, et seulement si elle
@@ -28,8 +30,8 @@ const sharp = require('sharp');
 
 const PUBLIC_DIR = path.resolve(__dirname, '../../public');
 const FAMILLES = [
-  { dossier: path.join(PUBLIC_DIR, 'quiz', 'featured'), largeurs: [720, 880] },
-  { dossier: path.join(PUBLIC_DIR, 'blog'), largeurs: [720, 1080] },
+  { dossier: path.join(PUBLIC_DIR, 'quiz', 'featured'), largeurs: [480, 720, 880] },
+  { dossier: path.join(PUBLIC_DIR, 'blog'), largeurs: [480, 720, 1080] },
 ];
 const QUALITE = 80;
 const refaire = process.argv.includes('--refaire');

@@ -1,6 +1,7 @@
 /**
- * Quiz extras : compteur "realise X fois" (bulle sous le fil d'Ariane),
- * suivi des completions, et bloc avis par quiz (liste + formulaire).
+ * Quiz extras : bandeau du haut (parties, note, avis : ce que la
+ * construction n'a pas pu y ecrire), suivi des lancements et des
+ * completions, et bloc avis par quiz (liste + formulaire).
  * Degrade proprement si Supabase est injoignable.
  */
 (function () {
@@ -16,45 +17,84 @@
   var HJ = { apikey: KEY, 'Authorization': 'Bearer ' + KEY, 'Content-Type': 'application/json' };
 
   var UI = {
-    fr: { close: 'Fermer', rate: 'Votre avis en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot sur votre expérience (optionnel)', submit: 'Publier mon avis', thanks: 'Votre avis sera visible après validation.', merci: 'Merci infiniment de votre soutien !', insta: 'Suivez-nous sur Instagram ❤️', err: 'Une erreur est survenue, réessayez.', none: 'Soyez les premiers à donner votre avis !', based: 'avis', doneTest: 'Ce test a déjà été réalisé {n} fois', playedTest: 'Ce test a déjà été joué {n} fois', doneQuiz: 'Ce quiz a déjà été joué {n} fois', doneGame: 'Ce jeu a déjà été joué {n} fois', doneOutil: 'Cette calculatrice a déjà été utilisée {n} fois', votesTotal: '{n} votes déposés sur ces dilemmes', votesTotalPC: '{n} votes déposés sur ces propositions', votesTotalON: '{n} oui/non répondus sur ces situations', minAvis: 'Trois étoiles ou moins ? Dites-nous ce qui n\'a pas marché, en 90 caractères au minimum.', minReste: 'Encore {n} caractères.', minPlace: 'Ce qui n\'a pas marché (90 caractères minimum)', nomRegle: 'Votre prénom doit faire de 3 à 60 caractères, espaces compris.' },
-    en: { close: 'Close', rate: 'Your review in 1 click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word about your experience (optional)', submit: 'Post my review', thanks: 'Your review will show after moderation.', merci: 'Thank you so much for your support!', insta: 'Follow us on Instagram ❤️', err: 'Something went wrong, please retry.', none: 'Be the first to leave a review!', based: 'reviews', doneTest: 'This test has been taken {n} times', playedTest: 'This test has already been played {n} times', doneQuiz: 'This quiz has been played {n} times', doneGame: 'This game has been played {n} times', doneOutil: 'This calculator has already been used {n} times', votesTotal: '{n} votes cast on these dilemmas', votesTotalPC: '{n} votes cast on these statements', votesTotalON: '{n} yes/no answered on these situations', minAvis: 'Three stars or fewer? Tell us what went wrong, in at least 90 characters.', minReste: '{n} characters to go.', minPlace: 'What went wrong (90 characters minimum)', nomRegle: 'Your first name must be 3 to 60 characters long, spaces included.' },
-    es: { close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Unas palabras sobre tu experiencia (opcional)', submit: 'Publicar mi opinión', thanks: 'Tu opinión se verá tras la validación.', merci: '¡Muchísimas gracias por tu apoyo!', insta: 'Síguenos en Instagram ❤️', err: 'Ha ocurrido un error, inténtalo de nuevo.', none: '¡Sé el primero en opinar!', based: 'opiniones', doneTest: 'Este test se ha realizado {n} veces', playedTest: 'Este test ya se ha jugado {n} veces', doneQuiz: 'Este quiz se ha jugado {n} veces', doneGame: 'Este juego se ha jugado {n} veces', doneOutil: 'Esta calculadora ya se ha usado {n} veces', votesTotal: '{n} votos emitidos en estos dilemas', votesTotalPC: '{n} votos emitidos en estas propuestas', votesTotalON: '{n} sí/no respondidos en estas situaciones', minAvis: '¿Tres estrellas o menos? Cuéntanos qué no ha funcionado, con 90 caracteres como mínimo.', minReste: 'Faltan {n} caracteres.', minPlace: 'Qué no ha funcionado (90 caracteres mínimo)', nomRegle: 'Tu nombre debe tener entre 3 y 60 caracteres, espacios incluidos.' },
-    de: { close: 'Schließen', rate: 'Deine Bewertung in 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort zu deiner Erfahrung (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Deine Bewertung erscheint nach der Prüfung.', merci: 'Vielen, vielen Dank für deine Unterstützung!', insta: 'Folge uns auf Instagram ❤️', err: 'Ein Fehler ist aufgetreten, bitte erneut versuchen.', none: 'Sei der Erste mit einer Bewertung!', based: 'Bewertungen', doneTest: 'Dieser Test wurde {n} mal gemacht', playedTest: 'Dieser Test wurde schon {n} mal gespielt', doneQuiz: 'Dieses Quiz wurde {n} mal gespielt', doneGame: 'Dieses Spiel wurde {n} mal gespielt', doneOutil: 'Dieser Rechner wurde schon {n} mal benutzt', votesTotal: '{n} abgegebene Stimmen zu diesen Dilemmata', votesTotalPC: '{n} abgegebene Stimmen zu diesen Aussagen', votesTotalON: '{n} Ja/Nein-Antworten zu diesen Situationen', minAvis: 'Drei Sterne oder weniger? Schreib uns, was nicht gepasst hat, mit mindestens 90 Zeichen.', minReste: 'Noch {n} Zeichen.', minPlace: 'Was nicht gepasst hat (mindestens 90 Zeichen)', nomRegle: 'Dein Vorname muss 3 bis 60 Zeichen lang sein, Leerzeichen eingeschlossen.' },
-    it: { close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola sulla tua esperienza (facoltativo)', submit: 'Pubblica la mia recensione', thanks: 'La recensione sarà visibile dopo la moderazione.', merci: 'Grazie infinite per il tuo sostegno!', insta: 'Seguici su Instagram ❤️', err: 'Si è verificato un errore, riprova.', none: 'Sii il primo a lasciare una recensione!', based: 'recensioni', doneTest: 'Questo test è stato fatto {n} volte', playedTest: 'Questo test è già stato giocato {n} volte', doneQuiz: 'Questo quiz è stato giocato {n} volte', doneGame: 'Questo gioco è stato giocato {n} volte', doneOutil: 'Questa calcolatrice è già stata usata {n} volte', votesTotal: '{n} voti espressi su questi dilemmi', votesTotalPC: '{n} voti espressi su queste proposte', votesTotalON: '{n} sì/no dati su queste situazioni', minAvis: 'Tre stelle o meno? Dicci cosa non ha funzionato, con almeno 90 caratteri.', minReste: 'Ancora {n} caratteri.', minPlace: 'Cosa non ha funzionato (minimo 90 caratteri)', nomRegle: 'Il tuo nome deve avere da 3 a 60 caratteri, spazi inclusi.' }
+    fr: { close: 'Fermer', rate: 'Votre avis en 1 clic', more: "Plus que votre / vos prénom(s), et c'est en ligne !", name: 'Votre prénom (ou vos prénoms)', comment: 'Un mot sur votre expérience (optionnel)', submit: 'Publier mon avis', thanks: 'Votre avis sera visible après validation.', merci: 'Merci infiniment de votre soutien !', insta: 'Suivez-nous sur Instagram ❤️', err: 'Une erreur est survenue, réessayez.', none: 'Soyez les premiers à donner votre avis !', based: 'avis', minAvis: 'Trois étoiles ou moins ? Dites-nous ce qui n\'a pas marché, en 90 caractères au minimum.', minReste: 'Encore {n} caractères.', minPlace: 'Ce qui n\'a pas marché (90 caractères minimum)', nomRegle: 'Votre prénom doit faire de 3 à 60 caractères, espaces compris.' },
+    en: { close: 'Close', rate: 'Your review in 1 click', more: 'Just your first name(s), and it goes live!', name: 'Your first name(s)', comment: 'A word about your experience (optional)', submit: 'Post my review', thanks: 'Your review will show after moderation.', merci: 'Thank you so much for your support!', insta: 'Follow us on Instagram ❤️', err: 'Something went wrong, please retry.', none: 'Be the first to leave a review!', based: 'reviews', minAvis: 'Three stars or fewer? Tell us what went wrong, in at least 90 characters.', minReste: '{n} characters to go.', minPlace: 'What went wrong (90 characters minimum)', nomRegle: 'Your first name must be 3 to 60 characters long, spaces included.' },
+    es: { close: 'Cerrar', rate: 'Tu opinión en 1 clic', more: '¡Solo tu(s) nombre(s) y se publica!', name: 'Tu nombre (o nombres)', comment: 'Unas palabras sobre tu experiencia (opcional)', submit: 'Publicar mi opinión', thanks: 'Tu opinión se verá tras la validación.', merci: '¡Muchísimas gracias por tu apoyo!', insta: 'Síguenos en Instagram ❤️', err: 'Ha ocurrido un error, inténtalo de nuevo.', none: '¡Sé el primero en opinar!', based: 'opiniones', minAvis: '¿Tres estrellas o menos? Cuéntanos qué no ha funcionado, con 90 caracteres como mínimo.', minReste: 'Faltan {n} caracteres.', minPlace: 'Qué no ha funcionado (90 caracteres mínimo)', nomRegle: 'Tu nombre debe tener entre 3 y 60 caracteres, espacios incluidos.' },
+    de: { close: 'Schließen', rate: 'Deine Bewertung in 1 Klick', more: 'Nur noch dein(e) Vorname(n), dann ist sie online!', name: 'Dein Vorname (oder Vornamen)', comment: 'Ein Wort zu deiner Erfahrung (optional)', submit: 'Bewertung veröffentlichen', thanks: 'Deine Bewertung erscheint nach der Prüfung.', merci: 'Vielen, vielen Dank für deine Unterstützung!', insta: 'Folge uns auf Instagram ❤️', err: 'Ein Fehler ist aufgetreten, bitte erneut versuchen.', none: 'Sei der Erste mit einer Bewertung!', based: 'Bewertungen', minAvis: 'Drei Sterne oder weniger? Schreib uns, was nicht gepasst hat, mit mindestens 90 Zeichen.', minReste: 'Noch {n} Zeichen.', minPlace: 'Was nicht gepasst hat (mindestens 90 Zeichen)', nomRegle: 'Dein Vorname muss 3 bis 60 Zeichen lang sein, Leerzeichen eingeschlossen.' },
+    it: { close: 'Chiudi', rate: 'La tua opinione in 1 clic', more: 'Solo il tuo/i vostri nome(i) e va online!', name: 'Il tuo nome (o i vostri nomi)', comment: 'Una parola sulla tua esperienza (facoltativo)', submit: 'Pubblica la mia recensione', thanks: 'La recensione sarà visibile dopo la moderazione.', merci: 'Grazie infinite per il tuo sostegno!', insta: 'Seguici su Instagram ❤️', err: 'Si è verificato un errore, riprova.', none: 'Sii il primo a lasciare una recensione!', based: 'recensioni', minAvis: 'Tre stelle o meno? Dicci cosa non ha funzionato, con almeno 90 caratteri.', minReste: 'Ancora {n} caratteri.', minPlace: 'Cosa non ha funzionato (minimo 90 caratteri)', nomRegle: 'Il tuo nome deve avere da 3 a 60 caratteri, spazi inclusi.' }
   };
   var t = UI[lang] || UI.fr;
   function fmt(n) { try { return Number(n).toLocaleString(lang); } catch (e) { return '' + n; } }
   function esc(s) { return s ? String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;') : ''; }
   function stars(r) { var h = ''; for (var i = 1; i <= 5; i++) h += '<svg viewBox="0 0 24 24" class="pqx-star ' + (i <= r ? 'on' : '') + '"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'; return h; }
 
-  // ── Bulle « joué X fois » juste sous le fil d'Ariane ──
+  // ── Bandeau du haut : parties, note et avis ──
+  // Il remplace depuis le 12 octobre 2026 la bulle « joué X fois » que ce
+  // script posait sous le dernier paragraphe du bloc du fil d'Ariane, après
+  // deux appels à la base par page vue, en poussant le texte quand la
+  // réponse arrivait. Le bandeau est maintenant écrit dans la page à la
+  // construction, chiffres compris (preuve-sociale.ejs, generate.js) : il ne
+  // reste ici que ce que la base n'a pas donné à la construction
+  // (data-a-lire), lu comme avant.
+  //
   // Les dilemmes ne comptent pas des parties mais des votes : une partie
   // peut en valoir trois comme cent, et c'est le total des votes qui a un
   // sens sur cette page. Ils ont donc leur propre compteur.
   // Idem pour le pour ou contre : une partie peut valoir trois votes comme
   // soixante, et il faut aller jusqu'au bilan pour qu'elle soit comptée.
-  // Le compteur générique restait donc à zéro alors que les votes, eux,
-  // partaient bien en base.
   // Le oui-non n'a pas de fonction de total dédiée : on somme les deux camps
   // de toutes les situations, la même réponse que le moteur charge déjà.
   var COMPTEURS_DE_VOTES = {
-    jeuDilemmes: { rpc: 'get_dilemme_total', libelle: 'votesTotal' },
-    pourContre:  { rpc: 'get_pour_contre_total', libelle: 'votesTotalPC' },
-    jeuOuiNon:   { rpc: 'get_oui_non_counts', libelle: 'votesTotalON', somme: true }
+    jeuDilemmes: { rpc: 'get_dilemme_total' },
+    pourContre:  { rpc: 'get_pour_contre_total' },
+    jeuOuiNon:   { rpc: 'get_oui_non_counts', somme: true }
   };
+  // Le bandeau dont le nombre de parties est lu ici plutôt qu'à la
+  // construction : la fin d'une partie le relit (watch), pour qu'un test qui
+  // vient d'ouvrir affiche sa première partie sans rechargement.
+  var bandeauVivant = null;
 
-  // Le chiffre n'était lu qu'au chargement de la page. Sur un test qui vient
-  // d'ouvrir, la bulle est donc restée cachée pendant toute la partie, et
-  // finir le test ne la faisait pas apparaître : il fallait recharger pour
-  // voir « réalisé 1 fois ». La lecture est isolée ici pour être rejouée à la
-  // fin de la partie, une fois la ligne enregistrée.
-  function litCompteur(slug, genre) {
-    var bubble = document.getElementById('quiz-count-bubble');
-    if (!bubble) return;
-    function pose(texte) {
-      bubble.querySelector('.qcb-text').textContent = texte;
-      bubble.style.display = '';
-    }
+  function noteTexte(avg) {
+    var n = Math.round((parseFloat(avg) || 0) * 10) / 10;
+    return n.toFixed(1).replace('.', lang.indexOf('en') === 0 ? '.' : ',');
+  }
+  function majSeparateur(bandeau) {
+    var sep = bandeau.querySelector('.preuve-sep');
+    var a = bandeau.querySelector('.preuve-parties');
+    var b = bandeau.querySelector('.preuve-note');
+    if (sep) sep.hidden = !(a && !a.hidden && b && !b.hidden);
+  }
+  function poseParties(bandeau, n) {
+    var bloc = bandeau.querySelector('.preuve-parties');
+    if (!bloc || !(n > 0)) return;
+    bloc.querySelector('.preuve-chiffre').textContent = fmt(n);
+    bloc.querySelector('.preuve-legende').textContent = n === 1 ? (bandeau.dataset.sing || '') : (bandeau.dataset.plur || '');
+    bloc.hidden = false;
+    bandeau.hidden = false;
+    majSeparateur(bandeau);
+  }
+  // La note et le nombre d'avis, quand la construction n'a pas pu lire les
+  // avis (le bloc du bas les redemande alors à la base, comme avant).
+  function poseNote(s) {
+    var bandeau = document.getElementById('preuve');
+    var lien = bandeau && bandeau.querySelector('.preuve-note[data-a-lire]');
+    if (!lien || !s || !(s.total > 0)) return;
+    var note = noteTexte(s.avg);
+    var mot = s.total === 1 ? lien.dataset.avisSing : lien.dataset.avisPlur;
+    lien.querySelector('.preuve-note-valeur').textContent = note;
+    lien.querySelector('.preuve-legende').textContent = fmt(s.total) + '\u00a0' + mot;
+    lien.setAttribute('aria-label', (lien.dataset.note || '{n}/5').replace('{n}', note) + ', ' + fmt(s.total) + ' ' + mot);
+    lien.removeAttribute('data-a-lire');
+    lien.hidden = false;
+    bandeau.hidden = false;
+    majSeparateur(bandeau);
+  }
+
+  // Les lancements ne sont mesures que depuis le 21 aout 2026 : tant qu'une
+  // page a plus de parties terminees que de lancements dans l'historique, on
+  // garde le plus grand des deux, pour que le nombre affiche ne baisse
+  // jamais (meme regle que generate.js).
+  function litCompteur(slug, bandeau) {
     var cv = COMPTEURS_DE_VOTES[slug];
     if (cv) {
       fetch(URL + '/rest/v1/rpc/' + cv.rpc, { method: 'POST', headers: HJ, body: '{}' })
@@ -65,20 +105,11 @@
             if (Array.isArray(n)) n.forEach(function (l) { total += (+l.oui || 0) + (+l.non || 0); });
             n = total;
           }
-          n = +n || 0;
-          if (n > 0) pose(t[cv.libelle].replace('{n}', fmt(n)));
+          poseParties(bandeau, +n || 0);
         })
         .catch(function () {});
       return;
     }
-    // Le compteur affiche les lancements : une partie commencee est une
-    // partie jouee, meme quand le couple s'arrete avant la fin pour en
-    // parler, et un jeu ne se « finit » pas vraiment. Il y a environ trois
-    // lancements pour une partie terminee : la bulle disait le tiers de
-    // l'usage. Les lancements ne sont mesures que depuis le 21 aout 2026 :
-    // tant qu'une page a plus de parties terminees que de lancements dans
-    // l'historique, on garde ce chiffre-la, avec le texte qui va avec
-    // (« realise »), pour que le nombre affiche ne baisse jamais.
     function compte(fn) {
       return fetch(URL + '/rest/v1/rpc/' + fn, { method: 'POST', headers: HJ, body: '{}' })
         .then(function (r) { return r.json(); })
@@ -90,36 +121,15 @@
         .catch(function () { return 0; });
     }
     Promise.all([compte('get_quiz_starts_counts'), compte('get_quiz_counts')])
-      .then(function (r) {
-        var lances = r[0], finis = r[1];
-        var phrase, n;
-        if (lances >= finis) {
-          n = lances;
-          phrase = genre === 'outil' ? t.doneOutil : genre === 'jeu' ? t.doneGame : genre === 'quiz' ? t.doneQuiz : t.playedTest;
-        } else {
-          n = finis;
-          phrase = genre === 'outil' ? t.doneOutil : genre === 'jeu' ? t.doneGame : genre === 'quiz' ? t.doneQuiz : t.doneTest;
-        }
-        if (n > 0) pose(phrase.replace('{n}', fmt(n)));
-      })
+      .then(function (r) { poseParties(bandeau, Math.max(r[0], r[1])); })
       .catch(function () {});
   }
 
-  function countBubble(slug, genre) {
-    var bc = document.querySelector('.breadcrumb');
-    if (!bc || document.getElementById('quiz-count-bubble')) return;
-    var bubble = document.createElement('div');
-    bubble.id = 'quiz-count-bubble';
-    bubble.className = 'quiz-count-bubble';
-    bubble.style.display = 'none';
-    bubble.innerHTML = '<span class="qcb-dot"></span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7-4-9.5-8.5C.8 9 2.5 5.5 6 5.5c2 0 3.2 1.2 4 2.4C10.8 6.7 12 5.5 14 5.5c3.5 0 5.2 3.5 3.5 7C19.5 17 12 21 12 21z"/></svg><span class="qcb-text"></span>';
-    // Place the badge on its own line just under the hero intro paragraph
-    // (left-aligned), instead of right under the breadcrumb.
-    var heroBlock = bc.parentNode;
-    var paras = heroBlock ? heroBlock.querySelectorAll('p') : null;
-    var anchor = (paras && paras.length) ? paras[paras.length - 1] : bc;
-    anchor.parentNode.insertBefore(bubble, anchor.nextSibling);
-    litCompteur(slug, genre);
+  function bandeauDuHaut(slug) {
+    var bandeau = document.getElementById('preuve');
+    if (!bandeau || !bandeau.querySelector('.preuve-parties[data-a-lire]')) return;
+    bandeauVivant = bandeau;
+    litCompteur(slug, bandeau);
   }
 
   // ── Envoi d'un evenement de partie ──────────────────────────────────
@@ -191,9 +201,10 @@
       if (sessionStorage.getItem(key) || !fini()) return;
       try { sessionStorage.setItem(key, '1'); } catch (e) {}
       envoiePartie('quiz_completions', { quiz_slug: slug, lang: lang });
-      // La ligne vient de partir : on relit le total pour que la bulle se
-      // mette a jour sans rechargement. Le delai laisse la base la valider.
-      setTimeout(function () { litCompteur(slug, genre); }, 1200);
+      // La ligne vient de partir : quand le nombre de parties est lu ici
+      // (pas a la construction), on le relit pour que le bandeau se mette a
+      // jour sans rechargement. Le delai laisse la base la valider.
+      if (bandeauVivant) setTimeout(function () { litCompteur(slug, bandeauVivant); }, 1200);
     }
     check();
     new MutationObserver(check).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class', 'style', 'hidden', 'data-quiz-done'] });
@@ -411,7 +422,10 @@
             var sum = 0; rows.forEach(function (x) { sum += x.rating || 0; });
             s = { total: rows.length, avg: (sum / rows.length).toFixed(1) };
           }
-          if (aggEl) aggEl.innerHTML = '<span class="pqx-avg">' + s.avg + '</span><span class="pqx-stars">' + stars(Math.round(s.avg)) + '</span><span class="pqx-count">' + s.total + ' ' + t.based + '</span>';
+          poseNote(s);
+          // La note sur cinq, avec la virgule de la langue (« 4,8/5 »), comme
+          // le bandeau du haut de page et l'accueil.
+          if (aggEl) aggEl.innerHTML = '<span class="pqx-avg">' + noteTexte(s.avg) + '<span class="pqx-sur5">/5</span></span><span class="pqx-stars">' + stars(Math.round(s.avg)) + '</span><span class="pqx-count">' + fmt(s.total) + ' ' + t.based + '</span>';
         });
         if (listEl) listEl.innerHTML = rows.map(function (x) { return '<div class="pqx-card"><div class="pqx-card-top"><b>' + esc(x.author_name) + '</b><span class="pqx-stars">' + stars(x.rating) + '</span></div>' + (x.comment ? '<p>' + esc(x.comment) + '</p>' : '') + '</div>'; }).join('');
       })
@@ -579,7 +593,7 @@
     var slug = pq ? pq.dataset.quizSlug : null;
     if (!slug) return;
     var genre = pq.dataset.quizKind || 'test';
-    countBubble(slug, genre);
+    bandeauDuHaut(slug);
     watch(slug, genre);
     watchStart(slug);
     watchSalon(slug);

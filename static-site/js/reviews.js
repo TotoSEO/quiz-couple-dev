@@ -270,11 +270,22 @@
     });
   }
 
+  // La note sur cinq s'écrit avec le séparateur décimal de la langue
+  // (« 4,8 » partout sauf en anglais), comme dans le hero ; le « /5 » est
+  // posé à côté dans le gabarit.
+  function noteLocale(avg) {
+    var n = parseFloat(avg);
+    if (isNaN(n)) return String(avg);
+    return n.toFixed(1).replace('.', lang.indexOf('en') === 0 ? '.' : ',');
+  }
+
   function updateStats(avg, total) {
     var avgEl = document.getElementById('reviews-avg');
     var countEl = document.getElementById('reviews-count');
     var starsEl = document.getElementById('reviews-stars-display');
-    if (avgEl) avgEl.textContent = avg;
+    if (avgEl) avgEl.textContent = noteLocale(avg);
+    var sur5 = document.querySelector('.avis-sur5');
+    if (sur5) sur5.hidden = false;
     if (countEl) countEl.textContent = t('basedOn') + ' ' + total + ' ' + t('reviews');
     if (starsEl) starsEl.innerHTML = starsHtml(Math.round(parseFloat(avg) || 0), 'sm');
     // Update JSON-LD AggregateRating with real data
