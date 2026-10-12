@@ -21,7 +21,7 @@ npm run build          # Main site → dist/
 - `static-site/build/generate.js` — Main site generator
 - `static-site/templates/base.ejs` — HTML base template (meta, OG, hreflang, JSON-LD)
 - `static-site/templates/pages/quiz-generic.ejs` — Generic quiz page template
-- `static-site/templates/partials/related-tests.ejs` — Related tests internal linking
+- `static-site/templates/partials/related-tests.ejs` — Related tests internal linking. Depuis le 12 octobre 2026 (Thomas : « c'est moche, très moche »), deux rangées de cartes à image de même hauteur, sous l'en-tête des sections de l'accueil (`.bloc-entete`) : les pages à faire ensuite (`.suite-*` : image de tête, pastille emoji, famille en couleur et en étiquette d'après `FAMILLES_NAV`, libellé `nav.<clé>`, phrase de carte de l'accueil, bouton Faire le test / Faire le quiz / Jouer / Essayer ; le sous-titre dit « ces tests », « ces quiz », « ces jeux » ou « d'autres idées » selon ce qui est proposé) puis les articles liés (`.lire-*` : image à la une, titre de l'article, temps de lecture et « Lu N fois », bouton « Lire l'article » ; données par `carteArticle` dans generate.js). Quatre colonnes au-dessus de 1024 px, deux au-dessous ; sur téléphone deux cartes de pages par rangée sans description, et les articles en bande qui défile de côté (78 % de largeur). Les `sizes` des images sont relevés dans Chromium, à refaire si la grille change. La section garde la classe `related-tests-section`, masquée à l'écran de résultat.
 - `static-site/js/quiz-engine-core.js` — Quiz engine (SoloTest, DuoMatch, Coquin, etc.)
 - `static-site/js/quiz-loader.js` — Quiz config & initialization
 - `static-site/build/moteurs.js` : découpe de quiz-engine-core.js en un paquet par moteur (`moteur-socle.js` + `moteur-<nom>.js`, 190 Ko en moyenne au lieu de 570). Tout moteur nommé dans quiz-loader.js (`engine: '...'`) doit figurer dans `TABLE_MOTEURS` avec son constructeur : sinon le build écrit « table incomplete ... pas de decoupage » et TOUTES les pages reçoivent le fichier entier. C'est arrivé du 5 septembre au 7 octobre 2026, le jeu des phrases à compléter n'y avait pas été déclaré. Un moteur s'écrit `  function NomQuiz(config) {` puis `  NomQuiz.prototype.x = ...`, sans fonction libre entre deux moteurs.
@@ -78,6 +78,31 @@ sur les 5 Go du plan gratuit). Seul l'envoi d'un avis reste en direct ; un
 avis approuvé paraît à la reconstruction suivante, sept par jour. Les avis
 se lisent par pages de mille (le plafond de PostgREST), et sans chargement
 réussi au build, le bloc manque et la page redemande à la base comme avant.
+
+Les compteurs suivent la même règle depuis le 12 octobre 2026 : le nombre de
+parties de chaque page jouable (le plus grand des lancements et des parties
+finies ; les votes sur les dilemmes, le pour ou contre et le oui-non) et les
+lectures de chaque article sont lus une fois par construction
+(`fetchCompteursParties`, `fetchLecturesArticles`, huit lectures à la fois
+après une sonde) et écrits dans le HTML. Avant, chaque page vue demandait à
+la base deux listes de toutes les pages pour la bulle « joué N fois », qui
+apparaissait après coup en poussant le texte, et chaque article ses lectures.
+La bulle est remplacée par un bandeau (`partials/preuve-sociale.ejs`) :
+parties, note « 4,8/5 » et nombre d'avis, la note menant aux avis du bas de
+page. Il est posé par `pointDuBandeau` (generate.js) sous le dernier
+paragraphe du bloc du fil d'Ariane, la place de l'ancienne bulle, sur toutes
+les pages jouables qui ont un fil d'Ariane (le test de pureté n'en a pas) ;
+comme il est dans le premier écran, ses règles sont gardées dans la feuille
+critique de toutes les pages jouables (`GARDER_JOUABLES`, critique.mjs). Sans
+chiffres au build, quiz-extras.js (`data-a-lire`) et blog-lectures.js
+(`data-cuit` absent) les redemandent comme avant. Le compteur de lectures
+d'un article (« Cet article a été lu N fois » dans la ligne de signature,
+« Lu N fois » sur les cartes) ne s'affiche qu'à partir de 10 lectures
+(`SEUIL_LECTURES`, une seule constante) : à 50, jusqu'au 12 octobre 2026, il
+restait caché sur la plupart des articles, et Thomas ne le voyait nulle part.
+Le build écrit au journal la médiane et le maximum des lectures. Les notes
+s'écrivent sur cinq avec la virgule de la langue (« 4,8/5 », « 4.8/5 » en
+anglais) : bandeau, avis du bas des pages, hero et section avis de l'accueil.
 
 Le reste de la règle : rien de tiers avant l'affichage. `pub.js` ne demande
 les emplacements qu'à l'événement `load`, jamais dans le premier écran avant

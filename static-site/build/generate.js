@@ -306,6 +306,124 @@ function avisCuitsPour(slug) {
   const stats = reviewStatsByQuiz[slug];
   return { total: stats ? Number(stats.count) : 0, avg: stats ? stats.avg : '0', rows: reviewsParQuiz[slug] || [] };
 }
+// ── Compteurs cuits dans les pages (12 octobre 2026) ─────────────────────
+// Le nombre de parties d'une page jouable et le nombre de lectures d'un
+// article étaient demandés à la base par chaque page vue : deux listes de
+// toutes les pages pour la bulle « joué N fois », une lecture par article
+// ouvert. Ils sont lus une fois par construction (sept par jour) et écrits
+// dans le HTML, comme les avis : le bandeau du haut des tests et la ligne
+// de signature des articles sont là dès le premier affichage, sans décaler
+// la page quand la réponse arrive. Sans réponse de la base, la valeur reste
+// à null et la page redemande elle-même, comme avant.
+let partiesParPage = null; // { quiz_slug: { lances, finis } }
+const votesParPage = {};   // { routeKey: total } pour les trois pages à votes
+let lecturesParArticle = null; // { '/blog/<slug>/': lectures }
+
+// Les dilemmes, le pour ou contre et le oui-non comptent des votes, pas des
+// parties (même table dans quiz-extras.js, qui en reste le repli).
+const COMPTEURS_DE_VOTES = {
+  jeuDilemmes: { rpc: 'get_dilemme_total' },
+  pourContre: { rpc: 'get_pour_contre_total' },
+  jeuOuiNon: { rpc: 'get_oui_non_counts', somme: true },
+};
+
+async function appelRpc(fonction, corps = {}, delai = 20000) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/${fonction}`, {
+    method: 'POST',
+    headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify(corps),
+    signal: AbortSignal.timeout(delai),
+  });
+  if (!res.ok) throw new Error(`${fonction} : HTTP ${res.status}`);
+  return res.json();
+}
+
+async function fetchCompteursParties() {
+  try {
+    const [lances, finis] = await Promise.all([appelRpc('get_quiz_starts_counts'), appelRpc('get_quiz_counts')]);
+    if (!Array.isArray(lances) || !Array.isArray(finis)) throw new Error('réponse inattendue');
+    const par = {};
+    const ligne = (slug) => (par[slug] = par[slug] || { lances: 0, finis: 0 });
+    for (const r of lances) if (r && r.quiz_slug) ligne(r.quiz_slug).lances = Number(r.total) || 0;
+    for (const r of finis) if (r && r.quiz_slug) ligne(r.quiz_slug).finis = Number(r.total) || 0;
+    partiesParPage = par;
+    console.log(`[compteurs] parties lues pour ${Object.keys(par).length} pages`);
+  } catch (e) {
+    console.warn(`[compteurs] parties illisibles (${e.message}) : les pages les demanderont elles-mêmes`);
+  }
+  for (const [cle, cv] of Object.entries(COMPTEURS_DE_VOTES)) {
+    try {
+      const n = await appelRpc(cv.rpc);
+      votesParPage[cle] = cv.somme
+        ? (Array.isArray(n) ? n.reduce((s, l) => s + (Number(l.oui) || 0) + (Number(l.non) || 0), 0) : 0)
+        : Number(n) || 0;
+    } catch (e) {
+      console.warn(`[compteurs] votes de ${cle} illisibles (${e.message})`);
+    }
+  }
+}
+
+// Les lectures de chaque article publié, dans chaque langue (environ 230
+// chemins, huit demandes à la fois). Une première demande sert de sonde :
+// si la base ne répond pas, on n'en envoie pas deux cents autres pour rien.
+async function fetchLecturesArticles() {
+  const chemins = [];
+  for (const a of BLOG_ARTICLES) {
+    for (const l of (a.frOnly ? ['fr'] : LANGUAGES)) {
+      if (a.slugs && a.slugs[l]) chemins.push(getArticlePath(a.slugs[l], l));
+    }
+  }
+  if (!chemins.length) return;
+  const lues = {};
+  try {
+    lues[chemins[0]] = Number(await appelRpc('get_article_lectures', { p_path: chemins[0] })) || 0;
+  } catch (e) {
+    console.warn(`[lectures] illisibles (${e.message}) : les articles les demanderont eux-mêmes`);
+    return;
+  }
+  let suivant = 1;
+  let echecs = 0;
+  const travailleur = async () => {
+    while (suivant < chemins.length) {
+      const p = chemins[suivant++];
+      try { lues[p] = Number(await appelRpc('get_article_lectures', { p_path: p }, 10000)) || 0; }
+      catch (e) { echecs++; }
+    }
+  };
+  await Promise.all(Array.from({ length: 8 }, travailleur));
+  lecturesParArticle = lues;
+  const valeurs = Object.values(lues).sort((a, b) => a - b);
+  const dessus = valeurs.filter((n) => n >= SEUIL_LECTURES).length;
+  console.log(`[lectures] ${valeurs.length} articles lus (${echecs} sans réponse), médiane ${valeurs[Math.floor(valeurs.length / 2)]}, maximum ${valeurs[valeurs.length - 1]}, ${dessus} à ${SEUIL_LECTURES} lectures ou plus`);
+}
+
+// Sous ce nombre de lectures, un article n'affiche pas son compteur :
+// « lu 3 fois » dessert l'article. Il était de 50 jusqu'au 12 octobre 2026,
+// et la plupart des articles restaient sans compteur.
+const SEUIL_LECTURES = 10;
+
+// Le compteur de parties d'une page : { n, sorte } ou null si la base n'a
+// pas répondu à la construction. Il compte les lancements : une partie
+// commencée est une partie jouée, même quand le couple s'arrête avant la fin
+// pour en parler, et un jeu ne se « finit » pas vraiment (il y a environ
+// trois lancements pour une partie terminée). Les lancements ne sont mesurés
+// que depuis le 21 août 2026 : tant qu'une page a plus de parties terminées
+// que de lancements dans l'historique, on garde le plus grand des deux, pour
+// que le nombre affiché ne baisse jamais.
+function compteurPartiesPour(routeKey) {
+  if (COMPTEURS_DE_VOTES[routeKey]) {
+    return routeKey in votesParPage ? { n: votesParPage[routeKey], sorte: routeKey === 'jeuOuiNon' ? 'reponses' : 'votes' } : null;
+  }
+  if (!partiesParPage) return null;
+  const p = partiesParPage[routeKey] || { lances: 0, finis: 0 };
+  return { n: Math.max(p.lances, p.finis), sorte: 'parties' };
+}
+
+function lecturesDe(chemin) {
+  if (!lecturesParArticle) return null;
+  return chemin in lecturesParArticle ? lecturesParArticle[chemin] : null;
+}
+
 // Le JSON prêt pour une balise <script type="application/json"> : « < »
 // échappé pour qu'aucun commentaire ne ferme la balise, et les deux
 // séparateurs de ligne Unicode que JSON laisse passer. Fait ici plutôt que
@@ -551,6 +669,48 @@ function injectStaticQuestions(html, tgd, lang) {
     return html.replace(m[0], m[0] + section);
   }
   return html;
+}
+
+// ── Où poser le bandeau parties, note et avis ───────────────────────────
+// quiz-extras.js posait la bulle « joué N fois » après coup, sous le dernier
+// paragraphe du bloc qui contient le fil d'Ariane : c'est le haut de chaque
+// page jouable, quel que soit son gabarit (il y en a 74). Le bandeau prend
+// la même place, mais dans le HTML servi. Le build n'a pas d'analyseur HTML :
+// on suit les balises ouvertes jusqu'au fil d'Ariane pour connaître son
+// bloc, puis on avance jusqu'à la fermeture de ce bloc en retenant la fin du
+// dernier paragraphe (à défaut, la fin du fil d'Ariane). Les commentaires
+// et le contenu des scripts et des styles sont sautés, les valeurs
+// d'attributs entre guillemets peuvent contenir « > ». Rend -1 sans fil
+// d'Ariane (le test de pureté) : la page reste sans bandeau.
+const BALISES_VIDES = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr']);
+const RE_BALISE = /<!--[\s\S]*?-->|<(script|style|textarea)\b(?:[^>"']|"[^"]*"|'[^']*')*>[\s\S]*?<\/\1\s*>|<(\/?)([a-zA-Z][\w:-]*)((?:\s+[^\s"'>\/=]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s"'>]+))?)*)\s*(\/?)>/g;
+function pointDuBandeau(html) {
+  const nav = html.indexOf('<nav class="breadcrumb');
+  if (nav < 0) return -1;
+  const pile = [];
+  let profondeur = -1; // nombre d'éléments ouverts au fil d'Ariane : son bloc est le dernier
+  let finP = -1;
+  let finNav = -1;
+  RE_BALISE.lastIndex = 0;
+  let m;
+  while ((m = RE_BALISE.exec(html))) {
+    if (!m[3]) continue; // commentaire, script, style
+    const nom = m[3].toLowerCase();
+    if (m[2] !== '/') {
+      if (m.index === nav) profondeur = pile.length;
+      if (!BALISES_VIDES.has(nom) && m[5] !== '/') pile.push(nom);
+      continue;
+    }
+    const i = pile.lastIndexOf(nom);
+    if (i < 0) continue;
+    pile.length = i;
+    if (profondeur < 0) continue;
+    const fin = m.index + m[0].length;
+    if (nom === 'nav' && finNav < 0 && pile.length === profondeur) finNav = fin;
+    if (nom === 'p') finP = fin;
+    if (pile.length < profondeur) return finP >= 0 ? finP : finNav;
+  }
+  return -1;
 }
 
 async function fetchReviewStats() {
@@ -1172,18 +1332,12 @@ async function generatePage(routeKey, lang) {
     })() : '{}',
     // Related blog articles for this quiz/test (existing articles, per language)
     relatedArticles: (QUIZ_RELATED_ARTICLES[routeKey] || [])
-      .map(internalSlug => {
-        const a = BLOG_ARTICLES.find(x => x.internalSlug === internalSlug);
-        if (!a) return null;
-        const slug = a.slugs[lang];
-        if (!slug) return null; // not published in this language
-        const aPath = path.resolve(__dirname, '../../data/blog', lang, `${internalSlug}.ts`);
-        const aFr = path.resolve(__dirname, '../../data/blog/fr', `${internalSlug}.ts`);
-        const aData = parseArticleTs(aPath) || parseArticleTs(aFr);
-        return { title: aData?.title || internalSlug, url: getArticleUrl(slug, lang) };
-      })
+      .map(internalSlug => carteArticle(internalSlug, lang))
       .filter(Boolean)
       .slice(0, 4),
+    // Le bandeau du haut des pages jouables (parties, note, avis)
+    preuveSociale: estPageJouable(routeKey) ? preuveSocialePour(routeKey) : null,
+    seuilLectures: SEUIL_LECTURES,
   };
 
   try {
@@ -1195,6 +1349,16 @@ async function generatePage(routeKey, lang) {
       ...data,
       content: pageHtml,
     });
+
+    // Le bandeau parties, note et avis, à la place de l'ancienne bulle
+    if (data.preuveSociale) {
+      const point = pointDuBandeau(fullHtml);
+      if (point >= 0) {
+        fullHtml = fullHtml.slice(0, point) + await renderTemplate('partials/preuve-sociale', data) + fullHtml.slice(point);
+      } else if (fullHtml.includes('<nav class="breadcrumb')) {
+        console.warn(`[bandeau] ${routeKey} (${lang}) : fil d'Ariane trouvé mais pas son bloc, page sans bandeau`);
+      }
+    }
 
     // SEO: render the quiz questions as static HTML so JS-less crawlers see them
     fullHtml = injectStaticQuestions(fullHtml, data.tgd, lang);
@@ -1732,6 +1896,66 @@ function parseArticleTs(filePath) {
   }
 }
 
+// Une carte du bloc « Pour aller plus loin » des pages de test : le titre de
+// l'article (celui de la base s'il y a été corrigé, comme la liste du blog),
+// son image à la une et ses variantes, son temps de lecture et ses lectures
+// lues à la construction. Un article sans version dans la langue n'a pas de
+// carte. Calculée une fois par article et par langue.
+const cartesArticles = new Map();
+function carteArticle(internalSlug, lang) {
+  const cle = `${internalSlug}-${lang}`;
+  if (cartesArticles.has(cle)) return cartesArticles.get(cle);
+  let carte = null;
+  const a = BLOG_ARTICLES.find(x => x.internalSlug === internalSlug);
+  const slug = a && a.slugs[lang];
+  if (slug) {
+    const aData = parseArticleTs(path.resolve(__dirname, '../../data/blog', lang, `${internalSlug}.ts`))
+      || parseArticleTs(path.resolve(__dirname, '../../data/blog/fr', `${internalSlug}.ts`));
+    const o = articleOverrides[cle];
+    const imageBase = o && imageDispo(o.featuredImage) ? o.featuredImage : null;
+    const image = imageBase || (aData && aData.featuredImage) || a.featuredImage || null;
+    carte = {
+      title: (o && o.title) || (aData && aData.title) || internalSlug,
+      url: getArticleUrl(slug, lang),
+      image,
+      imageSrcset: image ? srcsetImage(image) : null,
+      imageAlt: (imageBase && o.featuredImageAlt) || (aData && (aData.featuredImageAlt || aData.title)) || '',
+      minutes: aData ? tempsDeLecture(aData).readingMinutes : null,
+      lectures: lecturesDe(getArticlePath(slug, lang)),
+    };
+  }
+  cartesArticles.set(cle, carte);
+  return carte;
+}
+
+// Le bandeau du haut d'une page jouable : nombre de parties (ou de votes),
+// note moyenne et nombre d'avis. parties vaut null quand la base n'a pas
+// répondu à la construction (la page le demandera elle-même), avis aussi.
+function preuveSocialePour(routeKey) {
+  const stats = reviewsCharges ? reviewStatsByQuiz[routeKey] : null;
+  return {
+    parties: compteurPartiesPour(routeKey),
+    note: stats ? Number(stats.avg) : null,
+    nbAvis: reviewsCharges ? (stats ? Number(stats.count) : 0) : null,
+  };
+}
+
+// ── Nombre de mots et temps de lecture ──────────────────────────────────
+// Un seul comptage sert les trois usages : wordCount dans les donnees
+// structurees, le « X min de lecture » affiche sous le titre, et celui des
+// cartes « Pour aller plus loin » des pages de test. Les faire diverger
+// reviendrait a annoncer au lecteur autre chose qu'a Google.
+// 200 mots par minute, la vitesse de lecture courante a l'ecran pour de la
+// prose grand public. Jamais moins d'une minute : « 0 min de lecture » ne
+// veut rien dire.
+function tempsDeLecture(article) {
+  const texteArticle = (article.introduction || '') + ' ' + (article.sections || []).map(s =>
+    (s.content || '') + ' ' + (s.subsections || []).map(sub => sub.content || '').join(' ')
+  ).join(' ');
+  const wordCount = texteArticle.replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length;
+  return { wordCount, readingMinutes: Math.max(1, Math.round(wordCount / 200)) };
+}
+
 async function generateBlogArticle(articleMeta, lang) {
   const tsPath = path.resolve(__dirname, '../../data/blog', lang, `${articleMeta.internalSlug}.ts`);
   const frPath = path.resolve(__dirname, '../../data/blog/fr', `${articleMeta.internalSlug}.ts`);
@@ -1784,18 +2008,7 @@ async function generateBlogArticle(articleMeta, lang) {
   };
   const bl = breadcrumbLabels[lang] || breadcrumbLabels.fr;
 
-  // ── Nombre de mots et temps de lecture ──────────────────────────────────
-  // Un seul comptage sert les deux usages : wordCount dans les donnees
-  // structurees, et le « X min de lecture » affiche sous le titre. Les faire
-  // diverger reviendrait a annoncer au lecteur autre chose qu'a Google.
-  const texteArticle = (article.introduction || '') + ' ' + (article.sections || []).map(s =>
-    (s.content || '') + ' ' + (s.subsections || []).map(sub => sub.content || '').join(' ')
-  ).join(' ');
-  const wordCount = texteArticle.replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length;
-  // 200 mots par minute, la vitesse de lecture courante a l'ecran pour de la
-  // prose grand public. Jamais moins d'une minute : « 0 min de lecture » ne
-  // veut rien dire.
-  const readingMinutes = Math.max(1, Math.round(wordCount / 200));
+  const { wordCount, readingMinutes } = tempsDeLecture(article);
 
   const jsonLdItems = [
     {
@@ -1898,6 +2111,9 @@ async function generateBlogArticle(articleMeta, lang) {
     articleAlternates,
     wordCount,
     readingMinutes,
+    // Lectures lues à la construction (null : l'article les demande lui-même)
+    lecturesCuites: lecturesDe(pagePath),
+    seuilLectures: SEUIL_LECTURES,
     // Category
     articleCategory: articleMeta.category || null,
     articleCategoryLabel: articleMeta.category && BLOG_CATEGORIES[articleMeta.category] ? BLOG_CATEGORIES[articleMeta.category][lang] || BLOG_CATEGORIES[articleMeta.category].fr : null,
@@ -2011,6 +2227,10 @@ async function main() {
 
   // Fetch article SEO overrides from Supabase (admin edits)
   await fetchArticleOverrides();
+
+  // Parties par page et lectures par article, écrites dans le HTML
+  await fetchCompteursParties();
+  await fetchLecturesArticles();
 
   // Clean dist
   if (fs.existsSync(DIST_DIR)) {
