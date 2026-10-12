@@ -1,0 +1,45 @@
+{
+  "jour": "2026-10-31",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-007",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : elle émue, les pattes sur les joues, des étincelles.",
+        "texte": "merci d'être toi",
+        "duree": 11,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "emu",
+              "bras": "joues",
+              "signes": [
+                "etincelles"
+              ],
+              "x": 320,
+              "taille": 280
+            }
+          ]
+        }
+      },
+      "legende": "il a fait la vaisselle.\n\nenvoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

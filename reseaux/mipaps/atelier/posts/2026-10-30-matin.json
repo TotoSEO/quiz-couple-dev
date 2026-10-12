@@ -1,0 +1,258 @@
+{
+  "jour": "2026-10-30",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-019",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Encore un épisode : le canapé, le popcorn, 22 h ; 1 h, les yeux plats ; 3 h, il dort, elle regarde encore ; 7 h, le réveil, il part en sprint. Quatre plans, 14 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Les deux sont assis sur le canapé, contents, un bol de popcorn entre eux, face à nous. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "popcorn",
+                "x": 320,
+                "y": 290,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "22 h : « encore un épisode »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 3,
+            "transition": "fondu",
+            "description": "Même canapé, le bol de popcorn est vide. Les deux ont les yeux plats, la bouche en ligne, ils regardent l'écran sans bouger. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 3,
+            "transition": "fondu",
+            "description": "Lui dort la tête penchée, des petits zzz au-dessus de lui. Elle regarde toujours l'écran, les yeux grands ouverts, qui ne cligne plus. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "hypnotise"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "3 h",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Le jour se lève : le réveil sonne à 0,6 s. Elle dort maintenant, assise, la tête sur le côté. Lui se réveille en sursaut à 0,6 s, regarde l'horloge, panique, se lève et part en sprint vers la droite à 1,4 s, il sort du cadre à 3,2 s. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 0.6,
+                    "pose": "debout",
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 226,
+                    "y": 380,
+                    "taille": 250,
+                    "angle": 90,
+                    "pose": "debout",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 1.4,
+                    "x": 226,
+                    "pose": "sprint",
+                    "expression": "panique"
+                  },
+                  {
+                    "a": 3.2,
+                    "x": 820
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "horloge",
+                "x": 500,
+                "y": 150,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "7 h",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ],
+            "sons": [
+              {
+                "nom": "reveil",
+                "a": 0.5
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "il a dit « encore un épisode » à 22 h.\n\ntague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

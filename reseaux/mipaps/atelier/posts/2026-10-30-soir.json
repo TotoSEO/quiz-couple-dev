@@ -1,0 +1,143 @@
+{
+  "jour": "2026-10-30",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-016",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Quand elle rentre tard : il l'attend sur le canapé, s'endort ; elle le couvre.",
+        "pages": [
+          {
+            "texte": "23 h 40. je rentre tard.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "gene",
+                  "bras": "tient",
+                  "x": 320,
+                  "taille": 270
+                },
+                {
+                  "objet": "cle",
+                  "x": 380,
+                  "y": 340,
+                  "echelle": 0.4
+                }
+              ]
+            }
+          },
+          {
+            "texte": "il m'attend sur le canapé.",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "canape_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "y": 318,
+                  "pose": "assis",
+                  "x": 320,
+                  "taille": 210
+                }
+              ]
+            }
+          },
+          {
+            "texte": "il s'est endormi en m'attendant.",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "canape_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "y": 318,
+                  "pose": "assis",
+                  "signes": [
+                    "zzz"
+                  ],
+                  "x": 320,
+                  "taille": 210
+                }
+              ]
+            }
+          },
+          {
+            "texte": "je vais chercher la couverture.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "bras": "tient",
+                  "x": 270,
+                  "taille": 260
+                },
+                {
+                  "objet": "couverture",
+                  "x": 420,
+                  "y": 340,
+                  "echelle": 0.8
+                }
+              ]
+            }
+          },
+          {
+            "texte": "minuit 10",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "canape_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "y": 318,
+                  "pose": "assis",
+                  "signes": [
+                    "zzz"
+                  ],
+                  "x": 250,
+                  "taille": 210
+                },
+                {
+                  "perso": "elle",
+                  "expression": "dodo",
+                  "y": 318,
+                  "pose": "assis",
+                  "x": 350,
+                  "taille": 210
+                },
+                {
+                  "objet": "couverture",
+                  "x": 300,
+                  "y": 300,
+                  "echelle": 1.4
+                }
+              ]
+            },
+            "appel": "envoie-lui ça"
+          }
+        ]
+      },
+      "legende": "il avait gardé le dîner.\n\nenvoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#relation"
+      ]
+    }
+  }
+}

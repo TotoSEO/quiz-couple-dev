@@ -1,0 +1,51 @@
+{
+  "jour": "2026-10-30",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-008",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle dort sous la couette, le lit en perspective ; encore cinq minutes.",
+        "style": "mini",
+        "texte": "encore cinq minutes stp",
+        "dessin": {
+          "elements": [
+            {
+              "meuble": "lit_fond"
+            },
+            {
+              "perso": "elle",
+              "expression": "dodo",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "signes": [
+                "zzz"
+              ],
+              "x": 320,
+              "taille": 200
+            },
+            {
+              "meuble": "lit_couette"
+            }
+          ]
+        }
+      },
+      "legende": "l'alarme a sonné trois fois.\n\ntu fais ça aussi ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
