@@ -280,6 +280,30 @@
     return { nom: nom, ok: nom.length >= AVIS_NOM_MIN && nom.length <= AVIS_NOM_MAX };
   }
 
+  // La langue de la page part avec l'avis depuis le 12 octobre 2026 (colonne
+  // lang de reviews) : le classement de l'admin range les avis par page et
+  // par langue. Si la base ne connait pas encore la colonne, l'avis repart
+  // sans elle, il ne se perd jamais pour une information en plus. Ecrit deux
+  // fois aussi (pcReviewForm, quiz-engine-core.js), et une troisieme dans
+  // reviews.js pour l'accueil.
+  var LANGUES_AVIS = ['fr', 'en', 'es', 'de', 'it'];
+  function langueAvis(l) {
+    l = String(l || '').slice(0, 2).toLowerCase();
+    return LANGUES_AVIS.indexOf(l) >= 0 ? l : null;
+  }
+  function envoiAvis(url, entetes, corps) {
+    var envoi = function (c) { return fetch(url, { method: 'POST', headers: entetes, body: JSON.stringify(c) }); };
+    return envoi(corps).then(function (r) {
+      if (r.status !== 400 || !corps.lang) return r;
+      return r.clone().json().catch(function () { return null; }).then(function (e) {
+        if (!e || (e.code !== 'PGRST204' && !/'lang'/.test(String(e.message || '')))) return r;
+        var sans = {};
+        Object.keys(corps).forEach(function (k) { if (k !== 'lang') sans[k] = corps[k]; });
+        return envoi(sans);
+      });
+    });
+  }
+
   function freinAvis(champ, note) {
     var c = (champ && champ.value ? champ.value.trim() : '');
     if (note > AVIS_MIN_NOTE) return { ok: true, reste: 0 };
@@ -443,7 +467,8 @@
       if (submitB) submitB.disabled = true;
       var body = { author_name: name.substring(0, AVIS_NOM_MAX), rating: rating, quiz_slug: slug, is_approved: false };
       var c = commentI ? commentI.value.trim() : ''; if (c) body.comment = c.substring(0, 200);
-      fetch(URL + '/rest/v1/reviews', { method: 'POST', headers: Object.assign({ 'Prefer': 'return=minimal' }, HJ), body: JSON.stringify(body) })
+      if (langueAvis(lang)) body.lang = langueAvis(lang);
+      envoiAvis(URL + '/rest/v1/reviews', Object.assign({ 'Prefer': 'return=minimal' }, HJ), body)
         .then(function (r) { if (r.ok || r.status === 201) { form.innerHTML = merciAvis(t); } else throw new Error('x'); })
         .catch(function () { if (msg) { msg.textContent = t.err; msg.className = 'pqx-msg err'; } if (submitB) submitB.disabled = false; });
     });

@@ -141,7 +141,7 @@
   }
   function majPastilles() {
     poseePastille('reviews',
-      allReviews.filter(function (r) { return !r.is_approved; }).length,
+      avisResume ? Number(avisResume.attente) || 0 : allReviews.filter(function (r) { return !r.is_approved; }).length,
       'avis en attente de moderation');
     poseePastille('messages',
       allMessages.filter(function (m) { return m.status === 'new'; }).length,
@@ -2151,6 +2151,7 @@
   // de jours elle porte quand ce n'est pas la periode des compteurs.
   var TRAFIC_JOURS_COURBE_MINI = 14;
   function joursCourbeTrafic() { return Math.max(traficPeriode, TRAFIC_JOURS_COURBE_MINI); }
+  function suffixeCourbe(jours) { return jours !== traficPeriode ? ' · ' + jours + ' j' : ''; }
   function loadTrafic() {
     var tz = fuseau();
     var n = traficPeriode;
@@ -2283,9 +2284,11 @@
       points.visites.push({ date: d, label: label, total: v.visites });
       points.vues.push({ date: d, label: label, total: v.vues });
     }
-    var suffixe = jours !== traficPeriode ? ' · ' + jours + ' j' : '';
+    // « · 14 j » ne va qu'a la legende, dont les sommes couvrent toute la
+    // courbe. L'infobulle d'un jour garde le nom seul : elle ecrivait
+    // « Visites · 14 j » devant le chiffre d'une seule journee.
     var couches = TRAFIC_COURBES.map(function (c) {
-      return { cle: c.cle, nom: c.nom + suffixe, couleur: teinte(c.cle, c.couleur), axe: 'gauche', unite: '',
+      return { cle: c.cle, nom: c.nom, legende: c.nom + suffixeCourbe(jours), couleur: teinte(c.cle, c.couleur), axe: 'gauche', unite: '',
                visible: traficCouchesVues[c.cle], points: points[c.cle] };
     });
     // Les mini-courbes des deux tuiles, sur la periode affichee.
@@ -2304,7 +2307,7 @@
       return '<button type="button" class="stats-leg' + (c.visible ? '' : ' est-eteinte') + '"'
         + ' style="--leg:' + c.couleur + '" data-trafic-courbe="' + c.cle + '"'
         + ' aria-pressed="' + (c.visible ? 'true' : 'false') + '">'
-        + '<span class="stats-leg-nom"><span class="stats-leg-puce"></span>' + esc(c.nom) + '</span>'
+        + '<span class="stats-leg-nom"><span class="stats-leg-puce"></span>' + esc(c.legende || c.nom) + '</span>'
         + '<span class="stats-leg-val">' + nb(somme) + '</span>'
         + '</button>';
     }).join('');
@@ -2482,7 +2485,7 @@
       points.blog.push({ date: d, label: label, total: v.blog });
     }
     var couches = SOURCE_COURBES.map(function (c) {
-      return { cle: c.cle, nom: c.nom, couleur: teinte(c.cle, c.couleur), axe: 'gauche', unite: '',
+      return { cle: c.cle, nom: c.nom, legende: c.nom + suffixeCourbe(joursCourbeTrafic()), couleur: teinte(c.cle, c.couleur), axe: 'gauche', unite: '',
                visible: sourceCouchesVues[c.cle], points: points[c.cle] };
     });
     _sourceCouches = couches;
@@ -2499,7 +2502,7 @@
       return '<button type="button" class="stats-leg' + (c.visible ? '' : ' est-eteinte') + '"'
         + ' style="--leg:' + c.couleur + '" data-source-courbe="' + c.cle + '"'
         + ' aria-pressed="' + (c.visible ? 'true' : 'false') + '">'
-        + '<span class="stats-leg-nom"><span class="stats-leg-puce"></span>' + esc(c.nom) + '</span>'
+        + '<span class="stats-leg-nom"><span class="stats-leg-puce"></span>' + esc(c.legende || c.nom) + '</span>'
         + '<span class="stats-leg-val">' + nb(somme) + '</span>'
         + '</button>';
     }).join('');
@@ -2555,7 +2558,7 @@
     if (tab === 'stats') loadStats();
     else if (tab === 'trafic') loadTrafic();
     else if (tab === 'distance') loadDistance();
-    else if (tab === 'reviews') loadReviews();
+    else if (tab === 'reviews') { loadReviews(); chargeClassement(); }
     else if (tab === 'leads') { allLeads = []; loadLeads(); }
     else if (tab === 'messages') { allMessages = []; loadMessages(); }
     else if (tab === 'affiliation' && window.AdminAffiliation && window.AdminAffiliation.ouvrir) window.AdminAffiliation.ouvrir(contexteAffiliation());
@@ -2591,6 +2594,9 @@
     var rsTab = document.getElementById('admin-reseaux-tab');
     if (rsTab) rsTab.classList.toggle('hidden', tab !== 'reseaux');
     if (tab === 'reseaux') ouvrirReseaux();
+    // Le classement des pages n'est lu qu'a la premiere ouverture de l'onglet
+    // Avis (la liste, elle, est chargee des la connexion pour la pastille).
+    if (tab === 'reviews' && !avisClassement) chargeClassement();
 
     if (tab === 'stats') {
       loadStats();
@@ -2620,57 +2626,136 @@
     }
   }
 
-  // ── Reviews CRUD ──
+  // ── Avis ──
+  // La liste se lit par pages de dix, des plus récents aux plus anciens, et
+  // « Charger plus d'avis » demande les dix suivants (avant le 12 octobre
+  // 2026, chaque connexion et chaque action relisaient tous les avis, IP et
+  // commentaires compris). Les chiffres du haut viennent du serveur
+  // (resume : total, en attente, approuvés, note moyenne des approuvés), et
+  // le filtre se fait côté serveur : une page de « En attente » contient dix
+  // avis en attente, pas ce qui en reste dans dix avis quelconques.
+  var AVIS_PAR_PAGE = 10;
+  var FILTRES_AVIS = { all: 'tous', pending: 'attente', approved: 'approuves' };
+  var avisSuite = false;
+  var avisResume = null;
+  var avisClassement = null;
+  var avisJeton = 0;
+
+  function urlAvis(params) {
+    var q = Object.keys(params || {}).filter(function (k) {
+      return params[k] !== undefined && params[k] !== null && params[k] !== '';
+    }).map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]); }).join('&');
+    return SUPABASE_URL + '/functions/v1/admin-reviews' + (q ? '?' + q : '');
+  }
+
+  // Une réponse de admin-reviews, ou une erreur qui dit pourquoi : jusqu'au
+  // 12 octobre 2026, un refus du serveur ne produisait rien du tout à
+  // l'écran, et une suppression ratée ressemblait à un clic sans effet.
+  function reponseAvis(res) {
+    return res.json().catch(function () { return null; }).then(function (data) {
+      if (res.ok && !(data && data.success === false)) return data;
+      var texte = res.status === 401
+        ? 'session expirée, reconnectez-vous'
+        : (data && (data.detail || data.error)) || ('erreur ' + res.status);
+      var err = new Error(texte);
+      err.reessayable = res.status >= 500;
+      throw err;
+    });
+  }
+  function erreurReseau() {
+    var err = new Error('le serveur ne répond pas');
+    err.reessayable = true;
+    throw err;
+  }
+
+  function lireAvis(params) {
+    return fetch(urlAvis(params), {
+      headers: { 'Authorization': 'Bearer ' + SUPABASE_KEY, 'x-admin-token': adminToken }
+    })
+    .then(reponseAvis, erreurReseau)
+    .then(function (data) {
+      var liste = Array.isArray(data) ? data : (data && Array.isArray(data.reviews) ? data.reviews : null);
+      if (!liste) throw new Error('réponse inattendue du serveur');
+      // Fonction d'avant le 12 octobre 2026 (pas encore redéployée) : elle
+      // rend tous les avis d'un coup, la page se découpe donc ici.
+      if (!data || data.suite === undefined) return pageLocale(liste, params);
+      return { reviews: liste, suite: !!data.suite, resume: data.resume || null };
+    });
+  }
+  function pageLocale(liste, p) {
+    var garde = liste.filter(function (r) {
+      if (p.filtre === 'attente' && r.is_approved) return false;
+      if (p.filtre === 'approuves' && !r.is_approved) return false;
+      return !p.avant || String(r.created_at) < p.avant;
+    });
+    var app = liste.filter(function (r) { return r.is_approved; });
+    var somme = app.reduce(function (a, r) { return a + (r.rating || 0); }, 0);
+    return {
+      reviews: garde.slice(0, p.limite || AVIS_PAR_PAGE),
+      suite: garde.length > (p.limite || AVIS_PAR_PAGE),
+      resume: { total: liste.length, attente: liste.length - app.length, approuves: app.length, moyenne: app.length ? somme / app.length : null }
+    };
+  }
+
   function loadReviews() {
     var listEl = document.getElementById('admin-reviews-list');
+    var jeton = ++avisJeton;
     listEl.innerHTML = '<p class="text-center text-muted-foreground py-8">Chargement...</p>';
-
-    fetch(SUPABASE_URL + '/functions/v1/admin-reviews', {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer ' + SUPABASE_KEY,
-        'x-admin-token': adminToken
-      }
-    })
-    .then(function (res) {
-      if (!res.ok) throw new Error('Edge function returned ' + res.status);
-      return res.json();
-    })
-    .then(function (data) {
-      var reviews = Array.isArray(data) ? data : (data && data.reviews ? data.reviews : (data && data.data ? data.data : null));
-      if (reviews && Array.isArray(reviews)) {
-        allReviews = reviews;
+    avisSuite = false;
+    majPlusAvis();
+    return lireAvis({ limite: AVIS_PAR_PAGE, filtre: FILTRES_AVIS[currentFilter], resume: 1 })
+      .then(function (page) {
+        if (jeton !== avisJeton) return;
+        allReviews = page.reviews;
+        avisSuite = page.suite;
+        if (page.resume) avisResume = page.resume;
         majPastilles();
         updateStats();
         renderReviews();
-      } else {
-        throw new Error('Invalid response format');
-      }
-    })
-    .catch(function () {
-      fetch(SUPABASE_URL + '/rest/v1/reviews?select=id,author_name,rating,comment,is_approved,created_at,quiz_slug&order=created_at.desc&limit=100', {
-        headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
       })
-      .then(function (res) { return res.json(); })
-      .then(function (reviews) {
-        if (Array.isArray(reviews)) {
-          allReviews = reviews;
-          majPastilles();
-        majPastilles();
-          updateStats();
-          renderReviews();
-        } else {
-          listEl.innerHTML = '<p class="text-center text-destructive py-8">Erreur de chargement. Vérifiez que l\'Edge Function admin-reviews est déployée.</p>';
-        }
-      })
-      .catch(function () {
-        listEl.innerHTML = '<p class="text-center text-destructive py-8">Erreur de connexion au serveur.</p>';
+      .catch(function (e) {
+        if (jeton !== avisJeton) return;
+        listEl.innerHTML = '<div class="adm-avis-erreur"><p>Les avis ne se chargent pas : ' + esc(e.message) + '.</p>'
+          + '<button type="button" class="btn btn-outline btn-sm" data-avis-reessayer>Réessayer</button></div>';
       });
-    });
   }
 
-  function reviewAction(reviewId, action) {
-    fetch(SUPABASE_URL + '/functions/v1/admin-reviews', {
+  function chargerPlusAvis() {
+    var btn = document.getElementById('admin-avis-plus');
+    var dernier = allReviews[allReviews.length - 1];
+    if (!btn || !dernier) return;
+    var jeton = avisJeton;
+    btn.disabled = true;
+    btn.textContent = 'Chargement...';
+    lireAvis({ limite: AVIS_PAR_PAGE, filtre: FILTRES_AVIS[currentFilter], avant: dernier.created_at })
+      .then(function (page) {
+        if (jeton !== avisJeton) return;
+        var vus = {};
+        allReviews.forEach(function (r) { vus[r.id] = true; });
+        allReviews = allReviews.concat(page.reviews.filter(function (r) { return !vus[r.id]; }));
+        avisSuite = page.suite;
+        renderReviews();
+      })
+      .catch(function (e) {
+        if (jeton !== avisJeton) return;
+        majPlusAvis('Échec (' + e.message + '). Réessayer');
+      });
+  }
+
+  // Le bouton sous la liste : visible tant qu'il reste des avis plus anciens.
+  function majPlusAvis(texte) {
+    var btn = document.getElementById('admin-avis-plus');
+    if (!btn) return;
+    btn.disabled = false;
+    btn.textContent = texte || 'Charger plus d\'avis';
+    btn.classList.toggle('hidden', !(avisSuite && allReviews.length) && !texte);
+  }
+
+  // Approuver, retirer, supprimer. Une erreur réseau ou serveur est retentée
+  // une fois (les trois actions peuvent être rejouées sans dommage), puis
+  // affichée dans la carte.
+  function reviewAction(reviewId, action, essai) {
+    return fetch(SUPABASE_URL + '/functions/v1/admin-reviews', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer ' + SUPABASE_KEY,
@@ -2679,55 +2764,145 @@
       },
       body: JSON.stringify({ reviewId: reviewId, action: action })
     })
-    .then(function (res) {
-      if (res.ok) loadReviews();
+    .then(reponseAvis, erreurReseau)
+    .catch(function (e) {
+      if (e.reessayable && !essai) {
+        return new Promise(function (ok) { setTimeout(ok, 800); }).then(function () { return reviewAction(reviewId, action, 1); });
+      }
+      throw e;
     });
   }
 
+  var LIBELLES_ACTION = {
+    approve: ['Approuver', 'Approbation...'],
+    reject: ['Retirer', 'Retrait...'],
+    delete: ['Supprimer', 'Suppression...']
+  };
+
+  // La suppression se confirme dans la carte, par un second clic sur le même
+  // bouton, et plus par la fenêtre confirm() du navigateur : celle-ci peut
+  // ne pas s'ouvrir du tout (fenêtres de dialogue bloquées après plusieurs
+  // à la suite, navigateur intégré d'une application...), et confirm()
+  // répond alors « non » sans rien montrer. Un second clic arrivé moins de
+  // 0,4 s après le premier (double clic involontaire) ne confirme pas ; sans
+  // second clic, le bouton redevient « Supprimer » au bout de cinq secondes.
+  function suppressionConfirmee(btn) {
+    var arme = Number(btn.getAttribute('data-arme') || 0);
+    if (arme) return Date.now() - arme > 400;
+    btn.setAttribute('data-arme', String(Date.now()));
+    btn.classList.add('est-arme');
+    btn.textContent = 'Confirmer la suppression';
+    clearTimeout(btn._desarme);
+    btn._desarme = setTimeout(function () { desarmer(btn); }, 5000);
+    return false;
+  }
+  function desarmer(btn) {
+    clearTimeout(btn._desarme);
+    btn.removeAttribute('data-arme');
+    btn.classList.remove('est-arme');
+    var l = LIBELLES_ACTION[btn.getAttribute('data-action')];
+    if (l) btn.textContent = l[0];
+  }
+
+  function agirSurAvis(btn) {
+    var carte = btn.closest('[data-avis]');
+    var id = btn.getAttribute('data-id');
+    var action = btn.getAttribute('data-action');
+    if (!carte || !id || !LIBELLES_ACTION[action]) return;
+    var boutons = carte.querySelectorAll('.admin-action');
+    var msg = carte.querySelector('.adm-carte-msg');
+    clearTimeout(btn._desarme);
+    boutons.forEach(function (b) { b.disabled = true; });
+    btn.textContent = LIBELLES_ACTION[action][1];
+    if (msg) { msg.textContent = ''; msg.classList.remove('est-erreur'); }
+    reviewAction(id, action).then(function (data) {
+      var r = allReviews.filter(function (x) { return String(x.id) === String(id); })[0];
+      var sort = action === 'delete';
+      if (r && !sort) {
+        r.is_approved = action === 'approve';
+        sort = (currentFilter === 'pending' && r.is_approved) || (currentFilter === 'approved' && !r.is_approved);
+      }
+      if (sort) allReviews = allReviews.filter(function (x) { return String(x.id) !== String(id); });
+      if (data && data.resume) {
+        avisResume = data.resume;
+        majPastilles();
+        updateStats();
+      } else {
+        rafraichirResume();
+      }
+      renderReviews();
+      if (!allReviews.length && avisSuite) chargerPlusAvis();
+    }).catch(function (e) {
+      boutons.forEach(function (b) { b.disabled = false; desarmer(b); });
+      if (msg) {
+        msg.textContent = (action === 'delete' ? 'Suppression' : action === 'approve' ? 'Approbation' : 'Retrait')
+          + ' impossible : ' + e.message + '. Réessayez.';
+        msg.classList.add('est-erreur');
+      }
+    });
+  }
+
+  // Les chiffres du haut seuls, quand la réponse d'une action ne les porte
+  // pas (fonction serveur pas encore redéployée).
+  function rafraichirResume() {
+    lireAvis({ limite: 1, resume: 1 }).then(function (page) {
+      if (!page.resume) return;
+      avisResume = page.resume;
+      majPastilles();
+      updateStats();
+    }).catch(function () {});
+  }
+
+  function surClicAvis(e) {
+    if (e.target.closest('[data-avis-reessayer]')) { loadReviews(); return; }
+    var btn = e.target.closest('.admin-action');
+    if (!btn || btn.disabled) return;
+    if (btn.getAttribute('data-action') === 'delete' && !suppressionConfirmee(btn)) return;
+    agirSurAvis(btn);
+  }
+
   function updateStats() {
-    var pending = allReviews.filter(function (r) { return !r.is_approved; }).length;
-    var approved = allReviews.filter(function (r) { return r.is_approved; }).length;
-    var sum = 0;
-    allReviews.forEach(function (r) { sum += r.rating || 0; });
-    var avg = allReviews.length > 0 ? (sum / allReviews.length).toFixed(1) : '-';
+    var r = avisResume;
+    var set = function (id, v) { var el = document.getElementById(id); if (el) el.textContent = v; };
+    set('admin-stat-avg', r && r.moyenne !== null && r.moyenne !== undefined ? Number(r.moyenne).toFixed(1).replace('.', ',') : '-');
+    set('admin-stat-pending', r ? nb(r.attente) : '-');
+    set('admin-stat-approved', r ? nb(r.approuves) : '-');
+    set('admin-filter-all-count', r ? '(' + nb(r.total) + ')' : '');
+    set('admin-filter-pending-count', r ? '(' + nb(r.attente) + ')' : '');
+    set('admin-filter-approved-count', r ? '(' + nb(r.approuves) + ')' : '');
+  }
 
-    document.getElementById('admin-stat-avg').textContent = avg;
-    document.getElementById('admin-stat-pending').textContent = pending;
-    document.getElementById('admin-stat-approved').textContent = approved;
-
-    var allCount = document.getElementById('admin-filter-all-count');
-    var pendingCount = document.getElementById('admin-filter-pending-count');
-    var approvedCount = document.getElementById('admin-filter-approved-count');
-    if (allCount) allCount.textContent = '(' + allReviews.length + ')';
-    if (pendingCount) pendingCount.textContent = '(' + pending + ')';
-    if (approvedCount) approvedCount.textContent = '(' + approved + ')';
+  // Le drapeau de la version de la page sur laquelle l'avis a été laissé.
+  // La langue n'est enregistrée que depuis le 12 octobre 2026.
+  var DRAPEAUX = {
+    fr: ['🇫🇷', 'français'], en: ['🇬🇧', 'anglais'], es: ['🇪🇸', 'espagnol'],
+    de: ['🇩🇪', 'allemand'], it: ['🇮🇹', 'italien']
+  };
+  function drapeau(lang, titre) {
+    var d = DRAPEAUX[lang];
+    if (!d) return '';
+    return '<span class="adm-drapeau" role="img" aria-label="' + d[1] + '" title="' + esc((titre || 'Page en ') + d[1]) + '">' + d[0] + '</span>';
   }
 
   function renderReviews() {
     var list = document.getElementById('admin-reviews-list');
-    var filtered = allReviews;
-
-    if (currentFilter === 'pending') {
-      filtered = allReviews.filter(function (r) { return !r.is_approved; });
-    } else if (currentFilter === 'approved') {
-      filtered = allReviews.filter(function (r) { return r.is_approved; });
-    }
-
-    if (filtered.length === 0) {
+    if (!list) return;
+    majPlusAvis();
+    if (allReviews.length === 0) {
       list.innerHTML = '<p class="text-center text-muted-foreground py-8">Aucun avis</p>';
       return;
     }
 
     var html = '';
-    filtered.forEach(function (r) {
+    allReviews.forEach(function (r) {
       var statusBadge = r.is_approved
         ? '<span class="inline-flex items-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">Approuvé</span>'
         : '<span class="inline-flex items-center rounded-full bg-amber-100 dark:bg-amber-900/30 px-2 py-0.5 text-xs font-medium text-amber-700 dark:text-amber-400">En attente</span>';
 
-      html += '<div class="glass-card rounded-xl p-5 space-y-3">';
+      html += '<div class="glass-card rounded-xl p-5 space-y-3" data-avis="' + esc(String(r.id)) + '">';
       html += '<div class="flex items-center justify-between flex-wrap gap-2">';
-      var quizBadge = '<span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">' + (r.quiz_slug ? esc(nomQuiz(r.quiz_slug)) : 'Général (home)') + '</span>';
-      html += '<div class="flex items-center gap-2 flex-wrap"><span class="font-semibold">' + esc(r.author_name || 'Anonyme') + '</span>' + statusBadge + quizBadge + '</div>';
+      var quizBadge = '<span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">' + (r.quiz_slug ? esc(nomQuiz(canon(r.quiz_slug))) : 'Général (home)') + '</span>';
+      html += '<div class="flex items-center gap-2 flex-wrap"><span class="font-semibold">' + esc(r.author_name || 'Anonyme') + '</span>' + statusBadge + quizBadge + drapeau(r.lang) + '</div>';
       html += '<div class="flex items-center gap-0.5">' + starsHtml(r.rating) + '</div>';
       html += '</div>';
       html += '<p class="text-sm text-muted-foreground">' + formatDate(r.created_at) + '</p>';
@@ -2735,25 +2910,103 @@
       if (r.ip_address) html += '<p class="text-xs text-muted-foreground/60">IP: ' + esc(r.ip_address) + '</p>';
       html += '<div class="flex gap-2 pt-2">';
       if (!r.is_approved) {
-        html += '<button class="admin-action btn btn-sm text-emerald-600 border border-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/20" data-id="' + r.id + '" data-action="approve">Approuver</button>';
+        html += '<button type="button" class="admin-action btn btn-sm text-emerald-600 border border-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/20" data-id="' + esc(String(r.id)) + '" data-action="approve">Approuver</button>';
       } else {
-        html += '<button class="admin-action btn btn-sm text-amber-600 border border-amber-200 hover:bg-amber-50 dark:hover:bg-amber-900/20" data-id="' + r.id + '" data-action="reject">Retirer</button>';
+        html += '<button type="button" class="admin-action btn btn-sm text-amber-600 border border-amber-200 hover:bg-amber-50 dark:hover:bg-amber-900/20" data-id="' + esc(String(r.id)) + '" data-action="reject">Retirer</button>';
       }
-      html += '<button class="admin-action btn btn-sm text-destructive border border-destructive/20 hover:bg-destructive/10" data-id="' + r.id + '" data-action="delete">Supprimer</button>';
+      html += '<button type="button" class="admin-action admin-action--suppr btn btn-sm text-destructive border border-destructive/20 hover:bg-destructive/10" data-id="' + esc(String(r.id)) + '" data-action="delete">Supprimer</button>';
       html += '</div>';
+      html += '<p class="adm-carte-msg" role="status" aria-live="polite"></p>';
       html += '</div>';
     });
 
     list.innerHTML = html;
+  }
 
-    list.querySelectorAll('.admin-action').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var id = this.dataset.id;
-        var action = this.dataset.action;
-        if (action === 'delete' && !confirm('Supprimer cet avis définitivement ?')) return;
-        reviewAction(id, action);
-      });
+  // ── Les pages les plus notées ──
+  // Les vingt pages qui ont reçu le plus d'avis approuvés, hors accueil,
+  // chaque langue à part : le nom de la page en français, le drapeau de la
+  // version notée. admin_avis_par_page (migration 20261012120000) compte
+  // côté base ; pour les avis antérieurs à l'enregistrement de la langue,
+  // elle la devine d'après le commentaire, et l'admin dit combien.
+  var CLASSEMENT_AVIS = 20;
+
+  function chargeClassement() {
+    var el = document.getElementById('admin-avis-classement');
+    if (!el) return;
+    el.innerHTML = '<p class="stats-movers-vide">Chargement...</p>';
+    majNoteClassement('');
+    fetch(urlAvis({ classement: 1 }), {
+      headers: { 'Authorization': 'Bearer ' + SUPABASE_KEY, 'x-admin-token': adminToken }
+    })
+    .then(reponseAvis, erreurReseau)
+    .then(function (data) {
+      if (!data || !('classement' in data)) throw new Error('la fonction admin-reviews n\'est pas encore redéployée');
+      if (!Array.isArray(data.classement)) {
+        throw new Error('la base ne répond pas (' + (data.erreur || 'migration 20261012120000 à appliquer') + ')');
+      }
+      avisClassement = data.classement;
+      renderClassement();
+    })
+    .catch(function (e) {
+      el.innerHTML = '<p class="stats-movers-vide">Classement indisponible : ' + esc(e.message) + '.</p>';
     });
+  }
+
+  function majNoteClassement(texte) {
+    var note = document.getElementById('admin-avis-classement-note');
+    if (!note) return;
+    note.textContent = texte;
+    note.classList.toggle('hidden', !texte);
+  }
+
+  function renderClassement() {
+    var el = document.getElementById('admin-avis-classement');
+    if (!el) return;
+    var par = {}, devinees = 0, inconnues = 0;
+    (avisClassement || []).forEach(function (l) {
+      if (!l.quiz_slug) return;
+      var slug = canon(l.quiz_slug), lang = DRAPEAUX[l.lang] ? l.lang : '';
+      var n = Number(l.nombre) || 0;
+      var k = slug + '|' + lang;
+      if (!par[k]) par[k] = { slug: slug, lang: lang, nombre: 0, somme: 0 };
+      par[k].nombre += n;
+      par[k].somme += Number(l.somme) || 0;
+      if (l.devinee) devinees += n;
+      if (!lang) inconnues += n;
+    });
+    var lignes = Object.keys(par).map(function (k) { return par[k]; }).filter(function (l) { return l.nombre > 0; });
+    lignes.sort(function (a, b) {
+      return (b.nombre - a.nombre) || (b.somme / b.nombre - a.somme / a.nombre)
+        || nomQuiz(a.slug).localeCompare(nomQuiz(b.slug), 'fr');
+    });
+    lignes = lignes.slice(0, CLASSEMENT_AVIS);
+    if (!lignes.length) {
+      el.innerHTML = '<p class="stats-movers-vide">Aucun avis approuvé hors accueil pour l\'instant.</p>';
+      majNoteClassement('');
+      return;
+    }
+    var max = lignes[0].nombre;
+    el.style.setProperty('--rangs', String(Math.ceil(lignes.length / 2)));
+    el.innerHTML = lignes.map(function (l, i) {
+      var marque = l.lang ? drapeau(l.lang)
+        : '<span class="adm-drapeau" role="img" aria-label="langue inconnue" title="Langue inconnue">🌐</span>';
+      return '<div class="stats-row adm-classement-ligne" style="--fam:hsl(var(--primary));--part:' + (l.nombre / max) * 100 + '%">'
+        + '<span class="adm-classement-rang">' + (i + 1) + '</span>'
+        + '<span class="adm-classement-nom"><span class="adm-classement-texte">' + esc(nomQuiz(l.slug)) + '</span>' + marque + '</span>'
+        + '<span class="adm-classement-nb">' + nb(l.nombre) + ' avis</span>'
+        + '<span class="adm-classement-note">' + (l.somme / l.nombre).toFixed(1).replace('.', ',') + '/5 <span aria-hidden="true">⭐</span></span>'
+        + '</div>';
+    }).join('');
+    var parts = [];
+    if (devinees) parts.push('pour ' + nb(devinees) + ' avis, elle est devinée d\'après le commentaire');
+    if (inconnues) {
+      parts.push(nb(inconnues) + ' avis sans commentaire qui permette de la deviner '
+        + (inconnues > 1 ? 'sont comptés' : 'est compté') + ' sous 🌐');
+    }
+    majNoteClassement(parts.length
+      ? 'Jusqu\'à mi-octobre 2026, un avis n\'enregistrait pas la langue de sa page : ' + parts.join(', et ') + '.'
+      : '');
   }
 
   // ── Leads ──
@@ -2906,8 +3159,8 @@
       if (msg.status !== 'archived') {
         html += '<button class="btn btn-sm msg-action" data-action="archived" data-id="' + msg.id + '" style="font-size:0.75rem;color:hsl(var(--muted-foreground));">Archiver</button>';
       }
-      html += '<button class="btn btn-sm msg-action" data-action="delete" data-id="' + msg.id + '" style="font-size:0.75rem;color:hsl(var(--destructive));">Supprimer</button>';
-      html += '</div></div>';
+      html += '<button type="button" class="btn btn-sm msg-action text-destructive" data-action="delete" data-id="' + msg.id + '" style="font-size:0.75rem;">Supprimer</button>';
+      html += '</div><p class="adm-carte-msg" role="status" aria-live="polite"></p></div>';
     });
 
     listEl.innerHTML = html;
@@ -2917,17 +3170,28 @@
       btn.addEventListener('click', function () {
         var id = this.dataset.id;
         var action = this.dataset.action;
+        // Comme pour les avis : la suppression se confirme par un second clic
+        // dans la carte, pas par confirm(), que le navigateur peut taire.
+        if (action === 'delete' && !suppressionConfirmee(this)) return;
         // Aucune de ces deux requêtes ne regardait sa réponse : un jeton
         // expiré, un refus du serveur ou un blocage du navigateur passaient
         // pour un succès, la ligne disparaissait de l'écran et revenait au
         // rechargement suivant. On lit désormais l'issue avant de toucher à
-        // la liste, et on le dit quand ça échoue.
+        // la liste, et on le dit dans la carte quand ça échoue (une alerte
+        // alert() peut, elle aussi, ne jamais s'afficher).
         var bouton = this;
+        var ligne = bouton.closest('[data-msg-id]');
+        var etat = ligne && ligne.querySelector('.adm-carte-msg');
         bouton.disabled = true;
+        if (etat) { etat.textContent = ''; etat.classList.remove('est-erreur'); }
 
         function echec(raison) {
           bouton.disabled = false;
-          alert('Action impossible : ' + raison + '\n\nRechargez la page si le problème persiste.');
+          desarmer(bouton);
+          if (etat) {
+            etat.textContent = 'Action impossible : ' + raison + '. Rechargez la page si le problème persiste.';
+            etat.classList.add('est-erreur');
+          }
         }
 
         function lisReponse(res) {
@@ -2942,7 +3206,7 @@
         }
 
         if (action === 'delete') {
-          if (!confirm('Supprimer ce message ?')) { bouton.disabled = false; return; }
+          bouton.textContent = 'Suppression...';
           fetch(SUPABASE_URL + '/functions/v1/admin-messages', {
             method: 'DELETE',
             headers: {
@@ -3014,7 +3278,14 @@
 
     // Refresh reviews
     var refreshBtn = document.getElementById('admin-refresh');
-    if (refreshBtn) refreshBtn.addEventListener('click', loadReviews);
+    if (refreshBtn) refreshBtn.addEventListener('click', function () { loadReviews(); chargeClassement(); });
+
+    // Les boutons des cartes d'avis : un seul ecouteur pour toute la liste,
+    // pose une fois, que la liste soit redessinee ou non.
+    var listeAvis = document.getElementById('admin-reviews-list');
+    if (listeAvis) listeAvis.addEventListener('click', surClicAvis);
+    var plusAvis = document.getElementById('admin-avis-plus');
+    if (plusAvis) plusAvis.addEventListener('click', chargerPlusAvis);
 
     // Export de tout ce que l'admin sait, sur trente jours
     var exportBtn = document.getElementById('admin-export');
@@ -3026,7 +3297,7 @@
         document.querySelectorAll('.admin-filter').forEach(function (b) { b.classList.remove('active'); });
         this.classList.add('active');
         currentFilter = this.dataset.filter;
-        renderReviews();
+        loadReviews();
       });
     });
 

@@ -426,17 +426,14 @@
       };
       if (comment) submitData.comment = comment.substring(0, 200);
       if (clientIp) submitData.ip_address = clientIp;
+      if (langueAvis(lang)) submitData.lang = langueAvis(lang);
 
-      fetch(SUPABASE_URL + '/rest/v1/reviews', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'apikey': SUPABASE_KEY,
-          'Authorization': 'Bearer ' + SUPABASE_KEY,
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify(submitData)
-      })
+      envoiAvis(SUPABASE_URL + '/rest/v1/reviews', {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Prefer': 'return=minimal'
+      }, submitData)
       .then(function (res) {
         if (res.ok || res.status === 201) {
           showSuccess();
@@ -445,6 +442,27 @@
       .catch(function () {
         showError(t('errorGeneric'));
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = t('submit'); }
+      });
+    });
+  }
+
+  // La langue de la page part avec l'avis (colonne lang, 12 octobre 2026) ;
+  // sans la colonne en base, l'avis repart sans elle. Meme code que dans
+  // quiz-extras.js et quiz-engine-core.js.
+  var LANGUES_AVIS = ['fr', 'en', 'es', 'de', 'it'];
+  function langueAvis(l) {
+    l = String(l || '').slice(0, 2).toLowerCase();
+    return LANGUES_AVIS.indexOf(l) >= 0 ? l : null;
+  }
+  function envoiAvis(url, entetes, corps) {
+    var envoi = function (c) { return fetch(url, { method: 'POST', headers: entetes, body: JSON.stringify(c) }); };
+    return envoi(corps).then(function (r) {
+      if (r.status !== 400 || !corps.lang) return r;
+      return r.clone().json().catch(function () { return null; }).then(function (e) {
+        if (!e || (e.code !== 'PGRST204' && !/'lang'/.test(String(e.message || '')))) return r;
+        var sans = {};
+        Object.keys(corps).forEach(function (k) { if (k !== 'lang') sans[k] = corps[k]; });
+        return envoi(sans);
       });
     });
   }
