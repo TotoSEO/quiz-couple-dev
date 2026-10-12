@@ -52,7 +52,7 @@
                   {
                     "geste": "telephone",
                     "de": 0,
-                    "a": 2.0
+                    "a": 2
                   },
                   {
                     "geste": "regarde",
@@ -63,7 +63,7 @@
                   {
                     "geste": "visage",
                     "de": 2.2,
-                    "a": 3.0,
+                    "a": 3,
                     "yeux": "ouverts",
                     "bouche": "o"
                   },
@@ -87,7 +87,7 @@
           },
           {
             "description": "Gros plan qui se rapproche des deux. Le violet répond par message avec une bulle « u could just say it », les yeux plats, un sourcil haut ; la rose lève la tête vers lui et répond « im too comfy » en haussant les épaules, les joues roses. Ils se regardent et se mettent à rire, chacun avec son téléphone dans la main.",
-            "duree": 4.0,
+            "duree": 4,
             "decor": "salon",
             "moment": "soir",
             "persos": [
@@ -98,14 +98,14 @@
                   {
                     "geste": "tient",
                     "de": 0,
-                    "a": 4.0,
+                    "a": 4,
                     "objet": "telephone",
                     "main": "droite"
                   },
                   {
                     "geste": "regarde",
                     "de": 0.2,
-                    "a": 4.0,
+                    "a": 4,
                     "cible": "violet"
                   },
                   {
@@ -118,12 +118,12 @@
                   {
                     "geste": "parle",
                     "de": 1.9,
-                    "a": 3.0
+                    "a": 3
                   },
                   {
                     "geste": "rit",
-                    "de": 3.0,
-                    "a": 4.0
+                    "de": 3,
+                    "a": 4
                   }
                 ]
               },
@@ -134,7 +134,7 @@
                   {
                     "geste": "tient",
                     "de": 0,
-                    "a": 4.0,
+                    "a": 4,
                     "objet": "telephone",
                     "main": "gauche"
                   },
@@ -161,13 +161,13 @@
                   {
                     "geste": "regarde",
                     "de": 1.9,
-                    "a": 4.0,
+                    "a": 4,
                     "cible": "rose"
                   },
                   {
                     "geste": "rit",
-                    "de": 3.0,
-                    "a": 4.0
+                    "de": 3,
+                    "a": 4
                   }
                 ]
               }
@@ -181,7 +181,7 @@
               },
               {
                 "qui": "rose",
-                "de": 2.0,
+                "de": 2,
                 "a": 3.6,
                 "texte": "im too comfy"
               }
@@ -192,7 +192,7 @@
                 "zoom": 1
               },
               {
-                "a": 4.0,
+                "a": 4,
                 "zoom": 1.25,
                 "x": 540,
                 "y": 1150
@@ -200,7 +200,7 @@
             ]
           },
           {
-            "description": "Le canapé, même lumière. Les deux posent leurs téléphones et se rapprochent au milieu du canapé pour un câlin, la tête de la rose contre l'épaule du violet. À 0,6 s ils ferment les yeux de bonheur, joues roses ; des cœurs montent à partir de 1 s. La caméra se rapproche doucement jusqu'à la fin et une dernière bulle dit « ok that was better <3 ».",
+            "description": "Le canapé, même lumière. Les deux posent leurs téléphones et se rapprochent au milieu du canapé pour un câlin, la tête de la rose contre l'épaule du violet. À 0,6 s ils ferment les yeux de bonheur, joues roses ; des cœurs montent à partir de 1 s. La caméra se rapproche doucement jusqu'à la fin et une dernière bulle dit « ok that was better ».",
             "duree": 4.2,
             "decor": "salon",
             "moment": "soir",
@@ -266,7 +266,7 @@
                   },
                   {
                     "geste": "effet",
-                    "de": 1.0,
+                    "de": 1,
                     "a": 4.2,
                     "effet": "coeurs"
                   }
@@ -277,8 +277,8 @@
               {
                 "qui": "rose",
                 "de": 2.4,
-                "a": 4.0,
-                "texte": "ok that was better <3"
+                "a": 4,
+                "texte": "ok that was better"
               }
             ],
             "camera": [

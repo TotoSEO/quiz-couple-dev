@@ -17,7 +17,7 @@
         "plans": [
           {
             "description": "La chambre la nuit, lumière bleue, lune dans la fenêtre, lampe de chevet allumée, légende « Goodnight ». Dès la première image les deux sont dans le lit, la couette jusqu'au menton, et se sourient. À 1,5 s ils se penchent l'un vers l'autre pour un petit bisou, un cœur sort, puis les deux ferment les yeux de bonheur, joues roses. La caméra se rapproche lentement.",
-            "duree": 4.0,
+            "duree": 4,
             "decor": "chambre",
             "moment": "nuit",
             "persos": [
@@ -47,7 +47,7 @@
                   {
                     "geste": "visage",
                     "de": 3.3,
-                    "a": 4.0,
+                    "a": 4,
                     "yeux": "fermes",
                     "bouche": "chat",
                     "rougit": true
@@ -81,15 +81,15 @@
                   {
                     "geste": "visage",
                     "de": 3.3,
-                    "a": 4.0,
+                    "a": 4,
                     "yeux": "fermes",
                     "bouche": "sourire",
                     "rougit": true
                   },
                   {
                     "geste": "effet",
-                    "de": 2.0,
-                    "a": 4.0,
+                    "de": 2,
+                    "a": 4,
                     "effet": "coeurs"
                   }
                 ]
@@ -103,7 +103,7 @@
                 "zoom": 1
               },
               {
-                "a": 4.0,
+                "a": 4,
                 "zoom": 1.2,
                 "x": 540,
                 "y": 1100
@@ -112,7 +112,7 @@
           },
           {
             "description": "Même chambre, légende « Ok last one ». Le violet rouvre les yeux d'un coup et fait un clin d'œil à la rose, qui rit en secouant la tête ; à 1,5 s ils se penchent encore pour un bisou, des cœurs montent. Le violet garde un sourire malicieux, la rose a les joues très roses. Zoom rapide sur leurs visages à 0,4 s.",
-            "duree": 4.0,
+            "duree": 4,
             "decor": "chambre",
             "moment": "nuit",
             "persos": [
@@ -136,13 +136,13 @@
                   {
                     "geste": "bisou",
                     "de": 1.5,
-                    "a": 3.0,
+                    "a": 3,
                     "avec": "violet"
                   },
                   {
                     "geste": "visage",
-                    "de": 3.0,
-                    "a": 4.0,
+                    "de": 3,
+                    "a": 4,
                     "yeux": "fermes",
                     "bouche": "chat",
                     "rougit": true
@@ -177,19 +177,19 @@
                   {
                     "geste": "bisou",
                     "de": 1.5,
-                    "a": 3.0,
+                    "a": 3,
                     "avec": "rose"
                   },
                   {
                     "geste": "effet",
-                    "de": 2.0,
-                    "a": 4.0,
+                    "de": 2,
+                    "a": 4,
                     "effet": "coeurs"
                   },
                   {
                     "geste": "visage",
-                    "de": 3.0,
-                    "a": 4.0,
+                    "de": 3,
+                    "a": 4,
                     "yeux": "clin",
                     "bouche": "sourire",
                     "rougit": true
@@ -225,13 +225,13 @@
                   {
                     "geste": "visage",
                     "de": 0,
-                    "a": 1.0,
+                    "a": 1,
                     "yeux": "plats",
                     "bouche": "sourire"
                   },
                   {
                     "geste": "rit",
-                    "de": 1.0,
+                    "de": 1,
                     "a": 2.2
                   },
                   {
@@ -260,7 +260,7 @@
                   {
                     "geste": "visage",
                     "de": 0,
-                    "a": 1.0,
+                    "a": 1,
                     "yeux": "brillants",
                     "bouche": "sourire"
                   },
@@ -312,7 +312,7 @@
           "ambiance": "tendre"
         }
       },
-      "legende": "Goodnight. Ok, last one. Seriously, last one.\n\nSave this for a quiet night.",
+      "legende": "Send this to your partner",
       "hashtags": [
         "#couplecomedy",
         "#relationshiphumor",
