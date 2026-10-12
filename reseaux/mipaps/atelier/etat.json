@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-11T09:57:12.944Z",
+  "genere_le": "2026-10-12T03:12:41.289Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-11",
+  "aujourdhui": "2026-10-12",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 19,
+  "reserve_jours": 18,
   "a_remplir": [
     {
       "jour": "2026-10-30",
@@ -1251,6 +1251,21 @@
       "jour": "2027-01-19",
       "creneau": "soir",
       "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-20",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-20",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-20",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
     }
   ],
   "a_corriger": [],
@@ -1325,7 +1340,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "même quand on est pas d'accord, on est dans la même équipe.",
       "erreur": null
     },
@@ -1334,7 +1349,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1379,7 +1394,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "je gère.",
       "erreur": null
     },
@@ -1388,7 +1403,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "je te choisis encore. même avec ta vaisselle.",
       "erreur": null
     },
@@ -1828,7 +1843,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-12",
+      "jour": "2026-10-13",
       "creneau": "matin"
     },
     "mipaps-statique": {
@@ -1836,7 +1851,7 @@
       "creneau": "soir"
     },
     "mipaps-histoire": {
-      "jour": "2026-10-11",
+      "jour": "2026-10-12",
       "creneau": "soir"
     },
     "mipaps-post": {
