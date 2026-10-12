@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-11T09:57:10.137Z",
+  "genere_le": "2026-10-12T03:12:39.154Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-11",
+  "aujourdhui": "2026-10-12",
   "melange": {
     "midi": {
       "1": "connais-tu",
@@ -28,7 +28,7 @@
     },
     "matin": "pov"
   },
-  "reserve_jours": 36,
+  "reserve_jours": 35,
   "a_remplir": [
     {
       "jour": "2026-11-16",
@@ -999,6 +999,21 @@
       "jour": "2027-01-19",
       "creneau": "soir",
       "categorie": "bd"
+    },
+    {
+      "jour": "2027-01-20",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-20",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2027-01-20",
+      "creneau": "soir",
+      "categorie": "pov"
     }
   ],
   "a_corriger": [],
@@ -1118,7 +1133,7 @@
       "creneau": "midi",
       "gabarit": "pov",
       "categorie": "statique",
-      "statut": "conteneur",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1127,7 +1142,7 @@
       "creneau": "soir",
       "gabarit": "citation",
       "categorie": "phrase",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "I'd pick a random Tuesday with you over any party.",
       "erreur": null
     },
@@ -1136,7 +1151,7 @@
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
-      "statut": "rendu",
+      "statut": "conteneur",
       "texte": null,
       "erreur": null
     },
@@ -1172,7 +1187,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: date night?",
       "erreur": null
     },
@@ -1181,7 +1196,7 @@
       "creneau": "soir",
       "gabarit": "bd",
       "categorie": "bd",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2090,7 +2105,7 @@
   "prochain_creneau": {
     "pov": {
       "jour": "2026-10-12",
-      "creneau": "matin"
+      "creneau": "soir"
     },
     "connais-tu": {
       "jour": "2026-10-12",
@@ -2105,7 +2120,7 @@
       "creneau": "midi"
     },
     "phrase": {
-      "jour": "2026-10-11",
+      "jour": "2026-10-17",
       "creneau": "soir"
     },
     "coquin": {
