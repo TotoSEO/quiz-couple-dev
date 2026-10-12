@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-12T03:12:41.289Z",
+  "genere_le": "2026-10-12T10:41:36.238Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -20,38 +20,8 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 18,
+  "reserve_jours": 20,
   "a_remplir": [
-    {
-      "jour": "2026-10-30",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-10-30",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-10-30",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-10-31",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-10-31",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-10-31",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
     {
       "jour": "2026-11-01",
       "creneau": "matin",
@@ -1358,7 +1328,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1367,7 +1337,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "reviens vite stp",
       "erreur": null
     },
@@ -1412,7 +1382,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -1421,7 +1391,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "mon humeur, un jour normal",
       "erreur": null
     },
@@ -1647,7 +1617,7 @@
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
       "statut": "a_rendre",
-      "texte": "j'ai pas besoin de grand-chose. juste toi. et des frites.",
+      "texte": "j'ai pas besoin de grand-chose, juste toi et des frites.",
       "erreur": null
     },
     {
@@ -1838,6 +1808,60 @@
       "statut": "a_rendre",
       "texte": "reste encore un peu",
       "erreur": null
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "encore cinq minutes stp",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-30",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "6 h de crise pour finir sur « c'est pas si grave »",
+      "erreur": null
+    },
+    {
+      "jour": "2026-10-31",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "merci d'être toi",
+      "erreur": null
     }
   ],
   "idees": [],
@@ -1855,7 +1879,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-12",
+      "jour": "2026-10-13",
       "creneau": "midi"
     }
   },
