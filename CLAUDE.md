@@ -30,7 +30,7 @@ npm run build          # Main site → dist/
 - `static-site/js/salon.js` — Mode à distance (chacun sur son téléphone) : codes de partie, QR code, présence, chargé à la demande ; le moteur commun l'appelle via `QuizEngine.chargerSalon`
 - `reseaux/mipaps/` : le second compte Instagram, « Les mipaps » (français, fond blanc, aucun lien avec le site), en place depuis le 8 octobre 2026. `charte/gribouillou.mjs` dessine les deux personnages (le Gribouillou bleu, la Gribouillette rose à fleur ; Eli et Toh dans le lore seulement) en SVG : un rig paramétrique (86 expressions, 25 poses, 30 positions de mains, 80 objets, angle de rotation continu de face à de dos, chaque trait placé en trois dimensions sur le corps, cycle de marche par `foulee`, bras de course sur les poses qui courent, visage qui reste lisible de profil), `charte/scenes.mjs` les scènes à deux et les meubles en perspective, `charte/planches.mjs` le canevas de design (https://claude.ai/artifact/DYX3xFtQBrV4jDUerw8LDH). Règles de DA dans `charte/README.md`, analyse de story.sketchers, nub et bom.seeat et banque d'idées dans `REFERENCES.md`. **Quatre formats, pas de BD** (Thomas) : le studio les rend dans `reseaux/studio/src/mipaps/` (`mipaps-reel` animé par étapes interpolées, où l'angle tient jusqu'à l'étape qui précède son écriture et où un perso ne se tourne jamais en courant : fin de course, arrêt de 0,2 s, puis un petit saut pour se tourner, `rotation` dans `mouvement.ts` ; `mipaps-statique`, `mipaps-carrousel` l'histoire page par page, `mipaps-post` mini, déclaration ou schéma de bureau ; Shantell Sans, cadre automatique sur ce qui est dessiné, bruitages sans aucune voix : rires, pleurs et cris retirés à la demande de Thomas). Le contrôle des recettes est `reseaux/automates/lib/mipaps.mjs` (chaque nom vérifié contre le rig). Le compte est la langue `fr` des tables `social_*` (migration `20261009110000` : posts et idées portent leur langue, unicité (langue, jour, créneau), colonne `melange` par compte, l'accueil du site ne lit que `en`) ; semaine type `MELANGE_MIPAPS` (matin reel animé, midi post, soir histoire ou statique en alternance). L'atelier est `reseaux/mipaps/atelier/` (LIGNE-EDITORIALE, CONSIGNES, `sujets.json`, `exemple-post.json`) ; ses posts vivent sur la branche `mipaps-atelier` (`reseaux/mipaps/atelier/posts/`), lue par social-rendu.yml à côté de `reseaux-atelier`, l'entretien y dépose `etat.json` (`--etat-fr`), et la routine Claude « atelier mipaps » tourne à 6 h 12 (heure de Paris) dans sa propre session permanente. L'onglet Réseaux de l'admin a une barre de comptes (Quiz Couple, Les mipaps) et deux vues (planning en grille serrée, dix jours sans défiler ; publiés à part, lus à la demande), avec mémoire de session par compte. `controler.mjs` reconnaît un post des mipaps à son chemin (`/mipaps/`) et lui applique le même contrôle de style que Quiz Couple (`lib/style.mjs`, appels et fins en français).
 - `static-site/css/styles.css` — Main stylesheet
-- `static-site/templates/pages/admin.ejs`, `static-site/js/admin.js`, `static-site/css/admin.css` — Tableau de bord d'administration (`/admin/`) : coquille plein écran à barre latérale, tuiles, grands graphiques sur canvas, lectures RPC mises en mémoire de session (bouton « Actualiser »). L'onglet ouvert à la connexion est Trafic, premier du menu : `currentTab` dans admin.js, la classe `active` et le panneau visible dans le gabarit disent la même chose. Ses deux premières tuiles portent l'écart avec la période précédente (hier en vue du jour, les sept jours d'avant en vue à sept jours), calculé sur la série quotidienne déjà chargée pour la courbe ; au-delà elle ne remonte pas assez loin et l'étiquette disparaît. Les identifiants du gabarit sont le contrat du script, on ne les renomme pas ; base.ejs n'y met ni en-tête ni pied de page. Un lien « Retour au site » mène à l'accueil de la langue de la page, sous le bouton de connexion et en bas de la barre latérale (réduit à son icône sous 960 px). Au-dessus de lui, le bouton « Exporter » (`exporterTout`, admin.js, 7 octobre 2026) télécharge un JSON de tout ce que l'admin sait sur trente jours (parties finies et lancements par test, trafic par jour, page et source, blog, mode à distance, clics Instagram), en relisant la mémoire de session : Thomas l'envoie pour analyse, le fichier dit lui-même comment se lire, et une fonction absente y laisse son erreur. Le bouton de déploiement manuel a été retiré le 7 octobre 2026, avec la fonction `trigger-deploy` et les secrets `GITHUB_DEPLOY_TOKEN`, `GITHUB_REPO_OWNER`, `GITHUB_REPO_NAME` (une étape de deploy-functions.yml les efface de Supabase) : le site se publie au push sur main et aux reconstructions programmées (scheduled-rebuild.yml), et le bouton « Run workflow » de GitHub Actions reste là pour relancer un build à la main. Le même jour, l'onglet Blog a disparu (Thomas n'avait pas l'usage du classement « Les articles les plus lus ») : la courbe des clics « source préférée » Google a rejoint la fin de l'onglet Trafic, suit sa période et se charge avec ses six agrégats (ids `blog-sourcepref-*` gardés, le script en dépend) ; la fonction `get_blog_articles` et ses deux aides sont retirées de la base par la migration `20261008170000`, le compteur de lectures sous le titre d'un article (`blog-lectures.js`, table `article_lectures`) reste. L'ancien éditeur d'articles de l'admin (fonctions `admin-blog` et `blog-og`, `SEED_ARTICLES` injecté au build) n'avait plus aucun écran dans le gabarit depuis que le blog vit dans le dépôt : son code a été retiré, et deploy-functions.yml supprime les deux fonctions chez Supabase. Mesure : les onglets sont Trafic, Parties et À distance ; l'onglet À distance lit les comptes par page par `chargeSalonParPage`, qui se replie sur `get_salon_counts()` (sans borne de date, la table n'existant que depuis la mise en service du mode) quand `get_salon_counts_depuis` ne répond pas : le 7 octobre 2026 elle dépassait les trois secondes du rôle anon (erreur 57014) et l'onglet restait vide ; la migration `20261008160000_salon_rapide.sql` la rend rapide (borne indexable, et `trafic_fuseau` valide le fuseau en tentant la conversion au lieu de parcourir `pg_timezone_names`, pour toutes les fonctions de trafic).
+- `static-site/templates/pages/admin.ejs`, `static-site/js/admin.js`, `static-site/css/admin.css` — Tableau de bord d'administration (`/admin/`) : coquille plein écran à barre latérale, tuiles, grands graphiques sur canvas, lectures RPC mises en mémoire de session (bouton « Actualiser »), par la fonction serveur `admin-stats` depuis le 11 octobre 2026 (voir « Sécurité de la base »). L'onglet ouvert à la connexion est Trafic, premier du menu : `currentTab` dans admin.js, la classe `active` et le panneau visible dans le gabarit disent la même chose. Ses deux premières tuiles portent l'écart avec la période précédente (hier en vue du jour, les sept jours d'avant en vue à sept jours), calculé sur la série quotidienne déjà chargée pour la courbe ; au-delà elle ne remonte pas assez loin et l'étiquette disparaît. Les identifiants du gabarit sont le contrat du script, on ne les renomme pas ; base.ejs n'y met ni en-tête ni pied de page. Un lien « Retour au site » mène à l'accueil de la langue de la page, sous le bouton de connexion et en bas de la barre latérale (réduit à son icône sous 960 px). Au-dessus de lui, le bouton « Exporter » (`exporterTout`, admin.js, 7 octobre 2026) télécharge un JSON de tout ce que l'admin sait sur trente jours (parties finies et lancements par test, trafic par jour, page et source, blog, mode à distance, clics Instagram), en relisant la mémoire de session : Thomas l'envoie pour analyse, le fichier dit lui-même comment se lire, et une fonction absente y laisse son erreur. Le bouton de déploiement manuel a été retiré le 7 octobre 2026, avec la fonction `trigger-deploy` et les secrets `GITHUB_DEPLOY_TOKEN`, `GITHUB_REPO_OWNER`, `GITHUB_REPO_NAME` (une étape de deploy-functions.yml les efface de Supabase) : le site se publie au push sur main et aux reconstructions programmées (scheduled-rebuild.yml), et le bouton « Run workflow » de GitHub Actions reste là pour relancer un build à la main. Le même jour, l'onglet Blog a disparu (Thomas n'avait pas l'usage du classement « Les articles les plus lus ») : la courbe des clics « source préférée » Google a rejoint la fin de l'onglet Trafic, suit sa période et se charge avec ses six agrégats (ids `blog-sourcepref-*` gardés, le script en dépend) ; la fonction `get_blog_articles` et ses deux aides sont retirées de la base par la migration `20261008170000`, le compteur de lectures sous le titre d'un article (`blog-lectures.js`, table `article_lectures`) reste. L'ancien éditeur d'articles de l'admin (fonctions `admin-blog` et `blog-og`, `SEED_ARTICLES` injecté au build) n'avait plus aucun écran dans le gabarit depuis que le blog vit dans le dépôt : son code a été retiré, et deploy-functions.yml supprime les deux fonctions chez Supabase. Mesure : les onglets sont Trafic, Parties et À distance ; l'onglet À distance lit les comptes par page par `chargeSalonParPage`, qui se replie sur `get_salon_counts()` (sans borne de date, la table n'existant que depuis la mise en service du mode) quand `get_salon_counts_depuis` ne répond pas : le 7 octobre 2026 elle dépassait les trois secondes du rôle anon (erreur 57014) et l'onglet restait vide ; la migration `20261008160000_salon_rapide.sql` la rend rapide (borne indexable, et `trafic_fuseau` valide le fuseau en tentant la conversion au lieu de parcourir `pg_timezone_names`, pour toutes les fonctions de trafic).
 - `static-site/js/audience.js`, `supabase/migrations/20260822120000_page_views.sql`, `supabase/migrations/20260929120000_trafic_agregats.sql` : mesure d'audience maison (une ligne par page vue dans `page_views`, 10 000 par jour fin septembre 2026). **Ce que les chiffres veulent dire** (relu le 7 octobre 2026 à la demande de Thomas) : une visite est un numéro tiré au hasard dans le navigateur, partagé entre les onglets par localStorage, renouvelé après trente minutes sans page vue ou six heures au total, jamais reconduit : « 5 600 visites le 6 octobre » = 5 600 numéros distincts ayant au moins une page vue ce jour-là, heure de Paris ; c'est une visite, pas une personne (trois passages dans la semaine font trois visites, deux téléphones en mode à distance font deux visites), et une visite à cheval sur minuit compte dans les deux journées. Ne sont pas comptés : les robots (`ROBOTS` sur le user agent, `navigator.webdriver`, donc aussi nos propres passages Playwright), les pages dans une iframe (régie, aperçus), `/admin/`, le propriétaire sur les navigateurs où le drapeau `qc-no-track` est posé (automatique à la connexion à l'admin, `?qc-notrack=1` ailleurs), les préchargements de Chrome, et depuis le 7 octobre 2026 toute page chargée dans un onglet caché tant qu'il n'est pas passé au premier plan (préchargement de Safari, onglet d'arrière-plan jamais lu). « Pages vues » compte aussi l'écran de résultat d'un test, enregistré sous `/<page>/resultat/` par resultat-url.js : les pages par visite et la part « une seule page » s'en ressentent, pas les visites. Ce qui manque plutôt que de gonfler : les navigateurs sans JavaScript ou sans stockage (alors chaque page devient une visite), et les envois perdus. Depuis le 29 septembre 2026, les lignes brutes ne sont gardées que 35 jours (`trafic_jours_bruts()`, une seule constante à changer) : une tâche pg_cron (`trafic-entretien`, 2 h 20 UTC, fonction `trafic_entretien()`) condense chaque journée close dans cinq tables `trafic_jour*` (résumé, pages, sources, profondeur, entonnoir, treize mois), puis purge le brut, jamais avant condensation. Les six `get_trafic_*` et `get_blog_articles` lisent les agrégats pour les jours clos et le brut pour la journée en cours, avec les mêmes signatures : admin.js n'a pas changé. Leur paramètre `p_tz` n'est plus lu, les journées sont découpées en Europe/Paris (`trafic_fuseau_agregats()`), et une visite à cheval sur minuit compte dans les deux journées, comme dans la série quotidienne. Le calcul brut vit dans les fonctions `trafic_brut_*` (intervalle `[debut, fin[`), une seule écriture pour la condensation et la lecture. Toutes les bornes de dates comparent `created_at` à un instant calculé une fois : la forme `(created_at AT TIME ZONE tz)::date > jour0` empêche l'index de servir et faisait relire toute la table à chaque appel, jusqu'au dépassement des trois secondes du rôle anon. Les migrations de ce dossier s'appliquent à la main dans Supabase > SQL Editor (le workflow deploy-db.yml n'en applique que quatre anciennes) ; elles sont idempotentes.
 - `fr/*.json` — French translations (quizzes.json, common.json, home.json, gd.json, quiz-*.json)
 - `static-site/templates/pages/custom-quiz.ejs`, `static-site/js/custom-quiz.js`, `supabase/functions/manage-custom-quiz/index.ts` : création de quiz personnalisés (`/creation-quiz-personnalise/`). Depuis septembre 2026, **privés seulement** : un quiz se partage par son lien et expire au bout d'une semaine. La création de quiz publics a été retirée partout (choix de visibilité, liste de la communauté sur la page et sur l'accueil, action `list_public` de la fonction serveur, qui force aussi `is_public` à false et ne sert plus un quiz encore marqué public). La table garde la colonne `is_public` ; le compteur du hero additionne les deux lignes de `custom_quiz_totaux`, les quiz publics d'autrefois comptent dans l'historique.
@@ -59,7 +59,11 @@ critique garde la feuille bloquante.
   build prévient quand l'empreinte de `styles.css` inscrite en tête des
   fichiers n'est plus la bonne ; une feuille périmée ne casse rien (la feuille
   complète corrige tout dans la seconde), elle peut seulement faire manquer
-  une règle récente au premier rendu.
+  une règle récente au premier rendu. Sauf dans un cas : une règle retirée de
+  `styles.css` qui portait `!important` reste dans la feuille critique,
+  écrite dans la page, et l'emporte sur la nouvelle règle pour de bon (le
+  11 octobre 2026, les cartes de prénoms gardaient leur cadre à l'encre). Après
+  avoir retiré des `!important`, on régénère avant de publier.
 - Les états que la couverture ne voit pas (survol, écrans suivants du moteur)
   arrivent avec la feuille complète : un style indispensable dès le premier
   écran doit correspondre à des éléments présents au chargement.
@@ -78,10 +82,27 @@ Le reste de la règle : rien de tiers avant l'affichage. `pub.js` ne demande
 les emplacements qu'à l'événement `load`, jamais dans le premier écran avant
 le premier défilement, le footer compris, et l'interstitiel seulement au résultat ou à l'arrivée depuis une autre page du site ; le fichier de la plateforme de consentement part après
 `DOMContentLoaded` (le talon `__tcfapi` reste en tête) ; GA part au `load`.
-Les images de tête ont deux largeurs (`720/` et 1200 px) et les cartes de
-l'accueil les déclarent en `srcset`. Sur mobile, les animations qui
-repeignent à chaque image (dégradé du titre, halo du bouton pureté) sont
-coupées. Toute lecture de géométrie (`getBoundingClientRect`, `clientWidth`,
+Les images ont des variantes réduites versionnées à côté de l'original :
+720 et 880 px pour les images de tête (`public/quiz/featured/`, originaux de
+1200 px), 720 et 1080 px pour les couvertures du blog (`public/blog/`,
+jusqu'à 1536 px et 132 Ko en moyenne). `srcsetImage` (generate.js) écrit le
+`srcset` avec les seules variantes présentes et la vraie largeur de
+l'original, lue dans l'en-tête WebP ; il sert les cartes et les derniers
+articles de l'accueil, l'image de tête des tests (et son préchargement dans
+base.ejs, qui doit garder les mêmes candidats), la liste du blog, la tête
+d'article (l'image du LCP), les images écrites dans le corps des articles
+(`srcsetImagesArticle`, passée sur le rendu de chaque article), les
+vignettes du plan du site, les cartes du hub des jeux et la figure du test
+de pureté. Cette dernière n'est pas dans le hero mais base.ejs la précharge :
+elle reprend exactement le `srcset` et les `sizes` du préchargement, sinon
+le téléphone téléchargeait la variante préchargée puis l'original. Une nouvelle
+image reçoit ses variantes par `build/variantes-images.cjs` (sharp installé
+hors du dépôt, mode d'emploi en tête du fichier) ; sans elles, elle n'a
+qu'un fichier et pèse simplement plus lourd. Le `sizes` de chaque image
+donne sa largeur affichée relevée dans Chromium : jusqu'au 11 octobre 2026,
+les cartes de l'accueil annonçaient 82vw (320 px sur un écran de 390) pour
+259 px réels, et un téléphone x3 tirait les originaux, 1,8 Mo d'images pour
+la page parcourue contre 700 Ko depuis. Toute lecture de géométrie (`getBoundingClientRect`, `clientWidth`,
 `scrollY`) après une écriture dans le DOM force une mise en page complète :
 lire d'abord, écrire ensuite, comme dans `quiz-slider.js`.
 Dans un gabarit de test ou de jeu, l'include `partials/quiz-featured` (l'image
@@ -119,10 +140,22 @@ règle. Les textes sont `heroScene` dans `{lang}/home.json` ; les SVG en
 ligne ne sont pas candidats au LCP, et la scène n'a aucun fondu depuis
 l'opacité 0 au chargement (le premier écran apparaît en 0,4 s).
 Sous 768 px, les animations infinies qui n'animent ni `transform` ni
-`opacity` (reflet des boutons, halo de la carte d'avis, LED du bouton sources
-Google, point du compteur) sont coupées dans le bloc `@media (max-width:
-767.98px)` de styles.css : elles repeignent à chaque image et PageSpeed les
-compte. Pas de `:has()` sur `body` (le moteur pose `quiz-has-result`). L'état
+`opacity` (dégradé du titre, reflet des boutons, anneaux néon du bouton
+pureté et du bouton sources Google, fond de la carte finale de l'accueil,
+anneau de la scène du hero, halo de la carte d'avis et vague des étoiles,
+point du compteur) sont coupées par le bloc `@media (max-width: 767.98px)`
+qui **ferme styles.css et doit rester le dernier du fichier** : à
+spécificité égale, la dernière règle gagne. Écrit plus haut, sous le titre
+du hero, il ne coupait que le dégradé du titre, et jusqu'au 11 octobre 2026
+tout le reste tournait : au repos, l'accueil occupait le fil principal d'un
+téléphone moyen 9,7 s sur 10 (390 px, processeur ralenti 4x), 13 ms une
+fois le bloc déplacé. Une animation infinie ajoutée qui n'anime ni
+`transform` ni `opacity` y reçoit sa ligne. Au bureau, ces animations
+tournent toujours et coûtent un tiers d'un cœur au repos (2,9 s sur 10
+dès le 5 octobre, 3,3 s depuis la scène du hero) : tant qu'une seule tourne,
+le navigateur refait toute l'image à chaque trame, en couper une ne change
+rien, il faudrait les arrêter ou les recomposer toutes, l'anneau néon du
+menu collé en haut compris. Pas de `:has()` sur `body` (le moteur pose `quiz-has-result`). L'état
 collé de l'en-tête vient d'une sentinelle observée par IntersectionObserver
 (mobile-menu.js), jamais d'une lecture de `scrollY` au chargement.
 Accessibilité : un petit texte en rose prend `hsl(var(--primary-texte))`
@@ -185,11 +218,58 @@ de 39 et 23.
 - `BalanceQuiz` — Un résultat en deux parts qui font cent à elles deux, pas un score sur cent (test « couple ou célibat », prefix `balance`). Chaque question porte son propre poids (2 à 8 points selon ce qu'elle dit de la vie à deux) et les points de chaque réponse sont écrits dans gd.json (`prefix.q{N}{lettre}_pts`), comme un test solo à barème explicite. La part « à deux » est le rapport entre les points pris et la somme des maximums, soit 101 points en tout ; la part « seul » est son complément, les deux font donc toujours exactement cent. Les questions ne sont pas mélangées (elles vont du passé vécu au quotidien puis à la projection) : le chargeur relit la réserve dans l'ordre du fichier, comme le diagnostic. Cinq verdicts (`r{N}_cle/_t/_d/_a` dans gd.json) découpés par `paliers: [22, 42, 58, 78]` sur le pourcentage « à deux », dans quiz-loader.js ; la clé du verdict est ce qui part dans `profil_resultats`. L'affichage (`.bal-*` dans styles.css) met les deux chiffres face à face, turquoise du côté seul et rose du côté à deux, avec la barre partagée en dessous.
 - `AxesQuiz` — Deux axes mesurés séparément, et un verdict qui sort de la FORME du profil, pas d'une tranche de score (test « amour ou attachement », prefix `attache`). Chaque question porte `prefix.q{N}_axe` (`a` = l'élan vers la personne, `b` = ce qui vous retient) et ses points par réponse dans gd.json comme un test solo à barème explicite ; dix questions et cinquante points par axe, posées en alternance, sans mélange (le chargeur relit la réserve dans l'ordre du fichier). Chaque axe est ramené à son propre maximum, donc les deux pourcentages sont indépendants et ne font PAS cent à eux deux, contrairement à `BalanceQuiz`. Cinq profils, dans cet ordre d'évaluation : les deux sous 40 (`fini`), un écart d'au moins 15 en faveur de b (`attachement`) ou de a (`amour`), les deux au-dessus de 60 (`deux`), sinon `melange`. Les seuils sont réglables par `seuils: { bas, haut, ecart }` dans quiz-loader.js ; les fiches sont `p_<cle>_t/_d/_a` dans gd.json, et la clé du profil est ce qui part dans `profil_resultats`. L'affichage (`.axe-*` dans styles.css) empile deux jauges avec leur étiquette et leur chiffre, rose pour l'axe a et violet pour l'axe b.
 - `DureeQuiz` : une durée estimée, pas un score (test « combien de temps vais-je rester célibataire ? », prefix `dureeCelib`, route `testDureeCelibat`, famille Tests célibataires). Vingt questions sans mélange, de la situation (âge, activité, lieu, temps libre) à la vie sociale, aux rencontres puis à ce qu'on ressent. Chaque réponse multiplie la chance de commencer une histoire dans le mois : les multiplicateurs sont dans `facteurs` de la configuration `duree-celibat` (quiz-loader.js), une seule table pour les cinq langues, `m` dans l'ordre des réponses a, b, c... Chance mensuelle p = `base` × exp(`pente` × somme des logarithmes), durée affichée = médiane d'une attente à chance constante, ln 2 / -ln(1 - p), fourchette du 30e au 70e centile, date approximative au mois sous trois ans (à l'année au-delà), « plus de 10 ans » au-dessus de `plafond`. Calage : un profil type (trentaine, un travail, trois sorties par mois, un groupe d'amis) donne 10 mois, le plus sociable 3 mois, une personne sans emploi et sans vie sociale autour de six ans. Le résultat liste les trois réponses qui pèsent le plus dans chaque sens (`q{N}_facteur` dans gd.json pour leur nom) et le levier qui ferait gagner le plus de temps, parmi les questions marquées `levier` (jamais l'âge, le lieu, l'activité ni l'ancienneté du célibat) ; au-dessus du plafond, il cumule jusqu'à quatre changements pour repasser dessous. Cinq verdicts sur la durée (`paliers: [4, 9, 18, 36]` mois, `r{N}_cle/_t/_d/_a`), la clé part dans `profil_resultats`. Les unités sont `moisUn/moisN/anUn/anN` ; l'allemand ajoute `moisNApres/anNApres` (datif après « zwischen », « bei », « statt ») et `versAn` pour l'année seule. Affichage `.dur-*` dans styles.css, turquoise de la famille pour ce qui joue pour, rose pour ce qui freine ; `--celib-texte` est la variante lisible de `--celib` en petit texte, claire en thème sombre.
+- `EchelleQuiz` (engine `echelle`, prefix `compatSex`) : test de compatibilité sexuelle (route `testCompatSexuelle`, famille Tests de couple, octobre 2026). Deux joueurs, vingt questions à quatre réponses rangées d'un bout à l'autre d'une échelle, posées dans l'ordre du fichier (du plus doux au plus intime) ; le genre est demandé pour les mascottes. Chacun répond à toute la série de son côté, le téléphone ne change de main qu'une fois (`relaisSuite`) et rien ne s'affiche avant le résultat ; à distance, le tour par tour commun montre les deux réponses après chaque question. Proximité d'une question = 1 - écart / 3 (même réponse 1, une case d'écart deux tiers) ; `compatSex.q{N}_miroir` lit la réponse de l'autre à l'envers (la question 12, « qui fait le premier pas » : « moi » et « l'autre », c'est d'accord ; « moi » des deux côtés, c'est l'écart). Score = moyenne des vingt, cinq dimensions de quatre questions (`q{N}_axe` : `envie`, `tendresse`, `parole`, `audace`, `rythme`, une question sur cinq chacune), cinq verdicts `r1`..`r5` par `paliers: [55, 70, 80, 90]` (des réponses tirées au hasard donnent environ 58 %). Le résultat : anneau, une jauge par dimension, la dimension la plus accordée (`axe_<id>_fort`) et la moins accordée avec une idée pour en parler (`axe_<id>_parler`), les plus grands écarts (proximité sous 0,6) et toutes les réponses côte à côte dans un bloc replié, le prénom de chacun à la couleur de son personnage. Affichage `.ech-*` dans styles.css ; textes de la page dans `{lang}/quiz-compatibilite-sexuelle.json` (gabarit quiz-generic) ; liens entrants depuis le pilier « intimité » du test de compatibilité amoureuse et le quiz coquin. Le lien vers l'article des cinq langages de l'amour (section 2) reste masqué tant que l'article est programmé (12 décembre 2026), `stripFutureLinks` le retire seul.
+- `DixMaisGame` (engine `dix-mais`, prefix `dixMais`) : le jeu « C'est un 10 mais... » (route `jeuDixMais`, famille Jeux, octobre 2026). Soixante cartes écrites une seule fois pour les deux genres, la variante entre accolades (« {il|elle} est {jaloux|jalouse} », `forme`) ; l'espagnol et l'italien n'ont presque pas d'accolades (sujet sous-entendu), c'est l'accroche qui porte le genre (« Él es un 10, pero... »). Écran de départ : qui est le 10 (un homme, une femme, au hasard : une carte sur deux, compté sur les cartes jouées, 8 et 7 sur une partie de 15), 15, 30 ou toutes les cartes, et la façon de jouer : en secret (relais, celui qui note en premier change à chaque carte, les deux notes révélées ensemble) ou face à face (une rangée de notes chacun sur le même écran). À distance, le tour par tour commun en grille de notes, la forme de chaque carte voyageant dans l'identifiant (id × 10 + forme : 0 il, 1 elle). Résultat : accord à un point près en anneau, les deux moyennes et qui note le plus sévèrement, les trois plus gros écarts (3 points et plus), ce qui est rédhibitoire pour les deux (2 et moins) et ce qui ne dérange personne (8 et plus). Textes `dixMais.*` de gd.json ; la page (`jeu-dix-mais.ejs`, `{lang}/jeu-dix-mais.json`) liste les soixante cartes par thème (`section3.groupes`, `{ titre, de, a }`), une sur deux au féminin. La grille `.notes-*` (pastilles à un sixième de la largeur sur téléphone, six puis cinq) sert aussi au tour par tour ; le reste est en `.dixm-*`. Lien entrant depuis la FAQ du test « Suis-je amoureux ? ».
 - `calculatrice-amour.ejs` — Outil autonome, hors quiz-loader et hors moteur : deux prénoms, un pourcentage, aucune question. Le score est la moyenne pondérée de cinq mesures (lettres partagées 22, méthode historique 26, rythme des voyelles 16, numérologie 22, équilibre des longueurs 14), toutes affichées en barres avec leur explication. Il est déterministe et symétrique : les mêmes prénoms donnent toujours le même résultat et A + B vaut B + A (les deux prénoms sont triés avant le pliage de la méthode historique). Étendue mesurée sur 1 128 paires : 36 à 99 %, médiane 67. La méthode historique compte les lettres du mot amour dans la langue de la page (`calcul.mot` : amour, loves, amor, liebe, amore), donc un même couple n'a pas exactement le même score d'une langue à l'autre, ce que la page explique. Vingt-quatre couples célèbres (`couples` dans `{lang}/calculatrice-amour.json`) remplacent le score et le verdict, jamais le détail des barres. La dose du jour (`dose` : 20 conseils, 20 questions, 20 défis) tourne sur le quantième de l'année, sans rien demander au serveur. Le gabarit ne reçoit que la langue courante : `donneesJs` est construit en EJS, pas les cinq langues d'un coup.
 
 - `quiz-signes-chinois.ejs`, `js/signes-chinois.js`, `{lang}/quiz-signes-chinois.json` : compatibilité amoureuse des signes chinois (route `testSignesChinois`, famille Tests de couple, à côté de la date de naissance). Outil autonome hors moteur, bâti sur le gabarit et les classes (`astro-*`, `dn-*`) de la compatibilité par date de naissance : deux dates complètes (l'année chinoise commence entre le 21 janvier et le 20 février, table `NOUVEL_AN` identique à celle de `date-naissance.js`, les deux fichiers doivent rester d'accord), deux animaux avec élément et polarité, la relation traditionnelle (`trine`, `harmonie`, `meme`, `neutre`, `nuisance`, `opposition`, calcul repris de date-naissance.js), le texte propre à la paire (78 paires dans `paires`, chacune avec sa `note` sur 10, la même dans les cinq langues, écrite dans le helper de génération), le portrait de chaque animal en amour (`portraits`), la relation des éléments avec le sens (`{{de}}` nourrit ou contrôle `{{vers}}`), cinq paliers (`fusion` ≥ 85, `belle` ≥ 70, `solide` ≥ 55, `travail` ≥ 42, `contraires`) et un conseil par relation. Score = note de la paire, plus 0,8 si les éléments se nourrissent, plus 0,3 s'ils sont égaux, moins 0,6 s'ils se contrôlent, borné de 15 à 98 %. Les noms d'animaux, d'éléments et les libellés du formulaire sont repris du fichier `quiz-date-naissance.json` de la même langue. La racine `#sc-outil` est déclarée dans `RACINES_MOTEUR` (quiz-extras.js) pour que les lancements soient comptés, et la carte de résultat porte `quiz-result-card` pour les parties terminées. Encart produit `astro`.
-- `compteur-couple.ejs`, `js/compteur-couple.js`, `{lang}/compteur-couple.json` : compteur de couple (route `compteurCouple`, famille Tests de couple, déclaré dans `ROUTES_OUTILS` comme la calculatrice). Outil autonome hors moteur, sur le gabarit et les classes (`astro-*`, `dn-*`) des outils par date : une date de début (trois listes, pas de valeur par défaut), deux prénoms facultatifs, et la carte donne les jours ensemble en grand, la durée en années, mois et jours (le mois se compte de quantième à quantième, `decomposer`, le 31 devient le 30 ou le 28), six tuiles (semaines, mois, heures, minutes, Saint-Valentin partagées, dimanches), les quatre prochaines dates à fêter triées par proximité (anniversaire avec le nom des noces de la langue, `noces` dans le JSON ; prochain mois rond ; deux prochains caps de `CAPS`, centaines puis milliers jusqu'à 30 000 jours plus quatre caps insolites en heures et en minutes) et le dernier cap franchi. Le jour d'une de ces dates, la carte l'annonce (`fete`). Tous les écarts se comptent en UTC sur des dates à minuit. La date et les prénoms sont gardés dans localStorage (`qc-compteur`) et dans le lien `?depuis=AAAA-MM-JJ&a=&b=` que copie le bouton dédié : au retour ou à l'ouverture du lien, le compteur s'affiche tout seul, sans adresse de résultat ni défilement (`silencieux`), le lien l'emportant sur la mémoire. La racine `#cc-outil` est dans `RACINES_MOTEUR` (quiz-extras.js) et la carte porte `quiz-result-card`. Les styles propres sont les `.cc-*` en fin de styles.css ; comme le compteur peut être déjà affiché au chargement (retour ou lien), les règles du résultat (`.cc-*`, `.dn-verdict`, `.dn-bloc`) sont ajoutées à la main en fin de `css/critique/compteurCouple.css` après chaque `npm run critique`, la couverture ne les voyant pas. Aucun encart produit (les outils hors moteur n'en affichent pas).
+- `compteur-couple.ejs`, `js/compteur-couple.js`, `{lang}/compteur-couple.json` : compteur de durée en couple (« Compteur de couple » jusqu'au 11 octobre 2026, Thomas : « compteur de couple ne veut rien dire » ; le nom est le même dans le H1, le title, la meta, le JSON-LD, le fil d'Ariane, le menu et les deux premiers titres de la page : Relationship duration counter, Contador de tiempo en pareja, Beziehungsdauer-Zähler, Contatore della durata di coppia ; les adresses n'ont pas changé ; le H1 allemand porte une césure conditionnelle, `Beziehungs\u00addauer`, sans quoi un écran de 320 px coupait avant le trait d'union) (route `compteurCouple`, famille Tests de couple, déclaré dans `ROUTES_OUTILS` comme la calculatrice). Outil autonome hors moteur, sur le gabarit et les classes (`astro-*`, `dn-*`) des outils par date : une date de début (trois listes, pas de valeur par défaut), deux prénoms facultatifs, et la carte donne les jours ensemble en grand, la durée en années, mois et jours (le mois se compte de quantième à quantième, `decomposer`, le 31 devient le 30 ou le 28), six tuiles (semaines, mois, heures, minutes, Saint-Valentin partagées, dimanches), les quatre prochaines dates à fêter triées par proximité (anniversaire avec le nom des noces de la langue, `noces` dans le JSON ; prochain mois rond ; deux prochains caps de `CAPS`, centaines puis milliers jusqu'à 30 000 jours plus quatre caps insolites en heures et en minutes) et le dernier cap franchi. Le jour d'une de ces dates, la carte l'annonce (`fete`). Tous les écarts se comptent en UTC sur des dates à minuit. La date et les prénoms sont gardés dans localStorage (`qc-compteur`) et dans le lien `?depuis=AAAA-MM-JJ&a=&b=` que copie le bouton dédié : au retour ou à l'ouverture du lien, le compteur s'affiche tout seul, sans adresse de résultat ni défilement (`silencieux`), le lien l'emportant sur la mémoire. La racine `#cc-outil` est dans `RACINES_MOTEUR` (quiz-extras.js) et la carte porte `quiz-result-card`. Les styles propres sont les `.cc-*` en fin de styles.css ; comme le compteur peut être déjà affiché au chargement (retour ou lien), les règles du résultat (`.cc-*`, `.dn-verdict`, `.dn-bloc`) sont gardées par `npm run critique` lui-même (`GARDER_PAR_CLE` dans `build/critique.mjs`), la couverture ne les voyant pas : recopiées à la main jusqu'au 11 octobre 2026, elles avaient été oubliées dans une régénération du 8 octobre. Aucun encart produit (les outils hors moteur n'en affichent pas).
 - `quiz-tu-preferes.ejs` — Inline `WYRGame` (not part of quiz-loader): 15 or 30 dilemmas, two modes chosen on the setup screen and kept across replays. « Chacun son tour » (`mode='tour'`, default): both players answer on the same phone, relay banner between them, reveal after each dilemma, agreement rate at the end. « Ensemble » (`mode='ensemble'`): one answer per dilemma decided by the couple, no names, no relay, no reveal, result lists the choices with the letter picked. The setup accroche is « Tu préfères ? » (`UI.accroche`); `UI.or` is only the medallion between the two options.
+
+### L'écran de départ des tests et des jeux à deux
+
+Revu le 11 octobre 2026 après la remarque de Thomas sur la compatibilité
+sexuelle : « c'est de la superposition constante, les marges externes sont
+mal gérées et trop courtes », valable pour tous les écrans de prénoms.
+Chaque niveau portait un cadre à l'encre et une ombre portée (l'écran, la
+carte du joueur, la pastille du numéro, le champ, les boutons de genre, la
+pastille du nombre de questions), les cartes étaient inclinées, et sous
+480 px la grille sortait du rembourrage du moteur par des marges négatives
+pour ne garder que 4 px contre son bord.
+
+- **Une seule carte de prénom :** `cartePrenom(o)` (quiz-engine-core.js), en
+  tête la pastille du numéro et le libellé, dessous le champ et, à côté,
+  les deux boutons de genre (`aria-pressed`). Elle sert `cartesDeuxJoueurs`,
+  la carte « moi » du mode à distance (`carteMoi`), DuoMatch, couple sain,
+  parentalité et emménager, coquin, connaissance, et âme sœur et charge
+  mentale à deux ; le quiz ado écrit la même structure en HTML
+  (`carteJoueur`, quiz-ado-multiplayer.js), et « Qui est le plus » ses
+  lignes `.most-joueur` dans le même aplat. Une nouvelle page à deux passe
+  par là, jamais par des cartes écrites à la main.
+- **L'encre reste au cadre :** le contour épais et l'ombre portée sont pour
+  le moteur et le bouton de départ. Dedans, tout est à plat : cartes
+  teintées (rose pour le joueur 1, violet pour le joueur 2, comme les deux
+  personnages), pastille du nombre de questions en aplat rose, encart de
+  mise en garde et interrupteur à distance en aplat neutre. Le champ et les
+  boutons de genre gardent seuls un contour, et le bouton de genre non
+  retenu s'efface quand l'autre est choisi.
+- **Le même ordre partout :** personnages, titre, description, pastille
+  « N questions • M min », mise en garde ou ligne d'aide éventuelle, cartes,
+  options (longueur, façon de jouer), interrupteur à distance, bouton.
+  `ecranDepart` pose la pastille sous la description ; un moteur qui ajoute
+  l'interrupteur l'insère avant `ecran.bouton`, pas avant la pastille.
+  Allumer le mode à distance ne masque plus la pastille.
+- **Les marges :** une colonne sous 720 px, dans le rembourrage du moteur
+  (1,25 rem sous 640 px), deux colonnes au-delà. Plus aucune marge négative.
+- **Les champs :** texte en 16 px (en dessous, Safari sur iPhone zoome la
+  page à la saisie). La règle est écrite `.quiz-engine input.quiz-player-champ`
+  pour l'emporter sur `.quiz-engine input[type="text"]`, qui impose sinon le
+  trait à l'encre et l'ombre au focus.
+- **La ponctuation :** `insecables()` colle « ? ! : ; » à leur mot dans le
+  titre et la description de l'écran de départ (le site écrit une espace
+  ordinaire, et le « ? » d'un titre passait seul à la ligne à 360 px).
+- Styles : section « Écran de départ à deux » en fin de styles.css, juste
+  avant le bloc des animations sur téléphone, qui reste le dernier.
 
 ### Mode à distance (`salon.js`)
 
@@ -201,7 +281,8 @@ amoureux (`DuoMatchQuiz`), couple sain (`HealthyQuiz`), parentalité court et
 complet et emménager (`ParentaliteQuiz`), âme sœur en duo (`PiliersQuiz`),
 charge mentale en duo (`ChargeMentaleQuiz`), je n'ai jamais (`JamaisGame`),
 qui de nous deux (`DuoVoteGame`, vote secret) et qui pourrait
-(`QuiPourraitGame`). Une personne crée la partie (code + QR code + lien
+(`QuiPourraitGame`), et depuis octobre 2026 c'est un 10 mais (`DixMaisGame`) et la
+compatibilité sexuelle (`EchelleQuiz`). Une personne crée la partie (code + QR code + lien
 `?salon=CODE`), l'autre rejoint, et les deux avancent question par question :
 chacun répond sur son écran, attend l'autre, les deux réponses s'affichent
 côte à côte sur la question (pour en parler), puis on ne passe à la suivante
@@ -221,12 +302,17 @@ confirmation et annule pour les deux.
   sa configuration, faire passer `optionsDistance(cfg, pool)` au constructeur
   (chargeur), appeler `reprendrePartieRejointe(this, config)` dans le
   constructeur, poser `zoneDistancePour(this, { formulaire, bouton, meta })`
-  sur l'écran des prénoms, et écrire `demarrerADistance(salon, moi, moiInfo,
+  sur l'écran des prénoms (inséré avant le bouton de départ), et écrire `demarrerADistance(salon, moi, moiInfo,
   partenaireInfo)` qui construit un `TourParTour` avec `question(idx)` (texte
   et options `{ id, texte }`) et `surFin(a, b)` (ranger les deux séries puis
   afficher le résultat). Un moteur qui tire ses questions autrement fournit
   `idsDepart()` et `appliquerTirage(ids)`. `HealthyQuiz.demarrerADistance` est
-  le modèle le plus court.
+  le modèle le plus court. Deux options du tour par tour (octobre 2026) :
+  `verdict(maRep, saRep, rang)` rend `{ texte, accord }`, la phrase sous les
+  deux réponses et sa couleur (une question lue à l'envers a la même lettre
+  des deux côtés sans être un accord) ; une question qui porte `grille: true`
+  et `bornes: [gauche, droite]` s'affiche en pastilles sans lettre (les notes
+  de 0 à 10 du « c'est un 10 mais »), les deux notes écrites dessous.
 - Mesure : `salon.js` émet `qc:salon` (`depart`, `fin`) que `quiz-extras.js`
   enregistre dans `salon_parties` (migration `20260906120000`), deux lignes par
   partie comme il y a deux lancés ; l'admin a un onglet À distance
@@ -237,6 +323,93 @@ confirmation et annule pour les deux.
   code en « Mode DUO ».
 - Les essais sans réseau passent par `window.__QCSalonTransport`, une doublure
   du canal sur `BroadcastChannel` (voir la PR d'origine).
+
+## Sécurité de la base (11 octobre 2026)
+
+Suite de l'audit du 10 octobre 2026. Le site est statique et la clé publique
+(anon) est dans chaque page : tout ce qu'elle peut faire, n'importe qui peut
+le faire. Ce qu'elle peut faire aujourd'hui, et rien d'autre :
+
+- **Écrire** dans les tables de mesure (`page_views`, `quiz_starts`,
+  `quiz_completions`, `salon_parties`, `article_lectures`, `source_pref_clics`,
+  `instagram_clics`), les votes (`oui_non_votes`, `pour_contre_votes`,
+  `dilemme_votes`), `profil_resultats`, `purete_scores` et `reviews` (jamais
+  approuvé d'office). Chaque colonne texte a une borne de taille (contraintes
+  `<table>_<colonne>_taille`, NOT VALID : seules les nouvelles lignes sont
+  contrôlées), loin au-dessus de ce que le site envoie, et le score de pureté
+  est borné (`purete_scores_bornes`). Un nouveau champ écrit par le site
+  reçoit sa borne dans une migration, sinon un seul envoi peut écrire des
+  mégaoctets (plan gratuit : 500 Mo, base pleine = lecture seule).
+- **Lire** les fonctions des pages publiques : `get_quiz_counts`,
+  `get_quiz_total`, `get_quiz_starts_counts`, `get_dilemme_*`,
+  `get_oui_non_counts`, `get_pour_contre_*`, `get_profil_stats`,
+  `get_purete_stats`, `get_custom_quiz_totaux`, `get_article_lectures`,
+  `get_instagram_recents`, `avis_deja_depose`.
+
+Les **statistiques de l'admin** (`get_trafic_*`, `get_quiz_daily*`,
+`get_quiz_starts_total`, `get_quiz_starts_daily_par_quiz`, `get_salon_*`,
+`get_source_pref_*`, `get_instagram_clics`) ne répondent plus à la clé
+publique (migration `20261011130000_stats_admin_privees.sql`) : l'admin les lit
+par la fonction serveur `admin-stats`, qui vérifie le jeton admin et relaie
+l'appel à PostgREST avec la clé de service, réponse comprise telle quelle
+(corps, code, `Content-Range`). Côté navigateur, `appelStats` (admin.js) et
+`chargerClics` (admin-reseaux.js) retombent sur l'appel direct d'avant quand
+`admin-stats` ne répond pas (réponse sans l'en-tête `x-admin-stats`, ou 401).
+Ajouter une statistique à l'admin : l'inscrire dans `FONCTIONS` de
+`admin-stats/index.ts`, ne pas la donner à anon (Supabase accorde EXECUTE à
+anon sur toute fonction créée dans `public` : `REVOKE ... FROM PUBLIC, anon,
+authenticated` dans sa migration) et l'ajouter à la liste de
+`20261011130000`. Une migration qui supprime puis recrée l'une de ces
+fonctions la rouvre (un CREATE OR REPLACE garde les droits) : relancer
+`securite-base.yml`. `20261008150000_instagram_clics.sql`, rejouée par
+social-base.yml à chaque nouvelle migration des réseaux, ne donne plus
+`get_instagram_clics` à anon.
+
+**Application** : `securite-base.yml` applique à la fusion, par l'API de
+gestion de Supabase comme social-base.yml, `20261011110000` et
+`20261011120000` tout de suite, puis `20261011130000` seulement quand le site
+publié sert le nouvel `admin.js` (celui qui appelle `admin-stats`) et que
+`admin-stats?sante=1` répond `ok` (il fabrique un jeton comme verify-admin, le
+vérifie, puis relaie un vrai appel). Sans ces deux signaux en 45 minutes, le
+job échoue sans rien fermer ; le relancer (« Run workflow ») est toujours sans
+risque.
+
+Le reste de ce qui a changé ce jour-là :
+
+- `quiz_ado_sessions` et `quiz_sessions` n'ont plus de règle ni de droit pour
+  anon (lecture, création et modification des parties de l'ancien quiz ado,
+  prénoms, réponses et adresses IP compris) : le quiz ado passe par des canaux
+  Realtime `ado-<code>`, sans table. La fonction `manage-ado-session` est
+  retirée du dépôt et supprimée chez Supabase par deploy-functions.yml.
+- `leads` : plus d'insertion par la clé publique, tout passe par
+  `ebook-verify`, qui contrôle le prénom (60 signes) et l'adresse, limite à dix
+  demandes par heure et par adresse IP, n'envoie pas de second e-mail à la
+  même adresse avant dix minutes (`leads.verification_sent_at`) et garde le
+  même lien d'un e-mail à l'autre (un double clic rendait le premier lien
+  inutilisable).
+- `verify-admin` compte les essais ratés en base (`admin_connexions_ratees` :
+  cinq par adresse en quinze minutes, cent en tout), en plus de la limite en
+  mémoire, qui repartait de zéro à chaque redémarrage. Sans la table, la
+  limite en mémoire reste seule. Le vrai rempart reste un mot de passe long et
+  tiré au hasard (secret `ADMIN_PASSWORD` de Supabase).
+- Le jeton Affilae de l'onglet Affiliation est rangé côté serveur
+  (`admin_reglages`, fonction `admin-reglages`) et non plus dans le
+  `localStorage` du domaine, que lisent les scripts de la régie et de la mesure
+  sur les pages publiques. L'admin ne le garde qu'en mémoire ; un jeton resté
+  dans un navigateur part au serveur à la première ouverture de l'onglet.
+- Les purges (`cleanup_*`, `purge_*`) et `increment_quiz_plays` sont fermées à
+  la clé publique. Un `REVOKE ... FROM anon, authenticated` sans `PUBLIC` ne
+  ferme rien : anon hérite de PUBLIC.
+- `get_article_lectures` (le compteur sous le titre d'un article) répondait
+  une erreur depuis `20261008170000`, qui avait supprimé `est_article_blog`,
+  qu'elle appelait : une fonction SQL n'enregistre pas les fonctions qu'elle
+  appelle comme des dépendances, le DROP passe sans rien dire. Le test est
+  désormais écrit dans la fonction (`20261011110000`). Avant de supprimer une
+  fonction : `select proname from pg_proc where prosrc ilike '%nom%'`.
+- Quelques objets n'existent qu'en production, créés à la main : les tables
+  `quiz_completions` et `dilemme_votes`, les fonctions `get_quiz_counts`,
+  `get_quiz_total`, `get_dilemme_counts`, `get_dilemme_total`. Ils ne sont
+  dans aucun fichier du dépôt (voir RECOVERY.md avant une restauration).
 
 ## UI/UX Design Guidelines
 

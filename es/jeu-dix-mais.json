@@ -1,0 +1,113 @@
+{
+  "jsonLd": {
+    "name": "Es un 10, pero..., el juego para parejas"
+  },
+  "hero": {
+    "badge": "Juego para dos • 60 cartas",
+    "title": "Es un 10, pero...: el juego para hacer en pareja",
+    "titleHighlight": "Es un 10, pero...",
+    "description": "Una persona perfecta y un defecto. Cada uno da su nueva nota del 0 al 10 y luego comparáis. 60 cartas para jugar en secreto, cara a cara o a distancia."
+  },
+  "section1": {
+    "title": "¿Qué es «Es un 10, pero...»?",
+    "p1": "«Es un 10, pero...» es un juego que se puede hacer con amigos o en pareja. Se imagina a una persona perfecta, un 10 sobre 10, y se le añade un defecto. Por ejemplo: «Es un 10, pero le echa kétchup a la pasta carbonara». Luego cada uno dice qué nota le pone ahora.",
+    "p2": "Si mantienes el 10, es que el defecto no te molesta nada. Si bajas a un 2, es que te estropea bastante a la persona... ¡y si pones un 0, queda descartada y ya no hay nada que hacer! La idea viene de una tendencia de TikTok en inglés, «He's a 10 but...», que ha dado la vuelta a las redes. Entre dos, se convierte en uno de esos <a href=\"/es/juegos-para-parejas/\">juegos para hacer en pareja</a>: descubres lo que el otro soporta y lo que le saca de quicio, y la mayoría de las veces acaba en debate.",
+    "p3": "El juego de arriba funciona en el navegador, sin registrarse y sin instalar nada. Basta con un móvil, o con dos si estáis lejos el uno del otro."
+  },
+  "section2": {
+    "title": "Cómo se juega",
+    "intro": "Así funciona nuestro juego de arriba. Antes de empezar, elegís tres cosas: quién es el 10 (un hombre, una mujer o al azar de una carta a otra), el número de cartas (15, 30 o las 60) y la forma de jugar.",
+    "modeSecretEmoji": "🤫",
+    "modeSecretTitre": "En secreto",
+    "modeSecretTexte": "Cada uno pone su nota sin ver la del otro. El móvil pasa de mano en mano y, cuando los dos habéis votado, las dos notas aparecen a la vez. Es la versión más sincera, porque nadie puede copiar al otro.",
+    "modeFaceEmoji": "👀",
+    "modeFaceTitre": "Cara a cara",
+    "modeFaceTexte": "Las dos notas se ponen en la misma pantalla, una fila cada uno. Es más rápido y no hace falta esconderse: veis llegar la nota del otro y la discusión empieza enseguida.",
+    "modeDistanceEmoji": "📱",
+    "modeDistanceTitre": "A distancia",
+    "modeDistanceTexte": "Cada uno juega en su móvil. Uno crea la partida y le manda el código o el enlace al otro, votáis cada uno por vuestro lado y las dos notas aparecen en las dos pantallas. Muy práctico en una videollamada o cuando vivís lejos.",
+    "apres": "Después de cada carta, el juego muestra la diferencia entre vuestras dos notas. Al final veis en cuántas cartas estabais de acuerdo con un punto de diferencia como mucho, quién de los dos pone las notas más duras, vuestros mayores desacuerdos y los defectos que descartan a alguien para los dos."
+  },
+  "section3": {
+    "title": "Las 60 cartas del juego",
+    "intro": "Aquí tenéis todas las cartas, ordenadas por tema. En el juego se barajan y, si elegís «al azar», una de cada dos habla de una mujer. Algunas están para reírse y otras son temas de pareja de verdad, y justo esa mezcla es lo que hace divertida la partida.",
+    "groupes": [
+      {
+        "titre": "En el día a día",
+        "de": 1,
+        "a": 12
+      },
+      {
+        "titre": "En la mesa",
+        "de": 13,
+        "a": 22
+      },
+      {
+        "titre": "Con el móvil",
+        "de": 23,
+        "a": 34
+      },
+      {
+        "titre": "En pareja",
+        "de": 35,
+        "a": 48
+      },
+      {
+        "titre": "Las auténticas red flags",
+        "de": 49,
+        "a": 60
+      }
+    ],
+    "apres": "Si os gusta tomar partido, también hay <a href=\"/es/juego-si-o-no-pareja/\">situaciones de pareja que hay que juzgar con un sí o un no</a>, con los votos de todos los demás jugadores después de cada respuesta."
+  },
+  "section4": {
+    "title": "Cómo poner la nota",
+    "intro": "No hay una regla oficial. La mayoría de la gente vota más o menos así:",
+    "entetes": [
+      "Nota",
+      "Lo que significa"
+    ],
+    "bareme": [
+      [
+        "10",
+        "No cambia nada, hasta tiene su gracia."
+      ],
+      [
+        "7 a 9",
+        "Molesta un poco, pero se vive muy bien con ello."
+      ],
+      [
+        "4 a 6",
+        "Depende. Del resto de la persona y del humor del día."
+      ],
+      [
+        "1 a 3",
+        "Muchas dudas. El resto tendría que compensarlo, y mucho."
+      ],
+      [
+        "0",
+        "Descartado. Ni un 10 se recupera de eso."
+      ]
+    ],
+    "apres": "Lo más interesante suele ser la diferencia entre vuestras dos notas. Cuando uno pone un 9 y el otro un 1 a la misma carta, seguro que hay una historia detrás... ¡o por lo menos una explicación que dar!"
+  },
+  "section5": {
+    "title": "¿Un defecto sin más o una auténtica red flag?",
+    "p1": "El juego mezcla las dos cosas. El kétchup en la pasta o los calcetines por el suelo son el tipo de defecto del que uno se ríe, aunque moleste. Mirar el móvil del otro o no soportar a sus amigos es otra cosa: son <a href=\"/es/blog/red-flags-en-un-hombre/\">señales de alarma que conviene ver a tiempo</a>, tanto en un hombre como en una mujer.",
+    "p2": "Cuando vuestras notas se alejan mucho en una carta de este tipo, merece la pena hablarlo con calma al terminar la partida. Cada uno tiene <a href=\"/es/blog/cosas-no-aceptar-pareja/\">cosas que no acepta en una pareja</a>, y es más fácil conocerlas antes de verse en la situación.",
+    "p3": "Para todo lo demás, que el juego siga siendo ligero. Es un juego, ¡y nadie debería sentirse juzgado por ponerle un 3 a la piña en la pizza!"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿De dónde viene «Es un 10, pero»?",
+    "a1": "De una tendencia de TikTok en inglés, «He's a 10 but...». La idea se ha copiado en todas partes, en español como en otros idiomas: se describe a una persona perfecta, se le añade un defecto y cada uno da su nota.",
+    "q2": "¿Se puede jugar entre más de dos?",
+    "a2": "El juego en línea cuenta las notas de dos personas. Con amigos, nada os impide leer las cartas en voz alta y dar vuestras notas por turnos, funciona muy bien en una fiesta.",
+    "q3": "¿Cuánto dura una partida?",
+    "a3": "Unos diez minutos para 15 cartas cara a cara, algo más en secreto porque el móvil pasa de mano en mano. Las 60 cartas dan para una noche entera, sobre todo si discutís cada nota.",
+    "q4": "¿Por qué elegir entre un hombre y una mujer?",
+    "a4": "Las cartas están escritas para los dos. Según lo que elijáis, la carta dice «Él es un 10, pero...» o «Ella es un 10, pero...». Al azar, cambia de una carta a otra, y suele ser divertido ver si la nota cambia según sea un hombre o una mujer.",
+    "q5": "¿Se guardan nuestras notas?",
+    "a5": "No. Las notas se quedan en vuestro móvil mientras dura la partida y desaparecen al salir de la página. A distancia, pasan de un móvil al otro sin guardarse en ningún sitio."
+  }
+}

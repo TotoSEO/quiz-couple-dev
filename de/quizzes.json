@@ -257,10 +257,10 @@
     "metaDescription": "Seelenverwandtschaft oder nur eine schöne Geschichte? 20 Fragen, ein Wert und ein Ergebnis, das nicht nur schmeichelt. Kostenloser Test, allein oder zu zweit, ohne Anmeldung."
   },
   "jeuxCouple": {
-    "title": "Paarspiele & Beziehungsspiele: 11 kostenlose Spiele",
+    "title": "Paarspiele & Beziehungsspiele: 13 kostenlose Spiele",
     "shortTitle": "Paarspiele",
-    "description": "Elf Spiele für zu zweit: Ja oder Nein, Dafür oder dagegen, Wer könnte, Ich hab noch nie, Wer von uns beiden, Was würdest du lieber, die Dilemmas, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
-    "metaDescription": "11 kostenlose Paarspiele auf einem Handy: Ja oder Nein, Dafür oder dagegen, Wer von uns beiden, Was würdest du lieber, die Dilemmas und Wahrheit oder Pflicht. Ohne Anmeldung."
+    "description": "Dreizehn Spiele für zu zweit: Er ist eine 10 aber, Satz vervollständigen, Ja oder Nein, Dafür oder dagegen, Wer könnte, Ich hab noch nie, Wer von uns beiden, Was würdest du lieber, die Dilemmas, Wahrheit oder Pflicht, die pikante Version, das Strafenrad und das Brettspiel.",
+    "metaDescription": "13 kostenlose Paarspiele auf einem Handy: Ja oder Nein, Dafür oder dagegen, Wer von uns beiden, Was würdest du lieber, die Dilemmas und Wahrheit oder Pflicht. Ohne Anmeldung."
   },
   "jeuGages": {
     "title": "Strafen für Paare: das Glücksrad-Spiel mit 140 Strafen",
@@ -435,15 +435,27 @@
     "metaDescription": "Zwei Geburtsdaten, eure beiden Tiere und ihr Element, und was die chinesische Tradition über euer Paar sagt. Ergebnis sofort, kostenlos und anonym."
   },
   "compteurCouple": {
-    "title": "Beziehungszähler: eure Tage zusammen und die Daten zum Feiern",
-    "shortTitle": "Beziehungszähler",
+    "title": "Beziehungsdauer-Zähler: eure Tage zusammen und die Daten zum Feiern",
+    "shortTitle": "Beziehungsdauer-Zähler",
     "description": "Gebt den Tag ein, an dem alles begann, und der Zähler sagt euch, wie viele Tage ihr zusammen seid, die genaue Dauer und die nächsten Daten zum Feiern.",
-    "metaDescription": "Kostenloser Beziehungszähler: Startdatum eingeben und eure Tage zusammen sehen, die genaue Dauer, die nächsten Jahrestage und Tage-Marken zum Feiern."
+    "metaDescription": "Kostenloser Beziehungsdauer-Zähler: Startdatum eingeben und eure Tage zusammen sehen, die genaue Dauer, die nächsten Jahrestage und Tage-Marken zum Feiern."
   },
   "testDureeCelibat": {
     "title": "Wie lange bleibe ich noch Single? Online-Test",
     "shortTitle": "Wie lange bleibe ich noch Single?",
     "description": "Zwanzig Fragen zu deinem Alltag und eine Schätzung in Monaten, wie lange es noch dauert, bis du jemanden kennenlernst.",
     "metaDescription": "Wie lange bleibst du noch Single? Zwanzig Fragen zu deinem Alter, deinen Abenden, deinen Freunden und deinen Gewohnheiten, und eine Schätzung in Monaten. Kostenloser, anonymer Test."
+  },
+  "jeuDixMais": {
+    "title": "Er ist eine 10, aber... | Das Spiel für Paare (60 Karten)",
+    "shortTitle": "Er ist eine 10, aber...",
+    "metaDescription": "„Er ist eine 10, aber...“ als Paar spielen: ein perfekter Mensch, eine Macke, und jeder gibt eine neue Note von 0 bis 10. 60 Karten, kostenlos, ohne Anmeldung.",
+    "description": "Ein perfekter Mensch mit einer Macke: Jeder gibt eine neue Note von 0 bis 10, dann vergleicht ihr."
+  },
+  "testCompatSexuelle": {
+    "title": "Sexuelle Kompatibilität testen: 20 Fragen für Paare",
+    "shortTitle": "Test sexuelle Kompatibilität",
+    "metaDescription": "Test zur sexuellen Kompatibilität für Paare: 20 Fragen zu Lust, Zärtlichkeit, Neuem und Rhythmus, mit einem Ergebnis pro Bereich. Kostenlos.",
+    "description": "Zwanzig Fragen zu zweit über Lust, Zärtlichkeit und wie ihr darüber redet, um zu sehen, wo ihr euch trefft."
   }
 }

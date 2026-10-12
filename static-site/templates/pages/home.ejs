@@ -64,6 +64,7 @@
     testTrouverAmour: { icon: '🧭', img: 'quiz-amoureux' },
     testCelibataire: { icon: '🔍', img: 'quiz-amoureux' },
     testDureeCelibat: { icon: '⏳', img: 'quiz-amoureux' },
+    testCompatSexuelle: { icon: '🔥', img: 'quiz-coquin' },
     testCoupleOuCelibat: { icon: '🛋️', img: 'quiz-amoureux' },
     testPretRelation: { icon: '🌱', img: 'quiz-amoureux' },
     testSuisJeAmoureux: { icon: '💗', img: 'quiz-amoureux' },
@@ -96,6 +97,7 @@
     jeuQuiPourrait: { icon: '🏆', img: 'quiz-most' },
     jeuOuiNon: { icon: '✅', img: 'quiz-couple-sain' },
     jeuPhrases: { icon: '💬', img: 'quiz-most' },
+    jeuDixMais: { icon: '🔟', img: 'quiz-most' },
   };
   const versCartes = (cles) => cles.map((k) => ({ routeKey: k, key: k, icon: (VISUELS[k] || {}).icon || '💞', img: (VISUELS[k] || {}).img || 'test-couple' }));
   const tests = versCartes(famillesNav.tests);
@@ -355,13 +357,16 @@
 <% } %>
 
 <!-- Quiz Section -->
-<%# Les images de tete existent en deux largeurs (1200 et 720 px, voir
-    QUIZ_FEATURED). Une carte du curseur mesure au plus 340 px : servir le
-    1200 px partout coutait 50 a 60 % du poids de chaque image. Le navigateur
-    choisit d'apres la largeur reelle de la carte a chaque point de rupture
-    (.quiz-slide dans styles.css). %>
-<% const TAILLES_CARTE = '(min-width: 1200px) 286px, (min-width: 900px) 31vw, (min-width: 640px) 46vw, 82vw';
-   function srcsetFeatured(f) { return f ? '/quiz/featured/720/' + f.file + '.webp 720w, /quiz/featured/' + f.file + '.webp 1200w' : ''; } %>
+<%# Les images de tete existent en trois largeurs (720, 880 et 1200 px,
+    srcsetImage dans generate.js). Le navigateur choisit d'apres la largeur
+    de la carte, qu'il faut donc lui donner juste : jusqu'au 11 octobre 2026
+    les tailles annoncaient 82vw sur telephone (320 px a 390 px de large)
+    pour une carte de 259 px, et un ecran x3 tirait l'original de 1200 px
+    (45 Ko) au lieu d'une variante (16 a 20 Ko). Largeurs relevees dans
+    Chromium (.quiz-slide dans styles.css) : 82 % de la piste moins les
+    marges sous 486 px, plafond de 338 px jusqu'a 900 px (entre 640 et 900,
+    la carte fait 260 a 338 px), 31 % au-dessus, 288 px au plus des 1200 px. %>
+<% const TAILLES_CARTE = '(min-width: 1200px) 288px, (min-width: 900px) calc(31vw - 38px), (min-width: 486px) 338px, calc(82vw - 60px)'; %>
 <section id="quiz-section" class="section-padding bg-muted/20">
   <div class="container mx-auto px-4">
     <!-- Section intro -->
@@ -389,7 +394,7 @@
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--test">
               <div class="quiz-bubble-media">
-                <img src="<%= fImg %>"<% if (_f) { %> srcset="<%= srcsetFeatured(_f) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
+                <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
                 <span class="quiz-bubble-chip"><%= item.icon %></span>
               </div>
               <div class="quiz-bubble-body">
@@ -443,7 +448,7 @@
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--celib">
               <div class="quiz-bubble-media">
-                <img src="<%= fImg %>"<% if (_f) { %> srcset="<%= srcsetFeatured(_f) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
+                <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
                 <span class="quiz-bubble-chip"><%= item.icon %></span>
               </div>
               <div class="quiz-bubble-body">
@@ -498,7 +503,7 @@
           <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
             <div class="quiz-bubble-card quiz-bubble-card--quiz">
               <div class="quiz-bubble-media">
-                <img src="<%= fImg %>"<% if (_f) { %> srcset="<%= srcsetFeatured(_f) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
+                <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
                 <span class="quiz-bubble-chip quiz-bubble-chip--quiz"><%= item.icon %></span>
               </div>
               <div class="quiz-bubble-body">
@@ -550,10 +555,10 @@
              const jTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
              const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
              const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : jTitle;
-             const accents = { quizTuPreferes: '270 45% 58%', jeuActionVerite: '340 65% 62%', jeuActionVeriteHot: '12 78% 56%', jeuGages: '190 60% 45%', jeuPlateau: '160 50% 42%', jeuQuiDeNous: '210 60% 52%', jeuDilemmes: '38 85% 52%', pourContre: '338 72% 58%', jeuJamais: '288 55% 52%', jeuQuiPourrait: '152 55% 40%', jeuOuiNon: '0 62% 52%', jeuPhrases: '256 50% 56%' }; %>
+             const accents = { quizTuPreferes: '270 45% 58%', jeuActionVerite: '340 65% 62%', jeuActionVeriteHot: '12 78% 56%', jeuGages: '190 60% 45%', jeuPlateau: '160 50% 42%', jeuQuiDeNous: '210 60% 52%', jeuDilemmes: '38 85% 52%', pourContre: '338 72% 58%', jeuJamais: '288 55% 52%', jeuQuiPourrait: '152 55% 40%', jeuOuiNon: '0 62% 52%', jeuPhrases: '256 50% 56%', jeuDixMais: '46 92% 46%' }; %>
           <a class="jeu-card quiz-slide" href="<%= getLocalizedUrl(item.routeKey, lang) %>" style="--jeu-accent: <%= accents[item.routeKey] || '340 65% 62%' %>">
             <span class="jeu-card-visuel">
-              <img src="<%= fImg %>"<% if (_f) { %> srcset="<%= srcsetFeatured(_f) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" width="600" height="315" loading="lazy" decoding="async">
+              <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" width="600" height="315" loading="lazy" decoding="async">
             </span>
             <span class="jeu-card-corps">
               <span class="jeu-card-emoji" aria-hidden="true"><%= item.icon %></span>
@@ -736,7 +741,11 @@
       <article class="group rounded-2xl overflow-hidden border border-border bg-card/60 shadow-sm hover:shadow-lg transition-shadow duration-300">
         <a href="<%= article.url %>" class="block no-underline" tabindex="-1" aria-hidden="true">
           <div class="blog-img-wrap" style="margin:0">
-            <img src="<%= article.featuredImage %>" alt="<%= escapeHtml(article.featuredImageAlt) %>" class="group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="225">
+            <%# Couvertures de 1536 px (132 Ko en moyenne) affichees a 356 px sur
+                telephone : les variantes 720 et 1080 px les remplacent.
+                Largeurs relevees : la colonne entiere moins 34 px sous 640 px,
+                480 px jusqu'a 768, puis trois colonnes, 350 px au plus. %>
+            <img src="<%= article.featuredImage %>"<% if (srcsetImage(article.featuredImage)) { %> srcset="<%= srcsetImage(article.featuredImage) %>" sizes="(min-width: 1152px) 350px, (min-width: 768px) calc((100vw - 102px) / 3), (min-width: 640px) 480px, calc(100vw - 34px)"<% } %> alt="<%= escapeHtml(article.featuredImageAlt) %>" class="group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="225">
           </div>
         </a>
         <div class="p-5 space-y-3">

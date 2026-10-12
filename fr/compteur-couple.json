@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "Outil gratuit",
-    "title": "Compteur de couple : depuis combien de temps êtes-vous ensemble ?",
-    "highlight": "Compteur de couple",
+    "title": "Compteur de durée en couple : depuis combien de temps êtes-vous ensemble ?",
+    "highlight": "Compteur de durée en couple",
     "description": "Entrez la date de votre premier jour à deux. Le compteur vous donne <strong>le nombre de jours ensemble</strong>, la durée en années, mois et jours, et les prochaines dates à fêter : anniversaire, mois ronds, cap des 1 000 jours... Avec un lien à garder pour revenir voir le chiffre monter.",
     "subtitle": "Aucune inscription. La date reste dans votre téléphone, rien n'est envoyé."
   },
@@ -242,8 +242,8 @@
     "bouton": "Faire le test amour ou habitude"
   },
   "section1": {
-    "title": "Qu'est-ce qu'un compteur de couple ?",
-    "p1": "Un compteur de couple, c'est un outil tout simple : vous entrez la date à laquelle votre histoire a commencé, et il vous dit depuis combien de temps vous êtes ensemble. Il ne compte pas seulement en années, comme on répond quand on nous pose la question, mais en jours, en semaines, en mois, et même en heures. Par exemple, un couple qui s'est formé le 14 mai 2023 passe les 1 200 jours ensemble à l'automne 2026. Dit comme ça, ça fait tout de suite autre chose que « trois ans et quelques ».",
+    "title": "Qu'est-ce qu'un compteur de durée en couple ?",
+    "p1": "Un compteur de durée en couple, c'est un outil tout simple : vous entrez la date à laquelle votre histoire a commencé, et il vous dit depuis combien de temps vous êtes ensemble. Il ne compte pas seulement en années, comme on répond quand on nous pose la question, mais en jours, en semaines, en mois, et même en heures. Par exemple, un couple qui s'est formé le 14 mai 2023 passe les 1 200 jours ensemble à l'automne 2026. Dit comme ça, ça fait tout de suite autre chose que « trois ans et quelques ».",
     "p2": "Le principe existe depuis longtemps sur les applications de couple, où le chiffre s'affiche sur l'écran d'accueil et monte d'un cran chaque matin. Ici, c'est la même chose, sans rien installer : la page garde votre date dans votre navigateur, et à chaque visite le compteur est à jour. Vous pouvez aussi copier un lien qui contient la date et vos prénoms, le mettre en favori ou l'envoyer à l'autre.",
     "p3": "Et comme un chiffre tout seul ne fait pas grand-chose, le compteur vous dit aussi ce qui arrive : le prochain anniversaire avec le nom des noces qui va avec, le prochain mois rond, et les caps de jours qu'on ne voit jamais venir, les 500 jours, les 1 000 jours, les 10 000 heures. Ça donne des occasions de fêter quelque chose en dehors des dates habituelles, et c'est souvent celles-là qu'on retient !"
   },
@@ -452,8 +452,8 @@
     "tip": "Mettez le compteur en favori sur vos deux téléphones, avec le même lien. Celui qui remarque le cap le premier a gagné le droit de choisir le restaurant."
   },
   "faq": {
-    "title": "Vos questions sur le compteur de couple",
-    "q1": "Le compteur de couple est-il gratuit ?",
+    "title": "Vos questions sur le compteur de durée en couple",
+    "q1": "Le compteur de durée en couple est-il gratuit ?",
     "a1": "Oui, entièrement, sans inscription ni adresse e-mail. Vous pouvez le refaire autant de fois que vous voulez, pour votre couple ou pour celui de vos parents, par curiosité.",
     "q2": "Où est enregistrée notre date ?",
     "a2": "Dans votre navigateur seulement, sur l'appareil que vous utilisez. Rien n'est envoyé sur un serveur. Si vous effacez les données de navigation, la date part avec : d'où le lien à copier, qui la contient et vous permet de la retrouver n'importe où.",
@@ -467,7 +467,7 @@
     "a6": "Bien sûr. Une amitié, un mariage, la date d'arrivée d'un animal à la maison, le jour où vous avez arrêté de fumer... Il compte des jours depuis une date, le reste dépend de ce que vous y mettez. Les noces et la Saint-Valentin auront simplement moins de sens !"
   },
   "jsonLd": {
-    "name": "Compteur de couple",
+    "name": "Compteur de durée en couple",
     "about": "Nombre de jours passés ensemble depuis une date de début, et prochaines dates à fêter"
   }
 }

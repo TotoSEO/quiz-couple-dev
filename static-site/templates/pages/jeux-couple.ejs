@@ -17,7 +17,8 @@
     { routeKey: 'jeuJamais',          cle: 'jamais',           emoji: '🙊', accent: '288 55% 52%', img: 'jamais-doigts-leves' },
     { routeKey: 'jeuQuiPourrait',     cle: 'quiPourrait',      emoji: '🏆', accent: '152 55% 40%', img: 'qui-pourrait-duel' },
     { routeKey: 'jeuOuiNon',          cle: 'ouiNon',           emoji: '✅', accent: '0 62% 52%',   img: 'oui-non-vote' },
-    { routeKey: 'jeuPhrases',         cle: 'phrases',          emoji: '💬', accent: '256 50% 56%', img: 'deux-bulles-phrase' }
+    { routeKey: 'jeuPhrases',         cle: 'phrases',          emoji: '💬', accent: '256 50% 56%', img: 'deux-bulles-phrase' },
+    { routeKey: 'jeuDixMais',         cle: 'dixMais',          emoji: '🔟', accent: '46 92% 46%',  img: 'macaron-fendu' }
   ].map(function(j) {
     j.url = getLocalizedUrl(j.routeKey, lang);
     // L'image de tete est celle de QUIZ_FEATURED (build/config.js), la meme
@@ -118,7 +119,11 @@
       <% jeux.forEach(function(j) { %>
       <a class="jeu-card" href="<%= j.url %>" style="--jeu-accent: <%= j.accent %>">
         <span class="jeu-card-visuel">
-          <img src="/quiz/featured/<%= j.img %>.webp" alt="<%= escapeHtml(j.alt) %>" width="600" height="315" loading="lazy" decoding="async">
+          <%# Variantes 720/880 des images de tête ; largeurs relevées : la page
+              moins 34 px sous 640 px, deux colonnes jusqu'à 1100 px, puis
+              quatre de 252 px (.jeux-board dans styles.css). %>
+          <% const srcJeu = '/quiz/featured/' + j.img + '.webp'; %>
+          <img src="<%= srcJeu %>"<% if (srcsetImage(srcJeu)) { %> srcset="<%= srcsetImage(srcJeu) %>" sizes="(min-width: 1100px) 252px, (min-width: 640px) calc((100vw - 60px) / 2), calc(100vw - 34px)"<% } %> alt="<%= escapeHtml(j.alt) %>" width="600" height="315" loading="lazy" decoding="async">
           <% if (j.adultes) { %><span class="jeu-card-flag"><%= t(ns + ':jeux.adultes', '18+') %></span><% } %>
         </span>
         <span class="jeu-card-corps">

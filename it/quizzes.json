@@ -257,10 +257,10 @@
     "metaDescription": "Anima gemella o solo una bella storia? 20 domande, un indice e un verdetto che non si limita a lusingare. Test gratuito, da solo o in due, senza registrazione."
   },
   "jeuxCouple": {
-    "title": "Giochi di coppia online: 11 giochi gratis da fare in due",
+    "title": "Giochi di coppia online: 13 giochi gratis da fare in due",
     "shortTitle": "Giochi di coppia",
-    "description": "Undici giochi da fare in due: il sì o no, pro o contro, chi potrebbe, non ho mai, chi di noi due, preferiresti, i dilemmi, obbligo o verità, la versione piccante, la ruota delle penitenze e il tabellone.",
-    "metaDescription": "11 giochi di coppia gratis su un solo telefono: sì o no, pro o contro, chi di noi due, preferiresti, i dilemmi, obbligo o verità e la ruota delle penitenze. Senza registrazione."
+    "description": "Tredici giochi da fare in due: è un 10 ma, le frasi da completare, il sì o no, pro o contro, chi potrebbe, non ho mai, chi di noi due, preferiresti, i dilemmi, obbligo o verità, la versione piccante, la ruota delle penitenze e il tabellone.",
+    "metaDescription": "13 giochi di coppia gratis su un solo telefono: sì o no, pro o contro, chi di noi due, preferiresti, i dilemmi, obbligo o verità e la ruota delle penitenze. Senza registrazione."
   },
   "jeuGages": {
     "title": "Penitenze di coppia: il gioco della ruota, 140 penitenze",
@@ -435,15 +435,27 @@
     "metaDescription": "Due date di nascita, i vostri due animali e quello che la tradizione cinese dice della vostra coppia. Risultato immediato, gratuito e anonimo."
   },
   "compteurCouple": {
-    "title": "Contatore di coppia: giorni insieme e date da festeggiare",
-    "shortTitle": "Contatore di coppia",
+    "title": "Contatore della durata di coppia: giorni insieme e date da festeggiare",
+    "shortTitle": "Contatore della durata di coppia",
     "description": "Scrivete la data in cui è iniziato tutto e il contatore vi dice quanti giorni state insieme, la durata esatta e le prossime date da festeggiare.",
-    "metaDescription": "Contatore di coppia gratis: inserite la data d'inizio e vedete i giorni insieme, la durata esatta, i prossimi anniversari e traguardi da festeggiare."
+    "metaDescription": "Contatore della durata di coppia gratis: inserite la data d'inizio e vedete i giorni insieme, la durata esatta, i prossimi anniversari e traguardi da festeggiare."
   },
   "testDureeCelibat": {
     "title": "Quanto tempo resterò single? Test online",
     "shortTitle": "Quanto tempo resterò single?",
     "description": "Venti domande sulla tua vita di tutti i giorni e una stima in mesi del tempo che ti resta prima di conoscere qualcuno.",
     "metaDescription": "Quanto tempo resterai ancora single? Venti domande sulla tua età, le tue uscite, i tuoi amici e le tue abitudini, e una stima in mesi. Test gratuito e anonimo."
+  },
+  "jeuDixMais": {
+    "title": "È un 10, ma... | Il gioco di coppia (60 carte)",
+    "shortTitle": "È un 10, ma...",
+    "metaDescription": "Il gioco «È un 10, ma...» in coppia: una persona perfetta, un difetto, e ognuno dà il suo nuovo voto da 0 a 10. 60 carte, in segreto o a distanza. Gratis.",
+    "description": "Una persona perfetta e un difetto: ognuno dà il suo nuovo voto da 0 a 10, poi confrontate."
+  },
+  "testCompatSexuelle": {
+    "title": "Test di compatibilità sessuale di coppia: 20 domande in due",
+    "shortTitle": "Test di compatibilità sessuale",
+    "metaDescription": "Test di compatibilità sessuale in coppia: 20 domande su desiderio, tenerezza, novità e ritmo, con un punteggio per dimensione. Gratis.",
+    "description": "Venti domande in due sul desiderio, la tenerezza e il modo di parlarne, per vedere dove vi incontrate."
   }
 }

@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "Herramienta gratuita",
-    "title": "Contador de pareja: ¿cuánto tiempo lleváis juntos?",
-    "highlight": "Contador de pareja",
+    "title": "Contador de tiempo en pareja: ¿cuánto tiempo lleváis juntos?",
+    "highlight": "Contador de tiempo en pareja",
     "description": "Escribid la fecha de vuestro primer día en pareja. El contador os da <strong>el número de días juntos</strong>, la duración exacta en años, meses y días, y las próximas fechas que celebrar: aniversario, meses redondos, la meta de los 1.000 días... Con un enlace para guardar y volver a ver cómo sube la cifra.",
     "subtitle": "Sin registro. La fecha se queda en vuestro teléfono, no se envía nada."
   },
@@ -242,8 +242,8 @@
     "bouton": "Hacer el test amor o costumbre"
   },
   "section1": {
-    "title": "¿Qué es un contador de pareja?",
-    "p1": "Un contador de pareja es una herramienta muy sencilla: escribís la fecha en que empezó vuestra historia y os dice cuánto tiempo lleváis juntos. No cuenta solo en años, como respondemos cuando nos lo preguntan, sino en días, en semanas, en meses e incluso en horas. Por ejemplo, una pareja que empezó el 14 de mayo de 2023 pasa de los 1.200 días juntos en otoño de 2026. Dicho así, suena bastante distinto a «tres años y algo».",
+    "title": "¿Qué es un contador de tiempo en pareja?",
+    "p1": "Un contador de tiempo en pareja es una herramienta muy sencilla: escribís la fecha en que empezó vuestra historia y os dice cuánto tiempo lleváis juntos. No cuenta solo en años, como respondemos cuando nos lo preguntan, sino en días, en semanas, en meses e incluso en horas. Por ejemplo, una pareja que empezó el 14 de mayo de 2023 pasa de los 1.200 días juntos en otoño de 2026. Dicho así, suena bastante distinto a «tres años y algo».",
     "p2": "La idea existe desde hace tiempo en las aplicaciones de pareja, donde la cifra aparece en la pantalla de inicio y sube un punto cada mañana. Aquí es lo mismo, sin instalar nada: la página guarda vuestra fecha en el navegador y, en cada visita, el contador está al día. También podéis copiar un enlace que lleva la fecha y vuestros nombres, ponerlo en favoritos o enviárselo al otro.",
     "p3": "Y como una cifra sola no hace gran cosa, el contador también os dice lo que viene: el próximo aniversario con el nombre de las bodas que le corresponde, el próximo mes redondo y las metas de días que nunca se ven venir, los 500 días, los 1.000 días, las 10.000 horas. Da ocasiones para celebrar algo fuera de las fechas de siempre, ¡y muchas veces son esas las que se recuerdan!"
   },
@@ -452,8 +452,8 @@
     "tip": "Poned el contador en favoritos en vuestros dos teléfonos, con el mismo enlace. Quien vea la meta primero se gana el derecho a elegir el restaurante."
   },
   "faq": {
-    "title": "Vuestras preguntas sobre el contador de pareja",
-    "q1": "¿El contador de pareja es gratis?",
+    "title": "Vuestras preguntas sobre el contador de tiempo en pareja",
+    "q1": "¿El contador de tiempo en pareja es gratis?",
     "a1": "Sí, del todo, sin registro ni correo electrónico. Podéis usarlo tantas veces como queráis, para vuestra pareja o para la de vuestros padres, por curiosidad.",
     "q2": "¿Dónde se guarda nuestra fecha?",
     "a2": "Solo en vuestro navegador, en el aparato que estáis usando. No se envía nada a ningún servidor. Si borráis los datos de navegación, la fecha se va con ellos: de ahí el enlace para copiar, que la contiene y permite recuperarla en cualquier sitio.",
@@ -467,7 +467,7 @@
     "a6": "Claro. Una amistad, una boda, el día en que llegó una mascota a casa, el día en que dejasteis de fumar... Cuenta días desde una fecha, el resto depende de lo que pongáis. ¡Las bodas y los San Valentín simplemente tendrán menos sentido!"
   },
   "jsonLd": {
-    "name": "Contador de pareja",
+    "name": "Contador de tiempo en pareja",
     "about": "Número de días pasados juntos desde una fecha de inicio, y próximas fechas que celebrar"
   }
 }

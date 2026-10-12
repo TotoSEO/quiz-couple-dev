@@ -1,8 +1,8 @@
 {
   "hero": {
     "badge": "Strumento gratuito",
-    "title": "Contatore di coppia: da quanto tempo state insieme?",
-    "highlight": "Contatore di coppia",
+    "title": "Contatore della durata di coppia: da quanto tempo state insieme?",
+    "highlight": "Contatore della durata di coppia",
     "description": "Inserite la data del vostro primo giorno in coppia. Il contatore vi dà <strong>il numero di giorni insieme</strong>, la durata esatta in anni, mesi e giorni, e le prossime date da festeggiare: anniversario, mesi tondi, il traguardo dei 1.000 giorni... Con un link da tenere, per tornare a vedere la cifra che sale.",
     "subtitle": "Nessuna registrazione. La data resta sul vostro telefono, non viene inviato niente."
   },
@@ -242,8 +242,8 @@
     "bouton": "Fare il test amore o abitudine"
   },
   "section1": {
-    "title": "Che cos'è un contatore di coppia?",
-    "p1": "Un contatore di coppia è uno strumento molto semplice: inserite la data in cui è iniziata la vostra storia e vi dice da quanto tempo state insieme. Non conta solo in anni, come si risponde quando ce lo chiedono, ma in giorni, in settimane, in mesi e persino in ore. Per esempio, una coppia nata il 14 maggio 2023 supera i 1.200 giorni insieme nell'autunno del 2026. Detto così, suona ben diverso da «tre anni e qualcosa».",
+    "title": "Che cos'è un contatore della durata di coppia?",
+    "p1": "Un contatore della durata di coppia è uno strumento molto semplice: inserite la data in cui è iniziata la vostra storia e vi dice da quanto tempo state insieme. Non conta solo in anni, come si risponde quando ce lo chiedono, ma in giorni, in settimane, in mesi e persino in ore. Per esempio, una coppia nata il 14 maggio 2023 supera i 1.200 giorni insieme nell'autunno del 2026. Detto così, suona ben diverso da «tre anni e qualcosa».",
     "p2": "L'idea esiste da tempo nelle app di coppia, dove la cifra sta nella schermata iniziale e sale di uno ogni mattina. Qui è la stessa cosa, senza installare niente: la pagina tiene la vostra data nel browser e, a ogni visita, il contatore è aggiornato. Potete anche copiare un link che contiene la data e i vostri nomi, metterlo tra i preferiti o mandarlo all'altro.",
     "p3": "E siccome una cifra da sola non fa granché, il contatore vi dice anche cosa arriva: il prossimo anniversario con il nome delle nozze che gli corrisponde, il prossimo mese tondo e i traguardi di giorni che non si vedono mai arrivare, i 500 giorni, i 1.000 giorni, le 10.000 ore. Dà occasioni per festeggiare qualcosa fuori dalle date solite, e spesso sono proprio quelle che si ricordano!"
   },
@@ -452,8 +452,8 @@
     "tip": "Mettete il contatore tra i preferiti su entrambi i telefoni, con lo stesso link. Chi si accorge del traguardo per primo si guadagna il diritto di scegliere il ristorante."
   },
   "faq": {
-    "title": "Le vostre domande sul contatore di coppia",
-    "q1": "Il contatore di coppia è gratuito?",
+    "title": "Le vostre domande sul contatore della durata di coppia",
+    "q1": "Il contatore della durata di coppia è gratuito?",
     "a1": "Sì, del tutto, senza registrazione né indirizzo e-mail. Potete usarlo quante volte volete, per la vostra coppia o per quella dei vostri genitori, per curiosità.",
     "q2": "Dove viene salvata la nostra data?",
     "a2": "Solo nel vostro browser, sul dispositivo che state usando. Non viene inviato niente a nessun server. Se cancellate i dati di navigazione, la data se ne va con loro: da qui il link da copiare, che la contiene e permette di ritrovarla ovunque.",
@@ -467,7 +467,7 @@
     "a6": "Certo. Un'amicizia, un matrimonio, il giorno in cui è arrivato un animale in casa, il giorno in cui avete smesso di fumare... Conta i giorni da una data, il resto dipende da cosa ci mettete. Le nozze e i San Valentino avranno semplicemente meno senso!"
   },
   "jsonLd": {
-    "name": "Contatore di coppia",
+    "name": "Contatore della durata di coppia",
     "about": "Numero di giorni passati insieme da una data d'inizio, e prossime date da festeggiare"
   }
 }

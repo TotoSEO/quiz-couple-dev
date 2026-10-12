@@ -293,11 +293,17 @@
       '<h2 class="text-2xl font-bold mb-3 text-center"><span class="quiz-setup-h2-txt">' + esc(titre) + '</span></h2>' +
       (desc ? '<p class="text-muted-foreground mb-8 text-center">' + esc(desc) + '</p>' : '');
   }
-  function carteJoueur(num, inputId, valeur) {
-    return '<div class="quiz-player-card">' +
-      '<div class="quiz-player-number">' + num + '</div>' +
-      '<label class="block text-sm font-semibold mb-2 text-center" for="' + inputId + '">' + esc(t('joueur')) + ' ' + num + '</label>' +
-      '<input id="' + inputId + '" type="text" class="input w-full" placeholder="' + esc(t('prenomCourt')) + '" maxlength="30" autocomplete="off" value="' + esc(valeur || '') + '" />' +
+  // La carte de prenom du moteur commun (cartePrenom), ecrite en HTML : la
+  // pastille du numero et le libelle en tete, le champ dessous.
+  function carteJoueur(num, inputId, valeur, libelle, champ) {
+    return '<div class="quiz-player-card quiz-player-card--j' + num + '">' +
+      '<div class="quiz-player-tete">' +
+        '<span class="quiz-player-number" aria-hidden="true">' + num + '</span>' +
+        '<label class="quiz-player-libelle" for="' + inputId + '">' + esc(libelle || (t('joueur') + ' ' + num)) + '</label>' +
+      '</div>' +
+      '<div class="quiz-player-ligne">' +
+        '<input id="' + inputId + '" type="text" class="input quiz-player-champ" placeholder="' + esc(champ || t('prenomCourt')) + '" maxlength="30" autocomplete="off" value="' + esc(valeur || '') + '" />' +
+      '</div>' +
     '</div>';
   }
   function progression(courant, total, droite) {
@@ -498,12 +504,12 @@
     container.innerHTML =
       '<div class="quiz-engine quiz-setup-screen animate-fade-in">' +
         enTete(ICONE_TEL, t('localBtn'), t('localDesc')) +
-        '<div class="quiz-setup-grid max-w-lg mx-auto">' +
+        '<div class="quiz-setup-meta">' + esc(t('metaQuestions').replace('{{n}}', totalQ)) + '</div>' +
+        '<div class="quiz-setup-grid">' +
           carteJoueur(1, 'name1', state.name1) +
           carteJoueur(2, 'name2', state.name2) +
         '</div>' +
         (state.error ? '<p class="ado-erreur">' + esc(state.error) + '</p>' : '') +
-        '<div class="quiz-setup-meta">' + esc(t('metaQuestions').replace('{{n}}', totalQ)) + '</div>' +
         '<button id="btn-go" type="button" class="btn btn-cta btn-lg quiz-setup-start-btn">' + esc(t('startLocal')) + '</button>' +
         backBtn() +
       '</div>';
@@ -551,15 +557,13 @@
           '</button>' +
         '</div>' +
         (role ?
-        '<div class="quiz-setup-grid quiz-setup-grid--seul max-w-lg mx-auto">' +
+        '<div class="quiz-setup-grid quiz-setup-grid--seul">' +
+          carteJoueur(role === 'join' ? 2 : 1, 'online-name', state.name1, t('nomLabel'), t('namePlaceholder')) +
+          (role === 'join' ?
           '<div class="quiz-player-card">' +
-            '<div class="quiz-player-number">' + (role === 'join' ? 2 : 1) + '</div>' +
-            '<label class="block text-sm font-semibold mb-2 text-center" for="online-name">' + esc(t('nomLabel')) + '</label>' +
-            '<input id="online-name" type="text" class="input w-full" placeholder="' + esc(t('namePlaceholder')) + '" maxlength="30" autocomplete="off" value="' + esc(state.name1) + '" />' +
-            (role === 'join' ?
-            '<label class="block text-sm font-semibold mt-4 mb-2 text-center" for="online-code">' + esc(t('sessionCode')) + '</label>' +
-            '<input id="online-code" type="text" class="input w-full ado-code-saisie" placeholder="' + esc(t('codePlaceholder')) + '" maxlength="6" autocomplete="off" autocapitalize="characters" spellcheck="false" />' : '') +
-          '</div>' +
+            '<div class="quiz-player-tete"><label class="quiz-player-libelle" for="online-code">' + esc(t('sessionCode')) + '</label></div>' +
+            '<div class="quiz-player-ligne"><input id="online-code" type="text" class="input quiz-player-champ ado-code-saisie" placeholder="' + esc(t('codePlaceholder')) + '" maxlength="6" autocomplete="off" autocapitalize="characters" spellcheck="false" /></div>' +
+          '</div>' : '') +
         '</div>' +
         (state.error ? '<p class="ado-erreur">' + esc(state.error) + '</p>' : '') +
         '<button id="btn-online-go" type="button" class="btn btn-cta btn-lg quiz-setup-start-btn"' + (state.loading ? ' disabled' : '') + '>' +

@@ -8,7 +8,6 @@
 --   • leads                 → capture e-mail e-book (double opt-in)
 --   • messages              → formulaire de contact
 --   • reviews               → avis clients (+ note agrégée / étoiles Google)
---   • quiz_ado_sessions     → quiz ado multijoueur (temps réel)
 --   • activity_validations  → recherche d'activités
 --
 -- NE fait PLUS partie de la base (désormais servi depuis le repo) :
@@ -19,6 +18,12 @@
 -- Retiré définitivement (fonctionnalités supprimées) :
 --   • problem_resolver_usage (page « résoudre un problème de couple » IA)
 --   • tables annuaire (annuaire.quiz-couple.com)
+--   • quiz_ado_sessions : le quiz ado passe par des canaux Realtime sans
+--     table (11 octobre 2026) ; la table restait ouverte à la clé publique
+--
+-- Ce script reconstruit la base de juillet 2026. Tout ce qui est venu après
+-- (mesure d'audience, réseaux sociaux, quiz personnalisés, sécurité...) vit
+-- dans supabase/migrations/ : voir RECOVERY.md, §2, pour la suite.
 -- ============================================================================
 
 
@@ -50,53 +55,7 @@ CREATE INDEX idx_reviews_ip_address ON public.reviews(ip_address);
 CREATE INDEX idx_reviews_approved ON public.reviews(is_approved) WHERE is_approved = true;
 
 
--- ####################  2. QUIZ ADO MULTIJOUEUR (temps réel)  ################
-CREATE TABLE public.quiz_ado_sessions (
-  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
-  code TEXT NOT NULL UNIQUE,
-  status TEXT NOT NULL DEFAULT 'waiting' CHECK (status IN ('waiting', 'active', 'completed')),
-  question_indices INTEGER[] NOT NULL,
-  player1_name TEXT NOT NULL,
-  player1_answers JSONB DEFAULT '[]'::jsonb,
-  player2_name TEXT,
-  player2_answers JSONB DEFAULT '[]'::jsonb,
-  ip_address TEXT,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  expires_at TIMESTAMPTZ NOT NULL DEFAULT (now() + interval '30 minutes')
-);
-
-ALTER TABLE public.quiz_ado_sessions ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Anyone can read sessions by code"
-  ON public.quiz_ado_sessions FOR SELECT USING (true);
-CREATE POLICY "Anyone can create sessions"
-  ON public.quiz_ado_sessions FOR INSERT WITH CHECK (true);
-CREATE POLICY "Anyone can update sessions"
-  ON public.quiz_ado_sessions FOR UPDATE USING (true);
-
-CREATE INDEX idx_quiz_ado_sessions_code ON public.quiz_ado_sessions (code);
-CREATE INDEX idx_quiz_ado_sessions_expires ON public.quiz_ado_sessions (expires_at);
-
--- Auto-update de updated_at
-CREATE OR REPLACE FUNCTION public.update_quiz_ado_updated_at()
-RETURNS TRIGGER AS $$
-BEGIN
-  NEW.updated_at = now();
-  RETURN NEW;
-END;
-$$ LANGUAGE plpgsql SET search_path = public;
-
-CREATE TRIGGER update_quiz_ado_sessions_updated_at
-  BEFORE UPDATE ON public.quiz_ado_sessions
-  FOR EACH ROW
-  EXECUTE FUNCTION public.update_quiz_ado_updated_at();
-
--- Realtime pour le multijoueur
-ALTER PUBLICATION supabase_realtime ADD TABLE public.quiz_ado_sessions;
-
-
--- ####################  3. RECHERCHE D'ACTIVITÉS  ###########################
+-- ####################  2. RECHERCHE D'ACTIVITÉS  ###########################
 CREATE TABLE public.activity_validations (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   ip_address TEXT,
@@ -113,7 +72,7 @@ CREATE INDEX idx_activity_validations_created_at
 ON public.activity_validations(created_at DESC);
 
 
--- ####################  4. LEADS (e-book, double opt-in)  ###################
+-- ####################  3. LEADS (e-book, double opt-in)  ###################
 CREATE TABLE public.leads (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   first_name TEXT NOT NULL,
@@ -123,24 +82,23 @@ CREATE TABLE public.leads (
   verification_token UUID DEFAULT gen_random_uuid(),
   email_verified BOOLEAN DEFAULT false,
   verified_at TIMESTAMPTZ,
+  verification_sent_at TIMESTAMPTZ,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
 ALTER TABLE public.leads ENABLE ROW LEVEL SECURITY;
+REVOKE ALL ON TABLE public.leads FROM anon, authenticated;
 
-CREATE POLICY "Anyone can submit a lead"
-ON public.leads FOR INSERT
-WITH CHECK (true);
-
--- Pas de policy SELECT/UPDATE publique : les leads sont accédés via les
--- fonctions edge admin-leads / ebook-verify (service_role).
+-- Aucune règle : tout passe par les fonctions edge ebook-verify et
+-- admin-leads (service_role). La clé publique pouvait y insérer jusqu'au
+-- 11 octobre 2026, sans qu'aucune page ne s'en serve.
 
 CREATE INDEX idx_leads_email ON public.leads(email);
 CREATE INDEX idx_leads_subject ON public.leads(subject);
 CREATE INDEX idx_leads_verification_token ON public.leads(verification_token);
 
 
--- ####################  5. MESSAGES (formulaire de contact)  ################
+-- ####################  4. MESSAGES (formulaire de contact)  ################
 CREATE TABLE public.messages (
   id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
   last_name text NOT NULL,
@@ -167,26 +125,8 @@ CREATE INDEX idx_messages_status ON public.messages (status);
 CREATE INDEX idx_messages_created_at ON public.messages (created_at DESC);
 
 
--- ####################  6. CRON : nettoyage automatique  ####################
+-- ####################  5. CRON : nettoyage automatique  ####################
 CREATE EXTENSION IF NOT EXISTS pg_cron;
-
--- Sessions ado expirées, toutes les 15 min
-CREATE OR REPLACE FUNCTION cleanup_expired_sessions()
-RETURNS void
-LANGUAGE plpgsql
-SECURITY DEFINER
-SET search_path = public
-AS $$
-BEGIN
-  DELETE FROM quiz_ado_sessions WHERE expires_at < now();
-END;
-$$;
-
-SELECT cron.schedule(
-  'cleanup-expired-sessions',
-  '*/15 * * * *',
-  'SELECT cleanup_expired_sessions()'
-);
 
 -- Avis non approuvés de plus de 30 jours, tous les jours à 3h
 CREATE OR REPLACE FUNCTION cleanup_old_unapproved_reviews()
@@ -202,6 +142,10 @@ BEGIN
 END;
 $$;
 
+-- Réservée à pg_cron (qui la lance en tant que propriétaire) : sans ce
+-- REVOKE, n'importe qui pouvait la déclencher avec la clé publique.
+REVOKE ALL ON FUNCTION cleanup_old_unapproved_reviews() FROM PUBLIC, anon, authenticated;
+
 SELECT cron.schedule(
   'cleanup-old-reviews',
   '0 3 * * *',
@@ -209,7 +153,7 @@ SELECT cron.schedule(
 );
 
 
--- ####################  7. RÉINJECTION DES 11 VRAIS AVIS  ###################
+-- ####################  6. RÉINJECTION DES 11 VRAIS AVIS  ###################
 -- (les seuls avis récupérables ; ceux postés après le 28/02/2026 sont perdus)
 INSERT INTO public.reviews (id, author_name, rating, comment, ip_address, is_approved, created_at) VALUES
 ('27277bdb-2824-46e8-a31c-a74338574810', 'Louloudu77', 5, 'Trop génial on s''est bien amusé ! Merci <33', '92.184.140.122', true, '2026-01-24 14:16:52.374362+00'),
@@ -229,7 +173,7 @@ ON CONFLICT (id) DO NOTHING;
 -- ####################  VÉRIFICATION  ######################################
 SELECT table_name FROM information_schema.tables
 WHERE table_schema = 'public' ORDER BY table_name;
--- attendu : activity_validations, leads, messages, quiz_ado_sessions, reviews
+-- attendu : activity_validations, leads, messages, reviews
 
 SELECT COUNT(*) AS avis, ROUND(AVG(rating), 1) AS note_moyenne
 FROM reviews WHERE is_approved = true;   -- attendu : 11 avis, ~4.9

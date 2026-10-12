@@ -15,6 +15,40 @@ const SITE_URL = 'https://quiz-couple.com';
 const EBOOK_PDF_URL = SITE_URL + '/assets/ebook-astrologie.pdf';
 const EBOOK_FILENAME = 'Apprendre-les-bases-de-l-Astrologie-QuizCouple.pdf';
 
+// Garde-fous du formulaire (11 octobre 2026). Jusque-là, la fonction envoyait
+// un e-mail depuis noreply@quiz-couple.com à n'importe quelle adresse, autant
+// de fois qu'on la lui donnait, et chaque nouvel envoi changeait le lien : un
+// double clic rendait le premier e-mail inutilisable. Désormais :
+//   • dix demandes par heure et par adresse IP (mémoire de la fonction, qui
+//     repart de zéro à chaque redémarrage, comme contact-message) ;
+//   • un prénom de 60 signes au plus et une adresse e-mail bien formée ;
+//   • pas de second e-mail à la même adresse avant dix minutes (colonne
+//     leads.verification_sent_at, migration 20261011120000), la réponse
+//     restant celle d'un envoi ; et le lien ne change plus d'un e-mail à
+//     l'autre, tous ceux reçus marchent.
+const LIMITE_IP = 10;
+const FENETRE_IP_MS = 60 * 60 * 1000;
+const DELAI_RENVOI_MS = 10 * 60 * 1000;
+const PRENOM_MAX = 60;
+const EMAIL_MAX = 254;
+// Une adresse, une seule : ni espace, ni virgule, ni point-virgule, ni
+// chevrons (ce qui permettrait d'en glisser plusieurs), une extension d'au
+// moins deux lettres. L'apostrophe reste permise (o'brien@...).
+const EMAIL_RE = /^[^\s@,;<>"]+@[^\s@,;<>"]+\.[^\s@,;<>"]{2,}$/;
+const demandesParIp = new Map<string, { n: number; fin: number }>();
+
+function ipAutorisee(ip: string): boolean {
+  const maintenant = Date.now();
+  const e = demandesParIp.get(ip);
+  if (!e || maintenant > e.fin) {
+    demandesParIp.set(ip, { n: 1, fin: maintenant + FENETRE_IP_MS });
+    return true;
+  }
+  if (e.n >= LIMITE_IP) return false;
+  e.n++;
+  return true;
+}
+
 function escapeHtml(str: string): string {
   return str
     .replace(/&/g, '&amp;')
@@ -37,7 +71,22 @@ serve(async (req) => {
 
     // ── POST: Submit email → insert lead + send verification email ──
     if (req.method === 'POST' && action === 'submit') {
-      const { first_name, email } = await req.json();
+      const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+        || req.headers.get('cf-connecting-ip')
+        || 'inconnue';
+      if (!ipAutorisee(ip)) {
+        return new Response(
+          JSON.stringify({ success: false, error: 'Trop de demandes. Réessayez dans une heure.' }),
+          { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+
+      let corps: Record<string, unknown> = {};
+      try { corps = await req.json(); } catch { corps = {}; }
+      const first_name = typeof corps.first_name === 'string'
+        ? corps.first_name.replace(/[\u0000-\u001f\u007f]/g, '').trim()
+        : '';
+      const email = typeof corps.email === 'string' ? corps.email.trim().toLowerCase() : '';
 
       if (!first_name || !email) {
         return new Response(
@@ -45,12 +94,18 @@ serve(async (req) => {
           { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         );
       }
+      if (first_name.length > PRENOM_MAX || email.length > EMAIL_MAX || !EMAIL_RE.test(email)) {
+        return new Response(
+          JSON.stringify({ success: false, error: 'Prénom ou adresse e-mail invalide' }),
+          { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
 
       // Check if this email already has a verified lead
       const { data: existing } = await supabase
         .from('leads')
-        .select('id, email_verified')
-        .eq('email', email.toLowerCase().trim())
+        .select('*')
+        .eq('email', email)
         .eq('subject', 'Ebook Astro')
         .maybeSingle();
 
@@ -61,7 +116,17 @@ serve(async (req) => {
         );
       }
 
-      // Insert or update lead with new verification token
+      // Un e-mail de confirmation est parti il y a moins de dix minutes : pas
+      // de second envoi, son lien marche toujours.
+      const dernierEnvoi = existing?.verification_sent_at ? new Date(existing.verification_sent_at).getTime() : 0;
+      if (dernierEnvoi && Date.now() - dernierEnvoi < DELAI_RENVOI_MS) {
+        return new Response(
+          JSON.stringify({ success: true }),
+          { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+
+      // Insert or update lead, keeping its verification token
       let leadId: string;
       let token: string;
 
@@ -70,8 +135,8 @@ serve(async (req) => {
         const { data, error } = await supabase
           .from('leads')
           .update({
-            first_name: first_name.trim(),
-            verification_token: crypto.randomUUID(),
+            first_name,
+            verification_token: existing.verification_token || crypto.randomUUID(),
           })
           .eq('id', existing.id)
           .select('id, verification_token')
@@ -84,8 +149,8 @@ serve(async (req) => {
         const { data, error } = await supabase
           .from('leads')
           .insert({
-            first_name: first_name.trim(),
-            email: email.toLowerCase().trim(),
+            first_name,
+            email,
             subject: 'Ebook Astro',
             verification_token: crypto.randomUUID(),
           })
@@ -115,14 +180,14 @@ serve(async (req) => {
         },
         body: JSON.stringify({
           from: 'Quiz Couple <noreply@quiz-couple.com>',
-          to: [email.toLowerCase().trim()],
+          to: [email],
           subject: 'Confirmez votre e-mail pour accéder à votre E-Book gratuit',
           html: `
             <div style="font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:2rem;">
               <div style="text-align:center;margin-bottom:2rem;">
                 <img src="${SITE_URL}/assets/logo-quiz-couple.png" alt="Quiz Couple" style="height:40px;">
               </div>
-              <h1 style="color:#d6336c;font-size:1.5rem;text-align:center;">Plus qu'une étape, ${escapeHtml(first_name.trim())} !</h1>
+              <h1 style="color:#d6336c;font-size:1.5rem;text-align:center;">Plus qu'une étape, ${escapeHtml(first_name)} !</h1>
               <p style="font-size:1rem;line-height:1.6;color:#333;text-align:center;">
                 Cliquez sur le bouton ci-dessous pour confirmer votre adresse e-mail et accéder immédiatement à votre E-Book gratuit sur l'astrologie.
               </p>
@@ -147,6 +212,14 @@ serve(async (req) => {
       if (!emailRes.ok) {
         const errText = await emailRes.text();
         console.error('[ebook-verify] Resend error:', errText);
+      } else {
+        // L'heure de l'envoi, pour le délai avant un second e-mail. Sans la
+        // colonne (migration pas encore passée), l'envoi reste valable.
+        const { error: errEnvoi } = await supabase
+          .from('leads')
+          .update({ verification_sent_at: new Date().toISOString() })
+          .eq('id', leadId);
+        if (errEnvoi) console.warn('[ebook-verify] verification_sent_at :', errEnvoi.message);
       }
 
       return new Response(

@@ -257,7 +257,7 @@
     testDateNaissance: 'Compatibilité par date de naissance',
     testSignesChinois: 'Compatibilité signes chinois',
     calculatriceAmour: "Calculatrice de l'amour",
-    compteurCouple: 'Compteur de couple',
+    compteurCouple: 'Compteur de durée en couple',
     testJalousie: 'Jalousie',
     testKarmique: 'Relation karmique',
     testSuisJeAmoureux: 'Suis-je amoureux',
@@ -284,6 +284,7 @@
     testPretRelation: 'Prêt(e) pour une nouvelle relation',
     testDureeCelibat: 'Combien de temps je vais rester célibataire',
     testEstCeLeBon: 'Est-ce le bon / la bonne',
+    testCompatSexuelle: 'Compatibilité sexuelle',
     quizTypeCouple: 'Quel type de couple êtes-vous',
     testAmourAttachement: 'Amour ou attachement',
     testJeLaimeEncore: "Je l'aime encore ?",
@@ -299,6 +300,7 @@
     jeuQuiPourrait: 'Qui pourrait',
     jeuOuiNon: 'Oui ou non',
     jeuPhrases: 'Phrases à compléter',
+    jeuDixMais: "C'est un 10 mais",
     testCrush: 'Amour ou crush',
     testAmourAmi: 'Amoureux de mon meilleur ami',
     quizTentation: 'Tentation',
@@ -367,6 +369,7 @@
     'most': 'quizMost',
     'oui-non': 'jeuOuiNon',
     'phrases': 'jeuPhrases',
+    'dix-mais': 'jeuDixMais',
     'parentalite': 'testParentalite',
     'pervers': 'testPervers',
     'plateau-couple': 'jeuPlateau',
@@ -386,6 +389,7 @@
     'pret-nouvelle-relation': 'testPretRelation',
     'duree-celibat': 'testDureeCelibat',
     'est-ce-le-bon': 'testEstCeLeBon',
+    'compatibilite-sexuelle': 'testCompatSexuelle',
     'type-couple': 'quizTypeCouple',
     'amour-ou-attachement': 'testAmourAttachement',
     'je-l-aime-encore': 'testJeLaimeEncore',
@@ -417,7 +421,7 @@
           'jeuDilemmes', 'pourContre', 'quizTuPreferes', 'jeuJamais',
           'action-ou-verite', 'action-ou-verite-coquin', 'gage-couple', 'plateau-couple',
           'qui-de-nous-deux', 'dilemmes', 'pour-contre', 'tu-preferes', 'jamais',
-          'jeuPhrases', 'phrases'],
+          'jeuPhrases', 'phrases', 'jeuDixMais', 'dix-mais'],
     quiz: ['zamours', 'amoureux', 'coquin', 'genant', 'knowledge', 'marrant', 'most',
            'vrai-faux', 'ado', 'tentation', 'rencontre']
   };
@@ -542,21 +546,41 @@
     if (enCache !== undefined) return Promise.resolve(enCache);
     return statsRpcPagesReseau(fn, body).then(function (r) { cacheEcris(cle, r); return r; });
   }
+  // ── Lecture d'une fonction de statistiques ──────────────────────────
+  // Depuis le 11 octobre 2026, les statistiques passent par la fonction
+  // serveur admin-stats : elle verifie le jeton admin, appelle la fonction
+  // SQL avec la cle de service et rend sa reponse telle quelle (corps, code,
+  // Content-Range). La migration 20261011130000 retire ces fonctions a la cle
+  // publique, qui laissait n'importe qui lire le trafic du site. Tant que
+  // admin-stats n'est pas deployee ou ne repond pas, l'appel direct d'avant
+  // prend le relais : une reponse sans l'en-tete x-admin-stats vient de la
+  // passerelle de Supabase, pas d'elle. Un jeton refuse (401) y retombe
+  // aussi. Ce repli marche jusqu'a ce que la migration passe, et
+  // securite-base.yml ne l'applique qu'une fois la fonction en etat de
+  // marche (jeton fabrique et verifie, puis un vrai appel relaye).
+  function appelStats(fn, body, page) {
+    var corps = JSON.stringify(body || {});
+    var suite = page ? 'limit=' + page.limit + '&offset=' + page.offset : '';
+    var entetes = { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' };
+    // Sans ce prefixe, l'en-tete Content-Range se termine par une etoile : le
+    // serveur rend le lot sans dire combien de lignes existent, et il n'y a
+    // plus aucun moyen de savoir qu'il en reste.
+    if (page) entetes['Prefer'] = 'count=exact';
+    function direct() {
+      return fetch(SUPABASE_URL + '/rest/v1/rpc/' + fn + (suite ? '?' + suite : ''), { method: 'POST', headers: entetes, body: corps });
+    }
+    if (!adminToken) return direct();
+    return fetch(SUPABASE_URL + '/functions/v1/admin-stats?fn=' + encodeURIComponent(fn) + (suite ? '&' + suite : ''), {
+      method: 'POST',
+      headers: Object.assign({ 'x-admin-token': adminToken }, entetes),
+      body: corps
+    }).then(function (r) { return r.headers.get('x-admin-stats') && r.status !== 401 ? r : direct(); }, direct);
+  }
+
   function statsRpcPagesReseau(fn, body) {
     var tout = [];
     function lot(depart) {
-      return fetch(SUPABASE_URL + '/rest/v1/rpc/' + fn + '?limit=' + LOT_RPC + '&offset=' + depart, {
-        method: 'POST',
-        headers: {
-          'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
-          'Content-Type': 'application/json',
-          // Sans ce prefixe, l'en-tete Content-Range se termine par une
-          // etoile : le serveur rend le lot sans dire combien de lignes
-          // existent, et il n'y a plus aucun moyen de savoir qu'il en reste.
-          'Prefer': 'count=exact'
-        },
-        body: JSON.stringify(body || {})
-      }).then(function (r) {
+      return appelStats(fn, body, { limit: LOT_RPC, offset: depart }).then(function (r) {
         var plage = r.headers.get('content-range') || '';
         var m = /\/(\d+)$/.exec(plage);
         var total = m ? parseInt(m[1], 10) : null;
@@ -633,11 +657,7 @@
     return statsRpcReseau(fn, body).then(function (r) { cacheEcris(cle, r); return r; });
   }
   function statsRpcReseau(fn, body) {
-    return fetch(SUPABASE_URL + '/rest/v1/rpc/' + fn, {
-      method: 'POST',
-      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' },
-      body: JSON.stringify(body || {})
-    }).then(function (r) { return r.json(); });
+    return appelStats(fn, body).then(function (r) { return r.json(); });
   }
 
   // ── Export (Thomas, 7 octobre 2026) ──────────────────────────────────────
@@ -768,7 +788,7 @@
   // elle, l'onglet le dit et la ligne sous les lances reste vide.
   var PAGES_DISTANCE = ['testCouple', 'testCommonPoints', 'testCompatibilite', 'quizAmoureux',
     'testCoupleSain', 'testParentalite', 'testEmmenager', 'testAmeSoeur', 'testChargeMentale',
-    'jeuJamais', 'jeuQuiDeNous', 'jeuQuiPourrait'];
+    'jeuJamais', 'jeuQuiDeNous', 'jeuQuiPourrait', 'jeuDixMais', 'testCompatSexuelle'];
   var DEBUT_DISTANCE = (typeof window !== 'undefined' && window.__ADM_DEBUT_DISTANCE) || '2026-09-07';
   var distanceCouchesVues = { lances: true, distance: true, part: true };
   var _distanceCouches = null;
@@ -2527,6 +2547,10 @@
     if (sub && t) sub.textContent = t[1];
   }
 
+  function contexteAffiliation() {
+    return { url: SUPABASE_URL, cle: SUPABASE_KEY, jeton: adminToken };
+  }
+
   function rechargeOnglet(tab) {
     if (tab === 'stats') loadStats();
     else if (tab === 'trafic') loadTrafic();
@@ -2534,7 +2558,7 @@
     else if (tab === 'reviews') loadReviews();
     else if (tab === 'leads') { allLeads = []; loadLeads(); }
     else if (tab === 'messages') { allMessages = []; loadMessages(); }
-    else if (tab === 'affiliation' && window.AdminAffiliation && window.AdminAffiliation.ouvrir) window.AdminAffiliation.ouvrir();
+    else if (tab === 'affiliation' && window.AdminAffiliation && window.AdminAffiliation.ouvrir) window.AdminAffiliation.ouvrir(contexteAffiliation());
     else if (tab === 'reseaux') ouvrirReseaux();
   }
 
@@ -2579,10 +2603,11 @@
     if (tab === 'distance') {
       loadDistance();
     }
-    // L'onglet affiliation vit dans son propre module : il gere son jeton et
-    // ne parle qu'a Affilae, sans rien partager avec le reste de l'admin.
+    // L'onglet affiliation vit dans son propre module : il parle a Affilae
+    // et range son jeton cote serveur (fonction admin-reglages), d'ou le
+    // contexte qu'il recoit (url, cle publique, jeton admin).
     if (tab === 'affiliation' && window.AdminAffiliation) {
-      window.AdminAffiliation.ouvrir();
+      window.AdminAffiliation.ouvrir(contexteAffiliation());
     }
     if (tab === 'leads') {
       if (allLeads.length === 0) loadLeads();

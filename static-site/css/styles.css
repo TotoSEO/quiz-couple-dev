@@ -625,30 +625,6 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
   100% { background-position: 0% center; }
 }
 @media (min-width: 768px) { .hero-title { font-size: 3.25rem; } }
-/* Sur un telephone, les animations qui repeignent a chaque image (le degrade
-   qui glisse dans le titre et sous le bouton du test de purete, la position
-   du fond) tournent sur le fil principal pendant tout le chargement, alors
-   que le processeur y est deja quatre fois plus lent qu'au bureau. Le degrade
-   reste, il ne bouge plus. Les taches de couleur floutees et la trame du
-   fond, elles, sont composees par la carte graphique : elles gardent leur
-   mouvement. */
-@media (max-width: 767.98px) {
-  .hero-title .text-gradient, .text-gradient { animation: none; background-position: 30% center; }
-  /* Les autres animations infinies qui repeignent a chaque image (elles
-     n'animent ni transform ni opacity) : reflet des boutons, halo de la carte
-     d'avis et vague des etoiles, LED du bouton sources Google, point du
-     compteur. PageSpeed les compte parmi les « animations non composees » et
-     elles occupent le fil principal pendant tout le chargement. */
-  .btn-cta::after { animation: none; }
-  .pqx-form-wrap { animation: none; }
-  .pqx-input-stars:not(:hover):not(:has(.on)) .pqx-star-btn svg { animation: none; }
-  .gsource-btn::before, .gsource-g::before { animation: none; }
-  .quiz-count-bubble .qcb-dot { animation: none; }
-  .btn-purete::before, .btn-purete:hover::before { animation: none; --nv-angle: 60deg; }
-  /* L'anneau du résultat de la scène du hero (trait, non composé) : posé
-     directement à sa valeur, la scène garde ses fondus et ses sauts. */
-  .scene-anneau-fill { animation: none; }
-}
 @media (min-width: 1024px) { .hero-title { font-size: 4.25rem; line-height: 1.05; } }
 .hero-desc {
   font-size: 1.1rem; color: hsl(var(--muted-foreground));
@@ -3628,66 +3604,15 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .quiz-setup-nom .input { text-align: center; font-weight: 600; }
 .input--erreur { border-color: hsl(var(--destructive)) !important; }
 
-/* Setup grid : deux joueurs cote a cote, meme sur mobile (tout visible d'un coup) */
-.quiz-setup-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; width: 100%; }
+/* La grille des prenoms, les cartes, la pastille du numero et les boutons
+   de genre : section « Ecran de depart a deux », en fin de feuille. */
 
-/* Player cards, gamifiees */
-.quiz-player-card {
-  position: relative; border-radius: 1.2rem; padding: 1.35rem 1rem 1.4rem;
-  background: hsl(var(--card));
-  border: 1.5px solid hsl(var(--border));
-  display: flex; flex-direction: column; align-items: center;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  overflow: hidden;
-}
-.quiz-player-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
-  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
-}
-.quiz-player-card:nth-child(2)::before { background: linear-gradient(90deg, #f59e0b, #ec4899); }
-.quiz-player-card:focus-within { border-color: hsl(var(--primary) / 0.55); transform: translateY(-3px); box-shadow: 0 16px 30px -18px hsl(var(--primary) / 0.7); }
-.quiz-player-card .input { text-align: center; font-weight: 600; }
-
-/* Player number circle */
-.quiz-player-number {
-  width: 42px; height: 42px; border-radius: 50%;
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-  color: #fff; display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.6rem;
-  box-shadow: 0 6px 14px -4px hsl(var(--primary) / 0.5);
-}
-.quiz-player-card:nth-child(2) .quiz-player-number { background: linear-gradient(135deg, #f59e0b, #ec4899); box-shadow: 0 6px 14px -4px rgba(236, 72, 153, 0.5); }
-
-/* Gender selection buttons */
-.gender-btn {
-  flex: 1; min-width: 0; padding: 0.5rem 0.55rem; border-radius: 0.7rem;
-  border: 1.5px solid hsl(var(--border)); background: hsl(var(--muted) / 0.35);
-  color: hsl(var(--foreground)); font-size: 0.82rem; font-weight: 600;
-  cursor: pointer; transition: all 180ms ease; white-space: nowrap;
-  display: flex; align-items: center; justify-content: center; gap: 0.3rem;
-  -webkit-tap-highlight-color: transparent;
-}
-@media (hover: hover) and (pointer: fine) {
-.gender-btn:hover { border-color: hsl(var(--primary) / 0.4); }
-}
-/* L'etat choisi est defini en fin de feuille, apres le style a l'encre du
-   moteur qui l'ecrasait (section « Choix du sexe »). */
-
-/* Compaction mobile : prenoms + genre + bouton visibles sans scroller */
+/* Compaction mobile : la tete de l'ecran de depart */
 @media (max-width: 640px) {
   .quiz-setup-screen .quiz-setup-icon { width: 54px; height: 54px; border-radius: 17px; margin-bottom: 0.55rem !important; }
   .quiz-setup-screen .quiz-setup-icon svg { width: 26px; height: 26px; }
   .quiz-setup-screen > h2 { font-size: 1.3rem; margin-bottom: 0.3rem !important; }
   .quiz-setup-screen > p { font-size: 0.88rem; margin-bottom: 0.9rem !important; }
-  .quiz-setup-grid { gap: 0.6rem; }
-  .quiz-player-card { padding: 0.85rem 0.65rem 1rem; border-radius: 1rem; }
-  .quiz-player-number { width: 34px; height: 34px; font-size: 0.95rem; margin-bottom: 0.4rem; }
-  .quiz-player-card label { font-size: 0.78rem !important; margin-bottom: 0.35rem !important; }
-  .quiz-player-card .mt-4 { margin-top: 0.5rem !important; }
-  .quiz-player-card .input { padding: 0.5rem 0.55rem; }
-  .quiz-player-card .flex.gap-3 { gap: 0.35rem !important; }
-  .gender-btn { padding: 0.4rem 0.3rem; font-size: 0.75rem; gap: 0.2rem; }
-  .quiz-setup-meta { margin-top: 1rem; padding: 0.4rem 1rem; font-size: 0.74rem; }
   .quiz-setup-start-btn { margin-top: 1rem !important; padding: 0.85rem 1.5rem !important; font-size: 1rem !important; }
 }
 
@@ -5847,17 +5772,9 @@ footer .mt-12.border-t svg.text-primary {
 .quiz-setup-icon { width: 80px; height: 80px; border-radius: 1.25rem; box-shadow: 0 12px 32px -8px hsl(var(--primary) / 0.4), inset 0 1px 1px rgba(255,255,255,0.2); animation: setupIconFloat 3s ease-in-out infinite; }
 @keyframes setupIconFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 .quiz-setup-icon svg { width: 36px; height: 36px; }
-.quiz-setup-meta { padding: 0.75rem 1.5rem; border-radius: 0.75rem; background: hsl(var(--muted) / 0.4); border: 1px solid hsl(var(--border) / 0.3); }
 .quiz-setup-start-btn { max-width: 20rem !important; border-radius: calc(var(--radius)) !important; background: linear-gradient(135deg, hsl(var(--primary)), hsl(338 70% 55%)) !important; box-shadow: 0 4px 16px -2px hsl(var(--primary) / 0.4), 0 12px 32px -8px hsl(var(--primary) / 0.2) !important; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important; }
 @media (hover: hover) and (pointer: fine) {
 .quiz-setup-start-btn:hover { transform: translateY(-3px) scale(1.03) !important; box-shadow: 0 8px 24px -4px hsl(var(--primary) / 0.5), 0 16px 48px -12px hsl(var(--primary) / 0.3) !important; }
-}
-.quiz-player-card { border-radius: 1rem; padding: 1.75rem; background: hsl(var(--card)); border: 1px solid hsl(var(--border) / 0.5); transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-.quiz-player-card:focus-within { border-color: hsl(var(--primary) / 0.4); box-shadow: 0 0 0 3px hsl(var(--primary) / 0.08), 0 8px 24px -8px hsl(var(--primary) / 0.1); }
-.quiz-player-number { width: 40px; height: 40px; border-radius: 0.75rem; box-shadow: 0 6px 16px -4px hsl(var(--primary) / 0.35); }
-.gender-btn { border-radius: 0.75rem; border-width: 1.5px; padding: 0.75rem 1rem; transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); }
-@media (hover: hover) and (pointer: fine) {
-.gender-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
 }
 /* SEO article: alternating soft "content blocks" to break the flat wall of
    text (background variation + breathing room, no copy changes). */
@@ -7076,25 +6993,8 @@ body.quiz-has-result .related-tests-section { display: none !important; }
   box-shadow: var(--qe-ombre-i) hsl(var(--ink)) !important;
   transform: rotate(-5deg); animation: none !important;
 }
-/* Player cards: thick borders + a playful tilt */
-.quiz-setup-screen .quiz-player-card {
-  border: var(--qe-trait-i) solid hsl(var(--ink)) !important;
-  box-shadow: var(--qe-ombre-i) hsl(var(--ink)) !important;
-  background: hsl(var(--card)) !important;
-}
-.quiz-setup-screen .quiz-setup-grid > .quiz-player-card:nth-child(1) { transform: rotate(-1.6deg); }
-.quiz-setup-screen .quiz-setup-grid > .quiz-player-card:nth-child(2) { transform: rotate(1.6deg); }
-.quiz-setup-screen .quiz-player-card:focus-within { transform: rotate(0) translateY(-2px); }
-.quiz-setup-screen .quiz-player-card .input {
-  border: 2.5px solid hsl(var(--ink) / .8) !important; border-radius: .85rem !important; text-align: center;
-}
-.quiz-setup-screen .quiz-player-number { border: 3px solid hsl(var(--ink)); box-shadow: 3px 3px 0 hsl(var(--ink)); }
-
-/* Meta chip + start button, chunky */
-.quiz-setup-screen .quiz-setup-meta {
-  border: var(--qe-trait-p) solid hsl(var(--ink)) !important; border-radius: 999px !important;
-  background: hsl(var(--card)) !important; font-weight: 700;
-}
+/* Start button, chunky : les cartes de prenoms et la pastille sont a plat,
+   section « Ecran de depart a deux » en fin de feuille. */
 .quiz-setup-screen .quiz-setup-start-btn {
   border: var(--qe-trait-i) solid hsl(var(--ink)) !important;
   box-shadow: var(--qe-ombre-i) hsl(var(--ink)) !important;
@@ -7106,23 +7006,13 @@ body.quiz-has-result .related-tests-section { display: none !important; }
   box-shadow: 6px 6px 0 hsl(var(--ink)) !important;
 }
 }
-/* Gender buttons chunky too */
-.quiz-setup-screen .gender-btn { border-width: 2.5px !important; }
-
-/* Several engines (distance, coquin, knowledge, debate, funny, most, parentalite)
-   use .glass-card for their inner name-entry cards and a plain .btn-cta start
-   button — give them the same chunky sticker treatment as the DuoMatch screen. */
+/* Un panneau interne d'ecran de depart est un aplat, comme les cartes de
+   prenoms : le cadre a l'encre reste au moteur et au bouton de depart. */
 .quiz-setup-screen .glass-card {
-  border: var(--qe-trait-i) solid hsl(var(--ink)) !important;
-  box-shadow: var(--qe-ombre-i) hsl(var(--ink)) !important;
-  background: hsl(var(--card)) !important;
-  backdrop-filter: none !important;
-}
-.quiz-setup-screen .glass-card:nth-child(odd) { transform: rotate(-1.4deg); }
-.quiz-setup-screen .glass-card:nth-child(even) { transform: rotate(1.4deg); }
-.quiz-setup-screen .glass-card:focus-within { transform: rotate(0) translateY(-2px); }
-.quiz-setup-screen .glass-card .input {
-  border: 2.5px solid hsl(var(--ink) / .8) !important; border-radius: .85rem !important; text-align: center;
+  border: 1.5px solid hsl(var(--border));
+  box-shadow: none;
+  background: hsl(var(--muted) / .5);
+  backdrop-filter: none;
 }
 .quiz-setup-screen .btn-cta {
   border: var(--qe-trait-i) solid hsl(var(--ink)) !important;
@@ -7137,9 +7027,7 @@ body.quiz-has-result .related-tests-section { display: none !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .quiz-setup-screen .quiz-setup-icon,
-  .quiz-setup-screen .quiz-player-card,
-  .quiz-setup-screen .glass-card { transform: none !important; }
+  .quiz-setup-screen .quiz-setup-icon { transform: none !important; }
 }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -10499,8 +10387,7 @@ body { padding-bottom: var(--pub-footer, 0px); }
 }
 /* Les autres familles de reponses : echelles, vrai/faux, boutons de choix. */
 .quiz-engine .quiz-scale-option,
-.quiz-engine .choice-btn,
-.quiz-engine .gender-btn {
+.quiz-engine .choice-btn {
   border: var(--qe-trait-i) solid hsl(var(--ink));
   border-radius: var(--qe-rayon-i);
   box-shadow: var(--qe-ombre-i) hsl(var(--ink));
@@ -10527,11 +10414,14 @@ body { padding-bottom: var(--pub-footer, 0px); }
 }
 
 /* ── L'encart de mise en garde, avant le depart ──────────────── */
+/* Un aplat, comme les cartes de prenoms : dans l'ecran de depart, le cadre
+   a l'encre reste au moteur et au bouton (section « Ecran de depart a
+   deux », en fin de feuille). */
 .quiz-setup-screen .quiz-setup-note {
-  border: var(--qe-trait-p) solid hsl(var(--ink));
-  border-radius: var(--qe-rayon-i);
-  box-shadow: var(--qe-ombre-p) hsl(var(--ink));
-  background: hsl(var(--card));
+  border: 1.5px solid hsl(var(--border));
+  border-radius: 1rem;
+  box-shadow: none;
+  background: hsl(var(--muted) / 0.5);
 }
 
 /* ── Les boutons du moteur, hors ecran de depart ─────────────── */
@@ -10967,7 +10857,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
 
   .quiz-engine .quiz-scale-option:hover,
   .quiz-engine .choice-btn:hover,
-  .quiz-engine .gender-btn:hover,
   .quiz-engine .quiz-mode-carte:hover,
   .quiz-engine .choix-mode:hover {
     transform: translate(-2px, -2px);
@@ -11012,7 +10901,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
     .quiz-engine .quiz-option:hover, #quiz-engine .quiz-option:hover,
     .quiz-engine .quiz-scale-option:hover,
     .quiz-engine .choice-btn:hover,
-    .quiz-engine .gender-btn:hover,
     .quiz-engine .quiz-mode-carte:hover,
     .quiz-engine .choix-mode:hover,
     .quiz-engine .btn-cta:hover,
@@ -11077,41 +10965,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .cmp-pastille-regie .qc-cmp2-persistent-link { display: block !important; }
 
 /* ═══════════════════════════════════════════════════════════
-   CHOIX DU SEXE : L'EMOJI SEUL, LA COULEUR DIT QUI EST CHOISI
-   L'ancien libellé « Homme » / « Femme » chargeait l'écran de
-   départ ; il reste dans aria-label et dans l'infobulle. L'état
-   choisi passe au bleu ou au rose, avec l'ombre franche du moteur
-   dans la même couleur : on voit du premier coup d'œil lequel
-   des deux est retenu. Ces règles viennent après le style à
-   l'encre du moteur, qui écrasait l'ancien état choisi.
-   ═══════════════════════════════════════════════════════════ */
-.gender-btn .gender-label { display: none; }
-.quiz-engine .gender-btn,
-.quiz-setup-screen .gender-btn {
-  flex: 0 0 auto; width: 3.6rem; height: 3.1rem; padding: 0; gap: 0;
-  font-size: 1.5rem; line-height: 1;
-  transition: transform .16s ease, box-shadow .16s ease, background .16s ease, border-color .16s ease, opacity .16s ease;
-}
-.quiz-engine .gender-btn:not(.gender-btn-selected) { opacity: .8; }
-.quiz-engine .gender-btn.gender-btn-selected { opacity: 1; transform: translate(-2px, -2px); }
-.quiz-engine .gender-btn.gender-btn-selected.gender-btn-male {
-  background: #dbeafe; border-color: #2563eb;
-  box-shadow: 4px 4px 0 #2563eb, 0 0 0 3px #bfdbfe;
-}
-.quiz-engine .gender-btn.gender-btn-selected.gender-btn-female {
-  background: #fce7f3; border-color: #db2777;
-  box-shadow: 4px 4px 0 #db2777, 0 0 0 3px #fbcfe8;
-}
-.dark .quiz-engine .gender-btn.gender-btn-selected.gender-btn-male { background: #1e3a8a; border-color: #60a5fa; box-shadow: 4px 4px 0 #60a5fa, 0 0 0 3px #1e40af; }
-.dark .quiz-engine .gender-btn.gender-btn-selected.gender-btn-female { background: #831843; border-color: #f472b6; box-shadow: 4px 4px 0 #f472b6, 0 0 0 3px #9d174d; }
-@media (hover: hover) and (pointer: fine) {
-  .quiz-engine .gender-btn:hover { opacity: 1; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .quiz-engine .gender-btn, .quiz-setup-screen .gender-btn { transition: none; }
-}
-
-/* ═══════════════════════════════════════════════════════════
    QUIZ ADO : LES PIECES PROPRES A SON MOTEUR
    Le moteur ado reprend les ecrans du moteur commun (depart a
    cartes joueurs, barre de progression, reponses lettrees, relais,
@@ -11128,7 +10981,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
   border-color: hsl(var(--primary));
   box-shadow: 5px 5px 0 hsl(var(--primary));
 }
-.quiz-setup-grid--seul { grid-template-columns: minmax(0, 1fr); max-width: 22rem; }
 .ado-code-saisie { text-align: center; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .3em; text-transform: uppercase; font-weight: 700; }
 .ado-erreur { width: 100%; text-align: center; color: hsl(var(--destructive, 0 72% 51%)); font-size: .9rem; font-weight: 600; margin: .9rem 0 0; }
 .ado-code {
@@ -11369,10 +11221,7 @@ body { padding-bottom: var(--pub-footer, 0px); }
   cursor: pointer; user-select: none; padding: 0.5rem 0;
 }
 /* Interrupteur allumé : la carte de prénom, les deux boutons et la saisie du
-   code se suivent avec de l'air, et un filet les sépare de l'interrupteur.
-   Sur téléphone, la grille des prénoms déborde du moteur (marges négatives
-   sous 480 px, plus bas) ; dans l'encart elle reste dans le cadre, sinon la
-   carte venait toucher la bordure. */
+   code se suivent avec de l'air, et un filet les sépare de l'interrupteur. */
 .salon-detail { margin-top: 0.75rem; padding: 1rem 0 0.25rem; border-top: 1.5px dashed hsl(var(--primary) / .3); }
 .salon-detail .quiz-setup-grid { width: 100%; max-width: 20rem; margin-left: auto; margin-right: auto; }
 .salon-interrupteur input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
@@ -11416,7 +11265,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
   text-align: center; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   letter-spacing: .3em; text-transform: uppercase; font-weight: 700; font-size: 1.15rem;
 }
-.quiz-setup-grid--seul { grid-template-columns: minmax(0, 1fr); max-width: 20rem; }
 .salon-erreur { color: hsl(var(--destructive)); font-weight: 600; text-align: center; margin: 0.5rem 0 0.25rem; }
 
 .salon-code {
@@ -11471,17 +11319,6 @@ body { padding-bottom: var(--pub-footer, 0px); }
    de départ : leurs classes fixent un display, l'attribut hidden seul ne
    suffisait pas. */
 .quiz-setup-grid[hidden], .quiz-setup-meta[hidden], .quiz-setup-start-btn[hidden], .quiz-setup-nom[hidden] { display: none; }
-
-/* Les cartes de prenoms : sur telephone, deux cartes cote a cote laissaient
-   un champ de la largeur d'un pouce. Elles s'empilent et sortent du
-   rembourrage de la carte du moteur (1,25 rem a cette largeur) pour ne garder
-   que quatre pixels d'air entre la carte de prenom et le bord du moteur. */
-@media (max-width: 480px) {
-  .quiz-setup-grid { grid-template-columns: minmax(0, 1fr); width: calc(100% + 2.5rem - 8px); max-width: none; margin-left: calc(4px - 1.25rem); margin-right: calc(4px - 1.25rem); gap: 0.75rem; }
-  .quiz-setup-screen .quiz-setup-grid > .quiz-player-card:nth-child(1),
-  .quiz-setup-screen .quiz-setup-grid > .quiz-player-card:nth-child(2) { transform: none; }
-  .quiz-player-card { padding: 1rem 0.9rem 1.1rem; }
-}
 
 /* ── La question a distance : les deux reponses cote a cote ── */
 .salon-option--figee { cursor: default; }
@@ -12303,4 +12140,411 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .qc-relais-perso { animation: none; }
   .quiz-setup-icon--mascottes,
   .quiz-setup-screen .quiz-setup-icon--mascottes { animation: none !important; }
+}
+
+/* ── C'est un 10 mais... ────────────────────────────────────────────────
+   La carte (l'accroche en petit, le défaut en grand), une grille de onze
+   notes, puis les deux notes côte à côte avec les mascottes. La grille de
+   notes (.notes-*) sert aussi au tour par tour à distance. Les états
+   choisis sont teintés et non pleins : un chiffre blanc sur le rose de la
+   marque tombait sous 3:1. */
+.dixm-choix { margin-top: 1.125rem; }
+.dixm-choix-titre {
+  font-size: 0.875rem; font-weight: 600; text-align: center;
+  color: hsl(var(--foreground)); margin: 0 0 0.625rem;
+}
+.dixm-choix-boutons {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.625rem; max-width: 32rem; margin: 0 auto;
+}
+.dixm-choix-boutons--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.dixm-choix-btn {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.125rem;
+  padding: 0.75rem 0.5rem; cursor: pointer; text-align: center;
+  border-radius: var(--radius); border: 2px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.6); color: hsl(var(--foreground));
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+.dixm-choix-btn:hover { border-color: hsl(var(--primary) / 0.55); transform: translateY(-1px); }
+}
+.dixm-choix-btn.active {
+  border-color: hsl(var(--primary));
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.12), hsl(var(--secondary) / 0.12));
+}
+.dixm-choix-emoji { font-size: 1.375rem; line-height: 1; }
+.dixm-choix-nb { font-size: 1.5rem; font-weight: 800; line-height: 1; color: hsl(var(--primary-texte)); }
+.dixm-choix-nom { font-size: 0.875rem; font-weight: 700; line-height: 1.2; }
+.dixm-choix-sous { font-size: 0.75rem; line-height: 1.25; color: hsl(var(--muted-foreground)); }
+.dixm-choix--longueur .dixm-choix-nom { font-size: 0.75rem; font-weight: 500; color: hsl(var(--muted-foreground)); }
+.dixm-choix--longueur .dixm-choix-sous { font-size: 0.8125rem; font-weight: 600; color: hsl(var(--foreground)); margin-top: 0.125rem; }
+@media (max-width: 400px) {
+  .dixm-choix-boutons { gap: 0.4rem; }
+  .dixm-choix-btn { padding: 0.625rem 0.25rem; }
+  .dixm-choix-sous, .dixm-choix--longueur .dixm-choix-sous { font-size: 0.72rem; }
+}
+
+.dixm-carte {
+  max-width: 34rem; margin: 0 auto 1.25rem; padding: 1.5rem 1.5rem 1.75rem;
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid hsl(var(--primary) / 0.25);
+  background: linear-gradient(160deg, hsl(var(--primary) / 0.07), hsl(var(--secondary) / 0.07));
+  text-align: center;
+}
+.dixm-accroche { margin: 0 0 0.5rem; font-size: 0.95rem; font-weight: 700; color: hsl(var(--primary-texte)); }
+.dixm-defaut {
+  margin: 0; font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: clamp(1.2rem, 3.6vw, 1.5rem); font-weight: 700; line-height: 1.35;
+  color: hsl(var(--foreground));
+}
+.dixm-bandeau { display: flex; justify-content: center; margin-bottom: 1rem; }
+.dixm-rangee {
+  max-width: 34rem; margin: 0 auto 0.875rem; padding: 0.875rem 0.75rem 1rem;
+  border-radius: var(--radius); border: 1px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.6); text-align: center;
+}
+.dixm-rangee .party-tour { margin-bottom: 0.75rem; }
+
+.notes-bloc { max-width: 34rem; margin: 0 auto; }
+.notes-grille { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; max-width: 34rem; margin: 0 auto; }
+.notes-btn {
+  flex: 0 0 2.75rem; height: 2.75rem; padding: 0; cursor: pointer;
+  border-radius: 999px; border: 2px solid hsl(var(--border));
+  background: hsl(var(--card)); color: hsl(var(--foreground));
+  font-weight: 800; font-size: 1.05rem; font-variant-numeric: tabular-nums;
+  transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease, opacity 150ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+.notes-btn:not(:disabled):hover { border-color: hsl(var(--primary)); transform: translateY(-2px); }
+}
+.notes-btn:disabled { cursor: default; }
+.notes-btn--choisie, .notes-btn--moi {
+  border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.16); color: hsl(var(--primary-texte));
+}
+.notes-grille--j2 .notes-btn--choisie, .notes-btn--autre {
+  border-color: hsl(var(--secondary)); background: hsl(var(--secondary) / 0.16); color: hsl(var(--secondary-texte));
+}
+.notes-btn--moi.notes-btn--autre {
+  border-color: hsl(var(--secondary)); color: hsl(var(--foreground));
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.22) 50%, hsl(var(--secondary) / 0.22) 50%);
+}
+.notes-grille--verrouillee .notes-btn { pointer-events: none; }
+.notes-grille--verrouillee .notes-btn:not(.notes-btn--choisie),
+.notes-grille--revelee .notes-btn:not(.notes-btn--moi):not(.notes-btn--autre) { opacity: 0.4; }
+.notes-bornes {
+  display: flex; justify-content: space-between; gap: 1rem;
+  max-width: 22rem; margin: 0.625rem auto 0;
+  font-size: 0.78rem; font-weight: 600; color: hsl(var(--muted-foreground));
+}
+.notes-duo { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.875rem; }
+.notes-duo-item, .dixm-pastille {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.2rem 0.75rem; border-radius: 999px; font-weight: 700; font-size: 0.9rem;
+  background: hsl(var(--primary) / 0.12); color: hsl(var(--primary-texte));
+}
+.notes-duo-item--autre, .dixm-pastille--j2 { background: hsl(var(--secondary) / 0.12); color: hsl(var(--secondary-texte)); }
+.notes-duo-item b, .dixm-pastille b { font-weight: 800; }
+/* Sur téléphone, six pastilles sur la première ligne et cinq sur la
+   seconde : chaque pastille prend le sixième de la largeur disponible (au
+   plus 2,75 rem), donc la grille se replie toujours au même endroit. Avec
+   une taille fixe, l'écran de 360 px en face à face, plus étroit de
+   l'encadré de chaque rangée, repliait en 5, 5 et un « 10 » tout seul. */
+@media (max-width: 767.98px) {
+  .notes-grille { max-width: calc(6 * 2.75rem + 5 * 0.5rem); }
+  .notes-btn { flex-basis: calc((100% - 5 * 0.5rem) / 6); max-width: 2.75rem; height: auto; aspect-ratio: 1; }
+}
+@media (max-width: 400px) {
+  .dixm-rangee { padding-left: 0.5rem; padding-right: 0.5rem; }
+}
+
+.dixm-revele { max-width: 34rem; margin: 1.25rem auto 0; text-align: center; }
+.dixm-duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.875rem; }
+.dixm-note {
+  display: flex; flex-direction: column; align-items: center; gap: 0.125rem; min-width: 0;
+  padding: 0.75rem 0.5rem 1rem; border-radius: var(--radius);
+  border: 2px solid hsl(var(--primary) / 0.35); background: hsl(var(--primary) / 0.07);
+  animation: dixmNote 320ms ease both;
+}
+.dixm-note--j2 { border-color: hsl(var(--secondary) / 0.35); background: hsl(var(--secondary) / 0.07); animation-delay: 90ms; }
+.dixm-note-perso { display: block; height: 56px; }
+.dixm-note-perso:empty { display: none; }
+.dixm-note-nom { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; font-size: 0.9rem; }
+.dixm-note-val {
+  font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 2.25rem; line-height: 1;
+  color: hsl(var(--primary-texte));
+}
+.dixm-note--j2 .dixm-note-val { color: hsl(var(--secondary-texte)); }
+.dixm-note-val small { margin-left: 0.125rem; font-size: 0.95rem; font-weight: 700; color: hsl(var(--muted-foreground)); }
+@keyframes dixmNote { from { opacity: 0; transform: translateY(8px) scale(0.96); } to { opacity: 1; transform: none; } }
+.dixm-verdict {
+  display: inline-block; margin: 1rem auto 0; padding: 0.5rem 1rem; border-radius: 999px;
+  background: hsl(var(--secondary) / 0.12); font-weight: 700; font-size: 0.95rem;
+}
+.dixm-verdict.est-pareil { background: hsl(142 70% 45% / 0.15); }
+.dixm-suivant { display: flex; justify-content: center; width: 100%; max-width: 20rem; margin: 1.125rem auto 0; }
+
+.dixm-res-sur { margin: 0 0 0.25rem; font-size: 0.85rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.dixm-anneau { margin: 1rem auto 0.25rem; }
+.dixm-anneau-legende { margin: 0 0 1rem; font-size: 0.85rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.dixm-moyennes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.875rem; max-width: 26rem; margin: 0 auto; }
+.dixm-moyenne {
+  display: flex; flex-direction: column; align-items: center; min-width: 0; padding: 0.875rem 0.5rem;
+  border-radius: var(--radius); border: 2px solid hsl(var(--primary) / 0.3); background: hsl(var(--primary) / 0.06);
+}
+.dixm-moyenne--j2 { border-color: hsl(var(--secondary) / 0.3); background: hsl(var(--secondary) / 0.06); }
+.dixm-moyenne-nom { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; font-size: 0.9rem; }
+.dixm-moyenne-val { font-family: 'Poppins', 'Inter', sans-serif; font-weight: 800; font-size: 2rem; line-height: 1.1; color: hsl(var(--primary-texte)); }
+.dixm-moyenne--j2 .dixm-moyenne-val { color: hsl(var(--secondary-texte)); }
+.dixm-moyenne-mot { font-size: 0.78rem; color: hsl(var(--muted-foreground)); }
+.dixm-phrase { max-width: 30rem; margin: 0.875rem auto 0; font-weight: 600; }
+.dixm-bloc { max-width: 34rem; margin: 1.75rem auto 0; text-align: left; }
+.dixm-bloc-titre { margin: 0 0 0.625rem; font-size: 1.05rem; font-weight: 800; text-align: center; }
+.dixm-liste { display: grid; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.dixm-liste-item {
+  display: flex; flex-direction: column; gap: 0.375rem; padding: 0.75rem 0.875rem;
+  border-radius: var(--radius); border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+}
+.dixm-liste-texte { font-size: 0.95rem; line-height: 1.4; }
+.dixm-liste-accroche { font-weight: 700; color: hsl(var(--primary-texte)); }
+.dixm-liste-notes { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+.dixm-pastille { font-size: 0.8rem; padding: 0.15rem 0.6rem; }
+@media (prefers-reduced-motion: reduce) {
+  .dixm-note { animation: none; }
+}
+/* La liste des cartes dans le texte de la page : l'accroche en couleur,
+   deux colonnes à partir de la tablette. */
+.dixm-page-groupe { margin-top: 2rem; }
+.dixm-page-liste { display: grid; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.dixm-page-liste li {
+  padding: 0.625rem 0.875rem; border-radius: var(--radius);
+  border: 1px solid hsl(var(--border)); background: hsl(var(--card));
+  color: hsl(var(--muted-foreground)); line-height: 1.45;
+}
+.dixm-page-liste li span { font-weight: 700; color: hsl(var(--primary-texte)); }
+@media (min-width: 768px) {
+  .dixm-page-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ── Compatibilité sexuelle (EchelleQuiz) ──────────────────────────────
+   Le résultat : l'anneau, une jauge par dimension, ce qui rapproche et ce
+   dont parler, puis les réponses côte à côte. Le prénom de chacun prend la
+   couleur de son personnage (rose ou violet, selon le genre donné). */
+.ech-avert { max-width: 30rem; margin: 0 auto 1.25rem; font-size: 0.85rem; line-height: 1.45; text-align: center; color: hsl(var(--muted-foreground)); }
+.ech-res-noms { margin: 0 0 0.25rem; font-size: 0.85rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.ech-anneau { margin: 1rem auto 0.25rem; }
+.ech-anneau-legende { margin: 0 0 1rem; font-size: 0.85rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.ech-bloc-titre { margin: 0 0 0.75rem; font-size: 1.05rem; font-weight: 800; text-align: center; }
+.ech-axes { max-width: 30rem; margin: 1.5rem auto 0; text-align: left; }
+.ech-axe { margin-bottom: 0.75rem; }
+.ech-axe-tete { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.3rem; font-size: 0.9rem; font-weight: 700; }
+.ech-axe-pct { color: hsl(var(--primary-texte)); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ech-axe-piste { height: 0.6rem; border-radius: 999px; background: hsl(var(--muted)); overflow: hidden; }
+.ech-axe-plein { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary))); }
+.ech-pistes { display: grid; gap: 0.75rem; max-width: 34rem; margin: 1.5rem auto 0; text-align: left; }
+@media (min-width: 640px) {
+  .ech-pistes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.ech-piste { padding: 0.875rem 1rem; border-radius: var(--radius); border: 1px solid hsl(var(--border)); background: hsl(var(--card)); }
+.ech-piste--fort { border-color: hsl(142 50% 42% / 0.4); background: hsl(142 60% 45% / 0.07); }
+.ech-piste--parler { border-color: hsl(var(--primary) / 0.4); background: hsl(var(--primary) / 0.07); }
+.ech-piste-titre { margin: 0; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: hsl(var(--muted-foreground)); }
+.ech-piste-axe { margin: 0.125rem 0 0.375rem; font-size: 1.05rem; font-weight: 800; }
+.ech-piste p:last-child { margin: 0; font-size: 0.92rem; line-height: 1.5; }
+.ech-ecarts { max-width: 34rem; margin: 1.75rem auto 0; text-align: left; }
+.ech-tout { max-width: 34rem; margin: 1.25rem auto 0; text-align: left; border: 1px solid hsl(var(--border)); border-radius: var(--radius); background: hsl(var(--card) / 0.6); }
+.ech-tout-titre { cursor: pointer; padding: 0.875rem 1rem; font-weight: 700; }
+.ech-tout .ech-liste { padding: 0 0.75rem 0.75rem; }
+.ech-liste { display: grid; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.ech-liste-item {
+  padding: 0.75rem 0.875rem; border-radius: var(--radius);
+  border: 1px solid hsl(var(--border)); border-left-width: 4px; background: hsl(var(--card));
+}
+.ech-liste-item--pareil { border-left-color: hsl(142 60% 40%); }
+.ech-liste-item--proche { border-left-color: hsl(38 85% 50%); }
+.ech-liste-item--loin { border-left-color: hsl(var(--primary)); }
+.ech-liste-q { margin: 0 0 0.375rem; font-size: 0.92rem; font-weight: 700; line-height: 1.4; }
+.ech-liste-r { margin: 0.125rem 0 0; font-size: 0.88rem; line-height: 1.4; color: hsl(var(--muted-foreground)); }
+.ech-liste-r b { margin-right: 0.3rem; }
+.ech-nom--rose { color: hsl(var(--primary-texte)); }
+.ech-nom--violet { color: hsl(var(--secondary-texte)); }
+
+/* ═══════════════════════════════════════════════════════════════════
+   ÉCRAN DE DÉPART À DEUX : LES CARTES DE PRÉNOMS (octobre 2026)
+   Thomas, sur la compatibilité sexuelle : « c'est de la superposition
+   constante, les marges externes sont mal gérées et trop courtes ».
+   Chaque niveau portait un cadre à l'encre et une ombre portée (l'écran,
+   la carte du joueur, la pastille du numéro, le champ, les boutons de
+   genre, la pastille du nombre de questions), les cartes étaient
+   inclinées, et sur téléphone la grille débordait du rembourrage du
+   moteur pour ne garder que quatre pixels contre son bord.
+   Désormais le cadre à l'encre reste au moteur et au bouton de départ.
+   Dedans, les cartes sont des aplats teintés (rose pour le joueur 1,
+   violet pour le joueur 2, comme les deux personnages), sans ombre ; le
+   champ et les boutons de genre gardent seuls un contour. Toutes les
+   cartes de prénoms passent par cartePrenom (quiz-engine-core.js) : en
+   tête la pastille et le libellé, dessous le champ et, à côté, le genre.
+   L'ordre de l'écran est le même partout : personnages, titre,
+   description, pastille « N questions • M min », mise en garde
+   éventuelle, cartes, options, interrupteur à distance, bouton.
+   ═══════════════════════════════════════════════════════════════════ */
+.quiz-setup-screen { padding: 2.25rem 2rem 2rem; }
+@media (min-width: 768px) { .quiz-setup-screen { padding: 2.75rem 3rem 2.5rem; } }
+@media (max-width: 640px) { .quiz-setup-screen { padding: 1.75rem 1.25rem 1.5rem; } }
+
+/* La pastille se lit avec la description, juste dessous : un aplat rose,
+   sans contour. Suivie directement du bouton (tests sans prénoms), elle
+   ne double pas l'écart. */
+.quiz-setup-screen .quiz-setup-meta {
+  margin: 0 auto 1.25rem; padding: 0.4rem 0.95rem;
+  border: 0; border-radius: 999px;
+  background: hsl(var(--primary) / 0.1); color: hsl(var(--primary-texte));
+  font-size: 0.8rem; font-weight: 700; line-height: 1.35;
+}
+.quiz-setup-screen .quiz-setup-meta + .quiz-setup-start-btn { margin-top: 0.25rem !important; }
+
+/* Une ligne d'aide sous la pastille (règles du jeu, mise en garde). */
+.quiz-setup-aide {
+  max-width: 28rem; margin: 0 auto 1.25rem;
+  font-size: 0.85rem; line-height: 1.45; text-align: center;
+  color: hsl(var(--muted-foreground));
+}
+
+/* La grille : une colonne sur téléphone, dans le rembourrage du moteur ;
+   deux colonnes dès que deux cartes tiennent avec leur genre. */
+.quiz-setup-grid {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.75rem;
+  width: 100%; max-width: 30rem; margin-left: auto; margin-right: auto;
+}
+@media (min-width: 720px) {
+  .quiz-setup-grid:not(.quiz-setup-grid--seul) { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 42rem; gap: 1rem; }
+}
+.quiz-setup-grid--seul { max-width: 22rem; }
+
+.quiz-player-card {
+  position: relative; text-align: left;
+  padding: 0.8rem 0.85rem 0.9rem; border-radius: 1rem;
+  background: hsl(var(--muted) / 0.5);
+  border: 1.5px solid hsl(var(--border));
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.quiz-player-card--j1 { background: hsl(var(--primary) / 0.07); border-color: hsl(var(--primary) / 0.2); }
+.quiz-player-card--j2 { background: hsl(var(--secondary) / 0.08); border-color: hsl(var(--secondary) / 0.22); }
+.dark .quiz-player-card--j1 { background: hsl(var(--primary) / 0.12); border-color: hsl(var(--primary) / 0.28); }
+.dark .quiz-player-card--j2 { background: hsl(var(--secondary) / 0.17); border-color: hsl(var(--secondary) / 0.36); }
+.quiz-player-card:focus-within { border-color: hsl(var(--primary) / 0.55); box-shadow: 0 0 0 3px hsl(var(--primary) / 0.12); }
+.quiz-player-card--j2:focus-within { border-color: hsl(var(--secondary) / 0.6); box-shadow: 0 0 0 3px hsl(var(--secondary) / 0.15); }
+
+.quiz-player-tete { display: flex; align-items: center; gap: 0.5rem; min-height: 1.5rem; margin-bottom: 0.5rem; }
+.quiz-player-ligne + .quiz-player-tete { margin-top: 0.75rem; }
+.quiz-player-number {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  width: 1.5rem; height: 1.5rem; margin: 0; border: 0; border-radius: 999px; box-shadow: none;
+  background: hsl(var(--primary)); color: #fff;
+  font-family: var(--font-display); font-size: 0.78rem; font-weight: 800; line-height: 1;
+}
+.quiz-player-card--j2 .quiz-player-number { background: hsl(var(--secondary)); }
+.quiz-player-libelle { display: block; margin: 0; font-size: 0.875rem; font-weight: 700; line-height: 1.3; color: hsl(var(--foreground)); text-align: left; }
+
+/* Le champ et, à côté, les deux boutons de genre, à la même hauteur. Le
+   texte du champ est en 16 px : en dessous, Safari sur iPhone zoome toute
+   la page à la saisie. */
+.quiz-player-ligne { display: flex; align-items: center; gap: 0.5rem; }
+/* input.quiz-player-champ : la regle des champs texte du moteur
+   (.quiz-engine input[type="text"], trait a l'encre et ombre au focus) a
+   la meme force, celle-ci vient apres et l'emporte. */
+.quiz-engine input.quiz-player-champ {
+  flex: 1 1 auto; min-width: 0; width: auto; height: 2.75rem; margin: 0;
+  padding: 0 0.85rem; text-align: left; font-size: 1rem; font-weight: 600;
+  border: 2px solid hsl(var(--ink) / 0.45); border-radius: 0.8rem;
+  background: hsl(var(--background)); box-shadow: none;
+}
+.quiz-engine input.quiz-player-champ:focus { border-color: hsl(var(--primary)); box-shadow: 0 0 0 3px hsl(var(--primary) / 0.18); outline: none; }
+.quiz-player-genre { flex: 0 0 auto; display: flex; gap: 0.375rem; }
+.quiz-engine .gender-btn {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  width: 2.75rem; height: 2.75rem; margin: 0; padding: 0;
+  border: 2px solid hsl(var(--ink) / 0.2); border-radius: 0.8rem;
+  background: hsl(var(--background)); box-shadow: none; transform: none;
+  font-size: 1.35rem; line-height: 1; cursor: pointer; opacity: 1;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .quiz-engine .gender-btn:hover { border-color: hsl(var(--ink) / 0.45); }
+}
+.dark .quiz-engine .gender-btn { border-color: hsl(var(--ink) / 0.32); }
+.quiz-engine .gender-btn:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
+/* Une fois l'un choisi, l'autre s'efface : on voit d'un coup d'œil lequel
+   est retenu. */
+.quiz-player-genre:has(.gender-btn-selected) .gender-btn:not(.gender-btn-selected) { opacity: 0.45; }
+.quiz-engine .gender-btn.gender-btn-selected.gender-btn-male { background: #dbeafe; border-color: #3b82f6; }
+.quiz-engine .gender-btn.gender-btn-selected.gender-btn-female { background: #fce7f3; border-color: #ec4899; }
+.dark .quiz-engine .gender-btn.gender-btn-selected.gender-btn-male { background: #1e3a8a; border-color: #60a5fa; }
+.dark .quiz-engine .gender-btn.gender-btn-selected.gender-btn-female { background: #831843; border-color: #f472b6; }
+
+/* Qui est le plus : une ligne par joueur, dans le même aplat. */
+.most-joueurs { display: grid; gap: 0.6rem; width: 100%; max-width: 30rem; margin: 0 auto; }
+.most-joueur {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.5rem 0.55rem 0.5rem 0.7rem; border-radius: 1rem;
+  background: hsl(var(--primary) / 0.07); border: 1.5px solid hsl(var(--primary) / 0.2);
+}
+.most-joueur:nth-child(even) { background: hsl(var(--secondary) / 0.08); border-color: hsl(var(--secondary) / 0.22); }
+.dark .most-joueur { background: hsl(var(--primary) / 0.12); border-color: hsl(var(--primary) / 0.28); }
+.dark .most-joueur:nth-child(even) { background: hsl(var(--secondary) / 0.17); border-color: hsl(var(--secondary) / 0.36); }
+.most-joueur .quiz-player-letter {
+  width: 1.75rem; height: 1.75rem; border-radius: 999px; box-shadow: none;
+  background: hsl(var(--primary)); font-size: 0.8rem; font-weight: 800;
+}
+.most-joueur:nth-child(even) .quiz-player-letter { background: hsl(var(--secondary)); }
+.most-joueur-retirer {
+  flex: 0 0 auto; width: 2.5rem; height: 2.5rem; border-radius: 0.75rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: hsl(var(--destructive)); background: transparent; border: 0; cursor: pointer;
+}
+.most-joueur-retirer svg { width: 1.1rem; height: 1.1rem; }
+.quiz-setup-screen .most-joueurs .quiz-add-player-btn { margin: 0; }
+
+/* Les options sous les cartes (longueur du quiz coquin) et l'interrupteur
+   à distance : un aplat sans contour, à la largeur des cartes. */
+.quiz-setup-screen > .coquin-longueur { width: 100%; max-width: 30rem; margin: 1.25rem auto 0; }
+.quiz-setup-screen .salon-zone {
+  width: 100%; max-width: 30rem; margin: 1rem auto 0; padding: 0.55rem 0.9rem;
+  border: 0; border-radius: 1rem; background: hsl(var(--muted) / 0.55);
+}
+.salon-detail .quiz-setup-grid { max-width: 22rem; }
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   Téléphone : les animations infinies qui repeignent à chaque image
+   ═══════════════════════════════════════════════════════════════════
+   Elles n'animent ni transform ni opacity : dégradé qui glisse dans le
+   titre, reflet des boutons, anneau néon du bouton pureté, LED et anneau du
+   bouton sources Google, fond de la carte finale de l'accueil, anneau du
+   résultat de la scène du hero, halo de la carte d'avis et vague des
+   étoiles, point du compteur. Chacune recalcule le style et repeint à
+   chaque image, sur le fil principal, du chargement jusqu'au départ. Sur un
+   téléphone moyen (processeur quatre fois plus lent qu'au bureau, 390 px),
+   l'accueil occupait ainsi le fil principal 9,7 s sur 10 au repos, contre
+   8 ms sans elles (mesure du 11 octobre 2026) : défilement haché, appuis
+   lents, LCP retardé. Le dessin reste, il ne bouge plus. Les animations
+   composées (taches floutées, trame, ruban, scène des mascottes) gardent
+   leur mouvement.
+
+   Ce bloc reste le DERNIER du fichier : à spécificité égale, la dernière
+   règle gagne. Écrit plus haut, sous le titre du hero, il ne coupait que le
+   dégradé du titre, déclaré avant lui ; toutes les autres animations,
+   déclarées plus bas, tournaient quand même. */
+@media (max-width: 767.98px) {
+  .hero-title .text-gradient, .text-gradient { animation: none; background-position: 30% center; }
+  .btn-cta::after { animation: none; display: none; }
+  .btn-purete::before, .btn-purete:hover::before { animation: none; --nv-angle: 60deg; }
+  .gsource-btn::before, .gsource-g::before { animation: none; }
+  .final-cta-card { animation: none; background-position: 50% 50%; }
+  /* L'anneau du résultat de la scène du hero : posé directement à sa
+     valeur, la scène garde ses fondus et ses sauts. */
+  .scene-anneau-fill { animation: none; }
+  .pqx-form-wrap { animation: none; }
+  .pqx-input-stars:not(:hover):not(:has(.on)) .pqx-star-btn svg { animation: none; }
+  .quiz-count-bubble .qcb-dot { animation: none; }
 }

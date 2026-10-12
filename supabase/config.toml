@@ -9,9 +9,6 @@ verify_jwt = false
 [functions.admin-reviews]
 verify_jwt = false
 
-[functions.manage-ado-session]
-verify_jwt = false
-
 [functions.manage-custom-quiz]
 verify_jwt = false
 
@@ -31,4 +28,10 @@ verify_jwt = false
 verify_jwt = false
 
 [functions.admin-social]
+verify_jwt = false
+
+[functions.admin-stats]
+verify_jwt = false
+
+[functions.admin-reglages]
 verify_jwt = false
