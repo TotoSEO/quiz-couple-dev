@@ -63,9 +63,14 @@ Puis `reseaux/atelier/etat.json`, écrit chaque matin par l'entretien :
   la publication n'ont pas besoin d'elle).
 - `hors_grille` : posts déjà en base dont la catégorie ne suit plus la
   semaine type (la grille a changé après leur écriture, comme le mardi soir
-  devenu BD le 8 octobre 2026). Ils partiront tels quels si on n'y touche
-  pas : on les réécrit dans la catégorie `attendue`, après les créneaux
-  vides, en remplaçant le fichier existant.
+  devenu BD le 8 octobre 2026, ou le samedi soir devenu « He's a 10
+  but... » le 12 octobre 2026). Ils partiront tels quels si on n'y touche
+  pas : on les réécrit dans la catégorie `attendue`, en remplaçant le
+  fichier existant, **dans l'ordre des dates, avec les créneaux vides** :
+  un hors grille de samedi prochain passe avant un créneau vide de
+  décembre. Une fois la réserve pleine, les créneaux vides sont à plus d'un
+  mois ; les traiter d'abord laissait partir tels quels les hors grille des
+  semaines suivantes.
 - `refuses` : fichiers que la synchro a refusés dans les dernières
   24 heures, avec leurs `fautes`. Le fichier existe sur la branche mais rien
   n'est en base, donc rien ne partira : on le réécrit en entier, en
@@ -128,7 +133,10 @@ sa phrase.
 Sans `categorie`, on la déduit du texte : une situation à jouer → `pov`
 (coquine → `coquin`) ; une question à poser au couple → `connais-tu` ; un
 dilemme → `tu-preferes` ; une phrase douce → `phrase` ; un gag en quatre
-temps → `bd` ; un dessin et une phrase → `statique`. Puis on prend
+temps → `bd` ; un dessin et une phrase → `statique` ; une manie, un défaut
+ou un drapeau rouge à noter sur dix → `dix-mais` (l'idée devient une des
+huit cartes, à sa place dans l'ordre du plus léger au plus grave, et on
+écrit les sept autres dans la même édition). Puis on prend
 `prochain_creneau[categorie]` ; pour une deuxième idée sans catégorie qui
 tomberait dans la même catégorie, le créneau suivant de cette catégorie dans
 la semaine type, en vérifiant dans `recents_et_prevus` que rien n'y est parti.
@@ -181,7 +189,8 @@ Les recettes de `reseaux/studio/recettes/exemples/` sont les modèles, une
 par catégorie : `pov-frites`, `pov-fleurs` et `pov-cafe` (pov ; le café est
 le modèle d'une situation jouée sans aucune bulle, dans un des nouveaux
 décors), `pov-couette` (coquin), `statique-calin` (statique), `connais-tu`,
-`tu-preferes`, `citation` (phrase), `bd-malade` (bd).
+`tu-preferes`, `citation` (phrase), `bd-malade` (bd), `dix-mais` et
+`dix-mais-elle` (dix-mais).
 
 ### Les animations (pov, coquin, statique)
 
@@ -410,6 +419,52 @@ night », « couple questions »), puis « Save this for your next date
 night » ; le renvoi vers le site est permis (« More questions: link in
 bio »). Hashtags : `#couplequestions`, `#datenight`, `#couplegoals`,
 `#quizcouple`. Le format du post : `"format": "carrousel"`.
+
+### Le « He's a 10 but... » (samedi soir)
+
+Gabarit `carrousel`, catégorie `dix-mais`, au format de
+`recettes/exemples/dix-mais.json` (« He's a 10 but... » : le violet est le
+10) et de `recettes/exemples/dix-mais-elle.json` (« She's a 10 but... » : la
+rose est le 10), avec un sujet de la banque `dix-mais`. Le sujet donne tout :
+`qui` (he ou she), l'`edition`, l'`accroche` et les huit `cartes`.
+
+C'est la version Instagram du jeu « C'est un 10 mais... » du site : la
+personne est un 10, et chaque carte peut lui coûter des points. Les cartes
+vont de la petite manie qui fait sourire (« but he claps when the plane
+lands ») au vrai drapeau rouge, toujours en dernier (« but he goes through
+your phone while you sleep ») : c'est la chute du carrousel, et ce qui fait
+commenter.
+
+- **Couverture** : `etiquette` « He's a 10 but... » ou « She's a 10
+  but... », `accroche` du sujet (deux lignes au plus).
+- **Huit pages** `{ "type": "page", "numero": "10", "question": "<carte>" }`,
+  les cartes du sujet dans leur ordre. Une carte commence par « but he » ou
+  « but she », jamais « they », et fait 70 signes au plus (trois lignes).
+  Si `--verifier` en refuse une, on la raccourcit ; on ne change pas
+  l'ordre, on n'ajoute rien.
+- **Page finale** : `texte` « What's he now, out of 10? » ou « Which slide
+  dropped him to a 2? » (« she », « her » pour elle), `bouton` « Full game:
+  link in bio » : le jeu complet est sur le site (`/en/hes-a-10-but-game/`).
+- **Les deux scènes** sont celles des modèles, décor `ligne`, `"haut": 180`
+  (l'accroche fait deux lignes et la scène descend pour lui laisser la
+  place) : sur la couverture, le 10 fait un clin d'œil dans les étincelles
+  et l'autre le regarde, sourcils hauts ; à la fin, le 10 rougit, bouche en
+  o, et l'autre a les yeux plats. **Les effets au-dessus de la tête (« ? »,
+  « ... ») ne vont qu'à la rose** : le violet est plus grand, et un effet
+  au-dessus de lui mord sur l'accroche ou sur le bouton (vu au rendu le
+  12 octobre 2026). Quand c'est lui qui doute, son visage suffit. Les
+  visages peuvent changer d'une semaine à l'autre, pas la composition.
+- **Légende** : la règle du jeu en une ligne, sans reprendre une carte
+  (« Start at 10. Take a point off for every slide you couldn't live
+  with. »), puis l'appel « Comment your number ». Hashtags : `#hesa10but`
+  ou `#shesa10but`, `#redflags`, `#couplequiz`, `#quizcouple`. Format du
+  post : `"format": "carrousel"`. Pas de musique : un carrousel n'en a pas.
+
+Quand la banque est épuisée, on écrit un sujet dans le même moule : une
+édition (un thème de la vie à deux), huit cartes qui se suivent du plus
+léger au plus grave, aucune carte déjà vue dans `posts/`, et pour ce
+public de 13 à 25 ans, des drapeaux rouges de couple (jalousie, mensonge,
+contrôle, mépris), jamais rien de sexuel ni de violent.
 
 ### La BD en quatre cases (mardi soir)
 

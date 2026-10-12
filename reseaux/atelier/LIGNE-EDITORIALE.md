@@ -69,14 +69,16 @@ refuse un post qui ne la suit pas.
 | Mercredi | POV | Connais-tu | POV |
 | Jeudi | POV | Statique | Carrousel |
 | Vendredi | POV | Connais-tu | Coquin |
-| Samedi | POV | Tu préfères | Phrase tendre |
+| Samedi | POV | Tu préfères | « He's a 10 but... » |
 | Dimanche | POV | Statique | Phrase tendre |
 
 Par semaine : 10 animations (dont une coquine), 3 « Connais-tu ton
-partenaire ? », 2 « Tu préfères », 2 reels statiques, 2 phrases tendres,
-1 carrousel de questions (le jeudi soir, depuis le 7 octobre 2026 : c'est le
-format qui se garde, « Save this for your next date night ») et 1 bande
-dessinée en quatre cases (le mardi soir, depuis le 8 octobre 2026). Sur 13
+partenaire ? », 2 « Tu préfères », 2 reels statiques, 1 phrase tendre (le
+dimanche soir), 1 carrousel de questions (le jeudi soir, depuis le 7 octobre
+2026 : c'est le format qui se garde, « Save this for your next date
+night »), 1 bande dessinée en quatre cases (le mardi soir, depuis le
+8 octobre 2026) et 1 carrousel « He's a 10 but... » (le samedi soir, depuis
+le 12 octobre 2026, à la place de la phrase tendre du samedi). Sur 13
 semaines : 273 posts. Et chaque jour, une **story** reprend le reel du matin
 (voir plus bas).
 
@@ -211,6 +213,29 @@ dans le coin de chaque page. C'est le format qui fait le plus
 d'enregistrements : la légende dit « Save this for your next date night »,
 et peut renvoyer vers le site. Pas de musique (un carrousel d'images n'en
 a pas par l'API). Treize éditions dans la banque (`carrousel`).
+
+### `dix-mais` : le « He's a 10 but... » du samedi soir (gabarit `carrousel`)
+
+Le jeu « C'est un 10 mais... » du site, en carrousel (idée de Thomas, 12
+octobre 2026). « He's a 10 but... » est une tendance qu'on retrouve partout
+en anglais : quelqu'un est parfait, mais il a une manie, et chacun dit ce
+qu'il en reste sur dix. Dix pages : une couverture (« He's a 10 but... » ou
+« She's a 10 but... », l'édition et « Is he still a 10? »), huit cartes avec
+un grand « 10 » et la suite de la phrase (« but he replies "ok" to your
+three-paragraph text »), et une page finale qui demande la note (« What's he
+now, out of 10? ») et renvoie au jeu complet du site.
+
+Les huit cartes vont du plus léger au plus grave : des petites manies qu'on
+pardonne en riant (il applaudit à l'atterrissage, elle dort avec un ours
+plus grand que lui), puis ce qui agace, puis un vrai drapeau rouge en
+dernier (il fouille son téléphone pendant qu'elle dort). Ce dernier
+carrousel de la semaine est fait pour faire commenter : chacun donne son
+chiffre, et les avis se partagent sur les cartes du milieu. « He » et
+« she » une semaine sur deux, le 10 est le violet ou la rose. Les mascottes
+sont sur la couverture et la page finale (le 10 fait un clin d'œil, puis
+rougit, pris en faute) et en petit dans le coin de chaque carte. Pas de
+musique. Légende : la règle du jeu, puis « Comment your number ». Seize
+éditions dans la banque (`dix-mais`), plus une de Noël et une du Nouvel An.
 
 ### `bd` : la bande dessinée en quatre cases du mardi soir (gabarit `bd`)
 
@@ -364,7 +389,9 @@ les mots que les gens tapent, et donner envie d'un geste précis.
   - tu préfères : `#wouldyourather`, `#couplequestions`, `#couplequiz`,
     `#quizcouple` ;
   - phrases tendres : `#lovequotes`, `#relationshipquotes`,
-    `#couplegoals`, `#quizcouple`.
+    `#couplegoals`, `#quizcouple` ;
+  - « He's a 10 but... » : `#hesa10but` (ou `#shesa10but`), `#redflags`,
+    `#couplequiz`, `#quizcouple`.
 - Pas de tiret cadratin, pas de « really », « actually », « in short » dans
   un titre, pas de formules d'IA (triades, renversements, chutes travaillées).
 
@@ -376,8 +403,9 @@ quarantaine de scènes ont quitté le mur nu pour la rue, le café, la forêt,
 la plage, la voiture et le cinéma, et les gags à bulles ont été réécrits en
 situations), 15 coquines, 28
 statiques, 51 thèmes de « Connais-tu » (dont 8 « Who's more likely? » et 3
-éditions difficiles), 28 de « Tu préfères », 28 phrases, plus 16 sujets
-datés de Noël et du Nouvel An. La routine prend le premier sujet libre de la
+éditions difficiles), 28 de « Tu préfères », 28 phrases, 16 carrousels
+« He's a 10 but... » (12 octobre 2026), plus 18 sujets datés de Noël et du
+Nouvel An. La routine prend le premier sujet libre de la
 catégorie et écrit son id dans le champ `sujet` du post ; un sujet déjà
 utilisé dans `posts/` n'est jamais repris. Les sujets datés passent avant
 la banque, à leur date et à leur créneau.

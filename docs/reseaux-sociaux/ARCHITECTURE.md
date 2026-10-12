@@ -60,10 +60,12 @@ même jour par Thomas ; ses choix sont en partie 1.2.
   - le matin entre 6 h et 8 h ;
   - le midi entre 11 h et 13 h ;
   - l'après-midi entre 16 h et 18 h.
-- **Le mélange de la semaine :** 11 animations avec les mascottes (dont
+- **Le mélange de la semaine :** 10 animations avec les mascottes (dont
   une coquine le vendredi), 3 « Connais-tu ton partenaire ? », 2 « Tu
-  préfères », 2 reels statiques, 2 phrases tendres et, le jeudi soir, 1
-  carrousel de questions (le format qui se garde). Tout dessiné, aucune
+  préfères », 2 reels statiques, 1 phrase tendre (le dimanche soir), 1 BD
+  en quatre cases le mardi soir, 1 carrousel de questions le jeudi soir (le
+  format qui se garde) et, depuis le 12 octobre 2026, 1 carrousel « He's a
+  10 but... » le samedi soir. Tout dessiné, aucune
   photo. 273 posts sur les trois premiers mois, avec une banque de sujets
   (`reseaux/atelier/sujets.json`). Et chaque jour, le reel du matin repart
   en story juste après sa publication.
