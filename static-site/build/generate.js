@@ -859,11 +859,11 @@ function largeurImage(fichier) {
 
 // Le srcset d'une image de tête (/quiz/featured/) ou d'une couverture du blog
 // (/blog/) : les variantes réduites présentes à côté de l'original, dans
-// 720/, 880/ ou 1080/ (produites par build/variantes-images.cjs), puis
+// 480/, 720/, 880/ ou 1080/ (produites par build/variantes-images.cjs), puis
 // l'original à sa vraie largeur. Une variante absente n'est pas déclarée,
 // une image sans aucune variante n'a pas de srcset (null), et une URL
 // absolue non plus. Calculé une fois par image.
-const LARGEURS_VARIANTES = { '/quiz/featured/': [720, 880], '/blog/': [720, 1080] };
+const LARGEURS_VARIANTES = { '/quiz/featured/': [480, 720, 880], '/blog/': [480, 720, 1080] };
 const srcsetsImages = new Map();
 function srcsetImage(src) {
   if (typeof src !== 'string') return null;
@@ -1277,7 +1277,7 @@ async function generatePage(routeKey, lang) {
     ogImage: featured ? `${BASE_URL}/quiz/featured/${featured.file}.webp` : `${BASE_URL}/og-image.webp`,
     featuredImage: featured ? `/quiz/featured/${featured.file}.webp` : null,
     featuredImageAlt: featured ? (featured.alt[lang] || featured.alt.fr) : '',
-    // Les variantes reduites de l'image de tete (720/ et 880/), quand elles
+    // Les variantes reduites de l'image de tete (480/, 720/ et 880/), quand elles
     // existent : sur telephone, l'original de 1200 px etait affiche a 390 px
     // de large, et PageSpeed comptait les octets en trop. Une image sans
     // variante garde son seul fichier : rien ne casse, elle pese juste plus

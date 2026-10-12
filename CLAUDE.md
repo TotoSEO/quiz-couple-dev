@@ -109,9 +109,14 @@ les emplacements qu'à l'événement `load`, jamais dans le premier écran avant
 le premier défilement, le footer compris, et l'interstitiel seulement au résultat ou à l'arrivée depuis une autre page du site ; le fichier de la plateforme de consentement part après
 `DOMContentLoaded` (le talon `__tcfapi` reste en tête) ; GA part au `load`.
 Les images ont des variantes réduites versionnées à côté de l'original :
-720 et 880 px pour les images de tête (`public/quiz/featured/`, originaux de
-1200 px), 720 et 1080 px pour les couvertures du blog (`public/blog/`,
-jusqu'à 1536 px et 132 Ko en moyenne). `srcsetImage` (generate.js) écrit le
+480, 720 et 880 px pour les images de tête (`public/quiz/featured/`,
+originaux de 1200 px), 480, 720 et 1080 px pour les couvertures du blog
+(`public/blog/`, jusqu'à 1536 px et 132 Ko en moyenne). La 480 date du
+12 octobre 2026 : les cartes du bas des pages de test s'affichent en 171 à
+263 px, et un ordinateur ou un téléphone x2 tirait la 720 ; elle a divisé
+par deux les images des cartes sur ordinateur, et allégé l'accueil (519 à
+267 Ko d'images au chargement sur un écran x1) et la liste du blog
+(338 à 185 Ko). `srcsetImage` (generate.js) écrit le
 `srcset` avec les seules variantes présentes et la vraie largeur de
 l'original, lue dans l'en-tête WebP ; il sert les cartes et les derniers
 articles de l'accueil, l'image de tête des tests (et son préchargement dans
