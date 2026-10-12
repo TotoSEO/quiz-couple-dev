@@ -2926,9 +2926,13 @@
   // ── Les pages les plus notées ──
   // Les vingt pages qui ont reçu le plus d'avis approuvés, hors accueil,
   // chaque langue à part : le nom de la page en français, le drapeau de la
-  // version notée. admin_avis_par_page (migration 20261012120000) compte
-  // côté base ; pour les avis antérieurs à l'enregistrement de la langue,
-  // elle la devine d'après le commentaire, et l'admin dit combien.
+  // version notée. admin_avis_par_page (migrations 20261012120000 et
+  // 20261012150000) compte côté base ; pour les avis antérieurs à
+  // l'enregistrement de la langue, elle la devine d'après le commentaire ou
+  // les prénoms du couple. Un avis dont la langue reste inconnue n'a pas de
+  // drapeau possible : il ne prend pas de ligne du classement (une ligne
+  // « 🌐 » ne disait rien de la langue, et Thomas ne savait pas la lire),
+  // la note dessous dit combien il y en a et sur quelles pages.
   var CLASSEMENT_AVIS = 20;
 
   function chargeClassement() {
@@ -2963,17 +2967,21 @@
   function renderClassement() {
     var el = document.getElementById('admin-avis-classement');
     if (!el) return;
-    var par = {}, devinees = 0, inconnues = 0;
+    var par = {}, devinees = 0, inconnues = 0, inconnuesParPage = {};
     (avisClassement || []).forEach(function (l) {
       if (!l.quiz_slug) return;
       var slug = canon(l.quiz_slug), lang = DRAPEAUX[l.lang] ? l.lang : '';
       var n = Number(l.nombre) || 0;
+      if (!lang) {
+        inconnues += n;
+        inconnuesParPage[slug] = (inconnuesParPage[slug] || 0) + n;
+        return;
+      }
       var k = slug + '|' + lang;
       if (!par[k]) par[k] = { slug: slug, lang: lang, nombre: 0, somme: 0 };
       par[k].nombre += n;
       par[k].somme += Number(l.somme) || 0;
       if (l.devinee) devinees += n;
-      if (!lang) inconnues += n;
     });
     var lignes = Object.keys(par).map(function (k) { return par[k]; }).filter(function (l) { return l.nombre > 0; });
     lignes.sort(function (a, b) {
@@ -2981,32 +2989,42 @@
         || nomQuiz(a.slug).localeCompare(nomQuiz(b.slug), 'fr');
     });
     lignes = lignes.slice(0, CLASSEMENT_AVIS);
+    var note = noteClassement(devinees, inconnues, inconnuesParPage);
     if (!lignes.length) {
-      el.innerHTML = '<p class="stats-movers-vide">Aucun avis approuvé hors accueil pour l\'instant.</p>';
-      majNoteClassement('');
+      el.innerHTML = '<p class="stats-movers-vide">Aucun avis approuvé hors accueil dont on connaisse la langue pour l\'instant.</p>';
+      majNoteClassement(note);
       return;
     }
     var max = lignes[0].nombre;
     el.style.setProperty('--rangs', String(Math.ceil(lignes.length / 2)));
     el.innerHTML = lignes.map(function (l, i) {
-      var marque = l.lang ? drapeau(l.lang)
-        : '<span class="adm-drapeau" role="img" aria-label="langue inconnue" title="Langue inconnue">🌐</span>';
       return '<div class="stats-row adm-classement-ligne" style="--fam:hsl(var(--primary));--part:' + (l.nombre / max) * 100 + '%">'
         + '<span class="adm-classement-rang">' + (i + 1) + '</span>'
-        + '<span class="adm-classement-nom"><span class="adm-classement-texte">' + esc(nomQuiz(l.slug)) + '</span>' + marque + '</span>'
+        + '<span class="adm-classement-nom"><span class="adm-classement-texte">' + esc(nomQuiz(l.slug)) + '</span>' + drapeau(l.lang) + '</span>'
         + '<span class="adm-classement-nb">' + nb(l.nombre) + ' avis</span>'
         + '<span class="adm-classement-note">' + (l.somme / l.nombre).toFixed(1).replace('.', ',') + '/5 <span aria-hidden="true">⭐</span></span>'
         + '</div>';
     }).join('');
-    var parts = [];
-    if (devinees) parts.push('pour ' + nb(devinees) + ' avis, elle est devinée d\'après le commentaire');
-    if (inconnues) {
-      parts.push(nb(inconnues) + ' avis sans commentaire qui permette de la deviner '
-        + (inconnues > 1 ? 'sont comptés' : 'est compté') + ' sous 🌐');
+    majNoteClassement(note);
+  }
+
+  // La note sous le classement : d'où vient la langue des anciens avis, et
+  // combien d'avis n'en ont aucune, avec les pages qui en ont le plus.
+  function noteClassement(devinees, inconnues, parPage) {
+    if (!devinees && !inconnues) return '';
+    var phrases = ['Jusqu\'au 12 octobre 2026, un avis n\'enregistrait pas la langue de sa page.'];
+    if (devinees) {
+      phrases.push('Pour ' + nb(devinees) + ' de ces avis, elle est devinée d\'après le commentaire ou les prénoms du couple («\u00a0Noah and Micayla\u00a0»).');
     }
-    majNoteClassement(parts.length
-      ? 'Jusqu\'à mi-octobre 2026, un avis n\'enregistrait pas la langue de sa page : ' + parts.join(', et ') + '.'
-      : '');
+    if (inconnues) {
+      var pages = Object.keys(parPage).sort(function (a, b) { return parPage[b] - parPage[a]; })
+        .slice(0, 3).map(function (s) { return nomQuiz(s) + ' (' + nb(parPage[s]) + ')'; });
+      var un = inconnues === 1;
+      phrases.push(nb(inconnues) + (un ? ' avis n\'a' : ' avis n\'ont') + ' qu\'une note et un prénom, ou un mot qui existe dans plusieurs langues («\u00a0Super\u00a0», «\u00a0Top\u00a0»)\u00a0: '
+        + (un ? 'sans drapeau possible, il n\'est pas' : 'sans drapeau possible, ils ne sont pas') + ' dans le classement. '
+        + (pages.length > 1 ? 'Les pages qui en ont le plus\u00a0: ' : 'Sur la page ') + pages.join(', ') + '.');
+    }
+    return phrases.join(' ');
   }
 
   // ── Leads ──

@@ -1,23 +1,26 @@
 name: Avis · base Supabase
 
-# Applique 20261012120000_avis_langue.sql par l'API de gestion de Supabase,
+# Applique 20261012120000_avis_langue.sql puis 20261012150000_avis_langue_prenoms.sql
+# par l'API de gestion de Supabase,
 # comme securite-base.yml, avec les secrets déjà là pour les fonctions
 # (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Rien à faire à la main.
 #
-# La migration ajoute la langue de la page aux avis (colonne lang, que les
-# formulaires du site envoient), et les deux fonctions du classement des
-# pages de l'onglet Avis de l'admin. Elle ne ferme rien : elle peut passer
-# avant comme après la publication du site, et un formulaire qui envoie la
-# langue avant qu'elle existe renvoie l'avis sans elle.
+# La première ajoute la langue de la page aux avis (colonne lang, que les
+# formulaires du site envoient), et les fonctions du classement des pages de
+# l'onglet Avis de l'admin. La seconde devine aussi la langue des anciens avis
+# d'après les prénoms du couple, avec plus de mots. Elles ne ferment rien :
+# elles peuvent passer avant comme après la publication du site, et un
+# formulaire qui envoie la langue avant qu'elle existe renvoie l'avis sans elle.
 #
-# Le relancer (« Run workflow ») est toujours sans risque : la migration est
-# idempotente.
+# Le relancer (« Run workflow ») est toujours sans risque : les migrations
+# sont idempotentes, et passent toujours dans cet ordre.
 
 on:
   push:
     branches: [main]
     paths:
       - 'supabase/migrations/20261012120000_avis_langue.sql'
+      - 'supabase/migrations/20261012150000_avis_langue_prenoms.sql'
       - '.github/workflows/avis-base.yml'
   workflow_dispatch:
 
@@ -34,17 +37,17 @@ jobs:
       SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
     steps:
       - uses: actions/checkout@v4
-      # La dernière requête de la migration rend un bilan (nombre d'avis, avec
-      # une langue enregistrée, avec une langue devinée) : il est affiché
-      # dans le journal.
-      - name: Appliquer la migration
+      # La dernière requête de chaque migration rend un bilan (avis approuvés,
+      # langue enregistrée, devinée, inconnue) : il est affiché dans le journal.
+      - name: Appliquer les migrations
         run: |
-          f=supabase/migrations/20261012120000_avis_langue.sql
-          jq -Rs '{query: .}' "$f" > requete.json
-          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
-            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
-            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
-            --data @requete.json)
-          echo "$f : réponse $code"
-          head -c 800 reponse.json; echo
-          if [ "$code" -ge 300 ]; then exit 1; fi
+          for f in supabase/migrations/20261012120000_avis_langue.sql supabase/migrations/20261012150000_avis_langue_prenoms.sql; do
+            jq -Rs '{query: .}' "$f" > requete.json
+            code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+              "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+              -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+              --data @requete.json)
+            echo "$f : réponse $code"
+            head -c 800 reponse.json; echo
+            if [ "$code" -ge 300 ]; then exit 1; fi
+          done
