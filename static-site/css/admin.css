@@ -793,7 +793,6 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
 .adm-avis-erreur p{margin:0;font-size:.9rem;font-weight:600;}
 .adm-avis-plus{display:flex;justify-content:center;margin:1rem 0 1.5rem;}
 .adm-avis-plus:has(.hidden){margin:0 0 1.25rem;}
-.adm-drapeau{font-size:1rem;line-height:1;}
 /* Les pages les plus notees : deux colonnes de dix sur grand ecran, rangees
    de haut en bas (le nombre de rangees vient du script, --rangs). */
 .adm-classement-liste{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(var(--rangs,10),auto);grid-auto-flow:column;column-gap:1.75rem;}
@@ -803,10 +802,8 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
 .adm-classement-rang{flex:0 0 1.5rem;text-align:right;font-size:.78rem;font-weight:800;color:var(--adm-ink-2);font-variant-numeric:tabular-nums;}
 .adm-classement-nom{flex:1;min-width:0;display:flex;align-items:center;gap:.4rem;font-size:.88rem;font-weight:600;}
 .adm-classement-texte{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.adm-classement-nom .adm-drapeau{flex:none;}
 .adm-classement-nb{flex:none;font-size:.85rem;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;}
 .adm-classement-note{flex:0 0 4.7rem;text-align:right;font-size:.85rem;font-weight:700;color:var(--adm-ink-2);font-variant-numeric:tabular-nums;white-space:nowrap;}
-.adm-classement-pied{font-size:.78rem;margin:.75rem 0 0;}
 @media (max-width:960px){
   .adm-classement-liste{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-auto-flow:row;}
 }

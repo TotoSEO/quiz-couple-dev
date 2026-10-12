@@ -87,11 +87,11 @@ serve(async (req) => {
     const action = url.searchParams.get('action');
 
     if (req.method === 'GET') {
-      // Le classement des pages par nombre d'avis (admin_avis_par_page,
-      // migration 20261012120000). Sans la migration, l'admin dit pourquoi
-      // le classement manque au lieu de rester vide.
+      // Le classement des pages par nombre d'avis, toutes langues confondues
+      // (admin_avis_par_test, migration 20261012160000). Sans la migration,
+      // l'admin dit pourquoi le classement manque au lieu de rester vide.
       if (url.searchParams.get('classement') === '1') {
-        const { data, error } = await supabase.rpc('admin_avis_par_page');
+        const { data, error } = await supabase.rpc('admin_avis_par_test');
         if (error) return json({ success: true, classement: null, erreur: error.message });
         return json({ success: true, classement: data ?? [] });
       }
