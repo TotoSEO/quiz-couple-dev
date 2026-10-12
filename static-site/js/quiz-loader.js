@@ -259,6 +259,11 @@
     // lui-même : lecture simple, ou décompte de trois secondes. ──
     'phrases':                 { prefix: 'phrases', engine: 'phrases', totalQ: 0, pool: 0, textOnly: true },
 
+    // ── C'est un 10 mais... : une personne parfaite, un défaut, et chacun
+    // redonne sa note de 0 à 10. Les cartes sont écrites pour les deux
+    // genres, « {il|elle} », le moteur choisit la forme au tirage. ──
+    'dix-mais':                { prefix: 'dixMais', engine: 'dix-mais', totalQ: 0, pool: 0, textOnly: true, distance: true },
+
     // ── Pour ou contre : une proposition, deux camps, et les pourcentages
     // des couples qui sont passés avant. Les familles sont déclarées ici avec
     // leur effectif parce que l'identifiant envoyé en base est la position
@@ -384,6 +389,14 @@
     // cinquante points chacun. Le verdict sort de la forme du profil, pas
     // d'une tranche de score : voir AxesQuiz.
     'amour-ou-attachement': { prefix: 'attache', engine: 'axes', totalQ: 20, pool: 20, quizType: 'amour-ou-attachement' },
+    // Compatibilité sexuelle : deux joueurs, des réponses rangées sur une
+    // échelle et comparées en proximité (voir EchelleQuiz). Cinq dimensions,
+    // quatre questions chacune, posées dans l'ordre du fichier (du plus doux
+    // au plus intime) ; `prefix.q{N}_axe` dit la dimension, `_miroir` une
+    // question qui se lit à l'envers chez l'autre (qui fait le premier pas).
+    'compatibilite-sexuelle': { prefix: 'compatSex', engine: 'echelle', totalQ: 20, pool: 20, quizType: 'compatibilite-sexuelle',
+                                needsGender: true, distance: true,
+                                axes: ['envie', 'tendresse', 'parole', 'audace', 'rythme'], paliers: [55, 70, 80, 90] },
 
     // Je l'aime encore ? Un test solo a bareme explicite : les points vont au
     // sentiment encore present (l'anneau se lit donc comme « combien il
@@ -804,6 +817,25 @@
       new QuizEngine.JamaisGame(etendre({ container: container, prefix: config.prefix, lang: lang, questions: affirmations }, optionsDistance(config)));
       return;
     }
+    // C'est un 10 mais : même chargement, un réservoir de cartes numérotées
+    // lu en entier. Chaque carte porte ses deux formes entre accolades.
+    if (config.engine === 'dix-mais') {
+      var cartesDM = [];
+      for (var dmi = 1; dmi <= 90; dmi++) {
+        var cleDM = config.prefix + '.q' + dmi;
+        var texteDM = QuizEngine.tgd(cleDM, null);
+        if (!texteDM || texteDM === cleDM) continue;
+        cartesDM.push({ id: dmi, texte: texteDM });
+      }
+      if (cartesDM.length === 0) {
+        if (!_repliComplet) { _repliComplet = true; QuizEngine.loadAllTranslations(lang, initFromData); return; }
+        if (_dataAttempt < 3) { _dataAttempt++; setTimeout(function() { QuizEngine.loadAllTranslations(lang, initFromData); }, 700 * _dataAttempt); return; }
+        showUnavailable(config);
+        return;
+      }
+      new QuizEngine.DixMaisGame(etendre({ container: container, prefix: config.prefix, lang: lang, cartes: cartesDM }, optionsDistance(config)));
+      return;
+    }
     // Qui pourrait : même chargement que le je n'ai jamais, un réservoir
     // de questions numérotées lu en entier, le moteur fait le tirage.
     if (config.engine === 'qui-pourrait') {
@@ -1038,6 +1070,9 @@
         break;
       case 'axes':
         initAxesQuiz(config);
+        break;
+      case 'echelle':
+        initEchelleQuiz(config);
         break;
       case 'piliers':
         initPiliersQuiz(config, questions);
@@ -2519,6 +2554,31 @@
         secondLabel: lu('secondLibelle', '')
       }
     });
+  }
+
+  // Compatibilite sexuelle : comme le diagnostic, la reserve est lue dans
+  // l'ordre du fichier, sans tirage, et chaque question porte sa dimension.
+  function initEchelleQuiz(cfg) {
+    var questions = parseGdQuestions(cfg.prefix, (cfg.pool || 20) + 5, false);
+    questions.sort(function(a, b) { return a.id - b.id; });
+    questions.forEach(function(q) {
+      var cleAxe = cfg.prefix + '.q' + q.id + '_axe';
+      var axe = QuizEngine.tgd(cleAxe, null);
+      q.axe = (axe && axe !== cleAxe) ? axe : '';
+      var cleMiroir = cfg.prefix + '.q' + q.id + '_miroir';
+      var miroir = QuizEngine.tgd(cleMiroir, null);
+      q.miroir = !!(miroir && miroir !== cleMiroir && miroir !== '0');
+    });
+    if (!questions.length) { showUnavailable(cfg); return; }
+    new QuizEngine.EchelleQuiz(etendre({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang,
+      quizType: cfg.quizType || 'echelle',
+      axes: cfg.axes || [],
+      paliers: cfg.paliers || [55, 70, 80, 90]
+    }, optionsDistance(cfg, questions.slice())));
   }
 
   // Les cles des cinq profils, dans l'ordre ou AxesQuiz les nomme.

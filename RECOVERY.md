@@ -12,8 +12,10 @@
   (`data/blog/**/*.ts` et `public/blog/`). Plus de dépendance Supabase pour le blog.
 - **6 images d'articles manquantes : recréées en SVG** (voir §7). ✅ fait.
 - **Nouvelle base minimale** limitée aux fonctionnalités conservées :
-  `leads`, `messages`, `reviews`, `quiz_ado_sessions`, `activity_validations`.
-  Script unique : **`supabase/RESTORE.sql`**.
+  `leads`, `messages`, `reviews`, `activity_validations` (`quiz_ado_sessions`
+  en est sortie le 11 octobre 2026 : le quiz ado passe par des canaux Realtime,
+  sans table). Script de départ : **`supabase/RESTORE.sql`**, puis les
+  migrations venues depuis (§2).
 
 ---
 
@@ -21,7 +23,7 @@
 
 | Élément | État | Source |
 |---|---|---|
-| **Schéma de la base** (5 tables, RLS, triggers, cron) | ✅ | `supabase/RESTORE.sql` |
+| **Schéma de la base** (4 tables de départ, RLS, triggers, cron) | ✅ | `supabase/RESTORE.sql` puis `supabase/migrations/` |
 | **Edge functions conservées** (10) | ✅ | `supabase/functions/` |
 | **Contenu des articles** (FR/EN/ES/DE/IT) | ✅ à jour | `data/blog/**/*.ts` |
 | **Images d'articles** | ✅ dans le repo | `public/blog/` (dont les 6 SVG recréés) |
@@ -49,16 +51,30 @@
 Dans **Dashboard → SQL Editor → New Query** : colle l'intégralité de
 **`supabase/RESTORE.sql`**, puis **Run**.
 
-Ce script crée les 5 tables, leurs RLS, les triggers, les cron jobs, active le Realtime
-pour le quiz ado, et réinjecte les 11 vrais avis. Il n'y a **rien d'autre à exécuter**
-(plus de tables blog ni de bucket storage : le blog est dans le repo).
+Ce script crée les 4 tables de juillet 2026, leurs RLS, les triggers, les cron jobs, et
+réinjecte les 11 vrais avis (plus de tables blog ni de bucket storage : le blog est dans le repo).
 
 Vérification (incluse en fin de script) :
 ```sql
 select table_name from information_schema.tables where table_schema='public' order by 1;
--- attendu : activity_validations, leads, messages, quiz_ado_sessions, reviews
+-- attendu : activity_validations, leads, messages, reviews
 select count(*) from reviews where is_approved;   -- attendu : 11
 ```
+
+**Ensuite, tout ce qui est venu après juillet 2026** (mesure d'audience, quiz
+personnalisés, votes, mode à distance, réseaux sociaux, sécurité) : coller dans
+le SQL Editor, dans l'ordre des noms, chaque migration de `supabase/migrations/`
+à partir de `20260731120000_create_custom_quizzes.sql`, puis lancer à la main
+(« Run workflow ») les workflows **Réseaux · base Supabase** et **Sécurité · base
+Supabase**. Ce dernier referme ce que les anciennes migrations ouvrent à la clé
+publique (statistiques de l'admin, purges).
+
+> ⚠️ Quelques objets ont été créés à la main dans le tableau de bord et ne sont
+> dans **aucun fichier du dépôt** : les tables `quiz_completions` et
+> `dilemme_votes`, et les fonctions `get_quiz_counts`, `get_quiz_total`,
+> `get_dilemme_counts`, `get_dilemme_total`. Avant toute restauration, relever
+> leur définition sur la base en place (`pg_dump --schema-only`), sinon le
+> compteur de parties et le jeu des dilemmes n'auront plus rien à lire.
 
 ---
 
@@ -70,11 +86,11 @@ supabase link --project-ref <nouveau-ref>
 supabase functions deploy <nom>   # une par une, ou toutes celles à garder
 ```
 
-**Fonctions à déployer** (celles des fonctionnalités conservées) :
-`ebook-verify`, `admin-leads`, `contact-message`, `admin-messages`, `admin-reviews`,
-`get-client-ip`, `manage-ado-session`, `search-activities`, `verify-admin`.
+**Fonctions à déployer** : toutes celles de `supabase/functions/` (le workflow
+« Deploy Supabase Edge Functions » les déploie toutes d'un coup, avec les réglages
+de `supabase/config.toml`).
 
-**Fonctions retirées du dépôt le 7 octobre 2026** (le blog est dans le repo, l'admin n'a plus d'éditeur d'articles) : `admin-blog`, `blog-og`, `trigger-deploy`. Le workflow de déploiement les supprime aussi chez Supabase.
+**Fonctions retirées du dépôt le 7 octobre 2026** (le blog est dans le repo, l'admin n'a plus d'éditeur d'articles) : `admin-blog`, `blog-og`, `trigger-deploy`. **Le 11 octobre 2026** : `manage-ado-session` (le quiz ado n'a plus de table). Le workflow de déploiement les supprime aussi chez Supabase.
 
 Puis configure les **secrets** (Dashboard → Edge Functions → Secrets, ou CLI) :
 
@@ -134,7 +150,7 @@ Puis pousse (le workflow GitHub Pages redéploie le site). À vérifier en prod 
 
 - [ ] Les **avis** s'affichent (accueil / bloc avis) et la note (étoiles) revient ; on peut en soumettre un.
 - [ ] Le **formulaire de contact** enregistre bien (table `messages`).
-- [ ] Le **quiz ado multijoueur** crée/rejoint une session (Realtime `quiz_ado_sessions`).
+- [ ] Le **quiz ado multijoueur** crée/rejoint une partie (canal Realtime `ado-<code>`, sans table).
 - [ ] La **recherche d'activités** renvoie des résultats.
 - [ ] Le **tunnel e-book** : soumission e-mail → e-mail de confirmation → lien → PDF.
 - [ ] L'**admin** (`/admin`) se connecte avec le nouveau `ADMIN_PASSWORD`.

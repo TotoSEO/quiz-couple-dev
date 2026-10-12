@@ -314,7 +314,7 @@
     "enregistree": "¡Imagen guardada! Abre Instagram, TikTok, Snapchat o Facebook y añádela a tu historia."
   },
   "parentalite": {
-    "setupDesc": "Cada uno responde por separado a las mismas 20 preguntas.",
+    "setupDesc": "Cada uno responde por separado a las mismas {{n}} preguntas.",
     "scoreOn60": "Puntuación sobre 60 por persona",
     "combinedScore": "Puntuación global de la pareja",
     "gapWarning": "Hay una diferencia significativa entre vuestras dos puntuaciones. A menudo, en estas diferencias se encuentran las conversaciones más importantes que aún debéis tener."
@@ -387,7 +387,9 @@
     "quizTypeCouple": "Quiz qué tipo de pareja sois",
     "testEstCeLeBon": "Test es la persona adecuada",
     "testSignesChinois": "Compatibilidad signos chinos",
-    "compteurCouple": "Contador de pareja"
+    "compteurCouple": "Contador de tiempo en pareja",
+    "jeuDixMais": "Es un 10, pero...",
+    "testCompatSexuelle": "Test de compatibilidad sexual"
   },
   "truefalse": {
     "ready": "¿Listo para el verdadero o falso?",

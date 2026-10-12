@@ -3,8 +3,14 @@
  *
  * Le jeton n'est jamais ecrit dans le depot ni dans la page construite : le
  * site est statique et public, tout ce qui est genere au build est lisible par
- * n'importe qui. Il est saisi une fois et garde dans le localStorage de ce
- * navigateur, et un bouton permet de l'effacer.
+ * n'importe qui. Il est saisi une fois, puis range cote serveur, dans la table
+ * fermee admin_reglages, par la fonction admin-reglages et le jeton admin
+ * (11 octobre 2026). Il dormait avant dans le localStorage du domaine, que lit
+ * n'importe quel script charge sur une page du site (regie publicitaire,
+ * mesure, consentement) : la page ne le garde plus qu'en memoire, le temps de
+ * l'onglet. Un jeton reste dans ce navigateur est deplace au serveur a la
+ * premiere ouverture, puis efface d'ici. Si admin-reglages ne repond pas, on
+ * garde l'ancienne facon de faire. Un bouton permet de l'effacer.
  *
  * L'API autorise l'origine du site en CORS (elle renvoie l'Origin recu), donc
  * aucun relais serveur n'est necessaire.
@@ -14,8 +20,13 @@
 
   var BASE = 'https://rest.affilae.com';
   var CLE_JETON = 'qc_affilae_token';
+  var CLE_SERVEUR = 'affilae_jeton';
   // Les montants de l'API sont en centimes (100 = 1,00 EUR).
   var CENTIMES = 100;
+
+  // Contexte de l'admin (url et cle publique de Supabase, jeton admin), passe
+  // par admin.js a chaque ouverture de l'onglet.
+  var ctx = null;
 
   var etat = {
     jeton: null,
@@ -352,6 +363,37 @@
     }
   }
 
+  // ── Le jeton, range cote serveur ───────────────────────────────────
+  // Rejette si la reponse ne vient pas d'admin-reglages (fonction pas encore
+  // deployee : la passerelle repond sans l'en-tete x-admin-reglages) ou si
+  // elle refuse : l'appelant retombe alors sur le localStorage.
+  function reglage(methode, valeur) {
+    if (!ctx || !ctx.url || !ctx.jeton) return Promise.reject(new Error('pas de contexte admin'));
+    var url = ctx.url + '/functions/v1/admin-reglages' + (methode === 'POST' ? '' : '?cle=' + CLE_SERVEUR);
+    return fetch(url, {
+      method: methode,
+      headers: { 'Authorization': 'Bearer ' + ctx.cle, 'x-admin-token': ctx.jeton, 'Content-Type': 'application/json' },
+      body: methode === 'POST' ? JSON.stringify({ cle: CLE_SERVEUR, valeur: valeur }) : undefined
+    }).then(function (r) {
+      if (!r.headers.get('x-admin-reglages')) throw new Error('admin-reglages absente');
+      return r.json().then(function (j) {
+        if (!r.ok || !j || j.success === false) throw new Error((j && j.error) || 'Erreur ' + r.status);
+        return j;
+      });
+    });
+  }
+  function lisLocal() { try { return localStorage.getItem(CLE_JETON); } catch (e) { return null; } }
+  function effaceLocal() { try { localStorage.removeItem(CLE_JETON); } catch (e) {} }
+
+  function lireJeton() {
+    var local = lisLocal();
+    return reglage('GET').then(function (rep) {
+      if (rep.valeur) { if (local) effaceLocal(); return rep.valeur; }
+      if (!local) return null;
+      return reglage('POST', local).then(function () { effaceLocal(); return local; }, function () { return local; });
+    }, function () { return local; });
+  }
+
   // ── Porte d'entree ─────────────────────────────────────────────────
   function montrerPorte() {
     $('afl-gate').classList.remove('hidden');
@@ -369,7 +411,9 @@
     err.classList.add('hidden');
     etat.jeton = val;
     appel('/publisher/publishers.me').then(function () {
-      try { localStorage.setItem(CLE_JETON, val); } catch (e) {}
+      reglage('POST', val).catch(function () {
+        try { localStorage.setItem(CLE_JETON, val); } catch (e) {}
+      });
       $('afl-token-input').value = '';
       montrerTableau();
       return chargerProfils().then(chargerTout);
@@ -381,8 +425,9 @@
   }
 
   function oublier() {
-    if (!window.confirm('Effacer le jeton Affilae de ce navigateur ?')) return;
-    try { localStorage.removeItem(CLE_JETON); } catch (e) {}
+    if (!window.confirm('Effacer le jeton Affilae ? Il faudra le recoller pour revoir cet onglet.')) return;
+    reglage('DELETE').catch(function () {});
+    effaceLocal();
     etat.jeton = null;
     etat.charge = false;
     montrerPorte();
@@ -432,11 +477,19 @@
   }
 
   // Appele par admin.js quand l'onglet devient visible.
-  function ouvrir() {
-    if (!etat.jeton) {
-      try { etat.jeton = localStorage.getItem(CLE_JETON); } catch (e) {}
-    }
-    if (!etat.jeton) { montrerPorte(); return; }
+  var lecture = null;
+  function ouvrir(contexte) {
+    if (contexte) ctx = contexte;
+    if (etat.jeton) { afficher(); return; }
+    if (lecture) return;
+    lecture = lireJeton().then(function (jeton) {
+      lecture = null;
+      if (!jeton) { montrerPorte(); return; }
+      etat.jeton = jeton;
+      afficher();
+    });
+  }
+  function afficher() {
     montrerTableau();
     if (!etat.charge) chargerProfils().then(chargerTout).catch(function (e) {
       erreur(e.message || 'Impossible de joindre Affilae.');

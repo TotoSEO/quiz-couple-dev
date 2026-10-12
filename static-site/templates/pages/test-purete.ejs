@@ -280,7 +280,10 @@
           la première section, une fois le sujet posé. %>
       <% if (idx === 0 && typeof featuredImage !== 'undefined' && featuredImage) { %>
       <figure class="pu-figure">
-        <img src="<%= featuredImage %>" alt="<%= featuredImageAlt %>"
+        <%# Mêmes candidats et mêmes tailles que le préchargement de base.ejs :
+            sans srcset, le téléphone préchargeait une variante puis tirait
+            l'original de 1200 px pour la balise, deux téléchargements. %>
+        <img src="<%= featuredImage %>"<% if (typeof featuredImageSrcset !== 'undefined' && featuredImageSrcset) { %> srcset="<%= featuredImageSrcset %>" sizes="(min-width: 1200px) 500px, (min-width: 552px) 520px, calc(100vw - 32px)"<% } %> alt="<%= featuredImageAlt %>"
              width="1200" height="630" loading="lazy" decoding="async">
       </figure>
       <% } %>

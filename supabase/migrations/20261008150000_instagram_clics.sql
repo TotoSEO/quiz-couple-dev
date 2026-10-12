@@ -51,4 +51,9 @@ AS $$
          (SELECT count(DISTINCT c.visite_id) FROM public.instagram_clics c, b WHERE c.created_at >= b.debut_7)::bigint;
 $$;
 
-GRANT EXECUTE ON FUNCTION public.get_instagram_clics() TO anon, authenticated;
+-- Lue par l'admin seulement, par la fonction serveur admin-stats et la clé de
+-- service depuis le 11 octobre 2026 (20261011130000 la retire à la clé
+-- publique). Plus de GRANT à anon ici : social-base.yml rejoue ce fichier à
+-- chaque nouvelle migration des réseaux, et le GRANT la rouvrait à chaque fois.
+-- CREATE OR REPLACE garde les droits déjà posés.
+GRANT EXECUTE ON FUNCTION public.get_instagram_clics() TO service_role;

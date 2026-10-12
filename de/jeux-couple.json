@@ -1,14 +1,14 @@
 {
   "hero": {
-    "badge": "12 Spiele • Kostenlos • Ohne Anmeldung",
+    "badge": "13 Spiele • Kostenlos • Ohne Anmeldung",
     "title": "Paarspiele und Beziehungsspiele, in einem Tipp startklar",
     "titleHighlight": "Beziehungsspiele",
-    "description": "Zwölf Spiele, die auf einem einzigen Handy zwischen euch beiden starten, ohne Konto und ohne Installation."
+    "description": "Dreizehn Spiele, die auf einem einzigen Handy zwischen euch beiden starten, ohne Konto und ohne Installation."
   },
   "stats": {
-    "jeux": "12",
+    "jeux": "13",
     "jeuxLabel": "Spiele zu zweit",
-    "cartes": "410",
+    "cartes": "470",
     "cartesLabel": "Karten, Strafen und Dilemmas",
     "compte": "0",
     "compteLabel": "Konten anzulegen"
@@ -79,13 +79,18 @@
     "phrasesTagline": "Angefangene Sätze, jeder mit seinem eigenen Ende",
     "phrasesContenu": "20 Sätze, die ihr laut zu Ende bringt, in Ruhe oder beide gleichzeitig nach einem Countdown",
     "phrasesDuree": "10 bis 15 Min.",
-    "phrasesJoueurs": "2 Spieler"
+    "phrasesJoueurs": "2 Spieler",
+    "dixMaisNom": "Er ist eine 10, aber...",
+    "dixMaisTagline": "Ein perfekter Mensch, eine Macke, und jeder gibt eine neue Note",
+    "dixMaisContenu": "60 Macken, die ihr von 0 bis 10 bewertet, geheim, zusammen oder auf Distanz, danach eure Noten im Vergleich",
+    "dixMaisDuree": "10 bis 30 Min.",
+    "dixMaisJoueurs": "2 Spieler"
   },
   "section1": {
     "title": "Was ein Spiel zu zweit an einem Abend verändert",
     "p1": "Ein <strong class=\"text-foreground\">Paarspiel</strong> sieht nach nichts aus. Und doch löst es ein sehr konkretes Problem: zu zweit dreht man sich am Ende immer um dieselben Themen. Der Tag, die Arbeit, was es heute Abend gibt… Ein Spiel setzt einen Rahmen, und dieser Rahmen erlaubt Fragen, die man aus dem Nichts heraus nie stellen würde.",
     "p2": "Deshalb funktioniert ein Spiel auch besser als ein Film, wenn ihr euch wirklich wiederfinden wollt. Vor einem Bildschirm seid ihr zwei Menschen nebeneinander, die woanders hinschauen. Um ein Spiel herum seid ihr zwei Menschen, die einander anschauen. Den Unterschied spürt man nach zehn Minuten.",
-    "p3": "Die zwölf Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten."
+    "p3": "Die dreizehn Spiele auf dieser Seite laufen online, kostenlos, auf einem einzigen Handy. Nichts anzulegen, nichts zu installieren, nichts vorzubereiten."
   },
   "section2": {
     "title": "Welches Spiel zu welchem Moment passt",
@@ -116,7 +121,9 @@
     "row11Moment": "Fünf Minuten Pause, mit einem Kaffee in der Hand",
     "row11Pourquoi": "Jede Situation wird mit Ja oder Nein entschieden, und ihr seht sofort, wie die anderen Besucher abgestimmt haben. Ihr könnt nach drei Fragen aufhören, es funktioniert trotzdem.",
     "row12Moment": "Ein Jahrestag oder ein Abend voller Erinnerungen",
-    "row12Pourquoi": "Jeder beendet den Satz auf seine Art, zum Beispiel „Das Gericht, das wir jedes Mal bestellen, ist…“. Mit dem Countdown antwortet ihr gleichzeitig, und wenn die beiden Versionen nicht zusammenpassen, endet es meistens in Gelächter."
+    "row12Pourquoi": "Jeder beendet den Satz auf seine Art, zum Beispiel „Das Gericht, das wir jedes Mal bestellen, ist…“. Mit dem Countdown antwortet ihr gleichzeitig, und wenn die beiden Versionen nicht zusammenpassen, endet es meistens in Gelächter.",
+    "row13Moment": "Ein Abend mit Freunden, oder zu zweit auf dem Sofa",
+    "row13Pourquoi": "Jede Karte beschreibt einen perfekten Menschen mit einer Macke, und jeder gibt seine neue Note von 0 bis 10. Man lacht über die kleinen Eigenheiten und erfährt nebenbei, was für den anderen ein No-Go ist."
   },
   "section3": {
     "title": "Ein Spieleabend zu zweit, der funktioniert",

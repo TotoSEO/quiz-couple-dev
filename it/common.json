@@ -3,6 +3,7 @@
     "testCouple": "Test di coppia",
     "testCommonPoints": "Test punti comuni",
     "testCompatibilite": "Compatibilità amorosa",
+    "testCompatSexuelle": "Compatibilità sessuale",
     "testDistance": "Test relazione a distanza",
     "testToxic": "Test relazione tossica",
     "testPervers": "Test partner narcisista",
@@ -84,6 +85,7 @@
     "jeuQuiPourrait": "Chi potrebbe?",
     "jeuOuiNon": "Sì o no",
     "jeuPhrases": "Frasi da completare",
+    "jeuDixMais": "È un 10, ma...",
     "testAimeEncore": "Mi ama ancora?",
     "testAimeEncoreDesc": "I suoi sentimenti ci sono ancora?",
     "testEmprise": "Sono sotto controllo?",
@@ -102,7 +104,7 @@
     "testEstCeLeBonDesc": "Venti domande per capire se è la persona giusta",
     "testSignesChinois": "Compatibilità segni cinesi",
     "testSignesChinoisDesc": "Due date, due animali, un verdetto",
-    "compteurCouple": "Contatore di coppia",
+    "compteurCouple": "Contatore della durata di coppia",
     "compteurCoupleDesc": "I vostri giorni insieme, le date da festeggiare"
   },
   "footer": {

@@ -1,0 +1,113 @@
+{
+  "jsonLd": {
+    "name": "He's a 10 but..., the game for couples"
+  },
+  "hero": {
+    "badge": "Game for two • 60 cards",
+    "title": "The “He's a 10 but...” game for couples",
+    "titleHighlight": "He's a 10 but...",
+    "description": "A perfect person with one flaw. You each give your new rating from 0 to 10, then compare. 60 cards, with “he's a 10 but”, “she's a 10 but” or a mix of both."
+  },
+  "section1": {
+    "title": "What is “He's a 10 but...”?",
+    "p1": "“He's a 10 but...” is a game you can play with friends or as a couple. You picture a perfect person, a 10 out of 10, and you give them one flaw. For example: “He's a 10 but he puts ketchup on spaghetti carbonara.” Then everyone says what rating they'd give him now.",
+    "p2": "If you keep the 10, the flaw doesn't bother you at all. If you drop to a 2, it pretty much ruins the person for you... and if you go down to 0, it's a dealbreaker and there's nothing left to save! It started as a TikTok trend and spread everywhere, with “she's a 10 but...” right behind it. Played by two, it turns into one of those <a href=\"/en/couple-games/\">games you can play as a couple</a>: you find out what your partner can live with and what drives them up the wall, and most of the time it turns into a debate.",
+    "p3": "The game above runs in your browser, with no sign-up and nothing to install. One phone is enough, or two if you're not in the same place."
+  },
+  "section2": {
+    "title": "How to play",
+    "intro": "Here's how our game above works. Before you start, you pick three things: who the 10 is (a man, a woman, or a mix from one card to the next), how many cards (15, 30 or all 60), and how you want to play.",
+    "modeSecretEmoji": "🤫",
+    "modeSecretTitre": "In secret",
+    "modeSecretTexte": "Each of you rates the card without seeing the other's rating. The phone goes back and forth, and once you've both rated, the two ratings appear at the same time. It's the most honest version, since nobody can just copy the other.",
+    "modeFaceEmoji": "👀",
+    "modeFaceTitre": "Face to face",
+    "modeFaceTexte": "You both rate on the same screen, one row each. It's quicker and there's nothing to hide: you see the other rating come in, and the discussion starts right away.",
+    "modeDistanceEmoji": "📱",
+    "modeDistanceTitre": "Long distance",
+    "modeDistanceTexte": "Each of you plays on your own phone. One of you creates the game and sends the code or link to the other, you each rate on your own side, and both ratings show up on both screens. Handy on a video call, or when you live far apart.",
+    "apres": "After each card, the game shows the gap between your two ratings. At the end, you see on how many cards you agreed within a point, which of you is the tougher judge, your biggest disagreements, and the flaws that are a dealbreaker for both of you."
+  },
+  "section3": {
+    "title": "All 60 cards in the game",
+    "intro": "Here are all the cards, sorted by theme. In the game they're shuffled, and if you pick “mix it up”, every other card is about a woman. Some are just there for a laugh, others are real relationship topics, and that mix is exactly what makes the game fun.",
+    "groupes": [
+      {
+        "titre": "Everyday life",
+        "de": 1,
+        "a": 12
+      },
+      {
+        "titre": "At the table",
+        "de": 13,
+        "a": 22
+      },
+      {
+        "titre": "On the phone",
+        "de": 23,
+        "a": 34
+      },
+      {
+        "titre": "In a relationship",
+        "de": 35,
+        "a": 48
+      },
+      {
+        "titre": "The real red flags",
+        "de": 49,
+        "a": 60
+      }
+    ],
+    "apres": "If you like taking sides, there are also <a href=\"/en/yes-or-no-couples-game/\">relationship situations to judge with a yes or a no</a>, with everyone else's votes shown after each answer."
+  },
+  "section4": {
+    "title": "How to give your rating",
+    "intro": "There's no official rule. Most people rate more or less like this:",
+    "entetes": [
+      "Rating",
+      "What it means"
+    ],
+    "bareme": [
+      [
+        "10",
+        "Changes nothing, it's kind of cute actually."
+      ],
+      [
+        "7 to 9",
+        "A bit annoying, but you can easily live with it."
+      ],
+      [
+        "4 to 6",
+        "Up for debate. It depends on everything else, and on your mood that day."
+      ],
+      [
+        "1 to 3",
+        "Serious doubts. Everything else would have to make up for it."
+      ],
+      [
+        "0",
+        "Dealbreaker. Not even a 10 comes back from that."
+      ]
+    ],
+    "apres": "What's most interesting is the gap between your two ratings. When one of you gives a 9 and the other a 1 to the same card, there's bound to be a story behind it... or at least some explaining to do!"
+  },
+  "section5": {
+    "title": "Just a quirk or a real red flag?",
+    "p1": "The game mixes both. Ketchup on pasta or socks lying around is the kind of flaw you laugh about, even when it gets on your nerves. Going through someone's phone or not being able to stand their friends is something else: those are <a href=\"/en/blog/red-flags-in-a-man/\">warning signs you'd rather spot early</a>, in a man as much as in a woman.",
+    "p2": "When your ratings are far apart on a card like that, it's worth talking about it calmly once the game is over. Everyone has <a href=\"/en/blog/things-not-accept-relationship/\">things they won't accept in a relationship</a>, and it's easier to know them before you end up in the situation.",
+    "p3": "For everything else, keep it light. It's a game, and nobody should feel judged for giving pineapple on pizza a 3!"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "Where does “He's a 10 but” come from?",
+    "a1": "From a TikTok trend that went viral in English. The idea was picked up just about everywhere, often as “she's a 10 but...” too: you describe a perfect person, add a flaw, and everyone gives their rating.",
+    "q2": "Can more than two people play?",
+    "a2": "The online game keeps track of two people's ratings. With friends, nothing stops you from reading the cards out loud and giving your ratings one after the other, it works really well at a party.",
+    "q3": "How long does a game take?",
+    "a3": "About ten minutes for 15 cards face to face, a bit longer in secret since the phone goes back and forth. All 60 cards is more like a whole evening, especially if you argue over every rating.",
+    "q4": "Why choose between a man and a woman?",
+    "a4": "The cards are written for both. Depending on what you choose, the card says “He's a 10 but he...” or “She's a 10 but she...”. With “mix it up”, it changes from one card to the next, and it's often funny to see whether the rating moves depending on who the 10 is.",
+    "q5": "Are our ratings saved?",
+    "a5": "No. Your ratings stay on your phone for the length of the game and disappear when you leave the page. In long-distance mode, they go from one phone to the other without being stored anywhere."
+  }
+}
