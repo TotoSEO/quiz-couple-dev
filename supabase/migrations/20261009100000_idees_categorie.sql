@@ -4,6 +4,10 @@
 -- était à des semaines, puis à trois mois une fois la réserve pleine.
 -- Idempotente, appliquée par social-base.yml.
 alter table public.social_idees add column if not exists categorie text;
+-- NOT VALID depuis le 12 octobre 2026 : social-base.yml rejoue cette migration
+-- avant celles qui élargissent la liste (20261012180000 en dernier), et une
+-- idée d'une catégorie plus récente la faisait échouer, ce qui arrêtait le
+-- workflow avant la grille du jour.
 alter table public.social_idees drop constraint if exists social_idees_categorie_check;
 alter table public.social_idees add constraint social_idees_categorie_check
-  check (categorie is null or categorie in ('pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd'));
+  check (categorie is null or categorie in ('pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd')) not valid;

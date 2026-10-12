@@ -32,9 +32,13 @@ alter table public.social_posts drop constraint if exists social_posts_jour_cren
 create unique index if not exists social_posts_langue_jour_creneau on public.social_posts (langue, jour, creneau);
 
 alter table public.social_idees add column if not exists langue text not null default 'en';
+-- NOT VALID depuis le 12 octobre 2026 : social-base.yml rejoue cette migration
+-- avant celles qui élargissent la liste (20261012180000 en dernier), et une
+-- idée d'une catégorie plus récente la faisait échouer, ce qui arrêtait le
+-- workflow avant la grille du jour.
 alter table public.social_idees drop constraint if exists social_idees_categorie_check;
 alter table public.social_idees add constraint social_idees_categorie_check
-  check (categorie is null or categorie in ('pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd', 'mipaps-anime', 'mipaps-statique', 'mipaps-histoire', 'mipaps-post'));
+  check (categorie is null or categorie in ('pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd', 'mipaps-anime', 'mipaps-statique', 'mipaps-histoire', 'mipaps-post')) not valid;
 
 -- 4. L'accueil de quiz-couple.com ne montre que les publications de Quiz
 --    Couple (la langue en), jamais celles des mipaps.
