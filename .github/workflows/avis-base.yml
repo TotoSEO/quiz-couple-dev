@@ -1,16 +1,17 @@
 name: Avis · base Supabase
 
-# Applique 20261012120000_avis_langue.sql puis 20261012150000_avis_langue_prenoms.sql
+# Applique 20261012120000_avis_langue.sql puis 20261012160000_avis_par_test.sql
 # par l'API de gestion de Supabase,
 # comme securite-base.yml, avec les secrets déjà là pour les fonctions
 # (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Rien à faire à la main.
 #
 # La première ajoute la langue de la page aux avis (colonne lang, que les
-# formulaires du site envoient), et les fonctions du classement des pages de
-# l'onglet Avis de l'admin. La seconde devine aussi la langue des anciens avis
-# d'après les prénoms du couple, avec plus de mots. Elles ne ferment rien :
-# elles peuvent passer avant comme après la publication du site, et un
-# formulaire qui envoie la langue avant qu'elle existe renvoie l'avis sans elle.
+# formulaires du site envoient) et un premier classement des pages rangé par
+# langue ; la seconde le remplace par un classement toutes langues confondues
+# (admin_avis_par_test) et retire les fonctions de la première. Elles ne
+# ferment rien : elles peuvent passer avant comme après la publication du
+# site, et un formulaire qui envoie la langue avant qu'elle existe renvoie
+# l'avis sans elle.
 #
 # Le relancer (« Run workflow ») est toujours sans risque : les migrations
 # sont idempotentes, et passent toujours dans cet ordre.
@@ -20,7 +21,7 @@ on:
     branches: [main]
     paths:
       - 'supabase/migrations/20261012120000_avis_langue.sql'
-      - 'supabase/migrations/20261012150000_avis_langue_prenoms.sql'
+      - 'supabase/migrations/20261012160000_avis_par_test.sql'
       - '.github/workflows/avis-base.yml'
   workflow_dispatch:
 
@@ -37,11 +38,11 @@ jobs:
       SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
     steps:
       - uses: actions/checkout@v4
-      # La dernière requête de chaque migration rend un bilan (avis approuvés,
-      # langue enregistrée, devinée, inconnue) : il est affiché dans le journal.
+      # La dernière requête de chaque migration rend un bilan (nombre d'avis,
+      # pages) : il est affiché dans le journal.
       - name: Appliquer les migrations
         run: |
-          for f in supabase/migrations/20261012120000_avis_langue.sql supabase/migrations/20261012150000_avis_langue_prenoms.sql; do
+          for f in supabase/migrations/20261012120000_avis_langue.sql supabase/migrations/20261012160000_avis_par_test.sql; do
             jq -Rs '{query: .}' "$f" > requete.json
             code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
               "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \

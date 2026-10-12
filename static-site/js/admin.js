@@ -2872,18 +2872,6 @@
     set('admin-filter-approved-count', r ? '(' + nb(r.approuves) + ')' : '');
   }
 
-  // Le drapeau de la version de la page sur laquelle l'avis a été laissé.
-  // La langue n'est enregistrée que depuis le 12 octobre 2026.
-  var DRAPEAUX = {
-    fr: ['🇫🇷', 'français'], en: ['🇬🇧', 'anglais'], es: ['🇪🇸', 'espagnol'],
-    de: ['🇩🇪', 'allemand'], it: ['🇮🇹', 'italien']
-  };
-  function drapeau(lang, titre) {
-    var d = DRAPEAUX[lang];
-    if (!d) return '';
-    return '<span class="adm-drapeau" role="img" aria-label="' + d[1] + '" title="' + esc((titre || 'Page en ') + d[1]) + '">' + d[0] + '</span>';
-  }
-
   function renderReviews() {
     var list = document.getElementById('admin-reviews-list');
     if (!list) return;
@@ -2902,7 +2890,7 @@
       html += '<div class="glass-card rounded-xl p-5 space-y-3" data-avis="' + esc(String(r.id)) + '">';
       html += '<div class="flex items-center justify-between flex-wrap gap-2">';
       var quizBadge = '<span class="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">' + (r.quiz_slug ? esc(nomQuiz(canon(r.quiz_slug))) : 'Général (home)') + '</span>';
-      html += '<div class="flex items-center gap-2 flex-wrap"><span class="font-semibold">' + esc(r.author_name || 'Anonyme') + '</span>' + statusBadge + quizBadge + drapeau(r.lang) + '</div>';
+      html += '<div class="flex items-center gap-2 flex-wrap"><span class="font-semibold">' + esc(r.author_name || 'Anonyme') + '</span>' + statusBadge + quizBadge + '</div>';
       html += '<div class="flex items-center gap-0.5">' + starsHtml(r.rating) + '</div>';
       html += '</div>';
       html += '<p class="text-sm text-muted-foreground">' + formatDate(r.created_at) + '</p>';
@@ -2925,21 +2913,17 @@
 
   // ── Les pages les plus notées ──
   // Les vingt pages qui ont reçu le plus d'avis approuvés, hors accueil,
-  // chaque langue à part : le nom de la page en français, le drapeau de la
-  // version notée. admin_avis_par_page (migrations 20261012120000 et
-  // 20261012150000) compte côté base ; pour les avis antérieurs à
-  // l'enregistrement de la langue, elle la devine d'après le commentaire ou
-  // les prénoms du couple. Un avis dont la langue reste inconnue n'a pas de
-  // drapeau possible : il ne prend pas de ligne du classement (une ligne
-  // « 🌐 » ne disait rien de la langue, et Thomas ne savait pas la lire),
-  // la note dessous dit combien il y en a et sur quelles pages.
+  // toutes langues confondues : les cinq versions d'une page sont le même
+  // test traduit et partagent leurs avis (Thomas, 12 octobre 2026, après une
+  // première version rangée par langue). admin_avis_par_test (migration
+  // 20261012160000) compte côté base ; l'ancien identifiant d'une page est
+  // replié sur le nouveau (canon), comme dans l'onglet Parties.
   var CLASSEMENT_AVIS = 20;
 
   function chargeClassement() {
     var el = document.getElementById('admin-avis-classement');
     if (!el) return;
     el.innerHTML = '<p class="stats-movers-vide">Chargement...</p>';
-    majNoteClassement('');
     fetch(urlAvis({ classement: 1 }), {
       headers: { 'Authorization': 'Bearer ' + SUPABASE_KEY, 'x-admin-token': adminToken }
     })
@@ -2947,7 +2931,7 @@
     .then(function (data) {
       if (!data || !('classement' in data)) throw new Error('la fonction admin-reviews n\'est pas encore redéployée');
       if (!Array.isArray(data.classement)) {
-        throw new Error('la base ne répond pas (' + (data.erreur || 'migration 20261012120000 à appliquer') + ')');
+        throw new Error('la base ne répond pas (' + (data.erreur || 'migration 20261012160000 à appliquer') + ')');
       }
       avisClassement = data.classement;
       renderClassement();
@@ -2957,31 +2941,16 @@
     });
   }
 
-  function majNoteClassement(texte) {
-    var note = document.getElementById('admin-avis-classement-note');
-    if (!note) return;
-    note.textContent = texte;
-    note.classList.toggle('hidden', !texte);
-  }
-
   function renderClassement() {
     var el = document.getElementById('admin-avis-classement');
     if (!el) return;
-    var par = {}, devinees = 0, inconnues = 0, inconnuesParPage = {};
+    var par = {};
     (avisClassement || []).forEach(function (l) {
       if (!l.quiz_slug) return;
-      var slug = canon(l.quiz_slug), lang = DRAPEAUX[l.lang] ? l.lang : '';
-      var n = Number(l.nombre) || 0;
-      if (!lang) {
-        inconnues += n;
-        inconnuesParPage[slug] = (inconnuesParPage[slug] || 0) + n;
-        return;
-      }
-      var k = slug + '|' + lang;
-      if (!par[k]) par[k] = { slug: slug, lang: lang, nombre: 0, somme: 0 };
-      par[k].nombre += n;
-      par[k].somme += Number(l.somme) || 0;
-      if (l.devinee) devinees += n;
+      var slug = canon(l.quiz_slug);
+      if (!par[slug]) par[slug] = { slug: slug, nombre: 0, somme: 0 };
+      par[slug].nombre += Number(l.nombre) || 0;
+      par[slug].somme += Number(l.somme) || 0;
     });
     var lignes = Object.keys(par).map(function (k) { return par[k]; }).filter(function (l) { return l.nombre > 0; });
     lignes.sort(function (a, b) {
@@ -2989,10 +2958,8 @@
         || nomQuiz(a.slug).localeCompare(nomQuiz(b.slug), 'fr');
     });
     lignes = lignes.slice(0, CLASSEMENT_AVIS);
-    var note = noteClassement(devinees, inconnues, inconnuesParPage);
     if (!lignes.length) {
-      el.innerHTML = '<p class="stats-movers-vide">Aucun avis approuvé hors accueil dont on connaisse la langue pour l\'instant.</p>';
-      majNoteClassement(note);
+      el.innerHTML = '<p class="stats-movers-vide">Aucun avis approuvé hors accueil pour l\'instant.</p>';
       return;
     }
     var max = lignes[0].nombre;
@@ -3000,31 +2967,11 @@
     el.innerHTML = lignes.map(function (l, i) {
       return '<div class="stats-row adm-classement-ligne" style="--fam:hsl(var(--primary));--part:' + (l.nombre / max) * 100 + '%">'
         + '<span class="adm-classement-rang">' + (i + 1) + '</span>'
-        + '<span class="adm-classement-nom"><span class="adm-classement-texte">' + esc(nomQuiz(l.slug)) + '</span>' + drapeau(l.lang) + '</span>'
+        + '<span class="adm-classement-nom"><span class="adm-classement-texte">' + esc(nomQuiz(l.slug)) + '</span></span>'
         + '<span class="adm-classement-nb">' + nb(l.nombre) + ' avis</span>'
         + '<span class="adm-classement-note">' + (l.somme / l.nombre).toFixed(1).replace('.', ',') + '/5 <span aria-hidden="true">⭐</span></span>'
         + '</div>';
     }).join('');
-    majNoteClassement(note);
-  }
-
-  // La note sous le classement : d'où vient la langue des anciens avis, et
-  // combien d'avis n'en ont aucune, avec les pages qui en ont le plus.
-  function noteClassement(devinees, inconnues, parPage) {
-    if (!devinees && !inconnues) return '';
-    var phrases = ['Jusqu\'au 12 octobre 2026, un avis n\'enregistrait pas la langue de sa page.'];
-    if (devinees) {
-      phrases.push('Pour ' + nb(devinees) + ' de ces avis, elle est devinée d\'après le commentaire ou les prénoms du couple («\u00a0Noah and Micayla\u00a0»).');
-    }
-    if (inconnues) {
-      var pages = Object.keys(parPage).sort(function (a, b) { return parPage[b] - parPage[a]; })
-        .slice(0, 3).map(function (s) { return nomQuiz(s) + ' (' + nb(parPage[s]) + ')'; });
-      var un = inconnues === 1;
-      phrases.push(nb(inconnues) + (un ? ' avis n\'a' : ' avis n\'ont') + ' qu\'une note et un prénom, ou un mot qui existe dans plusieurs langues («\u00a0Super\u00a0», «\u00a0Top\u00a0»)\u00a0: '
-        + (un ? 'sans drapeau possible, il n\'est pas' : 'sans drapeau possible, ils ne sont pas') + ' dans le classement. '
-        + (pages.length > 1 ? 'Les pages qui en ont le plus\u00a0: ' : 'Sur la page ') + pages.join(', ') + '.');
-    }
-    return phrases.join(' ');
   }
 
   // ── Leads ──
