@@ -13,7 +13,7 @@
         "langue": "fr",
         "theme": "light",
         "idee": "Reel statique : les deux gourmands autour du cornet de frites.",
-        "texte": "j'ai pas besoin de grand-chose. juste toi. et des frites.",
+        "texte": "j'ai pas besoin de grand-chose, juste toi et des frites.",
         "duree": 11,
         "son": {
           "ambiance": "tendre"
@@ -22,7 +22,7 @@
           "duo": "frites"
         }
       },
-      "legende": "toi et des frites. c'est tout.\n\nenvoie ça à ta personne",
+      "legende": "on a commandé un seul cornet.\n\nenvoie ça à ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",

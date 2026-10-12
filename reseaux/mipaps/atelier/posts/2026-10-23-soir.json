@@ -15,7 +15,7 @@
         "idee": "On n'est pas d'accord, et pourtant : la dispute, le dos à dos, lui qui craque, elle qui boude en coin, puis la main dans la main.",
         "pages": [
           {
-            "texte": "on n'est pas d'accord. et pourtant.",
+            "texte": "on n'est pas d'accord sur le film.",
             "dessin": {
               "duo": "dispute"
             }
@@ -55,7 +55,7 @@
             }
           },
           {
-            "texte": "le premier qui craque : lui. toujours lui.",
+            "texte": "c'est lui qui craque en premier.",
             "dessin": {
               "elements": [
                 {
@@ -83,7 +83,7 @@
             }
           },
           {
-            "texte": "main dans la main. comme avant la dispute.",
+            "texte": "main dans la main.",
             "dessin": {
               "duo": "main_dans_la_main"
             },
@@ -91,7 +91,7 @@
           }
         ]
       },
-      "legende": "toujours les mêmes disputes. toujours la même fin.\n\ngarde ça pour la prochaine dispute",
+      "legende": "ça a duré 10 minutes.\n\ngarde ça pour la prochaine dispute",
       "hashtags": [
         "#lesmipaps",
         "#couple",
