@@ -1,28 +1,187 @@
 {
   "jour": "2026-10-31",
   "creneau": "soir",
-  "format": "reel",
-  "gabarit": "citation",
-  "categorie": "phrase",
-  "sujet": "ph-007",
+  "format": "carrousel",
+  "gabarit": "carrousel",
+  "categorie": "dix-mais",
+  "sujet": "dm-003",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "citation",
+        "gabarit": "carrousel",
         "langue": "en",
         "theme": "light",
-        "texte": "You don't have to be perfect. You just have to be you, with me.",
-        "fleurs": "brin-marguerite",
-        "son": {
-          "ambiance": "tendre"
-        }
+        "pages": [
+          {
+            "type": "couverture",
+            "etiquette": "He's a 10 but...",
+            "accroche": "Food edition. Is he still a 10?",
+            "scene": {
+              "t": 1.4,
+              "haut": 180,
+              "plan": {
+                "description": "Les deux sur un trait de sol. Le violet, à droite, fait un clin d'œil avec un grand sourire, entouré d'étincelles : c'est lui, le 10. La rose, à gauche, le regarde, sourcils hauts et bouche plate, un point d'interrogation au-dessus de la tête.",
+                "duree": 2,
+                "decor": "ligne",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "cible": "violet",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "visage",
+                        "yeux": "ouverts",
+                        "bouche": "plate",
+                        "sourcils": "hauts",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "effet": "question",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "yeux": "clin",
+                        "bouche": "sourire",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "effet": "etincelles",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he takes a photo of every dish before you can eat"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he pours the milk before the cereal"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he puts pineapple on pizza"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he puts ketchup on everything, even pasta"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he eats the last slice without asking"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he chews with his mouth open"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he never cooks, and rates everything you make"
+          },
+          {
+            "type": "page",
+            "numero": "10",
+            "question": "but he's rude to every waiter"
+          },
+          {
+            "type": "fin",
+            "texte": "What's he now, out of 10?",
+            "bouton": "Full game: link in bio",
+            "scene": {
+              "t": 1.4,
+              "haut": 180,
+              "plan": {
+                "description": "Même trait de sol. La rose, à gauche, les yeux plats et la bouche plate, trois petits points au-dessus de la tête : elle n'est pas convaincue. Le violet, à droite, rougit, les yeux grands ouverts et la bouche en o, une goutte de sueur au front.",
+                "duree": 2,
+                "decor": "ligne",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "cible": "violet",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "visage",
+                        "yeux": "plats",
+                        "bouche": "plate",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "effet": "points",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "yeux": "ouverts",
+                        "bouche": "o",
+                        "rougit": true,
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "effet": "goutte",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
       },
-      "legende": "A reminder for your person, from you.\n\nSend this to your partner.",
+      "legende": "Start at 10. Take a point off for every slide you couldn't live with.\n\nComment your number",
       "hashtags": [
-        "#lovequotes",
-        "#relationshipquotes",
-        "#couplegoals",
+        "#hesa10but",
+        "#redflags",
+        "#couplequiz",
         "#quizcouple"
       ]
     }
