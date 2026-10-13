@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-13T03:12:45.154Z",
+  "genere_le": "2026-10-13T10:29:43.860Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -1032,38 +1032,7 @@
     }
   ],
   "a_corriger": [],
-  "hors_grille": [
-    {
-      "jour": "2026-10-17",
-      "creneau": "soir",
-      "categorie": "phrase",
-      "attendue": "dix-mais"
-    },
-    {
-      "jour": "2026-10-24",
-      "creneau": "soir",
-      "categorie": "phrase",
-      "attendue": "dix-mais"
-    },
-    {
-      "jour": "2026-10-31",
-      "creneau": "soir",
-      "categorie": "phrase",
-      "attendue": "dix-mais"
-    },
-    {
-      "jour": "2026-11-07",
-      "creneau": "soir",
-      "categorie": "phrase",
-      "attendue": "dix-mais"
-    },
-    {
-      "jour": "2026-11-14",
-      "creneau": "soir",
-      "categorie": "phrase",
-      "attendue": "dix-mais"
-    }
-  ],
+  "hors_grille": [],
   "refuses": [],
   "recents_et_prevus": [
     {
@@ -1224,7 +1193,7 @@
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1233,7 +1202,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: date night?",
       "erreur": null
     },
@@ -1278,7 +1247,7 @@
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -1287,7 +1256,7 @@
       "creneau": "midi",
       "gabarit": "pov",
       "categorie": "statique",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -1348,10 +1317,10 @@
     {
       "jour": "2026-10-17",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "carrousel",
+      "categorie": "dix-mais",
       "statut": "a_rendre",
-      "texte": "You're the first thing I want to tell good news to.",
+      "texte": "Texting edition. Is he still a 10?",
       "erreur": null
     },
     {
@@ -1537,10 +1506,10 @@
     {
       "jour": "2026-10-24",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "carrousel",
+      "categorie": "dix-mais",
       "statut": "a_rendre",
-      "texte": "I love the way you make the world feel a little softer.",
+      "texte": "Bedtime edition. Is she still a 10?",
       "erreur": null
     },
     {
@@ -1726,10 +1695,10 @@
     {
       "jour": "2026-10-31",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "carrousel",
+      "categorie": "dix-mais",
       "statut": "a_rendre",
-      "texte": "You don't have to be perfect. You just have to be you, with me.",
+      "texte": "Food edition. Is he still a 10?",
       "erreur": null
     },
     {
@@ -1915,10 +1884,10 @@
     {
       "jour": "2026-11-07",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "carrousel",
+      "categorie": "dix-mais",
       "statut": "a_rendre",
-      "texte": "Loving you is the easiest thing I've ever done.",
+      "texte": "Phone edition. Is she still a 10?",
       "erreur": null
     },
     {
@@ -2104,10 +2073,10 @@
     {
       "jour": "2026-11-14",
       "creneau": "soir",
-      "gabarit": "citation",
-      "categorie": "phrase",
+      "gabarit": "carrousel",
+      "categorie": "dix-mais",
       "statut": "a_rendre",
-      "texte": "I sleep better when you're on your side of the bed.",
+      "texte": "Date night edition. Is he still a 10?",
       "erreur": null
     },
     {
@@ -2158,7 +2127,7 @@
       "creneau": "midi"
     },
     "tu-preferes": {
-      "jour": "2026-10-13",
+      "jour": "2026-10-17",
       "creneau": "midi"
     },
     "statique": {
