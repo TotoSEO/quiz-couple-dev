@@ -28,17 +28,24 @@
     : lang === 'de' ? `${readingMinutes} Min. Lesezeit`
     : `${readingMinutes} min di lettura`;
 
-  // Le compteur de lectures est rempli par le navigateur : c'est un chiffre
-  // vivant, il ne peut pas être figé dans une page statique. Le gabarit pose
-  // le modèle de phrase, le script remplace {n} et lève le hidden.
-  const readCountTemplate = lang === 'fr' ? 'Ce contenu a été lu {n} fois'
+  // Le compteur de lectures est lu à la construction (generate.js,
+  // lecturesCuites) et écrit ici, comme les avis des pages de test : il est
+  // là dès le premier affichage, et l'article ne le redemande plus à la base
+  // à chaque visite. Sans réponse de la base à la construction, il reste
+  // vide et blog-lectures.js le demande lui-même (data-cuit absent).
+  const readCountTemplate = lang === 'fr' ? 'Cet article a été lu {n} fois'
     : lang === 'en' ? 'This article has been read {n} times'
-    : lang === 'es' ? 'Este contenido se ha leído {n} veces'
-    : lang === 'de' ? 'Dieser Beitrag wurde {n} Mal gelesen'
-    : 'Questo contenuto è stato letto {n} volte';
-  // En dessous de ce seuil, le compteur reste invisible : « lu 4 fois » sur
-  // un article publié hier dessert l'article au lieu de le servir.
-  const readCountSeuil = 50;
+    : lang === 'es' ? 'Este artículo se ha leído {n} veces'
+    : lang === 'de' ? 'Dieser Artikel wurde {n} Mal gelesen'
+    : 'Questo articolo è stato letto {n} volte';
+  // En dessous de ce seuil, le compteur reste invisible : « lu 3 fois » sur
+  // un article publié hier dessert l'article au lieu de le servir. Le seuil
+  // vient de generate.js (SEUIL_LECTURES), le même que sur les cartes.
+  const readCountSeuil = typeof seuilLectures === 'number' ? seuilLectures : 10;
+  const lectures = typeof lecturesCuites === 'number' ? lecturesCuites : null;
+  const lecturesVisibles = lectures !== null && lectures >= readCountSeuil;
+  const lecturesLocale = lang === 'fr' ? 'fr-FR' : lang === 'en' ? 'en-US' : lang === 'es' ? 'es-ES' : lang === 'de' ? 'de-DE' : 'it-IT';
+  const lecturesTexte = lecturesVisibles ? readCountTemplate.replace('{n}', Number(lectures).toLocaleString(lecturesLocale)) : '';
 
   // Format published date
   const publishedDate = new Date(article.publishedAt);
@@ -91,12 +98,15 @@
             <svg class="blog-signature-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
             <%= readingTimeLabel %>
           </span>
-          <span class="blog-signature-sep" id="blog-lectures-sep" aria-hidden="true" hidden>|</span>
-          <span class="blog-signature-meta" id="blog-lectures" hidden
+          <span class="blog-signature-sep" id="blog-lectures-sep" aria-hidden="true"<% if (!lecturesVisibles) { %> hidden<% } %>>|</span>
+          <span class="blog-signature-meta" id="blog-lectures"<% if (!lecturesVisibles) { %> hidden<% } %>
                 data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>"
                 data-path="<%= pagePath %>" data-seuil="<%= readCountSeuil %>"
                 data-minutes="<%= readingMinutes %>"
-                data-modele="<%= readCountTemplate %>"></span>
+                data-modele="<%= readCountTemplate %>"<% if (lectures !== null) { %> data-cuit="1"<% } %>>
+            <svg class="blog-signature-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="blog-lectures-texte"><%= lecturesTexte %></span>
+          </span>
         </div>
 
         <!-- Sources préférées Google, version compacte.

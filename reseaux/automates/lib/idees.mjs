@@ -10,7 +10,7 @@
 // l'admin dès la saisie : une modification ici en appelle une là-bas.
 import { ajouterJours, categorieAttendue } from './calendrier.mjs';
 
-export const CATEGORIES_IDEE = ['pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd'];
+export const CATEGORIES_IDEE = ['pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd', 'dix-mais'];
 // celles des mipaps (compte fr), pour le même calcul
 export const CATEGORIES_IDEE_MIPAPS = ['mipaps-anime', 'mipaps-statique', 'mipaps-histoire', 'mipaps-post'];
 export const categoriesIdee = (langue) => (langue === 'fr' ? CATEGORIES_IDEE_MIPAPS : CATEGORIES_IDEE);

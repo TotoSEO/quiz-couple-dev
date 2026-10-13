@@ -18,8 +18,10 @@ export const MELANGE_DEFAUT = {
   matin: 'pov',
   midi: { 1: 'connais-tu', 2: 'tu-preferes', 3: 'connais-tu', 4: 'statique', 5: 'connais-tu', 6: 'tu-preferes', 7: 'statique' },
   // le mardi soir une BD en quatre cases (8 octobre 2026), le jeudi soir un
-  // carrousel de questions : le format qui se garde
-  soir: { 1: 'pov', 2: 'bd', 3: 'pov', 4: 'carrousel', 5: 'coquin', 6: 'phrase', 7: 'phrase' },
+  // carrousel de questions : le format qui se garde ; le samedi soir un
+  // carrousel « He's a 10 but... » (12 octobre 2026, à la place d'une des
+  // deux phrases tendres de la semaine)
+  soir: { 1: 'pov', 2: 'bd', 3: 'pov', 4: 'carrousel', 5: 'coquin', 6: 'dix-mais', 7: 'phrase' },
 };
 
 // La catégorie attendue pour un créneau, d'après le réglage « melange »

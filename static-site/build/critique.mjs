@@ -31,7 +31,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
-import { ROUTE_CONFIG, BLOG_ARTICLES, getLocalizedPath, getArticlePath } from './config.js';
+import { ROUTE_CONFIG, BLOG_ARTICLES, getLocalizedPath, getArticlePath, estPageJouable } from './config.js';
 
 const require = createRequire(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -179,6 +179,16 @@ const TOUJOURS = /^(@import|@charset|@namespace|@font-face|@property|:root\b|htm
 const GARDER_PAR_CLE = {
   compteurCouple: /\.(cc-[a-z]|dn-verdict|dn-bloc)/,
 };
+// Le bandeau du haut des pages jouables (parties, note, avis) est écrit à la
+// construction, dans le premier écran : une page relevée le jour où elle n'a
+// ni partie ni avis ne l'affiche pas, puis l'affiche à la construction
+// suivante. Ses règles sont donc gardées sur toutes les pages jouables.
+const GARDER_JOUABLES = /\.preuve\b/;
+function garderPour(cle) {
+  const propre = GARDER_PAR_CLE[cle];
+  if (!estPageJouable(cle)) return propre;
+  return propre ? new RegExp(propre.source + '|' + GARDER_JOUABLES.source) : GARDER_JOUABLES;
+}
 
 function selectionne(css, noeuds, plages, garderAussi) {
   const garde = new Set();
@@ -317,7 +327,7 @@ async function main() {
         const { plages, texte } = await releve(browser, p.chemin);
         if (texte === null) throw new Error('styles.css jamais chargee sur ' + p.chemin);
         if (texte.length !== cssDist.length) throw new Error('la feuille servie ne correspond pas a dist/css/styles.css (' + texte.length + ' vs ' + cssDist.length + ')');
-        const css = selectionne(cssDist, arbre, plages, GARDER_PAR_CLE[p.cle]);
+        const css = selectionne(cssDist, arbre, plages, garderPour(p.cle));
         // Pas de date dans l'en-tete : deux releves identiques doivent donner le meme fichier.
         const entete = `/*! critique ${p.cle} styles=${empreinte} */\n`;
         fs.writeFileSync(path.join(DOSSIER, `${p.cle}.css`), entete + css, 'utf-8');

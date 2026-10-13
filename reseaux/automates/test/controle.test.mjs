@@ -10,7 +10,7 @@ const ici = path.dirname(fileURLToPath(import.meta.url));
 const exemple = (nom) => JSON.parse(fs.readFileSync(path.join(ici, '..', '..', 'studio', 'recettes', 'exemples', `${nom}.json`), 'utf8'));
 
 test('les recettes d\'exemple passent le contrôle', () => {
-  for (const nom of ['pov-frites', 'pov-fleurs', 'pov-couette', 'statique-calin', 'connais-tu', 'tu-preferes', 'citation', 'post-banc', 'carrousel-questions', 'bd-malade']) {
+  for (const nom of ['pov-frites', 'pov-fleurs', 'pov-couette', 'statique-calin', 'connais-tu', 'tu-preferes', 'citation', 'post-banc', 'carrousel-questions', 'bd-malade', 'dix-mais', 'dix-mais-elle']) {
     assert.deepEqual(controlerRecette(exemple(nom), 'en'), [], nom);
   }
 });
@@ -79,6 +79,17 @@ test('la catégorie impose son gabarit, un reel statique a un seul plan', () => 
   assert.match(controlerPost(post('phrase', 'pov', exemple('pov-frites'))).join('\n'), /se fait avec le gabarit citation/);
   assert.match(controlerPost(post('statique', 'pov', exemple('pov-frites'))).join('\n'), /un seul plan/);
   assert.deepEqual(controlerPost(post('statique', 'pov', exemple('statique-calin'))), []);
+});
+
+test("« He's a 10 but... » est un carrousel, et peut renvoyer au jeu du site", () => {
+  const legende = "Start at 10. Take a point off for every slide you couldn't live with.\nComment your number";
+  for (const nom of ['dix-mais', 'dix-mais-elle']) {
+    assert.deepEqual(controlerPost({ ...post('dix-mais', 'carrousel', exemple(nom), legende), format: 'carrousel' }), [], nom);
+  }
+  assert.match(controlerPost({ ...post('dix-mais', 'carrousel', exemple('dix-mais'), legende), format: 'image' }).join('\n'), /ne donne pas un image/);
+  assert.match(controlerPost({ ...post('dix-mais', 'citation', exemple('citation')), format: 'reel' }).join('\n'), /se fait avec le gabarit carrousel/);
+  // un jeu : le renvoi vers le site est permis dans la légende
+  assert.deepEqual(controlerPost({ ...post('dix-mais', 'carrousel', exemple('dix-mais'), 'Comment your number\nMore quizzes: link in bio'), format: 'carrousel' }), []);
 });
 
 test('une BD a quatre cases, des scènes du vocabulaire et des répliques courtes', () => {
