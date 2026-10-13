@@ -1,0 +1,220 @@
+{
+  "jour": "2026-11-01",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-020",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Le lit froid : il dort au chaud ; elle arrive frigorifiée, se glisse dans le lit et colle ses pattes glacées sur lui ; il se réveille en sursaut ; il la garde contre lui. Quatre plans, 14 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3,
+            "description": "Lui est allongé, bien au chaud sous sa couette, il dort tranquillement, des petits zzz. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couette",
+                "x": 400,
+                "y": 355,
+                "echelle": 1.1
+              }
+            ],
+            "textes": [
+              {
+                "texte": "2 h du matin",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Elle entre du bord gauche en marchant de profil, grelottante, les bras croisés, des flocons autour d'elle. Elle s'arrête à côté du lit à 2 s. Lui dort toujours.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "froid",
+                    "bras": "croises",
+                    "signes": [
+                      "flocons"
+                    ]
+                  },
+                  {
+                    "a": 2,
+                    "x": 290,
+                    "pose": "debout"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couette",
+                "x": 400,
+                "y": 355,
+                "echelle": 1.1
+              }
+            ],
+            "textes": [
+              {
+                "texte": "dehors, il fait 4 degrés",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle s'allonge à côté de lui et colle ses pattes glacées contre lui à 1 s. Lui se réveille en sursaut, les yeux grands, des rayons autour de la tête. Elle sourit, les yeux fermés.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "pose": "allonge",
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1,
+                    "expression": "content",
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 1,
+                    "expression": "choque",
+                    "signes": [
+                      "rayons"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couette",
+                "x": 360,
+                "y": 355,
+                "echelle": 1.5
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Les deux sont serrés l'un contre l'autre sous la couette, elle blottie contre lui, lui qui la tient du bras, endormis. Un petit cœur flotte.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 315,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "couette",
+                "x": 355,
+                "y": 355,
+                "echelle": 1.4
+              },
+              {
+                "objet": "coeur",
+                "x": 355,
+                "y": 170,
+                "echelle": 0.4,
+                "de": 0.6,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "elle a marché 20 minutes sans gants.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#humour"
+      ]
+    }
+  }
+}

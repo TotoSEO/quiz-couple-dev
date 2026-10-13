@@ -1,0 +1,128 @@
+{
+  "jour": "2026-11-01",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-011",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Le bouton : elle veut le percer, il dit non, elle supplie, il cède ; elle est ravie, il est KO.",
+        "pages": [
+          {
+            "texte": "elle a vu un bouton.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "curieux",
+                  "bras": "pointe",
+                  "x": 420,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« laisse-moi le percer. »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "supplie",
+                  "bras": "priere",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« non. »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "determine",
+                  "bras": "croises",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« stp stp stp »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "supplie",
+                  "bras": "priere",
+                  "signes": [
+                    "tremblement"
+                  ],
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« bon... »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "desole",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "2 min plus tard",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "ko",
+                  "pose": "allonge",
+                  "x": 250,
+                  "taille": 250
+                },
+                {
+                  "perso": "elle",
+                  "expression": "joie",
+                  "bras": "leves",
+                  "x": 420,
+                  "taille": 260
+                }
+              ]
+            },
+            "appel": "tague-la"
+          }
+        ]
+      },
+      "legende": "il a tenu 40 secondes.\n\ntague-la",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

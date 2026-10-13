@@ -1,0 +1,128 @@
+{
+  "jour": "2026-11-02",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-015",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Les étapes du « j'ai pas faim » : une frite pour goûter, deux, la patte dans le cornet, le cornet est à lui.",
+        "pages": [
+          {
+            "texte": "« j'ai pas faim. »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "zen",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "une frite, pour goûter.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "bras": "tend_d",
+                  "x": 270,
+                  "taille": 260
+                },
+                {
+                  "objet": "frites",
+                  "x": 440,
+                  "y": 338,
+                  "echelle": 0.7
+                }
+              ]
+            }
+          },
+          {
+            "texte": "deux frites.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "bras": "tend_d",
+                  "x": 270,
+                  "taille": 260
+                },
+                {
+                  "objet": "frites",
+                  "x": 440,
+                  "y": 338,
+                  "echelle": 0.7
+                }
+              ]
+            }
+          },
+          {
+            "texte": "la patte dans le cornet.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "gourmand",
+                  "bras": "tend_d",
+                  "x": 270,
+                  "taille": 260
+                },
+                {
+                  "objet": "frites",
+                  "x": 420,
+                  "y": 338,
+                  "echelle": 0.7
+                }
+              ]
+            }
+          },
+          {
+            "texte": "elle avait commandé un cornet pour elle.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "miam",
+                  "bras": "tient",
+                  "x": 250,
+                  "taille": 250
+                },
+                {
+                  "perso": "elle",
+                  "expression": "blase",
+                  "x": 420,
+                  "taille": 250
+                },
+                {
+                  "objet": "frites",
+                  "x": 280,
+                  "y": 336,
+                  "echelle": 0.6
+                }
+              ]
+            },
+            "appel": "c'est qui chez vous ?"
+          }
+        ]
+      },
+      "legende": "il en restait trois.\n\nc'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "jour": "2026-11-02",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-028",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Il a faim : il hésite, regarde dans le frigo, rien ; elle arrive avec une pizza, il saute de joie. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 4,
+            "description": "Il est au milieu, il hésite, des points d'interrogation au-dessus de lui, il se gratte la tête. Il regarde à droite, puis à gauche. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 320,
+                    "expression": "hesite",
+                    "signes": [
+                      "question"
+                    ]
+                  },
+                  {
+                    "a": 2,
+                    "expression": "perplexe",
+                    "bras": "menton"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "22 h 40. il a faim.",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Il ouvre la porte du frigo à droite : il regarde dedans, et son visage s'effondre, les épaules tombent. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "curieux"
+                  },
+                  {
+                    "a": 1.2,
+                    "expression": "deprime"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 450,
+                "y": 300,
+                "echelle": 1.4
+              }
+            ],
+            "textes": [
+              {
+                "texte": "il a ouvert le frigo 4 fois",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Elle arrive du bord gauche en marchant de profil, une pizza à la patte, et s'arrête devant lui à 2 s, se tourne vers nous à 2,5 s. Il lève les yeux, des étoiles dans le regard, et saute de joie à 3,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2,
+                    "x": 240,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.5,
+                    "angle": 0,
+                    "expression": "fier",
+                    "bras": "tend_d"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "expression": "deprime"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "emerveille",
+                    "signes": [
+                      "etoiles"
+                    ]
+                  },
+                  {
+                    "a": 3.2,
+                    "pose": "saut",
+                    "expression": "triomphe"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pizza",
+                "x": -140,
+                "y": 350,
+                "echelle": 0.6,
+                "etapes": [
+                  {
+                    "a": 0.01,
+                    "x": -140,
+                    "y": 350
+                  },
+                  {
+                    "a": 2,
+                    "x": 240,
+                    "y": 350
+                  },
+                  {
+                    "a": 2.5,
+                    "x": 345,
+                    "y": 338
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "elle l'avait commandée à 22 h 15.\n\ntague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}
