@@ -412,6 +412,19 @@
           <div id="admin-reviews-list" class="adm-cartes">
             <p class="text-center text-muted-foreground py-8">Chargement...</p>
           </div>
+          <%# Dix avis a la fois : le bouton demande les dix suivants (admin.js). %>
+          <div class="adm-avis-plus">
+            <button id="admin-avis-plus" class="btn btn-outline btn-sm hidden" type="button">Charger plus d'avis</button>
+          </div>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Pages les plus notées</h2>
+                <p class="stats-panel-sub">Les 20 pages qui ont reçu le plus d'avis approuvés, hors accueil, toutes langues confondues.</p>
+              </div>
+            </div>
+            <div id="admin-avis-classement" class="stats-list adm-classement-liste"><p class="stats-movers-vide">Chargement...</p></div>
+          </div>
         </div>
 
         <!-- ═══ Leads ═══ -->

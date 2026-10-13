@@ -25,9 +25,13 @@
  * ce qui passerait quand même.
  *
  * ── Le compteur ───────────────────────────────────────────────────────────
- * Il reste caché tant que le nombre est petit. « Ce contenu a été lu 4 fois »
+ * Il reste caché tant que le nombre est petit. « Cet article a été lu 4 fois »
  * dessert l'article au lieu de le servir, et un article publié hier n'a pas à
  * s'excuser d'être jeune. Le seuil est posé dans le gabarit, pas ici.
+ *
+ * Depuis le 12 octobre 2026, le nombre est lu à la construction du site et
+ * écrit dans la page (data-cuit) : il n'est demandé ici que si la base n'a
+ * pas répondu à la construction. Le signal de lecture, lui, part toujours.
  */
 (function () {
   'use strict';
@@ -35,7 +39,7 @@
   var el = document.getElementById('blog-lectures');
 
   // ── Le compteur affiché ─────────────────────────────────────────────────
-  if (el && el.dataset.url && el.dataset.key && el.dataset.path) {
+  if (el && el.dataset.url && el.dataset.key && el.dataset.path && el.dataset.cuit !== '1') {
     var seuil = parseInt(el.dataset.seuil, 10);
     if (!(seuil >= 0)) seuil = 50;
 
@@ -59,7 +63,8 @@
         try { lu = Number(total).toLocaleString(document.documentElement.lang || 'fr'); }
         catch (e) { lu = String(total); }
         var modele = el.dataset.modele || '{n}';
-        el.textContent = modele.replace('{n}', lu);
+        var texte = el.querySelector('.blog-lectures-texte') || el;
+        texte.textContent = modele.replace('{n}', lu);
         el.hidden = false;
         var sep = document.getElementById('blog-lectures-sep');
         if (sep) sep.hidden = false;

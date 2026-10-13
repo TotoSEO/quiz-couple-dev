@@ -1,5 +1,5 @@
 {
-  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau. La banque « bd » (8 octobre 2026) : des planches en quatre cases, une situation, une chute dans la dernière case ; chaque idée découpe les quatre images et donne les répliques. Le 9 octobre 2026, les 28 phrases tendres ont été réécrites en phrases concrètes qu'une personne écrirait vraiment à l'autre (« I love how you say my name when you're half asleep. ») à la place des maximes sur l'amour (« You're the reason I believe in slow, gentle love. »), et les chutes des planches qui commentaient la scène ont été remplacées par ce que le personnage dirait pour de vrai : voir « La chute, et ce qui sonne machine » dans LIGNE-EDITORIALE.md.",
+  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau. La banque « bd » (8 octobre 2026) : des planches en quatre cases, une situation, une chute dans la dernière case ; chaque idée découpe les quatre images et donne les répliques. Le 9 octobre 2026, les 28 phrases tendres ont été réécrites en phrases concrètes qu'une personne écrirait vraiment à l'autre (« I love how you say my name when you're half asleep. ») à la place des maximes sur l'amour (« You're the reason I believe in slow, gentle love. »), et les chutes des planches qui commentaient la scène ont été remplacées par ce que le personnage dirait pour de vrai : voir « La chute, et ce qui sonne machine » dans LIGNE-EDITORIALE.md. La banque « dix-mais » (12 octobre 2026, idée de Thomas) : un carrousel « He's a 10 but... » ou « She's a 10 but... » le samedi soir, une couverture, huit cartes qui commencent par « but he » ou « but she », de la petite manie qui fait sourire au vrai drapeau rouge, la plus grave en dernier, et une page finale ; chaque sujet donne l'édition, l'accroche et les huit cartes, et « qui » dit lequel des deux est le 10 (he : le violet, she : la rose).",
   "pov": [
     {
       "id": "pov-001",
@@ -2049,7 +2049,7 @@
     }
   ],
   "saison": {
-    "note": "Noël et Nouvel An, les seules fêtes du calendrier (universelles). À ces dates et créneaux, le sujet daté remplace celui de la banque ; la catégorie reste celle de la semaine type. Décor « noel », bonnets, flocons, cadeaux, sapin ; au Nouvel An, coupes, feux d'artifice, confettis.",
+    "note": "Noël et Nouvel An, les seules fêtes du calendrier (universelles). À ces dates et créneaux, le sujet daté remplace celui de la banque ; la catégorie reste celle de la semaine type (depuis le 12 octobre 2026, les sujets datés du jeudi soir sont des carrousels de questions et ceux du samedi soir des « 10 but... », comme la grille). Décor « noel », bonnets, flocons, cadeaux, sapin ; au Nouvel An, coupes, feux d'artifice, confettis.",
     "sujets": [
       {
         "id": "noel-01",
@@ -2098,8 +2098,15 @@
         "id": "noel-07",
         "jour": "2026-12-24",
         "creneau": "soir",
-        "categorie": "pov",
-        "idee": "POV: Christmas Eve dinner | table, nuit : bougie, bonnets, bisou, flocons"
+        "categorie": "carrousel",
+        "etiquette": "Christmas Eve",
+        "accroche": "8 questions for Christmas Eve",
+        "exemples": [
+          "What's your favorite Christmas memory from when you were little?",
+          "Which gift from me do you still use?",
+          "What should we do every Christmas from now on?"
+        ],
+        "scene": "table, nuit : bougie, bonnets, flocons à la fenêtre, les deux se sourient"
       },
       {
         "id": "noel-08",
@@ -2116,8 +2123,28 @@
         "idee": "POV: Christmas night under the blanket | chambre, nuit : bonnet qui s'envole de sous la couette, cœurs"
       },
       {
-        "id": "noel-10",
+        "id": "noel-11",
         "jour": "2026-12-26",
+        "creneau": "soir",
+        "categorie": "dix-mais",
+        "qui": "he",
+        "edition": "Christmas",
+        "accroche": "Christmas edition. Is he still a 10?",
+        "cartes": [
+          "but he plays Christmas songs from November 1st",
+          "but he shakes every present to guess what's inside",
+          "but he wraps your gift in a supermarket bag",
+          "but he eats the whole advent calendar on December 1st",
+          "but he gives you socks every year",
+          "but he regifts the candle his aunt gave him",
+          "but he leaves you alone with his family all day",
+          "but he spent Christmas Eve texting his ex"
+        ],
+        "scene": "noel : le violet en bonnet, clin d'œil et étincelles ; la rose, sourcils hauts, un point d'interrogation"
+      },
+      {
+        "id": "noel-10",
+        "jour": "2026-12-27",
         "creneau": "soir",
         "categorie": "phrase",
         "texte": "This year, my favorite gift was you, again."
@@ -2140,8 +2167,15 @@
         "id": "an-03",
         "jour": "2026-12-31",
         "creneau": "soir",
-        "categorie": "pov",
-        "idee": "POV: the countdown kiss | dehors, nuit : légendes « 3 », « 2 », « 1 », bisou, feux d'artifice"
+        "categorie": "carrousel",
+        "etiquette": "New Year's Eve",
+        "accroche": "8 questions before midnight",
+        "exemples": [
+          "What was our best day this year?",
+          "What do you want us to try next year?",
+          "What did you learn about me this year?"
+        ],
+        "scene": "dehors, nuit : feux d'artifice, les deux lèvent la tête, confettis"
       },
       {
         "id": "an-04",
@@ -2158,8 +2192,28 @@
         "theme_libre": "Our year edition : leur meilleur moment de l'année, le plus drôle, la plus grosse surprise, le voyage, la chanson de l'année..."
       },
       {
-        "id": "an-06",
+        "id": "an-07",
         "jour": "2027-01-02",
+        "creneau": "soir",
+        "categorie": "dix-mais",
+        "qui": "she",
+        "edition": "New Year",
+        "accroche": "New Year edition. Is she still a 10?",
+        "cartes": [
+          "but she writes 25 resolutions and forgets them by the 3rd",
+          "but she falls asleep at 11:50 on New Year's Eve",
+          "but she writes last year's date until March",
+          "but she films the whole countdown for her story",
+          "but she makes you go to a party where you know nobody",
+          "but she texts \"happy new year\" to everyone except you",
+          "but she leaves you alone at midnight to find her friends",
+          "but she kisses someone else at midnight \"as a joke\""
+        ],
+        "scene": "ligne, nuit : la rose, clin d'œil et étincelles, confettis ; le violet, yeux plats"
+      },
+      {
+        "id": "an-06",
+        "jour": "2027-01-03",
         "creneau": "soir",
         "categorie": "phrase",
         "texte": "Wherever the new year takes us, I want to go there with you."
@@ -2368,6 +2422,264 @@
       "id": "bd-014",
       "pilier": "tendresse",
       "idee": "Réviser à deux, la table | 1 les deux lisent, sérieux | 2 elle s'ennuie et le regarde | 3 elle pose la tête sur son épaule | 4 il lit toujours, mais il sourit, un cœur"
+    }
+  ],
+  "dix-mais": [
+    {
+      "id": "dm-001",
+      "qui": "he",
+      "edition": "Texting",
+      "accroche": "Texting edition. Is he still a 10?",
+      "cartes": [
+        "but he answers every text with a GIF",
+        "but he sends four-minute voice notes",
+        "but he replies \"ok\" to your three-paragraph text",
+        "but he sends \"?\" when you don't answer in five minutes",
+        "but he leaves you on read for two days, then sends a meme",
+        "but he texts in ALL CAPS as soon as he's annoyed",
+        "but he still has his ex saved as \"babe\"",
+        "but he deletes all his messages every night"
+      ]
+    },
+    {
+      "id": "dm-002",
+      "qui": "she",
+      "edition": "Bedtime",
+      "accroche": "Bedtime edition. Is she still a 10?",
+      "cartes": [
+        "but she sleeps with a teddy bear bigger than you",
+        "but she can't fall asleep without a show on",
+        "but she puts her freezing feet on you the second you fall asleep",
+        "but she steals the whole blanket and calls it \"sharing\"",
+        "but she sets six alarms and sleeps through all of them",
+        "but she's mad at you in the morning for something you did in her dream",
+        "but she scrolls her phone at full brightness until 3 a.m.",
+        "but she checks your phone every time you fall asleep first"
+      ]
+    },
+    {
+      "id": "dm-003",
+      "qui": "he",
+      "edition": "Food",
+      "accroche": "Food edition. Is he still a 10?",
+      "cartes": [
+        "but he takes a photo of every dish before you can eat",
+        "but he pours the milk before the cereal",
+        "but he puts pineapple on pizza",
+        "but he puts ketchup on everything, even pasta",
+        "but he eats the last slice without asking",
+        "but he chews with his mouth open",
+        "but he never cooks, and rates everything you make",
+        "but he's rude to every waiter"
+      ]
+    },
+    {
+      "id": "dm-004",
+      "qui": "she",
+      "edition": "Phone",
+      "accroche": "Phone edition. Is she still a 10?",
+      "cartes": [
+        "but she has 4,000 unread notifications",
+        "but she takes 50 selfies to post one",
+        "but she keeps the keyboard sounds on, at full volume",
+        "but she sends you 30 videos a day and checks that you watched them",
+        "but she screenshots your texts for her group chat",
+        "but she posts about your fights on her story",
+        "but she watches her ex's stories every day",
+        "but she wants your password \"just in case\""
+      ]
+    },
+    {
+      "id": "dm-005",
+      "qui": "he",
+      "edition": "Date night",
+      "accroche": "Date night edition. Is he still a 10?",
+      "cartes": [
+        "but he says \"I don't mind\" and then hates the restaurant",
+        "but he orders for you without asking",
+        "but he's late for everything, even his own birthday party",
+        "but he splits the bill down to the last cent",
+        "but he answers work emails during your date nights",
+        "but he spends the whole dinner on his phone",
+        "but he flirts with the waitress, \"just being nice\"",
+        "but he's never free on weekends and won't say why"
+      ]
+    },
+    {
+      "id": "dm-006",
+      "qui": "she",
+      "edition": "Moving in",
+      "accroche": "Moving in edition. Is she still a 10?",
+      "cartes": [
+        "but she has 14 bottles of shampoo in the shower",
+        "but she leaves hair ties everywhere, even in your shoes",
+        "but she sings off-key in the shower, very loudly",
+        "but she leaves the dishes \"soaking\" for three days",
+        "but she puts the empty milk carton back in the fridge",
+        "but she moves your stuff and calls it \"organizing\"",
+        "but she uses your towel for her 12-step skincare routine",
+        "but she never apologizes after a fight"
+      ]
+    },
+    {
+      "id": "dm-007",
+      "qui": "he",
+      "edition": "Gamer",
+      "accroche": "Gamer edition. Is he still a 10?",
+      "cartes": [
+        "but he says \"one more game\" and plays five more",
+        "but he only answers you during loading screens",
+        "but he calls you \"bro\" when he's focused",
+        "but he plays video games until 3 a.m.",
+        "but he yells at his teammates while you're trying to sleep",
+        "but he remembers every game release, not your anniversary",
+        "but he rage quits and is mad at you for an hour",
+        "but he cancels your plans when his friends are online"
+      ]
+    },
+    {
+      "id": "dm-008",
+      "qui": "she",
+      "edition": "Friend group",
+      "accroche": "Friend group edition. Is she still a 10?",
+      "cartes": [
+        "but she brings her best friend on your dates",
+        "but her group chat knows about your date before you get home",
+        "but she makes you take 40 photos of her and her friends",
+        "but she says \"we should hang out\" to everyone and never plans anything",
+        "but she can't stand your friends",
+        "but she tells her friends about every fight you have",
+        "but she's jealous of your best friend",
+        "but she tells you who you can and can't see"
+      ]
+    },
+    {
+      "id": "dm-009",
+      "qui": "he",
+      "edition": "Family",
+      "accroche": "Family edition. Is he still a 10?",
+      "cartes": [
+        "but he calls his mom every night, for an hour",
+        "but his mom still does his laundry",
+        "but he wants five kids",
+        "but he asks his mom before every decision",
+        "but he still lives with his parents at 35",
+        "but he invites his mom on your vacation",
+        "but he hasn't introduced you to his parents after two years",
+        "but he lets his family talk badly about you"
+      ]
+    },
+    {
+      "id": "dm-010",
+      "qui": "she",
+      "edition": "Vacation",
+      "accroche": "Vacation edition. Is she still a 10?",
+      "cartes": [
+        "but she packs three suitcases for a weekend",
+        "but she wants to be at the airport four hours early",
+        "but she claps when the plane lands",
+        "but she plans every hour of the trip in a spreadsheet",
+        "but she takes 300 photos and posts none of them",
+        "but she hates the beach and books one every summer",
+        "but she spends the whole trip on her phone",
+        "but she still goes on the trip she booked with her ex"
+      ]
+    },
+    {
+      "id": "dm-011",
+      "qui": "he",
+      "edition": "Money",
+      "accroche": "Money edition. Is he still a 10?",
+      "cartes": [
+        "but he talks about crypto at every meal",
+        "but he keeps every receipt \"just in case\"",
+        "but he sends you a payment request for half a pizza",
+        "but he spends his whole paycheck the day it comes in",
+        "but he gets a new phone every year and \"can't afford\" dinner out",
+        "but he uses your streaming passwords and never pays",
+        "but he borrowed money three months ago and \"forgot\"",
+        "but he lies about where his money goes"
+      ]
+    },
+    {
+      "id": "dm-012",
+      "qui": "she",
+      "edition": "Texting",
+      "accroche": "Texting edition. Is she still a 10?",
+      "cartes": [
+        "but she sends ten texts instead of one",
+        "but she replies in her head and forgets to send it",
+        "but she makes spelling mistakes in every single text",
+        "but she sends a voice note when \"yes\" would do",
+        "but she says \"fine\" and it's never fine",
+        "but she watches your story and ignores your text",
+        "but she reads your messages over your shoulder",
+        "but she goes silent for two days after every fight"
+      ]
+    },
+    {
+      "id": "dm-013",
+      "qui": "he",
+      "edition": "Moving in",
+      "accroche": "Moving in edition. Is he still a 10?",
+      "cartes": [
+        "but he leaves dirty socks all over the apartment",
+        "but he never tidies up and knows exactly where everything is",
+        "but he hangs the toilet paper the wrong way",
+        "but he gets up at 5 a.m., even on Sundays",
+        "but he talks to his plants and gave them names",
+        "but he thinks sheets get washed twice a year",
+        "but he invites his friends over without asking",
+        "but he doesn't wash his hands after the bathroom"
+      ]
+    },
+    {
+      "id": "dm-014",
+      "qui": "she",
+      "edition": "Food",
+      "accroche": "Food edition. Is she still a 10?",
+      "cartes": [
+        "but she puts hot sauce on everything, even fruit",
+        "but she eats pizza with a knife and fork",
+        "but she hides snacks all over the apartment",
+        "but she reads the whole menu and orders the same thing as always",
+        "but she eats cereal for dinner three nights a week",
+        "but she refuses to try any food she doesn't know",
+        "but she doesn't know how to cook pasta",
+        "but she makes fun of what you eat in front of her friends"
+      ]
+    },
+    {
+      "id": "dm-015",
+      "qui": "he",
+      "edition": "Ex",
+      "accroche": "Ex edition. Is he still a 10?",
+      "cartes": [
+        "but he's still friends with all his exes",
+        "but he still follows all his exes' moms",
+        "but he talked about his ex on your first date",
+        "but he still sleeps in his ex's hoodie",
+        "but he has his ex's name tattooed on his arm",
+        "but he called you by his ex's name, \"by accident\"",
+        "but he still likes his ex's photos",
+        "but he says all his exes were crazy"
+      ]
+    },
+    {
+      "id": "dm-016",
+      "qui": "she",
+      "edition": "Movie night",
+      "accroche": "Movie night edition. Is she still a 10?",
+      "cartes": [
+        "but she cries at every animated movie",
+        "but she takes 40 minutes to pick a movie and falls asleep in ten",
+        "but she talks through the whole movie",
+        "but she spoils every ending \"by accident\"",
+        "but she rewatches the same show for the 14th time",
+        "but she never lets you pick the movie",
+        "but she's on her phone during the best scene",
+        "but she watched your show without you and lied about it"
+      ]
     }
   ],
   "deja_publies": {

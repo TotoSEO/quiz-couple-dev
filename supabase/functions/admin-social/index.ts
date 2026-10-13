@@ -49,7 +49,7 @@ const jourIso = (d: Date) => d.toISOString().slice(0, 10);
 // datés (Noël, Nouvel An), qui vivent dans le dépôt : à ces deux dates près,
 // l'estimation est celle de la routine.
 const CATEGORIES_IDEE: Record<string, string[]> = {
-  en: ['pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd'],
+  en: ['pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd', 'dix-mais'],
   fr: ['mipaps-anime', 'mipaps-statique', 'mipaps-histoire', 'mipaps-post'],
 };
 const CRENEAUX = ['matin', 'midi', 'soir'];

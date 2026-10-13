@@ -24,6 +24,8 @@ export const CATEGORIES = {
   post: 'image',
   carrousel: 'carrousel',
   bd: 'bd',
+  // « He's a 10 but... » (12 octobre 2026) : un carrousel de huit cartes
+  'dix-mais': 'carrousel',
   // le second compte, Les mipaps (reseaux/mipaps) : ses quatre formats
   ...CATEGORIES_MIPAPS,
 };

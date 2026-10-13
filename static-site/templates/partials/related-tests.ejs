@@ -112,73 +112,144 @@
     return getLocalizedUrl(k, lang);
   }).slice(0, 4);
 
-  const _relatedLabel = lang === 'fr' ? 'Continuez l\'aventure' :
-    lang === 'en' ? 'Keep exploring' :
-    lang === 'es' ? 'Sigue explorando' :
-    lang === 'de' ? 'Weiter entdecken' :
-    'Continua a esplorare';
+  // Famille de chaque page suggérée (FAMILLES_NAV, la liste du menu) : elle
+  // donne la couleur de la carte, son étiquette et le verbe du bouton.
+  // Les deux outils (calculatrice, compteur) sont rangés dans les tests mais
+  // s'essaient plutôt qu'ils ne se font.
+  const _familleDe = function (k) {
+    if (k === 'calculatriceAmour' || k === 'compteurCouple') return 'outil';
+    for (const f of ['tests', 'celib', 'quiz', 'jeux']) {
+      if (famillesNav && famillesNav[f] && famillesNav[f].indexOf(k) !== -1) return f;
+    }
+    return /^jeu/.test(k) || k === 'pourContre' ? 'jeux' : (/^quiz/.test(k) || k === 'zamours' ? 'quiz' : 'tests');
+  };
 
-  const _relatedSub = lang === 'fr' ? 'Ces tests pourraient aussi vous plaire' :
-    lang === 'en' ? 'You might also enjoy these tests' :
-    lang === 'es' ? 'Estos tests también te pueden gustar' :
-    lang === 'de' ? 'Diese Tests könnten euch auch gefallen' :
-    'Potrebbero piacerti anche questi test';
+  const _TXT = {
+    fr: { pastille: 'À faire ensuite', titre: 'Continuez l\'aventure',
+          sous: { tests: 'Ces tests pourraient aussi vous plaire', quiz: 'Ces quiz pourraient aussi vous plaire', jeux: 'Ces jeux pourraient aussi vous plaire', mix: 'D\'autres idées qui pourraient vous plaire' },
+          famille: { tests: 'Test de couple', celib: 'Test célibataire', quiz: 'Quiz de couple', jeux: 'Jeu de couple', outil: 'Outil' },
+          essayer: 'Essayer',
+          blogPastille: 'Le blog', blogTitre: 'Pour aller plus loin', blogSous: 'Nos articles pour approfondir le sujet',
+          lire: 'Lire l\'article', minutes: '{n} min', lu: 'Lu {n} fois' },
+    en: { pastille: 'Up next', titre: 'Keep exploring',
+          sous: { tests: 'You might also enjoy these tests', quiz: 'You might also enjoy these quizzes', jeux: 'You might also enjoy these games', mix: 'More ideas you might enjoy' },
+          famille: { tests: 'Couple test', celib: 'Singles test', quiz: 'Couple quiz', jeux: 'Couple game', outil: 'Tool' },
+          essayer: 'Try it',
+          blogPastille: 'The blog', blogTitre: 'Go further', blogSous: 'Our articles to dig deeper',
+          lire: 'Read the article', minutes: '{n} min', lu: 'Read {n} times' },
+    es: { pastille: 'Lo siguiente', titre: 'Sigue explorando',
+          sous: { tests: 'Estos tests también te pueden gustar', quiz: 'Estos quiz también te pueden gustar', jeux: 'Estos juegos también te pueden gustar', mix: 'Más ideas que te pueden gustar' },
+          famille: { tests: 'Test de pareja', celib: 'Test para solteros', quiz: 'Quiz de pareja', jeux: 'Juego en pareja', outil: 'Herramienta' },
+          essayer: 'Probar',
+          blogPastille: 'El blog', blogTitre: 'Para profundizar', blogSous: 'Nuestros artículos para profundizar',
+          lire: 'Leer el artículo', minutes: '{n} min', lu: 'Leído {n} veces' },
+    de: { pastille: 'Als Nächstes', titre: 'Weiter entdecken',
+          sous: { tests: 'Diese Tests könnten euch auch gefallen', quiz: 'Diese Quiz könnten euch auch gefallen', jeux: 'Diese Spiele könnten euch auch gefallen', mix: 'Weitere Ideen, die euch gefallen könnten' },
+          famille: { tests: 'Beziehungstest', celib: 'Single-Test', quiz: 'Paar-Quiz', jeux: 'Paarspiel', outil: 'Tool' },
+          essayer: 'Ausprobieren',
+          blogPastille: 'Der Blog', blogTitre: 'Mehr erfahren', blogSous: 'Unsere Artikel zum Vertiefen',
+          lire: 'Artikel lesen', minutes: '{n} Min.', lu: '{n} Mal gelesen' },
+    it: { pastille: 'Da fare dopo', titre: 'Continua a esplorare',
+          sous: { tests: 'Potrebbero piacerti anche questi test', quiz: 'Potrebbero piacerti anche questi quiz', jeux: 'Potrebbero piacerti anche questi giochi', mix: 'Altre idee che potrebbero piacerti' },
+          famille: { tests: 'Test di coppia', celib: 'Test per single', quiz: 'Quiz di coppia', jeux: 'Gioco di coppia', outil: 'Strumento' },
+          essayer: 'Prova',
+          blogPastille: 'Il blog', blogTitre: 'Per approfondire', blogSous: 'I nostri articoli per approfondire',
+          lire: 'Leggi l\'articolo', minutes: '{n} min', lu: 'Letto {n} volte' },
+  };
+  const _tx = _TXT[lang] || _TXT.fr;
+  const _locale = { fr: 'fr-FR', en: 'en-US', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
+  const _nombre = function (n) { try { return Number(n).toLocaleString(_locale); } catch (e) { return String(n); } };
 
-  const _articlesLabel = lang === 'fr' ? 'Pour aller plus loin' :
-    lang === 'en' ? 'Go further' :
-    lang === 'es' ? 'Para profundizar' :
-    lang === 'de' ? 'Mehr erfahren' :
-    'Per approfondire';
+  // Le sous-titre suit ce qui est proposé : « ces tests » sous une liste de
+  // jeux était faux sur la moitié des pages.
+  const _familles = _relatedKeys.map(_familleDe);
+  const _groupe = function (f) { return f === 'celib' || f === 'outil' ? 'tests' : f; };
+  const _sousTitre = _familles.length && _familles.every(function (f) { return _groupe(f) === _groupe(_familles[0]); })
+    ? _tx.sous[_groupe(_familles[0])] : _tx.sous.mix;
 
-  const _articlesSub = lang === 'fr' ? 'Nos articles pour approfondir le sujet' :
-    lang === 'en' ? 'Our articles to dig deeper' :
-    lang === 'es' ? 'Nuestros artículos para profundizar' :
-    lang === 'de' ? 'Unsere Artikel zum Vertiefen' :
-    'I nostri articoli per approfondire';
+  // Largeurs des images relevées dans Chromium : quatre colonnes de 263 px
+  // dans le conteneur de 1152 px, quatre colonnes fluides de 1024 à 1183 px,
+  // deux colonnes au-dessous ; sur téléphone, deux cartes de tests par
+  // rangée et une carte d'article à 78 % de la bande qui défile.
+  const _taillesTest = '(min-width: 1184px) 263px, (min-width: 1024px) calc((100vw - 100px) / 4), (min-width: 640px) calc((100vw - 56px) / 2), calc((100vw - 48px) / 2)';
+  const _taillesArticle = '(min-width: 1184px) 263px, (min-width: 1024px) calc((100vw - 100px) / 4), (min-width: 640px) calc((100vw - 56px) / 2), calc(78vw - 27px)';
 
   const _relatedArticles = (typeof relatedArticles !== 'undefined' && Array.isArray(relatedArticles)) ? relatedArticles : [];
+  const _seuilLu = typeof seuilLectures === 'number' ? seuilLectures : 10;
 %>
 <% if (_relatedKeys.length > 0) { %>
-<section class="related-tests-section">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <div class="related-tests-header">
-      <h2 class="related-tests-badge"><%= _relatedLabel %></h2>
-      <p class="related-tests-sub"><%= _relatedSub %></p>
+<section class="related-tests-section suite-section" aria-labelledby="suite-titre">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="bloc-entete suite-entete">
+      <span class="bloc-pastille"><%= _tx.pastille %></span>
+      <h2 class="bloc-titre" id="suite-titre"><%= _tx.titre %></h2>
+      <span class="bloc-trait" aria-hidden="true"></span>
+      <p class="bloc-sous-titre"><%= _sousTitre %></p>
     </div>
-    <div class="related-tests-grid">
-      <% for (const rk of _relatedKeys) {
-        const rTitle = t('quizzes:' + rk + '.shortTitle', t('quizzes:' + rk + '.title', rk));
-        const rDesc = t('quizzes:' + rk + '.description', '');
+    <div class="suite-grille">
+      <% _relatedKeys.forEach(function (rk, i) {
         const rUrl = getLocalizedUrl(rk, lang);
-        const rIcon = _relatedIcons[rk] || '📝';
-        if (!rUrl) continue;
+        if (!rUrl) return;
+        const fam = _familles[i];
+        const rTitle = t('common:nav.' + rk, t('quizzes:' + rk + '.shortTitle', t('quizzes:' + rk + '.title', rk)));
+        const rDesc = t('home:quizGrid.cards.' + rk, t('quizzes:' + rk + '.description', ''));
+        const rIcon = _relatedIcons[rk] || '💞';
+        const _f = quizFeatured && quizFeatured[rk];
+        const rImg = _f ? '/quiz/featured/' + _f.file + '.webp' : null;
+        const rSrcset = rImg ? srcsetImage(rImg) : null;
+        const rCta = fam === 'outil' ? _tx.essayer
+          : fam === 'jeux' ? t('common:buttons.startGame', 'Jouer')
+          : fam === 'quiz' ? t('common:buttons.startQuiz', 'Faire le quiz')
+          : t('common:buttons.startTest', 'Faire le test');
       %>
-      <a href="<%= rUrl %>" class="related-test-card no-underline group">
-        <span class="related-test-icon"><%= rIcon %></span>
-        <div class="related-test-content">
-          <h3 class="related-test-title"><%= rTitle %></h3>
-          <% if (rDesc) { %><p class="related-test-desc"><%= rDesc %></p><% } %>
-        </div>
-        <svg class="related-test-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+      <a href="<%= rUrl %>" class="suite-carte suite-carte--<%= fam === 'outil' ? 'tests' : fam %>">
+        <span class="suite-media">
+          <% if (rImg) { %>
+          <img src="<%= rImg %>"<% if (rSrcset) { %> srcset="<%= rSrcset %>" sizes="<%= _taillesTest %>"<% } %> alt="" loading="lazy" decoding="async" width="1200" height="630">
+          <% } %>
+          <span class="suite-emoji" aria-hidden="true"><%= rIcon %></span>
+        </span>
+        <span class="suite-corps">
+          <span class="suite-famille"><%= _tx.famille[fam] || _tx.famille.tests %></span>
+          <h3 class="suite-nom"><%= rTitle %></h3>
+          <% if (rDesc) { %><span class="suite-desc"><%= rDesc %></span><% } %>
+          <span class="suite-cta"><%= rCta %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </span>
       </a>
-      <% } %>
+      <% }); %>
     </div>
   </div>
 </section>
 <% } %>
 <% if (_relatedArticles.length > 0) { %>
-<section class="related-articles-section animate-on-scroll">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <div class="related-tests-header">
-      <span class="related-tests-badge related-tests-badge--articles"><%= _articlesLabel %></span>
-      <p class="related-tests-sub"><%= _articlesSub %></p>
+<section class="related-articles-section lire-section" aria-labelledby="lire-titre">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="bloc-entete lire-entete">
+      <span class="bloc-pastille"><%= _tx.blogPastille %></span>
+      <h2 class="bloc-titre" id="lire-titre"><%= _tx.blogTitre %></h2>
+      <span class="bloc-trait" aria-hidden="true"></span>
+      <p class="bloc-sous-titre"><%= _tx.blogSous %></p>
     </div>
-    <div class="related-articles-grid">
+    <div class="lire-grille">
       <% for (const art of _relatedArticles) { if (!art.url) continue; %>
-      <a href="<%= art.url %>" class="related-article-card no-underline group">
-        <span class="related-article-icon" aria-hidden="true">📖</span>
-        <span class="related-article-title"><%= art.title %></span>
-        <svg class="related-test-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+      <a href="<%= art.url %>" class="lire-carte">
+        <span class="lire-media">
+          <% if (art.image) { %>
+          <img src="<%= art.image %>"<% if (art.imageSrcset) { %> srcset="<%= art.imageSrcset %>" sizes="<%= _taillesArticle %>"<% } %> alt="" loading="lazy" decoding="async" width="1200" height="675">
+          <% } %>
+        </span>
+        <span class="lire-corps">
+          <h3 class="lire-titre"><%= art.title %></h3>
+          <span class="lire-meta">
+            <% if (art.minutes) { %>
+            <span class="lire-info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><%= _tx.minutes.replace('{n}', art.minutes) %></span>
+            <% } %>
+            <% if (art.lectures !== null && art.lectures !== undefined && art.lectures >= _seuilLu) { %>
+            <span class="lire-info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><%= _tx.lu.replace('{n}', _nombre(art.lectures)) %></span>
+            <% } %>
+          </span>
+          <span class="lire-bouton"><%= _tx.lire %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </span>
       </a>
       <% } %>
     </div>

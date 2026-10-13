@@ -27,6 +27,9 @@
   --adm-axis:rgba(90,70,110,.55);
   --adm-bon:#0a7a3c;
   --adm-mauvais:#c22b2b;
+  /* Fond plein d'une action destructrice, le meme en clair et en sombre :
+     texte blanc a 5,6:1. */
+  --adm-danger:#c22b2b;
   color:var(--adm-ink);
 }
 .dark .adm{
@@ -772,4 +775,43 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
   .rsx-rang{grid-template-columns:1fr;}
   .rsx-rang-jour{flex-direction:row;align-items:baseline;gap:.5rem;padding-top:.5rem;}
   .rsx-case.is-vide{min-height:2.4rem;flex-direction:row;}
+}
+
+/* ── Onglet Avis ───────────────────────────────────────────────────── */
+/* Supprimer se confirme d'un second clic sur le meme bouton : il passe au
+   rouge plein le temps de la confirmation, cinq secondes. Pendant l'envoi,
+   les boutons de la carte sont desactives, et un echec s'ecrit dessous. */
+.adm .admin-action,.adm .msg-action{touch-action:manipulation;}
+.adm .admin-action:disabled,.adm .msg-action:disabled{opacity:.55;cursor:progress;}
+.adm .admin-action.est-arme,.adm .msg-action.est-arme{background:var(--adm-danger);border-color:var(--adm-danger);color:#fff;}
+.adm .admin-action.est-arme:hover,.adm .msg-action.est-arme:hover{background:color-mix(in srgb,var(--adm-danger) 88%,#000);}
+/* La ligne d'etat d'une carte (avis, message) : vide, elle ne prend pas de place. */
+.adm-carte-msg{margin:0;font-size:.8rem;color:var(--adm-ink-2);}
+.adm-carte-msg:empty{display:none;}
+.adm-carte-msg.est-erreur{color:var(--adm-mauvais);font-weight:600;}
+.adm-avis-erreur{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:.6rem;padding:2rem 1rem;text-align:center;color:var(--adm-mauvais);}
+.adm-avis-erreur p{margin:0;font-size:.9rem;font-weight:600;}
+.adm-avis-plus{display:flex;justify-content:center;margin:1rem 0 1.5rem;}
+.adm-avis-plus:has(.hidden){margin:0 0 1.25rem;}
+/* Les pages les plus notees : deux colonnes de dix sur grand ecran, rangees
+   de haut en bas (le nombre de rangees vient du script, --rangs). */
+.adm-classement-liste{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(var(--rangs,10),auto);grid-auto-flow:column;column-gap:1.75rem;}
+.adm-classement-liste>p{grid-column:1/-1;}
+.adm .adm-classement-ligne{cursor:default;gap:.65rem;}
+.adm .adm-classement-ligne:hover{background:none;}
+.adm-classement-rang{flex:0 0 1.5rem;text-align:right;font-size:.78rem;font-weight:800;color:var(--adm-ink-2);font-variant-numeric:tabular-nums;}
+.adm-classement-nom{flex:1;min-width:0;display:flex;align-items:center;gap:.4rem;font-size:.88rem;font-weight:600;}
+.adm-classement-texte{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.adm-classement-nb{flex:none;font-size:.85rem;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.adm-classement-note{flex:0 0 4.7rem;text-align:right;font-size:.85rem;font-weight:700;color:var(--adm-ink-2);font-variant-numeric:tabular-nums;white-space:nowrap;}
+@media (max-width:960px){
+  .adm-classement-liste{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-auto-flow:row;}
+}
+/* Sur telephone, le nom de la page passe a la ligne plutot que d'etre coupe :
+   « Quiz am... » ne dit pas de quelle page il s'agit. */
+@media (max-width:600px){
+  .adm .adm-classement-ligne{gap:.5rem;padding-left:.4rem;padding-right:.4rem;}
+  .adm-classement-rang{flex-basis:1.2rem;}
+  .adm-classement-texte{white-space:normal;overflow:visible;text-overflow:clip;line-height:1.25;}
+  .adm-classement-note{flex-basis:4.3rem;}
 }

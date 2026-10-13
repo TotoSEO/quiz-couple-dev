@@ -784,6 +784,11 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
   line-height: 1; color: hsl(var(--foreground)); font-variant-numeric: tabular-nums;
 }
 .note-site-detail { font-size: .72rem; line-height: 1.2; color: hsl(var(--muted-foreground)); }
+.note-site-note { display: inline-flex; align-items: baseline; }
+.note-site-sur5 { margin-left: .05em; font-family: var(--font-display); font-weight: 700; font-size: .82rem; color: hsl(var(--muted-foreground)); }
+/* La note de la section des avis, en bas de l'accueil : « 4,8/5 » */
+.avis-note-bas { display: inline-flex; align-items: baseline; }
+.avis-sur5 { margin-left: .05em; font-weight: 700; font-size: 1rem; color: hsl(var(--muted-foreground)); }
 
 @media (min-width: 768px) {
   .note-site { margin-left: 0; margin-right: auto; }
@@ -4556,115 +4561,162 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 @keyframes vagueVersGauche { from { transform: translateX(0); } to { transform: translateX(-1440px); } }
 @keyframes vagueVersDroite { from { transform: translateX(-1440px); } to { transform: translateX(0); } }
 
-.related-tests-section {
-  padding: 3rem 0 4rem;
-  background: linear-gradient(180deg, transparent, hsl(var(--muted) / 0.3));
+/* ═══════════════════════════════════════════════════════════
+   BAS DES PAGES JOUABLES : LES PAGES SUGGÉRÉES ET LES ARTICLES
+   (12 octobre 2026, related-tests.ejs). Deux rangées de cartes à
+   image, de même hauteur dans une rangée : les pages à faire ensuite
+   (image de tête, famille en couleur, bouton) puis les articles liés
+   (image à la une, titre de l'article, temps de lecture et lectures,
+   bouton « Lire l'article »). L'en-tête reprend celui des sections de
+   l'accueil (.bloc-entete). Au survol, seuls transform, l'ombre et la
+   bordure changent. Sur téléphone, deux cartes de pages par rangée et
+   les articles en bande qui défile de côté.
+   ═══════════════════════════════════════════════════════════ */
+.suite-section {
+  --bloc-accent: var(--primary);
+  padding: 3.5rem 0 3rem;
+  background: linear-gradient(180deg, transparent, hsl(var(--muted) / .35));
 }
-.related-tests-header {
-  text-align: center; margin-bottom: 2rem;
+.lire-section {
+  --bloc-accent: var(--secondary);
+  padding: 2.5rem 0 4rem;
+  background: hsl(var(--muted) / .35);
 }
-h2.related-tests-badge { line-height: 1.25; letter-spacing: -0.01em; }
-.related-tests-badge {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  font-size: 1.5rem; font-weight: 800;
-  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0.5rem;
-}
-.related-tests-sub {
-  font-size: 0.9375rem; color: hsl(var(--muted-foreground));
-}
-.related-tests-grid {
-  display: grid; grid-template-columns: 1fr; gap: 0.75rem;
-}
+.suite-entete, .lire-entete { margin-bottom: 2rem; }
+.suite-entete .bloc-titre, .lire-entete .bloc-titre { font-size: clamp(1.45rem, 4vw, 2rem); }
 
-/* ── Related articles (quiz → blog internal linking) ──────── */
-.related-articles-section { padding: 0 0 4rem; }
-.related-tests-badge--articles {
-  background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
-  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+.suite-grille, .lire-grille {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem;
 }
-.related-articles-grid {
-  display: grid; grid-template-columns: 1fr; gap: 0.75rem;
-  max-width: 42rem; margin: 0 auto;
-}
-@media (min-width: 640px) { .related-articles-grid { grid-template-columns: repeat(2, 1fr); } }
-.related-article-card {
-  display: flex; align-items: center; gap: 1rem;
-  padding: 1.05rem 1.2rem; border-radius: 1.15rem;
-  border: 2px solid hsl(var(--border));
-  background: hsl(var(--card)); color: hsl(var(--foreground));
-  text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.related-article-card:hover {
-  border-color: hsl(var(--secondary) / 0.5);
-  transform: translateY(-3px); box-shadow: 0 14px 28px -16px hsl(var(--secondary) / 0.55);
-}
-.related-article-icon {
-  width: 46px; height: 46px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem; border-radius: 13px;
-  background: linear-gradient(135deg, hsl(var(--secondary) / 0.16), hsl(var(--primary) / 0.16));
-}
-.related-article-title { flex: 1; font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; line-height: 1.35; }
-.related-article-card:hover .related-article-title { color: hsl(var(--secondary)); }
-.related-article-card .related-test-arrow {
-  width: 18px; height: 18px; color: hsl(var(--muted-foreground)); flex-shrink: 0;
-  transition: transform 0.2s;
-}
-.related-article-card:hover .related-test-arrow { transform: translateX(3px); color: hsl(var(--secondary)); }
-@media (min-width: 640px) { .related-tests-grid { grid-template-columns: repeat(2, 1fr); } }
-
-.related-test-card {
-  display: flex; align-items: center; gap: 1rem;
-  padding: 1rem 1.25rem;
-  border-radius: 1rem;
-  border: 1px solid hsl(var(--border) / 0.6);
+.suite-carte, .lire-carte {
+  --carte-accent: var(--primary);
+  --carte-texte: var(--primary-texte);
+  position: relative;
+  display: flex; flex-direction: column;
+  flex: 0 1 calc((100% - 3.75rem) / 4);
+  min-width: 0;
+  border-radius: 1.25rem;
   background: hsl(var(--card));
-  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  text-decoration: none;
-}
-.related-test-card:hover {
-  border-color: hsl(var(--primary) / 0.3);
-  background: hsl(var(--primary) / 0.03);
-  transform: translateY(-4px) translateX(4px);
-  box-shadow: 0 12px 32px -8px hsl(var(--primary) / 0.12);
-}
-.related-test-icon {
-  display: flex; align-items: center; justify-content: center;
-  width: 2.75rem; height: 2.75rem; flex-shrink: 0;
-  border-radius: 0.75rem;
-  background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.06));
-  border: 1px solid hsl(var(--primary) / 0.08);
-  font-size: 1.25rem;
-  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-.related-test-card:hover .related-test-icon {
-  transform: scale(1.1) rotate(-5deg);
-  box-shadow: 0 4px 12px -2px hsl(var(--primary) / 0.2);
-}
-.related-test-content { flex: 1; min-width: 0; }
-.related-test-title {
-  font-size: 0.875rem; font-weight: 700;
+  border: 1px solid hsl(var(--border) / .7);
+  box-shadow: 0 1px 3px rgb(0 0 0 / .04);
+  overflow: hidden;
   color: hsl(var(--foreground));
-  margin-bottom: 0.125rem;
-  transition: color 0.2s;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
-.related-test-card:hover .related-test-title { color: hsl(var(--primary)); }
-.related-test-desc {
-  font-size: 0.75rem; color: hsl(var(--muted-foreground));
-  line-height: 1.4;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+.suite-carte--celib { --carte-accent: var(--celib); --carte-texte: var(--celib-texte); }
+.suite-carte--quiz { --carte-accent: var(--secondary); --carte-texte: var(--secondary-texte); }
+.suite-carte--jeux { --carte-accent: 160 48% 40%; --carte-texte: 160 62% 26%; }
+.dark .suite-carte--jeux { --carte-texte: 160 50% 60%; }
+.lire-carte { --carte-accent: var(--secondary); --carte-texte: var(--secondary-texte); }
+.suite-carte:hover, .lire-carte:hover {
+  transform: translateY(-4px);
+  border-color: hsl(var(--carte-accent) / .4);
+  box-shadow: 0 18px 36px -18px hsl(var(--carte-accent) / .55);
 }
-.related-test-arrow {
-  width: 1.25rem; height: 1.25rem; flex-shrink: 0;
-  color: hsl(var(--muted-foreground) / 0.4);
-  transition: all 0.3s ease;
+.suite-carte:focus-visible, .lire-carte:focus-visible {
+  outline: 3px solid hsl(var(--carte-accent)); outline-offset: 3px;
 }
-.related-test-card:hover .related-test-arrow {
-  color: hsl(var(--primary));
-  transform: translateX(4px);
+
+.suite-media, .lire-media {
+  position: relative; display: block; flex: none;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: linear-gradient(135deg, hsl(var(--carte-accent) / .25), hsl(var(--secondary) / .12));
+}
+.suite-media img, .lire-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .5s cubic-bezier(.22, 1, .36, 1);
+}
+.suite-carte:hover .suite-media img, .lire-carte:hover .lire-media img { transform: scale(1.05); }
+/* Le trait de la famille, au bas de l'image */
+.suite-media::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
+  background: linear-gradient(90deg, hsl(var(--carte-accent)), hsl(var(--carte-accent) / .3));
+}
+.suite-emoji {
+  position: absolute; top: .7rem; left: .7rem;
+  display: grid; place-items: center;
+  width: 2.4rem; height: 2.4rem; border-radius: .8rem;
+  font-size: 1.2rem; line-height: 1;
+  background: hsl(var(--card) / .92);
+  box-shadow: 0 4px 12px -4px rgb(0 0 0 / .3);
+}
+
+.suite-corps, .lire-corps {
+  display: flex; flex-direction: column; flex: 1;
+  padding: 1rem 1.1rem 1.15rem;
+}
+.suite-famille {
+  font-size: .68rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  color: hsl(var(--carte-texte));
+  margin-bottom: .35rem;
+}
+.suite-nom, .lire-titre {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 1rem; line-height: 1.3; margin: 0;
+  color: hsl(var(--foreground));
+}
+.suite-desc {
+  margin-top: .4rem;
+  font-size: .82rem; line-height: 1.5; color: hsl(var(--muted-foreground));
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.suite-cta {
+  display: inline-flex; align-items: center; gap: .35rem;
+  margin-top: auto; padding-top: .9rem;
+  font-size: .85rem; font-weight: 700; color: hsl(var(--carte-texte));
+}
+.suite-cta svg, .lire-bouton svg { width: 1rem; height: 1rem; flex: none; transition: transform .25s ease; }
+.suite-carte:hover .suite-cta svg, .lire-carte:hover .lire-bouton svg { transform: translateX(3px); }
+
+/* Le temps de lecture et les lectures, puis le bouton, tous calés en bas
+   de la carte : d'une carte à l'autre ils restent sur la même ligne, quelle
+   que soit la longueur du titre. */
+.lire-meta {
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem;
+  margin: auto 0 .9rem; padding-top: .7rem;
+  font-size: .78rem; color: hsl(var(--muted-foreground));
+}
+.lire-info { display: inline-flex; align-items: center; gap: .3rem; white-space: nowrap; }
+.lire-info svg { width: .95rem; height: .95rem; flex: none; }
+.lire-bouton {
+  display: flex; align-items: center; justify-content: center; gap: .4rem;
+  padding: .6rem 1rem;
+  border-radius: 999px;
+  border: 2px solid hsl(var(--secondary) / .35);
+  font-size: .85rem; font-weight: 700;
+  color: hsl(var(--secondary-texte));
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.lire-carte:hover .lire-bouton {
+  background: hsl(var(--secondary)); border-color: hsl(var(--secondary)); color: #fff;
+}
+
+@media (max-width: 1023.98px) {
+  .suite-carte, .lire-carte { flex-basis: calc((100% - 1.25rem) / 2); }
+}
+@media (max-width: 639.98px) {
+  .suite-section { padding: 2.75rem 0 2rem; }
+  .lire-section { padding: 2rem 0 3rem; }
+  .suite-entete, .lire-entete { margin-bottom: 1.5rem; }
+  .suite-grille { gap: .75rem; }
+  .suite-carte { flex-basis: calc((100% - .75rem) / 2); border-radius: 1rem; }
+  .suite-corps { padding: .7rem .8rem .85rem; }
+  .suite-desc { display: none; }
+  .suite-nom { font-size: .9rem; }
+  .suite-famille { font-size: .62rem; }
+  .suite-emoji { top: .5rem; left: .5rem; width: 2rem; height: 2rem; border-radius: .65rem; font-size: 1rem; }
+  .suite-cta { padding-top: .6rem; font-size: .8rem; }
+  /* Les articles défilent de côté : une carte entière et le bord de la suivante */
+  .lire-grille {
+    flex-wrap: nowrap; justify-content: flex-start;
+    overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    margin: 0 -1rem; padding: .25rem 1rem 1rem; scroll-padding: 0 1rem;
+    scrollbar-width: none;
+  }
+  .lire-grille::-webkit-scrollbar { display: none; }
+  .lire-carte { flex: 0 0 78%; scroll-snap-align: start; }
 }
 
 /* Respect reduced motion preference */
@@ -5573,8 +5625,6 @@ details[open] summary {
   color: hsl(var(--primary));
 }
 
-/* ── Related Tests, styles moved to .related-test-card ── */
-
 /* ── Entree de page ─────────────────────────────────
    La premiere section de chaque page (le hero) apparaissait en fondu depuis
    l'opacite 0 pendant 0,6 s. Chrome ne retient jamais comme candidat LCP un
@@ -6172,6 +6222,7 @@ h1, h2, h3, h4, h5, h6,
 .pqx-sub { color: hsl(var(--foreground) / 0.75); font-size: 0.98rem; margin: 0.4rem 0 1.6rem; max-width: 52ch; }
 .pqx-agg { display: inline-flex; align-items: center; gap: 0.5rem; }
 .pqx-avg { font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; line-height: 1; }
+.pqx-sur5 { margin-left: .05em; font-size: .62em; font-weight: 700; color: hsl(var(--muted-foreground)); }
 .pqx-count { font-size: 0.82rem; color: hsl(var(--muted-foreground)); }
 .pqx-stars { display: inline-flex; gap: 1px; }
 .pqx-star { width: 1rem; height: 1rem; fill: hsl(var(--border)); }
@@ -6423,25 +6474,64 @@ h1, h2, h3, h4, h5, h6,
 body.quiz-has-result .related-tests-section { display: none !important; }
 .quiz-page .hero-badge { display: none !important; }
 
-/* ── Bulle "realise X fois" sous le fil d'Ariane ── */
-.quiz-count-bubble {
-  display: flex; align-items: center; gap: 0.5rem;
-  width: max-content; max-width: 100%;
-  /* Sur sa propre ligne sous l'intro, centree comme le reste du hero ; elle
-     ne passe a gauche que sur grand ecran, quand l'image de tete pousse le
-     texte a gauche (regle plus bas, avec les autres). */
-  margin: 1rem auto 0.25rem;
-  padding: 0.5rem 1.05rem;
-  border-radius: 999px;
-  font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700;
-  color: hsl(var(--primary));
-  background: hsl(var(--primary) / 0.1);
-  border: 2px solid hsl(var(--primary) / 0.28);
-  box-shadow: 0 4px 14px -8px hsl(var(--primary) / 0.5);
+/* ── Bandeau du haut des pages jouables : parties, note et avis ──
+   Écrit à la construction sous l'introduction du hero (preuve-sociale.ejs,
+   posé par pointDuBandeau dans generate.js), à la place de la bulle
+   « joué N fois » que quiz-extras.js ajoutait après coup. Deux blocs : une
+   pastille, le chiffre en grand, sa légende dessous ; la note mène aux avis
+   du bas de page. Centré comme le hero, à gauche sur grand écran quand
+   l'image de tête pousse le texte (règle plus bas). Rien n'y bouge. */
+.preuve {
+  display: flex; align-items: center; gap: 1rem;
+  width: fit-content; max-width: 100%;
+  margin: 1.1rem auto .25rem;
+  padding: .55rem 1.1rem .55rem .6rem;
+  border-radius: 1.1rem;
+  background: hsl(var(--card) / .8);
+  border: 1px solid hsl(var(--border) / .8);
+  box-shadow: 0 10px 26px -18px hsl(var(--primary) / .6);
+  text-align: left;
 }
-.quiz-count-bubble svg { width: 15px; height: 15px; }
-.quiz-count-bubble .qcb-dot { width: 7px; height: 7px; border-radius: 50%; background: hsl(var(--mint)); box-shadow: 0 0 0 0 hsl(var(--mint) / 0.6); animation: qcbPulse 2.4s infinite; }
-@keyframes qcbPulse { 0% { box-shadow: 0 0 0 0 hsl(var(--mint) / 0.55); } 70% { box-shadow: 0 0 0 7px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+.preuve[hidden], .preuve [hidden] { display: none; }
+.preuve-bloc {
+  display: flex; align-items: center; gap: .6rem; min-width: 0;
+  color: inherit; text-decoration: none;
+}
+.preuve-icone {
+  flex: none; display: grid; place-items: center;
+  width: 2.3rem; height: 2.3rem; border-radius: 50%;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  color: #fff;
+}
+.preuve-icone svg { width: 1.05rem; height: 1.05rem; fill: currentColor; }
+.preuve-icone--note { background: linear-gradient(135deg, hsl(44 96% 58%), hsl(30 94% 56%)); }
+.preuve-texte { display: flex; flex-direction: column; gap: .1rem; min-width: 0; line-height: 1.15; }
+.preuve-chiffre {
+  font-family: var(--font-display); font-weight: 800; font-size: 1.12rem;
+  color: hsl(var(--foreground)); font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.preuve-sur5 { margin-left: .05em; font-size: .8em; font-weight: 700; color: hsl(var(--muted-foreground)); }
+.preuve-legende { font-size: .75rem; color: hsl(var(--muted-foreground)); white-space: nowrap; }
+.preuve-legende--lien {
+  text-decoration: underline; text-decoration-color: hsl(var(--muted-foreground) / .45);
+  text-underline-offset: 2px;
+}
+.preuve-note:hover .preuve-legende--lien { color: hsl(var(--primary-texte)); text-decoration-color: currentColor; }
+.preuve-note:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 4px; border-radius: .6rem; }
+.preuve-sep { align-self: stretch; width: 1px; margin: .2rem 0; background: hsl(var(--border)); }
+/* La note renvoie aux avis : ils arrivent sous l'en-tête collé, pas dessous */
+#pq-reviews { scroll-margin-top: 6rem; }
+/* Sur un petit téléphone, le bandeau se resserre et une légende longue
+   (« partidas jugadas », « 138 Bewertungen ») passe sur deux lignes plutôt
+   que de pousser le second bloc sous le premier. */
+@media (max-width: 420px) {
+  .preuve { gap: .7rem; padding: .5rem .85rem .5rem .5rem; }
+  .preuve-bloc { gap: .5rem; }
+  .preuve-icone { width: 2rem; height: 2rem; }
+  .preuve-icone svg { width: .95rem; height: .95rem; }
+  .preuve-chiffre { font-size: 1.05rem; }
+  .preuve-legende { white-space: normal; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -6520,8 +6610,8 @@ body.quiz-has-result .related-tests-section { display: none !important; }
   .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto .breadcrumb ol { justify-content: flex-start; }
   .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto p,
   .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto p { margin-left: 0; margin-right: 0; }
-  .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto .quiz-count-bubble,
-  .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto .quiz-count-bubble { margin-left: 0; margin-right: 0; }
+  .quiz-page-hero:has(.quiz-hero-media) > .container > .mx-auto .preuve,
+  .hero-gradient:has(.quiz-hero-media) > .container > .mx-auto .preuve { margin-left: 0; margin-right: 0; }
 }
 
 /* Banner variant: always a centered image on top (used on themed heroes) */
@@ -12546,5 +12636,4 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .scene-anneau-fill { animation: none; }
   .pqx-form-wrap { animation: none; }
   .pqx-input-stars:not(:hover):not(:has(.on)) .pqx-star-btn svg { animation: none; }
-  .quiz-count-bubble .qcb-dot { animation: none; }
 }

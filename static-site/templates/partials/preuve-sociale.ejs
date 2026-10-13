@@ -1,0 +1,58 @@
+<%
+  /* Le bandeau du haut des pages jouables (12 octobre 2026) : le nombre de
+     parties (de votes sur les trois pages à votes), la note moyenne sur cinq
+     et le nombre d'avis. Il remplace la bulle « Ce test a déjà été joué N
+     fois », que quiz-extras.js ajoutait après coup en poussant le texte.
+     Les chiffres sont lus à la construction (generate.js,
+     preuveSocialePour) et le bandeau est posé sous le dernier paragraphe du
+     bloc du fil d'Ariane (pointDuBandeau), la place de l'ancienne bulle.
+     La note mène aux avis du bas de page, qui gardent le détail.
+     Un chiffre que la base n'a pas donné à la construction est demandé par
+     quiz-extras.js (data-a-lire) ; data-sing et data-plur lui donnent le
+     libellé dans la langue de la page. */
+  var _ps = (typeof preuveSociale !== 'undefined' && preuveSociale) || {};
+  var _lg = lang || 'fr';
+  var _loc = { fr: 'fr-FR', en: 'en-US', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[_lg] || 'fr-FR';
+  var _MOTS = {
+    fr: { parties: ['partie jouée', 'parties jouées'], utilisations: ['utilisation', 'utilisations'], votes: ['vote', 'votes'], reponses: ['réponse', 'réponses'], avis: ['avis', 'avis'], note: '{n} sur 5' },
+    en: { parties: ['play', 'plays'], utilisations: ['use', 'uses'], votes: ['vote', 'votes'], reponses: ['answer', 'answers'], avis: ['review', 'reviews'], note: '{n} out of 5' },
+    es: { parties: ['partida jugada', 'partidas jugadas'], utilisations: ['uso', 'usos'], votes: ['voto', 'votos'], reponses: ['respuesta', 'respuestas'], avis: ['opinión', 'opiniones'], note: '{n} sobre 5' },
+    de: { parties: ['Mal gespielt', 'Mal gespielt'], utilisations: ['Nutzung', 'Nutzungen'], votes: ['Stimme', 'Stimmen'], reponses: ['Antwort', 'Antworten'], avis: ['Bewertung', 'Bewertungen'], note: '{n} von 5' },
+    it: { parties: ['partita giocata', 'partite giocate'], utilisations: ['utilizzo', 'utilizzi'], votes: ['voto', 'voti'], reponses: ['risposta', 'risposte'], avis: ['recensione', 'recensioni'], note: '{n} su 5' },
+  };
+  var _m = _MOTS[_lg] || _MOTS.fr;
+  var _nb = function (n) { try { return Number(n).toLocaleString(_loc); } catch (e) { return String(n); } };
+
+  var _parties = _ps.parties || null;
+  var _aLire = !_ps.parties;
+  var _sorte = _parties && _parties.sorte !== 'parties' ? _parties.sorte
+    : ({ jeuDilemmes: 'votes', pourContre: 'votes', jeuOuiNon: 'reponses' }[routeKey]
+       || (genrePage === 'outil' ? 'utilisations' : 'parties'));
+  var _mots = _m[_sorte] || _m.parties;
+  var _n = _parties ? _parties.n : 0;
+
+  var _note = Number(_ps.note) || 0;
+  var _nbAvis = Number(_ps.nbAvis) || 0;
+  var _avecAvis = _nbAvis > 0 && _note > 0;
+  var _noteTxt = _note.toFixed(1).replace('.', _lg === 'en' ? '.' : ',');
+  var _motAvis = _nbAvis === 1 ? _m.avis[0] : _m.avis[1];
+  var _avisALire = _ps.nbAvis === null || _ps.nbAvis === undefined;
+%>
+<div class="preuve" id="preuve" data-sing="<%= _mots[0] %>" data-plur="<%= _mots[1] %>"<% if (!_n && !_avecAvis && !_aLire && !_avisALire) { %> hidden<% } %>>
+  <div class="preuve-bloc preuve-parties"<% if (_aLire) { %> data-a-lire="1"<% } %><% if (!_n) { %> hidden<% } %>>
+    <span class="preuve-icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.2v11.6c0 .8.9 1.3 1.6.9l9-5.8c.6-.4.6-1.4 0-1.8l-9-5.8C9.9 4.9 9 5.4 9 6.2z"/></svg></span>
+    <span class="preuve-texte">
+      <span class="preuve-chiffre"><%= _n ? _nb(_n) : '' %></span>
+      <span class="preuve-legende"><%= _n === 1 ? _mots[0] : _mots[1] %></span>
+    </span>
+  </div>
+  <span class="preuve-sep" aria-hidden="true"<% if (!(_n && _avecAvis)) { %> hidden<% } %>></span>
+  <a class="preuve-bloc preuve-note" href="#pq-reviews"<% if (_avecAvis) { %> aria-label="<%= _m.note.replace('{n}', _noteTxt) %>, <%= _nb(_nbAvis) %> <%= _motAvis %>"<% } else { %> hidden<% } %><% if (_avisALire) { %> data-a-lire="1"<% } %>
+     data-note="<%= _m.note %>" data-avis-sing="<%= _m.avis[0] %>" data-avis-plur="<%= _m.avis[1] %>">
+    <span class="preuve-icone preuve-icone--note" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 16.8l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span>
+    <span class="preuve-texte">
+      <span class="preuve-chiffre"><span class="preuve-note-valeur"><%= _avecAvis ? _noteTxt : '' %></span><span class="preuve-sur5">/5</span></span>
+      <span class="preuve-legende preuve-legende--lien"><%= _avecAvis ? _nb(_nbAvis) + '\u00a0' + _motAvis : '' %></span>
+    </span>
+  </a>
+</div>
