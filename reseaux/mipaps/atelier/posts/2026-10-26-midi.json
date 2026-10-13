@@ -14,7 +14,7 @@
         "theme": "light",
         "idee": "Mini : elle, gourmande, un cornet de frites à côté, des cœurs.",
         "style": "mini",
-        "texte": "je t'aime plus que les frites. et c'est beaucoup.",
+        "texte": "je t'aime plus que les frites.",
         "dessin": {
           "elements": [
             {
@@ -38,7 +38,7 @@
           ]
         }
       },
-      "legende": "elle a hésité. un peu.\n\nc'est quoi ton plat préféré après lui ?",
+      "legende": "elle a hésité quatre secondes.\n\nenvoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",

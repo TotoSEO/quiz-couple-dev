@@ -83,7 +83,7 @@
             }
           },
           {
-            "texte": "le train : 3 h de retard. évidemment.",
+            "texte": "le train : 3 h de retard.",
             "dessin": {
               "elements": [
                 {
@@ -116,15 +116,15 @@
             }
           },
           {
-            "texte": "ça valait chaque kilomètre. chaque heure d'attente.",
+            "texte": "la gare, 21 h 40.",
             "dessin": {
               "duo": "calin"
             },
-            "appel": "tague ta personne, même loin"
+            "appel": "envoie-lui ça"
           }
         ]
       },
-      "legende": "chaque kilomètre.\n\ntague ta personne, même loin",
+      "legende": "il a attendu 3 h 10 sur le quai.\n\nenvoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
