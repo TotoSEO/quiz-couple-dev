@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-13T03:12:47.537Z",
+  "genere_le": "2026-10-13T10:29:45.545Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -20,38 +20,8 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 19,
+  "reserve_jours": 21,
   "a_remplir": [
-    {
-      "jour": "2026-11-01",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-01",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-01",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
-      "jour": "2026-11-02",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-02",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-02",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
     {
       "jour": "2026-11-03",
       "creneau": "matin",
@@ -1370,7 +1340,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1379,7 +1349,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "je gère.",
       "erreur": null
     },
@@ -1424,7 +1394,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -1433,7 +1403,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "t'as encore oublié le pain...",
       "erreur": null
     },
@@ -1704,7 +1674,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "j'ai pas peur du reste du monde. j'ai juste peur du monde sans toi.",
+      "texte": "t'es la première personne que j'ai envie d'appeler quand il se passe un truc.",
       "erreur": null
     },
     {
@@ -1731,7 +1701,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "je t'aime plus que les frites. et c'est beaucoup.",
+      "texte": "je t'aime plus que les frites.",
       "erreur": null
     },
     {
@@ -1877,6 +1847,60 @@
       "statut": "a_rendre",
       "texte": "merci d'être toi",
       "erreur": null
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "si t'as un coup de mou, appelle-moi. même à 3 h du matin. même si j'ai l'air de dormir.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-01",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "petit rappel : t'es ma personne.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-02",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
     }
   ],
   "idees": [],
@@ -1894,7 +1918,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-13",
+      "jour": "2026-10-14",
       "creneau": "midi"
     }
   },
