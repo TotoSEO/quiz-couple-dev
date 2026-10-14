@@ -6456,6 +6456,9 @@ h1, h2, h3, h4, h5, h6,
 .duo-pcard-name { font-family: var(--font-display); font-weight: 800; font-size: 1.02rem; }
 .duo-pcard-ring { margin: 0.1rem 0; }
 @media (max-width: 420px) { .duo-players-scores { gap: 0.6rem; } .duo-pcard { padding: 0.95rem 0.5rem; } }
+/* Le conseil du verdict (test a distance a deux) : l'espace du bloc suffit,
+   sans la marge haute qu'il a sous le resultat des autres moteurs. */
+.duo-score > .duo-verdict-conseil { margin: 0 auto; width: 100%; }
 
 /* Le bloc de renvoi du bas ne s'effaçait pas seulement sur les pages de test :
    « quiz-page » est posé sur le corps de toutes les pages par quiz-extras.js,

@@ -137,7 +137,18 @@
     // score monte donc vers le bon palier (r1 le plus dur, r4 le meilleur).
     // 15 questions tirees parmi 100 depuis le 7 octobre 2026 (un tiers des
     // parties allait au bout a 20, admin, septembre 2026).
-    'distance':       { prefix: 'distance', engine: 'solo', totalQ: 15, pool: 100, quizType: 'distance' },
+    // Depuis le 14 octobre 2026 (Thomas), deux modes comme le test de couple :
+    // seul(e), le test d'avant, inchange ; ou a deux, avec l'ecran des prenoms
+    // du test de couple et son mode a distance, chacun sur son telephone, ce
+    // qui est justement la situation d'un couple a distance. A deux, le moteur
+    // est celui du test de couple, avec le bareme pondere et le tirage par
+    // dimension du solo (initDuoMatchQuiz) et les quatre verdicts de la page
+    // (verdictsDuTest) : deux notes, leur moyenne, et le verdict de la moyenne.
+    'distance':       { modesGrand: true, modes: [
+      { id: 'solo', emoji: '🌍', prefix: 'distance', engine: 'solo', totalQ: 15, pool: 100, quizType: 'distance' },
+      { id: 'duo',  emoji: '👥', prefix: 'distance', engine: 'duo-match', totalQ: 15, pool: 100,
+        useScoring: true, needsGender: true, distance: true, verdictsDuTest: true }
+    ] },
 
     // ── Coquin quiz (guess & reveal mechanic) ──
     'coquin':         { prefix: 'coquin', engine: 'coquin', totalQ: 30, pool: 60 },
@@ -1959,9 +1970,21 @@
   // `pool` est le reservoir complet, avant tirage : le mode a distance en a
   // besoin pour rejouer le tirage du createur (optionsDistance).
   function initDuoMatchQuiz(cfg, questions, pool) {
+    // Un test a bareme pondere (le test a distance) le garde a deux : memes
+    // points par reponse et meme tirage par dimension que son mode solo. Le
+    // reservoir recoit les points lui aussi, puisque celui qui rejoint une
+    // partie a distance y relit les questions du createur.
+    var tableBareme = SOLO_BAREME[cfg.prefix];
+    if (tableBareme) {
+      var reservoir = (pool && pool.length) ? pool : questions;
+      appliqueBaremePondere(cfg.prefix, reservoir, !!cfg.ascending);
+      if (reservoir.length > cfg.totalQ && QuizEngine.tirageStratifie) {
+        questions = QuizEngine.tirageStratifie(reservoir, tableBareme, cfg.totalQ);
+      }
+    }
     var total = questions.length;
     var results = cfg.resultSet === 'compat' ? buildCompatResults(total) : buildDuoResults(total);
-    new QuizEngine.DuoMatchQuiz(etendre({
+    var options = {
       container: container,
       questions: questions,
       results: results,
@@ -1971,7 +1994,27 @@
       useScoring: cfg.useScoring || false,
       modeSolo: cfg.modeSolo || false,
       partenaire: partenaireResultat(quizType)
-    }, optionsDistance(cfg, pool)));
+    };
+    if (cfg.verdictsDuTest) {
+      options.verdicts = verdictsEnPourcentage(cfg.prefix);
+      var cleTitre = cfg.prefix + '.duoTitre';
+      var titreV = QuizEngine.tgd(cleTitre, null);
+      if (titreV && titreV !== cleTitre) options.verdictsTitre = titreV;
+    }
+    new QuizEngine.DuoMatchQuiz(etendre(options, optionsDistance(cfg, pool)));
+  }
+
+  // Les verdicts d'un test a points, en pourcentage, pour son resultat a
+  // deux : les textes du mode solo (r{N}_t, _d, _a), coupes en tranches
+  // egales comme parseGdResults le fait sur les points, et une etiquette
+  // courte (r{N}_tag) pour la carte de chacun.
+  function verdictsEnPourcentage(prefix) {
+    return parseGdResults(prefix, 100).map(function (r, i) {
+      var cle = prefix + '.r' + (i + 1) + '_tag';
+      var tag = QuizEngine.tgd(cle, null);
+      return { min: r.min, max: r.max, title: r.title, desc: r.description,
+               advice: r.advice, tag: (tag && tag !== cle) ? tag : '' };
+    });
   }
 
   function initHealthyQuiz(cfg, questions) {

@@ -2,9 +2,9 @@
   "hero": {
     "badge": "Test de compatibilité à distance",
     "title": "Couple à distance : les questions à se poser, et le test qui répond",
-    "description": "15 questions tirées parmi 100 pour situer votre relation à distance : communication, visites, confiance, projet commun. Vous répondez seul(e), le résultat est immédiat.",
+    "description": "15 questions tirées parmi 100 pour situer votre relation à distance : communication, visites, confiance, projet commun. Vous pouvez répondre seul(e) ou à deux, chacun sur son téléphone, même à des centaines de kilomètres l'un de l'autre !",
     "questions": "100 questions",
-    "players": "Test solo",
+    "players": "Seul(e) ou à deux",
     "duration": "~10 minutes",
     "titleHighlight": "questions à se poser"
   },
