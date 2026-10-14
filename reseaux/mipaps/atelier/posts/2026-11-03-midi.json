@@ -1,0 +1,42 @@
+{
+  "jour": "2026-11-03",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-029",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle, une mauvaise idée en tête, des cornes, les mains jointes.",
+        "style": "mini",
+        "texte": "mouahaha tu peux plus partir maintenant",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "diable",
+              "bras": "priere",
+              "signes": [
+                "cornes"
+              ],
+              "x": 320,
+              "taille": 290
+            }
+          ]
+        }
+      },
+      "legende": "il avait dit « je rentre chez moi ».\n\ntague-la",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

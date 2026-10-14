@@ -1,0 +1,114 @@
+{
+  "jour": "2026-11-04",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-017",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Les quatre saisons avec toi : les fleurs, un seul parasol, un parapluie pour deux, la couette.",
+        "pages": [
+          {
+            "texte": "les quatre saisons avec toi",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "signes": [
+                    "fleurs"
+                  ],
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "printemps : il m'offre des fleurs.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "timide",
+                  "bras": "tend_d",
+                  "x": 270,
+                  "taille": 260
+                },
+                {
+                  "objet": "bouquet",
+                  "x": 390,
+                  "y": 330,
+                  "echelle": 0.7
+                },
+                {
+                  "perso": "elle",
+                  "expression": "emerveille",
+                  "x": 440,
+                  "taille": 250
+                }
+              ]
+            }
+          },
+          {
+            "texte": "été : la plage, un seul parasol.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "x": 250,
+                  "taille": 250
+                },
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "x": 410,
+                  "taille": 250
+                },
+                {
+                  "objet": "parapluie",
+                  "x": 330,
+                  "y": 150,
+                  "echelle": 1.4
+                },
+                {
+                  "objet": "soleil",
+                  "x": 480,
+                  "y": 100,
+                  "echelle": 0.6
+                }
+              ]
+            }
+          },
+          {
+            "texte": "automne : la pluie, un parapluie pour deux.",
+            "dessin": {
+              "duo": "parapluie"
+            }
+          },
+          {
+            "texte": "hiver : la couette, 2 degrés dehors.",
+            "dessin": {
+              "duo": "couette"
+            },
+            "appel": "garde ça pour un soir où ça va pas"
+          }
+        ]
+      },
+      "legende": "on a refait le tour deux fois.\n\ngarde ça pour un soir où ça va pas",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

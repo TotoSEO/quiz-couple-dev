@@ -1,0 +1,170 @@
+{
+  "jour": "2026-11-03",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-004",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Le bisou raté : il se penche vers elle pour un bisou, elle se tourne au même moment pour regarder le chat, le bisou atterrit sur le côté de sa tête, il est gêné. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3,
+            "description": "Les deux sont debout côte à côte, face à nous, lui à gauche, elle à droite. Il la regarde, tendre. Un chat est assis à droite. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "amour"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "chat",
+                "x": 500,
+                "y": 345,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "20 h 15",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "coupe",
+            "description": "Il se penche vers elle les yeux fermés pour un bisou à 1 s. Au même moment, elle se tourne de profil vers le chat, curieuse, sans le voir. Le bisou arrive sur son oreille à 2,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "amour"
+                  },
+                  {
+                    "a": 1,
+                    "expression": "bisou",
+                    "pose": "penche_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1,
+                    "angle": 90,
+                    "expression": "curieux"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "chat",
+                "x": 500,
+                "y": 345,
+                "echelle": 0.8
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Il se redresse, gêné, les joues rouges, il regarde ailleurs. Elle regarde toujours le chat, de profil, qui n'a rien remarqué. Le texte à 0,3 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "pose": "penche_d",
+                    "expression": "bisou"
+                  },
+                  {
+                    "a": 0.6,
+                    "pose": "debout",
+                    "expression": "gene",
+                    "signes": [
+                      "rougeur_pleine"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "angle": 90,
+                    "expression": "curieux"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "chat",
+                "x": 500,
+                "y": 345,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "elle regardait le chat",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "il avait préparé ça toute la journée.\n\nenvoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

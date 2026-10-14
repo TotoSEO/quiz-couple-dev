@@ -1,0 +1,47 @@
+{
+  "jour": "2026-11-03",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-012",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : lui tire la langue, elle fait un clin d'œil.",
+        "texte": "t'es bizarre. et j'adore ça.",
+        "duree": 11,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "moqueur",
+              "x": 250,
+              "taille": 265
+            },
+            {
+              "perso": "elle",
+              "expression": "clin",
+              "x": 400,
+              "taille": 262
+            }
+          ]
+        }
+      },
+      "legende": "il fait ça depuis le premier jour.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}
