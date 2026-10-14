@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-13T10:29:43.860Z",
+  "genere_le": "2026-10-14T03:12:51.386Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-13",
+  "aujourdhui": "2026-10-14",
   "melange": {
     "midi": {
       "1": "connais-tu",
@@ -28,7 +28,7 @@
     },
     "matin": "pov"
   },
-  "reserve_jours": 34,
+  "reserve_jours": 33,
   "a_remplir": [
     {
       "jour": "2026-11-16",
@@ -1029,6 +1029,21 @@
       "jour": "2027-01-21",
       "creneau": "soir",
       "categorie": "carrousel"
+    },
+    {
+      "jour": "2027-01-22",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-22",
+      "creneau": "midi",
+      "categorie": "connais-tu"
+    },
+    {
+      "jour": "2027-01-22",
+      "creneau": "soir",
+      "categorie": "coquin"
     }
   ],
   "a_corriger": [],
@@ -1211,7 +1226,7 @@
       "creneau": "soir",
       "gabarit": "bd",
       "categorie": "bd",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1220,7 +1235,7 @@
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
-      "statut": "rendu",
+      "statut": "conteneur",
       "texte": null,
       "erreur": null
     },
@@ -1265,7 +1280,7 @@
       "creneau": "soir",
       "gabarit": "carrousel",
       "categorie": "carrousel",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "8 questions you've never asked each other",
       "erreur": null
     },
@@ -2120,7 +2135,7 @@
   "prochain_creneau": {
     "pov": {
       "jour": "2026-10-14",
-      "creneau": "matin"
+      "creneau": "soir"
     },
     "connais-tu": {
       "jour": "2026-10-14",
@@ -2147,7 +2162,7 @@
       "creneau": "soir"
     },
     "bd": {
-      "jour": "2026-10-13",
+      "jour": "2026-10-20",
       "creneau": "soir"
     },
     "dix-mais": {
