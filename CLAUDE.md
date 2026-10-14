@@ -65,6 +65,16 @@ critique garde la feuille bloquante.
   écrite dans la page, et l'emporte sur la nouvelle règle pour de bon (le
   11 octobre 2026, les cartes de prénoms gardaient leur cadre à l'encre). Après
   avoir retiré des `!important`, on régénère avant de publier.
+- On ne régénère que sur un `dist/` construit avec les données de Supabase
+  (avis cuits, compteurs) : le build n'y arrive pas toujours depuis une
+  session de travail (« [reviews] Could not fetch », proxy qui refuse la
+  connexion), et la couverture ne voit alors ni les avis ni leurs règles.
+  Le 14 octobre 2026, une régénération complète faite ainsi a retiré les
+  règles `.pqx-*` de 78 feuilles ; elles ont été rétablies depuis main. Sans
+  accès à la base, on ne régénère que la page qui a changé, après avoir
+  recopié dans sa page de `dist/` le bloc `#pqx-avis-cuits` de la page
+  publiée ; les autres feuilles gardent leur contenu, avec la nouvelle
+  empreinte, quand la règle ajoutée à `styles.css` ne sert pas au chargement.
 - Les états que la couverture ne voit pas (survol, écrans suivants du moteur)
   arrivent avec la feuille complète : un style indispensable dès le premier
   écran doit correspondre à des éléments présents au chargement.
