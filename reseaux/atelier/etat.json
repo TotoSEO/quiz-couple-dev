@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-14T03:12:51.386Z",
+  "genere_le": "2026-10-14T08:39:34.440Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -1235,7 +1235,7 @@
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
-      "statut": "conteneur",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1289,7 +1289,7 @@
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2138,7 +2138,7 @@
       "creneau": "soir"
     },
     "connais-tu": {
-      "jour": "2026-10-14",
+      "jour": "2026-10-16",
       "creneau": "midi"
     },
     "tu-preferes": {
