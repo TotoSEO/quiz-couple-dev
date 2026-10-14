@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-13T10:29:45.545Z",
+  "genere_le": "2026-10-14T03:12:54.087Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-13",
+  "aujourdhui": "2026-10-14",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 21,
+  "reserve_jours": 20,
   "a_remplir": [
     {
       "jour": "2026-11-03",
@@ -1221,6 +1221,21 @@
       "jour": "2027-01-21",
       "creneau": "soir",
       "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-22",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-22",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-22",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
     }
   ],
   "a_corriger": [],
@@ -1358,7 +1373,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "je te choisis encore. même avec ta vaisselle.",
       "erreur": null
     },
@@ -1367,7 +1382,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "conteneur",
       "texte": null,
       "erreur": null
     },
@@ -1412,7 +1427,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "dors bien mon amoureux <3",
       "erreur": null
     },
@@ -1906,11 +1921,11 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-14",
+      "jour": "2026-10-15",
       "creneau": "matin"
     },
     "mipaps-statique": {
-      "jour": "2026-10-13",
+      "jour": "2026-10-15",
       "creneau": "soir"
     },
     "mipaps-histoire": {
