@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-14T03:12:54.087Z",
+  "genere_le": "2026-10-14T08:39:35.930Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -20,38 +20,8 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 20,
+  "reserve_jours": 22,
   "a_remplir": [
-    {
-      "jour": "2026-11-03",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-03",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-03",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-11-04",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-04",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-04",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
     {
       "jour": "2026-11-05",
       "creneau": "matin",
@@ -1382,7 +1352,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "conteneur",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1436,7 +1406,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -1916,6 +1886,60 @@
       "statut": "a_rendre",
       "texte": null,
       "erreur": null
+    },
+    {
+      "jour": "2026-11-03",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-03",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "mouahaha tu peux plus partir maintenant",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-03",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "t'es bizarre. et j'adore ça.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-04",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-04",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "dans ma tête, là tout de suite",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-04",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
     }
   ],
   "idees": [],
@@ -1933,7 +1957,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-14",
+      "jour": "2026-10-15",
       "creneau": "midi"
     }
   },
