@@ -572,8 +572,15 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
    mobile : LCP a 14 s alors que le titre etait affiche a 3 s). Le meme decor,
    en degrades sur le fond de la section, ne pose aucun probleme et coute
    moins a peindre. Les taches perdent leur derive lente, rien d'autre. */
+/* Plein ecran, mais plafonne. Le moteur de rendu de Google agrandit la
+   fenetre a toute la hauteur de la page avant sa capture (16 500 px sur
+   l'accueil) : avec 100svh seul, le hero prenait toute cette hauteur et son
+   contenu, centre, tombait a 7 800 px du haut. La Search Console ne montrait
+   que le menu et le fond, dans les cinq langues (15 octobre 2026). Le plafond
+   garde le plein ecran jusqu'aux fenetres de 1 200 px de haut ; sur
+   telephone le hero depasse deja l'ecran, rien n'y change. */
 .hero-home {
-  min-height: 100svh;
+  min-height: min(100svh, 75rem);
   display: flex; align-items: center;
   position: relative; overflow: hidden;
   padding: 6rem 0 3rem;

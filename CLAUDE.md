@@ -160,6 +160,19 @@ le fondu se termine. Un fondu `main > section:first-child` de 0,6 s donnait
 un LCP de 14 s sur mobile et « NO_LCP » sur bureau. Même chose pour les
 décors en absolu par-dessus le hero (taches floutées, trame en `::after`) :
 ils sont des dégradés du fond de `.hero-home`, pas des éléments.
+Pas de hauteur en `vh` sans plafond sur une section qui centre son contenu :
+pour sa capture, le moteur de rendu de Google agrandit la fenêtre à toute la
+hauteur de la page (16 500 px sur l'accueil). Le hero de l'accueil
+(`min-height: 100svh`, contenu centré) prenait alors toute cette hauteur, son
+contenu tombait à 7 800 px du haut, et jusqu'au 15 octobre 2026 la Search
+Console ne montrait de l'accueil que le menu et le fond, dans les cinq
+langues. Il est plafonné à `min(100svh, 75rem)`, ce qui ne change rien
+jusqu'aux fenêtres de 1 200 px de haut (sur téléphone le hero dépasse déjà
+l'écran). Pour vérifier une page : l'ouvrir dans Chromium, agrandir la fenêtre
+à `document.documentElement.scrollHeight` et regarder où tombe le contenu.
+La minification ne garde que la dernière déclaration d'une même propriété :
+un repli en `vh` écrit au-dessus d'une ligne en `svh` ne part pas en
+production.
 La colonne droite du hero (`.hero-visual`, home.ejs) est la scène des
 mascottes depuis le 8 octobre 2026 : la rose et le violet, en grand, jouent
 une partie à deux en boucle (une question de test où ils répondent la même
