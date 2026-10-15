@@ -744,7 +744,7 @@
     <% if (latestArticles.length > 0) { %>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <% for (const article of latestArticles) { %>
-      <article class="group rounded-2xl overflow-hidden border border-border bg-card/60 shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <article class="dernier-article group rounded-2xl overflow-hidden border border-border bg-card/60 shadow-sm hover:shadow-lg transition-shadow duration-300">
         <a href="<%= article.url %>" class="block no-underline" tabindex="-1" aria-hidden="true">
           <div class="blog-img-wrap" style="margin:0">
             <%# Couvertures de 1536 px (132 Ko en moyenne) affichees a 356 px sur
@@ -754,15 +754,16 @@
             <img src="<%= article.featuredImage %>"<% if (srcsetImage(article.featuredImage)) { %> srcset="<%= srcsetImage(article.featuredImage) %>" sizes="(min-width: 1152px) 350px, (min-width: 768px) calc((100vw - 102px) / 3), (min-width: 640px) 480px, calc(100vw - 34px)"<% } %> alt="<%= escapeHtml(article.featuredImageAlt) %>" class="group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="225">
           </div>
         </a>
-        <div class="p-5 space-y-3">
-          <time datetime="<%= article.publishedAt %>" class="text-xs text-muted-foreground"><%= new Date(article.publishedAt).toLocaleDateString(dateLocaleHome, { year: 'numeric', month: 'long', day: 'numeric' }) %></time>
-          <h3 class="font-semibold text-lg leading-snug line-clamp-2"><a href="<%= article.url %>" class="hover:text-primary transition-colors"><%= article.title %></a></h3>
-          <p class="text-sm text-muted-foreground line-clamp-2"><%= article.excerpt %></p>
-          <a href="<%= article.url %>" class="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline mt-2 no-underline">
-            <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            <%= t('common:blog.readArticle', 'Lire l\'article') %>
-          </a>
-        </div>
+        <%# Les parties de la carte sont ses enfants directs, sans boîte
+            intermédiaire : c'est ce qui permet de les aligner d'une carte à
+            l'autre (.dernier-article dans styles.css). %>
+        <time datetime="<%= article.publishedAt %>" class="dernier-article-date text-xs text-muted-foreground"><%= new Date(article.publishedAt).toLocaleDateString(dateLocaleHome, { year: 'numeric', month: 'long', day: 'numeric' }) %></time>
+        <h3 class="dernier-article-titre font-semibold text-lg leading-snug"><a href="<%= article.url %>" class="hover:text-primary transition-colors"><%= article.title %></a></h3>
+        <p class="dernier-article-extrait text-sm text-muted-foreground"><%= article.excerpt %></p>
+        <a href="<%= article.url %>" class="dernier-article-lien inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline no-underline">
+          <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <%= t('common:blog.readArticle', 'Lire l\'article') %>
+        </a>
       </article>
       <% } %>
     </div>

@@ -2010,10 +2010,48 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .blog-card-title a { color: hsl(var(--foreground)); text-decoration: none; transition: color 150ms; }
 .blog-card-title a:hover { color: hsl(var(--primary)); }
 .blog-card-meta { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem 0; font-size: 0.875rem; color: hsl(var(--muted-foreground)); }
-.blog-card-excerpt { padding: 0.5rem 1.25rem 0.75rem; font-size: 0.875rem; line-height: 1.5; color: hsl(var(--muted-foreground)); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.blog-card-cta { align-self: flex-start; margin: 0 0 1.25rem 1.25rem; display: inline-flex; align-items: center; gap: 0.25rem; border-radius: var(--radius); color: hsl(var(--primary)); padding: 0; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: color 150ms; }
+/* Un texte tronqué par line-clamp n'a jamais de rembourrage vertical : le
+   masque passe au bord du rembourrage, et celui du bas laissait voir le haut
+   de la quatrième ligne, coupée en deux juste au-dessus du bouton. L'espace
+   est donc une marge. */
+.blog-card-excerpt { margin: 0.5rem 1.25rem 0.75rem; padding: 0; font-size: 0.875rem; line-height: 1.5; color: hsl(var(--muted-foreground)); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.blog-card-cta { align-self: flex-start; margin: auto 0 1.25rem 1.25rem; display: inline-flex; align-items: center; gap: 0.25rem; border-radius: var(--radius); color: hsl(var(--primary)); padding: 0; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: color 150ms; }
 .blog-card-cta:hover { color: hsl(var(--primary) / 0.75); }
 .blog-card-cta::after { content: '→'; }
+/* Dans une rangée, chaque partie de la carte est sur la même ligne que chez
+   ses voisines (sous-grille) : un titre de trois lignes ne décale plus la
+   date, l'extrait et le bouton par rapport à la carte d'à côté. Chaque
+   partie a sa ligne, la catégorie peut manquer. L'extrait garde sa propre
+   hauteur (start) : étiré à celle de la rangée, il montrerait de nouveau la
+   ligne d'après. Sans sous-grille, la colonne flex cale le bouton en bas. */
+@supports (grid-template-rows: subgrid) {
+  .blog-card { display: grid; grid-template-rows: subgrid; grid-row: span 6; row-gap: 0; }
+  .blog-card > :first-child { grid-row: 1; }
+  .blog-card-category { grid-row: 2; }
+  .blog-card-title { grid-row: 3; }
+  .blog-card-meta { grid-row: 4; }
+  .blog-card-excerpt { grid-row: 5; align-self: start; }
+  .blog-card-cta { grid-row: 6; justify-self: start; }
+}
+
+/* Les trois derniers articles de l'accueil (home.ejs), sur le même principe.
+   Titre et extrait s'arrêtent à trois lignes. Le titre porte la couleur de
+   son lien : les points de suspension sont dessinés dans la couleur du bloc,
+   et sortaient en noir au bout d'un titre rose. */
+.dernier-article { display: flex; flex-direction: column; }
+.dernier-article > :not(:first-child) { margin-left: 1.25rem; margin-right: 1.25rem; }
+.dernier-article-date { margin-top: 1.25rem; }
+.dernier-article-titre, .dernier-article-extrait {
+  margin-top: 0.75rem;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.dernier-article-titre { color: hsl(var(--primary)); }
+.dernier-article-lien { align-self: flex-start; margin-top: auto; padding-top: 1rem; margin-bottom: 1.25rem; }
+@supports (grid-template-rows: subgrid) {
+  .dernier-article { display: grid; grid-template-rows: subgrid; grid-row: span 5; row-gap: 0; }
+  .dernier-article-titre, .dernier-article-extrait { align-self: start; }
+  .dernier-article-lien { justify-self: start; }
+}
 
 /* Blog category tabs */
 .blog-category-tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 2rem; }
