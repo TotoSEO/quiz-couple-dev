@@ -1,0 +1,246 @@
+{
+  "jour": "2026-11-17",
+  "creneau": "soir",
+  "format": "image",
+  "gabarit": "bd",
+  "categorie": "bd",
+  "sujet": "bd-002",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "bd",
+        "langue": "en",
+        "theme": "light",
+        "idee": "La couette, la nuit : les deux dorment, il tire la couette, elle la reprend, chacun finit roulé dans sa moitié, dos à dos, elle : « night. »",
+        "cases": [
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Une chambre la nuit, lumière bleue de la lune. Les deux dorment côte à côte sous la même couette, la rose à gauche et le violet à droite, les yeux fermés, la bouche en sourire tranquille, des petits Z qui montent.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "zzz"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "lit-droite",
+                    "gestes": [
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "zzz"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même chambre, plus tard dans la nuit. La rose est réveillée, les yeux plats et la bouche plate, une main sur le bord de la couette. Le violet, à droite, a l'air content, enroulé dans la couette, les yeux fermés et un grand sourire.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate",
+                        "sourcils": "tristes"
+                      },
+                      {
+                        "geste": "tremble",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "lit-droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "fermes",
+                        "bouche": "sourire"
+                      },
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "um. blanket?",
+                "cote": "gauche"
+              }
+            ]
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même chambre, la rose a tout repris et dort enroulée dans la couette, un sourire de bonheur. Le violet est tout au bord du lit, grelotte, les yeux grands ouverts, les dents qui claquent, une goutte de gêne sur le côté.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "fermes",
+                        "bouche": "sourire"
+                      },
+                      {
+                        "geste": "dort",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "lit-droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "triste",
+                        "sourcils": "tristes"
+                      },
+                      {
+                        "geste": "tremble",
+                        "de": 0,
+                        "a": 2
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "goutte"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "scene": {
+              "t": 1.2,
+              "haut": 420,
+              "echelle": 1.25,
+              "plan": {
+                "description": "Même chambre. Chacun a sa moitié de couette, roulé dans la sienne, dos à dos, les yeux plats et fatigués. La rose, à gauche, tourne un peu la tête vers l'autre, la bouche plate.",
+                "duree": 2,
+                "decor": "chambre",
+                "moment": "nuit",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "lit-gauche",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      },
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "lit-droite",
+                    "gestes": [
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "plats",
+                        "bouche": "plate"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "repliques": [
+              {
+                "texte": "night.",
+                "cote": "gauche"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "Tag your partner",
+      "hashtags": [
+        "#couplecomics",
+        "#relationshipcomics",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}

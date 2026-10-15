@@ -1,0 +1,200 @@
+{
+  "jour": "2026-11-18",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-028",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Mini message : la rose fait coucou à la caméra, « just a reminder: ur my favorite person », mignonne, étincelles, cœurs.",
+        "plans": [
+          {
+            "description": "Fond papier avec un petit trait de sol. Dès la première image la rose est debout au centre, en grand, de face, et fait un petit coucou de la main à la caméra, un sourire timide, les joues roses. Le texte « just a reminder: » s'écrit mot à mot en haut à partir de 0,2 s. La caméra se rapproche doucement.",
+            "duree": 3.8,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "salue",
+                    "de": 0,
+                    "a": 3.2,
+                    "main": "droite"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 0.2,
+                "texte": "just a reminder:",
+                "motAMot": true,
+                "place": "haut"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même fond. La rose pose les deux mains sur ses joues, les yeux brillants, la bouche de chat, et se balance doucement ; le texte « ur my favorite person » s'écrit en haut. Des petits cœurs montent autour d'elle. Zoom rapide sur son visage à 0,3 s.",
+            "duree": 3.8,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "mignon",
+                    "de": 0,
+                    "a": 3.8
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "brillants",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 3.8,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 0.2,
+                "texte": "ur my favorite person",
+                "motAMot": true,
+                "place": "haut"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.4,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          },
+          {
+            "description": "Même fond. La rose rouvre les yeux, regarde droit vers la caméra et fait un petit clin d'œil, la bouche en sourire timide. Des étincelles scintillent autour d'elle puis des cœurs flottent jusqu'à la fin. La caméra recule lentement.",
+            "duree": 3.6,
+            "decor": "ligne",
+            "moment": "soir",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "centre",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.6,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "ouverts",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 3.6,
+                    "yeux": "clin",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.3,
+                    "a": 3.6,
+                    "effet": "etincelles"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.8,
+                    "a": 3.6,
+                    "effet": "coeurs"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1100
+              },
+              {
+                "a": 3.6,
+                "zoom": 1,
+                "x": 540,
+                "y": 1050
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Tag your partner",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

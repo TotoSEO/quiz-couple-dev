@@ -1,0 +1,309 @@
+{
+  "jour": "2026-11-17",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-059",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il reste un biscuit : la rose se détourne une seconde, le violet le mange, elle revient et le regarde, lui regarde la caméra. Aucune bulle.",
+        "titre": "POV: he eats the last cookie and looks at you",
+        "plans": [
+          {
+            "description": "Une cuisine claire le matin, un plan de travail avec une assiette où il reste un seul biscuit. Dès la première image la rose est à gauche du comptoir, un grand sourire, les yeux brillants, et regarde le biscuit ; le violet, à droite, regarde aussi le biscuit, les joues roses. À 1,8 s la rose se détourne et regarde en bas, vers le tiroir. La caméra se rapproche doucement.",
+            "duree": 3.8,
+            "decor": "cuisine",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "brillants",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "brillants",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.6,
+                    "a": 3.8,
+                    "effet": "goutte"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.8,
+                    "yeux": "brillants",
+                    "bouche": "plate"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "assiette",
+                "x": 540,
+                "y": 1180,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même cuisine. La rose est tournée vers le tiroir. Le violet jette un regard vers la caméra, tend la main vers l'assiette et croque le biscuit, les yeux fermés de plaisir, les joues gonflées. Zoom rapide sur le violet à 0,3 s.",
+            "duree": 3.8,
+            "decor": "cuisine",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.2,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 1.2,
+                    "a": 3.8,
+                    "objet": "assiette"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.2,
+                    "yeux": "ouverts",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.2,
+                    "a": 3.8,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "assiette",
+                "x": 540,
+                "y": 1180,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 700,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même cuisine. La rose se retourne avec un grand sourire, voit l'assiette vide et se fige : les yeux plats, la bouche plate, une goutte de gêne. Le violet, la bouche encore pleine, regarde droit vers la caméra avec l'air innocent. Lent rapprochement sur les deux.",
+            "duree": 4.4,
+            "decor": "cuisine",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.6,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 4.4,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 4.4,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.0,
+                    "a": 4.4,
+                    "effet": "points"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.4,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 1.6,
+                    "objet": "assiette"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 4.4,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.2,
+                    "a": 4.4,
+                    "effet": "goutte"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "assiette",
+                "x": 540,
+                "y": 1180,
+                "de": 0,
+                "entree": "aucune"
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.4,
+                "zoom": 1.3,
+                "x": 540,
+                "y": 1130
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}
