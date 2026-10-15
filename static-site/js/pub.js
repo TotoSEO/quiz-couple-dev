@@ -474,9 +474,161 @@
     } catch (e) {}
   }
 
+  // ── Le bandeau du test ──────────────────────────────────────────────
+  // Pendant une partie, le billboard pose sous le moteur n'est presque
+  // jamais a l'ecran : sur telephone, la question et ses reponses remplissent
+  // l'ecran, et un bloc de 250 px en dessous ne peut pas etre vu a moitie
+  // sans faire defiler les reponses (mesure du 15 octobre 2026 : vu sur 0 %
+  // des ecrans de question du test de couple, quelle que soit la taille
+  // d'ecran). La megabanniere tient, elle, au-dessus de la question : 320x50
+  // ou 320x100 sur telephone, 728x90 sur ordinateur.
+  //
+  // Elle est posee juste avant la racine du moteur, jamais dedans : le moteur
+  // redessine sa boite a chaque question, une annonce dedans serait detruite
+  // et redemandee a chaque reponse. Elle n'apparait qu'a la premiere question
+  // (la barre de progression du moteur commun), apres un geste dans le
+  // moteur, donc jamais dans le premier ecran a l'arrivee. Sa hauteur est
+  // reservee avant la demande et ne change qu'au moment ou le moteur change
+  // de question : une reponse qui glisse sous le pouce quand l'annonce arrive,
+  // c'est un clic accidentel, et Google le sanctionne. Entre le bandeau et la
+  // premiere reponse, il reste la barre de progression et la question,
+  // environ 250 px (Google demande au moins 150 px entre une annonce et un
+  // jeu).
+  //
+  // C'est le recadrage du moteur, a chaque nouvel ecran (quiz-extras.js,
+  // recadrer), qui le met a l'ecran : il cadre le bandeau et la carte
+  // ensemble, centres quand ils tiennent dans la fenetre, sinon poses sous
+  // l'en-tete colle. A l'ecran de resultat le bandeau est retire : il se
+  // retrouverait au-dessus de l'ecran pendant la lecture, et la regie l'y
+  // rafraichirait sans que personne le voie. Un seul bandeau par page vue :
+  // apres le resultat, une nouvelle partie n'en redemande pas (un meme
+  // format pose deux fois sur une page n'est pas garanti chez la regie).
+  //
+  // Et il ne s'affiche que s'il tient a l'ecran avec la carte de la premiere
+  // question : sur un petit ecran, il ferait passer les dernieres reponses
+  // sous le bas de la fenetre, et l'on ne pose alors rien pour cette partie.
+  //
+  // FORMAT_BANDEAU est le numero de la megabanniere (728x90) chez The
+  // Moneytizer, tag transmis le 15 octobre 2026 ; vide, rien n'est pose.
+  var FORMAT_BANDEAU = '1';
+  var SITE_REGIE = '142829';
+  var ETIQUETTES = { fr: 'Publicité', en: 'Advertisement', es: 'Publicidad', de: 'Anzeige', it: 'Pubblicità' };
+
+  // Le geste qui lance la partie. Ecoute des l'execution du script, avant
+  // l'evenement load : sur une connexion lente, on peut commencer un test
+  // avant que la page ait fini de charger.
+  var gesteDansLeMoteur = false;
+  function noteGeste(e) {
+    if (gesteDansLeMoteur) return;
+    var dans = e.target && e.target.closest && e.target.closest('#quiz-engine');
+    if (!dans) return;
+    gesteDansLeMoteur = true;
+    document.removeEventListener('pointerdown', noteGeste, true);
+    document.removeEventListener('keydown', noteGeste, true);
+  }
+  if (FORMAT_BANDEAU) {
+    document.addEventListener('pointerdown', noteGeste, true);
+    document.addEventListener('keydown', noteGeste, true);
+  }
+
+  function bandeauDuTest() {
+    if (!FORMAT_BANDEAU || !('MutationObserver' in window)) return;
+    var racine = document.getElementById('quiz-engine');
+    if (!racine || !racine.parentNode) return;
+    var hote = null, cible = null, debut = 0, fini = false;
+
+    function pose() {
+      var lang = (document.documentElement.getAttribute('lang') || 'fr').slice(0, 2);
+      hote = document.createElement('div');
+      hote.className = 'pub pub--bandeau';
+      hote.setAttribute('data-pub-site', SITE_REGIE);
+      hote.setAttribute('data-pub-posee', '1');
+      hote.setAttribute('data-etiquette', ETIQUETTES[lang] || ETIQUETTES.fr);
+      cible = document.createElement('div');
+      cible.id = SITE_REGIE + '-' + FORMAT_BANDEAU;
+      hote.appendChild(cible);
+      racine.parentNode.insertBefore(hote, racine);
+      // Mesure et retrait dans la meme tache : s'il ne tient pas, il n'est
+      // jamais peint, et rien n'est demande a la regie.
+      if (!tientALEcran()) {
+        hote.parentNode.removeChild(hote);
+        hote = null;
+        fini = true;
+        obs.disconnect();
+        return;
+      }
+      debut = Date.now();
+      injecte(cible, FORMAT_BANDEAU, SITE_REGIE);
+    }
+
+    // Le bandeau, sa marge et la carte de la question doivent tenir entre le
+    // bas visible de l'en-tete colle (et la marge du recadrage) et le bas de
+    // la fenetre.
+    function tientALEcran() {
+      var carte = racine.querySelector('.quiz-engine') || racine.firstElementChild;
+      if (!carte) return true;
+      var entete = document.getElementById('site-header');
+      var basEntete = entete ? Math.max(0, entete.getBoundingClientRect().bottom) : 0;
+      var besoin = hote.getBoundingClientRect().height + 16 + carte.getBoundingClientRect().height;
+      return besoin <= window.innerHeight - basEntete - 16 - 8;
+    }
+
+    // La plus haute boite visible posee par la regie dans l'emplacement.
+    function hauteurAnnonce() {
+      var h = 0;
+      var enfants = cible.querySelectorAll('*');
+      for (var i = 0; i < enfants.length; i++) {
+        var e = enfants[i];
+        if (e.tagName === 'SCRIPT' || e.tagName === 'STYLE' || e.tagName === 'LINK') continue;
+        if (e.offsetWidth > 20 && e.offsetHeight > h) h = e.offsetHeight;
+      }
+      return h;
+    }
+
+    // Les changements de hauteur attendent un changement de question : un
+    // emplacement reste vide au-dela de DELAI_VIDE se replie, une annonce
+    // arrivee apres coup le rouvre, une annonce plus haute que la place
+    // reservee (320x100 sur telephone) l'agrandit, toujours au moment ou le
+    // moteur redessine. Il ne retrecit jamais : entre deux annonces, la regie
+    // vide le cadre un instant, ce n'est pas une raison de faire sauter la
+    // page.
+    function ajuste() {
+      var h = hauteurAnnonce();
+      if (h > 20) {
+        hote.setAttribute('data-pub-remplie', '1');
+        hote.classList.remove('pub--vide');
+        var plafond = window.innerWidth < 768 ? 100 : 90;
+        var reserve = parseFloat(getComputedStyle(hote).getPropertyValue('--bandeau-h')) || 0;
+        if (h > reserve && reserve < plafond) hote.style.setProperty('--bandeau-h', Math.min(h, plafond) + 'px');
+      } else if (!hote.getAttribute('data-pub-remplie') && Date.now() - debut >= DELAI_VIDE) {
+        hote.classList.add('pub--vide');
+      }
+    }
+
+    function verifie() {
+      if (fini) return;
+      if (!hote) {
+        if (gesteDansLeMoteur && racine.querySelector('.quiz-progress-wrapper')) pose();
+        return;
+      }
+      if (document.body.classList.contains('quiz-has-result') || racine.querySelector('.quiz-result-card')) {
+        fini = true;
+        obs.disconnect();
+        if (hote.parentNode) hote.parentNode.removeChild(hote);
+        return;
+      }
+      ajuste();
+    }
+
+    var obs = new MutationObserver(verifie);
+    obs.observe(racine, { childList: true, subtree: true });
+    verifie();
+  }
+
   function demarre() {
     coupeRafraichissementInvisible();
     try { interstitielDeNavigation(); } catch (e) {}
+    try { bandeauDuTest(); } catch (e) {}
     var tous = document.querySelectorAll('[data-pub-differee]:not([data-pub-posee])');
     var plusBas = [];       // sous la ligne de flottaison : a l'approche, comme avant
     var premierEcran = [];  // dans le premier ecran : apres le premier defilement
