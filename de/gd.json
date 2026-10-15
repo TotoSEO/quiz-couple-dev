@@ -1320,7 +1320,22 @@
     "r3_a": "Bleibt bei eurer Kommunikation dran und behaltet eure gemeinsamen Pläne im Blick.",
     "r4_t": "Liebe stärker als die Distanz!",
     "r4_d": "Bravo! Eure Beziehung beweist, dass Distanz kein Hindernis ist, wenn die Liebe stark ist.",
-    "r4_a": "Ihr habt alles in der Hand. Das Ende der Distanz wird das Sahnehäubchen sein!"
+    "r4_a": "Ihr habt alles in der Hand. Das Ende der Distanz wird das Sahnehäubchen sein!",
+    "modesIcone": "🌍",
+    "modesTitre": "Wie wollt ihr den Test machen?",
+    "modesDesc": "Die Fragen sind in beiden Modi dieselben! Nur die Art, wie ihr antwortet, ist anders.",
+    "modesRetour": "Modus wechseln",
+    "modeSoloTitre": "DEINE FERNBEZIEHUNG ALLEIN EINSCHÄTZEN",
+    "modeSoloDesc": "Du beantwortest die Fragen allein, über deine Beziehung",
+    "modeSoloMeta": "Ein einziges Ergebnis",
+    "modeDuoTitre": "ZU ZWEIT ANTWORTEN",
+    "modeDuoDesc": "Ihr beantwortet beide dieselben Fragen, am selben Handy oder jeder am eigenen, egal wo ihr gerade seid",
+    "modeDuoMeta": "Zwei Ergebnisse und ihr Durchschnitt",
+    "duoTitre": "Eure Fernbeziehung",
+    "r1_tag": "Harte Probe",
+    "r2_tag": "Ausbaufähig",
+    "r3_tag": "Stabil",
+    "r4_tag": "Sehr stabil"
   },
   "cp": {
     "q1": "Was ist deine Lieblingsfarbe?",

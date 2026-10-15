@@ -1320,7 +1320,22 @@
     "r3_a": "Continuate a curare la comunicazione e tenete d'occhio i vostri progetti comuni.",
     "r4_t": "L'amore più forte della distanza!",
     "r4_d": "Bravi! La vostra coppia dimostra che la distanza non è un ostacolo quando l'amore è solido.",
-    "r4_a": "Avete tutte le carte in regola. La fine della distanza sarà la ciliegina sulla torta!"
+    "r4_a": "Avete tutte le carte in regola. La fine della distanza sarà la ciliegina sulla torta!",
+    "modesIcone": "🌍",
+    "modesTitre": "Come volete fare il test?",
+    "modesDesc": "Le domande non cambiano tra le due modalità! Cambia solo il modo in cui rispondete.",
+    "modesRetour": "Cambiare modalità",
+    "modeSoloTitre": "VALUTARE LA RELAZIONE A DISTANZA DA SOLO/A",
+    "modeSoloDesc": "Rispondi da solo/a alle domande, sulla tua relazione",
+    "modeSoloMeta": "Un solo punteggio",
+    "modeDuoTitre": "RISPONDERE IN COPPIA",
+    "modeDuoDesc": "Rispondete entrambi alle stesse domande, sullo stesso telefono o ciascuno sul proprio, ovunque siate",
+    "modeDuoMeta": "Due punteggi e la loro media",
+    "duoTitre": "La vostra relazione a distanza",
+    "r1_tag": "A dura prova",
+    "r2_tag": "Da sistemare",
+    "r3_tag": "Solida",
+    "r4_tag": "Molto solida"
   },
   "cp": {
     "q1": "Qual è il tuo colore preferito?",

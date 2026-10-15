@@ -65,6 +65,16 @@ critique garde la feuille bloquante.
   écrite dans la page, et l'emporte sur la nouvelle règle pour de bon (le
   11 octobre 2026, les cartes de prénoms gardaient leur cadre à l'encre). Après
   avoir retiré des `!important`, on régénère avant de publier.
+- On ne régénère que sur un `dist/` construit avec les données de Supabase
+  (avis cuits, compteurs) : le build n'y arrive pas toujours depuis une
+  session de travail (« [reviews] Could not fetch », proxy qui refuse la
+  connexion), et la couverture ne voit alors ni les avis ni leurs règles.
+  Le 14 octobre 2026, une régénération complète faite ainsi a retiré les
+  règles `.pqx-*` de 78 feuilles ; elles ont été rétablies depuis main. Sans
+  accès à la base, on ne régénère que la page qui a changé, après avoir
+  recopié dans sa page de `dist/` le bloc `#pqx-avis-cuits` de la page
+  publiée ; les autres feuilles gardent leur contenu, avec la nouvelle
+  empreinte, quand la règle ajoutée à `styles.css` ne sert pas au chargement.
 - Les états que la couverture ne voit pas (survol, écrans suivants du moteur)
   arrivent avec la feuille complète : un style indispensable dès le premier
   écran doit correspondre à des éléments présents au chargement.
@@ -237,7 +247,7 @@ de 39 et 23.
 - `ProfileQuiz` (engine `profile`) : un profil tiré de l'axe dominant, pas un score : attachement, karmique, langages, personnalité amoureuse, portrait de l'âme sœur, et le quiz « quel type de couple êtes-vous ? » (prefix `typeCouple`, typologie `typeCouple` dans `TYPOLOGIES`, quiz-loader.js). Ce dernier se répond à deux sur un seul téléphone : quinze situations, quatre axes (fusion, complices, libres, batisseurs), et le sens des lettres tourne d'une question à l'autre (`carte`, permutations sur `(questionId - 1) % 4`) pour qu'on ne puisse pas répondre « toujours a » sans lire. Le cinquième profil `equilibre` (couple caméléon) sort quand l'axe de tête fait moins de 35 % des questions ou ne devance le second que d'une voix. Les libellés sont dans gd.json : `pf_axis_<id>`, `pf_<id>_t/_d/_a`, `introTitle`, `linkLabel`.
 - `DuoMatchQuiz` — 2 players, answer matching (tester-couple, common-points). Le test du couple (`tester-couple`, première page du site, 37 000 visites par mois dont 18 000 entrées Google en anglais) a deux modes : « Seul(e) ou à deux » (une seule série de réponses, un score, `modeSolo`) et « Chacun son tour » (deux scores et leur moyenne, à distance possible). Jusqu'au 7 octobre 2026 le premier s'appelait « SOLO : vous répondez à deux » : quelqu'un qui arrivait seul n'avait aucune option qui lui parle, et 60 % des parties lancées n'allaient pas au bout, contre 35 % sur les points communs avec le même moteur et la même longueur (export de l'admin, septembre 2026). Les libellés sont `testerC.mode*` dans gd.json, cinq langues.
 - `HealthyQuiz` — 2 players, weighted scoring (couple-sain)
-- `DistanceQuiz` — 2 players, alternating turns (distance)
+- Test de relation à distance (`distance`, route `testDistance`) : deux modes depuis le 14 octobre 2026, à la demande de Thomas, sur le modèle du test de couple. « Évaluer sa relation à distance seul(e) » est le test d'avant, inchangé (`SoloTest`, 15 questions tirées parmi 100, barème pondéré `SOLO_BAREME.distance`, tirage par dimension). « Répondre à deux » passe par `DuoMatchQuiz`, avec l'écran des prénoms et le mode à distance du test de couple : chacun peut répondre sur son téléphone, ce qui est justement la situation d'un couple à distance. Sur un seul téléphone, c'est le tour par tour du test de couple, un relais entre chaque réponse ; l'ancien moteur `DistanceQuiz`, qui ne proposait que ça (dix-huit parties lancées, aucune finie), n'existe plus. À deux, `initDuoMatchQuiz` (quiz-loader.js) garde le barème et le tirage du solo et pose aussi les points sur le réservoir, où celui qui rejoint une partie relit les questions du créateur ; `verdictsDuTest` remplace les paliers du test de couple (`coupleLevel`) par les quatre verdicts de la page (`distance.r{N}_t/_d/_a`, découpés en quarts du pourcentage comme le solo le fait sur les points), avec le conseil sous le verdict et une étiquette courte `r{N}_tag` sur la carte de chacun. Libellés : `distance.mode*` et `distance.duoTitre` dans gd.json, cinq langues.
 - `quiz-ado-multiplayer.js` — Dedicated engine for the teen quiz: 2 players, same phone or game code, score = identical answers (not part of quiz-loader)
 - `CoquinQuiz` — Guess & reveal (coquin)
 - `KnowledgeQuiz` — Oral validation with check/cross (knowledge)
@@ -312,8 +322,9 @@ amoureux (`DuoMatchQuiz`), couple sain (`HealthyQuiz`), parentalité court et
 complet et emménager (`ParentaliteQuiz`), âme sœur en duo (`PiliersQuiz`),
 charge mentale en duo (`ChargeMentaleQuiz`), je n'ai jamais (`JamaisGame`),
 qui de nous deux (`DuoVoteGame`, vote secret) et qui pourrait
-(`QuiPourraitGame`), et depuis octobre 2026 c'est un 10 mais (`DixMaisGame`) et la
-compatibilité sexuelle (`EchelleQuiz`). Une personne crée la partie (code + QR code + lien
+(`QuiPourraitGame`), et depuis octobre 2026 c'est un 10 mais (`DixMaisGame`), la
+compatibilité sexuelle (`EchelleQuiz`) et le test de relation à distance en mode à deux
+(`DuoMatchQuiz`). Une personne crée la partie (code + QR code + lien
 `?salon=CODE`), l'autre rejoint, et les deux avancent question par question :
 chacun répond sur son écran, attend l'autre, les deux réponses s'affichent
 côte à côte sur la question (pour en parler), puis on ne passe à la suivante

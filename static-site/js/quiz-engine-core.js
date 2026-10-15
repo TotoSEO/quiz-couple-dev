@@ -3751,6 +3751,11 @@ var QuizEngine = (function() {
     this.setupTitle = config.setupTitle || '';
     this.setupDesc = config.setupDesc || '';
     this.partenaire = config.partenaire || null;
+    // Les verdicts propres au test, a la place des paliers du test de couple
+    // (coupleLevel) : le test a distance passe les siens, en pourcentage, avec
+    // leur conseil et une etiquette courte (initDuoMatchQuiz, quiz-loader.js).
+    this.verdicts = (config.verdicts && config.verdicts.length) ? config.verdicts : null;
+    this.verdictsTitre = config.verdictsTitre || '';
     // Le mode a distance : le reservoir complet sert a rejouer le tirage du
     // createur, la page et le format servent a nommer le salon.
     this.pool = config.pool || null;
@@ -4105,6 +4110,7 @@ var QuizEngine = (function() {
 
     var cl = tg('coupleLevel', null);
     if (!cl || !cl.bands || !cl.bands.length) cl = COUPLE_LEVEL_FALLBACK;
+    if (this.verdicts) cl = { heading: this.verdictsTitre || cl.heading, bands: this.verdicts };
     function bandFor(pct) {
       for (var j = 0; j < cl.bands.length; j++) { if (pct >= cl.bands[j].min && pct <= cl.bands[j].max) return cl.bands[j]; }
       return cl.bands[cl.bands.length - 1];
@@ -4124,10 +4130,17 @@ var QuizEngine = (function() {
     var gRing = el('div', 'duo-verdict-ring');
     gRing.innerHTML = renderScoreRing(pctG, null, undefined, persosDe(this.players));
     verdict.appendChild(gRing);
-    verdict.appendChild(el('span', 'duo-tag duo-tag--global', esc(bG.tag || '')));
+    if (bG.tag) verdict.appendChild(el('span', 'duo-tag duo-tag--global', esc(bG.tag)));
     verdict.appendChild(el('h3', 'duo-verdict-title', esc(bG.title || '')));
     verdict.appendChild(el('p', 'duo-verdict-desc', bG.desc || ''));
     box.appendChild(verdict);
+    // Le conseil du verdict, quand le test en ecrit un (le test a distance) :
+    // juste sous le verdict, comme dans son mode solo.
+    if (bG.advice) {
+      var conseil = el('div', 'duo-result-advice duo-verdict-conseil');
+      conseil.innerHTML = '<strong>' + esc(tg('result.ourAdvice', 'Notre conseil')) + '</strong>' + escRiche(bG.advice);
+      box.appendChild(conseil);
+    }
 
     // Bloc scores individuels. En solo il n'y a qu'une grille de reponses :
     // afficher deux cartes identiques sans prenom n'apprendrait rien.
@@ -4143,7 +4156,7 @@ var QuizEngine = (function() {
       var r = el('div', 'duo-pcard-ring');
       r.innerHTML = renderScoreRing(pct, 'sm');
       card.appendChild(r);
-      card.appendChild(el('span', 'duo-tag', esc(band.tag || '')));
+      if (band.tag) card.appendChild(el('span', 'duo-tag', esc(band.tag)));
       return card;
     }
     row.appendChild(playerCard(nameA, pctA, bA, colorA));

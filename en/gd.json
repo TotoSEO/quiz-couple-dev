@@ -1320,7 +1320,22 @@
     "r3_a": "Keep up the effort on communication, and keep your shared plans in sight.",
     "r4_t": "Love stronger than the distance!",
     "r4_d": "Well done! Your relationship proves that distance is no obstacle when love is solid.",
-    "r4_a": "You have everything you need. The end of the distance will be the icing on the cake!"
+    "r4_a": "You have everything you need. The end of the distance will be the icing on the cake!",
+    "modesIcone": "🌍",
+    "modesTitre": "How do you want to take the test?",
+    "modesDesc": "The questions are the same in both modes! Only the way you answer them is different.",
+    "modesRetour": "Change mode",
+    "modeSoloTitre": "RATE YOUR LONG-DISTANCE RELATIONSHIP ALONE",
+    "modeSoloDesc": "You answer the questions on your own, about your relationship",
+    "modeSoloMeta": "One single score",
+    "modeDuoTitre": "ANSWER AS A COUPLE",
+    "modeDuoDesc": "You each answer the same questions, on one phone or each on your own, wherever you are",
+    "modeDuoMeta": "Two scores and their average",
+    "duoTitre": "Your long-distance relationship",
+    "r1_tag": "Under strain",
+    "r2_tag": "Needs adjusting",
+    "r3_tag": "Solid",
+    "r4_tag": "Very solid"
   },
   "cp": {
     "q1": "What's your favourite colour?",
