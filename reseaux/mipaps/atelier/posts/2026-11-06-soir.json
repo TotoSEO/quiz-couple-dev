@@ -1,0 +1,115 @@
+{
+  "jour": "2026-11-06",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-018",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Avant toi, avec toi : le dimanche, le frigo, les pulls, le canapé.",
+        "pages": [
+          {
+            "texte": "avant toi / avec toi",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "x": 320,
+                  "taille": 270
+                }
+              ]
+            }
+          },
+          {
+            "texte": "le dimanche : seul au lit / à deux au lit",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "lit_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "y": 346,
+                  "pose": "debout",
+                  "bras": "aucun",
+                  "pattes": "aucune",
+                  "x": 320,
+                  "taille": 200
+                },
+                {
+                  "meuble": "lit_couette"
+                }
+              ]
+            }
+          },
+          {
+            "texte": "le frigo : une bière / des frites pour deux",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "miam",
+                  "x": 250,
+                  "taille": 250
+                },
+                {
+                  "perso": "elle",
+                  "expression": "miam",
+                  "x": 410,
+                  "taille": 250
+                },
+                {
+                  "objet": "frites",
+                  "x": 330,
+                  "y": 336,
+                  "echelle": 0.9
+                }
+              ]
+            }
+          },
+          {
+            "texte": "les pulls : le mien / le sien aussi",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "x": 320,
+                  "taille": 270
+                },
+                {
+                  "objet": "pull",
+                  "x": 470,
+                  "y": 340,
+                  "echelle": 0.8
+                }
+              ]
+            }
+          },
+          {
+            "texte": "le canapé : une place / une place et demie",
+            "dessin": {
+              "duo": "canape"
+            },
+            "appel": "envoie-lui ça"
+          }
+        ]
+      },
+      "legende": "le canapé fait 1 m 80.\n\nenvoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#relation"
+      ]
+    }
+  }
+}

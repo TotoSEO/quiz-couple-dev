@@ -1,0 +1,31 @@
+{
+  "jour": "2026-11-05",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-038",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : au lit, les deux sous la couette, elle contente, lui qui dort.",
+        "style": "mini",
+        "texte": "viens, on reste au lit toute la journée.",
+        "dessin": {
+          "duo": "couette"
+        }
+      },
+      "legende": "il est 10 h 20.\n\ntague-la",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

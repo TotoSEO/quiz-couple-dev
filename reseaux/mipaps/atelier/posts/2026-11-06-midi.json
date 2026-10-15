@@ -1,0 +1,42 @@
+{
+  "jour": "2026-11-06",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-011",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : lui, triomphant, il saute de joie, des étoiles.",
+        "style": "mini",
+        "texte": "JE T'AIME !!!",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "triomphe",
+              "pose": "saut",
+              "signes": [
+                "etoiles"
+              ],
+              "x": 320,
+              "taille": 280
+            }
+          ]
+        }
+      },
+      "legende": "il l'a crié dans un parking.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

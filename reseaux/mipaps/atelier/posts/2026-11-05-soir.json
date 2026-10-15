@@ -1,0 +1,34 @@
+{
+  "jour": "2026-11-05",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-003",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : main dans la main, un cœur au milieu ; une phrase qu'on se dit.",
+        "texte": "je serai là même quand tu m'énerves.",
+        "duree": 11,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "duo": "main_dans_la_main"
+        }
+      },
+      "legende": "il l'a dit à 23 h, en rentrant.\n\nenvoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}
