@@ -1,0 +1,115 @@
+{
+  "note": "Bruitages synthétisés par scripts/synthese-sons.mjs (aucune bibliothèque, aucune voix), pour le bonhomme bâton : public/sons/sy-<nom>.mp3, dans le dépôt. Les noms suffixés -2, -3 sont les variantes tirées au sort par le studio (VARIANTES, Son.tsx).",
+  "sons": [
+    {
+      "nom": "whoosh",
+      "titre": "Whoosh court",
+      "duree": 0.42
+    },
+    {
+      "nom": "whoosh-2",
+      "titre": "Whoosh court, plus grave",
+      "duree": 0.48
+    },
+    {
+      "nom": "whoosh-3",
+      "titre": "Whoosh court, plus aigu",
+      "duree": 0.36
+    },
+    {
+      "nom": "whoosh-long",
+      "titre": "Long whoosh qui monte (un bond)",
+      "duree": 1.15
+    },
+    {
+      "nom": "shing",
+      "titre": "Lame qu'on tire",
+      "duree": 0.75
+    },
+    {
+      "nom": "rentre",
+      "titre": "Lame qu'on rentre",
+      "duree": 0.42
+    },
+    {
+      "nom": "zap",
+      "titre": "Zap électrique",
+      "duree": 0.32
+    },
+    {
+      "nom": "zap-2",
+      "titre": "Zap électrique, plus grave",
+      "duree": 0.32
+    },
+    {
+      "nom": "bourdon",
+      "titre": "Bourdon électrique (boucle)",
+      "duree": 2.34
+    },
+    {
+      "nom": "boum",
+      "titre": "Boum sourd",
+      "duree": 0.62
+    },
+    {
+      "nom": "coup",
+      "titre": "Coup sourd, court",
+      "duree": 0.32
+    },
+    {
+      "nom": "explosion",
+      "titre": "Explosion grave",
+      "duree": 1.7
+    },
+    {
+      "nom": "grondement",
+      "titre": "Grondement de dragon",
+      "duree": 1.35
+    },
+    {
+      "nom": "ailes",
+      "titre": "Battement d'ailes",
+      "duree": 0.48
+    },
+    {
+      "nom": "ailes-2",
+      "titre": "Battement d'ailes, plus lent",
+      "duree": 0.62
+    },
+    {
+      "nom": "craque",
+      "titre": "Le sol qui craque",
+      "duree": 0.4
+    },
+    {
+      "nom": "eclats",
+      "titre": "Éclats qui retombent",
+      "duree": 0.95
+    },
+    {
+      "nom": "flash",
+      "titre": "Flash",
+      "duree": 0.55
+    },
+    {
+      "nom": "monte",
+      "titre": "Montée (riser)",
+      "duree": 1.25
+    },
+    {
+      "nom": "ralenti",
+      "titre": "Drone d'un ralenti",
+      "duree": 2.7
+    },
+    {
+      "nom": "atterrit",
+      "titre": "Réception au sol",
+      "duree": 0.28
+    },
+    {
+      "nom": "atterrit-2",
+      "titre": "Réception au sol, plus lourde",
+      "duree": 0.28
+    }
+  ]
+}

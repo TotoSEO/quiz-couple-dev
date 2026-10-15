@@ -46,6 +46,7 @@ Le son du reel fini est ramené à -14 LUFS et -1 dBTP (jetons `son-*`).
 | `image` | image.jpg | Post 4:5 : phrase émotive (plume, fleurs) ou drôle (Fredoka), avec une scène dessinée (`scene`) ou le petit duo |
 | `carrousel` | page-1.jpg... | Couverture et page finale (scène dessinée ou duo), pages numérotées avec le duo en tout petit dans le coin |
 | `bd` | image.jpg (ou page-1.jpg... avec `sortie: carrousel`) | Bande dessinée en quatre cases : une scène figée par case (vocabulaire des animations), bordée d'un trait d'encre, répliques courtes en haut du côté de celui qui parle, chute dans la dernière case |
+| `baton` | reel.mp4 + couverture.jpg | Le bonhomme bâton (« me in my dreams with u ») : une mini-aventure de 10 à 20 s au trait noir, un héros articulé qui bouge comme un ninja, des ralentis, un dragon ; hors de la DA des mascottes, voir plus bas |
 
 Les mascottes sont sur tous les visuels (`Duo.tsx` quand il n'y a pas de
 scène). Elles sont dessinées : trait d'encre tremblé (`charte/mascottes.js`,
@@ -88,6 +89,60 @@ Instagram attaché à la publication (`automates/lib/son.mjs`). Un reel dure
 
 Le contrôle du scénario avant rendu est dans
 `automates/lib/pov.mjs` (vocabulaire, temps, longueurs, emojis).
+
+## Le bonhomme bâton (`studio/src/baton/`, gabarit `baton`)
+
+Le format « me in my dreams with u » (idée de Thomas, 15 octobre 2026) :
+un héros au corps de traits et à la tête ronde, bandana violet, qui se
+déplace comme un ninja (course, passe-muraille, saut, roulade, glissade,
+grand bond), sa copine (queue de cheval, nœud rose), un dragon, dans des
+mini-aventures de 10 à 20 s. Noir et blanc au trait sur papier blanc,
+seuls les éléments qui comptent sont en couleur (le bandana, le nœud, la
+lame électrique bleue, les yeux et la gueule rouges du dragon, le bouquet,
+les cœurs). Rien à voir avec la DA des mascottes : c'est un format à part.
+
+Le scénario est un **découpage technique** plan par plan
+(`recettes/exemples/baton-dragon.md` pour le modèle, `baton-dragon.json`
+pour la recette) : description de 120 signes au moins, durée de récit,
+décor (`montagnes`, `foret`, `falaise`, `pont`, `tour`, `sommet`),
+travelling (`defile`, le paysage glisse en deux plans de profondeur, des
+`obstacles` posés par l'instant où ils passent sous le héros), personnages
+avec leurs `etapes` (position, hauteur, rotation, pose fondue depuis la
+précédente, expression, arme, bouquet, regard) et leurs `actions`
+procédurales (`court`, `saute`, `vaulte`, `roule`, `glisse`, `bond`,
+`trainee`, `trainee-lame`, `electrise`, `charge`, `tremble`, `souffle`,
+`parle`, `gigote`, `vent`), le dragon (`vole`, `plonge`, `perche`, `rugit`,
+`eclate`, il emporte un personnage avec `porte`), les effets (poussière,
+onde de choc, fissure, lignes de vitesse, flash, ombre qui passe, cœurs,
+étincelles, éclats), la caméra (zoom sur la tête, le corps ou les pieds
+d'un personnage, déplacement, secousse) et les **ralentis** : les temps
+d'un plan sont en secondes de récit, `ralentis` étire une tranche à
+l'écran (facteur 0,1 : 0,2 s de récit en 2 s), et `plan.ts` convertit tout
+en images d'écran.
+
+- `rig.ts` : le squelette (hanches, buste, tête ; épaules, coudes, mains ;
+  hanches, genoux, chevilles, pieds), 27 poses nommées en degrés, le fondu
+  entre poses, le cycle de course (sprint de ninja : buste couché, bras en
+  arrière, lame qui traîne), les visages (15 expressions), l'épée (poignée
+  au dos, lame tenue avec halo et étincelles selon la charge), le bouquet,
+  les pans du bandana et la queue de cheval qui suivent le vent et la
+  vitesse. La hauteur des hanches est recalculée pour que le pied le plus
+  bas touche toujours le sol.
+- `temps.ts` : l'état de chacun et de la caméra à un instant du récit, et
+  le remap des ralentis.
+- `decors.ts`, `creatures.ts`, `effets.ts` : les dessins.
+- `Scene.tsx`, `gabarits/Baton.tsx` : le rendu (rémanences, traînée de la
+  lame, flash, voile du ralenti, lignes de vitesse, titre, signature).
+- `plan.ts` : durées à l'écran, images contrôlées, bruitages déduits des
+  gestes.
+
+Les bruitages sont synthétisés par `scripts/synthese-sons.mjs` (whoosh,
+lame, zap, bourdon, boum, explosion, grondement, ailes, craquement, éclats,
+flash, montée, drone de ralenti, réception ; `public/sons/sy-*.mp3`,
+manifeste `synthese.json`, dans le dépôt), jamais de voix. Le contrôle du
+scénario est `automates/lib/baton.mjs`. Le format n'a pas encore de
+catégorie dans la grille : il attend le feu vert de Thomas sur le premier
+reel.
 
 ## Sons
 

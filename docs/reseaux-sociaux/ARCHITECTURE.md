@@ -206,7 +206,13 @@ tu valides les formats, et l'automate les décline.
 > scènes figées en grille, répliques courtes, chute dans la dernière case,
 > en post ou en carrousel). Le
 > quiz chrono à bonne réponse (`quiz-chrono`, R7) reste disponible hors de
-> la semaine type. Le tableau ci-dessous est le plan de départ.
+> la semaine type. Depuis le 15 octobre 2026, le studio sait aussi rendre
+> le **bonhomme bâton** (`baton`, « me in my dreams with u ») : une
+> mini-aventure de 10 à 20 s au trait noir, un héros articulé qui bouge
+> comme un ninja, des ralentis, un dragon, hors de la DA des mascottes
+> (`reseaux/README.md`, « Le bonhomme bâton »). Il n'a pas encore de
+> catégorie dans la grille : Thomas valide le premier reel avant la
+> production. Le tableau ci-dessous est le plan de départ.
 
 Un gabarit est un format réutilisable : sa mise en page, ses animations, ses
 sons et la liste des champs à remplir (avec leurs longueurs maximales). La

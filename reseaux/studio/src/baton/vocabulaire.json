@@ -1,0 +1,173 @@
+{
+  "note": "Vocabulaire du format bonhomme bâton (gabarit baton). Les noms admis dans une recette ; le contrôle des automates (lib/baton.mjs) et le studio lisent le même fichier. Les angles des poses sont dans rig.ts.",
+  "poses": {
+    "debout": "Debout, bras le long du corps, jambes légèrement écartées",
+    "parle": "Debout, la main proche levée à hauteur de la poitrine (gesticule avec l'action parle)",
+    "ecoute": "Debout, tête un peu penchée",
+    "choc": "Recule d'un pas, buste en arrière, bras écartés, tête renversée",
+    "determine": "Poings serrés le long du corps, buste en avant, jambes écartées",
+    "tire-epee-1": "La main proche passe derrière la tête et saisit la poignée dans le dos",
+    "tire-epee-2": "Le bras a balayé vers l'avant-bas, l'épée tirée au bout",
+    "garde-pret": "De profil, l'épée basse devant soi, genoux fléchis",
+    "garde": "Les deux mains sur la poignée, lame dressée vers l'avant-haut, pied avant devant",
+    "garde-basse": "La même garde, jambes pliées à fond, buste penché",
+    "bond": "Corps tendu comme une flèche : bras de l'épée devant, l'autre le long du corps, jambes qui traînent",
+    "vol-etire": "En l'air : bras en avant, jambe avant repliée haute, jambe arrière tendue",
+    "groupe": "Groupé en boule : genoux à la poitrine, bras serrés",
+    "vaulte": "Corps à l'horizontale, les deux bras plantés sous soi, jambes repliées sur le côté",
+    "atterrit": "Accroupi à la réception, une main au sol",
+    "glisse": "Glissade : buste en arrière, jambe avant tendue, bras écartés",
+    "leve-tete": "Debout, menton levé, l'épée basse le long de la jambe",
+    "souffle": "Plié en deux, mains sur les genoux",
+    "range-epee": "Le bras repasse par-dessus l'épaule pour ranger la lame",
+    "cache-dos": "La main proche cachée derrière le dos",
+    "offre": "Le bras proche tendu vers l'avant, un bouquet au bout",
+    "attend": "Debout, mains jointes sur la poitrine",
+    "tend": "Penchée en avant, les deux bras tendus",
+    "portee": "Emportée : bras levés accrochés, jambes qui pendent",
+    "joie": "Bras en V au-dessus de la tête",
+    "assis": "Assis au sol, jambes devant",
+    "ancre": "La garde basse, le pied arrière droit reculé et ancré, la pointe enfoncée",
+    "ancre-tendu": "La même, le talon arrière qui se lève (la tension avant le bond)"
+  },
+  "expressions": {
+    "neutre": "Deux points, bouche en petit trait",
+    "sourire": "Bouche qui remonte",
+    "rire": "Yeux fermés en accents, grande bouche ouverte",
+    "surpris": "Yeux ronds, bouche en petit o, sourcils hauts",
+    "choc": "Yeux ronds écarquillés avec la pupille, bouche en o, sourcils très hauts",
+    "determine": "Sourcils en biais vers le nez, yeux en traits, bouche serrée",
+    "concentre": "Yeux plissés, bouche minuscule",
+    "electrique": "Yeux bleus lumineux, sourcils en biais, bouche serrée",
+    "charmeur": "Un sourcil relevé, un œil mi-clos, sourire en coin, étincelle",
+    "heureux": "Yeux fermés de bonheur, grand sourire",
+    "amour": "Yeux fermés de bonheur, sourire, joues roses",
+    "peur": "Yeux ronds, sourcils relevés vers l'extérieur, bouche tremblante",
+    "soulagee": "Sourcils relevés, sourire doux",
+    "ferme": "Yeux fermés, bouche entrouverte (souffle)",
+    "triste": "Bouche vers le bas, sourcils tristes"
+  },
+  "actions": [
+    "court",
+    "saute",
+    "vaulte",
+    "roule",
+    "glisse",
+    "bond",
+    "trainee",
+    "trainee-lame",
+    "electrise",
+    "charge",
+    "tremble",
+    "souffle",
+    "parle",
+    "gigote",
+    "vent"
+  ],
+  "vues": [
+    "trois-quarts",
+    "face"
+  ],
+  "armes": [
+    "dos",
+    "main",
+    "aucune"
+  ],
+  "decors": {
+    "montagnes": {
+      "description": "Un trait de sol, trois pics en deux plans de profondeur, soleil, nuages, touffes d'herbe",
+      "sol": 1300,
+      "ambiance": "vent"
+    },
+    "foret": {
+      "description": "Travelling : troncs et feuillages au premier plan, arbres gris derrière, herbe ; obstacle tronc",
+      "sol": 1300,
+      "ambiance": "foret"
+    },
+    "falaise": {
+      "description": "Travelling : sol rocheux, montagnes au loin ; obstacle trou (ravin)",
+      "sol": 1300,
+      "ambiance": "vent"
+    },
+    "pont": {
+      "description": "Travelling : pont de corde au-dessus du vide, la tour qui grandit au fond",
+      "sol": 1300,
+      "ambiance": "vent"
+    },
+    "tour": {
+      "description": "Contre-plongée : la tour sur le tiers droit, plateforme crénelée en haut (sol de la plateforme : 600, assez bas pour que les visages restent sous le titre), sol au pied : 1300",
+      "sol": 1300,
+      "plateforme": 600,
+      "ambiance": "vent"
+    },
+    "sommet": {
+      "description": "Le sol crénelé de la plateforme, le ciel, le soleil, des oiseaux au loin",
+      "sol": 1250,
+      "ambiance": "vent"
+    }
+  },
+  "creatures": {
+    "dragon": "Dragon au trait : corps, long cou, tête cornue, ailes de chauve-souris, queue en pointe ; yeux et gueule rouges. Poses vole, plonge, perche, rugit, eclate"
+  },
+  "effets": {
+    "poussiere": "Nuage de poussière au point (x, y), à l'instant de",
+    "onde": "Onde de choc circulaire qui s'élargit depuis (x, y)",
+    "fissure": "Fentes en zigzag qui s'ouvrent dans le sol en (x, y), cailloux qui sautent",
+    "lignes-vitesse": "Lignes de vitesse sur toute l'image, de de à a (angle, intensite)",
+    "flash": "Éclair blanc plein écran à l'instant de",
+    "ombre": "Une ombre ovale qui glisse sur le sol de deX à versX (y, largeur), de de à a",
+    "coeurs": "Petits cœurs roses qui montent depuis (x, y), de de à a",
+    "etincelles": "Étincelles bleues au point (x, y), de de à a",
+    "eclats": "Éclats et braises qui partent en étoile depuis (x, y), à l'instant de",
+    "trainee-lame": "La lame laisse une traînée bleue (de de à a)"
+  },
+  "sons": [
+    "pas",
+    "saut",
+    "glisse",
+    "zoom",
+    "pop",
+    "coeur",
+    "tinte",
+    "tape",
+    "splat",
+    "boing",
+    "tonnerre",
+    "battement",
+    "vent",
+    "whoosh",
+    "whoosh-long",
+    "shing",
+    "rentre",
+    "zap",
+    "bourdon",
+    "boum",
+    "coup",
+    "explosion",
+    "grondement",
+    "ailes",
+    "craque",
+    "eclats",
+    "flash",
+    "monte",
+    "ralenti",
+    "atterrit"
+  ],
+  "ambiances": [
+    "vent",
+    "foret",
+    "oiseaux",
+    "grillons",
+    "pluie",
+    "aucune"
+  ],
+  "transitions": [
+    "coupe",
+    "fondu",
+    "noir"
+  ],
+  "duree": {
+    "min": 10,
+    "max": 22
+  }
+}

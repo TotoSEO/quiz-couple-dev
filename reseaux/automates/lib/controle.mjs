@@ -6,9 +6,12 @@ import { controlerPov, VOCABULAIRE } from './pov.mjs';
 import { AMBIANCES, BIBLIOTHEQUE } from './musique.mjs';
 import { AMBIANCES_SON } from './son.mjs';
 import { CATEGORIES_MIPAPS, controlerMipaps, GABARITS_MIPAPS } from './mipaps.mjs';
+import { controlerBaton } from './baton.mjs';
 
 const CRENEAUX = ['matin', 'midi', 'soir'];
-const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', image: 'image', carrousel: 'carrousel', bd: 'image', ...GABARITS_MIPAPS };
+// « baton » : le bonhomme bâton (« me in my dreams with u », octobre 2026),
+// un reel ; il n'a pas encore de catégorie dans la grille.
+const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', baton: 'reel', image: 'image', carrousel: 'carrousel', bd: 'image', ...GABARITS_MIPAPS };
 // Le format que donne un gabarit : une image, sauf la BD rendue en carrousel
 // (une case par page) quand sa recette le demande.
 export const formatDuGabarit = (gabarit, recette) => (gabarit === 'bd' && recette?.sortie === 'carrousel' ? 'carrousel' : FORMAT_DU_GABARIT[gabarit]);
@@ -110,6 +113,7 @@ export function controlerRecette(r, langue) {
     });
   }
   if (r.gabarit === 'pov') f.push(...controlerPov(r));
+  if (r.gabarit === 'baton') f.push(...controlerBaton(r));
   if (String(r.gabarit).startsWith('mipaps-')) f.push(...controlerMipaps(r));
   if (r.gabarit === 'quiz-chrono') {
     if (!Array.isArray(r.questions) || r.questions.length < 4 || r.questions.length > 8) f.push('un quiz chrono a de 4 à 8 questions');
