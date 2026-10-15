@@ -255,6 +255,12 @@
           verdict: t('home:heroScene.verdict', ''),
           detail: t('home:heroScene.detail', '')
         };
+        // Les textes du site portent une espace ordinaire devant « ? ! : ; » :
+        // collée ici à son mot comme insecables() le fait dans le moteur,
+        // sinon le « ? » de la question passait seul à la ligne dans la carte.
+        Object.keys(sc).forEach(function (k) {
+          sc[k] = String(sc[k]).replace(/ ([?!:;»])/g, ' $1').replace(/« /g, '« ');
+        });
         const anneauPct = Math.max(0, Math.min(100, parseInt(sc.pct, 10) || 87));
         // circonference du cercle de rayon 42 : 2 * pi * 42
         const anneauOffset = (263.9 * (1 - anneauPct / 100)).toFixed(1);
