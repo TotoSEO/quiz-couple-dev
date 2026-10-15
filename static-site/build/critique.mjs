@@ -168,8 +168,11 @@ function chevauche(plages, debut, fin) {
 }
 
 // Ce qu'on garde toujours, couvert ou non : les declarations, les polices,
-// les proprietes enregistrees, et les variables de la racine.
-const TOUJOURS = /^(@import|@charset|@namespace|@font-face|@property|:root\b|html\b)/;
+// les proprietes enregistrees, les variables de la racine, et le style de la
+// barre de defilement de la page. Chromium sans ecran masque les barres
+// (--hide-scrollbars) : la couverture ne voit jamais ces regles, et une
+// feuille relevee depuis une session de travail les perdait.
+const TOUJOURS = /^(@import|@charset|@namespace|@font-face|@property|:root\b|html\b|::-webkit-scrollbar)/;
 
 // Ce qu'une page peut afficher des le chargement sans que la couverture le
 // voie : le compteur de duree en couple s'ouvre directement sur son resultat

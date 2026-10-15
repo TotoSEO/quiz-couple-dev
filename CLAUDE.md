@@ -78,6 +78,11 @@ critique garde la feuille bloquante.
 - Les états que la couverture ne voit pas (survol, écrans suivants du moteur)
   arrivent avec la feuille complète : un style indispensable dès le premier
   écran doit correspondre à des éléments présents au chargement.
+- Le style de la barre de défilement de la page (`::-webkit-scrollbar*`) est
+  toujours gardé (`TOUJOURS`, critique.mjs) : Chromium sans écran masque les
+  barres, la couverture ne voyait pas ces règles, et les feuilles relevées
+  depuis une session de travail les perdaient (blog et test à distance,
+  rétablies le 15 octobre 2026).
 
 Les avis d'une page (douze derniers, note moyenne, nombre) sont cuits dans
 le HTML à la construction (`avisCuitsPour` dans generate.js, bloc
@@ -490,6 +495,21 @@ Le reste de ce qui a changé ce jour-là :
 - `.hero-*` — Homepage hero section
 - `.quiz-engine` — Quiz container
 - `.blog-*` — Blog article styles
+- `.blog-card` (liste du blog) et `.dernier-article` (les trois derniers
+  articles de l'accueil) : chaque partie de la carte est un enfant direct, sur
+  sa propre ligne d'une sous-grille (`grid-template-rows: subgrid`), si bien
+  que dans une rangée la date, l'extrait et le bouton sont à la même hauteur
+  d'une carte à l'autre, quelle que soit la longueur des titres ; sans
+  sous-grille, une colonne flex cale le bouton en bas. Un texte tronqué par
+  `-webkit-line-clamp` n'a jamais de rembourrage vertical : le masque passe au
+  bord du rembourrage, et jusqu'au 15 octobre 2026 celui du bas de l'extrait
+  laissait voir le haut de la quatrième ligne, coupée en deux contre « Lire
+  l'article » (remarque de Thomas). L'espace autour est une marge, et dans la
+  sous-grille le texte tronqué garde sa propre hauteur (`align-self: start`) :
+  étiré à la hauteur de la rangée, il montrerait la ligne suivante. Les points
+  de suspension prennent la couleur du bloc, pas celle du lien : un titre
+  tronqué porte donc la couleur de son lien (ils sortaient en noir au bout des
+  titres roses de l'accueil).
 - `.nav-*` — Navigation components
 
 ### When Improving UI/UX
