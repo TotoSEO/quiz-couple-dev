@@ -647,10 +647,22 @@
     var r = carte.getBoundingClientRect();
     if (!r.height) return;
 
+    // Le bandeau publicitaire pose au-dessus du moteur pendant la partie
+    // (pub.js, bandeauDuTest) fait bloc avec la carte : on les cadre
+    // ensemble, sinon centrer la carte seule le glissait sous l'en-tete.
+    var bandeau = conteneur.previousElementSibling;
+    var hautBloc = r.top;
+    if (bandeau && bandeau.classList.contains('pub--bandeau') && !bandeau.classList.contains('pub--vide')) {
+      hautBloc = bandeau.getBoundingClientRect().top;
+    }
+    var hauteurBloc = r.bottom - hautBloc;
+
+    // La partie visible de l'en-tete colle : sur ordinateur son premier
+    // niveau glisse hors de l'ecran (108 px de haut, 56 a l'ecran).
     var entete = document.getElementById('site-header');
-    var hEntete = entete ? entete.getBoundingClientRect().height : 0;
-    var haut = window.pageYOffset + r.top;
-    var marge = Math.max(hEntete + 16, (window.innerHeight - r.height) / 2);
+    var hEntete = entete ? Math.max(0, entete.getBoundingClientRect().bottom) : 0;
+    var haut = window.pageYOffset + hautBloc;
+    var marge = Math.max(hEntete + 16, (window.innerHeight - hauteurBloc) / 2);
     var y = Math.max(0, haut - marge);
     if (Math.abs(y - window.pageYOffset) < 24) return;
 

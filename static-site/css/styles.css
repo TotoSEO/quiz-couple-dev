@@ -9230,6 +9230,22 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
 }
 .pub--31, .pub--2 { min-height: 250px; }
 
+/* Le bandeau du test (pub.js, bandeauDuTest) : la megabanniere posee
+   au-dessus de la question pendant une partie. Sa hauteur est reservee
+   d'avance (320x50 sur telephone, 728x90 au-dessus) pour que la question ne
+   bouge pas quand l'annonce arrive ; une annonce plus haute (320x100) ne
+   l'agrandit qu'au changement de question suivant (--bandeau-h pose par
+   pub.js). Le mot « Publicité » au-dessus la distingue du test. */
+.pub.pub--bandeau { --bandeau-h: 50px; height: calc(var(--bandeau-h) + 0.875rem); min-height: 0; margin: 0 auto 1rem; }
+@media (min-width: 768px) { .pub.pub--bandeau { --bandeau-h: 90px; } }
+.pub.pub--bandeau::before {
+  content: attr(data-etiquette); display: block; height: 0.875rem;
+  font-size: 0.625rem; line-height: 0.875rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+.pub.pub--bandeau > div { height: var(--bandeau-h); display: flex; align-items: center; justify-content: center; }
+.pub.pub--bandeau.pub--vide { height: 0; margin: 0; }
+
 /* L'interstitiel se dessine par-dessus la page, pas dans le flux : son div
    n'est qu'un point d'ancrage. Il ne doit donc reserver aucune hauteur, sans
    quoi il laisserait un blanc de 250 px au milieu de l'ecran de resultat.
