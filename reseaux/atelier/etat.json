@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-15T03:13:12.563Z",
+  "genere_le": "2026-10-15T08:14:18.204Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
@@ -28,38 +28,8 @@
     },
     "matin": "pov"
   },
-  "reserve_jours": 32,
+  "reserve_jours": 34,
   "a_remplir": [
-    {
-      "jour": "2026-11-16",
-      "creneau": "midi",
-      "categorie": "connais-tu"
-    },
-    {
-      "jour": "2026-11-16",
-      "creneau": "soir",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-11-17",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
-    {
-      "jour": "2026-11-17",
-      "creneau": "midi",
-      "categorie": "tu-preferes"
-    },
-    {
-      "jour": "2026-11-17",
-      "creneau": "soir",
-      "categorie": "bd"
-    },
-    {
-      "jour": "2026-11-18",
-      "creneau": "matin",
-      "categorie": "pov"
-    },
     {
       "jour": "2026-11-18",
       "creneau": "midi",
@@ -1277,7 +1247,7 @@
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1286,7 +1256,7 @@
       "creneau": "midi",
       "gabarit": "pov",
       "categorie": "statique",
-      "statut": "rendu",
+      "statut": "conteneur",
       "texte": null,
       "erreur": null
     },
@@ -1331,7 +1301,7 @@
       "creneau": "matin",
       "gabarit": "pov",
       "categorie": "pov",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2144,6 +2114,60 @@
       "statut": "a_rendre",
       "texte": null,
       "erreur": null
+    },
+    {
+      "jour": "2026-11-16",
+      "creneau": "midi",
+      "gabarit": "connais-tu",
+      "categorie": "connais-tu",
+      "statut": "a_rendre",
+      "texte": "How well do you know your partner?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-16",
+      "creneau": "soir",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "midi",
+      "gabarit": "tu-preferes",
+      "categorie": "tu-preferes",
+      "statut": "a_rendre",
+      "texte": "Would you rather: pets?",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-17",
+      "creneau": "soir",
+      "gabarit": "bd",
+      "categorie": "bd",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-18",
+      "creneau": "matin",
+      "gabarit": "pov",
+      "categorie": "pov",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
     }
   ],
   "idees": [],
@@ -2161,7 +2185,7 @@
       "creneau": "midi"
     },
     "statique": {
-      "jour": "2026-10-15",
+      "jour": "2026-10-18",
       "creneau": "midi"
     },
     "phrase": {
@@ -2191,6 +2215,13 @@
       "releve": "j7",
       "vues": 1008,
       "partages": 5,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "7f6983cd-5218-4f62-890f-eb70d7f76866",
+      "releve": "j7",
+      "vues": 607,
+      "partages": 0,
       "enregistrements": 0
     }
   ]
