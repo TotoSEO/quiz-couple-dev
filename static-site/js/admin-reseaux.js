@@ -38,9 +38,9 @@
   // les catégories qu'une idée peut viser, par compte, avec le créneau de la grille
   var CATEGORIES_IDEE = {
     en: [
-      ['pov', 'Animation POV (matin et soir)'], ['bd', 'BD en quatre cases (mardi soir)'], ['connais-tu', 'Connais-tu ton partenaire ? (midi)'], ['tu-preferes', 'Tu préfères (midi)'],
+      ['pov', 'Animation POV (lundi et mercredi soir)'], ['bd', 'BD en quatre cases (mardi soir)'], ['connais-tu', 'Connais-tu ton partenaire ? (midi)'], ['tu-preferes', 'Tu préfères (midi)'],
       ['statique', 'Reel statique, dessin et phrase (midi)'], ['phrase', 'Phrase tendre (dimanche soir)'], ['coquin', 'Animation coquine (vendredi soir)'], ['carrousel', 'Carrousel de questions (jeudi soir)'],
-      ['dix-mais', "C'est un 10 mais... (carrousel du samedi soir)"], ['baton', 'Bonhomme bâton, « me in my dreams with u » (lundi, mercredi et vendredi matin)']
+      ['dix-mais', "C'est un 10 mais... (carrousel du samedi soir)"], ['baton', 'Bonhomme bâton, « me in my dreams with u » (tous les matins)']
     ],
     fr: [
       ['mipaps-anime', 'Reel animé (matin)'], ['mipaps-post', 'Post : mini, déclaration ou schéma (midi)'], ['mipaps-histoire', 'Carrousel-histoire (soir, lundi, mercredi, vendredi, dimanche)'], ['mipaps-statique', 'Reel statique (soir, mardi, jeudi, samedi)']

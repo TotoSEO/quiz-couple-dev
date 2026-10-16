@@ -29,21 +29,22 @@ test("la grille met « He's a 10 but... » le samedi soir et la phrase tendre le
   assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-18', 'soir'), 'phrase');
 });
 
-test('la grille met le bonhomme bâton le lundi, le mercredi et le vendredi matin, une animation les autres matins', () => {
-  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-19', 'matin'), 'baton');
-  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-20', 'matin'), 'pov');
-  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-21', 'matin'), 'baton');
-  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-23', 'matin'), 'baton');
-  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-25', 'matin'), 'pov');
+test('la grille met le bonhomme bâton tous les matins (16 octobre 2026 au soir) et garde les animations des mascottes le lundi et le mercredi soir, la coquine le vendredi soir', () => {
+  for (const jour of ['2026-10-19', '2026-10-20', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24', '2026-10-25']) {
+    assert.equal(categorieAttendue(MELANGE_DEFAUT, jour, 'matin'), 'baton', jour);
+  }
+  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-19', 'soir'), 'pov');
+  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-21', 'soir'), 'pov');
+  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-23', 'soir'), 'coquin');
 });
 
-test("la banque « baton » : une histoire par sujet, les neuf trames de rêve à tour de rôle, le héros fille presque une fois sur deux et dans chaque trame, une trame connue, une musique", () => {
+test("la banque « baton » : une histoire par sujet et par jour, les neuf trames de rêve à tour de rôle, le héros fille presque une fois sur deux et dans chaque trame, une trame connue, une musique", () => {
   const sujets = SUJETS.baton;
   const trames = Object.keys(TRAMES);
-  assert.ok(sujets.length >= 27, 'au moins neuf semaines de sujets');
+  assert.ok(sujets.length >= 63, 'au moins neuf semaines de sujets, un reel par jour depuis le 16 octobre 2026');
   for (const trame of trames) {
     const de = sujets.filter((x) => x.trame === trame);
-    assert.ok(de.length >= 3, `au moins trois histoires de la trame ${trame}`);
+    assert.ok(de.length >= 7, `au moins sept histoires de la trame ${trame}`);
     assert.ok(de.some((x) => x.heros === 'fille') && de.some((x) => x.heros === 'garcon'), `la trame ${trame} a une héroïne et un héros`);
   }
   const filles = sujets.filter((x) => x.heros === 'fille').length;

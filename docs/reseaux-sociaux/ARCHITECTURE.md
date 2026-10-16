@@ -60,15 +60,18 @@ même jour par Thomas ; ses choix sont en partie 1.2.
   - le matin entre 6 h et 8 h ;
   - le midi entre 11 h et 13 h ;
   - l'après-midi entre 16 h et 18 h.
-- **Le mélange de la semaine :** 10 animations avec les mascottes (dont
-  une coquine le vendredi), 3 « Connais-tu ton partenaire ? », 2 « Tu
-  préfères », 2 reels statiques, 1 phrase tendre (le dimanche soir), 1 BD
-  en quatre cases le mardi soir, 1 carrousel de questions le jeudi soir (le
-  format qui se garde) et, depuis le 12 octobre 2026, 1 carrousel « He's a
-  10 but... » le samedi soir. Tout dessiné, aucune
-  photo. 273 posts sur les trois premiers mois, avec une banque de sujets
-  (`reseaux/atelier/sujets.json`). Et chaque jour, le reel du matin repart
-  en story juste après sa publication.
+- **Le mélange de la semaine :** 7 reels du bonhomme bâton (tous les
+  matins depuis le 16 octobre 2026 au soir, Thomas : « on lance ces
+  animations à raison de une par jour, du coup réduis les formats posts
+  classiques »), 3 animations avec les mascottes (le lundi et le mercredi
+  soir, la coquine le vendredi soir ; dix par semaine jusqu'au 16 octobre
+  2026), 3 « Connais-tu ton partenaire ? », 2 « Tu préfères », 2 reels
+  statiques, 1 phrase tendre (le dimanche soir), 1 BD en quatre cases le
+  mardi soir, 1 carrousel de questions le jeudi soir (le format qui se
+  garde) et, depuis le 12 octobre 2026, 1 carrousel « He's a 10 but... » le
+  samedi soir. Tout dessiné, aucune photo. 273 posts sur les trois premiers
+  mois, avec une banque de sujets (`reseaux/atelier/sujets.json`). Et chaque
+  jour, le reel du matin repart en story juste après sa publication.
 
 ---
 
@@ -221,9 +224,11 @@ tu valides les formats, et l'automate les décline.
 > (bulles de dialogue, le téléphone, la lune qui arrive, l'horreur, noir),
 > écrites en brief par séquences que le réalisateur du studio met en plans,
 > hors de la DA des mascottes (`reseaux/README.md`, « Le bonhomme bâton »).
-> Depuis le 16 octobre 2026 c'est la catégorie `baton` du lundi, du mercredi
-> et du vendredi matin (Thomas, sur le dragon : « je veux exactement ce style
-> de post »). Le
+> Depuis le 16 octobre 2026 c'est la catégorie `baton` de tous les matins
+> (trois matins par semaine le matin même, puis Thomas, le soir, devant la
+> promesse de la lune et les chiens : « on lance ces animations à raison de
+> une par jour, du coup réduis les formats posts classiques » ; sur le
+> dragon : « je veux exactement ce style de post »). Le
 > tableau ci-dessous est le plan de départ.
 
 Un gabarit est un format réutilisable : sa mise en page, ses animations, ses

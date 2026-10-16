@@ -29,8 +29,8 @@ export const CATEGORIES = {
   bd: 'bd',
   // « He's a 10 but... » (12 octobre 2026) : un carrousel de huit cartes
   'dix-mais': 'carrousel',
-  // le bonhomme bâton, « me in my dreams with u » (16 octobre 2026), le
-  // lundi, le mercredi et le vendredi matin
+  // le bonhomme bâton, « me in my dreams with u » (16 octobre 2026), tous
+  // les matins depuis le soir même (trois matins par semaine au départ)
   baton: 'baton',
   // le second compte, Les mipaps (reseaux/mipaps) : ses quatre formats
   ...CATEGORIES_MIPAPS,

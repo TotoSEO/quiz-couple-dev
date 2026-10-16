@@ -1,5 +1,5 @@
 {
-  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau. La banque « bd » (8 octobre 2026) : des planches en quatre cases, une situation, une chute dans la dernière case ; chaque idée découpe les quatre images et donne les répliques. Le 9 octobre 2026, les 28 phrases tendres ont été réécrites en phrases concrètes qu'une personne écrirait vraiment à l'autre (« I love how you say my name when you're half asleep. ») à la place des maximes sur l'amour (« You're the reason I believe in slow, gentle love. »), et les chutes des planches qui commentaient la scène ont été remplacées par ce que le personnage dirait pour de vrai : voir « La chute, et ce qui sonne machine » dans LIGNE-EDITORIALE.md. La banque « dix-mais » (12 octobre 2026, idée de Thomas) : un carrousel « He's a 10 but... » ou « She's a 10 but... » le samedi soir, une couverture, huit cartes qui commencent par « but he » ou « but she », de la petite manie qui fait sourire au vrai drapeau rouge, la plus grave en dernier, et une page finale ; chaque sujet donne l'édition, l'accroche et les huit cartes, et « qui » dit lequel des deux est le 10 (he : le violet, she : la rose). Depuis le 16 octobre 2026, 24 histoires de bonhomme bâton (banque « baton », lundi, mercredi et vendredi matin), trois par trame (sauvetage, parapluie, course, etoile, porte, rattrape, danse, reveil : voir TRAMES dans studio/src/baton/realisateur.mjs) : chaque sujet dit qui est le héros (garçon puis fille en alternance), sa trame, l'histoire en trois ou quatre phrases et un titre connu pour la musique ; la routine en tire un brief par séquences (CONSIGNES.md, « Le bonhomme bâton »).",
+  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau. La banque « bd » (8 octobre 2026) : des planches en quatre cases, une situation, une chute dans la dernière case ; chaque idée découpe les quatre images et donne les répliques. Le 9 octobre 2026, les 28 phrases tendres ont été réécrites en phrases concrètes qu'une personne écrirait vraiment à l'autre (« I love how you say my name when you're half asleep. ») à la place des maximes sur l'amour (« You're the reason I believe in slow, gentle love. »), et les chutes des planches qui commentaient la scène ont été remplacées par ce que le personnage dirait pour de vrai : voir « La chute, et ce qui sonne machine » dans LIGNE-EDITORIALE.md. La banque « dix-mais » (12 octobre 2026, idée de Thomas) : un carrousel « He's a 10 but... » ou « She's a 10 but... » le samedi soir, une couverture, huit cartes qui commencent par « but he » ou « but she », de la petite manie qui fait sourire au vrai drapeau rouge, la plus grave en dernier, et une page finale ; chaque sujet donne l'édition, l'accroche et les huit cartes, et « qui » dit lequel des deux est le 10 (he : le violet, she : la rose). Depuis le 16 octobre 2026, 24 histoires de bonhomme bâton (banque « baton », lundi, mercredi et vendredi matin), trois par trame (sauvetage, parapluie, course, etoile, porte, rattrape, danse, reveil : voir TRAMES dans studio/src/baton/realisateur.mjs) : chaque sujet dit qui est le héros (garçon puis fille en alternance), sa trame, l'histoire en trois ou quatre phrases et un titre connu pour la musique ; la routine en tire un brief par séquences (CONSIGNES.md, « Le bonhomme bâton »). Depuis le 16 octobre 2026 au soir, un bonhomme bâton part tous les matins (Thomas : « on lance ces animations à raison de une par jour, du coup réduis les formats posts classiques ») : banque « baton » de 63 histoires, sept par trame, les neuf trames à tour de rôle, jamais le même décor d’ouverture deux jours de suite, le héros fille presque une fois sur deux ; midi et soir gardent les formats classiques, les animations des mascottes n’ont plus que le lundi et le mercredi soir et la coquine du vendredi soir.",
   "pov": [
     {
       "id": "pov-001",
@@ -2049,14 +2049,17 @@
     }
   ],
   "saison": {
-    "note": "Noël et Nouvel An, les seules fêtes du calendrier (universelles). À ces dates et créneaux, le sujet daté remplace celui de la banque ; la catégorie reste celle de la semaine type (depuis le 12 octobre 2026, les sujets datés du jeudi soir sont des carrousels de questions et ceux du samedi soir des « 10 but... », comme la grille). Décor « noel », bonnets, flocons, cadeaux, sapin ; au Nouvel An, coupes, feux d'artifice, confettis.",
+    "note": "Noël et Nouvel An, les seules fêtes du calendrier (universelles). À ces dates et créneaux, le sujet daté remplace celui de la banque ; la catégorie reste celle de la semaine type (depuis le 12 octobre 2026, les sujets datés du jeudi soir sont des carrousels de questions et ceux du samedi soir des « 10 but... », comme la grille). Décor « noel », bonnets, flocons, cadeaux, sapin ; au Nouvel An, coupes, feux d'artifice, confettis. Depuis le 16 octobre 2026 au soir, tous les matins sont des bonhommes bâton : un sujet daté du matin est une histoire de bâton (heros, trame, son), comme noel-01, noel-06, noel-08, an-02 et an-04.",
     "sujets": [
       {
         "id": "noel-01",
         "jour": "2026-12-19",
         "creneau": "matin",
-        "categorie": "pov",
-        "idee": "POV: decorating the tree together | noel : le violet accroche l'étoile en sautant, la rose rit, flocons dans la fenêtre"
+        "categorie": "baton",
+        "idee": "Une semaine avant Noël, dans le salon, assis sur le canapé, elle (le héros) joint les mains sous le menton, les yeux qui brillent : un chiot dans sa bulle de pensée, son cadeau de Noël ; il croise les bras et fait non de la tête, deux fois. Elle laisse tomber les épaules, puis un sourire en coin. Le soir même elle le tire par la main hors du canapé, « j’ai une surprise pour toi », et l’emmène jusqu’au jardin dans la nuit d’hiver : une meute entière qui saute partout, roulement de tambour. Il tremble, la spirale au-dessus de la tête, et s’évanouit raide comme une planche au ralenti, les yeux en croix ; elle rit avec un chiot dans les bras, s’agenouille près de lui ; il revient à lui sous les léchouilles, joyeux Noël en avance.",
+        "heros": "fille",
+        "trame": "chiens",
+        "son": "Santa Baby"
       },
       {
         "id": "noel-02",
@@ -2091,8 +2094,11 @@
         "id": "noel-06",
         "jour": "2026-12-24",
         "creneau": "matin",
-        "categorie": "pov",
-        "idee": "POV: matching hats on Christmas Eve | noel : les deux avec un bonnet, danse, flocons"
+        "categorie": "baton",
+        "idee": "Veille de Noël devant la maison, elle regarde sa main nue, rêveuse, une bague dans sa bulle de pensée ; il comprend et se ferme, décidé : pas question d’attendre l’an prochain. Pioche sortie de derrière le dos, sprint : la forêt (un tronc), le donjon aux torches (des piques), le tapis de nuages (le vide), jusqu’à la grotte où le diamant géant pulse en bleu. Pioche levée, pieds ancrés, le saut et le coup au ralenti : flash, mille éclats, la pierre parfaite qui flotte, le marteau qui sonne trois fois, la bague levée. Retour en courant jusqu’à la porte dans la nuit de Noël, un genou à terre ; elle porte les mains à sa bouche, saute de joie, câlin et cœurs.",
+        "heros": "garcon",
+        "trame": "diamant",
+        "son": "Mistletoe"
       },
       {
         "id": "noel-07",
@@ -2163,8 +2169,11 @@
         "id": "an-02",
         "jour": "2026-12-31",
         "creneau": "matin",
-        "categorie": "pov",
-        "idee": "POV: getting ready for New Year's Eve | mur : légendes « 6 PM », « 9 PM », « 11:59 PM », le violet attend, la rose arrive enfin"
+        "categorie": "baton",
+        "idee": "Le 31 décembre en ville, en fin d’après-midi, ils discutent sous les lampadaires du réveillon qui vient ; le nuage d’orage arrive en grondant au-dessus de la rue et se plante juste au-dessus de lui, la pluie à verse, lui trempé sous ses mains, les dents qui claquent. Elle (le héros) lève les yeux, surprise, puis décidée : accroupie, le bond entre les immeubles et le coup de pied au ralenti, impact de bande dessinée ; le nuage crève en étincelles et en gouttes, le ciel se dégage, les derniers rayons du soleil sur la ville. Elle retombe, s’époussette les mains ; il lui saute au cou, trempé, et ils rient : la nuit sera claire pour le feu d’artifice.",
+        "heros": "fille",
+        "trame": "nuage",
+        "son": "Firework"
       },
       {
         "id": "an-03",
@@ -2706,7 +2715,7 @@
       "id": "bat-002",
       "heros": "fille",
       "trame": "ailes",
-      "idee": "Dans les montagnes, il suit des yeux les oiseaux qui passent au-dessus des pics et baisse la tête. Elle (le héros) le regarde, attendrie, un sourcil se lève : des ailes jaillissent dans son dos, onde de choc, plumes ; elle plane jusqu'à lui, main tendue, il la prend au ralenti et ils s'envolent ; deux paysages de ciel, un looping, et ils se posent sur un nuage ; assis l'un contre l'autre, des ailes lui poussent à lui aussi.",
+      "idee": "Dans la prairie, il suit des yeux une alouette qui monte tout droit dans le ciel et baisse la tête en soupirant. Elle (le héros) le regarde, attendrie, un sourcil se lève : des ailes jaillissent dans son dos, onde de choc, plumes dans l’herbe ; elle plane jusqu’à lui, main tendue, il la prend au ralenti et ils s’envolent au-dessus des collines ; deux paysages de ciel, un looping, et ils se posent sur un nuage ; assis l’un contre l’autre, des ailes lui poussent à lui aussi.",
       "son": "Learn to Fly"
     },
     {
@@ -2755,7 +2764,7 @@
       "id": "bat-009",
       "heros": "garcon",
       "trame": "promesse",
-      "idee": "Une nuit dans la prairie, il lui dit « je décrocherai la lune pour toi » ; elle hausse un sourcil, « ... », et retourne à son téléphone. Gros plan sur lui, vexé, les joues rouges. Il recule de quatre pas, sort un lasso, le fait tournoyer et le lance au ralenti : fumée partout, le sol se brise ; la boucle fonce vers la lune et s'agrippe autour, il tire de toutes ses forces et la lune grossit, elle arrive. Gros plan sur elle au téléphone : un grondement, la caméra tremble, elle lève les yeux, la lune se reflète dans ses yeux écarquillés, visage horrifié, noir.",
+      "idee": "Une nuit en ville, sous les lampadaires, il lui dit « je décrocherai la lune pour toi » ; elle hausse un sourcil, « ... », et retourne à son téléphone. Gros plan sur lui, vexé, les joues rouges. Il recule de quatre pas sur le trottoir, sort un lasso, le fait tournoyer et le lance au ralenti : fumée partout, le bitume se brise ; la boucle fonce entre les immeubles vers la lune et s’agrippe autour, il tire de toutes ses forces et la lune grossit, elle arrive au-dessus des toits. Gros plan sur elle au téléphone : un grondement, la caméra tremble, elle lève les yeux, la lune se reflète dans ses yeux écarquillés, visage horrifié, noir.",
       "son": "Fly Me to the Moon"
     },
     {
@@ -2763,14 +2772,14 @@
       "heros": "fille",
       "trame": "sauvetage",
       "idee": "Dans la prairie, c'est LUI que le dragon enlève : il discutait, elle riait, le dragon plane, rugit et pique. Elle : le choc, le chagrin, puis le visage qui se ferme. Épée tirée, forêt (un tronc), falaise (un ravin), pont ; la tour où il attend apeuré, garde, pieds ancrés, bond au ralenti, le dragon pulvérisé. Souffle, épée rangée, un bouquet avec un sourire en coin, les cœurs au sommet.",
-      "son": "Eye of the Tiger"
+      "son": "Centuries"
     },
     {
       "id": "bat-011",
       "heros": "garcon",
       "trame": "ailes",
       "idee": "Sur la plage, elle regarde passer un vol d'oiseaux et soupire : elle voudrait voler. Il sourit, et dans son dos deux grandes ailes se déploient d'un coup, des plumes partout ; il plane jusqu'à elle, lui tend la main, elle la prend au ralenti et ils montent dans le ciel, un looping dans les nuages, puis se posent sur un nuage devant le soleil ; assis côte à côte, et des ailes lui poussent à elle aussi.",
-      "son": "Fly Me to the Moon"
+      "son": "Up Where We Belong"
     },
     {
       "id": "bat-012",
@@ -2804,7 +2813,7 @@
       "id": "bat-016",
       "heros": "fille",
       "trame": "nuage",
-      "idee": "Dans la prairie, un nuage d'orage vient se planter au-dessus d'eux et les arrose ; il se met les mains sur la tête et claque des dents. Elle (le héros) lève les yeux, surprise, puis décidée : elle s'accroupit, bondit jusqu'au nuage et le shoote d'un coup de pied au ralenti ; le nuage crève en étincelles et en gouttes, le soleil revient avec ses rayons, les oiseaux chantent. Elle retombe, s'époussette les mains, clin d'œil ; il rit aux éclats.",
+      "idee": "Devant la maison, un nuage d’orage vient se planter au-dessus d’eux et les arrose ; il se met les mains sur la tête et claque des dents. Elle (le héros) lève les yeux, surprise, puis décidée : elle s’accroupit, bondit par-dessus le toit jusqu’au nuage et le shoote d’un coup de pied au ralenti ; le nuage crève en étincelles et en gouttes, le soleil revient avec ses rayons sur la pelouse, les oiseaux chantent. Elle retombe, s’époussette les mains, clin d’œil ; il rit aux éclats.",
       "son": "Here Comes the Sun"
     },
     {
@@ -2818,8 +2827,8 @@
       "id": "bat-018",
       "heros": "fille",
       "trame": "promesse",
-      "idee": "Nuit dans les montagnes, elle (le héros) lui lance « je décrocherai la lune pour toi » ; il hausse un sourcil sans lever le nez de son téléphone, « ... ». Gros plan sur elle, vexée, les joues rouges. Quatre pas en arrière, la corde, le lasso qui tournoie, le lancer au ralenti dans la fumée et le sol qui se fend, la boucle qui fonce sur la lune et s'agrippe ; elle tire de toutes ses forces, la lune grossit, elle arrive. Gros plan sur lui au téléphone : un grondement, la caméra tremble, il lève les yeux, la lune se reflète dans ses yeux, l'horreur, noir.",
-      "son": "Talking to the Moon"
+      "idee": "Nuit devant la maison, elle (le héros) lui lance « je décrocherai la lune pour toi » ; il hausse un sourcil sans lever le nez de son téléphone, « ... ». Gros plan sur elle, vexée, les joues rouges. Quatre pas en arrière dans l’allée, la corde, le lasso qui tournoie, le lancer au ralenti dans la fumée et le sol qui se fend, la boucle qui fonce sur la lune au-dessus du toit et s’agrippe ; elle tire de toutes ses forces, la lune grossit, elle arrive. Gros plan sur lui au téléphone : un grondement, la caméra tremble, il lève les yeux, la lune se reflète dans ses yeux, l’horreur, noir.",
+      "son": "Bad Moon Rising"
     },
     {
       "id": "bat-019",
@@ -2881,8 +2890,260 @@
       "id": "bat-027",
       "heros": "garcon",
       "trame": "promesse",
-      "idee": "Nuit sur la plage, il promet : « je décrocherai la lune pour toi » ; elle, sur son téléphone, un sourcil levé : « ... ». Gros plan sur lui, la colère monte. Il recule de quatre pas, sort le lasso, trois tours au-dessus de la tête, le lancer au ralenti, fumée, le sable qui se brise ; la boucle s'agrippe à la lune et il tire, les pieds plantés, la lune grossit à vue d'œil. Gros plan sur elle au téléphone : grondement, secousses, elle lève les yeux, la lune dans ses pupilles, visage horrifié, fondu au noir.",
-      "son": "Moon River"
+      "idee": "Nuit dans la prairie, il promet : « je décrocherai la lune pour toi » ; elle, sur son téléphone, un sourcil levé : « ... ». Gros plan sur lui, la colère monte. Il recule de quatre pas dans l’herbe, sort le lasso, trois tours au-dessus de la tête, le lancer au ralenti, fumée, le sol qui se brise ; la boucle s’agrippe à la lune et il tire, les pieds plantés, la lune grossit à vue d’œil au-dessus des collines. Gros plan sur elle au téléphone : grondement, secousses, elle lève les yeux, la lune dans ses pupilles, visage horrifié, fondu au noir.",
+      "son": "Total Eclipse of the Heart"
+    },
+    {
+      "id": "bat-028",
+      "heros": "fille",
+      "trame": "sauvetage",
+      "idee": "Devant la maison, au soir, il lui raconte sa journée en gesticulant et elle rit ; le dragon surgit derrière le toit, rugit, et c'est LUI qu'il emporte dans ses serres. Elle (le héros) : le choc, le chagrin, une larme, puis le visage qui se ferme. Épée tirée, elle traverse la forêt (un tronc), la falaise (un ravin) et le tapis de nuages (le vide) jusqu'à la tour où il attend, apeuré ; garde, pieds ancrés, le bond au ralenti, le dragon vole en mille éclats. Souffle, épée rangée, trois pas vers lui et elle l'embrasse, les cœurs au sommet.",
+      "son": "Thunderstruck"
+    },
+    {
+      "id": "bat-029",
+      "heros": "garcon",
+      "trame": "ailes",
+      "idee": "Dans la prairie, elle regarde un vol d'oies sauvages passer en V au-dessus des collines et baisse la tête en soupirant. Il la regarde, un sourire en coin : il ouvre les bras et deux grandes ailes se déploient dans son dos, onde de choc, les plumes qui tombent dans l'herbe ; il plane jusqu'à elle, la main tendue, elle la prend au ralenti et ils décollent au-dessus des champs ; le ciel, les oies qui les suivent, un looping, et ils se posent sur un nuage ; assis l'un contre l'autre, et des ailes lui poussent à elle aussi.",
+      "son": "Fly Away"
+    },
+    {
+      "id": "bat-030",
+      "heros": "fille",
+      "trame": "bandits",
+      "idee": "En plein jour en ville, quatre bandits masqués sortent d'une ruelle et l'encerclent, lui, qui se fige ; elle (le héros) se plante devant. Choc, puis le regard qui se durcit, les poings qui se lèvent, un pas en avant. Coup de poing, le premier part hors de l'image ; coup de pied, le deuxième passe par-dessus elle et s'étale K.-O., les étoiles autour de la tête ; saut et coup de pied retourné au ralenti, les deux derniers volent dans le décor. Elle s'époussette les mains ; il l'attrape et l'embrasse au milieu de la rue.",
+      "son": "Beat It"
+    },
+    {
+      "id": "bat-031",
+      "heros": "garcon",
+      "trame": "chiens",
+      "idee": "Sur la plage, des aboiements montent de la dune ; il écoute, joint les mains sous le menton, les yeux qui brillent, un chiot dans sa bulle de pensée ; elle croise les bras et fait non de la tête, deux fois. Il laisse tomber les épaules, puis un sourire en coin. Le soir même il vient la chercher par la main, « une surprise », et l'emmène jusqu'au jardin : neuf chiens qui bondissent dans tous les sens, roulement de tambour. Elle se fige, tremble, la spirale au-dessus de la tête, et bascule en arrière au ralenti, raide comme une planche ; il cajole un chiot en riant, s'agenouille près d'elle ; elle revient à elle sous les léchouilles.",
+      "son": "Dog Days Are Over"
+    },
+    {
+      "id": "bat-032",
+      "heros": "fille",
+      "trame": "diamant",
+      "idee": "Dans le salon, le soir, assis sur le canapé, il regarde sa main nue, rêveur, une bague dans sa bulle de pensée ; elle (le héros) comprend et se ferme. Elle sort une pioche de derrière son dos et part en flèche : la ville (un banc), le donjon aux torches (des piques), le tapis de nuages (le vide), jusqu'à la grotte où le diamant géant brille en bleu. Pioche levée, pieds ancrés, le saut et le coup au ralenti : mille éclats, la pierre parfaite qui flotte, trois coups de marteau sur l'enclume, la bague. Retour en sprint, un genou à terre devant le canapé ; il porte les mains à sa bouche, saute de joie, câlin et cœurs.",
+      "son": "Marry You"
+    },
+    {
+      "id": "bat-033",
+      "heros": "garcon",
+      "trame": "etoile",
+      "idee": "En ville la nuit, entre deux immeubles, elle lève la tête : une seule étoile perce au-dessus des toits, elle la montre du doigt, les yeux en cœur. Il sourit, tendre, puis se concentre, s'accroupit et bondit depuis le trottoir, si haut que les lampadaires rapetissent ; au ralenti, ses doigts se referment sur l'étoile, qui s'éteint dans le ciel et brille dans sa main. Il retombe accroupi près d'elle et la lui tend, sourire charmeur ; elle la prend, émerveillée, la rue s'éclaire ; les cœurs.",
+      "son": "Counting Stars"
+    },
+    {
+      "id": "bat-034",
+      "heros": "fille",
+      "trame": "nuage",
+      "idee": "Dans la prairie, en pleine balade, le nuage d’orage les suit depuis le bout du champ et se plante juste au-dessus de lui ; la pluie à verse, il se met les mains sur la tête, trempé, et claque des dents. Elle (le héros) lève les yeux, surprise, puis décidée : accroupie, le bond au-dessus des collines et le coup de pied au ralenti, impact de bande dessinée ; le nuage crève en étincelles et en gouttes, le soleil revient d’un coup, les rayons sur l’herbe. Elle retombe, s’époussette les mains ; il lui saute au cou, trempé, et ils rient.",
+      "son": "Mr. Blue Sky"
+    },
+    {
+      "id": "bat-035",
+      "heros": "garcon",
+      "trame": "lune",
+      "idee": "Nuit devant la maison, la lune énorme posée au-dessus du toit ; elle la montre du doigt, les yeux en cœur. Il sourit, puis un sourcil se lève : il sort une corde de derrière son dos, fait tournoyer le lasso au-dessus de sa tête et le lance au ralenti, la fumée partout, l'allée qui se fend ; la boucle file jusqu'à la lune et se referme, la lune ouvre des yeux ronds ; il tire de tout son poids, les pieds plantés dans la pelouse, et la lune descend se poser devant la porte dans un grand boum, les fenêtres qui tremblent. Ils grimpent dessus et s'asseyent côte à côte, la lune sourit les yeux fermés, les cœurs.",
+      "son": "Blue Moon"
+    },
+    {
+      "id": "bat-036",
+      "heros": "fille",
+      "trame": "promesse",
+      "idee": "Nuit dans la prairie, assis dans l'herbe, elle (le héros) lui dit « je décrocherai la lune pour toi » ; il hausse un sourcil, « ... », et retourne à son téléphone. Gros plan sur elle, vexée, les joues rouges. Elle se lève, recule de quatre pas, sort la corde, fait tournoyer le lasso et le lance au ralenti : fumée partout, l'herbe qui se fend ; la boucle fonce vers la lune et s'agrippe autour, elle tire de toutes ses forces et la lune grossit, elle arrive au-dessus des collines. Gros plan sur lui au téléphone : un grondement, la caméra tremble, il lève les yeux, la lune se reflète dans ses yeux écarquillés, visage horrifié, noir.",
+      "son": "Walking on the Moon"
+    },
+    {
+      "id": "bat-037",
+      "heros": "garcon",
+      "trame": "sauvetage",
+      "idee": "En ville la nuit, sous les lampadaires, ils rentrent en riant ; une ombre passe sur les toits, le dragon pique entre les immeubles, rugit et l'emporte, elle, dans ses serres. Lui : le choc, le chagrin (une larme), puis l'esprit vengeur. Il tire l'épée et traverse la plage (un rocher), le pont et le donjon aux torches (des piques) jusqu'à la tour ; garde, pieds ancrés, le bond au ralenti, le dragon explose en mille éclats. Souffle, épée rangée, un bouquet sorti de derrière le dos, et elle lui saute au cou au sommet, les cœurs.",
+      "son": "Kings and Queens"
+    },
+    {
+      "id": "bat-038",
+      "heros": "fille",
+      "trame": "ailes",
+      "idee": "Nuit dans les montagnes, une chouette passe devant la lune ; il la suit des yeux et soupire, la tête en arrière. Elle (le héros) le regarde, attendrie, puis un sourcil se lève : ses ailes jaillissent dans son dos, onde de choc, les plumes qui tombent dans l'herbe ; elle plane jusqu'à lui, lui tend la main, il la prend au ralenti et ils décollent au-dessus des pics ; le ciel de nuit, les étoiles qui défilent, un looping autour de la lune, et ils se posent sur un nuage ; assis l'un contre l'autre, et des ailes lui poussent à lui aussi.",
+      "son": "Wind Beneath My Wings"
+    },
+    {
+      "id": "bat-039",
+      "heros": "garcon",
+      "trame": "bandits",
+      "idee": "En ville la nuit, ils rentrent du restaurant ; trois bandits masqués surgissent d'une ruelle et l'encerclent, elle ; il se met devant, figé. Choc, puis le regard qui se durcit : il fait craquer ses jointures et prend sa garde. Coup de poing, le premier vole hors de l'image ; coup de pied, le deuxième passe par-dessus lui et s'étale K.-O. sur le trottoir ; saut et coup de pied retourné au ralenti, le dernier part dans le décor, onde de choc. Il s'époussette les mains, un peu essoufflé ; elle le regarde, bouche ouverte, et ils éclatent de rire tous les deux.",
+      "son": "Smooth Criminal"
+    },
+    {
+      "id": "bat-040",
+      "heros": "fille",
+      "trame": "chiens",
+      "idee": "Nuit dans les montagnes, des aboiements montent de la vallée vers la lune ; elle (le héros) écoute, joint les mains, les yeux qui brillent, un chiot dans sa bulle de pensée ; il croise les bras et fait non de la tête, deux fois. Elle baisse la tête, puis un sourire en coin. Le lendemain soir elle revient le chercher par la main, « une surprise », et l'emmène jusqu'au jardin : neuf chiens qui aboient à la lune et sautent partout. Il se fige, tremble, la spirale au-dessus de la tête, et tombe à la renverse au ralenti, les yeux en croix ; elle rit, un chiot dans les bras, s'agenouille près de lui ; il se réveille sous les léchouilles et éclate de rire.",
+      "son": "Bark at the Moon"
+    },
+    {
+      "id": "bat-041",
+      "heros": "garcon",
+      "trame": "diamant",
+      "idee": "Devant la maison, elle regarde sa main nue, rêveuse, une bague dans sa bulle de pensée ; il comprend et se ferme, décidé. Pioche sortie de derrière le dos, sprint : la forêt (un tronc), le donjon aux torches (des piques), le tapis de nuages (le vide), jusqu'à la grotte où le diamant géant pulse en bleu. Pioche levée, pieds ancrés, le saut et le coup au ralenti : flash, mille éclats de cristal, la pierre parfaite qui flotte, le marteau qui sonne trois fois, la bague levée. Retour en courant jusqu'à la porte, un genou à terre ; elle porte les mains à sa bouche, saute de joie, câlin et cœurs.",
+      "son": "Diamonds Are Forever"
+    },
+    {
+      "id": "bat-042",
+      "heros": "fille",
+      "trame": "etoile",
+      "idee": "Nuit dans la prairie, assis dans l'herbe, il compte les étoiles à voix haute et montre la plus petite, tout au bout du ciel, les yeux en cœur. Elle (le héros) sourit, tendre, se relève, se concentre, s'accroupit et bondit si haut que les collines rapetissent ; au ralenti, ses doigts se referment sur la petite étoile, qui s'éteint là-haut et brille dans sa main. Elle retombe accroupie près de lui et la lui tend ; il la prend dans ses mains jointes, émerveillé, et elle l'embrasse ; les cœurs montent dans la nuit.",
+      "son": "Catch a Falling Star"
+    },
+    {
+      "id": "bat-043",
+      "heros": "garcon",
+      "trame": "nuage",
+      "idee": "En ville, en plein jour, le nuage d'orage arrive en grondant au-dessus de la rue et se plante juste au-dessus d'elle ; trempée en deux secondes, elle se met les mains sur la tête et claque des dents. Il la regarde, surpris, puis le visage qui se durcit : accroupi, le bond entre les immeubles et le coup de pied en plein vol au ralenti, impact de bande dessinée ; le nuage crève en étincelles et en gouttes, le soleil revient, les rayons sur le trottoir, un oiseau. Il retombe accroupi, s'époussette les mains, sourire en coin ; elle éclate de rire, trempée, et il rit avec elle.",
+      "son": "Walking on Sunshine"
+    },
+    {
+      "id": "bat-044",
+      "heros": "fille",
+      "trame": "lune",
+      "idee": "Nuit dans les montagnes, la lune énorme posée sur le col ; il tend le bras vers elle, les yeux en cœur. Elle (le héros) sourit, malicieuse, sort une corde de derrière son dos, fait tournoyer le lasso et le lance au ralenti, la fumée partout, la roche qui se fend ; la boucle file et se referme sur la lune, surprise ; elle tire de tout son poids, les pieds plantés, et la lune descend se poser entre les pics dans un grand boum, le sol qui tremble, puis sourit les yeux fermés. Clin d'œil, et ils grimpent s'asseoir dessus, face à face, les joues roses, les cœurs.",
+      "son": "Harvest Moon"
+    },
+    {
+      "id": "bat-045",
+      "heros": "garcon",
+      "trame": "promesse",
+      "idee": "Nuit sur le pas de la porte, il lui dit « je décrocherai la lune pour toi, promis » ; elle, assise sur la marche avec son téléphone, hausse un sourcil : « ... ». Gros plan sur lui, vexé, la colère qui monte. Il recule de quatre pas dans l'allée, sort le lasso, trois tours au-dessus de la tête, le lancer au ralenti dans la fumée et le sol qui se brise ; la boucle s'agrippe à la lune et il tire de toutes ses forces, la lune grossit au-dessus du toit, elle arrive. Gros plan sur elle au téléphone : grondement, la caméra tremble, elle lève les yeux, la lune dans ses pupilles, visage horrifié, fondu au noir.",
+      "son": "To the Moon and Back"
+    },
+    {
+      "id": "bat-046",
+      "heros": "fille",
+      "trame": "sauvetage",
+      "idee": "Dans la prairie, assis dans l'herbe au soleil, il rit à ce qu'elle raconte ; le dragon surgit derrière les collines, plane au-dessus d'eux, rugit et c'est LUI qu'il emporte dans ses serres. Elle (le héros) : le choc, la larme, puis le visage qui se ferme. Épée tirée, elle traverse la ville (un banc), la falaise (un ravin) et le pont jusqu'à la tour ; garde, pieds ancrés, le bond au ralenti, le dragon pulvérisé. Souffle, épée rangée, trois pas, un bouquet sorti de derrière le dos avec un sourire charmeur ; il rougit, les cœurs au sommet.",
+      "son": "Believer"
+    },
+    {
+      "id": "bat-047",
+      "heros": "garcon",
+      "trame": "ailes",
+      "idee": "Sur la plage au couchant, elle regarde les mouettes tourner au-dessus des vagues et soupire, les mains dans le dos. Il la regarde, un sourire en coin : il ouvre les bras et ses ailes se déploient d'un coup, onde de choc, les plumes sur le sable ; il plane jusqu'à elle, lui tend la main, elle la prend au ralenti et ils décollent au-dessus de la mer ; le ciel orange, un looping au-dessus des vagues, et ils se posent sur un nuage ; assis l'un contre l'autre, et des ailes lui poussent à elle aussi, ils éclatent de rire.",
+      "son": "Come Fly With Me"
+    },
+    {
+      "id": "bat-048",
+      "heros": "fille",
+      "trame": "bandits",
+      "idee": "La nuit en ville, au coin de la rue, trois bandits masqués surgissent en courant et l'encerclent, lui ; elle (le héros) se plante devant, les poings serrés. Choc, puis le regard qui se durcit, un pas en avant, la garde. Coup de poing, le premier vole hors de l'image ; coup de pied, le deuxième passe par-dessus elle et s'étale K.-O. sur le trottoir, les étoiles autour de la tête ; saut et coup de pied retourné au ralenti, le dernier part dans le décor, onde de choc. Elle se frotte les mains avec un clin d'œil ; il court lui sauter au cou.",
+      "son": "Danger Zone"
+    },
+    {
+      "id": "bat-049",
+      "heros": "garcon",
+      "trame": "chiens",
+      "idee": "Nuit dans la prairie, sous les étoiles, il joint les mains sous le menton, les yeux qui brillent, un chiot dans sa bulle de pensée ; elle croise les bras : non, deux fois de la tête. Il baisse la tête, puis un sourire en coin. Le lendemain soir il vient la chercher par la main, « j'ai une surprise », et l'emmène jusqu'au jardin : une meute entière qui saute et aboie, roulement de tambour. Elle tremble, la spirale au-dessus de la tête, et s'évanouit raide comme une planche au ralenti, les yeux en croix ; il rit avec un chiot dans les bras, s'agenouille près d'elle ; elle revient à elle sous les léchouilles.",
+      "son": "Walking the Dog"
+    },
+    {
+      "id": "bat-050",
+      "heros": "fille",
+      "trame": "diamant",
+      "idee": "Nuit dans les montagnes, sous les étoiles, il regarde sa main nue à la lumière de la lune, rêveur, une bague dans sa bulle ; elle (le héros) comprend, le visage qui se ferme. Pioche sortie de derrière le dos, sprint dans la nuit : la falaise (un ravin), le donjon aux torches (des piques), le tapis de nuages (le vide), jusqu'à la grotte où le diamant géant brille en bleu dans le noir. Pioche levée, pieds ancrés, le saut et le coup au ralenti : flash, mille éclats, la pierre parfaite qui flotte, le marteau qui sonne, la bague levée. Retour en courant jusqu'aux pics, un genou à terre sous la lune ; il porte les mains à sa bouche, saute de joie, câlin et cœurs.",
+      "son": "Perfect"
+    },
+    {
+      "id": "bat-051",
+      "heros": "garcon",
+      "trame": "etoile",
+      "idee": "Nuit devant la maison, assis sur le pas de la porte ; une étoile scintille juste au-dessus du toit, elle la montre du doigt, les yeux en cœur, et joint les mains pour un vœu. Il sourit, tendre, puis se concentre, s'accroupit et part comme une flèche vers le ciel ; au ralenti, sa main se referme sur l'étoile, qui s'éteint là-haut et brille entre ses doigts. Il retombe accroupi sur le perron et la lui tend ; elle la prend dans ses mains jointes, émerveillée, le vœu exaucé ; les cœurs montent sous les étoiles.",
+      "son": "Starman"
+    },
+    {
+      "id": "bat-052",
+      "heros": "fille",
+      "trame": "nuage",
+      "idee": "Sur la plage, assis sur le sable au soleil, ils regardent la mer ; le nuage d'orage arrive en grondant au-dessus des vagues et se plante juste au-dessus de lui, la pluie à verse, lui trempé sous ses mains, les dents qui claquent. Elle (le héros) lève la tête, surprise, puis décidée : debout, accroupie, le bond au-dessus de la mer et le coup de pied au ralenti, impact de bande dessinée ; le nuage crève en étincelles et en gouttes, le soleil revient, les rayons sur le sable. Elle retombe, s'époussette les mains ; il rit aux éclats, trempé, et elle rit avec lui.",
+      "son": "I Can See Clearly Now"
+    },
+    {
+      "id": "bat-053",
+      "heros": "garcon",
+      "trame": "lune",
+      "idee": "Nuit dans la prairie, la pleine lune posée sur la ligne des collines ; elle tend le bras vers elle, les yeux en cœur. Il sourit, puis un sourcil se lève : la corde sortie de derrière le dos, le lasso qui siffle au-dessus de sa tête, le lancer au ralenti dans la fumée et l'herbe qui se fissure ; la boucle file et se referme sur la lune aux yeux ronds ; il tire de tout son poids, les talons plantés, la lune descend lentement et se pose dans l'herbe, le sol qui tremble, puis sourit les yeux fermés. Ils grimpent dessus et s'asseyent côte à côte, les joues roses, les cœurs.",
+      "son": "Moondance"
+    },
+    {
+      "id": "bat-054",
+      "heros": "fille",
+      "trame": "promesse",
+      "idee": "Nuit en ville, sous un lampadaire, elle (le héros) lui lance « je t'offrirai la lune » ; il hausse un sourcil sans quitter son téléphone, « ... ». Gros plan sur elle, vexée, les joues rouges. Quatre pas en arrière sur le trottoir, la corde, le lasso qui tournoie, le lancer au ralenti dans la fumée et le bitume qui se brise ; la boucle fonce entre les immeubles, s'agrippe à la lune, elle tire de toutes ses forces, la lune grossit, elle arrive au-dessus des toits. Gros plan sur lui au téléphone : un grondement, la caméra tremble, il lève les yeux, la lune se reflète dans ses yeux écarquillés, l'horreur, noir.",
+      "son": "Man on the Moon"
+    },
+    {
+      "id": "bat-055",
+      "heros": "garcon",
+      "trame": "sauvetage",
+      "idee": "Nuit dans les montagnes, sous les étoiles, elle lui montre les pics en riant ; l'ombre du dragon passe devant la lune, il pique, rugit et l'emporte dans ses serres. Lui : le choc, le chagrin, une larme, puis l'esprit vengeur. Épée tirée, il traverse la falaise (un rocher), la forêt (un tronc) et le tapis de nuages (le vide) jusqu'à la tour où elle attend, apeurée ; garde, pieds ancrés, le bond au ralenti, le dragon pulvérisé en éclats. Souffle, épée rangée, un bouquet sorti de derrière le dos ; elle lui saute au cou, les cœurs au sommet sous la lune.",
+      "son": "The Final Countdown"
+    },
+    {
+      "id": "bat-056",
+      "heros": "fille",
+      "trame": "ailes",
+      "idee": "Au petit matin devant la maison, il regarde les oiseaux quitter le toit en bande et soupire, la tête en arrière. Elle (le héros) le regarde, attendrie, un sourcil se lève : ses ailes jaillissent dans son dos, onde de choc, les plumes sur l'allée ; elle plane jusqu'à lui, la main tendue, il la prend au ralenti et ils décollent par-dessus le toit ; le ciel clair du matin, un grand virage au-dessus des champs, et ils se posent sur un nuage ; assis l'un contre l'autre, et des ailes lui poussent à lui aussi, ils éclatent de rire.",
+      "son": "Wings"
+    },
+    {
+      "id": "bat-057",
+      "heros": "garcon",
+      "trame": "bandits",
+      "idee": "En ville, en plein jour, quatre bandits masqués déboulent et l'encerclent, elle, qui recule ; il se met devant, figé. Choc, puis l'esprit vengeur : il fait craquer ses jointures, lève les poings. Coup de poing, le premier vole hors de l'image ; coup de pied, le deuxième passe par-dessus lui et s'étale K.-O. sur le trottoir ; saut et coup de pied retourné au ralenti, les deux derniers volent dans le décor, onde de choc. Il s'époussette les mains avec un sourire charmeur ; elle éclate de rire et les cœurs montent.",
+      "son": "Bad Boys"
+    },
+    {
+      "id": "bat-058",
+      "heros": "fille",
+      "trame": "chiens",
+      "idee": "Dans le salon, le soir, assis sur le canapé, elle (le héros) joint les mains sous le menton, les yeux qui brillent : un chiot dans sa bulle de pensée ; il croise les bras et fait non de la tête, deux fois. Elle laisse tomber les épaules, puis un sourire en coin. Un peu plus tard elle le tire par la main hors du canapé, « j'ai une surprise », et l'emmène jusqu'au jardin : une meute entière qui saute et aboie sous la lune, roulement de tambour. Il tremble, la spirale au-dessus de la tête, et s'évanouit raide comme une planche au ralenti, les yeux en croix ; elle rit avec un chiot dans les bras, s'agenouille près de lui ; il revient à lui sous les léchouilles.",
+      "son": "Me and You and a Dog Named Boo"
+    },
+    {
+      "id": "bat-059",
+      "heros": "garcon",
+      "trame": "diamant",
+      "idee": "En ville, sur un banc, elle regarde sa main nue, rêveuse, une bague dans sa bulle de pensée ; il comprend et se ferme. Il sort une pioche de derrière son dos et part en flèche : la falaise (un ravin), le donjon aux torches (des piques), le tapis de nuages (le vide), jusqu'à la grotte où le diamant géant brille en bleu. Pioche levée, pieds ancrés, le saut et le coup au ralenti : mille éclats, la pierre parfaite qui flotte, trois coups de marteau, la bague. Retour en sprint, un genou à terre sur le trottoir ; elle porte les mains à sa bouche et saute de joie ; câlin, les cœurs.",
+      "son": "Thinking Out Loud"
+    },
+    {
+      "id": "bat-060",
+      "heros": "fille",
+      "trame": "etoile",
+      "idee": "À la tombée de la nuit dans les montagnes, la première étoile s'allume au-dessus des pics ; il la montre du doigt, les yeux en cœur, et ferme les yeux pour un vœu. Elle (le héros) sourit, tendre, puis se concentre, s'accroupit et part comme une flèche vers le ciel ; au ralenti, sa main se referme sur l'étoile, qui s'éteint là-haut et brille entre ses doigts. Elle retombe accroupie près de lui et la lui tend ; il ouvre les yeux, émerveillé, et la prend dans ses mains jointes ; ils éclatent de rire, les cœurs montent.",
+      "son": "Lucky Star"
+    },
+    {
+      "id": "bat-061",
+      "heros": "garcon",
+      "trame": "nuage",
+      "idee": "Devant la maison, ils discutent au soleil ; le nuage d'orage arrive en grondant par-dessus le toit et se plante au-dessus d'elle, la pluie à verse, elle claque des dents sous ses mains. Il la regarde, surpris, puis se ferme : accroupi, le bond par-dessus le toit et le coup de pied en plein vol au ralenti qui fait éclater le nuage en étincelles ; le soleil revient d'un coup, les rayons sur la pelouse, les oiseaux. Il retombe accroupi, s'époussette les mains, sourire en coin ; elle l'attrape par le cou et l'embrasse, trempée.",
+      "son": "Have You Ever Seen the Rain"
+    },
+    {
+      "id": "bat-062",
+      "heros": "fille",
+      "trame": "lune",
+      "idee": "Nuit en ville, la lune posée entre deux immeubles ; il la montre du doigt, les yeux en cœur. Elle (le héros) sourit, malicieuse, sort une corde de derrière son dos, fait tournoyer le lasso au-dessus de sa tête et le lance au ralenti, la fumée partout, le trottoir qui se fend ; la boucle file jusqu'à la lune et se referme, la lune ouvre des yeux ronds ; elle tire de tout son poids, les pieds plantés, et la lune descend se poser sur la place dans un grand boum, le sol qui tremble. Ils grimpent dessus et s'asseyent côte à côte, la lune sourit les yeux fermés, les cœurs qui montent.",
+      "son": "Moonlight Serenade"
+    },
+    {
+      "id": "bat-063",
+      "heros": "garcon",
+      "trame": "promesse",
+      "idee": "Nuit dans les montagnes, il promet : « je t'offrirai la lune » ; elle, sur son téléphone, un sourcil levé : « ... ». Gros plan sur lui, la colère qui monte, les joues rouges. Il recule de quatre pas, sort le lasso, trois tours au-dessus de la tête, le lancer au ralenti, fumée, la roche qui se brise ; la boucle s'agrippe à la lune et il tire, les pieds plantés, la lune grossit à vue d'œil au-dessus des pics. Gros plan sur elle au téléphone : grondement, secousses, elle lève les yeux, la lune dans ses pupilles, visage horrifié, fondu au noir.",
+      "son": "Moonlight Shadow"
     }
   ]
 }

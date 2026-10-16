@@ -157,7 +157,7 @@ Pour chaque créneau à remplir, dans l'ordre des dates :
    d'essai des fleurs du 7 octobre 2026) : **jamais de doublon**, ni de
    sujet, ni de scène, ni de phrase déjà vue dans `recents_et_prevus` ;
 3. sinon (la banque de la catégorie est épuisée, elle couvre treize
-   semaines) tu inventes un sujet dans le même esprit que ceux de la
+   semaines, neuf pour le bonhomme bâton) tu inventes un sujet dans le même esprit que ceux de la
    banque, avec un identifiant neuf (`pov-274`, `connais-tu-40`...), sans
    reprendre une situation vue dans `recents_et_prevus` ni dans les
    soixante derniers posts de `posts/`. La publication ne s'arrête jamais
@@ -496,10 +496,16 @@ rendue (`image.jpg`) : les quatre cases se lisent-elles sans le texte ?
 La story du matin n'est pas ton travail : l'automate reprend le reel du
 matin en story après sa publication.
 
-### Le bonhomme bâton (lundi, mercredi et vendredi matin)
+### Le bonhomme bâton (tous les matins)
 
 Gabarit `baton`, catégorie `baton`, `"format": "reel"`, un sujet de la
-banque `baton` (ou un sujet daté qui porte cette catégorie). C'est le format
+banque `baton` (ou un sujet daté qui porte cette catégorie). Un chaque
+matin depuis le 16 octobre 2026 au soir (Thomas : « on lance ces animations
+à raison de une par jour, du coup réduis les formats posts classiques » ; le
+matin même il n'y en avait que trois par semaine, les autres matins étaient
+des animations des mascottes, qui gardent le lundi et le mercredi soir et la
+coquine du vendredi soir ; les animations déjà écrites pour ces matins te
+reviennent par `hors_grille`). C'est le format
 « me in my dreams with u » : un héros au corps de traits qui bouge comme un
 ninja, des mini-aventures de couple en noir et blanc où seuls les éléments
 qui comptent sont en couleur, des ralentis, des zooms, une vraie petite
@@ -594,8 +600,10 @@ connu) : tu écris le brief qui la raconte.
 - **Varier** : le décor d'ouverture (montagnes, prairie, ville, plage,
   maison, salon), le jour ou la nuit, les paysages traversés et leurs
   obstacles, les temps du gros plan d'émotion, la fin quand la trame en
-  laisse le choix. Deux reels de la même semaine n'ont pas la même trame ;
-  on tourne sur les neuf, dans l'ordre de la banque.
+  laisse le choix. Deux reels de la même semaine n'ont pas la même trame
+  (sept matins, neuf trames) : on tourne sur les neuf, dans l'ordre de la
+  banque, qui est écrite pour que deux matins de suite n'aient jamais le
+  même décor d'ouverture ; on la suit dans l'ordre.
 - **La musique** : le reel est rendu sans musique et publié avec un son de
   la bibliothèque Instagram. Le sujet donne un titre connu qui va avec
   l'histoire (« He's a Pirate » pour le dragon, « Kung Fu Fighting » pour

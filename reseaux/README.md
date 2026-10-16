@@ -224,11 +224,13 @@ l'effet `impact` → `coup`, ailes qui se déploient → `froissement` et
 `aboie` et `boing`, lune qui se pose → `impact-profond` et `boum`, bulle de
 dialogue → `bulle`, ralenti → `coeur-ambiance`, transition floue →
 `passage`). Le contrôle du scénario est `automates/lib/baton.mjs`. Depuis le
-16 octobre 2026, le format est la catégorie `baton` du lundi, du mercredi
-et du vendredi matin (`MELANGE_DEFAUT`, migration `20261016120000`), avec
-une banque de 27 histoires (`atelier/sujets.json`, trois par trame, les
-trames à tour de rôle, le héros fille presque une fois sur deux et dans
-chaque trame, un titre de musique connu par histoire) et sa section dans
+16 octobre 2026, le format est la catégorie `baton` de tous les matins
+(`MELANGE_DEFAUT`, migration `20261016150000` ; trois matins par semaine
+le matin même, un par jour depuis le soir, Thomas : « on lance ces
+animations à raison de une par jour »), avec une banque de 63 histoires
+(`atelier/sujets.json`, sept par trame, les trames à tour de rôle, jamais
+le même décor d'ouverture deux jours de suite, le héros fille presque une
+fois sur deux et dans chaque trame, un titre de musique connu par histoire) et sa section dans
 `atelier/CONSIGNES.md` ; la publication cherche ce titre dans la
 bibliothèque Instagram (`son.recherche`), à défaut l'ambiance de la trame
 (`epique` pour le dragon, les bandits et le diamant, `drole` pour les

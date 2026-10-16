@@ -65,24 +65,27 @@ refuse un post qui ne la suit pas.
 | | Matin | Midi | Après-midi |
 |---|---|---|---|
 | Lundi | Bonhomme bâton | Connais-tu | POV |
-| Mardi | POV | Tu préfères | BD en quatre cases |
+| Mardi | Bonhomme bâton | Tu préfères | BD en quatre cases |
 | Mercredi | Bonhomme bâton | Connais-tu | POV |
-| Jeudi | POV | Statique | Carrousel |
+| Jeudi | Bonhomme bâton | Statique | Carrousel |
 | Vendredi | Bonhomme bâton | Connais-tu | Coquin |
-| Samedi | POV | Tu préfères | « He's a 10 but... » |
-| Dimanche | POV | Statique | Phrase tendre |
+| Samedi | Bonhomme bâton | Tu préfères | « He's a 10 but... » |
+| Dimanche | Bonhomme bâton | Statique | Phrase tendre |
 
-Par semaine : 7 animations des mascottes (dont une coquine), 3 reels du
-bonhomme bâton (le lundi, le mercredi et le vendredi matin, depuis le
-16 octobre 2026, à la place de trois animations), 3 « Connais-tu ton
-partenaire ? », 2 « Tu préfères », 2 reels statiques, 1 phrase tendre (le
-dimanche soir), 1 carrousel de questions (le jeudi soir, depuis le 7 octobre
-2026 : c'est le format qui se garde, « Save this for your next date
-night »), 1 bande dessinée en quatre cases (le mardi soir, depuis le
-8 octobre 2026) et 1 carrousel « He's a 10 but... » (le samedi soir, depuis
-le 12 octobre 2026, à la place de la phrase tendre du samedi). Sur 13
-semaines : 273 posts. Et chaque jour, une **story** reprend le reel du matin
-(voir plus bas).
+Par semaine : 7 reels du bonhomme bâton (tous les matins depuis le
+16 octobre 2026 au soir ; le matin même il n'en avait que trois, le lundi, le
+mercredi et le vendredi, puis Thomas, devant la promesse de la lune et les
+chiens : « on lance ces animations à raison de une par jour, du coup réduis
+les formats posts classiques »), 3 animations des mascottes (le lundi et le
+mercredi soir, et la coquine du vendredi soir ; elles étaient dix par semaine
+jusqu'au 16 octobre 2026), 3 « Connais-tu ton partenaire ? », 2 « Tu
+préfères », 2 reels statiques, 1 phrase tendre (le dimanche soir),
+1 carrousel de questions (le jeudi soir, depuis le 7 octobre 2026 : c'est le
+format qui se garde, « Save this for your next date night »), 1 bande
+dessinée en quatre cases (le mardi soir, depuis le 8 octobre 2026) et
+1 carrousel « He's a 10 but... » (le samedi soir, depuis le 12 octobre 2026,
+à la place de la phrase tendre du samedi). Sur 13 semaines : 273 posts. Et
+chaque jour, une **story** reprend le reel du matin (voir plus bas).
 
 ## Les catégories
 
@@ -137,8 +140,8 @@ apart »). Chaque mécanique vient avec ses sujets dans la banque.
   7 octobre 2026, la forêt, la rue, le café, la plage, l'intérieur d'une
   voiture et la salle de cinéma, chacun avec son ambiance sonore (oiseaux,
   circulation, brouhaha, vagues, moteur, projecteur). Jamais le même décor
-  deux animations de suite ; quatre animations par semaine au moins hors de
-  la maison.
+  deux animations de suite ; deux des trois animations de la semaine au
+  moins hors de la maison (quatre sur dix jusqu'au 16 octobre 2026).
 - Le titre « POV: ... » en haut, ou un message mot à mot, rarement les deux.
 - La mention quiz-couple.com est dans l'image ; **la légende ne renvoie
   jamais vers le site.**
@@ -296,8 +299,13 @@ sa queue de cheval, le garçon son bandana, quel que soit le rôle. Pas de
 texte à l'écran en dehors du titre et des deux bulles de la promesse, pas de
 voix : des bruitages, et la musique connue qui va avec l'histoire (voir « Le
 son »). Légende sans renvoi vers le site ; hashtags `#stickman`,
-`#stickfigure`, `#animation`, `#couplegoals`, `#quizcouple`. Vingt-sept
-histoires dans la banque (`baton`), trois par trame.
+`#stickfigure`, `#animation`, `#couplegoals`, `#quizcouple`. Un reel
+chaque matin depuis le 16 octobre 2026 au soir (Thomas : « on lance ces
+animations à raison de une par jour ») ; soixante-trois histoires dans la
+banque (`baton`), sept par trame, les neuf trames à tour de rôle et jamais
+le même décor d'ouverture deux jours de suite : à ce rythme une trame
+revient tous les neuf jours, et c'est le décor, le moment, le héros et la
+musique qui font la différence d'un reel à l'autre.
 
 ### `post`
 
@@ -311,8 +319,8 @@ publication : même vidéo, 24 heures, sans légende ni son ajouté. C'est une
 deuxième surface pour le même travail, et c'est l'automate qui s'en occupe
 (`publierStories` dans `publication.mjs`) : la routine n'a rien à écrire.
 Un reel de plus de 60 secondes ne peut pas devenir une story ; le matin
-étant une animation de 10 à 15 secondes ou un bonhomme bâton de 40 s au
-plus, ça ne se produit pas.
+étant un bonhomme bâton de 40 s au plus (une animation de 10 à 15 secondes
+les autres matins jusqu'au 16 octobre 2026), ça ne se produit pas.
 
 ## Le son
 
@@ -459,11 +467,14 @@ la plage, la voiture et le cinéma, et les gags à bulles ont été réécrits e
 situations), 15 coquines, 28
 statiques, 51 thèmes de « Connais-tu » (dont 8 « Who's more likely? » et 3
 éditions difficiles), 28 de « Tu préfères », 28 phrases, 16 carrousels
-« He's a 10 but... » (12 octobre 2026), 27 histoires de bonhomme bâton
-(16 octobre 2026, trois par trame de rêve, le héros fille presque une fois
-sur deux, chacune avec sa musique), plus 18 sujets datés de Noël et du
-Nouvel An (dont deux bonhommes bâton : l'étoile de Noël et l'envol du
-Nouvel An). La routine prend le premier sujet libre de la
+« He's a 10 but... » (12 octobre 2026), 63 histoires de bonhomme bâton
+(16 octobre 2026 : 27 le matin, trois par trame de rêve, puis 63 le soir
+même pour un reel par jour, sept par trame, les trames à tour de rôle,
+jamais le même décor d'ouverture deux jours de suite, le héros fille presque
+une fois sur deux, chacune avec sa musique), plus 18 sujets datés de Noël et
+du Nouvel An (dont cinq bonhommes bâton, un par matin daté : le chiot de
+Noël, la bague de la veille de Noël, l'étoile de Noël, le nuage du
+31 décembre et l'envol du Nouvel An). La routine prend le premier sujet libre de la
 catégorie et écrit son id dans le champ `sujet` du post ; un sujet déjà
 utilisé dans `posts/` n'est jamais repris. Les sujets datés passent avant
 la banque, à leur date et à leur créneau.

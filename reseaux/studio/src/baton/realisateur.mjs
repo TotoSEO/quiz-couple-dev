@@ -1349,6 +1349,7 @@ function exploit(seq, ctx, f) {
       actions: [{ type: 'court', de: 0.6, a: 0.98, allure: 'sprint' }],
     });
     // les derniers : ils avancent ensemble et prennent le coup de pied retourné
+    // (le quatrième part plus haut, jamais plus loin : 1600 est la borne du contrôle)
     for (let i = 2; i < nb; i++) {
       bandits.push({
         qui: `bandit${i + 1}`,
@@ -1361,7 +1362,7 @@ function exploit(seq, ctx, f) {
           { a: 2.1, x: postes[i] - 170, ease: 'douce' },
           { a: r2(2.45 + (i - 2) * 0.05), pose: 'projete', fondu: 0.1, expression: 'ko' },
           { a: r2(2.45 + (i - 2) * 0.05), x: postes[i] - 170, haut: 0, rot: 0 },
-          { a: r2(3.0 + (i - 2) * 0.05), x: 1600 + (i - 2) * 100, haut: 300 + (i - 2) * 160, rot: -90, ease: 'sortie' },
+          { a: r2(3.0 + (i - 2) * 0.05), x: 1600, haut: 300 + (i - 2) * 160, rot: -90, ease: 'sortie' },
         ],
         actions: [{ type: 'court', de: 1.4, a: 2.1, allure: 'marche' }, { type: 'tremble', de: 0, a: 1.4, amplitude: 0.7 }],
       });
