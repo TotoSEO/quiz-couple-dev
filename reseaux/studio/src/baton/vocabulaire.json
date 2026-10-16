@@ -28,7 +28,8 @@
     "joie": "Bras en V au-dessus de la tête",
     "assis": "Assis au sol, jambes devant",
     "ancre": "La garde basse, le pied arrière droit reculé et ancré, la pointe enfoncée",
-    "ancre-tendu": "La même, le talon arrière qui se lève (la tension avant le bond)"
+    "ancre-tendu": "La même, le talon arrière qui se lève (la tension avant le bond)",
+    "abattu": "Abattu : la tête tombe, les épaules aussi, les bras pendent"
   },
   "expressions": {
     "neutre": "Deux points, bouche en petit trait",
@@ -45,7 +46,9 @@
     "peur": "Yeux ronds, sourcils relevés vers l'extérieur, bouche tremblante",
     "soulagee": "Sourcils relevés, sourire doux",
     "ferme": "Yeux fermés, bouche entrouverte (souffle)",
-    "triste": "Bouche vers le bas, sourcils tristes"
+    "triste": "Bouche vers le bas, sourcils tristes",
+    "chagrin": "Triste, une larme qui coule de l'œil proche",
+    "vengeur": "Sourcils en biais, yeux plissés, sourire en coin : l'esprit de vengeance"
   },
   "actions": [
     "court",
@@ -77,7 +80,7 @@
     "montagnes": {
       "description": "Un trait de sol, trois pics en deux plans de profondeur, soleil, nuages, touffes d'herbe",
       "sol": 1300,
-      "ambiance": "vent"
+      "ambiance": "vent-montagne"
     },
     "foret": {
       "description": "Travelling : troncs et feuillages au premier plan, arbres gris derrière, herbe ; obstacle tronc",
@@ -98,12 +101,12 @@
       "description": "Contre-plongée : la tour sur le tiers droit, plateforme crénelée en haut (sol de la plateforme : 600, assez bas pour que les visages restent sous le titre), sol au pied : 1300",
       "sol": 1300,
       "plateforme": 600,
-      "ambiance": "vent"
+      "ambiance": "vent-montagne"
     },
     "sommet": {
       "description": "Le sol crénelé de la plateforme, le ciel, le soleil, des oiseaux au loin",
       "sol": 1250,
-      "ambiance": "vent"
+      "ambiance": "vent-montagne"
     }
   },
   "creatures": {
@@ -151,10 +154,39 @@
     "flash",
     "monte",
     "ralenti",
-    "atterrit"
+    "atterrit",
+    "epee-tire",
+    "epee-range",
+    "lame",
+    "dragon-grogne",
+    "dragon-rugit",
+    "passage",
+    "air",
+    "fusee",
+    "meteore",
+    "tempete",
+    "crepite",
+    "charge-electrique",
+    "montee-electrique",
+    "onde-choc",
+    "eclair-electrique",
+    "deflagration",
+    "debris",
+    "impact-lointain",
+    "impact-profond",
+    "trailer",
+    "chute",
+    "pietine",
+    "craquement",
+    "cailloux",
+    "coeur-lent",
+    "coeur-ambiance",
+    "scintille",
+    "etincelle-magique"
   ],
   "ambiances": [
     "vent",
+    "vent-montagne",
     "foret",
     "oiseaux",
     "grillons",
@@ -164,10 +196,11 @@
   "transitions": [
     "coupe",
     "fondu",
+    "flou",
     "noir"
   ],
   "duree": {
     "min": 10,
-    "max": 22
+    "max": 40
   }
 }

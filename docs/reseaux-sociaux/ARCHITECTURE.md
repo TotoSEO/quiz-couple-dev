@@ -208,8 +208,10 @@ tu valides les formats, et l'automate les décline.
 > quiz chrono à bonne réponse (`quiz-chrono`, R7) reste disponible hors de
 > la semaine type. Depuis le 15 octobre 2026, le studio sait aussi rendre
 > le **bonhomme bâton** (`baton`, « me in my dreams with u ») : une
-> mini-aventure de 10 à 20 s au trait noir, un héros articulé qui bouge
-> comme un ninja, des ralentis, un dragon, hors de la DA des mascottes
+> mini-aventure au trait noir (le dragon fait 34 s ; plus de cible « 10 à
+> 20 s » depuis le 16 octobre 2026, des scènes étaient précipitées), un
+> héros articulé qui bouge comme un ninja, des ralentis, des transitions
+> floues entre les paysages, un dragon, hors de la DA des mascottes
 > (`reseaux/README.md`, « Le bonhomme bâton »). Il n'a pas encore de
 > catégorie dans la grille : Thomas valide le premier reel avant la
 > production. Le tableau ci-dessous est le plan de départ.

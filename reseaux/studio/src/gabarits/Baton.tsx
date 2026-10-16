@@ -2,7 +2,11 @@
 // de récit (les ralentis étirent l'écran), le titre en haut, la signature
 // en bas, le flash blanc d'une explosion, le voile d'un ralenti, les
 // lignes de vitesse à l'écran. Coupes franches par défaut ; « fondu » fait
-// un fondu enchaîné depuis la dernière image du plan d'avant.
+// un fondu enchaîné court depuis la dernière image du plan d'avant ;
+// « flou » (Thomas, 16 octobre 2026 : « un effet flou comme une transition
+// CapCut, pour le côté le temps passe ») dure une seconde : le plan d'avant
+// continue de jouer en se brouillant et en s'éclaircissant, le nouveau
+// arrive flou et se précise.
 import React from 'react';
 import { Img, staticFile, useCurrentFrame } from 'remotion';
 import '../baton/charte';
@@ -13,10 +17,17 @@ import type { Plan } from '../plan';
 import { lignesVitesse } from '../baton/effets';
 import type { PlanBaton, RecetteBaton } from '../baton/recette';
 import { Etage } from '../baton/Scene';
+import { FLOU } from '../baton/plan';
 import { calculer, remap } from '../baton/temps';
 
 const TRANSITION = 8;
+// le flou le plus fort de la transition, en pixels
+const FLOU_MAX = 22;
 const bornes = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const douce = (p: number) => {
+  const q = bornes(p);
+  return q * q * (3 - 2 * q);
+};
 
 // Les flashs d'un plan, en secondes de récit : l'effet « flash » et
 // l'explosion d'une créature.
@@ -38,11 +49,19 @@ export const Baton: React.FC<{ recette: RecetteBaton; plan: Plan; verification?:
   const t = rm.scene(tReel);
   const graine = Math.floor(f / 2);
   const image = calculer(p, t, graine);
-  // le fondu enchaîné depuis le plan d'avant
-  const enTransition = i > 0 && fPlan < TRANSITION && p.transition === 'fondu';
-  const q = enTransition ? fPlan / TRANSITION : 1;
-  const pPrec = enTransition ? r.plans[i - 1] : null;
-  const imagePrec = pPrec ? calculer(pPrec, remap(pPrec).scene((scenes[i - 1].duree - 1) / FPS), graine) : null;
+  // le fondu enchaîné court, ou la transition floue d'une seconde
+  const fondu = i > 0 && fPlan < TRANSITION && p.transition === 'fondu';
+  const flou = i > 0 && fPlan < FLOU && p.transition === 'flou';
+  const q = fondu ? fPlan / TRANSITION : flou ? douce(fPlan / FLOU) : 1;
+  const pPrec = fondu || flou ? r.plans[i - 1] : null;
+  let imagePrec = null;
+  if (pPrec) {
+    const rmPrec = remap(pPrec);
+    // en fondu, le plan d'avant reste figé sur sa dernière image ; en flou,
+    // il continue de jouer pendant la seconde de transition
+    const tPrec = flou ? rmPrec.scene((scenes[i - 1].duree + fPlan) / FPS) : rmPrec.scene((scenes[i - 1].duree - 1) / FPS);
+    imagePrec = calculer(pPrec, tPrec, graine);
+  }
   // le flash blanc : plein deux images, puis fondu en 0,3 s
   let flash = 0;
   for (const tf of flashs(p)) {
@@ -65,14 +84,17 @@ export const Baton: React.FC<{ recette: RecetteBaton; plan: Plan; verification?:
   // le noir : un fondu au noir en fin de reel si le dernier plan le demande
   const reste = sc.duree - fPlan;
   const noir = i === scenes.length - 1 && p.transition === 'noir' && reste < 10 ? 1 - reste / 10 : 0;
+  // en flou : l'ancien se brouille et s'éclaircit, le nouveau se précise
+  const filtrePrec = flou ? `blur(${(FLOU_MAX * q).toFixed(1)}px) brightness(${(1 + 0.3 * Math.sin(Math.PI * q)).toFixed(3)})` : undefined;
+  const filtre = flou ? `blur(${(FLOU_MAX * (1 - q)).toFixed(1)}px) brightness(${(1 + 0.3 * Math.sin(Math.PI * q)).toFixed(3)})` : undefined;
   return (
     <Canevas theme="light" format="reel" verification={verification} classes="is-baton is-papier">
       {pPrec && imagePrec && (
-        <div style={{ position: 'absolute', inset: 0 }}>
-          <Etage plan={pPrec} image={imagePrec} graine={graine} id={`p${i - 1}`} />
+        <div style={{ position: 'absolute', inset: 0, background: '#ffffff', filter: filtrePrec }}>
+          <Etage plan={pPrec} image={imagePrec} graine={graine} id={`p${i - 1}`} fantome />
         </div>
       )}
-      <div style={{ position: 'absolute', inset: 0, opacity: enTransition ? q : 1, background: '#ffffff' }}>
+      <div style={{ position: 'absolute', inset: 0, opacity: fondu || flou ? q : 1, background: '#ffffff', filter: filtre }}>
         <Etage plan={p} image={image} graine={graine} id={`p${i}`} />
       </div>
       {lignes && <svg viewBox="0 0 1080 1920" width={1080} height={1920} style={{ position: 'absolute', left: 0, top: 0 }} dangerouslySetInnerHTML={{ __html: lignes }} />}

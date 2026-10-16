@@ -72,6 +72,8 @@ export const POSES: Record<NomPose, Pose> = {
   atterrit: pose({ torse: 40, tete: -20, epauleD: 20, coudeD: 0, lame: 30, epauleG: -40, coudeG: -15, hancheG: 85, genouG: 120, hancheD: 45, genouD: 110 }),
   glisse: pose({ torse: -22, tete: 8, epauleD: -45, coudeD: 15, lame: 20, epauleG: 65, coudeG: 10, hancheG: 52, genouG: 6, hancheD: 20, genouD: 70, piedG: 20 }),
   'leve-tete': pose({ torse: -4, tete: -25, epauleD: 12, coudeD: 4, lame: 8, epauleG: 10, coudeG: 8 }),
+  // abattu : la tête tombe, les épaules aussi, les bras pendent
+  abattu: pose({ torse: 7, tete: 16, epauleD: -3, coudeD: 4, epauleG: 5, coudeG: 4, hancheG: 4, genouG: 6, hancheD: -4, genouD: 6 }),
   souffle: pose({ torse: 65, tete: 0, epauleD: -27, coudeD: 0, lame: 40, epauleG: -22, coudeG: 0, hancheG: 30, genouG: 40, hancheD: 28, genouD: 38 }),
   'range-epee': pose({ torse: 6, tete: -4, epauleD: 165, coudeD: 125, epauleG: -35, coudeG: 30, hancheG: 12, genouG: 18, hancheD: -12, genouD: 18 }),
   'cache-dos': pose({ torse: -3, tete: 4, epauleD: -45, coudeD: -60, epauleG: 6, coudeG: 10 }),
@@ -178,7 +180,7 @@ export const ancrage = (p: Pose): number => {
 type Yeux = 'point' | 'rond' | 'grand' | 'trait' | 'plisse' | 'ferme' | 'heureux' | 'bleu' | 'clin';
 type Sourcils = 'hauts' | 'tres-hauts' | 'faches' | 'releve' | 'tristes' | 'peur' | 'doux';
 type Bouche = 'trait' | 'sourire' | 'o' | 'petit-o' | 'serre' | 'rire' | 'coin' | 'peur' | 'triste' | 'mini';
-type Visage = { yeux: Yeux; sourcils?: Sourcils; bouche: Bouche; joues?: boolean; etincelle?: boolean };
+type Visage = { yeux: Yeux; sourcils?: Sourcils; bouche: Bouche; joues?: boolean; etincelle?: boolean; larme?: boolean };
 
 export const VISAGES: Record<NomExpression, Visage> = {
   neutre: { yeux: 'point', bouche: 'trait' },
@@ -196,6 +198,10 @@ export const VISAGES: Record<NomExpression, Visage> = {
   soulagee: { yeux: 'point', sourcils: 'doux', bouche: 'sourire' },
   ferme: { yeux: 'ferme', bouche: 'petit-o' },
   triste: { yeux: 'point', sourcils: 'tristes', bouche: 'triste' },
+  // le chagrin : triste, et une larme qui coule de l'œil proche
+  chagrin: { yeux: 'point', sourcils: 'tristes', bouche: 'triste', larme: true },
+  // l'esprit vengeur : sourcils en biais, yeux plissés, et un sourire en coin
+  vengeur: { yeux: 'plisse', sourcils: 'faches', bouche: 'coin' },
 };
 
 export const COULEURS = {
@@ -236,6 +242,8 @@ export type Apparence = {
   tient: 'bouquet' | 'aucun';
   t: number;
   graine: number;
+  // secondes depuis que l'expression a changé (la larme coule, l'étincelle naît)
+  depuis: number;
   // l'étincelle du sourire charmeur (0 à 1)
   etincelle: number;
   // une rémanence : tout d'une couleur, sans accent
@@ -341,6 +349,18 @@ const visage = (ap: Apparence, encre: string, accent: boolean): string => {
         break;
     }
   });
+  // la larme : une goutte qui perle sous l'œil proche, coule le long de la
+  // joue et s'efface, puis une autre
+  if (v.larme) {
+    const e = yeux[1];
+    const cycle = 1.3;
+    const u = ((ap.depuis + 0.2) % cycle) / cycle;
+    const perle = Math.min(1, ap.depuis / 0.3);
+    const y = e[1] + 0.22 + u * 0.7;
+    const r = 0.07 * perle * (u < 0.15 ? u / 0.15 : 1);
+    const op = perle * (1 - Math.max(0, (u - 0.7) / 0.3));
+    s += `<path d="M${n3(e[0] + 0.1)} ${n3(y - r * 1.6)} C${n3(e[0] + 0.1 + r)} ${n3(y - r * 0.4)} ${n3(e[0] + 0.1 + r)} ${n3(y + r)} ${n3(e[0] + 0.1)} ${n3(y + r)} C${n3(e[0] + 0.1 - r)} ${n3(y + r)} ${n3(e[0] + 0.1 - r)} ${n3(y - r * 0.4)} ${n3(e[0] + 0.1)} ${n3(y - r * 1.6)} Z" fill="${accent ? '#8fd3f4' : encre}" stroke="${encre}" stroke-width="0.05" opacity="${n3(op)}"/>`;
+  }
   // joues
   if (v.joues && accent) s += rond([yeux[0][0] - 0.1, yeux[0][1] + 0.4], 0.12, COULEURS.rose, undefined, 0, ' opacity="0.55"') + rond([yeux[1][0] + 0.1, yeux[1][1] + 0.4], 0.12, COULEURS.rose, undefined, 0, ' opacity="0.55"');
   // bouche

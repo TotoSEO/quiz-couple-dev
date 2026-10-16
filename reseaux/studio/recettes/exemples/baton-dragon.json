@@ -2,15 +2,15 @@
   "gabarit": "baton",
   "langue": "en",
   "theme": "light",
-  "idee": "Le dragon enlève sa copine ; le héros sort son épée électrique, traverse trois paysages en parkour, bondit sur le dragon au ralenti, le pulvérise, et lui offre des fleurs avec un sourire charmeur. Découpage complet dans baton-dragon.md.",
+  "idee": "Le dragon enlève sa copine ; le héros, choqué puis triste, relève la tête l'esprit vengeur, sort son épée électrique, traverse trois paysages en parkour (coupes floues, le temps passe), bondit sur le dragon au ralenti, le pulvérise, et lui offre des fleurs avec un sourire charmeur. Découpage complet dans baton-dragon.md.",
   "titre": "me in my dreams with u",
   "son": {
     "ambiance": "tendance"
   },
   "plans": [
     {
-      "description": "Plan d'ensemble, caméra fixe, montagnes. Les deux se parlent debout face à face : lui gesticule de la main droite, elle penche la tête puis répond et rit. Une ombre glisse sur le sol depuis la droite ; il lève les yeux, surpris, elle se retourne. Le dragon entre en piqué par le coin haut droit, la saisit dans ses serres (l'écran tremble, poussière, boum) et remonte en l'emportant, jambes qui gigotent. Lui recule, bras écartés, tête renversée, bouche ouverte.",
-      "duree": 2.7,
+      "description": "Plan d'ensemble, caméra fixe, montagnes. Les deux se parlent debout face à face : lui gesticule de la main droite, elle penche la tête puis répond et rit. À 1,3 s le dragon entre en vol par le coin haut droit, grand, ailes déployées, grognement, et vient se placer au-dessus d'eux à droite ; son ombre glisse sur le sol jusqu'à eux. Il lève les yeux, surpris, elle se retourne. Le dragon plane sur place et rugit (gueule ouverte, yeux rouges), une rafale couche l'herbe et le bandana ; elle a peur, lui est sous le choc ; la caméra pousse un peu sur eux. Puis le dragon pique sur elle, la saisit dans ses serres (l'écran tremble, poussière, impact sourd) et remonte en l'emportant, jambes qui gigotent, jusqu'à sortir par le coin haut droit. Lui recule, bras écartés, tête renversée, bouche ouverte, et les suit des yeux.",
+      "duree": 5.0,
       "decor": "montagnes",
       "persos": [
         {
@@ -27,9 +27,9 @@
               "fondu": 0.3
             },
             {
-              "a": 1.65,
+              "a": 1.75,
               "pose": "leve-tete",
-              "fondu": 0.25,
+              "fondu": 0.3,
               "expression": "surpris",
               "regard": [
                 0.7,
@@ -37,13 +37,28 @@
               ]
             },
             {
-              "a": 2.3,
+              "a": 2.95,
+              "expression": "peur",
+              "regard": [
+                0.75,
+                -0.85
+              ]
+            },
+            {
+              "a": 3.6,
               "pose": "choc",
               "fondu": 0.2,
               "expression": "choc",
               "regard": [
                 0.8,
                 -0.9
+              ]
+            },
+            {
+              "a": 4.4,
+              "regard": [
+                0.9,
+                -1
               ]
             }
           ],
@@ -58,6 +73,18 @@
               "de": 0,
               "a": 0.01,
               "force": 0.5
+            },
+            {
+              "type": "vent",
+              "de": 2.6,
+              "a": 3.1,
+              "force": 1.1
+            },
+            {
+              "type": "vent",
+              "de": 3.7,
+              "a": 4.2,
+              "force": 0.7
             }
           ]
         },
@@ -74,11 +101,11 @@
               "fondu": 0.3
             },
             {
-              "a": 1.4,
+              "a": 1.45,
               "expression": "rire"
             },
             {
-              "a": 1.9,
+              "a": 2.05,
               "pose": "debout",
               "fondu": 0.2,
               "sens": "droite",
@@ -89,7 +116,7 @@
               ]
             },
             {
-              "a": 2.3,
+              "a": 2.9,
               "expression": "peur"
             }
           ],
@@ -97,7 +124,7 @@
             {
               "type": "parle",
               "de": 1.1,
-              "a": 1.4
+              "a": 1.45
             },
             {
               "type": "vent",
@@ -107,8 +134,8 @@
             },
             {
               "type": "gigote",
-              "de": 2.3,
-              "a": 2.7
+              "de": 3.6,
+              "a": 5.0
             }
           ]
         }
@@ -116,30 +143,45 @@
       "creatures": [
         {
           "qui": "dragon",
-          "x": 1420,
-          "y": 40,
+          "x": 1500,
+          "y": -150,
           "echelle": 1.35,
           "sens": "gauche",
-          "pose": "perche",
+          "pose": "vole",
           "porte": "elle",
-          "porteDe": 2.3,
+          "porteDe": 3.6,
           "etapes": [
             {
-              "a": 2.0,
-              "x": 1420,
-              "y": 40,
+              "a": 1.3,
+              "x": 1500,
+              "y": -150
+            },
+            {
+              "a": 2.4,
+              "x": 880,
+              "y": 430,
+              "ease": "sortie"
+            },
+            {
+              "a": 2.5,
+              "pose": "rugit"
+            },
+            {
+              "a": 3.05,
+              "x": 880,
+              "y": 430,
               "pose": "plonge"
             },
             {
-              "a": 2.3,
+              "a": 3.6,
               "x": 700,
               "y": 880,
               "ease": "entree"
             },
             {
-              "a": 2.7,
-              "x": 1300,
-              "y": -280,
+              "a": 5.0,
+              "x": 1350,
+              "y": -320,
               "pose": "vole",
               "ease": "entree"
             }
@@ -149,16 +191,25 @@
       "effets": [
         {
           "effet": "ombre",
-          "de": 1.55,
-          "a": 2.25,
-          "deX": 1180,
+          "de": 1.5,
+          "a": 2.4,
+          "deX": 1260,
+          "versX": 880,
+          "y": 1300,
+          "largeur": 330
+        },
+        {
+          "effet": "ombre",
+          "de": 3.05,
+          "a": 3.6,
+          "deX": 880,
           "versX": 660,
           "y": 1300,
           "largeur": 300
         },
         {
           "effet": "poussiere",
-          "de": 2.3,
+          "de": 3.6,
           "x": 660,
           "y": 1300,
           "intensite": 1.2
@@ -166,14 +217,29 @@
       ],
       "camera": [
         {
-          "a": 2.3,
+          "a": 0,
+          "zoom": 1
+        },
+        {
+          "a": 2.5,
+          "zoom": 1
+        },
+        {
+          "a": 3.05,
+          "zoom": 1.08,
+          "x": 620,
+          "y": 900,
+          "ease": "douce"
+        },
+        {
+          "a": 3.6,
           "secousse": 30
         }
       ]
     },
     {
-      "description": "Très gros plan sur le visage du héros, coupe franche : la tête remplit l'image. Choc (yeux ronds écarquillés, bouche en o, sourcils très hauts), la tête tremble à peine, le regard fixé en haut à droite. À 0,7 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée ; coup de zoom d'accompagnement, coup sourd. Il tient le regard, le vent se lève, les pans du bandana claquent, une montée sonore mène à la coupe.",
-      "duree": 1.6,
+      "description": "Très gros plan sur le visage du héros, coupe franche : la tête remplit l'image. Trois temps. Le choc (yeux ronds écarquillés, bouche en o, sourcils très hauts), la tête tremble à peine, le regard fixé en haut à droite, deux battements de cœur lents. À 1,2 s la tête tombe : sourcils tristes, bouche à l'envers, le regard descend vers le sol, une larme perle sous l'œil et coule sur la joue ; le vent tombe, presque le silence. À 2,5 s le visage se relève et se ferme d'un coup : sourcils en biais, yeux plissés, un sourire en coin, l'esprit de vengeance ; coup de zoom d'accompagnement, impact sourd au loin, et le vent se lève, les pans du bandana claquent, une montée de tempête mène à la coupe.",
+      "duree": 3.8,
       "decor": "montagnes",
       "persos": [
         {
@@ -192,10 +258,20 @@
               ]
             },
             {
-              "a": 0.7,
+              "a": 1.2,
+              "pose": "abattu",
+              "fondu": 0.55,
+              "expression": "chagrin",
+              "regard": [
+                0.2,
+                0.7
+              ]
+            },
+            {
+              "a": 2.5,
               "pose": "determine",
-              "fondu": 0.15,
-              "expression": "determine",
+              "fondu": 0.25,
+              "expression": "vengeur",
               "regard": [
                 0.6,
                 -0.5
@@ -206,7 +282,7 @@
             {
               "type": "tremble",
               "de": 0,
-              "a": 0.7,
+              "a": 1.2,
               "amplitude": 1.5
             },
             {
@@ -217,9 +293,15 @@
             },
             {
               "type": "vent",
-              "de": 0.7,
-              "a": 1.6,
-              "force": 1.5
+              "de": 1.2,
+              "a": 1.7,
+              "force": 0.15
+            },
+            {
+              "type": "vent",
+              "de": 2.5,
+              "a": 3.2,
+              "force": 1.6
             }
           ]
         }
@@ -232,14 +314,14 @@
           "point": "tete"
         },
         {
-          "a": 0.7,
+          "a": 2.5,
           "zoom": 5.6,
           "cible": "heros",
           "point": "tete"
         },
         {
-          "a": 0.95,
-          "zoom": 6.3,
+          "a": 2.8,
+          "zoom": 6.4,
           "cible": "heros",
           "point": "tete",
           "ease": "sortie"
@@ -248,26 +330,27 @@
       "sons": [
         {
           "a": 0.05,
-          "son": "battement"
+          "son": "coeur-lent"
         },
         {
-          "a": 0.45,
-          "son": "battement"
+          "a": 0.8,
+          "son": "coeur-lent",
+          "volume": 0.18
         },
         {
-          "a": 0.7,
-          "son": "coup"
+          "a": 2.5,
+          "son": "impact-lointain"
         },
         {
-          "a": 0.72,
-          "son": "monte",
-          "volume": 0.12
+          "a": 2.6,
+          "son": "tempete",
+          "volume": 0.16
         }
       ]
     },
     {
-      "description": "Dézoom rapide du visage au plan américain, puis caméra fixe. La main droite monte derrière la tête et saisit la poignée (l'autre bras part en arrière, genoux fléchis), puis tire l'épée d'un seul grand arc vers l'avant-bas : la lame apparaît, traînée bleue en arc, shing, zap. Il reste de profil, lame basse devant lui, genoux fléchis, étincelles. Puis il part en flèche vers la droite : rémanences, lignes de vitesse, poussière, long whoosh.",
-      "duree": 1.5,
+      "description": "Dézoom rapide du visage au plan américain, puis caméra fixe. La main droite monte derrière la tête et saisit la poignée (l'autre bras part en arrière, genoux fléchis), puis tire l'épée d'un seul grand arc vers l'avant-bas : la lame apparaît, traînée bleue en arc, glissement métallique de la lame qui sort du fourreau puis sifflement de la lame, crépitement d'étincelles. Il reste de profil, lame basse devant lui, genoux fléchis, étincelles, le temps de respirer deux fois. Puis il part en flèche vers la droite : rémanences, lignes de vitesse, poussière, long souffle d'air.",
+      "duree": 2.3,
       "decor": "montagnes",
       "persos": [
         {
@@ -275,32 +358,33 @@
           "x": 420,
           "sens": "droite",
           "pose": "determine",
-          "expression": "determine",
+          "expression": "vengeur",
           "arme": "dos",
           "charge": 0.45,
           "etapes": [
             {
-              "a": 0.25,
+              "a": 0.35,
               "pose": "tire-epee-1",
-              "fondu": 0.25
+              "fondu": 0.3
             },
             {
-              "a": 0.48,
+              "a": 0.65,
               "pose": "tire-epee-2",
               "fondu": 0.22,
               "arme": "main"
             },
             {
-              "a": 0.75,
+              "a": 0.95,
               "pose": "garde-pret",
-              "fondu": 0.25
+              "fondu": 0.25,
+              "expression": "determine"
             },
             {
-              "a": 1.15,
+              "a": 1.85,
               "x": 420
             },
             {
-              "a": 1.5,
+              "a": 2.3,
               "x": 1500,
               "ease": "entree"
             }
@@ -314,24 +398,24 @@
             },
             {
               "type": "trainee-lame",
-              "de": 0.48,
-              "a": 0.95
+              "de": 0.65,
+              "a": 1.15
             },
             {
               "type": "court",
-              "de": 1.15,
-              "a": 1.5,
+              "de": 1.85,
+              "a": 2.3,
               "allure": "sprint"
             },
             {
               "type": "trainee",
-              "de": 1.15,
-              "a": 1.5
+              "de": 1.85,
+              "a": 2.3
             },
             {
               "type": "vent",
-              "de": 1.1,
-              "a": 1.3,
+              "de": 1.8,
+              "a": 2.0,
               "force": 1.4
             }
           ]
@@ -340,15 +424,15 @@
       "effets": [
         {
           "effet": "poussiere",
-          "de": 1.15,
+          "de": 1.85,
           "x": 420,
           "y": 1300,
           "intensite": 1.1
         },
         {
           "effet": "lignes-vitesse",
-          "de": 1.2,
-          "a": 1.5,
+          "de": 1.9,
+          "a": 2.3,
           "angle": 0,
           "intensite": 0.8
         }
@@ -361,29 +445,37 @@
           "point": "tete"
         },
         {
-          "a": 0.4,
+          "a": 0.45,
           "zoom": 1.25,
           "cible": "heros",
           "point": "corps",
           "ease": "sortie"
         },
         {
-          "a": 1.15,
+          "a": 1.85,
           "zoom": 1.25,
           "x": 420,
           "y": 1130
         }
+      ],
+      "sons": [
+        {
+          "a": 0.9,
+          "son": "crepite",
+          "volume": 0.12
+        }
       ]
     },
     {
-      "description": "Travelling latéral, la forêt : troncs et feuillages à l'encre devant, arbres gris derrière, le héros sprinte à la même place dans l'image. Un tronc couché arrive sous lui : passe-muraille (mains plantées sur le tronc, corps à l'horizontale, jambes repliées sur le côté), poussière à l'atterrissage, et il repart en course.",
-      "duree": 1.25,
+      "description": "Transition floue d'une seconde depuis le plan d'avant (le temps passe), puis travelling latéral dans la forêt : troncs et feuillages à l'encre devant, arbres gris derrière, le héros sprinte à la même place dans l'image. À 1,45 s un tronc couché arrive sous lui : passe-muraille (mains plantées sur le tronc, corps à l'horizontale, jambes repliées sur le côté), poussière à l'atterrissage, et il repart en course jusqu'à la coupe, qui est elle aussi un flou.",
+      "duree": 2.4,
       "decor": "foret",
       "defile": 760,
+      "transition": "flou",
       "obstacles": [
         {
           "type": "tronc",
-          "a": 0.66
+          "a": 1.45
         }
       ],
       "persos": [
@@ -405,13 +497,13 @@
             {
               "type": "court",
               "de": 0,
-              "a": 1.25,
+              "a": 3.4,
               "allure": "sprint"
             },
             {
               "type": "vaulte",
-              "de": 0.5,
-              "a": 0.82,
+              "de": 1.28,
+              "a": 1.6,
               "haut": 120
             }
           ]
@@ -420,7 +512,7 @@
       "effets": [
         {
           "effet": "poussiere",
-          "de": 0.82,
+          "de": 1.6,
           "x": 430,
           "y": 1300,
           "intensite": 0.8
@@ -428,14 +520,15 @@
       ]
     },
     {
-      "description": "Travelling latéral, la falaise : sol rocheux, montagnes au loin. Un ravin s'ouvre sous lui : il saute, corps étiré, bras en avant, jambe avant repliée haute, et retombe de l'autre côté en roulade (corps groupé, un tour complet) avant de se relever en pleine course. Whoosh au saut, choc sourd à la réception.",
-      "duree": 1.2,
+      "description": "Transition floue d'une seconde, puis travelling latéral sur la falaise : sol rocheux, montagnes au loin. À 1,5 s un ravin s'ouvre sous lui : il saute, corps étiré, bras en avant, jambe avant repliée haute, et retombe de l'autre côté en roulade (corps groupé, un tour complet) avant de se relever en pleine course. Souffle d'air au saut, choc sourd à la réception, puis la course continue sous le flou de la coupe suivante.",
+      "duree": 2.4,
       "decor": "falaise",
       "defile": 820,
+      "transition": "flou",
       "obstacles": [
         {
           "type": "trou",
-          "a": 0.62,
+          "a": 1.5,
           "largeur": 420
         }
       ],
@@ -458,19 +551,19 @@
             {
               "type": "court",
               "de": 0,
-              "a": 1.2,
+              "a": 3.4,
               "allure": "sprint"
             },
             {
               "type": "saute",
-              "de": 0.35,
-              "a": 0.9,
+              "de": 1.22,
+              "a": 1.78,
               "haut": 250
             },
             {
               "type": "roule",
-              "de": 0.9,
-              "a": 1.15
+              "de": 1.78,
+              "a": 2.03
             }
           ]
         }
@@ -478,7 +571,7 @@
       "effets": [
         {
           "effet": "poussiere",
-          "de": 0.9,
+          "de": 1.78,
           "x": 430,
           "y": 1300,
           "intensite": 1
@@ -486,10 +579,11 @@
       ]
     },
     {
-      "description": "Travelling latéral, le pont de corde au-dessus du vide : les planches défilent, les cordes pendent, et au fond, à droite, la tour apparaît et grandit. Sprint, lignes de vitesse légères, vent plus fort ; sur la dernière demi-seconde la caméra pousse doucement sur lui pour amener la coupe.",
-      "duree": 1.35,
+      "description": "Transition floue d'une seconde, puis travelling latéral sur le pont de corde au-dessus du vide : les planches défilent, les cordes pendent, et au fond, à droite, la tour apparaît et grandit. Sprint, lignes de vitesse légères, vent plus fort ; sur les sept derniers dixièmes la caméra pousse doucement sur lui pour amener la coupe, floue elle aussi.",
+      "duree": 2.2,
       "decor": "pont",
       "defile": 880,
+      "transition": "flou",
       "persos": [
         {
           "qui": "heros",
@@ -509,7 +603,7 @@
             {
               "type": "court",
               "de": 0,
-              "a": 1.35,
+              "a": 3.2,
               "allure": "sprint"
             }
           ]
@@ -518,19 +612,19 @@
       "effets": [
         {
           "effet": "lignes-vitesse",
-          "de": 0.3,
-          "a": 1.35,
+          "de": 1.0,
+          "a": 2.2,
           "angle": 0,
           "intensite": 0.5
         }
       ],
       "camera": [
         {
-          "a": 0.85,
+          "a": 1.5,
           "zoom": 1
         },
         {
-          "a": 1.35,
+          "a": 2.2,
           "zoom": 1.12,
           "cible": "heros",
           "point": "corps"
@@ -538,9 +632,10 @@
       ]
     },
     {
-      "description": "Plan d'ensemble en contre-plongée, la tour sur le tiers droit : elle est debout sur la plateforme crénelée, mains jointes, apeurée ; le dragon est perché sur le créneau de droite, ailes repliées, et balance la tête. Le héros déboule par la gauche en sprint et freine en glissade jusqu'au pied de la tour (poussière, whoosh de glisse), puis relève la tête, menton levé, l'épée basse. Le dragon tourne la tête vers lui, yeux rouges, gueule ouverte : grondement. Elle se penche et tend les bras vers lui. Lente poussée de la caméra.",
-      "duree": 1.6,
+      "description": "Transition floue d'une seconde : on découvre la tour pendant que l'image se précise. Plan d'ensemble en contre-plongée, la tour sur le tiers droit : elle est debout sur la plateforme crénelée, mains jointes, apeurée ; le dragon est perché sur le créneau de droite, ailes repliées, et balance la tête. À 0,9 s le héros déboule par la gauche en sprint et freine en glissade jusqu'au pied de la tour (poussière, glissement), puis relève la tête, menton levé, l'épée basse. Le dragon tourne la tête vers lui, yeux rouges, gueule ouverte : rugissement. Elle se penche et tend les bras vers lui. Lente poussée de la caméra sur tout le plan.",
+      "duree": 3.0,
       "decor": "tour",
+      "transition": "flou",
       "persos": [
         {
           "qui": "heros",
@@ -552,21 +647,21 @@
           "charge": 0.45,
           "etapes": [
             {
-              "a": 0,
+              "a": 0.9,
               "x": -80
             },
             {
-              "a": 0.45,
+              "a": 1.35,
               "x": 300,
               "ease": "sortie"
             },
             {
-              "a": 0.5,
+              "a": 1.4,
               "pose": "debout",
               "fondu": 0.2
             },
             {
-              "a": 0.75,
+              "a": 1.7,
               "pose": "leve-tete",
               "fondu": 0.3,
               "regard": [
@@ -584,19 +679,19 @@
             },
             {
               "type": "court",
-              "de": 0,
-              "a": 0.3,
+              "de": 0.9,
+              "a": 1.2,
               "allure": "sprint"
             },
             {
               "type": "glisse",
-              "de": 0.25,
-              "a": 0.5
+              "de": 1.15,
+              "a": 1.4
             },
             {
               "type": "vent",
-              "de": 0.5,
-              "a": 1.2,
+              "de": 1.4,
+              "a": 2.2,
               "force": 0.8
             }
           ]
@@ -610,7 +705,7 @@
           "expression": "peur",
           "etapes": [
             {
-              "a": 1.1,
+              "a": 2.3,
               "pose": "tend",
               "fondu": 0.3,
               "expression": "soulagee"
@@ -636,7 +731,7 @@
           "pose": "perche",
           "etapes": [
             {
-              "a": 0.8,
+              "a": 1.95,
               "pose": "rugit"
             }
           ]
@@ -645,7 +740,7 @@
       "effets": [
         {
           "effet": "poussiere",
-          "de": 0.3,
+          "de": 1.2,
           "x": 300,
           "y": 1300,
           "intensite": 1.3
@@ -657,7 +752,7 @@
           "zoom": 1
         },
         {
-          "a": 1.6,
+          "a": 3.0,
           "zoom": 1.06,
           "x": 560,
           "y": 900
@@ -665,8 +760,8 @@
       ]
     },
     {
-      "description": "Plan moyen de profil, caméra fixe sur le héros, la base de la tour derrière. Il prend la garde : les deux mains sur la poignée, lame dressée vers l'avant-haut, pied gauche devant, pied droit derrière, genoux à peine fléchis ; les étincelles se font plus nombreuses. Puis il plie les jambes lentement, le buste se penche, les yeux se plissent, le bandana est plaqué en arrière. Il tient la position, la lame vibre, bourdonnement électrique qui monte, petit zap.",
-      "duree": 1.6,
+      "description": "Plan moyen de profil, caméra fixe sur le héros, la base de la tour derrière. Il prend la garde : les deux mains sur la poignée, lame dressée vers l'avant-haut, pied gauche devant, pied droit derrière, genoux à peine fléchis ; les étincelles se font plus nombreuses. Puis il plie les jambes lentement, sur une seconde, le buste se penche, les yeux se plissent, le bandana est plaqué en arrière. Il tient la position, la lame vibre, bourdonnement électrique qui monte, crépitement.",
+      "duree": 2.0,
       "decor": "tour",
       "persos": [
         {
@@ -684,9 +779,9 @@
               "fondu": 0.45
             },
             {
-              "a": 0.45,
+              "a": 0.6,
               "pose": "garde-basse",
-              "fondu": 0.9,
+              "fondu": 1.0,
               "expression": "concentre"
             }
           ],
@@ -700,13 +795,13 @@
             {
               "type": "charge",
               "de": 0,
-              "a": 1.6,
+              "a": 2.0,
               "vers": 0.85
             },
             {
               "type": "tremble",
-              "de": 1.35,
-              "a": 1.6,
+              "de": 1.7,
+              "a": 2.0,
               "amplitude": 0.8
             }
           ]
@@ -738,7 +833,7 @@
           "point": "corps"
         },
         {
-          "a": 1.6,
+          "a": 2.0,
           "zoom": 1.78,
           "cible": "heros",
           "point": "corps"
@@ -751,15 +846,15 @@
           "volume": 0.1
         },
         {
-          "a": 0.8,
-          "son": "zap",
-          "volume": 0.08
+          "a": 1.1,
+          "son": "crepite",
+          "volume": 0.1
         }
       ]
     },
     {
-      "description": "Insert, très gros plan au ras du sol sur ses deux pieds. Le pied arrière droit recule et s'ancre : la pointe s'enfonce, le sol se fissure sous lui (fentes en zigzag), petit nuage de poussière, cailloux qui sautent, secousse, craquement. Puis le talon se soulève, les jambes vibrent, des étincelles bleues courent sur le sol autour du pied.",
-      "duree": 1.0,
+      "description": "Insert, très gros plan au ras du sol sur ses deux pieds. Le pied arrière droit recule et s'ancre : la pointe s'enfonce, le sol se fissure sous lui (fentes en zigzag), petit nuage de poussière, cailloux qui sautent et retombent, secousse, craquement de pierre. Puis le talon se soulève, les jambes vibrent, des étincelles bleues courent sur le sol autour du pied, crépitement électrique.",
+      "duree": 1.2,
       "decor": "tour",
       "persos": [
         {
@@ -777,9 +872,9 @@
               "fondu": 0.16
             },
             {
-              "a": 0.3,
+              "a": 0.35,
               "pose": "ancre-tendu",
-              "fondu": 0.5
+              "fondu": 0.55
             }
           ],
           "actions": [
@@ -792,13 +887,13 @@
             {
               "type": "charge",
               "de": 0,
-              "a": 1.0,
+              "a": 1.2,
               "vers": 1
             },
             {
               "type": "tremble",
-              "de": 0.25,
-              "a": 1.0,
+              "de": 0.3,
+              "a": 1.2,
               "amplitude": 0.8
             }
           ]
@@ -807,21 +902,21 @@
       "effets": [
         {
           "effet": "fissure",
-          "de": 0.18,
+          "de": 0.2,
           "x": 205,
           "y": 1300
         },
         {
           "effet": "poussiere",
-          "de": 0.18,
+          "de": 0.2,
           "x": 205,
           "y": 1300,
           "intensite": 0.5
         },
         {
           "effet": "etincelles",
-          "de": 0.5,
-          "a": 1.0,
+          "de": 0.6,
+          "a": 1.2,
           "x": 205,
           "y": 1296
         }
@@ -835,14 +930,14 @@
           "y": 1470
         },
         {
-          "a": 0.18,
+          "a": 0.2,
           "secousse": 5
         }
       ]
     },
     {
-      "description": "Plan d'ensemble, même cadrage que la tour, puis la caméra suit le héros et serre sur le combat. Détente : il quitte le sol d'un coup, onde de choc, poussière, secousse, boum et long whoosh. Il file en diagonale ascendante jusqu'au dragon, tête la première, corps aligné sur la trajectoire, lame pointée ; six rémanences, lignes de vitesse. Il s'électrise : éclairs sur le corps, halo bleu, yeux bleus. À deux mètres du dragon, ralenti dix fois, caméra serrée, voile bleuté, battement de cœur, bourdon. Impact : flash blanc, le dragon est pulvérisé (éclats, braises, anneau bleu), secousse de 40 px, explosion. Il poursuit en arc, atterrit accroupi sur la plateforme, se redresse.",
-      "duree": 1.3,
+      "description": "Plan d'ensemble, même cadrage que la tour, puis la caméra suit le héros et serre sur le combat. Détente : il quitte le sol d'un coup, onde de choc électrique, poussière, secousse, souffle de fusée. Il file en diagonale ascendante jusqu'au dragon, tête la première, corps aligné sur la trajectoire, lame pointée ; six rémanences, lignes de vitesse. Il s'électrise : éclairs sur le corps, halo bleu, yeux bleus, montée électrique, crépitement. À deux mètres du dragon, ralenti onze fois, caméra serrée, voile bleuté, battement de cœur, bourdon. Impact : flash blanc, le dragon est pulvérisé (éclats, braises, anneau bleu), secousse de 40 px, déflagration, débris qui retombent. Il poursuit en arc, atterrit accroupi sur la plateforme, se redresse, se tourne vers elle, et on tient le plan pendant que les éclats finissent de tomber ; elle saute de joie.",
+      "duree": 2.0,
       "decor": "tour",
       "ralentis": [
         {
@@ -886,6 +981,14 @@
               "a": 1.08,
               "pose": "debout",
               "fondu": 0.25
+            },
+            {
+              "a": 1.45,
+              "sens": "gauche",
+              "regard": [
+                0.3,
+                0.1
+              ]
             }
           ],
           "actions": [
@@ -919,7 +1022,7 @@
             {
               "type": "charge",
               "de": 0.95,
-              "a": 1.3,
+              "a": 2.0,
               "vers": 0.5
             }
           ]
@@ -937,6 +1040,11 @@
               "pose": "attend",
               "fondu": 0.3,
               "expression": "heureux"
+            },
+            {
+              "a": 1.5,
+              "pose": "joie",
+              "fondu": 0.3
             }
           ]
         }
@@ -1028,8 +1136,8 @@
       ]
     },
     {
-      "description": "Plan moyen large sur la plateforme, caméra fixe : elle à gauche mains jointes, lui à droite. Il reprend son souffle, plié en deux, mains sur les genoux, le buste qui se soulève, yeux fermés ; elle sourit, soulagée. Il se redresse et range l'épée (le bras repasse par-dessus l'épaule, la lame disparaît dans son dos, les étincelles s'éteignent). Deux pas vers elle. Sa main passe derrière son dos et ressort avec un bouquet, bras tendu : pop, cœur. Sourire charmeur (sourcil relevé, œil mi-clos, étincelle) ; elle, yeux fermés de bonheur, joues roses, petit saut, des cœurs montent entre eux.",
-      "duree": 3.32,
+      "description": "Plan moyen large sur la plateforme, caméra fixe : elle à gauche mains jointes, lui à droite. Il reprend son souffle pendant une seconde et demie, plié en deux, mains sur les genoux, le buste qui se soulève, yeux fermés ; elle sourit, soulagée. Il se redresse et range l'épée (le bras repasse par-dessus l'épaule, la lame disparaît dans son dos, raclement métallique du fourreau, les étincelles s'éteignent). Il marche vers elle, trois pas tranquilles, et s'arrête devant elle. Sa main passe derrière son dos et ressort avec un bouquet, bras tendu : pop, cœur, scintillement magique. Sourire charmeur (sourcil relevé, œil mi-clos, étincelle, tintement de paillettes) ; elle, yeux fermés de bonheur, joues roses, petit saut, puis elle se penche vers lui, bras tendus, pendant que des cœurs montent entre eux ; lui sourit, heureux. La caméra pousse lentement sur eux deux jusqu'à la fin.",
+      "duree": 6.2,
       "decor": "sommet",
       "persos": [
         {
@@ -1040,8 +1148,13 @@
           "expression": "soulagee",
           "etapes": [
             {
-              "a": 2.45,
+              "a": 3.95,
               "expression": "amour"
+            },
+            {
+              "a": 4.9,
+              "pose": "tend",
+              "fondu": 0.45
             }
           ],
           "actions": [
@@ -1053,8 +1166,8 @@
             },
             {
               "type": "saute",
-              "de": 2.55,
-              "a": 2.85,
+              "de": 4.1,
+              "a": 4.4,
               "haut": 22,
               "pose": "attend"
             }
@@ -1070,50 +1183,58 @@
           "charge": 0.6,
           "etapes": [
             {
-              "a": 0.87,
+              "a": 1.4,
               "pose": "debout",
               "fondu": 0.3,
               "expression": "sourire"
             },
             {
-              "a": 0.95,
+              "a": 1.5,
               "pose": "tire-epee-2",
               "fondu": 0.2
             },
             {
-              "a": 1.15,
+              "a": 1.75,
               "pose": "range-epee",
               "fondu": 0.22
             },
             {
-              "a": 1.22,
+              "a": 1.85,
               "arme": "dos"
             },
             {
-              "a": 1.4,
+              "a": 2.05,
               "pose": "debout",
               "fondu": 0.25,
               "x": 660
             },
             {
-              "a": 1.95,
+              "a": 2.3,
+              "x": 660
+            },
+            {
+              "a": 3.0,
               "x": 520,
               "ease": "sortie"
             },
             {
-              "a": 2.0,
+              "a": 3.1,
               "pose": "cache-dos",
               "fondu": 0.2
             },
             {
-              "a": 2.2,
+              "a": 3.5,
               "pose": "offre",
               "fondu": 0.25,
               "tient": "bouquet"
             },
             {
-              "a": 2.4,
+              "a": 3.8,
               "expression": "charmeur"
+            },
+            {
+              "a": 5.3,
+              "expression": "heureux"
             }
           ],
           "actions": [
@@ -1126,18 +1247,18 @@
             {
               "type": "souffle",
               "de": 0,
-              "a": 0.85
+              "a": 1.35
             },
             {
               "type": "charge",
-              "de": 0.85,
-              "a": 1.2,
+              "de": 1.35,
+              "a": 1.8,
               "vers": 0
             },
             {
               "type": "court",
-              "de": 1.4,
-              "a": 1.95,
+              "de": 2.3,
+              "a": 3.0,
               "allure": "marche"
             }
           ]
@@ -1146,8 +1267,8 @@
       "effets": [
         {
           "effet": "coeurs",
-          "de": 2.5,
-          "a": 3.32,
+          "de": 3.95,
+          "a": 6.2,
           "x": 470,
           "y": 1000
         }
@@ -1158,6 +1279,26 @@
           "zoom": 1.15,
           "x": 540,
           "y": 1000
+        },
+        {
+          "a": 3.8,
+          "zoom": 1.15,
+          "x": 540,
+          "y": 1000
+        },
+        {
+          "a": 6.2,
+          "zoom": 1.28,
+          "x": 520,
+          "y": 1020,
+          "ease": "douce"
+        }
+      ],
+      "sons": [
+        {
+          "a": 3.5,
+          "son": "etincelle-magique",
+          "volume": 0.14
         }
       ]
     }

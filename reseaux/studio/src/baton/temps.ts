@@ -386,7 +386,8 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
   // la vitesse, pour les pans du bandana : différence finie sur 40 ms
   const xAvant = continu(etapes, 'x', t - 0.04, p.x, 'lineaire');
   const vitesse = porte ? 0 : ((x - xAvant) / 0.04) * sens;
-  const etincelle = expression === 'charmeur' && expressionE ? bornes((t - expressionE.depuis) / 0.25) : 0;
+  const depuis = expressionE ? t - expressionE.depuis : t;
+  const etincelle = expression === 'charmeur' ? bornes(depuis / 0.25) : 0;
   const apparence: Apparence = {
     qui: p.qui,
     pose,
@@ -403,6 +404,7 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
     tient,
     t,
     graine,
+    depuis,
     etincelle,
   };
   if (arme === 'main' && (electrise > 0 || actives(actions, t).some((a) => a.type === 'trainee'))) traineeLame = true;

@@ -42,7 +42,8 @@ const traineeLame = (passes: ImageBaton[], qui: EtatBaton['qui']): string => {
   return s;
 };
 
-export const Etage: React.FC<{ plan: PlanBaton; image: ImageBaton; graine: number; id: string }> = ({ plan, image, graine, id }) => {
+// fantome : le plan d'avant qui joue encore sous une transition, dont les visages ne comptent pas pour le contrôle
+export const Etage: React.FC<{ plan: PlanBaton; image: ImageBaton; graine: number; id: string; fantome?: boolean }> = ({ plan, image, graine, id, fantome }) => {
   const { etats, creatures, cam, t } = image;
   const heros = etats.find((e) => e.qui === 'heros');
   const decor = dessinDecor(plan.decor, t, image.defilement, plan.obstacles ?? [], heros?.x ?? 430, plan.defile ?? 0, id);
@@ -87,7 +88,7 @@ export const Etage: React.FC<{ plan: PlanBaton; image: ImageBaton; graine: numbe
       {etats.map((e) => {
         const [tx, ty] = pointsPerso(e).tete;
         const [sx, sy] = [(tx - cam.x) * cam.zoom + 540, (ty - cam.y) * cam.zoom + 960];
-        const dehors = e.horsChamp || sx < 20 || sx > 1060 || sy < 20 || sy > 1900;
+        const dehors = fantome || e.horsChamp || sx < 20 || sx > 1060 || sy < 20 || sy > 1900;
         return <div key={e.qui} data-tete={e.qui} data-hors-champ={dehors ? '1' : undefined} style={{ position: 'absolute', left: tx - 1, top: ty - 1, width: 2, height: 2 }} />;
       })}
     </div>

@@ -44,7 +44,7 @@ test('les temps hors du plan, les ralentis qui se chevauchent et les durées son
   assert.ok(f.some((x) => x.includes('chevauche le précédent')));
   const court = exemple();
   court.plans = court.plans.slice(0, 2);
-  assert.ok(controlerBaton(court).some((x) => x.includes("durée à l'écran de 10 à 22 s")));
+  assert.ok(controlerBaton(court).some((x) => x.includes("durée à l'écran de 10 à 40 s")));
 });
 
 test('une description trop courte et un plan long sans rien sont refusés', () => {
@@ -57,7 +57,7 @@ test('une description trop courte et un plan long sans rien sont refusés', () =
 });
 
 test("le vocabulaire nomme les poses, expressions et effets que le studio dessine", () => {
-  for (const nom of ['debout', 'garde', 'garde-basse', 'ancre', 'bond', 'atterrit', 'souffle', 'offre', 'portee']) assert.ok(VOCABULAIRE_BATON.poses[nom], nom);
-  for (const nom of ['choc', 'determine', 'electrique', 'charmeur', 'amour']) assert.ok(VOCABULAIRE_BATON.expressions[nom], nom);
+  for (const nom of ['debout', 'garde', 'garde-basse', 'ancre', 'bond', 'atterrit', 'souffle', 'offre', 'portee', 'abattu']) assert.ok(VOCABULAIRE_BATON.poses[nom], nom);
+  for (const nom of ['choc', 'chagrin', 'vengeur', 'determine', 'electrique', 'charmeur', 'amour']) assert.ok(VOCABULAIRE_BATON.expressions[nom], nom);
   for (const nom of ['poussiere', 'onde', 'fissure', 'lignes-vitesse', 'flash', 'coeurs']) assert.ok(VOCABULAIRE_BATON.effets[nom], nom);
 });

@@ -145,7 +145,9 @@ export type PlanBaton = {
   // travelling : vitesse du défilement du décor, en pixels par seconde
   defile?: number;
   obstacles?: ObstacleBaton[];
-  transition?: 'coupe' | 'fondu' | 'noir';
+  // flou : une seconde de transition floue depuis le plan d'avant, qui
+  // continue de jouer (« le temps passe »)
+  transition?: 'coupe' | 'fondu' | 'flou' | 'noir';
   ralentis?: RalentiBaton[];
   persos?: PersoBaton[];
   creatures?: CreatureBaton[];

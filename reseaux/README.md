@@ -46,7 +46,7 @@ Le son du reel fini est ramené à -14 LUFS et -1 dBTP (jetons `son-*`).
 | `image` | image.jpg | Post 4:5 : phrase émotive (plume, fleurs) ou drôle (Fredoka), avec une scène dessinée (`scene`) ou le petit duo |
 | `carrousel` | page-1.jpg... | Couverture et page finale (scène dessinée ou duo), pages numérotées avec le duo en tout petit dans le coin |
 | `bd` | image.jpg (ou page-1.jpg... avec `sortie: carrousel`) | Bande dessinée en quatre cases : une scène figée par case (vocabulaire des animations), bordée d'un trait d'encre, répliques courtes en haut du côté de celui qui parle, chute dans la dernière case |
-| `baton` | reel.mp4 + couverture.jpg | Le bonhomme bâton (« me in my dreams with u ») : une mini-aventure de 10 à 20 s au trait noir, un héros articulé qui bouge comme un ninja, des ralentis, un dragon ; hors de la DA des mascottes, voir plus bas |
+| `baton` | reel.mp4 + couverture.jpg | Le bonhomme bâton (« me in my dreams with u ») : une mini-aventure de 20 à 40 s au trait noir, un héros articulé qui bouge comme un ninja, des ralentis, un dragon ; hors de la DA des mascottes, voir plus bas |
 
 Les mascottes sont sur tous les visuels (`Duo.tsx` quand il n'y a pas de
 scène). Elles sont dessinées : trait d'encre tremblé (`charte/mascottes.js`,
@@ -96,7 +96,10 @@ Le format « me in my dreams with u » (idée de Thomas, 15 octobre 2026) :
 un héros au corps de traits et à la tête ronde, bandana violet, qui se
 déplace comme un ninja (course, passe-muraille, saut, roulade, glissade,
 grand bond), sa copine (queue de cheval, nœud rose), un dragon, dans des
-mini-aventures de 10 à 20 s. Noir et blanc au trait sur papier blanc,
+mini-aventures qui prennent le temps qu'il leur faut (le dragon fait 34 s ;
+la cible « 10 à 20 s » du départ est abandonnée depuis le 16 octobre 2026,
+Thomas : « ne te base plus sur ça », des scènes étaient précipitées ; le
+contrôle accepte de 10 à 40 s). Noir et blanc au trait sur papier blanc,
 seuls les éléments qui comptent sont en couleur (le bandana, le nœud, la
 lame électrique bleue, les yeux et la gueule rouges du dragon, le bouquet,
 les cœurs). Rien à voir avec la DA des mascottes : c'est un format à part.
@@ -118,12 +121,22 @@ onde de choc, fissure, lignes de vitesse, flash, ombre qui passe, cœurs,
 d'un personnage, déplacement, secousse) et les **ralentis** : les temps
 d'un plan sont en secondes de récit, `ralentis` étire une tranche à
 l'écran (facteur 0,1 : 0,2 s de récit en 2 s), et `plan.ts` convertit tout
-en images d'écran.
+en images d'écran. Un plan s'ouvre par une coupe franche, un `fondu` court,
+ou un `flou` (Thomas, 16 octobre 2026 : « un effet flou comme une
+transition CapCut, pour le côté le temps passe ») : pendant une seconde le
+plan d'avant continue de jouer en se brouillant et en s'éclaircissant
+pendant que le nouveau se précise, un souffle de passage dessus ; une
+action (la course) peut déborder son plan d'une seconde pour continuer sous
+la transition, et le contrôle de mise en page ne regarde ce plan qu'après
+elle (les visages du plan fantôme ne comptent pas).
 
 - `rig.ts` : le squelette (hanches, buste, tête ; épaules, coudes, mains ;
-  hanches, genoux, chevilles, pieds), 27 poses nommées en degrés, le fondu
+  hanches, genoux, chevilles, pieds), 28 poses nommées en degrés (dont
+  `abattu`, la tête qui tombe), le fondu
   entre poses, le cycle de course (sprint de ninja : buste couché, bras en
-  arrière, lame qui traîne), les visages (15 expressions), l'épée (poignée
+  arrière, lame qui traîne), les visages (17 expressions, dont `chagrin`,
+  une larme qui perle et coule depuis le changement d'expression, et
+  `vengeur`, sourcils en biais, yeux plissés et sourire en coin), l'épée (poignée
   au dos, lame tenue avec halo et étincelles selon la charge), le bouquet,
   les pans du bandana et la queue de cheval qui suivent le vent et la
   vitesse. La hauteur des hanches est recalculée pour que le pied le plus
@@ -136,13 +149,27 @@ en images d'écran.
 - `plan.ts` : durées à l'écran, images contrôlées, bruitages déduits des
   gestes.
 
-Les bruitages sont synthétisés par `scripts/synthese-sons.mjs` (whoosh,
-lame, zap, bourdon, boum, explosion, grondement, ailes, craquement, éclats,
-flash, montée, drone de ralenti, réception ; `public/sons/sy-*.mp3`,
-manifeste `synthese.json`, dans le dépôt), jamais de voix. Le contrôle du
-scénario est `automates/lib/baton.mjs`. Le format n'a pas encore de
-catégorie dans la grille : il attend le feu vert de Thomas sur le premier
-reel.
+Les bruitages viennent de Mixkit depuis le 16 octobre 2026 (Thomas :
+« plusieurs sound effects sont pas bons, genre quand il sort son épée ») :
+39 sons ajoutés à `public/sons/bibliotheque.json` (la lame qui sort du
+fourreau et qui rentre, le sifflement de lame, grognement et rugissements
+du dragon, souffles d'air et de passage, fusée, météore, tempête,
+crépitements et montées électriques, onde de choc, déflagrations, débris,
+impacts, chutes de corps, pierre qui craque, cailloux, battements de cœur,
+paillettes) et l'ambiance `vent-montagne` pour les montagnes, la tour et le
+sommet ; `plan.ts` les déduit des gestes (épée en main → `epee-tire` puis
+`lame`, au dos → `epee-range`, saut → `air` puis `chute`, grand bond →
+`onde-choc` et `fusee`, électrisation → `montee-electrique` et `crepite`,
+lame qui se charge → `charge-electrique`, dragon qui bouge → `dragon-grogne`,
+qui rugit → `dragon-rugit`, qui pique → `meteore`, qui explose →
+`deflagration` et `debris`, fissure → `craquement` et `cailloux`, ralenti →
+`coeur-ambiance`, transition floue → `passage`, sourire charmeur →
+`scintille`). Les sons synthétisés par `scripts/synthese-sons.mjs`
+(`public/sons/sy-*.mp3`, manifeste `synthese.json`, dans le dépôt) restent
+pour les ailes, le bourdon, le drone du ralenti et le flash ; jamais de
+voix. Le contrôle du scénario est `automates/lib/baton.mjs`. Le format n'a
+pas encore de catégorie dans la grille : il attend le feu vert de Thomas
+sur le premier reel.
 
 ## Sons
 

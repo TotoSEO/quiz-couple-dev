@@ -23,8 +23,11 @@ const EMOJI = /\p{Extended_Pictographic}/u;
 // genre de complexité de brief qu'il faut obtenir »).
 const DESCRIPTION_MIN = 120;
 const PLANS_MAX = 12;
-// La durée réelle à l'écran, ralentis compris.
-const DUREE_REELLE_MAX = 25;
+// La durée réelle à l'écran, ralentis compris. Plus de cible « 10 à 20 s »
+// depuis le 16 octobre 2026 (Thomas : « ne te base plus sur ça », des scènes
+// étaient précipitées) : une aventure prend le temps qu'il lui faut, dans la
+// limite d'un reel.
+const DUREE_REELLE_MAX = 45;
 
 const nombre = (v) => typeof v === 'number' && Number.isFinite(v);
 const s1 = (v) => v.toFixed(1).replace('.', ',');
@@ -64,6 +67,9 @@ export function controlerBaton(r) {
     if (p.defile !== undefined && (!nombre(p.defile) || p.defile < 0 || p.defile > 2000)) f.push(`${ou} : defile de 0 à 2000 px/s`);
     if (p.ambiance !== undefined && !V.ambiances.includes(p.ambiance)) f.push(`${ou} : ambiance inconnue « ${p.ambiance} » (${V.ambiances.join(', ')})`);
     if (p.transition !== undefined && !V.transitions.includes(p.transition)) f.push(`${ou} : transition inconnue « ${p.transition} »`);
+    // la transition floue dure une seconde, pendant laquelle le plan d'avant joue encore
+    if (p.transition === 'flou' && i === 0) f.push(`${ou} : une transition se joue depuis le plan d'avant, pas sur le premier`);
+    if (p.transition === 'flou' && dureeReelle(p) < 1.6) f.push(`${ou} : un plan qui s'ouvre en flou dure 1,6 s au moins (la transition en prend une)`);
     const dans = (t, quoi) => {
       if (!nombre(t)) return void f.push(`${ou}, ${quoi} : instant invalide`);
       if (t < 0 || t > (nombre(d) ? d : 0) + 0.01) f.push(`${ou}, ${quoi} : hors du plan (0 à ${d} s)`);
@@ -71,7 +77,8 @@ export function controlerBaton(r) {
     const dansDeA = (de, a, quoi) => {
       if (!nombre(de) || !nombre(a) || a <= de) return void f.push(`${ou}, ${quoi} : temps de/a invalides`);
       dans(de, quoi);
-      if (a > (nombre(d) ? d : 0) + 0.5) f.push(`${ou}, ${quoi} : déborde du plan`);
+      // une action peut dépasser le plan d'une seconde : elle continue sous la transition floue du suivant
+      if (a > (nombre(d) ? d : 0) + 1.0) f.push(`${ou}, ${quoi} : déborde du plan`);
     };
     for (const [k, o] of (p.obstacles ?? []).entries()) {
       if (!OBSTACLES.includes(o.type)) f.push(`${ou}, obstacle ${k + 1} : type inconnu « ${o.type} »`);
