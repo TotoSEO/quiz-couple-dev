@@ -3,7 +3,7 @@
 // les effets, sous la caméra. Les textes (titre, signature) sont dans le
 // gabarit, jamais zoomés.
 import React from 'react';
-import { dessinDragon } from './creatures';
+import { dessinCreature } from './creatures';
 import { dessinDecor } from './decors';
 import { effetsMonde } from './effets';
 import type { PlanBaton } from './recette';
@@ -46,7 +46,7 @@ const traineeLame = (passes: ImageBaton[], qui: EtatBaton['qui']): string => {
 export const Etage: React.FC<{ plan: PlanBaton; image: ImageBaton; graine: number; id: string; fantome?: boolean }> = ({ plan, image, graine, id, fantome }) => {
   const { etats, creatures, cam, t } = image;
   const heros = etats.find((e) => e.qui === 'heros');
-  const decor = dessinDecor(plan.decor, t, image.defilement, plan.obstacles ?? [], heros?.x ?? 430, plan.defile ?? 0, id);
+  const decor = dessinDecor(plan.decor, t, image.defilement, plan.obstacles ?? [], heros?.x ?? 430, plan.defile ?? 0, id, !!plan.nuit);
   // les instants passés, pour les rémanences et la traînée de la lame
   const besoin = Math.max(...etats.map((e) => (e.trainee ? e.trainee.nombre : 0)), etats.some((e) => e.traineeLame) ? 8 : 0);
   const ecart = etats.find((e) => e.trainee)?.trainee?.ecart ?? 0.03;
@@ -57,7 +57,7 @@ export const Etage: React.FC<{ plan: PlanBaton; image: ImageBaton; graine: numbe
     passes.push(calculer(plan, tp, graine));
   }
   let monde = '';
-  for (const c of creatures) monde += dessinDragon(c, graine);
+  for (const c of creatures) monde += dessinCreature(c, graine);
   // elle d'abord, le héros devant
   const ordre = [...etats].sort((a, b) => (a.qui === 'heros' ? 1 : 0) - (b.qui === 'heros' ? 1 : 0));
   for (const e of ordre) {

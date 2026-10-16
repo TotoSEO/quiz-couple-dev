@@ -1,8 +1,10 @@
-// Les créatures du bonhomme bâton : le dragon, au trait et en gris, avec
-// ses yeux et sa gueule rouges (les seules couleurs). Dessiné tourné vers
-// +x autour du centre de son corps, en unités U (60 px à l'échelle 1), et
-// retourné par le caller. Quand il explose, il se change en éclats.
-import { COULEURS, hasard } from './rig';
+// Les créatures du bonhomme bâton, au trait et en gris : le dragon, avec
+// ses yeux et sa gueule rouges (les seules couleurs), et le nuage d'orage,
+// avec ses éclairs jaunes. Chacune est dessinée tournée vers +x autour du
+// centre de son corps, en unités U (60 px à l'échelle 1), et retournée par
+// le caller. Quand elle explose, elle se change en éclats (le dragon) ou
+// crève en pluie et en étincelles (le nuage).
+import { cheminEtoile, COULEURS, hasard } from './rig';
 import type { EtatCreature } from './temps';
 
 const E = COULEURS.encre;
@@ -123,3 +125,107 @@ const eclats = (e: EtatCreature, graine: number): string => {
   }
   return s;
 };
+
+// Un éclair en zigzag de (x, y) vers le bas sur « longueur » U, jaune au
+// cœur blanc ; la graine fait varier la forme d'une image à l'autre.
+const eclairNuage = (x: number, y: number, longueur: number, graine: number, w: number) => {
+  const n = 4 + Math.floor(hasard(graine) * 2);
+  let d = `M${n2(x)} ${n2(y)}`;
+  let px = x;
+  let py = y;
+  for (let i = 1; i <= n; i++) {
+    px = x + (hasard(graine + i * 3) - 0.5) * 0.9 + (i % 2 ? 0.25 : -0.25);
+    py = y + (longueur * i) / n;
+    d += ` L${n2(px)} ${n2(py)}`;
+  }
+  return `<path d="${d}" fill="none" stroke="${COULEURS.jaune}" stroke-width="${n2(w)}" stroke-linecap="round" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="#ffffff" stroke-width="${n2(w * 0.35)}" stroke-linecap="round" stroke-linejoin="round"/>`;
+};
+
+// Le nuage d'orage : une masse grise à bosses, un visage fâché (deux yeux
+// qui luisent, des sourcils en biais, une bouche en zigzag), des éclairs
+// qui claquent dessous et, quand il est en colère, de la pluie.
+export const dessinNuage = (e: EtatCreature, graine: number): string => {
+  const U = 60;
+  if (e.eclate >= 0) return pluieEtEtincelles(e, graine);
+  const t = e.t;
+  const flot = Math.sin(t * Math.PI * 2 * e.vitesseAiles) * 0.18 * e.ailes;
+  let s = `<g transform="translate(${n2(e.x)} ${n2(e.y + flot * U * e.echelle)}) scale(${n2(e.echelle * e.sens * U)} ${n2(e.echelle * U)})">`;
+  // les éclairs sous le nuage, qui claquent par à-coups
+  if (e.cou > 0.1) {
+    const nb = 1 + Math.round(e.cou * 2);
+    for (let i = 0; i < nb; i++) {
+      const g = graine * 7 + i * 13;
+      if (hasard(g + 2) > 0.45 + 0.5 * e.cou) continue;
+      const x = -1.1 + 2.2 * hasard(g + 1);
+      s += eclairNuage(x, 0.6, 1.0 + 1.3 * hasard(g + 3) * e.cou, g, 0.12);
+    }
+  }
+  // la pluie : des traits courts qui tombent, décalés par le temps
+  if (e.serres > 0.05) {
+    const nb = Math.round(14 * e.serres);
+    for (let i = 0; i < nb; i++) {
+      const g = i * 11 + 5;
+      const x = -1.6 + 3.2 * hasard(g);
+      const chute = ((t * 2.6 + hasard(g + 1)) % 1) * 2.4;
+      s += `<path d="M${n2(x)} ${n2(0.7 + chute)} l-0.08 0.3" fill="none" stroke="${COULEURS.bleu}" stroke-width="0.07" stroke-linecap="round" opacity="${n2(0.5 + 0.4 * e.serres)}"/>`;
+    }
+  }
+  // la masse : des bosses sur le dessus, un ventre plat
+  const d = 'M-1.9 0.45 C-2.5 0.45 -2.6 -0.45 -1.9 -0.55 C-1.9 -1.25 -1.0 -1.5 -0.55 -1.05 C-0.3 -1.75 0.75 -1.8 1.0 -1.05 C1.65 -1.35 2.35 -0.8 2.05 -0.25 C2.65 -0.1 2.6 0.5 2.0 0.5 Z';
+  s += `<path d="${d}" fill="#6b6865" ${T(0.1)}/>`;
+  s += `<path d="M-1.4 0.1 q0.6 0.3 1.3 0.1 M0.6 -0.2 q0.5 0.2 1.0 0" ${T(0.05)} opacity="0.5"/>`;
+  // le visage
+  const colere = e.gueule;
+  const lueur = e.yeux;
+  for (const [ox, proche] of [[-0.55, false], [0.45, true]] as [number, boolean][]) {
+    if (lueur > 0) s += `<circle cx="${n2(ox)}" cy="-0.35" r="${n2(0.3 + 0.12 * lueur)}" fill="${COULEURS.jaune}" opacity="${n2(0.16 * lueur)}"/>`;
+    s += `<ellipse cx="${n2(ox)}" cy="-0.35" rx="0.24" ry="${n2(0.2 - 0.06 * colere)}" fill="${COULEURS.fond}" ${T(0.06)}/>`;
+    s += `<circle cx="${n2(ox + 0.05)}" cy="${n2(-0.33 + 0.02 * colere)}" r="0.1" fill="${E}"/>`;
+    // les sourcils, de plus en plus en biais
+    const nez = proche ? -1 : 1;
+    s += `<path d="M${n2(ox - nez * 0.3)} ${n2(-0.72 - 0.1 * colere)} L${n2(ox + nez * 0.26)} ${n2(-0.62 + 0.12 * colere)}" ${T(0.11)}/>`;
+  }
+  // la bouche : un trait boudeur, puis un zigzag fâché
+  if (colere < 0.5) s += `<path d="M-0.35 0.05 Q-0.05 -0.1 0.3 0.05" ${T(0.08)}/>`;
+  else s += `<path d="M-0.5 0.08 L-0.3 -0.08 L-0.1 0.08 L0.1 -0.08 L0.3 0.08 L0.5 -0.08" ${T(0.08)}/>`;
+  s += '</g>';
+  return s;
+};
+
+// Le nuage qui crève : la masse se dissout en gouttes bleues et en
+// étincelles jaunes qui partent en étoile, un anneau blanc, et il ne reste
+// rien, le ciel est dégagé.
+const pluieEtEtincelles = (e: EtatCreature, graine: number): string => {
+  const a = e.eclate;
+  if (a > 1.1) return '';
+  const U = 60 * e.echelle;
+  let s = '';
+  // la masse qui se dissipe
+  if (a < 0.5) {
+    const k = 1 + a * 1.6;
+    s += `<g transform="translate(${n2(e.x)} ${n2(e.y)}) scale(${n2(k * U * e.sens)} ${n2(k * U)})" opacity="${n2(0.9 * (1 - a / 0.5))}"><path d="M-1.9 0.45 C-2.5 0.45 -2.6 -0.45 -1.9 -0.55 C-1.9 -1.25 -1.0 -1.5 -0.55 -1.05 C-0.3 -1.75 0.75 -1.8 1.0 -1.05 C1.65 -1.35 2.35 -0.8 2.05 -0.25 C2.65 -0.1 2.6 0.5 2.0 0.5 Z" fill="#6b6865" ${T(0.08)}/></g>`;
+  }
+  const vie = 1 - Math.min(1, a / 0.9);
+  for (let i = 0; i < 26; i++) {
+    const g = i * 17 + 3 + graine * 0;
+    const ang = hasard(g) * Math.PI * 2;
+    const v = (500 + 1100 * hasard(g + 1)) * e.echelle;
+    const x = e.x + Math.cos(ang) * v * a;
+    const y = e.y + Math.sin(ang) * v * a + 900 * a * a;
+    if (i % 3 === 0) {
+      const r = (14 + 10 * hasard(g + 2)) * e.echelle;
+      s += `<path d="${cheminEtoile(x, y, r)}" fill="${COULEURS.jaune}" stroke="${E}" stroke-width="3" opacity="${n2(vie)}" transform="rotate(${n2(a * 400)} ${n2(x)} ${n2(y)})"/>`;
+    } else {
+      const r = (6 + 7 * hasard(g + 2)) * e.echelle;
+      s += `<path d="M${n2(x)} ${n2(y - r * 1.5)} C${n2(x + r)} ${n2(y - r * 0.3)} ${n2(x + r)} ${n2(y + r)} ${n2(x)} ${n2(y + r)} C${n2(x - r)} ${n2(y + r)} ${n2(x - r)} ${n2(y - r * 0.3)} ${n2(x)} ${n2(y - r * 1.5)} Z" fill="${COULEURS.bleu}" stroke="${E}" stroke-width="2.5" opacity="${n2(vie)}"/>`;
+    }
+  }
+  if (a < 0.45) {
+    const r = 60 + 800 * a;
+    s += `<circle cx="${n2(e.x)}" cy="${n2(e.y)}" r="${n2(r)}" fill="none" stroke="#ffffff" stroke-width="${n2(22 * (1 - a / 0.45))}" opacity="${n2(0.9 * (1 - a / 0.45))}"/>`;
+    s += `<circle cx="${n2(e.x)}" cy="${n2(e.y)}" r="${n2(r * 0.7)}" fill="none" stroke="${COULEURS.jaune}" stroke-width="${n2(10 * (1 - a / 0.45))}" opacity="${n2(0.8 * (1 - a / 0.45))}"/>`;
+  }
+  return s;
+};
+
+export const dessinCreature = (e: EtatCreature, graine: number): string => (e.qui === 'nuage' ? dessinNuage(e, graine) : dessinDragon(e, graine));

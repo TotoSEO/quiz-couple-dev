@@ -29,6 +29,9 @@ export const CATEGORIES = {
   bd: 'bd',
   // « He's a 10 but... » (12 octobre 2026) : un carrousel de huit cartes
   'dix-mais': 'carrousel',
+  // le bonhomme bâton, « me in my dreams with u » (16 octobre 2026), le
+  // lundi, le mercredi et le vendredi matin
+  baton: 'baton',
   // le second compte, Les mipaps (reseaux/mipaps) : ses quatre formats
   ...CATEGORIES_MIPAPS,
 };
@@ -36,7 +39,7 @@ export const CATEGORIES = {
 // (seule la mention quiz-couple.com dans l'image).
 const RENVOI_AU_SITE = /quiz-couple\.com|link in bio|lien en bio/i;
 // Les mipaps n'ont pas de site : jamais de renvoi, dans aucune catégorie.
-const SANS_RENVOI = ['pov', 'coquin', 'statique', 'phrase', 'bd', ...Object.keys(CATEGORIES_MIPAPS)];
+const SANS_RENVOI = ['pov', 'coquin', 'statique', 'phrase', 'bd', 'baton', ...Object.keys(CATEGORIES_MIPAPS)];
 const THEMES = ['light', 'dark', 'marque'];
 const LANGUES = ['en', 'fr', 'es', 'de', 'it'];
 
@@ -59,6 +62,7 @@ const chaines = (v, out = []) => {
 const titres = (r) => {
   if (['quiz-chrono', 'connais-tu', 'tu-preferes'].includes(r.gabarit)) return [r.etiquette, r.accroche, r.fin?.question];
   if (r.gabarit === 'pov') return [r.titre, ...(r.plans ?? []).map((p) => p.legende)];
+  if (r.gabarit === 'baton') return [r.titre];
   if (r.gabarit === 'carrousel') return r.pages.flatMap((p) => [p.etiquette, p.accroche, p.question]);
   return [];
 };

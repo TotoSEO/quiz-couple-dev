@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { categorieAttendue, MELANGE_DEFAUT } from '../lib/calendrier.mjs';
+import { TRAMES } from '../../studio/src/baton/realisateur.mjs';
 import { CATEGORIES } from '../lib/controle.mjs';
 import { controlerFin } from '../lib/style.mjs';
 
@@ -26,6 +27,33 @@ test('chaque sujet daté tombe sur un créneau de sa catégorie', () => {
 test("la grille met « He's a 10 but... » le samedi soir et la phrase tendre le dimanche soir", () => {
   assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-17', 'soir'), 'dix-mais');
   assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-18', 'soir'), 'phrase');
+});
+
+test('la grille met le bonhomme bâton le lundi, le mercredi et le vendredi matin, une animation les autres matins', () => {
+  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-19', 'matin'), 'baton');
+  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-20', 'matin'), 'pov');
+  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-21', 'matin'), 'baton');
+  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-23', 'matin'), 'baton');
+  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-25', 'matin'), 'pov');
+});
+
+test("la banque « baton » : une histoire par sujet, le héros fille une fois sur deux, une trame connue, une musique", () => {
+  const sujets = SUJETS.baton;
+  assert.ok(sujets.length >= 24, 'au moins huit semaines de sujets');
+  for (const trame of Object.keys(TRAMES)) assert.ok(sujets.filter((x) => x.trame === trame).length >= 2, `au moins deux histoires de la trame ${trame}`);
+  const ids = new Set();
+  sujets.forEach((s, i) => {
+    assert.ok(!ids.has(s.id), `${s.id} en double`);
+    ids.add(s.id);
+    assert.equal(s.heros, i % 2 ? 'fille' : 'garcon', `${s.id} : le héros alterne`);
+    assert.ok(Object.keys(TRAMES).includes(s.trame), `${s.id} : trame ${s.trame}`);
+    assert.ok(typeof s.idee === 'string' && s.idee.length >= 100, `${s.id} : l'histoire se raconte en deux ou trois phrases`);
+    assert.ok(typeof s.son === 'string' && s.son.length >= 3 && s.son.length <= 40, `${s.id} : un titre connu pour la musique (son)`);
+  });
+  for (const s of SUJETS.saison.sujets.filter((x) => x.categorie === 'baton')) {
+    assert.ok(['fille', 'garcon'].includes(s.heros), `${s.id} : heros`);
+    assert.ok(Object.keys(TRAMES).includes(s.trame), `${s.id} : trame`);
+  }
 });
 
 test("la banque « dix-mais » : huit cartes « but he / but she », courtes, toutes différentes, sans fin qui commente", () => {

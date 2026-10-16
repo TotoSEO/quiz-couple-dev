@@ -1,7 +1,14 @@
 # « me in my dreams with u » : le dragon
 
 Découpage technique du premier reel du format bonhomme bâton (gabarit
-`baton`, recette `baton-dragon.json`). Noir et blanc au trait, seuls les
+`baton`, recette `baton-dragon.json`). Depuis le 16 octobre 2026, la recette
+est un **brief par séquences** (`histoire.sequences`) : c'est le réalisateur
+du studio (`src/baton/realisateur.mjs`) qui écrit les plans ci-dessous à
+partir du brief, à la seconde et au pixel près ; ce document reste le
+modèle de ce qu'un plan contient, et le niveau de détail attendu des
+descriptions. Sept autres trames existent (le parapluie, la couverture,
+l'étoile, porter l'autre, rattraper sa chute, la danse, le petit-déjeuner en
+ninja), chacune avec son brief d'exemple dans ce dossier. Noir et blanc au trait, seuls les
 éléments qui comptent sont en couleur : le bandana violet du héros, le nœud
 rose dans les cheveux de sa copine, l'épée électrique (bleu), les yeux et la
 gueule du dragon (rouge), la larme (bleu pâle), le bouquet (rouge et vert),

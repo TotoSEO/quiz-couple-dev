@@ -190,7 +190,10 @@ par catégorie : `pov-frites`, `pov-fleurs` et `pov-cafe` (pov ; le café est
 le modèle d'une situation jouée sans aucune bulle, dans un des nouveaux
 décors), `pov-couette` (coquin), `statique-calin` (statique), `connais-tu`,
 `tu-preferes`, `citation` (phrase), `bd-malade` (bd), `dix-mais` et
-`dix-mais-elle` (dix-mais).
+`dix-mais-elle` (dix-mais), et pour le bonhomme bâton (baton) un brief par
+trame : `baton-dragon`, `baton-parapluie`, `baton-couverture`,
+`baton-etoile`, `baton-porte`, `baton-rattrape`, `baton-danse`,
+`baton-reveil`.
 
 ### Les animations (pov, coquin, statique)
 
@@ -492,6 +495,97 @@ rendue (`image.jpg`) : les quatre cases se lisent-elles sans le texte ?
 
 La story du matin n'est pas ton travail : l'automate reprend le reel du
 matin en story après sa publication.
+
+### Le bonhomme bâton (lundi, mercredi et vendredi matin)
+
+Gabarit `baton`, catégorie `baton`, `"format": "reel"`, un sujet de la
+banque `baton` (ou un sujet daté qui porte cette catégorie). C'est le format
+« me in my dreams with u » : un héros au corps de traits qui bouge comme un
+ninja, des mini-aventures de couple en noir et blanc où seuls les éléments
+qui comptent sont en couleur, des ralentis, des zooms, une vraie petite
+histoire en 15 à 40 s. Thomas, sur le premier reel (le dragon) : « C'EST
+IN-CROY-ABLE, digne d'un artiste. Je veux exactement ce style de post. Mais
+attention, pour obtenir une telle qualité de rendu il va falloir que les
+briefs soient d'une qualité exceptionnelle avec beaucoup de détail. » Et le
+même jour, devant un second reel qui refaisait le dragon avec un nuage :
+« il faut varier les histoires ! Ça doit pas forcément être un conte de fées
+ou une aventure ».
+
+**Le brief est une histoire par séquences**, pas des plans : la recette
+porte `heros` (`fille` ou `garcon`), `son` et `histoire.sequences`, et le
+réalisateur du studio (`reseaux/studio/src/baton/realisateur.mjs`) la
+transforme en plans techniques, cadrés et minutés comme le dragon (visages
+sous le titre, caméra qui pousse, ralenti au bon moment, transitions floues
+entre les paysages, bruitages déduits des gestes). Les modèles sont les huit
+briefs de `recettes/exemples/baton-*.json`, un par trame. Le sujet de la
+banque donne `heros`, `trame`, l'histoire en trois phrases et `son` (un titre
+connu) : tu écris le brief qui la raconte.
+
+- **Huit trames**, une par exploit (`TRAMES` dans realisateur.mjs ;
+  `sequences` donne l'ordre à suivre) :
+  - `sauvetage` : le dragon l'emporte, épée, traversée, tour, garde, bond,
+    bouquet au sommet. **La seule avec l'épée.** Plus tard il y aura des
+    combats contre d'autres gens ; pas maintenant, et jamais trois fois de
+    suite.
+  - `parapluie` : un nuage d'orage les arrose, le héros court chercher le
+    parapluie à la maison, l'ouvre au-dessus de l'autre au ralenti, trempé ;
+    le nuage boude et s'en va, câlin sous le parapluie.
+  - `course` : l'autre grelotte, le héros rapporte la couverture en parkour
+    et la lui pose sur les épaules.
+  - `etoile` : l'autre montre une étoile, le héros bondit la décrocher.
+  - `porte` : l'autre n'en peut plus (le soir), le héros la prend sur son
+    dos, traverse la ville et la forêt pendant qu'elle s'endort, arrive à
+    la maison ; la fenêtre s'allume.
+  - `rattrape` : l'autre grimpe sur un rocher ou un banc, perd l'équilibre
+    et tombe ; le héros plonge et la rattrape au ralenti ; bisou.
+  - `danse` : l'autre a le cafard sur le canapé, le héros s'incline, lui
+    tend la main, ils dansent, elle tournoie, il la renverse ; bisou.
+  - `reveil` : l'autre dort, le héros sort à pas de loup, fait sauter les
+    crêpes dans la cuisine et rapporte le plateau en ninja ; réveil devant
+    le petit-déjeuner.
+- **Le héros est une fille une fois sur deux** (le sujet le dit) : « me »
+  peut être elle. La fille garde son nœud rose et sa queue de cheval, le
+  garçon son bandana violet, quel que soit le rôle ; dans la recette
+  l'autre s'appelle toujours `elle`, même quand c'est lui.
+- **Chaque séquence a sa `description`** (120 signes au moins ; chaque
+  paysage d'une traversée et l'insert des pieds aussi) : le découpage qu'un
+  cadreur et un dessinateur liraient, cadrage, caméra, gestes à la seconde,
+  expressions, effets, sons. C'est ce que Thomas appelle un brief d'une
+  qualité exceptionnelle, et le contrôle le refuse en dessous. Les
+  paramètres acceptés par chaque séquence sont dans `SEQUENCES`
+  (realisateur.mjs) ; les noms (décors, incidents, exploits, fins, poses,
+  expressions) dans `reseaux/studio/src/baton/vocabulaire.json` et dans le
+  réalisateur, qui refuse un ordre impossible (une traversée avant le
+  départ, un bouquet quand les mains sont prises, l'épée hors d'un combat).
+- **Varier** : le décor d'ouverture (montagnes, prairie, ville, plage, salon,
+  chambre), le jour ou la nuit, les paysages traversés et leurs obstacles,
+  la fin (`charmeur`, `calin`, `bisou`, `rire`, `endormie`), les temps du
+  gros plan d'émotion. Deux reels de la même semaine n'ont pas la même
+  trame ; on tourne sur les huit.
+- **La musique** : le reel est rendu sans musique et publié avec un son de
+  la bibliothèque Instagram. Le sujet donne un titre connu qui va avec
+  l'histoire (« He's a Pirate » pour le dragon, « Umbrella » pour le
+  parapluie, « Here Comes the Sun » pour le réveil) : il va dans
+  `son.recherche`, et `son.ambiance` porte l'ambiance de la trame
+  (`epique` pour le sauvetage, `drole` pour le parapluie et le réveil,
+  `tendre` pour les autres) : si le titre n'est pas dans la bibliothèque,
+  la publication cherche dans cette ambiance. Thomas : « pour ces vidéos là
+  il faudra trouver des musiques qui sont en rapport avec l'animation...
+  idéalement des sons connus ! »
+- **Légende** sans renvoi vers le site (le contrôle le refuse) : une
+  première ligne qui dit la situation avec un mot-clé (« when she's cold »,
+  « my boyfriend when it rains »), ou rien, puis un seul appel de la liste
+  (envoyer : « Send this to your partner », « Tag him », « Tag her »).
+  Hashtags : `#stickman`, `#stickfigure`, `#animation`, `#couplegoals`,
+  `#quizcouple`.
+- **Vérifier** : `controler.mjs` sur le post (il compile le brief et refuse
+  une séquence hors d'ordre, un nom inconnu, une description courte, plus
+  de 40 s à l'écran), puis `rendre.mjs --verifier` sur la recette (visages
+  sous le titre et hors des textes) et une planche. Un rendu complet
+  prend une vingtaine de minutes sur les machines du rendu : la réserve
+  s'écrit d'avance, le rendu suit.
+
+La story du matin reprend ce reel comme les autres (il fait moins de 60 s).
 
 ### Légende et hashtags
 

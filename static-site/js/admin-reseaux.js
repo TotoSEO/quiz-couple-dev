@@ -27,12 +27,12 @@
   var ORDRE = ['matin', 'midi', 'soir'];
   var FORMATS = { reel: 'Reel', image: 'Image', carrousel: 'Carrousel' };
   var GABARITS = {
-    citation: 'Citation', 'quiz-chrono': 'Quiz chrono', 'connais-tu': 'Connais-tu ton partenaire', 'tu-preferes': 'Tu préfères', pov: 'Animation', image: 'Image', carrousel: 'Carrousel', bd: 'BD',
+    citation: 'Citation', 'quiz-chrono': 'Quiz chrono', 'connais-tu': 'Connais-tu ton partenaire', 'tu-preferes': 'Tu préfères', pov: 'Animation', baton: 'Bonhomme bâton', image: 'Image', carrousel: 'Carrousel', bd: 'BD',
     'mipaps-reel': 'Reel animé', 'mipaps-statique': 'Reel statique', 'mipaps-carrousel': 'Carrousel-histoire', 'mipaps-post': 'Post'
   };
   // les catégories de la ligne éditoriale, plus parlantes que le gabarit
   var CATEGORIES = {
-    pov: 'Animation POV', coquin: 'Animation coquine', statique: 'Reel statique', 'connais-tu': 'Connais-tu ton partenaire', 'tu-preferes': 'Tu préfères', phrase: 'Phrase tendre', post: 'Post', carrousel: 'Carrousel', bd: 'BD', 'dix-mais': "He's a 10 but...",
+    pov: 'Animation POV', coquin: 'Animation coquine', statique: 'Reel statique', 'connais-tu': 'Connais-tu ton partenaire', 'tu-preferes': 'Tu préfères', phrase: 'Phrase tendre', post: 'Post', carrousel: 'Carrousel', bd: 'BD', 'dix-mais': "He's a 10 but...", baton: 'Bonhomme bâton',
     'mipaps-anime': 'Reel animé', 'mipaps-statique': 'Reel statique', 'mipaps-histoire': 'Carrousel-histoire', 'mipaps-post': 'Post'
   };
   // les catégories qu'une idée peut viser, par compte, avec le créneau de la grille
@@ -40,7 +40,7 @@
     en: [
       ['pov', 'Animation POV (matin et soir)'], ['bd', 'BD en quatre cases (mardi soir)'], ['connais-tu', 'Connais-tu ton partenaire ? (midi)'], ['tu-preferes', 'Tu préfères (midi)'],
       ['statique', 'Reel statique, dessin et phrase (midi)'], ['phrase', 'Phrase tendre (dimanche soir)'], ['coquin', 'Animation coquine (vendredi soir)'], ['carrousel', 'Carrousel de questions (jeudi soir)'],
-      ['dix-mais', "C'est un 10 mais... (carrousel du samedi soir)"]
+      ['dix-mais', "C'est un 10 mais... (carrousel du samedi soir)"], ['baton', 'Bonhomme bâton, « me in my dreams with u » (lundi, mercredi et vendredi matin)']
     ],
     fr: [
       ['mipaps-anime', 'Reel animé (matin)'], ['mipaps-post', 'Post : mini, déclaration ou schéma (midi)'], ['mipaps-histoire', 'Carrousel-histoire (soir, lundi, mercredi, vendredi, dimanche)'], ['mipaps-statique', 'Reel statique (soir, mardi, jeudi, samedi)']

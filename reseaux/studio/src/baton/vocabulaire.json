@@ -1,5 +1,5 @@
 {
-  "note": "Vocabulaire du format bonhomme bâton (gabarit baton). Les noms admis dans une recette ; le contrôle des automates (lib/baton.mjs) et le studio lisent le même fichier. Les angles des poses sont dans rig.ts.",
+  "note": "Vocabulaire du format bonhomme bâton (gabarit baton). Les noms admis dans une recette ; le contrôle des automates (lib/baton.mjs) et le studio lisent le même fichier. Les angles des poses sont dans rig.ts ; les séquences d'un brief et leurs paramètres sont dans realisateur.mjs.",
   "poses": {
     "debout": "Debout, bras le long du corps, jambes légèrement écartées",
     "parle": "Debout, la main proche levée à hauteur de la poitrine (gesticule avec l'action parle)",
@@ -29,7 +29,34 @@
     "assis": "Assis au sol, jambes devant",
     "ancre": "La garde basse, le pied arrière droit reculé et ancré, la pointe enfoncée",
     "ancre-tendu": "La même, le talon arrière qui se lève (la tension avant le bond)",
-    "abattu": "Abattu : la tête tombe, les épaules aussi, les bras pendent"
+    "abattu": "Abattu : la tête tombe, les épaules aussi, les bras pendent",
+    "frissonne": "Frissonne : les bras croisés sur la poitrine, les épaules rentrées, les genoux serrés (avec l'action tremble)",
+    "montre": "Montre : le bras proche tendu vers le ciel devant soi, la tête levée",
+    "calin": "Câlin : les deux bras en avant, autour de l'autre (chacun face à l'autre, à 70 px)",
+    "enveloppe": "Enveloppe : les deux bras levés en avant, une couverture ouverte entre les mains",
+    "admire": "Admire : les mains jointes devant soi, la tête penchée sur ce qu'on tient",
+    "accroupi": "Accroupi : prêt à bondir, les jambes pliées, les bras en arrière (sans épée)",
+    "baille": "Bâille : la main proche devant la bouche, la tête en arrière (avec l'expression baille)",
+    "abrite": "S'abrite : les deux mains sur la tête (sous la pluie), les épaules rentrées",
+    "tient-parapluie": "Tient le parapluie ouvert au-dessus de lui : le bras proche dressé (avec l'objet parapluie)",
+    "furtif": "Le pas de loup du ninja : sur la pointe des pieds, un genou haut, les bras écartés (l'allure furtif de l'action court anime)",
+    "porteur": "Porte l'autre sur son dos : penché en avant, les mains derrière les hanches sous ses jambes, les genoux pliés",
+    "portee-dos": "Portée sur le dos de l'autre : les bras autour de son cou, les genoux repliés autour de ses hanches (avec attache dos)",
+    "invite": "Invite à danser : une révérence, la main proche tendue paume ouverte",
+    "danse-1": "Premier temps de danse : la main proche levée qui tient celle de l'autre, le poids sur la jambe avant",
+    "danse-2": "Second temps de danse : le poids sur l'autre jambe",
+    "tournoie": "Tournoie : les bras en l'air, un pied levé (le sens change deux fois pour un tour)",
+    "penche": "Le pas renversé : une fente, le bras proche à l'horizontale qui tient le dos de l'autre, l'autre bras levé",
+    "penchee": "Renversée dans les bras de l'autre : le buste en arrière, un bras à son cou, l'autre tendu, une jambe levée (avec attache main)",
+    "rattrape": "Rattrape : un genou au sol, le buste en avant, les deux bras tendus bas devant",
+    "rattrapee": "Rattrapée : couchée en arrière dans ses bras, un bras à son cou (avec attache main)",
+    "tombe": "Tombe : le buste part en arrière, les bras battent l'air, une jambe lâche",
+    "equilibre": "En équilibre : les bras à l'horizontale, un pied devant",
+    "dort": "Dort : allongée (couche : true sur un lit), les bras le long du corps, les genoux un peu pliés",
+    "assis-canape": "Assise au bord du lit ou sur le canapé : les cuisses à l'horizontale, les tibias qui pendent",
+    "cuisine": "Cuisine : le bras proche tendu devant sur la poêle, la tête penchée dessus",
+    "porte-plateau": "Porte le plateau : les deux mains devant, à la même hauteur",
+    "bisou": "Bisou : les deux mains sur les épaules de l'autre, le front penché vers le sien"
   },
   "expressions": {
     "neutre": "Deux points, bouche en petit trait",
@@ -48,7 +75,12 @@
     "ferme": "Yeux fermés, bouche entrouverte (souffle)",
     "triste": "Bouche vers le bas, sourcils tristes",
     "chagrin": "Triste, une larme qui coule de l'œil proche",
-    "vengeur": "Sourcils en biais, yeux plissés, sourire en coin : l'esprit de vengeance"
+    "vengeur": "Sourcils en biais, yeux plissés, sourire en coin : l'esprit de vengeance",
+    "froid": "Froid : yeux plissés, sourcils tristes, la bouche qui claque des dents",
+    "tendre": "Tendre : sourcils doux, sourire, les joues roses, les yeux ouverts",
+    "baille": "Bâille : les yeux fermés, la bouche grande ouverte en o",
+    "dort": "Dort : les yeux fermés, une bouche minuscule",
+    "fatigue": "La fatigue : les yeux mi-clos, les sourcils doux, la bouche minuscule"
   },
   "actions": [
     "court",
@@ -107,11 +139,47 @@
       "description": "Le sol crénelé de la plateforme, le ciel, le soleil, des oiseaux au loin",
       "sol": 1250,
       "ambiance": "vent-montagne"
+    },
+    "prairie": {
+      "description": "Une prairie : collines douces, un grand arbre à gauche, des fleurs ; un décor d'ouverture",
+      "sol": 1300,
+      "ambiance": "oiseaux"
+    },
+    "maison": {
+      "description": "Chez eux : une maison à droite (toit, porte à x 806, fenêtre, cheminée), un chemin, un arbre à gauche ; le héros y court chercher quelque chose",
+      "sol": 1300,
+      "ambiance": "oiseaux"
+    },
+    "ville": {
+      "description": "Travelling en ville : immeubles au loin, trottoir, lampadaires ; obstacle banc",
+      "sol": 1300,
+      "ambiance": "circulation"
+    },
+    "plage": {
+      "description": "Travelling sur la plage : la mer et ses vagues, le sable, des palmiers ; obstacle rocher",
+      "sol": 1300,
+      "ambiance": "vagues"
+    },
+    "chambre": {
+      "description": "La chambre : une fenêtre à gauche (la lune la nuit), un lit à droite (tête de lit à droite, oreiller ; on y dort la tête vers la droite, le corps sous la couette), une table de nuit et sa lampe ; décor d'ouverture",
+      "sol": 1300,
+      "ambiance": "grillons"
+    },
+    "cuisine": {
+      "description": "La cuisine : la fenêtre, une étagère à bocaux, le plan de travail et la cuisinière à droite ; le lieu d'arrivée du petit-déjeuner ninja",
+      "sol": 1300,
+      "ambiance": "oiseaux"
+    },
+    "salon": {
+      "description": "Le salon : une fenêtre, un cadre au cœur, un lampadaire à gauche, le canapé à droite (assise à 1216) ; décor d'ouverture",
+      "sol": 1300,
+      "ambiance": "horloge"
     }
   },
-  "creatures": {
-    "dragon": "Dragon au trait : corps, long cou, tête cornue, ailes de chauve-souris, queue en pointe ; yeux et gueule rouges. Poses vole, plonge, perche, rugit, eclate"
-  },
+  "creatures": [
+    "dragon",
+    "nuage"
+  ],
   "effets": {
     "poussiere": "Nuage de poussière au point (x, y), à l'instant de",
     "onde": "Onde de choc circulaire qui s'élargit depuis (x, y)",
@@ -122,7 +190,16 @@
     "coeurs": "Petits cœurs roses qui montent depuis (x, y), de de à a",
     "etincelles": "Étincelles bleues au point (x, y), de de à a",
     "eclats": "Éclats et braises qui partent en étoile depuis (x, y), à l'instant de",
-    "trainee-lame": "La lame laisse une traînée bleue (de de à a)"
+    "trainee-lame": "La lame laisse une traînée bleue (de de à a)",
+    "eclair": "Un éclair qui frappe de (x, y) vers le bas sur « hauteur » px (700 par défaut), jaune, avec un flash à moitié",
+    "pluie": "De la pluie qui tombe dans une bande de « largeur » px autour de x (1300 par défaut), depuis « hauteur » px du haut (140 par défaut, 760 sous le nuage), de « de » à « a »",
+    "etoile-ciel": "Une étoile qui scintille dans le ciel en (x, y), jusqu'à « a » (quand on la décroche)",
+    "zzz": "Trois z du sommeil qui montent depuis (x, y), de de à a",
+    "notes": "Des notes de musique roses et violettes qui montent depuis (x, y), de de à a",
+    "fumee": "De la vapeur qui monte de (x, y), de de à a",
+    "crepe": "La crêpe qui saute de la poêle en (x, y) et y retombe en 0,7 s, à l'instant de",
+    "gouttes": "Des gouttes qui tombent de (x, y) sur « largeur » px (le héros trempé), de de à a",
+    "lumiere": "Une lumière qui s'allume dans une fenêtre centrée en (x, y) (largeur, hauteur), de de à a"
   },
   "sons": [
     "pas",
@@ -182,7 +259,17 @@
     "coeur-lent",
     "coeur-ambiance",
     "scintille",
-    "etincelle-magique"
+    "etincelle-magique",
+    "froissement",
+    "baille",
+    "ronfle",
+    "smack",
+    "pose",
+    "soupir",
+    "sursaut",
+    "coussin",
+    "applaudit",
+    "reveil"
   ],
   "ambiances": [
     "vent",
@@ -191,6 +278,10 @@
     "oiseaux",
     "grillons",
     "pluie",
+    "circulation",
+    "vagues",
+    "rue-nuit",
+    "horloge",
     "aucune"
   ],
   "transitions": [
@@ -202,5 +293,34 @@
   "duree": {
     "min": 10,
     "max": 40
-  }
+  },
+  "genres": [
+    "fille",
+    "garcon"
+  ],
+  "objets": [
+    "bouquet",
+    "couverture",
+    "etoile",
+    "parapluie-ferme",
+    "parapluie",
+    "plateau",
+    "poele",
+    "poele-vide",
+    "aucun"
+  ],
+  "vetements": [
+    "aucun",
+    "cape"
+  ],
+  "obstacles": [
+    "tronc",
+    "trou",
+    "rocher",
+    "banc"
+  ],
+  "attaches": [
+    "dos",
+    "main"
+  ]
 }

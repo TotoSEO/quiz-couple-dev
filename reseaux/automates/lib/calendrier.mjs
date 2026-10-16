@@ -15,7 +15,10 @@ export const jourDeSemaine = (jour) => ((new Date(`${jour}T12:00:00Z`).getUTCDay
 // La semaine type de la ligne éditoriale (reseaux/atelier/LIGNE-EDITORIALE.md),
 // la même que le réglage « melange » posé par la migration.
 export const MELANGE_DEFAUT = {
-  matin: 'pov',
+  // le lundi, le mercredi et le vendredi matin, un reel du bonhomme bâton
+  // (« me in my dreams with u », 16 octobre 2026, à la place de trois des
+  // dix animations) ; les autres matins une animation des mascottes
+  matin: { 1: 'baton', 2: 'pov', 3: 'baton', 4: 'pov', 5: 'baton', 6: 'pov', 7: 'pov' },
   midi: { 1: 'connais-tu', 2: 'tu-preferes', 3: 'connais-tu', 4: 'statique', 5: 'connais-tu', 6: 'tu-preferes', 7: 'statique' },
   // le mardi soir une BD en quatre cases (8 octobre 2026), le jeudi soir un
   // carrousel de questions : le format qui se garde ; le samedi soir un

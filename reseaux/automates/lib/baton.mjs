@@ -1,28 +1,36 @@
 // Contrôle d'un scénario du bonhomme bâton (gabarit « baton », le format
-// « me in my dreams with u ») avant tout rendu : chaque nom vient du
-// vocabulaire du studio (studio/src/baton/vocabulaire.json), chaque temps
-// tient dans son plan, les ralentis ne se chevauchent pas, et chaque plan
-// est décrit comme un découpage technique. Le contrôle de mise en page
-// (titre dans la zone utile, visages) vient ensuite, au rendu.
+// « me in my dreams with u ») avant tout rendu. Une recette est un BRIEF
+// (histoire : des séquences, que le réalisateur du studio transforme en
+// plans) ou, pour les recettes écrites à la main, des PLANS. Dans les deux
+// cas : chaque nom vient du vocabulaire du studio
+// (studio/src/baton/vocabulaire.json), chaque temps tient dans son plan, les
+// ralentis ne se chevauchent pas, et chaque séquence ou plan est décrit
+// comme un découpage technique. Le contrôle de mise en page (titre dans la
+// zone utile, visages) vient ensuite, au rendu.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { realiser, SEQUENCES } from '../../studio/src/baton/realisateur.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
 export const VOCABULAIRE_BATON = JSON.parse(fs.readFileSync(path.join(ici, '..', '..', 'studio', 'src', 'baton', 'vocabulaire.json'), 'utf8'));
 
 const QUI = ['heros', 'elle'];
-const CREATURES = Object.keys(VOCABULAIRE_BATON.creatures);
+const CREATURES = VOCABULAIRE_BATON.creatures;
 const POSES_DRAGON = ['vole', 'plonge', 'perche', 'rugit', 'eclate'];
 const EASES = ['lineaire', 'douce', 'entree', 'sortie', 'ressort'];
 const POINTS = ['tete', 'corps', 'pieds'];
-const OBSTACLES = ['tronc', 'trou', 'rocher'];
+const OBSTACLES = VOCABULAIRE_BATON.obstacles;
+const ATTACHES = VOCABULAIRE_BATON.attaches;
+const GENRES = VOCABULAIRE_BATON.genres;
+const OBJETS = VOCABULAIRE_BATON.objets;
+const VETEMENTS = VOCABULAIRE_BATON.vetements;
 const EMOJI = /\p{Extended_Pictographic}/u;
-// Un plan se décrit comme à un dessinateur et à un cadreur : ce qu'on voit,
-// les gestes, la caméra, les sons (Thomas, 15 octobre 2026 : « c'est ce
-// genre de complexité de brief qu'il faut obtenir »).
+// Un plan ou une séquence se décrit comme à un dessinateur et à un cadreur :
+// ce qu'on voit, les gestes, la caméra, les sons (Thomas, 15 octobre 2026 :
+// « c'est ce genre de complexité de brief qu'il faut obtenir »).
 const DESCRIPTION_MIN = 120;
-const PLANS_MAX = 12;
+const PLANS_MAX = 14;
 // La durée réelle à l'écran, ralentis compris. Plus de cible « 10 à 20 s »
 // depuis le 16 octobre 2026 (Thomas : « ne te base plus sur ça », des scènes
 // étaient précipitées) : une aventure prend le temps qu'il lui faut, dans la
@@ -38,6 +46,32 @@ export const dureeReelle = (p) => {
   return (p.ralentis ?? []).reduce((t, r) => (nombre(r.de) && nombre(r.a) && nombre(r.facteur) && r.facteur > 0 ? t + (r.a - r.de) * (1 / r.facteur - 1) : t), d);
 };
 
+// Les plans d'une recette : les siens, ou ceux de son histoire.
+export const plansDeBaton = (r) => (Array.isArray(r?.plans) ? { plans: r.plans, fautes: [] } : r?.histoire ? realiser(r) : { plans: [], fautes: ['une recette du bonhomme bâton porte une histoire (le brief par séquences) ou des plans'] });
+
+// Le brief : chaque séquence décrite, chaque paysage d'une traversée décrit,
+// l'insert de la préparation décrit.
+const controlerBrief = (r) => {
+  const f = [];
+  const h = r.histoire;
+  if (!h || !Array.isArray(h.sequences)) return ['histoire : une liste de séquences (histoire.sequences) attendue'];
+  const texte = (t, ou) => {
+    if (typeof t !== 'string' || t.trim().length < DESCRIPTION_MIN) f.push(`${ou} : la description est un découpage technique, cadrage, caméra, gestes, expressions, effets, sons (${DESCRIPTION_MIN} signes au moins)`);
+  };
+  h.sequences.forEach((seq, i) => {
+    const nom = seq?.sequence;
+    const ou = `séquence ${i + 1}${nom ? ` (${nom})` : ''}`;
+    if (!SEQUENCES[nom]) return;
+    if (nom === 'traversee') {
+      (Array.isArray(seq.etapes) ? seq.etapes : []).forEach((e, k) => texte(e?.description, `${ou}, paysage ${k + 1}`));
+      return;
+    }
+    texte(seq.description, ou);
+    if (nom === 'preparation' && seq.pieds !== false) texte(seq.insert ?? seq.descriptionPieds, `${ou}, insert sur les pieds`);
+  });
+  return f;
+};
+
 export function controlerBaton(r) {
   const f = [];
   const V = VOCABULAIRE_BATON;
@@ -47,7 +81,13 @@ export function controlerBaton(r) {
     else if (EMOJI.test(r.titre)) f.push("titre : pas d'emoji à l'écran");
   }
   if (r.theme !== 'light') f.push('le bonhomme bâton se dessine sur papier blanc : theme light');
-  const plans = Array.isArray(r.plans) ? r.plans : [];
+  if (r.heros !== undefined && !GENRES.includes(r.heros)) f.push(`heros : « ${r.heros} » (${GENRES.join(', ')})`);
+  if (r.histoire && r.plans) f.push('une recette porte une histoire ou des plans, pas les deux');
+  if (r.histoire) f.push(...controlerBrief(r));
+  const { plans: compiles, fautes } = plansDeBaton(r);
+  f.push(...fautes);
+  if (fautes.length) return f;
+  const plans = Array.isArray(compiles) ? compiles : [];
   if (plans.length < 1 || plans.length > PLANS_MAX) f.push(`une aventure a de 1 à ${PLANS_MAX} plans`);
   const recit = plans.reduce((t, p) => t + (nombre(p.duree) ? p.duree : 0), 0);
   const ecran = plans.reduce((t, p) => t + dureeReelle(p), 0);
@@ -57,13 +97,14 @@ export function controlerBaton(r) {
   plans.forEach((p, i) => {
     const ou = `plan ${i + 1}`;
     const d = p.duree;
-    if (typeof p.description !== 'string' || p.description.trim().length < DESCRIPTION_MIN) f.push(`${ou} : la description est un découpage technique, cadrage, caméra, gestes, expressions, effets, sons (${DESCRIPTION_MIN} signes au moins)`);
+    if (!r.histoire && (typeof p.description !== 'string' || p.description.trim().length < DESCRIPTION_MIN)) f.push(`${ou} : la description est un découpage technique, cadrage, caméra, gestes, expressions, effets, sons (${DESCRIPTION_MIN} signes au moins)`);
     if (!nombre(d) || d < 0.4 || d > 8) f.push(`${ou} : durée de récit de 0,4 à 8 s`);
     const decor = V.decors[p.decor];
     if (!decor) {
       f.push(`${ou} : décor inconnu « ${p.decor} » (${Object.keys(V.decors).join(', ')})`);
       return;
     }
+    if (p.nuit !== undefined && typeof p.nuit !== 'boolean') f.push(`${ou} : nuit vaut true ou false`);
     if (p.defile !== undefined && (!nombre(p.defile) || p.defile < 0 || p.defile > 2000)) f.push(`${ou} : defile de 0 à 2000 px/s`);
     if (p.ambiance !== undefined && !V.ambiances.includes(p.ambiance)) f.push(`${ou} : ambiance inconnue « ${p.ambiance} » (${V.ambiances.join(', ')})`);
     if (p.transition !== undefined && !V.transitions.includes(p.transition)) f.push(`${ou} : transition inconnue « ${p.transition} »`);
@@ -81,8 +122,10 @@ export function controlerBaton(r) {
       if (a > (nombre(d) ? d : 0) + 1.0) f.push(`${ou}, ${quoi} : déborde du plan`);
     };
     for (const [k, o] of (p.obstacles ?? []).entries()) {
-      if (!OBSTACLES.includes(o.type)) f.push(`${ou}, obstacle ${k + 1} : type inconnu « ${o.type} »`);
-      if (!p.defile) f.push(`${ou}, obstacle ${k + 1} : un obstacle demande un travelling (defile)`);
+      if (!OBSTACLES.includes(o.type)) f.push(`${ou}, obstacle ${k + 1} : type inconnu « ${o.type} » (${OBSTACLES.join(', ')})`);
+      // un obstacle passe sous le héros à l'instant a (travelling) ou se pose à l'abscisse x (décor fixe)
+      if (!p.defile && o.x === undefined) f.push(`${ou}, obstacle ${k + 1} : un obstacle demande un travelling (defile) ou une abscisse (x)`);
+      if (o.x !== undefined && (!nombre(o.x) || o.x < -200 || o.x > 1300)) f.push(`${ou}, obstacle ${k + 1} : x de -200 à 1300`);
       dans(o.a, `obstacle ${k + 1}`);
     }
     const ral = [...(p.ralentis ?? [])].sort((a, b) => a.de - b.de);
@@ -100,11 +143,17 @@ export function controlerBaton(r) {
       if (x.expression !== undefined && !V.expressions[x.expression]) f.push(`${ou}, ${quoi} : expression inconnue « ${x.expression} »`);
       if (x.vue !== undefined && !V.vues.includes(x.vue)) f.push(`${ou}, ${quoi} : vue inconnue « ${x.vue} »`);
       if (x.arme !== undefined && !V.armes.includes(x.arme)) f.push(`${ou}, ${quoi} : arme « dos », « main » ou « aucune »`);
-      if (x.tient !== undefined && !['bouquet', 'aucun'].includes(x.tient)) f.push(`${ou}, ${quoi} : tient « bouquet » ou « aucun »`);
+      if (x.tient !== undefined && !OBJETS.includes(x.tient)) f.push(`${ou}, ${quoi} : tient (${OBJETS.join(', ')})`);
+      if (x.vetement !== undefined && !VETEMENTS.includes(x.vetement)) f.push(`${ou}, ${quoi} : vetement (${VETEMENTS.join(', ')})`);
       if (x.sens !== undefined && !['gauche', 'droite'].includes(x.sens)) f.push(`${ou}, ${quoi} : sens « gauche » ou « droite »`);
       if (x.regard !== undefined && (!Array.isArray(x.regard) || x.regard.length !== 2 || !x.regard.every((v) => nombre(v) && v >= -1 && v <= 1))) f.push(`${ou}, ${quoi} : regard = [dx, dy] de -1 à 1`);
       if (x.echelle !== undefined && (!nombre(x.echelle) || x.echelle < 0.4 || x.echelle > 2.5)) f.push(`${ou}, ${quoi} : échelle de 0,4 à 2,5`);
       if (x.ease !== undefined && !EASES.includes(x.ease)) f.push(`${ou}, ${quoi} : courbe inconnue « ${x.ease} »`);
+      if (x.couche !== undefined && typeof x.couche !== 'boolean') f.push(`${ou}, ${quoi} : couche vaut true ou false`);
+      if (x.attache !== undefined && x.attache !== null) {
+        if (typeof x.attache !== 'object' || !QUI.includes(x.attache.a) || !ATTACHES.includes(x.attache.ancre)) f.push(`${ou}, ${quoi} : attache = { a : heros ou elle, ancre : ${ATTACHES.join(' ou ')} }, ou null pour lâcher`);
+        else if (!presents.includes(x.attache.a)) f.push(`${ou}, ${quoi} : on s'accroche à un personnage présent dans le plan`);
+      }
     };
     for (const x of persos) {
       const qui = `${x.qui}`;
@@ -112,7 +161,9 @@ export function controlerBaton(r) {
         f.push(`${ou} : personnage inconnu « ${x.qui} » (${QUI.join(', ')})`);
         continue;
       }
+      if (x.genre !== undefined && !GENRES.includes(x.genre)) f.push(`${ou}, ${qui} : genre (${GENRES.join(', ')})`);
       if (!nombre(x.x) || x.x < -500 || x.x > 1600) f.push(`${ou}, ${qui} : position x hors de l'image`);
+      if (x.haut !== undefined && (!nombre(x.haut) || x.haut < -400 || x.haut > 1500)) f.push(`${ou}, ${qui} : haut de -400 à 1500 px`);
       if (x.sol !== undefined && (!nombre(x.sol) || x.sol < 100 || x.sol > 1900)) f.push(`${ou}, ${qui} : sol de 100 à 1900`);
       if (x.charge !== undefined && (!nombre(x.charge) || x.charge < 0 || x.charge > 1)) f.push(`${ou}, ${qui} : charge de 0 à 1`);
       allure(x, qui);
@@ -133,7 +184,8 @@ export function controlerBaton(r) {
           continue;
         }
         dansDeA(a.de, a.a, quoi);
-        if (a.type === 'court' && a.allure !== undefined && !['marche', 'course', 'sprint'].includes(a.allure)) f.push(`${ou}, ${quoi} : allure marche, course ou sprint`);
+        if (a.type === 'court' && a.allure !== undefined && !['marche', 'course', 'sprint', 'furtif'].includes(a.allure)) f.push(`${ou}, ${quoi} : allure marche, course, sprint ou furtif`);
+        if (a.type === 'court' && a.bras !== undefined && typeof a.bras !== 'boolean') f.push(`${ou}, ${quoi} : bras vaut true ou false`);
         if (a.type === 'court' && a.cadence !== undefined && (!nombre(a.cadence) || a.cadence < 1 || a.cadence > 8)) f.push(`${ou}, ${quoi} : cadence de 1 à 8 pas par seconde`);
         if ((a.type === 'saute' || a.type === 'vaulte') && a.haut !== undefined && (!nombre(a.haut) || a.haut < 0 || a.haut > 800)) f.push(`${ou}, ${quoi} : haut de 0 à 800 px`);
         if (a.type === 'saute' && a.pose !== undefined && !V.poses[a.pose]) f.push(`${ou}, ${quoi} : pose inconnue « ${a.pose} »`);

@@ -1,0 +1,57 @@
+{
+  "gabarit": "baton",
+  "langue": "en",
+  "theme": "light",
+  "titre": "me in my dreams with u",
+  "idee": "Le soir dans le salon, elle est assise sur le canapé, le cafard, la tête basse. Il s'approche, s'incline et lui tend la main ; elle hésite puis la prend, et ils dansent au milieu du salon : des pas, un tour sur elle-même, et il la renverse au ralenti ; bisou sur le front.",
+  "heros": "garcon",
+  "son": {
+    "ambiance": "tendre",
+    "recherche": "Perfect"
+  },
+  "histoire": {
+    "sequences": [
+      {
+        "sequence": "ouverture",
+        "decor": "salon",
+        "nuit": true,
+        "incident": {
+          "type": "tristesse",
+          "a": 1.3
+        },
+        "description": "Plan d'ensemble, caméra fixe, le salon le soir : la fenêtre et la lune, un cadre au cœur sur le mur, le lampadaire allumé à gauche, le canapé à droite. Elle (queue de cheval, nœud rose) est assise sur le canapé ; lui (bandana violet) debout devant elle lui raconte quelque chose en gesticulant, elle sourit à peine. À 1,3 s elle soupire et baisse la tête, le regard au sol, la bouche vers le bas : le cafard. Il la regarde, surpris, puis attendri (joues roses), puis son visage se ferme : il a une idée. La caméra pousse lentement sur elle."
+      },
+      {
+        "sequence": "emotion",
+        "etapes": [
+          {
+            "expression": "surpris",
+            "duree": 0.7
+          },
+          {
+            "expression": "tendre",
+            "duree": 0.9
+          },
+          {
+            "expression": "determine",
+            "duree": 1.0
+          }
+        ],
+        "description": "Très gros plan sur son visage, coupe franche, le mur du salon derrière. La surprise d'abord, yeux ronds, bouche en petit o. Puis la tendresse : sourcils doux, sourire, joues roses, le regard posé sur elle en bas à droite. À 1,6 s le visage se ferme d'un coup, sourcils en biais, yeux en traits, bouche serrée, le regard qui pétille ; coup de zoom d'accompagnement, impact sourd au loin, un souffle jusqu'à la coupe."
+      },
+      {
+        "sequence": "exploit",
+        "type": "danse",
+        "duree": 8.0,
+        "description": "Plan moyen, le salon. Il marche jusqu'au canapé, s'incline devant elle en révérence et lui tend la main, paume ouverte, sourire en coin et clin d'œil. Elle relève la tête, surprise, puis sourit et tend la main vers la sienne, tinte ; elle se lève et vient au milieu du salon. Ils dansent : main dans la main levée, le poids qui passe d'une jambe à l'autre, de petits pas qui balancent à gauche et à droite, des notes de musique roses et violettes qui montent au-dessus d'eux, tous les deux les yeux fermés de bonheur. À 4,7 s elle tournoie sur elle-même, les bras en l'air, la queue de cheval qui vole, deux tours. Puis il fait une fente et la renverse en arrière, un bras dans son dos, l'autre levé ; ralenti sept fois, caméra serrée, voile bleuté : elle, le buste en arrière, un bras à son cou, une jambe levée, les joues roses ; lui penché sur elle, tendre. Il la relève, ils se regardent, les cœurs montent."
+      },
+      {
+        "sequence": "retrouvailles",
+        "cadeau": "aucun",
+        "fin": "bisou",
+        "duree": 5.0,
+        "description": "Plan moyen large, le salon, le canapé derrière eux, le lampadaire. Ils sont face à face au milieu de la pièce, lui à gauche, elle à droite, les yeux en cœur. Il sourit, tendre, joues roses. Il fait un pas, pose les mains sur ses épaules et penche le front contre le sien, les yeux fermés ; elle ferme les yeux ; un petit bisou. Les cœurs montent au-dessus d'eux. La caméra pousse lentement sur eux jusqu'à la fin."
+      }
+    ]
+  }
+}

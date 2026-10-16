@@ -1,0 +1,54 @@
+{
+  "gabarit": "baton",
+  "langue": "en",
+  "theme": "light",
+  "titre": "me in my dreams with u",
+  "idee": "Sur la plage, il grimpe sur un rocher pour faire le malin et fait l'équilibriste ; le rocher glisse, il bascule en arrière. Elle (c'est elle le héros, « me ») plonge en avant et le rattrape au ralenti à un souffle du sable, dans ses bras ; ils se regardent, elle le relève, bisou sur le front.",
+  "heros": "fille",
+  "son": {
+    "ambiance": "tendre",
+    "recherche": "Fallin'"
+  },
+  "histoire": {
+    "sequences": [
+      {
+        "sequence": "ouverture",
+        "decor": "plage",
+        "jeu": "discussion",
+        "incident": {
+          "type": "chute",
+          "perchoir": "rocher",
+          "a": 1.2
+        },
+        "description": "Plan d'ensemble, caméra fixe, la plage : la mer et ses vagues au fond, deux palmiers, le sable, un rocher gris à droite. Elle (queue de cheval, nœud rose) parle à son copain (bandana violet) qui rit. À 1,2 s il saute sur le rocher d'un bond, corps étiré, et s'y tient en équilibre, bras à l'horizontale, tout fier ; elle le regarde en souriant. Il vacille, penche d'un côté puis de l'autre, de plus en plus, les bras qui battent l'air ; elle écarquille les yeux. À 2,9 s il bascule en arrière, bouche en o : choc. La caméra pousse doucement sur eux."
+      },
+      {
+        "sequence": "emotion",
+        "etapes": [
+          {
+            "expression": "choc",
+            "duree": 0.7
+          },
+          {
+            "expression": "determine",
+            "duree": 0.6
+          }
+        ],
+        "description": "Très gros plan sur son visage, coupe franche, la mer et le ciel derrière. Le choc : yeux écarquillés, bouche en o, sourcils tout en haut, deux battements de cœur lents, la tête qui tremble à peine. À 0,7 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée ; coup de zoom d'accompagnement, impact sourd, le vent qui se lève jusqu'à la coupe. Tout va très vite : il est en train de tomber."
+      },
+      {
+        "sequence": "exploit",
+        "type": "rattrape",
+        "duree": 3.0,
+        "description": "Plan d'ensemble, le rocher à droite et lui qui bascule en arrière, à moitié dans le vide, elle à gauche. Elle plonge en avant, le corps tendu comme une flèche, rémanences grises, lignes de vitesse horizontales, onde de choc et poussière là où elle était. Ralenti onze fois, caméra serrée, voile bleuté, battement de cœur : il tombe, les bras en l'air, et elle arrive un genou au sol, les bras tendus, et le rattrape à un souffle du sable, couché en arrière dans ses bras, un bras à son cou. Leurs visages sont tout près : il la regarde, surpris, puis les yeux en cœur ; elle sourit, tendre. Elle le relève doucement, les cœurs montent."
+      },
+      {
+        "sequence": "retrouvailles",
+        "cadeau": "aucun",
+        "fin": "bisou",
+        "duree": 5.4,
+        "description": "Plan moyen large, la plage, les vagues, le rocher à droite : lui debout près du rocher, encore ému, elle à gauche. Elle lui fait un clin d'œil charmeur, étincelle au coin de l'œil ; il a les yeux en cœur. Elle fait deux pas vers lui, pose les mains sur ses épaules et penche le front contre le sien, les yeux fermés ; lui aussi ; un petit bisou. Les cœurs montent au-dessus d'eux. La caméra pousse lentement sur eux jusqu'à la fin."
+      }
+    ]
+  }
+}

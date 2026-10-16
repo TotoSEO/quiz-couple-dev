@@ -18,6 +18,7 @@ import { lignesVitesse } from '../baton/effets';
 import type { PlanBaton, RecetteBaton } from '../baton/recette';
 import { Etage } from '../baton/Scene';
 import { FLOU } from '../baton/plan';
+import { plansDe } from '../baton/plans';
 import { calculer, remap } from '../baton/temps';
 
 const TRANSITION = 8;
@@ -30,10 +31,11 @@ const douce = (p: number) => {
 };
 
 // Les flashs d'un plan, en secondes de récit : l'effet « flash » et
-// l'explosion d'une créature.
-const flashs = (p: PlanBaton): number[] => [
-  ...(p.effets ?? []).filter((e) => e.effet === 'flash').map((e) => e.de),
-  ...(p.creatures ?? []).flatMap((c) => (c.etapes ?? []).filter((e) => e.pose === 'eclate').map((e) => e.a)),
+// l'explosion d'une créature (plein écran), un éclair (à moitié).
+const flashs = (p: PlanBaton): { t: number; force: number }[] => [
+  ...(p.effets ?? []).filter((e) => e.effet === 'flash').map((e) => ({ t: e.de, force: 1 })),
+  ...(p.effets ?? []).filter((e) => e.effet === 'eclair').map((e) => ({ t: e.de, force: 0.55 })),
+  ...(p.creatures ?? []).flatMap((c) => (c.etapes ?? []).filter((e) => e.pose === 'eclate').map((e) => ({ t: e.a, force: 1 }))),
 ];
 
 export const Baton: React.FC<{ recette: RecetteBaton; plan: Plan; verification?: boolean }> = ({ recette: r, plan, verification }) => {
@@ -42,7 +44,8 @@ export const Baton: React.FC<{ recette: RecetteBaton; plan: Plan; verification?:
   let i = scenes.findIndex((s) => f >= s.debut && f < s.debut + s.duree);
   if (i < 0) i = scenes.length - 1;
   const sc = scenes[i];
-  const p = r.plans[i];
+  const plans = plansDe(r);
+  const p = plans[i];
   const fPlan = f - sc.debut;
   const tReel = fPlan / FPS;
   const rm = remap(p);
@@ -53,7 +56,7 @@ export const Baton: React.FC<{ recette: RecetteBaton; plan: Plan; verification?:
   const fondu = i > 0 && fPlan < TRANSITION && p.transition === 'fondu';
   const flou = i > 0 && fPlan < FLOU && p.transition === 'flou';
   const q = fondu ? fPlan / TRANSITION : flou ? douce(fPlan / FLOU) : 1;
-  const pPrec = fondu || flou ? r.plans[i - 1] : null;
+  const pPrec = fondu || flou ? plans[i - 1] : null;
   let imagePrec = null;
   if (pPrec) {
     const rmPrec = remap(pPrec);
@@ -64,9 +67,9 @@ export const Baton: React.FC<{ recette: RecetteBaton; plan: Plan; verification?:
   }
   // le flash blanc : plein deux images, puis fondu en 0,3 s
   let flash = 0;
-  for (const tf of flashs(p)) {
+  for (const { t: tf, force } of flashs(p)) {
     const age = tReel - rm.reel(tf);
-    if (age >= 0) flash = Math.max(flash, age < 2 / FPS ? 1 : 1 - bornes((age - 2 / FPS) / 0.3));
+    if (age >= 0) flash = Math.max(flash, force * (age < 2 / FPS ? 1 : 1 - bornes((age - 2 / FPS) / 0.3)));
   }
   // le voile d'un ralenti, en douceur sur 0,25 s d'écran
   let voile = 0;

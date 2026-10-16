@@ -13,6 +13,7 @@ import type { EvenementAmbiance, EvenementSonore, NomSon } from '../charte/Son';
 import type { Plan, Scene } from '../plan';
 import type { PlanBaton, RecetteBaton } from './recette';
 import { vocabulaire } from './recette';
+import { plansDe } from './plans';
 import { remap } from './temps';
 
 const enImages = (s: number) => Math.round(s * FPS);
@@ -26,7 +27,8 @@ export const planBaton = (r: RecetteBaton): Plan => {
   const ambiances: EvenementAmbiance[] = [];
   const verifs: number[] = [];
   let debut = 0;
-  r.plans.forEach((p, i) => {
+  const plans = plansDe(r);
+  plans.forEach((p, i) => {
     const rm = remap(p);
     const duree = enImages(rm.dureeReelle);
     scenes.push({ type: 'plan', debut, duree, index: i });
@@ -61,8 +63,21 @@ export const planBaton = (r: RecetteBaton): Plan => {
     for (const perso of p.persos ?? []) {
       let arme = perso.arme ?? 'aucune';
       let tient = perso.tient ?? 'aucun';
+      let vetement = perso.vetement ?? 'aucun';
       let charge = perso.charge ?? 0;
+      let couche = !!perso.couche;
+      // quelqu'un qui dort ronfle doucement, une fois par plan
+      if (perso.expression === 'dort' && couche) son('ronfle', 0.3, 0.1);
       for (const e of [...(perso.etapes ?? [])].sort((a, b) => a.a - b.a)) {
+        if (e.expression === 'baille') son('baille', e.a);
+        if (e.pose === 'bisou' && perso.qui === 'heros') son('smack', e.a + 0.6);
+        if (e.pose === 'equilibre') son('boing', e.a - 0.3, 0.12);
+        if (e.pose === 'tombe') son('sursaut', e.a, 0.16);
+        if (e.attache) son(e.attache.ancre === 'dos' ? 'coussin' : 'coussin', e.a, 0.16);
+        if (e.couche === false && couche) {
+          son('froissement', e.a, 0.14);
+          couche = false;
+        }
         if (e.arme && e.arme !== arme) {
           // la lame sort du fourreau (glissement métallique) puis siffle ; elle rentre en raclant
           if (e.arme === 'main') {
@@ -76,7 +91,20 @@ export const planBaton = (r: RecetteBaton): Plan => {
             son('pop', e.a);
             son('coeur', e.a + 0.35);
           }
+          if (e.tient === 'couverture') son('froissement', e.a);
+          if (e.tient === 'etoile') son('etincelle-magique', e.a);
+          if (e.tient === 'parapluie-ferme') son('pop', e.a, 0.12);
+          if (e.tient === 'parapluie') {
+            son('air', e.a, 0.16);
+            son('froissement', e.a + 0.05, 0.18);
+          }
+          if (e.tient === 'plateau') son('tinte', e.a);
+          if (e.tient === 'poele') son('pose', e.a, 0.14);
           tient = e.tient;
+        }
+        if (e.vetement && e.vetement !== vetement) {
+          if (e.vetement === 'cape') son('froissement', e.a, 0.2);
+          vetement = e.vetement;
         }
         if (e.expression === 'charmeur') son('scintille', e.a + 0.1);
       }
@@ -84,8 +112,9 @@ export const planBaton = (r: RecetteBaton): Plan => {
         switch (a.type) {
           case 'court': {
             const allure = a.allure ?? 'course';
-            const cadence = a.cadence ?? (allure === 'marche' ? 2.2 : allure === 'sprint' ? 4.2 : 3.6);
-            for (let s = a.de + 0.5 / cadence; s < a.a; s += 1 / cadence) son('pas', s, allure === 'sprint' ? 0.18 : 0.14);
+            const cadence = a.cadence ?? (allure === 'marche' ? 2.2 : allure === 'sprint' ? 4.2 : allure === 'furtif' ? 2.4 : 3.6);
+            // le pas de loup s'entend à peine
+            for (let s = a.de + 0.5 / cadence; s < a.a; s += 1 / cadence) son('pas', s, allure === 'sprint' ? 0.18 : allure === 'furtif' ? 0.07 : 0.14);
             break;
           }
           case 'saute':
@@ -127,6 +156,7 @@ export const planBaton = (r: RecetteBaton): Plan => {
       }
     }
     for (const c of p.creatures ?? []) {
+      const nuage = c.qui === 'nuage';
       let pose = c.pose ?? 'vole';
       let depuis = 0;
       let bouge = false;
@@ -135,26 +165,37 @@ export const planBaton = (r: RecetteBaton): Plan => {
         if (pose === 'vole' || pose === 'plonge') vols.push([depuis, a]);
       };
       for (const e of [...(c.etapes ?? [])].sort((a, b) => a.a - b.a)) {
-        // la première fois qu'il bouge, un grognement : on entend qu'il arrive
+        // la première fois qu'il bouge : un grognement, ou le vent qui tourne à l'orage
         if (!bouge && (e.x !== undefined || e.y !== undefined)) {
-          son('dragon-grogne', e.a, 0.18);
+          son(nuage ? 'tempete' : 'dragon-grogne', e.a, 0.18);
           bouge = true;
         }
         if (!e.pose || e.pose === pose) continue;
         ferme(e.a);
-        if (e.pose === 'plonge') son('meteore', e.a, 0.2);
-        if (e.pose === 'rugit') son('dragon-rugit', e.a);
+        if (e.pose === 'plonge') son(nuage ? 'tempete' : 'meteore', e.a, 0.2);
+        if (e.pose === 'rugit') {
+          if (nuage) {
+            son('tonnerre', e.a, 0.22);
+            son('eclair-electrique', e.a + 0.05, 0.16);
+          } else son('dragon-rugit', e.a);
+        }
         if (e.pose === 'eclate') {
-          son('deflagration', e.a);
-          son('debris', e.a + 0.12, 0.2);
-          son('tonnerre', e.a, 0.1);
+          if (nuage) {
+            son('onde-choc', e.a, 0.24);
+            son('scintille', e.a + 0.1, 0.2);
+            son('tonnerre', e.a, 0.08);
+          } else {
+            son('deflagration', e.a);
+            son('debris', e.a + 0.12, 0.2);
+            son('tonnerre', e.a, 0.1);
+          }
           son('flash', e.a, 0.14);
         }
         pose = e.pose;
         depuis = e.a;
       }
       ferme(p.duree);
-      for (const [de, a] of vols) for (let s = de, k = 0; s < a && k < 6; s += 0.45, k++) son('ailes', s);
+      if (!nuage) for (const [de, a] of vols) for (let s = de, k = 0; s < a && k < 6; s += 0.45, k++) son('ailes', s);
       if (c.porteDe !== undefined) son('impact-profond', c.porteDe, 0.22);
     }
     for (const e of p.effets ?? []) {
@@ -165,6 +206,22 @@ export const planBaton = (r: RecetteBaton): Plan => {
       if (e.effet === 'flash') son('flash', e.de);
       if (e.effet === 'coeurs') son('coeur', e.de);
       if (e.effet === 'etincelles') son('crepite', e.de, 0.1);
+      if (e.effet === 'eclair') {
+        son('eclair-electrique', e.de, 0.2);
+        son('tonnerre', e.de + 0.05, 0.14);
+      }
+      if (e.effet === 'etoile-ciel') son('scintille', e.de, 0.12);
+      if (e.effet === 'crepe') {
+        son('air', e.de, 0.12);
+        son('splat', e.de + 0.68, 0.12);
+      }
+      if (e.effet === 'lumiere') son('tinte', e.de, 0.1);
+      if (e.effet === 'notes') son('scintille', e.de, 0.1);
+      if (e.effet === 'pluie') {
+        const fa = debut + enImages(rm.reel(e.de));
+        const fb = debut + enImages(rm.reel(Math.min(p.duree, e.a ?? p.duree)));
+        if (fb > fa) ambiances.push({ nom: 'pluie', a: fa, duree: fb - fa, volume: 0.45 });
+      }
     }
     // une secousse sans impact déclaré fait un impact sourd ; un zoom rapide, un souffle d'air
     for (const c of p.camera ?? []) {
@@ -191,12 +248,20 @@ export const planBaton = (r: RecetteBaton): Plan => {
     debut += duree;
   });
   const uniques = [...new Set(verifs)].filter((v) => v >= 0 && v < debut).sort((x, y) => x - y);
-  // la couverture : le plan où le héros tire l'épée, sinon le premier
-  const iCouv = Math.max(0, r.plans.findIndex((p) => (p.persos ?? []).some((q) => (q.etapes ?? []).some((e) => e.arme === 'main'))));
-  const scCouv = scenes[iCouv];
+  // la couverture : le cœur du ralenti de l'exploit ; sinon le plan où le
+  // héros tire l'épée, sinon la fin du premier plan
+  const iRal = plans.findIndex((p) => (p.ralentis ?? []).length);
+  let couverture: number;
+  if (iRal >= 0) {
+    const seg = [...plans[iRal].ralentis!].sort((a, b) => a.de - b.de)[0];
+    couverture = scenes[iRal].debut + enImages(remap(plans[iRal]).reel((seg.de + seg.a) / 2));
+  } else {
+    const iCouv = Math.max(0, plans.findIndex((p) => (p.persos ?? []).some((q) => (q.etapes ?? []).some((e) => e.arme === 'main'))));
+    couverture = scenes[iCouv].debut + scenes[iCouv].duree - 2;
+  }
   return {
     duree: debut,
-    couverture: scCouv.debut + scCouv.duree - 2,
+    couverture,
     verifs: uniques,
     scenes,
     sons: sons.sort((x, y) => x.a - y.a),

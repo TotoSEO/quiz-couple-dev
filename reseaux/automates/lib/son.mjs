@@ -36,6 +36,11 @@ export const AMBIANCES_SON = {
   coquin:    ['slow sexy rnb', 'sensual rnb', 'chill lofi night'],
   noel:      ['christmas jingle'],
   'nouvel-an': ['new year party'],
+  // le bonhomme bâton (16 octobre 2026, Thomas : « une musique action /
+  // aventure... idéalement des sons connus ») : des recherches qui ramènent
+  // les grands thèmes épiques du catalogue ; un brief qui veut un titre
+  // précis l'écrit dans son.recherche
+  epique:    ['epic adventure', 'epic cinematic', 'action movie theme', 'epic orchestral', 'hero theme'],
   tendance:  [],
 };
 
@@ -51,6 +56,8 @@ export const AMBIANCE_PAR_CATEGORIE = {
   coquin: 'coquin',
   'connais-tu': 'jeu',
   'tu-preferes': 'jeu',
+  // le bonhomme bâton : de l'action et de l'aventure, sauf mention contraire
+  baton: 'epique',
   // Les mipaps : les animations font rire, les dessins qui respirent attendrissent
   'mipaps-anime': 'drole',
   'mipaps-statique': 'tendre',

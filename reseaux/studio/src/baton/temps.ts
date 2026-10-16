@@ -3,9 +3,9 @@
 // sans React : le studio les appelle à chaque image, les rémanences les
 // rappellent sur des instants passés. Les ralentis vivent ici aussi : le
 // plan s'écrit en secondes de récit, l'écran a ses propres secondes.
-import type { ActionBaton, CleCameraBaton, CreatureBaton, Ease, NomPoseDragon, PersoBaton, PlanBaton, QuiBaton, SecousseBaton } from './recette';
+import type { ActionBaton, AttacheBaton, CleCameraBaton, CreatureBaton, Ease, NomCreature, NomPoseDragon, PersoBaton, PlanBaton, QuiBaton, SecousseBaton } from './recette';
 import { vocabulaire } from './recette';
-import { ancrage, type Apparence, cycleCourse, ECHELLE, melange, type Pose, POSES, squelette } from './rig';
+import { ancrage, type Apparence, cycleCourse, cycleFurtif, ECHELLE, genreDe, melange, type Pose, POSES, squelette } from './rig';
 
 const PI2 = Math.PI * 2;
 export const bornes = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
@@ -66,7 +66,7 @@ export const remap = (plan: PlanBaton): Remap => {
 // ── Les créatures ──────────────────────────────────────────────────────
 
 export type EtatCreature = {
-  qui: 'dragon';
+  qui: NomCreature;
   x: number;
   y: number;
   echelle: number;
@@ -92,6 +92,17 @@ const DRAGON: Record<NomPoseDragon, ParamsDragon> = {
   rugit: { ailes: 0.3, vitesseAiles: 0.8, cou: -0.6, gueule: 1, yeux: 1, serres: 0 },
   eclate: { ailes: 0.3, vitesseAiles: 0, cou: -0.6, gueule: 1, yeux: 1, serres: 0 },
 };
+// Le nuage d'orage : ailes = l'amplitude de son flottement, cou = la force
+// des éclairs sous lui, gueule = la colère du visage, yeux = la lueur des
+// yeux, serres = la pluie qui tombe.
+const NUAGE: Record<NomPoseDragon, ParamsDragon> = {
+  vole: { ailes: 1, vitesseAiles: 0.5, cou: 0.15, gueule: 0.3, yeux: 0.4, serres: 0 },
+  plonge: { ailes: 0.6, vitesseAiles: 0.9, cou: 0.5, gueule: 0.7, yeux: 0.8, serres: 0.3 },
+  perche: { ailes: 0.5, vitesseAiles: 0.4, cou: 0.25, gueule: 0.5, yeux: 0.6, serres: 0.2 },
+  rugit: { ailes: 0.7, vitesseAiles: 1.3, cou: 1, gueule: 1, yeux: 1, serres: 0.6 },
+  eclate: { ailes: 0.7, vitesseAiles: 0, cou: 1, gueule: 1, yeux: 1, serres: 1 },
+};
+const PARAMS: Record<NomCreature, Record<NomPoseDragon, ParamsDragon>> = { dragon: DRAGON, nuage: NUAGE };
 
 const derniere = <T extends { a: number }, K extends keyof T>(etapes: T[], k: K, t: number): { v: T[K]; depuis: number } | undefined => {
   let out: { v: T[K]; depuis: number } | undefined;
@@ -136,11 +147,12 @@ export const etatCreature = (c: CreatureBaton, t: number): EtatCreature => {
     if (e.pose) avant = e.pose;
   }
   const u = poseE ? douce((t - poseE.depuis) / 0.25) : 1;
-  const pa = DRAGON[avant];
-  const pb = DRAGON[pose];
+  const table = PARAMS[c.qui] ?? DRAGON;
+  const pa = table[avant];
+  const pb = table[pose];
   const mix = (k: keyof ParamsDragon) => pa[k] + (pb[k] - pa[k]) * u;
   return {
-    qui: 'dragon',
+    qui: c.qui,
     x,
     y,
     echelle,
@@ -160,7 +172,8 @@ export const etatCreature = (c: CreatureBaton, t: number): EtatCreature => {
 // L'unité du dragon : 60 px à l'échelle 1. Le point des serres, où pend
 // celle qu'il emporte.
 export const UNITE_DRAGON = 60;
-export const serres = (e: EtatCreature): [number, number] => [e.x + 0.45 * UNITE_DRAGON * e.echelle * e.sens, e.y + 1.35 * UNITE_DRAGON * e.echelle];
+export const serres = (e: EtatCreature): [number, number] =>
+  e.qui === 'nuage' ? [e.x, e.y + 1.4 * UNITE_DRAGON * e.echelle] : [e.x + 0.45 * UNITE_DRAGON * e.echelle * e.sens, e.y + 1.35 * UNITE_DRAGON * e.echelle];
 
 // ── Les personnages ────────────────────────────────────────────────────
 
@@ -182,6 +195,18 @@ export type Contexte = {
   sol: number;
   creatures: EtatCreature[];
   plan: PlanBaton;
+  // les personnages déjà calculés (ceux qui ne sont accrochés à personne), où
+  // un personnage accroché trouve son porteur
+  etats?: EtatBaton[];
+};
+
+// Le point où s'accroche un personnage porté, dans le repère (en R) de son
+// porteur : sur le dos, derrière les hanches et un peu au-dessus ; à la main
+// proche, juste sous elle (il la tient par le dos).
+const ancre = (porteur: EtatBaton, att: AttacheBaton): [number, number] => {
+  const sq = squelette(porteur.apparence.pose);
+  const local: [number, number] = att.ancre === 'dos' ? [sq.hanche[0] - 0.95, sq.hanche[1] - 0.75] : [sq.mainD[0] + 0.15, sq.mainD[1] + 0.35];
+  return pointEcran(porteur, local);
 };
 
 const actives = (actions: ActionBaton[], t: number, marge = 0) => actions.filter((a) => t >= a.de - marge && t < a.a + marge);
@@ -191,7 +216,8 @@ const poids = (a: { de: number; a: number }, t: number, fondu: number) => Math.m
 export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: number): EtatBaton => {
   const etapes = [...(p.etapes ?? [])].sort((a, b) => a.a - b.a);
   const actions = p.actions ?? [];
-  const k = ECHELLE[p.qui] * continu(etapes, 'echelle', t, p.echelle ?? 1, 'douce');
+  const genre = genreDe(p.qui, p.genre);
+  const k = ECHELLE[genre] * continu(etapes, 'echelle', t, p.echelle ?? 1, 'douce');
   const sensE = derniere(etapes, 'sens', t);
   let sens: 1 | -1 = (sensE?.v ?? p.sens ?? 'droite') === 'gauche' ? -1 : 1;
 
@@ -206,6 +232,7 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
   const vue = derniere(etapes, 'vue', t)?.v ?? p.vue ?? 'trois-quarts';
   const arme = derniere(etapes, 'arme', t)?.v ?? p.arme ?? 'aucune';
   const tient = derniere(etapes, 'tient', t)?.v ?? p.tient ?? 'aucun';
+  const vetement = derniere(etapes, 'vetement', t)?.v ?? p.vetement ?? 'aucun';
   const regard = derniere(etapes, 'regard', t)?.v ?? [0, 0];
   const sol = derniere(etapes, 'sol', t)?.v ?? p.sol ?? ctx.sol;
 
@@ -244,11 +271,14 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
       case 'court': {
         if (!dedans) break;
         const allure = a.allure ?? 'course';
+        const furtif = allure === 'furtif';
         const intensite = allure === 'marche' ? 0 : allure === 'sprint' ? 1.4 : 1;
-        const cadence = a.cadence ?? (allure === 'marche' ? 2.2 : allure === 'sprint' ? 4.2 : 3.6);
-        const cycle = cycleCourse(((t - a.de) * cadence) / 2, intensite);
+        const cadence = a.cadence ?? (allure === 'marche' ? 2.2 : allure === 'sprint' ? 4.2 : furtif ? 2.4 : 3.6);
+        const cycle = furtif ? cycleFurtif(((t - a.de) * cadence) / 2) : cycleCourse(((t - a.de) * cadence) / 2, intensite);
         const w = poids(a, t, 0.12);
         const { rebond, ...membres } = cycle;
+        // les bras restent ceux de la pose quand on porte quelqu'un ou un plateau
+        if (a.bras === false) for (const cle of ['epauleD', 'coudeD', 'epauleG', 'coudeG', 'lame'] as const) delete membres[cle];
         pose = melange(pose, { ...pose, ...membres }, w);
         haut += rebond * k * w;
         respire = false;
@@ -373,6 +403,56 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
     }
   }
 
+  // couché (sur un lit) : le corps tourné de 90°, la tête vers +x, les hanches
+  // posées sur le « sol » ; le passage couché ↔ assis se fond en 0,5 s
+  const coucheE = derniere(etapes, 'couche', t);
+  const couche = coucheE ? !!coucheE.v : !!p.couche;
+  let wCouche = couche ? 1 : 0;
+  if (coucheE) {
+    let avant = !!p.couche;
+    for (const e of etapes) {
+      if (e.a >= coucheE.depuis) break;
+      if (e.couche !== undefined) avant = !!e.couche;
+    }
+    if (avant !== couche) {
+      const u = douce((t - coucheE.depuis) / 0.5);
+      wCouche = couche ? u : 1 - u;
+    }
+  }
+  if (wCouche > 0) {
+    const yLibre = yAbsolu ?? sol - ancrage(pose) * k - haut;
+    yAbsolu = yLibre + (sol - 0.55 * k - yLibre) * wCouche;
+    rot += 90 * wCouche;
+    respire = false;
+  }
+
+  // accroché à l'autre : sur son dos ou à sa main, la position est la sienne
+  // (fondu de 0,3 s à l'accrochage et au lâcher)
+  const attE = derniere(etapes, 'attache', t);
+  const att = attE ? attE.v : p.attache ?? null;
+  let avantAtt: AttacheBaton | null = p.attache ?? null;
+  if (attE) for (const e of etapes) {
+    if (e.a >= attE.depuis) break;
+    if (e.attache !== undefined) avantAtt = e.attache;
+  }
+  const attVise = att ?? avantAtt;
+  if (attVise && ctx.etats) {
+    const porteur = ctx.etats.find((q) => q.qui === attVise.a);
+    if (porteur) {
+      const u = attE ? douce((t - attE.depuis) / 0.3) : 1;
+      const w = att ? u : 1 - u;
+      if (w > 0) {
+        const [ax, ay] = ancre(porteur, attVise);
+        const yLibre = yAbsolu ?? sol - ancrage(pose) * k - haut;
+        x = x + (ax - x) * w;
+        yAbsolu = yLibre + (ay - yLibre) * w;
+        rot += (porteur.rot - rot) * w;
+        if (w > 0.5) sens = attVise.ancre === 'main' ? ((-porteur.sens) as 1 | -1) : porteur.sens;
+        respire = false;
+      }
+    }
+  }
+
   // respiration : le buste et la tête bougent à peine
   if (respire) {
     const souffle = Math.sin((PI2 * t) / 2.6 + (p.qui === 'elle' ? 1.3 : 0));
@@ -390,6 +470,7 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
   const etincelle = expression === 'charmeur' ? bornes(depuis / 0.25) : 0;
   const apparence: Apparence = {
     qui: p.qui,
+    genre,
     pose,
     expression,
     vue,
@@ -402,6 +483,7 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
     vent,
     vitesse,
     tient,
+    vetement,
     t,
     graine,
     depuis,
@@ -430,7 +512,7 @@ export const pointsPerso = (e: EtatBaton) => {
 
 export type Camera = { zoom: number; x: number; y: number; ox: number; oy: number };
 
-export const camera = (plan: PlanBaton, t: number, etats: EtatBaton[], creatures: EtatCreature[]): Camera => {
+export const camera = (plan: PlanBaton, t: number, etats: EtatBaton[], creatures: EtatCreature[], sol = 1300): Camera => {
   const cles = (plan.camera ?? []).filter((c): c is CleCameraBaton => !('secousse' in c)).sort((a, b) => a.a - b.a);
   const vise = (c: CleCameraBaton) => {
     let x = c.x ?? 540;
@@ -443,8 +525,8 @@ export const camera = (plan: PlanBaton, t: number, etats: EtatBaton[], creatures
         x = c.x ?? pt[0];
         y = c.y ?? pt[1];
       }
-    } else if (c.cible === 'dragon') {
-      const e = creatures.find((q) => q.qui === 'dragon');
+    } else if (c.cible) {
+      const e = creatures.find((q) => q.qui === c.cible);
       if (e) {
         x = c.x ?? e.x;
         y = c.y ?? e.y;
@@ -467,7 +549,14 @@ export const camera = (plan: PlanBaton, t: number, etats: EtatBaton[], creatures
   }
   const z = Math.max(1, cam.zoom);
   const x = bornes(cam.x, 540 / z, 1080 - 540 / z);
-  const y = bornes(cam.y, 960 / z, 1920 - 960 / z);
+  let y = bornes(cam.y, 960 / z, 1920 - 960 / z);
+  // la signature est en bas de la zone utile : quand le sol est dans l'image
+  // et que quelqu'un s'y tient, il reste au-dessus d'elle (à 1340 px d'écran
+  // au plus), sinon les pieds et les fleurs passaient dessous (16 octobre
+  // 2026). Personne au sol (le couple sur la plateforme de la tour, la
+  // caméra qui regarde en l'air) : on laisse la caméra viser haut.
+  const auSol = !etats.length || etats.some((e) => e.y > sol - 450);
+  if (auSol && sol < y + 960 / z) y = Math.max(y, Math.min(1920 - 960 / z, sol - 380 / z));
   let ox = 0;
   let oy = 0;
   for (const s of (plan.camera ?? []).filter((c): c is SecousseBaton => 'secousse' in c)) {
@@ -492,7 +581,12 @@ export const calculer = (plan: PlanBaton, t: number, graine: number): ImageBaton
   const sol = solDuDecor(plan);
   const creatures = (plan.creatures ?? []).map((c) => etatCreature(c, t));
   const ctx: Contexte = { sol, creatures, plan };
-  const etats = (plan.persos ?? []).map((p, i) => etatPerso(p, t, ctx, graine + i * 101));
-  const cam = camera(plan, t, etats, creatures);
+  // les personnages libres d'abord, puis ceux qui s'accrochent à l'un d'eux
+  const persos = plan.persos ?? [];
+  const accroche = (p: PersoBaton) => !!p.attache || (p.etapes ?? []).some((e) => e.attache);
+  const libres = persos.map((p, i) => (accroche(p) ? null : etatPerso(p, t, ctx, graine + i * 101)));
+  const ctx2: Contexte = { ...ctx, etats: libres.filter((e): e is EtatBaton => !!e) };
+  const etats = persos.map((p, i) => libres[i] ?? etatPerso(p, t, ctx2, graine + i * 101));
+  const cam = camera(plan, t, etats, creatures, sol);
   return { etats, creatures, cam, sol, defilement: (plan.defile ?? 0) * t, t };
 };

@@ -1,5 +1,5 @@
 {
-  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau. La banque « bd » (8 octobre 2026) : des planches en quatre cases, une situation, une chute dans la dernière case ; chaque idée découpe les quatre images et donne les répliques. Le 9 octobre 2026, les 28 phrases tendres ont été réécrites en phrases concrètes qu'une personne écrirait vraiment à l'autre (« I love how you say my name when you're half asleep. ») à la place des maximes sur l'amour (« You're the reason I believe in slow, gentle love. »), et les chutes des planches qui commentaient la scène ont été remplacées par ce que le personnage dirait pour de vrai : voir « La chute, et ce qui sonne machine » dans LIGNE-EDITORIALE.md. La banque « dix-mais » (12 octobre 2026, idée de Thomas) : un carrousel « He's a 10 but... » ou « She's a 10 but... » le samedi soir, une couverture, huit cartes qui commencent par « but he » ou « but she », de la petite manie qui fait sourire au vrai drapeau rouge, la plus grave en dernier, et une page finale ; chaque sujet donne l'édition, l'accroche et les huit cartes, et « qui » dit lequel des deux est le 10 (he : le violet, she : la rose).",
+  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau. La banque « bd » (8 octobre 2026) : des planches en quatre cases, une situation, une chute dans la dernière case ; chaque idée découpe les quatre images et donne les répliques. Le 9 octobre 2026, les 28 phrases tendres ont été réécrites en phrases concrètes qu'une personne écrirait vraiment à l'autre (« I love how you say my name when you're half asleep. ») à la place des maximes sur l'amour (« You're the reason I believe in slow, gentle love. »), et les chutes des planches qui commentaient la scène ont été remplacées par ce que le personnage dirait pour de vrai : voir « La chute, et ce qui sonne machine » dans LIGNE-EDITORIALE.md. La banque « dix-mais » (12 octobre 2026, idée de Thomas) : un carrousel « He's a 10 but... » ou « She's a 10 but... » le samedi soir, une couverture, huit cartes qui commencent par « but he » ou « but she », de la petite manie qui fait sourire au vrai drapeau rouge, la plus grave en dernier, et une page finale ; chaque sujet donne l'édition, l'accroche et les huit cartes, et « qui » dit lequel des deux est le 10 (he : le violet, she : la rose). Depuis le 16 octobre 2026, 24 histoires de bonhomme bâton (banque « baton », lundi, mercredi et vendredi matin), trois par trame (sauvetage, parapluie, course, etoile, porte, rattrape, danse, reveil : voir TRAMES dans studio/src/baton/realisateur.mjs) : chaque sujet dit qui est le héros (garçon puis fille en alternance), sa trame, l'histoire en trois ou quatre phrases et un titre connu pour la musique ; la routine en tire un brief par séquences (CONSIGNES.md, « Le bonhomme bâton »).",
   "pov": [
     {
       "id": "pov-001",
@@ -2112,8 +2112,11 @@
         "id": "noel-08",
         "jour": "2026-12-25",
         "creneau": "matin",
-        "categorie": "pov",
-        "idee": "POV: opening gifts on Christmas morning | noel : cadeaux, le violet saute, la rose tend un cadeau, confettis"
+        "categorie": "baton",
+        "idee": "Nuit de Noël dans les montagnes : elle montre l'étoile la plus brillante du ciel, celle qu'il faudrait au sommet du sapin. Il sourit, tendre, puis se concentre, s'accroupit et bondit la décrocher au ralenti ; il retombe à côté d'elle et la lui pose dans les mains, émerveillée. Les cœurs montent dans la nuit de Noël.",
+        "heros": "garcon",
+        "trame": "etoile",
+        "son": "All I Want for Christmas Is You"
       },
       {
         "id": "noel-09",
@@ -2181,8 +2184,11 @@
         "id": "an-04",
         "jour": "2027-01-01",
         "creneau": "matin",
-        "categorie": "pov",
-        "idee": "POV: January 1st, same favorite person | chambre, matin : les deux sortent de sous la couette, confettis"
+        "categorie": "baton",
+        "idee": "Nuit du Nouvel An en ville : il bâille, s'affaisse, la soirée l'a achevé. Elle le regarde attendrie, s'accroupit et le prend sur son dos ; elle traverse la rue sous les lampadaires puis la forêt sous les étoiles pendant qu'il s'endort sur son épaule, et arrive à la maison sans le réveiller ; les cœurs montent sur la première nuit de l'année.",
+        "heros": "fille",
+        "trame": "porte",
+        "son": "Auld Lang Syne"
       },
       {
         "id": "an-05",
@@ -2687,5 +2693,175 @@
     "sujets": [
       "pov-002"
     ]
-  }
+  },
+  "baton": [
+    {
+      "id": "bat-001",
+      "heros": "garcon",
+      "trame": "sauvetage",
+      "idee": "Dans les montagnes, elle lui raconte sa journée et rit ; un dragon surgit par la droite, plane au-dessus d'eux, rugit et l'emporte dans ses serres. Lui : le choc, le chagrin (une larme), puis l'esprit vengeur. Il tire l'épée, traverse la forêt (un tronc), la falaise (un ravin) et le pont jusqu'à la tour, prend sa garde, ancre le pied et bondit au ralenti : le dragon explose. Souffle, épée rangée, trois pas, un bouquet, sourire charmeur, les cœurs au sommet.",
+      "son": "He's a Pirate"
+    },
+    {
+      "id": "bat-002",
+      "heros": "fille",
+      "trame": "parapluie",
+      "idee": "Dans la prairie, un nuage d'orage vient se planter au-dessus d'eux et les arrose ; il se met les mains sur la tête et grelotte. Elle le regarde, surprise, puis décide : elle file en ville (un banc), attrape le parapluie rouge à la maison, revient par la plage (un rocher) et l'ouvre au-dessus de lui au ralenti, trempée ; il éclate de rire, le nuage boude et s'en va, il vient se blottir sous le parapluie.",
+      "son": "Umbrella"
+    },
+    {
+      "id": "bat-003",
+      "heros": "garcon",
+      "trame": "course",
+      "idee": "Le soir dans la prairie, elle frissonne de froid, bras croisés, les dents qui claquent. Il la regarde, attendri, puis décidé, et part en flèche : la forêt (un rocher), la ville (un banc), la couverture attrapée à la maison, retour par la plage ; au ralenti il la lui pose sur les épaules, elle arrête de trembler, câlin sous la lune.",
+      "son": "Can't Help Falling in Love"
+    },
+    {
+      "id": "bat-004",
+      "heros": "fille",
+      "trame": "etoile",
+      "idee": "Une nuit dans les montagnes, il montre une étoile du doigt, les yeux en cœur. Elle sourit, attendrie, puis se concentre, s'accroupit et bondit si haut qu'elle décroche l'étoile au ralenti ; elle retombe à côté de lui et la lui pose dans les mains ; il l'admire, émerveillé, les cœurs montent.",
+      "son": "Yellow"
+    },
+    {
+      "id": "bat-005",
+      "heros": "garcon",
+      "trame": "porte",
+      "idee": "Le soir en ville, elle bâille à s'en décrocher la mâchoire et s'affaisse : elle n'en peut plus. Il la regarde, attendri, s'accroupit dos à elle et la prend sur son dos ; il traverse la rue puis la forêt sous les étoiles pendant qu'elle s'endort sur son épaule, des z au-dessus d'elle, et arrive à la maison sans la réveiller ; il la regarde, les cœurs montent.",
+      "son": "Until I Found You"
+    },
+    {
+      "id": "bat-006",
+      "heros": "fille",
+      "trame": "rattrape",
+      "idee": "Sur la plage, il saute sur un rocher pour faire le malin et joue les équilibristes, bras écartés ; il vacille, de plus en plus, et bascule en arrière. Elle plonge, le corps tendu comme une flèche, et le rattrape au ralenti à un souffle du sable, couché dans ses bras ; il la regarde, les yeux en cœur ; elle le relève, bisou sur le front.",
+      "son": "Fallin'"
+    },
+    {
+      "id": "bat-007",
+      "heros": "garcon",
+      "trame": "danse",
+      "idee": "Le soir dans le salon, elle est assise sur le canapé, la tête basse, le cafard. Il s'approche, s'incline et lui tend la main ; elle hésite, puis la prend et se lève. Ils dansent au milieu du salon, des notes qui montent, elle tournoie, et il la renverse au ralenti, un bras dans son dos ; bisou sur le front, les cœurs.",
+      "son": "Perfect"
+    },
+    {
+      "id": "bat-008",
+      "heros": "fille",
+      "trame": "reveil",
+      "idee": "Le matin, il dort encore, la tête sur l'oreiller, des z au-dessus de lui. Elle se lève, le regarde, attendrie, et sort de la chambre à pas de loup comme un ninja ; dans la cuisine elle fait sauter les crêpes et prend le plateau, puis revient sur la pointe des pieds, au ralenti. Il se réveille devant le petit-déjeuner au lit, les yeux en cœur ; clin d'œil.",
+      "son": "Here Comes the Sun"
+    },
+    {
+      "id": "bat-009",
+      "heros": "garcon",
+      "trame": "parapluie",
+      "idee": "Sur la plage, un nuage d'orage fond sur eux ; elle s'abrite les mains sur la tête, trempée. Il fonce chercher le parapluie à la maison en traversant la ville (un banc) et revient par la forêt (un tronc) ; au ralenti il l'ouvre au-dessus d'elle, dégoulinant ; elle rit aux éclats, le nuage s'en va en boudant, elle se blottit sous le parapluie.",
+      "son": "Singin' in the Rain"
+    },
+    {
+      "id": "bat-010",
+      "heros": "fille",
+      "trame": "porte",
+      "idee": "Le soir sur la plage, il traîne les pieds, bâille et s'affaisse : la journée l'a épuisé. Elle le regarde, attendrie, s'accroupit devant lui et le prend sur son dos, toute fière ; elle trotte sur la plage puis dans la rue sous les lampadaires pendant qu'il s'endort sur son épaule, et arrive à la maison sans le réveiller.",
+      "son": "Lucky"
+    },
+    {
+      "id": "bat-011",
+      "heros": "garcon",
+      "trame": "rattrape",
+      "idee": "Dans la prairie, elle grimpe sur un banc et marche dessus en équilibriste, les bras écartés, en riant. Le banc tangue, elle bat des bras, et tombe en arrière. Il plonge et la rattrape au ralenti, un genou au sol, juste avant l'herbe ; elle le regarde, surprise, puis les yeux en cœur ; il la relève et lui fait un clin d'œil.",
+      "son": "Catch & Release"
+    },
+    {
+      "id": "bat-012",
+      "heros": "fille",
+      "trame": "danse",
+      "idee": "Dehors dans la prairie, au soir, il a le cafard et baisse la tête. Elle s'incline devant lui, la main tendue, un sourire en coin ; il la prend. Ils dansent sous le ciel qui s'assombrit, des notes qui montent, elle tournoie, et c'est elle qui le renverse au ralenti ; bisou sur le front.",
+      "son": "Thinking Out Loud"
+    },
+    {
+      "id": "bat-013",
+      "heros": "garcon",
+      "trame": "reveil",
+      "idee": "Le matin, elle dort encore sous la couette, des z au-dessus d'elle. Il bâille, la regarde, attendri, et sort à pas de loup ; dans la cuisine il fait sauter la crêpe (elle retombe pile dans la poêle), prend le plateau et revient en ninja au ralenti. Elle se réveille, bâille, et découvre le petit-déjeuner, les yeux en cœur ; il rit.",
+      "son": "Lovely Day"
+    },
+    {
+      "id": "bat-014",
+      "heros": "fille",
+      "trame": "sauvetage",
+      "idee": "Dans la prairie, c'est LUI que le dragon enlève : il discutait, elle riait, le dragon plane, rugit et pique. Elle : le choc, le chagrin, puis le visage qui se ferme. Épée tirée, forêt (un tronc), falaise (un ravin), pont ; la tour où il attend apeuré, garde, pieds ancrés, bond au ralenti, le dragon pulvérisé. Souffle, épée rangée, un bouquet avec un sourire en coin, les cœurs au sommet.",
+      "son": "Eye of the Tiger"
+    },
+    {
+      "id": "bat-015",
+      "heros": "garcon",
+      "trame": "course",
+      "idee": "Nuit de montagne, elle a froid et se recroqueville. Lui, attendri puis décidé, fonce : la ville (un banc), la maison où il attrape la couverture, retour par la forêt (un tronc). Au ralenti il déplie la couverture et la pose sur ses épaules ; elle lève la tête, surprise, puis ses yeux s'adoucissent ; câlin sous les étoiles.",
+      "son": "Perfect"
+    },
+    {
+      "id": "bat-016",
+      "heros": "fille",
+      "trame": "etoile",
+      "idee": "Nuit de prairie : il tend le bras vers une étoile plus brillante que les autres. Elle sourit, tendre, puis se concentre, s'accroupit et bondit vers le ciel ; au ralenti sa main se referme sur l'étoile. Elle retombe à côté de lui et la lui tend ; il la prend dans ses mains jointes, émerveillé ; les cœurs montent sous la lune.",
+      "son": "A Thousand Years"
+    },
+    {
+      "id": "bat-017",
+      "heros": "garcon",
+      "trame": "danse",
+      "idee": "Dans le salon le soir, elle a le cafard sur le canapé et soupire. Il la regarde, surpris, puis attendri, et a une idée : révérence, main tendue, clin d'œil. Elle sourit et se lève ; ils dansent devant le canapé, des notes partout, elle tournoie deux fois, et il la renverse au ralenti ; ils se regardent, les joues roses ; bisou.",
+      "son": "Can't Help Falling in Love"
+    },
+    {
+      "id": "bat-018",
+      "heros": "fille",
+      "trame": "porte",
+      "idee": "Nuit de montagne, il bâille, s'affaisse, les yeux mi-clos. Elle le regarde avec tendresse, s'accroupit et le hisse sur son dos ; elle traverse la forêt puis la plage sous la lune pendant qu'il s'endort, des z au-dessus de lui, et arrive à la maison en le portant ; elle ferme les yeux de bonheur, les cœurs montent.",
+      "son": "Die With A Smile"
+    },
+    {
+      "id": "bat-019",
+      "heros": "garcon",
+      "trame": "reveil",
+      "idee": "Le matin, elle dort, la tête sur l'oreiller ; il se réveille, bâille, la regarde, et décide. Il sort de la chambre à pas de loup, un genou haut à chaque pas, glisse jusqu'à la cuisinière, fait sauter les crêpes dans un nuage de vapeur, prend le plateau et revient au ralenti sur la pointe des pieds. Elle se redresse en bâillant et découvre le plateau ; il lui fait un clin d'œil charmeur.",
+      "son": "Good Morning"
+    },
+    {
+      "id": "bat-020",
+      "heros": "fille",
+      "trame": "rattrape",
+      "idee": "Dans les montagnes, il saute sur un rocher et fait l'équilibriste pour l'épater ; elle rit. Le rocher roule, il bascule en arrière, bouche en o. Elle plonge, rémanences et lignes de vitesse, et le rattrape au ralenti un genou au sol, à un souffle de l'herbe ; il la regarde, les yeux en cœur ; elle le relève, bisou.",
+      "son": "I Wanna Be Yours"
+    },
+    {
+      "id": "bat-021",
+      "heros": "garcon",
+      "trame": "parapluie",
+      "idee": "Dans la prairie, le nuage d'orage arrive et pleut sur eux ; elle se met les mains sur la tête et claque des dents. Il fonce chercher le parapluie à la maison par la plage (un rocher), revient par la ville (un banc) et l'ouvre au-dessus d'elle au ralenti, trempé jusqu'aux os ; elle rit, le nuage s'en va en boudant, câlin sous le parapluie rouge.",
+      "son": "Here Comes the Sun"
+    },
+    {
+      "id": "bat-022",
+      "heros": "fille",
+      "trame": "course",
+      "idee": "Le soir dans la prairie, c'est lui qui grelotte, bras croisés, les dents qui claquent. Elle le regarde avec tendresse puis part en flèche : la ville (un banc), la plage (un rocher), la couverture attrapée à la maison, retour par la forêt (un tronc). Au ralenti elle la lui pose sur les épaules ; il s'arrête de trembler, joues roses ; câlin.",
+      "son": "Lover"
+    },
+    {
+      "id": "bat-023",
+      "heros": "garcon",
+      "trame": "etoile",
+      "idee": "Dans la prairie la nuit, elle tend le bras vers une étoile et la veut. Il sourit, tendre, puis se concentre, s'accroupit et bondit ; au ralenti ses doigts se referment sur l'étoile, qui s'éteint dans le ciel et brille dans sa main. Il retombe près d'elle et la lui tend, sourire charmeur ; elle la prend, émerveillée ; les cœurs.",
+      "son": "Rewrite The Stars"
+    },
+    {
+      "id": "bat-024",
+      "heros": "fille",
+      "trame": "danse",
+      "idee": "Le soir dans le salon, il est assis sur le canapé, le cafard. Elle s'incline, la main tendue, sourire en coin ; il hésite, la prend et se lève. Ils dansent au milieu du salon, des notes qui montent, elle tournoie, la queue de cheval qui vole, et elle le renverse au ralenti, un bras dans son dos ; bisou sur le front, les cœurs.",
+      "son": "Sway"
+    }
+  ]
 }

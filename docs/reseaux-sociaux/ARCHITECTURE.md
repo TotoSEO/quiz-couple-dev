@@ -207,14 +207,18 @@ tu valides les formats, et l'automate les décline.
 > en post ou en carrousel). Le
 > quiz chrono à bonne réponse (`quiz-chrono`, R7) reste disponible hors de
 > la semaine type. Depuis le 15 octobre 2026, le studio sait aussi rendre
-> le **bonhomme bâton** (`baton`, « me in my dreams with u ») : une
-> mini-aventure au trait noir (le dragon fait 34 s ; plus de cible « 10 à
-> 20 s » depuis le 16 octobre 2026, des scènes étaient précipitées), un
-> héros articulé qui bouge comme un ninja, des ralentis, des transitions
-> floues entre les paysages, un dragon, hors de la DA des mascottes
-> (`reseaux/README.md`, « Le bonhomme bâton »). Il n'a pas encore de
-> catégorie dans la grille : Thomas valide le premier reel avant la
-> production. Le tableau ci-dessous est le plan de départ.
+> le **bonhomme bâton** (`baton`, « me in my dreams with u ») : une petite
+> histoire de couple au trait noir (15 à 40 s ; plus de cible « 10 à 20 s »
+> depuis le 16 octobre 2026, des scènes étaient précipitées), un héros
+> articulé, fille ou garçon, qui bouge comme un ninja, des ralentis, des
+> transitions floues entre les paysages, huit trames (le dragon, le
+> parapluie, la couverture, l'étoile, porter l'autre, rattraper sa chute, la
+> danse, le petit-déjeuner en ninja) écrites en brief par séquences que le
+> réalisateur du studio met en plans, hors de la DA des mascottes
+> (`reseaux/README.md`, « Le bonhomme bâton »). Depuis le 16 octobre 2026
+> c'est la catégorie `baton` du lundi, du mercredi et du vendredi matin
+> (Thomas, sur le dragon : « je veux exactement ce style de post »). Le
+> tableau ci-dessous est le plan de départ.
 
 Un gabarit est un format réutilisable : sa mise en page, ses animations, ses
 sons et la liste des champs à remplir (avec leurs longueurs maximales). La
