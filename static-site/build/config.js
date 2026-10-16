@@ -292,6 +292,27 @@ export const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIU
 
 // Google Analytics
 export const GA_ID = 'G-XZV8V6FEK5';
+
+// ── La saison du site ────────────────────────────────────────────────────
+// Un habillage léger, posé et retiré d'un seul geste (Thomas, 16 octobre
+// 2026 : « un design Halloween du site, vraiment léger... un truc qui peut
+// facilement s'ajouter et facilement s'enlever »). Entre `du` et `au` (jours
+// inclus, heure de Paris), le body porte la classe saison-<nom> et
+// data-saison="<nom>", la feuille css/saison/<nom>.css est écrite dans le
+// <head> (jamais sur l'admin), et les mascottes reçoivent leurs déguisements
+// (SAISONS dans reseaux/charte/mascottes.js) sur le hero de l'accueil et dans
+// les moteurs. La reconstruction programmée (sept fois par jour) l'allume et
+// l'éteint toute seule aux dates ; QC_SAISON=aucune ou QC_SAISON=halloween
+// force le choix pour une construction. Rien de tout ça ne touche les
+// réseaux sociaux. Pour retirer l'habillage avant la date : SAISON = null.
+export const SAISON = { nom: 'halloween', du: '2026-10-16', au: '2026-11-01' };
+export function saisonActive(maintenant = new Date()) {
+  const force = process.env.QC_SAISON;
+  if (force) return ['aucune', 'none', '0', ''].includes(force) ? null : force;
+  if (!SAISON) return null;
+  const jour = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(maintenant);
+  return jour >= SAISON.du && jour <= SAISON.au ? SAISON.nom : null;
+}
 // La régie du site est The Moneytizer. Le fichier ads.txt qu'elle fournit est
 // écrit tel quel dans public/, il déclare quiz-couple.com comme propriétaire
 // et themoneytizer.com comme gestionnaire. Il n'y a plus d'identifiant

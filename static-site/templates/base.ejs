@@ -345,6 +345,15 @@
   <% } else { %>
   <link rel="stylesheet" href="/css/styles.css">
   <% } %>
+  <%# L'habillage de saison (build/config.js, SAISON ; Halloween 2026) : une
+      petite feuille a part, ecrite ici pour ne toucher ni styles.css ni ses
+      feuilles critiques, jamais sur l'admin. Le body porte la classe
+      saison-<nom> et data-saison, que le moteur lit pour deguiser les
+      mascottes. %>
+  <% var saisonPage = (typeof saison !== 'undefined' && saison && routeKey !== 'admin') ? saison : null; %>
+  <% if (saisonPage && typeof cssSaison !== 'undefined' && cssSaison) { %>
+  <style data-saison="<%= saisonPage %>"><%- cssSaison %></style>
+  <% } %>
 
   <%# Empreinte de la construction. Le générateur remplace le jeton ci-dessous
       par la même empreinte que celle ajoutée aux scripts et à la feuille de
@@ -377,7 +386,7 @@
     apres le premier affichage : la pastille disparaissait sous les yeux du
     visiteur et tout le hero remontait de 59 px, un decalage que PageSpeed
     comptait (CLS 0,05). Posee ici, elle est la des le premier rendu. %>
-<body class="bg-background text-foreground font-sans antialiased<%= routeKey === 'admin' ? ' page-admin' : '' %><%= (typeof pageJouable !== 'undefined' && pageJouable) ? ' quiz-page' : '' %>">
+<body class="bg-background text-foreground font-sans antialiased<%= routeKey === 'admin' ? ' page-admin' : '' %><%= (typeof pageJouable !== 'undefined' && pageJouable) ? ' quiz-page' : '' %><%= saisonPage ? ' saison-' + saisonPage : '' %>"<%- saisonPage ? ' data-saison="' + saisonPage + '"' : '' %>>
   <%# Le tableau de bord d'administration est une application plein ecran :
       il porte sa propre barre laterale et n'a que faire de l'en-tete du site. %>
   <% if (routeKey !== 'admin') { %>
