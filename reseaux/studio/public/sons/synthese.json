@@ -110,6 +110,26 @@
       "nom": "atterrit-2",
       "titre": "Réception au sol, plus lourde",
       "duree": 0.28
+    },
+    {
+      "nom": "aboie",
+      "titre": "Aboiement de dessin animé",
+      "duree": 0.22
+    },
+    {
+      "nom": "aboie-2",
+      "titre": "Aboiement de dessin animé, petit chien",
+      "duree": 0.17
+    },
+    {
+      "nom": "cristal",
+      "titre": "Cristal qui éclate",
+      "duree": 1.4
+    },
+    {
+      "nom": "enclume",
+      "titre": "Marteau sur l'enclume",
+      "duree": 0.6
     }
   ]
 }

@@ -1,5 +1,5 @@
 // Contrôle d'un scénario du bonhomme bâton (gabarit « baton », le format
-// « me in my dreams with u ») avant tout rendu. Une recette est un BRIEF
+// « me in my dreams with u » et ses variantes, la promesse) avant tout rendu. Une recette est un BRIEF
 // (histoire : des séquences, que le réalisateur du studio transforme en
 // plans) ou, pour les recettes écrites à la main, des PLANS. Dans les deux
 // cas : chaque nom vient du vocabulaire du studio
@@ -15,8 +15,11 @@ import { realiser, SEQUENCES } from '../../studio/src/baton/realisateur.mjs';
 const ici = path.dirname(fileURLToPath(import.meta.url));
 export const VOCABULAIRE_BATON = JSON.parse(fs.readFileSync(path.join(ici, '..', '..', 'studio', 'src', 'baton', 'vocabulaire.json'), 'utf8'));
 
-const QUI = ['heros', 'elle'];
+const QUI = VOCABULAIRE_BATON.personnages;
 const CREATURES = VOCABULAIRE_BATON.creatures;
+const ICONES = ['chien', 'bague', 'coeur'];
+// la bulle de dialogue : une réplique courte, en anglais (le compte), ou « ... »
+const REPLIQUE_MAX = 40;
 const POSES_DRAGON = ['vole', 'plonge', 'perche', 'rugit', 'eclate'];
 const EASES = ['lineaire', 'douce', 'entree', 'sortie', 'ressort'];
 const POINTS = ['tete', 'corps', 'pieds'];
@@ -58,6 +61,9 @@ const controlerBrief = (r) => {
   const texte = (t, ou) => {
     if (typeof t !== 'string' || t.trim().length < DESCRIPTION_MIN) f.push(`${ou} : la description est un découpage technique, cadrage, caméra, gestes, expressions, effets, sons (${DESCRIPTION_MIN} signes au moins)`);
   };
+  // l'insert sur les pieds n'existe qu'avec l'épée ou la pioche (la garde de karaté n'en a pas)
+  const incident = h.sequences.find((q) => q?.sequence === 'ouverture')?.incident?.type;
+  const insert = incident === 'enlevement' || incident === 'envie-bague';
   h.sequences.forEach((seq, i) => {
     const nom = seq?.sequence;
     const ou = `séquence ${i + 1}${nom ? ` (${nom})` : ''}`;
@@ -67,7 +73,7 @@ const controlerBrief = (r) => {
       return;
     }
     texte(seq.description, ou);
-    if (nom === 'preparation' && seq.pieds !== false) texte(seq.insert ?? seq.descriptionPieds, `${ou}, insert sur les pieds`);
+    if (nom === 'preparation' && insert && seq.pieds !== false) texte(seq.insert ?? seq.descriptionPieds, `${ou}, insert sur les pieds`);
   });
   return f;
 };
@@ -175,6 +181,7 @@ export function controlerBaton(r) {
         if (e.x !== undefined && (!nombre(e.x) || e.x < -500 || e.x > 1600)) f.push(`${ou}, ${quoi} : x hors de l'image`);
         if (e.haut !== undefined && (!nombre(e.haut) || e.haut < -400 || e.haut > 1500)) f.push(`${ou}, ${quoi} : haut de -400 à 1500 px`);
         if (e.rot !== undefined && !nombre(e.rot)) f.push(`${ou}, ${quoi} : rot en degrés`);
+        if (e.reflet !== undefined && typeof e.reflet !== 'boolean') f.push(`${ou}, ${quoi} : reflet vaut true ou false`);
         if (e.sol !== undefined && (!nombre(e.sol) || e.sol < 100 || e.sol > 1900)) f.push(`${ou}, ${quoi} : sol de 100 à 1900`);
       }
       for (const [k, a] of (x.actions ?? []).entries()) {
@@ -190,6 +197,8 @@ export function controlerBaton(r) {
         if ((a.type === 'saute' || a.type === 'vaulte') && a.haut !== undefined && (!nombre(a.haut) || a.haut < 0 || a.haut > 800)) f.push(`${ou}, ${quoi} : haut de 0 à 800 px`);
         if (a.type === 'saute' && a.pose !== undefined && !V.poses[a.pose]) f.push(`${ou}, ${quoi} : pose inconnue « ${a.pose} »`);
         if (a.type === 'bond' && (!nombre(a.versX) || !nombre(a.versHaut))) f.push(`${ou}, ${quoi} : versX et versHaut (position des hanches à l'arrivée, en pixels) manquent`);
+        if (a.type === 'bond' && a.pose !== undefined && !V.poses[a.pose]) f.push(`${ou}, ${quoi} : pose inconnue « ${a.pose} »`);
+        if (a.type === 'plane' && a.amplitude !== undefined && (!nombre(a.amplitude) || a.amplitude < 0 || a.amplitude > 120)) f.push(`${ou}, ${quoi} : amplitude de 0 à 120 px`);
         if (a.type === 'vent' && (!nombre(a.force) || a.force < 0 || a.force > 2.5)) f.push(`${ou}, ${quoi} : force de 0 à 2,5`);
         if (a.type === 'charge' && (!nombre(a.vers) || a.vers < 0 || a.vers > 1)) f.push(`${ou}, ${quoi} : vers de 0 à 1`);
         if (a.type === 'electrise' && a.intensite !== undefined && (!nombre(a.intensite) || a.intensite < 0 || a.intensite > 1)) f.push(`${ou}, ${quoi} : intensité de 0 à 1`);
@@ -205,7 +214,9 @@ export function controlerBaton(r) {
       }
       if (!nombre(c.x) || !nombre(c.y)) f.push(`${ou}, ${quoi} : position x, y manquante`);
       if (c.pose !== undefined && !POSES_DRAGON.includes(c.pose)) f.push(`${ou}, ${quoi} : pose inconnue « ${c.pose} » (${POSES_DRAGON.join(', ')})`);
-      if (c.echelle !== undefined && (!nombre(c.echelle) || c.echelle < 0.3 || c.echelle > 3)) f.push(`${ou}, ${quoi} : échelle de 0,3 à 3`);
+      if (c.echelle !== undefined && (!nombre(c.echelle) || c.echelle < 0.3 || c.echelle > 6)) f.push(`${ou}, ${quoi} : échelle de 0,3 à 6`);
+      if (c.nombre !== undefined && (!Number.isInteger(c.nombre) || c.nombre < 1 || c.nombre > 12)) f.push(`${ou}, ${quoi} : de 1 à 12 chiens (nombre)`);
+      if (c.largeur !== undefined && (!nombre(c.largeur) || c.largeur < 100 || c.largeur > 1200)) f.push(`${ou}, ${quoi} : largeur de 100 à 1200 px`);
       if (c.porte !== undefined) {
         if (!presents.includes(c.porte)) f.push(`${ou}, ${quoi} : « porte » doit nommer un personnage présent dans le plan`);
         dans(c.porteDe ?? -1, `${quoi}, porteDe`);
@@ -224,8 +235,14 @@ export function controlerBaton(r) {
       }
       dans(e.de, quoi);
       if (e.a !== undefined && (!nombre(e.a) || e.a <= e.de)) f.push(`${ou}, ${quoi} : « a » doit suivre « de »`);
-      if (['lignes-vitesse', 'ombre', 'coeurs', 'etincelles'].includes(e.effet) && e.a === undefined) f.push(`${ou}, ${quoi} : cet effet a une fin (a)`);
+      if (['lignes-vitesse', 'ombre', 'coeurs', 'etincelles', 'rayons', 'etoiles-ko', 'plumes', 'bulle', 'dit', 'diamant-flotte', 'fumee', 'oiseaux', 'spirale', 'lasso-vole'].includes(e.effet) && e.a === undefined) f.push(`${ou}, ${quoi} : cet effet a une fin (a)`);
       if (e.intensite !== undefined && (!nombre(e.intensite) || e.intensite < 0 || e.intensite > 3)) f.push(`${ou}, ${quoi} : intensité de 0 à 3`);
+      if (e.icone !== undefined && !ICONES.includes(e.icone)) f.push(`${ou}, ${quoi} : icône (${ICONES.join(', ')})`);
+      if (e.effet === 'dit') {
+        if (!presents.includes(e.qui)) f.push(`${ou}, ${quoi} : la bulle de dialogue nomme un personnage présent (qui)`);
+        if (typeof e.texte !== 'string' || !e.texte.trim() || e.texte.length > REPLIQUE_MAX) f.push(`${ou}, ${quoi} : une réplique de 1 à ${REPLIQUE_MAX} signes (texte)`);
+        else if (EMOJI.test(e.texte)) f.push(`${ou}, ${quoi} : pas d'emoji dans une bulle`);
+      }
     }
     let cam = 0;
     let avant = { a: -1, zoom: 1, x: undefined, y: undefined, cible: undefined };

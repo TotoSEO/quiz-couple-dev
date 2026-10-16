@@ -2,7 +2,9 @@
 // de 1080 x 1920, dessinés pour un instant t et, en travelling, pour un
 // défilement (en pixels). Les travellings ont deux plans de profondeur : le
 // lointain glisse plus lentement. Les obstacles d'un travelling sont posés
-// par l'instant où ils passent sous le héros.
+// par l'instant où ils passent sous le héros. Depuis le format rêvé
+// (16 octobre 2026) : le ciel où l'on vole, le tapis de nuages où l'on
+// court, le donjon aux torches, la grotte du diamant, le jardin de la maison.
 import type { NomDecorBaton, ObstacleBaton } from './recette';
 import { COULEURS, hasard } from './rig';
 
@@ -31,7 +33,7 @@ const etoiles = (t: number) => {
   }
   return s;
 };
-const astre = (nuit: boolean, t: number, x: number, y: number, r: number) => (nuit ? lune(x, y, r) + etoiles(t) : soleil(x, y, r));
+const astreDecor = (nuit: boolean, t: number, x: number, y: number, r: number) => (nuit ? lune(x, y, r) + etoiles(t) : soleil(x, y, r));
 
 // Des collines douces entre deux abscisses, en bosses.
 const collines = (y: number, h: number, bosses: number[], fill: string, w = 4) => {
@@ -205,10 +207,8 @@ const tour = (x: number, haut: number, largeur: number, bas: number) => {
 
 export type Couches = { fond: string; devant: string };
 
-// Le lit de la chambre : on y dort la tête à droite, sur l'oreiller, le
-// corps sous la couette (dessinée devant) ; et le canapé du salon, où l'on
-// s'assied (sol : son assise). Le réalisateur lit les mêmes chiffres.
-export const LIT = { x: 600, largeur: 440, matelas: 1130 };
+// Le canapé du salon, où l'on s'assied (sol : son assise). Le réalisateur
+// lit les mêmes chiffres.
 export const CANAPE = { x: 620, largeur: 440, assise: 1216 };
 
 // Une fenêtre d'intérieur : le cadre, la croisée, et dehors la lune et deux
@@ -235,7 +235,9 @@ const fenetre = (x: number, y: number, l: number, h: number, nuit: boolean, t: n
 // qu'on vient délivrer (vocabulaire.json dit la même hauteur).
 export const TOUR = { x: 740, largeur: 240, plateforme: 670 };
 
-export const dessinDecor = (nom: NomDecorBaton, t: number, defilement: number, obstacles: ObstacleBaton[], herosX: number, defile: number, id: string, nuit = false): Couches => {
+export const dessinDecor = (nom: NomDecorBaton, t: number, defilement: number, obstacles: ObstacleBaton[], herosX: number, defile: number, id: string, nuit = false, sansAstre = false): Couches => {
+  // sans astre : une créature « lune » joue la lune, le décor n'en dessine pas
+  const astre = (n: boolean, tt: number, x: number, y: number, r: number) => (sansAstre ? (n ? etoiles(tt) : '') : astreDecor(n, tt, x, y, r));
   // la position d'un obstacle : sous le héros à l'instant a, ou fixe (x)
   const obs = (o: ObstacleBaton) => o.x ?? herosX + defile * (o.a - t);
   // un décor qui défile se dessine avec des objets répétés ; immobile, il
@@ -401,45 +403,6 @@ export const dessinDecor = (nom: NomDecorBaton, t: number, defilement: number, o
       f += `<path d="M-20 1250 L-20 1150 L90 1150 L90 1250 M990 1250 L990 1150 L1100 1150 L1100 1250" ${T(7)} fill="${COULEURS.fond}"/>`;
       return { fond: f, devant: '' };
     }
-    case 'chambre': {
-      // la chambre : le mur et sa plinthe, une fenêtre à gauche (la lune et
-      // ses étoiles la nuit, le soleil le jour), un lit à droite (tête de lit
-      // à droite, oreiller, matelas, pieds) et sa couette devant, une table
-      // de nuit et sa lampe, un tapis
-      let f = `<path d="M-60 1300 L${W + 60} 1300" ${T(7)}/><path d="M-60 1284 L${W + 60} 1284" ${T(3)} opacity="0.4"/>`;
-      f += fenetre(130, 560, 300, 330, nuit, t);
-      f += `<rect x="470" y="1150" width="100" height="150" fill="${COULEURS.fond}" ${T(6)}/><path d="M470 1200 L570 1200 M512 1225 L528 1225" ${T(3)} opacity="0.5"/>`;
-      f += `<path d="M520 1150 L520 1080" ${T(6)}/><path d="M478 1080 L562 1080 L548 1010 L492 1010 Z" fill="${GRIS2}" ${T(6)}/>`;
-      if (nuit) f += `<path d="M492 1080 L562 1080 L640 1300 L420 1300 Z" fill="${COULEURS.jaune}" opacity="0.12"/>`;
-      f += `<ellipse cx="820" cy="1300" rx="280" ry="22" fill="${GRIS2}" ${T(4)}/>`;
-      f += `<rect x="1030" y="940" width="40" height="290" rx="10" fill="${COULEURS.fond}" ${T(7)}/>`;
-      f += `<rect x="${LIT.x}" y="${LIT.matelas}" width="${LIT.largeur}" height="60" rx="8" fill="${COULEURS.fond}" ${T(7)}/>`;
-      f += `<rect x="${LIT.x}" y="${LIT.matelas + 60}" width="${LIT.largeur}" height="40" fill="${GRIS2}" ${T(6)}/>`;
-      f += `<path d="M${LIT.x + 20} ${LIT.matelas + 100} L${LIT.x + 20} 1300 M${LIT.x + LIT.largeur - 20} ${LIT.matelas + 100} L${LIT.x + LIT.largeur - 20} 1300" ${T(8)}/>`;
-      f += `<rect x="920" y="${LIT.matelas - 44}" width="110" height="48" rx="18" fill="${COULEURS.fond}" ${T(6)}/>`;
-      const devant = `<path d="M${LIT.x + 8} ${LIT.matelas - 40} Q700 ${LIT.matelas - 68} 790 ${LIT.matelas - 42} Q860 ${LIT.matelas - 26} 915 ${LIT.matelas - 50} L915 ${LIT.matelas + 62} L${LIT.x + 8} ${LIT.matelas + 62} Z" fill="${GRIS}" ${T(6)}/><path d="M700 ${LIT.matelas - 30} q10 30 0 58 M820 ${LIT.matelas - 32} q-8 30 0 60" ${T(3)} opacity="0.5"/>`;
-      return { fond: f, devant };
-    }
-    case 'cuisine': {
-      // la cuisine : la fenêtre à gauche, une étagère et ses bocaux, le plan
-      // de travail à droite avec la cuisinière (deux feux), ses placards, un
-      // bol au bout
-      let f = `<path d="M-60 1300 L${W + 60} 1300" ${T(7)}/><path d="M-60 1284 L${W + 60} 1284" ${T(3)} opacity="0.4"/>`;
-      f += fenetre(110, 560, 280, 300, nuit, t);
-      f += `<path d="M560 790 L1060 790" ${T(7)}/>`;
-      for (let i = 0; i < 4; i++) {
-        const bx = 600 + i * 110;
-        f += `<rect x="${bx}" y="720" width="58" height="70" rx="8" fill="${GRIS2}" ${T(5)}/><rect x="${bx + 8}" y="708" width="42" height="14" rx="4" fill="${COULEURS.fond}" ${T(4)}/>`;
-      }
-      f += `<rect x="560" y="1110" width="540" height="190" fill="${GRIS2}" ${T(6)}/>`;
-      f += `<rect x="584" y="1134" width="230" height="142" rx="6" fill="${COULEURS.fond}" ${T(4)}/><rect x="834" y="1134" width="230" height="142" rx="6" fill="${COULEURS.fond}" ${T(4)}/>`;
-      f += `<path d="M790 1190 L790 1220 M858 1190 L858 1220" ${T(5)}/>`;
-      f += `<rect x="560" y="1080" width="540" height="30" fill="${COULEURS.fond}" ${T(7)}/>`;
-      f += `<rect x="690" y="1064" width="200" height="16" rx="4" fill="#3a3836"/>`;
-      f += `<ellipse cx="750" cy="1066" rx="40" ry="8" fill="${GRIS}" ${T(4)}/><ellipse cx="840" cy="1066" rx="32" ry="7" fill="${GRIS}" ${T(4)}/>`;
-      f += `<path d="M980 1080 q0 -50 40 -50 q40 0 40 50 Z" fill="${COULEURS.fond}" ${T(5)}/>`;
-      return { fond: f, devant: '' };
-    }
     case 'salon': {
       // le salon : une fenêtre, un cadre avec un cœur, un lampadaire à
       // gauche, le canapé à droite (dossier, assise, accoudoirs, pieds), un tapis
@@ -455,6 +418,142 @@ export const dessinDecor = (nom: NomDecorBaton, t: number, defilement: number, o
       f += `<rect x="${CANAPE.x}" y="${CANAPE.assise}" width="${CANAPE.largeur}" height="46" rx="10" fill="${COULEURS.fond}" ${T(7)}/>`;
       f += `<rect x="${CANAPE.x - 24}" y="${CANAPE.assise - 60}" width="60" height="106" rx="22" fill="${COULEURS.fond}" ${T(6)}/><rect x="${CANAPE.x + CANAPE.largeur - 36}" y="${CANAPE.assise - 60}" width="60" height="106" rx="22" fill="${COULEURS.fond}" ${T(6)}/>`;
       f += `<path d="M${CANAPE.x + 10} ${CANAPE.assise + 46} L${CANAPE.x + 10} 1300 M${CANAPE.x + CANAPE.largeur - 10} ${CANAPE.assise + 46} L${CANAPE.x + CANAPE.largeur - 10} 1300" ${T(8)}/>`;
+      return { fond: f, devant: '' };
+    }
+    case 'ciel': {
+      // le ciel où l'on vole : des nuages sur trois plans de profondeur, des
+      // vols d'oiseaux au loin, et tout en bas la ligne des montagnes
+      let f = astre(nuit, t, 200, 600, 70);
+      f += montagnes(1900, 180, [0.5, 0.9, 0.4, 0.8, 0.5, 0.7], GRIS2, 3);
+      f += repete(defilement, 0.22, 420, 141, (x, i) => nuage(x, 640 + 700 * hasard(i + 143), 0.55 + 0.3 * hasard(i + 145)).replace(`fill="${COULEURS.fond}"`, `fill="${GRIS2}"`));
+      f += repete(defilement, 0.3, 900, 151, (x, i) => {
+        const y = 560 + 900 * hasard(i + 153);
+        let o = '';
+        for (let k = 0; k < 4; k++) o += `<path d="M${n1(x + k * 34)} ${n1(y + 6 * Math.sin(t * 2 + k + i))} q7 ${n1(-8 + 3 * Math.sin(t * 9 + k))} 14 0 q7 ${n1(-8 + 3 * Math.sin(t * 9 + k))} 14 0" ${T(3)}/>`;
+        return o;
+      });
+      f += repete(defilement, 0.55, 520, 161, (x, i) => nuage(x, 460 + 1000 * hasard(i + 163), 0.9 + 0.4 * hasard(i + 165)));
+      f += repete(defilement, 1, 760, 171, (x, i) => nuage(x, 380 + 1200 * hasard(i + 173), 1.4 + 0.6 * hasard(i + 175)));
+      return { fond: f, devant: '' };
+    }
+    case 'nuages': {
+      // le tapis de nuages : on court dessus (sol 1300), le trou est un vide
+      // entre deux nuages ; sous le tapis, les sommets des montagnes ; fixe,
+      // c'est le nuage où l'on se pose, devant un grand soleil
+      let f = fixe ? astre(nuit, t, 700, 760, 130) : astre(nuit, t, 200, 600, 70);
+      f += montagnes(1900, 330, [0.5, 0.95, 0.45, 0.85, 0.5], GRIS2, 3);
+      f += repete(defilement, 0.3, 700, 181, (x, i) => nuage(x, 500 + 600 * hasard(i + 183), 0.7 + 0.4 * hasard(i + 185)));
+      const trou = obstacles.find((q) => q.type === 'trou');
+      const tx = trou ? obs(trou) : NaN;
+      const tl = trou?.largeur ?? 380;
+      const dans = (x: number) => trou && x > tx - tl / 2 - 70 && x < tx + tl / 2 + 70;
+      // le tapis : des bosses rondes qui se chevauchent, un dessous nuageux
+      let puffs = '';
+      const pas = 150;
+      const d = fixe ? 0 : defilement;
+      const i0 = Math.floor((d - 300) / pas);
+      const i1 = Math.ceil((d + W + 300) / pas);
+      for (let i = i0; i <= i1; i++) {
+        const x = i * pas - d + (hasard(i * 3 + 191) - 0.5) * 40;
+        if (dans(x)) continue;
+        const r = 84 + 24 * hasard(i + 193);
+        const h = 1300 - r * 0.35;
+        puffs += `<path d="M${n1(x - r)} 1500 L${n1(x - r)} ${n1(h)} Q${n1(x - r)} ${n1(h - r * 0.8)} ${n1(x)} ${n1(h - r * 0.8)} Q${n1(x + r)} ${n1(h - r * 0.8)} ${n1(x + r)} ${n1(h)} L${n1(x + r)} 1500 Z" fill="${COULEURS.fond}" ${T(7)}/>`;
+      }
+      f += puffs;
+      // le dessous : un bandeau blanc sans trait qui soude les bosses, puis une ondulation
+      const bords: [number, number][] = trou ? [[-80, tx - tl / 2 - 60], [tx + tl / 2 + 60, W + 80]] : [[-80, W + 80]];
+      for (const [a, b] of bords) {
+        if (b <= a) continue;
+        f += `<rect x="${n1(a)}" y="1380" width="${n1(b - a)}" height="150" fill="${COULEURS.fond}"/>`;
+        let ond = `M${n1(a)} 1530`;
+        for (let x = a; x < b; x += 90) ond += ` q45 ${x % 180 ? 40 : -40} 90 0`;
+        f += `<path d="${ond}" ${T(6)}/>`;
+      }
+      // le nuage de dessous, plus clair, qui glisse moins vite
+      f += repete(d, 0.6, 320, 201, (x, i) => (dans(x) ? '' : nuage(x, 1700 + 90 * hasard(i + 203), 1.2 + 0.5 * hasard(i + 205)).replace(`fill="${COULEURS.fond}"`, `fill="${GRIS2}"`)));
+      return { fond: f, devant: '' };
+    }
+    case 'donjon': {
+      // le donjon : un mur de pierre, des torches, des chaînes, des piliers,
+      // un sol dallé ; obstacle pique
+      let f = `<rect x="-60" y="-60" width="${W + 120}" height="1360" fill="${GRIS2}"/>`;
+      // les assises de pierre, qui glissent moins vite que le sol
+      for (let y = 420; y < 1300; y += 96) {
+        f += `<path d="M-60 ${y} L${W + 60} ${y}" ${T(3)} opacity="0.45"/>`;
+        const dec = ((y / 96) % 2) * 95 - ((defilement * 0.6) % 190);
+        for (let x = -200 + dec; x < W + 100; x += 190) f += `<path d="M${n1(x)} ${y} L${n1(x)} ${y + 96}" ${T(3)} opacity="0.45"/>`;
+      }
+      // les piliers
+      f += repete(defilement, 0.6, 1100, 211, (x) => `<rect x="${n1(x)}" y="360" width="96" height="940" fill="${GRIS}" ${T(6)}/><rect x="${n1(x - 14)}" y="340" width="124" height="40" fill="${GRIS}" ${T(6)}/>`);
+      // les chaînes
+      f += repete(defilement, 0.6, 760, 221, (x, i) => {
+        let o = '';
+        const l = 180 + 120 * hasard(i + 223);
+        for (let y = 380; y < 380 + l; y += 22) o += `<ellipse cx="${n1(x + 3 * Math.sin(t * 2 + y / 40))}" cy="${y}" rx="7" ry="12" fill="none" ${T(4).replace('fill="none" ', '')}/>`;
+        return o;
+      });
+      // les torches : la patère, la flamme orange qui danse, un halo jaune
+      f += repete(defilement, 0.6, 620, 231, (x, i) => {
+        const fl = 1 + 0.18 * Math.sin(t * 13 + i * 2) + 0.1 * Math.sin(t * 31 + i);
+        return (
+          `<path d="M${n1(x)} 1000 L${n1(x)} 880" ${T(8)}/><path d="M${n1(x - 24)} 880 L${n1(x + 24)} 880" ${T(7)}/>` +
+          `<path d="M${n1(x - 24)} 1300 L${n1(x + 24)} 1300 L${n1(x + 170)} 900 L${n1(x - 170)} 900 Z" fill="${COULEURS.jaune}" opacity="0.07"/>` +
+          `<path d="M${n1(x - 26)} 876 Q${n1(x - 30)} ${n1(876 - 70 * fl)} ${n1(x)} ${n1(876 - 110 * fl)} Q${n1(x + 30)} ${n1(876 - 70 * fl)} ${n1(x + 26)} 876 Z" fill="${COULEURS.orange}" ${T(5)}/>` +
+          `<path d="M${n1(x - 10)} 870 Q${n1(x - 8)} ${n1(870 - 40 * fl)} ${n1(x)} ${n1(870 - 60 * fl)} Q${n1(x + 8)} ${n1(870 - 40 * fl)} ${n1(x + 10)} 870 Z" fill="${COULEURS.jaune}"/>`
+        );
+      });
+      // le sol dallé
+      f += `<rect x="-60" y="1300" width="${W + 120}" height="700" fill="${GRIS}"/>`;
+      f += sol(1300);
+      f += repete(defilement, 1, 210, 241, (x) => `<path d="M${n1(x)} 1300 L${n1(x - 30)} 1400 M${n1(x - 105)} 1350 L${n1(x + 105)} 1350" ${T(3)} opacity="0.45"/>`);
+      // les piques
+      for (const o of obstacles.filter((q) => q.type === 'pique')) {
+        const x = obs(o);
+        const l = o.largeur ?? 170;
+        let d = `M${n1(x - l / 2)} 1300`;
+        for (let k = 0; k < 5; k++) d += ` L${n1(x - l / 2 + (l * (k + 0.5)) / 5)} 1180 L${n1(x - l / 2 + (l * (k + 1)) / 5)} 1300`;
+        f += `<path d="${d} Z" fill="${COULEURS.fond}" ${T(6)}/>`;
+      }
+      return { fond: f, devant: '' };
+    }
+    case 'grotte': {
+      // la grotte : la voûte et ses stalactites (sous le titre), les parois,
+      // des cristaux bleu pâle dans la roche, le sol de pierre et le socle
+      // où le diamant repose (le réalisateur le dessine en effet)
+      let f = `<rect x="-60" y="-60" width="${W + 120}" height="2040" fill="${GRIS2}"/>`;
+      f += `<path d="M-60 420 L-60 400 L${W + 60} 400 L${W + 60} 420 L1010 440 L950 540 L900 450 L820 470 L780 600 L730 460 L640 480 L590 560 L540 450 L470 470 L420 580 L370 460 L290 480 L240 600 L190 470 L120 470 L60 560 L10 450 Z" fill="${GRIS}" ${T(6)}/>`;
+      f += `<path d="M-60 420 Q80 700 -10 1300 M${W + 60} 420 Q${W - 140} 720 ${W + 10} 1300" fill="none" ${T(6)}/>`;
+      f += `<path d="M-60 420 Q80 700 -10 1300 L-60 1300 Z M${W + 60} 420 Q${W - 140} 720 ${W + 10} 1300 L${W + 60} 1300 Z" fill="${GRIS}"/>`;
+      for (const [cx, cy, k] of [[90, 980, 1], [1000, 1040, 0.8], [60, 760, 0.7], [1020, 820, 0.9]] as [number, number, number][]) {
+        f += `<path d="M${n1(cx)} ${n1(cy)} l${n1(-22 * k)} ${n1(-60 * k)} l${n1(22 * k)} ${n1(-30 * k)} l${n1(22 * k)} ${n1(30 * k)} Z" fill="${COULEURS.bleuClair}" ${T(4)} opacity="0.9"/>`;
+      }
+      f += `<rect x="-60" y="1300" width="${W + 120}" height="700" fill="${GRIS}"/>`;
+      f += sol(1300);
+      f += `<path d="M160 1300 q14 -30 34 0 M420 1300 q10 -22 26 0 M980 1300 q8 -18 20 0" ${T(4)}/>`;
+      // le socle de pierre du diamant
+      f += rocher(760, 330);
+      return { fond: f, devant: '' };
+    }
+    case 'jardin': {
+      // le jardin de la maison : la maison à gauche, la barrière et la niche
+      // au fond, un arbre à droite, la pelouse devant (la meute s'y déchaîne)
+      let f = astre(nuit, t, 900, 600, 60) + nuage(520, 640, 0.9);
+      f += collines(1300, 110, [0.35, 0.6, 0.4], GRIS2, 3);
+      f += `<rect x="40" y="900" width="380" height="400" fill="${COULEURS.fond}" ${T(7)}/>`;
+      f += `<path d="M10 900 L230 700 L450 900 Z" fill="${GRIS2}" ${T(7)}/>`;
+      f += `<path d="M340 790 L340 720 L380 720 L380 826" fill="${COULEURS.fond}" ${T(6)}/>`;
+      f += `<rect x="190" y="1120" width="92" height="180" rx="8" fill="${GRIS}" ${T(6)}/><circle cx="266" cy="1215" r="6" fill="${E}"/>`;
+      f += `<rect x="90" y="950" width="90" height="90" fill="${nuit ? COULEURS.jaune : COULEURS.fond}" ${T(6)}${nuit ? ' opacity="0.9"' : ''}/><path d="M135 950 L135 1040 M90 995 L180 995" ${T(4)}/>`;
+      f += `<rect x="300" y="950" width="90" height="90" fill="${nuit ? COULEURS.jaune : COULEURS.fond}" ${T(6)}${nuit ? ' opacity="0.9"' : ''}/><path d="M345 950 L345 1040 M300 995 L390 995" ${T(4)}/>`;
+      // la barrière du fond
+      f += `<path d="M450 1150 L1120 1150 M450 1200 L1120 1200" ${T(5)}/>`;
+      for (let x = 470; x < 1120; x += 44) f += `<path d="M${x} 1230 L${x} 1120 L${x + 12} 1100 L${x + 24} 1120 L${x + 24} 1230 Z" fill="${COULEURS.fond}" ${T(4)}/>`;
+      f += arbre(960, 1240, 230, 120, COULEURS.fond, 6);
+      // la niche
+      f += `<rect x="560" y="1130" width="130" height="100" fill="${COULEURS.fond}" ${T(6)}/><path d="M545 1130 L625 1070 L705 1130 Z" fill="${GRIS2}" ${T(6)}/><path d="M625 1230 L625 1170 A22 22 0 0 1 669 1170 L669 1230 Z" fill="${E}"/>`;
+      f += sol(1300);
+      f += herbe(500, 1300, 0.9) + herbe(760, 1300, 1) + herbe(1040, 1300, 0.8) + fleur(470, 1300, 0.8);
       return { fond: f, devant: '' };
     }
   }

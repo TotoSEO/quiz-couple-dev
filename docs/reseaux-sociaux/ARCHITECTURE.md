@@ -211,13 +211,19 @@ tu valides les formats, et l'automate les décline.
 > histoire de couple au trait noir (15 à 40 s ; plus de cible « 10 à 20 s »
 > depuis le 16 octobre 2026, des scènes étaient précipitées), un héros
 > articulé, fille ou garçon, qui bouge comme un ninja, des ralentis, des
-> transitions floues entre les paysages, huit trames (le dragon, le
-> parapluie, la couverture, l'étoile, porter l'autre, rattraper sa chute, la
-> danse, le petit-déjeuner en ninja) écrites en brief par séquences que le
-> réalisateur du studio met en plans, hors de la DA des mascottes
-> (`reseaux/README.md`, « Le bonhomme bâton »). Depuis le 16 octobre 2026
-> c'est la catégorie `baton` du lundi, du mercredi et du vendredi matin
-> (Thomas, sur le dragon : « je veux exactement ce style de post »). Le
+> transitions floues entre les paysages, et neuf trames de rêve où
+> l'impossible arrive (Thomas, 16 octobre 2026 : « la personne rêve ! Elle
+> fait des choses qui normalement sont pas possibles... faut pas faire des
+> trucs banals ») : le dragon, les ailes et le vol à deux, les bandits
+> explosés au karaté, le jardin rempli de chiens et le malaise, la quête du
+> diamant taillé en bague, l'étoile décrochée, le nuage shooté d'un coup de
+> pied, la lune attrapée au lasso, et la promesse de la lune qui finit mal
+> (bulles de dialogue, le téléphone, la lune qui arrive, l'horreur, noir),
+> écrites en brief par séquences que le réalisateur du studio met en plans,
+> hors de la DA des mascottes (`reseaux/README.md`, « Le bonhomme bâton »).
+> Depuis le 16 octobre 2026 c'est la catégorie `baton` du lundi, du mercredi
+> et du vendredi matin (Thomas, sur le dragon : « je veux exactement ce style
+> de post »). Le
 > tableau ci-dessous est le plan de départ.
 
 Un gabarit est un format réutilisable : sa mise en page, ses animations, ses

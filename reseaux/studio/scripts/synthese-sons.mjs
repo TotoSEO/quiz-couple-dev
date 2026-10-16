@@ -1,7 +1,8 @@
 // Les bruitages du bonhomme bâton, synthétisés ici même : des whooshs, une
 // lame qu'on tire, des zaps, un bourdon électrique, des boums, une
 // explosion, un grondement, des battements d'ailes, un sol qui craque, des
-// éclats, un flash, une montée, le drone d'un ralenti, une réception. Pas
+// éclats, un flash, une montée, le drone d'un ralenti, une réception, et
+// depuis le format rêvé un aboiement, le cristal qui éclate et l'enclume. Pas
 // de voix. Aucune bibliothèque : des oscillateurs, du bruit, des filtres et
 // des enveloppes écrits en quelques lignes, puis le ffmpeg de Remotion
 // encode en MP3. Les fichiers (public/sons/sy-<nom>.mp3, 20 à 60 Ko) sont
@@ -319,6 +320,66 @@ const atterrit = (lourd) => {
   return normaliser(fondu(b, 0.002, 0.03));
 };
 
+
+// Un aboiement de dessin animé (la meute du jardin) : un « wouf » bref, une
+// note qui tombe de 420 à 160 Hz, deux harmoniques, du souffle, et l'attaque
+// sèche d'une petite gueule ; la variante est un petit chien, plus aigu.
+const aboie = (petit) => {
+  const d = petit ? 0.17 : 0.22;
+  const b = tampon(d);
+  const pb = passeBande(1.1);
+  let ph = 0;
+  for (let i = 0; i < b.length; i++) {
+    const t = i / SR;
+    const u = t / d;
+    const f = lerp(petit ? 640 : 420, petit ? 260 : 160, Math.min(1, u * 1.6));
+    ph += f / SR;
+    const voix = sinus(ph) * 0.7 + sinus(ph * 2.01) * 0.35 + sinus(ph * 3.02) * 0.12;
+    const forme = env(t, 0.006, 0.055) * (1 - 0.3 * Math.sin(u * Math.PI * 6) * (u > 0.4 ? 1 : 0));
+    b[i] = voix * forme + pb(bruit(), f * 3.5) * env(t, 0.003, 0.03) * 0.8;
+  }
+  return normaliser(fondu(b, 0.003, 0.03));
+};
+
+// Le cristal qui éclate (le diamant brisé en mille morceaux) : une gerbe de
+// tintements très aigus aux hauteurs inharmoniques, chacun avec sa petite
+// attaque, sur un souffle brillant qui retombe.
+const cristal = () => {
+  const d = 1.4;
+  const b = tampon(d);
+  const ph = passeHaut();
+  const notes = [2093, 2637, 3136, 3729, 4186, 4978, 5588, 6272, 7040, 7902];
+  const depart = notes.map((_, k) => 0.02 + hasardSon(k) * 0.35);
+  for (let i = 0; i < b.length; i++) {
+    const t = i / SR;
+    let v = ph(bruit(), 4000) * env(t, 0.004, 0.09) * 0.9;
+    notes.forEach((f, k) => {
+      const tt = t - depart[k];
+      if (tt < 0) return;
+      v += sinus(f * tt) * env(tt, 0.002, 0.22 + 0.08 * (k % 3)) * 0.22 * (1 - k * 0.04);
+    });
+    b[i] = v;
+  }
+  return normaliser(fondu(b, 0.002, 0.2));
+};
+const hasardSon = (k) => {
+  const s = Math.sin(k * 127.1 + 311.7) * 43758.5453;
+  return s - Math.floor(s);
+};
+
+// Le marteau sur l'enclume (la bague qu'on forge) : un choc sourd et deux
+// partiels métalliques qui sonnent, l'un à 1 900 Hz, l'autre à 3 100 Hz.
+const enclume = () => {
+  const d = 0.6;
+  const b = tampon(d);
+  const pb = passeBas();
+  for (let i = 0; i < b.length; i++) {
+    const t = i / SR;
+    b[i] = pb(bruit(), 900) * env(t, 0.002, 0.03) * 1.2 + sinus(t * 1900) * env(t, 0.002, 0.16) * 0.5 + sinus(t * 3140) * env(t, 0.002, 0.12) * 0.3 + sinus(lerp(160, 70, Math.min(1, t / 0.05)) * t) * env(t, 0.002, 0.05) * 0.8;
+  }
+  return normaliser(fondu(b, 0.002, 0.08));
+};
+
 const SONS = [
   { nom: 'whoosh', titre: 'Whoosh court', fabrique: () => whoosh(0.42, 420, 2600, 700) },
   { nom: 'whoosh-2', titre: 'Whoosh court, plus grave', fabrique: () => whoosh(0.48, 260, 1900, 500, 1.3) },
@@ -342,6 +403,10 @@ const SONS = [
   { nom: 'ralenti', titre: "Drone d'un ralenti", fabrique: ralenti },
   { nom: 'atterrit', titre: 'Réception au sol', fabrique: () => atterrit(false) },
   { nom: 'atterrit-2', titre: 'Réception au sol, plus lourde', fabrique: () => atterrit(true) },
+  { nom: 'aboie', titre: 'Aboiement de dessin animé', fabrique: () => aboie(false) },
+  { nom: 'aboie-2', titre: 'Aboiement de dessin animé, petit chien', fabrique: () => aboie(true) },
+  { nom: 'cristal', titre: 'Cristal qui éclate', fabrique: cristal },
+  { nom: 'enclume', titre: "Marteau sur l'enclume", fabrique: enclume },
 ];
 
 // ── WAV puis MP3 ───────────────────────────────────────────────────────

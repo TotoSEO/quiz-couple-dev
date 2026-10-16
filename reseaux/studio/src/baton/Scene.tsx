@@ -1,7 +1,7 @@
 // Le rendu d'un plan du bonhomme bâton à un instant du récit : le décor,
-// le dragon, les personnages (et leurs rémanences), la traînée de la lame,
-// les effets, sous la caméra. Les textes (titre, signature) sont dans le
-// gabarit, jamais zoomés.
+// les créatures, les personnages (et leurs rémanences), la traînée de la
+// lame, la corde du lasso tendue vers la lune, les effets, sous la caméra.
+// Les textes (titre, signature) sont dans le gabarit, jamais zoomés.
 import React from 'react';
 import { dessinCreature } from './creatures';
 import { dessinDecor } from './decors';
@@ -46,7 +46,7 @@ const traineeLame = (passes: ImageBaton[], qui: EtatBaton['qui']): string => {
 export const Etage: React.FC<{ plan: PlanBaton; image: ImageBaton; graine: number; id: string; fantome?: boolean }> = ({ plan, image, graine, id, fantome }) => {
   const { etats, creatures, cam, t } = image;
   const heros = etats.find((e) => e.qui === 'heros');
-  const decor = dessinDecor(plan.decor, t, image.defilement, plan.obstacles ?? [], heros?.x ?? 430, plan.defile ?? 0, id, !!plan.nuit);
+  const decor = dessinDecor(plan.decor, t, image.defilement, plan.obstacles ?? [], heros?.x ?? 430, plan.defile ?? 0, id, !!plan.nuit, !!plan.sansAstre);
   // les instants passés, pour les rémanences et la traînée de la lame
   const besoin = Math.max(...etats.map((e) => (e.trainee ? e.trainee.nombre : 0)), etats.some((e) => e.traineeLame) ? 8 : 0);
   const ecart = etats.find((e) => e.trainee)?.trainee?.ecart ?? 0.03;
@@ -58,8 +58,18 @@ export const Etage: React.FC<{ plan: PlanBaton; image: ImageBaton; graine: numbe
   }
   let monde = '';
   for (const c of creatures) monde += dessinCreature(c, graine);
-  // elle d'abord, le héros devant
+  // elle d'abord, les bandits, le héros devant
   const ordre = [...etats].sort((a, b) => (a.qui === 'heros' ? 1 : 0) - (b.qui === 'heros' ? 1 : 0));
+  // la corde du lasso : de la main de celui qui la tient tendue au flanc de la lune
+  const lune = creatures.find((c) => c.qui === 'lune');
+  for (const e of etats) {
+    if (e.apparence.tient !== 'corde-tendue' || !lune) continue;
+    const main = pointEcran(e, dessinerBaton(e.apparence).mainD);
+    const cible: [number, number] = [lune.x - lune.sens * 2.2 * 60 * lune.echelle * 1.02, lune.y + 0.35 * 60 * lune.echelle];
+    const mx = (main[0] + cible[0]) / 2;
+    const my = (main[1] + cible[1]) / 2 + 40;
+    monde += `<path d="M${n2(main[0])} ${n2(main[1])} Q${n2(mx)} ${n2(my)} ${n2(cible[0])} ${n2(cible[1])}" fill="none" stroke="${COULEURS.encre}" stroke-width="9" stroke-linecap="round"/>`;
+  }
   for (const e of ordre) {
     if (e.trainee) {
       for (let i = e.trainee.nombre; i >= 1; i--) {

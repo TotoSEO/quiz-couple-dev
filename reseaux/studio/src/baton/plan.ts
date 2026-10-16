@@ -66,14 +66,24 @@ export const planBaton = (r: RecetteBaton): Plan => {
       let vetement = perso.vetement ?? 'aucun';
       let charge = perso.charge ?? 0;
       let couche = !!perso.couche;
-      // quelqu'un qui dort ronfle doucement, une fois par plan
-      if (perso.expression === 'dort' && couche) son('ronfle', 0.3, 0.1);
       for (const e of [...(perso.etapes ?? [])].sort((a, b) => a.a - b.a)) {
-        if (e.expression === 'baille') son('baille', e.a);
         if (e.pose === 'bisou' && perso.qui === 'heros') son('smack', e.a + 0.6);
-        if (e.pose === 'equilibre') son('boing', e.a - 0.3, 0.12);
         if (e.pose === 'tombe') son('sursaut', e.a, 0.16);
-        if (e.attache) son(e.attache.ancre === 'dos' ? 'coussin' : 'coussin', e.a, 0.16);
+        // le karaté : le souffle du coup ; l'impact est l'effet « impact »
+        if (e.pose === 'coup-poing' || e.pose === 'coup-pied' || e.pose === 'coup-pied-retourne') son('whoosh', e.a, 0.2);
+        if (e.pose === 'projete') son('air', e.a, 0.18);
+        if (e.pose === 'ko') son('chute', e.a, 0.16);
+        // le malaise : la chute de trombone, puis le corps qui tombe
+        if (e.pose === 'evanoui') son('trombone', e.a, 0.18);
+        if (e.pose === 'deploie') son('froissement', e.a, 0.18);
+        if (e.pose === 'tire-corde') son('grondement', e.a, 0.12);
+        if (e.pose === 'pioche-frappe') {
+          son('coup', e.a + 0.1, 0.2);
+          son('craquement', e.a + 0.12, 0.16);
+        }
+        if (e.pose === 'emue') son('sursaut', e.a, 0.14);
+        if (e.pose === 'cajole') son('aboie', e.a + 0.2, 0.14);
+        if (e.attache) son('coussin', e.a, 0.16);
         if (e.couche === false && couche) {
           son('froissement', e.a, 0.14);
           couche = false;
@@ -91,19 +101,28 @@ export const planBaton = (r: RecetteBaton): Plan => {
             son('pop', e.a);
             son('coeur', e.a + 0.35);
           }
-          if (e.tient === 'couverture') son('froissement', e.a);
           if (e.tient === 'etoile') son('etincelle-magique', e.a);
-          if (e.tient === 'parapluie-ferme') son('pop', e.a, 0.12);
-          if (e.tient === 'parapluie') {
-            son('air', e.a, 0.16);
-            son('froissement', e.a + 0.05, 0.18);
+          if (e.tient === 'corde') son('froissement', e.a, 0.1);
+          // le lasso qui tournoie : trois souffles ; la corde qui se tend : un craquement
+          if (e.tient === 'lasso') for (let k = 0; k < 3; k++) son('whoosh', e.a + 0.05 + k * 0.34, 0.14);
+          if (e.tient === 'corde-tendue') son('craque', e.a, 0.18);
+          if (e.tient === 'pioche' || e.tient === 'marteau') son('pop', e.a, 0.12);
+          if (e.tient === 'diamant') son('scintille', e.a, 0.18);
+          if (e.tient === 'bague') {
+            son('etincelle-magique', e.a, 0.18);
+            son('tinte', e.a + 0.1, 0.12);
           }
-          if (e.tient === 'plateau') son('tinte', e.a);
-          if (e.tient === 'poele') son('pose', e.a, 0.14);
+          if (e.tient === 'chiot') son('aboie', e.a + 0.1, 0.14);
+          if (e.tient === 'telephone') son('tape', e.a + 0.2, 0.1);
           tient = e.tient;
         }
         if (e.vetement && e.vetement !== vetement) {
-          if (e.vetement === 'cape') son('froissement', e.a, 0.2);
+          // les ailes qui se déploient : l'étoffe, la magie, un souffle
+          if (e.vetement === 'ailes') {
+            son('froissement', e.a, 0.2);
+            son('etincelle-magique', e.a, 0.18);
+            son('air', e.a + 0.1, 0.14);
+          }
           vetement = e.vetement;
         }
         if (e.expression === 'charmeur') son('scintille', e.a + 0.1);
@@ -150,6 +169,10 @@ export const planBaton = (r: RecetteBaton): Plan => {
             if (a.vers > charge + 0.1) son('charge-electrique', a.de, 0.12);
             charge = a.vers;
             break;
+          case 'plane':
+            // le vol : des battements d'ailes lents, un toutes les 0,6 s
+            for (let s2 = a.de, k = 0; s2 < a.a && k < 10; s2 += 0.6, k++) son('ailes', s2, 0.1);
+            break;
           default:
             break;
         }
@@ -157,6 +180,8 @@ export const planBaton = (r: RecetteBaton): Plan => {
     }
     for (const c of p.creatures ?? []) {
       const nuage = c.qui === 'nuage';
+      const lune = c.qui === 'lune';
+      const chiens = c.qui === 'chiens';
       let pose = c.pose ?? 'vole';
       let depuis = 0;
       let bouge = false;
@@ -164,20 +189,38 @@ export const planBaton = (r: RecetteBaton): Plan => {
       const ferme = (a: number) => {
         if (pose === 'vole' || pose === 'plonge') vols.push([depuis, a]);
       };
+      // la meute : elle aboie et saute dès qu'elle est là
+      if (chiens) {
+        for (let k = 0; k < 3; k++) son('aboie', 0.15 + k * 0.28, 0.16);
+        if (pose === 'vole') for (let s2 = 0.3, k = 0; s2 < p.duree && k < 8; s2 += 0.55, k++) son('boing', s2, 0.08);
+      }
       for (const e of [...(c.etapes ?? [])].sort((a, b) => a.a - b.a)) {
-        // la première fois qu'il bouge : un grognement, ou le vent qui tourne à l'orage
-        if (!bouge && (e.x !== undefined || e.y !== undefined)) {
-          son(nuage ? 'tempete' : 'dragon-grogne', e.a, 0.18);
+        // la première fois qu'il bouge : un grognement, le vent qui tourne à l'orage, la lune qui gronde
+        if (!bouge && (e.x !== undefined || e.y !== undefined) && !chiens) {
+          son(nuage ? 'tempete' : lune ? 'grondement' : 'dragon-grogne', e.a, 0.18);
           bouge = true;
         }
         if (!e.pose || e.pose === pose) continue;
         ferme(e.a);
-        if (e.pose === 'plonge') son(nuage ? 'tempete' : 'meteore', e.a, 0.2);
+        if (e.pose === 'plonge') {
+          if (lune) {
+            son('craque', e.a, 0.2);
+            son('grondement', e.a + 0.05, 0.14);
+          } else if (!chiens) son(nuage ? 'tempete' : 'meteore', e.a, 0.2);
+        }
+        if (e.pose === 'perche' && lune) {
+          // la lune se pose sur la colline
+          son('impact-profond', e.a, 0.24);
+          son('boum', e.a + 0.02, 0.2);
+          son('cailloux', e.a + 0.1, 0.16);
+        }
+        if (e.pose === 'vole' && chiens) for (let s2 = e.a + 0.2, k = 0; s2 < p.duree && k < 8; s2 += 0.55, k++) son('boing', s2, 0.08);
         if (e.pose === 'rugit') {
           if (nuage) {
             son('tonnerre', e.a, 0.22);
             son('eclair-electrique', e.a + 0.05, 0.16);
-          } else son('dragon-rugit', e.a);
+          } else if (chiens) for (let k = 0; k < 2; k++) son('aboie', e.a + k * 0.3, 0.18);
+          else if (!lune) son('dragon-rugit', e.a);
         }
         if (e.pose === 'eclate') {
           if (nuage) {
@@ -195,7 +238,7 @@ export const planBaton = (r: RecetteBaton): Plan => {
         depuis = e.a;
       }
       ferme(p.duree);
-      if (!nuage) for (const [de, a] of vols) for (let s = de, k = 0; s < a && k < 6; s += 0.45, k++) son('ailes', s);
+      if (!nuage && !lune && !chiens) for (const [de, a] of vols) for (let s = de, k = 0; s < a && k < 6; s += 0.45, k++) son('ailes', s);
       if (c.porteDe !== undefined) son('impact-profond', c.porteDe, 0.22);
     }
     for (const e of p.effets ?? []) {
@@ -211,12 +254,29 @@ export const planBaton = (r: RecetteBaton): Plan => {
         son('tonnerre', e.de + 0.05, 0.14);
       }
       if (e.effet === 'etoile-ciel') son('scintille', e.de, 0.12);
-      if (e.effet === 'crepe') {
-        son('air', e.de, 0.12);
-        son('splat', e.de + 0.68, 0.12);
+      // le rêve : l'impact du karaté, le diamant qui éclate, les rayons, les plumes, la bulle, les oiseaux, le lasso
+      if (e.effet === 'impact') {
+        son('coup', e.de, 0.24);
+        son('impact-profond', e.de + 0.02, 0.12);
       }
-      if (e.effet === 'lumiere') son('tinte', e.de, 0.1);
-      if (e.effet === 'notes') son('scintille', e.de, 0.1);
+      if (e.effet === 'eclats-diamant') {
+        son('cristal', e.de, 0.22);
+        son('eclats', e.de + 0.05, 0.14);
+        son('debris', e.de + 0.1, 0.1);
+      }
+      if (e.effet === 'diamant-geant') son('scintille', e.de + 0.2, 0.14);
+      if (e.effet === 'diamant-flotte') son('etincelle-magique', e.de, 0.16);
+      if (e.effet === 'rayons') son('scintille', e.de, 0.16);
+      if (e.effet === 'plumes') son('froissement', e.de, 0.12);
+      if (e.effet === 'bulle') son('bulle', e.de, 0.14);
+      if (e.effet === 'dit') son('bulle', e.de, 0.16);
+      if (e.effet === 'fumee') son('air', e.de, 0.12);
+      if (e.effet === 'etoiles-ko') son('scintille', e.de, 0.08);
+      if (e.effet === 'oiseaux') son('oiseau', e.de + 0.3, 0.12);
+      if (e.effet === 'lasso-vole') {
+        son('whoosh-long', e.de, 0.2);
+        if (e.a !== undefined) son('craque', e.a, 0.16);
+      }
       if (e.effet === 'pluie') {
         const fa = debut + enImages(rm.reel(e.de));
         const fb = debut + enImages(rm.reel(Math.min(p.duree, e.a ?? p.duree)));
@@ -243,8 +303,10 @@ export const planBaton = (r: RecetteBaton): Plan => {
       son('coeur-ambiance', seg.de + 0.001, 0.3);
     }
     for (const s of p.sons ?? []) son(s.son as NomSon, s.a, s.volume);
-    // contrôle : le plan installé (après la transition floue, s'il y en a une), puis sa fin
+    // contrôle : le plan installé (après la transition floue, s'il y en a une), puis sa fin,
+    // et le milieu de chaque bulle de dialogue (un texte de plus à l'écran)
     verifs.push(debut + Math.min(duree - 1, Math.max(flou ? FLOU + 2 : 9, Math.round(duree * 0.45))), debut + duree - 2);
+    for (const e of p.effets ?? []) if (e.effet === 'dit') verifs.push(debut + enImages(rm.reel(Math.min(p.duree, (e.de + (e.a ?? e.de + 1)) / 2))));
     debut += duree;
   });
   const uniques = [...new Set(verifs)].filter((v) => v >= 0 && v < debut).sort((x, y) => x - y);

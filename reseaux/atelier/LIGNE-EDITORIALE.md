@@ -270,29 +270,34 @@ maximiser cette statistique c'est mieux »). Un héros au corps de traits et à
 la tête ronde qui bouge comme un ninja, l'autre personnage, et une vraie
 petite histoire de couple en 15 à 40 s : au trait noir sur papier blanc,
 seuls les éléments qui comptent sont en couleur (le bandana violet du
-garçon, le nœud rose de la fille, le parapluie rouge, la couverture orange,
-l'étoile jaune, la lame bleue, les cœurs). Rien à voir avec la DA des
-mascottes : c'est un format à part, le seul du compte sans elles. Le titre
-« me in my dreams with u » est à l'écran du début à la fin.
+garçon, le nœud rose de la fille, la lame bleue, le diamant, l'or de la
+bague, la lune, les cœurs). Rien à voir avec la DA des mascottes : c'est un
+format à part, le seul du compte sans elles. Le titre « me in my dreams
+with u » est à l'écran du début à la fin (sauf la promesse, qui a le sien).
 
-Ce qui fait un bon reel : une ouverture où on les voit ensemble, un incident
-(elle grelotte, le nuage les arrose, il bâille à s'en décrocher la mâchoire,
-elle tombe du rocher), le très gros plan sur le visage du héros qui décide,
-puis l'exploit **au ralenti**, avec les zooms, les rémanences, les lignes de
-vitesse, et une fin heureuse (câlin, bisou, rire, elle endormie sur son dos).
-Huit trames se relaient (voir CONSIGNES.md, « Le bonhomme bâton ») : le
-sauvetage au dragon (la seule avec l'épée), le parapluie, la couverture,
-l'étoile, porter l'autre sur son dos, rattraper sa chute, la danse dans le
-salon, le petit-déjeuner apporté au lit en ninja. Thomas, 16 octobre 2026 :
-« il faut varier les histoires ! Ça doit pas forcément être un conte de fées
-ou une aventure, ça peut être autre chose ». Le héros (« me ») est un garçon
-ou une fille, une fois sur deux : la fille garde son nœud rose et sa queue
-de cheval, le garçon son bandana, quel que soit le rôle. Pas de texte à
-l'écran en dehors du titre, pas de voix : des bruitages, et la musique
-connue qui va avec l'histoire (voir « Le son »). Légende sans renvoi vers le
-site ; hashtags `#stickman`, `#stickfigure`, `#animation`, `#couplegoals`,
-`#quizcouple`. Vingt-quatre histoires dans la banque (`baton`), trois par
-trame.
+Ce que ça raconte (Thomas, 16 octobre 2026 : « la personne rêve ! Elle fait
+des choses qui normalement sont pas possibles, comme avec le dragon... faut
+pas faire des trucs banals ») : un rêve, où l'impossible arrive pour l'autre
+ou avec l'autre, avec une vraie chute. Ce qui fait un bon reel : une
+ouverture où on les voit ensemble, un incident (le dragon l'emporte, elle
+regarde passer les oiseaux et soupire, des bandits déboulent, il dit non au
+chien, elle rêve d'une bague, le nuage les arrose, elle montre la lune), le
+très gros plan sur le visage du héros qui décide, puis l'exploit **au
+ralenti**, avec les zooms, les rémanences, les lignes de vitesse, et une fin
+qui surprend (des ailes lui poussent à elle aussi, le malaise devant les
+chiens, la demande un genou à terre, assis sur la lune). Neuf trames se
+relaient (voir CONSIGNES.md, « Le bonhomme bâton ») : le dragon (la seule
+avec l'épée), les ailes, les bandits au karaté, les chiens, le diamant,
+l'étoile, le nuage shooté, la lune au lasso, et la promesse, la seule qui
+finit mal pour rire : « je décrocherai la lune pour toi », elle ne le croit
+pas, il le fait, et la lune arrive vraiment. Le héros (« me ») est un garçon
+ou une fille, presque une fois sur deux : la fille garde son nœud rose et
+sa queue de cheval, le garçon son bandana, quel que soit le rôle. Pas de
+texte à l'écran en dehors du titre et des deux bulles de la promesse, pas de
+voix : des bruitages, et la musique connue qui va avec l'histoire (voir « Le
+son »). Légende sans renvoi vers le site ; hashtags `#stickman`,
+`#stickfigure`, `#animation`, `#couplegoals`, `#quizcouple`. Vingt-sept
+histoires dans la banque (`baton`), trois par trame.
 
 ### `post`
 
@@ -334,11 +339,13 @@ vidéos là il faudra trouver des musiques qui sont en rapport avec
 l'animation, genre là pour le dragon et tout ça sera une musique action /
 aventure... idéalement des sons connus ! ») : chaque sujet de la banque
 porte un titre connu qui va avec l'histoire (« He's a Pirate » pour le
-dragon, « Umbrella » pour le parapluie, « Here Comes the Sun » pour le
-réveil, « Perfect » pour la danse), écrit dans `son.recherche`, et
-`son.ambiance` donne l'ambiance de la trame (`epique` pour le sauvetage,
-`drole` pour le parapluie et le réveil, `tendre` pour les autres), où la
-publication cherche si le titre n'est pas dans la bibliothèque Instagram.
+dragon, « Kung Fu Fighting » pour les bandits, « Who Let the Dogs Out »
+pour les chiens, « Fly Me to the Moon » pour les ailes, « Diamonds » pour
+la quête), écrit dans `son.recherche`, et `son.ambiance` donne l'ambiance
+de la trame (`epique` pour le dragon, les bandits et le diamant, `drole`
+pour les chiens, le nuage et la promesse, `tendre` pour les ailes, l'étoile
+et la lune), où la publication cherche si le titre n'est pas dans la
+bibliothèque Instagram.
 
 La bibliothèque de 55 morceaux libres de droits (Mixkit et FreePD) reste
 dans le studio en cinq ambiances (`leger`, `doux`, `sensuel`, `jeu`,
@@ -452,10 +459,10 @@ la plage, la voiture et le cinéma, et les gags à bulles ont été réécrits e
 situations), 15 coquines, 28
 statiques, 51 thèmes de « Connais-tu » (dont 8 « Who's more likely? » et 3
 éditions difficiles), 28 de « Tu préfères », 28 phrases, 16 carrousels
-« He's a 10 but... » (12 octobre 2026), 24 histoires de bonhomme bâton
-(16 octobre 2026, trois par trame, le héros garçon puis fille en
-alternance, chacune avec sa musique), plus 18 sujets datés de Noël et du
-Nouvel An (dont deux bonhommes bâton : l'étoile de Noël et le retour du
+« He's a 10 but... » (12 octobre 2026), 27 histoires de bonhomme bâton
+(16 octobre 2026, trois par trame de rêve, le héros fille presque une fois
+sur deux, chacune avec sa musique), plus 18 sujets datés de Noël et du
+Nouvel An (dont deux bonhommes bâton : l'étoile de Noël et l'envol du
 Nouvel An). La routine prend le premier sujet libre de la
 catégorie et écrit son id dans le champ `sujet` du post ; un sujet déjà
 utilisé dans `posts/` n'est jamais repris. Les sujets datés passent avant

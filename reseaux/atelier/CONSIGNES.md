@@ -191,9 +191,9 @@ le modèle d'une situation jouée sans aucune bulle, dans un des nouveaux
 décors), `pov-couette` (coquin), `statique-calin` (statique), `connais-tu`,
 `tu-preferes`, `citation` (phrase), `bd-malade` (bd), `dix-mais` et
 `dix-mais-elle` (dix-mais), et pour le bonhomme bâton (baton) un brief par
-trame : `baton-dragon`, `baton-parapluie`, `baton-couverture`,
-`baton-etoile`, `baton-porte`, `baton-rattrape`, `baton-danse`,
-`baton-reveil`.
+trame : `baton-dragon`, `baton-ailes`, `baton-bandits`, `baton-chiens`,
+`baton-diamant`, `baton-etoile`, `baton-nuage`, `baton-lune`,
+`baton-promesse`.
 
 ### Les animations (pov, coquin, statique)
 
@@ -506,46 +506,79 @@ qui comptent sont en couleur, des ralentis, des zooms, une vraie petite
 histoire en 15 à 40 s. Thomas, sur le premier reel (le dragon) : « C'EST
 IN-CROY-ABLE, digne d'un artiste. Je veux exactement ce style de post. Mais
 attention, pour obtenir une telle qualité de rendu il va falloir que les
-briefs soient d'une qualité exceptionnelle avec beaucoup de détail. » Et le
-même jour, devant un second reel qui refaisait le dragon avec un nuage :
-« il faut varier les histoires ! Ça doit pas forcément être un conte de fées
-ou une aventure ».
+briefs soient d'une qualité exceptionnelle avec beaucoup de détail. »
+
+**Le concept, à ne jamais perdre** (Thomas, 16 octobre 2026, devant une
+version où le héros allait chercher un parapluie à la maison ou faisait des
+crêpes) : « me in my dreams with u veut dire moi dans mes rêves avec toi. La
+personne rêve ! Elle fait des choses qui normalement sont pas possibles,
+comme avec le dragon ! Je dis pas que tout doit être tourné médiéval
+fantaisie, je dis juste que faut pas faire des trucs banals. » Donc : jamais
+le quotidien. Dans son rêve, le héros vole, explose des bandits au karaté,
+remplit le jardin de chiens, va chercher le plus gros diamant du monde,
+décroche la lune au lasso. Spectaculaire, impossible, avec une vraie chute.
 
 **Le brief est une histoire par séquences**, pas des plans : la recette
-porte `heros` (`fille` ou `garcon`), `son` et `histoire.sequences`, et le
-réalisateur du studio (`reseaux/studio/src/baton/realisateur.mjs`) la
+porte `heros` (`fille` ou `garcon`), `son`, `titre` et `histoire.sequences`,
+et le réalisateur du studio (`reseaux/studio/src/baton/realisateur.mjs`) la
 transforme en plans techniques, cadrés et minutés comme le dragon (visages
 sous le titre, caméra qui pousse, ralenti au bon moment, transitions floues
-entre les paysages, bruitages déduits des gestes). Les modèles sont les huit
+entre les paysages, bruitages déduits des gestes). Les modèles sont les neuf
 briefs de `recettes/exemples/baton-*.json`, un par trame. Le sujet de la
 banque donne `heros`, `trame`, l'histoire en trois phrases et `son` (un titre
 connu) : tu écris le brief qui la raconte.
 
-- **Huit trames**, une par exploit (`TRAMES` dans realisateur.mjs ;
+- **Neuf trames**, une par exploit (`TRAMES` dans realisateur.mjs ;
   `sequences` donne l'ordre à suivre) :
   - `sauvetage` : le dragon l'emporte, épée, traversée, tour, garde, bond,
-    bouquet au sommet. **La seule avec l'épée.** Plus tard il y aura des
-    combats contre d'autres gens ; pas maintenant, et jamais trois fois de
-    suite.
-  - `parapluie` : un nuage d'orage les arrose, le héros court chercher le
-    parapluie à la maison, l'ouvre au-dessus de l'autre au ralenti, trempé ;
-    le nuage boude et s'en va, câlin sous le parapluie.
-  - `course` : l'autre grelotte, le héros rapporte la couverture en parkour
-    et la lui pose sur les épaules.
+    bouquet au sommet. **La seule avec l'épée.**
+  - `ailes` : l'autre regarde passer les oiseaux et soupire ; des ailes se
+    déploient dans le dos du héros, il la prend par la main au ralenti, ils
+    traversent le ciel (décor `ciel`, un looping si tu le veux :
+    `looping: true`), se posent sur un nuage (`arrivee` lieu `nuage`),
+    s'asseyent devant le soleil, et des ailes lui poussent à elle aussi
+    (fin `assis`).
+  - `bandits` : en ville, trois ou quatre bandits masqués (`bandits` dans
+    l'incident) déboulent et encerclent l'autre ; `preparation` est la garde
+    de karaté (sans insert) ; l'exploit `karate` : coup de poing, coup de
+    pied, le deuxième s'étale K.-O., coup de pied retourné au ralenti ;
+    l'autre lui saute au cou (fin `calin`). Pas d'épée ici : le karaté.
+  - `chiens` : c'est le héros qui veut un chien (bulle de pensée, les yeux
+    qui brillent), l'autre croise les bras et fait non de la tête. Puis la
+    séquence `surprise` : le soir même, le héros l'emmène par la main vers
+    la maison, « j'ai une surprise pour toi » ; `arrivee` lieu `jardin` :
+    rempli de chiens ; l'exploit `malaise` : l'autre tourne de l'œil et
+    s'évanouit au ralenti ; fin `reveil`.
+  - `diamant` : l'autre rêve d'une bague (bulle) ; `depart` avec la pioche,
+    traversée de trois paysages (la falaise, le donjon et ses piques, le
+    tapis de nuages et son vide : montagne, donjon, cieux), `arrivee` à la
+    grotte du diamant géant, `preparation` (la pioche levée, l'insert sur
+    les pieds), l'exploit `taille` : le coup au ralenti qui brise le diamant
+    en mille morceaux, la pierre parfaite, la bague forgée au marteau ;
+    retrouvailles : il revient en courant, fin `demande`, un genou à terre,
+    cadeau `bague`.
   - `etoile` : l'autre montre une étoile, le héros bondit la décrocher.
-  - `porte` : l'autre n'en peut plus (le soir), le héros la prend sur son
-    dos, traverse la ville et la forêt pendant qu'elle s'endort, arrive à
-    la maison ; la fenêtre s'allume.
-  - `rattrape` : l'autre grimpe sur un rocher ou un banc, perd l'équilibre
-    et tombe ; le héros plonge et la rattrape au ralenti ; bisou.
-  - `danse` : l'autre a le cafard sur le canapé, le héros s'incline, lui
-    tend la main, ils dansent, elle tournoie, il la renverse ; bisou.
-  - `reveil` : l'autre dort, le héros sort à pas de loup, fait sauter les
-    crêpes dans la cuisine et rapporte le plateau en ninja ; réveil devant
-    le petit-déjeuner.
-- **Le héros est une fille une fois sur deux** (le sujet le dit) : « me »
-  peut être elle. La fille garde son nœud rose et sa queue de cheval, le
-  garçon son bandana violet, quel que soit le rôle ; dans la recette
+  - `nuage` : un nuage d'orage les arrose ; le héros bondit et le shoote
+    d'un coup de pied au ralenti, le nuage crève, le soleil revient ; fin
+    `rire`.
+  - `lune` : l'autre montre la lune ; le héros sort une corde (`depart` avec
+    `corde`), fait tournoyer le lasso, le lance au ralenti dans la fumée et
+    le sol qui se brise, attrape la lune et la tire jusqu'à la colline ;
+    ils s'asseyent dessus (fin `assis`).
+  - `promesse` : **l'idée de Thomas (16 octobre 2026)**, la seule qui finit
+    mal, pour rire. Le héros dit « i'd pull the moon down for you »
+    (`replique` dans l'incident, 40 signes, en anglais), l'autre hausse un
+    sourcil, « ... », et retourne à son téléphone ; gros plan de colère ;
+    `depart` avec `corde` et `recul` (quatre pas en arrière) ; l'exploit
+    `lasso` : la lune grossit, elle arrive ; puis la séquence `chute` à la
+    place des retrouvailles : gros plan sur l'autre au téléphone, un
+    grondement, la caméra tremble, elle lève les yeux, la lune se reflète
+    dans ses yeux, visage horrifié, noir. Le titre change : « when he
+    promises u the moon » (ou « when she... »). Thomas : « tu peux aussi
+    faire des formats comme ça ».
+- **Le héros est une fille presque une fois sur deux** (le sujet le dit) :
+  « me » peut être elle. La fille garde son nœud rose et sa queue de cheval,
+  le garçon son bandana violet, quel que soit le rôle ; dans la recette
   l'autre s'appelle toujours `elle`, même quand c'est lui.
 - **Chaque séquence a sa `description`** (120 signes au moins ; chaque
   paysage d'une traversée et l'insert des pieds aussi) : le découpage qu'un
@@ -556,34 +589,36 @@ connu) : tu écris le brief qui la raconte.
   (realisateur.mjs) ; les noms (décors, incidents, exploits, fins, poses,
   expressions) dans `reseaux/studio/src/baton/vocabulaire.json` et dans le
   réalisateur, qui refuse un ordre impossible (une traversée avant le
-  départ, un bouquet quand les mains sont prises, l'épée hors d'un combat).
-- **Varier** : le décor d'ouverture (montagnes, prairie, ville, plage, salon,
-  chambre), le jour ou la nuit, les paysages traversés et leurs obstacles,
-  la fin (`charmeur`, `calin`, `bisou`, `rire`, `endormie`), les temps du
-  gros plan d'émotion. Deux reels de la même semaine n'ont pas la même
-  trame ; on tourne sur les huit.
+  départ, le ciel à pied, l'épée hors du dragon, la chute hors de la
+  promesse).
+- **Varier** : le décor d'ouverture (montagnes, prairie, ville, plage,
+  maison, salon), le jour ou la nuit, les paysages traversés et leurs
+  obstacles, les temps du gros plan d'émotion, la fin quand la trame en
+  laisse le choix. Deux reels de la même semaine n'ont pas la même trame ;
+  on tourne sur les neuf, dans l'ordre de la banque.
 - **La musique** : le reel est rendu sans musique et publié avec un son de
   la bibliothèque Instagram. Le sujet donne un titre connu qui va avec
-  l'histoire (« He's a Pirate » pour le dragon, « Umbrella » pour le
-  parapluie, « Here Comes the Sun » pour le réveil) : il va dans
-  `son.recherche`, et `son.ambiance` porte l'ambiance de la trame
-  (`epique` pour le sauvetage, `drole` pour le parapluie et le réveil,
-  `tendre` pour les autres) : si le titre n'est pas dans la bibliothèque,
-  la publication cherche dans cette ambiance. Thomas : « pour ces vidéos là
-  il faudra trouver des musiques qui sont en rapport avec l'animation...
-  idéalement des sons connus ! »
+  l'histoire (« He's a Pirate » pour le dragon, « Kung Fu Fighting » pour
+  les bandits, « Who Let the Dogs Out » pour les chiens, « Fly Me to the
+  Moon » pour les ailes) : il va dans `son.recherche`, et `son.ambiance`
+  porte l'ambiance de la trame (`epique` pour le sauvetage, les bandits et
+  le diamant, `drole` pour les chiens, le nuage et la promesse, `tendre`
+  pour les ailes, l'étoile et la lune) : si le titre n'est pas dans la
+  bibliothèque, la publication cherche dans cette ambiance. Thomas : « pour
+  ces vidéos là il faudra trouver des musiques qui sont en rapport avec
+  l'animation... idéalement des sons connus ! »
 - **Légende** sans renvoi vers le site (le contrôle le refuse) : une
-  première ligne qui dit la situation avec un mot-clé (« when she's cold »,
-  « my boyfriend when it rains »), ou rien, puis un seul appel de la liste
-  (envoyer : « Send this to your partner », « Tag him », « Tag her »).
+  première ligne qui dit la situation avec un mot-clé (« when she wants a
+  dog », « my boyfriend when it rains »), ou rien, puis un seul appel de la
+  liste (envoyer : « Send this to your partner », « Tag him », « Tag her »).
   Hashtags : `#stickman`, `#stickfigure`, `#animation`, `#couplegoals`,
   `#quizcouple`.
 - **Vérifier** : `controler.mjs` sur le post (il compile le brief et refuse
   une séquence hors d'ordre, un nom inconnu, une description courte, plus
   de 40 s à l'écran), puis `rendre.mjs --verifier` sur la recette (visages
-  sous le titre et hors des textes) et une planche. Un rendu complet
-  prend une vingtaine de minutes sur les machines du rendu : la réserve
-  s'écrit d'avance, le rendu suit.
+  sous le titre et hors des textes, bulles dans la zone utile) et une
+  planche. Un rendu complet prend une vingtaine de minutes sur les machines
+  du rendu : la réserve s'écrit d'avance, le rendu suit.
 
 La story du matin reprend ce reel comme les autres (il fait moins de 60 s).
 

@@ -1,44 +1,54 @@
 // Le format bonhomme bâton (gabarit « baton », octobre 2026, idée de Thomas :
 // « me in my dreams with u ») : un héros au corps de traits et au visage
-// rond, qui bouge comme un ninja, dans des mini-aventures de 10 à 20 s,
+// rond, qui bouge comme un ninja, dans des mini-aventures de 15 à 40 s,
 // dessinées en noir et blanc où seuls les éléments qui comptent sont en
-// couleur. Depuis le 16 octobre 2026 les histoires varient (Thomas : « ça
-// doit pas forcément être un conte de fées ou une aventure ») : porter
-// l'autre sur son dos, le parapluie sous l'orage, une danse dans le salon,
-// rattraper une chute, le petit-déjeuner apporté au lit en ninja, à côté du
-// dragon, de la couverture et de l'étoile. Rien à voir avec la DA des mascottes : c'est un format à part,
-// avec son rig (rig.ts), ses décors (decors.ts), ses créatures et ses
-// effets. Le scénario s'écrit plan par plan, comme un découpage technique :
-// les temps d'un plan sont en secondes de récit depuis son début, et un
-// ralenti (ralentis) étire une tranche du récit à l'écran.
+// couleur. Le concept (Thomas, 16 octobre 2026 : « la personne rêve ! Elle
+// fait des choses qui normalement sont pas possibles, comme avec le dragon...
+// faut pas faire des trucs banals ») : le héros ou l'héroïne RÊVE, et dans
+// son rêve l'impossible arrive : des ailes qui se déploient, un combat de
+// karaté contre des bandits, un jardin rempli de chiens, un diamant taillé en
+// bague au bout d'une quête, le dragon, l'étoile décrochée, le nuage d'orage
+// shooté hors du ciel, la lune attrapée au lasso. Rien à voir avec la DA des
+// mascottes : c'est un format à part, avec son rig (rig.ts), ses décors
+// (decors.ts), ses créatures et ses effets. Le scénario s'écrit plan par
+// plan, comme un découpage technique : les temps d'un plan sont en secondes
+// de récit depuis son début, et un ralenti (ralentis) étire une tranche du
+// récit à l'écran.
 import type { Langue } from '../charte/libelles';
 import vocabulaire from './vocabulaire.json';
 
-// Les deux rôles : le héros (celui ou celle qui dit « me ») et son ou sa
-// partenaire, nommé « elle » dans les recettes depuis le premier reel, quel
-// que soit son genre. Le genre de chacun se dessine (genre) : une fille a
-// une queue de cheval et des cils, un garçon une mèche ; le héros porte le
-// bandana violet, la partenaire fille son nœud rose.
-export type QuiBaton = 'heros' | 'elle';
+// Les rôles : le héros (celui ou celle qui dit « me »), son ou sa partenaire,
+// nommé « elle » dans les recettes depuis le premier reel quel que soit son
+// genre, et jusqu'à quatre bandits (des figurants au même rig, masque noir et
+// bonnet, que le héros explose au karaté). Le genre de chacun se dessine
+// (genre) : une fille a une queue de cheval, des cils et son nœud rose, un
+// garçon une mèche et le bandana violet ; un bandit n'a ni l'un ni l'autre.
+export type Figurant = 'bandit1' | 'bandit2' | 'bandit3' | 'bandit4';
+export type QuiBaton = 'heros' | 'elle' | Figurant;
 export type Genre = 'fille' | 'garcon';
-// ce qu'on tient dans la main proche (le plateau et le parapluie ouvert
-// occupent les deux mains ou se dressent au-dessus de la tête ; la poêle est
-// « vide » le temps que la crêpe vole)
-export type Objet = 'bouquet' | 'couverture' | 'etoile' | 'parapluie-ferme' | 'parapluie' | 'plateau' | 'poele' | 'poele-vide' | 'aucun';
-// accroché à l'autre personnage : sur son dos (porté), ou à sa main proche
-// (renversé dans ses bras, rattrapé)
-export type Ancre = 'dos' | 'main';
+// ce qu'on tient dans la main proche : le bouquet, l'étoile décrochée, la
+// corde du lasso (roulée, tournoyante au-dessus de la tête, puis tendue vers
+// la lune : la scène dessine le bout qui part vers elle), la pioche de la
+// quête, le marteau qui forge la bague, le diamant taillé, la bague, un
+// chiot dans les bras, le téléphone qu'elle regarde au lieu de l'écouter
+export type Objet = 'bouquet' | 'etoile' | 'corde' | 'lasso' | 'corde-tendue' | 'pioche' | 'marteau' | 'diamant' | 'bague' | 'chiot' | 'telephone' | 'aucun';
+// accroché à l'autre personnage : sur son dos, à sa main proche (renversé
+// dans ses bras), ou à sa main arrière (la main qu'on tient en vol)
+export type Ancre = 'dos' | 'main' | 'bras';
 export type AttacheBaton = { a: QuiBaton; ancre: Ancre };
-// ce qu'on porte sur les épaules
-export type Vetement = 'aucun' | 'cape';
+// ce qu'on porte sur les épaules : les ailes de plumes, qui se déploient à
+// l'étape qui les écrit
+export type Vetement = 'aucun' | 'ailes';
 export type NomPose = keyof typeof vocabulaire.poses;
 export type NomExpression = keyof typeof vocabulaire.expressions;
 export type NomDecorBaton = keyof typeof vocabulaire.decors;
 export type NomEffetBaton = keyof typeof vocabulaire.effets;
-export type NomCreature = 'dragon' | 'nuage';
+export type NomCreature = 'dragon' | 'nuage' | 'lune' | 'chiens';
 // les poses d'une créature : le dragon vole, plonge, se perche, rugit et
 // explose ; le nuage d'orage dérive (vole), descend (plonge), reste
-// (perche), gronde avec ses éclairs (rugit) et crève en pluie (eclate)
+// (perche), gronde avec ses éclairs (rugit) et crève en pluie (eclate) ; la
+// lune brille dans le ciel (vole), se fait tirer (plonge), se pose (perche) ;
+// la meute de chiens attend (perche), saute partout (vole), aboie (rugit)
 export type NomPoseDragon = 'vole' | 'plonge' | 'perche' | 'rugit' | 'eclate';
 export type Vue = 'trois-quarts' | 'face';
 export type Arme = 'dos' | 'main' | 'aucune';
@@ -55,9 +65,9 @@ export type EtapeBaton = {
   x?: number;
   // hauteur au-dessus du sol, en pixels (0 : les pieds au sol)
   haut?: number;
-  // un nouveau sol (la plateforme de la tour) à partir de cette étape
+  // un nouveau sol (la plateforme de la tour, le dessus de la lune) à partir de cette étape
   sol?: number;
-  // rotation de tout le corps autour des hanches, en degrés (une roulade)
+  // rotation de tout le corps autour des hanches, en degrés (une roulade, le vol à l'horizontale)
   rot?: number;
   echelle?: number;
   sens?: Sens;
@@ -69,10 +79,12 @@ export type EtapeBaton = {
   vetement?: Vetement;
   // s'accrocher à l'autre (null : lâcher) ; la position suit alors la sienne
   attache?: AttacheBaton | null;
-  // couché sur son « sol » (un lit) : le corps tourné de 90°, la tête vers +x
+  // couché sur son « sol » : le corps tourné de 90°, la tête vers +x (un bandit K.-O., l'autre évanoui)
   couche?: boolean;
   // où va le regard : décalage des pupilles, de -1 à 1
   regard?: [number, number];
+  // la lune se reflète dans ses yeux (elle la voit arriver) ; false l'éteint
+  reflet?: boolean;
   fondu?: number;
   ease?: Ease;
 };
@@ -82,18 +94,18 @@ export type EtapeBaton = {
 export type ActionBaton =
   // course : jambes et bras qui balancent, rebond à chaque foulée ; « furtif »
   // est le pas de loup du ninja ; bras : false garde les bras de la pose (on
-  // porte quelqu'un, un plateau)
+  // tient la main de l'autre, un chiot)
   | { type: 'court'; de: number; a: number; cadence?: number; allure?: 'marche' | 'course' | 'sprint' | 'furtif'; bras?: boolean }
   // saut : arc de hauteur « haut » (px), pose d'envol et réception
   | { type: 'saute'; de: number; a: number; haut?: number; pose?: NomPose }
   // passe-muraille : les mains se plantent sur l'obstacle, les jambes passent sur le côté
   | { type: 'vaulte'; de: number; a: number; haut?: number }
-  // roulade : corps groupé, un tour complet
+  // roulade : corps groupé, un tour complet (en vol : un looping)
   | { type: 'roule'; de: number; a: number }
   // glissade : freinage, buste en arrière, poussière
   | { type: 'glisse'; de: number; a: number }
-  // le grand bond : corps aligné sur la trajectoire, de la position courante au point visé
-  | { type: 'bond'; de: number; a: number; versX: number; versHaut: number; arc?: number }
+  // le grand bond : corps aligné sur la trajectoire, de la position courante au point visé ; pose : celle du vol (bond, l'épée devant, par défaut)
+  | { type: 'bond'; de: number; a: number; versX: number; versHaut: number; arc?: number; pose?: NomPose }
   // images rémanentes derrière le personnage
   | { type: 'trainee'; de: number; a: number; nombre?: number; ecart?: number }
   // la lame laisse une traînée bleue (un grand arc quand on la tire)
@@ -110,7 +122,11 @@ export type ActionBaton =
   // les jambes gigotent (portée par le dragon)
   | { type: 'gigote'; de: number; a: number }
   // la force du vent sur le bandana et les cheveux (0 calme, 2 tempête), interpolée
-  | { type: 'vent'; de: number; a: number; force: number };
+  | { type: 'vent'; de: number; a: number; force: number }
+  // le vol : le corps ondule doucement de haut en bas (amplitude en px), les ailes battent
+  | { type: 'plane'; de: number; a: number; amplitude?: number }
+  // non de la tête : la tête tourne deux fois de gauche à droite
+  | { type: 'secoue'; de: number; a: number };
 
 export type PersoBaton = {
   qui: QuiBaton;
@@ -144,6 +160,9 @@ export type CreatureBaton = {
   echelle?: number;
   sens?: Sens;
   pose?: NomPoseDragon;
+  // la meute : combien de chiens (8 par défaut), sur quelle largeur (720 px)
+  nombre?: number;
+  largeur?: number;
   // le personnage qu'il emporte, et l'instant où il le saisit
   porte?: QuiBaton;
   porteDe?: number;
@@ -151,9 +170,9 @@ export type CreatureBaton = {
 };
 
 // Un obstacle du travelling : « a » est l'instant où il passe sous le héros.
-// Dans un décor fixe, « x » le pose à cette abscisse (un rocher ou un banc où
-// l'on grimpe).
-export type ObstacleBaton = { type: 'tronc' | 'trou' | 'rocher' | 'banc'; a: number; largeur?: number; x?: number };
+// Dans un décor fixe, « x » le pose à cette abscisse (un rocher où l'on
+// grimpe). Les piques sont celles du donjon.
+export type ObstacleBaton = { type: 'tronc' | 'trou' | 'rocher' | 'banc' | 'pique'; a: number; largeur?: number; x?: number };
 
 export type EffetPlanBaton = {
   effet: NomEffetBaton;
@@ -166,10 +185,17 @@ export type EffetPlanBaton = {
   intensite?: number;
   // éclair : où il frappe (x, y est son départ, la pointe tombe de « hauteur » px)
   hauteur?: number;
-  // ombre qui passe : d'où à où (abscisses), à quelle hauteur et quelle largeur
+  // ombre qui passe, vol d'oiseaux : d'où à où (abscisses), à quelle hauteur et quelle largeur ;
+  // le lasso qui vole : de (x, y) à (versX, versY)
   deX?: number;
   versX?: number;
+  versY?: number;
   largeur?: number;
+  // la bulle de pensée : ce qu'on y dessine
+  icone?: 'chien' | 'bague' | 'coeur';
+  // la bulle de dialogue (effet dit) : qui parle, et le texte (40 signes au plus)
+  qui?: QuiBaton;
+  texte?: string;
 };
 
 export type CleCameraBaton = { a: number; zoom?: number; x?: number; y?: number; cible?: QuiBaton | NomCreature; point?: 'tete' | 'corps' | 'pieds'; ease?: Ease };
@@ -183,6 +209,8 @@ export type PlanBaton = {
   decor: NomDecorBaton;
   // la nuit : une lune et des étoiles à la place du soleil et des nuages
   nuit?: boolean;
+  // le décor ne dessine ni lune ni soleil : une créature « lune » joue l'astre
+  sansAstre?: boolean;
   // travelling : vitesse du défilement du décor, en pixels par seconde
   defile?: number;
   obstacles?: ObstacleBaton[];

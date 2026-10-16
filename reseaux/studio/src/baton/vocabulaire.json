@@ -1,5 +1,5 @@
 {
-  "note": "Vocabulaire du format bonhomme bâton (gabarit baton). Les noms admis dans une recette ; le contrôle des automates (lib/baton.mjs) et le studio lisent le même fichier. Les angles des poses sont dans rig.ts ; les séquences d'un brief et leurs paramètres sont dans realisateur.mjs.",
+  "note": "Vocabulaire du format bonhomme bâton (gabarit baton). Les noms admis dans une recette ; le contrôle des automates (lib/baton.mjs) et le studio lisent le même fichier. Les angles des poses sont dans rig.ts ; les séquences d'un brief et leurs paramètres sont dans realisateur.mjs. Depuis le 16 octobre 2026, le format est celui du rêve (Thomas : « la personne rêve ! Elle fait des choses qui normalement sont pas possibles ») : huit trames, les ailes, les bandits, les chiens, le diamant, le dragon, l'étoile, le nuage, la lune.",
   "poses": {
     "debout": "Debout, bras le long du corps, jambes légèrement écartées",
     "parle": "Debout, la main proche levée à hauteur de la poitrine (gesticule avec l'action parle)",
@@ -30,33 +30,45 @@
     "ancre": "La garde basse, le pied arrière droit reculé et ancré, la pointe enfoncée",
     "ancre-tendu": "La même, le talon arrière qui se lève (la tension avant le bond)",
     "abattu": "Abattu : la tête tombe, les épaules aussi, les bras pendent",
-    "frissonne": "Frissonne : les bras croisés sur la poitrine, les épaules rentrées, les genoux serrés (avec l'action tremble)",
     "montre": "Montre : le bras proche tendu vers le ciel devant soi, la tête levée",
     "calin": "Câlin : les deux bras en avant, autour de l'autre (chacun face à l'autre, à 70 px)",
-    "enveloppe": "Enveloppe : les deux bras levés en avant, une couverture ouverte entre les mains",
     "admire": "Admire : les mains jointes devant soi, la tête penchée sur ce qu'on tient",
     "accroupi": "Accroupi : prêt à bondir, les jambes pliées, les bras en arrière (sans épée)",
-    "baille": "Bâille : la main proche devant la bouche, la tête en arrière (avec l'expression baille)",
     "abrite": "S'abrite : les deux mains sur la tête (sous la pluie), les épaules rentrées",
-    "tient-parapluie": "Tient le parapluie ouvert au-dessus de lui : le bras proche dressé (avec l'objet parapluie)",
     "furtif": "Le pas de loup du ninja : sur la pointe des pieds, un genou haut, les bras écartés (l'allure furtif de l'action court anime)",
-    "porteur": "Porte l'autre sur son dos : penché en avant, les mains derrière les hanches sous ses jambes, les genoux pliés",
-    "portee-dos": "Portée sur le dos de l'autre : les bras autour de son cou, les genoux repliés autour de ses hanches (avec attache dos)",
-    "invite": "Invite à danser : une révérence, la main proche tendue paume ouverte",
-    "danse-1": "Premier temps de danse : la main proche levée qui tient celle de l'autre, le poids sur la jambe avant",
-    "danse-2": "Second temps de danse : le poids sur l'autre jambe",
-    "tournoie": "Tournoie : les bras en l'air, un pied levé (le sens change deux fois pour un tour)",
-    "penche": "Le pas renversé : une fente, le bras proche à l'horizontale qui tient le dos de l'autre, l'autre bras levé",
-    "penchee": "Renversée dans les bras de l'autre : le buste en arrière, un bras à son cou, l'autre tendu, une jambe levée (avec attache main)",
-    "rattrape": "Rattrape : un genou au sol, le buste en avant, les deux bras tendus bas devant",
-    "rattrapee": "Rattrapée : couchée en arrière dans ses bras, un bras à son cou (avec attache main)",
     "tombe": "Tombe : le buste part en arrière, les bras battent l'air, une jambe lâche",
-    "equilibre": "En équilibre : les bras à l'horizontale, un pied devant",
-    "dort": "Dort : allongée (couche : true sur un lit), les bras le long du corps, les genoux un peu pliés",
-    "assis-canape": "Assise au bord du lit ou sur le canapé : les cuisses à l'horizontale, les tibias qui pendent",
-    "cuisine": "Cuisine : le bras proche tendu devant sur la poêle, la tête penchée dessus",
-    "porte-plateau": "Porte le plateau : les deux mains devant, à la même hauteur",
-    "bisou": "Bisou : les deux mains sur les épaules de l'autre, le front penché vers le sien"
+    "assis-canape": "Assise au bord du canapé : les cuisses à l'horizontale, les tibias qui pendent (sol : l'assise du canapé)",
+    "bisou": "Bisou : les deux mains sur les épaules de l'autre, le front penché vers le sien",
+    "deploie": "Les ailes se déploient : les bras en croix, la poitrine ouverte, la tête en arrière",
+    "plane": "Plane : debout dans les airs, les bras un peu ouverts, les jambes qui pendent (avec le vêtement ailes et l'action plane)",
+    "vole": "Vole : le corps à l'horizontale (rot 80 dans le plan), les deux bras tendus devant, les jambes qui traînent",
+    "vole-tient": "Vole en tenant l'autre : le bras proche devant, le bras arrière tendu vers la main de l'autre (son attache bras)",
+    "volee": "Volée : emportée par la main, les bras tendus vers lui, le corps qui flotte derrière (avec attache bras)",
+    "garde-karate": "La garde de karaté : les poings levés, les genoux fléchis",
+    "coup-poing": "Coup de poing : une fente, le bras proche tendu devant",
+    "coup-pied": "Coup de pied : la jambe proche tendue à hauteur de tête, le buste en arrière",
+    "coup-pied-retourne": "Coup de pied retourné : le corps renversé, la jambe fouettée au-dessus de la tête (rot pour la vrille)",
+    "epoussette": "Époussette : les deux mains l'une contre l'autre à la poitrine, c'est fait",
+    "menace": "Menace (un bandit) : penché en avant, les mains griffues devant",
+    "projete": "Projeté : le corps cambré qui part en arrière, bras et jambes devant",
+    "ko": "K.-O. : à plat (couche : true), un bras en l'air, les jambes de travers",
+    "supplie": "Supplie : les mains jointes sous le menton, la tête penchée (avec l'expression supplie)",
+    "bras-croises": "Bras croisés : droit, les bras croisés sur la poitrine (le non, avec l'action secoue)",
+    "tire-main": "Tire par la main : marche devant, le bras arrière tendu vers la main de l'autre (court avec bras : false)",
+    "suit": "Suit : marche derrière, le bras proche tendu devant vers la main qui le tire",
+    "evanoui": "Évanoui : raide comme une planche, les bras le long du corps (rot le couche en arrière)",
+    "agenouille": "Agenouillé : un genou au sol, penché sur quelqu'un, les bras vers lui",
+    "cajole": "Cajole : un chiot dans les bras (objet chiot), la tête penchée dessus",
+    "pioche-haut": "La pioche levée : les deux bras au-dessus de la tête, le buste cambré (objet pioche)",
+    "pioche-frappe": "La pioche abattue : plié en avant, les deux bras devant-bas",
+    "martele": "Martèle : à genoux, le bras proche levé qui frappe (objet marteau)",
+    "martele-frappe": "Le marteau abattu : le même, le bras proche descendu sur la pièce",
+    "genou-terre": "Genou à terre : la demande, un genou au sol, le bras proche tendu devant (objet bague)",
+    "emue": "Émue : les deux mains sur la bouche",
+    "lasso": "Le lasso : le bras proche dressé au-dessus de la tête, la boucle y tournoie (objet lasso)",
+    "lance": "Lance : la fente du lancer, le bras proche tendu devant-haut",
+    "telephone": "Au téléphone : les deux mains devant la poitrine, la tête penchée sur l'écran (objet telephone)",
+    "tire-corde": "Tire la corde : penché en arrière de tout son poids, les deux bras tendus devant, le pied arrière planté (objet corde-tendue)"
   },
   "expressions": {
     "neutre": "Deux points, bouche en petit trait",
@@ -78,9 +90,15 @@
     "vengeur": "Sourcils en biais, yeux plissés, sourire en coin : l'esprit de vengeance",
     "froid": "Froid : yeux plissés, sourcils tristes, la bouche qui claque des dents",
     "tendre": "Tendre : sourcils doux, sourire, les joues roses, les yeux ouverts",
-    "baille": "Bâille : les yeux fermés, la bouche grande ouverte en o",
-    "dort": "Dort : les yeux fermés, une bouche minuscule",
-    "fatigue": "La fatigue : les yeux mi-clos, les sourcils doux, la bouche minuscule"
+    "supplie": "Les yeux qui brillent : grands yeux ronds à reflet, sourcils doux, petite bouche (le chiot, la bague)",
+    "emerveille": "Émerveillé : les yeux qui brillent, les sourcils hauts, la bouche en petit o",
+    "malicieux": "Malicieux : un sourcil relevé, les yeux plissés, le sourire en coin (l'idée derrière la tête)",
+    "mechant": "Méchant (un bandit) : sourcils en biais, yeux plissés, la bouche en zigzag",
+    "ko": "K.-O. : des croix à la place des yeux, la bouche en o",
+    "tourne-oeil": "Tourne de l'œil : des spirales dans les yeux, la bouche qui tremble (le malaise)",
+    "sceptique": "Sceptique : un sourcil levé, la bouche plate (elle ne le croit pas)",
+    "colere": "La colère : sourcils en biais, yeux plissés, la bouche à l'envers, les joues rouges",
+    "horreur": "L'horreur : les yeux écarquillés, les sourcils en accent, la bouche grande ouverte"
   },
   "actions": [
     "court",
@@ -97,7 +115,9 @@
     "souffle",
     "parle",
     "gigote",
-    "vent"
+    "vent",
+    "plane",
+    "secoue"
   ],
   "vues": [
     "trois-quarts",
@@ -108,9 +128,17 @@
     "main",
     "aucune"
   ],
+  "personnages": [
+    "heros",
+    "elle",
+    "bandit1",
+    "bandit2",
+    "bandit3",
+    "bandit4"
+  ],
   "decors": {
     "montagnes": {
-      "description": "Un trait de sol, trois pics en deux plans de profondeur, soleil, nuages, touffes d'herbe",
+      "description": "Un trait de sol, trois pics en deux plans de profondeur, soleil ou lune, nuages, touffes d'herbe",
       "sol": 1300,
       "ambiance": "vent-montagne"
     },
@@ -146,12 +174,12 @@
       "ambiance": "oiseaux"
     },
     "maison": {
-      "description": "Chez eux : une maison à droite (toit, porte à x 806, fenêtre, cheminée), un chemin, un arbre à gauche ; le héros y court chercher quelque chose",
+      "description": "Chez eux : une maison à droite (toit, porte à x 806, fenêtre, cheminée), un chemin, un arbre à gauche ; le lieu des retrouvailles au retour d'une quête",
       "sol": 1300,
       "ambiance": "oiseaux"
     },
     "ville": {
-      "description": "Travelling en ville : immeubles au loin, trottoir, lampadaires ; obstacle banc",
+      "description": "Travelling en ville, ou fixe la nuit (deux lampadaires) : immeubles au loin, trottoir ; obstacle banc ; le décor de l'attaque des bandits",
       "sol": 1300,
       "ambiance": "circulation"
     },
@@ -160,25 +188,42 @@
       "sol": 1300,
       "ambiance": "vagues"
     },
-    "chambre": {
-      "description": "La chambre : une fenêtre à gauche (la lune la nuit), un lit à droite (tête de lit à droite, oreiller ; on y dort la tête vers la droite, le corps sous la couette), une table de nuit et sa lampe ; décor d'ouverture",
-      "sol": 1300,
-      "ambiance": "grillons"
-    },
-    "cuisine": {
-      "description": "La cuisine : la fenêtre, une étagère à bocaux, le plan de travail et la cuisinière à droite ; le lieu d'arrivée du petit-déjeuner ninja",
-      "sol": 1300,
-      "ambiance": "oiseaux"
-    },
     "salon": {
       "description": "Le salon : une fenêtre, un cadre au cœur, un lampadaire à gauche, le canapé à droite (assise à 1216) ; décor d'ouverture",
       "sol": 1300,
       "ambiance": "horloge"
+    },
+    "ciel": {
+      "description": "Travelling dans le ciel où l'on vole : des nuages sur trois plans, des vols d'oiseaux, la ligne des montagnes tout en bas (sol 1900 : personne n'y marche, les personnages portent leur propre sol)",
+      "sol": 1900,
+      "ambiance": "vent"
+    },
+    "nuages": {
+      "description": "Le tapis de nuages (sol 1300) : travelling où l'on court de nuage en nuage (obstacle trou : le vide entre deux), ou fixe, le nuage où l'on se pose devant un grand soleil ; les sommets des montagnes dessous",
+      "sol": 1300,
+      "ambiance": "vent-montagne"
+    },
+    "donjon": {
+      "description": "Travelling dans le donjon : mur de pierre, torches qui dansent, chaînes, piliers, sol dallé ; obstacle pique",
+      "sol": 1300,
+      "ambiance": "feu"
+    },
+    "grotte": {
+      "description": "La grotte : la voûte et ses stalactites sous le titre, les parois, des cristaux bleu pâle, le socle de pierre à x 760 où le diamant géant repose (effet diamant-geant, pointe à y 1160)",
+      "sol": 1300,
+      "ambiance": "vent"
+    },
+    "jardin": {
+      "description": "Le jardin de la maison : la maison à gauche (fenêtres allumées la nuit), la barrière et la niche au fond, un arbre à droite, la pelouse devant où la meute se déchaîne",
+      "sol": 1300,
+      "ambiance": "oiseaux"
     }
   },
   "creatures": [
     "dragon",
-    "nuage"
+    "nuage",
+    "lune",
+    "chiens"
   ],
   "effets": {
     "poussiere": "Nuage de poussière au point (x, y), à l'instant de",
@@ -194,12 +239,19 @@
     "eclair": "Un éclair qui frappe de (x, y) vers le bas sur « hauteur » px (700 par défaut), jaune, avec un flash à moitié",
     "pluie": "De la pluie qui tombe dans une bande de « largeur » px autour de x (1300 par défaut), depuis « hauteur » px du haut (140 par défaut, 760 sous le nuage), de « de » à « a »",
     "etoile-ciel": "Une étoile qui scintille dans le ciel en (x, y), jusqu'à « a » (quand on la décroche)",
-    "zzz": "Trois z du sommeil qui montent depuis (x, y), de de à a",
-    "notes": "Des notes de musique roses et violettes qui montent depuis (x, y), de de à a",
-    "fumee": "De la vapeur qui monte de (x, y), de de à a",
-    "crepe": "La crêpe qui saute de la poêle en (x, y) et y retombe en 0,7 s, à l'instant de",
-    "gouttes": "Des gouttes qui tombent de (x, y) sur « largeur » px (le héros trempé), de de à a",
-    "lumiere": "Une lumière qui s'allume dans une fenêtre centrée en (x, y) (largeur, hauteur), de de à a"
+    "plumes": "Des plumes qui tombent autour de (x, y), de de à a (les ailes qui se déploient)",
+    "bulle": "Une bulle de pensée au-dessus de (x, y) avec une icône (icone : chien, bague ou coeur), de de à a",
+    "impact": "Un impact de bande dessinée en (x, y) à l'instant de (intensite : la taille)",
+    "etoiles-ko": "Trois étoiles qui tournent autour de (x, y), de de à a (la tête d'un bandit K.-O.)",
+    "diamant-geant": "Le diamant géant sur son socle, la pointe en (x, y), jusqu'à « a » (l'instant où il éclate)",
+    "eclats-diamant": "Les éclats du diamant brisé qui partent en étoile depuis (x, y), à l'instant de",
+    "diamant-flotte": "Le diamant parfait qui flotte et tourne en (x, y), de de à a (quand on l'attrape)",
+    "rayons": "Les rayons du soleil qui tournent depuis (x, y), de de à a",
+    "oiseaux": "Un vol de cinq oiseaux de deX à versX à la hauteur y, de de à a",
+    "spirale": "La spirale du vertige au-dessus de (x, y), de de à a",
+    "lasso-vole": "Le lasso qui vole de (x, y) à (versX, versY), de de à a",
+    "fumee": "De la fumée partout autour de (x, y) sur « largeur » px, de de à a",
+    "dit": "Une bulle de dialogue au-dessus de la tête de « qui » (heros ou elle), avec « texte » (40 signes au plus, en anglais, ou « ... »), de de à a ; dessinée à l'écran, jamais sur le titre"
   },
   "sons": [
     "pas",
@@ -269,7 +321,14 @@
     "sursaut",
     "coussin",
     "applaudit",
-    "reveil"
+    "reveil",
+    "trombone",
+    "tambour",
+    "bulle",
+    "oiseau",
+    "aboie",
+    "cristal",
+    "enclume"
   ],
   "ambiances": [
     "vent",
@@ -282,6 +341,7 @@
     "vagues",
     "rue-nuit",
     "horloge",
+    "feu",
     "aucune"
   ],
   "transitions": [
@@ -300,27 +360,32 @@
   ],
   "objets": [
     "bouquet",
-    "couverture",
     "etoile",
-    "parapluie-ferme",
-    "parapluie",
-    "plateau",
-    "poele",
-    "poele-vide",
+    "corde",
+    "lasso",
+    "corde-tendue",
+    "pioche",
+    "marteau",
+    "diamant",
+    "bague",
+    "chiot",
+    "telephone",
     "aucun"
   ],
   "vetements": [
     "aucun",
-    "cape"
+    "ailes"
   ],
   "obstacles": [
     "tronc",
     "trou",
     "rocher",
-    "banc"
+    "banc",
+    "pique"
   ],
   "attaches": [
     "dos",
-    "main"
+    "main",
+    "bras"
   ]
 }

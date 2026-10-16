@@ -36,7 +36,7 @@ export const L = { cou: 0.5, tete: 1, torse: 2.3, bras: 1.35, avantBras: 1.25, c
 export const TRAIT = 0.3;
 // Pixels par R selon le genre : un garçon fait 8,2 R, soit 330 px, une fille un peu moins.
 export const ECHELLE: Record<Genre, number> = { garcon: 40, fille: 37 };
-export const genreDe = (qui: QuiBaton, genre?: Genre): Genre => genre ?? (qui === 'heros' ? 'garcon' : 'fille');
+export const genreDe = (qui: QuiBaton, genre?: Genre): Genre => genre ?? (qui === 'elle' ? 'fille' : 'garcon');
 
 const rad = (d: number) => (d * Math.PI) / 180;
 // direction d'un membre : (sin, cos), 0 vers le bas, 90 devant
@@ -84,60 +84,85 @@ export const POSES: Record<NomPose, Pose> = {
   portee: pose({ torse: -8, tete: -6, epauleD: 165, coudeD: 5, epauleG: 160, coudeG: 10, hancheG: 15, genouG: 45, hancheD: -10, genouD: 40, piedG: -30, piedD: -30 }),
   joie: pose({ torse: -3, tete: -6, epauleD: 150, coudeD: 15, epauleG: 150, coudeG: 15 }),
   assis: pose({ torse: 5, tete: 2, epauleD: 30, coudeD: 40, epauleG: 30, coudeG: 40, hancheG: 85, genouG: 15, hancheD: 80, genouD: 15 }),
-  // frissonne : les bras croisés sur la poitrine, les épaules rentrées, les genoux serrés (l'action tremble fait le reste)
-  frissonne: pose({ torse: 9, tete: 7, epauleD: 58, coudeD: 112, epauleG: 62, coudeG: 106, hancheG: 5, genouG: 9, hancheD: -4, genouD: 9 }),
   // montre : le bras proche tendu vers le ciel devant soi, la tête levée
   montre: pose({ torse: -5, tete: -24, epauleD: 142, coudeD: 4, epauleG: 6, coudeG: 10 }),
   // câlin : les deux bras en avant, autour de l'autre
   calin: pose({ torse: 9, tete: 7, epauleD: 68, coudeD: 62, epauleG: 76, coudeG: 54, hancheG: 4, genouG: 3, hancheD: -3, genouD: 3 }),
-  // enveloppe : les deux bras levés en avant, une couverture ouverte entre les mains
-  enveloppe: pose({ torse: 12, tete: 2, epauleD: 112, coudeD: 18, epauleG: 98, coudeG: 24, hancheG: 10, genouG: 6, hancheD: -8, genouD: 6 }),
   // accroupi : prêt à bondir, les jambes pliées, les bras en arrière
   accroupi: pose({ torse: 28, tete: -18, epauleD: -48, coudeD: 10, epauleG: -42, coudeG: 12, hancheG: 78, genouG: 96, hancheD: -38, genouD: 34, piedD: 14 }),
   // admire : les mains jointes devant, la tête penchée sur ce qu'on tient
   admire: pose({ torse: 6, tete: 16, epauleD: 42, coudeD: 98, epauleG: 46, coudeG: 94, hancheG: 2, genouG: 2, hancheD: -2, genouD: 2 }),
-  // ── les poses du quotidien (16 octobre 2026, Thomas : « il faut varier les histoires ») ──
-  // bâille : la main proche devant la bouche, la tête en arrière
-  baille: pose({ torse: -6, tete: -12, epauleD: 120, coudeD: 120, epauleG: 10, coudeG: 8 }),
-  // s'abrite : les deux mains sur la tête (la pluie), les épaules rentrées
+  // s'abrite : les deux mains sur la tête (la pluie du nuage), les épaules rentrées
   abrite: pose({ torse: 6, tete: 10, epauleD: 155, coudeD: 70, epauleG: 150, coudeG: 72, hancheG: 4, genouG: 8, hancheD: -3, genouD: 8 }),
-  // tient le parapluie ouvert au-dessus de lui : le bras proche dressé
-  'tient-parapluie': pose({ torse: 2, tete: -4, epauleD: 150, coudeD: 15, epauleG: 6, coudeG: 10 }),
   // le pas de loup : sur la pointe des pieds, un genou haut, les bras écartés (l'allure furtif anime)
   furtif: pose({ torse: 14, tete: -6, epauleD: 70, coudeD: 60, epauleG: -50, coudeG: 20, hancheG: 60, genouG: 90, hancheD: -10, genouD: 5, piedG: -40, piedD: -30 }),
-  // porte l'autre sur son dos : penché en avant, les mains derrière les hanches sous ses jambes, les genoux pliés
-  porteur: pose({ torse: 24, tete: -14, epauleD: -40, coudeD: -10, epauleG: -36, coudeG: -12, hancheG: 12, genouG: 14, hancheD: -8, genouD: 14 }),
-  // portée sur le dos de l'autre : les bras autour de son cou, les genoux repliés autour de ses hanches
-  'portee-dos': pose({ torse: 12, tete: 4, epauleD: 95, coudeD: 50, epauleG: 100, coudeG: 45, hancheG: 72, genouG: 100, hancheD: 62, genouD: 95, piedG: -20, piedD: -20 }),
-  // invite à danser : une révérence, la main proche tendue paume ouverte
-  invite: pose({ torse: 22, tete: -14, epauleD: 70, coudeD: 15, epauleG: -30, coudeG: 10, hancheG: 6, genouG: 4, hancheD: -8, genouD: 4 }),
-  // deux temps de danse : la main proche levée qui tient celle de l'autre, le poids d'une jambe sur l'autre
-  'danse-1': pose({ torse: 4, tete: -3, epauleD: 120, coudeD: 25, epauleG: 40, coudeG: 70, hancheG: 18, genouG: 14, hancheD: -10, genouD: 6 }),
-  'danse-2': pose({ torse: -4, tete: 3, epauleD: 115, coudeD: 30, epauleG: 45, coudeG: 65, hancheG: -8, genouG: 6, hancheD: 20, genouD: 14 }),
-  // tournoie : les bras en l'air, un pied levé
-  tournoie: pose({ torse: -3, tete: -8, epauleD: 160, coudeD: 10, epauleG: 150, coudeG: 15, hancheG: 10, genouG: 30, hancheD: -4, genouD: 2, piedG: -30 }),
-  // penché pour le pas de danse renversé : une fente, le bras proche à l'horizontale qui tient le dos de l'autre, l'autre bras levé
-  penche: pose({ torse: 30, tete: -16, epauleD: 88, coudeD: 0, epauleG: 150, coudeG: 10, hancheG: 55, genouG: 50, hancheD: -35, genouD: 8 }),
-  // renversée dans les bras de l'autre : le buste en arrière, un bras autour de son cou, l'autre tendu, une jambe levée
-  penchee: pose({ torse: -50, tete: -12, epauleD: 125, coudeD: 35, epauleG: -150, coudeG: -10, hancheG: 40, genouG: 8, hancheD: -20, genouD: 55, piedG: -20, piedD: -40 }),
-  // rattrape : un genou au sol, le buste en avant, les deux bras tendus bas devant
-  rattrape: pose({ torse: 28, tete: -18, epauleD: 68, coudeD: 12, epauleG: 60, coudeG: 18, hancheG: 90, genouG: 120, hancheD: -30, genouD: 60 }),
-  // rattrapée : couchée en arrière dans ses bras, un bras à son cou, l'autre pendu, les jambes tendues
-  rattrapee: pose({ torse: -62, tete: -10, epauleD: 140, coudeD: 40, epauleG: -165, coudeG: 0, hancheG: 30, genouG: 15, hancheD: 5, genouD: 10, piedG: -30, piedD: -30 }),
   // tombe : le buste part en arrière, les bras battent l'air, une jambe lâche
   tombe: pose({ torse: -28, tete: -12, epauleD: 165, coudeD: 15, epauleG: 150, coudeG: 20, hancheG: 35, genouG: 20, hancheD: -5, genouD: 50, piedG: -20, piedD: -30 }),
-  // équilibre : les bras à l'horizontale, un pied devant
-  equilibre: pose({ torse: 4, tete: 2, epauleD: 95, coudeD: -5, epauleG: -95, coudeG: 5, hancheG: 25, genouG: 8, hancheD: -6, genouD: 4, piedG: 10 }),
-  // dort : allongée (le plan la couche), les bras le long du corps, les genoux un peu pliés
-  dort: pose({ torse: 3, tete: 6, epauleD: 15, coudeD: 60, epauleG: 10, coudeG: 20, hancheG: 12, genouG: 20, hancheD: 4, genouD: 15 }),
-  // assise au bord du lit ou sur le canapé : les cuisses à l'horizontale, les tibias qui pendent
+  // assise au bord du canapé : les cuisses à l'horizontale, les tibias qui pendent
   'assis-canape': pose({ torse: -4, tete: 4, epauleD: 25, coudeD: 60, epauleG: 25, coudeG: 55, hancheG: 82, genouG: 85, hancheD: 78, genouD: 82 }),
-  // cuisine : le bras proche tendu devant sur la poêle, la tête penchée dessus
-  cuisine: pose({ torse: 10, tete: 14, epauleD: 75, coudeD: 25, epauleG: 20, coudeG: 80, hancheG: 6, genouG: 4, hancheD: -6, genouD: 4 }),
-  // porte le plateau : les deux mains devant, à la même hauteur
-  'porte-plateau': pose({ torse: 4, tete: 6, epauleD: 55, coudeD: 55, epauleG: 60, coudeG: 48, hancheG: 5, genouG: 4, hancheD: -5, genouD: 4 }),
   // bisou : les deux mains sur les épaules de l'autre, le front penché vers le sien
   bisou: pose({ torse: 10, tete: 16, epauleD: 60, coudeD: 55, epauleG: 65, coudeG: 50, hancheG: 4, genouG: 3, hancheD: -3, genouD: 3 }),
+  // ── le rêve (16 octobre 2026, Thomas : « la personne rêve ! Elle fait des choses qui normalement sont pas possibles ») ──
+  // les ailes : les bras en croix, la poitrine ouverte, la tête en arrière (les ailes se déploient dans le dos)
+  deploie: pose({ torse: -8, tete: -14, epauleD: 120, coudeD: -5, epauleG: -110, coudeG: 5, hancheG: 10, genouG: 4, hancheD: -10, genouD: 4 }),
+  // plane : debout dans les airs, les bras un peu ouverts, les jambes qui pendent
+  plane: pose({ torse: 2, tete: -6, epauleD: 40, coudeD: 20, epauleG: 38, coudeG: 22, hancheG: 10, genouG: 25, hancheD: -2, genouD: 20, piedG: -30, piedD: -30 }),
+  // vole : le corps à l'horizontale (rot du plan), les deux bras tendus devant, les jambes qui traînent, pieds pointés
+  vole: pose({ torse: 0, tete: -8, epauleD: 172, coudeD: 4, epauleG: 165, coudeG: 6, hancheG: 4, genouG: 2, hancheD: -4, genouD: 2, piedG: -45, piedD: -45 }),
+  // vole en tenant l'autre : le bras proche devant, le bras arrière tendu en arrière vers sa main (attache bras)
+  'vole-tient': pose({ torse: 0, tete: -10, epauleD: 172, coudeD: 4, epauleG: -28, coudeG: 5, hancheG: 4, genouG: 2, hancheD: -4, genouD: 2, piedG: -45, piedD: -45 }),
+  // volée : emportée par la main, les bras tendus vers lui, le corps qui flotte derrière
+  volee: pose({ torse: -4, tete: -10, epauleD: 168, coudeD: 6, epauleG: 158, coudeG: 10, hancheG: 8, genouG: 12, hancheD: -6, genouD: 10, piedG: -40, piedD: -40 }),
+  // la garde de karaté : les poings levés, les genoux fléchis
+  'garde-karate': pose({ torse: 6, tete: 0, epauleD: 55, coudeD: 110, epauleG: 40, coudeG: 120, hancheG: 22, genouG: 20, hancheD: -18, genouD: 14 }),
+  // le coup de poing : une fente, le bras proche tendu devant, l'autre poing à la poitrine
+  'coup-poing': pose({ torse: 14, tete: -4, epauleD: 92, coudeD: 2, epauleG: 30, coudeG: 125, hancheG: 40, genouG: 30, hancheD: -30, genouD: 10 }),
+  // le coup de pied : la jambe proche tendue à hauteur de tête, le buste en arrière, les bras qui équilibrent
+  'coup-pied': pose({ torse: -10, tete: 4, epauleD: -30, coudeD: 40, epauleG: 60, coudeG: 60, hancheG: 5, genouG: 6, hancheD: 105, genouD: 6, piedD: -30 }),
+  // le coup de pied retourné : le corps renversé en arrière, la jambe proche fouettée au-dessus de la tête (rot pour la vrille)
+  'coup-pied-retourne': pose({ torse: -28, tete: 12, epauleD: 150, coudeD: 20, epauleG: -60, coudeG: 30, hancheG: 30, genouG: 70, hancheD: 125, genouD: 4, piedD: -40 }),
+  // époussette : les deux mains l'une contre l'autre à la poitrine (on se frotte les mains, c'est fait)
+  epoussette: pose({ torse: 3, tete: 3, epauleD: 70, coudeD: 95, epauleG: 72, coudeG: 92 }),
+  // menace (un bandit) : penché en avant, les mains griffues devant, les genoux pliés
+  menace: pose({ torse: 18, tete: -6, epauleD: 80, coudeD: 60, epauleG: 70, coudeG: 70, hancheG: 20, genouG: 24, hancheD: -14, genouD: 18 }),
+  // projeté : le corps cambré qui part en arrière, bras et jambes devant
+  projete: pose({ torse: -30, tete: -15, epauleD: 140, coudeD: 30, epauleG: 120, coudeG: 40, hancheG: 70, genouG: 20, hancheD: 40, genouD: 30, piedG: -30, piedD: -30 }),
+  // K.-O. : à plat (couche : true), un bras en l'air, l'autre en arrière, les jambes de travers
+  ko: pose({ torse: 0, tete: 8, epauleD: 60, coudeD: 10, epauleG: -40, coudeG: 10, hancheG: 25, genouG: 10, hancheD: -10, genouD: 15 }),
+  // supplie : les mains jointes sous le menton, la tête penchée (avec l'expression supplie)
+  supplie: pose({ torse: -2, tete: 10, epauleD: 48, coudeD: 128, epauleG: 52, coudeG: 124, hancheG: 3, genouG: 3, hancheD: -3, genouD: 3 }),
+  // bras croisés : droit, les bras croisés sur la poitrine (le non)
+  'bras-croises': pose({ torse: -4, tete: -2, epauleD: 40, coudeD: 118, epauleG: 44, coudeG: 112, hancheG: 8, genouG: 3, hancheD: -8, genouD: 3 }),
+  // tire par la main : marche devant, le bras arrière tendu en arrière vers la main de l'autre (avec court, bras : false)
+  'tire-main': pose({ torse: 8, tete: -4, epauleD: 30, coudeD: 20, epauleG: -55, coudeG: -10, hancheG: 15, genouG: 10, hancheD: -12, genouD: 8 }),
+  // suit : marche derrière, le bras proche tendu devant vers la main qui le tire
+  suit: pose({ torse: 4, tete: 2, epauleD: 60, coudeD: 5, epauleG: 5, coudeG: 10, hancheG: 10, genouG: 8, hancheD: -8, genouD: 8 }),
+  // évanoui : raide comme une planche, les bras le long du corps (rot le couche en arrière)
+  evanoui: pose({ torse: -6, tete: -8, epauleD: -5, coudeD: 2, epauleG: 5, coudeG: 2, hancheG: 2, genouG: 0, hancheD: -2, genouD: 0 }),
+  // agenouillé : un genou au sol, penché sur quelqu'un, les bras vers lui
+  agenouille: pose({ torse: 30, tete: 10, epauleD: 70, coudeD: 40, epauleG: 60, coudeG: 50, hancheG: 90, genouG: 125, hancheD: -20, genouD: 100 }),
+  // cajole : un chiot dans les bras, les deux mains devant la poitrine, la tête penchée dessus
+  cajole: pose({ torse: 4, tete: 14, epauleD: 50, coudeD: 100, epauleG: 56, coudeG: 92, hancheG: 4, genouG: 3, hancheD: -4, genouD: 3 }),
+  // la pioche levée : les deux bras au-dessus de la tête, le buste cambré
+  'pioche-haut': pose({ torse: -12, tete: -10, epauleD: 170, coudeD: 20, epauleG: 165, coudeG: 25, hancheG: 20, genouG: 14, hancheD: -16, genouD: 10 }),
+  // la pioche abattue : plié en avant, les deux bras devant-bas
+  'pioche-frappe': pose({ torse: 38, tete: -10, epauleD: 70, coudeD: 10, epauleG: 65, coudeG: 15, hancheG: 60, genouG: 60, hancheD: -30, genouD: 20 }),
+  // martèle : à genoux, le bras proche levé qui frappe, l'autre qui tient la pièce
+  martele: pose({ torse: 24, tete: 10, epauleD: 120, coudeD: 70, epauleG: 60, coudeG: 60, hancheG: 70, genouG: 110, hancheD: -20, genouD: 90 }),
+  // le marteau abattu : le même, le bras proche descendu sur la pièce
+  'martele-frappe': pose({ torse: 28, tete: 12, epauleD: 62, coudeD: 12, epauleG: 60, coudeG: 60, hancheG: 70, genouG: 110, hancheD: -20, genouD: 90 }),
+  // genou à terre : la demande, un genou au sol, le bras proche tendu devant (la bague au bout)
+  'genou-terre': pose({ torse: 10, tete: -8, epauleD: 85, coudeD: 10, epauleG: -10, coudeG: 15, hancheG: 85, genouG: 120, hancheD: -25, genouD: 95 }),
+  // émue : les deux mains sur la bouche
+  emue: pose({ torse: -3, tete: 2, epauleD: 70, coudeD: 135, epauleG: 74, coudeG: 130, hancheG: 2, genouG: 2, hancheD: -2, genouD: 2 }),
+  // le lasso : le bras proche dressé au-dessus de la tête (l'objet lasso y tournoie), l'autre en arrière
+  lasso: pose({ torse: 2, tete: -8, epauleD: 170, coudeD: 15, epauleG: -20, coudeG: 15, hancheG: 12, genouG: 6, hancheD: -12, genouD: 6 }),
+  // lance : la fente du lancer, le bras proche tendu devant-haut
+  lance: pose({ torse: 20, tete: -10, epauleD: 130, coudeD: 0, epauleG: -40, coudeG: 20, hancheG: 45, genouG: 30, hancheD: -35, genouD: 14 }),
+  // au téléphone : les deux mains devant la poitrine, la tête penchée sur l'écran (objet telephone)
+  telephone: pose({ torse: 3, tete: 22, epauleD: 35, coudeD: 110, epauleG: 40, coudeG: 100, hancheG: 4, genouG: 3, hancheD: -4, genouD: 3 }),
+  // tire la corde : penché en arrière de tout son poids, les deux bras tendus devant, le pied arrière planté
+  'tire-corde': pose({ torse: -30, tete: 0, epauleD: 95, coudeD: 15, epauleG: 90, coudeG: 20, hancheG: 70, genouG: 60, hancheD: -45, genouD: 30, piedD: 25 }),
 };
 
 export const CLES = Object.keys(base) as (keyof Pose)[];
@@ -255,10 +280,10 @@ export const ancrage = (p: Pose): number => {
 
 // ── Visage ─────────────────────────────────────────────────────────────
 
-type Yeux = 'point' | 'rond' | 'grand' | 'trait' | 'plisse' | 'ferme' | 'heureux' | 'bleu' | 'clin';
+type Yeux = 'point' | 'rond' | 'grand' | 'trait' | 'plisse' | 'ferme' | 'heureux' | 'bleu' | 'clin' | 'croix' | 'brillant' | 'spirale';
 type Sourcils = 'hauts' | 'tres-hauts' | 'faches' | 'releve' | 'tristes' | 'peur' | 'doux';
-type Bouche = 'trait' | 'sourire' | 'o' | 'petit-o' | 'serre' | 'rire' | 'coin' | 'peur' | 'triste' | 'mini';
-type Visage = { yeux: Yeux; sourcils?: Sourcils; bouche: Bouche; joues?: boolean; etincelle?: boolean; larme?: boolean };
+type Bouche = 'trait' | 'sourire' | 'o' | 'petit-o' | 'serre' | 'rire' | 'coin' | 'peur' | 'triste' | 'mini' | 'grogne';
+type Visage = { yeux: Yeux; sourcils?: Sourcils; bouche: Bouche; joues?: boolean | 'rouge'; etincelle?: boolean; larme?: boolean };
 
 export const VISAGES: Record<NomExpression, Visage> = {
   neutre: { yeux: 'point', bouche: 'trait' },
@@ -284,12 +309,24 @@ export const VISAGES: Record<NomExpression, Visage> = {
   froid: { yeux: 'plisse', sourcils: 'tristes', bouche: 'peur' },
   // la tendresse : sourcils doux, sourire, les joues roses, les yeux ouverts
   tendre: { yeux: 'point', sourcils: 'doux', bouche: 'sourire', joues: true },
-  // bâille : les yeux fermés, la bouche grande ouverte en o
-  baille: { yeux: 'ferme', sourcils: 'hauts', bouche: 'o' },
-  // dort : les yeux fermés, une bouche minuscule
-  dort: { yeux: 'ferme', bouche: 'mini' },
-  // la fatigue : les yeux mi-clos (en traits), les sourcils doux, la bouche minuscule
-  fatigue: { yeux: 'trait', sourcils: 'doux', bouche: 'mini' },
+  // les yeux qui brillent (un chiot, une bague) : grands yeux ronds à reflet, sourcils doux, petite bouche
+  supplie: { yeux: 'brillant', sourcils: 'doux', bouche: 'mini' },
+  // émerveillé : les mêmes yeux, les sourcils hauts, la bouche en petit o
+  emerveille: { yeux: 'brillant', sourcils: 'hauts', bouche: 'petit-o' },
+  // malicieux : un sourcil relevé, les yeux plissés, le sourire en coin (l'idée derrière la tête)
+  malicieux: { yeux: 'plisse', sourcils: 'releve', bouche: 'coin' },
+  // méchant (un bandit) : sourcils en biais, yeux plissés, la bouche en zigzag
+  mechant: { yeux: 'plisse', sourcils: 'faches', bouche: 'grogne' },
+  // K.-O. : des croix à la place des yeux, la bouche en o
+  ko: { yeux: 'croix', bouche: 'o' },
+  // tourne de l'œil : des spirales dans les yeux, la bouche qui tremble (le malaise)
+  'tourne-oeil': { yeux: 'spirale', sourcils: 'hauts', bouche: 'peur' },
+  // sceptique : un sourcil levé, la bouche plate (elle ne le croit pas)
+  sceptique: { yeux: 'point', sourcils: 'releve', bouche: 'trait' },
+  // la colère : sourcils en biais, yeux plissés, la bouche à l'envers, les joues rouges
+  colere: { yeux: 'plisse', sourcils: 'faches', bouche: 'triste', joues: 'rouge' },
+  // l'horreur : les yeux écarquillés, les sourcils en accent, la bouche grande ouverte
+  horreur: { yeux: 'grand', sourcils: 'peur', bouche: 'o' },
 };
 
 export const COULEURS = {
@@ -302,7 +339,7 @@ export const COULEURS = {
   bleuClair: '#bfefff',
   rouge: '#e03e3e',
   vert: '#3f9b4a',
-  // la couverture (la chaleur) et l'étoile
+  // les flammes des torches du donjon ; le soleil, l'étoile, la lune, l'or de la bague
   orange: '#f0a35e',
   jaune: '#f6c94c',
 };
@@ -339,6 +376,12 @@ export type Apparence = {
   depuis: number;
   // l'étincelle du sourire charmeur (0 à 1)
   etincelle: number;
+  // le vol (0 au sol, 1 en plein vol) : les ailes battent d'autant
+  vol: number;
+  // secondes depuis que le vêtement a changé (les ailes se déploient)
+  depuisVetement: number;
+  // secondes depuis que la lune se reflète dans ses yeux, -1 sinon
+  reflet: number;
   // une rémanence : tout d'une couleur, sans accent
   teinte?: string;
   opacite?: number;
@@ -375,7 +418,9 @@ const visage = (ap: Apparence, encre: string, accent: boolean): string => {
   let s = '';
   const w = 0.12;
   let yeuxType: Yeux = v.yeux;
-  if (ap.cligne && (yeuxType === 'point' || yeuxType === 'rond')) yeuxType = 'ferme';
+  // la lune qui arrive se reflète dans des yeux ouverts : ils s'arrondissent
+  if (ap.reflet >= 0 && (yeuxType === 'point' || yeuxType === 'trait' || yeuxType === 'plisse')) yeuxType = 'rond';
+  if (ap.cligne && ap.reflet < 0 && (yeuxType === 'point' || yeuxType === 'rond')) yeuxType = 'ferme';
   yeux.forEach((e, i) => {
     const proche = i === 1;
     const type: Yeux = yeuxType === 'clin' ? (proche ? 'clin' : 'point') : yeuxType;
@@ -386,7 +431,13 @@ const visage = (ap: Apparence, encre: string, accent: boolean): string => {
       case 'rond':
       case 'grand': {
         const r = type === 'grand' ? 0.25 : 0.2;
-        s += rond(e, r, COULEURS.fond, encre, w) + rond([e[0] + rx, e[1] + ry], 0.08, encre);
+        s += rond(e, r, COULEURS.fond, encre, w);
+        if (ap.reflet >= 0 && accent) {
+          // le reflet : un petit disque de lune qui grandit dans la pupille, ses deux cratères
+          const rl = r * 0.78 * Math.min(1, ap.reflet / 0.8);
+          const c: [number, number] = [e[0] + rx * 0.4, e[1] + ry * 0.4];
+          s += rond(c, rl, '#f6f1dc', encre, 0.03) + rond([c[0] - rl * 0.35, c[1] + rl * 0.3], rl * 0.18, '#e6dfc4') + rond([c[0] + rl * 0.3, c[1] - rl * 0.35], rl * 0.13, '#e6dfc4');
+        } else s += rond([e[0] + rx, e[1] + ry], 0.08, encre);
         break;
       }
       case 'trait':
@@ -404,6 +455,22 @@ const visage = (ap: Apparence, encre: string, accent: boolean): string => {
       case 'clin':
         s += ligne([[e[0] - 0.14, e[1] + 0.02], [e[0] + 0.14, e[1] + 0.02]], encre, w);
         break;
+      case 'croix':
+        s += ligne([[e[0] - 0.13, e[1] - 0.13], [e[0] + 0.13, e[1] + 0.13]], encre, w) + ligne([[e[0] - 0.13, e[1] + 0.13], [e[0] + 0.13, e[1] - 0.13]], encre, w);
+        break;
+      case 'brillant':
+        s += rond(e, 0.25, COULEURS.fond, encre, w) + rond([e[0] + rx * 0.6, e[1] + 0.03 + ry * 0.6], 0.15, encre) + rond([e[0] - 0.06 + rx * 0.6, e[1] - 0.06 + ry * 0.6], 0.055, '#ffffff');
+        break;
+      case 'spirale': {
+        let d = '';
+        for (let k = 0; k <= 30; k++) {
+          const a = k * 0.62 + ap.t * 9;
+          const r = 0.02 + 0.006 * k;
+          d += `${k ? 'L' : 'M'}${n3(e[0] + Math.cos(a) * r)} ${n3(e[1] + Math.sin(a) * r)} `;
+        }
+        s += `<path d="${d}" fill="none" stroke="${encre}" stroke-width="0.07" stroke-linecap="round"/>`;
+        break;
+      }
       case 'bleu':
         if (accent) s += rond(e, 0.42, COULEURS.bleu, undefined, 0, ' opacity="0.16"') + rond(e, 0.26, COULEURS.bleu, undefined, 0, ' opacity="0.4"') + rond([e[0] + rx * 0.5, e[1] + ry * 0.5], 0.13, COULEURS.bleuClair) + rond([e[0] + rx * 0.5, e[1] + ry * 0.5], 0.07, '#ffffff');
         else s += rond(e, 0.12, encre);
@@ -455,7 +522,10 @@ const visage = (ap: Apparence, encre: string, accent: boolean): string => {
     s += `<path d="M${n3(e[0] + 0.1)} ${n3(y - r * 1.6)} C${n3(e[0] + 0.1 + r)} ${n3(y - r * 0.4)} ${n3(e[0] + 0.1 + r)} ${n3(y + r)} ${n3(e[0] + 0.1)} ${n3(y + r)} C${n3(e[0] + 0.1 - r)} ${n3(y + r)} ${n3(e[0] + 0.1 - r)} ${n3(y - r * 0.4)} ${n3(e[0] + 0.1)} ${n3(y - r * 1.6)} Z" fill="${accent ? '#8fd3f4' : encre}" stroke="${encre}" stroke-width="0.05" opacity="${n3(op)}"/>`;
   }
   // joues
-  if (v.joues && accent) s += rond([yeux[0][0] - 0.1, yeux[0][1] + 0.4], 0.12, COULEURS.rose, undefined, 0, ' opacity="0.55"') + rond([yeux[1][0] + 0.1, yeux[1][1] + 0.4], 0.12, COULEURS.rose, undefined, 0, ' opacity="0.55"');
+  if (v.joues && accent) {
+    const c = v.joues === 'rouge' ? COULEURS.rouge : COULEURS.rose;
+    s += rond([yeux[0][0] - 0.1, yeux[0][1] + 0.4], 0.12, c, undefined, 0, ' opacity="0.55"') + rond([yeux[1][0] + 0.1, yeux[1][1] + 0.4], 0.12, c, undefined, 0, ' opacity="0.55"');
+  }
   // bouche
   const [bx, by] = bouche;
   if (ap.bouche >= 0) {
@@ -492,6 +562,9 @@ const visage = (ap: Apparence, encre: string, accent: boolean): string => {
         break;
       case 'triste':
         s += `<path d="M${n3(bx - 0.18)} ${n3(by + 0.08)} Q${n3(bx)} ${n3(by - 0.1)} ${n3(bx + 0.18)} ${n3(by + 0.08)}" fill="none" stroke="${encre}" stroke-width="${w}" stroke-linecap="round"/>`;
+        break;
+      case 'grogne':
+        s += `<path d="M${n3(bx - 0.22)} ${n3(by + 0.02)} L${n3(bx - 0.12)} ${n3(by - 0.08)} L${n3(bx - 0.02)} ${n3(by + 0.04)} L${n3(bx + 0.08)} ${n3(by - 0.08)} L${n3(bx + 0.18)} ${n3(by + 0.04)} L${n3(bx + 0.26)} ${n3(by - 0.06)}" fill="none" stroke="${encre}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
         break;
     }
   }
@@ -561,8 +634,7 @@ const epeeEnMain = (s: Squelette, ap: Apparence, encre: string, accent: boolean)
 const bouquet = (s: Squelette, ap: Apparence, encre: string, accent: boolean): string => {
   const m = s.mainD;
   const d = membre(s.avantBrasD + 30);
-  const up: [number, number] = [-d[1] * 0, -1];
-  void up;
+  void ap;
   let out = '';
   const rouge = accent ? COULEURS.rouge : encre;
   const vert = accent ? COULEURS.vert : encre;
@@ -578,17 +650,6 @@ const bouquet = (s: Squelette, ap: Apparence, encre: string, accent: boolean): s
   return out;
 };
 
-// La couverture pliée, qui pend de la main proche : un pan orange, un pli.
-const couverture = (s: Squelette, encre: string, accent: boolean): string => {
-  const m = s.mainD;
-  const c = accent ? COULEURS.orange : COULEURS.fond;
-  return (
-    `<path d="M${n3(m[0] - 0.46)} ${n3(m[1] + 0.08)} L${n3(m[0] + 0.46)} ${n3(m[1] + 0.08)} L${n3(m[0] + 0.52)} ${n3(m[1] + 1.15)} Q${n3(m[0] + 0.2)} ${n3(m[1] + 1.38)} ${n3(m[0] - 0.05)} ${n3(m[1] + 1.2)} Q${n3(m[0] - 0.3)} ${n3(m[1] + 1.4)} ${n3(m[0] - 0.52)} ${n3(m[1] + 1.15)} Z" fill="${c}" stroke="${encre}" stroke-width="0.09" stroke-linejoin="round"/>` +
-    ligne([[m[0] - 0.1, m[1] + 0.12], [m[0] - 0.02, m[1] + 1.1]], encre, 0.05) +
-    `<path d="M${n3(m[0] - 0.46)} ${n3(m[1] + 0.08)} q0.46 0.22 0.92 0" fill="none" stroke="${encre}" stroke-width="0.05"/>`
-  );
-};
-
 // L'étoile décrochée du ciel, dans la main proche : cinq branches jaunes,
 // un halo, trois éclats qui tournent.
 export const cheminEtoile = (cx: number, cy: number, r: number): string => {
@@ -600,6 +661,9 @@ export const cheminEtoile = (cx: number, cy: number, r: number): string => {
   }
   return d + 'Z';
 };
+// Une petite étincelle à quatre pointes (les reflets d'un diamant, d'une bague).
+export const cheminEtincelle = (cx: number, cy: number, k: number): string =>
+  `M${n3(cx)} ${n3(cy - k)} Q${n3(cx)} ${n3(cy)} ${n3(cx + k)} ${n3(cy)} Q${n3(cx)} ${n3(cy)} ${n3(cx)} ${n3(cy + k)} Q${n3(cx)} ${n3(cy)} ${n3(cx - k)} ${n3(cy)} Q${n3(cx)} ${n3(cy)} ${n3(cx)} ${n3(cy - k)} Z`;
 const etoile = (s: Squelette, ap: Apparence, encre: string, accent: boolean): string => {
   const m = s.mainD;
   const c: [number, number] = [m[0] + 0.12, m[1] - 0.42];
@@ -618,99 +682,145 @@ const etoile = (s: Squelette, ap: Apparence, encre: string, accent: boolean): st
   return out;
 };
 
-// La cape : une couverture sur les épaules, qui tombe dans le dos jusqu'aux
-// cuisses, un col roulé, deux plis.
-const cape = (s: Squelette, encre: string, accent: boolean): string => {
-  const e = s.epaule;
-  const c = accent ? COULEURS.orange : COULEURS.fond;
-  const d = `M${n3(e[0] - 0.55)} ${n3(e[1] - 0.15)} C${n3(e[0] - 1.2)} ${n3(e[1] + 0.6)} ${n3(e[0] - 1.4)} ${n3(e[1] + 1.8)} ${n3(e[0] - 1.25)} ${n3(e[1] + 2.9)} Q${n3(e[0] - 0.3)} ${n3(e[1] + 3.15)} ${n3(e[0] + 0.75)} ${n3(e[1] + 2.85)} C${n3(e[0] + 0.95)} ${n3(e[1] + 1.8)} ${n3(e[0] + 0.85)} ${n3(e[1] + 0.6)} ${n3(e[0] + 0.6)} ${n3(e[1] - 0.1)} Q${n3(e[0])} ${n3(e[1] - 0.45)} ${n3(e[0] - 0.55)} ${n3(e[1] - 0.15)} Z`;
+// ── Les objets du rêve (16 octobre 2026) ───────────────────────────────
+
+// La corde du lasso, roulée dans la main proche : trois boucles.
+const corde = (s: Squelette, encre: string): string => {
+  const m = s.mainD;
+  let out = '';
+  for (let i = 0; i < 3; i++) out += `<ellipse cx="${n3(m[0] + 0.05 * i)}" cy="${n3(m[1] + 0.55 + 0.08 * i)}" rx="${n3(0.42 - 0.04 * i)}" ry="${n3(0.62 - 0.05 * i)}" fill="none" stroke="${encre}" stroke-width="0.11"/>`;
+  return out;
+};
+
+// Le lasso qui tournoie au-dessus de la tête : une grande boucle couchée
+// qui tourne autour de la main levée, et le brin qui la rejoint.
+const lasso = (s: Squelette, ap: Apparence, encre: string): string => {
+  const m = s.mainD;
+  const a = (ap.t * 760) % 360;
+  const c: [number, number] = [m[0], m[1] - 0.55];
   return (
-    `<path d="${d}" fill="${c}" stroke="${encre}" stroke-width="0.1" stroke-linejoin="round"/>` +
-    ligne([[e[0] - 0.7, e[1] + 0.5], [e[0] - 0.85, e[1] + 2.5]], encre, 0.05) +
-    ligne([[e[0] + 0.35, e[1] + 0.6], [e[0] + 0.45, e[1] + 2.4]], encre, 0.05) +
-    `<path d="M${n3(e[0] - 0.6)} ${n3(e[1] - 0.1)} Q${n3(e[0])} ${n3(e[1] + 0.25)} ${n3(e[0] + 0.62)} ${n3(e[1] - 0.05)}" fill="none" stroke="${encre}" stroke-width="0.08"/>`
+    `<ellipse cx="${n3(c[0])}" cy="${n3(c[1])}" rx="1.7" ry="0.5" fill="none" stroke="${encre}" stroke-width="0.12" stroke-linecap="round" transform="rotate(${n3(a * 0.35 - 10)} ${n3(c[0])} ${n3(c[1])})"/>` +
+    `<path d="M${P(m)} Q${n3(m[0] + Math.cos((a * Math.PI) / 180) * 0.9)} ${n3(c[1] + 0.1)} ${n3(c[0] + Math.cos((a * Math.PI) / 180) * 1.6)} ${n3(c[1] + Math.sin((a * Math.PI) / 180) * 0.45)}" fill="none" stroke="${encre}" stroke-width="0.1" stroke-linecap="round"/>` +
+    corde(s, encre)
   );
 };
 
-// Le parapluie fermé : une canne noire dans le prolongement de la main (comme
-// la lame), la toile roulée en fuseau rouge.
-const parapluieFerme = (s: Squelette, encre: string, accent: boolean): string => {
+// La pioche : le manche dans le prolongement de l'avant-bras (comme la
+// lame), et le fer recourbé au bout, en travers.
+const pioche = (s: Squelette, encre: string): string => {
   const d = membre(s.lame);
   const n: [number, number] = [-d[1], d[0]];
   const m = s.mainD;
-  const base = plus(m, d, -0.35);
-  const bout = plus(m, d, 2.3);
-  const a = plus(m, d, 0.5);
-  const b = plus(m, d, 2.1);
-  const mid = plus(m, d, 1.3);
-  const rouge = accent ? COULEURS.rouge : COULEURS.fond;
+  const bout = plus(m, d, 2.2);
+  const base = plus(m, d, -0.45);
+  const g1 = plus(plus(bout, n, 1.05), d, -0.45);
+  const g2 = plus(plus(bout, n, -1.05), d, -0.45);
   return (
-    ligne([base, bout], encre, 0.13) +
-    `<path d="M${P(a)} Q${P(plus(mid, n, 0.3))} ${P(b)} Q${P(plus(mid, n, -0.3))} ${P(a)} Z" fill="${rouge}" stroke="${encre}" stroke-width="0.08" stroke-linejoin="round"/>` +
-    `<path d="M${P(base)} Q${P(plus(plus(base, d, -0.3), n, 0.1))} ${P(plus(plus(base, d, -0.25), n, 0.35))}" fill="none" stroke="${encre}" stroke-width="0.12" stroke-linecap="round"/>`
+    ligne([base, bout], encre, 0.16) +
+    `<path d="M${P(g1)} Q${P(plus(bout, d, 0.25))} ${P(g2)} L${P(plus(plus(bout, n, -0.75), d, -0.15))} Q${P(plus(bout, d, -0.05))} ${P(plus(plus(bout, n, 0.75), d, -0.15))} Z" fill="#8a8784" stroke="${encre}" stroke-width="0.09" stroke-linejoin="round"/>`
   );
 };
 
-// Le parapluie ouvert : la canne droite au-dessus de la main, la toile rouge
-// en dôme festonné, ses baleines, la pointe, le manche recourbé sous la main.
-const parapluieOuvert = (s: Squelette, encre: string, accent: boolean): string => {
+// Le marteau : un manche court et une tête rectangulaire sombre.
+const marteau = (s: Squelette, encre: string): string => {
+  const d = membre(s.lame);
+  const n: [number, number] = [-d[1], d[0]];
   const m = s.mainD;
-  const h: [number, number] = [m[0], m[1] - 2.6];
-  const r = 3.2;
-  const nS = 5;
-  const w = (2 * r) / nS;
-  const rouge = accent ? COULEURS.rouge : COULEURS.fond;
-  let d = `M${n3(h[0] - r)} ${n3(h[1])} Q${n3(h[0] - r * 0.9)} ${n3(h[1] - 1.1)} ${n3(h[0])} ${n3(h[1] - 1.35)} Q${n3(h[0] + r * 0.9)} ${n3(h[1] - 1.1)} ${n3(h[0] + r)} ${n3(h[1])}`;
-  for (let i = 0; i < nS; i++) {
-    const x0 = h[0] + r - i * w;
-    d += ` Q${n3(x0 - w / 2)} ${n3(h[1] + 0.28)} ${n3(x0 - w)} ${n3(h[1])}`;
-  }
-  let out = `<path d="${d} Z" fill="${rouge}" stroke="${encre}" stroke-width="0.1" stroke-linejoin="round"/>`;
-  for (let i = 1; i < nS; i++) out += ligne([[h[0] - r + i * w, h[1]], [h[0], h[1] - 1.3]], encre, 0.05, ' opacity="0.5"');
-  out += ligne([[h[0], h[1] - 1.35], [h[0], h[1] - 1.62]], encre, 0.1);
-  out += ligne([m, h], encre, 0.12);
-  out += `<path d="M${n3(m[0])} ${n3(m[1])} L${n3(m[0])} ${n3(m[1] + 0.45)} Q${n3(m[0])} ${n3(m[1] + 0.8)} ${n3(m[0] - 0.3)} ${n3(m[1] + 0.75)}" fill="none" stroke="${encre}" stroke-width="0.12" stroke-linecap="round"/>`;
-  return out;
+  const bout = plus(m, d, 1.35);
+  const t1 = plus(plus(bout, n, 0.55), d, -0.3);
+  const t2 = plus(plus(bout, n, 0.55), d, 0.3);
+  const t3 = plus(plus(bout, n, -0.55), d, 0.3);
+  const t4 = plus(plus(bout, n, -0.55), d, -0.3);
+  return ligne([plus(m, d, -0.3), bout], encre, 0.15) + `<path d="M${P(t1)} L${P(t2)} L${P(t3)} L${P(t4)} Z" fill="#3a3836" stroke="${encre}" stroke-width="0.09" stroke-linejoin="round"/>`;
 };
 
-// Le plateau du petit-déjeuner, entre les deux mains : une pile de crêpes
-// orangées, une tasse violette, de la vapeur qui ondule.
-const plateau = (s: Squelette, ap: Apparence, encre: string, accent: boolean): string => {
-  const c: [number, number] = [(s.mainD[0] + s.mainG[0]) / 2 + 0.15, Math.min(s.mainD[1], s.mainG[1]) - 0.12];
-  const orange = accent ? COULEURS.orange : COULEURS.fond;
-  const violet = accent ? COULEURS.violet : COULEURS.fond;
-  let out = `<ellipse cx="${n3(c[0])}" cy="${n3(c[1])}" rx="1.35" ry="0.3" fill="${COULEURS.fond}" stroke="${encre}" stroke-width="0.1"/>`;
-  out += `<ellipse cx="${n3(c[0])}" cy="${n3(c[1] - 0.04)}" rx="1.15" ry="0.18" fill="none" stroke="${encre}" stroke-width="0.05" opacity="0.5"/>`;
-  const px = c[0] - 0.5;
-  for (let i = 0; i < 3; i++) out += `<ellipse cx="${n3(px)}" cy="${n3(c[1] - 0.14 - i * 0.11)}" rx="0.42" ry="0.1" fill="${orange}" stroke="${encre}" stroke-width="0.06"/>`;
-  const tx = c[0] + 0.5;
-  const ty = c[1] - 0.62;
-  out += `<rect x="${n3(tx)}" y="${n3(ty)}" width="0.5" height="0.52" rx="0.08" fill="${violet}" stroke="${encre}" stroke-width="0.07"/>`;
-  out += `<path d="M${n3(tx + 0.5)} ${n3(ty + 0.12)} q0.25 0.14 0 0.3" fill="none" stroke="${encre}" stroke-width="0.07" stroke-linecap="round"/>`;
-  for (let i = 0; i < 2; i++) {
-    const o = Math.sin(ap.t * 3 + i * 2) * 0.06;
-    const x0 = tx + 0.12 + i * 0.26 + o;
-    out += `<path d="M${n3(x0)} ${n3(ty - 0.08)} q0.1 -0.2 0 -0.4 t0 -0.4" fill="none" stroke="${encre}" stroke-width="0.05" stroke-linecap="round" opacity="${n3(0.35 + 0.15 * Math.sin(ap.t * 4 + i))}"/>`;
+// Un diamant taillé : la table, la couronne, la culasse en pointe, en bleu
+// pâle à facettes blanches, et des étincelles qui tournent autour.
+export const cheminDiamant = (cx: number, cy: number, r: number): string =>
+  `M${n3(cx - 0.62 * r)} ${n3(cy - 0.75 * r)} L${n3(cx + 0.62 * r)} ${n3(cy - 0.75 * r)} L${n3(cx + r)} ${n3(cy - 0.2 * r)} L${n3(cx)} ${n3(cy + r)} L${n3(cx - r)} ${n3(cy - 0.2 * r)} Z`;
+export const facettesDiamant = (cx: number, cy: number, r: number, encre: string, w: number): string =>
+  `<path d="M${n3(cx - r)} ${n3(cy - 0.2 * r)} L${n3(cx + r)} ${n3(cy - 0.2 * r)} M${n3(cx - 0.62 * r)} ${n3(cy - 0.75 * r)} L${n3(cx - 0.3 * r)} ${n3(cy - 0.2 * r)} L${n3(cx)} ${n3(cy + r)} M${n3(cx + 0.62 * r)} ${n3(cy - 0.75 * r)} L${n3(cx + 0.3 * r)} ${n3(cy - 0.2 * r)} L${n3(cx)} ${n3(cy + r)} M${n3(cx - 0.3 * r)} ${n3(cy - 0.2 * r)} L${n3(cx + 0.3 * r)} ${n3(cy - 0.2 * r)}" fill="none" stroke="${encre}" stroke-width="${n3(w)}" stroke-linejoin="round" opacity="0.55"/>`;
+const diamant = (s: Squelette, ap: Apparence, encre: string, accent: boolean): string => {
+  const m = s.mainD;
+  const c: [number, number] = [m[0] + 0.1, m[1] - 0.55];
+  const r = 0.5;
+  let out = '';
+  if (accent) out += rond(c, 1.0, COULEURS.bleu, undefined, 0, ' opacity="0.14"');
+  out += `<path d="${cheminDiamant(c[0], c[1], r)}" fill="${accent ? COULEURS.bleuClair : COULEURS.fond}" stroke="${encre}" stroke-width="0.08" stroke-linejoin="round"/>`;
+  out += facettesDiamant(c[0], c[1], r, '#ffffff', 0.06);
+  if (accent) {
+    for (let i = 0; i < 3; i++) {
+      const a = ap.t * 2.6 + (i * Math.PI * 2) / 3;
+      const k = 0.1 + 0.05 * Math.sin(ap.t * 11 + i);
+      out += `<path d="${cheminEtincelle(c[0] + Math.cos(a) * 0.85, c[1] + Math.sin(a) * 0.85, k)}" fill="${encre}"/>`;
+    }
   }
   return out;
 };
 
-// La poêle dans la main proche : le manche dans le prolongement de l'avant-bras,
-// la poêle gris sombre, et la crêpe dedans (sauf « poele-vide », quand elle vole).
-const poele = (s: Squelette, ap: Apparence, encre: string, accent: boolean): string => {
-  const d = membre(s.avantBrasD);
+// La bague : un anneau d'or et son petit diamant, tenue entre les doigts,
+// une étincelle qui tourne.
+const bague = (s: Squelette, ap: Apparence, encre: string, accent: boolean): string => {
   const m = s.mainD;
-  const c = plus(m, d, 1.6);
-  let out = ligne([m, plus(m, d, 0.8)], encre, 0.14);
-  out += `<path d="M${n3(c[0] - 0.85)} ${n3(c[1])} L${n3(c[0] - 0.7)} ${n3(c[1] + 0.32)} L${n3(c[0] + 0.7)} ${n3(c[1] + 0.32)} L${n3(c[0] + 0.85)} ${n3(c[1])} Z" fill="#3a3836" stroke="${encre}" stroke-width="0.07" stroke-linejoin="round"/>`;
-  out += `<ellipse cx="${n3(c[0])}" cy="${n3(c[1])}" rx="0.85" ry="0.2" fill="#9a9794" stroke="${encre}" stroke-width="0.08"/>`;
-  if (ap.tient === 'poele') out += `<ellipse cx="${n3(c[0])}" cy="${n3(c[1] - 0.03)}" rx="0.52" ry="0.1" fill="${accent ? COULEURS.orange : COULEURS.fond}" stroke="${encre}" stroke-width="0.05"/>`;
+  const c: [number, number] = [m[0] + 0.14, m[1] - 0.36];
+  const or = accent ? COULEURS.jaune : COULEURS.fond;
+  let out = rond(c, 0.27, 'none', encre, 0.2) + rond(c, 0.27, 'none', or, 0.11);
+  const g: [number, number] = [c[0], c[1] - 0.38];
+  out += `<path d="${cheminDiamant(g[0], g[1], 0.17)}" fill="${accent ? COULEURS.bleuClair : COULEURS.fond}" stroke="${encre}" stroke-width="0.05" stroke-linejoin="round"/>`;
+  if (accent) {
+    const k = 0.12 + 0.05 * Math.sin(ap.t * 9);
+    out += `<path d="${cheminEtincelle(g[0] + 0.3, g[1] - 0.25, k)}" fill="${encre}" transform="rotate(${n3(ap.t * 60)} ${n3(g[0] + 0.3)} ${n3(g[1] - 0.25)})"/>`;
+  }
   return out;
+};
+
+// Le chiot dans les bras : un petit corps blanc, une tête ronde aux oreilles
+// tombantes, une langue rose, la queue qui bat.
+const chiot = (s: Squelette, ap: Apparence, encre: string, accent: boolean): string => {
+  const c: [number, number] = [(s.mainD[0] + s.mainG[0]) / 2 + 0.3, Math.min(s.mainD[1], s.mainG[1]) - 0.35];
+  const h: [number, number] = [c[0] + 0.62, c[1] - 0.3];
+  const bat = Math.sin(ap.t * 14) * 28;
+  let out = `<path d="M${n3(c[0] - 0.75)} ${n3(c[1])} q0.15 -0.7 0.8 -0.5" fill="none" stroke="${encre}" stroke-width="0.11" stroke-linecap="round" transform="rotate(${n3(bat)} ${n3(c[0] - 0.75)} ${n3(c[1])})"/>`;
+  out += `<ellipse cx="${n3(c[0])}" cy="${n3(c[1])}" rx="0.78" ry="0.44" fill="${COULEURS.fond}" stroke="${encre}" stroke-width="0.1"/>`;
+  out += ligne([[c[0] - 0.35, c[1] + 0.4], [c[0] - 0.3, c[1] + 0.75]], encre, 0.1) + ligne([[c[0] + 0.3, c[1] + 0.4], [c[0] + 0.35, c[1] + 0.75]], encre, 0.1);
+  out += `<path d="M${n3(h[0] - 0.3)} ${n3(h[1] - 0.25)} q-0.35 0.1 -0.3 0.6 q0.25 0.1 0.35 -0.2 Z M${n3(h[0] + 0.3)} ${n3(h[1] - 0.25)} q0.35 0.1 0.3 0.6 q-0.25 0.1 -0.35 -0.2 Z" fill="#3a3836" stroke="${encre}" stroke-width="0.07" stroke-linejoin="round"/>`;
+  out += rond(h, 0.44, COULEURS.fond, encre, 0.1);
+  out += rond([h[0] - 0.14, h[1] - 0.08], 0.06, encre) + rond([h[0] + 0.14, h[1] - 0.08], 0.06, encre) + rond([h[0], h[1] + 0.1], 0.08, encre);
+  out += `<ellipse cx="${n3(h[0] + 0.05)}" cy="${n3(h[1] + 0.3)}" rx="0.1" ry="0.14" fill="${accent ? COULEURS.rose : COULEURS.fond}" stroke="${encre}" stroke-width="0.05"/>`;
+  return out;
+};
+
+// Le téléphone dans la main proche : un petit rectangle sombre à l'écran
+// clair, un peu incliné.
+const telephone = (s: Squelette, encre: string): string => {
+  const m = s.mainD;
+  return `<g transform="translate(${P(m)}) rotate(-22)"><rect x="-0.26" y="-0.5" width="0.52" height="0.9" rx="0.08" fill="#3a3836" stroke="${encre}" stroke-width="0.07"/><rect x="-0.19" y="-0.4" width="0.38" height="0.66" rx="0.04" fill="#efeeeb"/></g>`;
+};
+
+// Les ailes de plumes, dans le dos : deux grandes ailes attachées à
+// l'épaule, l'une derrière (plus claire), l'autre devant, qui se déploient
+// en 0,45 s (un ressort) à l'étape qui les écrit et battent d'autant plus
+// fort qu'on vole (ap.vol).
+const aile = (fill: string, encre: string, w: number) =>
+  `<path d="M0 0 C-1.2 -1.4 -2.6 -2.6 -4.3 -3.1 L-4.1 -2.5 Q-3.6 -2.2 -3.3 -1.7 Q-2.8 -1.5 -2.4 -1.0 Q-1.9 -0.9 -1.5 -0.3 Q-1.0 -0.2 -0.6 0.5 Q-0.2 0.6 0 0.3 Z" fill="${fill}" stroke="${encre}" stroke-width="${n3(w)}" stroke-linejoin="round"/>` +
+  `<path d="M0 0 L-3.3 -1.7 M0 0 L-2.4 -1.0 M0 0 L-1.5 -0.3" fill="none" stroke="${encre}" stroke-width="${n3(w * 0.6)}" stroke-linecap="round" opacity="0.6"/>`;
+const ailes = (s: Squelette, ap: Apparence, encre: string, accent: boolean): string => {
+  const u = Math.min(1, ap.depuisVetement / 0.45);
+  const k = u >= 1 ? 1 : 1 + (1.70158 * 1.2 + 1) * (u - 1) ** 3 + 1.70158 * 1.2 * (u - 1) ** 2;
+  if (k <= 0.02) return '';
+  const amp = 5 + 24 * ap.vol;
+  const freq = ap.vol > 0.5 ? 1.7 : 0.8;
+  const angle = Math.sin(ap.t * Math.PI * 2 * freq) * amp - 8 * ap.vol;
+  const e = s.epaule;
+  return (
+    `<g transform="translate(${P(e)}) scale(${n3(k)}) rotate(${n3(angle * 0.8 + 6)}) translate(0.25 -0.3)" opacity="0.9">${aile(accent ? '#efeeeb' : COULEURS.fond, encre, 0.09)}</g>` +
+    `<g transform="translate(${P(e)}) scale(${n3(k)}) rotate(${n3(angle)}) translate(-0.15 -0.1)">${aile(COULEURS.fond, encre, 0.1)}</g>`
+  );
 };
 
 // ── Le personnage entier ───────────────────────────────────────────────
 
-export type Dessin = { svg: string; tete: [number, number]; mainD: [number, number]; pointe?: [number, number] };
+export type Dessin = { svg: string; tete: [number, number]; mainD: [number, number]; mainG: [number, number]; pointe?: [number, number] };
 
 export const dessinerBaton = (ap: Apparence): Dessin => {
   const s = squelette(ap.pose);
@@ -721,13 +831,15 @@ export const dessinerBaton = (ap: Apparence): Dessin => {
   // Le nœud rose et la queue de cheval vont à la fille, le bandana violet au
   // garçon, que l'un ou l'autre soit le héros (Thomas, 16 octobre 2026 : « tu as
   // utilisé la fille comme perso principal mais tu lui as mis le bandana de
-  // ninja et pas le nœud rose »).
-  const fille = ap.genre === 'fille';
+  // ninja et pas le nœud rose ») ; un bandit porte un bonnet et un masque.
+  const bandit = ap.qui.startsWith('bandit');
+  const fille = ap.genre === 'fille' && !bandit;
   let out = '';
+  // les ailes, tout derrière
+  if (ap.vetement === 'ailes') out += ailes(s, ap, encre, accent);
   // membres de derrière
   out += ligne([s.epaule, s.coudeG, s.mainG], loin, w * 0.92) + rond(s.mainG, 0.16, loin);
   out += ligne([s.hanche, s.genouG, s.chevilleG, s.orteilG], loin, w * 0.92);
-  if (ap.vetement === 'cape') out += cape(s, encre, accent);
   // la queue de cheval, derrière la tête
   const vFlot = Math.min(2.2, ap.vent + Math.abs(ap.vitesse) / 420);
   if (fille) {
@@ -749,7 +861,7 @@ export const dessinerBaton = (ap: Apparence): Dessin => {
     out += `<circle cx="${n3(c[0])}" cy="${n3(c[1])}" r="4.2" fill="url(#halo${ap.graine})"/>`;
   }
   // les pans du bandana, derrière la tête
-  if (!fille) {
+  if (!fille && !bandit) {
     const noeud: [number, number] = [s.tete[0] - 0.96, s.tete[1] - 0.46];
     const couleur = accent ? COULEURS.violet : encre;
     for (let i = 0; i < 2; i++) {
@@ -766,8 +878,20 @@ export const dessinerBaton = (ap: Apparence): Dessin => {
   // la tête
   out += `<g transform="translate(${P(s.tete)}) rotate(${n3(s.angleTete)})">`;
   out += rond([0, 0], 1, COULEURS.fond, encre, w);
+  if (bandit) {
+    // le masque : une bande sombre sur les yeux, deux trous blancs où le
+    // visage dessine les yeux et les sourcils
+    const tq = ap.vue !== 'face';
+    const cx = tq ? 0.21 : 0;
+    const yeux: number[] = tq ? [-0.04, 0.46] : [-0.3, 0.3];
+    out += `<ellipse cx="${n3(cx)}" cy="-0.16" rx="0.98" ry="0.42" fill="#3a3836"/>`;
+    for (const ex of yeux) out += `<ellipse cx="${n3(ex)}" cy="-0.16" rx="0.27" ry="0.36" fill="${COULEURS.fond}"/>`;
+  }
   out += visage(ap, encre, accent);
-  if (!fille) {
+  if (bandit) {
+    out += `<path d="M-0.785 -0.62 A1.02 1.02 0 0 1 0.785 -0.62 Z" fill="#3a3836" stroke="${encre}" stroke-width="0.1" stroke-linejoin="round"/>`;
+    out += ligne([[-0.86, -0.56], [0.86, -0.56]], encre, 0.1);
+  } else if (!fille) {
     const couleur = accent ? COULEURS.violet : encre;
     out += `<path d="M-0.785 -0.62 A1 1 0 0 1 0.785 -0.62 L0.933 -0.36 A1 1 0 0 0 -0.933 -0.36 Z" fill="${couleur}" stroke="${encre}" stroke-width="0.1" stroke-linejoin="round"/>`;
     out += rond([-0.96, -0.46], 0.17, couleur, encre, 0.08);
@@ -787,12 +911,15 @@ export const dessinerBaton = (ap: Apparence): Dessin => {
     pointe = plus(s.mainD, membre(s.lame), LAME);
   }
   if (ap.tient === 'bouquet') out += bouquet(s, ap, encre, accent);
-  if (ap.tient === 'couverture') out += couverture(s, encre, accent);
   if (ap.tient === 'etoile') out += etoile(s, ap, encre, accent);
-  if (ap.tient === 'parapluie-ferme') out += parapluieFerme(s, encre, accent);
-  if (ap.tient === 'parapluie') out += parapluieOuvert(s, encre, accent);
-  if (ap.tient === 'plateau') out += plateau(s, ap, encre, accent);
-  if (ap.tient === 'poele' || ap.tient === 'poele-vide') out += poele(s, ap, encre, accent);
+  if (ap.tient === 'corde' || ap.tient === 'corde-tendue') out += corde(s, encre);
+  if (ap.tient === 'lasso') out += lasso(s, ap, encre);
+  if (ap.tient === 'pioche') out += pioche(s, encre);
+  if (ap.tient === 'marteau') out += marteau(s, encre);
+  if (ap.tient === 'diamant') out += diamant(s, ap, encre, accent);
+  if (ap.tient === 'bague') out += bague(s, ap, encre, accent);
+  if (ap.tient === 'chiot') out += chiot(s, ap, encre, accent);
+  if (ap.tient === 'telephone') out += telephone(s, encre);
   // les éclairs sur le corps
   if (ap.electrise > 0 && accent) {
     const points: [number, number][] = [s.epaule, s.coudeG, s.mainG, s.coudeD, s.genouG, s.chevilleG, s.genouD, s.chevilleD, s.hanche, s.tete];
@@ -804,5 +931,5 @@ export const dessinerBaton = (ap: Apparence): Dessin => {
     }
   }
   if (ap.opacite !== undefined && ap.opacite < 1) out = `<g opacity="${n3(ap.opacite)}">${out}</g>`;
-  return { svg: out, tete: s.tete, mainD: s.mainD, pointe };
+  return { svg: out, tete: s.tete, mainD: s.mainD, mainG: s.mainG, pointe };
 };

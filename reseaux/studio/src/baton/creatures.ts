@@ -1,9 +1,10 @@
 // Les créatures du bonhomme bâton, au trait et en gris : le dragon, avec
-// ses yeux et sa gueule rouges (les seules couleurs), et le nuage d'orage,
-// avec ses éclairs jaunes. Chacune est dessinée tournée vers +x autour du
-// centre de son corps, en unités U (60 px à l'échelle 1), et retournée par
-// le caller. Quand elle explose, elle se change en éclats (le dragon) ou
-// crève en pluie et en étincelles (le nuage).
+// ses yeux et sa gueule rouges (les seules couleurs), le nuage d'orage, avec
+// ses éclairs jaunes, la lune qu'on attrape au lasso, et la meute de chiens
+// du jardin. Chacune est dessinée tournée vers +x autour du centre de son
+// corps, en unités U (60 px à l'échelle 1), et retournée par le caller.
+// Quand elle explose, elle se change en éclats (le dragon) ou crève en pluie
+// et en étincelles (le nuage).
 import { cheminEtoile, COULEURS, hasard } from './rig';
 import type { EtatCreature } from './temps';
 
@@ -228,4 +229,91 @@ const pluieEtEtincelles = (e: EtatCreature, graine: number): string => {
   return s;
 };
 
-export const dessinCreature = (e: EtatCreature, graine: number): string => (e.qui === 'nuage' ? dessinNuage(e, graine) : dessinDragon(e, graine));
+// La lune : un grand disque pâle à trois cratères et un visage endormi
+// (yeux fermés, petit sourire) ; tirée par le lasso, elle s'écrase un peu
+// (cou), ouvre des yeux ronds et la bouche (gueule, yeux) et la corde fait
+// une boucle autour d'elle (serres) ; posée, elle rayonne (ailes) et sourit
+// les yeux fermés, les joues roses.
+export const dessinLune = (e: EtatCreature, graine: number): string => {
+  void graine;
+  const U = 60;
+  const R = 2.2;
+  const k = e.echelle * U;
+  let s = `<g transform="translate(${n2(e.x)} ${n2(e.y)}) scale(${n2(k * e.sens)} ${n2(k)})">`;
+  // le halo, qui respire
+  const halo = 0.5 + 0.5 * e.ailes;
+  const resp = 1 + 0.04 * Math.sin(e.t * 2.1);
+  s += `<circle cx="0" cy="0" r="${n2(R * 1.75 * resp)}" fill="${COULEURS.jaune}" opacity="${n2(0.08 * halo)}"/><circle cx="0" cy="0" r="${n2(R * 1.35 * resp)}" fill="${COULEURS.jaune}" opacity="${n2(0.12 * halo)}"/>`;
+  s += `<g transform="scale(${n2(1 + 0.1 * e.cou)} ${n2(1 - 0.1 * e.cou)})">`;
+  s += `<circle cx="0" cy="0" r="${n2(R)}" fill="#f6f1dc" ${T(0.1)}/>`;
+  for (const [cx, cy, r] of [[-1.1, 0.9, 0.34], [0.9, 1.2, 0.26], [1.3, -0.9, 0.22], [-0.3, 1.6, 0.16]] as [number, number, number][]) s += `<circle cx="${n2(cx)}" cy="${n2(cy)}" r="${n2(r)}" fill="#e6dfc4" ${T(0.05)} opacity="0.8"/>`;
+  // le visage : les yeux fermés ou ronds, la bouche, les joues
+  for (const ox of [-0.62, 0.62]) {
+    if (e.yeux < 0.5) s += `<path d="M${n2(ox - 0.26)} -0.35 Q${n2(ox)} ${n2(-0.12)} ${n2(ox + 0.26)} -0.35" ${T(0.1)}/>`;
+    else s += `<circle cx="${n2(ox)}" cy="-0.38" r="${n2(0.2 + 0.1 * e.yeux)}" fill="${COULEURS.fond}" ${T(0.07)}/><circle cx="${n2(ox + 0.03)}" cy="${n2(-0.36 + 0.06 * e.cou)}" r="0.09" fill="${E}"/>`;
+  }
+  if (e.gueule > 0.5) s += `<ellipse cx="0" cy="0.5" rx="${n2(0.18 + 0.1 * e.gueule)}" ry="${n2(0.22 + 0.12 * e.gueule)}" fill="${E}"/>`;
+  else s += `<path d="M-0.4 0.45 Q0 ${n2(0.75 + 0.15 * e.ailes)} 0.4 0.45" ${T(0.09)}/>`;
+  if (e.ailes > 0.8) s += `<circle cx="-1.0" cy="0.25" r="0.2" fill="${COULEURS.rose}" opacity="0.5"/><circle cx="1.0" cy="0.25" r="0.2" fill="${COULEURS.rose}" opacity="0.5"/>`;
+  s += '</g>';
+  // la corde du lasso autour d'elle
+  if (e.serres > 0.05) s += `<ellipse cx="0" cy="0.35" rx="${n2(R * 1.08)}" ry="${n2(R * 0.32)}" fill="none" stroke="${E}" stroke-width="0.14" opacity="${n2(e.serres)}"/>`;
+  s += '</g>';
+  return s;
+};
+
+// Un chien de la meute : un corps blanc, une tête ronde aux oreilles
+// tombantes, quatre pattes, la queue qui bat (cou : la vitesse), la langue
+// rose quand il est content (yeux), la gueule ouverte quand il aboie
+// (gueule), et le saut (ailes : la hauteur, vitesseAiles : le rythme).
+const chien = (x: number, y: number, k: number, sens: number, t: number, phase: number, e: EtatCreature): string => {
+  const saut = e.ailes * 1.4 * Math.max(0, Math.sin(t * Math.PI * 2 * e.vitesseAiles + phase * Math.PI * 2));
+  const bat = Math.sin(t * 14 * (0.5 + e.cou) + phase * 6) * (18 + 22 * e.cou);
+  let s = `<g transform="translate(${n2(x)} ${n2(y - saut * k)}) scale(${n2(k * sens)} ${n2(k)})">`;
+  // la queue
+  s += `<path d="M-0.72 -0.05 q-0.3 -0.6 0.1 -0.95" fill="none" stroke="${E}" stroke-width="0.11" stroke-linecap="round" transform="rotate(${n2(bat)} -0.72 -0.05)"/>`;
+  // les pattes : écartées en l'air, droites au sol
+  const ecart = 0.25 * saut;
+  s += `<path d="M-0.45 0.3 l${n2(-0.12 - ecart)} 0.55 M-0.25 0.32 l${n2(-0.02 - ecart * 0.5)} 0.55 M0.3 0.32 l${n2(0.02 + ecart * 0.5)} 0.55 M0.5 0.3 l${n2(0.12 + ecart)} 0.55" ${T(0.1)}/>`;
+  // le corps
+  s += `<ellipse cx="0" cy="0" rx="0.78" ry="0.42" fill="${COULEURS.fond}" ${T(0.1)}/>`;
+  // la tête et les oreilles
+  const hx = 0.75;
+  const hy = -0.38 - 0.1 * saut;
+  s += `<path d="M${n2(hx - 0.3)} ${n2(hy - 0.25)} q-0.35 0.1 -0.3 0.6 q0.25 0.1 0.35 -0.2 Z M${n2(hx + 0.3)} ${n2(hy - 0.25)} q0.35 0.1 0.3 0.6 q-0.25 0.1 -0.35 -0.2 Z" fill="#3a3836" ${T(0.07)}/>`;
+  s += `<circle cx="${n2(hx)}" cy="${n2(hy)}" r="0.44" fill="${COULEURS.fond}" ${T(0.1)}/>`;
+  s += `<circle cx="${n2(hx - 0.12)}" cy="${n2(hy - 0.1)}" r="0.06" fill="${E}"/><circle cx="${n2(hx + 0.16)}" cy="${n2(hy - 0.1)}" r="0.06" fill="${E}"/><circle cx="${n2(hx + 0.08)}" cy="${n2(hy + 0.08)}" r="0.08" fill="${E}"/>`;
+  if (e.gueule > 0.5) {
+    s += `<ellipse cx="${n2(hx + 0.12)}" cy="${n2(hy + 0.28)}" rx="0.12" ry="0.1" fill="${E}"/>`;
+    s += `<path d="M${n2(hx + 0.55)} ${n2(hy + 0.1)} l0.18 -0.1 M${n2(hx + 0.6)} ${n2(hy + 0.3)} l0.2 0.02 M${n2(hx + 0.55)} ${n2(hy + 0.5)} l0.18 0.1" ${T(0.06)} opacity="0.7"/>`;
+  } else if (e.yeux > 0.5) s += `<ellipse cx="${n2(hx + 0.14)}" cy="${n2(hy + 0.3)}" rx="0.09" ry="0.13" fill="${COULEURS.rose}" ${T(0.04)}/>`;
+  else s += `<path d="M${n2(hx - 0.02)} ${n2(hy + 0.2)} q0.12 0.1 0.24 0" ${T(0.06)}/>`;
+  s += '</g>';
+  return s;
+};
+
+// La meute : « nombre » chiens répartis sur « largeur » px autour de (x, y),
+// la ligne du sol de la meute ; une rangée du fond un peu plus petite et
+// plus haute, une rangée devant, chacun tourné de son côté, décalé dans le
+// temps pour que les sauts ne tombent jamais ensemble.
+export const dessinChiens = (e: EtatCreature, graine: number): string => {
+  void graine;
+  const n = Math.max(1, Math.round(e.nombre ?? 8));
+  const largeur = e.largeur ?? 720;
+  let fond = '';
+  let devant = '';
+  for (let i = 0; i < n; i++) {
+    const g = i * 13 + 7;
+    const derriere = i % 2 === 1;
+    const x = e.x - largeur / 2 + ((i + 0.5) * largeur) / n + (hasard(g) - 0.5) * (largeur / n) * 0.5;
+    const taille = 60 * e.echelle * (0.82 + 0.3 * hasard(g + 1)) * (derriere ? 0.82 : 1);
+    const sens = hasard(g + 2) > 0.5 ? 1 : -1;
+    const dessin = chien(x, e.y - (derriere ? 46 : 0), taille, sens, e.t, hasard(g + 3), e);
+    if (derriere) fond += dessin;
+    else devant += dessin;
+  }
+  return `<g opacity="0.85">${fond}</g>${devant}`;
+};
+
+export const dessinCreature = (e: EtatCreature, graine: number): string =>
+  e.qui === 'nuage' ? dessinNuage(e, graine) : e.qui === 'lune' ? dessinLune(e, graine) : e.qui === 'chiens' ? dessinChiens(e, graine) : dessinDragon(e, graine);

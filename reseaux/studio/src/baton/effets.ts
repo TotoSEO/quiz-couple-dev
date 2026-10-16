@@ -1,7 +1,7 @@
 // Les effets du bonhomme bâton, dans le monde (zoomés avec la scène) ou à
 // l'écran (lignes de vitesse, flash). Chacun est une fonction de l'instant.
 import type { EffetPlanBaton } from './recette';
-import { cheminEtoile, COULEURS, hasard } from './rig';
+import { cheminDiamant, cheminEtincelle, cheminEtoile, COULEURS, facettesDiamant, hasard } from './rig';
 
 const E = COULEURS.encre;
 const n1 = (v: number) => (Math.round(v * 10) / 10).toString();
@@ -165,91 +165,231 @@ const etoileCiel = (x: number, y: number, age: number, fin: number) => {
   return s;
 };
 
-// Les z du sommeil : trois « z » qui montent en biais depuis (x, y), de plus
-// en plus grands, et recommencent toutes les 1,4 s.
-const zzz = (x: number, y: number, age: number, fin: number) => {
+// ── Les effets du rêve (16 octobre 2026) ───────────────────────────────
+
+// Des plumes qui tombent de (x, y) : dix plumes qui descendent en se
+// balançant et s'effacent, en boucle jusqu'à « a » (les ailes qui se déploient).
+const plumes = (x: number, y: number, age: number, fin: number) => {
   if (age < 0) return '';
   let s = '';
   const op0 = Math.min(1, age / 0.3, fin);
-  for (let i = 0; i < 3; i++) {
-    const u = ((age / 1.4 + 1 - i * 0.33) % 1);
-    const k = 14 + 10 * i + 8 * u;
-    const px = x + 30 * i + 40 * u + 6 * Math.sin(age * 3 + i);
-    const py = y - 40 * i - 70 * u;
+  for (let i = 0; i < 10; i++) {
+    const g = i * 7 + 2;
+    const u = ((age * (0.45 + 0.2 * hasard(g)) + hasard(g + 1)) % 1);
+    const px = x + (hasard(g + 2) - 0.5) * 420 + 60 * Math.sin(u * 7 + i);
+    const py = y - 120 + u * 620;
+    const rot = 30 * Math.sin(u * 7 + i) + 20;
     const op = op0 * (1 - u) * 0.9;
-    s += `<path d="M${n1(px - k / 2)} ${n1(py - k / 2)} L${n1(px + k / 2)} ${n1(py - k / 2)} L${n1(px - k / 2)} ${n1(py + k / 2)} L${n1(px + k / 2)} ${n1(py + k / 2)}" fill="none" stroke="${E}" stroke-width="${n1(3 + i)}" stroke-linecap="round" stroke-linejoin="round" opacity="${n1(op)}"/>`;
+    s += `<path d="M0 -16 C8 -10 8 8 0 16 C-8 8 -8 -10 0 -16 Z M0 -14 L0 14" fill="${COULEURS.fond}" stroke="${E}" stroke-width="2.5" opacity="${n1(op)}" transform="translate(${n1(px)} ${n1(py)}) rotate(${n1(rot)}) scale(${n1(0.8 + 0.5 * hasard(g + 3))})"/>`;
   }
   return s;
 };
 
-// Des notes de musique qui montent en ondulant depuis (x, y), roses et
-// violettes en alternance, une toutes les 0,45 s.
-const notes = (x: number, y: number, age: number, fin: number) => {
+// Une bulle de pensée au-dessus de (x, y) : trois petites bulles qui
+// montent vers un nuage, et dedans l'icône (un chien, une bague, un cœur) ;
+// elle naît en 0,3 s et s'efface avant « a ».
+const icones: Record<string, string> = {
+  chien: `<path d="M-36 6 q-14 -26 4 -34" fill="none" stroke="${E}" stroke-width="4" stroke-linecap="round"/><ellipse cx="-8" cy="8" rx="30" ry="17" fill="${COULEURS.fond}" stroke="${E}" stroke-width="4"/><path d="M-22 22 l-3 16 M-8 24 l0 15 M8 24 l0 15 M18 22 l3 16" fill="none" stroke="${E}" stroke-width="4" stroke-linecap="round"/><path d="M8 -16 q-14 4 -12 24 q10 4 14 -8 Z M34 -16 q14 4 12 24 q-10 4 -14 -8 Z" fill="#3a3836" stroke="${E}" stroke-width="3"/><circle cx="21" cy="-6" r="17" fill="${COULEURS.fond}" stroke="${E}" stroke-width="4"/><circle cx="16" cy="-10" r="2.5" fill="${E}"/><circle cx="27" cy="-10" r="2.5" fill="${E}"/><circle cx="24" cy="-2" r="3" fill="${E}"/><ellipse cx="26" cy="7" rx="4" ry="5" fill="${COULEURS.rose}" stroke="${E}" stroke-width="1.5"/>`,
+  bague: `<circle cx="0" cy="10" r="24" fill="none" stroke="${E}" stroke-width="12"/><circle cx="0" cy="10" r="24" fill="none" stroke="${COULEURS.jaune}" stroke-width="7"/><path d="${cheminDiamant(0, -26, 15)}" fill="${COULEURS.bleuClair}" stroke="${E}" stroke-width="3" stroke-linejoin="round"/><path d="${cheminEtincelle(26, -36, 9)}" fill="${E}"/>`,
+  coeur: `<path d="M0 26 C-38 2 -30 -30 0 -12 C30 -30 38 2 0 26 Z" fill="${COULEURS.rose}" stroke="${E}" stroke-width="4"/>`,
+};
+const bulle = (x: number, y: number, age: number, fin: number, icone: string) => {
   if (age < 0) return '';
-  let s = '';
-  const n = Math.floor(age / 0.45) + 1;
-  for (let i = Math.max(0, n - 5); i < n; i++) {
-    const a = age - i * 0.45;
-    if (a < 0 || a > 1.8) continue;
-    const px = x + (hasard(i + 40) - 0.5) * 160 + 22 * Math.sin(a * 3 + i);
-    const py = y - a * 130;
-    const k = (0.7 + 0.5 * hasard(i + 41)) * Math.min(1, a / 0.2);
-    const op = (1 - (a / 1.8) ** 2) * Math.min(1, fin);
-    const c = i % 2 ? COULEURS.violet : COULEURS.rose;
-    s += `<g transform="translate(${n1(px)} ${n1(py)}) scale(${n1(k)}) rotate(${n1(12 * Math.sin(a * 2 + i))})" opacity="${n1(op)}"><ellipse cx="0" cy="0" rx="13" ry="9" fill="${c}" stroke="${E}" stroke-width="3" transform="rotate(-20)"/><path d="M11 -3 L11 -46 q18 4 26 16" fill="none" stroke="${E}" stroke-width="4" stroke-linecap="round"/></g>`;
+  const k = Math.min(1, age / 0.3);
+  const ks = k < 1 ? 1 + (1.70158 * 1.2 + 1) * (k - 1) ** 3 + 1.70158 * 1.2 * (k - 1) ** 2 : 1;
+  const op = Math.min(1, age / 0.2, fin);
+  const flot = 6 * Math.sin(age * 2.4);
+  let s = `<g opacity="${n1(op)}">`;
+  s += `<circle cx="${n1(x + 16)}" cy="${n1(y - 44)}" r="${n1(9 * k)}" fill="${COULEURS.fond}" ${T(4)}/><circle cx="${n1(x + 34)}" cy="${n1(y - 84)}" r="${n1(14 * k)}" fill="${COULEURS.fond}" ${T(4)}/>`;
+  s += `<g transform="translate(${n1(x + 70)} ${n1(y - 190 + flot)}) scale(${n1(ks)})">`;
+  s += `<path d="M-96 20 C-130 20 -130 -30 -92 -36 C-96 -78 -42 -92 -22 -62 C-6 -100 60 -98 72 -56 C116 -66 136 -20 102 -4 C128 20 100 50 70 36 C50 68 -10 66 -24 40 C-54 60 -102 50 -96 20 Z" fill="${COULEURS.fond}" ${T(5)}/>`;
+  s += `<g transform="translate(0 -8)">${icones[icone] ?? icones.coeur}</g>`;
+  s += '</g></g>';
+  return s;
+};
+
+// Un impact de bande dessinée en (x, y) : une étoile à douze pointes qui
+// surgit (0,12 s), tient, et s'efface en 0,5 s, avec quatre traits qui en partent.
+const impact = (x: number, y: number, age: number, intensite: number) => {
+  if (age < 0 || age > 0.5) return '';
+  const k = (age < 0.12 ? age / 0.12 : 1) * intensite;
+  const op = age < 0.3 ? 1 : 1 - (age - 0.3) / 0.2;
+  const r = 95 * k;
+  let d = '';
+  for (let i = 0; i < 24; i++) {
+    const a = (i * Math.PI) / 12 + age * 2;
+    const rr = i % 2 ? r * 0.55 : r * (0.9 + 0.2 * hasard(i + 50));
+    d += `${i ? 'L' : 'M'}${n1(x + Math.cos(a) * rr)} ${n1(y + Math.sin(a) * rr)} `;
+  }
+  let s = `<path d="${d}Z" fill="${COULEURS.fond}" ${T(7)} opacity="${n1(op)}"/>`;
+  for (let i = 0; i < 4; i++) {
+    const a = -0.9 + i * 0.6 + 0.3 * hasard(i + 60);
+    const l1 = r * 1.15;
+    const l2 = r * (1.5 + 0.4 * hasard(i + 61));
+    s += `<path d="M${n1(x + Math.cos(a) * l1)} ${n1(y + Math.sin(a) * l1)} L${n1(x + Math.cos(a) * l2)} ${n1(y + Math.sin(a) * l2)}" ${T(6)} opacity="${n1(op)}"/>`;
   }
   return s;
 };
 
-// De la vapeur : trois volutes grises qui montent de (x, y) en ondulant et
-// s'effacent, en boucle.
-const fumee = (x: number, y: number, age: number, fin: number) => {
+// Les étoiles du K.-O. : trois petites étoiles qui tournent en ellipse autour de (x, y).
+const etoilesKo = (x: number, y: number, age: number, fin: number) => {
   if (age < 0) return '';
+  const op = Math.min(1, age / 0.3, fin);
   let s = '';
   for (let i = 0; i < 3; i++) {
-    const u = ((age / 1.6 + 1 - i * 0.33) % 1);
-    const px = x - 22 + 22 * i + 12 * Math.sin(u * 6 + i);
-    const py = y - u * 150;
-    const op = Math.min(1, age / 0.3, fin) * (1 - u) * 0.5;
-    s += `<path d="M${n1(px)} ${n1(py)} q12 -18 0 -36 t0 -36" fill="none" stroke="#8a8784" stroke-width="${n1(4 + 4 * u)}" stroke-linecap="round" opacity="${n1(op)}"/>`;
+    const a = age * 5 + (i * Math.PI * 2) / 3;
+    const px = x + Math.cos(a) * 64;
+    const py = y + Math.sin(a) * 22;
+    s += `<path d="${cheminEtoile(px, py, 15)}" fill="${COULEURS.jaune}" stroke="${E}" stroke-width="3" stroke-linejoin="round" opacity="${n1(op * (0.65 + 0.35 * Math.sin(a)))}"/>`;
   }
   return s;
 };
 
-// La crêpe qui saute : une galette orange qui part de (x, y), monte de 260 px
-// en se retournant et retombe au même endroit en 0,7 s.
-const crepe = (x: number, y: number, age: number) => {
-  if (age < 0 || age > 0.7) return '';
-  const u = age / 0.7;
-  const py = y - 260 * Math.sin(Math.PI * u);
-  const ry = Math.max(2, Math.abs(Math.cos(u * Math.PI * 2)) * 10);
-  return `<ellipse cx="${n1(x)}" cy="${n1(py)}" rx="22" ry="${n1(ry)}" fill="${COULEURS.orange}" stroke="${E}" stroke-width="3"/>`;
+// Le diamant géant posé sur son socle en (x, y : la pointe du bas) : la
+// pierre, ses facettes, un halo qui respire, des étincelles qui tournent ;
+// visible jusqu'à « a », l'instant où il éclate.
+const diamantGeant = (x: number, y: number, age: number) => {
+  if (age < 0) return '';
+  const r = 150;
+  const cy = y - r;
+  const resp = 1 + 0.05 * Math.sin(age * 2.6);
+  let s = `<circle cx="${n1(x)}" cy="${n1(cy)}" r="${n1(r * 2.1 * resp)}" fill="${COULEURS.bleu}" opacity="0.07"/><circle cx="${n1(x)}" cy="${n1(cy)}" r="${n1(r * 1.5 * resp)}" fill="${COULEURS.bleu}" opacity="0.1"/>`;
+  s += `<path d="${cheminDiamant(x, cy, r)}" fill="${COULEURS.bleuClair}" ${T(8)}/>`;
+  s += facettesDiamant(x, cy, r, '#ffffff', 5);
+  for (let i = 0; i < 4; i++) {
+    const a = age * 1.6 + (i * Math.PI) / 2;
+    const k = 16 + 8 * Math.sin(age * 7 + i);
+    s += `<path d="${cheminEtincelle(x + Math.cos(a) * r * 1.25, cy + Math.sin(a) * r * 1.1, k)}" fill="${COULEURS.fond}" stroke="${E}" stroke-width="2.5"/>`;
+  }
+  return s;
 };
 
-// Des gouttes qui tombent de (x, y) (le héros trempé, le bord du parapluie),
-// quelques-unes à la fois, en boucle.
-const gouttes = (x: number, y: number, age: number, fin: number, largeur: number) => {
+// Les éclats du diamant brisé : vingt-huit morceaux bleu pâle qui partent
+// en étoile et retombent, et des étincelles blanches.
+const eclatsDiamant = (x: number, y: number, age: number) => {
+  if (age < 0 || age > 1.3) return '';
+  let s = '';
+  const vie = 1 - Math.max(0, (age - 0.5) / 0.8);
+  for (let i = 0; i < 28; i++) {
+    const g = i * 11 + 9;
+    const ang = hasard(g) * Math.PI * 2;
+    const v = 450 + 1100 * hasard(g + 1);
+    const ex = x + Math.cos(ang) * v * age;
+    const ey = y + Math.sin(ang) * v * age + 1100 * age * age;
+    const r = 8 + 22 * hasard(g + 2);
+    const rot = age * 900 * (hasard(g + 3) - 0.5);
+    s += `<path d="${cheminDiamant(ex, ey, r)}" fill="${COULEURS.bleuClair}" stroke="${E}" stroke-width="3" stroke-linejoin="round" opacity="${n1(vie)}" transform="rotate(${n1(rot)} ${n1(ex)} ${n1(ey)})"/>`;
+  }
+  for (let i = 0; i < 12; i++) {
+    const g = i * 17 + 5;
+    const ang = hasard(g) * Math.PI * 2;
+    const v = 300 + 900 * hasard(g + 1);
+    const ex = x + Math.cos(ang) * v * age;
+    const ey = y + Math.sin(ang) * v * age + 500 * age * age;
+    const k = (10 + 10 * hasard(g + 2)) * Math.max(0, 1 - age / 0.7);
+    if (k > 0.5) s += `<path d="${cheminEtincelle(ex, ey, k)}" fill="${COULEURS.fond}" stroke="${E}" stroke-width="2"/>`;
+  }
+  return s;
+};
+
+// Le diamant parfait qui flotte en (x, y) après l'éclat : il tourne sur
+// lui-même, monte et descend, et scintille, jusqu'à ce qu'on l'attrape (a).
+const diamantFlotte = (x: number, y: number, age: number, fin: number) => {
+  if (age < 0) return '';
+  const op = Math.min(1, age / 0.25, fin);
+  const cy = y + 14 * Math.sin(age * 3);
+  const sx = Math.max(0.15, Math.abs(Math.cos(age * 2.4)));
+  let s = `<circle cx="${n1(x)}" cy="${n1(cy)}" r="${n1(80 + 8 * Math.sin(age * 5))}" fill="${COULEURS.bleu}" opacity="${n1(0.14 * op)}"/>`;
+  s += `<g transform="translate(${n1(x)} ${n1(cy)}) scale(${n1(sx)} 1)" opacity="${n1(op)}"><path d="${cheminDiamant(0, 0, 40)}" fill="${COULEURS.bleuClair}" ${T(5)}/>${facettesDiamant(0, 0, 40, '#ffffff', 3)}</g>`;
+  for (let i = 0; i < 3; i++) {
+    const a = age * 3 + (i * Math.PI * 2) / 3;
+    s += `<path d="${cheminEtincelle(x + Math.cos(a) * 70, cy + Math.sin(a) * 60, 10 + 5 * Math.sin(age * 9 + i))}" fill="${E}" opacity="${n1(op)}"/>`;
+  }
+  return s;
+};
+
+// De la fumée partout autour de (x, y) : quatorze grosses volutes grises qui
+// gonflent, montent et s'écartent en 2,5 s, en boucle jusqu'à « a ».
+const fumee = (x: number, y: number, age: number, fin: number, largeur: number) => {
   if (age < 0) return '';
   let s = '';
-  const op = Math.min(1, age / 0.3, fin);
-  for (let i = 0; i < 5; i++) {
-    const g = i * 11 + 3;
-    const u = (age * (0.9 + 0.3 * hasard(g)) + hasard(g + 1)) % 1;
-    const px = x - largeur / 2 + largeur * hasard(g + 2);
-    const py = y + u * u * 170;
-    s += `<path d="M${n1(px)} ${n1(py - 7)} q5 7 0 12 q-5 -5 0 -12 Z" fill="${COULEURS.bleu}" stroke="${E}" stroke-width="1.5" opacity="${n1(op * (1 - u * 0.6))}"/>`;
+  const op0 = Math.min(1, age / 0.25, fin);
+  for (let i = 0; i < 14; i++) {
+    const g = i * 9 + 4;
+    const u = ((age / 2.5 + hasard(g)) % 1);
+    const cx = x + (hasard(g + 1) - 0.5) * largeur * (0.5 + u) + 30 * Math.sin(age * 2 + i);
+    const cy = y - 20 - u * 420 + 12 * Math.sin(age * 3 + i);
+    const r = (50 + 70 * hasard(g + 2)) * (0.5 + 0.9 * u);
+    const op = op0 * (1 - u) * 0.9;
+    s += `<circle cx="${n1(cx)}" cy="${n1(cy)}" r="${n1(r)}" fill="#dcdad6" stroke="${E}" stroke-width="5" opacity="${n1(op)}"/>`;
   }
   return s;
 };
 
-// Une lumière qui s'allume dans une fenêtre : un rectangle jaune de
-// « largeur » x « hauteur » autour de (x, y), qui monte en 0,4 s, et un halo.
-const lumiere = (x: number, y: number, age: number, largeur: number, hauteur: number) => {
+// Les rayons du soleil retrouvé : dix pans de lumière jaune qui tournent
+// lentement depuis (x, y), en fondu.
+const rayons = (x: number, y: number, age: number, fin: number) => {
   if (age < 0) return '';
-  const op = Math.min(1, age / 0.4);
+  const op = Math.min(1, age / 0.6, fin) * 0.16;
+  let s = '';
+  for (let i = 0; i < 10; i++) {
+    const a = age * 0.25 + (i * Math.PI * 2) / 10;
+    const l = 1500;
+    const w = 0.09;
+    s += `<path d="M${n1(x)} ${n1(y)} L${n1(x + Math.cos(a - w) * l)} ${n1(y + Math.sin(a - w) * l)} L${n1(x + Math.cos(a + w) * l)} ${n1(y + Math.sin(a + w) * l)} Z" fill="${COULEURS.jaune}" opacity="${n1(op)}"/>`;
+  }
+  return s;
+};
+
+// Un vol d'oiseaux de deX à versX à la hauteur y, de « de » à « a » : cinq
+// oiseaux en chevron qui battent des ailes.
+const oiseaux = (ef: EffetPlanBaton, t: number) => {
+  const de = ef.de;
+  const a = ef.a ?? de + 3;
+  if (t < de - 0.2 || t > a + 0.2) return '';
+  const u = (t - de) / Math.max(0.01, a - de);
+  const x0 = (ef.deX ?? 1200) + ((ef.versX ?? -200) - (ef.deX ?? 1200)) * u;
+  const y0 = ef.y ?? 620;
+  let s = '';
+  for (let i = 0; i < 5; i++) {
+    const bx = x0 + (i - 2) * 56 - Math.abs(i - 2) * 10;
+    const by = y0 + Math.abs(i - 2) * 26 + 4 * Math.sin(t * 3 + i);
+    const b = 10 * Math.sin(t * 11 + i * 1.3);
+    s += `<path d="M${n1(bx - 18)} ${n1(by + 2)} q9 ${n1(-10 + b)} 18 0 q9 ${n1(-10 + b)} 18 0" ${T(4)}/>`;
+  }
+  return s;
+};
+
+// La spirale du vertige au-dessus de (x, y) : elle tourne sur elle-même.
+const spirale = (x: number, y: number, age: number, fin: number) => {
+  if (age < 0) return '';
+  const op = Math.min(1, age / 0.3, fin);
+  let d = '';
+  for (let k = 0; k <= 40; k++) {
+    const a = k * 0.5 + age * 6;
+    const r = 4 + 1.6 * k;
+    d += `${k ? 'L' : 'M'}${n1(x + Math.cos(a) * r)} ${n1(y + Math.sin(a) * r * 0.6)} `;
+  }
+  return `<path d="${d}" ${T(5)} opacity="${n1(op)}"/>`;
+};
+
+// Le lasso qui vole de (x, y) vers (versX, versY) entre « de » et « a » : la
+// boucle file en arc en tournant, le brin se déroule derrière elle.
+const lassoVole = (ef: EffetPlanBaton, t: number) => {
+  const de = ef.de;
+  const a = ef.a ?? de + 0.6;
+  if (t < de || t > a) return '';
+  const u = 1 - (1 - bornes((t - de) / Math.max(0.01, a - de))) ** 2;
+  const x0 = ef.x ?? 540;
+  const y0 = ef.y ?? 900;
+  const x1 = ef.versX ?? 200;
+  const y1 = ef.versY ?? 600;
+  const px = x0 + (x1 - x0) * u;
+  const py = y0 + (y1 - y0) * u - 160 * Math.sin(Math.PI * u);
+  const r = 70 + 60 * u;
   return (
-    `<rect x="${n1(x - largeur / 2)}" y="${n1(y - hauteur / 2)}" width="${n1(largeur)}" height="${n1(hauteur)}" fill="${COULEURS.jaune}" opacity="${n1(0.45 * op)}"/>` +
-    `<rect x="${n1(x - largeur / 2 - 18)}" y="${n1(y - hauteur / 2 - 18)}" width="${n1(largeur + 36)}" height="${n1(hauteur + 36)}" rx="12" fill="${COULEURS.jaune}" opacity="${n1(0.12 * op)}"/>`
+    `<path d="M${n1(x0)} ${n1(y0)} Q${n1((x0 + px) / 2)} ${n1((y0 + py) / 2 + 70 * (1 - u))} ${n1(px)} ${n1(py)}" ${T(8)}/>` +
+    `<ellipse cx="${n1(px)}" cy="${n1(py)}" rx="${n1(r)}" ry="${n1(r * 0.42)}" fill="none" ${T(9).replace('fill="none" ', '')} transform="rotate(${n1(-30 + 25 * Math.sin(t * 9))} ${n1(px)} ${n1(py)})"/>`
   );
 };
 
@@ -288,23 +428,41 @@ export const effetsMonde = (effets: EffetPlanBaton[], t: number, graine: number)
       case 'etoile-ciel':
         if (ef.a === undefined || t < ef.a) s += etoileCiel(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.3);
         break;
-      case 'zzz':
-        if (ef.a === undefined || t < ef.a) s += zzz(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.3);
+      case 'plumes':
+        if (ef.a === undefined || t < ef.a) s += plumes(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.4);
         break;
-      case 'notes':
-        if (ef.a === undefined || t < ef.a) s += notes(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.4);
+      case 'bulle':
+        if (ef.a === undefined || t < ef.a) s += bulle(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.3, ef.icone ?? 'coeur');
+        break;
+      case 'impact':
+        s += impact(x, y, age, ef.intensite ?? 1);
+        break;
+      case 'etoiles-ko':
+        if (ef.a === undefined || t < ef.a) s += etoilesKo(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.3);
+        break;
+      case 'diamant-geant':
+        if (ef.a === undefined || t < ef.a) s += diamantGeant(x, y, age);
+        break;
+      case 'eclats-diamant':
+        s += eclatsDiamant(x, y, age);
+        break;
+      case 'diamant-flotte':
+        if (ef.a === undefined || t < ef.a) s += diamantFlotte(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.2);
+        break;
+      case 'rayons':
+        if (ef.a === undefined || t < ef.a) s += rayons(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.4);
         break;
       case 'fumee':
-        if (ef.a === undefined || t < ef.a) s += fumee(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.4);
+        if (ef.a === undefined || t < ef.a) s += fumee(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.5, ef.largeur ?? 500);
         break;
-      case 'crepe':
-        s += crepe(x, y, age);
+      case 'oiseaux':
+        s += oiseaux(ef, t);
         break;
-      case 'gouttes':
-        if (ef.a === undefined || t < ef.a) s += gouttes(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.3, ef.largeur ?? 60);
+      case 'spirale':
+        if (ef.a === undefined || t < ef.a) s += spirale(x, y, age, ef.a === undefined ? 1 : (ef.a - t) / 0.3);
         break;
-      case 'lumiere':
-        if (ef.a === undefined || t < ef.a) s += lumiere(x, y, age, ef.largeur ?? 90, ef.hauteur ?? 90);
+      case 'lasso-vole':
+        s += lassoVole(ef, t);
         break;
       case 'eclats':
         if (age >= 0 && age < 1) {

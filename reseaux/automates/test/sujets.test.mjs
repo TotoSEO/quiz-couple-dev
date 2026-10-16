@@ -37,16 +37,22 @@ test('la grille met le bonhomme bâton le lundi, le mercredi et le vendredi mati
   assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-25', 'matin'), 'pov');
 });
 
-test("la banque « baton » : une histoire par sujet, le héros fille une fois sur deux, une trame connue, une musique", () => {
+test("la banque « baton » : une histoire par sujet, les neuf trames de rêve à tour de rôle, le héros fille presque une fois sur deux et dans chaque trame, une trame connue, une musique", () => {
   const sujets = SUJETS.baton;
-  assert.ok(sujets.length >= 24, 'au moins huit semaines de sujets');
-  for (const trame of Object.keys(TRAMES)) assert.ok(sujets.filter((x) => x.trame === trame).length >= 2, `au moins deux histoires de la trame ${trame}`);
+  const trames = Object.keys(TRAMES);
+  assert.ok(sujets.length >= 27, 'au moins neuf semaines de sujets');
+  for (const trame of trames) {
+    const de = sujets.filter((x) => x.trame === trame);
+    assert.ok(de.length >= 3, `au moins trois histoires de la trame ${trame}`);
+    assert.ok(de.some((x) => x.heros === 'fille') && de.some((x) => x.heros === 'garcon'), `la trame ${trame} a une héroïne et un héros`);
+  }
+  const filles = sujets.filter((x) => x.heros === 'fille').length;
+  assert.ok(Math.abs(filles - sujets.length / 2) <= 1.5, `${filles} héroïnes sur ${sujets.length}`);
   const ids = new Set();
   sujets.forEach((s, i) => {
     assert.ok(!ids.has(s.id), `${s.id} en double`);
     ids.add(s.id);
-    assert.equal(s.heros, i % 2 ? 'fille' : 'garcon', `${s.id} : le héros alterne`);
-    assert.ok(Object.keys(TRAMES).includes(s.trame), `${s.id} : trame ${s.trame}`);
+    assert.equal(s.trame, trames[i % trames.length], `${s.id} : les trames tournent dans l'ordre`);
     assert.ok(typeof s.idee === 'string' && s.idee.length >= 100, `${s.id} : l'histoire se raconte en deux ou trois phrases`);
     assert.ok(typeof s.son === 'string' && s.son.length >= 3 && s.son.length <= 40, `${s.id} : un titre connu pour la musique (son)`);
   });

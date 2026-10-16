@@ -112,6 +112,11 @@ export const VOLUMES = {
   monte: 0.14,
   ralenti: 0.16,
   atterrit: 0.2,
+  // le format rêvé (16 octobre 2026) : la meute qui aboie, le diamant qui
+  // éclate en cristal, le marteau sur l'enclume
+  aboie: 0.2,
+  cristal: 0.2,
+  enclume: 0.22,
   // le bonhomme bâton, suite (Mixkit, 16 octobre 2026 ; Thomas : « plusieurs
   // sound effects sont pas bons, genre quand il sort son épée ») : la lame
   // qui sort et rentre, le dragon, les passages d'air, les impacts,
@@ -189,6 +194,7 @@ export const VARIANTES: Partial<Record<keyof typeof VOLUMES, number>> = {
   atterrit: 2,
   lame: 2,
   'dragon-rugit': 2,
+  aboie: 2,
   passage: 3,
   air: 3,
   crepite: 2,

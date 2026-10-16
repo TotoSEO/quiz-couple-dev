@@ -81,6 +81,9 @@ export type EtatCreature = {
   serres: number; // 0 repliées, 1 tendues
   // temps depuis le début de l'explosion, -1 sinon
   eclate: number;
+  // la meute : combien de chiens, sur quelle largeur
+  nombre?: number;
+  largeur?: number;
   t: number;
 };
 
@@ -102,7 +105,28 @@ const NUAGE: Record<NomPoseDragon, ParamsDragon> = {
   rugit: { ailes: 0.7, vitesseAiles: 1.3, cou: 1, gueule: 1, yeux: 1, serres: 0.6 },
   eclate: { ailes: 0.7, vitesseAiles: 0, cou: 1, gueule: 1, yeux: 1, serres: 1 },
 };
-const PARAMS: Record<NomCreature, Record<NomPoseDragon, ParamsDragon>> = { dragon: DRAGON, nuage: NUAGE };
+// La lune : ailes = son rayonnement, cou = l'écrasement quand on la tire,
+// gueule = la bouche ouverte de surprise, yeux = les yeux ouverts, serres =
+// la boucle du lasso autour d'elle. vole : elle dort dans le ciel ; plonge :
+// attrapée, tirée ; perche : posée sur la colline, rayonnante.
+const LUNE: Record<NomPoseDragon, ParamsDragon> = {
+  vole: { ailes: 0.5, vitesseAiles: 0, cou: 0, gueule: 0, yeux: 0, serres: 0 },
+  plonge: { ailes: 0.7, vitesseAiles: 0, cou: 0.7, gueule: 1, yeux: 1, serres: 1 },
+  perche: { ailes: 1, vitesseAiles: 0, cou: 0.15, gueule: 0, yeux: 0, serres: 0.6 },
+  rugit: { ailes: 0.7, vitesseAiles: 0, cou: 0.4, gueule: 1, yeux: 1, serres: 1 },
+  eclate: { ailes: 1, vitesseAiles: 0, cou: 0, gueule: 0, yeux: 0, serres: 0 },
+};
+// La meute : ailes = la hauteur des sauts, vitesseAiles = leur rythme, cou =
+// la vitesse des queues, gueule = les aboiements, yeux = la langue tirée.
+// perche : assis, la queue qui bat ; vole : saute partout ; rugit : aboie.
+const CHIENS: Record<NomPoseDragon, ParamsDragon> = {
+  vole: { ailes: 1, vitesseAiles: 1.6, cou: 1, gueule: 0, yeux: 1, serres: 0 },
+  plonge: { ailes: 0.6, vitesseAiles: 2.2, cou: 1, gueule: 1, yeux: 0, serres: 0 },
+  perche: { ailes: 0, vitesseAiles: 0, cou: 0.5, gueule: 0, yeux: 0.6, serres: 0 },
+  rugit: { ailes: 0.3, vitesseAiles: 2.4, cou: 1, gueule: 1, yeux: 0, serres: 0 },
+  eclate: { ailes: 0, vitesseAiles: 0, cou: 0, gueule: 0, yeux: 0, serres: 0 },
+};
+const PARAMS: Record<NomCreature, Record<NomPoseDragon, ParamsDragon>> = { dragon: DRAGON, nuage: NUAGE, lune: LUNE, chiens: CHIENS };
 
 const derniere = <T extends { a: number }, K extends keyof T>(etapes: T[], k: K, t: number): { v: T[K]; depuis: number } | undefined => {
   let out: { v: T[K]; depuis: number } | undefined;
@@ -165,6 +189,8 @@ export const etatCreature = (c: CreatureBaton, t: number): EtatCreature => {
     yeux: mix('yeux'),
     serres: mix('serres'),
     eclate: pose === 'eclate' && poseE ? t - poseE.depuis : -1,
+    nombre: c.nombre,
+    largeur: c.largeur,
     t,
   };
 };
@@ -200,12 +226,16 @@ export type Contexte = {
   etats?: EtatBaton[];
 };
 
-// Le point où s'accroche un personnage porté, dans le repère (en R) de son
-// porteur : sur le dos, derrière les hanches et un peu au-dessus ; à la main
-// proche, juste sous elle (il la tient par le dos).
-const ancre = (porteur: EtatBaton, att: AttacheBaton): [number, number] => {
+// Le point où s'accroche un personnage porté (ses hanches), dans le repère
+// (en R) de son porteur : sur le dos, derrière les hanches et un peu
+// au-dessus ; à la main proche, juste sous elle (il la tient par le dos) ; à
+// la main arrière (bras), 4,75 R de son côté « pieds », pour que sa propre
+// main levée (pose volee, les bras tendus vers lui) arrive dans celle du
+// porteur, à son échelle à lui.
+const ancre = (porteur: EtatBaton, att: AttacheBaton, kAttache: number): [number, number] => {
   const sq = squelette(porteur.apparence.pose);
-  const local: [number, number] = att.ancre === 'dos' ? [sq.hanche[0] - 0.95, sq.hanche[1] - 0.75] : [sq.mainD[0] + 0.15, sq.mainD[1] + 0.35];
+  const local: [number, number] =
+    att.ancre === 'dos' ? [sq.hanche[0] - 0.95, sq.hanche[1] - 0.75] : att.ancre === 'bras' ? [sq.mainG[0] - 0.15, sq.mainG[1] + 4.75 * (kAttache / porteur.k)] : [sq.mainD[0] + 0.15, sq.mainD[1] + 0.35];
   return pointEcran(porteur, local);
 };
 
@@ -233,7 +263,12 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
   const arme = derniere(etapes, 'arme', t)?.v ?? p.arme ?? 'aucune';
   const tient = derniere(etapes, 'tient', t)?.v ?? p.tient ?? 'aucun';
   const vetement = derniere(etapes, 'vetement', t)?.v ?? p.vetement ?? 'aucun';
-  const regard = derniere(etapes, 'regard', t)?.v ?? [0, 0];
+  const regardE = derniere(etapes, 'regard', t)?.v ?? [0, 0];
+  let regard: [number, number] = [regardE[0], regardE[1]];
+  const vetementE = derniere(etapes, 'vetement', t);
+  const depuisVetement = vetementE ? t - vetementE.depuis : 10;
+  const refletE = derniere(etapes, 'reflet', t);
+  const reflet = refletE && refletE.v ? t - refletE.depuis : -1;
   const sol = derniere(etapes, 'sol', t)?.v ?? p.sol ?? ctx.sol;
 
   // position
@@ -251,6 +286,7 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
   let dy = 0;
   let horsChamp = false;
   let respire = true;
+  let vol = 0;
 
   // la charge et le vent, interpolés action par action
   for (const a of actions) {
@@ -330,7 +366,7 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
           const phi = (Math.atan2(vy, vx) * 180) / Math.PI;
           sens = vx >= 0 ? 1 : -1;
           rot += douce(u / 0.12) * (phi + 90);
-          pose = melange(pose, POSES.bond, bornes(u / 0.12));
+          pose = melange(pose, POSES[a.pose ?? 'bond'], bornes(u / 0.12));
           horsChamp = true;
           respire = false;
         }
@@ -375,6 +411,25 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
         if (!dedans) break;
         const s = Math.sin(PI2 * 4.2 * (t - a.de));
         pose = { ...pose, hancheG: pose.hancheG + 22 * s, hancheD: pose.hancheD - 22 * s, genouG: pose.genouG + 15 * Math.abs(s), genouD: pose.genouD + 15 * Math.abs(s) };
+        break;
+      }
+      case 'plane': {
+        // le vol : le corps ondule, les ailes battent (vol), on ne respire pas
+        const w = poids(a, t, 0.4);
+        if (w <= 0) break;
+        vol = Math.max(vol, w);
+        const amp = a.amplitude ?? 26;
+        dy += amp * Math.sin(PI2 * 0.9 * (t - a.de)) * w;
+        rot += 3 * Math.sin(PI2 * 0.9 * (t - a.de) + 0.8) * w;
+        respire = false;
+        break;
+      }
+      case 'secoue': {
+        // non de la tête : elle tourne de gauche à droite trois fois par seconde
+        if (!dedans) break;
+        const s = Math.sin(PI2 * 3 * (t - a.de)) * poids(a, t, 0.15);
+        pose = { ...pose, tete: pose.tete + 6 * s };
+        regard = [regard[0] + 0.9 * s, regard[1]];
         break;
       }
       default:
@@ -442,7 +497,7 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
       const u = attE ? douce((t - attE.depuis) / 0.3) : 1;
       const w = att ? u : 1 - u;
       if (w > 0) {
-        const [ax, ay] = ancre(porteur, attVise);
+        const [ax, ay] = ancre(porteur, attVise, k);
         const yLibre = yAbsolu ?? sol - ancrage(pose) * k - haut;
         x = x + (ax - x) * w;
         yAbsolu = yLibre + (ay - yLibre) * w;
@@ -488,6 +543,9 @@ export const etatPerso = (p: PersoBaton, t: number, ctx: Contexte, graine: numbe
     graine,
     depuis,
     etincelle,
+    vol,
+    depuisVetement,
+    reflet,
   };
   if (arme === 'main' && (electrise > 0 || actives(actions, t).some((a) => a.type === 'trainee'))) traineeLame = true;
   if (trainee && electrise > 0) trainee.teinte = '#7fd6ff';

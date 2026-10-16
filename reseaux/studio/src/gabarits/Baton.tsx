@@ -19,7 +19,7 @@ import type { PlanBaton, RecetteBaton } from '../baton/recette';
 import { Etage } from '../baton/Scene';
 import { FLOU } from '../baton/plan';
 import { plansDe } from '../baton/plans';
-import { calculer, remap } from '../baton/temps';
+import { calculer, pointsPerso, remap } from '../baton/temps';
 
 const TRANSITION = 8;
 // le flou le plus fort de la transition, en pixels
@@ -87,6 +87,22 @@ export const Baton: React.FC<{ recette: RecetteBaton; plan: Plan; verification?:
   // le noir : un fondu au noir en fin de reel si le dernier plan le demande
   const reste = sc.duree - fPlan;
   const noir = i === scenes.length - 1 && p.transition === 'noir' && reste < 10 ? 1 - reste / 10 : 0;
+  // les bulles de dialogue (effet « dit ») : au-dessus de la tête de celui qui
+  // parle, projetée à l'écran (en coordonnées de l'image : le calque de la
+  // zone utile a son origine à son coin, d'où le calc), dans la zone utile et
+  // jamais sur le titre ; elles naissent en 0,2 s (un ressort)
+  const bulles: { cle: string; x: number; y: number; k: number; texte: string }[] = [];
+  for (const [k, e] of (p.effets ?? []).entries()) {
+    if (e.effet !== 'dit' || t < e.de || (e.a !== undefined && t >= e.a)) continue;
+    const etat = image.etats.find((q) => q.qui === e.qui);
+    if (!etat) continue;
+    const [tx, ty] = pointsPerso(etat).tete;
+    const sx = (tx - image.cam.x) * image.cam.zoom + 540 + image.cam.ox;
+    const sy = (ty - image.cam.y) * image.cam.zoom + 960 + image.cam.oy;
+    const u = bornes((t - e.de) / 0.2);
+    const ressort = 1 + (1.70158 * 1.2 + 1) * (u - 1) ** 3 + 1.70158 * 1.2 * (u - 1) ** 2;
+    bulles.push({ cle: `dit${k}`, x: bornes(sx, 440, 640), y: Math.max(560, sy - 150 * image.cam.zoom), k: ressort, texte: e.texte ?? '...' });
+  }
   // en flou : l'ancien se brouille et s'éclaircit, le nouveau se précise
   const filtrePrec = flou ? `blur(${(FLOU_MAX * q).toFixed(1)}px) brightness(${(1 + 0.3 * Math.sin(Math.PI * q)).toFixed(3)})` : undefined;
   const filtre = flou ? `blur(${(FLOU_MAX * (1 - q)).toFixed(1)}px) brightness(${(1 + 0.3 * Math.sin(Math.PI * q)).toFixed(3)})` : undefined;
@@ -112,6 +128,11 @@ export const Baton: React.FC<{ recette: RecetteBaton; plan: Plan; verification?:
             {r.titre}
           </div>
         )}
+        {bulles.map((b) => (
+          <div key={b.cle} className="bt-bulle" data-verif="bulle" data-sans-chevauchement data-lignes-max={2} style={{ left: `calc(${b.x}px - var(--zone-reel-gauche))`, top: `calc(${b.y}px - var(--zone-reel-haut))`, transform: `translate(-50%, -100%) scale(${b.k.toFixed(3)})` }}>
+            {b.texte}
+          </div>
+        ))}
         {r.signature !== false && (
           <div className="qc-signature bt-signature" data-verif="signature">
             <Img src={staticFile('marque/logo-quiz-couple-180.png')} alt="" />
