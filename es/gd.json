@@ -1320,7 +1320,22 @@
     "r3_a": "Seguid cuidando la comunicación y no perdáis de vista vuestros proyectos comunes.",
     "r4_t": "¡El amor más fuerte que la distancia!",
     "r4_d": "¡Enhorabuena! Vuestra pareja demuestra que la distancia no es un obstáculo cuando el amor es sólido.",
-    "r4_a": "Tenéis todas las claves para conseguirlo. El final de la distancia será la guinda del pastel."
+    "r4_a": "Tenéis todas las claves para conseguirlo. El final de la distancia será la guinda del pastel.",
+    "modesIcone": "🌍",
+    "modesTitre": "¿Cómo queréis hacer el test?",
+    "modesDesc": "¡Las preguntas no cambian entre los modos! Solo cambia la manera en la que respondéis.",
+    "modesRetour": "Cambiar de modo",
+    "modeSoloTitre": "EVALUAR TU RELACIÓN A DISTANCIA SOLO/A",
+    "modeSoloDesc": "Respondes tú solo/a a las preguntas, sobre tu relación",
+    "modeSoloMeta": "Una sola puntuación",
+    "modeDuoTitre": "RESPONDER EN PAREJA",
+    "modeDuoDesc": "Respondéis cada uno a las mismas preguntas, con el mismo móvil o cada uno con el suyo, estéis donde estéis",
+    "modeDuoMeta": "Dos puntuaciones y su media",
+    "duoTitre": "Vuestra relación a distancia",
+    "r1_tag": "Puesta a prueba",
+    "r2_tag": "Por ajustar",
+    "r3_tag": "Sólida",
+    "r4_tag": "Muy sólida"
   },
   "cp": {
     "q1": "¿Cuál es tu color favorito?",
