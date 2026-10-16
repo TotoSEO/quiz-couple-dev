@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-16T03:13:06.054Z",
+  "genere_le": "2026-10-16T08:07:16.596Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -20,47 +20,12 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 22,
+  "reserve_jours": 24,
   "a_remplir": [
     {
-      "jour": "2026-11-07",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-07",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-07",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-11-08",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-08",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-08",
-      "creneau": "soir",
-      "categorie": "mipaps-histoire"
-    },
-    {
       "jour": "2026-11-09",
       "creneau": "matin",
       "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-09",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
     },
     {
       "jour": "2026-11-09",
@@ -1406,7 +1371,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1460,7 +1425,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -1994,6 +1959,69 @@
       "statut": "a_rendre",
       "texte": null,
       "erreur": null
+    },
+    {
+      "jour": "2026-11-07",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-07",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "quand tu me dis « t'es belle » alors que j'ai la tête du matin",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-07",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "quand tu ris, j'oublie ce que je voulais dire",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-08",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-08",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "merci d'avoir été là le jour où j'ai pas répondu au téléphone.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-08",
+      "creneau": "soir",
+      "gabarit": "mipaps-carrousel",
+      "categorie": "mipaps-histoire",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-09",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "mais je dis rien.",
+      "erreur": null
     }
   ],
   "idees": [],
@@ -2011,7 +2039,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-16",
+      "jour": "2026-10-17",
       "creneau": "midi"
     }
   },
@@ -2042,6 +2070,13 @@
       "releve": "j7",
       "vues": 78,
       "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "3e8e2530-1062-47ec-b520-c53d6937fa33",
+      "releve": "j7",
+      "vues": 1451,
+      "partages": 1,
       "enregistrements": 0
     }
   ]
