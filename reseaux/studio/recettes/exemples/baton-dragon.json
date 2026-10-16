@@ -180,8 +180,8 @@
             },
             {
               "a": 5.0,
-              "x": 1500,
-              "y": 60,
+              "x": 1600,
+              "y": 150,
               "pose": "vole",
               "ease": "entree"
             }
@@ -936,7 +936,7 @@
       ]
     },
     {
-      "description": "Plan d'ensemble, même cadrage que la tour, puis la caméra suit le héros et serre sur le combat. Détente : il quitte le sol d'un coup, onde de choc électrique, poussière, secousse, souffle de fusée. Il file en diagonale ascendante jusqu'au dragon, tête la première, corps aligné sur la trajectoire, lame pointée ; six rémanences, lignes de vitesse. Il s'électrise : éclairs sur le corps, halo bleu, yeux bleus, montée électrique, crépitement. À deux mètres du dragon, ralenti onze fois, caméra serrée, voile bleuté, battement de cœur, bourdon. Impact : flash blanc, le dragon est pulvérisé (éclats, braises, anneau bleu), secousse de 40 px, déflagration, débris qui retombent. Il poursuit en arc, atterrit accroupi sur la plateforme, se redresse, se tourne vers elle, et on tient le plan pendant que les éclats finissent de tomber ; elle saute de joie.",
+      "description": "Plan d'ensemble, même cadrage que la tour, la caméra reste large pendant l'envol puis serre d'un coup sur le combat. Détente : il quitte le sol d'un coup, onde de choc électrique, poussière, secousse, souffle de fusée. Il file en diagonale ascendante jusqu'au dragon, tête la première, corps aligné sur la trajectoire, lame pointée ; six rémanences, lignes de vitesse. Il s'électrise : éclairs sur le corps, halo bleu, yeux bleus, montée électrique, crépitement. À deux mètres du dragon, ralenti onze fois, caméra serrée, voile bleuté, battement de cœur, bourdon. Impact : flash blanc, le dragon est pulvérisé (éclats, braises, anneau bleu), secousse de 40 px, déflagration, débris qui retombent. Il poursuit en arc, atterrit accroupi sur la plateforme, se redresse, se tourne vers elle, et on tient le plan pendant que les éclats finissent de tomber ; elle saute de joie.",
       "duree": 2.0,
       "decor": "tour",
       "ralentis": [
@@ -1103,9 +1103,9 @@
         },
         {
           "a": 0.3,
-          "zoom": 1.4,
-          "cible": "heros",
-          "point": "corps"
+          "zoom": 1,
+          "x": 540,
+          "y": 960
         },
         {
           "a": 0.46,

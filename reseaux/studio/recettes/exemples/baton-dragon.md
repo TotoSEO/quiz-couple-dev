@@ -59,7 +59,8 @@ gris clair), un soleil, deux nuages, des touffes d'herbe.
   ombre file jusqu'à ses pieds. 3,60 s : il la saisit dans ses serres.
   **L'écran tremble** (secousse de 30 px, amortie en 0,45 s), un nuage de
   poussière à ses pieds, impact profond.
-- 3,60 → 5,00 s : le dragon remonte vers la droite en l'emportant,
+- 3,60 → 5,00 s : le dragon remonte à plat vers la droite en l'emportant,
+  sous le titre,
   elle a les bras levés accrochés aux serres et les jambes qui gigotent. Le
   héros recule d'un pas, bras écartés, tête renversée pour les suivre des
   yeux (le regard monte jusqu'au coin), bouche ouverte, sous le choc.
@@ -216,7 +217,9 @@ héros** et serre sur le combat. Les temps ci-dessous sont ceux du récit.
   de l'épée tendu devant, lame pointée sur le dragon, l'autre bras le long du
   corps, jambes tendues qui traînent, pointes de pied en arrière. Six
   **images rémanentes** derrière lui, **lignes de vitesse** en diagonale sur
-  toute l'image. La caméra l'accompagne (zoom 1,0 → 1,4 sur lui).
+  toute l'image. La caméra reste large jusqu'à 0,30 s (serrer sur lui
+  faisait monter la plateforme, et elle, dans le titre), puis pousse d'un
+  coup vers le point d'impact.
 - 0,10 s : il **s'électrise** : des éclairs bleus sautent le long de ses
   bras et de ses jambes, un halo bleu l'entoure, la lame flambe, et **ses
   yeux deviennent bleus** (deux points lumineux). Montée électrique,
