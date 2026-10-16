@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-15T08:14:19.955Z",
+  "genere_le": "2026-10-16T03:13:06.054Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-15",
+  "aujourdhui": "2026-10-16",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 23,
+  "reserve_jours": 22,
   "a_remplir": [
     {
       "jour": "2026-11-07",
@@ -1191,6 +1191,21 @@
       "jour": "2027-01-23",
       "creneau": "soir",
       "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-24",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-24",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-24",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
     }
   ],
   "a_corriger": [],
@@ -1373,7 +1388,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "t'as encore oublié le pain...",
       "erreur": null
     },
@@ -1382,7 +1397,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "dors bien mon amoureux <3",
       "erreur": null
     },
@@ -1427,7 +1442,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "état des lieux",
       "erreur": null
     },
@@ -1436,7 +1451,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "je t'aime en pyjama troué aussi",
       "erreur": null
     },
@@ -1984,11 +1999,11 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-16",
+      "jour": "2026-10-17",
       "creneau": "matin"
     },
     "mipaps-statique": {
-      "jour": "2026-10-15",
+      "jour": "2026-10-17",
       "creneau": "soir"
     },
     "mipaps-histoire": {
@@ -2012,6 +2027,20 @@
       "variante_id": "7f6983cd-5218-4f62-890f-eb70d7f76866",
       "releve": "j7",
       "vues": 607,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "eb10d1a0-1926-4af5-b5db-3991cd7193df",
+      "releve": "j7",
+      "vues": 684,
+      "partages": 1,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "0d0a197e-a99f-4114-96d5-709d171a10c0",
+      "releve": "j7",
+      "vues": 78,
       "partages": 0,
       "enregistrements": 0
     }
