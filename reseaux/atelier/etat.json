@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-15T08:14:18.204Z",
+  "genere_le": "2026-10-16T03:13:03.984Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-15",
+  "aujourdhui": "2026-10-16",
   "melange": {
     "midi": {
       "1": "connais-tu",
@@ -28,7 +28,7 @@
     },
     "matin": "pov"
   },
-  "reserve_jours": 34,
+  "reserve_jours": 33,
   "a_remplir": [
     {
       "jour": "2026-11-18",
@@ -1029,6 +1029,21 @@
       "jour": "2027-01-23",
       "creneau": "soir",
       "categorie": "dix-mais"
+    },
+    {
+      "jour": "2027-01-24",
+      "creneau": "matin",
+      "categorie": "pov"
+    },
+    {
+      "jour": "2027-01-24",
+      "creneau": "midi",
+      "categorie": "statique"
+    },
+    {
+      "jour": "2027-01-24",
+      "creneau": "soir",
+      "categorie": "phrase"
     }
   ],
   "a_corriger": [],
@@ -1256,7 +1271,7 @@
       "creneau": "midi",
       "gabarit": "pov",
       "categorie": "statique",
-      "statut": "conteneur",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1265,7 +1280,7 @@
       "creneau": "soir",
       "gabarit": "carrousel",
       "categorie": "carrousel",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "8 questions you've never asked each other",
       "erreur": null
     },
@@ -1310,7 +1325,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Would you rather: travel?",
       "erreur": null
     },
@@ -1319,7 +1334,7 @@
       "creneau": "soir",
       "gabarit": "carrousel",
       "categorie": "dix-mais",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "Texting edition. Is he still a 10?",
       "erreur": null
     },
@@ -2173,7 +2188,7 @@
   "idees": [],
   "prochain_creneau": {
     "pov": {
-      "jour": "2026-10-16",
+      "jour": "2026-10-17",
       "creneau": "matin"
     },
     "connais-tu": {
@@ -2197,7 +2212,7 @@
       "creneau": "soir"
     },
     "carrousel": {
-      "jour": "2026-10-15",
+      "jour": "2026-10-22",
       "creneau": "soir"
     },
     "bd": {
@@ -2221,6 +2236,20 @@
       "variante_id": "7f6983cd-5218-4f62-890f-eb70d7f76866",
       "releve": "j7",
       "vues": 607,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "eb10d1a0-1926-4af5-b5db-3991cd7193df",
+      "releve": "j7",
+      "vues": 684,
+      "partages": 1,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "0d0a197e-a99f-4114-96d5-709d171a10c0",
+      "releve": "j7",
+      "vues": 78,
       "partages": 0,
       "enregistrements": 0
     }
