@@ -788,7 +788,7 @@
   // elle, l'onglet le dit et la ligne sous les lances reste vide.
   var PAGES_DISTANCE = ['testCouple', 'testCommonPoints', 'testCompatibilite', 'quizAmoureux',
     'testCoupleSain', 'testParentalite', 'testEmmenager', 'testAmeSoeur', 'testChargeMentale',
-    'jeuJamais', 'jeuQuiDeNous', 'jeuQuiPourrait', 'jeuDixMais', 'testCompatSexuelle'];
+    'jeuJamais', 'jeuQuiDeNous', 'jeuQuiPourrait', 'jeuDixMais', 'testCompatSexuelle', 'testDistance'];
   var DEBUT_DISTANCE = (typeof window !== 'undefined' && window.__ADM_DEBUT_DISTANCE) || '2026-09-07';
   var distanceCouchesVues = { lances: true, distance: true, part: true };
   var _distanceCouches = null;
