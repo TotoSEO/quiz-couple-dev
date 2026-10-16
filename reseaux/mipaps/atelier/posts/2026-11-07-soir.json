@@ -1,0 +1,53 @@
+{
+  "jour": "2026-11-07",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-009",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : lui rit, elle le regarde, des cœurs.",
+        "texte": "quand tu ris, j'oublie ce que je voulais dire",
+        "duree": 11,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "rire",
+              "x": 250,
+              "taille": 265
+            },
+            {
+              "perso": "elle",
+              "expression": "transi",
+              "x": 400,
+              "taille": 262
+            },
+            {
+              "objet": "coeur",
+              "x": 325,
+              "y": 150,
+              "echelle": 0.45
+            }
+          ]
+        }
+      },
+      "legende": "elle voulait parler du loyer.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#mignon"
+      ]
+    }
+  }
+}

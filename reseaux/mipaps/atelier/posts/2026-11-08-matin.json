@@ -1,0 +1,221 @@
+{
+  "jour": "2026-11-08",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-026",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "La photo de couple au retardateur : il pose le téléphone, court la rejoindre, trois fois ; au dixième essai ils posent enfin ; la photo est floue et ils la gardent. Trois plans, 13 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.8,
+            "description": "Le téléphone est posé par terre à gauche. Il lance le retardateur, puis court vers elle et s'arrête à côté d'elle, se tourne vers nous. Elle l'attend, souriante, et prend la pose.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150,
+                    "angle": 90,
+                    "pose": "debout",
+                    "expression": "concentre"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 150,
+                    "pose": "sprint",
+                    "expression": "energique"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 300
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.4,
+                    "angle": 0,
+                    "expression": "fier"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "clin"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 100,
+                "y": 352,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "essai 1",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3.8,
+            "description": "Le téléphone est posé par terre à gauche. Il lance le retardateur, puis court vers elle et s'arrête à côté d'elle, se tourne vers nous. Elle l'attend, souriante, et prend la pose.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 150,
+                    "angle": 90,
+                    "pose": "debout",
+                    "expression": "concentre"
+                  },
+                  {
+                    "a": 0.8,
+                    "x": 150,
+                    "pose": "sprint",
+                    "expression": "essouffle"
+                  },
+                  {
+                    "a": 1.8,
+                    "x": 300
+                  },
+                  {
+                    "a": 2.0,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.4,
+                    "angle": 0,
+                    "expression": "essouffle"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "clin"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 100,
+                "y": 352,
+                "echelle": 0.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "essai 7",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Les deux posent, côte à côte, face à nous, souriants. Le téléphone clique à 1,6 s. Il va le chercher, ils regardent l'écran ensemble : lui ému, elle aussi. Un cœur flotte. Le texte à 0,3 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 2,
+                    "expression": "emu"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2,
+                    "expression": "emu"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 100,
+                "y": 352,
+                "echelle": 0.5
+              },
+              {
+                "objet": "coeur",
+                "x": 350,
+                "y": 150,
+                "echelle": 0.45,
+                "de": 2.2,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "essai 10",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "le retardateur fait 10 secondes.\n\ntague ton amoureux",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amour"
+      ]
+    }
+  }
+}

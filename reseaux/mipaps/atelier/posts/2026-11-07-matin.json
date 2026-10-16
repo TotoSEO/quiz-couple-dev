@@ -1,0 +1,188 @@
+{
+  "jour": "2026-11-07",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-008",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "La flaque : il pleut, il la porte à bout de bras pour passer la flaque, il trébuche, les deux finissent trempés et contents. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Il pleut. Les deux sont debout, lui à gauche, elle à droite, contents, sous la pluie. Le texte se pose à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 420,
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pluie",
+                "x": 350,
+                "y": 110,
+                "echelle": 1.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "une flaque de 3 mètres",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "ambiance": "pluie"
+          },
+          {
+            "duree": 4,
+            "transition": "coupe",
+            "description": "Il la soulève et la porte au-dessus de sa tête, elle est assise sur lui, ravie, les bras en l'air. Il avance de profil, fier, à petits pas, vers la droite. La pluie tombe.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "angle": 90,
+                    "pose": "porte_haut",
+                    "bras": "porte_haut",
+                    "expression": "fier"
+                  },
+                  {
+                    "a": 3,
+                    "x": 420
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "y": 246,
+                    "taille": 150,
+                    "pose": "assis",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 3,
+                    "x": 420
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pluie",
+                "x": 350,
+                "y": 110,
+                "echelle": 1.6
+              }
+            ],
+            "ambiance": "pluie"
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Les deux sont par terre, assis, trempés, des bulles autour d'eux. Lui sourit, elle aussi, les yeux plissés. Des cœurs flottent. Le texte à 0,3 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 290,
+                    "pose": "assis",
+                    "expression": "content",
+                    "signes": [
+                      "bulles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 390,
+                    "pose": "assis",
+                    "expression": "rire"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pluie",
+                "x": 350,
+                "y": 110,
+                "echelle": 1.6
+              },
+              {
+                "objet": "coeur",
+                "x": 340,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.8,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 245,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 1.2000000000000002,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "il a glissé à 2 mètres 90",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ],
+            "ambiance": "pluie"
+          }
+        ]
+      },
+      "legende": "il a dit « je te porte ».\n\ntague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#amoureux"
+      ]
+    }
+  }
+}

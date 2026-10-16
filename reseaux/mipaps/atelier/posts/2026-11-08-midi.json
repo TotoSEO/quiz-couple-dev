@@ -1,0 +1,28 @@
+{
+  "jour": "2026-11-08",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-017",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Déclaration : une phrase plate pour dire merci, sans formule.",
+        "style": "declaration",
+        "texte": "merci d'avoir été là le jour où j'ai pas répondu au téléphone."
+      },
+      "legende": "garde ça pour un soir où ça va pas",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#couplegoals"
+      ]
+    }
+  }
+}
