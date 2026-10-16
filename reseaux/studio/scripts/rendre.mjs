@@ -89,7 +89,7 @@ const bruitagesManquants = (plan) => {
   return [...noms].filter((n) => mixkit.has(n) && !fs.existsSync(path.join(ici, '..', 'public', 'sons', `mx-${n}.mp3`)));
 };
 
-const REELS = ['citation', 'quiz-chrono', 'connais-tu', 'tu-preferes', 'pov', 'mipaps-reel', 'mipaps-statique'];
+const REELS = ['citation', 'quiz-chrono', 'connais-tu', 'tu-preferes', 'pov', 'baton', 'mipaps-reel', 'mipaps-statique'];
 if (REELS.includes(recette.gabarit)) {
   const composition = await choisir('reel', { recette });
   const { plan } = composition.props;

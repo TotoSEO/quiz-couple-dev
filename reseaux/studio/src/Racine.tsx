@@ -6,6 +6,7 @@ import { Ambiances, Bruitages, Musique } from './charte/Son';
 import { Citation } from './gabarits/Citation';
 import { Jeu } from './gabarits/QuizChrono';
 import { Pov } from './gabarits/Pov';
+import { Baton } from './gabarits/Baton';
 import { ImageFixe } from './gabarits/ImageFixe';
 import { PageCarrousel } from './gabarits/Carrousel';
 import { Bd, PageBd } from './gabarits/Bd';
@@ -31,6 +32,7 @@ const Reel: React.FC<PropsReel> = ({ recette: brute, plan, verification, silenci
         <Jeu recette={recette} plan={p} verification={verification} />
       )}
       {recette.gabarit === 'pov' && <Pov recette={recette} plan={p} verification={verification} />}
+      {recette.gabarit === 'baton' && <Baton recette={recette} plan={p} verification={verification} />}
       {recette.gabarit === 'mipaps-reel' && <MipapsAnime recette={recette} plan={p} verification={verification} />}
       {recette.gabarit === 'mipaps-statique' && <MipapsStatique recette={recette} plan={p} verification={verification} />}
       {!verification && !silencieux && (

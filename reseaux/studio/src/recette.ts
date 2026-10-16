@@ -3,6 +3,7 @@
 import type { Langue } from './charte/libelles';
 import type { PlanPov, RecettePov } from './pov/scenario';
 import type { RecetteMipapsCarrousel, RecetteMipapsPost, RecetteMipapsReel, RecetteMipapsStatique } from './mipaps/recette';
+import type { RecetteBaton } from './baton/recette';
 
 export type Theme = 'light' | 'dark' | 'marque';
 export type Fleurs = 'brin-marguerite' | 'feuillage' | 'aucune';
@@ -99,6 +100,8 @@ export type { RecettePov };
 // Les mipaps (second compte, reseaux/mipaps) : leurs quatre gabarits sont
 // décrits dans mipaps/recette.ts et passent par les mêmes compositions.
 export type { RecetteMipapsCarrousel, RecetteMipapsPost, RecetteMipapsReel, RecetteMipapsStatique };
-export type RecetteReel = RecetteCitation | RecetteJeu | RecettePov | RecetteMipapsReel | RecetteMipapsStatique;
+// Le bonhomme bâton (baton/recette.ts) : le format « me in my dreams with u ».
+export type { RecetteBaton };
+export type RecetteReel = RecetteCitation | RecetteJeu | RecettePov | RecetteBaton | RecetteMipapsReel | RecetteMipapsStatique;
 export type RecetteFixe = RecetteImage | RecetteCarrousel | RecetteBd | RecetteMipapsPost | RecetteMipapsCarrousel;
 export type Recette = RecetteReel | RecetteFixe;

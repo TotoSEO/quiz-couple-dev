@@ -64,23 +64,28 @@ refuse un post qui ne la suit pas.
 
 | | Matin | Midi | Après-midi |
 |---|---|---|---|
-| Lundi | POV | Connais-tu | POV |
-| Mardi | POV | Tu préfères | BD en quatre cases |
-| Mercredi | POV | Connais-tu | POV |
-| Jeudi | POV | Statique | Carrousel |
-| Vendredi | POV | Connais-tu | Coquin |
-| Samedi | POV | Tu préfères | « He's a 10 but... » |
-| Dimanche | POV | Statique | Phrase tendre |
+| Lundi | Bonhomme bâton | Connais-tu | POV |
+| Mardi | Bonhomme bâton | Tu préfères | BD en quatre cases |
+| Mercredi | Bonhomme bâton | Connais-tu | POV |
+| Jeudi | Bonhomme bâton | Statique | Carrousel |
+| Vendredi | Bonhomme bâton | Connais-tu | Coquin |
+| Samedi | Bonhomme bâton | Tu préfères | « He's a 10 but... » |
+| Dimanche | Bonhomme bâton | Statique | Phrase tendre |
 
-Par semaine : 10 animations (dont une coquine), 3 « Connais-tu ton
-partenaire ? », 2 « Tu préfères », 2 reels statiques, 1 phrase tendre (le
-dimanche soir), 1 carrousel de questions (le jeudi soir, depuis le 7 octobre
-2026 : c'est le format qui se garde, « Save this for your next date
-night »), 1 bande dessinée en quatre cases (le mardi soir, depuis le
-8 octobre 2026) et 1 carrousel « He's a 10 but... » (le samedi soir, depuis
-le 12 octobre 2026, à la place de la phrase tendre du samedi). Sur 13
-semaines : 273 posts. Et chaque jour, une **story** reprend le reel du matin
-(voir plus bas).
+Par semaine : 7 reels du bonhomme bâton (tous les matins depuis le
+16 octobre 2026 au soir ; le matin même il n'en avait que trois, le lundi, le
+mercredi et le vendredi, puis Thomas, devant la promesse de la lune et les
+chiens : « on lance ces animations à raison de une par jour, du coup réduis
+les formats posts classiques »), 3 animations des mascottes (le lundi et le
+mercredi soir, et la coquine du vendredi soir ; elles étaient dix par semaine
+jusqu'au 16 octobre 2026), 3 « Connais-tu ton partenaire ? », 2 « Tu
+préfères », 2 reels statiques, 1 phrase tendre (le dimanche soir),
+1 carrousel de questions (le jeudi soir, depuis le 7 octobre 2026 : c'est le
+format qui se garde, « Save this for your next date night »), 1 bande
+dessinée en quatre cases (le mardi soir, depuis le 8 octobre 2026) et
+1 carrousel « He's a 10 but... » (le samedi soir, depuis le 12 octobre 2026,
+à la place de la phrase tendre du samedi). Sur 13 semaines : 273 posts. Et
+chaque jour, une **story** reprend le reel du matin (voir plus bas).
 
 ## Les catégories
 
@@ -135,8 +140,8 @@ apart »). Chaque mécanique vient avec ses sujets dans la banque.
   7 octobre 2026, la forêt, la rue, le café, la plage, l'intérieur d'une
   voiture et la salle de cinéma, chacun avec son ambiance sonore (oiseaux,
   circulation, brouhaha, vagues, moteur, projecteur). Jamais le même décor
-  deux animations de suite ; quatre animations par semaine au moins hors de
-  la maison.
+  deux animations de suite ; deux des trois animations de la semaine au
+  moins hors de la maison (quatre sur dix jusqu'au 16 octobre 2026).
 - Le titre « POV: ... » en haut, ou un message mot à mot, rarement les deux.
 - La mention quiz-couple.com est dans l'image ; **la légende ne renvoie
   jamais vers le site.**
@@ -260,6 +265,48 @@ sans renvoi vers le site, comme les animations (un appel à identifier ou à
 envoyer à l'autre). Hashtags : `#couplecomics`, `#relationshipcomics`,
 `#couplegoals`, `#quizcouple`. Quatorze planches dans la banque (`bd`).
 
+### `baton` : le bonhomme bâton, « me in my dreams with u » (gabarit `baton`)
+
+Le format qui a percé (idée de Thomas, 15 octobre 2026 : un seul reel avait
+décollé, « la stratégie c'est de poster un maximum... mais si on peut
+maximiser cette statistique c'est mieux »). Un héros au corps de traits et à
+la tête ronde qui bouge comme un ninja, l'autre personnage, et une vraie
+petite histoire de couple en 15 à 40 s : au trait noir sur papier blanc,
+seuls les éléments qui comptent sont en couleur (le bandana violet du
+garçon, le nœud rose de la fille, la lame bleue, le diamant, l'or de la
+bague, la lune, les cœurs). Rien à voir avec la DA des mascottes : c'est un
+format à part, le seul du compte sans elles. Le titre « me in my dreams
+with u » est à l'écran du début à la fin (sauf la promesse, qui a le sien).
+
+Ce que ça raconte (Thomas, 16 octobre 2026 : « la personne rêve ! Elle fait
+des choses qui normalement sont pas possibles, comme avec le dragon... faut
+pas faire des trucs banals ») : un rêve, où l'impossible arrive pour l'autre
+ou avec l'autre, avec une vraie chute. Ce qui fait un bon reel : une
+ouverture où on les voit ensemble, un incident (le dragon l'emporte, elle
+regarde passer les oiseaux et soupire, des bandits déboulent, il dit non au
+chien, elle rêve d'une bague, le nuage les arrose, elle montre la lune), le
+très gros plan sur le visage du héros qui décide, puis l'exploit **au
+ralenti**, avec les zooms, les rémanences, les lignes de vitesse, et une fin
+qui surprend (des ailes lui poussent à elle aussi, le malaise devant les
+chiens, la demande un genou à terre, assis sur la lune). Neuf trames se
+relaient (voir CONSIGNES.md, « Le bonhomme bâton ») : le dragon (la seule
+avec l'épée), les ailes, les bandits au karaté, les chiens, le diamant,
+l'étoile, le nuage shooté, la lune au lasso, et la promesse, la seule qui
+finit mal pour rire : « je décrocherai la lune pour toi », elle ne le croit
+pas, il le fait, et la lune arrive vraiment. Le héros (« me ») est un garçon
+ou une fille, presque une fois sur deux : la fille garde son nœud rose et
+sa queue de cheval, le garçon son bandana, quel que soit le rôle. Pas de
+texte à l'écran en dehors du titre et des deux bulles de la promesse, pas de
+voix : des bruitages, et la musique connue qui va avec l'histoire (voir « Le
+son »). Légende sans renvoi vers le site ; hashtags `#stickman`,
+`#stickfigure`, `#animation`, `#couplegoals`, `#quizcouple`. Un reel
+chaque matin depuis le 16 octobre 2026 au soir (Thomas : « on lance ces
+animations à raison de une par jour ») ; soixante-trois histoires dans la
+banque (`baton`), sept par trame, les neuf trames à tour de rôle et jamais
+le même décor d'ouverture deux jours de suite : à ce rythme une trame
+revient tous les neuf jours, et c'est le décor, le moment, le héros et la
+musique qui font la différence d'un reel à l'autre.
+
 ### `post`
 
 Gabarit prêt (post 4:5 avec une scène dessinée), hors de la semaine type
@@ -272,7 +319,8 @@ publication : même vidéo, 24 heures, sans légende ni son ajouté. C'est une
 deuxième surface pour le même travail, et c'est l'automate qui s'en occupe
 (`publierStories` dans `publication.mjs`) : la routine n'a rien à écrire.
 Un reel de plus de 60 secondes ne peut pas devenir une story ; le matin
-étant toujours une animation de 10 à 15 secondes, ça ne se produit pas.
+étant un bonhomme bâton de 40 s au plus (une animation de 10 à 15 secondes
+les autres matins jusqu'au 16 octobre 2026), ça ne se produit pas.
 
 ## Le son
 
@@ -293,6 +341,19 @@ demande (une phrase tendre, une scène coquine), remplacer les tendances
 par une recherche : `"son": {"recherche": "soft piano"}`. Le morceau part
 du début, c'est l'API qui veut ça. Si l'API ne répond pas, le reel part
 avec ses bruitages plutôt que de manquer son créneau.
+
+Le bonhomme bâton fait exception (Thomas, 16 octobre 2026 : « pour ces
+vidéos là il faudra trouver des musiques qui sont en rapport avec
+l'animation, genre là pour le dragon et tout ça sera une musique action /
+aventure... idéalement des sons connus ! ») : chaque sujet de la banque
+porte un titre connu qui va avec l'histoire (« He's a Pirate » pour le
+dragon, « Kung Fu Fighting » pour les bandits, « Who Let the Dogs Out »
+pour les chiens, « Fly Me to the Moon » pour les ailes, « Diamonds » pour
+la quête), écrit dans `son.recherche`, et `son.ambiance` donne l'ambiance
+de la trame (`epique` pour le dragon, les bandits et le diamant, `drole`
+pour les chiens, le nuage et la promesse, `tendre` pour les ailes, l'étoile
+et la lune), où la publication cherche si le titre n'est pas dans la
+bibliothèque Instagram.
 
 La bibliothèque de 55 morceaux libres de droits (Mixkit et FreePD) reste
 dans le studio en cinq ambiances (`leger`, `doux`, `sensuel`, `jeu`,
@@ -391,7 +452,9 @@ les mots que les gens tapent, et donner envie d'un geste précis.
   - phrases tendres : `#lovequotes`, `#relationshipquotes`,
     `#couplegoals`, `#quizcouple` ;
   - « He's a 10 but... » : `#hesa10but` (ou `#shesa10but`), `#redflags`,
-    `#couplequiz`, `#quizcouple`.
+    `#couplequiz`, `#quizcouple` ;
+  - bonhomme bâton : `#stickman`, `#stickfigure`, `#animation`,
+    `#couplegoals`, `#quizcouple`.
 - Pas de tiret cadratin, pas de « really », « actually », « in short » dans
   un titre, pas de formules d'IA (triades, renversements, chutes travaillées).
 
@@ -404,8 +467,14 @@ la plage, la voiture et le cinéma, et les gags à bulles ont été réécrits e
 situations), 15 coquines, 28
 statiques, 51 thèmes de « Connais-tu » (dont 8 « Who's more likely? » et 3
 éditions difficiles), 28 de « Tu préfères », 28 phrases, 16 carrousels
-« He's a 10 but... » (12 octobre 2026), plus 18 sujets datés de Noël et du
-Nouvel An. La routine prend le premier sujet libre de la
+« He's a 10 but... » (12 octobre 2026), 63 histoires de bonhomme bâton
+(16 octobre 2026 : 27 le matin, trois par trame de rêve, puis 63 le soir
+même pour un reel par jour, sept par trame, les trames à tour de rôle,
+jamais le même décor d'ouverture deux jours de suite, le héros fille presque
+une fois sur deux, chacune avec sa musique), plus 18 sujets datés de Noël et
+du Nouvel An (dont cinq bonhommes bâton, un par matin daté : le chiot de
+Noël, la bague de la veille de Noël, l'étoile de Noël, le nuage du
+31 décembre et l'envol du Nouvel An). La routine prend le premier sujet libre de la
 catégorie et écrit son id dans le champ `sujet` du post ; un sujet déjà
 utilisé dans `posts/` n'est jamais repris. Les sujets datés passent avant
 la banque, à leur date et à leur créneau.

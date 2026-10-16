@@ -2,6 +2,7 @@ import React from 'react';
 import { Audio, interpolate, Sequence, staticFile } from 'remotion';
 import { FPS } from './charte';
 import bibliotheque from '../../public/sons/bibliotheque.json';
+import synthese from '../../public/sons/synthese.json';
 
 // Bruitages : les sons de Kenney (public/sons/<nom>.ogg, CC0, dans le dépôt)
 // et ceux de Mixkit (public/sons/mx-<nom>.mp3, préparés par scripts/sons.mjs,
@@ -92,6 +93,64 @@ export const VOLUMES = {
   cinema: 0.45,
   feu: 0.6,
   horloge: 0.55,
+  // le bonhomme bâton (public/sons/sy-*.mp3, synthétisés par scripts/synthese-sons.mjs,
+  // dans le dépôt) : des sons de déplacement et d'impact, jamais de voix
+  whoosh: 0.2,
+  'whoosh-long': 0.22,
+  shing: 0.22,
+  rentre: 0.18,
+  zap: 0.16,
+  bourdon: 0.12,
+  boum: 0.28,
+  coup: 0.22,
+  explosion: 0.3,
+  grondement: 0.22,
+  ailes: 0.16,
+  craque: 0.2,
+  eclats: 0.14,
+  flash: 0.18,
+  monte: 0.14,
+  ralenti: 0.16,
+  atterrit: 0.2,
+  // le format rêvé (16 octobre 2026) : la meute qui aboie, le diamant qui
+  // éclate en cristal, le marteau sur l'enclume
+  aboie: 0.2,
+  cristal: 0.2,
+  enclume: 0.22,
+  // le bonhomme bâton, suite (Mixkit, 16 octobre 2026 ; Thomas : « plusieurs
+  // sound effects sont pas bons, genre quand il sort son épée ») : la lame
+  // qui sort et rentre, le dragon, les passages d'air, les impacts,
+  // l'électricité, la chute des corps, la pierre, le cœur, les paillettes
+  'epee-tire': 0.24,
+  'epee-range': 0.2,
+  lame: 0.18,
+  'dragon-grogne': 0.22,
+  'dragon-rugit': 0.26,
+  passage: 0.16,
+  air: 0.16,
+  fusee: 0.22,
+  meteore: 0.2,
+  tempete: 0.18,
+  crepite: 0.14,
+  'charge-electrique': 0.12,
+  'montee-electrique': 0.18,
+  'onde-choc': 0.28,
+  'eclair-electrique': 0.24,
+  deflagration: 0.3,
+  debris: 0.2,
+  'impact-lointain': 0.2,
+  'impact-profond': 0.24,
+  trailer: 0.22,
+  chute: 0.18,
+  pietine: 0.2,
+  craquement: 0.2,
+  cailloux: 0.16,
+  'coeur-lent': 0.24,
+  'coeur-ambiance': 0.3,
+  scintille: 0.18,
+  'etincelle-magique': 0.16,
+  // le vent des sommets (ambiance, -23 LUFS)
+  'vent-montagne': 0.6,
 } as const;
 // Nombre de variantes d'un même son (pop.ogg, pop-2.ogg, pop-3.ogg...) :
 // la variante est tirée de l'instant du son, le même reel donne toujours le
@@ -129,7 +188,21 @@ export const VARIANTES: Partial<Record<keyof typeof VOLUMES, number>> = {
   grillon: 2,
   tonnerre: 2,
   coussin: 2,
+  whoosh: 3,
+  zap: 2,
+  ailes: 2,
+  atterrit: 2,
+  lame: 2,
+  'dragon-rugit': 2,
+  aboie: 2,
+  passage: 3,
+  air: 3,
+  crepite: 2,
+  deflagration: 2,
+  chute: 3,
 };
+// Les sons synthétisés (fichiers sy-<nom>.mp3).
+export const SYNTHESE = new Set(synthese.sons.map((s) => s.nom.replace(/-\d+$/, '')));
 // Les sons qui viennent de Mixkit (fichiers mx-<nom>.mp3) et, parmi eux, les ambiances.
 export const MIXKIT = new Set(bibliotheque.sons.map((s) => s.nom.replace(/-\d+$/, '')));
 export const AMBIANCES = new Set(bibliotheque.sons.filter((s) => s.type === 'ambiance').map((s) => s.nom));
@@ -140,8 +213,9 @@ export type EvenementAmbiance = { nom: NomSon; a: number; duree: number; volume?
 
 export const fichierSon = (nom: NomSon, a: number) => {
   const mx = MIXKIT.has(nom);
-  const base = mx ? `sons/mx-${nom}` : `sons/${nom}`;
-  const ext = mx ? 'mp3' : 'ogg';
+  const sy = SYNTHESE.has(nom);
+  const base = mx ? `sons/mx-${nom}` : sy ? `sons/sy-${nom}` : `sons/${nom}`;
+  const ext = mx || sy ? 'mp3' : 'ogg';
   const n = VARIANTES[nom] ?? 1;
   if (n <= 1) return `${base}.${ext}`;
   // un pseudo-hasard stable sur l'instant (en images) et le nom
@@ -152,8 +226,10 @@ export const fichierSon = (nom: NomSon, a: number) => {
 };
 // Le temps laissé à un bruitage pour finir : les sons de Kenney font moins
 // de deux secondes, ceux de Mixkit jusqu'à quatre (un rire, un bâillement),
-// le tonnerre dix.
-const dureeSon = (nom: NomSon) => (nom === 'tonnerre' ? 10 : MIXKIT.has(nom) ? 4.5 : 2) * FPS;
+// et quelques-uns traînent plus longtemps (le tonnerre, une déflagration,
+// le battement de cœur d'un ralenti).
+const LONGS: Partial<Record<NomSon, number>> = { tonnerre: 10, 'coeur-ambiance': 8, trailer: 6, tempete: 6, deflagration: 6, debris: 6, 'dragon-rugit': 6 };
+const dureeSon = (nom: NomSon) => (LONGS[nom] ?? (MIXKIT.has(nom) ? 4.5 : SYNTHESE.has(nom) ? 3 : 2)) * FPS;
 
 const bornes = { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' } as const;
 
