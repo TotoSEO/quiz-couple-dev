@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { Instagram, verifierJeton } from './lib/instagram.mjs';
-import { ajouterJours, aujourdhui, categorieAttendue, melangeDuCompte } from './lib/calendrier.mjs';
+import { ajouterJours, aujourdhui, categorieAttendue, melangeDuCompte, MOTIF_RETRAIT } from './lib/calendrier.mjs';
 import { categoriesIdee, viserCreneaux } from './lib/idees.mjs';
 
 const JOUR = 86400000;
@@ -208,11 +208,16 @@ export async function etat(base, { maintenant = new Date(), horizon = 100, langu
     // ne sera plus publié quoi qu'on en fasse (la publication refuse tout
     // retard de plus de 90 min), la routine ne doit pas le retravailler
     // chaque matin pendant trente jours
-    a_corriger: posts.filter((p) => variantes.some((v) => v.post_id === p.id && v.statut === 'echec') && encorePubliable(p)).map(resume),
+    // (une déclinaison retenue parce que sa catégorie est retirée de la
+    // grille n'est pas à corriger : elle est dans hors_grille, à réécrire)
+    a_corriger: posts.filter((p) => variantes.some((v) => v.post_id === p.id && v.statut === 'echec' && v.erreur !== MOTIF_RETRAIT) && encorePubliable(p)).map(resume),
     // posts acceptés par la synchro mais dont la catégorie ne suit plus la
     // grille (elle a changé après leur écriture, comme le mardi soir devenu
     // BD le 8 octobre 2026) : ils partiront tels quels si la routine ne les
-    // réécrit pas dans la catégorie attendue
+    // réécrit pas dans la catégorie attendue ; sauf les animations des
+    // mascottes (pov, coquin, statique), retirées le 16 octobre 2026, que la
+    // synchro retient : celles-là ne partent pas, mais leur créneau reste
+    // vide tant que le fichier n'est pas réécrit
     hors_grille: posts
       .filter((p) => p.statut === 'valide' && p.categorie && encorePubliable(p))
       .map((p) => ({ jour: p.jour, creneau: p.creneau, categorie: p.categorie, attendue: categorieAttendue(melange, p.jour, p.creneau) }))

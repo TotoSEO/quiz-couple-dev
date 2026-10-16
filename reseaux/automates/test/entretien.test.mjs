@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { BaseMemoire } from './memoire.mjs';
 import { etat, menage, reserve, verifierJetons } from '../entretien.mjs';
+import { MOTIF_RETRAIT } from '../lib/calendrier.mjs';
 
 const T0 = new Date('2026-10-12T15:00:00Z');
 const melange = { matin: 'pov', midi: { 1: 'connais-tu', 2: 'tu-preferes', 3: 'connais-tu', 4: 'statique', 5: 'connais-tu', 6: 'tu-preferes', 7: 'statique' }, soir: { 1: 'pov', 2: 'pov', 3: 'pov', 4: 'pov', 5: 'coquin', 6: 'phrase', 7: 'phrase' } };
@@ -96,7 +97,8 @@ test('l\'état donne à chaque idée de Thomas le créneau qu\'elle vise, et le 
     ['i-pov', 'pov', { jour: '2026-10-12', creneau: 'soir' }],
     ['i-libre', null, null],
   ]);
-  assert.deepEqual(e.prochain_creneau.pov, { jour: '2026-10-13', creneau: 'matin' }, 'après le soir du 12 pris par une idée');
+  // les animations des mascottes ne sont plus une catégorie proposée (retirées le 16 octobre 2026) : pas de prochain créneau pour elles
+  assert.equal(e.prochain_creneau.pov, undefined);
   assert.deepEqual(e.prochain_creneau.bd, { jour: '2026-10-20', creneau: 'soir' });
   assert.deepEqual(e.prochain_creneau.phrase, { jour: '2026-10-17', creneau: 'soir' });
 });
@@ -148,17 +150,22 @@ test('à corriger : seulement les posts en échec dont le créneau peut encore p
       { id: 'cematin', jour: '2026-10-12', creneau: 'matin', statut: 'valide', format: 'reel', gabarit: 'pov' },
       { id: 'cesoir', jour: '2026-10-12', creneau: 'soir', statut: 'valide', format: 'reel', gabarit: 'pov' },
       { id: 'demain', jour: '2026-10-13', creneau: 'midi', statut: 'valide', format: 'reel', gabarit: 'tu-preferes' },
+      // une animation retenue par la synchro (catégorie retirée le 16 octobre 2026) : à réécrire (hors_grille), pas à corriger
+      { id: 'retenu', jour: '2026-10-13', creneau: 'soir', statut: 'valide', format: 'reel', gabarit: 'pov', categorie: 'pov' },
     ],
     social_variantes: [
       { id: 'v1', post_id: 'hier', langue: 'en', statut: 'echec', erreur: 'Supabase upload/resumable : 409', recette: {} },
       { id: 'v2', post_id: 'cematin', langue: 'en', statut: 'echec', erreur: 'créneau dépassé sans publication', recette: {} },
       { id: 'v3', post_id: 'cesoir', langue: 'en', statut: 'echec', erreur: 'Contrôle du fichier : texte hors zone', recette: {} },
       { id: 'v4', post_id: 'demain', langue: 'en', statut: 'echec', erreur: 'Contrôle du fichier : texte hors zone', recette: {} },
+      { id: 'v5', post_id: 'retenu', langue: 'en', statut: 'echec', erreur: MOTIF_RETRAIT, recette: {} },
     ],
   });
   // 9 h 00 à Paris le 12 : hier et ce matin sont perdus, ce soir (16 h) et demain restent corrigeables
   const e = await etat(b, { maintenant: new Date('2026-10-12T07:00:00Z'), horizon: 1 });
   assert.deepEqual(e.a_corriger.map((p) => [p.jour, p.creneau]), [['2026-10-12', 'soir'], ['2026-10-13', 'midi']]);
+  // l'animation retenue n'est pas à corriger : son fichier est à réécrire (elle revient par hors_grille dès que la grille ne l'attend plus)
+  assert.ok(!e.a_corriger.some((p) => p.creneau === 'soir' && p.jour === '2026-10-13'));
   // 14 h 00 : ce soir commence dans moins de trois heures, il ne reste que demain
   const tard = await etat(b, { maintenant: new Date('2026-10-12T12:00:00Z'), horizon: 1 });
   assert.deepEqual(tard.a_corriger.map((p) => p.jour), ['2026-10-13']);

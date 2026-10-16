@@ -70,7 +70,13 @@ Puis `reseaux/atelier/etat.json`, écrit chaque matin par l'entretien :
   un hors grille de samedi prochain passe avant un créneau vide de
   décembre. Une fois la réserve pleine, les créneaux vides sont à plus d'un
   mois ; les traiter d'abord laissait partir tels quels les hors grille des
-  semaines suivantes.
+  semaines suivantes. **Depuis le 16 octobre 2026 au soir, les animations
+  des mascottes (`pov`, `coquin`, `statique`) y sont toutes** : Thomas les a
+  retirées de la grille (« ça sert à rien de continuer »), la synchro les
+  retient (rien ne part), et leur créneau reste vide tant que le fichier
+  n'est pas réécrit dans la catégorie `attendue` (des dilemmes le plus
+  souvent, un « Connais-tu » le lundi, le mercredi et le vendredi midi). Un
+  hors grille de demain soir passe avant tout le reste du passage.
 - `refuses` : fichiers que la synchro a refusés dans les dernières
   24 heures, avec leurs `fautes`. Le fichier existe sur la branche mais rien
   n'est en base, donc rien ne partira : on le réécrit en entier, en
@@ -154,11 +160,15 @@ Pour chaque créneau à remplir, dans l'ordre des dates :
 2. sinon le premier sujet de la catégorie qui n'apparaît dans aucun post de
    `posts/` (champ `sujet`) ni dans `deja_publies.sujets` de `sujets.json`
    (les posts partis sur le compte en dehors de l'atelier, comme le reel
-   d'essai des fleurs du 7 octobre 2026) : **jamais de doublon**, ni de
-   sujet, ni de scène, ni de phrase déjà vue dans `recents_et_prevus` ;
+   d'essai des fleurs du 7 octobre 2026), **et qu'aucun sujet daté ne
+   réserve** (son champ `theme` : `tp-014` et `tp-024`, les éditions de Noël
+   `tp-042` à `tp-044` et du Nouvel An `tp-106`, `ct-025` et `ct-038` ne se
+   prennent qu'à leur date, le contrôle les refuse ailleurs) : **jamais de
+   doublon**, ni de sujet, ni de scène, ni de phrase déjà vue dans
+   `recents_et_prevus` ;
 3. sinon (la banque de la catégorie est épuisée, elle couvre treize
-   semaines, neuf pour le bonhomme bâton) tu inventes un sujet dans le même esprit que ceux de la
-   banque, avec un identifiant neuf (`pov-274`, `connais-tu-40`...), sans
+   semaines, neuf pour le bonhomme bâton, quinze pour les dilemmes) tu inventes un sujet dans le même esprit que ceux de la
+   banque, avec un identifiant neuf (`tp-109`, `connais-tu-52`...), sans
    reprendre une situation vue dans `recents_et_prevus` ni dans les
    soixante derniers posts de `posts/`. La publication ne s'arrête jamais
    faute de sujet.
@@ -186,16 +196,32 @@ une heure précise (un soir où le créneau est déjà passé, par exemple) : le
 post porte alors `publier_a`, une date ISO avec fuseau
 (`"2026-10-07T19:45:00Z"`), et la synchro la garde telle quelle.
 Les recettes de `reseaux/studio/recettes/exemples/` sont les modèles, une
-par catégorie : `pov-frites`, `pov-fleurs` et `pov-cafe` (pov ; le café est
-le modèle d'une situation jouée sans aucune bulle, dans un des nouveaux
-décors), `pov-couette` (coquin), `statique-calin` (statique), `connais-tu`,
-`tu-preferes`, `citation` (phrase), `bd-malade` (bd), `dix-mais` et
-`dix-mais-elle` (dix-mais), et pour le bonhomme bâton (baton) un brief par
-trame : `baton-dragon`, `baton-ailes`, `baton-bandits`, `baton-chiens`,
-`baton-diamant`, `baton-etoile`, `baton-nuage`, `baton-lune`,
-`baton-promesse`.
+par catégorie : `tu-preferes` (le format de tous les jours depuis le
+16 octobre 2026), `connais-tu`, `citation` (phrase), `carrousel-questions`
+(carrousel), `bd-malade` (bd), `dix-mais` et `dix-mais-elle` (dix-mais), et
+pour le bonhomme bâton (baton) un brief par trame : `baton-dragon`,
+`baton-ailes`, `baton-bandits`, `baton-chiens`, `baton-diamant`,
+`baton-etoile`, `baton-nuage`, `baton-lune`, `baton-promesse`. Les modèles
+d'animation (`pov-frites`, `pov-fleurs`, `pov-cafe`, `pov-couette`,
+`statique-calin`) restent dans le dossier mais ne servent plus à écrire un
+post : les catégories `pov`, `coquin` et `statique` sont retirées de la
+grille depuis le 16 octobre 2026 au soir, et `controler.mjs` refuse un post
+qui les porte.
 
-### Les animations (pov, coquin, statique)
+### Les scènes dessinées (ex-animations pov, coquin, statique)
+
+**On n'écrit plus d'animation des mascottes depuis le 16 octobre 2026 au
+soir.** Thomas, devant les chiffres des dix premiers jours : « les vidéos
+d'animations avec les deux mascottes ne fonctionnent pas du tout. Ça sert à
+rien de continuer, sur les dizaines qui sont sorties y'en a pas une qui a
+fonctionné. Le seul qui a fait 30 000 vues est le reel dilemmes version date
+night. » Les catégories `pov`, `coquin` et `statique` ne sont plus dans la
+grille, la synchro retient un post qui les porte et `controler.mjs` le
+refuse ; les animations déjà écrites te reviennent par `hors_grille`, à
+réécrire en dilemmes ou en « Connais-tu ». Cette section reste parce que
+son vocabulaire (décors, places, gestes, visages, objets, effets) est celui
+des scènes dessinées d'une BD et des couvertures de carrousel : lis-la pour
+ça, pas pour écrire un reel.
 
 Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
 
@@ -313,8 +339,8 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
   `"son": {"ambiance": "..."}` dans la recette, avec une de ces valeurs :
   `drole` (un gag, une petite manie, le POV qui fait sourire), `tendre`
   (un câlin, un retour à la maison, une phrase douce, une statique),
-  `triste` (une dispute, des larmes, « we need to talk »), `coquin` (la
-  scène coquine du vendredi soir), `jeu` (connais-tu, tu préfères), `noel`
+  `triste` (une dispute, des larmes, « we need to talk »), `coquin` (une
+  scène coquine, plus dans la grille), `jeu` (connais-tu, tu préfères), `noel`
   et `nouvel-an` pour les deux seules fêtes, `tendance` si n'importe quel
   gros titre du moment convient. La publication cherche alors dans la
   bibliothèque avec des mots qui décrivent l'ambiance (piano doux, R&B
@@ -385,6 +411,36 @@ Le scénario est le brief : il doit dire, plan par plan, tout ce qu'on voit.
 Huit questions ou six dilemmes, au format des exemples. Les questions sont
 simples et personnelles ; la première dit « your partner's », les suivantes
 « their ». Les choix d'un dilemme visent 30 signes. Jamais de score.
+
+- **Les dilemmes « Tu préfères », un par jour depuis le 16 octobre 2026**
+  (quatre midis, trois soirs) : le format du seul reel qui a marché, « Date
+  night edition » (30 000 vues le 13 octobre 2026). Gabarit `tu-preferes`,
+  au format de `recettes/exemples/tu-preferes.json`, un sujet de la banque
+  `tu-preferes`. L'`etiquette` est l'édition : le `theme` du sujet tel quel,
+  en vingt-deux signes au plus (« Lazy Sunday edition », « Bedtime
+  edition », « Christmas gifts »). L'`accroche` garde les mots que les gens
+  cherchent et dit le moment : « Would you rather: date night? », « Would
+  you rather: lazy Sunday? », ou « Would you rather: couple edition » quand
+  l'édition n'est pas un moment. La `consigne` dit le nombre et les secondes
+  (« 6 dilemmas. Pick fast, then compare with your partner! »), l'`amorce`
+  est « Would you rather... », `secondes` 5. Six `dilemmes` : les trois
+  paires d'exemples du sujet, retouchées si besoin, et trois autres dans le
+  même esprit ; chaque choix fait 45 signes au plus (30 visés), concret et
+  visuel, et **les deux choix sont aussi tentants l'un que l'autre** (ou
+  aussi durs, dans « Hard mode » et « Impossible »), sinon il n'y a rien à
+  comparer. Jamais une paire déjà vue dans `recents_et_prevus` ou dans un
+  autre post de `posts/`. `fin.question` « Did you pick the same? Comment
+  your A and B! », `fin.bouton` « Send this to your partner »,
+  `fin.signature` « More dilemmas on quiz-couple.com ». Son : `"son":
+  {"ambiance": "jeu"}` (ou `noel` / `nouvel-an` pour les éditions datées).
+  Légende : la première ligne est un détail vrai qui nomme l'édition
+  (« Date night edition. 6 dilemmas, 5 seconds each. »), puis **un appel** :
+  « Save this for your next date night » ou « Save this for later » quand
+  l'édition est un moment à vivre à deux (date night, lazy Sunday, road
+  trip, weekend away, movie night, picnic...), « Comment your A and B »
+  sinon ; jamais le même appel sur deux reels de dilemmes qui se suivent.
+  Hashtags : `#wouldyourather`, `#couplequestions`, `#couplequiz`,
+  `#quizcouple`.
 
 - **L'étiquette (`etiquette`) porte l'édition**, en vingt-deux signes au
   plus : le `theme` du sujet, tourné en nom d'édition (« Food edition »,
@@ -503,9 +559,9 @@ banque `baton` (ou un sujet daté qui porte cette catégorie). Un chaque
 matin depuis le 16 octobre 2026 au soir (Thomas : « on lance ces animations
 à raison de une par jour, du coup réduis les formats posts classiques » ; le
 matin même il n'y en avait que trois par semaine, les autres matins étaient
-des animations des mascottes, qui gardent le lundi et le mercredi soir et la
-coquine du vendredi soir ; les animations déjà écrites pour ces matins te
-reviennent par `hors_grille`). C'est le format
+des animations des mascottes, retirées de la grille le soir même ; les
+animations déjà écrites pour ces matins te reviennent par `hors_grille`).
+C'est le format
 « me in my dreams with u » : un héros au corps de traits qui bouge comme un
 ninja, des mini-aventures de couple en noir et blanc où seuls les éléments
 qui comptent sont en couleur, des ralentis, des zooms, une vraie petite
@@ -638,15 +694,15 @@ avec un mot-clé quand il vient naturellement (« couple quiz », « my
 partner », « boyfriend », « girlfriend », « date night »), ou rien du tout,
 puis **un seul appel**, pris tel quel dans la liste `APPELS` de
 `reseaux/automates/lib/style.mjs` et choisi selon le geste voulu (envoyer
-pour les animations, les minis et les phrases tendres ; commenter pour les
-jeux et les phrases à finir ; enregistrer de temps en temps pour ce qui se
-garde). Jamais la légende qui répète ou résume l'image, jamais une phrase
+pour les phrases tendres et les BD ; commenter pour les jeux ; enregistrer
+pour ce qui se garde : les carrousels de questions et les dilemmes d'un
+moment à vivre). Jamais la légende qui répète ou résume l'image, jamais une phrase
 qui commente la scène, jamais un appel inventé.
 Les trois posts d'une journée ne portent pas le même appel. Hashtags : la
 liste de la catégorie dans la ligne éditoriale, 3 à 5, `#quizcouple`
-dedans. Les animations et les phrases ne renvoient jamais vers le site dans
-la légende (le contrôle le refuse) ; les jeux peuvent (« More quizzes: link
-in bio »). Tout en anglais simple, sans tiret cadratin.
+dedans. Les bonhommes bâton, les BD et les phrases ne renvoient jamais vers
+le site dans la légende (le contrôle le refuse) ; les jeux peuvent (« More
+quizzes: link in bio »). Tout en anglais simple, sans tiret cadratin.
 
 ## 5. Vérifier, puis regarder
 

@@ -37,10 +37,12 @@
   };
   // les catégories qu'une idée peut viser, par compte, avec le créneau de la grille
   var CATEGORIES_IDEE = {
+    // les animations des mascottes (pov, statique, coquin) ne sont plus
+    // proposées : retirées de la grille le 16 octobre 2026 au soir
     en: [
-      ['pov', 'Animation POV (lundi et mercredi soir)'], ['bd', 'BD en quatre cases (mardi soir)'], ['connais-tu', 'Connais-tu ton partenaire ? (midi)'], ['tu-preferes', 'Tu préfères (midi)'],
-      ['statique', 'Reel statique, dessin et phrase (midi)'], ['phrase', 'Phrase tendre (dimanche soir)'], ['coquin', 'Animation coquine (vendredi soir)'], ['carrousel', 'Carrousel de questions (jeudi soir)'],
-      ['dix-mais', "C'est un 10 mais... (carrousel du samedi soir)"], ['baton', 'Bonhomme bâton, « me in my dreams with u » (tous les matins)']
+      ['tu-preferes', 'Tu préfères, une édition de dilemmes (midi du mardi, du jeudi, du samedi et du dimanche ; soir du lundi, du mercredi et du vendredi)'], ['connais-tu', 'Connais-tu ton partenaire ? (midi du lundi, du mercredi et du vendredi)'],
+      ['bd', 'BD en quatre cases (mardi soir)'], ['carrousel', 'Carrousel de questions (jeudi soir)'], ['dix-mais', "C'est un 10 mais... (carrousel du samedi soir)"], ['phrase', 'Phrase tendre (dimanche soir)'],
+      ['baton', 'Bonhomme bâton, « me in my dreams with u » (tous les matins)']
     ],
     fr: [
       ['mipaps-anime', 'Reel animé (matin)'], ['mipaps-post', 'Post : mini, déclaration ou schéma (midi)'], ['mipaps-histoire', 'Carrousel-histoire (soir, lundi, mercredi, vendredi, dimanche)'], ['mipaps-statique', 'Reel statique (soir, mardi, jeudi, samedi)']

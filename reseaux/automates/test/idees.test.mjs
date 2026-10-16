@@ -23,7 +23,8 @@ test('une idée prend le créneau le plus proche de sa catégorie, même déjà 
     { id: 'p2', jour: '2026-10-12', creneau: 'midi', statut: 'valide' },
   ];
   const variantes = [{ post_id: 'p1', statut: 'rendu' }, { post_id: 'p2', statut: 'rendu' }];
-  const { vises, prochain } = viserCreneaux([idee('a', 'pov'), idee('b', 'bd'), idee('c', 'connais-tu')], { melange, posts, variantes, debut: '2026-10-12' });
+  // (la grille de ce test est celle d'avant le 16 octobre 2026, avec les animations : on nomme ses catégories)
+  const { vises, prochain } = viserCreneaux([idee('a', 'pov'), idee('b', 'bd'), idee('c', 'connais-tu')], { melange, posts, variantes, debut: '2026-10-12', categories: ['pov', 'bd', 'connais-tu', 'carrousel'] });
   assert.deepEqual(vises.get('a'), { jour: '2026-10-12', creneau: 'matin' }, 'le post rendu du lundi matin sera remplacé');
   assert.deepEqual(vises.get('b'), { jour: '2026-10-13', creneau: 'soir' }, 'la BD du mardi soir');
   assert.deepEqual(vises.get('c'), { jour: '2026-10-12', creneau: 'midi' });

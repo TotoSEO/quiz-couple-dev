@@ -19,12 +19,27 @@ const base = () =>
       { id: 'c-fr', langue: 'fr', nom: 'Les mipaps', fuseau: 'Europe/Paris', actif: false, melange: MELANGE_MIPAPS },
     ],
     social_reglages: [
-      { cle: 'melange', valeur: { matin: 'pov', midi: { 1: 'connais-tu', 2: 'tu-preferes', 3: 'connais-tu', 4: 'statique', 5: 'connais-tu', 6: 'tu-preferes', 7: 'statique' }, soir: { 1: 'pov', 2: 'pov', 3: 'pov', 4: 'pov', 5: 'coquin', 6: 'phrase', 7: 'phrase' } } },
+      // la grille du 16 octobre 2026 au soir : bâton le matin, dilemmes et
+      // « Connais-tu » à midi, dilemmes, BD, carrousel, « He's a 10 but... »
+      // et phrase tendre le soir
+      { cle: 'melange', valeur: { matin: 'baton', midi: { 1: 'connais-tu', 2: 'tu-preferes', 3: 'connais-tu', 4: 'tu-preferes', 5: 'connais-tu', 6: 'tu-preferes', 7: 'tu-preferes' }, soir: { 1: 'tu-preferes', 2: 'bd', 3: 'tu-preferes', 4: 'carrousel', 5: 'tu-preferes', 6: 'dix-mais', 7: 'phrase' } } },
     ],
   });
 
-// une animation POV : la catégorie du matin et des après-midi en semaine
+// un reel de dilemmes « Tu préfères » : la catégorie des soirs du lundi, du
+// mercredi et du vendredi et de quatre midis (hors grille le matin, qui est
+// au bonhomme bâton, et le lundi midi, qui attend un « Connais-tu »)
 const postQuiz = (jour = '2026-10-12', creneau = 'matin') => ({
+  jour,
+  creneau,
+  format: 'reel',
+  gabarit: 'tu-preferes',
+  categorie: 'tu-preferes',
+  variantes: { en: { recette: exemple('tu-preferes'), legende: '6 dilemmas, 5 seconds each.', hashtags: ['#quizcouple', '#wouldyourather'] } },
+});
+
+// une animation des mascottes : catégorie retirée de la grille le 16 octobre 2026
+const postAnimation = (jour = '2026-10-12', creneau = 'soir') => ({
   jour,
   creneau,
   format: 'reel',
@@ -56,7 +71,7 @@ test('les deux comptes publient le même jour au même créneau, chacun avec sa 
   const b = base();
   const bilan = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') }, { fichier: 'b.json', post: postMipaps('2026-10-12', 'midi') }], { maintenant: MAINTENANT });
   assert.deepEqual(bilan, { ecrits: 2, inchanges: 0, refuses: 0, ignores: 0 });
-  assert.deepEqual(b.tables.social_posts.map((p) => [p.langue, p.jour, p.creneau, p.gabarit]), [['en', '2026-10-12', 'midi', 'pov'], ['fr', '2026-10-12', 'midi', 'mipaps-post']]);
+  assert.deepEqual(b.tables.social_posts.map((p) => [p.langue, p.jour, p.creneau, p.gabarit]), [['en', '2026-10-12', 'midi', 'tu-preferes'], ['fr', '2026-10-12', 'midi', 'mipaps-post']]);
   // le post des mipaps suit la grille des mipaps (midi = post) : aucune alerte hors grille pour lui
   const alertes = b.tables.social_journal.filter((j) => j.niveau === 'alerte');
   assert.equal(alertes.length, 1);
@@ -85,15 +100,58 @@ test('une catégorie qui ne suit pas le mélange de la semaine est acceptée, av
   const b = base();
   const bilan = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') }], { maintenant: MAINTENANT });
   assert.deepEqual(bilan, { ecrits: 1, inchanges: 0, refuses: 0, ignores: 0 });
-  assert.equal(b.tables.social_posts[0].categorie, 'pov');
+  assert.equal(b.tables.social_posts[0].categorie, 'tu-preferes');
   const alertes = b.tables.social_journal.filter((j) => j.niveau === 'alerte');
   assert.equal(alertes.length, 1);
-  assert.match(alertes[0].message, /a\.json : le créneau midi du 2026-10-12 attend la catégorie connais-tu, pov accepté/);
-  assert.deepEqual(alertes[0].details, { fichier: 'a.json', attendue: 'connais-tu', categorie: 'pov' });
+  assert.match(alertes[0].message, /a\.json : le créneau midi du 2026-10-12 attend la catégorie connais-tu, tu-preferes accepté/);
+  assert.deepEqual(alertes[0].details, { fichier: 'a.json', attendue: 'connais-tu', categorie: 'tu-preferes' });
   // le même fichier relu une heure plus tard ne répète pas l'alerte
   const encore = await synchroniser(b, [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'midi') }], { maintenant: MAINTENANT });
   assert.equal(encore.inchanges, 1);
   assert.equal(b.tables.social_journal.filter((j) => j.niveau === 'alerte').length, 1);
+});
+
+test('une animation des mascottes (catégorie retirée le 16 octobre 2026) est écrite retenue en échec, jamais rendue, et repart au rendu une fois réécrite en dilemmes', async () => {
+  const { MOTIF_RETRAIT } = await import('../lib/calendrier.mjs');
+  const { rendre } = await import('../rendu.mjs');
+  const b = base();
+  b.tables.social_comptes[0].actif = true;
+  // lundi 12 octobre au soir : la grille attend des dilemmes, le fichier est un POV
+  const bilan = await synchroniser(b, [{ fichier: 'a.json', post: postAnimation() }], { maintenant: MAINTENANT });
+  assert.deepEqual(bilan, { ecrits: 1, inchanges: 0, refuses: 0, ignores: 0 });
+  // le post est en base (l'entretien le signalera dans hors_grille) mais sa déclinaison ne partira pas
+  assert.equal(b.tables.social_posts[0].categorie, 'pov');
+  const v = b.tables.social_variantes[0];
+  assert.equal(v.statut, 'echec');
+  assert.equal(v.erreur, MOTIF_RETRAIT);
+  assert.equal(v.essais, 3);
+  const alertes = b.tables.social_journal.filter((j) => j.niveau === 'alerte');
+  assert.equal(alertes.length, 1);
+  assert.match(alertes[0].message, /a\.json : pov retiré de la grille, rien ne partira tant qu'il n'est pas réécrit en tu-preferes/);
+  // relu une heure plus tard : inchangé, pas de seconde alerte
+  const encore = await synchroniser(b, [{ fichier: 'a.json', post: postAnimation() }], { maintenant: MAINTENANT });
+  assert.equal(encore.inchanges, 1);
+  assert.equal(b.tables.social_journal.filter((j) => j.niveau === 'alerte').length, 1);
+  // une déclinaison déjà rendue avant le retrait (ou remise en a_rendre) est retenue aussi
+  v.statut = 'rendu';
+  v.fichiers = { reel: 'x.mp4' };
+  await synchroniser(b, [{ fichier: 'a.json', post: postAnimation() }], { maintenant: MAINTENANT });
+  assert.equal(v.statut, 'echec');
+  assert.deepEqual(v.fichiers, {});
+  // le rendu ne la touche pas non plus
+  v.statut = 'a_rendre';
+  v.publier_a = '2026-10-12T15:30:00Z';
+  let appels = 0;
+  const r = await rendre(b, { maintenant: new Date('2026-10-12T00:00:00Z'), rendreFn: () => { appels++; return []; } });
+  assert.equal(appels, 0);
+  assert.equal(r.retenues, 1);
+  assert.equal(v.statut, 'echec');
+  // la routine réécrit le fichier en dilemmes : la déclinaison repart au rendu
+  await synchroniser(b, [{ fichier: 'a.json', post: postQuiz('2026-10-12', 'soir') }], { maintenant: MAINTENANT });
+  assert.equal(b.tables.social_posts[0].categorie, 'tu-preferes');
+  assert.equal(v.statut, 'a_rendre');
+  assert.equal(v.essais, 0);
+  assert.equal(v.erreur, null);
 });
 
 test('un post dans le passé est ignoré', async () => {
@@ -297,5 +355,5 @@ test("une ambiance de son posée ou changée se pose sans refaire le rendu ; une
   p3.variantes.en.recette.son = { ambiance: 'disco' };
   const refus = await synchroniser(b, [{ fichier: 'a.json', post: p3 }], { maintenant: MAINTENANT });
   assert.equal(refus.refuses, 1);
-  assert.ok(b.tables.social_journal.some((j) => j.details && j.details.fautes.some((f) => /ambiance de son inconnue/.test(f))));
+  assert.ok(b.tables.social_journal.some((j) => j.details?.fautes?.some((f) => /ambiance de son inconnue/.test(f))));
 });
