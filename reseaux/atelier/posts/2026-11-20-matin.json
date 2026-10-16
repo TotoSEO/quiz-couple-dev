@@ -1,0 +1,301 @@
+{
+  "jour": "2026-11-20",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-061",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Sortie de snack à 2 h du matin : les deux en pyjama avec des frites, le violet sort une glace, ils la finissent à la même cuillère en riant. Aucune bulle.",
+        "titre": "POV: the 2 AM snack run",
+        "plans": [
+          {
+            "description": "Une cuisine la nuit, seule la lumière du frigo éclaire la pièce, légende « 2 AM ». Dès la première image la rose et le violet sont derrière le plan de travail en pyjama, les yeux plats et ensommeillés, chacun avec un cornet de frites. La rose pique une frite et la mange, le violet regarde dans le vide en mâchant. La caméra se rapproche doucement.",
+            "duree": 3.8,
+            "decor": "cuisine",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "frites",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 0,
+                    "a": 2.4,
+                    "objet": "frites"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "violet"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "tient",
+                    "de": 0,
+                    "a": 3.8,
+                    "objet": "frites",
+                    "main": "gauche"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.6,
+                    "cible": "camera"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.6,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.6,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  }
+                ]
+              }
+            ],
+            "legende": "2 AM",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1150
+              }
+            ]
+          },
+          {
+            "description": "Même cuisine, légende « 2:30 AM ». Le violet sort un pot de glace du congélateur et le pose sur le comptoir avec un grand sourire, les yeux brillants. La rose lève les bras en l'air, les yeux grands ouverts, et un « ! » apparaît au-dessus d'elle. Zoom rapide sur le pot de glace à 0,3 s.",
+            "duree": 3.8,
+            "decor": "cuisine",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "joie",
+                    "de": 0.8,
+                    "a": 3.0
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 0.8,
+                    "yeux": "plats",
+                    "bouche": "plate"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0.8,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 0.8,
+                    "a": 3.8,
+                    "effet": "exclamation"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "offre",
+                    "de": 0,
+                    "a": 2.0,
+                    "objet": "glace"
+                  },
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "brillants",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "legende": "2:30 AM",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 540,
+                "y": 1160
+              }
+            ]
+          },
+          {
+            "description": "Même cuisine, légende « 3 AM ». Les deux mangent la glace à la même cuillère en riant, le corps secoué, des cœurs et des étincelles montent doucement. La rose pose la tête sur l'épaule du violet. La caméra recule lentement.",
+            "duree": 4.4,
+            "decor": "cuisine",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "comptoir-gauche",
+                "gestes": [
+                  {
+                    "geste": "rit",
+                    "de": 0,
+                    "a": 2.4
+                  },
+                  {
+                    "geste": "mange",
+                    "de": 2.4,
+                    "a": 4.4,
+                    "objet": "glace"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "fermes",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.4,
+                    "a": 4.4,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 2.6,
+                    "a": 4.4,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "comptoir-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.4,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "rit",
+                    "de": 0,
+                    "a": 2.0
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.0,
+                    "yeux": "fermes",
+                    "bouche": "rire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.0,
+                    "a": 4.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 4.4,
+                    "effet": "etincelles"
+                  }
+                ]
+              }
+            ],
+            "legende": "3 AM",
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1150
+              },
+              {
+                "a": 4.4,
+                "zoom": 1,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "drole"
+        }
+      },
+      "legende": "Send this to your partner",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

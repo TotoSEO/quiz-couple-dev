@@ -1,0 +1,157 @@
+{
+  "jour": "2026-11-19",
+  "creneau": "midi",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "statique",
+  "sujet": "sta-014",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Reel statique : sous le lampadaire la nuit, les deux arrivent chacun de leur bord, se serrent dans les bras, une phrase tendre s'écrit.",
+        "plans": [
+          {
+            "description": "Une rue de ville la nuit, le lampadaire à gauche allumé, les fenêtres des immeubles éclairées. Dès la première image la rose entre par le bord gauche et le violet par le bord droit en marchant l'un vers l'autre, les joues roses, un petit sourire. Ils se rejoignent près du lampadaire à 2,3 s et se serrent dans les bras, les yeux fermés, des cœurs montent. « you're my sunshine » s'écrit mot à mot en haut à partir de 3 s. À 6,5 s la rose fait sa petite bouche de chat ; à 7 s le violet rouvre des yeux heureux. La caméra se rapproche lentement.",
+            "duree": 11,
+            "decor": "rue",
+            "moment": "nuit",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": 40,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 2.3,
+                    "vers": 440
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.3,
+                    "a": 11,
+                    "avec": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.5,
+                    "a": 6.5,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 6.5,
+                    "a": 11,
+                    "yeux": "fermes",
+                    "bouche": "chat",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 3.0,
+                    "a": 11,
+                    "effet": "coeurs"
+                  }
+                ],
+                "premier": true
+              },
+              {
+                "qui": "violet",
+                "a": 1040,
+                "gestes": [
+                  {
+                    "geste": "marche",
+                    "de": 0,
+                    "a": 2.3,
+                    "vers": 650
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 2.4,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "calin",
+                    "de": 2.3,
+                    "a": 11,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 2.5,
+                    "a": 7.0,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 7.0,
+                    "a": 11,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "de": 3.0,
+                "texte": "you're my sunshine",
+                "motAMot": true,
+                "place": "haut",
+                "style": "plume"
+              }
+            ],
+            "camera": [
+              {
+                "a": 2.3,
+                "zoom": 1
+              },
+              {
+                "a": 6,
+                "zoom": 1.1,
+                "x": 540,
+                "y": 1250
+              },
+              {
+                "a": 11,
+                "zoom": 1.22,
+                "x": 540,
+                "y": 1250
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Tag your partner",
+      "hashtags": [
+        "#couplegoals",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

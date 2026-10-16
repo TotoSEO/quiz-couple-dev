@@ -1,0 +1,268 @@
+{
+  "jour": "2026-11-19",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "pov",
+  "categorie": "pov",
+  "sujet": "pov-063",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "pov",
+        "langue": "en",
+        "theme": "light",
+        "idee": "Il a retenu les petits détails : le violet sort le livre de l'auteur préféré de la rose au café, elle fond, il l'embrasse sur la joue. Aucune bulle.",
+        "titre": "POV: he remembered the little things",
+        "plans": [
+          {
+            "description": "Un café le matin, une lampe suspendue et la machine du comptoir derrière, titre « POV: he remembered the little things ». Dès la première image la rose est assise à gauche, une tasse devant elle, et regarde par la fenêtre, un sourire tranquille. Le violet, à droite, la regarde en cachant un livre sous la table, les joues roses, un petit sourire en coin. À 1,8 s il sort le livre. La caméra se rapproche doucement.",
+            "duree": 3.8,
+            "decor": "cafe",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "bas"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "offre",
+                    "de": 1.8,
+                    "a": 3.8,
+                    "objet": "livre"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.8,
+                    "a": 3.8,
+                    "yeux": "ouverts",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 3.8,
+                "zoom": 1.12,
+                "x": 540,
+                "y": 1200
+              }
+            ]
+          },
+          {
+            "description": "Même café. La rose lève la tête, voit le livre, ses yeux s'ouvrent grand puis deviennent brillants, des petits cœurs montent au-dessus d'elle. Elle porte les mains à ses joues. Le violet la regarde, ravi, un sourcil haut. Zoom rapide sur le visage de la rose à 0,3 s.",
+            "duree": 3.8,
+            "decor": "cafe",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.0,
+                    "yeux": "ouverts",
+                    "bouche": "o"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.0,
+                    "a": 3.8,
+                    "yeux": "coeur",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.0,
+                    "a": 3.8,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 3.8,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 3.8,
+                    "yeux": "heureux",
+                    "bouche": "sourire",
+                    "rougit": true,
+                    "sourcils": "hauts"
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1
+              },
+              {
+                "a": 0.3,
+                "zoom": 1.5,
+                "x": 400,
+                "y": 1180
+              }
+            ]
+          },
+          {
+            "description": "Même café. Les deux se penchent l'un vers l'autre au-dessus de la table, le violet donne un petit bisou sur la joue de la rose qui ferme les yeux, un grand sourire, les joues très roses. Des cœurs montent doucement. La caméra recule lentement.",
+            "duree": 4.2,
+            "decor": "cafe",
+            "moment": "matin",
+            "persos": [
+              {
+                "qui": "rose",
+                "a": "table-gauche",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 1.4,
+                    "cible": "violet"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.4,
+                    "yeux": "coeur",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.4,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  },
+                  {
+                    "geste": "effet",
+                    "de": 1.6,
+                    "a": 4.2,
+                    "effet": "coeurs"
+                  }
+                ]
+              },
+              {
+                "qui": "violet",
+                "a": "table-droite",
+                "gestes": [
+                  {
+                    "geste": "regarde",
+                    "de": 0,
+                    "a": 4.2,
+                    "cible": "rose"
+                  },
+                  {
+                    "geste": "bisou",
+                    "de": 1.2,
+                    "a": 3.2,
+                    "avec": "rose"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 0,
+                    "a": 1.2,
+                    "yeux": "heureux",
+                    "bouche": "sourire"
+                  },
+                  {
+                    "geste": "visage",
+                    "de": 1.2,
+                    "a": 4.2,
+                    "yeux": "fermes",
+                    "bouche": "sourire",
+                    "rougit": true
+                  }
+                ]
+              }
+            ],
+            "camera": [
+              {
+                "a": 0,
+                "zoom": 1.2,
+                "x": 540,
+                "y": 1180
+              },
+              {
+                "a": 4.2,
+                "zoom": 1,
+                "x": 540,
+                "y": 1100
+              }
+            ]
+          }
+        ],
+        "son": {
+          "ambiance": "tendre"
+        }
+      },
+      "legende": "Send this to him",
+      "hashtags": [
+        "#couplecomedy",
+        "#relationshiphumor",
+        "#cuteanimation",
+        "#quizcouple"
+      ]
+    }
+  }
+}

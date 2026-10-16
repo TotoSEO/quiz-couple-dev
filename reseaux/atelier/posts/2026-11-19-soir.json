@@ -1,0 +1,165 @@
+{
+  "jour": "2026-11-19",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "carrousel",
+  "categorie": "carrousel",
+  "sujet": "car-007",
+  "idee_id": null,
+  "variantes": {
+    "en": {
+      "recette": {
+        "gabarit": "carrousel",
+        "langue": "en",
+        "theme": "light",
+        "pages": [
+          {
+            "type": "couverture",
+            "etiquette": "Would you rather",
+            "accroche": "8 dilemmas to settle tonight",
+            "scene": {
+              "t": 1.4,
+              "plan": {
+                "description": "Le parc en plein jour : la rose et le violet sont assis sur le banc, côte à côte. La rose regarde le violet, les sourcils hauts, un point d'interrogation au-dessus de la tête ; le violet fait un clin d'œil, un grand sourire.",
+                "duree": 2,
+                "decor": "dehors",
+                "moment": "midi",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "banc-gauche",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "violet"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "ouverts",
+                        "bouche": "plate",
+                        "sourcils": "hauts"
+                      },
+                      {
+                        "geste": "effet",
+                        "de": 0,
+                        "a": 2,
+                        "effet": "question"
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "banc-droite",
+                    "gestes": [
+                      {
+                        "geste": "regarde",
+                        "de": 0,
+                        "a": 2,
+                        "cible": "rose"
+                      },
+                      {
+                        "geste": "visage",
+                        "de": 0,
+                        "a": 2,
+                        "yeux": "clin",
+                        "bouche": "sourire"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "type": "page",
+            "numero": "1",
+            "question": "Breakfast in bed or dinner under the stars?"
+          },
+          {
+            "type": "page",
+            "numero": "2",
+            "question": "Relive our first date or skip to our next trip?"
+          },
+          {
+            "type": "page",
+            "numero": "3",
+            "question": "A week by the sea or a week in the mountains?"
+          },
+          {
+            "type": "page",
+            "numero": "4",
+            "question": "A surprise party or a quiet night in?"
+          },
+          {
+            "type": "page",
+            "numero": "5",
+            "question": "A movie marathon or a long walk?"
+          },
+          {
+            "type": "page",
+            "numero": "6",
+            "question": "Cook together or order in?"
+          },
+          {
+            "type": "page",
+            "numero": "7",
+            "question": "Dance in the rain or cuddle by the fire?"
+          },
+          {
+            "type": "page",
+            "numero": "8",
+            "question": "Never argue again or never be bored again?"
+          },
+          {
+            "type": "fin",
+            "texte": "Want more questions for tonight?",
+            "bouton": "Link in bio",
+            "scene": {
+              "t": 1.4,
+              "plan": {
+                "description": "Les deux sur un trait de sol, la rose fait coucou, le violet saute de joie.",
+                "duree": 2,
+                "decor": "ligne",
+                "persos": [
+                  {
+                    "qui": "rose",
+                    "a": "gauche",
+                    "gestes": [
+                      {
+                        "geste": "salue",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  },
+                  {
+                    "qui": "violet",
+                    "a": "droite",
+                    "gestes": [
+                      {
+                        "geste": "joie",
+                        "de": 0,
+                        "a": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "legende": "Pick one. Then explain why.\n\nSave this for your next date night",
+      "hashtags": [
+        "#couplequestions",
+        "#datenight",
+        "#couplegoals",
+        "#quizcouple"
+      ]
+    }
+  }
+}
