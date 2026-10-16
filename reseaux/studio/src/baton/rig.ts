@@ -353,11 +353,11 @@ const visage = (ap: Apparence, encre: string, accent: boolean): string => {
   // joue et s'efface, puis une autre
   if (v.larme) {
     const e = yeux[1];
-    const cycle = 1.3;
+    const cycle = 1.0;
     const u = ((ap.depuis + 0.2) % cycle) / cycle;
     const perle = Math.min(1, ap.depuis / 0.3);
     const y = e[1] + 0.22 + u * 0.7;
-    const r = 0.07 * perle * (u < 0.15 ? u / 0.15 : 1);
+    const r = 0.1 * perle * (u < 0.15 ? u / 0.15 : 1);
     const op = perle * (1 - Math.max(0, (u - 0.7) / 0.3));
     s += `<path d="M${n3(e[0] + 0.1)} ${n3(y - r * 1.6)} C${n3(e[0] + 0.1 + r)} ${n3(y - r * 0.4)} ${n3(e[0] + 0.1 + r)} ${n3(y + r)} ${n3(e[0] + 0.1)} ${n3(y + r)} C${n3(e[0] + 0.1 - r)} ${n3(y + r)} ${n3(e[0] + 0.1 - r)} ${n3(y - r * 0.4)} ${n3(e[0] + 0.1)} ${n3(y - r * 1.6)} Z" fill="${accent ? '#8fd3f4' : encre}" stroke="${encre}" stroke-width="0.05" opacity="${n3(op)}"/>`;
   }

@@ -113,7 +113,7 @@ export type Couches = { fond: string; devant: string };
 
 // La tour du décor « tour » : sa plateforme crénelée est le sol de celle
 // qu'on vient délivrer (vocabulaire.json dit la même hauteur).
-export const TOUR = { x: 740, largeur: 240, plateforme: 600 };
+export const TOUR = { x: 740, largeur: 240, plateforme: 670 };
 
 export const dessinDecor = (nom: NomDecorBaton, t: number, defilement: number, obstacles: ObstacleBaton[], herosX: number, defile: number, id: string): Couches => {
   // la position d'un obstacle : sous le héros à l'instant a

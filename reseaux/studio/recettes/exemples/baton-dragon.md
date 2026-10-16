@@ -41,12 +41,13 @@ gris clair), un soleil, deux nuages, des touffes d'herbe.
   droite à hauteur de la poitrine (0,0 → 1,1 s), la bouche s'ouvre et se
   ferme ; elle penche la tête, puis répond (1,1 → 1,45 s) et rit (1,45 s :
   yeux fermés en accents circonflexes, petit sursaut du corps).
-- 1,30 s : **le dragon entre en vol** par le coin haut droit, grand (échelle
-  1,35), ailes déployées qui battent, et traverse le ciel vers la gauche
-  jusqu'à se placer au-dessus d'eux à droite (2,40 s). Grognement sourd à son
-  entrée, battements d'ailes. Son **ombre** glisse sur le sol depuis la
-  droite et s'arrête sous lui (1,50 → 2,40 s). On a le temps de le voir : la
-  tête cornue, le long cou, les ailes, la queue.
+- 1,30 s : **le dragon entre en vol** par le bord droit, à mi-hauteur,
+  grand (échelle 1,35), ailes déployées qui battent, et traverse le ciel
+  vers la gauche jusqu'à se placer au-dessus d'eux à droite, sous le titre
+  (2,40 s). Grognement sourd à son entrée, battements d'ailes. Son **ombre**
+  glisse sur le sol depuis la droite et s'arrête sous lui (1,50 → 2,40 s).
+  On a le temps de le voir : la tête cornue, le long cou, les ailes, la
+  queue.
 - 1,75 s : le héros lève les yeux vers le haut à droite, surpris ; 2,05 s :
   elle se retourne, surprise.
 - 2,50 → 3,05 s : le dragon **plane sur place et rugit** : la gueule
@@ -58,7 +59,7 @@ gris clair), un soleil, deux nuages, des touffes d'herbe.
   ombre file jusqu'à ses pieds. 3,60 s : il la saisit dans ses serres.
   **L'écran tremble** (secousse de 30 px, amortie en 0,45 s), un nuage de
   poussière à ses pieds, impact profond.
-- 3,60 → 5,00 s : le dragon remonte vers le coin haut droit en l'emportant,
+- 3,60 → 5,00 s : le dragon remonte vers la droite en l'emportant,
   elle a les bras levés accrochés aux serres et les jambes qui gigotent. Le
   héros recule d'un pas, bras écartés, tête renversée pour les suivre des
   yeux (le regard monte jusqu'au coin), bouche ouverte, sous le choc.
@@ -153,9 +154,11 @@ chaque transition, la course du plan d'avant continue sous le flou.
 18,10 → 19,10 s : **transition floue** depuis le pont, et on découvre la
 tour pendant que l'image se précise. **Plan d'ensemble en contre-plongée**.
 Décor `tour` : la tour occupe le tiers droit, du sol jusqu'à sa plateforme
-crénelée en haut ; elle est debout sur la plateforme, mains jointes sur la
-poitrine, apeurée ; le dragon est perché sur le créneau de droite, ailes
-repliées, et balance lentement la tête de gauche à droite. Ciel, nuages.
+crénelée en haut (sol de la plateforme à 670 px, assez bas pour que les
+visages et la tête du dragon restent sous le titre) ; elle est debout sur la
+plateforme, mains jointes sur la poitrine, apeurée ; le dragon est perché sur
+le créneau de droite, ailes repliées, et balance lentement la tête de gauche
+à droite. Ciel, nuages.
 
 - 19,00 → 19,45 s : le héros déboule par la gauche en sprint et **freine en
   glissade** (buste en arrière, jambe avant tendue, traînée de poussière)

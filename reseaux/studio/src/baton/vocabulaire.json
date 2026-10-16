@@ -98,9 +98,9 @@
       "ambiance": "vent"
     },
     "tour": {
-      "description": "Contre-plongée : la tour sur le tiers droit, plateforme crénelée en haut (sol de la plateforme : 600, assez bas pour que les visages restent sous le titre), sol au pied : 1300",
+      "description": "Contre-plongée : la tour sur le tiers droit, plateforme crénelée en haut (sol de la plateforme : 670, assez bas pour que les visages et la tête du dragon perché restent sous le titre), sol au pied : 1300",
       "sol": 1300,
-      "plateforme": 600,
+      "plateforme": 670,
       "ambiance": "vent-montagne"
     },
     "sommet": {

@@ -9,7 +9,7 @@
   },
   "plans": [
     {
-      "description": "Plan d'ensemble, caméra fixe, montagnes. Les deux se parlent debout face à face : lui gesticule de la main droite, elle penche la tête puis répond et rit. À 1,3 s le dragon entre en vol par le coin haut droit, grand, ailes déployées, grognement, et vient se placer au-dessus d'eux à droite ; son ombre glisse sur le sol jusqu'à eux. Il lève les yeux, surpris, elle se retourne. Le dragon plane sur place et rugit (gueule ouverte, yeux rouges), une rafale couche l'herbe et le bandana ; elle a peur, lui est sous le choc ; la caméra pousse un peu sur eux. Puis le dragon pique sur elle, la saisit dans ses serres (l'écran tremble, poussière, impact sourd) et remonte en l'emportant, jambes qui gigotent, jusqu'à sortir par le coin haut droit. Lui recule, bras écartés, tête renversée, bouche ouverte, et les suit des yeux.",
+      "description": "Plan d'ensemble, caméra fixe, montagnes. Les deux se parlent debout face à face : lui gesticule de la main droite, elle penche la tête puis répond et rit. À 1,3 s le dragon entre en vol par le coin haut droit, grand, ailes déployées, grognement, et vient se placer au-dessus d'eux à droite, sous le titre ; son ombre glisse sur le sol jusqu'à eux. Il lève les yeux, surpris, elle se retourne. Le dragon plane sur place et rugit (gueule ouverte, yeux rouges), une rafale couche l'herbe et le bandana ; elle a peur, lui est sous le choc ; la caméra pousse un peu sur eux. Puis le dragon pique sur elle, la saisit dans ses serres (l'écran tremble, poussière, impact sourd) et remonte en l'emportant, jambes qui gigotent, jusqu'à sortir par le coin haut droit. Lui recule, bras écartés, tête renversée, bouche ouverte, et les suit des yeux.",
       "duree": 5.0,
       "decor": "montagnes",
       "persos": [
@@ -144,7 +144,7 @@
         {
           "qui": "dragon",
           "x": 1500,
-          "y": -150,
+          "y": 450,
           "echelle": 1.35,
           "sens": "gauche",
           "pose": "vole",
@@ -154,12 +154,12 @@
             {
               "a": 1.3,
               "x": 1500,
-              "y": -150
+              "y": 450
             },
             {
               "a": 2.4,
               "x": 880,
-              "y": 430,
+              "y": 640,
               "ease": "sortie"
             },
             {
@@ -169,7 +169,7 @@
             {
               "a": 3.05,
               "x": 880,
-              "y": 430,
+              "y": 640,
               "pose": "plonge"
             },
             {
@@ -180,8 +180,8 @@
             },
             {
               "a": 5.0,
-              "x": 1350,
-              "y": -320,
+              "x": 1500,
+              "y": 60,
               "pose": "vole",
               "ease": "entree"
             }
@@ -699,7 +699,7 @@
         {
           "qui": "elle",
           "x": 800,
-          "sol": 600,
+          "sol": 670,
           "sens": "gauche",
           "pose": "attend",
           "expression": "peur",
@@ -725,7 +725,7 @@
         {
           "qui": "dragon",
           "x": 975,
-          "y": 460,
+          "y": 530,
           "echelle": 1.15,
           "sens": "gauche",
           "pose": "perche",
@@ -809,7 +809,7 @@
         {
           "qui": "elle",
           "x": 800,
-          "sol": 600,
+          "sol": 670,
           "sens": "gauche",
           "pose": "tend",
           "expression": "soulagee"
@@ -819,7 +819,7 @@
         {
           "qui": "dragon",
           "x": 975,
-          "y": 460,
+          "y": 530,
           "echelle": 1.15,
           "sens": "gauche",
           "pose": "rugit"
@@ -965,7 +965,7 @@
               "x": 738,
               "haut": -222,
               "rot": 40,
-              "sol": 600
+              "sol": 670
             },
             {
               "a": 0.98,
@@ -1003,7 +1003,7 @@
               "de": 0,
               "a": 0.62,
               "versX": 738,
-              "versHaut": 689,
+              "versHaut": 619,
               "arc": 30
             },
             {
@@ -1030,7 +1030,7 @@
         {
           "qui": "elle",
           "x": 800,
-          "sol": 600,
+          "sol": 670,
           "sens": "gauche",
           "pose": "tend",
           "expression": "soulagee",
@@ -1053,7 +1053,7 @@
         {
           "qui": "dragon",
           "x": 975,
-          "y": 460,
+          "y": 530,
           "echelle": 1.15,
           "sens": "gauche",
           "pose": "rugit",
@@ -1090,7 +1090,7 @@
           "effet": "poussiere",
           "de": 0.98,
           "x": 900,
-          "y": 600,
+          "y": 670,
           "intensite": 0.8
         }
       ],
@@ -1111,13 +1111,13 @@
           "a": 0.46,
           "zoom": 1.75,
           "x": 772,
-          "y": 620
+          "y": 640
         },
         {
           "a": 0.62,
           "zoom": 1.75,
           "x": 772,
-          "y": 600
+          "y": 620
         },
         {
           "a": 1.3,

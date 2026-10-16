@@ -135,7 +135,7 @@ elle (les visages du plan fantôme ne comptent pas).
   `abattu`, la tête qui tombe), le fondu
   entre poses, le cycle de course (sprint de ninja : buste couché, bras en
   arrière, lame qui traîne), les visages (17 expressions, dont `chagrin`,
-  une larme qui perle et coule depuis le changement d'expression, et
+  une larme qui perle et coule, deux par seconde et demie, depuis le changement d'expression, et
   `vengeur`, sourcils en biais, yeux plissés et sourire en coin), l'épée (poignée
   au dos, lame tenue avec halo et étincelles selon la charge), le bouquet,
   les pans du bandana et la queue de cheval qui suivent le vent et la
