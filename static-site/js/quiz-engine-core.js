@@ -2076,11 +2076,22 @@ var QuizEngine = (function() {
   // Une mascotte en SVG a la hauteur voulue, en pixels. La largeur suit les
   // proportions du dessin et les deux sont ecrites dans la balise : la taille
   // est juste des le premier rendu, avant meme la feuille de style.
+  // Les deguisements de saison du site (Halloween 2026 : la rose en
+  // sorciere, le violet en vampire) : le body porte data-saison quand la
+  // saison est active (build/config.js, SAISON) et le module des mascottes
+  // dit quoi mettre a qui (SAISONS_MASCOTTES). Sans saison, rien ne change.
+  function accessoiresSaison(nom) {
+    var s = document.body && document.body.getAttribute('data-saison');
+    var T = window.SAISONS_MASCOTTES;
+    return (s && T && T[s] && T[s][nom]) || null;
+  }
   function mascotteSvg(nom, pose, hauteur, extra, classe) {
     if (!mascottesDispo()) return '';
     var base = window.POSES_MASCOTTES[pose] || window.POSES_MASCOTTES.repos || {};
     var o = { couleurs: 'hex' }, k;
     for (k in base) o[k] = base[k];
+    var deguisement = accessoiresSaison(nom);
+    for (k in (deguisement || {})) o[k] = deguisement[k];
     for (k in (extra || {})) o[k] = extra[k];
     var boite = MASCOTTE_BOITES[nom] || MASCOTTE_BOITES.rose;
     var largeur = Math.round(hauteur * boite[0] / boite[1]);

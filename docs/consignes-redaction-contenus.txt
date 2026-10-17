@@ -1,0 +1,572 @@
+CONSIGNES DE RÉDACTION DES CONTENUS DE QUIZ-COUPLE.COM
+=======================================================
+
+Compilation faite le 16 octobre 2026 à partir de ce qui est écrit dans le
+dépôt GitHub : le fichier CLAUDE.md (sections « Tonalité de rédaction »,
+« Maillage interne », « Typographie des listes à puces » et les règles
+dispersées dans la description des pages), le guide interne de publication
+des articles (.internal/PUBLISHING-GUIDE.md) et la structure réelle des
+fichiers de contenu (fr/quiz-*.json, data/blog/fr/*.ts). Ces règles valent
+pour tout nouveau contenu et pour toute réécriture, dans les cinq langues du
+site (français d'abord, puis anglais, espagnol, allemand, italien).
+
+La ligne éditoriale des comptes Instagram (Quiz Couple en anglais, Les
+mipaps en français) est à part, dans reseaux/atelier/LIGNE-EDITORIALE.md et
+reseaux/mipaps/atelier/LIGNE-EDITORIALE.md ; ses règles de texte sont
+résumées en annexe à la fin de ce fichier.
+
+
+SOMMAIRE
+--------
+ 1. Les cinq langues
+ 2. L'anatomie d'une page de test ou de jeu
+ 3. L'anatomie d'un article de blog
+ 4. Title, meta description, H1 et titres de sections
+ 5. Le ton : écrire comme un humain (l'exemple de référence)
+ 6. Ce qu'une introduction ne fait jamais
+ 7. La fausse modestie et la vertu affichée
+ 8. Les phrases elliptiques qui ne veulent rien dire
+ 9. Les marqueurs IA interdits
+10. Varier les tournures : la réserve de formulations
+11. Varier aussi la construction
+12. Le maillage interne : les règles
+13. La typographie des listes à puces
+14. Chiffres, ponctuation et détails de forme
+15. Avant de dire que c'est fait
+Annexe. Les textes des comptes Instagram
+
+
+1. LES CINQ LANGUES
+-------------------
+
+- Le français est la langue de référence. On écrit la page en français,
+  puis on la décline en anglais (en), espagnol (es), allemand (de) et
+  italien (it).
+- On transpose le ton, on ne traduit pas mot à mot. Les règles de style de
+  ce fichier (ton humain, marqueurs interdits, mots interdits dans les
+  titres, maillage, ponctuation des listes) s'appliquent dans chaque langue
+  avec la typographie de cette langue : espace avant « ! » et « ? » en
+  français, « ¡...! » en espagnol, pas d'espace avant « : » hors du
+  français.
+- Les URL des liens internes portent le préfixe de la langue hors français
+  (/en/..., /es/..., /de/..., /it/...), jamais le chemin français dans une
+  page traduite.
+- Certaines pages n'existent qu'en français (marquées frOnly dans la
+  configuration : par exemple le test vacances, les Z'amours). Elles ne
+  doivent apparaître dans aucune navigation ni aucun lien d'une page
+  traduite.
+- Dans les articles de blog traduits, on adapte les références
+  géographiques : « en France » devient « in the US/UK », « en España »,
+  « in Deutschland », « in Italia » ; « Paris » devient « major cities »,
+  « Madrid/Barcelona », « Berlin/München », « Milano/Roma ». Les prix
+  restent en euros.
+- Dans une traduction, la structure est identique au français (mêmes
+  champs, même ordre, même image, même auteur, même date), et un mot en
+  gras en français est en gras dans la traduction.
+
+
+2. L'ANATOMIE D'UNE PAGE DE TEST OU DE JEU
+------------------------------------------
+
+Le contenu d'une page de test ou de jeu vit dans un fichier JSON par langue
+(fr/quiz-<nom>.json, en/quiz-<nom>.json, etc.), lu par le gabarit
+quiz-generic. Ses parties :
+
+- hero.badge : une étiquette courte au-dessus du titre (« Test à deux •
+  Pour les adultes »).
+- hero.title : le H1 de la page, sous forme de question ou de promesse
+  claire (« Test de compatibilité sexuelle : êtes-vous sur la même longueur
+  d'onde ? »). hero.titleHighlight : la partie du titre mise en couleur,
+  reprise mot pour mot du titre.
+- hero.description : un paragraphe qui dit ce que c'est, platement, et ce
+  qu'on va trouver.
+- hero.subtitle : la ligne pratique « N questions • M minutes • sur un
+  téléphone ou chacun le sien ». Le nombre de questions écrit doit être
+  exactement celui que le moteur tire (défini dans quiz-loader.js) ; quand
+  un test tire 20 questions parmi 30, la page dit 20.
+- hero.jumpBtn : le bouton (« Faire le test », « Faire le quiz »,
+  « Jouer »).
+- section1 à section4 (ou plus) : les sections de texte sous le moteur,
+  chacune avec son titre (H2), une introduction et des paragraphes p1, p2,
+  p3 ; une section peut avoir des sous-parties (sub1Title + sub1P1 : des
+  H3). Les sections habituelles : comment se passe le test, ce que le test
+  mesure ou compare, comment le score est calculé, un sujet de fond lié au
+  test (« Quand vos envies ne sont pas les mêmes »). Chaque section explique
+  avant d'embellir : d'abord ce que c'est, puis un exemple concret.
+- seo.faqTitle et seo.faq1Q/faq1A ... faq5Q/faq5A : cinq questions
+  fréquentes avec leur réponse. Elles sont rendues en FAQ sur la page et
+  reprises dans les données structurées (FAQPage), donc chaque réponse doit
+  se suffire à elle-même, en deux à quatre phrases.
+- jsonLd.about : le sujet de la page en quelques mots, pour les données
+  structurées.
+- Le title, la meta description et les libellés de navigation (menu, pied
+  de page, plan du site, cartes de l'accueil et du bas des pages) viennent
+  des fichiers quizzes.json et common.json de la langue (clé nav.<clé>).
+
+Deux règles de cohérence :
+
+- Le nom de la page est le même partout : H1, title, meta description,
+  JSON-LD, fil d'Ariane, menu, cartes. Quand le compteur de couple est
+  devenu « Compteur de durée en couple », tout a changé d'un coup, dans les
+  cinq langues, sans toucher aux adresses.
+- Deux pages d'une même famille de navigation (Tests de couple, Tests
+  célibataires, Quiz, Jeux) n'ont jamais le même libellé de menu.
+
+Une nouvelle page reçoit aussi : une image de tête (1200 x 630, WebP, avec
+ses variantes 480/720/880), un texte alternatif descriptif dans les cinq
+langues, et des liens entrants depuis d'autres pages (voir le maillage).
+
+
+3. L'ANATOMIE D'UN ARTICLE DE BLOG
+----------------------------------
+
+Un article est un fichier data/blog/<langue>/<slug-interne>.ts, enregistré
+dans BLOG_ARTICLES (static-site/build/config.js) avec son slug dans chaque
+langue et sa date de publication. Ses champs :
+
+- slug : le slug dans l'URL, propre à chaque langue.
+- title : le titre affiché en H1.
+- metaTitle : le titre SEO, moins de 60 caractères.
+- metaDescription : la description SEO, moins de 160 caractères.
+- featuredImage (/blog/<nom>.webp, 1200 x 630, environ 200 Ko au plus) et
+  featuredImageAlt (une vraie description de l'image).
+- publishedAt : la date, la même dans les cinq langues ; une date future
+  programme l'article, et les liens qui pointent vers lui depuis d'autres
+  pages restent masqués jusqu'à sa parution (stripFutureLinks s'en charge au
+  build : on peut écrire le lien d'avance).
+- author : le même auteur dans les cinq langues.
+- excerpt : le chapeau, une à deux phrases, affiché sur les cartes (il est
+  tronqué à trois lignes sur les cartes : l'essentiel au début).
+- introduction : des paragraphes HTML (voir la section 6 pour ce qu'une
+  introduction ne fait jamais).
+- quickSummary : quatre à six points clés, une phrase chacun, des faits et
+  pas des promesses.
+- sections : chacune avec un id en kebab-case, un titre (H2), un contenu
+  HTML, des sous-sections facultatives (id, titre H3, contenu) et un bloc
+  « astuce » facultatif (champ tip, affiché après la section).
+
+Le HTML autorisé dans un article : <p>, <strong>, <ul>/<li>, <table>. Un
+tableau s'entoure de <div><table>...</table></div>. Un score final s'écrit
+<p class="blog-note-score"><strong>X/10</strong></p>. Les blocs astuce
+passent par le champ tip, jamais par du HTML maison.
+
+Le compteur « Cet article a été lu N fois » et les lectures des cartes sont
+automatiques ; les images écrites dans le corps reçoivent leurs variantes
+au build ; le sommaire, le JSON-LD (BreadcrumbList + Article), les hreflang
+et la place dans la liste du blog et sur l'accueil sont générés.
+
+Procédure : fichier FR, image, enregistrement dans BLOG_ARTICLES, quatre
+traductions, build (cd static-site && npm run build), vérification de la
+page dans les cinq langues, commit.
+
+
+4. TITLE, META DESCRIPTION, H1 ET TITRES DE SECTIONS
+----------------------------------------------------
+
+- Title (metaTitle) : moins de 60 caractères, le sujet en premier, sans
+  formule d'accroche.
+- Meta description : moins de 160 caractères, une phrase ou deux qui disent
+  ce qu'on trouve sur la page, avec les mots que les gens tapent.
+- H1 : un seul par page. Pour un test ou un jeu, le nom du test suivi d'une
+  question ou d'une promesse claire ; pour un article, le vrai sujet, sans
+  cheville.
+- H2 et H3 : des titres qui annoncent le contenu de la section, lisibles
+  seuls dans un sommaire.
+- JAMAIS, dans un title, un H1, un H2 ou un H3 : « vraiment »,
+  « concrètement », « en bref », « au fait », ni leurs équivalents dans les
+  autres langues (really, actually, in short ; realmente, de verdad,
+  concretamente, en resumen ; wirklich, konkret gesagt, kurz gesagt ;
+  davvero, veramente, concretamente, in breve). Ce sont des chevilles : un
+  titre qui en a besoin est un titre mal posé. On reformule ou on retire le
+  mot, dans la langue du titre.
+- Pas de tiret cadratin dans un titre ni dans un texte ; on coupe la
+  phrase ou on met deux points.
+- Le nom d'une page ne change jamais sans changer en même temps son title,
+  sa meta, son H1, son JSON-LD, son fil d'Ariane et ses libellés de menu
+  dans les cinq langues (les adresses, elles, ne bougent pas).
+
+
+5. LE TON : ÉCRIRE COMME UN HUMAIN
+----------------------------------
+
+Le contenu éditorial doit sonner comme une personne qui explique le jeu à
+un ami, pas comme un rédacteur qui cisèle ses phrases. Le style « bien
+écrit » (formules, rythme, chutes) est précisément ce que Google repère
+comme un marqueur IA. Le naturel bat le brillant, dans les cinq langues.
+
+L'exemple de référence, validé par Thomas.
+
+Version bannie (marqueurs IA partout) :
+
+    La règle tient en une phrase : une affirmation commence par « Je n'ai
+    jamais », et chacun avoue si, en vrai, il l'a déjà fait. Pas de bonne
+    réponse, pas de points à marquer. Ce qui fait le jeu, c'est ce que la
+    réponse déclenche : la tête de l'autre, la question « attends, quand
+    ça ? », et l'histoire qui arrive derrière.
+
+Version humaine (à imiter) :
+
+    Le « Je n'ai jamais » est un jeu qu'on peut faire entre amis ou en
+    couple. C'est un jeu très simple qui consiste à être confronté à des
+    situations, et à simplement dire si « j'ai déjà » ou si « je n'ai
+    jamais », justement. Par exemple : « Je n'ai jamais été à un mariage ».
+
+    Si vous répondez « j'ai », c'est que vous avez déjà été à un mariage,
+    si vous répondez « je n'ai jamais », c'est que vous n'y avez jamais
+    été. C'est tout simple, mais la plupart du temps ça ouvre au débat,
+    rappelle des souvenirs et permet de passer un très bon moment à deux !
+
+Ce qui fait la différence :
+
+- Commencer par dire ce que c'est, platement : « X est un jeu qu'on peut
+  faire entre amis ou en couple. » Sujet, verbe, complément.
+- Un exemple concret tout de suite : « Par exemple : ... », puis dérouler
+  l'évidence sans peur de la redondance : « Si vous répondez X, c'est
+  que... Si vous répondez Y, c'est que... ». On ne laisse rien à déduire au
+  lecteur.
+- Répondre d'abord : une section « différence » commence par « La
+  principale différence réside dans les questions. », pas par un effet de
+  style.
+- Les mots de l'oral : « justement », « d'ailleurs », « du coup », « la
+  plupart du temps », « ou encore », « etc. », « ça ». Écrire « ça » plutôt
+  que « cela », « on » plutôt que des tournures impersonnelles.
+- Annoncer ce qui vient : « Voici comment fonctionne notre moteur de jeu
+  ci-dessus : ».
+- Des exemples en série, entre guillemets, reliés par « ou encore » et
+  fermés par « etc. » quand la liste pourrait continuer.
+- Une pointe d'enthousiasme simple est bienvenue : « ...et permet de passer
+  un très bon moment à deux ! »
+- De la ponctuation vivante, demandée par Thomas : un ou deux « ! » en fin
+  de phrase par page, là où l'enthousiasme est sincère, et quelques « ... »
+  quand une phrase reste en suspens (« Toi, parce que la dernière fois au
+  restaurant... »). Ça rend la lecture vivante. À petite dose : une page qui
+  en est tapissée redevient un tic. La règle vaut dans les cinq langues,
+  avec la typographie de chacune.
+- Le tutoiement ou le vouvoiement suit la page : les tests et les jeux
+  vouvoient le couple (« vous répondez »), les articles de blog tutoient le
+  lecteur (« ton style d'attachement »). On ne mélange pas dans une même
+  page.
+
+
+6. CE QU'UNE INTRODUCTION NE FAIT JAMAIS
+----------------------------------------
+
+Une introduction entre dans le sujet. Elle ne fait ni l'un ni l'autre de
+ces deux détours, qui sont des marqueurs IA immédiats :
+
+- Taper sur ce qui existe ailleurs : « le problème des listes qu'on trouve
+  partout », « la plupart des articles se contentent de... »,
+  « contrairement à ce qu'on lit souvent ». Le lecteur n'est pas venu lire
+  une critique de la concurrence. On montre qu'on fait mieux en le faisant,
+  pas en le disant.
+- Expliquer comment l'article est construit : « il y a ici 60 citations :
+  13 signées et 47 écrites par nous, rangées selon... », « voici comment
+  lire ce qui suit », « la première partie traite de... ». Le plan se voit
+  dans les titres. Personne ne lit le mode d'emploi d'un article.
+
+Une bonne introduction dit de quoi on parle, donne le contexte d'usage,
+puis annonce le contenu en une phrase simple : « Voici 60 des meilleures
+citations sur l'âme sœur, celles qu'on a trouvées et celles qu'on a
+écrites. » Et on attaque.
+
+
+7. LA FAUSSE MODESTIE ET LA VERTU AFFICHÉE
+------------------------------------------
+
+Se mettre en scène en train de bien faire est un marqueur IA aussi net que
+les autres. Interdit :
+
+    « Elles ne portent pas de nom d'auteur, et c'est volontaire : on
+    préfère ne rien signer plutôt que d'inventer une signature. »
+
+    « On a vérifié d'où elles viennent, parce que la moitié du web les
+    attribue à côté. »
+
+Le travail bien fait se constate, il ne se commente pas. Si une information
+mérite d'être donnée (une source, une nuance), on la donne platement, sans
+souligner le mérite qu'on a eu à la chercher.
+
+
+8. LES PHRASES ELLIPTIQUES QUI NE VEULENT RIEN DIRE
+---------------------------------------------------
+
+Une phrase courte et rythmée n'est pas une phrase claire. Interdit :
+
+    « L'âme sœur, elle, construit. »
+
+Construit quoi ? Personne ne parle comme ça. Chaque phrase doit pouvoir
+être lue à voix haute par quelqu'un qui ne connaît pas le sujet et être
+comprise du premier coup. Le verbe a un complément, le pronom a un
+référent, et l'incise de style (« elle, », « lui, ») disparaît.
+
+
+9. LES MARQUEURS IA INTERDITS
+-----------------------------
+
+- « tient en une phrase », « tient en un mot », « tiennent en quelques
+  lignes » et toute la famille, dans toutes les langues.
+- Les fragments sans verbe enchaînés : « Pas de bonne réponse, pas de
+  points à marquer. »
+- Les triades rythmées : « la tête de l'autre, la question..., et
+  l'histoire qui arrive derrière ».
+- Les renversements d'aphorisme : « Ce qui change, ce ne sont pas les
+  règles : ce sont les questions. »
+- Les deux-points rhétoriques en cascade et les chutes de paragraphe
+  travaillées.
+- Les chevilles dans les titres (section 4) et les maximes sur l'amour à la
+  place d'une phrase qu'une personne écrirait.
+
+La règle vaut pour tout nouveau contenu et pour toute réécriture, dans les
+cinq langues : on transpose le ton, pas seulement les mots.
+
+
+10. VARIER LES TOURNURES : LA RÉSERVE DE FORMULATIONS
+-----------------------------------------------------
+
+Un texte se repère comme écrit par une machine autant à ses tics qu'à ses
+fautes. Toujours ouvrir par le même connecteur, enchaîner des phrases de
+même longueur, conclure chaque paragraphe en reformulant le précédent :
+c'est ça qui sonne faux, avant même le vocabulaire.
+
+D'où cette réserve de formulations, à consulter avant et pendant la
+rédaction. CE N'EST PAS UNE LISTE À COCHER. On n'y pioche que lorsqu'une
+expression tombe juste dans la phrase qu'on est en train d'écrire.
+Reformuler une phrase correcte pour réussir à y caser un mot de la liste
+est pire que de ne pas l'utiliser : ça se voit, et ça abîme le texte.
+
+Elle sert surtout à éviter l'automatisme. Si « Il est important de noter
+que » revient dans trois articles, on change, et la liste dit par quoi.
+
+- avantageux, sublime, c'est une manière de, en l'occurrence, par rapport
+  au fait que, dans la plupart des cas, quelque chose de
+- à vrai dire, à première vue, dans les faits, dans le fond, au passage, à
+  ce propos, de ce côté-là, d'un côté comme de l'autre, dans une certaine
+  mesure, à bien y réfléchir, en quelque sorte, pour ainsi dire
+- à défaut de, faute de, quitte à, histoire de, question de, rien que pour,
+  ne serait-ce que, tout simplement, mine de rien, au bout du compte, au
+  final
+- entre autres, de loin, de près, à ce niveau-là, sur ce point-là, de ce
+  point de vue, dans ce cas précis, dans le cas présent, à ce stade, pour
+  le coup, dans la réalité, à l'inverse, à l'opposé, tant qu'à faire
+- autant dire que, il faut dire que, il faut bien reconnaître que, on peut
+  difficilement nier que, force est de constater que, encore faut-il que,
+  reste à savoir si
+- tout dépend de, ça dépend surtout de, selon les cas, selon les
+  situations, suivant les cas, dans bien des cas, la plupart du temps
+- une bonne partie de, une petite partie de, pas mal de, un certain nombre
+  de, une poignée de, une multitude de
+- pas forcément, pas nécessairement, pas toujours, pas vraiment, plus ou
+  moins, plus d'une fois, à plusieurs reprises
+- ce qui est intéressant, c'est que... / le problème, c'est que... / le
+  truc, c'est que... / ce n'est pas forcément évident au premier abord / on
+  pourrait penser que... / à première vue, on aurait tendance à... / en
+  réalité, c'est un peu plus compliqué / ça paraît simple, mais... / c'est
+  là que ça devient intéressant
+- le plus simple reste de..., pour faire simple..., pour prendre un exemple
+  concret..., disons que..., autrement dit..., en clair..., pour le dire
+  autrement..., si on regarde les choses autrement...
+- ça change pas mal de choses, ça peut faire une vraie différence, ça reste
+  quand même..., ce n'est pas rien, ce n'est pas forcément le meilleur
+  choix, ça vaut le coup de..., ça peut valoir le détour, à chacun de voir
+- c'est surtout une question de..., tout est une question de..., il y a
+  quand même un point à garder en tête, il y a un petit détail qui change
+  tout, c'est justement là que..., c'est souvent à ce moment-là que...
+
+Et on évite systématiquement la formulation la plus élégante ou la plus
+académique quand une tournure simple, voire un peu familière, colle mieux
+au ton de la page.
+
+
+11. VARIER AUSSI LA CONSTRUCTION
+--------------------------------
+
+Le vocabulaire ne suffit pas. Ce qui trahit une machine, c'est le moule. À
+proscrire :
+
+- les suites de phrases de longueur identique ;
+- les listes de trois éléments qui reviennent à chaque section ;
+- les paragraphes bâtis tous pareil, et les conclusions qui reformulent
+  mécaniquement ce qui précède ;
+- les oppositions en « ce n'est pas X, c'est Y » utilisées en boucle ;
+- les mêmes connecteurs en tête de phrase d'un bout à l'autre.
+
+Une phrase courte a le droit de suivre une phrase longue. Une transition a
+le droit d'être directe. Un paragraphe a le droit de commencer sans
+connecteur.
+
+Ces règles valent pour tous les contenus à venir, pas seulement pour ceux
+du jour, et dans les cinq langues : on transpose l'intention, on ne traduit
+pas la liste mot à mot.
+
+
+12. LE MAILLAGE INTERNE : LES RÈGLES
+------------------------------------
+
+Les ancres contextuelles et descriptives sont les liens les plus puissants
+du site. Elles renforcent la sémantique de la page cible et ne sont pas du
+spam. Ce ne sont PAS des ancres du type « notre test sur X », ni le titre
+exact de la page cible collé dans une phrase.
+
+La méthode, dans cet ordre :
+
+1. Le contenu d'abord. On écrit la page comme si aucun lien n'existait.
+2. Ensuite seulement, on relit en cherchant les endroits où une formulation
+   déjà présente mène naturellement vers une autre page.
+3. Si vraiment aucun endroit ne s'y prête, on reformule un passage pour
+   qu'un lien y ait sa place. Une page créée doit porter AU MINIMUM 2 LIENS
+   INTERNES SORTANTS EN PLEIN TEXTE, en plus du bloc de renvoi et de la
+   colonne latérale, qui ne comptent pas.
+
+L'ancre se trouve dans le texte, elle ne s'invente pas. On relit le
+paragraphe et on cherche la formulation qui est DÉJÀ ÉCRITE et qui mène
+vers la cible. On ne fabrique pas une formule vague à la fin de la phrase
+pour y accrocher le lien.
+
+Exemple réel, sur un paragraphe qui se termine par « ...ce n'est plus une
+âme sœur, c'est de la fusion » :
+
+    FAUX : ...suffisent à [savoir de quel côté penche votre histoire].
+           (inventé, vague)
+    JUSTE : ...[ce n'est plus une âme sœur], c'est de la fusion.
+            (déjà là, précis)
+
+Ce qui fait une bonne ancre :
+
+- Elle est contextuelle : la phrase autour du lien parle déjà du sujet de
+  la page cible.
+- Elle est descriptive : elle décrit ce qu'on va trouver, pas le nom du
+  test.
+- Le terme exact de la page cible n'a pas à être employé. C'est même mieux
+  quand il ne l'est pas : le lien reste naturel et apporte du vocabulaire
+  nouveau à la cible.
+- Elle est naturelle : on doit pouvoir lire la phrase à voix haute sans
+  deviner qu'un lien y a été posé.
+
+Exemples réels, tous validés :
+
+    « Quand un couple se dispute »              -> test couple toxique
+    « la preuve que rien n'est fini »           -> test est-ce la fin de mon couple
+    « garder une porte entrouverte »            -> test m'aime-t-il en secret
+    « dès les premiers mois de vie commune »    -> test emménager ensemble
+    « deux adultes qui vivent ensemble »        -> test couple sain
+    « y penser avant que ce soit fait »         -> test charge mentale
+
+À vérifier avant de dire que c'est fait :
+
+- Chaque nouvelle page a au moins 2 sortants en plein texte ET au moins
+  1 entrant éditorial venu d'une autre page.
+- Le maillage est répercuté à l'identique dans les cinq langues, avec une
+  ancre écrite dans la langue de la page, jamais traduite mot à mot du
+  français.
+- Les liens sont écrits en dur dans les fichiers {lang}/quiz-*.json (ou
+  dans le HTML des articles), avec l'URL préfixée par la langue hors FR
+  (/en/..., /es/..., /de/..., /it/...).
+- Aucun lien mort : passer le contrôle sur dist/ après construction.
+- Un lien vers un article programmé (date future) peut être écrit tout de
+  suite : le build le masque jusqu'à la parution.
+- Une page qui n'existe qu'en français ne reçoit aucun lien depuis une page
+  traduite.
+
+
+13. LA TYPOGRAPHIE DES LISTES À PUCES
+-------------------------------------
+
+Une puce qui commence par un intitulé en gras se termine par DEUX POINTS,
+jamais par un point. La puce porte déjà la marque de la liste : mettre un
+point après l'intitulé donne une phrase coupée en deux, et le lecteur bute
+dessus.
+
+    FAUX :  • <strong>Répondre « pareil ».</strong> C'est le seul vrai
+            interdit du jeu.
+    JUSTE : • <strong>Répondre « pareil » :</strong> C'est le seul vrai
+            interdit du jeu.
+
+L'espace avant les deux points suit la langue : « titre : » en français,
+"title:" en anglais, en espagnol, en allemand et en italien.
+
+La règle vaut pour tout intitulé en gras qui annonce ce qui suit, y compris
+quand il porte un lien : les deux points se posent APRÈS la balise de lien,
+à l'intérieur du gras.
+
+Elle ne vaut pas pour une phrase entière mise en gras au milieu d'un texte,
+qui garde sa ponctuation normale.
+
+
+14. CHIFFRES, PONCTUATION ET DÉTAILS DE FORME
+---------------------------------------------
+
+- Les notes s'écrivent sur cinq avec le séparateur décimal de la langue :
+  « 4,8/5 » en français, « 4.8/5 » en anglais ; les notes de produits
+  suivent la même règle.
+- Le nombre de questions, de minutes, de cartes écrit dans une page est
+  celui que le moteur utilise réellement ; quand le moteur change, le texte
+  change dans les cinq langues.
+- Les guillemets sont ceux de la langue : « ... » en français, "..." en
+  anglais, etc.
+- Les points de suspension et les points d'exclamation : à petite dose
+  (section 5).
+- Pas de tiret cadratin : deux points, une virgule ou une phrase de plus.
+- Un intitulé en gras dans une liste finit par deux points (section 13).
+- Les textes de l'interface des moteurs (boutons, écrans de départ,
+  verdicts) vivent dans gd.json, quizzes.json et quizGames.json : mêmes
+  règles de ton, phrases courtes mais complètes, et les mêmes mots que dans
+  la page (le nom du mode à l'écran de départ est celui de la page).
+
+
+15. AVANT DE DIRE QUE C'EST FAIT
+--------------------------------
+
+- Relire à voix haute : chaque phrase se comprend du premier coup par
+  quelqu'un qui ne connaît pas le sujet.
+- Chasser les marqueurs des sections 6 à 11 et les mots interdits dans les
+  titres (section 4).
+- Vérifier le maillage (section 12) dans les cinq langues, et passer le
+  contrôle des liens morts sur dist/.
+- Construire le site (cd static-site && npm run build) et ouvrir la page
+  dans un navigateur, dans les cinq langues ; pour un test ou un jeu, jouer
+  une partie entière dans chaque mode (écran de départ, prénoms, questions,
+  résultat), console vide, aucun libellé vide.
+- Pour un article : la page est dans la liste du blog, accessible par son
+  slug dans les cinq langues, avec son image, son sommaire, ses blocs
+  astuce et ses données structurées.
+
+
+ANNEXE. LES TEXTES DES COMPTES INSTAGRAM
+----------------------------------------
+
+Les règles complètes sont dans reseaux/atelier/LIGNE-EDITORIALE.md (compte
+anglais Quiz Couple) et reseaux/mipaps/atelier/LIGNE-EDITORIALE.md (compte
+français Les mipaps), et le contrôle automatique est
+reseaux/automates/lib/style.mjs. L'essentiel, décidé le 9 octobre 2026
+après la remarque de Thomas (« les chutes sont vraiment nulles, c'est de
+l'humour à l'IA, pas humain ») :
+
+- La chute est dans l'image, jamais dans une phrase qui la commente
+  (« That's love. », « He knew better. », « Every single time. », « Plot
+  twist » : interdit). Si un texte accompagne la dernière image, c'est un
+  détail vrai (« 3 AM », « 1 hour later ») ou ce que le personnage dit pour
+  de vrai, jamais un bilan.
+- La légende ajoute un détail vrai, ou se tait. Elle ne répète pas le texte
+  de l'image, ne le résume pas, n'explique pas entre parenthèses. L'appel
+  seul est une légende.
+- L'appel à l'action est un de la liste, tel quel (« Send this to your
+  partner », « Tag him », « Comment your score », « Save this for your next
+  date night » ; en français « envoie-lui ça », « tague ta personne »,
+  « c'est qui chez vous ? »...). Jamais un appel inventé avec « qui / who »
+  (« Tag your partner who always says it »). Un seul appel par post, et pas
+  le même trois fois dans la journée.
+- Un « <3 » par post au plus, jamais à la fin d'un texte de reel. Pas de
+  texte entier entre parenthèses, pas de triade, pas trois phrases de trois
+  mots à la suite, pas de maxime sur l'amour à la place d'une phrase qu'une
+  personne écrirait.
+- Deux tests avant de garder une ligne : à l'oral (quelqu'un dirait ça à
+  voix haute, comme ça ?) et l'ami (tu enverrais ce post à ta personne sans
+  avoir un peu honte ?). Si l'un des deux dit non, on coupe la phrase et on
+  garde l'image.
+- Les textes à l'écran du compte anglais s'écrivent en minuscules, façon
+  message (« u », « ur », « rn », « <3 ») ; 3 à 5 hashtags précis par
+  catégorie, avec #quizcouple ; pas de tiret cadratin, pas de « really »,
+  « actually », « in short » dans un titre.
+- Les vraies répliques de couples relevées dans reseaux/atelier/REFERENCES.md
+  et reseaux/mipaps/REFERENCES.md donnent le ton juste : on les reprend
+  telles quelles ou on les transpose.

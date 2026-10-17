@@ -20,6 +20,7 @@ import {
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable, pagePublicitaire,
 } from './config.js';
+import { saisonActive } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
 import { buildGitDateIndex, dateLaPlusRecente } from './git-dates.js';
 
@@ -43,9 +44,24 @@ const MASCOTTES = (() => {
   }
 })();
 const BOITES_MASCOTTES = { rose: [260, 280], violet: [220, 300] };
+// La saison du site (config.js, SAISON) : le body porte sa classe, sa
+// feuille css/saison/<nom>.css est ecrite dans le <head>, et les mascottes
+// du hero portent leurs deguisements (SAISONS du module des mascottes), comme
+// celles des moteurs le font d'elles-memes a partir de data-saison.
+const SAISON_ACTIVE = saisonActive();
+const CSS_SAISON = (() => {
+  if (!SAISON_ACTIVE) return '';
+  const chemin = path.resolve(__dirname, '../css/saison', `${SAISON_ACTIVE}.css`);
+  if (!fs.existsSync(chemin)) { console.warn(`[saison] ${SAISON_ACTIVE} : pas de feuille css/saison/${SAISON_ACTIVE}.css`); return ''; }
+  const sortie = new CleanCSS({ level: 1 }).minify(fs.readFileSync(chemin, 'utf8'));
+  if (sortie.errors && sortie.errors.length) console.warn(`[saison] ${sortie.errors.join(' ; ')}`);
+  return sortie.styles;
+})();
+console.log(`[saison] ${SAISON_ACTIVE ? `${SAISON_ACTIVE} (feuille de ${CSS_SAISON.length} octets)` : 'aucune'}`);
 function mascotteSvg(nom, pose, extra = {}, classe = '') {
   if (!MASCOTTES) return '';
-  const o = { ...(MASCOTTES.POSES[pose] || MASCOTTES.POSES.repos), couleurs: 'hex', ...extra };
+  const deguisement = (SAISON_ACTIVE && MASCOTTES.SAISONS && MASCOTTES.SAISONS[SAISON_ACTIVE] && MASCOTTES.SAISONS[SAISON_ACTIVE][nom]) || {};
+  const o = { ...(MASCOTTES.POSES[pose] || MASCOTTES.POSES.repos), couleurs: 'hex', ...deguisement, ...extra };
   const [l, h] = BOITES_MASCOTTES[nom] || BOITES_MASCOTTES.rose;
   return MASCOTTES.mascotte(nom, o)
     .replace(/^<svg /, `<svg class="${classe}" aria-hidden="true" focusable="false" `)
@@ -961,6 +977,9 @@ function renderTemplate(templateName, data) {
     data.ogImageWidth = size.width;
     data.ogImageHeight = size.height;
   }
+  // La saison du site est connue de tous les gabarits (base.ejs la pose
+  // sur le body et ecrit sa feuille), sans que chaque page la passe.
+  data = Object.assign({ saison: SAISON_ACTIVE, cssSaison: CSS_SAISON }, data || {});
   return ejs.renderFile(templatePath, data, {
     views: [TEMPLATES_DIR],
     async: false,

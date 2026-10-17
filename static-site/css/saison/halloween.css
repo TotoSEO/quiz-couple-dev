@@ -1,0 +1,57 @@
+/* Halloween : l'habillage de saison du site (build/config.js, SAISON ;
+   demande de Thomas, 16 octobre 2026 : « un design Halloween du site, vraiment
+   léger... un truc qui peut facilement s'ajouter et facilement s'enlever »).
+   Le générateur écrit cette feuille dans le <head> quand la saison est active
+   (jamais sur l'admin), tout est accroché à body.saison-halloween, et les
+   mascottes se déguisent d'elles-mêmes (data-saison lu par le moteur et le
+   hero, options chapeau / cape / crocs de reseaux/charte/mascottes.js).
+   styles.css et ses feuilles critiques ne bougent pas.
+   Ici : une toile dans le coin du menu, une araignée qui se balance au bout
+   de son fil sous le menu, une citrouille à côté du nom, et sur le moteur une
+   toile dans le coin et trois chauves-souris au-dessus de la carte. Les
+   dessins sont des SVG en data URI. Tout ce qui bouge le fait en transform ;
+   prefers-reduced-motion arrête tout. Pour retirer l'habillage : SAISON à
+   null dans build/config.js, ou laisser passer la date de fin. */
+/* sur le nav, pas sur le header : #site-header::after est déjà le filet du bas */
+.saison-halloween #site-header > nav::before,
+.saison-halloween #site-header > nav::after { content: ''; position: absolute; pointer-events: none; }
+/* la toile dans le coin haut gauche du menu, derrière le logo */
+.saison-halloween #site-header > nav::before {
+  left: 0; top: 0; width: 78px; height: 78px; opacity: .6;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%238d7c9a' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M0 0L100.0 0.0M0 0L92.4 38.3M0 0L70.7 70.7M0 0L38.3 92.4M0 0L0.0 100.0M18.0 0.0Q15.9 3.2 16.6 6.9Q13.5 9.0 12.7 12.7Q9.0 13.5 6.9 16.6Q3.2 15.9 0.0 18.0M36.0 0.0Q31.8 6.3 33.3 13.8Q26.9 18.0 25.5 25.5Q18.0 26.9 13.8 33.3Q6.3 31.8 0.0 36.0M54.0 0.0Q47.7 9.5 49.9 20.7Q40.4 27.0 38.2 38.2Q27.0 40.4 20.7 49.9Q9.5 47.7 0.0 54.0M72.0 0.0Q63.6 12.6 66.5 27.6Q53.9 36.0 50.9 50.9Q36.0 53.9 27.6 66.5Q12.6 63.6 0.0 72.0M90.0 0.0Q79.4 15.8 83.1 34.4Q67.3 45.0 63.6 63.6Q45.0 67.3 34.4 83.1Q15.8 79.4 0.0 90.0'/%3E%3C/svg%3E") no-repeat 0 0 / 100% 100%;
+}
+/* l'araignée au bout de son fil, qui se balance sous le menu, près de sa toile */
+.saison-halloween #site-header > nav::after {
+  top: 100%; left: 46px; width: 28px; height: 76px; margin-top: -1px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 92'%3E %3Cpath d='M17 0V56' stroke='%239a8ba6' stroke-width='1.6'/%3E %3Cg fill='none' stroke='%232a1e36' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E %3Cpath d='M11 64 5 59 2 52M11 69 3 68 0 62M11 74 4 78 2 86M12 79 7 86 8 92M23 64l6-5 3-7M23 69l8-1 3-6M23 74l7 4 2 8M22 79l5 7-1 6'/%3E %3C/g%3E %3Cellipse cx='17' cy='73' rx='9.5' ry='11.5' fill='%232a1e36' stroke='%23cdbfdd' stroke-width='.9'/%3E %3Ccircle cx='17' cy='59' r='5.8' fill='%232a1e36' stroke='%23cdbfdd' stroke-width='.9'/%3E %3Cpath d='M13 70q4 3 8 0' stroke='%236a4f80' stroke-width='1.2' fill='none'/%3E %3Ccircle cx='14.8' cy='58' r='1.5' fill='%23f08a24'/%3E%3Ccircle cx='19.2' cy='58' r='1.5' fill='%23f08a24'/%3E %3C/svg%3E") no-repeat 50% 0 / 100% 100%;
+  transform-origin: 50% 0;
+  animation: hwBalance 4.6s ease-in-out infinite alternate;
+}
+@keyframes hwBalance { from { transform: rotate(-7deg); } to { transform: rotate(7deg); } }
+/* la citrouille à côté du nom */
+.saison-halloween .entete-logo::after {
+  content: ''; display: inline-block; flex: none; width: 20px; height: 20px; margin-left: 2px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E %3Cpath d='M12 7.2c-1.4-1.6-3.8-2-5.8-.9C3.2 7.9 2 11 2.5 14.2 3 18 5.8 21 9.2 21c1 0 2-.3 2.8-.9.8.6 1.8.9 2.8.9 3.4 0 6.2-3 6.7-6.8.5-3.2-.7-6.3-3.7-7.9-2-1.1-4.4-.7-5.8.9z' fill='%23f08a24' stroke='%234a3540' stroke-width='1.5' stroke-linejoin='round'/%3E %3Cpath d='M9.5 20.5c-1.2-3.5-1.2-7 0-12.5M14.5 20.5c1.2-3.5 1.2-7 0-12.5' stroke='%23c9641a' stroke-width='1.1' fill='none' stroke-linecap='round'/%3E %3Cpath d='M12 7.2c-.2-2 .6-3.6 2.4-4.6' stroke='%235b8c3a' stroke-width='2.2' stroke-linecap='round' fill='none'/%3E %3Cpath d='M7.6 11.4l1.9 2.3-3.2.8zM16.4 11.4l-1.9 2.3 3.2.8zM7.8 16.2c2.8 2.6 5.6 2.6 8.4 0l-1.2 2.4h-6z' fill='%234a3540'/%3E %3C/svg%3E") no-repeat 50% 50% / 100% 100%;
+}
+/* le moteur : une toile dans le coin haut gauche de la carte, trois
+   chauves-souris qui volent au-dessus ; la carte devient le repère des deux */
+.saison-halloween .quiz-engine { position: relative; }
+.saison-halloween .quiz-engine::before,
+.saison-halloween .quiz-engine::after { content: ''; position: absolute; pointer-events: none; }
+.saison-halloween .quiz-engine::before {
+  left: -1px; top: -1px; width: 58px; height: 58px; opacity: .5; border-top-left-radius: inherit;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%238d7c9a' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M0 0L100.0 0.0M0 0L92.4 38.3M0 0L70.7 70.7M0 0L38.3 92.4M0 0L0.0 100.0M18.0 0.0Q15.9 3.2 16.6 6.9Q13.5 9.0 12.7 12.7Q9.0 13.5 6.9 16.6Q3.2 15.9 0.0 18.0M36.0 0.0Q31.8 6.3 33.3 13.8Q26.9 18.0 25.5 25.5Q18.0 26.9 13.8 33.3Q6.3 31.8 0.0 36.0M54.0 0.0Q47.7 9.5 49.9 20.7Q40.4 27.0 38.2 38.2Q27.0 40.4 20.7 49.9Q9.5 47.7 0.0 54.0M72.0 0.0Q63.6 12.6 66.5 27.6Q53.9 36.0 50.9 50.9Q36.0 53.9 27.6 66.5Q12.6 63.6 0.0 72.0M90.0 0.0Q79.4 15.8 83.1 34.4Q67.3 45.0 63.6 63.6Q45.0 67.3 34.4 83.1Q15.8 79.4 0.0 90.0'/%3E%3C/svg%3E") no-repeat 0 0 / 100% 100%;
+}
+.saison-halloween .quiz-engine::after {
+  left: 50%; top: -30px; width: 150px; height: 52px; margin-left: -75px; opacity: .9;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 52'%3E%3Cpath transform='translate(40 24) scale(1)' d='M0 -3C-6 -12 -17 -14 -30 -9C-25 -4 -27 3 -32 9C-23 7 -16 9 -12 13C-8 9 -4 11 0 15C4 11 8 9 12 13C16 9 23 7 32 9C27 3 25 -4 30 -9C17 -14 6 -12 0 -3ZM-5 -10L-8 -17L-2 -12ZM5 -10L8 -17L2 -12Z' fill='%233b2a4f'/%3E%3Cpath transform='translate(96 18) scale(0.72)' d='M0 -3C-6 -12 -17 -14 -30 -9C-25 -4 -27 3 -32 9C-23 7 -16 9 -12 13C-8 9 -4 11 0 15C4 11 8 9 12 13C16 9 23 7 32 9C27 3 25 -4 30 -9C17 -14 6 -12 0 -3ZM-5 -10L-8 -17L-2 -12ZM5 -10L8 -17L2 -12Z' fill='%233b2a4f'/%3E%3Cpath transform='translate(128 36) scale(0.5)' d='M0 -3C-6 -12 -17 -14 -30 -9C-25 -4 -27 3 -32 9C-23 7 -16 9 -12 13C-8 9 -4 11 0 15C4 11 8 9 12 13C16 9 23 7 32 9C27 3 25 -4 30 -9C17 -14 6 -12 0 -3ZM-5 -10L-8 -17L-2 -12ZM5 -10L8 -17L2 -12Z' fill='%233b2a4f'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% 100%;
+}
+html.dark .saison-halloween .quiz-engine::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 52'%3E%3Cpath transform='translate(40 24) scale(1)' d='M0 -3C-6 -12 -17 -14 -30 -9C-25 -4 -27 3 -32 9C-23 7 -16 9 -12 13C-8 9 -4 11 0 15C4 11 8 9 12 13C16 9 23 7 32 9C27 3 25 -4 30 -9C17 -14 6 -12 0 -3ZM-5 -10L-8 -17L-2 -12ZM5 -10L8 -17L2 -12Z' fill='%23cbb8e4'/%3E%3Cpath transform='translate(96 18) scale(0.72)' d='M0 -3C-6 -12 -17 -14 -30 -9C-25 -4 -27 3 -32 9C-23 7 -16 9 -12 13C-8 9 -4 11 0 15C4 11 8 9 12 13C16 9 23 7 32 9C27 3 25 -4 30 -9C17 -14 6 -12 0 -3ZM-5 -10L-8 -17L-2 -12ZM5 -10L8 -17L2 -12Z' fill='%23cbb8e4'/%3E%3Cpath transform='translate(128 36) scale(0.5)' d='M0 -3C-6 -12 -17 -14 -30 -9C-25 -4 -27 3 -32 9C-23 7 -16 9 -12 13C-8 9 -4 11 0 15C4 11 8 9 12 13C16 9 23 7 32 9C27 3 25 -4 30 -9C17 -14 6 -12 0 -3ZM-5 -10L-8 -17L-2 -12ZM5 -10L8 -17L2 -12Z' fill='%23cbb8e4'/%3E%3C/svg%3E"); opacity: .8; }
+html.dark .saison-halloween #site-header > nav::before,
+html.dark .saison-halloween .quiz-engine::before { opacity: .45; }
+@media (max-width: 767.98px) {
+  .saison-halloween #site-header > nav::after { left: 40px; width: 22px; height: 60px; }
+  .saison-halloween .quiz-engine::before { width: 44px; height: 44px; }
+  .saison-halloween .quiz-engine::after { width: 110px; height: 38px; margin-left: -55px; top: -24px; }
+}
+@media (prefers-reduced-motion: reduce) { .saison-halloween #site-header > nav::after { animation: none; } }
