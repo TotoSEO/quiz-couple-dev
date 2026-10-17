@@ -468,21 +468,26 @@
 
           <div class="mobile-nav-divider"></div>
 
-          <%# Quatre tuiles en grille de 2 x 2 (17 octobre 2026, Thomas : « plutôt
-              qu'un élément par ligne, tu fais 2 carrés et 2 carrés ») : Instagram
-              puis les liens directs, chacun dans sa couleur. %>
+          <%# Quatre tuiles carrées en grille de 2 x 2 (17 octobre 2026, Thomas : « 2
+              carrés et 2 carrés », puis « pas de gradient ni de fade ; le titre en
+              gros, le pictogramme en grand en fond, et en bas, séparée par un
+              trait, une longue flèche »). Le titre passe à la ligne après son
+              premier mot : « CRÉER / UN QUIZ ». %>
+          <%
+            const tuileIg = '<rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/>';
+            const tuiles = [{ href: instagramUrl, tuile: 'instagram', ic: tuileIg, libelle: 'Instagram', externe: true }]
+              .concat(directLinksFiltered.map((l) => ({ href: getLocalizedUrl(l.routeKey, lang), tuile: l.tuile, ic: l.ic, libelle: t('common:' + l.labelKey, l.labelKey) })));
+          %>
           <div class="mobile-tuiles">
-            <a href="<%= instagramUrl %>" class="mobile-tuile mobile-tuile--instagram" target="_blank" rel="noopener"
-               aria-label="<%= t('common:footer.instagram', 'Suivez-nous sur Instagram') %>">
-              <span class="mobile-tuile-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
-              <span class="mobile-tuile-texte">Instagram</span>
-              <svg class="mobile-tuile-fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
-            </a>
-            <% for (const link of directLinksFiltered) { %>
-            <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-tuile mobile-tuile--<%= link.tuile %>">
-              <span class="mobile-tuile-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><%- link.ic %></svg></span>
-              <span class="mobile-tuile-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-              <svg class="mobile-tuile-fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            <% for (const tu of tuiles) {
+                 const mots = String(tu.libelle).split(' ');
+                 const ligne1 = mots.shift(); const ligne2 = mots.join(' '); %>
+            <a href="<%= tu.href %>" class="mobile-tuile mobile-tuile--<%= tu.tuile %>"<% if (tu.externe) { %> target="_blank" rel="noopener" aria-label="<%= t('common:footer.instagram', 'Suivez-nous sur Instagram') %>"<% } %>>
+              <span class="mobile-tuile-haut">
+                <svg class="mobile-tuile-fond" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><%- tu.ic %></svg>
+                <span class="mobile-tuile-titre"><span><%= ligne1 %></span><% if (ligne2) { %><span><%= ligne2 %></span><% } %></span>
+              </span>
+              <span class="mobile-tuile-bas" aria-hidden="true"><span class="mobile-tuile-trait"></span><svg class="mobile-tuile-pointe" viewBox="0 0 10 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 1.5 8.5 6 3 10.5"/></svg></span>
             </a>
             <% } %>
           </div>

@@ -1865,55 +1865,64 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .mobile-nav-link:hover { background: hsl(var(--muted) / 0.5); color: hsl(var(--primary)); }
 
 /* Les quatre liens du bas du menu mobile, en grille de 2 x 2 (17 octobre
-   2026) : Instagram, créer un quiz, questions pour couple, blog. Chaque tuile
-   a sa couleur dans --tuile, posée par sa variante : fond teinté, pastille de
-   l'icône, flèche dans le coin. */
+   2026) : Instagram, créer un quiz, questions pour couple, blog. Des carrés en
+   aplat, sans dégradé ni fondu (Thomas : « ça fait trop IA ») : le titre en
+   majuscules, le pictogramme en grand et pâle en fond, puis, sous un trait,
+   une bande de 15 % de la hauteur avec une longue flèche. Chaque tuile a sa
+   couleur dans --tuile et sa variante lisible en petit texte dans
+   --tuile-texte, claire en thème sombre. */
 .mobile-tuiles {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.6rem; margin-top: 0.15rem;
 }
 .mobile-tuile {
-  --tuile: var(--primary);
-  position: relative; isolation: isolate; overflow: hidden;
-  display: flex; flex-direction: column; justify-content: space-between; gap: 0.75rem;
-  min-height: 7.25rem; padding: 0.85rem;
+  --tuile: var(--primary); --tuile-texte: var(--primary-texte);
+  display: grid; grid-template-rows: 85fr 15fr;
+  aspect-ratio: 1 / 1; overflow: hidden;
+  container-type: inline-size;
   border-radius: 1rem;
-  border: 1px solid hsl(var(--tuile) / 0.22);
-  background:
-    radial-gradient(120% 90% at 100% 0%, hsl(var(--tuile) / 0.16), transparent 60%),
-    linear-gradient(160deg, hsl(var(--tuile) / 0.09), hsl(var(--card) / 0.9));
-  color: hsl(var(--foreground));
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  border: 1.5px solid hsl(var(--tuile) / 0.35);
+  background: hsl(var(--tuile) / 0.1);
+  color: hsl(var(--tuile-texte));
+  transition: border-color 0.2s ease, transform 0.15s ease;
 }
-.mobile-tuile:hover { border-color: hsl(var(--tuile) / 0.45); box-shadow: 0 8px 20px -10px hsl(var(--tuile) / 0.5); }
+.dark .mobile-tuile { background: hsl(var(--tuile) / 0.16); }
+.mobile-tuile:hover { border-color: hsl(var(--tuile) / 0.7); }
 .mobile-tuile:active { transform: scale(0.97); }
 .mobile-tuile:focus-visible { outline: 2px solid hsl(var(--tuile)); outline-offset: 2px; }
-.mobile-tuile-ic {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 2.5rem; height: 2.5rem; border-radius: 0.8rem;
-  background: hsl(var(--tuile)); color: hsl(0 0% 100%);
-  box-shadow: 0 6px 14px -6px hsl(var(--tuile) / 0.7);
+.mobile-tuile-haut { position: relative; overflow: hidden; min-height: 0; }
+.mobile-tuile-fond {
+  position: absolute; width: 92%; height: auto; right: -18%; bottom: -20%;
+  color: hsl(var(--tuile)); opacity: 0.2;
+  pointer-events: none;
 }
-.mobile-tuile-ic svg { width: 1.2rem; height: 1.2rem; }
-.mobile-tuile-texte {
-  font-family: var(--font-heading, 'Poppins', sans-serif);
-  font-size: 0.9375rem; font-weight: 700; line-height: 1.2;
-  overflow-wrap: anywhere;
+.dark .mobile-tuile-fond { opacity: 0.28; }
+.mobile-tuile-titre {
+  position: relative; display: flex; flex-direction: column;
+  padding: 0.8rem 0.8rem 0;
+  font-family: var(--font-display);
+  /* À la largeur de la tuile, pas de l'écran : « INSTAGRAM » ou « QUESTIONS »
+     tiennent sur une ligne de 139 px (écran de 320) sans couper le mot. */
+  font-size: clamp(0.9rem, 11cqi, 1.45rem); font-weight: 700; line-height: 1.02;
+  letter-spacing: 0; text-transform: uppercase;
+  overflow-wrap: break-word;
 }
-.mobile-tuile-fleche {
-  position: absolute; top: 0.85rem; right: 0.85rem;
-  width: 1rem; height: 1rem; color: hsl(var(--tuile));
-  opacity: 0.7; transition: transform 0.2s ease, opacity 0.2s ease;
+.mobile-tuile-bas {
+  display: flex; align-items: center; gap: 0;
+  padding: 0 0.8rem;
+  border-top: 1.5px solid hsl(var(--tuile) / 0.35);
 }
-.mobile-tuile:hover .mobile-tuile-fleche { opacity: 1; transform: translateX(2px); }
-.mobile-tuile--instagram { --tuile: 330 75% 55%; }
-.mobile-tuile--instagram .mobile-tuile-ic { background: linear-gradient(45deg, #f9a03f, #e1306c 50%, #833ab4); }
-.mobile-tuile--instagram:hover .mobile-tuile-fleche { transform: translate(2px, -2px); }
-.mobile-tuile--creer { --tuile: var(--primary); }
-.mobile-tuile--questions { --tuile: var(--secondary); }
-.mobile-tuile--blog { --tuile: var(--celib); }
+.mobile-tuile-trait { flex: 1 1 auto; height: 2px; border-radius: 2px; background: currentColor; margin-right: -0.4rem; }
+.mobile-tuile-pointe { flex: 0 0 auto; width: 0.7rem; height: 0.85rem; }
+.mobile-tuile-trait, .mobile-tuile-pointe { transition: transform 0.2s ease; }
+.mobile-tuile:hover .mobile-tuile-pointe { transform: translateX(3px); }
+.mobile-tuile--instagram { --tuile: 330 70% 52%; --tuile-texte: 330 70% 40%; }
+.dark .mobile-tuile--instagram { --tuile-texte: 330 80% 74%; }
+.mobile-tuile--creer { --tuile: var(--primary); --tuile-texte: var(--primary-texte); }
+.mobile-tuile--questions { --tuile: var(--secondary); --tuile-texte: var(--secondary-texte); }
+.mobile-tuile--blog { --tuile: var(--celib); --tuile-texte: var(--celib-texte); }
 @media (prefers-reduced-motion: reduce) {
-  .mobile-tuile, .mobile-tuile-fleche { transition: none; }
+  .mobile-tuile, .mobile-tuile-pointe, .mobile-tuile-trait { transition: none; }
   .mobile-tuile:active { transform: none; }
 }
 
