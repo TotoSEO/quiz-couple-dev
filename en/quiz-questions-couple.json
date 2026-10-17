@@ -1,178 +1,37 @@
 {
   "hero": {
-    "title": "120 Questions for Couples to Ask Each Other",
-    "description": "Questions sorted by theme to know each other better, strengthen your bond, and create moments of authentic exchange.",
-    "titleHighlight": "120 Questions",
+    "title": "100+ Questions for Couples to Ask Each Other",
+    "titleHighlight": "100+ Questions",
+    "description": "A random question to get started right away, 120 questions sorted by theme just below, and all our lists for more specific moments: early dating, intimate questions, the future, long distance...",
     "badge": "120 questions • Free"
   },
-  "random": {
-    "button": "Random question"
+  "listes": {
+    "pastille": "💬 Our lists",
+    "titre": "All our question lists",
+    "sousTitre": "Each list fits one situation, with its own questions and a few tips on when to ask them.",
+    "bouton": "See the questions",
+    "minutes": "{n} min read",
+    "lu": "Read {n} times",
+    "tags": {
+      "questions-pour-mieux-se-connaitre-en-couple": "Know each other better",
+      "questions-debut-de-relation": "Early dating",
+      "questions-intimes-couple": "Intimate",
+      "questions-avenir-couple": "Future",
+      "questions-couple-telephone-message": "Long distance",
+      "36-questions-pour-tomber-amoureux": "Fall in love",
+      "questions-a-poser-a-son-copain": "For your boyfriend",
+      "questions-a-poser-a-sa-copine": "For your girlfriend",
+      "questions-a-poser-a-son-crush": "For your crush",
+      "questions-a-poser-a-une-fille": "For a girl"
+    }
   },
-  "seo": {
-    "s1": {
-      "title": "Why ask questions as a couple?",
-      "p1": "Communication is the cornerstone of a fulfilling relationship. Asking each other questions helps maintain an authentic connection and avoid the routine that sometimes creeps into relationships. Even after years together, there are always new things to discover about each other.",
-      "p2": "Studies in relationship psychology show that couples who regularly discuss their emotions, desires, and plans develop a deeper mutual understanding. These exchanges strengthen complicity, create shared memories, and help you better understand your partner's needs, dreams, and concerns.",
-      "p3": "Asking your partner questions is also a way of showing genuine interest beyond day-to-day life. It's an act of active listening that nurtures trust and emotional intimacy. Whether you're at the beginning of your relationship or have been together for years, these moments of exchange are essential to keeping your relationship alive."
-    },
-    "s2": {
-      "title": "The 5 categories of couple questions",
-      "intro": "Our 120 questions are divided into 5 complementary themes, designed to cover all aspects of your relationship. Each category addresses a specific need and allows you to explore a different facet of your couple.",
-      "tableHeaders": {
-        "category": "Category",
-        "goal": "Purpose",
-        "example": "Example question",
-        "count": "Count"
-      },
-      "rows": [
-        {
-          "cat": "Getting to know each other",
-          "goal": "Deepen your mutual knowledge beyond the obvious",
-          "example": "What past decision changed you the most?",
-          "count": "24"
-        },
-        {
-          "cat": "Future plans",
-          "goal": "Align your visions and build together",
-          "example": "Where do you see yourself in 5 years?",
-          "count": "24"
-        },
-        {
-          "cat": "Intimacy",
-          "goal": "Strengthen your emotional and affective bond",
-          "example": "What makes you feel most loved?",
-          "count": "24"
-        },
-        {
-          "cat": "Fun",
-          "goal": "Bring lightness and laughter to your relationship",
-          "example": "If our couple were a movie, what would its title be?",
-          "count": "24"
-        },
-        {
-          "cat": "Deep questions",
-          "goal": "Explore your values, fears, and philosophy of life",
-          "example": "What gives meaning to your life?",
-          "count": "24"
-        }
-      ],
-      "outro": "This thematic diversity lets you vary your exchanges according to your mood: a light conversation after dinner, a deep discussion during a walk, or an intimate moment of complicity before bed."
-    },
-    "s3": {
-      "title": "When to use these couple questions?",
-      "intro": "There is no bad moment. Some situations simply lend themselves to it better than others.",
-      "items": [
-        {
-          "title": "Early in a relationship",
-          "desc": "In the first months you mostly learn facts: the job, the family, the tastes. These questions save time on what comes next, how the other person works when they are tired, annoyed or happy."
-        },
-        {
-          "title": "After several years together",
-          "desc": "Curiosity fades because you think you've covered everything. That's almost always wrong: someone's answers at thirty are not the ones they gave at twenty-five. If you want to measure the gap, how much you still <a href=\"/en/couple-common-points-test/\">have in common</a> can be tested too."
-        },
-        {
-          "title": "When the miles get involved",
-          "desc": "Most <a href=\"/en/long-distance-relationship-quiz/\">long distance relationships</a> die of a call that no longer says anything: the day, the weather, good night. One question per call is enough to break that pattern."
-        },
-        {
-          "title": "An evening with no ideas",
-          "desc": "Rather than a screen each. Three questions and a drink fill an evening. If you'd rather have something livelier, there are also <a href=\"/en/couple-games/\">games for two</a>."
-        },
-        {
-          "title": "When something is off",
-          "desc": "An open question is easier to answer than a reproach. And sometimes what you're really asking is whether you're still there <a href=\"/en/love-or-habit-test/\">out of love or out of habit</a>, which is a question in its own right."
-        }
-      ]
-    },
-    "s4": {
-      "title": "How to use these questions effectively? Our tips",
-      "intro": "A few simple rules make the difference between a conversation and an interrogation.",
-      "tips": [
-        {
-          "title": "Three to five questions, no more",
-          "desc": "Past that, people answer quickly to get it over with. Better to stop on an answer that opens something than to run through fifteen."
-        },
-        {
-          "title": "Listen instead of preparing the next one",
-          "desc": "The reflex is to pick your next question while the other is talking. Follow up instead: \"and at that moment, what did you feel?\""
-        },
-        {
-          "title": "Accept that some get skipped",
-          "desc": "If a question makes someone uncomfortable, move on, no comment. Insisting turns the game into an exam."
-        },
-        {
-          "title": "Answer as well",
-          "desc": "Whoever asks all the questions never gives anything away. The exchange only exists if both go through it."
-        }
-      ]
-    },
-    "s5": {
-      "title": "Who are these questions for?",
-      "p1": "These 120 questions are not aimed at one particular kind of couple.",
-      "audiences": [
-        {
-          "title": "New couples",
-          "desc": "They speed up a phase that usually takes months."
-        },
-        {
-          "title": "Long-settled couples",
-          "desc": "They reopen a curiosity that routine had closed."
-        },
-        {
-          "title": "Long distance couples",
-          "desc": "They fill calls that were running on empty."
-        },
-        {
-          "title": "Couples talking again",
-          "desc": "After a hard period, they give a subject that isn't the conflict itself."
-        }
-      ],
-      "outro": "And if the real question is no longer curiosity but how solid the bond is, that can be looked at head on: you can check what makes <a href=\"/en/healthy-relationship-test/\">a relationship healthy</a>, or start again from the twenty scored questions of a <a href=\"/en/couple-compatibility-test/\">couple test</a>."
-    },
-    "s6": {
-      "title": "The proven benefits of couple communication",
-      "p1": "Research in psychology confirms what many couples intuit: communicating regularly and deeply is the best predictor of relationship longevity. Couples who maintain discussion rituals report significantly higher relationship satisfaction.",
-      "p2": "Concrete benefits include better conflict management (because you better understand each other's reactions), strengthened emotional intimacy, an increased ability to weather challenges together, and simply more moments of shared joy.",
-      "p3": "Our 120 questions are designed as a practical tool to integrate these moments of exchange into your daily life, without pressure or formality. Pick a random question, start the conversation, and let the magic happen."
-    },
-    "faqTitle": "Frequently asked questions about couple questions",
-    "faq": [
-      {
-        "q": "How many questions should you ask in a row?",
-        "a": "We recommend asking 3 to 5 questions per session to keep the exchange natural and avoid fatigue. The goal is to create a real dialogue, not a questionnaire."
-      },
-      {
-        "q": "Is this suitable for all couples?",
-        "a": "Yes, these questions are designed for all couples, whether together for a few weeks or several years. The 5 categories allow you to choose the depth level suited to your situation."
-      },
-      {
-        "q": "Can these questions be used long-distance?",
-        "a": "Absolutely! These questions are ideal for long-distance couples. You can ask them during a video call, by message, or even send each other a question a day to maintain the connection."
-      },
-      {
-        "q": "What to do if a question makes you uncomfortable?",
-        "a": "Simply move to another question without pressure. Respecting each other's boundaries is essential for maintaining a climate of trust."
-      },
-      {
-        "q": "Do you have to answer all the questions?",
-        "a": "No, choose the ones that speak to you and match the mood of the moment. What matters is the quality of the exchange, not the number of questions asked."
-      },
-      {
-        "q": "How often should you use these questions?",
-        "a": "There's no strict rule. Some couples enjoy asking one question a day, others prefer a session of 5 questions on weekends. Find the rhythm that works for you."
-      },
-      {
-        "q": "Can these questions replace couple therapy?",
-        "a": "No, these questions are a complementary communication tool. If you're going through serious difficulties, we recommend consulting a professional. Our questions can, however, be an excellent complement."
-      }
-    ]
-  },
-  "conclusion": "Take three tonight, not thirty. One good answer beats a list ticked off.",
-  "scrollTop": "Start with a random question",
+  "liste_titre": "The 120 questions, sorted by theme",
+  "liste_intro": "Here is the full list. Each theme has twenty-four questions, to read in order or to pick at random.",
   "liste": {
     "connaissance": {
       "titre": "Questions to get to know each other better",
-      "intro": "These dig underneath the obvious. <a href=\"/en/blog/questions-to-get-to-know-each-other/\">We think we know someone because we know their habits</a>; these twenty-four questions are about what shaped them.",
+      "court": "Get to know",
+      "intro": "Questions about what made you who you are: childhood, family, the choices that mattered. Even after years together, you often get an answer you didn't see coming!",
       "questions": [
         "Which decision from your past changed you the most, and did you realise it at the time?",
         "What did your parents pass on to you without ever saying it out loud?",
@@ -202,7 +61,8 @@
     },
     "futur": {
       "titre": "Questions about your plans and your future",
-      "intro": "Couples rarely split over a fundamental disagreement; they split because it was never put into words. These questions put it into words, while there is still time to talk about it.",
+      "court": "Future",
+      "intro": "Where to live, money, work, kids or no kids... These are the topics people put off, even though they're much easier to talk about while nothing has been decided yet.",
       "questions": [
         "What does an ordinary day of our life five years from now look like, in your head?",
         "What is the one thing you really don't want to see happen to us?",
@@ -232,7 +92,8 @@
     },
     "intime": {
       "titre": "Questions about intimacy and feelings",
-      "intro": "Intimacy is not only physical. These questions are about what makes you feel close, or not, and about what rarely gets said out loud.",
+      "court": "Intimacy",
+      "intro": "This is about what brings you closer: gestures, words, and what's sometimes missing. Nothing crude, these are mostly questions about feelings.",
       "questions": [
         "What makes you feel most loved day to day?",
         "When did you feel closest to me?",
@@ -262,7 +123,8 @@
     },
     "fun": {
       "titre": "Funny and light questions",
-      "intro": "Not every conversation has to be deep. These twenty-four are there for a good time, in the car, at the table, or on an evening when nobody has any ideas left.",
+      "court": "Funny",
+      "intro": "Questions to have a laugh, in the car, at dinner or on an evening when nobody has any ideas. They work really well with friends too.",
       "questions": [
         "If we were a film, what would the title and the poster be?",
         "What is the most ridiculous thing we have ever argued about?",
@@ -292,7 +154,8 @@
     },
     "profond": {
       "titre": "Deep questions about values and life",
-      "intro": "These need a little calm and a little time. They are about what guides you, and that is often where the real differences show up.",
+      "court": "Deep",
+      "intro": "Questions about what matters to you in life. They need a bit of calm, and that's often where the real differences show up.",
       "questions": [
         "What gives your life meaning right now?",
         "What would you have the hardest time recovering from?",
@@ -321,6 +184,194 @@
       ]
     }
   },
-  "liste_titre": "The 120 questions, sorted by theme",
-  "liste_intro": "Here is the full list. Each theme has twenty-four questions, to read in order or to pick at random."
+  "situations": {
+    "titre": "Which questions to ask as a couple, depending on the situation",
+    "intro": "A question that works great on a third date can fall flat after five years of living together, and the other way round too. Here are the situations that come up most often, with a few examples each time and the full list if you want more.",
+    "items": [
+      {
+        "article": "questions-pour-mieux-se-connaitre-en-couple",
+        "titre": "To get to know each other better, even after years",
+        "texte": "After a while you know your partner's habits by heart: how they take their coffee, their shows, the way they load the dishwasher. But you often know much less about <a href=\"/en/blog/questions-to-get-to-know-each-other/\">what shaped them, their family or what's on their mind right now</a>. For example:",
+        "exemples": [
+          "Which family habit have you reproduced without realising it?",
+          "What would you like me to notice more often?",
+          "If our story were a book, which chapter would we be on?"
+        ]
+      },
+      {
+        "article": "questions-debut-de-relation",
+        "titre": "Early in a relationship",
+        "texte": "In the first weeks you mostly talk about facts: work, where you live, friends. That's normal. But some things are worth knowing fairly early, like <a href=\"/en/blog/questions-early-relationship/\">how the other person takes criticism or what they want from a relationship</a>, without it turning into a questionnaire. A few to start with:",
+        "exemples": [
+          "What's your natural rhythm: going out or staying in?",
+          "What would I never guess about you?",
+          "What's a beautiful gesture, for you: words, time, small attentions?"
+        ]
+      },
+      {
+        "article": "questions-intimes-couple",
+        "titre": "Intimate questions",
+        "texte": "They're not necessarily about sex. Most of them are about what brings you closer: when your partner feels loved, the little gesture that gets to them, what they don't dare ask for. We sorted them <a href=\"/en/blog/intimate-questions-for-couples/\">starting with tenderness and moving slowly towards desire</a>, so each of you can stop wherever you like. For example:",
+        "exemples": [
+          "When do you feel most loved, concretely?",
+          "What's the ordinary little thing I do that gets to you?",
+          "What would you like us to do more often, without daring to ask?"
+        ]
+      },
+      {
+        "article": "questions-avenir-couple",
+        "titre": "About the future and the big decisions",
+        "texte": "Moving in, getting married or not, having kids, sharing money... People often avoid these topics because they're scared of disagreeing. And that's exactly why it's much easier to talk about them <a href=\"/en/blog/future-questions-for-couples/\">before making a big decision</a> than after. Three examples:",
+        "exemples": [
+          "City or suburbs, renting or buying: what's your ideal scenario?",
+          "A child: a dated plan, a vague desire, or an open question?",
+          "Joint account, separate accounts, or mixed: your model, and why?"
+        ]
+      },
+      {
+        "article": "questions-couple-telephone-message",
+        "titre": "Long distance, over the phone or by text",
+        "texte": "When you don't see each other much, calls end up sounding the same: your day, how tired you are, good night. One slightly different question is enough to get the conversation going again, and some even work better <a href=\"/en/blog/questions-for-couples-over-text/\">by text or on the phone</a> than face to face. If you want to see where you stand, you can also <a href=\"/en/long-distance-relationship-quiz/\">take stock of a long-distance relationship</a>. For example:",
+        "exemples": [
+          "What did you think today without saying it to anyone?",
+          "What do we watch, each at home, at the same time?",
+          "What do we do, hour by hour, on the first day of the reunion?"
+        ]
+      },
+      {
+        "article": "36-questions-pour-tomber-amoureux",
+        "titre": "The 36 questions to fall in love",
+        "texte": "This list comes from a psychology study run by Arthur Aron in 1997: two strangers ask each other 36 increasingly personal questions, then look into each other's eyes for four minutes. Lots of couples try it too, just to see what happens. We've put together <a href=\"/en/blog/36-questions-to-fall-in-love/\">the 36 questions from Aron's experiment</a> with a few tips on how to ask them. For example:",
+        "exemples": [
+          "What would constitute a perfect day for you?",
+          "If a crystal ball could tell you the truth about yourself, your life, the future or anything else, what would you want to know?",
+          "Your house catches fire, your loved ones and pets are safe: you can save ONE object. Which one, and why?"
+        ]
+      },
+      {
+        "article": "questions-a-poser-a-son-copain",
+        "titre": "To ask your boyfriend",
+        "texte": "People often ask us for questions to ask their boyfriend, especially when he isn't much of a talker. We gathered a hundred to <a href=\"/en/blog/questions-to-ask-your-boyfriend/\">get him talking a bit more than usual</a>, from the lightest to the most serious. For example:",
+        "exemples": [
+          "What do you wish people asked you more often?",
+          "What did we do at the beginning that we should do again?",
+          "How long would you survive in a horror film, honestly?"
+        ]
+      },
+      {
+        "article": "questions-a-poser-a-sa-copine",
+        "titre": "To ask your girlfriend",
+        "texte": "And the other way round, we wrote 75 questions to ask your girlfriend. They're mostly about <a href=\"/en/blog/questions-to-ask-your-girlfriend/\">taking an interest in what she's going through right now</a>, not just what she likes. A few examples:",
+        "exemples": [
+          "What are you missing these days, without talking about it?",
+          "What's your safe place, the one you go to in your head?",
+          "If our relationship were a TV series, which one would it be?"
+        ]
+      },
+      {
+        "article": "questions-a-poser-a-son-crush",
+        "titre": "Before you're a couple: your crush or a girl you're getting to know",
+        "texte": "Not everyone is looking for couple questions. When you're still at the texting stage, light questions that are easy to send and fun to answer work best. We have a list to <a href=\"/en/blog/questions-to-ask-your-crush/\">keep the conversation going with your crush</a> and another one to <a href=\"/en/blog/questions-to-ask-a-girl/\">get to know a girl</a> without it feeling like a job interview. For example:",
+        "exemples": [
+          "Are you more of a four-minute voice note or a wall of text?",
+          "What's your perfect Sunday, hour by hour?",
+          "Which place in your city would you show someone first?"
+        ]
+      }
+    ]
+  },
+  "jeux": {
+    "titre": "If you'd rather play",
+    "intro": "Some questions go down much better as a game, because there's a rule and often a result at the end. Here are the games on the site that are built on questions:",
+    "bouton": "Play",
+    "items": [
+      {
+        "route": "quizRencontre",
+        "texte": "Questions for a first or second date, drawn one by one on your phone."
+      },
+      {
+        "route": "quizKnowledge",
+        "texte": "Each of you answers questions about the other, and you count who knows the other best."
+      },
+      {
+        "route": "quizTuPreferes",
+        "texte": "Two choices every time, and you find out whether you agree."
+      },
+      {
+        "route": "jeuJamais",
+        "texte": "\"Never have I ever...\", and each of you says whether you've done it. It often brings back old stories."
+      },
+      {
+        "route": "jeuActionVerite",
+        "texte": "The couple version of the game, with truths to ask and dares to do."
+      },
+      {
+        "route": "jeuPhrases",
+        "texte": "Sentences to finish each on your own, then you compare."
+      },
+      {
+        "route": "jeuDilemmes",
+        "texte": "Impossible choices to make together, which often end in a debate."
+      },
+      {
+        "route": "quizCoquin",
+        "texte": "Spicier questions, for when the mood is right."
+      }
+    ]
+  },
+  "conseils": {
+    "titre": "How to ask these questions without it feeling like an interrogation",
+    "intro": "There's no complicated method, but a few small things make the difference between a real conversation and a questionnaire.",
+    "items": [
+      {
+        "titre": "A few questions at a time:",
+        "texte": "Three or four in an evening is plenty. If an answer opens up a topic, stay on it instead of moving on to the next one."
+      },
+      {
+        "titre": "Answer too:",
+        "texte": "Whoever asks the question answers it afterwards, otherwise it turns into a job interview. And most of the time, hearing the other person's answer is what makes you want to share yours."
+      },
+      {
+        "titre": "Follow up instead of planning the next one:",
+        "texte": "While the other person is talking, it's tempting to look for the next question. A simple \"and how did you feel then?\" works much better."
+      },
+      {
+        "titre": "The right to pass:",
+        "texte": "If a question makes someone uncomfortable, you skip it, no comment. You can always come back to it another day."
+      },
+      {
+        "titre": "Pick your moment:",
+        "texte": "In the car, on a walk or at a restaurant, it works really well. In passing or in the middle of an argument, much less so!"
+      }
+    ]
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions about couple questions",
+    "faq": [
+      {
+        "q": "What questions should couples ask each other?",
+        "a": "It mostly depends on the moment. For a fun evening, funny questions work really well, like \"If we were a film, what would the title and the poster be?\". To get to know each other better, go for childhood, family or what makes you proud. And when a big decision is coming up (moving in, a baby...), questions about the future are the most useful."
+      },
+      {
+        "q": "How many questions should you ask in a row?",
+        "a": "Three or four per evening is more than enough. The goal isn't to finish the list but to have a real conversation, and one good question can easily fill a whole evening."
+      },
+      {
+        "q": "Does it work long distance too?",
+        "a": "Yes, really well actually. You can send each other one question a day by text, or keep one for your evening call. We even have a list made specifically for phone calls and texting."
+      },
+      {
+        "q": "What if a question makes someone uncomfortable?",
+        "a": "Just skip it. Nobody has to answer everything, and pushing quickly turns the game into an exam. You can always come back to it another day, when the other person is ready."
+      },
+      {
+        "q": "How is this different from the 36 questions to fall in love?",
+        "a": "The 36 questions come from a psychology experiment: two people ask them in order, without skipping any, in about an hour and a half. Our 120 questions can be picked freely, in any order, and they're written for people who are already together."
+      },
+      {
+        "q": "Can these questions replace couples therapy?",
+        "a": "No. They help you talk, but if you're going through a real crisis, a couples counsellor or therapist will be much more useful. Nothing stops you from using these questions as well, though."
+      }
+    ]
+  }
 }

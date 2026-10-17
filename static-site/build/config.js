@@ -1432,6 +1432,25 @@ export function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
+// Les articles du blog qui sont des listes de questions, dans l'ordre du
+// curseur de la page « Questions pour couple » (questions-couple.ejs). Un
+// article programmé n'apparaît qu'à la reconstruction qui suit sa date, et un
+// article absent d'une langue n'a pas de carte dans cette langue. Un nouvel
+// article de questions se déclare ici, et reçoit son étiquette dans
+// listes.tags de {lang}/quiz-questions-couple.json.
+export const ARTICLES_QUESTIONS = [
+  'questions-pour-mieux-se-connaitre-en-couple',
+  'questions-debut-de-relation',
+  'questions-intimes-couple',
+  'questions-avenir-couple',
+  'questions-couple-telephone-message',
+  '36-questions-pour-tomber-amoureux',
+  'questions-a-poser-a-son-copain',
+  'questions-a-poser-a-sa-copine',
+  'questions-a-poser-a-son-crush',
+  'questions-a-poser-a-une-fille',
+];
+
 // Quiz/test route → relevant existing blog articles (by internalSlug).
 // Resolved at build time per language; articles not published in a language are
 // filtered out automatically, so non-FR pages only show their available ones.
