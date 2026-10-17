@@ -1,5 +1,5 @@
 /**
- * Questions Couple - loads question categories and displays them interactively
+ * Questions Couple - tirage au sort d'une question, par theme ou parmi toutes
  */
 (function() {
   'use strict';
@@ -8,74 +8,112 @@
   if (!container) return;
 
   var lang = document.documentElement.lang || 'fr';
-  var SUPABASE_URL = 'https://lojvajnnvhatfplevyvy.supabase.co';
-  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvanZham5udmhhdGZwbGV2eXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIyNzk3NDIsImV4cCI6MjA4Nzg1NTc0Mn0.gdd9HRbRvfQr6io9jGN6hUCW6tBOtognhwbsTJtSTng';
 
-  // Translations
   var labels = {
-    fr: { random: 'Question aléatoire', next: 'Suivante', categories: 'Catégories', all: 'Toutes', loading: 'Chargement...', noQ: 'Aucune question disponible.' },
-    en: { random: 'Random question', next: 'Next', categories: 'Categories', all: 'All', loading: 'Loading...', noQ: 'No questions available.' },
-    es: { random: 'Pregunta aleatoria', next: 'Siguiente', categories: 'Categorías', all: 'Todas', loading: 'Cargando...', noQ: 'No hay preguntas disponibles.' },
-    de: { random: 'Zufällige Frage', next: 'Nächste', categories: 'Kategorien', all: 'Alle', loading: 'Laden...', noQ: 'Keine Fragen verfügbar.' },
-    it: { random: 'Domanda casuale', next: 'Prossima', categories: 'Categorie', all: 'Tutte', loading: 'Caricamento...', noQ: 'Nessuna domanda disponibile.' }
+    fr: { next: 'Une autre question', categories: 'Thèmes', all: 'Toutes' },
+    en: { next: 'Another question', categories: 'Themes', all: 'All' },
+    es: { next: 'Otra pregunta', categories: 'Temas', all: 'Todas' },
+    de: { next: 'Andere Frage', categories: 'Themen', all: 'Alle' },
+    it: { next: 'Un’altra domanda', categories: 'Temi', all: 'Tutte' }
   };
   var t = labels[lang] || labels.fr;
 
   // Les questions sont deja dans la page, ecrites en dur par le gabarit.
   // On les relit depuis le DOM plutot que de retelecharger un fichier : c'est
   // la meme source pour l'affichage et pour le tirage, donc aucun risque que
-  // les deux divergent. L'ancien code cherchait une cle « questionsCouple »
-  // qui n'a jamais existe, et retombait sur douze questions codees en dur,
-  // servies en francais y compris sur les pages espagnole, allemande et
-  // italienne.
+  // les deux divergent. Chaque theme porte son nom court (data-court) pour
+  // les pastilles du tirage.
+  var themes = [];
   var questions = [];
-  document.querySelectorAll('#liste-questions .qc-question').forEach(function (li) {
-    var texte = li.querySelector('span:last-child');
-    var theme = li.closest('.qc-theme');
-    var titre = theme ? theme.querySelector('.qc-theme-titre') : null;
-    if (texte && texte.textContent.trim()) {
-      questions.push({ text: texte.textContent.trim(), category: titre ? titre.textContent.trim() : '' });
-    }
-  });
-  if (questions.length > 0) renderQuestions(questions);
-  else if (container) container.innerHTML = '';
-
-  function renderQuestions(questions) {
-    container.innerHTML = '';
-
-    var currentIndex = Math.floor(Math.random() * questions.length);
-
-    var card = document.createElement('div');
-    card.className = 'quiz-engine animate-fade-in text-center';
-
-    var questionEl = document.createElement('p');
-    questionEl.className = 'text-xl md:text-2xl font-semibold mb-8 leading-relaxed';
-    questionEl.textContent = questions[currentIndex].text;
-
-    var btn = document.createElement('button');
-    btn.className = 'btn btn-cta';
-    btn.textContent = t.next;
-    btn.addEventListener('click', function() {
-      currentIndex = (currentIndex + 1) % questions.length;
-      // Shuffle occasionally
-      if (currentIndex === 0) {
-        for (var i = questions.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * (i + 1));
-          var tmp = questions[i]; questions[i] = questions[j]; questions[j] = tmp;
-        }
+  document.querySelectorAll('#liste-questions .qc-theme').forEach(function (th) {
+    var cle = th.getAttribute('data-theme') || String(themes.length);
+    themes.push({ cle: cle, court: th.getAttribute('data-court') || '' });
+    th.querySelectorAll('.qc-question').forEach(function (li) {
+      var texte = li.querySelector('span:last-child');
+      if (texte && texte.textContent.trim()) {
+        questions.push({ text: texte.textContent.trim(), theme: cle });
       }
-      questionEl.textContent = questions[currentIndex].text;
-      card.classList.remove('animate-fade-in');
-      void card.offsetWidth;
-      card.classList.add('animate-fade-in');
     });
+  });
+  if (!questions.length) { container.innerHTML = ''; return; }
 
-    card.appendChild(questionEl);
-    card.appendChild(btn);
-    container.appendChild(card);
+  var courtDe = {};
+  themes.forEach(function (th) { courtDe[th.cle] = th.court; });
+
+  function melange(liste) {
+    for (var i = liste.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = liste[i]; liste[i] = liste[j]; liste[j] = tmp;
+    }
+    return liste;
   }
 
-  function renderFallback() {
-    container.innerHTML = '<div class="text-center py-8"><p class="text-muted-foreground">' + t.noQ + '</p></div>';
+  var themeChoisi = '';
+  var paquet = [];
+  var rang = 0;
+  function nouveauPaquet(eviter) {
+    paquet = melange(questions.filter(function (q) { return !themeChoisi || q.theme === themeChoisi; }));
+    // Jamais deux fois la meme question a la suite, meme en changeant de paquet
+    if (eviter && paquet.length > 1 && paquet[0] === eviter) paquet.push(paquet.shift());
+    rang = 0;
   }
+
+  var card = document.createElement('div');
+  card.className = 'quiz-engine qc-tirage text-center';
+
+  var rangee = document.createElement('div');
+  rangee.className = 'qc-tirage-themes';
+  rangee.setAttribute('role', 'group');
+  rangee.setAttribute('aria-label', t.categories);
+  var pastilles = [{ cle: '', court: t.all }].concat(themes).map(function (th) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'qc-tirage-theme';
+    b.textContent = th.court;
+    b.setAttribute('aria-pressed', th.cle === themeChoisi ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      if (themeChoisi === th.cle) return;
+      themeChoisi = th.cle;
+      pastilles.forEach(function (p) { p.btn.setAttribute('aria-pressed', p.cle === themeChoisi ? 'true' : 'false'); });
+      nouveauPaquet(paquet[rang]);
+      afficher();
+    });
+    rangee.appendChild(b);
+    return { cle: th.cle, btn: b };
+  });
+
+  var etiquette = document.createElement('p');
+  etiquette.className = 'qc-tirage-etiquette';
+
+  var questionEl = document.createElement('p');
+  questionEl.className = 'qc-tirage-question text-xl md:text-2xl font-semibold mb-8 leading-relaxed';
+  questionEl.setAttribute('aria-live', 'polite');
+
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'btn btn-cta';
+  btn.textContent = t.next;
+  btn.addEventListener('click', function () {
+    rang++;
+    if (rang >= paquet.length) nouveauPaquet(paquet[rang - 1]);
+    afficher();
+  });
+
+  function afficher() {
+    var q = paquet[rang];
+    etiquette.textContent = courtDe[q.theme] || '';
+    questionEl.textContent = q.text;
+    card.classList.remove('animate-fade-in');
+    void card.offsetWidth;
+    card.classList.add('animate-fade-in');
+  }
+
+  card.appendChild(rangee);
+  card.appendChild(etiquette);
+  card.appendChild(questionEl);
+  card.appendChild(btn);
+  container.innerHTML = '';
+  container.appendChild(card);
+  nouveauPaquet(null);
+  afficher();
 })();

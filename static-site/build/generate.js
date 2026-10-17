@@ -16,7 +16,7 @@ import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomD
 import {
   BASE_URL, INSTAGRAM_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
-  QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
+  QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable, pagePublicitaire,
 } from './config.js';
@@ -1355,6 +1355,10 @@ async function generatePage(routeKey, lang) {
       .map(internalSlug => carteArticle(internalSlug, lang))
       .filter(Boolean)
       .slice(0, 4),
+    // Le curseur des listes de questions de la page « Questions pour couple »
+    articlesQuestions: routeKey === 'questionsCouple'
+      ? ARTICLES_QUESTIONS.map(cle => { const c = carteArticle(cle, lang); return c && { ...c, cle }; }).filter(Boolean)
+      : [],
     // Le bandeau du haut des pages jouables (parties, note, avis)
     preuveSociale: estPageJouable(routeKey) ? preuveSocialePour(routeKey) : null,
     seuilLectures: SEUIL_LECTURES,
