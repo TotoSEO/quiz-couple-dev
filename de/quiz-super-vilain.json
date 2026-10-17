@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "badge": "Halloween-Quiz • Allein oder zu zweit",
+    "title": "Welchem Superschurken ähnelst du am meisten?",
+    "titleHighlight": "Superschurken",
+    "description": "Fünfzehn Fragen zu deiner Psychologie, deinen Reaktionen in der Situation, deinem idealen Versteck und deiner Schurkenausrüstung. Am Ende der Superschurke, der dir am meisten ähnelt, vom Joker bis Maleficent, mit seinem Porträt und einem Tipp für Halloween. Allein, oder zu zweit zum Vergleichen.",
+    "subtitle": "15 Fragen • 5 Minuten • allein, zu zweit an einem Handy oder jeder am eigenen",
+    "jumpBtn": "Zum Quiz"
+  },
+  "section1": {
+    "title": "So funktioniert das Quiz",
+    "intro": "Es ist ein Persönlichkeitstest, aber mit Umhängen. Die Fragen mischen drei Dinge: was du denkst, was du in einer bestimmten Situation tun würdest, und was du als Ausrüstung, Versteck oder Krafttier wählen würdest.",
+    "p1": "Zum Beispiel: „Jemand verrät dich. Du...“ oder „Man bietet dir eine Kraft an. Welche?“. Jede Antwort zählt für einen oder zwei der acht Schurken des Quiz. Am Ende gewinnt der Schurke mit den meisten Punkten, und die drei Züge, die aus deinen Antworten am stärksten hervorstechen, erscheinen als Balken.",
+    "p2": "Allein beantwortest du die fünfzehn Fragen und entdeckst deinen Schurken. Zu zweit beantwortet der Erste die ganze Reihe, gibt das Handy weiter, und der Zweite antwortet, ohne dessen Antworten zu sehen. Die beiden Porträts erscheinen nebeneinander, mit der Zahl gleicher Antworten.",
+    "p3": "Im Fernmodus spielt jeder auf dem eigenen Handy: Eine Person erstellt die Partie, die andere tritt mit dem Code bei, und ihr seht nach jeder Frage eure beiden Antworten."
+  },
+  "section2": {
+    "title": "Die acht Schurken des Quiz",
+    "intro": "Wir haben Bösewichte genommen, die jeder kennt, aus Kino, Comics und Zeichentrick, und für jeden den Charakterzug, der ihn zusammenfasst.",
+    "pillar1Title": "Der Joker",
+    "pillar1Text": "Das Chaos, das Lachen, der Plan, der sich alle fünf Minuten ändert.",
+    "pillar2Title": "Harley Quinn",
+    "pillar2Text": "Die zu starke Liebe, der Glitzer, und die Kraft zu gehen, wenn es sein muss.",
+    "pillar3Title": "Loki",
+    "pillar3Text": "Die List, das doppelte Spiel, und dahinter das Bedürfnis, geliebt zu werden.",
+    "pillar4Title": "Thanos",
+    "pillar4Text": "Die Logik, der Plan, und das Opfer im Namen eines Gleichgewichts, nach dem niemand gefragt hat.",
+    "pillar5Title": "Darth Vader",
+    "pillar5Text": "Die nach einem Verlust gewählte Macht, die Rüstung wie Trauer getragen, und das Gute, das bleibt.",
+    "pillar6Title": "Voldemort",
+    "pillar6Text": "Die Kontrolle, die Angst vor dem Tod, und der Name, den man nicht ausspricht.",
+    "pillar7Title": "Maleficent",
+    "pillar7Text": "Die Eleganz, der Groll, und der Fluch, der auf die vergessene Einladung folgt.",
+    "pillar8Title": "Cruella de Vil",
+    "pillar8Text": "Der Stil, der Luxus, die Besessenheit, und ein zu schnell gefahrenes Auto."
+  },
+  "section3": {
+    "title": "Zu zweit die entscheidende Frage: Bündnis oder Krieg?",
+    "p1": "Wenn ihr zu zweit spielt, erscheinen beide Porträts nebeneinander. Zwei Joker, das ist eine Stadt, die nicht mehr schläft. Ein Thanos und eine Harley Quinn, das ist eine lebhafte Diskussion darüber, was „vernünftig“ heißt. Und wenn ihr genau wissen wollt, welches Duo ihr bildet, mit einer Rolle für jeden, ist <a href=\"/de/quiz-welches-superschurken-duo-seid-ihr/\">das Quiz zum Superschurken-Duo</a> dafür gemacht: Es wird nur zu zweit gespielt.",
+    "p2": "Die anderen Halloween-Quiz haben dieselbe Stimmung: <a href=\"/de/quiz-welcher-serienmoerder-passt-zu-dir/\">der Serienmörder, der dir ähnelt</a> für ein düstereres Porträt, <a href=\"/de/quiz-wer-stirbt-zuerst-im-horrorfilm/\">wer von euch zuerst im Horrorfilm stirbt</a> für eine Stoppuhr, und <a href=\"/de/quiz-wer-wuerde-besessen-werden/\">wer besessen werden könnte</a> für einen Prozentsatz. Sie sind alle auf <a href=\"/de/besondere-paar-quiz/\">der Seite unserer besonderen Quiz</a> versammelt."
+  },
+  "section4": {
+    "title": "Was man wissen sollte",
+    "p1": "Die Figuren gehören ihren Schöpfern und Studios; das Quiz nutzt sie so, wie man sie auf einer Kostümparty nutzt, um darüber zu lachen, was man in einem fiktiven Bösewicht von sich selbst wiedererkennt. Die Bilder der Porträts sind für die Seite angefertigte Illustrationen, keine Bilder aus den Filmen.",
+    "p2": "Nichts wird gespeichert: Die Antworten bleiben auf deinem Handy. Nur der erzielte Schurke wird gezählt, ohne Vornamen und ohne Antworten, um eines Tages die Verteilung der Ergebnisse auf der Seite zu zeigen."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Welche Superschurken kann man bekommen?",
+    "faq1A": "Acht: den Joker, Harley Quinn, Loki, Thanos, Darth Vader, Voldemort, Maleficent und Cruella de Vil. Jeder entspricht einem Charakterzug, den die Fragen messen.",
+    "faq2Q": "Wie wird das Ergebnis berechnet?",
+    "faq2A": "Jede Antwort gibt einem oder zwei Schurken einen oder zwei Punkte. Am Ende wird jeder Schurke mit dem Maximum verglichen, das er bekommen konnte, und der mit dem höchsten Prozentsatz gewinnt. Die drei stärksten Züge erscheinen unter dem Ergebnis.",
+    "faq3Q": "Kann man es zu zweit machen?",
+    "faq3A": "Ja, abwechselnd am selben Handy, oder jeder am eigenen im Fernmodus. Die beiden Porträts erscheinen am Ende nebeneinander.",
+    "faq4Q": "Was ist der Unterschied zum Quiz des Superschurken-Duos?",
+    "faq4A": "Hier bekommt jeder seinen eigenen Schurken. Das Duo-Quiz gibt jedem eine Rolle (das Gehirn, das Chaos, die Kraft, der Charme, der Schatten, das Herz) und das berühmte Duo, das diese beiden Rollen zusammen bilden. Es wird nur zu zweit gespielt.",
+    "faq5Q": "Werden meine Antworten gespeichert?",
+    "faq5A": "Nein. Die Antworten bleiben auf deinem Handy. Nur der erzielte Schurke wird gezählt, ohne Vornamen, für die Verteilung der Ergebnisse."
+  },
+  "jsonLd": {
+    "about": "Halloween-Quiz"
+  }
+}

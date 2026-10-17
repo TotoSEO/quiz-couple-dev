@@ -9,6 +9,7 @@
   const footerCelibLinks = _versLiens(famillesNav.celib);
   const footerQuizLinks = _versLiens(famillesNav.quiz.concat('questionsCouple'));
   const footerJeuxLinks = _versLiens(['jeuxCouple'].concat(famillesNav.jeux));
+  const footerSpeciauxLinks = _versLiens(['speciauxCouple'].concat(famillesNav.speciaux || []));
   const footerLegalLinks = [
     { routeKey: 'about', labelKey: 'footer.about' },
     { routeKey: 'legalMentions', labelKey: 'footer.legalMentions' },
@@ -27,6 +28,7 @@
   const footerQuizLinksFiltered = _filterAvail(footerQuizLinks);
   const footerCelibLinksFiltered = _filterAvail(footerCelibLinks);
   const footerJeuxLinksFiltered = _filterAvail(footerJeuxLinks);
+  const footerSpeciauxLinksFiltered = _filterAvail(footerSpeciauxLinks);
 %>
 <footer class="border-t border-border bg-muted/30">
   <div class="container mx-auto px-6 sm:px-8 py-12">
@@ -104,6 +106,15 @@
           <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
         </div>
+        <%# Quiz spéciaux de saison : sous les jeux, la colonne la moins remplie. %>
+        <% if (footerSpeciauxLinksFiltered.length > 1) { %>
+        <span class="block mt-8 mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"><%= t('common:nav.categorySpeciaux', 'Quiz spéciaux') %></span>
+        <div class="flex flex-col gap-2">
+          <% for (const link of footerSpeciauxLinksFiltered) { %>
+          <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground transition-colors hover:text-primary no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a>
+          <% } %>
+        </div>
+        <% } %>
       </div>
 
       <!-- Legal / Info -->

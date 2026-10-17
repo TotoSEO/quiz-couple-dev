@@ -105,7 +105,15 @@
     "testSignesChinois": "Chinese zodiac compatibility",
     "testSignesChinoisDesc": "Two dates, two animals, one verdict",
     "compteurCouple": "Relationship duration counter",
-    "compteurCoupleDesc": "Your days together, dates to celebrate"
+    "compteurCoupleDesc": "Your days together, dates to celebrate",
+    "speciauxCouple": "Special quizzes",
+    "categorySpeciaux": "Special quizzes",
+    "deployerSpeciaux": "See all special quizzes",
+    "quizSerialKiller": "Which serial killer matches you",
+    "quizMortFilmHorreur": "Who dies first (horror movie)",
+    "quizPossession": "Who could get possessed",
+    "quizSuperVilain": "Which supervillain are you",
+    "quizDuoVilains": "Which supervillain duo"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

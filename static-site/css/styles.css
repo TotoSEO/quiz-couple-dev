@@ -19,6 +19,9 @@
      turquoise fixe, lisible sur les deux thèmes, distinct du vert des jeux
      de l'accueil et de l'orange du menu Jeux. */
   --celib: 186 62% 38%;
+  /* Famille « Quiz spéciaux » de saison (16 octobre 2026) : un violet
+     prune, distinct du violet des quiz et de l'orange du menu Jeux. */
+  --speciaux: 292 55% 45%;
   --secondary-foreground: 265 60% 20%;
   --muted: 280 20% 92%;
   --muted-foreground: 280 15% 45%;
@@ -71,6 +74,8 @@
    reste foncé en thème sombre, trop peu lisible en petit texte. */
 :root { --celib-texte: 186 70% 29%; }
 .dark { --celib-texte: 186 55% 62%; }
+:root { --speciaux-texte: 292 60% 36%; }
+.dark { --speciaux-texte: 292 55% 70%; }
 :root { --secondary-texte: 265 55% 45%; }
 .dark { --secondary-texte: 265 75% 78%; }
 
@@ -1788,6 +1793,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .nav-megamenu--quiz { width: 33rem; }
 .nav-megamenu--jeux { width: 33rem; }
 .nav-megamenu--celib { width: 33rem; }
+.nav-megamenu--speciaux { width: 33rem; }
 @keyframes menuDeplie {
   from { opacity: 0; transform: translateY(8px) scale(0.985); }
 }
@@ -4375,6 +4381,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .quiz-section-quizzes { --bloc-accent: 270 45% 55%; }
 .quiz-section-jeux { --bloc-accent: 160 48% 40%; }
 .quiz-section-celib { --bloc-accent: var(--celib); }
+.quiz-section-speciaux { --bloc-accent: var(--speciaux); }
 @media (max-width: 640px) {
   .quiz-section-block { padding: 2rem .85rem 1.5rem; border-radius: 1.25rem; }
 }
@@ -4457,6 +4464,12 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
     0 22px 44px -14px hsl(var(--celib) / 0.28),
     0 8px 16px -4px rgba(0,0,0,0.06);
 }
+.quiz-bubble-card--speciaux:hover {
+  border-color: hsl(var(--speciaux) / 0.3);
+  box-shadow:
+    0 22px 44px -14px hsl(var(--speciaux) / 0.28),
+    0 8px 16px -4px rgba(0,0,0,0.06);
+}
 
 /* ── Card image banner ── */
 .quiz-bubble-media {
@@ -4523,6 +4536,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .quiz-bubble-cta svg { width: 0.875rem; height: 0.875rem; flex-shrink: 0; }
 .quiz-bubble-cta--quiz { color: hsl(var(--secondary)); }
 .quiz-bubble-cta--celib { color: hsl(var(--celib)); }
+.quiz-bubble-cta--speciaux { color: hsl(var(--speciaux-texte)); }
 .quiz-bubble-card:hover .quiz-bubble-cta { gap: 0.625rem; }
 .quiz-bubble-card--quiz:hover .quiz-bubble-cta--quiz { box-shadow: none; }
 
@@ -4653,6 +4667,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .suite-carte--quiz { --carte-accent: var(--secondary); --carte-texte: var(--secondary-texte); }
 .suite-carte--jeux { --carte-accent: 160 48% 40%; --carte-texte: 160 62% 26%; }
 .dark .suite-carte--jeux { --carte-texte: 160 50% 60%; }
+.suite-carte--speciaux { --carte-accent: var(--speciaux); --carte-texte: var(--speciaux-texte); }
 .lire-carte { --carte-accent: var(--secondary); --carte-texte: var(--secondary-texte); }
 .suite-carte:hover, .lire-carte:hover {
   transform: translateY(-4px);
@@ -12668,6 +12683,177 @@ body { padding-bottom: var(--pub-footer, 0px); }
 }
 .salon-detail .quiz-setup-grid { max-width: 22rem; }
 
+/* ═══════════════════════════════════════════════════════════════════
+   QUIZ SPÉCIAUX DE SAISON (16 octobre 2026) : le hub, le moteur des
+   portraits (serial killer, super-vilain, duo de vilains) et celui de la
+   survie (qui meurt en premier, qui pourrait se faire posséder). Les
+   écrans de départ et les questions reprennent les classes communes du
+   moteur ; ici, seulement ce qui leur est propre.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Le hub : une section par saison, la saison du moment en tête. */
+.spx-saison { margin-bottom: 3.5rem; }
+.spx-saison:last-child { margin-bottom: 0; }
+.spx-pastille {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  margin-bottom: 0.875rem; padding: 0.3rem 0.85rem; border-radius: 999px;
+  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+  background: hsl(var(--muted)); border: 1px solid hsl(var(--border));
+}
+.spx-pastille--en-cours {
+  color: hsl(var(--speciaux-texte));
+  background: hsl(var(--speciaux) / 0.1); border-color: hsl(var(--speciaux) / 0.35);
+}
+.spx-pastille--en-cours::before {
+  content: ''; width: 0.5rem; height: 0.5rem; border-radius: 50%;
+  background: hsl(var(--speciaux)); box-shadow: 0 0 0 3px hsl(var(--speciaux) / 0.25);
+}
+.spx-pastille--bientot { border-style: dashed; }
+/* Cinq cartes : trois puis deux au-dessus de 1100 px, le tableau des jeux
+   en met quatre par rangée et laissait la cinquième seule. */
+@media (min-width: 1100px) { .spx-board { grid-template-columns: repeat(3, 1fr); max-width: 62rem; } }
+.spx-carte .jeu-card-visuel::after {
+  background: linear-gradient(to top, hsl(var(--card)) 2%, hsl(var(--jeu-accent) / 0.22) 50%, hsl(270 40% 12% / 0.25) 100%);
+}
+
+/* Les questions : la ligne de situation au-dessus de la question. */
+.port-question-sur, .surv-situation {
+  max-width: 34rem; margin: 0 auto 0.75rem; padding: 0.6rem 0.9rem;
+  border-radius: var(--radius); text-align: center;
+  font-size: 0.9rem; line-height: 1.45; font-style: italic;
+  color: hsl(var(--muted-foreground));
+  background: hsl(var(--muted) / 0.6); border: 1px dashed hsl(var(--border));
+}
+.port-avert {
+  max-width: 30rem; margin: 0 auto 1.25rem; font-size: 0.85rem; line-height: 1.45;
+  text-align: center; color: hsl(var(--muted-foreground));
+}
+
+/* Le portrait : image carrée au-dessus, texte dessous ; en duo sans table
+   de duos, deux cartes côte à côte, teintées comme les personnages. */
+.port-resultat, .surv-resultat { padding-left: 1.25rem; padding-right: 1.25rem; }
+.port-noms { margin: 0 0 0.5rem; font-size: 0.9rem; font-weight: 700; color: hsl(var(--muted-foreground)); }
+.port-carte {
+  --port-accent: var(--speciaux);
+  position: relative; display: flex; flex-direction: column;
+  max-width: 30rem; margin: 0 auto; overflow: hidden; text-align: left;
+  border-radius: calc(var(--radius) + 0.25rem);
+  background: hsl(var(--card)); border: 1px solid hsl(var(--port-accent) / 0.3);
+  box-shadow: 0 24px 48px -24px hsl(var(--port-accent) / 0.55);
+}
+.port-carte--rose { --port-accent: var(--primary); }
+.port-carte--violet { --port-accent: var(--secondary); }
+.port-image { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: hsl(270 30% 14%); }
+.port-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.port-image::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, hsl(var(--card)) 0%, transparent 28%);
+}
+.port-corps { position: relative; padding: 0.75rem 1.25rem 1.25rem; }
+.port-etiquette {
+  margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 800;
+  letter-spacing: 0.06em; text-transform: uppercase; color: hsl(var(--muted-foreground));
+}
+.port-etiquette b { text-transform: none; letter-spacing: 0; font-size: 0.85rem; }
+.port-titre {
+  margin: 0 0 0.5rem; font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.6rem; line-height: 1.15; font-weight: 800; color: hsl(var(--foreground));
+}
+.port-titre--petit { font-size: 1.25rem; }
+.port-desc { margin: 0; font-size: 0.95rem; line-height: 1.55; color: hsl(var(--muted-foreground)); }
+.port-conseil {
+  max-width: 30rem; margin: 1rem auto 0; padding: 0.875rem 1rem; text-align: left;
+  border-radius: var(--radius); font-size: 0.92rem; line-height: 1.5;
+  background: hsl(var(--primary) / 0.07); border: 1px solid hsl(var(--primary) / 0.25);
+}
+.port-carte .port-conseil { margin-left: 0; margin-right: 0; }
+.port-conseil strong { display: block; margin-bottom: 0.25rem; font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; color: hsl(var(--primary-texte)); }
+.port-bloc-titre { margin: 0 0 0.75rem; font-size: 1.05rem; font-weight: 800; text-align: center; }
+.port-jauges { max-width: 30rem; margin: 1.5rem auto 0; text-align: left; }
+.port-jauge { margin-bottom: 0.75rem; }
+.port-jauge-tete { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.3rem; font-size: 0.9rem; font-weight: 700; }
+.port-jauge-pct { color: hsl(var(--speciaux-texte)); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.port-jauge-piste { height: 0.6rem; border-radius: 999px; background: hsl(var(--muted)); overflow: hidden; }
+.port-jauge-plein { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, hsl(var(--speciaux)), hsl(var(--primary))); }
+/* Les deux rôles sous la carte du duo. */
+.port-roles { display: grid; gap: 0.75rem; max-width: 34rem; margin: 1.25rem auto 0; text-align: left; }
+.port-role {
+  --port-accent: var(--primary);
+  padding: 0.875rem 1rem; border-radius: var(--radius);
+  background: hsl(var(--port-accent) / 0.07); border: 1px solid hsl(var(--port-accent) / 0.3);
+}
+.port-role--violet { --port-accent: var(--secondary); }
+.port-role-nom { margin: 0; font-size: 0.8rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.port-role-titre { margin: 0.125rem 0 0.375rem; font-size: 1.1rem; font-weight: 800; }
+.port-role-desc { margin: 0; font-size: 0.9rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+.port-nom--rose, .surv-carte--rose .surv-carte-valeur { color: hsl(var(--primary-texte)); }
+.port-nom--violet, .surv-carte--violet .surv-carte-valeur { color: hsl(var(--secondary-texte)); }
+.port-deux { display: grid; gap: 1rem; max-width: 40rem; margin: 0 auto; }
+.port-deux .port-carte { max-width: none; margin: 0; }
+.port-bilan { max-width: 34rem; margin: 1.25rem auto 0; font-size: 0.95rem; line-height: 1.5; }
+.port-note { max-width: 34rem; margin: 1.25rem auto 0; font-size: 0.8rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+@media (min-width: 640px) {
+  .port-roles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .port-deux { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* La survie : la grande valeur, la ligne du temps du film (ou la jauge du
+   risque) avec la mascotte de chacun posée à sa valeur. */
+.surv-libelle { margin: 0 0 0.25rem; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: hsl(var(--muted-foreground)); }
+.surv-grand { margin: 0 0 0.5rem; }
+.surv-valeur {
+  display: inline-block; font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: clamp(2.4rem, 9vw, 3.6rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em;
+  background: linear-gradient(135deg, hsl(var(--speciaux)), hsl(var(--primary)));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.surv-ligne { max-width: 34rem; margin: 0 auto; padding: 3.75rem 1.5rem 2.25rem; }
+.surv-piste { position: relative; height: 0.75rem; border-radius: 999px; background: linear-gradient(90deg, hsl(142 55% 45%), hsl(38 90% 55%) 55%, hsl(0 70% 50%)); }
+.surv-ligne--pourcent .surv-piste { background: linear-gradient(90deg, hsl(142 55% 45%), hsl(38 90% 55%) 50%, hsl(292 55% 45%)); }
+.surv-graduation { position: absolute; top: 100%; transform: translateX(-50%); display: grid; justify-items: center; gap: 0.2rem; }
+.surv-graduation i { display: block; width: 2px; height: 0.4rem; background: hsl(var(--border)); }
+.surv-graduation b { font-size: 0.7rem; font-weight: 600; color: hsl(var(--muted-foreground)); white-space: nowrap; }
+.surv-repere { position: absolute; bottom: 100%; transform: translateX(-50%); display: grid; justify-items: center; margin-bottom: 0.2rem; }
+.surv-repere svg { width: 2.75rem; height: 2.75rem; display: block; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25)); }
+.surv-repere i { display: block; width: 1rem; height: 1rem; border-radius: 50%; background: hsl(var(--primary)); border: 3px solid hsl(var(--card)); }
+.surv-repere--violet i { background: hsl(var(--secondary)); }
+.surv-repere em { max-width: 6rem; font-style: normal; font-size: 0.72rem; font-weight: 700; line-height: 1.2; text-align: center; color: hsl(var(--primary-texte)); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.surv-repere--violet em { color: hsl(var(--secondary-texte)); }
+/* Deux joueurs : le second passe sous la piste pour qu'ils ne se chevauchent pas. */
+.surv-repere--bas { bottom: auto; top: 100%; margin: 0.9rem 0 0; }
+.surv-repere--bas svg { order: 2; }
+.surv-ligne:has(.surv-repere--bas) { padding-bottom: 4.5rem; }
+.surv-ligne:has(.surv-repere--bas) .surv-graduation b { display: none; }
+.surv-pistes { display: grid; gap: 0.75rem; max-width: 34rem; margin: 1.5rem auto 0; text-align: left; }
+.surv-piste-bloc { padding: 0.875rem 1rem; border-radius: var(--radius); border: 1px solid hsl(var(--border)); background: hsl(var(--card)); }
+.surv-piste-bloc .port-bloc-titre { text-align: left; font-size: 0.95rem; }
+.surv-piste-bloc--pour { border-color: hsl(142 50% 42% / 0.4); background: hsl(142 60% 45% / 0.07); }
+.surv-piste-bloc--contre { border-color: hsl(0 60% 50% / 0.35); background: hsl(0 70% 50% / 0.06); }
+.surv-faits { display: grid; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.surv-faits li { display: grid; gap: 0.125rem; padding-left: 0.75rem; border-left: 3px solid hsl(var(--border)); }
+.surv-piste-bloc--pour .surv-faits li { border-left-color: hsl(142 60% 40%); }
+.surv-piste-bloc--contre .surv-faits li { border-left-color: hsl(0 65% 50%); }
+.surv-fait-q { font-size: 0.85rem; font-weight: 700; line-height: 1.35; }
+.surv-fait-r { font-size: 0.85rem; line-height: 1.35; color: hsl(var(--muted-foreground)); }
+.surv-deux { display: grid; gap: 0.75rem; max-width: 34rem; margin: 1.25rem auto 0; text-align: left; }
+.surv-carte {
+  --port-accent: var(--primary);
+  padding: 0.875rem 1rem; border-radius: var(--radius);
+  background: hsl(var(--port-accent) / 0.07); border: 1px solid hsl(var(--port-accent) / 0.3);
+}
+.surv-carte--violet { --port-accent: var(--secondary); }
+.surv-carte-nom { margin: 0; font-size: 0.85rem; font-weight: 700; }
+.surv-carte-valeur { margin: 0.125rem 0 0.25rem; font-size: 1.6rem; font-weight: 800; line-height: 1.1; }
+.surv-carte-titre { margin: 0 0 0.25rem; font-size: 1rem; font-weight: 800; }
+.surv-carte-desc { margin: 0; font-size: 0.88rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.surv-ecarts { max-width: 34rem; margin: 1.5rem auto 0; text-align: left; }
+@media (min-width: 640px) {
+  .surv-pistes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .surv-deux { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.dark .port-image { background: hsl(270 30% 10%); }
+.dark .surv-repere svg { filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.6)); }
 
 /* ═══════════════════════════════════════════════════════════════════
    Téléphone : les animations infinies qui repeignent à chaque image

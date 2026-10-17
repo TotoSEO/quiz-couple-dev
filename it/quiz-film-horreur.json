@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Quiz di Halloween • Da solo/a o in due",
+    "title": "Chi di noi due muore per primo in un film horror?",
+    "titleHighlight": "film horror",
+    "description": "Quindici situazioni da film horror, quattro reazioni possibili ogni volta. Il risultato ti dice quanti minuti resisti prima di uscire dalla storia, su un film di due ore e mezza al massimo. In due, ognuno risponde per conto suo, e si sa chi muore per primo.",
+    "subtitle": "15 situazioni • 5 minuti • da solo/a, in due su un telefono o ognuno sul proprio",
+    "jumpBtn": "Fai il quiz"
+  },
+  "section1": {
+    "title": "Come funziona il quiz",
+    "intro": "Il principio è semplice: ti mettiamo nelle situazioni che tutti hanno visto al cinema, e tu scegli quello che faresti davvero. Non quello che bisognerebbe fare, quello che faresti.",
+    "p1": "Per esempio: «Sono le 23. Un rumore in soffitta, come dei passi». Puoi salire a vedere con una torcia che sfarfalla, mandare il tuo partner, chiudere la botola a chiave e accendere tutte le luci, o andare a dormire altrove subito. Ogni reazione vale da zero a tre punti, e la somma delle quindici situazioni diventa un tempo di sopravvivenza.",
+    "p2": "Un film horror dura al massimo due ore e mezza. Con i riflessi peggiori, resisti cinque minuti, il tempo dei titoli di testa. Con i migliori, arrivi a 2 h 30: sei sopravvissuto/a a tutto il film. Nel mezzo, il risultato ti dice a quale minuto esci dalla storia, e quali scelte ti hanno salvato/a o perso/a.",
+    "p3": "In due, il primo risponde alle quindici situazioni, passa il telefono, e il secondo risponde a sua volta. I vostri due tempi compaiono sulla stessa linea del tempo, con il nome della prima vittima e le situazioni in cui non avete reagito allo stesso modo. Se non siete insieme, la modalità a distanza permette di rispondere ognuno sul proprio telefono."
+  },
+  "section2": {
+    "title": "I cinque verdetti, dalla scena d'apertura ai titoli di coda",
+    "intro": "Il tempo di sopravvivenza si legge in cinque fasce, e ognuna corrisponde a un personaggio che tutti riconoscono.",
+    "pillar1Title": "Meno di 25 minuti: la scena d'apertura",
+    "pillar1Text": "Scendi in cantina dicendo che è il vento. Il film è appena iniziato e il tuo nome passa già nei titoli.",
+    "pillar2Title": "Da 25 a 55 minuti: la prima vittima",
+    "pillar2Text": "Ci si affeziona un po' a te, poi vai a vedere quel rumore in soffitta. Il pubblico urla, ma lo sapeva.",
+    "pillar3Title": "Da 55 a 90 minuti: la metà del film",
+    "pillar3Text": "I riflessi giusti una volta su due, e un'ultima occhiata per controllare che il killer sia davvero a terra.",
+    "pillar4Title": "Da 1 h 30 a 2 h 10: quasi fino alla fine",
+    "pillar4Text": "Porte chiuse, chiavi in mano, scorciatoia rifiutata. Resta l'ultima scena, quella in cui a tutti cadono le chiavi.",
+    "pillar5Title": "Oltre 2 h 10: la sopravvissuta o il sopravvissuto",
+    "pillar5Text": "Hai capito le regole e resisti fino ai titoli di coda. Il film racconta la tua storia, e il seguito ti aspetta."
+  },
+  "section3": {
+    "title": "Le regole di sopravvivenza che il quiz verifica",
+    "p1": "Tutti i film horror hanno le stesse regole, e tutti le conoscono: non ci si separa, non si scende in cantina, non si legge mai un vecchio libro ad alta voce, si rifiutano le scorciatoie nel bosco, e quando il killer è a terra, non si controlla, si va via. Il quiz passa queste regole una per una, in situazioni concrete.",
+    "p2": "Quello che è divertente in due è scoprire che uno di voi ha tutti i riflessi giusti e l'altro apre la botola della soffitta alla prima domanda. In genere, chi muore per primo è anche chi dice «ma no, è solo un film» quando guardate <a href=\"/it/quiz-chi-potrebbe-essere-posseduto/\">chi di voi due potrebbe essere posseduto</a>.",
+    "p3": "Per continuare la serata, <a href=\"/it/quiz-quale-serial-killer-e-compatibile-con-te/\">il quiz del serial killer compatibile</a> e <a href=\"/it/quiz-quale-supercattivo-sei/\">quello del supercattivo che ti somiglia</a> sono sulla stessa linea, con un ritratto alla fine invece di un cronometro. E <a href=\"/it/quiz-speciali-per-coppie/\">tutti i nostri quiz di stagione</a> sono riuniti in un'unica pagina."
+  },
+  "section4": {
+    "title": "Due precisazioni utili",
+    "p1": "I minuti sono calcolati sulla somma dei punti, tra 5 e 150: è una scala, non una previsione. Due persone con lo stesso totale hanno lo stesso tempo, anche se non hanno risposto allo stesso modo alle stesse domande. L'elenco di quello che ti ha salvato/a e di quello che ti ha perso/a ti dice dove si è deciso.",
+    "p2": "Niente viene salvato. Le risposte restano sul vostro telefono, e potete rifare il quiz quante volte volete, cambiando ruolo o risposte."
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Perché un massimo di 2 h 30?",
+    "faq1A": "Perché è la durata di un film horror molto lungo. Oltre, sei sopravvissuto/a a tutto: il risultato mostra allora «fino ai titoli di coda» invece di un numero di minuti.",
+    "faq2Q": "Bisogna essere in due per giocare?",
+    "faq2A": "No. Da solo/a, ottieni il tuo tempo di sopravvivenza e il tuo verdetto. In due, il quiz aggiunge il confronto: chi muore per primo, e in quali situazioni non avete reagito allo stesso modo.",
+    "faq3Q": "Ci sono risposte giuste e sbagliate?",
+    "faq3A": "Sì, nel senso del cinema: la reazione che vale tre punti è quella che ti tiene in vita in un film horror, quella che vale zero è quella della vittima classica. Nella vita reale, scendere in cantina è raramente mortale.",
+    "faq4Q": "Si può giocare a distanza?",
+    "faq4A": "Sì. Nella schermata dei nomi, la modalità a distanza crea una partita con un codice e un QR code. Ognuno risponde sul proprio telefono e vede la reazione dell'altro dopo ogni situazione.",
+    "faq5Q": "Le mie risposte vengono salvate?",
+    "faq5A": "No, restano sul tuo telefono. Il sito conserva solo il fatto che una partita è stata giocata, per il contatore della pagina."
+  },
+  "jsonLd": {
+    "about": "quiz di Halloween"
+  }
+}

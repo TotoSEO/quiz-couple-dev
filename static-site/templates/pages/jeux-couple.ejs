@@ -220,6 +220,7 @@
       <div class="space-y-4 text-muted-foreground leading-relaxed">
         <p><%- t(ns + ':section4.p1', '') %></p>
         <p class="text-foreground font-semibold"><%- t(ns + ':section4.p2', '') %></p>
+        <% const s4p3 = t(ns + ':section4.p3', ''); if (s4p3) { %><p><%- s4p3 %></p><% } %>
       </div>
       <a href="<%= getLocalizedUrl('testCouple', lang) %>" class="btn btn-outline mt-6"><%= t(ns + ':section4.cta', '') %></a>
     </section>

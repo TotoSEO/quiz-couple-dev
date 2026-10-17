@@ -409,6 +409,40 @@
                                 needsGender: true, distance: true,
                                 axes: ['envie', 'tendresse', 'parole', 'audace', 'rythme'], paliers: [55, 70, 80, 90] },
 
+    // Les quiz speciaux d'Halloween (16 octobre 2026, demande de Thomas), tous
+    // a distance possible. Les quiz a portrait (moteur « portrait ») : chaque
+    // reponse pese sur un ou plusieurs portraits (q{N}{lettre}_axes dans
+    // gd.json), le resultat est le portrait le plus charge, avec son image
+    // dessinee dans public/quiz/halloween/<images>/<id>.webp. Les axes sont
+    // ranges du plus commun au plus rare : a egalite, le premier gagne.
+    'serial-killer': { prefix: 'serialKiller', engine: 'portrait', totalQ: 15, pool: 15, quizType: 'serial-killer', needsGender: true, distance: true,
+                       axes: ['bundy', 'dahmer', 'ripper', 'zodiac', 'manson', 'btk', 'wuornos', 'holmes'], images: 'serial-killer', icone: '🔪' },
+    'super-vilain':  { prefix: 'superVilain', engine: 'portrait', totalQ: 15, pool: 15, quizType: 'super-vilain', needsGender: true, distance: true,
+                       axes: ['joker', 'harley', 'loki', 'thanos', 'vador', 'voldemort', 'malefique', 'cruella'], images: 'super-vilain', icone: '🦹' },
+    // Le duo : six roles, et la table des duos celebres que forment deux
+    // roles (toutes les paires sont couvertes ; la cle est triee).
+    'duo-vilains':   { prefix: 'duoVilains', engine: 'portrait', totalQ: 15, pool: 15, quizType: 'duo-vilains', needsGender: true, distance: true,
+                       axes: ['cerveau', 'chaos', 'muscle', 'charme', 'ombre', 'coeur'], images: 'duo-vilains', icone: '🎭', facons: { solo: false, duo: true },
+                       duos: {
+                         'cerveau+cerveau': 'cortex', 'cerveau+charme': 'cortex',
+                         'cerveau+muscle': 'vador', 'cerveau+ombre': 'vador',
+                         'cerveau+chaos': 'voldemort', 'cerveau+coeur': 'voldemort',
+                         'chaos+chaos': 'joker', 'chaos+coeur': 'joker',
+                         'chaos+charme': 'rocket', 'charme+charme': 'rocket', 'charme+coeur': 'rocket',
+                         'chaos+ombre': 'ivy', 'coeur+ombre': 'ivy',
+                         'chaos+muscle': 'wario', 'muscle+muscle': 'wario',
+                         'muscle+ombre': 'magneto', 'ombre+ombre': 'magneto', 'charme+ombre': 'magneto',
+                         'coeur+muscle': 'bonnie', 'coeur+coeur': 'bonnie', 'charme+muscle': 'bonnie'
+                       } },
+    // Les quiz a jauge (moteur « survie ») : des points par reponse
+    // (q{N}{lettre}_pts), la somme devient des minutes de survie dans le film
+    // (de 5 a 150 : un film fait au plus 2 h 30, a 150 on tient jusqu'au
+    // generique) ou un risque de possession en pourcentage.
+    'film-horreur':  { prefix: 'filmHorreur', engine: 'survie', totalQ: 15, pool: 15, quizType: 'film-horreur', needsGender: true, distance: true,
+                       mode: 'minutes', min: 5, max: 150, paliers: [25, 55, 90, 130], icone: '🎬' },
+    'possession':    { prefix: 'possession', engine: 'survie', totalQ: 15, pool: 15, quizType: 'possession', needsGender: true, distance: true,
+                       mode: 'pourcent', paliers: [20, 40, 60, 80], icone: '👻' },
+
     // Je l'aime encore ? Un test solo a bareme explicite : les points vont au
     // sentiment encore present (l'anneau se lit donc comme « combien il
     // reste »), et chaque question a son poids, de 3 a 6, selon ce qu'elle
@@ -1084,6 +1118,12 @@
         break;
       case 'echelle':
         initEchelleQuiz(config);
+        break;
+      case 'portrait':
+        initPortraitQuiz(config);
+        break;
+      case 'survie':
+        initSurvieQuiz(config);
         break;
       case 'piliers':
         initPiliersQuiz(config, questions);
@@ -2621,6 +2661,87 @@
       quizType: cfg.quizType || 'echelle',
       axes: cfg.axes || [],
       paliers: cfg.paliers || [55, 70, 80, 90]
+    }, optionsDistance(cfg, questions.slice())));
+  }
+
+  // Les quiz speciaux d'Halloween (16 octobre 2026). Comme la compatibilite
+  // sexuelle : la reserve est lue dans l'ordre du fichier, sans tirage.
+  function luDe(prefix) {
+    return function(cle, repli) {
+      var plein = prefix + '.' + cle;
+      var v = QuizEngine.tgd(plein, null);
+      return (v && v !== plein) ? v : repli;
+    };
+  }
+  function imageHalloween(dossier, id) {
+    return dossier ? '/quiz/halloween/' + dossier + '/' + id + '.webp' : null;
+  }
+  function initPortraitQuiz(cfg) {
+    var questions = parseGdQuestions(cfg.prefix, (cfg.pool || 15) + 5, false);
+    questions.sort(function(a, b) { return a.id - b.id; });
+    questions.forEach(function(q) {
+      q.options.forEach(function(opt) {
+        var cle = cfg.prefix + '.q' + q.id + opt.id + '_axes';
+        var brut = QuizEngine.tgd(cle, null);
+        opt.axes = (brut && brut !== cle) ? litAxes(brut) : {};
+      });
+    });
+    if (!questions.length) { showUnavailable(cfg); return; }
+    var lu = luDe(cfg.prefix);
+    var profils = {};
+    (cfg.axes || []).forEach(function(id) {
+      profils[id] = {
+        title: lu('p_' + id + '_t', id),
+        description: lu('p_' + id + '_d', ''),
+        advice: lu('p_' + id + '_a', ''),
+        image: imageHalloween(cfg.images, id)
+      };
+    });
+    var duoProfils = null;
+    if (cfg.duos) {
+      duoProfils = {};
+      Object.keys(cfg.duos).forEach(function(k) {
+        var id = cfg.duos[k];
+        if (duoProfils[id]) return;
+        duoProfils[id] = {
+          title: lu('d_' + id + '_t', id),
+          description: lu('d_' + id + '_d', ''),
+          advice: lu('d_' + id + '_a', ''),
+          image: imageHalloween(cfg.images, 'duo-' + id)
+        };
+      });
+    }
+    new QuizEngine.PortraitQuiz(etendre({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang,
+      quizType: cfg.quizType || 'portrait',
+      axes: cfg.axes || [],
+      profils: profils,
+      duos: cfg.duos || null,
+      duoProfils: duoProfils || {},
+      modes: cfg.facons || { solo: true, duo: true },
+      icone: cfg.icone
+    }, optionsDistance(cfg, questions.slice())));
+  }
+  function initSurvieQuiz(cfg) {
+    var questions = parseGdQuestions(cfg.prefix, (cfg.pool || 15) + 5, false);
+    questions.sort(function(a, b) { return a.id - b.id; });
+    appliquePointsExplicites(cfg.prefix, questions);
+    if (!questions.length) { showUnavailable(cfg); return; }
+    new QuizEngine.SurvieQuiz(etendre({
+      container: container,
+      questions: questions,
+      prefix: cfg.prefix,
+      lang: lang,
+      quizType: cfg.quizType || 'survie',
+      mode: cfg.mode || 'minutes',
+      min: cfg.min,
+      max: cfg.max,
+      paliers: cfg.paliers,
+      modes: cfg.facons || { solo: true, duo: true },
+      icone: cfg.icone
     }, optionsDistance(cfg, questions.slice())));
   }
 
