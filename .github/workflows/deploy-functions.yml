@@ -56,6 +56,10 @@ jobs:
       # rien »), la fonction qui interrogeait les lieux et comptait les
       # recherches dans activity_validations part avec elle (la table est
       # supprimee par la migration 20261017120000_retrait_activites.sql).
+      # Retirer une fonction du depot, c'est aussi retirer sa section
+      # [functions.<nom>] de supabase/config.toml : sinon l'etape de deploiement
+      # cherche son dossier et echoue avant d'arriver ici (17 octobre 2026,
+      # « entrypoint path does not exist » pour search-activities).
       # Les commandes ne font rien si c'est deja fait, et une erreur ne bloque
       # pas le deploiement : cette etape peut etre retiree une fois passee.
       - name: Retirer trigger-deploy, admin-blog, blog-og, manage-ado-session, search-activities et les secrets (supprimés du dépôt)

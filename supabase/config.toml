@@ -15,9 +15,6 @@ verify_jwt = false
 [functions.contact-message]
 verify_jwt = false
 
-[functions.search-activities]
-verify_jwt = false
-
 [functions.admin-leads]
 verify_jwt = false
 
