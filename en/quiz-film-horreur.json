@@ -3,14 +3,14 @@
     "badge": "Halloween quiz • Solo or as a couple",
     "title": "Which of us dies first in a horror movie?",
     "titleHighlight": "horror movie",
-    "description": "Fifteen horror movie situations, four possible reactions each time. The result tells you how many minutes you last before leaving the story, on a movie of two and a half hours at most. As a couple, each of you answers separately, and we find out who dies first.",
+    "description": "Fifteen situations, from arriving at the cabin to the end credits, four possible reactions each time. The result tells you how many minutes you last before leaving the story, out of a film of two and a half hours at most. As a couple, each of you answers separately, and we find out who dies first.",
     "subtitle": "15 situations • 5 minutes • solo, as a couple on one phone or each on your own",
     "jumpBtn": "Take the quiz"
   },
   "section1": {
     "title": "How the quiz works",
     "intro": "The idea is simple: we put you in the situations everyone has seen at the movies, and you choose what you'd really do. Not what you should do, what you'd do.",
-    "p1": "For example: “It's 11 pm. A noise in the attic, like footsteps.” You can go up to look with a flickering flashlight, send your partner, lock the hatch and turn on all the lights, or go sleep somewhere else right away. Each reaction is worth zero to three points, and the sum of the fifteen situations becomes a survival time.",
+    "p1": "For example: '11 p.m. Footsteps in the attic, right above your head. There's nobody in the attic.' You can go up to look in your socks with the flickering torch, send your partner, lock the hatch and all sleep in the living room, or put everyone in the car. Each reaction is worth zero to three points, and the sum of the fifteen situations becomes a survival time.",
     "p2": "A horror movie runs two and a half hours at most. With the worst reflexes, you last five minutes, the length of the opening credits. With the best, you reach 2 h 30: you survived the whole movie. In between, the result tells you at which minute you leave the story, and which choices saved you or got you killed.",
     "p3": "As a couple, the first player answers the fifteen situations, passes the phone, and the second answers in turn. Your two times show up on the same timeline, with the name of the first victim and the situations where you didn't react the same way. If you're not together, remote mode lets you each answer on your own phone."
   },

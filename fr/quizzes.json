@@ -208,12 +208,6 @@
     "description": "20 questions pour découvrir votre style d'attachement amoureux : sécure, anxieux, évitant ou désorganisé. Résultat immédiat.",
     "metaDescription": "Sécure, anxieux, évitant ou désorganisé ? Découvrez votre style d'attachement amoureux en 20 questions. Basé sur la théorie de Bowlby."
   },
-  "activities": {
-    "title": "Activités en couple près de chez vous : trouvez une idée",
-    "shortTitle": "Activités en couple",
-    "description": "Trouvez des activités à faire en couple près de chez vous. Outil gratuit et géolocalisé : filtrez par budget, ambiance et distance pour des sorties à deux inoubliables.",
-    "metaDescription": "Trouvez des activités en couple près de chez vous ! Filtrez par budget, ambiance et distance. Outil géolocalisé, 100% gratuit."
-  },
   "testInfidelite": {
     "title": "Test infidélité couple gratuit : les signes qui ne trompent pas",
     "shortTitle": "Test Infidélité",
@@ -479,8 +473,8 @@
   "quizSerialKiller": {
     "title": "Quiz : avec quel serial killer es-tu compatible ? (seul ou à deux)",
     "shortTitle": "Quel serial killer te correspond",
-    "metaDescription": "Un quiz d'Halloween : 15 questions sur ta façon d'aimer, de mentir et de ranger, et le serial killer célèbre qui te ressemble le plus. Seul(e) ou à deux, gratuit.",
-    "description": "Quinze questions et le tueur célèbre qui te ressemble le plus, en version très grossie. À faire seul(e) ou à deux."
+    "metaDescription": "Un quiz d'Halloween : 15 situations (la fête, le cimetière à minuit, l'inspecteur à la porte) et le serial killer célèbre qui te ressemble le plus. Seul(e) ou à deux, gratuit.",
+    "description": "Quinze situations d'un soir d'Halloween et le tueur célèbre qui te ressemble le plus, en version très grossie. À faire seul(e) ou à deux."
   },
   "quizMortFilmHorreur": {
     "title": "Qui de nous deux meurt en premier dans un film d'horreur ? Le quiz",
@@ -497,13 +491,13 @@
   "quizSuperVilain": {
     "title": "Quiz : à quel super-vilain ressembles-tu le plus ? (seul ou à deux)",
     "shortTitle": "Quel super-vilain es-tu",
-    "metaDescription": "Psychologie, mises en situation, équipement : 15 questions et le super-vilain qui te ressemble, du Joker à Maléfique. Un quiz d'Halloween gratuit, seul(e) ou à deux.",
-    "description": "Quinze questions sur ta psychologie, tes réactions et ton équipement de méchant, et le super-vilain qui te ressemble."
+    "metaDescription": "Ton entrée à la fête, ton déguisement, tes sbires, ton rire : 15 questions et le super-vilain qui te ressemble, du Joker à Maléfique. Un quiz d'Halloween gratuit, seul(e) ou à deux.",
+    "description": "Quinze questions dans la peau du méchant un soir d'Halloween, et le super-vilain qui te ressemble le plus."
   },
   "quizDuoVilains": {
     "title": "Quel duo de super-vilains formez-vous ? Le quiz à faire à deux",
     "shortTitle": "Quel duo de super-vilains formez-vous",
-    "metaDescription": "À deux : 15 questions chacun, votre rôle dans le duo (le cerveau, le chaos, la force...) et le duo de méchants célèbre que vous formez, du Joker et Harley Quinn à Bonnie et Clyde.",
+    "metaDescription": "À deux : le casse de la nuit d'Halloween en 15 questions chacun, votre rôle dans le duo (le cerveau, le chaos, la force...) et le duo de méchants célèbre que vous formez, du Joker et Harley Quinn à Bonnie et Clyde.",
     "description": "Chacun répond de son côté, et le quiz vous donne votre rôle dans le duo et le duo de méchants célèbre que vous formez."
   }
 }

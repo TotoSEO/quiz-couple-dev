@@ -3,14 +3,14 @@
     "badge": "Halloween-Quiz • Allein oder zu zweit",
     "title": "Welcher Serienmörder passt zu dir?",
     "titleHighlight": "Serienmörder",
-    "description": "Fünfzehn Fragen dazu, wie du liebst, wie du lügst, wie du deine Wohnung aufräumst und wie du auf einen anonymen Brief reagierst. Am Ende der berühmte Mörder, der dir am meisten ähnelt, in stark vergrößerter Fassung, mit seinem Porträt und einem Tipp für den Halloween-Abend. Allein, oder zu zweit zum Vergleichen.",
+    "description": "Fünfzehn Situationen eines Halloween-Abends: dein Auftritt auf der Party, dein Kostüm, der Friedhof um Mitternacht, der Kommissar, der an die Tür klopft, die True-Crime-Doku. Am Ende der berühmte Killer, der dir am meisten ähnelt, stark vergrößert, mit seinem Porträt und einem Tipp für den Abend. Allein, oder zu zweit zum Vergleichen.",
     "subtitle": "15 Fragen • 5 Minuten • allein, zu zweit an einem Handy oder jeder am eigenen",
     "jumpBtn": "Zum Quiz"
   },
   "section1": {
     "title": "So funktioniert dieses Quiz",
-    "intro": "Es ist ein Persönlichkeitsquiz im Halloween-Kostüm. Es will nicht wissen, ob du gefährlich bist, es schaut auf ganz gewöhnliche Charakterzüge: Charme, Geduld, Einsamkeit, Freude an Rätseln, das Bedürfnis, alles zu kontrollieren. Und es übertreibt sie bis zur Karikatur.",
-    "p1": "Die Fragen handeln vom Alltag. Zum Beispiel: „Dein Partner hat deine Nachrichten gelesen, ohne es dir zu sagen. Du...“ oder „Ein Freund vertraut dir ein riesiges Geheimnis an. Du...“. Jede Antwort zählt für eines oder zwei der acht Porträts des Quiz, und das Porträt mit den meisten Punkten gewinnt.",
+    "intro": "Es ist ein Persönlichkeitsquiz im Halloween-Kostüm. Es will nicht wissen, ob du gefährlich bist, es schaut auf ganz gewöhnliche Charakterzüge, Charme, Geduld, Einsamkeit, die Freude an Rätseln, das Bedürfnis, alles zu kontrollieren, anhand von Situationen eines Halloween-Abends. Und es vergrößert sie bis zur Karikatur.",
+    "p1": "Die Fragen sind Szenen. Zum Beispiel: „Ein Kommissar klopft an deine Tür und stellt Fragen zum Viertel.“ oder „Der Friedhof, um Mitternacht, auf eine Wette hin.“. Jede Antwort zählt für eines oder zwei der acht Porträts des Quiz, und das Porträt mit den meisten Punkten gewinnt.",
     "p2": "Allein beantwortest du die fünfzehn Fragen und entdeckst dein Porträt, mit den drei Zügen, die aus deinen Antworten am stärksten hervorstechen. Zu zweit beantwortet der Erste die ganze Reihe, gibt das Handy weiter, und der Zweite antwortet danach, ohne die Antworten des Ersten zu sehen. Die beiden Porträts erscheinen dann nebeneinander, mit der Zahl gleicher Antworten.",
     "p3": "Wenn ihr nicht am selben Ort seid, könnt ihr im Fernmodus jeder auf dem eigenen Handy antworten: Eine Person erstellt die Partie, die andere tritt mit dem Code bei, und ihr seht nach jeder Frage eure beiden Antworten."
   },
@@ -36,7 +36,7 @@
   },
   "section3": {
     "title": "Zu zweit spielen, an einem Halloween-Abend",
-    "p1": "Dieses Quiz funktioniert zu zweit sehr gut, gerade weil niemandem sein Ergebnis schmeichelt. Man lacht über das eigene Porträt, erkennt den anderen in seinem, und am Ende erzählt ihr euch, warum ihr bei der Frage zum Geheimnis oder zum anonymen Brief so geantwortet habt.",
+    "p1": "Dieses Quiz funktioniert zu zweit sehr gut, gerade weil niemand von seinem Ergebnis geschmeichelt ist. Man lacht über sein eigenes Porträt, erkennt den anderen in seinem wieder, und am Ende erzählt man sich, warum man bei der Frage mit dem Kommissar oder der mit dem Friedhof so geantwortet hat.",
     "p2": "Wenn ihr in der Stimmung bleiben wollt, lassen sich die anderen Halloween-Quiz gut aneinanderreihen: <a href=\"/de/quiz-wer-stirbt-zuerst-im-horrorfilm/\">herausfinden, wer von euch zuerst im Horrorfilm stirbt</a>, <a href=\"/de/quiz-wer-wuerde-besessen-werden/\">wer besessen werden könnte</a>, oder <a href=\"/de/quiz-welcher-superschurke-bist-du/\">welcher Superschurke in jedem von euch steckt</a>. Sie spielen sich alle gleich, allein oder zu zweit.",
     "p3": "Und für einen Abend, der nicht nur von Monstern handelt, übernehmen <a href=\"/de/was-wuerdest-du-lieber-paar-quiz/\">unsere „Was würdest du lieber“-Dilemmas</a> gut, wenn die Süßigkeiten alle sind."
   },

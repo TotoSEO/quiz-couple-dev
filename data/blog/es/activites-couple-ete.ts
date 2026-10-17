@@ -166,7 +166,7 @@ const article: BlogArticleData = {
 <tr><td><strong>Noche al aire libre</strong></td><td>Una noche</td><td>Gratis</td><td>Tienes jardín, terraza o un balcón grande</td></tr>
 <tr><td><strong>Noche de preguntas</strong></td><td>1 a 2 h</td><td>Gratis</td><td>Tenéis la sensación de que ya no os habláis</td></tr>
 </tbody></table></div>
-<p>Un pequeño consejo de método: <strong>no elijas la actividad más impresionante, elige la que corresponde a tu energía real del día.</strong> Un mantel logrado en un parque vale infinitamente más que una excursión abandonada a los veinte minutos porque nadie tenía ganas de verdad. Y si buscas algo concreto, la página que recopila <a href="/es/actividades-en-pareja-cerca/">lo que existe cerca de ti</a> te dará puntos de partida según tu zona.</p>`,
+<p>Un pequeño consejo de método: <strong>no elijas la actividad más impresionante, elige la que corresponde a tu energía real del día.</strong> Un mantel logrado en un parque vale infinitamente más que una excursión abandonada a los veinte minutos porque nadie tenía ganas de verdad. Y si buscas algo concreto, la página que recopila lo que existe cerca de ti te dará puntos de partida según tu zona.</p>`,
     },
     {
       id: 'les-4-erreurs',

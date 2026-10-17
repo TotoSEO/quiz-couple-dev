@@ -3,14 +3,14 @@
     "badge": "Quiz d'Halloween • Seul(e) ou à deux",
     "title": "Qui de nous deux meurt en premier dans un film d'horreur ?",
     "titleHighlight": "film d'horreur",
-    "description": "Quinze situations de film d'horreur, quatre réactions possibles à chaque fois. Le résultat te dit combien de minutes tu tiens avant de quitter l'histoire, sur un film de deux heures et demie au maximum. À deux, chacun répond de son côté, et on sait qui meurt en premier.",
+    "description": "Quinze situations, de l'arrivée au chalet au générique de fin, quatre réactions possibles à chaque fois. Le résultat te dit combien de minutes tu tiens avant de quitter l'histoire, sur un film de deux heures et demie au maximum. À deux, chacun répond de son côté, et on sait qui meurt en premier.",
     "subtitle": "15 situations • 5 minutes • seul(e), à deux sur un téléphone ou chacun sur le sien",
     "jumpBtn": "Faire le quiz"
   },
   "section1": {
     "title": "Comment marche le quiz",
     "intro": "Le principe est simple : on te met dans les situations que tout le monde a vues au cinéma, et tu choisis ce que tu ferais vraiment. Pas ce qu'il faudrait faire, ce que tu ferais.",
-    "p1": "Par exemple : « Il est 23 h. Un bruit dans le grenier, comme des pas. » Tu peux monter voir avec une lampe qui clignote, envoyer ton partenaire, fermer la trappe à clé et allumer toutes les lumières, ou partir dormir ailleurs tout de suite. Chaque réaction vaut de zéro à trois points, et la somme des quinze situations devient un temps de survie.",
+    "p1": "Par exemple : « 23 h. Des pas au grenier, juste au-dessus de ta tête. Il n'y a personne au grenier. » Tu peux monter voir en chaussettes avec la lampe qui clignote, envoyer ton partenaire, fermer la trappe à clé et dormir tous dans le salon, ou mettre tout le monde dans la voiture. Chaque réaction vaut de zéro à trois points, et la somme des quinze situations devient un temps de survie.",
     "p2": "Un film d'horreur fait au plus deux heures et demie. Avec les pires réflexes, tu tiens cinq minutes, le temps du générique d'ouverture. Avec les meilleurs, tu arrives à 2 h 30 : tu as survécu à tout le film. Entre les deux, le résultat te dit à quelle minute tu quittes l'histoire, et quels choix t'ont sauvé(e) ou perdu(e).",
     "p3": "À deux, le premier répond aux quinze situations, passe le téléphone, et le second répond à son tour. Vos deux temps s'affichent sur la même ligne du temps, avec le nom de la première victime et les situations où vous n'avez pas réagi pareil. Si vous n'êtes pas ensemble, le mode à distance permet de répondre chacun sur son téléphone."
   },

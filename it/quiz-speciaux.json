@@ -24,15 +24,15 @@
   },
   "quiz": {
     "quizSerialKillerNom": "Con quale serial killer sei compatibile?",
-    "quizSerialKillerTagline": "Quindici domande sul tuo modo di amare, di mentire e di tenere in ordine, e il killer celebre che ti somiglia di più, in versione molto ingrandita.",
+    "quizSerialKillerTagline": "Quindici situazioni di una sera di Halloween, e l'assassino celebre che ti somiglia di più, in versione molto ingrandita.",
     "quizMortFilmHorreurNom": "Chi di noi due muore per primo in un film horror?",
-    "quizMortFilmHorreurTagline": "Quindici situazioni da film horror, un tempo di sopravvivenza in minuti, e il nome della prima vittima quando giocate in due.",
+    "quizMortFilmHorreurTagline": "Quindici situazioni, dall'arrivo allo chalet ai titoli di coda, un tempo di sopravvivenza in minuti, e il nome della prima vittima quando giocate in coppia.",
     "quizPossessionNom": "Chi di noi due potrebbe essere posseduto?",
-    "quizPossessionTagline": "Quindici domande sulla tua curiosità e le tue notti, un rischio di possessione in percentuale, e chi sceglierebbero i demoni.",
+    "quizPossessionTagline": "Dieci giorni in una casa di cui nessuno vuole raccontare la storia, un rischio di possessione in percentuale, e chi sceglierebbero i demoni.",
     "quizSuperVilainNom": "A quale supercattivo somigli di più?",
-    "quizSuperVilainTagline": "Psicologia, situazioni, attrezzatura: il supercattivo che ti somiglia, da Joker a Malefica.",
+    "quizSuperVilainTagline": "Il tuo ingresso alla festa, il tuo costume, i tuoi scagnozzi, la tua risata: il supercattivo che ti somiglia, da Joker a Malefica.",
     "quizDuoVilainsNom": "Quale duo di supercattivi siete?",
-    "quizDuoVilainsTagline": "Il ruolo di ciascuno nel duo, il cervello, il caos, la forza, il fascino, l'ombra o il cuore, e il duo di cattivi celebre che formate."
+    "quizDuoVilainsTagline": "Il colpo della notte di Halloween: il ruolo di ciascuno, il cervello, il caos, la forza, il fascino, l'ombra o il cuore, e il duo di cattivi celebre che formate."
   },
   "section1": {
     "title": "Perché dei quiz di stagione",

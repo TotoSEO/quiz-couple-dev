@@ -190,12 +190,6 @@
     "description": "100 true or false questions about couples: myths, psychology, surprising statistics and common misconceptions.",
     "metaDescription": "100 true or false questions about couples: myths, psychology, surprising statistics and common misconceptions. Test your knowledge now."
   },
-  "activities": {
-    "title": "Couple Activities Near Me: Find Date Ideas Close to You",
-    "shortTitle": "Couple activities",
-    "description": "Find couple activities near you. Free geolocated tool: filter by budget, atmosphere and distance for unforgettable date ideas.",
-    "metaDescription": "Find couple activities near you. Free geolocated tool: filter by budget, atmosphere and distance for unforgettable date ideas."
-  },
   "quizTentation": {
     "title": "Temptation Island Quiz: Would You Survive It?",
     "shortTitle": "Temptation Quiz",
@@ -467,8 +461,8 @@
   "quizSerialKiller": {
     "title": "Quiz: which serial killer are you compatible with? (solo or as a couple)",
     "shortTitle": "Which serial killer matches you",
-    "metaDescription": "A Halloween quiz: 15 questions about how you love, lie and tidy up, and the famous serial killer you're most like. Solo or as a couple, free.",
-    "description": "Fifteen questions and the famous killer you're most like, blown way out of proportion. Solo or as a couple."
+    "metaDescription": "A Halloween quiz: 15 situations (the party, the cemetery at midnight, the detective at the door) and the famous serial killer you're most like. Solo or as a couple, free.",
+    "description": "Fifteen situations from a Halloween night and the famous killer you're most like, blown way out of proportion. Solo or as a couple."
   },
   "quizMortFilmHorreur": {
     "title": "Which of us dies first in a horror movie? The quiz",
@@ -485,13 +479,13 @@
   "quizSuperVilain": {
     "title": "Quiz: which supervillain are you most like? (solo or as a couple)",
     "shortTitle": "Which supervillain are you",
-    "metaDescription": "Psychology, situations, gear: 15 questions and the supervillain you're most like, from the Joker to Maleficent. A free Halloween quiz, solo or as a couple.",
-    "description": "Fifteen questions about your psychology, your reactions and your villain gear, and the supervillain you're most like."
+    "metaDescription": "Your entrance at the party, your costume, your henchmen, your laugh: 15 questions and the supervillain you're most like, from the Joker to Maleficent. A free Halloween quiz, solo or as a couple.",
+    "description": "Fifteen questions in the villain's shoes on Halloween night, and the supervillain you're most like."
   },
   "quizDuoVilains": {
     "title": "Which supervillain duo are you? The quiz to take as a couple",
     "shortTitle": "Which supervillain duo are you",
-    "metaDescription": "As a couple: 15 questions each, your role in the duo (the brains, the chaos, the muscle...) and the famous villain duo you form, from the Joker and Harley Quinn to Bonnie and Clyde.",
+    "metaDescription": "As a couple: the Halloween night heist in 15 questions each, your role in the duo (the brains, the chaos, the muscle...) and the famous villain duo you form, from the Joker and Harley Quinn to Bonnie and Clyde.",
     "description": "Each of you answers separately, and the quiz gives you your role in the duo and the famous villain duo you form."
   }
 }

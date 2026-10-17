@@ -3,14 +3,14 @@
     "badge": "Halloween-Quiz • Allein oder zu zweit",
     "title": "Welchem Superschurken ähnelst du am meisten?",
     "titleHighlight": "Superschurken",
-    "description": "Fünfzehn Fragen zu deiner Psychologie, deinen Reaktionen in der Situation, deinem idealen Versteck und deiner Schurkenausrüstung. Am Ende der Superschurke, der dir am meisten ähnelt, vom Joker bis Maleficent, mit seinem Porträt und einem Tipp für Halloween. Allein, oder zu zweit zum Vergleichen.",
+    "description": "Dein Auftritt auf der Halloween-Party, dein Kostüm, dein Versteck, deine Handlanger, dein Lachen, was du tust, wenn man dich verrät oder wenn ein Held dir die Hand reicht. Am Ende der Superschurke, der dir am meisten ähnelt, vom Joker bis Maleficent, mit seinem Porträt und einem Tipp für Halloween. Allein, oder zu zweit zum Vergleichen.",
     "subtitle": "15 Fragen • 5 Minuten • allein, zu zweit an einem Handy oder jeder am eigenen",
     "jumpBtn": "Zum Quiz"
   },
   "section1": {
     "title": "So funktioniert das Quiz",
-    "intro": "Es ist ein Persönlichkeitstest, aber mit Umhängen. Die Fragen mischen drei Dinge: was du denkst, was du in einer bestimmten Situation tun würdest, und was du als Ausrüstung, Versteck oder Krafttier wählen würdest.",
-    "p1": "Zum Beispiel: „Jemand verrät dich. Du...“ oder „Man bietet dir eine Kraft an. Welche?“. Jede Antwort zählt für einen oder zwei der acht Schurken des Quiz. Am Ende gewinnt der Schurke mit den meisten Punkten, und die drei Züge, die aus deinen Antworten am stärksten hervorstechen, erscheinen als Balken.",
+    "intro": "Es ist ein Persönlichkeitstest, aber mit Umhängen. Die Fragen versetzen dich an einem Halloween-Abend in die Haut des Bösewichts: wie du die Party betrittst, wer deine Handlanger sind, wie dein Lachen klingt, was du tust, wenn du verlierst.",
+    "p1": "Zum Beispiel: „Jemand verrät dich.“ oder „Ein Kind klingelt: Süßes oder Saures.“. Jede Antwort zählt für einen oder zwei der acht Schurken des Quiz. Am Ende gewinnt der Schurke mit den meisten Punkten, und die drei Züge, die in deinen Antworten am stärksten hervortreten, werden als Balken angezeigt.",
     "p2": "Allein beantwortest du die fünfzehn Fragen und entdeckst deinen Schurken. Zu zweit beantwortet der Erste die ganze Reihe, gibt das Handy weiter, und der Zweite antwortet, ohne dessen Antworten zu sehen. Die beiden Porträts erscheinen nebeneinander, mit der Zahl gleicher Antworten.",
     "p3": "Im Fernmodus spielt jeder auf dem eigenen Handy: Eine Person erstellt die Partie, die andere tritt mit dem Code bei, und ihr seht nach jeder Frage eure beiden Antworten."
   },

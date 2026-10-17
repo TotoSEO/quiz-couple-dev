@@ -166,7 +166,7 @@ const article: BlogArticleData = {
 <tr><td><strong>Notte all'aperto</strong></td><td>Una notte</td><td>Gratis</td><td>Avete un giardino, una terrazza o un grande balcone</td></tr>
 <tr><td><strong>Serata delle domande</strong></td><td>1-2 h</td><td>Gratis</td><td>Avete l'impressione di non parlarvi più davvero</td></tr>
 </tbody></table></div>
-<p>Un piccolo consiglio di metodo: <strong>non scegliete l'attività più impressionante, scegliete quella che corrisponde alla vostra energia reale del giorno.</strong> Una tovaglia riuscita in un parco vale infinitamente più di un'escursione abbandonata dopo venti minuti perché nessuno aveva davvero voglia. E se cercate qualcosa di concreto, la pagina che raccoglie <a href="/it/attivita-di-coppia-vicino/">ciò che esiste vicino a voi</a> vi darà dei punti di partenza a seconda della vostra zona.</p>`,
+<p>Un piccolo consiglio di metodo: <strong>non scegliete l'attività più impressionante, scegliete quella che corrisponde alla vostra energia reale del giorno.</strong> Una tovaglia riuscita in un parco vale infinitamente più di un'escursione abbandonata dopo venti minuti perché nessuno aveva davvero voglia. E se cercate qualcosa di concreto, la pagina che raccoglie ciò che esiste vicino a voi vi darà dei punti di partenza a seconda della vostra zona.</p>`,
     },
     {
       id: 'les-4-erreurs',
