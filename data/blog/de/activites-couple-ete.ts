@@ -166,7 +166,7 @@ const article: BlogArticleData = {
 <tr><td><strong>Nacht draußen</strong></td><td>Eine Nacht</td><td>Gratis</td><td>Ihr habt einen Garten, eine Terrasse oder einen großen Balkon</td></tr>
 <tr><td><strong>Fragenabend</strong></td><td>1 bis 2 h</td><td>Gratis</td><td>Ihr habt das Gefühl, nicht mehr richtig miteinander zu reden</td></tr>
 </tbody></table></div>
-<p>Ein kleiner Methodentipp: <strong>wählt nicht die beeindruckendste Aktivität, sondern die, die zu eurer echten Tagesenergie passt.</strong> Eine gelungene Tischdecke in einem Park ist unendlich viel mehr wert als eine nach zwanzig Minuten abgebrochene Wanderung, weil eigentlich niemand Lust hatte. Und wenn ihr etwas Konkretes sucht, gibt euch die Seite, die auflistet, <a href="/de/paar-aktivitaeten-in-der-naehe/">was es in eurer Nähe gibt</a>, je nach Gegend Anhaltspunkte.</p>`,
+<p>Ein kleiner Methodentipp: <strong>wählt nicht die beeindruckendste Aktivität, sondern die, die zu eurer echten Tagesenergie passt.</strong> Eine gelungene Tischdecke in einem Park ist unendlich viel mehr wert als eine nach zwanzig Minuten abgebrochene Wanderung, weil eigentlich niemand Lust hatte. Und wenn ihr etwas Konkretes sucht, gibt euch die Seite, die auflistet, was es in eurer Nähe gibt, je nach Gegend Anhaltspunkte.</p>`,
     },
     {
       id: 'les-4-erreurs',

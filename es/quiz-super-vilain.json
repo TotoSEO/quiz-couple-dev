@@ -3,14 +3,14 @@
     "badge": "Quiz de Halloween • Solo/a o en pareja",
     "title": "¿A qué supervillano te pareces más?",
     "titleHighlight": "supervillano",
-    "description": "Quince preguntas sobre tu psicología, tus reacciones en situación, tu guarida ideal y tu equipo de malvado. Al final, el supervillano que más se parece a ti, del Joker a Maléfica, con su retrato y un consejo para Halloween. Solo/a, o en pareja para comparar.",
+    "description": "Tu entrada en la fiesta de Halloween, tu disfraz, tu guarida, tus secuaces, tu risa, lo que haces cuando te traicionan o cuando un héroe te tiende la mano. Al final, el supervillano que más se parece a ti, del Joker a Maléfica, con su retrato y un consejo para Halloween. Solo/a, o en pareja para comparar.",
     "subtitle": "15 preguntas • 5 minutos • solo/a, en pareja con un móvil o cada uno con el suyo",
     "jumpBtn": "Hacer el quiz"
   },
   "section1": {
     "title": "Cómo funciona el quiz",
-    "intro": "Es un test de personalidad, pero con capas. Las preguntas mezclan tres cosas: lo que piensas, lo que harías en una situación dada, y lo que elegirías como equipo, guarida o animal tótem.",
-    "p1": "Por ejemplo: «Alguien te traiciona. Tú...» o «Te ofrecen un poder. ¿Cuál?». Cada respuesta pesa sobre uno o dos de los ocho villanos del quiz. Al final, el villano que ha recibido más puntos gana, y los tres rasgos que más destacan en tus respuestas aparecen en barras.",
+    "intro": "Es un test de personalidad, pero con capas. Las preguntas te ponen en la piel del malo una noche de Halloween: cómo entras en la fiesta, quiénes son tus secuaces, cómo suena tu risa, qué haces cuando pierdes.",
+    "p1": "Por ejemplo: «Alguien te traiciona.» o «Un niño llama al timbre: truco o trato.». Cada respuesta pesa sobre uno o dos de los ocho villanos del quiz. Al final, gana el villano que ha recibido más puntos, y los tres rasgos que más destacan en tus respuestas aparecen en forma de barras.",
     "p2": "Solo/a, respondes a las quince preguntas y descubres tu villano. En pareja, el primero responde a toda la serie, pasa el móvil, y el segundo responde sin ver sus respuestas. Los dos retratos aparecen uno al lado del otro, con el número de respuestas idénticas.",
     "p3": "El modo a distancia permite jugar cada uno en su móvil: una persona crea la partida, la otra se une con el código, y veis vuestras dos respuestas después de cada pregunta."
   },

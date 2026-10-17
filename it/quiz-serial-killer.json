@@ -3,14 +3,14 @@
     "badge": "Quiz di Halloween • Da solo/a o in due",
     "title": "Con quale serial killer sei compatibile?",
     "titleHighlight": "serial killer",
-    "description": "Quindici domande sul tuo modo di amare, di mentire, di tenere in ordine casa e di reagire a una lettera anonima. Alla fine, il killer celebre che ti somiglia di più, in versione molto ingrandita, con il suo ritratto e un consiglio per la sera di Halloween. Da solo/a, o in due per confrontarvi.",
+    "description": "Quindici situazioni di una sera di Halloween: il tuo ingresso alla festa, il tuo costume, il cimitero a mezzanotte, l'ispettore che bussa alla porta, il documentario true crime. Alla fine, l'assassino celebre che ti somiglia di più, in versione molto ingrandita, con il suo ritratto e un consiglio per la serata. Da solo/a, o in coppia per confrontarvi.",
     "subtitle": "15 domande • 5 minuti • da solo/a, in due su un telefono o ognuno sul proprio",
     "jumpBtn": "Fai il quiz"
   },
   "section1": {
     "title": "Come funziona questo quiz",
-    "intro": "È un quiz della personalità travestito per Halloween. Non cerca di sapere se sei pericoloso, guarda tratti del carattere molto comuni: il fascino, la pazienza, la solitudine, il gusto per gli enigmi, il bisogno di controllare tutto. E li ingrandisce fino alla caricatura.",
-    "p1": "Le domande parlano della vita di tutti i giorni. Per esempio: «Il tuo partner ha letto i tuoi messaggi senza dirtelo. Tu...» oppure «Un amico ti confida un segreto enorme. Tu...». Ogni risposta pesa su uno o due degli otto ritratti del quiz, e il ritratto che ha ricevuto più punti vince.",
+    "intro": "È un quiz della personalità travestito per Halloween. Non cerca di sapere se sei pericoloso, guarda tratti del carattere molto comuni, il fascino, la pazienza, la solitudine, il gusto per gli enigmi, il bisogno di controllare tutto, attraverso situazioni di una sera di Halloween. E li ingrandisce fino alla caricatura.",
+    "p1": "Le domande sono scene. Per esempio: «Un ispettore bussa alla tua porta e fa domande sul quartiere.» oppure «Il cimitero, a mezzanotte, per una scommessa.». Ogni risposta pesa su uno o due degli otto ritratti del quiz, e vince il ritratto che ha ricevuto più punti.",
     "p2": "Da solo/a, rispondi alle quindici domande e scopri il tuo ritratto, con i tre tratti che emergono di più dalle tue risposte. In due, il primo risponde a tutta la serie, passa il telefono, e il secondo risponde a sua volta senza vedere le risposte del primo. I due ritratti compaiono poi uno accanto all'altro, con il numero di risposte identiche.",
     "p3": "Se non siete nello stesso posto, la modalità a distanza permette di rispondere ognuno sul proprio telefono: una persona crea la partita, l'altra si unisce con il codice, e vedete le vostre due risposte dopo ogni domanda."
   },
@@ -36,7 +36,7 @@
   },
   "section3": {
     "title": "Giocarci in due, una sera di Halloween",
-    "p1": "Questo quiz funziona benissimo in due, proprio perché nessuno è lusingato dal proprio risultato. Si ride del proprio ritratto, si riconosce l'altro nel suo, e si finisce per raccontarsi perché si è risposto così alla domanda del segreto o della lettera anonima.",
+    "p1": "Questo quiz funziona benissimo in coppia, proprio perché nessuno è lusingato dal proprio risultato. Si ride del proprio ritratto, si riconosce l'altro nel suo, e si finisce per raccontarsi perché si è risposto così alla domanda dell'ispettore o a quella del cimitero.",
     "p2": "Se volete restare nell'atmosfera, gli altri quiz di Halloween sono fatti per essere concatenati: <a href=\"/it/quiz-chi-muore-per-primo-nel-film-horror/\">sapere chi di voi due muore per primo in un film horror</a>, <a href=\"/it/quiz-chi-potrebbe-essere-posseduto/\">chi potrebbe essere posseduto</a>, oppure <a href=\"/it/quiz-quale-supercattivo-sei/\">quale supercattivo si nasconde in ognuno di voi</a>. Si giocano tutti allo stesso modo, da solo/a o in due.",
     "p3": "E per una serata che non parli solo di mostri, <a href=\"/it/preferiresti-quiz-coppia/\">i nostri dilemmi «preferiresti»</a> prendono benissimo il testimone una volta finite le caramelle."
   },

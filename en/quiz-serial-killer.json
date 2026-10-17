@@ -3,14 +3,14 @@
     "badge": "Halloween quiz • Solo or as a couple",
     "title": "Which serial killer are you compatible with?",
     "titleHighlight": "serial killer",
-    "description": "Fifteen questions about how you love, how you lie, how you keep your apartment and how you react to an anonymous letter. At the end, the famous killer you're most like, blown way out of proportion, with their portrait and a tip for Halloween night. Solo, or as a couple to compare.",
+    "description": "Fifteen situations from a Halloween night: your entrance at the party, your costume, the cemetery at midnight, the detective knocking at the door, the true crime documentary. At the end, the famous killer you're most like, blown way out of proportion, with his portrait and a tip for the evening. Solo, or as a couple to compare.",
     "subtitle": "15 questions • 5 minutes • solo, as a couple on one phone or each on your own",
     "jumpBtn": "Take the quiz"
   },
   "section1": {
     "title": "How this quiz works",
-    "intro": "It's a personality quiz dressed up for Halloween. It doesn't try to find out whether you're dangerous, it looks at very ordinary character traits: charm, patience, loneliness, a taste for riddles, the need to control everything. And it blows them up to the point of caricature.",
-    "p1": "The questions are about everyday life. For example: “Your partner read your messages without telling you. You...” or “A friend tells you a huge secret. You...”. Each answer weighs on one or two of the quiz's eight portraits, and the portrait with the most points wins.",
+    "intro": "It's a personality quiz in Halloween fancy dress. It isn't trying to find out whether you're dangerous, it looks at very ordinary character traits, charm, patience, solitude, a taste for riddles, the need to control everything, through Halloween night situations. And it blows them up into caricature.",
+    "p1": "The questions are scenes. For example: 'A detective knocks on your door and asks questions about the neighbourhood.' or 'The cemetery, at midnight, on a dare.'. Each answer weighs on one or two of the quiz's eight portraits, and the portrait with the most points wins.",
     "p2": "Solo, you answer the fifteen questions and discover your portrait, with the three traits that stand out most in your answers. As a couple, the first player answers the whole series, passes the phone, and the second answers in turn without seeing the first one's answers. Both portraits then show up side by side, with the number of identical answers.",
     "p3": "If you're not in the same place, remote mode lets you each answer on your own phone: one person creates the game, the other joins with the code, and you see both answers after each question."
   },
@@ -36,7 +36,7 @@
   },
   "section3": {
     "title": "Playing it as a couple, on Halloween night",
-    "p1": "This quiz works very well as a couple, precisely because nobody is flattered by their result. You laugh at your own portrait, you recognise the other in theirs, and you end up telling each other why you answered that to the question about the secret or the anonymous letter.",
+    "p1": "This quiz works really well as a couple, precisely because nobody is flattered by their result. You laugh at your own portrait, you recognise the other person in theirs, and you end up telling each other why you answered that to the detective question or the cemetery one.",
     "p2": "If you want to stay in the mood, the other Halloween quizzes are made to be chained: <a href=\"/en/who-dies-first-in-a-horror-movie-quiz/\">find out which of you dies first in a horror movie</a>, <a href=\"/en/who-would-get-possessed-quiz/\">who could get possessed</a>, or <a href=\"/en/which-supervillain-are-you-quiz/\">which supervillain is hiding in each of you</a>. They all play the same way, solo or as a couple.",
     "p3": "And for an evening that isn't all about monsters, <a href=\"/en/would-you-rather-couple-quiz/\">our “would you rather” dilemmas</a> take over nicely once the candy is gone."
   },

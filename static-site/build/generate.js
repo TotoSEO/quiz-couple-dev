@@ -1259,7 +1259,7 @@ async function generatePage(routeKey, lang) {
 
   // Build visual breadcrumb items for specific page types
   const breadcrumbs = [];
-  if (routeKey.startsWith('test') || routeKey.startsWith('quiz') || routeKey === 'questionsCouple' || routeKey === 'activities') {
+  if (routeKey.startsWith('test') || routeKey.startsWith('quiz') || routeKey === 'questionsCouple') {
     breadcrumbs.push({ name: bl.home, url: getLocalizedPath('home', lang) });
     breadcrumbs.push({ name: title });
   }
@@ -1494,7 +1494,6 @@ function generateSitemaps() {
     if (key === 'home') { priority = '1.0'; changefreq = 'daily'; }
     else if (key === 'blog') { priority = '0.8'; changefreq = 'daily'; }
     else if (key === 'contact' || key === 'about') { priority = '0.4'; changefreq = 'monthly'; }
-    else if (key === 'activities') { priority = '0.6'; changefreq = 'weekly'; }
 
     const lastmod = dateLaPlusRecente(gitIndex.dates, fichiersSourceRoute(key));
     entries.push({ urlsByLang, lastmod, priority, changefreq, frOnly: isFrOnly || false });
@@ -1727,11 +1726,6 @@ function copyTranslationData() {
     const vacancesSrc = path.join(langDir, 'vacances.json');
     if (fs.existsSync(vacancesSrc)) {
       fs.copyFileSync(vacancesSrc, path.join(dataDir, `vacances-${lang}.json`));
-    }
-
-    const activitiesSrc = path.join(langDir, 'activities.json');
-    if (fs.existsSync(activitiesSrc)) {
-      fs.copyFileSync(activitiesSrc, path.join(dataDir, `activities-${lang}.json`));
     }
 
     // Les 144 duos de signes pesent 70 Ko : le test par date de naissance va

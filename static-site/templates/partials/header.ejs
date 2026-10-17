@@ -8,13 +8,12 @@
   const quizLinks = versLiens(famillesNav.quiz);
   const jeuLinks = versLiens(famillesNav.jeux);
   const speciauxLinks = versLiens(famillesNav.speciaux || []);
+  // Le test de pureté n'a plus d'entrée de premier niveau depuis le 17 octobre
+  // 2026 (Thomas : « retire le test de pureté du menu principal et laisse-le
+  // uniquement dans le sous-menu test ») : il est dans la liste des tests,
+  // comme sur l'accueil, le pied de page et le plan du site. Le bouton
+  // « Activités autour de moi » a disparu le même jour, avec la page.
   const directLinks = [
-    // Le test de pureté vise un mot-clé très concurrentiel : il lui faut une
-    // entrée de premier niveau, en plus de sa ligne dans la liste des tests
-    // (qui montre les mêmes pages que l'accueil). « vedette » lui donne un
-    // traitement à part, distinct du bouton des activités pour qu'on ne lise
-    // pas deux fois le même appel à l'action.
-    { routeKey: 'testPurete', labelKey: 'nav.testPurete', vedette: true, emoji: '🌡️' },
     { routeKey: 'customQuiz', labelKey: 'nav.customQuiz' },
     { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
     { routeKey: 'blog', labelKey: 'Blog' },
@@ -146,7 +145,7 @@
           </a>
 
           <div class="entete-n1-liens">
-            <% for (const link of directLinksFiltered) { if (link.vedette) continue; %>
+            <% for (const link of directLinksFiltered) { %>
             <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="n1-lien"><%= t('common:' + link.labelKey, link.labelKey) %></a>
             <% } %>
           </div>
@@ -335,25 +334,6 @@
             </div>
             <% } %>
 
-            <!-- Vedette : test de pureté -->
-            <% for (const link of directLinksFiltered) { if (!link.vedette) continue; %>
-            <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-vedette">
-              <span class="nav-vedette-emoji" aria-hidden="true"><%= link.emoji %></span>
-              <span class="nav-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-            </a>
-            <% } %>
-
-            <span class="entete-n2-ressort" aria-hidden="true"></span>
-
-            <!-- Activités -->
-            <%# Deux libellés, un seul affiché : le court prend le relais sur les
-                fenêtres bureau étroites, où la barre à quatre familles manque
-                de place (voir la règle dans styles.css). %>
-            <a href="<%= getLocalizedUrl('activities', lang) %>" class="nav-cta-btn">
-              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span class="nav-cta-texte"><%= t('common:nav.activities', 'Activities') %></span>
-              <span class="nav-cta-texte--court"><%= t('common:nav.activitiesCourt', 'Activités') %></span>
-            </a>
           </div>
 
         </div>
@@ -487,20 +467,8 @@
           <a href="<%= instagramUrl %>" class="mobile-nav-link" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:.5rem"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><%= t('common:footer.instagram', 'Suivez-nous sur Instagram') %></a>
 
           <% for (const link of directLinksFiltered) { %>
-          <% if (link.vedette) { %>
-          <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-vedette">
-            <span class="mobile-nav-vedette-emoji" aria-hidden="true"><%= link.emoji %></span>
-            <span class="mobile-nav-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-          </a>
-          <% } else { %>
           <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-link"><%= t('common:' + link.labelKey, link.labelKey) %></a>
           <% } %>
-          <% } %>
-
-          <a href="<%= getLocalizedUrl('activities', lang) %>" class="mobile-nav-cta">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <%= t('common:nav.activities', 'Activities') %>
-          </a>
         </div>
       </div>
     </div>

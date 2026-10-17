@@ -166,7 +166,7 @@ const article: BlogArticleData = {
 <tr><td><strong>Nuit dehors</strong></td><td>Une nuit</td><td>Gratuit</td><td>Vous avez un jardin, une terrasse ou un grand balcon</td></tr>
 <tr><td><strong>Soirée questions</strong></td><td>1 à 2 h</td><td>Gratuit</td><td>Vous avez l'impression de ne plus vraiment vous parler</td></tr>
 </tbody></table></div>
-<p>Petit conseil de méthode : <strong>ne choisissez pas l'activité la plus impressionnante, choisissez celle qui correspond à votre énergie réelle du jour.</strong> Une nappe dans un parc réussie vaut infiniment mieux qu'une randonnée abandonnée au bout de vingt minutes parce que personne n'avait vraiment envie. Et si vous cherchez du concret, la page qui recense <a href="/activites-autours-de-moi/">ce qui existe autour de chez vous</a> vous donnera des points de départ selon votre secteur.</p>`,
+<p>Petit conseil de méthode : <strong>ne choisissez pas l'activité la plus impressionnante, choisissez celle qui correspond à votre énergie réelle du jour.</strong> Une nappe dans un parc réussie vaut infiniment mieux qu'une randonnée abandonnée au bout de vingt minutes parce que personne n'avait vraiment envie. Et si vous cherchez du concret, la page qui recense ce qui existe autour de chez vous vous donnera des points de départ selon votre secteur.</p>`,
     },
     {
       id: 'les-4-erreurs',

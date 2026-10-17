@@ -3,14 +3,14 @@
     "badge": "Quiz de Halloween • Solo/a o en pareja",
     "title": "¿Quién de los dos muere primero en una película de terror?",
     "titleHighlight": "película de terror",
-    "description": "Quince situaciones de película de terror, cuatro reacciones posibles cada vez. El resultado te dice cuántos minutos aguantas antes de salir de la historia, en una película de dos horas y media como máximo. En pareja, cada uno responde por su lado, y se sabe quién muere primero.",
+    "description": "Quince situaciones, de la llegada a la cabaña a los créditos finales, cuatro reacciones posibles cada vez. El resultado te dice cuántos minutos aguantas antes de salir de la historia, en una película de dos horas y media como máximo. En pareja, cada uno responde por su lado, y se sabe quién muere primero.",
     "subtitle": "15 situaciones • 5 minutos • solo/a, en pareja con un móvil o cada uno con el suyo",
     "jumpBtn": "Hacer el quiz"
   },
   "section1": {
     "title": "Cómo funciona el quiz",
     "intro": "El principio es sencillo: te ponemos en las situaciones que todo el mundo ha visto en el cine, y eliges lo que harías de verdad. No lo que habría que hacer, lo que harías.",
-    "p1": "Por ejemplo: «Son las 23 h. Un ruido en el desván, como pasos». Puedes subir a mirar con una linterna que parpadea, mandar a tu pareja, cerrar la trampilla con llave y encender todas las luces, o irte a dormir a otro sitio ahora mismo. Cada reacción vale de cero a tres puntos, y la suma de las quince situaciones se convierte en un tiempo de supervivencia.",
+    "p1": "Por ejemplo: «Las 23 h. Pasos en el desván, justo encima de tu cabeza. En el desván no hay nadie.» Puedes subir a mirar en calcetines con la linterna parpadeando, mandar a tu pareja, cerrar la trampilla con llave y dormir todos en el salón, o meter a todo el mundo en el coche. Cada reacción vale de cero a tres puntos, y la suma de las quince situaciones se convierte en un tiempo de supervivencia.",
     "p2": "Una película de terror dura como mucho dos horas y media. Con los peores reflejos, aguantas cinco minutos, lo que duran los créditos iniciales. Con los mejores, llegas a las 2 h 30: has sobrevivido a toda la película. Entre medias, el resultado te dice en qué minuto sales de la historia, y qué decisiones te han salvado o perdido.",
     "p3": "En pareja, el primero responde a las quince situaciones, pasa el móvil, y el segundo responde a su vez. Vuestros dos tiempos aparecen en la misma línea del tiempo, con el nombre de la primera víctima y las situaciones en las que no habéis reaccionado igual. Si no estáis juntos, el modo a distancia permite responder cada uno en su móvil."
   },
