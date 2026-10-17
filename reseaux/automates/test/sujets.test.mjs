@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { categorieAttendue, MELANGE_DEFAUT } from '../lib/calendrier.mjs';
+import { TRAMES } from '../../studio/src/baton/realisateur.mjs';
 import { CATEGORIES } from '../lib/controle.mjs';
 import { controlerFin } from '../lib/style.mjs';
 
@@ -26,6 +27,40 @@ test('chaque sujet daté tombe sur un créneau de sa catégorie', () => {
 test("la grille met « He's a 10 but... » le samedi soir et la phrase tendre le dimanche soir", () => {
   assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-17', 'soir'), 'dix-mais');
   assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-18', 'soir'), 'phrase');
+});
+
+test('la grille met le bonhomme bâton tous les matins (16 octobre 2026 au soir) et garde les animations des mascottes le lundi et le mercredi soir, la coquine le vendredi soir', () => {
+  for (const jour of ['2026-10-19', '2026-10-20', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24', '2026-10-25']) {
+    assert.equal(categorieAttendue(MELANGE_DEFAUT, jour, 'matin'), 'baton', jour);
+  }
+  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-19', 'soir'), 'pov');
+  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-21', 'soir'), 'pov');
+  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-23', 'soir'), 'coquin');
+});
+
+test("la banque « baton » : une histoire par sujet et par jour, les neuf trames de rêve à tour de rôle, le héros fille presque une fois sur deux et dans chaque trame, une trame connue, une musique", () => {
+  const sujets = SUJETS.baton;
+  const trames = Object.keys(TRAMES);
+  assert.ok(sujets.length >= 63, 'au moins neuf semaines de sujets, un reel par jour depuis le 16 octobre 2026');
+  for (const trame of trames) {
+    const de = sujets.filter((x) => x.trame === trame);
+    assert.ok(de.length >= 7, `au moins sept histoires de la trame ${trame}`);
+    assert.ok(de.some((x) => x.heros === 'fille') && de.some((x) => x.heros === 'garcon'), `la trame ${trame} a une héroïne et un héros`);
+  }
+  const filles = sujets.filter((x) => x.heros === 'fille').length;
+  assert.ok(Math.abs(filles - sujets.length / 2) <= 1.5, `${filles} héroïnes sur ${sujets.length}`);
+  const ids = new Set();
+  sujets.forEach((s, i) => {
+    assert.ok(!ids.has(s.id), `${s.id} en double`);
+    ids.add(s.id);
+    assert.equal(s.trame, trames[i % trames.length], `${s.id} : les trames tournent dans l'ordre`);
+    assert.ok(typeof s.idee === 'string' && s.idee.length >= 100, `${s.id} : l'histoire se raconte en deux ou trois phrases`);
+    assert.ok(typeof s.son === 'string' && s.son.length >= 3 && s.son.length <= 40, `${s.id} : un titre connu pour la musique (son)`);
+  });
+  for (const s of SUJETS.saison.sujets.filter((x) => x.categorie === 'baton')) {
+    assert.ok(['fille', 'garcon'].includes(s.heros), `${s.id} : heros`);
+    assert.ok(Object.keys(TRAMES).includes(s.trame), `${s.id} : trame`);
+  }
 });
 
 test("la banque « dix-mais » : huit cartes « but he / but she », courtes, toutes différentes, sans fin qui commente", () => {

@@ -1,0 +1,59 @@
+{
+  "gabarit": "baton",
+  "langue": "en",
+  "theme": "light",
+  "idee": "Une nuit dans les montagnes, il montre une étoile du doigt et elle (le héros, « me ») comprend qu'il la veut. Elle sourit, se concentre, s'accroupit et bondit si haut qu'elle décroche l'étoile au ralenti, retombe à côté de lui et la lui pose dans les mains : il l'admire, les yeux en cœur.",
+  "titre": "me in my dreams with u",
+  "heros": "fille",
+  "son": {
+    "ambiance": "tendre",
+    "recherche": "Yellow"
+  },
+  "histoire": {
+    "sequences": [
+      {
+        "sequence": "ouverture",
+        "decor": "montagnes",
+        "nuit": true,
+        "jeu": "discussion",
+        "incident": {
+          "type": "envie-etoile",
+          "a": 1.2
+        },
+        "description": "Plan d'ensemble, caméra fixe, les montagnes la nuit : la lune, les étoiles qui scintillent, et une étoile plus grande qui brille en haut à droite avec ses rayons. Elle (bandana violet, queue de cheval) parle, lui (la mèche) l'écoute et rit. À 1,2 s il se tourne vers le ciel et tend le bras vers l'étoile, les yeux en cœur. Elle lève la tête, sourit, puis le regarde, attendrie, joues roses ; à 3,1 s son visage se ferme, décidé. La caméra pousse doucement vers l'étoile et vers eux."
+      },
+      {
+        "sequence": "emotion",
+        "etapes": [
+          {
+            "expression": "tendre",
+            "duree": 1.0
+          },
+          {
+            "expression": "determine",
+            "duree": 1.1
+          }
+        ],
+        "description": "Très gros plan sur son visage, coupe franche, les étoiles derrière. La tendresse d'abord : sourcils doux, sourire, joues roses, le regard sur lui. À 1,0 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée, le regard monte vers l'étoile ; coup de zoom d'accompagnement, impact sourd au loin, un souffle de vent mène à la coupe."
+      },
+      {
+        "sequence": "depart",
+        "epee": false,
+        "course": false,
+        "description": "Dézoom rapide du visage au plan américain : elle devant, lui derrière, le bras encore tendu vers le ciel. Elle se plante face à l'étoile, les poings serrés, les genoux qui fléchissent, le regard levé ; le vent soulève les pans du bandana. La caméra serre un peu sur elle : elle va sauter."
+      },
+      {
+        "sequence": "exploit",
+        "type": "attrape",
+        "description": "Plan d'ensemble, l'étoile en haut à droite, le couple en bas. Elle s'accroupit, les bras en arrière, tout le corps qui vibre. Détente : onde de choc, poussière, secousse, elle part comme une flèche vers l'étoile, rémanences, lignes de vitesse presque verticales. Juste avant de l'atteindre, ralenti dix fois, caméra serrée sur sa main et sur l'étoile, voile bleuté, battement de cœur : ses doigts se referment dessus, l'étoile du ciel s'éteint et brille dans sa main (scintillement). Elle retombe accroupie à côté de lui, poussière, se redresse l'étoile à la main, tendre ; il saute de joie."
+      },
+      {
+        "sequence": "retrouvailles",
+        "cadeau": "etoile",
+        "fin": "charmeur",
+        "duree": 6.0,
+        "description": "Plan moyen large, caméra fixe, les montagnes sous la lune. Lui à droite, elle à gauche avec l'étoile qui brille dans sa main, un halo jaune, trois éclats qui tournent. Elle fait un pas vers lui et la lui tend, bras tendu, sourire charmeur (sourcil relevé, œil mi-clos, étincelle, tintement). Il tend les bras, les yeux en cœur, et la reçoit dans ses mains jointes, la tête penchée dessus, émerveillé (scintillement magique). Les cœurs montent entre eux ; elle sourit, heureuse, les yeux fermés. La caméra pousse lentement sur eux deux jusqu'à la fin."
+      }
+    ]
+  }
+}

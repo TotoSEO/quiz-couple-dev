@@ -6,6 +6,7 @@ import type { EvenementAmbiance, EvenementSonore } from './charte/Son';
 import type { RecetteCitation, RecetteConnaisTu, RecetteJeu, RecetteQuizChrono, RecetteReel, RecetteTuPreferes } from './recette';
 import { planPov } from './pov/plan';
 import { planMipapsReel, planMipapsStatique } from './mipaps/plan';
+import { planBaton } from './baton/plan';
 
 // Décalage entre deux éléments qui entrent dans un écran du quiz, en images.
 export const PAS = 3;
@@ -125,6 +126,7 @@ export const planJeu = (r: RecetteJeu): Plan => {
 export const planifier = (r: RecetteReel): Plan => {
   if (r.gabarit === 'citation') return planCitation(r);
   if (r.gabarit === 'pov') return planPov(r);
+  if (r.gabarit === 'baton') return planBaton(r);
   if (r.gabarit === 'mipaps-reel') return planMipapsReel(r);
   if (r.gabarit === 'mipaps-statique') return planMipapsStatique(r);
   return planJeu(r);

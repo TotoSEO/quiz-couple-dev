@@ -6,9 +6,12 @@ import { controlerPov, VOCABULAIRE } from './pov.mjs';
 import { AMBIANCES, BIBLIOTHEQUE } from './musique.mjs';
 import { AMBIANCES_SON } from './son.mjs';
 import { CATEGORIES_MIPAPS, controlerMipaps, GABARITS_MIPAPS } from './mipaps.mjs';
+import { controlerBaton } from './baton.mjs';
 
 const CRENEAUX = ['matin', 'midi', 'soir'];
-const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', image: 'image', carrousel: 'carrousel', bd: 'image', ...GABARITS_MIPAPS };
+// « baton » : le bonhomme bâton (« me in my dreams with u », octobre 2026),
+// un reel ; il n'a pas encore de catégorie dans la grille.
+const FORMAT_DU_GABARIT = { citation: 'reel', 'quiz-chrono': 'reel', 'connais-tu': 'reel', 'tu-preferes': 'reel', pov: 'reel', baton: 'reel', image: 'image', carrousel: 'carrousel', bd: 'image', ...GABARITS_MIPAPS };
 // Le format que donne un gabarit : une image, sauf la BD rendue en carrousel
 // (une case par page) quand sa recette le demande.
 export const formatDuGabarit = (gabarit, recette) => (gabarit === 'bd' && recette?.sortie === 'carrousel' ? 'carrousel' : FORMAT_DU_GABARIT[gabarit]);
@@ -26,6 +29,9 @@ export const CATEGORIES = {
   bd: 'bd',
   // « He's a 10 but... » (12 octobre 2026) : un carrousel de huit cartes
   'dix-mais': 'carrousel',
+  // le bonhomme bâton, « me in my dreams with u » (16 octobre 2026), tous
+  // les matins depuis le soir même (trois matins par semaine au départ)
+  baton: 'baton',
   // le second compte, Les mipaps (reseaux/mipaps) : ses quatre formats
   ...CATEGORIES_MIPAPS,
 };
@@ -33,7 +39,7 @@ export const CATEGORIES = {
 // (seule la mention quiz-couple.com dans l'image).
 const RENVOI_AU_SITE = /quiz-couple\.com|link in bio|lien en bio/i;
 // Les mipaps n'ont pas de site : jamais de renvoi, dans aucune catégorie.
-const SANS_RENVOI = ['pov', 'coquin', 'statique', 'phrase', 'bd', ...Object.keys(CATEGORIES_MIPAPS)];
+const SANS_RENVOI = ['pov', 'coquin', 'statique', 'phrase', 'bd', 'baton', ...Object.keys(CATEGORIES_MIPAPS)];
 const THEMES = ['light', 'dark', 'marque'];
 const LANGUES = ['en', 'fr', 'es', 'de', 'it'];
 
@@ -56,6 +62,7 @@ const chaines = (v, out = []) => {
 const titres = (r) => {
   if (['quiz-chrono', 'connais-tu', 'tu-preferes'].includes(r.gabarit)) return [r.etiquette, r.accroche, r.fin?.question];
   if (r.gabarit === 'pov') return [r.titre, ...(r.plans ?? []).map((p) => p.legende)];
+  if (r.gabarit === 'baton') return [r.titre];
   if (r.gabarit === 'carrousel') return r.pages.flatMap((p) => [p.etiquette, p.accroche, p.question]);
   return [];
 };
@@ -110,6 +117,7 @@ export function controlerRecette(r, langue) {
     });
   }
   if (r.gabarit === 'pov') f.push(...controlerPov(r));
+  if (r.gabarit === 'baton') f.push(...controlerBaton(r));
   if (String(r.gabarit).startsWith('mipaps-')) f.push(...controlerMipaps(r));
   if (r.gabarit === 'quiz-chrono') {
     if (!Array.isArray(r.questions) || r.questions.length < 4 || r.questions.length > 8) f.push('un quiz chrono a de 4 à 8 questions');
