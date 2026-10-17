@@ -2,308 +2,76 @@
   "jour": "2026-10-24",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-025",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-007",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "idee": "Il prend sa place dès qu'elle se lève : la rose part chercher du pop-corn, le violet s'étale à sa place, elle revient les yeux plats, puis ils partagent. Aucune bulle.",
-        "titre": "POV: he steals your seat the second you get up",
-        "plans": [
-          {
-            "description": "Le salon, le soir, lumière chaude de la lampe. Dès la première image les deux sont assis chacun à un bout du canapé : la rose à gauche, sa tasse à la main, enroulée dans l'ambiance du film ; le violet à droite, les yeux sur l'écran. À 1,2 s la rose pose un regard vers la cuisine, se lève et sort de l'image par la gauche. Le violet la regarde partir, un sourcil haut, puis jette un œil à sa place vide.",
-            "duree": 3.4,
-            "decor": "salon",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "canape-gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 1.2,
-                    "objet": "tasse",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.2,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0.8,
-                    "a": 1.4,
-                    "cible": "gauche"
-                  },
-                  {
-                    "geste": "disparait",
-                    "de": 1.2,
-                    "a": 1.9,
-                    "vers": "gauche"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "canape-droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1.5,
-                    "cible": "camera"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.5,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.5,
-                    "a": 2.6,
-                    "cible": "gauche"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.6,
-                    "a": 3.4,
-                    "yeux": "ouverts",
-                    "bouche": "sourire",
-                    "sourcils": "hauts"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 2.6,
-                    "a": 3.4,
-                    "cible": "bas"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.4,
-                "zoom": 1.12,
-                "x": 540,
-                "y": 1150
-              }
-            ]
-          },
-          {
-            "description": "Même canapé. Le violet est maintenant à la place de la rose, au milieu des coussins, étalé, les yeux fermés de plaisir et la bouche de chat, un petit sourire de vainqueur. À 1,6 s la rose revient par la gauche, un pot de pop-corn dans les mains, et s'arrête devant le canapé : ses yeux deviennent plats, la bouche plate, une goutte de gêne sur la tempe. Zoom rapide sur son visage à 1,8 s.",
-            "duree": 3.8,
-            "decor": "salon",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "violet",
-                "a": "canape-gauche",
-                "gestes": [
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.8,
-                    "yeux": "fermes",
-                    "bouche": "chat",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "mignon",
-                    "de": 0.2,
-                    "a": 1.8
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.8,
-                    "a": 3.8,
-                    "yeux": "ouverts",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 2.2,
-                    "a": 3.8,
-                    "cible": "haut"
-                  }
-                ]
-              },
-              {
-                "qui": "rose",
-                "a": "devant-gauche",
-                "gestes": [
-                  {
-                    "geste": "apparait",
-                    "de": 1.4,
-                    "a": 2.0,
-                    "depuis": "gauche"
-                  },
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.8,
-                    "objet": "popcorn",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 2.0,
-                    "a": 3.8,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.8,
-                    "a": 3.8,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.4,
-                    "a": 3.8,
-                    "effet": "goutte"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 1.8,
-                "zoom": 1
-              },
-              {
-                "a": 2.2,
-                "zoom": 1.6,
-                "cible": "rose"
-              }
-            ]
-          },
-          {
-            "description": "Plan large, la rose est maintenant assise à l'autre bout du canapé, le pop-corn sur les genoux, les bras ballants, boudeuse ; le violet est resté au milieu, le sourire en coin, et regarde le plafond comme si de rien n'était. À 1,6 s il lui tend le pop-corn en riant, la rose prend une poignée, rougit malgré elle, et les deux rient ensemble, des cœurs montent à la fin.",
-            "duree": 4.2,
-            "decor": "salon",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "canape-droite",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.2,
-                    "objet": "popcorn",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "boude",
-                    "de": 0,
-                    "a": 1.8
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.8,
-                    "a": 2.8,
-                    "yeux": "plats",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 2.8,
-                    "a": 4.2
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 3.2,
-                    "a": 4.2,
-                    "effet": "coeurs"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "canape-gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1.6,
-                    "cible": "haut"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.6,
-                    "yeux": "ouverts",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.6,
-                    "a": 4.2,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.7,
-                    "a": 4.2,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 2.8,
-                    "a": 4.2
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 4.2,
-                "zoom": 1.2,
-                "x": 540,
-                "y": 1150
-              }
-            ]
-          }
-        ],
+        "idee": "Sur la plage, le nuage d'orage fond sur eux et pleut à verse ; elle s'abrite sous ses mains, trempée, en claquant des dents. Il la regarde, surpris, puis se ferme : accroupi, bond, le coup de pied en plein vol au ralenti qui fait éclater le nuage en étincelles ; le soleil revient d'un coup, les rayons sur le sable. Il retombe accroupi, s'époussette les mains, sourire en coin ; elle éclate de rire et saute de joie.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
         "son": {
-          "ambiance": "drole"
+          "ambiance": "drole",
+          "recherche": "Singin' in the Rain"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "plage",
+              "jeu": "discussion",
+              "incident": {
+                "type": "pluie",
+                "creature": "nuage",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, la plage : la mer et ses vagues au fond, deux palmiers, le soleil. Ils se parlent debout face à face, il (bandana violet) gesticule, elle (nœud rose) rit. À 1,2 s le vent tourne : un nuage d'orage gris arrive par le coin haut droit, un visage fâché, des éclairs qui claquent dessous, et vient se planter juste au-dessus d'eux ; il gronde, tonnerre, et la pluie se met à tomber en rideau sur eux deux. Ils lèvent la tête, surpris ; elle se met les mains sur la tête, les épaules rentrées, et claque des dents en tremblant ; il la regarde, puis regarde le nuage, et son visage se ferme. La caméra pousse légèrement."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "surpris",
+                  "duree": 0.8
+                },
+                {
+                  "expression": "determine",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage à lui, coupe franche, la pluie qui tombe autour. La surprise d'abord : yeux ronds, bouche en petit o, sourcils hauts, un battement de cœur. À 0,8 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée, le regard monte vers le nuage ; coup de zoom d'accompagnement, impact sourd au loin, les pans du bandana claquent dans une rafale qui mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain : lui devant, elle derrière les mains sur la tête, la pluie qui tombe sur le sable, le nuage au-dessus qui gronde. Il se plante face au nuage, les poings serrés, les genoux qui fléchissent, le regard levé sous les gouttes ; la caméra serre un peu sur lui : il va sauter."
+            },
+            {
+              "sequence": "exploit",
+              "type": "chasse",
+              "duree": 3.6,
+              "description": "Plan d'ensemble, le nuage en haut, le couple en bas sous la pluie. Il s'accroupit, les bras en arrière, tout le corps qui vibre. Détente : onde de choc, sable qui vole, secousse, il part comme une flèche vers le nuage, rémanences, lignes de vitesse, et arme un coup de pied en plein vol ; juste avant l'impact, ralenti dix fois, caméra serrée, voile bleuté, battement de cœur. Impact de bande dessinée : flash blanc, le nuage crève en étincelles jaunes et en gouttes bleues qui partent en étoile, un anneau blanc, et le ciel est dégagé ; la pluie s'arrête net, les rayons du soleil tournent sur la plage, une mouette crie. Il retombe accroupi dans le sable, se redresse, se tourne vers elle et s'époussette les mains avec un sourire en coin ; elle lève la tête, surprise, et saute de joie en riant."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "rire",
+              "duree": 6.2,
+              "description": "Plan moyen large, caméra fixe, la plage sous le soleil revenu. Il marche vers elle, trois pas tranquilles, et lui fait un clin d'œil charmeur, étincelle, tintement ; elle rit aux éclats et saute sur place, il rit aussi et saute à son tour, et des cœurs montent entre eux pendant qu'ils reprennent leur souffle, heureux. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
         }
       },
-      "legende": "She left for 30 seconds. He took the whole spot.\n\nSend this to your partner!",
+      "legende": "My boyfriend vs the rain.\n\nTag him",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

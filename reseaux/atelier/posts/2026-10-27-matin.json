@@ -2,297 +2,109 @@
   "jour": "2026-10-27",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-027",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-010",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "idee": "« Qui a mangé mon chocolat ? » : la rose trouve la boîte vide, le violet regarde ailleurs, puis il rit et sort une nouvelle boîte. Aucune bulle.",
-        "titre": "POV: 'who ate my chocolate?'",
-        "plans": [
-          {
-            "description": "Une cuisine en plein jour, lumière claire par la fenêtre. Dès la première image la rose est derrière le plan de travail à gauche et tient une boîte de chocolats en cœur entièrement vide, les yeux grands ouverts, la bouche ronde ; un point d'interrogation apparaît au-dessus de sa tête à 0,6 s. Le violet, à droite derrière le plan de travail, regarde le plafond, les mains dans le dos, l'air de rien, une goutte de gêne sur la tempe.",
-            "duree": 3.6,
-            "decor": "cuisine",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "comptoir-gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.6,
-                    "objet": "chocolats",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.6,
-                    "yeux": "ouverts",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.6,
-                    "a": 3.6,
-                    "effet": "question"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "comptoir-droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.6,
-                    "cible": "haut"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 3.6,
-                    "yeux": "ouverts",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.8,
-                    "a": 3.6,
-                    "effet": "goutte"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.6,
-                "zoom": 1.12,
-                "x": 540,
-                "y": 1200
-              }
-            ]
-          },
-          {
-            "description": "Zoom rapide à 0,3 s sur le visage du violet, qui sifflote en regardant ailleurs : les yeux glissent vers la rose puis reviennent au plafond, la bouche fait un petit sourire coupable, les joues rosissent. À 2,2 s ses yeux croisent ceux de la rose qui le fixe, les yeux plats, la bouche plate, et il se fige. Une goutte de gêne grossit sur sa tempe.",
-            "duree": 3.8,
-            "decor": "cuisine",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "comptoir-gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.8,
-                    "objet": "chocolats",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 3.8,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.8,
-                    "yeux": "ouverts",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.9,
-                    "a": 3.8,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "comptoir-droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1.0,
-                    "cible": "haut"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.0,
-                    "a": 1.6,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.6,
-                    "a": 2.2,
-                    "cible": "haut"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.2,
-                    "yeux": "ouverts",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 2.2,
-                    "a": 3.8,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.2,
-                    "a": 3.8,
-                    "yeux": "ouverts",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.6,
-                    "a": 3.8,
-                    "effet": "goutte"
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 0.3,
-                "zoom": 1.6,
-                "cible": "violet"
-              },
-              {
-                "a": 2.2,
-                "zoom": 1.6,
-                "cible": "violet"
-              }
-            ]
-          },
-          {
-            "description": "Plan large de la cuisine. Le violet éclate de rire, les yeux fermés, puis sort de derrière son dos une nouvelle boîte de chocolats qu'il tend à la rose, les joues rouges. Les yeux de la rose deviennent brillants, elle pousse un petit cri de joie et des cœurs montent au-dessus d'elle. La caméra se rapproche doucement des deux.",
-            "duree": 4.2,
-            "decor": "cuisine",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "comptoir-gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 1.2,
-                    "objet": "chocolats",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 4.2,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.4,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.5,
-                    "a": 2.6,
-                    "yeux": "brillants",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "joie",
-                    "de": 2.0,
-                    "a": 4.2
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.6,
-                    "a": 4.2,
-                    "effet": "coeurs"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "comptoir-droite",
-                "gestes": [
-                  {
-                    "geste": "rit",
-                    "de": 0,
-                    "a": 1.4
-                  },
-                  {
-                    "geste": "offre",
-                    "de": 1.4,
-                    "a": 4.2,
-                    "objet": "chocolats"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.5,
-                    "a": 4.2,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 4.2,
-                "zoom": 1.25,
-                "x": 540,
-                "y": 1200
-              }
-            ]
-          }
-        ],
+        "idee": "Dans la prairie, c'est LUI que le dragon enlève : il discutait, elle riait, le dragon plane, rugit et pique. Elle : le choc, le chagrin, puis le visage qui se ferme. Épée tirée, forêt (un tronc), falaise (un ravin), pont ; la tour où il attend apeuré, garde, pieds ancrés, bond au ralenti, le dragon pulvérisé. Souffle, épée rangée, un bouquet avec un sourire en coin, les cœurs au sommet.",
+        "titre": "me in my dreams with u",
+        "heros": "fille",
         "son": {
-          "ambiance": "drole"
+          "ambiance": "epique",
+          "recherche": "Centuries"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "prairie",
+              "jeu": "discussion",
+              "incident": {
+                "type": "enlevement",
+                "creature": "dragon",
+                "a": 1.3
+              },
+              "description": "Plan d'ensemble, caméra fixe, la prairie : l'herbe haute, un grand arbre, les collines au fond. Les deux se parlent debout face à face : elle (nœud rose, queue de cheval) gesticule de la main droite, il penche la tête puis répond et rit. À 1,3 s le dragon entre en vol par le coin haut droit, grand, ailes déployées, grognement, et vient se placer au-dessus d'eux à droite, sous le titre ; son ombre glisse sur l'herbe jusqu'à eux. Elle lève les yeux, surprise, il se retourne. Le dragon plane sur place et rugit (gueule ouverte, yeux rouges), une rafale couche l'herbe et la queue de cheval ; il a peur, elle est sous le choc ; la caméra pousse un peu sur eux. Puis le dragon pique sur lui, le saisit dans ses serres (l'écran tremble, poussière, impact sourd) et remonte en l'emportant, jambes qui gigotent, jusqu'à sortir par le coin haut droit. Elle recule, bras écartés, tête renversée, bouche ouverte, et les suit des yeux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "choc",
+                  "duree": 1.2
+                },
+                {
+                  "expression": "chagrin",
+                  "duree": 1.3
+                },
+                {
+                  "expression": "vengeur",
+                  "duree": 1.3
+                }
+              ],
+              "description": "Très gros plan sur le visage du héros, une fille, coupe franche : la tête remplit l'image. Trois temps. Le choc (yeux ronds écarquillés, bouche en o, sourcils très hauts), la tête tremble à peine, le regard fixé en haut à droite, deux battements de cœur lents. À 1,2 s la tête tombe : sourcils tristes, bouche à l'envers, le regard descend vers le sol, une larme perle sous l'œil et coule sur la joue ; le vent tombe, presque le silence. À 2,5 s le visage se relève et se ferme d'un coup : sourcils en biais, yeux plissés, un sourire en coin, l'esprit de vengeance ; coup de zoom d'accompagnement, impact sourd au loin, et le vent se lève, la queue de cheval claque, une montée de tempête mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "epee": true,
+              "description": "Dézoom rapide du visage au plan américain, puis caméra fixe. La main droite monte derrière la tête et saisit la poignée (l'autre bras part en arrière, genoux fléchis), puis tire l'épée d'un seul grand arc vers l'avant-bas : la lame apparaît, traînée bleue en arc, glissement métallique de la lame qui sort du fourreau puis sifflement de la lame, crépitement d'étincelles. Il reste de profil, lame basse devant lui, genoux fléchis, étincelles, le temps de respirer deux fois. Puis il part en flèche vers la droite : rémanences, lignes de vitesse, poussière, long souffle d'air."
+            },
+            {
+              "sequence": "traversee",
+              "etapes": [
+                {
+                  "decor": "foret",
+                  "obstacle": "tronc",
+                  "description": "Transition floue d'une seconde depuis le plan d'avant (le temps passe), puis travelling latéral dans la forêt : troncs et feuillages à l'encre devant, arbres gris derrière, le héros sprinte à la même place dans l'image. À 1,45 s un tronc couché arrive sous lui : passe-muraille (mains plantées sur le tronc, corps à l'horizontale, jambes repliées sur le côté), poussière à l'atterrissage, et il repart en course jusqu'à la coupe, qui est elle aussi un flou."
+                },
+                {
+                  "decor": "falaise",
+                  "obstacle": "trou",
+                  "description": "Transition floue d'une seconde, puis travelling latéral sur la falaise : sol rocheux, montagnes au loin. À 1,5 s un ravin s'ouvre sous lui : il saute, corps étiré, bras en avant, jambe avant repliée haute, et retombe de l'autre côté en roulade (corps groupé, un tour complet) avant de se relever en pleine course. Souffle d'air au saut, choc sourd à la réception, puis la course continue sous le flou de la coupe suivante."
+                },
+                {
+                  "decor": "pont",
+                  "duree": 2.2,
+                  "description": "Transition floue d'une seconde, puis travelling latéral sur le pont de corde au-dessus du vide : les planches défilent, les cordes pendent, et au fond, à droite, la tour apparaît et grandit. Sprint, lignes de vitesse légères, vent plus fort ; sur les sept derniers dixièmes la caméra pousse doucement sur lui pour amener la coupe, floue elle aussi."
+                }
+              ]
+            },
+            {
+              "sequence": "arrivee",
+              "lieu": "tour",
+              "description": "Transition floue d'une seconde : on découvre la tour pendant que l'image se précise. Plan d'ensemble en contre-plongée, la tour sur le tiers droit : il est debout sur la plateforme crénelée, mains jointes, apeuré ; le dragon est perché sur le créneau de droite, ailes repliées, et balance la tête. À 0,9 s l'héroïne déboule par la gauche en sprint et freine en glissade jusqu'au pied de la tour (poussière, glissement), puis relève la tête, menton levé, l'épée basse. Le dragon tourne la tête vers elle, yeux rouges, gueule ouverte : rugissement. Il se penche et tend les bras vers elle. Lente poussée de la caméra sur tout le plan."
+            },
+            {
+              "sequence": "preparation",
+              "description": "Plan moyen de profil, caméra fixe sur l'héroïne, la base de la tour derrière. Elle prend la garde : les deux mains sur la poignée, lame dressée vers l'avant-haut, pied gauche devant, pied droit derrière, genoux à peine fléchis ; les étincelles se font plus nombreuses. Puis elle plie les jambes lentement, sur une seconde, le buste se penche, les yeux se plissent, la queue de cheval est plaquée en arrière. Elle tient la position, la lame vibre, bourdonnement électrique qui monte, crépitement.",
+              "insert": "Insert, très gros plan au ras du sol sur ses deux pieds. Le pied arrière droit recule et s'ancre : la pointe s'enfonce, le sol se fissure sous lui (fentes en zigzag), petit nuage de poussière, cailloux qui sautent et retombent, secousse, craquement de pierre. Puis le talon se soulève, les jambes vibrent, des étincelles bleues courent sur le sol autour du pied, crépitement électrique."
+            },
+            {
+              "sequence": "exploit",
+              "type": "frappe",
+              "description": "Plan d'ensemble, même cadrage que la tour, la caméra reste large pendant l'envol puis serre d'un coup sur le combat. Détente : elle quitte le sol d'un coup, onde de choc électrique, poussière, secousse, souffle de fusée. Elle file en diagonale ascendante jusqu'au dragon, tête la première, corps aligné sur la trajectoire, lame pointée ; six rémanences, lignes de vitesse. Elle s'électrise : éclairs sur le corps, halo bleu, yeux bleus, montée électrique, crépitement. À deux mètres du dragon, ralenti onze fois, caméra serrée, voile bleuté, battement de cœur, bourdon. Impact : flash blanc, le dragon est pulvérisé (éclats, braises, anneau bleu), secousse de 40 px, déflagration, débris qui retombent. Elle poursuit en arc, atterrit accroupie sur la plateforme, se redresse, se tourne vers lui, et on tient le plan pendant que les éclats finissent de tomber ; il saute de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "cadeau": "bouquet",
+              "fin": "charmeur",
+              "description": "Plan moyen large sur la plateforme, caméra fixe : lui à gauche mains jointes, elle à droite. Elle reprend son souffle pendant une seconde et demie, pliée en deux, mains sur les genoux, le buste qui se soulève, yeux fermés ; il sourit, soulagé. Elle se redresse et range l'épée (le bras repasse par-dessus l'épaule, la lame disparaît dans son dos, raclement métallique du fourreau, les étincelles s'éteignent). Elle marche vers lui, trois pas tranquilles, et s'arrête devant lui. Sa main passe derrière son dos et ressort avec un bouquet, bras tendu : pop, cœur, scintillement magique. Sourire en coin (sourcil relevé, œil mi-clos, étincelle, tintement de paillettes) ; lui, yeux fermés de bonheur, joues roses, petit saut, puis il se penche vers elle, bras tendus, pendant que des cœurs montent entre eux ; elle sourit, heureuse. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
         }
       },
-      "legende": "Someone ate the chocolates. He knows exactly who.\n\nSend this to your partner!",
+      "legende": "When she saves him from a dragon.\n\nTag her",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }
