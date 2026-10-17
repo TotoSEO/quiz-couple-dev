@@ -10,7 +10,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/"/>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -442,7 +442,7 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/paarspiele/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/giochi-di-coppia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeux-de-couple/"/>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -899,6 +899,78 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/gioco-e-un-10-ma/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/jeu-c-est-un-10-mais/"/>
     <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-especiales-para-parejas/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-speciaux-pour-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/special-couple-quizzes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-especiales-para-parejas/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/besondere-paar-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-speciali-per-coppie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-speciaux-pour-couple/"/>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-con-que-asesino-en-serie-eres-compatible/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-serial-killer-compatible/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/which-serial-killer-are-you-compatible-with-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-con-que-asesino-en-serie-eres-compatible/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/quiz-welcher-serienmoerder-passt-zu-dir/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-quale-serial-killer-e-compatibile-con-te/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-serial-killer-compatible/"/>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-quien-muere-primero-pelicula-de-terror/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-qui-meurt-en-premier-film-horreur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/who-dies-first-in-a-horror-movie-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-quien-muere-primero-pelicula-de-terror/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/quiz-wer-stirbt-zuerst-im-horrorfilm/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-chi-muore-per-primo-nel-film-horror/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-qui-meurt-en-premier-film-horreur/"/>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-quien-podria-ser-poseido/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-qui-pourrait-se-faire-posseder/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/who-would-get-possessed-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-quien-podria-ser-poseido/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/quiz-wer-wuerde-besessen-werden/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-chi-potrebbe-essere-posseduto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-qui-pourrait-se-faire-posseder/"/>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-que-supervillano-eres/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-quel-super-vilain-es-tu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/which-supervillain-are-you-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-que-supervillano-eres/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/quiz-welcher-superschurke-bist-du/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-quale-supercattivo-sei/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-quel-super-vilain-es-tu/"/>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quiz-couple.com/es/quiz-que-duo-de-supervillanos-formais/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://quiz-couple.com/quiz-quel-duo-de-super-vilains-formez-vous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://quiz-couple.com/en/which-supervillain-duo-are-you-quiz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://quiz-couple.com/es/quiz-que-duo-de-supervillanos-formais/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://quiz-couple.com/de/quiz-welches-superschurken-duo-seid-ihr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://quiz-couple.com/it/quiz-quale-duo-di-supercattivi-siete/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://quiz-couple.com/quiz-quel-duo-de-super-vilains-formez-vous/"/>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
