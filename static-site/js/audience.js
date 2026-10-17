@@ -285,7 +285,7 @@
     if (ignorer()) return;
     var ou = lien.classList.contains('pqx-insta') ? 'resultat'
       : lien.classList.contains('nav-action-btn') ? 'menu'
-      : lien.classList.contains('mobile-nav-link') ? 'menu-mobile'
+      : (lien.classList.contains('mobile-nav-link') || lien.classList.contains('mobile-tuile')) ? 'menu-mobile'
       : lien.closest('footer') ? 'pied'
       : lien.classList.contains('ig-suivre') ? 'accueil-suivre'
       : lien.closest('#instagram-recents') ? 'accueil-post' : 'autre';

@@ -1864,6 +1864,76 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 }
 .mobile-nav-link:hover { background: hsl(var(--muted) / 0.5); color: hsl(var(--primary)); }
 
+/* Les quatre liens du bas du menu mobile, en grille de 2 x 2 (17 octobre
+   2026) : Instagram, créer un quiz, questions pour couple, blog. Des carrés en
+   aplat, sans dégradé ni fondu (Thomas : « ça fait trop IA ») : le titre en
+   majuscules, le pictogramme en grand et pâle en fond, puis, sous un trait,
+   une bande de 15 % de la hauteur avec une longue flèche. Chaque tuile a sa
+   couleur dans --tuile et sa variante lisible en petit texte dans
+   --tuile-texte, claire en thème sombre. */
+.mobile-tuiles {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem; margin: 0.15rem auto 0;
+  width: 100%; max-width: 19rem;
+}
+.mobile-tuile {
+  --tuile: var(--primary); --tuile-texte: var(--primary-texte);
+  display: grid; grid-template-rows: 85fr 15fr;
+  aspect-ratio: 1 / 1; overflow: hidden;
+  container-type: inline-size;
+  border-radius: 1rem;
+  border: 1.5px solid hsl(var(--tuile) / 0.35);
+  background: hsl(var(--tuile) / 0.1);
+  color: hsl(var(--tuile-texte));
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+.dark .mobile-tuile { background: hsl(var(--tuile) / 0.16); }
+.mobile-tuile:hover { border-color: hsl(var(--tuile) / 0.7); }
+.mobile-tuile:active { transform: scale(0.97); }
+.mobile-tuile:focus-visible { outline: 2px solid hsl(var(--tuile)); outline-offset: 2px; }
+.mobile-tuile-haut {
+  position: relative; overflow: hidden; min-height: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.mobile-tuile-fond {
+  position: absolute; width: 92%; height: auto; right: -18%; bottom: -20%;
+  color: hsl(var(--tuile)); opacity: 0.2;
+  pointer-events: none;
+}
+.dark .mobile-tuile-fond { opacity: 0.28; }
+.mobile-tuile-titre {
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  padding: 0 0.5rem;
+  text-align: center; white-space: nowrap;
+  font-family: var(--font-display);
+  /* Le titre remplit le carré : sa taille suit la largeur de la tuile (unités
+     de conteneur, la tuile est carrée donc c'est aussi sa hauteur), divisée
+     par la largeur de la plus longue ligne (--l, en em de Fredoka) et bornée
+     par le nombre de lignes (--n) dans les 85 % du haut. Les coupures et les
+     largeurs sont calculées au rendu du gabarit (header.ejs). */
+  font-size: min(calc((100cqi - 1.4rem) / var(--l, 6)), calc((85cqi - 1.2rem) / (var(--n, 2) * 1.02)), 3.2rem);
+  font-weight: 700; line-height: 1.02;
+  letter-spacing: 0; text-transform: uppercase;
+}
+.mobile-tuile-bas {
+  display: flex; align-items: center; gap: 0;
+  padding: 0 0.8rem;
+  border-top: 1.5px solid hsl(var(--tuile) / 0.35);
+}
+.mobile-tuile-trait { flex: 1 1 auto; height: 2px; border-radius: 2px; background: currentColor; margin-right: -0.4rem; }
+.mobile-tuile-pointe { flex: 0 0 auto; width: 0.7rem; height: 0.85rem; }
+.mobile-tuile-trait, .mobile-tuile-pointe { transition: transform 0.2s ease; }
+.mobile-tuile:hover .mobile-tuile-pointe { transform: translateX(3px); }
+.mobile-tuile--instagram { --tuile: 330 70% 52%; --tuile-texte: 330 70% 40%; }
+.dark .mobile-tuile--instagram { --tuile-texte: 330 80% 74%; }
+.mobile-tuile--creer { --tuile: var(--primary); --tuile-texte: var(--primary-texte); }
+.mobile-tuile--questions { --tuile: var(--secondary); --tuile-texte: var(--secondary-texte); }
+.mobile-tuile--blog { --tuile: var(--celib); --tuile-texte: var(--celib-texte); }
+@media (prefers-reduced-motion: reduce) {
+  .mobile-tuile, .mobile-tuile-pointe, .mobile-tuile-trait { transition: none; }
+  .mobile-tuile:active { transform: none; }
+}
+
 /* Deux colonnes aussi sur un vrai téléphone : un iPhone fait 375 à 430px de
    large, l'ancienne coupure à 480px le faisait retomber sur une seule
    colonne et obligeait à faire défiler tout le listing. Une seule colonne

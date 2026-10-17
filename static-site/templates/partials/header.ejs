@@ -13,10 +13,14 @@
   // uniquement dans le sous-menu test ») : il est dans la liste des tests,
   // comme sur l'accueil, le pied de page et le plan du site. Le bouton
   // « Activités autour de moi » a disparu le même jour, avec la page.
+  // tuile : couleur et dessin de la carte dans la grille du menu mobile.
   const directLinks = [
-    { routeKey: 'customQuiz', labelKey: 'nav.customQuiz' },
-    { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
-    { routeKey: 'blog', labelKey: 'Blog' },
+    { routeKey: 'customQuiz', labelKey: 'nav.customQuiz', tuile: 'creer',
+      ic: '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>' },
+    { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple', tuile: 'questions',
+      ic: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5"/><path d="M12 15h.01"/>' },
+    { routeKey: 'blog', labelKey: 'Blog', tuile: 'blog',
+      ic: '<path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/>' },
   ];
   const homeUrl = getLocalizedUrl('home', lang);
 
@@ -307,7 +311,7 @@
               <div class="n2-onglet n2-onglet--scinde">
                 <a href="<%= urlSpeciaux %>" class="nav-trigger-lien">
                   <span class="n2-onglet-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L12 13.5 7.8 16l1.1-4.8L5.2 8l4.9-.4z"/></svg></span>
-                  <%= t('common:nav.categorySpeciaux', 'Quiz spéciaux') %>
+                  <%= t('common:nav.ongletSpeciaux', t('common:nav.categorySpeciaux', 'Quiz spéciaux')) %>
                   <span class="n2-onglet-nb"><%= speciauxLinksFiltered.length %></span>
                 </a>
                 <button type="button" class="nav-trigger-fleche" aria-expanded="false"
@@ -441,7 +445,7 @@
             <div class="mobile-accordion-trigger mobile-trigger-scinde">
               <a href="<%= urlSpeciaux %>" class="mobile-trigger-lien">
                 <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L12 13.5 7.8 16l1.1-4.8L5.2 8l4.9-.4z"/></svg></span>
-                <%= t('common:nav.categorySpeciaux', 'Quiz spéciaux') %>
+                <%= t('common:nav.ongletSpeciaux', t('common:nav.categorySpeciaux', 'Quiz spéciaux')) %>
                 <span class="mobile-nav-count"><%= speciauxLinksFiltered.length %></span>
               </a>
               <button type="button" class="mobile-trigger-fleche" aria-expanded="false"
@@ -464,11 +468,46 @@
 
           <div class="mobile-nav-divider"></div>
 
-          <a href="<%= instagramUrl %>" class="mobile-nav-link" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:.5rem"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><%= t('common:footer.instagram', 'Suivez-nous sur Instagram') %></a>
-
-          <% for (const link of directLinksFiltered) { %>
-          <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-link"><%= t('common:' + link.labelKey, link.labelKey) %></a>
-          <% } %>
+          <%# Quatre tuiles carrées en grille de 2 x 2 (17 octobre 2026, Thomas : « 2
+              carrés et 2 carrés », puis « pas de gradient ni de fade ; le titre en
+              gros, le pictogramme en grand en fond, et en bas, séparée par un
+              trait, une longue flèche »). Le titre passe à la ligne après son
+              premier mot : « CRÉER / UN QUIZ ». %>
+          <%
+            const tuileIg = '<rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/>';
+            const tuiles = [{ href: instagramUrl, tuile: 'instagram', ic: tuileIg, libelle: 'Instagram', externe: true }]
+              .concat(directLinksFiltered.map((l) => ({ href: getLocalizedUrl(l.routeKey, lang), tuile: l.tuile, ic: l.ic, libelle: t('common:' + l.labelKey, l.labelKey) })));
+          %>
+          <div class="mobile-tuiles">
+            <% // Largeur des majuscules de Fredoka en gras, en em (relevée dans Chromium),
+               // 0,7 pour un signe absent. Sert à trouver la taille qui remplit le carré.
+               const chasse = { A: .71, B: .61, C: .63, D: .66, E: .6, F: .61, G: .72, H: .65, I: .24, J: .53, K: .6, L: .57, M: .81, N: .67, O: .72, P: .6, Q: .78, R: .6, S: .54, T: .64, U: .68, V: .73, W: .95, X: .69, Y: .64, Z: .6, 'À': .71, 'Â': .71, 'Ä': .71, 'Ç': .63, 'È': .6, 'É': .6, 'Ê': .6, 'Ë': .6, 'Î': .24, 'Ï': .24, 'Ô': .72, 'Ö': .72, 'Ù': .68, 'Û': .68, 'Ü': .68, ' ': .24, "'": .19, '-': .4 };
+               const largeur = (x) => Array.from(x).reduce((t, c) => t + (chasse[c] || .7), 0);
+               for (const tu of tuiles) {
+                 // Le titre remplit le carré : on garde la coupure qui donne la plus
+                 // grande taille, entre « CRÉER / UN QUIZ » (premier mot, puis le
+                 // reste), un mot par ligne et une seule ligne. La taille vient de la
+                 // plus longue ligne (--l, en em) et du nombre de lignes (--n), en
+                 // CSS. À moins de 10 % près, « CRÉER / UN QUIZ » l'emporte.
+                 const mots = String(tu.libelle).toUpperCase().split(' ').filter(Boolean);
+                 const essais = [[mots.join(' ')]];
+                 if (mots.length > 1) essais.push([mots[0], mots.slice(1).join(' ')], mots.slice());
+                 const taille = (lg) => Math.min(0.9 / Math.max.apply(null, lg.map(largeur)), 0.78 / (lg.length * 1.02));
+                 let lignes = essais[0];
+                 for (const e of essais) {
+                   const prefere = mots.length > 1 && e.length === 2 && lignes.length !== 2;
+                   if (taille(e) > taille(lignes) * (prefere ? 0.9 : 1.1)) lignes = e;
+                 }
+                 const plusLongue = Math.max.apply(null, lignes.map(largeur)).toFixed(2); %>
+            <a href="<%= tu.href %>" class="mobile-tuile mobile-tuile--<%= tu.tuile %>"<% if (tu.externe) { %> target="_blank" rel="noopener" aria-label="<%= t('common:footer.instagram', 'Suivez-nous sur Instagram') %>"<% } %>>
+              <span class="mobile-tuile-haut">
+                <svg class="mobile-tuile-fond" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><%- tu.ic %></svg>
+                <span class="mobile-tuile-titre" style="--l: <%= plusLongue %>; --n: <%= lignes.length %>"><% for (const ligne of lignes) { %><span><%= ligne %></span><% } %></span>
+              </span>
+              <span class="mobile-tuile-bas" aria-hidden="true"><span class="mobile-tuile-trait"></span><svg class="mobile-tuile-pointe" viewBox="0 0 10 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 1.5 8.5 6 3 10.5"/></svg></span>
+            </a>
+            <% } %>
+          </div>
         </div>
       </div>
     </div>
