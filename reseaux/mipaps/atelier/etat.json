@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-17T03:13:11.687Z",
+  "genere_le": "2026-10-17T07:45:03.973Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -38,24 +38,9 @@
       "categorie": "mipaps-anime"
     },
     {
-      "jour": "2026-11-10",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-10",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
       "jour": "2026-11-11",
       "creneau": "matin",
       "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-11",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
     },
     {
       "jour": "2026-11-11",
@@ -68,24 +53,9 @@
       "categorie": "mipaps-anime"
     },
     {
-      "jour": "2026-11-12",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-11-12",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
       "jour": "2026-11-13",
       "creneau": "matin",
       "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-13",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
     },
     {
       "jour": "2026-11-13",
@@ -103,19 +73,9 @@
       "categorie": "mipaps-post"
     },
     {
-      "jour": "2026-11-14",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
       "jour": "2026-11-15",
       "creneau": "matin",
       "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-11-15",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
     },
     {
       "jour": "2026-11-15",
@@ -1413,7 +1373,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1467,7 +1427,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2037,6 +1997,78 @@
       "statut": "a_rendre",
       "texte": "mais je dis rien.",
       "erreur": null
+    },
+    {
+      "jour": "2026-11-10",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "tu m'avais dit de pas oublier un truc. j'ai oublié lequel.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-10",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "t'es mon endroit préféré",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-11",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "si je t'avais pas rencontré, t'aurais quelqu'un d'autre. je t'en veux.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-12",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "quand je suis normale, il croit que je suis triste.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-12",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "je t'aime en silence aussi",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-13",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "je dors pas, j'attends que tu rentres.",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-14",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "le lit est trop grand quand t'es pas là",
+      "erreur": null
+    },
+    {
+      "jour": "2026-11-15",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "on est à 400 km l'un de l'autre. je compte les jours avant vendredi.",
+      "erreur": null
     }
   ],
   "idees": [],
@@ -2054,7 +2086,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-17",
+      "jour": "2026-10-18",
       "creneau": "midi"
     }
   },
@@ -2112,6 +2144,20 @@
       "variante_id": "eab84977-a61b-4494-9333-60208e43e7df",
       "releve": "j7",
       "vues": 0,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "cb1a8b2f-5e5a-419c-8124-7941580e9a2e",
+      "releve": "j7",
+      "vues": 304,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "5ffe51a8-532a-4c30-af2f-5ddb86659275",
+      "releve": "j7",
+      "vues": 218,
       "partages": 0,
       "enregistrements": 0
     }
