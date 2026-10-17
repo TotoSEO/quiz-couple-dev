@@ -389,7 +389,13 @@
     "testSignesChinois": "Chinese zodiac compatibility",
     "compteurCouple": "Relationship duration counter",
     "jeuDixMais": "He's a 10 but...",
-    "testCompatSexuelle": "Sexual compatibility test"
+    "testCompatSexuelle": "Sexual compatibility test",
+    "speciauxCouple": "Special quizzes",
+    "quizSerialKiller": "compatible serial killer quiz",
+    "quizMortFilmHorreur": "“who dies first in a horror movie” quiz",
+    "quizPossession": "“who could get possessed” quiz",
+    "quizSuperVilain": "supervillain quiz",
+    "quizDuoVilains": "supervillain duo quiz"
   },
   "truefalse": {
     "ready": "Ready for true or false?",

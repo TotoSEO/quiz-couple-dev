@@ -457,5 +457,41 @@
     "shortTitle": "Test sexuelle Kompatibilität",
     "metaDescription": "Test zur sexuellen Kompatibilität für Paare: 20 Fragen zu Lust, Zärtlichkeit, Neuem und Rhythmus, mit einem Ergebnis pro Bereich. Kostenlos.",
     "description": "Zwanzig Fragen zu zweit über Lust, Zärtlichkeit und wie ihr darüber redet, um zu sehen, wo ihr euch trefft."
+  },
+  "speciauxCouple": {
+    "title": "Besondere Paar-Quiz: Weihnachten, Halloween…",
+    "shortTitle": "Besondere Quiz",
+    "metaDescription": "Die saisonalen Quiz für Paare. Zu Halloween: Welcher Serienmörder passt zu dir, wer stirbt zuerst im Horrorfilm, wer würde besessen werden, welcher Superschurke bist du. Kostenlos.",
+    "description": "Die etwas verrückten Quiz für Paare je nach Jahreszeit: jetzt Halloween, danach Weihnachten."
+  },
+  "quizSerialKiller": {
+    "title": "Quiz: Welcher Serienmörder passt zu dir? (allein oder zu zweit)",
+    "shortTitle": "Welcher Serienmörder passt zu dir",
+    "metaDescription": "Ein Halloween-Quiz: 15 Fragen dazu, wie du liebst, lügst und aufräumst, und der berühmte Serienmörder, der dir am meisten ähnelt. Allein oder zu zweit, kostenlos.",
+    "description": "Fünfzehn Fragen und der berühmte Mörder, der dir am meisten ähnelt, in stark vergrößerter Fassung. Allein oder zu zweit."
+  },
+  "quizMortFilmHorreur": {
+    "title": "Wer von uns stirbt zuerst im Horrorfilm? Das Quiz",
+    "shortTitle": "Wer stirbt zuerst im Horrorfilm",
+    "metaDescription": "15 Horrorfilm-Situationen und ein Urteil in Minuten: wie lange du bis zum Abspann durchhältst, und wer von euch zuerst stirbt. Kostenlos, allein oder zu zweit.",
+    "description": "Fünfzehn Situationen, eine Überlebenszeit in Minuten, und der Name des ersten Opfers, wenn ihr zu zweit spielt."
+  },
+  "quizPossession": {
+    "title": "Wer von uns könnte besessen werden? Das Halloween-Quiz",
+    "shortTitle": "Wer könnte besessen werden",
+    "metaDescription": "15 Fragen und ein Besessenheitsrisiko in Prozent für jeden: Wer von euch öffnet den Dämonen die Tür? Ein kostenloses Halloween-Quiz, allein oder zu zweit.",
+    "description": "Fünfzehn Fragen, ein Besessenheitsrisiko in Prozent, und die Person, die die Dämonen zuerst wählen würden."
+  },
+  "quizSuperVilain": {
+    "title": "Quiz: Welchem Superschurken ähnelst du am meisten? (allein oder zu zweit)",
+    "shortTitle": "Welcher Superschurke bist du",
+    "metaDescription": "Psychologie, Situationen, Ausrüstung: 15 Fragen und der Superschurke, der dir ähnelt, vom Joker bis Maleficent. Ein kostenloses Halloween-Quiz, allein oder zu zweit.",
+    "description": "Fünfzehn Fragen zu deiner Psychologie, deinen Reaktionen und deiner Schurkenausrüstung, und der Superschurke, der dir ähnelt."
+  },
+  "quizDuoVilains": {
+    "title": "Welches Superschurken-Duo seid ihr? Das Quiz für Paare",
+    "shortTitle": "Welches Superschurken-Duo seid ihr",
+    "metaDescription": "Zu zweit: je 15 Fragen, eure Rolle im Duo (das Gehirn, das Chaos, die Kraft...) und das berühmte Schurken-Duo, das ihr bildet, vom Joker und Harley Quinn bis Bonnie und Clyde.",
+    "description": "Jeder antwortet für sich, und das Quiz verrät euch eure Rolle im Duo und das berühmte Schurken-Duo, das ihr bildet."
   }
 }

@@ -105,7 +105,15 @@
     "testSignesChinois": "Compatibilidad signos chinos",
     "testSignesChinoisDesc": "Dos fechas, dos animales, un veredicto",
     "compteurCouple": "Contador de tiempo en pareja",
-    "compteurCoupleDesc": "Vuestros días juntos, fechas que celebrar"
+    "compteurCoupleDesc": "Vuestros días juntos, fechas que celebrar",
+    "speciauxCouple": "Quiz especiales",
+    "categorySpeciaux": "Quiz especiales",
+    "deployerSpeciaux": "Ver todos los quiz especiales",
+    "quizSerialKiller": "Qué asesino en serie te corresponde",
+    "quizMortFilmHorreur": "Quién muere primero (película de terror)",
+    "quizPossession": "Quién podría ser poseído",
+    "quizSuperVilain": "Qué supervillano eres",
+    "quizDuoVilains": "Qué dúo de supervillanos"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

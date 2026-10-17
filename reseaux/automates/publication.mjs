@@ -19,6 +19,7 @@ import { connexion } from './lib/supabase.mjs';
 import { Instagram } from './lib/instagram.mjs';
 import { PageFacebook } from './lib/facebook.mjs';
 import { legendeFinale } from './lib/controle.mjs';
+import { estRetiree, MOTIF_RETRAIT } from './lib/calendrier.mjs';
 import { VOLUME_MUSIQUE, VOLUME_VIDEO, ambianceDuReel, choisirSon, requetePour, sonsRecents } from './lib/son.mjs';
 
 const AVANCE_REEL_MIN = 60;
@@ -75,7 +76,7 @@ async function sonDuReel(ig, base, v, tendances, categorie) {
 const NOM_DU_SON = { fr: 'Les mipaps' };
 
 export async function publier(base, { maintenant = new Date(), aBlanc = false, instagramPour, facebookPour } = {}) {
-  const bilan = { conteneurs: 0, publies: 0, attente: 0, echecs: 0, aBlanc: 0 };
+  const bilan = { conteneurs: 0, publies: 0, attente: 0, echecs: 0, aBlanc: 0, retenues: 0 };
   if ((await base.reglage('pause')) === true) {
     console.log('pause générale : rien ne part');
     return bilan;
@@ -92,6 +93,18 @@ export async function publier(base, { maintenant = new Date(), aBlanc = false, i
     const compte = comptes.find((c) => c.langue === v.langue);
     const [post] = await base.select('social_posts', `select=format,statut,jour,creneau,categorie&id=eq.${v.post_id}`);
     if (!post || post.statut !== 'valide') continue;
+    // Une catégorie retirée de la grille (les animations des mascottes, le
+    // 16 octobre 2026 au soir) ne part pas, même déjà rendue ou en conteneur
+    // : la déclinaison est retenue en échec avec le motif du retrait, essais
+    // au maximum pour que la synchro ne la remette pas au rendu, et la routine
+    // réécrit le fichier (hors_grille de etat.json). La synchro retient déjà
+    // ces posts ; ici c'est la dernière porte, pour ce qui a été rendu avant.
+    if (estRetiree(post.categorie)) {
+      await base.update('social_variantes', `id=eq.${v.id}`, { statut: 'echec', erreur: MOTIF_RETRAIT, essais: ESSAIS_MAX });
+      await base.journal('alerte', 'publication', `${post.jour} ${post.creneau} ${v.langue} : ${post.categorie} retiré de la grille, non publié`, null, v.id);
+      bilan.retenues++;
+      continue;
+    }
     const due = new Date(v.publier_a) <= maintenant;
     const [jeton] = compte ? await base.select('social_jetons', `select=jeton&compte_id=eq.${compte.id}`) : [];
     // compte pas encore branché : rien ne part, et rien n'est compté en échec

@@ -9,7 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { connexion } from './lib/supabase.mjs';
 import { controlerPost } from './lib/controle.mjs';
-import { aujourdhui, categorieAttendue, melangeDuCompte } from './lib/calendrier.mjs';
+import { aujourdhui, categorieAttendue, estRetiree, melangeDuCompte, MOTIF_RETRAIT } from './lib/calendrier.mjs';
 
 const MODIFIABLES = ['a_rendre', 'rendu', 'echec'];
 // Un rendu en échec est retenté par les synchros suivantes, trois fois en
@@ -59,6 +59,16 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
     // dans etat.json) pour qu'elle le réécrive dans la bonne catégorie.
     const attendu = categorieAttendue(melange, post.jour, post.creneau);
     const horsGrille = attendu && attendu !== post.categorie ? `le créneau ${post.creneau} du ${post.jour} attend la catégorie ${attendu}, ${post.categorie} accepté en attendant sa réécriture` : null;
+    // Une catégorie retirée de la grille (les animations des mascottes, le
+    // 16 octobre 2026 au soir) ne part plus du tout : le post est écrit en
+    // base pour que l'entretien le signale à la routine (`hors_grille`), mais
+    // sa déclinaison est mise en échec avec le motif du retrait, essais au
+    // maximum, et rien ne la rend ni ne la publie tant que le fichier n'est
+    // pas réécrit dans la catégorie attendue. Au 16 octobre 2026, 59 posts de
+    // la réserve étaient concernés, dont certains déjà rendus pour le
+    // lendemain : accepter les posts hors grille « en attendant leur
+    // réécriture » les aurait fait partir.
+    const retiree = estRetiree(post.categorie);
     for (const langue of Object.keys(post.variantes || {})) {
       if (!comptes.some((c) => c.langue === langue)) fautes.push(`aucun compte pour la langue ${langue}`);
     }
@@ -82,13 +92,25 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
     );
     let change = false;
     for (const [langue, v] of Object.entries(post.variantes)) {
-      const [existante] = await base.select('social_variantes', `select=id,statut,recette,legende,hashtags,publier_a,essais&post_id=eq.${ligne.id}&langue=eq.${langue}`);
+      const [existante] = await base.select('social_variantes', `select=id,statut,recette,legende,hashtags,publier_a,essais,erreur&post_id=eq.${ligne.id}&langue=eq.${langue}`);
       const valeurs = { recette: v.recette, legende: v.legende, hashtags: v.hashtags };
       // Une heure de publication écrite dans le post remplace la minute tirée
       // au sort dans le créneau (déclencheur social_variante_heure, qui ne
       // joue que si publier_a est nul) : pour un post qu'on veut voir partir
       // à une heure précise, par exemple un soir où le créneau est déjà passé.
       if (post.publier_a) valeurs.publier_a = new Date(post.publier_a).toISOString();
+      if (retiree) {
+        const retenue = { ...valeurs, statut: 'echec', erreur: MOTIF_RETRAIT, essais: ESSAIS_RENDU_MAX, fichiers: {} };
+        if (!existante) {
+          await base.insert('social_variantes', [{ post_id: ligne.id, langue, ...retenue }]);
+          change = true;
+        } else if (MODIFIABLES.includes(existante.statut) && !(existante.statut === 'echec' && existante.erreur === MOTIF_RETRAIT)) {
+          await base.update('social_variantes', `id=eq.${existante.id}`, retenue);
+          change = true;
+        }
+        // déjà retenue, ou déjà partie : rien à faire
+        continue;
+      }
       if (!existante) {
         await base.insert('social_variantes', [{ post_id: ligne.id, langue, ...valeurs }]);
         change = true;
@@ -125,7 +147,8 @@ export async function synchroniser(base, posts, { maintenant = new Date() } = {}
     if (change) bilan.ecrits++;
     else bilan.inchanges++;
     // une fois par écriture, pas à chaque passage horaire sur un fichier inchangé
-    if (horsGrille && change) await base.journal('alerte', 'synchro', `${fichier} : ${horsGrille}`, { fichier, attendue: attendu, categorie: post.categorie });
+    if (retiree && change) await base.journal('alerte', 'synchro', `${fichier} : ${post.categorie} retiré de la grille, rien ne partira tant qu'il n'est pas réécrit en ${attendu || 'la catégorie attendue'}`, { fichier, attendue: attendu, categorie: post.categorie });
+    else if (horsGrille && change) await base.journal('alerte', 'synchro', `${fichier} : ${horsGrille}`, { fichier, attendue: attendu, categorie: post.categorie });
   }
   await base.journal('info', 'synchro', `${bilan.ecrits} posts écrits, ${bilan.inchanges} inchangés, ${bilan.refuses} refusés, ${bilan.ignores} passés ignorés`);
   return bilan;

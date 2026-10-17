@@ -16,7 +16,7 @@ import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomD
 import {
   BASE_URL, INSTAGRAM_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
-  QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, FAMILLES_NAV, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
+  QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable, pagePublicitaire,
 } from './config.js';
@@ -1326,6 +1326,7 @@ async function generatePage(routeKey, lang) {
     getLocalizedUrl,
     mascotteSvg,
     famillesNav: FAMILLES_NAV,
+    saisonDesQuiz: SAISON_DES_QUIZ,
     instagramUrl: INSTAGRAM_URL,
     avisCuitsJson: jsonPourScript(avisCuitsPour(routeKey)),
     getLocalizedPath,
@@ -2118,6 +2119,7 @@ async function generateBlogArticle(articleMeta, lang) {
     translations,
     getLocalizedUrl,
     famillesNav: FAMILLES_NAV,
+    saisonDesQuiz: SAISON_DES_QUIZ,
     instagramUrl: INSTAGRAM_URL,
     getLocalizedPath,
     escapeHtml,
@@ -2210,6 +2212,8 @@ async function generate404Pages() {
       translations,
       getLocalizedUrl,
       famillesNav: FAMILLES_NAV,
+      saisonDesQuiz: SAISON_DES_QUIZ,
+    saisonDesQuiz: SAISON_DES_QUIZ,
       instagramUrl: INSTAGRAM_URL,
       getLocalizedPath,
       escapeHtml,

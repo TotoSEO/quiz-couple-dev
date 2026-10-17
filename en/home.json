@@ -143,11 +143,23 @@
       "quizKnowledge": "Who knows the other best? Challenge each other!",
       "quizMost": "Vote to find out who is the most... among you!",
       "testAttachement": "Find out your attachment style: secure, anxious or avoidant?",
-      "testConfiance": "Measure the level of mutual trust in your relationship."
+      "testConfiance": "Measure the level of mutual trust in your relationship.",
+      "quizSerialKiller": "Fifteen questions and the famous killer you're most like, blown way out of proportion.",
+      "quizMortFilmHorreur": "Fifteen situations, a survival time in minutes, and the first victim when you play as a couple.",
+      "quizPossession": "A possession risk in percent for each of you, and the one the demons would choose.",
+      "quizSuperVilain": "Psychology, reactions, gear: the supervillain you're most like, from the Joker to Maleficent.",
+      "quizDuoVilains": "Your role in the duo, and the famous villain duo you form."
     },
     "testsEyebrow": "The tests",
     "quizzesEyebrow": "The quizzes",
-    "jeuxEyebrow": "The games"
+    "jeuxEyebrow": "The games",
+    "speciauxEyebrow": "Special edition",
+    "speciauxTitle": "Our special quizzes, by season",
+    "speciauxTitleSaison": {
+      "halloween": "Halloween special: our (slightly) scary quizzes"
+    },
+    "speciauxDesc": "{{n}} quizzes to take solo or as a couple, for an evening unlike any other. Each one has a remote mode.",
+    "speciauxCta": "See all special quizzes"
   },
   "customQuizPromo": {
     "eyebrow": "Custom quiz",

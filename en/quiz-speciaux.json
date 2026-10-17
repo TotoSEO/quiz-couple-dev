@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "Seasonal quizzes • Free • Solo or as a couple",
+    "title": "Our special quizzes to take as a couple, by season",
+    "titleHighlight": "special quizzes",
+    "description": "Slightly crazy quizzes you don't take all year round: the Halloween ones now, the Christmas ones soon. They're played solo, as a couple on one phone or each on your own, and they stay here once the season is over."
+  },
+  "enCeMoment": "Right now",
+  "horsSaison": "All year round",
+  "jouer": "Take the quiz",
+  "duoSeul": "Couples only",
+  "soloOuDuo": "Solo or as a couple",
+  "distance": "Remote mode",
+  "saisons": {
+    "halloween": {
+      "titre": "Halloween special",
+      "intro": "Five quizzes for a Halloween night as a couple: a killer portrait, a survival timer, a possession risk, a supervillain portrait and the villain duo you form. It's all for fun, and each one takes five minutes."
+    },
+    "noel": {
+      "titre": "Christmas special",
+      "intro": "The Christmas quizzes arrive in December: how much you're willing to spend on each other, who'll give the worst gift, and a few other surprises.",
+      "bientot": "Coming soon"
+    }
+  },
+  "quiz": {
+    "quizSerialKillerNom": "Which serial killer are you compatible with?",
+    "quizSerialKillerTagline": "Fifteen questions about how you love, lie and tidy up, and the famous killer you're most like, blown way out of proportion.",
+    "quizMortFilmHorreurNom": "Which of us dies first in a horror movie?",
+    "quizMortFilmHorreurTagline": "Fifteen horror movie situations, a survival time in minutes, and the name of the first victim when you play as a couple.",
+    "quizPossessionNom": "Which of us could get possessed?",
+    "quizPossessionTagline": "Fifteen questions about your curiosity and your nights, a possession risk in percent, and the one the demons would choose.",
+    "quizSuperVilainNom": "Which supervillain are you most like?",
+    "quizSuperVilainTagline": "Psychology, situations, gear: the supervillain you're most like, from the Joker to Maleficent.",
+    "quizDuoVilainsNom": "Which supervillain duo are you?",
+    "quizDuoVilainsTagline": "Each of your roles in the duo, the brains, the chaos, the muscle, the charm, the shadow or the heart, and the famous villain duo you form."
+  },
+  "section1": {
+    "title": "Why seasonal quizzes",
+    "p1": "The quizzes on this page are nothing like our couple tests. They don't measure anything serious, they don't give advice, and they don't talk about your relationship. They're games for a specific evening: a Halloween night between two horror movies, a Christmas Eve while waiting for the presents.",
+    "p2": "They work because they're made for laughing at yourself and at each other. Finding out your partner would die after twelve minutes in a horror movie, or that you're Pinky and the Brain, keeps a good part of the evening busy.",
+    "p3": "We keep them all here, season after season. The current season's quizzes are at the top of the page; the others stay playable all year round, a bit further down."
+  },
+  "section2": {
+    "title": "How to play",
+    "p1": "All these quizzes play the same way. Solo, you answer and discover your result. As a couple, the first player answers the whole series, passes the phone, and the second answers in turn without seeing the first one's answers: both results show up at the end, side by side, with what sets you apart.",
+    "p2": "If you're not in the same place, each quiz has a remote mode: one person creates the game, the other joins with the code or the QR code, and each of you answers on your own phone. You see both answers after each question, and the result is the same on both sides.",
+    "p3": "No account to create, nothing to install, and nothing is saved: the answers stay on your phones."
+  },
+  "section3": {
+    "title": "And the rest of the year",
+    "p1": "Once the season is over, <a href=\"/en/couple-games/\">our couple games</a> take over: <a href=\"/en/would-you-rather-couple-quiz/\">the “would you rather” dilemmas</a>, truth or dare, the board game, and a dozen others. And for those who want a real answer about their relationship, <a href=\"/en/couple-compatibility-test/\">the couple test</a> compares your answers on what matters."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "q1": "Are the special quizzes free?",
+    "a1": "Yes, all of them, with no sign-up and no app to install. They're played in your phone's browser.",
+    "q2": "Do you have to be two?",
+    "a2": "Not necessarily. Four of the five Halloween quizzes are played solo or as a couple. Only the supervillain duo quiz needs two players, since it composes a duo.",
+    "q3": "What happens to the quizzes once the season is over?",
+    "a3": "They stay on this page, a bit further down, and at their own address. Nothing gets deleted: a Halloween quiz in the middle of March is fine too.",
+    "q4": "When do the Christmas quizzes arrive?",
+    "a4": "In December. On the programme: how much you're willing to spend on each other, who'll give the worst gift, and a few other end-of-year ideas.",
+    "q5": "Can you play remotely?",
+    "a5": "Yes, every quiz has a remote mode. One person creates the game, the other joins with the code, and you each answer on your own phone."
+  },
+  "jsonLd": {
+    "name": "Special couple quizzes"
+  }
+}

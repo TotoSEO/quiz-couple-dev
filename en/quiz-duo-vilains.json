@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "badge": "Halloween quiz • As a couple",
+    "title": "Which supervillain duo are you?",
+    "titleHighlight": "supervillain duo",
+    "description": "Fifteen questions each about how you pull off a job, how you react when the plan goes wrong and how you share the roles. The result gives each one's role in the duo (the brains, the chaos, the muscle, the charm, the shadow or the heart), then the famous villain duo the two of you form, from the Joker and Harley Quinn to Bonnie and Clyde.",
+    "subtitle": "15 questions each • 5 minutes • as a couple on one phone or each on your own",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "intro": "It's the only Halloween quiz played as a couple only, because a duo is something you compose. Each of you answers the same fifteen questions separately, and the result is calculated in two steps.",
+    "p1": "First, each one's role. The questions are about an imaginary heist: “The plan goes wrong. You...”, “Your seat in the car:”, “You get caught. You...”. Each answer weighs on one or two of the duo's six roles, and the heaviest role becomes yours.",
+    "p2": "Then, the duo. Each pair of roles matches a famous villain duo: chaos and heart give the Joker and Harley Quinn, heart and muscle give Bonnie and Clyde, brains and muscle give Darth Vader and the Emperor. Every combination is covered, including the same role twice.",
+    "p3": "On a single phone, the first player answers the whole series then passes the phone to the second. Remotely, each of you answers on your own and you see both answers after each question."
+  },
+  "section2": {
+    "title": "The six roles of a villain duo",
+    "intro": "In every villain duo, from movies to cartoons, you find the same roles. The quiz distinguishes six.",
+    "pillar1Title": "The brains",
+    "pillar1Text": "They wrote the plan minute by minute, and they hate it being changed.",
+    "pillar2Title": "The agent of chaos",
+    "pillar2Text": "They improvise, they laugh, and they blow up the plan as soon as they get bored.",
+    "pillar3Title": "The muscle",
+    "pillar3Text": "They charge in, carry the bags, take the hits, and protect the other without saying so.",
+    "pillar4Title": "The charm",
+    "pillar4Text": "They negotiate, they seduce, and they get the keys without forcing the lock.",
+    "pillar5Title": "The shadow",
+    "pillar5Text": "Discreet, loyal, already inside when the others arrive.",
+    "pillar6Title": "The heart",
+    "pillar6Text": "They follow the other out of love, and they're often the one who makes the crazy move."
+  },
+  "section3": {
+    "title": "The nine possible duos",
+    "p1": "The Joker and Harley Quinn, Bonnie and Clyde, Jessie and James of Team Rocket, Darth Vader and the Emperor, Voldemort and Bellatrix, Harley Quinn and Poison Ivy, Pinky and the Brain, Wario and Waluigi, Magneto and Mystique. Each duo has its card: what you have in common with the way they work, and a tip for Halloween night.",
+    "p2": "If you'd rather know each one's villain first, taken separately, <a href=\"/en/which-supervillain-are-you-quiz/\">the quiz about the supervillain you're most like</a> gives one portrait per person. And for a full evening, <a href=\"/en/who-dies-first-in-a-horror-movie-quiz/\">which of you dies first in a horror movie</a> and <a href=\"/en/who-would-get-possessed-quiz/\">who could get possessed</a> chain nicely afterwards.",
+    "p3": "All the seasonal quizzes are on <a href=\"/en/special-couple-quizzes/\">our special quizzes page</a>; the rest of the year, <a href=\"/en/couple-games/\">our couple games</a> take over."
+  },
+  "section4": {
+    "title": "What you should know",
+    "p1": "The characters belong to their creators. The duo images are illustrations made for the page, not images from the movies or games. And the heist of the century stays imaginary.",
+    "p2": "Nothing is saved: the answers stay on your phones. Only the duo obtained is counted, with no first name, to display one day how the results are distributed."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Can you take this quiz solo?",
+    "faq1A": "No, it's the only Halloween quiz that needs two players: the duo is calculated from your two roles. If you're on your own, the supervillain quiz gives an individual portrait.",
+    "faq2Q": "How is the duo chosen?",
+    "faq2A": "Each player gets one of six roles (the brains, the chaos, the muscle, the charm, the shadow, the heart), based on their answers. The pair of roles matches one of the quiz's nine duos. The same role twice also gives a duo: two agents of chaos make the Joker and Harley Quinn, two hearts make Bonnie and Clyde.",
+    "faq3Q": "Can you play remotely?",
+    "faq3A": "Yes. On the names screen, remote mode creates a game with a code and a QR code. Each of you answers on your own phone and sees the other's answer after each question.",
+    "faq4Q": "What if we don't like our duo?",
+    "faq4A": "Retake the quiz answering differently: the roles change quickly, and the duo with them. Many couples discover they're Pinky and the Brain and end up finding it very accurate.",
+    "faq5Q": "Are my answers saved?",
+    "faq5A": "No. The answers stay on your phones; only the duo obtained is counted, with no first name."
+  },
+  "jsonLd": {
+    "about": "Halloween quiz"
+  }
+}

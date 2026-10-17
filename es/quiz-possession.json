@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Quiz de Halloween • Solo/a o en pareja",
+    "title": "¿Quién de los dos podría ser poseído?",
+    "titleHighlight": "ser poseído",
+    "description": "Quince preguntas sobre tu curiosidad, tus noches, los objetos viejos que te traes a casa y tu forma de reaccionar cuando una puerta se cierra sola de golpe. El resultado es un riesgo de posesión en porcentaje, con lo que te protege y lo que te expone. En pareja, se sabe a quién de los dos elegirían los demonios.",
+    "subtitle": "15 preguntas • 5 minutos • solo/a, en pareja con un móvil o cada uno con el suyo",
+    "jumpBtn": "Hacer el quiz"
+  },
+  "section1": {
+    "title": "Cómo funciona el quiz",
+    "intro": "En todas las películas de posesiones, la víctima tiene el mismo perfil: curiosa, cansada, demasiado cómoda con las ouijas y los objetos del rastro. El quiz comprueba si es tu caso.",
+    "p1": "Las preguntas hablan de cosas muy concretas. Por ejemplo: «Hay una ouija tirada en el desván de la casa alquilada». Puedes proponer una partida esta noche, mirarla de lejos, guardarla sin tocarla o quemarla en el jardín. Cada respuesta vale de cero a tres puntos de riesgo, y la suma da un porcentaje.",
+    "p2": "Solo/a, descubres tu riesgo, tu veredicto entre cinco, y dos listas: lo que te protege y lo que te expone. En pareja, el primero responde, pasa el móvil, el segundo responde a su vez, y el resultado compara vuestros dos riesgos: quien tiene el porcentaje más alto es quien acaba poseído.",
+    "p3": "El modo a distancia también existe: una persona crea la partida, la otra se une con el código, cada uno responde en su móvil y veis vuestras dos respuestas después de cada pregunta."
+  },
+  "section2": {
+    "title": "Los cinco veredictos",
+    "intro": "El porcentaje se lee en cinco tramos, de la persona a la que nada afecta a la que haría bien en avisar a alguien.",
+    "pillar1Title": "Menos del 20 %: imposeíble",
+    "pillar1Text": "Puertas cerradas, ouija rechazada, edredón hasta la barbilla. Demasiado trabajo para un demonio.",
+    "pillar2Title": "Del 20 al 40 %: difícil de poseer",
+    "pillar2Text": "Los reflejos correctos, pero no puedes evitar mirar.",
+    "pillar3Title": "Del 40 al 60 %: poseíble una noche de cansancio",
+    "pillar3Text": "Un día normal, todo va bien. Una noche de octubre en una casa vieja, es discutible.",
+    "pillar4Title": "Del 60 al 80 %: el objetivo ideal",
+    "pillar4Text": "Hablas con los espejos y te traes objetos sin preguntar de dónde vienen.",
+    "pillar5Title": "Más del 80 %: ¿ya poseído/a?",
+    "pillar5Text": "Abres todas las puertas, dices que sí a todo, y te parece divertido."
+  },
+  "section3": {
+    "title": "Por qué es divertido en pareja",
+    "p1": "En una pareja, casi siempre hay una persona que quiere visitar la casa abandonada y otra que espera en el coche. El quiz le pone cifras. Y la persona más escéptica, la que dice «los fantasmas no existen», suele ser la que tiene el riesgo más alto, porque abre todas las puertas sin pensar.",
+    "p2": "Si os gusta el formato, <a href=\"/es/quiz-quien-muere-primero-pelicula-de-terror/\">el quiz de la película de terror</a> funciona con el mismo principio, en minutos de supervivencia en vez de porcentaje. Y para cambiar de registro sin salir del ambiente, <a href=\"/es/quiz-que-supervillano-eres/\">el supervillano que se parece a ti</a> o <a href=\"/es/quiz-que-duo-de-supervillanos-formais/\">el dúo de malvados que formáis</a> dan un retrato en vez de una cifra.",
+    "p3": "Todos estos quiz están reunidos en <a href=\"/es/quiz-especiales-para-parejas/\">la página de nuestros quiz especiales</a>, que cambia con la temporada."
+  },
+  "section4": {
+    "title": "Lo que hay que saber",
+    "p1": "Es un juego. Ninguna pregunta mide nada real, y la palabra «riesgo» hay que tomarla como en una película de Halloween. El único consejo de verdad del quiz es dormir bien en octubre.",
+    "p2": "No se guarda nada. Las respuestas se quedan en vuestro móvil, y repetir el quiz cambia el resultado si cambiáis de opinión sobre la ouija."
+  },
+  "seo": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Cómo se calcula el riesgo?",
+    "faq1A": "Cada respuesta vale de cero a tres puntos de riesgo. La suma de las quince preguntas se convierte en un porcentaje: cuarenta y cinco puntos son el 100 %, cero puntos son el 0 %. El veredicto depende del tramo en el que cae ese porcentaje.",
+    "faq2Q": "¿Se puede jugar solo/a?",
+    "faq2A": "Sí. Solo/a, obtienes tu riesgo, tu veredicto y las dos listas de lo que te protege y lo que te expone. En pareja, el quiz compara los dos riesgos y señala a quien elegirían los demonios.",
+    "faq3Q": "¿Quién acaba poseído cuando se juega en pareja?",
+    "faq3A": "Quien tiene el porcentaje más alto. En caso de empate, el quiz lo dice: el demonio tendrá que elegir.",
+    "faq4Q": "¿Se puede jugar a distancia?",
+    "faq4A": "Sí, desde la pantalla de los nombres. Una persona crea la partida, la otra se une con el código o el código QR, y cada uno responde en su móvil.",
+    "faq5Q": "¿Da miedo?",
+    "faq5A": "No. Las preguntas son divertidas, y lo peor que puede pasar es enterarte de que tu pareja le hablaría a una estatua en una iglesia abandonada."
+  },
+  "jsonLd": {
+    "about": "quiz de Halloween"
+  }
+}

@@ -469,5 +469,41 @@
     "shortTitle": "Test de compatibilité sexuelle",
     "metaDescription": "Test de compatibilité sexuelle à deux : 20 questions sur le désir, la tendresse, la nouveauté et le rythme, avec un score par dimension. Gratuit.",
     "description": "Vingt questions à deux sur le désir, la tendresse et la façon d'en parler, pour voir où vous vous rejoignez."
+  },
+  "speciauxCouple": {
+    "title": "Quiz spéciaux à faire en couple : Noël, Halloween…",
+    "shortTitle": "Quiz spéciaux",
+    "metaDescription": "Les quiz de saison à faire à deux. Pour Halloween : quel serial killer te correspond, qui meurt en premier dans un film d'horreur, qui pourrait se faire posséder, quel super-vilain es-tu. Gratuits.",
+    "description": "Les quiz un peu fous à faire à deux selon la saison : Halloween pour le moment, Noël ensuite."
+  },
+  "quizSerialKiller": {
+    "title": "Quiz : avec quel serial killer es-tu compatible ? (seul ou à deux)",
+    "shortTitle": "Quel serial killer te correspond",
+    "metaDescription": "Un quiz d'Halloween : 15 questions sur ta façon d'aimer, de mentir et de ranger, et le serial killer célèbre qui te ressemble le plus. Seul(e) ou à deux, gratuit.",
+    "description": "Quinze questions et le tueur célèbre qui te ressemble le plus, en version très grossie. À faire seul(e) ou à deux."
+  },
+  "quizMortFilmHorreur": {
+    "title": "Qui de nous deux meurt en premier dans un film d'horreur ? Le quiz",
+    "shortTitle": "Qui meurt en premier dans le film d'horreur",
+    "metaDescription": "15 situations de film d'horreur et un verdict en minutes : combien de temps tu tiens avant le générique, et qui de vous deux meurt en premier. Gratuit, seul(e) ou à deux.",
+    "description": "Quinze situations, un temps de survie en minutes, et le nom de la première victime quand vous jouez à deux."
+  },
+  "quizPossession": {
+    "title": "Qui de nous deux pourrait se faire posséder ? Le quiz d'Halloween",
+    "shortTitle": "Qui pourrait se faire posséder",
+    "metaDescription": "15 questions et un risque de possession en pourcentage pour chacun : qui de vous deux ouvre la porte aux démons ? Un quiz d'Halloween gratuit, seul(e) ou à deux.",
+    "description": "Quinze questions, un risque de possession en pourcentage, et celui ou celle que les démons choisiraient en premier."
+  },
+  "quizSuperVilain": {
+    "title": "Quiz : à quel super-vilain ressembles-tu le plus ? (seul ou à deux)",
+    "shortTitle": "Quel super-vilain es-tu",
+    "metaDescription": "Psychologie, mises en situation, équipement : 15 questions et le super-vilain qui te ressemble, du Joker à Maléfique. Un quiz d'Halloween gratuit, seul(e) ou à deux.",
+    "description": "Quinze questions sur ta psychologie, tes réactions et ton équipement de méchant, et le super-vilain qui te ressemble."
+  },
+  "quizDuoVilains": {
+    "title": "Quel duo de super-vilains formez-vous ? Le quiz à faire à deux",
+    "shortTitle": "Quel duo de super-vilains formez-vous",
+    "metaDescription": "À deux : 15 questions chacun, votre rôle dans le duo (le cerveau, le chaos, la force...) et le duo de méchants célèbre que vous formez, du Joker et Harley Quinn à Bonnie et Clyde.",
+    "description": "Chacun répond de son côté, et le quiz vous donne votre rôle dans le duo et le duo de méchants célèbre que vous formez."
   }
 }

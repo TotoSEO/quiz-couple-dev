@@ -7,6 +7,7 @@
   const celibLinks = versLiens(famillesNav.celib);
   const quizLinks = versLiens(famillesNav.quiz);
   const jeuLinks = versLiens(famillesNav.jeux);
+  const speciauxLinks = versLiens(famillesNav.speciaux || []);
   const directLinks = [
     // Le test de pureté vise un mot-clé très concurrentiel : il lui faut une
     // entrée de premier niveau, en plus de sa ligne dans la liste des tests
@@ -26,8 +27,10 @@
   const celibLinksFiltered = filterAvailable(celibLinks);
   const quizLinksFiltered = filterAvailable(quizLinks);
   const jeuLinksFiltered = filterAvailable(jeuLinks);
+  const speciauxLinksFiltered = filterAvailable(speciauxLinks);
   const directLinksFiltered = filterAvailable(directLinks);
   const urlJeux = getLocalizedUrl('jeuxCouple', lang);
+  const urlSpeciaux = getLocalizedUrl('speciauxCouple', lang);
 
   // Language names for selector
   const langNames = { fr: 'FR', en: 'EN', es: 'ES', de: 'DE', it: 'IT' };
@@ -36,6 +39,12 @@
   // Jeu d'icones SVG du menu (remplace les emojis, rendu plus travaille)
   function _svg(p) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>'; }
   const navIcons = {
+    // les quiz spéciaux d'Halloween (16 octobre 2026)
+    quizSerialKiller: _svg('<path d="M14 3l7 7-9 9-4-4z"/><path d="M8 15l-4.5 4.5a1.4 1.4 0 0 0 2 2L10 17"/><path d="M12 8l3 3"/>'),
+    quizMortFilmHorreur: _svg('<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 9h20M2 15h20M7 5v14M17 5v14"/>'),
+    quizPossession: _svg('<path d="M5 21v-9a7 7 0 0 1 14 0v9l-2.3-1.6L14.4 21l-2.4-1.6L9.6 21l-2.3-1.6z"/><path d="M9.5 11h.01M14.5 11h.01"/>'),
+    quizSuperVilain: _svg('<path d="M3 10c2-2 5-3 9-3s7 1 9 3c-1 3-3 5-5 5h-8c-2 0-4-2-5-5z"/><path d="M8 12h.01M16 12h.01"/><path d="M12 15v6"/>'),
+    quizDuoVilains: _svg('<path d="M2 9c2-1.5 4-2 6-2s4 .5 5 2c-1 2.5-2.5 4-4 4H6c-1.5 0-3-1.5-4-4z"/><path d="M11 13c2-1.5 4-2 6-2s4 .5 5 2c-1 2.5-2.5 4-4 4h-3c-1.5 0-3-1.5-4-4z"/>'),
     testCouple: _svg('<path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.2l-1.6-1.6a5 5 0 1 0-7.1 7.1L12 21.5l8.8-8.8a5 5 0 0 0 0-7.1z"/>'),
     testCommonPoints: _svg('<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>'),
     testCompatibilite: _svg('<path d="M8.5 19S3 15 3 10.2A3.3 3.3 0 0 1 8.5 7.8 3.3 3.3 0 0 1 14 10.2C14 15 8.5 19 8.5 19z"/><path d="M15 16.5c3.2-2.4 6-5.3 6-8.3a3.2 3.2 0 0 0-5.7-2"/>'),
@@ -293,6 +302,39 @@
               </div>
             </div>
 
+            <!-- Quiz spéciaux de saison : le libellé mène au hub, la flèche déplie. -->
+            <% if (speciauxLinksFiltered.length) { %>
+            <div class="nav-dropdown n2-famille nav-dropdown--scinde relative" data-megamenu style="--cat: var(--speciaux)">
+              <div class="n2-onglet n2-onglet--scinde">
+                <a href="<%= urlSpeciaux %>" class="nav-trigger-lien">
+                  <span class="n2-onglet-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L12 13.5 7.8 16l1.1-4.8L5.2 8l4.9-.4z"/></svg></span>
+                  <%= t('common:nav.categorySpeciaux', 'Quiz spéciaux') %>
+                  <span class="n2-onglet-nb"><%= speciauxLinksFiltered.length %></span>
+                </a>
+                <button type="button" class="nav-trigger-fleche" aria-expanded="false"
+                        aria-label="<%= t('common:nav.deployerSpeciaux', 'Voir tous les quiz spéciaux') %>">
+                  <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+              <div class="nav-megamenu nav-megamenu--speciaux nav-dropdown-content hidden">
+                <div class="nav-megamenu-inner">
+                  <div class="nav-megamenu-grid">
+                    <% for (const link of speciauxLinksFiltered) { %>
+                    <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item">
+                      <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
+                      <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                    </a>
+                    <% } %>
+                  </div>
+                  <a href="<%= urlSpeciaux %>" class="nav-megamenu-pied">
+                    <%= t('common:nav.deployerSpeciaux', 'Voir tous les quiz spéciaux') %>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <% } %>
+
             <!-- Vedette : test de pureté -->
             <% for (const link of directLinksFiltered) { if (!link.vedette) continue; %>
             <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-vedette">
@@ -412,6 +454,33 @@
               </div>
             </div>
           </div>
+
+          <% if (speciauxLinksFiltered.length) { %>
+          <!-- Quiz spéciaux : le libellé mène au hub, la flèche déplie. -->
+          <div class="mobile-accordion mobile-accordion--scinde" data-accordeon="speciaux" style="--cat: var(--speciaux)">
+            <div class="mobile-accordion-trigger mobile-trigger-scinde">
+              <a href="<%= urlSpeciaux %>" class="mobile-trigger-lien">
+                <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L12 13.5 7.8 16l1.1-4.8L5.2 8l4.9-.4z"/></svg></span>
+                <%= t('common:nav.categorySpeciaux', 'Quiz spéciaux') %>
+                <span class="mobile-nav-count"><%= speciauxLinksFiltered.length %></span>
+              </a>
+              <button type="button" class="mobile-trigger-fleche" aria-expanded="false"
+                      aria-label="<%= t('common:nav.deployerSpeciaux', 'Voir tous les quiz spéciaux') %>">
+                <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <div class="mobile-accordion-content hidden">
+              <div class="mobile-nav-grid">
+                <% for (const link of speciauxLinksFiltered) { %>
+                <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item">
+                  <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
+                  <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                </a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+          <% } %>
 
           <div class="mobile-nav-divider"></div>
 

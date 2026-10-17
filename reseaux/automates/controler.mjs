@@ -10,7 +10,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { controlerPost } from './lib/controle.mjs';
 import { controlerStylePost } from './lib/style.mjs';
-import { categorieAttendue, MELANGE_DEFAUT, MELANGE_MIPAPS } from './lib/calendrier.mjs';
+import { categorieAttendue, estRetiree, MELANGE_DEFAUT, MELANGE_MIPAPS } from './lib/calendrier.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
 // Deux ateliers, chacun sa banque et sa grille : un fichier sous
@@ -54,6 +54,10 @@ for (const fichier of process.argv.slice(2)) {
     const banque = (categorie) => SUJETS[categorie] ?? [];
     const attendu = categorieAttendue(estMipaps(fichier) ? MELANGE_MIPAPS : MELANGE_DEFAUT, post.jour, post.creneau);
     if (attendu && attendu !== post.categorie) fautes.push(`le créneau attend la catégorie ${attendu}`);
+    // les animations des mascottes ne partent plus (16 octobre 2026 au soir,
+    // Thomas : « ça sert à rien de continuer ») : la synchro retiendrait le
+    // post, autant ne pas l'écrire
+    if (estRetiree(post.categorie)) fautes.push(`la catégorie ${post.categorie} (animation des mascottes) est retirée de la grille depuis le 16 octobre 2026 : rien de cette catégorie ne part plus, on écrit ${attendu || 'la catégorie attendue'}`);
     const nom = `${post.jour}-${post.creneau}.json`;
     if (path.basename(fichier) !== nom) fautes.push(`le fichier doit s'appeler ${nom}`);
     // le sujet : celui du jour s'il est daté, sinon un sujet libre de la banque
@@ -63,6 +67,12 @@ for (const fichier of process.argv.slice(2)) {
     // et un sujet « idee-<début de l'identifiant> », hors banque
     if (post.idee_id && !/^idee-[0-9a-f]{8}$/.test(post.sujet || '')) fautes.push(`un post tiré d'une idée porte le sujet idee-<huit premiers caractères de idee_id>, pas « ${post.sujet} »`);
     if (!date && !post.idee_id && !banque(post.categorie).some((s) => s.id === post.sujet)) fautes.push(`sujet « ${post.sujet} » absent de la banque ${post.categorie} (sujets.json)`);
+    // un sujet de la banque qu'un sujet daté réserve (son champ « theme » :
+    // l'édition de Noël des dilemmes, celle du Nouvel An des « Connais-tu »)
+    // ne se prend qu'à cette date : sinon la routine l'aurait pris dans
+    // l'ordre normal, un quiz de Noël en novembre
+    const reserve = datés.find((s) => s.theme === post.sujet);
+    if (!date && reserve) fautes.push(`sujet ${post.sujet} réservé au ${reserve.jour} (${reserve.creneau}, sujet daté ${reserve.id})`);
     const deja = prisAilleurs(fichier).get(post.sujet);
     if (post.sujet && deja) fautes.push(`sujet ${post.sujet} déjà utilisé dans ${deja}`);
   } catch (e) {

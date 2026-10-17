@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "badge": "Quiz di Halloween • Da solo/a o in due",
+    "title": "A quale supercattivo somigli di più?",
+    "titleHighlight": "supercattivo",
+    "description": "Quindici domande sulla tua psicologia, le tue reazioni nelle situazioni, il tuo covo ideale e la tua attrezzatura da cattivo. Alla fine, il supercattivo che ti somiglia di più, da Joker a Malefica, con il suo ritratto e un consiglio per Halloween. Da solo/a, o in due per confrontarvi.",
+    "subtitle": "15 domande • 5 minuti • da solo/a, in due su un telefono o ognuno sul proprio",
+    "jumpBtn": "Fai il quiz"
+  },
+  "section1": {
+    "title": "Come funziona il quiz",
+    "intro": "È un test della personalità, ma con i mantelli. Le domande mescolano tre cose: quello che pensi, quello che faresti in una data situazione, e quello che sceglieresti come attrezzatura, covo o animale totem.",
+    "p1": "Per esempio: «Qualcuno ti tradisce. Tu...» oppure «Ti offrono un potere. Quale?». Ogni risposta pesa su uno o due degli otto cattivi del quiz. Alla fine, il cattivo che ha ricevuto più punti vince, e i tre tratti che emergono di più dalle tue risposte compaiono in barre.",
+    "p2": "Da solo/a, rispondi alle quindici domande e scopri il tuo cattivo. In due, il primo risponde a tutta la serie, passa il telefono, e il secondo risponde senza vedere le sue risposte. I due ritratti compaiono uno accanto all'altro, con il numero di risposte identiche.",
+    "p3": "La modalità a distanza permette di giocare ognuno sul proprio telefono: una persona crea la partita, l'altra si unisce con il codice, e vedete le vostre due risposte dopo ogni domanda."
+  },
+  "section2": {
+    "title": "Gli otto cattivi del quiz",
+    "intro": "Abbiamo preso cattivi che tutti conoscono, dal cinema, dai fumetti e dai cartoni animati, e per ciascuno il tratto del carattere che lo riassume.",
+    "pillar1Title": "Joker",
+    "pillar1Text": "Il caos, la risata, il piano che cambia ogni cinque minuti.",
+    "pillar2Title": "Harley Quinn",
+    "pillar2Text": "L'amore troppo forte, i brillantini, e la forza di andarsene quando serve.",
+    "pillar3Title": "Loki",
+    "pillar3Text": "L'astuzia, il doppio gioco, e il bisogno di essere amato dietro a tutto questo.",
+    "pillar4Title": "Thanos",
+    "pillar4Text": "La logica, il piano, e il sacrificio in nome di un equilibrio che nessuno ha chiesto.",
+    "pillar5Title": "Darth Vader",
+    "pillar5Text": "Il potere scelto dopo una perdita, l'armatura portata come un lutto, e il buono che resta.",
+    "pillar6Title": "Voldemort",
+    "pillar6Text": "Il controllo, la paura della morte, e il nome che non si pronuncia.",
+    "pillar7Title": "Malefica",
+    "pillar7Text": "L'eleganza, il rancore, e la maledizione che cade sull'invito dimenticato.",
+    "pillar8Title": "Crudelia De Mon",
+    "pillar8Text": "Lo stile, il lusso, l'ossessione, e un'auto guidata troppo veloce."
+  },
+  "section3": {
+    "title": "In due, la domanda che conta: alleanza o guerra?",
+    "p1": "Quando giocate in due, i due ritratti compaiono uno accanto all'altro. Due Joker sono una città che non dorme più. Un Thanos e una Harley Quinn sono una discussione animata su cosa voglia dire «ragionevole». E se volete sapere precisamente quale duo formate, con un ruolo per ciascuno, <a href=\"/it/quiz-quale-duo-di-supercattivi-siete/\">il quiz del duo di supercattivi</a> è fatto per questo: si gioca solo in due.",
+    "p2": "Gli altri quiz di Halloween sono nella stessa atmosfera: <a href=\"/it/quiz-quale-serial-killer-e-compatibile-con-te/\">il serial killer che ti somiglia</a> per un ritratto più cupo, <a href=\"/it/quiz-chi-muore-per-primo-nel-film-horror/\">chi di voi due muore per primo in un film horror</a> per un cronometro, e <a href=\"/it/quiz-chi-potrebbe-essere-posseduto/\">chi potrebbe essere posseduto</a> per una percentuale. Sono tutti riuniti su <a href=\"/it/quiz-speciali-per-coppie/\">la pagina dei nostri quiz speciali</a>."
+  },
+  "section4": {
+    "title": "Quello che c'è da sapere",
+    "p1": "I personaggi appartengono ai loro creatori e ai loro studi; il quiz li usa come li si usa a una festa in maschera, per ridere di quello che si riconosce di sé in un cattivo di finzione. Le immagini dei ritratti sono illustrazioni fatte per la pagina, non immagini dei film.",
+    "p2": "Niente viene salvato: le risposte restano sul tuo telefono. Viene contato solo il cattivo ottenuto, senza nome né risposte, per mostrare un giorno la distribuzione dei risultati sulla pagina."
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Quali supercattivi si possono ottenere?",
+    "faq1A": "Otto: Joker, Harley Quinn, Loki, Thanos, Darth Vader, Voldemort, Malefica e Crudelia De Mon. Ognuno corrisponde a un tratto del carattere che le domande misurano.",
+    "faq2Q": "Come viene calcolato il risultato?",
+    "faq2A": "Ogni risposta dà uno o due punti a uno o due cattivi. Alla fine, ogni cattivo viene rapportato al massimo che poteva ricevere, e quello con la percentuale più alta vince. I tre tratti più presenti compaiono sotto il risultato.",
+    "faq3Q": "Si può fare in due?",
+    "faq3A": "Sì, a turno sullo stesso telefono, o ognuno sul proprio con la modalità a distanza. I due ritratti compaiono uno accanto all'altro alla fine.",
+    "faq4Q": "Qual è la differenza con il quiz del duo di supercattivi?",
+    "faq4A": "Qui, ognuno ottiene il proprio cattivo. Il quiz del duo, invece, dà un ruolo a ciascuno (il cervello, il caos, la forza, il fascino, l'ombra, il cuore) e il duo celebre che questi due ruoli formano insieme. Si gioca solo in due.",
+    "faq5Q": "Le mie risposte vengono salvate?",
+    "faq5A": "No. Le risposte restano sul tuo telefono. Viene contato solo il cattivo ottenuto, senza nome, per la distribuzione dei risultati."
+  },
+  "jsonLd": {
+    "about": "quiz di Halloween"
+  }
+}

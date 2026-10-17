@@ -10,7 +10,11 @@
 // l'admin dès la saisie : une modification ici en appelle une là-bas.
 import { ajouterJours, categorieAttendue } from './calendrier.mjs';
 
-export const CATEGORIES_IDEE = ['pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd', 'dix-mais', 'baton'];
+// (pov, statique et coquin, les animations des mascottes, n'y sont plus
+// depuis le 16 octobre 2026 au soir : retirées de la grille, voir
+// CATEGORIES_RETIREES dans calendrier.mjs ; une idée notée avant dans une
+// de ces catégories n'a plus de créneau et reste sans creneau_vise)
+export const CATEGORIES_IDEE = ['connais-tu', 'tu-preferes', 'phrase', 'carrousel', 'bd', 'dix-mais', 'baton'];
 // celles des mipaps (compte fr), pour le même calcul
 export const CATEGORIES_IDEE_MIPAPS = ['mipaps-anime', 'mipaps-statique', 'mipaps-histoire', 'mipaps-post'];
 export const categoriesIdee = (langue) => (langue === 'fr' ? CATEGORIES_IDEE_MIPAPS : CATEGORIES_IDEE);

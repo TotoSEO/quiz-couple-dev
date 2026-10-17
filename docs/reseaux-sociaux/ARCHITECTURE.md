@@ -63,15 +63,27 @@ même jour par Thomas ; ses choix sont en partie 1.2.
 - **Le mélange de la semaine :** 7 reels du bonhomme bâton (tous les
   matins depuis le 16 octobre 2026 au soir, Thomas : « on lance ces
   animations à raison de une par jour, du coup réduis les formats posts
-  classiques »), 3 animations avec les mascottes (le lundi et le mercredi
-  soir, la coquine le vendredi soir ; dix par semaine jusqu'au 16 octobre
-  2026), 3 « Connais-tu ton partenaire ? », 2 « Tu préfères », 2 reels
-  statiques, 1 phrase tendre (le dimanche soir), 1 BD en quatre cases le
+  classiques »), 7 reels de dilemmes « Tu préfères » (une édition par reel,
+  quatre midis et trois soirs), 3 « Connais-tu ton partenaire ? » (les
+  midis du lundi, du mercredi et du vendredi), 1 BD en quatre cases le
   mardi soir, 1 carrousel de questions le jeudi soir (le format qui se
-  garde) et, depuis le 12 octobre 2026, 1 carrousel « He's a 10 but... » le
-  samedi soir. Tout dessiné, aucune photo. 273 posts sur les trois premiers
-  mois, avec une banque de sujets (`reseaux/atelier/sujets.json`). Et chaque
-  jour, le reel du matin repart en story juste après sa publication.
+  garde), 1 carrousel « He's a 10 but... » le samedi soir (12 octobre 2026)
+  et 1 phrase tendre le dimanche soir. **Plus aucune animation des
+  mascottes depuis le 16 octobre 2026 au soir** : dix par semaine au départ
+  (POV, minis, coquine, statiques), trois le matin du 16 octobre, zéro le
+  soir même, Thomas devant les chiffres des dix premiers jours : « les
+  vidéos d'animations avec les deux mascottes ne fonctionnent pas du tout.
+  Ça sert à rien de continuer, sur les dizaines qui sont sorties y'en a pas
+  une qui a fonctionné. Le seul qui a fait 30 000 vues est le reel dilemmes
+  version date night. Je pense qu'il va falloir plutôt se concentrer sur ces
+  reels-là, ceux qui sont familiers. » Les catégories `pov`, `coquin` et
+  `statique` sont retirées (`CATEGORIES_RETIREES`, lib/calendrier.mjs) : la
+  synchro, le rendu et la publication retiennent toute déclinaison qui les
+  porte, et la routine réécrit les posts déjà écrits (`hors_grille`). Tout
+  dessiné, aucune photo. Une banque de sujets
+  (`reseaux/atelier/sujets.json`, 108 éditions de dilemmes depuis ce soir-là).
+  Et chaque jour, le reel du matin repart en story juste après sa
+  publication.
 
 ---
 
@@ -228,8 +240,14 @@ tu valides les formats, et l'automate les décline.
 > (trois matins par semaine le matin même, puis Thomas, le soir, devant la
 > promesse de la lune et les chiens : « on lance ces animations à raison de
 > une par jour, du coup réduis les formats posts classiques » ; sur le
-> dragon : « je veux exactement ce style de post »). Le
-> tableau ci-dessous est le plan de départ.
+> dragon : « je veux exactement ce style de post »). Le même soir, les
+> animations des mascottes (`pov`, avec ses catégories coquin et statique)
+> sont sorties de la grille : « les vidéos d'animations avec les deux
+> mascottes ne fonctionnent pas du tout [...] le seul qui a fait 30 000 vues
+> est le reel dilemmes version date night » ; le gabarit reste dans le
+> studio, pour les scènes dessinées des BD et des carrousels, et les
+> dilemmes « Tu préfères » sont devenus le format de tous les jours (une
+> édition par reel). Le tableau ci-dessous est le plan de départ.
 
 Un gabarit est un format réutilisable : sa mise en page, ses animations, ses
 sons et la liste des champs à remplir (avec leurs longueurs maximales). La

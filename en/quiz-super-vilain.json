@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "badge": "Halloween quiz • Solo or as a couple",
+    "title": "Which supervillain are you most like?",
+    "titleHighlight": "supervillain",
+    "description": "Fifteen questions about your psychology, how you react under pressure, your ideal lair and your villain gear. At the end, the supervillain you're most like, from the Joker to Maleficent, with their portrait and a Halloween tip. Solo, or as a couple to compare.",
+    "subtitle": "15 questions • 5 minutes • solo, as a couple on one phone or each on your own",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "intro": "It's a personality test, but with capes. The questions mix three things: what you think, what you'd do in a given situation, and what you'd choose as gear, lair or spirit animal.",
+    "p1": "For example: “Someone betrays you. You...” or “You're offered a power. Which one?”. Each answer weighs on one or two of the quiz's eight villains. At the end, the villain with the most points wins, and the three traits that stand out most in your answers show up as gauges.",
+    "p2": "Solo, you answer the fifteen questions and discover your villain. As a couple, the first player answers the whole series, passes the phone, and the second answers without seeing their answers. Both portraits show up side by side, with the number of identical answers.",
+    "p3": "Remote mode lets you each play on your own phone: one person creates the game, the other joins with the code, and you see both answers after each question."
+  },
+  "section2": {
+    "title": "The quiz's eight villains",
+    "intro": "We took villains everyone knows, from movies, comics and cartoons, and for each the character trait that sums them up.",
+    "pillar1Title": "The Joker",
+    "pillar1Text": "Chaos, laughter, the plan that changes every five minutes.",
+    "pillar2Title": "Harley Quinn",
+    "pillar2Text": "Love that's too strong, glitter, and the strength to leave when you have to.",
+    "pillar3Title": "Loki",
+    "pillar3Text": "Cunning, the double game, and the need to be loved behind it all.",
+    "pillar4Title": "Thanos",
+    "pillar4Text": "Logic, the plan, and sacrifice in the name of a balance nobody asked for.",
+    "pillar5Title": "Darth Vader",
+    "pillar5Text": "Power chosen after a loss, armour worn like mourning, and the good that remains.",
+    "pillar6Title": "Voldemort",
+    "pillar6Text": "Control, the fear of death, and the name nobody says.",
+    "pillar7Title": "Maleficent",
+    "pillar7Text": "Elegance, grudges, and the curse that falls on the forgotten invitation.",
+    "pillar8Title": "Cruella de Vil",
+    "pillar8Text": "Style, luxury, obsession, and a car driven too fast."
+  },
+  "section3": {
+    "title": "As a couple, the question that matters: alliance or war?",
+    "p1": "When you play as a couple, both portraits show up side by side. Two Jokers is a city that never sleeps again. A Thanos and a Harley Quinn is a lively discussion about what “reasonable” means. And if you want to know precisely which duo you form, with a role for each of you, <a href=\"/en/which-supervillain-duo-are-you-quiz/\">the supervillain duo quiz</a> is made for that: it's played as a couple only.",
+    "p2": "The other Halloween quizzes are in the same mood: <a href=\"/en/which-serial-killer-are-you-compatible-with-quiz/\">the serial killer you're most like</a> for a darker portrait, <a href=\"/en/who-dies-first-in-a-horror-movie-quiz/\">which of you dies first in a horror movie</a> for a timer, and <a href=\"/en/who-would-get-possessed-quiz/\">who could get possessed</a> for a percentage. They're all gathered on <a href=\"/en/special-couple-quizzes/\">our special quizzes page</a>."
+  },
+  "section4": {
+    "title": "What you should know",
+    "p1": "The characters belong to their creators and their studios; the quiz uses them the way you'd use them at a costume party, to laugh at what you recognise of yourself in a fictional villain. The portrait images are illustrations made for the page, not images from the movies.",
+    "p2": "Nothing is saved: the answers stay on your phone. Only the villain obtained is counted, with no first name or answers, to display one day how the results are distributed on the page."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Which supervillains can you get?",
+    "faq1A": "Eight: the Joker, Harley Quinn, Loki, Thanos, Darth Vader, Voldemort, Maleficent and Cruella de Vil. Each one matches a character trait the questions measure.",
+    "faq2Q": "How is the result calculated?",
+    "faq2A": "Each answer gives one or two points to one or two villains. At the end, each villain is compared to the maximum it could receive, and the one with the highest percentage wins. The three most present traits show up under the result.",
+    "faq3Q": "Can you take it as a couple?",
+    "faq3A": "Yes, taking turns on the same phone, or each on your own with remote mode. Both portraits show up side by side at the end.",
+    "faq4Q": "What's the difference with the supervillain duo quiz?",
+    "faq4A": "Here, each of you gets your own villain. The duo quiz gives each of you a role (the brains, the chaos, the muscle, the charm, the shadow, the heart) and the famous duo those two roles form together. It's played as a couple only.",
+    "faq5Q": "Are my answers saved?",
+    "faq5A": "No. The answers stay on your phone. Only the villain obtained is counted, with no first name, for the distribution of results."
+  },
+  "jsonLd": {
+    "about": "Halloween quiz"
+  }
+}

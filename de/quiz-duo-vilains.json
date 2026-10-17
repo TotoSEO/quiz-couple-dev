@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "badge": "Halloween-Quiz • Zu zweit",
+    "title": "Welches Superschurken-Duo seid ihr?",
+    "titleHighlight": "Superschurken-Duo",
+    "description": "Je fünfzehn Fragen dazu, wie ihr einen Coup plant, wie ihr reagiert, wenn der Plan schiefläuft, und wie ihr die Rollen aufteilt. Das Ergebnis zeigt die Rolle jedes Einzelnen im Duo (das Gehirn, das Chaos, die Kraft, der Charme, der Schatten oder das Herz) und dann das berühmte Schurken-Duo, das ihr zu zweit bildet, vom Joker und Harley Quinn bis Bonnie und Clyde.",
+    "subtitle": "Je 15 Fragen • 5 Minuten • zu zweit an einem Handy oder jeder am eigenen",
+    "jumpBtn": "Zum Quiz"
+  },
+  "section1": {
+    "title": "So funktioniert das Quiz",
+    "intro": "Es ist das einzige Halloween-Quiz, das nur zu zweit gespielt wird, denn ein Duo stellt man zusammen. Jeder beantwortet für sich dieselben fünfzehn Fragen, und das Ergebnis wird in zwei Schritten berechnet.",
+    "p1": "Zuerst die Rolle jedes Einzelnen. Die Fragen handeln von einem erfundenen Coup: „Der Plan läuft schief. Du...“, „Dein Platz im Auto:“, „Ihr werdet erwischt. Du...“. Jede Antwort zählt für eine oder zwei der sechs Rollen des Duos, und die am stärksten besetzte Rolle wird deine.",
+    "p2": "Dann das Duo. Jedes Rollenpaar entspricht einem berühmten Schurken-Duo: Chaos und Herz ergeben den Joker und Harley Quinn, Herz und Kraft ergeben Bonnie und Clyde, Gehirn und Kraft ergeben Darth Vader und den Imperator. Alle Kombinationen sind abgedeckt, auch zweimal dieselbe Rolle.",
+    "p3": "An einem einzigen Handy beantwortet der Erste die ganze Reihe und gibt das Handy dann dem Zweiten. Aus der Ferne antwortet jeder auf dem eigenen, und ihr seht nach jeder Frage eure beiden Antworten."
+  },
+  "section2": {
+    "title": "Die sechs Rollen eines Schurken-Duos",
+    "intro": "In allen Schurken-Duos, vom Kino bis zum Zeichentrick, finden sich dieselben Rollen. Das Quiz unterscheidet sechs.",
+    "pillar1Title": "Das Gehirn",
+    "pillar1Text": "Es hat den Plan Minute für Minute geschrieben und hasst es, wenn man ihn ändert.",
+    "pillar2Title": "Der Agent des Chaos",
+    "pillar2Text": "Er improvisiert, lacht, und sprengt den Plan, sobald ihm langweilig wird.",
+    "pillar3Title": "Die Kraft",
+    "pillar3Text": "Sie stürmt los, trägt die Taschen, steckt die Schläge ein, und beschützt den anderen, ohne es zu sagen.",
+    "pillar4Title": "Der Charme",
+    "pillar4Text": "Er verhandelt, verführt, und bekommt die Schlüssel, ohne das Schloss aufzubrechen.",
+    "pillar5Title": "Der Schatten",
+    "pillar5Text": "Diskret, treu, schon drinnen, wenn die anderen ankommen.",
+    "pillar6Title": "Das Herz",
+    "pillar6Text": "Es folgt dem anderen aus Liebe, und oft macht es die verrückte Geste."
+  },
+  "section3": {
+    "title": "Die neun möglichen Duos",
+    "p1": "Der Joker und Harley Quinn, Bonnie und Clyde, Jessie und James von Team Rocket, Darth Vader und der Imperator, Voldemort und Bellatrix, Harley Quinn und Poison Ivy, Pinky und der Brain, Wario und Waluigi, Magneto und Mystique. Jedes Duo hat seine Karte: was euch an ihrer Art ähnelt, und ein Tipp für den Halloween-Abend.",
+    "p2": "Wenn ihr zuerst den Schurken jedes Einzelnen kennen wollt, getrennt betrachtet, gibt <a href=\"/de/quiz-welcher-superschurke-bist-du/\">das Quiz zum Superschurken, der dir ähnelt</a> ein Porträt pro Person. Und für einen ganzen Abend reihen sich <a href=\"/de/quiz-wer-stirbt-zuerst-im-horrorfilm/\">wer von euch zuerst im Horrorfilm stirbt</a> und <a href=\"/de/quiz-wer-wuerde-besessen-werden/\">wer besessen werden könnte</a> gut hinten an.",
+    "p3": "Alle saisonalen Quiz stehen auf <a href=\"/de/besondere-paar-quiz/\">der Seite unserer besonderen Quiz</a>; den Rest des Jahres übernehmen <a href=\"/de/paarspiele/\">unsere Paarspiele</a>."
+  },
+  "section4": {
+    "title": "Was man wissen sollte",
+    "p1": "Die Figuren gehören ihren Schöpfern. Die Bilder der Duos sind für die Seite angefertigte Illustrationen, keine Bilder aus den Filmen oder Spielen. Und der Coup des Jahrhunderts bleibt erfunden.",
+    "p2": "Nichts wird gespeichert: Die Antworten bleiben auf euren Handys. Nur das erzielte Duo wird gezählt, ohne Vornamen, um eines Tages die Verteilung der Ergebnisse zu zeigen."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Kann man dieses Quiz allein machen?",
+    "faq1A": "Nein, es ist das einzige Halloween-Quiz, das zwei Spieler verlangt: Das Duo wird aus euren beiden Rollen berechnet. Wenn du allein bist, gibt das Superschurken-Quiz ein Einzelporträt.",
+    "faq2Q": "Wie wird das Duo bestimmt?",
+    "faq2A": "Jeder Spieler bekommt anhand seiner Antworten eine von sechs Rollen (das Gehirn, das Chaos, die Kraft, der Charme, der Schatten, das Herz). Das Rollenpaar entspricht einem der neun Duos des Quiz. Zweimal dieselbe Rolle ergibt auch ein Duo: Zwei Agenten des Chaos sind der Joker und Harley Quinn, zwei Herzen sind Bonnie und Clyde.",
+    "faq3Q": "Kann man aus der Ferne spielen?",
+    "faq3A": "Ja. Auf dem Namensbildschirm erstellt der Fernmodus eine Partie mit Code und QR-Code. Jeder antwortet auf dem eigenen Handy und sieht nach jeder Frage die Antwort des anderen.",
+    "faq4Q": "Und wenn uns unser Duo nicht gefällt?",
+    "faq4A": "Wiederholt das Quiz mit anderen Antworten: Die Rollen ändern sich schnell, und das Duo mit ihnen. Viele Paare entdecken, dass sie Pinky und der Brain sind, und finden es am Ende sehr treffend.",
+    "faq5Q": "Werden meine Antworten gespeichert?",
+    "faq5A": "Nein. Die Antworten bleiben auf euren Handys; nur das erzielte Duo wird gezählt, ohne Vornamen."
+  },
+  "jsonLd": {
+    "about": "Halloween-Quiz"
+  }
+}

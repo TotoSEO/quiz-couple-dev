@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Quiz de Halloween • Solo/a o en pareja",
+    "title": "¿Quién de los dos muere primero en una película de terror?",
+    "titleHighlight": "película de terror",
+    "description": "Quince situaciones de película de terror, cuatro reacciones posibles cada vez. El resultado te dice cuántos minutos aguantas antes de salir de la historia, en una película de dos horas y media como máximo. En pareja, cada uno responde por su lado, y se sabe quién muere primero.",
+    "subtitle": "15 situaciones • 5 minutos • solo/a, en pareja con un móvil o cada uno con el suyo",
+    "jumpBtn": "Hacer el quiz"
+  },
+  "section1": {
+    "title": "Cómo funciona el quiz",
+    "intro": "El principio es sencillo: te ponemos en las situaciones que todo el mundo ha visto en el cine, y eliges lo que harías de verdad. No lo que habría que hacer, lo que harías.",
+    "p1": "Por ejemplo: «Son las 23 h. Un ruido en el desván, como pasos». Puedes subir a mirar con una linterna que parpadea, mandar a tu pareja, cerrar la trampilla con llave y encender todas las luces, o irte a dormir a otro sitio ahora mismo. Cada reacción vale de cero a tres puntos, y la suma de las quince situaciones se convierte en un tiempo de supervivencia.",
+    "p2": "Una película de terror dura como mucho dos horas y media. Con los peores reflejos, aguantas cinco minutos, lo que duran los créditos iniciales. Con los mejores, llegas a las 2 h 30: has sobrevivido a toda la película. Entre medias, el resultado te dice en qué minuto sales de la historia, y qué decisiones te han salvado o perdido.",
+    "p3": "En pareja, el primero responde a las quince situaciones, pasa el móvil, y el segundo responde a su vez. Vuestros dos tiempos aparecen en la misma línea del tiempo, con el nombre de la primera víctima y las situaciones en las que no habéis reaccionado igual. Si no estáis juntos, el modo a distancia permite responder cada uno en su móvil."
+  },
+  "section2": {
+    "title": "Los cinco veredictos, de la escena inicial a los créditos finales",
+    "intro": "El tiempo de supervivencia se lee en cinco tramos, y cada uno corresponde a un personaje que todo el mundo reconoce.",
+    "pillar1Title": "Menos de 25 minutos: la escena inicial",
+    "pillar1Text": "Bajas al sótano diciendo que es el viento. La película apenas empieza y tu nombre ya sale en los créditos.",
+    "pillar2Title": "De 25 a 55 minutos: la primera víctima",
+    "pillar2Text": "La gente te coge un poco de cariño, y luego vas a ver ese ruido en el desván. El público grita, pero ya lo sabía.",
+    "pillar3Title": "De 55 a 90 minutos: la mitad de la película",
+    "pillar3Text": "Los reflejos correctos una de cada dos veces, y un último vistazo para comprobar que el asesino está bien en el suelo.",
+    "pillar4Title": "De 1 h 30 a 2 h 10: casi hasta el final",
+    "pillar4Text": "Puertas cerradas, llaves en la mano, atajo rechazado. Queda la última escena, en la que a todo el mundo se le caen las llaves.",
+    "pillar5Title": "Más de 2 h 10: la superviviente o el superviviente",
+    "pillar5Text": "Has entendido las reglas y aguantas hasta los créditos. La película cuenta tu historia, y la secuela te espera."
+  },
+  "section3": {
+    "title": "Las reglas de supervivencia que comprueba el quiz",
+    "p1": "Todas las películas de terror tienen las mismas reglas, y todo el mundo las conoce: no separarse, no bajar al sótano, no leer nunca un libro viejo en voz alta, rechazar los atajos por el bosque, y cuando el asesino está en el suelo, no comprobar, huir. El quiz repasa estas reglas una por una, en situaciones concretas.",
+    "p2": "Lo divertido en pareja es descubrir que uno de los dos tiene todos los reflejos correctos y que el otro abre la trampilla del desván en la primera pregunta. En general, quien muere primero es también quien dice «que no, que solo es una película» cuando miráis <a href=\"/es/quiz-quien-podria-ser-poseido/\">quién de los dos podría ser poseído</a>.",
+    "p3": "Para seguir con la noche, <a href=\"/es/quiz-con-que-asesino-en-serie-eres-compatible/\">el quiz del asesino en serie compatible</a> y <a href=\"/es/quiz-que-supervillano-eres/\">el del supervillano que se parece a ti</a> van en la misma línea, con un retrato al final en vez de un cronómetro. Y <a href=\"/es/quiz-especiales-para-parejas/\">todos nuestros quiz de temporada</a> están reunidos en una sola página."
+  },
+  "section4": {
+    "title": "Dos aclaraciones útiles",
+    "p1": "Los minutos se calculan sobre la suma de los puntos, entre 5 y 150: es una escala, no una predicción. Dos personas con el mismo total tienen el mismo tiempo, aunque no hayan respondido igual a las mismas preguntas. La lista de lo que te ha salvado y de lo que te ha perdido te dice dónde se ha decidido.",
+    "p2": "No se guarda nada. Las respuestas se quedan en vuestro móvil, y podéis repetir el quiz tantas veces como queráis, cambiando de papel o de respuestas."
+  },
+  "seo": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿Por qué un máximo de 2 h 30?",
+    "faq1A": "Porque es lo que dura una película de terror muy larga. Más allá, has sobrevivido a todo: el resultado muestra entonces «hasta los créditos» en vez de un número de minutos.",
+    "faq2Q": "¿Hay que ser dos para jugar?",
+    "faq2A": "No. Solo/a, obtienes tu tiempo de supervivencia y tu veredicto. En pareja, el quiz añade la comparación: quién muere primero, y en qué situaciones no habéis reaccionado igual.",
+    "faq3Q": "¿Hay respuestas buenas y malas?",
+    "faq3A": "Sí, en el sentido del cine: la reacción que vale tres puntos es la que te mantiene con vida en una película de terror, la que vale cero es la de la víctima clásica. En la vida real, bajar al sótano rara vez es mortal.",
+    "faq4Q": "¿Se puede jugar a distancia?",
+    "faq4A": "Sí. En la pantalla de los nombres, el modo a distancia crea una partida con un código y un código QR. Cada uno responde en su móvil y ve la reacción del otro después de cada situación.",
+    "faq5Q": "¿Se guardan mis respuestas?",
+    "faq5A": "No, se quedan en tu móvil. El sitio solo guarda el hecho de que se ha jugado una partida, para el contador de la página."
+  },
+  "jsonLd": {
+    "about": "quiz de Halloween"
+  }
+}

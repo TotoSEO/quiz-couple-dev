@@ -457,5 +457,41 @@
     "shortTitle": "Sexual compatibility test",
     "metaDescription": "A sexual compatibility test for two: 20 questions on desire, tenderness, trying new things and rhythm, with a score for each dimension. Free.",
     "description": "Twenty questions for two on desire, tenderness and how you talk about it, to see where you meet."
+  },
+  "speciauxCouple": {
+    "title": "Special couple quizzes: Christmas, Halloween…",
+    "shortTitle": "Special quizzes",
+    "metaDescription": "Seasonal quizzes to take as a couple. For Halloween: which serial killer matches you, who dies first in a horror movie, who would get possessed, which supervillain are you. Free.",
+    "description": "The slightly crazy quizzes to take as a couple depending on the season: Halloween for now, Christmas next."
+  },
+  "quizSerialKiller": {
+    "title": "Quiz: which serial killer are you compatible with? (solo or as a couple)",
+    "shortTitle": "Which serial killer matches you",
+    "metaDescription": "A Halloween quiz: 15 questions about how you love, lie and tidy up, and the famous serial killer you're most like. Solo or as a couple, free.",
+    "description": "Fifteen questions and the famous killer you're most like, blown way out of proportion. Solo or as a couple."
+  },
+  "quizMortFilmHorreur": {
+    "title": "Which of us dies first in a horror movie? The quiz",
+    "shortTitle": "Who dies first in the horror movie",
+    "metaDescription": "15 horror movie situations and a verdict in minutes: how long you last before the credits, and which of you dies first. Free, solo or as a couple.",
+    "description": "Fifteen situations, a survival time in minutes, and the name of the first victim when you play as a couple."
+  },
+  "quizPossession": {
+    "title": "Which of us could get possessed? The Halloween quiz",
+    "shortTitle": "Who could get possessed",
+    "metaDescription": "15 questions and a possession risk in percent for each of you: which of you opens the door to the demons? A free Halloween quiz, solo or as a couple.",
+    "description": "Fifteen questions, a possession risk in percent, and the one the demons would choose first."
+  },
+  "quizSuperVilain": {
+    "title": "Quiz: which supervillain are you most like? (solo or as a couple)",
+    "shortTitle": "Which supervillain are you",
+    "metaDescription": "Psychology, situations, gear: 15 questions and the supervillain you're most like, from the Joker to Maleficent. A free Halloween quiz, solo or as a couple.",
+    "description": "Fifteen questions about your psychology, your reactions and your villain gear, and the supervillain you're most like."
+  },
+  "quizDuoVilains": {
+    "title": "Which supervillain duo are you? The quiz to take as a couple",
+    "shortTitle": "Which supervillain duo are you",
+    "metaDescription": "As a couple: 15 questions each, your role in the duo (the brains, the chaos, the muscle...) and the famous villain duo you form, from the Joker and Harley Quinn to Bonnie and Clyde.",
+    "description": "Each of you answers separately, and the quiz gives you your role in the duo and the famous villain duo you form."
   }
 }

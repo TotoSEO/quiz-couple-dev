@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Quiz d'Halloween • Seul(e) ou à deux",
+    "title": "Qui de nous deux pourrait se faire posséder ?",
+    "titleHighlight": "se faire posséder",
+    "description": "Quinze questions sur ta curiosité, tes nuits, les vieux objets que tu ramènes à la maison et ta façon de réagir quand une porte claque toute seule. Le résultat est un risque de possession en pourcentage, avec ce qui te protège et ce qui t'expose. À deux, on sait lequel de vous deux les démons choisiraient.",
+    "subtitle": "15 questions • 5 minutes • seul(e), à deux sur un téléphone ou chacun sur le sien",
+    "jumpBtn": "Faire le quiz"
+  },
+  "section1": {
+    "title": "Comment marche le quiz",
+    "intro": "Dans tous les films de possession, la victime a le même profil : curieuse, fatiguée, un peu trop à l'aise avec les planches de Ouija et les objets de brocante. Le quiz vérifie si c'est ton cas.",
+    "p1": "Les questions parlent de choses très concrètes. Par exemple : « Une planche de Ouija traîne dans le grenier de la maison louée. » Tu peux proposer une partie ce soir, la regarder de loin, la ranger sans y toucher ou la brûler dans le jardin. Chaque réponse vaut de zéro à trois points de risque, et la somme donne un pourcentage.",
+    "p2": "Seul(e), tu découvres ton risque, ton verdict parmi cinq, et deux listes : ce qui te protège et ce qui t'expose. À deux, le premier répond, passe le téléphone, le second répond à son tour, et le résultat compare vos deux risques : c'est celui ou celle qui a le pourcentage le plus haut qui se fait posséder.",
+    "p3": "Le mode à distance existe aussi : une personne crée la partie, l'autre rejoint avec le code, chacun répond sur son téléphone et vous voyez vos deux réponses après chaque question."
+  },
+  "section2": {
+    "title": "Les cinq verdicts",
+    "intro": "Le pourcentage se lit en cinq paliers, de la personne que rien n'atteint à celle qui ferait mieux de prévenir quelqu'un.",
+    "pillar1Title": "Moins de 20 % : impossédable",
+    "pillar1Text": "Portes fermées, planche refusée, couette jusqu'au menton. Trop de travail pour un démon.",
+    "pillar2Title": "De 20 à 40 % : difficile à posséder",
+    "pillar2Text": "Les bons réflexes, mais tu ne peux pas t'empêcher de regarder.",
+    "pillar3Title": "De 40 à 60 % : possédable un soir de fatigue",
+    "pillar3Text": "Un jour normal, tout va bien. Un soir d'octobre dans une vieille maison, ça se discute.",
+    "pillar4Title": "De 60 à 80 % : la cible idéale",
+    "pillar4Text": "Tu parles aux miroirs et tu ramènes des objets sans demander d'où ils viennent.",
+    "pillar5Title": "Plus de 80 % : déjà possédé(e) ?",
+    "pillar5Text": "Tu ouvres toutes les portes, tu dis oui à tout, et tu trouves ça drôle."
+  },
+  "section3": {
+    "title": "Pourquoi c'est drôle à deux",
+    "p1": "Dans un couple, il y a presque toujours une personne qui veut visiter la maison abandonnée et une autre qui attend dans la voiture. Le quiz met des chiffres dessus. Et la personne la plus sceptique, celle qui dit « les fantômes n'existent pas », est souvent celle qui a le risque le plus haut, parce qu'elle ouvre toutes les portes sans réfléchir.",
+    "p2": "Si vous aimez le format, <a href=\"/quiz-qui-meurt-en-premier-film-horreur/\">le quiz du film d'horreur</a> marche sur le même principe, en minutes de survie plutôt qu'en pourcentage. Et pour changer de registre tout en restant dans l'ambiance, <a href=\"/quiz-quel-super-vilain-es-tu/\">le super-vilain qui te ressemble</a> ou <a href=\"/quiz-quel-duo-de-super-vilains-formez-vous/\">le duo de méchants que vous formez</a> donnent un portrait plutôt qu'un chiffre.",
+    "p3": "Tous ces quiz sont réunis sur <a href=\"/quiz-speciaux-pour-couple/\">la page de nos quiz spéciaux</a>, qui change avec la saison."
+  },
+  "section4": {
+    "title": "Ce qu'il faut savoir",
+    "p1": "C'est un jeu. Aucune question ne mesure quoi que ce soit de réel, et le mot « risque » est à prendre comme dans un film d'Halloween. Le seul vrai conseil du quiz, c'est de bien dormir en octobre.",
+    "p2": "Rien n'est enregistré. Les réponses restent sur votre téléphone, et refaire le quiz change le résultat si vous changez d'avis sur la planche de Ouija."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Comment le risque est-il calculé ?",
+    "faq1A": "Chaque réponse vaut de zéro à trois points de risque. La somme des quinze questions est ramenée à un pourcentage : quarante-cinq points font 100 %, zéro point fait 0 %. Le verdict dépend du palier dans lequel tombe ce pourcentage.",
+    "faq2Q": "Peut-on jouer seul(e) ?",
+    "faq2A": "Oui. Seul(e), tu obtiens ton risque, ton verdict et les deux listes de ce qui te protège et de ce qui t'expose. À deux, le quiz compare les deux risques et désigne celui ou celle que les démons choisiraient.",
+    "faq3Q": "Qui se fait posséder quand on joue à deux ?",
+    "faq3A": "Celui ou celle qui a le pourcentage le plus haut. En cas d'égalité, le quiz le dit : le démon devra choisir.",
+    "faq4Q": "Peut-on jouer à distance ?",
+    "faq4A": "Oui, depuis l'écran des prénoms. Une personne crée la partie, l'autre rejoint avec le code ou le QR code, et chacun répond sur son téléphone.",
+    "faq5Q": "Est-ce que ça fait peur ?",
+    "faq5A": "Non. Les questions sont drôles, et le pire qui puisse arriver est d'apprendre que ton partenaire parlerait à une statue dans une église abandonnée."
+  },
+  "jsonLd": {
+    "about": "quiz d'Halloween"
+  }
+}

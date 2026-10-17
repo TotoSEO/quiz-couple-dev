@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Halloween-Quiz • Allein oder zu zweit",
+    "title": "Wer von uns stirbt zuerst im Horrorfilm?",
+    "titleHighlight": "Horrorfilm",
+    "description": "Fünfzehn Horrorfilm-Situationen, jedes Mal vier mögliche Reaktionen. Das Ergebnis sagt dir, wie viele Minuten du durchhältst, bevor du aus der Geschichte ausscheidest, bei einem Film von höchstens zweieinhalb Stunden. Zu zweit antwortet jeder für sich, und ihr erfahrt, wer zuerst stirbt.",
+    "subtitle": "15 Situationen • 5 Minuten • allein, zu zweit an einem Handy oder jeder am eigenen",
+    "jumpBtn": "Zum Quiz"
+  },
+  "section1": {
+    "title": "So funktioniert das Quiz",
+    "intro": "Das Prinzip ist einfach: Wir versetzen dich in die Situationen, die jeder aus dem Kino kennt, und du wählst, was du wirklich tun würdest. Nicht, was man tun sollte, sondern was du tun würdest.",
+    "p1": "Zum Beispiel: „Es ist 23 Uhr. Ein Geräusch auf dem Dachboden, wie Schritte.“ Du kannst mit einer flackernden Taschenlampe nachsehen, deinen Partner schicken, die Luke abschließen und alle Lichter anmachen, oder sofort woanders schlafen. Jede Reaktion ist null bis drei Punkte wert, und die Summe der fünfzehn Situationen wird zu einer Überlebenszeit.",
+    "p2": "Ein Horrorfilm dauert höchstens zweieinhalb Stunden. Mit den schlechtesten Reflexen hältst du fünf Minuten durch, die Dauer des Vorspanns. Mit den besten kommst du auf 2 Std. 30: Du hast den ganzen Film überlebt. Dazwischen sagt dir das Ergebnis, in welcher Minute du aus der Geschichte ausscheidest, und welche Entscheidungen dich gerettet oder das Leben gekostet haben.",
+    "p3": "Zu zweit beantwortet der Erste die fünfzehn Situationen, gibt das Handy weiter, und der Zweite antwortet danach. Eure beiden Zeiten erscheinen auf derselben Zeitleiste, mit dem Namen des ersten Opfers und den Situationen, in denen ihr nicht gleich reagiert habt. Wenn ihr nicht zusammen seid, könnt ihr im Fernmodus jeder auf dem eigenen Handy antworten."
+  },
+  "section2": {
+    "title": "Die fünf Urteile, von der Eröffnungsszene bis zum Abspann",
+    "intro": "Die Überlebenszeit liest sich in fünf Stufen, und jede entspricht einer Figur, die jeder wiedererkennt.",
+    "pillar1Title": "Unter 25 Minuten: die Eröffnungsszene",
+    "pillar1Text": "Du gehst in den Keller und sagst, es sei der Wind. Der Film hat kaum begonnen, und dein Name läuft schon im Vorspann.",
+    "pillar2Title": "25 bis 55 Minuten: das erste Opfer",
+    "pillar2Text": "Man schließt dich ein bisschen ins Herz, dann schaust du nach dem Geräusch auf dem Dachboden. Das Publikum schreit, aber es wusste es.",
+    "pillar3Title": "55 bis 90 Minuten: die Mitte des Films",
+    "pillar3Text": "Jedes zweite Mal die richtigen Reflexe, und ein letzter Blick, um zu prüfen, ob der Mörder wirklich am Boden liegt.",
+    "pillar4Title": "1 Std. 30 bis 2 Std. 10: fast bis zum Schluss",
+    "pillar4Text": "Türen abgeschlossen, Schlüssel in der Hand, Abkürzung abgelehnt. Es bleibt die letzte Szene, in der allen die Schlüssel runterfallen.",
+    "pillar5Title": "Über 2 Std. 10: die Überlebende oder der Überlebende",
+    "pillar5Text": "Du hast die Regeln verstanden und hältst bis zum Abspann durch. Der Film erzählt deine Geschichte, und die Fortsetzung wartet auf dich."
+  },
+  "section3": {
+    "title": "Die Überlebensregeln, die das Quiz prüft",
+    "p1": "Alle Horrorfilme haben dieselben Regeln, und jeder kennt sie: nicht trennen, nicht in den Keller, nie ein altes Buch laut vorlesen, Abkürzungen durch den Wald ablehnen, und wenn der Mörder am Boden liegt, nicht nachprüfen, sondern gehen. Das Quiz geht diese Regeln eine nach der anderen durch, in konkreten Situationen.",
+    "p2": "Lustig zu zweit ist, zu entdecken, dass einer von euch alle richtigen Reflexe hat und der andere bei der ersten Frage die Dachbodenluke öffnet. Meist ist der, der zuerst stirbt, auch der, der „Ach was, das ist nur ein Film“ sagt, wenn ihr schaut, <a href=\"/de/quiz-wer-wuerde-besessen-werden/\">wer von euch besessen werden könnte</a>.",
+    "p3": "Um den Abend fortzusetzen, gehen <a href=\"/de/quiz-welcher-serienmoerder-passt-zu-dir/\">das Quiz zum passenden Serienmörder</a> und <a href=\"/de/quiz-welcher-superschurke-bist-du/\">das zum Superschurken, der dir ähnelt</a> in dieselbe Richtung, mit einem Porträt statt einer Stoppuhr am Ende. Und <a href=\"/de/besondere-paar-quiz/\">alle unsere saisonalen Quiz</a> sind auf einer einzigen Seite versammelt."
+  },
+  "section4": {
+    "title": "Zwei nützliche Hinweise",
+    "p1": "Die Minuten werden aus der Summe der Punkte berechnet, zwischen 5 und 150: Es ist eine Skala, keine Vorhersage. Zwei Personen mit derselben Summe haben dieselbe Zeit, auch wenn sie dieselben Fragen nicht gleich beantwortet haben. Die Liste dessen, was dich gerettet und was dich das Leben gekostet hat, sagt dir, wo es sich entschieden hat.",
+    "p2": "Nichts wird gespeichert. Die Antworten bleiben auf eurem Handy, und ihr könnt das Quiz so oft wiederholen, wie ihr wollt, mit anderen Rollen oder anderen Antworten."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Warum ein Maximum von 2 Std. 30?",
+    "faq1A": "Weil das die Länge eines sehr langen Horrorfilms ist. Darüber hinaus hast du alles überlebt: Das Ergebnis zeigt dann „bis zum Abspann“ statt einer Minutenzahl.",
+    "faq2Q": "Muss man zu zweit spielen?",
+    "faq2A": "Nein. Allein bekommst du deine Überlebenszeit und dein Urteil. Zu zweit kommt der Vergleich hinzu: wer zuerst stirbt, und in welchen Situationen ihr nicht gleich reagiert habt.",
+    "faq3Q": "Gibt es richtige und falsche Antworten?",
+    "faq3A": "Ja, im Sinne des Kinos: Die Reaktion, die drei Punkte wert ist, hält dich im Horrorfilm am Leben, die mit null Punkten ist die des klassischen Opfers. Im echten Leben ist der Gang in den Keller selten tödlich.",
+    "faq4Q": "Kann man aus der Ferne spielen?",
+    "faq4A": "Ja. Auf dem Namensbildschirm erstellt der Fernmodus eine Partie mit Code und QR-Code. Jeder antwortet auf dem eigenen Handy und sieht nach jeder Situation die Reaktion des anderen.",
+    "faq5Q": "Werden meine Antworten gespeichert?",
+    "faq5A": "Nein, sie bleiben auf deinem Handy. Die Seite speichert nur, dass eine Partie gespielt wurde, für den Zähler der Seite."
+  },
+  "jsonLd": {
+    "about": "Halloween-Quiz"
+  }
+}

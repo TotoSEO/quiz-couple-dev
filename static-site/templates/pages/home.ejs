@@ -98,18 +98,31 @@
     jeuOuiNon: { icon: '✅', img: 'quiz-couple-sain' },
     jeuPhrases: { icon: '💬', img: 'quiz-most' },
     jeuDixMais: { icon: '🔟', img: 'quiz-most' },
+    // les quiz spéciaux d'Halloween (16 octobre 2026)
+    quizSerialKiller: { icon: '🔪', img: 'quiz-marrant' },
+    quizMortFilmHorreur: { icon: '🎬', img: 'quiz-marrant' },
+    quizPossession: { icon: '👻', img: 'quiz-marrant' },
+    quizSuperVilain: { icon: '🦹', img: 'quiz-marrant' },
+    quizDuoVilains: { icon: '🎭', img: 'quiz-marrant' },
   };
   const versCartes = (cles) => cles.map((k) => ({ routeKey: k, key: k, icon: (VISUELS[k] || {}).icon || '💞', img: (VISUELS[k] || {}).img || 'test-couple' }));
   const tests = versCartes(famillesNav.tests);
   const celib = versCartes(famillesNav.celib);
   const quizzes = versCartes(famillesNav.quiz);
   const jeux = versCartes(famillesNav.jeux);
+  const speciaux = versCartes(famillesNav.speciaux || []);
 
   // Filter out tests/quizzes not available in current language
   const testsFiltered = tests.filter(item => getLocalizedUrl(item.routeKey, lang));
   const celibFiltered = celib.filter(item => getLocalizedUrl(item.routeKey, lang));
   const quizzesFiltered = quizzes.filter(item => getLocalizedUrl(item.routeKey, lang));
   const jeuxFiltered = jeux.filter(item => getLocalizedUrl(item.routeKey, lang));
+  const speciauxFiltered = speciaux.filter(item => getLocalizedUrl(item.routeKey, lang));
+  // La saison en cours (SAISON dans config.js, posée par le générateur) donne
+  // son titre au bloc des quiz spéciaux et met ses quiz en tête.
+  const saisonCourante = (typeof saison !== 'undefined' && saison) ? saison : null;
+  const saisonDe = (k) => (typeof saisonDesQuiz !== 'undefined' && saisonDesQuiz[k]) || null;
+  speciauxFiltered.sort((a, b) => (saisonDe(a.routeKey) === saisonCourante ? -1 : 0) - (saisonDe(b.routeKey) === saisonCourante ? -1 : 0));
 
   // Why do quiz - 6 reasons
   const reasons = ['testRelation', 'haveFun', 'discover', 'strengthen', 'dialogue', 'memories'];
@@ -195,7 +208,7 @@
             <span class="hero-stat-txt"><%= t('home:hero.stats.testsLabel', 'tests disponibles') %></span>
           </div>
           <div class="hero-stat">
-            <span class="hero-stat-nb"><%= quizzesFiltered.length + jeuxFiltered.length %></span>
+            <span class="hero-stat-nb"><%= quizzesFiltered.length + jeuxFiltered.length + speciauxFiltered.length %></span>
             <span class="hero-stat-txt"><%= t('home:hero.stats.quizzesLabel', 'quiz & jeux disponibles') %></span>
           </div>
         </div>
@@ -588,6 +601,69 @@
         </div>
         <div class="text-center mt-8">
           <a href="<%= getLocalizedUrl('jeuxCouple', lang) %>" class="btn btn-outline"><%= t('home:quizGrid.jeuxCta', '') %></a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+
+    <% if (speciauxFiltered.length) {
+       // Les quiz spéciaux de saison (16 octobre 2026) : le titre suit la
+       // saison (« Spécial Halloween ») quand elle en a un, sinon le titre
+       // général, et les quiz de la saison passent en tête.
+       const titresSaison = t('home:quizGrid.speciauxTitleSaison', {});
+       const titreSpeciaux = (saisonCourante && titresSaison && titresSaison[saisonCourante]) || t('home:quizGrid.speciauxTitle', 'Nos quiz spéciaux, selon la saison'); %>
+    <div class="quiz-section-divider">
+      <div class="quiz-section-divider-line"></div>
+      <div class="quiz-section-divider-line"></div>
+    </div>
+
+    <!-- Quiz spéciaux de saison -->
+    <div class="quiz-section-block quiz-section-speciaux">
+      <div class="quiz-section-block-inner">
+        <div class="bloc-entete">
+          <span class="bloc-pastille">🎃 <%= t('home:quizGrid.speciauxEyebrow', 'Édition spéciale') %></span>
+          <h2 class="bloc-titre"><%= titreSpeciaux %></h2>
+          <span class="bloc-trait" aria-hidden="true"></span>
+          <p class="bloc-sous-titre"><%= t('home:quizGrid.speciauxDesc', '').replace('{{n}}', speciauxFiltered.length) %></p>
+        </div>
+        <div class="quiz-slider" data-slider>
+          <button type="button" class="quiz-slider__nav quiz-slider__nav--prev" data-slider-prev aria-label="<%= t('common:buttons.previous', 'Précédent') %>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="quiz-slider__track" data-slider-track>
+          <% for (let si = 0; si < speciauxFiltered.length; si++) { const item = speciauxFiltered[si];
+             const _f = quizFeatured && quizFeatured[item.routeKey];
+             const sTitle = t('common:nav.' + item.key, t('quizzes:' + item.key + '.shortTitle', t('quizzes:' + item.key + '.title', item.key)));
+             const fImg = _f ? '/quiz/featured/' + _f.file + '.webp' : '/quiz/' + item.img + '.webp';
+             const fAlt = (_f && _f.alt) ? (_f.alt[lang] || _f.alt.fr) : sTitle; %>
+          <a href="<%= getLocalizedUrl(item.routeKey, lang) %>" class="homepage-quiz-card quiz-slide no-underline group">
+            <div class="quiz-bubble-card quiz-bubble-card--speciaux">
+              <div class="quiz-bubble-media">
+                <img src="<%= fImg %>"<% if (_f && srcsetImage(fImg)) { %> srcset="<%= srcsetImage(fImg) %>" sizes="<%= TAILLES_CARTE %>"<% } %> alt="<%= escapeHtml(fAlt) %>" loading="lazy" decoding="async" width="1200" height="630">
+                <span class="quiz-bubble-chip quiz-bubble-chip--speciaux"><%= item.icon %></span>
+              </div>
+              <div class="quiz-bubble-body">
+                <h3 class="quiz-bubble-title"><%= sTitle %></h3>
+                <p class="quiz-bubble-desc"><%= t('home:quizGrid.cards.' + item.key, t('quizzes:' + item.key + '.description', '')) %></p>
+                <span class="quiz-bubble-cta quiz-bubble-cta--speciaux">
+                  <%= t('common:buttons.startQuiz', 'Faire le quiz') %>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <% } %>
+          </div>
+          <button type="button" class="quiz-slider__nav quiz-slider__nav--next" data-slider-next aria-label="<%= t('common:buttons.next', 'Suivant') %>">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+          <div class="quiz-slider__pied" aria-hidden="true">
+            <div class="quiz-slider__barre"><span class="quiz-slider__avance"></span></div>
+            <span class="quiz-slider__compteur" data-slider-compteur></span>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a href="<%= getLocalizedUrl('speciauxCouple', lang) %>" class="btn btn-outline"><%= t('home:quizGrid.speciauxCta', '') %></a>
         </div>
       </div>
     </div>

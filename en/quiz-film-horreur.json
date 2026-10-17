@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Halloween quiz • Solo or as a couple",
+    "title": "Which of us dies first in a horror movie?",
+    "titleHighlight": "horror movie",
+    "description": "Fifteen horror movie situations, four possible reactions each time. The result tells you how many minutes you last before leaving the story, on a movie of two and a half hours at most. As a couple, each of you answers separately, and we find out who dies first.",
+    "subtitle": "15 situations • 5 minutes • solo, as a couple on one phone or each on your own",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "intro": "The idea is simple: we put you in the situations everyone has seen at the movies, and you choose what you'd really do. Not what you should do, what you'd do.",
+    "p1": "For example: “It's 11 pm. A noise in the attic, like footsteps.” You can go up to look with a flickering flashlight, send your partner, lock the hatch and turn on all the lights, or go sleep somewhere else right away. Each reaction is worth zero to three points, and the sum of the fifteen situations becomes a survival time.",
+    "p2": "A horror movie runs two and a half hours at most. With the worst reflexes, you last five minutes, the length of the opening credits. With the best, you reach 2 h 30: you survived the whole movie. In between, the result tells you at which minute you leave the story, and which choices saved you or got you killed.",
+    "p3": "As a couple, the first player answers the fifteen situations, passes the phone, and the second answers in turn. Your two times show up on the same timeline, with the name of the first victim and the situations where you didn't react the same way. If you're not together, remote mode lets you each answer on your own phone."
+  },
+  "section2": {
+    "title": "The five verdicts, from the opening scene to the end credits",
+    "intro": "The survival time reads in five tiers, and each one matches a character everyone recognises.",
+    "pillar1Title": "Under 25 minutes: the opening scene",
+    "pillar1Text": "You go down to the basement saying it's the wind. The movie has barely started and your name is already rolling in the credits.",
+    "pillar2Title": "25 to 55 minutes: the first victim",
+    "pillar2Text": "People get a bit attached to you, then you go check that noise in the attic. The audience screams, but they knew.",
+    "pillar3Title": "55 to 90 minutes: the middle of the movie",
+    "pillar3Text": "The right reflexes every other time, and one last look to check the killer is really down.",
+    "pillar4Title": "1 h 30 to 2 h 10: almost to the end",
+    "pillar4Text": "Doors locked, keys in hand, shortcut refused. There's still the last scene, the one where everyone drops their keys.",
+    "pillar5Title": "Over 2 h 10: the survivor",
+    "pillar5Text": "You understood the rules and you make it to the end credits. The movie tells your story, and the sequel is waiting for you."
+  },
+  "section3": {
+    "title": "The survival rules the quiz checks",
+    "p1": "All horror movies have the same rules, and everyone knows them: you don't split up, you don't go down to the basement, you never read an old book out loud, you refuse shortcuts through the woods, and when the killer is on the ground, you don't check, you leave. The quiz goes through these rules one by one, in concrete situations.",
+    "p2": "What's funny as a couple is discovering that one of you has all the right reflexes and the other opens the attic hatch at the first question. Usually, the one who dies first is also the one who says “come on, it's just a movie” when you look at <a href=\"/en/who-would-get-possessed-quiz/\">which of you could get possessed</a>.",
+    "p3": "To carry on the evening, <a href=\"/en/which-serial-killer-are-you-compatible-with-quiz/\">the compatible serial killer quiz</a> and <a href=\"/en/which-supervillain-are-you-quiz/\">the one about the supervillain you're most like</a> are in the same vein, with a portrait at the end rather than a timer. And <a href=\"/en/special-couple-quizzes/\">all our seasonal quizzes</a> are gathered on a single page."
+  },
+  "section4": {
+    "title": "Two useful details",
+    "p1": "The minutes are calculated on the sum of the points, between 5 and 150: it's a scale, not a prediction. Two people with the same total get the same time, even if they didn't answer the same questions the same way. The list of what saved you and what got you killed tells you where it was decided.",
+    "p2": "Nothing is saved. The answers stay on your phone, and you can retake the quiz as many times as you want, switching roles or answers."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Why a maximum of 2 h 30?",
+    "faq1A": "Because that's the length of a very long horror movie. Beyond that, you survived everything: the result then shows “until the end credits” instead of a number of minutes.",
+    "faq2Q": "Do you have to be two to play?",
+    "faq2A": "No. Solo, you get your survival time and your verdict. As a couple, the quiz adds the comparison: who dies first, and which situations you didn't react the same way to.",
+    "faq3Q": "Is there a right and a wrong answer?",
+    "faq3A": "Yes, in the movie sense: the reaction worth three points is the one that keeps you alive in a horror movie, the one worth zero is the classic victim's. In real life, going down to the basement is rarely fatal.",
+    "faq4Q": "Can you play remotely?",
+    "faq4A": "Yes. On the names screen, remote mode creates a game with a code and a QR code. Each of you answers on your own phone and sees the other's reaction after each situation.",
+    "faq5Q": "Are my answers saved?",
+    "faq5A": "No, they stay on your phone. The site only keeps the fact that a game was played, for the page's counter."
+  },
+  "jsonLd": {
+    "about": "Halloween quiz"
+  }
+}

@@ -143,11 +143,23 @@
       "quizKnowledge": "Wer kennt den anderen besser? Fordert euch heraus!",
       "quizMost": "Stimmt ab, wer am meisten... unter euch ist!",
       "testAttachement": "Finde deinen Bindungsstil heraus: sicher, ängstlich oder vermeidend?",
-      "testConfiance": "Messt das gegenseitige Vertrauen in eurer Beziehung."
+      "testConfiance": "Messt das gegenseitige Vertrauen in eurer Beziehung.",
+      "quizSerialKiller": "Fünfzehn Fragen und der berühmte Mörder, der dir am meisten ähnelt, in stark vergrößerter Fassung.",
+      "quizMortFilmHorreur": "Fünfzehn Situationen, eine Überlebenszeit in Minuten, und das erste Opfer, wenn ihr zu zweit spielt.",
+      "quizPossession": "Ein Besessenheitsrisiko in Prozent für jeden, und die Person, die die Dämonen wählen würden.",
+      "quizSuperVilain": "Psychologie, Reaktionen, Ausrüstung: der Superschurke, der dir ähnelt, vom Joker bis Maleficent.",
+      "quizDuoVilains": "Eure Rolle im Duo, und das berühmte Schurken-Duo, das ihr bildet."
     },
     "testsEyebrow": "Die Tests",
     "quizzesEyebrow": "Die Quiz",
-    "jeuxEyebrow": "Die Spiele"
+    "jeuxEyebrow": "Die Spiele",
+    "speciauxEyebrow": "Sonderausgabe",
+    "speciauxTitle": "Unsere besonderen Quiz, je nach Jahreszeit",
+    "speciauxTitleSaison": {
+      "halloween": "Halloween-Special: unsere (ein bisschen) gruseligen Quiz"
+    },
+    "speciauxDesc": "{{n}} Quiz für allein oder zu zweit, für einen Abend, der anders ist als die anderen. Jedes gibt es auch im Fernmodus.",
+    "speciauxCta": "Alle besonderen Quiz anzeigen"
   },
   "customQuizPromo": {
     "eyebrow": "Eigenes Quiz",

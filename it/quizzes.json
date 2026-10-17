@@ -457,5 +457,41 @@
     "shortTitle": "Test di compatibilità sessuale",
     "metaDescription": "Test di compatibilità sessuale in coppia: 20 domande su desiderio, tenerezza, novità e ritmo, con un punteggio per dimensione. Gratis.",
     "description": "Venti domande in due sul desiderio, la tenerezza e il modo di parlarne, per vedere dove vi incontrate."
+  },
+  "speciauxCouple": {
+    "title": "Quiz speciali da fare in coppia: Natale, Halloween…",
+    "shortTitle": "Quiz speciali",
+    "metaDescription": "I quiz di stagione da fare in due. Per Halloween: quale serial killer ti corrisponde, chi muore per primo in un film horror, chi potrebbe essere posseduto, quale supercattivo sei. Gratis.",
+    "description": "I quiz un po' folli da fare in due a seconda della stagione: Halloween per ora, Natale poi."
+  },
+  "quizSerialKiller": {
+    "title": "Quiz: con quale serial killer sei compatibile? (da solo o in due)",
+    "shortTitle": "Quale serial killer ti corrisponde",
+    "metaDescription": "Un quiz di Halloween: 15 domande sul tuo modo di amare, di mentire e di tenere in ordine, e il serial killer celebre che ti somiglia di più. Da solo/a o in due, gratis.",
+    "description": "Quindici domande e il killer celebre che ti somiglia di più, in versione molto ingrandita. Da fare da solo/a o in due."
+  },
+  "quizMortFilmHorreur": {
+    "title": "Chi di noi due muore per primo in un film horror? Il quiz",
+    "shortTitle": "Chi muore per primo nel film horror",
+    "metaDescription": "15 situazioni da film horror e un verdetto in minuti: quanto resisti prima dei titoli di coda, e chi di voi due muore per primo. Gratis, da solo/a o in due.",
+    "description": "Quindici situazioni, un tempo di sopravvivenza in minuti, e il nome della prima vittima quando giocate in due."
+  },
+  "quizPossession": {
+    "title": "Chi di noi due potrebbe essere posseduto? Il quiz di Halloween",
+    "shortTitle": "Chi potrebbe essere posseduto",
+    "metaDescription": "15 domande e un rischio di possessione in percentuale per ciascuno: chi di voi due apre la porta ai demoni? Un quiz di Halloween gratis, da solo/a o in due.",
+    "description": "Quindici domande, un rischio di possessione in percentuale, e chi sceglierebbero per primo i demoni."
+  },
+  "quizSuperVilain": {
+    "title": "Quiz: a quale supercattivo somigli di più? (da solo o in due)",
+    "shortTitle": "Quale supercattivo sei",
+    "metaDescription": "Psicologia, situazioni, attrezzatura: 15 domande e il supercattivo che ti somiglia, da Joker a Malefica. Un quiz di Halloween gratis, da solo/a o in due.",
+    "description": "Quindici domande sulla tua psicologia, le tue reazioni e la tua attrezzatura da cattivo, e il supercattivo che ti somiglia."
+  },
+  "quizDuoVilains": {
+    "title": "Quale duo di supercattivi siete? Il quiz da fare in due",
+    "shortTitle": "Quale duo di supercattivi siete",
+    "metaDescription": "In due: 15 domande ciascuno, il vostro ruolo nel duo (il cervello, il caos, la forza...) e il duo di cattivi celebre che formate, da Joker e Harley Quinn a Bonnie e Clyde.",
+    "description": "Ognuno risponde per conto suo, e il quiz vi dà il vostro ruolo nel duo e il duo di cattivi celebre che formate."
   }
 }

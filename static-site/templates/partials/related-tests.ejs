@@ -66,7 +66,7 @@
 
     // Quiz légers
     quizAmoureux:     ['jeuDilemmes', 'quizTuPreferes', 'quizKnowledge', 'quizMarrant'],
-    quizMarrant:      ['quizGenant', 'quizMost', 'jeuActionVerite', 'quizTuPreferes'],
+    quizMarrant:      ['quizGenant', 'quizMost', 'quizMortFilmHorreur', 'quizTuPreferes'],
     quizGenant:       ['quizMarrant', 'jeuActionVerite', 'quizMost', 'quizTuPreferes'],
     quizKnowledge:    ['jeuQuiDeNous', 'zamours', 'testCommonPoints', 'quizMost'],
     quizMost:         ['jeuActionVerite', 'quizMarrant', 'quizTuPreferes', 'quizKnowledge'],
@@ -93,6 +93,14 @@
     jeuOuiNon:        ['jeuDilemmes', 'jeuDixMais', 'pourContre', 'jeuQuiDeNous'],
     jeuPhrases:       ['jeuQuiDeNous', 'jeuJamais', 'quizKnowledge', 'jeuQuiPourrait'],
     jeuDixMais:       ['jeuOuiNon', 'jeuDilemmes', 'jeuJamais', 'quizTuPreferes'],
+
+    // Les quiz spéciaux d'Halloween (16 octobre 2026) : d'un quiz de saison à
+    // l'autre, puis un jeu
+    quizSerialKiller:    ['quizSuperVilain', 'quizMortFilmHorreur', 'quizPossession', 'quizTuPreferes'],
+    quizMortFilmHorreur: ['quizPossession', 'quizSerialKiller', 'quizDuoVilains', 'jeuDilemmes'],
+    quizPossession:      ['quizMortFilmHorreur', 'quizSerialKiller', 'quizSuperVilain', 'jeuJamais'],
+    quizSuperVilain:     ['quizDuoVilains', 'quizSerialKiller', 'quizMortFilmHorreur', 'quizTuPreferes'],
+    quizDuoVilains:      ['quizSuperVilain', 'quizPossession', 'quizMortFilmHorreur', 'jeuActionVerite'],
   };
 
   const _relatedIcons = {
@@ -106,6 +114,7 @@
     zamours: '📺', quizTentation: '🏝️',
     jeuActionVerite: '🎲', jeuActionVeriteHot: '🌶️', jeuGages: '🎡',
     jeuPlateau: '🎲', jeuQuiDeNous: '👀', jeuDilemmes: '⚖️', pourContre: '👍', jeuJamais: '🙊', jeuQuiPourrait: '🏆', jeuOuiNon: '✅', jeuPhrases: '💬', jeuDixMais: '🔟',
+    quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭',
   };
 
   const _relatedKeys = (_relatedMap[routeKey] || []).filter(function(k) {
@@ -118,7 +127,7 @@
   // s'essaient plutôt qu'ils ne se font.
   const _familleDe = function (k) {
     if (k === 'calculatriceAmour' || k === 'compteurCouple') return 'outil';
-    for (const f of ['tests', 'celib', 'quiz', 'jeux']) {
+    for (const f of ['tests', 'celib', 'quiz', 'jeux', 'speciaux']) {
       if (famillesNav && famillesNav[f] && famillesNav[f].indexOf(k) !== -1) return f;
     }
     return /^jeu/.test(k) || k === 'pourContre' ? 'jeux' : (/^quiz/.test(k) || k === 'zamours' ? 'quiz' : 'tests');
@@ -127,31 +136,31 @@
   const _TXT = {
     fr: { pastille: 'À faire ensuite', titre: 'Continuez l\'aventure',
           sous: { tests: 'Ces tests pourraient aussi vous plaire', quiz: 'Ces quiz pourraient aussi vous plaire', jeux: 'Ces jeux pourraient aussi vous plaire', mix: 'D\'autres idées qui pourraient vous plaire' },
-          famille: { tests: 'Test de couple', celib: 'Test célibataire', quiz: 'Quiz de couple', jeux: 'Jeu de couple', outil: 'Outil' },
+          famille: { tests: 'Test de couple', celib: 'Test célibataire', quiz: 'Quiz de couple', jeux: 'Jeu de couple', outil: 'Outil', speciaux: 'Quiz spécial' },
           essayer: 'Essayer',
           blogPastille: 'Le blog', blogTitre: 'Pour aller plus loin', blogSous: 'Nos articles pour approfondir le sujet',
           lire: 'Lire l\'article', minutes: '{n} min', lu: 'Lu {n} fois' },
     en: { pastille: 'Up next', titre: 'Keep exploring',
           sous: { tests: 'You might also enjoy these tests', quiz: 'You might also enjoy these quizzes', jeux: 'You might also enjoy these games', mix: 'More ideas you might enjoy' },
-          famille: { tests: 'Couple test', celib: 'Singles test', quiz: 'Couple quiz', jeux: 'Couple game', outil: 'Tool' },
+          famille: { tests: 'Couple test', celib: 'Singles test', quiz: 'Couple quiz', jeux: 'Couple game', outil: 'Tool', speciaux: 'Special quiz' },
           essayer: 'Try it',
           blogPastille: 'The blog', blogTitre: 'Go further', blogSous: 'Our articles to dig deeper',
           lire: 'Read the article', minutes: '{n} min', lu: 'Read {n} times' },
     es: { pastille: 'Lo siguiente', titre: 'Sigue explorando',
           sous: { tests: 'Estos tests también te pueden gustar', quiz: 'Estos quiz también te pueden gustar', jeux: 'Estos juegos también te pueden gustar', mix: 'Más ideas que te pueden gustar' },
-          famille: { tests: 'Test de pareja', celib: 'Test para solteros', quiz: 'Quiz de pareja', jeux: 'Juego en pareja', outil: 'Herramienta' },
+          famille: { tests: 'Test de pareja', celib: 'Test para solteros', quiz: 'Quiz de pareja', jeux: 'Juego en pareja', outil: 'Herramienta', speciaux: 'Quiz especial' },
           essayer: 'Probar',
           blogPastille: 'El blog', blogTitre: 'Para profundizar', blogSous: 'Nuestros artículos para profundizar',
           lire: 'Leer el artículo', minutes: '{n} min', lu: 'Leído {n} veces' },
     de: { pastille: 'Als Nächstes', titre: 'Weiter entdecken',
           sous: { tests: 'Diese Tests könnten euch auch gefallen', quiz: 'Diese Quiz könnten euch auch gefallen', jeux: 'Diese Spiele könnten euch auch gefallen', mix: 'Weitere Ideen, die euch gefallen könnten' },
-          famille: { tests: 'Beziehungstest', celib: 'Single-Test', quiz: 'Paar-Quiz', jeux: 'Paarspiel', outil: 'Tool' },
+          famille: { tests: 'Beziehungstest', celib: 'Single-Test', quiz: 'Paar-Quiz', jeux: 'Paarspiel', outil: 'Tool', speciaux: 'Besonderes Quiz' },
           essayer: 'Ausprobieren',
           blogPastille: 'Der Blog', blogTitre: 'Mehr erfahren', blogSous: 'Unsere Artikel zum Vertiefen',
           lire: 'Artikel lesen', minutes: '{n} Min.', lu: '{n} Mal gelesen' },
     it: { pastille: 'Da fare dopo', titre: 'Continua a esplorare',
           sous: { tests: 'Potrebbero piacerti anche questi test', quiz: 'Potrebbero piacerti anche questi quiz', jeux: 'Potrebbero piacerti anche questi giochi', mix: 'Altre idee che potrebbero piacerti' },
-          famille: { tests: 'Test di coppia', celib: 'Test per single', quiz: 'Quiz di coppia', jeux: 'Gioco di coppia', outil: 'Strumento' },
+          famille: { tests: 'Test di coppia', celib: 'Test per single', quiz: 'Quiz di coppia', jeux: 'Gioco di coppia', outil: 'Strumento', speciaux: 'Quiz speciale' },
           essayer: 'Prova',
           blogPastille: 'Il blog', blogTitre: 'Per approfondire', blogSous: 'I nostri articoli per approfondire',
           lire: 'Leggi l\'articolo', minutes: '{n} min', lu: 'Letto {n} volte' },
@@ -163,7 +172,7 @@
   // Le sous-titre suit ce qui est proposé : « ces tests » sous une liste de
   // jeux était faux sur la moitié des pages.
   const _familles = _relatedKeys.map(_familleDe);
-  const _groupe = function (f) { return f === 'celib' || f === 'outil' ? 'tests' : f; };
+  const _groupe = function (f) { return f === 'celib' || f === 'outil' ? 'tests' : (f === 'speciaux' ? 'quiz' : f); };
   const _sousTitre = _familles.length && _familles.every(function (f) { return _groupe(f) === _groupe(_familles[0]); })
     ? _tx.sous[_groupe(_familles[0])] : _tx.sous.mix;
 
