@@ -1,0 +1,45 @@
+{
+  "jour": "2026-11-12",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-027",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle, blasée, de face ; lui, inquiet, plus petit, la patte tendue vers elle.",
+        "style": "mini",
+        "texte": "quand je suis normale, il croit que je suis triste.",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "blase",
+              "x": 270,
+              "taille": 280
+            },
+            {
+              "perso": "lui",
+              "expression": "inquiet",
+              "bras": "tend_g",
+              "x": 450,
+              "taille": 210
+            }
+          ]
+        }
+      },
+      "legende": "elle avait juste faim.\n\nc'est laquelle chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

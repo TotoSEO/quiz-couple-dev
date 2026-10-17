@@ -1,0 +1,51 @@
+{
+  "jour": "2026-11-14",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "sta-015",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : un grand lit, elle seule au milieu, triste, l'oreiller de l'autre côté.",
+        "texte": "le lit est trop grand quand t'es pas là",
+        "duree": 12,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "meuble": "lit_fond"
+            },
+            {
+              "perso": "elle",
+              "expression": "triste",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "x": 320,
+              "taille": 200
+            },
+            {
+              "meuble": "lit_couette"
+            }
+          ]
+        }
+      },
+      "legende": "elle dort du côté de la fenêtre. ça change rien.\n\ntague ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#relation"
+      ]
+    }
+  }
+}

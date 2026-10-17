@@ -1,0 +1,48 @@
+{
+  "jour": "2026-11-13",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "pos-036",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle, assise, la tête qui tombe, le téléphone posé à côté ; elle attend qu'il rentre.",
+        "style": "mini",
+        "texte": "je dors pas, j'attends que tu rentres.",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "dodo",
+              "pose": "assis",
+              "signes": [
+                "zzz"
+              ],
+              "x": 290,
+              "taille": 280
+            },
+            {
+              "objet": "telephone",
+              "x": 470,
+              "y": 340,
+              "echelle": 0.6
+            }
+          ]
+        }
+      },
+      "legende": "il rentre à 23 h 40.\n\ntague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#relation"
+      ]
+    }
+  }
+}
