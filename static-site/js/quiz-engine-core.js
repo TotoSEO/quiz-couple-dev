@@ -14250,7 +14250,11 @@ var QuizEngine = (function() {
       var pire = this.perdLe === 'min' ? (vA <= vB ? 0 : 1) : (vA >= vB ? 0 : 1);
       var egal = vA === vB;
       wrap.appendChild(el('p', 'port-noms', esc(this.players[0].name + ' & ' + this.players[1].name)));
-      var phrase = egal ? this.etg('duoEgal', '') : this.etg('duoPerd', '');
+      // A egalite au bout du film, personne ne meurt : « au bout de jusqu'au
+      // generique » ne veut rien dire, d'ou la phrase duoSurvie.
+      var tousSauves = egal && this.echelle === 'minutes' && vA >= this.max;
+      var phrase = tousSauves ? (this.etg('duoSurvie', '') || this.etg('duoEgal', ''))
+        : (egal ? this.etg('duoEgal', '') : this.etg('duoPerd', ''));
       phrase = phrase.replace('{{nom}}', this.players[pire].name).replace('{{autre}}', this.players[1 - pire].name)
         .replace('{{valeur}}', this.formate(vA)).replace('{{v1}}', this.formate(vA)).replace('{{v2}}', this.formate(vB))
         .replace('{{vp}}', this.formate(pire === 0 ? vA : vB)).replace('{{va}}', this.formate(pire === 0 ? vB : vA));

@@ -12698,6 +12698,7 @@
     "perduTitre": "What got you killed",
     "duoPerd": "<b>{{nom}}</b> dies first, after {{vp}}. {{autre}} lasts {{va}}.",
     "duoEgal": "You die together, after {{v1}}. It's almost romantic.",
+    "duoSurvie": "You both make it to the end credits. The killer leaves empty-handed!",
     "verdictDifferent": "{{nom}} doesn't do so well on this one.",
     "noteFin": "A movie runs two and a half hours at most: at 2 h 30, you survived the whole movie, end credits included.",
     "r1_t": "Dead in the opening scene",

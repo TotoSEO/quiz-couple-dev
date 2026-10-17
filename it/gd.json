@@ -12699,6 +12699,7 @@
     "perduTitre": "Quello che ti ha perso/a",
     "duoPerd": "<b>{{nom}}</b> muore per primo/a, dopo {{vp}}. {{autre}} resiste {{va}}.",
     "duoEgal": "Morite insieme, dopo {{v1}}. È quasi romantico.",
+    "duoSurvie": "Resistete tutti e due fino ai titoli di coda. L'assassino se ne va a mani vuote!",
     "verdictDifferent": "{{nom}} se la cava peggio su questa.",
     "noteFin": "Un film dura al massimo due ore e mezza: a 2 h 30, sei sopravvissuto/a a tutto il film, titoli di coda compresi.",
     "r1_t": "Morto/a nella scena d'apertura",

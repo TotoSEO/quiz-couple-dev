@@ -12698,6 +12698,7 @@
     "perduTitre": "Lo que te ha perdido",
     "duoPerd": "<b>{{nom}}</b> muere primero, a los {{vp}}. {{autre}} aguanta {{va}}.",
     "duoEgal": "Morís juntos, a los {{v1}}. Es casi romántico.",
+    "duoSurvie": "Los dos aguantáis hasta los créditos. ¡El asesino se va con las manos vacías!",
     "verdictDifferent": "{{nom}} sale peor parado/a en esta.",
     "noteFin": "Una película dura como mucho dos horas y media: a las 2 h 30, has sobrevivido a toda la película, créditos incluidos.",
     "r1_t": "Muerto/a en la escena inicial",
