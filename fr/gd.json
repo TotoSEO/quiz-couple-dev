@@ -12790,6 +12790,7 @@
     "perduTitre": "Ce qui t'a perdu(e)",
     "duoPerd": "<b>{{nom}}</b> meurt en premier, au bout de {{vp}}. {{autre}} tient {{va}}.",
     "duoEgal": "Vous mourez ensemble, au bout de {{v1}}. C'est presque romantique.",
+    "duoSurvie": "Vous tenez tous les deux jusqu'au générique. Le tueur repart bredouille !",
     "verdictDifferent": "{{nom}} s'en sort moins bien sur ce coup.",
     "noteFin": "Un film fait au plus deux heures et demie : à 2 h 30, tu as survécu à tout le film, générique compris.",
     "r1_t": "Mort(e) dans la scène d'ouverture",
