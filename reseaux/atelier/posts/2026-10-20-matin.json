@@ -2,326 +2,77 @@
   "jour": "2026-10-20",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-018",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-003",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "idee": "Quelqu'un dit « pizza ? » en voiture : les deux sautent en même temps sur leurs sièges, klaxon, et une pizza tombe du ciel.",
-        "titre": "POV: someone says 'pizza?'",
-        "plans": [
-          {
-            "description": "L'intérieur d'une voiture en plein jour, vue depuis le pare-brise : le paysage défile dans la lunette arrière, le petit sapin du rétroviseur se balance. Dès la première image le violet tient le volant à gauche, les yeux plats, la bouche plate ; la rose, à droite sur le siège passager, bâille et regarde par la vitre, la tête appuyée. Long trajet, rien ne se passe. À 2 s la rose tourne la tête vers le violet, les yeux grands ouverts, et lance « Pizza? » dans une bulle.",
-            "duree": 3.6,
-            "decor": "voiture",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "passager",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1.9,
-                    "cible": "droite"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.9,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.0,
-                    "a": 3.6,
-                    "yeux": "brillants",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 2.0,
-                    "a": 3.6,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "parle",
-                    "de": 2.0,
-                    "a": 3.4
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "volant",
-                "gestes": [
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.0,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1.5,
-                    "cible": "gauche"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 2.0,
-                    "a": 3.6,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.2,
-                    "a": 3.6,
-                    "yeux": "ouverts",
-                    "bouche": "o"
-                  }
-                ]
-              }
-            ],
-            "bulles": [
-              {
-                "qui": "rose",
-                "de": 2.0,
-                "a": 3.5,
-                "texte": "Pizza?"
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.6,
-                "zoom": 1.1,
-                "x": 540,
-                "y": 1200
-              }
-            ]
-          },
-          {
-            "description": "Même voiture. Les yeux du violet deviennent brillants, un « ! » apparaît au-dessus de sa tête et au-dessus de celle de la rose en même temps. Ils sautent tous les deux sur leur siège, les bras en l'air, et le violet appuie par accident sur le klaxon à 1,2 s ; la caméra tremble d'un coup. Ils rient aux éclats.",
-            "duree": 3.4,
-            "decor": "voiture",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "passager",
-                "gestes": [
-                  {
-                    "geste": "saute",
-                    "de": 0.2,
-                    "a": 1.6,
-                    "fois": 2
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.2,
-                    "a": 1.8,
-                    "yeux": "brillants",
-                    "bouche": "rire"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.2,
-                    "a": 1.6,
-                    "effet": "exclamation"
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 1.8,
-                    "a": 3.4
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "volant",
-                "gestes": [
-                  {
-                    "geste": "saute",
-                    "de": 0.2,
-                    "a": 1.6,
-                    "fois": 2
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.2,
-                    "a": 1.8,
-                    "yeux": "brillants",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.3,
-                    "a": 1.7,
-                    "effet": "exclamation"
-                  },
-                  {
-                    "geste": "rit",
-                    "de": 1.8,
-                    "a": 3.4
-                  }
-                ]
-              }
-            ],
-            "sons": [
-              {
-                "a": 1.2,
-                "son": "klaxon"
-              }
-            ],
-            "camera": [
-              {
-                "a": 1.2,
-                "secousse": 12
-              }
-            ]
-          },
-          {
-            "description": "Même voiture. Une part de pizza tombe du haut de l'image et se pose sur le tableau de bord, entre les deux. Les deux la regardent en même temps, bouche ronde, puis se tournent l'un vers l'autre avec un grand sourire. La rose attrape la pizza, le violet fait un clin d'œil, des cœurs montent. Zoom lent sur eux deux.",
-            "duree": 4.2,
-            "decor": "voiture",
-            "moment": "midi",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "passager",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1.4,
-                    "cible": "bas"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.4,
-                    "yeux": "ouverts",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.4,
-                    "a": 4.2,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.4,
-                    "a": 2.6,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "tient",
-                    "de": 2.0,
-                    "a": 4.2,
-                    "objet": "pizza",
-                    "main": "droite"
-                  },
-                  {
-                    "geste": "mange",
-                    "de": 2.8,
-                    "a": 4.2,
-                    "objet": "pizza"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "volant",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1.4,
-                    "cible": "bas"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.4,
-                    "yeux": "ouverts",
-                    "bouche": "o"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.4,
-                    "a": 4.2,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.4,
-                    "a": 2.6,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.6,
-                    "a": 4.2,
-                    "yeux": "clin",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.2,
-                    "a": 4.2,
-                    "effet": "coeurs"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "pizza",
-                "x": 540,
-                "y": 1330,
-                "de": 0.3,
-                "entree": "tombe"
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 4.2,
-                "zoom": 1.25,
-                "x": 540,
-                "y": 1200
-              }
-            ]
-          }
-        ],
+        "idee": "En ville la nuit, quatre bandits déboulent en courant et l'encerclent, elle ; il se met devant. Choc, puis l'esprit vengeur ; il fait craquer ses jointures et lève les poings. Coup de poing, coup de pied, le deuxième s'étale K.-O. sur le trottoir, puis le saut et le coup de pied retourné au ralenti qui envoie les deux derniers hors de l'image. Il s'époussette les mains, elle court lui sauter au cou sous les lampadaires.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
         "son": {
-          "ambiance": "drole"
+          "ambiance": "epique",
+          "recherche": "Eye of the Tiger"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "ville",
+              "nuit": true,
+              "jeu": "discussion",
+              "incident": {
+                "type": "agression",
+                "bandits": 4,
+                "a": 1.3
+              },
+              "description": "Plan d'ensemble, caméra fixe, la rue la nuit : des immeubles éclairés au loin, deux lampadaires qui font des cônes de lumière, le trottoir. Ils rentrent en se parlant, il (bandana violet) gesticule, elle (nœud rose) rit. À 1,3 s un impact sourd : quatre bandits masqués, bonnet noir, déboulent en sprintant par la droite, poussière, lignes de vitesse, et se plantent devant eux penchés en avant, les mains griffues, en grognant ; l'écran tremble à leur arrivée. Elle recule d'un pas, bras écartés, apeurée, et tremble ; il lève la tête, surpris, puis son visage se durcit et il avance d'un pas pour se mettre devant elle. La caméra pousse légèrement."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "choc",
+                  "duree": 0.8
+                },
+                {
+                  "expression": "vengeur",
+                  "duree": 1.2
+                }
+              ],
+              "description": "Très gros plan sur son visage à lui, coupe franche, le lampadaire derrière. Le choc : yeux ronds écarquillés, bouche en o, sourcils très hauts, un battement de cœur lent. À 0,8 s le visage se ferme d'un coup : sourcils en biais, yeux plissés, un sourire en coin, l'esprit de vengeance ; coup de zoom d'accompagnement, impact sourd au loin, le vent se lève et le bandana claque, une montée de tempête mène à la coupe."
+            },
+            {
+              "sequence": "preparation",
+              "duree": 1.9,
+              "description": "Plan moyen de profil, caméra sur lui, les bandits à droite qui se tassent et avancent d'un pas en tremblant de menace. Il se frotte les mains l'une contre l'autre, un craquement de jointures, puis lève les poings et plie les genoux : la garde de karaté, un souffle. Il avance d'un pas lent vers eux, le corps qui vibre, le regard fixe ; la caméra serre un peu plus."
+            },
+            {
+              "sequence": "exploit",
+              "type": "karate",
+              "duree": 4.6,
+              "description": "Plan d'ensemble, la caméra suit le combat vers la droite. Il sprinte, rémanences, et décoche un coup de poing au premier : impact de bande dessinée, l'écran tremble, il part en vol plané hors de l'image par la droite, les yeux en croix. Le deuxième charge ; coup de pied à hauteur de tête, impact, il passe par-dessus lui en vrille et s'étale à plat sur le trottoir à gauche, K.-O., des étoiles qui tournent autour de sa tête. Les deux derniers avancent ensemble ; il saute et part en coup de pied retourné, le corps qui tourne sur lui-même : ralenti onze fois au cœur de la vrille, caméra serrée, voile bleuté, battement de cœur, lignes de vitesse ; impact énorme, onde de choc, secousse, les deux sont propulsés hors de l'image. Il retombe accroupi, se redresse, se tourne vers elle et s'époussette les mains avec un sourire en coin ; elle, encore sous le choc, lève les bras de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "calin",
+              "duree": 6.2,
+              "description": "Plan moyen large, caméra fixe, le bandit K.-O. toujours à plat à gauche avec ses étoiles. Il la regarde, les yeux fermés de bonheur ; elle court vers lui et lui saute au cou, poussière, et ils restent enlacés pendant que des cœurs montent entre eux, tous les deux heureux. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
         }
       },
-      "legende": "One word and the whole car wakes up.\n\nSend this to your partner!",
+      "legende": "My boyfriend vs four muggers.\n\nTag him",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

@@ -2,265 +2,110 @@
   "jour": "2026-10-22",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-026",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-005",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "idee": "Regarder le coucher de soleil à deux : assis dans le sable, la rose pose la tête contre le violet, les vagues avancent, un bisou sur le front. Aucune bulle.",
-        "titre": "POV: watching the sunset together",
-        "plans": [
-          {
-            "description": "Une plage au coucher du soleil : ciel orange et rose, la mer et ses vagues qui avancent, un voilier au loin, un parasol rayé à gauche. Dès la première image les deux sont assis dans le sable côte à côte, la rose à gauche, le violet à droite, et regardent l'horizon avec un petit sourire. À 2,2 s le violet tourne les yeux vers la rose, les joues roses, des petites étincelles scintillent autour d'eux. La caméra se rapproche lentement.",
-            "duree": 4.0,
-            "decor": "plage",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "sable-gauche",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 4.0,
-                    "cible": "camera"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 4.0,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.0,
-                    "a": 4.0,
-                    "effet": "etincelles"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "sable-droite",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 2.2,
-                    "cible": "camera"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 2.2,
-                    "yeux": "heureux",
-                    "bouche": "sourire"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 2.2,
-                    "a": 4.0,
-                    "cible": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.2,
-                    "a": 4.0,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 4.0,
-                "zoom": 1.12,
-                "x": 540,
-                "y": 1150
-              }
-            ]
-          },
-          {
-            "description": "Même plage, le soleil descend. La rose se rapproche du violet et pose la tête contre son épaule : câlin, les deux ferment les yeux de bonheur, joues roses. Les vagues avancent et reculent derrière eux, des petits cœurs montent doucement. La caméra continue de se rapprocher, très lentement.",
-            "duree": 4.2,
-            "decor": "plage",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "sable-gauche",
-                "gestes": [
-                  {
-                    "geste": "calin",
-                    "de": 0,
-                    "a": 4.2,
-                    "avec": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.6,
-                    "a": 4.2,
-                    "yeux": "fermes",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.2,
-                    "a": 4.2,
-                    "effet": "coeurs"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "sable-droite",
-                "gestes": [
-                  {
-                    "geste": "calin",
-                    "de": 0,
-                    "a": 4.2,
-                    "avec": "rose"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.6,
-                    "a": 2.6,
-                    "yeux": "fermes",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.6,
-                    "a": 4.2,
-                    "yeux": "heureux",
-                    "bouche": "chat",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1.12,
-                "x": 540,
-                "y": 1150
-              },
-              {
-                "a": 4.2,
-                "zoom": 1.3,
-                "x": 540,
-                "y": 1150
-              }
-            ]
-          },
-          {
-            "description": "Dernier plan, le ciel devient rose foncé. Les deux restent serrés l'un contre l'autre, immobiles. À 1,2 s le violet tourne la tête et dépose un petit bisou sur le front de la rose, un cœur sort ; la rose rouvre des yeux heureux et sa bouche fait un petit chat. La caméra recule doucement pour montrer toute la plage.",
-            "duree": 4.2,
-            "decor": "plage",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "sable-gauche",
-                "gestes": [
-                  {
-                    "geste": "calin",
-                    "de": 0,
-                    "a": 4.2,
-                    "avec": "violet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.3,
-                    "yeux": "fermes",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.4,
-                    "a": 4.2,
-                    "yeux": "heureux",
-                    "bouche": "chat",
-                    "rougit": true
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "sable-droite",
-                "gestes": [
-                  {
-                    "geste": "calin",
-                    "de": 0,
-                    "a": 1.2,
-                    "avec": "rose"
-                  },
-                  {
-                    "geste": "bisou",
-                    "de": 1.2,
-                    "a": 2.6,
-                    "avec": "rose"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.6,
-                    "a": 4.2,
-                    "effet": "coeurs"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.6,
-                    "a": 4.2,
-                    "yeux": "fermes",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1.3,
-                "x": 540,
-                "y": 1150
-              },
-              {
-                "a": 4.2,
-                "zoom": 1,
-                "x": 540,
-                "y": 1000
-              }
-            ]
-          }
-        ],
+        "idee": "Dans la prairie, elle regarde sa main nue, rêveuse, une bague dans sa bulle ; il comprend. Il sort une pioche et part en flèche : la falaise et son ravin, le donjon et ses piques, le tapis de nuages et son vide, jusqu'à la grotte du diamant géant. Pioche levée, pieds ancrés, le saut et le coup au ralenti : le diamant vole en mille éclats, une pierre parfaite flotte, il la forge au marteau, lève la bague ; retour en courant, un genou à terre, elle porte les mains à sa bouche, saute de joie, câlin.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "epique",
+          "recherche": "Diamonds"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "prairie",
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-bague",
+                "a": 1.3
+              },
+              "description": "Plan d'ensemble, caméra fixe, la prairie : le grand arbre à gauche, les collines, des fleurs. Ils se parlent debout, il gesticule, elle penche la tête et rit. À 1,3 s elle baisse les yeux sur sa main nue, les doigts joints, rêveuse, joues roses ; une bulle de pensée pop au-dessus d'elle : une bague et son petit diamant qui scintille. Il la regarde, surpris, puis attendri, et son visage se ferme, décidé. La caméra pousse doucement sur eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "tendre",
+                  "duree": 1.0
+                },
+                {
+                  "expression": "determine",
+                  "duree": 1.2
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, les collines derrière. La tendresse d'abord : sourcils doux, sourire, joues roses, le regard sur elle. À 1,0 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée, le regard vers l'horizon ; coup de zoom d'accompagnement, impact sourd au loin, les pans du bandana claquent dans une montée de vent qui mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "pioche": true,
+              "course": true,
+              "description": "Dézoom rapide du visage au plan américain. Sa main passe derrière son dos et ressort avec une pioche, pop ; il la lève au-dessus de la tête, un éclat métallique, la rabaisse, et part en flèche vers la droite : rémanences, poussière, lignes de vitesse, un long souffle d'air. Elle reste là, les mains jointes, à le regarder partir."
+            },
+            {
+              "sequence": "traversee",
+              "etapes": [
+                {
+                  "decor": "falaise",
+                  "obstacle": "trou",
+                  "description": "Transition floue d'une seconde (le temps passe), puis travelling latéral sur la falaise : sol rocheux, montagnes au loin, la pioche à la main. À 1,5 s un ravin s'ouvre sous lui : il saute, corps étiré, et retombe de l'autre côté en roulade avant de se relever en pleine course, souffle d'air au saut, choc sourd à la réception, puis le flou de la coupe suivante."
+                },
+                {
+                  "decor": "donjon",
+                  "obstacle": "pique",
+                  "description": "Transition floue d'une seconde, puis travelling dans le donjon : un mur de pierre, des torches qui dansent et jettent une lueur orange, des chaînes qui pendent, des piliers, le sol dallé. À 1,45 s une rangée de piques se dresse devant lui : il saute groupé en boule par-dessus, retombe et repart en sprint, les pas qui claquent sur les dalles, jusqu'au flou."
+                },
+                {
+                  "decor": "nuages",
+                  "obstacle": "trou",
+                  "duree": 2.2,
+                  "description": "Transition floue d'une seconde, puis travelling sur le tapis de nuages, tout là-haut : des bosses blanches qui défilent, les sommets des montagnes qui dépassent en dessous, le soleil. À 1,3 s le vide entre deux nuages : il saute, roulade à la réception sur le nuage suivant, et sprinte ; sur les derniers dixièmes la caméra pousse sur lui pour amener la coupe."
+                }
+              ]
+            },
+            {
+              "sequence": "arrivee",
+              "lieu": "grotte",
+              "duree": 3.2,
+              "description": "Transition floue d'une seconde : la grotte, la voûte et ses stalactites, des cristaux bleu pâle dans les parois, et au centre, sur un socle de pierre, le diamant géant qui pulse d'une lumière bleue, des étincelles qui tournent. Il déboule par la gauche en sprint et freine en glissade dans la poussière, lève la tête : les yeux qui brillent, bouche en petit o, émerveillé. Puis le visage se ferme : au travail. La caméra pousse lentement vers le diamant."
+            },
+            {
+              "sequence": "preparation",
+              "duree": 2.0,
+              "description": "Plan moyen de profil, caméra sur lui, le diamant géant à droite qui pulse. Il lève lentement la pioche au-dessus de la tête, à deux mains, le buste qui se cambre, les yeux plissés, une montée sourde ; il tient la position, le corps qui vibre.",
+              "insert": "Insert, très gros plan au ras du sol sur ses deux pieds. Le pied arrière recule et s'ancre : la pointe s'enfonce, le sol de pierre se fissure sous lui (fentes en zigzag), petit nuage de poussière, cailloux qui sautent et retombent, secousse, craquement de pierre ; les jambes vibrent."
+            },
+            {
+              "sequence": "exploit",
+              "type": "taille",
+              "duree": 5.4,
+              "description": "Plan d'ensemble, caméra sur la grotte. Détente : il saute, la pioche au-dessus de la tête, rémanences, et l'abat sur le diamant géant : ralenti douze fois juste avant l'impact, caméra serrée, voile bleuté, battement de cœur. Impact : flash blanc, onde de choc, secousse de 40 px, le diamant éclate en mille morceaux de cristal bleu pâle qui partent en étoile et retombent, un tintement de cristal. Dans le nuage d'éclats, une pierre parfaite reste à flotter en tournant sur elle-même, des étincelles autour ; il lève la tête, émerveillé, s'approche et la cueille dans ses mains. Puis il s'agenouille, sort un marteau, et frappe trois fois : l'enclume sonne, des étincelles bleues jaillissent au sol. Il se redresse avec la bague au bout des doigts, l'anneau d'or et son petit diamant qui scintille, et la contemple ; la caméra pousse sur sa main."
+            },
+            {
+              "sequence": "retrouvailles",
+              "fin": "demande",
+              "cadeau": "bague",
+              "duree": 7.6,
+              "description": "Transition floue d'une seconde : la prairie, le soleil, elle qui attend les mains jointes. Il déboule par la droite en sprint, rémanences, et freine en glissade devant elle dans la poussière ; elle sursaute. Il met un genou à terre et lui tend la bague, bras tendu, le petit diamant qui scintille, le regard tendre. Elle porte les deux mains à sa bouche, les yeux écarquillés, puis fermés de bonheur, les joues roses ; elle saute de joie deux fois, les bras en l'air. Il se relève, elle se jette dans ses bras, câlin, et des cœurs montent entre eux. La caméra serre sur la bague puis pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
         }
       },
-      "legende": "Nothing to say. Just the sunset and you.\n\nSend this to your partner!",
+      "legende": "Hint: a ring.\n\nTag him",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

@@ -2,280 +2,109 @@
   "jour": "2026-10-18",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-015",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-001",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "idee": "Morning person contre oiseau de nuit : le matin la rose danse avec sa tasse et le violet se cache sous la couette ; le soir, c'est lui qui est survolté pendant qu'elle dort.",
-        "titre": "POV: morning person vs night owl",
-        "plans": [
-          {
-            "description": "La chambre le matin, lumière claire et chaude, soleil dans la fenêtre, légende « 7 AM ». Dès la première image la rose est debout devant le lit, une tasse fumante dans la main gauche, et elle saute de joie deux fois, les yeux heureux et un grand sourire ; le violet est couché à droite, la couette jusqu'au menton, il dort, des Z montent. À 2,4 s la rose fait quelques pas de danse, des notes de musique montent autour d'elle. La caméra se rapproche doucement.",
-            "duree": 3.8,
-            "decor": "chambre",
-            "moment": "matin",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "devant-gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.8,
-                    "objet": "tasse",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "saute",
-                    "de": 0.1,
-                    "a": 1.5,
-                    "fois": 2
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.1,
-                    "a": 2.4,
-                    "yeux": "heureux",
-                    "bouche": "rire"
-                  },
-                  {
-                    "geste": "danse",
-                    "de": 2.4,
-                    "a": 3.8
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.5,
-                    "a": 3.8,
-                    "effet": "notes"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "lit-droite",
-                "gestes": [
-                  {
-                    "geste": "dort",
-                    "de": 0,
-                    "a": 3.8
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.3,
-                    "a": 3.8,
-                    "effet": "zzz"
-                  }
-                ]
-              }
-            ],
-            "couette": "calme",
-            "legende": "7 AM",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 3.8,
-                "zoom": 1.15,
-                "x": 540,
-                "y": 1150
-              }
-            ]
-          },
-          {
-            "description": "Zoom rapide à 0,3 s sur le violet : un œil s'entrouvre, puis la bouche fait la grimace du grognon, les sourcils froncés. La rose continue de danser derrière lui, tasse en main, toujours ravie. À 2 s le violet tire la couette au-dessus de sa tête, qui se met à bouger d'un coup, et la rose s'arrête, les yeux plats, une goutte de gêne sur la tempe.",
-            "duree": 3.8,
-            "decor": "chambre",
-            "moment": "matin",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "devant-gauche",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 3.8,
-                    "objet": "tasse",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "danse",
-                    "de": 0,
-                    "a": 2.0
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.0,
-                    "a": 3.8,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 2.3,
-                    "a": 3.8,
-                    "effet": "goutte"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "lit-droite",
-                "gestes": [
-                  {
-                    "geste": "dort",
-                    "de": 0,
-                    "a": 0.5
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.5,
-                    "a": 2.0,
-                    "yeux": "ouverts",
-                    "bouche": "grogne",
-                    "sourcils": "faches"
-                  },
-                  {
-                    "geste": "fache",
-                    "de": 2.0,
-                    "a": 3.8
-                  }
-                ]
-              }
-            ],
-            "couette": "bouge",
-            "couetteDe": 2.0,
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 0.3,
-                "zoom": 1.7,
-                "cible": "violet"
-              }
-            ]
-          },
-          {
-            "description": "Écran noir, puis la même chambre, en pleine nuit : lumière bleue, lune et étoiles dans la fenêtre, légende « 11 PM ». C'est la rose qui est dans le lit, endormie, la couette jusqu'au menton, des Z qui montent. Le violet, lui, est debout devant le lit, une manette dans la main, les yeux grands ouverts, et il saute de joie et danse, plus réveillé que jamais. À 2,6 s la rose ouvre un œil, les yeux plats, la bouche plate, et trois points flottent au-dessus de sa tête. Zoom rapide sur son visage.",
-            "duree": 4.4,
-            "decor": "chambre",
-            "moment": "nuit",
-            "persos": [
-              {
-                "qui": "rose",
-                "a": "lit-gauche",
-                "gestes": [
-                  {
-                    "geste": "dort",
-                    "de": 0,
-                    "a": 2.5
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 0.3,
-                    "a": 2.5,
-                    "effet": "zzz"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2.6,
-                    "a": 4.4,
-                    "yeux": "plats",
-                    "bouche": "plate"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 2.7,
-                    "a": 4.4,
-                    "cible": "violet"
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 3.0,
-                    "a": 4.4,
-                    "effet": "points"
-                  }
-                ]
-              },
-              {
-                "qui": "violet",
-                "a": "devant-droite",
-                "gestes": [
-                  {
-                    "geste": "tient",
-                    "de": 0,
-                    "a": 4.4,
-                    "objet": "manette",
-                    "main": "gauche"
-                  },
-                  {
-                    "geste": "saute",
-                    "de": 0.1,
-                    "a": 1.4,
-                    "fois": 2
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0.1,
-                    "a": 2.0,
-                    "yeux": "brillants",
-                    "bouche": "rire"
-                  },
-                  {
-                    "geste": "danse",
-                    "de": 1.5,
-                    "a": 4.4
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.8,
-                    "a": 4.4,
-                    "effet": "etincelles"
-                  }
-                ]
-              }
-            ],
-            "transition": "noir",
-            "couette": "calme",
-            "legende": "11 PM",
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 2.6,
-                "zoom": 1
-              },
-              {
-                "a": 3.0,
-                "zoom": 1.5,
-                "cible": "rose"
-              }
-            ]
-          }
-        ],
+        "idee": "Dans les montagnes, elle lui raconte sa journée et rit ; un dragon surgit par la droite, plane au-dessus d'eux, rugit et l'emporte dans ses serres. Lui : le choc, le chagrin (une larme), puis l'esprit vengeur. Il tire l'épée, traverse la forêt (un tronc), la falaise (un ravin) et le pont jusqu'à la tour, prend sa garde, ancre le pied et bondit au ralenti : le dragon explose. Souffle, épée rangée, trois pas, un bouquet, sourire charmeur, les cœurs au sommet.",
+        "titre": "me in my dreams with u",
+        "heros": "garcon",
         "son": {
-          "ambiance": "drole"
+          "ambiance": "epique",
+          "recherche": "He's a Pirate"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "montagnes",
+              "jeu": "discussion",
+              "incident": {
+                "type": "enlevement",
+                "creature": "dragon",
+                "a": 1.3
+              },
+              "description": "Plan d'ensemble, caméra fixe, montagnes. Les deux se parlent debout face à face : lui gesticule de la main droite, elle penche la tête puis répond et rit. À 1,3 s le dragon entre en vol par le coin haut droit, grand, ailes déployées, grognement, et vient se placer au-dessus d'eux à droite, sous le titre ; son ombre glisse sur le sol jusqu'à eux. Il lève les yeux, surpris, elle se retourne. Le dragon plane sur place et rugit (gueule ouverte, yeux rouges), une rafale couche l'herbe et le bandana ; elle a peur, lui est sous le choc ; la caméra pousse un peu sur eux. Puis le dragon pique sur elle, la saisit dans ses serres (l'écran tremble, poussière, impact sourd) et remonte en l'emportant, jambes qui gigotent, jusqu'à sortir par le coin haut droit. Lui recule, bras écartés, tête renversée, bouche ouverte, et les suit des yeux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "choc",
+                  "duree": 1.2
+                },
+                {
+                  "expression": "chagrin",
+                  "duree": 1.3
+                },
+                {
+                  "expression": "vengeur",
+                  "duree": 1.3
+                }
+              ],
+              "description": "Très gros plan sur le visage du héros, coupe franche : la tête remplit l'image. Trois temps. Le choc (yeux ronds écarquillés, bouche en o, sourcils très hauts), la tête tremble à peine, le regard fixé en haut à droite, deux battements de cœur lents. À 1,2 s la tête tombe : sourcils tristes, bouche à l'envers, le regard descend vers le sol, une larme perle sous l'œil et coule sur la joue ; le vent tombe, presque le silence. À 2,5 s le visage se relève et se ferme d'un coup : sourcils en biais, yeux plissés, un sourire en coin, l'esprit de vengeance ; coup de zoom d'accompagnement, impact sourd au loin, et le vent se lève, les pans du bandana claquent, une montée de tempête mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "epee": true,
+              "description": "Dézoom rapide du visage au plan américain, puis caméra fixe. La main droite monte derrière la tête et saisit la poignée (l'autre bras part en arrière, genoux fléchis), puis tire l'épée d'un seul grand arc vers l'avant-bas : la lame apparaît, traînée bleue en arc, glissement métallique de la lame qui sort du fourreau puis sifflement de la lame, crépitement d'étincelles. Il reste de profil, lame basse devant lui, genoux fléchis, étincelles, le temps de respirer deux fois. Puis il part en flèche vers la droite : rémanences, lignes de vitesse, poussière, long souffle d'air."
+            },
+            {
+              "sequence": "traversee",
+              "etapes": [
+                {
+                  "decor": "foret",
+                  "obstacle": "tronc",
+                  "description": "Transition floue d'une seconde depuis le plan d'avant (le temps passe), puis travelling latéral dans la forêt : troncs et feuillages à l'encre devant, arbres gris derrière, le héros sprinte à la même place dans l'image. À 1,45 s un tronc couché arrive sous lui : passe-muraille (mains plantées sur le tronc, corps à l'horizontale, jambes repliées sur le côté), poussière à l'atterrissage, et il repart en course jusqu'à la coupe, qui est elle aussi un flou."
+                },
+                {
+                  "decor": "falaise",
+                  "obstacle": "trou",
+                  "description": "Transition floue d'une seconde, puis travelling latéral sur la falaise : sol rocheux, montagnes au loin. À 1,5 s un ravin s'ouvre sous lui : il saute, corps étiré, bras en avant, jambe avant repliée haute, et retombe de l'autre côté en roulade (corps groupé, un tour complet) avant de se relever en pleine course. Souffle d'air au saut, choc sourd à la réception, puis la course continue sous le flou de la coupe suivante."
+                },
+                {
+                  "decor": "pont",
+                  "duree": 2.2,
+                  "description": "Transition floue d'une seconde, puis travelling latéral sur le pont de corde au-dessus du vide : les planches défilent, les cordes pendent, et au fond, à droite, la tour apparaît et grandit. Sprint, lignes de vitesse légères, vent plus fort ; sur les sept derniers dixièmes la caméra pousse doucement sur lui pour amener la coupe, floue elle aussi."
+                }
+              ]
+            },
+            {
+              "sequence": "arrivee",
+              "lieu": "tour",
+              "description": "Transition floue d'une seconde : on découvre la tour pendant que l'image se précise. Plan d'ensemble en contre-plongée, la tour sur le tiers droit : elle est debout sur la plateforme crénelée, mains jointes, apeurée ; le dragon est perché sur le créneau de droite, ailes repliées, et balance la tête. À 0,9 s le héros déboule par la gauche en sprint et freine en glissade jusqu'au pied de la tour (poussière, glissement), puis relève la tête, menton levé, l'épée basse. Le dragon tourne la tête vers lui, yeux rouges, gueule ouverte : rugissement. Elle se penche et tend les bras vers lui. Lente poussée de la caméra sur tout le plan."
+            },
+            {
+              "sequence": "preparation",
+              "description": "Plan moyen de profil, caméra fixe sur le héros, la base de la tour derrière. Il prend la garde : les deux mains sur la poignée, lame dressée vers l'avant-haut, pied gauche devant, pied droit derrière, genoux à peine fléchis ; les étincelles se font plus nombreuses. Puis il plie les jambes lentement, sur une seconde, le buste se penche, les yeux se plissent, le bandana est plaqué en arrière. Il tient la position, la lame vibre, bourdonnement électrique qui monte, crépitement.",
+              "insert": "Insert, très gros plan au ras du sol sur ses deux pieds. Le pied arrière droit recule et s'ancre : la pointe s'enfonce, le sol se fissure sous lui (fentes en zigzag), petit nuage de poussière, cailloux qui sautent et retombent, secousse, craquement de pierre. Puis le talon se soulève, les jambes vibrent, des étincelles bleues courent sur le sol autour du pied, crépitement électrique."
+            },
+            {
+              "sequence": "exploit",
+              "type": "frappe",
+              "description": "Plan d'ensemble, même cadrage que la tour, la caméra reste large pendant l'envol puis serre d'un coup sur le combat. Détente : il quitte le sol d'un coup, onde de choc électrique, poussière, secousse, souffle de fusée. Il file en diagonale ascendante jusqu'au dragon, tête la première, corps aligné sur la trajectoire, lame pointée ; six rémanences, lignes de vitesse. Il s'électrise : éclairs sur le corps, halo bleu, yeux bleus, montée électrique, crépitement. À deux mètres du dragon, ralenti onze fois, caméra serrée, voile bleuté, battement de cœur, bourdon. Impact : flash blanc, le dragon est pulvérisé (éclats, braises, anneau bleu), secousse de 40 px, déflagration, débris qui retombent. Il poursuit en arc, atterrit accroupi sur la plateforme, se redresse, se tourne vers elle, et on tient le plan pendant que les éclats finissent de tomber ; elle saute de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "cadeau": "bouquet",
+              "fin": "charmeur",
+              "description": "Plan moyen large sur la plateforme, caméra fixe : elle à gauche mains jointes, lui à droite. Il reprend son souffle pendant une seconde et demie, plié en deux, mains sur les genoux, le buste qui se soulève, yeux fermés ; elle sourit, soulagée. Il se redresse et range l'épée (le bras repasse par-dessus l'épaule, la lame disparaît dans son dos, raclement métallique du fourreau, les étincelles s'éteignent). Il marche vers elle, trois pas tranquilles, et s'arrête devant elle. Sa main passe derrière son dos et ressort avec un bouquet, bras tendu : pop, cœur, scintillement magique. Sourire charmeur (sourcil relevé, œil mi-clos, étincelle, tintement de paillettes) ; elle, yeux fermés de bonheur, joues roses, petit saut, puis elle se penche vers lui, bras tendus, pendant que des cœurs montent entre eux ; lui sourit, heureux. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
         }
       },
-      "legende": "She wakes up singing. He plays games at midnight.\n\nSend this to your partner!",
+      "legende": "My boyfriend in my dreams.\n\nTag him",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }

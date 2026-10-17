@@ -2,268 +2,77 @@
   "jour": "2026-10-23",
   "creneau": "matin",
   "format": "reel",
-  "gabarit": "pov",
-  "categorie": "pov",
-  "sujet": "pov-020",
+  "gabarit": "baton",
+  "categorie": "baton",
+  "sujet": "bat-006",
   "idee_id": null,
   "variantes": {
     "en": {
       "recette": {
-        "gabarit": "pov",
+        "gabarit": "baton",
         "langue": "en",
         "theme": "light",
-        "idee": "Mini message : trois vases de fleurs arrivent l'un après l'autre, puis le violet tend un bouquet à la caméra.",
-        "plans": [
-          {
-            "description": "Fond papier avec un trait de sol. Dès la première image le violet est debout au centre, de face, et regarde la caméra avec un sourire timide, les joues roses. À 0,3 s un vase rose avec deux marguerites glisse depuis le bord gauche et se pose à ses pieds ; le texte « you deserve this... » s'écrit mot à mot en haut. À 2 s le violet fait un petit clin d'œil. La caméra se rapproche doucement.",
-            "duree": 4,
-            "decor": "ligne",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "violet",
-                "a": "centre",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 4,
-                    "cible": "camera"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.8,
-                    "yeux": "heureux",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 2,
-                    "a": 4,
-                    "yeux": "clin",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "vase-marguerites",
-                "x": 200,
-                "y": 1360,
-                "de": 0.3,
-                "entree": "glisse-gauche"
-              }
-            ],
-            "textes": [
-              {
-                "de": 0.2,
-                "texte": "you deserve this...",
-                "motAMot": true,
-                "place": "haut"
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 4,
-                "zoom": 1.12,
-                "x": 540,
-                "y": 1150
-              }
-            ]
-          },
-          {
-            "description": "Même fond. Un deuxième vase, mince et bleu avec une rose rouge, glisse depuis le bord droit et se pose à côté du violet ; « ...and this... » s'écrit en haut. Le violet ouvre les yeux, la bouche en « o », rougit encore plus et regarde le vase, puis la caméra. Un « ! » apparaît au-dessus de sa tête à 1,2 s. Zoom rapide sur son visage à 0,3 s.",
-            "duree": 3.6,
-            "decor": "ligne",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "violet",
-                "a": "centre",
-                "gestes": [
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1.4,
-                    "cible": "bas"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1.4,
-                    "yeux": "ouverts",
-                    "bouche": "o",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.2,
-                    "a": 3.6,
-                    "effet": "exclamation"
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 1.4,
-                    "a": 3.6,
-                    "cible": "camera"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1.5,
-                    "a": 3.6,
-                    "yeux": "brillants",
-                    "bouche": "sourire",
-                    "rougit": true
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "vase-marguerites",
-                "x": 200,
-                "y": 1360,
-                "de": 0,
-                "entree": "aucune"
-              },
-              {
-                "objet": "vase-rose",
-                "x": 880,
-                "y": 1360,
-                "de": 0.2,
-                "entree": "glisse-droite"
-              }
-            ],
-            "textes": [
-              {
-                "de": 0.2,
-                "texte": "...and this...",
-                "motAMot": true,
-                "place": "haut"
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 0.3,
-                "zoom": 1.5,
-                "x": 540,
-                "y": 1100
-              }
-            ]
-          },
-          {
-            "description": "Même fond, les deux vases à gauche et à droite. Un troisième vase, un pot rose avec un tournesol, tombe du haut devant le violet ; « ...and this one too » s'écrit en haut. À 1 s le violet sort un bouquet de roses et le tend vers la caméra, tout rouge, les yeux brillants. Des cœurs montent autour de lui jusqu'à la fin, la caméra se rapproche.",
-            "duree": 4.4,
-            "decor": "ligne",
-            "moment": "soir",
-            "persos": [
-              {
-                "qui": "violet",
-                "a": "centre",
-                "gestes": [
-                  {
-                    "geste": "visage",
-                    "de": 0,
-                    "a": 1,
-                    "yeux": "ouverts",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "regarde",
-                    "de": 0,
-                    "a": 1,
-                    "cible": "bas"
-                  },
-                  {
-                    "geste": "offre",
-                    "de": 1,
-                    "a": 4.4,
-                    "objet": "bouquet"
-                  },
-                  {
-                    "geste": "visage",
-                    "de": 1,
-                    "a": 4.4,
-                    "yeux": "brillants",
-                    "bouche": "sourire",
-                    "rougit": true
-                  },
-                  {
-                    "geste": "effet",
-                    "de": 1.6,
-                    "a": 4.4,
-                    "effet": "coeurs"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "vase-marguerites",
-                "x": 200,
-                "y": 1360,
-                "de": 0,
-                "entree": "aucune"
-              },
-              {
-                "objet": "vase-rose",
-                "x": 880,
-                "y": 1360,
-                "de": 0,
-                "entree": "aucune"
-              },
-              {
-                "objet": "vase-tournesol",
-                "x": 360,
-                "y": 1360,
-                "de": 0.2,
-                "entree": "tombe"
-              }
-            ],
-            "textes": [
-              {
-                "de": 0.2,
-                "texte": "...and this one too",
-                "motAMot": true,
-                "place": "haut"
-              }
-            ],
-            "camera": [
-              {
-                "a": 0,
-                "zoom": 1
-              },
-              {
-                "a": 4.4,
-                "zoom": 1.25,
-                "x": 540,
-                "y": 1150
-              }
-            ]
-          }
-        ],
+        "idee": "Une nuit dans les montagnes, il montre une étoile du doigt, les yeux en cœur. Elle (le héros) sourit, attendrie, puis se concentre, s'accroupit et bondit si haut qu'elle décroche l'étoile au ralenti ; elle retombe à côté de lui et la lui pose dans les mains ; il l'admire, émerveillé, les cœurs montent.",
+        "titre": "me in my dreams with u",
+        "heros": "fille",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "tendre",
+          "recherche": "Yellow"
+        },
+        "histoire": {
+          "sequences": [
+            {
+              "sequence": "ouverture",
+              "decor": "montagnes",
+              "nuit": true,
+              "jeu": "discussion",
+              "incident": {
+                "type": "envie-etoile",
+                "a": 1.2
+              },
+              "description": "Plan d'ensemble, caméra fixe, les montagnes la nuit : la lune, les étoiles qui scintillent, et une étoile plus grande qui brille en haut à droite avec ses rayons. Elle (bandana violet, queue de cheval) parle, lui (la mèche) l'écoute et rit. À 1,2 s il se tourne vers le ciel et tend le bras vers l'étoile, les yeux en cœur. Elle lève la tête, sourit, puis le regarde, attendrie, joues roses ; à 3,1 s son visage se ferme, décidé. La caméra pousse doucement vers l'étoile et vers eux."
+            },
+            {
+              "sequence": "emotion",
+              "etapes": [
+                {
+                  "expression": "tendre",
+                  "duree": 1.0
+                },
+                {
+                  "expression": "determine",
+                  "duree": 1.1
+                }
+              ],
+              "description": "Très gros plan sur son visage, coupe franche, les étoiles derrière. La tendresse d'abord : sourcils doux, sourire, joues roses, le regard sur lui. À 1,0 s le visage se ferme d'un coup : sourcils en biais, yeux en traits, bouche serrée, le regard monte vers l'étoile ; coup de zoom d'accompagnement, impact sourd au loin, un souffle de vent mène à la coupe."
+            },
+            {
+              "sequence": "depart",
+              "epee": false,
+              "course": false,
+              "description": "Dézoom rapide du visage au plan américain : elle devant, lui derrière, le bras encore tendu vers le ciel. Elle se plante face à l'étoile, les poings serrés, les genoux qui fléchissent, le regard levé ; le vent soulève les pans du bandana. La caméra serre un peu sur elle : elle va sauter."
+            },
+            {
+              "sequence": "exploit",
+              "type": "attrape",
+              "description": "Plan d'ensemble, l'étoile en haut à droite, le couple en bas. Elle s'accroupit, les bras en arrière, tout le corps qui vibre. Détente : onde de choc, poussière, secousse, elle part comme une flèche vers l'étoile, rémanences, lignes de vitesse presque verticales. Juste avant de l'atteindre, ralenti dix fois, caméra serrée sur sa main et sur l'étoile, voile bleuté, battement de cœur : ses doigts se referment dessus, l'étoile du ciel s'éteint et brille dans sa main (scintillement). Elle retombe accroupie à côté de lui, poussière, se redresse l'étoile à la main, tendre ; il saute de joie."
+            },
+            {
+              "sequence": "retrouvailles",
+              "cadeau": "etoile",
+              "fin": "charmeur",
+              "duree": 6.0,
+              "description": "Plan moyen large, caméra fixe, les montagnes sous la lune. Lui à droite, elle à gauche avec l'étoile qui brille dans sa main, un halo jaune, trois éclats qui tournent. Elle fait un pas vers lui et la lui tend, bras tendu, sourire charmeur (sourcil relevé, œil mi-clos, étincelle, tintement). Il tend les bras, les yeux en cœur, et la reçoit dans ses mains jointes, la tête penchée dessus, émerveillé (scintillement magique). Les cœurs montent entre eux ; elle sourit, heureuse, les yeux fermés. La caméra pousse lentement sur eux deux jusqu'à la fin."
+            }
+          ]
         }
       },
-      "legende": "Flowers for the one who reads this.\n\nSend this to your partner.",
+      "legende": "Nothing is too high for her.\n\nTag your partner",
       "hashtags": [
-        "#couplecomedy",
-        "#relationshiphumor",
-        "#cuteanimation",
+        "#stickman",
+        "#stickfigure",
+        "#animation",
+        "#couplegoals",
         "#quizcouple"
       ]
     }
