@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-16T08:07:16.596Z",
+  "genere_le": "2026-10-17T03:13:11.687Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-16",
+  "aujourdhui": "2026-10-17",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 24,
+  "reserve_jours": 23,
   "a_remplir": [
     {
       "jour": "2026-11-09",
@@ -1171,6 +1171,21 @@
       "jour": "2027-01-24",
       "creneau": "soir",
       "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-25",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-25",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-25",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
     }
   ],
   "a_corriger": [],
@@ -1380,7 +1395,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "j'ai rien fait",
       "erreur": null
     },
@@ -1389,7 +1404,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1434,7 +1449,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "on s'engueule pour la vaisselle. on s'endort collés.",
       "erreur": null
     },
@@ -1443,7 +1458,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2027,7 +2042,7 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-17",
+      "jour": "2026-10-18",
       "creneau": "matin"
     },
     "mipaps-statique": {
@@ -2035,7 +2050,7 @@
       "creneau": "soir"
     },
     "mipaps-histoire": {
-      "jour": "2026-10-16",
+      "jour": "2026-10-18",
       "creneau": "soir"
     },
     "mipaps-post": {
@@ -2077,6 +2092,27 @@
       "releve": "j7",
       "vues": 1451,
       "partages": 1,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "14f136e6-53c1-493c-b2a7-72af378cee9a",
+      "releve": "j7",
+      "vues": 198,
+      "partages": 2,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "6a7c5685-dc66-43e2-9f5b-003b2c83887c",
+      "releve": "j7",
+      "vues": 1352,
+      "partages": 6,
+      "enregistrements": 1
+    },
+    {
+      "variante_id": "eab84977-a61b-4494-9333-60208e43e7df",
+      "releve": "j7",
+      "vues": 0,
+      "partages": 0,
       "enregistrements": 0
     }
   ]
