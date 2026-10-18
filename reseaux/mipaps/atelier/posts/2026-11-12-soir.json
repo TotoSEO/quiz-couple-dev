@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-statique",
   "categorie": "mipaps-statique",
-  "sujet": "sta-013",
+  "sujet": "sta-105",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,8 +12,8 @@
         "gabarit": "mipaps-statique",
         "langue": "fr",
         "theme": "light",
-        "idee": "Reel statique : les deux assis côte à côte, un soleil au-dessus d'eux.",
-        "texte": "je t'aime en silence aussi",
+        "idee": "Reel statique : elle, un peu triste, le téléphone à la patte ; un cœur au-dessus de l'écran.",
+        "texte": "quand ça va pas, c'est ton nom que je cherche dans mon téléphone",
         "duree": 11,
         "son": {
           "ambiance": "tendre"
@@ -21,36 +21,34 @@
         "dessin": {
           "elements": [
             {
-              "perso": "lui",
-              "expression": "content",
-              "pose": "assis",
-              "y": 380,
-              "x": 250,
-              "taille": 230
-            },
-            {
               "perso": "elle",
-              "expression": "content",
-              "pose": "assis",
-              "y": 380,
-              "x": 400,
-              "taille": 230
+              "expression": "triste",
+              "x": 320,
+              "taille": 280,
+              "bras": "tient"
             },
             {
-              "objet": "soleil",
-              "x": 325,
-              "y": 120,
-              "echelle": 0.8
+              "objet": "telephone",
+              "x": 358,
+              "y": 344,
+              "echelle": 0.5
+            },
+            {
+              "objet": "coeur",
+              "x": 400,
+              "y": 220,
+              "echelle": 0.35,
+              "flotte": true
             }
           ]
         }
       },
-      "legende": "on a regardé le coucher de soleil sans parler.\n\nenvoie ça sans rien dire",
+      "legende": "envoie ça à ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#mignon"
+        "#relation"
       ]
     }
   }

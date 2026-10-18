@@ -12,25 +12,33 @@
         "gabarit": "mipaps-post",
         "langue": "fr",
         "theme": "light",
-        "idee": "Mini : elle, zen, assise, les yeux fermés, des étincelles ; six heures de dispute.",
+        "idee": "Mini : les deux, perplexes, un point d'interrogation chacun ; la dispute dont plus personne ne connaît la raison.",
         "style": "mini",
-        "texte": "6 h de crise pour finir sur « c'est pas si grave »",
+        "texte": "on s'est disputés une heure et plus personne se souvient pourquoi",
         "dessin": {
           "elements": [
             {
-              "perso": "elle",
-              "expression": "zen",
-              "pose": "assis",
+              "perso": "lui",
+              "expression": "perplexe",
               "signes": [
-                "etincelles"
+                "question"
               ],
-              "x": 320,
-              "taille": 280
+              "x": 230,
+              "taille": 260
+            },
+            {
+              "perso": "elle",
+              "expression": "perplexe",
+              "signes": [
+                "question"
+              ],
+              "x": 410,
+              "taille": 260
             }
           ]
         }
       },
-      "legende": "c'était à cause des chaussettes.\n\nc'est qui chez vous ?",
+      "legende": "vous aussi ou c'est que nous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

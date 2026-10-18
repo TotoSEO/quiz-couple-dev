@@ -12,7 +12,7 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le selfie : ils prennent la pose, encore une pose, encore une ; 48 photos plus tard il est KO ; elle choisit la première. Quatre plans, 14 secondes.",
+        "idee": "« Juste une photo de nous deux » : ils posent, elle en veut encore une, puis encore une ; cinquante photos plus tard il est KO ; elle garde la première. Quatre plans, 14 secondes.",
         "son": {
           "ambiance": "drole"
         },
@@ -54,7 +54,7 @@
             ],
             "textes": [
               {
-                "texte": "le selfie",
+                "texte": "« juste une photo de nous deux »",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -107,7 +107,7 @@
             ],
             "textes": [
               {
-                "texte": "nouvelle pose. nouvelle pose.",
+                "texte": "« attends, encore une »",
                 "de": 0.3,
                 "place": "haut"
               }
@@ -116,7 +116,7 @@
           {
             "duree": 3.5,
             "transition": "fondu",
-            "description": "48 photos plus tard : lui est allongé par terre, épuisé, les yeux en croix. Elle est toujours là, fraîche, le téléphone à la patte, prête pour une de plus.",
+            "description": "Cinquante photos plus tard : lui est allongé par terre, épuisé, les yeux en croix. Elle est toujours là, fraîche, le téléphone à la patte, prête pour une de plus.",
             "persos": [
               {
                 "perso": "lui",
@@ -151,7 +151,7 @@
             ],
             "textes": [
               {
-                "texte": "48 photos plus tard",
+                "texte": "50 photos plus tard",
                 "de": 0.2,
                 "place": "haut"
               }
@@ -195,7 +195,7 @@
             ],
             "textes": [
               {
-                "texte": "photo 1 sur 48",
+                "texte": "« on garde la première »",
                 "de": 0.4,
                 "place": "haut",
                 "motAMot": true
@@ -204,7 +204,7 @@
           }
         ]
       },
-      "legende": "la première était très bien.\n\ntague-le",
+      "legende": "tague ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",

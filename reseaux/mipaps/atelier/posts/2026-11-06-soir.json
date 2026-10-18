@@ -12,7 +12,7 @@
         "gabarit": "mipaps-carrousel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Avant toi, avec toi : le dimanche, le frigo, les pulls, le canapé.",
+        "idee": "Avant toi, avec toi : le dimanche, le téléphone, les pulls, le canapé.",
         "pages": [
           {
             "texte": "avant toi / avec toi",
@@ -51,26 +51,21 @@
             }
           },
           {
-            "texte": "le frigo : une bière / des frites pour deux",
+            "texte": "mon téléphone : rien / tes vidéos toute la journée",
             "dessin": {
               "elements": [
                 {
-                  "perso": "lui",
-                  "expression": "miam",
-                  "x": 250,
-                  "taille": 250
-                },
-                {
                   "perso": "elle",
-                  "expression": "miam",
-                  "x": 410,
-                  "taille": 250
+                  "expression": "rire",
+                  "x": 290,
+                  "taille": 270,
+                  "bras": "tient"
                 },
                 {
-                  "objet": "frites",
-                  "x": 330,
-                  "y": 336,
-                  "echelle": 0.9
+                  "objet": "telephone",
+                  "x": 328,
+                  "y": 346,
+                  "echelle": 0.5
                 }
               ]
             }
@@ -103,7 +98,7 @@
           }
         ]
       },
-      "legende": "le canapé fait 1 m 80.\n\nenvoie-lui ça",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",

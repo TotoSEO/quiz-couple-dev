@@ -47,7 +47,7 @@
             ],
             "textes": [
               {
-                "texte": "20 h 10",
+                "texte": "quand on se fait la tête",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -98,8 +98,8 @@
             ],
             "textes": [
               {
-                "texte": "20 h 12",
-                "de": 0.2,
+                "texte": "« je boude, là »",
+                "de": 1.6,
                 "place": "haut"
               }
             ]
@@ -107,7 +107,7 @@
           {
             "duree": 3.5,
             "transition": "fondu",
-            "description": "Elle s'approche d'un pas et lui fait un bisou sur la joue à 0,8 s. Il fond, les yeux qui brillent, des cœurs autour de lui, les bras qui retombent. Le texte à 0,2 s.",
+            "description": "Elle s'approche d'un pas et lui fait un bisou sur la joue à 0,8 s. Il fond, les yeux qui brillent, des cœurs autour de lui, les bras qui retombent. Pas de texte : le bisou fait la fin.",
             "persos": [
               {
                 "perso": "lui",
@@ -145,17 +145,11 @@
                 ]
               }
             ],
-            "textes": [
-              {
-                "texte": "20 h 13",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
+            "textes": []
           }
         ]
       },
-      "legende": "il a boudé 3 minutes.\n\ntague-le",
+      "legende": "vous aussi ou c'est que nous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

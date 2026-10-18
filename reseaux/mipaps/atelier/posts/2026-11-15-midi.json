@@ -4,7 +4,7 @@
   "format": "image",
   "gabarit": "mipaps-post",
   "categorie": "mipaps-post",
-  "sujet": "pos-033",
+  "sujet": "pos-145",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,16 +12,41 @@
         "gabarit": "mipaps-post",
         "langue": "fr",
         "theme": "light",
-        "idee": "Déclaration : la distance en un fait précis, sans formule.",
-        "style": "declaration",
-        "texte": "on est à 400 km l'un de l'autre. je compte les jours avant vendredi."
+        "idee": "Schéma de bureau : la liste de ce qui se passe avant de dormir, tout est coché, jusqu'à « non mais attends ».",
+        "style": "schema",
+        "texte": "avant de dormir, chez nous",
+        "schema": {
+          "type": "liste",
+          "lignes": [
+            {
+              "texte": "« tu dors ? »",
+              "coche": true
+            },
+            {
+              "texte": "on parle de tout",
+              "coche": true
+            },
+            {
+              "texte": "on rigole pour rien",
+              "coche": true
+            },
+            {
+              "texte": "« allez, on dort »",
+              "coche": true
+            },
+            {
+              "texte": "« non mais attends »",
+              "coche": true
+            }
+          ]
+        }
       },
-      "legende": "garde ça pour un soir où ça va pas",
+      "legende": "vous aussi ou c'est que nous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#amour",
-        "#couplegoals"
+        "#humour",
+        "#relation"
       ]
     }
   }

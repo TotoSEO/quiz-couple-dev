@@ -4,7 +4,7 @@
   "format": "carrousel",
   "gabarit": "mipaps-carrousel",
   "categorie": "mipaps-histoire",
-  "sujet": "his-017",
+  "sujet": "his-105",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,102 +12,135 @@
         "gabarit": "mipaps-carrousel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Les quatre saisons avec toi : les fleurs, un seul parasol, un parapluie pour deux, la couette.",
+        "idee": "Si vous faites ces trucs-là, vous êtes un vrai couple : les vidéos envoyées dans la même pièce, le dîner dont on parle au déjeuner, la chanson à vous, la commande de l'autre qu'on connaît par cœur.",
         "pages": [
           {
-            "texte": "les quatre saisons avec toi",
+            "texte": "vous êtes un vrai couple si...",
+            "dessin": {
+              "duo": "main_dans_la_main"
+            }
+          },
+          {
+            "texte": "vous vous envoyez des vidéos alors que vous êtes dans la même pièce.",
             "dessin": {
               "elements": [
                 {
+                  "meuble": "canape_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "rire",
+                  "x": 250,
+                  "taille": 210,
+                  "bras": "tient",
+                  "y": 318,
+                  "pose": "assis"
+                },
+                {
                   "perso": "elle",
-                  "expression": "content",
-                  "signes": [
-                    "fleurs"
-                  ],
-                  "x": 320,
-                  "taille": 270
+                  "expression": "rire",
+                  "x": 390,
+                  "taille": 210,
+                  "bras": "tient",
+                  "y": 318,
+                  "pose": "assis"
                 }
               ]
             }
           },
           {
-            "texte": "printemps : il m'offre des fleurs.",
+            "texte": "vous parlez du dîner pendant le déjeuner.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "pensif",
+                  "x": 280,
+                  "taille": 260,
+                  "bras": "menton"
+                },
+                {
+                  "objet": "pizza",
+                  "x": 450,
+                  "y": 300,
+                  "echelle": 0.5
+                }
+              ]
+            }
+          },
+          {
+            "texte": "vous avez une chanson rien qu'à vous.",
             "dessin": {
               "elements": [
                 {
                   "perso": "lui",
-                  "expression": "timide",
-                  "bras": "tend_d",
+                  "expression": "chante",
+                  "x": 250,
+                  "taille": 260,
+                  "signes": [
+                    "notes"
+                  ]
+                },
+                {
+                  "perso": "elle",
+                  "expression": "chante",
+                  "x": 410,
+                  "taille": 260,
+                  "signes": [
+                    "notes"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "texte": "tu sais ce que l'autre va commander avant qu'il ouvre la carte.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "malicieux",
                   "x": 270,
                   "taille": 260
                 },
                 {
-                  "objet": "bouquet",
-                  "x": 390,
-                  "y": 330,
-                  "echelle": 0.7
-                },
-                {
-                  "perso": "elle",
-                  "expression": "emerveille",
-                  "x": 440,
-                  "taille": 250
+                  "perso": "lui",
+                  "expression": "hesite",
+                  "x": 430,
+                  "taille": 260,
+                  "bras": "menton"
                 }
               ]
             }
           },
           {
-            "texte": "été : la plage, un seul parasol.",
+            "texte": "et vous vous comprenez d'un regard.",
             "dessin": {
               "elements": [
                 {
                   "perso": "lui",
-                  "expression": "content",
+                  "expression": "clin",
                   "x": 250,
-                  "taille": 250
+                  "taille": 260
                 },
                 {
                   "perso": "elle",
-                  "expression": "content",
+                  "expression": "clin",
                   "x": 410,
-                  "taille": 250
-                },
-                {
-                  "objet": "parapluie",
-                  "x": 330,
-                  "y": 150,
-                  "echelle": 1.4
-                },
-                {
-                  "objet": "soleil",
-                  "x": 480,
-                  "y": 100,
-                  "echelle": 0.6
+                  "taille": 260
                 }
               ]
-            }
-          },
-          {
-            "texte": "automne : la pluie, un parapluie pour deux.",
-            "dessin": {
-              "duo": "parapluie"
-            }
-          },
-          {
-            "texte": "hiver : la couette, 2 degrés dehors.",
-            "dessin": {
-              "duo": "couette"
             },
-            "appel": "garde ça pour un soir où ça va pas"
+            "appel": "tague ta personne"
           }
         ]
       },
-      "legende": "on a refait le tour deux fois.\n\ngarde ça pour un soir où ça va pas",
+      "legende": "tague ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#amour",
-        "#mignon"
+        "#humour",
+        "#relation"
       ]
     }
   }

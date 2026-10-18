@@ -12,33 +12,77 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le matin de noël : elle dort, il arrive en sprint avec un cadeau et lui saute dessus ; elle l'ouvre, ce sont des frites ; câlin et cœurs. Trois plans, 11 secondes.",
+        "idee": "« On avait dit pas de cadeaux cette année » : chacun cache un cadeau derrière son dos ; ils le sortent en même temps, « toi aussi ? » ; câlin, cœurs et flocons. Trois plans, 11,5 secondes.",
         "son": {
           "ambiance": "noel"
         },
         "plans": [
           {
-            "duree": 3,
-            "description": "Elle dort allongée, très calme, des flocons dehors et des petits zzz au-dessus d'elle. Le texte en haut dès 0,2 s.",
+            "duree": 4,
+            "description": "Les deux sont face à nous, lui à gauche, elle à droite, chacun avec un cadeau caché derrière le dos, l'air innocent. Des flocons tombent doucement. Ils se jettent un regard en coin à 2 s. Le texte se pose à 0,2 s.",
             "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 240,
+                    "expression": "ange"
+                  },
+                  {
+                    "a": 2,
+                    "expression": "malicieux"
+                  }
+                ]
+              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 330,
-                    "pose": "allonge",
-                    "expression": "dodo",
-                    "signes": [
-                      "zzz"
-                    ]
+                    "x": 420,
+                    "expression": "ange"
+                  },
+                  {
+                    "a": 2,
+                    "expression": "malicieux"
                   }
                 ]
               }
             ],
+            "objets": [
+              {
+                "objet": "cadeau",
+                "x": 210,
+                "y": 330,
+                "echelle": 0.5,
+                "derriere": true
+              },
+              {
+                "objet": "cadeau",
+                "x": 450,
+                "y": 330,
+                "echelle": 0.5,
+                "derriere": true
+              },
+              {
+                "objet": "flocon",
+                "x": 120,
+                "y": 90,
+                "echelle": 0.3,
+                "flotte": true
+              },
+              {
+                "objet": "flocon",
+                "x": 530,
+                "y": 120,
+                "echelle": 0.25,
+                "flotte": true
+              }
+            ],
             "textes": [
               {
-                "texte": "le matin de noël chez nous",
+                "texte": "« on avait dit pas de cadeaux cette année »",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -47,29 +91,24 @@
           },
           {
             "duree": 3.5,
-            "description": "Il surgit du bord gauche en sprint, joyeux, un cadeau à la patte. À 2 s il est près d'elle et saute. Elle se redresse d'un coup, surprise.",
+            "transition": "coupe",
+            "description": "Au même moment, ils sortent chacun leur cadeau et se le tendent, à 0,4 s. Ils se voient faire, surpris, un point d'exclamation au-dessus de chacun. Le texte arrive à 1,2 s.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "sprint",
-                    "expression": "joie"
+                    "x": 240,
+                    "expression": "malicieux",
+                    "bras": "tend_d"
                   },
                   {
-                    "a": 1.9,
-                    "x": 300,
-                    "pose": "saut",
-                    "expression": "joie"
-                  },
-                  {
-                    "a": 3,
-                    "x": 330,
-                    "pose": "debout",
-                    "expression": "content"
+                    "a": 0.8,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
                   }
                 ]
               },
@@ -78,14 +117,16 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 450,
-                    "pose": "allonge",
-                    "expression": "dodo"
+                    "x": 420,
+                    "expression": "malicieux",
+                    "bras": "tend_g"
                   },
                   {
-                    "a": 2,
-                    "pose": "assis",
-                    "expression": "surpris"
+                    "a": 0.8,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
                   }
                 ]
               }
@@ -93,37 +134,36 @@
             "objets": [
               {
                 "objet": "cadeau",
-                "x": 330,
-                "y": 330,
-                "echelle": 0.6,
-                "de": 1.9
+                "x": 300,
+                "y": 320,
+                "echelle": 0.5
+              },
+              {
+                "objet": "cadeau",
+                "x": 360,
+                "y": 320,
+                "echelle": 0.5
               }
             ],
             "textes": [
               {
-                "texte": "il saute sur le lit",
-                "de": 0.3,
+                "texte": "« toi aussi ? »",
+                "de": 1.2,
                 "place": "haut"
               }
             ]
           },
           {
-            "duree": 4.5,
+            "duree": 4,
             "transition": "fondu",
-            "description": "Elle assise ouvre le cadeau, des frites en sortent, elle ouvre grand les yeux, ravie. Il est à côté, content. À 1,5 s ils se serrent fort et trois cœurs flottent. La phrase s'écrit mot à mot.",
+            "description": "Ils se serrent fort, les yeux fermés, les deux cadeaux posés par terre à leurs pieds. Des cœurs et des flocons flottent autour d'eux. La phrase s'écrit mot à mot à 0,6 s.",
             "persos": [
               {
-                "perso": "elle",
+                "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 270,
-                    "pose": "assis",
-                    "expression": "emerveille",
-                    "bras": "devant"
-                  },
-                  {
-                    "a": 1.5,
+                    "x": 285,
                     "expression": "calin",
                     "bras": "tend_d",
                     "pose": "penche_d"
@@ -131,17 +171,12 @@
                 ]
               },
               {
-                "perso": "lui",
+                "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
-                    "pose": "assis",
-                    "expression": "content"
-                  },
-                  {
-                    "a": 1.5,
-                    "expression": "calin",
+                    "x": 395,
+                    "expression": "transi",
                     "bras": "tend_g",
                     "pose": "penche_g"
                   }
@@ -150,17 +185,23 @@
             ],
             "objets": [
               {
-                "objet": "frites",
-                "x": 330,
-                "y": 320,
-                "echelle": 0.6
+                "objet": "cadeau",
+                "x": 200,
+                "y": 360,
+                "echelle": 0.4
+              },
+              {
+                "objet": "cadeau",
+                "x": 480,
+                "y": 360,
+                "echelle": 0.4
               },
               {
                 "objet": "coeur",
                 "x": 335,
                 "y": 150,
                 "echelle": 0.5,
-                "de": 1.6,
+                "de": 0.8,
                 "flotte": true
               },
               {
@@ -168,22 +209,21 @@
                 "x": 240,
                 "y": 190,
                 "echelle": 0.32,
-                "de": 2.0,
+                "de": 1.2000000000000002,
                 "flotte": true
               },
               {
-                "objet": "coeur",
-                "x": 435,
-                "y": 200,
-                "echelle": 0.36,
-                "de": 2.4000000000000004,
+                "objet": "flocon",
+                "x": 540,
+                "y": 110,
+                "echelle": 0.25,
                 "flotte": true
               }
             ],
             "textes": [
               {
-                "texte": "joyeux noël mon amoureux",
-                "de": 0.4,
+                "texte": "joyeux noël, mon amour",
+                "de": 0.6,
                 "place": "haut",
                 "motAMot": true
               }
@@ -191,7 +231,7 @@
           }
         ]
       },
-      "legende": "elle voulait des frites.\n\nenvoie-lui ça",
+      "legende": "envoie ça à ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",

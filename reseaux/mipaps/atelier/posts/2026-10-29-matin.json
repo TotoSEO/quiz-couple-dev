@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-021",
+  "sujet": "ani-132",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,14 +12,14 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le cadeau : il arrive avec un cadeau derrière le dos, timide, le tend ; elle est émerveillée ; elle l'ouvre : des frites. Trois plans, 11 secondes.",
+        "idee": "Quand ta personne rentre avec un petit truc pour toi : il arrive, quelque chose caché derrière le dos, timide ; il lui tend un bubble tea ; elle est aux anges ; « j'suis passé devant, j'ai pensé à toi ». Trois plans, 11 secondes.",
         "son": {
           "ambiance": "tendre"
         },
         "plans": [
           {
             "duree": 3.5,
-            "description": "Elle est à droite, debout, contente. Il entre du bord gauche en marchant de profil, un cadeau caché derrière lui. Il s'arrête devant elle à 2 s, se tourne vers nous à 2,5 s, timide, les joues rouges. Le texte se pose à 0,2 s.",
+            "description": "Elle est à droite, debout, contente. Il entre du bord gauche en marchant de profil, quelque chose caché derrière lui. Il s'arrête devant elle à 2 s, se tourne vers nous à 2,5 s, timide, les joues rouges. Le texte se pose à 0,2 s.",
             "persos": [
               {
                 "perso": "elle",
@@ -63,7 +63,7 @@
             ],
             "objets": [
               {
-                "objet": "cadeau",
+                "objet": "bubble_tea",
                 "x": -140,
                 "y": 340,
                 "echelle": 0.6,
@@ -84,7 +84,7 @@
             ],
             "textes": [
               {
-                "texte": "il arrive avec un cadeau",
+                "texte": "quand ta personne rentre avec un petit truc pour toi",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -93,7 +93,7 @@
           },
           {
             "duree": 3.5,
-            "description": "Il tend le cadeau à bout de patte à 0,4 s, elle ouvre de grands yeux, des étoiles dans le regard, et le prend. Lui, tout fier, attend.",
+            "description": "Il lui tend un bubble tea à bout de patte à 0,4 s, elle ouvre de grands yeux, des étoiles dans le regard, et le prend. Lui, tout fier, attend sa réaction.",
             "persos": [
               {
                 "perso": "lui",
@@ -130,7 +130,7 @@
             ],
             "objets": [
               {
-                "objet": "cadeau",
+                "objet": "bubble_tea",
                 "x": 230,
                 "y": 340,
                 "echelle": 0.6,
@@ -152,7 +152,7 @@
           {
             "duree": 4,
             "transition": "fondu",
-            "description": "Elle l'ouvre : à l'intérieur, un cornet de frites. Elle fait « miam », lui rayonne à côté. Les deux sourient en regardant le cornet.",
+            "description": "Elle boit son bubble tea, les yeux fermés, aux anges. Lui rayonne à côté, les bras le long du corps. Sa phrase s'écrit mot à mot à partir de 0,8 s, comme si de rien n'était.",
             "persos": [
               {
                 "perso": "lui",
@@ -182,17 +182,24 @@
             ],
             "objets": [
               {
-                "objet": "frites",
+                "objet": "bubble_tea",
                 "x": 430,
                 "y": 336,
-                "echelle": 0.8,
-                "de": 0.7
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« j'suis passé devant, j'ai pensé à toi »",
+                "de": 0.8,
+                "place": "haut",
+                "motAMot": true
               }
             ]
           }
         ]
       },
-      "legende": "il a dit « c'est une surprise ».\n\ntague ton amoureux",
+      "legende": "envoie ça à ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",

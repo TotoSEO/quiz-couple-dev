@@ -4,7 +4,7 @@
   "format": "carrousel",
   "gabarit": "mipaps-carrousel",
   "categorie": "mipaps-histoire",
-  "sujet": "his-006",
+  "sujet": "his-104",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,123 +12,170 @@
         "gabarit": "mipaps-carrousel",
         "langue": "fr",
         "theme": "light",
-        "idee": "La distance : deux lits, un compte à rebours, le train, la gare, puis le câlin des retrouvailles.",
+        "idee": "Au début / maintenant : on se préparait une heure, maintenant pyjama ; bonne nuit pendant des heures, maintenant on s'endort au milieu d'une phrase ; on mangeait à peine, maintenant dans l'assiette de l'autre.",
         "pages": [
           {
-            "texte": "quand t'es loin",
+            "texte": "nous deux au début, et nous deux maintenant",
+            "dessin": {
+              "duo": "main_dans_la_main"
+            }
+          },
+          {
+            "texte": "au début : je me préparais une heure avant de te voir.",
             "dessin": {
               "elements": [
                 {
                   "perso": "elle",
-                  "expression": "triste",
-                  "bras": "tient",
-                  "x": 320,
-                  "taille": 270
+                  "expression": "concentre",
+                  "x": 300,
+                  "taille": 270,
+                  "signes": [
+                    "etincelles"
+                  ]
                 },
                 {
-                  "objet": "telephone",
-                  "x": 358,
-                  "y": 344,
+                  "objet": "brosse",
+                  "x": 460,
+                  "y": 300,
                   "echelle": 0.5
                 }
               ]
             }
           },
           {
-            "texte": "deux téléphones. deux lits. un seul sujet : toi.",
-            "dessin": {
-              "elements": [
-                {
-                  "perso": "lui",
-                  "expression": "dodo",
-                  "signes": [
-                    "zzz"
-                  ],
-                  "x": 250,
-                  "taille": 240
-                },
-                {
-                  "perso": "elle",
-                  "expression": "triste",
-                  "bras": "tient",
-                  "x": 410,
-                  "taille": 240
-                },
-                {
-                  "objet": "telephone",
-                  "x": 444,
-                  "y": 326,
-                  "echelle": 0.4
-                }
-              ]
-            }
-          },
-          {
-            "texte": "le compte à rebours : 47 jours.",
+            "texte": "maintenant : pyjama et chaussettes qui vont pas ensemble.",
             "dessin": {
               "elements": [
                 {
                   "perso": "elle",
                   "expression": "content",
-                  "x": 270,
-                  "taille": 260
+                  "x": 300,
+                  "taille": 270
                 },
                 {
-                  "objet": "calendrier",
+                  "objet": "chaussettes",
                   "x": 460,
-                  "y": 300,
-                  "echelle": 1.0
+                  "y": 350,
+                  "echelle": 0.5
                 }
               ]
             }
           },
           {
-            "texte": "le train : 3 h de retard.",
+            "texte": "au début : on se disait bonne nuit pendant des heures.",
             "dessin": {
               "elements": [
                 {
+                  "perso": "lui",
+                  "expression": "transi",
+                  "x": 300,
+                  "taille": 270,
+                  "bras": "tient",
+                  "signes": [
+                    "coeurs"
+                  ]
+                },
+                {
+                  "objet": "telephone",
+                  "x": 338,
+                  "y": 346,
+                  "echelle": 0.5
+                }
+              ]
+            }
+          },
+          {
+            "texte": "maintenant : on s'endort au milieu d'une phrase.",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "lit_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "x": 248,
+                  "taille": 200,
+                  "signes": [
+                    "zzz"
+                  ],
+                  "y": 346,
+                  "pose": "debout",
+                  "bras": "aucun",
+                  "pattes": "aucune"
+                },
+                {
                   "perso": "elle",
-                  "expression": "blase",
+                  "expression": "dodo",
+                  "x": 394,
+                  "taille": 200,
+                  "signes": [
+                    "zzz"
+                  ],
+                  "y": 346,
+                  "pose": "debout",
+                  "bras": "aucun",
+                  "pattes": "aucune"
+                },
+                {
+                  "meuble": "lit_couette"
+                }
+              ]
+            }
+          },
+          {
+            "texte": "au début : je mangeais à peine devant toi.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "timide",
                   "x": 280,
                   "taille": 260
                 },
                 {
-                  "objet": "valise",
+                  "objet": "burger",
                   "x": 450,
-                  "y": 344,
+                  "y": 340,
                   "echelle": 0.6
                 }
               ]
             }
           },
           {
-            "texte": "la gare : il attend, avec sa pancarte.",
+            "texte": "maintenant : je mange dans ton assiette.",
             "dessin": {
               "elements": [
                 {
                   "perso": "lui",
-                  "expression": "content",
-                  "bras": "pancarte",
-                  "x": 320,
-                  "taille": 270
+                  "expression": "miam",
+                  "x": 250,
+                  "taille": 260,
+                  "bras": "tend_d"
+                },
+                {
+                  "perso": "elle",
+                  "expression": "blase",
+                  "x": 420,
+                  "taille": 260
+                },
+                {
+                  "objet": "burger",
+                  "x": 335,
+                  "y": 340,
+                  "echelle": 0.6
                 }
               ]
-            }
-          },
-          {
-            "texte": "la gare, 21 h 40.",
-            "dessin": {
-              "duo": "calin"
             },
-            "appel": "envoie-lui ça"
+            "appel": "vous aussi ou c'est que nous ?"
           }
         ]
       },
-      "legende": "il a attendu 3 h 10 sur le quai.\n\nenvoie-lui ça",
+      "legende": "vous aussi ou c'est que nous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#amour",
+        "#humour",
         "#relation"
       ]
     }

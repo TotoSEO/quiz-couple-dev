@@ -12,7 +12,7 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Je gère le dîner : il est fier devant sa pizza, la fumée monte et il panique ; elle arrive, sans un mot, avec des frites. Trois plans, 12 secondes.",
+        "idee": "« Je gère le dîner » : il est fier devant sa pizza, la fumée monte, il panique ; elle arrive sans un mot, le téléphone à la patte : « j'ai commandé. » Trois plans, 12 secondes.",
         "son": {
           "ambiance": "drole"
         },
@@ -46,7 +46,7 @@
             ],
             "textes": [
               {
-                "texte": "20 h : « je gère le dîner »",
+                "texte": "quand ta personne dit « je gère le dîner »",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -56,7 +56,7 @@
           {
             "duree": 4,
             "transition": "fondu",
-            "description": "De la fumée noire monte de la pizza à 0,6 s. Il panique à 1 s, les bras en l'air, qui tremble, des gouttes de sueur. Le texte à 0,2 s.",
+            "description": "De la fumée noire monte de la pizza à 0,6 s. Il panique à 1 s, les bras en l'air, qui tremble, des gouttes de sueur.",
             "persos": [
               {
                 "perso": "lui",
@@ -93,18 +93,12 @@
                 "de": 0.6
               }
             ],
-            "textes": [
-              {
-                "texte": "20 h 40",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
+            "textes": []
           },
           {
             "duree": 4.5,
             "transition": "fondu",
-            "description": "Elle arrive du bord gauche en marchant de profil, un cornet de frites à la patte, les yeux plats, sans rien dire. Elle s'arrête à côté de lui à 2 s et se tourne vers nous à 2,5 s. Lui la regarde, soulagé.",
+            "description": "Elle arrive du bord gauche en marchant de profil, son téléphone à la patte, les yeux plats, sans rien dire. Elle s'arrête à côté de lui à 2 s et se tourne vers nous à 2,5 s, le téléphone levé. Lui la regarde, soulagé. La phrase s'écrit mot à mot à 2,6 s.",
             "persos": [
               {
                 "perso": "elle",
@@ -147,10 +141,10 @@
             ],
             "objets": [
               {
-                "objet": "frites",
+                "objet": "telephone",
                 "x": -140,
                 "y": 350,
-                "echelle": 0.6,
+                "echelle": 0.5,
                 "etapes": [
                   {
                     "a": 0.01,
@@ -172,15 +166,16 @@
             ],
             "textes": [
               {
-                "texte": "21 h",
-                "de": 0.2,
-                "place": "haut"
+                "texte": "« j'ai commandé. »",
+                "de": 2.6,
+                "place": "haut",
+                "motAMot": true
               }
             ]
           }
         ]
       },
-      "legende": "il avait dit « ça se cuit tout seul ».\n\nenvoie ça à ta personne",
+      "legende": "tague la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",

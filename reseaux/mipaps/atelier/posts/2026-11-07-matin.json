@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-008",
+  "sujet": "ani-104",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,21 +12,21 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "La flaque : il pleut, il la porte à bout de bras pour passer la flaque, il trébuche, les deux finissent trempés et contents. Trois plans, 12 secondes.",
+        "idee": "« J'ai pas faim » : il a une pizza, elle dit non ; elle regarde la pizza, puis lui ; « juste pour goûter » ; la pizza a disparu, elle a l'air d'un ange, « euh, il en reste ? ». Quatre plans, 14 secondes.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
             "duree": 3.5,
-            "description": "Il pleut. Les deux sont debout, lui à gauche, elle à droite, contents, sous la pluie. Le texte se pose à 0,2 s.",
+            "description": "Il est à gauche, content, une pizza posée devant lui. Elle est à droite, sereine, les bras croisés, elle n'a besoin de rien. Le texte se pose à 0,2 s.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 270,
+                    "x": 230,
                     "expression": "content"
                   }
                 ]
@@ -36,49 +36,42 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 420,
-                    "expression": "content"
+                    "x": 440,
+                    "expression": "zen",
+                    "bras": "croises"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "pluie",
-                "x": 350,
-                "y": 110,
-                "echelle": 1.6
+                "objet": "pizza",
+                "x": 330,
+                "y": 345,
+                "echelle": 0.7
               }
             ],
             "textes": [
               {
-                "texte": "une flaque de 3 mètres",
+                "texte": "« non merci, j'ai pas faim »",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
               }
-            ],
-            "ambiance": "pluie"
+            ]
           },
           {
-            "duree": 4,
-            "transition": "coupe",
-            "description": "Il la soulève et la porte au-dessus de sa tête, elle est assise sur lui, ravie, les bras en l'air. Il avance de profil, fier, à petits pas, vers la droite. La pluie tombe.",
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Il mange une part, les yeux fermés, ravi. Elle décroise les bras à 0,8 s et fixe la pizza, gourmande, puis le regarde lui à 2,2 s, l'air de rien, les sourcils qui se lèvent.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "angle": 90,
-                    "pose": "porte_haut",
-                    "bras": "porte_haut",
-                    "expression": "fier"
-                  },
-                  {
-                    "a": 3,
-                    "x": 420
+                    "x": 230,
+                    "expression": "miam"
                   }
                 ]
               },
@@ -87,44 +80,97 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 250,
-                    "y": 246,
-                    "taille": 150,
-                    "pose": "assis",
-                    "expression": "joie"
+                    "x": 440,
+                    "expression": "zen",
+                    "bras": "croises"
                   },
                   {
-                    "a": 3,
-                    "x": 420
+                    "a": 0.8,
+                    "expression": "gourmand",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "malicieux"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "pluie",
-                "x": 350,
-                "y": 110,
-                "echelle": 1.6
+                "objet": "pizza",
+                "x": 330,
+                "y": 345,
+                "echelle": 0.7
               }
-            ],
-            "ambiance": "pluie"
+            ]
           },
           {
-            "duree": 4.5,
+            "duree": 3.5,
             "transition": "fondu",
-            "description": "Les deux sont par terre, assis, trempés, des bulles autour d'eux. Lui sourit, elle aussi, les yeux plissés. Des cœurs flottent. Le texte à 0,3 s.",
+            "description": "Elle s'approche d'un pas et tend la patte vers la pizza à 0,6 s. Il la regarde faire, un sourcil levé. Sa phrase arrive à 0,4 s.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 290,
-                    "pose": "assis",
-                    "expression": "content",
+                    "x": 230,
+                    "expression": "miam"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "suspicieux"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 440,
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 0.6,
+                    "x": 410,
+                    "bras": "tend_g",
+                    "expression": "gourmand"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pizza",
+                "x": 330,
+                "y": 345,
+                "echelle": 0.7
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« juste pour goûter »",
+                "de": 0.4,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Plus de pizza. Elle est toute contente, l'air d'un ange, des étincelles autour d'elle. Lui regarde l'endroit où était la pizza, perplexe, un point d'interrogation au-dessus de lui. Sa phrase s'écrit mot à mot à 1 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "perplexe",
                     "signes": [
-                      "bulles"
+                      "question"
                     ]
                   }
                 ]
@@ -134,54 +180,32 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 390,
-                    "pose": "assis",
-                    "expression": "rire"
+                    "x": 420,
+                    "expression": "ange",
+                    "signes": [
+                      "etincelles"
+                    ]
                   }
                 ]
               }
             ],
-            "objets": [
-              {
-                "objet": "pluie",
-                "x": 350,
-                "y": 110,
-                "echelle": 1.6
-              },
-              {
-                "objet": "coeur",
-                "x": 340,
-                "y": 150,
-                "echelle": 0.5,
-                "de": 0.8,
-                "flotte": true
-              },
-              {
-                "objet": "coeur",
-                "x": 245,
-                "y": 190,
-                "echelle": 0.32,
-                "de": 1.2000000000000002,
-                "flotte": true
-              }
-            ],
             "textes": [
               {
-                "texte": "il a glissé à 2 mètres 90",
-                "de": 0.3,
-                "place": "haut"
+                "texte": "« euh, il en reste ? »",
+                "de": 1.0,
+                "place": "haut",
+                "motAMot": true
               }
-            ],
-            "ambiance": "pluie"
+            ]
           }
         ]
       },
-      "legende": "il a dit « je te porte ».\n\ntague-le",
+      "legende": "c'est qui chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#humour",
-        "#amoureux"
+        "#relation"
       ]
     }
   }

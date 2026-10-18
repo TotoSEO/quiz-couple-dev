@@ -12,7 +12,7 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le dimanche : le canapé, le popcorn ; elle s'endort doucement sur lui ; il n'ose plus bouger ; il s'endort aussi. Trois plans, 12 secondes.",
+        "idee": "Quand ta personne s'endort sur toi : le canapé, le popcorn ; elle glisse et s'endort sur lui, le popcorn reste hors de portée, il n'ose plus bouger ; trois heures plus tard les deux dorment. Trois plans, 12 secondes.",
         "son": {
           "ambiance": "tendre"
         },
@@ -62,7 +62,7 @@
             ],
             "textes": [
               {
-                "texte": "dimanche, 15 h",
+                "texte": "quand ta personne s'endort sur toi",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -133,7 +133,7 @@
             ],
             "textes": [
               {
-                "texte": "il n'ose plus bouger.",
+                "texte": "et que le popcorn est de l'autre côté",
                 "de": 0.5,
                 "place": "haut"
               }
@@ -201,7 +201,7 @@
           }
         ]
       },
-      "legende": "le popcorn est resté de l'autre côté.\n\nenvoie ça à ta personne",
+      "legende": "envoie ça à ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",

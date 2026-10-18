@@ -4,7 +4,7 @@
   "format": "image",
   "gabarit": "mipaps-post",
   "categorie": "mipaps-post",
-  "sujet": "pos-017",
+  "sujet": "pos-135",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,16 +12,16 @@
         "gabarit": "mipaps-post",
         "langue": "fr",
         "theme": "light",
-        "idee": "Déclaration : une phrase plate pour dire merci, sans formule.",
+        "idee": "Déclaration : le bruit de la porte quand l'autre rentre, qu'on reconnaît entre mille.",
         "style": "declaration",
-        "texte": "merci d'avoir été là le jour où j'ai pas répondu au téléphone."
+        "texte": "je sais que c'est toi rien qu'à ta façon de fermer la porte en rentrant."
       },
-      "legende": "garde ça pour un soir où ça va pas",
+      "legende": "envoie ça à ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#couplegoals"
+        "#relation"
       ]
     }
   }

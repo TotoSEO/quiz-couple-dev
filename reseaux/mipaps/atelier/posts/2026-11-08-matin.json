@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-026",
+  "sujet": "ani-120",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,43 +12,26 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "La photo de couple au retardateur : il pose le téléphone, court la rejoindre, trois fois ; au dixième essai ils posent enfin ; la photo est floue et ils la gardent. Trois plans, 13 secondes.",
+        "idee": "Quand ta personne a faim : il est grognon, un nuage noir sur la tête ; elle lui parle, il grogne ; elle sort un croissant de derrière son dos ; il fond, « merci mon cœur ». Trois plans, 12 secondes.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
-            "duree": 3.8,
-            "description": "Le téléphone est posé par terre à gauche. Il lance le retardateur, puis court vers elle et s'arrête à côté d'elle, se tourne vers nous. Elle l'attend, souriante, et prend la pose.",
+            "duree": 4,
+            "description": "Il est au milieu gauche, grognon, les bras croisés, un nuage noir au-dessus de la tête. Elle entre du bord droit en marchant de profil, s'arrête à côté de lui à 2 s et se tourne vers nous à 2,4 s, contente, sans se douter de rien. Le texte se pose à 0,2 s.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 150,
-                    "angle": 90,
-                    "pose": "debout",
-                    "expression": "concentre"
-                  },
-                  {
-                    "a": 0.8,
-                    "x": 150,
-                    "pose": "sprint",
-                    "expression": "energique"
-                  },
-                  {
-                    "a": 1.8,
-                    "x": 300
-                  },
-                  {
-                    "a": 2.0,
-                    "pose": "debout"
-                  },
-                  {
-                    "a": 2.4,
-                    "angle": 0,
-                    "expression": "fier"
+                    "x": 260,
+                    "expression": "agace",
+                    "bras": "croises",
+                    "signes": [
+                      "nuage_noir"
+                    ]
                   }
                 ]
               },
@@ -57,64 +40,52 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
+                    "x": 780,
+                    "angle": -90,
+                    "pose": "marche",
                     "expression": "content"
                   },
                   {
-                    "a": 2.2,
-                    "expression": "clin"
+                    "a": 2,
+                    "x": 440,
+                    "pose": "debout"
+                  },
+                  {
+                    "a": 2.4,
+                    "angle": 0
                   }
                 ]
               }
             ],
-            "objets": [
-              {
-                "objet": "telephone",
-                "x": 100,
-                "y": 352,
-                "echelle": 0.5
-              }
-            ],
             "textes": [
               {
-                "texte": "essai 1",
+                "texte": "quand ta personne a faim",
                 "de": 0.2,
-                "place": "haut"
+                "place": "haut",
+                "style": "titre"
               }
             ]
           },
           {
-            "duree": 3.8,
-            "description": "Le téléphone est posé par terre à gauche. Il lance le retardateur, puis court vers elle et s'arrête à côté d'elle, se tourne vers nous. Elle l'attend, souriante, et prend la pose.",
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle lui parle, la patte tendue vers lui, gentille. Lui se renfrogne encore plus à 1 s, le nuage noir grossit, il détourne la tête. Elle comprend, un sourcil levé. Le texte arrive à 0,5 s.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 150,
-                    "angle": 90,
-                    "pose": "debout",
-                    "expression": "concentre"
+                    "x": 260,
+                    "expression": "agace",
+                    "bras": "croises",
+                    "signes": [
+                      "nuage_noir"
+                    ]
                   },
                   {
-                    "a": 0.8,
-                    "x": 150,
-                    "pose": "sprint",
-                    "expression": "essouffle"
-                  },
-                  {
-                    "a": 1.8,
-                    "x": 300
-                  },
-                  {
-                    "a": 2.0,
-                    "pose": "debout"
-                  },
-                  {
-                    "a": 2.4,
-                    "angle": 0,
-                    "expression": "essouffle"
+                    "a": 1,
+                    "expression": "colere"
                   }
                 ]
               },
@@ -123,28 +94,22 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 410,
-                    "expression": "content"
+                    "x": 440,
+                    "expression": "content",
+                    "bras": "tend_g"
                   },
                   {
-                    "a": 2.2,
-                    "expression": "clin"
+                    "a": 1.8,
+                    "expression": "suspicieux",
+                    "bras": "bas"
                   }
                 ]
               }
             ],
-            "objets": [
-              {
-                "objet": "telephone",
-                "x": 100,
-                "y": 352,
-                "echelle": 0.5
-              }
-            ],
             "textes": [
               {
-                "texte": "essai 7",
-                "de": 0.2,
+                "texte": "« ça va ? » « grmbl »",
+                "de": 0.5,
                 "place": "haut"
               }
             ]
@@ -152,19 +117,33 @@
           {
             "duree": 4.5,
             "transition": "fondu",
-            "description": "Les deux posent, côte à côte, face à nous, souriants. Le téléphone clique à 1,6 s. Il va le chercher, ils regardent l'écran ensemble : lui ému, elle aussi. Un cœur flotte. Le texte à 0,3 s.",
+            "description": "Elle sort un croissant de derrière son dos à 0,5 s et le lui tend entre eux deux. Il le voit, surpris à 1 s, se penche vers lui et croque dedans les yeux fermés à 1,8 s, puis fond à 2,8 s, des cœurs autour de lui. Sa phrase s'écrit mot à mot à 3 s.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 300,
-                    "expression": "fier"
+                    "x": 260,
+                    "expression": "colere",
+                    "bras": "croises"
                   },
                   {
-                    "a": 2,
-                    "expression": "emu"
+                    "a": 1,
+                    "expression": "surpris",
+                    "bras": "bas"
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "miam",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 2.8,
+                    "expression": "transi",
+                    "signes": [
+                      "coeurs"
+                    ]
                   }
                 ]
               },
@@ -173,48 +152,59 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 400,
+                    "x": 440,
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 0.6,
+                    "bras": "tend_g",
                     "expression": "content"
                   },
                   {
-                    "a": 2,
-                    "expression": "emu"
+                    "a": 1.8,
+                    "bras": "bas",
+                    "expression": "fier"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "telephone",
-                "x": 100,
-                "y": 352,
-                "echelle": 0.5
-              },
-              {
-                "objet": "coeur",
-                "x": 350,
-                "y": 150,
-                "echelle": 0.45,
-                "de": 2.2,
-                "flotte": true
+                "objet": "croissant",
+                "x": 510,
+                "y": 300,
+                "echelle": 0.9,
+                "etapes": [
+                  {
+                    "a": 0.5,
+                    "x": 510,
+                    "y": 300
+                  },
+                  {
+                    "a": 1.0,
+                    "x": 350,
+                    "y": 290
+                  }
+                ]
               }
             ],
             "textes": [
               {
-                "texte": "essai 10",
-                "de": 0.3,
-                "place": "haut"
+                "texte": "« merci mon cœur »",
+                "de": 3.0,
+                "place": "haut",
+                "motAMot": true
               }
             ]
           }
         ]
       },
-      "legende": "le retardateur fait 10 secondes.\n\ntague ton amoureux",
+      "legende": "tague la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#humour",
-        "#amour"
+        "#relation"
       ]
     }
   }

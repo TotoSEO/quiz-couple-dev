@@ -4,7 +4,7 @@
   "format": "carrousel",
   "gabarit": "mipaps-carrousel",
   "categorie": "mipaps-histoire",
-  "sujet": "his-005",
+  "sujet": "his-110",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,126 +12,121 @@
         "gabarit": "mipaps-carrousel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Nous en huit émotions : gourmand et blasée, en colère et suppliant, frigorifiée et en nage, dodo et éveillée ; à la fin les deux sont transis.",
+        "idee": "Les questions qu'on se pose dix fois par jour : « t'as mangé ? », « tu rentres à quelle heure ? », « t'as vu mes clés ? », « on mange quoi ce soir ? », « tu m'aimes ? ».",
         "pages": [
           {
-            "texte": "nous deux, en 8 émotions différentes",
+            "texte": "les questions qu'on se pose dix fois par jour",
             "dessin": {
               "duo": "main_dans_la_main"
             }
           },
           {
-            "texte": "lui : gourmand. elle : blasée.",
+            "texte": "« t'as mangé ? »",
             "dessin": {
               "elements": [
                 {
-                  "perso": "lui",
-                  "expression": "gourmand",
-                  "x": 250,
-                  "taille": 250
+                  "perso": "elle",
+                  "expression": "inquiet",
+                  "x": 300,
+                  "taille": 270,
+                  "bras": "tient"
                 },
                 {
-                  "perso": "elle",
-                  "expression": "blase",
-                  "x": 410,
-                  "taille": 250
+                  "objet": "telephone",
+                  "x": 338,
+                  "y": 346,
+                  "echelle": 0.5
                 }
               ]
             }
           },
           {
-            "texte": "elle : en colère. lui : il supplie.",
+            "texte": "« tu rentres à quelle heure ? »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "curieux",
+                  "x": 320,
+                  "taille": 270,
+                  "signes": [
+                    "question"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« t'as vu mes clés ? »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "panique",
+                  "x": 290,
+                  "taille": 270,
+                  "bras": "tete",
+                  "signes": [
+                    "sueur"
+                  ]
+                },
+                {
+                  "objet": "cle",
+                  "x": 470,
+                  "y": 360,
+                  "echelle": 0.4
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« on mange quoi ce soir ? »",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "hesite",
+                  "x": 250,
+                  "taille": 260,
+                  "bras": "menton"
+                },
+                {
+                  "perso": "elle",
+                  "expression": "hesite",
+                  "x": 410,
+                  "taille": 260,
+                  "bras": "menton"
+                }
+              ]
+            }
+          },
+          {
+            "texte": "« tu m'aimes ? » « oui. » « mais genre beaucoup ? »",
             "dessin": {
               "elements": [
                 {
                   "perso": "elle",
-                  "expression": "colere",
-                  "x": 410,
-                  "taille": 250
-                },
-                {
-                  "perso": "lui",
                   "expression": "supplie",
-                  "bras": "priere",
-                  "x": 250,
-                  "taille": 250
-                }
-              ]
-            }
-          },
-          {
-            "texte": "elle : frigorifiée. lui : il a chaud.",
-            "dessin": {
-              "elements": [
+                  "x": 260,
+                  "taille": 260,
+                  "bras": "priere"
+                },
                 {
-                  "perso": "elle",
-                  "expression": "froid",
+                  "perso": "lui",
+                  "expression": "content",
+                  "x": 420,
+                  "taille": 260,
                   "signes": [
-                    "flocons"
-                  ],
-                  "x": 410,
-                  "taille": 250
-                },
-                {
-                  "perso": "lui",
-                  "expression": "chaud",
-                  "x": 250,
-                  "taille": 250
-                }
-              ]
-            }
-          },
-          {
-            "texte": "lui : dodo. elle : elle attend.",
-            "dessin": {
-              "elements": [
-                {
-                  "perso": "lui",
-                  "expression": "dodo",
-                  "signes": [
-                    "zzz"
-                  ],
-                  "x": 250,
-                  "taille": 250
-                },
-                {
-                  "perso": "elle",
-                  "expression": "attend",
-                  "x": 410,
-                  "taille": 250
-                }
-              ]
-            }
-          },
-          {
-            "texte": "nous, en vrai, un mardi",
-            "dessin": {
-              "elements": [
-                {
-                  "perso": "lui",
-                  "expression": "transi",
-                  "x": 250,
-                  "taille": 250
-                },
-                {
-                  "perso": "elle",
-                  "expression": "transi",
-                  "x": 410,
-                  "taille": 250
-                },
-                {
-                  "objet": "coeur",
-                  "x": 330,
-                  "y": 150,
-                  "echelle": 0.45
+                    "coeurs"
+                  ]
                 }
               ]
             },
-            "appel": "c'est qui chez vous ?"
+            "appel": "tague ta personne"
           }
         ]
       },
-      "legende": "on a compté sur une journée.\n\nc'est qui chez vous ?",
+      "legende": "tague ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",

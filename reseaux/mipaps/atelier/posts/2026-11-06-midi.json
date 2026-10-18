@@ -4,7 +4,7 @@
   "format": "image",
   "gabarit": "mipaps-post",
   "categorie": "mipaps-post",
-  "sujet": "pos-011",
+  "sujet": "pos-140",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,30 +12,22 @@
         "gabarit": "mipaps-post",
         "langue": "fr",
         "theme": "light",
-        "idee": "Mini : lui, triomphant, il saute de joie, des étoiles.",
-        "style": "mini",
-        "texte": "JE T'AIME !!!",
-        "dessin": {
-          "elements": [
-            {
-              "perso": "lui",
-              "expression": "triomphe",
-              "pose": "saut",
-              "signes": [
-                "etoiles"
-              ],
-              "x": 320,
-              "taille": 280
-            }
-          ]
+        "idee": "Schéma de bureau : deux cercles, ce que je propose et ce que tu proposes ; au milieu, des pâtes.",
+        "style": "schema",
+        "texte": "ce qu'on mange quand on sait pas quoi manger",
+        "schema": {
+          "type": "venn",
+          "gauche": "ce que je propose",
+          "droite": "ce que tu proposes",
+          "milieu": "des pâtes"
         }
       },
-      "legende": "il l'a crié dans un parking.\n\nenvoie ça à ta personne",
+      "legende": "vous aussi ou c'est que nous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#amour",
-        "#mignon"
+        "#humour",
+        "#relation"
       ]
     }
   }

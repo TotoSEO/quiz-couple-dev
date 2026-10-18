@@ -12,7 +12,7 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "La porte : elle part, revient pour un bisou, repart, revient pour les clés, repart, revient pour un câlin. « bon, à ce soir. (vraiment) ». Quatre plans, 16 secondes.",
+        "idee": "L'au revoir qui n'en finit pas : « à ce soir », elle revient pour un bisou, pour les clés, puis se jette dans ses bras ; « bon, là j'y vais pour de vrai ». Quatre plans, 16 secondes.",
         "son": {
           "ambiance": "tendre"
         },
@@ -60,7 +60,7 @@
             ],
             "textes": [
               {
-                "texte": "« à ce soir »",
+                "texte": "quand on se dit « à ce soir »",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -244,7 +244,7 @@
             ],
             "textes": [
               {
-                "texte": "elle part à 8 h. il est 8 h 40.",
+                "texte": "« bon, là j'y vais pour de vrai »",
                 "de": 0.4,
                 "place": "haut",
                 "motAMot": true
@@ -253,7 +253,7 @@
           }
         ]
       },
-      "legende": "troisième fois qu'elle revient.\n\nenvoie ça sans rien dire",
+      "legende": "envoie ça à la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",

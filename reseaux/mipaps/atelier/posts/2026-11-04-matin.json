@@ -12,7 +12,7 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le réveil : il se lève, s'arrête à la porte, revient se coucher ; il ressort, revient encore ; à 7 h 45 les deux dorment. Quatre plans, 14 secondes.",
+        "idee": "« Allez, je me lève » : il se lève, va jusqu'à la porte, il fait trop froid, il revient se coucher ; « encore un peu » ; les deux dorment serrés, le réveil sur le côté. Quatre plans, 14 secondes.",
         "son": {
           "ambiance": "drole"
         },
@@ -49,7 +49,7 @@
             ],
             "textes": [
               {
-                "texte": "6 h 30",
+                "texte": "« allez, je me lève »",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -130,7 +130,7 @@
             ],
             "textes": [
               {
-                "texte": "6 h 45",
+                "texte": "il fait trop froid hors de la couette",
                 "de": 0.2,
                 "place": "haut"
               }
@@ -172,7 +172,7 @@
             ],
             "textes": [
               {
-                "texte": "7 h 15",
+                "texte": "« allez, encore un peu »",
                 "de": 0.2,
                 "place": "haut"
               }
@@ -181,7 +181,7 @@
           {
             "duree": 4,
             "transition": "fondu",
-            "description": "Les deux dorment serrés l'un contre l'autre, un petit cœur au-dessus d'eux. Le réveil, sur le côté, indique 7 h 45. Le texte à 0,2 s.",
+            "description": "Les deux dorment serrés l'un contre l'autre, un petit cœur au-dessus d'eux. Le réveil est sur le côté. Pas de texte : on les regarde dormir.",
             "persos": [
               {
                 "perso": "lui",
@@ -225,17 +225,11 @@
                 "flotte": true
               }
             ],
-            "textes": [
-              {
-                "texte": "7 h 45",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
+            "textes": []
           }
         ]
       },
-      "legende": "l'alarme était à 6 h 30.\n\ntague-le",
+      "legende": "c'est qui chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

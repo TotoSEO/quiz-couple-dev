@@ -12,8 +12,8 @@
         "gabarit": "mipaps-statique",
         "langue": "fr",
         "theme": "light",
-        "idee": "Reel statique : les deux assis côte à côte, un verre à la patte, des étoiles au-dessus, l'horloge sur minuit.",
-        "texte": "bonne année mon amoureux. encore une avec toi.",
+        "idee": "Reel statique : les deux endormis sous un plaid, l'horloge sur minuit, des étoiles dehors ; la grosse soirée prévue.",
+        "texte": "on avait prévu de faire la fête toute la nuit. on dormait avant minuit.",
         "duree": 12,
         "son": {
           "ambiance": "tendre"
@@ -22,31 +22,28 @@
           "elements": [
             {
               "perso": "lui",
-              "expression": "content",
+              "expression": "dodo",
               "pose": "assis",
               "y": 380,
-              "x": 250,
-              "taille": 230
+              "x": 270,
+              "taille": 230,
+              "signes": [
+                "zzz"
+              ]
             },
             {
               "perso": "elle",
-              "expression": "content",
+              "expression": "dodo",
               "pose": "assis",
               "y": 380,
-              "x": 400,
+              "x": 380,
               "taille": 230
             },
             {
-              "objet": "verre",
-              "x": 290,
-              "y": 330,
-              "echelle": 0.55
-            },
-            {
-              "objet": "verre",
-              "x": 360,
-              "y": 330,
-              "echelle": 0.55
+              "objet": "couverture",
+              "x": 325,
+              "y": 350,
+              "echelle": 1.3
             },
             {
               "objet": "horloge",
@@ -56,14 +53,14 @@
             },
             {
               "objet": "etoiles",
-              "x": 325,
-              "y": 40,
-              "echelle": 0.7
+              "x": 520,
+              "y": 60,
+              "echelle": 0.6
             }
           ]
         }
       },
-      "legende": "minuit pile.\n\nenvoie ça à ta personne",
+      "legende": "vous aussi ou c'est que nous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

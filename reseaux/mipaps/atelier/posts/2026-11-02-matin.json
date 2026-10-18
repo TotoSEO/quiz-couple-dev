@@ -12,7 +12,7 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Il a faim : il hésite, regarde dans le frigo, rien ; elle arrive avec une pizza, il saute de joie. Trois plans, 12 secondes.",
+        "idee": "Quand t'as faim et qu'il n'y a rien : il hésite, rouvre le frigo au cas où, rien ; elle arrive avec une pizza, il saute de joie. Trois plans, 12 secondes.",
         "son": {
           "ambiance": "drole"
         },
@@ -42,7 +42,7 @@
             ],
             "textes": [
               {
-                "texte": "22 h 40. il a faim.",
+                "texte": "quand t'as faim mais y a rien dans le frigo",
                 "de": 0.2,
                 "place": "haut"
               }
@@ -78,7 +78,7 @@
             ],
             "textes": [
               {
-                "texte": "il a ouvert le frigo 4 fois",
+                "texte": "tu rouvres le frigo, au cas où",
                 "de": 0.2,
                 "place": "haut"
               }
@@ -163,7 +163,7 @@
           }
         ]
       },
-      "legende": "elle l'avait commandée à 22 h 15.\n\ntague-le",
+      "legende": "tu fais ça aussi ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

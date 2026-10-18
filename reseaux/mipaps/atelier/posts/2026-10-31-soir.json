@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-statique",
   "categorie": "mipaps-statique",
-  "sujet": "sta-007",
+  "sujet": "sta-111",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,8 +12,8 @@
         "gabarit": "mipaps-statique",
         "langue": "fr",
         "theme": "light",
-        "idee": "Reel statique : elle émue, les pattes sur les joues, des étincelles.",
-        "texte": "merci d'être toi",
+        "idee": "Reel statique : lui, gourmand, une part de pizza à la patte ; elle fait semblant d'être fâchée.",
+        "texte": "je t'aime même quand tu manges dans mon assiette",
         "duree": 11,
         "son": {
           "ambiance": "tendre"
@@ -21,24 +21,33 @@
         "dessin": {
           "elements": [
             {
+              "perso": "lui",
+              "expression": "gourmand",
+              "x": 250,
+              "taille": 265,
+              "bras": "tient"
+            },
+            {
+              "objet": "pizza",
+              "x": 290,
+              "y": 330,
+              "echelle": 0.5
+            },
+            {
               "perso": "elle",
-              "expression": "emu",
-              "bras": "joues",
-              "signes": [
-                "etincelles"
-              ],
-              "x": 320,
-              "taille": 280
+              "expression": "sarcastique",
+              "x": 410,
+              "taille": 262
             }
           ]
         }
       },
-      "legende": "il a fait la vaisselle.\n\nenvoie-lui ça",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#amour",
-        "#mignon"
+        "#humour",
+        "#relation"
       ]
     }
   }

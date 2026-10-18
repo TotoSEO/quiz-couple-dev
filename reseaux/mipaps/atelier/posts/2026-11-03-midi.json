@@ -4,7 +4,7 @@
   "format": "image",
   "gabarit": "mipaps-post",
   "categorie": "mipaps-post",
-  "sujet": "pos-029",
+  "sujet": "pos-109",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,25 +12,28 @@
         "gabarit": "mipaps-post",
         "langue": "fr",
         "theme": "light",
-        "idee": "Mini : elle, une mauvaise idée en tête, des cornes, les mains jointes.",
+        "idee": "Mini : elle, morte de rire, qui tend son téléphone vers nous pour montrer une vidéo.",
         "style": "mini",
-        "texte": "mouahaha tu peux plus partir maintenant",
+        "texte": "nan mais regarde ça",
         "dessin": {
           "elements": [
             {
               "perso": "elle",
-              "expression": "diable",
-              "bras": "priere",
-              "signes": [
-                "cornes"
-              ],
-              "x": 320,
+              "expression": "mort_de_rire",
+              "bras": "tend_d",
+              "x": 290,
               "taille": 290
+            },
+            {
+              "objet": "telephone",
+              "x": 410,
+              "y": 300,
+              "echelle": 0.55
             }
           ]
         }
       },
-      "legende": "il avait dit « je rentre chez moi ».\n\ntague-la",
+      "legende": "tague ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",

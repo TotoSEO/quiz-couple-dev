@@ -52,7 +52,7 @@
             ],
             "textes": [
               {
-                "texte": "20 h 15",
+                "texte": "le bisou qui finit sur l'oreille",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -150,7 +150,7 @@
             ],
             "textes": [
               {
-                "texte": "elle regardait le chat",
+                "texte": "« t'as vu le chat ? »",
                 "de": 0.3,
                 "place": "haut"
               }
@@ -158,7 +158,7 @@
           }
         ]
       },
-      "legende": "il avait préparé ça toute la journée.\n\nenvoie-lui ça",
+      "legende": "tague ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",

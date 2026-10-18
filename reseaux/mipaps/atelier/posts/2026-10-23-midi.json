@@ -12,9 +12,9 @@
         "gabarit": "mipaps-post",
         "langue": "fr",
         "theme": "light",
-        "idee": "Mini : lui, inquiet, le téléphone à la patte, qui cherche où elle est.",
+        "idee": "Mini : lui, inquiet, le téléphone à la patte ; il écrit « t'es où ? » à quelqu'un qui est dans la pièce d'à côté.",
         "style": "mini",
-        "texte": "t'es où ?",
+        "texte": "je t'écris « t'es où ? » alors que t'es dans la pièce d'à côté",
         "dessin": {
           "elements": [
             {
@@ -33,7 +33,7 @@
           ]
         }
       },
-      "legende": "elle était dans la cuisine.\n\ntu fais ça aussi ?",
+      "legende": "tu fais ça aussi ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

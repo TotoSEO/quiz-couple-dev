@@ -66,7 +66,7 @@
             ],
             "textes": [
               {
-                "texte": "le matin, avant le café",
+                "texte": "parler à ta personne avant son café",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -180,7 +180,7 @@
           }
         ]
       },
-      "legende": "il est debout depuis 6 h.\n\ntague-la",
+      "legende": "envoie ça à ta personne sans rien dire",
       "hashtags": [
         "#lesmipaps",
         "#couple",

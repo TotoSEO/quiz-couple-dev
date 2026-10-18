@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-031",
+  "sujet": "ani-131",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,14 +12,14 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Les retrouvailles : elle attend avec sa valise, il arrive de très loin, tout petit, et grandit en courant ; elle court aussi ; câlin et cœurs. Deux plans, 11 secondes.",
+        "idee": "Quand ta personne rentre du boulot : elle l'attend, le voit arriver de loin, ils courent l'un vers l'autre comme après un an ; câlin et cœurs ; « on s'est vus ce matin. » Deux plans, 10,5 secondes.",
         "son": {
           "ambiance": "tendre"
         },
         "plans": [
           {
             "duree": 6,
-            "description": "Elle attend à droite, inquiète, sa valise à côté d'elle. À 1 s elle repère quelqu'un de très loin : surprise. Il surgit du bord gauche, tout petit, en courant de profil, et grandit à chaque pas. Elle pose sa valise, se tourne vers lui à 1,5 s et court à sa rencontre. Ils se rejoignent au milieu à 4,5 s.",
+            "description": "Elle attend à droite, l'air de s'ennuyer. À 1 s elle repère quelqu'un au loin : surprise. Il surgit du bord gauche, tout petit, en courant de profil, et grandit à chaque pas. Elle se tourne vers lui à 1,5 s et court à sa rencontre. Ils se rejoignent au milieu à 4,5 s, comme s'ils ne s'étaient pas vus depuis un an.",
             "persos": [
               {
                 "perso": "elle",
@@ -27,7 +27,7 @@
                   {
                     "a": 0,
                     "x": 450,
-                    "expression": "inquiet"
+                    "expression": "ennui"
                   },
                   {
                     "a": 1,
@@ -73,17 +73,10 @@
                 ]
               }
             ],
-            "objets": [
-              {
-                "objet": "valise",
-                "x": 470,
-                "y": 348,
-                "echelle": 0.6
-              }
-            ],
+            "objets": [],
             "textes": [
               {
-                "texte": "quand il revient de loin",
+                "texte": "quand ta personne rentre du boulot",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -148,8 +141,8 @@
             ],
             "textes": [
               {
-                "texte": "47 jours.",
-                "de": 0.5,
+                "texte": "on s'est vus ce matin.",
+                "de": 1.2,
                 "place": "haut",
                 "motAMot": true
               }
@@ -157,7 +150,7 @@
           }
         ]
       },
-      "legende": "le train avait 3 h de retard.\n\nenvoie ça à ta personne",
+      "legende": "envoie ça à ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",

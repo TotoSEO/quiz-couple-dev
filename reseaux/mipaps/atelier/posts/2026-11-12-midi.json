@@ -12,9 +12,9 @@
         "gabarit": "mipaps-post",
         "langue": "fr",
         "theme": "light",
-        "idee": "Mini : elle, blasée, de face ; lui, inquiet, plus petit, la patte tendue vers elle.",
+        "idee": "Mini : elle, la tête de tous les jours, un peu blasée ; lui, inquiet, plus petit, la patte tendue vers elle : « t'as quoi ? »",
         "style": "mini",
-        "texte": "quand je suis normale, il croit que je suis triste.",
+        "texte": "« t'as quoi ? » « rien, c'est juste ma tête »",
         "dessin": {
           "elements": [
             {
@@ -33,7 +33,7 @@
           ]
         }
       },
-      "legende": "elle avait juste faim.\n\nc'est laquelle chez vous ?",
+      "legende": "c'est qui chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

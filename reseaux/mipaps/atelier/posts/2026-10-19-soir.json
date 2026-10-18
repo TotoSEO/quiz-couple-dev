@@ -57,7 +57,7 @@
             }
           },
           {
-            "texte": "« j'ai pas faim. » / je vais manger les tiennes.",
+            "texte": "« j'ai pas faim. » / je vais manger dans ton assiette.",
             "dessin": {
               "elements": [
                 {
@@ -67,7 +67,7 @@
                   "taille": 260
                 },
                 {
-                  "objet": "frites",
+                  "objet": "pizza",
                   "x": 460,
                   "y": 340,
                   "echelle": 0.7
@@ -107,7 +107,7 @@
           }
         ]
       },
-      "legende": "la 3 c'est tous les soirs.\n\nc'est laquelle chez vous ?",
+      "legende": "c'est laquelle chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

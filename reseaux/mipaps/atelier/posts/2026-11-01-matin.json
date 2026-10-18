@@ -12,7 +12,7 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le lit froid : il dort au chaud ; elle arrive frigorifiée, se glisse dans le lit et colle ses pattes glacées sur lui ; il se réveille en sursaut ; il la garde contre lui. Quatre plans, 14 secondes.",
+        "idee": "Les pieds gelés : il dort au chaud ; elle arrive frigorifiée, se glisse dans le lit et colle ses pieds glacés sur lui ; il se réveille en sursaut, « ils sont pas si froids » ; il la garde contre lui. Quatre plans, 14 secondes.",
         "son": {
           "ambiance": "tendre"
         },
@@ -46,7 +46,7 @@
             ],
             "textes": [
               {
-                "texte": "2 h du matin",
+                "texte": "toi, les pieds gelés, et ta personne qui dort au chaud",
                 "de": 0.2,
                 "place": "haut"
               }
@@ -101,13 +101,7 @@
                 "echelle": 1.1
               }
             ],
-            "textes": [
-              {
-                "texte": "dehors, il fait 4 degrés",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
+            "textes": []
           },
           {
             "duree": 3.5,
@@ -155,6 +149,14 @@
                 "x": 360,
                 "y": 355,
                 "echelle": 1.5
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« ils sont pas si froids »",
+                "de": 1.6,
+                "place": "haut",
+                "motAMot": true
               }
             ]
           },
@@ -208,7 +210,7 @@
           }
         ]
       },
-      "legende": "elle a marché 20 minutes sans gants.\n\nenvoie ça à ta personne",
+      "legende": "tague la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",

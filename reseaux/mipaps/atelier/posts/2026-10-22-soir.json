@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-statique",
   "categorie": "mipaps-statique",
-  "sujet": "sta-008",
+  "sujet": "sta-101",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,22 +12,42 @@
         "gabarit": "mipaps-statique",
         "langue": "fr",
         "theme": "light",
-        "idee": "Reel statique : les deux gourmands autour du cornet de frites.",
-        "texte": "j'ai pas besoin de grand-chose, juste toi et des frites.",
+        "idee": "Reel statique : les deux sur le canapé, un cœur qui flotte ; la personne à qui on raconte tout, même le reste.",
+        "texte": "t'es la personne à qui je veux raconter les trucs nuls de ma journée",
         "duree": 11,
         "son": {
           "ambiance": "tendre"
         },
         "dessin": {
-          "duo": "frites"
+          "elements": [
+            {
+              "meuble": "canape_fond"
+            },
+            {
+              "perso": "lui",
+              "expression": "ecoute",
+              "x": 250,
+              "taille": 210,
+              "y": 318,
+              "pose": "assis"
+            },
+            {
+              "perso": "elle",
+              "expression": "content",
+              "x": 390,
+              "taille": 210,
+              "y": 318,
+              "pose": "assis"
+            }
+          ]
         }
       },
-      "legende": "on a commandé un seul cornet.\n\nenvoie ça à ta personne",
+      "legende": "envoie ça à ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#mignon"
+        "#relation"
       ]
     }
   }

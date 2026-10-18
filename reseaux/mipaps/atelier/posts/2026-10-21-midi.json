@@ -12,30 +12,33 @@
         "gabarit": "mipaps-post",
         "langue": "fr",
         "theme": "light",
-        "idee": "Schéma de bureau : une liste de courses qui dérape vers les chips, la vraie liste de deux personnes.",
+        "idee": "Schéma de bureau : la liste de courses d'un couple ; on a pris les chips et les bonbons, pas le pain ni le lait.",
         "style": "schema",
-        "texte": "liste de courses",
+        "texte": "notre liste de courses",
         "schema": {
           "type": "liste",
           "lignes": [
             {
-              "texte": "pain",
+              "texte": "du pain"
+            },
+            {
+              "texte": "du lait"
+            },
+            {
+              "texte": "un truc pour ce soir"
+            },
+            {
+              "texte": "des chips",
               "coche": true
             },
             {
-              "texte": "lait",
+              "texte": "des bonbons",
               "coche": true
-            },
-            {
-              "texte": "un truc pour le dîner"
-            },
-            {
-              "texte": "des chips (pas les siennes)"
             }
           ]
         }
       },
-      "legende": "ça fait 40 minutes qu'on est au rayon chips.\n\nc'est qui chez vous ?",
+      "legende": "vous aussi ou c'est que nous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

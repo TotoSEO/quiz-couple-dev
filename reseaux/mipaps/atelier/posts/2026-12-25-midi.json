@@ -12,32 +12,34 @@
         "gabarit": "mipaps-post",
         "langue": "fr",
         "theme": "light",
-        "idee": "Mini : elle, contente, un bonnet de noël, des flocons et des cœurs.",
+        "idee": "Mini : lui, repu et KO, à côté d'une bûche ; le repas de Noël dans la famille de l'autre.",
         "style": "mini",
-        "texte": "le plus beau cadeau c'est toi. (mais j'ai aimé les frites aussi)",
+        "texte": "noël dans ta famille : j'en peux plus et on me ressert quand même",
         "dessin": {
           "elements": [
             {
-              "perso": "elle",
-              "expression": "content",
-              "bras": "joues",
-              "signes": [
-                "flocons",
-                "coeurs"
-              ],
-              "x": 320,
-              "taille": 290
+              "perso": "lui",
+              "expression": "ko",
+              "pose": "assis",
+              "x": 290,
+              "taille": 280
             },
             {
-              "objet": "bonnet",
-              "x": 320,
-              "y": 214,
+              "objet": "gateau",
+              "x": 470,
+              "y": 340,
               "echelle": 0.6
+            },
+            {
+              "objet": "flocon",
+              "x": 140,
+              "y": 120,
+              "echelle": 0.3
             }
           ]
         }
       },
-      "legende": "elle a mangé les siennes et une partie des miennes.\n\ntague ton amoureux",
+      "legende": "c'est qui chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

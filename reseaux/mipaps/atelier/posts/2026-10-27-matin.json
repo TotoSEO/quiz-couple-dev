@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-032",
+  "sujet": "ani-124",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,60 +12,77 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le câlin qui arrive des deux côtés : elle entre par la gauche, lui par la droite ; ils se voient, accélèrent, se cognent doucement au milieu, étourdis ; câlin quand même. Trois plans, 11 secondes.",
+        "idee": "Quand le livreur sonne : les deux sur le canapé ; la sonnette, ils se redressent d'un coup ; ils courent ouvrir en même temps et se cognent ; assis par terre, la pizza entre eux, contents. Trois plans, 11 secondes.",
         "son": {
-          "ambiance": "tendre"
+          "ambiance": "drole"
         },
         "plans": [
           {
             "duree": 3.5,
-            "description": "Elle entre par la gauche en marchant de profil, lui par la droite en marchant de profil aussi, chacun content, chacun vers l'autre. Le texte se pose à 0,2 s.",
+            "meubles": [
+              "canape_fond"
+            ],
+            "description": "Les deux sont assis sur le canapé, côte à côte, l'air de s'ennuyer. La sonnette retentit à 1,2 s : ils se redressent d'un coup, surpris, un point d'exclamation au-dessus de chacun. Le texte se pose à 0,2 s.",
             "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": -140,
-                    "angle": 90,
-                    "pose": "marche",
-                    "expression": "content"
-                  },
-                  {
-                    "a": 3.2,
-                    "x": 170
-                  }
-                ]
-              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 780,
-                    "angle": -90,
-                    "pose": "marche",
-                    "expression": "content"
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ennui"
                   },
                   {
-                    "a": 3.2,
-                    "x": 470
+                    "a": 1.3,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "ennui"
+                  },
+                  {
+                    "a": 1.3,
+                    "expression": "surpris",
+                    "signes": [
+                      "exclamation"
+                    ]
                   }
                 ]
               }
             ],
             "textes": [
               {
-                "texte": "quand on rentre en même temps",
+                "texte": "quand le livreur sonne",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
+              }
+            ],
+            "sons": [
+              {
+                "nom": "sonnette",
+                "a": 1.2
               }
             ]
           },
           {
             "duree": 3.5,
-            "description": "Ils se voient et accélèrent, les bras de course, les yeux brillants, chacun vers le milieu. À 1,8 s ils se cognent doucement, des étoiles autour de leurs têtes, et s'arrêtent, étourdis.",
+            "description": "Ils déboulent chacun d'un bord en courant de profil, les yeux brillants, vers la porte d'entrée, dessinée au milieu derrière eux. À 1,8 s ils se cognent doucement, des étoiles autour de leurs têtes, et s'arrêtent, étourdis. Le texte arrive à 0,3 s.",
             "persos": [
               {
                 "perso": "elle",
@@ -112,7 +129,7 @@
             ],
             "textes": [
               {
-                "texte": "on se cogne. à chaque fois.",
+                "texte": "« c'est moi qui ouvre ! »",
                 "de": 0.3,
                 "place": "haut"
               }
@@ -122,42 +139,60 @@
                 "nom": "tape",
                 "a": 1.8
               }
+            ],
+            "transition": "coupe",
+            "objets": [
+              {
+                "objet": "porte",
+                "x": 330,
+                "y": 230,
+                "echelle": 1.6,
+                "derriere": true
+              }
             ]
           },
           {
             "duree": 4,
             "transition": "fondu",
-            "description": "Les deux se font un câlin quand même, les yeux fermés, des cœurs au-dessus d'eux. La phrase s'écrit mot à mot.",
+            "description": "Les deux sont assis par terre face à nous, la boîte de pizza ouverte entre eux, chacun une part à la patte, les yeux fermés de bonheur. Deux petits cœurs flottent au-dessus d'eux. Pas de texte : la pizza fait la fin.",
             "persos": [
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 285,
-                    "expression": "transi",
-                    "bras": "tend_d",
-                    "pose": "penche_d"
-                  }
-                ]
-              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 395,
-                    "expression": "calin",
-                    "bras": "tend_g",
-                    "pose": "penche_g"
+                    "x": 230,
+                    "y": 380,
+                    "taille": 230,
+                    "pose": "assis",
+                    "expression": "miam"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "y": 380,
+                    "taille": 230,
+                    "pose": "assis",
+                    "expression": "miam"
                   }
                 ]
               }
             ],
             "objets": [
               {
+                "objet": "pizza",
+                "x": 320,
+                "y": 360,
+                "echelle": 1.3
+              },
+              {
                 "objet": "coeur",
-                "x": 340,
+                "x": 335,
                 "y": 150,
                 "echelle": 0.5,
                 "de": 0.6,
@@ -165,38 +200,22 @@
               },
               {
                 "objet": "coeur",
-                "x": 245,
+                "x": 240,
                 "y": 190,
                 "echelle": 0.32,
                 "de": 1.0,
                 "flotte": true
-              },
-              {
-                "objet": "coeur",
-                "x": 440,
-                "y": 200,
-                "echelle": 0.36,
-                "de": 1.4,
-                "flotte": true
-              }
-            ],
-            "textes": [
-              {
-                "texte": "18 h 30",
-                "de": 0.4,
-                "place": "haut",
-                "motAMot": true
               }
             ]
           }
         ]
       },
-      "legende": "ça fait trois fois cette semaine.\n\ntague-le",
+      "legende": "tague ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#amour",
-        "#mignon"
+        "#humour",
+        "#relation"
       ]
     }
   }

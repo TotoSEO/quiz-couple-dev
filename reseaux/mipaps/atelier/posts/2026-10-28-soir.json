@@ -12,7 +12,7 @@
         "gabarit": "mipaps-carrousel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Le régime : elle est déterminée, il arrive avec un gâteau, elle résiste quatre minutes.",
+        "idee": "Le régime : jour 1, une salade ; l'autre rentre avec un gâteau ; « juste une part » ; la moitié du gâteau ; « on recommence lundi ».",
         "pages": [
           {
             "texte": "le régime, jour 1",
@@ -29,7 +29,7 @@
             }
           },
           {
-            "texte": "12 h : une salade.",
+            "texte": "midi : une salade.",
             "dessin": {
               "elements": [
                 {
@@ -48,7 +48,7 @@
             }
           },
           {
-            "texte": "16 h : il arrive avec un gâteau.",
+            "texte": "16 h : tu rentres avec un gâteau.",
             "dessin": {
               "elements": [
                 {
@@ -74,7 +74,7 @@
             }
           },
           {
-            "texte": "16 h 02",
+            "texte": "« bon, juste une part »",
             "dessin": {
               "elements": [
                 {
@@ -96,7 +96,7 @@
             }
           },
           {
-            "texte": "16 h 04",
+            "texte": "la moitié du gâteau.",
             "dessin": {
               "elements": [
                 {
@@ -121,7 +121,7 @@
             }
           },
           {
-            "texte": "jour 2",
+            "texte": "« on recommence lundi »",
             "dessin": {
               "elements": [
                 {
@@ -133,11 +133,11 @@
                 }
               ]
             },
-            "appel": "tu fais ça aussi ?"
+            "appel": "vous aussi ou c'est que nous ?"
           }
         ]
       },
-      "legende": "tu fais ça aussi ?",
+      "legende": "vous aussi ou c'est que nous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

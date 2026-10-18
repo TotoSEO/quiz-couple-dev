@@ -12,7 +12,7 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand il dort : il dort, elle le regarde les yeux ouverts, elle lui met un oreiller, le couvre, et s'endort contre lui. Trois plans, 12 secondes.",
+        "idee": "Quand ta personne s'endort en deux secondes : il dort la bouche ouverte, elle a les yeux grands ouverts ; à 3 h du matin elle lui glisse un oreiller et le couvre ; elle finit par s'endormir contre lui. Trois plans, 12 secondes.",
         "son": {
           "ambiance": "tendre"
         },
@@ -49,7 +49,7 @@
             ],
             "textes": [
               {
-                "texte": "3 h 12",
+                "texte": "quand ta personne s'endort en deux secondes",
                 "de": 0.2,
                 "place": "haut"
               }
@@ -109,7 +109,7 @@
             ],
             "textes": [
               {
-                "texte": "3 h 20",
+                "texte": "et toi, 3 h du matin, les yeux grands ouverts",
                 "de": 0.2,
                 "place": "haut"
               }
@@ -118,7 +118,7 @@
           {
             "duree": 4,
             "transition": "fondu",
-            "description": "Elle se rapproche et s'endort contre lui, sous la même couverture. Un petit cœur flotte au-dessus d'eux. Le texte à 0,2 s.",
+            "description": "Elle se rapproche et s'endort contre lui, sous la même couverture. Un petit cœur flotte au-dessus d'eux.",
             "persos": [
               {
                 "perso": "lui",
@@ -162,17 +162,11 @@
                 "flotte": true
               }
             ],
-            "textes": [
-              {
-                "texte": "3 h 25",
-                "de": 0.2,
-                "place": "haut"
-              }
-            ]
+            "textes": []
           }
         ]
       },
-      "legende": "il ronfle depuis 23 h.\n\ntague ton amoureux",
+      "legende": "c'est qui chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

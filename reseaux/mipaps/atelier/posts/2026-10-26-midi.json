@@ -4,7 +4,7 @@
   "format": "image",
   "gabarit": "mipaps-post",
   "categorie": "mipaps-post",
-  "sujet": "pos-031",
+  "sujet": "pos-110",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,38 +12,38 @@
         "gabarit": "mipaps-post",
         "langue": "fr",
         "theme": "light",
-        "idee": "Mini : elle, gourmande, un cornet de frites à côté, des cœurs.",
+        "idee": "Mini : elle, fière, dans un pull beaucoup trop grand pour elle, le sien à lui.",
         "style": "mini",
-        "texte": "je t'aime plus que les frites.",
+        "texte": "ton pull est mieux sur moi",
         "dessin": {
           "elements": [
             {
               "perso": "elle",
-              "expression": "gourmand",
-              "x": 290,
-              "taille": 280
+              "expression": "fier",
+              "x": 300,
+              "taille": 290
             },
             {
-              "objet": "frites",
-              "x": 470,
-              "y": 340,
-              "echelle": 0.7
+              "objet": "pull",
+              "x": 300,
+              "y": 300,
+              "echelle": 1.2
             },
             {
               "objet": "coeur",
-              "x": 200,
-              "y": 176,
-              "echelle": 0.4
+              "x": 470,
+              "y": 170,
+              "echelle": 0.35
             }
           ]
         }
       },
-      "legende": "elle a hésité quatre secondes.\n\nenvoie-lui ça",
+      "legende": "tague ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",
         "#amour",
-        "#humour"
+        "#mignon"
       ]
     }
   }

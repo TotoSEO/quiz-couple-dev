@@ -54,7 +54,7 @@
             ],
             "textes": [
               {
-                "texte": "la couette. à deux.",
+                "texte": "dormir à deux avec une seule couette",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -193,7 +193,7 @@
             ],
             "textes": [
               {
-                "texte": "3 h 10",
+                "texte": "un peu plus tard",
                 "de": 0.2,
                 "place": "haut"
               }
@@ -248,7 +248,7 @@
           }
         ]
       },
-      "legende": "on a un lit de 160.\n\nenvoie-lui ça",
+      "legende": "c'est qui chez vous ?",
       "hashtags": [
         "#lesmipaps",
         "#couple",

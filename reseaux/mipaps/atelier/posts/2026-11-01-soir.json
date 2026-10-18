@@ -15,7 +15,7 @@
         "idee": "Le bouton : elle veut le percer, il dit non, elle supplie, il cède ; elle est ravie, il est KO.",
         "pages": [
           {
-            "texte": "elle a vu un bouton.",
+            "texte": "quand ta personne voit un bouton sur toi",
             "dessin": {
               "elements": [
                 {
@@ -112,11 +112,11 @@
                 }
               ]
             },
-            "appel": "tague-la"
+            "appel": "tague la personne qui fait ça"
           }
         ]
       },
-      "legende": "il a tenu 40 secondes.\n\ntague-la",
+      "legende": "tague la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",

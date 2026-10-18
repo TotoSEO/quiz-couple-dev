@@ -56,7 +56,7 @@
             ],
             "textes": [
               {
-                "texte": "« c'est à 5 minutes »",
+                "texte": "« t'inquiète, c'est à 5 minutes »",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -241,7 +241,7 @@
           }
         ]
       },
-      "legende": "ça fait 40 minutes.\n\ntague-le",
+      "legende": "tague la personne qui fait ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",

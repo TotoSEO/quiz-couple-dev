@@ -4,7 +4,7 @@
   "format": "carrousel",
   "gabarit": "mipaps-carrousel",
   "categorie": "mipaps-histoire",
-  "sujet": "his-007",
+  "sujet": "his-108",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,90 +12,96 @@
         "gabarit": "mipaps-carrousel",
         "langue": "fr",
         "theme": "light",
-        "idee": "On n'est pas d'accord, et pourtant : la dispute, le dos à dos, lui qui craque, elle qui boude en coin, puis la main dans la main.",
+        "idee": "Les étapes d'une dispute chez nous : un truc tout bête, le grand silence, chacun dans son coin, l'un des deux qui demande « t'as faim ? », le câlin.",
         "pages": [
           {
-            "texte": "on n'est pas d'accord sur le film.",
+            "texte": "les étapes d'une dispute chez nous",
             "dessin": {
               "duo": "dispute"
             }
           },
           {
-            "texte": "elle : « j'ai raison. »",
+            "texte": "1. on se dispute pour un truc tout bête.",
             "dessin": {
               "elements": [
                 {
                   "perso": "elle",
-                  "expression": "determine",
-                  "bras": "hanches",
-                  "x": 320,
-                  "taille": 270
-                }
-              ]
-            }
-          },
-          {
-            "texte": "lui : « non, c'est moi. »",
-            "dessin": {
-              "elements": [
+                  "expression": "colere",
+                  "x": 250,
+                  "taille": 260,
+                  "bras": "hanches"
+                },
                 {
                   "perso": "lui",
-                  "expression": "determine",
-                  "bras": "hanches",
-                  "x": 320,
-                  "taille": 270
+                  "expression": "vexe",
+                  "x": 410,
+                  "taille": 260,
+                  "bras": "croises"
                 }
               ]
             }
           },
           {
-            "texte": "après : dos à dos. 10 minutes de silence.",
+            "texte": "2. le grand silence.",
             "dessin": {
               "duo": "dos_a_dos"
             }
           },
           {
-            "texte": "c'est lui qui craque en premier.",
+            "texte": "3. chacun regarde l'autre en douce, pour voir s'il craque.",
             "dessin": {
               "elements": [
                 {
                   "perso": "lui",
-                  "expression": "supplie",
-                  "bras": "priere",
-                  "x": 320,
-                  "taille": 270
+                  "expression": "boude",
+                  "x": 250,
+                  "taille": 260,
+                  "angle": 40
+                },
+                {
+                  "perso": "elle",
+                  "expression": "boude",
+                  "x": 410,
+                  "taille": 260,
+                  "angle": -40
                 }
               ]
             }
           },
           {
-            "texte": "elle fait semblant de bouder. elle regarde en coin.",
+            "texte": "4. l'un des deux finit par demander « t'as faim ? »",
             "dessin": {
               "elements": [
                 {
-                  "perso": "elle",
-                  "expression": "vexe",
-                  "angle": 60,
-                  "x": 320,
-                  "taille": 270
+                  "perso": "lui",
+                  "expression": "timide",
+                  "x": 290,
+                  "taille": 260,
+                  "bras": "tient"
+                },
+                {
+                  "objet": "croissant",
+                  "x": 420,
+                  "y": 330,
+                  "echelle": 0.5
                 }
               ]
             }
           },
           {
-            "texte": "main dans la main.",
+            "texte": "5. le câlin, et c'est fini.",
             "dessin": {
-              "duo": "main_dans_la_main"
+              "duo": "calin"
             },
             "appel": "garde ça pour la prochaine dispute"
           }
         ]
       },
-      "legende": "ça a duré 10 minutes.\n\ngarde ça pour la prochaine dispute",
+      "legende": "garde ça pour la prochaine dispute",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#amour",
+        "#humour",
         "#relation"
       ]
     }

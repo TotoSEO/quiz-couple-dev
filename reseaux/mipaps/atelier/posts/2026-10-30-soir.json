@@ -12,10 +12,10 @@
         "gabarit": "mipaps-carrousel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand elle rentre tard : il l'attend sur le canapé, s'endort ; elle le couvre.",
+        "idee": "Quand je rentre tard : il a dit « je t'attends », il s'est endormi sur le canapé ; elle va chercher la couverture et s'endort contre lui ; « t'es rentrée ? ».",
         "pages": [
           {
-            "texte": "23 h 40. je rentre tard.",
+            "texte": "quand je rentre tard",
             "dessin": {
               "elements": [
                 {
@@ -35,7 +35,7 @@
             }
           },
           {
-            "texte": "il m'attend sur le canapé.",
+            "texte": "tu m'as dit « je t'attends ».",
             "dessin": {
               "elements": [
                 {
@@ -53,7 +53,7 @@
             }
           },
           {
-            "texte": "il s'est endormi en m'attendant.",
+            "texte": "tu m'as attendue... les yeux fermés.",
             "dessin": {
               "elements": [
                 {
@@ -94,7 +94,7 @@
             }
           },
           {
-            "texte": "minuit 10",
+            "texte": "« t'es rentrée ? »",
             "dessin": {
               "elements": [
                 {
@@ -131,7 +131,7 @@
           }
         ]
       },
-      "legende": "il avait gardé le dîner.\n\nenvoie-lui ça",
+      "legende": "envoie-lui ça",
       "hashtags": [
         "#lesmipaps",
         "#couple",
