@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-17T07:45:03.973Z",
+  "genere_le": "2026-10-18T03:12:35.878Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-17",
+  "aujourdhui": "2026-10-18",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 23,
+  "reserve_jours": 22,
   "a_remplir": [
     {
       "jour": "2026-11-09",
@@ -1146,6 +1146,21 @@
       "jour": "2027-01-25",
       "creneau": "soir",
       "categorie": "mipaps-histoire"
+    },
+    {
+      "jour": "2027-01-26",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-26",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-26",
+      "creneau": "soir",
+      "categorie": "mipaps-statique"
     }
   ],
   "a_corriger": [],
@@ -1382,7 +1397,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "état des lieux",
       "erreur": null
     },
@@ -1391,7 +1406,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "je t'aime en pyjama troué aussi",
       "erreur": null
     },
@@ -1400,7 +1415,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "rendu",
+      "statut": "conteneur",
       "texte": null,
       "erreur": null
     },
@@ -1436,7 +1451,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "j'ai trop hâte de me blottir",
       "erreur": null
     },
@@ -1445,7 +1460,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2074,11 +2089,11 @@
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-18",
+      "jour": "2026-10-19",
       "creneau": "matin"
     },
     "mipaps-statique": {
-      "jour": "2026-10-17",
+      "jour": "2026-10-20",
       "creneau": "soir"
     },
     "mipaps-histoire": {
@@ -2159,6 +2174,34 @@
       "releve": "j7",
       "vues": 218,
       "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "08ea1aed-714d-45e3-88e8-75724f498eab",
+      "releve": "j7",
+      "vues": 2,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "f47c4ea7-e61f-4485-a542-353fa0ea2542",
+      "releve": "j7",
+      "vues": 173,
+      "partages": 1,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "ffad7d32-1461-42af-908b-f13476005a62",
+      "releve": "j7",
+      "vues": 211,
+      "partages": 2,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "985c5c8b-f448-46c8-9487-21b779e42d29",
+      "releve": "j7",
+      "vues": 182,
+      "partages": 2,
       "enregistrements": 0
     }
   ]
