@@ -39,31 +39,7 @@
       adminToken = token;
       showDashboard();
       loadReviews();
-      loadActivityCount();
     }
-  }
-
-  function loadActivityCount() {
-    fetch(SUPABASE_URL + '/rest/v1/activity_validations?select=id&limit=0', {
-      method: 'GET',
-      headers: {
-        'apikey': SUPABASE_KEY,
-        'Authorization': 'Bearer ' + SUPABASE_KEY,
-        'Prefer': 'count=exact'
-      }
-    })
-    .then(function (res) {
-      var range = res.headers.get('content-range');
-      if (range) {
-        var total = range.split('/')[1];
-        var el = document.getElementById('admin-stat-activities');
-        if (el) el.textContent = total === '*' ? '0' : total;
-      }
-    })
-    .catch(function () {
-      var el = document.getElementById('admin-stat-activities');
-      if (el) el.textContent = '?';
-    });
   }
 
   function login() {
@@ -90,7 +66,6 @@
         sessionStorage.setItem('admin-token-expiry', expiry.toString());
         showDashboard();
         loadReviews();
-        loadActivityCount();
       } else {
         errorEl.textContent = data.error || 'Mot de passe incorrect';
         errorEl.classList.remove('hidden');
@@ -390,6 +365,11 @@
     'duree-celibat': 'testDureeCelibat',
     'est-ce-le-bon': 'testEstCeLeBon',
     'compatibilite-sexuelle': 'testCompatSexuelle',
+    'serial-killer': 'quizSerialKiller',
+    'film-horreur': 'quizMortFilmHorreur',
+    'possession': 'quizPossession',
+    'super-vilain': 'quizSuperVilain',
+    'duo-vilains': 'quizDuoVilains',
     'type-couple': 'quizTypeCouple',
     'amour-ou-attachement': 'testAmourAttachement',
     'je-l-aime-encore': 'testJeLaimeEncore',
@@ -423,7 +403,10 @@
           'qui-de-nous-deux', 'dilemmes', 'pour-contre', 'tu-preferes', 'jamais',
           'jeuPhrases', 'phrases', 'jeuDixMais', 'dix-mais'],
     quiz: ['zamours', 'amoureux', 'coquin', 'genant', 'knowledge', 'marrant', 'most',
-           'vrai-faux', 'ado', 'tentation', 'rencontre']
+           'vrai-faux', 'ado', 'tentation', 'rencontre',
+           // les quiz spéciaux d'Halloween (16 octobre 2026)
+           'quizSerialKiller', 'serial-killer', 'quizMortFilmHorreur', 'film-horreur', 'quizPossession', 'possession',
+           'quizSuperVilain', 'super-vilain', 'quizDuoVilains', 'duo-vilains']
   };
   var LIBELLE_FAMILLE = { test: 'Tests', quiz: 'Quiz', jeu: 'Jeux' };
 
@@ -788,7 +771,8 @@
   // elle, l'onglet le dit et la ligne sous les lances reste vide.
   var PAGES_DISTANCE = ['testCouple', 'testCommonPoints', 'testCompatibilite', 'quizAmoureux',
     'testCoupleSain', 'testParentalite', 'testEmmenager', 'testAmeSoeur', 'testChargeMentale',
-    'jeuJamais', 'jeuQuiDeNous', 'jeuQuiPourrait', 'jeuDixMais', 'testCompatSexuelle', 'testDistance'];
+    'jeuJamais', 'jeuQuiDeNous', 'jeuQuiPourrait', 'jeuDixMais', 'testCompatSexuelle', 'testDistance',
+    'quizSerialKiller', 'quizMortFilmHorreur', 'quizPossession', 'quizSuperVilain', 'quizDuoVilains'];
   var DEBUT_DISTANCE = (typeof window !== 'undefined' && window.__ADM_DEBUT_DISTANCE) || '2026-09-07';
   var distanceCouchesVues = { lances: true, distance: true, part: true };
   var _distanceCouches = null;

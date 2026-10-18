@@ -1,0 +1,184 @@
+<%
+  // Le hub des quiz spéciaux de saison (16 octobre 2026, demande de Thomas :
+  // « une page quiz-speciaux-pour-couple qui va répertorier tous les quiz un
+  // peu fun... on mettra en avant ceux les plus propices en fonction de la
+  // saison »). La liste des quiz vient de FAMILLES_NAV.speciaux et leur
+  // saison de SAISON_DES_QUIZ (config.js) ; la saison en cours (`saison`,
+  // posée par le générateur d'après SAISON) passe en tête avec une pastille
+  // « En ce moment », les autres restent jouables toute l'année. Le title
+  // (« Quiz spéciaux à faire en couple : Noël, Halloween… ») et le H1
+  // diffèrent exprès.
+  const ns = 'quiz-speciaux';
+  const pageTitle = t('quizzes:speciauxCouple.title', 'Quiz spéciaux à faire en couple');
+  const saisonCourante = (typeof saison !== 'undefined' && saison) ? saison : null;
+  const EMOJIS = { quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭' };
+  const ACCENTS = { quizSerialKiller: '0 55% 42%', quizMortFilmHorreur: '222 48% 46%', quizPossession: '150 40% 38%', quizSuperVilain: '292 55% 45%', quizDuoVilains: '27 90% 48%' };
+  const DUO_SEUL = { quizDuoVilains: true };
+  const toutes = (famillesNav.speciaux || []).map(function (k) {
+    const f = quizFeatured && quizFeatured[k];
+    return {
+      routeKey: k,
+      url: getLocalizedUrl(k, lang),
+      saison: (typeof saisonDesQuiz !== 'undefined' && saisonDesQuiz[k]) || null,
+      emoji: EMOJIS[k] || '🎃',
+      accent: ACCENTS[k] || '340 65% 62%',
+      duoSeul: !!DUO_SEUL[k],
+      img: f && f.file ? f.file : 'test-couple',
+      alt: f ? (f.alt[lang] || f.alt.fr) : '',
+      nom: t(ns + ':quiz.' + k + 'Nom', t('quizzes:' + k + '.shortTitle', '')),
+      tagline: t(ns + ':quiz.' + k + 'Tagline', t('quizzes:' + k + '.description', ''))
+    };
+  }).filter(function (q) { return q.url; });
+  // Les saisons, celle du moment d'abord ; une saison annoncée sans quiz
+  // (Noël avant décembre) reste listée avec sa pastille « Bientôt ».
+  const saisonsTextes = t(ns + ':saisons', {});
+  const ordre = Object.keys(saisonsTextes).sort(function (a, b) {
+    return (a === saisonCourante ? -1 : 0) - (b === saisonCourante ? -1 : 0);
+  });
+  const blocs = ordre.map(function (id) {
+    return { id: id, textes: saisonsTextes[id] || {}, quiz: toutes.filter(function (q) { return q.saison === id; }), enCours: id === saisonCourante };
+  });
+  const horsSaison = toutes.filter(function (q) { return !q.saison || !saisonsTextes[q.saison]; });
+  const faqNums = [1, 2, 3, 4, 5].filter(function (i) { return t(ns + ':faq.q' + i, ''); });
+  const jsonLd = [
+    {
+      "@context": "https://schema.org", "@type": "CollectionPage",
+      "name": t(ns + ':jsonLd.name', pageTitle),
+      "description": t('quizzes:speciauxCouple.metaDescription', ''),
+      "inLanguage": lang,
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": toutes.length,
+        "itemListElement": toutes.map(function (q, i) {
+          return { "@type": "ListItem", "position": i + 1, "item": { "@type": "Quiz", "name": q.nom, "description": q.tagline, "url": q.url, "isAccessibleForFree": true } };
+        })
+      }
+    },
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": faqNums.map(function (i) {
+        return { "@type": "Question", "name": t(ns + ':faq.q' + i, ''), "acceptedAnswer": { "@type": "Answer", "text": t(ns + ':faq.a' + i, '') } };
+      })
+    }
+  ];
+%>
+<script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
+
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient py-14 md:py-20">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb justify-center" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:speciauxCouple.shortTitle', pageTitle) %></li>
+        </ol>
+      </nav>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L12 13.5 7.8 16l1.1-4.8L5.2 8l4.9-.4z"/></svg>
+        <%= t(ns + ':hero.badge', '') %>
+      </span>
+      <%
+        const heroTitle = t(ns + ':hero.title', pageTitle);
+        const heroHighlight = t(ns + ':hero.titleHighlight', '');
+        const posSurligne = heroHighlight ? heroTitle.toLowerCase().indexOf(heroHighlight.toLowerCase()) : -1;
+      %>
+      <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (posSurligne >= 0) { %>
+          <%= heroTitle.slice(0, posSurligne) %><span class="text-gradient"><%= heroTitle.slice(posSurligne, posSurligne + heroHighlight.length) %></span><%= heroTitle.slice(posSurligne + heroHighlight.length) %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%= t(ns + ':hero.description', '') %></p>
+    </div>
+  </div>
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '' }) %>
+</section>
+
+<!-- Les quiz, saison par saison -->
+<section class="py-12 md:py-16" id="quiz">
+  <div class="container mx-auto px-4">
+    <% blocs.forEach(function (bloc) { %>
+    <div class="spx-saison spx-saison--<%= bloc.id %><%= bloc.enCours ? ' spx-saison--en-cours' : '' %>">
+      <div class="mx-auto max-w-2xl text-center mb-8">
+        <% if (bloc.enCours) { %><span class="spx-pastille spx-pastille--en-cours"><%= t(ns + ':enCeMoment', 'En ce moment') %></span>
+        <% } else if (!bloc.quiz.length) { %><span class="spx-pastille spx-pastille--bientot"><%= bloc.textes.bientot || '' %></span>
+        <% } else { %><span class="spx-pastille"><%= t(ns + ':horsSaison', "Toute l'année") %></span><% } %>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3"><%= bloc.textes.titre || bloc.id %></h2>
+        <p class="text-muted-foreground"><%= bloc.textes.intro || '' %></p>
+      </div>
+      <% if (bloc.quiz.length) { %>
+      <div class="jeux-board spx-board">
+        <% bloc.quiz.forEach(function (q) { %>
+        <a class="jeu-card spx-carte" href="<%= q.url %>" style="--jeu-accent: <%= q.accent %>">
+          <span class="jeu-card-visuel">
+            <% const srcQ = '/quiz/featured/' + q.img + '.webp'; %>
+            <img src="<%= srcQ %>"<% if (srcsetImage(srcQ)) { %> srcset="<%= srcsetImage(srcQ) %>" sizes="(min-width: 1100px) 252px, (min-width: 640px) calc((100vw - 60px) / 2), calc(100vw - 34px)"<% } %> alt="<%= escapeHtml(q.alt) %>" width="600" height="315" loading="lazy" decoding="async">
+          </span>
+          <span class="jeu-card-corps">
+            <span class="jeu-card-emoji" aria-hidden="true"><%= q.emoji %></span>
+            <h3 class="jeu-card-nom"><%= q.nom %></h3>
+            <p class="jeu-card-tagline"><%= q.tagline %></p>
+            <ul class="jeu-card-meta">
+              <li><%= q.duoSeul ? t(ns + ':duoSeul', 'À deux seulement') : t(ns + ':soloOuDuo', 'Seul(e) ou à deux') %></li>
+              <li><%= t(ns + ':distance', 'Mode à distance') %></li>
+            </ul>
+            <span class="jeu-card-cta">
+              <%= t(ns + ':jouer', 'Faire le quiz') %>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            </span>
+          </span>
+        </a>
+        <% }) %>
+      </div>
+      <% } %>
+    </div>
+    <% }) %>
+    <% if (horsSaison.length) { %>
+    <div class="spx-saison">
+      <div class="mx-auto max-w-2xl text-center mb-8"><span class="spx-pastille"><%= t(ns + ':horsSaison', "Toute l'année") %></span></div>
+      <div class="jeux-board spx-board">
+        <% horsSaison.forEach(function (q) { %>
+        <a class="jeu-card spx-carte" href="<%= q.url %>" style="--jeu-accent: <%= q.accent %>">
+          <span class="jeu-card-corps"><span class="jeu-card-emoji" aria-hidden="true"><%= q.emoji %></span><h3 class="jeu-card-nom"><%= q.nom %></h3><p class="jeu-card-tagline"><%= q.tagline %></p></span>
+        </a>
+        <% }) %>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Le texte -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <% [1, 2, 3].forEach(function (s) {
+      const titre = t(ns + ':section' + s + '.title', '');
+      if (!titre) return; %>
+    <section class="mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= titre %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <% [1, 2, 3].forEach(function (p) { const texte = t(ns + ':section' + s + '.p' + p, ''); if (texte) { %><p><%- texte %></p><% } }) %>
+      </div>
+    </section>
+    <% }) %>
+
+    <% if (faqNums.length) { %>
+    <section class="mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', 'Questions fréquentes') %></h2>
+      <div class="space-y-4">
+        <% faqNums.forEach(function (i) { %>
+        <details class="bg-card border border-border rounded-lg p-5">
+          <summary class="font-semibold cursor-pointer"><%= t(ns + ':faq.q' + i, '') %></summary>
+          <p class="text-muted-foreground leading-relaxed mt-3"><%- t(ns + ':faq.a' + i, '') %></p>
+        </details>
+        <% }) %>
+      </div>
+    </section>
+    <% } %>
+  </div>
+</article>

@@ -40,8 +40,6 @@
     "categoryQuizzes": "Couple quizzes",
     "categoryJeux": "Couple games",
     "categorySingles": "Singles tests",
-    "activities": "Activities near me",
-    "activitiesCourt": "Activities",
     "contact": "Contact",
     "testAttachement": "Attachment test",
     "testAttachementDesc": "Discover your attachment style",
@@ -105,7 +103,16 @@
     "testSignesChinois": "Chinese zodiac compatibility",
     "testSignesChinoisDesc": "Two dates, two animals, one verdict",
     "compteurCouple": "Relationship duration counter",
-    "compteurCoupleDesc": "Your days together, dates to celebrate"
+    "compteurCoupleDesc": "Your days together, dates to celebrate",
+    "speciauxCouple": "Special quizzes",
+    "categorySpeciaux": "Special quizzes",
+    "ongletSpeciaux": "Halloween quizzes",
+    "deployerSpeciaux": "See all Halloween quizzes",
+    "quizSerialKiller": "Which serial killer matches you",
+    "quizMortFilmHorreur": "Who dies first (horror movie)",
+    "quizPossession": "Who could get possessed",
+    "quizSuperVilain": "Which supervillain are you",
+    "quizDuoVilains": "Which supervillain duo"
   },
   "footer": {
     "brandDescription": "Test your compatibility and discover your love match with our free couple quizzes.",

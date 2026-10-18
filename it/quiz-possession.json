@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Quiz di Halloween • Da solo/a o in due",
+    "title": "Chi di noi due potrebbe essere posseduto?",
+    "titleHighlight": "essere posseduto",
+    "description": "Dieci giorni in una casa economica di cui nessuno vuole raccontare la storia: la tavola Ouija della soffitta, lo specchio del mercatino, il gatto che soffia verso l'angolo del salotto, la voce che conosce il tuo nome. Il risultato è un rischio di possessione in percentuale, con quello che ti protegge e quello che ti espone. In coppia, si sa quale dei due sceglierebbero i demoni.",
+    "subtitle": "15 domande • 5 minuti • da solo/a, in due su un telefono o ognuno sul proprio",
+    "jumpBtn": "Fai il quiz"
+  },
+  "section1": {
+    "title": "Come funziona il quiz",
+    "intro": "In tutti i film di possessione, la vittima ha lo stesso profilo: curiosa, stanca, un po' troppo a suo agio con le tavole Ouija e gli oggetti dei mercatini. Il quiz verifica se è il tuo caso.",
+    "p1": "Le domande seguono i dieci giorni. Per esempio: «In soffitta, sotto un lenzuolo: una tavola Ouija, con il bicchiere già appoggiato sopra.» Puoi proporre una seduta stasera, fotografarla per gli amici, lasciarla sotto il lenzuolo o bruciarla in giardino. Ogni risposta vale da zero a tre punti di rischio, e la somma dà una percentuale.",
+    "p2": "Da solo/a, scopri il tuo rischio, il tuo verdetto tra cinque, e due elenchi: quello che ti protegge e quello che ti espone. In due, il primo risponde, passa il telefono, il secondo risponde a sua volta, e il risultato confronta i vostri due rischi: a farsi possedere è chi ha la percentuale più alta.",
+    "p3": "Esiste anche la modalità a distanza: una persona crea la partita, l'altra si unisce con il codice, ognuno risponde sul proprio telefono e vedete le vostre due risposte dopo ogni domanda."
+  },
+  "section2": {
+    "title": "I cinque verdetti",
+    "intro": "La percentuale si legge in cinque fasce, dalla persona che niente tocca a quella che farebbe meglio ad avvisare qualcuno.",
+    "pillar1Title": "Meno del 20 %: impossedibile",
+    "pillar1Text": "Porte chiuse, tavola rifiutata, piumone fino al mento. Troppo lavoro per un demone.",
+    "pillar2Title": "Dal 20 al 40 %: difficile da possedere",
+    "pillar2Text": "I riflessi giusti, ma non riesci a fare a meno di guardare.",
+    "pillar3Title": "Dal 40 al 60 %: possedibile in una sera di stanchezza",
+    "pillar3Text": "In un giorno normale, tutto bene. In una sera d'ottobre in una casa vecchia, se ne può discutere.",
+    "pillar4Title": "Dal 60 all'80 %: il bersaglio ideale",
+    "pillar4Text": "Parli agli specchi e porti a casa oggetti senza chiedere da dove vengono.",
+    "pillar5Title": "Oltre l'80 %: già posseduto/a?",
+    "pillar5Text": "Apri tutte le porte, dici di sì a tutto, e lo trovi divertente."
+  },
+  "section3": {
+    "title": "Perché è divertente in due",
+    "p1": "In una coppia, c'è quasi sempre una persona che vuole visitare la casa abbandonata e un'altra che aspetta in macchina. Il quiz ci mette sopra dei numeri. E la persona più scettica, quella che dice «i fantasmi non esistono», è spesso quella con il rischio più alto, perché apre tutte le porte senza pensare.",
+    "p2": "Se vi piace il formato, <a href=\"/it/quiz-chi-muore-per-primo-nel-film-horror/\">il quiz del film horror</a> funziona con lo stesso principio, in minuti di sopravvivenza invece che in percentuale. E per cambiare registro restando nell'atmosfera, <a href=\"/it/quiz-quale-supercattivo-sei/\">il supercattivo che ti somiglia</a> o <a href=\"/it/quiz-quale-duo-di-supercattivi-siete/\">il duo di cattivi che formate</a> danno un ritratto invece di un numero.",
+    "p3": "Tutti questi quiz sono riuniti su <a href=\"/it/quiz-speciali-per-coppie/\">la pagina dei nostri quiz speciali</a>, che cambia con la stagione."
+  },
+  "section4": {
+    "title": "Quello che c'è da sapere",
+    "p1": "È un gioco. Nessuna domanda misura qualcosa di reale, e la parola «rischio» va presa come in un film di Halloween. L'unico vero consiglio del quiz è dormire bene a ottobre.",
+    "p2": "Niente viene salvato. Le risposte restano sul vostro telefono, e rifare il quiz cambia il risultato se cambiate idea sulla tavola Ouija."
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Come viene calcolato il rischio?",
+    "faq1A": "Ogni risposta vale da zero a tre punti di rischio. La somma delle quindici domande viene rapportata a una percentuale: quarantacinque punti fanno il 100 %, zero punti fanno lo 0 %. Il verdetto dipende dalla fascia in cui cade questa percentuale.",
+    "faq2Q": "Si può giocare da solo/a?",
+    "faq2A": "Sì. Da solo/a, ottieni il tuo rischio, il tuo verdetto e i due elenchi di quello che ti protegge e di quello che ti espone. In due, il quiz confronta i due rischi e indica chi sceglierebbero i demoni.",
+    "faq3Q": "Chi si fa possedere quando si gioca in due?",
+    "faq3A": "Chi ha la percentuale più alta. In caso di parità, il quiz lo dice: il demone dovrà scegliere.",
+    "faq4Q": "Si può giocare a distanza?",
+    "faq4A": "Sì, dalla schermata dei nomi. Una persona crea la partita, l'altra si unisce con il codice o il QR code, e ognuno risponde sul proprio telefono.",
+    "faq5Q": "Fa paura?",
+    "faq5A": "No. Le domande sono divertenti, e il peggio che possa succedere è scoprire che il tuo partner parlerebbe a una statua in una chiesa abbandonata."
+  },
+  "jsonLd": {
+    "about": "quiz di Halloween"
+  }
+}

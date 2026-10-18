@@ -90,10 +90,10 @@
     "metaDescription": "Who Is Most Likely To? quiz with 240+ questions for 2-8 players. Vote, laugh and discover who's the funniest, most romantic... Free!"
   },
   "questionsCouple": {
-    "title": "120 Questions for Couples to Ask Each Other | Free",
+    "title": "100+ Questions for Couples to Ask Each Other",
     "shortTitle": "Questions",
-    "description": "120 questions sorted by theme to know each other better, strengthen your bond, and create authentic moments of exchange.",
-    "metaDescription": "120 couple questions in 5 categories: getting to know each other, future plans, intimacy, fun and deep questions. Free, no registration."
+    "description": "Over 100 questions sorted by theme, to pick at random, plus all our lists for every situation.",
+    "metaDescription": "Over 100 questions for couples to ask each other, sorted by theme, plus all our lists: early dating, intimate questions, the future, for your boyfriend or girlfriend."
   },
   "testCoupleSain": {
     "title": "Healthy Relationship Test - Is Your Couple Solid?",
@@ -189,12 +189,6 @@
     "shortTitle": "True or False",
     "description": "100 true or false questions about couples: myths, psychology, surprising statistics and common misconceptions.",
     "metaDescription": "100 true or false questions about couples: myths, psychology, surprising statistics and common misconceptions. Test your knowledge now."
-  },
-  "activities": {
-    "title": "Couple Activities Near Me: Find Date Ideas Close to You",
-    "shortTitle": "Couple activities",
-    "description": "Find couple activities near you. Free geolocated tool: filter by budget, atmosphere and distance for unforgettable date ideas.",
-    "metaDescription": "Find couple activities near you. Free geolocated tool: filter by budget, atmosphere and distance for unforgettable date ideas."
   },
   "quizTentation": {
     "title": "Temptation Island Quiz: Would You Survive It?",
@@ -457,5 +451,41 @@
     "shortTitle": "Sexual compatibility test",
     "metaDescription": "A sexual compatibility test for two: 20 questions on desire, tenderness, trying new things and rhythm, with a score for each dimension. Free.",
     "description": "Twenty questions for two on desire, tenderness and how you talk about it, to see where you meet."
+  },
+  "speciauxCouple": {
+    "title": "Special couple quizzes: Christmas, Halloween…",
+    "shortTitle": "Special quizzes",
+    "metaDescription": "Seasonal quizzes to take as a couple. For Halloween: which serial killer matches you, who dies first in a horror movie, who would get possessed, which supervillain are you. Free.",
+    "description": "The slightly crazy quizzes to take as a couple depending on the season: Halloween for now, Christmas next."
+  },
+  "quizSerialKiller": {
+    "title": "Quiz: which serial killer are you compatible with? (solo or as a couple)",
+    "shortTitle": "Which serial killer matches you",
+    "metaDescription": "A Halloween quiz: 15 situations (the party, the cemetery at midnight, the detective at the door) and the famous serial killer you're most like. Solo or as a couple, free.",
+    "description": "Fifteen situations from a Halloween night and the famous killer you're most like, blown way out of proportion. Solo or as a couple."
+  },
+  "quizMortFilmHorreur": {
+    "title": "Which of us dies first in a horror movie? The quiz",
+    "shortTitle": "Who dies first in the horror movie",
+    "metaDescription": "15 horror movie situations and a verdict in minutes: how long you last before the credits, and which of you dies first. Free, solo or as a couple.",
+    "description": "Fifteen situations, a survival time in minutes, and the name of the first victim when you play as a couple."
+  },
+  "quizPossession": {
+    "title": "Which of us could get possessed? The Halloween quiz",
+    "shortTitle": "Who could get possessed",
+    "metaDescription": "15 questions and a possession risk in percent for each of you: which of you opens the door to the demons? A free Halloween quiz, solo or as a couple.",
+    "description": "Fifteen questions, a possession risk in percent, and the one the demons would choose first."
+  },
+  "quizSuperVilain": {
+    "title": "Quiz: which supervillain are you most like? (solo or as a couple)",
+    "shortTitle": "Which supervillain are you",
+    "metaDescription": "Your entrance at the party, your costume, your henchmen, your laugh: 15 questions and the supervillain you're most like, from the Joker to Maleficent. A free Halloween quiz, solo or as a couple.",
+    "description": "Fifteen questions in the villain's shoes on Halloween night, and the supervillain you're most like."
+  },
+  "quizDuoVilains": {
+    "title": "Which supervillain duo are you? The quiz to take as a couple",
+    "shortTitle": "Which supervillain duo are you",
+    "metaDescription": "As a couple: the Halloween night heist in 15 questions each, your role in the duo (the brains, the chaos, the muscle...) and the famous villain duo you form, from the Joker and Harley Quinn to Bonnie and Clyde.",
+    "description": "Each of you answers separately, and the quiz gives you your role in the duo and the famous villain duo you form."
   }
 }

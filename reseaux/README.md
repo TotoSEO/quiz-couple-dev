@@ -38,9 +38,9 @@ Le son du reel fini est ramené à -14 LUFS et -1 dBTP (jetons `son-*`).
 
 | Recette `gabarit` | Sortie | Contenu |
 |---|---|---|
-| `pov` | reel.mp4 + couverture.jpg | Animation avec les mascottes : POV, mini message, scène coquine, reel statique (un plan). Scénario plan par plan, voir plus bas |
+| `pov` | reel.mp4 + couverture.jpg | Animation avec les mascottes : POV, mini message, scène coquine, reel statique (un plan). Scénario plan par plan, voir plus bas. Plus dans la grille depuis le 16 octobre 2026 au soir (aucune n'a marché, Thomas) : son vocabulaire sert aux scènes des BD et des carrousels |
 | `connais-tu` | reel.mp4 + couverture.jpg | « Connais-tu ton partenaire ? » : accroche animée, 8 questions sans réponse, lecture puis chrono, « Comment your score! » |
-| `tu-preferes` | reel.mp4 + couverture.jpg | Tu préfères : accroche animée, dilemmes A ou B (alignés à gauche), lecture puis chrono |
+| `tu-preferes` | reel.mp4 + couverture.jpg | Tu préfères : accroche animée, l'édition sur la couverture (« Date night edition »), dilemmes A ou B (alignés à gauche), lecture puis chrono. Le format de tous les jours depuis le 16 octobre 2026 (sept par semaine) |
 | `quiz-chrono` | reel.mp4 + couverture.jpg | Quiz à bonne réponse : lecture, réponses, chrono, réponse, fin |
 | `citation` | reel.mp4 + couverture.jpg | Phrase en police plume, mot à mot, fleurs au trait, le petit duo des mascottes, 10 à 14 s |
 | `image` | image.jpg | Post 4:5 : phrase émotive (plume, fleurs) ou drôle (Fredoka), avec une scène dessinée (`scene`) ou le petit duo |

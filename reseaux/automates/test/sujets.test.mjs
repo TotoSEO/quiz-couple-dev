@@ -9,7 +9,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { categorieAttendue, MELANGE_DEFAUT } from '../lib/calendrier.mjs';
+import { categorieAttendue, CATEGORIES_RETIREES, estRetiree, MELANGE_DEFAUT } from '../lib/calendrier.mjs';
 import { TRAMES } from '../../studio/src/baton/realisateur.mjs';
 import { CATEGORIES } from '../lib/controle.mjs';
 import { controlerFin } from '../lib/style.mjs';
@@ -29,13 +29,18 @@ test("la grille met « He's a 10 but... » le samedi soir et la phrase tendre le
   assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-18', 'soir'), 'phrase');
 });
 
-test('la grille met le bonhomme bâton tous les matins (16 octobre 2026 au soir) et garde les animations des mascottes le lundi et le mercredi soir, la coquine le vendredi soir', () => {
-  for (const jour of ['2026-10-19', '2026-10-20', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24', '2026-10-25']) {
-    assert.equal(categorieAttendue(MELANGE_DEFAUT, jour, 'matin'), 'baton', jour);
-  }
-  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-19', 'soir'), 'pov');
-  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-21', 'soir'), 'pov');
-  assert.equal(categorieAttendue(MELANGE_DEFAUT, '2026-10-23', 'soir'), 'coquin');
+test('la grille du 16 octobre 2026 au soir : le bonhomme bâton tous les matins, les dilemmes « Tu préfères » quatre midis et trois soirs, plus aucune animation des mascottes', () => {
+  // la semaine du lundi 19 octobre 2026
+  const semaine = ['2026-10-19', '2026-10-20', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24', '2026-10-25'];
+  for (const jour of semaine) assert.equal(categorieAttendue(MELANGE_DEFAUT, jour, 'matin'), 'baton', jour);
+  assert.deepEqual(semaine.map((j) => categorieAttendue(MELANGE_DEFAUT, j, 'midi')), ['connais-tu', 'tu-preferes', 'connais-tu', 'tu-preferes', 'connais-tu', 'tu-preferes', 'tu-preferes']);
+  assert.deepEqual(semaine.map((j) => categorieAttendue(MELANGE_DEFAUT, j, 'soir')), ['tu-preferes', 'bd', 'tu-preferes', 'carrousel', 'tu-preferes', 'dix-mais', 'phrase']);
+  // Thomas, le 16 octobre 2026 au soir : « les vidéos d'animations avec les deux mascottes ne fonctionnent pas du tout »
+  assert.deepEqual(CATEGORIES_RETIREES, ['pov', 'coquin', 'statique']);
+  for (const jour of semaine) for (const creneau of ['matin', 'midi', 'soir']) assert.ok(!estRetiree(categorieAttendue(MELANGE_DEFAUT, jour, creneau)), `${jour} ${creneau}`);
+  // sept dilemmes par semaine : un par jour, le format du seul reel qui a marché (« Date night edition », 30 000 vues)
+  const dilemmes = semaine.flatMap((j) => ['midi', 'soir'].map((c) => categorieAttendue(MELANGE_DEFAUT, j, c))).filter((c) => c === 'tu-preferes').length;
+  assert.equal(dilemmes, 7);
 });
 
 test("la banque « baton » : une histoire par sujet et par jour, les neuf trames de rêve à tour de rôle, le héros fille presque une fois sur deux et dans chaque trame, une trame connue, une musique", () => {
@@ -61,6 +66,43 @@ test("la banque « baton » : une histoire par sujet et par jour, les neuf trame
     assert.ok(['fille', 'garcon'].includes(s.heros), `${s.id} : heros`);
     assert.ok(Object.keys(TRAMES).includes(s.trame), `${s.id} : trame`);
   }
+});
+
+test("la banque « tu-preferes » : une édition par reel, sept par semaine depuis le 16 octobre 2026 ; thème court, trois paires d'exemples, choix courts, jamais la même paire deux fois", () => {
+  const sujets = SUJETS['tu-preferes'];
+  assert.ok(sujets.length >= 105, `${sujets.length} éditions : au moins quinze semaines à un reel de dilemmes par jour`);
+  const ids = new Set();
+  const paires = new Map();
+  const normaliser = (x) => x.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
+  sujets.forEach((s, i) => {
+    assert.equal(s.id, `tp-${String(i + 1).padStart(3, '0')}`, `${s.id} : les identifiants se suivent`);
+    assert.ok(!ids.has(s.id), `${s.id} en double`);
+    ids.add(s.id);
+    // le thème est l'étiquette de la couverture : vingt-deux signes au plus (contrôle du gabarit)
+    assert.ok(typeof s.theme === 'string' && s.theme.trim().length >= 3 && s.theme.length <= 22, `${s.id} : thème « ${s.theme} »`);
+    assert.ok(Array.isArray(s.exemples) && s.exemples.length >= 2, `${s.id} : au moins deux paires d'exemples`);
+    if (i >= 28) assert.ok(s.exemples.length >= 3, `${s.id} : trois paires d'exemples depuis le 16 octobre 2026`);
+    for (const paire of s.exemples) {
+      assert.ok(Array.isArray(paire) && paire.length === 2, `${s.id} : une paire a deux choix`);
+      for (const choix of paire) {
+        assert.ok(typeof choix === 'string' && choix.trim() && choix.length <= 45, `${s.id} : « ${choix} » (45 signes au plus par choix)`);
+        assert.doesNotMatch(choix, /\u2014|\u2013/, `${s.id} : « ${choix} » sans tiret cadratin`);
+      }
+      assert.notEqual(normaliser(paire[0]), normaliser(paire[1]), `${s.id} : deux choix différents`);
+      const cle = [normaliser(paire[0]), normaliser(paire[1])].sort().join(' | ');
+      assert.ok(!paires.has(cle), `${s.id} : la paire « ${paire.join(' / ')} » est déjà dans ${paires.get(cle)}`);
+      paires.set(cle, s.id);
+    }
+  });
+  // les éditions de Noël et du Nouvel An sont réservées à leur date (sujets datés)
+  const reserves = SUJETS.saison.sujets.filter((d) => d.categorie === 'tu-preferes').map((d) => d.theme);
+  for (const theme of ['tp-014', 'tp-024']) assert.ok(reserves.includes(theme), `${theme} réservé à sa date`);
+  for (const d of SUJETS.saison.sujets) {
+    if (!d.theme) continue;
+    assert.ok((SUJETS[d.categorie] || []).some((s) => s.id === d.theme), `${d.id} : le thème ${d.theme} existe dans la banque ${d.categorie}`);
+  }
+  // aucune fête d'un seul pays : Noël et le Nouvel An seulement
+  for (const s of sujets) assert.doesNotMatch(s.theme + ' ' + s.exemples.flat().join(' '), /halloween|thanksgiving|valentine/i, `${s.id}`);
 });
 
 test("la banque « dix-mais » : huit cartes « but he / but she », courtes, toutes différentes, sans fin qui commente", () => {

@@ -143,11 +143,23 @@
       "quizCoquin": "Explorez vos désirs et pimentez votre relation.",
       "quizMarrant": "Riez ensemble avec des questions hilarantes !",
       "quizKnowledge": "Qui connaît le mieux l'autre ? Défiez-vous !",
-      "quizMost": "Votez pour savoir qui est le plus... entre vous !"
+      "quizMost": "Votez pour savoir qui est le plus... entre vous !",
+      "quizSerialKiller": "Quinze situations d'un soir d'Halloween et le tueur célèbre qui te ressemble le plus, en version très grossie.",
+      "quizMortFilmHorreur": "Quinze situations, un temps de survie en minutes, et la première victime quand vous jouez à deux.",
+      "quizPossession": "Un risque de possession en pourcentage pour chacun, et celui que les démons choisiraient.",
+      "quizSuperVilain": "Ton entrée à la fête, ton déguisement, ton rire : le super-vilain qui te ressemble, du Joker à Maléfique.",
+      "quizDuoVilains": "Le casse de la nuit d'Halloween : votre rôle à chacun, et le duo de méchants célèbre que vous formez."
     },
     "testsEyebrow": "Les tests",
     "quizzesEyebrow": "Les quiz",
-    "jeuxEyebrow": "Les jeux"
+    "jeuxEyebrow": "Les jeux",
+    "speciauxEyebrow": "Édition spéciale",
+    "speciauxTitle": "Nos quiz spéciaux, selon la saison",
+    "speciauxTitleSaison": {
+      "halloween": "Spécial Halloween : nos quiz qui font (un peu) peur"
+    },
+    "speciauxDesc": "{{n}} quiz à faire seul(e) ou à deux, pour une soirée pas comme les autres. Chacun existe en mode à distance.",
+    "speciauxCta": "Voir tous les quiz spéciaux"
   },
   "customQuizPromo": {
     "eyebrow": "Quiz personnalisé",

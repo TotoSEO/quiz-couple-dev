@@ -60,38 +60,60 @@ dans le lit. Une image qui ne bouge pas est un reel qu'on fait défiler.
 
 Trois posts par jour, à une minute tirée au sort dans 6 h-8 h, 11 h-13 h et
 16 h-18 h. Le réglage `melange` de Supabase porte cette grille ; la synchro
-refuse un post qui ne la suit pas.
+accepte avec une alerte un post qui ne la suit plus (la grille a changé
+après son écriture) et le signale à la routine, qui le réécrit ; une
+catégorie retirée, elle, est retenue : rien n'en part.
 
 | | Matin | Midi | Après-midi |
 |---|---|---|---|
-| Lundi | Bonhomme bâton | Connais-tu | POV |
+| Lundi | Bonhomme bâton | Connais-tu | Tu préfères |
 | Mardi | Bonhomme bâton | Tu préfères | BD en quatre cases |
-| Mercredi | Bonhomme bâton | Connais-tu | POV |
-| Jeudi | Bonhomme bâton | Statique | Carrousel |
-| Vendredi | Bonhomme bâton | Connais-tu | Coquin |
+| Mercredi | Bonhomme bâton | Connais-tu | Tu préfères |
+| Jeudi | Bonhomme bâton | Tu préfères | Carrousel |
+| Vendredi | Bonhomme bâton | Connais-tu | Tu préfères |
 | Samedi | Bonhomme bâton | Tu préfères | « He's a 10 but... » |
-| Dimanche | Bonhomme bâton | Statique | Phrase tendre |
+| Dimanche | Bonhomme bâton | Tu préfères | Phrase tendre |
 
 Par semaine : 7 reels du bonhomme bâton (tous les matins depuis le
-16 octobre 2026 au soir ; le matin même il n'en avait que trois, le lundi, le
-mercredi et le vendredi, puis Thomas, devant la promesse de la lune et les
+16 octobre 2026 au soir, Thomas, devant la promesse de la lune et les
 chiens : « on lance ces animations à raison de une par jour, du coup réduis
-les formats posts classiques »), 3 animations des mascottes (le lundi et le
-mercredi soir, et la coquine du vendredi soir ; elles étaient dix par semaine
-jusqu'au 16 octobre 2026), 3 « Connais-tu ton partenaire ? », 2 « Tu
-préfères », 2 reels statiques, 1 phrase tendre (le dimanche soir),
-1 carrousel de questions (le jeudi soir, depuis le 7 octobre 2026 : c'est le
-format qui se garde, « Save this for your next date night »), 1 bande
-dessinée en quatre cases (le mardi soir, depuis le 8 octobre 2026) et
-1 carrousel « He's a 10 but... » (le samedi soir, depuis le 12 octobre 2026,
-à la place de la phrase tendre du samedi). Sur 13 semaines : 273 posts. Et
-chaque jour, une **story** reprend le reel du matin (voir plus bas).
+les formats posts classiques »), 7 « Tu préfères » (une édition de dilemmes
+par reel, quatre midis et trois soirs), 3 « Connais-tu ton partenaire ? »
+(les midis du lundi, du mercredi et du vendredi), 1 bande dessinée en
+quatre cases (le mardi soir, depuis le 8 octobre 2026), 1 carrousel de
+questions (le jeudi soir, depuis le 7 octobre 2026 : c'est le format qui se
+garde, « Save this for your next date night »), 1 carrousel « He's a 10
+but... » (le samedi soir, depuis le 12 octobre 2026) et 1 phrase tendre (le
+dimanche soir). Et chaque jour, une **story** reprend le reel du matin
+(voir plus bas).
+
+**Plus aucune animation des mascottes depuis le 16 octobre 2026 au soir.**
+Thomas, devant les chiffres des dix premiers jours du compte : « les vidéos
+d'animations avec les deux mascottes ne fonctionnent pas du tout. Ça sert à
+rien de continuer, sur les dizaines qui sont sorties y'en a pas une qui a
+fonctionné. Le seul qui a fait 30 000 vues est le reel dilemmes version date
+night. Je pense qu'il va falloir plutôt se concentrer sur ces reels-là, ceux
+qui sont familiers. » Elles étaient dix par semaine jusqu'au matin du
+16 octobre (POV, minis, phrases à finir, la coquine du vendredi, deux reels
+statiques), trois le soir même après l'arrivée du bonhomme bâton quotidien,
+zéro depuis. Les catégories `pov`, `coquin` et `statique` restent décrites
+plus bas pour comprendre ce qui est parti et parce que leur vocabulaire
+sert encore aux scènes dessinées des BD et des carrousels, mais la synchro
+retient tout post de ces catégories (sa déclinaison est mise en échec, rien
+n'est rendu ni publié) et le contrôle de l'atelier le refuse. Les
+animations déjà écrites pour les semaines suivantes reviennent à la routine
+par `hors_grille`, à réécrire en dilemmes ou en « Connais-tu ».
 
 ## Les catégories
 
 Chaque post porte une `categorie`, qui impose son gabarit.
 
 ### `pov` : animation avec les mascottes (gabarit `pov`)
+
+**Retirée de la grille le 16 octobre 2026 au soir** (voir « La semaine
+type ») : plus aucun POV, mini ni phrase à finir ne part, la synchro les
+retient. Ce qui suit reste pour mémoire, et pour le vocabulaire des scènes
+dessinées (BD, couvertures de carrousel).
 
 Humour de couple (« POV: he says he's not hungry »), moments
 tendres, et mini messages faits comme les petits chats d'Instagram (un
@@ -150,6 +172,9 @@ apart »). Chaque mécanique vient avec ses sujets dans la banque.
 
 ### `coquin` : l'animation coquine de la semaine (gabarit `pov`)
 
+**Retirée de la grille le 16 octobre 2026 au soir**, avec les autres
+animations des mascottes ; le vendredi soir est un reel de dilemmes.
+
 Toujours un clin d'œil, jamais rien de montré : la couette qui bouge, une
 chaussette ou un oreiller qui s'envole, des cœurs, des joues rouges, un clin
 d'œil. Aucun mot sur le corps, aucune nudité, rien qu'un ado ne puisse voir.
@@ -157,6 +182,10 @@ Instagram ne recommande pas aux non-abonnés ce qu'il juge suggestif : plus
 c'est appuyé, moins c'est vu.
 
 ### `statique` : reel statique (gabarit `pov`, un seul plan)
+
+**Retirée de la grille le 16 octobre 2026 au soir**, avec les autres
+animations des mascottes ; les midis du jeudi et du dimanche sont des reels
+de dilemmes.
 
 Les deux mascottes dans une pose tendre (câlin, banc au coucher du soleil,
 sous la couette, dans le canapé), une phrase courte qui s'écrit mot à mot
@@ -190,9 +219,34 @@ La vidéo ne donne jamais la réponse : c'est le couple qui rit.
 
 ### `tu-preferes` : Tu préfères (gabarit `tu-preferes`)
 
-Six dilemmes de couple, les deux choix aussi tentants l'un que l'autre,
-courts (30 signes visés, 45 au plus). Fin : « Did you pick the same?
-Comment your A and B! ». Renvoi vers le site possible, comme les jeux.
+Le format du compte depuis le 16 octobre 2026 : sept reels par semaine, un
+par jour (quatre midis, trois soirs). C'est le seul qui a marché sur les
+dix premiers jours : le reel « Date night edition » du 13 octobre 2026 a
+fait 30 000 vues quand tout le reste plafonnait au millier. Ce qui a joué,
+et qu'on garde : un jeu que tout le monde connaît déjà (would you rather,
+pas besoin d'expliquer la règle), une **édition nommée sur la couverture**
+qui promet un moment précis (« Date night edition »), six dilemmes auxquels
+un couple répond en une seconde, les deux choix aussi tentants l'un que
+l'autre, et une légende qui donne une raison de garder le reel (« Save this
+for your next date night »).
+
+Six dilemmes de couple, courts (30 signes visés, 45 au plus), cinq secondes
+chacun. L'étiquette (`etiquette`) est l'édition : le `theme` du sujet, en
+vingt-deux signes au plus (« Lazy Sunday edition », « Road trip edition »,
+« Bedtime edition »). L'accroche garde les mots que les gens cherchent
+(« Would you rather: date night? », « Would you rather: road trip? »), la
+consigne dit le nombre de dilemmes et les secondes, et la fin : « Did you
+pick the same? Comment your A and B! ». Les éditions de la banque alternent
+les moments à vivre à deux (date night, lazy Sunday, rainy day, weekend
+away, movie night...), les habitudes et les petits choix du quotidien
+(breakfast, bedtime, chores, phone, texting...) et, de temps en temps, un
+jeu pur (hard mode, impossible, silly, time travel). Légende : un détail
+vrai (« 6 dilemmas, 5 seconds each. ») puis un appel : « Save this for your
+next date night » ou « Save this for later » quand l'édition est un moment
+à vivre, « Comment your A and B » sinon, jamais le même appel deux jours de
+suite sur les dilemmes. Renvoi vers le site possible, comme les jeux.
+108 éditions dans la banque (`tu-preferes`), dont celles de Noël et du
+Nouvel An, réservées à leur date.
 
 ### `phrase` : phrase tendre (gabarit `citation`)
 
@@ -460,26 +514,39 @@ les mots que les gens tapent, et donner envie d'un geste précis.
 
 ## Les sujets
 
-`sujets.json` : 173 animations (95 d'humour, 47 tendres, 25 minis, 6
-phrases à finir, après l'ajout du 7 octobre 2026 ; le même jour, une
-quarantaine de scènes ont quitté le mur nu pour la rue, le café, la forêt,
-la plage, la voiture et le cinéma, et les gags à bulles ont été réécrits en
-situations), 15 coquines, 28
-statiques, 51 thèmes de « Connais-tu » (dont 8 « Who's more likely? » et 3
-éditions difficiles), 28 de « Tu préfères », 28 phrases, 16 carrousels
+`sujets.json` : 51 thèmes de « Connais-tu » (dont 8 « Who's more likely? »
+et 3 éditions difficiles), 108 éditions de « Tu préfères » (28 au départ,
+80 ajoutées le 16 octobre 2026 au soir pour sept reels par semaine : des
+moments à vivre à deux, des habitudes du quotidien, un peu de jeu pur), 28
+phrases, 173 animations, 15 coquines et 28 statiques qui ne servent plus
+depuis le 16 octobre 2026 au soir (gardées dans le fichier), 16 carrousels
 « He's a 10 but... » (12 octobre 2026), 63 histoires de bonhomme bâton
 (16 octobre 2026 : 27 le matin, trois par trame de rêve, puis 63 le soir
 même pour un reel par jour, sept par trame, les trames à tour de rôle,
 jamais le même décor d'ouverture deux jours de suite, le héros fille presque
-une fois sur deux, chacune avec sa musique), plus 18 sujets datés de Noël et
+une fois sur deux, chacune avec sa musique), plus 20 sujets datés de Noël et
 du Nouvel An (dont cinq bonhommes bâton, un par matin daté : le chiot de
 Noël, la bague de la veille de Noël, l'étoile de Noël, le nuage du
-31 décembre et l'envol du Nouvel An). La routine prend le premier sujet libre de la
+31 décembre et l'envol du Nouvel An ; et sept reels de dilemmes ou de
+« Connais-tu » qui réservent une édition de la banque à leur date :
+Christmas edition, Winter edition, Christmas gifts, Christmas night, New
+Year edition, New Year's Day, et les éditions de Noël et du Nouvel An des
+« Connais-tu »). La routine prend le premier sujet libre de la
 catégorie et écrit son id dans le champ `sujet` du post ; un sujet déjà
 utilisé dans `posts/` n'est jamais repris. Les sujets datés passent avant
 la banque, à leur date et à leur créneau.
 
 ## Ce qu'on regarde dans les statistiques
+
+Ce que les dix premiers jours ont appris (7 au 16 octobre 2026) : toutes
+les animations des mascottes sont restées sous le millier de vues, quel que
+soit le pilier, le décor ou l'heure ; le reel de dilemmes « Date night
+edition » a fait 30 000 vues. Un format que les gens connaissent déjà et
+auquel ils peuvent jouer tout de suite avec leur partenaire bat une
+animation originale qu'il faut regarder jusqu'au bout pour comprendre.
+C'est ce qui a fait la grille du 16 octobre au soir, et la règle pour la
+suite : on mesure par format, et c'est le format qui marche qu'on
+multiplie.
 
 Les relevés à J+7 de l'admin (`statistiques_j7` dans l'état lu par la
 routine) servent à deux choses :

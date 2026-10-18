@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "Quiz de saison • Gratuits • Seul(e) ou à deux",
+    "title": "Nos quiz spéciaux à faire à deux, selon la saison",
+    "titleHighlight": "quiz spéciaux",
+    "description": "Des quiz un peu fous, qu'on ne fait pas toute l'année : ceux d'Halloween maintenant, ceux de Noël bientôt. Ils se jouent seul(e), à deux sur un téléphone ou chacun sur le sien, et ils restent ici une fois la saison passée."
+  },
+  "enCeMoment": "En ce moment",
+  "horsSaison": "Toute l'année",
+  "jouer": "Faire le quiz",
+  "duoSeul": "À deux seulement",
+  "soloOuDuo": "Seul(e) ou à deux",
+  "distance": "Mode à distance",
+  "saisons": {
+    "halloween": {
+      "titre": "Spécial Halloween",
+      "intro": "Cinq quiz pour un soir d'Halloween à deux : un portrait de tueur, un chrono de survie, un risque de possession, un portrait de super-vilain et le duo de méchants que vous formez. Tout est pour rire, et tout se joue en cinq minutes."
+    },
+    "noel": {
+      "titre": "Spécial Noël",
+      "intro": "Les quiz de Noël arrivent en décembre : combien vous êtes prêts à dépenser l'un pour l'autre, qui offrira le cadeau le plus nul, et quelques autres surprises.",
+      "bientot": "Bientôt"
+    }
+  },
+  "quiz": {
+    "quizSerialKillerNom": "Avec quel serial killer es-tu compatible ?",
+    "quizSerialKillerTagline": "Quinze situations d'un soir d'Halloween, et le tueur célèbre qui te ressemble le plus, en version très grossie.",
+    "quizMortFilmHorreurNom": "Qui de nous deux meurt en premier dans un film d'horreur ?",
+    "quizMortFilmHorreurTagline": "Quinze situations, de l'arrivée au chalet au générique, un temps de survie en minutes, et le nom de la première victime quand vous jouez à deux.",
+    "quizPossessionNom": "Qui de nous deux pourrait se faire posséder ?",
+    "quizPossessionTagline": "Dix jours dans une maison dont personne ne veut raconter l'histoire, un risque de possession en pourcentage, et celui ou celle que les démons choisiraient.",
+    "quizSuperVilainNom": "À quel super-vilain ressembles-tu le plus ?",
+    "quizSuperVilainTagline": "Ton entrée à la fête, ton déguisement, tes sbires, ton rire : le super-vilain qui te ressemble, du Joker à Maléfique.",
+    "quizDuoVilainsNom": "Quel duo de super-vilains formez-vous ?",
+    "quizDuoVilainsTagline": "Le casse de la nuit d'Halloween : votre rôle à chacun, le cerveau, le chaos, la force, le charme, l'ombre ou le cœur, et le duo de méchants célèbre que vous formez."
+  },
+  "section1": {
+    "title": "Pourquoi des quiz de saison",
+    "p1": "Les quiz de cette page ne ressemblent pas à nos tests de couple. Ils ne mesurent rien de sérieux, ils ne donnent pas de conseil, et ils ne parlent pas de votre relation. Ce sont des jeux pour une soirée précise : un soir d'Halloween entre deux films d'horreur, une veillée de Noël en attendant les cadeaux.",
+    "p2": "Ils marchent parce qu'ils sont faits pour rire de soi et de l'autre. Découvrir que ton partenaire mourrait au bout de douze minutes dans un film d'horreur, ou que vous formez le duo Minus et Cortex, ça occupe une bonne partie de la soirée.",
+    "p3": "On les garde tous ici, saison après saison. Ceux de la saison en cours sont en haut de la page ; les autres restent jouables toute l'année, un peu plus bas."
+  },
+  "section2": {
+    "title": "Comment on y joue",
+    "p1": "Tous ces quiz se jouent de la même façon. Seul(e), tu réponds et tu découvres ton résultat. À deux, le premier répond à toute la série, passe le téléphone, et le second répond à son tour sans voir les réponses du premier : les deux résultats s'affichent à la fin, côte à côte, avec ce qui vous sépare.",
+    "p2": "Si vous n'êtes pas au même endroit, chaque quiz a un mode à distance : une personne crée la partie, l'autre rejoint avec le code ou le QR code, et chacun répond sur son téléphone. Vous voyez vos deux réponses après chaque question, et le résultat est le même des deux côtés.",
+    "p3": "Aucun compte à créer, rien à installer, et rien n'est enregistré : les réponses restent sur vos téléphones."
+  },
+  "section3": {
+    "title": "Et le reste de l'année",
+    "p1": "Quand la saison est passée, <a href=\"/jeux-de-couple/\">nos jeux de couple</a> prennent le relais : <a href=\"/tu-preferes-couple-quiz/\">les dilemmes « tu préfères »</a>, action ou vérité, le plateau, et une dizaine d'autres. Et pour ceux qui veulent une vraie réponse sur leur couple, <a href=\"/tester-son-couple/\">le test de couple</a> compare vos réponses sur ce qui compte."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Les quiz spéciaux sont-ils gratuits ?",
+    "a1": "Oui, tous, sans inscription et sans application à installer. Ils se jouent dans le navigateur de votre téléphone.",
+    "q2": "Faut-il être deux ?",
+    "a2": "Pas forcément. Quatre des cinq quiz d'Halloween se jouent seul(e) ou à deux. Seul le quiz du duo de super-vilains demande deux joueurs, puisqu'il compose un duo.",
+    "q3": "Que deviennent les quiz une fois la saison passée ?",
+    "a3": "Ils restent sur cette page, un peu plus bas, et sur leur propre adresse. On ne supprime rien : un quiz d'Halloween en plein mois de mars, ça se fait aussi.",
+    "q4": "Quand arrivent les quiz de Noël ?",
+    "a4": "En décembre. Au programme : combien vous êtes prêts à dépenser l'un pour l'autre, qui offrira le cadeau le plus nul, et quelques autres idées de fin d'année.",
+    "q5": "Peut-on jouer à distance ?",
+    "a5": "Oui, chaque quiz a un mode à distance. Une personne crée la partie, l'autre rejoint avec le code, et vous répondez chacun sur votre téléphone."
+  },
+  "jsonLd": {
+    "name": "Quiz spéciaux à faire en couple"
+  }
+}

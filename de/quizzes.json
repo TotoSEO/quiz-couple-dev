@@ -90,10 +90,10 @@
     "metaDescription": "Wer ist am ehesten...? Quiz mit 240+ Fragen für 2-8 Spieler. Stimmt ab, lacht und entdeckt, wer am lustigsten ist. Kostenlos!"
   },
   "questionsCouple": {
-    "title": "120 Fragen für Paare, die ihr euch stellen solltet | Kostenlos",
+    "title": "100+ Fragen für Paare",
     "shortTitle": "Fragen",
-    "description": "120 Fragen nach Themen sortiert, um sich besser kennenzulernen, die Komplizenschaft zu stärken und authentische Momente des Austauschs zu schaffen.",
-    "metaDescription": "120 Fragen für Paare in 5 Kategorien: Kennenlernen, Zukunft, Intimität, Spaß und tiefgründige Fragen. Kostenlos, ohne Anmeldung."
+    "description": "Über 100 Fragen nach Themen sortiert, zum zufälligen Ziehen, und alle unsere Listen für jede Situation.",
+    "metaDescription": "Über 100 Fragen für Paare, nach Themen sortiert, dazu alle unsere Listen: Beziehungsanfang, intime Fragen, Zukunft, Fragen an deinen Freund oder deine Freundin."
   },
   "testCoupleSain": {
     "title": "Gesunde Beziehung Test - Ist eure Beziehung solide?",
@@ -189,12 +189,6 @@
     "shortTitle": "Wahr oder Falsch",
     "description": "100 Wahr-oder-Falsch-Fragen über die Paarbeziehung: Mythen, Psychologie, überraschende Zahlen und weit verbreitete Irrtümer.",
     "metaDescription": "100 Wahr-oder-Falsch-Fragen über die Paarbeziehung: Mythen, Psychologie, überraschende Zahlen und weit verbreitete Irrtümer. Teste jetzt dein Wissen."
-  },
-  "activities": {
-    "title": "Paar-Aktivitäten in der Nähe: Date-Ideen finden",
-    "shortTitle": "Paar-Aktivitäten",
-    "description": "Finde Paar-Aktivitäten in deiner Nähe. Kostenloses geolokalisiertes Tool: filtere nach Budget, Atmosphäre und Entfernung für unvergessliche Unternehmungen zu zweit.",
-    "metaDescription": "Finde Paar-Aktivitäten in deiner Nähe. Kostenloses geolokalisiertes Tool: filtere nach Budget, Atmosphäre und Entfernung für unvergessliche Unternehmungen zu zweit."
   },
   "quizTentation": {
     "title": "Temptation Island Quiz: Würdest du widerstehen?",
@@ -457,5 +451,41 @@
     "shortTitle": "Test sexuelle Kompatibilität",
     "metaDescription": "Test zur sexuellen Kompatibilität für Paare: 20 Fragen zu Lust, Zärtlichkeit, Neuem und Rhythmus, mit einem Ergebnis pro Bereich. Kostenlos.",
     "description": "Zwanzig Fragen zu zweit über Lust, Zärtlichkeit und wie ihr darüber redet, um zu sehen, wo ihr euch trefft."
+  },
+  "speciauxCouple": {
+    "title": "Besondere Paar-Quiz: Weihnachten, Halloween…",
+    "shortTitle": "Besondere Quiz",
+    "metaDescription": "Die saisonalen Quiz für Paare. Zu Halloween: Welcher Serienmörder passt zu dir, wer stirbt zuerst im Horrorfilm, wer würde besessen werden, welcher Superschurke bist du. Kostenlos.",
+    "description": "Die etwas verrückten Quiz für Paare je nach Jahreszeit: jetzt Halloween, danach Weihnachten."
+  },
+  "quizSerialKiller": {
+    "title": "Quiz: Welcher Serienmörder passt zu dir? (allein oder zu zweit)",
+    "shortTitle": "Welcher Serienmörder passt zu dir",
+    "metaDescription": "Ein Halloween-Quiz: 15 Situationen (die Party, der Friedhof um Mitternacht, der Kommissar an der Tür) und der berühmte Serienkiller, der dir am meisten ähnelt. Allein oder zu zweit, kostenlos.",
+    "description": "Fünfzehn Situationen eines Halloween-Abends und der berühmte Killer, der dir am meisten ähnelt, stark vergrößert. Allein oder zu zweit."
+  },
+  "quizMortFilmHorreur": {
+    "title": "Wer von uns stirbt zuerst im Horrorfilm? Das Quiz",
+    "shortTitle": "Wer stirbt zuerst im Horrorfilm",
+    "metaDescription": "15 Horrorfilm-Situationen und ein Urteil in Minuten: wie lange du bis zum Abspann durchhältst, und wer von euch zuerst stirbt. Kostenlos, allein oder zu zweit.",
+    "description": "Fünfzehn Situationen, eine Überlebenszeit in Minuten, und der Name des ersten Opfers, wenn ihr zu zweit spielt."
+  },
+  "quizPossession": {
+    "title": "Wer von uns könnte besessen werden? Das Halloween-Quiz",
+    "shortTitle": "Wer könnte besessen werden",
+    "metaDescription": "15 Fragen und ein Besessenheitsrisiko in Prozent für jeden: Wer von euch öffnet den Dämonen die Tür? Ein kostenloses Halloween-Quiz, allein oder zu zweit.",
+    "description": "Fünfzehn Fragen, ein Besessenheitsrisiko in Prozent, und die Person, die die Dämonen zuerst wählen würden."
+  },
+  "quizSuperVilain": {
+    "title": "Quiz: Welchem Superschurken ähnelst du am meisten? (allein oder zu zweit)",
+    "shortTitle": "Welcher Superschurke bist du",
+    "metaDescription": "Dein Auftritt auf der Party, dein Kostüm, deine Handlanger, dein Lachen: 15 Fragen und der Superschurke, der dir ähnelt, vom Joker bis Maleficent. Ein kostenloses Halloween-Quiz, allein oder zu zweit.",
+    "description": "Fünfzehn Fragen in der Haut des Bösewichts an einem Halloween-Abend, und der Superschurke, der dir am meisten ähnelt."
+  },
+  "quizDuoVilains": {
+    "title": "Welches Superschurken-Duo seid ihr? Das Quiz für Paare",
+    "shortTitle": "Welches Superschurken-Duo seid ihr",
+    "metaDescription": "Zu zweit: der Coup der Halloween-Nacht in je 15 Fragen, eure Rolle im Duo (das Gehirn, das Chaos, die Kraft...) und das berühmte Schurken-Duo, das ihr bildet, vom Joker und Harley Quinn bis Bonnie und Clyde.",
+    "description": "Jeder antwortet für sich, und das Quiz verrät euch eure Rolle im Duo und das berühmte Schurken-Duo, das ihr bildet."
   }
 }

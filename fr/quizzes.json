@@ -96,10 +96,10 @@
     "metaDescription": "Qui est le plus romantique, le plus tête en l'air, le plus jaloux ? 240 questions à voter ensemble, en couple ou entre amis. Gratuit, sans inscription."
   },
   "questionsCouple": {
-    "title": "120 questions pour couple à se poser : les meilleures en 2026",
+    "title": "100+ questions à se poser en couple",
     "shortTitle": "Questions",
-    "description": "120 questions classées par thème pour mieux vous connaître, renforcer votre complicité et créer des moments d'échange authentiques.",
-    "metaDescription": "120 questions profondes et fun à se poser en couple. 5 thèmes pour mieux se connaître et créer de vrais moments d'échange à deux."
+    "description": "Plus de 100 questions classées par thème, à piocher au hasard, et toutes nos listes pour chaque situation.",
+    "metaDescription": "Plus de 100 questions à se poser en couple, classées par thème, et toutes nos listes : début de relation, questions intimes, avenir, pour son copain ou sa copine."
   },
   "testCoupleSain": {
     "title": "Test de couple sain gratuit : votre relation est-elle saine ?",
@@ -207,12 +207,6 @@
     "shortTitle": "Test Attachement",
     "description": "20 questions pour découvrir votre style d'attachement amoureux : sécure, anxieux, évitant ou désorganisé. Résultat immédiat.",
     "metaDescription": "Sécure, anxieux, évitant ou désorganisé ? Découvrez votre style d'attachement amoureux en 20 questions. Basé sur la théorie de Bowlby."
-  },
-  "activities": {
-    "title": "Activités en couple près de chez vous : trouvez une idée",
-    "shortTitle": "Activités en couple",
-    "description": "Trouvez des activités à faire en couple près de chez vous. Outil gratuit et géolocalisé : filtrez par budget, ambiance et distance pour des sorties à deux inoubliables.",
-    "metaDescription": "Trouvez des activités en couple près de chez vous ! Filtrez par budget, ambiance et distance. Outil géolocalisé, 100% gratuit."
   },
   "testInfidelite": {
     "title": "Test infidélité couple gratuit : les signes qui ne trompent pas",
@@ -469,5 +463,41 @@
     "shortTitle": "Test de compatibilité sexuelle",
     "metaDescription": "Test de compatibilité sexuelle à deux : 20 questions sur le désir, la tendresse, la nouveauté et le rythme, avec un score par dimension. Gratuit.",
     "description": "Vingt questions à deux sur le désir, la tendresse et la façon d'en parler, pour voir où vous vous rejoignez."
+  },
+  "speciauxCouple": {
+    "title": "Quiz spéciaux à faire en couple : Noël, Halloween…",
+    "shortTitle": "Quiz spéciaux",
+    "metaDescription": "Les quiz de saison à faire à deux. Pour Halloween : quel serial killer te correspond, qui meurt en premier dans un film d'horreur, qui pourrait se faire posséder, quel super-vilain es-tu. Gratuits.",
+    "description": "Les quiz un peu fous à faire à deux selon la saison : Halloween pour le moment, Noël ensuite."
+  },
+  "quizSerialKiller": {
+    "title": "Quiz : avec quel serial killer es-tu compatible ? (seul ou à deux)",
+    "shortTitle": "Quel serial killer te correspond",
+    "metaDescription": "Un quiz d'Halloween : 15 situations (la fête, le cimetière à minuit, l'inspecteur à la porte) et le serial killer célèbre qui te ressemble le plus. Seul(e) ou à deux, gratuit.",
+    "description": "Quinze situations d'un soir d'Halloween et le tueur célèbre qui te ressemble le plus, en version très grossie. À faire seul(e) ou à deux."
+  },
+  "quizMortFilmHorreur": {
+    "title": "Qui de nous deux meurt en premier dans un film d'horreur ? Le quiz",
+    "shortTitle": "Qui meurt en premier dans le film d'horreur",
+    "metaDescription": "15 situations de film d'horreur et un verdict en minutes : combien de temps tu tiens avant le générique, et qui de vous deux meurt en premier. Gratuit, seul(e) ou à deux.",
+    "description": "Quinze situations, un temps de survie en minutes, et le nom de la première victime quand vous jouez à deux."
+  },
+  "quizPossession": {
+    "title": "Qui de nous deux pourrait se faire posséder ? Le quiz d'Halloween",
+    "shortTitle": "Qui pourrait se faire posséder",
+    "metaDescription": "15 questions et un risque de possession en pourcentage pour chacun : qui de vous deux ouvre la porte aux démons ? Un quiz d'Halloween gratuit, seul(e) ou à deux.",
+    "description": "Quinze questions, un risque de possession en pourcentage, et celui ou celle que les démons choisiraient en premier."
+  },
+  "quizSuperVilain": {
+    "title": "Quiz : à quel super-vilain ressembles-tu le plus ? (seul ou à deux)",
+    "shortTitle": "Quel super-vilain es-tu",
+    "metaDescription": "Ton entrée à la fête, ton déguisement, tes sbires, ton rire : 15 questions et le super-vilain qui te ressemble, du Joker à Maléfique. Un quiz d'Halloween gratuit, seul(e) ou à deux.",
+    "description": "Quinze questions dans la peau du méchant un soir d'Halloween, et le super-vilain qui te ressemble le plus."
+  },
+  "quizDuoVilains": {
+    "title": "Quel duo de super-vilains formez-vous ? Le quiz à faire à deux",
+    "shortTitle": "Quel duo de super-vilains formez-vous",
+    "metaDescription": "À deux : le casse de la nuit d'Halloween en 15 questions chacun, votre rôle dans le duo (le cerveau, le chaos, la force...) et le duo de méchants célèbre que vous formez, du Joker et Harley Quinn à Bonnie et Clyde.",
+    "description": "Chacun répond de son côté, et le quiz vous donne votre rôle dans le duo et le duo de méchants célèbre que vous formez."
   }
 }

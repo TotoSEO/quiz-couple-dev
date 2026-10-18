@@ -40,8 +40,6 @@
     "categoryQuizzes": "Quiz de pareja",
     "categoryJeux": "Juegos para parejas",
     "categorySingles": "Tests para solteros",
-    "activities": "Actividades cerca",
-    "activitiesCourt": "Actividades",
     "contact": "Contacto",
     "testAttachement": "Test de apego",
     "testAttachementDesc": "Descubre tu estilo de apego",
@@ -105,7 +103,16 @@
     "testSignesChinois": "Compatibilidad signos chinos",
     "testSignesChinoisDesc": "Dos fechas, dos animales, un veredicto",
     "compteurCouple": "Contador de tiempo en pareja",
-    "compteurCoupleDesc": "Vuestros días juntos, fechas que celebrar"
+    "compteurCoupleDesc": "Vuestros días juntos, fechas que celebrar",
+    "speciauxCouple": "Quiz especiales",
+    "categorySpeciaux": "Quiz especiales",
+    "ongletSpeciaux": "Quiz de Halloween",
+    "deployerSpeciaux": "Ver todos los quiz de Halloween",
+    "quizSerialKiller": "Qué asesino en serie te corresponde",
+    "quizMortFilmHorreur": "Quién muere primero (película de terror)",
+    "quizPossession": "Quién podría ser poseído",
+    "quizSuperVilain": "Qué supervillano eres",
+    "quizDuoVilains": "Qué dúo de supervillanos"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",

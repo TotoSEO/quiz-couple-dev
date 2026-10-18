@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Halloween quiz • Solo or as a couple",
+    "title": "Which of us could get possessed?",
+    "titleHighlight": "get possessed",
+    "description": "Ten days in a cheap house whose story nobody wants to tell: the Ouija board in the attic, the mirror from the flea market, the cat hissing at the corner of the living room, the voice that knows your first name. The result is a possession risk as a percentage, with what protects you and what exposes you. As a couple, we find out which of you the demons would pick.",
+    "subtitle": "15 questions • 5 minutes • solo, as a couple on one phone or each on your own",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How the quiz works",
+    "intro": "In every possession movie, the victim has the same profile: curious, tired, a bit too comfortable with Ouija boards and flea-market finds. The quiz checks whether that's you.",
+    "p1": "The questions follow the ten days. For example: 'In the attic, under a sheet: a Ouija board, the glass already sitting on it.' You can suggest a game tonight, photograph it for your friends, leave it under the sheet or burn it in the garden. Each answer is worth zero to three risk points, and the sum gives a percentage.",
+    "p2": "Solo, you discover your risk, your verdict among five, and two lists: what protects you and what exposes you. As a couple, the first player answers, passes the phone, the second answers in turn, and the result compares your two risks: the one with the highest percentage gets possessed.",
+    "p3": "Remote mode exists too: one person creates the game, the other joins with the code, each of you answers on your own phone and you see both answers after each question."
+  },
+  "section2": {
+    "title": "The five verdicts",
+    "intro": "The percentage reads in five tiers, from the person nothing can reach to the one who'd better let someone know.",
+    "pillar1Title": "Under 20%: unpossessable",
+    "pillar1Text": "Doors locked, board refused, duvet up to the chin. Too much work for a demon.",
+    "pillar2Title": "20 to 40%: hard to possess",
+    "pillar2Text": "The right reflexes, but you can't help looking.",
+    "pillar3Title": "40 to 60%: possessable on a tired night",
+    "pillar3Text": "On a normal day, everything's fine. On an October night in an old house, that's debatable.",
+    "pillar4Title": "60 to 80%: the ideal target",
+    "pillar4Text": "You talk to mirrors and bring home objects without asking where they come from.",
+    "pillar5Title": "Over 80%: already possessed?",
+    "pillar5Text": "You open every door, you say yes to everything, and you find it funny."
+  },
+  "section3": {
+    "title": "Why it's funny as a couple",
+    "p1": "In a couple, there's almost always one person who wants to visit the abandoned house and another who waits in the car. The quiz puts numbers on it. And the most sceptical person, the one who says “ghosts don't exist”, is often the one with the highest risk, because they open every door without thinking.",
+    "p2": "If you like the format, <a href=\"/en/who-dies-first-in-a-horror-movie-quiz/\">the horror movie quiz</a> works on the same principle, in minutes of survival rather than percent. And to change register while staying in the mood, <a href=\"/en/which-supervillain-are-you-quiz/\">the supervillain you're most like</a> or <a href=\"/en/which-supervillain-duo-are-you-quiz/\">the villain duo you form</a> give you a portrait rather than a number.",
+    "p3": "All these quizzes are gathered on <a href=\"/en/special-couple-quizzes/\">our special quizzes page</a>, which changes with the season."
+  },
+  "section4": {
+    "title": "What you should know",
+    "p1": "It's a game. No question measures anything real, and the word “risk” is to be taken as in a Halloween movie. The quiz's only real advice is to sleep well in October.",
+    "p2": "Nothing is saved. The answers stay on your phone, and retaking the quiz changes the result if you change your mind about the Ouija board."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "How is the risk calculated?",
+    "faq1A": "Each answer is worth zero to three risk points. The sum of the fifteen questions is turned into a percentage: forty-five points make 100%, zero points make 0%. The verdict depends on the tier the percentage falls into.",
+    "faq2Q": "Can you play solo?",
+    "faq2A": "Yes. Solo, you get your risk, your verdict and the two lists of what protects you and what exposes you. As a couple, the quiz compares the two risks and names the one the demons would choose.",
+    "faq3Q": "Who gets possessed when you play as a couple?",
+    "faq3A": "The one with the highest percentage. In case of a tie, the quiz says so: the demon will have to choose.",
+    "faq4Q": "Can you play remotely?",
+    "faq4A": "Yes, from the names screen. One person creates the game, the other joins with the code or the QR code, and each of you answers on your own phone.",
+    "faq5Q": "Is it scary?",
+    "faq5A": "No. The questions are funny, and the worst that can happen is learning that your partner would talk to a statue in an abandoned church."
+  },
+  "jsonLd": {
+    "about": "Halloween quiz"
+  }
+}

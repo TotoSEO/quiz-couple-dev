@@ -90,10 +90,10 @@
     "metaDescription": "Quiz ¿Quién es más probable que...? con 240+ preguntas para 2-8 jugadores. Voten, ríanse y descubran quién es el más divertido. ¡Gratis!"
   },
   "questionsCouple": {
-    "title": "120 preguntas para parejas para haceros mutuamente | Gratis",
+    "title": "100+ preguntas para hacerse en pareja",
     "shortTitle": "Preguntas",
-    "description": "120 preguntas clasificadas por tema para conoceros mejor, fortalecer vuestra complicidad y crear momentos de intercambio auténtico.",
-    "metaDescription": "120 preguntas para parejas en 5 categorías: conocerse, proyectos, intimidad, diversión y preguntas profundas. Gratis, sin registro."
+    "description": "Más de 100 preguntas ordenadas por tema, para elegir al azar, y todas nuestras listas para cada situación.",
+    "metaDescription": "Más de 100 preguntas para hacerse en pareja, ordenadas por tema, y todas nuestras listas: inicio de relación, preguntas íntimas, futuro, para tu novio o tu novia."
   },
   "testCoupleSain": {
     "title": "Test de pareja sana: ¿vuestra relación es sólida?",
@@ -189,12 +189,6 @@
     "shortTitle": "Verdadero o Falso",
     "description": "100 preguntas de verdadero o falso sobre la pareja: mitos, psicología, cifras sorprendentes e ideas preconcebidas.",
     "metaDescription": "100 preguntas de verdadero o falso sobre la pareja: mitos, psicología, cifras sorprendentes e ideas preconcebidas. Pon a prueba tus conocimientos ahora."
-  },
-  "activities": {
-    "title": "Actividades en pareja cerca de mí, Ideas juntos",
-    "shortTitle": "Actividades en pareja",
-    "description": "Encuentra actividades en pareja cerca de ti. Herramienta gratuita y geolocalizada: filtra por presupuesto, ambiente y distancia para salidas inolvidables.",
-    "metaDescription": "Encuentra actividades en pareja cerca de ti. Herramienta gratuita y geolocalizada: filtra por presupuesto, ambiente y distancia para salidas inolvidables."
   },
   "quizTentation": {
     "title": "Quiz La Isla de las Tentaciones: ¿sobrevivirías?",
@@ -457,5 +451,41 @@
     "shortTitle": "Test de compatibilidad sexual",
     "metaDescription": "Test de compatibilidad sexual en pareja: 20 preguntas sobre deseo, ternura, novedades y ritmo, con una puntuación por dimensión. Gratis.",
     "description": "Veinte preguntas para dos sobre el deseo, la ternura y la forma de hablarlo, para ver dónde coincidís."
+  },
+  "speciauxCouple": {
+    "title": "Quiz especiales para hacer en pareja: Navidad, Halloween…",
+    "shortTitle": "Quiz especiales",
+    "metaDescription": "Los quiz de temporada para hacer en pareja. Para Halloween: qué asesino en serie te corresponde, quién muere primero en una película de terror, quién podría ser poseído, qué supervillano eres. Gratis.",
+    "description": "Los quiz un poco locos para hacer en pareja según la temporada: Halloween por ahora, Navidad después."
+  },
+  "quizSerialKiller": {
+    "title": "Quiz: ¿con qué asesino en serie eres compatible? (solo o en pareja)",
+    "shortTitle": "Qué asesino en serie te corresponde",
+    "metaDescription": "Un quiz de Halloween: 15 situaciones (la fiesta, el cementerio a medianoche, el inspector en la puerta) y el asesino en serie célebre que más se parece a ti. Solo/a o en pareja, gratis.",
+    "description": "Quince situaciones de una noche de Halloween y el asesino célebre que más se parece a ti, en versión muy exagerada. Solo/a o en pareja."
+  },
+  "quizMortFilmHorreur": {
+    "title": "¿Quién de los dos muere primero en una película de terror? El quiz",
+    "shortTitle": "Quién muere primero en la película de terror",
+    "metaDescription": "15 situaciones de película de terror y un veredicto en minutos: cuánto aguantas antes de los créditos, y quién de los dos muere primero. Gratis, solo/a o en pareja.",
+    "description": "Quince situaciones, un tiempo de supervivencia en minutos, y el nombre de la primera víctima cuando jugáis en pareja."
+  },
+  "quizPossession": {
+    "title": "¿Quién de los dos podría ser poseído? El quiz de Halloween",
+    "shortTitle": "Quién podría ser poseído",
+    "metaDescription": "15 preguntas y un riesgo de posesión en porcentaje para cada uno: ¿quién de los dos abre la puerta a los demonios? Un quiz de Halloween gratis, solo/a o en pareja.",
+    "description": "Quince preguntas, un riesgo de posesión en porcentaje, y a quién elegirían primero los demonios."
+  },
+  "quizSuperVilain": {
+    "title": "Quiz: ¿a qué supervillano te pareces más? (solo o en pareja)",
+    "shortTitle": "Qué supervillano eres",
+    "metaDescription": "Tu entrada en la fiesta, tu disfraz, tus secuaces, tu risa: 15 preguntas y el supervillano que se parece a ti, del Joker a Maléfica. Un quiz de Halloween gratis, solo/a o en pareja.",
+    "description": "Quince preguntas en la piel del malo una noche de Halloween, y el supervillano que más se parece a ti."
+  },
+  "quizDuoVilains": {
+    "title": "¿Qué dúo de supervillanos formáis? El quiz para hacer en pareja",
+    "shortTitle": "Qué dúo de supervillanos formáis",
+    "metaDescription": "En pareja: el golpe de la noche de Halloween en 15 preguntas cada uno, vuestro papel en el dúo (el cerebro, el caos, la fuerza...) y el dúo de malvados célebre que formáis, del Joker y Harley Quinn a Bonnie y Clyde.",
+    "description": "Cada uno responde por su lado, y el quiz os da vuestro papel en el dúo y el dúo de malvados célebre que formáis."
   }
 }

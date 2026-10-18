@@ -49,7 +49,9 @@ const jourIso = (d: Date) => d.toISOString().slice(0, 10);
 // datés (Noël, Nouvel An), qui vivent dans le dépôt : à ces deux dates près,
 // l'estimation est celle de la routine.
 const CATEGORIES_IDEE: Record<string, string[]> = {
-  en: ['pov', 'connais-tu', 'tu-preferes', 'statique', 'phrase', 'coquin', 'carrousel', 'bd', 'dix-mais', 'baton'],
+  // sans pov, statique ni coquin (animations des mascottes) depuis le
+  // 16 octobre 2026 au soir : retirées de la grille
+  en: ['connais-tu', 'tu-preferes', 'phrase', 'carrousel', 'bd', 'dix-mais', 'baton'],
   fr: ['mipaps-anime', 'mipaps-statique', 'mipaps-histoire', 'mipaps-post'],
 };
 const CRENEAUX = ['matin', 'midi', 'soir'];

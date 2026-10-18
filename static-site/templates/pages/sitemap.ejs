@@ -67,9 +67,9 @@ const testLinks = _versLiens(famillesNav.tests);
 const celibLinks = _versLiens(famillesNav.celib);
 const quizLinks = _versLiens(famillesNav.quiz);
 const jeuxLinks = _versLiens(['jeuxCouple'].concat(famillesNav.jeux));
+const speciauxLinks = _versLiens(['speciauxCouple'].concat(famillesNav.speciaux || []));
 const toolLinks = [
   { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
-  { routeKey: 'activities', labelKey: 'nav.activities' },
 ];
 const infoLinks = [
   { routeKey: 'about', labelKey: 'footer.about' },
@@ -84,6 +84,7 @@ const testLinksDispo = _dispo(testLinks);
 const quizLinksDispo = _dispo(quizLinks);
 const celibLinksDispo = _dispo(celibLinks);
 const jeuxLinksDispo = _dispo(jeuxLinks);
+const speciauxLinksDispo = _dispo(speciauxLinks);
 const toolLinksDispo = _dispo(toolLinks);
 %>
 
@@ -169,6 +170,22 @@ const toolLinksDispo = _dispo(toolLinks);
               <% } %>
             </ul>
           </div>
+
+          <% if (speciauxLinksDispo.length > 1) { %>
+          <div class="rounded-2xl border border-border bg-card p-6">
+            <h3 class="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+              <span class="w-8 h-8 rounded-full flex items-center justify-center text-sm" style="background: hsl(var(--speciaux) / 0.1)">
+                <svg class="w-4 h-4" style="color: hsl(var(--speciaux))" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L12 13.5 7.8 16l1.1-4.8L5.2 8l4.9-.4z"/></svg>
+              </span>
+              <%= t('common:nav.categorySpeciaux', 'Quiz spéciaux') %>
+            </h3>
+            <ul class="space-y-2">
+              <% for (const link of speciauxLinksDispo) { %>
+              <li><a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="text-sm text-muted-foreground hover:text-primary transition-colors no-underline"><%= t('common:' + link.labelKey, link.labelKey) %></a></li>
+              <% } %>
+            </ul>
+          </div>
+          <% } %>
 
           <div class="rounded-2xl border border-border bg-card p-6">
             <h3 class="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">

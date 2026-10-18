@@ -8,7 +8,6 @@
 --   • leads                 → capture e-mail e-book (double opt-in)
 --   • messages              → formulaire de contact
 --   • reviews               → avis clients (+ note agrégée / étoiles Google)
---   • activity_validations  → recherche d'activités
 --
 -- NE fait PLUS partie de la base (désormais servi depuis le repo) :
 --   • articles de blog (blog_articles, blog_article_translations)
@@ -55,24 +54,7 @@ CREATE INDEX idx_reviews_ip_address ON public.reviews(ip_address);
 CREATE INDEX idx_reviews_approved ON public.reviews(is_approved) WHERE is_approved = true;
 
 
--- ####################  2. RECHERCHE D'ACTIVITÉS  ###########################
-CREATE TABLE public.activity_validations (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  ip_address TEXT,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
-);
-
-ALTER TABLE public.activity_validations ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Allow read activity_validations"
-ON public.activity_validations FOR SELECT
-USING (true);
-
-CREATE INDEX idx_activity_validations_created_at
-ON public.activity_validations(created_at DESC);
-
-
--- ####################  3. LEADS (e-book, double opt-in)  ###################
+-- ####################  2. LEADS (e-book, double opt-in)  ###################
 CREATE TABLE public.leads (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   first_name TEXT NOT NULL,
@@ -98,7 +80,7 @@ CREATE INDEX idx_leads_subject ON public.leads(subject);
 CREATE INDEX idx_leads_verification_token ON public.leads(verification_token);
 
 
--- ####################  4. MESSAGES (formulaire de contact)  ################
+-- ####################  3. MESSAGES (formulaire de contact)  ################
 CREATE TABLE public.messages (
   id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
   last_name text NOT NULL,
@@ -125,7 +107,7 @@ CREATE INDEX idx_messages_status ON public.messages (status);
 CREATE INDEX idx_messages_created_at ON public.messages (created_at DESC);
 
 
--- ####################  5. CRON : nettoyage automatique  ####################
+-- ####################  4. CRON : nettoyage automatique  ####################
 CREATE EXTENSION IF NOT EXISTS pg_cron;
 
 -- Avis non approuvés de plus de 30 jours, tous les jours à 3h
@@ -153,7 +135,7 @@ SELECT cron.schedule(
 );
 
 
--- ####################  6. RÉINJECTION DES 11 VRAIS AVIS  ###################
+-- ####################  5. RÉINJECTION DES 11 VRAIS AVIS  ###################
 -- (les seuls avis récupérables ; ceux postés après le 28/02/2026 sont perdus)
 INSERT INTO public.reviews (id, author_name, rating, comment, ip_address, is_approved, created_at) VALUES
 ('27277bdb-2824-46e8-a31c-a74338574810', 'Louloudu77', 5, 'Trop génial on s''est bien amusé ! Merci <33', '92.184.140.122', true, '2026-01-24 14:16:52.374362+00'),
@@ -173,7 +155,7 @@ ON CONFLICT (id) DO NOTHING;
 -- ####################  VÉRIFICATION  ######################################
 SELECT table_name FROM information_schema.tables
 WHERE table_schema = 'public' ORDER BY table_name;
--- attendu : activity_validations, leads, messages, reviews
+-- attendu : leads, messages, reviews
 
 SELECT COUNT(*) AS avis, ROUND(AVG(rating), 1) AS note_moyenne
 FROM reviews WHERE is_approved = true;   -- attendu : 11 avis, ~4.9

@@ -6,12 +6,12 @@ import { publier } from '../publication.mjs';
 const T0 = new Date('2026-10-12T10:30:00Z'); // 12 h 30 à Paris
 const plus = (min) => new Date(T0.getTime() + min * 60000);
 
-const base = ({ actif = true, format = 'reel', publierA = plus(30), pause = false, recette, autres = [], creneau = 'matin', duree = 12, facebook } = {}) =>
+const base = ({ actif = true, format = 'reel', publierA = plus(30), pause = false, recette, autres = [], creneau = 'matin', duree = 12, facebook, categorie } = {}) =>
   new BaseMemoire({
     social_comptes: [{ id: 'c', langue: 'en', ig_user_id: '178', actif, ...(facebook ? { facebook: true, page_id: '99' } : {}) }],
     social_jetons: [{ compte_id: 'c', jeton: 'J' }],
     social_reglages: [{ cle: 'pause', valeur: pause }],
-    social_posts: [{ id: 'p', jour: '2026-10-12', creneau, format, statut: 'valide' }],
+    social_posts: [{ id: 'p', jour: '2026-10-12', creneau, format, statut: 'valide', ...(categorie ? { categorie } : {}) }],
     social_variantes: [
       {
         id: 'v',
@@ -219,6 +219,29 @@ test('créneau dépassé : les essais sont au maximum, la synchro ne retente pas
   assert.equal(v.essais, 3);
 });
 
+test('une animation des mascottes déjà rendue (catégorie retirée le 16 octobre 2026) ne part pas : retenue en échec, la synchro ne la retente pas', async () => {
+  const { MOTIF_RETRAIT } = await import('../lib/calendrier.mjs');
+  for (const categorie of ['pov', 'coquin', 'statique']) {
+    const b = base({ publierA: plus(-5), categorie });
+    const ig = faux();
+    const r = await publier(b, { maintenant: T0, instagramPour: () => ig });
+    assert.equal(ig.appels.length, 0, categorie);
+    assert.equal(r.retenues, 1);
+    assert.equal(r.publies, 0);
+    const v = b.tables.social_variantes[0];
+    assert.equal(v.statut, 'echec');
+    assert.equal(v.erreur, MOTIF_RETRAIT);
+    assert.equal(v.essais, 3);
+    assert.ok(b.tables.social_journal.some((j) => j.niveau === 'alerte' && /retiré de la grille, non publié/.test(j.message)), categorie);
+  }
+  // un reel de dilemmes au même instant part normalement
+  const b = base({ publierA: plus(-5), categorie: 'tu-preferes' });
+  const ig = faux();
+  const r = await publier(b, { maintenant: T0, instagramPour: () => ig });
+  assert.equal(r.retenues, 0);
+  assert.ok(ig.appels.length > 0);
+});
+
 test('créneau dépassé de plus de 90 minutes : pas de publication', async () => {
   const b = base({ publierA: plus(-120) });
   const ig = faux();
@@ -334,22 +357,23 @@ test("pas de story pour un reel de midi, ni pour un reel de plus de 60 s", async
 });
 
 test("reel : sans ambiance dans la recette, la catégorie du post choisit les mots de la recherche", async () => {
-  const b = base({ recette: { gabarit: 'pov' } });
-  b.tables.social_posts[0].categorie = 'pov';
+  // (une phrase tendre : les animations, catégorie pov, ne partent plus depuis le 16 octobre 2026)
+  const b = base({ recette: { gabarit: 'citation' } });
+  b.tables.social_posts[0].categorie = 'phrase';
   const demandes = [];
   const ig = faux(['FINISHED'], { sons: async (o) => { demandes.push(o.recherche || ''); return TENDANCES; } });
   await publier(b, { maintenant: T0, instagramPour: () => ig });
   assert.deepEqual(demandes.length, 1);
-  assert.ok(['funny upbeat', 'happy whistle', 'cute ukulele'].includes(demandes[0]), demandes[0]);
+  assert.ok(['soft love piano', 'sweet romantic', 'romantic acoustic', 'warm acoustic guitar'].includes(demandes[0]), demandes[0]);
   const son = b.tables.social_variantes[0].recette.son;
-  assert.equal(son.ambiance, 'drole');
+  assert.equal(son.ambiance, 'tendre');
   assert.equal(son.recherche, demandes[0]);
   assert.ok(['S1', 'S2'].includes(son.id));
 });
 
 test("reel : l'ambiance écrite dans la recette l'emporte sur la catégorie", async () => {
-  const b = base({ recette: { gabarit: 'pov', son: { ambiance: 'triste' } } });
-  b.tables.social_posts[0].categorie = 'pov';
+  const b = base({ recette: { gabarit: 'citation', son: { ambiance: 'triste' } } });
+  b.tables.social_posts[0].categorie = 'phrase';
   const demandes = [];
   const ig = faux(['FINISHED'], { sons: async (o) => { demandes.push(o.recherche || ''); return TENDANCES; } });
   await publier(b, { maintenant: T0, instagramPour: () => ig });

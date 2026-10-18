@@ -1,178 +1,37 @@
 {
   "hero": {
-    "title": "120 domande di coppia da farsi a vicenda",
-    "description": "Domande classificate per tema per conoscervi meglio, rafforzare la vostra complicità e creare momenti di scambio autentico.",
-    "titleHighlight": "120 domande",
-    "badge": "120 domande • Gratuito"
+    "title": "100+ domande da farsi in coppia",
+    "titleHighlight": "100+ domande",
+    "description": "Una domanda a caso per cominciare subito, 120 domande divise per tema qui sotto e tutte le nostre liste per i momenti più precisi: inizio di una relazione, domande intime, il futuro, a distanza...",
+    "badge": "120 domande • Gratis"
   },
-  "random": {
-    "button": "Domanda casuale"
+  "listes": {
+    "pastille": "💬 Le nostre liste",
+    "titre": "Tutte le nostre liste di domande",
+    "sousTitre": "Ogni lista corrisponde a una situazione, con le sue domande e qualche consiglio per farle al momento giusto.",
+    "bouton": "Vedi le domande",
+    "minutes": "{n} min di lettura",
+    "lu": "Letto {n} volte",
+    "tags": {
+      "questions-pour-mieux-se-connaitre-en-couple": "Conoscersi meglio",
+      "questions-debut-de-relation": "Inizio relazione",
+      "questions-intimes-couple": "Intime",
+      "questions-avenir-couple": "Futuro",
+      "questions-couple-telephone-message": "A distanza",
+      "36-questions-pour-tomber-amoureux": "Innamorarsi",
+      "questions-a-poser-a-son-copain": "Per il tuo ragazzo",
+      "questions-a-poser-a-sa-copine": "Per la tua ragazza",
+      "questions-a-poser-a-son-crush": "Per il tuo crush",
+      "questions-a-poser-a-une-fille": "Per una ragazza"
+    }
   },
-  "seo": {
-    "s1": {
-      "title": "Perché farsi domande in coppia?",
-      "p1": "La comunicazione è il pilastro di una relazione appagante. Farsi domande permette di mantenere una connessione autentica e di evitare la routine che a volte si instaura nelle coppie. Anche dopo anni insieme, ci sono sempre cose nuove da scoprire sull'altro.",
-      "p2": "Studi di psicologia relazionale dimostrano che le coppie che si confrontano regolarmente sulle proprie emozioni, desideri e progetti sviluppano una migliore comprensione reciproca. Questi scambi rafforzano la complicità, creano ricordi condivisi e permettono di capire meglio i bisogni, i sogni e le preoccupazioni del proprio partner.",
-      "p3": "Fare domande al proprio partner è anche un modo per mostrare interesse genuino al di là della quotidianità. È un atto di ascolto attivo che nutre la fiducia e l'intimità emotiva. Che siate all'inizio della relazione o insieme da tempo, questi momenti di scambio sono essenziali per mantenere viva la vostra coppia."
-    },
-    "s2": {
-      "title": "Le 5 categorie di domande per coppie",
-      "intro": "Le nostre 120 domande sono suddivise in 5 tematiche complementari, pensate per coprire tutti gli aspetti della vostra relazione. Ogni categoria risponde a un bisogno specifico e permette di esplorare una sfaccettatura diversa della vostra coppia.",
-      "tableHeaders": {
-        "category": "Categoria",
-        "goal": "Obiettivo",
-        "example": "Esempio di domanda",
-        "count": "Quantità"
-      },
-      "rows": [
-        {
-          "cat": "Conoscersi",
-          "goal": "Approfondire la conoscenza reciproca oltre l'ovvio",
-          "example": "Quale decisione passata ti ha cambiato di più?",
-          "count": "24"
-        },
-        {
-          "cat": "Progetti futuri",
-          "goal": "Allineare le visioni e costruire insieme",
-          "example": "Dove ti vedi tra 5 anni?",
-          "count": "24"
-        },
-        {
-          "cat": "Intimità",
-          "goal": "Rafforzare il legame emotivo e affettivo",
-          "example": "Cosa ti fa sentire più amato/a?",
-          "count": "24"
-        },
-        {
-          "cat": "Divertimento",
-          "goal": "Portare leggerezza e risate nella vostra relazione",
-          "example": "Se la nostra coppia fosse un film, quale sarebbe il titolo?",
-          "count": "24"
-        },
-        {
-          "cat": "Domande profonde",
-          "goal": "Esplorare valori, paure e filosofia di vita",
-          "example": "Cosa dà senso alla tua vita?",
-          "count": "24"
-        }
-      ],
-      "outro": "Questa diversità tematica vi permette di variare gli scambi in base al vostro umore: una conversazione leggera dopo cena, una discussione profonda durante una passeggiata, o un momento di complicità intima prima di dormire."
-    },
-    "s3": {
-      "title": "Quando usare queste domande di coppia?",
-      "intro": "Non esiste un momento sbagliato. Semplicemente, alcune situazioni si prestano più di altre.",
-      "items": [
-        {
-          "title": "All'inizio di una storia",
-          "desc": "Nei primi mesi si imparano soprattutto dei dati: il lavoro, la famiglia, i gusti. Queste domande fanno guadagnare tempo su quello che viene dopo, su come funziona l'altro quando è stanco, seccato o contento."
-        },
-        {
-          "title": "Dopo diversi anni insieme",
-          "desc": "La curiosità si spegne perché si crede di aver visto tutto. Quasi sempre è falso: le risposte di qualcuno a trent'anni non sono quelle di venticinque. Per misurare la distanza, si può anche verificare quanto <a href=\"/it/test-punti-comuni-coppia/\">avete ancora in comune</a>."
-        },
-        {
-          "title": "Quando ci si mettono i chilometri",
-          "desc": "La maggior parte delle <a href=\"/it/quiz-coppia-distanza/\">relazioni a distanza</a> muore di una telefonata che non racconta più niente: la giornata, il tempo, buonanotte. Una domanda per chiamata basta a rompere quel meccanismo."
-        },
-        {
-          "title": "Una sera senza idee",
-          "desc": "Meglio di uno schermo a testa. Tre domande e un bicchiere riempiono una serata. Se preferite qualcosa di più mosso, ci sono anche <a href=\"/it/giochi-di-coppia/\">giochi da fare in due</a>."
-        },
-        {
-          "title": "Quando qualcosa non torna",
-          "desc": "A una domanda aperta si risponde più facilmente che a un rimprovero. E a volte ci si chiede soprattutto se si è ancora lì <a href=\"/it/test-amore-o-abitudine/\">per amore o per abitudine</a>, che è una domanda a sé."
-        }
-      ]
-    },
-    "s4": {
-      "title": "Come usare bene queste domande? I nostri consigli",
-      "intro": "Poche regole semplici fanno la differenza tra uno scambio e un interrogatorio.",
-      "tips": [
-        {
-          "title": "Da tre a cinque domande, non di più",
-          "desc": "Oltre, si risponde in fretta per finire. Meglio fermarsi su una risposta che apre qualcosa che incatenarne quindici."
-        },
-        {
-          "title": "Ascoltare invece di preparare la prossima",
-          "desc": "Il riflesso è scegliere la domanda successiva mentre l'altro parla. Meglio rilanciare: «e in quel momento cosa hai provato?»"
-        },
-        {
-          "title": "Accettare che se ne salti qualcuna",
-          "desc": "Se una domanda mette a disagio, si passa, senza commenti. Insistere trasforma il gioco in un esame."
-        },
-        {
-          "title": "Rispondere anche voi",
-          "desc": "Chi fa tutte le domande non si espone mai. Lo scambio esiste solo se ci passano entrambi."
-        }
-      ]
-    },
-    "s5": {
-      "title": "A chi si rivolgono queste domande?",
-      "p1": "Queste 120 domande non si rivolgono a un tipo di coppia in particolare.",
-      "audiences": [
-        {
-          "title": "Coppie recenti",
-          "desc": "Accelerano una fase che di solito richiede mesi."
-        },
-        {
-          "title": "Coppie di lunga data",
-          "desc": "Riaprono una curiosità che la routine aveva chiuso."
-        },
-        {
-          "title": "Coppie a distanza",
-          "desc": "Riempiono telefonate che giravano a vuoto."
-        },
-        {
-          "title": "Coppie che tornano a parlarsi",
-          "desc": "Dopo un periodo difficile, danno un argomento che non sia il conflitto stesso."
-        }
-      ],
-      "outro": "E se la domanda di fondo non è più la curiosità ma la solidità del legame, la si guarda in faccia: si può verificare cosa rende <a href=\"/it/test-relazione-sana/\">una relazione sana</a>, o ripartire dalle venti domande con punteggio di un <a href=\"/it/test-compatibilita-coppia/\">test di coppia</a>."
-    },
-    "s6": {
-      "title": "I benefici dimostrati della comunicazione di coppia",
-      "p1": "La ricerca in psicologia conferma ciò che molte coppie intuiscono: comunicare regolarmente e in profondità è il miglior indicatore di longevità di una relazione. Le coppie che mantengono rituali di confronto riportano una soddisfazione relazionale significativamente più alta.",
-      "p2": "I benefici concreti includono una migliore gestione dei conflitti (perché si comprendono meglio le reazioni dell'altro), un'intimità emotiva rafforzata, una maggiore capacità di superare insieme le sfide, e semplicemente più momenti di gioia condivisa.",
-      "p3": "Le nostre 120 domande sono pensate come uno strumento pratico per integrare questi momenti di scambio nella vostra quotidianità, senza pressione né formalismo. Scegliete una domanda a caso, lanciate l'argomento, e lasciate che la magia della conversazione operi."
-    },
-    "faqTitle": "Domande frequenti sulle domande di coppia",
-    "faq": [
-      {
-        "q": "Quante domande fare di fila?",
-        "a": "Consigliamo 3-5 domande per sessione per mantenere lo scambio naturale. L'obiettivo è creare un vero dialogo, non un questionario."
-      },
-      {
-        "q": "È adatto a tutte le coppie?",
-        "a": "Sì, queste domande sono pensate per tutte le coppie, insieme da settimane o da anni. Le 5 categorie permettono di scegliere il livello di profondità adatto alla vostra situazione."
-      },
-      {
-        "q": "Si possono usare queste domande a distanza?",
-        "a": "Assolutamente! Ideali per le coppie a distanza. Potete farle durante una videochiamata, via messaggio, o inviarvi una domanda al giorno per mantenere la connessione."
-      },
-      {
-        "q": "Cosa fare se una domanda mette a disagio?",
-        "a": "Passate semplicemente ad un'altra domanda senza pressione. Rispettare i limiti dell'altro è essenziale per mantenere un clima di fiducia."
-      },
-      {
-        "q": "Bisogna rispondere a tutte le domande?",
-        "a": "No, scegliete quelle che vi parlano e corrispondono al momento. Ciò che conta è la qualità dello scambio, non la quantità di domande."
-      },
-      {
-        "q": "Con quale frequenza usare queste domande?",
-        "a": "Non c'è una regola fissa. Alcune coppie preferiscono una domanda al giorno, altre una sessione di 5 domande nel weekend. Trovate il ritmo che fa per voi."
-      },
-      {
-        "q": "Queste domande possono sostituire la terapia di coppia?",
-        "a": "No, sono uno strumento di comunicazione complementare. In caso di difficoltà serie, consigliamo di consultare un professionista. Le nostre domande possono però essere un ottimo complemento."
-      }
-    ]
-  },
-  "conclusion": "Prendetene tre stasera, non trenta. Una buona risposta vale più di un elenco spuntato.",
-  "scrollTop": "Iniziare con una domanda casuale",
+  "liste_titre": "Le 120 domande, divise per tema",
+  "liste_intro": "Ecco l'elenco completo. Ogni tema conta ventiquattro domande, da leggere in ordine o da pescare a caso.",
   "liste": {
     "connaissance": {
       "titre": "Domande per conoscervi meglio",
-      "intro": "Queste vanno sotto l'evidente. <a href=\"/it/blog/domande-per-conoscersi-meglio/\">Crediamo di conoscere qualcuno perché ne conosciamo le abitudini</a>; queste ventiquattro domande si occupano di ciò che le ha costruite.",
+      "court": "Conoscersi",
+      "intro": "Domande su ciò che vi ha resi quello che siete: l'infanzia, la famiglia, le scelte che hanno contato. Anche dopo anni insieme, spesso arriva una risposta che non vi aspettavate!",
       "questions": [
         "Quale decisione del tuo passato ti ha cambiato di più, e te ne rendevi conto sul momento?",
         "Cosa ti hanno trasmesso i tuoi genitori senza mai dirtelo apertamente?",
@@ -202,7 +61,8 @@
     },
     "futur": {
       "titre": "Domande sui vostri progetti e sul vostro futuro",
-      "intro": "Le coppie raramente si lasciano per un disaccordo di fondo; si lasciano perché quel disaccordo non è mai stato messo in parole. Queste domande lo mettono, finché c'è ancora tempo per parlarne.",
+      "court": "Futuro",
+      "intro": "Dove vivere, i soldi, il lavoro, figli o no... Sono argomenti che si rimandano, quando invece è molto più facile parlarne finché non è ancora deciso niente.",
       "questions": [
         "Com'è una giornata normale della nostra vita fra cinque anni, nella tua testa?",
         "Qual è l'unica cosa che non vuoi assolutamente veda accadere alla nostra storia?",
@@ -232,7 +92,8 @@
     },
     "intime": {
       "titre": "Domande sull'intimità e sui sentimenti",
-      "intro": "L'intimità non si limita al corpo. Queste domande riguardano ciò che vi fa sentire vicini, o no, e ciò che si dice raramente ad alta voce.",
+      "court": "Intimità",
+      "intro": "Qui si parla di quello che vi avvicina: i gesti, le parole, quello che a volte manca. Niente di volgare, sono soprattutto domande su ciò che provate.",
       "questions": [
         "Cosa ti fa sentire più amato nel quotidiano?",
         "In quale momento ti sei sentito più vicino a me?",
@@ -262,7 +123,8 @@
     },
     "fun": {
       "titre": "Domande divertenti e leggere",
-      "intro": "Non tutte le conversazioni devono essere profonde. Queste ventiquattro servono a passare una bella serata, in auto, a tavola o quando a nessuno viene più in mente niente.",
+      "court": "Divertenti",
+      "intro": "Domande per ridere un po', in macchina, a tavola o una sera in cui a nessuno viene in mente niente. Funzionano benissimo anche con gli amici.",
       "questions": [
         "Se noi due fossimo un film, che titolo e che locandina avremmo?",
         "Qual è la cosa più ridicola per cui abbiamo litigato?",
@@ -292,7 +154,8 @@
     },
     "profond": {
       "titre": "Domande profonde sui valori e sulla vita",
-      "intro": "Queste chiedono un po' di calma e un po' di tempo. Riguardano ciò che vi guida, ed è spesso lì che emergono le differenze vere.",
+      "court": "Profonde",
+      "intro": "Domande su ciò che conta per voi nella vita. Chiedono un po' di calma, ed è spesso lì che vengono fuori le vere differenze.",
       "questions": [
         "Cosa dà senso alla tua vita in questo momento?",
         "Da cosa faresti più fatica a riprenderti?",
@@ -321,6 +184,194 @@
       ]
     }
   },
-  "liste_titre": "Le 120 domande, divise per tema",
-  "liste_intro": "Ecco l'elenco completo. Ogni tema conta ventiquattro domande, da leggere in ordine o da pescare a caso."
+  "situations": {
+    "titre": "Quali domande farsi in coppia, a seconda della situazione",
+    "intro": "Una domanda che funziona benissimo al terzo appuntamento può cadere nel vuoto dopo cinque anni di convivenza, e vale anche il contrario. Ecco le situazioni che tornano più spesso, con qualche esempio per ciascuna e la lista completa se ne volete di più.",
+    "items": [
+      {
+        "article": "questions-pour-mieux-se-connaitre-en-couple",
+        "titre": "Per conoscervi meglio, anche dopo anni",
+        "texte": "Dopo un po' si conoscono a memoria le abitudini dell'altro: come prende il caffè, le sue serie, come carica la lavastoviglie. Invece spesso si sa molto meno di <a href=\"/it/blog/domande-per-conoscersi-meglio/\">quello che l'ha formato, della sua famiglia o di quello che gli passa per la testa in questo periodo</a>. Per esempio:",
+        "exemples": [
+          "Quale abitudine della tua famiglia hai riprodotto senza accorgertene?",
+          "Cosa vorresti che notassi più spesso?",
+          "Se la nostra storia fosse un libro, a quale capitolo saremmo?"
+        ]
+      },
+      {
+        "article": "questions-debut-de-relation",
+        "titre": "All'inizio di una relazione",
+        "texte": "Le prime settimane si parla soprattutto di fatti: il lavoro, la città, gli amici. È normale. Ma ci sono cose che conviene sapere abbastanza presto, come <a href=\"/it/blog/domande-inizio-relazione/\">il modo in cui l'altro reagisce a una critica o quello che si aspetta da una storia</a>, senza che diventi un questionario. Qualcuna per cominciare:",
+        "exemples": [
+          "Qual è il tuo ritmo naturale: più uscite o più tana?",
+          "Cosa non indovinerei mai di te?",
+          "Cos'è un bel gesto, per te: le parole, il tempo, le attenzioni?"
+        ]
+      },
+      {
+        "article": "questions-intimes-couple",
+        "titre": "Domande intime",
+        "texte": "Non sono per forza domande sul sesso. Quasi tutte parlano di quello che vi avvicina: quando l'altro si sente amato, il gesto che gli fa effetto, quello che non osa chiedere. Le abbiamo ordinate <a href=\"/it/blog/domande-intime-di-coppia/\">partendo dalla tenerezza per arrivare piano piano al desiderio</a>, così ognuno si ferma dove vuole. Per esempio:",
+        "exemples": [
+          "Quando ti senti più amato, concretamente?",
+          "Qual è il gesto banale che faccio e che ti fa effetto?",
+          "Cosa vorresti che facessimo più spesso, senza osare chiederlo?"
+        ]
+      },
+      {
+        "article": "questions-avenir-couple",
+        "titre": "Sul futuro e le grandi decisioni",
+        "texte": "Andare a vivere insieme, sposarsi o no, avere figli, mettere i soldi in comune... Sono argomenti che si evitano spesso per paura di non essere d'accordo. E proprio per questo è molto più facile parlarne <a href=\"/it/blog/domande-sul-futuro-di-coppia/\">prima di prendere una grande decisione</a> che dopo. Tre esempi:",
+        "exemples": [
+          "Città o periferia, affitto o acquisto: qual è il tuo scenario ideale?",
+          "Un figlio: è un progetto con una data, un desiderio vago o una domanda aperta?",
+          "Conto comune, conti separati o misto: il tuo modello, e perché?"
+        ]
+      },
+      {
+        "article": "questions-couple-telephone-message",
+        "titre": "A distanza, al telefono o per messaggio",
+        "texte": "Quando ci si vede poco, le chiamate finiscono per somigliarsi tutte: la giornata, la stanchezza, buonanotte. Basta una domanda un po' diversa per rimettere in moto la conversazione, e alcune funzionano addirittura meglio <a href=\"/it/blog/domande-di-coppia-per-messaggio/\">per messaggio o al telefono</a> che di persona. Se volete capire a che punto siete, potete anche <a href=\"/it/quiz-coppia-distanza/\">fare il punto su una relazione a distanza</a>. Per esempio:",
+        "exemples": [
+          "Cosa hai pensato oggi senza dirlo a nessuno?",
+          "Cosa guardiamo, ciascuno a casa sua, nello stesso momento?",
+          "Cosa facciamo, ora per ora, il primo giorno del ritrovo?"
+        ]
+      },
+      {
+        "article": "36-questions-pour-tomber-amoureux",
+        "titre": "Le 36 domande per innamorarsi",
+        "texte": "Questa lista viene da uno studio di psicologia condotto da Arthur Aron nel 1997: due sconosciuti si fanno 36 domande sempre più personali e poi si guardano negli occhi per quattro minuti. Anche tante coppie lo provano, solo per vedere cosa succede. Abbiamo tradotto <a href=\"/it/blog/36-domande-per-innamorarsi/\">le 36 domande dell'esperimento di Aron</a>, con qualche consiglio su come farle. Per esempio:",
+        "exemples": [
+          "Come sarebbe per te una giornata perfetta?",
+          "Se una sfera di cristallo potesse rivelarti una verità su di te, sulla tua vita o sul futuro, cosa vorresti sapere?",
+          "La tua casa va a fuoco, i tuoi cari e i tuoi animali sono salvi: puoi salvare UN solo oggetto. Quale e perché?"
+        ]
+      },
+      {
+        "article": "questions-a-poser-a-son-copain",
+        "titre": "Da fare al tuo ragazzo",
+        "texte": "Ci chiedete spesso domande da fare al proprio ragazzo, soprattutto quando non è un gran chiacchierone. Ne abbiamo raccolte cento per <a href=\"/it/blog/domande-da-fare-al-tuo-ragazzo/\">farlo parlare un po' più del solito</a>, dalla più leggera alla più seria. Per esempio:",
+        "exemples": [
+          "Cosa vorresti che ti chiedessero più spesso?",
+          "Cosa facevamo all'inizio che dovremmo rifare?",
+          "Quanto sopravvivresti in un film horror, sinceramente?"
+        ]
+      },
+      {
+        "article": "questions-a-poser-a-sa-copine",
+        "titre": "Da fare alla tua ragazza",
+        "texte": "E nell'altro senso, abbiamo scritto 75 domande da fare alla propria ragazza. Servono soprattutto a <a href=\"/it/blog/domande-da-fare-alla-tua-ragazza/\">interessarsi a quello che sta vivendo adesso</a>, e non solo a quello che le piace. Qualche esempio:",
+        "exemples": [
+          "Cosa ti manca in questo periodo, senza che tu ne parli?",
+          "Qual è il tuo posto rifugio, quello dove vai con la testa?",
+          "Se la nostra coppia fosse una serie, quale sarebbe?"
+        ]
+      },
+      {
+        "article": "questions-a-poser-a-son-crush",
+        "titre": "Prima di essere una coppia: al tuo crush o a una ragazza che stai conoscendo",
+        "texte": "Non tutti cercano domande di coppia. Quando si è ancora nella fase dei messaggi, funzionano meglio domande leggere, facili da mandare e che fanno venire voglia di rispondere. Abbiamo una lista per <a href=\"/it/blog/domande-da-fare-al-tuo-crush/\">far durare la conversazione con il tuo crush</a> e un'altra per <a href=\"/it/blog/domande-da-fare-a-una-ragazza/\">conoscere una ragazza</a> senza che sembri un colloquio di lavoro. Per esempio:",
+        "exemples": [
+          "Sei più da vocale di quattro minuti o da muro di testo?",
+          "Qual è la tua domenica perfetta, ora per ora?",
+          "Quale angolo della tua città mostreresti per primo a qualcuno?"
+        ]
+      }
+    ]
+  },
+  "jeux": {
+    "titre": "E se preferite giocare",
+    "intro": "Alcune domande funzionano molto meglio sotto forma di gioco, perché c'è una regola e spesso un risultato alla fine. Ecco i giochi del sito che si basano sulle domande:",
+    "bouton": "Gioca",
+    "items": [
+      {
+        "route": "quizRencontre",
+        "texte": "Domande per un primo o un secondo appuntamento, da pescare una alla volta sul telefono."
+      },
+      {
+        "route": "quizKnowledge",
+        "texte": "Ognuno risponde a domande sull'altro, e si conta chi lo conosce meglio."
+      },
+      {
+        "route": "quizTuPreferes",
+        "texte": "Due scelte ogni volta, e si vede se siete d'accordo."
+      },
+      {
+        "route": "jeuJamais",
+        "texte": "«Non ho mai...», e ognuno dice se l'ha già fatto. Spesso vengono fuori vecchie storie."
+      },
+      {
+        "route": "jeuActionVerite",
+        "texte": "La versione di coppia del gioco, con verità da chiedere e obblighi da fare."
+      },
+      {
+        "route": "jeuPhrases",
+        "texte": "Frasi da finire ognuno per conto suo, poi si confrontano."
+      },
+      {
+        "route": "jeuDilemmes",
+        "texte": "Scelte impossibili da fare in due, che spesso finiscono in un dibattito."
+      },
+      {
+        "route": "quizCoquin",
+        "texte": "Domande più piccanti, quando l'atmosfera è quella giusta."
+      }
+    ]
+  },
+  "conseils": {
+    "titre": "Come fare queste domande senza che sembri un interrogatorio",
+    "intro": "Non serve un metodo complicato, ma qualche dettaglio fa la differenza tra una conversazione vera e un questionario.",
+    "items": [
+      {
+        "titre": "Poche domande alla volta:",
+        "texte": "Tre o quattro in una serata bastano e avanzano. Se una risposta apre un argomento, restateci invece di passare alla prossima."
+      },
+      {
+        "titre": "Rispondere anche voi:",
+        "texte": "Chi fa la domanda poi ci risponde, altrimenti diventa un colloquio di lavoro. E il più delle volte è la risposta dell'altro che fa venire voglia di raccontare la propria."
+      },
+      {
+        "titre": "Rilanciare invece di preparare la prossima:",
+        "texte": "Mentre l'altro parla, viene facile cercare già la domanda successiva. Un semplice «e lì come ti sei sentito?» funziona molto meglio."
+      },
+      {
+        "titre": "Il diritto di passare:",
+        "texte": "Se una domanda mette a disagio, si passa, senza commenti. Ci si può sempre tornare un altro giorno."
+      },
+      {
+        "titre": "Scegliere il momento:",
+        "texte": "In macchina, a passeggio o al ristorante funziona benissimo. Di fretta o nel mezzo di una litigata, molto meno!"
+      }
+    ]
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti sulle domande di coppia",
+    "faq": [
+      {
+        "q": "Quali domande farsi in coppia?",
+        "a": "Dipende soprattutto dal momento. Per passare una bella serata, le domande divertenti funzionano benissimo, per esempio «Se noi due fossimo un film, che titolo e che locandina avremmo?». Per conoscervi meglio, meglio puntare sull'infanzia, la famiglia o le cose di cui andate fieri. E quando si avvicina una grande decisione (andare a vivere insieme, un figlio...), sono le domande sul futuro a servire di più."
+      },
+      {
+        "q": "Quante domande fare di fila?",
+        "a": "Tre o quattro per serata sono più che sufficienti. Lo scopo non è finire la lista ma avere una vera conversazione, e una buona domanda può tranquillamente riempire una serata intera."
+      },
+      {
+        "q": "Funziona anche a distanza?",
+        "a": "Sì, e anche molto bene. Potete mandarvi una domanda al giorno per messaggio, o tenerne una per la telefonata della sera. Abbiamo anche una lista pensata apposta per il telefono e i messaggi."
+      },
+      {
+        "q": "Cosa fare se una domanda mette a disagio?",
+        "a": "Si passa a un'altra, semplicemente. Nessuno è obbligato a rispondere a tutto, e insistere trasforma subito il gioco in un esame. Ci si può sempre tornare un altro giorno, quando l'altro è pronto."
+      },
+      {
+        "q": "Che differenza c'è con le 36 domande per innamorarsi?",
+        "a": "Le 36 domande vengono da un esperimento di psicologia: due persone se le fanno in ordine, senza saltarne nessuna, in circa un'ora e mezza. Le nostre 120 domande si scelgono liberamente, nell'ordine che volete, e sono pensate per chi è già in coppia."
+      },
+      {
+        "q": "Queste domande possono sostituire una terapia di coppia?",
+        "a": "No. Aiutano a parlarsi, ma se state attraversando una vera crisi, un terapeuta di coppia vi sarà molto più utile. Niente vieta però di usare queste domande in aggiunta."
+      }
+    ]
+  }
 }

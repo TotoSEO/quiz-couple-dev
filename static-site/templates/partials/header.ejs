@@ -7,16 +7,20 @@
   const celibLinks = versLiens(famillesNav.celib);
   const quizLinks = versLiens(famillesNav.quiz);
   const jeuLinks = versLiens(famillesNav.jeux);
+  const speciauxLinks = versLiens(famillesNav.speciaux || []);
+  // Le test de pureté n'a plus d'entrée de premier niveau depuis le 17 octobre
+  // 2026 (Thomas : « retire le test de pureté du menu principal et laisse-le
+  // uniquement dans le sous-menu test ») : il est dans la liste des tests,
+  // comme sur l'accueil, le pied de page et le plan du site. Le bouton
+  // « Activités autour de moi » a disparu le même jour, avec la page.
+  // tuile : couleur et dessin de la carte dans la grille du menu mobile.
   const directLinks = [
-    // Le test de pureté vise un mot-clé très concurrentiel : il lui faut une
-    // entrée de premier niveau, en plus de sa ligne dans la liste des tests
-    // (qui montre les mêmes pages que l'accueil). « vedette » lui donne un
-    // traitement à part, distinct du bouton des activités pour qu'on ne lise
-    // pas deux fois le même appel à l'action.
-    { routeKey: 'testPurete', labelKey: 'nav.testPurete', vedette: true, emoji: '🌡️' },
-    { routeKey: 'customQuiz', labelKey: 'nav.customQuiz' },
-    { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple' },
-    { routeKey: 'blog', labelKey: 'Blog' },
+    { routeKey: 'customQuiz', labelKey: 'nav.customQuiz', tuile: 'creer',
+      ic: '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>' },
+    { routeKey: 'questionsCouple', labelKey: 'nav.questionsCouple', tuile: 'questions',
+      ic: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5"/><path d="M12 15h.01"/>' },
+    { routeKey: 'blog', labelKey: 'Blog', tuile: 'blog',
+      ic: '<path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/>' },
   ];
   const homeUrl = getLocalizedUrl('home', lang);
 
@@ -26,8 +30,10 @@
   const celibLinksFiltered = filterAvailable(celibLinks);
   const quizLinksFiltered = filterAvailable(quizLinks);
   const jeuLinksFiltered = filterAvailable(jeuLinks);
+  const speciauxLinksFiltered = filterAvailable(speciauxLinks);
   const directLinksFiltered = filterAvailable(directLinks);
   const urlJeux = getLocalizedUrl('jeuxCouple', lang);
+  const urlSpeciaux = getLocalizedUrl('speciauxCouple', lang);
 
   // Language names for selector
   const langNames = { fr: 'FR', en: 'EN', es: 'ES', de: 'DE', it: 'IT' };
@@ -36,6 +42,12 @@
   // Jeu d'icones SVG du menu (remplace les emojis, rendu plus travaille)
   function _svg(p) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>'; }
   const navIcons = {
+    // les quiz spéciaux d'Halloween (16 octobre 2026)
+    quizSerialKiller: _svg('<path d="M14 3l7 7-9 9-4-4z"/><path d="M8 15l-4.5 4.5a1.4 1.4 0 0 0 2 2L10 17"/><path d="M12 8l3 3"/>'),
+    quizMortFilmHorreur: _svg('<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 9h20M2 15h20M7 5v14M17 5v14"/>'),
+    quizPossession: _svg('<path d="M5 21v-9a7 7 0 0 1 14 0v9l-2.3-1.6L14.4 21l-2.4-1.6L9.6 21l-2.3-1.6z"/><path d="M9.5 11h.01M14.5 11h.01"/>'),
+    quizSuperVilain: _svg('<path d="M3 10c2-2 5-3 9-3s7 1 9 3c-1 3-3 5-5 5h-8c-2 0-4-2-5-5z"/><path d="M8 12h.01M16 12h.01"/><path d="M12 15v6"/>'),
+    quizDuoVilains: _svg('<path d="M2 9c2-1.5 4-2 6-2s4 .5 5 2c-1 2.5-2.5 4-4 4H6c-1.5 0-3-1.5-4-4z"/><path d="M11 13c2-1.5 4-2 6-2s4 .5 5 2c-1 2.5-2.5 4-4 4h-3c-1.5 0-3-1.5-4-4z"/>'),
     testCouple: _svg('<path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.2l-1.6-1.6a5 5 0 1 0-7.1 7.1L12 21.5l8.8-8.8a5 5 0 0 0 0-7.1z"/>'),
     testCommonPoints: _svg('<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>'),
     testCompatibilite: _svg('<path d="M8.5 19S3 15 3 10.2A3.3 3.3 0 0 1 8.5 7.8 3.3 3.3 0 0 1 14 10.2C14 15 8.5 19 8.5 19z"/><path d="M15 16.5c3.2-2.4 6-5.3 6-8.3a3.2 3.2 0 0 0-5.7-2"/>'),
@@ -137,7 +149,7 @@
           </a>
 
           <div class="entete-n1-liens">
-            <% for (const link of directLinksFiltered) { if (link.vedette) continue; %>
+            <% for (const link of directLinksFiltered) { %>
             <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="n1-lien"><%= t('common:' + link.labelKey, link.labelKey) %></a>
             <% } %>
           </div>
@@ -293,25 +305,39 @@
               </div>
             </div>
 
-            <!-- Vedette : test de pureté -->
-            <% for (const link of directLinksFiltered) { if (!link.vedette) continue; %>
-            <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-vedette">
-              <span class="nav-vedette-emoji" aria-hidden="true"><%= link.emoji %></span>
-              <span class="nav-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-            </a>
+            <!-- Quiz spéciaux de saison : le libellé mène au hub, la flèche déplie. -->
+            <% if (speciauxLinksFiltered.length) { %>
+            <div class="nav-dropdown n2-famille nav-dropdown--scinde relative" data-megamenu style="--cat: var(--speciaux)">
+              <div class="n2-onglet n2-onglet--scinde">
+                <a href="<%= urlSpeciaux %>" class="nav-trigger-lien">
+                  <span class="n2-onglet-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L12 13.5 7.8 16l1.1-4.8L5.2 8l4.9-.4z"/></svg></span>
+                  <%= t('common:nav.ongletSpeciaux', t('common:nav.categorySpeciaux', 'Quiz spéciaux')) %>
+                  <span class="n2-onglet-nb"><%= speciauxLinksFiltered.length %></span>
+                </a>
+                <button type="button" class="nav-trigger-fleche" aria-expanded="false"
+                        aria-label="<%= t('common:nav.deployerSpeciaux', 'Voir tous les quiz spéciaux') %>">
+                  <svg class="nav-chevron" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+              <div class="nav-megamenu nav-megamenu--speciaux nav-dropdown-content hidden">
+                <div class="nav-megamenu-inner">
+                  <div class="nav-megamenu-grid">
+                    <% for (const link of speciauxLinksFiltered) { %>
+                    <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="nav-megamenu-item">
+                      <span class="nav-megamenu-icon"><%- navIcon(link.routeKey) %></span>
+                      <span class="nav-megamenu-label"><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                    </a>
+                    <% } %>
+                  </div>
+                  <a href="<%= urlSpeciaux %>" class="nav-megamenu-pied">
+                    <%= t('common:nav.deployerSpeciaux', 'Voir tous les quiz spéciaux') %>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
             <% } %>
 
-            <span class="entete-n2-ressort" aria-hidden="true"></span>
-
-            <!-- Activités -->
-            <%# Deux libellés, un seul affiché : le court prend le relais sur les
-                fenêtres bureau étroites, où la barre à quatre familles manque
-                de place (voir la règle dans styles.css). %>
-            <a href="<%= getLocalizedUrl('activities', lang) %>" class="nav-cta-btn">
-              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span class="nav-cta-texte"><%= t('common:nav.activities', 'Activities') %></span>
-              <span class="nav-cta-texte--court"><%= t('common:nav.activitiesCourt', 'Activités') %></span>
-            </a>
           </div>
 
         </div>
@@ -413,25 +439,75 @@
             </div>
           </div>
 
+          <% if (speciauxLinksFiltered.length) { %>
+          <!-- Quiz spéciaux : le libellé mène au hub, la flèche déplie. -->
+          <div class="mobile-accordion mobile-accordion--scinde" data-accordeon="speciaux" style="--cat: var(--speciaux)">
+            <div class="mobile-accordion-trigger mobile-trigger-scinde">
+              <a href="<%= urlSpeciaux %>" class="mobile-trigger-lien">
+                <span class="m-acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.9 4.6 4.9.4-3.7 3.2 1.1 4.8L12 13.5 7.8 16l1.1-4.8L5.2 8l4.9-.4z"/></svg></span>
+                <%= t('common:nav.ongletSpeciaux', t('common:nav.categorySpeciaux', 'Quiz spéciaux')) %>
+                <span class="mobile-nav-count"><%= speciauxLinksFiltered.length %></span>
+              </a>
+              <button type="button" class="mobile-trigger-fleche" aria-expanded="false"
+                      aria-label="<%= t('common:nav.deployerSpeciaux', 'Voir tous les quiz spéciaux') %>">
+                <svg class="h-4 w-4 transition-transform duration-200" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <div class="mobile-accordion-content hidden">
+              <div class="mobile-nav-grid">
+                <% for (const link of speciauxLinksFiltered) { %>
+                <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-item">
+                  <span class="mobile-nav-item-icon"><%- navIcon(link.routeKey) %></span>
+                  <span><%= t('common:' + link.labelKey, link.labelKey) %></span>
+                </a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+          <% } %>
+
           <div class="mobile-nav-divider"></div>
 
-          <a href="<%= instagramUrl %>" class="mobile-nav-link" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:.5rem"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><%= t('common:footer.instagram', 'Suivez-nous sur Instagram') %></a>
-
-          <% for (const link of directLinksFiltered) { %>
-          <% if (link.vedette) { %>
-          <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-vedette">
-            <span class="mobile-nav-vedette-emoji" aria-hidden="true"><%= link.emoji %></span>
-            <span class="mobile-nav-vedette-texte"><%= t('common:' + link.labelKey, link.labelKey) %></span>
-          </a>
-          <% } else { %>
-          <a href="<%= getLocalizedUrl(link.routeKey, lang) %>" class="mobile-nav-link"><%= t('common:' + link.labelKey, link.labelKey) %></a>
-          <% } %>
-          <% } %>
-
-          <a href="<%= getLocalizedUrl('activities', lang) %>" class="mobile-nav-cta">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <%= t('common:nav.activities', 'Activities') %>
-          </a>
+          <%# Quatre tuiles carrées en grille de 2 x 2 (17 octobre 2026, Thomas : « 2
+              carrés et 2 carrés », puis « pas de gradient ni de fade ; le titre en
+              gros, le pictogramme en grand en fond, et en bas, séparée par un
+              trait, une longue flèche »). Le titre passe à la ligne après son
+              premier mot : « CRÉER / UN QUIZ ». %>
+          <%
+            const tuileIg = '<rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/>';
+            const tuiles = [{ href: instagramUrl, tuile: 'instagram', ic: tuileIg, libelle: 'Instagram', externe: true }]
+              .concat(directLinksFiltered.map((l) => ({ href: getLocalizedUrl(l.routeKey, lang), tuile: l.tuile, ic: l.ic, libelle: t('common:' + l.labelKey, l.labelKey) })));
+          %>
+          <div class="mobile-tuiles">
+            <% // Largeur des majuscules de Fredoka en gras, en em (relevée dans Chromium),
+               // 0,7 pour un signe absent. Sert à trouver la taille qui remplit le carré.
+               const chasse = { A: .71, B: .61, C: .63, D: .66, E: .6, F: .61, G: .72, H: .65, I: .24, J: .53, K: .6, L: .57, M: .81, N: .67, O: .72, P: .6, Q: .78, R: .6, S: .54, T: .64, U: .68, V: .73, W: .95, X: .69, Y: .64, Z: .6, 'À': .71, 'Â': .71, 'Ä': .71, 'Ç': .63, 'È': .6, 'É': .6, 'Ê': .6, 'Ë': .6, 'Î': .24, 'Ï': .24, 'Ô': .72, 'Ö': .72, 'Ù': .68, 'Û': .68, 'Ü': .68, ' ': .24, "'": .19, '-': .4 };
+               const largeur = (x) => Array.from(x).reduce((t, c) => t + (chasse[c] || .7), 0);
+               for (const tu of tuiles) {
+                 // Le titre remplit le carré : on garde la coupure qui donne la plus
+                 // grande taille, entre « CRÉER / UN QUIZ » (premier mot, puis le
+                 // reste), un mot par ligne et une seule ligne. La taille vient de la
+                 // plus longue ligne (--l, en em) et du nombre de lignes (--n), en
+                 // CSS. À moins de 10 % près, « CRÉER / UN QUIZ » l'emporte.
+                 const mots = String(tu.libelle).toUpperCase().split(' ').filter(Boolean);
+                 const essais = [[mots.join(' ')]];
+                 if (mots.length > 1) essais.push([mots[0], mots.slice(1).join(' ')], mots.slice());
+                 const taille = (lg) => Math.min(0.9 / Math.max.apply(null, lg.map(largeur)), 0.78 / (lg.length * 1.02));
+                 let lignes = essais[0];
+                 for (const e of essais) {
+                   const prefere = mots.length > 1 && e.length === 2 && lignes.length !== 2;
+                   if (taille(e) > taille(lignes) * (prefere ? 0.9 : 1.1)) lignes = e;
+                 }
+                 const plusLongue = Math.max.apply(null, lignes.map(largeur)).toFixed(2); %>
+            <a href="<%= tu.href %>" class="mobile-tuile mobile-tuile--<%= tu.tuile %>"<% if (tu.externe) { %> target="_blank" rel="noopener" aria-label="<%= t('common:footer.instagram', 'Suivez-nous sur Instagram') %>"<% } %>>
+              <span class="mobile-tuile-haut">
+                <svg class="mobile-tuile-fond" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><%- tu.ic %></svg>
+                <span class="mobile-tuile-titre" style="--l: <%= plusLongue %>; --n: <%= lignes.length %>"><% for (const ligne of lignes) { %><span><%= ligne %></span><% } %></span>
+              </span>
+              <span class="mobile-tuile-bas" aria-hidden="true"><span class="mobile-tuile-trait"></span><svg class="mobile-tuile-pointe" viewBox="0 0 10 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 1.5 8.5 6 3 10.5"/></svg></span>
+            </a>
+            <% } %>
+          </div>
         </div>
       </div>
     </div>

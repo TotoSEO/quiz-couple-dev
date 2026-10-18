@@ -90,10 +90,10 @@
     "metaDescription": "Quiz Chi è più probabile che...? con 240+ domande per 2-8 giocatori. Votate, ridete e scoprite chi è il più divertente. Gratis!"
   },
   "questionsCouple": {
-    "title": "120 domande di coppia da farsi a vicenda | Gratis",
+    "title": "100+ domande da farsi in coppia",
     "shortTitle": "Domande",
-    "description": "120 domande classificate per tema per conoscervi meglio, rafforzare la vostra complicità e creare momenti di scambio autentico.",
-    "metaDescription": "120 domande per coppie in 5 categorie: conoscersi, progetti, intimità, divertimento e domande profonde. Gratis, senza registrazione."
+    "description": "Più di 100 domande divise per tema, da pescare a caso, e tutte le nostre liste per ogni situazione.",
+    "metaDescription": "Più di 100 domande da farsi in coppia, divise per tema, e tutte le nostre liste: inizio relazione, domande intime, futuro, per il tuo ragazzo o la tua ragazza."
   },
   "testCoupleSain": {
     "title": "Test relazione sana: la tua coppia è solida?",
@@ -189,12 +189,6 @@
     "shortTitle": "Vero o Falso",
     "description": "100 domande vero o falso sulla coppia: miti, psicologia, cifre sorprendenti e luoghi comuni da sfatare.",
     "metaDescription": "100 domande vero o falso sulla coppia: miti, psicologia, cifre sorprendenti e luoghi comuni da sfatare. Metti alla prova le tue conoscenze adesso."
-  },
-  "activities": {
-    "title": "Attività di coppia vicino a me: idee per uscite a due",
-    "shortTitle": "Attività di coppia",
-    "description": "Trova attività di coppia vicino a te. Strumento gratuito e geolocalizzato: filtra per budget, atmosfera e distanza per uscite a due indimenticabili.",
-    "metaDescription": "Trova attività di coppia vicino a te. Strumento gratuito e geolocalizzato: filtra per budget, atmosfera e distanza per uscite a due indimenticabili."
   },
   "quizTentation": {
     "title": "Quiz Temptation Island: sopravvivresti?",
@@ -457,5 +451,41 @@
     "shortTitle": "Test di compatibilità sessuale",
     "metaDescription": "Test di compatibilità sessuale in coppia: 20 domande su desiderio, tenerezza, novità e ritmo, con un punteggio per dimensione. Gratis.",
     "description": "Venti domande in due sul desiderio, la tenerezza e il modo di parlarne, per vedere dove vi incontrate."
+  },
+  "speciauxCouple": {
+    "title": "Quiz speciali da fare in coppia: Natale, Halloween…",
+    "shortTitle": "Quiz speciali",
+    "metaDescription": "I quiz di stagione da fare in due. Per Halloween: quale serial killer ti corrisponde, chi muore per primo in un film horror, chi potrebbe essere posseduto, quale supercattivo sei. Gratis.",
+    "description": "I quiz un po' folli da fare in due a seconda della stagione: Halloween per ora, Natale poi."
+  },
+  "quizSerialKiller": {
+    "title": "Quiz: con quale serial killer sei compatibile? (da solo o in due)",
+    "shortTitle": "Quale serial killer ti corrisponde",
+    "metaDescription": "Un quiz di Halloween: 15 situazioni (la festa, il cimitero a mezzanotte, l'ispettore alla porta) e il serial killer celebre che ti somiglia di più. Da solo/a o in coppia, gratis.",
+    "description": "Quindici situazioni di una sera di Halloween e l'assassino celebre che ti somiglia di più, in versione molto ingrandita. Da solo/a o in coppia."
+  },
+  "quizMortFilmHorreur": {
+    "title": "Chi di noi due muore per primo in un film horror? Il quiz",
+    "shortTitle": "Chi muore per primo nel film horror",
+    "metaDescription": "15 situazioni da film horror e un verdetto in minuti: quanto resisti prima dei titoli di coda, e chi di voi due muore per primo. Gratis, da solo/a o in due.",
+    "description": "Quindici situazioni, un tempo di sopravvivenza in minuti, e il nome della prima vittima quando giocate in due."
+  },
+  "quizPossession": {
+    "title": "Chi di noi due potrebbe essere posseduto? Il quiz di Halloween",
+    "shortTitle": "Chi potrebbe essere posseduto",
+    "metaDescription": "15 domande e un rischio di possessione in percentuale per ciascuno: chi di voi due apre la porta ai demoni? Un quiz di Halloween gratis, da solo/a o in due.",
+    "description": "Quindici domande, un rischio di possessione in percentuale, e chi sceglierebbero per primo i demoni."
+  },
+  "quizSuperVilain": {
+    "title": "Quiz: a quale supercattivo somigli di più? (da solo o in due)",
+    "shortTitle": "Quale supercattivo sei",
+    "metaDescription": "Il tuo ingresso alla festa, il tuo costume, i tuoi scagnozzi, la tua risata: 15 domande e il supercattivo che ti somiglia, da Joker a Malefica. Un quiz di Halloween gratuito, da solo/a o in coppia.",
+    "description": "Quindici domande nei panni del cattivo una sera di Halloween, e il supercattivo che ti somiglia di più."
+  },
+  "quizDuoVilains": {
+    "title": "Quale duo di supercattivi siete? Il quiz da fare in due",
+    "shortTitle": "Quale duo di supercattivi siete",
+    "metaDescription": "In coppia: il colpo della notte di Halloween in 15 domande ciascuno, il vostro ruolo nel duo (il cervello, il caos, la forza...) e il duo di cattivi celebre che formate, da Joker e Harley Quinn a Bonnie e Clyde.",
+    "description": "Ognuno risponde per conto suo, e il quiz vi dà il vostro ruolo nel duo e il duo di cattivi celebre che formate."
   }
 }

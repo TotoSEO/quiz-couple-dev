@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Halloween quiz • Solo or as a couple",
+    "title": "Which serial killer are you compatible with?",
+    "titleHighlight": "serial killer",
+    "description": "Fifteen situations from a Halloween night: your entrance at the party, your costume, the cemetery at midnight, the detective knocking at the door, the true crime documentary. At the end, the famous killer you're most like, blown way out of proportion, with his portrait and a tip for the evening. Solo, or as a couple to compare.",
+    "subtitle": "15 questions • 5 minutes • solo, as a couple on one phone or each on your own",
+    "jumpBtn": "Take the quiz"
+  },
+  "section1": {
+    "title": "How this quiz works",
+    "intro": "It's a personality quiz in Halloween fancy dress. It isn't trying to find out whether you're dangerous, it looks at very ordinary character traits, charm, patience, solitude, a taste for riddles, the need to control everything, through Halloween night situations. And it blows them up into caricature.",
+    "p1": "The questions are scenes. For example: 'A detective knocks on your door and asks questions about the neighbourhood.' or 'The cemetery, at midnight, on a dare.'. Each answer weighs on one or two of the quiz's eight portraits, and the portrait with the most points wins.",
+    "p2": "Solo, you answer the fifteen questions and discover your portrait, with the three traits that stand out most in your answers. As a couple, the first player answers the whole series, passes the phone, and the second answers in turn without seeing the first one's answers. Both portraits then show up side by side, with the number of identical answers.",
+    "p3": "If you're not in the same place, remote mode lets you each answer on your own phone: one person creates the game, the other joins with the code, and you see both answers after each question."
+  },
+  "section2": {
+    "title": "The quiz's eight portraits",
+    "intro": "We took the best-known serial killers, the ones everyone has heard of in a documentary or a series, and kept for each the character trait people remember them for. That trait, and nothing else, is what the quiz measures.",
+    "pillar1Title": "Ted Bundy, the charmer",
+    "pillar1Text": "The smile, the instant trust, the perfect-son-in-law look. The portrait of those who get everything with one line.",
+    "pillar2Title": "Jeffrey Dahmer, the loner",
+    "pillar2Text": "The fear of being left, the need to keep, the apartment preferred to the rest of the world.",
+    "pillar3Title": "Jack the Ripper, the mystery",
+    "pillar3Text": "Nobody knows who he was. The portrait of those we've known for ten years without knowing anything about them.",
+    "pillar4Title": "The Zodiac, the riddle player",
+    "pillar4Text": "The coded letters, the riddles, the pleasure of being hunted. For those who always leave a clue.",
+    "pillar5Title": "Charles Manson, the guru",
+    "pillar5Text": "He did nothing himself: he talked. The portrait of those who decide for the group without anyone noticing.",
+    "pillar6Title": "Dennis Rader, the facade",
+    "pillar6Text": "Thirty years of normal life, family and volunteering. The portrait of the perfectly tidy double life.",
+    "pillar7Title": "Aileen Wuornos, the raw nerve",
+    "pillar7Text": "Anger, survival instinct, reaction before reflection. For those who slam the door on their way out.",
+    "pillar8Title": "H. H. Holmes, the builder",
+    "pillar8Text": "The hotel with secret rooms, the scams, the money. The portrait of those who always have a plan and one more room."
+  },
+  "section3": {
+    "title": "Playing it as a couple, on Halloween night",
+    "p1": "This quiz works really well as a couple, precisely because nobody is flattered by their result. You laugh at your own portrait, you recognise the other person in theirs, and you end up telling each other why you answered that to the detective question or the cemetery one.",
+    "p2": "If you want to stay in the mood, the other Halloween quizzes are made to be chained: <a href=\"/en/who-dies-first-in-a-horror-movie-quiz/\">find out which of you dies first in a horror movie</a>, <a href=\"/en/who-would-get-possessed-quiz/\">who could get possessed</a>, or <a href=\"/en/which-supervillain-are-you-quiz/\">which supervillain is hiding in each of you</a>. They all play the same way, solo or as a couple.",
+    "p3": "And for an evening that isn't all about monsters, <a href=\"/en/would-you-rather-couple-quiz/\">our “would you rather” dilemmas</a> take over nicely once the candy is gone."
+  },
+  "section4": {
+    "title": "What this quiz is not",
+    "p1": "It's not a psychological test, and even less a diagnosis. The people named had real victims, and we don't forget that: the quiz only takes one character trait from each of them, the one the public remembers, and pushes it to the point of ridicule. If you land on Ted Bundy, it means you're comfortable with people. Nothing more.",
+    "p2": "The result says nothing about your relationship either. Two different portraits means two different characters, and that's the case for most couples. If you want a real test as a couple, <a href=\"/en/couple-compatibility-test/\">our couple test</a> compares your answers on what really matters.",
+    "p3": "Your answers aren't saved. The quiz only keeps the portrait obtained, with no first name or answers, to display one day how the portraits are distributed on the page."
+  },
+  "seo": {
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Is the quiz meant to be taken seriously?",
+    "faq1A": "No. It's a Halloween game. It measures ordinary character traits (charm, patience, curiosity, anger) and matches them to a very caricatured portrait. Nobody is dangerous because they land on the Zodiac.",
+    "faq2Q": "Can you take it as a couple?",
+    "faq2A": "Yes. The first player answers the whole series, then passes the phone to the second. Both portraits show up at the end. And if you're not together, remote mode lets you each play on your own phone.",
+    "faq3Q": "How is the result calculated?",
+    "faq3A": "Each answer gives one or two points to one or two of the eight portraits. At the end, each portrait is compared to the maximum it could receive, and the one with the highest percentage wins. The three most present traits show up as gauges under the result.",
+    "faq4Q": "Why these eight killers and not others?",
+    "faq4A": "Because they're the best known, the ones with a trait that's easy to remember: Bundy's charm, the Zodiac's riddles, Dennis Rader's facade. A personality quiz needs portraits everyone recognises in one line.",
+    "faq5Q": "Are my answers saved?",
+    "faq5A": "No. The answers stay on your phone. Only the portrait obtained is counted, with no first name, so we can later display how the results are distributed."
+  },
+  "jsonLd": {
+    "about": "Halloween quiz"
+  }
+}

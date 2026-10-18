@@ -12,9 +12,9 @@
   (`data/blog/**/*.ts` et `public/blog/`). Plus de dépendance Supabase pour le blog.
 - **6 images d'articles manquantes : recréées en SVG** (voir §7). ✅ fait.
 - **Nouvelle base minimale** limitée aux fonctionnalités conservées :
-  `leads`, `messages`, `reviews`, `activity_validations` (`quiz_ado_sessions`
-  en est sortie le 11 octobre 2026 : le quiz ado passe par des canaux Realtime,
-  sans table). Script de départ : **`supabase/RESTORE.sql`**, puis les
+  `leads`, `messages`, `reviews` (`quiz_ado_sessions` en est sortie le
+  11 octobre 2026 : le quiz ado passe par des canaux Realtime, sans table ;
+  `activity_validations` le 17 octobre 2026, avec la page des activités). Script de départ : **`supabase/RESTORE.sql`**, puis les
   migrations venues depuis (§2).
 
 ---
@@ -57,7 +57,7 @@ réinjecte les 11 vrais avis (plus de tables blog ni de bucket storage : le blog
 Vérification (incluse en fin de script) :
 ```sql
 select table_name from information_schema.tables where table_schema='public' order by 1;
--- attendu : activity_validations, leads, messages, reviews
+-- attendu : leads, messages, reviews
 select count(*) from reviews where is_approved;   -- attendu : 11
 ```
 

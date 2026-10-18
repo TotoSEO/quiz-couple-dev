@@ -19,6 +19,9 @@
      turquoise fixe, lisible sur les deux thèmes, distinct du vert des jeux
      de l'accueil et de l'orange du menu Jeux. */
   --celib: 186 62% 38%;
+  /* Famille « Quiz spéciaux » de saison (16 octobre 2026) : un violet
+     prune, distinct du violet des quiz et de l'orange du menu Jeux. */
+  --speciaux: 292 55% 45%;
   --secondary-foreground: 265 60% 20%;
   --muted: 280 20% 92%;
   --muted-foreground: 280 15% 45%;
@@ -71,6 +74,8 @@
    reste foncé en thème sombre, trop peu lisible en petit texte. */
 :root { --celib-texte: 186 70% 29%; }
 .dark { --celib-texte: 186 55% 62%; }
+:root { --speciaux-texte: 292 60% 36%; }
+.dark { --speciaux-texte: 292 55% 70%; }
 :root { --secondary-texte: 265 55% 45%; }
 .dark { --secondary-texte: 265 75% 78%; }
 
@@ -649,8 +654,17 @@ button { cursor: pointer; background: transparent; border: none; padding: 0; }
 .hero-ctas .btn-purete { padding: 1rem 1.6rem; font-size: 1.0625rem; }
 @media (min-width: 480px) { .hero-ctas { gap: 0.75rem; } }
 
-/* Bouton du test de pureté dans le hero : la même signature que sa pastille
-   du menu, l'anneau néon qui tourne, à la taille d'un vrai bouton. */
+/* Bouton du test de pureté dans le hero : un anneau néon dont le point
+   lumineux tourne autour, à la taille d'un vrai bouton. On anime l'angle du
+   dégradé conique et non une rotation d'élément. La pastille du menu qui
+   portait la même signature a disparu le 17 octobre 2026 (le test reste dans
+   la liste des tests) : l'angle et l'animation de l'anneau vivent ici. */
+@property --nv-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: true;
+}
+@keyframes navVedetteTour { to { --nv-angle: 360deg; } }
 .btn-purete {
   position: relative; isolation: isolate;
   border-radius: 9999px; font-weight: 700; gap: 0.55rem;
@@ -1394,7 +1408,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
-@keyframes pulseSoft { 0%, 100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.05); } }
 @keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
 /* Les taches floues animaient leur border-radius sous un flou de 100px : la
    forme changeait a chaque image et le navigateur redessinait tout le flou,
@@ -1415,7 +1428,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .animate-slide-in { animation: slideIn 0.5s ease-out forwards; }
 .animate-float { animation: float 6s ease-in-out infinite; }
 .animate-float-slow { animation: float 8s ease-in-out infinite; }
-.animate-pulse-soft { animation: pulseSoft 3s ease-in-out infinite; }
 .animate-scale-in { animation: scaleIn 0.4s ease-out forwards; }
 .animate-spin { animation: spin 1s linear infinite; }
 .animate-spark { animation: spark 1.5s ease-in-out infinite; }
@@ -1423,8 +1435,9 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 /* ── Navigation : en-tête à deux niveaux ──────────────────
    Niveau 1 : identité et outillage (logo, liens directs, langue, thème).
-   Niveau 2 : les quatre familles (Tests de couple, Tests célibataires, Quiz,
-   Jeux), la pastille du test de pureté et le bouton des activités.
+   Niveau 2 : les cinq familles (Tests de couple, Tests célibataires, Quiz,
+   Jeux, Quiz spéciaux) ; la pastille du test de pureté et le bouton des
+   activités, qui fermaient la rangée, ont disparu le 17 octobre 2026.
    Chaque famille porte sa couleur dans la variable --cat, posée sur le bloc
    dans le gabarit : tout ce qui suit (onglet, panneau, puce, accordéon) se
    teinte tout seul, sans dupliquer une règle par catégorie.
@@ -1521,7 +1534,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 
 .entete-n2 { border-top: 1px solid hsl(var(--border) / 0.35); }
 .entete-n2-inner { display: flex; align-items: center; }
-.entete-n2-ressort { flex: 1 1 auto; }
 
 /* Petit logo du mode collé (bureau seulement) */
 .entete-logo-mini { display: none; }
@@ -1592,21 +1604,15 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .n2-onglet--scinde .nav-trigger-fleche { width: 1.5rem; }
   .n2-onglet-ic { width: 1.6rem; height: 1.6rem; }
   .n2-onglet-nb { display: none; }
-  .nav-vedette { font-size: 0.78125rem; padding: 0 0.6rem 0 0.5rem; }
-  .nav-cta-btn { font-size: 0.78125rem; padding: 0 0.8rem; margin-left: 0.25rem; }
   .n1-lien { font-size: 0.78125rem; padding: 0 0.55rem; }
 }
 /* Sous 1180 px, resserrer ne suffit plus (jusqu'à 187 px de trop en espagnol
-   à 1024) : les pastilles d'icône des onglets s'effacent et le bouton des
-   activités passe à son libellé court. Les libellés des familles, eux,
-   restent entiers. */
-.nav-cta-texte--court { display: none; }
+   à 1024) : les pastilles d'icône des onglets s'effacent. Les libellés des
+   familles, eux, restent entiers. */
 @media (min-width: 1024px) and (max-width: 1179.98px) {
   .n2-onglet-ic { display: none; }
   .n2-onglet { padding-left: 0.45rem; }
   .n2-onglet--scinde .nav-trigger-lien { padding-left: 0.45rem; }
-  .nav-cta-texte { display: none; }
-  .nav-cta-texte--court { display: inline; }
 }
 @media (min-width: 1024px) {
 
@@ -1642,108 +1648,6 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
      burger donne déjà accès à tout, une rangée de plus ferait doublon. */
   .entete-n2 { display: none; }
 }
-
-/* ── Entrée vedette (bureau) : anneau néon rotatif ─────────
-   Le test de pureté doit sortir du lot sans devenir un second bouton rose :
-   une pastille cerclée d'un néon dont le point lumineux tourne autour.
-   On anime l'angle du dégradé conique et non une rotation d'élément. */
-@property --nv-angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: true;
-}
-.nav-vedette {
-  display: inline-flex; align-items: center; gap: 0.3rem;
-  height: 2rem; padding: 0 0.7rem 0 0.6rem; margin-left: 0.125rem;
-  border-radius: 9999px;
-  font-size: 0.8125rem; font-weight: 700;
-  white-space: nowrap;
-  position: relative; isolation: isolate;
-  --nv-angle: 0deg;
-  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.nav-vedette::before {
-  content: ''; position: absolute; z-index: -2; inset: -1px;
-  border-radius: 9999px;
-  background: conic-gradient(
-    from var(--nv-angle),
-    hsl(var(--primary) / 0.16) 0deg,
-    hsl(var(--primary) / 0.16) 170deg,
-    hsl(265 60% 58%) 245deg,
-    hsl(var(--primary)) 295deg,
-    hsl(340 95% 80%) 320deg,
-    hsl(var(--primary)) 345deg,
-    hsl(var(--primary) / 0.16) 360deg
-  );
-  filter: blur(1.5px);
-  animation: navVedetteTour 3.2s linear infinite;
-}
-.nav-vedette::after {
-  content: ''; position: absolute; z-index: -1; inset: 1.5px;
-  border-radius: 9999px;
-  background: hsl(var(--background));
-}
-@keyframes navVedetteTour { to { --nv-angle: 360deg; } }
-.nav-vedette-texte {
-  background: linear-gradient(120deg, hsl(var(--primary)), hsl(265 60% 58%));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.nav-vedette-emoji { font-size: 0.9rem; line-height: 1; }
-.nav-vedette:hover { transform: translateY(-1px); }
-.nav-vedette:hover::before { animation-duration: 1.6s; filter: blur(2.5px); inset: -2px; }
-.nav-vedette:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 2px; }
-
-/* Version mobile du menu déplié : même néon, en ligne ajustée au texte. */
-.mobile-nav-vedette {
-  position: relative; isolation: isolate;
-  display: inline-flex; width: fit-content; align-self: flex-start;
-  align-items: center; gap: 0.5rem;
-  margin: 0.25rem 0.25rem 0;
-  padding: 0.7rem 1.05rem; border-radius: 9999px;
-  font-size: 0.9375rem; font-weight: 700;
-  --nv-angle: 0deg;
-}
-.mobile-nav-vedette::before {
-  content: ''; position: absolute; z-index: -2; inset: -1px;
-  border-radius: 9999px;
-  background: conic-gradient(
-    from var(--nv-angle),
-    hsl(var(--primary) / 0.16) 0deg,
-    hsl(var(--primary) / 0.16) 170deg,
-    hsl(265 60% 58%) 245deg,
-    hsl(var(--primary)) 295deg,
-    hsl(340 95% 80%) 320deg,
-    hsl(var(--primary)) 345deg,
-    hsl(var(--primary) / 0.16) 360deg
-  );
-  filter: blur(1.5px);
-  animation: navVedetteTour 3.2s linear infinite;
-}
-.mobile-nav-vedette::after {
-  content: ''; position: absolute; z-index: -1; inset: 1.5px;
-  border-radius: 9999px;
-  background: linear-gradient(100deg, hsl(var(--primary) / 0.1), hsl(265 60% 58% / 0.08)), hsl(var(--background));
-}
-.mobile-nav-vedette-emoji { font-size: 1.15rem; line-height: 1; }
-.mobile-nav-vedette-texte {
-  white-space: nowrap;
-  background: linear-gradient(120deg, hsl(var(--primary)), hsl(265 60% 58%));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-
-/* ── Bouton activités (niveau 2, bureau) ──────────────────── */
-
-.nav-cta-btn {
-  display: inline-flex; align-items: center; gap: 0.375rem;
-  height: 2.15rem; padding: 0 1rem; margin-left: 0.375rem;
-  border-radius: 9999px; font-size: 0.8125rem; font-weight: 600;
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.85));
-  color: hsl(var(--primary-foreground));
-  box-shadow: 0 2px 8px -2px hsl(var(--primary) / 0.4), inset 0 1px 0 hsl(0 0% 100% / 0.15);
-  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
-  white-space: nowrap;
-}
-.nav-cta-btn:hover { box-shadow: 0 6px 20px -4px hsl(var(--primary) / 0.5), inset 0 1px 0 hsl(0 0% 100% / 0.2); transform: translateY(-1px); }
 
 /* ── Mécanique des menus déroulants ───────────────────────── */
 
@@ -1788,6 +1692,7 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
 .nav-megamenu--quiz { width: 33rem; }
 .nav-megamenu--jeux { width: 33rem; }
 .nav-megamenu--celib { width: 33rem; }
+.nav-megamenu--speciaux { width: 33rem; }
 @keyframes menuDeplie {
   from { opacity: 0; transform: translateY(8px) scale(0.985); }
 }
@@ -1958,14 +1863,76 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   transition: background 0.2s ease, color 0.2s ease;
 }
 .mobile-nav-link:hover { background: hsl(var(--muted) / 0.5); color: hsl(var(--primary)); }
-.mobile-nav-cta {
-  display: flex; align-items: center; gap: 0.5rem;
-  margin: 0.25rem 0.25rem 0; padding: 0.8rem 1rem; border-radius: 0.85rem;
-  font-size: 0.9375rem; font-weight: 600;
-  background: hsl(var(--primary) / 0.08); color: hsl(var(--primary));
-  transition: background 0.2s ease;
+
+/* Les quatre liens du bas du menu mobile, en grille de 2 x 2 (17 octobre
+   2026) : Instagram, créer un quiz, questions pour couple, blog. Des carrés en
+   aplat, sans dégradé ni fondu (Thomas : « ça fait trop IA ») : le titre en
+   majuscules, le pictogramme en grand et pâle en fond, puis, sous un trait,
+   une bande de 15 % de la hauteur avec une longue flèche. Chaque tuile a sa
+   couleur dans --tuile et sa variante lisible en petit texte dans
+   --tuile-texte, claire en thème sombre. */
+.mobile-tuiles {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem; margin: 0.15rem auto 0;
+  width: 100%; max-width: 19rem;
 }
-.mobile-nav-cta:hover { background: hsl(var(--primary) / 0.15); }
+.mobile-tuile {
+  --tuile: var(--primary); --tuile-texte: var(--primary-texte);
+  display: grid; grid-template-rows: 85fr 15fr;
+  aspect-ratio: 1 / 1; overflow: hidden;
+  container-type: inline-size;
+  border-radius: 1rem;
+  border: 1.5px solid hsl(var(--tuile) / 0.35);
+  background: hsl(var(--tuile) / 0.1);
+  color: hsl(var(--tuile-texte));
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+.dark .mobile-tuile { background: hsl(var(--tuile) / 0.16); }
+.mobile-tuile:hover { border-color: hsl(var(--tuile) / 0.7); }
+.mobile-tuile:active { transform: scale(0.97); }
+.mobile-tuile:focus-visible { outline: 2px solid hsl(var(--tuile)); outline-offset: 2px; }
+.mobile-tuile-haut {
+  position: relative; overflow: hidden; min-height: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.mobile-tuile-fond {
+  position: absolute; width: 92%; height: auto; right: -18%; bottom: -20%;
+  color: hsl(var(--tuile)); opacity: 0.2;
+  pointer-events: none;
+}
+.dark .mobile-tuile-fond { opacity: 0.28; }
+.mobile-tuile-titre {
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  padding: 0 0.5rem;
+  text-align: center; white-space: nowrap;
+  font-family: var(--font-display);
+  /* Le titre remplit le carré : sa taille suit la largeur de la tuile (unités
+     de conteneur, la tuile est carrée donc c'est aussi sa hauteur), divisée
+     par la largeur de la plus longue ligne (--l, en em de Fredoka) et bornée
+     par le nombre de lignes (--n) dans les 85 % du haut. Les coupures et les
+     largeurs sont calculées au rendu du gabarit (header.ejs). */
+  font-size: min(calc((100cqi - 1.4rem) / var(--l, 6)), calc((85cqi - 1.2rem) / (var(--n, 2) * 1.02)), 3.2rem);
+  font-weight: 700; line-height: 1.02;
+  letter-spacing: 0; text-transform: uppercase;
+}
+.mobile-tuile-bas {
+  display: flex; align-items: center; gap: 0;
+  padding: 0 0.8rem;
+  border-top: 1.5px solid hsl(var(--tuile) / 0.35);
+}
+.mobile-tuile-trait { flex: 1 1 auto; height: 2px; border-radius: 2px; background: currentColor; margin-right: -0.4rem; }
+.mobile-tuile-pointe { flex: 0 0 auto; width: 0.7rem; height: 0.85rem; }
+.mobile-tuile-trait, .mobile-tuile-pointe { transition: transform 0.2s ease; }
+.mobile-tuile:hover .mobile-tuile-pointe { transform: translateX(3px); }
+.mobile-tuile--instagram { --tuile: 330 70% 52%; --tuile-texte: 330 70% 40%; }
+.dark .mobile-tuile--instagram { --tuile-texte: 330 80% 74%; }
+.mobile-tuile--creer { --tuile: var(--primary); --tuile-texte: var(--primary-texte); }
+.mobile-tuile--questions { --tuile: var(--secondary); --tuile-texte: var(--secondary-texte); }
+.mobile-tuile--blog { --tuile: var(--celib); --tuile-texte: var(--celib-texte); }
+@media (prefers-reduced-motion: reduce) {
+  .mobile-tuile, .mobile-tuile-pointe, .mobile-tuile-trait { transition: none; }
+  .mobile-tuile:active { transform: none; }
+}
 
 /* Deux colonnes aussi sur un vrai téléphone : un iPhone fait 375 à 430px de
    large, l'ancienne coupure à 480px le faisait retomber sur une seule
@@ -1975,12 +1942,10 @@ article a:not(.no-underline):hover, .seo-content a:hover { text-decoration-color
   .mobile-nav-grid { grid-template-columns: 1fr; }
 }
 
-/* Mouvement réduit : plus d'anneau qui tourne ni de niveaux qui glissent. */
+/* Mouvement réduit : plus de niveaux qui glissent. */
 @media (prefers-reduced-motion: reduce) {
   .entete-n1, .entete-n1-inner, .entete-n2, .entete-logo, .entete-logo-mini,
-  .nav-vedette, .nav-megamenu-inner, .nav-lang-dropdown { transition: none; animation: none; }
-  .nav-vedette::before, .nav-vedette:hover::before,
-  .mobile-nav-vedette::before { animation: none; --nv-angle: 60deg; }
+  .nav-megamenu-inner, .nav-lang-dropdown { transition: none; animation: none; }
 }
 
 /* ── Table styles for quiz pages ──────────────────────────── */
@@ -4116,118 +4081,6 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 }
 .animate-shake { animation: shake 0.4s ease-in-out; }
 
-/* ── Activities Search Page ──────────────────────────── */
-
-/* Nominatim autocomplete dropdown */
-.nominatim-dropdown { position: absolute; top: 100%; left: 0; right: 0; z-index: 40; background: hsl(var(--card)); border: 1px solid hsl(var(--border)); border-radius: calc(var(--radius) - 2px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); max-height: 200px; overflow-y: auto; margin-top: 0.25rem; }
-.nominatim-item { padding: 0.625rem 0.75rem; font-size: 0.875rem; cursor: pointer; transition: background-color 150ms; border-bottom: 1px solid hsl(var(--border) / 0.3); }
-.nominatim-item:last-child { border-bottom: none; }
-.nominatim-item:hover { background-color: hsl(var(--accent)); }
-
-/* Activity type chip toggles */
-.activity-chip { display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.5rem 0.875rem; border-radius: 9999px; border: 1px solid hsl(var(--border)); background: transparent; font-size: 0.8125rem; font-weight: 500; cursor: pointer; transition: all 150ms; user-select: none; color: hsl(var(--foreground)); }
-.activity-chip:hover { border-color: hsl(var(--primary) / 0.5); color: hsl(var(--primary)); }
-.activity-chip.active { background: hsl(var(--primary) / 0.15); border-color: hsl(var(--primary) / 0.4); color: hsl(var(--primary)); }
-.activity-chip svg { width: 1rem; height: 1rem; }
-
-/* Radio/option cards for single-select fields */
-.option-card { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: calc(var(--radius) - 2px); border: 1px solid hsl(var(--border)); background: transparent; font-size: 0.8125rem; cursor: pointer; transition: all 150ms; color: hsl(var(--foreground)); }
-.option-card:hover { border-color: hsl(var(--primary) / 0.4); }
-.option-card.active { background: hsl(var(--primary) / 0.1); border-color: hsl(var(--primary)); color: hsl(var(--primary)); font-weight: 500; }
-
-/* Custom range slider for radius */
-.range-slider { -webkit-appearance: none; width: 100%; height: 6px; border-radius: 3px; background: hsl(var(--muted)); outline: none; margin: 0.5rem 0; }
-.range-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: hsl(var(--primary)); cursor: pointer; box-shadow: 0 0 10px hsl(var(--primary) / 0.3); }
-.range-slider::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: hsl(var(--primary)); cursor: pointer; border: none; }
-
-/* Results split layout: map left, cards right */
-.activities-results { display: grid; grid-template-columns: 1fr; gap: 1rem; }
-@media (min-width: 1024px) { .activities-results { grid-template-columns: 1fr 1fr; gap: 1.5rem; } }
-
-/* Cards scroll container: scrollable on both mobile and desktop */
-.activity-cards-scroll { display: grid; grid-template-columns: 1fr; gap: 0.75rem; max-height: 500px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: hsl(var(--border)) transparent; padding-right: 4px; }
-@media (min-width: 1024px) {
-  .activity-cards-scroll { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; max-height: 600px; }
-}
-
-/* Map container */
-.activity-map { height: 350px; border-radius: calc(var(--radius) + 4px); overflow: hidden; border: 1px solid hsl(var(--border)); }
-@media (min-width: 768px) { .activity-map { height: 450px; } }
-@media (min-width: 1024px) { .activity-map { height: 600px; position: sticky; top: 5rem; } }
-
-/* Leaflet theme overrides */
-.leaflet-popup-content-wrapper { border-radius: calc(var(--radius) - 2px) !important; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1) !important; background: hsl(var(--card)) !important; color: hsl(var(--foreground)) !important; border: 1px solid hsl(var(--border)) !important; }
-.leaflet-popup-tip { background: hsl(var(--card)) !important; }
-.leaflet-popup-content { font-family: 'Inter', system-ui, sans-serif !important; font-size: 0.875rem !important; margin: 0.75rem 1rem !important; }
-.leaflet-popup-close-button { color: hsl(var(--muted-foreground)) !important; }
-.leaflet-control-zoom a { background: hsl(var(--card)) !important; color: hsl(var(--foreground)) !important; border-color: hsl(var(--border)) !important; }
-.dark .leaflet-tile { filter: brightness(0.8) contrast(1.1) saturate(0.8); }
-.dark .leaflet-control-zoom a { background: hsl(var(--card)) !important; }
-
-/* Activity cards */
-.activity-card { background: hsl(var(--card) / 0.6); backdrop-filter: blur(12px); border: 1px solid hsl(var(--border) / 0.5); border-radius: calc(var(--radius) + 4px); padding: 1rem; transition: all 200ms; cursor: pointer; }
-.activity-card:hover { border-color: hsl(var(--primary) / 0.4); box-shadow: 0 8px 25px -5px hsl(var(--primary) / 0.1); transform: translateY(-2px); }
-.activity-card.highlighted { border-color: hsl(var(--primary) / 0.6); box-shadow: 0 0 0 2px hsl(var(--primary) / 0.15); }
-
-/* Sort bar */
-.activity-sort-btn { padding: 0.375rem 0.75rem; border-radius: 9999px; font-size: 0.8125rem; font-weight: 500; border: 1px solid transparent; background: transparent; color: hsl(var(--muted-foreground)); cursor: pointer; transition: all 150ms; }
-.activity-sort-btn:hover { color: hsl(var(--foreground)); }
-.activity-sort-btn.active { background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); border-color: hsl(var(--primary) / 0.3); }
-
-/* Score badge */
-.score-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 2.5rem; height: 1.5rem; padding: 0 0.375rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
-.score-high { background: hsl(142 71% 45% / 0.15); color: hsl(142 71% 35%); }
-.score-medium { background: hsl(48 96% 53% / 0.15); color: hsl(48 96% 35%); }
-.score-low { background: hsl(var(--muted)); color: hsl(var(--muted-foreground)); }
-
-/* Category badges */
-.cat-badge { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.125rem 0.5rem; border-radius: 9999px; font-size: 0.6875rem; font-weight: 500; }
-.cat-culture { background: hsl(270 40% 50% / 0.12); color: hsl(270 40% 45%); }
-.cat-nature { background: hsl(142 50% 45% / 0.12); color: hsl(142 50% 35%); }
-.cat-sport { background: hsl(210 70% 50% / 0.12); color: hsl(210 70% 40%); }
-.cat-divertissement { background: hsl(340 65% 55% / 0.12); color: hsl(340 65% 45%); }
-.cat-bienEtre { background: hsl(180 50% 45% / 0.12); color: hsl(180 50% 35%); }
-.cat-gastronomie { background: hsl(30 80% 50% / 0.12); color: hsl(30 80% 40%); }
-.cat-ateliers { background: hsl(48 80% 50% / 0.12); color: hsl(48 80% 35%); }
-
-/* Form section accordion */
-.form-section { border: 1px solid hsl(var(--border)); border-radius: calc(var(--radius) + 2px); overflow: hidden; }
-.form-section + .form-section { margin-top: 0.75rem; }
-.form-section-header { display: flex; align-items: center; justify-content: space-between; padding: 0.875rem 1rem; background: hsl(var(--card) / 0.5); cursor: pointer; user-select: none; transition: background 150ms; }
-.form-section-header:hover { background: hsl(var(--muted) / 0.5); }
-.form-section-header svg { transition: transform 200ms; }
-.form-section.open .form-section-header svg { transform: rotate(180deg); }
-.form-section-body { padding: 1rem; display: none; }
-.form-section.open .form-section-body { display: block; }
-
-/* Loading skeleton */
-.skeleton { background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--muted) / 0.5) 50%, hsl(var(--muted)) 75%); background-size: 200% 100%; animation: shimmer 1.5s ease-in-out infinite; border-radius: calc(var(--radius) - 2px); }
-
-/* ═══════════════════════════════════════════════════════════
-   ACTIVITIES PAGE, Full-page design
-   ═══════════════════════════════════════════════════════════ */
-
-/* Tool section */
-.act-tool { background: hsl(var(--muted)/0.3); padding: 64px 24px; }
-.act-tool-inner { max-width: 1400px; margin: 0 auto; }
-@media (max-width: 768px) { .act-tool { padding: 40px 16px; } }
-
-/* Quote blockquote */
-.act-quote { max-width: 720px; margin: 32px auto; padding: 20px 24px; background: hsl(var(--primary)/0.06); border-left: 4px solid hsl(var(--primary)); border-radius: 0 10px 10px 0; }
-.act-quote p { font-size: 17px; font-style: italic; color: hsl(var(--foreground)); margin: 0; line-height: 1.6; }
-
-/* Jalousie quiz encart */
-.jalousie-encart { background: hsl(var(--card) / 0.7); backdrop-filter: blur(16px); border: 1px solid hsl(var(--border) / 0.6); border-radius: 1.5rem; padding: 1.5rem; box-shadow: 0 20px 40px -10px rgb(0 0 0 / 0.08); }
-.jalousie-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem; }
-.jalousie-tab { display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1rem; border-radius: 0.75rem; border: 2px solid hsl(var(--border)); background: transparent; color: hsl(var(--muted-foreground)); font-weight: 600; font-size: 0.875rem; cursor: pointer; transition: all 0.25s ease; text-align: center; line-height: 1.3; }
-.jalousie-tab:hover { border-color: hsl(var(--primary) / 0.4); color: hsl(var(--foreground)); }
-.jalousie-tab.active { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); border-color: hsl(var(--primary)); box-shadow: 0 0 20px -4px hsl(var(--primary) / 0.4); }
-.jalousie-tab-icon { font-size: 1.25rem; flex-shrink: 0; }
-@media (max-width: 640px) {
-  .jalousie-encart { padding: 1rem; border-radius: 1rem; }
-  .jalousie-tab { padding: 0.75rem 0.5rem; font-size: 0.8rem; gap: 0.375rem; }
-}
-
 /* ── Ruban de la ligne de flottaison ───────────────────────
    Une bande pleine largeur et sombre qui coupe la page entre le hero et la
    grille : c'est elle qui apporte le contraste, tout le reste du bloc est
@@ -4375,6 +4228,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .quiz-section-quizzes { --bloc-accent: 270 45% 55%; }
 .quiz-section-jeux { --bloc-accent: 160 48% 40%; }
 .quiz-section-celib { --bloc-accent: var(--celib); }
+.quiz-section-speciaux { --bloc-accent: var(--speciaux); }
 @media (max-width: 640px) {
   .quiz-section-block { padding: 2rem .85rem 1.5rem; border-radius: 1.25rem; }
 }
@@ -4457,6 +4311,12 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
     0 22px 44px -14px hsl(var(--celib) / 0.28),
     0 8px 16px -4px rgba(0,0,0,0.06);
 }
+.quiz-bubble-card--speciaux:hover {
+  border-color: hsl(var(--speciaux) / 0.3);
+  box-shadow:
+    0 22px 44px -14px hsl(var(--speciaux) / 0.28),
+    0 8px 16px -4px rgba(0,0,0,0.06);
+}
 
 /* ── Card image banner ── */
 .quiz-bubble-media {
@@ -4523,6 +4383,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .quiz-bubble-cta svg { width: 0.875rem; height: 0.875rem; flex-shrink: 0; }
 .quiz-bubble-cta--quiz { color: hsl(var(--secondary)); }
 .quiz-bubble-cta--celib { color: hsl(var(--celib)); }
+.quiz-bubble-cta--speciaux { color: hsl(var(--speciaux-texte)); }
 .quiz-bubble-card:hover .quiz-bubble-cta { gap: 0.625rem; }
 .quiz-bubble-card--quiz:hover .quiz-bubble-cta--quiz { box-shadow: none; }
 
@@ -4653,6 +4514,7 @@ a.blog-banniere-visuel { display: block; text-decoration: none !important; }
 .suite-carte--quiz { --carte-accent: var(--secondary); --carte-texte: var(--secondary-texte); }
 .suite-carte--jeux { --carte-accent: 160 48% 40%; --carte-texte: 160 62% 26%; }
 .dark .suite-carte--jeux { --carte-texte: 160 50% 60%; }
+.suite-carte--speciaux { --carte-accent: var(--speciaux); --carte-texte: var(--speciaux-texte); }
 .lire-carte { --carte-accent: var(--secondary); --carte-texte: var(--secondary-texte); }
 .suite-carte:hover, .lire-carte:hover {
   transform: translateY(-4px);
@@ -7742,15 +7604,15 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   overflow-wrap: break-word;
   hyphens: manual;
 }
-/* Deux endroits font exception, parce qu'un mot y est plus large que la ligne
+/* Un endroit fait exception, parce qu'un mot y est plus large que la ligne
    entière : la couper reste le seul moyen de ne pas faire déborder la page, et
    autant qu'elle porte un trait d'union plutôt que de tomber en plein milieu
-   d'une lettre. Les composés allemands d'abord (« Datenschutzerklärung »
-   mesure 370 px pour 328 px disponibles à 360 px, et l'allemand coupe ses mots
-   par convention), les étiquettes des cartes de catégories ensuite, larges de
-   116 px pour « Entretenimiento ». La coupure suit le lang du document. */
-:lang(de) h1, :lang(de) h2, :lang(de) h3, :lang(de) h4,
-.cat-carte-titre { hyphens: auto; }
+   d'une lettre. Les composés allemands (« Datenschutzerklärung » mesure 370 px
+   pour 328 px disponibles à 360 px, et l'allemand coupe ses mots par
+   convention). La coupure suit le lang du document. Les étiquettes des cartes
+   de catégories de la page des activités, retirée le 17 octobre 2026, étaient
+   la seconde exception. */
+:lang(de) h1, :lang(de) h2, :lang(de) h3, :lang(de) h4 { hyphens: auto; }
 
 /* .btn force white-space: nowrap, ce qui fait sortir de l'écran les
    libellés longs (« Meinen Standort verwenden », « Commencer le quiz
@@ -8962,20 +8824,91 @@ h1, h2, h3, h4, .quiz-result-title, .duo-result-title {
   font-variant-numeric: tabular-nums;
 }
 
-/* Les points de « quand », « comment » et « pour qui » etaient des puces d'une
-   seule ligne, ce qui ne donne aucune structure a Google ni au lecteur. Ce
-   sont des sous-titres. */
-.qc-points { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 1.5rem; }
-.qc-point-titre {
-  font-size: 1.0625rem; font-weight: 700; color: hsl(var(--foreground));
-  margin: 0 0 0.375rem;
+/* ── Page « Questions pour couple » en hub (17 octobre 2026) ──────────
+   Le tirage au sort avec ses pastilles de theme, le curseur des listes de
+   questions du blog juste dessous (les cartes reprennent .lire-carte et le
+   curseur de l'accueil, quiz-slider.js), puis les situations, les jeux et
+   les conseils. */
+.qc-tirage { padding-top: 1.75rem; }
+.qc-tirage-themes {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem;
+  margin: 0 auto 1.4rem; max-width: 34rem;
 }
-.qc-point-texte { color: hsl(var(--muted-foreground)); line-height: 1.75; margin: 0; }
-.qc-conclusion {
-  border-radius: 1.25rem; padding: 1.5rem 1.75rem;
-  border: 1px solid hsl(var(--primary) / 0.2); background: hsl(var(--primary) / 0.05);
+.qc-tirage-theme {
+  padding: .4rem .85rem; border-radius: 999px;
+  border: 1.5px solid hsl(var(--primary) / .3); background: transparent;
+  font-size: .8125rem; font-weight: 700; line-height: 1.2;
+  color: hsl(var(--primary-texte)); cursor: pointer;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
 }
-.qc-conclusion p { color: hsl(var(--foreground)); line-height: 1.75; margin: 0; }
+.qc-tirage-theme:hover { border-color: hsl(var(--primary)); }
+.qc-tirage-theme[aria-pressed="true"] { background: hsl(var(--primary)); border-color: hsl(var(--primary)); color: #fff; }
+.qc-tirage-theme:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 2px; }
+.qc-tirage-etiquette {
+  margin: 0 0 .5rem; min-height: 1.1rem;
+  font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: hsl(var(--secondary-texte));
+}
+.qc-tirage-question { min-height: 4.2em; display: flex; align-items: center; justify-content: center; }
+
+.qc-listes { --bloc-accent: var(--secondary); padding-top: .5rem; }
+.qc-listes .bloc-titre { font-size: clamp(1.45rem, 4vw, 2rem); }
+.qc-listes .quiz-slide { flex: 0 0 auto; }
+@media (min-width: 1200px) { .qc-listes .quiz-slide { width: 31%; } }
+.qc-liste-tag {
+  font-size: .68rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  color: hsl(var(--carte-texte)); margin-bottom: .35rem;
+}
+
+.qc-situations { display: flex; flex-direction: column; gap: 2rem; }
+.qc-situation-titre {
+  font-size: 1.1875rem; font-weight: 700; color: hsl(var(--foreground));
+  padding-left: .75rem; border-left: 4px solid hsl(var(--secondary));
+  margin: 0 0 .6rem;
+}
+.qc-situation-texte { color: hsl(var(--muted-foreground)); line-height: 1.75; margin: 0 0 .8rem; }
+.qc-exemples { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+.qc-exemples li {
+  position: relative; padding: .65rem .9rem .65rem 2.4rem;
+  border-radius: .9rem; background: hsl(var(--secondary) / .07);
+  color: hsl(var(--foreground)); line-height: 1.55; font-size: .9688rem;
+}
+.qc-exemples li::before {
+  content: '?'; position: absolute; left: .75rem; top: .84rem;
+  display: grid; place-items: center; width: 1.15rem; height: 1.15rem; border-radius: 50%;
+  background: hsl(var(--secondary)); color: #fff; font-size: .72rem; font-weight: 800; line-height: 1;
+}
+
+.qc-jeux { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; }
+.qc-jeu {
+  display: flex; flex-direction: column; gap: .35rem;
+  padding: 1rem 1.1rem; border-radius: 1rem;
+  border: 1px solid hsl(var(--border) / .8); background: hsl(var(--card));
+  color: hsl(var(--foreground)); text-decoration: none;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+/* Dans l'article, les liens sont soulignés en rose (.seo-content a) : la carte entière ne doit pas l'être */
+.seo-content a.qc-jeu, .seo-content a.qc-jeu:hover { color: hsl(var(--foreground)); text-decoration: none; }
+.qc-jeu:hover { transform: translateY(-3px); border-color: hsl(var(--primary) / .45); box-shadow: 0 14px 28px -16px hsl(var(--primary) / .55); }
+.qc-jeu:focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 3px; }
+.qc-jeu-nom { font-family: var(--font-display); font-weight: 700; font-size: 1.0625rem; line-height: 1.3; }
+.qc-jeu-texte { font-size: .875rem; line-height: 1.55; color: hsl(var(--muted-foreground)); }
+.qc-jeu-cta {
+  display: inline-flex; align-items: center; gap: .35rem; margin-top: auto; padding-top: .4rem;
+  font-size: .85rem; font-weight: 700; color: hsl(var(--primary-texte));
+}
+.qc-jeu-cta svg { width: 1rem; height: 1rem; transition: transform .2s ease; }
+.qc-jeu:hover .qc-jeu-cta svg { transform: translateX(3px); }
+@media (max-width: 639.98px) { .qc-jeux { grid-template-columns: minmax(0, 1fr); } }
+
+.qc-conseils { margin: 0; padding: 0 0 0 1.2rem; display: flex; flex-direction: column; gap: .8rem; }
+.qc-conseils li { color: hsl(var(--muted-foreground)); line-height: 1.75; }
+.qc-conseils li::marker { color: hsl(var(--primary)); }
+.qc-conseils strong { color: hsl(var(--foreground)); }
+@media (prefers-reduced-motion: reduce) {
+  .qc-jeu, .qc-jeu-cta svg, .qc-tirage-theme { transition: none; }
+  .qc-jeu:hover { transform: none; }
+}
 
 /* ── Bannière partenaire (écrans de fin coquin et action ou vérité hot) ──
    Une bannière, pas un bouton posé sur un aplat : visuel de la marque à
@@ -12668,6 +12601,177 @@ body { padding-bottom: var(--pub-footer, 0px); }
 }
 .salon-detail .quiz-setup-grid { max-width: 22rem; }
 
+/* ═══════════════════════════════════════════════════════════════════
+   QUIZ SPÉCIAUX DE SAISON (16 octobre 2026) : le hub, le moteur des
+   portraits (serial killer, super-vilain, duo de vilains) et celui de la
+   survie (qui meurt en premier, qui pourrait se faire posséder). Les
+   écrans de départ et les questions reprennent les classes communes du
+   moteur ; ici, seulement ce qui leur est propre.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Le hub : une section par saison, la saison du moment en tête. */
+.spx-saison { margin-bottom: 3.5rem; }
+.spx-saison:last-child { margin-bottom: 0; }
+.spx-pastille {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  margin-bottom: 0.875rem; padding: 0.3rem 0.85rem; border-radius: 999px;
+  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+  background: hsl(var(--muted)); border: 1px solid hsl(var(--border));
+}
+.spx-pastille--en-cours {
+  color: hsl(var(--speciaux-texte));
+  background: hsl(var(--speciaux) / 0.1); border-color: hsl(var(--speciaux) / 0.35);
+}
+.spx-pastille--en-cours::before {
+  content: ''; width: 0.5rem; height: 0.5rem; border-radius: 50%;
+  background: hsl(var(--speciaux)); box-shadow: 0 0 0 3px hsl(var(--speciaux) / 0.25);
+}
+.spx-pastille--bientot { border-style: dashed; }
+/* Cinq cartes : trois puis deux au-dessus de 1100 px, le tableau des jeux
+   en met quatre par rangée et laissait la cinquième seule. */
+@media (min-width: 1100px) { .spx-board { grid-template-columns: repeat(3, 1fr); max-width: 62rem; } }
+.spx-carte .jeu-card-visuel::after {
+  background: linear-gradient(to top, hsl(var(--card)) 2%, hsl(var(--jeu-accent) / 0.22) 50%, hsl(270 40% 12% / 0.25) 100%);
+}
+
+/* Les questions : la ligne de situation au-dessus de la question. */
+.port-question-sur, .surv-situation {
+  max-width: 34rem; margin: 0 auto 0.75rem; padding: 0.6rem 0.9rem;
+  border-radius: var(--radius); text-align: center;
+  font-size: 0.9rem; line-height: 1.45; font-style: italic;
+  color: hsl(var(--muted-foreground));
+  background: hsl(var(--muted) / 0.6); border: 1px dashed hsl(var(--border));
+}
+.port-avert {
+  max-width: 30rem; margin: 0 auto 1.25rem; font-size: 0.85rem; line-height: 1.45;
+  text-align: center; color: hsl(var(--muted-foreground));
+}
+
+/* Le portrait : image carrée au-dessus, texte dessous ; en duo sans table
+   de duos, deux cartes côte à côte, teintées comme les personnages. */
+.port-resultat, .surv-resultat { padding-left: 1.25rem; padding-right: 1.25rem; }
+.port-noms { margin: 0 0 0.5rem; font-size: 0.9rem; font-weight: 700; color: hsl(var(--muted-foreground)); }
+.port-carte {
+  --port-accent: var(--speciaux);
+  position: relative; display: flex; flex-direction: column;
+  max-width: 30rem; margin: 0 auto; overflow: hidden; text-align: left;
+  border-radius: calc(var(--radius) + 0.25rem);
+  background: hsl(var(--card)); border: 1px solid hsl(var(--port-accent) / 0.3);
+  box-shadow: 0 24px 48px -24px hsl(var(--port-accent) / 0.55);
+}
+.port-carte--rose { --port-accent: var(--primary); }
+.port-carte--violet { --port-accent: var(--secondary); }
+.port-image { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: hsl(270 30% 14%); }
+.port-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.port-image::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, hsl(var(--card)) 0%, transparent 28%);
+}
+.port-corps { position: relative; padding: 0.75rem 1.25rem 1.25rem; }
+.port-etiquette {
+  margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 800;
+  letter-spacing: 0.06em; text-transform: uppercase; color: hsl(var(--muted-foreground));
+}
+.port-etiquette b { text-transform: none; letter-spacing: 0; font-size: 0.85rem; }
+.port-titre {
+  margin: 0 0 0.5rem; font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.6rem; line-height: 1.15; font-weight: 800; color: hsl(var(--foreground));
+}
+.port-titre--petit { font-size: 1.25rem; }
+.port-desc { margin: 0; font-size: 0.95rem; line-height: 1.55; color: hsl(var(--muted-foreground)); }
+.port-conseil {
+  max-width: 30rem; margin: 1rem auto 0; padding: 0.875rem 1rem; text-align: left;
+  border-radius: var(--radius); font-size: 0.92rem; line-height: 1.5;
+  background: hsl(var(--primary) / 0.07); border: 1px solid hsl(var(--primary) / 0.25);
+}
+.port-carte .port-conseil { margin-left: 0; margin-right: 0; }
+.port-conseil strong { display: block; margin-bottom: 0.25rem; font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; color: hsl(var(--primary-texte)); }
+.port-bloc-titre { margin: 0 0 0.75rem; font-size: 1.05rem; font-weight: 800; text-align: center; }
+.port-jauges { max-width: 30rem; margin: 1.5rem auto 0; text-align: left; }
+.port-jauge { margin-bottom: 0.75rem; }
+.port-jauge-tete { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.3rem; font-size: 0.9rem; font-weight: 700; }
+.port-jauge-pct { color: hsl(var(--speciaux-texte)); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.port-jauge-piste { height: 0.6rem; border-radius: 999px; background: hsl(var(--muted)); overflow: hidden; }
+.port-jauge-plein { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, hsl(var(--speciaux)), hsl(var(--primary))); }
+/* Les deux rôles sous la carte du duo. */
+.port-roles { display: grid; gap: 0.75rem; max-width: 34rem; margin: 1.25rem auto 0; text-align: left; }
+.port-role {
+  --port-accent: var(--primary);
+  padding: 0.875rem 1rem; border-radius: var(--radius);
+  background: hsl(var(--port-accent) / 0.07); border: 1px solid hsl(var(--port-accent) / 0.3);
+}
+.port-role--violet { --port-accent: var(--secondary); }
+.port-role-nom { margin: 0; font-size: 0.8rem; font-weight: 600; color: hsl(var(--muted-foreground)); }
+.port-role-titre { margin: 0.125rem 0 0.375rem; font-size: 1.1rem; font-weight: 800; }
+.port-role-desc { margin: 0; font-size: 0.9rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+.port-nom--rose, .surv-carte--rose .surv-carte-valeur { color: hsl(var(--primary-texte)); }
+.port-nom--violet, .surv-carte--violet .surv-carte-valeur { color: hsl(var(--secondary-texte)); }
+.port-deux { display: grid; gap: 1rem; max-width: 40rem; margin: 0 auto; }
+.port-deux .port-carte { max-width: none; margin: 0; }
+.port-bilan { max-width: 34rem; margin: 1.25rem auto 0; font-size: 0.95rem; line-height: 1.5; }
+.port-note { max-width: 34rem; margin: 1.25rem auto 0; font-size: 0.8rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+@media (min-width: 640px) {
+  .port-roles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .port-deux { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* La survie : la grande valeur, la ligne du temps du film (ou la jauge du
+   risque) avec la mascotte de chacun posée à sa valeur. */
+.surv-libelle { margin: 0 0 0.25rem; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: hsl(var(--muted-foreground)); }
+.surv-grand { margin: 0 0 0.5rem; }
+.surv-valeur {
+  display: inline-block; font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: clamp(2.4rem, 9vw, 3.6rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em;
+  background: linear-gradient(135deg, hsl(var(--speciaux)), hsl(var(--primary)));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.surv-ligne { max-width: 34rem; margin: 0 auto; padding: 3.75rem 1.5rem 2.25rem; }
+.surv-piste { position: relative; height: 0.75rem; border-radius: 999px; background: linear-gradient(90deg, hsl(142 55% 45%), hsl(38 90% 55%) 55%, hsl(0 70% 50%)); }
+.surv-ligne--pourcent .surv-piste { background: linear-gradient(90deg, hsl(142 55% 45%), hsl(38 90% 55%) 50%, hsl(292 55% 45%)); }
+.surv-graduation { position: absolute; top: 100%; transform: translateX(-50%); display: grid; justify-items: center; gap: 0.2rem; }
+.surv-graduation i { display: block; width: 2px; height: 0.4rem; background: hsl(var(--border)); }
+.surv-graduation b { font-size: 0.7rem; font-weight: 600; color: hsl(var(--muted-foreground)); white-space: nowrap; }
+.surv-repere { position: absolute; bottom: 100%; transform: translateX(-50%); display: grid; justify-items: center; margin-bottom: 0.2rem; }
+.surv-repere svg { width: 2.75rem; height: 2.75rem; display: block; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25)); }
+.surv-repere i { display: block; width: 1rem; height: 1rem; border-radius: 50%; background: hsl(var(--primary)); border: 3px solid hsl(var(--card)); }
+.surv-repere--violet i { background: hsl(var(--secondary)); }
+.surv-repere em { max-width: 6rem; font-style: normal; font-size: 0.72rem; font-weight: 700; line-height: 1.2; text-align: center; color: hsl(var(--primary-texte)); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.surv-repere--violet em { color: hsl(var(--secondary-texte)); }
+/* Deux joueurs : le second passe sous la piste pour qu'ils ne se chevauchent pas. */
+.surv-repere--bas { bottom: auto; top: 100%; margin: 0.9rem 0 0; }
+.surv-repere--bas svg { order: 2; }
+.surv-ligne:has(.surv-repere--bas) { padding-bottom: 4.5rem; }
+.surv-ligne:has(.surv-repere--bas) .surv-graduation b { display: none; }
+.surv-pistes { display: grid; gap: 0.75rem; max-width: 34rem; margin: 1.5rem auto 0; text-align: left; }
+.surv-piste-bloc { padding: 0.875rem 1rem; border-radius: var(--radius); border: 1px solid hsl(var(--border)); background: hsl(var(--card)); }
+.surv-piste-bloc .port-bloc-titre { text-align: left; font-size: 0.95rem; }
+.surv-piste-bloc--pour { border-color: hsl(142 50% 42% / 0.4); background: hsl(142 60% 45% / 0.07); }
+.surv-piste-bloc--contre { border-color: hsl(0 60% 50% / 0.35); background: hsl(0 70% 50% / 0.06); }
+.surv-faits { display: grid; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.surv-faits li { display: grid; gap: 0.125rem; padding-left: 0.75rem; border-left: 3px solid hsl(var(--border)); }
+.surv-piste-bloc--pour .surv-faits li { border-left-color: hsl(142 60% 40%); }
+.surv-piste-bloc--contre .surv-faits li { border-left-color: hsl(0 65% 50%); }
+.surv-fait-q { font-size: 0.85rem; font-weight: 700; line-height: 1.35; }
+.surv-fait-r { font-size: 0.85rem; line-height: 1.35; color: hsl(var(--muted-foreground)); }
+.surv-deux { display: grid; gap: 0.75rem; max-width: 34rem; margin: 1.25rem auto 0; text-align: left; }
+.surv-carte {
+  --port-accent: var(--primary);
+  padding: 0.875rem 1rem; border-radius: var(--radius);
+  background: hsl(var(--port-accent) / 0.07); border: 1px solid hsl(var(--port-accent) / 0.3);
+}
+.surv-carte--violet { --port-accent: var(--secondary); }
+.surv-carte-nom { margin: 0; font-size: 0.85rem; font-weight: 700; }
+.surv-carte-valeur { margin: 0.125rem 0 0.25rem; font-size: 1.6rem; font-weight: 800; line-height: 1.1; }
+.surv-carte-titre { margin: 0 0 0.25rem; font-size: 1rem; font-weight: 800; }
+.surv-carte-desc { margin: 0; font-size: 0.88rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.surv-ecarts { max-width: 34rem; margin: 1.5rem auto 0; text-align: left; }
+@media (min-width: 640px) {
+  .surv-pistes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .surv-deux { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.dark .port-image { background: hsl(270 30% 10%); }
+.dark .surv-repere svg { filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.6)); }
 
 /* ═══════════════════════════════════════════════════════════════════
    Téléphone : les animations infinies qui repeignent à chaque image
