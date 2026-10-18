@@ -333,6 +333,36 @@ export const GA_ID = 'G-XZV8V6FEK5';
 export const BILAN_OUVERT = process.env.QC_BILAN === 'ouvert' ? true
   : process.env.QC_BILAN === 'ferme' ? false
   : false;
+// Les pages qui envoient vers le bilan, une fois ouvert : l'encart sous le
+// verdict (encartBilan, quiz-engine-core.js) et la bannière au-dessus des
+// cartes « À faire ensuite » (related-tests.ejs). Le groupe choisit le texte :
+// `score`, un test fait à deux qui rend un chiffre ou un profil ; `projet`,
+// avant une grande étape ; `doute`, quand on se pose des questions sur son
+// couple. L'identifiant part dans l'adresse (?src=resultat-<id> ou
+// ?src=bas-<id>) et se lit dans l'onglet Bilan de l'admin. Jamais les pages
+// d'emprise, de violence, de manipulation ou d'infidélité : le bilan montre à
+// chacun les réponses de l'autre.
+export const BILAN_ENTREES = {
+  testCouple: { groupe: 'score', id: 'tester-couple' },
+  testCompatibilite: { groupe: 'score', id: 'compatibilite' },
+  testCommonPoints: { groupe: 'score', id: 'points-communs' },
+  quizAmoureux: { groupe: 'score', id: 'amoureux' },
+  quizTypeCouple: { groupe: 'score', id: 'type-couple' },
+  testCompatSexuelle: { groupe: 'score', id: 'compat-sexuelle' },
+  testLangageAmour: { groupe: 'score', id: 'langage-amour' },
+  testEmmenager: { groupe: 'projet', id: 'emmenager' },
+  testMariage: { groupe: 'projet', id: 'mariage' },
+  testParentalite: { groupe: 'projet', id: 'parentalite' },
+  testEstCeLeBon: { groupe: 'projet', id: 'est-ce-le-bon' },
+  testFinCouple: { groupe: 'doute', id: 'fin-couple' },
+  testCoupleSain: { groupe: 'doute', id: 'couple-sain' },
+  testChargeMentale: { groupe: 'doute', id: 'charge-mentale' },
+  testDistance: { groupe: 'doute', id: 'distance' },
+  testDivorce: { groupe: 'doute', id: 'divorce' },
+  testConfiance: { groupe: 'doute', id: 'confiance' },
+  testAmourHabitude: { groupe: 'doute', id: 'amour-habitude' },
+  testJeLaimeEncore: { groupe: 'doute', id: 'je-l-aime-encore' },
+};
 // Les mentions obligatoires d'un vendeur (mentions légales et conditions de
 // vente). Un champ vide n'est pas affiché. Le médiateur de la consommation
 // est obligatoire dès qu'on vend à des particuliers (art. L612-1 du Code de

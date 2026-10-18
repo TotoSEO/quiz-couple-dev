@@ -29,7 +29,7 @@ const TOKEN_MAX_AGE = 86400; // 24 heures, comme les autres fonctions admin-*
 // Les seules fonctions qu'on peut lire par ici : celles de l'admin (onglets
 // Trafic, Parties, À distance, Réseaux, Bilan, et l'export).
 const FONCTIONS = new Set([
-  'get_bilan_stats',
+  'get_bilan_tableau',
   'get_instagram_clics',
   'get_quiz_counts',
   'get_quiz_daily',

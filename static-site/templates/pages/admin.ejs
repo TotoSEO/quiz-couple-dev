@@ -379,35 +379,112 @@
           </div>
         </div>
 
-        <%# Le bilan de couple payant : l'entonnoir sur trente jours (get_bilan_stats, par admin-stats). %>
+        <%# Le bilan de couple payant (get_bilan_tableau, par admin-stats) : la page, l'entonnoir, les ventes, les abandons par domaine, les sources, les rapports PDF. Les identifiants sont le contrat de loadBilan (admin.js). %>
         <div id="admin-bilan-tab" class="hidden">
-          <p class="adm-note">Chaque étape est comptée le jour où elle arrive (heure de Paris), même si le bilan a été supprimé depuis. Le chiffre d'affaires est celui des paiements confirmés, avant les frais de Stripe et sans les remboursements, qui se lisent dans Stripe.</p>
+          <div class="stats-comp stats-comp--periode" id="admin-bilan-periode" role="group" aria-label="Période">
+            <button class="stats-comp-btn" data-bilan-jours="7" type="button">7 j</button>
+            <button class="stats-comp-btn active" data-bilan-jours="30" type="button">30 j</button>
+            <button class="stats-comp-btn" data-bilan-jours="90" type="button">90 j</button>
+            <button class="stats-comp-btn" data-bilan-jours="365" type="button">1 an</button>
+          </div>
+          <p class="adm-note" id="admin-bilan-note">Chaque étape est comptée le jour où elle arrive (heure de Paris), même si le bilan a été supprimé depuis. Les visites ne comptent ni vos propres passages (drapeau posé à la connexion à l'admin) ni les robots. Le chiffre d'affaires est celui des paiements confirmés, avant les frais de Stripe.</p>
           <div class="stats-tetes">
             <div class="stats-tete stats-tete--lances">
-              <p class="stats-tete-titre">Bilans créés</p>
-              <p class="stats-tete-jour" id="admin-bilan-crees">-</p>
-              <p class="stats-tete-sub" id="admin-bilan-rejoints">sur trente jours</p>
+              <p class="stats-tete-titre">Visites de la page</p>
+              <p class="stats-tete-jour" id="admin-bilan-vues">-</p>
+              <p class="stats-tete-sub" id="admin-bilan-vues-sub">&nbsp;</p>
             </div>
             <div class="stats-tete stats-tete--finis">
-              <p class="stats-tete-titre">Finis à deux</p>
-              <p class="stats-tete-jour" id="admin-bilan-finis">-</p>
-              <p class="stats-tete-sub" id="admin-bilan-finis-part">des bilans créés</p>
+              <p class="stats-tete-titre">Bilans démarrés</p>
+              <p class="stats-tete-jour" id="admin-bilan-crees">-</p>
+              <p class="stats-tete-sub" id="admin-bilan-crees-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--ventes">
+              <p class="stats-tete-titre">Ventes</p>
+              <p class="stats-tete-jour" id="admin-bilan-payes">-</p>
+              <p class="stats-tete-sub" id="admin-bilan-ca">&nbsp;</p>
+              <p class="stats-tete-total" id="admin-bilan-total"></p>
             </div>
             <div class="stats-tete stats-tete--ratio">
-              <p class="stats-tete-titre">Rapports payés</p>
-              <p class="stats-tete-jour" id="admin-bilan-payes">-</p>
-              <p class="stats-tete-sub" id="admin-bilan-ca">chiffre d'affaires</p>
+              <p class="stats-tete-titre">Taux de conversion</p>
+              <p class="stats-tete-jour" id="admin-bilan-conversion">-</p>
+              <p class="stats-tete-sub" id="admin-bilan-conversion-sub">des visites de la page finissent en vente</p>
             </div>
           </div>
+
           <div class="stats-panel">
             <div class="stats-panel-head">
               <div>
-                <h2 class="stats-panel-title">Jour par jour</h2>
-                <p class="stats-panel-sub">Créés : un bilan lancé par quelqu'un. Rejoints : le partenaire a ouvert l'invitation et accepté. Un fini : le premier des deux a terminé. Finis à deux : le résultat gratuit est disponible. Paiements ouverts : quelqu'un a cliqué sur « Débloquer » et coché la renonciation. Payés : paiement confirmé par Stripe.</p>
+                <h2 class="stats-panel-title">Ventes par jour</h2>
+                <p class="stats-panel-sub">Le nombre de rapports payés chaque jour ; le chiffre d'affaires de la période est sur la vignette. Les bilans démarrés et les visites de la page s'affichent d'un clic sur leur vignette.</p>
               </div>
             </div>
-            <div id="admin-bilan-list" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+            <div class="stats-legende" id="admin-bilan-legende" role="group" aria-label="Courbes affichées"></div>
+            <canvas id="admin-bilan-chart" class="stats-canvas adm-canvas--hero"></canvas>
           </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">L'entonnoir</h2>
+                <p class="stats-panel-sub">De la visite au paiement, sur la période. La barre se lit en part des visites ; le pourcentage de droite est celui de l'étape d'avant. Les étapes ne se suivent pas toujours dans cet ordre : le partenaire peut rejoindre avant que le premier ait fini, et on peut payer dès qu'on a fini ses propres réponses.</p>
+              </div>
+            </div>
+            <div id="admin-bilan-entonnoir" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Où les gens s'arrêtent</h2>
+                <p class="stats-panel-sub">Les douze domaines dans l'ordre des questions. Entrés : personnes qui ont répondu à au moins une question du domaine ; finis : à toutes. Bloqués : personnes qui n'ont plus rien fait depuis 24 heures et dont c'est le premier domaine non fini (bilans créés sur la période).</p>
+              </div>
+            </div>
+            <div id="admin-bilan-domaines" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">D'où viennent les visites</h2>
+                <p class="stats-panel-sub">La source est posée par le lien qui mène à la page : l'encart sous le résultat d'un test (« Résultat »), la bannière du bas de page (« Bas de page »), le menu, l'accueil, le pied de page. « Direct » : sans source (Google, lien partagé, adresse tapée).</p>
+              </div>
+            </div>
+            <div id="admin-bilan-sources" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Délais et rapports PDF</h2>
+                <p class="stats-panel-sub">Médianes sur les bilans créés pendant la période. Les rapports sont fabriqués par le workflow bilan-rapport.yml et partent par e-mail ; un rapport en erreur n'est jamais envoyé.</p>
+              </div>
+            </div>
+            <div id="admin-bilan-delais" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Payés, en attente du partenaire</h2>
+                <p class="stats-panel-sub">Rapports réglés dont l'un des deux n'a pas fini ses réponses : la personne qui a payé peut relancer son partenaire depuis sa page. Au-delà de quatorze jours, un remboursement se fait depuis Stripe.</p>
+              </div>
+            </div>
+            <div id="admin-bilan-attente" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+
+          <details class="stats-details">
+            <summary>
+              <span>
+                <span class="stats-details-titre">Jour par jour</span>
+                <span class="stats-details-sub">Toutes les étapes, chaque jour de la période</span>
+              </span>
+              <svg class="stats-details-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="stats-details-corps">
+              <div id="admin-bilan-list" class="stats-list"></div>
+            </div>
+          </details>
         </div>
 
         <!-- ═══ Avis ═══ -->

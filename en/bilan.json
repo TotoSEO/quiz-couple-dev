@@ -1,11 +1,4 @@
 {
-  "hero": {
-    "badge": "Couple check-up",
-    "title": "The couple check-up, done separately by each of you",
-    "highlight": "couple check-up",
-    "description": "About 90 concrete questions about life together: money, children, where to live, family, fidelity, intimacy... Each of you answers on your own phone without seeing the other's answers, then you find out where you agree and where you don't.",
-    "prix": "Answering is free, and so is your overall result. The full report costs {{prix}} for both of you."
-  },
   "jsonLd": {
     "name": "Couple check-up",
     "about": "Couple check-up"
@@ -13,25 +6,23 @@
   "app": {
     "chargement": "Loading...",
     "accueil": {
-      "titre": "Take stock, each on your own side",
-      "etapes": [
-        "You each answer on your own phone, without seeing the other's answers. Allow 20 to 25 minutes, in one go or in several.",
-        "When you've both finished, you see your result for free: your overall agreement, each area, and one of your gaps in full.",
-        "The full report ({{prix}} for both of you, paid once) shows all your gaps with both your answers, and how to talk about them."
-      ],
-      "commencer": "Start our check-up",
-      "enCours": "Your check-ups on this device",
+      "titre": "Your check-ups on this device",
       "avec": "With {{autre}}",
       "progression": "{{n}} questions out of {{total}}",
       "invite": "Invitation not accepted yet",
       "fini": "Your answers are sent",
-      "resultat": "Result available",
+      "resultat": "Report available",
       "reprendre": "Continue",
-      "voir": "See the result",
+      "voir": "See the report",
       "oublier": "Remove from this device",
       "oublierConfirmer": "Confirm: remove from here",
       "oublierAide": "The check-up isn't deleted, it just disappears from this device. Keep your personal link to find it again.",
-      "violence": "This check-up shows each of you the other's answers. If you're afraid of your partner, it isn't made for your situation: in the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, 24/7, and in the US the National Domestic Violence Hotline (1-800-799-7233)."
+      "violence": "This check-up shows each of you the other's answers. If you're afraid of your partner, it isn't made for your situation: in the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, 24/7, and in the US the National Domestic Violence Hotline (1-800-799-7233).",
+      "nouveau": "Start a new check-up",
+      "pret": "Ready: the report just needs unlocking",
+      "reprise": "You have a check-up in progress with {{autre}}.",
+      "repriseRapport": "Your report with {{autre}} is available.",
+      "quitter": "Back"
     },
     "creation": {
       "titre": "Your check-up",
@@ -50,8 +41,8 @@
       "accordTitre": "Before you start",
       "majeur": "I'm 18 or over.",
       "consentement": "I agree that my answers are saved for this check-up, including on intimate topics (sex life, religion, opinions), and that {{autre}} sees them in the report.",
-      "accordAide": "Your check-up is kept for 60 days after your last answer if it isn't paid for, and six months after payment if it is, and either of you can delete it at any time. No account, no email address.",
-      "prixRappel": "Answering is free. The full report costs {{prix}} for both of you, only if you want it, once you've both finished.",
+      "accordAide": "Your check-up is kept for 60 days after your last answer if it isn't paid for, and six months after payment if it is, and either of you can delete it at any time. No account to create.",
+      "prixRappel": "The questions are free. The full report costs {{prix}} for both of you: you unlock it once you've finished your answers.",
       "suivant": "Next",
       "retour": "Back",
       "creer": "Create our check-up",
@@ -77,14 +68,15 @@
     },
     "rejoindre": {
       "titre": "{{autre}} would like you to do your couple check-up together",
-      "texte": "About 90 concrete questions about your life together. You answer on your side without seeing {{autre}}'s answers, and the other way round. When you've both finished, you find out together where you agree and where you don't.",
-      "duree": "Allow 20 to 25 minutes. You can take a break whenever you like, everything is saved.",
+      "texte": "About a hundred concrete questions about your life together. You answer on your side, without seeing {{autre}}'s answers, and the other way round. When you've both finished, your report puts your two answers side by side, topic by topic.",
+      "duree": "Allow 25 to 30 minutes. You can take a break whenever you like, everything is saved.",
       "situationTitre": "Your situation, as {{autre}} described it",
       "situationCorriger": "Correct",
       "prenom": "Your first name",
       "genre": "You are",
       "commencer": "I agree, let's start",
-      "lienUtilise": "This invitation link has already been used. If it was you, open your personal link, or come back to this page from the phone you started on."
+      "lienUtilise": "This invitation link has already been used. If it was you, open your personal link, or come back to this page from the phone you started on.",
+      "paye": "Good news: {{autre}} has already paid for the report for both of you. It'll open as soon as you've finished your answers."
     },
     "domaine": {
       "partie": "Part {{n}} of {{total}}",
@@ -112,33 +104,44 @@
     },
     "attente": {
       "titre": "You're done!",
-      "texte": "Your answers are saved. The result will open as soon as {{autre}} has finished.",
+      "texte": "Your answers are saved. Your report will be ready as soon as {{autre}} has finished theirs.",
       "autreProgression": "{{autre}}: {{n}} questions out of {{total}}",
       "autrePasRejoint": "{{autre}} hasn't opened the invitation yet.",
       "renvoyer": "Send the invitation again",
       "revoir": "Review my answers",
       "revoirAide": "You can still change your answers until {{autre}} has finished.",
       "maj": "This page updates by itself.",
-      "accueil": "Back to my check-ups"
+      "accueil": "Back",
+      "payeTitre": "Your report is paid for",
+      "payeTexte": "Thank you! It'll open here and go out by email as soon as {{autre}} has finished their answers.",
+      "relance": "Send {{autre}} a little reminder",
+      "relanceMessage": "I've finished my answers for our couple check-up, I'm waiting for you! You'll pick up where you left off, on your phone."
     },
     "paywall": {
-      "titre": "The full report",
-      "intro": "Everything your two sets of answers say, topic by topic, with what you need to talk about them.",
+      "titre": "Your full report",
+      "titrePret": "Your report is waiting for you",
+      "introAttente": "You can unlock it right now: it'll open here, and go out by email, as soon as {{autre}} has finished.",
+      "introPret": "Both your sets of answers are ready. There's just one step left to find out what they say about your relationship.",
+      "apercu": "Extract from a sample report (fictional couple)",
       "contenu": [
+        "Your alignment and the climate of your relationship, at a glance",
+        "The map of your twelve areas, from money to children",
         "Your next four conversations, in the order to have them",
         "All your gaps, with both your answers side by side",
-        "For each gap: why the topic matters, two questions to talk about it, and what's best not to say",
-        "Your sticking points and what's non-negotiable for each of you",
-        "The topics where each of you thinks they do more than the other",
-        "What brings you together",
-        "Your relationship forecast, question by question",
-        "The report to print or keep as a PDF"
+        "For each gap: why it matters, questions to talk about it and what's best avoided",
+        "Your warning signs in arguments",
+        "Who does what at home, as each of you sees it",
+        "A PDF of around thirty pages by email, and the report online for six months"
       ],
       "prix": "{{prix}} for both of you",
-      "prixAide": "A single payment, by either of you, unlocks the report for both of you. No subscription.",
-      "renonciation": "I request immediate access to the report and acknowledge that I lose my right of withdrawal once the report is unlocked.",
+      "prixAide": "A single payment, and {{autre}} won't have anything to pay. No subscription.",
+      "emailLabel": "Where should we send the report?",
+      "emailPlaceholder": "you@email.com",
+      "emailAide": "The PDF will go to this address as soon as you've both finished. It isn't used for anything else.",
+      "emailFaux": "This address doesn't look valid.",
+      "renonciation": "I ask to receive the report as soon as it is ready and acknowledge that I lose my right of withdrawal once the report has been provided.",
       "renonciationManque": "Tick the box to continue.",
-      "bouton": "Unlock the report: {{prix}}",
+      "bouton": "Unlock our report · {{prix}}",
       "garantie": "Money back if you're not satisfied, within {{jours}} days: a message from the contact page is enough.",
       "securite": "Secure payment by Stripe (card, Apple Pay, Google Pay). We never see your card.",
       "cgv": "Terms of sale",
@@ -148,7 +151,7 @@
     },
     "paiement": {
       "verification": "Checking the payment...",
-      "ok": "Payment confirmed, thank you! Here's your report.",
+      "ok": "Payment confirmed, thank you!",
       "attente": "The payment isn't confirmed yet. It can take a few seconds...",
       "annule": "The payment was cancelled. Your check-up is still here.",
       "erreur": "We can't check the payment right now. If you've paid, reload the page in a minute."
@@ -371,78 +374,304 @@
       "h": "A man"
     }
   },
-  "section1": {
-    "title": "What is a couple check-up?",
-    "p1": "A couple check-up is a questionnaire that both partners fill in separately, so they can compare their answers afterwards. It doesn't measure personality compatibility: it looks at whether you want the same life. For example: \"Having children: yes, definitely, yes, probably, I don't know yet, or no\". If one of you answers \"yes, definitely\" and the other \"no\", that's a gap, and it's the kind of gap you'd better know about early!",
-    "p2": "Couples counsellors have used this kind of questionnaire for a long time, especially before a wedding. This one is done without a counsellor, on your phone, and takes 20 to 25 minutes each. It asks very concrete questions: a joint account or not, whose family at Christmas, city or countryside, phones at the table, or what each of you calls cheating.",
-    "p3": "At the end, you see where you agree, where your answers are close, and where they drift apart. The point isn't to get a score, it's to know what to talk about, and in what order."
-  },
-  "section2": {
-    "title": "The twelve areas of the check-up",
-    "p1": "The questions are grouped into twelve areas, from the simplest to the most intimate. You start with everyday life to warm up, and finish with how each of you is experiencing the relationship right now.",
+  "lp": {
+    "badge": "Couple check-up",
+    "titre": "Do you both want the same life?",
+    "sousTitre": "The couple check-up is a complete assessment of your relationship. Each of you answers about a hundred specific questions on your own, across twelve areas of life together, and you get a report that puts your two sets of answers side by side, with what you need to talk about them.",
     "points": [
-      "<strong>Everyday life at home:</strong> chores, what each of you keeps track of, tidiness, the rhythm of evenings and weekends.",
-      "<strong>Time together and time for yourself:</strong> how much time together, the need to be alone, going out, holidays.",
-      "<strong>Family and friends:</strong> the in-laws, the end-of-year holidays, nights out without the other.",
-      "<strong>Work and ambitions:</strong> the place of work, a career change, a pay gap.",
-      "<strong>Money:</strong> joint account or not, splitting costs, saving, big purchases.",
-      "<strong>Where and how to live:</strong> moving in, city or countryside, buying a home, moving for the other's job.",
-      "<strong>Children:</strong> wanting them or not, when, how many, how to raise them.",
-      "<strong>Values:</strong> religion, marriage, what matters most to each of you.",
-      "<strong>Communication and arguments:</strong> saying what bothers you, arguing, making up.",
-      "<strong>Trust and fidelity:</strong> phones, exes, jealousy, what counts as cheating.",
-      "<strong>Intimacy and tenderness:</strong> desire, tenderness, and how you talk about them.",
-      "<strong>How you're doing:</strong> eight questions about how each of you feels in the relationship today."
+      "Each of you answers on your own phone, without seeing the other's answers",
+      "Questions built on research in couple psychology",
+      "A PDF report of around thirty pages, sent by email"
     ],
-    "p2": "No area can be removed, and that's on purpose: if one of you doesn't want children and the other does, that's exactly what the check-up should show. The questions do adapt to your situation, though. A couple who don't live together yet get \"living together, when?\" instead of \"who does the chores?\", and a couple who already have children get \"another child?\" instead of \"do you want them?\"."
-  },
-  "section3": {
-    "title": "How it works",
-    "p1": "Here's how the check-up works, from start to finish:",
-    "points": [
-      "<strong>You create the check-up:</strong> your two first names, and seven questions about your situation (do you live together, do you have children, etc.).",
-      "<strong>You invite your partner:</strong> you send them a link, by message or with a QR code.",
-      "<strong>Each of you answers separately:</strong> about 90 questions, in one go or in several. Every answer is saved straight away, and each of you can see how far the other has got, without ever seeing their answers.",
-      "<strong>You discover your result:</strong> as soon as you've both finished, for free.",
-      "<strong>If you want it, the full report:</strong> all your gaps, both your answers and what you need to talk about them, for {{prix}}."
+    "cta": "Start our check-up",
+    "ctaNote": "Free questions · {{prix}} for both of you, at the end · {{jours}}-day money-back guarantee",
+    "voirExtrait": "See an extract of the report",
+    "visuelAlt": "Two pages of a sample report: the cover and the summary",
+    "chiffres": [
+      {
+        "n": "12",
+        "l": "areas of life together"
+      },
+      {
+        "n": "100",
+        "l": "questions or so"
+      },
+      {
+        "n": "25 min",
+        "l": "each, at your own pace"
+      },
+      {
+        "n": "30 pages",
+        "l": "of report, just for you two"
+      }
     ],
-    "p2": "On the big questions (children, where to live, marriage, what counts as cheating...), you can mark an answer \"non-negotiable\". If your answers clash on a point one of you marked that way, the report shows it first: it's a sticking point."
-  },
-  "section4": {
-    "title": "Why each of you answers separately",
-    "p1": "When you answer together on the same screen, you watch the other's reaction before choosing, and you often end up giving the answer that pleases. On your own, you answer for yourself. In fact, many couples discover gaps on topics they thought they'd already talked about.",
-    "p2": "That's also why questions about sharing the chores are answered with \"mostly me\", \"both of us equally\" or \"mostly the other\". When each of you thinks they do more, the check-up shows it in black and white, and it's often the starting point for a much calmer conversation than usual. To go further on that particular topic, there's also our test on <a href=\"/en/mental-load-test-couples/\">what weighs on each of your minds</a>.",
-    "p3": "If you're looking for a quick test to do together on the same phone instead, <a href=\"/en/love-compatibility-test/\">your love compatibility</a> can be measured in five minutes. The check-up takes longer because it goes into the detail of your life."
-  },
-  "section5": {
-    "title": "What's free, and what you pay for",
-    "p1": "Answering is free, for both of you. When you've finished, your overall result is free too: your agreement percentage, your relationship forecast, a bar for each area, the number of your gaps and sticking points, and one of your gaps in full, with both your answers and the guide to talking about it.",
-    "p2": "The full report costs {{prix}} for both of you, paid once, by either of you. It contains all your gaps with both your answers, why each topic matters, two questions to talk about it and what's best not to say, your next four conversations in order, what brings you together, and the forecast question by question. You can print it or keep it as a PDF.",
-    "tip": "The price is the same for everyone, there's no subscription, and you get your money back within {{jours}} days if you're not satisfied."
-  },
-  "section6": {
-    "title": "Your answers stay between you",
-    "p1": "There's no account and no email address to give. Each of you gets into the check-up with your own link, which contains a secret key we don't store in plain text. Nobody but the two of you sees your answers, and your partner only sees them once you've both finished.",
-    "p2": "An unpaid check-up is erased 60 days after the last answer, a paid one six months after payment. Either of you can also delete it at any time, in one click, from the report. The details are in our <a href=\"/en/privacy-policy/\">privacy policy</a>.",
-    "tip": "This check-up shows each of you the other's answers. If you're afraid of your partner, it isn't made for your situation: in the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, 24/7, and in the US the National Domestic Violence Hotline (1-800-799-7233)."
-  },
-  "faq": {
-    "title": "Frequently asked questions",
-    "q1": "How long does the check-up take?",
-    "a1": "Allow 20 to 25 minutes each, for about 90 questions. You don't have to do it all at once: every answer is saved, and you pick up where you left off, on the same phone or with your personal link.",
-    "q2": "Will my partner see all my answers?",
-    "a2": "Yes, once you've both finished: the report puts your two answers side by side, that's the whole point of the check-up. While you're answering, though, nobody sees anything, and each of you only sees how far the other has got.",
-    "q3": "Can we do the check-up if we don't live together or don't have children?",
-    "a3": "Yes. At the start, you describe your situation in seven questions, and the questions adapt: a couple who don't live together get \"living together, when?\", a couple without children get \"do you want them?\", etc. No area is removed, though, because your wishes matter as much as your current situation.",
-    "q4": "What if we find out we disagree on lots of things?",
-    "a4": "It happens a lot, and it isn't bad news: a gap you know about can be discussed, a gap you don't know about ends up blowing up at the wrong moment. The report helps you choose where to start, with questions to talk about it calmly.",
-    "q5": "Does the check-up replace couples therapy?",
-    "a5": "No. It's a tool to put words to what you're going through and know what to talk about. If you're going through a difficult time, a couples counsellor can help you go further, and the report can even be a starting point with them.",
-    "q6": "How does payment work?",
-    "a6": "By card, Apple Pay or Google Pay, on Stripe's secure payment page. A single payment of {{prix}}, by either of you, unlocks the report for both of you. You get a receipt by email, and you get your money back within {{jours}} days if you're not satisfied.",
-    "q7": "Can we do the check-up again later?",
-    "a7": "Yes, and it's actually a good idea: doing it again in a year shows what has changed between you. Each check-up is separate, you just create a new one.",
-    "q8": "What happens to our answers?",
-    "a8": "They're only used for your check-up. They're erased 60 days after the last answer if the check-up isn't paid for, six months after payment if it is, and either of you can delete them straight away from the report."
+    "pour": {
+      "titre": "For couples who want a clear picture",
+      "intro": "You don't need to be in a bad place to do a check-up. Most couples do it at a very specific moment:",
+      "cartes": [
+        {
+          "titre": "Before a big step",
+          "texte": "Moving in, getting married, having a baby, buying a place together. It's the right time to check you want the same thing, before you commit."
+        },
+        {
+          "titre": "When the same arguments keep coming back",
+          "texte": "Behind an argument that keeps coming back, there's often a gap nobody has ever put a name to. The report puts it on the table, without blaming anyone."
+        },
+        {
+          "titre": "When you're asking yourselves questions",
+          "texte": "You feel less close, or you're not quite sure where you stand anymore. The check-up helps you put words to what each of you is going through."
+        },
+        {
+          "titre": "When everything's fine",
+          "texte": "So that it lasts! Solid couples talk about touchy subjects before they turn into fights, and the check-up gives them the chance."
+        }
+      ]
+    },
+    "rapport": {
+      "titre": "A report that puts your two sets of answers side by side",
+      "intro": "Once you've both finished, you receive your report as a PDF, around thirty pages depending on your answers. Here's what it looks like.",
+      "pages": [
+        {
+          "img": "synthese",
+          "titre": "Your summary",
+          "texte": "Two figures to start with: your alignment, meaning how much you want the same life, and the climate of your relationship right now. Then where you're closest, and where you're furthest apart."
+        },
+        {
+          "img": "carte",
+          "titre": "The map of your twelve areas",
+          "texte": "Everyday life, money, children, family, fidelity, intimacy... One bar per area, so you can see at a glance where you're on the same page."
+        },
+        {
+          "img": "conversation",
+          "titre": "Your next four conversations",
+          "texte": "The topics that matter most to you both, with your two answers, why it matters, questions to get the conversation going and what's best not to say."
+        },
+        {
+          "img": "signaux",
+          "titre": "Your warning signs",
+          "texte": "The ways of arguing that decades of research link to couples wearing down: how often each of you sees them in your relationship, and how to respond."
+        }
+      ],
+      "legende": "Extracts from a sample report. Emma and Daniel are a fictional couple."
+    },
+    "diff": {
+      "titre": "How it differs from a test an AI would give you",
+      "intro": "You could ask an AI to quiz you about your relationship. It would happily do it, but you wouldn't get the same thing. Here's what changes.",
+      "colIa": "A test generated by an AI",
+      "colBilan": "The couple check-up",
+      "lignes": [
+        {
+          "sujet": "The questions",
+          "ia": "Made up the moment you ask, often vague: \"Do you communicate well?\"",
+          "bilan": "About a hundred questions written in advance and backed by research: \"Who keeps track of doctor's appointments?\""
+        },
+        {
+          "sujet": "Who answers",
+          "ia": "One person, imagining what the other would say",
+          "bilan": "Each of you on your own, without seeing the other's answers: two real points of view are compared"
+        },
+        {
+          "sujet": "What's measured",
+          "ia": "A general impression",
+          "bilan": "The subjects that shape a life (children, money, where to live, fidelity) and the ways of arguing that research links most to couples wearing down"
+        },
+        {
+          "sujet": "The big decisions",
+          "ia": "Every question carries the same weight",
+          "bilan": "Whatever one of you considers non-negotiable is flagged, and comes first"
+        },
+        {
+          "sujet": "The result",
+          "ia": "A few reassuring paragraphs",
+          "bilan": "A report of around thirty pages: your gaps with both your answers, why they matter and how to talk about them"
+        },
+        {
+          "sujet": "Your answers",
+          "ia": "Typed into a conversation with an AI service",
+          "bilan": "Kept by us, never sold, and deleted automatically after six months at most"
+        }
+      ],
+      "conclusion": "This check-up is a serious assessment, and a long one. Its aim is to give you a real, overall view of where your relationship stands right now, topic by topic, so you know what to talk about."
+    },
+    "recherche": {
+      "titre": "Built on research into couples",
+      "p1": "The questions don't come out of nowhere. They're based on research in the psychology and sociology of couples: studies that followed thousands of couples for years, theses on how housework is shared, and the premarital questionnaires that couples counsellors have been using for decades.",
+      "constats": [
+        "Comparing each partner's answers, given separately, makes it possible to spot gaps well before they become a problem. That's the principle behind the questionnaires used before a wedding.",
+        "How you argue matters more than how often you argue. A few specific attitudes wear a couple down far more than the disagreements themselves.",
+        "Feeling that the other person is committed to the relationship, and feeling appreciated, are among the most reliable signs of a good relationship.",
+        "The person who thinks of everything isn't always the one who does everything. The mental load is hard to see from the inside, and each person often thinks they do more."
+      ],
+      "p2": "The check-up isn't a clinical test and doesn't replace a professional. It's a serious questionnaire, built on what research knows about couples, to help you talk about the right things."
+    },
+    "questions": {
+      "titre": "Specific questions, not generalities",
+      "intro": "Here are some of the check-up's questions, as Emma saw them. Each of you answers on your own, and it's by comparing your two answers that the report finds what matters.",
+      "exemples": [
+        {
+          "domaine": "Everyday life at home",
+          "q": "Who keeps track of everything that needs doing (appointments, bills, presents, what's missing in the fridge)?",
+          "o": [
+            "Mostly me",
+            "A bit more me",
+            "Both of us equally",
+            "A bit more Daniel",
+            "Mostly Daniel"
+          ]
+        },
+        {
+          "domaine": "Money",
+          "q": "For a purchase over €300 just for yourself...",
+          "o": [
+            "I make it without mentioning it",
+            "I let Daniel know",
+            "I talk about it first",
+            "I decide with Daniel"
+          ]
+        },
+        {
+          "domaine": "Where and how to live",
+          "q": "In ten years, you see yourself living...",
+          "o": [
+            "In a big city",
+            "In a mid-sized town or the suburbs",
+            "In the countryside",
+            "Abroad"
+          ]
+        },
+        {
+          "domaine": "Trust and fidelity",
+          "q": "For you, cheating starts when you...",
+          "o": [
+            "Flirt by text",
+            "Kiss someone",
+            "Sleep with someone",
+            "Have a real secret relationship"
+          ]
+        },
+        {
+          "domaine": "Communication and arguments",
+          "q": "During an argument, what you need is...",
+          "o": [
+            "To sort it out right away",
+            "A break to calm down before talking",
+            "To be reassured first",
+            "To let it pass, it'll sort itself out"
+          ]
+        },
+        {
+          "domaine": "Family and friends",
+          "q": "The end-of-year holidays, ideally, you spend them...",
+          "o": [
+            "With my family",
+            "With Daniel's family",
+            "Alternating each year",
+            "Just us, or with friends"
+          ]
+        }
+      ],
+      "fin": "On the big questions (children, where to live, fidelity...), each of you can also mark your answer as a deal-breaker. The report then starts there."
+    },
+    "etapes": {
+      "titre": "How it works",
+      "liste": [
+        {
+          "titre": "You create the check-up",
+          "texte": "Your two first names, seven questions about your situation (do you live together, do you have children...), then you send the link to your partner."
+        },
+        {
+          "titre": "Each of you answers on your own",
+          "texte": "On your phone, at your own pace, in one go or several: everything is saved as you go. Allow 25 to 30 minutes each."
+        },
+        {
+          "titre": "You receive your report",
+          "texte": "You unlock it once you've finished your answers. It arrives by email as a PDF as soon as you've both finished, and stays online for six months."
+        }
+      ]
+    },
+    "prix": {
+      "titre": "One price, for both of you",
+      "unite": "for the couple, paid once",
+      "aide": "You only pay at the end, once you've given your answers. One payment, by either of you. No subscription, no account.",
+      "inclus": [
+        "About a hundred questions across twelve areas",
+        "The full report, around thirty pages",
+        "Your next four conversations, with what you need to have them",
+        "The PDF by email and the online version for six months"
+      ],
+      "comparaison": "For comparison, a single session with a couples counsellor usually costs €60 or more.",
+      "garantie": "Money back if you're not satisfied, within {{jours}} days: one message is enough."
+    },
+    "confiance": {
+      "titre": "Your answers stay between you two",
+      "points": [
+        {
+          "titre": "No account",
+          "texte": "Each of you gets into the check-up through your own link. No password, and an email address only if you want to receive the report."
+        },
+        {
+          "titre": "Nothing is shown before the end",
+          "texte": "Neither you nor your partner sees the other's answers until you've both finished."
+        },
+        {
+          "titre": "Deleted automatically",
+          "texte": "An unpaid check-up is deleted 60 days after the last answer, a paid one six months after payment. Either of you can delete it before then, in one click."
+        },
+        {
+          "titre": "Secure payment",
+          "texte": "Payment goes through Stripe (card, Apple Pay, Google Pay). We never see your card."
+        }
+      ]
+    },
+    "faq": {
+      "titre": "Frequently asked questions",
+      "items": [
+        {
+          "q": "How long does the check-up take?",
+          "a": "Allow 25 to 30 minutes each, for about a hundred questions. You don't have to do it all in one go: every answer is saved, and you pick up where you left off."
+        },
+        {
+          "q": "Will my partner see all my answers?",
+          "a": "Yes, once you've both finished: the report puts your two answers side by side, that's the whole point. Before that, nobody sees anything."
+        },
+        {
+          "q": "Why do we have to pay to see the result?",
+          "a": "Because the result is the report: your two sets of answers compared, topic by topic, with what you need to talk about them. The questions are free, and you only pay once you've finished your answers, if you want the report."
+        },
+        {
+          "q": "Can we do the check-up if we don't live together or don't have children?",
+          "a": "Yes. At the start, you describe your situation in seven questions, and the questions adapt: a couple who don't live together yet answer about what they imagine, a couple without children about what they'd like."
+        },
+        {
+          "q": "What if we find out we disagree on a lot of things?",
+          "a": "It's common, and it isn't bad news: a gap you know about can be talked through, a gap you ignore ends up coming back as an argument. The report tells you where to start, and how to talk about it without it turning into a trial."
+        },
+        {
+          "q": "Is it based on anything serious?",
+          "a": "Yes. The questions are based on research in couple psychology and on the questionnaires couples counsellors use before a wedding. That doesn't make the check-up a clinical test: it's a tool for talking, not a diagnosis."
+        },
+        {
+          "q": "Does the check-up replace couples therapy?",
+          "a": "No. It's a tool to put words to what you're going through and know what to talk about. If you're going through a hard time, a couples counsellor or therapist can help you, and the report can even be a starting point."
+        },
+        {
+          "q": "How does payment work?",
+          "a": "By card, Apple Pay or Google Pay, on Stripe's secure payment page. A single payment of {{prix}} for both of you, once you've finished your answers. You get a receipt by email, and the report as soon as you've both finished."
+        },
+        {
+          "q": "What if we don't like the report?",
+          "a": "You get your money back within {{jours}} days if you're not satisfied: one message from the contact page is enough, no need to justify yourself."
+        },
+        {
+          "q": "What happens to our answers?",
+          "a": "They're used only for your check-up, never sold and never used for advertising. They're deleted 60 days after the last answer if the check-up isn't paid for, six months after payment if it is, and either of you can delete everything before then."
+        }
+      ]
+    },
+    "final": {
+      "titre": "Ready to take stock?",
+      "texte": "Twenty-five minutes each, and you'll know what you agree on and what you need to talk about. Start whenever you like: you can take a break at any time."
+    },
+    "avertissement": "This check-up shows each of you the other's answers. If you're afraid of your partner, it isn't made for your situation: in the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, 24/7, and in the US the National Domestic Violence Hotline (1-800-799-7233)."
   }
 }

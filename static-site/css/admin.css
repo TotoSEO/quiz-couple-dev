@@ -23,6 +23,7 @@
   --adm-s-vues:#0EA5E9;
   --adm-s-pied:#3B82F6;
   --adm-s-blog:#EF4E88;
+  --adm-s-ventes:#16A34A;
   --adm-grid:rgba(90,70,110,.13);
   --adm-axis:rgba(90,70,110,.55);
   --adm-bon:#0a7a3c;
@@ -40,6 +41,7 @@
   --adm-s-vues:#199e70;
   --adm-s-pied:#3987e5;
   --adm-s-blog:#d55181;
+  --adm-s-ventes:#3ecf78;
   --adm-grid:rgba(200,190,220,.13);
   --adm-axis:rgba(190,180,210,.6);
   --adm-bon:#3ecf78;
@@ -209,6 +211,31 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
 .adm .stats-tete--lances{--tete:var(--adm-s-lances);}
 .adm .stats-tete--finis{--tete:var(--adm-s-finis);}
 .adm .stats-tete--ratio{--tete:var(--adm-s-taux);}
+.adm .stats-tete--ventes{--tete:var(--adm-s-ventes);}
+/* Onglet Bilan : l'entonnoir en barres, les petits faits (délais, rapports),
+   les tableaux des domaines, des sources et des payés en attente. */
+#admin-bilan-periode{margin-bottom:1rem;}
+.bil-etape{display:grid;grid-template-columns:minmax(9rem,15rem) minmax(0,1fr) 4.5rem 4rem;gap:.75rem;align-items:center;padding:.55rem .2rem;border-bottom:1px solid var(--adm-line);font-size:.86rem;}
+.bil-etape:last-child{border-bottom:0;}
+.bil-etape-nom{font-weight:600;color:var(--adm-ink);min-width:0;}
+.bil-etape-nom small{display:block;font-weight:400;font-size:.74rem;color:var(--adm-ink-2);}
+.bil-barre{height:.6rem;border-radius:999px;background:var(--adm-line);overflow:hidden;}
+.bil-barre>span{display:block;height:100%;width:var(--part,0%);background:var(--barre,var(--adm-s-finis));border-radius:inherit;}
+.bil-etape-n{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;color:var(--adm-ink);}
+.bil-etape-pct{text-align:right;font-variant-numeric:tabular-nums;color:var(--adm-ink-2);}
+@media (max-width:640px){
+  .bil-etape{grid-template-columns:minmax(0,1fr) 3.6rem 3.4rem;row-gap:.35rem;}
+  .bil-etape .bil-barre{grid-column:1/-1;grid-row:2;}
+}
+.bil-faits{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:.75rem;margin-bottom:1rem;}
+.bil-fait{border:1px solid var(--adm-line);border-radius:.8rem;padding:.65rem .85rem;}
+.bil-fait-n{font-size:1.3rem;font-weight:800;color:var(--adm-ink);font-variant-numeric:tabular-nums;}
+.bil-fait-l{font-size:.75rem;color:var(--adm-ink-2);}
+.bil-fait--alerte{border-color:var(--adm-mauvais,#d33);}
+.bil-vide{padding:.9rem .2rem;margin:0;font-size:.86rem;color:var(--adm-ink-2);}
+.adm-table th.bil-gauche,.adm-table td.bil-gauche{text-align:left;}
+.adm-table td.bil-alerte{color:var(--adm-mauvais,#d33);font-weight:700;}
+.bil-erreur{font-family:ui-monospace,monospace;font-size:.72rem;white-space:pre-wrap;word-break:break-word;color:var(--adm-ink-2);}
 .adm .trafic-kpi--visites{--tete:var(--adm-s-visites);}
 .adm .trafic-kpi--vues{--tete:var(--adm-s-vues);}
 .adm .trafic-kpi--profondeur{--tete:#1baf7a;}

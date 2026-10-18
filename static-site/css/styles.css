@@ -13065,26 +13065,67 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .bilan-puces strong { color: hsl(var(--foreground)); }
 
 /* L'encart du bilan sous le verdict des tests de couple (encartBilan,
-   quiz-engine-core.js), à la place des produits affiliés. */
+   quiz-engine-core.js), à la place des produits affiliés : une carte de nuit
+   comme la page du bilan (css/pages/bilanCouple.css), avec une vraie page du
+   rapport d'exemple à droite, en bandeau au-dessus du texte sur téléphone.
+   Les mêmes règles servent la bannière du bas des pages (related-tests.ejs). */
 .qr-bilan {
-  --ink: 268 45% 27%;
-  display: flex; gap: 1rem; align-items: center; text-align: left;
-  border: 3px solid hsl(var(--ink)); border-radius: 1.2rem; box-shadow: 4px 4px 0 hsl(var(--ink));
-  padding: 1.1rem 1.2rem;
-  background: linear-gradient(160deg, hsl(var(--primary) / .1), hsl(var(--secondary) / .1)), hsl(var(--card));
+  --qrb-nuit: 286 38% 14%; --qrb-nuit-2: 266 42% 24%;
+  --qrb-rose: 338 72% 62%; --qrb-violet: 268 50% 58%; --qrb-clair: 338 85% 80%;
+  position: relative; overflow: hidden; isolation: isolate;
+  display: grid; grid-template-columns: minmax(0, 1fr) 11.5rem; gap: 1.25rem; align-items: center;
+  padding: 1.75rem 1.5rem 1.75rem 1.75rem; border-radius: 1.5rem; text-align: left;
+  color: #f7f1f6;
+  background: radial-gradient(120% 90% at 100% 0%, hsl(var(--qrb-rose) / .26), transparent 55%),
+    linear-gradient(155deg, hsl(var(--qrb-nuit)), hsl(var(--qrb-nuit-2)));
+  box-shadow: 0 20px 44px -24px hsl(var(--qrb-nuit) / .9);
 }
-.dark .qr-bilan { --ink: 270 30% 62%; }
-.qr-bilan-duo { flex: none; display: flex; align-items: flex-end; gap: .15rem; }
-.qr-bilan-duo .qc-masc { height: 4rem; width: auto; }
+.dark .qr-bilan { box-shadow: inset 0 0 0 1px hsl(0 0% 100% / .09); }
+.qr-bilan-visuel { order: 2; align-self: stretch; position: relative; min-height: 13.5rem; }
+.qr-bilan-visuel img {
+  position: absolute; top: .2rem; left: 50%; width: 10.5rem; height: auto; max-width: none;
+  transform: translateX(-50%) rotate(4deg); border-radius: .35rem;
+  box-shadow: 0 18px 36px -14px rgb(0 0 0 / .6);
+}
 .qr-bilan-corps { min-width: 0; }
-.qr-bilan-sur { font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: hsl(var(--primary-texte)); margin: 0 0 .2rem; }
-.qr-bilan-titre { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; margin: 0 0 .35rem; }
-.qr-bilan-texte { font-size: .9rem; color: hsl(var(--muted-foreground)); line-height: 1.5; margin: 0 0 .4rem; }
-.qr-bilan-prix { font-size: .82rem; font-weight: 600; margin: 0 0 .7rem; }
-.qr-bilan .qr-bilan-bouton { white-space: normal; padding: .65rem 1.3rem; font-size: .95rem; }
-@media (max-width: 480px) {
-  .qr-bilan { flex-direction: column; text-align: center; }
+.qr-bilan-sur { font-size: .74rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: hsl(var(--qrb-clair)); margin: 0 0 .5rem; }
+.qr-bilan-titre { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.2rem, 2.6vw, 1.45rem); line-height: 1.22; color: #fff; margin: 0 0 .6rem; overflow-wrap: break-word; hyphens: auto; }
+.qr-bilan-texte { font-size: .95rem; line-height: 1.55; color: hsl(0 0% 100% / .8); margin: 0; overflow-wrap: break-word; hyphens: auto; }
+.qr-bilan-points { list-style: none; margin: 1rem 0 1.25rem; padding: 0; display: grid; gap: .45rem; }
+.qr-bilan-points li { display: grid; grid-template-columns: 1.15rem minmax(0, 1fr); gap: .55rem; align-items: start; font-size: .9rem; line-height: 1.4; color: hsl(0 0% 100% / .9); }
+.qr-bilan-points svg { width: 1.15rem; height: 1.15rem; margin-top: .05rem; color: hsl(var(--qrb-clair)); }
+.qr-bilan-bouton {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  min-height: 3.1rem; padding: .8rem 1.45rem; border-radius: 999px; text-align: center;
+  font: 700 1rem/1.2 var(--font-display, inherit); color: #fff; text-decoration: none;
+  background: linear-gradient(135deg, hsl(var(--qrb-rose)), hsl(var(--qrb-violet)));
+  box-shadow: 0 10px 26px -10px hsl(var(--qrb-rose) / .75), inset 0 1px 0 hsl(0 0% 100% / .25);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
+.qr-bilan-bouton:hover { color: #fff; transform: translateY(-1px); box-shadow: 0 14px 32px -10px hsl(var(--qrb-rose) / .85), inset 0 1px 0 hsl(0 0% 100% / .25); }
+.qr-bilan-bouton:focus-visible { outline: 3px solid hsl(45 90% 65%); outline-offset: 3px; }
+.qr-bilan-bouton svg { width: 1.1rem; height: 1.1rem; flex: none; transition: transform .2s ease; }
+.qr-bilan-bouton:hover svg { transform: translateX(3px); }
+.qr-bilan-prix { font-size: .82rem; line-height: 1.45; color: hsl(0 0% 100% / .66); margin: .75rem 0 0; }
+@media (max-width: 559.98px) {
+  .qr-bilan { grid-template-columns: minmax(0, 1fr); gap: 0; padding: 0 1.25rem 1.5rem; }
+  .qr-bilan-visuel {
+    order: 0; min-height: 0; height: 9.5rem; margin: 0 -1.25rem 1.1rem;
+    -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent);
+    mask-image: linear-gradient(to bottom, #000 62%, transparent);
+  }
+  .qr-bilan-visuel img { top: 1.1rem; width: min(66%, 15rem); transform: translateX(-50%) rotate(-2.5deg); }
+  .qr-bilan-bouton { display: flex; width: 100%; }
+}
+/* La bannière au-dessus des cartes « À faire ensuite » : centrée, une page
+   du rapport un peu plus grande sur ordinateur. */
+.qr-bilan--bas { max-width: 54rem; margin: 0 auto 2.25rem; }
+@media (min-width: 768px) {
+  .qr-bilan--bas { grid-template-columns: minmax(0, 1fr) 15rem; padding: 2.25rem 2rem 2.25rem 2.5rem; gap: 2rem; }
+  .qr-bilan--bas .qr-bilan-visuel { min-height: 15rem; }
+  .qr-bilan--bas .qr-bilan-visuel img { width: 13.5rem; }
+}
+@media (prefers-reduced-motion: reduce) { .qr-bilan-bouton, .qr-bilan-bouton svg { transition: none; } }
 
 @media print {
   #site-header, body > footer, .quiz-page-hero, .seo-content, .wave-divider,

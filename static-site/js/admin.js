@@ -672,7 +672,8 @@
       sources_google_clics: statsRpc('get_source_pref_clics', { p_days: n, p_tz: tz }),
       distance_par_jour: statsRpc('get_salon_daily', { p_days: n + 1, p_tz: tz }),
       distance_depuis_le_debut: chargeSalonParPage(),
-      instagram_clics: statsRpc('get_instagram_clics')
+      instagram_clics: statsRpc('get_instagram_clics'),
+      bilan: statsRpc('get_bilan_tableau', { p_jours: n })
     };
     var cles = Object.keys(lots);
     Promise.all(cles.map(function (k) {
@@ -684,7 +685,7 @@
         exporte_le: new Date().toISOString(),
         periode_jours: n,
         fuseau: tz,
-        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : pages vues, visites, pages, sources, profondeur et entonnoir sur la période. distance_* : mode à distance. instagram_clics : clics vers Instagram depuis le site. Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
+        lecture: 'Export de l\'admin de quiz-couple.com. parties_* : parties terminées (depuis toujours par test, par jour sur la période) ; lancements_* : parties commencées, depuis le 21 août 2026 ; le taux de finition d\'un test = finies / lancées. trafic_* : pages vues, visites, pages, sources, profondeur et entonnoir sur la période. distance_* : mode à distance. instagram_clics : clics vers Instagram depuis le site. bilan : le bilan de couple payant (visites de sa page, entonnoir, ventes en centimes, sources, domaines). Une entrée { erreur } ou { code, message } = fonction absente ou refusée.',
         donnees: donnees
       };
       var blob = new Blob([JSON.stringify(fichier, null, 2)], { type: 'application/json' });
@@ -893,38 +894,230 @@
     drawChart(cv, couches, {});
   }
   // ── Bilan de couple ─────────────────────────────────────────────────────
-  // L'entonnoir du bilan payant, jour par jour (get_bilan_stats, compteurs
-  // tenus par un déclencheur sur la table bilans, docs/bilan/CONCEPTION.md).
+  // Tout vient d'une seule lecture, get_bilan_tableau (migration
+  // 20261018120000) : la série jour par jour (visites de la page, clics sur
+  // « Commencer », bilans créés, rejoints, finis, paiements), les sources
+  // (?src= des liens du site), les domaines entrés et finis, les arrêts, les
+  // délais, l'état des rapports PDF et les payés en attente du partenaire.
+  // Les compteurs sont tenus par la fonction bilan et par un déclencheur sur
+  // la table bilans : un bilan supprimé reste compté.
+  var bilanJours = 30;
+  var bilanCouchesVues = { payes: true, crees: false, vues: false };
+  var _bilanCouches = null;
+  var BILAN_DOMAINES = [
+    ['quotidien', 'Le quotidien à la maison'], ['temps', 'Le temps à deux et pour soi'],
+    ['entourage', 'Famille et amis'], ['travail', 'Le travail et les ambitions'], ['argent', 'L\'argent'],
+    ['logement', 'Où et comment vivre'], ['enfants', 'Les enfants'], ['valeurs', 'Les valeurs'],
+    ['disputes', 'La communication et les disputes'], ['confiance', 'La confiance et la fidélité'],
+    ['intimite', 'L\'intimité et la tendresse'], ['meteo', 'Comment vous allez']
+  ];
+  var BILAN_SOURCES = { direct: 'Direct', menu: 'Menu', accueil: 'Accueil', pied: 'Pied de page' };
+  function libelleSourceBilan(src) {
+    src = String(src || 'direct');
+    if (BILAN_SOURCES[src]) return BILAN_SOURCES[src];
+    var m = /^(resultat|bas)-(.+)$/.exec(src);
+    if (m) return (m[1] === 'resultat' ? 'Résultat · ' : 'Bas de page · ') + m[2];
+    return src;
+  }
+  function eurosBilan(centimes) {
+    return ((Number(centimes) || 0) / 100).toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
+  }
+  function nombreBilan(n) { return (Number(n) || 0).toLocaleString('fr-FR'); }
+  // Une part en pour cent, avec une décimale sous 10 % (une conversion de
+  // 1,4 % ne doit pas s'afficher 1 %).
+  function partBilan(a, b) {
+    if (!b) return '—';
+    var p = (a / b) * 100;
+    return (p < 10 ? (Math.round(p * 10) / 10).toLocaleString('fr-FR') : String(Math.round(p))) + ' %';
+  }
+  function dureeBilan(minutes) {
+    if (minutes === null || minutes === undefined || isNaN(minutes)) return '—';
+    var m = Math.round(Number(minutes));
+    if (m < 60) return m + ' min';
+    var h = m / 60;
+    if (h < 48) return (Math.round(h * 10) / 10).toLocaleString('fr-FR') + ' h';
+    return (Math.round((h / 24) * 10) / 10).toLocaleString('fr-FR') + ' j';
+  }
+  function dateBilan(iso) {
+    if (!iso) return '—';
+    var d = new Date(iso);
+    return isNaN(d) ? '—' : d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' }) + ' ' + d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+  }
+  function ligneEtapeBilan(nom, aide, n, base, avant, couleur) {
+    var part = base ? Math.min(100, (n / base) * 100) : 0;
+    return '<div class="bil-etape"><span class="bil-etape-nom">' + esc(nom) + (aide ? '<small>' + esc(aide) + '</small>' : '') + '</span>' +
+      '<span class="bil-barre" style="--part:' + part.toFixed(1) + '%;--barre:' + couleur + '"><span></span></span>' +
+      '<span class="bil-etape-n">' + nombreBilan(n) + '</span>' +
+      '<span class="bil-etape-pct">' + (avant === null ? '' : partBilan(n, avant)) + '</span></div>';
+  }
+  function renderBilanLegende(couches) {
+    var el = document.getElementById('admin-bilan-legende');
+    if (!el) return;
+    el.innerHTML = couches.map(function (c) {
+      return '<button type="button" class="stats-leg' + (c.visible ? '' : ' est-eteinte') + '"'
+        + ' style="--leg:' + c.couleur + '" data-bilan-courbe="' + c.cle + '"'
+        + ' aria-pressed="' + (c.visible ? 'true' : 'false') + '">'
+        + '<span class="stats-leg-nom"><span class="stats-leg-puce"></span>' + esc(c.nom) + '</span>'
+        + '<span class="stats-leg-val">' + esc(c.legende) + '</span>'
+        + '</button>';
+    }).join('');
+  }
+  function dessineBilan() {
+    if (!_bilanCouches) return;
+    _bilanCouches.forEach(function (c) {
+      c.visible = bilanCouchesVues[c.cle];
+      c.couleur = teinte(c.teinte, c.couleur);
+    });
+    renderBilanLegende(_bilanCouches);
+    drawChart(document.getElementById('admin-bilan-chart'), _bilanCouches, {});
+  }
   function loadBilan() {
-    var listEl = document.getElementById('admin-bilan-list');
-    if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
+    var ids = ['admin-bilan-entonnoir', 'admin-bilan-domaines', 'admin-bilan-sources', 'admin-bilan-delais', 'admin-bilan-attente', 'admin-bilan-list'];
+    ids.forEach(function (id) { var e = document.getElementById(id); if (e) e.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>'; });
     var ecrit = function (id, texte) { var e = document.getElementById(id); if (e) e.textContent = texte; };
-    appelStats('get_bilan_stats', { p_jours: 30 }).then(function (r) {
-      if (!r.ok) throw new Error('get_bilan_stats ' + r.status);
-      return r.json();
-    }).then(function (jours) {
-      if (!Array.isArray(jours)) throw new Error('réponse inattendue');
-      var tot = { crees: 0, rejoints: 0, premiers_finis: 0, deux_finis: 0, paiements_ouverts: 0, payes: 0, revenu_centimes: 0 };
-      jours.forEach(function (j) { for (var k in tot) tot[k] += Number(j[k]) || 0; });
-      var euros = function (c) { return (c / 100).toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' }); };
-      ecrit('admin-bilan-crees', tot.crees.toLocaleString('fr-FR'));
-      ecrit('admin-bilan-rejoints', tot.rejoints.toLocaleString('fr-FR') + ' rejoints par le partenaire (' + pct(tot.rejoints, tot.crees) + ' %)');
-      ecrit('admin-bilan-finis', tot.deux_finis.toLocaleString('fr-FR'));
-      ecrit('admin-bilan-finis-part', pct(tot.deux_finis, tot.crees) + ' % des bilans créés');
-      ecrit('admin-bilan-payes', tot.payes.toLocaleString('fr-FR'));
-      ecrit('admin-bilan-ca', euros(tot.revenu_centimes) + ' · ' + pct(tot.payes, tot.deux_finis) + ' % des bilans finis à deux');
-      var cols = [['crees', 'Créés'], ['rejoints', 'Rejoints'], ['premiers_finis', 'Un fini'], ['deux_finis', 'Finis à deux'], ['paiements_ouverts', 'Paiements ouverts'], ['payes', 'Payés']];
-      var html = '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th>Jour</th>' +
-        cols.map(function (c) { return '<th>' + c[1] + '</th>'; }).join('') + '<th>CA</th></tr></thead><tbody>';
-      jours.slice().reverse().forEach(function (j) {
-        html += '<tr><td>' + esc(String(j.jour)) + '</td>' + cols.map(function (c) { return '<td>' + (Number(j[c[0]]) || 0) + '</td>'; }).join('') +
-          '<td>' + (Number(j.revenu_centimes) ? euros(Number(j.revenu_centimes)) : '') + '</td></tr>';
+    var place = function (id, html) { var e = document.getElementById(id); if (e) e.innerHTML = html; };
+    document.querySelectorAll('#admin-bilan-periode [data-bilan-jours]').forEach(function (b) {
+      b.classList.toggle('active', Number(b.dataset.bilanJours) === bilanJours);
+    });
+    drawChart(document.getElementById('admin-bilan-chart'), [], { loading: true });
+    statsRpc('get_bilan_tableau', { p_jours: bilanJours }).then(function (d) {
+      if (!d || typeof d !== 'object' || !Array.isArray(d.serie)) {
+        throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');
+      }
+      var serie = d.serie;
+      var tot = {};
+      ['vues', 'ctas', 'crees', 'rejoints', 'finis_a', 'finis_b', 'deux_finis', 'paiements_ouverts', 'payes', 'revenu', 'rembourses', 'rembourse_montant']
+        .forEach(function (k) { tot[k] = serie.reduce(function (a, j) { return a + (Number(j[k]) || 0); }, 0); });
+      var periode = bilanJours === 365 ? 'sur un an' : 'sur ' + bilanJours + ' jours';
+
+      // Les quatre tuiles.
+      ecrit('admin-bilan-vues', nombreBilan(tot.vues));
+      ecrit('admin-bilan-vues-sub', periode + ' · ' + nombreBilan(tot.ctas) + ' clics sur «\u00a0Commencer\u00a0» (' + partBilan(tot.ctas, tot.vues) + ')');
+      ecrit('admin-bilan-crees', nombreBilan(tot.crees));
+      ecrit('admin-bilan-crees-sub', partBilan(tot.crees, tot.vues) + ' des visites · ' + nombreBilan(tot.rejoints) + ' rejoints par le partenaire');
+      ecrit('admin-bilan-payes', nombreBilan(tot.payes));
+      ecrit('admin-bilan-ca', eurosBilan(tot.revenu) + (tot.rembourses ? ' · ' + nombreBilan(tot.rembourses) + ' remboursé' + (tot.rembourses > 1 ? 's' : '') + ' (' + eurosBilan(tot.rembourse_montant) + ')' : ''));
+      ecrit('admin-bilan-total', 'Depuis l\'ouverture : ' + nombreBilan(d.total_payes) + ' vente' + (Number(d.total_payes) > 1 ? 's' : '') + ', ' + eurosBilan(d.total_revenu));
+      ecrit('admin-bilan-conversion', partBilan(tot.payes, tot.vues));
+      ecrit('admin-bilan-conversion-sub', 'des visites finissent en vente · ' + partBilan(tot.payes, tot.crees) + ' des bilans démarrés');
+
+      // La courbe des ventes.
+      // Trois courbes sur le même axe : les ventes seules par défaut, les
+      // démarrés et les visites d'un clic sur leur vignette (ils écraseraient
+      // sinon la courbe des ventes).
+      var points = { payes: [], crees: [], vues: [] };
+      serie.forEach(function (j) {
+        var dt = new Date(String(j.jour) + 'T12:00:00');
+        var label = dt.getDate() + '/' + (dt.getMonth() + 1);
+        points.payes.push({ date: dt, label: label, total: Number(j.payes) || 0 });
+        points.crees.push({ date: dt, label: label, total: Number(j.crees) || 0 });
+        points.vues.push({ date: dt, label: label, total: Number(j.vues) || 0 });
       });
-      html += '<tr class="adm-table-total"><td>Trente jours</td>' + cols.map(function (c) { return '<td>' + tot[c[0]] + '</td>'; }).join('') +
-        '<td>' + euros(tot.revenu_centimes) + '</td></tr></tbody></table></div>';
-      if (listEl) listEl.innerHTML = html;
+      _bilanCouches = [
+        { cle: 'payes', teinte: 'ventes', nom: 'Ventes', couleur: '#16A34A', axe: 'gauche', unite: '', legende: nombreBilan(tot.payes) + ' · ' + eurosBilan(tot.revenu) },
+        { cle: 'crees', teinte: 'lances', nom: 'Bilans démarrés', couleur: '#3B82F6', axe: 'gauche', unite: '', legende: nombreBilan(tot.crees) },
+        { cle: 'vues', teinte: 'vues', nom: 'Visites de la page', couleur: '#0EA5E9', axe: 'gauche', unite: '', legende: nombreBilan(tot.vues) }
+      ].map(function (c) { c.points = points[c.cle]; c.total = null; return c; });
+      dessineBilan();
+
+      // L'entonnoir, en part des visites.
+      var base = tot.vues;
+      var etapes = [
+        ['Visites de la page', 'chaque affichage de la page de vente', tot.vues],
+        ['Clic sur «\u00a0Commencer\u00a0»', 'la page de vente cède la place aux questions', tot.ctas],
+        ['Bilan créé', 'prénoms, situation et accord donnés', tot.crees],
+        ['Le premier a fini', 'toutes ses questions', tot.finis_a],
+        ['Le partenaire a rejoint', 'invitation ouverte et acceptée', tot.rejoints],
+        ['Le partenaire a fini', 'toutes ses questions', tot.finis_b],
+        ['Paiement ouvert', 'clic sur «\u00a0Débloquer\u00a0» et page Stripe ouverte', tot.paiements_ouverts],
+        ['Rapport payé', 'paiement confirmé par Stripe', tot.payes]
+      ];
+      var couleurs = ['var(--adm-s-vues)', 'var(--adm-s-vues)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-lances)', 'var(--adm-s-finis)', 'var(--adm-s-taux)', 'var(--adm-s-ventes)'];
+      place('admin-bilan-entonnoir', base
+        ? etapes.map(function (e, i) { return ligneEtapeBilan(e[0], e[1], e[2], base, i ? etapes[i - 1][2] : null, couleurs[i]); }).join('')
+        : '<p class="bil-vide">Aucune visite de la page sur la période.</p>');
+
+      // Les domaines, dans l'ordre des questions.
+      var parDom = {};
+      (d.domaines || []).forEach(function (x) { parDom[x.domaine] = x; });
+      var arrets = {};
+      (d.arrets || []).forEach(function (x) { arrets[x.etape] = Number(x.n) || 0; });
+      var maxEntres = 0;
+      BILAN_DOMAINES.forEach(function (dm) { var x = parDom[dm[0]]; if (x && Number(x.entres) > maxEntres) maxEntres = Number(x.entres); });
+      var lignesDom = BILAN_DOMAINES.map(function (dm) {
+        var x = parDom[dm[0]] || { entres: 0, finis: 0 };
+        var e = Number(x.entres) || 0, f = Number(x.finis) || 0, a = arrets[dm[0]] || 0;
+        var perte = e ? Math.round(((e - f) / e) * 100) : 0;
+        return '<tr><td class="bil-gauche">' + esc(dm[1]) + '</td><td>' + nombreBilan(e) + '</td><td>' + nombreBilan(f) + '</td>' +
+          '<td class="' + (perte >= 20 ? 'bil-alerte' : '') + '">' + (e ? perte + ' %' : '—') + '</td><td class="' + (a ? 'bil-alerte' : '') + '">' + (a || '') + '</td></tr>';
+      }).join('');
+      var autresArrets = Object.keys(arrets).filter(function (k) { return !BILAN_DOMAINES.some(function (dm) { return dm[0] === k; }); });
+      place('admin-bilan-domaines', maxEntres || autresArrets.length
+        ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Domaine</th><th>Entrés</th><th>Finis</th><th>Laissés en cours</th><th>Bloqués</th></tr></thead><tbody>' + lignesDom + '</tbody></table></div>' +
+          (autresArrets.length ? '<p class="bil-vide">Autres arrêts : ' + autresArrets.map(function (k) { return esc(k) + ' (' + arrets[k] + ')'; }).join(', ') + '</p>' : '')
+        : '<p class="bil-vide">Personne n\'a encore répondu sur la période.</p>');
+
+      // Les sources.
+      var sources = (d.sources || []).slice();
+      place('admin-bilan-sources', sources.length
+        ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Source</th><th>Visites</th><th>Commencer</th><th>Créés</th><th>Finis à deux</th><th>Ventes</th><th>CA</th><th>Conversion</th></tr></thead><tbody>' +
+          sources.map(function (x) {
+            return '<tr><td class="bil-gauche">' + esc(libelleSourceBilan(x.src)) + '</td><td>' + nombreBilan(x.vues) + '</td><td>' + nombreBilan(x.ctas) + '</td><td>' + nombreBilan(x.crees) + '</td><td>' +
+              nombreBilan(x.deux_finis) + '</td><td>' + nombreBilan(x.payes) + '</td><td>' + (Number(x.revenu) ? eurosBilan(x.revenu) : '') + '</td><td>' + partBilan(Number(x.payes) || 0, Number(x.vues) || 0) + '</td></tr>';
+          }).join('') + '</tbody></table></div>'
+        : '<p class="bil-vide">Aucune visite sur la période.</p>');
+
+      // Délais et rapports.
+      var dl = d.delais || {};
+      var rp = d.rapports || {};
+      var faits = [
+        [dureeBilan(dl.minutes_a), 'pour répondre à tout (premier)'],
+        [dureeBilan(dl.minutes_b), 'pour répondre à tout (partenaire)'],
+        [dureeBilan(dl.heures_rejoint === null || dl.heures_rejoint === undefined ? null : dl.heures_rejoint * 60), 'avant que le partenaire rejoigne'],
+        [dureeBilan(dl.heures_deux_finis === null || dl.heures_deux_finis === undefined ? null : dl.heures_deux_finis * 60), 'de la création aux deux séries finies'],
+        [nombreBilan(dl.payes_avant_fin) + ' / ' + nombreBilan(dl.payes), 'payés avant que les deux aient fini'],
+        [nombreBilan(d.en_cours), 'bilans en cours, toutes périodes']
+      ];
+      var etats = [['pret', 'PDF envoyés'], ['a_faire', 'À fabriquer'], ['en_cours', 'En fabrication'], ['erreur', 'En erreur']];
+      var html = '<div class="bil-faits">' + faits.map(function (f) { return '<div class="bil-fait"><div class="bil-fait-n">' + esc(f[0]) + '</div><div class="bil-fait-l">' + esc(f[1]) + '</div></div>'; }).join('') + '</div>' +
+        '<div class="bil-faits">' + etats.map(function (e) { return '<div class="bil-fait' + (e[0] === 'erreur' && rp.erreur ? ' bil-fait--alerte' : '') + '"><div class="bil-fait-n">' + nombreBilan(rp[e[0]]) + '</div><div class="bil-fait-l">' + esc(e[1]) + '</div></div>'; }).join('') + '</div>';
+      if ((d.erreurs || []).length) {
+        html += '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Bilan</th><th>Essais</th><th>Le</th><th class="bil-gauche">Erreur</th></tr></thead><tbody>' +
+          d.erreurs.map(function (x) { return '<tr><td class="bil-gauche">' + esc(x.id) + '</td><td>' + nombreBilan(x.essais) + '</td><td>' + esc(dateBilan(x.le)) + '</td><td class="bil-gauche bil-erreur">' + esc(x.erreur || '') + '</td></tr>'; }).join('') +
+          '</tbody></table></div>';
+      }
+      place('admin-bilan-delais', html);
+
+      // Payés en attente.
+      var etapeLisible = function (e) {
+        if (!e) return '—';
+        if (e === 'fini') return 'fini';
+        if (e === 'invitation') return 'invitation pas ouverte';
+        var dm = BILAN_DOMAINES.filter(function (x) { return x[0] === e; })[0];
+        return dm ? dm[1] : e;
+      };
+      place('admin-bilan-attente', (d.attente || []).length
+        ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Bilan</th><th>Payé le</th><th class="bil-gauche">E-mail</th><th>Langue</th><th class="bil-gauche">Premier</th><th class="bil-gauche">Partenaire</th><th>Dernière activité</th></tr></thead><tbody>' +
+          d.attente.map(function (x) {
+            return '<tr><td class="bil-gauche">' + esc(x.id) + '</td><td>' + esc(dateBilan(x.paye_le)) + '</td><td class="bil-gauche">' + esc(x.email || '') + '</td><td>' + esc(x.lang || '') + '</td><td class="bil-gauche">' +
+              esc(etapeLisible(x.etape_a)) + '</td><td class="bil-gauche">' + esc(etapeLisible(x.etape_b)) + '</td><td>' + esc(dateBilan(x.maj_le)) + '</td></tr>';
+          }).join('') + '</tbody></table></div>'
+        : '<p class="bil-vide">Aucun rapport payé en attente.</p>');
+
+      // Jour par jour.
+      var cols = [['vues', 'Visites'], ['ctas', 'Commencer'], ['crees', 'Créés'], ['rejoints', 'Rejoints'], ['finis_a', 'Premier fini'], ['finis_b', 'Partenaire fini'], ['deux_finis', 'Finis à deux'], ['paiements_ouverts', 'Paiements ouverts'], ['payes', 'Payés']];
+      var t = '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th>Jour</th>' + cols.map(function (c) { return '<th>' + c[1] + '</th>'; }).join('') + '<th>CA</th></tr></thead><tbody>';
+      serie.slice().reverse().forEach(function (j) {
+        t += '<tr><td>' + esc(String(j.jour)) + '</td>' + cols.map(function (c) { return '<td>' + (Number(j[c[0]]) || '') + '</td>'; }).join('') +
+          '<td>' + (Number(j.revenu) ? eurosBilan(j.revenu) : '') + '</td></tr>';
+      });
+      t += '<tr class="adm-table-total"><td>Total</td>' + cols.map(function (c) { return '<td>' + tot[c[0]] + '</td>'; }).join('') + '<td>' + eurosBilan(tot.revenu) + '</td></tr></tbody></table></div>';
+      place('admin-bilan-list', t);
     }).catch(function (e) {
-      if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Les chiffres du bilan ne répondent pas (' + esc(String(e.message || e)) + '). La migration 20261018120000 est-elle appliquée ?</p>';
+      var msg = '<p class="text-center text-muted-foreground py-6">Les chiffres du bilan ne répondent pas (' + esc(String((e && e.message) || e)) + '). La migration 20261018120000 est-elle appliquée, et admin-stats déployée avec get_bilan_tableau ?</p>';
+      ids.forEach(function (id) { place(id, msg); });
+      _bilanCouches = null;
+      drawChart(document.getElementById('admin-bilan-chart'), [], {});
     });
   }
 
@@ -2557,7 +2750,7 @@
     stats: ['Parties', 'Lancés, terminés et taux de finition, toutes pages confondues'],
     trafic: ['Trafic', 'Visites et pages vues, mesurées par le site lui-même'],
     distance: ['À distance', 'Les parties jouées chacun sur son téléphone'],
-    bilan: ['Bilan', 'Le bilan de couple payant : de la création au paiement, sur trente jours'],
+    bilan: ['Bilan', 'Le bilan de couple payant : de la visite de sa page au paiement'],
     reviews: ['Avis', 'Modération des avis laissés sur les pages'],
     leads: ['Leads', 'Les demandes reçues par le formulaire'],
     messages: ['Messagerie', 'Les messages du formulaire de contact'],
@@ -3395,6 +3588,24 @@
       traficCouchesVues[cle] = !traficCouchesVues[cle];
       renderTraficCourbe();
     });
+    // La légende et la période de l'onglet Bilan.
+    var legBi = document.getElementById('admin-bilan-legende');
+    if (legBi) legBi.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-bilan-courbe]');
+      if (!b) return;
+      var cle = b.dataset.bilanCourbe;
+      var allumees = Object.keys(bilanCouchesVues).filter(function (k) { return bilanCouchesVues[k]; });
+      if (bilanCouchesVues[cle] && allumees.length === 1) return;
+      bilanCouchesVues[cle] = !bilanCouchesVues[cle];
+      dessineBilan();
+    });
+    var perBi = document.getElementById('admin-bilan-periode');
+    if (perBi) perBi.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-bilan-jours]');
+      if (!b) return;
+      bilanJours = Number(b.dataset.bilanJours) || 30;
+      loadBilan();
+    });
     // La legende de la courbe des parties a distance, meme mecanique.
     var legDi = document.getElementById('admin-distance-legende');
     if (legDi) legDi.addEventListener('click', function (e) {
@@ -3447,6 +3658,7 @@
         if (_traficCouches) renderTraficCourbe();
         return;
       }
+      if (currentTab === 'bilan') { dessineBilan(); return; }
       if (currentTab === 'distance') {
         if (_distanceCouches) {
           _distanceCouches.forEach(function (c) { c.couleur = teinte(c.cle === 'part' ? 'ratio' : (c.cle === 'distance' ? 'finis' : 'lances'), c.couleur); });

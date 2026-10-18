@@ -18,7 +18,7 @@ import {
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
-  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, VENDEUR,
+  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, VENDEUR,
 } from './config.js';
 import { saisonActive } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
@@ -1398,6 +1398,9 @@ async function generatePage(routeKey, lang) {
     // sa garantie, et les mentions du vendeur (mentions légales, CGV).
     bilanOuvert: BILAN_OUVERT,
     bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
+    // Les pages qui renvoient vers le bilan (BILAN_ENTREES) : le groupe du
+    // texte et l'identifiant de la source.
+    bilanEntree: BILAN_OUVERT ? (BILAN_ENTREES[routeKey] || null) : null,
     bilanPrix: prixBilan(lang),
     bilanPrixCentimes: BILAN_CONST.prix,
     bilanGarantie: BILAN_CONST.garantie,

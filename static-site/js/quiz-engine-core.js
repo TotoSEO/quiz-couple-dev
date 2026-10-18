@@ -3201,43 +3201,70 @@ var QuizEngine = (function() {
   // en francais. C'est ce que dispositionResultat pose sous le resultat, et ce
   // que les pages a ecran de resultat propre (tu preferes) appellent.
   // ── Le bilan de couple, sous le verdict des tests de couple ──────────
-  // Le body porte data-bilan (l'adresse de la page dans la langue) seulement
-  // quand le bilan est ouvert (BILAN_OUVERT, config.js) : sans lui, rien.
-  // docs/bilan/CONCEPTION.md.
-  var TESTS_BILAN = ['tester-couple', 'compatibilite', 'sain', 'emmenager', 'mariage', 'parentalite',
-    'est-ce-le-bon', 'charge-mentale', 'common-points', 'amoureux', 'type-couple',
-    'compatibilite-sexuelle', 'fin-couple', 'distance'];
+  // Le body porte data-bilan (l'adresse de la page dans la langue) quand le
+  // bilan est ouvert (BILAN_OUVERT, config.js), et data-bilan-groupe et
+  // data-bilan-id sur les pages qui y renvoient (BILAN_ENTREES) : sans eux,
+  // rien. Le texte dépend du groupe : `score` (un test fait à deux, qui rend
+  // un chiffre ou un profil), `projet` (avant une grande étape), `doute`
+  // (quand on se pose des questions). Le lien porte ?src=resultat-<id>, que
+  // l'onglet Bilan de l'admin lit. docs/bilan/CONCEPTION.md.
   var BILAN_TEXTES = {
-    fr: { sur: 'Pour aller plus loin à deux', titre: 'Le bilan de couple complet',
-          texte: 'Environ 90 questions concrètes (l\'argent, les enfants, où vivre, la fidélité...), chacun de son côté sur son téléphone. Puis vos accords et vos écarts, domaine par domaine.',
-          prix: 'Répondre est gratuit · rapport complet {{prix}} pour vous deux', bouton: 'Faire notre bilan' },
-    en: { sur: 'Go further, together', titre: 'The full couple check-up',
-          texte: 'About 90 concrete questions (money, kids, where to live, fidelity...), each of you on your own phone. Then where you agree and where you don\'t, area by area.',
-          prix: 'Answering is free · full report {{prix}} for both of you', bouton: 'Do our check-up' },
-    es: { sur: 'Para ir más lejos en pareja', titre: 'El chequeo de pareja completo',
-          texte: 'Unas 90 preguntas concretas (el dinero, los hijos, dónde vivir, la fidelidad...), cada uno por su lado en su móvil. Y después vuestros acuerdos y diferencias, tema por tema.',
-          prix: 'Responder es gratis · informe completo {{prix}} para los dos', bouton: 'Hacer nuestro chequeo' },
-    de: { sur: 'Gemeinsam weitergehen', titre: 'Der vollständige Beziehungs-Check',
-          texte: 'Rund 90 konkrete Fragen (Geld, Kinder, Wohnort, Treue...), jeder für sich auf seinem Handy. Danach eure Übereinstimmungen und Unterschiede, Bereich für Bereich.',
-          prix: 'Antworten ist kostenlos · vollständiger Bericht {{prix}} für euch beide', bouton: 'Unseren Check machen' },
-    it: { sur: 'Per andare più a fondo in due', titre: 'Il check-up di coppia completo',
-          texte: 'Circa 90 domande concrete (i soldi, i figli, dove vivere, la fedeltà...), ciascuno per conto suo sul proprio telefono. Poi i vostri accordi e le vostre differenze, tema per tema.',
-          prix: 'Rispondere è gratis · report completo {{prix}} per tutti e due', bouton: 'Fare il nostro check-up' },
+    fr: { sur: 'Bilan de couple',
+          score: ['Et si vous alliez plus loin que ce test ?', 'Un test rapide donne une tendance. Le bilan de couple passe toute votre relation en revue, de l\'argent aux enfants, et compare vos deux points de vue sujet par sujet.'],
+          projet: ['Avant de vous lancer, vérifiez que vous voulez la même vie', 'Emménager, se marier, avoir un enfant... Le bilan de couple passe en revue tout ce qui engage une vie à deux et vous montre où vous êtes d\'accord, et de quoi parler avant de vous engager.'],
+          doute: ['Faites le point, tous les deux', 'Ce test donne votre ressenti. Le bilan de couple compare celui de chacun, sujet par sujet, et vous dit par où commencer pour en parler.'],
+          points: ['Une centaine de questions, chacun sur son téléphone', 'Construit à partir de la recherche en psychologie du couple', 'Un rapport PDF d\'une trentaine de pages'],
+          bouton: 'Découvrir le bilan', prix: 'Questions gratuites · rapport {{prix}} pour vous deux' },
+    en: { sur: 'Couple check-up',
+          score: ['Want to go further than this test?', 'A quick test gives you a trend. The couple check-up goes through your whole relationship, from money to children, and compares your two points of view topic by topic.'],
+          projet: ['Before you take the leap, check you want the same life', 'Moving in, getting married, having a baby... The couple check-up goes through everything that shapes a life together and shows you where you agree, and what to talk about before you commit.'],
+          doute: ['Take stock, the two of you', 'This test gives you your own feeling. The couple check-up compares how each of you sees things, topic by topic, and tells you where to start talking.'],
+          points: ['About a hundred questions, each on your own phone', 'Built on research in couple psychology', 'A PDF report of around thirty pages'],
+          bouton: 'Discover the check-up', prix: 'Free questions · report {{prix}} for both of you' },
+    es: { sur: 'Chequeo de pareja',
+          score: ['¿Y si fuerais más allá de este test?', 'Un test rápido da una tendencia. El chequeo de pareja repasa toda vuestra relación, del dinero a los hijos, y compara vuestros dos puntos de vista tema por tema.'],
+          projet: ['Antes de dar el paso, comprobad que queréis la misma vida', 'Iros a vivir juntos, casaros, tener un hijo... El chequeo de pareja repasa todo lo que marca una vida en común y os muestra en qué estáis de acuerdo, y de qué hablar antes de comprometeros.'],
+          doute: ['Haced balance, los dos', 'Este test da tu impresión. El chequeo de pareja compara la de cada uno, tema por tema, y os dice por dónde empezar a hablar.'],
+          points: ['Un centenar de preguntas, cada uno en su móvil', 'Construido a partir de la investigación en psicología de pareja', 'Un informe en PDF de unas treinta páginas'],
+          bouton: 'Descubrir el chequeo', prix: 'Preguntas gratis · informe {{prix}} para los dos' },
+    de: { sur: 'Beziehungs-Check',
+          score: ['Wollt ihr weiter gehen als dieser Test?', 'Ein kurzer Test zeigt eine Tendenz. Der Beziehungs-Check geht eure ganze Beziehung durch, vom Geld bis zu den Kindern, und vergleicht eure beiden Sichtweisen Thema für Thema.'],
+          projet: ['Bevor ihr den Schritt wagt: Wollt ihr dasselbe Leben?', 'Zusammenziehen, heiraten, ein Kind bekommen... Der Beziehungs-Check geht alles durch, was ein gemeinsames Leben prägt, und zeigt euch, wo ihr euch einig seid und worüber ihr reden solltet, bevor ihr euch festlegt.'],
+          doute: ['Macht eine Bestandsaufnahme, zu zweit', 'Dieser Test zeigt dein Gefühl. Der Beziehungs-Check vergleicht die Sicht von euch beiden, Thema für Thema, und sagt euch, womit ihr anfangen könnt.'],
+          points: ['Rund hundert Fragen, jeder auf seinem Handy', 'Aufgebaut auf der Forschung zur Paarpsychologie', 'Ein PDF-Bericht mit rund dreißig Seiten'],
+          bouton: 'Den Check entdecken', prix: 'Fragen kostenlos · Bericht {{prix}} für euch beide' },
+    it: { sur: 'Check-up di coppia',
+          score: ['E se andaste oltre questo test?', 'Un test veloce dà una tendenza. Il check-up di coppia passa in rassegna tutta la vostra relazione, dai soldi ai figli, e confronta i vostri due punti di vista tema per tema.'],
+          projet: ['Prima del grande passo, verificate di volere la stessa vita', 'Andare a vivere insieme, sposarsi, avere un figlio... Il check-up di coppia passa in rassegna tutto quello che segna una vita a due e vi mostra su cosa siete d\'accordo, e di cosa parlare prima di impegnarvi.'],
+          doute: ['Fate il punto, tutti e due', 'Questo test dà la tua impressione. Il check-up di coppia confronta quella di ciascuno, tema per tema, e vi dice da dove cominciare a parlarne.'],
+          points: ['Un centinaio di domande, ciascuno sul proprio telefono', 'Costruito a partire dalla ricerca in psicologia di coppia', 'Un report in PDF di una trentina di pagine'],
+          bouton: 'Scopri il check-up', prix: 'Domande gratuite · report {{prix}} per tutti e due' },
   };
+  var COCHE_BILAN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   function encartBilan(cle, lang) {
-    var chemin = document.body && document.body.getAttribute('data-bilan');
-    if (!chemin || TESTS_BILAN.indexOf(cle) < 0) return null;
+    var corps = document.body;
+    var chemin = corps && corps.getAttribute('data-bilan');
+    var groupe = corps && corps.getAttribute('data-bilan-groupe');
+    if (!chemin || !groupe) return null;
     var t = BILAN_TEXTES[lang] || BILAN_TEXTES.fr;
-    var prix = document.body.getAttribute('data-bilan-prix') || '';
+    var texte = t[groupe] || t.score;
+    var prix = corps.getAttribute('data-bilan-prix') || '';
+    var id = corps.getAttribute('data-bilan-id') || cle || 'test';
+    var lien = chemin + (chemin.indexOf('?') < 0 ? '?' : '&') + 'src=resultat-' + encodeURIComponent(id);
     var zone = el('section', 'qr-bilan');
-    zone.setAttribute('aria-label', t.titre);
-    var duo = mascottesDispo() ? '<div class="qr-bilan-duo" aria-hidden="true">' + mascotteSvg('rose', 'salut', 64) + mascotteSvg('violet', 'mignon', 68) + '</div>' : '';
-    zone.innerHTML = duo +
+    zone.setAttribute('aria-label', t.sur);
+    // Une vraie page du rapport d'exemple (bilan/apercus.mjs), dans la langue.
+    var visuel = '<div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-' + esc(BILAN_TEXTES[lang] ? lang : 'fr') +
+      '.webp" alt="" width="600" height="849" loading="lazy" decoding="async"></div>';
+    zone.innerHTML = visuel +
       '<div class="qr-bilan-corps"><p class="qr-bilan-sur">' + esc(t.sur) + '</p>' +
-      '<h3 class="qr-bilan-titre">' + esc(t.titre) + '</h3>' +
-      '<p class="qr-bilan-texte">' + esc(insecables(t.texte)) + '</p>' +
+      '<h3 class="qr-bilan-titre">' + esc(insecables(texte[0])) + '</h3>' +
+      '<p class="qr-bilan-texte">' + esc(insecables(texte[1])) + '</p>' +
+      '<ul class="qr-bilan-points">' + t.points.map(function (p) { return '<li>' + COCHE_BILAN + '<span>' + esc(p) + '</span></li>'; }).join('') + '</ul>' +
+      '<a class="qr-bilan-bouton" href="' + esc(lien) + '">' + esc(t.bouton) +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
       (prix ? '<p class="qr-bilan-prix">' + esc(t.prix.replace('{{prix}}', prix)) + '</p>' : '') +
-      '<a class="btn btn-cta btn-gradient qr-bilan-bouton" href="' + esc(chemin) + '">' + esc(t.bouton) + '</a></div>';
+      '</div>';
     return zone;
   }
 

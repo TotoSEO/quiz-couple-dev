@@ -117,15 +117,37 @@
     quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭',
   };
 
-  // Le bilan de couple payant passe en tête sur les tests de couple, une
-  // fois ouvert (BILAN_OUVERT, config.js), comme sous le verdict du moteur.
-  const _avecBilan = (typeof bilanOuvert !== 'undefined' && bilanOuvert) &&
-    ['testCouple', 'testCompatibilite', 'testCoupleSain', 'testEmmenager', 'testMariage', 'testParentalite',
-     'testEstCeLeBon', 'testChargeMentale', 'testCommonPoints', 'quizAmoureux', 'quizTypeCouple',
-     'testCompatSexuelle', 'testFinCouple', 'testDistance'].indexOf(routeKey) !== -1;
-  const _relatedKeys = (_avecBilan ? ['bilanCouple'] : []).concat((_relatedMap[routeKey] || []).filter(function(k) {
+  // Le bilan de couple payant, une fois ouvert (BILAN_OUVERT, config.js), sur
+  // les pages qui y renvoient (BILAN_ENTREES) : une bannière au-dessus des
+  // cartes, aux couleurs de l'encart sous le verdict (.qr-bilan, styles.css),
+  // dont le lien porte ?src=bas-<id> pour l'onglet Bilan de l'admin.
+  const _bilan = (typeof bilanEntree !== 'undefined' && bilanEntree && typeof bilanChemin !== 'undefined' && bilanChemin) ? bilanEntree : null;
+  const _relatedKeys = (_relatedMap[routeKey] || []).filter(function(k) {
     return getLocalizedUrl(k, lang) && k !== 'bilanCouple';
-  })).slice(0, 4);
+  }).slice(0, 4);
+  const _BILAN_BAS = {
+    fr: { sur: 'Bilan de couple', titre: 'Le bilan complet de votre couple',
+          texte: 'Une centaine de questions précises sur l\'argent, les enfants, où vivre, la fidélité... Chacun répond de son côté, et vous recevez un rapport d\'une trentaine de pages qui compare vos deux réponses, sujet par sujet.',
+          points: ['Une centaine de questions, chacun sur son téléphone', 'Construit à partir de la recherche en psychologie du couple', 'Un rapport PDF d\'une trentaine de pages'],
+          bouton: 'Découvrir le bilan', prix: 'Questions gratuites · rapport {{prix}} pour vous deux' },
+    en: { sur: 'Couple check-up', titre: 'The complete check-up of your relationship',
+          texte: 'About a hundred specific questions on money, children, where to live, fidelity... Each of you answers on your own, and you get a report of around thirty pages that compares your two sets of answers, topic by topic.',
+          points: ['About a hundred questions, each on your own phone', 'Built on research in couple psychology', 'A PDF report of around thirty pages'],
+          bouton: 'Discover the check-up', prix: 'Free questions · report {{prix}} for both of you' },
+    es: { sur: 'Chequeo de pareja', titre: 'El chequeo completo de vuestra pareja',
+          texte: 'Un centenar de preguntas concretas sobre el dinero, los hijos, dónde vivir, la fidelidad... Cada uno responde por su lado, y recibís un informe de unas treinta páginas que compara vuestras dos respuestas, tema por tema.',
+          points: ['Un centenar de preguntas, cada uno en su móvil', 'Construido a partir de la investigación en psicología de pareja', 'Un informe en PDF de unas treinta páginas'],
+          bouton: 'Descubrir el chequeo', prix: 'Preguntas gratis · informe {{prix}} para los dos' },
+    de: { sur: 'Beziehungs-Check', titre: 'Der vollständige Check eurer Beziehung',
+          texte: 'Rund hundert genaue Fragen zu Geld, Kindern, Wohnort, Treue... Jeder antwortet für sich, und ihr bekommt einen Bericht mit rund dreißig Seiten, der eure beiden Antworten vergleicht, Thema für Thema.',
+          points: ['Rund hundert Fragen, jeder auf seinem Handy', 'Aufgebaut auf der Forschung zur Paarpsychologie', 'Ein PDF-Bericht mit rund dreißig Seiten'],
+          bouton: 'Den Check entdecken', prix: 'Fragen kostenlos · Bericht {{prix}} für euch beide' },
+    it: { sur: 'Check-up di coppia', titre: 'Il check-up completo della vostra coppia',
+          texte: 'Un centinaio di domande precise sui soldi, i figli, dove vivere, la fedeltà... Ciascuno risponde per conto suo, e ricevete un report di una trentina di pagine che confronta le vostre due risposte, tema per tema.',
+          points: ['Un centinaio di domande, ciascuno sul proprio telefono', 'Costruito a partire dalla ricerca in psicologia di coppia', 'Un report in PDF di una trentina di pagine'],
+          bouton: 'Scopri il check-up', prix: 'Domande gratuite · report {{prix}} per tutti e due' },
+  };
+  const _bb = _BILAN_BAS[lang] || _BILAN_BAS.fr;
 
   // Famille de chaque page suggérée (FAMILLES_NAV, la liste du menu) : elle
   // donne la couleur de la carte, son étiquette et le verbe du bouton.
@@ -192,7 +214,7 @@
   const _relatedArticles = (typeof relatedArticles !== 'undefined' && Array.isArray(relatedArticles)) ? relatedArticles : [];
   const _seuilLu = typeof seuilLectures === 'number' ? seuilLectures : 10;
 %>
-<% if (_relatedKeys.length > 0) { %>
+<% if (_relatedKeys.length > 0 || _bilan) { %>
 <section class="related-tests-section suite-section" aria-labelledby="suite-titre">
   <div class="container mx-auto px-4 max-w-6xl">
     <div class="bloc-entete suite-entete">
@@ -201,6 +223,22 @@
       <span class="bloc-trait" aria-hidden="true"></span>
       <p class="bloc-sous-titre"><%= _sousTitre %></p>
     </div>
+    <% if (_bilan) { %>
+    <section class="qr-bilan qr-bilan--bas" aria-label="<%= _bb.sur %>">
+      <div class="qr-bilan-visuel" aria-hidden="true"><img src="/bilan/apercu-synthese-<%= _BILAN_BAS[lang] ? lang : 'fr' %>.webp" alt="" width="600" height="849" loading="lazy" decoding="async"></div>
+      <div class="qr-bilan-corps">
+        <p class="qr-bilan-sur"><%= _bb.sur %></p>
+        <h3 class="qr-bilan-titre"><%= _bb.titre %></h3>
+        <p class="qr-bilan-texte"><%= _bb.texte %></p>
+        <ul class="qr-bilan-points">
+          <% for (const p of _bb.points) { %><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><%= p %></span></li><% } %>
+        </ul>
+        <a class="qr-bilan-bouton" href="<%= bilanChemin %>?src=bas-<%= _bilan.id %>"><%= _bb.bouton %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="qr-bilan-prix"><%= _bb.prix.replace('{{prix}}', bilanPrix) %></p>
+      </div>
+    </section>
+    <% } %>
+    <% if (_relatedKeys.length > 0) { %>
     <div class="suite-grille">
       <% _relatedKeys.forEach(function (rk, i) {
         const rUrl = getLocalizedUrl(rk, lang);
@@ -233,6 +271,7 @@
       </a>
       <% }); %>
     </div>
+    <% } %>
   </div>
 </section>
 <% } %>
