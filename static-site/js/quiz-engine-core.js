@@ -2372,6 +2372,12 @@ var QuizEngine = (function() {
     { type: 'test', key: 'duree-celibat', icon: '⏳', route: 'testDureeCelibat' },
     { type: 'test', key: 'est-ce-le-bon', icon: '🔑', route: 'testEstCeLeBon' },
     { type: 'test', key: 'compatibilite-sexuelle', icon: '🔥', route: 'testCompatSexuelle' },
+    // Les quiz speciaux d'Halloween (16 octobre 2026), ranges avec les quiz
+    { type: 'quiz', key: 'serial-killer', icon: '🔪', route: 'quizSerialKiller' },
+    { type: 'quiz', key: 'film-horreur', icon: '🎬', route: 'quizMortFilmHorreur' },
+    { type: 'quiz', key: 'possession', icon: '👻', route: 'quizPossession' },
+    { type: 'quiz', key: 'super-vilain', icon: '🦹', route: 'quizSuperVilain' },
+    { type: 'quiz', key: 'duo-vilains', icon: '🎭', route: 'quizDuoVilains' },
     { type: 'test', key: 'charge-mentale', icon: '🧠', route: 'testChargeMentale' },
     { type: 'quiz', key: 'rencontre', icon: '💬', route: 'quizRencontre' },
     { type: 'test', key: 'langage-amour', icon: '💬', route: 'testLangageAmour' },
@@ -2514,6 +2520,12 @@ var QuizEngine = (function() {
     // moment où elles sont le plus disposées à enchaîner : on garde le ton.
     'coquin':                  ['jeuActionVeriteHot', 'testCompatSexuelle', 'jeuGages'],
     'compatibilite-sexuelle':  ['quizCoquin', 'jeuActionVeriteHot', 'testCompatibilite'],
+    // Halloween : d'un quiz special a l'autre, puis un jeu
+    'serial-killer':    ['quizSuperVilain', 'quizMortFilmHorreur', 'quizPossession'],
+    'film-horreur':     ['quizPossession', 'quizSerialKiller', 'quizDuoVilains'],
+    'possession':       ['quizMortFilmHorreur', 'quizSerialKiller', 'quizSuperVilain'],
+    'super-vilain':     ['quizDuoVilains', 'quizSerialKiller', 'quizMortFilmHorreur'],
+    'duo-vilains':      ['quizSuperVilain', 'quizPossession', 'quizTuPreferes'],
     'action-ou-verite-coquin': ['quizCoquin', 'jeuGages', 'quizTentation'],
     'tentation':               ['testInfidelite', 'quizCoquin', 'testConfiance'],
 
@@ -3287,6 +3299,91 @@ var QuizEngine = (function() {
     }
     if (sameGender) return playerIndex === 0 ? { bg: '#3b82f6', text: '#fff' } : { bg: '#3730a3', text: '#fff' };
     return { bg: '#3b82f6', text: '#fff' };
+  }
+
+  // ── Quiz de saison : ce que PortraitQuiz et SurvieQuiz partagent ────────
+  // Ces fonctions vivent dans le socle, pas dans un moteur : la construction
+  // decoupe quiz-engine-core.js en un paquet par moteur (build/moteurs.js) et
+  // un paquet ne contient que le socle et les methodes du moteur servi. Une
+  // methode copiee d'un moteur a l'autre (SurvieQuiz.prototype.x =
+  // PortraitQuiz.prototype.x) referait un paquet sans PortraitQuiz planter au
+  // chargement, c'est arrive le 16 octobre 2026.
+  function saisonEtg(cle, repli) {
+    var plein = this.prefix + '.' + cle;
+    var v = tgd(plein, null);
+    return (v && v !== plein) ? v : (repli === undefined ? '' : repli);
+  }
+  function saisonTexteQuestion(q) { return tgd(this.prefix + '.q' + q.id, q.text); }
+  function saisonTexteOption(q, opt) { return tgd(this.prefix + '.q' + q.id + opt.id, opt.text); }
+  function saisonCouleur(rang) { return getPlayerColor(this.players[rang], this.players[1 - rang], rang); }
+  function saisonPct(lang, v) { return lang === 'en' ? v + '%' : v + '\u00a0%'; }
+  function saisonOptionDe(q, id) {
+    for (var i = 0; i < q.options.length; i++) if (q.options[i].id === id) return q.options[i];
+    return null;
+  }
+  function saisonRender() {
+    if (this.__relaisTimer) { clearTimeout(this.__relaisTimer); this.__relaisTimer = null; }
+    this.container.innerHTML = '';
+    if (this.phase === 'modes') this.renderModes();
+    else if (this.phase === 'setup') this.renderSetup();
+    else if (this.phase === 'relais') this.renderRelais();
+    else if (this.phase === 'results') this.renderResults();
+    else this.renderQuestion();
+  }
+  // Seul(e) ou a deux : la question se pose avant les prenoms.
+  function saisonRenderModes() {
+    var self = this;
+    this.container.appendChild(ecranModes({
+      icone: this.icone,
+      titre: this.etg('modesTitre', 'Seul(e) ou à deux ?'),
+      desc: this.etg('modesDesc', ''),
+      modes: [
+        { id: 'solo', emoji: '🙋', titre: this.etg('modeSolo', 'Seul(e)'), desc: this.etg('modeSoloDesc', ''), meta: this.etg('modeSoloMeta', '') },
+        { id: 'duo', emoji: '👫', titre: this.etg('modeDuo', 'À deux'), desc: this.etg('modeDuoDesc', ''), meta: this.etg('modeDuoMeta', '') }
+      ],
+      onChoix: function(id) { self.mode = id; self.phase = 'setup'; self.render(); smoothScroll(self.container, 'start'); }
+    }));
+  }
+  function saisonBoutonRetourModes() {
+    var self = this;
+    if (!(this.modes.solo && this.modes.duo)) return null;
+    var b = el('button', 'quiz-modes-retour', '← ' + esc(this.etg('modesRetour', 'Changer de mode')));
+    b.type = 'button';
+    b.addEventListener('click', function() { self.mode = null; self.phase = 'modes'; self.render(); smoothScroll(self.container, 'start'); });
+    return b;
+  }
+  function saisonRenderRelais() {
+    var self = this;
+    var j = this.joueurCourant;
+    var joueur = this.players[j];
+    this.container.appendChild(relaisJoueur(this, {
+      nom: joueur.name,
+      emoji: this.icone,
+      perso: mascotteDe(joueur, j),
+      couleur: this.couleur(j).bg,
+      note: j === 0 ? this.etg('relaisDebut', '') : this.etg('relaisSuite', '').replace('{{nom}}', this.players[0].name),
+      etape: this.etg('relaisEtape', '{{n}} questions').replace('{{n}}', this.questions.length),
+      suite: function() { self.phase = 'playing'; self.render(); }
+    }));
+  }
+  // Le profil obtenu part dans profil_resultats, une fois par test et par
+  // navigateur ; ProfileQuiz et les quiz de saison passent tous par ici.
+  function enregistreProfilResultat(moteur, profil) {
+    var bloc = document.getElementById('pq-reviews');
+    var slug = bloc ? bloc.dataset.quizSlug : null;
+    if (!slug || !profil) return;
+    // Une seule fois par test et par navigateur : sinon, refaire le test pour
+    // comparer deux réponses gonflerait la répartition d'un même profil.
+    var cle = 'qc-profil-' + slug;
+    try { if (localStorage.getItem(cle)) return; localStorage.setItem(cle, profil); } catch (e) {}
+    fetch(SUPABASE_URL + '/rest/v1/profil_resultats', {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json', 'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ quiz_slug: slug, profil: profil, lang: moteur.lang })
+    }).catch(function () {});
   }
 
   // ═══════════════════════════════════════════════════════════
@@ -6633,23 +6730,7 @@ var QuizEngine = (function() {
   // c'est ce qui permet aux pages d'annoncer une répartition réelle plutôt
   // qu'un chiffre repris d'une étude américaine. Silencieux par nature : si la
   // table n'existe pas encore, la page se contente de masquer ses statistiques.
-  ProfileQuiz.prototype.enregistreProfil = function(profil) {
-    var bloc = document.getElementById('pq-reviews');
-    var slug = bloc ? bloc.dataset.quizSlug : null;
-    if (!slug || !profil) return;
-    // Une seule fois par test et par navigateur : sinon, refaire le test pour
-    // comparer deux réponses gonflerait la répartition d'un même profil.
-    var cle = 'qc-profil-' + slug;
-    try { if (localStorage.getItem(cle)) return; localStorage.setItem(cle, profil); } catch (e) {}
-    fetch(SUPABASE_URL + '/rest/v1/profil_resultats', {
-      method: 'POST',
-      headers: {
-        'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
-        'Content-Type': 'application/json', 'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify({ quiz_slug: slug, profil: profil, lang: this.lang })
-    }).catch(function () {});
-  };
+  ProfileQuiz.prototype.enregistreProfil = function(profil) { enregistreProfilResultat(this, profil); };
 
   ProfileQuiz.prototype.renderResults = function() {
     var self = this;
@@ -13509,6 +13590,735 @@ var QuizEngine = (function() {
     return ul;
   };
 
+  // ═══════════════════════════════════════════════════════════
+  // PORTRAIT QUIZ - les quiz speciaux d'Halloween a profil (16 octobre 2026)
+  // « Avec quel serial killer es-tu compatible ? », « A quel super-vilain
+  // ressembles-tu ? », « Quel duo de super-vilains formez-vous ? ».
+  // Chaque reponse pese sur un ou plusieurs portraits (gd.json,
+  // q{N}{lettre}_axes : « bundy:2,zodiac:1 »), le resultat est le portrait
+  // le plus charge. Seul(e) : un portrait. A deux : chacun repond a toute la
+  // serie de son cote (le telephone change de main une fois, comme la
+  // compatibilite sexuelle), puis les deux portraits cote a cote, ou, quand
+  // le quiz porte une table « duos », le duo que forment les deux roles. A
+  // distance : le tour par tour commun. Les portraits ont une image
+  // (public/quiz/halloween/<quiz>/<id>.webp), dessinee, jamais une photo.
+  // ═══════════════════════════════════════════════════════════
+  function PortraitQuiz(config) {
+    this.container = config.container;
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.questions = config.questions || [];
+    this.pool = config.pool || this.questions.slice();
+    this.quizType = config.quizType || 'portrait';
+    this.axes = config.axes || [];
+    this.profils = config.profils || {};
+    this.duos = config.duos || null;
+    this.duoProfils = config.duoProfils || {};
+    this.modes = config.modes || { solo: true, duo: true };
+    this.icone = config.icone || '🎃';
+    this.distance = !!config.distance;
+    this.mode = this.modes.solo && this.modes.duo ? null : (this.modes.duo ? 'duo' : 'solo');
+    this.phase = this.mode ? 'setup' : 'modes';
+    this.players = [{ name: '', gender: null }, { name: '', gender: null }];
+    this.joueurCourant = 0;
+    this.currentQ = 0;
+    this.answers = { p1: [], p2: [] };
+    this.aDistance = false;
+    this.maxParAxe = this.calculeMax();
+    if (reprendrePartieRejointe(this, config)) return;
+    this.render();
+  }
+
+  PortraitQuiz.prototype.etg = saisonEtg;
+  PortraitQuiz.prototype.texteQuestion = saisonTexteQuestion;
+  PortraitQuiz.prototype.texteOption = saisonTexteOption;
+  PortraitQuiz.prototype.couleur = saisonCouleur;
+
+  // Le maximum que chaque portrait peut recevoir : pour une question, le
+  // plus de points qu'une reponse lui donne. Sert aux pourcentages.
+  PortraitQuiz.prototype.calculeMax = function() {
+    var max = {};
+    var axes = this.axes;
+    axes.forEach(function(a) { max[a] = 0; });
+    this.questions.forEach(function(q) {
+      axes.forEach(function(a) {
+        var m = 0;
+        q.options.forEach(function(o) { var n = (o.axes && o.axes[a]) || 0; if (n > m) m = n; });
+        max[a] += m;
+      });
+    });
+    return max;
+  };
+
+  PortraitQuiz.prototype.optionDe = saisonOptionDe;
+
+  // Le total par portrait d'une serie de reponses.
+  PortraitQuiz.prototype.tally = function(reponses) {
+    var self = this;
+    var t = {};
+    this.axes.forEach(function(a) { t[a] = 0; });
+    this.questions.forEach(function(q, i) {
+      var opt = self.optionDe(q, reponses[i]);
+      if (!opt || !opt.axes) return;
+      Object.keys(opt.axes).forEach(function(a) { if (t[a] !== undefined) t[a] += opt.axes[a]; });
+    });
+    return t;
+  };
+
+  // Le portrait d'une serie : le plus charge, dans l'ordre des axes en cas
+  // d'egalite (ils sont ranges du plus commun au plus rare dans le chargeur).
+  PortraitQuiz.prototype.portraitDe = function(reponses) {
+    var t = this.tally(reponses);
+    var self = this;
+    var meilleur = this.axes[0], score = -1;
+    this.axes.forEach(function(a) {
+      var pct = self.maxParAxe[a] ? t[a] / self.maxParAxe[a] : 0;
+      if (pct > score) { score = pct; meilleur = a; }
+    });
+    var pcts = {};
+    this.axes.forEach(function(a) { pcts[a] = self.maxParAxe[a] ? Math.round(t[a] / self.maxParAxe[a] * 100) : 0; });
+    return { id: meilleur, tally: t, pcts: pcts };
+  };
+
+  PortraitQuiz.prototype.cleDuo = function(a, b) {
+    return [a, b].sort().join('+');
+  };
+
+  PortraitQuiz.prototype.render = saisonRender;
+  PortraitQuiz.prototype.renderModes = saisonRenderModes;
+  PortraitQuiz.prototype.boutonRetourModes = saisonBoutonRetourModes;
+
+  PortraitQuiz.prototype.renderSetup = function() {
+    var self = this;
+    var duo = this.mode === 'duo';
+    var grille = duo ? cartesDeuxJoueurs('port-nom', { genre: true }) : null;
+    var avert = this.etg('avertissement', '');
+    var corps = [];
+    if (avert) corps.push(el('p', 'port-avert', esc(avert)));
+    if (grille) corps.push(grille);
+    var ecran = ecranDepart({
+      icone: this.icone,
+      poses: ['surprise', 'surprise'],
+      titre: duo ? this.etg('setupTitreDuo', this.etg('setupTitre', '')) : this.etg('setupTitreSolo', this.etg('setupTitre', '')),
+      desc: duo ? this.etg('setupDescDuo', this.etg('setupDesc', '')) : this.etg('setupDescSolo', this.etg('setupDesc', '')),
+      corps: corps,
+      meta: pastilleMeta(this.questions.length, null, this.etg('duree', '5 min')),
+      bouton: this.etg('commencer', 'Commencer'),
+      onStart: function() {
+        var total = self.questions.length;
+        self.answers = { p1: new Array(total).fill(null), p2: new Array(total).fill(null) };
+        self.joueurCourant = 0;
+        self.currentQ = 0;
+        if (duo) {
+          var genres = grille.lireGenres();
+          self.players = [0, 1].map(function(i) {
+            return {
+              name: grille.querySelector('#port-nom' + (i + 1)).value.trim() || tg('playerSetup.player' + (i + 1), 'Joueur ' + (i + 1)),
+              gender: genres[i] || null
+            };
+          });
+          self.phase = 'relais';
+        } else {
+          self.players = [{ name: '', gender: null }, { name: '', gender: null }];
+          self.phase = 'playing';
+        }
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    if (duo && this.distance) ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: grille, bouton: ecran.bouton, meta: ecran.meta, needsGender: true }), ecran.bouton);
+    var retour = this.boutonRetourModes();
+    if (retour) ecran.wrap.appendChild(retour);
+    this.container.appendChild(ecran.wrap);
+  };
+
+  PortraitQuiz.prototype.renderRelais = saisonRenderRelais;
+
+  PortraitQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var duo = this.mode === 'duo';
+    var j = this.joueurCourant;
+    var cle = j === 0 ? 'p1' : 'p2';
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+    renderProgressBar(wrap, this.currentQ, total,
+      tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
+      duo ? persosBarre(this.players, j) : { marche: 'rose', attend: null });
+
+    if (duo) {
+      var c = this.couleur(j);
+      var badge = el('div', 'text-center mb-4');
+      badge.innerHTML = '<span class="badge" style="background:' + c.bg + ';color:' + c.text + '">' + esc(this.players[j].name) + '</span>';
+      wrap.appendChild(badge);
+    }
+    var sur = this.etg('q' + q.id + '_sur', '');
+    if (sur) wrap.appendChild(el('p', 'port-question-sur', esc(sur)));
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(this.texteQuestion(q))));
+
+    var liste = el('div', 'space-y-2');
+    var lettres = ['A', 'B', 'C', 'D', 'E'];
+    // L'ordre des reponses est melange a l'affichage : la lettre ne dit rien
+    // du portrait, et personne ne peut repondre « toujours a » sans lire.
+    shuffleArray(q.options).forEach(function(opt, k) {
+      var b = el('button', 'quiz-option');
+      b.type = 'button';
+      b.innerHTML = '<span class="quiz-option-letter">' + (lettres[k] || '') + '</span><span>' + esc(self.texteOption(q, opt)) + '</span>';
+      b.style.animationDelay = (k * 60) + 'ms';
+      b.addEventListener('click', function() {
+        if (!answerLock(self)) return;
+        b.classList.add('selected');
+        liste.querySelectorAll('.quiz-option').forEach(function(x) {
+          if (x !== b) x.style.opacity = '0.5';
+          x.style.pointerEvents = 'none';
+        });
+        setTimeout(function() {
+          self.answers[cle][self.currentQ] = opt.id;
+          if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
+          else if (duo && j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'relais'; }
+          else { self.phase = 'results'; }
+          self.render();
+        }, DELAI_REPONSE);
+      });
+      liste.appendChild(b);
+    });
+    wrap.appendChild(liste);
+    this.container.appendChild(wrap);
+  };
+
+  PortraitQuiz.prototype.demarrerADistance = function(salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    this.players = joueursDuSalon(moi, moiInfo, partenaireInfo);
+    this.aDistance = true;
+    this.mode = 'duo';
+    this.phase = 'playing';
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi,
+      noms: [this.players[0].name, this.players[1].name],
+      couleurs: [this.couleur(0), this.couleur(1)],
+      total: this.questions.length,
+      question: function(idx) {
+        var q = self.questions[idx];
+        return {
+          texte: self.texteQuestion(q),
+          sur: self.etg('q' + q.id + '_sur', '') || undefined,
+          options: q.options.map(function(o) { return { id: o.id, texte: self.texteOption(q, o) }; })
+        };
+      },
+      verdict: function(a, b) {
+        return a === b ? { texte: self.etg('verdictPareil', 'Même réponse !'), accord: true }
+          : { texte: self.etg('verdictDifferent', 'Pas la même réponse.'), accord: false };
+      },
+      surFin: function(a, b) {
+        self.answers = { p1: a, p2: b };
+        self.phase = 'results';
+        self.render();
+      }
+    });
+  };
+
+  // La carte d'un portrait : l'image, l'etiquette, le nom, le texte.
+  PortraitQuiz.prototype.cartePortrait = function(profil, o) {
+    var carte = el('div', 'port-carte' + (o.classe ? ' ' + o.classe : ''));
+    if (profil.image) {
+      var fig = el('div', 'port-image');
+      fig.innerHTML = '<img src="' + esc(profil.image) + '" alt="" width="600" height="600" loading="lazy" decoding="async">';
+      carte.appendChild(fig);
+    }
+    var corps = el('div', 'port-corps');
+    // L'etiquette : « Tu es compatible avec », ou « Lea est compatible avec »
+    // avec le prenom a la couleur du personnage (escRiche ne laisse passer
+    // aucun attribut, le prenom est donc pose ici, pas dans le texte).
+    if (o.etiquette || o.nom) {
+      var etiquette = el('p', 'port-etiquette');
+      etiquette.innerHTML = (o.nom ? '<b class="port-nom--' + esc(o.perso || 'rose') + '">' + esc(o.nom) + '</b> ' : '') + escRiche(o.etiquette || '');
+      corps.appendChild(etiquette);
+    }
+    corps.appendChild(el('h2', 'port-titre' + (o.petit ? ' port-titre--petit' : ''), esc(profil.title || '')));
+    if (profil.description) corps.appendChild(el('p', 'port-desc', escRiche(profil.description)));
+    if (o.conseil && profil.advice) {
+      var conseil = el('div', 'port-conseil');
+      conseil.innerHTML = '<strong>' + esc(this.etg('conseilTitre', tg('result.ourAdvice', 'Notre conseil'))) + '</strong>' + escRiche(profil.advice);
+      corps.appendChild(conseil);
+    }
+    carte.appendChild(corps);
+    return carte;
+  };
+
+  // Les trois portraits les plus presents, en jauges.
+  PortraitQuiz.prototype.jauges = function(pcts, titre) {
+    var self = this;
+    var tries = this.axes.slice().sort(function(a, b) { return pcts[b] - pcts[a]; }).slice(0, 3);
+    var bloc = el('div', 'port-jauges');
+    bloc.appendChild(el('h3', 'port-bloc-titre', esc(titre)));
+    tries.forEach(function(a) {
+      var ligne = el('div', 'port-jauge');
+      ligne.innerHTML = '<div class="port-jauge-tete"><span class="port-jauge-nom">' + esc(self.etg('axe_' + a, (self.profils[a] || {}).title || a)) + '</span>' +
+        '<span class="port-jauge-pct">' + saisonPct(self.lang, pcts[a]) + '</span></div>' +
+        '<div class="port-jauge-piste" aria-hidden="true"><span class="port-jauge-plein" style="width:' + pcts[a] + '%"></span></div>';
+      bloc.appendChild(ligne);
+    });
+    return bloc;
+  };
+
+  PortraitQuiz.prototype.memesReponses = function() {
+    var n = 0;
+    for (var i = 0; i < this.questions.length; i++) {
+      if (this.answers.p1[i] !== null && this.answers.p1[i] !== undefined && this.answers.p1[i] === this.answers.p2[i]) n++;
+    }
+    return n;
+  };
+
+  PortraitQuiz.prototype.renderResults = function() {
+    var self = this;
+    var duo = this.mode === 'duo';
+    var wrap = el('div', 'quiz-engine quiz-result-card port-resultat text-center');
+    var partage;
+
+    if (!duo) {
+      var r = this.portraitDe(this.answers.p1);
+      var profil = this.profils[r.id] || {};
+      enregistreProfilResultat(this, r.id);
+      wrap.appendChild(this.cartePortrait(profil, { etiquette: this.etg('resLibelleSolo', ''), conseil: true, classe: 'port-carte--seul' }));
+      wrap.appendChild(this.jauges(r.pcts, this.etg('jaugesTitre', 'Ce qui ressort de tes réponses')));
+      partage = { noms: nomsPartage(this), type: 'profil', verdict: profil.title || '' };
+    } else {
+      var rA = this.portraitDe(this.answers.p1), rB = this.portraitDe(this.answers.p2);
+      var persos = persosDe(this.players);
+      var noms = el('p', 'port-noms', esc(this.players[0].name + ' & ' + this.players[1].name));
+      wrap.appendChild(noms);
+      if (this.duos) {
+        // Le duo que forment les deux roles : la table du chargeur.
+        var cle = this.cleDuo(rA.id, rB.id);
+        var idDuo = this.duos[cle] || this.duos[rA.id + '+' + rB.id] || this.duos[rB.id + '+' + rA.id];
+        var duoProfil = (idDuo && this.duoProfils[idDuo]) || {};
+        enregistreProfilResultat(this, idDuo || cle);
+        wrap.appendChild(this.cartePortrait(duoProfil, { etiquette: this.etg('resLibelleDuo', ''), conseil: true, classe: 'port-carte--seul' }));
+        var roles = el('div', 'port-roles');
+        [[0, rA], [1, rB]].forEach(function(x) {
+          var k = x[0], r = x[1];
+          var role = el('div', 'port-role port-role--' + persos[k]);
+          role.innerHTML = '<p class="port-role-nom"><b class="port-nom--' + persos[k] + '">' + esc(self.players[k].name) + '</b> ' + esc(self.etg('roleLibelle', '')) + '</p>' +
+            '<p class="port-role-titre">' + esc(self.etg('axe_' + r.id, (self.profils[r.id] || {}).title || r.id)) + '</p>' +
+            '<p class="port-role-desc">' + escRiche((self.profils[r.id] || {}).description || '') + '</p>';
+          roles.appendChild(role);
+        });
+        wrap.appendChild(roles);
+        partage = { noms: nomsPartage(this), type: 'profil', verdict: duoProfil.title || '' };
+      } else {
+        var deux = el('div', 'port-deux');
+        [[0, rA], [1, rB]].forEach(function(x) {
+          var k = x[0], r = x[1];
+          var profil = self.profils[r.id] || {};
+          var carte = self.cartePortrait(profil, { nom: self.players[k].name, perso: persos[k], etiquette: self.etg('resLibelleDuo', ''), petit: true, classe: 'port-carte--' + persos[k] });
+          deux.appendChild(carte);
+        });
+        wrap.appendChild(deux);
+        var n = this.memesReponses();
+        var phrase = rA.id === rB.id ? this.etg('memePortrait', '') : this.etg('portraitsDifferents', '');
+        var bilan = el('p', 'port-bilan', esc(this.etg('memesReponses', '{{n}} réponses identiques sur {{total}}').replace('{{n}}', n).replace('{{total}}', this.questions.length)) + (phrase ? ' ' + escRiche(phrase) : ''));
+        wrap.appendChild(bilan);
+        enregistreProfilResultat(this, rA.id);
+        partage = { noms: nomsPartage(this), type: 'profil', verdict: (self.profils[rA.id] || {}).title + ' & ' + (self.profils[rB.id] || {}).title };
+      }
+    }
+    var note = this.etg('noteFin', '');
+    if (note) wrap.appendChild(el('p', 'port-note', escRiche(note)));
+
+    renderActionButtons(wrap, {
+      share: partage,
+      restart: function() {
+        if (self.aDistance) { location.reload(); return; }
+        self.phase = (self.modes.solo && self.modes.duo) ? 'modes' : 'setup';
+        if (self.phase === 'modes') self.mode = null;
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
+  // ═══════════════════════════════════════════════════════════
+  // SURVIE QUIZ - « Qui de nous deux meurt en premier dans un film
+  // d'horreur ? » et « Qui de nous deux pourrait se faire posseder ? »
+  // (16 octobre 2026). Chaque reponse vaut des points (gd.json,
+  // q{N}{lettre}_pts) ; la somme devient une valeur sur une echelle : des
+  // minutes de survie (de 5 a 150, un film fait au plus 2 h 30 ; a 150 on
+  // tient jusqu'au generique) ou un pourcentage (le risque de possession).
+  // Seul(e) : sa valeur, son verdict (paliers), ce qui a joue pour et contre.
+  // A deux : chacun repond a toute la serie de son cote, le telephone change
+  // de main une fois, puis les deux valeurs sur la meme ligne du temps et
+  // qui meurt (ou se fait posseder) en premier. A distance : le tour par
+  // tour commun.
+  // ═══════════════════════════════════════════════════════════
+  function SurvieQuiz(config) {
+    this.container = config.container;
+    this.prefix = config.prefix;
+    this.lang = config.lang || 'fr';
+    this.questions = config.questions || [];
+    this.pool = config.pool || this.questions.slice();
+    this.quizType = config.quizType || 'survie';
+    this.echelle = config.mode === 'pourcent' ? 'pourcent' : 'minutes';
+    this.min = config.min !== undefined ? config.min : (this.echelle === 'minutes' ? 5 : 0);
+    this.max = config.max || (this.echelle === 'minutes' ? 150 : 100);
+    this.paliers = config.paliers || (this.echelle === 'minutes' ? [25, 55, 90, 130] : [20, 40, 60, 80]);
+    // Pour la possession, plus de points = plus de risque ; pour le film,
+    // plus de points = plus de minutes. Le sens de « qui perd » suit.
+    this.perdLe = this.echelle === 'minutes' ? 'min' : 'max';
+    this.modes = config.modes || { solo: true, duo: true };
+    this.icone = config.icone || '🎃';
+    this.distance = !!config.distance;
+    this.mode = this.modes.solo && this.modes.duo ? null : (this.modes.duo ? 'duo' : 'solo');
+    this.phase = this.mode ? 'setup' : 'modes';
+    this.players = [{ name: '', gender: null }, { name: '', gender: null }];
+    this.joueurCourant = 0;
+    this.currentQ = 0;
+    this.answers = { p1: [], p2: [] };
+    this.aDistance = false;
+    this.maxPoints = this.questions.reduce(function(s, q) {
+      var m = 0; q.options.forEach(function(o) { if ((o.points || 0) > m) m = o.points || 0; }); return s + m;
+    }, 0);
+    if (reprendrePartieRejointe(this, config)) return;
+    this.render();
+  }
+
+  SurvieQuiz.prototype.etg = saisonEtg;
+  SurvieQuiz.prototype.texteQuestion = saisonTexteQuestion;
+  SurvieQuiz.prototype.texteOption = saisonTexteOption;
+  SurvieQuiz.prototype.couleur = saisonCouleur;
+  SurvieQuiz.prototype.optionDe = saisonOptionDe;
+  SurvieQuiz.prototype.render = saisonRender;
+  SurvieQuiz.prototype.renderModes = saisonRenderModes;
+  SurvieQuiz.prototype.boutonRetourModes = saisonBoutonRetourModes;
+  SurvieQuiz.prototype.renderRelais = saisonRenderRelais;
+
+  SurvieQuiz.prototype.renderSetup = function() {
+    var self = this;
+    var duo = this.mode === 'duo';
+    var grille = duo ? cartesDeuxJoueurs('surv-nom', { genre: true }) : null;
+    var corps = [];
+    var avert = this.etg('avertissement', '');
+    if (avert) corps.push(el('p', 'port-avert', esc(avert)));
+    if (grille) corps.push(grille);
+    var ecran = ecranDepart({
+      icone: this.icone,
+      poses: ['surprise', 'surprise'],
+      titre: duo ? this.etg('setupTitreDuo', this.etg('setupTitre', '')) : this.etg('setupTitreSolo', this.etg('setupTitre', '')),
+      desc: duo ? this.etg('setupDescDuo', this.etg('setupDesc', '')) : this.etg('setupDescSolo', this.etg('setupDesc', '')),
+      corps: corps,
+      meta: pastilleMeta(this.questions.length, this.etg('questionsMot', null), this.etg('duree', '5 min')),
+      bouton: this.etg('commencer', 'Commencer'),
+      onStart: function() {
+        var total = self.questions.length;
+        self.answers = { p1: new Array(total).fill(null), p2: new Array(total).fill(null) };
+        self.joueurCourant = 0;
+        self.currentQ = 0;
+        if (duo) {
+          var genres = grille.lireGenres();
+          self.players = [0, 1].map(function(i) {
+            return {
+              name: grille.querySelector('#surv-nom' + (i + 1)).value.trim() || tg('playerSetup.player' + (i + 1), 'Joueur ' + (i + 1)),
+              gender: genres[i] || null
+            };
+          });
+          self.phase = 'relais';
+        } else {
+          self.players = [{ name: '', gender: null }, { name: '', gender: null }];
+          self.phase = 'playing';
+        }
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    if (duo && this.distance) ecran.wrap.insertBefore(zoneDistancePour(this, { formulaire: grille, bouton: ecran.bouton, meta: ecran.meta, needsGender: true }), ecran.bouton);
+    var retour = this.boutonRetourModes();
+    if (retour) ecran.wrap.appendChild(retour);
+    this.container.appendChild(ecran.wrap);
+  };
+
+  SurvieQuiz.prototype.renderQuestion = function() {
+    var self = this;
+    var q = this.questions[this.currentQ];
+    var total = this.questions.length;
+    var duo = this.mode === 'duo';
+    var j = this.joueurCourant;
+    var cle = j === 0 ? 'p1' : 'p2';
+    var wrap = el('div', 'quiz-engine quiz-question-enter');
+    renderProgressBar(wrap, this.currentQ, total,
+      tg('question.question', 'Question') + ' ' + (this.currentQ + 1) + '/' + total,
+      duo ? persosBarre(this.players, j) : { marche: 'rose', attend: null });
+    if (duo) {
+      var c = this.couleur(j);
+      var badge = el('div', 'text-center mb-4');
+      badge.innerHTML = '<span class="badge" style="background:' + c.bg + ';color:' + c.text + '">' + esc(this.players[j].name) + '</span>';
+      wrap.appendChild(badge);
+    }
+    // La situation : une ligne au-dessus de la question (« Il est 23 h, la
+    // maison craque. »), quand la page en ecrit une.
+    var sur = this.etg('q' + q.id + '_sur', '');
+    if (sur) wrap.appendChild(el('p', 'surv-situation', esc(sur)));
+    wrap.appendChild(el('h3', 'text-xl font-semibold mb-6 text-center', esc(this.texteQuestion(q))));
+    var liste = el('div', 'space-y-2');
+    var lettres = ['A', 'B', 'C', 'D', 'E'];
+    shuffleArray(q.options).forEach(function(opt, k) {
+      var b = el('button', 'quiz-option');
+      b.type = 'button';
+      b.innerHTML = '<span class="quiz-option-letter">' + (lettres[k] || '') + '</span><span>' + esc(self.texteOption(q, opt)) + '</span>';
+      b.style.animationDelay = (k * 60) + 'ms';
+      b.addEventListener('click', function() {
+        if (!answerLock(self)) return;
+        b.classList.add('selected');
+        liste.querySelectorAll('.quiz-option').forEach(function(x) {
+          if (x !== b) x.style.opacity = '0.5';
+          x.style.pointerEvents = 'none';
+        });
+        setTimeout(function() {
+          self.answers[cle][self.currentQ] = opt.id;
+          if (self.currentQ < total - 1) { self.currentQ++; self.phase = 'playing'; }
+          else if (duo && j === 0) { self.joueurCourant = 1; self.currentQ = 0; self.phase = 'relais'; }
+          else { self.phase = 'results'; }
+          self.render();
+        }, DELAI_REPONSE);
+      });
+      liste.appendChild(b);
+    });
+    wrap.appendChild(liste);
+    this.container.appendChild(wrap);
+  };
+
+  SurvieQuiz.prototype.demarrerADistance = function(salon, moi, moiInfo, partenaireInfo) {
+    var self = this;
+    this.players = joueursDuSalon(moi, moiInfo, partenaireInfo);
+    this.aDistance = true;
+    this.mode = 'duo';
+    this.phase = 'playing';
+    new TourParTour({
+      moteur: this, salon: salon, moi: moi,
+      noms: [this.players[0].name, this.players[1].name],
+      couleurs: [this.couleur(0), this.couleur(1)],
+      total: this.questions.length,
+      question: function(idx) {
+        var q = self.questions[idx];
+        return {
+          texte: self.texteQuestion(q),
+          sur: self.etg('q' + q.id + '_sur', '') || undefined,
+          options: q.options.map(function(o) { return { id: o.id, texte: self.texteOption(q, o) }; })
+        };
+      },
+      verdict: function(a, b, idx) {
+        var q = self.questions[idx];
+        var pa = (self.optionDe(q, a) || {}).points || 0, pb = (self.optionDe(q, b) || {}).points || 0;
+        if (a === b) return { texte: self.etg('verdictPareil', 'Même réponse !'), accord: true };
+        if (pa === pb) return { texte: self.etg('verdictEquivalent', 'Deux réponses différentes, le même sort.'), accord: false };
+        // celui qui s'en sort le moins bien : le moins de points quand les
+        // points sont des minutes de survie, le plus quand ils sont un risque
+        var perdant = self.perdLe === 'min' ? (pa < pb ? 0 : 1) : (pa > pb ? 0 : 1);
+        return { texte: self.etg('verdictDifferent', '{{nom}} s\'en sort moins bien sur ce coup.').replace('{{nom}}', self.players[perdant].name), accord: false };
+      },
+      surFin: function(a, b) {
+        self.answers = { p1: a, p2: b };
+        self.phase = 'results';
+        self.render();
+      }
+    });
+  };
+
+  // Les points d'une serie, et la valeur sur l'echelle.
+  SurvieQuiz.prototype.points = function(reponses) {
+    var self = this;
+    var s = 0;
+    this.questions.forEach(function(q, i) { var o = self.optionDe(q, reponses[i]); if (o) s += o.points || 0; });
+    return s;
+  };
+  SurvieQuiz.prototype.valeur = function(reponses) {
+    var ratio = this.maxPoints ? this.points(reponses) / this.maxPoints : 0;
+    if (this.echelle === 'pourcent') return Math.round(ratio * 100);
+    return Math.round(this.min + ratio * (this.max - this.min));
+  };
+  SurvieQuiz.prototype.rang = function(v) {
+    var r = 1;
+    for (var i = 0; i < this.paliers.length; i++) if (v >= this.paliers[i]) r = i + 2;
+    return r;
+  };
+  // « 46 min », « 1 h 32 », et a la valeur maximale « jusqu'au generique ».
+  SurvieQuiz.prototype.formate = function(v) {
+    if (this.echelle === 'pourcent') return saisonPct(this.lang, v);
+    if (v >= this.max) return this.etg('generique', 'jusqu\'au générique');
+    var h = Math.floor(v / 60), m = v % 60;
+    if (h === 0) return this.etg('minutes', '{{n}} min').replace('{{n}}', m);
+    return this.etg('heures', '{{h}} h {{m}}').replace('{{h}}', h).replace('{{m}}', m < 10 ? '0' + m : m);
+  };
+  // La ligne du temps du film (ou la jauge du risque), avec un repere par
+  // joueur : la mascotte quand on sait qui joue, un point sinon.
+  SurvieQuiz.prototype.ligne = function(reperes) {
+    var self = this;
+    var bloc = el('div', 'surv-ligne' + (this.echelle === 'pourcent' ? ' surv-ligne--pourcent' : ''));
+    var piste = el('div', 'surv-piste');
+    piste.setAttribute('aria-hidden', 'true');
+    var pas = this.echelle === 'pourcent' ? [0, 25, 50, 75, 100] : [0, 30, 60, 90, 120, 150];
+    pas.forEach(function(p) {
+      var g = el('span', 'surv-graduation');
+      g.style.left = (p / self.max * 100) + '%';
+      g.innerHTML = '<i></i><b>' + (self.echelle === 'pourcent' ? saisonPct(self.lang, p) : (p === 0 ? '0' : (p % 60 === 0 ? (p / 60) + ' h' : p))) + '</b>';
+      piste.appendChild(g);
+    });
+    reperes.forEach(function(r, k) {
+      var pt = el('span', 'surv-repere surv-repere--' + (r.perso || 'rose') + (reperes.length > 1 && k === 1 ? ' surv-repere--bas' : ''));
+      pt.setAttribute('aria-hidden', 'true');
+      pt.style.left = Math.min(100, Math.max(0, r.valeur / self.max * 100)) + '%';
+      pt.innerHTML = (mascottesDispo() ? mascotteSvg(r.perso || 'rose', r.pose || 'surprise', 44) : '<i></i>') + (r.nom ? '<em>' + esc(r.nom) + '</em>' : '');
+      piste.appendChild(pt);
+    });
+    bloc.appendChild(piste);
+    return bloc;
+  };
+
+  // Les reponses qui ont le plus joue, dans un sens et dans l'autre.
+  SurvieQuiz.prototype.pesees = function(reponses) {
+    var self = this;
+    var liste = [];
+    this.questions.forEach(function(q, i) {
+      var o = self.optionDe(q, reponses[i]);
+      if (!o) return;
+      var max = 0; q.options.forEach(function(x) { if ((x.points || 0) > max) max = x.points || 0; });
+      liste.push({ q: q, o: o, pts: o.points || 0, max: max });
+    });
+    var bonnes = liste.filter(function(x) { return x.pts === x.max && x.max > 0; }).slice(0, 3);
+    var mauvaises = liste.filter(function(x) { return x.pts === 0 && x.max > 0; }).slice(0, 3);
+    return { bonnes: bonnes, mauvaises: mauvaises };
+  };
+  SurvieQuiz.prototype.listeFaits = function(items) {
+    var self = this;
+    var ul = el('ul', 'surv-faits');
+    items.forEach(function(x) {
+      var li = el('li', '');
+      li.innerHTML = '<span class="surv-fait-q">' + esc(self.texteQuestion(x.q)) + '</span><span class="surv-fait-r">' + esc(self.texteOption(x.q, x.o)) + '</span>';
+      ul.appendChild(li);
+    });
+    return ul;
+  };
+  SurvieQuiz.prototype.blocFaits = function(reponses) {
+    var p = this.pesees(reponses);
+    var bloc = el('div', 'surv-pistes');
+    var titrePour = this.etg(this.echelle === 'minutes' ? 'sauveTitre' : 'protegeTitre', '');
+    var titreContre = this.etg(this.echelle === 'minutes' ? 'perduTitre' : 'exposeTitre', '');
+    if (p.bonnes.length && titrePour) {
+      var a = el('div', 'surv-piste-bloc surv-piste-bloc--pour');
+      a.appendChild(el('h3', 'port-bloc-titre', esc(titrePour)));
+      a.appendChild(this.listeFaits(p.bonnes));
+      bloc.appendChild(a);
+    }
+    if (p.mauvaises.length && titreContre) {
+      var b = el('div', 'surv-piste-bloc surv-piste-bloc--contre');
+      b.appendChild(el('h3', 'port-bloc-titre', esc(titreContre)));
+      b.appendChild(this.listeFaits(p.mauvaises));
+      bloc.appendChild(b);
+    }
+    return bloc;
+  };
+
+  SurvieQuiz.prototype.renderResults = function() {
+    var self = this;
+    var duo = this.mode === 'duo';
+    var wrap = el('div', 'quiz-engine quiz-result-card surv-resultat text-center');
+    var partage;
+    if (!duo) {
+      var v = this.valeur(this.answers.p1);
+      var r = this.rang(v);
+      var titre = this.etg('r' + r + '_t', '');
+      wrap.appendChild(el('p', 'surv-libelle', esc(this.etg('resLibelleSolo', ''))));
+      var grand = el('div', 'surv-grand');
+      grand.innerHTML = '<span class="surv-valeur">' + esc(this.formate(v)) + '</span>';
+      wrap.appendChild(grand);
+      wrap.appendChild(this.ligne([{ valeur: v, perso: 'rose', pose: this.echelle === 'minutes' && v >= this.max ? 'joie' : 'surprise' }]));
+      wrap.appendChild(el('h2', 'text-2xl font-bold mb-2 mt-4', esc(titre)));
+      wrap.appendChild(el('p', 'text-muted-foreground mb-4', escRiche(this.etg('r' + r + '_d', ''))));
+      var conseil = this.etg('r' + r + '_a', '');
+      if (conseil) {
+        var c = el('div', 'port-conseil');
+        c.innerHTML = '<strong>' + esc(this.etg('conseilTitre', tg('result.ourAdvice', 'Notre conseil'))) + '</strong>' + escRiche(conseil);
+        wrap.appendChild(c);
+      }
+      wrap.appendChild(this.blocFaits(this.answers.p1));
+      partage = this.echelle === 'pourcent'
+        ? { noms: nomsPartage(this), type: 'solo', pct: v, verdict: titre }
+        : { noms: nomsPartage(this), type: 'profil', verdict: this.formate(v) + ' : ' + titre };
+    } else {
+      var vA = this.valeur(this.answers.p1), vB = this.valeur(this.answers.p2);
+      var persos = persosDe(this.players);
+      var pire = this.perdLe === 'min' ? (vA <= vB ? 0 : 1) : (vA >= vB ? 0 : 1);
+      var egal = vA === vB;
+      wrap.appendChild(el('p', 'port-noms', esc(this.players[0].name + ' & ' + this.players[1].name)));
+      // A egalite au bout du film, personne ne meurt : « au bout de jusqu'au
+      // generique » ne veut rien dire, d'ou la phrase duoSurvie.
+      var tousSauves = egal && this.echelle === 'minutes' && vA >= this.max;
+      var phrase = tousSauves ? (this.etg('duoSurvie', '') || this.etg('duoEgal', ''))
+        : (egal ? this.etg('duoEgal', '') : this.etg('duoPerd', ''));
+      phrase = phrase.replace('{{nom}}', this.players[pire].name).replace('{{autre}}', this.players[1 - pire].name)
+        .replace('{{valeur}}', this.formate(vA)).replace('{{v1}}', this.formate(vA)).replace('{{v2}}', this.formate(vB))
+        .replace('{{vp}}', this.formate(pire === 0 ? vA : vB)).replace('{{va}}', this.formate(pire === 0 ? vB : vA));
+      wrap.appendChild(el('h2', 'text-2xl font-bold mb-3', escRiche(phrase)));
+      var posePour = function(v, perdant) {
+        if (self.echelle === 'minutes') return v >= self.max ? 'joie' : (perdant ? 'triste' : 'surprise');
+        return perdant ? 'surprise' : 'joie';
+      };
+      wrap.appendChild(this.ligne([
+        { valeur: vA, perso: persos[0], nom: this.players[0].name, pose: posePour(vA, pire === 0 && !egal) },
+        { valeur: vB, perso: persos[1], nom: this.players[1].name, pose: posePour(vB, pire === 1 && !egal) }
+      ]));
+      var deux = el('div', 'surv-deux');
+      [[0, vA], [1, vB]].forEach(function(x) {
+        var k = x[0], v = x[1], r = self.rang(v);
+        var carte = el('div', 'surv-carte surv-carte--' + persos[k]);
+        carte.innerHTML = '<p class="surv-carte-nom"><b class="port-nom--' + persos[k] + '">' + esc(self.players[k].name) + '</b></p>' +
+          '<p class="surv-carte-valeur">' + esc(self.formate(v)) + '</p>' +
+          '<p class="surv-carte-titre">' + esc(self.etg('r' + r + '_t', '')) + '</p>' +
+          '<p class="surv-carte-desc">' + escRiche(self.etg('r' + r + '_d', '')) + '</p>';
+        deux.appendChild(carte);
+      });
+      wrap.appendChild(deux);
+      // Les questions ou l'un a fait bien mieux que l'autre.
+      var ecarts = [];
+      this.questions.forEach(function(q, i) {
+        var a = self.optionDe(q, self.answers.p1[i]), b = self.optionDe(q, self.answers.p2[i]);
+        if (!a || !b) return;
+        var d = Math.abs((a.points || 0) - (b.points || 0));
+        if (d >= 2) ecarts.push({ q: q, a: a, b: b, d: d });
+      });
+      ecarts.sort(function(x, y) { return y.d - x.d; });
+      if (ecarts.length) {
+        var be = el('div', 'surv-ecarts');
+        be.appendChild(el('h3', 'port-bloc-titre', esc(this.etg('ecartsTitre', 'Là où vous n\'avez pas réagi pareil'))));
+        var ul = el('ul', 'ech-liste');
+        ecarts.slice(0, 4).forEach(function(e) {
+          var li = el('li', 'ech-liste-item ech-liste-item--loin');
+          li.innerHTML = '<p class="ech-liste-q">' + esc(self.texteQuestion(e.q)) + '</p>' +
+            '<p class="ech-liste-r"><b class="ech-nom--' + persos[0] + '">' + esc(self.players[0].name) + '</b> ' + esc(self.texteOption(e.q, e.a)) + '</p>' +
+            '<p class="ech-liste-r"><b class="ech-nom--' + persos[1] + '">' + esc(self.players[1].name) + '</b> ' + esc(self.texteOption(e.q, e.b)) + '</p>';
+          ul.appendChild(li);
+        });
+        be.appendChild(ul);
+        wrap.appendChild(be);
+      }
+      partage = { noms: nomsPartage(this), type: 'profil', verdict: this.players[0].name + ' ' + this.formate(vA) + ', ' + this.players[1].name + ' ' + this.formate(vB) };
+    }
+    var note = this.etg('noteFin', '');
+    if (note) wrap.appendChild(el('p', 'port-note', escRiche(note)));
+    renderActionButtons(wrap, {
+      share: partage,
+      restart: function() {
+        if (self.aDistance) { location.reload(); return; }
+        self.phase = (self.modes.solo && self.modes.duo) ? 'modes' : 'setup';
+        if (self.phase === 'modes') self.mode = null;
+        self.render();
+        smoothScroll(self.container, 'start');
+      }
+    });
+    this.container.appendChild(wrap);
+    smoothScroll(wrap, 'center');
+  };
+
   // ─── Public API ───────────────────────────────────────────
   return {
     loadTranslations: loadTranslations,
@@ -13546,6 +14356,8 @@ var QuizEngine = (function() {
     PhrasesGame: PhrasesGame,
     DixMaisGame: DixMaisGame,
     EchelleQuiz: EchelleQuiz,
+    PortraitQuiz: PortraitQuiz,
+    SurvieQuiz: SurvieQuiz,
     el: el,
     esc: esc,
     shuffleArray: shuffleArray,

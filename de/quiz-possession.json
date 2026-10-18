@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Halloween-Quiz • Allein oder zu zweit",
+    "title": "Wer von uns könnte besessen werden?",
+    "titleHighlight": "besessen werden",
+    "description": "Zehn Tage in einem billigen Haus, dessen Geschichte niemand erzählen will: das Ouija-Brett auf dem Dachboden, der Spiegel vom Flohmarkt, die Katze, die in die Ecke des Wohnzimmers faucht, die Stimme, die deinen Vornamen kennt. Das Ergebnis ist ein Besessenheitsrisiko in Prozent, mit dem, was dich schützt, und dem, was dich angreifbar macht. Zu zweit weiß man, wen von euch die Dämonen wählen würden.",
+    "subtitle": "15 Fragen • 5 Minuten • allein, zu zweit an einem Handy oder jeder am eigenen",
+    "jumpBtn": "Zum Quiz"
+  },
+  "section1": {
+    "title": "So funktioniert das Quiz",
+    "intro": "In allen Besessenheitsfilmen hat das Opfer dasselbe Profil: neugierig, müde, etwas zu entspannt im Umgang mit Ouija-Brettern und Flohmarktfunden. Das Quiz prüft, ob das auf dich zutrifft.",
+    "p1": "Die Fragen folgen den zehn Tagen. Zum Beispiel: „Auf dem Dachboden, unter einem Laken: ein Ouija-Brett, das Glas steht schon darauf.“ Du kannst für heute Abend eine Runde vorschlagen, es für die Freunde fotografieren, es unter dem Laken lassen oder es im Garten verbrennen. Jede Antwort ist null bis drei Risikopunkte wert, und die Summe ergibt einen Prozentsatz.",
+    "p2": "Allein entdeckst du dein Risiko, dein Urteil aus fünf möglichen und zwei Listen: was dich schützt und was dich angreifbar macht. Zu zweit antwortet der Erste, gibt das Handy weiter, der Zweite antwortet danach, und das Ergebnis vergleicht eure beiden Risiken: Wer den höheren Prozentsatz hat, wird besessen.",
+    "p3": "Den Fernmodus gibt es auch: Eine Person erstellt die Partie, die andere tritt mit dem Code bei, jeder antwortet auf dem eigenen Handy, und ihr seht nach jeder Frage eure beiden Antworten."
+  },
+  "section2": {
+    "title": "Die fünf Urteile",
+    "intro": "Der Prozentsatz liest sich in fünf Stufen, von der Person, der nichts etwas anhaben kann, bis zu der, die besser jemandem Bescheid sagt.",
+    "pillar1Title": "Unter 20 %: unbesetzbar",
+    "pillar1Text": "Türen zu, Brett abgelehnt, Decke bis zum Kinn. Zu viel Arbeit für einen Dämon.",
+    "pillar2Title": "20 bis 40 %: schwer zu besetzen",
+    "pillar2Text": "Die richtigen Reflexe, aber du kannst nicht anders, als hinzuschauen.",
+    "pillar3Title": "40 bis 60 %: besetzbar an einem müden Abend",
+    "pillar3Text": "An einem normalen Tag ist alles gut. An einem Oktoberabend in einem alten Haus wird es knapp.",
+    "pillar4Title": "60 bis 80 %: das ideale Ziel",
+    "pillar4Text": "Du sprichst mit Spiegeln und bringst Gegenstände mit, ohne zu fragen, woher sie kommen.",
+    "pillar5Title": "Über 80 %: schon besessen?",
+    "pillar5Text": "Du öffnest alle Türen, sagst zu allem Ja, und findest das lustig."
+  },
+  "section3": {
+    "title": "Warum es zu zweit lustig ist",
+    "p1": "In einer Beziehung gibt es fast immer eine Person, die das verlassene Haus besichtigen will, und eine, die im Auto wartet. Das Quiz legt Zahlen darauf. Und die skeptischste Person, die, die sagt „Geister gibt es nicht“, hat oft das höchste Risiko, weil sie alle Türen öffnet, ohne nachzudenken.",
+    "p2": "Wenn euch das Format gefällt: <a href=\"/de/quiz-wer-stirbt-zuerst-im-horrorfilm/\">Das Horrorfilm-Quiz</a> funktioniert nach demselben Prinzip, in Überlebensminuten statt in Prozent. Und um das Register zu wechseln und trotzdem in der Stimmung zu bleiben, geben <a href=\"/de/quiz-welcher-superschurke-bist-du/\">der Superschurke, der dir ähnelt</a> oder <a href=\"/de/quiz-welches-superschurken-duo-seid-ihr/\">das Schurken-Duo, das ihr bildet</a> ein Porträt statt einer Zahl.",
+    "p3": "Alle diese Quiz sind auf <a href=\"/de/besondere-paar-quiz/\">der Seite unserer besonderen Quiz</a> versammelt, die sich mit der Jahreszeit ändert."
+  },
+  "section4": {
+    "title": "Was man wissen sollte",
+    "p1": "Es ist ein Spiel. Keine Frage misst irgendetwas Reales, und das Wort „Risiko“ ist wie in einem Halloween-Film zu verstehen. Der einzige echte Rat des Quiz ist, im Oktober gut zu schlafen.",
+    "p2": "Nichts wird gespeichert. Die Antworten bleiben auf eurem Handy, und wenn ihr das Quiz wiederholt, ändert sich das Ergebnis, sobald ihr eure Meinung zum Ouija-Brett ändert."
+  },
+  "seo": {
+    "faqTitle": "Häufige Fragen",
+    "faq1Q": "Wie wird das Risiko berechnet?",
+    "faq1A": "Jede Antwort ist null bis drei Risikopunkte wert. Die Summe der fünfzehn Fragen wird in einen Prozentsatz umgerechnet: Fünfundvierzig Punkte sind 100 %, null Punkte sind 0 %. Das Urteil hängt von der Stufe ab, in die dieser Prozentsatz fällt.",
+    "faq2Q": "Kann man allein spielen?",
+    "faq2A": "Ja. Allein bekommst du dein Risiko, dein Urteil und die beiden Listen dessen, was dich schützt und was dich angreifbar macht. Zu zweit vergleicht das Quiz die beiden Risiken und nennt die Person, die die Dämonen wählen würden.",
+    "faq3Q": "Wer wird besessen, wenn man zu zweit spielt?",
+    "faq3A": "Wer den höheren Prozentsatz hat. Bei Gleichstand sagt es das Quiz: Der Dämon muss sich entscheiden.",
+    "faq4Q": "Kann man aus der Ferne spielen?",
+    "faq4A": "Ja, vom Namensbildschirm aus. Eine Person erstellt die Partie, die andere tritt mit dem Code oder dem QR-Code bei, und jeder antwortet auf dem eigenen Handy.",
+    "faq5Q": "Ist es gruselig?",
+    "faq5A": "Nein. Die Fragen sind lustig, und das Schlimmste, was passieren kann, ist zu erfahren, dass dein Partner in einer verlassenen Kirche mit einer Statue reden würde."
+  },
+  "jsonLd": {
+    "about": "Halloween-Quiz"
+  }
+}

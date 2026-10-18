@@ -83,7 +83,7 @@ const article: BlogArticleData = {
       title: "Date",
       content: `<p>"On a une date samedi", il y a dix ans, ça sonnait bizarre en français. Aujourd'hui, tout le monde comprend.</p>
 <p>La "date" a définitivement remplacé le "rendez-vous galant" dans le langage courant. C'est plus court, plus neutre, et ça évite le côté solennel de "rendez-vous amoureux" qui implique déjà un peu trop. Une date, c'est un rendez-vous où les deux personnes savent que c'est romantique sans que ce soit officiel. C'est cet espace intermédiaire entre "on se voit" et "on est ensemble".</p>
-<p>Le mot a aussi changé les attentes. Quand on parle de "date", on parle d'un moment pensé, pas juste d'un verre improvisé. Il y a une légère mise en scène, une intention. Ce que <a href="https://quiz-couple.com/activites-autours-de-moi/">trouver quelque chose à faire ensemble</a> peut prendre tout son sens, notamment quand on manque d'idées pour sortir du verre en terrasse classique.</p>
+<p>Le mot a aussi changé les attentes. Quand on parle de "date", on parle d'un moment pensé, pas juste d'un verre improvisé. Il y a une légère mise en scène, une intention. Ce que trouver quelque chose à faire ensemble peut prendre tout son sens, notamment quand on manque d'idées pour sortir du verre en terrasse classique.</p>
 <p>Ce que ça dit de nous : qu'on a besoin d'un mot qui porte l'intention sans encore porter l'engagement. Et qu'en français, on n'en avait pas vraiment.</p>`,
     },
     {

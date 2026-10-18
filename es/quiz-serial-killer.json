@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Quiz de Halloween • Solo/a o en pareja",
+    "title": "¿Con qué asesino en serie eres compatible?",
+    "titleHighlight": "asesino en serie",
+    "description": "Quince situaciones de una noche de Halloween: tu entrada en la fiesta, tu disfraz, el cementerio a medianoche, el inspector que llama a la puerta, el documental de true crime. Al final, el asesino célebre que más se parece a ti, en versión muy exagerada, con su retrato y un consejo para la noche. Solo/a, o en pareja para comparar.",
+    "subtitle": "15 preguntas • 5 minutos • solo/a, en pareja con un móvil o cada uno con el suyo",
+    "jumpBtn": "Hacer el quiz"
+  },
+  "section1": {
+    "title": "Cómo funciona este quiz",
+    "intro": "Es un quiz de personalidad disfrazado para Halloween. No intenta saber si eres peligroso, mira rasgos de carácter muy corrientes, el encanto, la paciencia, la soledad, el gusto por los enigmas, la necesidad de controlarlo todo, a través de situaciones de una noche de Halloween. Y los exagera hasta la caricatura.",
+    "p1": "Las preguntas son escenas. Por ejemplo: «Un inspector llama a tu puerta y hace preguntas sobre el barrio.» o «El cementerio, a medianoche, por una apuesta.». Cada respuesta pesa sobre uno o dos de los ocho retratos del quiz, y gana el retrato que ha recibido más puntos.",
+    "p2": "Solo/a, respondes a las quince preguntas y descubres tu retrato, con los tres rasgos que más destacan en tus respuestas. En pareja, el primero responde a toda la serie, pasa el móvil, y el segundo responde a su vez sin ver las respuestas del primero. Los dos retratos aparecen después uno al lado del otro, con el número de respuestas idénticas.",
+    "p3": "Si no estáis en el mismo sitio, el modo a distancia permite responder cada uno en su móvil: una persona crea la partida, la otra se une con el código, y veis vuestras dos respuestas después de cada pregunta."
+  },
+  "section2": {
+    "title": "Los ocho retratos del quiz",
+    "intro": "Hemos cogido a los asesinos en serie más conocidos, aquellos cuyo nombre todo el mundo ha oído en un documental o una serie, y nos hemos quedado para cada uno con el rasgo de carácter que la gente recuerda de él. Ese rasgo, y nada más, es lo que mide el quiz.",
+    "pillar1Title": "Ted Bundy, el encantador",
+    "pillar1Text": "La sonrisa, la confianza inmediata, el aire de yerno ideal. El retrato de quienes lo consiguen todo con una frase.",
+    "pillar2Title": "Jeffrey Dahmer, el solitario",
+    "pillar2Text": "El miedo a que lo dejen, la necesidad de guardar, el piso preferido al resto del mundo.",
+    "pillar3Title": "Jack el Destripador, el misterio",
+    "pillar3Text": "Nadie sabe quién era. El retrato de quienes conocemos desde hace diez años sin saber nada de ellos.",
+    "pillar4Title": "El Zodiaco, el jugador de enigmas",
+    "pillar4Text": "Las cartas cifradas, las adivinanzas, el placer de que te busquen. Para quienes siempre dejan una pista.",
+    "pillar5Title": "Charles Manson, el gurú",
+    "pillar5Text": "No hacía nada él mismo: hablaba. El retrato de quienes deciden por el grupo sin que nadie se dé cuenta.",
+    "pillar6Title": "Dennis Rader, la fachada",
+    "pillar6Text": "Treinta años de vida normal, familia y voluntariado. El retrato de la doble vida perfectamente ordenada.",
+    "pillar7Title": "Aileen Wuornos, la herida",
+    "pillar7Text": "La rabia, el instinto de supervivencia, la reacción antes que la reflexión. Para quienes se van dando un portazo.",
+    "pillar8Title": "H. H. Holmes, el constructor",
+    "pillar8Text": "El hotel con habitaciones secretas, las estafas, el dinero. El retrato de quienes siempre tienen un plan y una habitación de más."
+  },
+  "section3": {
+    "title": "Jugarlo en pareja, una noche de Halloween",
+    "p1": "Este quiz funciona muy bien en pareja, justamente porque a nadie le halaga su resultado. Uno se ríe de su propio retrato, reconoce al otro en el suyo, y se acaba contando por qué respondió eso a la pregunta del inspector o a la del cementerio.",
+    "p2": "Si queréis seguir en el ambiente, los demás quiz de Halloween están hechos para encadenarse: <a href=\"/es/quiz-quien-muere-primero-pelicula-de-terror/\">saber quién de los dos muere primero en una película de terror</a>, <a href=\"/es/quiz-quien-podria-ser-poseido/\">quién podría ser poseído</a>, o <a href=\"/es/quiz-que-supervillano-eres/\">qué supervillano se esconde en cada uno de vosotros</a>. Todos se juegan igual, solo/a o en pareja.",
+    "p3": "Y para una noche que no hable solo de monstruos, <a href=\"/es/quiz-preferirias-pareja/\">nuestros dilemas «qué preferirías»</a> toman muy bien el relevo cuando se acaban los caramelos."
+  },
+  "section4": {
+    "title": "Lo que este quiz no es",
+    "p1": "No es un test psicológico, y mucho menos un diagnóstico. Las personas citadas tuvieron víctimas reales, y no lo olvidamos: el quiz solo toma de ellas un rasgo de carácter, el que el gran público ha retenido, y lo lleva hasta el ridículo. Si te sale Ted Bundy, quiere decir que te sientes cómodo/a con la gente. Nada más.",
+    "p2": "El resultado tampoco dice nada de vuestra pareja. Dos retratos distintos son dos caracteres distintos, y es el caso de la mayoría de las parejas. Si queréis un test de verdad para dos, <a href=\"/es/test-compatibilidad-pareja/\">nuestro test de pareja</a> compara vuestras respuestas sobre lo que importa de verdad.",
+    "p3": "Tus respuestas no se guardan. El quiz solo conserva el retrato obtenido, sin nombre ni respuestas, para mostrar algún día el reparto de los retratos en la página."
+  },
+  "seo": {
+    "faqTitle": "Preguntas frecuentes",
+    "faq1Q": "¿El quiz está hecho para tomárselo en serio?",
+    "faq1A": "No. Es un juego de Halloween. Mide rasgos de carácter corrientes (el encanto, la paciencia, la curiosidad, la rabia) y los asocia a un retrato muy caricaturesco. Nadie es peligroso porque le salga el Zodiaco.",
+    "faq2Q": "¿Se puede hacer en pareja?",
+    "faq2A": "Sí. El primero responde a toda la serie y luego pasa el móvil al segundo. Los dos retratos aparecen al final. Y si no estáis juntos, el modo a distancia permite jugar cada uno en su móvil.",
+    "faq3Q": "¿Cómo se calcula el resultado?",
+    "faq3A": "Cada respuesta da uno o dos puntos a uno o dos de los ocho retratos. Al final, cada retrato se compara con el máximo que podía recibir, y el que tiene el porcentaje más alto gana. Los tres rasgos más presentes aparecen en barras debajo del resultado.",
+    "faq4Q": "¿Por qué estos ocho asesinos y no otros?",
+    "faq4A": "Porque son los más conocidos, aquellos de los que se retiene fácilmente un rasgo: el encanto de Bundy, los enigmas del Zodiaco, la fachada de Dennis Rader. Un quiz de personalidad necesita retratos que todo el mundo reconozca en una línea.",
+    "faq5Q": "¿Se guardan mis respuestas?",
+    "faq5A": "No. Las respuestas se quedan en tu móvil. Solo se cuenta el retrato obtenido, sin nombre, para poder mostrar más adelante el reparto de los resultados."
+  },
+  "jsonLd": {
+    "about": "quiz de Halloween"
+  }
+}

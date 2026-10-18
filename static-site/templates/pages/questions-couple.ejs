@@ -1,6 +1,5 @@
 <%
   const ns = 'quiz-questions-couple';
-  // FAQ items for JSON-LD
   const faqRaw = t(ns + ':seo.faq', null);
   const faqItems = Array.isArray(faqRaw) ? faqRaw : [];
   const jsonLd = faqItems.length > 0 ? {
@@ -10,16 +9,27 @@
     })
   } : null;
 
-  // Table data
-  const tableHeaders = t(ns + ':seo.s2.tableHeaders', { category: 'Catégorie', goal: 'Objectif', example: 'Exemple', count: 'Nombre' });
-  const tableRowsRaw = t(ns + ':seo.s2.rows', null);
-  const tableRows = Array.isArray(tableRowsRaw) ? tableRowsRaw : [];
-  const whenItemsRaw = t(ns + ':seo.s3.items', null);
-  const whenItems = Array.isArray(whenItemsRaw) ? whenItemsRaw : [];
-  const tipsRaw = t(ns + ':seo.s4.tips', null);
-  const tipsList = Array.isArray(tipsRaw) ? tipsRaw : [];
-  const audiencesRaw = t(ns + ':seo.s5.audiences', null);
-  const audiences = Array.isArray(audiencesRaw) ? audiencesRaw : [];
+  // Le curseur des listes : les articles de questions publiés dans la langue
+  // (ARTICLES_QUESTIONS de config.js, cartes faites par carteArticle).
+  const _cartes = typeof articlesQuestions !== 'undefined' && Array.isArray(articlesQuestions) ? articlesQuestions : [];
+  const _listes = t(ns + ':listes', {}) || {};
+  const _tags = _listes.tags || {};
+  const _locale = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
+  const _nombre = function (n) { try { return Number(n).toLocaleString(_locale); } catch (e) { return String(n); } };
+  const _seuilLu = typeof seuilLectures === 'number' ? seuilLectures : 10;
+  // Largeur affichée des images des cartes (.quiz-slide, max-w-4xl), relevée dans Chromium
+  const _taillesCarte = '(min-width: 900px) 270px, (min-width: 640px) calc(46vw - 15px), min(340px, calc(82vw - 27px))';
+
+  // En français, « ? ! : ; » et les guillemets restent collés à leur mot : sinon,
+  // sur téléphone, le point d'interrogation d'une question passe seul à la ligne.
+  const _insec = function (x) {
+    if (lang !== 'fr' || x == null) return x;
+    return String(x).replace(/ ([?!:;»])/g, '\u00a0$1').replace(/« /g, '«\u00a0');
+  };
+
+  const _situations = t(ns + ':situations', null);
+  const _jeux = t(ns + ':jeux', null);
+  const _conseils = t(ns + ':conseils', null);
 %>
 <% if (jsonLd) { %>
 <script type="application/ld+json"><%- JSON.stringify(jsonLd) %></script>
@@ -36,10 +46,10 @@
         </ol>
       </nav>
       <% const heroBadge = t(ns + ':hero.badge', ''); if (heroBadge) { %>
-      <span class="hero-badge mb-4">
+      <div><span class="hero-badge mb-4">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <%= heroBadge %>
-      </span>
+      </span></div>
       <% } %>
       <%
         const heroTitle = t(ns + ':hero.title', '120 questions pour couple');
@@ -52,7 +62,7 @@
           <%= heroTitle %>
         <% } %>
       </h1>
-      <p class="text-lg text-muted-foreground max-w-2xl mx-auto"><%= t(ns + ':hero.description', '') %></p>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto"><%= _insec(t(ns + ':hero.description', '')) %></p>
     </div>
   </div>
   <%# L'image de tete vient en dernier dans le code : sur mobile, elle s'affiche sous le texte (order: 99) et sur grand ecran elle est posee en absolu. Placee en tete, elle etait peinte seule pendant que le reste de la section arrivait encore, puis sautait de 300 px quand le texte se mettait en place. %>
@@ -64,6 +74,53 @@
 
     <!-- Tirage au sort, alimente par la liste ci-dessous -->
     <div id="questions-container"></div>
+
+    <% if (_cartes.length) { %>
+    <section class="qc-listes" aria-labelledby="qc-listes-titre">
+      <div class="bloc-entete">
+        <span class="bloc-pastille"><%= _listes.pastille %></span>
+        <h2 class="bloc-titre" id="qc-listes-titre"><%= _listes.titre %></h2>
+        <span class="bloc-trait" aria-hidden="true"></span>
+        <p class="bloc-sous-titre"><%= _insec(_listes.sousTitre) %></p>
+      </div>
+      <div class="quiz-slider" data-slider>
+        <button type="button" class="quiz-slider__nav quiz-slider__nav--prev" data-slider-prev aria-label="<%= t('common:buttons.previous', 'Précédent') %>">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="quiz-slider__track" data-slider-track>
+          <% for (const art of _cartes) { %>
+          <a href="<%= art.url %>" class="quiz-slide lire-carte qc-liste-carte">
+            <span class="lire-media">
+              <% if (art.image) { %>
+              <img src="<%= art.image %>"<% if (art.imageSrcset) { %> srcset="<%= art.imageSrcset %>" sizes="<%= _taillesCarte %>"<% } %> alt="" loading="lazy" decoding="async" width="1200" height="675">
+              <% } %>
+            </span>
+            <span class="lire-corps">
+              <% if (_tags[art.cle]) { %><span class="qc-liste-tag"><%= _tags[art.cle] %></span><% } %>
+              <h3 class="lire-titre"><%= art.title %></h3>
+              <span class="lire-meta">
+                <% if (art.minutes) { %>
+                <span class="lire-info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><%= String(_listes.minutes || '{n} min').replace('{n}', art.minutes) %></span>
+                <% } %>
+                <% if (art.lectures !== null && art.lectures !== undefined && art.lectures >= _seuilLu) { %>
+                <span class="lire-info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><%= String(_listes.lu || '{n}').replace('{n}', _nombre(art.lectures)) %></span>
+                <% } %>
+              </span>
+              <span class="lire-bouton"><%= _listes.bouton %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+            </span>
+          </a>
+          <% } %>
+        </div>
+        <button type="button" class="quiz-slider__nav quiz-slider__nav--next" data-slider-next aria-label="<%= t('common:buttons.next', 'Suivant') %>">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="quiz-slider__pied" aria-hidden="true">
+          <div class="quiz-slider__barre"><span class="quiz-slider__avance"></span></div>
+          <span class="quiz-slider__compteur" data-slider-compteur></span>
+        </div>
+      </div>
+    </section>
+    <% } %>
 
     <%
       // Les 120 questions sont ecrites dans le HTML, pas chargees en
@@ -86,12 +143,12 @@
 
       <% let numero = 0; %>
       <% themes.forEach(function (cle) { %>
-      <div class="qc-theme" id="theme-<%= cle %>">
+      <div class="qc-theme" id="theme-<%= cle %>" data-theme="<%= cle %>" data-court="<%= liste[cle].court || liste[cle].titre %>">
         <h3 class="qc-theme-titre"><%= liste[cle].titre %></h3>
-        <p class="qc-theme-intro"><%- liste[cle].intro %></p>
+        <p class="qc-theme-intro"><%- _insec(liste[cle].intro) %></p>
         <ol class="qc-questions">
           <% liste[cle].questions.forEach(function (q) { numero++; %>
-          <li class="qc-question"><span class="qc-numero"><%= numero %>.</span><span><%= q %></span></li>
+          <li class="qc-question"><span class="qc-numero"><%= numero %>.</span><span><%= _insec(q) %></span></li>
           <% }); %>
         </ol>
       </div>
@@ -99,94 +156,57 @@
     </section>
     <% } %>
 
-    <!-- SEO Article -->
-    <article class="space-y-10 pt-10 border-t border-border seo-content">
+    <article class="space-y-12 pt-10 border-t border-border seo-content">
 
+      <% if (_situations && Array.isArray(_situations.items)) { %>
       <section>
-        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s1.title', '') %></h2>
-        <div class="space-y-4 text-muted-foreground leading-relaxed">
-          <p><%= t(ns + ':seo.s1.p1', '') %></p>
-          <p><%= t(ns + ':seo.s1.p2', '') %></p>
-          <p><%- t(ns + ':seo.s1.p3', '') %></p>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s2.title', '') %></h2>
-        <p class="text-muted-foreground mb-6 leading-relaxed"><%= t(ns + ':seo.s2.intro', '') %></p>
-        <% if (tableRows.length > 0) { %>
-        <div class="overflow-x-auto">
-          <table class="quiz-table">
-            <thead><tr>
-              <th><%= typeof tableHeaders === 'object' ? tableHeaders.category || 'Catégorie' : 'Catégorie' %></th>
-              <th><%= typeof tableHeaders === 'object' ? tableHeaders.goal || 'Objectif' : 'Objectif' %></th>
-              <th><%= typeof tableHeaders === 'object' ? tableHeaders.example || 'Exemple' : 'Exemple' %></th>
-              <th><%= typeof tableHeaders === 'object' ? tableHeaders.count || 'Nombre' : 'Nombre' %></th>
-            </tr></thead>
-            <tbody>
-              <% for (const row of tableRows) { %>
-              <tr>
-                <td class="font-medium"><%= row.cat %></td>
-                <td class="text-muted-foreground"><%= row.goal %></td>
-                <td class="text-muted-foreground italic">&laquo; <%= row.example %> &raquo;</td>
-                <td class="text-center font-medium"><%= row.count %></td>
-              </tr>
+        <h2 class="text-2xl font-bold mb-4"><%= _insec(_situations.titre) %></h2>
+        <p class="text-muted-foreground mb-8 leading-relaxed"><%= _insec(_situations.intro) %></p>
+        <div class="qc-situations">
+          <% for (const sit of _situations.items) { %>
+          <div class="qc-situation">
+            <h3 class="qc-situation-titre"><%= _insec(sit.titre) %></h3>
+            <p class="qc-situation-texte"><%- _insec(sit.texte) %></p>
+            <ul class="qc-exemples">
+              <% for (const ex of (sit.exemples || [])) { %>
+              <li><%= _insec(ex) %></li>
               <% } %>
-            </tbody>
-          </table>
-        </div>
-        <% } %>
-        <p class="text-muted-foreground mt-4 leading-relaxed"><%= t(ns + ':seo.s2.outro', '') %></p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s3.title', '') %></h2>
-        <p class="text-muted-foreground mb-4 leading-relaxed"><%- t(ns + ':seo.s3.intro', '') %></p>
-        <ul class="qc-points">
-          <% for (const item of whenItems) { %>
-          <li>
-            <h3 class="qc-point-titre"><%= item.title %></h3>
-            <p class="qc-point-texte"><%- item.desc %></p>
-          </li>
+            </ul>
+          </div>
           <% } %>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s4.title', '') %></h2>
-        <p class="text-muted-foreground mb-4 leading-relaxed"><%= t(ns + ':seo.s4.intro', '') %></p>
-        <ul class="qc-points">
-          <% for (const tip of tipsList) { %>
-          <li>
-            <h3 class="qc-point-titre"><%= tip.title %></h3>
-            <p class="qc-point-texte"><%- tip.desc %></p>
-          </li>
-          <% } %>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s5.title', '') %></h2>
-        <p class="text-muted-foreground mb-4 leading-relaxed"><%- t(ns + ':seo.s5.p1', '') %></p>
-        <ul class="qc-points">
-          <% for (const aud of audiences) { %>
-          <li>
-            <h3 class="qc-point-titre"><%= aud.title %></h3>
-            <p class="qc-point-texte"><%- aud.desc %></p>
-          </li>
-          <% } %>
-        </ul>
-        <p class="text-muted-foreground mt-4 leading-relaxed"><%- t(ns + ':seo.s5.outro', '') %></p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold mb-4"><%= t(ns + ':seo.s6.title', '') %></h2>
-        <div class="space-y-4 text-muted-foreground leading-relaxed">
-          <p><%- t(ns + ':seo.s6.p1', '') %></p>
-          <p><%= t(ns + ':seo.s6.p2', '') %></p>
-          <p><%= t(ns + ':seo.s6.p3', '') %></p>
         </div>
       </section>
+      <% } %>
+
+      <% if (_jeux && Array.isArray(_jeux.items)) { %>
+      <section>
+        <h2 class="text-2xl font-bold mb-4"><%= _jeux.titre %></h2>
+        <p class="text-muted-foreground mb-6 leading-relaxed"><%= _insec(_jeux.intro) %></p>
+        <div class="qc-jeux">
+          <% for (const jeu of _jeux.items) {
+               const _url = getLocalizedUrl(jeu.route, lang);
+               if (!_url) continue; %>
+          <a href="<%= _url %>" class="qc-jeu">
+            <span class="qc-jeu-nom"><%= t('common:nav.' + jeu.route, jeu.route) %></span>
+            <span class="qc-jeu-texte"><%= _insec(jeu.texte) %></span>
+            <span class="qc-jeu-cta"><%= _jeux.bouton %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <% } %>
+        </div>
+      </section>
+      <% } %>
+
+      <% if (_conseils && Array.isArray(_conseils.items)) { %>
+      <section>
+        <h2 class="text-2xl font-bold mb-4"><%= _conseils.titre %></h2>
+        <p class="text-muted-foreground mb-4 leading-relaxed"><%= _insec(_conseils.intro) %></p>
+        <ul class="qc-conseils">
+          <% for (const c of _conseils.items) { %>
+          <li><strong><%= _insec(c.titre) %></strong> <%= _insec(c.texte) %></li>
+          <% } %>
+        </ul>
+      </section>
+      <% } %>
 
       <% if (faqItems.length > 0) { %>
       <section>
@@ -194,18 +214,11 @@
         <div class="space-y-4">
           <% for (const item of faqItems) { %>
           <details class="border border-border rounded-lg">
-            <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= item.q %></summary>
-            <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= item.a %></div>
+            <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= _insec(item.q) %></summary>
+            <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%= _insec(item.a) %></div>
           </details>
           <% } %>
         </div>
-      </section>
-      <% } %>
-
-    
-      <% if (t(ns + ':conclusion', '')) { %>
-      <section class="qc-conclusion">
-        <p><%- t(ns + ':conclusion', '') %></p>
       </section>
       <% } %>
 
@@ -215,3 +228,4 @@
 </section>
 
 <script src="/js/questions-couple.js" defer></script>
+<script src="/js/quiz-slider.js" defer></script>

@@ -47,8 +47,6 @@
     "categoryQuizzes": "Quiz de couple",
     "categoryJeux": "Jeux de couple",
     "categorySingles": "Tests célibataires",
-    "activities": "Activités autour de moi",
-    "activitiesCourt": "Activités",
     "contact": "Contact",
     "testInfidelite": "Test infidélité",
     "testInfideliteDesc": "Détectez les signes d'infidélité",
@@ -107,7 +105,16 @@
     "testSignesChinois": "Compatibilité signes chinois",
     "testSignesChinoisDesc": "Deux dates, deux animaux, un verdict",
     "compteurCouple": "Compteur de durée en couple",
-    "compteurCoupleDesc": "Vos jours ensemble, les dates à fêter"
+    "compteurCoupleDesc": "Vos jours ensemble, les dates à fêter",
+    "speciauxCouple": "Quiz spéciaux",
+    "categorySpeciaux": "Quiz spéciaux",
+    "ongletSpeciaux": "Quiz Halloween",
+    "deployerSpeciaux": "Voir tous les quiz Halloween",
+    "quizSerialKiller": "Quel serial killer te correspond",
+    "quizMortFilmHorreur": "Qui meurt en premier (film d'horreur)",
+    "quizPossession": "Qui pourrait se faire posséder",
+    "quizSuperVilain": "Quel super-vilain es-tu",
+    "quizDuoVilains": "Quel duo de super-vilains"
   },
   "footer": {
     "brandDescription": "Testez votre complicité et découvrez votre compatibilité amoureuse avec nos quiz gratuits pour couples.",

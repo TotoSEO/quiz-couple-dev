@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "badge": "Quiz d'Halloween • Seul(e) ou à deux",
+    "title": "À quel super-vilain ressembles-tu le plus ?",
+    "titleHighlight": "super-vilain",
+    "description": "Ton entrée à la fête d'Halloween, ton déguisement, ton repaire, tes sbires, ton rire, ce que tu fais quand on te trahit ou quand un héros te tend la main. À la fin, le super-vilain qui te ressemble le plus, du Joker à Maléfique, avec son portrait et un conseil pour Halloween. Seul(e), ou à deux pour comparer.",
+    "subtitle": "15 questions • 5 minutes • seul(e), à deux sur un téléphone ou chacun sur le sien",
+    "jumpBtn": "Faire le quiz"
+  },
+  "section1": {
+    "title": "Comment marche le quiz",
+    "intro": "C'est un test de personnalité, mais avec des capes. Les questions te mettent dans la peau du méchant un soir d'Halloween : comment tu entres dans la fête, qui sont tes sbires, à quoi ressemble ton rire, ce que tu fais quand tu perds.",
+    "p1": "Par exemple : « Quelqu'un te trahit. » ou « Un enfant sonne : des bonbons ou un sort. ». Chaque réponse pèse sur un ou deux des huit vilains du quiz. À la fin, le vilain qui a reçu le plus de points l'emporte, et les trois traits qui ressortent le plus de tes réponses s'affichent en jauges.",
+    "p2": "Seul(e), tu réponds aux quinze questions et tu découvres ton vilain. À deux, le premier répond à toute la série, passe le téléphone, et le second répond sans voir ses réponses. Les deux portraits s'affichent côte à côte, avec le nombre de réponses identiques.",
+    "p3": "Le mode à distance permet de jouer chacun sur son téléphone : une personne crée la partie, l'autre rejoint avec le code, et vous voyez vos deux réponses après chaque question."
+  },
+  "section2": {
+    "title": "Les huit vilains du quiz",
+    "intro": "On a pris des méchants que tout le monde connaît, du cinéma, des comics et des dessins animés, et pour chacun le trait de caractère qui le résume.",
+    "pillar1Title": "Le Joker",
+    "pillar1Text": "Le chaos, le rire, le plan qui change toutes les cinq minutes.",
+    "pillar2Title": "Harley Quinn",
+    "pillar2Text": "L'amour trop fort, les paillettes, et la force de partir quand il le faut.",
+    "pillar3Title": "Loki",
+    "pillar3Text": "La ruse, le double jeu, et le besoin d'être aimé derrière tout ça.",
+    "pillar4Title": "Thanos",
+    "pillar4Text": "La logique, le plan, et le sacrifice au nom d'un équilibre que personne n'a demandé.",
+    "pillar5Title": "Dark Vador",
+    "pillar5Text": "Le pouvoir choisi après une perte, l'armure portée comme un deuil, et le bon qui reste.",
+    "pillar6Title": "Voldemort",
+    "pillar6Text": "Le contrôle, la peur de la mort, et le nom qu'on ne prononce pas.",
+    "pillar7Title": "Maléfique",
+    "pillar7Text": "L'élégance, la rancune, et la malédiction qui tombe sur l'invitation oubliée.",
+    "pillar8Title": "Cruella d'Enfer",
+    "pillar8Text": "Le style, le luxe, l'obsession, et une voiture conduite trop vite."
+  },
+  "section3": {
+    "title": "À deux, la question qui compte : alliance ou guerre ?",
+    "p1": "Quand vous jouez à deux, les deux portraits s'affichent côte à côte. Deux Jokers, c'est une ville qui ne dort plus. Un Thanos et une Harley Quinn, c'est une discussion animée sur ce que veut dire « raisonnable ». Et si vous voulez savoir précisément quel duo vous formez, avec un rôle pour chacun, <a href=\"/quiz-quel-duo-de-super-vilains-formez-vous/\">le quiz du duo de super-vilains</a> est fait pour ça : il se joue uniquement à deux.",
+    "p2": "Les autres quiz d'Halloween sont dans la même ambiance : <a href=\"/quiz-serial-killer-compatible/\">le serial killer qui te ressemble</a> pour un portrait plus sombre, <a href=\"/quiz-qui-meurt-en-premier-film-horreur/\">qui de vous deux meurt en premier dans un film d'horreur</a> pour un chrono, et <a href=\"/quiz-qui-pourrait-se-faire-posseder/\">qui pourrait se faire posséder</a> pour un pourcentage. Ils sont tous réunis sur <a href=\"/quiz-speciaux-pour-couple/\">la page de nos quiz spéciaux</a>."
+  },
+  "section4": {
+    "title": "Ce qu'il faut savoir",
+    "p1": "Les personnages appartiennent à leurs créateurs et à leurs studios ; le quiz s'en sert comme on s'en sert à une soirée déguisée, pour rire de ce qu'on reconnaît de soi dans un méchant de fiction. Les images des portraits sont des illustrations faites pour la page, pas des images des films.",
+    "p2": "Rien n'est enregistré : les réponses restent sur ton téléphone. Seul le vilain obtenu est compté, sans prénom ni réponse, pour afficher un jour la répartition des résultats sur la page."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Quels super-vilains peut-on obtenir ?",
+    "faq1A": "Huit : le Joker, Harley Quinn, Loki, Thanos, Dark Vador, Voldemort, Maléfique et Cruella d'Enfer. Chacun correspond à un trait de caractère que les questions mesurent.",
+    "faq2Q": "Comment le résultat est-il calculé ?",
+    "faq2A": "Chaque réponse donne un ou deux points à un ou deux vilains. À la fin, chaque vilain est ramené au maximum qu'il pouvait recevoir, et celui qui a le pourcentage le plus haut l'emporte. Les trois traits les plus présents s'affichent sous le résultat.",
+    "faq3Q": "Peut-on le faire à deux ?",
+    "faq3A": "Oui, chacun son tour sur le même téléphone, ou chacun sur le sien avec le mode à distance. Les deux portraits s'affichent côte à côte à la fin.",
+    "faq4Q": "Quelle est la différence avec le quiz du duo de super-vilains ?",
+    "faq4A": "Ici, chacun obtient son propre vilain. Le quiz du duo, lui, donne un rôle à chacun (le cerveau, le chaos, la force, le charme, l'ombre, le cœur) et le duo célèbre que ces deux rôles forment ensemble. Il se joue uniquement à deux.",
+    "faq5Q": "Mes réponses sont-elles enregistrées ?",
+    "faq5A": "Non. Les réponses restent sur ton téléphone. Seul le vilain obtenu est compté, sans prénom, pour la répartition des résultats."
+  },
+  "jsonLd": {
+    "about": "quiz d'Halloween"
+  }
+}

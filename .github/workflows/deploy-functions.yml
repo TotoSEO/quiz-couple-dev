@@ -51,11 +51,20 @@ jobs:
       # l'ancien quiz ado multijoueur dans la table quiz_ado_sessions, alors
       # que le quiz ado passe depuis par des canaux Realtime sans table ; plus
       # rien ne l'appelait, mais elle restait une porte ouverte sur la base.
+      # Le 17 octobre 2026, search-activities : la page « Activites autour de
+      # moi » a ete retiree du site (Thomas : « ca fonctionne pas et ca sert a
+      # rien »), la fonction qui interrogeait les lieux et comptait les
+      # recherches dans activity_validations part avec elle (la table est
+      # supprimee par la migration 20261017120000_retrait_activites.sql).
+      # Retirer une fonction du depot, c'est aussi retirer sa section
+      # [functions.<nom>] de supabase/config.toml : sinon l'etape de deploiement
+      # cherche son dossier et echoue avant d'arriver ici (17 octobre 2026,
+      # « entrypoint path does not exist » pour search-activities).
       # Les commandes ne font rien si c'est deja fait, et une erreur ne bloque
       # pas le deploiement : cette etape peut etre retiree une fois passee.
-      - name: Retirer trigger-deploy, admin-blog, blog-og, manage-ado-session et les secrets (supprimés du dépôt)
+      - name: Retirer trigger-deploy, admin-blog, blog-og, manage-ado-session, search-activities et les secrets (supprimés du dépôt)
         run: |
-          for f in trigger-deploy admin-blog blog-og manage-ado-session; do
+          for f in trigger-deploy admin-blog blog-og manage-ado-session search-activities; do
             supabase functions delete "$f" --project-ref "$SUPABASE_PROJECT_REF" < /dev/null \
               || echo "$f : déjà absente"
           done

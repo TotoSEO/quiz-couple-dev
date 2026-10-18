@@ -15,21 +15,36 @@ export const jourDeSemaine = (jour) => ((new Date(`${jour}T12:00:00Z`).getUTCDay
 // La semaine type de la ligne éditoriale (reseaux/atelier/LIGNE-EDITORIALE.md),
 // la même que le réglage « melange » posé par la migration.
 export const MELANGE_DEFAUT = {
-  // tous les matins, un reel du bonhomme bâton (« me in my dreams with u »).
-  // Le 16 octobre 2026 au matin il n'avait que le lundi, le mercredi et le
-  // vendredi, à la place de trois des dix animations ; le soir même, devant
-  // la promesse de la lune et les chiens, Thomas : « on lance ces animations
-  // à raison de une par jour, du coup réduis les formats posts classiques ».
-  // Les animations des mascottes gardent le lundi et le mercredi soir, et la
-  // coquine du vendredi soir.
+  // tous les matins, un reel du bonhomme bâton (« me in my dreams with u »),
+  // depuis le 16 octobre 2026 au soir (Thomas, devant la promesse de la lune
+  // et les chiens : « on lance ces animations à raison de une par jour »).
   matin: 'baton',
-  midi: { 1: 'connais-tu', 2: 'tu-preferes', 3: 'connais-tu', 4: 'statique', 5: 'connais-tu', 6: 'tu-preferes', 7: 'statique' },
+  // Le même soir, Thomas, devant les chiffres des dix premiers jours : « les
+  // vidéos d'animations avec les deux mascottes ne fonctionnent pas du tout
+  // [...] sur les dizaines qui sont sorties y'en a pas une qui a fonctionné.
+  // Le seul qui a fait 30 000 vues est le reel dilemmes version date night
+  // [...] il va falloir plutôt se concentrer sur ces reels-là, ceux qui sont
+  // familiers ». Les animations des mascottes (pov, coquin, statique) sortent
+  // donc de la grille (CATEGORIES_RETIREES) : les dilemmes « Tu préfères »,
+  // une édition par reel, prennent les deux midis des reels statiques et les
+  // trois soirs des animations ; les trois « Connais-tu » de midi restent.
+  midi: { 1: 'connais-tu', 2: 'tu-preferes', 3: 'connais-tu', 4: 'tu-preferes', 5: 'connais-tu', 6: 'tu-preferes', 7: 'tu-preferes' },
   // le mardi soir une BD en quatre cases (8 octobre 2026), le jeudi soir un
   // carrousel de questions : le format qui se garde ; le samedi soir un
   // carrousel « He's a 10 but... » (12 octobre 2026, à la place d'une des
   // deux phrases tendres de la semaine)
-  soir: { 1: 'pov', 2: 'bd', 3: 'pov', 4: 'carrousel', 5: 'coquin', 6: 'dix-mais', 7: 'phrase' },
+  soir: { 1: 'tu-preferes', 2: 'bd', 3: 'tu-preferes', 4: 'carrousel', 5: 'tu-preferes', 6: 'dix-mais', 7: 'phrase' },
 };
+
+// Les catégories retirées de la grille le 16 octobre 2026 au soir : les
+// animations des mascottes (gabarit pov). Rien de cette catégorie ne part
+// plus : la synchro, le rendu et la publication mettent leurs déclinaisons
+// en échec avec MOTIF_RETRAIT, l'entretien les laisse à la routine dans
+// `hors_grille` (elle les réécrit dans la catégorie attendue), et le contrôle
+// de l'atelier refuse d'en écrire une. Les posts déjà publiés ne bougent pas.
+export const CATEGORIES_RETIREES = ['pov', 'coquin', 'statique'];
+export const MOTIF_RETRAIT = 'catégorie retirée de la grille le 16 octobre 2026 (animation des mascottes) : à réécrire dans la catégorie attendue';
+export const estRetiree = (categorie) => CATEGORIES_RETIREES.includes(categorie);
 
 // La catégorie attendue pour un créneau, d'après le réglage « melange »
 // (pov, coquin, statique, connais-tu, tu-preferes, phrase...).

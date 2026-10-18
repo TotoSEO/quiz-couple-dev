@@ -1,5 +1,5 @@
 {
-  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau. La banque « bd » (8 octobre 2026) : des planches en quatre cases, une situation, une chute dans la dernière case ; chaque idée découpe les quatre images et donne les répliques. Le 9 octobre 2026, les 28 phrases tendres ont été réécrites en phrases concrètes qu'une personne écrirait vraiment à l'autre (« I love how you say my name when you're half asleep. ») à la place des maximes sur l'amour (« You're the reason I believe in slow, gentle love. »), et les chutes des planches qui commentaient la scène ont été remplacées par ce que le personnage dirait pour de vrai : voir « La chute, et ce qui sonne machine » dans LIGNE-EDITORIALE.md. La banque « dix-mais » (12 octobre 2026, idée de Thomas) : un carrousel « He's a 10 but... » ou « She's a 10 but... » le samedi soir, une couverture, huit cartes qui commencent par « but he » ou « but she », de la petite manie qui fait sourire au vrai drapeau rouge, la plus grave en dernier, et une page finale ; chaque sujet donne l'édition, l'accroche et les huit cartes, et « qui » dit lequel des deux est le 10 (he : le violet, she : la rose). Depuis le 16 octobre 2026, 24 histoires de bonhomme bâton (banque « baton », lundi, mercredi et vendredi matin), trois par trame (sauvetage, parapluie, course, etoile, porte, rattrape, danse, reveil : voir TRAMES dans studio/src/baton/realisateur.mjs) : chaque sujet dit qui est le héros (garçon puis fille en alternance), sa trame, l'histoire en trois ou quatre phrases et un titre connu pour la musique ; la routine en tire un brief par séquences (CONSIGNES.md, « Le bonhomme bâton »). Depuis le 16 octobre 2026 au soir, un bonhomme bâton part tous les matins (Thomas : « on lance ces animations à raison de une par jour, du coup réduis les formats posts classiques ») : banque « baton » de 63 histoires, sept par trame, les neuf trames à tour de rôle, jamais le même décor d’ouverture deux jours de suite, le héros fille presque une fois sur deux ; midi et soir gardent les formats classiques, les animations des mascottes n’ont plus que le lundi et le mercredi soir et la coquine du vendredi soir.",
+  "note": "Banque de sujets des premiers mois (13 semaines au départ, 273 posts ; complétée le 7 octobre 2026 par 23 animations et 11 jeux venus de la revue des comptes qui marchent : éditions nommées, « Who's more likely? » à pointer, minis participatifs, échelles de réaction, routines, faux messages, contrastes, retrouvailles). La routine prend le premier sujet libre de la catégorie du créneau, le développe en scénario détaillé, et écrit son id dans le champ « sujet » du post : un sujet déjà présent dans posts/ n'est jamais repris. Les sujets datés (saison) passent avant la banque. Piliers des animations : humour, tendre, mini (un personnage qui parle à la caméra), participatif (une phrase à finir en commentaire). Un sujet de « Connais-tu » avec « mode » : « pointe » se joue en montrant l'autre du doigt (voir CONSIGNES.md). Depuis le 7 octobre 2026, un carrousel de questions par semaine (jeudi soir, banque « carrousel », une couverture à l'étiquette de l'édition, huit pages, une page finale) ; chaque jour, une story reprend le reel du matin, sans rien demander à la routine. Depuis le 7 octobre 2026, le décor d'un sujet se lit dans l'idée (« rue, soir : ... ») et les quinze décors du studio y sont répartis (mur, salon, chambre, cuisine, table, dehors, forêt, rue, café, plage, voiture, cinéma) : la routine garde ce décor, ou en prend un autre si celui-ci a servi la veille, jamais le même deux jours de suite au même créneau. La banque « bd » (8 octobre 2026) : des planches en quatre cases, une situation, une chute dans la dernière case ; chaque idée découpe les quatre images et donne les répliques. Le 9 octobre 2026, les 28 phrases tendres ont été réécrites en phrases concrètes qu'une personne écrirait vraiment à l'autre (« I love how you say my name when you're half asleep. ») à la place des maximes sur l'amour (« You're the reason I believe in slow, gentle love. »), et les chutes des planches qui commentaient la scène ont été remplacées par ce que le personnage dirait pour de vrai : voir « La chute, et ce qui sonne machine » dans LIGNE-EDITORIALE.md. La banque « dix-mais » (12 octobre 2026, idée de Thomas) : un carrousel « He's a 10 but... » ou « She's a 10 but... » le samedi soir, une couverture, huit cartes qui commencent par « but he » ou « but she », de la petite manie qui fait sourire au vrai drapeau rouge, la plus grave en dernier, et une page finale ; chaque sujet donne l'édition, l'accroche et les huit cartes, et « qui » dit lequel des deux est le 10 (he : le violet, she : la rose). Depuis le 16 octobre 2026, 24 histoires de bonhomme bâton (banque « baton », lundi, mercredi et vendredi matin), trois par trame (sauvetage, parapluie, course, etoile, porte, rattrape, danse, reveil : voir TRAMES dans studio/src/baton/realisateur.mjs) : chaque sujet dit qui est le héros (garçon puis fille en alternance), sa trame, l'histoire en trois ou quatre phrases et un titre connu pour la musique ; la routine en tire un brief par séquences (CONSIGNES.md, « Le bonhomme bâton »). Depuis le 16 octobre 2026 au soir, un bonhomme bâton part tous les matins (Thomas : « on lance ces animations à raison de une par jour, du coup réduis les formats posts classiques ») : banque « baton » de 63 histoires, sept par trame, les neuf trames à tour de rôle, jamais le même décor d’ouverture deux jours de suite, le héros fille presque une fois sur deux ; midi et soir gardaient les formats classiques. Le soir même, seconde décision : les animations des mascottes (banques « pov », « coquin », « statique ») sortent de la grille, Thomas : « les vidéos d'animations avec les deux mascottes ne fonctionnent pas du tout [...] le seul qui a fait 30 000 vues est le reel dilemmes version date night [...] se concentrer sur ces reels-là, ceux qui sont familiers » ; les trois banques restent dans le fichier sans plus servir (la synchro retient un post de ces catégories, le contrôle de l'atelier le refuse). La banque « tu-preferes » passe de 28 à 108 éditions (tp-029 à tp-108) pour sept reels par semaine : des moments à vivre à deux (Lazy Sunday, Movie night, Rainy day, Road trip, Weekend away...), des habitudes et des petits choix du quotidien (Breakfast, Bedtime, Chores, Phone, Texting...), et un peu de jeu pur de temps en temps (Hard mode, Impossible, Silly, Superpowers, Time travel) ; le thème est l'étiquette de la couverture (22 signes au plus), trois paires d'exemples par édition (45 signes au plus par choix), la routine écrit les six dilemmes du reel dans le même esprit. Un sujet de la banque référencé par un sujet daté (champ « theme » : tp-014 et tp-024, les éditions de Noël tp-042 à tp-044 et du Nouvel An tp-106, ct-025 et ct-038) est réservé à sa date : on le saute dans l'ordre normal.",
   "pov": [
     {
       "id": "pov-001",
@@ -1932,6 +1932,1446 @@
           "Sunny day outside"
         ]
       ]
+    },
+    {
+      "id": "tp-029",
+      "theme": "Lazy Sunday edition",
+      "exemples": [
+        [
+          "Breakfast in bed till noon",
+          "Brunch out in pajamas"
+        ],
+        [
+          "Nap together",
+          "Walk together"
+        ],
+        [
+          "A whole series in one day",
+          "A whole book, out loud"
+        ]
+      ]
+    },
+    {
+      "id": "tp-030",
+      "theme": "Movie night",
+      "exemples": [
+        [
+          "Horror with the lights off",
+          "Comedy with popcorn"
+        ],
+        [
+          "Their pick tonight",
+          "Your pick tonight"
+        ],
+        [
+          "Cinema seats",
+          "Sofa and blanket"
+        ]
+      ]
+    },
+    {
+      "id": "tp-031",
+      "theme": "Rainy day edition",
+      "exemples": [
+        [
+          "Puzzle on the floor",
+          "Board game at the table"
+        ],
+        [
+          "Walk in the rain",
+          "Watch the rain from bed"
+        ],
+        [
+          "Pancakes for dinner",
+          "Soup and bread"
+        ]
+      ]
+    },
+    {
+      "id": "tp-032",
+      "theme": "Road trip edition",
+      "exemples": [
+        [
+          "You drive, they pick the music",
+          "They drive, you pick the music"
+        ],
+        [
+          "Stop at every viewpoint",
+          "Get there before dark"
+        ],
+        [
+          "Sleep in the car",
+          "Find a tiny motel"
+        ]
+      ]
+    },
+    {
+      "id": "tp-033",
+      "theme": "Breakfast edition",
+      "exemples": [
+        [
+          "Pancakes every day",
+          "Croissants every day"
+        ],
+        [
+          "They make the coffee",
+          "You make the coffee"
+        ],
+        [
+          "Eat together at 7",
+          "Eat together at 11"
+        ]
+      ]
+    },
+    {
+      "id": "tp-034",
+      "theme": "Cozy night in",
+      "exemples": [
+        [
+          "Candles and music",
+          "Fairy lights and a movie"
+        ],
+        [
+          "Massage for them first",
+          "Massage for you first"
+        ],
+        [
+          "Hot chocolate",
+          "Ice cream, in winter"
+        ]
+      ]
+    },
+    {
+      "id": "tp-035",
+      "theme": "First date, again",
+      "exemples": [
+        [
+          "Same place as the first time",
+          "Somewhere new"
+        ],
+        [
+          "They plan everything",
+          "You plan everything"
+        ],
+        [
+          "Dress up",
+          "Hoodies and sneakers"
+        ]
+      ]
+    },
+    {
+      "id": "tp-036",
+      "theme": "Vacation edition",
+      "exemples": [
+        [
+          "Two weeks at the beach",
+          "Two weeks in a city"
+        ],
+        [
+          "Plan every day",
+          "No plan at all"
+        ],
+        [
+          "Hotel breakfast",
+          "Bakery on the corner"
+        ]
+      ]
+    },
+    {
+      "id": "tp-037",
+      "theme": "Kitchen edition",
+      "exemples": [
+        [
+          "Cook together, mess everywhere",
+          "One cooks, one cleans"
+        ],
+        [
+          "Follow the recipe",
+          "Improvise"
+        ],
+        [
+          "Taste everything first",
+          "Wait for the plate"
+        ]
+      ]
+    },
+    {
+      "id": "tp-038",
+      "theme": "Bedtime edition",
+      "exemples": [
+        [
+          "Lights out at 10",
+          "Talk till 2am"
+        ],
+        [
+          "Same side forever",
+          "Swap sides every night"
+        ],
+        [
+          "Their arm as a pillow",
+          "Your own pillow, always"
+        ]
+      ]
+    },
+    {
+      "id": "tp-039",
+      "theme": "Weekend away",
+      "exemples": [
+        [
+          "Cabin in the woods",
+          "Room with a sea view"
+        ],
+        [
+          "Hike all day",
+          "Spa all day"
+        ],
+        [
+          "Pack the night before",
+          "Pack in five minutes"
+        ]
+      ]
+    },
+    {
+      "id": "tp-040",
+      "theme": "Night out edition",
+      "exemples": [
+        [
+          "Dance till 3am",
+          "Dinner then home by 11"
+        ],
+        [
+          "Dress up together",
+          "Jeans and a tee"
+        ],
+        [
+          "Big party",
+          "A table for two"
+        ]
+      ]
+    },
+    {
+      "id": "tp-041",
+      "theme": "Little rituals",
+      "exemples": [
+        [
+          "Good morning kiss",
+          "Good night kiss"
+        ],
+        [
+          "Same mug every day",
+          "Share one mug"
+        ],
+        [
+          "Say I love you at bedtime",
+          "Say it over breakfast"
+        ]
+      ]
+    },
+    {
+      "id": "tp-042",
+      "theme": "Winter edition",
+      "exemples": [
+        [
+          "Snowball fight",
+          "Build a snowman"
+        ],
+        [
+          "Ice skating together",
+          "Sledding together"
+        ],
+        [
+          "Hot chocolate by the fire",
+          "Soup under a blanket"
+        ]
+      ]
+    },
+    {
+      "id": "tp-043",
+      "theme": "Christmas gifts",
+      "exemples": [
+        [
+          "One big gift",
+          "Ten small gifts"
+        ],
+        [
+          "A gift they asked for",
+          "A total surprise"
+        ],
+        [
+          "Unwrap at midnight",
+          "Unwrap in the morning"
+        ]
+      ]
+    },
+    {
+      "id": "tp-044",
+      "theme": "Christmas night",
+      "exemples": [
+        [
+          "Movie under the blanket",
+          "Walk in the snow"
+        ],
+        [
+          "Leftovers in bed",
+          "One more dessert"
+        ],
+        [
+          "Fall asleep by the tree",
+          "Fall asleep on the sofa"
+        ]
+      ]
+    },
+    {
+      "id": "tp-045",
+      "theme": "Summer edition",
+      "exemples": [
+        [
+          "Beach at sunrise",
+          "Beach at sunset"
+        ],
+        [
+          "Ice cream for dinner",
+          "Barbecue at midnight"
+        ],
+        [
+          "Swim together",
+          "Nap in the shade"
+        ]
+      ]
+    },
+    {
+      "id": "tp-046",
+      "theme": "Snack edition",
+      "exemples": [
+        [
+          "Share one bag of chips",
+          "Two bags, no sharing"
+        ],
+        [
+          "Sweet at midnight",
+          "Salty at midnight"
+        ],
+        [
+          "Popcorn",
+          "Nachos"
+        ]
+      ]
+    },
+    {
+      "id": "tp-047",
+      "theme": "Phone edition",
+      "exemples": [
+        [
+          "No phone at dinner",
+          "No phone in bed"
+        ],
+        [
+          "Reply in one second",
+          "Reply in one hour"
+        ],
+        [
+          "Share your screen time",
+          "Share your camera roll"
+        ]
+      ]
+    },
+    {
+      "id": "tp-048",
+      "theme": "Cuddle edition",
+      "exemples": [
+        [
+          "Big spoon tonight",
+          "Little spoon tonight"
+        ],
+        [
+          "Cuddle and sweat",
+          "Cold feet on your legs"
+        ],
+        [
+          "Head on their chest",
+          "Their head on your lap"
+        ]
+      ]
+    },
+    {
+      "id": "tp-049",
+      "theme": "Picnic edition",
+      "exemples": [
+        [
+          "Sandwiches in the park",
+          "Pizza on the grass"
+        ],
+        [
+          "Lie on a blanket",
+          "Sit on a bench"
+        ],
+        [
+          "Watch the clouds",
+          "Watch the people"
+        ]
+      ]
+    },
+    {
+      "id": "tp-050",
+      "theme": "Dinner date",
+      "exemples": [
+        [
+          "Candlelit restaurant",
+          "Street food standing up"
+        ],
+        [
+          "Share one dessert",
+          "One dessert each"
+        ],
+        [
+          "Order the same dish",
+          "Order two and swap"
+        ]
+      ]
+    },
+    {
+      "id": "tp-051",
+      "theme": "Chores edition",
+      "exemples": [
+        [
+          "Dishes forever",
+          "Laundry forever"
+        ],
+        [
+          "Clean together on Sunday",
+          "Ten minutes every day"
+        ],
+        [
+          "Make the bed",
+          "Take out the trash"
+        ]
+      ]
+    },
+    {
+      "id": "tp-052",
+      "theme": "Coffee date",
+      "exemples": [
+        [
+          "Tiny cafe with one table",
+          "Big cafe with sofas"
+        ],
+        [
+          "Hot coffee in winter",
+          "Iced coffee in summer"
+        ],
+        [
+          "Talk for three hours",
+          "Read side by side"
+        ]
+      ]
+    },
+    {
+      "id": "tp-053",
+      "theme": "Game night",
+      "exemples": [
+        [
+          "Cards",
+          "Board game"
+        ],
+        [
+          "Team up against friends",
+          "Play against each other"
+        ],
+        [
+          "Loser does the dishes",
+          "Loser gives a massage"
+        ]
+      ]
+    },
+    {
+      "id": "tp-054",
+      "theme": "Texting edition",
+      "exemples": [
+        [
+          "Voice notes only",
+          "Texts only"
+        ],
+        [
+          "Hearts in every text",
+          "No emoji ever"
+        ],
+        [
+          "Good morning text first",
+          "Good night text last"
+        ]
+      ]
+    },
+    {
+      "id": "tp-055",
+      "theme": "Camping edition",
+      "exemples": [
+        [
+          "Tent by the lake",
+          "Van by the sea"
+        ],
+        [
+          "Marshmallows",
+          "Grilled corn"
+        ],
+        [
+          "Stars till 2am",
+          "Sunrise at 6"
+        ]
+      ]
+    },
+    {
+      "id": "tp-056",
+      "theme": "Money edition",
+      "exemples": [
+        [
+          "Split everything",
+          "Take turns paying"
+        ],
+        [
+          "Save for a trip",
+          "Save for a home"
+        ],
+        [
+          "One big splurge a year",
+          "Small treats every week"
+        ]
+      ]
+    },
+    {
+      "id": "tp-057",
+      "theme": "City break",
+      "exemples": [
+        [
+          "Rooftop at sunset",
+          "Old town at night"
+        ],
+        [
+          "Museum morning",
+          "Market morning"
+        ],
+        [
+          "Walk everywhere",
+          "Scooter everywhere"
+        ]
+      ]
+    },
+    {
+      "id": "tp-058",
+      "theme": "Sleepy edition",
+      "exemples": [
+        [
+          "Snooze together",
+          "Up at the first alarm"
+        ],
+        [
+          "Nap at 3pm",
+          "Sleep in till 10"
+        ],
+        [
+          "Fall asleep to a movie",
+          "Fall asleep to rain sounds"
+        ]
+      ]
+    },
+    {
+      "id": "tp-059",
+      "theme": "Pet edition",
+      "exemples": [
+        [
+          "A puppy",
+          "A kitten"
+        ],
+        [
+          "Name it after a snack",
+          "Name it after a song"
+        ],
+        [
+          "It sleeps on the bed",
+          "It sleeps in its own bed"
+        ]
+      ]
+    },
+    {
+      "id": "tp-060",
+      "theme": "Birthday edition",
+      "exemples": [
+        [
+          "Surprise party",
+          "Dinner for two"
+        ],
+        [
+          "Cake for breakfast",
+          "Cake at midnight"
+        ],
+        [
+          "One gift, well chosen",
+          "Little gifts all day"
+        ]
+      ]
+    },
+    {
+      "id": "tp-061",
+      "theme": "Anniversary edition",
+      "exemples": [
+        [
+          "Back to your first date",
+          "A brand new place"
+        ],
+        [
+          "A handwritten letter",
+          "A photo book"
+        ],
+        [
+          "Weekend away",
+          "Weekend in bed"
+        ]
+      ]
+    },
+    {
+      "id": "tp-062",
+      "theme": "Lazy morning",
+      "exemples": [
+        [
+          "Coffee in bed",
+          "Cuddle, no coffee"
+        ],
+        [
+          "Pancakes",
+          "Toast and jam"
+        ],
+        [
+          "Open the curtains",
+          "Keep it dark"
+        ]
+      ]
+    },
+    {
+      "id": "tp-063",
+      "theme": "Long distance",
+      "exemples": [
+        [
+          "Call every night",
+          "One long call a week"
+        ],
+        [
+          "Visit them first",
+          "They visit you first"
+        ],
+        [
+          "Watch a movie together online",
+          "Play a game together online"
+        ]
+      ]
+    },
+    {
+      "id": "tp-064",
+      "theme": "Bath and shower",
+      "exemples": [
+        [
+          "Bubble bath together",
+          "Shower duet"
+        ],
+        [
+          "Singing in the shower",
+          "Dancing while brushing teeth"
+        ],
+        [
+          "Hot water first",
+          "Towel first"
+        ]
+      ]
+    },
+    {
+      "id": "tp-065",
+      "theme": "Autumn edition",
+      "exemples": [
+        [
+          "Jump in the leaves",
+          "Pumpkin soup at home"
+        ],
+        [
+          "Scarf swap",
+          "Hoodie swap"
+        ],
+        [
+          "Forest walk",
+          "Cafe with a view"
+        ]
+      ]
+    },
+    {
+      "id": "tp-066",
+      "theme": "Takeout night",
+      "exemples": [
+        [
+          "Pizza",
+          "Sushi"
+        ],
+        [
+          "Eat on the floor",
+          "Eat in bed"
+        ],
+        [
+          "Same order every time",
+          "Something new every time"
+        ]
+      ]
+    },
+    {
+      "id": "tp-067",
+      "theme": "Sunday walk",
+      "exemples": [
+        [
+          "Along the river",
+          "Through the park"
+        ],
+        [
+          "Hold hands the whole way",
+          "Race to the bench"
+        ],
+        [
+          "Coffee to go",
+          "Ice cream to go"
+        ]
+      ]
+    },
+    {
+      "id": "tp-068",
+      "theme": "Playlist edition",
+      "exemples": [
+        [
+          "Their songs all day",
+          "Your songs all day"
+        ],
+        [
+          "Sing in the car",
+          "Dance in the kitchen"
+        ],
+        [
+          "One song that is yours",
+          "A whole playlist"
+        ]
+      ]
+    },
+    {
+      "id": "tp-069",
+      "theme": "Weekend plans",
+      "exemples": [
+        [
+          "Stay in all weekend",
+          "Out both days"
+        ],
+        [
+          "Friends on Saturday",
+          "Just us on Saturday"
+        ],
+        [
+          "Big breakfast Sunday",
+          "Big dinner Sunday"
+        ]
+      ]
+    },
+    {
+      "id": "tp-070",
+      "theme": "Comfort edition",
+      "exemples": [
+        [
+          "Hug for an hour",
+          "A hundred short hugs"
+        ],
+        [
+          "Soup when you are sick",
+          "Blanket when you are sick"
+        ],
+        [
+          "They stay quiet with you",
+          "They make you laugh"
+        ]
+      ]
+    },
+    {
+      "id": "tp-071",
+      "theme": "Flight edition",
+      "exemples": [
+        [
+          "Window seat",
+          "Aisle seat"
+        ],
+        [
+          "Sleep on their shoulder",
+          "Share one headphone each"
+        ],
+        [
+          "Airport at 5am",
+          "Airport at midnight"
+        ]
+      ]
+    },
+    {
+      "id": "tp-072",
+      "theme": "Beach day",
+      "exemples": [
+        [
+          "Build a sandcastle",
+          "Swim out far"
+        ],
+        [
+          "Sunset walk",
+          "Sunrise swim"
+        ],
+        [
+          "Fries on the beach",
+          "Fruit on the beach"
+        ]
+      ]
+    },
+    {
+      "id": "tp-073",
+      "theme": "Spring edition",
+      "exemples": [
+        [
+          "Picnic under a tree",
+          "Bike ride by the river"
+        ],
+        [
+          "Flowers every Friday",
+          "Plants on every shelf"
+        ],
+        [
+          "Rain, then rainbow",
+          "Sun all day"
+        ]
+      ]
+    },
+    {
+      "id": "tp-074",
+      "theme": "Movie choices",
+      "exemples": [
+        [
+          "Their favorite, for the tenth time",
+          "A movie neither of you knows"
+        ],
+        [
+          "Subtitles on",
+          "Subtitles off"
+        ],
+        [
+          "Talk during the movie",
+          "Total silence"
+        ]
+      ]
+    },
+    {
+      "id": "tp-075",
+      "theme": "Sweet tooth",
+      "exemples": [
+        [
+          "Chocolate",
+          "Candy"
+        ],
+        [
+          "Share one cake",
+          "Two slices, two forks"
+        ],
+        [
+          "Dessert first",
+          "Dessert for breakfast"
+        ]
+      ]
+    },
+    {
+      "id": "tp-076",
+      "theme": "Apology edition",
+      "exemples": [
+        [
+          "Say sorry first",
+          "Make the first joke"
+        ],
+        [
+          "Fix it before bed",
+          "Fix it over breakfast"
+        ],
+        [
+          "A hug to make up",
+          "A letter to make up"
+        ]
+      ]
+    },
+    {
+      "id": "tp-077",
+      "theme": "Shopping edition",
+      "exemples": [
+        [
+          "Groceries together",
+          "Groceries alone, fast"
+        ],
+        [
+          "One cart",
+          "Two carts, a race"
+        ],
+        [
+          "Cook what you bought",
+          "Snack what you bought"
+        ]
+      ]
+    },
+    {
+      "id": "tp-078",
+      "theme": "Cold weather",
+      "exemples": [
+        [
+          "Share one blanket",
+          "Two blankets, warm feet"
+        ],
+        [
+          "Walk in the snow",
+          "Watch the snow from bed"
+        ],
+        [
+          "Hot soup",
+          "Warm cookies"
+        ]
+      ]
+    },
+    {
+      "id": "tp-079",
+      "theme": "Fitness edition",
+      "exemples": [
+        [
+          "Run together at 7",
+          "Yoga together at 9"
+        ],
+        [
+          "Gym date",
+          "Hike date"
+        ],
+        [
+          "Stretch in bed",
+          "Dance in the kitchen"
+        ]
+      ]
+    },
+    {
+      "id": "tp-080",
+      "theme": "Photo edition",
+      "exemples": [
+        [
+          "A photo every day",
+          "One photo a month"
+        ],
+        [
+          "Printed on the wall",
+          "Only on your phones"
+        ],
+        [
+          "Silly faces",
+          "Nice smiles"
+        ]
+      ]
+    },
+    {
+      "id": "tp-081",
+      "theme": "Meet the parents",
+      "exemples": [
+        [
+          "Dinner at theirs",
+          "Dinner at a restaurant"
+        ],
+        [
+          "Bring flowers",
+          "Bring dessert"
+        ],
+        [
+          "Tell all your stories",
+          "Let them talk"
+        ]
+      ]
+    },
+    {
+      "id": "tp-082",
+      "theme": "Night drive",
+      "exemples": [
+        [
+          "Windows down, music up",
+          "Heater on, soft music"
+        ],
+        [
+          "Drive to the sea",
+          "Drive to the hills"
+        ],
+        [
+          "Fries at a gas station",
+          "Snacks from home"
+        ]
+      ]
+    },
+    {
+      "id": "tp-083",
+      "theme": "Living together",
+      "exemples": [
+        [
+          "Your place",
+          "Their place"
+        ],
+        [
+          "Huge bed, tiny kitchen",
+          "Huge kitchen, tiny bed"
+        ],
+        [
+          "Plants everywhere",
+          "Books everywhere"
+        ]
+      ]
+    },
+    {
+      "id": "tp-084",
+      "theme": "Surprise edition",
+      "exemples": [
+        [
+          "Surprise trip",
+          "Surprise party"
+        ],
+        [
+          "Flowers at the door",
+          "Breakfast on the table"
+        ],
+        [
+          "Know the surprise",
+          "Be surprised"
+        ]
+      ]
+    },
+    {
+      "id": "tp-085",
+      "theme": "Rain or shine",
+      "exemples": [
+        [
+          "Rain on the roof, tea inside",
+          "Sun on your face, no plans"
+        ],
+        [
+          "Umbrella for two",
+          "Run and get wet"
+        ],
+        [
+          "Thunderstorm in bed",
+          "Sunset on a roof"
+        ]
+      ]
+    },
+    {
+      "id": "tp-086",
+      "theme": "Favorite spot",
+      "exemples": [
+        [
+          "Your sofa",
+          "Your bed"
+        ],
+        [
+          "The kitchen table",
+          "The balcony"
+        ],
+        [
+          "Their shoulder",
+          "Their lap"
+        ]
+      ]
+    },
+    {
+      "id": "tp-087",
+      "theme": "Friday night",
+      "exemples": [
+        [
+          "Takeout and a movie",
+          "Dinner out and a walk"
+        ],
+        [
+          "Friends over",
+          "Just the two of you"
+        ],
+        [
+          "Bed by 11",
+          "Up till 3"
+        ]
+      ]
+    },
+    {
+      "id": "tp-088",
+      "theme": "Holiday morning",
+      "exemples": [
+        [
+          "Lie in",
+          "Up early for croissants"
+        ],
+        [
+          "Pool first",
+          "Breakfast first"
+        ],
+        [
+          "Plan the day",
+          "See what happens"
+        ]
+      ]
+    },
+    {
+      "id": "tp-089",
+      "theme": "Little gestures",
+      "exemples": [
+        [
+          "Forehead kiss",
+          "Hand on your back"
+        ],
+        [
+          "They warm your hands",
+          "They carry your bag"
+        ],
+        [
+          "A note in your pocket",
+          "A text at noon"
+        ]
+      ]
+    },
+    {
+      "id": "tp-090",
+      "theme": "Table for two",
+      "exemples": [
+        [
+          "Same table every time",
+          "A new place every week"
+        ],
+        [
+          "Share a starter",
+          "Share a dessert"
+        ],
+        [
+          "Talk about the day",
+          "Talk about the future"
+        ]
+      ]
+    },
+    {
+      "id": "tp-091",
+      "theme": "Sunday dinner",
+      "exemples": [
+        [
+          "Pasta",
+          "Tacos"
+        ],
+        [
+          "Cook together",
+          "Order in"
+        ],
+        [
+          "Eat at the table",
+          "Eat on the sofa"
+        ]
+      ]
+    },
+    {
+      "id": "tp-092",
+      "theme": "Honesty edition",
+      "exemples": [
+        [
+          "Hear every truth",
+          "Hear every compliment"
+        ],
+        [
+          "Read their mind for a day",
+          "They read yours"
+        ],
+        [
+          "Share every secret",
+          "Keep a few"
+        ]
+      ]
+    },
+    {
+      "id": "tp-093",
+      "theme": "Forever edition",
+      "exemples": [
+        [
+          "Same song forever",
+          "Never the same song twice"
+        ],
+        [
+          "One trip a year, forever",
+          "Flowers every week, forever"
+        ],
+        [
+          "Grow old in a city",
+          "Grow old by the sea"
+        ]
+      ]
+    },
+    {
+      "id": "tp-094",
+      "theme": "Two phones",
+      "exemples": [
+        [
+          "Swap phones for a day",
+          "Swap wardrobes for a day"
+        ],
+        [
+          "They read your messages",
+          "You read theirs"
+        ],
+        [
+          "No phone on vacation",
+          "No phone on weekends"
+        ]
+      ]
+    },
+    {
+      "id": "tp-095",
+      "theme": "Night sky",
+      "exemples": [
+        [
+          "Stars from a rooftop",
+          "Stars from a field"
+        ],
+        [
+          "Make a wish",
+          "Count the stars"
+        ],
+        [
+          "Blanket on the grass",
+          "Blanket on the car"
+        ]
+      ]
+    },
+    {
+      "id": "tp-096",
+      "theme": "Slow weekend",
+      "exemples": [
+        [
+          "Market in the morning",
+          "Bakery in the morning"
+        ],
+        [
+          "Read in the park",
+          "Nap in the park"
+        ],
+        [
+          "Cook all afternoon",
+          "Walk all afternoon"
+        ]
+      ]
+    },
+    {
+      "id": "tp-097",
+      "theme": "Breakfast out",
+      "exemples": [
+        [
+          "Pancakes with syrup",
+          "Eggs and toast"
+        ],
+        [
+          "Window table",
+          "Terrace table"
+        ],
+        [
+          "Orange juice",
+          "Hot chocolate"
+        ]
+      ]
+    },
+    {
+      "id": "tp-098",
+      "theme": "Future home",
+      "exemples": [
+        [
+          "A house with a fireplace",
+          "A house with a pool"
+        ],
+        [
+          "City flat with a view",
+          "Village house with a garden"
+        ],
+        [
+          "Pets first",
+          "Plants first"
+        ]
+      ]
+    },
+    {
+      "id": "tp-099",
+      "theme": "Movie marathon",
+      "exemples": [
+        [
+          "Trilogy in one night",
+          "One episode a night"
+        ],
+        [
+          "Blanket fort",
+          "Sofa and pillows"
+        ],
+        [
+          "Pizza halfway",
+          "Popcorn the whole way"
+        ]
+      ]
+    },
+    {
+      "id": "tp-100",
+      "theme": "Hard mode",
+      "exemples": [
+        [
+          "No kisses for a week",
+          "No hugs for a week"
+        ],
+        [
+          "Always too hot",
+          "Always too cold"
+        ],
+        [
+          "Never eat dessert again",
+          "Never watch a movie again"
+        ]
+      ]
+    },
+    {
+      "id": "tp-101",
+      "theme": "Impossible edition",
+      "exemples": [
+        [
+          "Only ever eat their cooking",
+          "Only ever eat your own"
+        ],
+        [
+          "Lose every argument",
+          "Win, and they sulk"
+        ],
+        [
+          "Never sleep in",
+          "Never stay up late"
+        ]
+      ]
+    },
+    {
+      "id": "tp-102",
+      "theme": "Silly edition",
+      "exemples": [
+        [
+          "Talk like a pirate all day",
+          "Sing every sentence"
+        ],
+        [
+          "Match outfits for a week",
+          "Swap shoes for a day"
+        ],
+        [
+          "Dance in public",
+          "Sing in public"
+        ]
+      ]
+    },
+    {
+      "id": "tp-103",
+      "theme": "Magic edition",
+      "exemples": [
+        [
+          "Fly together",
+          "Breathe underwater together"
+        ],
+        [
+          "Talk to animals together",
+          "Understand every language"
+        ],
+        [
+          "A day with no gravity",
+          "A day with no clocks"
+        ]
+      ]
+    },
+    {
+      "id": "tp-104",
+      "theme": "Time travel",
+      "exemples": [
+        [
+          "Relive your first kiss",
+          "Skip to your next trip"
+        ],
+        [
+          "Meet them at 10 years old",
+          "Meet them at 80"
+        ],
+        [
+          "Your first date, again",
+          "Your best day, again"
+        ]
+      ]
+    },
+    {
+      "id": "tp-105",
+      "theme": "Our story edition",
+      "exemples": [
+        [
+          "First kiss again",
+          "First trip again"
+        ],
+        [
+          "A playlist of your story",
+          "A map of all your dates"
+        ],
+        [
+          "Their first text",
+          "Your first text"
+        ]
+      ]
+    },
+    {
+      "id": "tp-106",
+      "theme": "New Year's Day",
+      "exemples": [
+        [
+          "Brunch at 2pm",
+          "Walk at sunrise"
+        ],
+        [
+          "Resolutions together",
+          "No resolutions at all"
+        ],
+        [
+          "Movie all day",
+          "Friends all day"
+        ]
+      ]
+    },
+    {
+      "id": "tp-107",
+      "theme": "Spicy edition",
+      "exemples": [
+        [
+          "Kiss in the rain",
+          "Kiss at the top of a wheel"
+        ],
+        [
+          "Slow dance in the kitchen",
+          "Slow dance in the street"
+        ],
+        [
+          "Whisper at a party",
+          "Hold hands under the table"
+        ]
+      ]
+    },
+    {
+      "id": "tp-108",
+      "theme": "Love language",
+      "exemples": [
+        [
+          "A hundred compliments",
+          "One long hug"
+        ],
+        [
+          "A love letter",
+          "A love song"
+        ],
+        [
+          "They cook for you",
+          "They plan a surprise"
+        ]
+      ]
     }
   ],
   "phrase": [
@@ -2065,9 +3505,8 @@
         "id": "noel-02",
         "jour": "2026-12-20",
         "creneau": "midi",
-        "categorie": "statique",
-        "texte": "All I want for Christmas is you",
-        "scene": "noel : câlin devant le sapin, bonnets, flocons"
+        "categorie": "tu-preferes",
+        "theme": "tp-042"
       },
       {
         "id": "noel-03",
@@ -2087,8 +3526,8 @@
         "id": "noel-05",
         "jour": "2026-12-23",
         "creneau": "soir",
-        "categorie": "pov",
-        "idee": "POV: wrapping their gift without them seeing | noel : la rose cache un cadeau, le violet arrive, « ! », elle le cache derrière elle"
+        "categorie": "tu-preferes",
+        "theme": "tp-043"
       },
       {
         "id": "noel-06",
@@ -2128,8 +3567,8 @@
         "id": "noel-09",
         "jour": "2026-12-25",
         "creneau": "soir",
-        "categorie": "coquin",
-        "idee": "POV: Christmas night under the blanket | chambre, nuit : bonnet qui s'envole de sous la couette, cœurs"
+        "categorie": "tu-preferes",
+        "theme": "tp-044"
       },
       {
         "id": "noel-11",
@@ -2176,6 +3615,13 @@
         "son": "Firework"
       },
       {
+        "id": "an-08",
+        "jour": "2026-12-31",
+        "creneau": "midi",
+        "categorie": "tu-preferes",
+        "theme": "tp-024"
+      },
+      {
         "id": "an-03",
         "jour": "2026-12-31",
         "creneau": "soir",
@@ -2205,6 +3651,13 @@
         "creneau": "midi",
         "categorie": "connais-tu",
         "theme_libre": "Our year edition : leur meilleur moment de l'année, le plus drôle, la plus grosse surprise, le voyage, la chanson de l'année..."
+      },
+      {
+        "id": "an-09",
+        "jour": "2027-01-01",
+        "creneau": "soir",
+        "categorie": "tu-preferes",
+        "theme": "tp-106"
       },
       {
         "id": "an-07",

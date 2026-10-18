@@ -16,7 +16,7 @@ import { analyseMoteur, litQuizConfig, ensemblesPossibles, moteursDeLaPage, nomD
 import {
   BASE_URL, INSTAGRAM_URL, LANGUAGES, LOCALES, ROUTE_SLUGS, ROUTE_CONFIG, GA_ID,
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
-  QUIZ_RELATED_ARTICLES, QUIZ_FEATURED, FAMILLES_NAV, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
+  QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
   estPageJouable, genrePageJouable, pagePublicitaire,
 } from './config.js';
@@ -1259,7 +1259,7 @@ async function generatePage(routeKey, lang) {
 
   // Build visual breadcrumb items for specific page types
   const breadcrumbs = [];
-  if (routeKey.startsWith('test') || routeKey.startsWith('quiz') || routeKey === 'questionsCouple' || routeKey === 'activities') {
+  if (routeKey.startsWith('test') || routeKey.startsWith('quiz') || routeKey === 'questionsCouple') {
     breadcrumbs.push({ name: bl.home, url: getLocalizedPath('home', lang) });
     breadcrumbs.push({ name: title });
   }
@@ -1326,6 +1326,7 @@ async function generatePage(routeKey, lang) {
     getLocalizedUrl,
     mascotteSvg,
     famillesNav: FAMILLES_NAV,
+    saisonDesQuiz: SAISON_DES_QUIZ,
     instagramUrl: INSTAGRAM_URL,
     avisCuitsJson: jsonPourScript(avisCuitsPour(routeKey)),
     getLocalizedPath,
@@ -1354,6 +1355,10 @@ async function generatePage(routeKey, lang) {
       .map(internalSlug => carteArticle(internalSlug, lang))
       .filter(Boolean)
       .slice(0, 4),
+    // Le curseur des listes de questions de la page « Questions pour couple »
+    articlesQuestions: routeKey === 'questionsCouple'
+      ? ARTICLES_QUESTIONS.map(cle => { const c = carteArticle(cle, lang); return c && { ...c, cle }; }).filter(Boolean)
+      : [],
     // Le bandeau du haut des pages jouables (parties, note, avis)
     preuveSociale: estPageJouable(routeKey) ? preuveSocialePour(routeKey) : null,
     seuilLectures: SEUIL_LECTURES,
@@ -1493,7 +1498,6 @@ function generateSitemaps() {
     if (key === 'home') { priority = '1.0'; changefreq = 'daily'; }
     else if (key === 'blog') { priority = '0.8'; changefreq = 'daily'; }
     else if (key === 'contact' || key === 'about') { priority = '0.4'; changefreq = 'monthly'; }
-    else if (key === 'activities') { priority = '0.6'; changefreq = 'weekly'; }
 
     const lastmod = dateLaPlusRecente(gitIndex.dates, fichiersSourceRoute(key));
     entries.push({ urlsByLang, lastmod, priority, changefreq, frOnly: isFrOnly || false });
@@ -1726,11 +1730,6 @@ function copyTranslationData() {
     const vacancesSrc = path.join(langDir, 'vacances.json');
     if (fs.existsSync(vacancesSrc)) {
       fs.copyFileSync(vacancesSrc, path.join(dataDir, `vacances-${lang}.json`));
-    }
-
-    const activitiesSrc = path.join(langDir, 'activities.json');
-    if (fs.existsSync(activitiesSrc)) {
-      fs.copyFileSync(activitiesSrc, path.join(dataDir, `activities-${lang}.json`));
     }
 
     // Les 144 duos de signes pesent 70 Ko : le test par date de naissance va
@@ -2118,6 +2117,7 @@ async function generateBlogArticle(articleMeta, lang) {
     translations,
     getLocalizedUrl,
     famillesNav: FAMILLES_NAV,
+    saisonDesQuiz: SAISON_DES_QUIZ,
     instagramUrl: INSTAGRAM_URL,
     getLocalizedPath,
     escapeHtml,
@@ -2210,6 +2210,8 @@ async function generate404Pages() {
       translations,
       getLocalizedUrl,
       famillesNav: FAMILLES_NAV,
+      saisonDesQuiz: SAISON_DES_QUIZ,
+    saisonDesQuiz: SAISON_DES_QUIZ,
       instagramUrl: INSTAGRAM_URL,
       getLocalizedPath,
       escapeHtml,

@@ -143,11 +143,23 @@
       "quizKnowledge": "Chi conosce meglio l'altro? Sfidate voi stessi!",
       "quizMost": "Votate per scoprire chi è il più... tra voi!",
       "testAttachement": "Scopri il tuo stile di attaccamento: sicuro, ansioso o evitante?",
-      "testConfiance": "Valuta il livello di fiducia reciproca nella vostra coppia."
+      "testConfiance": "Valuta il livello di fiducia reciproca nella vostra coppia.",
+      "quizSerialKiller": "Quindici situazioni di una sera di Halloween e l'assassino celebre che ti somiglia di più, in versione molto ingrandita.",
+      "quizMortFilmHorreur": "Quindici situazioni, un tempo di sopravvivenza in minuti, e la prima vittima quando giocate in due.",
+      "quizPossession": "Un rischio di possessione in percentuale per ciascuno, e chi sceglierebbero i demoni.",
+      "quizSuperVilain": "Il tuo ingresso alla festa, il tuo costume, la tua risata: il supercattivo che ti somiglia, da Joker a Malefica.",
+      "quizDuoVilains": "Il colpo della notte di Halloween: il ruolo di ciascuno, e il duo di cattivi celebre che formate."
     },
     "testsEyebrow": "I test",
     "quizzesEyebrow": "I quiz",
-    "jeuxEyebrow": "I giochi"
+    "jeuxEyebrow": "I giochi",
+    "speciauxEyebrow": "Edizione speciale",
+    "speciauxTitle": "I nostri quiz speciali, a seconda della stagione",
+    "speciauxTitleSaison": {
+      "halloween": "Speciale Halloween: i nostri quiz che fanno (un po') paura"
+    },
+    "speciauxDesc": "{{n}} quiz da fare da solo/a o in due, per una serata diversa dalle altre. Ognuno esiste in modalità a distanza.",
+    "speciauxCta": "Vedi tutti i quiz speciali"
   },
   "customQuizPromo": {
     "eyebrow": "Quiz personalizzato",

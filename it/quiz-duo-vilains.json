@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "badge": "Quiz di Halloween • In due",
+    "title": "Quale duo di supercattivi siete?",
+    "titleHighlight": "duo di supercattivi",
+    "description": "Il colpo della notte di Halloween: svuotare il magazzino di caramelle della città. Quindici domande ciascuno, dal costume al commissariato. Il risultato dà il ruolo di ciascuno nel duo (il cervello, il caos, la forza, il fascino, l'ombra o il cuore), poi il duo di cattivi celebre che formate in due, da Joker e Harley Quinn a Bonnie e Clyde.",
+    "subtitle": "15 domande ciascuno • 5 minuti • in due su un telefono o ognuno sul proprio",
+    "jumpBtn": "Fai il quiz"
+  },
+  "section1": {
+    "title": "Come funziona il quiz",
+    "intro": "È l'unico quiz di Halloween che si gioca solo in due, perché un duo si compone. Ognuno risponde per conto suo alle stesse quindici domande, e il risultato si calcola in due tempi.",
+    "p1": "Prima, il ruolo di ciascuno. Le domande raccontano un colpo nella notte di Halloween: «Scatta l'allarme. Ovviamente.», «Nel camion della fuga:», «La polizia bussa alla porta. Apri:». Ogni risposta pesa su uno o due dei sei ruoli del duo, e il ruolo più carico diventa il tuo.",
+    "p2": "Poi, il duo. Ogni coppia di ruoli corrisponde a un duo di cattivi celebre: il caos e il cuore danno Joker e Harley Quinn, il cuore e la forza danno Bonnie e Clyde, il cervello e la forza danno Darth Vader e l'Imperatore. Tutte le combinazioni sono coperte, compreso due volte lo stesso ruolo.",
+    "p3": "Su un solo telefono, il primo risponde a tutta la serie poi passa il telefono al secondo. A distanza, ognuno risponde sul proprio e vedete le vostre due risposte dopo ogni domanda."
+  },
+  "section2": {
+    "title": "I sei ruoli di un duo di cattivi",
+    "intro": "In tutti i duo di cattivi, dal cinema ai cartoni animati, si ritrovano gli stessi ruoli. Il quiz ne distingue sei.",
+    "pillar1Title": "Il cervello",
+    "pillar1Text": "Ha scritto il piano minuto per minuto, e odia che lo si cambi.",
+    "pillar2Title": "L'agente del caos",
+    "pillar2Text": "Improvvisa, ride, e fa saltare il piano appena si annoia.",
+    "pillar3Title": "La forza",
+    "pillar3Text": "Si lancia, porta le borse, prende i colpi, e protegge l'altro senza dirlo.",
+    "pillar4Title": "Il fascino",
+    "pillar4Text": "Negozia, seduce, e ottiene le chiavi senza forzare la serratura.",
+    "pillar5Title": "L'ombra",
+    "pillar5Text": "Discreta, leale, già dentro quando gli altri arrivano.",
+    "pillar6Title": "Il cuore",
+    "pillar6Text": "Segue l'altro per amore, e spesso è lui a fare il gesto folle."
+  },
+  "section3": {
+    "title": "I nove duo possibili",
+    "p1": "Joker e Harley Quinn, Bonnie e Clyde, Jessie e James del Team Rocket, Darth Vader e l'Imperatore, Voldemort e Bellatrix, Harley Quinn e Poison Ivy, Mignolo e Prof, Wario e Waluigi, Magneto e Mystica. Ogni duo ha la sua scheda: quello che vi somiglia nel loro modo di funzionare, e un consiglio per la sera di Halloween.",
+    "p2": "Se volete prima conoscere il cattivo di ciascuno, preso separatamente, <a href=\"/it/quiz-quale-supercattivo-sei/\">il quiz del supercattivo che ti somiglia</a> dà un ritratto a persona. E per una serata completa, <a href=\"/it/quiz-chi-muore-per-primo-nel-film-horror/\">chi di voi due muore per primo in un film horror</a> e <a href=\"/it/quiz-chi-potrebbe-essere-posseduto/\">chi potrebbe essere posseduto</a> si concatenano bene dopo.",
+    "p3": "Tutti i quiz di stagione sono su <a href=\"/it/quiz-speciali-per-coppie/\">la pagina dei nostri quiz speciali</a>; il resto dell'anno, <a href=\"/it/giochi-di-coppia/\">i nostri giochi di coppia</a> prendono il testimone."
+  },
+  "section4": {
+    "title": "Quello che c'è da sapere",
+    "p1": "I personaggi appartengono ai loro creatori. Le immagini dei duo sono illustrazioni fatte per la pagina, non immagini dei film o dei giochi. E il colpo del secolo resta immaginario.",
+    "p2": "Niente viene salvato: le risposte restano sui vostri telefoni. Viene contato solo il duo ottenuto, senza nome, per mostrare un giorno la distribuzione dei risultati."
+  },
+  "seo": {
+    "faqTitle": "Domande frequenti",
+    "faq1Q": "Si può fare questo quiz da solo/a?",
+    "faq1A": "No, è l'unico quiz di Halloween che richiede due giocatori: il duo si calcola a partire dai vostri due ruoli. Se sei da solo/a, il quiz del supercattivo dà un ritratto individuale.",
+    "faq2Q": "Come viene scelto il duo?",
+    "faq2A": "Ogni giocatore ottiene un ruolo tra sei (il cervello, il caos, la forza, il fascino, l'ombra, il cuore), in base alle sue risposte. La coppia di ruoli corrisponde a uno dei nove duo del quiz. Due volte lo stesso ruolo dà anch'esso un duo: due agenti del caos fanno Joker e Harley Quinn, due cuori fanno Bonnie e Clyde.",
+    "faq3Q": "Si può giocare a distanza?",
+    "faq3A": "Sì. Nella schermata dei nomi, la modalità a distanza crea una partita con un codice e un QR code. Ognuno risponde sul proprio telefono e vede la risposta dell'altro dopo ogni domanda.",
+    "faq4Q": "E se il nostro duo non ci piace?",
+    "faq4A": "Rifate il quiz rispondendo diversamente: i ruoli cambiano in fretta, e il duo con loro. Molte coppie scoprono di essere Mignolo e Prof e finiscono per trovarlo molto azzeccato.",
+    "faq5Q": "Le mie risposte vengono salvate?",
+    "faq5A": "No. Le risposte restano sui vostri telefoni; viene contato solo il duo ottenuto, senza nome."
+  },
+  "jsonLd": {
+    "about": "quiz di Halloween"
+  }
+}

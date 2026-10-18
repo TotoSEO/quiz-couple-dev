@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "badge": "Saisonale Quiz • Kostenlos • Allein oder zu zweit",
+    "title": "Unsere besonderen Quiz für Paare, je nach Jahreszeit",
+    "titleHighlight": "besonderen Quiz",
+    "description": "Etwas verrückte Quiz, die man nicht das ganze Jahr macht: jetzt die zu Halloween, bald die zu Weihnachten. Man spielt sie allein, zu zweit an einem Handy oder jeder am eigenen, und sie bleiben hier, wenn die Saison vorbei ist."
+  },
+  "enCeMoment": "Gerade jetzt",
+  "horsSaison": "Das ganze Jahr",
+  "jouer": "Zum Quiz",
+  "duoSeul": "Nur zu zweit",
+  "soloOuDuo": "Allein oder zu zweit",
+  "distance": "Fernmodus",
+  "saisons": {
+    "halloween": {
+      "titre": "Halloween-Special",
+      "intro": "Fünf Quiz für einen Halloween-Abend zu zweit: ein Mörderporträt, eine Überlebensuhr, ein Besessenheitsrisiko, ein Superschurkenporträt und das Schurken-Duo, das ihr bildet. Alles zum Lachen, und alles in fünf Minuten gespielt."
+    },
+    "noel": {
+      "titre": "Weihnachts-Special",
+      "intro": "Die Weihnachts-Quiz kommen im Dezember: wie viel ihr bereit seid, füreinander auszugeben, wer das schlechteste Geschenk macht, und ein paar weitere Überraschungen.",
+      "bientot": "Bald"
+    }
+  },
+  "quiz": {
+    "quizSerialKillerNom": "Welcher Serienmörder passt zu dir?",
+    "quizSerialKillerTagline": "Fünfzehn Situationen eines Halloween-Abends, und der berühmte Killer, der dir am meisten ähnelt, stark vergrößert.",
+    "quizMortFilmHorreurNom": "Wer von uns stirbt zuerst im Horrorfilm?",
+    "quizMortFilmHorreurTagline": "Fünfzehn Situationen, von der Ankunft an der Hütte bis zum Abspann, eine Überlebenszeit in Minuten, und der Name des ersten Opfers, wenn ihr zu zweit spielt.",
+    "quizPossessionNom": "Wer von uns könnte besessen werden?",
+    "quizPossessionTagline": "Zehn Tage in einem Haus, dessen Geschichte niemand erzählen will, ein Besessenheitsrisiko in Prozent, und wen die Dämonen wählen würden.",
+    "quizSuperVilainNom": "Welchem Superschurken ähnelst du am meisten?",
+    "quizSuperVilainTagline": "Dein Auftritt auf der Party, dein Kostüm, deine Handlanger, dein Lachen: der Superschurke, der dir ähnelt, vom Joker bis Maleficent.",
+    "quizDuoVilainsNom": "Welches Superschurken-Duo seid ihr?",
+    "quizDuoVilainsTagline": "Der Coup der Halloween-Nacht: eure Rollen, das Gehirn, das Chaos, die Kraft, der Charme, der Schatten oder das Herz, und das berühmte Schurken-Duo, das ihr bildet."
+  },
+  "section1": {
+    "title": "Warum saisonale Quiz",
+    "p1": "Die Quiz auf dieser Seite haben nichts mit unseren Paartests gemein. Sie messen nichts Ernstes, geben keine Ratschläge und sprechen nicht über eure Beziehung. Es sind Spiele für einen bestimmten Abend: einen Halloween-Abend zwischen zwei Horrorfilmen, einen Heiligabend beim Warten auf die Geschenke.",
+    "p2": "Sie funktionieren, weil sie dafür gemacht sind, über sich selbst und den anderen zu lachen. Herauszufinden, dass dein Partner im Horrorfilm nach zwölf Minuten sterben würde, oder dass ihr Pinky und der Brain seid, füllt einen guten Teil des Abends.",
+    "p3": "Wir behalten sie alle hier, Saison für Saison. Die der laufenden Saison stehen oben auf der Seite; die anderen bleiben das ganze Jahr spielbar, etwas weiter unten."
+  },
+  "section2": {
+    "title": "So wird gespielt",
+    "p1": "Alle diese Quiz spielen sich gleich. Allein antwortest du und entdeckst dein Ergebnis. Zu zweit beantwortet der Erste die ganze Reihe, gibt das Handy weiter, und der Zweite antwortet danach, ohne die Antworten des Ersten zu sehen: Am Ende erscheinen beide Ergebnisse nebeneinander, mit dem, was euch unterscheidet.",
+    "p2": "Wenn ihr nicht am selben Ort seid, hat jedes Quiz einen Fernmodus: Eine Person erstellt die Partie, die andere tritt mit dem Code oder dem QR-Code bei, und jeder antwortet auf dem eigenen Handy. Ihr seht nach jeder Frage eure beiden Antworten, und das Ergebnis ist auf beiden Seiten dasselbe.",
+    "p3": "Kein Konto anlegen, nichts installieren, und nichts wird gespeichert: Die Antworten bleiben auf euren Handys."
+  },
+  "section3": {
+    "title": "Und der Rest des Jahres",
+    "p1": "Wenn die Saison vorbei ist, übernehmen <a href=\"/de/paarspiele/\">unsere Paarspiele</a>: <a href=\"/de/was-wuerdest-du-lieber-paar-quiz/\">die „Was würdest du lieber“-Dilemmas</a>, Wahrheit oder Pflicht, das Brettspiel und ein Dutzend weitere. Und wer eine echte Antwort über seine Beziehung will: <a href=\"/de/paar-kompatibilitaetstest/\">Der Paartest</a> vergleicht eure Antworten zu dem, was zählt."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Sind die besonderen Quiz kostenlos?",
+    "a1": "Ja, alle, ohne Anmeldung und ohne App. Sie werden im Browser des Handys gespielt.",
+    "q2": "Muss man zu zweit sein?",
+    "a2": "Nicht unbedingt. Vier der fünf Halloween-Quiz spielt man allein oder zu zweit. Nur das Quiz zum Superschurken-Duo braucht zwei Spieler, weil es ein Duo zusammenstellt.",
+    "q3": "Was passiert mit den Quiz, wenn die Saison vorbei ist?",
+    "a3": "Sie bleiben auf dieser Seite, etwas weiter unten, und unter ihrer eigenen Adresse. Wir löschen nichts: Ein Halloween-Quiz mitten im März geht auch.",
+    "q4": "Wann kommen die Weihnachts-Quiz?",
+    "a4": "Im Dezember. Auf dem Programm: wie viel ihr bereit seid, füreinander auszugeben, wer das schlechteste Geschenk macht, und ein paar weitere Ideen zum Jahresende.",
+    "q5": "Kann man aus der Ferne spielen?",
+    "a5": "Ja, jedes Quiz hat einen Fernmodus. Eine Person erstellt die Partie, die andere tritt mit dem Code bei, und ihr antwortet jeder auf dem eigenen Handy."
+  },
+  "jsonLd": {
+    "name": "Besondere Paar-Quiz"
+  }
+}

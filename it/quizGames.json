@@ -389,7 +389,13 @@
     "testSignesChinois": "Compatibilità segni cinesi",
     "compteurCouple": "Contatore della durata di coppia",
     "jeuDixMais": "È un 10, ma...",
-    "testCompatSexuelle": "Test di compatibilità sessuale"
+    "testCompatSexuelle": "Test di compatibilità sessuale",
+    "speciauxCouple": "Quiz speciali",
+    "quizSerialKiller": "quiz del serial killer compatibile",
+    "quizMortFilmHorreur": "quiz «chi muore per primo in un film horror»",
+    "quizPossession": "quiz «chi potrebbe essere posseduto»",
+    "quizSuperVilain": "quiz del supercattivo",
+    "quizDuoVilains": "quiz del duo di supercattivi"
   },
   "truefalse": {
     "ready": "Pronto per il vero o falso?",

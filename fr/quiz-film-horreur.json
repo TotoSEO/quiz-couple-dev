@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "badge": "Quiz d'Halloween • Seul(e) ou à deux",
+    "title": "Qui de nous deux meurt en premier dans un film d'horreur ?",
+    "titleHighlight": "film d'horreur",
+    "description": "Quinze situations, de l'arrivée au chalet au générique de fin, quatre réactions possibles à chaque fois. Le résultat te dit combien de minutes tu tiens avant de quitter l'histoire, sur un film de deux heures et demie au maximum. À deux, chacun répond de son côté, et on sait qui meurt en premier.",
+    "subtitle": "15 situations • 5 minutes • seul(e), à deux sur un téléphone ou chacun sur le sien",
+    "jumpBtn": "Faire le quiz"
+  },
+  "section1": {
+    "title": "Comment marche le quiz",
+    "intro": "Le principe est simple : on te met dans les situations que tout le monde a vues au cinéma, et tu choisis ce que tu ferais vraiment. Pas ce qu'il faudrait faire, ce que tu ferais.",
+    "p1": "Par exemple : « 23 h. Des pas au grenier, juste au-dessus de ta tête. Il n'y a personne au grenier. » Tu peux monter voir en chaussettes avec la lampe qui clignote, envoyer ton partenaire, fermer la trappe à clé et dormir tous dans le salon, ou mettre tout le monde dans la voiture. Chaque réaction vaut de zéro à trois points, et la somme des quinze situations devient un temps de survie.",
+    "p2": "Un film d'horreur fait au plus deux heures et demie. Avec les pires réflexes, tu tiens cinq minutes, le temps du générique d'ouverture. Avec les meilleurs, tu arrives à 2 h 30 : tu as survécu à tout le film. Entre les deux, le résultat te dit à quelle minute tu quittes l'histoire, et quels choix t'ont sauvé(e) ou perdu(e).",
+    "p3": "À deux, le premier répond aux quinze situations, passe le téléphone, et le second répond à son tour. Vos deux temps s'affichent sur la même ligne du temps, avec le nom de la première victime et les situations où vous n'avez pas réagi pareil. Si vous n'êtes pas ensemble, le mode à distance permet de répondre chacun sur son téléphone."
+  },
+  "section2": {
+    "title": "Les cinq verdicts, de la scène d'ouverture au générique de fin",
+    "intro": "Le temps de survie se lit en cinq paliers, et chacun correspond à un personnage que tout le monde reconnaît.",
+    "pillar1Title": "Moins de 25 minutes : la scène d'ouverture",
+    "pillar1Text": "Tu descends à la cave en disant que c'est le vent. Le film commence à peine et ton nom passe déjà au générique.",
+    "pillar2Title": "De 25 à 55 minutes : la première victime",
+    "pillar2Text": "On s'attache un peu à toi, puis tu vas voir ce bruit dans le grenier. Le public crie, mais il savait.",
+    "pillar3Title": "De 55 à 90 minutes : le milieu du film",
+    "pillar3Text": "Les bons réflexes une fois sur deux, et un dernier coup d'œil pour vérifier que le tueur est bien à terre.",
+    "pillar4Title": "De 1 h 30 à 2 h 10 : presque jusqu'au bout",
+    "pillar4Text": "Portes fermées, clés dans la main, raccourci refusé. Il reste la dernière scène, celle où tout le monde fait tomber ses clés.",
+    "pillar5Title": "Plus de 2 h 10 : la survivante ou le survivant",
+    "pillar5Text": "Tu as compris les règles et tu tiens jusqu'au générique. Le film raconte ton histoire, et la suite t'attend."
+  },
+  "section3": {
+    "title": "Les règles de survie que le quiz vérifie",
+    "p1": "Tous les films d'horreur ont les mêmes règles, et tout le monde les connaît : on ne se sépare pas, on ne descend pas à la cave, on ne lit jamais un vieux livre à voix haute, on refuse les raccourcis par les bois, et quand le tueur est à terre, on ne vérifie pas, on part. Le quiz passe ces règles une par une, dans des situations concrètes.",
+    "p2": "Ce qui est drôle à deux, c'est de découvrir que l'un de vous a tous les bons réflexes et que l'autre ouvre la trappe du grenier à la première question. En général, celui qui meurt en premier est aussi celui qui dit « mais non, c'est juste un film » quand vous regardez <a href=\"/quiz-qui-pourrait-se-faire-posseder/\">qui de vous deux pourrait se faire posséder</a>.",
+    "p3": "Pour continuer la soirée, <a href=\"/quiz-serial-killer-compatible/\">le quiz du serial killer compatible</a> et <a href=\"/quiz-quel-super-vilain-es-tu/\">celui du super-vilain qui te ressemble</a> sont dans la même veine, avec un portrait à la clé plutôt qu'un chrono. Et <a href=\"/quiz-speciaux-pour-couple/\">tous nos quiz de saison</a> sont réunis sur une seule page."
+  },
+  "section4": {
+    "title": "Deux précisions utiles",
+    "p1": "Les minutes sont calculées sur la somme des points, entre 5 et 150 : c'est une échelle, pas une prédiction. Deux personnes qui ont le même total ont le même temps, même si elles n'ont pas répondu pareil aux mêmes questions. La liste de ce qui t'a sauvé(e) et de ce qui t'a perdu(e) te dit où ça s'est joué.",
+    "p2": "Rien n'est enregistré. Les réponses restent sur votre téléphone, et vous pouvez refaire le quiz autant de fois que vous voulez, en changeant de rôle ou de réponses."
+  },
+  "seo": {
+    "faqTitle": "Questions fréquentes",
+    "faq1Q": "Pourquoi un maximum de 2 h 30 ?",
+    "faq1A": "Parce que c'est la durée d'un très long film d'horreur. Au-delà, tu as survécu à tout : le résultat affiche alors « jusqu'au générique » au lieu d'un nombre de minutes.",
+    "faq2Q": "Faut-il être deux pour jouer ?",
+    "faq2A": "Non. Seul(e), tu obtiens ton temps de survie et ton verdict. À deux, le quiz ajoute la comparaison : qui meurt en premier, et sur quelles situations vous n'avez pas réagi pareil.",
+    "faq3Q": "Les réponses ont-elles une bonne et une mauvaise réponse ?",
+    "faq3A": "Oui, au sens du cinéma : la réaction qui vaut trois points est celle qui te garde en vie dans un film d'horreur, celle qui vaut zéro est celle de la victime classique. Dans la vraie vie, descendre à la cave est rarement mortel.",
+    "faq4Q": "Peut-on jouer à distance ?",
+    "faq4A": "Oui. Sur l'écran des prénoms, le mode à distance crée une partie avec un code et un QR code. Chacun répond sur son téléphone et voit la réaction de l'autre après chaque situation.",
+    "faq5Q": "Mes réponses sont-elles enregistrées ?",
+    "faq5A": "Non, elles restent sur ton téléphone. Le site ne garde que le fait qu'une partie a été jouée, pour le compteur de la page."
+  },
+  "jsonLd": {
+    "about": "quiz d'Halloween"
+  }
+}

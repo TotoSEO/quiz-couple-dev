@@ -166,7 +166,7 @@ const article: BlogArticleData = {
 <tr><td><strong>Night outside</strong></td><td>One night</td><td>Free</td><td>You have a garden, terrace or large balcony</td></tr>
 <tr><td><strong>Questions evening</strong></td><td>1 to 2 h</td><td>Free</td><td>You feel like you don't really talk anymore</td></tr>
 </tbody></table></div>
-<p>A little method tip: <strong>don't pick the most impressive activity, pick the one that matches your real energy for the day.</strong> A successful tablecloth in a park is infinitely better than a hike abandoned after twenty minutes because nobody really wanted to go. And if you're after something concrete, the page that lists <a href="/en/couple-activities-near-me/">what exists around you</a> will give you starting points depending on your area.</p>`,
+<p>A little method tip: <strong>don't pick the most impressive activity, pick the one that matches your real energy for the day.</strong> A successful tablecloth in a park is infinitely better than a hike abandoned after twenty minutes because nobody really wanted to go. And if you're after something concrete, the page that lists what exists around you will give you starting points depending on your area.</p>`,
     },
     {
       id: 'les-4-erreurs',

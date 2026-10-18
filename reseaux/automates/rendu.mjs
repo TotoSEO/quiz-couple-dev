@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { BUCKET_PUBLIC, connexion } from './lib/supabase.mjs';
 import { affiche, controlerImage, controlerReel, dureeVideo, vignette } from './lib/fichier.mjs';
 import { AVEC_MUSIQUE, ambianceDe, choisirMusique, present } from './lib/musique.mjs';
+import { estRetiree, MOTIF_RETRAIT } from './lib/calendrier.mjs';
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
 const studio = path.join(ici, '..', 'studio');
@@ -65,7 +66,7 @@ export async function rendre(base, { heures = 30, maintenant = new Date(), rendr
     'social_variantes',
     `select=id,post_id,langue,recette,publier_a,essais&statut=eq.a_rendre&publier_a=lte.${limite}&order=publier_a.asc`,
   );
-  const bilan = { rendues: 0, echecs: 0, enAttente: 0 };
+  const bilan = { rendues: 0, echecs: 0, enAttente: 0, retenues: 0 };
   // tant qu'un compte n'est pas actif, ses posts ne sont pas rendus : les
   // fichiers rempliraient le stockage sans jamais partir
   const actifs = new Set((await base.select('social_comptes', 'select=langue&actif=is.true')).map((c) => c.langue));
@@ -76,6 +77,16 @@ export async function rendre(base, { heures = 30, maintenant = new Date(), rendr
     }
     const [post] = await base.select('social_posts', `select=jour,statut,format,categorie&id=eq.${v.post_id}`);
     if (!post || post.statut !== 'valide') continue;
+    // une catégorie retirée de la grille (animations des mascottes, 16 octobre
+    // 2026) n'est pas rendue : vingt minutes de machine pour un fichier qui
+    // ne partira pas ; la déclinaison est retenue en échec, essais au maximum
+    // (la synchro ne la remet pas au rendu), et la routine réécrit le fichier
+    if (estRetiree(post.categorie)) {
+      await base.update('social_variantes', `id=eq.${v.id}&statut=eq.a_rendre`, { statut: 'echec', erreur: MOTIF_RETRAIT, essais: 3 });
+      await base.journal('alerte', 'rendu', `${post.jour} ${v.langue} : ${post.categorie} retiré de la grille, non rendu`, null, v.id);
+      bilan.retenues++;
+      continue;
+    }
     const dossier = fs.mkdtempSync(path.join(os.tmpdir(), 'rendu-'));
     try {
       const recette = await avecMusique(base, v, post.categorie, disponible);
