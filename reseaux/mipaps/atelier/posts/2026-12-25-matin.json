@@ -1,0 +1,203 @@
+{
+  "jour": "2026-12-25",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "noel-002",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Le matin de noël : elle dort, il arrive en sprint avec un cadeau et lui saute dessus ; elle l'ouvre, ce sont des frites ; câlin et cœurs. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "noel"
+        },
+        "plans": [
+          {
+            "duree": 3,
+            "description": "Elle dort allongée, très calme, des flocons dehors et des petits zzz au-dessus d'elle. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 330,
+                    "pose": "allonge",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "le matin de noël chez nous",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "Il surgit du bord gauche en sprint, joyeux, un cadeau à la patte. À 2 s il est près d'elle et saute. Elle se redresse d'un coup, surprise.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "sprint",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 1.9,
+                    "x": 300,
+                    "pose": "saut",
+                    "expression": "joie"
+                  },
+                  {
+                    "a": 3,
+                    "x": 330,
+                    "pose": "debout",
+                    "expression": "content"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 450,
+                    "pose": "allonge",
+                    "expression": "dodo"
+                  },
+                  {
+                    "a": 2,
+                    "pose": "assis",
+                    "expression": "surpris"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "cadeau",
+                "x": 330,
+                "y": 330,
+                "echelle": 0.6,
+                "de": 1.9
+              }
+            ],
+            "textes": [
+              {
+                "texte": "il saute sur le lit",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Elle assise ouvre le cadeau, des frites en sortent, elle ouvre grand les yeux, ravie. Il est à côté, content. À 1,5 s ils se serrent fort et trois cœurs flottent. La phrase s'écrit mot à mot.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "pose": "assis",
+                    "expression": "emerveille",
+                    "bras": "devant"
+                  },
+                  {
+                    "a": 1.5,
+                    "expression": "calin",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 400,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 1.5,
+                    "expression": "calin",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "frites",
+                "x": 330,
+                "y": 320,
+                "echelle": 0.6
+              },
+              {
+                "objet": "coeur",
+                "x": 335,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 1.6,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 240,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 2.0,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 435,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 2.4000000000000004,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "joyeux noël mon amoureux",
+                "de": 0.4,
+                "place": "haut",
+                "motAMot": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "elle voulait des frites.\n\nenvoie-lui ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#noel"
+      ]
+    }
+  }
+}

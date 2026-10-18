@@ -1,0 +1,28 @@
+{
+  "jour": "2027-01-01",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "nouvelan-002",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Déclaration : la nouvelle année, la même équipe, les mêmes frites.",
+        "style": "declaration",
+        "texte": "nouvelle année et toujours la même équipe, avec les mêmes frites."
+      },
+      "legende": "garde ça pour un soir où ça va pas",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#bonneannee"
+      ]
+    }
+  }
+}

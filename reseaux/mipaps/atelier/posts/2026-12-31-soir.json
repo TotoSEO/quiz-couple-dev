@@ -1,0 +1,75 @@
+{
+  "jour": "2026-12-31",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "nouvelan-001",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : les deux assis côte à côte, un verre à la patte, des étoiles au-dessus, l'horloge sur minuit.",
+        "texte": "bonne année mon amoureux. encore une avec toi.",
+        "duree": 12,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "perso": "lui",
+              "expression": "content",
+              "pose": "assis",
+              "y": 380,
+              "x": 250,
+              "taille": 230
+            },
+            {
+              "perso": "elle",
+              "expression": "content",
+              "pose": "assis",
+              "y": 380,
+              "x": 400,
+              "taille": 230
+            },
+            {
+              "objet": "verre",
+              "x": 290,
+              "y": 330,
+              "echelle": 0.55
+            },
+            {
+              "objet": "verre",
+              "x": 360,
+              "y": 330,
+              "echelle": 0.55
+            },
+            {
+              "objet": "horloge",
+              "x": 325,
+              "y": 100,
+              "echelle": 0.7
+            },
+            {
+              "objet": "etoiles",
+              "x": 325,
+              "y": 40,
+              "echelle": 0.7
+            }
+          ]
+        }
+      },
+      "legende": "minuit pile.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#bonneannee"
+      ]
+    }
+  }
+}

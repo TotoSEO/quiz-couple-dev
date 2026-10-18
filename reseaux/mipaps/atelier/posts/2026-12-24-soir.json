@@ -1,0 +1,70 @@
+{
+  "jour": "2026-12-24",
+  "creneau": "soir",
+  "format": "reel",
+  "gabarit": "mipaps-statique",
+  "categorie": "mipaps-statique",
+  "sujet": "noel-001",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-statique",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Reel statique : la veille de noël, les deux sous la couette, un bonnet sur la tête de lui, des flocons.",
+        "texte": "le bonnet est resté sur ta tête toute la nuit",
+        "duree": 12,
+        "son": {
+          "ambiance": "tendre"
+        },
+        "dessin": {
+          "elements": [
+            {
+              "meuble": "lit_fond"
+            },
+            {
+              "perso": "lui",
+              "expression": "dodo",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "signes": [
+                "flocons"
+              ],
+              "x": 250,
+              "taille": 200
+            },
+            {
+              "perso": "elle",
+              "expression": "dodo",
+              "y": 346,
+              "pose": "debout",
+              "bras": "aucun",
+              "pattes": "aucune",
+              "x": 400,
+              "taille": 200
+            },
+            {
+              "meuble": "lit_couette"
+            },
+            {
+              "objet": "bonnet",
+              "x": 245,
+              "y": 222,
+              "echelle": 0.6
+            }
+          ]
+        }
+      },
+      "legende": "il l'a gardé jusqu'au matin.\n\nenvoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#noel"
+      ]
+    }
+  }
+}

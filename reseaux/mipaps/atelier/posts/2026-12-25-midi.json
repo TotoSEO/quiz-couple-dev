@@ -1,0 +1,49 @@
+{
+  "jour": "2026-12-25",
+  "creneau": "midi",
+  "format": "image",
+  "gabarit": "mipaps-post",
+  "categorie": "mipaps-post",
+  "sujet": "noel-003",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-post",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Mini : elle, contente, un bonnet de noël, des flocons et des cœurs.",
+        "style": "mini",
+        "texte": "le plus beau cadeau c'est toi. (mais j'ai aimé les frites aussi)",
+        "dessin": {
+          "elements": [
+            {
+              "perso": "elle",
+              "expression": "content",
+              "bras": "joues",
+              "signes": [
+                "flocons",
+                "coeurs"
+              ],
+              "x": 320,
+              "taille": 290
+            },
+            {
+              "objet": "bonnet",
+              "x": 320,
+              "y": 214,
+              "echelle": 0.6
+            }
+          ]
+        }
+      },
+      "legende": "elle a mangé les siennes et une partie des miennes.\n\ntague ton amoureux",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#amour",
+        "#noel"
+      ]
+    }
+  }
+}
