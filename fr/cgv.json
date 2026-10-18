@@ -2,7 +2,11 @@
   "title": "Conditions générales de vente",
   "majLe": "Dernière mise à jour : 18 octobre 2026",
   "intro": "Ces conditions s'appliquent à l'achat du rapport complet du {{bilan}} sur quiz-couple.com. Tout le reste du site est gratuit et n'est concerné par aucune vente.",
-  "liens": { "contact": "page contact", "confidentialite": "politique de confidentialité", "bilan": "bilan de couple" },
+  "liens": {
+    "contact": "page contact",
+    "confidentialite": "politique de confidentialité",
+    "bilan": "bilan de couple"
+  },
   "vendeur": {
     "titre": "Le vendeur",
     "nom": "Nom :",
@@ -17,8 +21,8 @@
     {
       "titre": "1. Ce qui est vendu",
       "p": [
-        "Le bilan de couple est un questionnaire auquel deux partenaires répondent chacun de leur côté. Répondre est gratuit, et le résultat général (pourcentage d'accord, météo du couple, une barre par domaine, le nombre d'écarts et un écart en entier) l'est aussi.",
-        "Ce qui est vendu, c'est le rapport complet : tous les écarts du couple avec les deux réponses, les guides pour en parler, les quatre prochaines conversations, les points bloquants et les non négociables de chacun, ce qui rassemble le couple et la météo question par question. Le rapport est un contenu numérique, affiché sur la page du bilan et imprimable."
+        "Le bilan de couple est un questionnaire auquel deux partenaires répondent chacun de leur côté. Répondre aux questions est gratuit ; aucun résultat n'est donné sans achat.",
+        "Ce qui est vendu, c'est le rapport : une évaluation complète du couple à partir des deux séries de réponses (alignement, climat, carte des domaines, écarts avec les deux réponses, guides pour en parler, points bloquants et non négociables, signaux de vigilance, répartition des rôles). Le rapport est un contenu numérique : un document PDF envoyé par e-mail, et la même version consultable sur la page du bilan."
       ]
     },
     {
@@ -31,21 +35,22 @@
     {
       "titre": "3. La commande et le paiement",
       "p": [
-        "Le paiement n'est proposé qu'une fois que les deux partenaires ont fini de répondre. Avant de payer, l'acheteur coche une case par laquelle il demande l'accès immédiat au rapport et reconnaît perdre son droit de rétractation une fois le rapport débloqué (voir l'article 5).",
+        "Le paiement est proposé à chaque partenaire dès qu'il a fini ses propres réponses. Avant de payer, l'acheteur peut indiquer l'adresse e-mail où recevoir le rapport, et il coche une case par laquelle il demande à recevoir le rapport dès qu'il est prêt et reconnaît perdre son droit de rétractation une fois le rapport fourni (voir l'article 5).",
         "Le paiement se fait sur la page sécurisée de notre prestataire Stripe, par carte bancaire, Apple Pay ou Google Pay. Nous n'avons jamais accès aux données de la carte. Stripe envoie un reçu à l'adresse e-mail donnée au moment du paiement : c'est la confirmation de la commande. Une facture peut être demandée depuis la {{contact}}."
       ]
     },
     {
-      "titre": "4. L'accès au rapport",
+      "titre": "4. La fourniture du rapport",
       "p": [
-        "Le rapport s'ouvre dès que le paiement est confirmé, sur la page du bilan, pour les deux partenaires, depuis leurs liens personnels. Il reste disponible six mois après le paiement, puis le bilan est effacé. Il peut être imprimé ou enregistré en PDF à tout moment.",
+        "Le rapport est fabriqué dès que le paiement est confirmé et que les deux partenaires ont fini de répondre. Il part alors en PDF aux adresses e-mail données, et s'affiche sur la page du bilan pour les deux partenaires, depuis leurs liens personnels, avec un bouton pour télécharger le PDF. Il reste disponible six mois après le paiement, puis le bilan est effacé.",
+        "Si le partenaire ne finit pas ses réponses, le rapport ne peut pas être fabriqué : l'acheteur peut alors en demander le remboursement à tout moment depuis la {{contact}}.",
         "Chacun des deux partenaires peut supprimer le bilan avant ce délai. La suppression est immédiate et définitive, pour les deux, et ne donne pas lieu à un remboursement en dehors de la garantie de l'article 6."
       ]
     },
     {
       "titre": "5. Le droit de rétractation",
       "p": [
-        "Le rapport est un contenu numérique fourni tout de suite après le paiement. Conformément à l'article L221-28 13° du Code de la consommation, le droit de rétractation de quatorze jours ne s'applique pas une fois le rapport débloqué, l'acheteur ayant demandé l'accès immédiat et reconnu perdre ce droit avant de payer."
+        "Le rapport est un contenu numérique. Conformément à l'article L221-28 13° du Code de la consommation, le droit de rétractation de quatorze jours ne s'applique plus une fois le rapport fourni, l'acheteur ayant demandé à le recevoir dès qu'il est prêt et reconnu perdre ce droit avant de payer. Tant que le rapport n'a pas été fourni, l'acheteur peut se rétracter en nous écrivant depuis la {{contact}}, et il est remboursé en entier."
       ]
     },
     {
@@ -64,7 +69,7 @@
     {
       "titre": "8. Les données personnelles",
       "p": [
-        "Les réponses du bilan, qui peuvent toucher la vie intime et les convictions, ne sont enregistrées qu'avec l'accord explicite de chaque partenaire et ne servent qu'au bilan. Leur durée de conservation, vos droits et la liste des prestataires sont détaillés dans notre {{confidentialite}}."
+        "Les réponses du bilan, qui peuvent toucher la vie intime et les convictions, ne sont enregistrées qu'avec l'accord explicite de chaque partenaire et ne servent qu'au bilan. L'adresse e-mail donnée pour recevoir le rapport ne sert qu'à cet envoi. La durée de conservation, vos droits et la liste des prestataires sont détaillés dans notre {{confidentialite}}."
       ]
     },
     {

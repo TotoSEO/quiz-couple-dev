@@ -2,7 +2,11 @@
   "title": "Condiciones generales de venta",
   "majLe": "Última actualización: 18 de octubre de 2026",
   "intro": "Estas condiciones se aplican a la compra del informe completo del {{bilan}} en quiz-couple.com. Todo lo demás en el sitio es gratis y no está sujeto a ninguna venta.",
-  "liens": { "contact": "página de contacto", "confidentialite": "política de privacidad", "bilan": "chequeo de pareja" },
+  "liens": {
+    "contact": "página de contacto",
+    "confidentialite": "política de privacidad",
+    "bilan": "chequeo de pareja"
+  },
   "vendeur": {
     "titre": "El vendedor",
     "nom": "Nombre:",
@@ -17,8 +21,8 @@
     {
       "titre": "1. Lo que se vende",
       "p": [
-        "El chequeo de pareja es un cuestionario que dos miembros de una pareja responden cada uno por su lado. Responder es gratis, y el resultado general (porcentaje de acuerdo, el tiempo en la pareja, una barra por tema, el número de diferencias y una diferencia completa) también.",
-        "Lo que se vende es el informe completo: todas las diferencias de la pareja con las dos respuestas, las guías para hablarlas, las cuatro próximas conversaciones, los puntos de bloqueo y lo que no es negociable para cada uno, lo que une a la pareja y el tiempo pregunta por pregunta. El informe es un contenido digital, que se muestra en la página del chequeo y se puede imprimir."
+        "El chequeo de pareja es un cuestionario que dos miembros de una pareja responden cada uno por su lado. Responder a las preguntas es gratis; no se da ningún resultado sin compra.",
+        "Lo que se vende es el informe: una evaluación completa de la pareja a partir de las dos series de respuestas (alineación, clima, mapa de las áreas, diferencias con las dos respuestas, guías para hablarlas, puntos de bloqueo e innegociables, señales de alerta, reparto de los papeles). El informe es un contenido digital: un documento PDF enviado por correo electrónico, y la misma versión disponible en la página del chequeo."
       ]
     },
     {
@@ -31,21 +35,22 @@
     {
       "titre": "3. El pedido y el pago",
       "p": [
-        "El pago solo se propone cuando los dos han terminado de responder. Antes de pagar, el comprador marca una casilla con la que pide el acceso inmediato al informe y reconoce que pierde su derecho de desistimiento una vez desbloqueado el informe (ver el artículo 5).",
-        "El pago se hace en la página segura de nuestro proveedor Stripe, con tarjeta bancaria, Apple Pay o Google Pay. Nunca tenemos acceso a los datos de la tarjeta. Stripe envía un recibo a la dirección de correo indicada al pagar: es la confirmación del pedido. Se puede pedir una factura desde la {{contact}}."
+        "El pago se ofrece a cada miembro de la pareja en cuanto termina sus propias respuestas. Antes de pagar, el comprador puede indicar la dirección de correo donde quiere recibir el informe, y marca una casilla con la que pide recibir el informe en cuanto esté listo y reconoce perder su derecho de desistimiento una vez entregado el informe (ver el artículo 5).",
+        "El pago se hace en la página segura de nuestro proveedor Stripe, con tarjeta bancaria, Apple Pay o Google Pay. Nunca tenemos acceso a los datos de la tarjeta. Stripe envía un recibo a la dirección de correo indicada en el pago: es la confirmación del pedido. Se puede pedir una factura desde la {{contact}}."
       ]
     },
     {
-      "titre": "4. El acceso al informe",
+      "titre": "4. La entrega del informe",
       "p": [
-        "El informe se abre en cuanto se confirma el pago, en la página del chequeo, para los dos, desde sus enlaces personales. Sigue disponible seis meses después del pago, y después el chequeo se borra. Se puede imprimir o guardar en PDF en cualquier momento.",
+        "El informe se elabora en cuanto se confirma el pago y los dos miembros de la pareja han terminado de responder. Sale entonces en PDF a las direcciones de correo indicadas, y se muestra en la página del chequeo para los dos, desde sus enlaces personales, con un botón para descargar el PDF. Sigue disponible seis meses después del pago; después, el chequeo se borra.",
+        "Si la pareja no termina sus respuestas, el informe no se puede elaborar: el comprador puede pedir entonces el reembolso en cualquier momento desde la {{contact}}.",
         "Cualquiera de los dos puede borrar el chequeo antes de ese plazo. El borrado es inmediato y definitivo, para los dos, y no da lugar a reembolso fuera de la garantía del artículo 6."
       ]
     },
     {
       "titre": "5. El derecho de desistimiento",
       "p": [
-        "El informe es un contenido digital que se entrega justo después del pago. Conforme al artículo 16, letra m), de la Directiva 2011/83/UE y al artículo L221-28 13° del Código de Consumo francés, el derecho de desistimiento de catorce días no se aplica una vez desbloqueado el informe, ya que el comprador ha pedido el acceso inmediato y ha reconocido perder ese derecho antes de pagar."
+        "El informe es un contenido digital. Conforme al artículo 16, letra m, de la Directiva 2011/83/UE y al artículo L221-28 13° del Código de consumo francés, el derecho de desistimiento de catorce días deja de aplicarse una vez entregado el informe, ya que el comprador pidió recibirlo en cuanto estuviera listo y reconoció perder este derecho antes de pagar. Mientras el informe no se haya entregado, el comprador puede desistir escribiéndonos desde la {{contact}}, y se le reembolsa por completo."
       ]
     },
     {
@@ -64,7 +69,7 @@
     {
       "titre": "8. Los datos personales",
       "p": [
-        "Las respuestas del chequeo, que pueden tocar la vida íntima y las convicciones, solo se guardan con el consentimiento explícito de cada uno y solo sirven para el chequeo. El plazo de conservación, vuestros derechos y la lista de proveedores se detallan en nuestra {{confidentialite}}."
+        "Las respuestas del chequeo, que pueden tocar la vida íntima y las convicciones, solo se guardan con el consentimiento explícito de cada miembro de la pareja y solo sirven para el chequeo. La dirección de correo indicada para recibir el informe solo sirve para ese envío. El plazo de conservación, vuestros derechos y la lista de proveedores se detallan en nuestra {{confidentialite}}."
       ]
     },
     {

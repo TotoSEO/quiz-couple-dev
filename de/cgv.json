@@ -2,7 +2,11 @@
   "title": "Allgemeine Geschäftsbedingungen",
   "majLe": "Zuletzt aktualisiert: 18. Oktober 2026",
   "intro": "Diese Bedingungen gelten für den Kauf des vollständigen Berichts zum {{bilan}} auf quiz-couple.com. Alles andere auf der Website ist kostenlos und von keinem Verkauf betroffen.",
-  "liens": { "contact": "Kontaktseite", "confidentialite": "Datenschutzerklärung", "bilan": "Beziehungs-Check" },
+  "liens": {
+    "contact": "Kontaktseite",
+    "confidentialite": "Datenschutzerklärung",
+    "bilan": "Beziehungs-Check"
+  },
   "vendeur": {
     "titre": "Der Verkäufer",
     "nom": "Name:",
@@ -17,8 +21,8 @@
     {
       "titre": "1. Was verkauft wird",
       "p": [
-        "Der Beziehungs-Check ist ein Fragebogen, den zwei Partner jeweils für sich beantworten. Das Antworten ist kostenlos, ebenso das Gesamtergebnis (Übereinstimmung in Prozent, Beziehungswetter, ein Balken pro Bereich, die Zahl der Unterschiede und ein Unterschied komplett).",
-        "Verkauft wird der vollständige Bericht: alle Unterschiede des Paares mit beiden Antworten, die Leitfäden, um darüber zu reden, die nächsten vier Gespräche, die Knackpunkte und was für jeden nicht verhandelbar ist, was das Paar verbindet und das Beziehungswetter Frage für Frage. Der Bericht ist ein digitaler Inhalt, der auf der Seite des Checks angezeigt wird und ausgedruckt werden kann."
+        "Der Beziehungs-Check ist ein Fragebogen, den zwei Partner jeweils für sich beantworten. Das Beantworten der Fragen ist kostenlos; ohne Kauf gibt es kein Ergebnis.",
+        "Verkauft wird der Bericht: eine vollständige Bestandsaufnahme des Paares auf Grundlage beider Antwortreihen (Übereinstimmung, Klima, Karte der Bereiche, Unterschiede mit beiden Antworten, Leitfäden, um darüber zu reden, Knackpunkte und Unverhandelbares, Warnsignale, Aufgabenverteilung). Der Bericht ist ein digitaler Inhalt: ein PDF-Dokument, das per E-Mail verschickt wird, und dieselbe Fassung zum Ansehen auf der Seite des Checks."
       ]
     },
     {
@@ -31,21 +35,22 @@
     {
       "titre": "3. Bestellung und Zahlung",
       "p": [
-        "Die Zahlung wird erst angeboten, wenn beide Partner fertig geantwortet haben. Vor der Zahlung setzt der Käufer ein Häkchen, mit dem er den sofortigen Zugang zum Bericht verlangt und zur Kenntnis nimmt, dass er sein Widerrufsrecht verliert, sobald der Bericht freigeschaltet ist (siehe Artikel 5).",
+        "Die Zahlung wird jedem Partner angeboten, sobald er seine eigenen Antworten fertig hat. Vor der Zahlung kann der Käufer die E-Mail-Adresse angeben, an die der Bericht gehen soll, und er setzt ein Häkchen, mit dem er verlangt, den Bericht zu erhalten, sobald er fertig ist, und zur Kenntnis nimmt, dass er sein Widerrufsrecht verliert, sobald der Bericht bereitgestellt ist (siehe Artikel 5).",
         "Die Zahlung erfolgt auf der sicheren Seite unseres Dienstleisters Stripe, per Bankkarte, Apple Pay oder Google Pay. Wir haben nie Zugriff auf die Kartendaten. Stripe schickt eine Quittung an die bei der Zahlung angegebene E-Mail-Adresse: Das ist die Bestellbestätigung. Eine Rechnung kann über die {{contact}} angefordert werden."
       ]
     },
     {
-      "titre": "4. Zugang zum Bericht",
+      "titre": "4. Bereitstellung des Berichts",
       "p": [
-        "Der Bericht öffnet sich, sobald die Zahlung bestätigt ist, auf der Seite des Checks, für beide Partner, über ihre persönlichen Links. Er bleibt sechs Monate nach der Zahlung verfügbar, danach wird der Check gelöscht. Er kann jederzeit ausgedruckt oder als PDF gespeichert werden.",
+        "Der Bericht wird erstellt, sobald die Zahlung bestätigt ist und beide Partner fertig geantwortet haben. Er geht dann als PDF an die angegebenen E-Mail-Adressen und erscheint auf der Seite des Checks für beide Partner, über ihre persönlichen Links, mit einer Schaltfläche zum Herunterladen des PDFs. Er bleibt sechs Monate nach der Zahlung verfügbar, danach wird der Check gelöscht.",
+        "Wenn der Partner seine Antworten nicht fertigstellt, kann der Bericht nicht erstellt werden: Der Käufer kann dann jederzeit über die {{contact}} die Erstattung verlangen.",
         "Jeder der beiden Partner kann den Check vor Ablauf dieser Frist löschen. Die Löschung erfolgt sofort und endgültig, für beide, und führt außerhalb der Garantie aus Artikel 6 zu keiner Erstattung."
       ]
     },
     {
       "titre": "5. Das Widerrufsrecht",
       "p": [
-        "Der Bericht ist ein digitaler Inhalt, der unmittelbar nach der Zahlung bereitgestellt wird. Gemäß Artikel 16 Buchstabe m der Richtlinie 2011/83/EU und Artikel L221-28 13° des französischen Verbrauchergesetzbuchs gilt das vierzehntägige Widerrufsrecht nicht mehr, sobald der Bericht freigeschaltet ist, da der Käufer vor der Zahlung den sofortigen Zugang verlangt und den Verlust dieses Rechts zur Kenntnis genommen hat."
+        "Der Bericht ist ein digitaler Inhalt. Gemäß Artikel 16 Buchstabe m der Richtlinie 2011/83/EU und Artikel L221-28 13° des französischen Verbrauchergesetzbuchs gilt das vierzehntägige Widerrufsrecht nicht mehr, sobald der Bericht bereitgestellt ist, da der Käufer verlangt hat, ihn zu erhalten, sobald er fertig ist, und vor der Zahlung den Verlust dieses Rechts zur Kenntnis genommen hat. Solange der Bericht nicht bereitgestellt ist, kann der Käufer widerrufen, indem er uns über die {{contact}} schreibt, und erhält den vollen Betrag zurück."
       ]
     },
     {
@@ -64,7 +69,7 @@
     {
       "titre": "8. Personenbezogene Daten",
       "p": [
-        "Die Antworten im Check, die das Intimleben und Überzeugungen berühren können, werden nur mit der ausdrücklichen Einwilligung jedes Partners gespeichert und dienen nur dem Check. Speicherdauer, eure Rechte und die Liste der Dienstleister stehen in unserer {{confidentialite}}."
+        "Die Antworten im Check, die das Intimleben und Überzeugungen berühren können, werden nur mit der ausdrücklichen Einwilligung jedes Partners gespeichert und dienen nur dem Check. Die E-Mail-Adresse, die für den Empfang des Berichts angegeben wird, dient nur diesem Versand. Speicherdauer, eure Rechte und die Liste der Dienstleister stehen in unserer {{confidentialite}}."
       ]
     },
     {

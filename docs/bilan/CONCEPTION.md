@@ -41,12 +41,15 @@ français pour le grand public, sans conseiller, sur téléphone.
 ## Ce qu'on vend
 
 **Un bilan de couple complet, à faire chacun de son côté.** Chacun répond sur
-son téléphone, sans voir les réponses de l'autre, à environ 90 questions
-concrètes (20 à 25 minutes), rangées en douze domaines de la vie. Quand les
-deux ont fini, le rapport met les deux séries face à face : où vous êtes
+son téléphone, sans voir les réponses de l'autre, à une centaine de questions
+concrètes (25 à 30 minutes), rangées en douze domaines de la vie et appuyées
+sur la recherche en psychologie du couple (`docs/bilan/RECHERCHE.md`). Quand
+les deux ont fini, le rapport met les deux séries face à face : où vous êtes
 d'accord, où vous ne l'êtes pas, ce qui est non négociable pour l'un ou
-l'autre, ce que chacun pense faire à la maison, comment chacun vit le couple
-en ce moment, et par quoi commencer pour en parler.
+l'autre, ce que chacun pense faire à la maison, les attitudes de dispute qui
+usent un couple, comment chacun vit le couple en ce moment, et par quoi
+commencer pour en parler. Le rapport est un PDF d'une trentaine de pages,
+envoyé par e-mail, et la même version en ligne sur la page du bilan.
 
 Pourquoi c'est autre chose que les 60 tests gratuits :
 
@@ -120,8 +123,8 @@ qu'aucun n'a fini.
 
 ### D'une traite ou en plusieurs fois ?
 
-**En plusieurs fois, sans rien perdre.** 90 questions, c'est 20 à 25
-minutes : beaucoup les feront d'un coup le soir, d'autres en trois pauses
+**En plusieurs fois, sans rien perdre.** Une centaine de questions, c'est 25
+à 30 minutes : beaucoup les feront d'un coup le soir, d'autres en trois pauses
 dans les transports.
 
 - Chaque réponse est enregistrée sur le serveur au moment où on la donne.
@@ -133,8 +136,7 @@ dans les transports.
   nombre de questions et sa durée, et une pause est proposée entre deux
   domaines.
 - On peut revenir sur ses réponses tant que l'autre n'a pas fini. Quand les
-  deux ont fini, le bilan est figé : le rapport ne change plus après le
-  paiement.
+  deux ont fini, le bilan est figé : le rapport ne change plus.
 - Chacun voit où en est l'autre (« Léa : 34 questions sur 86 »), sans jamais
   voir ses réponses avant la fin.
 
@@ -145,39 +147,44 @@ lien à l'autre (message, copie, QR code). Si les deux répondent sur le même
 téléphone, les deux bilans en cours apparaissent sur l'accueil de la page, un
 par personne, et chacun reprend le sien.
 
-### Ce qui est gratuit et ce qui est payant
+### Rien de gratuit : le résultat, c'est le rapport
 
-**Répondre est gratuit, le prix est annoncé avant la première question.** Pas
-de mur surprise après 25 minutes : ce serait la pratique commerciale
-trompeuse que la DGCCRF sanctionne, et ça ruinerait la confiance (et les
-avis). La page, l'écran de départ et l'invitation disent la même phrase :
-répondre est gratuit, le résultat général est gratuit, le rapport complet
-coûte 9,90 € pour vous deux.
+Thomas, 18 octobre 2026 : « ce test ne doit avoir aucun "résultat gratuit".
+Si tu veux avoir les résultats, tu payes. Point barre. » La première version
+donnait un résumé gratuit (accord, météo, barres, un écart en entier) ; il
+est retiré partout, du serveur (`resultat` répond 402 tant que ce n'est pas
+payé, sans aucun chiffre) jusqu'aux textes.
 
-Quand les deux ont fini, **gratuit, pour les deux** :
+**Répondre est gratuit, et le prix est annoncé avant la première question.**
+Pas de mur surprise après 25 minutes : ce serait la pratique commerciale
+trompeuse que la DGCCRF sanctionne, et ça ruinerait la confiance. La page de
+vente, l'écran de départ et l'invitation disent la même chose : questions
+gratuites, rapport à 9,90 € pour vous deux, à la fin.
 
-- le pourcentage d'accord global et son verdict ;
-- la météo du couple (un chiffre et une phrase) ;
-- une barre par domaine ;
-- le nombre d'accords, d'écarts et de points bloquants ;
-- **un écart en entier**, avec les deux réponses et le guide pour en
-  parler : le plus marqué parmi ceux qui ne touchent ni une grande décision
-  ni un sujet sensible. C'est la démonstration de ce que contient le
-  rapport, sans donner la réponse aux questions qui font payer ;
-- le titre des autres écarts, les plus importants d'abord (points
-  bloquants compris), réponses floutées.
+**On paie dès qu'on a fini ses propres réponses**, sans attendre l'autre :
+c'est le moment où l'envie de savoir est la plus forte, et celui qui a fini
+le premier est souvent celui qui a lancé le bilan. Il peut indiquer
+l'adresse e-mail où recevoir le PDF. L'écran d'après lui dit que le rapport
+est réglé, qu'il partira dès que l'autre aura fini, et lui donne un bouton
+pour relancer son partenaire. Celui qui rejoint un bilan déjà payé le lit
+sur son invitation (« X a déjà réglé le rapport pour vous deux »). Si
+personne n'a payé quand les deux ont fini, l'offre s'affiche aux deux.
 
-**Payant (9,90 €, un seul paiement débloque le rapport pour les deux)** :
+Ce que contient le rapport, dans l'ordre :
 
-- vos quatre prochaines conversations, dans l'ordre ;
-- tous les écarts, avec les deux réponses, pourquoi ce sujet compte, deux
-  questions pour en parler et ce qu'il vaut mieux éviter ;
+- la synthèse : l'alignement (à quel point vous voulez la même vie) et le
+  climat du couple, les accords, les écarts, les points bloquants ;
+- la carte des douze domaines ;
+- vos quatre prochaines conversations, dans l'ordre, chacune avec les deux
+  réponses, pourquoi le sujet compte, des questions pour en parler et ce
+  qu'il vaut mieux éviter de dire ;
 - les points bloquants et les non négociables de chacun ;
-- « chacun pense en faire plus » : les sujets où chacun pense s'en charger
-  davantage ;
-- ce qui vous rassemble (les accords sur les grandes questions) ;
-- la météo détaillée, question par question ;
-- l'impression ou le PDF (par l'impression du navigateur).
+- le climat question par question ;
+- les signaux de vigilance dans les disputes (critique, mépris, défense,
+  fermeture, et la réparation) ;
+- qui fait quoi à la maison, vu par chacun ;
+- chaque domaine en détail ;
+- et après : comment s'en servir, où trouver de l'aide.
 
 ### Le prix
 
@@ -190,8 +197,8 @@ Quand les deux ont fini, **gratuit, pour les deux** :
   chacun et un rapport de plusieurs pages, ça dévalue le produit, et Stripe
   prend 0,25 € + 1,5 % par paiement : 8 % du prix à 3,99 €, 4 % à 9,90 €.
 - 9,90 € pour deux, c'est 4,95 € chacun, le prix d'une place de cinéma
-  réduite ; et le paiement arrive après 25 minutes investies par chacun, au
-  moment où la curiosité est la plus forte.
+  réduite ; et le paiement arrive après 25 minutes investies, au moment où
+  la curiosité est la plus forte.
 
 Ordre de grandeur, à confirmer par les chiffres : 150 000 visites, 90 000
 parties finies par mois. Si 1 % des personnes qui finissent un test de couple
@@ -202,16 +209,18 @@ paient, on est entre 50 et 150 ventes par mois, 500 à 1 500 €.
 ### La garantie
 
 « Satisfaits ou remboursés pendant 14 jours », sur simple message. C'est une
-promesse commerciale volontaire (le droit de rétractation, lui, tombe au
-déblocage, voir plus bas). Elle rassure au moment de payer, et le
+promesse commerciale volontaire (le droit de rétractation, lui, tombe quand
+le rapport est fourni, voir plus bas). Elle rassure au moment de payer, et le
 remboursement se fait en deux clics dans Stripe. Thomas peut la retirer :
 `GARANTIE_JOURS` dans coeur.mjs, 0 pour aucune.
 
 ## Ce que montre le rapport, et comment c'est calculé
 
 Toute la logique est dans `supabase/functions/_shared/bilan/coeur.mjs`, le
-même fichier pour le serveur (qui calcule le résumé gratuit) et pour la page
-(qui calcule le rapport complet à partir des deux séries de réponses).
+même fichier pour le serveur, la page et la fabrique des PDF. Le rapport
+lui-même est écrit une seule fois, dans `rapport.mjs` (le gabarit, servi au
+site en `/js/bilan-rapport.js`) et `rapport.css` (sa feuille, en
+`/css/bilan-rapport.css`) : la page l'affiche, la fabrique l'imprime.
 
 **Quatre types de questions :**
 
@@ -249,32 +258,65 @@ négociable vaut 100, une question décisive 30, l'écart lui-même jusqu'à 50,
 « chacun pense en faire plus » 15. Les quatre prochaines conversations sont
 les quatre premiers écarts, un par domaine au plus.
 
+## Le rapport PDF
+
+« Le PDF est le rapport, il doit être parfaitement UX, design, sans aucun bug
+de génération » (Thomas). Il est fabriqué par `bilan/fabrique.mjs`, dans
+Chrome, par le workflow `bilan-rapport.yml` :
+
+1. Dès qu'un bilan payé est fini des deux côtés, un déclencheur de la base
+   le passe « à faire » et lance le workflow (le même jeton GitHub que
+   l'horloge des réseaux sociaux) ; pg_cron relance toutes les dix minutes
+   tant qu'il en reste un.
+2. Le document : le gabarit partagé, les polices du rapport embarquées
+   (Fraunces et Inter, `public/fonts/bilan/`), les mots longs coupés à
+   l'avance selon la langue (`bilan/cesure.mjs`, motifs de césure de
+   chaque langue), A4, numéros de page.
+3. Deux contrôles avant tout envoi : dans la page, aucun texte ne sort de sa
+   boîte ni n'en chevauche un autre (`bilan/mise-en-page.mjs`) ; dans le PDF
+   produit, aucun mot hors des marges (`bilan/controle-pdf.mjs`). Un rapport
+   qui échoue n'est jamais envoyé : il passe « en erreur » (admin, et
+   workflow en échec, donc e-mail de GitHub).
+4. Le PDF part dans l'espace privé `bilan-rapports`, puis la fonction `bilan`
+   l'envoie par Resend (pièce jointe) à l'acheteur et aux adresses données
+   par chacun. Sur la page, « Télécharger le PDF » passe par un lien signé
+   valable dix minutes.
+
+Vingt rapports d'exemple (cinq langues, quatre cas dont des prénoms de
+trente signes en allemand et un couple d'accord sur rien) passent les mêmes
+contrôles à chaque changement du gabarit ou des textes
+(`bilan-controle.yml`, `node bilan/exemples.mjs <dossier>`). Les aperçus de
+la page de vente sont de vraies pages de ce gabarit
+(`node bilan/apercus.mjs`, dans `public/bilan/`).
+
 ## Confidentialité et sécurité
 
-- **Pas de compte, pas d'e-mail.** Un bilan est une ligne en base ; chacun y
-  accède par sa clé (128 bits au hasard, dans la partie `#` du lien, que le
-  navigateur n'envoie jamais à un serveur). La base n'en garde que
-  l'empreinte SHA-256.
+- **Pas de compte.** Un bilan est une ligne en base ; chacun y accède par sa
+  clé (128 bits au hasard, dans la partie `#` du lien, que le navigateur
+  n'envoie jamais à un serveur). La base n'en garde que l'empreinte
+  SHA-256. Une adresse e-mail seulement si on veut recevoir le PDF.
 - La table n'est lisible par personne d'autre que la fonction serveur
-  `bilan` (aucun droit pour la clé publique, RLS sans règle).
-- Chacun ne lit que ses propres réponses tant que les deux n'ont pas fini.
-  Le résumé gratuit est calculé par le serveur, sans renvoyer les réponses
-  de l'autre. Le rapport payé renvoie les deux séries aux deux partenaires.
+  `bilan` (aucun droit pour la clé publique, RLS sans règle). Le stockage
+  des PDF est privé.
+- Chacun ne lit que ses propres réponses tant que les deux n'ont pas fini
+  et que le rapport n'est pas payé. Le rapport payé renvoie les deux séries
+  aux deux partenaires.
 - Données sensibles au sens du RGPD (vie sexuelle, convictions religieuses,
   opinions politiques, article 9) : **consentement explicite de chacun**
   pour ses propres réponses, case à cocher non pré-cochée, avec la phrase
   « mon ou ma partenaire verra mes réponses dans le rapport ».
 - Réservé aux majeurs (case à cocher).
 - Durée de conservation : un bilan non payé disparaît 60 jours après la
-  dernière réponse, un bilan payé 6 mois après le paiement (le temps de le
-  relire et de la garantie). Bouton « Supprimer notre bilan » dans le
-  rapport, pour chacun des deux, effet immédiat.
+  dernière réponse, un bilan payé 6 mois après le paiement, PDF et adresses
+  compris. Bouton « Supprimer notre bilan » dans le rapport, pour chacun
+  des deux, effet immédiat.
 - **Violences :** le bilan montre à chacun les réponses de l'autre. La page
   le dit et ajoute que si l'on a peur de son ou sa partenaire, ce bilan
   n'est pas fait pour ça, avec le numéro d'écoute de chaque pays (3919 en
   France). Aucune question du bilan ne porte sur des violences : le
   Gottman Checkup garde ces réponses pour le seul conseiller, nous n'avons
-  pas de conseiller.
+  pas de conseiller. Les tests d'emprise, de manipulation et d'infidélité
+  ne renvoient jamais vers le bilan.
 
 ## Le paiement
 
@@ -282,58 +324,99 @@ Stripe Checkout (page de paiement hébergée par Stripe : carte, Apple Pay,
 Google Pay selon ce qui est activé dans le tableau de bord). Pas de
 bibliothèque, deux appels HTTP.
 
-1. Le bouton « Débloquer le rapport » demande d'abord de cocher : « Je
-   demande l'accès immédiat au rapport et je renonce à mon droit de
-   rétractation une fois le rapport débloqué » (article L221-28 13° du Code
-   de la consommation, contenu numérique fourni tout de suite).
+1. L'offre s'affiche dès qu'on a fini ses propres réponses. Le bouton
+   « Débloquer notre rapport » demande d'abord de cocher : « Je demande à
+   recevoir le rapport dès qu'il est prêt et je reconnais perdre mon droit
+   de rétractation une fois le rapport fourni » (article L221-28 13° du Code
+   de la consommation, contenu numérique). Tant que le rapport n'a pas été
+   fourni (le partenaire n'a pas fini), la rétractation reste possible et
+   remboursée en entier : les CGV le disent.
 2. La fonction `bilan` crée la session Stripe (9,90 €, nom du produit dans la
-   langue de la page, mention « TVA non applicable, art. 293 B du CGI » sous
-   le bouton de Stripe) et renvoie son adresse.
+   langue de la page, adresse e-mail préremplie si on l'a donnée, mention
+   « TVA non applicable, art. 293 B du CGI ») et renvoie son adresse.
 3. Après le paiement, Stripe ramène sur la page avec le numéro de session ;
-   la page demande à la fonction de vérifier le paiement auprès de Stripe,
-   et le rapport s'ouvre.
-4. En parallèle, Stripe appelle la fonction `bilan-stripe` (webhook signé,
-   `checkout.session.completed`) : le bilan est débloqué même si la personne
-   a fermé l'onglet pendant le paiement.
+   la page demande à la fonction de vérifier le paiement auprès de Stripe.
+4. En parallèle, Stripe appelle la fonction `bilan-stripe` (webhook signé) :
+   `checkout.session.completed` et `checkout.session.async_payment_succeeded`
+   marquent le bilan payé même si la personne a fermé l'onglet ;
+   `charge.refunded` note un remboursement pour l'admin.
+
+## La page de vente
+
+`templates/pages/bilan-couple.ejs`, styles propres dans
+`css/pages/bilanCouple.css` (mis en ligne par le gabarit de base, styles.css
+n'y est pour rien), textes `lp` de `{lang}/bilan.json`. Elle est écrite pour
+quelqu'un qui arrive d'un test du site, pas pour Google. Dans l'ordre : la
+promesse (« Voulez-vous la même vie, tous les deux ? ») avec deux vraies
+pages du rapport ; quatre chiffres ; pour qui ; à quoi ressemble le rapport,
+page par page ; la différence avec un test qu'une IA ferait passer ; la
+recherche ; six vraies questions, telles qu'on les voit ; comment ça se
+passe ; le prix, avec ce qu'il contient et la garantie ; la confidentialité ;
+les questions fréquentes ; un dernier appel. Dès qu'on clique sur
+« Commencer », la page de vente s'efface et l'application prend toute la
+place (`body.bilan-focus`), avec un bouton pour revenir.
+
+Ce qu'elle peut dire de la recherche, et ce qu'elle ne doit jamais dire
+(« validé scientifiquement », une prédiction), est dans
+`docs/bilan/RECHERCHE.md`.
+
+## Les entrées depuis le site
+
+Le site est la source des visites de la page : `BILAN_ENTREES`
+(`build/config.js`) liste les dix-neuf tests qui y renvoient, chacun avec un
+groupe de texte (`score` après un test fait à deux, `projet` avant une grande
+étape, `doute` quand on se pose des questions) et un identifiant.
+
+- **Sous le verdict** (`encartBilan`, quiz-engine-core.js) : une carte de
+  nuit, une vraie page du rapport, un titre et un texte selon le groupe,
+  trois points, « Découvrir le bilan », et le prix. Elle prend la place des
+  produits affiliés sur ces pages : un seul encart sous le verdict.
+- **En bas de page**, au-dessus des cartes « À faire ensuite »
+  (related-tests.ejs) : la même carte, en plus large.
+- **Le menu, l'accueil et le pied de page** : le bilan en tête des tests de
+  couple.
+
+Chaque lien porte sa source (`?src=resultat-<id>`, `bas-<id>`, `menu`,
+`accueil`, `pied`), gardée pour la visite et comptée avec chaque étape.
 
 ## Ce qu'il faut de Thomas avant d'ouvrir
 
 Tant que ce n'est pas fait, `BILAN_OUVERT` reste à `false` dans
-`static-site/build/config.js` : la page existe mais n'est pas indexée, elle
-n'est dans aucun menu, et les écrans de résultat des tests n'en parlent pas.
+`static-site/build/config.js` : la page existe mais n'est pas indexée, aucun
+lien du site n'y mène, et les écrans de résultat des tests n'en parlent pas.
 
-1. **Mentions légales d'un vendeur** (obligatoires dès qu'on vend) : le
-   numéro SIRET et l'adresse (une domiciliation suffit si on ne veut pas
-   publier son adresse personnelle), dans `VENDEUR` de config.js. La page
-   des conditions de vente et les mentions légales les affichent.
-2. **Un médiateur de la consommation** : tout vendeur à des particuliers
-   doit en proposer un gratuitement (article L612-1 du Code de la
-   consommation). Adhésion à un médiateur agréé (quelques dizaines d'euros
-   par an), puis son nom et son site dans `VENDEUR.mediateur`.
-3. **Stripe** : créer le compte (statut entrepreneur individuel), puis :
-   - dans Supabase, secrets `STRIPE_SECRET_KEY` (sk_live_... ou sk_test_...
-     pour essayer) et `STRIPE_WEBHOOK_SECRET` ;
-   - dans Stripe, Développeurs > Webhooks > ajouter un point de terminaison
-     `https://<projet>.supabase.co/functions/v1/bilan-stripe`, événements
-     `checkout.session.completed` et
-     `checkout.session.async_payment_succeeded`, puis copier sa clé de
-     signature (whsec_...) dans `STRIPE_WEBHOOK_SECRET` ;
-   - dans Stripe, Paramètres > E-mails clients : activer les reçus de
-     paiement (c'est la confirmation de la commande « sur un support
-     durable »).
-
-   Avec une clé de test (`sk_test_...`), le paiement s'ouvre déjà sur la
-   page cachée, pour tout essayer sur le vrai site avec la carte de test de
-   Stripe. Avec la clé réelle, il n'est proposé qu'une fois le bilan ouvert.
+1. **L'adresse du vendeur** dans `VENDEUR.adresse` (config.js). Le nom
+   (Visibilitea, entreprise individuelle de Thomas Owaller) et le SIRET y
+   sont déjà. Pas de médiateur de la consommation, par choix de Thomas.
+2. **Resend** pour l'envoi du PDF : secret `RESEND_API_KEY`, domaine
+   quiz-couple.com vérifié.
+3. **Stripe** : secrets `STRIPE_SECRET_KEY` et `STRIPE_WEBHOOK_SECRET`,
+   webhook avec les trois événements, reçus activés.
 4. Passer `BILAN_OUVERT` à `true`.
 
 Le mode d'emploi détaillé est dans `docs/bilan/STRIPE.md`.
 
 ## Mesure
 
-La fonction `get_bilan_stats` (lue par l'admin via `admin-stats`) donne par
-jour : bilans créés, partenaires qui ont rejoint, premiers finis, bilans finis
-à deux, payés, et le chiffre d'affaires. L'entonnoir se lit de gauche à
-droite : si les partenaires ne rejoignent pas, c'est l'invitation ; s'ils
-rejoignent sans finir, c'est la longueur ; s'ils finissent sans payer, c'est
-le résultat gratuit ou le prix.
+L'onglet Bilan de l'admin lit tout par `get_bilan_tableau` (via
+`admin-stats`), sur 7, 30, 90 jours ou un an :
+
+- les visites de la page de vente (comptées par la page elle-même, ni les
+  robots ni les passages de Thomas), les clics sur « Commencer », les bilans
+  démarrés, les ventes, le chiffre d'affaires, les remboursements, et la
+  conversion (ventes rapportées aux visites) ;
+- les ventes jour par jour ;
+- l'entonnoir : visite, « Commencer », bilan créé, premier fini, partenaire
+  qui rejoint, partenaire qui finit, paiement ouvert, payé ;
+- les douze domaines : combien y sont entrés, combien les ont finis, et où
+  s'arrêtent ceux qui n'ont plus rien fait depuis 24 heures ;
+- les sources, avec leurs ventes : quel test envoie des acheteurs ;
+- les délais (temps de réponse, temps pour que le partenaire rejoigne) et
+  l'état des PDF, erreurs comprises ;
+- les rapports payés dont le partenaire n'a pas fini, à relancer ou à
+  rembourser.
+
+L'entonnoir se lit de haut en bas : si l'on clique peu sur « Commencer »,
+c'est la page de vente ; si les partenaires ne rejoignent pas, c'est
+l'invitation ; s'ils rejoignent sans finir, c'est la longueur (et le tableau
+des domaines dit où) ; s'ils finissent sans payer, c'est l'offre ou le prix.

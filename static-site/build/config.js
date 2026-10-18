@@ -364,16 +364,19 @@ export const BILAN_ENTREES = {
   testJeLaimeEncore: { groupe: 'doute', id: 'je-l-aime-encore' },
 };
 // Les mentions obligatoires d'un vendeur (mentions légales et conditions de
-// vente). Un champ vide n'est pas affiché. Le médiateur de la consommation
-// est obligatoire dès qu'on vend à des particuliers (art. L612-1 du Code de
-// la consommation) : nom et site du médiateur auquel Thomas adhère.
+// vente). Un champ vide n'est pas affiché. L'entreprise de Thomas est une
+// entreprise individuelle (nom de l'entrepreneur suivi de « EI » dans les
+// mentions légales), sans TVA (franchise en base). Pas de médiateur de la
+// consommation : choix de Thomas (18 octobre 2026), la section « Réclamations »
+// des CGV s'écrit alors sans (pSans de {lang}/cgv.json) ; un médiateur se
+// déclare ici, mediateur: { nom, site }, et la phrase revient d'elle-même.
 export const VENDEUR = {
-  nom: 'Thomas Owaller',
-  statut: { fr: 'Entrepreneur individuel (micro-entreprise)', en: 'Sole trader (French micro-entreprise)', es: 'Empresario individual (microempresa francesa)', de: 'Einzelunternehmer (französisches Kleinunternehmen)', it: 'Imprenditore individuale (microimpresa francese)' },
-  siret: '',
+  nom: 'Visibilitea',
+  dirigeant: 'Thomas Owaller',
+  statut: { fr: 'Entreprise individuelle (EI) de Thomas Owaller', en: 'Sole proprietorship of Thomas Owaller (French entreprise individuelle)', es: 'Empresa individual de Thomas Owaller (entreprise individuelle francesa)', de: 'Einzelunternehmen von Thomas Owaller (französische entreprise individuelle)', it: 'Impresa individuale di Thomas Owaller (entreprise individuelle francese)' },
+  siret: '940 106 800 00011',
   adresse: '',
   email: 'infoquizcouple@gmail.com',
-  mediateur: { nom: '', site: '' },
 };
 
 // ── La saison du site ────────────────────────────────────────────────────

@@ -131,8 +131,8 @@ const BILAN_CONST = (() => {
   };
   return { prix: lis('PRIX_CENTIMES', 990), garantie: lis('GARANTIE_JOURS', 0) };
 })();
-if (BILAN_OUVERT && (!VENDEUR.siret || !VENDEUR.adresse || !(VENDEUR.mediateur && VENDEUR.mediateur.nom))) {
-  console.warn('[bilan] ATTENTION : bilan ouvert sans SIRET, adresse ou médiateur de la consommation (VENDEUR, config.js) : mentions légales et CGV incomplètes.');
+if (BILAN_OUVERT && (!VENDEUR.siret || !VENDEUR.adresse)) {
+  console.warn('[bilan] ATTENTION : bilan ouvert sans SIRET ou sans adresse (VENDEUR, config.js) : mentions légales et CGV incomplètes.');
 }
 function prixBilan(lang) {
   try {

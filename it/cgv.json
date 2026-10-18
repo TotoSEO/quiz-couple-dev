@@ -2,7 +2,11 @@
   "title": "Condizioni generali di vendita",
   "majLe": "Ultimo aggiornamento: 18 ottobre 2026",
   "intro": "Queste condizioni si applicano all'acquisto del report completo del {{bilan}} su quiz-couple.com. Tutto il resto del sito è gratuito e non è interessato da nessuna vendita.",
-  "liens": { "contact": "pagina dei contatti", "confidentialite": "informativa sulla privacy", "bilan": "check-up di coppia" },
+  "liens": {
+    "contact": "pagina dei contatti",
+    "confidentialite": "informativa sulla privacy",
+    "bilan": "check-up di coppia"
+  },
   "vendeur": {
     "titre": "Il venditore",
     "nom": "Nome:",
@@ -15,10 +19,10 @@
   },
   "sections": [
     {
-      "titre": "1. Cosa viene venduto",
+      "titre": "1. Cosa si vende",
       "p": [
-        "Il check-up di coppia è un questionario a cui due partner rispondono ognuno per conto suo. Rispondere è gratis, e anche il risultato generale (percentuale di accordo, meteo della coppia, una barra per area, il numero di differenze e una differenza per intero).",
-        "Quello che viene venduto è il report completo: tutte le differenze della coppia con le due risposte, le guide per parlarne, le prossime quattro conversazioni, i punti critici e quello che non è negoziabile per ciascuno, quello che unisce la coppia e il meteo domanda per domanda. Il report è un contenuto digitale, mostrato sulla pagina del check-up e stampabile."
+        "Il check-up di coppia è un questionario a cui due partner rispondono ciascuno per conto suo. Rispondere alle domande è gratuito; nessun risultato viene dato senza acquisto.",
+        "Ciò che si vende è il report: una valutazione completa della coppia a partire dalle due serie di risposte (allineamento, clima, mappa delle aree, differenze con le due risposte, guide per parlarne, punti di blocco e non negoziabili, segnali d'allarme, divisione dei ruoli). Il report è un contenuto digitale: un documento PDF inviato per e-mail, e la stessa versione consultabile sulla pagina del check-up."
       ]
     },
     {
@@ -29,23 +33,24 @@
       ]
     },
     {
-      "titre": "3. L'ordine e il pagamento",
+      "titre": "3. Ordine e pagamento",
       "p": [
-        "Il pagamento viene proposto solo quando entrambi i partner hanno finito di rispondere. Prima di pagare, l'acquirente spunta una casella con cui chiede l'accesso immediato al report e riconosce di perdere il diritto di recesso una volta sbloccato il report (vedi l'articolo 5).",
-        "Il pagamento avviene sulla pagina sicura del nostro fornitore Stripe, con carta, Apple Pay o Google Pay. Non abbiamo mai accesso ai dati della carta. Stripe invia una ricevuta all'indirizzo e-mail indicato al momento del pagamento: è la conferma dell'ordine. Si può chiedere una fattura dalla {{contact}}."
+        "Il pagamento viene proposto a ciascun partner appena ha finito le proprie risposte. Prima di pagare, l'acquirente può indicare l'indirizzo e-mail a cui ricevere il report, e spunta una casella con cui chiede di ricevere il report appena è pronto e riconosce di perdere il diritto di recesso una volta fornito il report (vedi l'articolo 5).",
+        "Il pagamento avviene sulla pagina sicura del nostro fornitore Stripe, con carta bancaria, Apple Pay o Google Pay. Non abbiamo mai accesso ai dati della carta. Stripe invia una ricevuta all'indirizzo e-mail indicato al momento del pagamento: è la conferma dell'ordine. Si può chiedere una fattura dalla {{contact}}."
       ]
     },
     {
-      "titre": "4. L'accesso al report",
+      "titre": "4. La fornitura del report",
       "p": [
-        "Il report si apre appena il pagamento è confermato, sulla pagina del check-up, per entrambi i partner, dai loro link personali. Resta disponibile sei mesi dopo il pagamento, poi il check-up viene cancellato. Può essere stampato o salvato in PDF in qualsiasi momento.",
-        "Ognuno dei due partner può cancellare il check-up prima di questo termine. La cancellazione è immediata e definitiva, per entrambi, e non dà diritto a un rimborso al di fuori della garanzia dell'articolo 6."
+        "Il report viene preparato appena il pagamento è confermato e i due partner hanno finito di rispondere. Parte allora in PDF agli indirizzi e-mail indicati, e compare sulla pagina del check-up per entrambi, dai loro link personali, con un pulsante per scaricare il PDF. Resta disponibile sei mesi dopo il pagamento, poi il check-up viene cancellato.",
+        "Se il partner non finisce le sue risposte, il report non può essere preparato: l'acquirente può allora chiederne il rimborso in qualsiasi momento dalla {{contact}}.",
+        "Ciascuno dei due partner può cancellare il check-up prima di questo termine. La cancellazione è immediata e definitiva, per entrambi, e non dà diritto a rimborso al di fuori della garanzia dell'articolo 6."
       ]
     },
     {
       "titre": "5. Il diritto di recesso",
       "p": [
-        "Il report è un contenuto digitale fornito subito dopo il pagamento. In conformità all'articolo 16, lettera m), della Direttiva 2011/83/UE e all'articolo L221-28 13° del Codice del consumo francese, il diritto di recesso di quattordici giorni non si applica una volta sbloccato il report, poiché l'acquirente ha chiesto l'accesso immediato e ha riconosciuto di perdere questo diritto prima di pagare."
+        "Il report è un contenuto digitale. Ai sensi dell'articolo 16, lettera m, della Direttiva 2011/83/UE e dell'articolo L221-28 13° del Codice del consumo francese, il diritto di recesso di quattordici giorni non si applica più una volta fornito il report, poiché l'acquirente ha chiesto di riceverlo appena pronto e ha riconosciuto di perdere questo diritto prima di pagare. Finché il report non è stato fornito, l'acquirente può recedere scrivendoci dalla {{contact}}, e viene rimborsato per intero."
       ]
     },
     {
@@ -64,7 +69,7 @@
     {
       "titre": "8. I dati personali",
       "p": [
-        "Le risposte del check-up, che possono riguardare la vita intima e le convinzioni, vengono salvate solo con il consenso esplicito di ciascun partner e servono solo al check-up. La durata di conservazione, i vostri diritti e l'elenco dei fornitori sono indicati nella nostra {{confidentialite}}."
+        "Le risposte del check-up, che possono toccare la vita intima e le convinzioni, vengono registrate solo con il consenso esplicito di ciascun partner e servono solo al check-up. L'indirizzo e-mail indicato per ricevere il report serve solo a questo invio. La durata di conservazione, i vostri diritti e l'elenco dei fornitori sono descritti nella nostra {{confidentialite}}."
       ]
     },
     {
