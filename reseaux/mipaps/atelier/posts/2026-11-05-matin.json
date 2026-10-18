@@ -12,7 +12,7 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "« Je gère le dîner » : il est fier devant sa pizza, la fumée monte, il panique ; elle arrive sans un mot, le téléphone à la patte : « j'ai commandé. » Trois plans, 12 secondes.",
+        "idee": "« Ce soir, c'est moi qui cuisine » : il est fier devant sa pizza, la fumée monte, il panique ; elle arrive sans un mot, le téléphone à la patte : « j'ai commandé. » Trois plans, 12 secondes.",
         "son": {
           "ambiance": "drole"
         },
@@ -46,7 +46,7 @@
             ],
             "textes": [
               {
-                "texte": "quand ta personne dit « je gère le dîner »",
+                "texte": "« ce soir, c'est moi qui cuisine »",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"

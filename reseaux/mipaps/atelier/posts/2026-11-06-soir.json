@@ -12,7 +12,7 @@
         "gabarit": "mipaps-carrousel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Avant toi, avec toi : le dimanche, le téléphone, les pulls, le canapé.",
+        "idee": "Avant toi, avec toi : le dimanche, la musique, les pulls, le canapé.",
         "pages": [
           {
             "texte": "avant toi / avec toi",
@@ -51,21 +51,23 @@
             }
           },
           {
-            "texte": "mon téléphone : rien / tes vidéos toute la journée",
+            "texte": "la musique : mes playlists / tes chansons partout",
             "dessin": {
               "elements": [
                 {
-                  "perso": "elle",
-                  "expression": "rire",
-                  "x": 290,
-                  "taille": 270,
-                  "bras": "tient"
+                  "perso": "lui",
+                  "expression": "chante",
+                  "signes": [
+                    "notes"
+                  ],
+                  "x": 250,
+                  "taille": 250
                 },
                 {
-                  "objet": "telephone",
-                  "x": 328,
-                  "y": 346,
-                  "echelle": 0.5
+                  "perso": "elle",
+                  "expression": "content",
+                  "x": 410,
+                  "taille": 250
                 }
               ]
             }

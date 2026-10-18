@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-104",
+  "sujet": "ani-110",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,22 +12,23 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "« J'ai pas faim » : il a une pizza, elle dit non ; elle regarde la pizza, puis lui ; « juste pour goûter » ; la pizza a disparu, elle a l'air d'un ange, « euh, il en reste ? ». Quatre plans, 14 secondes.",
+        "idee": "« Raccroche, toi » « non, toi » : chacun au téléphone, tout timide, des cœurs ; une heure plus tard, les deux endormis, le téléphone encore à la patte. Trois plans, 11 secondes.",
         "son": {
-          "ambiance": "drole"
+          "ambiance": "tendre"
         },
         "plans": [
           {
             "duree": 3.5,
-            "description": "Il est à gauche, content, une pizza posée devant lui. Elle est à droite, sereine, les bras croisés, elle n'a besoin de rien. Le texte se pose à 0,2 s.",
+            "description": "Elle est à droite, au téléphone, toute timide, les joues roses, des petits cœurs autour d'elle. Lui est à gauche, au téléphone aussi, qui sourit bêtement. Chacun chez soi, ils ne se regardent pas. Le texte se pose à 0,2 s.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 230,
-                    "expression": "content"
+                    "x": 190,
+                    "expression": "content",
+                    "bras": "tient"
                   }
                 ]
               },
@@ -36,24 +37,33 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 440,
-                    "expression": "zen",
-                    "bras": "croises"
+                    "x": 450,
+                    "expression": "timide",
+                    "bras": "tient",
+                    "signes": [
+                      "coeurs"
+                    ]
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "pizza",
-                "x": 330,
-                "y": 345,
-                "echelle": 0.7
+                "objet": "telephone",
+                "x": 228,
+                "y": 346,
+                "echelle": 0.5
+              },
+              {
+                "objet": "telephone",
+                "x": 488,
+                "y": 346,
+                "echelle": 0.5
               }
             ],
             "textes": [
               {
-                "texte": "« non merci, j'ai pas faim »",
+                "texte": "« raccroche, toi »",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -62,16 +72,25 @@
           },
           {
             "duree": 3.5,
-            "transition": "fondu",
-            "description": "Il mange une part, les yeux fermés, ravi. Elle décroise les bras à 0,8 s et fixe la pizza, gourmande, puis le regarde lui à 2,2 s, l'air de rien, les sourcils qui se lèvent.",
+            "transition": "coupe",
+            "description": "Même image. Lui devient tout timide à son tour à 0,4 s, les joues rouges, des cœurs au-dessus de lui ; elle se cache un peu derrière son téléphone, ravie. Le texte arrive à 0,4 s.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 230,
-                    "expression": "miam"
+                    "x": 190,
+                    "expression": "content",
+                    "bras": "tient"
+                  },
+                  {
+                    "a": 0.4,
+                    "expression": "timide",
+                    "signes": [
+                      "coeurs",
+                      "joues_hachures"
+                    ]
                   }
                 ]
               },
@@ -80,97 +99,60 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 440,
-                    "expression": "zen",
-                    "bras": "croises"
+                    "x": 450,
+                    "expression": "timide",
+                    "bras": "tient"
                   },
                   {
-                    "a": 0.8,
-                    "expression": "gourmand",
-                    "bras": "bas"
-                  },
-                  {
-                    "a": 2.2,
-                    "expression": "malicieux"
+                    "a": 1.2,
+                    "expression": "transi",
+                    "signes": [
+                      "coeurs"
+                    ]
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "pizza",
-                "x": 330,
-                "y": 345,
-                "echelle": 0.7
-              }
-            ]
-          },
-          {
-            "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle s'approche d'un pas et tend la patte vers la pizza à 0,6 s. Il la regarde faire, un sourcil levé. Sa phrase arrive à 0,4 s.",
-            "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 230,
-                    "expression": "miam"
-                  },
-                  {
-                    "a": 0.8,
-                    "expression": "suspicieux"
-                  }
-                ]
+                "objet": "telephone",
+                "x": 228,
+                "y": 346,
+                "echelle": 0.5
               },
               {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 440,
-                    "expression": "malicieux"
-                  },
-                  {
-                    "a": 0.6,
-                    "x": 410,
-                    "bras": "tend_g",
-                    "expression": "gourmand"
-                  }
-                ]
-              }
-            ],
-            "objets": [
-              {
-                "objet": "pizza",
-                "x": 330,
-                "y": 345,
-                "echelle": 0.7
+                "objet": "telephone",
+                "x": 488,
+                "y": 346,
+                "echelle": 0.5
               }
             ],
             "textes": [
               {
-                "texte": "« juste pour goûter »",
+                "texte": "« non, toi »",
                 "de": 0.4,
                 "place": "haut"
               }
             ]
           },
           {
-            "duree": 3.5,
+            "duree": 4,
             "transition": "fondu",
-            "description": "Plus de pizza. Elle est toute contente, l'air d'un ange, des étincelles autour d'elle. Lui regarde l'endroit où était la pizza, perplexe, un point d'interrogation au-dessus de lui. Sa phrase s'écrit mot à mot à 1 s.",
+            "description": "Une heure plus tard : les deux se sont endormis chacun de son côté, assis, la tête qui penche, le téléphone encore contre eux, des petits zzz au-dessus de chacun. Le texte se pose à 0,4 s.",
             "persos": [
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 230,
-                    "expression": "perplexe",
+                    "x": 190,
+                    "y": 380,
+                    "taille": 230,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "bras": "tient",
                     "signes": [
-                      "question"
+                      "zzz"
                     ]
                   }
                 ]
@@ -180,32 +162,49 @@
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 420,
-                    "expression": "ange",
+                    "x": 450,
+                    "y": 380,
+                    "taille": 230,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "bras": "tient",
                     "signes": [
-                      "etincelles"
+                      "zzz"
                     ]
                   }
                 ]
               }
             ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 228,
+                "y": 346,
+                "echelle": 0.5
+              },
+              {
+                "objet": "telephone",
+                "x": 488,
+                "y": 346,
+                "echelle": 0.5
+              }
+            ],
             "textes": [
               {
-                "texte": "« euh, il en reste ? »",
-                "de": 1.0,
-                "place": "haut",
-                "motAMot": true
+                "texte": "1 h plus tard",
+                "de": 0.4,
+                "place": "haut"
               }
             ]
           }
         ]
       },
-      "legende": "c'est qui chez vous ?",
+      "legende": "tague ta personne",
       "hashtags": [
         "#lesmipaps",
         "#couple",
-        "#humour",
-        "#relation"
+        "#amour",
+        "#mignon"
       ]
     }
   }

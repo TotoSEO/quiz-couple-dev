@@ -4,7 +4,7 @@
   "format": "reel",
   "gabarit": "mipaps-reel",
   "categorie": "mipaps-anime",
-  "sujet": "ani-120",
+  "sujet": "ani-118",
   "idee_id": null,
   "variantes": {
     "fr": {
@@ -12,54 +12,59 @@
         "gabarit": "mipaps-reel",
         "langue": "fr",
         "theme": "light",
-        "idee": "Quand ta personne a faim : il est grognon, un nuage noir sur la tête ; elle lui parle, il grogne ; elle sort un croissant de derrière son dos ; il fond, « merci mon cœur ». Trois plans, 12 secondes.",
+        "idee": "Quand tu racontes ta journée : elle raconte avec les pattes, lui hoche la tête sur son téléphone, « mmh mmh » ; elle s'arrête et le fixe ; il pose le téléphone, le menton dans la patte, « et donc ? ». Trois plans, 11,5 secondes.",
         "son": {
           "ambiance": "drole"
         },
         "plans": [
           {
             "duree": 4,
-            "description": "Il est au milieu gauche, grognon, les bras croisés, un nuage noir au-dessus de la tête. Elle entre du bord droit en marchant de profil, s'arrête à côté de lui à 2 s et se tourne vers nous à 2,4 s, contente, sans se douter de rien. Le texte se pose à 0,2 s.",
+            "description": "Elle est à gauche, pleine d'énergie, elle raconte sa journée avec les pattes en l'air, puis tendues vers lui à 1,5 s. Lui est à droite, les yeux sur son téléphone, concentré, il ne la regarde pas. Le texte se pose à 0,2 s.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 260,
-                    "expression": "agace",
-                    "bras": "croises",
-                    "signes": [
-                      "nuage_noir"
-                    ]
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 780,
-                    "angle": -90,
-                    "pose": "marche",
-                    "expression": "content"
+                    "x": 230,
+                    "expression": "energique",
+                    "bras": "leves"
                   },
                   {
-                    "a": 2,
-                    "x": 440,
-                    "pose": "debout"
+                    "a": 1.5,
+                    "bras": "tend_d",
+                    "expression": "joie"
                   },
                   {
-                    "a": 2.4,
-                    "angle": 0
+                    "a": 2.8,
+                    "bras": "leves",
+                    "expression": "energique"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "concentre",
+                    "bras": "tient"
                   }
                 ]
               }
             ],
+            "objets": [
+              {
+                "objet": "telephone",
+                "x": 468,
+                "y": 346,
+                "echelle": 0.5
+              }
+            ],
             "textes": [
               {
-                "texte": "quand ta personne a faim",
+                "texte": "quand tu racontes ta journée",
                 "de": 0.2,
                 "place": "haut",
                 "style": "titre"
@@ -68,130 +73,107 @@
           },
           {
             "duree": 3.5,
-            "transition": "fondu",
-            "description": "Elle lui parle, la patte tendue vers lui, gentille. Lui se renfrogne encore plus à 1 s, le nuage noir grossit, il détourne la tête. Elle comprend, un sourcil levé. Le texte arrive à 0,5 s.",
+            "transition": "coupe",
+            "description": "Lui répond sans lever les yeux de son téléphone, à 0,3 s. Elle s'arrête net à 1,2 s, les bras croisés, et le fixe, un sourcil levé. Il sent le regard à 2,2 s : il lève les yeux, une goutte de sueur.",
             "persos": [
-              {
-                "perso": "lui",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 260,
-                    "expression": "agace",
-                    "bras": "croises",
-                    "signes": [
-                      "nuage_noir"
-                    ]
-                  },
-                  {
-                    "a": 1,
-                    "expression": "colere"
-                  }
-                ]
-              },
               {
                 "perso": "elle",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 440,
-                    "expression": "content",
-                    "bras": "tend_g"
+                    "x": 230,
+                    "expression": "energique",
+                    "bras": "tend_d"
                   },
                   {
-                    "a": 1.8,
+                    "a": 1.2,
                     "expression": "suspicieux",
-                    "bras": "bas"
+                    "bras": "croises"
                   }
                 ]
-              }
-            ],
-            "textes": [
-              {
-                "texte": "« ça va ? » « grmbl »",
-                "de": 0.5,
-                "place": "haut"
-              }
-            ]
-          },
-          {
-            "duree": 4.5,
-            "transition": "fondu",
-            "description": "Elle sort un croissant de derrière son dos à 0,5 s et le lui tend entre eux deux. Il le voit, surpris à 1 s, se penche vers lui et croque dedans les yeux fermés à 1,8 s, puis fond à 2,8 s, des cœurs autour de lui. Sa phrase s'écrit mot à mot à 3 s.",
-            "persos": [
+              },
               {
                 "perso": "lui",
                 "etapes": [
                   {
                     "a": 0,
-                    "x": 260,
-                    "expression": "colere",
-                    "bras": "croises"
-                  },
-                  {
-                    "a": 1,
-                    "expression": "surpris",
-                    "bras": "bas"
-                  },
-                  {
-                    "a": 1.8,
-                    "expression": "miam",
+                    "x": 430,
+                    "expression": "concentre",
                     "bras": "tient"
                   },
                   {
-                    "a": 2.8,
-                    "expression": "transi",
+                    "a": 2.2,
+                    "expression": "nerveux",
                     "signes": [
-                      "coeurs"
+                      "sueur"
                     ]
-                  }
-                ]
-              },
-              {
-                "perso": "elle",
-                "etapes": [
-                  {
-                    "a": 0,
-                    "x": 440,
-                    "expression": "malicieux"
-                  },
-                  {
-                    "a": 0.6,
-                    "bras": "tend_g",
-                    "expression": "content"
-                  },
-                  {
-                    "a": 1.8,
-                    "bras": "bas",
-                    "expression": "fier"
                   }
                 ]
               }
             ],
             "objets": [
               {
-                "objet": "croissant",
-                "x": 510,
-                "y": 300,
-                "echelle": 0.9,
-                "etapes": [
-                  {
-                    "a": 0.5,
-                    "x": 510,
-                    "y": 300
-                  },
-                  {
-                    "a": 1.0,
-                    "x": 350,
-                    "y": 290
-                  }
-                ]
+                "objet": "telephone",
+                "x": 468,
+                "y": 346,
+                "echelle": 0.5
               }
             ],
             "textes": [
               {
-                "texte": "« merci mon cœur »",
-                "de": 3.0,
+                "texte": "« mmh mmh »",
+                "de": 0.3,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Le téléphone a disparu. Lui a le menton dans la patte, tout ouïe, les yeux brillants, un petit cœur au-dessus de lui. Elle reprend son histoire, ravie, les pattes en l'air à 0,8 s. Sa phrase à lui s'écrit mot à mot à 0,4 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 230,
+                    "expression": "suspicieux",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 0.8,
+                    "expression": "joie",
+                    "bras": "leves"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 430,
+                    "expression": "ecoute",
+                    "bras": "menton"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 440,
+                "y": 150,
+                "echelle": 0.35,
+                "de": 1.2,
+                "flotte": true
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« et donc ? »",
+                "de": 0.4,
                 "place": "haut",
                 "motAMot": true
               }
