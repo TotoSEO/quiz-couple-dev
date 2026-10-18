@@ -1,5 +1,5 @@
 {
-  "genere_le": "2026-10-18T03:12:35.878Z",
+  "genere_le": "2026-10-18T07:59:42.421Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
@@ -663,21 +663,6 @@
       "categorie": "mipaps-post"
     },
     {
-      "jour": "2026-12-24",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
-    },
-    {
-      "jour": "2026-12-25",
-      "creneau": "matin",
-      "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2026-12-25",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
-    },
-    {
       "jour": "2026-12-25",
       "creneau": "soir",
       "categorie": "mipaps-histoire"
@@ -766,21 +751,11 @@
       "jour": "2026-12-31",
       "creneau": "midi",
       "categorie": "mipaps-post"
-    },
-    {
-      "jour": "2026-12-31",
-      "creneau": "soir",
-      "categorie": "mipaps-statique"
     },
     {
       "jour": "2027-01-01",
       "creneau": "matin",
       "categorie": "mipaps-anime"
-    },
-    {
-      "jour": "2027-01-01",
-      "creneau": "midi",
-      "categorie": "mipaps-post"
     },
     {
       "jour": "2027-01-01",
@@ -1415,7 +1390,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "conteneur",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1469,7 +1444,7 @@
       "creneau": "matin",
       "gabarit": "mipaps-reel",
       "categorie": "mipaps-anime",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": null,
       "erreur": null
     },
@@ -2084,6 +2059,51 @@
       "statut": "a_rendre",
       "texte": "on est à 400 km l'un de l'autre. je compte les jours avant vendredi.",
       "erreur": null
+    },
+    {
+      "jour": "2026-12-24",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "le bonnet est resté sur ta tête toute la nuit",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-25",
+      "creneau": "matin",
+      "gabarit": "mipaps-reel",
+      "categorie": "mipaps-anime",
+      "statut": "a_rendre",
+      "texte": null,
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-25",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "le plus beau cadeau c'est toi. (mais j'ai aimé les frites aussi)",
+      "erreur": null
+    },
+    {
+      "jour": "2026-12-31",
+      "creneau": "soir",
+      "gabarit": "mipaps-statique",
+      "categorie": "mipaps-statique",
+      "statut": "a_rendre",
+      "texte": "bonne année mon amoureux. encore une avec toi.",
+      "erreur": null
+    },
+    {
+      "jour": "2027-01-01",
+      "creneau": "midi",
+      "gabarit": "mipaps-post",
+      "categorie": "mipaps-post",
+      "statut": "a_rendre",
+      "texte": "nouvelle année et toujours la même équipe, avec les mêmes frites.",
+      "erreur": null
     }
   ],
   "idees": [],
@@ -2101,7 +2121,7 @@
       "creneau": "soir"
     },
     "mipaps-post": {
-      "jour": "2026-10-18",
+      "jour": "2026-10-19",
       "creneau": "midi"
     }
   },
@@ -2203,6 +2223,20 @@
       "vues": 182,
       "partages": 2,
       "enregistrements": 0
+    },
+    {
+      "variante_id": "7b06b7fb-e9ad-4697-b1dc-49fe5e3c2e8c",
+      "releve": "j7",
+      "vues": 288,
+      "partages": 1,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "30c8ec65-c9db-4421-bd35-dff810257482",
+      "releve": "j7",
+      "vues": 242,
+      "partages": 0,
+      "enregistrements": 1
     }
   ]
 }
