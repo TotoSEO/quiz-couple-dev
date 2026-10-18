@@ -10,6 +10,16 @@
 //  - le « <3 » collé à la fin d'un texte de reel, et plus d'un par post ;
 //  - la parenthèse qui explique (« (il gérait pas) ») ;
 //  - trois phrases courtes à la suite (« il arrive. elle dort. il reste. »).
+// Et depuis le 18 octobre 2026, pour les mipaps (Thomas, la veille : « aucun
+// reel ne fonctionne [...] rien n'est assez naturel, qui correspond à tout le
+// monde » ; voir « L'effet Barnum » dans leur ligne éditoriale) :
+//  - la légende qui donne un chiffre ou une heure pour faire vrai (« il est
+//    3 h 12. », « 4 minutes. j'ai compté. ») : personne ne l'a vécu, donc
+//    personne ne s'y reconnaît ;
+//  - la légende qui raconte la suite de l'anecdote à la troisième personne
+//    (« elle a marché 20 minutes sans gants », « il avait préparé ça ») ;
+//  - l'heure à la minute près dans l'image (« 3 h 12 / 3 h 20 ») : « 3 h du
+//    matin » suffit.
 // Ce contrôle garde la porte de l'atelier (controler.mjs, avant de pousser) :
 // il n'est pas un verrou de production, la synchro ne le passe pas.
 
@@ -20,6 +30,8 @@ export const APPELS = {
     "c'est qui chez vous ?", "c'est quoi chez vous ?", "c'est laquelle chez vous ?", "c'est lequel chez vous ?", 'tu fais ça aussi ?',
     'tague ton amoureux', 'tague ton amoureuse',
     'garde ça pour un soir où ça va pas', 'garde ça pour la prochaine dispute', 'garde ça pour votre prochaine soirée',
+    // les appels de l'effet Barnum (18 octobre 2026) : le geste montré suffit à dire qui
+    'envoie ça à la personne qui fait ça', 'tague la personne qui fait ça', "vous aussi ou c'est que nous ?",
   ],
   en: [
     'send this to them', 'send this to him', 'send this to her', 'send this to your partner', 'send this with no context',
@@ -44,6 +56,15 @@ const FINS_SEULES = { fr: ['même équipe', 'et pourtant'], en: ['same team', 'a
 // « c'est ça, rentrer », « c'est ça, nous » : la morale en fin de texte
 const MORALE = { fr: /(^|[.!?]\s*)c'est ça,? [^.!?]{2,30}$/i, en: /(^|[.!?]\s*)(and )?that's (what|how|the) [^.!?]{2,30}$/i };
 const APPEL_INVENTE = { fr: /^(envoie(-lui)? ça|tague(-le|-la)?|garde ça)\b.*\b(qui|celle|celui|ceux)\b/i, en: /^(send this|tag)\b.*\b(who|that)\b/i };
+// La fausse précision d'une légende des mipaps : un chiffre, ou un nombre en
+// lettres suivi d'une unité (« quatre secondes », « trois couvertures »).
+const NOMBRE_ECRIT = /\b(deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|quinze|vingt|trente|quarante|cinquante|cent)\s+(minutes?|secondes?|heures?|jours?|semaines?|mois|ans|fois|mètres?|degrés?|kilos?|photos?|messages?|couvertures?|pulls?|épisodes?)\b/i;
+// L'anecdote racontée : « il a glissé », « elle avait commandé », « il
+// s'est endormi », pas « il a pas de freins » (un présent, un trait).
+const RECIT = /^(il|elle)\s+((avait|était|s'est|s'était|l'avait|lui avait|en avait|venait|voulait|regardait|faisait)\b|(a|l'a|lui a|en a|y a)\s+\S*(é|ée|és|ées|i|is|it|u|us|ert|ait|ois)(?=[\s.,;!?…]|$))/i;
+// L'heure à la minute près, à l'écran ou en légende : « 3 h 12 », « 18 h 02 »
+// (la demie et l'heure pile passent : « 18 h 30 », « 22 h »)
+const MINUTE_PRES = /\b\d{1,2}\s?h\s?(?!00\b|30\b)\d{2}\b/i;
 
 const normaliser = (s) =>
   String(s ?? '')
@@ -96,6 +117,7 @@ export function controlerStyle({ textes = [], legende = '', appel, langue = 'fr'
   textes.filter((t) => typeof t === 'string' && t.trim()).forEach((t, i) => {
     const ou = `texte ${i + 1}`;
     controlerFin(t, L, ou, f);
+    if (L === 'fr' && MINUTE_PRES.test(t)) f.push(`${ou} : une heure à la minute près (« ${t.match(MINUTE_PRES)[0]} ») fait anecdote inventée ; « 3 h du matin » suffit`);
     if (reel && /<3\s*$/.test(t.trim())) f.push(`${ou} : pas de « <3 » à la fin d'un texte de reel ; l'image fait la chute`);
     if (/^\(.*\)$/.test(t.trim())) f.push(`${ou} : un texte entier entre parenthèses, c'est le narrateur qui explique`);
   });
@@ -104,9 +126,9 @@ export function controlerStyle({ textes = [], legende = '', appel, langue = 'fr'
   const corps = lignes.slice(0, -1);
   // l'appel : un de la liste, tel quel
   const estAppel = (s) => (APPELS[L] || []).some((a) => normaliser(a) === normaliser(s));
-  if (lignes.length) {
+  if (lignes.length && !estAppel(appelLegende)) {
     if ((APPEL_INVENTE[L] || APPEL_INVENTE.fr).test(appelLegende)) f.push(`légende : appel inventé (« ${appelLegende} ») ; on écrit un appel de la liste, court, sans « celui qui »`);
-    else if (!estAppel(appelLegende)) f.push(`légende : la dernière ligne doit être un appel de la liste (${(APPELS[L] || []).slice(0, 4).join(' / ')}...), pas « ${appelLegende} »`);
+    else f.push(`légende : la dernière ligne doit être un appel de la liste (${(APPELS[L] || []).slice(0, 4).join(' / ')}...), pas « ${appelLegende} »`);
   }
   if (appel !== undefined && appel !== null && !estAppel(appel)) f.push(`appel de la dernière page : pas dans la liste (« ${appel} »)`);
   // la légende : un détail en plus, jamais l'image répétée, jamais une parenthèse
@@ -114,12 +136,16 @@ export function controlerStyle({ textes = [], legende = '', appel, langue = 'fr'
   corps.forEach((ligne, i) => {
     const ou = `légende, ligne ${i + 1}`;
     controlerFin(ligne, L, ou, f);
-    if (/^\(.*\)$/.test(ligne)) f.push(`${ou} : la légende explique entre parenthèses (« ${ligne} ») ; soit un détail vrai, soit rien`);
+    if (/^\(.*\)$/.test(ligne)) f.push(`${ou} : la légende explique entre parenthèses (« ${ligne} ») ; elle parle au lecteur ou se tait`);
+    if (L === 'fr') {
+      if (/\d/.test(ligne) || NOMBRE_ECRIT.test(ligne)) f.push(`${ou} : un chiffre dans la légende (« ${ligne} ») ; la fausse précision fait anecdote inventée, la légende parle au lecteur ou se tait (effet Barnum)`);
+      if (RECIT.test(ligne)) f.push(`${ou} : la légende raconte l'anecdote des personnages (« ${ligne} ») ; elle parle au lecteur ou se tait (effet Barnum)`);
+    }
     for (const p of phrases(ligne)) {
       const np = normaliser(p);
       if (np.length < 10) continue;
       if (normTextes.some((t) => t === np || t.includes(np) || (np.includes(t) && t.length >= 10))) {
-        f.push(`${ou} : la légende répète l'image (« ${p} ») ; elle ajoute un détail vrai ou se tait`);
+        f.push(`${ou} : la légende répète l'image (« ${p} ») ; elle parle au lecteur ou se tait`);
         break;
       }
     }

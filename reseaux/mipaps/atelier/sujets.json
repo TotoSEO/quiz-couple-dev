@@ -1,125 +1,1359 @@
 {
-  "note": "Banque de sujets des mipaps, en français (reseaux/mipaps/REFERENCES.md : les mécaniques et les textes de story.sketchers, nub et bom.seeat, reformulés ; jamais leur dessin). La routine prend le premier sujet libre de la catégorie du créneau, le développe en recette (reseaux/studio/src/mipaps/recette.ts), écrit son id dans le champ « sujet » du post : un sujet présent dans posts/ ou dans deja_publies.sujets n'est jamais repris. Les sujets datés (saison) passent avant la banque. L'idée d'un reel animé se lit plan par plan (|) ; celle d'une histoire page par page ; un post dit son style (mini, declaration, schema) ; un statique donne sa phrase et sa scène. « lui » est le Gribouillou, « elle » la Gribouillette ; la moitié des posts met elle dans le rôle drôle. Relue le 9 octobre 2026 (Thomas : « les chutes sont nulles, c'est de l'humour à l'IA ») : la chute est dans le dessin, « sans texte » dans l'idée veut dire que la dernière image se passe de phrase ; plus aucune fin qui commente (« c'est tout. », « je note. », « et pourtant. »), plus d'appel inventé avec « celui qui » : les appels sont ceux de lib/style.mjs.",
+  "note": "Banque de sujets des mipaps, réécrite le 18 octobre 2026 selon « L'effet Barnum » (LIGNE-EDITORIALE) : chaque sujet est une situation que presque tous les couples ont vécue, dite au lecteur (« toi quand... », « quand ta personne... », « nous deux... »), avec le geste que tout le monde fait, jamais un chiffre ni une anecdote inventés. « qui » dit qui fait la bêtise (lui, elle ou les deux) : on alterne. La routine prend le premier sujet libre de la catégorie du créneau, le passe aux quatre questions de « L'effet Barnum » (CONSIGNES), le développe en recette (reseaux/studio/src/mipaps/recette.ts) et écrit son id dans le champ « sujet » du post ; un sujet présent dans posts/ ou dans deja_publies.sujets n'est jamais repris. Un sujet qui porte « retire » (la date) est d'avant l'effet Barnum : il reste ici pour les posts déjà écrits, le contrôle refuse qu'un nouveau post le prenne. Les sujets datés (saison) passent avant la banque. L'idée d'un reel animé se lit plan par plan (|), celle d'une histoire page par page ; un post dit son style (mini, declaration, schema) ; un statique donne sa phrase et sa scène. « lui » est le Gribouillou, « elle » la Gribouillette.",
   "mipaps-anime": [
-    { "id": "ani-001", "pilier": "tendresse", "idee": "quand il me voit de loin | elle attend, bras croisés | il surgit du bord gauche en courant (joie, bras en l'air), passe au sprint et la dépasse sans freiner, elle surprise puis perplexe | il revient essoufflé, s'arrête, se tourne vers nous, timide ; elle rit puis fond | câlin, trois cœurs, il la serre fort, elle ne lâche plus ; pas de texte sur la chute" },
-    { "id": "ani-002", "pilier": "tendresse", "idee": "l'au revoir interminable | « bon j'y vais » : il marche vers le bord droit, elle debout | il revient pour un câlin | « j'y vais vraiment » : il repart, revient encore | chute : « une heure plus tard », il est toujours là, assis à côté d'elle, elle blasée" },
-    { "id": "ani-003", "pilier": "tendresse", "idee": "le réveil | lit (meubles lit_fond, lit_couette) : elle dodo, lui se réveille (baille) | il sort du lit (marche vers la droite), s'arrête, se retourne (angle 0 → 180 → 0) | il revient se coucher | il ressort, revient : trois fois ; chute « 7 h 45 », les deux dodo" },
-    { "id": "ani-004", "pilier": "contrastes", "idee": "le bisou raté | les deux de face | il se penche vers elle (penche_d, bisou) | elle se tourne au même moment (angle 0 → 90) pour regarder autre chose (curieux) | bisou sur l'oreille, lui gêné, elle n'a rien vu : c'est la chute, sans texte" },
-    { "id": "ani-005", "pilier": "contrastes", "idee": "« j'arrive dans 2 min » | il arrive de loin en courant et plante un panneau (pose plante) devant elle, texte « 2 min » | il repart en courant | elle attend (attend, tremble), le temps passe : fondu, elle s'assoit, fondu, elle dodo contre le panneau | chute « 2 min plus tard » et il n'est toujours pas là" },
-    { "id": "ani-006", "pilier": "contrastes", "idee": "elle vole le pull | lui content avec le pull (objet pull près de lui), elle arrive en marchant | elle prend le pull (pose tire), s'éloigne, ravie (joie) | lui tout seul, frigorifié, flocons | chute : elle revient et se blottit contre lui dans le pull, câlin" },
-    { "id": "ani-007", "pilier": "contrastes", "idee": "les frites volées une par une | lui gourmand avec le cornet de frites, elle à côté innocente (ange, auréole) | une frite part : elle miam, lui ne voit rien | encore une, et encore une : lui compte (pensif, points) | chute : le cornet est vide, lui choqué, elle toujours innocente" },
-    { "id": "ani-008", "pilier": "tendresse", "idee": "la flaque | pluie (objet pluie), une flaque au sol : il la porte à bout de bras (pose porte_haut, elle assise au-dessus) pour passer | il avance fièrement (marche) | il trébuche (pose tombe), les deux dans la flaque | chute : les deux trempés, morts de rire, cœurs" },
-    { "id": "ani-009", "pilier": "contrastes", "idee": "le tour complet | ils sont fâchés : il se retourne pour bouder (angle 0 → 180, boude), elle de face agacée | elle le fait tourner d'une patte (bras pointe, lui tourne 180 → 360) | il revient de face, encore boudeur | elle lui fait un bisou, il fond (transi) : c'est la chute, ses bras retombent, sans texte" },
-    { "id": "ani-010", "pilier": "tendresse", "idee": "quand elle a froid | elle frigorifiée, flocons, toute seule | il arrive de loin en courant avec la couverture (objet couverture) | il la pose sur elle (bras tend) | chute : les deux sous la couverture, elle contente, lui frigorifié à son tour" },
-    { "id": "ani-011", "pilier": "contrastes", "idee": "je gère le dîner | lui fier, bras sur les hanches, devant le fourneau (objet tasse ou gâteau à transformer : poêle absente, on prend la pizza) | fumée (objet nuage) qui monte, lui panique | elle arrive, blasée, n'a rien dit | chute : les deux avec des frites, le plat brûlé encore sur la table, sans texte" },
-    { "id": "ani-012", "pilier": "manque", "idee": "il ne répond pas | elle regarde son téléphone (bras tient, objet telephone), attend | elle imagine le pire : nuage noir, panique, tremble | fondu | lui, allongé, dodo, le téléphone à côté ; chute « il dormait. »" },
-    { "id": "ani-013", "pilier": "contrastes", "idee": "la couette | lit : les deux allongés, la couette au milieu | elle tire la couette (pose tire), il se retrouve découvert, frigorifié | il tire, c'est elle qui grelotte | chute : le matin, les deux en boule serrés sous le même coin de couette, dodo" },
-    { "id": "ani-014", "pilier": "contrastes", "idee": "« c'est à 5 minutes » | les deux partent en marchant, confiants | ils marchent toujours, sueur (effort) | ils courent (court), puis sprint | chute : arrivés essoufflés devant une pancarte ; « c'était 5 minutes en voiture »" },
-    { "id": "ani-015", "pilier": "contrastes", "idee": "le selfie | lui tient le téléphone (bras tend_d, objet telephone), les deux prennent la pose (fier, clin) | nouvelle pose, nouvelle pose | « 48 photos plus tard » : lui KO, allongé | chute : elle choisit la première, ravie" },
-    { "id": "ani-016", "pilier": "tendresse", "idee": "quand je rentre et qu'il est là | il attend, assis, content | elle arrive de loin en courant (joie) | elle saute (pose saut) et atterrit dans ses bras : câlin | cœurs qui flottent, il la fait tourner, sans texte" },
-    { "id": "ani-017", "pilier": "tendresse", "idee": "le compliment | elle lui dit quelque chose (bras pointe vers lui), texte « t'es beau » | lui surpris, puis ému (emu), puis transi | il n'arrive plus à bouger, cœurs | chute : elle part en marchant, lui toujours figé, « il est resté là 10 minutes »" },
-    { "id": "ani-018", "pilier": "contrastes", "idee": "le pardon | dos à dos, boudeurs | il se retourne, supplie (mains jointes) | elle boude encore, regard en coin (vers lui) | il lui tend un cœur (objet coeur au bout du bras tend_d) ; chute : main dans la main, un petit cœur au-dessus" },
-    { "id": "ani-019", "pilier": "contrastes", "idee": "encore un épisode | canapé (meuble canape_fond), les deux assis, télé (objet tele), texte « 22 h » | « 1 h » : yeux plats (blase) | « 3 h » : lui KO, elle encore devant | chute : « 7 h », le réveil (objet horloge) : elle dodo, lui en sprint vers la droite" },
-    { "id": "ani-020", "pilier": "tendresse", "idee": "le lit froid | lit : lui dodo, bien au chaud | elle arrive, frigorifiée (flocons), se glisse dans le lit | elle colle ses pattes glacées : lui choqué (rayons), réveillé en sursaut | chute : il la garde quand même contre lui, câlin, dodo à deux" },
-    { "id": "ani-021", "pilier": "tendresse", "idee": "le cadeau | il arrive de dos (angle 180), quelque chose derrière lui (objet cadeau caché) | il se retourne (180 → 0), timide, et tend le cadeau (bras tient) | elle émerveillée, étoiles dans les yeux | chute : elle ouvre, c'est des frites (objet frites) ; miam à deux" },
-    { "id": "ani-022", "pilier": "tendresse", "idee": "la pluie | pluie partout (objets pluie), elle seule, frigorifiée | il arrive en courant de loin avec le parapluie (objet parapluie, bras tend_haut_d) | il le tient au-dessus d'elle, lui reste sous la pluie, content | chute : elle le tire sous le parapluie, serrés, cœurs" },
-    { "id": "ani-023", "pilier": "tendresse", "idee": "le dimanche | canapé, popcorn (objet popcorn), les deux assis | elle s'endort doucement sur lui (dodo, penchée) | lui n'ose plus bouger (tremble, sueur), le popcorn hors de portée | chute : il s'endort aussi, « 3 h sans bouger »" },
-    { "id": "ani-024", "pilier": "contrastes", "idee": "quand elle boude | elle de dos (angle 180), boude | il tourne autour d'elle en marchant (de face à de profil), lui tend un cœur : rien | il revient avec une fleur (objet fleur) : rien | chute : il revient avec des frites, elle se retourne d'un coup, joie" },
-    { "id": "ani-025", "pilier": "contrastes", "idee": "café d'abord | matin, elle avec sa tasse (objet tasse), fatiguée (yeux fatigue) | il arrive plein d'énergie (energique), parle (pas de bulle : il gesticule, bras leves) | elle lève une patte (bras pointe_devant) : chut | elle boit ; chute : elle sourit, « maintenant tu peux parler »" },
-    { "id": "ani-026", "pilier": "tendresse", "idee": "la photo de couple | il tient le téléphone à bout de bras (tend_haut_d), elle à côté | il bouge, elle recadre (pose penche) | « 10 essais plus tard » : les deux étourdis | chute : la photo est floue, ils la gardent quand même, cœur" },
-    { "id": "ani-027", "pilier": "manque", "idee": "la porte | elle part en marchant vers la droite, texte « à ce soir » | elle revient en courant pour un bisou, repart | elle revient encore : les clés (objet cle) | chute : elle revient une troisième fois, juste pour un câlin, « bon, à ce soir. (vraiment) »" },
-    { "id": "ani-028", "pilier": "contrastes", "idee": "il a faim | lui tourne en rond en marchant (angle qui tourne), hésite, points d'interrogation | il regarde le frigo (objet porte en guise de frigo) | il revient, déprimé, rien dedans | chute : elle arrive avec la pizza (objet pizza) : étoiles, triomphe, saut" },
-    { "id": "ani-029", "pilier": "tendresse", "idee": "quand il dort | lit : lui dodo, zzz, bouche ouverte | elle à côté, yeux grands ouverts (attend), le regarde | elle lui met un oreiller sous la tête (objet oreiller), pose la couverture | chute : elle s'endort contre lui, cœur" },
-    { "id": "ani-030", "pilier": "contrastes", "idee": "on sort ? | elle prête, debout, contente ; lui assis, texte « 2 min » | elle attend, tremble, puis s'assoit | elle s'endort | chute : il arrive, tout fier, prêt ; elle dort, « et c'est moi qui suis longue, hein. »" },
-    { "id": "ani-031", "pilier": "manque", "idee": "les retrouvailles | la gare : une pancarte (objet panneau_fleche), elle attend avec une valise (objet valise), inquiète | il arrive de très loin (tout petit, taille 120, puis grandit en courant) | elle court aussi, les deux se rejoignent au milieu | câlin, saut à deux, cœurs partout, « enfin. »" },
-    { "id": "ani-032", "pilier": "tendresse", "idee": "le câlin qui arrive des deux côtés | elle entre par la gauche en marchant, lui par la droite | ils se voient : joie, ils accélèrent | ils se cognent doucement au milieu (impact), étourdis | chute : câlin quand même, cœurs, une bosse sur chaque front, sans texte" }
+    {
+      "id": "ani-131",
+      "pilier": "manque",
+      "qui": "les deux",
+      "idee": "quand ta personne rentre du boulot | elle attend, l'air de s'ennuyer | il arrive de loin, ils courent l'un vers l'autre comme après un an | câlin, cœurs | chute : « on s'est vus ce matin. »"
+    },
+    {
+      "id": "ani-124",
+      "pilier": "contrastes",
+      "qui": "les deux",
+      "idee": "quand le livreur sonne | les deux sur le canapé (canape_fond), la sonnette | ils sprintent ouvrir en même temps et se cognent (étoiles) | chute : assis par terre, la pizza entre eux, contents, sans texte"
+    },
+    {
+      "id": "ani-132",
+      "pilier": "tendresse",
+      "qui": "lui",
+      "idee": "quand ta personne rentre avec un petit truc pour toi | il arrive, quelque chose caché derrière le dos, timide | il tend un bubble tea, elle est aux anges | chute : « j'suis passé devant, j'ai pensé à toi »"
+    },
+    {
+      "id": "ani-104",
+      "pilier": "contrastes",
+      "qui": "elle",
+      "idee": "« non merci, j'ai pas faim » | il a une pizza, elle croise les bras, sereine | elle regarde la pizza, puis lui | « juste pour goûter » | chute : plus de pizza, elle l'air d'un ange, lui : « euh, il en reste ? »"
+    },
+    {
+      "id": "ani-120",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "quand ta personne a faim | il est grognon, nuage noir | « ça va ? » « grmbl » | elle sort un croissant de derrière son dos | chute : il fond, « merci mon cœur »"
+    },
+    {
+      "id": "ani-101",
+      "pilier": "tendresse",
+      "qui": "elle",
+      "idee": "nous deux au lit | collés sous la couette (meubles lit_fond, lit_couette), câlin, cœurs | « un peu plus tard » : il a chaud, il se décale vers le bord ; elle se rapproche en dormant | elle se rapproche encore, il est tout au bord | chute : il tombe du lit, elle dort tranquille au milieu, sans texte"
+    },
+    {
+      "id": "ani-103",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "quand on doit choisir un film | les deux sur le canapé (canape_fond), la télé devant | il propose (idée), elle fait non de la tête ; elle propose, il fait la tête | « 1 h plus tard » : toujours en train de chercher, la tête dans les mains | chute : les deux dorment l'un sur l'autre, la télé encore allumée"
+    },
+    {
+      "id": "ani-105",
+      "pilier": "contrastes",
+      "qui": "elle",
+      "idee": "toi quand t'as toujours froid et que ta personne a jamais froid | elle tremble (signes flocons), lui content en t-shirt | elle vient se coller à lui | chute : elle lui a pris son pull (objet pull), c'est lui qui tremble maintenant, elle ravie"
+    },
+    {
+      "id": "ani-107",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "« t'as quoi ? » « rien » | il boude, bras croisés, dos tourné, il jette des regards par-dessus son épaule | elle passe sans rien remarquer | il soupire et se met sur son chemin, toujours boudeur | chute : elle le prend dans ses bras, il fond tout de suite"
+    },
+    {
+      "id": "ani-102",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "toi quand ta personne dit « j'arrive » | elle prête devant la porte, sac à la patte, contente | « 20 min plus tard » : assise par terre, blasée | chute : il arrive en courant, essoufflé, fier, un seul pied chaussé ; elle se relève sans un mot"
+    },
+    {
+      "id": "ani-109",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "les vidéos qu'on s'envoie toute la journée | elle sur son téléphone, une notification, elle rit | lui sur son téléphone, une notification, il rit | chute : le plan s'élargit, ils sont sur le même canapé, chacun sur son téléphone, à s'envoyer des vidéos"
+    },
+    {
+      "id": "ani-108",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "chercher un truc qui est juste devant toi | il cherche ses clés partout, panique (sueur) | elle arrive et prend les clés posées juste devant lui | chute : il fait comme s'il le savait, l'air moqueur, elle blasée"
+    },
+    {
+      "id": "ani-110",
+      "pilier": "manque",
+      "qui": "les deux",
+      "idee": "« raccroche toi » « non toi » | elle au téléphone, timide, cœurs | lui au téléphone, timide | chute : « 1 h plus tard », les deux endormis, le téléphone encore à l'oreille"
+    },
+    {
+      "id": "ani-113",
+      "pilier": "contrastes",
+      "qui": "elle",
+      "idee": "« je suis prête dans 5 minutes » | elle essaie une tenue, se regarde, non | une autre, non (agace) | lui attend, assis par terre | chute : elle repart avec la première, contente ; lui se relève, blasé"
+    },
+    {
+      "id": "ani-111",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "s'endormir devant la série | canapé, ils regardent ; il dort au bout de quelques secondes | elle le secoue, il se réveille d'un coup, « je regarde, je regarde » | chute : il ronfle (zzz), elle lui met la couverture quand même"
+    },
+    {
+      "id": "ani-114",
+      "pilier": "contrastes",
+      "qui": "les deux",
+      "idee": "quand on se dispute pour rien | face à face, colère (nuage noir) | dos à dos, bras croisés | chacun jette un œil par-dessus son épaule | chute : ils se jettent dans les bras l'un de l'autre sans rien dire, cœurs"
+    },
+    {
+      "id": "ani-112",
+      "pilier": "contrastes",
+      "qui": "elle",
+      "idee": "l'épisode regardé en douce sans l'autre | elle seule sur le canapé, gourmande, popcorn | il arrive, elle cache le popcorn derrière elle | chute : il lance l'épisode, elle fait la surprise devant un épisode qu'elle a déjà vu"
+    },
+    {
+      "id": "ani-115",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "la dernière part | un gâteau entre eux, chacun le pousse vers l'autre, poli | « prends-la » « non toi » | elle se retourne une seconde | chute : la part a disparu, il a la bouche pleine, l'air innocent"
+    },
+    {
+      "id": "ani-116",
+      "pilier": "manque",
+      "qui": "elle",
+      "idee": "le bruit des clés dans la porte | elle sur le canapé, l'air de s'ennuyer | un bruit de porte, elle se redresse d'un coup | chute : elle court jusqu'à lui, câlin qui la soulève, cœurs"
+    },
+    {
+      "id": "ani-118",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "quand tu racontes ta journée et que ta personne écoute à moitié | elle raconte avec les pattes, énergique ; lui sur son téléphone hoche la tête | elle s'arrête et le fixe | chute : il pose le téléphone, menton dans les pattes, il écoute pour de bon, elle reprend contente"
+    },
+    {
+      "id": "ani-119",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "la musique dans la voiture | elle met sa chanson (notes), contente | il change, content | elle remet la sienne, il fait la tête | chute : la chanson d'après, ils chantent les deux à fond (notes, chante)"
+    },
+    {
+      "id": "ani-145",
+      "pilier": "tendresse",
+      "qui": "elle",
+      "idee": "faire semblant de dormir pour qu'on te porte jusqu'au lit | elle « dort » sur le canapé | il la soulève et la porte | elle ouvre un œil, sourit | chute : il la pose dans le lit, elle se rendort pour de vrai"
+    },
+    {
+      "id": "ani-121",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "le selfie à deux | elle tient le téléphone, il ferme les yeux | « encore une » : elle fait une grimace | « encore une » : il éternue | chute : elle garde celle où il éternue, ils rient dessus ensemble"
+    },
+    {
+      "id": "ani-122",
+      "pilier": "tendresse",
+      "qui": "lui",
+      "idee": "réveiller ta personne en douceur | elle chuchote près de son oreille, il dort | elle tapote son épaule, il dort | elle saute sur le lit | chute : il se réveille d'un bond et la serre, elle rit"
+    },
+    {
+      "id": "ani-144",
+      "pilier": "contrastes",
+      "qui": "elle",
+      "idee": "quand ta personne te pique ta place au chaud | il se lève une seconde du canapé | elle se glisse à sa place, toute contente | il revient, la voit, blasé | chute : il s'assoit sur elle, elle rit, câlin"
+    },
+    {
+      "id": "ani-123",
+      "pilier": "tendresse",
+      "qui": "lui",
+      "idee": "le câlin « juste 2 secondes » | il doit partir, sac à la patte, elle demande un câlin | il pose son sac | il enlève son bonnet | chute : ils sont assis par terre, toujours en câlin, le sac oublié"
+    },
+    {
+      "id": "ani-125",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "montrer une vidéo drôle à ta personne | elle tend son téléphone, elle rit d'avance | il regarde, ne rit pas | elle pointe l'écran, « attends, là » | chute : il rit enfin, elle le regarde rire, contente"
+    },
+    {
+      "id": "ani-138",
+      "pilier": "tendresse",
+      "qui": "lui",
+      "idee": "danser dans la cuisine | il met de la musique (notes) et danse tout seul | elle le regarde, blasée | il lui tend la patte | chute : les deux dansent, des notes partout"
+    },
+    {
+      "id": "ani-126",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "« ce soir on se fait une grosse soirée » | ils préparent tout : popcorn, couverture, la télé | « 22 h » | chute : les deux dorment sous la couverture, le popcorn pas touché"
+    },
+    {
+      "id": "ani-127",
+      "pilier": "tendresse",
+      "qui": "elle",
+      "idee": "quand ça va pas et que ta personne le voit tout de suite | elle assise, triste, nuage noir | il arrive, s'assoit à côté sans rien dire | il pose sa tête sur son épaule | chute : elle sourit, un cœur entre eux"
+    },
+    {
+      "id": "ani-139",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "quand ta personne parle en dormant | il dort | il marmonne, une bulle | elle se penche pour écouter | chute : « ...pas les cornichons... », elle rit sous la couette"
+    },
+    {
+      "id": "ani-128",
+      "pilier": "manque",
+      "qui": "lui",
+      "idee": "l'au revoir du soir qui dure | « bon, j'y vais » : il marche vers la porte (objet porte) | il revient pour un bisou | il repart, revient pour un câlin | chute : « 1 h plus tard », il est assis sur le canapé avec elle, le manteau encore sur le dos"
+    },
+    {
+      "id": "ani-140",
+      "pilier": "tendresse",
+      "qui": "elle",
+      "idee": "les chatouilles | elle arrive derrière lui en douce | elle le chatouille, il rit et tombe | chute : il riposte, les deux par terre, morts de rire"
+    },
+    {
+      "id": "ani-129",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "quand ta personne chante sous la douche | lui dans la baignoire (objet baignoire), chante fort (notes) | elle se bouche les oreilles (bras oreilles_bouchees) | chute : elle finit par chanter avec lui, des notes partout"
+    },
+    {
+      "id": "ani-136",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "essayer de faire peur à ta personne | il se cache derrière la porte, malicieux | elle arrive, il saute « bouh » | elle ne bronche pas, blasée | chute : elle lui fait « bouh » à son tour, il tombe à la renverse"
+    },
+    {
+      "id": "ani-133",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "« juste une petite sieste » | les deux s'allongent sur le canapé, « 20 min » | « 3 h plus tard » : il fait nuit, ils dorment toujours | chute : ils se réveillent, perdus, « on est quel jour ? »"
+    },
+    {
+      "id": "ani-130",
+      "pilier": "tendresse",
+      "qui": "lui",
+      "idee": "regarder ta personne dormir | elle dort, lui assis à côté la regarde, cœurs | elle ouvre un œil, il sursaute | chute : elle le tire sous la couette, câlin"
+    },
+    {
+      "id": "ani-001",
+      "pilier": "tendresse",
+      "idee": "quand il me voit de loin | elle attend, bras croisés | il surgit du bord gauche en courant (joie, bras en l'air), passe au sprint et la dépasse sans freiner, elle surprise puis perplexe | il revient essoufflé, s'arrête, se tourne vers nous, timide ; elle rit puis fond | câlin, trois cœurs, il la serre fort, elle ne lâche plus ; pas de texte sur la chute"
+    },
+    {
+      "id": "ani-002",
+      "pilier": "tendresse",
+      "idee": "l'au revoir interminable | « bon j'y vais » : il marche vers le bord droit, elle debout | il revient pour un câlin | « j'y vais vraiment » : il repart, revient encore | chute : « une heure plus tard », il est toujours là, assis à côté d'elle, elle blasée"
+    },
+    {
+      "id": "ani-003",
+      "pilier": "tendresse",
+      "idee": "« Allez, je me lève » : il se lève, va jusqu'à la porte, il fait trop froid, il revient se coucher ; « encore un peu » ; les deux dorment serrés, le réveil sur le côté. Quatre plans, 14 secondes."
+    },
+    {
+      "id": "ani-004",
+      "pilier": "contrastes",
+      "idee": "Le bisou raté : il se penche vers elle pour un bisou, elle se tourne au même moment pour regarder le chat, le bisou atterrit sur le côté de sa tête, il est gêné. Trois plans, 11 secondes."
+    },
+    {
+      "id": "ani-005",
+      "pilier": "contrastes",
+      "idee": "« j'arrive dans 2 min » | il arrive de loin en courant et plante un panneau (pose plante) devant elle, texte « 2 min » | il repart en courant | elle attend (attend, tremble), le temps passe : fondu, elle s'assoit, fondu, elle dodo contre le panneau | chute « 2 min plus tard » et il n'est toujours pas là"
+    },
+    {
+      "id": "ani-006",
+      "pilier": "contrastes",
+      "idee": "elle vole le pull | lui content avec le pull (objet pull près de lui), elle arrive en marchant | elle prend le pull (pose tire), s'éloigne, ravie (joie) | lui tout seul, frigorifié, flocons | chute : elle revient et se blottit contre lui dans le pull, câlin"
+    },
+    {
+      "id": "ani-007",
+      "pilier": "contrastes",
+      "idee": "les frites volées une par une | lui gourmand avec le cornet de frites, elle à côté innocente (ange, auréole) | une frite part : elle miam, lui ne voit rien | encore une, et encore une : lui compte (pensif, points) | chute : le cornet est vide, lui choqué, elle toujours innocente"
+    },
+    {
+      "id": "ani-008",
+      "pilier": "tendresse",
+      "idee": "la flaque | pluie (objet pluie), une flaque au sol : il la porte à bout de bras (pose porte_haut, elle assise au-dessus) pour passer | il avance fièrement (marche) | il trébuche (pose tombe), les deux dans la flaque | chute : les deux trempés, morts de rire, cœurs",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "ani-009",
+      "pilier": "contrastes",
+      "idee": "Le tour complet : ils sont fâchés, il boude de dos ; elle le fait tourner d'une patte ; il revient de face, encore boudeur ; elle lui fait un bisou et il fond. Trois plans, 11 secondes."
+    },
+    {
+      "id": "ani-010",
+      "pilier": "tendresse",
+      "idee": "quand elle a froid | elle frigorifiée, flocons, toute seule | il arrive de loin en courant avec la couverture (objet couverture) | il la pose sur elle (bras tend) | chute : les deux sous la couverture, elle contente, lui frigorifié à son tour"
+    },
+    {
+      "id": "ani-011",
+      "pilier": "contrastes",
+      "idee": "« Je gère le dîner » : il est fier devant sa pizza, la fumée monte, il panique ; elle arrive sans un mot, le téléphone à la patte : « j'ai commandé. » Trois plans, 12 secondes."
+    },
+    {
+      "id": "ani-012",
+      "pilier": "manque",
+      "idee": "il ne répond pas | elle regarde son téléphone (bras tient, objet telephone), attend | elle imagine le pire : nuage noir, panique, tremble | fondu | lui, allongé, dodo, le téléphone à côté ; chute « il dormait. »",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "ani-013",
+      "pilier": "contrastes",
+      "idee": "La couette : elle la tire à elle, il a froid ; il la reprend, c'est elle qui a froid ; au matin les deux sont serrés sous le même coin. Quatre plans, 13 secondes."
+    },
+    {
+      "id": "ani-014",
+      "pilier": "contrastes",
+      "idee": "« C'est à 5 minutes » : ils partent confiants, marchent encore, courent, et arrivent essoufflés devant une pancarte. Quatre plans, 14 secondes."
+    },
+    {
+      "id": "ani-015",
+      "pilier": "contrastes",
+      "idee": "« Juste une photo de nous deux » : ils posent, elle en veut encore une, puis encore une ; cinquante photos plus tard il est KO ; elle garde la première. Quatre plans, 14 secondes."
+    },
+    {
+      "id": "ani-016",
+      "pilier": "tendresse",
+      "idee": "quand je rentre et qu'il est là | il attend, assis, content | elle arrive de loin en courant (joie) | elle saute (pose saut) et atterrit dans ses bras : câlin | cœurs qui flottent, il la fait tourner, sans texte"
+    },
+    {
+      "id": "ani-017",
+      "pilier": "tendresse",
+      "idee": "le compliment | elle lui dit quelque chose (bras pointe vers lui), texte « t'es beau » | lui surpris, puis ému (emu), puis transi | il n'arrive plus à bouger, cœurs | chute : elle part en marchant, lui toujours figé, « il est resté là 10 minutes »"
+    },
+    {
+      "id": "ani-018",
+      "pilier": "contrastes",
+      "idee": "le pardon | dos à dos, boudeurs | il se retourne, supplie (mains jointes) | elle boude encore, regard en coin (vers lui) | il lui tend un cœur (objet coeur au bout du bras tend_d) ; chute : main dans la main, un petit cœur au-dessus"
+    },
+    {
+      "id": "ani-019",
+      "pilier": "contrastes",
+      "idee": "Encore un épisode : le canapé, le popcorn, 22 h ; 1 h, les yeux plats ; 3 h, il dort, elle regarde encore ; 7 h, le réveil, il part en sprint. Quatre plans, 14 secondes."
+    },
+    {
+      "id": "ani-020",
+      "pilier": "tendresse",
+      "idee": "Les pieds gelés : il dort au chaud ; elle arrive frigorifiée, se glisse dans le lit et colle ses pieds glacés sur lui ; il se réveille en sursaut, « ils sont pas si froids » ; il la garde contre lui. Quatre plans, 14 secondes."
+    },
+    {
+      "id": "ani-021",
+      "pilier": "tendresse",
+      "idee": "le cadeau | il arrive de dos (angle 180), quelque chose derrière lui (objet cadeau caché) | il se retourne (180 → 0), timide, et tend le cadeau (bras tient) | elle émerveillée, étoiles dans les yeux | chute : elle ouvre, c'est des frites (objet frites) ; miam à deux",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "ani-022",
+      "pilier": "tendresse",
+      "idee": "la pluie | pluie partout (objets pluie), elle seule, frigorifiée | il arrive en courant de loin avec le parapluie (objet parapluie, bras tend_haut_d) | il le tient au-dessus d'elle, lui reste sous la pluie, content | chute : elle le tire sous le parapluie, serrés, cœurs"
+    },
+    {
+      "id": "ani-023",
+      "pilier": "tendresse",
+      "idee": "Quand ta personne s'endort sur toi : le canapé, le popcorn ; elle glisse et s'endort sur lui, le popcorn reste hors de portée, il n'ose plus bouger ; trois heures plus tard les deux dorment. Trois plans, 12 secondes."
+    },
+    {
+      "id": "ani-024",
+      "pilier": "contrastes",
+      "idee": "Quand elle boude : elle est de dos ; il lui tend un cœur, puis une fleur, rien ; il revient avec des frites et elle se retourne d'un coup. Trois plans, 13 secondes."
+    },
+    {
+      "id": "ani-025",
+      "pilier": "contrastes",
+      "idee": "Café d'abord : elle, fatiguée, sa tasse ; il arrive plein d'énergie et parle ; elle lève une patte, chut ; elle boit, sourit : maintenant il peut parler. Trois plans, 11 secondes."
+    },
+    {
+      "id": "ani-026",
+      "pilier": "tendresse",
+      "idee": "la photo de couple | il tient le téléphone à bout de bras (tend_haut_d), elle à côté | il bouge, elle recadre (pose penche) | « 10 essais plus tard » : les deux étourdis | chute : la photo est floue, ils la gardent quand même, cœur",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "ani-027",
+      "pilier": "manque",
+      "idee": "L'au revoir qui n'en finit pas : « à ce soir », elle revient pour un bisou, pour les clés, puis se jette dans ses bras ; « bon, là j'y vais pour de vrai ». Quatre plans, 16 secondes."
+    },
+    {
+      "id": "ani-028",
+      "pilier": "contrastes",
+      "idee": "Quand t'as faim et qu'il n'y a rien : il hésite, rouvre le frigo au cas où, rien ; elle arrive avec une pizza, il saute de joie. Trois plans, 12 secondes."
+    },
+    {
+      "id": "ani-029",
+      "pilier": "tendresse",
+      "idee": "Quand ta personne s'endort en deux secondes : il dort la bouche ouverte, elle a les yeux grands ouverts ; à 3 h du matin elle lui glisse un oreiller et le couvre ; elle finit par s'endormir contre lui. Trois plans, 12 secondes."
+    },
+    {
+      "id": "ani-030",
+      "pilier": "contrastes",
+      "idee": "« On sort ? » : elle est prête, il dit 2 min ; elle attend, s'assoit, s'endort ; il arrive tout fier. Quatre plans, 14 secondes."
+    },
+    {
+      "id": "ani-031",
+      "pilier": "manque",
+      "idee": "les retrouvailles | la gare : une pancarte (objet panneau_fleche), elle attend avec une valise (objet valise), inquiète | il arrive de très loin (tout petit, taille 120, puis grandit en courant) | elle court aussi, les deux se rejoignent au milieu | câlin, saut à deux, cœurs partout, « enfin. »",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "ani-032",
+      "pilier": "tendresse",
+      "idee": "le câlin qui arrive des deux côtés | elle entre par la gauche en marchant, lui par la droite | ils se voient : joie, ils accélèrent | ils se cognent doucement au milieu (impact), étourdis | chute : câlin quand même, cœurs, une bosse sur chaque front, sans texte",
+      "retire": "2026-10-18"
+    }
   ],
   "mipaps-post": [
-    { "id": "pos-001", "style": "mini", "texte": "j'pense à toi là.", "scene": "lui, amoureux (yeux cœur), deux petits cœurs autour" },
-    { "id": "pos-002", "style": "mini", "texte": "reviens vite stp", "scene": "elle, supplie, mains jointes, petit tremblement" },
-    { "id": "pos-003", "style": "mini", "texte": "t'as encore oublié le pain...", "scene": "elle, blasée, les yeux plats, un croissant posé à côté pour la forme" },
-    { "id": "pos-004", "style": "mini", "texte": "...mais je dis rien", "scene": "lui, nerveux, sourire forcé (dents), gouttes de sueur" },
-    { "id": "pos-005", "style": "mini", "texte": "j'ai froid. viens.", "scene": "elle, frigorifiée, flocons, bras croisés" },
-    { "id": "pos-006", "style": "mini", "texte": "je gère.", "scene": "lui, fier, bras sur les hanches, étincelles ; en légende : « (il gérait pas) »" },
-    { "id": "pos-007", "style": "mini", "texte": "t'es où ?", "scene": "lui, inquiet, téléphone à la patte" },
-    { "id": "pos-008", "style": "mini", "texte": "encore cinq minutes", "scene": "elle, dodo, sous la couette (meubles lit_fond et lit_couette)" },
-    { "id": "pos-009", "style": "mini", "texte": "j'ai faim mais je veux pas choisir", "scene": "lui, hésite, une pizza d'un côté et un burger de l'autre" },
-    { "id": "pos-010", "style": "mini", "texte": "6 h de crise pour finir sur « c'est pas si grave »", "scene": "elle, zen, assise, les yeux fermés, étincelles" },
-    { "id": "pos-011", "style": "mini", "texte": "JE T'AIME !!!", "scene": "lui, triomphe, saut, étoiles" },
-    { "id": "pos-012", "style": "mini", "texte": "tu dors ?", "scene": "lit : elle les yeux grands ouverts, lui dodo à côté, zzz" },
-    { "id": "pos-013", "style": "mini", "texte": "ok j'avoue c'était moi", "scene": "lui, gêné, la patte sur la bouche, joues rouges" },
-    { "id": "pos-014", "style": "mini", "texte": "j'ai rien fait", "scene": "elle, innocente, auréole, mains jointes, un cornet de frites vide à côté" },
-    { "id": "pos-015", "style": "declaration", "texte": "même quand on est pas d'accord, on est dans la même équipe.", "scene": "le petit duo du câlin (automatique)" },
-    { "id": "pos-016", "style": "declaration", "texte": "on s'engueule pour la vaisselle. on s'endort collés.", "scene": "le petit duo du câlin (automatique)" },
-    { "id": "pos-017", "style": "declaration", "texte": "merci d'être resté le jour où j'étais pas facile.", "scene": "le petit duo du câlin (automatique)" },
-    { "id": "pos-018", "style": "declaration", "texte": "t'as jamais haussé la voix. en 4 ans.", "scene": "le petit duo du câlin (automatique)" },
-    { "id": "pos-019", "style": "declaration", "texte": "je sais pas ce que je ferais sans toi. probablement rien, je resterais au lit.", "scene": "le petit duo du câlin (automatique)" },
-    { "id": "pos-020", "style": "schema", "texte": "j'ai fait un schéma", "scene": "venn : « ce qui me calme » / « ce qui me stresse » / au milieu « toi »" },
-    { "id": "pos-021", "style": "schema", "texte": "mon humeur, un jour normal", "scene": "courbe : de « réveil » à « tu rentres », qui descend toute la journée et remonte d'un coup à la fin, repère « tu rentres »" },
-    { "id": "pos-022", "style": "schema", "texte": "liste de courses", "scene": "liste : pain (coché), lait (coché), un câlin (barré), un câlin (pas coché, réécrit)" },
-    { "id": "pos-023", "style": "schema", "texte": "état des lieux", "scene": "barres : patience 12, envie de pizza 100, amour 100, sommeil 30" },
-    { "id": "pos-024", "style": "schema", "texte": "dans ma tête, là tout de suite", "scene": "camembert : toi 70, manger 20, dormir 10" },
-    { "id": "pos-025", "style": "mini", "texte": "moi en train de me rappeler ce que tu m'as dit de pas oublier. je me rappelle juste que fallait pas oublier.", "scene": "elle, pensive, points de suspension, la patte au menton" },
-    { "id": "pos-026", "style": "mini", "texte": "si je t'avais pas rencontré, là tout de suite tu serais avec quelqu'un d'autre. (je t'en veux)", "scene": "elle vexée, bras croisés, regard en coin vers lui ; lui perplexe à côté, en plus petit" },
-    { "id": "pos-027", "style": "mini", "texte": "t'es tellement habitué à ma bizarrerie que quand je suis normale tu crois que je suis triste", "scene": "elle blasée, de face ; lui inquiet, en plus petit, la patte tendue vers elle" },
-    { "id": "pos-028", "style": "mini", "texte": "j'ai trop hâte de me blottir", "scene": "lui, veut un câlin (calin, bras tendus), cœurs" },
-    { "id": "pos-029", "style": "mini", "texte": "mouahaha tu peux plus partir maintenant", "scene": "elle, mauvaise idée (diable, cornes), mains jointes" },
-    { "id": "pos-030", "style": "mini", "texte": "bon. je vais te faire confiance sur ce coup-là.", "scene": "lui, suspicieux, un sourcil levé, la patte au menton" },
-    { "id": "pos-031", "style": "mini", "texte": "je t'aime plus que les frites. enfin presque.", "scene": "elle, gourmande, un cornet de frites à côté, cœurs" },
-    { "id": "pos-032", "style": "mini", "texte": "quand tu me dis « t'es belle » alors que j'ai la tête du matin", "scene": "elle, fou amoureux (transi), rougeur pleine, les pattes sur les joues" },
-    { "id": "pos-033", "style": "declaration", "texte": "643 km et je connais les horaires de train par cœur.", "scene": "le petit duo du câlin (automatique)" },
-    { "id": "pos-034", "style": "mini", "texte": "petit rappel : t'es ma personne.", "scene": "lui, amoureux, un gros cœur" },
-    { "id": "pos-035", "style": "schema", "texte": "à faire aujourd'hui", "scene": "liste : penser à toi (coché), repenser à toi (coché), arrêter d'y penser (pas coché), t'envoyer ça (coché)" },
-    { "id": "pos-036", "style": "mini", "texte": "je dors pas, j'attends que tu rentres. (je dors)", "scene": "lit : elle dodo avec le téléphone à côté" },
-    { "id": "pos-037", "style": "schema", "texte": "ce que je dis / ce que je pense", "scene": "barres : « ça va » 100 / « ça va pas » 100, avec deux barres de couleur différente, légende dans le titre" },
-    { "id": "pos-038", "style": "mini", "texte": "viens on reste au lit. toute la journée. toute la vie.", "scene": "lit : les deux sous la couette, elle contente, lui dodo" }
+    {
+      "id": "pos-110",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "ton pull est mieux sur moi",
+      "scene": "elle, fière, dans un pull trop grand (objet pull)"
+    },
+    {
+      "id": "pos-104",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "je suis pas fâchée.",
+      "scene": "elle, bras croisés, boude, nuage noir"
+    },
+    {
+      "id": "pos-109",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "nan mais regarde ça",
+      "scene": "elle, morte de rire, le téléphone tendu vers nous (bras tend_d, objet telephone)"
+    },
+    {
+      "id": "pos-140",
+      "style": "schema",
+      "qui": "les deux",
+      "texte": "ce qu'on mange quand on sait pas quoi manger",
+      "scene": "venn : gauche « ce que je propose », droite « ce que tu proposes », milieu « des pâtes »"
+    },
+    {
+      "id": "pos-135",
+      "style": "declaration",
+      "qui": "les deux",
+      "texte": "je sais que c'est toi rien qu'à ta façon de fermer la porte en rentrant.",
+      "scene": "le câlin dessous"
+    },
+    {
+      "id": "pos-103",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "t'as entendu ce bruit ?",
+      "scene": "elle, peur, les yeux grands ouverts dans le lit (lit_fond, lit_couette) ; à côté, lui dort (zzz)"
+    },
+    {
+      "id": "pos-145",
+      "style": "schema",
+      "qui": "les deux",
+      "texte": "avant de dormir, chez nous",
+      "scene": "liste à cocher : « tu dors ? » ; « on parle de tout » ; « on rigole pour rien » ; « allez, on dort » ; « non mais attends », tout coché"
+    },
+    {
+      "id": "pos-101",
+      "style": "mini",
+      "qui": "lui",
+      "texte": "t'as vu mon message ?",
+      "scene": "lui, inquiet, le téléphone à la patte (bras tient, objet telephone)"
+    },
+    {
+      "id": "pos-102",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "on mange quoi ce soir ?",
+      "scene": "elle, pensive, un point d'interrogation (signe question)"
+    },
+    {
+      "id": "pos-130",
+      "style": "declaration",
+      "qui": "les deux",
+      "texte": "t'es la seule personne avec qui je peux rien faire et trouver ça trop bien.",
+      "scene": "le câlin dessous"
+    },
+    {
+      "id": "pos-123",
+      "style": "mini",
+      "qui": "lui",
+      "texte": "pardon pour tout à l'heure. j'avais faim.",
+      "scene": "lui, désolé, les pattes jointes (bras priere), un croissant à côté (objet croissant)"
+    },
+    {
+      "id": "pos-141",
+      "style": "schema",
+      "qui": "les deux",
+      "texte": "les signes qu'on est ensemble depuis longtemps",
+      "scene": "liste à cocher : « on parle du dîner pendant le déjeuner » ; « on se dit tout par vidéo de chat » ; « on se comprend d'un regard » ; « on se dit encore bonne nuit », tout coché"
+    },
+    {
+      "id": "pos-108",
+      "style": "mini",
+      "qui": "lui",
+      "texte": "je peux goûter ?",
+      "scene": "lui, gourmand, les yeux sur un burger (objet burger)"
+    },
+    {
+      "id": "pos-113",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "c'est toi qui choisis. non, pas ça.",
+      "scene": "elle, hésite, le menton dans la patte (bras menton)"
+    },
+    {
+      "id": "pos-132",
+      "style": "declaration",
+      "qui": "les deux",
+      "texte": "avec toi, même faire les courses, c'est bien.",
+      "scene": "le câlin dessous"
+    },
+    {
+      "id": "pos-119",
+      "style": "mini",
+      "qui": "lui",
+      "texte": "attends, je finis juste ce truc et j'arrive",
+      "scene": "lui, concentré, une manette à la patte (objet manette)"
+    },
+    {
+      "id": "pos-142",
+      "style": "schema",
+      "qui": "les deux",
+      "texte": "ce qu'on fait le dimanche",
+      "scene": "camembert : « dire qu'on va sortir » 25 ; « rester au lit » 55 ; « se demander ce qu'on mange » 20"
+    },
+    {
+      "id": "pos-106",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "t'as pas froid toi ?",
+      "scene": "elle, tremble, flocons, les yeux fixés sur un pull (objet pull)"
+    },
+    {
+      "id": "pos-124",
+      "style": "declaration",
+      "qui": "les deux",
+      "texte": "j'aime bien quand tu fais ta tête de concentré et que tu sais pas que je te regarde.",
+      "scene": "le câlin dessous"
+    },
+    {
+      "id": "pos-120",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "t'as pris mon chargeur ?",
+      "scene": "elle, suspicieuse, un sourcil levé, le téléphone à la patte (objet telephone)"
+    },
+    {
+      "id": "pos-144",
+      "style": "schema",
+      "qui": "les deux",
+      "texte": "ce qui nous fait le plus nous disputer",
+      "scene": "barres : « la télécommande » 60 ; « le chauffage » 80 ; « on mange quoi » 95"
+    },
+    {
+      "id": "pos-114",
+      "style": "mini",
+      "qui": "lui",
+      "texte": "tu m'as manqué. t'étais partie chercher le pain.",
+      "scene": "lui, amour, cœurs, un croissant (objet croissant) à côté"
+    },
+    {
+      "id": "pos-133",
+      "style": "declaration",
+      "qui": "les deux",
+      "texte": "tu prends toute la couette et je dors quand même mieux quand t'es là.",
+      "scene": "le câlin dessous"
+    },
+    {
+      "id": "pos-111",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "tu m'écoutes ?",
+      "scene": "elle, vexée, bras croisés"
+    },
+    {
+      "id": "pos-143",
+      "style": "schema",
+      "qui": "elle",
+      "texte": "mon humeur quand t'es pas là",
+      "scene": "courbe : étiquettes « tu pars » et « tu rentres » ; elle descend doucement, tout en bas au milieu, et remonte d'un coup à la fin ; repère sur la remontée"
+    },
+    {
+      "id": "pos-112",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "je t'avais dit de prendre une veste",
+      "scene": "elle, blasée mais tendre, elle tend une écharpe (objet echarpe)"
+    },
+    {
+      "id": "pos-134",
+      "style": "declaration",
+      "qui": "les deux",
+      "texte": "t'as le droit d'être grognon. je reste.",
+      "scene": "le câlin dessous"
+    },
+    {
+      "id": "pos-116",
+      "style": "mini",
+      "qui": "lui",
+      "texte": "je vais pas m'endormir tout de suite",
+      "scene": "lui, dodo assis sur le canapé, la tête qui penche, zzz"
+    },
+    {
+      "id": "pos-148",
+      "style": "schema",
+      "qui": "les deux",
+      "texte": "ce que je fais quand t'es pas là",
+      "scene": "barres : « regarder nos photos » 60 ; « t'écrire » 85 ; « dormir de ton côté » 70"
+    },
+    {
+      "id": "pos-115",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "ok.",
+      "scene": "elle, blasée, le téléphone à la patte, nuage noir"
+    },
+    {
+      "id": "pos-125",
+      "style": "declaration",
+      "qui": "les deux",
+      "texte": "même après une journée pourrie, t'arrives à me faire rire avec une blague nulle.",
+      "scene": "le câlin dessous"
+    },
+    {
+      "id": "pos-117",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "on se fait un câlin et après je range, promis",
+      "scene": "elle, supplie, les pattes jointes (bras priere), une pile de linge derrière (objet caisse)"
+    },
+    {
+      "id": "pos-146",
+      "style": "schema",
+      "qui": "elle",
+      "texte": "ce que je dis vouloir / ce que je veux",
+      "scene": "venn : gauche « rien, ça va », droite « un câlin », milieu « un câlin »"
+    },
+    {
+      "id": "pos-118",
+      "style": "mini",
+      "qui": "elle",
+      "texte": "je fais quoi moi quand t'es pas là ?",
+      "scene": "elle, ennui, allongée par terre (pose allonge)"
+    },
+    {
+      "id": "pos-149",
+      "style": "schema",
+      "qui": "les deux",
+      "texte": "avant de partir, chez nous",
+      "scene": "liste à cocher : « t'as les clés ? » ; « t'as ton chargeur ? » ; « t'as éteint le four ? » ; « on remonte vérifier », tout coché"
+    },
+    {
+      "id": "pos-147",
+      "style": "schema",
+      "qui": "lui",
+      "texte": "pourquoi je t'appelle",
+      "scene": "camembert : « te dire un truc » 20 ; « t'entendre » 80"
+    },
+    {
+      "id": "pos-001",
+      "style": "mini",
+      "texte": "j'pense à toi là.",
+      "scene": "lui, amoureux (yeux cœur), deux petits cœurs autour"
+    },
+    {
+      "id": "pos-002",
+      "style": "mini",
+      "texte": "reviens vite stp",
+      "scene": "elle, supplie, mains jointes, petit tremblement"
+    },
+    {
+      "id": "pos-003",
+      "style": "mini",
+      "texte": "t'as encore oublié le pain...",
+      "scene": "elle, blasée, les yeux plats, un croissant posé à côté pour la forme"
+    },
+    {
+      "id": "pos-004",
+      "style": "mini",
+      "texte": "...mais je dis rien",
+      "scene": "lui, nerveux, sourire forcé (dents), gouttes de sueur",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "pos-005",
+      "style": "mini",
+      "texte": "j'ai froid. viens.",
+      "scene": "elle, frigorifiée, flocons, bras croisés"
+    },
+    {
+      "id": "pos-006",
+      "style": "mini",
+      "texte": "je gère.",
+      "scene": "lui, fier, bras sur les hanches, étincelles ; en légende : « (il gérait pas) »"
+    },
+    {
+      "id": "pos-007",
+      "style": "mini",
+      "texte": "je t'écris « t'es où ? » alors que t'es dans la pièce d'à côté",
+      "scene": "lui, inquiet, téléphone à la patte"
+    },
+    {
+      "id": "pos-008",
+      "style": "mini",
+      "texte": "encore cinq minutes stp",
+      "scene": "elle, dodo, sous la couette (meubles lit_fond et lit_couette)"
+    },
+    {
+      "id": "pos-009",
+      "style": "mini",
+      "texte": "j'ai faim mais je veux pas choisir",
+      "scene": "lui, hésite, une pizza d'un côté et un burger de l'autre"
+    },
+    {
+      "id": "pos-010",
+      "style": "mini",
+      "texte": "on s'est disputés une heure et plus personne se souvient pourquoi",
+      "scene": "elle, zen, assise, les yeux fermés, étincelles"
+    },
+    {
+      "id": "pos-011",
+      "style": "mini",
+      "texte": "JE T'AIME !!!",
+      "scene": "lui, triomphe, saut, étoiles",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "pos-012",
+      "style": "mini",
+      "texte": "tu dors ?",
+      "scene": "lit : elle les yeux grands ouverts, lui dodo à côté, zzz"
+    },
+    {
+      "id": "pos-013",
+      "style": "mini",
+      "texte": "ok j'avoue c'est moi qui ai mangé la dernière part",
+      "scene": "lui, gêné, la patte sur la bouche, joues rouges"
+    },
+    {
+      "id": "pos-014",
+      "style": "mini",
+      "texte": "j'ai rien fait",
+      "scene": "elle, innocente, auréole, mains jointes, un cornet de frites vide à côté"
+    },
+    {
+      "id": "pos-015",
+      "style": "declaration",
+      "texte": "même quand on est pas d'accord, on est dans la même équipe.",
+      "scene": "le petit duo du câlin (automatique)"
+    },
+    {
+      "id": "pos-016",
+      "style": "declaration",
+      "texte": "on s'engueule pour la vaisselle. on s'endort collés.",
+      "scene": "le petit duo du câlin (automatique)"
+    },
+    {
+      "id": "pos-017",
+      "style": "declaration",
+      "texte": "merci d'être resté le jour où j'étais pas facile.",
+      "scene": "le petit duo du câlin (automatique)",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "pos-018",
+      "style": "declaration",
+      "texte": "si t'as un coup de mou, appelle-moi. même à 3 h du matin. même si j'ai l'air de dormir.",
+      "scene": "le petit duo du câlin (automatique)"
+    },
+    {
+      "id": "pos-019",
+      "style": "declaration",
+      "texte": "t'es la première personne que j'ai envie d'appeler quand il se passe un truc.",
+      "scene": "le petit duo du câlin (automatique)"
+    },
+    {
+      "id": "pos-020",
+      "style": "schema",
+      "texte": "j'ai fait un schéma",
+      "scene": "venn : « ce qui me calme » / « ce qui me stresse » / au milieu « toi »"
+    },
+    {
+      "id": "pos-021",
+      "style": "schema",
+      "texte": "mon humeur, un jour normal",
+      "scene": "courbe : de « réveil » à « tu rentres », qui descend toute la journée et remonte d'un coup à la fin, repère « tu rentres »"
+    },
+    {
+      "id": "pos-022",
+      "style": "schema",
+      "texte": "notre liste de courses",
+      "scene": "liste : pain (coché), lait (coché), un câlin (barré), un câlin (pas coché, réécrit)"
+    },
+    {
+      "id": "pos-023",
+      "style": "schema",
+      "texte": "état des lieux",
+      "scene": "barres : patience 12, envie de pizza 100, amour 100, sommeil 30"
+    },
+    {
+      "id": "pos-024",
+      "style": "schema",
+      "texte": "dans ma tête, là tout de suite",
+      "scene": "camembert : toi 70, manger 20, dormir 10"
+    },
+    {
+      "id": "pos-025",
+      "style": "mini",
+      "texte": "tu m'avais dit de pas oublier un truc. j'ai oublié lequel.",
+      "scene": "elle, pensive, points de suspension, la patte au menton"
+    },
+    {
+      "id": "pos-026",
+      "style": "mini",
+      "texte": "si je t'avais pas rencontré, t'aurais quelqu'un d'autre. je t'en veux.",
+      "scene": "elle vexée, bras croisés, regard en coin vers lui ; lui perplexe à côté, en plus petit"
+    },
+    {
+      "id": "pos-027",
+      "style": "mini",
+      "texte": "« t'as quoi ? » « rien, c'est juste ma tête »",
+      "scene": "elle blasée, de face ; lui inquiet, en plus petit, la patte tendue vers elle"
+    },
+    {
+      "id": "pos-028",
+      "style": "mini",
+      "texte": "j'ai trop hâte de me blottir contre toi ce soir",
+      "scene": "lui, veut un câlin (calin, bras tendus), cœurs"
+    },
+    {
+      "id": "pos-029",
+      "style": "mini",
+      "texte": "mouahaha tu peux plus partir maintenant",
+      "scene": "elle, mauvaise idée (diable, cornes), mains jointes",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "pos-030",
+      "style": "mini",
+      "texte": "bon. je vais te faire confiance sur ce coup-là.",
+      "scene": "lui, suspicieux, un sourcil levé, la patte au menton",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "pos-031",
+      "style": "mini",
+      "texte": "je t'aime plus que les frites. enfin presque.",
+      "scene": "elle, gourmande, un cornet de frites à côté, cœurs",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "pos-032",
+      "style": "mini",
+      "texte": "quand tu me dis « t'es belle » alors que j'ai la tête du matin",
+      "scene": "elle, fou amoureux (transi), rougeur pleine, les pattes sur les joues"
+    },
+    {
+      "id": "pos-033",
+      "style": "declaration",
+      "texte": "643 km et je connais les horaires de train par cœur.",
+      "scene": "le petit duo du câlin (automatique)",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "pos-034",
+      "style": "mini",
+      "texte": "petit rappel : t'es ma personne.",
+      "scene": "lui, amoureux, un gros cœur"
+    },
+    {
+      "id": "pos-035",
+      "style": "schema",
+      "texte": "à faire aujourd'hui",
+      "scene": "liste : penser à toi (coché), repenser à toi (coché), arrêter d'y penser (pas coché), t'envoyer ça (coché)"
+    },
+    {
+      "id": "pos-036",
+      "style": "mini",
+      "texte": "je dors pas, j'attends que tu rentres.",
+      "scene": "lit : elle dodo avec le téléphone à côté"
+    },
+    {
+      "id": "pos-037",
+      "style": "schema",
+      "texte": "ce que je dis / ce que je pense",
+      "scene": "barres : « ça va » 100 / « ça va pas » 100, avec deux barres de couleur différente, légende dans le titre",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "pos-038",
+      "style": "mini",
+      "texte": "viens, on reste au lit toute la journée.",
+      "scene": "lit : les deux sous la couette, elle contente, lui dodo"
+    }
   ],
   "mipaps-histoire": [
-    { "id": "his-001", "pilier": "manque", "idee": "ce que j'imagine quand tu réponds pas | 10 min : il conduit, c'est normal | 30 min : il a plus de batterie, sûrement | 1 h : il m'en veut ?? j'ai dit quoi ?? | 2 h : enlevé par des extraterrestres, c'est la seule explication | chute : il dormait. (appel : envoie-lui ça)" },
-    { "id": "his-002", "pilier": "tendresse", "idee": "petit message pour toi (elle avec une lettre) | j'aime bien quand t'es là | même quand tu dis rien | surtout quand tu dis rien, en vrai | câlin, cœurs | chute : il lit la lettre, rougit, la range dans sa poche, sans texte (appel : envoie-lui ça)" },
-    { "id": "his-003", "pilier": "tendresse", "idee": "les 5 trucs que je te dirai jamais à voix haute | 1 : je fais exprès d'avoir froid | 2 : j'ai mangé la dernière part, c'était pas le chat | 3 : je t'écoute ronfler pour m'endormir | 4 : je t'ai gardé la meilleure frite | chute, 5 : j'ai pas hâte de vieillir. sauf avec toi. (appel : garde ça pour un soir où ça va pas)" },
-    { "id": "his-004", "pilier": "tendresse", "idee": "notre soirée parfaite | 20 h : canapé, popcorn, lui rire, elle blasée (il a choisi le film) | 21 h : la couette arrive | 22 h : elle s'endort sur lui | 23 h : lui aussi | chute : le film est fini depuis une heure, personne ne sait la fin, et c'était parfait. (appel : tague ta personne)" },
-    { "id": "his-005", "pilier": "contrastes", "idee": "nous en 8 émotions | lui gourmand / elle blasée | elle en colère / lui supplie | elle frigorifiée / lui qui a chaud | lui dodo / elle attend | chute : les deux transis, main dans la main, sans texte (appel : c'est qui chez vous ?)" },
-    { "id": "his-006", "pilier": "manque", "idee": "la distance | deux téléphones, chacun dans son lit (lui dodo, elle regarde l'écran) | le compte à rebours : un calendrier, une horloge | le train : elle avec la valise | la gare : il attend avec une pancarte | chute : le câlin des retrouvailles, « ça valait chaque kilomètre. » (appel : envoie ça à ta personne, où qu'elle soit)" },
-    { "id": "his-007", "pilier": "contrastes", "idee": "on n'est pas d'accord, et pourtant | la dispute : colère des deux côtés | dos à dos | le premier qui craque (lui supplie) | elle boude, puis regard en coin | chute : main dans la main, elle a encore les sourcils froncés, sans texte (appel : garde ça pour la prochaine dispute)" },
-    { "id": "his-008", "pilier": "contrastes", "idee": "ton manuel d'utilisation | quand il a faim : ne pas lui parler, le nourrir | quand elle boude : attendre, apporter des frites | quand il dort : rien à faire, c'est fini pour aujourd'hui | quand elle a froid : donner le pull, tout de suite | chute : en cas de doute : câlin. (appel : envoie ça à ta personne pour qu'elle apprenne)" },
-    { "id": "his-009", "pilier": "tendresse", "idee": "24 h avec toi | 7 h : elle dodo, lui réveillé | 9 h : café, elle fatiguée, lui parle | 13 h : frites à deux | 18 h : il rentre, elle court | 22 h : canapé, couette | chute : minuit, dodo à deux, le réveil mis à 7 h (appel : tague-le)" },
-    { "id": "his-010", "pilier": "tendresse", "idee": "les petits trucs | le café déjà prêt le matin | la place côté mur, toujours pour moi | sa main dans ma poche quand j'ai froid | la dernière frite gardée | chute : il dit « c'est rien » ; elle le regarde dormir (appel : envoie ça à ta personne sans rien dire)" },
-    { "id": "his-011", "pilier": "contrastes", "idee": "le bouton | elle a repéré un bouton sur lui : « laisse-moi le percer stp » | lui : non. (bras croisés) | elle supplie : « stp stp stp » | lui : « bon... » | chute : percé ; elle ravie, lui défait (ko). (appel : tague-la)" },
-    { "id": "his-012", "pilier": "contrastes", "idee": "sa colère vs ma colère | sa colère : flammes, cris, vapeur | ma colère : silence, les yeux plats | lui s'inquiète : « ça va ? » | elle : « ça va. » (ça va pas) | chute : il arrive avec des frites sans rien demander, elle sourit, sans texte (appel : c'est qui chez vous ?)" },
-    { "id": "his-013", "pilier": "contrastes", "idee": "le régime | elle, déterminée, une carotte à la patte (objet : on prend la plante, à défaut) | il arrive avec un gâteau | elle résiste, sueur | elle bave | chute : les deux miam, le gâteau fini, « demain. » (appel : tague ton complice)" },
-    { "id": "his-014", "pilier": "contrastes", "idee": "ce que je dis / ce que je pense | « ça va » / ça va pas | « fais comme tu veux » / fais pas ça | « j'ai pas faim » / je vais manger les tiennes | « je suis pas jalouse » / c'est qui elle | chute : « je t'aime » / je t'aime. (appel : envoie ça à ta personne, elle comprendra)" },
-    { "id": "his-015", "pilier": "contrastes", "idee": "les étapes du « j'ai pas faim » | « j'ai pas faim », lui zen | une frite, pour goûter | deux frites | la patte dans le cornet | chute : le cornet est à lui, elle blasée. (appel : tague-le)" },
-    { "id": "his-016", "pilier": "manque", "idee": "quand je rentre tard | il attend sur le canapé, content | il regarde l'horloge, inquiet | il s'endort sur le canapé | elle rentre sur la pointe des pattes | chute : elle le couvre avec la couverture et s'endort à côté. (appel : envoie ça à ta personne)" },
-    { "id": "his-017", "pilier": "tendresse", "idee": "les quatre saisons avec toi | printemps : les fleurs qu'il offre | été : la plage, le soleil, les deux à l'ombre du parapluie | automne : la pluie, un parapluie pour deux | hiver : la couette, les flocons | chute : hiver, les deux dodo sous la couette, les flocons dehors, sans texte (appel : garde ça pour les 365 prochains jours)" },
-    { "id": "his-018", "pilier": "tendresse", "idee": "avant toi / avec toi | le dimanche : seul au lit / à deux au lit | le frigo : vide / plein de frites | les pulls : à moi / à elle | le canapé : une place / une place pour deux | chute : moi : un peu perdu / moi : à ma place. (appel : envoie-lui ça)" }
+    {
+      "id": "his-101",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "les signes que t'as trouvé ta personne | tu peux rester en pyjama toute la journée devant elle | le silence est jamais gênant | tu lui racontes même les trucs nuls de ta journée | tu lui gardes la meilleure part sans y réfléchir | chute : et quand ça va pas, c'est elle que t'as envie de voir (appel : envoie ça à ta personne)"
+    },
+    {
+      "id": "his-108",
+      "pilier": "contrastes",
+      "qui": "les deux",
+      "idee": "les étapes d'une dispute chez nous | on se dispute pour un truc tout bête | le grand silence | chacun regarde l'autre en douce | l'un des deux demande « t'as faim ? » | chute : le câlin, et c'est fini (appel : garde ça pour la prochaine dispute)"
+    },
+    {
+      "id": "his-104",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "nous deux au début, et nous deux maintenant | je me préparais une heure / pyjama et chaussettes dépareillées | bonne nuit pendant des heures / on s'endort au milieu d'une phrase | je mangeais à peine devant toi / je mange dans ton assiette (appel : vous aussi ou c'est que nous ?)"
+    },
+    {
+      "id": "his-106",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "les petits trucs qui veulent dire « je t'aime » | « t'as mangé ? » | « envoie-moi un message quand t'es arrivée » | la place chaude dans le lit, gardée pour toi | « prends une veste » | chute : le câlin sans raison (appel : envoie ça sans rien dire)"
+    },
+    {
+      "id": "his-103",
+      "pilier": "contrastes",
+      "qui": "les deux",
+      "idee": "dans chaque couple, il y a... | celui qui s'endort en dix secondes | celle qui a encore mille trucs à raconter | celui qui prend toute la place | celle qui finit au bord | chute : au réveil, les deux collés au milieu (appel : c'est qui chez vous ?)"
+    },
+    {
+      "id": "his-105",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "vous êtes un vrai couple si... | vous vous envoyez des vidéos dans la même pièce | vous parlez du dîner pendant le déjeuner | vous avez une chanson rien qu'à vous | tu sais ce que l'autre va commander | chute : vous vous comprenez d'un regard (appel : tague ta personne)"
+    },
+    {
+      "id": "his-110",
+      "pilier": "contrastes",
+      "qui": "les deux",
+      "idee": "les questions qu'on se pose dix fois par jour | « t'as mangé ? » | « tu rentres à quelle heure ? » | « t'as vu mes clés ? » | « on mange quoi ce soir ? » | chute : « tu m'aimes ? » « oui. » « mais genre beaucoup ? » (appel : tague ta personne)"
+    },
+    {
+      "id": "his-107",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "nous deux un dimanche | 10 h : on se dit qu'on va faire plein de trucs | 13 h : toujours au lit | 16 h : on hésite à sortir | 19 h : on commande à manger | chute : « on fera tout ça le week-end prochain », les deux sous la couette (appel : vous aussi ou c'est que nous ?)"
+    },
+    {
+      "id": "his-133",
+      "pilier": "contrastes",
+      "qui": "elle",
+      "idee": "quand t'es fâchée mais que t'as faim | tu boudes, bras croisés | ta personne se met à cuisiner | ça sent bon, tu jettes un œil | chute : tu boudes en mangeant (appel : c'est qui chez vous ?)"
+    },
+    {
+      "id": "his-109",
+      "pilier": "tendresse",
+      "qui": "lui",
+      "idee": "quand ta personne est malade | tu deviens infirmier d'un coup | thé, couverture, mouchoirs | « repose-toi » toutes les cinq minutes | chute : le lendemain c'est toi qui es malade, elle t'apporte le thé (appel : envoie ça à la personne qui fait ça)"
+    },
+    {
+      "id": "his-136",
+      "pilier": "contrastes",
+      "qui": "les deux",
+      "idee": "tout ce qu'on se pique | le pull | la couette | le chargeur | la dernière part | chute : le côté du lit (appel : c'est quoi chez vous ?)"
+    },
+    {
+      "id": "his-122",
+      "pilier": "tendresse",
+      "qui": "lui",
+      "idee": "toi quand ta personne est triste | tu sais pas quoi dire | tu fais un câlin | tu ramènes à manger | tu fais une blague nulle | chute : elle sourit enfin (appel : envoie ça à ta personne)"
+    },
+    {
+      "id": "his-111",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "les types de câlins | le câlin du matin qui empêche de se lever | le câlin de réconciliation, sans un mot | le câlin par derrière pendant qu'on cuisine | le câlin où on tombe sur le canapé | chute : le câlin « juste deux secondes » qui dure toute la soirée (appel : c'est lequel chez vous ?)"
+    },
+    {
+      "id": "his-127",
+      "pilier": "contrastes",
+      "qui": "les deux",
+      "idee": "les rôles chez nous | celui qui conduit, celle qui choisit la musique | celle qui cuisine, celui qui fait la vaisselle | celui qui a toujours chaud, celle qui a toujours froid | chute : les deux qui cherchent les clés (appel : c'est qui chez vous ?)"
+    },
+    {
+      "id": "his-112",
+      "pilier": "manque",
+      "qui": "elle",
+      "idee": "toi quand ta personne sort sans toi | 20 h : enfin tranquille | 21 h : ta série, ton plaid | 22 h : tu t'ennuies un peu | 23 h : « tu rentres quand ? » | chute : tu t'endors avec son pull (appel : envoie-lui ça)"
+    },
+    {
+      "id": "his-119",
+      "pilier": "contrastes",
+      "qui": "les deux",
+      "idee": "choisir un resto à deux | « où tu veux » | « non, pas là » | « ok, là » | « finalement non » | chute : on mange des pâtes à la maison (appel : vous aussi ou c'est que nous ?)"
+    },
+    {
+      "id": "his-124",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "idee": "les différents bisous | le bisou du matin qui pique | le bisou sur le front | le bisou en vitesse avant de partir | le bisou qui fait « smack » exprès | chute : le bisou esquimau, nez contre nez (appel : c'est lequel chez vous ?)"
+    },
+    {
+      "id": "his-129",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "quand ta personne raconte une histoire trop longue | il raconte | elle hoche la tête | il revient au début « attends, je reprends » | chute : elle s'est endormie, il continue (appel : tague la personne qui fait ça)"
+    },
+    {
+      "id": "his-113",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "regarder un film qui fait peur à deux | « j'ai pas peur » | sous la couverture | les pattes devant les yeux | chute : c'est elle qui le rassure (appel : c'est qui chez vous ?)"
+    },
+    {
+      "id": "his-001",
+      "pilier": "manque",
+      "idee": "ce que j'imagine quand tu réponds pas | 10 min : il conduit, c'est normal | 30 min : il a plus de batterie, sûrement | 1 h : il m'en veut ?? j'ai dit quoi ?? | 2 h : enlevé par des extraterrestres, c'est la seule explication | chute : il dormait. (appel : envoie-lui ça)"
+    },
+    {
+      "id": "his-002",
+      "pilier": "tendresse",
+      "idee": "petit message pour toi (elle avec une lettre) | j'aime bien quand t'es là | même quand tu dis rien | surtout quand tu dis rien, en vrai | câlin, cœurs | chute : il lit la lettre, rougit, la range dans sa poche, sans texte (appel : envoie-lui ça)"
+    },
+    {
+      "id": "his-003",
+      "pilier": "tendresse",
+      "idee": "les 5 trucs que je te dirai jamais à voix haute | 1 : je fais exprès d'avoir froid | 2 : j'ai mangé la dernière part, c'était pas le chat | 3 : je t'écoute ronfler pour m'endormir | 4 : je t'ai gardé la meilleure frite | chute, 5 : j'ai pas hâte de vieillir. sauf avec toi. (appel : garde ça pour un soir où ça va pas)"
+    },
+    {
+      "id": "his-004",
+      "pilier": "tendresse",
+      "idee": "notre soirée parfaite | 20 h : canapé, popcorn, lui rire, elle blasée (il a choisi le film) | 21 h : la couette arrive | 22 h : elle s'endort sur lui | 23 h : lui aussi | chute : le film est fini depuis une heure, personne ne sait la fin, et c'était parfait. (appel : tague ta personne)"
+    },
+    {
+      "id": "his-005",
+      "pilier": "contrastes",
+      "idee": "nous en 8 émotions | lui gourmand / elle blasée | elle en colère / lui supplie | elle frigorifiée / lui qui a chaud | lui dodo / elle attend | chute : les deux transis, main dans la main, sans texte (appel : c'est qui chez vous ?)",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "his-006",
+      "pilier": "manque",
+      "idee": "la distance | deux téléphones, chacun dans son lit (lui dodo, elle regarde l'écran) | le compte à rebours : un calendrier, une horloge | le train : elle avec la valise | la gare : il attend avec une pancarte | chute : le câlin des retrouvailles, « ça valait chaque kilomètre. » (appel : envoie ça à ta personne, où qu'elle soit)",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "his-007",
+      "pilier": "contrastes",
+      "idee": "on n'est pas d'accord, et pourtant | la dispute : colère des deux côtés | dos à dos | le premier qui craque (lui supplie) | elle boude, puis regard en coin | chute : main dans la main, elle a encore les sourcils froncés, sans texte (appel : garde ça pour la prochaine dispute)",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "his-008",
+      "pilier": "contrastes",
+      "idee": "ton manuel d'utilisation | quand il a faim : ne pas lui parler, le nourrir | quand elle boude : attendre, apporter des frites | quand il dort : rien à faire, c'est fini pour aujourd'hui | quand elle a froid : donner le pull, tout de suite | chute : en cas de doute : câlin. (appel : envoie ça à ta personne pour qu'elle apprenne)"
+    },
+    {
+      "id": "his-009",
+      "pilier": "tendresse",
+      "idee": "24 h avec toi | 7 h : elle dodo, lui réveillé | 9 h : café, elle fatiguée, lui parle | 13 h : frites à deux | 18 h : il rentre, elle court | 22 h : canapé, couette | chute : minuit, dodo à deux, le réveil mis à 7 h (appel : tague-le)",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "his-010",
+      "pilier": "tendresse",
+      "idee": "les petits trucs | le café déjà prêt le matin | la place côté mur, toujours pour moi | sa main dans ma poche quand j'ai froid | la dernière frite gardée | chute : il dit « c'est rien » ; elle le regarde dormir (appel : envoie ça à ta personne sans rien dire)",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "his-011",
+      "pilier": "contrastes",
+      "idee": "Le bouton : elle veut le percer, il dit non, elle supplie, il cède ; elle est ravie, il est KO."
+    },
+    {
+      "id": "his-012",
+      "pilier": "contrastes",
+      "idee": "sa colère vs ma colère | sa colère : flammes, cris, vapeur | ma colère : silence, les yeux plats | lui s'inquiète : « ça va ? » | elle : « ça va. » (ça va pas) | chute : il arrive avec des frites sans rien demander, elle sourit, sans texte (appel : c'est qui chez vous ?)"
+    },
+    {
+      "id": "his-013",
+      "pilier": "contrastes",
+      "idee": "Le régime : jour 1, une salade ; l'autre rentre avec un gâteau ; « juste une part » ; la moitié du gâteau ; « on recommence lundi »."
+    },
+    {
+      "id": "his-014",
+      "pilier": "contrastes",
+      "idee": "Ce que je dis contre ce que je pense : « ça va » / ça va pas, jusqu'à « je t'aime » / je t'aime."
+    },
+    {
+      "id": "his-015",
+      "pilier": "contrastes",
+      "idee": "les étapes du « j'ai pas faim » | « j'ai pas faim », lui zen | une frite, pour goûter | deux frites | la patte dans le cornet | chute : le cornet est à lui, elle blasée. (appel : tague-le)",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "his-016",
+      "pilier": "manque",
+      "idee": "Quand je rentre tard : il a dit « je t'attends », il s'est endormi sur le canapé ; elle va chercher la couverture et s'endort contre lui ; « t'es rentrée ? »."
+    },
+    {
+      "id": "his-017",
+      "pilier": "tendresse",
+      "idee": "les quatre saisons avec toi | printemps : les fleurs qu'il offre | été : la plage, le soleil, les deux à l'ombre du parapluie | automne : la pluie, un parapluie pour deux | hiver : la couette, les flocons | chute : hiver, les deux dodo sous la couette, les flocons dehors, sans texte (appel : garde ça pour les 365 prochains jours)",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "his-018",
+      "pilier": "tendresse",
+      "idee": "Avant toi, avec toi : le dimanche, le téléphone, les pulls, le canapé."
+    }
   ],
   "mipaps-statique": [
-    { "id": "sta-001", "pilier": "tendresse", "texte": "j'aime bien quand t'es là et qu'on fait rien", "scene": "le câlin (duo calin), trois cœurs qui flottent" },
-    { "id": "sta-002", "pilier": "manque", "texte": "tu me manques déjà et t'es parti depuis 4 minutes", "scene": "elle, triste, le téléphone à la patte, une petite larme" },
-    { "id": "sta-003", "pilier": "tendresse", "texte": "je serai toujours là. même quand tu m'énerves. surtout quand tu m'énerves.", "scene": "main dans la main (duo main_dans_la_main), un cœur au milieu" },
-    { "id": "sta-004", "pilier": "tendresse", "texte": "dors bien mon amoureux <3", "scene": "lit : lui dodo, zzz ; elle le regarde, amoureuse" },
-    { "id": "sta-005", "pilier": "tendresse", "texte": "je te choisis encore. même avec ta vaisselle.", "scene": "le bisou sur la joue (duo bisou), un gros cœur" },
-    { "id": "sta-006", "pilier": "tendresse", "texte": "t'es mon endroit préféré", "scene": "sous la couette (duo couette) : les deux têtes qui dépassent, cœurs" },
-    { "id": "sta-007", "pilier": "tendresse", "texte": "merci d'être toi", "scene": "elle émue (emu), les pattes sur les joues, étincelles" },
-    { "id": "sta-008", "pilier": "tendresse", "texte": "j'ai pas besoin de grand-chose. juste toi. et des frites.", "scene": "les frites (duo frites) : les deux gourmands autour du cornet" },
-    { "id": "sta-009", "pilier": "tendresse", "texte": "quand tu ris, j'oublie ce que je voulais dire", "scene": "lui rit (rire) ; elle transie à côté, cœurs" },
-    { "id": "sta-010", "pilier": "manque", "texte": "ma maison, c'est là où t'es", "scene": "sous la pluie (duo parapluie) : les deux sous le parapluie" },
-    { "id": "sta-011", "pilier": "tendresse", "texte": "reste encore un peu", "scene": "lit : elle supplie, lui dodo, la couette" },
-    { "id": "sta-012", "pilier": "contrastes", "texte": "t'es bizarre. j'adore.", "scene": "lui moqueur (langue), elle clin d'œil" },
-    { "id": "sta-013", "pilier": "tendresse", "texte": "je t'aime en silence aussi", "scene": "les deux assis côte à côte (assis), un soleil (objet soleil) au-dessus, aucun cœur" },
-    { "id": "sta-014", "pilier": "tendresse", "texte": "je t'aime en pyjama troué aussi", "scene": "elle fatiguée (fatigue), lui qui lui tend un cœur (bras tend_d, objet coeur)" },
-    { "id": "sta-015", "pilier": "manque", "texte": "le lit est trop grand quand t'es pas là", "scene": "lit : elle toute seule au milieu, triste, l'oreiller de l'autre côté" },
-    { "id": "sta-016", "pilier": "tendresse", "texte": "promis, je te garde", "scene": "le câlin (duo calin), un seul gros cœur" }
+    {
+      "id": "sta-101",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "texte": "t'es la personne à qui je veux raconter les trucs nuls de ma journée",
+      "scene": "les deux sur le canapé (canape_fond), lui qui écoute"
+    },
+    {
+      "id": "sta-103",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "texte": "même fâchée, je veux que tu restes à côté",
+      "scene": "dos à dos (duo dos_a_dos)"
+    },
+    {
+      "id": "sta-108",
+      "pilier": "tendresse",
+      "qui": "lui",
+      "texte": "j'adore quand tu t'endors au milieu d'une phrase",
+      "scene": "lui dodo sur l'épaule d'elle, zzz, elle sourit"
+    },
+    {
+      "id": "sta-111",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "texte": "je t'aime même quand tu manges dans mon assiette",
+      "scene": "lui gourmand, une part de pizza à la patte, elle fait semblant d'être fâchée"
+    },
+    {
+      "id": "sta-109",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "texte": "on a nos blagues que personne d'autre comprend",
+      "scene": "les deux morts de rire (mort_de_rire), des petites étincelles"
+    },
+    {
+      "id": "sta-105",
+      "pilier": "manque",
+      "qui": "elle",
+      "texte": "quand ça va pas, c'est ton nom que je cherche dans mon téléphone",
+      "scene": "elle, triste, le téléphone à la patte ; un cœur au-dessus de l'écran"
+    },
+    {
+      "id": "sta-102",
+      "pilier": "tendresse",
+      "qui": "lui",
+      "texte": "je dors mieux quand t'es là. même quand tu prends toute la place.",
+      "scene": "les deux sous la couette (lit_fond, lit_couette), lui étalé, elle au bord, contente"
+    },
+    {
+      "id": "sta-115",
+      "pilier": "tendresse",
+      "qui": "lui",
+      "texte": "j'aime bien quand tu me racontes un truc et que tu ris avant la fin",
+      "scene": "lui qui rit, elle qui le regarde, attendrie"
+    },
+    {
+      "id": "sta-113",
+      "pilier": "tendresse",
+      "qui": "elle",
+      "texte": "même quand je dis « laisse-moi », reste un peu",
+      "scene": "elle sous la couverture (objet couverture), lui assis à côté"
+    },
+    {
+      "id": "sta-116",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "texte": "t'es la seule personne qui sait ce que je veux commander",
+      "scene": "les deux à table, un burger et une pizza (objets burger, pizza), elle contente"
+    },
+    {
+      "id": "sta-110",
+      "pilier": "manque",
+      "qui": "elle",
+      "texte": "la meilleure partie de ma journée, c'est quand tu rentres",
+      "scene": "câlin à la porte (duo porte)"
+    },
+    {
+      "id": "sta-120",
+      "pilier": "contrastes",
+      "qui": "elle",
+      "texte": "tu me fais rire même quand j'ai décidé de bouder",
+      "scene": "elle, bras croisés, qui essaie de ne pas rire ; lui, une grimace (moqueur)"
+    },
+    {
+      "id": "sta-117",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "texte": "même les jours où je suis pénible, tu me prends dans tes bras",
+      "scene": "le câlin (duo calin)"
+    },
+    {
+      "id": "sta-118",
+      "pilier": "tendresse",
+      "qui": "elle",
+      "texte": "j'adore ta tête quand tu viens de te réveiller",
+      "scene": "lui qui bâille au lit (baille), elle qui le regarde, cœurs"
+    },
+    {
+      "id": "sta-121",
+      "pilier": "tendresse",
+      "qui": "les deux",
+      "texte": "j'aime bien quand on parle de tout et de rien jusqu'à pas d'heure",
+      "scene": "les deux au lit (lit_fond, lit_couette), la lune dehors (objet lune)"
+    },
+    {
+      "id": "sta-114",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "texte": "merci de me laisser ton côté du lit quand j'ai froid",
+      "scene": "les deux au lit, elle contente, lui serré au bord"
+    },
+    {
+      "id": "sta-122",
+      "pilier": "tendresse",
+      "qui": "lui",
+      "texte": "t'as le droit de prendre la dernière part. juste toi.",
+      "scene": "lui qui tend une part de gâteau (objet gateau), elle émerveillée"
+    },
+    {
+      "id": "sta-001",
+      "pilier": "tendresse",
+      "texte": "j'aime bien quand t'es là et qu'on fait rien",
+      "scene": "le câlin (duo calin), trois cœurs qui flottent"
+    },
+    {
+      "id": "sta-002",
+      "pilier": "manque",
+      "texte": "tu me manques déjà et t'es parti depuis 4 minutes",
+      "scene": "elle, triste, le téléphone à la patte, une petite larme"
+    },
+    {
+      "id": "sta-003",
+      "pilier": "tendresse",
+      "texte": "je serai là même quand tu m'énerves.",
+      "scene": "main dans la main (duo main_dans_la_main), un cœur au milieu"
+    },
+    {
+      "id": "sta-004",
+      "pilier": "tendresse",
+      "texte": "dors bien mon amoureux <3",
+      "scene": "lit : lui dodo, zzz ; elle le regarde, amoureuse"
+    },
+    {
+      "id": "sta-005",
+      "pilier": "tendresse",
+      "texte": "je te choisis encore. même avec ta vaisselle.",
+      "scene": "le bisou sur la joue (duo bisou), un gros cœur"
+    },
+    {
+      "id": "sta-006",
+      "pilier": "tendresse",
+      "texte": "t'es mon endroit préféré",
+      "scene": "sous la couette (duo couette) : les deux têtes qui dépassent, cœurs",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "sta-007",
+      "pilier": "tendresse",
+      "texte": "merci d'être toi",
+      "scene": "elle émue (emu), les pattes sur les joues, étincelles",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "sta-008",
+      "pilier": "tendresse",
+      "texte": "j'ai pas besoin de grand-chose. juste toi. et des frites.",
+      "scene": "les frites (duo frites) : les deux gourmands autour du cornet",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "sta-009",
+      "pilier": "tendresse",
+      "texte": "quand tu ris, j'oublie ce que je voulais dire",
+      "scene": "lui rit (rire) ; elle transie à côté, cœurs"
+    },
+    {
+      "id": "sta-010",
+      "pilier": "manque",
+      "texte": "ma maison, c'est là où t'es",
+      "scene": "sous la pluie (duo parapluie) : les deux sous le parapluie",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "sta-011",
+      "pilier": "tendresse",
+      "texte": "reste encore un peu",
+      "scene": "lit : elle supplie, lui dodo, la couette"
+    },
+    {
+      "id": "sta-012",
+      "pilier": "contrastes",
+      "texte": "t'es bizarre. et j'adore ça.",
+      "scene": "lui moqueur (langue), elle clin d'œil"
+    },
+    {
+      "id": "sta-013",
+      "pilier": "tendresse",
+      "texte": "je t'aime en silence aussi",
+      "scene": "les deux assis côte à côte (assis), un soleil (objet soleil) au-dessus, aucun cœur",
+      "retire": "2026-10-18"
+    },
+    {
+      "id": "sta-014",
+      "pilier": "tendresse",
+      "texte": "je t'aime en pyjama troué aussi",
+      "scene": "elle fatiguée (fatigue), lui qui lui tend un cœur (bras tend_d, objet coeur)"
+    },
+    {
+      "id": "sta-015",
+      "pilier": "manque",
+      "texte": "le lit est trop grand quand t'es pas là",
+      "scene": "lit : elle toute seule au milieu, triste, l'oreiller de l'autre côté"
+    },
+    {
+      "id": "sta-016",
+      "pilier": "tendresse",
+      "texte": "promis, je te garde",
+      "scene": "le câlin (duo calin), un seul gros cœur",
+      "retire": "2026-10-18"
+    }
   ],
   "saison": {
     "note": "Noël et Nouvel An, les seules fêtes du calendrier. À ces dates et créneaux, le sujet daté remplace celui de la banque ; la catégorie reste celle de la semaine type. Objets : bonnet, flocons, cadeau, bougie ; au Nouvel An, verres, étoiles, horloge.",
     "sujets": [
-      { "id": "noel-001", "jour": "2026-12-24", "creneau": "soir", "categorie": "mipaps-histoire", "idee": "notre réveillon | elle prépare (table, bougie), lui goûte tout | il a mangé la bûche (gâteau) avant minuit | elle en colère, flocons dehors | il revient avec un cadeau, timide | chute : dodo à deux, le bonnet encore sur la tête. (appel : envoie ça à ta personne, joyeux noël)" },
-      { "id": "noel-002", "jour": "2026-12-25", "creneau": "matin", "categorie": "mipaps-anime", "idee": "le cadeau de noël | elle dodo, lui se lève en sprint (joie), un cadeau à la patte | il la réveille en sautant sur le lit | elle ouvre : des frites | chute : elle est ravie, câlin, flocons, « joyeux noël mon amoureux »" },
-      { "id": "noel-003", "jour": "2026-12-25", "creneau": "midi", "categorie": "mipaps-post", "idee": "mini : « le plus beau cadeau c'est toi. (mais j'ai aimé les frites aussi) », elle avec un bonnet (objet bonnet), cœurs et flocons" },
-      { "id": "nouvelan-001", "jour": "2026-12-31", "creneau": "soir", "categorie": "mipaps-statique", "idee": "« bonne année mon amoureux. encore une avec toi. » : les deux avec un verre (objet verre), des étoiles au-dessus, l'horloge sur minuit" },
-      { "id": "nouvelan-002", "jour": "2027-01-01", "creneau": "midi", "categorie": "mipaps-post", "idee": "declaration : « nouvelle année. même équipe. mêmes frites. » avec le petit duo" }
+      {
+        "id": "noel-001",
+        "jour": "2026-12-24",
+        "creneau": "soir",
+        "categorie": "mipaps-statique",
+        "idee": "Reel statique : les deux sous un plaid sur le canapé, les flocons à la fenêtre ; les films de Noël qu'on regarde chaque année."
+      },
+      {
+        "id": "noel-002",
+        "jour": "2026-12-25",
+        "creneau": "matin",
+        "categorie": "mipaps-anime",
+        "idee": "« On avait dit pas de cadeaux cette année » : chacun cache un cadeau derrière son dos ; ils le sortent en même temps, « toi aussi ? » ; câlin, cœurs et flocons. Trois plans, 11,5 secondes."
+      },
+      {
+        "id": "noel-003",
+        "jour": "2026-12-25",
+        "creneau": "midi",
+        "categorie": "mipaps-post",
+        "idee": "Mini : lui, repu et KO, à côté d'une bûche ; le repas de Noël dans la famille de l'autre."
+      },
+      {
+        "id": "nouvelan-001",
+        "jour": "2026-12-31",
+        "creneau": "soir",
+        "categorie": "mipaps-statique",
+        "idee": "Reel statique : les deux endormis sous un plaid, l'horloge sur minuit, des étoiles dehors ; la grosse soirée prévue."
+      },
+      {
+        "id": "nouvelan-002",
+        "jour": "2027-01-01",
+        "creneau": "midi",
+        "categorie": "mipaps-post",
+        "idee": "Déclaration : la résolution de se coucher plus tôt, prise chaque année à deux."
+      }
     ]
   },
   "deja_publies": {
