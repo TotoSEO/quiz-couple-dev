@@ -17,19 +17,19 @@
       "id": "ani-132",
       "pilier": "tendresse",
       "qui": "lui",
-      "idee": "quand ta personne rentre avec un petit truc pour toi | il arrive, quelque chose caché derrière le dos, timide | il tend un bubble tea, elle est aux anges | chute : « j'suis passé devant, j'ai pensé à toi »"
+      "idee": "le petit truc rapporté sans raison | il arrive, quelque chose caché derrière le dos, timide | il tend un bubble tea, elle est aux anges | chute : « j'suis passé devant, j'ai pensé à toi »"
     },
     {
-      "id": "ani-104",
-      "pilier": "contrastes",
-      "qui": "elle",
-      "idee": "« non merci, j'ai pas faim » | il a une pizza, elle croise les bras, sereine | elle regarde la pizza, puis lui | « juste pour goûter » | chute : plus de pizza, elle l'air d'un ange, lui : « euh, il en reste ? »"
+      "id": "ani-110",
+      "pilier": "manque",
+      "qui": "les deux",
+      "idee": "« raccroche, toi » « non, toi » | chacun au téléphone, chez soi, tout timide, des cœurs | lui devient timide à son tour | chute : « 1 h plus tard », les deux endormis, le téléphone encore contre eux"
     },
     {
-      "id": "ani-120",
+      "id": "ani-118",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "quand ta personne a faim | il est grognon, nuage noir | « ça va ? » « grmbl » | elle sort un croissant de derrière son dos | chute : il fond, « merci mon cœur »"
+      "idee": "quand tu racontes ta journée | elle raconte avec les pattes, énergique ; lui sur son téléphone, « mmh mmh » | elle s'arrête et le fixe, il transpire | chute : il pose le téléphone, le menton dans la patte, « et donc ? »"
     },
     {
       "id": "ani-101",
@@ -74,16 +74,16 @@
       "idee": "chercher un truc qui est juste devant toi | il cherche ses clés partout, panique (sueur) | elle arrive et prend les clés posées juste devant lui | chute : il fait comme s'il le savait, l'air moqueur, elle blasée"
     },
     {
-      "id": "ani-110",
-      "pilier": "manque",
-      "qui": "les deux",
-      "idee": "« raccroche toi » « non toi » | elle au téléphone, timide, cœurs | lui au téléphone, timide | chute : « 1 h plus tard », les deux endormis, le téléphone encore à l'oreille"
-    },
-    {
       "id": "ani-113",
       "pilier": "contrastes",
       "qui": "elle",
       "idee": "« je suis prête dans 5 minutes » | elle essaie une tenue, se regarde, non | une autre, non (agace) | lui attend, assis par terre | chute : elle repart avec la première, contente ; lui se relève, blasé"
+    },
+    {
+      "id": "ani-104",
+      "pilier": "contrastes",
+      "qui": "elle",
+      "idee": "« non merci, j'ai pas faim » | il a une pizza, elle croise les bras, sereine | elle regarde la pizza, puis lui | « juste pour goûter » | chute : plus de pizza, elle l'air d'un ange, lui : « euh, il en reste ? »"
     },
     {
       "id": "ani-111",
@@ -116,12 +116,6 @@
       "idee": "le bruit des clés dans la porte | elle sur le canapé, l'air de s'ennuyer | un bruit de porte, elle se redresse d'un coup | chute : elle court jusqu'à lui, câlin qui la soulève, cœurs"
     },
     {
-      "id": "ani-118",
-      "pilier": "contrastes",
-      "qui": "lui",
-      "idee": "quand tu racontes ta journée et que ta personne écoute à moitié | elle raconte avec les pattes, énergique ; lui sur son téléphone hoche la tête | elle s'arrête et le fixe | chute : il pose le téléphone, menton dans les pattes, il écoute pour de bon, elle reprend contente"
-    },
-    {
       "id": "ani-119",
       "pilier": "tendresse",
       "qui": "les deux",
@@ -150,6 +144,12 @@
       "pilier": "contrastes",
       "qui": "elle",
       "idee": "quand ta personne te pique ta place au chaud | il se lève une seconde du canapé | elle se glisse à sa place, toute contente | il revient, la voit, blasé | chute : il s'assoit sur elle, elle rit, câlin"
+    },
+    {
+      "id": "ani-120",
+      "pilier": "contrastes",
+      "qui": "lui",
+      "idee": "quand ta personne a faim | il est grognon, nuage noir | « ça va ? » « grmbl » | elle sort un croissant de derrière son dos | chute : il fond, « merci mon cœur »"
     },
     {
       "id": "ani-123",
@@ -277,7 +277,7 @@
     {
       "id": "ani-011",
       "pilier": "contrastes",
-      "idee": "« Je gère le dîner » : il est fier devant sa pizza, la fumée monte, il panique ; elle arrive sans un mot, le téléphone à la patte : « j'ai commandé. » Trois plans, 12 secondes."
+      "idee": "« Ce soir, c'est moi qui cuisine » : il est fier devant sa pizza, la fumée monte, il panique ; elle arrive sans un mot, le téléphone à la patte : « j'ai commandé. » Trois plans, 12 secondes."
     },
     {
       "id": "ani-012",
@@ -1090,7 +1090,7 @@
     {
       "id": "his-018",
       "pilier": "tendresse",
-      "idee": "Avant toi, avec toi : le dimanche, le téléphone, les pulls, le canapé."
+      "idee": "Avant toi, avec toi : le dimanche, la musique, les pulls, le canapé."
     }
   ],
   "mipaps-statique": [
