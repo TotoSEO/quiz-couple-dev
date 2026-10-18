@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-17T07:45:01.745Z",
+  "genere_le": "2026-10-18T03:12:33.990Z",
   "langue": "en",
   "compte": {
     "nom": "quiz_couple_official",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-17",
+  "aujourdhui": "2026-10-18",
   "melange": {
     "midi": {
       "1": "connais-tu",
@@ -28,7 +28,7 @@
     },
     "matin": "baton"
   },
-  "reserve_jours": 34,
+  "reserve_jours": 33,
   "a_remplir": [
     {
       "jour": "2026-11-20",
@@ -1029,6 +1029,21 @@
       "jour": "2027-01-25",
       "creneau": "soir",
       "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2027-01-26",
+      "creneau": "matin",
+      "categorie": "baton"
+    },
+    {
+      "jour": "2027-01-26",
+      "creneau": "midi",
+      "categorie": "tu-preferes"
+    },
+    {
+      "jour": "2027-01-26",
+      "creneau": "soir",
+      "categorie": "bd"
     }
   ],
   "a_corriger": [],
@@ -1587,7 +1602,7 @@
       "creneau": "midi",
       "gabarit": "tu-preferes",
       "categorie": "tu-preferes",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Would you rather: travel?",
       "erreur": null
     },
@@ -1596,7 +1611,7 @@
       "creneau": "soir",
       "gabarit": "carrousel",
       "categorie": "dix-mais",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "Texting edition. Is he still a 10?",
       "erreur": null
     },
@@ -1641,7 +1656,7 @@
       "creneau": "midi",
       "gabarit": "connais-tu",
       "categorie": "connais-tu",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "How well do you know your partner?",
       "erreur": null
     },
@@ -2524,11 +2539,11 @@
       "creneau": "soir"
     },
     "dix-mais": {
-      "jour": "2026-10-17",
+      "jour": "2026-10-24",
       "creneau": "soir"
     },
     "baton": {
-      "jour": "2026-10-18",
+      "jour": "2026-10-19",
       "creneau": "matin"
     }
   },
@@ -2601,6 +2616,34 @@
       "releve": "j7",
       "vues": 218,
       "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "08ea1aed-714d-45e3-88e8-75724f498eab",
+      "releve": "j7",
+      "vues": 2,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "f47c4ea7-e61f-4485-a542-353fa0ea2542",
+      "releve": "j7",
+      "vues": 173,
+      "partages": 1,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "ffad7d32-1461-42af-908b-f13476005a62",
+      "releve": "j7",
+      "vues": 211,
+      "partages": 2,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "985c5c8b-f448-46c8-9487-21b779e42d29",
+      "releve": "j7",
+      "vues": 182,
+      "partages": 2,
       "enregistrements": 0
     }
   ]
