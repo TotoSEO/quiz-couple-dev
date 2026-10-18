@@ -892,6 +892,42 @@
     renderDistanceLegende(couches);
     drawChart(cv, couches, {});
   }
+  // ── Bilan de couple ─────────────────────────────────────────────────────
+  // L'entonnoir du bilan payant, jour par jour (get_bilan_stats, compteurs
+  // tenus par un déclencheur sur la table bilans, docs/bilan/CONCEPTION.md).
+  function loadBilan() {
+    var listEl = document.getElementById('admin-bilan-list');
+    if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
+    var ecrit = function (id, texte) { var e = document.getElementById(id); if (e) e.textContent = texte; };
+    appelStats('get_bilan_stats', { p_jours: 30 }).then(function (r) {
+      if (!r.ok) throw new Error('get_bilan_stats ' + r.status);
+      return r.json();
+    }).then(function (jours) {
+      if (!Array.isArray(jours)) throw new Error('réponse inattendue');
+      var tot = { crees: 0, rejoints: 0, premiers_finis: 0, deux_finis: 0, paiements_ouverts: 0, payes: 0, revenu_centimes: 0 };
+      jours.forEach(function (j) { for (var k in tot) tot[k] += Number(j[k]) || 0; });
+      var euros = function (c) { return (c / 100).toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' }); };
+      ecrit('admin-bilan-crees', tot.crees.toLocaleString('fr-FR'));
+      ecrit('admin-bilan-rejoints', tot.rejoints.toLocaleString('fr-FR') + ' rejoints par le partenaire (' + pct(tot.rejoints, tot.crees) + ' %)');
+      ecrit('admin-bilan-finis', tot.deux_finis.toLocaleString('fr-FR'));
+      ecrit('admin-bilan-finis-part', pct(tot.deux_finis, tot.crees) + ' % des bilans créés');
+      ecrit('admin-bilan-payes', tot.payes.toLocaleString('fr-FR'));
+      ecrit('admin-bilan-ca', euros(tot.revenu_centimes) + ' · ' + pct(tot.payes, tot.deux_finis) + ' % des bilans finis à deux');
+      var cols = [['crees', 'Créés'], ['rejoints', 'Rejoints'], ['premiers_finis', 'Un fini'], ['deux_finis', 'Finis à deux'], ['paiements_ouverts', 'Paiements ouverts'], ['payes', 'Payés']];
+      var html = '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th>Jour</th>' +
+        cols.map(function (c) { return '<th>' + c[1] + '</th>'; }).join('') + '<th>CA</th></tr></thead><tbody>';
+      jours.slice().reverse().forEach(function (j) {
+        html += '<tr><td>' + esc(String(j.jour)) + '</td>' + cols.map(function (c) { return '<td>' + (Number(j[c[0]]) || 0) + '</td>'; }).join('') +
+          '<td>' + (Number(j.revenu_centimes) ? euros(Number(j.revenu_centimes)) : '') + '</td></tr>';
+      });
+      html += '<tr class="adm-table-total"><td>Trente jours</td>' + cols.map(function (c) { return '<td>' + tot[c[0]] + '</td>'; }).join('') +
+        '<td>' + euros(tot.revenu_centimes) + '</td></tr></tbody></table></div>';
+      if (listEl) listEl.innerHTML = html;
+    }).catch(function (e) {
+      if (listEl) listEl.innerHTML = '<p class="text-center text-muted-foreground py-6">Les chiffres du bilan ne répondent pas (' + esc(String(e.message || e)) + '). La migration 20261018120000 est-elle appliquée ?</p>';
+    });
+  }
+
   function loadDistance() {
     var listEl = document.getElementById('admin-distance-list');
     var elL = document.getElementById('admin-distance-lances');
@@ -2521,6 +2557,7 @@
     stats: ['Parties', 'Lancés, terminés et taux de finition, toutes pages confondues'],
     trafic: ['Trafic', 'Visites et pages vues, mesurées par le site lui-même'],
     distance: ['À distance', 'Les parties jouées chacun sur son téléphone'],
+    bilan: ['Bilan', 'Le bilan de couple payant : de la création au paiement, sur trente jours'],
     reviews: ['Avis', 'Modération des avis laissés sur les pages'],
     leads: ['Leads', 'Les demandes reçues par le formulaire'],
     messages: ['Messagerie', 'Les messages du formulaire de contact'],
@@ -2542,6 +2579,7 @@
     if (tab === 'stats') loadStats();
     else if (tab === 'trafic') loadTrafic();
     else if (tab === 'distance') loadDistance();
+    else if (tab === 'bilan') loadBilan();
     else if (tab === 'reviews') { loadReviews(); chargeClassement(); }
     else if (tab === 'leads') { allLeads = []; loadLeads(); }
     else if (tab === 'messages') { allMessages = []; loadMessages(); }
@@ -2575,6 +2613,9 @@
     if (trTab) trTab.classList.toggle('hidden', tab !== 'trafic');
     var diTab = document.getElementById('admin-distance-tab');
     if (diTab) diTab.classList.toggle('hidden', tab !== 'distance');
+    var biTab = document.getElementById('admin-bilan-tab');
+    if (biTab) biTab.classList.toggle('hidden', tab !== 'bilan');
+    if (tab === 'bilan') loadBilan();
     var rsTab = document.getElementById('admin-reseaux-tab');
     if (rsTab) rsTab.classList.toggle('hidden', tab !== 'reseaux');
     if (tab === 'reseaux') ouvrirReseaux();

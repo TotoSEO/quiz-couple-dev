@@ -1,0 +1,199 @@
+<%
+  // Le bilan de couple payant (docs/bilan/CONCEPTION.md). La page porte le
+  // texte et l'application (js/bilan.js), qui parle à la fonction serveur
+  // `bilan` ; le calcul vient de js/bilan-coeur.js, construit depuis
+  // supabase/functions/_shared/bilan/coeur.mjs, et les questions de
+  // /js/data/bilan-<lang>.json, chargé seulement quand l'application s'ouvre.
+  const ns = 'bilan';
+  const pageTitle = t('quizzes:bilanCouple.title', 'Bilan de couple');
+  const prix = typeof bilanPrix !== 'undefined' ? bilanPrix : '9,90 €';
+  const jours = typeof bilanGarantie !== 'undefined' ? bilanGarantie : 0;
+  // {{prix}} et {{jours}} dans les textes de la page.
+  const rp = (s) => String(s || '').replace(/\{\{prix\}\}/g, prix).replace(/\{\{jours\}\}/g, jours);
+
+  const faqEntrees = [];
+  for (let i = 1; i <= 8; i++) {
+    const q = t(ns + ':faq.q' + i, '');
+    const a = rp(t(ns + ':faq.a' + i, ''));
+    if (q && a) faqEntrees.push({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } });
+  }
+
+  const baseUrl = 'https://quiz-couple.com';
+  const imageBilan = (typeof featuredImage !== 'undefined' && featuredImage) ? baseUrl + featuredImage : baseUrl + '/og-image.webp';
+  const appBilan = {
+    '@context': 'https://schema.org', '@type': 'WebApplication',
+    name: t(ns + ':jsonLd.name', pageTitle),
+    description: t('quizzes:bilanCouple.metaDescription', ''),
+    applicationCategory: 'LifestyleApplication',
+    operatingSystem: 'All',
+    browserRequirements: 'JavaScript',
+    inLanguage: lang,
+    url: canonical,
+    image: imageBilan,
+    about: { '@type': 'Thing', name: t(ns + ':jsonLd.about', '') },
+    offers: { '@type': 'Offer', price: (bilanPrixCentimes / 100).toFixed(2), priceCurrency: 'EUR' },
+    author: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl },
+    publisher: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl, logo: { '@type': 'ImageObject', url: baseUrl + '/apple-touch-icon.png' } }
+  };
+
+  // Tout ce que l'application affiche, dans la langue de la page, avec le
+  // prix et la garantie déjà écrits.
+  const appTextes = JSON.parse(rp(JSON.stringify(t(ns + ':app', {}))));
+  const bilanConfig = {
+    lang,
+    fonction: supabaseUrl + '/functions/v1/bilan',
+    cle: supabaseKey,
+    chemin: getLocalizedPath('bilanCouple', lang),
+    cgv: getLocalizedPath('cgv', lang),
+    contact: getLocalizedPath('contact', lang),
+    prix,
+    garantie: jours,
+    ouvert: !!(typeof bilanOuvert !== 'undefined' && bilanOuvert),
+    textes: appTextes,
+  };
+%>
+<script type="application/ld+json"><%- JSON.stringify(appBilan) %></script>
+<% if (faqEntrees.length) { %>
+<script type="application/ld+json"><%- JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqEntrees }) %></script>
+<% } %>
+
+<!-- Hero -->
+<section class="quiz-page-hero relative overflow-hidden hero-gradient">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="mx-auto max-w-3xl text-center">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
+          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:bilanCouple.shortTitle', pageTitle) %></li>
+        </ol>
+      </nav>
+      <span class="hero-badge mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <%= t(ns + ':hero.badge', '') %>
+      </span>
+      <%
+        const heroTitle = t(ns + ':hero.title', pageTitle);
+        const heroHighlight = t(ns + ':hero.highlight', '');
+      %>
+      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
+          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
+        <% } else { %>
+          <%= heroTitle %>
+        <% } %>
+      </h1>
+      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
+      <p class="bilan-hero-prix"><%= rp(t(ns + ':hero.prix', '')) %></p>
+    </div>
+  </div>
+  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '', featuredImageSrcset: typeof featuredImageSrcset !== 'undefined' ? featuredImageSrcset : null }) %>
+</section>
+
+<!-- L'application -->
+<section class="py-10 md:py-14">
+  <div class="container mx-auto px-4">
+    <div id="bilan-app" class="bilan" data-lang="<%= lang %>" aria-live="polite">
+      <div class="bilan-carte bilan-chargement">
+        <p><%= t(ns + ':app.chargement', 'Chargement...') %></p>
+      </div>
+      <noscript><div class="bilan-carte"><p><%= lang === 'fr' ? 'Le bilan a besoin de JavaScript pour fonctionner.' : 'The check-up needs JavaScript to work.' %></p></div></noscript>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
+
+<!-- Contenu -->
+<article class="py-16 md:py-24 seo-content">
+  <div class="avec-colonne">
+    <div class="avec-colonne__contenu container mx-auto px-4 max-w-3xl">
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- rp(t(ns + ':section1.p1')) %></p>
+        <p><%- rp(t(ns + ':section1.p2')) %></p>
+        <p><%- rp(t(ns + ':section1.p3')) %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed mb-6">
+        <p><%- rp(t(ns + ':section2.p1')) %></p>
+      </div>
+      <ul class="space-y-3 text-muted-foreground leading-relaxed list-disc pl-6 mb-6">
+        <% for (const pt of t(ns + ':section2.points', [])) { %><li><%- rp(pt) %></li><% } %>
+      </ul>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- rp(t(ns + ':section2.p2')) %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed mb-6">
+        <p><%- rp(t(ns + ':section3.p1')) %></p>
+      </div>
+      <ul class="space-y-3 text-muted-foreground leading-relaxed list-disc pl-6 mb-6">
+        <% for (const pt of t(ns + ':section3.points', [])) { %><li><%- rp(pt) %></li><% } %>
+      </ul>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- rp(t(ns + ':section3.p2')) %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section4.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- rp(t(ns + ':section4.p1')) %></p>
+        <p><%- rp(t(ns + ':section4.p2')) %></p>
+        <p><%- rp(t(ns + ':section4.p3')) %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section5.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- rp(t(ns + ':section5.p1')) %></p>
+        <p><%- rp(t(ns + ':section5.p2')) %></p>
+      </div>
+      <% if (jours > 0) { %>
+      <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+        <p class="text-sm text-muted-foreground"><%- rp(t(ns + ':section5.tip')) %></p>
+      </div>
+      <% } %>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section6.title') %></h2>
+      <div class="space-y-4 text-muted-foreground leading-relaxed">
+        <p><%- rp(t(ns + ':section6.p1')) %></p>
+        <p><%- rp(t(ns + ':section6.p2')) %></p>
+      </div>
+      <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+        <p class="text-sm text-muted-foreground"><%- rp(t(ns + ':section6.tip')) %></p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', 'FAQ') %></h2>
+      <div class="space-y-3">
+        <% for (let i = 1; i <= 8; i++) { %>
+        <details class="border border-border rounded-lg">
+          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= t(ns + ':faq.q' + i) %></summary>
+          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%- rp(t(ns + ':faq.a' + i)) %></div>
+        </details>
+        <% } %>
+      </div>
+    </section>
+
+    </div>
+  </div>
+</article>
+
+<script>window.BILAN_CONFIG = <%- JSON.stringify(bilanConfig).replace(/</g, '\\u003c') %>;</script>
+<script src="/js/mascottes.js" defer></script>
+<script src="/js/bilan-coeur.js" defer></script>
+<script src="/js/bilan.js" defer></script>

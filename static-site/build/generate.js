@@ -18,7 +18,7 @@ import {
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
-  estPageJouable, genrePageJouable, pagePublicitaire,
+  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, VENDEUR,
 } from './config.js';
 import { saisonActive } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
@@ -106,6 +106,41 @@ const FUTURE_BLOG_URLS = new Set();
     BLOG_ARTICLES.push(...publies);
     console.log(`[blog] ${futurs.length} article(s) programmé(s) en attente (publishedAt > ${BUILD_INSTANT.toISOString()})`);
     console.log(`[blog] prochain : ${futurs.map(f => f.publishedAt).sort()[0]}`);
+  }
+}
+
+// Le bilan de couple tant qu'il n'est pas ouvert (BILAN_OUVERT, config.js) :
+// les liens écrits vers lui dans les textes sont neutralisés comme ceux d'un
+// article programmé, et ils reviennent seuls le jour où il ouvre.
+if (!BILAN_OUVERT) {
+  for (const l of LANGUAGES) {
+    const p = getLocalizedPath('bilanCouple', l);
+    if (p) FUTURE_BLOG_URLS.add(p);
+  }
+}
+
+// Le prix du rapport du bilan, lu dans le module partagé avec le serveur
+// (supabase/functions/_shared/bilan/coeur.mjs), écrit dans la langue de la
+// page : « 9,90 € », « €9.90 ».
+const BILAN_COEUR_SRC = path.join(REPO_ROOT, 'supabase', 'functions', '_shared', 'bilan', 'coeur.mjs');
+const BILAN_CONST = (() => {
+  const src = fs.existsSync(BILAN_COEUR_SRC) ? fs.readFileSync(BILAN_COEUR_SRC, 'utf-8') : '';
+  const lis = (nom, defaut) => {
+    const m = src.match(new RegExp('export const ' + nom + ' = (\\d+);'));
+    return m ? Number(m[1]) : defaut;
+  };
+  return { prix: lis('PRIX_CENTIMES', 990), garantie: lis('GARANTIE_JOURS', 0) };
+})();
+if (BILAN_OUVERT && (!VENDEUR.siret || !VENDEUR.adresse || !(VENDEUR.mediateur && VENDEUR.mediateur.nom))) {
+  console.warn('[bilan] ATTENTION : bilan ouvert sans SIRET, adresse ou médiateur de la consommation (VENDEUR, config.js) : mentions légales et CGV incomplètes.');
+}
+function prixBilan(lang) {
+  try {
+    const bcp = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
+    return new Intl.NumberFormat(bcp, { style: 'currency', currency: 'EUR' })
+      .format(BILAN_CONST.prix / 100).replace(/\u202f/g, '\u00a0');
+  } catch (e) {
+    return (BILAN_CONST.prix / 100).toFixed(2) + ' €';
   }
 }
 
@@ -1001,7 +1036,8 @@ async function generatePage(routeKey, lang) {
   const pagePath = getLocalizedPath(routeKey, lang);
   if (pagePath === null) return; // Route not available in this language
 
-  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm'];
+  const noindexRoutes = ['legalMentions', 'privacy', 'admin', 'ebookConfirm', 'cgv'];
+  if (!BILAN_OUVERT) noindexRoutes.push('bilanCouple');
   const isNoindex = noindexRoutes.includes(routeKey);
   const alternates = isNoindex ? [] : getRouteAlternates(routeKey).filter(alt => alt.href);
   const canonical = getLocalizedUrl(routeKey, lang);
@@ -1081,6 +1117,16 @@ async function generatePage(routeKey, lang) {
     };
     title = cqMeta[lang]?.title || cqMeta.fr.title;
     description = cqMeta[lang]?.description || cqMeta.fr.description;
+  } else if (routeKey === 'cgv') {
+    const cgvMeta = {
+      fr: { title: 'Conditions générales de vente - Quiz Couple', description: 'Conditions générales de vente du bilan de couple de Quiz Couple.' },
+      en: { title: 'Terms of Sale - Quiz Couple', description: 'Terms of sale for the Quiz Couple couple check-up.' },
+      es: { title: 'Condiciones generales de venta - Quiz Couple', description: 'Condiciones generales de venta del chequeo de pareja de Quiz Couple.' },
+      de: { title: 'Allgemeine Geschäftsbedingungen - Quiz Couple', description: 'Allgemeine Geschäftsbedingungen für den Beziehungs-Check von Quiz Couple.' },
+      it: { title: 'Condizioni generali di vendita - Quiz Couple', description: 'Condizioni generali di vendita del check-up di coppia di Quiz Couple.' },
+    };
+    title = cgvMeta[lang]?.title || cgvMeta.fr.title;
+    description = cgvMeta[lang]?.description || cgvMeta.fr.description;
   } else if (routeKey === 'admin') {
     title = 'Administration - Quiz Couple';
     description = 'Panel d\'administration Quiz Couple';
@@ -1326,6 +1372,14 @@ async function generatePage(routeKey, lang) {
     getLocalizedUrl,
     mascotteSvg,
     famillesNav: FAMILLES_NAV,
+    // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
+    // sa garantie, et les mentions du vendeur (mentions légales, CGV).
+    bilanOuvert: BILAN_OUVERT,
+    bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
+    bilanPrix: prixBilan(lang),
+    bilanPrixCentimes: BILAN_CONST.prix,
+    bilanGarantie: BILAN_CONST.garantie,
+    vendeur: VENDEUR,
     saisonDesQuiz: SAISON_DES_QUIZ,
     instagramUrl: INSTAGRAM_URL,
     avisCuitsJson: jsonPourScript(avisCuitsPour(routeKey)),
@@ -1478,7 +1532,8 @@ function generateSitemaps() {
   // Static routes
   for (const [key, slugs] of Object.entries(ROUTE_SLUGS)) {
     // Skip noindex pages, admin, and frOnly routes without proper multilang support
-    if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm'].includes(key)) continue;
+    if (['admin', 'legalMentions', 'privacy', 'sitemap', 'ebookConfirm', 'cgv'].includes(key)) continue;
+    if (key === 'bilanCouple' && !BILAN_OUVERT) continue;
 
     // Build URL map for available languages
     const urlsByLang = {};
@@ -1725,6 +1780,13 @@ function copyTranslationData() {
       fs.copyFileSync(pureteSrc, path.join(dataDir, `purete-${lang}.json`));
     }
 
+    // Les questions du bilan de couple et leurs guides (près de 100 Ko) ne
+    // se chargent que quand quelqu'un ouvre l'application du bilan.
+    const bilanSrc = path.join(langDir, 'bilan-questions.json');
+    if (fs.existsSync(bilanSrc)) {
+      fs.writeFileSync(path.join(dataDir, `bilan-${lang}.json`), JSON.stringify(JSON.parse(fs.readFileSync(bilanSrc, 'utf-8'))), 'utf-8');
+    }
+
     // Les 200 destinations du test « où partir en vacances ? » ne se
     // chargent que quand quelqu'un lance le questionnaire.
     const vacancesSrc = path.join(langDir, 'vacances.json');
@@ -1837,6 +1899,20 @@ async function copyJs() {
     console.log('[js] mascottes.js copie depuis reseaux/charte');
   } else {
     console.warn('[js] reseaux/charte/mascottes.js introuvable : pages sans mascottes');
+  }
+
+  // Le calcul du bilan de couple, écrit une seule fois en module pour la
+  // fonction serveur (supabase/functions/_shared/bilan/coeur.mjs) et servi
+  // ici en script classique : les `export` retirés, le tout dans une
+  // fonction, et ce qui était exporté rangé sous window.QCBilanCoeur.
+  if (fs.existsSync(BILAN_COEUR_SRC)) {
+    const src = fs.readFileSync(BILAN_COEUR_SRC, 'utf-8');
+    const noms = [...src.matchAll(/^export (?:const|function) ([A-Za-z_]\w*)/gm)].map(m => m[1]);
+    const corps = src.replace(/^export (const|function) /gm, '$1 ');
+    if (/^\s*(import|export)\b/m.test(corps)) throw new Error('[bilan] coeur.mjs : import ou export inattendu');
+    fs.writeFileSync(path.join(destDir, 'bilan-coeur.js'),
+      `(function () {\n'use strict';\n${corps}\nwindow.QCBilanCoeur = { ${noms.join(', ')} };\n})();\n`, 'utf-8');
+    console.log(`[js] bilan-coeur.js construit (${noms.length} noms exportés)`);
   }
 
   // Inject the Supabase URL + anon key (resolved from config.js, itself driven by the
@@ -2117,6 +2193,14 @@ async function generateBlogArticle(articleMeta, lang) {
     translations,
     getLocalizedUrl,
     famillesNav: FAMILLES_NAV,
+    // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
+    // sa garantie, et les mentions du vendeur (mentions légales, CGV).
+    bilanOuvert: BILAN_OUVERT,
+    bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
+    bilanPrix: prixBilan(lang),
+    bilanPrixCentimes: BILAN_CONST.prix,
+    bilanGarantie: BILAN_CONST.garantie,
+    vendeur: VENDEUR,
     saisonDesQuiz: SAISON_DES_QUIZ,
     instagramUrl: INSTAGRAM_URL,
     getLocalizedPath,
@@ -2210,6 +2294,14 @@ async function generate404Pages() {
       translations,
       getLocalizedUrl,
       famillesNav: FAMILLES_NAV,
+      // Le bilan de couple : ouvert ou non, son prix dans la langue de la page,
+      // sa garantie, et les mentions du vendeur (mentions légales, CGV).
+      bilanOuvert: BILAN_OUVERT,
+      bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
+      bilanPrix: prixBilan(lang),
+      bilanPrixCentimes: BILAN_CONST.prix,
+      bilanGarantie: BILAN_CONST.garantie,
+      vendeur: VENDEUR,
       saisonDesQuiz: SAISON_DES_QUIZ,
     saisonDesQuiz: SAISON_DES_QUIZ,
       instagramUrl: INSTAGRAM_URL,

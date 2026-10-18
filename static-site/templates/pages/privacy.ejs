@@ -99,6 +99,18 @@
       <p class="text-foreground"><%= t('legal:privacy.s5Outro', '') %></p>
     </section>
 
+    <%# Le bilan de couple (service payant) : ce qui est gardé, pourquoi, combien de temps. %>
+    <% const _bilanPoints = t('legal:privacy.bilanItems', []); %>
+    <% if (typeof bilanOuvert !== 'undefined' && bilanOuvert && Array.isArray(_bilanPoints) && _bilanPoints.length) { %>
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.bilanTitle', '') %></h2>
+      <p class="text-foreground mb-4"><%= t('legal:privacy.bilanIntro', '') %></p>
+      <ul class="list-disc pl-6 space-y-2 text-foreground">
+        <% for (const _pt of _bilanPoints) { %><li><%- _pt %></li><% } %>
+      </ul>
+    </section>
+    <% } %>
+
     <% for (let i = 6; i <= 9; i++) { %>
     <section class="mb-10">
       <h2 class="text-2xl font-semibold text-foreground mb-4"><%= t('legal:privacy.s' + i + 'Title', '') %></h2>

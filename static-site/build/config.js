@@ -48,6 +48,11 @@ export const ROUTE_SLUGS = {
   testAstroPrenoms: { fr: 'signes-astrologiques-prenoms-compatibilite', en: 'zodiac-signs-names-compatibility', es: 'signos-astrologicos-nombres-compatibilidad', de: 'sternzeichen-vornamen-kompatibilitaet', it: 'segni-zodiacali-nomi-compatibilita' },
   calculatriceAmour: { fr: 'calculatrice-de-l-amour', en: 'love-calculator', es: 'calculadora-del-amor', de: 'liebesrechner', it: 'calcolatrice-dell-amore' },
   compteurCouple: { fr: 'compteur-de-couple', en: 'relationship-counter', es: 'contador-de-pareja', de: 'beziehungszaehler', it: 'contatore-di-coppia' },
+  // Le bilan de couple payant (docs/bilan/CONCEPTION.md). Les mêmes adresses
+  // sont écrites dans CHEMINS de supabase/functions/_shared/bilan/serveur.mjs
+  // (le retour de Stripe), un test vérifie qu'elles ne divergent pas.
+  bilanCouple: { fr: 'bilan-de-couple', en: 'couple-check-up', es: 'chequeo-de-pareja', de: 'beziehungs-check', it: 'check-up-di-coppia' },
+  cgv: { fr: 'conditions-generales-de-vente', en: 'terms-of-sale', es: 'condiciones-generales-de-venta', de: 'agb', it: 'condizioni-generali-di-vendita' },
   testSignesChinois: { fr: 'compatibilite-amoureuse-signes-chinois', en: 'chinese-zodiac-love-compatibility', es: 'compatibilidad-amorosa-signos-chinos', de: 'chinesische-sternzeichen-liebeskompatibilitaet', it: 'compatibilita-amorosa-segni-cinesi' },
   testDateNaissance: { fr: 'compatibilite-amoureuse-date-de-naissance', en: 'birth-date-love-compatibility', es: 'compatibilidad-amorosa-fecha-de-nacimiento', de: 'liebeskompatibilitaet-geburtsdatum', it: 'compatibilita-amorosa-data-di-nascita' },
   testJalousie: { fr: 'test-jalousie-couple', en: 'jealousy-test-couple', es: 'test-celos-pareja', de: 'eifersucht-test-paar', it: 'test-gelosia-coppia' },
@@ -145,6 +150,7 @@ export const QUIZ_FEATURED = {
   testParentalite:   { file: 'baby-shoes-toys',          old: 'test-parentalite',    alt: { fr: 'Petits chaussons de bébé et jouets en bois sur une couverture', en: 'Tiny baby shoes and wooden toys on a blanket', es: 'Pequeños zapatos de bebé y juguetes de madera sobre una manta', de: 'Winzige Babyschuhe und Holzspielzeug auf einer Decke', it: 'Scarpine da neonato e giochi di legno su una coperta' } },
   testEmmenager:     { file: 'moving-in-boxes',          old: null,                  alt: { fr: 'Cartons de déménagement dans un appartement lumineux et vide', en: 'Moving boxes in a bright empty apartment', es: 'Cajas de mudanza en un apartamento luminoso y vacío', de: 'Umzugskartons in einer hellen leeren Wohnung', it: 'Scatole per il trasloco in un appartamento luminoso e vuoto' } },
   calculatriceAmour: { file: 'love-calculator-hearts', old: null, alt: {"fr": "Petite machine à calculer ancienne sur une nappe de lin, un ruban de papier terminé par un cœur rose", "en": "A small vintage adding machine on a linen tablecloth, its paper ribbon ending in a pink paper heart", "es": "Pequeña máquina de calcular antigua sobre un mantel de lino, con una cinta de papel que termina en un corazón rosa", "de": "Kleine alte Rechenmaschine auf einer Leinendecke, deren Papierstreifen in einem rosa Herz endet", "it": "Piccola macchina da calcolo d'epoca su una tovaglia di lino, con un nastro di carta che termina in un cuore rosa"} },
+  bilanCouple: { file: 'couple-check-up', old: null, alt: {"fr": "Deux petits carnets ouverts côte à côte sur une nappe de lin, l'un rose et l'autre lavande, chacun avec son stylo et une liste de cases vides, deux tasses de thé derrière", "en": "Two small open notebooks side by side on a linen tablecloth, one pink and one lavender, each with its own pen and a list of empty tick boxes, two cups of tea behind", "es": "Dos libretas abiertas una al lado de la otra sobre un mantel de lino, una rosa y otra lavanda, cada una con su bolígrafo y una lista de casillas vacías, dos tazas de té detrás", "de": "Zwei kleine aufgeschlagene Notizbücher nebeneinander auf einer Leinentischdecke, eines rosa und eines lavendelfarben, jedes mit eigenem Stift und einer Liste leerer Kästchen, dahinter zwei Tassen Tee", "it": "Due piccoli quaderni aperti uno accanto all'altro su una tovaglia di lino, uno rosa e uno lavanda, ciascuno con la sua penna e un elenco di caselle vuote, due tazze di tè dietro"} },
   compteurCouple: { file: 'couple-day-counter', old: null, alt: {"fr": "Un grand bocal en verre rempli de centaines de petits cœurs en papier rose et lilas, quelques-uns tombés sur la nappe de lin, deux tasses de café côte à côte", "en": "A tall glass jar filled with hundreds of tiny pink and lilac paper hearts, a few spilled on the linen tablecloth, two coffee cups side by side", "es": "Un gran tarro de cristal lleno de cientos de pequeños corazones de papel rosa y lila, algunos caídos sobre el mantel de lino, dos tazas de café juntas", "de": "Ein hohes Glas voll mit hunderten kleinen Papierherzen in Rosa und Lila, ein paar auf die Leinentischdecke gefallen, zwei Kaffeetassen nebeneinander", "it": "Un grande barattolo di vetro pieno di centinaia di piccoli cuori di carta rosa e lilla, alcuni caduti sulla tovaglia di lino, due tazzine da caffè affiancate"} },
   testAstroPrenoms:  { file: 'zodiac-astrology',          old: 'test-astro-prenoms',  alt: { fr: 'Carte astrologique avec les constellations dorées du zodiaque', en: 'Astrology chart with golden zodiac constellations', es: 'Carta astrológica con constelaciones doradas del zodiaco', de: 'Astrologie-Karte mit goldenen Sternzeichen-Konstellationen', it: 'Carta astrologica con costellazioni dorate dello zodiaco' } },
   testSignesChinois: { file: 'chinese-zodiac-wheel',    old: null,                  alt: { fr: "Sur une soie rouge, une roue du zodiaque chinois en bois sculpté avec ses douze animaux, deux petits jetons de laque rouge reliés par un fil rouge posés au centre, quelques pétales de prunier", en: "On red silk, a carved wooden Chinese zodiac wheel with its twelve animals, two small red lacquer tokens tied together by a red thread resting at the centre, a few plum blossom petals", es: "Sobre una seda roja, una rueda del zodiaco chino de madera tallada con sus doce animales, dos pequeñas fichas de laca roja unidas por un hilo rojo en el centro, algunos pétalos de ciruelo", de: "Auf roter Seide ein geschnitztes Holzrad des chinesischen Tierkreises mit seinen zwölf Tieren, in der Mitte zwei kleine rote Lackplättchen, durch einen roten Faden verbunden, ein paar Pflaumenblütenblätter", it: "Su una seta rossa, una ruota dello zodiaco cinese in legno intagliato con i suoi dodici animali, due piccoli gettoni di lacca rossa legati da un filo rosso posati al centro, qualche petalo di pruno" } },
@@ -230,7 +236,7 @@ export const ROUTE_CONFIG = {
   quizKnowledge: { template: 'quiz-knowledge', namespaces: ['quiz-knowledge', 'quizzes', 'quizGames', 'gd', 'common'] },
   quizMost: { template: 'quiz-most', namespaces: ['quiz-most', 'quizzes', 'quizGames', 'gd', 'common'] },
   questionsCouple: { template: 'questions-couple', namespaces: ['quiz-questions-couple', 'quizzes', 'common'] },
-  legalMentions: { template: 'legal', namespaces: ['legal', 'common'] },
+  legalMentions: { template: 'legal', namespaces: ['legal', 'cgv', 'common'] },
   privacy: { template: 'privacy', namespaces: ['legal', 'common'] },
   blog: { template: 'blog-listing', namespaces: ['common'] },
   quizAdo: { template: 'quiz-ado', namespaces: ['quiz-ado', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -239,6 +245,8 @@ export const ROUTE_CONFIG = {
   testAstroPrenoms: { template: 'quiz-astro-prenoms', namespaces: ['quiz-astro-prenoms', 'quizzes', 'common'] },
   calculatriceAmour: { template: 'calculatrice-amour', namespaces: ['calculatrice-amour', 'quizzes', 'common'] },
   compteurCouple: { template: 'compteur-couple', namespaces: ['compteur-couple', 'quizzes', 'common'] },
+  bilanCouple: { template: 'bilan-couple', namespaces: ['bilan', 'quizzes', 'common'] },
+  cgv: { template: 'cgv', namespaces: ['cgv', 'common'] },
   testDateNaissance: { template: 'quiz-date-naissance', namespaces: ['quiz-date-naissance', 'quizzes', 'common'] },
   testSignesChinois: { template: 'quiz-signes-chinois', namespaces: ['quiz-signes-chinois', 'quizzes', 'common'] },
   testJalousie: { template: 'quiz-jalousie', namespaces: ['quiz-jalousie', 'quizzes', 'quizGames', 'gd', 'common'] },
@@ -313,6 +321,31 @@ export const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIU
 // Google Analytics
 export const GA_ID = 'G-XZV8V6FEK5';
 
+// ── Le bilan de couple payant ───────────────────────────────────────────
+// Un seul interrupteur (docs/bilan/CONCEPTION.md, « Ce qu'il faut de Thomas
+// avant d'ouvrir »). Tant qu'il est à false : la page existe mais n'est pas
+// indexée ni dans le sitemap, elle n'est dans aucun menu, les liens écrits
+// vers elle dans les textes sont neutralisés à la construction, et les
+// écrans de résultat des tests ne la proposent pas. À passer à true une fois
+// le compte Stripe branché (secrets STRIPE_SECRET_KEY et
+// STRIPE_WEBHOOK_SECRET chez Supabase) et VENDEUR rempli.
+// QC_BILAN=ouvert ou QC_BILAN=ferme force le choix pour une construction.
+export const BILAN_OUVERT = process.env.QC_BILAN === 'ouvert' ? true
+  : process.env.QC_BILAN === 'ferme' ? false
+  : false;
+// Les mentions obligatoires d'un vendeur (mentions légales et conditions de
+// vente). Un champ vide n'est pas affiché. Le médiateur de la consommation
+// est obligatoire dès qu'on vend à des particuliers (art. L612-1 du Code de
+// la consommation) : nom et site du médiateur auquel Thomas adhère.
+export const VENDEUR = {
+  nom: 'Thomas Owaller',
+  statut: { fr: 'Entrepreneur individuel (micro-entreprise)', en: 'Sole trader (French micro-entreprise)', es: 'Empresario individual (microempresa francesa)', de: 'Einzelunternehmer (französisches Kleinunternehmen)', it: 'Imprenditore individuale (microimpresa francese)' },
+  siret: '',
+  adresse: '',
+  email: 'infoquizcouple@gmail.com',
+  mediateur: { nom: '', site: '' },
+};
+
 // ── La saison du site ────────────────────────────────────────────────────
 // Un habillage léger, posé et retiré d'un seul geste (Thomas, 16 octobre
 // 2026 : « un design Halloween du site, vraiment léger... un truc qui peut
@@ -359,6 +392,8 @@ const ROUTES_JEUX = [
 // common.json, le même partout.
 export const FAMILLES_NAV = {
   tests: [
+    // Le bilan de couple en tête des tests de couple, une fois ouvert.
+    ...(BILAN_OUVERT ? ['bilanCouple'] : []),
     'testCouple', 'testCommonPoints', 'testCompatibilite', 'testCompatSexuelle', 'testDistance',
     'testFinCouple', 'testToxic', 'testPervers', 'testEmprise',
     'testAmourHabitude', 'testAmourAttachement', 'testEstCeLeBon',
@@ -423,6 +458,9 @@ export function estPageJouable(routeKey) {
 // vient de promettre ferait mauvais genre.
 const ROUTES_SANS_PUB = [
   'admin', 'legalMentions', 'privacy', 'contact', 'ebookConfirm', 'sitemap', '404',
+  // Le bilan est un produit payant : une page de publicité à côté le
+  // dévaloriserait, et ses écrans se succèdent sans fin de page.
+  'bilanCouple', 'cgv',
 ];
 
 export function pagePublicitaire(routeKey) {

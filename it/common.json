@@ -112,7 +112,9 @@
     "quizMortFilmHorreur": "Chi muore per primo (film horror)",
     "quizPossession": "Chi potrebbe essere posseduto",
     "quizSuperVilain": "Quale supercattivo sei",
-    "quizDuoVilains": "Quale duo di supercattivi"
+    "quizDuoVilains": "Quale duo di supercattivi",
+    "bilanCouple": "Check-up di coppia",
+    "bilanCoupleDesc": "90 domande ciascuno per conto suo, e dove non la vedete allo stesso modo"
   },
   "footer": {
     "brandDescription": "Metti alla prova la tua compatibilità e scopri la tua connessione amorosa con i nostri quiz gratuiti per coppie.",
@@ -130,7 +132,8 @@
     "sourcePrefAide": "Un'opzione di Google: i siti che aggiungete compaiono più in alto nei vostri risultati e nelle risposte IA. È collegata al vostro account Google e si può rimuovere in qualsiasi momento.",
     "sourcePrefAideAria": "Che cos'è una fonte preferita?",
     "cookiePrefs": "Gestisci i cookie",
-    "instagram": "Seguici su Instagram"
+    "instagram": "Seguici su Instagram",
+    "cgv": "Condizioni di vendita"
   },
   "buttons": {
     "start": "Inizia",

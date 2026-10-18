@@ -85,7 +85,17 @@
     "s9Title": "9. Contatto",
     "s9Text": "Per qualsiasi domanda o richiesta di informazioni sul sito, usa il nostro ",
     "s9Lien": "modulo di contatto",
-    "s9Fin": "."
+    "s9Fin": ".",
+    "bilanTitle": "Il check-up di coppia",
+    "bilanIntro": "Il check-up di coppia è l'unico servizio del sito che salva risposte a delle domande. Ecco esattamente cosa viene conservato, e per quanto tempo.",
+    "bilanItems": [
+      "<strong>Cosa viene salvato:</strong> i nomi dei due partner e, se lo indicano, il loro genere, la situazione della coppia (convivenza, figli, ecc.) e le risposte di ciascuno, anche su temi sensibili ai sensi dell'articolo 9 del GDPR (vita sessuale, convinzioni religiose, opinioni politiche). Nessun indirizzo e-mail, nessun account.",
+      "<strong>La base giuridica:</strong> il consenso esplicito che ogni partner dà per le proprie risposte, spuntando una casella prima della prima domanda. Può essere revocato in qualsiasi momento cancellando il check-up.",
+      "<strong>Chi le vede:</strong> voi due, e nessun altro. Il tuo partner vede le tue risposte nel report quando avete finito tutti e due. Le chiavi dei vostri link personali sono conservate solo sotto forma di impronta, impossibile da invertire.",
+      "<strong>Per quanto tempo:</strong> un check-up non pagato viene cancellato 60 giorni dopo l'ultima risposta, uno pagato sei mesi dopo il pagamento. Ognuno dei due può cancellarlo subito dal report. Oltre questo termine si conservano solo contatori anonimi (check-up creati, conclusi e pagati per giorno).",
+      "<strong>Il pagamento:</strong> passa da Stripe (Stripe Payments Europe, Ltd., Dublino, Irlanda), che tratta i dati di pagamento e l'indirizzo e-mail della ricevuta secondo la propria informativa sulla privacy. Non vediamo mai la tua carta: conserviamo solo il numero della sessione di pagamento e il suo importo.",
+      "<strong>Un'impronta dell'indirizzo IP:</strong> con sale e impossibile da invertire, conservata con il check-up per limitare il numero di check-up creati ogni ora dalla stessa connessione."
+    ]
   },
   "mentions": {
     "seoTitle": "Note Legali | Quiz Couple",

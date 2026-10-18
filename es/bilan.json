@@ -1,0 +1,312 @@
+{
+  "hero": {
+    "badge": "Chequeo de pareja",
+    "title": "El chequeo de pareja, que cada uno hace por su lado",
+    "highlight": "chequeo de pareja",
+    "description": "Unas 90 preguntas concretas sobre la vida en pareja: el dinero, los hijos, dónde vivir, la familia, la fidelidad, la intimidad... Cada uno responde en su móvil, sin ver las respuestas del otro, y después descubrís en qué estáis de acuerdo y en qué no.",
+    "prix": "Responder es gratis, y vuestro resultado general también. El informe completo cuesta {{prix}} para los dos."
+  },
+  "jsonLd": {
+    "name": "Chequeo de pareja",
+    "about": "Chequeo de pareja"
+  },
+  "app": {
+    "chargement": "Cargando...",
+    "accueil": {
+      "titre": "Haced balance, cada uno por su lado",
+      "etapes": [
+        "Cada uno responde en su móvil, sin ver las respuestas del otro. Calculad de 20 a 25 minutos, de una vez o en varias.",
+        "Cuando hayáis terminado los dos, veis gratis vuestro resultado: vuestro acuerdo global, cada tema y una de vuestras diferencias completa.",
+        "El informe completo ({{prix}} para los dos, un solo pago) muestra todas vuestras diferencias con vuestras dos respuestas, y cómo hablar de ellas."
+      ],
+      "commencer": "Empezar nuestro chequeo",
+      "enCours": "Vuestros chequeos en este dispositivo",
+      "avec": "Con {{autre}}",
+      "progression": "{{n}} preguntas de {{total}}",
+      "invite": "Invitación todavía sin aceptar",
+      "fini": "Tus respuestas están enviadas",
+      "resultat": "Resultado disponible",
+      "reprendre": "Continuar",
+      "voir": "Ver el resultado",
+      "oublier": "Quitar de este dispositivo",
+      "oublierConfirmer": "Confirmar: quitar de aquí",
+      "oublierAide": "El chequeo no se borra, solo desaparece de este dispositivo. Guarda tu enlace personal para recuperarlo.",
+      "violence": "Este chequeo muestra a cada uno las respuestas del otro. Si tienes miedo de tu pareja, no está pensado para tu situación: en España, el 016 atiende gratis las 24 horas y no deja rastro en la factura."
+    },
+    "creation": {
+      "titre": "Vuestro chequeo",
+      "etape": "Paso {{n}} de 3",
+      "prenomsTitre": "¿Quién hace el chequeo?",
+      "moi": "Tu nombre",
+      "autre": "El nombre de tu pareja",
+      "genre": "Tú eres",
+      "genreAutre": "Tu pareja es",
+      "femme": "Una mujer",
+      "homme": "Un hombre",
+      "sansGenre": "Prefiero no decirlo",
+      "genreAide": "Solo sirve para concordar las preguntas («escuchado» o «escuchada») y para elegir los personajes.",
+      "situationTitre": "Vuestra situación",
+      "situationAide": "Estas respuestas cambian las preguntas: una pareja que ya tiene hijos no tendrá «¿queréis tenerlos?» sino «¿otro más?». Tu pareja podrá corregirlas.",
+      "accordTitre": "Antes de empezar",
+      "majeur": "Tengo 18 años o más.",
+      "consentement": "Acepto que mis respuestas se guarden para este chequeo, también sobre temas íntimos (vida sexual, religión, opiniones), y que {{autre}} las vea en el informe.",
+      "accordAide": "Vuestro chequeo se guarda 60 días después de la última respuesta si no está pagado, y seis meses después del pago si lo está, y cualquiera de los dos puede borrarlo cuando quiera. Sin cuenta y sin correo electrónico.",
+      "prixRappel": "Responder es gratis. El informe completo cuesta {{prix}} para los dos, solo si lo queréis, cuando hayáis terminado los dos.",
+      "suivant": "Siguiente",
+      "retour": "Atrás",
+      "creer": "Crear nuestro chequeo",
+      "manque": "Falta una respuesta.",
+      "prenomManque": "Escribe vuestros dos nombres.",
+      "accordManque": "Marca las dos casillas para continuar."
+    },
+    "invitation": {
+      "titre": "Invita a {{autre}}",
+      "texte": "Envía este enlace a {{autre}}. {{autre}} responderá por su lado, en su móvil, sin ver tus respuestas, y tú no verás las suyas hasta el final.",
+      "envoyer": "Enviar el enlace",
+      "copier": "Copiar el enlace",
+      "copie": "¡Enlace copiado!",
+      "qr": "Mostrar el código QR",
+      "qrAide": "{{autre}} puede escanearlo con la cámara de su móvil.",
+      "message": "He empezado nuestro chequeo de pareja, te toca responder por tu lado: {{lien}}",
+      "messageTitre": "Nuestro chequeo de pareja",
+      "monLien": "Tu enlace personal",
+      "monLienAide": "Te permite retomar tus respuestas en otro dispositivo. No se lo des a nadie, ni siquiera a {{autre}}: es la llave de tus respuestas.",
+      "copierMonLien": "Copiar mi enlace",
+      "commencer": "Empezar mis respuestas",
+      "dejaRejoint": "{{autre}} se ha unido al chequeo."
+    },
+    "rejoindre": {
+      "titre": "{{autre}} te propone hacer vuestro chequeo de pareja",
+      "texte": "Unas 90 preguntas concretas sobre vuestra vida en pareja. Respondes por tu lado, sin ver las respuestas de {{autre}}, y al revés. Cuando hayáis terminado los dos, descubrís juntos en qué estáis de acuerdo y en qué no.",
+      "duree": "Calcula de 20 a 25 minutos. Puedes hacer una pausa cuando quieras, todo se guarda.",
+      "situationTitre": "Vuestra situación, tal como la ha descrito {{autre}}",
+      "situationCorriger": "Corregir",
+      "prenom": "Tu nombre",
+      "genre": "Tú eres",
+      "commencer": "Acepto y empiezo",
+      "lienUtilise": "Este enlace de invitación ya se ha usado. Si fuiste tú, abre tu enlace personal, o vuelve a esta página desde el móvil en el que empezaste."
+    },
+    "domaine": {
+      "partie": "Parte {{n}} de {{total}}",
+      "nb": "{{n}} preguntas, unos {{min}} min",
+      "go": "Vamos allá",
+      "pause": "Hacer una pausa",
+      "reprise": "Sigues donde lo dejaste."
+    },
+    "question": {
+      "progression": "Pregunta {{n}} de {{total}}",
+      "precedente": "Anterior",
+      "suivante": "Siguiente",
+      "nn": "Para mí no es negociable",
+      "nnAide": "Márcalo si no podrías ceder en este punto. Tu pareja lo verá en el informe.",
+      "pause": "Pausa",
+      "enregistre": "Guardado",
+      "horsLigne": "Sin conexión: tus respuestas se enviarán en cuanto vuelva.",
+      "erreur": "Tus últimas respuestas no se han podido guardar. Volvemos a intentarlo enseguida..."
+    },
+    "pause": {
+      "titre": "Está guardado",
+      "texte": "Puedes cerrar la página: tus respuestas se conservan. Para seguir, vuelve a esta página desde este móvil, o abre tu enlace personal en otro dispositivo.",
+      "reprendre": "Seguir con mis respuestas",
+      "progression": "Has respondido {{n}} preguntas de {{total}}."
+    },
+    "attente": {
+      "titre": "¡Ya has terminado!",
+      "texte": "Tus respuestas están guardadas. El resultado se abrirá en cuanto {{autre}} haya terminado.",
+      "autreProgression": "{{autre}}: {{n}} preguntas de {{total}}",
+      "autrePasRejoint": "{{autre}} todavía no ha abierto la invitación.",
+      "renvoyer": "Volver a enviar la invitación",
+      "revoir": "Revisar mis respuestas",
+      "revoirAide": "Todavía puedes cambiar tus respuestas mientras {{autre}} no haya terminado.",
+      "maj": "Esta página se actualiza sola.",
+      "accueil": "Volver a mis chequeos"
+    },
+    "resultat": {
+      "titre": "El chequeo de {{a}} y {{b}}",
+      "accord": "Vuestro acuerdo",
+      "meteo": "El tiempo en vuestra pareja",
+      "verdicts": {
+        "onde": { "titre": "En la misma onda", "texte": "Queréis más o menos la misma vida, y la veis de la misma manera. Tenéis diferencias, pero pocas: es el buen momento para hablarlas, mientras siguen siendo pequeñas." },
+        "proches": { "titre": "Muy cerca", "texte": "Estáis de acuerdo en lo esencial, con algunos temas en los que no veis las cosas igual. Es lo que les pasa a la mayoría de las parejas que van bien." },
+        "creuser": { "titre": "Cerca, con temas que hablar", "texte": "Coincidís en muchas cosas, pero varios temas os separan. Nada alarmante mientras los habléis, y precisamente para eso sirve este chequeo." },
+        "apprivoiser": { "titre": "Diferencias con las que aprender a vivir", "texte": "Tenéis maneras bastante distintas de ver la vida en pareja. No dice nada de vuestro amor, pero sí que algunos temas necesitan conversaciones de verdad, y acuerdos." },
+        "visions": { "titre": "Dos maneras de ver la vida", "texte": "En muchos temas no queréis lo mismo. Algunas parejas viven muy bien con eso, otras no: lo más importante es saber cuáles de estas diferencias cuentan de verdad para cada uno." }
+      },
+      "meteos": {
+        "beau": { "titre": "Sol radiante", "texte": "Los dos os sentís bien en vuestra pareja." },
+        "nuages": { "titre": "Sol con algunas nubes", "texte": "Va bien, con algunos puntos en los que uno de los dos está menos a gusto." },
+        "variable": { "titre": "Cielo variable", "texte": "Hay cosas buenas y algunos tramos más difíciles en este momento." },
+        "orageux": { "titre": "Tormentoso", "texte": "Uno de los dos, o los dos, no está muy bien en la pareja ahora mismo." },
+        "tempete": { "titre": "Temporal", "texte": "Las cosas no van muy bien en este momento. Este chequeo puede ayudar a ponerle palabras, y un terapeuta de pareja puede ayudaros a ir más allá." }
+      },
+      "parDomaine": "Tema por tema",
+      "compte": "{{accords}} acuerdos, {{proches}} respuestas cercanas, {{ecarts}} diferencias",
+      "bloquants": "{{n}} punto de bloqueo",
+      "bloquantsN": "{{n}} puntos de bloqueo",
+      "bloquantsAide": "Un punto de bloqueo es una diferencia en una gran pregunta (hijos, dónde vivir, fidelidad...) que uno de los dos ha marcado como «no negociable».",
+      "aucunBloquant": "Ningún punto de bloqueo",
+      "echantillonTitre": "Una de vuestras diferencias, completa",
+      "echantillonAide": "Este es un ejemplo de lo que contiene el informe para cada una de vuestras diferencias.",
+      "autresTitre": "Vuestras otras diferencias",
+      "masque": "Respuestas visibles en el informe",
+      "plusAutres": "Y {{n}} más",
+      "aucunEcart": "No tenéis ninguna diferencia: vuestras respuestas son cercanas o iguales en todo. ¡Es poco habitual!"
+    },
+    "paywall": {
+      "titre": "El informe completo",
+      "intro": "Todo lo que dicen vuestras dos series de respuestas, tema por tema, con lo necesario para hablarlo.",
+      "contenu": [
+        "Vuestras cuatro próximas conversaciones, en el orden en que tenerlas",
+        "Todas vuestras diferencias, con vuestras dos respuestas una al lado de la otra",
+        "Para cada diferencia: por qué importa el tema, dos preguntas para hablarlo y lo que mejor no decir",
+        "Vuestros puntos de bloqueo y lo que no es negociable para cada uno",
+        "Los temas en los que cada uno cree que hace más que el otro",
+        "Lo que os une",
+        "El tiempo en vuestra pareja, pregunta por pregunta",
+        "El informe para imprimir o guardar en PDF"
+      ],
+      "prix": "{{prix}} para los dos",
+      "prixAide": "Un solo pago, de uno u otro, desbloquea el informe para los dos. Sin suscripción.",
+      "renonciation": "Pido el acceso inmediato al informe y reconozco que pierdo mi derecho de desistimiento una vez desbloqueado el informe.",
+      "renonciationManque": "Marca la casilla para continuar.",
+      "bouton": "Desbloquear el informe: {{prix}}",
+      "garantie": "Si no estáis satisfechos, os devolvemos el dinero durante {{jours}} días: basta con un mensaje desde la página de contacto.",
+      "securite": "Pago seguro con Stripe (tarjeta, Apple Pay, Google Pay). Nunca vemos tu tarjeta.",
+      "cgv": "Condiciones de venta",
+      "tva": "IVA no aplicable, art. 293 B del Código General de Impuestos francés.",
+      "ferme": "El pago en línea se abre muy pronto. Vuestro chequeo está guardado: volved a esta página dentro de unos días.",
+      "redirection": "Redirigiendo al pago..."
+    },
+    "paiement": {
+      "verification": "Comprobando el pago...",
+      "ok": "Pago confirmado, ¡gracias! Aquí tenéis vuestro informe.",
+      "attente": "El pago todavía no está confirmado. Puede tardar unos segundos...",
+      "annule": "El pago se ha cancelado. Vuestro chequeo sigue aquí.",
+      "erreur": "No podemos comprobar el pago ahora mismo. Si has pagado, recarga la página dentro de un minuto."
+    },
+    "rapport": {
+      "date": "Chequeo terminado el {{date}}",
+      "conversationsTitre": "Vuestras cuatro próximas conversaciones",
+      "conversationsIntro": "Los temas en los que vuestras respuestas más se alejan, sobre lo que más cuenta, uno por tema. Dejad uno para cada noche, con calma, en lugar de todos de golpe.",
+      "conversation": "Conversación {{n}}",
+      "bloquantsTitre": "Vuestros puntos de bloqueo",
+      "bloquantsIntro": "Diferencias en preguntas que uno de los dos ha marcado como «no negociable». Son los primeros temas que hay que tratar, sin intentar convencer al otro esa misma noche: primero, entender.",
+      "nnTitre": "Lo que no es negociable para cada uno",
+      "nnAucun": "Nada marcado",
+      "chacunTitre": "Cada uno cree que hace más",
+      "chacunIntro": "En estos temas, cada uno cree que hace más que el otro. Es muy habitual: uno ve mejor lo que hace él que lo que hace el otro.",
+      "rassembleTitre": "Lo que os une",
+      "rassembleIntro": "Las grandes preguntas en las que habéis respondido exactamente lo mismo.",
+      "domainesTitre": "Tema por tema",
+      "accords": "Estáis de acuerdo",
+      "accordsAucun": "Ningún acuerdo exacto en este tema.",
+      "differences": "Vuestras diferencias",
+      "differencesAucune": "Ninguna diferencia en este tema.",
+      "desequilibre": "Estáis de acuerdo: es sobre todo {{nom}} quien se encarga. ¿Os parece bien a los dos?",
+      "cat": { "accord": "Acuerdo", "proche": "Respuestas cercanas", "ecart": "Diferencia" },
+      "statut": { "bloquant": "Punto de bloqueo", "aTrancher": "Por decidir", "aConfirmer": "Por confirmar" },
+      "chacunPlus": "Cada uno cree que hace más",
+      "nnDe": "No negociable para {{nom}}",
+      "pourquoi": "Por qué importa",
+      "parler": "Para hablarlo",
+      "eviter": "Mejor evitar",
+      "meteoTitre": "Cómo estáis",
+      "meteoIntro": "Estas preguntas no buscan un acuerdo: dicen cómo vive cada uno la pareja en este momento.",
+      "meteoEcart": "No lo vivís igual",
+      "meteoAttention": "A tener en cuenta",
+      "meteoDe": "Para {{nom}}",
+      "imprimer": "Imprimir o guardar en PDF",
+      "supprimer": "Borrar nuestro chequeo",
+      "supprimerConfirmer": "Confirmar el borrado",
+      "supprimerAide": "El chequeo se borra para los dos, enseguida y para siempre. Acordaos de guardar el PDF antes.",
+      "supprime": "Vuestro chequeo se ha borrado.",
+      "note": "Este chequeo es una herramienta para hablar, no un diagnóstico. Si estáis pasando por una época difícil, un terapeuta de pareja puede ayudaros a ir más allá.",
+      "garde": "Este informe sigue disponible seis meses en esta página, para los dos."
+    },
+    "situation": {
+      "resume": "Situación"
+    },
+    "erreurs": {
+      "reseau": "Sin conexión. Comprueba tu red y vuelve a intentarlo.",
+      "introuvable": "Este chequeo ya no existe, o este enlace no es el correcto.",
+      "trop": "Se han creado demasiados chequeos desde esta conexión. Vuelve a intentarlo dentro de una hora.",
+      "serveur": "Ha habido un problema por nuestra parte. Vuelve a intentarlo en un momento.",
+      "reessayer": "Reintentar"
+    },
+    "genres": { "f": "Una mujer", "h": "Un hombre" }
+  },
+  "section1": {
+    "title": "¿Qué es un chequeo de pareja?",
+    "p1": "Un chequeo de pareja es un cuestionario que los dos miembros de la pareja rellenan cada uno por su lado, para comparar después sus respuestas. No mide una compatibilidad de personalidad: mira si queréis la misma vida. Por ejemplo: «Tener hijos: sí, seguro, sí, seguramente, todavía no lo sé, o no». Si uno responde «sí, seguro» y el otro «no», eso es una diferencia, ¡y es el tipo de diferencia que más vale conocer pronto!",
+    "p2": "Los terapeutas de pareja usan este tipo de cuestionario desde hace mucho tiempo, sobre todo antes de una boda. Este se hace sin terapeuta, en el móvil, y dura de 20 a 25 minutos para cada uno. Hace preguntas muy concretas: la cuenta conjunta, con qué familia se pasa la Navidad, la ciudad o el campo, el móvil en la mesa, o lo que cada uno llama engañar.",
+    "p3": "Al final, veis en qué estáis de acuerdo, en qué vuestras respuestas son cercanas y en qué se alejan. El objetivo no es sacar una nota, es saber de qué hablar, y en qué orden."
+  },
+  "section2": {
+    "title": "Los doce temas del chequeo",
+    "p1": "Las preguntas están ordenadas en doce temas, del más sencillo al más íntimo. Se empieza por el día a día para entrar en materia, y se termina con cómo vive cada uno la pareja en este momento.",
+    "points": [
+      "<strong>El día a día en casa:</strong> las tareas, lo que cada uno tiene en la cabeza, el orden, el ritmo de las noches y de los fines de semana.",
+      "<strong>El tiempo juntos y el tiempo para uno mismo:</strong> cuánto tiempo juntos, la necesidad de estar solo, las salidas, las vacaciones.",
+      "<strong>Familia y amigos:</strong> la familia política, las fiestas de fin de año, las noches sin el otro.",
+      "<strong>El trabajo y las ambiciones:</strong> el lugar del trabajo, un cambio de profesión, una diferencia de sueldo.",
+      "<strong>El dinero:</strong> cuenta conjunta o no, reparto de gastos, ahorro, compras grandes.",
+      "<strong>Dónde y cómo vivir:</strong> irse a vivir juntos, la ciudad o el campo, comprar, mudarse por el trabajo del otro.",
+      "<strong>Los hijos:</strong> quererlos o no, cuándo, cuántos, cómo educarlos.",
+      "<strong>Los valores:</strong> la religión, el matrimonio, lo que más cuenta para cada uno.",
+      "<strong>La comunicación y las discusiones:</strong> decir lo que molesta, discutir, hacer las paces.",
+      "<strong>La confianza y la fidelidad:</strong> el móvil, los ex, los celos, lo que es engañar.",
+      "<strong>La intimidad y la ternura:</strong> el deseo, la ternura y cómo hablar de ello.",
+      "<strong>Cómo estáis:</strong> ocho preguntas sobre cómo vive cada uno la pareja hoy."
+    ],
+    "p2": "Ningún tema se puede quitar, y es a propósito: si uno no quiere hijos y el otro sí, es justo lo que el chequeo tiene que mostrar. En cambio, las preguntas se adaptan a vuestra situación. Una pareja que todavía no vive junta tiene «vivir juntos, ¿cuándo?» en lugar de «¿quién hace las tareas?», y una pareja que ya tiene hijos tiene «¿otro hijo?» en lugar de «¿queréis tenerlos?»."
+  },
+  "section3": {
+    "title": "Cómo funciona",
+    "p1": "Así funciona el chequeo, de principio a fin:",
+    "points": [
+      "<strong>Creas el chequeo:</strong> vuestros dos nombres y siete preguntas sobre vuestra situación (¿vivís juntos?, ¿tenéis hijos?, etc.).",
+      "<strong>Invitas a tu pareja:</strong> le envías un enlace, por mensaje o con un código QR.",
+      "<strong>Cada uno responde por su lado:</strong> unas 90 preguntas, de una vez o en varias. Cada respuesta se guarda al momento, y cada uno ve por dónde va el otro, sin ver nunca sus respuestas.",
+      "<strong>Descubrís vuestro resultado:</strong> en cuanto hayáis terminado los dos, gratis.",
+      "<strong>Si lo queréis, el informe completo:</strong> todas vuestras diferencias, vuestras dos respuestas y lo necesario para hablarlas, por {{prix}}."
+    ],
+    "p2": "En las grandes preguntas (los hijos, dónde vivir, el matrimonio, lo que es engañar...), podéis marcar una respuesta como «no negociable». Si vuestras respuestas se oponen en un punto que uno de los dos ha marcado así, el informe lo muestra primero: es un punto de bloqueo."
+  },
+  "section4": {
+    "title": "Por qué cada uno responde por su lado",
+    "p1": "Cuando se responde entre dos en la misma pantalla, uno mira la reacción del otro antes de elegir, y a menudo acaba respondiendo lo que le va a gustar. Cada uno por su lado, se responde para uno mismo. De hecho, muchas parejas descubren diferencias en temas de los que creían haber hablado ya.",
+    "p2": "Por eso también las preguntas sobre el reparto de tareas se responden con «sobre todo yo», «los dos por igual» o «sobre todo el otro». Cuando cada uno cree que hace más, el chequeo lo muestra negro sobre blanco, y suele ser el punto de partida de una conversación mucho más tranquila que de costumbre. Para ir más lejos en ese tema concreto, también tenemos un test sobre <a href=\"/es/test-carga-mental-pareja/\">todo lo que cada uno lleva en la cabeza</a>.",
+    "p3": "Si buscáis más bien un test rápido para hacer juntos en el mismo móvil, <a href=\"/es/test-compatibilidad-amorosa/\">vuestros puntos de compatibilidad amorosa</a> se miden en cinco minutos. El chequeo lleva más tiempo porque entra en el detalle de vuestra vida."
+  },
+  "section5": {
+    "title": "Lo que es gratis y lo que es de pago",
+    "p1": "Responder es gratis, para los dos. Cuando hayáis terminado, vuestro resultado general también es gratis: vuestro porcentaje de acuerdo, el tiempo en vuestra pareja, una barra por tema, el número de diferencias y de puntos de bloqueo, y una de vuestras diferencias completa, con vuestras dos respuestas y la guía para hablarla.",
+    "p2": "El informe completo cuesta {{prix}} para los dos, en un solo pago, de uno u otro. Contiene todas vuestras diferencias con vuestras dos respuestas, por qué importa cada tema, dos preguntas para hablarlo y lo que mejor no decir, vuestras cuatro próximas conversaciones en orden, lo que os une, y el tiempo en vuestra pareja pregunta por pregunta. Podéis imprimirlo o guardarlo en PDF.",
+    "tip": "El precio es el mismo para todo el mundo, no hay suscripción, y si no estáis satisfechos os devolvemos el dinero durante {{jours}} días."
+  },
+  "section6": {
+    "title": "Vuestras respuestas quedan entre vosotros",
+    "p1": "No hay que crear cuenta ni dar ningún correo electrónico. Cada uno entra en el chequeo con su propio enlace, que contiene una clave secreta que no guardamos en claro. Nadie más que vosotros dos ve vuestras respuestas, y tu pareja solo las ve cuando hayáis terminado los dos.",
+    "p2": "Un chequeo sin pagar se borra 60 días después de la última respuesta, uno pagado seis meses después del pago. Cualquiera de los dos puede borrarlo también en cualquier momento, con un clic, desde el informe. Los detalles están en nuestra <a href=\"/es/politica-privacidad/\">política de privacidad</a>.",
+    "tip": "Este chequeo muestra a cada uno las respuestas del otro. Si tienes miedo de tu pareja, no está pensado para tu situación: en España, el 016 atiende gratis las 24 horas y no deja rastro en la factura."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cuánto tiempo se tarda en hacer el chequeo?",
+    "a1": "Calculad de 20 a 25 minutos cada uno, para unas 90 preguntas. Nada os obliga a hacerlo todo de una vez: cada respuesta se guarda, y seguís donde lo dejasteis, en el mismo móvil o con vuestro enlace personal.",
+    "q2": "¿Mi pareja verá todas mis respuestas?",
+    "a2": "Sí, cuando hayáis terminado los dos: el informe pone vuestras dos respuestas una al lado de la otra, y esa es toda la gracia del chequeo. Mientras respondéis, en cambio, nadie ve nada, y cada uno solo ve por dónde va el otro.",
+    "q3": "¿Se puede hacer el chequeo si no vivimos juntos o no tenemos hijos?",
+    "a3": "Sí. Al principio describís vuestra situación en siete preguntas, y las preguntas se adaptan: una pareja que no vive junta tendrá «vivir juntos, ¿cuándo?», una pareja sin hijos tendrá «¿queréis tenerlos?», etc. Aun así, no se quita ningún tema, porque vuestros deseos cuentan tanto como vuestra situación actual.",
+    "q4": "¿Y si descubrimos que no estamos de acuerdo en muchas cosas?",
+    "a4": "Es frecuente, y no es una mala noticia: una diferencia que se conoce se puede hablar, una que se ignora acaba explotando en el peor momento. El informe os ayuda justamente a elegir por dónde empezar, con preguntas para hablarlo con calma.",
+    "q5": "¿El chequeo sustituye a una terapia de pareja?",
+    "a5": "No. Es una herramienta para poner palabras a lo que vivís y saber de qué hablar. Si estáis pasando por una época difícil, un terapeuta de pareja puede ayudaros a ir más allá, y el informe puede incluso servir de punto de partida con él.",
+    "q6": "¿Cómo se paga?",
+    "a6": "Con tarjeta, Apple Pay o Google Pay, en la página de pago segura de Stripe. Un solo pago de {{prix}}, de uno u otro, desbloquea el informe para los dos. Recibís un recibo por correo electrónico, y si no estáis satisfechos os devolvemos el dinero durante {{jours}} días.",
+    "q7": "¿Se puede repetir el chequeo más adelante?",
+    "a7": "Sí, y además es buena idea: repetirlo dentro de un año muestra lo que ha cambiado entre vosotros. Cada chequeo es independiente, basta con crear uno nuevo.",
+    "q8": "¿Qué pasa con nuestras respuestas?",
+    "a8": "Solo sirven para vuestro chequeo. Se borran 60 días después de la última respuesta si el chequeo no está pagado, seis meses después del pago si lo está, y cualquiera de los dos puede borrarlas enseguida desde el informe."
+  }
+}

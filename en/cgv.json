@@ -1,0 +1,88 @@
+{
+  "title": "Terms of sale",
+  "majLe": "Last updated: 18 October 2026",
+  "intro": "These terms apply to the purchase of the full report of the {{bilan}} on quiz-couple.com. Everything else on the site is free and isn't covered by any sale.",
+  "liens": { "contact": "contact page", "confidentialite": "privacy policy", "bilan": "couple check-up" },
+  "vendeur": {
+    "titre": "The seller",
+    "nom": "Name:",
+    "statut": "Status:",
+    "siret": "SIRET (French business ID):",
+    "adresse": "Address:",
+    "email": "Email:",
+    "tva": "VAT:",
+    "tvaValeur": "VAT not applicable, article 293 B of the French General Tax Code"
+  },
+  "sections": [
+    {
+      "titre": "1. What is sold",
+      "p": [
+        "The couple check-up is a questionnaire that two partners each answer separately. Answering is free, and so is the overall result (agreement percentage, relationship forecast, a bar for each area, the number of gaps and one gap in full).",
+        "What is sold is the full report: all the couple's gaps with both answers, the guides to talking about them, the next four conversations, the sticking points and each partner's non-negotiables, what brings the couple together and the forecast question by question. The report is digital content, shown on the check-up page and printable."
+      ]
+    },
+    {
+      "titre": "2. The price",
+      "p": [
+        "The full report costs {{prix}}, VAT not applicable. It's a one-off payment, with no subscription. A single payment, made by either partner, unlocks the report for both.",
+        "The price is shown on the check-up page before the first question, and again before payment."
+      ]
+    },
+    {
+      "titre": "3. Ordering and payment",
+      "p": [
+        "Payment is only offered once both partners have finished answering. Before paying, the buyer ticks a box requesting immediate access to the report and acknowledging that they lose their right of withdrawal once the report is unlocked (see article 5).",
+        "Payment is made on the secure page of our provider Stripe, by bank card, Apple Pay or Google Pay. We never have access to card details. Stripe sends a receipt to the email address given at payment: this is the order confirmation. An invoice can be requested from the {{contact}}."
+      ]
+    },
+    {
+      "titre": "4. Access to the report",
+      "p": [
+        "The report opens as soon as payment is confirmed, on the check-up page, for both partners, from their personal links. It stays available for six months after payment, then the check-up is erased. It can be printed or saved as a PDF at any time.",
+        "Either partner can delete the check-up before then. Deletion is immediate and permanent, for both, and doesn't lead to a refund outside the guarantee in article 6."
+      ]
+    },
+    {
+      "titre": "5. The right of withdrawal",
+      "p": [
+        "The report is digital content supplied immediately after payment. In accordance with article 16(m) of Directive 2011/83/EU and article L221-28 13° of the French Consumer Code, the fourteen-day right of withdrawal doesn't apply once the report is unlocked, as the buyer requested immediate access and acknowledged losing this right before paying."
+      ]
+    },
+    {
+      "titre": "6. Money-back guarantee",
+      "p": [
+        "On top of what the law provides, we refund the report within {{jours}} days of payment, with no need to give a reason: just write to us from the {{contact}} giving both partners' first names and the date of payment. The refund is made to the payment method used, within fourteen days of the request."
+      ]
+    },
+    {
+      "titre": "7. What the check-up is, and what it isn't",
+      "p": [
+        "The check-up is a tool to help a couple talk about their life together. It isn't a diagnosis, a therapy or the opinion of a health professional. Decisions taken on the basis of the report remain the partners' own. If you're going through a difficult time, a couples counsellor or therapist can support you.",
+        "The service is provided as is. We do our best to keep it available at all times, but a temporary interruption (maintenance, a provider outage) can't be ruled out. If a paid report remains inaccessible through our fault, it is refunded."
+      ]
+    },
+    {
+      "titre": "8. Personal data",
+      "p": [
+        "The check-up answers, which may touch on intimate life and beliefs, are only saved with each partner's explicit consent and are only used for the check-up. How long they're kept, your rights and the list of providers are detailed in our {{confidentialite}}."
+      ]
+    },
+    {
+      "titre": "9. Complaints and mediation",
+      "mediation": true,
+      "p": [
+        "For any complaint, first write to us from the {{contact}} or at {{email}}: we reply within a few days.",
+        "If the disagreement continues, you can turn free of charge to the consumer mediator we belong to: {{mediateur}}, within one year of your written complaint."
+      ],
+      "pSans": [
+        "For any complaint, first write to us from the {{contact}} or at {{email}}: we reply within a few days."
+      ]
+    },
+    {
+      "titre": "10. Applicable law",
+      "p": [
+        "These terms are governed by French law. If you live in another country of the European Union, you keep the protection of the mandatory rules of your country of residence."
+      ]
+    }
+  ]
+}

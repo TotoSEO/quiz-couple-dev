@@ -85,7 +85,17 @@
     "s9Title": "9. Contacto",
     "s9Text": "Para cualquier pregunta o solicitud de información sobre el sitio, utiliza nuestro ",
     "s9Lien": "formulario de contacto",
-    "s9Fin": "."
+    "s9Fin": ".",
+    "bilanTitle": "El chequeo de pareja",
+    "bilanIntro": "El chequeo de pareja es el único servicio del sitio que guarda respuestas a preguntas. Esto es exactamente lo que se guarda, y durante cuánto tiempo.",
+    "bilanItems": [
+      "<strong>Lo que se guarda:</strong> los nombres de los dos y, si lo indican, su género, la situación de la pareja (convivencia, hijos, etc.) y las respuestas de cada uno, también sobre temas sensibles en el sentido del artículo 9 del RGPD (vida sexual, convicciones religiosas, opiniones políticas). Ningún correo electrónico, ninguna cuenta.",
+      "<strong>La base legal:</strong> el consentimiento explícito que cada uno da para sus propias respuestas, marcando una casilla antes de la primera pregunta. Se puede retirar en cualquier momento borrando el chequeo.",
+      "<strong>Quién las ve:</strong> vosotros dos, y nadie más. Tu pareja ve tus respuestas en el informe cuando habéis terminado los dos. Las claves de vuestros enlaces personales solo se guardan en forma de huella, imposible de revertir.",
+      "<strong>Durante cuánto tiempo:</strong> un chequeo sin pagar se borra 60 días después de la última respuesta, uno pagado seis meses después del pago. Cualquiera de los dos puede borrarlo enseguida desde el informe. Más allá de eso solo se guardan contadores anónimos (chequeos creados, terminados y pagados por día).",
+      "<strong>El pago:</strong> pasa por Stripe (Stripe Payments Europe, Ltd., Dublín, Irlanda), que trata los datos de pago y el correo del recibo según su propia política de privacidad. Nunca vemos tu tarjeta: solo guardamos el número de la sesión de pago y su importe.",
+      "<strong>Una huella de la dirección IP:</strong> con sal e imposible de revertir, guardada con el chequeo para limitar el número de chequeos creados por hora desde una misma conexión."
+    ]
   },
   "mentions": {
     "seoTitle": "Aviso Legal | Quiz Couple",

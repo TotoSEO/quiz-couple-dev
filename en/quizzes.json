@@ -487,5 +487,11 @@
     "shortTitle": "Which supervillain duo are you",
     "metaDescription": "As a couple: the Halloween night heist in 15 questions each, your role in the duo (the brains, the chaos, the muscle...) and the famous villain duo you form, from the Joker and Harley Quinn to Bonnie and Clyde.",
     "description": "Each of you answers separately, and the quiz gives you your role in the duo and the famous villain duo you form."
+  },
+  "bilanCouple": {
+    "title": "Couple Check-Up: 90 Questions to Answer Separately",
+    "shortTitle": "Couple check-up",
+    "description": "About 90 concrete questions about your life together, each on your own phone, then where you agree and where you don't, area by area.",
+    "metaDescription": "Do a full couple check-up: money, kids, where to live, family, fidelity, intimacy. Each of you answers separately. Free result, full report for €9.90."
   }
 }

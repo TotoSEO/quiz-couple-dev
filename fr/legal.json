@@ -85,7 +85,17 @@
     "s9Title": "9. Contact",
     "s9Text": "Pour toute question ou demande d'information concernant le site, passez par notre ",
     "s9Lien": "formulaire de contact",
-    "s9Fin": "."
+    "s9Fin": ".",
+    "bilanTitle": "Le bilan de couple",
+    "bilanIntro": "Le bilan de couple est le seul service du site qui enregistre des réponses à des questions. Voici exactement ce qui est gardé, et pour combien de temps.",
+    "bilanItems": [
+      "<strong>Ce qui est enregistré :</strong> les prénoms des deux partenaires et, s'ils le donnent, leur genre, la situation du couple (vie commune, enfants, etc.) et les réponses de chacun, y compris sur des sujets sensibles au sens de l'article 9 du RGPD (vie sexuelle, convictions religieuses, opinions politiques). Aucune adresse e-mail, aucun compte.",
+      "<strong>La base légale :</strong> le consentement explicite que chaque partenaire donne pour ses propres réponses, en cochant une case avant la première question. Il peut être retiré à tout moment en supprimant le bilan.",
+      "<strong>Qui les voit :</strong> vous deux, et personne d'autre. Votre partenaire voit vos réponses dans le rapport une fois que vous avez fini tous les deux. Les clés de vos liens personnels ne sont gardées que sous forme d'empreinte, impossible à retourner.",
+      "<strong>Combien de temps :</strong> un bilan non payé est effacé 60 jours après la dernière réponse, un bilan payé six mois après le paiement. Chacun des deux peut le supprimer tout de suite depuis le rapport. Seuls des compteurs anonymes (bilans créés, finis, payés par jour) sont gardés au-delà.",
+      "<strong>Le paiement :</strong> il passe par Stripe (Stripe Payments Europe, Ltd., Dublin, Irlande), qui traite les données de paiement et l'adresse e-mail du reçu selon sa propre politique de confidentialité. Nous ne voyons jamais votre carte : nous gardons seulement le numéro de la session de paiement et son montant.",
+      "<strong>Une empreinte de l'adresse IP :</strong> salée et impossible à retourner, gardée avec le bilan pour limiter le nombre de bilans créés par heure depuis une même connexion."
+    ]
   },
   "mentions": {
     "seoTitle": "Mentions Légales | Quiz Couple",

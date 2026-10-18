@@ -1,0 +1,312 @@
+{
+  "hero": {
+    "badge": "Beziehungs-Check",
+    "title": "Der Beziehungs-Check, den jeder für sich macht",
+    "highlight": "Beziehungs-Check",
+    "description": "Rund 90 konkrete Fragen zum Leben zu zweit: Geld, Kinder, wo ihr wohnen wollt, Familie, Treue, Intimität... Jeder antwortet auf seinem eigenen Handy, ohne die Antworten des anderen zu sehen, und danach seht ihr, wo ihr euch einig seid und wo nicht.",
+    "prix": "Das Antworten ist kostenlos, euer Gesamtergebnis auch. Der vollständige Bericht kostet {{prix}} für euch beide."
+  },
+  "jsonLd": {
+    "name": "Beziehungs-Check",
+    "about": "Beziehungs-Check"
+  },
+  "app": {
+    "chargement": "Wird geladen...",
+    "accueil": {
+      "titre": "Zieht Bilanz, jeder für sich",
+      "etapes": [
+        "Jeder antwortet auf seinem eigenen Handy, ohne die Antworten des anderen zu sehen. Rechnet mit 20 bis 25 Minuten, am Stück oder in mehreren Etappen.",
+        "Wenn ihr beide fertig seid, seht ihr euer Ergebnis kostenlos: eure Gesamtübereinstimmung, jeden Bereich und einen eurer Unterschiede komplett.",
+        "Der vollständige Bericht ({{prix}} für euch beide, einmalig) zeigt alle eure Unterschiede mit euren beiden Antworten, und wie ihr darüber reden könnt."
+      ],
+      "commencer": "Unseren Check starten",
+      "enCours": "Eure Checks auf diesem Gerät",
+      "avec": "Mit {{autre}}",
+      "progression": "{{n}} von {{total}} Fragen",
+      "invite": "Einladung noch nicht angenommen",
+      "fini": "Deine Antworten sind abgeschickt",
+      "resultat": "Ergebnis verfügbar",
+      "reprendre": "Weitermachen",
+      "voir": "Ergebnis ansehen",
+      "oublier": "Von diesem Gerät entfernen",
+      "oublierConfirmer": "Bestätigen: hier entfernen",
+      "oublierAide": "Der Check wird nicht gelöscht, er verschwindet nur von diesem Gerät. Behalte deinen persönlichen Link, um ihn wiederzufinden.",
+      "violence": "Dieser Check zeigt jedem die Antworten des anderen. Wenn du Angst vor deinem Partner oder deiner Partnerin hast, ist er nicht für deine Situation gedacht: In Deutschland ist das Hilfetelefon „Gewalt gegen Frauen“ rund um die Uhr kostenlos und anonym unter 116 016 erreichbar, in Österreich die Frauenhelpline unter 0800 222 555."
+    },
+    "creation": {
+      "titre": "Euer Check",
+      "etape": "Schritt {{n}} von 3",
+      "prenomsTitre": "Wer macht den Check?",
+      "moi": "Dein Vorname",
+      "autre": "Der Vorname deines Partners oder deiner Partnerin",
+      "genre": "Du bist",
+      "genreAutre": "Dein Partner oder deine Partnerin ist",
+      "femme": "Eine Frau",
+      "homme": "Ein Mann",
+      "sansGenre": "Möchte ich nicht sagen",
+      "genreAide": "Das dient nur dazu, die Figuren neben euren Namen auszuwählen.",
+      "situationTitre": "Eure Situation",
+      "situationAide": "Diese Antworten ändern die Fragen: Ein Paar, das schon Kinder hat, bekommt nicht „Wollt ihr welche?“, sondern „Noch eins?“. Dein Partner oder deine Partnerin kann sie korrigieren.",
+      "accordTitre": "Bevor es losgeht",
+      "majeur": "Ich bin 18 Jahre oder älter.",
+      "consentement": "Ich bin einverstanden, dass meine Antworten für diesen Check gespeichert werden, auch zu intimen Themen (Sexualleben, Religion, Ansichten), und dass {{autre}} sie im Bericht sieht.",
+      "accordAide": "Euer Check wird 60 Tage nach eurer letzten Antwort gespeichert, wenn er nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und jeder von euch kann ihn jederzeit löschen. Kein Konto, keine E-Mail-Adresse.",
+      "prixRappel": "Das Antworten ist kostenlos. Der vollständige Bericht kostet {{prix}} für euch beide, nur wenn ihr ihn wollt, sobald ihr beide fertig seid.",
+      "suivant": "Weiter",
+      "retour": "Zurück",
+      "creer": "Unseren Check erstellen",
+      "manque": "Eine Antwort fehlt.",
+      "prenomManque": "Schreib eure beiden Vornamen.",
+      "accordManque": "Setz beide Häkchen, um weiterzumachen."
+    },
+    "invitation": {
+      "titre": "Lade {{autre}} ein",
+      "texte": "Schick diesen Link an {{autre}}. {{autre}} antwortet für sich, auf dem eigenen Handy, ohne deine Antworten zu sehen, und du siehst die Antworten von {{autre}} erst am Ende.",
+      "envoyer": "Link senden",
+      "copier": "Link kopieren",
+      "copie": "Link kopiert!",
+      "qr": "QR-Code anzeigen",
+      "qrAide": "{{autre}} kann ihn mit der Handykamera scannen.",
+      "message": "Ich habe unseren Beziehungs-Check angefangen, jetzt bist du dran: {{lien}}",
+      "messageTitre": "Unser Beziehungs-Check",
+      "monLien": "Dein persönlicher Link",
+      "monLienAide": "Damit kannst du deine Antworten auf einem anderen Gerät fortsetzen. Gib ihn niemandem, auch nicht {{autre}}: Er ist der Schlüssel zu deinen Antworten.",
+      "copierMonLien": "Meinen Link kopieren",
+      "commencer": "Mit meinen Antworten anfangen",
+      "dejaRejoint": "{{autre}} ist dem Check beigetreten."
+    },
+    "rejoindre": {
+      "titre": "{{autre}} schlägt dir vor, euren Beziehungs-Check zu machen",
+      "texte": "Rund 90 konkrete Fragen zu eurem Leben zu zweit. Du antwortest für dich, ohne die Antworten von {{autre}} zu sehen, und umgekehrt. Wenn ihr beide fertig seid, seht ihr zusammen, wo ihr euch einig seid und wo nicht.",
+      "duree": "Rechne mit 20 bis 25 Minuten. Du kannst jederzeit eine Pause machen, alles wird gespeichert.",
+      "situationTitre": "Eure Situation, wie {{autre}} sie beschrieben hat",
+      "situationCorriger": "Korrigieren",
+      "prenom": "Dein Vorname",
+      "genre": "Du bist",
+      "commencer": "Einverstanden, los geht's",
+      "lienUtilise": "Dieser Einladungslink wurde schon benutzt. Wenn du das warst, öffne deinen persönlichen Link, oder komm von dem Handy auf diese Seite zurück, auf dem du angefangen hast."
+    },
+    "domaine": {
+      "partie": "Teil {{n}} von {{total}}",
+      "nb": "{{n}} Fragen, etwa {{min}} Min.",
+      "go": "Los geht's",
+      "pause": "Pause machen",
+      "reprise": "Du machst da weiter, wo du aufgehört hast."
+    },
+    "question": {
+      "progression": "Frage {{n}} von {{total}}",
+      "precedente": "Zurück",
+      "suivante": "Weiter",
+      "nn": "Das ist für mich nicht verhandelbar",
+      "nnAide": "Setz das Häkchen, wenn du bei diesem Punkt keinen Kompromiss eingehen könntest. Dein Partner oder deine Partnerin sieht es im Bericht.",
+      "pause": "Pause",
+      "enregistre": "Gespeichert",
+      "horsLigne": "Keine Verbindung: Deine Antworten werden gesendet, sobald sie wieder da ist.",
+      "erreur": "Deine letzten Antworten konnten nicht gespeichert werden. Neuer Versuch gleich..."
+    },
+    "pause": {
+      "titre": "Ist gespeichert",
+      "texte": "Du kannst die Seite schließen: Deine Antworten bleiben erhalten. Um weiterzumachen, komm von diesem Handy auf diese Seite zurück, oder öffne deinen persönlichen Link auf einem anderen Gerät.",
+      "reprendre": "Mit meinen Antworten weitermachen",
+      "progression": "Du hast {{n}} von {{total}} Fragen beantwortet."
+    },
+    "attente": {
+      "titre": "Du bist fertig!",
+      "texte": "Deine Antworten sind gespeichert. Das Ergebnis öffnet sich, sobald {{autre}} fertig ist.",
+      "autreProgression": "{{autre}}: {{n}} von {{total}} Fragen",
+      "autrePasRejoint": "{{autre}} hat die Einladung noch nicht geöffnet.",
+      "renvoyer": "Einladung noch einmal senden",
+      "revoir": "Meine Antworten ansehen",
+      "revoirAide": "Du kannst deine Antworten noch ändern, solange {{autre}} nicht fertig ist.",
+      "maj": "Diese Seite aktualisiert sich von selbst.",
+      "accueil": "Zurück zu meinen Checks"
+    },
+    "resultat": {
+      "titre": "Der Check von {{a}} und {{b}}",
+      "accord": "Eure Übereinstimmung",
+      "meteo": "Das Beziehungswetter",
+      "verdicts": {
+        "onde": { "titre": "Auf einer Wellenlänge", "texte": "Ihr wollt ungefähr dasselbe Leben, und ihr seht es gleich. Unterschiede gibt es, aber nur wenige: Jetzt ist ein guter Moment, darüber zu reden, solange sie klein sind." },
+        "proches": { "titre": "Sehr nah beieinander", "texte": "Beim Wesentlichen seid ihr euch einig, mit ein paar Themen, bei denen ihr die Dinge nicht gleich seht. So geht es den meisten Paaren, die glücklich sind." },
+        "creuser": { "titre": "Nah beieinander, mit Themen zum Vertiefen", "texte": "Bei vielen Dingen seid ihr euch einig, aber mehrere Themen trennen euch. Nichts Beunruhigendes, solange ihr darüber redet, und genau dafür ist dieser Check da." },
+        "apprivoiser": { "titre": "Unterschiede, mit denen ihr umgehen lernt", "texte": "Ihr habt ziemlich unterschiedliche Vorstellungen vom Leben zu zweit. Das sagt nichts über eure Liebe, aber es heißt, dass manche Themen echte Gespräche brauchen, und Kompromisse." },
+        "visions": { "titre": "Zwei Arten, das Leben zu sehen", "texte": "Bei vielen Themen wollt ihr nicht dasselbe. Manche Paare leben sehr gut damit, andere nicht: Am wichtigsten ist zu wissen, welche dieser Unterschiede jedem von euch wirklich wichtig sind." }
+      },
+      "meteos": {
+        "beau": { "titre": "Strahlender Sonnenschein", "texte": "Ihr fühlt euch beide wohl in eurer Beziehung." },
+        "nuages": { "titre": "Sonnig mit ein paar Wolken", "texte": "Es läuft gut, mit ein paar Punkten, bei denen sich einer von euch weniger wohlfühlt." },
+        "variable": { "titre": "Wechselhaft", "texte": "Es gibt Gutes und gerade ein paar schwierigere Phasen." },
+        "orageux": { "titre": "Gewitterstimmung", "texte": "Einer von euch, oder ihr beide, fühlt sich gerade nicht so wohl in der Beziehung." },
+        "tempete": { "titre": "Sturm", "texte": "Gerade läuft es nicht gut. Dieser Check kann helfen, Worte dafür zu finden, und eine Paarberatung kann euch helfen, weiterzukommen." }
+      },
+      "parDomaine": "Bereich für Bereich",
+      "compte": "{{accords}} Übereinstimmungen, {{proches}} ähnliche Antworten, {{ecarts}} Unterschiede",
+      "bloquants": "{{n}} Knackpunkt",
+      "bloquantsN": "{{n}} Knackpunkte",
+      "bloquantsAide": "Ein Knackpunkt ist ein Unterschied bei einer großen Frage (Kinder, Wohnort, Treue...), die einer von euch als „nicht verhandelbar“ markiert hat.",
+      "aucunBloquant": "Kein Knackpunkt",
+      "echantillonTitre": "Einer eurer Unterschiede, komplett",
+      "echantillonAide": "Hier ein Beispiel dafür, was der Bericht zu jedem eurer Unterschiede enthält.",
+      "autresTitre": "Eure anderen Unterschiede",
+      "masque": "Antworten im Bericht sichtbar",
+      "plusAutres": "Und {{n}} weitere",
+      "aucunEcart": "Ihr habt keinen einzigen Unterschied: Eure Antworten sind überall ähnlich oder gleich. Das ist selten!"
+    },
+    "paywall": {
+      "titre": "Der vollständige Bericht",
+      "intro": "Alles, was eure beiden Antwortreihen sagen, Thema für Thema, mit allem, was ihr braucht, um darüber zu reden.",
+      "contenu": [
+        "Eure nächsten vier Gespräche, in der Reihenfolge, in der ihr sie führen solltet",
+        "Alle eure Unterschiede, mit euren beiden Antworten nebeneinander",
+        "Zu jedem Unterschied: warum das Thema wichtig ist, zwei Fragen, um darüber zu reden, und was ihr besser nicht sagt",
+        "Eure Knackpunkte und was für jeden von euch nicht verhandelbar ist",
+        "Die Themen, bei denen jeder glaubt, mehr zu machen als der andere",
+        "Was euch verbindet",
+        "Das Beziehungswetter, Frage für Frage",
+        "Der Bericht zum Ausdrucken oder als PDF"
+      ],
+      "prix": "{{prix}} für euch beide",
+      "prixAide": "Eine einzige Zahlung, von einem von euch, schaltet den Bericht für euch beide frei. Kein Abo.",
+      "renonciation": "Ich verlange den sofortigen Zugang zum Bericht und nehme zur Kenntnis, dass ich mein Widerrufsrecht verliere, sobald der Bericht freigeschaltet ist.",
+      "renonciationManque": "Setz das Häkchen, um weiterzumachen.",
+      "bouton": "Bericht freischalten: {{prix}}",
+      "garantie": "Geld-zurück-Garantie für {{jours}} Tage: Eine Nachricht über die Kontaktseite genügt.",
+      "securite": "Sichere Zahlung über Stripe (Karte, Apple Pay, Google Pay). Wir sehen deine Karte nie.",
+      "cgv": "AGB",
+      "tva": "Keine Umsatzsteuer, gemäß Art. 293 B des französischen Steuergesetzbuchs (Kleinunternehmerregelung).",
+      "ferme": "Die Online-Zahlung startet sehr bald. Euer Check ist gespeichert: Kommt in ein paar Tagen auf diese Seite zurück.",
+      "redirection": "Weiterleitung zur Zahlung..."
+    },
+    "paiement": {
+      "verification": "Zahlung wird geprüft...",
+      "ok": "Zahlung bestätigt, danke! Hier ist euer Bericht.",
+      "attente": "Die Zahlung ist noch nicht bestätigt. Das kann ein paar Sekunden dauern...",
+      "annule": "Die Zahlung wurde abgebrochen. Euer Check ist noch da.",
+      "erreur": "Die Zahlung kann gerade nicht geprüft werden. Wenn du bezahlt hast, lade die Seite in einer Minute neu."
+    },
+    "rapport": {
+      "date": "Check abgeschlossen am {{date}}",
+      "conversationsTitre": "Eure nächsten vier Gespräche",
+      "conversationsIntro": "Die Themen, bei denen eure Antworten am weitesten auseinanderliegen, bei dem, was am meisten zählt, eins pro Bereich. Nehmt euch eins pro Abend vor, in Ruhe, statt alles auf einmal.",
+      "conversation": "Gespräch {{n}}",
+      "bloquantsTitre": "Eure Knackpunkte",
+      "bloquantsIntro": "Unterschiede bei Fragen, die einer von euch als „nicht verhandelbar“ markiert hat. Das sind die ersten Themen, die ihr ansprechen solltet, ohne den anderen an dem Abend überzeugen zu wollen: erst einmal verstehen.",
+      "nnTitre": "Was für jeden nicht verhandelbar ist",
+      "nnAucun": "Nichts markiert",
+      "chacunTitre": "Jeder glaubt, mehr zu machen",
+      "chacunIntro": "Bei diesen Themen glaubt jeder von euch, mehr zu machen als der andere. Das ist sehr häufig: Man sieht besser, was man selbst macht, als was der andere macht.",
+      "rassembleTitre": "Was euch verbindet",
+      "rassembleIntro": "Die großen Fragen, bei denen ihr genau gleich geantwortet habt.",
+      "domainesTitre": "Bereich für Bereich",
+      "accords": "Ihr seid euch einig",
+      "accordsAucun": "Keine genaue Übereinstimmung in diesem Bereich.",
+      "differences": "Eure Unterschiede",
+      "differencesAucune": "Keine Unterschiede in diesem Bereich.",
+      "desequilibre": "Ihr seid euch einig: Vor allem {{nom}} kümmert sich darum. Passt das für euch beide?",
+      "cat": { "accord": "Übereinstimmung", "proche": "Ähnliche Antworten", "ecart": "Unterschied" },
+      "statut": { "bloquant": "Knackpunkt", "aTrancher": "Zu entscheiden", "aConfirmer": "Zu klären" },
+      "chacunPlus": "Jeder glaubt, mehr zu machen",
+      "nnDe": "Nicht verhandelbar für {{nom}}",
+      "pourquoi": "Warum es wichtig ist",
+      "parler": "Um darüber zu reden",
+      "eviter": "Lieber vermeiden",
+      "meteoTitre": "Wie es euch geht",
+      "meteoIntro": "Diese Fragen suchen keine Übereinstimmung: Sie zeigen, wie jeder die Beziehung gerade erlebt.",
+      "meteoEcart": "Ihr erlebt es nicht gleich",
+      "meteoAttention": "Im Auge behalten",
+      "meteoDe": "Für {{nom}}",
+      "imprimer": "Drucken oder als PDF speichern",
+      "supprimer": "Unseren Check löschen",
+      "supprimerConfirmer": "Löschen bestätigen",
+      "supprimerAide": "Der Check wird für euch beide gelöscht, sofort und endgültig. Denkt daran, vorher das PDF zu speichern.",
+      "supprime": "Euer Check wurde gelöscht.",
+      "note": "Dieser Check ist ein Werkzeug zum Reden, keine Diagnose. Wenn ihr gerade eine schwierige Zeit durchmacht, kann euch eine Paarberatung oder Paartherapie helfen, weiterzukommen.",
+      "garde": "Dieser Bericht bleibt sechs Monate auf dieser Seite verfügbar, für euch beide."
+    },
+    "situation": {
+      "resume": "Situation"
+    },
+    "erreurs": {
+      "reseau": "Keine Verbindung. Prüf dein Netz und versuch es noch einmal.",
+      "introuvable": "Diesen Check gibt es nicht mehr, oder der Link stimmt nicht.",
+      "trop": "Von dieser Verbindung aus wurden zu viele Checks erstellt. Versuch es in einer Stunde noch einmal.",
+      "serveur": "Bei uns ist ein Problem aufgetreten. Versuch es gleich noch einmal.",
+      "reessayer": "Noch einmal versuchen"
+    },
+    "genres": { "f": "Eine Frau", "h": "Ein Mann" }
+  },
+  "section1": {
+    "title": "Was ist ein Beziehungs-Check?",
+    "p1": "Ein Beziehungs-Check ist ein Fragebogen, den beide Partner jeweils für sich ausfüllen, um danach ihre Antworten zu vergleichen. Er misst keine Kompatibilität der Persönlichkeit: Er schaut, ob ihr dasselbe Leben wollt. Zum Beispiel: „Kinder haben: ja, sicher, ja, wahrscheinlich, weiß ich noch nicht, oder nein“. Wenn einer „ja, sicher“ antwortet und der andere „nein“, ist das ein Unterschied, und genau so einen Unterschied kennt man besser früh!",
+    "p2": "Paarberater nutzen solche Fragebögen schon lange, vor allem vor einer Hochzeit. Dieser hier funktioniert ohne Berater, auf eurem Handy, und dauert für jeden 20 bis 25 Minuten. Er stellt sehr konkrete Fragen: das Gemeinschaftskonto, Weihnachten bei wem, Stadt oder Land, das Handy am Tisch, oder was jeder von euch Fremdgehen nennt.",
+    "p3": "Am Ende seht ihr, wo ihr euch einig seid, wo eure Antworten nah beieinanderliegen und wo sie auseinandergehen. Es geht nicht um eine Note, sondern darum zu wissen, worüber ihr reden solltet, und in welcher Reihenfolge."
+  },
+  "section2": {
+    "title": "Die zwölf Bereiche des Checks",
+    "p1": "Die Fragen sind in zwölf Bereiche sortiert, vom einfachsten bis zum intimsten. Ihr fangt mit dem Alltag an, um reinzukommen, und hört damit auf, wie jeder die Beziehung gerade erlebt.",
+    "points": [
+      "<strong>Der Alltag zu Hause:</strong> Hausarbeit, wer woran denkt, Ordnung, der Rhythmus der Abende und Wochenenden.",
+      "<strong>Zeit zu zweit und Zeit für sich:</strong> wie viel Zeit zusammen, das Bedürfnis nach Alleinsein, Ausgehen, Urlaub.",
+      "<strong>Familie und Freunde:</strong> die Schwiegerfamilie, die Feiertage zum Jahresende, Abende ohne den anderen.",
+      "<strong>Arbeit und Ziele:</strong> der Platz der Arbeit, ein Berufswechsel, ein Gehaltsunterschied.",
+      "<strong>Geld:</strong> Gemeinschaftskonto oder nicht, Kosten aufteilen, sparen, größere Anschaffungen.",
+      "<strong>Wo und wie wohnen:</strong> zusammenziehen, Stadt oder Land, Eigentum kaufen, für den Job des anderen umziehen.",
+      "<strong>Kinder:</strong> ob ihr welche wollt, wann, wie viele, wie ihr sie erziehen wollt.",
+      "<strong>Werte:</strong> Religion, Ehe, was jedem von euch am wichtigsten ist.",
+      "<strong>Kommunikation und Streit:</strong> sagen, was stört, streiten, sich versöhnen.",
+      "<strong>Vertrauen und Treue:</strong> das Handy, die Exes, Eifersucht, was als Fremdgehen zählt.",
+      "<strong>Intimität und Zärtlichkeit:</strong> Lust, Zärtlichkeit und wie ihr darüber redet.",
+      "<strong>Wie es euch geht:</strong> acht Fragen dazu, wie jeder die Beziehung heute erlebt."
+    ],
+    "p2": "Kein Bereich lässt sich abwählen, und das ist Absicht: Wenn einer von euch keine Kinder will und der andere schon, ist genau das, was der Check zeigen soll. Die Fragen passen sich aber eurer Situation an. Ein Paar, das noch nicht zusammenwohnt, bekommt „Zusammenziehen, wann?“ statt „Wer macht die Hausarbeit?“, und ein Paar, das schon Kinder hat, bekommt „Noch ein Kind?“ statt „Wollt ihr welche?“."
+  },
+  "section3": {
+    "title": "So läuft es ab",
+    "p1": "So funktioniert der Check, von Anfang bis Ende:",
+    "points": [
+      "<strong>Du erstellst den Check:</strong> eure beiden Vornamen und sieben Fragen zu eurer Situation (wohnt ihr zusammen, habt ihr Kinder usw.).",
+      "<strong>Du lädst deinen Partner oder deine Partnerin ein:</strong> per Link, als Nachricht oder mit einem QR-Code.",
+      "<strong>Jeder antwortet für sich:</strong> rund 90 Fragen, am Stück oder in mehreren Etappen. Jede Antwort wird sofort gespeichert, und jeder sieht, wie weit der andere ist, ohne je seine Antworten zu sehen.",
+      "<strong>Ihr seht euer Ergebnis:</strong> sobald ihr beide fertig seid, kostenlos.",
+      "<strong>Wenn ihr wollt, der vollständige Bericht:</strong> alle eure Unterschiede, eure beiden Antworten und alles, um darüber zu reden, für {{prix}}."
+    ],
+    "p2": "Bei den großen Fragen (Kinder, Wohnort, Heiraten, was als Fremdgehen zählt...) könnt ihr eine Antwort als „nicht verhandelbar“ markieren. Wenn eure Antworten bei einem Punkt auseinandergehen, den einer von euch so markiert hat, zeigt der Bericht ihn zuerst: Das ist ein Knackpunkt."
+  },
+  "section4": {
+    "title": "Warum jeder für sich antwortet",
+    "p1": "Wenn man zu zweit auf demselben Bildschirm antwortet, schaut man vor der Wahl auf die Reaktion des anderen, und am Ende antwortet man oft das, was ihm gefällt. Jeder für sich antwortet man für sich selbst. Viele Paare entdecken übrigens Unterschiede bei Themen, über die sie dachten, schon gesprochen zu haben.",
+    "p2": "Deshalb werden auch die Fragen zur Aufteilung der Hausarbeit mit „vor allem ich“, „wir beide gleich“ oder „vor allem der andere“ beantwortet. Wenn jeder glaubt, mehr zu machen, zeigt der Check es schwarz auf weiß, und das ist oft der Ausgangspunkt für ein viel ruhigeres Gespräch als sonst. Wer bei diesem Thema tiefer gehen will, findet bei uns auch einen Test dazu, <a href=\"/de/mental-load-test-paare/\">was jeder im Kopf mit sich herumträgt</a>.",
+    "p3": "Wenn ihr eher einen schnellen Test sucht, den ihr zusammen auf einem Handy macht, lassen sich <a href=\"/de/liebeskompatibilitaet-test/\">eure Gemeinsamkeiten in der Liebe</a> in fünf Minuten messen. Der Check dauert länger, weil er ins Detail eures Lebens geht."
+  },
+  "section5": {
+    "title": "Was kostenlos ist und was etwas kostet",
+    "p1": "Das Antworten ist kostenlos, für euch beide. Wenn ihr fertig seid, ist auch euer Gesamtergebnis kostenlos: eure Übereinstimmung in Prozent, das Beziehungswetter, ein Balken pro Bereich, die Zahl eurer Unterschiede und Knackpunkte, und einer eurer Unterschiede komplett, mit euren beiden Antworten und dem Leitfaden, um darüber zu reden.",
+    "p2": "Der vollständige Bericht kostet {{prix}} für euch beide, einmalig, bezahlt von einem von euch. Er enthält alle eure Unterschiede mit euren beiden Antworten, warum jedes Thema wichtig ist, zwei Fragen, um darüber zu reden, und was ihr besser nicht sagt, eure nächsten vier Gespräche in der richtigen Reihenfolge, was euch verbindet, und das Beziehungswetter Frage für Frage. Ihr könnt ihn ausdrucken oder als PDF behalten.",
+    "tip": "Der Preis ist für alle gleich, es gibt kein Abo, und ihr bekommt euer Geld innerhalb von {{jours}} Tagen zurück, wenn ihr nicht zufrieden seid."
+  },
+  "section6": {
+    "title": "Eure Antworten bleiben unter euch",
+    "p1": "Es gibt kein Konto und keine E-Mail-Adresse anzugeben. Jeder kommt mit seinem eigenen Link in den Check, der einen geheimen Schlüssel enthält, den wir nicht im Klartext speichern. Niemand außer euch beiden sieht eure Antworten, und dein Partner oder deine Partnerin sieht sie erst, wenn ihr beide fertig seid.",
+    "p2": "Ein nicht bezahlter Check wird 60 Tage nach der letzten Antwort gelöscht, ein bezahlter sechs Monate nach der Zahlung. Jeder von euch kann ihn außerdem jederzeit mit einem Klick im Bericht löschen. Die Einzelheiten stehen in unserer <a href=\"/de/datenschutz/\">Datenschutzerklärung</a>.",
+    "tip": "Dieser Check zeigt jedem die Antworten des anderen. Wenn du Angst vor deinem Partner oder deiner Partnerin hast, ist er nicht für deine Situation gedacht: In Deutschland ist das Hilfetelefon „Gewalt gegen Frauen“ rund um die Uhr kostenlos und anonym unter 116 016 erreichbar, in Österreich die Frauenhelpline unter 0800 222 555."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "q1": "Wie lange dauert der Check?",
+    "a1": "Rechnet mit 20 bis 25 Minuten pro Person, für rund 90 Fragen. Nichts zwingt euch, alles auf einmal zu machen: Jede Antwort wird gespeichert, und ihr macht da weiter, wo ihr aufgehört habt, auf demselben Handy oder mit eurem persönlichen Link.",
+    "q2": "Sieht mein Partner oder meine Partnerin alle meine Antworten?",
+    "a2": "Ja, sobald ihr beide fertig seid: Der Bericht stellt eure beiden Antworten nebeneinander, genau darum geht es beim Check. Während ihr antwortet, sieht dagegen niemand etwas, und jeder sieht nur, wie weit der andere ist.",
+    "q3": "Können wir den Check machen, wenn wir nicht zusammenwohnen oder keine Kinder haben?",
+    "a3": "Ja. Am Anfang beschreibt ihr eure Situation in sieben Fragen, und die Fragen passen sich an: Ein Paar, das nicht zusammenwohnt, bekommt „Zusammenziehen, wann?“, ein Paar ohne Kinder bekommt „Wollt ihr welche?“ usw. Kein Bereich fällt deshalb weg, denn eure Wünsche zählen genauso viel wie eure aktuelle Situation.",
+    "q4": "Und wenn wir merken, dass wir uns bei vielen Dingen nicht einig sind?",
+    "a4": "Das kommt oft vor, und es ist keine schlechte Nachricht: Über einen Unterschied, den man kennt, kann man reden, einer, den man nicht kennt, explodiert irgendwann im falschen Moment. Der Bericht hilft euch genau dabei, zu entscheiden, womit ihr anfangt, mit Fragen, um in Ruhe darüber zu reden.",
+    "q5": "Ersetzt der Check eine Paartherapie?",
+    "a5": "Nein. Er ist ein Werkzeug, um Worte für das zu finden, was ihr erlebt, und zu wissen, worüber ihr reden solltet. Wenn ihr eine schwierige Zeit durchmacht, kann euch eine Paarberatung helfen, weiterzukommen, und der Bericht kann dort sogar ein Ausgangspunkt sein.",
+    "q6": "Wie läuft die Zahlung ab?",
+    "a6": "Mit Karte, Apple Pay oder Google Pay, auf der sicheren Zahlungsseite von Stripe. Eine einzige Zahlung von {{prix}}, von einem von euch, schaltet den Bericht für euch beide frei. Ihr bekommt eine Quittung per E-Mail und euer Geld innerhalb von {{jours}} Tagen zurück, wenn ihr nicht zufrieden seid.",
+    "q7": "Können wir den Check später noch einmal machen?",
+    "a7": "Ja, und das ist sogar eine gute Idee: Den Check in einem Jahr noch einmal zu machen zeigt, was sich zwischen euch verändert hat. Jeder Check ist eigenständig, ihr erstellt einfach einen neuen.",
+    "q8": "Was passiert mit unseren Antworten?",
+    "a8": "Sie dienen nur eurem Check. Sie werden 60 Tage nach der letzten Antwort gelöscht, wenn der Check nicht bezahlt ist, sonst sechs Monate nach der Zahlung, und jeder von euch kann sie sofort im Bericht löschen."
+  }
+}

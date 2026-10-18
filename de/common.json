@@ -112,7 +112,9 @@
     "quizMortFilmHorreur": "Wer stirbt zuerst (Horrorfilm)",
     "quizPossession": "Wer könnte besessen werden",
     "quizSuperVilain": "Welcher Superschurke bist du",
-    "quizDuoVilains": "Welches Superschurken-Duo"
+    "quizDuoVilains": "Welches Superschurken-Duo",
+    "bilanCouple": "Beziehungs-Check",
+    "bilanCoupleDesc": "90 Fragen, jeder für sich, und wo ihr die Dinge anders seht"
   },
   "footer": {
     "brandDescription": "Teste deine Kompatibilität und entdecke deine Liebesverbindung mit unseren kostenlosen Paar-Quiz.",
@@ -130,7 +132,8 @@
     "sourcePrefAide": "Eine Google-Einstellung: Die Seiten, die ihr hinzufügt, erscheinen weiter oben in euren Ergebnissen und in den KI-Antworten. Sie hängt an eurem Google-Konto und lässt sich jederzeit entfernen.",
     "sourcePrefAideAria": "Was ist eine bevorzugte Quelle?",
     "cookiePrefs": "Cookies verwalten",
-    "instagram": "Folge uns auf Instagram"
+    "instagram": "Folge uns auf Instagram",
+    "cgv": "AGB"
   },
   "buttons": {
     "start": "Starten",

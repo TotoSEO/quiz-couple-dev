@@ -1,0 +1,48 @@
+name: Bilan de couple · base Supabase
+
+# Applique 20261018120000_bilan_couple.sql par l'API de gestion de Supabase,
+# comme avis-base.yml, avec les secrets déjà là pour les fonctions
+# (SUPABASE_ACCESS_TOKEN et SUPABASE_PROJECT_REF). Rien à faire à la main.
+#
+# La migration crée la table des bilans (fermée à la clé publique), les
+# compteurs de l'entonnoir, le ménage de chaque nuit (pg_cron) et
+# get_bilan_stats, que l'admin lit par admin-stats. Elle ne ferme rien
+# d'existant : elle peut passer avant comme après la publication du site.
+#
+# Le relancer (« Run workflow ») est toujours sans risque : la migration est
+# idempotente.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'supabase/migrations/20261018120000_bilan_couple.sql'
+      - '.github/workflows/bilan-base.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: bilan-base
+  cancel-in-progress: false
+
+jobs:
+  migration:
+    name: Table des bilans, compteurs et ménage
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      # La dernière requête de la migration rend un bilan (lignes, compteurs,
+      # pg_cron présent ou non) : il est affiché dans le journal.
+      - name: Appliquer la migration
+        run: |
+          f=supabase/migrations/20261018120000_bilan_couple.sql
+          jq -Rs '{query: .}' "$f" > requete.json
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST \
+            "https://api.supabase.com/v1/projects/$SUPABASE_PROJECT_REF/database/query" \
+            -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" -H 'Content-Type: application/json' \
+            --data @requete.json)
+          echo "$f : réponse $code"
+          head -c 800 reponse.json; echo
+          if [ "$code" -ge 300 ]; then exit 1; fi

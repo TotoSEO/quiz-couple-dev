@@ -85,7 +85,17 @@
     "s9Title": "9. Contact",
     "s9Text": "For any question or request for information about the site, please use our ",
     "s9Lien": "contact form",
-    "s9Fin": "."
+    "s9Fin": ".",
+    "bilanTitle": "The couple check-up",
+    "bilanIntro": "The couple check-up is the only service on the site that saves answers to questions. Here's exactly what is kept, and for how long.",
+    "bilanItems": [
+      "<strong>What is saved:</strong> both partners' first names and, if they give it, their gender, the couple's situation (living together, children, etc.) and each person's answers, including on sensitive topics within the meaning of article 9 of the GDPR (sex life, religious beliefs, political opinions). No email address, no account.",
+      "<strong>The legal basis:</strong> the explicit consent each partner gives for their own answers, by ticking a box before the first question. It can be withdrawn at any time by deleting the check-up.",
+      "<strong>Who sees them:</strong> the two of you, and nobody else. Your partner sees your answers in the report once you've both finished. The keys to your personal links are only kept as a fingerprint that can't be reversed.",
+      "<strong>How long:</strong> an unpaid check-up is erased 60 days after the last answer, a paid one six months after payment. Either of you can delete it straight away from the report. Only anonymous counters (check-ups created, finished and paid per day) are kept beyond that.",
+      "<strong>Payment:</strong> it goes through Stripe (Stripe Payments Europe, Ltd., Dublin, Ireland), which processes payment data and the receipt email address under its own privacy policy. We never see your card: we only keep the payment session number and its amount.",
+      "<strong>A fingerprint of the IP address:</strong> salted and impossible to reverse, kept with the check-up to limit the number of check-ups created per hour from the same connection."
+    ]
   },
   "mentions": {
     "seoTitle": "Legal Notice | Quiz Couple",

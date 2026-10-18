@@ -2665,7 +2665,11 @@ var QuizEngine = (function() {
     // page, pas du type de test.
     if (!zones.produits) {
       var quizEl = document.getElementById('quiz-engine') || document.querySelector('[data-quiz]');
-      var produits = encartProduits(quizEl ? quizEl.dataset.quiz : '', quizEl ? (quizEl.dataset.lang || 'fr') : 'fr');
+      var cleQuiz = quizEl ? quizEl.dataset.quiz : '';
+      var langQuiz = quizEl ? (quizEl.dataset.lang || 'fr') : 'fr';
+      // Le bilan de couple payant passe avant les produits affiliés sur les
+      // tests de couple (un seul encart sous le verdict, jamais deux).
+      var produits = encartBilan(cleQuiz, langQuiz) || encartProduits(cleQuiz, langQuiz);
       if (produits) zones.produits = produits;
     }
     // Le pave de la regie (format 2) reste dans le texte, apres la premiere
@@ -3196,6 +3200,47 @@ var QuizEngine = (function() {
   // La zone entiere, ou null quand la page n'a rien a proposer ou n'est pas
   // en francais. C'est ce que dispositionResultat pose sous le resultat, et ce
   // que les pages a ecran de resultat propre (tu preferes) appellent.
+  // ── Le bilan de couple, sous le verdict des tests de couple ──────────
+  // Le body porte data-bilan (l'adresse de la page dans la langue) seulement
+  // quand le bilan est ouvert (BILAN_OUVERT, config.js) : sans lui, rien.
+  // docs/bilan/CONCEPTION.md.
+  var TESTS_BILAN = ['tester-couple', 'compatibilite', 'sain', 'emmenager', 'mariage', 'parentalite',
+    'est-ce-le-bon', 'charge-mentale', 'common-points', 'amoureux', 'type-couple',
+    'compatibilite-sexuelle', 'fin-couple', 'distance'];
+  var BILAN_TEXTES = {
+    fr: { sur: 'Pour aller plus loin à deux', titre: 'Le bilan de couple complet',
+          texte: 'Environ 90 questions concrètes (l\'argent, les enfants, où vivre, la fidélité...), chacun de son côté sur son téléphone. Puis vos accords et vos écarts, domaine par domaine.',
+          prix: 'Répondre est gratuit · rapport complet {{prix}} pour vous deux', bouton: 'Faire notre bilan' },
+    en: { sur: 'Go further, together', titre: 'The full couple check-up',
+          texte: 'About 90 concrete questions (money, kids, where to live, fidelity...), each of you on your own phone. Then where you agree and where you don\'t, area by area.',
+          prix: 'Answering is free · full report {{prix}} for both of you', bouton: 'Do our check-up' },
+    es: { sur: 'Para ir más lejos en pareja', titre: 'El chequeo de pareja completo',
+          texte: 'Unas 90 preguntas concretas (el dinero, los hijos, dónde vivir, la fidelidad...), cada uno por su lado en su móvil. Y después vuestros acuerdos y diferencias, tema por tema.',
+          prix: 'Responder es gratis · informe completo {{prix}} para los dos', bouton: 'Hacer nuestro chequeo' },
+    de: { sur: 'Gemeinsam weitergehen', titre: 'Der vollständige Beziehungs-Check',
+          texte: 'Rund 90 konkrete Fragen (Geld, Kinder, Wohnort, Treue...), jeder für sich auf seinem Handy. Danach eure Übereinstimmungen und Unterschiede, Bereich für Bereich.',
+          prix: 'Antworten ist kostenlos · vollständiger Bericht {{prix}} für euch beide', bouton: 'Unseren Check machen' },
+    it: { sur: 'Per andare più a fondo in due', titre: 'Il check-up di coppia completo',
+          texte: 'Circa 90 domande concrete (i soldi, i figli, dove vivere, la fedeltà...), ciascuno per conto suo sul proprio telefono. Poi i vostri accordi e le vostre differenze, tema per tema.',
+          prix: 'Rispondere è gratis · report completo {{prix}} per tutti e due', bouton: 'Fare il nostro check-up' },
+  };
+  function encartBilan(cle, lang) {
+    var chemin = document.body && document.body.getAttribute('data-bilan');
+    if (!chemin || TESTS_BILAN.indexOf(cle) < 0) return null;
+    var t = BILAN_TEXTES[lang] || BILAN_TEXTES.fr;
+    var prix = document.body.getAttribute('data-bilan-prix') || '';
+    var zone = el('section', 'qr-bilan');
+    zone.setAttribute('aria-label', t.titre);
+    var duo = mascottesDispo() ? '<div class="qr-bilan-duo" aria-hidden="true">' + mascotteSvg('rose', 'salut', 64) + mascotteSvg('violet', 'mignon', 68) + '</div>' : '';
+    zone.innerHTML = duo +
+      '<div class="qr-bilan-corps"><p class="qr-bilan-sur">' + esc(t.sur) + '</p>' +
+      '<h3 class="qr-bilan-titre">' + esc(t.titre) + '</h3>' +
+      '<p class="qr-bilan-texte">' + esc(insecables(t.texte)) + '</p>' +
+      (prix ? '<p class="qr-bilan-prix">' + esc(t.prix.replace('{{prix}}', prix)) + '</p>' : '') +
+      '<a class="btn btn-cta btn-gradient qr-bilan-bouton" href="' + esc(chemin) + '">' + esc(t.bouton) + '</a></div>';
+    return zone;
+  }
+
   function encartProduits(cle, lang, explicites) {
     lang = lang || 'fr';
     var t = PRODUITS_TEXTES[lang];

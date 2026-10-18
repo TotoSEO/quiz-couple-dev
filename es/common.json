@@ -112,7 +112,9 @@
     "quizMortFilmHorreur": "Quién muere primero (película de terror)",
     "quizPossession": "Quién podría ser poseído",
     "quizSuperVilain": "Qué supervillano eres",
-    "quizDuoVilains": "Qué dúo de supervillanos"
+    "quizDuoVilains": "Qué dúo de supervillanos",
+    "bilanCouple": "Chequeo de pareja",
+    "bilanCoupleDesc": "90 preguntas cada uno por su lado, y dónde no veis las cosas igual"
   },
   "footer": {
     "brandDescription": "Pon a prueba tu compatibilidad y descubre tu conexión amorosa con nuestros quiz gratuitos para parejas.",
@@ -130,7 +132,8 @@
     "sourcePrefAide": "Una opción de Google: los sitios que añadís aparecen más arriba en vuestros resultados y en las respuestas de IA. Está vinculada a vuestra cuenta de Google y se puede quitar en cualquier momento.",
     "sourcePrefAideAria": "¿Qué es una fuente preferida?",
     "cookiePrefs": "Gestionar las cookies",
-    "instagram": "Síguenos en Instagram"
+    "instagram": "Síguenos en Instagram",
+    "cgv": "Condiciones de venta"
   },
   "buttons": {
     "start": "Empezar",

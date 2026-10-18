@@ -107,7 +107,7 @@
     testCouple: '💕', testCommonPoints: '🎯', testDistance: '🌍', testToxic: '⚠️',
     testCoupleSain: '💚', testMariage: '💒', testDivorce: '⚖️', testParentalite: '👶',
     testEmmenager: '🏠', testAstroPrenoms: '♈', testDateNaissance: '📅', testSignesChinois: '🐉', testJalousie: '🫣', testLangageAmour: '💬',
-    testAttachement: '🔗', testConfiance: '🤝', testCompatibilite: '💘', testPervers: '🎭', testAmourHabitude: '☕', testEstCeLeBon: '🔑', compteurCouple: '📆', testCompatSexuelle: '🔥',
+    testAttachement: '🔗', testConfiance: '🤝', bilanCouple: '📋', testCompatibilite: '💘', testPervers: '🎭', testAmourHabitude: '☕', testEstCeLeBon: '🔑', compteurCouple: '📆', testCompatSexuelle: '🔥',
     testAmeSoeur: '💫', testFinCouple: '🪢', testAmourAmitie: '🧭', testCrush: '💘', testAmourAmi: '🧡', testKarmique: '🔮', testInfidelite: '💔', testCouche: '🛏️', testSecret: '💌', testAimeEncore: '💞', testEmprise: '🔒', testDistanceAime: '📞', testEx: '🕰️', testChargeMentale: '🧠', quizRencontre: '💬', testSuisJeAmoureux: '💗',
     quizAmoureux: '❤️', quizCoquin: '🔥', quizMarrant: '😂', quizKnowledge: '🧠',
     quizMost: '🏆', quizAdo: '🌟', quizGenant: '😳', quizTuPreferes: '🤔', quizVraiFaux: '✅',
@@ -117,9 +117,15 @@
     quizSerialKiller: '🔪', quizMortFilmHorreur: '🎬', quizPossession: '👻', quizSuperVilain: '🦹', quizDuoVilains: '🎭',
   };
 
-  const _relatedKeys = (_relatedMap[routeKey] || []).filter(function(k) {
-    return getLocalizedUrl(k, lang);
-  }).slice(0, 4);
+  // Le bilan de couple payant passe en tête sur les tests de couple, une
+  // fois ouvert (BILAN_OUVERT, config.js), comme sous le verdict du moteur.
+  const _avecBilan = (typeof bilanOuvert !== 'undefined' && bilanOuvert) &&
+    ['testCouple', 'testCompatibilite', 'testCoupleSain', 'testEmmenager', 'testMariage', 'testParentalite',
+     'testEstCeLeBon', 'testChargeMentale', 'testCommonPoints', 'quizAmoureux', 'quizTypeCouple',
+     'testCompatSexuelle', 'testFinCouple', 'testDistance'].indexOf(routeKey) !== -1;
+  const _relatedKeys = (_avecBilan ? ['bilanCouple'] : []).concat((_relatedMap[routeKey] || []).filter(function(k) {
+    return getLocalizedUrl(k, lang) && k !== 'bilanCouple';
+  })).slice(0, 4);
 
   // Famille de chaque page suggérée (FAMILLES_NAV, la liste du menu) : elle
   // donne la couleur de la carte, son étiquette et le verbe du bouton.

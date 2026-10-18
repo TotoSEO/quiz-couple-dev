@@ -181,6 +181,14 @@ button.adm-retour-site:disabled{opacity:.6;cursor:progress;}
 .adm-table-wrap table thead{background:hsl(var(--muted)/.6);}
 .adm-table-wrap table th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--adm-ink-2);}
 
+/* Tableau de l'onglet Bilan : un jour par ligne, le total en dernier. */
+.adm-table-defile{overflow-x:auto;}
+.adm-table{width:100%;border-collapse:collapse;font-size:.85rem;font-variant-numeric:tabular-nums;}
+.adm-table th{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--adm-ink-2);text-align:right;padding:.45rem .6rem;white-space:nowrap;}
+.adm-table td{text-align:right;padding:.4rem .6rem;border-top:1px solid var(--adm-line);}
+.adm-table th:first-child,.adm-table td:first-child{text-align:left;}
+.adm-table-total td{font-weight:700;border-top:2px solid var(--adm-line);}
+
 /* ── Tuiles d'indicateurs ──────────────────────────────────────────── */
 .adm .stats-tetes,.adm .trafic-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem;margin-bottom:1.25rem;align-items:stretch;}
 .adm .stats-tete{

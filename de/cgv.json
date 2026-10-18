@@ -1,0 +1,88 @@
+{
+  "title": "Allgemeine Geschäftsbedingungen",
+  "majLe": "Zuletzt aktualisiert: 18. Oktober 2026",
+  "intro": "Diese Bedingungen gelten für den Kauf des vollständigen Berichts zum {{bilan}} auf quiz-couple.com. Alles andere auf der Website ist kostenlos und von keinem Verkauf betroffen.",
+  "liens": { "contact": "Kontaktseite", "confidentialite": "Datenschutzerklärung", "bilan": "Beziehungs-Check" },
+  "vendeur": {
+    "titre": "Der Verkäufer",
+    "nom": "Name:",
+    "statut": "Rechtsform:",
+    "siret": "SIRET (französische Unternehmensnummer):",
+    "adresse": "Anschrift:",
+    "email": "E-Mail:",
+    "tva": "Umsatzsteuer:",
+    "tvaValeur": "Keine Umsatzsteuer, gemäß Artikel 293 B des französischen Steuergesetzbuchs (Kleinunternehmerregelung)"
+  },
+  "sections": [
+    {
+      "titre": "1. Was verkauft wird",
+      "p": [
+        "Der Beziehungs-Check ist ein Fragebogen, den zwei Partner jeweils für sich beantworten. Das Antworten ist kostenlos, ebenso das Gesamtergebnis (Übereinstimmung in Prozent, Beziehungswetter, ein Balken pro Bereich, die Zahl der Unterschiede und ein Unterschied komplett).",
+        "Verkauft wird der vollständige Bericht: alle Unterschiede des Paares mit beiden Antworten, die Leitfäden, um darüber zu reden, die nächsten vier Gespräche, die Knackpunkte und was für jeden nicht verhandelbar ist, was das Paar verbindet und das Beziehungswetter Frage für Frage. Der Bericht ist ein digitaler Inhalt, der auf der Seite des Checks angezeigt wird und ausgedruckt werden kann."
+      ]
+    },
+    {
+      "titre": "2. Der Preis",
+      "p": [
+        "Der vollständige Bericht kostet {{prix}}, ohne Umsatzsteuer (Kleinunternehmerregelung). Es ist eine einmalige Zahlung, ohne Abo. Eine einzige Zahlung, von einem der beiden Partner, schaltet den Bericht für beide frei.",
+        "Der Preis wird auf der Seite des Checks vor der ersten Frage angezeigt, und noch einmal vor der Zahlung."
+      ]
+    },
+    {
+      "titre": "3. Bestellung und Zahlung",
+      "p": [
+        "Die Zahlung wird erst angeboten, wenn beide Partner fertig geantwortet haben. Vor der Zahlung setzt der Käufer ein Häkchen, mit dem er den sofortigen Zugang zum Bericht verlangt und zur Kenntnis nimmt, dass er sein Widerrufsrecht verliert, sobald der Bericht freigeschaltet ist (siehe Artikel 5).",
+        "Die Zahlung erfolgt auf der sicheren Seite unseres Dienstleisters Stripe, per Bankkarte, Apple Pay oder Google Pay. Wir haben nie Zugriff auf die Kartendaten. Stripe schickt eine Quittung an die bei der Zahlung angegebene E-Mail-Adresse: Das ist die Bestellbestätigung. Eine Rechnung kann über die {{contact}} angefordert werden."
+      ]
+    },
+    {
+      "titre": "4. Zugang zum Bericht",
+      "p": [
+        "Der Bericht öffnet sich, sobald die Zahlung bestätigt ist, auf der Seite des Checks, für beide Partner, über ihre persönlichen Links. Er bleibt sechs Monate nach der Zahlung verfügbar, danach wird der Check gelöscht. Er kann jederzeit ausgedruckt oder als PDF gespeichert werden.",
+        "Jeder der beiden Partner kann den Check vor Ablauf dieser Frist löschen. Die Löschung erfolgt sofort und endgültig, für beide, und führt außerhalb der Garantie aus Artikel 6 zu keiner Erstattung."
+      ]
+    },
+    {
+      "titre": "5. Das Widerrufsrecht",
+      "p": [
+        "Der Bericht ist ein digitaler Inhalt, der unmittelbar nach der Zahlung bereitgestellt wird. Gemäß Artikel 16 Buchstabe m der Richtlinie 2011/83/EU und Artikel L221-28 13° des französischen Verbrauchergesetzbuchs gilt das vierzehntägige Widerrufsrecht nicht mehr, sobald der Bericht freigeschaltet ist, da der Käufer vor der Zahlung den sofortigen Zugang verlangt und den Verlust dieses Rechts zur Kenntnis genommen hat."
+      ]
+    },
+    {
+      "titre": "6. Geld-zurück-Garantie",
+      "p": [
+        "Zusätzlich zu den gesetzlichen Regeln erstatten wir den Bericht innerhalb von {{jours}} Tagen nach der Zahlung, ohne Begründung: Schreibt uns einfach über die {{contact}} mit den Vornamen beider Partner und dem Datum der Zahlung. Die Erstattung erfolgt auf das verwendete Zahlungsmittel, innerhalb von vierzehn Tagen nach der Anfrage."
+      ]
+    },
+    {
+      "titre": "7. Was der Check ist, und was nicht",
+      "p": [
+        "Der Check ist ein Werkzeug, das einem Paar hilft, über sein gemeinsames Leben zu reden. Er ist weder eine Diagnose noch eine Therapie noch die Meinung einer medizinischen Fachkraft. Entscheidungen, die auf Grundlage des Berichts getroffen werden, bleiben die der Partner. Wenn ihr eine schwierige Zeit durchmacht, kann euch eine Paarberatung oder Paartherapie begleiten.",
+        "Der Dienst wird so bereitgestellt, wie er ist. Wir tun unser Möglichstes, damit er jederzeit verfügbar ist, aber eine vorübergehende Unterbrechung (Wartung, Ausfall eines Dienstleisters) lässt sich nicht ausschließen. Bleibt ein bezahlter Bericht durch unser Verschulden unzugänglich, wird er erstattet."
+      ]
+    },
+    {
+      "titre": "8. Personenbezogene Daten",
+      "p": [
+        "Die Antworten im Check, die das Intimleben und Überzeugungen berühren können, werden nur mit der ausdrücklichen Einwilligung jedes Partners gespeichert und dienen nur dem Check. Speicherdauer, eure Rechte und die Liste der Dienstleister stehen in unserer {{confidentialite}}."
+      ]
+    },
+    {
+      "titre": "9. Beschwerden und Schlichtung",
+      "mediation": true,
+      "p": [
+        "Bei Beschwerden schreib uns zuerst über die {{contact}} oder an {{email}}: Wir antworten innerhalb weniger Tage.",
+        "Wenn die Meinungsverschiedenheit bestehen bleibt, kannst du kostenlos die Verbraucherschlichtungsstelle anrufen, der wir angehören: {{mediateur}}, innerhalb eines Jahres nach deiner schriftlichen Beschwerde."
+      ],
+      "pSans": [
+        "Bei Beschwerden schreib uns zuerst über die {{contact}} oder an {{email}}: Wir antworten innerhalb weniger Tage."
+      ]
+    },
+    {
+      "titre": "10. Anwendbares Recht",
+      "p": [
+        "Diese Bedingungen unterliegen französischem Recht. Wenn du in einem anderen Land der Europäischen Union lebst, behältst du den Schutz der zwingenden Vorschriften deines Wohnsitzlandes."
+      ]
+    }
+  ]
+}

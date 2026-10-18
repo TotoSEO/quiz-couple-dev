@@ -1,0 +1,88 @@
+{
+  "title": "Condizioni generali di vendita",
+  "majLe": "Ultimo aggiornamento: 18 ottobre 2026",
+  "intro": "Queste condizioni si applicano all'acquisto del report completo del {{bilan}} su quiz-couple.com. Tutto il resto del sito è gratuito e non è interessato da nessuna vendita.",
+  "liens": { "contact": "pagina dei contatti", "confidentialite": "informativa sulla privacy", "bilan": "check-up di coppia" },
+  "vendeur": {
+    "titre": "Il venditore",
+    "nom": "Nome:",
+    "statut": "Forma giuridica:",
+    "siret": "SIRET (numero d'impresa francese):",
+    "adresse": "Indirizzo:",
+    "email": "E-mail:",
+    "tva": "IVA:",
+    "tvaValeur": "IVA non applicabile, articolo 293 B del Codice generale delle imposte francese"
+  },
+  "sections": [
+    {
+      "titre": "1. Cosa viene venduto",
+      "p": [
+        "Il check-up di coppia è un questionario a cui due partner rispondono ognuno per conto suo. Rispondere è gratis, e anche il risultato generale (percentuale di accordo, meteo della coppia, una barra per area, il numero di differenze e una differenza per intero).",
+        "Quello che viene venduto è il report completo: tutte le differenze della coppia con le due risposte, le guide per parlarne, le prossime quattro conversazioni, i punti critici e quello che non è negoziabile per ciascuno, quello che unisce la coppia e il meteo domanda per domanda. Il report è un contenuto digitale, mostrato sulla pagina del check-up e stampabile."
+      ]
+    },
+    {
+      "titre": "2. Il prezzo",
+      "p": [
+        "Il report completo costa {{prix}}, IVA non applicabile. È un pagamento unico, senza abbonamento. Un solo pagamento, fatto da uno dei due partner, sblocca il report per entrambi.",
+        "Il prezzo è indicato sulla pagina del check-up prima della prima domanda, e di nuovo prima del pagamento."
+      ]
+    },
+    {
+      "titre": "3. L'ordine e il pagamento",
+      "p": [
+        "Il pagamento viene proposto solo quando entrambi i partner hanno finito di rispondere. Prima di pagare, l'acquirente spunta una casella con cui chiede l'accesso immediato al report e riconosce di perdere il diritto di recesso una volta sbloccato il report (vedi l'articolo 5).",
+        "Il pagamento avviene sulla pagina sicura del nostro fornitore Stripe, con carta, Apple Pay o Google Pay. Non abbiamo mai accesso ai dati della carta. Stripe invia una ricevuta all'indirizzo e-mail indicato al momento del pagamento: è la conferma dell'ordine. Si può chiedere una fattura dalla {{contact}}."
+      ]
+    },
+    {
+      "titre": "4. L'accesso al report",
+      "p": [
+        "Il report si apre appena il pagamento è confermato, sulla pagina del check-up, per entrambi i partner, dai loro link personali. Resta disponibile sei mesi dopo il pagamento, poi il check-up viene cancellato. Può essere stampato o salvato in PDF in qualsiasi momento.",
+        "Ognuno dei due partner può cancellare il check-up prima di questo termine. La cancellazione è immediata e definitiva, per entrambi, e non dà diritto a un rimborso al di fuori della garanzia dell'articolo 6."
+      ]
+    },
+    {
+      "titre": "5. Il diritto di recesso",
+      "p": [
+        "Il report è un contenuto digitale fornito subito dopo il pagamento. In conformità all'articolo 16, lettera m), della Direttiva 2011/83/UE e all'articolo L221-28 13° del Codice del consumo francese, il diritto di recesso di quattordici giorni non si applica una volta sbloccato il report, poiché l'acquirente ha chiesto l'accesso immediato e ha riconosciuto di perdere questo diritto prima di pagare."
+      ]
+    },
+    {
+      "titre": "6. Soddisfatti o rimborsati",
+      "p": [
+        "Oltre a quanto previsto dalla legge, rimborsiamo il report entro {{jours}} giorni dal pagamento, senza bisogno di giustificarsi: basta scriverci dalla {{contact}} indicando il nome dei due partner e la data del pagamento. Il rimborso avviene sul mezzo di pagamento utilizzato, entro quattordici giorni dalla richiesta."
+      ]
+    },
+    {
+      "titre": "7. Cosa è il check-up, e cosa non è",
+      "p": [
+        "Il check-up è uno strumento per aiutare una coppia a parlare della propria vita a due. Non è una diagnosi, né una terapia, né il parere di un professionista sanitario. Le decisioni prese a partire dal report restano dei partner. Se state attraversando un periodo difficile, un consulente di coppia o un terapeuta può accompagnarvi.",
+        "Il servizio è fornito così com'è. Facciamo il possibile perché sia sempre disponibile, ma non si può escludere un'interruzione temporanea (manutenzione, guasto di un fornitore). Se un report pagato resta inaccessibile per colpa nostra, viene rimborsato."
+      ]
+    },
+    {
+      "titre": "8. I dati personali",
+      "p": [
+        "Le risposte del check-up, che possono riguardare la vita intima e le convinzioni, vengono salvate solo con il consenso esplicito di ciascun partner e servono solo al check-up. La durata di conservazione, i vostri diritti e l'elenco dei fornitori sono indicati nella nostra {{confidentialite}}."
+      ]
+    },
+    {
+      "titre": "9. Reclami e mediazione",
+      "mediation": true,
+      "p": [
+        "Per qualsiasi reclamo, scrivici prima dalla {{contact}} o all'indirizzo {{email}}: rispondiamo in pochi giorni.",
+        "Se il disaccordo persiste, puoi rivolgerti gratuitamente al mediatore dei consumatori a cui facciamo capo: {{mediateur}}, entro un anno dal tuo reclamo scritto."
+      ],
+      "pSans": [
+        "Per qualsiasi reclamo, scrivici prima dalla {{contact}} o all'indirizzo {{email}}: rispondiamo in pochi giorni."
+      ]
+    },
+    {
+      "titre": "10. La legge applicabile",
+      "p": [
+        "Queste condizioni sono regolate dal diritto francese. Se risiedi in un altro paese dell'Unione europea, mantieni la tutela delle norme imperative del tuo paese di residenza."
+      ]
+    }
+  ]
+}
