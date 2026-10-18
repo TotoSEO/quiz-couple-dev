@@ -29,7 +29,7 @@
       "id": "ani-120",
       "pilier": "contrastes",
       "qui": "lui",
-      "idee": "ta personne quand elle a faim | il est grognon, nuage noir | « ça va ? » « grmbl » | elle sort un croissant de derrière son dos | chute : il fond, « merci mon cœur »"
+      "idee": "quand ta personne a faim | il est grognon, nuage noir | « ça va ? » « grmbl » | elle sort un croissant de derrière son dos | chute : il fond, « merci mon cœur »"
     },
     {
       "id": "ani-101",
@@ -409,7 +409,7 @@
       "id": "pos-109",
       "style": "mini",
       "qui": "elle",
-      "texte": "regarde regarde regarde",
+      "texte": "nan mais regarde ça",
       "scene": "elle, morte de rire, le téléphone tendu vers nous (bras tend_d, objet telephone)"
     },
     {
@@ -897,7 +897,7 @@
       "id": "his-104",
       "pilier": "tendresse",
       "qui": "les deux",
-      "idee": "au début / maintenant | je me préparais une heure / pyjama et chaussettes dépareillées | bonne nuit pendant des heures / on s'endort au milieu d'une phrase | je mangeais à peine devant toi / je mange dans ton assiette (appel : vous aussi ou c'est que nous ?)"
+      "idee": "nous deux au début, et nous deux maintenant | je me préparais une heure / pyjama et chaussettes dépareillées | bonne nuit pendant des heures / on s'endort au milieu d'une phrase | je mangeais à peine devant toi / je mange dans ton assiette (appel : vous aussi ou c'est que nous ?)"
     },
     {
       "id": "his-106",
