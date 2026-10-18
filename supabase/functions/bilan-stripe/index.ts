@@ -2,7 +2,8 @@
 // paiement est payée (checkout.session.completed, ou
 // checkout.session.async_payment_succeeded pour un moyen de paiement
 // différé), le bilan qu'elle porte en métadonnée est débloqué, même si la
-// personne a fermé l'onglet pendant le paiement. La signature est vérifiée
+// personne a fermé l'onglet pendant le paiement ; un remboursement fait depuis
+// Stripe (charge.refunded) est noté pour l'admin. La signature est vérifiée
 // avec STRIPE_WEBHOOK_SECRET (Stripe > Développeurs > Webhooks).
 // Mode d'emploi : docs/bilan/STRIPE.md.
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
@@ -17,7 +18,7 @@ const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!;
 const SERVICE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 const SECRET = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
 
-const { marquerPaye } = creerServeur({
+const { marquerPaye, marquerRembourse } = creerServeur({
   stockage: creerStockageRest({ url: SUPABASE_URL, cle: SERVICE_KEY, fetch }),
 });
 
@@ -32,6 +33,7 @@ serve(async (req: Request) => {
       secret: SECRET,
       verifierSignature,
       marquerPaye,
+      marquerRembourse,
     });
     return new Response(JSON.stringify(r.json), { status: r.statut, headers: { 'Content-Type': 'application/json' } });
   } catch (e) {

@@ -1,10 +1,14 @@
 /* Le bilan de couple : l'application de la page /bilan-de-couple/.
-   Chacun répond de son côté, sur son téléphone, à environ 90 questions ; la
-   fonction serveur `bilan` garde les réponses, et quand les deux ont fini,
-   elle renvoie le résumé gratuit, ou les deux séries de réponses une fois le
-   rapport payé. Le calcul est celui du serveur (window.QCBilanCoeur, construit
-   depuis supabase/functions/_shared/bilan/coeur.mjs), les questions arrivent
-   de /js/data/bilan-<lang>.json.
+   La page est d'abord une présentation ; l'application prend toute la place
+   (mode focus, body.bilan-focus) dès qu'on commence ou qu'on arrive par un
+   lien. Chacun répond de son côté, sur son téléphone, à une centaine de
+   questions ; la fonction serveur `bilan` garde les réponses. Aucun résultat
+   avant le paiement : on paie dès qu'on a fini ses propres réponses, le
+   rapport s'ouvre quand les deux ont fini et part en PDF par e-mail. Le
+   calcul est celui du serveur (window.QCBilanCoeur, depuis
+   supabase/functions/_shared/bilan/coeur.mjs), le rapport le même gabarit
+   que le PDF (window.QCBilanRapport, depuis rapport.mjs), les questions
+   arrivent de /js/data/bilan-<lang>.json.
 
    Chacun accède au bilan par son lien personnel (#b=<id>&t=<clé>), que la
    page range aussi dans localStorage (qc-bilans) pour reprendre sans lien sur
@@ -58,10 +62,7 @@
   function nombre(n) {
     try { return new Intl.NumberFormat(LOCALES[LANG] || 'fr-FR').format(n); } catch (e) { return String(n); }
   }
-  function dateLongue(iso) {
-    try { return new Date(iso).toLocaleDateString(LOCALES[LANG] || 'fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }); }
-    catch (e) { return String(iso || '').slice(0, 10); }
-  }
+
 
   // ── Les personnages ─────────────────────────────────────────────────────
   // Même règle que les moteurs : une femme est la rose, un homme le violet,
@@ -197,7 +198,7 @@
     if (f) f(cible, e);
   });
   var ACTIONS_COMMUNES = {
-    accueil: function () { nettoyerUrl(); accueil(); },
+    accueil: function () { nettoyerUrl(); if (lireListe().length) accueil(); else quitterFocus(); },
   };
 
   function copier(texte, boutonEl, libelleOk) {
@@ -244,16 +245,6 @@
     if (r.q.type === 'qui') return Q.qui.map(function (o) { return C.remplir(o, { autre: autre }); });
     return (texteQ(id).o || []).map(function (o) { return C.remplir(C.accorder(o, genre), { autre: autre }); });
   }
-  // La réponse de quelqu'un, écrite pour être lue par les deux.
-  function reponseLue(id, v, genre, nom, autre) {
-    var r = C.INDEX[id];
-    if (r.q.type === 'qui') {
-      if (v === 2) return Q.quiNeutre[2];
-      return C.remplir(Q.quiNeutre[v < 2 ? v : 4 - v], { nom: v < 2 ? nom : autre });
-    }
-    return C.remplir(C.accorder((texteQ(id).o || [])[v] || '', genre), { autre: autre });
-  }
-
   // ── Démarrage ───────────────────────────────────────────────────────────
 
   function charger() {
@@ -268,22 +259,38 @@
     try { history.replaceState(null, '', location.pathname); } catch (e) { /* rien */ }
   }
 
+  // Les questions et le calcul ne se chargent qu'une fois, quand
+  // l'application s'ouvre.
+  var pret = null;
+  function preparer() {
+    return pret || (pret = charger().catch(function (e) { pret = null; throw e; }));
+  }
+
   function demarrer() {
+    var hash = new URLSearchParams(location.hash.replace(/^#/, ''));
+    var query = new URLSearchParams(location.search);
+    var id = hash.get('b'), jeton = hash.get('t');
+    var lien = !!(id && jeton);
+    var paiement = !!(query.get('paiement') && query.get('b'));
+    var annule = !!(query.get('annule') && query.get('b'));
+    source();
+    if (!lien && !paiement && !annule) {
+      // La présentation seule : l'application attend le bouton.
+      repriseSurLaPage();
+      compterVue('page');
+      return;
+    }
+    focus(true, true);
     chargement();
-    charger().then(function () {
-      var hash = new URLSearchParams(location.hash.replace(/^#/, ''));
-      var query = new URLSearchParams(location.search);
-      var id = hash.get('b'), jeton = hash.get('t');
-      if (id && jeton) {
+    preparer().then(function () {
+      if (lien) {
         nettoyerUrl();
         return ouvrirLien(id, jeton);
       }
-      if (query.get('paiement') && query.get('b')) return retourPaiement(query.get('b'), query.get('paiement'));
-      if (query.get('annule') && query.get('b')) {
-        var e = entreeDe(query.get('b'));
-        nettoyerUrl();
-        if (e) return ouvrirResultat(e, x('paiement.annule'));
-      }
+      if (paiement) return retourPaiement(query.get('b'), query.get('paiement'));
+      var e = entreeDe(query.get('b'));
+      nettoyerUrl();
+      if (e) return ouvrirResultat(e, x('paiement.annule'));
       accueil();
     }).catch(function () { messageErreur('reseau'); });
   }
@@ -314,7 +321,7 @@
       moi: etat.moi.prenom, autre: etat.autre.prenom,
       repondu: C.progression(etat.situation, etat.moi.reponses).repondu,
       total: C.progression(etat.situation, etat.moi.reponses).total,
-      statut: etat.verrouille ? 'resultat' : etat.moi.fini ? 'fini' : 'encours',
+      statut: etat.verrouille ? (etat.paye ? 'resultat' : 'pret') : etat.moi.fini ? 'fini' : 'encours',
     });
     if (etat.verrouille) return ouvrirResultat(entree);
     if (etat.moi.fini) return attente(entree, etat);
@@ -332,41 +339,40 @@
 
   // ── Accueil ─────────────────────────────────────────────────────────────
 
+  // Dans le mode focus : les bilans de cet appareil, ou directement la
+  // création s'il n'y en a pas.
   function accueil() {
     S = null;
-    var liste = lireListe();
-    var etapes = tr('accueil.etapes', []).map(function (e) { return '<li>' + esc(ins(e)) + '</li>'; }).join('');
-    var html = carte(
-      duo('salut', 'mignon', 92) +
-      '<h2 class="bilan-titre">' + x('accueil.titre') + '</h2>' +
-      '<ol class="bilan-etapes">' + etapes + '</ol>' +
-      '<div class="bilan-actions">' + bouton('creer', x('accueil.commencer')) + '</div>' +
-      '<p class="bilan-note">' + x('accueil.violence') + '</p>', 'bilan-accueil');
-    if (liste.length) {
-      var cartes = liste.map(function (e) {
-        var statut = e.statut === 'resultat' ? x('accueil.resultat')
-          : e.statut === 'fini' ? x('accueil.fini')
-          : e.total ? x('accueil.progression', { n: nombre(e.repondu || 0), total: nombre(e.total) })
-          : '';
-        return '<li class="bilan-reprise">' +
-          '<div><strong>' + x('accueil.avec', { autre: e.autre || '' }) + '</strong>' +
-          (statut ? '<span class="bilan-reprise-statut">' + statut + '</span>' : '') + '</div>' +
-          '<div class="bilan-reprise-actions">' +
-          bouton('reprendre', e.statut === 'resultat' ? x('accueil.voir') : x('accueil.reprendre'), 'btn-cta btn-gradient btn-sm', ' data-id="' + esc(e.id) + '" data-role="' + esc(e.role) + '"') +
-          bouton('oublier', x('accueil.oublier'), 'btn-outline btn-sm', ' data-id="' + esc(e.id) + '" data-role="' + esc(e.role) + '"') +
-          '</div></li>';
-      }).join('');
-      html = carte('<h2 class="bilan-sous-titre">' + x('accueil.enCours') + '</h2><ul class="bilan-reprises">' + cartes + '</ul>' +
-        '<p class="bilan-note">' + x('accueil.oublierAide') + '</p>') + html;
+    if (!C || !Q) {
+      chargement();
+      return preparer().then(accueil).catch(function () { messageErreur('reseau'); });
     }
-    afficher(html, true);
+    var liste = lireListe();
+    if (!liste.length) return creation(1);
+    var cartes = liste.map(function (e) {
+      var statut = e.statut === 'resultat' ? x('accueil.resultat')
+        : e.statut === 'pret' ? x('accueil.pret')
+        : e.statut === 'fini' ? x('accueil.fini')
+        : e.total ? x('accueil.progression', { n: nombre(e.repondu || 0), total: nombre(e.total) })
+        : '';
+      return '<li class="bilan-reprise">' +
+        '<div><strong>' + x('accueil.avec', { autre: e.autre || '' }) + '</strong>' +
+        (statut ? '<span class="bilan-reprise-statut">' + statut + '</span>' : '') + '</div>' +
+        '<div class="bilan-reprise-actions">' +
+        bouton('reprendre', e.statut === 'resultat' ? x('accueil.voir') : x('accueil.reprendre'), 'btn-cta btn-gradient btn-sm', ' data-id="' + esc(e.id) + '" data-role="' + esc(e.role) + '"') +
+        bouton('oublier', x('accueil.oublier'), 'btn-outline btn-sm', ' data-id="' + esc(e.id) + '" data-role="' + esc(e.role) + '"') +
+        '</div></li>';
+    }).join('');
+    afficher(carte('<h2 class="bilan-titre">' + x('accueil.titre') + '</h2><ul class="bilan-reprises">' + cartes + '</ul>' +
+      '<p class="bilan-note">' + x('accueil.oublierAide') + '</p>' +
+      '<div class="bilan-actions">' + bouton('creer', x('accueil.nouveau'), 'btn-outline') + '</div>', 'bilan-accueil'), true);
     ACTIONS = {
-      creer: function () { creation(); },
+      creer: function () { creation(1); },
       reprendre: function (b) { var e = entreeRole(b.getAttribute('data-id'), b.getAttribute('data-role')); if (e) ouvrir(e); },
       oublier: function (b) {
         confirmerDeuxFois(b, x('accueil.oublierConfirmer'), function () {
           oublier(b.getAttribute('data-id'), b.getAttribute('data-role'));
-          accueil();
+          if (lireListe().length) accueil(); else quitterFocus();
         });
       },
     };
@@ -474,7 +480,12 @@
       }
     }
     ACTIONS = {
-      retour: function () { lireEtape(); if (etape > 1) creation(etape - 1); else accueil(); },
+      retour: function () {
+        lireEtape();
+        if (etape > 1) creation(etape - 1);
+        else if (lireListe().length) accueil();
+        else quitterFocus();
+      },
       suivant: function () {
         lireEtape();
         if (etape === 1 && (!brouillon.moi || !brouillon.autre)) return erreur('creation.prenomManque');
@@ -485,7 +496,7 @@
         if (!document.getElementById('bilan-majeur').checked || !document.getElementById('bilan-consent').checked) return erreur('creation.accordManque');
         b.disabled = true;
         appel('creer', {
-          lang: LANG, situation: brouillon.situation,
+          lang: LANG, situation: brouillon.situation, src: source(),
           moi: { prenom: brouillon.moi, genre: brouillon.genreMoi },
           autre: { prenom: brouillon.autre, genre: brouillon.genreAutre },
           consentement: true, majeur: true,
@@ -565,6 +576,7 @@
       '<h2 class="bilan-titre">' + x('rejoindre.titre', { autre: autre }) + '</h2>' +
       '<p class="bilan-texte">' + x('rejoindre.texte', { autre: autre }) + '</p>' +
       '<p class="bilan-texte">' + x('rejoindre.duree') + '</p>' +
+      (etat.paye ? '<p class="bilan-alerte bilan-alerte--ok">' + x('rejoindre.paye', { autre: autre }) + '</p>' : '') +
       '<h3 class="bilan-sous-titre">' + x('rejoindre.situationTitre', { autre: autre }) + '</h3>' +
       '<div id="bilan-sit">' + resumeSituation(etat.situation) +
       '<div class="bilan-actions bilan-actions--gauche">' + bouton('corriger', x('rejoindre.situationCorriger'), 'btn-outline btn-sm') + '</div></div>' +
@@ -864,38 +876,152 @@
     });
   }
 
-  // ── Attente de l'autre ──────────────────────────────────────────────────
+  // ── Mes réponses sont finies : l'attente, et le rapport à débloquer ─────
+  // Aucun résultat avant le paiement (Thomas, 18 octobre 2026). Celui qui a
+  // fini ses réponses peut payer tout de suite : le rapport s'ouvrira, et
+  // partira par e-mail, dès que l'autre aura fini.
+
+  function paiementOuvert(etat) {
+    return !!(etat.paiementOuvert && (CFG.ouvert !== false || etat.paiementTest));
+  }
+
+  function blocAutre(entree, etat) {
+    var autre = etat.autre.prenom;
+    var pct = etat.autre.total ? Math.round(etat.autre.repondu / etat.autre.total * 100) : 0;
+    var ligne = etat.autre.rejoint
+      ? x('attente.autreProgression', { autre: autre, n: nombre(etat.autre.repondu), total: etat.autre.total ? nombre(etat.autre.total) : '…' })
+      : x('attente.autrePasRejoint', { autre: autre });
+    return '<div class="bilan-autre"><p>' + ligne + '</p>' +
+      (etat.autre.rejoint ? '<div class="bilan-barre bilan-barre--autre"><span style="width:' + pct + '%"></span></div>' : '') +
+      '<div class="bilan-actions bilan-actions--gauche">' +
+      (!etat.autre.rejoint && entree.invitation ? bouton('renvoyer', x('attente.renvoyer'), 'btn-outline btn-sm')
+        : etat.autre.rejoint ? bouton('relancer', x('attente.relance', { autre: autre }), 'btn-outline btn-sm') : '') +
+      '</div></div>';
+  }
+
+  // Le champ de l'adresse où recevoir le PDF.
+  function champEmail(valeur, id) {
+    return '<div class="bilan-champ bilan-email"><label for="' + id + '">' + x('paywall.emailLabel') + '</label>' +
+      '<input id="' + id + '" class="bilan-input" type="email" inputmode="email" autocomplete="email" maxlength="254" placeholder="' + x('paywall.emailPlaceholder') + '" value="' + esc(valeur || '') + '">' +
+      '<p class="bilan-note">' + x('paywall.emailAide') + '</p></div>';
+  }
+  function emailValide(v) {
+    return /^[^\s@<>()[\]",;:\\]{1,64}@[^\s@<>()[\]",;:\\.]+(\.[^\s@<>()[\]",;:\\.]+)+$/.test(v) && /\.[a-z]{2,}$/i.test(v) && v.length <= 254;
+  }
+
+  // L'offre : ce que contient le rapport, le prix, l'adresse, la case de
+  // renonciation et le bouton. pret : les deux ont fini.
+  // tete : l'en-tête de l'écran « à débloquer » (personnages et titre),
+  // posé dans la même carte que l'offre.
+  function offre(etat, pret, tete) {
+    var autre = etat.autre.prenom;
+    if (!paiementOuvert(etat)) {
+      return carte('<h3 class="bilan-sous-titre">' + x('paywall.titre') + '</h3><p class="bilan-alerte bilan-alerte--doux">' + x('paywall.ferme') + '</p>', 'bilan-offre');
+    }
+    var contenu = tr('paywall.contenu', []).map(function (c) { return '<li>' + esc(ins(c)) + '</li>'; }).join('');
+    var apercu = CFG.apercu ? '<figure class="bilan-apercu"><img src="' + esc(CFG.apercu) + '" alt="" width="600" height="424" loading="lazy" decoding="async">' +
+      '<figcaption>' + x('paywall.apercu') + '</figcaption></figure>' : '';
+    return carte(
+      (tete || '<p class="bilan-offre-sur">' + x('paywall.titre') + '</p>') +
+      '<p class="bilan-offre-intro">' + x(pret ? 'paywall.introPret' : 'paywall.introAttente', { autre: autre }) + '</p>' +
+      apercu +
+      '<ul class="bilan-offre-liste">' + contenu + '</ul>' +
+      '<div class="bilan-prix"><p class="bilan-prix-montant">' + x('paywall.prix') + '</p>' +
+      '<p class="bilan-note">' + x('paywall.prixAide', { autre: autre }) + '</p></div>' +
+      champEmail(etat.moi.email, 'bilan-email-paie') +
+      '<label class="bilan-case"><input type="checkbox" id="bilan-renonce"> <span>' + x('paywall.renonciation') + '</span></label>' +
+      '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
+      '<div class="bilan-actions">' + bouton('payer', x('paywall.bouton'), 'btn-cta btn-gradient btn-lg') + '</div>' +
+      (CFG.garantie > 0 ? '<p class="bilan-garantie">' + x('paywall.garantie', { jours: CFG.garantie }) + '</p>' : '') +
+      '<p class="bilan-note bilan-centre">' + x('paywall.securite') + '</p>' +
+      '<p class="bilan-note bilan-centre"><a href="' + esc(CFG.cgv) + '" target="_blank" rel="noopener">' + x('paywall.cgv') + '</a> · ' + x('paywall.tva') + '</p>',
+      'bilan-offre');
+  }
+
+  function actionsOffre(entree) {
+    return {
+      payer: function (b) {
+        var err = document.getElementById('bilan-erreur');
+        var montre = function (cle) { err.textContent = ins(remplir(tr(cle, ''), {})); err.hidden = false; };
+        var champ = document.getElementById('bilan-email-paie');
+        var email = champ ? (champ.value || '').trim() : '';
+        if (email && !emailValide(email)) { if (champ) champ.focus(); return montre('paywall.emailFaux'); }
+        if (!document.getElementById('bilan-renonce').checked) return montre('paywall.renonciationManque');
+        err.hidden = true;
+        b.disabled = true;
+        b.textContent = remplir(tr('paywall.redirection', ''), {});
+        appel('payer', { id: entree.id, jeton: entree.jeton, renonciation: true, lang: LANG, email: email || undefined }).then(function (r) {
+          if (r.statut === 200 && r.json.url) { location.href = r.json.url; return; }
+          if (r.statut === 200 && r.json.paye) { ouvrir(entree); return; }
+          b.disabled = false;
+          b.innerHTML = x('paywall.bouton');
+          montre(r.json.erreur === 'paiement_ferme' ? 'paywall.ferme' : 'erreurs.serveur');
+        }).catch(function () {
+          b.disabled = false;
+          b.innerHTML = x('paywall.bouton');
+          montre('erreurs.reseau');
+        });
+      },
+    };
+  }
+
+  // Le bloc « recevoir le rapport par e-mail », une fois payé.
+  function blocEmail(etat) {
+    var r = etat.rapport || {};
+    var dest = (r.envoiA || []).join(', ');
+    var ligne = dest ? '<p class="bilan-note">' + x(r.envoye ? 'rapport.ecran.envoyeA' : 'rapport.ecran.envoiA', { emails: dest }) + '</p>' : '';
+    return '<div class="bilan-email-bloc"><h3 class="bilan-sous-titre">' + x('rapport.ecran.emailTitre') + '</h3>' + ligne +
+      '<div class="bilan-email-ligne"><input id="bilan-email" class="bilan-input" type="email" inputmode="email" autocomplete="email" maxlength="254" placeholder="' + x('paywall.emailPlaceholder') + '" value="' + esc(etat.moi.email || '') + '" aria-label="' + x('rapport.ecran.emailChamp') + '">' +
+      bouton('email', x('rapport.ecran.emailBouton'), 'btn-outline') + '</div>' +
+      '<p class="bilan-note" id="bilan-email-msg" aria-live="polite">' + x('rapport.ecran.emailAide') + '</p></div>';
+  }
+  function actionEmail(entree) {
+    return function (b) {
+      var champ = document.getElementById('bilan-email');
+      var msg = document.getElementById('bilan-email-msg');
+      var v = (champ.value || '').trim();
+      if (!emailValide(v)) { msg.textContent = ins(remplir(tr('rapport.ecran.emailFaux', ''), {})); msg.className = 'bilan-note bilan-erreur-texte'; champ.focus(); return; }
+      b.disabled = true;
+      appel('email', { id: entree.id, jeton: entree.jeton, email: v }).then(function (r) {
+        b.disabled = false;
+        if (r.statut !== 200) { msg.textContent = ins(remplir(tr(r.json.erreur === 'email' ? 'rapport.ecran.emailFaux' : 'erreurs.serveur', ''), {})); msg.className = 'bilan-note bilan-erreur-texte'; return; }
+        msg.textContent = ins(remplir(tr('rapport.ecran.emailOk', ''), {}));
+        msg.className = 'bilan-note bilan-ok-texte';
+      }).catch(function () { b.disabled = false; msg.textContent = ins(remplir(tr('erreurs.reseau', ''), {})); msg.className = 'bilan-note bilan-erreur-texte'; });
+    };
+  }
 
   function attente(entree, etat) {
     S = null;
     var autre = etat.autre.prenom;
-    var ligne = etat.autre.rejoint
-      ? x('attente.autreProgression', { autre: autre, n: etat.autre.repondu, total: etat.autre.total || '…' })
-      : x('attente.autrePasRejoint', { autre: autre });
-    var pct = etat.autre.total ? Math.round(etat.autre.repondu / etat.autre.total * 100) : 0;
-    afficher(carte(
+    var paye = !!etat.paye;
+    var html = carte(
       duo('joie', 'repos', 86, etat.moi.genre, etat.autre.genre) +
-      '<h2 class="bilan-titre">' + x('attente.titre') + '</h2>' +
-      '<p class="bilan-texte">' + x('attente.texte', { autre: autre }) + '</p>' +
-      '<div class="bilan-autre"><p>' + ligne + '</p>' +
-      (etat.autre.rejoint ? '<div class="bilan-barre bilan-barre--autre"><span style="width:' + pct + '%"></span></div>' : '') + '</div>' +
-      '<div class="bilan-actions">' +
-      (!etat.autre.rejoint && entree.invitation ? bouton('renvoyer', x('attente.renvoyer')) : '') +
-      bouton('revoir', x('attente.revoir'), 'btn-outline') + '</div>' +
-      '<p class="bilan-note">' + x('attente.revoirAide', { autre: autre }) + '</p>' +
-      '<p class="bilan-note">' + x('attente.maj') + '</p>' +
-      '<div class="bilan-actions">' + bouton('accueil', x('attente.accueil'), 'btn-link') + '</div>', 'bilan-attente'));
-    ACTIONS = {
-      renvoyer: function () { invitation(entree, etat); },
-      revoir: function () { commencerSession(entree, etat, true); },
-    };
+      '<h2 class="bilan-titre">' + x(paye ? 'attente.payeTitre' : 'attente.titre') + '</h2>' +
+      '<p class="bilan-texte">' + x(paye ? 'attente.payeTexte' : 'attente.texte', { autre: autre }) + '</p>' +
+      blocAutre(entree, etat) +
+      (paye ? blocEmail(etat) : '') +
+      '<p class="bilan-note">' + x('attente.maj') + '</p>', 'bilan-attente') +
+      (paye ? '' : offre(etat, false)) +
+      carte('<div class="bilan-actions bilan-actions--gauche">' + bouton('revoir', x('attente.revoir'), 'btn-outline btn-sm') + '</div>' +
+        '<p class="bilan-note">' + x('attente.revoirAide', { autre: autre }) + '</p>', 'bilan-carte--discrete');
+    afficher(html);
+    var actions = actionsOffre(entree);
+    actions.renvoyer = function () { invitation(entree, etat); };
+    actions.relancer = function (b) { relancer(b, autre); };
+    actions.revoir = function () { commencerSession(entree, etat, true); };
+    actions.email = actionEmail(entree);
+    ACTIONS = actions;
     var verifier = function () {
       if (document.visibilityState !== 'visible') return;
       appel('etat', { id: entree.id, jeton: entree.jeton }).then(function (r) {
         if (r.statut !== 200 || !racine.querySelector('.bilan-attente')) return;
         var e = r.json;
         if (e.verrouille) return ouvrirResultat(entree);
-        if (e.autre.repondu !== etat.autre.repondu || e.autre.rejoint !== etat.autre.rejoint) attente(entree, e);
+        // On ne redessine pas sous les doigts de quelqu'un qui écrit.
+        var actif = document.activeElement;
+        if (actif && racine.contains(actif) && /INPUT|TEXTAREA/.test(actif.tagName)) return;
+        if (e.autre.repondu !== etat.autre.repondu || e.autre.rejoint !== etat.autre.rejoint || e.paye !== etat.paye) attente(entree, e);
       }).catch(function () {});
     };
     minuteur = setInterval(verifier, 15000);
@@ -906,311 +1032,227 @@
     if (document.visibilityState === 'visible' && verifAttente) verifAttente();
   });
 
+  // Un petit message à l'autre, sans lien : il reprend sur son téléphone.
+  function relancer(b, autre) {
+    var message = remplir(tr('attente.relanceMessage', ''), { autre: autre });
+    if (navigator.share) {
+      navigator.share({ text: message }).catch(function () {});
+      return;
+    }
+    copier(message, b);
+  }
+
   // ── Le résultat ─────────────────────────────────────────────────────────
 
   function ouvrirResultat(entree, message) {
     S = null;
     chargement();
     appel('resultat', { id: entree.id, jeton: entree.jeton }).then(function (r) {
-      if (r.statut === 409) return ouvrir(entree);
       if (r.statut === 404) { oublier(entree.id, entree.role); return messageErreur('introuvable', accueil); }
+      if (r.statut === 402) {
+        // Pas encore payé : l'offre, seule. Si l'un des deux n'a pas fini, on
+        // repart de l'état (questions ou attente).
+        if (!r.json.deuxFinis) return ouvrir(entree);
+        majEntree(entree.id, entree.role, { statut: 'pret' });
+        return aDebloquer(entree, r.json, message);
+      }
+      if (r.statut === 409) return ouvrir(entree);
       if (r.statut !== 200) return messageErreur(r.json.erreur, function () { ouvrirResultat(entree, message); });
       majEntree(entree.id, entree.role, { statut: 'resultat' });
-      if (r.json.paye) rapport(entree, r.json, message);
-      else gratuit(entree, r.json, message);
+      rapport(entree, r.json, message);
     }).catch(function () { messageErreur('reseau', function () { ouvrirResultat(entree, message); }); });
   }
 
-  // Les deux personnes du point de vue du rapport : a et b, chacun avec son
-  // personnage et le prénom de l'autre.
-  function personnes(res) {
-    var a = { cle: 'a', prenom: res.a.prenom, genre: res.a.genre, perso: perso(res.a.genre, 0) };
-    var b = { cle: 'b', prenom: res.b.prenom, genre: res.b.genre, perso: perso(res.b.genre, 1) };
-    a.autre = b.prenom; b.autre = a.prenom;
-    return { a: a, b: b };
-  }
-
-  function anneau(valeur, classe) {
-    var v = Math.max(0, Math.min(100, valeur || 0));
-    return '<div class="bilan-anneau ' + (classe || '') + '" style="--v:' + v + '"><span>' + v + '<small>%</small></span></div>';
-  }
-
-  function enTete(res, an, P) {
-    var vg = an.bandeGlobal ? 'resultat.verdicts.' + an.bandeGlobal : null;
-    var vm = an.bandeMeteo ? 'resultat.meteos.' + an.bandeMeteo : null;
-    return carte(
-      duo('joie', 'joie', 92, P.a.genre, P.b.genre) +
-      '<h2 class="bilan-titre">' + x('resultat.titre', { a: P.a.prenom, b: P.b.prenom }) + '</h2>' +
-      (res.finiLe ? '<p class="bilan-etape">' + x('rapport.date', { date: dateLongue(res.finiLe) }) + '</p>' : '') +
-      '<div class="bilan-chiffres">' +
-      '<div class="bilan-chiffre">' + anneau(an.global, 'bilan-anneau--accord') + '<p class="bilan-chiffre-titre">' + x('resultat.accord') + '</p>' +
-      (vg ? '<p class="bilan-verdict">' + x(vg + '.titre') + '</p><p class="bilan-texte">' + x(vg + '.texte') + '</p>' : '') + '</div>' +
-      '<div class="bilan-chiffre">' + anneau(an.meteo, 'bilan-anneau--meteo') + '<p class="bilan-chiffre-titre">' + x('resultat.meteo') + '</p>' +
-      (vm ? '<p class="bilan-verdict">' + x(vm + '.titre') + '</p><p class="bilan-texte">' + x(vm + '.texte') + '</p>' : '') + '</div>' +
-      '</div>' +
-      '<p class="bilan-compte">' + x('resultat.compte', { accords: an.compte.accords, proches: an.compte.proches, ecarts: an.compte.ecarts }) + '</p>' +
-      '<p class="bilan-compte bilan-compte--' + (an.compte.bloquants ? 'alerte' : 'ok') + '">' +
-      (an.compte.bloquants ? x(an.compte.bloquants > 1 ? 'resultat.bloquantsN' : 'resultat.bloquants', { n: an.compte.bloquants }) : x('resultat.aucunBloquant')) + '</p>' +
-      (an.compte.bloquants ? '<p class="bilan-note">' + x('resultat.bloquantsAide') + '</p>' : ''),
-      'bilan-tete');
-  }
-
-  function barresDomaines(domaines) {
-    return carte('<h3 class="bilan-sous-titre">' + x('resultat.parDomaine') + '</h3><ul class="bilan-barres">' +
-      domaines.filter(function (d) { return !d.meteo && d.score !== null; }).map(function (d) {
-        return '<li><span class="bilan-barre-nom">' + esc(ins(titreDomaine(d.id))) + '</span>' +
-          '<span class="bilan-barre bilan-barre--' + (d.bande || 'moyen') + '"><span style="width:' + d.score + '%"></span></span>' +
-          '<span class="bilan-barre-val">' + d.score + '%</span></li>';
-      }).join('') + '</ul>');
-  }
-
-  function etiquette(item) {
-    var t = [];
-    if (item.statut) t.push('<span class="bilan-tag bilan-tag--' + item.statut + '">' + x('rapport.statut.' + item.statut) + '</span>');
-    else t.push('<span class="bilan-tag bilan-tag--' + item.cat + '">' + x('rapport.cat.' + item.cat) + '</span>');
-    if (item.chacunPlus) t.push('<span class="bilan-tag bilan-tag--chacun">' + x('rapport.chacunPlus') + '</span>');
-    return t.join('');
-  }
-
-  // Un écart en entier : les deux réponses, pourquoi, pour en parler, à éviter.
-  function carteEcart(item, P, titreAvant) {
-    var tq = texteQ(item.id);
-    var rep = function (p, v, nn) {
-      return '<div class="bilan-rep bilan-rep--' + p.perso + '"><span class="bilan-rep-nom">' + esc(p.prenom) + '</span>' +
-        '<span class="bilan-rep-val">' + esc(ins(reponseLue(item.id, v, p.genre, p.prenom, p.autre))) + '</span>' +
-        (nn ? '<span class="bilan-tag bilan-tag--nn">' + x('rapport.nnDe', { nom: p.prenom }) + '</span>' : '') + '</div>';
+  // Les deux ont fini, rien n'est payé : un seul écran, l'offre.
+  function aDebloquer(entree, res, message) {
+    var moi = res.role === 'a' ? res.a : res.b;
+    var autre = res.role === 'a' ? res.b : res.a;
+    var etat = {
+      paiementOuvert: res.paiementOuvert, paiementTest: res.paiementTest,
+      moi: { prenom: moi.prenom, genre: moi.genre, email: res.moiEmail || null }, autre: { prenom: autre.prenom, genre: autre.genre },
     };
-    var parler = (tq.parler || []).map(function (q) { return '<li>' + esc(ins(q)) + '</li>'; }).join('');
-    return '<article class="bilan-ecart bilan-ecart--' + item.cat + '">' +
-      (titreAvant ? '<p class="bilan-etape">' + titreAvant + '</p>' : '') +
-      '<div class="bilan-ecart-tete"><h4>' + esc(ins(tq.court || item.id)) + '</h4><div class="bilan-tags">' + etiquette(item) + '</div></div>' +
-      '<p class="bilan-ecart-domaine">' + esc(ins(titreDomaine(item.domaine))) + '</p>' +
-      '<div class="bilan-reps">' + rep(P.a, item.a, item.nnA) + rep(P.b, item.b, item.nnB) + '</div>' +
-      (item.desequilibre ? '<p class="bilan-texte">' + x('rapport.desequilibre', { nom: item.desequilibre === 'a' ? P.a.prenom : P.b.prenom }) + '</p>' : '') +
-      '<div class="bilan-guide">' +
-      (tq.pourquoi ? '<p><strong>' + x('rapport.pourquoi') + '</strong> ' + esc(ins(tq.pourquoi)) + '</p>' : '') +
-      (parler ? '<p><strong>' + x('rapport.parler') + '</strong></p><ul>' + parler + '</ul>' : '') +
-      (tq.eviter ? '<p><strong>' + x('rapport.eviter') + '</strong> ' + esc(ins(tq.eviter)) + '</p>' : '') +
-      '</div></article>';
-  }
-
-  // ── Le résultat gratuit et le paiement ──────────────────────────────────
-
-  function gratuit(entree, res, message) {
-    var an = res.resume;
-    var P = personnes(res);
-    var html = (message ? carte('<p class="bilan-info">' + message + '</p>') : '') + enTete(res, an, P) + barresDomaines(an.domaines);
-    if (an.echantillon) {
-      html += carte('<h3 class="bilan-sous-titre">' + x('resultat.echantillonTitre') + '</h3>' +
-        '<p class="bilan-note">' + x('resultat.echantillonAide') + '</p>' + carteEcart(an.echantillon, P));
-    }
-    if (an.autres.length) {
-      html += carte('<h3 class="bilan-sous-titre">' + x('resultat.autresTitre') + '</h3><ul class="bilan-floutes">' +
-        an.autres.map(function (it) {
-          return '<li class="bilan-floute"><div class="bilan-floute-tete"><strong>' + esc(ins(texteQ(it.id).court || it.id)) + '</strong>' +
-            '<span class="bilan-tags">' + etiquette(it) + '</span></div>' +
-            '<span class="bilan-floute-domaine">' + esc(ins(titreDomaine(it.domaine))) + '</span>' +
-            '<div class="bilan-floute-reps" aria-hidden="true"><span></span><span></span></div>' +
-            '<span class="bilan-floute-aide">' + x('resultat.masque') + '</span></li>';
-        }).join('') + '</ul>' +
-        (an.nbAutres > an.autres.length ? '<p class="bilan-note">' + x('resultat.plusAutres', { n: an.nbAutres - an.autres.length }) + '</p>' : ''));
-    } else if (!an.echantillon) {
-      html += carte('<p class="bilan-texte">' + x('resultat.aucunEcart') + '</p>');
-    }
-    html += paywall(res);
-    afficher(html);
-    ACTIONS = {
-      payer: function (b) {
-        var c = document.getElementById('bilan-renonciation');
-        var err = document.getElementById('bilan-erreur');
-        if (!c.checked) { err.textContent = ins(remplir(tr('paywall.renonciationManque', ''), {})); err.hidden = false; return; }
-        err.hidden = true;
-        b.disabled = true;
-        b.innerHTML = x('paywall.redirection');
-        appel('payer', { id: entree.id, jeton: entree.jeton, renonciation: true, lang: LANG }).then(function (r) {
-          if (r.statut === 200 && r.json.url) { location.href = r.json.url; return; }
-          if (r.statut === 200 && r.json.paye) { ouvrirResultat(entree); return; }
-          b.disabled = false;
-          b.innerHTML = x('paywall.bouton');
-          err.textContent = ins(remplir(tr(r.json.erreur === 'paiement_ferme' ? 'paywall.ferme' : 'erreurs.serveur', ''), {}));
-          err.hidden = false;
-        }).catch(function () {
-          b.disabled = false;
-          b.innerHTML = x('paywall.bouton');
-          err.textContent = ins(remplir(tr('erreurs.reseau', ''), {}));
-          err.hidden = false;
-        });
-      },
-    };
-  }
-
-  function paywall(res) {
-    var contenu = tr('paywall.contenu', []).map(function (c) { return '<li>' + esc(ins(c)) + '</li>'; }).join('');
-    // Avec une clé Stripe de test, le paiement s'essaie avant l'ouverture.
-    var ouvert = res.paiementOuvert && (CFG.ouvert !== false || res.paiementTest);
-    return carte(
-      '<h3 class="bilan-titre">' + x('paywall.titre') + '</h3>' +
-      '<p class="bilan-texte">' + x('paywall.intro') + '</p>' +
-      '<ul class="bilan-contenu">' + contenu + '</ul>' +
-      '<p class="bilan-prix">' + x('paywall.prix') + '</p>' +
-      '<p class="bilan-note">' + x('paywall.prixAide') + '</p>' +
-      (ouvert
-        ? '<label class="bilan-case"><input type="checkbox" id="bilan-renonciation"> <span>' + x('paywall.renonciation') + '</span></label>' +
-          '<p class="bilan-alerte" id="bilan-erreur" hidden></p>' +
-          '<div class="bilan-actions">' + bouton('payer', x('paywall.bouton'), 'btn-cta btn-gradient bilan-payer') + '</div>' +
-          (res.garantie > 0 ? '<p class="bilan-note">' + x('paywall.garantie') + '</p>' : '') +
-          '<p class="bilan-note">' + x('paywall.securite') + '</p>'
-        : '<p class="bilan-info">' + x('paywall.ferme') + '</p>') +
-      '<p class="bilan-note bilan-legal"><a href="' + esc(CFG.cgv) + '">' + x('paywall.cgv') + '</a> · ' + x('paywall.tva') + '</p>',
-      'bilan-paywall');
+    afficher(
+      (message ? carte('<p class="bilan-alerte bilan-alerte--doux">' + message + '</p>') : '') +
+      offre(etat, true, duo('surprise', 'joie', 86, moi.genre, autre.genre) +
+        '<h2 class="bilan-titre">' + x('paywall.titrePret') + '</h2>'));
+    ACTIONS = actionsOffre(entree);
   }
 
   function retourPaiement(id, session) {
     var entree = entreeDe(id);
-    if (!entree) { nettoyerUrl(); return accueil(); }
-    afficher(carte('<p class="bilan-centre">' + x('paiement.verification') + '</p>', 'bilan-chargement'), true);
+    nettoyerUrl();
+    if (!entree) return accueil();
+    afficher(carte('<p class="bilan-centre">' + x('paiement.verification') + '</p>', 'bilan-chargement'));
     var essais = 0;
     var essai = function () {
       appel('verifier', { id: id, jeton: entree.jeton, session: session }).then(function (r) {
-        if (r.statut === 200 && r.json.paye) { nettoyerUrl(); return ouvrirResultat(entree, x('paiement.ok')); }
+        if (r.statut === 200 && r.json.paye) return ouvrirResultat(entree, x('paiement.ok'));
         if (++essais < 8) {
-          afficher(carte('<p class="bilan-centre">' + x('paiement.attente') + '</p>', 'bilan-chargement'), true);
+          afficher(carte('<p class="bilan-centre">' + x('paiement.attente') + '</p>', 'bilan-chargement'));
           return setTimeout(essai, 2500);
         }
-        nettoyerUrl();
         ouvrirResultat(entree, x('paiement.erreur'));
       }).catch(function () {
-        if (++essais < 8) return setTimeout(essai, 2500);
-        nettoyerUrl();
+        if (++essais < 8) return setTimeout(essai, 3000);
         ouvrirResultat(entree, x('paiement.erreur'));
       });
     };
     essai();
   }
 
-  // ── Le rapport complet ──────────────────────────────────────────────────
+  // ── Le rapport ──────────────────────────────────────────────────────────
+  // Le même gabarit que le PDF (window.QCBilanRapport, construit depuis
+  // supabase/functions/_shared/bilan/rapport.mjs), en version écran.
+
+  function feuilleRapport() {
+    if (document.getElementById('bilan-rapport-css')) return;
+    var l = document.createElement('link');
+    l.id = 'bilan-rapport-css';
+    l.rel = 'stylesheet';
+    l.href = '/css/bilan-rapport.css' + (window.__QCV ? '?v=' + window.__QCV : '');
+    document.head.appendChild(l);
+  }
 
   function rapport(entree, res, message) {
-    var P = personnes(res);
-    var an = C.analyser(res.situation, { reponses: res.a.reponses, nn: res.a.nn }, { reponses: res.b.reponses, nn: res.b.nn });
-    var parId = {};
-    an.items.forEach(function (i) { parId[i.id] = i; });
-    var html = (message ? carte('<p class="bilan-info">' + message + '</p>') : '') + enTete(res, an, P);
-
-    // Les quatre prochaines conversations.
-    if (an.conversations.length) {
-      html += carte('<h3 class="bilan-titre">' + x('rapport.conversationsTitre') + '</h3>' +
-        '<p class="bilan-texte">' + x('rapport.conversationsIntro') + '</p>' +
-        an.conversations.map(function (id, i) { return carteEcart(parId[id], P, x('rapport.conversation', { n: i + 1 })); }).join(''),
-        'bilan-conversations');
+    feuilleRapport();
+    var R = window.QCBilanRapport;
+    if (!R) return messageErreur('serveur', function () { ouvrirResultat(entree, message); });
+    var corps;
+    try {
+      corps = R.rapportHtml(res, T, Q, { format: 'ecran' }).html;
+    } catch (e) {
+      return messageErreur('serveur', function () { ouvrirResultat(entree, message); });
     }
-
-    // Les points bloquants et les non négociables de chacun.
-    var blocs = '';
-    if (an.bloquants.length) {
-      blocs += '<h3 class="bilan-sous-titre">' + x('rapport.bloquantsTitre') + '</h3><p class="bilan-texte">' + x('rapport.bloquantsIntro') + '</p>' +
-        '<ul class="bilan-liste">' + an.bloquants.map(function (id) { return '<li>' + esc(ins(texteQ(id).court)) + '</li>'; }).join('') + '</ul>';
-    }
-    var listeNn = function (p, ids, reps) {
-      return '<div class="bilan-nn-col bilan-rep--' + p.perso + '"><p class="bilan-rep-nom">' + esc(p.prenom) + '</p>' +
-        (ids.length ? '<ul class="bilan-liste">' + ids.map(function (id) {
-          return '<li><strong>' + esc(ins(texteQ(id).court)) + ' :</strong> ' + esc(ins(reponseLue(id, reps[id], p.genre, p.prenom, p.autre))) + '</li>';
-        }).join('') + '</ul>' : '<p class="bilan-note">' + x('rapport.nnAucun') + '</p>') + '</div>';
-    };
-    blocs += '<h3 class="bilan-sous-titre">' + x('rapport.nnTitre') + '</h3><div class="bilan-nn-cols">' +
-      listeNn(P.a, an.nonNegociables.a, res.a.reponses) + listeNn(P.b, an.nonNegociables.b, res.b.reponses) + '</div>';
-    html += carte(blocs);
-
-    // Chacun pense en faire plus.
-    if (an.chacunPlus.length) {
-      html += carte('<h3 class="bilan-sous-titre">' + x('rapport.chacunTitre') + '</h3><p class="bilan-texte">' + x('rapport.chacunIntro') + '</p>' +
-        '<ul class="bilan-liste">' + an.chacunPlus.map(function (id) { return '<li>' + esc(ins(texteQ(id).court)) + '</li>'; }).join('') + '</ul>');
-    }
-
-    // Ce qui vous rassemble.
-    if (an.rassemble.length) {
-      html += carte('<h3 class="bilan-sous-titre">' + x('rapport.rassembleTitre') + '</h3><p class="bilan-texte">' + x('rapport.rassembleIntro') + '</p>' +
-        '<ul class="bilan-liste bilan-liste--accord">' + an.rassemble.map(function (id) {
-          var it = parId[id];
-          return '<li><strong>' + esc(ins(texteQ(id).court)) + ' :</strong> ' + esc(ins(reponseLue(id, it.a, P.a.genre, P.a.prenom, P.a.autre))) + '</li>';
-        }).join('') + '</ul>');
-    }
-
-    // Domaine par domaine.
-    var doms = an.domaines.filter(function (d) { return !d.meteo; }).map(function (d) {
-      var D = Q.domaines[d.id] || {};
-      var accords = d.items.filter(function (i) { return i.cat === 'accord' && !i.chacunPlus; });
-      var diffs = d.items.filter(function (i) { return i.cat !== 'accord' || i.chacunPlus || i.desequilibre; })
-        .sort(function (u, v) { return v.prio - u.prio; });
-      var etats = d.etats.map(function (e) { return ligneEtat(e, P); }).join('');
-      return '<details class="bilan-domaine"><summary><span class="bilan-domaine-nom">' + esc(ins(D.titre || d.id)) + '</span>' +
-        (d.score !== null ? '<span class="bilan-barre bilan-barre--' + d.bande + '"><span style="width:' + d.score + '%"></span></span><span class="bilan-barre-val">' + d.score + '%</span>' : '') +
-        '</summary><div class="bilan-domaine-corps">' +
-        (d.bande && D.rapport ? '<p class="bilan-texte">' + esc(ins(D.rapport[d.bande] || '')) + '</p>' : '') +
-        '<h4 class="bilan-h4">' + x('rapport.accords') + '</h4>' +
-        (accords.length ? '<ul class="bilan-puces">' + accords.map(function (i) {
-          return '<li><strong>' + esc(ins(texteQ(i.id).court)) + ' :</strong> ' + esc(ins(reponseLue(i.id, i.a, P.a.genre, P.a.prenom, P.a.autre))) + '</li>';
-        }).join('') + '</ul>' : '<p class="bilan-note">' + x('rapport.accordsAucun') + '</p>') +
-        '<h4 class="bilan-h4">' + x('rapport.differences') + '</h4>' +
-        (diffs.length ? diffs.map(function (i) { return carteEcart(i, P); }).join('') : '<p class="bilan-note">' + x('rapport.differencesAucune') + '</p>') +
-        (etats ? '<div class="bilan-etats">' + etats + '</div>' : '') +
-        '</div></details>';
-    }).join('');
-    html += carte('<h3 class="bilan-titre">' + x('rapport.domainesTitre') + '</h3>' + doms, 'bilan-domaines');
-
-    // La météo, question par question.
-    var meteo = an.etats.filter(function (e) { return e.domaine === 'meteo'; });
-    if (meteo.length) {
-      html += carte('<h3 class="bilan-titre">' + x('rapport.meteoTitre') + '</h3><p class="bilan-texte">' + x('rapport.meteoIntro') + '</p>' +
-        '<div class="bilan-etats">' + meteo.map(function (e) { return ligneEtat(e, P); }).join('') + '</div>');
-    }
-
-    html += carte(
-      '<div class="bilan-actions">' + bouton('imprimer', x('rapport.imprimer')) + '</div>' +
-      '<p class="bilan-note">' + x('rapport.garde') + '</p>' +
-      '<p class="bilan-note">' + x('rapport.note') + '</p>' +
-      '<hr class="bilan-sep">' +
-      '<div class="bilan-actions">' + bouton('supprimer', x('rapport.supprimer'), 'btn-outline btn-sm') + '</div>' +
-      '<p class="bilan-note">' + x('rapport.supprimerAide') + '</p>', 'bilan-fin');
-    afficher(html);
+    var r = res.rapport || {};
+    var etatPdf = r.pret ? '' : '<p class="bilan-note" id="bilan-pdf-etat">' + x(r.statut === 'erreur' ? 'rapport.ecran.pdfErreur' : 'rapport.ecran.pdfPrepa') + '</p>';
+    var etatEmail = { rapport: r, moi: { email: res.moiEmail || null } };
+    afficher(
+      (message ? carte('<p class="bilan-alerte bilan-alerte--doux">' + message + '</p>') : '') +
+      carte('<div class="bilan-rapport-barre">' +
+        '<div class="bilan-actions bilan-actions--gauche">' + bouton('pdf', x('rapport.ecran.telecharger')) + '</div>' + etatPdf +
+        '</div>' + blocEmail(etatEmail), 'bilan-rapport-outils') +
+      '<div class="bilan-rapport">' + corps + '</div>' +
+      carte('<p class="bilan-note">' + x('rapport.ecran.garde') + '</p>' +
+        '<div class="bilan-actions bilan-actions--gauche">' + bouton('supprimer', x('rapport.ecran.supprimer'), 'btn-outline btn-sm') + '</div>' +
+        '<p class="bilan-note">' + x('rapport.ecran.supprimerAide') + '</p>', 'bilan-carte--discrete'),
+      !!message);
     ACTIONS = {
-      imprimer: function () {
-        racine.querySelectorAll('details').forEach(function (d) { d.open = true; });
-        window.print();
+      pdf: function (b) {
+        b.disabled = true;
+        appel('pdf', { id: entree.id, jeton: entree.jeton }).then(function (rr) {
+          b.disabled = false;
+          if (rr.statut === 200 && rr.json.pret && rr.json.url) { location.href = rr.json.url; return; }
+          var z = document.getElementById('bilan-pdf-etat');
+          if (!z) {
+            z = document.createElement('p');
+            z.className = 'bilan-note';
+            z.id = 'bilan-pdf-etat';
+            b.parentNode.parentNode.appendChild(z);
+          }
+          z.textContent = ins(remplir(tr(rr.json.statut === 'erreur' ? 'rapport.ecran.pdfErreur' : 'rapport.ecran.pdfPrepa', ''), {}));
+        }).catch(function () { b.disabled = false; });
       },
+      email: actionEmail(entree),
       supprimer: function (b) {
-        confirmerDeuxFois(b, x('rapport.supprimerConfirmer'), function () {
+        confirmerDeuxFois(b, x('rapport.ecran.supprimerConfirmer'), function () {
           b.disabled = true;
-          appel('supprimer', { id: entree.id, jeton: entree.jeton }).then(function (r) {
-            if (r.statut !== 200 && r.statut !== 404) { b.disabled = false; return; }
+          appel('supprimer', { id: entree.id, jeton: entree.jeton }).then(function (rr) {
+            if (rr.statut !== 200) { b.disabled = false; return; }
             oublier(entree.id);
-            afficher(carte('<p class="bilan-info">' + x('rapport.supprime') + '</p><div class="bilan-actions">' + bouton('accueil', x('attente.accueil'), 'btn-outline') + '</div>'));
+            afficher(carte('<p class="bilan-texte">' + x('rapport.ecran.supprime') + '</p>' +
+              '<div class="bilan-actions">' + bouton('accueil', x('attente.accueil'), 'btn-outline') + '</div>'));
           }).catch(function () { b.disabled = false; });
         });
       },
     };
   }
-  window.addEventListener('beforeprint', function () {
-    racine.querySelectorAll('details').forEach(function (d) { d.open = true; });
-  });
 
-  function ligneEtat(e, P) {
-    var tq = texteQ(e.id);
-    var rep = function (p, v, attention) {
-      return '<div class="bilan-rep bilan-rep--' + p.perso + (attention ? ' bilan-rep--attention' : '') + '"><span class="bilan-rep-nom">' + esc(p.prenom) + '</span>' +
-        '<span class="bilan-rep-val">' + esc(ins(reponseLue(e.id, v, p.genre, p.prenom, p.autre))) + '</span></div>';
-    };
-    var parler = (tq.parler || []).map(function (q) { return '<li>' + esc(ins(q)) + '</li>'; }).join('');
-    var tags = (e.ecart ? '<span class="bilan-tag bilan-tag--ecart">' + x('rapport.meteoEcart') + '</span>' : '') +
-      (e.attentionA || e.attentionB ? '<span class="bilan-tag bilan-tag--attention">' + x('rapport.meteoAttention') + '</span>' : '');
-    var signal = e.ecart || e.attentionA || e.attentionB;
-    return '<article class="bilan-etat' + (signal ? ' bilan-etat--signal' : '') + '">' +
-      '<div class="bilan-ecart-tete"><h4>' + esc(ins(tq.court || e.id)) + '</h4><div class="bilan-tags">' + tags + '</div></div>' +
-      '<div class="bilan-reps">' + rep(P.a, e.a, e.attentionA) + rep(P.b, e.b, e.attentionB) + '</div>' +
-      (signal ? '<div class="bilan-guide">' + (tq.pourquoi ? '<p>' + esc(ins(tq.pourquoi)) + '</p>' : '') +
-        (parler ? '<p><strong>' + x('rapport.parler') + '</strong></p><ul>' + parler + '</ul>' : '') + '</div>' : '') +
-      '</article>';
+  // ── Le mode focus ───────────────────────────────────────────────────────
+  // La page est d'abord une présentation. Dès que quelqu'un commence, ou
+  // arrive par un lien, l'application prend toute la place : la
+  // présentation est masquée, le bouton « retour » du navigateur la rend.
+
+  var enFocus = false;
+  function focus(oui, sansHistorique) {
+    if (oui === enFocus) return;
+    enFocus = oui;
+    document.body.classList.toggle('bilan-focus', oui);
+    if (oui && !sansHistorique) {
+      try { history.pushState({ bilanFocus: true }, '', location.pathname); } catch (e) { /* rien */ }
+    }
+    window.scrollTo(0, 0);
   }
+  window.addEventListener('popstate', function () {
+    if (!enFocus) return;
+    S = null;
+    arreterMinuteur();
+    focus(false, true);
+    repriseSurLaPage();
+  });
+  function quitterFocus() {
+    if (!enFocus) return;
+    if (history.state && history.state.bilanFocus) { history.back(); return; }
+    focus(false, true);
+    repriseSurLaPage();
+  }
+
+  // La source de la visite (?src= posé par les liens du site), gardée le
+  // temps de la session pour la création du bilan.
+  function source() {
+    var q = new URLSearchParams(location.search).get('src');
+    try {
+      if (q && /^[a-z0-9-]{1,40}$/.test(q)) sessionStorage.setItem('qc-bilan-src', q);
+      return sessionStorage.getItem('qc-bilan-src') || 'direct';
+    } catch (e) { return q && /^[a-z0-9-]{1,40}$/.test(q) ? q : 'direct'; }
+  }
+  function compterVue(quoi) {
+    var cle = 'qc-bilan-' + quoi;
+    try {
+      if (quoi === 'page' && sessionStorage.getItem(cle)) return;
+      sessionStorage.setItem(cle, '1');
+    } catch (e) { /* rien */ }
+    try { if (localStorage.getItem('qc-no-track')) return; } catch (e) { /* rien */ }
+    if (navigator.webdriver) return;
+    appel('vue', { quoi: quoi, src: source() }).catch(function () {});
+  }
+
+  // Le bandeau « reprendre » en haut de la présentation, pour un bilan déjà
+  // commencé sur cet appareil.
+  function repriseSurLaPage() {
+    var zone = document.getElementById('bilan-reprise');
+    if (!zone) return;
+    var liste = lireListe();
+    if (!liste.length) { zone.hidden = true; zone.innerHTML = ''; return; }
+    var e = liste[0];
+    zone.innerHTML = '<p>' + x(e.statut === 'resultat' ? 'accueil.repriseRapport' : 'accueil.reprise', { autre: e.autre || '' }) + '</p>' +
+      '<button type="button" class="btn btn-cta btn-gradient btn-sm" data-bilan-reprendre>' + x(e.statut === 'resultat' ? 'accueil.voir' : 'accueil.reprendre') + '</button>';
+    zone.hidden = false;
+  }
+
+  document.addEventListener('click', function (ev) {
+    var go = ev.target.closest('[data-bilan-commencer]');
+    if (go) {
+      ev.preventDefault();
+      compterVue('cta');
+      focus(true);
+      accueil();
+      return;
+    }
+    if (ev.target.closest('[data-bilan-reprendre]')) {
+      ev.preventDefault();
+      focus(true);
+      chargement();
+      preparer().then(function () {
+        var l = lireListe();
+        if (l.length === 1) ouvrir(l[0]); else accueil();
+      }).catch(function () { messageErreur('reseau'); });
+      return;
+    }
+    if (ev.target.closest('[data-bilan-quitter]')) {
+      ev.preventDefault();
+      quitterFocus();
+    }
+  });
 
   demarrer();
 })();

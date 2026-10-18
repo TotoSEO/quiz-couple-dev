@@ -121,37 +121,6 @@
       "maj": "Diese Seite aktualisiert sich von selbst.",
       "accueil": "Zurück zu meinen Checks"
     },
-    "resultat": {
-      "titre": "Der Check von {{a}} und {{b}}",
-      "accord": "Eure Übereinstimmung",
-      "meteo": "Das Beziehungswetter",
-      "verdicts": {
-        "onde": { "titre": "Auf einer Wellenlänge", "texte": "Ihr wollt ungefähr dasselbe Leben, und ihr seht es gleich. Unterschiede gibt es, aber nur wenige: Jetzt ist ein guter Moment, darüber zu reden, solange sie klein sind." },
-        "proches": { "titre": "Sehr nah beieinander", "texte": "Beim Wesentlichen seid ihr euch einig, mit ein paar Themen, bei denen ihr die Dinge nicht gleich seht. So geht es den meisten Paaren, die glücklich sind." },
-        "creuser": { "titre": "Nah beieinander, mit Themen zum Vertiefen", "texte": "Bei vielen Dingen seid ihr euch einig, aber mehrere Themen trennen euch. Nichts Beunruhigendes, solange ihr darüber redet, und genau dafür ist dieser Check da." },
-        "apprivoiser": { "titre": "Unterschiede, mit denen ihr umgehen lernt", "texte": "Ihr habt ziemlich unterschiedliche Vorstellungen vom Leben zu zweit. Das sagt nichts über eure Liebe, aber es heißt, dass manche Themen echte Gespräche brauchen, und Kompromisse." },
-        "visions": { "titre": "Zwei Arten, das Leben zu sehen", "texte": "Bei vielen Themen wollt ihr nicht dasselbe. Manche Paare leben sehr gut damit, andere nicht: Am wichtigsten ist zu wissen, welche dieser Unterschiede jedem von euch wirklich wichtig sind." }
-      },
-      "meteos": {
-        "beau": { "titre": "Strahlender Sonnenschein", "texte": "Ihr fühlt euch beide wohl in eurer Beziehung." },
-        "nuages": { "titre": "Sonnig mit ein paar Wolken", "texte": "Es läuft gut, mit ein paar Punkten, bei denen sich einer von euch weniger wohlfühlt." },
-        "variable": { "titre": "Wechselhaft", "texte": "Es gibt Gutes und gerade ein paar schwierigere Phasen." },
-        "orageux": { "titre": "Gewitterstimmung", "texte": "Einer von euch, oder ihr beide, fühlt sich gerade nicht so wohl in der Beziehung." },
-        "tempete": { "titre": "Sturm", "texte": "Gerade läuft es nicht gut. Dieser Check kann helfen, Worte dafür zu finden, und eine Paarberatung kann euch helfen, weiterzukommen." }
-      },
-      "parDomaine": "Bereich für Bereich",
-      "compte": "{{accords}} Übereinstimmungen, {{proches}} ähnliche Antworten, {{ecarts}} Unterschiede",
-      "bloquants": "{{n}} Knackpunkt",
-      "bloquantsN": "{{n}} Knackpunkte",
-      "bloquantsAide": "Ein Knackpunkt ist ein Unterschied bei einer großen Frage (Kinder, Wohnort, Treue...), die einer von euch als „nicht verhandelbar“ markiert hat.",
-      "aucunBloquant": "Kein Knackpunkt",
-      "echantillonTitre": "Einer eurer Unterschiede, komplett",
-      "echantillonAide": "Hier ein Beispiel dafür, was der Bericht zu jedem eurer Unterschiede enthält.",
-      "autresTitre": "Eure anderen Unterschiede",
-      "masque": "Antworten im Bericht sichtbar",
-      "plusAutres": "Und {{n}} weitere",
-      "aucunEcart": "Ihr habt keinen einzigen Unterschied: Eure Antworten sind überall ähnlich oder gleich. Das ist selten!"
-    },
     "paywall": {
       "titre": "Der vollständige Bericht",
       "intro": "Alles, was eure beiden Antwortreihen sagen, Thema für Thema, mit allem, was ihr braucht, um darüber zu reden.",
@@ -185,43 +154,207 @@
       "erreur": "Die Zahlung kann gerade nicht geprüft werden. Wenn du bezahlt hast, lade die Seite in einer Minute neu."
     },
     "rapport": {
-      "date": "Check abgeschlossen am {{date}}",
-      "conversationsTitre": "Eure nächsten vier Gespräche",
-      "conversationsIntro": "Die Themen, bei denen eure Antworten am weitesten auseinanderliegen, bei dem, was am meisten zählt, eins pro Bereich. Nehmt euch eins pro Abend vor, in Ruhe, statt alles auf einmal.",
-      "conversation": "Gespräch {{n}}",
-      "bloquantsTitre": "Eure Knackpunkte",
-      "bloquantsIntro": "Unterschiede bei Fragen, die einer von euch als „nicht verhandelbar“ markiert hat. Das sind die ersten Themen, die ihr ansprechen solltet, ohne den anderen an dem Abend überzeugen zu wollen: erst einmal verstehen.",
-      "nnTitre": "Was für jeden nicht verhandelbar ist",
-      "nnAucun": "Nichts markiert",
-      "chacunTitre": "Jeder glaubt, mehr zu machen",
-      "chacunIntro": "Bei diesen Themen glaubt jeder von euch, mehr zu machen als der andere. Das ist sehr häufig: Man sieht besser, was man selbst macht, als was der andere macht.",
-      "rassembleTitre": "Was euch verbindet",
-      "rassembleIntro": "Die großen Fragen, bei denen ihr genau gleich geantwortet habt.",
-      "domainesTitre": "Bereich für Bereich",
-      "accords": "Ihr seid euch einig",
-      "accordsAucun": "Keine genaue Übereinstimmung in diesem Bereich.",
-      "differences": "Eure Unterschiede",
-      "differencesAucune": "Keine Unterschiede in diesem Bereich.",
-      "desequilibre": "Ihr seid euch einig: Vor allem {{nom}} kümmert sich darum. Passt das für euch beide?",
-      "cat": { "accord": "Übereinstimmung", "proche": "Ähnliche Antworten", "ecart": "Unterschied" },
-      "statut": { "bloquant": "Knackpunkt", "aTrancher": "Zu entscheiden", "aConfirmer": "Zu klären" },
-      "chacunPlus": "Jeder glaubt, mehr zu machen",
+      "surtitre": "Beziehungs-Check",
+      "pied": "Beziehungs-Check · vertraulich",
+      "couverture": {
+        "de": "Der Beziehungs-Check von",
+        "et": "und",
+        "date": "Bericht erstellt am {{date}}",
+        "chiffres": "{{domaines}} Bereiche · {{questions}} verglichene Fragen",
+        "confidentiel": "Vertraulich: Dieser Bericht enthält eure Antworten, die von euch beiden."
+      },
+      "lire": {
+        "titre": "So lest ihr diesen Bericht",
+        "p1": "Jeder von euch hat für sich geantwortet, ohne die Antworten des anderen zu sehen. Dieser Bericht stellt eure beiden Antwortreihen nebeneinander, Thema für Thema, damit ihr seht, wo ihr euch einig seid und wo ihr die Dinge unterschiedlich seht.",
+        "p2": "Die Fragen stützen sich auf Forschung in der Paarpsychologie: Studien, die Paare über Jahre begleitet haben, und die Fragebögen, mit denen Paarberater vor einer Hochzeit arbeiten. Dieser Bericht ist keine Diagnose. Er ist eine Grundlage zum Reden, mit den richtigen Themen in der richtigen Reihenfolge.",
+        "p3": "Am einfachsten lest ihn zuerst jeder für sich und sprecht dann gemeinsam darüber, ein Thema nach dem anderen. Wenn ihr nicht wisst, wo ihr anfangen sollt, geht direkt zu euren nächsten vier Gesprächen.",
+        "reperes": "Legende",
+        "accord": "Ihr habt dieselbe Antwort gegeben.",
+        "proche": "Eure Antworten liegen nah beieinander.",
+        "ecart": "Eure Antworten liegen auseinander.",
+        "nn": "Einer von euch hat dieses Thema als nicht verhandelbar markiert.",
+        "sommaire": "In diesem Bericht",
+        "nnTag": "Nicht verhandelbar"
+      },
+      "chapitres": {
+        "synthese": "Eure Zusammenfassung",
+        "carte": "Die Karte eurer Bereiche",
+        "conversations": "Eure nächsten vier Gespräche",
+        "bloquants": "Knackpunkte und Unverhandelbares",
+        "climat": "Das Klima in eurer Beziehung",
+        "signaux": "Eure Warnsignale",
+        "roles": "Wer macht was, aus der Sicht jedes Einzelnen",
+        "domaines": "Bereich für Bereich",
+        "suite": "Und jetzt?"
+      },
+      "synthese": {
+        "intro": "Zwei Zahlen fassen euren Check zusammen. Die erste zeigt, wie sehr ihr dasselbe gemeinsame Leben wollt. Die zweite zeigt, wie sich jeder von euch gerade in der Beziehung fühlt. Die beiden hängen nicht unbedingt zusammen: Man kann sich sehr einig sein und gerade eine schwierige Phase durchmachen, oder umgekehrt.",
+        "alignement": "Eure Übereinstimmung",
+        "alignementAide": "Wie sehr eure Antworten zum gemeinsamen Leben übereinstimmen. Die großen Entscheidungen zählen doppelt.",
+        "climat": "Euer Klima",
+        "climatAide": "Wie jeder von euch die Beziehung gerade erlebt.",
+        "climatDe": "{{nom}}: {{n}} %",
+        "tuiles": {
+          "accords": "Gleiche Antworten",
+          "proches": "Ähnliche Antworten",
+          "ecarts": "Unterschiede",
+          "bloquants": "Knackpunkte",
+          "vigilance": "Signale zum Hinsehen"
+        },
+        "forts": "Wo ihr euch am nächsten seid",
+        "faibles": "Wo ihr am weitesten auseinanderliegt",
+        "rassemble": "Was euch verbindet",
+        "rassembleIntro": "Die großen Fragen, bei denen ihr genau gleich geantwortet habt."
+      },
+      "verdicts": {
+        "onde": {
+          "titre": "Auf einer Wellenlänge",
+          "texte": "Ihr wollt ungefähr dasselbe Leben, und ihr seht es gleich. Unterschiede gibt es, aber nur wenige: Jetzt ist ein guter Moment, darüber zu reden, solange sie klein sind."
+        },
+        "proches": {
+          "titre": "Sehr nah beieinander",
+          "texte": "Beim Wesentlichen seid ihr euch einig, mit ein paar Themen, bei denen ihr die Dinge nicht gleich seht. So geht es den meisten Paaren, die glücklich sind."
+        },
+        "creuser": {
+          "titre": "Nah beieinander, mit Themen zum Vertiefen",
+          "texte": "Bei vielen Dingen seid ihr euch einig, aber mehrere Themen trennen euch. Nichts Beunruhigendes, solange ihr darüber redet, und genau dafür ist dieser Check da."
+        },
+        "apprivoiser": {
+          "titre": "Unterschiede, mit denen ihr umgehen lernt",
+          "texte": "Ihr habt ziemlich unterschiedliche Vorstellungen vom Leben zu zweit. Das sagt nichts über eure Liebe, aber es heißt, dass manche Themen echte Gespräche brauchen, und Kompromisse."
+        },
+        "visions": {
+          "titre": "Zwei Arten, das Leben zu sehen",
+          "texte": "Bei vielen Themen wollt ihr nicht dasselbe. Manche Paare leben sehr gut damit, andere nicht: Am wichtigsten ist zu wissen, welche dieser Unterschiede jedem von euch wirklich wichtig sind."
+        }
+      },
+      "meteos": {
+        "beau": {
+          "titre": "Strahlender Sonnenschein",
+          "texte": "Ihr fühlt euch beide wohl in eurer Beziehung."
+        },
+        "nuages": {
+          "titre": "Sonnig mit ein paar Wolken",
+          "texte": "Es läuft gut, mit ein paar Punkten, bei denen sich einer von euch weniger wohlfühlt."
+        },
+        "variable": {
+          "titre": "Wechselhaft",
+          "texte": "Es gibt Gutes und gerade ein paar schwierigere Phasen."
+        },
+        "orageux": {
+          "titre": "Gewitterstimmung",
+          "texte": "Einer von euch, oder ihr beide, fühlt sich gerade nicht so wohl in der Beziehung."
+        },
+        "tempete": {
+          "titre": "Sturm",
+          "texte": "Gerade läuft es nicht gut. Dieser Check kann helfen, Worte dafür zu finden, und eine Paarberatung kann euch helfen, weiterzukommen."
+        }
+      },
+      "carte": {
+        "intro": "Jeder Balken zeigt, wie sehr eure Antworten in einem Bereich übereinstimmen, von 0 bis 100 %. Das Klima in eurer Beziehung sucht keine Übereinstimmung: Es hat einen eigenen Teil.",
+        "bandes": {
+          "fort": "Sehr nah",
+          "moyen": "Ziemlich nah",
+          "faible": "Gesprächsthema"
+        },
+        "accords": "gleich",
+        "proches": "ähnlich",
+        "ecarts": "Unterschiede"
+      },
+      "conversations": {
+        "intro": "Die Themen, bei denen eure Antworten am weitesten auseinanderliegen, bei dem, was am meisten zählt, eins pro Bereich. Nehmt euch eins pro Abend vor, in Ruhe, statt alles auf einmal.",
+        "titre": "Gespräch {{n}}",
+        "aucune": "Ihr habt keinen Unterschied, an dem ihr arbeiten müsstet: Eure Antworten sind überall ähnlich oder gleich. Das ist selten! Nutzt es, um über das zu reden, was euch verbindet."
+      },
+      "bloquants": {
+        "intro": "Unterschiede bei Fragen, die einer von euch als „nicht verhandelbar“ markiert hat. Das sind die ersten Themen, die ihr ansprechen solltet, ohne den anderen an dem Abend überzeugen zu wollen: erst einmal verstehen.",
+        "aucun": "Keine Knackpunkte: Keiner eurer Unterschiede betrifft ein Thema, das einer von euch als nicht verhandelbar markiert hat.",
+        "nnTitre": "Was für jeden nicht verhandelbar ist",
+        "nnIntro": "Die Themen, bei denen jeder von euch gesagt hat, dass er keinen Kompromiss eingehen könnte, mit seiner Antwort.",
+        "nnAucun": "Nichts markiert."
+      },
+      "climat": {
+        "intro": "Diese Fragen suchen keine Übereinstimmung: Sie zeigen, wie jeder von euch die Beziehung gerade erlebt. Ein Unterschied hier heißt, dass ihr nicht dieselbe Beziehung erlebt, und das kommt viel häufiger vor, als man denkt.",
+        "ecart": "Ihr erlebt es nicht gleich",
+        "attention": "Im Auge behalten",
+        "de": "Für {{nom}}",
+        "sens": "In jeder Zeile steht links das, was am besten läuft, und rechts das, was am wenigsten gut läuft."
+      },
+      "signaux": {
+        "intro": "Forscher, die seit Jahrzehnten Paare beobachten, haben ein paar Arten zu streiten ausgemacht, die eine Beziehung, wenn sie zur Gewohnheit werden, viel mehr zermürben als die Streits selbst. Jeder macht das manchmal. Entscheidend ist, wie oft, und was ihr danach daraus macht.",
+        "rare": "Selten bei euch",
+        "attention": "Im Blick behalten",
+        "alerte": "Zuerst ansehen",
+        "reparationBien": "Eine echte Stärke",
+        "reparationAttention": "Daran arbeiten",
+        "fin": "Wenn eine dieser Haltungen bei euch oft vorkommt, ist das kein Urteil: Genau dabei hilft eine Paarberatung, und es lässt sich ändern."
+      },
+      "roles": {
+        "intro": "Bei jedem Thema reicht die Linie von „vor allem {{a}}“ bis „vor allem {{b}}“. Die beiden Markierungen zeigen, was jeder geantwortet hat.",
+        "surtout": "Vor allem {{nom}}",
+        "autant": "Beide gleich",
+        "chacunPlus": "Jeder glaubt, mehr zu machen",
+        "chacunPlusTexte": "Das ist sehr häufig: Man sieht besser, was man selbst macht, als was der andere macht. Am besten schreibt ihr gemeinsam auf, was jeder übernimmt, ohne Punkte zu zählen.",
+        "desequilibre": "Ihr seid euch einig: Vor allem {{nom}} kümmert sich darum. Passt das für euch beide?",
+        "accord": "Ihr seht es gleich.",
+        "aucun": "In eurem Check gibt es keine Frage dieser Art."
+      },
+      "domaines": {
+        "intro": "Alle eure Antworten, Bereich für Bereich: zuerst, worin ihr euch einig seid, dann eure Unterschiede, vom wichtigsten bis zum kleinsten.",
+        "accords": "Ihr seid euch einig",
+        "accordsAucun": "Keine genaue Übereinstimmung in diesem Bereich.",
+        "differences": "Eure Unterschiede",
+        "differencesAucune": "Keine Unterschiede in diesem Bereich.",
+        "etats": "Wie ihr es erlebt",
+        "voirConversation": "Ihr findet es weiter oben, mit Ideen zum Gespräch: Gespräch {{n}}.",
+        "voirBloquants": "Ihr findet es weiter oben, mit Ideen zum Gespräch: Knackpunkte."
+      },
+      "cat": {
+        "accord": "Übereinstimmung",
+        "proche": "Ähnliche Antworten",
+        "ecart": "Unterschied"
+      },
+      "statut": {
+        "bloquant": "Knackpunkt",
+        "aTrancher": "Zu entscheiden",
+        "aConfirmer": "Zu klären"
+      },
       "nnDe": "Nicht verhandelbar für {{nom}}",
       "pourquoi": "Warum es wichtig ist",
       "parler": "Um darüber zu reden",
       "eviter": "Lieber vermeiden",
-      "meteoTitre": "Wie es euch geht",
-      "meteoIntro": "Diese Fragen suchen keine Übereinstimmung: Sie zeigen, wie jeder die Beziehung gerade erlebt.",
-      "meteoEcart": "Ihr erlebt es nicht gleich",
-      "meteoAttention": "Im Auge behalten",
-      "meteoDe": "Für {{nom}}",
-      "imprimer": "Drucken oder als PDF speichern",
-      "supprimer": "Unseren Check löschen",
-      "supprimerConfirmer": "Löschen bestätigen",
-      "supprimerAide": "Der Check wird für euch beide gelöscht, sofort und endgültig. Denkt daran, vorher das PDF zu speichern.",
-      "supprime": "Euer Check wurde gelöscht.",
-      "note": "Dieser Check ist ein Werkzeug zum Reden, keine Diagnose. Wenn ihr gerade eine schwierige Zeit durchmacht, kann euch eine Paarberatung oder Paartherapie helfen, weiterzukommen.",
-      "garde": "Dieser Bericht bleibt sechs Monate auf dieser Seite verfügbar, für euch beide."
+      "suite": {
+        "p1": "Ein Bericht ändert allein nichts: Was zählt, sind die Gespräche, die er anstößt. So geht ihr es an, nach dem, was bei Paaren funktioniert, die gut miteinander reden.",
+        "conseils": [
+          "Ein Thema pro Abend, nicht mehr. Fangt mit dem einfachsten an, um in den Rhythmus zu kommen.",
+          "Wählt einen ruhigen Moment, ohne Handy, und nicht mitten in einer Spannung.",
+          "Sprecht über das, was ihr fühlt („Ich habe Angst, dass...“), statt über das, was der andere tut.",
+          "Ziel des ersten Gesprächs ist, den anderen zu verstehen, nicht ihn zu überzeugen. Eine Entscheidung kann bis zur nächsten Woche warten.",
+          "Wenn es hitzig wird, macht zwanzig Minuten Pause und redet später weiter. Das hilft mehr, als man denkt."
+        ],
+        "refaire": "Den Check in sechs Monaten oder einem Jahr zu wiederholen zeigt, was sich zwischen euch verändert hat. Viele Paare machen ihn bei jedem großen Schritt neu: zusammenziehen, heiraten, ein Kind bekommen.",
+        "aide": "Dieser Check ist ein Werkzeug zum Reden, keine Diagnose. Wenn ihr gerade eine schwierige Zeit durchmacht, kann euch eine Paarberatung oder Paartherapie helfen, weiterzukommen.",
+        "violence": "Wenn du Angst vor deinem Partner oder deiner Partnerin hast, ist dieser Check nicht für deine Situation gedacht: In Deutschland ist das Hilfetelefon „Gewalt gegen Frauen“ rund um die Uhr kostenlos und anonym unter 116 016 erreichbar, in Österreich die Frauenhelpline unter 0800 222 555."
+      },
+      "ecran": {
+        "telecharger": "PDF herunterladen",
+        "pdfPrepa": "Euer PDF wird gerade erstellt: Es kommt in ein paar Minuten, per E-Mail und hier.",
+        "pdfErreur": "Das PDF verspätet sich. Es wird euch geschickt, sobald es fertig ist, ihr müsst nichts tun.",
+        "envoyeA": "Bericht gesendet an {{emails}}",
+        "envoiA": "Der Bericht wird gesendet an {{emails}}",
+        "emailTitre": "Den Bericht per E-Mail bekommen",
+        "emailAide": "Deine Adresse wird nur verwendet, um dir diesen Bericht zu schicken.",
+        "emailChamp": "Deine E-Mail-Adresse",
+        "emailBouton": "Senden",
+        "emailOk": "Notiert!",
+        "emailFaux": "Diese Adresse scheint nicht gültig zu sein.",
+        "imprimer": "Drucken",
+        "supprimer": "Unseren Check löschen",
+        "supprimerConfirmer": "Löschen bestätigen",
+        "supprimerAide": "Der Check wird für euch beide gelöscht, sofort und endgültig, das PDF eingeschlossen. Denkt daran, das PDF vorher zu speichern.",
+        "supprime": "Euer Check wurde gelöscht.",
+        "garde": "Dieser Bericht bleibt sechs Monate auf dieser Seite verfügbar, für euch beide."
+      }
     },
     "situation": {
       "resume": "Situation"
@@ -233,7 +366,10 @@
       "serveur": "Bei uns ist ein Problem aufgetreten. Versuch es gleich noch einmal.",
       "reessayer": "Noch einmal versuchen"
     },
-    "genres": { "f": "Eine Frau", "h": "Ein Mann" }
+    "genres": {
+      "f": "Eine Frau",
+      "h": "Ein Mann"
+    }
   },
   "section1": {
     "title": "Was ist ein Beziehungs-Check?",

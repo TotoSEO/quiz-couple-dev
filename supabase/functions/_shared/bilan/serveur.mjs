@@ -1,14 +1,21 @@
-// La logique de la fonction `bilan`, sans rien de propre à Deno : le stockage
-// et Stripe sont passés en paramètres, ce qui permet de tout essayer en Node
-// avec une base en mémoire et un faux Stripe (test/serveur.test.mjs).
+// La logique de la fonction `bilan`, sans rien de propre à Deno : le stockage,
+// Stripe et l'envoi des e-mails sont passés en paramètres, ce qui permet de
+// tout essayer en Node avec une base en mémoire, un faux Stripe et une fausse
+// boîte aux lettres (test/serveur.test.mjs).
 //
 // Chaque bilan a deux clés, une par partenaire. La page les garde dans la
 // partie # du lien (jamais envoyée à un serveur web) ; la base n'en garde que
 // l'empreinte SHA-256. La clé d'invitation de B est remplacée dès que B
 // rejoint : celui qui a envoyé le lien ne peut plus s'en servir pour lire les
 // réponses de l'autre.
+//
+// Aucun résultat sans paiement (Thomas, 18 octobre 2026 : « Si tu veux avoir
+// les résultats, tu payes. Point barre. »). Chacun peut payer dès qu'il a
+// fini ses propres réponses ; le rapport s'ouvre quand les deux ont fini, et
+// le PDF part par e-mail (fabrique : bilan/fabrique.mjs).
 
 import * as C from './coeur.mjs';
+import { emailPropre, masquerEmail, messageRapport, nomFichier } from './courriel.mjs';
 
 export const LANGUES = ['fr', 'en', 'es', 'de', 'it'];
 export const SITE = 'https://quiz-couple.com';
@@ -26,32 +33,32 @@ export const CHEMINS = {
 const PRODUIT = {
   fr: {
     nom: 'Bilan de couple : le rapport complet',
-    description: 'Pour vous deux : tous vos écarts avec les deux réponses, les guides pour en parler, vos quatre prochaines conversations et la météo de votre couple.',
-    mention: 'TVA non applicable, art. 293 B du CGI. Le rapport s\'ouvre dès le paiement confirmé : vous avez demandé l\'accès immédiat et renoncé au droit de rétractation.',
+    description: 'Pour vous deux : le rapport complet de votre bilan, en PDF par e-mail et en ligne. Vos accords, vos écarts avec les deux réponses, les signaux de vigilance, la météo de votre couple et vos quatre prochaines conversations.',
+    mention: 'TVA non applicable, art. 293 B du CGI. Le rapport est fourni dès le paiement confirmé et dès que vous avez fini tous les deux : vous avez demandé l\'exécution immédiate et renoncé au droit de rétractation.',
     garantie: 'Satisfaits ou remboursés pendant {jours} jours : il suffit d\'un message depuis la page contact.',
   },
   en: {
     nom: 'Couple check-up: the full report',
-    description: 'For both of you: every difference with both answers, conversation guides, your next four conversations and how your relationship is doing.',
-    mention: 'VAT not applicable, art. 293 B of the French tax code. The report opens as soon as payment is confirmed: you asked for immediate access and waived your right of withdrawal.',
+    description: 'For both of you: the full report of your check-up, as a PDF by email and online. Where you agree, every difference with both answers, the warning signs, how your relationship is doing and your next four conversations.',
+    mention: 'VAT not applicable, art. 293 B of the French tax code. The report is provided as soon as payment is confirmed and you have both finished: you asked for immediate performance and waived your right of withdrawal.',
     garantie: 'Money-back guarantee for {jours} days: just send us a message from the contact page.',
   },
   es: {
     nom: 'Chequeo de pareja: el informe completo',
-    description: 'Para los dos: todas vuestras diferencias con las dos respuestas, guías para hablarlo, vuestras cuatro próximas conversaciones y cómo está vuestra pareja.',
-    mention: 'IVA no aplicable, art. 293 B del CGI francés. El informe se abre en cuanto se confirma el pago: habéis pedido el acceso inmediato y renunciado al derecho de desistimiento.',
+    description: 'Para los dos: el informe completo de vuestro chequeo, en PDF por correo y en línea. En qué estáis de acuerdo, todas las diferencias con las dos respuestas, las señales de alerta, cómo está vuestra pareja y vuestras cuatro próximas conversaciones.',
+    mention: 'IVA no aplicable, art. 293 B del CGI francés. El informe se entrega en cuanto se confirma el pago y habéis terminado los dos: habéis pedido la ejecución inmediata y renunciado al derecho de desistimiento.',
     garantie: 'Satisfechos o reembolsados durante {jours} días: basta con un mensaje desde la página de contacto.',
   },
   de: {
     nom: 'Beziehungs-Check: der vollständige Bericht',
-    description: 'Für euch beide: alle Unterschiede mit beiden Antworten, Gesprächshilfen, eure nächsten vier Gespräche und wie es eurer Beziehung geht.',
-    mention: 'Keine Umsatzsteuer gemäß Art. 293 B des französischen Steuergesetzbuchs. Der Bericht öffnet sich, sobald die Zahlung bestätigt ist: Ihr habt den sofortigen Zugang verlangt und auf das Widerrufsrecht verzichtet.',
+    description: 'Für euch beide: der vollständige Bericht eures Checks, als PDF per E-Mail und online. Wo ihr euch einig seid, alle Unterschiede mit beiden Antworten, die Warnsignale, wie es eurer Beziehung geht und eure nächsten vier Gespräche.',
+    mention: 'Keine Umsatzsteuer gemäß Art. 293 B des französischen Steuergesetzbuchs. Der Bericht wird geliefert, sobald die Zahlung bestätigt ist und ihr beide fertig seid: Ihr habt die sofortige Ausführung verlangt und auf das Widerrufsrecht verzichtet.',
     garantie: 'Geld-zurück-Garantie für {jours} Tage: Eine Nachricht über die Kontaktseite genügt.',
   },
   it: {
     nom: 'Check-up di coppia: il report completo',
-    description: 'Per tutti e due: tutte le differenze con le due risposte, le guide per parlarne, le vostre prossime quattro conversazioni e come sta la vostra coppia.',
-    mention: 'IVA non applicabile, art. 293 B del CGI francese. Il report si apre appena il pagamento è confermato: avete chiesto l\'accesso immediato e rinunciato al diritto di recesso.',
+    description: 'Per tutti e due: il report completo del vostro check-up, in PDF via e-mail e online. Su cosa siete d\'accordo, tutte le differenze con le due risposte, i segnali d\'allarme, come sta la vostra coppia e le vostre prossime quattro conversazioni.',
+    mention: 'IVA non applicabile, art. 293 B del CGI francese. Il report viene fornito appena il pagamento è confermato e avete finito tutti e due: avete chiesto l\'esecuzione immediata e rinunciato al diritto di recesso.',
     garantie: 'Soddisfatti o rimborsati per {jours} giorni: basta un messaggio dalla pagina dei contatti.',
   },
 };
@@ -59,8 +66,14 @@ const PRODUIT = {
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
 const JETON = /^[A-Za-z0-9_-]{20,64}$/;
 const SESSION = /^cs_[A-Za-z0-9_]{10,200}$/;
+const SOURCE = /^[a-z0-9-]{1,40}$/;
 // Créations de bilans par adresse IP et par heure.
 export const CREATIONS_PAR_HEURE = 10;
+// Envois du rapport par e-mail, au plus, pour un bilan : chacun peut changer
+// son adresse, mais la fonction ne doit pas devenir un relais d'envoi.
+export const ENVOIS_MAX = 8;
+// Durée de l'adresse de téléchargement du PDF, en secondes.
+export const DUREE_LIEN_PDF = 600;
 
 // ── Petits outils ───────────────────────────────────────────────────────
 
@@ -86,6 +99,11 @@ export function prenomPropre(p) {
   return s;
 }
 
+// La page qui a mené au bilan (?src=), « direct » sinon.
+export function sourcePropre(s) {
+  return typeof s === 'string' && SOURCE.test(s) ? s : 'direct';
+}
+
 function genrePropre(g) {
   return g === 'f' || g === 'h' ? g : null;
 }
@@ -93,15 +111,52 @@ function genrePropre(g) {
 const ok = (json) => ({ statut: 200, json });
 const non = (statut, erreur, plus) => ({ statut, json: { erreur, ...(plus || {}) } });
 
+// L'étape d'une personne : le premier domaine qu'elle n'a pas fini, ou
+// « fini ». Les domaines sont posés dans l'ordre.
+function etapeDe(situation, reponses) {
+  const e = C.etapes(situation, reponses);
+  for (const d of C.DOMAINES) {
+    const qs = d.questions.filter((q) => C.applicable(q, situation, reponses));
+    if (qs.length && !e.finis.includes(d.id)) return d.id;
+  }
+  return 'fini';
+}
+
+// Les adresses où envoyer le rapport, sans doublon.
+function destinataires(ligne) {
+  const vues = new Set();
+  const liste = [];
+  for (const e of [ligne.paiement_email, ligne.a_email, ligne.b_email]) {
+    if (!e) continue;
+    const cle = e.toLowerCase();
+    if (vues.has(cle)) continue;
+    vues.add(cle);
+    liste.push(e);
+  }
+  return liste;
+}
+
 // ── Le serveur ──────────────────────────────────────────────────────────
 
 // stockage : { inserer(ligne), lire(id), maj(id, champs), supprimer(id),
-//              compterRecents(ipHash, depuisIso) }
+//              compterRecents(ipHash, depuisIso), compter(evenement, cle, montant),
+//              trouverParIntent(intent), lireFichier(chemin),
+//              supprimerFichier(chemin), urlSignee(chemin, secondes, nom) }
 // stripe   : { creerSession(params), lireSession(id) } ou null (paiement fermé)
 // stripeTest : clé de test (sk_test_...) ; la page ouvre alors le paiement
 //              même tant que le bilan n'est pas ouvert, pour l'essayer.
-/** @param {{ stockage: any, stripe?: any, stripeTest?: boolean, sel?: string, maintenant?: () => Date }} options */
-export function creerServeur({ stockage, stripe = null, stripeTest = false, sel = '', maintenant = () => new Date() }) {
+// courriel : { envoyer({ a, sujet, html, texte, pieces }) } ou null
+/** @param {{ stockage: any, stripe?: any, stripeTest?: boolean, courriel?: any, sel?: string, maintenant?: () => Date }} options */
+export function creerServeur({ stockage, stripe = null, stripeTest = false, courriel = null, sel = '', maintenant = () => new Date() }) {
+
+  // Un compteur qui rate ne doit jamais faire échouer une réponse.
+  async function compter(evenement, cle, montant) {
+    try {
+      if (stockage.compter) await stockage.compter(evenement, cle || '', montant || 0);
+    } catch (e) {
+      console.error('[bilan] compteur', evenement, String(e && e.message || e).slice(0, 200));
+    }
+  }
 
   async function charger(corps) {
     const id = corps?.id;
@@ -121,6 +176,27 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     return { prenom: ligne[r + '_prenom'], genre: ligne[r + '_genre'] || null };
   }
 
+  // Ce que la page sait du paiement et du rapport.
+  function paiementPour(ligne, role) {
+    const paye = !!ligne.paye_le;
+    return {
+      prix: C.PRIX_CENTIMES,
+      garantie: C.GARANTIE_JOURS,
+      paiementOuvert: !!stripe,
+      paiementTest: !!stripe && stripeTest,
+      paye,
+      payeParMoi: paye && ligne.paiement_role === role,
+      rapport: paye ? {
+        statut: ligne.rapport_statut || null,
+        pret: ligne.rapport_statut === 'pret',
+        pages: ligne.rapport_pages || null,
+        // Les adresses où le rapport part ou est parti, masquées.
+        envoiA: destinataires(ligne).map(masquerEmail),
+        envoye: (ligne.envois || []).some((e) => e.ok),
+      } : null,
+    };
+  }
+
   function etatPour(ligne, role) {
     const autre = role === 'a' ? 'b' : 'a';
     const repAutre = ligne[autre + '_reponses'] || {};
@@ -131,10 +207,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
       lang: ligne.lang,
       situation: ligne.situation,
       creeLe: ligne.cree_le,
-      prix: C.PRIX_CENTIMES,
-      garantie: C.GARANTIE_JOURS,
-      paiementOuvert: !!stripe, paiementTest: !!stripe && stripeTest,
-      paye: !!ligne.paye_le,
+      ...paiementPour(ligne, role),
       verrouille: !!(ligne.a_fini && ligne.b_fini),
       moi: {
         ...personne(ligne, role),
@@ -142,6 +215,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
         reponses: ligne[role + '_reponses'] || {},
         nn: ligne[role + '_nn'] || [],
         fini: !!ligne[role + '_fini'],
+        email: ligne[role + '_email'] || null,
       },
       autre: {
         ...personne(ligne, autre),
@@ -151,6 +225,14 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
         total: prog.total,
       },
     };
+  }
+
+  // La page du bilan vue, ou son bouton « commencer » : comptés par source.
+  async function vue(corps) {
+    const quoi = corps?.quoi === 'cta' ? 'cta' : corps?.quoi === 'page' ? 'vue' : null;
+    if (!quoi) return non(400, 'quoi');
+    await compter(quoi, sourcePropre(corps.src));
+    return ok({ compte: true });
   }
 
   async function creer(corps, ctx) {
@@ -170,14 +252,17 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     const jetonA = nouveauJeton();
     const jetonB = nouveauJeton();
     const quand = maintenant().toISOString();
+    const situation = C.nettoieSituation(corps.situation);
     const ligne = await stockage.inserer({
       lang,
-      situation: C.nettoieSituation(corps.situation),
+      situation,
+      src: sourcePropre(corps.src),
       a_prenom: pa, a_genre: genrePropre(corps.moi?.genre),
       b_prenom: pb, b_genre: genrePropre(corps.autre?.genre),
       a_jeton: await empreinte(jetonA),
       b_jeton: await empreinte(jetonB),
       a_consent: quand,
+      a_etape: etapeDe(situation, {}),
       ip_hash: ipHash,
       cree_le: quand,
       maj_le: quand,
@@ -191,10 +276,10 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     const { ligne, role } = c;
     if (!ligne[role + '_consent']) {
       // B arrive par l'invitation : ni réponses ni progression, juste de quoi
-      // présenter le bilan et demander son accord.
+      // présenter le bilan et demander son accord (et dire si A a déjà payé).
       return ok({
         id: ligne.id, role, invite: true, lang: ligne.lang, situation: ligne.situation,
-        prix: C.PRIX_CENTIMES, garantie: C.GARANTIE_JOURS, paiementOuvert: !!stripe, paiementTest: !!stripe && stripeTest,
+        ...paiementPour(ligne, role), rapport: null,
         moi: personne(ligne, role), autre: personne(ligne, role === 'a' ? 'b' : 'a'),
       });
     }
@@ -217,6 +302,7 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     const jeton = nouveauJeton();
     champs[role + '_jeton'] = await empreinte(jeton);
     champs[role + '_consent'] = maintenant().toISOString();
+    champs[role + '_etape'] = etapeDe(ligne.situation, ligne[role + '_reponses'] || {});
     champs.maj_le = champs[role + '_consent'];
     const maj = await stockage.maj(ligne.id, champs);
     return ok({ jeton, etat: etatPour(maj, role) });
@@ -250,12 +336,20 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     if (complet && (corps.fini === true || dejaFini)) {
       fini = dejaFini ? ligne[role + '_fini'] : maintenant().toISOString();
     }
+    const avant = C.etapes(ligne.situation, ligne[role + '_reponses'] || {});
+    const apres = C.etapes(ligne.situation, v.reponses);
     const maj = await stockage.maj(ligne.id, {
       [role + '_reponses']: v.reponses,
       [role + '_nn']: v.nn,
       [role + '_fini']: fini,
+      [role + '_etape']: fini ? 'fini' : etapeDe(ligne.situation, v.reponses),
       maj_le: maintenant().toISOString(),
     });
+    // Où les gens entrent et sortent, domaine par domaine (onglet Bilan de
+    // l'admin). Une personne qui revient sur une réponse ne compte pas deux
+    // fois : seuls les domaines nouveaux comptent.
+    for (const d of apres.entres) if (!avant.entres.includes(d)) await compter('domaine_entre', d);
+    for (const d of apres.finis) if (!avant.finis.includes(d)) await compter('domaine_fini', d);
     const prog = C.progression(maj.situation, v.reponses);
     return ok({
       fini: !!fini,
@@ -265,39 +359,31 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     });
   }
 
+  // Le rapport : seulement payé, et seulement quand les deux ont fini.
   async function resultat(corps) {
     const c = await charger(corps);
     if (c.erreur) return c.erreur;
     const { ligne, role } = c;
     if (!ligne[role + '_consent']) return non(403, 'consentement');
-    if (!ligne.a_fini || !ligne.b_fini) return non(409, 'pas_fini');
     const base = {
       role,
       lang: ligne.lang,
       situation: ligne.situation,
-      prix: C.PRIX_CENTIMES,
-      garantie: C.GARANTIE_JOURS,
-      paiementOuvert: !!stripe, paiementTest: !!stripe && stripeTest,
-      finiLe: ligne.a_fini > ligne.b_fini ? ligne.a_fini : ligne.b_fini,
-      payeLe: ligne.paye_le || null,
-    };
-    if (ligne.paye_le) {
-      return ok({
-        ...base,
-        paye: true,
-        a: { ...personne(ligne, 'a'), reponses: ligne.a_reponses || {}, nn: ligne.a_nn || [] },
-        b: { ...personne(ligne, 'b'), reponses: ligne.b_reponses || {}, nn: ligne.b_nn || [] },
-      });
-    }
-    const analyse = C.analyser(ligne.situation,
-      { reponses: ligne.a_reponses, nn: ligne.a_nn },
-      { reponses: ligne.b_reponses, nn: ligne.b_nn });
-    return ok({
-      ...base,
-      paye: false,
+      ...paiementPour(ligne, role),
+      moiFini: !!ligne[role + '_fini'],
+      deuxFinis: !!(ligne.a_fini && ligne.b_fini),
+      moiEmail: ligne[role + '_email'] || null,
       a: personne(ligne, 'a'),
       b: personne(ligne, 'b'),
-      resume: C.resumeGratuit(analyse),
+    };
+    if (!ligne.paye_le) return { statut: 402, json: { erreur: 'non_paye', ...base } };
+    if (!ligne.a_fini || !ligne.b_fini) return { statut: 409, json: { erreur: 'pas_fini', ...base } };
+    return ok({
+      ...base,
+      finiLe: ligne.a_fini > ligne.b_fini ? ligne.a_fini : ligne.b_fini,
+      payeLe: ligne.paye_le,
+      a: { ...personne(ligne, 'a'), reponses: ligne.a_reponses || {}, nn: ligne.a_nn || [] },
+      b: { ...personne(ligne, 'b'), reponses: ligne.b_reponses || {}, nn: ligne.b_nn || [] },
     });
   }
 
@@ -306,7 +392,9 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     if (c.erreur) return c.erreur;
     const { ligne, role } = c;
     if (!ligne[role + '_consent']) return non(403, 'consentement');
-    if (!ligne.a_fini || !ligne.b_fini) return non(409, 'pas_fini');
+    // On paie quand on a fini ses propres réponses : c'est là que la page
+    // propose le rapport. Le rapport, lui, attend que les deux aient fini.
+    if (!ligne[role + '_fini']) return non(409, 'pas_fini');
     if (ligne.paye_le) return ok({ paye: true });
     if (!stripe) return non(503, 'paiement_ferme');
     if (corps.renonciation !== true) return non(400, 'renonciation');
@@ -315,17 +403,19 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     const base = SITE + CHEMINS[lang];
     const message = [t.mention, C.GARANTIE_JOURS > 0 ? C.remplir(t.garantie, { jours: C.GARANTIE_JOURS }) : '']
       .filter(Boolean).join(' ');
+    const email = emailPropre(corps.email) || ligne[role + '_email'] || null;
     let session;
     try {
       session = await stripe.creerSession({
         mode: 'payment',
         locale: lang,
         client_reference_id: ligne.id,
+        customer_email: email || undefined,
         success_url: base + '?paiement={CHECKOUT_SESSION_ID}&b=' + ligne.id,
         cancel_url: base + '?annule=1&b=' + ligne.id,
         allow_promotion_codes: 'true',
-        metadata: { bilan: ligne.id },
-        payment_intent_data: { metadata: { bilan: ligne.id } },
+        metadata: { bilan: ligne.id, role },
+        payment_intent_data: { metadata: { bilan: ligne.id, role } },
         custom_text: { submit: { message } },
         line_items: [{
           quantity: 1,
@@ -339,10 +429,12 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     } catch (e) {
       return non(502, 'stripe', { detail: String(e.message || e).slice(0, 200) });
     }
-    await stockage.maj(ligne.id, {
+    const champs = {
       renonciation_le: maintenant().toISOString(),
       paiement_session: session.id,
-    });
+    };
+    if (email && !ligne[role + '_email']) champs[role + '_email'] = email;
+    await stockage.maj(ligne.id, champs);
     return ok({ url: session.url });
   }
 
@@ -354,13 +446,32 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     const ligne = await stockage.lire(id);
     if (!ligne) return false;
     if (ligne.paye_le) return true;
+    const role = session.metadata?.role === 'a' || session.metadata?.role === 'b' ? session.metadata.role : null;
+    const intent = typeof session.payment_intent === 'string' ? session.payment_intent
+      : (session.payment_intent && typeof session.payment_intent.id === 'string' ? session.payment_intent.id : null);
+    const email = emailPropre(session.customer_details?.email) || emailPropre(session.customer_email);
     await stockage.maj(id, {
       paye_le: maintenant().toISOString(),
-      paiement_session: session.id,
+      paiement_session: typeof session.id === 'string' ? session.id.slice(0, 255) : null,
+      paiement_intent: intent ? intent.slice(0, 255) : null,
       paiement_montant: Number.isInteger(session.amount_total) ? session.amount_total : null,
+      paiement_role: role,
+      paiement_email: email,
       // Le bilan payé est gardé six mois à partir d'ici (bilan_menage).
       maj_le: maintenant().toISOString(),
     });
+    return true;
+  }
+
+  // Un remboursement fait depuis Stripe (charge.refunded) : noté pour l'admin,
+  // le rapport reste ouvert (docs/bilan/STRIPE.md).
+  async function marquerRembourse(charge) {
+    const intent = typeof charge?.payment_intent === 'string' ? charge.payment_intent : null;
+    if (!intent || !charge.refunded) return false;
+    const ligne = stockage.trouverParIntent ? await stockage.trouverParIntent(intent) : null;
+    if (!ligne) return false;
+    if (ligne.rembourse_le) return true;
+    await stockage.maj(ligne.id, { rembourse_le: maintenant().toISOString() });
     return true;
   }
 
@@ -383,14 +494,97 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     return ok({ paye });
   }
 
+  // Envoie le PDF prêt aux adresses qui ne l'ont pas encore reçu. Appelé par
+  // la fabrique (action interne) juste après avoir rangé le fichier, et par
+  // la page quand quelqu'un donne son adresse après coup.
+  async function envoyerA(ligne) {
+    if (!ligne.paye_le || ligne.rapport_statut !== 'pret' || !ligne.rapport_chemin) {
+      return { envoyes: 0, attente: true };
+    }
+    const envois = Array.isArray(ligne.envois) ? ligne.envois.slice() : [];
+    const deja = new Set(envois.filter((e) => e.ok).map((e) => String(e.email).toLowerCase()));
+    const restants = destinataires(ligne).filter((e) => !deja.has(e.toLowerCase()));
+    if (!restants.length) return { envoyes: 0 };
+    if (!courriel) return { envoyes: 0, erreur: 'courriel' };
+    if (envois.length >= ENVOIS_MAX) return { envoyes: 0, erreur: 'trop' };
+    const octets = await stockage.lireFichier(ligne.rapport_chemin);
+    const msg = messageRapport({ lang: ligne.lang, a: ligne.a_prenom, b: ligne.b_prenom, pages: ligne.rapport_pages });
+    const nom = nomFichier(ligne.lang, ligne.a_prenom, ligne.b_prenom);
+    let envoyes = 0;
+    for (const dest of restants) {
+      if (envois.length >= ENVOIS_MAX) break;
+      let reussi = false;
+      try {
+        await courriel.envoyer({ a: dest, sujet: msg.sujet, html: msg.html, texte: msg.texte, pieces: [{ nom, octets }] });
+        reussi = true;
+        envoyes++;
+      } catch (e) {
+        console.error('[bilan] envoi', String(e && e.message || e).slice(0, 200));
+      }
+      envois.push({ email: dest, le: maintenant().toISOString(), ok: reussi });
+      await compter(reussi ? 'envoi_ok' : 'envoi_echec');
+    }
+    await stockage.maj(ligne.id, { envois });
+    return { envoyes, echecs: restants.length - envoyes };
+  }
+
+  // L'adresse où recevoir le rapport. Chacun ne règle que la sienne.
+  async function email(corps) {
+    const c = await charger(corps);
+    if (c.erreur) return c.erreur;
+    const { ligne, role } = c;
+    if (!ligne[role + '_consent']) return non(403, 'consentement');
+    if (corps.email === undefined) return non(400, 'email');
+    const e = corps.email === '' || corps.email === null ? null : emailPropre(corps.email);
+    if (corps.email && !e) return non(400, 'email');
+    if ((ligne.envois || []).length >= ENVOIS_MAX) return non(429, 'trop');
+    const maj = await stockage.maj(ligne.id, { [role + '_email']: e, maj_le: maintenant().toISOString() });
+    const envoi = e ? await envoyerA(maj) : { envoyes: 0 };
+    const relu = envoi.envoyes ? await stockage.lire(ligne.id) : maj;
+    return ok({ email: e, envoi, etat: etatPour(relu, role) });
+  }
+
+  // Une adresse de téléchargement du PDF, valable dix minutes.
+  async function pdf(corps) {
+    const c = await charger(corps);
+    if (c.erreur) return c.erreur;
+    const { ligne } = c;
+    if (!ligne.paye_le) return non(402, 'non_paye');
+    if (ligne.rapport_statut !== 'pret' || !ligne.rapport_chemin) {
+      return ok({ pret: false, statut: ligne.rapport_statut || null });
+    }
+    const url = await stockage.urlSignee(ligne.rapport_chemin, DUREE_LIEN_PDF,
+      nomFichier(ligne.lang, ligne.a_prenom, ligne.b_prenom));
+    return ok({ pret: true, url });
+  }
+
   async function supprimer(corps) {
     const c = await charger(corps);
     if (c.erreur) return c.erreur;
+    if (c.ligne.rapport_chemin && stockage.supprimerFichier) {
+      try { await stockage.supprimerFichier(c.ligne.rapport_chemin); } catch (e) {
+        // La fabrique efface au passage suivant les fichiers sans bilan.
+        console.error('[bilan] fichier', String(e && e.message || e).slice(0, 200));
+      }
+    }
     await stockage.supprimer(c.ligne.id);
     return ok({ supprime: true });
   }
 
-  const ACTIONS = { creer, etat, consentir, situation, repondre, resultat, payer, verifier, supprimer };
+  // Réservé à la fabrique du PDF (clé de service, vérifiée par index.ts).
+  async function envoyerRapport(corps, ctx) {
+    if (!ctx?.interne) return non(403, 'interne');
+    const id = corps?.id;
+    if (typeof id !== 'string' || !UUID.test(id)) return non(400, 'lien');
+    const ligne = await stockage.lire(id);
+    if (!ligne) return non(404, 'introuvable');
+    return ok(await envoyerA(ligne));
+  }
+
+  const ACTIONS = {
+    vue, creer, etat, consentir, situation, repondre, resultat, payer, verifier,
+    email, pdf, supprimer, envoyer_rapport: envoyerRapport,
+  };
 
   async function traiter(corps, ctx) {
     if (!corps || typeof corps !== 'object') return non(400, 'corps');
@@ -399,13 +593,13 @@ export function creerServeur({ stockage, stripe = null, stripeTest = false, sel 
     return action(corps, ctx);
   }
 
-  return { traiter, marquerPaye };
+  return { traiter, marquerPaye, marquerRembourse };
 }
 
-// Le webhook de Stripe (fonction bilan-stripe). `verifier` est la fonction de
-// vérification de signature (stripe.mjs), passée pour garder ce fichier sans
-// dépendance.
-export async function traiterWebhook({ corps, signature, secret, verifierSignature, marquerPaye }) {
+// Le webhook de Stripe (fonction bilan-stripe). `verifierSignature` est la
+// fonction de vérification de signature (stripe.mjs), passée pour garder ce
+// fichier sans dépendance.
+export async function traiterWebhook({ corps, signature, secret, verifierSignature, marquerPaye, marquerRembourse }) {
   if (!secret) return { statut: 503, json: { erreur: 'secret' } };
   const valide = await verifierSignature(corps, signature, secret);
   if (!valide) return { statut: 400, json: { erreur: 'signature' } };
@@ -414,6 +608,10 @@ export async function traiterWebhook({ corps, signature, secret, verifierSignatu
   const type = evenement?.type;
   if (type === 'checkout.session.completed' || type === 'checkout.session.async_payment_succeeded') {
     const marque = await marquerPaye(evenement.data?.object);
+    return { statut: 200, json: { recu: true, marque } };
+  }
+  if (type === 'charge.refunded' && marquerRembourse) {
+    const marque = await marquerRembourse(evenement.data?.object);
     return { statut: 200, json: { recu: true, marque } };
   }
   return { statut: 200, json: { recu: true, ignore: type || null } };

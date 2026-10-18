@@ -170,6 +170,9 @@ function empreinteRessources() {
     path.resolve(__dirname, '../js'),
     path.resolve(__dirname, '../css'),
     ...LANGUAGES.map(l => path.resolve(__dirname, `../../${l}`)),
+    // Le calcul, le gabarit et la feuille du rapport du bilan, servis en
+    // /js/bilan-coeur.js, /js/bilan-rapport.js et /css/bilan-rapport.css.
+    path.dirname(BILAN_COEUR_SRC),
   ];
   const h = crypto.createHash('sha1');
   const parcours = (dir) => {
@@ -178,7 +181,7 @@ function empreinteRessources() {
       const p = path.join(dir, nom);
       const st = fs.statSync(p);
       if (st.isDirectory()) { parcours(p); continue; }
-      if (!/\.(js|css|json)$/.test(nom)) continue;
+      if (!/\.(m?js|css|json)$/.test(nom)) continue;
       h.update(path.relative(__dirname, p));
       h.update(fs.readFileSync(p));
     }
@@ -218,6 +221,24 @@ function cssCritiquePour(cle) {
     }
   }
   critiqueCache.set(cle, css);
+  return css;
+}
+// La feuille propre à une page (css/pages/<routeKey>.css), mise en ligne
+// dans le <head> de cette page seulement : la page du bilan de couple a son
+// propre habillage, sans rien ajouter à styles.css ni à ses feuilles
+// critiques.
+const cssPageCache = new Map();
+function cssPagePour(cle) {
+  if (!cle) return '';
+  if (cssPageCache.has(cle)) return cssPageCache.get(cle);
+  const fichier = path.resolve(__dirname, '../css/pages', `${cle}.css`);
+  let css = '';
+  if (fs.existsSync(fichier)) {
+    const r = new CleanCSS({ level: 1 }).minify(fs.readFileSync(fichier, 'utf-8'));
+    if (r.errors && r.errors.length) throw new Error(`[css] pages/${cle}.css : ${r.errors.join(' ; ')}`);
+    css = r.styles;
+  }
+  cssPageCache.set(cle, css);
   return css;
 }
 function bilanCritique() {
@@ -1359,6 +1380,7 @@ async function generatePage(routeKey, lang) {
     pageJouable: estPageJouable(routeKey),
     pagePublicitaire: pagePublicitaire(routeKey),
     cssCritique: cssCritiquePour(routeKey),
+    cssPage: cssPagePour(routeKey),
     genrePage: genrePageJouable(routeKey),
     pureteQuestions: routeKey === 'testPurete' ? pureteQuestions(lang) : null,
     pagePath,
@@ -1657,7 +1679,9 @@ function copyStaticAssets() {
   // photos de destinations du test « où partir en vacances ? ».
   // « produits » porte les visuels Amazon des encarts de resultat, copies chez
   // nous plutot qu'appeles sur le CDN d'Amazon.
-  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances', 'produits']) {
+  // « fonts » porte les polices du rapport du bilan (Fraunces et Inter, OFL),
+  // « bilan » les aperçus du rapport montrés sur sa page.
+  for (const dir of ['blog', 'authors', 'quiz', 'partenaires', 'vacances', 'produits', 'fonts', 'bilan']) {
     const srcDir = path.join(publicDir, dir);
     const destDir = path.join(DIST_DIR, dir);
     if (fs.existsSync(srcDir)) {
@@ -1832,6 +1856,14 @@ function copyCss() {
       }
     }
   }
+  // La feuille du rapport du bilan, écrite une seule fois pour l'écran et
+  // pour le PDF (supabase/functions/_shared/bilan/rapport.css).
+  const rapportCss = path.join(path.dirname(BILAN_COEUR_SRC), 'rapport.css');
+  if (fs.existsSync(rapportCss)) {
+    const r = new CleanCSS({ level: 1 }).minify(fs.readFileSync(rapportCss, 'utf-8'));
+    if (r.errors && r.errors.length) throw new Error('[bilan] rapport.css : ' + r.errors.join(' ; '));
+    fs.writeFileSync(path.join(destDir, 'bilan-rapport.css'), r.styles, 'utf-8');
+  }
   console.log('[css] CSS files minified to dist/css/');
 }
 
@@ -1913,6 +1945,20 @@ async function copyJs() {
     fs.writeFileSync(path.join(destDir, 'bilan-coeur.js'),
       `(function () {\n'use strict';\n${corps}\nwindow.QCBilanCoeur = { ${noms.join(', ')} };\n})();\n`, 'utf-8');
     console.log(`[js] bilan-coeur.js construit (${noms.length} noms exportés)`);
+  }
+  // Le gabarit du rapport, de la même façon : il prend le calcul sur
+  // window.QCBilanCoeur au lieu de l'importer.
+  const rapportSrc = path.join(path.dirname(BILAN_COEUR_SRC), 'rapport.mjs');
+  if (fs.existsSync(rapportSrc)) {
+    const src = fs.readFileSync(rapportSrc, 'utf-8');
+    const noms = [...src.matchAll(/^export (?:const|function) ([A-Za-z_]\w*)/gm)].map(m => m[1]);
+    const corps = src
+      .replace(/^import \* as C from '\.\/coeur\.mjs';$/m, 'var C = window.QCBilanCoeur;')
+      .replace(/^export (const|function) /gm, '$1 ');
+    if (/^\s*(import|export)\b/m.test(corps)) throw new Error('[bilan] rapport.mjs : import ou export inattendu');
+    fs.writeFileSync(path.join(destDir, 'bilan-rapport.js'),
+      `(function () {\n'use strict';\n${corps}\nwindow.QCBilanRapport = { ${noms.join(', ')} };\n})();\n`, 'utf-8');
+    console.log(`[js] bilan-rapport.js construit (${noms.length} noms exportés)`);
   }
 
   // Inject the Supabase URL + anon key (resolved from config.js, itself driven by the

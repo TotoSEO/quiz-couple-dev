@@ -121,37 +121,6 @@
       "maj": "Questa pagina si aggiorna da sola.",
       "accueil": "Torna ai miei check-up"
     },
-    "resultat": {
-      "titre": "Il check-up di {{a}} e {{b}}",
-      "accord": "Il vostro accordo",
-      "meteo": "Il meteo della vostra coppia",
-      "verdicts": {
-        "onde": { "titre": "Sulla stessa lunghezza d'onda", "texte": "Volete più o meno la stessa vita, e la vedete allo stesso modo. Le differenze ci sono, ma sono poche: è il momento giusto per parlarne, finché restano piccole." },
-        "proches": { "titre": "Molto vicini", "texte": "Siete d'accordo sull'essenziale, con qualche argomento su cui non la vedete allo stesso modo. È il caso della maggior parte delle coppie che stanno bene." },
-        "creuser": { "titre": "Vicini, con qualche tema da approfondire", "texte": "Vi ritrovate su molte cose, ma diversi argomenti vi separano. Niente di allarmante finché ne parlate, ed è proprio a questo che serve questo check-up." },
-        "apprivoiser": { "titre": "Differenze con cui fare i conti", "texte": "Avete modi piuttosto diversi di vedere la vita a due. Non dice niente del vostro amore, ma vuol dire che alcuni argomenti richiedono vere discussioni, e compromessi." },
-        "visions": { "titre": "Due modi di vedere la vita", "texte": "Su molti argomenti non volete la stessa cosa. Alcune coppie ci vivono benissimo, altre no: la cosa più importante è sapere quali di queste differenze contano davvero per ciascuno." }
-      },
-      "meteos": {
-        "beau": { "titre": "Sole pieno", "texte": "Vi sentite bene nella vostra coppia, tutti e due." },
-        "nuages": { "titre": "Sole con qualche nuvola", "texte": "Va bene, con qualche punto in cui uno di voi si sente meno bene." },
-        "variable": { "titre": "Variabile", "texte": "Ci sono cose belle e qualche momento più difficile in questo periodo." },
-        "orageux": { "titre": "Temporalesco", "texte": "Uno di voi, o tutti e due, non si sente molto bene nella coppia in questo momento." },
-        "tempete": { "titre": "Tempesta", "texte": "In questo periodo le cose non vanno bene. Questo check-up può aiutare a dare un nome a quello che succede, e un consulente di coppia può aiutarvi ad andare più a fondo." }
-      },
-      "parDomaine": "Area per area",
-      "compte": "{{accords}} accordi, {{proches}} risposte vicine, {{ecarts}} differenze",
-      "bloquants": "{{n}} punto critico",
-      "bloquantsN": "{{n}} punti critici",
-      "bloquantsAide": "Un punto critico è una differenza su una grande domanda (figli, dove vivere, fedeltà...) che uno di voi ha segnato come «non negoziabile».",
-      "aucunBloquant": "Nessun punto critico",
-      "echantillonTitre": "Una delle vostre differenze, per intero",
-      "echantillonAide": "Ecco un esempio di quello che il report contiene per ognuna delle vostre differenze.",
-      "autresTitre": "Le vostre altre differenze",
-      "masque": "Risposte visibili nel report",
-      "plusAutres": "E altre {{n}}",
-      "aucunEcart": "Non avete nessuna differenza: le vostre risposte sono vicine o identiche ovunque. È raro!"
-    },
     "paywall": {
       "titre": "Il report completo",
       "intro": "Tutto quello che dicono le vostre due serie di risposte, argomento per argomento, con quello che serve per parlarne.",
@@ -185,43 +154,207 @@
       "erreur": "Al momento non riusciamo a verificare il pagamento. Se hai pagato, ricarica la pagina tra un minuto."
     },
     "rapport": {
-      "date": "Check-up concluso il {{date}}",
-      "conversationsTitre": "Le vostre prossime quattro conversazioni",
-      "conversationsIntro": "Gli argomenti su cui le vostre risposte si allontanano di più, su quello che conta di più, uno per area. Tenetene uno per sera, con calma, invece di farli tutti in una volta.",
-      "conversation": "Conversazione {{n}}",
-      "bloquantsTitre": "I vostri punti critici",
-      "bloquantsIntro": "Differenze su domande che uno di voi ha segnato come «non negoziabile». Sono i primi argomenti da affrontare, senza cercare di convincere l'altro quella sera stessa: prima capire.",
-      "nnTitre": "Quello che non è negoziabile per ciascuno",
-      "nnAucun": "Niente di segnato",
-      "chacunTitre": "Ognuno pensa di fare di più",
-      "chacunIntro": "Su questi argomenti, ognuno di voi pensa di fare più dell'altro. È molto comune: si vede meglio quello che si fa che quello che fa l'altro.",
-      "rassembleTitre": "Quello che vi unisce",
-      "rassembleIntro": "Le grandi domande a cui avete risposto esattamente allo stesso modo.",
-      "domainesTitre": "Area per area",
-      "accords": "Siete d'accordo",
-      "accordsAucun": "Nessun accordo esatto in quest'area.",
-      "differences": "Le vostre differenze",
-      "differencesAucune": "Nessuna differenza in quest'area.",
-      "desequilibre": "Siete d'accordo: è soprattutto {{nom}} a occuparsene. Va bene a tutti e due?",
-      "cat": { "accord": "Accordo", "proche": "Risposte vicine", "ecart": "Differenza" },
-      "statut": { "bloquant": "Punto critico", "aTrancher": "Da decidere", "aConfirmer": "Da confermare" },
-      "chacunPlus": "Ognuno pensa di fare di più",
+      "surtitre": "Check-up di coppia",
+      "pied": "Check-up di coppia · riservato",
+      "couverture": {
+        "de": "Il check-up di coppia di",
+        "et": "e",
+        "date": "Report redatto il {{date}}",
+        "chiffres": "{{domaines}} aree · {{questions}} domande confrontate",
+        "confidentiel": "Riservato: questo report contiene le risposte di tutti e due."
+      },
+      "lire": {
+        "titre": "Come leggere questo report",
+        "p1": "Ognuno ha risposto per conto suo, senza vedere le risposte dell'altro. Questo report mette le vostre due serie di risposte una di fronte all'altra, argomento per argomento, per mostrarvi dove siete d'accordo e dove non vedete le cose allo stesso modo.",
+        "p2": "Le domande si basano sulla ricerca in psicologia di coppia: studi che hanno seguito coppie per anni e i questionari che usano i consulenti di coppia prima di un matrimonio. Questo report non è una diagnosi. È una base per parlarvi, con gli argomenti giusti nell'ordine giusto.",
+        "p3": "La cosa più semplice è leggerlo ognuno per conto suo e poi parlarne insieme, un argomento alla volta. Se non sapete da dove cominciare, andate direttamente alle vostre prossime quattro conversazioni.",
+        "reperes": "Legenda",
+        "accord": "Avete dato la stessa risposta.",
+        "proche": "Le vostre risposte sono vicine.",
+        "ecart": "Le vostre risposte si allontanano.",
+        "nn": "Uno di voi ha segnato questo argomento come non negoziabile.",
+        "sommaire": "In questo report",
+        "nnTag": "Non negoziabile"
+      },
+      "chapitres": {
+        "synthese": "La vostra sintesi",
+        "carte": "La mappa delle vostre aree",
+        "conversations": "Le vostre prossime quattro conversazioni",
+        "bloquants": "Punti di blocco e non negoziabili",
+        "climat": "Il clima della vostra coppia",
+        "signaux": "I vostri segnali d'allarme",
+        "roles": "Chi fa cosa, secondo ciascuno",
+        "domaines": "Area per area",
+        "suite": "E adesso?"
+      },
+      "synthese": {
+        "intro": "Due numeri riassumono il vostro check-up. Il primo dice quanto volete la stessa vita insieme. Il secondo dice come si sente ciascuno di voi nella coppia in questo momento. Non vanno per forza insieme: si può essere molto allineati e attraversare un periodo difficile, o il contrario.",
+        "alignement": "Il vostro allineamento",
+        "alignementAide": "L'accordo delle vostre risposte sulla vita insieme. Le grandi decisioni contano il doppio.",
+        "climat": "Il vostro clima",
+        "climatAide": "Come vive la coppia ciascuno di voi in questo momento.",
+        "climatDe": "{{nom}}: {{n}}%",
+        "tuiles": {
+          "accords": "Risposte uguali",
+          "proches": "Risposte vicine",
+          "ecarts": "Differenze",
+          "bloquants": "Punti di blocco",
+          "vigilance": "Segnali da guardare"
+        },
+        "forts": "Dove siete più vicini",
+        "faibles": "Dove lo siete meno",
+        "rassemble": "Ciò che vi unisce",
+        "rassembleIntro": "Le grandi domande a cui avete risposto esattamente allo stesso modo."
+      },
+      "verdicts": {
+        "onde": {
+          "titre": "Sulla stessa lunghezza d'onda",
+          "texte": "Volete più o meno la stessa vita, e la vedete allo stesso modo. Le differenze ci sono, ma sono poche: è il momento giusto per parlarne, finché restano piccole."
+        },
+        "proches": {
+          "titre": "Molto vicini",
+          "texte": "Siete d'accordo sull'essenziale, con qualche argomento su cui non la vedete allo stesso modo. È il caso della maggior parte delle coppie che stanno bene."
+        },
+        "creuser": {
+          "titre": "Vicini, con qualche tema da approfondire",
+          "texte": "Vi ritrovate su molte cose, ma diversi argomenti vi separano. Niente di allarmante finché ne parlate, ed è proprio a questo che serve questo check-up."
+        },
+        "apprivoiser": {
+          "titre": "Differenze con cui fare i conti",
+          "texte": "Avete modi piuttosto diversi di vedere la vita a due. Non dice niente del vostro amore, ma vuol dire che alcuni argomenti richiedono vere discussioni, e compromessi."
+        },
+        "visions": {
+          "titre": "Due modi di vedere la vita",
+          "texte": "Su molti argomenti non volete la stessa cosa. Alcune coppie ci vivono benissimo, altre no: la cosa più importante è sapere quali di queste differenze contano davvero per ciascuno."
+        }
+      },
+      "meteos": {
+        "beau": {
+          "titre": "Sole pieno",
+          "texte": "Vi sentite bene nella vostra coppia, tutti e due."
+        },
+        "nuages": {
+          "titre": "Sole con qualche nuvola",
+          "texte": "Va bene, con qualche punto in cui uno di voi si sente meno bene."
+        },
+        "variable": {
+          "titre": "Variabile",
+          "texte": "Ci sono cose belle e qualche momento più difficile in questo periodo."
+        },
+        "orageux": {
+          "titre": "Temporalesco",
+          "texte": "Uno di voi, o tutti e due, non si sente molto bene nella coppia in questo momento."
+        },
+        "tempete": {
+          "titre": "Tempesta",
+          "texte": "In questo periodo le cose non vanno bene. Questo check-up può aiutare a dare un nome a quello che succede, e un consulente di coppia può aiutarvi ad andare più a fondo."
+        }
+      },
+      "carte": {
+        "intro": "Ogni barra mostra l'accordo delle vostre risposte in un'area, da 0 a 100%. Il clima della vostra coppia non cerca un accordo: ha una parte tutta sua.",
+        "bandes": {
+          "fort": "Molto vicini",
+          "moyen": "Abbastanza vicini",
+          "faible": "Da discutere"
+        },
+        "accords": "uguali",
+        "proches": "vicine",
+        "ecarts": "differenze"
+      },
+      "conversations": {
+        "intro": "Gli argomenti su cui le vostre risposte si allontanano di più, su quello che conta di più, uno per area. Tenetene uno per sera, con calma, invece di farli tutti in una volta.",
+        "titre": "Conversazione {{n}}",
+        "aucune": "Non avete nessuna differenza su cui lavorare: le vostre risposte sono vicine o identiche ovunque. È raro! Approfittatene per parlare di ciò che vi unisce."
+      },
+      "bloquants": {
+        "intro": "Differenze su domande che uno di voi ha segnato come «non negoziabile». Sono i primi argomenti da affrontare, senza cercare di convincere l'altro quella sera stessa: prima capire.",
+        "aucun": "Nessun punto di blocco: nessuna delle vostre differenze riguarda un argomento che uno di voi ha segnato come non negoziabile.",
+        "nnTitre": "Quello che non è negoziabile per ciascuno",
+        "nnIntro": "Gli argomenti su cui ciascuno di voi ha detto di non poter scendere a compromessi, con la sua risposta.",
+        "nnAucun": "Niente di segnato."
+      },
+      "climat": {
+        "intro": "Queste domande non cercano un accordo: dicono come ciascuno di voi vive la coppia in questo momento. Una differenza qui vuol dire che non state vivendo la stessa relazione, cosa che succede molto più spesso di quanto si pensi.",
+        "ecart": "Non la vivete allo stesso modo",
+        "attention": "Da tenere d'occhio",
+        "de": "Per {{nom}}",
+        "sens": "Su ogni riga, la casella a sinistra è quella in cui le cose vanno meglio, quella a destra quella in cui vanno meno bene."
+      },
+      "signaux": {
+        "intro": "I ricercatori che osservano le coppie da decenni hanno individuato alcuni modi di litigare che, quando diventano un'abitudine, logorano una relazione molto più dei litigi stessi. Capita a tutti, ogni tanto. Quello che conta è quanto spesso, e cosa ne fate dopo.",
+        "rare": "Raro da voi",
+        "attention": "Da tenere d'occhio",
+        "alerte": "Da guardare per primo",
+        "reparationBien": "Un vero punto di forza",
+        "reparationAttention": "Su cui lavorare",
+        "fin": "Se uno di questi atteggiamenti torna spesso da voi, non è una condanna: è proprio quello che un consulente di coppia aiuta a cambiare, e si può cambiare."
+      },
+      "roles": {
+        "intro": "Per ogni argomento, la linea va da «soprattutto {{a}}» a «soprattutto {{b}}». I due segni mostrano cosa ha risposto ciascuno.",
+        "surtout": "Soprattutto {{nom}}",
+        "autant": "Tutti e due",
+        "chacunPlus": "Ognuno pensa di fare di più",
+        "chacunPlusTexte": "È molto comune: si vede meglio quello che si fa che quello che fa l'altro. La cosa migliore è fare insieme la lista di quello di cui si occupa ciascuno, senza contare i punti.",
+        "desequilibre": "Siete d'accordo: è soprattutto {{nom}} a occuparsene. Va bene a tutti e due?",
+        "accord": "La vedete allo stesso modo.",
+        "aucun": "Nel vostro check-up non c'è nessuna domanda di questo tipo."
+      },
+      "domaines": {
+        "intro": "Tutte le vostre risposte, area per area: prima ciò su cui siete d'accordo, poi le vostre differenze, dalla più importante alla più piccola.",
+        "accords": "Siete d'accordo",
+        "accordsAucun": "Nessun accordo esatto in quest'area.",
+        "differences": "Le vostre differenze",
+        "differencesAucune": "Nessuna differenza in quest'area.",
+        "etats": "Come lo vivete",
+        "voirConversation": "Lo trovate più in alto, con spunti per parlarne: conversazione {{n}}.",
+        "voirBloquants": "Lo trovate più in alto, con spunti per parlarne: punti di blocco."
+      },
+      "cat": {
+        "accord": "Accordo",
+        "proche": "Risposte vicine",
+        "ecart": "Differenza"
+      },
+      "statut": {
+        "bloquant": "Punto critico",
+        "aTrancher": "Da decidere",
+        "aConfirmer": "Da confermare"
+      },
       "nnDe": "Non negoziabile per {{nom}}",
       "pourquoi": "Perché conta",
       "parler": "Per parlarne",
       "eviter": "Da evitare",
-      "meteoTitre": "Come state",
-      "meteoIntro": "Queste domande non cercano un accordo: dicono come ognuno vive la coppia in questo momento.",
-      "meteoEcart": "Non la vivete allo stesso modo",
-      "meteoAttention": "Da tenere d'occhio",
-      "meteoDe": "Per {{nom}}",
-      "imprimer": "Stampa o salva in PDF",
-      "supprimer": "Cancella il nostro check-up",
-      "supprimerConfirmer": "Conferma la cancellazione",
-      "supprimerAide": "Il check-up viene cancellato per tutti e due, subito e per sempre. Ricordatevi di salvare il PDF prima.",
-      "supprime": "Il vostro check-up è stato cancellato.",
-      "note": "Questo check-up è uno strumento per parlare, non una diagnosi. Se state attraversando un periodo difficile, un consulente di coppia o un terapeuta può aiutarvi ad andare più a fondo.",
-      "garde": "Questo report resta disponibile per sei mesi su questa pagina, per tutti e due."
+      "suite": {
+        "p1": "Un report da solo non cambia niente: quello che conta sono le conversazioni che fa nascere. Ecco come fare, in base a quello che funziona nelle coppie che si parlano bene.",
+        "conseils": [
+          "Un argomento a sera, non di più. Cominciate dal più facile per prendere il ritmo.",
+          "Scegliete un momento tranquillo, senza telefono, e non nel mezzo di una tensione.",
+          "Parlate di quello che sentite («io ho paura che...») più che di quello che fa l'altro.",
+          "Lo scopo della prima chiacchierata è capire l'altro, non convincerlo. Una decisione può aspettare la settimana dopo.",
+          "Se la cosa si scalda, fate una pausa di venti minuti e riprendete dopo. Funziona meglio di quanto si pensi."
+        ],
+        "refaire": "Rifare il check-up tra sei mesi o un anno mostra cosa è cambiato tra voi. Molte coppie lo rifanno a ogni grande passo: andare a vivere insieme, sposarsi, avere un figlio.",
+        "aide": "Questo check-up è uno strumento per parlare, non una diagnosi. Se state attraversando un periodo difficile, un consulente di coppia o un terapeuta può aiutarvi ad andare più a fondo.",
+        "violence": "Se hai paura del tuo partner, questo check-up non è pensato per la tua situazione: in Italia il 1522 risponde gratuitamente, 24 ore su 24, anche in modo anonimo."
+      },
+      "ecran": {
+        "telecharger": "Scarica il PDF",
+        "pdfPrepa": "Il vostro PDF è in preparazione: arriverà tra qualche minuto, via e-mail e qui.",
+        "pdfErreur": "Il PDF è in ritardo. Ve lo invieremo appena è pronto, non dovete fare niente.",
+        "envoyeA": "Report inviato a {{emails}}",
+        "envoiA": "Il report sarà inviato a {{emails}}",
+        "emailTitre": "Ricevere il report via e-mail",
+        "emailAide": "Il tuo indirizzo serve solo a inviarti questo report.",
+        "emailChamp": "Il tuo indirizzo e-mail",
+        "emailBouton": "Invia",
+        "emailOk": "Fatto!",
+        "emailFaux": "Questo indirizzo non sembra valido.",
+        "imprimer": "Stampa",
+        "supprimer": "Cancella il nostro check-up",
+        "supprimerConfirmer": "Conferma la cancellazione",
+        "supprimerAide": "Il check-up viene cancellato per tutti e due, subito e per sempre, PDF compreso. Ricordatevi di salvare il PDF prima.",
+        "supprime": "Il vostro check-up è stato cancellato.",
+        "garde": "Questo report resta disponibile per sei mesi su questa pagina, per tutti e due."
+      }
     },
     "situation": {
       "resume": "Situazione"
@@ -233,7 +366,10 @@
       "serveur": "C'è stato un problema da parte nostra. Riprova tra un attimo.",
       "reessayer": "Riprova"
     },
-    "genres": { "f": "Una donna", "h": "Un uomo" }
+    "genres": {
+      "f": "Una donna",
+      "h": "Un uomo"
+    }
   },
   "section1": {
     "title": "Che cos'è un check-up di coppia?",

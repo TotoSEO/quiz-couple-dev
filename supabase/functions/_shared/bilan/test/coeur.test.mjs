@@ -40,14 +40,14 @@ test('chaque question a un identifiant unique et un type connu', () => {
   assert.equal(C.DOMAINES.length, 12);
 });
 
-test('environ 90 questions par personne, quelle que soit la situation', () => {
+test('environ 100 questions par personne, quelle que soit la situation', () => {
   const valeurs = C.SITUATION.map((s) => s.valeurs);
   const combos = valeurs.reduce((acc, v) => acc.flatMap((a) => v.map((x) => [...a, x])), [[]]);
   for (const combo of combos) {
     const sit = Object.fromEntries(C.SITUATION.map((s, i) => [s.id, combo[i]]));
     assert.ok(C.situationValide(sit));
     const tout = C.questionsPour(sit, {}).length;
-    assert.ok(tout >= 84 && tout <= 95, JSON.stringify(sit) + ' : ' + tout);
+    assert.ok(tout >= 94 && tout <= 105, JSON.stringify(sit) + ' : ' + tout);
     // Chaque domaine garde au moins cinq questions.
     for (const d of C.DOMAINES) {
       const n = C.questionsPour(sit, {}).filter((x) => x.domaine === d.id).length;
@@ -152,7 +152,7 @@ test('des réponses identiques donnent 100 %, le hasard autour de 55 %', () => {
   assert.ok(moyenne > 48 && moyenne < 62, 'moyenne au hasard : ' + moyenne);
 });
 
-test('points bloquants, priorités, conversations et aperçu gratuit', () => {
+test('points bloquants, priorités et conversations', () => {
   const ra = toutRepondre(SIT, () => 1);
   const rb = { ...ra };
   for (const [id, v] of Object.entries(ra)) if (C.INDEX[id].q.type === 'qui') rb[id] = 4 - v;
@@ -171,17 +171,38 @@ test('points bloquants, priorités, conversations et aperçu gratuit', () => {
   assert.ok(a.conversations.length <= 4);
   const domaines = a.conversations.map((id) => C.INDEX[id].d.id);
   assert.equal(new Set(domaines).size, domaines.length, 'un sujet par domaine');
-  // L'aperçu gratuit ne montre jamais un sujet sensible.
-  assert.ok(a.echantillon && !a.items.find((i) => i.id === a.echantillon).sensible);
   assert.ok(!a.items.find((i) => i.id === 'enf2'), 'question sans réponse de B : pas comparée');
+  assert.equal(C.resumeGratuit, undefined, 'plus aucun résultat gratuit');
+});
 
-  const g = C.resumeGratuit(a);
-  assert.equal(g.echantillon.id, a.echantillon);
-  assert.ok(Number.isInteger(g.echantillon.a) && Number.isInteger(g.echantillon.b));
-  for (const x of g.autres) assert.equal(x.a, undefined, 'pas de réponses dans les autres écarts');
-  assert.equal(g.nbAutres, a.divergences.length - 1);
-  const texte = JSON.stringify(g);
-  assert.ok(!texte.includes('"reponses"'));
+test('signaux de vigilance : fréquences de chacun, alerte à la case la plus inquiétante', () => {
+  const ra = toutRepondre(SIT, () => 0);
+  const rb = { ...ra };
+  for (const [id, v] of Object.entries(ra)) if (C.INDEX[id].q.type === 'qui') rb[id] = 4 - v;
+  rb.dis9 = 3;   // mépris : souvent, selon B
+  rb.dis12 = 2;  // réparer : parfois
+  const a = C.analyser(SIT, { reponses: ra }, { reponses: rb });
+  assert.deepEqual(a.signaux.map((x) => x.signal), ['critique', 'mepris', 'defense', 'retrait', 'reparation']);
+  const mepris = a.signaux.find((x) => x.signal === 'mepris');
+  assert.equal(mepris.a, 0);
+  assert.equal(mepris.b, 3);
+  assert.equal(mepris.alerte, true);
+  assert.equal(a.signaux.find((x) => x.signal === 'reparation').alerte, false);
+  assert.equal(a.compte.vigilance, 1);
+  // Les signaux pèsent dans le climat, jamais dans l'accord.
+  const sans = C.analyser(SIT, { reponses: ra }, { reponses: { ...rb, dis9: 0, dis12: 0 } });
+  assert.equal(a.global, sans.global);
+  assert.ok(a.meteo < sans.meteo);
+});
+
+test('étapes : domaines commencés et finis, pour les compteurs', () => {
+  const rep = toutRepondre(SIT, () => 0);
+  const tout = C.etapes(SIT, rep);
+  assert.equal(tout.finis.length, 12);
+  const debut = { quo1: 0, quo2: 1 };
+  const e = C.etapes(SIT, debut);
+  assert.deepEqual(e.entres, ['quotidien']);
+  assert.deepEqual(e.finis, []);
 });
 
 test('météo : bien-être moyen, signaux d\'attention et d\'alerte', () => {

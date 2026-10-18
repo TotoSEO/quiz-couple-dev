@@ -365,6 +365,22 @@
             "Wie würdest du den nächsten gern feiern?"
           ],
           "eviter": "Sagen „das ist doch nur Kommerz“, wenn es dem anderen wichtig ist: Es geht darum, was er fühlt, nicht um den Feiertag."
+        },
+        "tps9": {
+          "q": "Gemeinsam Dinge machen, die ihr noch nie gemacht habt (ein neuer Ort, eine Aktivität, eine andere Art von Reise), davon hättest du gern...",
+          "o": [
+            "Viel mehr als jetzt",
+            "Etwas mehr",
+            "So viel wie jetzt",
+            "Weniger, ich mag unsere Gewohnheiten"
+          ],
+          "court": "Neues zu zweit",
+          "pourquoi": "Paare, die regelmäßig neue Erfahrungen miteinander teilen, langweilen sich weniger in ihrer Beziehung, und Langeweile nutzt ein Paar lange vor jedem Streit ab. Man braucht aber dieselbe Lust auf Neues: Für den einen ist es ein Abenteuer, für den anderen eine Anstrengung mehr.",
+          "parler": [
+            "Was haben wir zuletzt zum ersten Mal zusammen gemacht?",
+            "Was würdest du dieses Jahr gern mit mir ausprobieren?"
+          ],
+          "eviter": "Eine „Überraschung“ planen, die der andere als zusätzliche Pflicht erlebt."
         }
       }
     },
@@ -1298,6 +1314,81 @@
             "Wie sagst du mir, dass du mich liebst, ohne es auszusprechen?"
           ],
           "eviter": "Davon ausgehen, dass der andere es schon weiß: Wissen und Hören ist nicht dasselbe."
+        },
+        "dis8": {
+          "q": "Bei euren Streits zielen Vorwürfe manchmal auf die Person statt auf das Problem („du bist immer...“, „du machst nie...“):",
+          "o": [
+            "Nie",
+            "Selten",
+            "Manchmal",
+            "Oft"
+          ],
+          "court": "Vorwürfe gegen die Person",
+          "pourquoi": "„Du hast den Einkauf vergessen“ sagt etwas über eine Sache. „Du denkst nie an irgendwas“ sagt etwas über die Person, und dem anderen bleibt nur noch, sich zu verteidigen. Forschende, die Paare seit Jahrzehnten beobachten, sehen darin eines der ersten Zeichen, dass ein Streit schlecht ausgeht.",
+          "parler": [
+            "Wenn ich dir etwas vorwerfe, wie könnte ich es sagen, damit es sich nicht wie ein Angriff anfühlt?",
+            "Gibt es einen Satz von mir, bei dem du sofort hochgehst?"
+          ]
+        },
+        "dis9": {
+          "q": "Bei einem Streit macht sich einer von euch manchmal über den anderen lustig, wird ironisch oder verdreht die Augen:",
+          "o": [
+            "Nie",
+            "Selten",
+            "Manchmal",
+            "Oft"
+          ],
+          "court": "Spott und Verachtung",
+          "pourquoi": "Verachtung (Ironie, Spott, Augenverdrehen) ist in Studien, die Paare über viele Jahre begleiten, das beunruhigendste Signal für die Zukunft einer Beziehung. Sie sagt dem anderen „ich bin mehr wert als du“, und das sagt keine Meinungsverschiedenheit.",
+          "parler": [
+            "Habe ich manchmal einen Ton, der dich verletzt, auch im Spaß?",
+            "Was bewunderst du an mir, selbst wenn du wütend bist?"
+          ]
+        },
+        "dis10": {
+          "q": "Wenn {autre} dir etwas vorwirft, ist dein erster Reflex, dich zu rechtfertigen oder mit einem anderen Vorwurf zu kontern:",
+          "o": [
+            "Nie",
+            "Selten",
+            "Manchmal",
+            "Oft"
+          ],
+          "court": "Verteidigen statt zuhören",
+          "pourquoi": "Sich zu rechtfertigen ist ein sehr menschlicher Reflex. Das Problem: Der andere hört „ich bin nicht schuld“ und wiederholt seinen Vorwurf lauter. Auch nur einen kleinen Teil anzuerkennen („stimmt, ich hab's vergessen“) reicht oft, damit die Spannung sinkt.",
+          "parler": [
+            "Wenn ich mich rechtfertige, was bräuchtest du stattdessen zu hören?",
+            "Bei welchem Thema hast du das Gefühl, dass ich nie etwas zugebe?"
+          ]
+        },
+        "dis11": {
+          "q": "Bei einem Streit macht einer von euch manchmal komplett dicht: antwortet nicht mehr, verlässt wortlos den Raum oder tut so, als wäre der andere nicht da:",
+          "o": [
+            "Nie",
+            "Selten",
+            "Manchmal",
+            "Oft"
+          ],
+          "court": "Dichtmachen im Streit",
+          "pourquoi": "Dichtmachen ist fast nie Gleichgültigkeit: Oft ist der Körper überlastet, das Herz schlägt zu schnell, um nachzudenken. Für den, der gegenübersteht, wirkt dieses Schweigen aber wie eine Wand. Eine echte Pause von etwa zwanzig Minuten, mit angekündigter Rückkehr, ändert viel.",
+          "parler": [
+            "Wenn ich dichtmache, was fühlst du dann?",
+            "Wollen wir ein Wort ausmachen für „Pause, ich brauche zwanzig Minuten“?"
+          ]
+        },
+        "dis12": {
+          "q": "Nach einem Streit schafft ihr es, euch zu versöhnen (eine Geste, ein Witz, ein „Entschuldigung“, eine Umarmung):",
+          "o": [
+            "Immer",
+            "Oft",
+            "Manchmal",
+            "Selten"
+          ],
+          "court": "Sich nach einem Streit versöhnen",
+          "pourquoi": "Alle Paare streiten. Laut Forschung streiten Paare, die zusammenbleiben, genauso oft wie andere; der Unterschied ist, dass sie danach leichter wieder zueinanderfinden, mit einer Geste, einem Wort oder einem Witz.",
+          "parler": [
+            "Was hilft dir am besten, damit wir uns versöhnen?",
+            "Gibt es einen Streit, den wir nie richtig verdaut haben?"
+          ]
         }
       }
     },
@@ -1692,6 +1783,66 @@
           "parler": [
             "Was würde dich „ja, ohne zu zögern“ antworten lassen?",
             "Was hat sich für dich seit dem Anfang verändert?"
+          ]
+        },
+        "met9": {
+          "q": "Wenn du {autre} eine gute Nachricht erzählst, ist die Reaktion meistens...",
+          "o": [
+            "Begeistert: wir reden darüber, es freut {autre} mit",
+            "Positiv, mehr nicht",
+            "Abgelenkt, halb aufmerksam",
+            "Gleichgültig oder kritisch"
+          ],
+          "court": "Gute Nachrichten teilen",
+          "pourquoi": "Man spricht viel über Unterstützung in schweren Zeiten. Die Forschung zeigt, dass die Reaktion auf gute Nachrichten mindestens genauso zählt: Ein „wie toll, erzähl!“ bringt euch näher, ein abgelenktes „ah, schön“ entfernt euch, ohne dass man es merkt.",
+          "parler": [
+            "Was war die letzte gute Nachricht, die du mir erzählt hast, und wie habe ich reagiert?",
+            "Woran merkst du, dass ich mich wirklich für dich freue?"
+          ]
+        },
+        "met10": {
+          "q": "Du fühlst dich von {autre} geschätzt, für das, was du tust, und für das, was du bist:",
+          "o": [
+            "Immer",
+            "Oft",
+            "Selten",
+            "Nie"
+          ],
+          "court": "Sich geschätzt fühlen",
+          "pourquoi": "Sich vom Partner geschätzt zu fühlen gehört zu dem, was die Qualität einer Beziehung am besten vorhersagt, laut einer großen Auswertung, die Dutzende Paarstudien zusammengeführt hat. Und Wertschätzung steckt an: Wer sich geschätzt fühlt, schätzt den anderen meist auch mehr.",
+          "parler": [
+            "Was tue ich für dich, das du öfter von mir bemerkt haben möchtest?",
+            "Wann hattest du zuletzt das Gefühl, dass ich wirklich sehe, was du machst?"
+          ]
+        },
+        "met11": {
+          "q": "Du bist dir sicher, dass {autre} genauso viel an eurer Beziehung liegt wie dir:",
+          "o": [
+            "Völlig",
+            "Eher ja",
+            "Nicht wirklich",
+            "Gar nicht"
+          ],
+          "court": "Das Engagement des anderen",
+          "pourquoi": "Das Gefühl, dass der andere wirklich engagiert ist, gehört in großen Auswertungen von Paardaten zu den besten Indikatoren für die Qualität einer Beziehung. Ein Zweifel daran wiegt oft schwer, ohne je ausgesprochen zu werden.",
+          "parler": [
+            "Woran merkst du, dass mir etwas an uns liegt?",
+            "Gab es Momente, in denen du an meinem Engagement gezweifelt hast?"
+          ]
+        },
+        "met12": {
+          "q": "Du hast das Gefühl, dass {autre} weiß, was gerade in deinem Leben los ist (deine Sorgen, deine Pläne, was dich beschäftigt):",
+          "o": [
+            "Völlig",
+            "Größtenteils",
+            "Ein bisschen",
+            "Nicht wirklich"
+          ],
+          "court": "Das Leben des anderen kennen",
+          "pourquoi": "Zu wissen, was den anderen gerade beschäftigt (ein schwieriger Kollege, ein Projekt, eine Sorge), ist eine der Grundlagen eines stabilen Paares. Wenn dieses Wissen verloren geht, lebt man irgendwann nebeneinander statt miteinander, oft ohne einen einzigen Streit, der darauf hinweist.",
+          "parler": [
+            "Was geht dir gerade am meisten im Kopf herum?",
+            "Was weiß ich nicht über deine Woche?"
           ]
         }
       }

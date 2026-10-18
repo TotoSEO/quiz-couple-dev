@@ -365,6 +365,22 @@
             "¿Cómo te gustaría que celebráramos la próxima?"
           ],
           "eviter": "Decir «eso es puro marketing» cuando al otro le importa: el tema es lo que siente, no la fiesta."
+        },
+        "tps9": {
+          "q": "Hacer juntos cosas que nunca habéis hecho (un sitio nuevo, una actividad, un viaje distinto), te gustaría hacer...",
+          "o": [
+            "Muchas más que ahora",
+            "Algunas más",
+            "Tantas como ahora",
+            "Menos, prefiero nuestras costumbres"
+          ],
+          "court": "La novedad en pareja",
+          "pourquoi": "Las parejas que viven a menudo experiencias nuevas juntas se aburren menos en su relación, y el aburrimiento desgasta una pareja mucho antes que las discusiones. Aun así, hay que tener las mismas ganas de novedad: para uno es una aventura, para el otro un cansancio más.",
+          "parler": [
+            "¿Qué es lo último que hicimos juntos por primera vez?",
+            "¿Qué te gustaría que probáramos este año?"
+          ],
+          "eviter": "Organizar una «sorpresa» que el otro vivirá como una obligación más."
         }
       }
     },
@@ -1298,6 +1314,81 @@
             "¿Cómo me dices que me quieres, sin decirlo?"
           ],
           "eviter": "Dar por hecho que el otro ya lo sabe: saberlo y oírlo no es lo mismo."
+        },
+        "dis8": {
+          "q": "En vuestras discusiones, a veces los reproches van contra la persona y no contra el problema («siempre eres...», «nunca haces...»):",
+          "o": [
+            "Nunca",
+            "Pocas veces",
+            "A veces",
+            "A menudo"
+          ],
+          "court": "Los reproches contra la persona",
+          "pourquoi": "Decir «se te ha olvidado la compra» habla de un hecho. Decir «nunca te acuerdas de nada» habla de la persona, y al otro solo le queda defenderse. Los investigadores que observan parejas desde hace décadas ven en ese cambio una de las primeras señales de que una discusión va a ir mal.",
+          "parler": [
+            "Cuando te hago un reproche, ¿cómo podría decirlo para que no lo vivas como un ataque?",
+            "¿Hay alguna frase mía que siempre te hace saltar?"
+          ]
+        },
+        "dis9": {
+          "q": "En una discusión, a veces uno de los dos se burla del otro, es irónico o pone los ojos en blanco:",
+          "o": [
+            "Nunca",
+            "Pocas veces",
+            "A veces",
+            "A menudo"
+          ],
+          "court": "La burla y el desprecio",
+          "pourquoi": "El desprecio (la ironía, las burlas, poner los ojos en blanco) es, en los estudios que siguen a parejas durante muchos años, la señal más preocupante para el futuro de una relación. Le dice al otro «valgo más que tú», algo que ningún desacuerdo dice.",
+          "parler": [
+            "¿A veces tengo un tono que te hace daño, aunque sea en broma?",
+            "¿Qué admiras de mí, incluso cuando estás enfadado o enfadada?"
+          ]
+        },
+        "dis10": {
+          "q": "Cuando {autre} te hace un reproche, tu primer reflejo es justificarte o devolverle otro reproche:",
+          "o": [
+            "Nunca",
+            "Pocas veces",
+            "A veces",
+            "A menudo"
+          ],
+          "court": "Defenderse en vez de escuchar",
+          "pourquoi": "Justificarse es un reflejo muy humano. El problema es que el otro oye «no es culpa mía» y repite su reproche más fuerte. Reconocer aunque sea una pequeña parte («es verdad, se me olvidó») suele bastar para que baje la tensión.",
+          "parler": [
+            "Cuando me justifico, ¿qué necesitarías oír en su lugar?",
+            "¿En qué tema tienes la sensación de que nunca reconozco nada?"
+          ]
+        },
+        "dis11": {
+          "q": "En una discusión, a veces uno de los dos se cierra por completo: deja de contestar, se va de la habitación sin decir nada o hace como si el otro no estuviera:",
+          "o": [
+            "Nunca",
+            "Pocas veces",
+            "A veces",
+            "A menudo"
+          ],
+          "court": "Cerrarse en una discusión",
+          "pourquoi": "Cerrarse casi nunca es indiferencia: muchas veces es el cuerpo que se satura, el corazón que late demasiado deprisa para pensar. Pero para quien se queda enfrente, ese silencio parece un muro. Una pausa de verdad, de unos veinte minutos, anunciando cuándo se vuelve, cambia mucho las cosas.",
+          "parler": [
+            "Cuando me cierro, ¿qué sientes?",
+            "¿Acordamos una palabra para decir «pausa, necesito veinte minutos»?"
+          ]
+        },
+        "dis12": {
+          "q": "Después de una discusión, conseguís reconciliaros (un gesto, una broma, un «perdón», un abrazo):",
+          "o": [
+            "Siempre",
+            "A menudo",
+            "A veces",
+            "Pocas veces"
+          ],
+          "court": "Reconciliarse después de discutir",
+          "pourquoi": "Todas las parejas discuten. Según las investigaciones, las parejas que duran discuten tanto como las demás; la diferencia es que les resulta más fácil volver el uno hacia el otro después, con un gesto, una palabra o una broma.",
+          "parler": [
+            "¿Qué es lo que mejor te funciona para reconciliarnos?",
+            "¿Hay alguna discusión de la que nunca nos hemos recuperado del todo?"
+          ]
         }
       }
     },
@@ -1692,6 +1783,66 @@
           "parler": [
             "¿Qué te haría responder «sí, sin dudarlo»?",
             "¿Qué ha cambiado desde el principio, para ti?"
+          ]
+        },
+        "met9": {
+          "q": "Cuando le das una buena noticia a {autre}, su reacción suele ser...",
+          "o": [
+            "Entusiasta: lo hablamos, se alegra",
+            "Positiva, sin más",
+            "Distraída, a medias",
+            "Indiferente o crítica"
+          ],
+          "court": "Compartir las buenas noticias",
+          "pourquoi": "Se habla mucho del apoyo en los malos momentos. Las investigaciones muestran que la forma de reaccionar a las buenas noticias cuenta como mínimo lo mismo: un «¡qué bien, cuéntamelo todo!» acerca, un «ah, genial» distraído aleja sin que uno se dé cuenta.",
+          "parler": [
+            "¿Cuál es la última buena noticia que me diste y cómo reaccioné?",
+            "¿Qué te demuestra que de verdad me alegro por ti?"
+          ]
+        },
+        "met10": {
+          "q": "Te sientes {valorado|valorada|valorado/a} por {autre}, por lo que haces y por cómo eres:",
+          "o": [
+            "Siempre",
+            "A menudo",
+            "Pocas veces",
+            "Nunca"
+          ],
+          "court": "Sentirse valorado",
+          "pourquoi": "Sentirse valorado por la pareja es de lo que mejor predice la calidad de una relación, según un gran análisis que reunió decenas de estudios sobre parejas. Y el aprecio se contagia: quien se siente valorado tiende a valorar al otro a su vez.",
+          "parler": [
+            "¿Qué hago por ti que te gustaría que yo notara más a menudo?",
+            "¿Cuál fue la última vez que sentiste que yo veía de verdad lo que haces?"
+          ]
+        },
+        "met11": {
+          "q": "Estás {seguro|segura|seguro/a} de que a {autre} le importa vuestra relación tanto como a ti:",
+          "o": [
+            "Totalmente",
+            "Bastante",
+            "No mucho",
+            "Nada"
+          ],
+          "court": "El compromiso del otro",
+          "pourquoi": "Sentir que el otro está de verdad comprometido es, en los grandes análisis de datos sobre parejas, uno de los mejores indicadores de la calidad de una relación. Una duda sobre esto suele pesar en silencio, sin decirse nunca.",
+          "parler": [
+            "¿Qué te demuestra que lo nuestro me importa?",
+            "¿Ha habido momentos en los que has dudado de mi compromiso?"
+          ]
+        },
+        "met12": {
+          "q": "Tienes la sensación de que {autre} sabe lo que pasa en tu vida ahora mismo (tus preocupaciones, tus proyectos, lo que te ocupa):",
+          "o": [
+            "Totalmente",
+            "En gran parte",
+            "Un poco",
+            "No mucho"
+          ],
+          "court": "Conocer la vida del otro",
+          "pourquoi": "Saber qué ocupa al otro en este momento (un compañero difícil, un proyecto, una preocupación) es una de las bases de una pareja sólida. Cuando ese conocimiento se desgasta, uno acaba viviendo al lado del otro y no con él, a menudo sin una sola discusión que lo avise.",
+          "parler": [
+            "¿Qué es lo que más te ronda la cabeza ahora mismo?",
+            "¿Qué no sé de tu semana?"
           ]
         }
       }

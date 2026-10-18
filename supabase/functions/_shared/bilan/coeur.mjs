@@ -1,13 +1,14 @@
 // Le bilan de couple : la structure des questions et tout le calcul.
 //
-// Un seul fichier pour le serveur (fonction `bilan`, qui valide les réponses
-// et calcule le résumé gratuit) et pour la page (le générateur le sert en
-// /js/bilan-coeur.js, sans les `export`, sous window.QCBilanCoeur, et la page
-// calcule le rapport complet à partir des deux séries de réponses). Les textes
-// sont ailleurs, un fichier par langue : {lang}/bilan-questions.json.
-// Conception et raisons de chaque choix : docs/bilan/CONCEPTION.md.
+// Un seul fichier pour le serveur (fonction `bilan`, qui valide les réponses),
+// pour la page (le générateur le sert en /js/bilan-coeur.js, sans les
+// `export`, sous window.QCBilanCoeur, et la page calcule le rapport une fois
+// payé) et pour la fabrique du PDF (rapport/). Les textes sont ailleurs, un
+// fichier par langue : {lang}/bilan-questions.json.
+// Conception : docs/bilan/CONCEPTION.md ; la recherche derrière chaque
+// question : docs/bilan/RECHERCHE.md.
 
-export const VERSION = 1;
+export const VERSION = 2;
 
 // Le prix du rapport complet, pour le couple (un seul paiement débloque le
 // rapport des deux). En centimes d'euro.
@@ -36,9 +37,14 @@ export const SITUATION = [
 //   qui      qui s'en occupe, cinq cases de « surtout moi » à « surtout
 //            l'autre » ; la réponse de l'autre est retournée avant de comparer
 //   etat     comment on vit les choses en ce moment, du mieux au moins bien ;
-//            ne compte pas dans l'accord, fait la météo du couple
+//            ne compte pas dans l'accord, fait l'indice de climat
 // `decisif` : la question engage une vie, on peut la marquer non négociable.
-// `sensible` : jamais montrée dans l'aperçu gratuit.
+// `sensible` : sujet intime (religion, opinions, sexualité), jamais repris
+//              dans un texte qui pourrait être lu par-dessus l'épaule.
+// `signal` : une des attitudes de dispute que la recherche relie le plus à
+//            l'usure d'un couple (reproches qui visent la personne, mépris,
+//            défense, fermeture) ou à sa solidité (réparer après) ; elles
+//            forment la page « Signaux de vigilance » du rapport.
 // `si` : conditions sur la situation ; `siRep` : sur ses propres réponses
 // (on ne demande pas comment élever un enfant à qui n'en veut pas).
 const VEUT_ENFANTS = { enf1: [0, 1, 2] };
@@ -66,6 +72,7 @@ export const DOMAINES = [
     { id: 'tps6', type: 'choix', n: 4, proches: [[1, 2], [0, 3]] },
     { id: 'tps7', type: 'echelle', n: 4 },
     { id: 'tps8', type: 'echelle', n: 4 },
+    { id: 'tps9', type: 'echelle', n: 4 },
   ] },
   { id: 'entourage', questions: [
     { id: 'ent1', type: 'echelle', n: 4 },
@@ -136,6 +143,11 @@ export const DOMAINES = [
     { id: 'dis5', type: 'echelle', n: 4 },
     { id: 'dis6', type: 'choix', n: 4, proches: [[0, 2]] },
     { id: 'dis7', type: 'echelle', n: 4 },
+    { id: 'dis8', type: 'etat', n: 4, signal: 'critique' },
+    { id: 'dis9', type: 'etat', n: 4, signal: 'mepris' },
+    { id: 'dis10', type: 'etat', n: 4, signal: 'defense' },
+    { id: 'dis11', type: 'etat', n: 4, signal: 'retrait' },
+    { id: 'dis12', type: 'etat', n: 4, signal: 'reparation' },
   ] },
   { id: 'confiance', questions: [
     { id: 'con1', type: 'echelle', n: 4 },
@@ -166,6 +178,10 @@ export const DOMAINES = [
     { id: 'met6', type: 'etat', n: 4 },
     { id: 'met7', type: 'etat', n: 4 },
     { id: 'met8', type: 'etat', n: 4 },
+    { id: 'met9', type: 'etat', n: 4 },
+    { id: 'met10', type: 'etat', n: 4 },
+    { id: 'met11', type: 'etat', n: 4 },
+    { id: 'met12', type: 'etat', n: 4 },
   ] },
 ];
 
@@ -255,6 +271,22 @@ export function progression(situation, reponses) {
 export function complet(situation, reponses) {
   const p = progression(situation, reponses);
   return p.total > 0 && p.repondu === p.total;
+}
+
+// Où en est une personne, domaine par domaine : ceux où elle a répondu à au
+// moins une question, et ceux qu'elle a finis. Sert aux compteurs de l'admin
+// (à quel domaine les gens s'arrêtent).
+export function etapes(situation, reponses) {
+  const entres = [];
+  const finis = [];
+  for (const d of DOMAINES) {
+    const qs = d.questions.filter((q) => applicable(q, situation, reponses));
+    if (!qs.length) continue;
+    const faits = qs.filter((q) => estReponse(reponses?.[q.id])).length;
+    if (faits > 0) entres.push(d.id);
+    if (faits === qs.length) finis.push(d.id);
+  }
+  return { entres, finis };
 }
 
 function estReponse(v) {
@@ -359,7 +391,8 @@ export function analyser(situation, A, B) {
       if (q.type === 'etat') {
         const max = q.n - 1;
         const e = {
-          id: q.id, domaine: d.id, a, b,
+          id: q.id, domaine: d.id, a, b, signal: q.signal || null,
+          sensible: !!(q.sensible || d.sensible),
           bienA: 1 - a / max, bienB: 1 - b / max,
           attentionA: a >= q.n / 2, attentionB: b >= q.n / 2,
           alerteA: a === max, alerteB: b === max,
@@ -416,6 +449,14 @@ export function analyser(situation, A, B) {
     meteo = Math.round((meteoA + meteoB) / 2);
   }
 
+  // Les signaux de vigilance : pour chacun, la fréquence que chacun des deux
+  // a donnée (0 le mieux, 3 le moins bien) ; « alerte » quand l'un des deux
+  // répond la case la plus inquiétante.
+  const signaux = etats.filter((e) => e.signal).map((e) => ({
+    id: e.id, signal: e.signal, a: e.a, b: e.b,
+    alerte: e.alerteA || e.alerteB, attention: e.attentionA || e.attentionB,
+  }));
+
   const divergences = items
     .filter((i) => i.cat !== 'accord' || i.chacunPlus)
     .sort((x, y) => y.prio - x.prio || ordre(x.id) - ordre(y.id));
@@ -431,15 +472,6 @@ export function analyser(situation, A, B) {
     conversations.push(i.id);
   }
 
-  // L'aperçu gratuit : un écart ordinaire, ni sensible ni sur une grande
-  // décision. Les points bloquants restent visibles en titre, réponses
-  // floutées : montrer le plus lourd en entier, c'était donner la réponse à
-  // la question qui fait payer.
-  const echantillon = divergences.find((i) => !i.sensible && !i.decisif && i.cat === 'ecart')
-    || divergences.find((i) => !i.sensible && !i.decisif)
-    || divergences.find((i) => !i.sensible)
-    || null;
-
   const rassemble = items
     .filter((i) => i.cat === 'accord' && !i.desequilibre)
     .sort((x, y) => (y.decisif ? 1 : 0) - (x.decisif ? 1 : 0) || ordre(x.id) - ordre(y.id))
@@ -453,6 +485,7 @@ export function analyser(situation, A, B) {
     bloquants: items.filter((i) => i.statut === 'bloquant').length,
     aTrancher: items.filter((i) => i.statut === 'aTrancher').length,
     attention: etats.filter((e) => e.attentionA || e.attentionB).length,
+    vigilance: signaux.filter((x) => x.alerte).length,
   };
 
   return {
@@ -466,7 +499,7 @@ export function analyser(situation, A, B) {
     etats,
     divergences: divergences.map((i) => i.id),
     conversations,
-    echantillon: echantillon ? echantillon.id : null,
+    signaux,
     rassemble,
     chacunPlus: items.filter((i) => i.chacunPlus).map((i) => i.id),
     desequilibres: items.filter((i) => i.desequilibre).map((i) => ({ id: i.id, qui: i.desequilibre })),
@@ -482,37 +515,6 @@ export function analyser(situation, A, B) {
 function ordre(id) {
   const r = INDEX[id];
   return r ? r.di * 100 + r.qi : 9999;
-}
-
-// Ce que le serveur renvoie tant que le rapport n'est pas payé : les chiffres,
-// une barre par domaine, les comptes, un écart en entier (l'échantillon) et le
-// titre des autres, sans les réponses.
-export const AUTRES_MONTRES = 8;
-
-export function resumeGratuit(analyse) {
-  const items = Object.fromEntries(analyse.items.map((i) => [i.id, i]));
-  const ech = analyse.echantillon ? items[analyse.echantillon] : null;
-  const autres = analyse.divergences.filter((id) => id !== analyse.echantillon);
-  return {
-    version: analyse.version,
-    global: analyse.global,
-    bandeGlobal: analyse.bandeGlobal,
-    meteo: analyse.meteo,
-    bandeMeteo: analyse.bandeMeteo,
-    domaines: analyse.domaines.map((d) => ({
-      id: d.id, score: d.score, bande: d.bande, meteo: d.meteo,
-      accords: d.accords, proches: d.proches, ecarts: d.ecarts,
-    })),
-    compte: analyse.compte,
-    echantillon: ech ? {
-      id: ech.id, domaine: ech.domaine, type: ech.type, a: ech.a, b: ech.b,
-      cat: ech.cat, statut: ech.statut, chacunPlus: ech.chacunPlus,
-    } : null,
-    autres: autres.slice(0, AUTRES_MONTRES).map((id) => ({
-      id, domaine: items[id].domaine, cat: items[id].cat, statut: items[id].statut,
-    })),
-    nbAutres: autres.length,
-  };
 }
 
 // ── Textes ──────────────────────────────────────────────────────────────

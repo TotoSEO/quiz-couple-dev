@@ -1,6 +1,7 @@
-// La fonction `bilan` de bout en bout, avec une base en mémoire et un faux
-// Stripe : création, invitation, accord de B, réponses en plusieurs fois,
-// résultat gratuit, paiement, webhook signé, suppression.
+// La fonction `bilan` de bout en bout, avec une base en mémoire, un faux
+// Stripe et une fausse boîte aux lettres : création, invitation, accord de B,
+// réponses en plusieurs fois, aucun résultat sans paiement, paiement dès sa
+// propre fin, rapport envoyé par e-mail, webhook signé, suppression.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -43,12 +44,25 @@ function toutRepondre(situation, choix) {
   return rep;
 }
 
+function fausseBoite() {
+  const envoyes = [];
+  return {
+    envoyes,
+    async envoyer(m) {
+      if (m.a.startsWith('rebond')) throw new Error('resend 422 adresse refusée');
+      envoyes.push(m);
+      return { ok: true, id: 'em_' + envoyes.length };
+    },
+  };
+}
+
 function monter(options = {}) {
   const stockage = creerStockageMemoire();
   const stripe = options.sansStripe ? null : fauxStripe();
-  const { traiter, marquerPaye } = creerServeur({ stockage, stripe, stripeTest: !!options.stripeTest, sel: 'sel' });
-  const appel = (corps, ip = '1.2.3.4') => traiter(corps, { ip });
-  return { stockage, stripe, traiter, appel, marquerPaye };
+  const courriel = fausseBoite();
+  const { traiter, marquerPaye, marquerRembourse } = creerServeur({ stockage, stripe, courriel, stripeTest: !!options.stripeTest, sel: 'sel' });
+  const appel = (corps, ip = '1.2.3.4', interne = false) => traiter(corps, { ip, interne });
+  return { stockage, stripe, courriel, traiter, appel, marquerPaye, marquerRembourse };
 }
 
 async function creerCouple(appel) {
@@ -93,16 +107,19 @@ test('créer : contrôles, clés jamais gardées en clair, limite par adresse IP
   assert.equal(autreIp.statut, 200);
 });
 
-test('le parcours complet à deux, jusqu\'au rapport payé', async () => {
-  const { appel, stripe, stockage } = monter();
+test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rapport par e-mail', async () => {
+  const { appel, stripe, stockage, courriel } = monter();
   const c = await creerCouple(appel);
   const A = { id: c.id, jeton: c.jeton };
+  assert.equal(stockage.lignes.get(c.id).src, 'direct');
+  assert.equal(stockage.lignes.get(c.id).a_etape, 'quotidien');
 
   // B ouvre l'invitation : on lui présente le bilan, sans aucune réponse.
   const vue = await appel({ action: 'etat', id: c.id, jeton: c.invitation });
   assert.equal(vue.json.invite, true);
   assert.equal(vue.json.autre.prenom, 'Thomas');
   assert.equal(vue.json.moi.reponses, undefined);
+  assert.equal(vue.json.paye, false);
   // Sans accord, B ne peut rien écrire.
   assert.equal((await appel({ action: 'repondre', id: c.id, jeton: c.invitation, reponses: { quo3: 1 } })).statut, 403);
   // B accepte, corrige son prénom, et reçoit une nouvelle clé.
@@ -121,75 +138,182 @@ test('le parcours complet à deux, jusqu\'au rapport payé', async () => {
   let r = await appel({ action: 'repondre', ...A, reponses: moitie, nn: [] });
   assert.equal(r.json.progression.repondu, 30);
   assert.equal(r.json.fini, false);
+  assert.notEqual(stockage.lignes.get(c.id).a_etape, 'quotidien', 'l\'étape avance');
+  // Les domaines commencés et finis sont comptés une fois chacun.
+  const entres = stockage.compteurs.filter((x) => x.evenement === 'domaine_entre').map((x) => x.cle);
+  assert.ok(entres.includes('quotidien') && entres.includes('temps'));
+  assert.ok(stockage.compteurs.some((x) => x.evenement === 'domaine_fini' && x.cle === 'quotidien'));
+  r = await appel({ action: 'repondre', ...A, reponses: moitie, nn: [] });
+  assert.equal(stockage.compteurs.filter((x) => x.evenement === 'domaine_entre' && x.cle === 'quotidien').length, 1);
   // Demander « fini » avec des réponses manquantes ne termine pas.
   r = await appel({ action: 'repondre', ...A, reponses: moitie, fini: true });
   assert.equal(r.json.fini, false);
+  // Payer avant d'avoir fini ses propres réponses : non.
+  assert.equal((await appel({ action: 'payer', ...A, renonciation: true })).json.erreur, 'pas_fini');
   r = await appel({ action: 'repondre', ...A, reponses: ra, nn: ['log2', 'quo3'] });
   assert.equal(r.statut, 400, 'quo3 n\'est pas décisive');
   r = await appel({ action: 'repondre', ...A, reponses: ra, nn: ['log2'], fini: true });
   assert.equal(r.json.fini, true);
+  assert.equal(stockage.lignes.get(c.id).a_etape, 'fini');
   // B voit la progression de A, jamais ses réponses.
   const eB = (await appel({ action: 'etat', ...B })).json;
   assert.equal(eB.autre.fini, true);
   assert.equal(eB.autre.repondu, eB.autre.total);
   assert.ok(!JSON.stringify(eB).includes('"log2"'));
 
-  // Le résultat attend les deux.
-  assert.equal((await appel({ action: 'resultat', ...A })).json.erreur, 'pas_fini');
-  // La situation ne change plus quand l'un a fini.
-  assert.equal((await appel({ action: 'situation', ...B, situation: { ...SIT, animal: 'non' } })).statut, 409);
+  // Aucun résultat sans paiement : pas un chiffre, pas une réponse.
+  let g = await appel({ action: 'resultat', ...A });
+  assert.equal(g.statut, 402);
+  assert.equal(g.json.erreur, 'non_paye');
+  assert.equal(g.json.moiFini, true);
+  assert.equal(g.json.deuxFinis, false);
+  for (const interdit of ['resume', 'global', 'meteo', 'echantillon', 'reponses', 'compte']) {
+    assert.ok(!JSON.stringify(g.json).includes('"' + interdit + '"'), interdit);
+  }
 
-  const rb = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : q.n - 1));
-  r = await appel({ action: 'repondre', ...B, reponses: rb, nn: ['log2'], fini: true });
-  assert.equal(r.json.fini, true);
-  assert.equal(r.json.etat.verrouille, true);
-  // Plus aucune modification une fois les deux finis.
-  assert.equal((await appel({ action: 'repondre', ...A, reponses: ra })).json.erreur, 'verrouille');
-
-  // Résultat gratuit : les chiffres, un écart en entier, aucune série de réponses.
-  const g = (await appel({ action: 'resultat', ...A })).json;
-  assert.equal(g.paye, false);
-  assert.ok(g.resume.global < 50);
-  assert.ok(g.resume.compte.bloquants >= 1);
-  assert.ok(!('reponses' in g.a) && !('reponses' in g.b));
-  assert.ok(g.resume.echantillon);
-
-  // Paiement : renonciation obligatoire, puis session Stripe.
-  assert.equal((await appel({ action: 'payer', ...B })).json.erreur, 'renonciation');
-  const p = await appel({ action: 'payer', ...B, renonciation: true, lang: 'en' });
+  // A paie avant que B ait fini : renonciation obligatoire, puis Stripe.
+  assert.equal((await appel({ action: 'payer', ...A })).json.erreur, 'renonciation');
+  const p = await appel({ action: 'payer', ...A, renonciation: true, lang: 'en', email: 'thomas@exemple.fr' });
   assert.equal(p.statut, 200);
   const session = [...stripe.sessions.values()][0];
   assert.equal(session.params.line_items[0].price_data.unit_amount, C.PRIX_CENTIMES);
-  assert.equal(session.params.metadata.bilan, c.id);
+  assert.deepEqual(session.params.metadata, { bilan: c.id, role: 'a' });
+  assert.equal(session.params.customer_email, 'thomas@exemple.fr');
   assert.equal(session.params.locale, 'en');
   assert.ok(session.params.success_url.startsWith('https://quiz-couple.com/en/couple-check-up/?paiement={CHECKOUT_SESSION_ID}&b=' + c.id));
   assert.match(session.params.custom_text.submit.message, /VAT not applicable/);
   assert.ok(stockage.lignes.get(c.id).renonciation_le);
+  assert.equal(stockage.lignes.get(c.id).a_email, 'thomas@exemple.fr');
 
   // Pas encore payé : la vérification ne débloque rien.
   assert.equal((await appel({ action: 'verifier', ...A, session: session.id })).json.paye, false);
   stripe.payer(session.id);
+  session.customer_details = { email: 'Thomas.Paie@Exemple.fr' };
+  session.payment_intent = 'pi_1234567890';
   // Une session d'un autre bilan ne débloque pas celui-ci.
   const autre = await creerCouple(appel);
   assert.equal((await appel({ action: 'verifier', id: autre.id, jeton: autre.jeton, session: session.id })).json.erreur, 'session');
   assert.equal((await appel({ action: 'verifier', ...A, session: session.id })).json.paye, true);
-  assert.equal(stockage.lignes.get(c.id).paiement_montant, C.PRIX_CENTIMES);
+  const payee = stockage.lignes.get(c.id);
+  assert.equal(payee.paiement_montant, C.PRIX_CENTIMES);
+  assert.equal(payee.paiement_role, 'a');
+  assert.equal(payee.paiement_email, 'Thomas.Paie@exemple.fr');
+  assert.equal(payee.paiement_intent, 'pi_1234567890');
+  assert.equal(payee.rapport_statut, null, 'B n\'a pas fini : pas encore de rapport à faire');
 
-  // Rapport payé : les deux séries, pour les deux.
+  // Payé, mais B n'a pas fini : toujours rien à lire.
+  g = await appel({ action: 'resultat', ...A });
+  assert.equal(g.statut, 409);
+  assert.equal(g.json.erreur, 'pas_fini');
+  assert.equal(g.json.paye, true);
+  assert.equal(g.json.payeParMoi, true);
+  // B l'apprend sur son écran.
+  const eB2 = (await appel({ action: 'etat', ...B })).json;
+  assert.equal(eB2.paye, true);
+  assert.equal(eB2.payeParMoi, false);
+  // Payer une seconde fois ne crée pas de session.
+  const rb = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : q.n - 1));
+  r = await appel({ action: 'repondre', ...B, reponses: rb, nn: ['log2'], fini: true });
+  assert.equal(r.json.fini, true);
+  assert.equal(r.json.etat.verrouille, true);
+  assert.equal((await appel({ action: 'payer', ...B, renonciation: true })).json.paye, true);
+  assert.equal(stripe.sessions.size, 1);
+  // Les deux ont fini et c'est payé : le rapport passe « à faire ».
+  assert.equal(stockage.lignes.get(c.id).rapport_statut, 'a_faire');
+  // Plus aucune modification une fois les deux finis.
+  assert.equal((await appel({ action: 'repondre', ...A, reponses: ra })).json.erreur, 'verrouille');
+
+  // Rapport : les deux séries, pour les deux.
   const plein = (await appel({ action: 'resultat', ...A })).json;
   assert.equal(plein.paye, true);
   assert.deepEqual(plein.a.reponses, ra);
   assert.deepEqual(plein.b.reponses, rb);
   assert.deepEqual(plein.b.nn, ['log2']);
   assert.equal((await appel({ action: 'resultat', ...B })).json.paye, true);
-  // Payer une seconde fois ne crée pas de session.
-  assert.equal((await appel({ action: 'payer', ...A, renonciation: true })).json.paye, true);
-  assert.equal(stripe.sessions.size, 1);
 
-  // Supprimer efface tout, pour les deux.
+  // Le PDF n'est pas prêt : la page le dit, rien n'est envoyé.
+  assert.deepEqual((await appel({ action: 'pdf', ...B })).json, { pret: false, statut: 'a_faire' });
+  // B donne son adresse avant que le PDF soit prêt : gardée pour l'envoi.
+  let em = await appel({ action: 'email', ...B, email: 'lea@exemple.fr' });
+  assert.equal(em.statut, 200);
+  assert.equal(em.json.envoi.attente, true);
+  assert.equal(courriel.envoyes.length, 0);
+  assert.equal((await appel({ action: 'email', ...B, email: 'pas une adresse' })).json.erreur, 'email');
+
+  // La fabrique range le PDF, puis demande l'envoi (action interne).
+  const chemin = c.id + '/rapport-abc.pdf';
+  stockage.fichiers.set(chemin, new Uint8Array([37, 80, 68, 70, 45]));
+  await stockage.maj(c.id, { rapport_statut: 'pret', rapport_chemin: chemin, rapport_pages: 24 });
+  assert.equal((await appel({ action: 'envoyer_rapport', id: c.id })).statut, 403, 'réservé à la fabrique');
+  const env = await appel({ action: 'envoyer_rapport', id: c.id }, '1.2.3.4', true);
+  assert.equal(env.json.envoyes, 3, 'adresse du paiement, de A et de B');
+  assert.deepEqual(courriel.envoyes.map((m) => m.a).sort(), ['Thomas.Paie@exemple.fr', 'lea@exemple.fr', 'thomas@exemple.fr'].sort());
+  const m0 = courriel.envoyes[0];
+  assert.equal(m0.pieces[0].nom, 'bilan-de-couple-thomas-et-lea-rose.pdf');
+  assert.match(m0.texte, /24 pages/);
+  // Rien n'est renvoyé deux fois.
+  assert.equal((await appel({ action: 'envoyer_rapport', id: c.id }, '1.2.3.4', true)).json.envoyes, 0);
+  // B change d'adresse : la nouvelle reçoit le rapport tout de suite.
+  em = await appel({ action: 'email', ...B, email: 'lea.nouvelle@exemple.fr' });
+  assert.equal(em.json.envoi.envoyes, 1);
+  assert.equal(courriel.envoyes.length, 4);
+  // Une adresse refusée par Resend est notée en échec, sans rien casser.
+  em = await appel({ action: 'email', ...A, email: 'rebond@exemple.fr' });
+  assert.equal(em.json.envoi.envoyes, 0);
+  assert.equal(em.json.envoi.echecs, 1);
+  assert.ok(stockage.compteurs.some((x) => x.evenement === 'envoi_echec'));
+  // L'état dit où le rapport est parti, sans écrire les adresses en entier.
+  const eA = (await appel({ action: 'etat', ...A })).json;
+  assert.equal(eA.rapport.pret, true);
+  assert.equal(eA.rapport.envoye, true);
+  assert.ok(eA.rapport.envoiA.includes('l•••@exemple.fr'));
+  assert.ok(!JSON.stringify(eA.rapport).includes('lea.nouvelle'));
+  // Le téléchargement : une adresse signée de dix minutes.
+  const t = (await appel({ action: 'pdf', ...A })).json;
+  assert.equal(t.pret, true);
+  assert.match(t.url, /expire=600&download=bilan-de-couple-thomas-et-lea-rose\.pdf$/);
+
+  // Supprimer efface tout, pour les deux, fichier compris.
   assert.equal((await appel({ action: 'supprimer', ...B })).json.supprime, true);
   assert.equal((await appel({ action: 'etat', ...A })).statut, 404);
   assert.ok(!stockage.lignes.has(c.id));
+  assert.ok(!stockage.fichiers.has(chemin));
+});
+
+test('payer quand les deux ont fini, puis rapport à faire tout de suite', async () => {
+  const { appel, stripe, stockage } = monter();
+  const c = await creerCouple(appel);
+  const B = (await appel({ action: 'consentir', id: c.id, jeton: c.invitation, consentement: true, majeur: true })).json.jeton;
+  const rep = toutRepondre(SIT, () => 0);
+  await appel({ action: 'repondre', id: c.id, jeton: c.jeton, reponses: rep, fini: true });
+  await appel({ action: 'repondre', id: c.id, jeton: B, reponses: rep, fini: true });
+  const nonPaye = await appel({ action: 'resultat', id: c.id, jeton: B });
+  assert.equal(nonPaye.statut, 402);
+  assert.equal(nonPaye.json.deuxFinis, true);
+  await appel({ action: 'payer', id: c.id, jeton: B, renonciation: true });
+  const s = [...stripe.sessions.values()][0];
+  assert.equal(s.params.metadata.role, 'b');
+  assert.equal(s.params.customer_email, undefined);
+  stripe.payer(s.id);
+  await appel({ action: 'verifier', id: c.id, jeton: B, session: s.id });
+  assert.equal(stockage.lignes.get(c.id).rapport_statut, 'a_faire');
+  assert.equal((await appel({ action: 'resultat', id: c.id, jeton: c.jeton })).statut, 200);
+});
+
+test('la page vue et son bouton, comptés par source', async () => {
+  const { appel, stockage } = monter();
+  assert.equal((await appel({ action: 'vue', quoi: 'page', src: 'tester-couple' })).statut, 200);
+  await appel({ action: 'vue', quoi: 'cta', src: 'Pas Une Source !' });
+  assert.equal((await appel({ action: 'vue', quoi: 'autre' })).statut, 400);
+  assert.deepEqual(stockage.compteurs, [
+    { evenement: 'vue', cle: 'tester-couple', montant: 0 },
+    { evenement: 'cta', cle: 'direct', montant: 0 },
+  ]);
+  const c = await appel({
+    action: 'creer', lang: 'fr', situation: SIT, src: 'encart-tester-couple',
+    moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: true,
+  });
+  assert.equal(stockage.lignes.get(c.json.id).src, 'encart-tester-couple');
 });
 
 test('une clé de test le dit à la page, une clé réelle non', async () => {
@@ -213,7 +337,7 @@ test('sans clé Stripe, tout marche sauf le paiement', async () => {
   const rep = toutRepondre(SIT, () => 0);
   await appel({ action: 'repondre', id: c.id, jeton: c.jeton, reponses: rep, fini: true });
   await appel({ action: 'repondre', id: c.id, jeton: B, reponses: rep, fini: true });
-  assert.equal((await appel({ action: 'resultat', id: c.id, jeton: B })).statut, 200);
+  assert.equal((await appel({ action: 'resultat', id: c.id, jeton: B })).statut, 402);
   const p = await appel({ action: 'payer', id: c.id, jeton: B, renonciation: true });
   assert.equal(p.statut, 503);
   assert.equal(p.json.erreur, 'paiement_ferme');
@@ -230,7 +354,7 @@ test('liens mal formés et clés fausses', async () => {
 });
 
 test('le webhook signé débloque le bilan, une fausse signature est refusée', async () => {
-  const { appel, marquerPaye, stockage } = monter();
+  const { appel, marquerPaye, marquerRembourse, stockage } = monter();
   const c = await creerCouple(appel);
   const secret = 'whsec_test';
   const evenement = JSON.stringify({ type: 'checkout.session.completed', data: { object: { id: 'cs_test_abcdefghijkl', payment_status: 'paid', amount_total: 990, metadata: { bilan: c.id } } } });
@@ -244,8 +368,14 @@ test('le webhook signé débloque le bilan, une fausse signature est refusée', 
   assert.equal(bon.statut, 200);
   assert.equal(bon.json.marque, true);
   assert.ok(stockage.lignes.get(c.id).paye_le);
-  const autre = JSON.stringify({ type: 'charge.refunded', data: { object: {} } });
-  assert.equal((await traiterWebhook({ corps: autre, signature: await signer(autre, secret, t), secret, verifierSignature, marquerPaye })).json.ignore, 'charge.refunded');
+  const inconnu = JSON.stringify({ type: 'customer.created', data: { object: {} } });
+  assert.equal((await traiterWebhook({ corps: inconnu, signature: await signer(inconnu, secret, t), secret, verifierSignature, marquerPaye, marquerRembourse })).json.ignore, 'customer.created');
+  // Un remboursement fait depuis Stripe est noté (retrouvé par le paiement).
+  await stockage.maj(c.id, { paiement_intent: 'pi_rembourse' });
+  const remb = JSON.stringify({ type: 'charge.refunded', data: { object: { payment_intent: 'pi_rembourse', refunded: true } } });
+  const rr = await traiterWebhook({ corps: remb, signature: await signer(remb, secret, t), secret, verifierSignature, marquerPaye, marquerRembourse });
+  assert.equal(rr.json.marque, true);
+  assert.ok(stockage.lignes.get(c.id).rembourse_le);
 });
 
 test('encoderFormulaire suit le format de Stripe', () => {

@@ -121,37 +121,6 @@
       "maj": "Esta página se actualiza sola.",
       "accueil": "Volver a mis chequeos"
     },
-    "resultat": {
-      "titre": "El chequeo de {{a}} y {{b}}",
-      "accord": "Vuestro acuerdo",
-      "meteo": "El tiempo en vuestra pareja",
-      "verdicts": {
-        "onde": { "titre": "En la misma onda", "texte": "Queréis más o menos la misma vida, y la veis de la misma manera. Tenéis diferencias, pero pocas: es el buen momento para hablarlas, mientras siguen siendo pequeñas." },
-        "proches": { "titre": "Muy cerca", "texte": "Estáis de acuerdo en lo esencial, con algunos temas en los que no veis las cosas igual. Es lo que les pasa a la mayoría de las parejas que van bien." },
-        "creuser": { "titre": "Cerca, con temas que hablar", "texte": "Coincidís en muchas cosas, pero varios temas os separan. Nada alarmante mientras los habléis, y precisamente para eso sirve este chequeo." },
-        "apprivoiser": { "titre": "Diferencias con las que aprender a vivir", "texte": "Tenéis maneras bastante distintas de ver la vida en pareja. No dice nada de vuestro amor, pero sí que algunos temas necesitan conversaciones de verdad, y acuerdos." },
-        "visions": { "titre": "Dos maneras de ver la vida", "texte": "En muchos temas no queréis lo mismo. Algunas parejas viven muy bien con eso, otras no: lo más importante es saber cuáles de estas diferencias cuentan de verdad para cada uno." }
-      },
-      "meteos": {
-        "beau": { "titre": "Sol radiante", "texte": "Los dos os sentís bien en vuestra pareja." },
-        "nuages": { "titre": "Sol con algunas nubes", "texte": "Va bien, con algunos puntos en los que uno de los dos está menos a gusto." },
-        "variable": { "titre": "Cielo variable", "texte": "Hay cosas buenas y algunos tramos más difíciles en este momento." },
-        "orageux": { "titre": "Tormentoso", "texte": "Uno de los dos, o los dos, no está muy bien en la pareja ahora mismo." },
-        "tempete": { "titre": "Temporal", "texte": "Las cosas no van muy bien en este momento. Este chequeo puede ayudar a ponerle palabras, y un terapeuta de pareja puede ayudaros a ir más allá." }
-      },
-      "parDomaine": "Tema por tema",
-      "compte": "{{accords}} acuerdos, {{proches}} respuestas cercanas, {{ecarts}} diferencias",
-      "bloquants": "{{n}} punto de bloqueo",
-      "bloquantsN": "{{n}} puntos de bloqueo",
-      "bloquantsAide": "Un punto de bloqueo es una diferencia en una gran pregunta (hijos, dónde vivir, fidelidad...) que uno de los dos ha marcado como «no negociable».",
-      "aucunBloquant": "Ningún punto de bloqueo",
-      "echantillonTitre": "Una de vuestras diferencias, completa",
-      "echantillonAide": "Este es un ejemplo de lo que contiene el informe para cada una de vuestras diferencias.",
-      "autresTitre": "Vuestras otras diferencias",
-      "masque": "Respuestas visibles en el informe",
-      "plusAutres": "Y {{n}} más",
-      "aucunEcart": "No tenéis ninguna diferencia: vuestras respuestas son cercanas o iguales en todo. ¡Es poco habitual!"
-    },
     "paywall": {
       "titre": "El informe completo",
       "intro": "Todo lo que dicen vuestras dos series de respuestas, tema por tema, con lo necesario para hablarlo.",
@@ -185,43 +154,207 @@
       "erreur": "No podemos comprobar el pago ahora mismo. Si has pagado, recarga la página dentro de un minuto."
     },
     "rapport": {
-      "date": "Chequeo terminado el {{date}}",
-      "conversationsTitre": "Vuestras cuatro próximas conversaciones",
-      "conversationsIntro": "Los temas en los que vuestras respuestas más se alejan, sobre lo que más cuenta, uno por tema. Dejad uno para cada noche, con calma, en lugar de todos de golpe.",
-      "conversation": "Conversación {{n}}",
-      "bloquantsTitre": "Vuestros puntos de bloqueo",
-      "bloquantsIntro": "Diferencias en preguntas que uno de los dos ha marcado como «no negociable». Son los primeros temas que hay que tratar, sin intentar convencer al otro esa misma noche: primero, entender.",
-      "nnTitre": "Lo que no es negociable para cada uno",
-      "nnAucun": "Nada marcado",
-      "chacunTitre": "Cada uno cree que hace más",
-      "chacunIntro": "En estos temas, cada uno cree que hace más que el otro. Es muy habitual: uno ve mejor lo que hace él que lo que hace el otro.",
-      "rassembleTitre": "Lo que os une",
-      "rassembleIntro": "Las grandes preguntas en las que habéis respondido exactamente lo mismo.",
-      "domainesTitre": "Tema por tema",
-      "accords": "Estáis de acuerdo",
-      "accordsAucun": "Ningún acuerdo exacto en este tema.",
-      "differences": "Vuestras diferencias",
-      "differencesAucune": "Ninguna diferencia en este tema.",
-      "desequilibre": "Estáis de acuerdo: es sobre todo {{nom}} quien se encarga. ¿Os parece bien a los dos?",
-      "cat": { "accord": "Acuerdo", "proche": "Respuestas cercanas", "ecart": "Diferencia" },
-      "statut": { "bloquant": "Punto de bloqueo", "aTrancher": "Por decidir", "aConfirmer": "Por confirmar" },
-      "chacunPlus": "Cada uno cree que hace más",
+      "surtitre": "Chequeo de pareja",
+      "pied": "Chequeo de pareja · confidencial",
+      "couverture": {
+        "de": "El chequeo de pareja de",
+        "et": "y",
+        "date": "Informe elaborado el {{date}}",
+        "chiffres": "{{domaines}} áreas · {{questions}} preguntas comparadas",
+        "confidentiel": "Confidencial: este informe contiene las respuestas de los dos."
+      },
+      "lire": {
+        "titre": "Cómo leer este informe",
+        "p1": "Cada uno respondió por su lado, sin ver las respuestas del otro. Este informe pone vuestras dos series de respuestas frente a frente, tema por tema, para mostraros en qué estáis de acuerdo y en qué no veis las cosas igual.",
+        "p2": "Las preguntas se basan en investigaciones en psicología de pareja: estudios que siguieron a parejas durante años y los cuestionarios que usan los terapeutas de pareja antes de una boda. Este informe no es un diagnóstico. Es una base para hablar, con los temas adecuados en el orden adecuado.",
+        "p3": "Lo más sencillo es que cada uno lo lea por su lado y luego lo habléis juntos, un tema cada vez. Si no sabéis por dónde empezar, id directamente a vuestras cuatro próximas conversaciones.",
+        "reperes": "Leyenda",
+        "accord": "Habéis dado la misma respuesta.",
+        "proche": "Vuestras respuestas están cerca.",
+        "ecart": "Vuestras respuestas se alejan.",
+        "nn": "Uno de los dos ha marcado este tema como innegociable.",
+        "sommaire": "En este informe",
+        "nnTag": "Innegociable"
+      },
+      "chapitres": {
+        "synthese": "Vuestro resumen",
+        "carte": "El mapa de vuestras áreas",
+        "conversations": "Vuestras cuatro próximas conversaciones",
+        "bloquants": "Puntos de bloqueo e innegociables",
+        "climat": "El clima de vuestra pareja",
+        "signaux": "Vuestras señales de alerta",
+        "roles": "Quién hace qué, según cada uno",
+        "domaines": "Área por área",
+        "suite": "¿Y ahora qué?"
+      },
+      "synthese": {
+        "intro": "Dos cifras resumen vuestro chequeo. La primera dice hasta qué punto queréis la misma vida en pareja. La segunda dice cómo se siente cada uno en la pareja ahora mismo. No siempre van juntas: se puede estar muy alineados y pasar por una mala racha, o al revés.",
+        "alignement": "Vuestra alineación",
+        "alignementAide": "El acuerdo de vuestras respuestas sobre la vida en pareja. Las grandes decisiones cuentan el doble.",
+        "climat": "Vuestro clima",
+        "climatAide": "Cómo vive cada uno la pareja ahora mismo.",
+        "climatDe": "{{nom}}: {{n}} %",
+        "tuiles": {
+          "accords": "Acuerdos",
+          "proches": "Respuestas cercanas",
+          "ecarts": "Diferencias",
+          "bloquants": "Puntos de bloqueo",
+          "vigilance": "Señales que mirar"
+        },
+        "forts": "Donde estáis más cerca",
+        "faibles": "Donde lo estáis menos",
+        "rassemble": "Lo que os une",
+        "rassembleIntro": "Las grandes preguntas en las que habéis respondido exactamente lo mismo."
+      },
+      "verdicts": {
+        "onde": {
+          "titre": "En la misma onda",
+          "texte": "Queréis más o menos la misma vida, y la veis de la misma manera. Tenéis diferencias, pero pocas: es el buen momento para hablarlas, mientras siguen siendo pequeñas."
+        },
+        "proches": {
+          "titre": "Muy cerca",
+          "texte": "Estáis de acuerdo en lo esencial, con algunos temas en los que no veis las cosas igual. Es lo que les pasa a la mayoría de las parejas que van bien."
+        },
+        "creuser": {
+          "titre": "Cerca, con temas que hablar",
+          "texte": "Coincidís en muchas cosas, pero varios temas os separan. Nada alarmante mientras los habléis, y precisamente para eso sirve este chequeo."
+        },
+        "apprivoiser": {
+          "titre": "Diferencias con las que aprender a vivir",
+          "texte": "Tenéis maneras bastante distintas de ver la vida en pareja. No dice nada de vuestro amor, pero sí que algunos temas necesitan conversaciones de verdad, y acuerdos."
+        },
+        "visions": {
+          "titre": "Dos maneras de ver la vida",
+          "texte": "En muchos temas no queréis lo mismo. Algunas parejas viven muy bien con eso, otras no: lo más importante es saber cuáles de estas diferencias cuentan de verdad para cada uno."
+        }
+      },
+      "meteos": {
+        "beau": {
+          "titre": "Sol radiante",
+          "texte": "Los dos os sentís bien en vuestra pareja."
+        },
+        "nuages": {
+          "titre": "Sol con algunas nubes",
+          "texte": "Va bien, con algunos puntos en los que uno de los dos está menos a gusto."
+        },
+        "variable": {
+          "titre": "Cielo variable",
+          "texte": "Hay cosas buenas y algunos tramos más difíciles en este momento."
+        },
+        "orageux": {
+          "titre": "Tormentoso",
+          "texte": "Uno de los dos, o los dos, no está muy bien en la pareja ahora mismo."
+        },
+        "tempete": {
+          "titre": "Temporal",
+          "texte": "Las cosas no van muy bien en este momento. Este chequeo puede ayudar a ponerle palabras, y un terapeuta de pareja puede ayudaros a ir más allá."
+        }
+      },
+      "carte": {
+        "intro": "Cada barra muestra el acuerdo de vuestras respuestas en un área, de 0 a 100 %. El clima de vuestra pareja no busca un acuerdo: tiene su propia parte.",
+        "bandes": {
+          "fort": "Muy cerca",
+          "moyen": "Bastante cerca",
+          "faible": "Para hablar"
+        },
+        "accords": "acuerdos",
+        "proches": "cercanas",
+        "ecarts": "diferencias"
+      },
+      "conversations": {
+        "intro": "Los temas en los que vuestras respuestas más se alejan, sobre lo que más cuenta, uno por tema. Dejad uno para cada noche, con calma, en lugar de todos de golpe.",
+        "titre": "Conversación {{n}}",
+        "aucune": "No tenéis ninguna diferencia que trabajar: vuestras respuestas son cercanas o idénticas en todo. ¡Es raro! Aprovechadlo para hablar de lo que os une."
+      },
+      "bloquants": {
+        "intro": "Diferencias en preguntas que uno de los dos ha marcado como «no negociable». Son los primeros temas que hay que tratar, sin intentar convencer al otro esa misma noche: primero, entender.",
+        "aucun": "Ningún punto de bloqueo: ninguna de vuestras diferencias está en un tema que uno de los dos haya marcado como innegociable.",
+        "nnTitre": "Lo que no es negociable para cada uno",
+        "nnIntro": "Los temas en los que cada uno dijo que no podría ceder, con su respuesta.",
+        "nnAucun": "Nada marcado."
+      },
+      "climat": {
+        "intro": "Estas preguntas no buscan un acuerdo: dicen cómo vive cada uno la pareja ahora mismo. Una diferencia aquí significa que no estáis viviendo la misma relación, algo que pasa mucho más a menudo de lo que se cree.",
+        "ecart": "No lo vivís igual",
+        "attention": "A tener en cuenta",
+        "de": "Para {{nom}}",
+        "sens": "En cada línea, la casilla de la izquierda es donde las cosas van mejor, y la de la derecha donde van peor."
+      },
+      "signaux": {
+        "intro": "Los investigadores que observan parejas desde hace décadas han detectado algunas formas de discutir que, cuando se convierten en costumbre, desgastan una relación mucho más que las propias discusiones. A todo el mundo le pasa a veces. Lo que cuenta es la frecuencia, y lo que hacéis después.",
+        "rare": "Poco frecuente en vosotros",
+        "attention": "A vigilar",
+        "alerte": "Para mirar primero",
+        "reparationBien": "Un punto fuerte",
+        "reparationAttention": "Para trabajar",
+        "fin": "Si una de estas actitudes aparece a menudo entre vosotros, no es una condena: es justo lo que un terapeuta de pareja ayuda a cambiar, y se puede cambiar."
+      },
+      "roles": {
+        "intro": "En cada tema, la línea va de «sobre todo {{a}}» a «sobre todo {{b}}». Las dos marcas muestran lo que respondió cada uno.",
+        "surtout": "Sobre todo {{nom}}",
+        "autant": "Los dos por igual",
+        "chacunPlus": "Cada uno cree que hace más",
+        "chacunPlusTexte": "Es muy habitual: uno ve mejor lo que hace él que lo que hace el otro. Lo mejor es hacer juntos la lista de lo que se encarga cada uno, sin llevar la cuenta.",
+        "desequilibre": "Estáis de acuerdo: es sobre todo {{nom}} quien se encarga. ¿Os parece bien a los dos?",
+        "accord": "Lo veis de la misma manera.",
+        "aucun": "No hay ninguna pregunta de este tipo en vuestro chequeo."
+      },
+      "domaines": {
+        "intro": "Todas vuestras respuestas, área por área: primero en qué estáis de acuerdo, luego vuestras diferencias, de la más importante a la más pequeña.",
+        "accords": "Estáis de acuerdo",
+        "accordsAucun": "Ningún acuerdo exacto en este tema.",
+        "differences": "Vuestras diferencias",
+        "differencesAucune": "Ninguna diferencia en este tema.",
+        "etats": "Cómo lo vivís",
+        "voirConversation": "Lo encontraréis más arriba, con ideas para hablarlo: conversación {{n}}.",
+        "voirBloquants": "Lo encontraréis más arriba, con ideas para hablarlo: puntos de bloqueo."
+      },
+      "cat": {
+        "accord": "Acuerdo",
+        "proche": "Respuestas cercanas",
+        "ecart": "Diferencia"
+      },
+      "statut": {
+        "bloquant": "Punto de bloqueo",
+        "aTrancher": "Por decidir",
+        "aConfirmer": "Por confirmar"
+      },
       "nnDe": "No negociable para {{nom}}",
       "pourquoi": "Por qué importa",
       "parler": "Para hablarlo",
       "eviter": "Mejor evitar",
-      "meteoTitre": "Cómo estáis",
-      "meteoIntro": "Estas preguntas no buscan un acuerdo: dicen cómo vive cada uno la pareja en este momento.",
-      "meteoEcart": "No lo vivís igual",
-      "meteoAttention": "A tener en cuenta",
-      "meteoDe": "Para {{nom}}",
-      "imprimer": "Imprimir o guardar en PDF",
-      "supprimer": "Borrar nuestro chequeo",
-      "supprimerConfirmer": "Confirmar el borrado",
-      "supprimerAide": "El chequeo se borra para los dos, enseguida y para siempre. Acordaos de guardar el PDF antes.",
-      "supprime": "Vuestro chequeo se ha borrado.",
-      "note": "Este chequeo es una herramienta para hablar, no un diagnóstico. Si estáis pasando por una época difícil, un terapeuta de pareja puede ayudaros a ir más allá.",
-      "garde": "Este informe sigue disponible seis meses en esta página, para los dos."
+      "suite": {
+        "p1": "Un informe no cambia nada por sí solo: lo que cuenta son las conversaciones que provoca. Así es como hacerlo, según lo que funciona en las parejas que se hablan bien.",
+        "conseils": [
+          "Un tema por noche, no más. Empezad por el más fácil para coger el ritmo.",
+          "Elegid un momento tranquilo, sin móviles, y no en medio de una tensión.",
+          "Hablad de lo que sentís («a mí me da miedo que...») más que de lo que hace el otro.",
+          "El objetivo de la primera charla es entender al otro, no convencerle. Una decisión puede esperar a la semana siguiente.",
+          "Si la cosa se calienta, haced una pausa de veinte minutos y retomadlo después. Funciona mejor de lo que parece."
+        ],
+        "refaire": "Repetir el chequeo dentro de seis meses o un año muestra lo que ha cambiado entre vosotros. Muchas parejas lo repiten en cada gran etapa: irse a vivir juntos, casarse, tener un hijo.",
+        "aide": "Este chequeo es una herramienta para hablar, no un diagnóstico. Si estáis pasando por una época difícil, un terapeuta de pareja puede ayudaros a ir más allá.",
+        "violence": "Si tienes miedo de tu pareja, este chequeo no está pensado para tu situación: en España, el 016 atiende gratis las 24 horas y no deja rastro en la factura."
+      },
+      "ecran": {
+        "telecharger": "Descargar el PDF",
+        "pdfPrepa": "Vuestro PDF se está preparando: llegará en unos minutos, por correo y aquí.",
+        "pdfErreur": "El PDF se está retrasando. Os lo enviaremos en cuanto esté listo, no tenéis que hacer nada.",
+        "envoyeA": "Informe enviado a {{emails}}",
+        "envoiA": "El informe se enviará a {{emails}}",
+        "emailTitre": "Recibir el informe por correo",
+        "emailAide": "Tu dirección solo sirve para enviarte este informe.",
+        "emailChamp": "Tu correo electrónico",
+        "emailBouton": "Enviar",
+        "emailOk": "¡Anotado!",
+        "emailFaux": "Esta dirección no parece válida.",
+        "imprimer": "Imprimir",
+        "supprimer": "Borrar nuestro chequeo",
+        "supprimerConfirmer": "Confirmar el borrado",
+        "supprimerAide": "El chequeo se borra para los dos, enseguida y para siempre, PDF incluido. Acordaos de guardar el PDF antes.",
+        "supprime": "Vuestro chequeo se ha borrado.",
+        "garde": "Este informe sigue disponible seis meses en esta página, para los dos."
+      }
     },
     "situation": {
       "resume": "Situación"
@@ -233,7 +366,10 @@
       "serveur": "Ha habido un problema por nuestra parte. Vuelve a intentarlo en un momento.",
       "reessayer": "Reintentar"
     },
-    "genres": { "f": "Una mujer", "h": "Un hombre" }
+    "genres": {
+      "f": "Una mujer",
+      "h": "Un hombre"
+    }
   },
   "section1": {
     "title": "¿Qué es un chequeo de pareja?",

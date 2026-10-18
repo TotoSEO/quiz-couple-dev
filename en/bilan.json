@@ -121,37 +121,6 @@
       "maj": "This page updates by itself.",
       "accueil": "Back to my check-ups"
     },
-    "resultat": {
-      "titre": "{{a}} and {{b}}'s check-up",
-      "accord": "Your agreement",
-      "meteo": "Your relationship forecast",
-      "verdicts": {
-        "onde": { "titre": "On the same wavelength", "texte": "You want roughly the same life, and you see it the same way. You do have gaps, but only a few: it's a good time to talk about them while they're still small." },
-        "proches": { "titre": "Very close", "texte": "You agree on the essentials, with a few topics where you don't see things the same way. That's the case for most couples who are doing well." },
-        "creuser": { "titre": "Close, with a few topics to explore", "texte": "You agree on a lot of things, but several topics set you apart. Nothing alarming as long as you talk about them, and that's exactly what this check-up is for." },
-        "apprivoiser": { "titre": "Differences to work with", "texte": "You have fairly different ways of seeing life together. It says nothing about your love, but it does mean some topics need real conversations, and compromises." },
-        "visions": { "titre": "Two ways of seeing life", "texte": "On many topics, you don't want the same thing. Some couples live very well with that, others don't: the most important thing is to know which of these gaps really matter to each of you." }
-      },
-      "meteos": {
-        "beau": { "titre": "Clear skies", "texte": "You both feel good in your relationship." },
-        "nuages": { "titre": "Sunny, with a few clouds", "texte": "Things are going well, with a few points where one of you feels less good." },
-        "variable": { "titre": "Changeable", "texte": "There's good, and some harder patches at the moment." },
-        "orageux": { "titre": "Stormy", "texte": "One of you, or both, isn't feeling very good in the relationship right now." },
-        "tempete": { "titre": "Storm", "texte": "Things aren't going well at the moment. This check-up can help put words to it, and a couples counsellor can help you go further." }
-      },
-      "parDomaine": "Area by area",
-      "compte": "{{accords}} agreements, {{proches}} close answers, {{ecarts}} gaps",
-      "bloquants": "{{n}} sticking point",
-      "bloquantsN": "{{n}} sticking points",
-      "bloquantsAide": "A sticking point is a gap on a big question (children, where to live, fidelity...) that one of you marked \"non-negotiable\".",
-      "aucunBloquant": "No sticking points",
-      "echantillonTitre": "One of your gaps, in full",
-      "echantillonAide": "Here's an example of what the report contains for each of your gaps.",
-      "autresTitre": "Your other gaps",
-      "masque": "Answers visible in the report",
-      "plusAutres": "And {{n}} more",
-      "aucunEcart": "You have no gaps: your answers are close or identical everywhere. That's rare!"
-    },
     "paywall": {
       "titre": "The full report",
       "intro": "Everything your two sets of answers say, topic by topic, with what you need to talk about them.",
@@ -185,43 +154,207 @@
       "erreur": "We can't check the payment right now. If you've paid, reload the page in a minute."
     },
     "rapport": {
-      "date": "Check-up completed on {{date}}",
-      "conversationsTitre": "Your next four conversations",
-      "conversationsIntro": "The topics where your answers are furthest apart, on what matters most, one per area. Keep one per evening, when things are calm, rather than all at once.",
-      "conversation": "Conversation {{n}}",
-      "bloquantsTitre": "Your sticking points",
-      "bloquantsIntro": "Gaps on questions that one of you marked \"non-negotiable\". These are the first topics to raise, without trying to convince the other that evening: understand first.",
-      "nnTitre": "What's non-negotiable for each of you",
-      "nnAucun": "Nothing marked",
-      "chacunTitre": "Each of you thinks they do more",
-      "chacunIntro": "On these topics, each of you thinks they do more than the other. It's very common: you see what you do better than what the other does.",
-      "rassembleTitre": "What brings you together",
-      "rassembleIntro": "The big questions where you answered exactly the same.",
-      "domainesTitre": "Area by area",
-      "accords": "You agree",
-      "accordsAucun": "No exact agreement in this area.",
-      "differences": "Your differences",
-      "differencesAucune": "No differences in this area.",
-      "desequilibre": "You agree: it's mostly {{nom}} who takes care of it. Is that OK for both of you?",
-      "cat": { "accord": "Agreement", "proche": "Close answers", "ecart": "Gap" },
-      "statut": { "bloquant": "Sticking point", "aTrancher": "To decide", "aConfirmer": "To check" },
-      "chacunPlus": "Each thinks they do more",
+      "surtitre": "Couple check-up",
+      "pied": "Couple check-up · confidential",
+      "couverture": {
+        "de": "The couple check-up of",
+        "et": "and",
+        "date": "Report issued on {{date}}",
+        "chiffres": "{{domaines}} areas · {{questions}} questions compared",
+        "confidentiel": "Confidential: this report contains both of your answers."
+      },
+      "lire": {
+        "titre": "How to read this report",
+        "p1": "Each of you answered on your own, without seeing the other's answers. This report puts your two sets of answers side by side, topic by topic, to show you where you agree and where you don't see things the same way.",
+        "p2": "The questions are based on research in couple psychology: studies that followed couples for years, and the questionnaires marriage counsellors use before a wedding. This report isn't a diagnosis. It's a starting point for talking, with the right topics in the right order.",
+        "p3": "The easiest way is for each of you to read it on your own, then talk it through together, one topic at a time. If you're not sure where to start, go straight to your next four conversations.",
+        "reperes": "Key",
+        "accord": "You gave the same answer.",
+        "proche": "Your answers are close.",
+        "ecart": "Your answers are far apart.",
+        "nn": "One of you marked this topic as a deal-breaker.",
+        "sommaire": "In this report",
+        "nnTag": "Deal-breaker"
+      },
+      "chapitres": {
+        "synthese": "Your summary",
+        "carte": "The map of your areas",
+        "conversations": "Your next four conversations",
+        "bloquants": "Sticking points and deal-breakers",
+        "climat": "How your relationship feels right now",
+        "signaux": "Your warning signs",
+        "roles": "Who does what, as each of you sees it",
+        "domaines": "Area by area",
+        "suite": "What now?"
+      },
+      "synthese": {
+        "intro": "Two numbers sum up your check-up. The first shows how much you want the same life together. The second shows how each of you feels in the relationship right now. The two don't always go together: you can be very aligned and going through a rough patch, or the other way round.",
+        "alignement": "Your alignment",
+        "alignementAide": "How closely your answers about life together match. The big decisions count double.",
+        "climat": "Your climate",
+        "climatAide": "How each of you feels in the relationship right now.",
+        "climatDe": "{{nom}}: {{n}}%",
+        "tuiles": {
+          "accords": "Same answers",
+          "proches": "Close answers",
+          "ecarts": "Gaps",
+          "bloquants": "Sticking points",
+          "vigilance": "Signs to look at"
+        },
+        "forts": "Where you're closest",
+        "faibles": "Where you're furthest apart",
+        "rassemble": "What brings you together",
+        "rassembleIntro": "The big questions where you answered exactly the same."
+      },
+      "verdicts": {
+        "onde": {
+          "titre": "On the same wavelength",
+          "texte": "You want roughly the same life, and you see it the same way. You do have gaps, but only a few: it's a good time to talk about them while they're still small."
+        },
+        "proches": {
+          "titre": "Very close",
+          "texte": "You agree on the essentials, with a few topics where you don't see things the same way. That's the case for most couples who are doing well."
+        },
+        "creuser": {
+          "titre": "Close, with a few topics to explore",
+          "texte": "You agree on a lot of things, but several topics set you apart. Nothing alarming as long as you talk about them, and that's exactly what this check-up is for."
+        },
+        "apprivoiser": {
+          "titre": "Differences to work with",
+          "texte": "You have fairly different ways of seeing life together. It says nothing about your love, but it does mean some topics need real conversations, and compromises."
+        },
+        "visions": {
+          "titre": "Two ways of seeing life",
+          "texte": "On many topics, you don't want the same thing. Some couples live very well with that, others don't: the most important thing is to know which of these gaps really matter to each of you."
+        }
+      },
+      "meteos": {
+        "beau": {
+          "titre": "Clear skies",
+          "texte": "You both feel good in your relationship."
+        },
+        "nuages": {
+          "titre": "Sunny, with a few clouds",
+          "texte": "Things are going well, with a few points where one of you feels less good."
+        },
+        "variable": {
+          "titre": "Changeable",
+          "texte": "There's good, and some harder patches at the moment."
+        },
+        "orageux": {
+          "titre": "Stormy",
+          "texte": "One of you, or both, isn't feeling very good in the relationship right now."
+        },
+        "tempete": {
+          "titre": "Storm",
+          "texte": "Things aren't going well at the moment. This check-up can help put words to it, and a couples counsellor can help you go further."
+        }
+      },
+      "carte": {
+        "intro": "Each bar shows how closely your answers match in one area, from 0 to 100%. How your relationship feels right now isn't about agreeing, so it has its own part.",
+        "bandes": {
+          "fort": "Very close",
+          "moyen": "Fairly close",
+          "faible": "To talk about"
+        },
+        "accords": "same answers",
+        "proches": "close",
+        "ecarts": "gaps"
+      },
+      "conversations": {
+        "intro": "The topics where your answers are furthest apart, on what matters most, one per area. Keep one per evening, when things are calm, rather than all at once.",
+        "titre": "Conversation {{n}}",
+        "aucune": "You don't have any gap to work on: your answers are close or identical everywhere. That's rare! Make the most of it and talk about what brings you together."
+      },
+      "bloquants": {
+        "intro": "Gaps on questions that one of you marked \"non-negotiable\". These are the first topics to raise, without trying to convince the other that evening: understand first.",
+        "aucun": "No sticking points: none of your gaps is on a topic one of you marked as a deal-breaker.",
+        "nnTitre": "What's non-negotiable for each of you",
+        "nnIntro": "The topics where each of you said you couldn't compromise, with their answer.",
+        "nnAucun": "Nothing marked."
+      },
+      "climat": {
+        "intro": "These questions aren't looking for agreement: they show how each of you is experiencing the relationship right now. A gap here means you're not living the same relationship, which happens much more often than people think.",
+        "ecart": "You don't feel it the same way",
+        "attention": "Worth watching",
+        "de": "For {{nom}}",
+        "sens": "On each line, the left end is where things are going best, and the right end where they're going least well."
+      },
+      "signaux": {
+        "intro": "Researchers who have been watching couples for decades have spotted a few ways of arguing that, once they become a habit, wear a relationship down far more than the arguments themselves. Everyone does them sometimes. What matters is how often, and what you do afterwards.",
+        "rare": "Rare for you",
+        "attention": "Keep an eye on it",
+        "alerte": "Look at this first",
+        "reparationBien": "A real strength",
+        "reparationAttention": "Worth working on",
+        "fin": "If one of these comes up often for you, it's not a life sentence: it's exactly what a couples counsellor helps you change, and it can be changed."
+      },
+      "roles": {
+        "intro": "For each topic, the line goes from \"mostly {{a}}\" to \"mostly {{b}}\". The two markers show what each of you answered.",
+        "surtout": "Mostly {{nom}}",
+        "autant": "Both equally",
+        "chacunPlus": "Each thinks they do more",
+        "chacunPlusTexte": "It's very common: you see what you do better than what the other does. The best thing is to list together what each of you takes care of, without keeping score.",
+        "desequilibre": "You agree: it's mostly {{nom}} who takes care of it. Is that OK for both of you?",
+        "accord": "You see it the same way.",
+        "aucun": "There's no question of this kind in your check-up."
+      },
+      "domaines": {
+        "intro": "All your answers, area by area: first what you agree on, then your differences, from the most important to the smallest.",
+        "accords": "You agree",
+        "accordsAucun": "No exact agreement in this area.",
+        "differences": "Your differences",
+        "differencesAucune": "No differences in this area.",
+        "etats": "How you're experiencing it",
+        "voirConversation": "You'll find it further up, with ways to talk about it: conversation {{n}}.",
+        "voirBloquants": "You'll find it further up, with ways to talk about it: sticking points."
+      },
+      "cat": {
+        "accord": "Agreement",
+        "proche": "Close answers",
+        "ecart": "Gap"
+      },
+      "statut": {
+        "bloquant": "Sticking point",
+        "aTrancher": "To decide",
+        "aConfirmer": "To check"
+      },
       "nnDe": "Non-negotiable for {{nom}}",
       "pourquoi": "Why it matters",
       "parler": "To talk about it",
       "eviter": "Best avoided",
-      "meteoTitre": "How you're doing",
-      "meteoIntro": "These questions aren't looking for agreement: they say how each of you is experiencing the relationship right now.",
-      "meteoEcart": "You don't feel it the same way",
-      "meteoAttention": "Worth watching",
-      "meteoDe": "For {{nom}}",
-      "imprimer": "Print or save as PDF",
-      "supprimer": "Delete our check-up",
-      "supprimerConfirmer": "Confirm deletion",
-      "supprimerAide": "The check-up is erased for both of you, right away and for good. Remember to save the PDF first.",
-      "supprime": "Your check-up has been deleted.",
-      "note": "This check-up is a tool for talking, not a diagnosis. If you're going through a difficult time, a couples counsellor or therapist can help you go further.",
-      "garde": "This report stays available on this page for six months, for both of you."
+      "suite": {
+        "p1": "A report doesn't change anything on its own: what counts are the conversations it starts. Here's how to go about it, based on what works for couples who talk well.",
+        "conseils": [
+          "One topic per evening, no more. Start with the easiest one to get into the rhythm.",
+          "Pick a calm moment, with no phones, and not in the middle of an argument.",
+          "Talk about what you feel (\"I'm afraid that...\") rather than about what the other person does.",
+          "The point of the first chat is to understand the other person, not to convince them. A decision can wait until the following week.",
+          "If things heat up, take a twenty-minute break and come back to it later. It works better than you'd think."
+        ],
+        "refaire": "Doing the check-up again in six months or a year shows what has changed between you. Lots of couples redo it at every big step: moving in together, getting married, having a baby.",
+        "aide": "This check-up is a tool for talking, not a diagnosis. If you're going through a difficult time, a couples counsellor or therapist can help you go further.",
+        "violence": "If you're afraid of your partner, this check-up isn't made for your situation. In the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, 24/7, and in the US the National Domestic Violence Hotline (1-800-799-7233)."
+      },
+      "ecran": {
+        "telecharger": "Download the PDF",
+        "pdfPrepa": "Your PDF is being prepared: it'll arrive in a few minutes, by email and here.",
+        "pdfErreur": "The PDF is running late. It will be sent to you as soon as it's ready, you don't need to do anything.",
+        "envoyeA": "Report sent to {{emails}}",
+        "envoiA": "The report will be sent to {{emails}}",
+        "emailTitre": "Get the report by email",
+        "emailAide": "Your address is only used to send you this report.",
+        "emailChamp": "Your email address",
+        "emailBouton": "Send",
+        "emailOk": "Got it!",
+        "emailFaux": "This address doesn't look valid.",
+        "imprimer": "Print",
+        "supprimer": "Delete our check-up",
+        "supprimerConfirmer": "Confirm deletion",
+        "supprimerAide": "The check-up is erased for both of you, right away and for good, PDF included. Remember to keep the PDF first.",
+        "supprime": "Your check-up has been deleted.",
+        "garde": "This report stays available on this page for six months, for both of you."
+      }
     },
     "situation": {
       "resume": "Situation"
@@ -233,7 +366,10 @@
       "serveur": "Something went wrong on our side. Try again in a moment.",
       "reessayer": "Try again"
     },
-    "genres": { "f": "A woman", "h": "A man" }
+    "genres": {
+      "f": "A woman",
+      "h": "A man"
+    }
   },
   "section1": {
     "title": "What is a couple check-up?",

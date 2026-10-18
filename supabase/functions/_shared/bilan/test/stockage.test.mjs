@@ -48,3 +48,31 @@ test('une erreur de la base remonte', async () => {
   const s = creerStockageRest({ url: 'https://x.supabase.co', cle: 'k', fetch: f });
   await assert.rejects(() => s.inserer({}), /base 400/);
 });
+
+test('compteurs, paiement retrouvé, fichiers du rapport', async () => {
+  const id = '11111111-2222-4333-8444-555555555555';
+  const pdf = new Uint8Array([37, 80, 68, 70]);
+  const appels = [];
+  const reponses = [
+    new Response(null, { status: 204 }),
+    new Response(JSON.stringify([{ id }]), { status: 200 }),
+    new Response(pdf, { status: 200 }),
+    new Response(JSON.stringify([]), { status: 200 }),
+    new Response(JSON.stringify({ signedURL: '/object/sign/bilan-rapports/' + id + '/r.pdf?token=abc' }), { status: 200 }),
+  ];
+  const f = async (url, options = {}) => { appels.push({ url, ...options }); return reponses.shift(); };
+  const s = creerStockageRest({ url: 'https://x.supabase.co', cle: 'service', fetch: f });
+  await s.compter('domaine_entre', 'argent', 0);
+  assert.equal((await s.trouverParIntent('pi_123')).id, id);
+  assert.deepEqual([...(await s.lireFichier(id + '/r.pdf'))], [...pdf]);
+  await s.supprimerFichier(id + '/r.pdf');
+  const url = await s.urlSignee(id + '/r.pdf', 600, 'bilan-de-couple-a-et-b.pdf');
+  assert.equal(appels[0].url, 'https://x.supabase.co/rest/v1/rpc/bilan_compte_evenement');
+  assert.deepEqual(JSON.parse(appels[0].body), { p_evenement: 'domaine_entre', p_cle: 'argent', p_montant: 0 });
+  assert.match(appels[1].url, /paiement_intent=eq\.pi_123&select=\*&limit=1$/);
+  assert.equal(appels[2].url, `https://x.supabase.co/storage/v1/object/bilan-rapports/${id}/r.pdf`);
+  assert.equal(appels[3].method, 'DELETE');
+  assert.deepEqual(JSON.parse(appels[3].body), { prefixes: [id + '/r.pdf'] });
+  assert.deepEqual(JSON.parse(appels[4].body), { expiresIn: 600 });
+  assert.equal(url, `https://x.supabase.co/storage/v1/object/sign/bilan-rapports/${id}/r.pdf?token=abc&download=bilan-de-couple-a-et-b.pdf`);
+});

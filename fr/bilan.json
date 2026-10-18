@@ -1,11 +1,4 @@
 {
-  "hero": {
-    "badge": "Bilan de couple",
-    "title": "Le bilan de couple, à faire chacun de son côté",
-    "highlight": "bilan de couple",
-    "description": "Environ 90 questions concrètes sur la vie à deux : l'argent, les enfants, où vivre, la famille, la fidélité, l'intimité... Chacun répond sur son téléphone, sans voir les réponses de l'autre, puis vous découvrez où vous êtes d'accord et où vous ne l'êtes pas.",
-    "prix": "Répondre est gratuit, et votre résultat général aussi. Le rapport complet coûte {{prix}} pour vous deux."
-  },
   "jsonLd": {
     "name": "Bilan de couple",
     "about": "Bilan de couple"
@@ -13,25 +6,23 @@
   "app": {
     "chargement": "Chargement...",
     "accueil": {
-      "titre": "Faites le point, chacun de votre côté",
-      "etapes": [
-        "Vous répondez chacun sur votre téléphone, sans voir les réponses de l'autre. Comptez 20 à 25 minutes, en une fois ou en plusieurs.",
-        "Quand vous avez fini tous les deux, vous voyez gratuitement votre résultat : votre accord global, chaque domaine, et un de vos écarts en entier.",
-        "Le rapport complet ({{prix}} pour vous deux, une seule fois) montre tous vos écarts avec vos deux réponses, et comment en parler."
-      ],
-      "commencer": "Commencer notre bilan",
-      "enCours": "Vos bilans sur cet appareil",
+      "titre": "Vos bilans sur cet appareil",
       "avec": "Avec {{autre}}",
       "progression": "{{n}} questions sur {{total}}",
       "invite": "Invitation pas encore acceptée",
       "fini": "Vos réponses sont envoyées",
-      "resultat": "Résultat disponible",
+      "resultat": "Rapport disponible",
       "reprendre": "Reprendre",
-      "voir": "Voir le résultat",
+      "voir": "Voir le rapport",
       "oublier": "Retirer de cet appareil",
       "oublierConfirmer": "Confirmer : retirer d'ici",
       "oublierAide": "Le bilan n'est pas supprimé, il disparaît seulement de cet appareil. Gardez votre lien personnel pour le retrouver.",
-      "violence": "Ce bilan montre à chacun les réponses de l'autre. Si vous avez peur de votre partenaire, il n'est pas fait pour votre situation : en France, le 3919 répond gratuitement et anonymement, 24 h sur 24."
+      "violence": "Ce bilan montre à chacun les réponses de l'autre. Si vous avez peur de votre partenaire, il n'est pas fait pour votre situation : en France, le 3919 répond gratuitement et anonymement, 24 h sur 24.",
+      "nouveau": "Commencer un nouveau bilan",
+      "pret": "Prêt : il reste à débloquer le rapport",
+      "reprise": "Vous avez un bilan en cours avec {{autre}}.",
+      "repriseRapport": "Votre rapport avec {{autre}} est disponible.",
+      "quitter": "Retour"
     },
     "creation": {
       "titre": "Votre bilan",
@@ -50,8 +41,8 @@
       "accordTitre": "Avant de commencer",
       "majeur": "J'ai 18 ans ou plus.",
       "consentement": "J'accepte que mes réponses soient enregistrées pour ce bilan, y compris sur des sujets intimes (vie sexuelle, religion, opinions), et que {{autre}} les voie dans le rapport.",
-      "accordAide": "Votre bilan est gardé 60 jours après votre dernière réponse s'il n'est pas payé, six mois après le paiement sinon, et chacun de vous peut le supprimer à tout moment. Pas de compte, pas d'adresse e-mail.",
-      "prixRappel": "Répondre est gratuit. Le rapport complet coûte {{prix}} pour vous deux, seulement si vous le voulez, une fois que vous avez fini tous les deux.",
+      "accordAide": "Votre bilan est gardé 60 jours après votre dernière réponse s'il n'est pas payé, six mois après le paiement sinon, et chacun de vous peut le supprimer à tout moment. Pas de compte à créer.",
+      "prixRappel": "Les questions sont gratuites. Le rapport complet coûte {{prix}} pour vous deux : vous le débloquez quand vous avez fini vos réponses.",
       "suivant": "Suivant",
       "retour": "Retour",
       "creer": "Créer notre bilan",
@@ -77,14 +68,15 @@
     },
     "rejoindre": {
       "titre": "{{autre}} vous propose de faire votre bilan de couple",
-      "texte": "Environ 90 questions concrètes sur votre vie à deux. Vous répondez de votre côté, sans voir les réponses de {{autre}}, et inversement. Quand vous avez fini tous les deux, vous découvrez ensemble où vous êtes d'accord et où vous ne l'êtes pas.",
-      "duree": "Comptez 20 à 25 minutes. Vous pouvez faire une pause quand vous voulez, tout est enregistré.",
+      "texte": "Une centaine de questions concrètes sur votre vie à deux. Vous répondez de votre côté, sans voir les réponses de {{autre}}, et inversement. Quand vous avez fini tous les deux, votre rapport met vos deux réponses face à face, sujet par sujet.",
+      "duree": "Comptez 25 à 30 minutes. Vous pouvez faire une pause quand vous voulez, tout est enregistré.",
       "situationTitre": "Votre situation, telle que {{autre}} l'a décrite",
       "situationCorriger": "Corriger",
       "prenom": "Votre prénom",
       "genre": "Pour vous, plutôt",
       "commencer": "J'accepte et je commence",
-      "lienUtilise": "Ce lien d'invitation a déjà été utilisé. Si c'était vous, ouvrez votre lien personnel, ou revenez sur cette page depuis le téléphone où vous avez commencé."
+      "lienUtilise": "Ce lien d'invitation a déjà été utilisé. Si c'était vous, ouvrez votre lien personnel, ou revenez sur cette page depuis le téléphone où vous avez commencé.",
+      "paye": "Bonne nouvelle : {{autre}} a déjà réglé le rapport pour vous deux. Il s'ouvrira dès que vous aurez fini vos réponses."
     },
     "domaine": {
       "partie": "Partie {{n}} sur {{total}}",
@@ -112,64 +104,44 @@
     },
     "attente": {
       "titre": "C'est fini pour vous !",
-      "texte": "Vos réponses sont enregistrées. Le résultat s'ouvrira dès que {{autre}} aura fini.",
+      "texte": "Vos réponses sont enregistrées. Votre rapport sera prêt dès que {{autre}} aura fini les siennes.",
       "autreProgression": "{{autre}} : {{n}} questions sur {{total}}",
       "autrePasRejoint": "{{autre}} n'a pas encore ouvert l'invitation.",
       "renvoyer": "Renvoyer l'invitation",
       "revoir": "Revoir mes réponses",
       "revoirAide": "Vous pouvez encore changer vos réponses tant que {{autre}} n'a pas fini.",
       "maj": "Cette page se met à jour toute seule.",
-      "accueil": "Retour à mes bilans"
-    },
-    "resultat": {
-      "titre": "Le bilan de {{a}} et {{b}}",
-      "accord": "Votre accord",
-      "meteo": "La météo de votre couple",
-      "verdicts": {
-        "onde": { "titre": "Sur la même longueur d'onde", "texte": "Vous voulez à peu près la même vie, et vous la voyez de la même façon. Vos écarts existent, ils sont peu nombreux : c'est le bon moment pour en parler, tant qu'ils restent petits." },
-        "proches": { "titre": "Très proches", "texte": "Vous êtes d'accord sur l'essentiel, avec quelques sujets où vous ne voyez pas les choses pareil. C'est le cas de la plupart des couples qui vont bien." },
-        "creuser": { "titre": "Proches, avec des sujets à creuser", "texte": "Vous vous retrouvez sur beaucoup de choses, mais plusieurs sujets vous séparent. Rien d'alarmant tant que vous en parlez, et c'est justement à ça que sert ce bilan." },
-        "apprivoiser": { "titre": "Des différences à apprivoiser", "texte": "Vous avez des façons assez différentes de voir la vie à deux. Ça ne dit rien de votre amour, mais ça veut dire que certains sujets demandent de vraies discussions, et des compromis." },
-        "visions": { "titre": "Deux façons de voir la vie", "texte": "Sur beaucoup de sujets, vous ne voulez pas la même chose. Certains couples vivent très bien avec ça, d'autres non : le plus important est de savoir lesquels de ces écarts comptent vraiment pour chacun." }
-      },
-      "meteos": {
-        "beau": { "titre": "Grand beau temps", "texte": "Vous vous sentez bien dans votre couple, tous les deux." },
-        "nuages": { "titre": "Beau temps, quelques nuages", "texte": "Ça va bien, avec quelques points où l'un de vous se sent moins bien." },
-        "variable": { "titre": "Ciel variable", "texte": "Il y a du bon et des passages plus difficiles en ce moment." },
-        "orageux": { "titre": "Temps orageux", "texte": "L'un de vous, ou les deux, ne se sent pas très bien dans le couple en ce moment." },
-        "tempete": { "titre": "Tempête", "texte": "Ça ne va pas fort en ce moment. Ce bilan peut aider à mettre des mots dessus, et un conseiller conjugal peut vous aider à aller plus loin." }
-      },
-      "parDomaine": "Domaine par domaine",
-      "compte": "{{accords}} accords, {{proches}} réponses proches, {{ecarts}} écarts",
-      "bloquants": "{{n}} point bloquant",
-      "bloquantsN": "{{n}} points bloquants",
-      "bloquantsAide": "Un point bloquant, c'est un écart sur une grande question (enfants, lieu de vie, fidélité...) que l'un de vous a marquée « non négociable ».",
-      "aucunBloquant": "Aucun point bloquant",
-      "echantillonTitre": "Un de vos écarts, en entier",
-      "echantillonAide": "Voici un exemple de ce que contient le rapport pour chacun de vos écarts.",
-      "autresTitre": "Vos autres écarts",
-      "masque": "Réponses visibles dans le rapport",
-      "plusAutres": "Et {{n}} autres",
-      "aucunEcart": "Vous n'avez aucun écart : vos réponses sont proches ou identiques partout. C'est rare !"
+      "accueil": "Retour",
+      "payeTitre": "Votre rapport est réglé",
+      "payeTexte": "Merci ! Il s'ouvrira ici et partira par e-mail dès que {{autre}} aura fini ses réponses.",
+      "relance": "Envoyer un petit rappel à {{autre}}",
+      "relanceMessage": "J'ai fini mes réponses pour notre bilan de couple, je t'attends ! Tu reprends là où tu en étais, sur ton téléphone."
     },
     "paywall": {
-      "titre": "Le rapport complet",
-      "intro": "Tout ce que vos deux séries de réponses disent, sujet par sujet, avec de quoi en parler.",
+      "titre": "Votre rapport complet",
+      "titrePret": "Votre rapport vous attend",
+      "introAttente": "Vous pouvez le débloquer dès maintenant : il s'ouvrira ici, et partira par e-mail, dès que {{autre}} aura fini.",
+      "introPret": "Vos deux séries de réponses sont prêtes. Il ne reste qu'une étape pour découvrir ce qu'elles disent de votre couple.",
+      "apercu": "Extrait d'un rapport d'exemple (couple fictif)",
       "contenu": [
+        "Votre alignement et le climat de votre couple, en un coup d'œil",
+        "La carte de vos douze domaines, de l'argent aux enfants",
         "Vos quatre prochaines conversations, dans l'ordre où les avoir",
         "Tous vos écarts, avec vos deux réponses côte à côte",
-        "Pour chaque écart : pourquoi ce sujet compte, deux questions pour en parler, et ce qu'il vaut mieux éviter de dire",
-        "Vos points bloquants et ce qui est non négociable pour chacun",
-        "Les sujets où chacun pense en faire plus que l'autre",
-        "Ce qui vous rassemble",
-        "La météo de votre couple, question par question",
-        "Le rapport à imprimer ou à garder en PDF"
+        "Pour chaque écart : pourquoi ça compte, des questions pour en parler et ce qu'il vaut mieux éviter",
+        "Vos signaux de vigilance dans les disputes",
+        "Qui fait quoi à la maison, vu par chacun",
+        "Un PDF d'une trentaine de pages par e-mail, et le rapport en ligne pendant six mois"
       ],
       "prix": "{{prix}} pour vous deux",
-      "prixAide": "Un seul paiement, par l'un ou l'autre, débloque le rapport pour vous deux. Pas d'abonnement.",
-      "renonciation": "Je demande l'accès immédiat au rapport et je reconnais perdre mon droit de rétractation une fois le rapport débloqué.",
+      "prixAide": "Un seul paiement, et {{autre}} n'aura rien à payer. Pas d'abonnement.",
+      "emailLabel": "Où vous envoyer le rapport ?",
+      "emailPlaceholder": "votre@email.com",
+      "emailAide": "Le PDF partira à cette adresse dès que vous aurez fini tous les deux. Elle ne sert à rien d'autre.",
+      "emailFaux": "Cette adresse ne semble pas valide.",
+      "renonciation": "Je demande à recevoir le rapport dès qu'il est prêt et je reconnais perdre mon droit de rétractation une fois le rapport fourni.",
       "renonciationManque": "Cochez la case pour continuer.",
-      "bouton": "Débloquer le rapport : {{prix}}",
+      "bouton": "Débloquer notre rapport · {{prix}}",
       "garantie": "Satisfaits ou remboursés pendant {{jours}} jours : un message depuis la page contact suffit.",
       "securite": "Paiement sécurisé par Stripe (carte, Apple Pay, Google Pay). Nous ne voyons jamais votre carte.",
       "cgv": "Conditions de vente",
@@ -179,49 +151,213 @@
     },
     "paiement": {
       "verification": "Vérification du paiement...",
-      "ok": "Paiement confirmé, merci ! Voici votre rapport.",
+      "ok": "Paiement confirmé, merci !",
       "attente": "Le paiement n'est pas encore confirmé. Ça peut prendre quelques secondes...",
       "annule": "Le paiement a été annulé. Votre bilan est toujours là.",
       "erreur": "Impossible de vérifier le paiement pour l'instant. Si vous avez payé, rechargez la page dans une minute."
     },
     "rapport": {
-      "date": "Bilan terminé le {{date}}",
-      "conversationsTitre": "Vos quatre prochaines conversations",
-      "conversationsIntro": "Les sujets où vos réponses s'éloignent le plus, sur ce qui compte le plus, un par domaine. Gardez-en un par soirée, au calme, plutôt que tout d'un coup.",
-      "conversation": "Conversation {{n}}",
-      "bloquantsTitre": "Vos points bloquants",
-      "bloquantsIntro": "Des écarts sur des questions que l'un de vous a marquées « non négociable ». Ce sont les premiers sujets à aborder, sans chercher à convaincre l'autre ce soir-là : d'abord comprendre.",
-      "nnTitre": "Ce qui est non négociable pour chacun",
-      "nnAucun": "Rien de marqué",
-      "chacunTitre": "Chacun pense en faire plus",
-      "chacunIntro": "Sur ces sujets, chacun de vous pense en faire plus que l'autre. C'est très courant : on voit mieux ce qu'on fait que ce que fait l'autre.",
-      "rassembleTitre": "Ce qui vous rassemble",
-      "rassembleIntro": "Les grandes questions sur lesquelles vous avez répondu exactement pareil.",
-      "domainesTitre": "Domaine par domaine",
-      "accords": "Vous êtes d'accord",
-      "accordsAucun": "Aucun accord exact dans ce domaine.",
-      "differences": "Vos différences",
-      "differencesAucune": "Aucune différence dans ce domaine.",
-      "desequilibre": "Vous êtes d'accord : c'est surtout {{nom}} qui s'en occupe. Est-ce que ça vous va, à tous les deux ?",
-      "cat": { "accord": "Accord", "proche": "Réponses proches", "ecart": "Écart" },
-      "statut": { "bloquant": "Point bloquant", "aTrancher": "À trancher", "aConfirmer": "À confirmer" },
-      "chacunPlus": "Chacun pense en faire plus",
+      "surtitre": "Bilan de couple",
+      "pied": "Bilan de couple · confidentiel",
+      "couverture": {
+        "de": "Le bilan de couple de",
+        "et": "et",
+        "date": "Rapport établi le {{date}}",
+        "chiffres": "{{domaines}} domaines · {{questions}} questions comparées",
+        "confidentiel": "Confidentiel : ce rapport contient vos réponses à tous les deux."
+      },
+      "lire": {
+        "titre": "Comment lire ce rapport",
+        "p1": "Vous avez répondu chacun de votre côté, sans voir les réponses de l'autre. Ce rapport met vos deux séries de réponses face à face, sujet par sujet, pour vous montrer où vous êtes d'accord et où vous ne voyez pas les choses de la même façon.",
+        "p2": "Les questions s'appuient sur des travaux de recherche en psychologie du couple : des études qui ont suivi des couples pendant des années, et les questionnaires qu'utilisent les conseillers conjugaux avant un mariage. Ce rapport n'est pas un diagnostic. C'est une base pour vous parler, avec les bons sujets dans le bon ordre.",
+        "p3": "Le plus simple est de le lire chacun de son côté, puis d'en parler ensemble, un sujet à la fois. Si vous ne savez pas par où commencer, allez directement à vos quatre prochaines conversations.",
+        "reperes": "Les repères",
+        "accord": "Vous avez donné la même réponse.",
+        "proche": "Vos réponses sont voisines.",
+        "ecart": "Vos réponses s'éloignent.",
+        "nn": "L'un de vous a marqué ce sujet « non négociable ».",
+        "sommaire": "Dans ce rapport",
+        "nnTag": "Non négociable"
+      },
+      "chapitres": {
+        "synthese": "Votre synthèse",
+        "carte": "La carte de vos domaines",
+        "conversations": "Vos quatre prochaines conversations",
+        "bloquants": "Points bloquants et non négociables",
+        "climat": "Le climat de votre couple",
+        "signaux": "Vos signaux de vigilance",
+        "roles": "Qui fait quoi, vu par chacun",
+        "domaines": "Domaine par domaine",
+        "suite": "Et maintenant ?"
+      },
+      "synthese": {
+        "intro": "Deux chiffres résument votre bilan. Le premier dit à quel point vous voulez la même vie à deux. Le second dit comment chacun de vous se sent dans le couple en ce moment. Les deux ne vont pas forcément ensemble : on peut être très alignés et traverser une période difficile, ou l'inverse.",
+        "alignement": "Votre alignement",
+        "alignementAide": "L'accord de vos réponses sur la vie à deux. Les grandes décisions comptent double.",
+        "climat": "Votre climat",
+        "climatAide": "Comment chacun de vous vit le couple en ce moment.",
+        "climatDe": "{{nom}} : {{n}} %",
+        "tuiles": {
+          "accords": "Accords",
+          "proches": "Réponses proches",
+          "ecarts": "Écarts",
+          "bloquants": "Points bloquants",
+          "vigilance": "Signaux à regarder"
+        },
+        "forts": "Là où vous êtes le plus proches",
+        "faibles": "Là où vous l'êtes le moins",
+        "rassemble": "Ce qui vous rassemble",
+        "rassembleIntro": "Des sujets importants sur lesquels vous avez répondu exactement pareil."
+      },
+      "verdicts": {
+        "onde": {
+          "titre": "Sur la même longueur d'onde",
+          "texte": "Vous voulez à peu près la même vie, et vous la voyez de la même façon. Vos écarts existent, ils sont peu nombreux : c'est le bon moment pour en parler, tant qu'ils restent petits."
+        },
+        "proches": {
+          "titre": "Très proches",
+          "texte": "Vous êtes d'accord sur l'essentiel, avec quelques sujets où vous ne voyez pas les choses pareil. C'est le cas de la plupart des couples qui vont bien."
+        },
+        "creuser": {
+          "titre": "Proches, avec des sujets à creuser",
+          "texte": "Vous vous retrouvez sur beaucoup de choses, mais plusieurs sujets vous séparent. Rien d'alarmant tant que vous en parlez, et c'est justement à ça que sert ce rapport."
+        },
+        "apprivoiser": {
+          "titre": "Des différences à apprivoiser",
+          "texte": "Vous avez des façons assez différentes de voir la vie à deux. Ça ne dit rien de votre amour, mais ça veut dire que certains sujets demandent de vraies discussions, et des compromis."
+        },
+        "visions": {
+          "titre": "Deux façons de voir la vie",
+          "texte": "Sur beaucoup de sujets, vous ne voulez pas la même chose. Certains couples vivent très bien avec ça, d'autres non : le plus important est de savoir lesquels de ces écarts comptent pour chacun de vous."
+        }
+      },
+      "meteos": {
+        "beau": {
+          "titre": "Grand beau temps",
+          "texte": "Vous vous sentez bien dans votre couple, tous les deux."
+        },
+        "nuages": {
+          "titre": "Beau temps, quelques nuages",
+          "texte": "Ça va bien, avec quelques points où l'un de vous se sent moins bien."
+        },
+        "variable": {
+          "titre": "Ciel variable",
+          "texte": "Il y a du bon, et des passages plus difficiles en ce moment."
+        },
+        "orageux": {
+          "titre": "Temps orageux",
+          "texte": "L'un de vous, ou les deux, ne se sent pas très bien dans le couple en ce moment."
+        },
+        "tempete": {
+          "titre": "Tempête",
+          "texte": "Ça ne va pas fort en ce moment. Ce rapport peut aider à mettre des mots dessus, et un conseiller conjugal peut vous aider à aller plus loin."
+        }
+      },
+      "carte": {
+        "intro": "Chaque barre montre l'accord de vos réponses dans un domaine, de 0 à 100 %. Le climat de votre couple ne cherche pas d'accord : il a sa propre partie.",
+        "bandes": {
+          "fort": "Très proches",
+          "moyen": "Assez proches",
+          "faible": "À discuter"
+        },
+        "accords": "accords",
+        "proches": "proches",
+        "ecarts": "écarts"
+      },
+      "conversations": {
+        "intro": "Les sujets où vos réponses s'éloignent le plus, sur ce qui compte le plus, un par domaine. Gardez-en un par soirée, au calme, plutôt que tout d'un coup.",
+        "titre": "Conversation {{n}}",
+        "aucune": "Vous n'avez aucun écart à travailler : vos réponses sont proches ou identiques partout. C'est rare ! Profitez-en pour parler de ce qui vous rassemble."
+      },
+      "bloquants": {
+        "intro": "Des écarts sur des questions que l'un de vous a marquées « non négociable ». Ce sont les premiers sujets à aborder, sans chercher à convaincre l'autre ce soir-là : d'abord comprendre.",
+        "aucun": "Aucun point bloquant : aucun de vos écarts ne porte sur un sujet que l'un de vous a marqué non négociable.",
+        "nnTitre": "Ce qui est non négociable pour chacun",
+        "nnIntro": "Les sujets sur lesquels chacun de vous a dit ne pas pouvoir faire de compromis, avec sa réponse.",
+        "nnAucun": "Rien de marqué."
+      },
+      "climat": {
+        "intro": "Ces questions ne cherchent pas un accord : elles disent comment chacun de vous vit le couple en ce moment. Un écart ici veut dire que vous ne vivez pas la même relation, ce qui arrive bien plus souvent qu'on ne le croit.",
+        "ecart": "Vous ne le vivez pas pareil",
+        "attention": "À surveiller",
+        "de": "Pour {{nom}}",
+        "sens": "Sur chaque ligne, la case de gauche est celle où ça va le mieux, et celle de droite celle où ça va le moins bien."
+      },
+      "signaux": {
+        "intro": "Les chercheurs qui observent des couples depuis des décennies ont repéré quelques attitudes de dispute qui, quand elles deviennent une habitude, usent une relation bien plus que les disputes elles-mêmes. Tout le monde les a parfois. Ce qui compte, c'est leur fréquence, et ce que vous en faites après.",
+        "rare": "Rare chez vous",
+        "attention": "À surveiller",
+        "alerte": "À regarder en priorité",
+        "reparationBien": "Une vraie force",
+        "reparationAttention": "À travailler",
+        "fin": "Si l'une de ces attitudes revient souvent chez vous, ce n'est pas une condamnation : c'est précisément ce qu'un conseiller conjugal aide à changer, et ça se change."
+      },
+      "roles": {
+        "intro": "Sur chaque sujet, la ligne va de « surtout {{a}} » à « surtout {{b}} ». Les deux repères montrent ce que chacun a répondu.",
+        "surtout": "Surtout {{nom}}",
+        "autant": "Autant",
+        "chacunPlus": "Chacun pense en faire plus",
+        "chacunPlusTexte": "C'est très courant : on voit mieux ce qu'on fait que ce que fait l'autre. Le mieux est de faire la liste ensemble de ce que chacun prend en charge, sans compter les points.",
+        "desequilibre": "Vous êtes d'accord : c'est surtout {{nom}} qui s'en occupe. Est-ce que ça vous va, à tous les deux ?",
+        "accord": "Vous voyez les choses de la même façon.",
+        "aucun": "Aucune question de ce type dans votre bilan."
+      },
+      "domaines": {
+        "intro": "Toutes vos réponses, domaine par domaine : d'abord ce sur quoi vous êtes d'accord, puis vos différences, de la plus importante à la plus légère.",
+        "accords": "Vous êtes d'accord",
+        "accordsAucun": "Aucun accord exact dans ce domaine.",
+        "differences": "Vos différences",
+        "differencesAucune": "Aucune différence dans ce domaine.",
+        "etats": "Comment vous le vivez",
+        "voirConversation": "Vous le retrouvez plus haut, avec de quoi en parler : conversation {{n}}.",
+        "voirBloquants": "Vous le retrouvez plus haut, avec de quoi en parler : points bloquants."
+      },
+      "cat": {
+        "accord": "Accord",
+        "proche": "Réponses proches",
+        "ecart": "Écart"
+      },
+      "statut": {
+        "bloquant": "Point bloquant",
+        "aTrancher": "À trancher",
+        "aConfirmer": "À confirmer"
+      },
       "nnDe": "Non négociable pour {{nom}}",
       "pourquoi": "Pourquoi ça compte",
       "parler": "Pour en parler",
       "eviter": "À éviter",
-      "meteoTitre": "Comment vous allez",
-      "meteoIntro": "Ces questions ne cherchent pas un accord : elles disent comment chacun vit le couple en ce moment.",
-      "meteoEcart": "Vous ne le vivez pas pareil",
-      "meteoAttention": "À surveiller",
-      "meteoDe": "Pour {{nom}}",
-      "imprimer": "Imprimer ou enregistrer en PDF",
-      "supprimer": "Supprimer notre bilan",
-      "supprimerConfirmer": "Confirmer la suppression",
-      "supprimerAide": "Le bilan est effacé pour vous deux, tout de suite et pour de bon. Pensez à enregistrer le PDF avant.",
-      "supprime": "Votre bilan est supprimé.",
-      "note": "Ce bilan est un outil pour parler, pas un diagnostic. Si vous traversez une période difficile, un conseiller conjugal ou un thérapeute de couple peut vous aider à aller plus loin.",
-      "garde": "Ce rapport reste disponible six mois sur cette page, pour vous deux."
+      "suite": {
+        "p1": "Un rapport ne change rien tout seul : ce qui compte, ce sont les conversations qu'il déclenche. Voici comment s'y prendre, d'après ce qui marche chez les couples qui se parlent bien.",
+        "conseils": [
+          "Un sujet par soirée, pas plus. Commencez par le plus simple pour prendre le rythme.",
+          "Choisissez un moment calme, sans téléphone, et pas au milieu d'une tension.",
+          "Parlez de ce que vous ressentez (« moi, j'ai peur que... ») plutôt que de ce que l'autre fait.",
+          "Le but du premier échange est de comprendre l'autre, pas de le convaincre. Une décision peut attendre la semaine suivante.",
+          "Si ça chauffe, faites une pause de vingt minutes et reprenez plus tard. Ça marche mieux qu'on ne le croit."
+        ],
+        "refaire": "Refaire le bilan dans six mois ou un an montre ce qui a bougé entre vous. Beaucoup de couples le refont à chaque grande étape : emménager, se marier, avoir un enfant.",
+        "aide": "Ce rapport est un outil pour parler, pas un diagnostic. Si vous traversez une période difficile, un conseiller conjugal ou un thérapeute de couple peut vous accompagner.",
+        "violence": "Si vous avez peur de votre partenaire, ce bilan n'est pas fait pour votre situation. En France, le 3919 répond gratuitement et anonymement, 24 h sur 24."
+      },
+      "ecran": {
+        "telecharger": "Télécharger le PDF",
+        "pdfPrepa": "Votre PDF est en préparation : il arrive dans quelques minutes, par e-mail et ici.",
+        "pdfErreur": "Le PDF a pris du retard. Il vous sera envoyé dès qu'il sera prêt, vous n'avez rien à faire.",
+        "envoyeA": "Rapport envoyé à {{emails}}",
+        "envoiA": "Le rapport sera envoyé à {{emails}}",
+        "emailTitre": "Recevoir le rapport par e-mail",
+        "emailAide": "Votre adresse sert seulement à vous envoyer ce rapport.",
+        "emailChamp": "Votre adresse e-mail",
+        "emailBouton": "Envoyer",
+        "emailOk": "C'est noté !",
+        "emailFaux": "Cette adresse ne semble pas valide.",
+        "imprimer": "Imprimer",
+        "supprimer": "Supprimer notre bilan",
+        "supprimerConfirmer": "Confirmer la suppression",
+        "supprimerAide": "Le bilan est effacé pour vous deux, tout de suite et pour de bon, PDF compris. Pensez à garder le PDF avant.",
+        "supprime": "Votre bilan est supprimé.",
+        "garde": "Ce rapport reste disponible six mois sur cette page, pour vous deux."
+      }
     },
     "situation": {
       "resume": "Situation"
@@ -233,80 +369,309 @@
       "serveur": "Un problème est survenu de notre côté. Réessayez dans un instant.",
       "reessayer": "Réessayer"
     },
-    "genres": { "f": "Une femme", "h": "Un homme" }
+    "genres": {
+      "f": "Une femme",
+      "h": "Un homme"
+    }
   },
-  "section1": {
-    "title": "Qu'est-ce qu'un bilan de couple ?",
-    "p1": "Un bilan de couple, c'est un questionnaire que les deux partenaires remplissent chacun de leur côté, pour comparer ensuite leurs réponses. Il ne mesure pas une compatibilité de personnalité : il regarde si vous voulez la même vie. Par exemple : « Avoir des enfants : oui c'est sûr, oui sans doute, je ne sais pas encore, ou non ». Si l'un répond « oui, c'est sûr » et l'autre « non », c'est un écart, et c'est le genre d'écart qu'il vaut mieux connaître tôt !",
-    "p2": "Les conseillers conjugaux utilisent ce genre de questionnaire depuis longtemps, notamment avant un mariage. Celui-ci se fait sans conseiller, sur votre téléphone, et dure 20 à 25 minutes pour chacun. Il pose des questions très concrètes : le compte commun, Noël chez qui, la ville ou la campagne, le téléphone à table, ou encore ce que chacun appelle tromper.",
-    "p3": "À la fin, vous voyez où vous êtes d'accord, où vos réponses sont proches, et où elles s'éloignent. Le but n'est pas d'avoir une note, c'est de savoir de quoi parler, et dans quel ordre."
-  },
-  "section2": {
-    "title": "Les douze domaines du bilan",
-    "p1": "Les questions sont rangées en douze domaines, du plus simple au plus intime. On commence par le quotidien pour se mettre en route, et on finit par la façon dont chacun vit le couple en ce moment.",
+  "lp": {
+    "badge": "Bilan de couple",
+    "titre": "Voulez-vous la même vie, tous les deux ?",
+    "sousTitre": "Le bilan de couple est une évaluation complète de votre relation. Vous répondez chacun de votre côté à une centaine de questions précises, sur douze domaines de la vie à deux, et vous recevez un rapport qui met vos deux réponses face à face, avec de quoi en parler.",
     "points": [
-      "<strong>Le quotidien à la maison :</strong> les tâches, ce que chacun a en tête, le rangement, le rythme des soirées et des week-ends.",
-      "<strong>Le temps à deux et le temps pour soi :</strong> combien de temps ensemble, le besoin d'être seul, les sorties, les vacances.",
-      "<strong>Famille et amis :</strong> la belle-famille, les fêtes de fin d'année, les soirées sans l'autre.",
-      "<strong>Le travail et les ambitions :</strong> la place du travail, une reconversion, un écart de salaire.",
-      "<strong>L'argent :</strong> compte commun ou pas, partage des dépenses, épargne, gros achats.",
-      "<strong>Où et comment vivre :</strong> emménager, la ville ou la campagne, devenir propriétaires, partir pour le travail de l'autre.",
-      "<strong>Les enfants :</strong> en vouloir ou pas, quand, combien, comment les élever.",
-      "<strong>Les valeurs :</strong> la religion, le mariage, ce qui compte le plus pour chacun.",
-      "<strong>La communication et les disputes :</strong> dire ce qui dérange, se disputer, se réconcilier.",
-      "<strong>La confiance et la fidélité :</strong> le téléphone, les ex, la jalousie, ce qui est tromper.",
-      "<strong>L'intimité et la tendresse :</strong> le désir, la tendresse, et la façon d'en parler.",
-      "<strong>Comment vous allez :</strong> huit questions sur la façon dont chacun vit le couple aujourd'hui."
+      "Chacun répond sur son téléphone, sans voir les réponses de l'autre",
+      "Des questions construites à partir de la recherche en psychologie du couple",
+      "Un rapport PDF d'une trentaine de pages, envoyé par e-mail"
     ],
-    "p2": "Aucun domaine ne se retire, et c'est voulu : si l'un de vous ne veut pas d'enfants et que l'autre en veut, c'est justement ce que le bilan doit montrer. En revanche, les questions s'adaptent à votre situation. Un couple qui ne vit pas encore ensemble a « vivre ensemble, quand ? » à la place de « qui fait les tâches ? », et un couple qui a déjà des enfants a « un autre enfant ? » à la place de « en voulez-vous ? »."
-  },
-  "section3": {
-    "title": "Comment ça se passe",
-    "p1": "Voici comment fonctionne le bilan, du début à la fin :",
-    "points": [
-      "<strong>Vous créez le bilan :</strong> vos deux prénoms, et sept questions sur votre situation (vivez-vous ensemble, avez-vous des enfants, etc.).",
-      "<strong>Vous invitez votre partenaire :</strong> vous lui envoyez un lien, par message ou avec un QR code.",
-      "<strong>Chacun répond de son côté :</strong> environ 90 questions, en une fois ou en plusieurs. Chaque réponse est enregistrée tout de suite, et chacun voit où en est l'autre, sans jamais voir ses réponses.",
-      "<strong>Vous découvrez votre résultat :</strong> dès que vous avez fini tous les deux, gratuitement.",
-      "<strong>Si vous le voulez, le rapport complet :</strong> tous vos écarts, vos deux réponses et de quoi en parler, pour {{prix}}."
+    "cta": "Commencer notre bilan",
+    "ctaNote": "Questions gratuites · {{prix}} pour vous deux, à la fin · Satisfaits ou remboursés {{jours}} jours",
+    "voirExtrait": "Voir un extrait du rapport",
+    "visuelAlt": "Deux pages d'un rapport d'exemple : la couverture et la synthèse",
+    "chiffres": [
+      {
+        "n": "12",
+        "l": "domaines de la vie à deux"
+      },
+      {
+        "n": "100",
+        "l": "questions environ"
+      },
+      {
+        "n": "25 min",
+        "l": "chacun, à son rythme"
+      },
+      {
+        "n": "30 pages",
+        "l": "de rapport, rien que pour vous"
+      }
     ],
-    "p2": "Sur les grandes questions (les enfants, le lieu de vie, le mariage, ce qui est tromper...), vous pouvez marquer une réponse « non négociable ». Si vos réponses s'opposent sur un point que l'un de vous a marqué comme ça, le rapport le montre en premier : c'est un point bloquant."
-  },
-  "section4": {
-    "title": "Pourquoi chacun répond de son côté",
-    "p1": "Quand on répond à deux sur le même écran, on regarde la réaction de l'autre avant de choisir, et on finit souvent par répondre ce qui fait plaisir. Chacun de son côté, on répond pour soi. D'ailleurs, beaucoup de couples découvrent des écarts sur des sujets dont ils pensaient avoir déjà parlé.",
-    "p2": "C'est aussi pour ça que les questions sur le partage des tâches se répondent en « surtout moi », « autant l'un que l'autre » ou « surtout l'autre ». Quand chacun pense en faire plus, le bilan le montre noir sur blanc, et c'est souvent le point de départ d'une discussion bien plus calme que d'habitude. Pour aller plus loin sur ce sujet précis, il y a aussi notre test sur <a href=\"/test-charge-mentale-couple/\">ce qui pèse dans la tête de chacun</a>.",
-    "p3": "Si vous cherchez plutôt un test rapide à faire ensemble sur le même téléphone, <a href=\"/test-compatibilite-amoureuse/\">vos points de compatibilité amoureuse</a> se mesurent en cinq minutes. Le bilan, lui, prend plus de temps parce qu'il va dans le détail de votre vie."
-  },
-  "section5": {
-    "title": "Ce qui est gratuit, et ce qui est payant",
-    "p1": "Répondre est gratuit, pour tous les deux. Quand vous avez fini, votre résultat général est gratuit aussi : votre pourcentage d'accord, la météo de votre couple, une barre par domaine, le nombre de vos écarts et de vos points bloquants, et un de vos écarts en entier, avec vos deux réponses et le guide pour en parler.",
-    "p2": "Le rapport complet coûte {{prix}} pour vous deux, en une seule fois, par l'un ou l'autre. Il contient tous vos écarts avec vos deux réponses, pourquoi chaque sujet compte, deux questions pour en parler et ce qu'il vaut mieux éviter de dire, vos quatre prochaines conversations dans l'ordre, ce qui vous rassemble, et la météo question par question. Vous pouvez l'imprimer ou le garder en PDF.",
-    "tip": "Le prix est le même pour tout le monde, il n'y a pas d'abonnement, et vous êtes satisfaits ou remboursés pendant {{jours}} jours."
-  },
-  "section6": {
-    "title": "Vos réponses restent entre vous",
-    "p1": "Il n'y a ni compte ni adresse e-mail à donner. Chacun accède au bilan par son propre lien, qui contient une clé secrète que nous ne gardons pas en clair. Personne d'autre que vous deux ne voit vos réponses, et votre partenaire ne les voit qu'une fois que vous avez fini tous les deux.",
-    "p2": "Un bilan non payé est effacé 60 jours après la dernière réponse, un bilan payé six mois après le paiement. Chacun de vous peut aussi le supprimer à tout moment, en un clic, depuis le rapport. Le détail est dans notre <a href=\"/confidentialite/\">politique de confidentialité</a>.",
-    "tip": "Ce bilan montre à chacun les réponses de l'autre. Si vous avez peur de votre partenaire, il n'est pas fait pour votre situation : en France, le 3919 répond gratuitement et anonymement, 24 h sur 24."
-  },
-  "faq": {
-    "title": "Questions fréquentes",
-    "q1": "Combien de temps faut-il pour faire le bilan ?",
-    "a1": "Comptez 20 à 25 minutes chacun, pour environ 90 questions. Rien ne vous oblige à tout faire d'un coup : chaque réponse est enregistrée, et vous reprenez où vous en étiez, sur le même téléphone ou avec votre lien personnel.",
-    "q2": "Est-ce que mon ou ma partenaire verra toutes mes réponses ?",
-    "a2": "Oui, une fois que vous avez fini tous les deux : le rapport met vos deux réponses côte à côte, c'est tout l'intérêt du bilan. Pendant que vous répondez, en revanche, personne ne voit rien, et chacun ne voit que l'avancement de l'autre.",
-    "q3": "Peut-on faire le bilan si on ne vit pas ensemble ou si on n'a pas d'enfants ?",
-    "a3": "Oui. Au début, vous décrivez votre situation en sept questions, et les questions s'adaptent : un couple qui ne vit pas ensemble aura « vivre ensemble, quand ? », un couple sans enfant aura « en voulez-vous ? », etc. Aucun domaine n'est retiré pour autant, parce que vos souhaits comptent autant que votre situation actuelle.",
-    "q4": "Et si on découvre qu'on n'est pas d'accord sur beaucoup de choses ?",
-    "a4": "C'est fréquent, et ce n'est pas une mauvaise nouvelle : un écart qu'on connaît se discute, un écart qu'on ignore finit par exploser au mauvais moment. Le rapport vous aide justement à choisir par quoi commencer, avec des questions pour en parler calmement.",
-    "q5": "Le bilan remplace-t-il une thérapie de couple ?",
-    "a5": "Non. C'est un outil pour mettre des mots sur ce que vous vivez et savoir de quoi parler. Si vous traversez une période difficile, un conseiller conjugal peut vous aider à aller plus loin, et le rapport peut d'ailleurs servir de point de départ avec lui.",
-    "q6": "Comment se passe le paiement ?",
-    "a6": "Par carte, Apple Pay ou Google Pay, sur la page de paiement sécurisée de Stripe. Un seul paiement de {{prix}}, par l'un ou l'autre, débloque le rapport pour vous deux. Vous recevez un reçu par e-mail, et vous êtes satisfaits ou remboursés pendant {{jours}} jours.",
-    "q7": "Peut-on refaire le bilan plus tard ?",
-    "a7": "Oui, et c'est même une bonne idée : refaire le bilan dans un an montre ce qui a bougé entre vous. Chaque bilan est indépendant, il suffit d'en créer un nouveau.",
-    "q8": "Que deviennent nos réponses ?",
-    "a8": "Elles servent uniquement à votre bilan. Elles sont effacées 60 jours après la dernière réponse si le bilan n'est pas payé, six mois après le paiement sinon, et chacun de vous peut les supprimer tout de suite depuis le rapport."
+    "pour": {
+      "titre": "Pour les couples qui veulent y voir clair",
+      "intro": "Il n'y a pas besoin d'aller mal pour faire un bilan. La plupart des couples le font à un moment bien précis :",
+      "cartes": [
+        {
+          "titre": "Avant une grande étape",
+          "texte": "Emménager, se marier, faire un enfant, acheter ensemble. C'est le bon moment pour vérifier que vous voulez la même chose, avant de vous engager."
+        },
+        {
+          "titre": "Quand les mêmes disputes reviennent",
+          "texte": "Souvent, derrière une dispute qui revient, il y a un écart que personne n'a jamais nommé. Le rapport le met sur la table, sans accuser personne."
+        },
+        {
+          "titre": "Quand vous vous posez des questions",
+          "texte": "Vous vous sentez moins proches, ou vous ne savez plus trop où vous en êtes. Le bilan aide à mettre des mots sur ce que chacun vit."
+        },
+        {
+          "titre": "Quand tout va bien",
+          "texte": "Pour que ça dure ! Les couples solides parlent des sujets qui fâchent avant qu'ils fâchent, et le bilan leur en donne l'occasion."
+        }
+      ]
+    },
+    "rapport": {
+      "titre": "Un rapport qui met vos deux réponses face à face",
+      "intro": "Une fois que vous avez fini tous les deux, vous recevez votre rapport en PDF, d'une trentaine de pages selon vos réponses. Voici à quoi il ressemble.",
+      "pages": [
+        {
+          "img": "synthese",
+          "titre": "Votre synthèse",
+          "texte": "Deux chiffres pour commencer : votre alignement, c'est-à-dire à quel point vous voulez la même vie, et le climat de votre couple en ce moment. Puis là où vous êtes le plus proches, et le moins."
+        },
+        {
+          "img": "carte",
+          "titre": "La carte de vos douze domaines",
+          "texte": "Le quotidien, l'argent, les enfants, la famille, la fidélité, l'intimité... Une barre par domaine, pour voir d'un coup d'œil où vous vous retrouvez."
+        },
+        {
+          "img": "conversation",
+          "titre": "Vos quatre prochaines conversations",
+          "texte": "Les sujets qui comptent le plus pour vous deux, avec vos deux réponses, pourquoi ça compte, des questions pour lancer la discussion et ce qu'il vaut mieux éviter de dire."
+        },
+        {
+          "img": "signaux",
+          "titre": "Vos signaux de vigilance",
+          "texte": "Les attitudes de dispute que des décennies de recherche relient à l'usure d'un couple : à quelle fréquence chacun de vous les voit chez vous, et comment réagir."
+        }
+      ],
+      "legende": "Extraits d'un rapport d'exemple. Camille et Julien sont un couple fictif."
+    },
+    "diff": {
+      "titre": "La différence avec un test qu'une IA vous ferait passer",
+      "intro": "Vous pourriez demander à une IA de vous poser des questions sur votre couple. Elle le ferait volontiers, mais vous n'obtiendriez pas la même chose. Voici ce qui change.",
+      "colIa": "Un test généré par une IA",
+      "colBilan": "Le bilan de couple",
+      "lignes": [
+        {
+          "sujet": "Les questions",
+          "ia": "Inventées au moment où vous les demandez, souvent vagues : « Communiquez-vous bien ? »",
+          "bilan": "Une centaine de questions écrites à l'avance et appuyées sur la recherche : « Qui pense aux rendez-vous chez le médecin ? »"
+        },
+        {
+          "sujet": "Qui répond",
+          "ia": "Une seule personne, qui imagine ce que l'autre dirait",
+          "bilan": "Chacun de son côté, sans voir les réponses de l'autre : on compare deux vrais points de vue"
+        },
+        {
+          "sujet": "Ce qui est mesuré",
+          "ia": "Une impression générale",
+          "bilan": "Les sujets qui engagent une vie (enfants, argent, lieu de vie, fidélité) et les attitudes de dispute que la recherche relie le plus à l'usure d'un couple"
+        },
+        {
+          "sujet": "Les grandes décisions",
+          "ia": "Toutes les questions pèsent pareil",
+          "bilan": "Ce que l'un de vous juge non négociable est repéré, et passe en premier"
+        },
+        {
+          "sujet": "Le résultat",
+          "ia": "Quelques paragraphes rassurants",
+          "bilan": "Un rapport d'une trentaine de pages : vos écarts avec vos deux réponses, pourquoi ils comptent et comment en parler"
+        },
+        {
+          "sujet": "Vos réponses",
+          "ia": "Tapées dans une conversation avec un service d'IA",
+          "bilan": "Gardées chez nous, jamais revendues, et effacées automatiquement au bout de six mois au plus"
+        }
+      ],
+      "conclusion": "Ce bilan est une évaluation sérieuse, et longue. Son objectif est de vous donner une vision réelle et globale de l'état de votre relation à l'instant T, sujet par sujet, pour que vous sachiez de quoi parler."
+    },
+    "recherche": {
+      "titre": "Construit à partir de la recherche sur les couples",
+      "p1": "Les questions ne sortent pas de nulle part. Elles s'appuient sur des travaux de recherche en psychologie et en sociologie du couple : des études qui ont suivi des milliers de couples pendant des années, des thèses sur la répartition des tâches à la maison, et les questionnaires de préparation au mariage qu'utilisent les conseillers conjugaux depuis des décennies.",
+      "constats": [
+        "Comparer les réponses de chacun, données séparément, permet de repérer les écarts bien avant qu'ils posent problème. C'est le principe des questionnaires utilisés avant un mariage.",
+        "La façon de se disputer pèse plus que le nombre de disputes. Quelques attitudes précises usent un couple bien plus que les désaccords eux-mêmes.",
+        "Le sentiment que l'autre tient à la relation, et le fait de se sentir apprécié, font partie des indicateurs les plus solides de la qualité d'un couple.",
+        "Celui qui pense à tout n'est pas toujours celui qui fait tout. La charge mentale se voit mal de l'intérieur, et chacun pense souvent en faire plus."
+      ],
+      "p2": "Le bilan n'est pas un test clinique et ne remplace pas un professionnel. C'est un questionnaire sérieux, construit à partir de ce que la recherche sait des couples, pour vous aider à parler des bons sujets."
+    },
+    "questions": {
+      "titre": "Des questions précises, pas des généralités",
+      "intro": "Voici quelques-unes des questions du bilan, telles que Camille les a vues. Chacun y répond de son côté, et c'est en comparant vos deux réponses que le rapport trouve ce qui compte.",
+      "exemples": [
+        {
+          "domaine": "Le quotidien à la maison",
+          "q": "Qui pense à tout ce qui doit être fait (rendez-vous, factures, cadeaux, ce qui manque dans le frigo) ?",
+          "o": [
+            "Surtout moi",
+            "Un peu plus moi",
+            "Autant l'un que l'autre",
+            "Un peu plus Julien",
+            "Surtout Julien"
+          ]
+        },
+        {
+          "domaine": "L'argent",
+          "q": "Pour un achat de plus de 300 € rien que pour vous...",
+          "o": [
+            "Je le fais sans en parler",
+            "Je préviens Julien",
+            "J'en parle avant",
+            "Je décide avec Julien"
+          ]
+        },
+        {
+          "domaine": "Où et comment vivre",
+          "q": "Dans dix ans, vous vous voyez vivre...",
+          "o": [
+            "Dans une grande ville",
+            "Dans une ville moyenne ou en banlieue",
+            "À la campagne",
+            "À l'étranger"
+          ]
+        },
+        {
+          "domaine": "La confiance et la fidélité",
+          "q": "Pour vous, on commence à tromper quand on...",
+          "o": [
+            "Flirte par messages",
+            "Embrasse quelqu'un",
+            "Couche avec quelqu'un",
+            "A une vraie relation cachée"
+          ]
+        },
+        {
+          "domaine": "La communication et les disputes",
+          "q": "Pendant une dispute, ce dont vous avez besoin, c'est...",
+          "o": [
+            "De régler ça tout de suite",
+            "D'une pause pour me calmer avant d'en parler",
+            "D'être rassurée d'abord",
+            "De laisser passer, ça s'arrange tout seul"
+          ]
+        },
+        {
+          "domaine": "Famille et amis",
+          "q": "Les fêtes de fin d'année, idéalement, vous les passez...",
+          "o": [
+            "Dans ma famille",
+            "Dans la famille de Julien",
+            "Une année chacun",
+            "À deux ou entre amis"
+          ]
+        }
+      ],
+      "fin": "Sur les grandes questions (les enfants, le lieu de vie, la fidélité...), chacun peut aussi marquer sa réponse « non négociable ». Le rapport commence alors par là."
+    },
+    "etapes": {
+      "titre": "Comment ça se passe",
+      "liste": [
+        {
+          "titre": "Vous créez le bilan",
+          "texte": "Vos deux prénoms, sept questions sur votre situation (vivez-vous ensemble, avez-vous des enfants...), puis vous envoyez le lien à votre partenaire."
+        },
+        {
+          "titre": "Chacun répond de son côté",
+          "texte": "Sur son téléphone, à son rythme, en une ou plusieurs fois : tout est enregistré au fur et à mesure. Comptez 25 à 30 minutes chacun."
+        },
+        {
+          "titre": "Vous recevez votre rapport",
+          "texte": "Vous le débloquez quand vous avez fini vos réponses. Il arrive par e-mail en PDF dès que vous avez fini tous les deux, et reste en ligne pendant six mois."
+        }
+      ]
+    },
+    "prix": {
+      "titre": "Un seul prix, pour vous deux",
+      "unite": "pour le couple, en une fois",
+      "aide": "Vous ne payez qu'à la fin, une fois vos réponses données. Un seul paiement, par l'un ou l'autre. Pas d'abonnement, pas de compte.",
+      "inclus": [
+        "Une centaine de questions sur douze domaines",
+        "Le rapport complet, d'une trentaine de pages",
+        "Vos quatre prochaines conversations, avec de quoi les mener",
+        "Le PDF par e-mail et la version en ligne pendant six mois"
+      ],
+      "comparaison": "Pour comparer, une séance chez un conseiller conjugal coûte souvent entre 50 et 90 €.",
+      "garantie": "Satisfaits ou remboursés pendant {{jours}} jours : un message suffit."
+    },
+    "confiance": {
+      "titre": "Vos réponses restent entre vous",
+      "points": [
+        {
+          "titre": "Pas de compte",
+          "texte": "Chacun accède au bilan par son propre lien. Aucun mot de passe, et une adresse e-mail seulement si vous voulez recevoir le rapport."
+        },
+        {
+          "titre": "Rien n'est montré avant la fin",
+          "texte": "Ni vous ni votre partenaire ne voyez les réponses de l'autre avant que vous ayez fini tous les deux."
+        },
+        {
+          "titre": "Effacé automatiquement",
+          "texte": "Un bilan non payé est effacé 60 jours après la dernière réponse, un bilan payé six mois après le paiement. Chacun peut le supprimer avant, d'un clic."
+        },
+        {
+          "titre": "Paiement sécurisé",
+          "texte": "Le paiement passe par Stripe (carte, Apple Pay, Google Pay). Nous ne voyons jamais votre carte."
+        }
+      ]
+    },
+    "faq": {
+      "titre": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Combien de temps faut-il pour faire le bilan ?",
+          "a": "Comptez 25 à 30 minutes chacun, pour une centaine de questions. Rien ne vous oblige à tout faire d'un coup : chaque réponse est enregistrée, et vous reprenez là où vous en étiez."
+        },
+        {
+          "q": "Mon ou ma partenaire verra-t-il toutes mes réponses ?",
+          "a": "Oui, une fois que vous avez fini tous les deux : le rapport met vos deux réponses côte à côte, c'est tout l'intérêt. Avant ça, personne ne voit rien."
+        },
+        {
+          "q": "Pourquoi faut-il payer pour voir le résultat ?",
+          "a": "Parce que le résultat, c'est le rapport : vos deux séries de réponses comparées, sujet par sujet, avec de quoi en parler. Les questions sont gratuites, et vous ne payez qu'une fois vos réponses finies, si vous voulez le rapport."
+        },
+        {
+          "q": "Peut-on faire le bilan si on ne vit pas ensemble ou si on n'a pas d'enfants ?",
+          "a": "Oui. Au début, vous décrivez votre situation en sept questions, et les questions s'adaptent : un couple qui ne vit pas encore ensemble répond sur ce qu'il imagine, un couple sans enfant sur ce qu'il souhaite."
+        },
+        {
+          "q": "Et si on découvre qu'on n'est pas d'accord sur beaucoup de choses ?",
+          "a": "C'est fréquent, et ce n'est pas une mauvaise nouvelle : un écart qu'on connaît se discute, un écart qu'on ignore finit par revenir en dispute. Le rapport vous dit par quoi commencer, et comment en parler sans que ça tourne au procès."
+        },
+        {
+          "q": "Est-ce basé sur quelque chose de sérieux ?",
+          "a": "Oui. Les questions s'appuient sur la recherche en psychologie du couple et sur les questionnaires utilisés par les conseillers conjugaux avant un mariage. Le bilan n'est pas un test clinique pour autant : c'est un outil pour parler, pas un diagnostic."
+        },
+        {
+          "q": "Le bilan remplace-t-il une thérapie de couple ?",
+          "a": "Non. C'est un outil pour mettre des mots sur ce que vous vivez et savoir de quoi parler. Si vous traversez une période difficile, un conseiller conjugal ou un thérapeute de couple peut vous accompagner, et le rapport peut d'ailleurs servir de point de départ."
+        },
+        {
+          "q": "Comment se passe le paiement ?",
+          "a": "Par carte, Apple Pay ou Google Pay, sur la page de paiement sécurisée de Stripe. Un seul paiement de {{prix}} pour vous deux, quand vous avez fini vos réponses. Vous recevez un reçu par e-mail, et le rapport dès que vous avez fini tous les deux."
+        },
+        {
+          "q": "Et si le rapport ne nous plaît pas ?",
+          "a": "Vous êtes satisfaits ou remboursés pendant {{jours}} jours : un message depuis la page contact suffit, sans avoir à vous justifier."
+        },
+        {
+          "q": "Que deviennent nos réponses ?",
+          "a": "Elles servent uniquement à votre bilan, ne sont jamais revendues et ne servent à aucune publicité. Elles sont effacées 60 jours après la dernière réponse si le bilan n'est pas payé, six mois après le paiement sinon, et chacun de vous peut tout supprimer avant."
+        }
+      ]
+    },
+    "final": {
+      "titre": "Prêts à faire le point ?",
+      "texte": "Vingt-cinq minutes chacun, et vous saurez sur quoi vous êtes d'accord, et de quoi il faut parler. Commencez quand vous voulez : vous pouvez faire une pause à tout moment."
+    },
+    "avertissement": "Ce bilan montre à chacun les réponses de l'autre. Si vous avez peur de votre partenaire, il n'est pas fait pour votre situation : en France, le 3919 répond gratuitement et anonymement, 24 h sur 24."
   }
 }

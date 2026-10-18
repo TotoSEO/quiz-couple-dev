@@ -1,0 +1,57 @@
+name: Bilan de couple · rapports PDF
+
+# Fabrique les rapports PDF des bilans payés et finis des deux côtés, les
+# range dans le stockage privé bilan-rapports et les fait envoyer par e-mail
+# (bilan/fabrique.mjs, docs/bilan/CONCEPTION.md).
+#
+# Qui le lance : la base elle-même, dès qu'un rapport passe « à faire »
+# (déclencheur bilans_compte → bilan_lancer_fabrique →
+# social_declencher_workflow, le même jeton que l'horloge des réseaux), puis
+# pg_cron toutes les dix minutes tant qu'il reste un rapport en attente, et
+# une fois par jour pour effacer les fichiers des bilans supprimés. Le
+# « schedule » ci-dessous n'est qu'un secours.
+#
+# Un rapport qui ne passe pas les contrôles de mise en page n'est pas envoyé
+# et ce workflow échoue : GitHub prévient par e-mail, l'onglet Bilan de
+# l'admin montre l'erreur. Le relancer (« Run workflow ») est sans risque.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 */6 * * *'
+
+concurrency:
+  group: bilan-rapport
+  cancel-in-progress: false
+
+jobs:
+  rapports:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            bilan
+            supabase/functions/_shared/bilan
+            public/fonts/bilan
+            fr
+            en
+            es
+            de
+            it
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: bilan/package-lock.json
+      - name: Dépendances
+        run: cd bilan && npm ci
+      # Le Chrome stable de la machine imprime les PDF (channel « chrome »).
+      - name: Chrome
+        run: google-chrome --version
+      - name: Rapports
+        run: node bilan/fabrique.mjs

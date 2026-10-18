@@ -345,6 +345,11 @@
   <% } else { %>
   <link rel="stylesheet" href="/css/styles.css">
   <% } %>
+  <%# La feuille propre à la page (css/pages/<routeKey>.css), mise en ligne :
+      aujourd'hui la page du bilan de couple seulement. %>
+  <% if (typeof cssPage !== 'undefined' && cssPage) { %>
+  <style data-page><%- cssPage %></style>
+  <% } %>
   <%# L'habillage de saison (build/config.js, SAISON ; Halloween 2026) : une
       petite feuille a part, ecrite ici pour ne toucher ni styles.css ni ses
       feuilles critiques, jamais sur l'admin. Le body porte la classe

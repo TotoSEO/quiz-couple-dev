@@ -365,6 +365,22 @@
             "How would you like us to celebrate the next one?"
           ],
           "eviter": "Saying \"it's just commercial\" when it matters to the other: the point is how they feel, not the holiday."
+        },
+        "tps9": {
+          "q": "Doing things together you've never done before (a new place, an activity, a different kind of trip), you'd like to do...",
+          "o": [
+            "Much more than now",
+            "A bit more",
+            "As much as now",
+            "Less, I prefer our habits"
+          ],
+          "court": "Trying new things together",
+          "pourquoi": "Couples who regularly share new experiences get less bored in their relationship, and boredom wears a couple down long before arguments do. You still need the same appetite for novelty: for one of you it's an adventure, for the other it's one more thing to organise.",
+          "parler": [
+            "What's the last thing we did together for the very first time?",
+            "What would you like us to try this year?"
+          ],
+          "eviter": "Planning a \"surprise\" that the other will experience as yet another chore."
         }
       }
     },
@@ -1298,6 +1314,81 @@
             "How do you tell me you love me, without saying it?"
           ],
           "eviter": "Assuming the other already knows: knowing and hearing aren't the same."
+        },
+        "dis8": {
+          "q": "During your arguments, criticism sometimes targets the person rather than the problem (\"you always...\", \"you never...\"):",
+          "o": [
+            "Never",
+            "Rarely",
+            "Sometimes",
+            "Often"
+          ],
+          "court": "Criticism aimed at the person",
+          "pourquoi": "Saying \"you forgot the shopping\" is about a fact. Saying \"you never think of anything\" is about the person, and the other has only one option left: to defend themselves. Researchers who have watched couples for decades see this shift as one of the first signs an argument is going to go badly.",
+          "parler": [
+            "When I criticise something, how could I say it so it doesn't feel like an attack?",
+            "Is there something I say that always makes you tense up?"
+          ]
+        },
+        "dis9": {
+          "q": "During an argument, one of you sometimes mocks the other, is sarcastic or rolls their eyes:",
+          "o": [
+            "Never",
+            "Rarely",
+            "Sometimes",
+            "Often"
+          ],
+          "court": "Mockery and contempt",
+          "pourquoi": "Contempt (sarcasm, mockery, eye-rolling) is, in studies that follow couples over many years, the most worrying signal for a relationship's future. It tells the other \"I'm better than you\", which no disagreement ever says.",
+          "parler": [
+            "Do I sometimes use a tone that hurts you, even as a joke?",
+            "What do you admire about me, even when you're angry?"
+          ]
+        },
+        "dis10": {
+          "q": "When {autre} criticises you, your first reflex is to justify yourself or hit back with another criticism:",
+          "o": [
+            "Never",
+            "Rarely",
+            "Sometimes",
+            "Often"
+          ],
+          "court": "Defending instead of listening",
+          "pourquoi": "Justifying yourself is a very human reflex. The problem is that the other hears \"it's not my fault\" and repeats the complaint louder. Acknowledging even a small part (\"you're right, I forgot\") is often enough to bring the tension down.",
+          "parler": [
+            "When I justify myself, what would you need to hear instead?",
+            "On what topic do you feel I never admit anything?"
+          ]
+        },
+        "dis11": {
+          "q": "During an argument, one of you sometimes shuts down completely: stops answering, leaves the room without a word, or acts as if the other wasn't there:",
+          "o": [
+            "Never",
+            "Rarely",
+            "Sometimes",
+            "Often"
+          ],
+          "court": "Shutting down during an argument",
+          "pourquoi": "Shutting down is almost never indifference: it's often the body overloading, the heart beating too fast to think. But for the person left facing it, that silence feels like a wall. A real break of about twenty minutes, announced with a time to come back, makes a big difference.",
+          "parler": [
+            "When I shut down, how does it feel for you?",
+            "Shall we agree on a word for \"break, I need twenty minutes\"?"
+          ]
+        },
+        "dis12": {
+          "q": "After an argument, you manage to make up (a gesture, a joke, a \"sorry\", a hug):",
+          "o": [
+            "Always",
+            "Often",
+            "Sometimes",
+            "Rarely"
+          ],
+          "court": "Making up after an argument",
+          "pourquoi": "Every couple argues. According to research, couples who last have as many arguments as others; the difference is that they find it easier to come back to each other afterwards, with a gesture, a word or a joke.",
+          "parler": [
+            "What works best for you when we make up?",
+            "Is there an argument we've never really got over?"
+          ]
         }
       }
     },
@@ -1692,6 +1783,66 @@
           "parler": [
             "What would make you answer \"yes, without hesitating\"?",
             "What has changed since the beginning, for you?"
+          ]
+        },
+        "met9": {
+          "q": "When you share good news with {autre}, their reaction is usually...",
+          "o": [
+            "Enthusiastic: we talk about it, they're happy for me",
+            "Positive, nothing more",
+            "Distracted, half listening",
+            "Indifferent or critical"
+          ],
+          "court": "Sharing good news",
+          "pourquoi": "People talk a lot about support in hard times. Research shows that how you react to good news matters at least as much: a \"that's great, tell me everything!\" brings you closer, a distracted \"oh, nice\" pushes you apart without you noticing.",
+          "parler": [
+            "What's the last good news you told me, and how did I react?",
+            "What shows you that I'm really happy for you?"
+          ]
+        },
+        "met10": {
+          "q": "You feel appreciated by {autre}, for what you do and for who you are:",
+          "o": [
+            "Always",
+            "Often",
+            "Rarely",
+            "Never"
+          ],
+          "court": "Feeling appreciated",
+          "pourquoi": "Feeling appreciated by your partner is among the best predictors of relationship quality, according to a large analysis that brought together dozens of couple studies. And appreciation spreads: the person who feels appreciated tends to appreciate the other in return.",
+          "parler": [
+            "What do I do for you that you'd like me to notice more often?",
+            "When did you last feel I really saw what you do?"
+          ]
+        },
+        "met11": {
+          "q": "You're sure {autre} cares about your relationship as much as you do:",
+          "o": [
+            "Completely",
+            "Mostly",
+            "Not really",
+            "Not at all"
+          ],
+          "court": "The other's commitment",
+          "pourquoi": "Feeling that the other is truly committed is, in large analyses of couple data, one of the best indicators of relationship quality. A doubt about it often weighs silently, without ever being said.",
+          "parler": [
+            "What shows you that I care about us?",
+            "Have there been times when you doubted my commitment?"
+          ]
+        },
+        "met12": {
+          "q": "You feel {autre} knows what's going on in your life right now (your worries, your plans, what's on your mind):",
+          "o": [
+            "Completely",
+            "Mostly",
+            "A little",
+            "Not really"
+          ],
+          "court": "Knowing each other's life",
+          "pourquoi": "Knowing what's on the other's mind right now (a difficult colleague, a project, a worry) is one of the foundations of a solid couple. When that knowledge fades, you end up living side by side rather than together, often without a single argument to flag it.",
+          "parler": [
+            "What's taking up most of your head at the moment?",
+            "What don't I know about your week?"
           ]
         }
       }

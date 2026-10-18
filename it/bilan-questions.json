@@ -365,6 +365,22 @@
             "Come ti piacerebbe festeggiare la prossima?"
           ],
           "eviter": "Dire «è solo una festa commerciale» quando per l'altro conta: il punto è quello che prova lui, non la festa."
+        },
+        "tps9": {
+          "q": "Fare insieme cose che non avete mai fatto (un posto nuovo, un'attività, un viaggio diverso), ti piacerebbe farne...",
+          "o": [
+            "Molte più di adesso",
+            "Qualcuna in più",
+            "Quante adesso",
+            "Meno, preferisco le nostre abitudini"
+          ],
+          "court": "La novità in coppia",
+          "pourquoi": "Le coppie che vivono spesso esperienze nuove insieme si annoiano meno nella loro relazione, e la noia logora una coppia molto prima dei litigi. Bisogna però avere la stessa voglia di novità: per uno è un'avventura, per l'altro una fatica in più.",
+          "parler": [
+            "Qual è l'ultima cosa che abbiamo fatto insieme per la prima volta?",
+            "Cosa ti piacerebbe provare insieme quest'anno?"
+          ],
+          "eviter": "Organizzare una «sorpresa» che l'altro vivrà come un impegno in più."
         }
       }
     },
@@ -1298,6 +1314,81 @@
             "Come mi dici che mi ami, senza dirlo?"
           ],
           "eviter": "Dare per scontato che l'altro lo sappia già: saperlo e sentirselo dire non è la stessa cosa."
+        },
+        "dis8": {
+          "q": "Durante i vostri litigi, a volte i rimproveri colpiscono la persona invece del problema («sei sempre...», «non fai mai...»):",
+          "o": [
+            "Mai",
+            "Raramente",
+            "A volte",
+            "Spesso"
+          ],
+          "court": "I rimproveri contro la persona",
+          "pourquoi": "Dire «hai dimenticato la spesa» parla di un fatto. Dire «non pensi mai a niente» parla della persona, e all'altro resta solo da difendersi. I ricercatori che osservano le coppie da decenni vedono in questo scivolamento uno dei primi segni che un litigio finirà male.",
+          "parler": [
+            "Quando ti faccio un rimprovero, come potrei dirlo perché tu non lo senta come un attacco?",
+            "C'è una frase mia che ti fa sempre scattare?"
+          ]
+        },
+        "dis9": {
+          "q": "Durante un litigio, a volte uno di voi prende in giro l'altro, fa dell'ironia o alza gli occhi al cielo:",
+          "o": [
+            "Mai",
+            "Raramente",
+            "A volte",
+            "Spesso"
+          ],
+          "court": "La presa in giro e il disprezzo",
+          "pourquoi": "Il disprezzo (l'ironia, le prese in giro, gli occhi al cielo) è, negli studi che seguono le coppie per molti anni, il segnale più preoccupante per il futuro di una relazione. Dice all'altro «valgo più di te», cosa che nessun disaccordo dice.",
+          "parler": [
+            "Mi capita di avere un tono che ti ferisce, anche per scherzo?",
+            "Cosa ammiri di me, anche quando sei arrabbiato o arrabbiata?"
+          ]
+        },
+        "dis10": {
+          "q": "Quando {autre} ti fa un rimprovero, il tuo primo riflesso è giustificarti o rispondere con un altro rimprovero:",
+          "o": [
+            "Mai",
+            "Raramente",
+            "A volte",
+            "Spesso"
+          ],
+          "court": "Difendersi invece di ascoltare",
+          "pourquoi": "Giustificarsi è un riflesso molto umano. Il problema è che l'altro sente «non è colpa mia» e ripete il rimprovero più forte. Riconoscere anche solo una piccola parte («è vero, l'ho dimenticato») spesso basta a far scendere la tensione.",
+          "parler": [
+            "Quando mi giustifico, cosa avresti bisogno di sentire al posto?",
+            "Su quale argomento hai l'impressione che io non riconosca mai niente?"
+          ]
+        },
+        "dis11": {
+          "q": "Durante un litigio, a volte uno di voi si chiude del tutto: non risponde più, esce dalla stanza senza una parola o fa come se l'altro non ci fosse:",
+          "o": [
+            "Mai",
+            "Raramente",
+            "A volte",
+            "Spesso"
+          ],
+          "court": "Chiudersi durante un litigio",
+          "pourquoi": "Chiudersi non è quasi mai indifferenza: spesso è il corpo che va in saturazione, il cuore che batte troppo forte per ragionare. Ma per chi resta di fronte, quel silenzio sembra un muro. Una vera pausa di una ventina di minuti, dicendo quando si torna, cambia molte cose.",
+          "parler": [
+            "Quando mi chiudo, cosa provi?",
+            "Ci mettiamo d'accordo su una parola per dire «pausa, ho bisogno di venti minuti»?"
+          ]
+        },
+        "dis12": {
+          "q": "Dopo un litigio, riuscite a fare pace (un gesto, una battuta, uno «scusa», un abbraccio):",
+          "o": [
+            "Sempre",
+            "Spesso",
+            "A volte",
+            "Raramente"
+          ],
+          "court": "Fare pace dopo un litigio",
+          "pourquoi": "Tutte le coppie litigano. Secondo le ricerche, le coppie che durano litigano quanto le altre; la differenza è che trovano più facilmente il modo di tornare l'uno verso l'altra dopo, con un gesto, una parola o una battuta.",
+          "parler": [
+            "Cosa funziona meglio per te per fare pace?",
+            "C'è un litigio da cui non ci siamo mai ripresi del tutto?"
+          ]
         }
       }
     },
@@ -1692,6 +1783,66 @@
           "parler": [
             "Cosa ti farebbe rispondere «sì, senza esitare»?",
             "Cosa è cambiato dall'inizio, per te?"
+          ]
+        },
+        "met9": {
+          "q": "Quando dai una bella notizia a {autre}, la reazione di solito è...",
+          "o": [
+            "Entusiasta: ne parliamo, ne è felice",
+            "Positiva, niente di più",
+            "Distratta, a metà",
+            "Indifferente o critica"
+          ],
+          "court": "Condividere le belle notizie",
+          "pourquoi": "Si parla molto del sostegno nei momenti difficili. Le ricerche mostrano che il modo di reagire alle belle notizie conta almeno altrettanto: un «fantastico, raccontami!» avvicina, un «ah, bene» distratto allontana senza che ce ne si accorga.",
+          "parler": [
+            "Qual è l'ultima bella notizia che mi hai dato, e come ho reagito?",
+            "Cosa ti fa capire che sono davvero felice per te?"
+          ]
+        },
+        "met10": {
+          "q": "Ti senti {apprezzato|apprezzata|apprezzato/a} da {autre}, per quello che fai e per quello che sei:",
+          "o": [
+            "Sempre",
+            "Spesso",
+            "Raramente",
+            "Mai"
+          ],
+          "court": "Sentirsi apprezzati",
+          "pourquoi": "Sentirsi apprezzati dal partner è tra ciò che predice meglio la qualità di una relazione, secondo una vasta analisi che ha riunito decine di studi sulle coppie. E l'apprezzamento si trasmette: chi si sente apprezzato tende ad apprezzare l'altro a sua volta.",
+          "parler": [
+            "Cosa faccio per te che vorresti che notassi più spesso?",
+            "Qual è l'ultima volta in cui hai avuto l'impressione che vedessi davvero quello che fai?"
+          ]
+        },
+        "met11": {
+          "q": "Sei {sicuro|sicura|sicuro/a} che {autre} tenga alla vostra relazione quanto te:",
+          "o": [
+            "Del tutto",
+            "Abbastanza",
+            "Non proprio",
+            "Per niente"
+          ],
+          "court": "L'impegno dell'altro",
+          "pourquoi": "Sentire che l'altro è davvero impegnato è, nelle grandi analisi di dati sulle coppie, uno dei migliori indicatori della qualità di una relazione. Un dubbio su questo spesso pesa in silenzio, senza mai essere detto.",
+          "parler": [
+            "Cosa ti fa capire che tengo a noi?",
+            "Ci sono stati momenti in cui hai dubitato del mio impegno?"
+          ]
+        },
+        "met12": {
+          "q": "Hai l'impressione che {autre} sappia cosa succede nella tua vita in questo momento (le tue preoccupazioni, i tuoi progetti, ciò che ti tiene impegnato o impegnata):",
+          "o": [
+            "Del tutto",
+            "In gran parte",
+            "Un po'",
+            "Non proprio"
+          ],
+          "court": "Conoscere la vita dell'altro",
+          "pourquoi": "Sapere cosa occupa l'altro in questo momento (un collega difficile, un progetto, una preoccupazione) è una delle basi di una coppia solida. Quando questa conoscenza si sbiadisce, si finisce per vivere uno accanto all'altro invece che insieme, spesso senza un solo litigio a segnalarlo.",
+          "parler": [
+            "Cosa ti gira di più per la testa in questo periodo?",
+            "Cosa non so della tua settimana?"
           ]
         }
       }

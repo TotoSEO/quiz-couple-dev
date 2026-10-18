@@ -1,22 +1,31 @@
 <%
-  // Le bilan de couple payant (docs/bilan/CONCEPTION.md). La page porte le
-  // texte et l'application (js/bilan.js), qui parle à la fonction serveur
-  // `bilan` ; le calcul vient de js/bilan-coeur.js, construit depuis
-  // supabase/functions/_shared/bilan/coeur.mjs, et les questions de
-  // /js/data/bilan-<lang>.json, chargé seulement quand l'application s'ouvre.
+  // Le bilan de couple payant (docs/bilan/CONCEPTION.md) : une page de vente
+  // (`lp` de {lang}/bilan.json), et l'application (js/bilan.js), qui prend
+  // toute la place dès qu'on commence (body.bilan-focus) et parle à la
+  // fonction serveur `bilan`. Le calcul vient de js/bilan-coeur.js, le
+  // rapport de js/bilan-rapport.js (le même gabarit que le PDF), les
+  // questions de /js/data/bilan-<lang>.json, chargé quand l'application
+  // s'ouvre. Les styles de la page sont dans css/bilan.css, mis en ligne par
+  // le gabarit de base (cssPage) ; ceux des écrans de l'application dans
+  // styles.css (.bilan-*).
+  //
+  // La page n'a pas de vocation de référencement (noindex tant que le bilan
+  // n'est pas ouvert, et elle est d'abord la destination des tests du site) :
+  // elle est écrite pour convaincre quelqu'un qui arrive d'un test.
   const ns = 'bilan';
   const pageTitle = t('quizzes:bilanCouple.title', 'Bilan de couple');
   const prix = typeof bilanPrix !== 'undefined' ? bilanPrix : '9,90 €';
   const jours = typeof bilanGarantie !== 'undefined' ? bilanGarantie : 0;
   // {{prix}} et {{jours}} dans les textes de la page.
   const rp = (s) => String(s || '').replace(/\{\{prix\}\}/g, prix).replace(/\{\{jours\}\}/g, jours);
+  const L = (k, d) => t(ns + ':lp.' + k, d === undefined ? '' : d);
+  // Le français colle « ? ! : ; » à leur mot.
+  const ins = (s) => lang === 'fr' ? String(s || '').replace(/ ([?!:;»])/g, ' $1').replace(/« /g, '« ') : String(s || '');
+  const e = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const x = (k, d) => e(ins(rp(L(k, d))));
 
-  const faqEntrees = [];
-  for (let i = 1; i <= 8; i++) {
-    const q = t(ns + ':faq.q' + i, '');
-    const a = rp(t(ns + ':faq.a' + i, ''));
-    if (q && a) faqEntrees.push({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } });
-  }
+  const faqItems = t(ns + ':lp.faq.items', []);
+  const faqEntrees = (Array.isArray(faqItems) ? faqItems : []).map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: rp(f.a) } }));
 
   const baseUrl = 'https://quiz-couple.com';
   const imageBilan = (typeof featuredImage !== 'undefined' && featuredImage) ? baseUrl + featuredImage : baseUrl + '/og-image.webp';
@@ -36,6 +45,10 @@
     publisher: { '@type': 'Organization', name: 'Quiz Couple', url: baseUrl, logo: { '@type': 'ImageObject', url: baseUrl + '/apple-touch-icon.png' } }
   };
 
+  // Les aperçus du rapport : des pages d'un rapport d'exemple (couple
+  // fictif), rendues par bilan/apercus.mjs dans chaque langue.
+  const apercu = (nom) => '/bilan/apercu-' + nom + '-' + lang + '.webp';
+
   // Tout ce que l'application affiche, dans la langue de la page, avec le
   // prix et la garantie déjà écrits.
   const appTextes = JSON.parse(rp(JSON.stringify(t(ns + ':app', {}))));
@@ -49,151 +62,268 @@
     prix,
     garantie: jours,
     ouvert: !!(typeof bilanOuvert !== 'undefined' && bilanOuvert),
+    apercu: apercu('synthese'),
     textes: appTextes,
   };
+  const chiffres = t(ns + ':lp.chiffres', []);
+  const pour = t(ns + ':lp.pour.cartes', []);
+  const pages = t(ns + ':lp.rapport.pages', []);
+  const lignes = t(ns + ':lp.diff.lignes', []);
+  const constats = t(ns + ':lp.recherche.constats', []);
+  const exemples = t(ns + ':lp.questions.exemples', []);
+  const etapes = t(ns + ':lp.etapes.liste', []);
+  const inclus = t(ns + ':lp.prix.inclus', []);
+  const confiance = t(ns + ':lp.confiance.points', []);
+  const icones = [
+    '<path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/>',
+    '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.4A8 8 0 1 1 21 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/>',
+    '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6"/><path d="M12 17h.01"/>',
+    '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+  ];
+  const iconesConfiance = [
+    '<circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/><path d="M3 3l18 18"/>',
+    '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><path d="M3 3l18 18"/>',
+    '<path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/>',
+    '<rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
+  ];
+  const fleche = '<svg class="blp-fleche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>';
+  const coche = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 %>
 <script type="application/ld+json"><%- JSON.stringify(appBilan) %></script>
 <% if (faqEntrees.length) { %>
 <script type="application/ld+json"><%- JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqEntrees }) %></script>
 <% } %>
 
-<!-- Hero -->
-<section class="quiz-page-hero relative overflow-hidden hero-gradient">
-  <div class="container mx-auto px-4 relative z-10">
-    <div class="mx-auto max-w-3xl text-center">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a></li>
-          <li class="breadcrumb-separator" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></li>
-          <li class="breadcrumb-current" aria-current="page"><%= t('quizzes:bilanCouple.shortTitle', pageTitle) %></li>
-        </ol>
-      </nav>
-      <span class="hero-badge mb-4">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        <%= t(ns + ':hero.badge', '') %>
-      </span>
-      <%
-        const heroTitle = t(ns + ':hero.title', pageTitle);
-        const heroHighlight = t(ns + ':hero.highlight', '');
-      %>
-      <h1 class="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-        <% if (heroHighlight && heroTitle.includes(heroHighlight)) { %>
-          <%- heroTitle.replace(heroHighlight, '<span class="text-gradient">' + heroHighlight + '</span>') %>
-        <% } else { %>
-          <%= heroTitle %>
-        <% } %>
-      </h1>
-      <p class="text-lg text-muted-foreground md:text-xl"><%- t(ns + ':hero.description', '') %></p>
-      <p class="bilan-hero-prix"><%= rp(t(ns + ':hero.prix', '')) %></p>
+<div class="blp" data-lang="<%= lang %>">
+
+  <!-- La promesse -->
+  <section class="blp-hero">
+    <div class="blp-wrap blp-hero-grille">
+      <div class="blp-hero-texte">
+        <nav class="blp-ariane" aria-label="Breadcrumb">
+          <a href="<%= lang === 'fr' ? '/' : '/' + lang + '/' %>">Quiz Couple</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page"><%= t('quizzes:bilanCouple.shortTitle', pageTitle) %></span>
+        </nav>
+        <p class="blp-sur"><%- x('badge') %></p>
+        <h1 class="blp-h1"><%- x('titre') %></h1>
+        <p class="blp-lead"><%- x('sousTitre') %></p>
+        <ul class="blp-coches">
+          <% for (const p of (Array.isArray(t(ns + ':lp.points', [])) ? t(ns + ':lp.points', []) : [])) { %><li><span class="blp-coche"><%- coche %></span><span><%= ins(rp(p)) %></span></li><% } %>
+        </ul>
+        <div class="blp-cta-zone">
+          <button type="button" class="blp-btn" data-bilan-commencer><%- x('cta') %><%- fleche %></button>
+          <a class="blp-lien" href="#extrait"><%- x('voirExtrait') %></a>
+        </div>
+        <p class="blp-cta-note"><%- x('ctaNote') %></p>
+        <div id="bilan-reprise" class="blp-reprise" hidden></div>
+        <noscript><p class="blp-cta-note"><%= lang === 'fr' ? 'Le bilan a besoin de JavaScript pour fonctionner.' : 'The check-up needs JavaScript to work.' %></p></noscript>
+      </div>
+      <div class="blp-hero-visuel" aria-hidden="false">
+        <img class="blp-feuille blp-feuille--arriere" src="<%= apercu('couverture') %>" alt="" width="600" height="849" decoding="async">
+        <img class="blp-feuille blp-feuille--avant" src="<%= apercu('synthese') %>" alt="<%- x('visuelAlt') %>" width="600" height="849" fetchpriority="high" decoding="async">
+      </div>
     </div>
-  </div>
-  <%- include('../partials/quiz-featured', { featuredImage: typeof featuredImage !== 'undefined' ? featuredImage : null, featuredImageAlt: typeof featuredImageAlt !== 'undefined' ? featuredImageAlt : '', featuredImageSrcset: typeof featuredImageSrcset !== 'undefined' ? featuredImageSrcset : null }) %>
-</section>
+  </section>
 
-<!-- L'application -->
-<section class="py-10 md:py-14">
-  <div class="container mx-auto px-4">
-    <div id="bilan-app" class="bilan" data-lang="<%= lang %>" aria-live="polite">
-      <div class="bilan-carte bilan-chargement">
-        <p><%= t(ns + ':app.chargement', 'Chargement...') %></p>
-      </div>
-      <noscript><div class="bilan-carte"><p><%= lang === 'fr' ? 'Le bilan a besoin de JavaScript pour fonctionner.' : 'The check-up needs JavaScript to work.' %></p></div></noscript>
-    </div>
-  </div>
-</section>
-
-<%- include('../partials/wave-divider', { variant: 'muted', direction: 'down' }) %>
-
-<!-- Contenu -->
-<article class="py-16 md:py-24 seo-content">
-  <div class="avec-colonne">
-    <div class="avec-colonne__contenu container mx-auto px-4 max-w-3xl">
-
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section1.title') %></h2>
-      <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- rp(t(ns + ':section1.p1')) %></p>
-        <p><%- rp(t(ns + ':section1.p2')) %></p>
-        <p><%- rp(t(ns + ':section1.p3')) %></p>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section2.title') %></h2>
-      <div class="space-y-4 text-muted-foreground leading-relaxed mb-6">
-        <p><%- rp(t(ns + ':section2.p1')) %></p>
-      </div>
-      <ul class="space-y-3 text-muted-foreground leading-relaxed list-disc pl-6 mb-6">
-        <% for (const pt of t(ns + ':section2.points', [])) { %><li><%- rp(pt) %></li><% } %>
-      </ul>
-      <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- rp(t(ns + ':section2.p2')) %></p>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section3.title') %></h2>
-      <div class="space-y-4 text-muted-foreground leading-relaxed mb-6">
-        <p><%- rp(t(ns + ':section3.p1')) %></p>
-      </div>
-      <ul class="space-y-3 text-muted-foreground leading-relaxed list-disc pl-6 mb-6">
-        <% for (const pt of t(ns + ':section3.points', [])) { %><li><%- rp(pt) %></li><% } %>
-      </ul>
-      <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- rp(t(ns + ':section3.p2')) %></p>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section4.title') %></h2>
-      <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- rp(t(ns + ':section4.p1')) %></p>
-        <p><%- rp(t(ns + ':section4.p2')) %></p>
-        <p><%- rp(t(ns + ':section4.p3')) %></p>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section5.title') %></h2>
-      <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- rp(t(ns + ':section5.p1')) %></p>
-        <p><%- rp(t(ns + ':section5.p2')) %></p>
-      </div>
-      <% if (jours > 0) { %>
-      <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-        <p class="text-sm text-muted-foreground"><%- rp(t(ns + ':section5.tip')) %></p>
-      </div>
+  <!-- Quelques chiffres -->
+  <section class="blp-chiffres" aria-label="<%- x('badge') %>">
+    <div class="blp-wrap blp-chiffres-grille">
+      <% for (const c of (Array.isArray(chiffres) ? chiffres : [])) { %>
+      <div class="blp-chiffre"><p class="blp-chiffre-n"><%= c.n %></p><p class="blp-chiffre-l"><%= ins(c.l) %></p></div>
       <% } %>
-    </section>
+    </div>
+  </section>
 
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':section6.title') %></h2>
-      <div class="space-y-4 text-muted-foreground leading-relaxed">
-        <p><%- rp(t(ns + ':section6.p1')) %></p>
-        <p><%- rp(t(ns + ':section6.p2')) %></p>
+  <!-- Pour qui -->
+  <section class="blp-section blp-pour">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('pour.titre') %></h2>
+      <p class="blp-intro"><%- x('pour.intro') %></p>
+      <div class="blp-cartes">
+        <% (Array.isArray(pour) ? pour : []).forEach((c, i) => { %>
+        <article class="blp-carte">
+          <span class="blp-carte-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><%- icones[i % icones.length] %></svg></span>
+          <h3 class="blp-h3"><%= ins(c.titre) %></h3>
+          <p><%= ins(rp(c.texte)) %></p>
+        </article>
+        <% }) %>
       </div>
-      <div class="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-        <p class="text-sm text-muted-foreground"><%- rp(t(ns + ':section6.tip')) %></p>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="mb-16">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6"><%= t(ns + ':faq.title', 'FAQ') %></h2>
-      <div class="space-y-3">
-        <% for (let i = 1; i <= 8; i++) { %>
-        <details class="border border-border rounded-lg">
-          <summary class="p-4 font-medium cursor-pointer hover:bg-muted transition-colors"><%= t(ns + ':faq.q' + i) %></summary>
-          <div class="px-4 pb-4 text-muted-foreground leading-relaxed"><%- rp(t(ns + ':faq.a' + i)) %></div>
+  <!-- Le rapport -->
+  <section class="blp-section blp-rapport" id="extrait">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('rapport.titre') %></h2>
+      <p class="blp-intro"><%- x('rapport.intro') %></p>
+      <div class="blp-pages">
+        <% (Array.isArray(pages) ? pages : []).forEach((p, i) => { %>
+        <figure class="blp-page<%= i % 2 ? ' blp-page--inverse' : '' %>">
+          <div class="blp-page-image"><img src="<%= apercu(p.img) %>" alt="<%- e(ins(p.titre)) %>" width="600" height="849" loading="lazy" decoding="async"></div>
+          <figcaption class="blp-page-texte">
+            <p class="blp-page-num"><%= String(i + 1).padStart(2, '0') %></p>
+            <h3 class="blp-h3"><%= ins(p.titre) %></h3>
+            <p><%= ins(rp(p.texte)) %></p>
+          </figcaption>
+        </figure>
+        <% }) %>
+      </div>
+      <p class="blp-legende"><%- x('rapport.legende') %></p>
+    </div>
+  </section>
+
+  <!-- La différence avec un test généré par une IA -->
+  <section class="blp-section blp-diff">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('diff.titre') %></h2>
+      <p class="blp-intro"><%- x('diff.intro') %></p>
+      <div class="blp-tableau" role="table" aria-label="<%- x('diff.titre') %>">
+        <div class="blp-tableau-tete" role="row">
+          <span role="columnheader"></span>
+          <span role="columnheader" class="blp-col-ia"><%- x('diff.colIa') %></span>
+          <span role="columnheader" class="blp-col-bilan"><%- x('diff.colBilan') %></span>
+        </div>
+        <% for (const l of (Array.isArray(lignes) ? lignes : [])) { %>
+        <div class="blp-tableau-ligne" role="row">
+          <span role="rowheader" class="blp-tableau-sujet"><%= ins(l.sujet) %></span>
+          <span role="cell" class="blp-col-ia" data-col="<%- x('diff.colIa') %>"><%= ins(l.ia) %></span>
+          <span role="cell" class="blp-col-bilan" data-col="<%- x('diff.colBilan') %>"><%= ins(l.bilan) %></span>
+        </div>
+        <% } %>
+      </div>
+      <p class="blp-conclusion"><%- x('diff.conclusion') %></p>
+    </div>
+  </section>
+
+  <!-- La recherche -->
+  <section class="blp-section blp-recherche">
+    <div class="blp-wrap blp-etroit">
+      <h2 class="blp-h2"><%- x('recherche.titre') %></h2>
+      <p class="blp-intro"><%- x('recherche.p1') %></p>
+      <ol class="blp-constats">
+        <% for (const c of (Array.isArray(constats) ? constats : [])) { %><li><%= ins(c) %></li><% } %>
+      </ol>
+      <p class="blp-note"><%- x('recherche.p2') %></p>
+    </div>
+  </section>
+
+  <!-- Des exemples de questions -->
+  <section class="blp-section blp-questions">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('questions.titre') %></h2>
+      <p class="blp-intro"><%- x('questions.intro') %></p>
+      <div class="blp-qs">
+        <% for (const q of (Array.isArray(exemples) ? exemples : [])) { %>
+        <article class="blp-q">
+          <p class="blp-q-dom"><%= ins(q.domaine) %></p>
+          <h3 class="blp-q-texte"><%= ins(q.q) %></h3>
+          <ul class="blp-q-options"><% for (const o of q.o || []) { %><li><%= ins(o) %></li><% } %></ul>
+        </article>
+        <% } %>
+      </div>
+      <p class="blp-note"><%- x('questions.fin') %></p>
+    </div>
+  </section>
+
+  <!-- Comment ça se passe -->
+  <section class="blp-section blp-etapes">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('etapes.titre') %></h2>
+      <ol class="blp-etapes-liste">
+        <% (Array.isArray(etapes) ? etapes : []).forEach((s, i) => { %>
+        <li><span class="blp-etape-num"><%= i + 1 %></span><h3 class="blp-h3"><%= ins(s.titre) %></h3><p><%= ins(rp(s.texte)) %></p></li>
+        <% }) %>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Le prix -->
+  <section class="blp-section blp-prix-section">
+    <div class="blp-wrap">
+      <div class="blp-prix">
+        <div class="blp-prix-tete">
+          <h2 class="blp-h2"><%- x('prix.titre') %></h2>
+          <p class="blp-prix-montant"><%= prix %></p>
+          <p class="blp-prix-unite"><%- x('prix.unite') %></p>
+        </div>
+        <div class="blp-prix-corps">
+          <ul class="blp-coches blp-coches--sombre">
+            <% for (const p of (Array.isArray(inclus) ? inclus : [])) { %><li><span class="blp-coche"><%- coche %></span><span><%= ins(rp(p)) %></span></li><% } %>
+          </ul>
+          <p class="blp-prix-aide"><%- x('prix.aide') %></p>
+          <% if (jours > 0) { %><p class="blp-garantie"><%- x('prix.garantie') %></p><% } %>
+          <p class="blp-prix-comparaison"><%- x('prix.comparaison') %></p>
+          <button type="button" class="blp-btn blp-btn--plein" data-bilan-commencer><%- x('cta') %><%- fleche %></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- La confiance -->
+  <section class="blp-section blp-confiance">
+    <div class="blp-wrap">
+      <h2 class="blp-h2"><%- x('confiance.titre') %></h2>
+      <div class="blp-confiance-grille">
+        <% (Array.isArray(confiance) ? confiance : []).forEach((c, i) => { %>
+        <div class="blp-confiance-point">
+          <span class="blp-carte-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><%- iconesConfiance[i % iconesConfiance.length] %></svg></span>
+          <h3 class="blp-h3"><%= ins(c.titre) %></h3>
+          <p><%= ins(rp(c.texte)) %></p>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questions fréquentes -->
+  <section class="blp-section blp-faq">
+    <div class="blp-wrap blp-etroit">
+      <h2 class="blp-h2"><%- x('faq.titre') %></h2>
+      <div class="blp-faq-liste">
+        <% for (const f of (Array.isArray(faqItems) ? faqItems : [])) { %>
+        <details class="blp-faq-item">
+          <summary><%= ins(f.q) %></summary>
+          <p><%= ins(rp(f.a)) %></p>
         </details>
         <% } %>
       </div>
-    </section>
+    </div>
+  </section>
 
+  <!-- Dernier appel -->
+  <section class="blp-final">
+    <div class="blp-wrap blp-etroit">
+      <h2 class="blp-h2"><%- x('final.titre') %></h2>
+      <p class="blp-lead"><%- x('final.texte') %></p>
+      <button type="button" class="blp-btn" data-bilan-commencer><%- x('cta') %><%- fleche %></button>
+      <p class="blp-cta-note"><%- x('ctaNote') %></p>
+    </div>
+  </section>
+
+  <p class="blp-avertissement blp-wrap"><%- x('avertissement') %></p>
+</div>
+
+<!-- L'application : masquée tant qu'on n'a pas commencé -->
+<section class="bilan-scene" aria-live="polite">
+  <div class="bilan-scene-barre">
+    <button type="button" class="bilan-scene-retour" data-bilan-quitter>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>
+      <span><%= t(ns + ':app.accueil.quitter', 'Retour') %></span>
+    </button>
+    <span class="bilan-scene-titre"><%= t('quizzes:bilanCouple.shortTitle', pageTitle) %></span>
+  </div>
+  <div class="container mx-auto px-4">
+    <div id="bilan-app" class="bilan" data-lang="<%= lang %>">
+      <div class="bilan-carte bilan-chargement">
+        <p><%= t(ns + ':app.chargement', 'Chargement...') %></p>
+      </div>
     </div>
   </div>
-</article>
+</section>
 
 <script>window.BILAN_CONFIG = <%- JSON.stringify(bilanConfig).replace(/</g, '\\u003c') %>;</script>
 <script src="/js/mascottes.js" defer></script>
 <script src="/js/bilan-coeur.js" defer></script>
+<script src="/js/bilan-rapport.js" defer></script>
 <script src="/js/bilan.js" defer></script>

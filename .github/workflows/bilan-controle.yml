@@ -1,0 +1,53 @@
+name: Bilan de couple · contrôle du rapport
+
+# À chaque changement du gabarit du rapport, de sa feuille de style, du
+# calcul ou des textes du bilan : vingt rapports d'exemple (cinq langues,
+# quatre cas, dont des prénoms de trente signes et un couple d'accord sur
+# rien) passent par les mêmes contrôles que la fabrique. Le moindre texte
+# qui sort de sa boîte fait échouer le contrôle. Les PDF sont gardés en
+# artefact pour les relire.
+
+on:
+  pull_request:
+    paths:
+      - 'bilan/**'
+      - 'supabase/functions/_shared/bilan/**'
+      - 'public/fonts/bilan/**'
+      - '*/bilan.json'
+      - '*/bilan-questions.json'
+      - '.github/workflows/bilan-controle.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'bilan/**'
+      - 'supabase/functions/_shared/bilan/**'
+      - 'public/fonts/bilan/**'
+      - '*/bilan.json'
+      - '*/bilan-questions.json'
+  workflow_dispatch:
+
+jobs:
+  controle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: bilan/package-lock.json
+      - name: Dépendances
+        run: cd bilan && npm ci
+      - name: Tests du calcul, du serveur et de l'e-mail
+        run: node --test supabase/functions/_shared/bilan/test/*.test.mjs
+      - name: Tests de la fabrique
+        run: cd bilan && npm test
+      - name: Rapports d'exemple
+        run: node bilan/exemples.mjs "$RUNNER_TEMP/rapports"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rapports-exemple
+          path: ${{ runner.temp }}/rapports
+          retention-days: 14
