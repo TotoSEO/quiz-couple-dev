@@ -47,8 +47,12 @@ Les posts s'écrivent dans `reseaux/mipaps/atelier/posts/`, le journal dans
 ## 2. Lire l'état et la ligne éditoriale
 
 Avant d'écrire quoi que ce soit, lis `reseaux/mipaps/atelier/LIGNE-EDITORIALE.md`
-(le compte, la voix, les trois piliers, la semaine type, ce que fait chaque
-catégorie) et `reseaux/mipaps/atelier/sujets.json` (la banque de sujets).
+(le compte, **l'effet Barnum**, la voix, les trois piliers, la semaine type,
+ce que fait chaque catégorie) et `reseaux/mipaps/atelier/sujets.json` (la
+banque de sujets). « L'effet Barnum » d'abord : c'est la règle qui décide si
+un post part ou non, depuis le 18 octobre 2026 (Thomas, la veille :
+« aucun reel ne fonctionne [...] rien n'est assez naturel, qui correspond à
+tout le monde »).
 
 Puis `reseaux/mipaps/atelier/etat.json`, écrit chaque matin par l'entretien
 pour ce compte (`langue: "fr"`) :
@@ -81,15 +85,19 @@ en sautant les fichiers déjà présents dans `posts/`.
 
 ## Revoir la réserve pour le style
 
-Les posts écrits avant le 9 octobre 2026 ont été relus à la main jusqu'au
-19 octobre. Le reste de la réserve se revoit au fil des passages. Au début
+Toute la réserve du 19 octobre au 15 novembre 2026, et les cinq posts de
+Noël et du Nouvel An, a été réécrite à la main le 18 octobre selon « L'effet
+Barnum ». Les posts déjà publiés avant (jusqu'au 18 octobre) ne passent plus
+le contrôle et n'y passeront jamais : leur créneau est passé, on n'y touche
+pas. Ce qui s'écrit ensuite se revoit au fil des passages. Au début
 de chaque passage, après le journal :
 
     node reseaux/automates/controler.mjs reseaux/mipaps/atelier/posts/*.json
 
 liste les fichiers `KO` avec leurs fautes de style (`lib/style.mjs` : une
-fin qui commente la scène, une légende qui répète le dessin, un appel hors
-liste, un « <3 » de trop, un texte entre parenthèses). Parmi eux, ceux dont
+fin qui commente la scène, une légende qui répète le dessin, une légende qui
+raconte une anecdote ou ajoute un chiffre, une heure à la minute près, un
+appel hors liste, un « <3 » de trop, un texte entre parenthèses). Parmi eux, ceux dont
 le créneau commence dans plus de trois heures (heure de Paris), du plus
 proche au plus lointain, **six par passage au plus** : on réécrit le post
 selon « La chute, et ce qui sonne machine » (ligne éditoriale), pas
@@ -123,21 +131,38 @@ Pour chaque créneau à remplir, dans l'ordre des dates :
 
 1. s'il existe un sujet daté (`saison.sujets`) pour ce jour et ce créneau,
    c'est lui ;
-2. sinon le premier sujet de la catégorie qui n'apparaît dans aucun post de
-   `posts/` (champ `sujet`) ni dans `deja_publies.sujets` : **jamais de
-   doublon**, ni de sujet, ni de scène, ni de phrase déjà vue dans
-   `recents_et_prevus` ;
-3. sinon (la banque de la catégorie est épuisée) tu inventes un sujet dans
-   le même esprit, avec un identifiant neuf (`ani-033`, `pos-039`...), en
-   t'inspirant de la banque d'idées de `REFERENCES.md` et des comptes
-   modèles, sans reprendre une situation vue dans `recents_et_prevus` ni
-   dans les soixante derniers posts de `posts/`. La publication ne s'arrête
-   jamais faute de sujet.
+2. sinon le premier sujet de la catégorie qui ne porte pas `retire` et
+   n'apparaît dans aucun post de `posts/` (champ `sujet`) ni dans
+   `deja_publies.sujets` : **jamais de doublon**, ni de sujet, ni de scène,
+   ni de phrase déjà vue dans `recents_et_prevus`. Les sujets marqués
+   `retire` sont ceux d'avant l'effet Barnum que personne n'avait pris : le
+   contrôle refuse qu'un post les prenne ;
+3. sinon (la banque de la catégorie est épuisée) tu laisses le créneau vide
+   et tu l'écris au journal (« banque mipaps-histoire épuisée, créneaux
+   vides à partir du ... »). `sujets.json` ne se modifie que sur `main`,
+   jamais sur la branche de l'atelier (la fusion de `main` serait en
+   conflit), et le contrôle refuse un identifiant qui n'y est pas. La réserve
+   a plusieurs semaines d'avance : c'est le journal qui dit qu'il faut
+   remplir la banque, avant que le compte ne manque de posts.
 
 Dans la semaine, varie : la moitié des posts met elle dans le rôle drôle,
-l'autre lui ; les trois piliers tournent ; le post de midi est une
-déclaration une fois par semaine (le dimanche ou le lundi) et un schéma de
-bureau une ou deux fois.
+l'autre lui, et beaucoup marchent dans les deux sens ; les trois piliers
+tournent ; le post de midi est une déclaration une fois par semaine (le
+dimanche ou le lundi) et un schéma de bureau une ou deux fois. Jamais deux
+fois la même situation dans la quinzaine (lis `recents_et_prevus` et les
+posts de `posts/`), et un même objet de chute (les frites, le pull, la
+couette) au plus une fois par mois.
+
+Avant de garder un sujet, même pris dans la banque, passe-le aux quatre
+questions de « L'effet Barnum » ; si une seule répond non, prends le
+suivant :
+
+1. lu à dix couples, est-ce que huit répondent « c'est nous » ?
+2. est-ce que le texte parle au lecteur (« toi », « nous deux », « le moment
+   où ») plutôt que de raconter ce qu'il a fait, lui ?
+3. est-ce que le détail qui fait rire est un geste que tout le monde fait,
+   et pas un chiffre ou un objet inventé ?
+4. est-ce que tu l'enverrais à ta personne en disant « c'est toi » ?
 
 **Un créneau dont le fichier existe déjà dans `posts/` n'est jamais réécrit**,
 même s'il figure encore dans `a_remplir`. Trois exceptions, et trois
@@ -216,12 +241,14 @@ on raccourcit le texte, jamais la taille.
 **La chute est dans le dessin, jamais dans une phrase qui la commente**
 (Thomas, 9 octobre 2026 : « les chutes sont nulles, c'est de l'humour à
 l'IA »). La dernière image montre ce qui arrive et s'arrête là ; le texte
-qui l'accompagne, s'il y en a un, est un détail vrai (« 1 h plus tard »,
-« il a 12 pulls ») ou ce que le personnage dit pour de vrai (« bon. viens
-là. »), jamais un bilan (« c'est tout. », « je note. », « et ça repart. »,
-« comme d'hab. »). La légende suit la même règle : un détail vrai ou
-l'appel seul, un appel pris tel quel dans la liste `APPELS` de
-`lib/style.mjs`, jamais inventé avec « celui qui ». Un seul « <3 » par
+qui l'accompagne, s'il y en a un, est ce que le personnage dit pour de
+vrai (« bon. viens là. ») ou le temps qui passe (« 1 h plus tard »), jamais
+un bilan (« c'est tout. », « je note. », « et ça repart. », « comme
+d'hab. ») et jamais un chiffre ajouté pour faire vrai (« il a 12 pulls »,
+« il est 3 h 12 »). La légende : l'appel seul, le plus souvent, pris tel
+quel dans la liste `APPELS` de `lib/style.mjs` ; une ligne avant lui
+seulement si elle parle au lecteur, jamais pour raconter la suite ou donner
+une heure. Un seul « <3 » par
 post, jamais en fin de texte de reel ; pas de texte entier entre
 parenthèses ; pas de triade. Les règles complètes et les deux tests
 (l'oral, l'ami) sont dans la ligne éditoriale, « La chute, et ce qui sonne
@@ -275,10 +302,11 @@ machine » ; les phrases vraies à imiter dans `reseaux/mipaps/REFERENCES.md`,
   "message" | "titre", "motAMot": true }`. Trois au plus par plan, jamais
   deux en même temps au même endroit. En bas, une seule ligne de 40 signes
   (elle tient entre le sol de la scène et la bande d'Instagram). Le premier plan porte son texte dès
-  0,2 s ; dans le dernier plan la chute est le dessin, et le texte qui s'y
-  écrit mot à mot, s'il y en a un, est un détail vrai (« 1 h plus tard »,
-  « 7 h 45 »), jamais une phrase qui commente (« c'est tout. », « je
-  note. »). **Au moins un texte
+  0,2 s, et il dit la situation au lecteur (« toi quand... », « nous deux
+  quand... ») ; dans le dernier plan la chute est le dessin, et le texte qui
+  s'y écrit mot à mot, s'il y en a un, marque le temps (« 1 h plus tard »)
+  ou dit ce qui se dit pour de vrai, jamais une phrase qui commente
+  (« c'est tout. », « je note. ») ni une heure à la minute près. **Au moins un texte
   dans le reel.** Pas de bulle, pas de dialogue : la situation se montre.
 - `transition`: `"coupe"` (défaut) ou `"fondu"` (le plan d'avant s'éteint
   vers le blanc). `zoom`: `[1, 1.15]` rapproche doucement sur la durée du
@@ -358,8 +386,9 @@ machine » ; les phrases vraies à imiter dans `reseaux/mipaps/REFERENCES.md`,
 
 ### Légende et hashtags
 
-Voir la ligne éditoriale : une ligne qui ajoute un détail vrai (« il part
-à 19 h. il est 20 h 30. »), ou rien, en minuscules, puis **un seul appel**,
+Voir la ligne éditoriale : l'appel seul le plus souvent, ou une ligne qui
+parle au lecteur (jamais une anecdote, une heure ou un chiffre), en
+minuscules, puis **un seul appel**,
 pris tel quel dans la liste `APPELS` de `lib/style.mjs` (envoyer, taguer,
 commenter ou garder), choisi selon le geste voulu ; les trois posts d'une journée ne portent pas le même appel.
 `hashtags` : trois à cinq, avec `#lesmipaps` et `#couple`, jamais dans la
