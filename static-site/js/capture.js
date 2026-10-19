@@ -62,8 +62,12 @@
   }
 
   // La tête du résultat : le premier titre de la carte hors avis, formulaire,
-  // story et suite. Tout ce qui le suit, à chaque niveau jusqu'à la carte,
-  // est flouté.
+  // story et suite. Tout ce qui le suit, à chaque niveau jusqu'à la zone du
+  // résultat (.qr-zone--resultat, posée par dispositionResultat), est flouté.
+  // Jamais au-delà : les produits, l'encart de l'évaluation, les actions, les
+  // tests à faire ensuite et la story restent nets (20 octobre 2026, Thomas :
+  // « ça floute toute la zone même les produits liés, les autres tests »).
+  var HORS_PORTE = '.qr-zone--avis, .qr-zone--produits, .qr-zone--actions, .qr-zone--suite, .qr-zone--pub, .story-share, .related-tests-section, .qc-porte';
   function trouveTete(carte) {
     var cands = carte.querySelectorAll('h2, h3');
     for (var i = 0; i < cands.length; i++) {
@@ -71,12 +75,16 @@
     }
     return null;
   }
+  function horsPorte(e) {
+    return e.classList.contains('qc-porte') || (e.matches && e.matches(HORS_PORTE));
+  }
   function suivants(tete, carte) {
+    var zone = tete.closest('.qr-zone--resultat') || carte;
     var liste = [];
     var n = tete;
-    while (n && n !== carte) {
+    while (n && n !== zone && zone.contains(n)) {
       var s = n.nextElementSibling;
-      while (s) { if (!s.classList.contains('qc-porte')) liste.push(s); s = s.nextElementSibling; }
+      while (s) { if (!horsPorte(s)) liste.push(s); s = s.nextElementSibling; }
       n = n.parentElement;
     }
     return liste;

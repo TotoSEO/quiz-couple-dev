@@ -389,7 +389,7 @@
     <div class="blp-wrap">
       <h2 class="blp-h2"><%- x('compar.titre') %></h2>
       <p class="blp-intro"><%- x('compar.intro') %></p>
-      <div class="blp-tableau" role="table" aria-label="<%- x('compar.titre') %>">
+      <div class="blp-tableau" role="table" aria-label="<%- x('compar.titre') %>"><div class="blp-tableau-defile">
         <div class="blp-tableau-tete" role="row">
           <span role="columnheader"></span>
           <% comparCols.forEach((c, i) => { %><span role="columnheader" class="blp-col blp-col--<%= i + 1 %>"><%- tx(c) %></span><% }) %>
@@ -400,7 +400,8 @@
           <% (l.c || []).forEach((v, i) => { %><span role="cell" class="blp-col blp-col--<%= i + 1 %>" data-col="<%- tx(comparCols[i] || '') %>"><%- tx(v) %></span><% }) %>
         </div>
         <% } %>
-      </div>
+      </div></div>
+      <p class="blp-tableau-aide" aria-hidden="true"><%- x('compar.aide') %></p>
       <p class="blp-conclusion"><%- x('compar.conclusion') %></p>
     </div>
   </section>

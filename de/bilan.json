@@ -643,11 +643,6 @@
           "texte": "Zwei Zahlen: eure Übereinstimmung und das Klima eurer Beziehung. Dann eure Bereiche auf einen Blick, auf einem Radar."
         },
         {
-          "img": "ouverture",
-          "titre": "Ein Kapitel, eine Farbe",
-          "texte": "Jedes Kapitel beginnt mit seiner eigenen Seite, damit man immer weiß, wo man ist."
-        },
-        {
           "img": "carte",
           "titre": "Die Karte eurer Bereiche",
           "texte": "Ein Balken pro Bereich, von 0 bis 100 %, mit den gleichen, ähnlichen und unterschiedlichen Antworten im Detail."
@@ -832,7 +827,8 @@
           ]
         }
       ],
-      "conclusion": "Die Analyse ersetzt keine Paarberatung: Sie gibt euch eine Bestandsaufnahme eurer Beziehung, Thema für Thema, damit ihr wisst, worüber ihr reden solltet. Viele Paare nutzen sie genau als Ausgangspunkt, zu zweit oder mit einer Fachperson."
+      "conclusion": "Die Analyse ersetzt keine Paarberatung: Sie gibt euch eine Bestandsaufnahme eurer Beziehung, Thema für Thema, damit ihr wisst, worüber ihr reden solltet. Viele Paare nutzen sie genau als Ausgangspunkt, zu zweit oder mit einer Fachperson.",
+      "aide": "Wische die Tabelle, um alle drei Spalten zu sehen."
     },
     "recherche": {
       "titre": "Aufgebaut auf der Forschung über Paare",

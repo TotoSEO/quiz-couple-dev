@@ -9284,6 +9284,9 @@ body { padding-bottom: var(--pub-footer, 0px); }
    Le résultat est construit, puis masqué derrière cette carte le temps de
    la publicité qui donne accès à la suite. Elle est inerte aujourd'hui
    (PORTE_ACTIVE est à faux dans resultat-url.js) : rien ne s'affiche tant
+   Classes qc-portail-* depuis le 20 octobre 2026 : elles s'appelaient qc-porte-*
+   et déteignaient sur la porte e-mail des résultats (capture.js), qui héritait
+   de la rotation et de la largeur réduite (Thomas : « de travers et pas assez large »).
    que le format n'est pas branché, mais le style est prêt.
 
    Même grammaire que les écrans de départ des moteurs : bordure épaisse,
@@ -9292,7 +9295,7 @@ body { padding-bottom: var(--pub-footer, 0px); }
    comme une fenêtre de navigateur posée par-dessus. */
 .qc-cache { display: none !important; }
 
-.qc-porte {
+.qc-portail {
   --ink: 268 45% 27%;
   position: relative;
   /* Le macaron deborde d'un rem sur la gauche et la carte est de travers :
@@ -9309,9 +9312,9 @@ body { padding-bottom: var(--pub-footer, 0px); }
   transform: rotate(-1.2deg);
   text-align: center;
 }
-.dark .qc-porte { --ink: 270 30% 62%; }
+.dark .qc-portail { --ink: 270 30% 62%; }
 
-.qc-porte-macaron {
+.qc-portail-macaron {
   position: absolute;
   top: -1.5rem; left: -1rem;
   width: 3.6rem; height: 3.6rem;
@@ -9324,7 +9327,7 @@ body { padding-bottom: var(--pub-footer, 0px); }
   transform: rotate(-10deg);
 }
 
-.qc-porte-titre {
+.qc-portail-titre {
   margin: 0 0 .6rem;
   font-family: 'Poppins', system-ui, sans-serif;
   font-size: 1.25rem;
@@ -9333,14 +9336,14 @@ body { padding-bottom: var(--pub-footer, 0px); }
   color: hsl(var(--foreground));
 }
 
-.qc-porte-note {
+.qc-portail-note {
   margin: 0 0 1.4rem;
   font-size: .9rem;
   line-height: 1.55;
   color: hsl(var(--muted-foreground));
 }
 
-.qc-porte-btn {
+.qc-portail-btn {
   display: block;
   width: 100%;
   padding: .85rem 1.4rem;
@@ -9355,25 +9358,25 @@ body { padding-bottom: var(--pub-footer, 0px); }
   box-shadow: 5px 5px 0 hsl(var(--ink));
   transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
 }
-.qc-porte-btn:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 hsl(var(--ink)); }
-.qc-porte-btn:focus-visible { outline: 3px solid hsl(var(--ink)); outline-offset: 3px; }
+.qc-portail-btn:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 hsl(var(--ink)); }
+.qc-portail-btn:focus-visible { outline: 3px solid hsl(var(--ink)); outline-offset: 3px; }
 /* Pendant la publicité : le bouton reste lisible, il dit juste qu'il ne
    sert plus à rien de le presser. */
-.qc-porte-btn[disabled] { cursor: default; opacity: .65; transform: none; box-shadow: 3px 3px 0 hsl(var(--ink)); }
+.qc-portail-btn[disabled] { cursor: default; opacity: .65; transform: none; box-shadow: 3px 3px 0 hsl(var(--ink)); }
 
 @media (hover: hover) and (pointer: fine) {
-  .qc-porte-btn:hover:not([disabled]) { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 hsl(var(--ink)); }
+  .qc-portail-btn:hover:not([disabled]) { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 hsl(var(--ink)); }
 }
 
 @media (min-width: 640px) {
-  .qc-porte { padding: 2.7rem 2rem 1.8rem; }
-  .qc-porte-titre { font-size: 1.4rem; }
-  .qc-porte-btn { width: auto; min-width: 15rem; margin: 0 auto; }
-  .qc-porte-macaron { width: 4.2rem; height: 4.2rem; font-size: 2rem; top: -1.7rem; left: -1.2rem; }
+  .qc-portail { padding: 2.7rem 2rem 1.8rem; }
+  .qc-portail-titre { font-size: 1.4rem; }
+  .qc-portail-btn { width: auto; min-width: 15rem; margin: 0 auto; }
+  .qc-portail-macaron { width: 4.2rem; height: 4.2rem; font-size: 2rem; top: -1.7rem; left: -1.2rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .qc-porte-btn { transition: none; }
+  .qc-portail-btn { transition: none; }
 }
 
 /* ── Relais entre les deux joueurs ─────────────────────────────────────────
