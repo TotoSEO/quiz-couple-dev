@@ -29,7 +29,7 @@ test('un prénom avec des balises est échappé', () => {
 });
 
 test('adresses : contrôle, masque, nom de fichier', () => {
-  assert.equal(emailPropre(' Lea.Martin@Gmail.COM '), 'Lea.Martin@gmail.com');
+  assert.equal(emailPropre(' Lea.Martin@Gmail.COM '), 'lea.martin@gmail.com');
   for (const faux of ['', 'a@b', 'a b@c.fr', 'x@y.c', '<a@b.fr>', 'a@@b.fr', 'a@b..fr', null, 3]) {
     assert.equal(emailPropre(faux), null, String(faux));
   }

@@ -36,6 +36,7 @@
           <% if (statut) { %><li><strong><%= t('cgv:vendeur.statut', '') %></strong> <%= statut %></li><% } %>
           <% if (v.siret) { %><li><strong><%= t('cgv:vendeur.siret', '') %></strong> <%= v.siret %></li><% } %>
           <% if (v.adresse) { %><li><strong><%= t('cgv:vendeur.adresse', '') %></strong> <%= v.adresse %></li><% } %>
+          <% if (v.telephone) { %><li><strong><%= t('cgv:vendeur.telephone', '') %></strong> <a class="text-primary hover:underline" href="tel:<%= v.telephone.replace(/[^+\d]/g, '') %>"><%= v.telephone %></a></li><% } %>
           <% if (v.email) { %><li><strong><%= t('cgv:vendeur.email', '') %></strong> <%- vars.email %></li><% } %>
           <li><strong><%= t('cgv:vendeur.tva', '') %></strong> <%= t('cgv:vendeur.tvaValeur', '') %></li>
         </ul>

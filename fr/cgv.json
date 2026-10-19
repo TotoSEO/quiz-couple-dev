@@ -1,6 +1,6 @@
 {
   "title": "Conditions générales de vente",
-  "majLe": "Dernière mise à jour : 18 octobre 2026",
+  "majLe": "Dernière mise à jour : 20 octobre 2026",
   "intro": "Ces conditions s'appliquent à l'achat du rapport complet du {{bilan}} sur quiz-couple.com. Tout le reste du site est gratuit et n'est concerné par aucune vente.",
   "liens": {
     "contact": "page contact",
@@ -15,14 +15,16 @@
     "adresse": "Adresse :",
     "email": "E-mail :",
     "tva": "TVA :",
-    "tvaValeur": "TVA non applicable, article 293 B du Code général des impôts"
+    "tvaValeur": "TVA non applicable, article 293 B du Code général des impôts",
+    "telephone": "Téléphone :"
   },
   "sections": [
     {
       "titre": "1. Ce qui est vendu",
       "p": [
         "L'évaluation de couple est un questionnaire auquel deux partenaires répondent chacun de leur côté, ou auquel une seule personne répond en indiquant aussi ce que son ou sa partenaire répondrait d'après elle (mode seul(e)). Répondre aux questions est gratuit ; aucun résultat n'est donné sans achat.",
-        "Ce qui est vendu, c'est le rapport : une évaluation complète du couple à partir des deux séries de réponses (alignement, climat, carte des domaines, écarts avec les deux réponses, guides pour en parler, points bloquants et non négociables, signaux de vigilance, répartition des rôles). Le rapport est un contenu numérique : un document PDF envoyé par e-mail, et la même version consultable sur la page de l'évaluation."
+        "Ce qui est vendu, c'est le rapport : une évaluation complète du couple à partir des deux séries de réponses (alignement, climat, carte des domaines, écarts avec les deux réponses, guides pour en parler, points bloquants et non négociables, signaux de vigilance, répartition des rôles). Le rapport est un contenu numérique : un document PDF envoyé par e-mail, et la même version consultable sur la page de l'évaluation.",
+        "L'évaluation est réservée aux personnes majeures. Le rapport est un fichier PDF ordinaire, lisible avec n'importe quel lecteur de PDF, sur téléphone comme sur ordinateur ; la même version se lit sur la page de l'évaluation. Les conditions qui s'appliquent à un achat sont celles en ligne au moment du paiement."
       ]
     },
     {
@@ -35,7 +37,7 @@
     {
       "titre": "3. La commande et le paiement",
       "p": [
-        "Le paiement est proposé à chaque partenaire dès qu'il a fini ses propres réponses. Avant de payer, l'acheteur peut indiquer l'adresse e-mail où recevoir le rapport, et il coche une case par laquelle il demande à recevoir le rapport dès qu'il est prêt et reconnaît perdre son droit de rétractation une fois le rapport fourni (voir l'article 5).",
+        "Le paiement est proposé à chaque partenaire dès qu'il a fini ses propres réponses. Avant de payer, l'acheteur peut indiquer l'adresse e-mail où recevoir le rapport, et il coche une case par laquelle il demande expressément que le rapport lui soit fourni dès qu'il est prêt, sans attendre la fin du délai de rétractation, et reconnaît qu'il perd son droit de rétractation dès que le rapport est fourni (voir l'article 5). L'e-mail qui apporte le rapport reprend cette demande et cette reconnaissance.",
         "Le paiement se fait sur la page sécurisée de notre prestataire Stripe, par carte bancaire, Apple Pay ou Google Pay. Nous n'avons jamais accès aux données de la carte. Stripe envoie un reçu à l'adresse e-mail donnée au moment du paiement : c'est la confirmation de la commande. Une facture peut être demandée depuis la {{contact}}."
       ]
     },
@@ -44,26 +46,30 @@
       "p": [
         "Le rapport est fabriqué dès que le paiement est confirmé et que les deux partenaires ont fini de répondre (ou, en mode seul(e), que la personne a fini). Il part alors en PDF aux adresses e-mail données, et s'affiche sur la page de l'évaluation pour les deux partenaires, depuis leurs liens personnels, avec un bouton pour télécharger le PDF. Il reste disponible six mois après le paiement, puis l'évaluation est effacée.",
         "Si le partenaire ne finit pas ses réponses, le rapport ne peut pas être fabriqué : l'acheteur peut alors en demander le remboursement à tout moment depuis la {{contact}}.",
-        "Chacun des deux partenaires peut supprimer l'évaluation avant ce délai. La suppression est immédiate et définitive, pour les deux, et ne donne pas lieu à un remboursement en dehors de la garantie de l'article 6."
+        "Chacun des deux partenaires peut supprimer l'évaluation avant ce délai. La suppression est immédiate et définitive, pour les deux, et ne donne lieu à aucun remboursement."
       ]
     },
     {
       "titre": "5. Le droit de rétractation",
       "p": [
-        "Le rapport est un contenu numérique. Conformément à l'article L221-28 13° du Code de la consommation, le droit de rétractation de quatorze jours ne s'applique plus une fois le rapport fourni, l'acheteur ayant demandé à le recevoir dès qu'il est prêt et reconnu perdre ce droit avant de payer. Tant que le rapport n'a pas été fourni, l'acheteur peut se rétracter en nous écrivant depuis la {{contact}}, et il est remboursé en entier."
+        "Le rapport est un contenu numérique fourni sans support matériel. Pour ce type de contenu, l'article L221-28 13° du Code de la consommation prévoit que le droit de rétractation de quatorze jours ne peut plus être exercé une fois que la fourniture a commencé avec l'accord exprès du consommateur, et après qu'il a reconnu perdre ainsi ce droit. C'est ce que l'acheteur accepte en cochant la case avant de payer.",
+        "Le rapport est fourni au moment où il est envoyé par e-mail ou mis à disposition sur la page de l'évaluation, le premier des deux. À partir de cet instant, le droit de rétractation a pris fin : l'achat est définitif et ne peut plus être remboursé à ce titre.",
+        "Tant que le rapport n'a pas été fourni, par exemple parce que le partenaire n'a pas fini de répondre, l'acheteur peut se rétracter sans donner de motif, dans les quatorze jours qui suivent le paiement, en nous écrivant depuis la {{contact}}. Il est alors remboursé en entier, sur le moyen de paiement utilisé, dans les quatorze jours."
       ]
     },
     {
-      "titre": "6. Satisfaits ou remboursés",
+      "titre": "6. Après la fourniture du rapport",
       "p": [
-        "En plus de ce que prévoit la loi, nous remboursons le rapport pendant {{jours}} jours après le paiement, sans avoir à se justifier : il suffit de nous écrire depuis la {{contact}} en indiquant le prénom des deux partenaires et la date du paiement. Le remboursement se fait sur le moyen de paiement utilisé, dans les quatorze jours qui suivent la demande."
+        "Une fois le rapport fourni, aucun remboursement n'est dû. Le rapport est construit à partir des réponses données : un résultat qui déplaît, qui surprend ou qui ne correspond pas à l'idée que l'on se faisait de sa relation n'est pas un défaut du rapport, et n'ouvre droit ni à un remboursement ni à une indemnité.",
+        "Le rapport bénéficie de la garantie légale de conformité des contenus numériques (articles L224-25-12 et suivants du Code de la consommation). Si le fichier ne s'ouvre pas, si le rapport est incomplet ou s'il ne correspond pas à ce que décrit l'article 1, écrivez-nous depuis la {{contact}} : nous le corrigeons ou le refabriquons sans frais et, si ce n'est pas possible, nous vous remboursons."
       ]
     },
     {
-      "titre": "7. Ce que l'évaluation est, et ce qu'il n'est pas",
+      "titre": "7. Ce que l'évaluation est, et ce qu'elle n'est pas",
       "p": [
-        "L'évaluation est un outil pour aider un couple à parler de sa vie à deux. Ce n'est ni un diagnostic, ni une thérapie, ni un avis de professionnel de santé. Les décisions prises à partir du rapport restent celles des partenaires. Si vous traversez une période difficile, un conseiller conjugal ou un thérapeute de couple peut vous accompagner.",
-        "Le service est fourni tel quel. Nous faisons notre possible pour qu'il soit disponible en continu, mais une interruption temporaire (maintenance, panne d'un prestataire) ne peut pas être exclue. Si le rapport payé reste inaccessible de notre fait, il est remboursé."
+        "L'évaluation de couple est un outil d'information et de discussion. Elle met en regard les réponses des deux partenaires, ou, en mode seul(e), vos réponses et ce que vous pensez des siennes, et vous propose des sujets de conversation. Aucun professionnel n'intervient : ce n'est ni un diagnostic, ni une thérapie, ni un avis médical, psychologique, juridique ou financier, et aucun résultat n'a valeur de vérité sur votre relation ni sur ce qu'elle deviendra.",
+        "Les décisions que vous prenez dans votre vie à partir du rapport, qu'il s'agisse de rester ensemble, de vous séparer, de vous marier, d'avoir un enfant, de déménager, d'argent ou de tout autre choix, sont les vôtres et relèvent de votre seule responsabilité. Nous ne garantissons aucun résultat et ne répondons pas de ces décisions ni de leurs conséquences. Si vous traversez une période difficile, un conseiller conjugal ou un thérapeute de couple peut vous accompagner ; si vous avez peur de votre partenaire, appelez le 3919 (en France) ou le numéro d'aide de votre pays.",
+        "Nous faisons notre possible pour que le service soit disponible en continu, sans pouvoir exclure une interruption temporaire (maintenance, panne d'un prestataire). Si un rapport payé reste inaccessible de notre fait, nous le fournissons de nouveau ou nous le remboursons. Notre responsabilité ne peut être engagée que dans les conditions prévues par la loi."
       ]
     },
     {
@@ -86,7 +92,7 @@
     {
       "titre": "10. Le droit applicable",
       "p": [
-        "Ces conditions sont soumises au droit français. Si vous résidez dans un autre pays de l'Union européenne, vous gardez la protection des règles impératives de votre pays de résidence."
+        "Ces conditions sont soumises au droit français. En cas de litige, et à défaut d'accord amiable, les tribunaux compétents sont ceux désignés par la loi ; un consommateur peut aussi saisir la juridiction du lieu où il résidait au moment du paiement. Si vous résidez dans un autre pays de l'Union européenne, vous gardez la protection des règles impératives de votre pays de résidence."
       ]
     }
   ]

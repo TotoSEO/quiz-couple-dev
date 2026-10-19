@@ -12903,6 +12903,20 @@ body { padding-bottom: var(--pub-footer, 0px); }
 .bilan-situation li { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px dashed hsl(var(--border)); padding: .35rem 0; }
 .bilan-situation span { color: hsl(var(--muted-foreground)); }
 .bilan-lien .bilan-input { font-size: .85rem; text-overflow: ellipsis; }
+/* Les aperçus du rapport, partout (page de vente, accueil, encart, bannière) :
+   petits et illisibles exprès, jamais ouverts ni glissés (19 octobre 2026). */
+img[src^="/bilan/apercu-"] { pointer-events: none; user-select: none; -webkit-user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; }
+/* « Recevoir mon lien par e-mail » (invitation, pause) et « Retrouver mon
+   évaluation » (accueil, création, lien usé) : voir blocLien et blocRetrouver. */
+.bilan-lien-mail { margin: .25rem 0 1.1rem; text-align: left; }
+.bilan-lien-ligne { display: flex; gap: .5rem; align-items: stretch; flex-wrap: wrap; }
+.bilan-lien-ligne .bilan-input { flex: 1 1 12rem; min-width: 0; }
+.bilan-lien-ligne .btn { flex: 0 0 auto; }
+.bilan-retrouver { margin: 1.25rem 0 0; padding: .85rem 1rem; border-radius: var(--radius); background: hsl(var(--muted) / .55); text-align: left; }
+.bilan-retrouver summary { cursor: pointer; font-weight: 600; }
+.bilan-retrouver summary::marker { color: hsl(var(--primary)); }
+.bilan-retrouver .bilan-lien-ligne { margin-top: .6rem; }
+.bilan-retrouver .bilan-note:empty { display: none; }
 .bilan-qr { display: flex; flex-direction: column; align-items: center; margin-top: 1rem; }
 .bilan-qr svg { width: 11rem; height: 11rem; background: #fff; border-radius: .75rem; padding: .35rem; }
 

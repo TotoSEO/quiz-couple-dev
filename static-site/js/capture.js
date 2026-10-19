@@ -7,7 +7,7 @@
    restent visibles, tout ce qui suit est flouté et rendu inerte, et un petit
    formulaire s'insère sous le titre : adresse, case de consentement, bouton.
    L'adresse part à la fonction lead-capture ; au 200, tout se déverrouille
-   et l'appareil s'en souvient six mois. Quand le serveur ne répond pas, met
+   et l'appareil s'en souvient deux ans. Quand le serveur ne répond pas, met
    plus de huit secondes ou freine l'adresse IP (429), tout se déverrouille
    aussi, sans mémoire : une panne de notre côté ne bloque personne. Seules
    les erreurs que la personne peut corriger (format, adresse jetable,
@@ -22,7 +22,13 @@
   var T = CFG.t || {};
   if (!source || !T.titre) return;
   var CLE = 'qc-abonne';
-  var DUREE = 180 * 24 * 3600 * 1000;
+  // Deux ans (Thomas, 19 octobre 2026 : « si une adresse mail est déjà en base,
+  // l'utilisateur n'a pas besoin de la ressaisir ») : sur l'appareil qui a
+  // donné une adresse, à la fin d'un test ou pour l'e-book, la porte ne se
+  // représente plus. Sur un autre appareil, le navigateur remplit l'adresse
+  // d'un geste (autocomplete) et une adresse déjà connue est acceptée tout de
+  // suite par le serveur, jamais en double.
+  var DUREE = 730 * 24 * 3600 * 1000;
   var FONCTION = 'https://lojvajnnvhatfplevyvy.supabase.co/functions/v1/lead-capture';
   var lang = (document.documentElement.lang || 'fr').slice(0, 2).toLowerCase();
   if (['fr', 'en', 'es', 'de', 'it'].indexOf(lang) < 0) lang = 'fr';

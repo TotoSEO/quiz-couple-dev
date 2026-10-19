@@ -13,6 +13,8 @@
           <li><strong><%= t('legal:mentions.s1Status', '') %></strong> <%= _v ? (_v.statut[lang] || _v.statut.fr) : t('legal:mentions.s1StatusValue', '') %></li>
           <% if (_v) { %><li><strong><%= t('cgv:vendeur.siret', lang === 'fr' ? 'SIRET :' : 'SIRET:') %></strong> <%= _v.siret %></li><% } %>
           <% if (_v && _v.adresse) { %><li><strong><%= t('cgv:vendeur.adresse', lang === 'fr' ? 'Adresse :' : 'Address:') %></strong> <%= _v.adresse %></li><% } %>
+          <%# Le numéro de téléphone (LCEN, art. 6-III, et L221-5 du Code de la consommation) : affiché dès que VENDEUR.telephone est rempli. %>
+          <% if (_v && _v.telephone) { %><li><strong><%= t('cgv:vendeur.telephone', lang === 'fr' ? 'Téléphone :' : 'Phone:') %></strong> <a href="tel:<%= _v.telephone.replace(/[^+\d]/g, '') %>" class="text-primary hover:underline"><%= _v.telephone %></a></li><% } %>
           <li><strong><%= t('legal:mentions.s1Email', '') %></strong> <a href="mailto:infoquizcouple@gmail.com" class="text-primary hover:underline">infoquizcouple@gmail.com</a></li>
           <li><strong><%= t('legal:mentions.s1Website', '') %></strong> quiz-couple.com</li>
         </ul>
@@ -49,6 +51,8 @@
         <li><strong><%= t('legal:mentions.s5Item1Label', '') %></strong> <%= t('legal:mentions.s5Item1Text', '') %></li>
         <li><strong><%= t('legal:mentions.s5Item2Label', '') %></strong> <%= t('legal:mentions.s5Item2Text', '') %></li>
         <li><strong><%= t('legal:mentions.s5Item3Label', '') %></strong> <%= t('legal:mentions.s5Item3Text', '') %></li>
+        <li><strong><%= t('legal:mentions.s5Item4Label', '') %></strong> <%= t('legal:mentions.s5Item4Text', '') %></li>
+        <li><strong><%= t('legal:mentions.s5Item5Label', '') %></strong> <%= t('legal:mentions.s5Item5Text', '') %></li>
       </ul>
       <div class="bg-primary/10 rounded-lg p-4 border border-primary/20">
         <p class="text-foreground text-sm"><%= t('legal:mentions.s5Warning', '') %></p>

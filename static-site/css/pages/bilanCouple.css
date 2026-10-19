@@ -51,6 +51,10 @@
 .blp-h1, .blp-h2 { font-family: var(--blp-titre); font-weight: 500; letter-spacing: -.02em; text-wrap: balance; }
 .blp-h1 { font-size: clamp(2.3rem, 6vw, 4.1rem); line-height: 1.04; margin: 0 0 1.25rem; font-variation-settings: 'opsz' 144; }
 .blp-h2 { font-size: clamp(1.8rem, 4.2vw, 2.75rem); line-height: 1.1; margin: 0 0 1rem; font-variation-settings: 'opsz' 96; }
+/* La citation au-dessus de « À deux, ou seul(e) » : le prix d'une séance. */
+.blp-citation { margin: 0 auto 1.75rem; max-width: 42rem; padding: 1rem 1.25rem 1rem 1.4rem; border-left: 4px solid hsl(var(--blp-rose)); border-radius: 0 1rem 1rem 0; background: hsl(var(--blp-rose) / .09); }
+.blp-citation p { margin: 0; font-family: var(--blp-titre); font-size: clamp(1.1rem, 2.4vw, 1.4rem); line-height: 1.4; font-style: italic; color: hsl(var(--foreground)); text-wrap: pretty; }
+.dark .blp-citation { background: hsl(var(--blp-rose) / .14); }
 .blp-h3 { font-family: var(--font-display, inherit); font-weight: 700; font-size: 1.12rem; line-height: 1.3; margin: 0 0 .5rem; }
 .blp-intro { font-size: 1.12rem; line-height: 1.65; color: hsl(var(--muted-foreground)); max-width: 46rem; margin: 0 0 2.5rem; }
 .blp-lead { font-size: clamp(1.05rem, 2vw, 1.2rem); line-height: 1.65; margin: 0 0 1.5rem; }
@@ -199,7 +203,8 @@
 @media (min-width: 900px) { .blp-slide { flex-basis: 20rem; } }
 .blp-slide-image { position: relative; border-radius: .9rem; overflow: hidden; background: #fff; box-shadow: 0 24px 50px -24px hsl(var(--blp-nuit) / .55), 0 0 0 1px hsl(var(--border)); transition: transform .3s ease, box-shadow .3s ease; }
 .blp-slide:hover .blp-slide-image { transform: translateY(-4px); box-shadow: 0 30px 56px -24px hsl(var(--blp-nuit) / .6), 0 0 0 1px hsl(var(--border)); }
-.blp-slide-image img { display: block; width: 100%; height: auto; }
+.blp-slide-image img { display: block; width: 100%; height: auto; pointer-events: none; user-select: none; -webkit-user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; }
+.blp-slide-image { -webkit-touch-callout: none; }
 .blp-slide-texte { padding: 0 .25rem; }
 .blp-slide-num { font-family: var(--blp-titre); font-style: italic; font-weight: 300; font-size: 1.6rem; line-height: 1; color: hsl(var(--primary)); margin: 0 0 .3rem; }
 .blp-slide-texte p:last-child { margin: 0; color: hsl(var(--muted-foreground)); line-height: 1.55; font-size: .95rem; }
@@ -333,7 +338,6 @@
 .blp-coches--sombre .blp-coche { background: hsl(var(--blp-rose) / .25); color: hsl(var(--blp-rose-clair)); }
 .blp-prix-aide { margin: 0 0 1rem; color: hsl(0 0% 100% / .8); line-height: 1.6; }
 .blp-garantie { margin: 0 0 1rem; font-weight: 700; color: hsl(152 60% 72%); }
-.blp-prix-comparaison { margin: 0 0 1.5rem; font-size: .9rem; color: hsl(0 0% 100% / .65); }
 .blp-prix .blp-btn--second { color: #fff; box-shadow: inset 0 0 0 2px hsl(0 0% 100% / .5); }
 .blp-prix .blp-btn--second:hover { box-shadow: inset 0 0 0 2px #fff; }
 

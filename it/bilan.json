@@ -54,7 +54,10 @@
       "creer": "Crea la nostra valutazione",
       "manque": "Manca una risposta.",
       "prenomManque": "Scrivi i vostri due nomi.",
-      "accordManque": "Spunta le due caselle per continuare."
+      "accordManque": "Spunta le due caselle per continuare.",
+      "email": "La tua e-mail (facoltativa)",
+      "emailAide": "Per ricevere subito il tuo link personale e ritrovare le tue risposte se chiudi la pagina. È anche l'indirizzo a cui arriverà il report.",
+      "emailFaux": "Questo indirizzo e-mail non sembra completo."
     },
     "invitation": {
       "titre": "Invita {{autre}}",
@@ -151,10 +154,9 @@
       "emailPlaceholder": "tu@email.it",
       "emailAide": "Il PDF partirà a questo indirizzo appena avrete finito tutti e due. Non serve a nient'altro.",
       "emailFaux": "Questo indirizzo non sembra valido.",
-      "renonciation": "Chiedo di ricevere il report appena è pronto e riconosco di perdere il mio diritto di recesso una volta fornito il report.",
+      "renonciation": "Chiedo che il report mi sia fornito non appena pronto, senza attendere la fine del periodo di recesso di 14 giorni, e riconosco di perdere il diritto di recesso una volta fornito.",
       "renonciationManque": "Spunta la casella per continuare.",
       "bouton": "Sblocca il nostro report · {{prix}}",
-      "garantie": "Soddisfatti o rimborsati per {{jours}} giorni: basta un messaggio dalla pagina dei contatti.",
       "securite": "Pagamento sicuro con Stripe (carta, Apple Pay, Google Pay). Non vediamo mai la tua carta.",
       "cgv": "Condizioni di vendita",
       "tva": "IVA non applicabile, art. 293 B del Codice generale delle imposte francese.",
@@ -543,6 +545,23 @@
     "genres": {
       "f": "Una donna",
       "h": "Un uomo"
+    },
+    "lien": {
+      "titre": "Ricevere il mio link via e-mail",
+      "placeholder": "tu@email.com",
+      "bouton": "Invia",
+      "aide": "Per ritrovare le tue risposte se chiudi questa pagina o cambi telefono.",
+      "envoye": "Fatto: il tuo link è nella tua casella ({{email}}). Controlla anche lo spam.",
+      "faux": "Questo indirizzo e-mail non sembra completo.",
+      "trop": "Troppi invii per questa valutazione. Riprova tra un'ora."
+    },
+    "retrouver": {
+      "titre": "Avevi già iniziato una valutazione?",
+      "texte": "Se avevi dato il tuo indirizzo e-mail, ti rimandiamo i tuoi link. Il vecchio link non funzionerà più.",
+      "placeholder": "tu@email.com",
+      "bouton": "Ritrovare la mia valutazione",
+      "envoye": "Se una valutazione è collegata a {{email}}, i tuoi link arrivano nella tua casella entro un minuto. Controlla anche lo spam.",
+      "trop": "Troppe richieste dalla tua connessione. Riprova tra un'ora."
     }
   },
   "lp": {
@@ -557,7 +576,7 @@
     "cta": "Iniziare la valutazione",
     "ctaDuo": "Fare la valutazione in due",
     "ctaSolo": "Farla da solo/a",
-    "ctaNote": "Domande gratuite · {{prix}} per il report, alla fine · Soddisfatti o rimborsati entro {{jours}} giorni",
+    "ctaNote": "Domande gratuite · {{prix}} per il report, alla fine · Pagamento unico, senza abbonamento",
     "voirExtrait": "Vedere il report pagina per pagina",
     "visuel": {
       "sur": "Report di esempio · coppia immaginaria",
@@ -606,10 +625,11 @@
         ],
         "cta": "Iniziare da solo/a"
       },
-      "note": "Stesso prezzo, stesso report. Se un giorno il tuo partner vorrà rispondere a sua volta, una valutazione in due sostituirà le tue supposizioni con le sue risposte."
+      "note": "Stesso prezzo, stesso report. Se un giorno il tuo partner vorrà rispondere a sua volta, una valutazione in due sostituirà le tue supposizioni con le sue risposte.",
+      "citation": "Una seduta da un consulente di coppia costa tra 60 e 100 €. Cominciare dalla valutazione completa di Quiz Couple è IL primo passo giusto."
     },
     "rapport": {
-      "titre": "Il report, pagina per pagina",
+      "titre": "Cosa c'è nel report?",
       "intro": "Un vero documento di una quarantina di pagine, con i suoi capitoli, i suoi grafici e, per ogni differenza, spunti per parlarne. Scorrete.",
       "pages": [
         {
@@ -722,7 +742,7 @@
         }
       ],
       "fin": "Sulle grandi domande (i figli, dove vivere, la fedeltà...), ciascuno può anche segnare la propria risposta come non negoziabile. Il report comincia allora da lì.",
-      "cta": "Vedere le 100 domande"
+      "cta": "Fare le 100 domande"
     },
     "pour": {
       "titre": "Per le coppie che vogliono vederci chiaro",
@@ -836,7 +856,6 @@
         "Il PDF via e-mail e la versione online per sei mesi",
         "Lo stesso report, che la facciate in due o da soli"
       ],
-      "comparaison": "Per confronto, una seduta da un consulente di coppia costa spesso tra 60 e 100 €.",
       "garantie": "Soddisfatti o rimborsati entro {{jours}} giorni: basta un messaggio."
     },
     "confiance": {
@@ -905,7 +924,7 @@
         },
         {
           "q": "E se il report non ci piace?",
-          "a": "Siete soddisfatti o rimborsati entro {{jours}} giorni: basta un messaggio dalla pagina dei contatti, senza doversi giustificare."
+          "a": "Il report è fatto delle vostre risposte, e a volte dice qualcosa di diverso da ciò che si sperava. Una volta fornito, non viene rimborsato: è un contenuto digitale, e prima di pagare chiedi di riceverlo subito. Finché non è stato fornito, puoi recedere ed essere rimborsato. E se il file ha un problema, lo sistemiamo."
         },
         {
           "q": "Che fine fanno le nostre risposte?",

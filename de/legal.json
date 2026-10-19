@@ -35,7 +35,7 @@
     "s2_3Item3Text": "Um den von Ihnen angeforderten Inhalt zu identifizieren",
     "s2_3Important": "Wichtig:",
     "s2_3ImportantText": "Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie uns unter der unten angegebenen Adresse kontaktieren. Ihre Daten werden dann innerhalb von 30 Tagen gelöscht.",
-    "lastUpdated": "Zuletzt aktualisiert: August 2026",
+    "lastUpdated": "Zuletzt aktualisiert: 20. Oktober 2026",
     "s2_4Title": "2.4 Reichweitenmessung der Website",
     "s2_4Intro": "Um zu wissen, welche Seiten gelesen werden und welche nicht, zählen wir die Besuche selbst, ohne einen externen Dienst. Jede angezeigte Seite erfasst drei Angaben und sonst nichts:",
     "s2_4Item1Label": "Die Adresse der Seite:",
@@ -75,7 +75,7 @@
     "s5Item4Text": "Ihre Daten in einem strukturierten Format erhalten",
     "s5Item5Label": "Widerspruchsrecht:",
     "s5Item5Text": "Der Verarbeitung Ihrer Daten widersprechen",
-    "s5Outro": "Um diese Rechte bezüglich der Nutzungsbeschränkungsdaten auszuüben, kontaktieren Sie uns unter der unten angegebenen Adresse.",
+    "s5Outro": "Um diese Rechte auszuüben, schreib uns an die unten angegebene Adresse: Wir antworten innerhalb eines Monats.",
     "s6Title": "6. Datenhosting und Auftragsverarbeiter",
     "s6Text": "Die Seite selbst wird von GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) gehostet. Die Daten, die du uns schickst, liegen in einer von Supabase betriebenen Datenbank; Supabase handelt dabei als Auftragsverarbeiter im Sinne der DSGVO. Das betrifft den Vornamen und den Kommentar in einer Bewertung, Nachrichten aus dem Kontaktformular, die E-Mail-Adresse und den Vornamen bei der Anforderung kostenloser Inhalte sowie die technischen Daten zur Doppelungsvermeidung aus Punkt 2.2. Quiz-Durchläufe werden in einer Form gezählt, die dich nicht identifiziert: gespeichert werden nur der Name des Tests und die Sprache, nie deine Antworten. Keiner dieser Auftragsverarbeiter darf diese Daten für eigene Zwecke nutzen.",
     "s7Title": "7. Links zu externen Websites",
@@ -106,7 +106,13 @@
       "<strong>Die Rechtsgrundlage:</strong> deine Einwilligung, die du mit dem Häkchen gibst. Du kannst sie jederzeit widerrufen: Jede E-Mail enthält einen Abmeldelink mit einem Klick, und wir schreiben dir nicht mehr.",
       "<strong>Wie lange:</strong> solange du angemeldet bist; danach wird die Adresse spätestens drei Jahre nach deiner letzten geöffneten E-Mail gelöscht. Eine abgemeldete oder nicht mehr existierende Adresse wird innerhalb von drei Monaten gelöscht.",
       "<strong>Wer sie verschickt:</strong> unsere E-Mails gehen über Resend (Resend Inc., USA, Standardvertragsklauseln der Europäischen Kommission) von einer quiz-couple.com-Adresse aus; die Liste liegt bei Supabase (Europäische Union)."
-    ]
+    ],
+    "s5Item6Label": "Recht auf Einschränkung:",
+    "s5Item6Text": "Verlangen, dass deine Daten nicht mehr verwendet, aber nicht gelöscht werden, solange eine Anfrage bearbeitet wird",
+    "s5Item7Label": "Recht auf Widerruf der Einwilligung:",
+    "s5Item7Text": "Jederzeit, für die darauf gestützten Verarbeitungen (E-Mails, Beziehungsanalyse), ohne dass das bisher Geschehene berührt wird",
+    "s5Item8Label": "Beschwerderecht:",
+    "s5Item8Text": "Bei der CNIL (cnil.fr), der französischen Datenschutzbehörde, oder bei der Behörde deines Landes, wenn du meinst, dass deine Rechte nicht gewahrt werden"
   },
   "mentions": {
     "seoTitle": "Impressum | Quiz Couple",
@@ -129,7 +135,7 @@
     "s3AddressValue": "88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA",
     "s3Website": "Website:",
     "s3HostingLabel": "Datenhosting:",
-    "s3HostingText": "Technische Daten (Nutzungsbeschränkung) und Backend-Funktionen werden auf einer sicheren Cloud-Infrastruktur gehostet.",
+    "s3HostingText": "Die Datenbank, die privaten Dateien (PDF-Berichte) und die Serverfunktionen werden von Supabase, Inc. gehostet, das als Auftragsverarbeiter im Sinne der DSGVO handelt. Die Zahlungen für die Beziehungsanalyse wickelt Stripe Payments Europe, Ltd. (Dublin, Irland) ab, die E-Mails versendet Resend, Inc. (USA).",
     "s4Title": "4. Geistiges Eigentum",
     "s4P1": "Alle Inhalte der Website Quiz Couple, einschließlich, aber nicht beschränkt auf Texte, Bilder, Grafiken, Logo, Icons, Töne und Software, sind ausschließliches Eigentum von Thomas Owaller, mit Ausnahme von Marken, Logos oder Inhalten, die anderen Partnerunternehmen oder Autoren gehören.",
     "s4P2": "Jede Reproduktion, Verbreitung, Änderung, Anpassung, Weiterübertragung oder Veröffentlichung, auch teilweise, dieser Elemente ist ohne die ausdrückliche schriftliche Zustimmung von Thomas Owaller streng verboten.",
@@ -144,8 +150,8 @@
     "s5Warning": "⚠️ Hinweis: Die Quiz, Tests und Spiele auf dieser Seite dienen der Information und der Unterhaltung. Sie ersetzen keine fachliche Beratung in Psychologie, Paartherapie oder Medizin.",
     "s6Title": "6. Haftungsbeschränkung",
     "s6P1": "Quiz Couple unternimmt alle Anstrengungen, um den Nutzern verfügbare und verifizierte Informationen und Tools anzubieten. Es kann jedoch nicht für Fehler, Nichtverfügbarkeit von Informationen oder das Vorhandensein von Viren auf seiner Website haftbar gemacht werden.",
-    "s6P2": "Die auf dieser Website angebotenen Quiz dienen der Unterhaltung. Sie stellen in keinem Fall professionelle Beratung in Liebesbeziehungen, Psychologie oder Paartherapie dar.",
-    "s6P3": "Der Betreiber übernimmt keine Haftung für persönliche Entscheidungen, die allein auf Grundlage der angezeigten Testergebnisse getroffen werden; diese haben keinerlei diagnostischen Wert.",
+    "s6P2": "Die kostenlosen Tests, Quiz und Spiele sind wie die kostenpflichtige Beziehungsanalyse Werkzeuge zur Information und zum Gespräch. Sie sind in keinem Fall eine fachliche Beratung, ob psychologisch, medizinisch, rechtlich oder finanziell, und keine Diagnose, und kein Ergebnis garantiert irgendetwas über eine Beziehung oder ihre Zukunft.",
+    "s6P3": "Die Entscheidungen, die jede Person in ihrem Leben auf Grundlage eines Ergebnisses oder eines Berichts trifft (zusammenbleiben, sich trennen, heiraten, ein Kind bekommen, umziehen, Geld ausgeben), liegen allein in ihrer Verantwortung; der Herausgeber haftet nicht dafür. Für die kostenpflichtige Beziehungsanalyse regeln die Allgemeinen Geschäftsbedingungen die Art des Dienstes, das Widerrufsrecht und die gesetzliche Gewährleistung.",
     "s7Title": "7. Hyperlinks",
     "s7Text": "Die Website Quiz Couple kann Hyperlinks zu anderen Websites enthalten. Thomas Owaller hat jedoch keine Möglichkeit, den Inhalt der so besuchten Websites zu überprüfen und lehnt daher jede Haftung für eventuelle Risiken illegaler Inhalte ab.",
     "s8Title": "8. Affiliate-Links",
@@ -153,12 +159,16 @@
     "s8P2": "Wir sagen das lieber deutlich, als es dich erraten zu lassen. Jede Seite mit solchen Links zeigt einen sichtbaren Hinweis, genau dort, wo der Link steht, damit du vor dem Klick immer weißt, woran du bist.",
     "s8P3": "Diese Partnerschaften entscheiden nie darüber, was wir schreiben. Wir behalten nur Partner, deren Angebot direkt mit dem Paarleben zu tun hat, deren Qualität wir gut genug finden, um sie einer nahestehenden Person zu empfehlen, und die zur Linie der Seite passen. Ein Partner, der diese Bedingungen nicht mehr erfüllt, fliegt raus, Provision hin oder her.",
     "s9Title": "9. Anwendbares Recht",
-    "s9Text": "Dieses Impressum unterliegt dem französischen Recht. Im Falle eines Rechtsstreits sind ausschließlich die französischen Gerichte zuständig.",
+    "s9Text": "Dieses Impressum unterliegt französischem Recht. Im Streitfall und wenn keine gütliche Einigung gelingt, sind die gesetzlich bestimmten Gerichte zuständig, ohne einem Verbraucher den Schutz der zwingenden Vorschriften seines Wohnsitzlandes zu nehmen.",
     "s10Title": "10. Kontakt",
     "s10Text": "Für Fragen oder Auskunftswünsche zur Seite nutze bitte unser ",
-    "lastUpdated": "Letzte Aktualisierung: März 2026",
+    "lastUpdated": "Zuletzt aktualisiert: 20. Oktober 2026",
     "s10Lien": "Kontaktformular",
     "s10Fin": ".",
-    "s3WebsiteValue": "github.com"
+    "s3WebsiteValue": "github.com",
+    "s5Item4Label": "Stripe:",
+    "s5Item4Text": "Für die Zahlung der Beziehungsanalyse auf der sicheren Seite von Stripe. Wir haben nie Zugriff auf Kartendaten.",
+    "s5Item5Label": "Resend:",
+    "s5Item5Text": "Für den Versand der E-Mails der Website: den Bericht der Analyse, das E-Book und die E-Mails, für die du dich angemeldet hast."
   }
 }

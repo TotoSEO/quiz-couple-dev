@@ -209,13 +209,110 @@ voient l'encart et lancent un bilan (quelques centaines), que la moitié des
 partenaires rejoignent et finissent, et qu'un tiers des couples qui ont fini
 paient, on est entre 50 et 150 ventes par mois, 500 à 1 500 €.
 
-### La garantie
+### Pas de garantie « satisfait ou remboursé »
 
-« Satisfaits ou remboursés pendant 14 jours », sur simple message. C'est une
-promesse commerciale volontaire (le droit de rétractation, lui, tombe quand
-le rapport est fourni, voir plus bas). Elle rassure au moment de payer, et le
-remboursement se fait en deux clics dans Stripe. Thomas peut la retirer :
-`GARANTIE_JOURS` dans coeur.mjs, 0 pour aucune.
+Elle a existé un jour (quatorze jours, sur simple message). Thomas l'a
+retirée le 19 octobre 2026 : « si jamais une personne n'est pas satisfaite du
+test, bah c'est trop tard ». `GARANTIE_JOURS = 0` dans coeur.mjs ; les textes du
+paiement et de Stripe ont été retirés, seul `lp.prix.garantie` (page de
+vente) reste et ne s'affiche qu'avec une valeur en jours. Ce qui reste, c'est la loi : la rétractation
+jusqu'à la fourniture du rapport, la garantie légale de conformité après.
+
+À garder en tête, côté commerce : un client mécontent qui ne peut pas être
+remboursé peut ouvrir un litige auprès de sa banque. Un litige perdu coûte le
+prix du rapport plus des frais Stripe, et un taux de litiges élevé met le
+compte Stripe en danger. Rembourser à la main un cas qui s'envenime (Stripe >
+Paiements > Rembourser) reste possible, et souvent moins cher. Le droit
+protège Thomas ; il n'oblige pas à aller au bout d'un conflit à 9,90 €.
+
+### Ce qui protège Thomas, et ce qui manque encore
+
+Relu le 19 octobre 2026 (Thomas : « soit sûr que niveau paiement on ne peut
+pas se retourner contre moi »). Ce qui est en place :
+
+- **La rétractation prend fin à la fourniture du rapport**, pas avant, pas
+  après (L221-28 13° du Code de la consommation, article 16 m de la directive
+  2011/83). Trois conditions, toutes remplies : l'acheteur demande
+  expressément la fourniture immédiate, il reconnaît perdre son droit (la
+  case cochée avant de payer, `paywall.renonciation`, enregistrée avec
+  l'heure dans `renonciation_le`), et il en reçoit la confirmation sur un
+  support durable (la ligne `legal` de l'e-mail qui apporte le rapport, avec
+  le lien des CGV, L221-13). « Fourni » est défini : envoyé par e-mail ou mis
+  à disposition sur la page, le premier des deux (CGV, article 5).
+- **Après, aucun remboursement n'est dû**, et les CGV disent qu'un résultat
+  qui déplaît n'est pas un défaut (article 6). Reste la garantie légale de
+  conformité des contenus numériques (L224-25-12 et suivants) : un fichier
+  qui ne s'ouvre pas, un rapport incomplet ou qui ne correspond pas à sa
+  description. On ne peut pas y renoncer ; on la traite en refabriquant le
+  rapport, et c'est tout à notre avantage de le dire.
+- **La nature du service** (article 7) : un outil d'information et de
+  discussion, aucun professionnel, ni diagnostic ni avis médical,
+  psychologique, juridique ou financier, aucune garantie de résultat, et les
+  décisions de la vraie vie relèvent de la seule responsabilité des
+  personnes. C'est la clause que Thomas demandait (« je ne suis pas
+  responsable d'une prise de décision dans la vraie vie »). Elle est écrite
+  comme une description du service, pas comme une exclusion de notre
+  responsabilité : une clause qui supprimerait le droit à réparation du
+  consommateur pour nos propres manquements est abusive de plein droit
+  (R212-1 6°) et ne tiendrait pas devant un juge. Même règle dans les
+  mentions légales (section 6), pour les tests gratuits.
+- **Le reste** : majeurs seulement (case à la création et CGV), prix TTC
+  avec « TVA non applicable, art. 293 B du CGI » (page, Stripe, CGV, e-mail),
+  conditions datées (la version en ligne au paiement s'applique), vendeur
+  identifié (Visibilitea, SIRET, adresse) sur les trois pages légales, droits
+  RGPD complets dans la confidentialité (limitation, retrait, réclamation à
+  la CNIL), consentement explicite pour les données sensibles (article 9),
+  traces : `a_consent` / `b_consent`, `renonciation_le`, `envois`.
+
+Ce qui manque, et que seul Thomas peut fournir :
+
+- **Un médiateur de la consommation.** Tout professionnel qui vend à des
+  consommateurs doit en désigner un et le nommer dans ses CGV et sur son
+  site (L612-1 et L616-1 ; amende administrative jusqu'à 3 000 € pour une
+  personne physique). Thomas a choisi de ne pas en prendre pour l'instant ;
+  la section « Réclamations et médiation » des CGV s'écrit sans (`pSans`).
+  Le jour où il en prend un (une adhésion annuelle auprès d'un médiateur
+  référencé par la CECMC, liste sur economie.gouv.fr), il suffit de remplir
+  `VENDEUR.mediateur` (`nom`, `site`) dans config.js : la section s'écrit
+  avec son nom dans les cinq langues. La plateforme européenne de règlement
+  en ligne des litiges a fermé le 20 juillet 2025 : plus aucun lien à
+  afficher de ce côté-là.
+- **Un numéro de téléphone.** La LCEN (article 6-III) et l'information
+  précontractuelle (L221-5 et R221-1) le demandent. `VENDEUR.telephone`,
+  vide pour l'instant ; rempli, il s'affiche dans les mentions légales, la
+  confidentialité et les CGV.
+
+### Les liens perdus
+
+19 octobre 2026, Thomas : « si quelqu'un ferme l'onglet par erreur et qu'il
+n'a pas eu le temps de copier son lien, on fait comment ? Il faut une
+solution ! » Trois étages :
+
+1. **Le même appareil** : la page retient chaque évaluation ouverte
+   (`qc-bilans` dans localStorage) et propose « Reprendre » en revenant sur
+   la page. Un onglet fermé n'y change rien, sauf en navigation privée.
+2. **L'adresse e-mail, facultative, à la création** (champ sous les
+   prénoms) : le lien personnel part tout de suite par e-mail (action
+   `lien`), et l'adresse devient celle du rapport. « Recevoir mon lien » à
+   une autre adresse, plus tard, envoie le lien sans remplacer celle du
+   rapport : sinon « retrouver » par la première adresse ne trouverait plus
+   rien. « Recevoir mon lien par
+   e-mail » est aussi sur l'écran d'invitation et sur l'écran de pause
+   (`blocLien`, bilan.js).
+3. **« Retrouver mon évaluation »** (`blocRetrouver` : accueil de
+   l'application, première étape de la création, lien d'invitation déjà
+   utilisé) : on donne l'adresse seule. L'action `retrouver` cherche les
+   évaluations qui la portent (adresse du rapport de A ou de B, ou du reçu
+   Stripe, `trouverParEmail`, égalité stricte sur l'adresse en minuscules,
+   jamais `ilike` : un `_` serait un joker), remplace le jeton de chaque rôle
+   concerné (la base ne garde que des empreintes SHA-256, l'ancien lien ne
+   peut pas être relu : il meurt, celui du partenaire reste) et envoie tout
+   en un e-mail (`messageLien`, cinq langues). Sans évaluation, un e-mail le
+   dit aussi : la réponse de la page est la même dans les deux cas, personne
+   ne peut sonder une adresse. Limites, en mémoire de l'instance : cinq
+   envois par heure et par évaluation (`lien`), cinq demandes par heure et
+   par IP, une par adresse toutes les dix minutes (`retrouver`). Index de la
+   migration `20261020120000_bilan_retrouver.sql`.
 
 ## Ce que montre le rapport, et comment c'est calculé
 

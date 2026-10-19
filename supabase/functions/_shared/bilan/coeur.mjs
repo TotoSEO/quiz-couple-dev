@@ -14,7 +14,14 @@ export const VERSION = 3;
 // rapport des deux) comme pour une évaluation faite seul(e). En centimes.
 export const PRIX_CENTIMES = 990;
 // « Satisfaits ou remboursés » : 0 pour retirer la promesse partout.
-export const GARANTIE_JOURS = 14;
+// Aucune garantie « satisfait ou remboursé » depuis le 19 octobre 2026
+// (Thomas : « si jamais une personne n'est pas satisfaite du test, bah c'est
+// trop tard ») : le rapport est un contenu numérique fourni à la demande,
+// le droit de rétractation prend fin à sa fourniture (CGV, article 5), et
+// seule la garantie légale de conformité reste. Les textes du paiement et de
+// Stripe ont été retirés ; seul `lp.prix.garantie` (page de vente) reste, et
+// ne s'affiche qu'avec une valeur en jours.
+export const GARANTIE_JOURS = 0;
 // Durées de conservation, en jours (reprises par la migration et la page).
 export const CONSERVATION = { nonPaye: 60, paye: 183 };
 

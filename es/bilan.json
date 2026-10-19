@@ -54,7 +54,10 @@
       "creer": "Crear nuestra evaluación",
       "manque": "Falta una respuesta.",
       "prenomManque": "Escribe vuestros dos nombres.",
-      "accordManque": "Marca las dos casillas para continuar."
+      "accordManque": "Marca las dos casillas para continuar.",
+      "email": "Tu e-mail (opcional)",
+      "emailAide": "Para recibir ahora mismo tu enlace personal y recuperar tus respuestas si cierras la página. También es la dirección a la que llegará el informe.",
+      "emailFaux": "Esta dirección de e-mail no parece completa."
     },
     "invitation": {
       "titre": "Invita a {{autre}}",
@@ -151,10 +154,9 @@
       "emailPlaceholder": "tu@email.com",
       "emailAide": "El PDF saldrá a esta dirección en cuanto hayáis terminado los dos. No sirve para nada más.",
       "emailFaux": "Esta dirección no parece válida.",
-      "renonciation": "Pido recibir el informe en cuanto esté listo y reconozco que pierdo mi derecho de desistimiento una vez entregado el informe.",
+      "renonciation": "Pido que el informe se me entregue en cuanto esté listo, sin esperar al final del plazo de desistimiento de 14 días, y reconozco que pierdo mi derecho de desistimiento una vez entregado.",
       "renonciationManque": "Marca la casilla para continuar.",
       "bouton": "Desbloquear nuestro informe · {{prix}}",
-      "garantie": "Si no estáis satisfechos, os devolvemos el dinero durante {{jours}} días: basta con un mensaje desde la página de contacto.",
       "securite": "Pago seguro con Stripe (tarjeta, Apple Pay, Google Pay). Nunca vemos tu tarjeta.",
       "cgv": "Condiciones de venta",
       "tva": "IVA no aplicable, art. 293 B del Código General de Impuestos francés.",
@@ -543,6 +545,23 @@
     "genres": {
       "f": "Una mujer",
       "h": "Un hombre"
+    },
+    "lien": {
+      "titre": "Recibir mi enlace por e-mail",
+      "placeholder": "tu@email.com",
+      "bouton": "Enviar",
+      "aide": "Para recuperar tus respuestas si cierras esta página o cambias de móvil.",
+      "envoye": "Listo: tu enlace está en tu bandeja ({{email}}). Mira también en el correo no deseado.",
+      "faux": "Esta dirección de e-mail no parece completa.",
+      "trop": "Demasiados envíos para esta evaluación. Vuelve a intentarlo dentro de una hora."
+    },
+    "retrouver": {
+      "titre": "¿Ya habías empezado una evaluación?",
+      "texte": "Si diste tu dirección de e-mail, te volvemos a enviar tus enlaces. El enlace antiguo dejará de funcionar.",
+      "placeholder": "tu@email.com",
+      "bouton": "Recuperar mi evaluación",
+      "envoye": "Si hay una evaluación vinculada a {{email}}, tus enlaces llegarán a tu bandeja en un minuto. Mira también en el correo no deseado.",
+      "trop": "Demasiadas solicitudes desde tu conexión. Vuelve a intentarlo dentro de una hora."
     }
   },
   "lp": {
@@ -557,7 +576,7 @@
     "cta": "Empezar la evaluación",
     "ctaDuo": "Hacer la evaluación en pareja",
     "ctaSolo": "Hacerla a solas",
-    "ctaNote": "Preguntas gratis · {{prix}} por el informe, al final · Satisfechos o reembolsados {{jours}} días",
+    "ctaNote": "Preguntas gratis · {{prix}} por el informe, al final · Pago único, sin suscripción",
     "voirExtrait": "Ver el informe página a página",
     "visuel": {
       "sur": "Informe de ejemplo · pareja ficticia",
@@ -606,10 +625,11 @@
         ],
         "cta": "Empezar a solas"
       },
-      "note": "Mismo precio, mismo informe. Si algún día tu pareja quiere responder también, una evaluación en pareja sustituirá tus suposiciones por sus respuestas."
+      "note": "Mismo precio, mismo informe. Si algún día tu pareja quiere responder también, una evaluación en pareja sustituirá tus suposiciones por sus respuestas.",
+      "citation": "Una sesión con un consejero de pareja cuesta entre 50 y 90 €. Empezar por la evaluación completa de Quiz Couple es EL buen primer paso."
     },
     "rapport": {
-      "titre": "El informe, página a página",
+      "titre": "¿Qué hay en el informe?",
       "intro": "Un documento de verdad, de unas cuarenta páginas, con sus capítulos, sus gráficos y, para cada diferencia, pistas para hablarlo. Desliza.",
       "pages": [
         {
@@ -722,7 +742,7 @@
         }
       ],
       "fin": "En las grandes preguntas (los hijos, dónde vivir, la fidelidad...), cada uno puede además marcar su respuesta como innegociable. El informe empieza entonces por ahí.",
-      "cta": "Ver las 100 preguntas"
+      "cta": "Hacer las 100 preguntas"
     },
     "pour": {
       "titre": "Para las parejas que quieren ver claro",
@@ -836,7 +856,6 @@
         "El PDF por correo y la versión en línea durante seis meses",
         "El mismo informe, la hagáis en pareja o a solas"
       ],
-      "comparaison": "Para comparar, una sesión con un consejero de pareja suele costar entre 50 y 90 €.",
       "garantie": "Satisfechos o reembolsados durante {{jours}} días: basta un mensaje."
     },
     "confiance": {
@@ -905,7 +924,7 @@
         },
         {
           "q": "¿Y si el informe no nos gusta?",
-          "a": "Estáis satisfechos o reembolsados durante {{jours}} días: basta un mensaje desde la página de contacto, sin tener que justificaros."
+          "a": "El informe está hecho con vuestras respuestas, y a veces dice algo distinto de lo que se esperaba. Una vez entregado, no se reembolsa: es un contenido digital, y antes de pagar pides recibirlo enseguida. Mientras no se haya entregado, puedes desistir y que te reembolsen. Y si el archivo tiene algún problema, lo arreglamos."
         },
         {
           "q": "¿Qué pasa con nuestras respuestas?",
