@@ -46,11 +46,12 @@ jobs:
           url="https://$SUPABASE_PROJECT_REF.supabase.co/functions/v1/bilan"
           code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST "$url" \
             -H 'Content-Type: application/json' \
-            -d '{"action":"vue","id":"00000000-0000-0000-0000-000000000000","jeton":"abcdefghijklmnopqrstuvwxyz0123456789abcd"}')
-          echo "bilan (vue d'un identifiant inconnu) : $code $(head -c 200 reponse.json)"
-          # 404 « introuvable » ou 400 « lien » : la fonction est là et contrôle
-          # ce qu'on lui envoie. Tout autre code est une panne.
-          case "$code" in 400|404) ;; *) echo "::error::bilan répond $code"; exit 1;; esac
+            -d '{"action":"etat","id":"00000000-0000-0000-0000-000000000000","jeton":"abcdefghijklmnopqrstuvwxyz0123456789abcd"}')
+          echo "bilan (état d'un identifiant inconnu) : $code $(head -c 200 reponse.json)"
+          # 404 « introuvable » : la fonction est là, lit la base et ne trouve
+          # rien, ce qu'on veut. 400 « lien » : elle est là mais refuse la
+          # forme de l'appel. Tout autre code est une panne.
+          case "$code" in 404) ;; 400) echo "::warning::bilan répond 400 : la forme de la sonde a vieilli";; *) echo "::error::bilan répond $code"; exit 1;; esac
 
       - name: Le webhook Stripe refuse un événement sans signature
         run: |

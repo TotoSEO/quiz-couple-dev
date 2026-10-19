@@ -326,13 +326,16 @@ export const GA_ID = 'G-XZV8V6FEK5';
 // avant d'ouvrir »). Tant qu'il est à false : la page existe mais n'est pas
 // indexée ni dans le sitemap, elle n'est dans aucun menu, les liens écrits
 // vers elle dans les textes sont neutralisés à la construction, et les
-// écrans de résultat des tests ne la proposent pas. À passer à true une fois
+// écrans de résultat des tests ne la proposent pas. Ouvert le 20 octobre
+// 2026 (Thomas : « Met tout en on, on lance la machine. Ouvre. »), une fois
 // le compte Stripe branché (secrets STRIPE_SECRET_KEY et
-// STRIPE_WEBHOOK_SECRET chez Supabase) et VENDEUR rempli.
+// STRIPE_WEBHOOK_SECRET chez Supabase) et VENDEUR rempli ; le workflow
+// « Évaluation de couple · santé » (bilan-sante.yml) vérifie que les secrets
+// sont là et que les fonctions répondent.
 // QC_BILAN=ouvert ou QC_BILAN=ferme force le choix pour une construction.
 export const BILAN_OUVERT = process.env.QC_BILAN === 'ouvert' ? true
   : process.env.QC_BILAN === 'ferme' ? false
-  : false;
+  : true;
 // Les pages qui envoient vers le bilan, une fois ouvert : l'encart sous le
 // verdict (encartBilan, quiz-engine-core.js) et la bannière au-dessus des
 // cartes « À faire ensuite » (related-tests.ejs). Le groupe choisit le texte :
