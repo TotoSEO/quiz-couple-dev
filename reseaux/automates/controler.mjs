@@ -66,7 +66,12 @@ for (const fichier of process.argv.slice(2)) {
     // une idée de Thomas (admin) tient lieu de sujet : le post porte idee_id
     // et un sujet « idee-<début de l'identifiant> », hors banque
     if (post.idee_id && !/^idee-[0-9a-f]{8}$/.test(post.sujet || '')) fautes.push(`un post tiré d'une idée porte le sujet idee-<huit premiers caractères de idee_id>, pas « ${post.sujet} »`);
-    if (!date && !post.idee_id && !banque(post.categorie).some((s) => s.id === post.sujet)) fautes.push(`sujet « ${post.sujet} » absent de la banque ${post.categorie} (sujets.json)`);
+    const sujet = banque(post.categorie).find((s) => s.id === post.sujet);
+    if (!date && !post.idee_id && !sujet) fautes.push(`sujet « ${post.sujet} » absent de la banque ${post.categorie} (sujets.json)`);
+    // un sujet retiré (les mipaps, 18 octobre 2026 : ceux d'avant l'effet
+    // Barnum qu'aucun post n'avait pris) ne se prend plus ; les sujets déjà
+    // pris restent dans la banque, sans « retire », pour leurs posts
+    if (sujet?.retire) fautes.push(`sujet ${post.sujet} retiré de la banque le ${sujet.retire} : on prend un sujet libre, sans « retire »`);
     // un sujet de la banque qu'un sujet daté réserve (son champ « theme » :
     // l'édition de Noël des dilemmes, celle du Nouvel An des « Connais-tu »)
     // ne se prend qu'à cette date : sinon la routine l'aurait pris dans

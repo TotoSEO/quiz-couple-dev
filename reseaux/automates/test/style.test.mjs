@@ -35,7 +35,7 @@ test('un post complet : les textes affichés de chaque gabarit sont lus', () => 
   const post = {
     variantes: {
       fr: {
-        legende: 'il part à 19 h. il est 20 h 30.\n\ntague-le',
+        legende: 'tague-le',
         recette: { gabarit: 'mipaps-reel', plans: [{ textes: [{ texte: 'bon j\'y vais' }] }, { textes: [{ texte: 'une heure plus tard.' }, { texte: 'il est toujours là. <3' }] }] },
       },
     },
@@ -53,4 +53,19 @@ test("« même équipe » n'est refusé que seul en fin de texte, pas dans une v
   assert.deepEqual(controlerStyle({ textes: ["même quand on est pas d'accord, on est dans la même équipe."], legende: 'envoie-lui ça' }), []);
   a(controlerStyle({ textes: ['he snores. and yet.'], legende: 'tag him', langue: 'en' }), 'la fin commente');
   assert.deepEqual(controlerStyle({ textes: ['we fight about dishes and yet we fall asleep holding hands.'], legende: 'tag him', langue: 'en' }), []);
+});
+
+test("effet Barnum : la légende des mipaps ne donne ni chiffre ni anecdote, l'image pas d'heure à la minute", () => {
+  a(controlerStyle({ textes: ['tu dors ?'], legende: 'il est 3 h 12.\n\ntu fais ça aussi ?' }), 'un chiffre dans la légende');
+  a(controlerStyle({ textes: ["j'ai froid. viens."], legende: 'elle a trois couvertures.\n\ntague-le' }), 'un chiffre dans la légende');
+  a(controlerStyle({ textes: ['2 h du matin'], legende: 'elle a marché sans gants.\n\nenvoie ça à ta personne' }), "raconte l'anecdote");
+  a(controlerStyle({ textes: ['20 h 15'], legende: 'il avait préparé ça toute la journée.\n\nenvoie-lui ça' }), "raconte l'anecdote");
+  a(controlerStyle({ textes: ['3 h 12', '3 h 20'], legende: 'tague-le', reel: true }), 'à la minute près');
+  // le temps qui passe et l'heure ronde passent, le trait de caractère au présent aussi
+  assert.deepEqual(controlerStyle({ textes: ['nous deux devant un film', '22 h', '1 h plus tard'], legende: 'envoie ça à la personne qui fait ça', reel: true }), []);
+  assert.deepEqual(controlerStyle({ textes: ['quand il me voit de loin'], legende: 'il a pas de freins.\n\ntague-le' }), []);
+  assert.deepEqual(controlerStyle({ textes: ['toi quand ta personne dit « j\'arrive dans 2 min »'], legende: "vous aussi ou c'est que nous ?", reel: true }), []);
+  assert.deepEqual(controlerStyle({ textes: ['les signes que t\'as trouvé ta personne'], legende: 'tague la personne qui fait ça' }), []);
+  // les comptes en anglais (Quiz Couple) ne sont pas concernés
+  assert.deepEqual(controlerStyle({ textes: ['POV: he says 5 more minutes'], legende: 'it has been 40 minutes.\n\ntag him', langue: 'en' }), []);
 });

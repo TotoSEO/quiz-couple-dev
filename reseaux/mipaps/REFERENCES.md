@@ -301,9 +301,13 @@ on ne la « cisèle » pas.
 
 ### Ce qu'elles ont en commun, et que nos textes n'avaient pas
 
-1. **Un détail précis à la place d'un adjectif** : une heure, un chiffre,
-   un objet, ce qu'il a dit mot pour mot (« la moitié de son Twix », « 45
-   minutes », « les gros pots », « 16 ans et trois enfants »).
+1. **Un détail précis à la place d'un adjectif** : un objet, ce qu'il a
+   dit mot pour mot (« la moitié de son Twix », « les gros pots »). Attention
+   (18 octobre 2026) : dans un tweet, un chiffre (« 45 minutes ») marche
+   parce qu'il exagère un geste que tout le monde fait ; ajouté à la
+   légende de chaque post, il était devenu un tic qui sonnait inventé, et
+   personne ne s'y reconnaissait. Voir « L'effet Barnum » plus bas et dans
+   la ligne éditoriale.
 2. **La chute est un fait, pas un commentaire.** La phrase s'arrête sur ce
    qui s'est passé (« Elle croit que c'est un jeu. », « Je sais. ») ;
    personne n'écrit « c'est ça l'amour » après.
@@ -353,3 +357,33 @@ on ne la « cisèle » pas.
 - 1 h de « je sais pas, choisis toi ». on a pris une pizza.
 - il part à 19 h. il est 20 h 30. (il est toujours là)
 - « c'est pas grave. » / c'est grave.
+
+## L'effet Barnum, et les comptes qui en vivent (octobre 2026)
+
+L'effet Barnum (ou effet Forer) : on prend pour une description de soi une
+phrase qui vaut pour presque tout le monde, surtout quand elle est gentille,
+qu'elle a deux faces et qu'elle semble écrite pour nous. Bertram Forer l'a
+mesuré en 1948 : un même portrait, recopié dans des horoscopes, distribué à
+toute une classe comme s'il était personnel, noté juste à 4,3 sur 5 en
+moyenne. C'est la mécanique des comptes de couple qui marchent, et la règle
+des mipaps depuis le 18 octobre 2026 (ligne éditoriale, « L'effet
+Barnum »).
+
+Deux bandes dessinées de couple vivent de ce ressort, à regarder pour la
+mécanique, jamais pour le dessin :
+
+- **Catana Comics** (Catana Chetwynd) : des moments minuscules que tous les
+  couples ont, sans chute écrite. Il lui vole la couette, elle pose ses
+  pieds gelés sur lui, il la regarde manger ses frites à elle. Le lecteur ne
+  rit pas d'une blague, il rit parce que c'est lui. Presque jamais de date,
+  de lieu ou de chiffre : rien qui fasse de la scène l'histoire de
+  quelqu'un d'autre.
+- **Yehuda Devir et Maya** (« One of Those Days ») : les mêmes situations
+  universelles poussées un cran plus loin (elle prend toute la place dans
+  le lit, il doit poser pour cent photos), toujours dans les deux sens :
+  chacun est tour à tour celui qui agace et celui qui subit.
+
+Ce qu'ils ont en commun, et que les premiers posts des mipaps n'avaient
+pas : la situation est celle du lecteur, pas celle des personnages ; le
+geste qui fait rire est un geste que tout le monde fait ; et la scène finit
+sur l'image, sans phrase pour l'expliquer.
