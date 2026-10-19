@@ -113,7 +113,9 @@
     "quizPossession": "Wer könnte besessen werden",
     "quizSuperVilain": "Welcher Superschurke bist du",
     "quizDuoVilains": "Welches Superschurken-Duo",
-    "bilanCouple": "Beziehungs-Check",
+    "bilanCouple": "Beziehungsanalyse",
+    "evaluer": "Beziehung analysieren",
+    "evaluerSous": "Die vollständige Analyse, zu zweit oder allein",
     "bilanCoupleDesc": "100 Fragen, jeder für sich, und ein Bericht mit 30 Seiten"
   },
   "footer": {

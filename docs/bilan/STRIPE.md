@@ -88,7 +88,7 @@ vrai site, sans que personne d'autre ne le voie.
      dernier fait apparaître les remboursements dans l'admin) ;
    - une fois créée, afficher sa « clé secrète de signature » `whsec_...` et
      la mettre dans le secret Supabase `STRIPE_WEBHOOK_SECRET`.
-4. Faire un bilan à deux sur https://quiz-couple.com/bilan-de-couple/ (deux
+4. Faire une évaluation à deux sur https://quiz-couple.com/evaluation-de-couple/ (deux
    téléphones, ou deux navigateurs). Le premier qui a fini ses réponses voit
    l'offre : y mettre son adresse e-mail, cocher la case et payer avec la
    carte de test `4242 4242 4242 4242`, n'importe quelle date future,
@@ -112,12 +112,11 @@ la personne ferme l'onglet avant de revenir. Les deux doivent marcher.
 ## 5. Les mentions légales du vendeur
 
 Dans `static-site/build/config.js`, objet `VENDEUR` : le nom (Visibilitea),
-le statut (entreprise individuelle de Thomas Owaller) et le SIRET sont déjà
-remplis. **Il manque `adresse`** : l'adresse postale de l'entreprise (une
-domiciliation suffit si on ne veut pas publier son adresse personnelle).
-Les mentions légales et les conditions de vente l'affichent dès qu'elle est
-remplie ; le build prévient (« bilan ouvert sans SIRET ou sans adresse ») si
-on ouvre sans elle.
+le statut (entreprise individuelle de Thomas Owaller), le SIRET et, depuis le
+19 octobre 2026, l'adresse (4 rue de Bruges, 67000 Strasbourg) sont remplis.
+Les mentions légales et les conditions de vente les affichent ; le build
+prévient (« bilan ouvert sans SIRET ou sans adresse ») si l'un des deux
+manque.
 
 Pas de médiateur de la consommation (choix de Thomas, 18 octobre 2026) : la
 section « Réclamations » des conditions de vente s'écrit sans. La loi

@@ -18,6 +18,20 @@
       "totalLabel": "quiz y tests realizados"
     }
   },
+  "evaluation": {
+    "sur": "Nuevo · Evaluación de pareja",
+    "titre": "¿Queréis la misma vida, los dos?",
+    "texte": "Un centenar de preguntas concretas sobre doce áreas de la vida en pareja, construidas sobre la investigación en psicología de pareja, y un informe de 40 páginas que pone vuestras respuestas frente a frente. En pareja, cada uno en su teléfono, o a solas si el otro no está listo para hablarlo.",
+    "points": [
+      "Cada uno responde por su lado, sin ver las respuestas del otro",
+      "Un informe de 40 páginas, con gráficos y pistas para hablarlo",
+      "Preguntas gratis · {{prix}} por el informe, al final"
+    ],
+    "ctaDuo": "Hacer la evaluación en pareja",
+    "ctaSolo": "Hacerla a solas",
+    "ctaCourt": "Evaluar tu pareja",
+    "legende": "Una página del informe de ejemplo"
+  },
   "quizSection": {
     "title": "Nuestros quiz gratis para",
     "titleHighlight": "parejas",

@@ -5,7 +5,7 @@
   "liens": {
     "contact": "pagina dei contatti",
     "confidentialite": "informativa sulla privacy",
-    "bilan": "check-up di coppia"
+    "bilan": "valutazione di coppia"
   },
   "vendeur": {
     "titre": "Il venditore",
@@ -21,15 +21,15 @@
     {
       "titre": "1. Cosa si vende",
       "p": [
-        "Il check-up di coppia è un questionario a cui due partner rispondono ciascuno per conto suo. Rispondere alle domande è gratuito; nessun risultato viene dato senza acquisto.",
-        "Ciò che si vende è il report: una valutazione completa della coppia a partire dalle due serie di risposte (allineamento, clima, mappa delle aree, differenze con le due risposte, guide per parlarne, punti di blocco e non negoziabili, segnali d'allarme, divisione dei ruoli). Il report è un contenuto digitale: un documento PDF inviato per e-mail, e la stessa versione consultabile sulla pagina del check-up."
+        "La valutazione di coppia è un questionario a cui due partner rispondono ciascuno per conto suo, o a cui una sola persona risponde indicando anche cosa risponderebbe il suo partner secondo lei (modalità da soli). Rispondere alle domande è gratuito; nessun risultato viene dato senza acquisto.",
+        "Ciò che si vende è il report: una valutazione completa della coppia a partire dalle due serie di risposte (allineamento, clima, mappa delle aree, differenze con le due risposte, guide per parlarne, punti di blocco e non negoziabili, segnali d'allarme, divisione dei ruoli). Il report è un contenuto digitale: un documento PDF inviato per e-mail, e la stessa versione consultabile sulla pagina della valutazione."
       ]
     },
     {
       "titre": "2. Il prezzo",
       "p": [
-        "Il report completo costa {{prix}}, IVA non applicabile. È un pagamento unico, senza abbonamento. Un solo pagamento, fatto da uno dei due partner, sblocca il report per entrambi.",
-        "Il prezzo è indicato sulla pagina del check-up prima della prima domanda, e di nuovo prima del pagamento."
+        "Il report completo costa {{prix}}, IVA non applicabile. È un pagamento unico, senza abbonamento. Un solo pagamento, fatto da uno dei due partner, sblocca il report per entrambi. Nella modalità da soli, il report viene fornito solo alla persona che ha risposto.",
+        "Il prezzo è indicato sulla pagina della valutazione prima della prima domanda, e di nuovo prima del pagamento."
       ]
     },
     {
@@ -42,9 +42,9 @@
     {
       "titre": "4. La fornitura del report",
       "p": [
-        "Il report viene preparato appena il pagamento è confermato e i due partner hanno finito di rispondere. Parte allora in PDF agli indirizzi e-mail indicati, e compare sulla pagina del check-up per entrambi, dai loro link personali, con un pulsante per scaricare il PDF. Resta disponibile sei mesi dopo il pagamento, poi il check-up viene cancellato.",
+        "Il report viene preparato appena il pagamento è confermato e i due partner hanno finito di rispondere (o, nella modalità da soli, la persona ha finito). Parte allora in PDF agli indirizzi e-mail indicati, e compare sulla pagina della valutazione per entrambi, dai loro link personali, con un pulsante per scaricare il PDF. Resta disponibile sei mesi dopo il pagamento, poi la valutazione viene cancellata.",
         "Se il partner non finisce le sue risposte, il report non può essere preparato: l'acquirente può allora chiederne il rimborso in qualsiasi momento dalla {{contact}}.",
-        "Ciascuno dei due partner può cancellare il check-up prima di questo termine. La cancellazione è immediata e definitiva, per entrambi, e non dà diritto a rimborso al di fuori della garanzia dell'articolo 6."
+        "Ciascuno dei due partner può cancellare la valutazione prima di questo termine. La cancellazione è immediata e definitiva, per entrambi, e non dà diritto a rimborso al di fuori della garanzia dell'articolo 6."
       ]
     },
     {
@@ -60,16 +60,16 @@
       ]
     },
     {
-      "titre": "7. Cosa è il check-up, e cosa non è",
+      "titre": "7. Cosa è la valutazione, e cosa non è",
       "p": [
-        "Il check-up è uno strumento per aiutare una coppia a parlare della propria vita a due. Non è una diagnosi, né una terapia, né il parere di un professionista sanitario. Le decisioni prese a partire dal report restano dei partner. Se state attraversando un periodo difficile, un consulente di coppia o un terapeuta può accompagnarvi.",
+        "La valutazione è uno strumento per aiutare una coppia a parlare della propria vita a due. Non è una diagnosi, né una terapia, né il parere di un professionista sanitario. Le decisioni prese a partire dal report restano dei partner. Se state attraversando un periodo difficile, un consulente di coppia o un terapeuta può accompagnarvi.",
         "Il servizio è fornito così com'è. Facciamo il possibile perché sia sempre disponibile, ma non si può escludere un'interruzione temporanea (manutenzione, guasto di un fornitore). Se un report pagato resta inaccessibile per colpa nostra, viene rimborsato."
       ]
     },
     {
       "titre": "8. I dati personali",
       "p": [
-        "Le risposte del check-up, che possono toccare la vita intima e le convinzioni, vengono registrate solo con il consenso esplicito di ciascun partner e servono solo al check-up. L'indirizzo e-mail indicato per ricevere il report serve solo a questo invio. La durata di conservazione, i vostri diritti e l'elenco dei fornitori sono descritti nella nostra {{confidentialite}}."
+        "Le risposte della valutazione, che possono toccare la vita intima e le convinzioni, vengono registrate solo con il consenso esplicito di ciascun partner e servono solo alla valutazione. L'indirizzo e-mail indicato per ricevere il report serve solo a questo invio. La durata di conservazione, i vostri diritti e l'elenco dei fornitori sono descritti nella nostra {{confidentialite}}."
       ]
     },
     {

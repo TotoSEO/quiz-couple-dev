@@ -1,12 +1,12 @@
 {
   "jsonLd": {
-    "name": "Check-up di coppia",
-    "about": "Check-up di coppia"
+    "name": "Valutazione di coppia",
+    "about": "Valutazione di coppia"
   },
   "app": {
     "chargement": "Caricamento...",
     "accueil": {
-      "titre": "I vostri check-up su questo dispositivo",
+      "titre": "Le vostre valutazioni su questo dispositivo",
       "avec": "Con {{autre}}",
       "seul": "Da solo/a",
       "progression": "{{n}} domande su {{total}}",
@@ -17,16 +17,16 @@
       "voir": "Vedi il report",
       "oublier": "Rimuovi da questo dispositivo",
       "oublierConfirmer": "Conferma: rimuovi da qui",
-      "oublierAide": "Il check-up non viene cancellato, sparisce solo da questo dispositivo. Tieni il tuo link personale per ritrovarlo.",
-      "violence": "Questo check-up mostra a ciascuno le risposte dell'altro. Se hai paura del tuo partner, non è pensato per la tua situazione: in Italia il 1522 risponde gratuitamente, 24 ore su 24, anche in modo anonimo.",
-      "nouveau": "Inizia un nuovo check-up",
+      "oublierAide": "La valutazione non viene cancellata, sparisce solo da questo dispositivo. Tieni il tuo link personale per ritrovarlo.",
+      "violence": "Questa valutazione mostra a ciascuno le risposte dell'altro. Se hai paura del tuo partner, non è pensato per la tua situazione: in Italia il 1522 risponde gratuitamente, 24 ore su 24, anche in modo anonimo.",
+      "nouveau": "Inizia una nuova valutazione",
       "pret": "Pronto: resta solo da sbloccare il report",
-      "reprise": "Hai un check-up in corso con {{autre}}.",
+      "reprise": "Hai una valutazione in corso con {{autre}}.",
       "repriseRapport": "Il tuo report con {{autre}} è disponibile.",
       "quitter": "Indietro"
     },
     "creation": {
-      "titre": "Il vostro check-up",
+      "titre": "La vostra valutazione",
       "etape": "Passo {{n}} di 3",
       "modeTitre": "Come fate la valutazione?",
       "modeDuo": "In due",
@@ -46,12 +46,12 @@
       "situationAide": "Queste risposte cambiano le domande: una coppia che ha già figli non avrà «li volete?» ma «un altro?». Il tuo partner potrà correggerle.",
       "accordTitre": "Prima di iniziare",
       "majeur": "Ho 18 anni o più.",
-      "consentement": "Accetto che le mie risposte vengano salvate per questo check-up, anche su temi intimi (vita sessuale, religione, opinioni), e che {{autre}} le veda nel report.",
-      "accordAide": "Il vostro check-up viene conservato 60 giorni dopo la vostra ultima risposta se non è pagato, sei mesi dopo il pagamento se lo è, e ciascuno di voi può cancellarlo in qualsiasi momento. Nessun account da creare.",
+      "consentement": "Accetto che le mie risposte vengano salvate per questa valutazione, anche su temi intimi (vita sessuale, religione, opinioni), e che {{autre}} le veda nel report.",
+      "accordAide": "La vostra valutazione viene conservata 60 giorni dopo la vostra ultima risposta se non è pagato, sei mesi dopo il pagamento se lo è, e ciascuno di voi può cancellarlo in qualsiasi momento. Nessun account da creare.",
       "prixRappel": "Le domande sono gratuite. Il report completo costa {{prix}} per tutti e due: lo sblocchi quando hai finito le tue risposte.",
       "suivant": "Avanti",
       "retour": "Indietro",
-      "creer": "Crea il nostro check-up",
+      "creer": "Crea la nostra valutazione",
       "manque": "Manca una risposta.",
       "prenomManque": "Scrivi i vostri due nomi.",
       "accordManque": "Spunta le due caselle per continuare."
@@ -64,8 +64,8 @@
       "copie": "Link copiato!",
       "qr": "Mostra il codice QR",
       "qrAide": "{{autre}} può scansionarlo con la fotocamera del telefono.",
-      "message": "Ho iniziato il nostro check-up di coppia, tocca a te rispondere per conto tuo: {{lien}}",
-      "messageTitre": "Il nostro check-up di coppia",
+      "message": "Ho iniziato il nostra valutazione di coppia, tocca a te rispondere per conto tuo: {{lien}}",
+      "messageTitre": "Il nostra valutazione di coppia",
       "monLien": "Il tuo link personale",
       "monLienAide": "Ti permette di riprendere le tue risposte su un altro dispositivo. Non darlo a nessuno, nemmeno a {{autre}}: è la chiave delle tue risposte.",
       "copierMonLien": "Copia il mio link",
@@ -73,7 +73,7 @@
       "dejaRejoint": "{{autre}} ha accettato l'invito."
     },
     "rejoindre": {
-      "titre": "{{autre}} ti propone di fare il vostro check-up di coppia",
+      "titre": "{{autre}} ti propone di fare il vostra valutazione di coppia",
       "texte": "Un centinaio di domande concrete sulla vostra vita a due. Rispondi per conto tuo, senza vedere le risposte di {{autre}}, e viceversa. Quando avete finito tutti e due, il vostro report mette le vostre due risposte una di fronte all'altra, tema per tema.",
       "duree": "Calcola dai 25 ai 30 minuti. Puoi fare una pausa quando vuoi, tutto viene salvato.",
       "situationTitre": "La vostra situazione, come l'ha descritta {{autre}}",
@@ -127,7 +127,7 @@
       "payeTitre": "Il vostro report è pagato",
       "payeTexte": "Grazie! Si aprirà qui e partirà per e-mail appena {{autre}} avrà finito le sue risposte.",
       "relance": "Manda un promemoria a {{autre}}",
-      "relanceMessage": "Ho finito le mie risposte per il nostro check-up di coppia, ti aspetto! Riprendi da dove avevi lasciato, sul tuo telefono."
+      "relanceMessage": "Ho finito le mie risposte per il nostra valutazione di coppia, ti aspetto! Riprendi da dove avevi lasciato, sul tuo telefono."
     },
     "paywall": {
       "titre": "Il vostro report completo",
@@ -158,14 +158,14 @@
       "securite": "Pagamento sicuro con Stripe (carta, Apple Pay, Google Pay). Non vediamo mai la tua carta.",
       "cgv": "Condizioni di vendita",
       "tva": "IVA non applicabile, art. 293 B del Codice generale delle imposte francese.",
-      "ferme": "Il pagamento online apre molto presto. Il vostro check-up è salvato: tornate su questa pagina tra qualche giorno.",
+      "ferme": "Il pagamento online apre molto presto. La vostra valutazione è salvata: tornate su questa pagina tra qualche giorno.",
       "redirection": "Reindirizzamento al pagamento..."
     },
     "paiement": {
       "verification": "Verifica del pagamento...",
       "ok": "Pagamento confermato, grazie!",
       "attente": "Il pagamento non è ancora confermato. Può volerci qualche secondo...",
-      "annule": "Il pagamento è stato annullato. Il vostro check-up è ancora qui.",
+      "annule": "Il pagamento è stato annullato. La vostra valutazione è ancora qui.",
       "erreur": "Al momento non riusciamo a verificare il pagamento. Se hai pagato, ricarica la pagina tra un minuto."
     },
     "solo": {
@@ -258,7 +258,7 @@
         "suite": "Come parlarne, e quando rifare il punto."
       },
       "synthese": {
-        "intro": "Due numeri riassumono il vostro valutazione. Il primo dice quanto volete la stessa vita insieme. Il secondo dice come si sente ciascuno di voi nella coppia in questo momento. Non vanno per forza insieme: si può essere molto allineati e attraversare un periodo difficile, o il contrario.",
+        "intro": "Due numeri riassumono il vostra valutazione. Il primo dice quanto volete la stessa vita insieme. Il secondo dice come si sente ciascuno di voi nella coppia in questo momento. Non vanno per forza insieme: si può essere molto allineati e attraversare un periodo difficile, o il contrario.",
         "alignement": "Il vostro allineamento",
         "alignementAide": "L'accordo delle vostre risposte sulla vita insieme. I temi decisivi contano il triplo.",
         "climat": "Il vostro clima",
@@ -290,7 +290,7 @@
         },
         "creuser": {
           "titre": "Vicini, con qualche tema da approfondire",
-          "texte": "Vi ritrovate su molte cose, ma diversi argomenti vi separano. Niente di allarmante finché ne parlate, ed è proprio a questo che serve questo check-up."
+          "texte": "Vi ritrovate su molte cose, ma diversi argomenti vi separano. Niente di allarmante finché ne parlate, ed è proprio a questo che serve questa valutazione."
         },
         "apprivoiser": {
           "titre": "Differenze con cui fare i conti",
@@ -320,7 +320,7 @@
         },
         "tempete": {
           "titre": "Tempesta",
-          "texte": "In questo periodo le cose non vanno bene. Questo check-up può aiutare a dare un nome a quello che succede, e un consulente di coppia può aiutarvi ad andare più a fondo."
+          "texte": "In questo periodo le cose non vanno bene. Questa valutazione può aiutare a dare un nome a quello che succede, e un consulente di coppia può aiutarvi ad andare più a fondo."
         }
       },
       "carte": {
@@ -395,7 +395,7 @@
         "chacunPlusTexte": "È molto comune: si vede meglio quello che si fa che quello che fa l'altro. La cosa migliore è fare insieme la lista di quello di cui si occupa ciascuno, senza contare i punti.",
         "desequilibre": "Siete d'accordo: è soprattutto {{nom}} a occuparsene. Va bene a tutti e due?",
         "accord": "La vedete allo stesso modo.",
-        "aucun": "Nel vostro valutazione non c'è nessuna domanda di questo tipo."
+        "aucun": "Nel vostra valutazione non c'è nessuna domanda di questo tipo."
       },
       "domaines": {
         "intro": "Tutte le vostre risposte, area per area: prima ciò su cui siete d'accordo, poi le vostre differenze, dalla più importante alla più piccola.",
@@ -453,8 +453,8 @@
           "Se la cosa si scalda, fate una pausa di venti minuti e riprendete dopo. Funziona meglio di quanto si pensi."
         ],
         "refaire": "Rifare la valutazione tra sei mesi o un anno mostra cosa è cambiato tra voi. Molte coppie la rifanno a ogni grande passo: andare a vivere insieme, sposarsi, avere un figlio.",
-        "aide": "Questo check-up è uno strumento per parlare, non una diagnosi. Se state attraversando un periodo difficile, un consulente di coppia o un terapeuta può aiutarvi ad andare più a fondo.",
-        "violence": "Se hai paura del tuo partner, questo check-up non è pensato per la tua situazione: in Italia il 1522 risponde gratuitamente, 24 ore su 24, anche in modo anonimo."
+        "aide": "Questa valutazione è uno strumento per parlare, non una diagnosi. Se state attraversando un periodo difficile, un consulente di coppia o un terapeuta può aiutarvi ad andare più a fondo.",
+        "violence": "Se hai paura del tuo partner, questa valutazione non è pensata per la tua situazione: in Italia il 1522 risponde gratuitamente, 24 ore su 24, anche in modo anonimo."
       },
       "solo": {
         "selonSuffixe": ", secondo te",
@@ -523,10 +523,10 @@
         "emailOk": "Fatto!",
         "emailFaux": "Questo indirizzo non sembra valido.",
         "imprimer": "Stampa",
-        "supprimer": "Cancella il nostro check-up",
+        "supprimer": "Cancella la nostra valutazione",
         "supprimerConfirmer": "Conferma la cancellazione",
-        "supprimerAide": "Il check-up viene cancellato per tutti e due, subito e per sempre, PDF compreso. Ricordatevi di salvare il PDF prima.",
-        "supprime": "Il vostro check-up è stato cancellato.",
+        "supprimerAide": "La valutazione viene cancellata per tutti e due, subito e per sempre, PDF compreso. Ricordatevi di salvare il PDF prima.",
+        "supprime": "La vostra valutazione è stata cancellata.",
         "garde": "Questo report resta disponibile per sei mesi su questa pagina, per tutti e due."
       }
     },
@@ -535,8 +535,8 @@
     },
     "erreurs": {
       "reseau": "Nessuna connessione. Controlla la rete e riprova.",
-      "introuvable": "Questo check-up non esiste più, o questo link non è quello giusto.",
-      "trop": "Da questa connessione sono stati creati troppi check-up. Riprova tra un'ora.",
+      "introuvable": "Questa valutazione non esiste più, o questo link non è quello giusto.",
+      "trop": "Da questa connessione sono stati creati troppe valutazioni. Riprova tra un'ora.",
       "serveur": "C'è stato un problema da parte nostra. Riprova tra un attimo.",
       "reessayer": "Riprova"
     },
@@ -546,18 +546,25 @@
     }
   },
   "lp": {
-    "badge": "Check-up di coppia",
-    "titre": "Volete tutti e due la stessa vita?",
-    "sousTitre": "Il check-up di coppia è una valutazione completa della vostra relazione. Ciascuno risponde per conto suo a un centinaio di domande precise su dodici aree della vita a due, e ricevete un report che mette le vostre due risposte una di fronte all'altra, con quello che serve per parlarne.",
+    "badge": "Valutazione di coppia",
+    "titre": "Volete la stessa vita, tutti e due?",
+    "sousTitre": "Una valutazione completa della vostra relazione, costruita sulla ricerca in psicologia di coppia: un centinaio di domande precise su dodici aree della vita insieme, e un report che vi dice, argomento per argomento, dove vi ritrovate e di cosa bisogna parlare. In due, ciascuno per conto suo, o da soli se l'altro non è pronto a parlarne.",
     "points": [
       "Ciascuno risponde sul proprio telefono, senza vedere le risposte dell'altro",
       "Domande costruite a partire dalla ricerca in psicologia di coppia",
-      "Un report in PDF di una trentina di pagine, inviato per e-mail"
+      "Un report di 40 pagine, con grafici e spunti per parlarne"
     ],
-    "cta": "Inizia il nostro check-up",
-    "ctaNote": "Domande gratuite · {{prix}} per tutti e due, alla fine · Soddisfatti o rimborsati per {{jours}} giorni",
-    "voirExtrait": "Vedi un estratto del report",
-    "visuelAlt": "Due pagine di un report di esempio: la copertina e la sintesi",
+    "cta": "Iniziare la valutazione",
+    "ctaDuo": "Fare la valutazione in due",
+    "ctaSolo": "Farla da solo/a",
+    "ctaNote": "Domande gratuite · {{prix}} per il report, alla fine · Soddisfatti o rimborsati entro {{jours}} giorni",
+    "voirExtrait": "Vedere il report pagina per pagina",
+    "visuel": {
+      "sur": "Report di esempio · coppia immaginaria",
+      "noms": "Giulia & Marco",
+      "alignement": "Allineamento",
+      "legende": "Il radar delle aree, com'è nel report"
+    },
     "chiffres": [
       {
         "n": "12",
@@ -565,104 +572,247 @@
       },
       {
         "n": "100",
-        "l": "domande, più o meno"
+        "l": "domande circa"
       },
       {
         "n": "25 min",
-        "l": "a testa, con calma"
+        "l": "ciascuno, al proprio ritmo"
       },
       {
-        "n": "30 pagine",
-        "l": "di report, solo per voi"
+        "n": "40 pagine",
+        "l": "di report, con grafici"
       }
     ],
-    "pour": {
-      "titre": "Per le coppie che vogliono vederci chiaro",
-      "intro": "Non c'è bisogno di stare male per fare un check-up. La maggior parte delle coppie lo fa in un momento ben preciso:",
-      "cartes": [
-        {
-          "titre": "Prima di un grande passo",
-          "texte": "Andare a vivere insieme, sposarsi, fare un figlio, comprare casa insieme. È il momento giusto per verificare che volete la stessa cosa, prima di impegnarvi."
-        },
-        {
-          "titre": "Quando tornano sempre gli stessi litigi",
-          "texte": "Spesso, dietro un litigio che torna, c'è una differenza a cui nessuno ha mai dato un nome. Il report la mette sul tavolo, senza accusare nessuno."
-        },
-        {
-          "titre": "Quando vi fate delle domande",
-          "texte": "Vi sentite meno vicini, o non sapete più bene a che punto siete. Il check-up aiuta a dare un nome a quello che vive ciascuno di voi."
-        },
-        {
-          "titre": "Quando va tutto bene",
-          "texte": "Perché duri! Le coppie solide parlano dei temi delicati prima che diventino litigi, e il check-up gliene dà l'occasione."
-        }
-      ]
+    "facons": {
+      "titre": "In due, o da soli: funzionano tutte e due",
+      "intro": "La maggior parte delle coppie la fa in due. Ma quando le cose vanno male, o l'altro non ha voglia di parlarne, si può anche fare per conto proprio: rispondi per te, poi dici cosa risponderebbe il tuo partner, e il report ti mostra quello che sai, quello che supponi e quello che non sai.",
+      "duo": {
+        "titre": "In due",
+        "sous": "Ciascuno sul proprio telefono",
+        "points": [
+          "Ciascuno risponde per conto suo, al proprio ritmo",
+          "Nessuno vede le risposte dell'altro prima della fine",
+          "Il report confronta le vostre due serie di risposte, argomento per argomento"
+        ],
+        "cta": "Iniziare in due"
+      },
+      "solo": {
+        "titre": "Da solo/a",
+        "sous": "Senza avvisare il tuo partner",
+        "points": [
+          "Rispondi per te, poi per il tuo partner, secondo te",
+          "Il tuo partner non viene avvisato e non vede niente",
+          "Il report aggiunge le tue zone d'ombra: quello che non sai dell'altro, pronto da chiedere"
+        ],
+        "cta": "Iniziare da solo/a"
+      },
+      "note": "Stesso prezzo, stesso report. Se un giorno il tuo partner vorrà rispondere a sua volta, una valutazione in due sostituirà le tue supposizioni con le sue risposte."
     },
     "rapport": {
-      "titre": "Un report che mette le vostre due risposte una di fronte all'altra",
-      "intro": "Quando avete finito tutti e due, ricevete il vostro report in PDF, di una trentina di pagine a seconda delle vostre risposte. Ecco com'è.",
+      "titre": "Il report, pagina per pagina",
+      "intro": "Un vero documento di una quarantina di pagine, con i suoi capitoli, i suoi grafici e, per ogni differenza, spunti per parlarne. Scorrete.",
       "pages": [
+        {
+          "img": "couverture",
+          "titre": "La copertina",
+          "texte": "I vostri due nomi, la data e il numero di domande confrontate."
+        },
         {
           "img": "synthese",
           "titre": "La vostra sintesi",
-          "texte": "Due numeri per cominciare: il vostro allineamento, cioè quanto volete la stessa vita, e il clima della vostra coppia in questo momento. Poi dove siete più vicini, e dove meno."
+          "texte": "Due numeri: il vostro allineamento e il clima della vostra coppia. Poi le vostre aree a colpo d'occhio, su un radar."
+        },
+        {
+          "img": "ouverture",
+          "titre": "Un capitolo, un colore",
+          "texte": "Ogni capitolo si apre con la sua pagina, per sapere sempre a che punto si è."
         },
         {
           "img": "carte",
-          "titre": "La mappa delle vostre dodici aree",
-          "texte": "La vita di tutti i giorni, i soldi, i figli, la famiglia, la fedeltà, l'intimità... Una barra per area, per vedere a colpo d'occhio dove vi ritrovate."
+          "titre": "La mappa delle vostre aree",
+          "texte": "Una barra per area, da 0 a 100%, con il dettaglio di risposte uguali, vicine e differenze."
         },
         {
           "img": "conversation",
           "titre": "Le vostre prossime quattro conversazioni",
-          "texte": "I temi che contano di più per tutti e due, con le vostre due risposte, perché contano, domande per avviare il discorso e cosa è meglio evitare di dire."
+          "texte": "Gli argomenti da cui partire, le vostre due risposte una accanto all'altra, perché conta, domande per parlarne e cosa è meglio evitare."
         },
         {
-          "img": "signaux",
-          "titre": "I vostri segnali d'allarme",
-          "texte": "I modi di litigare che decenni di ricerca collegano al logoramento di una coppia: quanto spesso ciascuno di voi li vede tra voi, e come reagire."
+          "img": "climat",
+          "titre": "Il clima della vostra coppia",
+          "texte": "Come si sente ciascuno di voi nella relazione, area per area, sulla stessa riga."
+        },
+        {
+          "img": "domaine",
+          "titre": "Area per area",
+          "texte": "Tutte le vostre risposte: prima gli accordi, poi le differenze, dalla più importante alla più piccola."
+        },
+        {
+          "img": "fin",
+          "titre": "Per finire",
+          "texte": "Una seconda sintesi, diversa dalla prima: la ripartizione delle vostre risposte, la vostra base, ciò che regge, ciò che chiede lavoro, e una tabella di marcia."
         }
       ],
-      "legende": "Estratti di un report di esempio. Giulia e Marco sono una coppia immaginaria."
+      "legende": "Pagine di un report di esempio. Giulia e Marco sono una coppia immaginaria."
     },
-    "diff": {
-      "titre": "La differenza con un test che vi farebbe un'IA",
-      "intro": "Potreste chiedere a un'IA di farvi delle domande sulla vostra coppia. Lo farebbe volentieri, ma non otterreste la stessa cosa. Ecco cosa cambia.",
-      "colIa": "Un test generato da un'IA",
-      "colBilan": "Il check-up di coppia",
+    "etapes": {
+      "titre": "Come funziona",
+      "liste": [
+        {
+          "duree": "2 min",
+          "titre": "Create la valutazione",
+          "texte": "I vostri due nomi, sette domande sulla vostra situazione (vivete insieme, avete figli...). In due, mandi il link al tuo partner; da solo/a, inizi subito."
+        },
+        {
+          "duree": "25-30 min",
+          "titre": "Ciascuno risponde per conto suo",
+          "texte": "Sul proprio telefono, al proprio ritmo, in una o più volte: tutto viene salvato. Da solo/a, rispondi due volte a ogni domanda: per te, poi per l'altro, secondo te."
+        },
+        {
+          "duree": "1 min",
+          "titre": "Sbloccate il report",
+          "texte": "Appena hai finito le tue risposte: {{prix}} per tutti e due, con carta, Apple Pay o Google Pay. Le domande, invece, sono gratuite."
+        },
+        {
+          "duree": "6 mesi online",
+          "titre": "Lo leggete, e ne parlate",
+          "texte": "Il PDF arriva via e-mail appena tutto è stato risposto, e il report resta online sei mesi. Finisce con una tabella di marcia: un argomento a settimana."
+        }
+      ]
+    },
+    "domaines": {
+      "titre": "Le dodici aree della vita a due",
+      "intro": "Cose concrete, non generalità: le domande parlano del frigo, dell'affitto, dei suoceri e del telefono sul comodino.",
+      "liste": {
+        "quotidien": "Chi fa cosa, chi pensa a cosa, l'ordine, i pasti, l'ora di andare a letto.",
+        "temps": "Il tempo in due, il tempo per sé, le uscite, le piccole attenzioni.",
+        "entourage": "Le vostre famiglie, i vostri amici, le feste di fine anno, un genitore che invecchia.",
+        "travail": "Il posto del lavoro, le ambizioni, una differenza di stipendio, cambiare mestiere.",
+        "argent": "Conto in comune o no, le spese, il risparmio, aiutare la famiglia.",
+        "logement": "Dove vivere tra dieci anni, comprare casa, trasferirsi per l'altro.",
+        "enfants": "Averne, quando, quanti, come crescerli, chi se ne occupa.",
+        "valeurs": "La religione, il matrimonio, l'ecologia, le tradizioni, la politica.",
+        "disputes": "Come litigate, e come fate pace.",
+        "confiance": "Il telefono dell'altro, la gelosia, gli ex, cosa vuol dire tradire.",
+        "intimite": "Il ritmo, la tenerezza, parlarne, la novità.",
+        "meteo": "Come si sente ciascuno di voi nella coppia, in questo momento."
+      }
+    },
+    "demo": {
+      "titre": "Provate tre domande",
+      "intro": "Così come vengono poste nella valutazione, qui come le ha viste Giulia. Rispondi per vedere cosa ne fa il report.",
+      "partenaireNom": "Marco",
+      "vous": "Tu",
+      "partenaire": "Marco",
+      "attente": "risponde per conto suo",
+      "apres": "Nel report, la tua risposta è messa di fronte a quella del tuo partner, con il perché conta e domande per parlarne.",
+      "pourquoi": "Perché conta",
+      "questions": [
+        {
+          "dom": "quotidien",
+          "id": "quo2"
+        },
+        {
+          "dom": "argent",
+          "id": "arg3"
+        },
+        {
+          "dom": "confiance",
+          "id": "con2"
+        }
+      ],
+      "fin": "Sulle grandi domande (i figli, dove vivere, la fedeltà...), ciascuno può anche segnare la propria risposta come non negoziabile. Il report comincia allora da lì.",
+      "cta": "Vedere le altre cento"
+    },
+    "pour": {
+      "titre": "Per le coppie che vogliono vederci chiaro",
+      "intro": "Non c'è bisogno di stare male per fare una valutazione. La maggior parte delle coppie la fa in un momento ben preciso:",
+      "cartes": [
+        {
+          "titre": "Prima di un grande passo",
+          "texte": "Andare a vivere insieme, sposarsi, fare un figlio, comprare insieme. È il momento giusto per verificare che volete la stessa cosa, prima di impegnarvi."
+        },
+        {
+          "titre": "Quando tornano gli stessi litigi",
+          "texte": "Spesso, dietro un litigio che torna, c'è una differenza che nessuno ha mai nominato. Il report la mette sul tavolo, senza accusare nessuno."
+        },
+        {
+          "titre": "Quando vi fate delle domande",
+          "texte": "Vi sentite meno vicini, o non sapete più bene a che punto siete. La valutazione aiuta a dare parole a quello che vive ciascuno, e puoi farla da solo/a se l'altro non è pronto."
+        },
+        {
+          "titre": "Quando va tutto bene",
+          "texte": "Perché duri! Le coppie solide parlano degli argomenti che fanno arrabbiare prima che facciano arrabbiare, e la valutazione gliene dà l'occasione."
+        }
+      ]
+    },
+    "compar": {
+      "titre": "Un consulente, un'IA, o questa valutazione?",
+      "intro": "Tre modi di fare il punto, che non servono alla stessa cosa. Ecco cosa porta ciascuno.",
+      "cols": [
+        "Un consulente di coppia",
+        "Un test generato da un'IA",
+        "La valutazione di coppia"
+      ],
       "lignes": [
         {
           "sujet": "Le domande",
-          "ia": "Inventate nel momento in cui le chiedete, spesso vaghe: «Comunicate bene?»",
-          "bilan": "Un centinaio di domande scritte in anticipo e basate sulla ricerca: «Chi si ricorda delle visite dal medico?»"
+          "c": [
+            "Quelle di un professionista, nel corso delle sedute",
+            "Inventate nel momento in cui le chiedi, spesso vaghe: «Comunicate bene?»",
+            "Un centinaio, scritte in anticipo e fondate sulla ricerca: «Chi pensa agli appuntamenti dal medico?»"
+          ]
         },
         {
           "sujet": "Chi risponde",
-          "ia": "Una persona sola, che immagina cosa direbbe l'altro",
-          "bilan": "Ciascuno per conto suo, senza vedere le risposte dell'altro: si confrontano due punti di vista veri"
+          "c": [
+            "Voi due, in seduta, uno davanti all'altro",
+            "Una sola persona, che immagina cosa direbbe l'altro",
+            "Ciascuno per conto suo, senza vedere l'altro; oppure tu da solo/a, con le tue zone d'ombra individuate"
+          ]
         },
         {
           "sujet": "Cosa si misura",
-          "ia": "Un'impressione generale",
-          "bilan": "I temi che segnano una vita (figli, soldi, dove vivere, fedeltà) e i modi di litigare che la ricerca collega di più al logoramento di una coppia"
+          "c": [
+            "Quello che il professionista osserva e quello che gli raccontate",
+            "Un'impressione generale",
+            "Gli argomenti che impegnano una vita, pesati secondo la loro importanza, e le abitudini di litigio che la ricerca lega al logoramento di una coppia"
+          ]
         },
         {
-          "sujet": "Le grandi decisioni",
-          "ia": "Tutte le domande pesano allo stesso modo",
-          "bilan": "Quello che uno di voi considera non negoziabile viene individuato, e passa per primo"
+          "sujet": "Il tempo",
+          "c": [
+            "Più sedute, su settimane o mesi",
+            "Dieci minuti",
+            "25-30 minuti ciascuno, quando volete"
+          ]
+        },
+        {
+          "sujet": "Il prezzo",
+          "c": [
+            "60-100 € a seduta, spesso più sedute",
+            "Gratis, o compreso in un abbonamento",
+            "{{prix}} per tutti e due, una volta"
+          ]
         },
         {
           "sujet": "Il risultato",
-          "ia": "Qualche paragrafo rassicurante",
-          "bilan": "Un report di una trentina di pagine: le vostre differenze con le vostre due risposte, perché contano e come parlarne"
+          "c": [
+            "Un accompagnamento nel tempo",
+            "Qualche paragrafo rassicurante",
+            "Un report di 40 pagine: le vostre risposte a confronto, perché conta, e una tabella di marcia"
+          ]
         },
         {
           "sujet": "Le vostre risposte",
-          "ia": "Scritte in una conversazione con un servizio di IA",
-          "bilan": "Conservate da noi, mai vendute, e cancellate automaticamente dopo sei mesi al massimo"
+          "c": [
+            "Tra voi e il professionista, tenuto al segreto",
+            "Digitate in una conversazione con un servizio di IA",
+            "Conservate da noi, mai vendute, cancellate al massimo dopo sei mesi"
+          ]
         }
       ],
-      "conclusion": "Questo check-up è una valutazione seria, e lunga. Il suo obiettivo è darvi una visione reale e globale dello stato della vostra relazione in questo momento, tema per tema, perché sappiate di cosa parlare."
+      "conclusion": "La valutazione non sostituisce un consulente di coppia: vi dà un quadro della vostra relazione, argomento per argomento, per sapere di cosa parlare. Molte coppie la usano proprio come punto di partenza, in due o con un professionista."
     },
     "recherche": {
       "titre": "Costruito a partire dalla ricerca sulle coppie",
@@ -673,120 +823,36 @@
         "Sentire che l'altro tiene alla relazione, e sentirsi apprezzati, sono tra gli indicatori più solidi della qualità di una coppia.",
         "Chi pensa a tutto non è sempre chi fa tutto. Il carico mentale si vede male da dentro, e spesso ognuno pensa di fare di più."
       ],
-      "p2": "Il check-up non è un test clinico e non sostituisce un professionista. È un questionario serio, costruito su quello che la ricerca sa delle coppie, per aiutarvi a parlare degli argomenti giusti."
-    },
-    "questions": {
-      "titre": "Domande precise, non generiche",
-      "intro": "Ecco alcune domande del check-up, così come le ha viste Giulia. Ciascuno risponde per conto suo, ed è confrontando le vostre due risposte che il report trova quello che conta.",
-      "exemples": [
-        {
-          "domaine": "La vita di tutti i giorni in casa",
-          "q": "Chi si ricorda di tutto quello che c'è da fare (appuntamenti, bollette, regali, cosa manca in frigo)?",
-          "o": [
-            "Soprattutto io",
-            "Un po' più io",
-            "Tutti e due allo stesso modo",
-            "Un po' più Marco",
-            "Soprattutto Marco"
-          ]
-        },
-        {
-          "domaine": "I soldi",
-          "q": "Per un acquisto sopra i 300 € solo per te...",
-          "o": [
-            "Compro senza dirlo",
-            "Avviso Marco",
-            "Ne parlo prima",
-            "Decido con Marco"
-          ]
-        },
-        {
-          "domaine": "Dove e come vivere",
-          "q": "Tra dieci anni, ti vedi vivere...",
-          "o": [
-            "In una grande città",
-            "In una città media o in periferia",
-            "In campagna",
-            "All'estero"
-          ]
-        },
-        {
-          "domaine": "Fiducia e fedeltà",
-          "q": "Per te, il tradimento comincia quando si...",
-          "o": [
-            "Flirta per messaggio",
-            "Bacia qualcuno",
-            "Va a letto con qualcuno",
-            "Ha una vera relazione segreta"
-          ]
-        },
-        {
-          "domaine": "Comunicazione e litigi",
-          "q": "Durante un litigio, hai bisogno...",
-          "o": [
-            "Di chiarire subito",
-            "Di una pausa per calmarmi prima di parlarne",
-            "Di essere rassicurata prima di tutto",
-            "Di lasciar perdere, si sistemerà da sé"
-          ]
-        },
-        {
-          "domaine": "Famiglia e amici",
-          "q": "Le feste di fine anno, idealmente, le passi...",
-          "o": [
-            "Con la mia famiglia",
-            "Con la famiglia di Marco",
-            "Alternando ogni anno",
-            "Solo noi due, o con gli amici"
-          ]
-        }
-      ],
-      "fin": "Sulle grandi domande (i figli, dove vivere, la fedeltà...), ciascuno può anche segnare la sua risposta come «non negoziabile». Il report allora comincia da lì."
-    },
-    "etapes": {
-      "titre": "Come funziona",
-      "liste": [
-        {
-          "titre": "Create il check-up",
-          "texte": "I vostri due nomi, sette domande sulla vostra situazione (vivete insieme, avete figli...), poi mandi il link al tuo partner."
-        },
-        {
-          "titre": "Ciascuno risponde per conto suo",
-          "texte": "Sul proprio telefono, con calma, in una volta o in più riprese: tutto viene salvato man mano. Calcolate dai 25 ai 30 minuti a testa."
-        },
-        {
-          "titre": "Ricevete il vostro report",
-          "texte": "Lo sbloccate quando avete finito le vostre risposte. Arriva per e-mail in PDF appena avete finito tutti e due, e resta online per sei mesi."
-        }
-      ]
+      "p2": "La valutazione non è un test clinico e non sostituisce un professionista. È un questionario serio, costruito a partire da quello che la ricerca sa delle coppie, per aiutarvi a parlare degli argomenti giusti."
     },
     "prix": {
       "titre": "Un solo prezzo, per tutti e due",
       "unite": "per la coppia, in una volta",
-      "aide": "Pagate solo alla fine, una volta date le vostre risposte. Un solo pagamento, dell'uno o dell'altra. Nessun abbonamento, nessun account.",
+      "aide": "Pagate solo alla fine, una volta date le vostre risposte. Un solo pagamento, dell'uno o dell'altro. Nessun abbonamento, nessun account.",
       "inclus": [
         "Un centinaio di domande su dodici aree",
-        "Il report completo, di una trentina di pagine",
-        "Le vostre prossime quattro conversazioni, con quello che serve per farle",
-        "Il PDF per e-mail e la versione online per sei mesi"
+        "Il report completo, una quarantina di pagine con i suoi grafici",
+        "Le vostre prossime quattro conversazioni, con spunti per condurle",
+        "Il PDF via e-mail e la versione online per sei mesi",
+        "Lo stesso report, che la facciate in due o da soli"
       ],
-      "comparaison": "Per fare un confronto, una seduta da un consulente di coppia costa spesso tra i 50 e i 90 €.",
-      "garantie": "Soddisfatti o rimborsati per {{jours}} giorni: basta un messaggio."
+      "comparaison": "Per confronto, una seduta da un consulente di coppia costa spesso tra 60 e 100 €.",
+      "garantie": "Soddisfatti o rimborsati entro {{jours}} giorni: basta un messaggio."
     },
     "confiance": {
       "titre": "Le vostre risposte restano tra voi",
       "points": [
         {
           "titre": "Nessun account",
-          "texte": "Ciascuno entra nel check-up con il proprio link. Nessuna password, e un indirizzo e-mail solo se volete ricevere il report."
+          "texte": "Ciascuno accede alla valutazione con il proprio link. Nessuna password, e un indirizzo e-mail solo se volete ricevere il report."
         },
         {
-          "titre": "Niente si vede prima della fine",
-          "texte": "Né tu né il tuo partner vedete le risposte dell'altro prima che abbiate finito tutti e due."
+          "titre": "Niente viene mostrato prima della fine",
+          "texte": "Né tu né il tuo partner vedete le risposte dell'altro prima di aver finito tutti e due. Da solo/a, il tuo partner non viene mai contattato."
         },
         {
           "titre": "Cancellato automaticamente",
-          "texte": "Un check-up non pagato viene cancellato 60 giorni dopo l'ultima risposta, uno pagato sei mesi dopo il pagamento. Ciascuno può cancellarlo prima, con un clic."
+          "texte": "Una valutazione non pagata viene cancellata 60 giorni dopo l'ultima risposta, una pagata sei mesi dopo il pagamento. Ciascuno può cancellarla prima, con un clic."
         },
         {
           "titre": "Pagamento sicuro",
@@ -798,51 +864,63 @@
       "titre": "Domande frequenti",
       "items": [
         {
-          "q": "Quanto tempo ci vuole per fare il check-up?",
-          "a": "Calcolate dai 25 ai 30 minuti a testa, per un centinaio di domande. Niente vi obbliga a fare tutto in una volta: ogni risposta viene salvata, e riprendete da dove eravate rimasti."
+          "q": "Quanto tempo ci vuole per fare la valutazione?",
+          "a": "Contate 25-30 minuti ciascuno, per un centinaio di domande. Niente vi obbliga a fare tutto in una volta: ogni risposta viene salvata, e riprendete da dove eravate."
         },
         {
           "q": "Il mio partner vedrà tutte le mie risposte?",
-          "a": "Sì, quando avete finito tutti e due: il report mette le vostre due risposte una accanto all'altra, è proprio questo il punto. Prima, nessuno vede niente."
+          "a": "Sì, una volta che avete finito tutti e due: il report mette le vostre due risposte una accanto all'altra, è tutto il senso. Prima, nessuno vede niente."
         },
         {
           "q": "Perché bisogna pagare per vedere il risultato?",
-          "a": "Perché il risultato è il report: le vostre due serie di risposte confrontate, tema per tema, con quello che serve per parlarne. Le domande sono gratuite, e pagate solo quando avete finito le vostre risposte, se volete il report."
+          "a": "Perché il risultato è il report: le vostre due serie di risposte confrontate, argomento per argomento, con spunti per parlarne. Le domande sono gratuite, e pagate solo una volta finite le vostre risposte, se volete il report."
         },
         {
-          "q": "Possiamo fare il check-up se non viviamo insieme o non abbiamo figli?",
+          "q": "Si può fare da soli?",
+          "a": "Sì. Rispondi per te, poi dici cosa risponderebbe il tuo partner, o «non lo so». Il report confronta le tue risposte con quello che immagini delle sue, e raccoglie le tue zone d'ombra: gli argomenti su cui non sai, pronti da chiedere. Stesso prezzo, stesso report."
+        },
+        {
+          "q": "Se la faccio da solo/a, il mio partner verrà avvisato?",
+          "a": "No. Non gli viene inviato niente, nessuno lo contatta, e solo tu vedi il report. Il suo nome serve solo a scrivere le domande."
+        },
+        {
+          "q": "Si può fare la valutazione se non viviamo insieme o non abbiamo figli?",
           "a": "Sì. All'inizio descrivete la vostra situazione in sette domande, e le domande si adattano: una coppia che non vive ancora insieme risponde su quello che immagina, una coppia senza figli su quello che desidera."
         },
         {
-          "q": "E se scopriamo di non essere d'accordo su tante cose?",
-          "a": "Succede spesso, e non è una brutta notizia: una differenza che si conosce si può discutere, una differenza che si ignora finisce per tornare sotto forma di litigio. Il report vi dice da dove cominciare, e come parlarne senza che diventi un processo."
+          "q": "E se scopriamo di non essere d'accordo su molte cose?",
+          "a": "È frequente, e non è una brutta notizia: una differenza che si conosce si discute, una che si ignora finisce per tornare come litigio. Il report vi dice da dove cominciare, e come parlarne senza che diventi un processo."
         },
         {
-          "q": "È basato su qualcosa di serio?",
-          "a": "Sì. Le domande si basano sulla ricerca in psicologia di coppia e sui questionari che i consulenti di coppia usano prima di un matrimonio. Questo non fa del check-up un test clinico: è uno strumento per parlare, non una diagnosi."
+          "q": "Si basa su qualcosa di serio?",
+          "a": "Sì. Le domande si fondano sulla ricerca in psicologia di coppia e sui questionari usati dai consulenti di coppia prima di un matrimonio. La valutazione non è per questo un test clinico: è uno strumento per parlare, non una diagnosi."
         },
         {
-          "q": "Il check-up sostituisce una terapia di coppia?",
-          "a": "No. È uno strumento per dare un nome a quello che vivete e sapere di cosa parlare. Se state attraversando un periodo difficile, un consulente o un terapeuta di coppia può accompagnarvi, e il report può anche servire come punto di partenza."
+          "q": "La valutazione sostituisce una terapia di coppia?",
+          "a": "No. È uno strumento per dare parole a quello che vivete e sapere di cosa parlare. Se attraversate un periodo difficile, un consulente di coppia o un terapeuta può accompagnarvi, e il report può servire da punto di partenza."
         },
         {
           "q": "Come funziona il pagamento?",
-          "a": "Con carta, Apple Pay o Google Pay, sulla pagina di pagamento sicura di Stripe. Un solo pagamento di {{prix}} per tutti e due, quando avete finito le vostre risposte. Ricevete una ricevuta per e-mail, e il report appena avete finito tutti e due."
+          "a": "Con carta, Apple Pay o Google Pay, sulla pagina di pagamento sicura di Stripe. Un solo pagamento di {{prix}} per tutti e due, quando avete finito le vostre risposte. Ricevete una ricevuta via e-mail, e il report appena tutto è stato risposto."
         },
         {
           "q": "E se il report non ci piace?",
-          "a": "Siete soddisfatti o rimborsati per {{jours}} giorni: basta un messaggio dalla pagina dei contatti, senza dover dare spiegazioni."
+          "a": "Siete soddisfatti o rimborsati entro {{jours}} giorni: basta un messaggio dalla pagina dei contatti, senza doversi giustificare."
         },
         {
           "q": "Che fine fanno le nostre risposte?",
-          "a": "Servono solo al vostro check-up, non vengono mai vendute e non vengono usate per nessuna pubblicità. Vengono cancellate 60 giorni dopo l'ultima risposta se il check-up non è pagato, sei mesi dopo il pagamento se lo è, e ciascuno di voi può cancellare tutto prima."
+          "a": "Servono solo alla vostra valutazione, non vengono mai vendute e non servono a nessuna pubblicità. Vengono cancellate 60 giorni dopo l'ultima risposta se la valutazione non viene pagata, sei mesi dopo il pagamento altrimenti, e ciascuno di voi può cancellare tutto prima."
         }
       ]
     },
     "final": {
       "titre": "Pronti a fare il punto?",
-      "texte": "Venticinque minuti a testa, e saprete su cosa siete d'accordo e di cosa dovete parlare. Cominciate quando volete: potete fare una pausa in qualsiasi momento."
+      "texte": "Venticinque minuti ciascuno, e saprete su cosa siete d'accordo, e di cosa bisogna parlare. Cominciate quando volete: potete fare una pausa in qualsiasi momento."
     },
-    "avertissement": "Questo check-up mostra a ciascuno le risposte dell'altro. Se hai paura del tuo partner, non è pensato per la tua situazione: in Italia il 1522 risponde gratuitamente, 24 ore su 24, anche in modo anonimo."
+    "colle": {
+      "texte": "Valutazione di coppia · {{prix}}",
+      "bouton": "Iniziare"
+    },
+    "avertissement": "In due, questa valutazione mostra a ciascuno le risposte dell'altro. Se hai paura del tuo partner, falla da solo/a, o non farla: in Italia il 1522 risponde gratis e in modo anonimo, 24 ore su 24."
   }
 }

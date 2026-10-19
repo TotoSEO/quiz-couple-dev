@@ -5,7 +5,7 @@
   "liens": {
     "contact": "contact page",
     "confidentialite": "privacy policy",
-    "bilan": "couple check-up"
+    "bilan": "relationship assessment"
   },
   "vendeur": {
     "titre": "The seller",
@@ -21,15 +21,15 @@
     {
       "titre": "1. What is sold",
       "p": [
-        "The couple check-up is a questionnaire that two partners each answer separately. Answering the questions is free; no result is given without a purchase.",
-        "What is sold is the report: a complete assessment of the couple based on both sets of answers (alignment, climate, map of the areas, gaps with both answers, guides to talking about them, sticking points and deal-breakers, warning signs, who does what). The report is digital content: a PDF document sent by email, and the same version available on the check-up page."
+        "The relationship assessment is a questionnaire that two partners each answer separately, or that one person answers alone, also saying what they think their partner would answer (solo mode). Answering the questions is free; no result is given without a purchase.",
+        "What is sold is the report: a complete assessment of the couple based on both sets of answers (alignment, climate, map of the areas, gaps with both answers, guides to talking about them, sticking points and deal-breakers, warning signs, who does what). The report is digital content: a PDF document sent by email, and the same version available on the assessment page."
       ]
     },
     {
       "titre": "2. The price",
       "p": [
-        "The full report costs {{prix}}, VAT not applicable. It's a one-off payment, with no subscription. A single payment, made by either partner, unlocks the report for both.",
-        "The price is shown on the check-up page before the first question, and again before payment."
+        "The full report costs {{prix}}, VAT not applicable. It's a one-off payment, with no subscription. A single payment, made by either partner, unlocks the report for both. In solo mode, the report is only provided to the person who answered.",
+        "The price is shown on the assessment page before the first question, and again before payment."
       ]
     },
     {
@@ -42,9 +42,9 @@
     {
       "titre": "4. Providing the report",
       "p": [
-        "The report is produced as soon as payment is confirmed and both partners have finished answering. It is then sent as a PDF to the email addresses given, and shown on the check-up page for both partners, from their personal links, with a button to download the PDF. It stays available for six months after payment, then the check-up is erased.",
+        "The report is produced as soon as payment is confirmed and both partners have finished answering (or, in solo mode, the person has finished). It is then sent as a PDF to the email addresses given, and shown on the assessment page for both partners, from their personal links, with a button to download the PDF. It stays available for six months after payment, then the assessment is erased.",
         "If the partner doesn't finish their answers, the report can't be produced: the buyer can then ask for a refund at any time from the {{contact}}.",
-        "Either partner can delete the check-up before then. Deletion is immediate and permanent, for both, and doesn't lead to a refund outside the guarantee in article 6."
+        "Either partner can delete the assessment before then. Deletion is immediate and permanent, for both, and doesn't lead to a refund outside the guarantee in article 6."
       ]
     },
     {
@@ -60,16 +60,16 @@
       ]
     },
     {
-      "titre": "7. What the check-up is, and what it isn't",
+      "titre": "7. What the assessment is, and what it isn't",
       "p": [
-        "The check-up is a tool to help a couple talk about their life together. It isn't a diagnosis, a therapy or the opinion of a health professional. Decisions taken on the basis of the report remain the partners' own. If you're going through a difficult time, a couples counsellor or therapist can support you.",
+        "The assessment is a tool to help a couple talk about their life together. It isn't a diagnosis, a therapy or the opinion of a health professional. Decisions taken on the basis of the report remain the partners' own. If you're going through a difficult time, a couples counsellor or therapist can support you.",
         "The service is provided as is. We do our best to keep it available at all times, but a temporary interruption (maintenance, a provider outage) can't be ruled out. If a paid report remains inaccessible through our fault, it is refunded."
       ]
     },
     {
       "titre": "8. Personal data",
       "p": [
-        "The check-up answers, which may touch on intimate life and beliefs, are only saved with each partner's explicit consent and are only used for the check-up. The email address given to receive the report is only used to send it. How long data is kept, your rights and the list of providers are detailed in our {{confidentialite}}."
+        "The assessment answers, which may touch on intimate life and beliefs, are only saved with each partner's explicit consent and are only used for the assessment. The email address given to receive the report is only used to send it. How long data is kept, your rights and the list of providers are detailed in our {{confidentialite}}."
       ]
     },
     {

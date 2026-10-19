@@ -113,7 +113,9 @@
     "quizPossession": "Who could get possessed",
     "quizSuperVilain": "Which supervillain are you",
     "quizDuoVilains": "Which supervillain duo",
-    "bilanCouple": "Couple check-up",
+    "bilanCouple": "Relationship assessment",
+    "evaluer": "Assess your relationship",
+    "evaluerSous": "The complete assessment, together or on your own",
     "bilanCoupleDesc": "100 questions each on your own, and a 30-page report"
   },
   "footer": {

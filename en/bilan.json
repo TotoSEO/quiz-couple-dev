@@ -1,12 +1,12 @@
 {
   "jsonLd": {
-    "name": "Couple check-up",
-    "about": "Couple check-up"
+    "name": "Relationship assessment",
+    "about": "Relationship assessment"
   },
   "app": {
     "chargement": "Loading...",
     "accueil": {
-      "titre": "Your check-ups on this device",
+      "titre": "Your assessments on this device",
       "avec": "With {{autre}}",
       "seul": "On your own",
       "progression": "{{n}} questions out of {{total}}",
@@ -17,16 +17,16 @@
       "voir": "See the report",
       "oublier": "Remove from this device",
       "oublierConfirmer": "Confirm: remove from here",
-      "oublierAide": "The check-up isn't deleted, it just disappears from this device. Keep your personal link to find it again.",
-      "violence": "This check-up shows each of you the other's answers. If you're afraid of your partner, it isn't made for your situation: in the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, 24/7, and in the US the National Domestic Violence Hotline (1-800-799-7233).",
-      "nouveau": "Start a new check-up",
+      "oublierAide": "The assessment isn't deleted, it just disappears from this device. Keep your personal link to find it again.",
+      "violence": "This assessment shows each of you the other's answers. If you're afraid of your partner, it isn't made for your situation: in the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, 24/7, and in the US the National Domestic Violence Hotline (1-800-799-7233).",
+      "nouveau": "Start a new assessment",
       "pret": "Ready: the report just needs unlocking",
-      "reprise": "You have a check-up in progress with {{autre}}.",
+      "reprise": "You have an assessment in progress with {{autre}}.",
       "repriseRapport": "Your report with {{autre}} is available.",
       "quitter": "Back"
     },
     "creation": {
-      "titre": "Your check-up",
+      "titre": "Your assessment",
       "etape": "Step {{n}} of 3",
       "modeTitre": "How are you doing the assessment?",
       "modeDuo": "Together",
@@ -46,12 +46,12 @@
       "situationAide": "These answers change the questions you get: a couple who already has children won't get \"do you want them?\" but \"another one?\". Your partner can correct them.",
       "accordTitre": "Before you start",
       "majeur": "I'm 18 or over.",
-      "consentement": "I agree that my answers are saved for this check-up, including on intimate topics (sex life, religion, opinions), and that {{autre}} sees them in the report.",
-      "accordAide": "Your check-up is kept for 60 days after your last answer if it isn't paid for, and six months after payment if it is, and either of you can delete it at any time. No account to create.",
+      "consentement": "I agree that my answers are saved for this assessment, including on intimate topics (sex life, religion, opinions), and that {{autre}} sees them in the report.",
+      "accordAide": "Your assessment is kept for 60 days after your last answer if it isn't paid for, and six months after payment if it is, and either of you can delete it at any time. No account to create.",
       "prixRappel": "The questions are free. The full report costs {{prix}} for both of you: you unlock it once you've finished your answers.",
       "suivant": "Next",
       "retour": "Back",
-      "creer": "Create our check-up",
+      "creer": "Create our assessment",
       "manque": "An answer is missing.",
       "prenomManque": "Write both your first names.",
       "accordManque": "Tick both boxes to continue."
@@ -64,16 +64,16 @@
       "copie": "Link copied!",
       "qr": "Show the QR code",
       "qrAide": "{{autre}} can scan it with their phone's camera.",
-      "message": "I've started our couple check-up, your turn to answer on your side: {{lien}}",
-      "messageTitre": "Our couple check-up",
+      "message": "I've started our relationship assessment, your turn to answer on your side: {{lien}}",
+      "messageTitre": "Our relationship assessment",
       "monLien": "Your personal link",
       "monLienAide": "It lets you pick up your answers on another device. Don't give it to anyone, not even {{autre}}: it's the key to your answers.",
       "copierMonLien": "Copy my link",
       "commencer": "Start my answers",
-      "dejaRejoint": "{{autre}} has joined the check-up."
+      "dejaRejoint": "{{autre}} has joined the assessment."
     },
     "rejoindre": {
-      "titre": "{{autre}} would like you to do your couple check-up together",
+      "titre": "{{autre}} would like you to do your relationship assessment together",
       "texte": "About a hundred concrete questions about your life together. You answer on your side, without seeing {{autre}}'s answers, and the other way round. When you've both finished, your report puts your two answers side by side, topic by topic.",
       "duree": "Allow 25 to 30 minutes. You can take a break whenever you like, everything is saved.",
       "situationTitre": "Your situation, as {{autre}} described it",
@@ -127,7 +127,7 @@
       "payeTitre": "Your report is paid for",
       "payeTexte": "Thank you! It'll open here and go out by email as soon as {{autre}} has finished their answers.",
       "relance": "Send {{autre}} a little reminder",
-      "relanceMessage": "I've finished my answers for our couple check-up, I'm waiting for you! You'll pick up where you left off, on your phone."
+      "relanceMessage": "I've finished my answers for our relationship assessment, I'm waiting for you! You'll pick up where you left off, on your phone."
     },
     "paywall": {
       "titre": "Your full report",
@@ -158,14 +158,14 @@
       "securite": "Secure payment by Stripe (card, Apple Pay, Google Pay). We never see your card.",
       "cgv": "Terms of sale",
       "tva": "VAT not applicable, art. 293 B of the French General Tax Code.",
-      "ferme": "Online payment opens very soon. Your check-up is saved: come back to this page in a few days.",
+      "ferme": "Online payment opens very soon. Your assessment is saved: come back to this page in a few days.",
       "redirection": "Redirecting to payment..."
     },
     "paiement": {
       "verification": "Checking the payment...",
       "ok": "Payment confirmed, thank you!",
       "attente": "The payment isn't confirmed yet. It can take a few seconds...",
-      "annule": "The payment was cancelled. Your check-up is still here.",
+      "annule": "The payment was cancelled. Your assessment is still here.",
       "erreur": "We can't check the payment right now. If you've paid, reload the page in a minute."
     },
     "solo": {
@@ -290,7 +290,7 @@
         },
         "creuser": {
           "titre": "Close, with a few topics to explore",
-          "texte": "You agree on a lot of things, but several topics set you apart. Nothing alarming as long as you talk about them, and that's exactly what this check-up is for."
+          "texte": "You agree on a lot of things, but several topics set you apart. Nothing alarming as long as you talk about them, and that's exactly what this assessment is for."
         },
         "apprivoiser": {
           "titre": "Differences to work with",
@@ -320,7 +320,7 @@
         },
         "tempete": {
           "titre": "Storm",
-          "texte": "Things aren't going well at the moment. This check-up can help put words to it, and a couples counsellor can help you go further."
+          "texte": "Things aren't going well at the moment. This assessment can help put words to it, and a couples counsellor can help you go further."
         }
       },
       "carte": {
@@ -453,8 +453,8 @@
           "If things heat up, take a twenty-minute break and come back to it later. It works better than you'd think."
         ],
         "refaire": "Doing the assessment again in six months or a year shows what has changed between you. Lots of couples redo it at every big step: moving in together, getting married, having a baby.",
-        "aide": "This check-up is a tool for talking, not a diagnosis. If you're going through a difficult time, a couples counsellor or therapist can help you go further.",
-        "violence": "If you're afraid of your partner, this check-up isn't made for your situation. In the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, 24/7, and in the US the National Domestic Violence Hotline (1-800-799-7233)."
+        "aide": "This assessment is a tool for talking, not a diagnosis. If you're going through a difficult time, a couples counsellor or therapist can help you go further.",
+        "violence": "If you're afraid of your partner, this assessment isn't made for your situation. In the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, 24/7, and in the US the National Domestic Violence Hotline (1-800-799-7233)."
       },
       "solo": {
         "selonSuffixe": ", as you see it",
@@ -523,10 +523,10 @@
         "emailOk": "Got it!",
         "emailFaux": "This address doesn't look valid.",
         "imprimer": "Print",
-        "supprimer": "Delete our check-up",
+        "supprimer": "Delete our assessment",
         "supprimerConfirmer": "Confirm deletion",
-        "supprimerAide": "The check-up is erased for both of you, right away and for good, PDF included. Remember to keep the PDF first.",
-        "supprime": "Your check-up has been deleted.",
+        "supprimerAide": "The assessment is erased for both of you, right away and for good, PDF included. Remember to keep the PDF first.",
+        "supprime": "Your assessment has been deleted.",
         "garde": "This report stays available on this page for six months, for both of you."
       }
     },
@@ -535,8 +535,8 @@
     },
     "erreurs": {
       "reseau": "No connection. Check your network and try again.",
-      "introuvable": "This check-up no longer exists, or this link isn't the right one.",
-      "trop": "Too many check-ups have been created from this connection. Try again in an hour.",
+      "introuvable": "This assessment no longer exists, or this link isn't the right one.",
+      "trop": "Too many assessments have been created from this connection. Try again in an hour.",
       "serveur": "Something went wrong on our side. Try again in a moment.",
       "reessayer": "Try again"
     },
@@ -546,18 +546,25 @@
     }
   },
   "lp": {
-    "badge": "Couple check-up",
+    "badge": "Relationship assessment",
     "titre": "Do you both want the same life?",
-    "sousTitre": "The couple check-up is a complete assessment of your relationship. Each of you answers about a hundred specific questions on your own, across twelve areas of life together, and you get a report that puts your two sets of answers side by side, with what you need to talk about them.",
+    "sousTitre": "A complete assessment of your relationship, built on research in couple psychology: about a hundred specific questions across twelve areas of life together, and a report that tells you, topic by topic, where you meet and what you need to talk about. Together, each on your own side, or on your own if the other isn't ready to talk about it.",
     "points": [
-      "Each of you answers on your own phone, without seeing the other's answers",
-      "Questions built on research in couple psychology",
-      "A PDF report of around thirty pages, sent by email"
+      "You each answer on your own phone, without seeing the other's answers",
+      "Questions built from research in couple psychology",
+      "A 40-page report, with charts and ways to talk things through"
     ],
-    "cta": "Start our check-up",
-    "ctaNote": "Free questions · {{prix}} for both of you, at the end · {{jours}}-day money-back guarantee",
-    "voirExtrait": "See an extract of the report",
-    "visuelAlt": "Two pages of a sample report: the cover and the summary",
+    "cta": "Start the assessment",
+    "ctaDuo": "Take the assessment together",
+    "ctaSolo": "Take it on your own",
+    "ctaNote": "Free questions · {{prix}} for the report, at the end · Satisfied or refunded within {{jours}} days",
+    "voirExtrait": "See the report page by page",
+    "visuel": {
+      "sur": "Sample report · fictional couple",
+      "noms": "Emma & Daniel",
+      "alignement": "Alignment",
+      "legende": "The radar of the areas, as it appears in the report"
+    },
     "chiffres": [
       {
         "n": "12",
@@ -572,97 +579,240 @@
         "l": "each, at your own pace"
       },
       {
-        "n": "30 pages",
-        "l": "of report, just for you two"
+        "n": "40 pages",
+        "l": "of report, with charts"
       }
     ],
-    "pour": {
-      "titre": "For couples who want a clear picture",
-      "intro": "You don't need to be in a bad place to do a check-up. Most couples do it at a very specific moment:",
-      "cartes": [
-        {
-          "titre": "Before a big step",
-          "texte": "Moving in, getting married, having a baby, buying a place together. It's the right time to check you want the same thing, before you commit."
-        },
-        {
-          "titre": "When the same arguments keep coming back",
-          "texte": "Behind an argument that keeps coming back, there's often a gap nobody has ever put a name to. The report puts it on the table, without blaming anyone."
-        },
-        {
-          "titre": "When you're asking yourselves questions",
-          "texte": "You feel less close, or you're not quite sure where you stand anymore. The check-up helps you put words to what each of you is going through."
-        },
-        {
-          "titre": "When everything's fine",
-          "texte": "So that it lasts! Solid couples talk about touchy subjects before they turn into fights, and the check-up gives them the chance."
-        }
-      ]
+    "facons": {
+      "titre": "Together, or on your own: both work",
+      "intro": "Most couples do it together. But when things are rough, or the other doesn't feel like talking about it, you can also do it on your side: you answer for yourself, then say what your partner would answer, and the report shows you what you know, what you assume and what you don't know.",
+      "duo": {
+        "titre": "Together",
+        "sous": "Each on your own phone",
+        "points": [
+          "You each answer on your own side, at your own pace",
+          "Nobody sees the other's answers before the end",
+          "The report compares your two sets of answers, topic by topic"
+        ],
+        "cta": "Start together"
+      },
+      "solo": {
+        "titre": "On your own",
+        "sous": "Without telling your partner",
+        "points": [
+          "You answer for yourself, then for your partner, as far as you can tell",
+          "Your partner isn't told and sees nothing",
+          "The report adds your blind spots: what you don't know about the other, ready to ask"
+        ],
+        "cta": "Start on your own"
+      },
+      "note": "Same price, same report. If one day your partner wants to answer too, an assessment done together will replace your assumptions with their answers."
     },
     "rapport": {
-      "titre": "A report that puts your two sets of answers side by side",
-      "intro": "Once you've both finished, you receive your report as a PDF, around thirty pages depending on your answers. Here's what it looks like.",
+      "titre": "The report, page by page",
+      "intro": "A real document of about forty pages, with its chapters, its charts and, for each gap, ways to talk about it. Scroll through.",
       "pages": [
+        {
+          "img": "couverture",
+          "titre": "The cover",
+          "texte": "Your two first names, the date, and the number of questions compared."
+        },
         {
           "img": "synthese",
           "titre": "Your summary",
-          "texte": "Two figures to start with: your alignment, meaning how much you want the same life, and the climate of your relationship right now. Then where you're closest, and where you're furthest apart."
+          "texte": "Two figures: your alignment and the mood of your relationship. Then your areas at a glance, on a radar."
+        },
+        {
+          "img": "ouverture",
+          "titre": "One chapter, one colour",
+          "texte": "Each chapter opens on its own page, so you always know where you are."
         },
         {
           "img": "carte",
-          "titre": "The map of your twelve areas",
-          "texte": "Everyday life, money, children, family, fidelity, intimacy... One bar per area, so you can see at a glance where you're on the same page."
+          "titre": "The map of your areas",
+          "texte": "One bar per area, from 0 to 100%, with the detail of same answers, close answers and gaps."
         },
         {
           "img": "conversation",
           "titre": "Your next four conversations",
-          "texte": "The topics that matter most to you both, with your two answers, why it matters, questions to get the conversation going and what's best not to say."
+          "texte": "The topics to start with, your two answers side by side, why it matters, questions to talk it through and what's best avoided."
         },
         {
-          "img": "signaux",
-          "titre": "Your warning signs",
-          "texte": "The ways of arguing that decades of research link to couples wearing down: how often each of you sees them in your relationship, and how to respond."
+          "img": "climat",
+          "titre": "The mood of your relationship",
+          "texte": "How each of you feels in the relationship, area by area, on the same line."
+        },
+        {
+          "img": "domaine",
+          "titre": "Area by area",
+          "texte": "All your answers: what you agree on first, then your differences, from the most important to the smallest."
+        },
+        {
+          "img": "fin",
+          "titre": "To finish",
+          "texte": "A second summary, different from the first: how your answers split, your foundation, what holds, what needs work, and a roadmap."
         }
       ],
-      "legende": "Extracts from a sample report. Emma and Daniel are a fictional couple."
+      "legende": "Pages from a sample report. Emma and Daniel are a fictional couple."
     },
-    "diff": {
-      "titre": "How it differs from a test an AI would give you",
-      "intro": "You could ask an AI to quiz you about your relationship. It would happily do it, but you wouldn't get the same thing. Here's what changes.",
-      "colIa": "A test generated by an AI",
-      "colBilan": "The couple check-up",
+    "etapes": {
+      "titre": "How it works",
+      "liste": [
+        {
+          "duree": "2 min",
+          "titre": "You create the assessment",
+          "texte": "Your two first names, seven questions about your situation (do you live together, do you have children...). Together, you send its link to your partner; on your own, you start right away."
+        },
+        {
+          "duree": "25 to 30 min",
+          "titre": "You each answer on your own side",
+          "texte": "On your phone, at your own pace, in one go or several: everything is saved. On your own, you answer each question twice: for yourself, then for the other, as far as you can tell."
+        },
+        {
+          "duree": "1 min",
+          "titre": "You unlock the report",
+          "texte": "As soon as you've finished your answers: {{prix}} for both of you, by card, Apple Pay or Google Pay. The questions themselves are free."
+        },
+        {
+          "duree": "6 months online",
+          "titre": "You read it, and you talk about it",
+          "texte": "The PDF arrives by email as soon as everything is answered, and the report stays online for six months. It ends with a roadmap: one topic a week."
+        }
+      ]
+    },
+    "domaines": {
+      "titre": "The twelve areas of life together",
+      "intro": "Concrete things, not generalities: the questions are about the fridge, the rent, the in-laws and the phone on the bedside table.",
+      "liste": {
+        "quotidien": "Who does what, who thinks of what, tidiness, meals, bedtime.",
+        "temps": "Time together, time for yourself, going out, small attentions.",
+        "entourage": "Your families, your friends, the end-of-year holidays, an ageing parent.",
+        "travail": "The place of work, ambitions, a pay gap, changing careers.",
+        "argent": "Joint account or not, spending, savings, helping family.",
+        "logement": "Where to live in ten years, buying a home, moving for the other.",
+        "enfants": "Having them, when, how many, how to raise them, who looks after them.",
+        "valeurs": "Religion, marriage, the environment, traditions, politics.",
+        "disputes": "How you argue, and how you make up.",
+        "confiance": "The other's phone, jealousy, exes, what cheating means.",
+        "intimite": "Rhythm, tenderness, talking about it, trying new things.",
+        "meteo": "How each of you feels in the relationship, right now."
+      }
+    },
+    "demo": {
+      "titre": "Try three questions",
+      "intro": "Just as they're asked in the assessment, here as Emma saw them. Answer to see what the report does with them.",
+      "partenaireNom": "Daniel",
+      "vous": "You",
+      "partenaire": "Daniel",
+      "attente": "answers on his side",
+      "apres": "In the report, your answer is set against your partner's, with why it matters and questions to talk it through.",
+      "pourquoi": "Why it matters",
+      "questions": [
+        {
+          "dom": "quotidien",
+          "id": "quo2"
+        },
+        {
+          "dom": "argent",
+          "id": "arg3"
+        },
+        {
+          "dom": "confiance",
+          "id": "con2"
+        }
+      ],
+      "fin": "On the big questions (children, where to live, fidelity...), each of you can also mark an answer as a deal-breaker. The report then starts there.",
+      "cta": "See the hundred others"
+    },
+    "pour": {
+      "titre": "For couples who want to see clearly",
+      "intro": "You don't need to be in trouble to do an assessment. Most couples do it at a very specific moment:",
+      "cartes": [
+        {
+          "titre": "Before a big step",
+          "texte": "Moving in, getting married, having a child, buying together. It's the right time to check that you want the same thing, before committing."
+        },
+        {
+          "titre": "When the same arguments keep coming back",
+          "texte": "Often, behind an argument that keeps coming back, there's a gap nobody has ever named. The report puts it on the table, without blaming anyone."
+        },
+        {
+          "titre": "When you're asking yourself questions",
+          "texte": "You feel less close, or you're not quite sure where you stand anymore. The assessment helps put words on what each of you is going through, and you can do it on your own if the other isn't ready."
+        },
+        {
+          "titre": "When everything is fine",
+          "texte": "So that it lasts! Solid couples talk about touchy subjects before they get touchy, and the assessment gives them the chance."
+        }
+      ]
+    },
+    "compar": {
+      "titre": "A counsellor, an AI, or this assessment?",
+      "intro": "Three ways of taking stock, which don't serve the same purpose. Here's what each one brings.",
+      "cols": [
+        "A relationship counsellor",
+        "A test generated by an AI",
+        "The relationship assessment"
+      ],
       "lignes": [
         {
           "sujet": "The questions",
-          "ia": "Made up the moment you ask, often vague: \"Do you communicate well?\"",
-          "bilan": "About a hundred questions written in advance and backed by research: \"Who keeps track of doctor's appointments?\""
+          "c": [
+            "A professional's, over the sessions",
+            "Made up when you ask for them, often vague: \"Do you communicate well?\"",
+            "About a hundred, written in advance and backed by research: \"Who thinks of the doctor's appointments?\""
+          ]
         },
         {
           "sujet": "Who answers",
-          "ia": "One person, imagining what the other would say",
-          "bilan": "Each of you on your own, without seeing the other's answers: two real points of view are compared"
+          "c": [
+            "The two of you, in session, in front of each other",
+            "One person, who imagines what the other would say",
+            "Each on your own side, without seeing the other; or you alone, with your blind spots identified"
+          ]
         },
         {
-          "sujet": "What's measured",
-          "ia": "A general impression",
-          "bilan": "The subjects that shape a life (children, money, where to live, fidelity) and the ways of arguing that research links most to couples wearing down"
+          "sujet": "What is measured",
+          "c": [
+            "What the professional observes and what you tell them",
+            "A general impression",
+            "The topics that shape a life, weighted by importance, and the arguing habits research links to a couple wearing down"
+          ]
         },
         {
-          "sujet": "The big decisions",
-          "ia": "Every question carries the same weight",
-          "bilan": "Whatever one of you considers non-negotiable is flagged, and comes first"
+          "sujet": "The time",
+          "c": [
+            "Several sessions, over weeks or months",
+            "Ten minutes",
+            "25 to 30 minutes each, whenever you want"
+          ]
+        },
+        {
+          "sujet": "The price",
+          "c": [
+            "£50 to £90 a session, often several sessions",
+            "Free, or part of a subscription",
+            "{{prix}} for both of you, once"
+          ]
         },
         {
           "sujet": "The result",
-          "ia": "A few reassuring paragraphs",
-          "bilan": "A report of around thirty pages: your gaps with both your answers, why they matter and how to talk about them"
+          "c": [
+            "Support over time",
+            "A few reassuring paragraphs",
+            "A 40-page report: your answers side by side, why it matters, and a roadmap"
+          ]
         },
         {
           "sujet": "Your answers",
-          "ia": "Typed into a conversation with an AI service",
-          "bilan": "Kept by us, never sold, and deleted automatically after six months at most"
+          "c": [
+            "Between you and the professional, bound by confidentiality",
+            "Typed into a conversation with an AI service",
+            "Kept with us, never sold, erased after six months at most"
+          ]
         }
       ],
-      "conclusion": "This check-up is a serious assessment, and a long one. Its aim is to give you a real, overall view of where your relationship stands right now, topic by topic, so you know what to talk about."
+      "conclusion": "The assessment doesn't replace a relationship counsellor: it gives you a picture of your relationship, topic by topic, so you know what to talk about. Many couples use it precisely as a starting point, together or with a professional."
     },
     "recherche": {
       "titre": "Built on research into couples",
@@ -673,120 +823,36 @@
         "Feeling that the other person is committed to the relationship, and feeling appreciated, are among the most reliable signs of a good relationship.",
         "The person who thinks of everything isn't always the one who does everything. The mental load is hard to see from the inside, and each person often thinks they do more."
       ],
-      "p2": "The check-up isn't a clinical test and doesn't replace a professional. It's a serious questionnaire, built on what research knows about couples, to help you talk about the right things."
-    },
-    "questions": {
-      "titre": "Specific questions, not generalities",
-      "intro": "Here are some of the check-up's questions, as Emma saw them. Each of you answers on your own, and it's by comparing your two answers that the report finds what matters.",
-      "exemples": [
-        {
-          "domaine": "Everyday life at home",
-          "q": "Who keeps track of everything that needs doing (appointments, bills, presents, what's missing in the fridge)?",
-          "o": [
-            "Mostly me",
-            "A bit more me",
-            "Both of us equally",
-            "A bit more Daniel",
-            "Mostly Daniel"
-          ]
-        },
-        {
-          "domaine": "Money",
-          "q": "For a purchase over €300 just for yourself...",
-          "o": [
-            "I make it without mentioning it",
-            "I let Daniel know",
-            "I talk about it first",
-            "I decide with Daniel"
-          ]
-        },
-        {
-          "domaine": "Where and how to live",
-          "q": "In ten years, you see yourself living...",
-          "o": [
-            "In a big city",
-            "In a mid-sized town or the suburbs",
-            "In the countryside",
-            "Abroad"
-          ]
-        },
-        {
-          "domaine": "Trust and fidelity",
-          "q": "For you, cheating starts when you...",
-          "o": [
-            "Flirt by text",
-            "Kiss someone",
-            "Sleep with someone",
-            "Have a real secret relationship"
-          ]
-        },
-        {
-          "domaine": "Communication and arguments",
-          "q": "During an argument, what you need is...",
-          "o": [
-            "To sort it out right away",
-            "A break to calm down before talking",
-            "To be reassured first",
-            "To let it pass, it'll sort itself out"
-          ]
-        },
-        {
-          "domaine": "Family and friends",
-          "q": "The end-of-year holidays, ideally, you spend them...",
-          "o": [
-            "With my family",
-            "With Daniel's family",
-            "Alternating each year",
-            "Just us, or with friends"
-          ]
-        }
-      ],
-      "fin": "On the big questions (children, where to live, fidelity...), each of you can also mark your answer as a deal-breaker. The report then starts there."
-    },
-    "etapes": {
-      "titre": "How it works",
-      "liste": [
-        {
-          "titre": "You create the check-up",
-          "texte": "Your two first names, seven questions about your situation (do you live together, do you have children...), then you send the link to your partner."
-        },
-        {
-          "titre": "Each of you answers on your own",
-          "texte": "On your phone, at your own pace, in one go or several: everything is saved as you go. Allow 25 to 30 minutes each."
-        },
-        {
-          "titre": "You receive your report",
-          "texte": "You unlock it once you've finished your answers. It arrives by email as a PDF as soon as you've both finished, and stays online for six months."
-        }
-      ]
+      "p2": "The assessment isn't a clinical test and doesn't replace a professional. It's a serious questionnaire, built from what research knows about couples, to help you talk about the right topics."
     },
     "prix": {
       "titre": "One price, for both of you",
-      "unite": "for the couple, paid once",
-      "aide": "You only pay at the end, once you've given your answers. One payment, by either of you. No subscription, no account.",
+      "unite": "for the couple, in one go",
+      "aide": "You only pay at the end, once your answers are in. One payment, by either of you. No subscription, no account.",
       "inclus": [
         "About a hundred questions across twelve areas",
-        "The full report, around thirty pages",
-        "Your next four conversations, with what you need to have them",
-        "The PDF by email and the online version for six months"
+        "The full report, about forty pages with its charts",
+        "Your next four conversations, with ways to lead them",
+        "The PDF by email and the online version for six months",
+        "The same report, whether you do it together or on your own"
       ],
-      "comparaison": "For comparison, a single session with a couples counsellor usually costs €60 or more.",
-      "garantie": "Money back if you're not satisfied, within {{jours}} days: one message is enough."
+      "comparaison": "For comparison, a session with a relationship counsellor often costs between £50 and £90.",
+      "garantie": "Satisfied or refunded within {{jours}} days: one message is enough."
     },
     "confiance": {
-      "titre": "Your answers stay between you two",
+      "titre": "Your answers stay between you",
       "points": [
         {
           "titre": "No account",
-          "texte": "Each of you gets into the check-up through your own link. No password, and an email address only if you want to receive the report."
+          "texte": "You each access the assessment through your own link. No password, and an email address only if you want to receive the report."
         },
         {
           "titre": "Nothing is shown before the end",
-          "texte": "Neither you nor your partner sees the other's answers until you've both finished."
+          "texte": "Neither you nor your partner sees the other's answers before you've both finished. On your own, your partner is never contacted."
         },
         {
-          "titre": "Deleted automatically",
-          "texte": "An unpaid check-up is deleted 60 days after the last answer, a paid one six months after payment. Either of you can delete it before then, in one click."
+          "titre": "Erased automatically",
+          "texte": "An unpaid assessment is erased 60 days after the last answer, a paid one six months after payment. Either of you can delete it before, in one click."
         },
         {
           "titre": "Secure payment",
@@ -798,51 +864,63 @@
       "titre": "Frequently asked questions",
       "items": [
         {
-          "q": "How long does the check-up take?",
-          "a": "Allow 25 to 30 minutes each, for about a hundred questions. You don't have to do it all in one go: every answer is saved, and you pick up where you left off."
+          "q": "How long does the assessment take?",
+          "a": "Allow 25 to 30 minutes each, for about a hundred questions. Nothing forces you to do it all at once: every answer is saved, and you pick up where you left off."
         },
         {
           "q": "Will my partner see all my answers?",
           "a": "Yes, once you've both finished: the report puts your two answers side by side, that's the whole point. Before that, nobody sees anything."
         },
         {
-          "q": "Why do we have to pay to see the result?",
-          "a": "Because the result is the report: your two sets of answers compared, topic by topic, with what you need to talk about them. The questions are free, and you only pay once you've finished your answers, if you want the report."
+          "q": "Why do you have to pay to see the result?",
+          "a": "Because the result is the report: your two sets of answers compared, topic by topic, with ways to talk about them. The questions are free, and you only pay once your answers are finished, if you want the report."
         },
         {
-          "q": "Can we do the check-up if we don't live together or don't have children?",
-          "a": "Yes. At the start, you describe your situation in seven questions, and the questions adapt: a couple who don't live together yet answer about what they imagine, a couple without children about what they'd like."
+          "q": "Can I do it on my own?",
+          "a": "Yes. You answer for yourself, then you say what your partner would answer, or \"I don't know\". The report compares your answers with what you imagine theirs to be, and gathers your blind spots: the topics you don't know about, ready to be asked. Same price, same report."
+        },
+        {
+          "q": "If I do it on my own, will my partner be told?",
+          "a": "No. Nothing is sent to them, nobody contacts them, and only you see the report. Their first name is only used to write the questions."
+        },
+        {
+          "q": "Can we do the assessment if we don't live together or don't have children?",
+          "a": "Yes. At the start, you describe your situation in seven questions, and the questions adapt: a couple who don't live together yet answer about what they imagine, a couple without children about what they want."
         },
         {
           "q": "What if we find out we disagree on a lot of things?",
-          "a": "It's common, and it isn't bad news: a gap you know about can be talked through, a gap you ignore ends up coming back as an argument. The report tells you where to start, and how to talk about it without it turning into a trial."
+          "a": "It's common, and it isn't bad news: a gap you know about can be discussed, a gap you ignore ends up coming back as an argument. The report tells you where to start, and how to talk about it without it turning into a trial."
         },
         {
           "q": "Is it based on anything serious?",
-          "a": "Yes. The questions are based on research in couple psychology and on the questionnaires couples counsellors use before a wedding. That doesn't make the check-up a clinical test: it's a tool for talking, not a diagnosis."
+          "a": "Yes. The questions draw on research in couple psychology and on the questionnaires relationship counsellors use before a marriage. The assessment isn't a clinical test for all that: it's a tool for talking, not a diagnosis."
         },
         {
-          "q": "Does the check-up replace couples therapy?",
-          "a": "No. It's a tool to put words to what you're going through and know what to talk about. If you're going through a hard time, a couples counsellor or therapist can help you, and the report can even be a starting point."
+          "q": "Does the assessment replace couples therapy?",
+          "a": "No. It's a tool to put words on what you're going through and know what to talk about. If you're going through a hard time, a relationship counsellor or couples therapist can support you, and the report can serve as a starting point."
         },
         {
           "q": "How does payment work?",
-          "a": "By card, Apple Pay or Google Pay, on Stripe's secure payment page. A single payment of {{prix}} for both of you, once you've finished your answers. You get a receipt by email, and the report as soon as you've both finished."
+          "a": "By card, Apple Pay or Google Pay, on Stripe's secure payment page. One payment of {{prix}} for both of you, once you've finished your answers. You receive a receipt by email, and the report as soon as everything is answered."
         },
         {
           "q": "What if we don't like the report?",
-          "a": "You get your money back within {{jours}} days if you're not satisfied: one message from the contact page is enough, no need to justify yourself."
+          "a": "You're satisfied or refunded within {{jours}} days: a message from the contact page is enough, no need to justify yourself."
         },
         {
           "q": "What happens to our answers?",
-          "a": "They're used only for your check-up, never sold and never used for advertising. They're deleted 60 days after the last answer if the check-up isn't paid for, six months after payment if it is, and either of you can delete everything before then."
+          "a": "They're used only for your assessment, never sold and never used for advertising. They're erased 60 days after the last answer if the assessment isn't paid for, six months after payment otherwise, and either of you can delete everything before."
         }
       ]
     },
     "final": {
       "titre": "Ready to take stock?",
-      "texte": "Twenty-five minutes each, and you'll know what you agree on and what you need to talk about. Start whenever you like: you can take a break at any time."
+      "texte": "Twenty-five minutes each, and you'll know what you agree on, and what you need to talk about. Start whenever you want: you can pause at any time."
     },
-    "avertissement": "This check-up shows each of you the other's answers. If you're afraid of your partner, it isn't made for your situation: in the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, 24/7, and in the US the National Domestic Violence Hotline (1-800-799-7233)."
+    "colle": {
+      "texte": "Relationship assessment · {{prix}}",
+      "bouton": "Start"
+    },
+    "avertissement": "Together, this assessment shows each of you the other's answers. If you're afraid of your partner, do it on your own, or not at all: a domestic abuse helpline can talk with you, free and anonymously."
   }
 }

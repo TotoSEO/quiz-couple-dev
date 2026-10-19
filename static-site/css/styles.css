@@ -13125,6 +13125,27 @@ body { padding-bottom: var(--pub-footer, 0px); }
   .qr-bilan--bas .qr-bilan-visuel { min-height: 15rem; }
   .qr-bilan--bas .qr-bilan-visuel img { width: 13.5rem; }
 }
+/* Deux boutons depuis le 19 octobre 2026 : à deux, et seul(e) (le second
+   ouvre la page sur ses deux façons de faire, ?mode=solo#facons). */
+.qr-bilan-boutons { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.qr-bilan-bouton--second {
+  background: hsl(0 0% 100% / .08); box-shadow: inset 0 0 0 1.5px hsl(0 0% 100% / .45);
+}
+.qr-bilan-bouton--second:hover { background: hsl(0 0% 100% / .16); box-shadow: inset 0 0 0 1.5px hsl(0 0% 100% / .7); }
+@media (max-width: 559.98px) { .qr-bilan-boutons { display: grid; } }
+/* La section de l'accueil (home.ejs, .home-eval) : la même carte, en plus
+   grand, avec la page de synthèse du rapport d'exemple à droite. */
+.home-eval { padding: 2.5rem 0 0; }
+.qr-bilan--accueil { max-width: 62rem; margin: 0 auto; }
+.qr-bilan--accueil .qr-bilan-titre { font-size: clamp(1.45rem, 3.2vw, 2.1rem); }
+.qr-bilan--accueil .qr-bilan-texte { font-size: 1.02rem; }
+.qr-bilan-legende { font-size: .74rem; color: hsl(0 0% 100% / .6); text-align: center; margin: .5rem 0 0; }
+@media (min-width: 768px) {
+  .qr-bilan--accueil { grid-template-columns: minmax(0, 1fr) 17rem; padding: 2.5rem 2.25rem 2.5rem 2.75rem; gap: 2.25rem; }
+  .qr-bilan--accueil .qr-bilan-visuel { min-height: 20rem; }
+  .qr-bilan--accueil .qr-bilan-visuel img { width: 15rem; }
+  .home-eval { padding-top: 3.5rem; }
+}
 @media (prefers-reduced-motion: reduce) { .qr-bilan-bouton, .qr-bilan-bouton svg { transition: none; } }
 
 @media print {

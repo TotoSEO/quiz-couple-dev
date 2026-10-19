@@ -362,6 +362,39 @@ export const BILAN_ENTREES = {
   testConfiance: { groupe: 'doute', id: 'confiance' },
   testAmourHabitude: { groupe: 'doute', id: 'amour-habitude' },
   testJeLaimeEncore: { groupe: 'doute', id: 'je-l-aime-encore' },
+  // Depuis le 19 octobre 2026 (Thomas : « on ne va pas compter sur le SEO
+  // pour vendre »), presque toute la famille des tests de couple, les jeux
+  // (groupe `jeu`) et le hub des questions (groupe `questions`) ; le mode
+  // seul(e) permet d'y renvoyer depuis les tests où l'on doute. Toujours
+  // rien depuis l'emprise, la manipulation et l'infidélité.
+  testToxic: { groupe: 'doute', id: 'toxique' },
+  testJalousie: { groupe: 'doute', id: 'jalousie' },
+  testAmourAttachement: { groupe: 'doute', id: 'amour-attachement' },
+  testAimeEncore: { groupe: 'doute', id: 'aime-encore' },
+  testDistanceAime: { groupe: 'doute', id: 'distance-aime' },
+  testDependance: { groupe: 'doute', id: 'dependance' },
+  testAttachement: { groupe: 'score', id: 'attachement' },
+  testAmeSoeur: { groupe: 'score', id: 'ame-soeur' },
+  testCouche: { groupe: 'score', id: 'couche' },
+  testPersonnalite: { groupe: 'score', id: 'personnalite' },
+  testKarmique: { groupe: 'score', id: 'karmique' },
+  testVacances: { groupe: 'projet', id: 'vacances' },
+  quizCoquin: { groupe: 'score', id: 'coquin' },
+  quizKnowledge: { groupe: 'score', id: 'connaissance' },
+  quizGenant: { groupe: 'score', id: 'genant' },
+  quizTuPreferes: { groupe: 'jeu', id: 'tu-preferes' },
+  jeuDilemmes: { groupe: 'jeu', id: 'dilemmes' },
+  jeuQuiDeNous: { groupe: 'jeu', id: 'qui-de-nous' },
+  jeuJamais: { groupe: 'jeu', id: 'jamais' },
+  jeuQuiPourrait: { groupe: 'jeu', id: 'qui-pourrait' },
+  jeuDixMais: { groupe: 'jeu', id: 'dix-mais' },
+  jeuOuiNon: { groupe: 'jeu', id: 'oui-non' },
+  pourContre: { groupe: 'jeu', id: 'pour-contre' },
+  jeuPhrases: { groupe: 'jeu', id: 'phrases' },
+  jeuActionVerite: { groupe: 'jeu', id: 'action-verite' },
+  jeuGages: { groupe: 'jeu', id: 'gages' },
+  jeuPlateau: { groupe: 'jeu', id: 'plateau' },
+  questionsCouple: { groupe: 'questions', id: 'questions-couple' },
 };
 // Les mentions obligatoires d'un vendeur (mentions légales et conditions de
 // vente). Un champ vide n'est pas affiché. L'entreprise de Thomas est une

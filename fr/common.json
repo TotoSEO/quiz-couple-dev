@@ -115,7 +115,9 @@
     "quizPossession": "Qui pourrait se faire posséder",
     "quizSuperVilain": "Quel super-vilain es-tu",
     "quizDuoVilains": "Quel duo de super-vilains",
-    "bilanCouple": "Bilan de couple",
+    "bilanCouple": "Évaluation de couple",
+    "evaluer": "Évaluer son couple",
+    "evaluerSous": "L'évaluation complète, à deux ou seul(e)",
     "bilanCoupleDesc": "100 questions chacun de son côté, et un rapport de 30 pages"
   },
   "footer": {

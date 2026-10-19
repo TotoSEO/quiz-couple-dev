@@ -1,5 +1,5 @@
-// Les aperçus du rapport montrés sur la page du bilan (public/bilan/) : de
-// vraies pages du gabarit, pour un couple fictif, dans chaque langue. À
+// Les aperçus du rapport montrés sur la page de l'évaluation (public/bilan/) :
+// de vraies pages du gabarit, pour un couple fictif, dans chaque langue. À
 // refaire quand le gabarit, sa feuille ou les textes du rapport changent.
 //
 //   node bilan/apercus.mjs [langue...]
@@ -29,9 +29,14 @@ const COUPLES = {
   de: ['Hannah', 'Lukas'],
   it: ['Giulia', 'Marco'],
 };
-const PAGES = ['couverture', 'synthese', 'carte', 'conversations', 'signaux'];
-const NOMS = { couverture: 'couverture', synthese: 'synthese', carte: 'carte', conversations: 'conversation', signaux: 'signaux' };
-const LARGEUR = 600;
+// Les pages montrées dans le curseur de la page de vente, dans l'ordre du
+// rapport : la couverture, la synthèse, une page d'ouverture de chapitre, la
+// carte, les conversations, le climat, le début du domaine par domaine et la
+// synthèse de fin.
+const PAGES = ['couverture', 'synthese', 'ouverture', 'carte', 'conversations', 'climat', 'domaines', 'fin'];
+const NOMS = { couverture: 'couverture', synthese: 'synthese', ouverture: 'ouverture', carte: 'carte', conversations: 'conversation', climat: 'climat', domaines: 'domaine', fin: 'fin' };
+// 720 px de large : le curseur les affiche jusqu'à 360 px sur un écran x2.
+const LARGEUR = 720;
 
 function documentApercu(lang, html) {
   return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><style>${feuilleEnLigne()}
@@ -60,9 +65,11 @@ async function principal() {
       for (const cle of PAGES) {
         await page.evaluate(({ cle }) => {
           const rap = document.querySelector('.rap');
-          const source = cle === 'couverture' ? rap.querySelector('.rap-couv') : rap.querySelector('.rap-chap--' + cle);
+          const source = cle === 'couverture' ? rap.querySelector('.rap-couv')
+            : cle === 'ouverture' ? rap.querySelector('.rap-ouv--prune')
+            : rap.querySelector('.rap-chap--' + cle);
           const feuille = document.createElement('div');
-          feuille.className = 'feuille' + (cle === 'couverture' ? '' : ' feuille--marges');
+          feuille.className = 'feuille' + (cle === 'couverture' || cle === 'ouverture' ? '' : ' feuille--marges');
           const copie = document.createElement('div');
           copie.className = rap.className;
           copie.setAttribute('lang', rap.getAttribute('lang'));
@@ -73,7 +80,7 @@ async function principal() {
         }, { cle });
         const png = await page.locator('.feuille').screenshot({ type: 'png' });
         const sortie = path.join(SORTIE, `apercu-${NOMS[cle]}-${lang}.webp`);
-        await sharp(png).resize({ width: LARGEUR }).webp({ quality: 82 }).toFile(sortie);
+        await sharp(png).resize({ width: LARGEUR }).webp({ quality: 80 }).toFile(sortie);
         console.log('  ', path.relative(RACINE, sortie), Math.round(fs.statSync(sortie).size / 1024) + ' Ko');
         // On remet le rapport entier pour la page suivante.
         await page.setContent(documentApercu(lang, r.html), { waitUntil: 'load' });

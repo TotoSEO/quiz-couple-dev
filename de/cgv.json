@@ -1,11 +1,11 @@
 {
   "title": "Allgemeine Geschäftsbedingungen",
   "majLe": "Zuletzt aktualisiert: 18. Oktober 2026",
-  "intro": "Diese Bedingungen gelten für den Kauf des vollständigen Berichts zum {{bilan}} auf quiz-couple.com. Alles andere auf der Website ist kostenlos und von keinem Verkauf betroffen.",
+  "intro": "Diese Bedingungen gelten für den Kauf des vollständigen Berichts zur {{bilan}} auf quiz-couple.com. Alles andere auf der Website ist kostenlos und von keinem Verkauf betroffen.",
   "liens": {
     "contact": "Kontaktseite",
     "confidentialite": "Datenschutzerklärung",
-    "bilan": "Beziehungs-Check"
+    "bilan": "Beziehungsanalyse"
   },
   "vendeur": {
     "titre": "Der Verkäufer",
@@ -21,15 +21,15 @@
     {
       "titre": "1. Was verkauft wird",
       "p": [
-        "Der Beziehungs-Check ist ein Fragebogen, den zwei Partner jeweils für sich beantworten. Das Beantworten der Fragen ist kostenlos; ohne Kauf gibt es kein Ergebnis.",
-        "Verkauft wird der Bericht: eine vollständige Bestandsaufnahme des Paares auf Grundlage beider Antwortreihen (Übereinstimmung, Klima, Karte der Bereiche, Unterschiede mit beiden Antworten, Leitfäden, um darüber zu reden, Knackpunkte und Unverhandelbares, Warnsignale, Aufgabenverteilung). Der Bericht ist ein digitaler Inhalt: ein PDF-Dokument, das per E-Mail verschickt wird, und dieselbe Fassung zum Ansehen auf der Seite des Checks."
+        "Die Beziehungsanalyse ist ein Fragebogen, den zwei Partner jeweils für sich beantworten, oder den eine Person allein beantwortet und dabei auch angibt, was ihr Partner oder ihre Partnerin ihrer Meinung nach antworten würde (Solo-Modus). Das Beantworten der Fragen ist kostenlos; ohne Kauf gibt es kein Ergebnis.",
+        "Verkauft wird der Bericht: eine vollständige Bestandsaufnahme des Paares auf Grundlage beider Antwortreihen (Übereinstimmung, Klima, Karte der Bereiche, Unterschiede mit beiden Antworten, Leitfäden, um darüber zu reden, Knackpunkte und Unverhandelbares, Warnsignale, Aufgabenverteilung). Der Bericht ist ein digitaler Inhalt: ein PDF-Dokument, das per E-Mail verschickt wird, und dieselbe Fassung zum Ansehen auf der Seite der Analyse."
       ]
     },
     {
       "titre": "2. Der Preis",
       "p": [
-        "Der vollständige Bericht kostet {{prix}}, ohne Umsatzsteuer (Kleinunternehmerregelung). Es ist eine einmalige Zahlung, ohne Abo. Eine einzige Zahlung, von einem der beiden Partner, schaltet den Bericht für beide frei.",
-        "Der Preis wird auf der Seite des Checks vor der ersten Frage angezeigt, und noch einmal vor der Zahlung."
+        "Der vollständige Bericht kostet {{prix}}, ohne Umsatzsteuer (Kleinunternehmerregelung). Es ist eine einmalige Zahlung, ohne Abo. Eine einzige Zahlung, von einem der beiden Partner, schaltet den Bericht für beide frei. Im Solo-Modus wird der Bericht nur der Person bereitgestellt, die geantwortet hat.",
+        "Der Preis wird auf der Seite der Analyse vor der ersten Frage angezeigt, und noch einmal vor der Zahlung."
       ]
     },
     {
@@ -42,9 +42,9 @@
     {
       "titre": "4. Bereitstellung des Berichts",
       "p": [
-        "Der Bericht wird erstellt, sobald die Zahlung bestätigt ist und beide Partner fertig geantwortet haben. Er geht dann als PDF an die angegebenen E-Mail-Adressen und erscheint auf der Seite des Checks für beide Partner, über ihre persönlichen Links, mit einer Schaltfläche zum Herunterladen des PDFs. Er bleibt sechs Monate nach der Zahlung verfügbar, danach wird der Check gelöscht.",
+        "Der Bericht wird erstellt, sobald die Zahlung bestätigt ist und beide Partner fertig geantwortet haben (oder, im Solo-Modus, die Person fertig ist). Er geht dann als PDF an die angegebenen E-Mail-Adressen und erscheint auf der Seite der Analyse für beide Partner, über ihre persönlichen Links, mit einer Schaltfläche zum Herunterladen des PDFs. Er bleibt sechs Monate nach der Zahlung verfügbar, danach wird die Analyse gelöscht.",
         "Wenn der Partner seine Antworten nicht fertigstellt, kann der Bericht nicht erstellt werden: Der Käufer kann dann jederzeit über die {{contact}} die Erstattung verlangen.",
-        "Jeder der beiden Partner kann den Check vor Ablauf dieser Frist löschen. Die Löschung erfolgt sofort und endgültig, für beide, und führt außerhalb der Garantie aus Artikel 6 zu keiner Erstattung."
+        "Jeder der beiden Partner kann die Analyse vor Ablauf dieser Frist löschen. Die Löschung erfolgt sofort und endgültig, für beide, und führt außerhalb der Garantie aus Artikel 6 zu keiner Erstattung."
       ]
     },
     {
@@ -60,16 +60,16 @@
       ]
     },
     {
-      "titre": "7. Was der Check ist, und was nicht",
+      "titre": "7. Was die Analyse ist, und was nicht",
       "p": [
-        "Der Check ist ein Werkzeug, das einem Paar hilft, über sein gemeinsames Leben zu reden. Er ist weder eine Diagnose noch eine Therapie noch die Meinung einer medizinischen Fachkraft. Entscheidungen, die auf Grundlage des Berichts getroffen werden, bleiben die der Partner. Wenn ihr eine schwierige Zeit durchmacht, kann euch eine Paarberatung oder Paartherapie begleiten.",
+        "Die Analyse ist ein Werkzeug, das einem Paar hilft, über sein gemeinsames Leben zu reden. Er ist weder eine Diagnose noch eine Therapie noch die Meinung einer medizinischen Fachkraft. Entscheidungen, die auf Grundlage des Berichts getroffen werden, bleiben die der Partner. Wenn ihr eine schwierige Zeit durchmacht, kann euch eine Paarberatung oder Paartherapie begleiten.",
         "Der Dienst wird so bereitgestellt, wie er ist. Wir tun unser Möglichstes, damit er jederzeit verfügbar ist, aber eine vorübergehende Unterbrechung (Wartung, Ausfall eines Dienstleisters) lässt sich nicht ausschließen. Bleibt ein bezahlter Bericht durch unser Verschulden unzugänglich, wird er erstattet."
       ]
     },
     {
       "titre": "8. Personenbezogene Daten",
       "p": [
-        "Die Antworten im Check, die das Intimleben und Überzeugungen berühren können, werden nur mit der ausdrücklichen Einwilligung jedes Partners gespeichert und dienen nur dem Check. Die E-Mail-Adresse, die für den Empfang des Berichts angegeben wird, dient nur diesem Versand. Speicherdauer, eure Rechte und die Liste der Dienstleister stehen in unserer {{confidentialite}}."
+        "Die Antworten im Check, die das Intimleben und Überzeugungen berühren können, werden nur mit der ausdrücklichen Einwilligung jedes Partners gespeichert und dienen nur der Analyse. Die E-Mail-Adresse, die für den Empfang des Berichts angegeben wird, dient nur diesem Versand. Speicherdauer, eure Rechte und die Liste der Dienstleister stehen in unserer {{confidentialite}}."
       ]
     },
     {

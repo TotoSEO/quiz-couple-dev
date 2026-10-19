@@ -27,6 +27,14 @@
   // Le lien vers le bilan de couple porte sa source (?src=), lue dans
   // l'onglet Bilan de l'admin.
   const urlNav = (k) => { const u = getLocalizedUrl(k, lang); return u && k === 'bilanCouple' ? u + '?src=menu' : u; };
+  // Le bouton « Évaluer son couple » (19 octobre 2026, Thomas : « en premier
+  // sur mobile, et sur PC à gauche de Test de couple, directement
+  // accessible ») : seulement quand l'évaluation est ouverte (BILAN_OUVERT).
+  // Ses styles sont écrits ici, dans la page : il est dans le premier écran
+  // de toutes les pages et les feuilles critiques (css/critique/) ne le
+  // connaissent pas encore.
+  const urlEval = (typeof bilanOuvert !== 'undefined' && bilanOuvert) ? getLocalizedUrl('bilanCouple', lang) : null;
+  const icEval = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M12 17s-3.4-2.1-3.4-4.5a1.7 1.7 0 0 1 3.4-.6 1.7 1.7 0 0 1 3.4.6C15.4 14.9 12 17 12 17z"/></svg>';
 
   // Filter out links that don't have a URL for the current language (frOnly pages in non-FR)
   const filterAvailable = (links) => links.filter(link => getLocalizedUrl(link.routeKey, lang));
@@ -139,6 +147,23 @@
     niveau 2 ; le mobile replie la rangée de puces du niveau 2 et fait
     glisser le logo, centré en haut de page, vers la gauche. %>
 <header class="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80" id="site-header">
+  <% if (urlEval) { %>
+  <style>
+    .n2-eval { display: inline-flex; align-items: center; gap: .5rem; height: 2.5rem; padding: 0 1rem 0 .4rem; margin-right: .45rem; border-radius: 999px; font-size: .875rem; font-weight: 700; white-space: nowrap; color: #fff; background: hsl(var(--primary)); text-decoration: none; box-shadow: 0 8px 18px -10px hsl(var(--primary) / .9); transition: background .2s ease, transform .2s ease; }
+    .n2-eval:hover, .n2-eval:focus-visible { color: #fff; background: hsl(340 65% 58%); transform: translateY(-1px); }
+    .n2-eval:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 2px; }
+    .n2-eval-ic { display: inline-flex; align-items: center; justify-content: center; width: 1.8rem; height: 1.8rem; border-radius: 999px; background: hsl(0 0% 100% / .22); flex-shrink: 0; }
+    .n2-eval-ic svg { width: 1rem; height: 1rem; }
+    .mobile-eval { display: grid; grid-template-columns: 2.7rem minmax(0, 1fr) 1.25rem; gap: .85rem; align-items: center; padding: .9rem 1rem .9rem .85rem; border-radius: 1rem; color: #fff; background: hsl(var(--primary)); text-decoration: none; }
+    .mobile-eval:hover, .mobile-eval:focus-visible { color: #fff; background: hsl(340 65% 58%); }
+    .mobile-eval-ic { display: inline-flex; align-items: center; justify-content: center; width: 2.7rem; height: 2.7rem; border-radius: .85rem; background: hsl(0 0% 100% / .22); }
+    .mobile-eval-ic svg { width: 1.4rem; height: 1.4rem; }
+    .mobile-eval-titre { display: block; font-size: 1.02rem; font-weight: 800; line-height: 1.2; }
+    .mobile-eval-sous { display: block; margin-top: .15rem; font-size: .8rem; line-height: 1.3; color: hsl(0 0% 100% / .88); }
+    .mobile-eval > svg { width: 1.25rem; height: 1.25rem; }
+    @media (prefers-reduced-motion: reduce) { .n2-eval { transition: none; } }
+  </style>
+  <% } %>
   <nav aria-label="<%= lang === 'fr' ? 'Navigation principale' : 'Main navigation' %>">
 
     <!-- Niveau 1 -->
@@ -212,6 +237,12 @@
 
           <!-- Onglets bureau -->
           <div class="entete-onglets">
+            <% if (urlEval) { %>
+            <a href="<%= urlEval %>?src=menu" class="n2-eval">
+              <span class="n2-eval-ic"><%- icEval %></span>
+              <%= t('common:nav.evaluer', 'Évaluer son couple') %>
+            </a>
+            <% } %>
             <!-- Tests -->
             <div class="nav-dropdown n2-famille relative" data-megamenu style="--cat: var(--primary)">
               <button class="n2-onglet nav-dropdown-trigger" aria-expanded="false">
@@ -353,6 +384,16 @@
     <div id="mobile-menu" class="hidden lg:hidden">
       <div class="container mx-auto px-4">
         <div class="mobile-nav-inner">
+          <% if (urlEval) { %>
+          <a href="<%= urlEval %>?src=menu-mobile" class="mobile-eval">
+            <span class="mobile-eval-ic"><%- icEval %></span>
+            <span>
+              <span class="mobile-eval-titre"><%= t('common:nav.evaluer', 'Évaluer son couple') %></span>
+              <span class="mobile-eval-sous"><%= t('common:nav.evaluerSous', '') %></span>
+            </span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <% } %>
           <!-- Tests -->
           <div class="mobile-accordion" data-accordeon="tests" style="--cat: var(--primary)">
             <button class="mobile-accordion-trigger" aria-expanded="false">

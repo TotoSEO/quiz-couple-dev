@@ -1,4 +1,7 @@
-# Le bilan de couple : conception
+# L'évaluation de couple : conception
+
+(« Bilan de couple » jusqu'au 19 octobre 2026 ; le code, la table `bilans`,
+les fonctions `bilan*` et les clés des JSON gardent ce mot.)
 
 Octobre 2026. Thomas cherchait un revenu en plus de la publicité (environ
 200 € par mois pour 150 000 visites, 200 000 parties lancées et 90 000
@@ -420,3 +423,141 @@ L'entonnoir se lit de haut en bas : si l'on clique peu sur « Commencer »,
 c'est la page de vente ; si les partenaires ne rejoignent pas, c'est
 l'invitation ; s'ils rejoignent sans finir, c'est la longueur (et le tableau
 des domaines dit où) ; s'ils finissent sans payer, c'est l'offre ou le prix.
+
+## Version 3 (19 octobre 2026)
+
+Thomas, après avoir relu la v2 : l'axe marketing devient **« L'évaluation de
+couple »** (au lieu d'un psychologue, un test avancé construit sur la
+recherche, qui donne un vrai état des lieux), les questions et le barème
+doivent être parfaits et impartiaux, le rapport « manque d'une touche WOW…
+on dirait juste un document Word », la page de vente n'est « pas assez
+transactionnelle », il faut « obligatoirement » pouvoir tout faire seul(e)
+« quand ça va mal dans un couple ou que l'un est fermé à la discussion », et
+le maillage depuis le reste du site est « sûrement le travail le plus
+important… on ne va pas compter sur le SEO pour vendre ».
+
+### Le nom
+
+« Évaluation de couple » partout où le public lit : titre, menu, encarts,
+rapport, e-mails, CGV, confidentialité, et le slug `/evaluation-de-couple/`
+(Relationship assessment, Evaluación de pareja, Beziehungsanalyse,
+Valutazione di coppia). Le code garde « bilan » : table `bilans`, fonctions
+`bilan` et `bilan-stripe`, clés `bilan*` des JSON, onglet de l'admin,
+`BILAN_OUVERT`, `BILAN_ENTREES`. Renommer tout ça n'aurait rien apporté à
+personne et aurait cassé les liens déjà envoyés.
+
+### Le poids des questions
+
+Chaque question porte un poids de 1 à 3 (`poids` dans
+`{lang}/bilan-questions.json`, lu par `coeur.mjs`). Le poids dit à quel point
+un désaccord sur ce sujet pèse sur une vie à deux d'après la recherche :
+vouloir ou non des enfants, la fidélité, l'argent qu'on cache valent 3 ; qui
+sort les poubelles vaut 1. Le détail et la justification, question par
+question, sont dans RECHERCHE.md (section « Le poids des questions »). Le
+score d'un domaine est la moyenne pondérée des proximités ; le rapport
+marque les sujets de poids 3 « Sujet décisif » et la synthèse de fin compte
+le « socle » : la part des sujets décisifs sur lesquels les deux sont
+d'accord.
+
+### Des réponses sans bonne réponse
+
+Aucune option ne doit se lire comme la bonne ou la mauvaise réponse, ni
+comme un choix noir ou blanc. Les questions dont une réponse sonnait comme
+un aveu (con1, con5, con6, tra6, arg8) ont été réécrites en cinq langues :
+chaque option décrit une façon de faire qu'un couple heureux peut avoir. La
+règle est écrite dans RECHERCHE.md (« Des réponses sans bonne réponse »)
+pour toute question ajoutée.
+
+### Le mode seul(e)
+
+Le besoin : quand ça va mal, c'est souvent une seule personne qui cherche, et
+l'autre ne veut pas répondre à cent questions. Refuser de la servir, c'est
+perdre la personne qui a le plus envie d'un état des lieux.
+
+Comment : sur l'écran de création, le choix « À deux » ou « Seul(e) »
+(`mode`, cartes avec les mascottes). En solo, une seule personne (A) répond
+deux fois à chaque question : ce qu'elle pense, puis ce que son ou sa
+partenaire répondrait d'après elle, avec une option « Je ne sais pas »
+(`INCONNU = -1`). L'énoncé de la seconde phase est la question telle que
+l'autre la lirait (accordée au genre du partenaire, le prénom de A à la place
+de « votre partenaire ») ; les questions « qui de vous deux » passent par
+`quiPercu`, formulées dans le cadre du partenaire. Les réponses de A vont
+dans `a_reponses`, ses perceptions dans `a_percu` (colonnes `mode` et
+`a_percu`, migration `20261019120000_evaluation_solo.sql`). Pas d'invitation,
+pas de second lien, rien n'est envoyé au partenaire ; l'offre s'affiche dès
+que A a fini. Même prix : le rapport a la même longueur et le même travail.
+
+Ce que le rapport dit : il compare la réponse de A à l'idée qu'A se fait de
+l'autre, sujet par sujet, écrit « selon vous » partout où il parle du
+partenaire (`rapport.solo.*` de bilan.json), et ajoute un chapitre « Zones
+d'ombre » : les sujets où A a répondu « je ne sais pas », rangés par domaine,
+avec une bande (large, quelques, peu) et la consigne de les poser en vrai.
+Il ne prétend jamais connaître le partenaire : un accord en solo est « vous
+pensez être d'accord », pas « vous êtes d'accord ». Si un jour le partenaire
+veut répondre, une évaluation à deux remplace les suppositions par ses
+réponses (c'est écrit sur la page de vente).
+
+Données : les perceptions sont sous le seul lien de A, effacées avec le reste
+(60 jours sans paiement, six mois après). La confidentialité et les CGV
+disent en cinq langues que le partenaire n'est ni contacté ni informé.
+
+### Le rapport, version 2 du gabarit
+
+`VERSION_RAPPORT = 2` dans `rapport.mjs`. Ce qui a changé pour la « touche
+WOW » : des chapitres numérotés, chacun ouvert par une page pleine d'une
+couleur différente (numéro géant, titre, une phrase d'ouverture, signature ;
+`chapitre()`, `.rap-ouv--<teinte>`, page CSS nommée `chapitre` à marges
+nulles dans document.mjs pour que la couleur aille jusqu'au bord) ; des
+bandeaux de domaine colorés par bande avec le score en grand ; un radar des
+douze domaines sur la synthèse ; et une synthèse de fin, différente de celle
+du début : anneau de répartition accords / proches / écarts, socle des sujets
+décisifs, forces et chantiers en deux colonnes, feuille de route. Palette
+dataviz validée (accord `#2a8e62`, proche `#dca11c`, écart `#c43d3f`, avec
+des variantes plus sombres pour le texte, et une étiquette sur chaque part :
+jamais la couleur seule). Les aperçus de la page de vente sont des pages
+réelles du rapport d'exemple (`bilan/apercus.mjs`, 720 px : couverture,
+synthèse, ouverture, carte, conversation, climat, domaine, fin). Les trente
+rapports d'exemple (six cas, dont solo et solo à larges zones d'ombre, cinq
+langues) passent les deux contrôles de mise en page.
+
+### La page de vente, version transactionnelle
+
+Hero sombre avec le radar du rapport animé en CSS et les deux mascottes,
+deux boutons (à deux, seul·e) ; chiffres ; ruban ; les deux façons de faire
+face à face (`#facons`) ; le rapport page par page dans le curseur de
+l'accueil ; la frise des étapes ; les douze domaines ; une démonstration de
+trois vraies questions où l'on répond et où l'on voit ce que le rapport en
+fait ; pour qui ; le comparatif avec un test gratuit et une IA ; la
+recherche ; le prix ; la confiance ; la FAQ ; une barre d'appel collée en bas
+sur téléphone, cachée tant que le hero ou le dernier appel sont à l'écran
+(`bilan-lp.js`). `?mode=solo` préselectionne le mode seul(e) et `#facons`
+amène dessus : c'est le lien que posent tous les seconds boutons du site.
+
+### Le maillage
+
+Thomas : « surement le travail le plus important ». Le bouton « Évaluer son
+couple » est le premier élément du menu mobile et, sur ordinateur, à gauche
+de l'onglet Tests ; l'accueil a un lien « Nouveau » sous les boutons du hero
+et une section sous le ruban ; l'encart sous le verdict et la bannière du bas
+ont deux boutons (le second en mode seul(e)) et des textes par groupe
+(`score`, `projet`, `doute`, `jeu`, `questions`) ; `BILAN_ENTREES` couvre
+presque tous les tests de couple, les jeux et la page des questions ; chaque
+article de blog finit par la bannière, sauf ceux qui parlent d'emprise, de
+manipulation, de violence ou d'infidélité (`entreeArticle`, generate.js) : on
+ne vend pas une évaluation à deux à quelqu'un qui lit ça. Chaque lien porte
+sa source (`?src=`), lue dans l'onglet de l'admin, qui compte aussi à part
+les évaluations créées et payées seul(e).
+
+### Sécurité, relue pour la v3
+
+Ce qui a été vérifié : les jetons restent dans le fragment de l'adresse
+(jamais envoyés au serveur dans l'URL, gardés en empreinte) ; chaque action
+du serveur contrôle le mode, les identifiants de questions et les valeurs
+(une perception vaut une option de la question ou `-1`), les tailles (bornes
+de la base recréées avec les nouvelles colonnes) ; aucun chiffre ne sort
+avant paiement, en solo comme à deux ; la limite par adresse IP sur la
+création ; le rapport n'est fabriqué que par la clé de service ; le PDF est
+servi par lien signé de dix minutes ; les prénoms et textes libres passent
+par `esc()` dans l'application et le rapport ; le webhook Stripe vérifie la
+signature. Le mode seul(e) n'ouvre aucune porte nouvelle : il n'y a qu'un
+lien, celui de A.

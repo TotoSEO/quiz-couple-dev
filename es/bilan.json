@@ -1,12 +1,12 @@
 {
   "jsonLd": {
-    "name": "Chequeo de pareja",
-    "about": "Chequeo de pareja"
+    "name": "Evaluación de pareja",
+    "about": "Evaluación de pareja"
   },
   "app": {
     "chargement": "Cargando...",
     "accueil": {
-      "titre": "Vuestros chequeos en este dispositivo",
+      "titre": "Vuestras evaluaciones en este dispositivo",
       "avec": "Con {{autre}}",
       "seul": "A solas",
       "progression": "{{n}} preguntas de {{total}}",
@@ -17,16 +17,16 @@
       "voir": "Ver el informe",
       "oublier": "Quitar de este dispositivo",
       "oublierConfirmer": "Confirmar: quitar de aquí",
-      "oublierAide": "El chequeo no se borra, solo desaparece de este dispositivo. Guarda tu enlace personal para recuperarlo.",
-      "violence": "Este chequeo muestra a cada uno las respuestas del otro. Si tienes miedo de tu pareja, no está pensado para tu situación: en España, el 016 atiende gratis las 24 horas y no deja rastro en la factura.",
-      "nouveau": "Empezar un chequeo nuevo",
+      "oublierAide": "La evaluación no se borra, solo desaparece de este dispositivo. Guarda tu enlace personal para recuperarlo.",
+      "violence": "Esta evaluación muestra a cada uno las respuestas del otro. Si tienes miedo de tu pareja, no está pensado para tu situación: en España, el 016 atiende gratis las 24 horas y no deja rastro en la factura.",
+      "nouveau": "Empezar una evaluación nueva",
       "pret": "Listo: solo falta desbloquear el informe",
-      "reprise": "Tienes un chequeo en curso con {{autre}}.",
+      "reprise": "Tienes una evaluación en curso con {{autre}}.",
       "repriseRapport": "Tu informe con {{autre}} está disponible.",
       "quitter": "Volver"
     },
     "creation": {
-      "titre": "Vuestro chequeo",
+      "titre": "Vuestra evaluación",
       "etape": "Paso {{n}} de 3",
       "modeTitre": "¿Cómo hacéis la evaluación?",
       "modeDuo": "En pareja",
@@ -46,12 +46,12 @@
       "situationAide": "Estas respuestas cambian las preguntas: una pareja que ya tiene hijos no tendrá «¿queréis tenerlos?» sino «¿otro más?». Tu pareja podrá corregirlas.",
       "accordTitre": "Antes de empezar",
       "majeur": "Tengo 18 años o más.",
-      "consentement": "Acepto que mis respuestas se guarden para este chequeo, también sobre temas íntimos (vida sexual, religión, opiniones), y que {{autre}} las vea en el informe.",
-      "accordAide": "Vuestro chequeo se guarda 60 días después de vuestra última respuesta si no está pagado, y seis meses después del pago si lo está, y cualquiera de los dos puede borrarlo en todo momento. No hay que crear ninguna cuenta.",
+      "consentement": "Acepto que mis respuestas se guarden para esta evaluación, también sobre temas íntimos (vida sexual, religión, opiniones), y que {{autre}} las vea en el informe.",
+      "accordAide": "Vuestra evaluación se guarda 60 días después de vuestra última respuesta si no está pagado, y seis meses después del pago si lo está, y cualquiera de los dos puede borrarlo en todo momento. No hay que crear ninguna cuenta.",
       "prixRappel": "Las preguntas son gratis. El informe completo cuesta {{prix}} para los dos: lo desbloqueas cuando hayas terminado tus respuestas.",
       "suivant": "Siguiente",
       "retour": "Atrás",
-      "creer": "Crear nuestro chequeo",
+      "creer": "Crear nuestra evaluación",
       "manque": "Falta una respuesta.",
       "prenomManque": "Escribe vuestros dos nombres.",
       "accordManque": "Marca las dos casillas para continuar."
@@ -64,16 +64,16 @@
       "copie": "¡Enlace copiado!",
       "qr": "Mostrar el código QR",
       "qrAide": "{{autre}} puede escanearlo con la cámara de su móvil.",
-      "message": "He empezado nuestro chequeo de pareja, te toca responder por tu lado: {{lien}}",
-      "messageTitre": "Nuestro chequeo de pareja",
+      "message": "He empezado nuestra evaluación de pareja, te toca responder por tu lado: {{lien}}",
+      "messageTitre": "Nuestra evaluación de pareja",
       "monLien": "Tu enlace personal",
       "monLienAide": "Te permite retomar tus respuestas en otro dispositivo. No se lo des a nadie, ni siquiera a {{autre}}: es la llave de tus respuestas.",
       "copierMonLien": "Copiar mi enlace",
       "commencer": "Empezar mis respuestas",
-      "dejaRejoint": "{{autre}} se ha unido al chequeo."
+      "dejaRejoint": "{{autre}} se ha unido a la evaluación."
     },
     "rejoindre": {
-      "titre": "{{autre}} te propone hacer vuestro chequeo de pareja",
+      "titre": "{{autre}} te propone hacer vuestra evaluación de pareja",
       "texte": "Un centenar de preguntas concretas sobre vuestra vida en pareja. Respondes por tu lado, sin ver las respuestas de {{autre}}, y al revés. Cuando hayáis terminado los dos, vuestro informe pone vuestras dos respuestas frente a frente, tema por tema.",
       "duree": "Calcula entre 25 y 30 minutos. Puedes hacer una pausa cuando quieras, todo queda guardado.",
       "situationTitre": "Vuestra situación, tal como la ha descrito {{autre}}",
@@ -127,7 +127,7 @@
       "payeTitre": "Vuestro informe está pagado",
       "payeTexte": "¡Gracias! Se abrirá aquí y saldrá por correo en cuanto {{autre}} termine sus respuestas.",
       "relance": "Enviar un recordatorio a {{autre}}",
-      "relanceMessage": "He terminado mis respuestas de nuestro chequeo de pareja, ¡te espero! Sigues donde lo dejaste, en tu móvil."
+      "relanceMessage": "He terminado mis respuestas de nuestra evaluación de pareja, ¡te espero! Sigues donde lo dejaste, en tu móvil."
     },
     "paywall": {
       "titre": "Vuestro informe completo",
@@ -158,14 +158,14 @@
       "securite": "Pago seguro con Stripe (tarjeta, Apple Pay, Google Pay). Nunca vemos tu tarjeta.",
       "cgv": "Condiciones de venta",
       "tva": "IVA no aplicable, art. 293 B del Código General de Impuestos francés.",
-      "ferme": "El pago en línea se abre muy pronto. Vuestro chequeo está guardado: volved a esta página dentro de unos días.",
+      "ferme": "El pago en línea se abre muy pronto. Vuestra evaluación está guardada: volved a esta página dentro de unos días.",
       "redirection": "Redirigiendo al pago..."
     },
     "paiement": {
       "verification": "Comprobando el pago...",
       "ok": "Pago confirmado, ¡gracias!",
       "attente": "El pago todavía no está confirmado. Puede tardar unos segundos...",
-      "annule": "El pago se ha cancelado. Vuestro chequeo sigue aquí.",
+      "annule": "El pago se ha cancelado. Vuestra evaluación sigue aquí.",
       "erreur": "No podemos comprobar el pago ahora mismo. Si has pagado, recarga la página dentro de un minuto."
     },
     "solo": {
@@ -202,7 +202,7 @@
         "ecran": {
           "supprimer": "Borrar mi evaluación",
           "supprimerAide": "La evaluación se borra ahora mismo y para siempre, PDF incluido. Guarda antes el PDF.",
-          "supprime": "Tu evaluación se ha borrado.",
+          "supprime": "Tu evaluación se ha borrada.",
           "garde": "Este informe queda disponible seis meses en esta página, solo para ti."
         }
       }
@@ -258,7 +258,7 @@
         "suite": "Cómo hablarlo, y cuándo volver a hacer balance."
       },
       "synthese": {
-        "intro": "Dos cifras resumen vuestro evaluación. La primera dice hasta qué punto queréis la misma vida en pareja. La segunda dice cómo se siente cada uno en la pareja ahora mismo. No siempre van juntas: se puede estar muy alineados y pasar por una mala racha, o al revés.",
+        "intro": "Dos cifras resumen vuestra evaluación. La primera dice hasta qué punto queréis la misma vida en pareja. La segunda dice cómo se siente cada uno en la pareja ahora mismo. No siempre van juntas: se puede estar muy alineados y pasar por una mala racha, o al revés.",
         "alignement": "Vuestra alineación",
         "alignementAide": "El acuerdo de vuestras respuestas sobre la vida en pareja. Los temas decisivos cuentan el triple.",
         "climat": "Vuestro clima",
@@ -290,7 +290,7 @@
         },
         "creuser": {
           "titre": "Cerca, con temas que hablar",
-          "texte": "Coincidís en muchas cosas, pero varios temas os separan. Nada alarmante mientras los habléis, y precisamente para eso sirve este chequeo."
+          "texte": "Coincidís en muchas cosas, pero varios temas os separan. Nada alarmante mientras los habléis, y precisamente para eso sirve esta evaluación."
         },
         "apprivoiser": {
           "titre": "Diferencias con las que aprender a vivir",
@@ -320,7 +320,7 @@
         },
         "tempete": {
           "titre": "Temporal",
-          "texte": "Las cosas no van muy bien en este momento. Este chequeo puede ayudar a ponerle palabras, y un terapeuta de pareja puede ayudaros a ir más allá."
+          "texte": "Las cosas no van muy bien en este momento. Esta evaluación puede ayudar a ponerle palabras, y un terapeuta de pareja puede ayudaros a ir más allá."
         }
       },
       "carte": {
@@ -395,7 +395,7 @@
         "chacunPlusTexte": "Es muy habitual: uno ve mejor lo que hace él que lo que hace el otro. Lo mejor es hacer juntos la lista de lo que se encarga cada uno, sin llevar la cuenta.",
         "desequilibre": "Estáis de acuerdo: es sobre todo {{nom}} quien se encarga. ¿Os parece bien a los dos?",
         "accord": "Lo veis de la misma manera.",
-        "aucun": "No hay ninguna pregunta de este tipo en vuestro evaluación."
+        "aucun": "No hay ninguna pregunta de este tipo en vuestra evaluación."
       },
       "domaines": {
         "intro": "Todas vuestras respuestas, área por área: primero en qué estáis de acuerdo, luego vuestras diferencias, de la más importante a la más pequeña.",
@@ -453,8 +453,8 @@
           "Si la cosa se calienta, haced una pausa de veinte minutos y retomadlo después. Funciona mejor de lo que parece."
         ],
         "refaire": "Repetir la evaluación dentro de seis meses o un año muestra lo que ha cambiado entre vosotros. Muchas parejas la repiten en cada gran etapa: irse a vivir juntos, casarse, tener un hijo.",
-        "aide": "Este chequeo es una herramienta para hablar, no un diagnóstico. Si estáis pasando por una época difícil, un terapeuta de pareja puede ayudaros a ir más allá.",
-        "violence": "Si tienes miedo de tu pareja, este chequeo no está pensado para tu situación: en España, el 016 atiende gratis las 24 horas y no deja rastro en la factura."
+        "aide": "Esta evaluación es una herramienta para hablar, no un diagnóstico. Si estáis pasando por una época difícil, un terapeuta de pareja puede ayudaros a ir más allá.",
+        "violence": "Si tienes miedo de tu pareja, esta evaluación no está pensada para tu situación: en España, el 016 atiende gratis las 24 horas y no deja rastro en la factura."
       },
       "solo": {
         "selonSuffixe": ", según tú",
@@ -523,10 +523,10 @@
         "emailOk": "¡Anotado!",
         "emailFaux": "Esta dirección no parece válida.",
         "imprimer": "Imprimir",
-        "supprimer": "Borrar nuestro chequeo",
+        "supprimer": "Borrar nuestra evaluación",
         "supprimerConfirmer": "Confirmar el borrado",
-        "supprimerAide": "El chequeo se borra para los dos, enseguida y para siempre, PDF incluido. Acordaos de guardar el PDF antes.",
-        "supprime": "Vuestro chequeo se ha borrado.",
+        "supprimerAide": "La evaluación se borra para los dos, enseguida y para siempre, PDF incluido. Acordaos de guardar el PDF antes.",
+        "supprime": "Vuestra evaluación se ha borrada.",
         "garde": "Este informe sigue disponible seis meses en esta página, para los dos."
       }
     },
@@ -535,8 +535,8 @@
     },
     "erreurs": {
       "reseau": "Sin conexión. Comprueba tu red y vuelve a intentarlo.",
-      "introuvable": "Este chequeo ya no existe, o este enlace no es el correcto.",
-      "trop": "Se han creado demasiados chequeos desde esta conexión. Vuelve a intentarlo dentro de una hora.",
+      "introuvable": "Esta evaluación ya no existe, o este enlace no es el correcto.",
+      "trop": "Se han creado demasiadas evaluaciones desde esta conexión. Vuelve a intentarlo dentro de una hora.",
       "serveur": "Ha habido un problema por nuestra parte. Vuelve a intentarlo en un momento.",
       "reessayer": "Reintentar"
     },
@@ -546,18 +546,25 @@
     }
   },
   "lp": {
-    "badge": "Chequeo de pareja",
-    "titre": "¿Queréis los dos la misma vida?",
-    "sousTitre": "El chequeo de pareja es una evaluación completa de vuestra relación. Cada uno responde por su lado a un centenar de preguntas concretas sobre doce áreas de la vida en pareja, y recibís un informe que pone vuestras dos respuestas frente a frente, con lo necesario para hablar de ellas.",
+    "badge": "Evaluación de pareja",
+    "titre": "¿Queréis la misma vida, los dos?",
+    "sousTitre": "Una evaluación completa de vuestra relación, construida sobre la investigación en psicología de pareja: un centenar de preguntas concretas sobre doce áreas de la vida en pareja, y un informe que os dice, tema por tema, dónde coincidís y de qué hay que hablar. En pareja, cada uno por su lado, o a solas si el otro no está listo para hablarlo.",
     "points": [
-      "Cada uno responde en su móvil, sin ver las respuestas del otro",
+      "Cada uno responde en su teléfono, sin ver las respuestas del otro",
       "Preguntas construidas a partir de la investigación en psicología de pareja",
-      "Un informe en PDF de unas treinta páginas, enviado por correo"
+      "Un informe de 40 páginas, con gráficos y pistas para hablarlo"
     ],
-    "cta": "Empezar nuestro chequeo",
-    "ctaNote": "Preguntas gratis · {{prix}} para los dos, al final · Satisfechos o reembolsados {{jours}} días",
-    "voirExtrait": "Ver un extracto del informe",
-    "visuelAlt": "Dos páginas de un informe de ejemplo: la portada y el resumen",
+    "cta": "Empezar la evaluación",
+    "ctaDuo": "Hacer la evaluación en pareja",
+    "ctaSolo": "Hacerla a solas",
+    "ctaNote": "Preguntas gratis · {{prix}} por el informe, al final · Satisfechos o reembolsados {{jours}} días",
+    "voirExtrait": "Ver el informe página a página",
+    "visuel": {
+      "sur": "Informe de ejemplo · pareja ficticia",
+      "noms": "Lucía & Pablo",
+      "alignement": "Alineación",
+      "legende": "El radar de las áreas, tal como aparece en el informe"
+    },
     "chiffres": [
       {
         "n": "12",
@@ -572,97 +579,240 @@
         "l": "cada uno, a su ritmo"
       },
       {
-        "n": "30 páginas",
-        "l": "de informe, solo para vosotros"
+        "n": "40 páginas",
+        "l": "de informe, con gráficos"
       }
     ],
-    "pour": {
-      "titre": "Para las parejas que quieren verlo claro",
-      "intro": "No hace falta estar mal para hacer un chequeo. La mayoría de las parejas lo hacen en un momento muy concreto:",
-      "cartes": [
-        {
-          "titre": "Antes de un gran paso",
-          "texte": "Iros a vivir juntos, casaros, tener un hijo, comprar una casa. Es el momento de comprobar que queréis lo mismo, antes de comprometeros."
-        },
-        {
-          "titre": "Cuando vuelven las mismas discusiones",
-          "texte": "Muchas veces, detrás de una discusión que vuelve una y otra vez, hay una diferencia que nadie ha nombrado nunca. El informe la pone sobre la mesa, sin culpar a nadie."
-        },
-        {
-          "titre": "Cuando os hacéis preguntas",
-          "texte": "Os sentís menos cerca, o ya no sabéis muy bien en qué punto estáis. El chequeo ayuda a poner palabras a lo que vive cada uno."
-        },
-        {
-          "titre": "Cuando todo va bien",
-          "texte": "¡Para que dure! Las parejas sólidas hablan de los temas delicados antes de que se conviertan en peleas, y el chequeo les da la ocasión."
-        }
-      ]
+    "facons": {
+      "titre": "En pareja, o a solas: las dos cosas funcionan",
+      "intro": "La mayoría de las parejas la hacen juntos. Pero cuando las cosas van mal, o el otro no tiene ganas de hablarlo, también se puede hacer por tu lado: respondes por ti, luego dices lo que respondería tu pareja, y el informe te muestra lo que sabes, lo que supones y lo que ignoras.",
+      "duo": {
+        "titre": "En pareja",
+        "sous": "Cada uno en su teléfono",
+        "points": [
+          "Cada uno responde por su lado, a su ritmo",
+          "Nadie ve las respuestas del otro antes del final",
+          "El informe compara vuestras dos series de respuestas, tema por tema"
+        ],
+        "cta": "Empezar en pareja"
+      },
+      "solo": {
+        "titre": "A solas",
+        "sous": "Sin avisar a tu pareja",
+        "points": [
+          "Respondes por ti, y luego por tu pareja, según tú",
+          "Tu pareja no se entera y no ve nada",
+          "El informe añade tus zonas de sombra: lo que no sabes del otro, listo para preguntar"
+        ],
+        "cta": "Empezar a solas"
+      },
+      "note": "Mismo precio, mismo informe. Si algún día tu pareja quiere responder también, una evaluación en pareja sustituirá tus suposiciones por sus respuestas."
     },
     "rapport": {
-      "titre": "Un informe que pone vuestras dos respuestas frente a frente",
-      "intro": "Cuando hayáis terminado los dos, recibís vuestro informe en PDF, de unas treinta páginas según vuestras respuestas. Así es como se ve.",
+      "titre": "El informe, página a página",
+      "intro": "Un documento de verdad, de unas cuarenta páginas, con sus capítulos, sus gráficos y, para cada diferencia, pistas para hablarlo. Desliza.",
       "pages": [
+        {
+          "img": "couverture",
+          "titre": "La portada",
+          "texte": "Vuestros dos nombres, la fecha y el número de preguntas comparadas."
+        },
         {
           "img": "synthese",
           "titre": "Vuestro resumen",
-          "texte": "Dos cifras para empezar: vuestra alineación, es decir, hasta qué punto queréis la misma vida, y el clima de vuestra pareja ahora mismo. Después, dónde estáis más cerca, y dónde menos."
+          "texte": "Dos cifras: vuestra alineación y el clima de vuestra pareja. Luego vuestras áreas de un vistazo, en un radar."
+        },
+        {
+          "img": "ouverture",
+          "titre": "Un capítulo, un color",
+          "texte": "Cada capítulo se abre con su propia página, para saber siempre dónde se está."
         },
         {
           "img": "carte",
-          "titre": "El mapa de vuestras doce áreas",
-          "texte": "El día a día, el dinero, los hijos, la familia, la fidelidad, la intimidad... Una barra por área, para ver de un vistazo dónde coincidís."
+          "titre": "El mapa de vuestras áreas",
+          "texte": "Una barra por área, de 0 a 100 %, con el detalle de acuerdos, respuestas cercanas y diferencias."
         },
         {
           "img": "conversation",
           "titre": "Vuestras cuatro próximas conversaciones",
-          "texte": "Los temas que más cuentan para los dos, con vuestras dos respuestas, por qué importan, preguntas para empezar a hablar y lo que más vale no decir."
+          "texte": "Los temas por los que empezar, vuestras dos respuestas una junto a otra, por qué cuenta, preguntas para hablarlo y lo que más vale evitar."
         },
         {
-          "img": "signaux",
-          "titre": "Vuestras señales de alerta",
-          "texte": "Las formas de discutir que décadas de investigación relacionan con el desgaste de una pareja: con qué frecuencia las ve cada uno en vuestra relación, y cómo reaccionar."
+          "img": "climat",
+          "titre": "El clima de vuestra pareja",
+          "texte": "Cómo se siente cada uno en la relación, área por área, en la misma línea."
+        },
+        {
+          "img": "domaine",
+          "titre": "Área por área",
+          "texte": "Todas vuestras respuestas: primero los acuerdos, luego las diferencias, de la más importante a la más pequeña."
+        },
+        {
+          "img": "fin",
+          "titre": "Para terminar",
+          "texte": "Un segundo resumen, distinto del primero: el reparto de vuestras respuestas, vuestra base, lo que se sostiene, lo que pide trabajo, y una hoja de ruta."
         }
       ],
-      "legende": "Extractos de un informe de ejemplo. Lucía y Pablo son una pareja ficticia."
+      "legende": "Páginas de un informe de ejemplo. Lucía y Pablo son una pareja ficticia."
     },
-    "diff": {
-      "titre": "La diferencia con un test que te haría una IA",
-      "intro": "Podríais pedirle a una IA que os hiciera preguntas sobre vuestra pareja. Lo haría encantada, pero no obtendríais lo mismo. Esto es lo que cambia.",
-      "colIa": "Un test generado por una IA",
-      "colBilan": "El chequeo de pareja",
+    "etapes": {
+      "titre": "Cómo funciona",
+      "liste": [
+        {
+          "duree": "2 min",
+          "titre": "Creáis la evaluación",
+          "texte": "Vuestros dos nombres, siete preguntas sobre vuestra situación (si vivís juntos, si tenéis hijos...). En pareja, envías el enlace a tu pareja; a solas, empiezas enseguida."
+        },
+        {
+          "duree": "25 a 30 min",
+          "titre": "Cada uno responde por su lado",
+          "texte": "En su teléfono, a su ritmo, de una vez o en varias: todo queda guardado. A solas, respondes dos veces a cada pregunta: por ti, y luego por el otro, según tú."
+        },
+        {
+          "duree": "1 min",
+          "titre": "Desbloqueáis el informe",
+          "texte": "En cuanto hayas terminado tus respuestas: {{prix}} para los dos, con tarjeta, Apple Pay o Google Pay. Las preguntas, en cambio, son gratis."
+        },
+        {
+          "duree": "6 meses en línea",
+          "titre": "Lo leéis, y lo habláis",
+          "texte": "El PDF llega por correo en cuanto todo está respondido, y el informe queda en línea seis meses. Termina con una hoja de ruta: un tema por semana."
+        }
+      ]
+    },
+    "domaines": {
+      "titre": "Las doce áreas de la vida en pareja",
+      "intro": "Cosas concretas, no generalidades: las preguntas hablan de la nevera, del alquiler, de los suegros y del móvil en la mesilla.",
+      "liste": {
+        "quotidien": "Quién hace qué, quién piensa en qué, el orden, las comidas, la hora de acostarse.",
+        "temps": "El tiempo en pareja, el tiempo para uno, las salidas, los detalles.",
+        "entourage": "Vuestras familias, vuestros amigos, las fiestas de fin de año, un padre que envejece.",
+        "travail": "El lugar del trabajo, las ambiciones, una diferencia de sueldo, cambiar de oficio.",
+        "argent": "Cuenta común o no, los gastos, el ahorro, ayudar a la familia.",
+        "logement": "Dónde vivir dentro de diez años, comprar una casa, mudarse por el otro.",
+        "enfants": "Tenerlos, cuándo, cuántos, cómo educarlos, quién se ocupa.",
+        "valeurs": "La religión, el matrimonio, la ecología, las tradiciones, la política.",
+        "disputes": "Cómo discutís, y cómo os reconciliáis.",
+        "confiance": "El móvil del otro, los celos, los ex, qué significa engañar.",
+        "intimite": "El ritmo, la ternura, hablarlo, la novedad.",
+        "meteo": "Cómo se siente cada uno en la pareja, ahora mismo."
+      }
+    },
+    "demo": {
+      "titre": "Prueba tres preguntas",
+      "intro": "Tal como se plantean en la evaluación, aquí como las vio Lucía. Responde para ver qué hace el informe con ellas.",
+      "partenaireNom": "Pablo",
+      "vous": "Tú",
+      "partenaire": "Pablo",
+      "attente": "responde por su lado",
+      "apres": "En el informe, tu respuesta se pone frente a la de tu pareja, con por qué cuenta y preguntas para hablarlo.",
+      "pourquoi": "Por qué cuenta",
+      "questions": [
+        {
+          "dom": "quotidien",
+          "id": "quo2"
+        },
+        {
+          "dom": "argent",
+          "id": "arg3"
+        },
+        {
+          "dom": "confiance",
+          "id": "con2"
+        }
+      ],
+      "fin": "En las grandes preguntas (los hijos, dónde vivir, la fidelidad...), cada uno puede además marcar su respuesta como innegociable. El informe empieza entonces por ahí.",
+      "cta": "Ver las otras cien"
+    },
+    "pour": {
+      "titre": "Para las parejas que quieren ver claro",
+      "intro": "No hace falta estar mal para hacer una evaluación. La mayoría de las parejas la hacen en un momento muy concreto:",
+      "cartes": [
+        {
+          "titre": "Antes de un gran paso",
+          "texte": "Irse a vivir juntos, casarse, tener un hijo, comprar juntos. Es el buen momento para comprobar que queréis lo mismo, antes de comprometeros."
+        },
+        {
+          "titre": "Cuando vuelven las mismas discusiones",
+          "texte": "A menudo, detrás de una discusión que vuelve, hay una diferencia que nadie ha nombrado nunca. El informe la pone sobre la mesa, sin acusar a nadie."
+        },
+        {
+          "titre": "Cuando os hacéis preguntas",
+          "texte": "Os sentís menos cerca, o ya no sabéis muy bien dónde estáis. La evaluación ayuda a poner palabras a lo que vive cada uno, y puedes hacerla a solas si el otro no está listo."
+        },
+        {
+          "titre": "Cuando todo va bien",
+          "texte": "¡Para que dure! Las parejas sólidas hablan de los temas que enfadan antes de que enfaden, y la evaluación les da la ocasión."
+        }
+      ]
+    },
+    "compar": {
+      "titre": "¿Un consejero, una IA, o esta evaluación?",
+      "intro": "Tres maneras de hacer balance, que no sirven para lo mismo. Esto es lo que aporta cada una.",
+      "cols": [
+        "Un consejero de pareja",
+        "Un test generado por una IA",
+        "La evaluación de pareja"
+      ],
       "lignes": [
         {
           "sujet": "Las preguntas",
-          "ia": "Inventadas en el momento en que las pides, a menudo vagas: «¿Os comunicáis bien?»",
-          "bilan": "Un centenar de preguntas escritas de antemano y apoyadas en la investigación: «¿Quién se acuerda de las citas con el médico?»"
+          "c": [
+            "Las de un profesional, a lo largo de las sesiones",
+            "Inventadas en el momento en que las pides, a menudo vagas: «¿Os comunicáis bien?»",
+            "Un centenar, escritas de antemano y apoyadas en la investigación: «¿Quién piensa en las citas con el médico?»"
+          ]
         },
         {
           "sujet": "Quién responde",
-          "ia": "Una sola persona, que imagina lo que diría el otro",
-          "bilan": "Cada uno por su lado, sin ver las respuestas del otro: se comparan dos puntos de vista reales"
+          "c": [
+            "Los dos, en sesión, uno delante del otro",
+            "Una sola persona, que imagina lo que diría el otro",
+            "Cada uno por su lado, sin ver al otro; o tú a solas, con tus zonas de sombra detectadas"
+          ]
         },
         {
           "sujet": "Lo que se mide",
-          "ia": "Una impresión general",
-          "bilan": "Los temas que marcan una vida (hijos, dinero, dónde vivir, fidelidad) y las formas de discutir que la investigación más relaciona con el desgaste de una pareja"
+          "c": [
+            "Lo que observa el profesional y lo que le contáis",
+            "Una impresión general",
+            "Los temas que comprometen una vida, ponderados según su importancia, y las actitudes de discusión que la investigación relaciona con el desgaste de una pareja"
+          ]
         },
         {
-          "sujet": "Las grandes decisiones",
-          "ia": "Todas las preguntas pesan lo mismo",
-          "bilan": "Lo que uno de los dos considera innegociable se detecta, y va primero"
+          "sujet": "El tiempo",
+          "c": [
+            "Varias sesiones, durante semanas o meses",
+            "Diez minutos",
+            "25 a 30 minutos cada uno, cuando queráis"
+          ]
+        },
+        {
+          "sujet": "El precio",
+          "c": [
+            "50 a 90 € la sesión, a menudo varias sesiones",
+            "Gratis, o incluido en una suscripción",
+            "{{prix}} para los dos, una vez"
+          ]
         },
         {
           "sujet": "El resultado",
-          "ia": "Unos cuantos párrafos tranquilizadores",
-          "bilan": "Un informe de unas treinta páginas: vuestras diferencias con vuestras dos respuestas, por qué importan y cómo hablarlas"
+          "c": [
+            "Un acompañamiento en el tiempo",
+            "Unos párrafos tranquilizadores",
+            "Un informe de 40 páginas: vuestras respuestas frente a frente, por qué cuenta, y una hoja de ruta"
+          ]
         },
         {
           "sujet": "Vuestras respuestas",
-          "ia": "Escritas en una conversación con un servicio de IA",
-          "bilan": "Guardadas por nosotros, nunca vendidas, y borradas automáticamente a los seis meses como mucho"
+          "c": [
+            "Entre vosotros y el profesional, sujeto al secreto",
+            "Tecleadas en una conversación con un servicio de IA",
+            "Guardadas con nosotros, nunca vendidas, borradas como mucho a los seis meses"
+          ]
         }
       ],
-      "conclusion": "Este chequeo es una evaluación seria, y larga. Su objetivo es daros una visión real y global del estado de vuestra relación en este momento, tema por tema, para que sepáis de qué hablar."
+      "conclusion": "La evaluación no sustituye a un consejero de pareja: os da un estado de vuestra relación, tema por tema, para saber de qué hablar. Muchas parejas la usan justamente como punto de partida, en pareja o con un profesional."
     },
     "recherche": {
       "titre": "Construido a partir de la investigación sobre las parejas",
@@ -673,120 +823,36 @@
         "Sentir que el otro se implica en la relación, y sentirse valorado, están entre los indicadores más sólidos de la calidad de una pareja.",
         "Quien piensa en todo no siempre es quien lo hace todo. La carga mental se ve mal desde dentro, y cada uno suele pensar que hace más."
       ],
-      "p2": "El chequeo no es un test clínico y no sustituye a un profesional. Es un cuestionario serio, construido a partir de lo que la investigación sabe de las parejas, para ayudaros a hablar de los temas que importan."
-    },
-    "questions": {
-      "titre": "Preguntas precisas, no generalidades",
-      "intro": "Estas son algunas de las preguntas del chequeo, tal y como las vio Lucía. Cada uno responde por su lado, y es comparando vuestras dos respuestas como el informe encuentra lo que importa.",
-      "exemples": [
-        {
-          "domaine": "El día a día en casa",
-          "q": "¿Quién piensa en todo lo que hay que hacer (citas, facturas, regalos, lo que falta en la nevera)?",
-          "o": [
-            "Sobre todo yo",
-            "Un poco más yo",
-            "Los dos por igual",
-            "Un poco más Pablo",
-            "Sobre todo Pablo"
-          ]
-        },
-        {
-          "domaine": "El dinero",
-          "q": "Para una compra de más de 300 € solo para ti...",
-          "o": [
-            "La hago sin decir nada",
-            "Aviso a Pablo",
-            "Lo hablo antes",
-            "Lo decido con Pablo"
-          ]
-        },
-        {
-          "domaine": "Dónde y cómo vivir",
-          "q": "Dentro de diez años, te ves viviendo...",
-          "o": [
-            "En una gran ciudad",
-            "En una ciudad mediana o en las afueras",
-            "En el campo",
-            "En el extranjero"
-          ]
-        },
-        {
-          "domaine": "Confianza y fidelidad",
-          "q": "Para ti, el engaño empieza cuando...",
-          "o": [
-            "Se coquetea por mensajes",
-            "Se besa a alguien",
-            "Se acuesta con alguien",
-            "Se tiene una relación secreta de verdad"
-          ]
-        },
-        {
-          "domaine": "Comunicación y discusiones",
-          "q": "Durante una discusión, lo que necesitas es...",
-          "o": [
-            "Arreglarlo enseguida",
-            "Una pausa para calmarme antes de hablar",
-            "Que me tranquilicen primero",
-            "Dejarlo pasar, ya se arreglará"
-          ]
-        },
-        {
-          "domaine": "Familia y amigos",
-          "q": "Las fiestas de fin de año, idealmente, las pasáis...",
-          "o": [
-            "Con mi familia",
-            "Con la familia de Pablo",
-            "Un año cada uno",
-            "Los dos solos o con amigos"
-          ]
-        }
-      ],
-      "fin": "En las grandes preguntas (los hijos, dónde vivir, la fidelidad...), cada uno puede marcar además su respuesta como «innegociable». El informe empieza entonces por ahí."
-    },
-    "etapes": {
-      "titre": "Cómo funciona",
-      "liste": [
-        {
-          "titre": "Creáis el chequeo",
-          "texte": "Vuestros dos nombres, siete preguntas sobre vuestra situación (si vivís juntos, si tenéis hijos...), y después envías el enlace a tu pareja."
-        },
-        {
-          "titre": "Cada uno responde por su lado",
-          "texte": "En su móvil, a su ritmo, de una vez o en varias: todo se guarda sobre la marcha. Calculad entre 25 y 30 minutos cada uno."
-        },
-        {
-          "titre": "Recibís vuestro informe",
-          "texte": "Lo desbloqueáis cuando hayáis terminado vuestras respuestas. Llega por correo en PDF en cuanto hayáis terminado los dos, y sigue en línea durante seis meses."
-        }
-      ]
+      "p2": "La evaluación no es un test clínico y no sustituye a un profesional. Es un cuestionario serio, construido a partir de lo que la investigación sabe de las parejas, para ayudaros a hablar de los temas adecuados."
     },
     "prix": {
       "titre": "Un solo precio, para los dos",
-      "unite": "para la pareja, en un solo pago",
-      "aide": "Solo pagáis al final, una vez dadas vuestras respuestas. Un solo pago, de uno u otro. Sin suscripción, sin cuenta.",
+      "unite": "para la pareja, de una vez",
+      "aide": "Solo pagáis al final, una vez dadas vuestras respuestas. Un solo pago, de uno o del otro. Sin suscripción, sin cuenta.",
       "inclus": [
         "Un centenar de preguntas sobre doce áreas",
-        "El informe completo, de unas treinta páginas",
-        "Vuestras cuatro próximas conversaciones, con lo necesario para tenerlas",
-        "El PDF por correo y la versión en línea durante seis meses"
+        "El informe completo, unas cuarenta páginas con sus gráficos",
+        "Vuestras cuatro próximas conversaciones, con pistas para llevarlas",
+        "El PDF por correo y la versión en línea durante seis meses",
+        "El mismo informe, la hagáis en pareja o a solas"
       ],
-      "comparaison": "Para comparar, una sesión con un terapeuta de pareja suele costar entre 50 y 90 €.",
-      "garantie": "Satisfechos o reembolsados durante {{jours}} días: basta con un mensaje."
+      "comparaison": "Para comparar, una sesión con un consejero de pareja suele costar entre 50 y 90 €.",
+      "garantie": "Satisfechos o reembolsados durante {{jours}} días: basta un mensaje."
     },
     "confiance": {
       "titre": "Vuestras respuestas quedan entre vosotros",
       "points": [
         {
           "titre": "Sin cuenta",
-          "texte": "Cada uno entra en el chequeo con su propio enlace. Sin contraseña, y una dirección de correo solo si queréis recibir el informe."
+          "texte": "Cada uno accede a la evaluación por su propio enlace. Ninguna contraseña, y una dirección de correo solo si queréis recibir el informe."
         },
         {
-          "titre": "No se enseña nada antes del final",
-          "texte": "Ni tú ni tu pareja veis las respuestas del otro antes de que hayáis terminado los dos."
+          "titre": "Nada se muestra antes del final",
+          "texte": "Ni tú ni tu pareja veis las respuestas del otro antes de haber terminado los dos. A solas, nunca se contacta a tu pareja."
         },
         {
-          "titre": "Borrado automático",
-          "texte": "Un chequeo no pagado se borra 60 días después de la última respuesta, uno pagado seis meses después del pago. Cada uno puede borrarlo antes, con un clic."
+          "titre": "Borrado automáticamente",
+          "texte": "Una evaluación no pagada se borra 60 días después de la última respuesta, una pagada seis meses después del pago. Cada uno puede borrarla antes, con un clic."
         },
         {
           "titre": "Pago seguro",
@@ -798,51 +864,63 @@
       "titre": "Preguntas frecuentes",
       "items": [
         {
-          "q": "¿Cuánto tiempo hace falta para hacer el chequeo?",
-          "a": "Calculad entre 25 y 30 minutos cada uno, para un centenar de preguntas. Nada os obliga a hacerlo todo de una vez: cada respuesta se guarda, y seguís donde lo dejasteis."
+          "q": "¿Cuánto tiempo lleva hacer la evaluación?",
+          "a": "Contad 25 a 30 minutos cada uno, para un centenar de preguntas. Nada os obliga a hacerlo todo de una vez: cada respuesta queda guardada, y retomáis donde lo dejasteis."
         },
         {
           "q": "¿Mi pareja verá todas mis respuestas?",
-          "a": "Sí, cuando hayáis terminado los dos: el informe pone vuestras dos respuestas una al lado de la otra, esa es la gracia. Antes de eso, nadie ve nada."
+          "a": "Sí, una vez que hayáis terminado los dos: el informe pone vuestras dos respuestas una junto a otra, ese es todo el interés. Antes, nadie ve nada."
         },
         {
           "q": "¿Por qué hay que pagar para ver el resultado?",
-          "a": "Porque el resultado es el informe: vuestras dos series de respuestas comparadas, tema por tema, con lo necesario para hablar de ellas. Las preguntas son gratis, y solo pagáis cuando hayáis terminado vuestras respuestas, si queréis el informe."
+          "a": "Porque el resultado es el informe: vuestras dos series de respuestas comparadas, tema por tema, con pistas para hablarlo. Las preguntas son gratis, y solo pagáis una vez terminadas vuestras respuestas, si queréis el informe."
         },
         {
-          "q": "¿Podemos hacer el chequeo si no vivimos juntos o no tenemos hijos?",
-          "a": "Sí. Al principio describís vuestra situación en siete preguntas, y las preguntas se adaptan: una pareja que todavía no vive junta responde sobre lo que imagina, una pareja sin hijos sobre lo que desea."
+          "q": "¿Se puede hacer a solas?",
+          "a": "Sí. Respondes por ti, luego dices lo que respondería tu pareja, o «no lo sé». El informe compara tus respuestas con lo que imaginas de las suyas, y reúne tus zonas de sombra: los temas en los que no sabes, listos para preguntar. Mismo precio, mismo informe."
+        },
+        {
+          "q": "Si la hago a solas, ¿se enterará mi pareja?",
+          "a": "No. No se le envía nada, nadie le contacta, y solo tú ves el informe. Su nombre sirve solo para escribir las preguntas."
+        },
+        {
+          "q": "¿Se puede hacer la evaluación si no vivimos juntos o no tenemos hijos?",
+          "a": "Sí. Al principio, describís vuestra situación en siete preguntas, y las preguntas se adaptan: una pareja que aún no vive junta responde sobre lo que imagina, una pareja sin hijos sobre lo que desea."
         },
         {
           "q": "¿Y si descubrimos que no estamos de acuerdo en muchas cosas?",
-          "a": "Es frecuente, y no es una mala noticia: una diferencia que se conoce se puede hablar, una diferencia que se ignora acaba volviendo en forma de discusión. El informe os dice por dónde empezar, y cómo hablarlo sin que se convierta en un juicio."
+          "a": "Es frecuente, y no es una mala noticia: una diferencia que se conoce se habla, una que se ignora acaba volviendo en forma de discusión. El informe os dice por dónde empezar, y cómo hablarlo sin que se convierta en un juicio."
         },
         {
-          "q": "¿Está basado en algo serio?",
-          "a": "Sí. Las preguntas se apoyan en la investigación en psicología de pareja y en los cuestionarios que usan los terapeutas de pareja antes de una boda. Eso no convierte el chequeo en un test clínico: es una herramienta para hablar, no un diagnóstico."
+          "q": "¿Se basa en algo serio?",
+          "a": "Sí. Las preguntas se apoyan en la investigación en psicología de pareja y en los cuestionarios que usan los consejeros de pareja antes de una boda. La evaluación no es un test clínico por ello: es una herramienta para hablar, no un diagnóstico."
         },
         {
-          "q": "¿El chequeo sustituye a una terapia de pareja?",
-          "a": "No. Es una herramienta para poner palabras a lo que vivís y saber de qué hablar. Si estáis pasando por un momento difícil, un terapeuta de pareja puede acompañaros, y el informe puede servir incluso como punto de partida."
+          "q": "¿La evaluación sustituye a una terapia de pareja?",
+          "a": "No. Es una herramienta para poner palabras a lo que vivís y saber de qué hablar. Si atravesáis un periodo difícil, un consejero de pareja o un terapeuta puede acompañaros, y el informe puede servir de punto de partida."
         },
         {
-          "q": "¿Cómo funciona el pago?",
-          "a": "Con tarjeta, Apple Pay o Google Pay, en la página de pago segura de Stripe. Un solo pago de {{prix}} para los dos, cuando hayáis terminado vuestras respuestas. Recibís un recibo por correo, y el informe en cuanto hayáis terminado los dos."
+          "q": "¿Cómo se paga?",
+          "a": "Con tarjeta, Apple Pay o Google Pay, en la página de pago segura de Stripe. Un solo pago de {{prix}} para los dos, cuando hayáis terminado vuestras respuestas. Recibís un recibo por correo, y el informe en cuanto todo está respondido."
         },
         {
           "q": "¿Y si el informe no nos gusta?",
-          "a": "Estáis satisfechos o reembolsados durante {{jours}} días: basta con un mensaje desde la página de contacto, sin tener que justificaros."
+          "a": "Estáis satisfechos o reembolsados durante {{jours}} días: basta un mensaje desde la página de contacto, sin tener que justificaros."
         },
         {
           "q": "¿Qué pasa con nuestras respuestas?",
-          "a": "Solo sirven para vuestro chequeo, nunca se venden y no se usan para ninguna publicidad. Se borran 60 días después de la última respuesta si el chequeo no está pagado, seis meses después del pago si lo está, y cualquiera de los dos puede borrarlo todo antes."
+          "a": "Sirven únicamente para vuestra evaluación, nunca se venden y no sirven para ninguna publicidad. Se borran 60 días después de la última respuesta si la evaluación no se paga, seis meses después del pago si se paga, y cada uno puede borrarlo todo antes."
         }
       ]
     },
     "final": {
       "titre": "¿Listos para hacer balance?",
-      "texte": "Veinticinco minutos cada uno, y sabréis en qué estáis de acuerdo y de qué tenéis que hablar. Empezad cuando queráis: podéis hacer una pausa en cualquier momento."
+      "texte": "Veinticinco minutos cada uno, y sabréis en qué estáis de acuerdo, y de qué hay que hablar. Empezad cuando queráis: podéis hacer una pausa en cualquier momento."
     },
-    "avertissement": "Este chequeo muestra a cada uno las respuestas del otro. Si tienes miedo de tu pareja, no está pensado para tu situación: en España, el 016 atiende gratis las 24 horas y no deja rastro en la factura."
+    "colle": {
+      "texte": "Evaluación de pareja · {{prix}}",
+      "bouton": "Empezar"
+    },
+    "avertissement": "En pareja, esta evaluación muestra a cada uno las respuestas del otro. Si tienes miedo de tu pareja, hazla a solas, o no la hagas: en España, el 016 atiende gratis y de forma anónima, las 24 horas."
   }
 }

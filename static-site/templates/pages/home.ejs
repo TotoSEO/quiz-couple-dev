@@ -111,6 +111,14 @@
   // Le lien vers le bilan de couple porte sa source (?src=), lue dans
   // l'onglet Bilan de l'admin.
   const urlNav = (k) => { const u = getLocalizedUrl(k, lang); return u && k === 'bilanCouple' ? u + '?src=accueil' : u; };
+  // L'évaluation de couple sur l'accueil (19 octobre 2026, Thomas : « on ne va
+  // pas compter sur le SEO pour vendre ») : un lien dans le hero et une
+  // section à elle sous le ruban, seulement quand elle est ouverte
+  // (BILAN_OUVERT). Textes `evaluation` de home.json, prix de bilanPrix.
+  const urlEval = (typeof bilanOuvert !== 'undefined' && bilanOuvert) ? getLocalizedUrl('bilanCouple', lang) : null;
+  const evaluation = t('home:evaluation', {}) || {};
+  const prixEval = typeof bilanPrix !== 'undefined' ? bilanPrix : '9,90 €';
+  const evalNouveau = String(evaluation.sur || '').split(' · ')[0];
   const tests = versCartes(famillesNav.tests);
   const celib = versCartes(famillesNav.celib);
   const quizzes = versCartes(famillesNav.quiz);
@@ -197,6 +205,23 @@
           </a>
           <% } %>
         </div>
+        <% if (urlEval) { %>
+        <%# Dans le premier écran : ses styles sont écrits ici, les feuilles
+            critiques ne les connaissent pas encore. Aucun fondu depuis
+            l'opacité 0 (LCP). %>
+        <style>
+          .hero-eval { display: inline-flex; align-items: center; gap: .6rem; max-width: 100%; margin-top: 1.1rem; padding: .35rem .95rem .35rem .35rem; border-radius: 999px; font-size: .92rem; font-weight: 700; line-height: 1.25; color: hsl(var(--foreground)); background: hsl(var(--primary) / .1); text-decoration: none; transition: background .2s ease; }
+          .hero-eval:hover, .hero-eval:focus-visible { background: hsl(var(--primary) / .18); color: hsl(var(--foreground)); }
+          .hero-eval-nouveau { flex: none; padding: .25rem .6rem; border-radius: 999px; background: hsl(var(--primary)); color: #fff; font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+          .hero-eval svg { width: 1rem; height: 1rem; flex: none; }
+          @media (prefers-reduced-motion: reduce) { .hero-eval { transition: none; } }
+        </style>
+        <a href="<%= urlEval %>?src=accueil-hero" class="hero-eval">
+          <span class="hero-eval-nouveau"><%= evalNouveau %></span>
+          <span><%= evaluation.ctaCourt %></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <% } %>
 
         <!-- Compteurs : le total joué domine, l'inventaire du catalogue suit -->
         <div class="hero-stats">
@@ -378,6 +403,34 @@
     <% }) %>
   </div>
 </div>
+<% } %>
+
+<% if (urlEval) { %>
+<!-- L'évaluation de couple : la carte des encarts de résultat (.qr-bilan,
+     styles.css), en grand, avec ses deux boutons (à deux, seul·e). -->
+<section class="home-eval" aria-labelledby="home-eval-titre">
+  <div class="container mx-auto px-4">
+    <div class="qr-bilan qr-bilan--bas qr-bilan--accueil">
+      <div class="qr-bilan-visuel">
+        <img src="/bilan/apercu-synthese-<%= lang %>.webp" alt="" width="720" height="1018" loading="lazy" decoding="async">
+      </div>
+      <div class="qr-bilan-corps">
+        <p class="qr-bilan-sur"><%= evaluation.sur %></p>
+        <h2 class="qr-bilan-titre" id="home-eval-titre"><%= evaluation.titre %></h2>
+        <p class="qr-bilan-texte"><%= evaluation.texte %></p>
+        <ul class="qr-bilan-points">
+          <% (evaluation.points || []).forEach((pt) => { %>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><%= String(pt).replace(/\{\{prix\}\}/g, prixEval) %></span></li>
+          <% }) %>
+        </ul>
+        <div class="qr-bilan-boutons">
+          <a class="qr-bilan-bouton" href="<%= urlEval %>?src=accueil"><%= evaluation.ctaDuo %><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="qr-bilan-bouton qr-bilan-bouton--second" href="<%= urlEval %>?src=accueil&amp;mode=solo#facons"><%= evaluation.ctaSolo %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <% } %>
 
 <!-- Quiz Section -->

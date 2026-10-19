@@ -113,7 +113,9 @@
     "quizPossession": "Chi potrebbe essere posseduto",
     "quizSuperVilain": "Quale supercattivo sei",
     "quizDuoVilains": "Quale duo di supercattivi",
-    "bilanCouple": "Check-up di coppia",
+    "bilanCouple": "Valutazione di coppia",
+    "evaluer": "Valutare la coppia",
+    "evaluerSous": "La valutazione completa, in due o da soli",
     "bilanCoupleDesc": "100 domande ciascuno per conto suo, e un report di 30 pagine"
   },
   "footer": {

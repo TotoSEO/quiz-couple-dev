@@ -113,7 +113,9 @@
     "quizPossession": "Quién podría ser poseído",
     "quizSuperVilain": "Qué supervillano eres",
     "quizDuoVilains": "Qué dúo de supervillanos",
-    "bilanCouple": "Chequeo de pareja",
+    "bilanCouple": "Evaluación de pareja",
+    "evaluer": "Evaluar tu pareja",
+    "evaluerSous": "La evaluación completa, en pareja o a solas",
     "bilanCoupleDesc": "100 preguntas cada uno por su lado, y un informe de 30 páginas"
   },
   "footer": {

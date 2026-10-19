@@ -134,6 +134,16 @@ const BILAN_CONST = (() => {
 if (BILAN_OUVERT && (!VENDEUR.siret || !VENDEUR.adresse)) {
   console.warn('[bilan] ATTENTION : bilan ouvert sans SIRET ou sans adresse (VENDEUR, config.js) : mentions légales et CGV incomplètes.');
 }
+// Les articles de blog renvoient vers l'évaluation (bannière de fin,
+// partials/bilan-banniere.ejs), sauf ceux qui parlent d'emprise, de
+// manipulation, de violence ou d'infidélité : on ne vend pas une évaluation
+// à deux à quelqu'un qui lit ça (même règle que BILAN_ENTREES).
+const ARTICLE_SANS_BILAN = /pervers|narciss|manipul|emprise|infid|tromp|adult|violen|toxi|harc|abus|jalou/i;
+function entreeArticle(articleMeta) {
+  if (!BILAN_OUVERT || !articleMeta) return null;
+  const cles = [articleMeta.internalSlug, ...Object.values(articleMeta.slugs || {})].join(' ');
+  return ARTICLE_SANS_BILAN.test(cles) ? null : { groupe: 'article', id: 'article' };
+}
 function prixBilan(lang) {
   try {
     const bcp = { fr: 'fr-FR', en: 'en-GB', es: 'es-ES', de: 'de-DE', it: 'it-IT' }[lang] || 'fr-FR';
@@ -1140,11 +1150,11 @@ async function generatePage(routeKey, lang) {
     description = cqMeta[lang]?.description || cqMeta.fr.description;
   } else if (routeKey === 'cgv') {
     const cgvMeta = {
-      fr: { title: 'Conditions générales de vente - Quiz Couple', description: 'Conditions générales de vente du bilan de couple de Quiz Couple.' },
-      en: { title: 'Terms of Sale - Quiz Couple', description: 'Terms of sale for the Quiz Couple couple check-up.' },
-      es: { title: 'Condiciones generales de venta - Quiz Couple', description: 'Condiciones generales de venta del chequeo de pareja de Quiz Couple.' },
-      de: { title: 'Allgemeine Geschäftsbedingungen - Quiz Couple', description: 'Allgemeine Geschäftsbedingungen für den Beziehungs-Check von Quiz Couple.' },
-      it: { title: 'Condizioni generali di vendita - Quiz Couple', description: 'Condizioni generali di vendita del check-up di coppia di Quiz Couple.' },
+      fr: { title: 'Conditions générales de vente - Quiz Couple', description: 'Conditions générales de vente de l\'évaluation de couple de Quiz Couple.' },
+      en: { title: 'Terms of Sale - Quiz Couple', description: 'Terms of sale for the Quiz Couple relationship assessment.' },
+      es: { title: 'Condiciones generales de venta - Quiz Couple', description: 'Condiciones generales de venta de la evaluación de pareja de Quiz Couple.' },
+      de: { title: 'Allgemeine Geschäftsbedingungen - Quiz Couple', description: 'Allgemeine Geschäftsbedingungen für die Beziehungsanalyse von Quiz Couple.' },
+      it: { title: 'Condizioni generali di vendita - Quiz Couple', description: 'Condizioni generali di vendita della valutazione di coppia di Quiz Couple.' },
     };
     title = cgvMeta[lang]?.title || cgvMeta.fr.title;
     description = cgvMeta[lang]?.description || cgvMeta.fr.description;
@@ -2246,6 +2256,7 @@ async function generateBlogArticle(articleMeta, lang) {
     // sa garantie, et les mentions du vendeur (mentions légales, CGV).
     bilanOuvert: BILAN_OUVERT,
     bilanChemin: BILAN_OUVERT ? getLocalizedPath('bilanCouple', lang) : null,
+    bilanEntree: entreeArticle(articleMeta),
     bilanPrix: prixBilan(lang),
     bilanPrixCentimes: BILAN_CONST.prix,
     bilanGarantie: BILAN_CONST.garantie,

@@ -5,7 +5,7 @@
   "liens": {
     "contact": "page contact",
     "confidentialite": "politique de confidentialité",
-    "bilan": "bilan de couple"
+    "bilan": "évaluation de couple"
   },
   "vendeur": {
     "titre": "Le vendeur",
@@ -21,15 +21,15 @@
     {
       "titre": "1. Ce qui est vendu",
       "p": [
-        "Le bilan de couple est un questionnaire auquel deux partenaires répondent chacun de leur côté. Répondre aux questions est gratuit ; aucun résultat n'est donné sans achat.",
-        "Ce qui est vendu, c'est le rapport : une évaluation complète du couple à partir des deux séries de réponses (alignement, climat, carte des domaines, écarts avec les deux réponses, guides pour en parler, points bloquants et non négociables, signaux de vigilance, répartition des rôles). Le rapport est un contenu numérique : un document PDF envoyé par e-mail, et la même version consultable sur la page du bilan."
+        "L'évaluation de couple est un questionnaire auquel deux partenaires répondent chacun de leur côté, ou auquel une seule personne répond en indiquant aussi ce que son ou sa partenaire répondrait d'après elle (mode seul(e)). Répondre aux questions est gratuit ; aucun résultat n'est donné sans achat.",
+        "Ce qui est vendu, c'est le rapport : une évaluation complète du couple à partir des deux séries de réponses (alignement, climat, carte des domaines, écarts avec les deux réponses, guides pour en parler, points bloquants et non négociables, signaux de vigilance, répartition des rôles). Le rapport est un contenu numérique : un document PDF envoyé par e-mail, et la même version consultable sur la page de l'évaluation."
       ]
     },
     {
       "titre": "2. Le prix",
       "p": [
-        "Le rapport complet coûte {{prix}}, TVA non applicable. C'est un paiement unique, sans abonnement. Un seul paiement, fait par l'un ou l'autre des partenaires, débloque le rapport pour les deux.",
-        "Le prix est affiché sur la page du bilan avant la première question, et à nouveau avant le paiement."
+        "Le rapport complet coûte {{prix}}, TVA non applicable. C'est un paiement unique, sans abonnement. Un seul paiement, fait par l'un ou l'autre des partenaires, débloque le rapport pour les deux. En mode seul(e), le rapport n'est fourni qu'à la personne qui a répondu.",
+        "Le prix est affiché sur la page de l'évaluation avant la première question, et à nouveau avant le paiement."
       ]
     },
     {
@@ -42,9 +42,9 @@
     {
       "titre": "4. La fourniture du rapport",
       "p": [
-        "Le rapport est fabriqué dès que le paiement est confirmé et que les deux partenaires ont fini de répondre. Il part alors en PDF aux adresses e-mail données, et s'affiche sur la page du bilan pour les deux partenaires, depuis leurs liens personnels, avec un bouton pour télécharger le PDF. Il reste disponible six mois après le paiement, puis le bilan est effacé.",
+        "Le rapport est fabriqué dès que le paiement est confirmé et que les deux partenaires ont fini de répondre (ou, en mode seul(e), que la personne a fini). Il part alors en PDF aux adresses e-mail données, et s'affiche sur la page de l'évaluation pour les deux partenaires, depuis leurs liens personnels, avec un bouton pour télécharger le PDF. Il reste disponible six mois après le paiement, puis l'évaluation est effacée.",
         "Si le partenaire ne finit pas ses réponses, le rapport ne peut pas être fabriqué : l'acheteur peut alors en demander le remboursement à tout moment depuis la {{contact}}.",
-        "Chacun des deux partenaires peut supprimer le bilan avant ce délai. La suppression est immédiate et définitive, pour les deux, et ne donne pas lieu à un remboursement en dehors de la garantie de l'article 6."
+        "Chacun des deux partenaires peut supprimer l'évaluation avant ce délai. La suppression est immédiate et définitive, pour les deux, et ne donne pas lieu à un remboursement en dehors de la garantie de l'article 6."
       ]
     },
     {
@@ -60,16 +60,16 @@
       ]
     },
     {
-      "titre": "7. Ce que le bilan est, et ce qu'il n'est pas",
+      "titre": "7. Ce que l'évaluation est, et ce qu'il n'est pas",
       "p": [
-        "Le bilan est un outil pour aider un couple à parler de sa vie à deux. Ce n'est ni un diagnostic, ni une thérapie, ni un avis de professionnel de santé. Les décisions prises à partir du rapport restent celles des partenaires. Si vous traversez une période difficile, un conseiller conjugal ou un thérapeute de couple peut vous accompagner.",
+        "L'évaluation est un outil pour aider un couple à parler de sa vie à deux. Ce n'est ni un diagnostic, ni une thérapie, ni un avis de professionnel de santé. Les décisions prises à partir du rapport restent celles des partenaires. Si vous traversez une période difficile, un conseiller conjugal ou un thérapeute de couple peut vous accompagner.",
         "Le service est fourni tel quel. Nous faisons notre possible pour qu'il soit disponible en continu, mais une interruption temporaire (maintenance, panne d'un prestataire) ne peut pas être exclue. Si le rapport payé reste inaccessible de notre fait, il est remboursé."
       ]
     },
     {
       "titre": "8. Les données personnelles",
       "p": [
-        "Les réponses du bilan, qui peuvent toucher la vie intime et les convictions, ne sont enregistrées qu'avec l'accord explicite de chaque partenaire et ne servent qu'au bilan. L'adresse e-mail donnée pour recevoir le rapport ne sert qu'à cet envoi. La durée de conservation, vos droits et la liste des prestataires sont détaillés dans notre {{confidentialite}}."
+        "Les réponses de l'évaluation, qui peuvent toucher la vie intime et les convictions, ne sont enregistrées qu'avec l'accord explicite de chaque partenaire et ne servent qu'à l'évaluation. L'adresse e-mail donnée pour recevoir le rapport ne sert qu'à cet envoi. La durée de conservation, vos droits et la liste des prestataires sont détaillés dans notre {{confidentialite}}."
       ]
     },
     {
