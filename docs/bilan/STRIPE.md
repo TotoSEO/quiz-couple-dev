@@ -133,7 +133,15 @@ dans les cinq langues.
 2. Stripe, mode réel : refaire le webhook du point 4 (les webhooks du mode
    test ne servent pas en réel) et mettre sa nouvelle clé `whsec_...` dans
    `STRIPE_WEBHOOK_SECRET`.
-3. `static-site/build/config.js` : `BILAN_OUVERT = true`. À la publication
+3. Vérifier que tout est en place sans rien créer : GitHub > Actions >
+   « Évaluation de couple · santé » > « Run workflow » (`bilan-sante.yml`).
+   Il liste les noms des secrets posés chez Supabase (jamais leurs valeurs)
+   et échoue si `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` ou
+   `RESEND_API_KEY` manque, vérifie que les fonctions `bilan`,
+   `bilan-stripe` et `lead-capture` répondent, que le webhook refuse un
+   événement sans signature, et dit si la page de vente publiée est ouverte
+   ou fermée. À relancer après tout changement de clé.
+4. `static-site/build/config.js` : `BILAN_OUVERT = true`. À la publication
    suivante :
    - la page est indexée et entre dans le plan du site, en tête des tests de
      couple du menu, de l'accueil et du pied de page ;
@@ -144,7 +152,12 @@ dans les cinq langues.
      politique de confidentialité sa section sur le bilan.
 
 Avec la clé réelle, le paiement n'est proposé que sur une page construite
-ouverte : on ne peut pas vendre par erreur avant l'étape 3.
+ouverte : on ne peut pas vendre par erreur avant l'étape 4. Et la vraie
+preuve que tout marche reste un achat réel à 9,90 € fait par Thomas
+lui-même, remboursé ensuite depuis Stripe (les frais Stripe, une trentaine
+de centimes, ne reviennent pas) : page de vente, cent questions, paiement,
+retour sur la page, e-mail du rapport avec le PDF, vente comptée dans
+l'admin.
 
 ## 7. Ensuite
 
