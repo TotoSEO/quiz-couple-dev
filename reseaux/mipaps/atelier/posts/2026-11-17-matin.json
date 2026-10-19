@@ -1,0 +1,216 @@
+{
+  "jour": "2026-11-17",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-111",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "S'endormir devant la série : sur le canapé, il dort au bout de quelques secondes ; elle le secoue, « je regarde, je regarde » ; il ronfle, elle lui met la couverture. Trois plans, 12 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Les deux sont assis sur le canapé face à la télé, contents, côte à côte. À 2,2 s lui ferme les yeux et sa tête penche, des petits zzz. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.2,
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ],
+                    "pose": "penche_d"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "nous deux devant une série",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle le secoue du bras à 0,5 s. Il se réveille d'un coup, les yeux grands, un point d'exclamation. Le texte « je regarde, je regarde » à 1 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  },
+                  {
+                    "a": 0.5,
+                    "expression": "choque",
+                    "signes": [
+                      "exclamation"
+                    ],
+                    "pose": "assis"
+                  },
+                  {
+                    "a": 2,
+                    "expression": "content",
+                    "signes": []
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase",
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« je regarde, je regarde »",
+                "de": 1,
+                "place": "haut"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4.5,
+            "transition": "fondu",
+            "description": "Il dort de nouveau, profondément, des zzz au-dessus de lui. Elle, blasée, tire la couverture sur lui. La télé est toujours allumée.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "blase"
+                  },
+                  {
+                    "a": 1.5,
+                    "expression": "content"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              },
+              {
+                "objet": "couverture",
+                "x": 226,
+                "y": 300,
+                "echelle": 1.0,
+                "de": 1.5
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          }
+        ]
+      },
+      "legende": "tague ton amoureux",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

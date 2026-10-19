@@ -1,0 +1,171 @@
+{
+  "jour": "2026-11-16",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-104",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "« Non merci, j'ai pas faim » : il a une pizza, elle refuse, sereine ; elle regarde la pizza puis lui, « juste pour goûter » ; plus de pizza, elle fait l'ange, il est sidéré. Trois plans, 11 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Lui est debout, content, une pizza à la patte. Elle est à côté, les bras croisés, sereine, le regard droit devant elle. Le texte en haut dès 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "gourmand",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "pose": "debout",
+                    "expression": "zen",
+                    "bras": "croises"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pizza",
+                "x": 284,
+                "y": 335,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« non merci, j'ai pas faim »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle jette un œil à la pizza à 0,6 s, puis à lui à 1,4 s, l'air gourmand. À 1,8 s elle tend la patte vers la pizza. Le texte « juste pour goûter » à 1,6 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "content",
+                    "bras": "tient"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "pose": "debout",
+                    "expression": "zen",
+                    "bras": "croises"
+                  },
+                  {
+                    "a": 0.6,
+                    "expression": "gourmand"
+                  },
+                  {
+                    "a": 1.4,
+                    "expression": "malicieux"
+                  },
+                  {
+                    "a": 1.8,
+                    "bras": "tend_g"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "pizza",
+                "x": 284,
+                "y": 335,
+                "echelle": 0.6
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« juste pour goûter »",
+                "de": 1.6,
+                "place": "haut"
+              }
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Plus de pizza. Elle est sereine, un halo au-dessus de la tête, les pattes jointes. Lui est à côté, sidéré, les yeux grands, un point d'interrogation au-dessus de la tête.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 250,
+                    "pose": "debout",
+                    "expression": "choque",
+                    "signes": [
+                      "question"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 410,
+                    "pose": "debout",
+                    "expression": "ange",
+                    "bras": "priere",
+                    "signes": [
+                      "halo"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça à la personne qui fait ça",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "jour": "2026-11-16",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-122",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Toi quand ta personne est triste : tu sais pas quoi dire, câlin, tu ramènes à boire, blague nulle ; elle sourit enfin.",
+        "pages": [
+          {
+            "texte": "toi quand ta personne est triste",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "triste",
+                  "x": 410,
+                  "taille": 260
+                },
+                {
+                  "perso": "lui",
+                  "expression": "inquiet",
+                  "x": 250,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "tu sais pas quoi dire",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "perplexe",
+                  "bras": "tend",
+                  "signes": [
+                    "points"
+                  ],
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "triste",
+                  "x": 410,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "alors tu fais un câlin",
+            "dessin": {
+              "duo": "calin"
+            }
+          },
+          {
+            "texte": "tu ramènes à boire",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "bras": "tient",
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "objet": "bubble_tea",
+                  "x": 284,
+                  "y": 335,
+                  "echelle": 0.55
+                },
+                {
+                  "perso": "elle",
+                  "expression": "triste",
+                  "x": 410,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "texte": "tu fais une blague nulle",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "malicieux",
+                  "bras": "leves",
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "blase",
+                  "x": 410,
+                  "taille": 260
+                }
+              ]
+            }
+          },
+          {
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "joie",
+                  "signes": [
+                    "coeurs"
+                  ],
+                  "x": 410,
+                  "taille": 260
+                }
+              ]
+            },
+            "appel": "envoie ça à ta personne"
+          }
+        ]
+      },
+      "legende": "envoie ça à ta personne",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
