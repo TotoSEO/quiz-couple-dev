@@ -643,11 +643,6 @@
           "texte": "Dos cifras: vuestra alineación y el clima de vuestra pareja. Luego vuestras áreas de un vistazo, en un radar."
         },
         {
-          "img": "ouverture",
-          "titre": "Un capítulo, un color",
-          "texte": "Cada capítulo se abre con su propia página, para saber siempre dónde se está."
-        },
-        {
           "img": "carte",
           "titre": "El mapa de vuestras áreas",
           "texte": "Una barra por área, de 0 a 100 %, con el detalle de acuerdos, respuestas cercanas y diferencias."
@@ -832,7 +827,8 @@
           ]
         }
       ],
-      "conclusion": "La evaluación no sustituye a un consejero de pareja: os da un estado de vuestra relación, tema por tema, para saber de qué hablar. Muchas parejas la usan justamente como punto de partida, en pareja o con un profesional."
+      "conclusion": "La evaluación no sustituye a un consejero de pareja: os da un estado de vuestra relación, tema por tema, para saber de qué hablar. Muchas parejas la usan justamente como punto de partida, en pareja o con un profesional.",
+      "aide": "Desliza la tabla para ver las tres columnas."
     },
     "recherche": {
       "titre": "Construido a partir de la investigación sobre las parejas",

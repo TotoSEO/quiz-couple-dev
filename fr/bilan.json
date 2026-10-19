@@ -643,11 +643,6 @@
           "texte": "Deux chiffres : votre alignement et le climat de votre couple. Puis vos domaines d'un coup d'œil, sur un radar."
         },
         {
-          "img": "ouverture",
-          "titre": "Un chapitre, une couleur",
-          "texte": "Chaque chapitre s'ouvre sur sa page, pour qu'on sache toujours où on en est."
-        },
-        {
           "img": "carte",
           "titre": "La carte de vos domaines",
           "texte": "Une barre par domaine, de 0 à 100 %, avec le détail des accords, des réponses proches et des écarts."
@@ -832,7 +827,8 @@
           ]
         }
       ],
-      "conclusion": "L'évaluation ne remplace pas un conseiller conjugal : elle vous donne un état des lieux de votre relation, sujet par sujet, pour savoir de quoi parler. Beaucoup de couples s'en servent justement comme point de départ, à deux ou avec un professionnel."
+      "conclusion": "L'évaluation ne remplace pas un conseiller conjugal : elle vous donne un état des lieux de votre relation, sujet par sujet, pour savoir de quoi parler. Beaucoup de couples s'en servent justement comme point de départ, à deux ou avec un professionnel.",
+      "aide": "Faites glisser le tableau pour voir les trois colonnes."
     },
     "recherche": {
       "titre": "Construit à partir de la recherche sur les couples",

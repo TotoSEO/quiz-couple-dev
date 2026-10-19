@@ -30,11 +30,12 @@ const COUPLES = {
   it: ['Giulia', 'Marco'],
 };
 // Les pages montrées dans le curseur de la page de vente, dans l'ordre du
-// rapport : la couverture, la synthèse, une page d'ouverture de chapitre, la
-// carte, les conversations, le climat, le début du domaine par domaine et la
-// synthèse de fin.
-const PAGES = ['couverture', 'synthese', 'ouverture', 'carte', 'conversations', 'climat', 'domaines', 'fin'];
-const NOMS = { couverture: 'couverture', synthese: 'synthese', ouverture: 'ouverture', carte: 'carte', conversations: 'conversation', climat: 'climat', domaines: 'domaine', fin: 'fin' };
+// rapport : la couverture, la synthèse, la carte, les conversations, le
+// climat, le début du domaine par domaine et la synthèse de fin. La page
+// d'ouverture de chapitre n'y est plus (20 octobre 2026, Thomas : ce n'est
+// pas un avantage à mettre en avant).
+const PAGES = ['couverture', 'synthese', 'carte', 'conversations', 'climat', 'domaines', 'fin'];
+const NOMS = { couverture: 'couverture', synthese: 'synthese', carte: 'carte', conversations: 'conversation', climat: 'climat', domaines: 'domaine', fin: 'fin' };
 // 240 px de large, exprès (19 octobre 2026, Thomas : « ça doit rester affiché
 // en tout petit et illisible volontairement pour éviter toute copie sans
 // payer ») : la mise en page se devine, le texte ne se lit pas, même ouvert
@@ -69,10 +70,9 @@ async function principal() {
         await page.evaluate(({ cle }) => {
           const rap = document.querySelector('.rap');
           const source = cle === 'couverture' ? rap.querySelector('.rap-couv')
-            : cle === 'ouverture' ? rap.querySelector('.rap-ouv--prune')
             : rap.querySelector('.rap-chap--' + cle);
           const feuille = document.createElement('div');
-          feuille.className = 'feuille' + (cle === 'couverture' || cle === 'ouverture' ? '' : ' feuille--marges');
+          feuille.className = 'feuille' + (cle === 'couverture' ? '' : ' feuille--marges');
           const copie = document.createElement('div');
           copie.className = rap.className;
           copie.setAttribute('lang', rap.getAttribute('lang'));

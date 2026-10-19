@@ -643,11 +643,6 @@
           "texte": "Due numeri: il vostro allineamento e il clima della vostra coppia. Poi le vostre aree a colpo d'occhio, su un radar."
         },
         {
-          "img": "ouverture",
-          "titre": "Un capitolo, un colore",
-          "texte": "Ogni capitolo si apre con la sua pagina, per sapere sempre a che punto si è."
-        },
-        {
           "img": "carte",
           "titre": "La mappa delle vostre aree",
           "texte": "Una barra per area, da 0 a 100%, con il dettaglio di risposte uguali, vicine e differenze."
@@ -832,7 +827,8 @@
           ]
         }
       ],
-      "conclusion": "La valutazione non sostituisce un consulente di coppia: vi dà un quadro della vostra relazione, argomento per argomento, per sapere di cosa parlare. Molte coppie la usano proprio come punto di partenza, in due o con un professionista."
+      "conclusion": "La valutazione non sostituisce un consulente di coppia: vi dà un quadro della vostra relazione, argomento per argomento, per sapere di cosa parlare. Molte coppie la usano proprio come punto di partenza, in due o con un professionista.",
+      "aide": "Scorri la tabella per vedere le tre colonne."
     },
     "recherche": {
       "titre": "Costruito a partire dalla ricerca sulle coppie",

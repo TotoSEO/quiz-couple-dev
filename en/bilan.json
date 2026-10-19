@@ -643,11 +643,6 @@
           "texte": "Two figures: your alignment and the mood of your relationship. Then your areas at a glance, on a radar."
         },
         {
-          "img": "ouverture",
-          "titre": "One chapter, one colour",
-          "texte": "Each chapter opens on its own page, so you always know where you are."
-        },
-        {
           "img": "carte",
           "titre": "The map of your areas",
           "texte": "One bar per area, from 0 to 100%, with the detail of same answers, close answers and gaps."
@@ -832,7 +827,8 @@
           ]
         }
       ],
-      "conclusion": "The assessment doesn't replace a relationship counsellor: it gives you a picture of your relationship, topic by topic, so you know what to talk about. Many couples use it precisely as a starting point, together or with a professional."
+      "conclusion": "The assessment doesn't replace a relationship counsellor: it gives you a picture of your relationship, topic by topic, so you know what to talk about. Many couples use it precisely as a starting point, together or with a professional.",
+      "aide": "Swipe the table to see all three columns."
     },
     "recherche": {
       "titre": "Built on research into couples",
