@@ -3200,7 +3200,91 @@
   }
 
   // ── Leads ──
+  // ── Les abonnés e-mail (table abonnes, 19 octobre 2026) ──
+  // Une lecture, get_abonnes_tableau (par admin-stats) : totaux, par source
+  // avec la répartition par langue, par langue, les cinquante dernières.
+  var SOURCES_ABONNES = {
+    ebook: 'E-book (astro des prénoms)', 'tester-couple': 'Test de couple', compatibilite: 'Compatibilité amoureuse', 'points-communs': 'Points communs',
+    amoureux: 'Quiz amoureux', 'type-couple': 'Quel type de couple', 'compat-sexuelle': 'Compatibilité sexuelle', 'langage-amour': 'Langages de l\'amour',
+    emmenager: 'Emménager ensemble', mariage: 'Prêts pour le mariage', parentalite: 'Parentalité', 'est-ce-le-bon': 'Est-ce le bon / la bonne',
+    'fin-couple': 'Fin du couple', 'couple-sain': 'Couple sain', 'charge-mentale': 'Charge mentale', distance: 'Relation à distance', divorce: 'Divorce',
+    confiance: 'Confiance', 'amour-habitude': 'Amour ou habitude', 'je-l-aime-encore': 'Je l\'aime encore ?', toxique: 'Couple toxique', jalousie: 'Jalousie',
+    'amour-attachement': 'Amour ou attachement', 'aime-encore': 'M\'aime-t-il encore', 'distance-aime': 'À distance, m\'aime-t-il', dependance: 'Dépendance affective',
+    attachement: 'Style d\'attachement', 'ame-soeur': 'Âme sœur', couche: 'Couche-tôt / couche-tard', personnalite: 'Personnalité amoureuse', karmique: 'Relation karmique',
+    vacances: 'Vacances à deux', coquin: 'Quiz coquin', connaissance: 'Connaissance du partenaire', genant: 'Couple gênant'
+  };
+  var LANGUES_ABONNES = ['fr', 'en', 'es', 'de', 'it'];
+  function libelleSourceAbonnes(src) { return SOURCES_ABONNES[src] || String(src || ''); }
+  function nombreAb(n) { return (Number(n) || 0).toLocaleString('fr-FR'); }
+  function statutAbonne(st) {
+    var m = { actif: ['Actif', 'hsl(142 71% 45%/0.12)', 'hsl(142 71% 32%)'], desinscrit: ['Désinscrit', 'hsl(var(--muted))', 'hsl(var(--muted-foreground))'], invalide: ['Invalide', 'hsl(0 70% 50%/0.12)', 'hsl(0 70% 40%)'] }[st] || [st, 'hsl(var(--muted))', 'inherit'];
+    return '<span style="display:inline-block;padding:0.15rem 0.5rem;border-radius:9999px;font-size:0.75rem;font-weight:600;background:' + m[1] + ';color:' + m[2] + ';">' + esc(m[0]) + '</span>';
+  }
+  function loadAbonnes() {
+    ['abonnes-sources', 'abonnes-derniers'].forEach(function (id) {
+      var e = document.getElementById(id);
+      if (e) e.innerHTML = '<p class="text-center text-muted-foreground py-6">Chargement...</p>';
+    });
+    statsRpc('get_abonnes_tableau', { p_jours: 30 }).then(function (d) {
+      if (!d || typeof d !== 'object' || !Array.isArray(d.par_source)) throw new Error((d && (d.message || d.erreur)) || 'réponse inattendue');
+      renderAbonnes(d);
+    }).catch(function (e) {
+      var msg = '<p class="bil-vide">Abonnés illisibles : ' + esc(e && e.message ? e.message : e) + '. La migration 20261020100000 (abonnes-base.yml) est-elle passée ?</p>';
+      ['abonnes-sources', 'abonnes-derniers'].forEach(function (id) { place(id, msg); });
+      ['abonnes-total', 'abonnes-jour', 'abonnes-periode', 'abonnes-langues'].forEach(function (id) { ecrit(id, '—'); });
+    });
+  }
+  function renderAbonnes(d) {
+    ecrit('abonnes-total', nombreAb(d.total));
+    ecrit('abonnes-total-sub', nombreAb(d.actifs) + ' actifs · ' + nombreAb(d.desinscrits) + ' désinscrits' + (Number(d.invalides) ? ' · ' + nombreAb(d.invalides) + ' invalides' : ''));
+    ecrit('abonnes-jour', nombreAb(d.aujourd_hui));
+    ecrit('abonnes-jour-sub', nombreAb(d.sept_jours) + ' sur sept jours');
+    ecrit('abonnes-periode', nombreAb(d.periode));
+    var serie = Array.isArray(d.serie) ? d.serie : [];
+    var moyenne = serie.length ? Math.round((serie.reduce(function (a, j) { return a + (Number(j.n) || 0); }, 0) / serie.length) * 10) / 10 : 0;
+    ecrit('abonnes-periode-sub', 'soit ' + moyenne.toLocaleString('fr-FR') + ' par jour en moyenne');
+    var langues = Array.isArray(d.par_langue) ? d.par_langue : [];
+    var premiere = langues[0];
+    ecrit('abonnes-langues', premiere ? premiere.lang.toUpperCase() + ' ' + Math.round(100 * (Number(premiere.n) || 0) / Math.max(1, Number(d.total) || 0)) + ' %' : '—');
+    ecrit('abonnes-langues-sub', langues.map(function (l) { return l.lang.toUpperCase() + ' ' + nombreAb(l.n); }).join(' · ') || 'aucune adresse');
+
+    var sources = Array.isArray(d.par_source) ? d.par_source : [];
+    place('abonnes-sources', sources.length
+      ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">Source</th><th>Abonnés</th><th>Actifs</th><th>30 jours</th>' +
+        LANGUES_ABONNES.map(function (l) { return '<th>' + l.toUpperCase() + '</th>'; }).join('') + '</tr></thead><tbody>' +
+        sources.map(function (x) {
+          return '<tr><td class="bil-gauche">' + esc(libelleSourceAbonnes(x.source)) + ' <span style="opacity:.55;font-size:.75rem">' + esc(x.source) + '</span></td><td>' + nombreAb(x.n) + '</td><td>' + nombreAb(x.actifs) + '</td><td>' + nombreAb(x.periode) + '</td>' +
+            LANGUES_ABONNES.map(function (l) { return '<td>' + (Number(x[l]) ? nombreAb(x[l]) : '') + '</td>'; }).join('') + '</tr>';
+        }).join('') + '</tbody></table></div>'
+      : '<p class="bil-vide">Aucune adresse pour le moment.</p>');
+
+    var derniers = Array.isArray(d.derniers) ? d.derniers : [];
+    place('abonnes-derniers', derniers.length
+      ? '<div class="adm-table-defile"><table class="adm-table"><thead><tr><th class="bil-gauche">E-mail</th><th>Langue</th><th class="bil-gauche">Source</th><th>Statut</th><th>Captures</th><th>Le</th></tr></thead><tbody>' +
+        derniers.map(function (a) {
+          return '<tr><td class="bil-gauche">' + esc(a.email) + '</td><td>' + esc(String(a.lang || '').toUpperCase()) + '</td><td class="bil-gauche">' + esc(libelleSourceAbonnes(a.source)) + '</td><td>' + statutAbonne(a.statut) + '</td><td>' + nombreAb(a.captures) + '</td><td>' + esc(dateBilan(a.created_at)) + '</td></tr>';
+        }).join('') + '</tbody></table></div>'
+      : '<p class="bil-vide">Aucune adresse pour le moment.</p>');
+  }
+  // L'export CSV passe par admin-leads (clé de service, jeton admin) : le
+  // fichier se télécharge tel quel.
+  function exporterAbonnes(bouton) {
+    bouton.disabled = true; var libelle = bouton.textContent; bouton.textContent = 'Préparation...';
+    fetch(SUPABASE_URL + '/functions/v1/admin-leads?vue=export', { headers: { 'Authorization': 'Bearer ' + SUPABASE_KEY, 'x-admin-token': adminToken } })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+      .then(function (csv) {
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8' }));
+        a.download = 'abonnes-quiz-couple-' + new Date().toISOString().slice(0, 10) + '.csv';
+        document.body.appendChild(a); a.click(); a.remove();
+        window.setTimeout(function () { URL.revokeObjectURL(a.href); }, 2000);
+      })
+      .catch(function (e) { window.alert('Export impossible : ' + (e && e.message ? e.message : e)); })
+      .then(function () { bouton.disabled = false; bouton.textContent = libelle; });
+  }
+
   function loadLeads() {
+    loadAbonnes();
     var tbody = document.getElementById('leads-table-body');
     if (tbody) tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;text-align:center;color:hsl(var(--muted-foreground));">Chargement...</td></tr>';
 
@@ -3497,6 +3581,10 @@
         switchTab(this.dataset.tab);
       });
     });
+
+    // Abonnés : export CSV
+    var abonnesExport = document.getElementById('abonnes-export');
+    if (abonnesExport) abonnesExport.addEventListener('click', function () { exporterAbonnes(abonnesExport); });
 
     // Leads refresh
     var leadsRefresh = document.getElementById('leads-refresh');

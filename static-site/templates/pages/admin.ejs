@@ -395,7 +395,7 @@
               <p class="stats-tete-sub" id="admin-bilan-vues-sub">&nbsp;</p>
             </div>
             <div class="stats-tete stats-tete--finis">
-              <p class="stats-tete-titre">Bilans démarrés</p>
+              <p class="stats-tete-titre">Évaluations démarrées</p>
               <p class="stats-tete-jour" id="admin-bilan-crees">-</p>
               <p class="stats-tete-sub" id="admin-bilan-crees-sub">&nbsp;</p>
             </div>
@@ -534,8 +534,58 @@
 
         <!-- ═══ Leads ═══ -->
         <div id="admin-leads-tab" class="hidden">
+          <%# Les abonnés e-mail (table abonnes, get_abonnes_tableau par admin-stats) :
+              les adresses laissées à la fin des tests (porte des résultats,
+              capture.js) et celles de l'e-book, avec la langue de chacun, par
+              source et par langue, les dernières, et l'export CSV. Les
+              identifiants sont le contrat de loadAbonnes (admin.js). %>
           <div class="adm-toolbar">
-            <h2>Leads</h2>
+            <h2>Abonnés e-mail</h2>
+            <button id="abonnes-export" class="btn btn-cta btn-sm" type="button">Exporter en CSV</button>
+          </div>
+          <p class="adm-note">Les adresses laissées à la fin des tests pour voir le reste de leurs résultats, et celles de l'e-book une fois confirmées. Chaque adresse garde la langue de la personne : l'export CSV (e-mail, langue, source, statut, dates) s'importe dans l'outil d'envoi langue par langue. Une adresse redonnée à la fin d'un autre test compte dans « captures », jamais en double.</p>
+          <div class="stats-tetes">
+            <div class="stats-tete stats-tete--lances">
+              <p class="stats-tete-titre">Abonnés</p>
+              <p class="stats-tete-jour" id="abonnes-total">-</p>
+              <p class="stats-tete-sub" id="abonnes-total-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--finis">
+              <p class="stats-tete-titre">Aujourd'hui</p>
+              <p class="stats-tete-jour" id="abonnes-jour">-</p>
+              <p class="stats-tete-sub" id="abonnes-jour-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--ratio">
+              <p class="stats-tete-titre">30 derniers jours</p>
+              <p class="stats-tete-jour" id="abonnes-periode">-</p>
+              <p class="stats-tete-sub" id="abonnes-periode-sub">&nbsp;</p>
+            </div>
+            <div class="stats-tete stats-tete--ventes">
+              <p class="stats-tete-titre">Par langue</p>
+              <p class="stats-tete-jour" id="abonnes-langues">-</p>
+              <p class="stats-tete-sub" id="abonnes-langues-sub">&nbsp;</p>
+            </div>
+          </div>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Par source</h2>
+                <p class="stats-panel-sub">D'où viennent les adresses : chaque test qui porte la porte des résultats, et l'e-book. Avec la répartition par langue, pour savoir à qui écrire dans quelle langue.</p>
+              </div>
+            </div>
+            <div id="abonnes-sources" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+          <div class="stats-panel">
+            <div class="stats-panel-head">
+              <div>
+                <h2 class="stats-panel-title">Les cinquante dernières adresses</h2>
+                <p class="stats-panel-sub">Avec leur langue, leur source et leur statut (actif, désinscrit, invalide après un rebond).</p>
+              </div>
+            </div>
+            <div id="abonnes-derniers" class="stats-list"><p class="text-center text-muted-foreground py-6">Chargement...</p></div>
+          </div>
+          <div class="adm-toolbar">
+            <h2>E-book : demandes et confirmations</h2>
             <button id="leads-refresh" class="btn btn-outline btn-sm" type="button"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg> Actualiser</button>
           </div>
           <div class="adm-table-wrap">

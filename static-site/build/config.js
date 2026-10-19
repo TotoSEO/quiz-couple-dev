@@ -403,6 +403,18 @@ export const BILAN_ENTREES = {
 // consommation : choix de Thomas (18 octobre 2026), la section « Réclamations »
 // des CGV s'écrit alors sans (pSans de {lang}/cgv.json) ; un médiateur se
 // déclare ici, mediateur: { nom, site }, et la phrase revient d'elle-même.
+// La porte e-mail des écrans de résultat (19 octobre 2026, Thomas : « si je
+// récolte des emails tous les jours, je vais pouvoir contacter les gens pour
+// leur promouvoir le test payant, avec des codes de réduction ») : les tests
+// de couple et les quiz à résultat (les groupes score, projet et doute de
+// BILAN_ENTREES), jamais les tests célibataires, les jeux ni les questions.
+// Le body porte data-capture="<id>", capture.js floute le résultat après le
+// titre jusqu'à ce qu'une adresse soit laissée (table abonnes, fonction
+// lead-capture) ; l'id est la source gardée avec l'adresse.
+export const CAPTURE_PAGES = Object.fromEntries(Object.entries(BILAN_ENTREES)
+  .filter(([, e]) => e.groupe === 'score' || e.groupe === 'projet' || e.groupe === 'doute')
+  .map(([cle, e]) => [cle, e.id]));
+
 export const VENDEUR = {
   nom: 'Visibilitea',
   dirigeant: 'Thomas Owaller',

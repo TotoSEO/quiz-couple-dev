@@ -97,6 +97,15 @@
       "<strong>Die Zahlung:</strong> Sie läuft über Stripe (Stripe Payments Europe, Ltd., Dublin, Irland), das die Zahlungsdaten nach seiner eigenen Datenschutzerklärung verarbeitet. Wir sehen deine Karte nie: Wir speichern die Nummer der Zahlungssitzung, den Betrag und die E-Mail-Adresse der Quittung, um dir den Bericht zu schicken und auf eine Bitte um Erstattung antworten zu können.",
       "<strong>Der Versand des Berichts:</strong> Der PDF-Bericht wird in einem privaten Speicher bei unserem Hoster (Supabase) aufbewahrt und über unseren E-Mail-Dienstleister Resend (Resend, Inc., USA) an die angegebenen Adressen verschickt, auf Grundlage der Standardvertragsklauseln der Europäischen Kommission. Der Download-Link auf der Website ist nur wenige Minuten gültig.",
       "<strong>Ein Fingerabdruck der IP-Adresse:</strong> gesalzen und nicht umkehrbar, mit der Analyse gespeichert, um die Zahl der Checks zu begrenzen, die pro Stunde von derselben Verbindung aus erstellt werden."
+    ],
+    "emailsTitle": "E-Mails von Quiz Couple",
+    "emailsIntro": "Am Ende mancher Tests bieten wir dir an, deine E-Mail-Adresse zu hinterlassen, um den Rest deines Ergebnisses zu sehen. Das Formular des E-Books macht dasselbe. Das passiert damit.",
+    "emailsItems": [
+      "<strong>Was gespeichert wird:</strong> deine E-Mail-Adresse, die Sprache der Website, die du benutzt hast, die Seite, von der die Adresse kommt (welcher Test, oder das E-Book), das Datum deiner Einwilligung und ein Fingerabdruck deiner IP-Adresse (gesalzen, nicht umkehrbar), um Missbrauch zu begrenzen. Kein Name, kein Testergebnis.",
+      "<strong>Wozu:</strong> um dir in deiner Sprache Tipps für deine Beziehung, neue Tests und Angebote zur Beziehungsanalyse zu schicken. Deine Adresse wird nie verkauft oder an irgendjemanden weitergegeben.",
+      "<strong>Die Rechtsgrundlage:</strong> deine Einwilligung, die du mit dem Häkchen gibst. Du kannst sie jederzeit widerrufen: Jede E-Mail enthält einen Abmeldelink mit einem Klick, und wir schreiben dir nicht mehr.",
+      "<strong>Wie lange:</strong> solange du angemeldet bist; danach wird die Adresse spätestens drei Jahre nach deiner letzten geöffneten E-Mail gelöscht. Eine abgemeldete oder nicht mehr existierende Adresse wird innerhalb von drei Monaten gelöscht.",
+      "<strong>Wer sie verschickt:</strong> unsere E-Mails gehen über Resend (Resend Inc., USA, Standardvertragsklauseln der Europäischen Kommission) von einer quiz-couple.com-Adresse aus; die Liste liegt bei Supabase (Europäische Union)."
     ]
   },
   "mentions": {

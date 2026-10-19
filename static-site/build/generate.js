@@ -18,7 +18,7 @@ import {
   SUPABASE_URL, SUPABASE_ANON_KEY, BLOG_ARTICLES, BLOG_CATEGORIES, AUTHORS,
   QUIZ_RELATED_ARTICLES, ARTICLES_QUESTIONS, QUIZ_FEATURED, FAMILLES_NAV, SAISON_DES_QUIZ, getLocalizedPath, getLocalizedUrl, getRouteAlternates, escapeHtml,
   getArticlePath, getArticleUrl, getArticleAlternates,
-  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, VENDEUR,
+  estPageJouable, genrePageJouable, pagePublicitaire, BILAN_OUVERT, BILAN_ENTREES, CAPTURE_PAGES, VENDEUR,
 } from './config.js';
 import { saisonActive } from './config.js';
 import { createT, createTgd, loadTranslations } from './i18n.js';
@@ -1411,6 +1411,9 @@ async function generatePage(routeKey, lang) {
     // Les pages qui renvoient vers le bilan (BILAN_ENTREES) : le groupe du
     // texte et l'identifiant de la source.
     bilanEntree: BILAN_OUVERT ? (BILAN_ENTREES[routeKey] || null) : null,
+    // La porte e-mail des résultats (capture.js) : l'id de la page, gardé
+    // comme source avec l'adresse. Indépendante de l'ouverture de l'évaluation.
+    captureId: CAPTURE_PAGES[routeKey] || null,
     bilanPrix: prixBilan(lang),
     bilanPrixCentimes: BILAN_CONST.prix,
     bilanGarantie: BILAN_CONST.garantie,

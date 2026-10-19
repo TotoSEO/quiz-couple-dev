@@ -97,6 +97,15 @@
       "<strong>Il pagamento:</strong> passa da Stripe (Stripe Payments Europe, Ltd., Dublino, Irlanda), che tratta i dati di pagamento secondo la propria informativa sulla privacy. Non vediamo mai la tua carta: conserviamo il numero della sessione di pagamento, l'importo e l'indirizzo e-mail della ricevuta, per inviarti il report e poter rispondere a una richiesta di rimborso.",
       "<strong>L'invio del report:</strong> il report in PDF è conservato in uno spazio di archiviazione privato presso il nostro hosting (Supabase) e inviato agli indirizzi indicati tramite il nostro fornitore di e-mail, Resend (Resend, Inc., Stati Uniti), nel quadro delle clausole contrattuali tipo della Commissione europea. Il link di download del sito vale solo pochi minuti.",
       "<strong>Un'impronta dell'indirizzo IP:</strong> con sale e impossibile da invertire, conservata con la valutazione per limitare il numero di valutazioni create ogni ora dalla stessa connessione."
+    ],
+    "emailsTitle": "Le e-mail di Quiz Couple",
+    "emailsIntro": "Alla fine di alcuni test, ti proponiamo di lasciare il tuo indirizzo e-mail per vedere il resto dei tuoi risultati. Il modulo dell'e-book fa lo stesso. Ecco cosa ne facciamo.",
+    "emailsItems": [
+      "<strong>Cosa viene salvato:</strong> il tuo indirizzo e-mail, la lingua del sito che usavi, la pagina da cui viene l'indirizzo (quale test, o l'e-book), la data del tuo consenso e un'impronta del tuo indirizzo IP (con sale, impossibile da invertire) per limitare gli abusi. Nessun nome, nessun risultato di test.",
+      "<strong>Perché:</strong> per mandarti, nella tua lingua, consigli per la tua coppia, nuovi test e offerte sulla valutazione di coppia. Il tuo indirizzo non viene mai venduto né condiviso con nessuno.",
+      "<strong>La base giuridica:</strong> il tuo consenso, dato spuntando la casella. Puoi ritirarlo in qualsiasi momento: ogni e-mail contiene un link di disiscrizione con un clic, e smettiamo di scriverti.",
+      "<strong>Per quanto tempo:</strong> finché sei iscritto o iscritta; poi l'indirizzo viene cancellato al più tardi tre anni dopo l'ultima e-mail che hai aperto. Un indirizzo disiscritto o che non esiste più viene cancellato entro tre mesi.",
+      "<strong>Chi le manda:</strong> le nostre e-mail partono tramite Resend (Resend Inc., Stati Uniti, clausole contrattuali tipo della Commissione europea) da un indirizzo quiz-couple.com; la lista è ospitata da Supabase (Unione europea)."
     ]
   },
   "mentions": {

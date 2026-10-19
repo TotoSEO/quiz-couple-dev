@@ -13148,6 +13148,45 @@ body { padding-bottom: var(--pub-footer, 0px); }
 }
 @media (prefers-reduced-motion: reduce) { .qr-bilan-bouton, .qr-bilan-bouton svg { transition: none; } }
 
+/* La porte e-mail des écrans de résultat (capture.js) : le score et le titre
+   restent nets, tout ce qui suit est flouté et inerte, et la carte du
+   formulaire se glisse sous le titre. Le flou ne touche que des blocs du
+   résultat, jamais la page autour. */
+.qc-flou { filter: blur(7px); opacity: .72; pointer-events: none; user-select: none; transition: filter .45s ease, opacity .45s ease; }
+.qc-flou--ouvre { filter: blur(0); opacity: 1; }
+.qc-porte {
+  position: relative; z-index: 2; max-width: 30rem; margin: 1.25rem auto 1.5rem; padding: 1.35rem 1.25rem 1.25rem;
+  border-radius: 1.25rem; text-align: left; color: hsl(var(--foreground));
+  background: hsl(var(--card)); border: 2px solid hsl(var(--primary) / .4);
+  box-shadow: 0 18px 44px -24px hsl(var(--primary) / .55);
+  transition: opacity .35s ease, transform .35s ease;
+}
+.qc-porte--ok { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+.qc-porte-ic { width: 2.7rem; height: 2.7rem; border-radius: 999px; margin: 0 auto .6rem; display: flex; align-items: center; justify-content: center; background: hsl(var(--primary) / .12); color: hsl(var(--primary-texte)); }
+.qc-porte-ic svg { width: 1.35rem; height: 1.35rem; }
+.qc-porte-sur { margin: 0 0 .25rem; text-align: center; font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: hsl(var(--primary-texte)); }
+.qc-porte-titre { margin: 0 0 .45rem; text-align: center; font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; line-height: 1.3; }
+.qc-porte-texte { margin: 0 0 1rem; text-align: center; font-size: .92rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+.qc-porte-form { display: grid; gap: .7rem; }
+.quiz-engine .qc-porte input.qc-porte-email, .qc-porte input.qc-porte-email {
+  width: 100%; font-size: 16px; padding: .85rem 1rem; border-radius: .9rem;
+  border: 1.5px solid hsl(var(--border)); background: hsl(var(--background)); color: inherit; box-shadow: none;
+}
+.quiz-engine .qc-porte input.qc-porte-email:focus, .qc-porte input.qc-porte-email:focus { outline: none; border-color: hsl(var(--primary)); box-shadow: 0 0 0 3px hsl(var(--primary) / .18); }
+.qc-porte-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.qc-porte-suggestion { margin: -.3rem 0 0; font-size: .85rem; }
+.qc-porte-suggestion button { background: none; border: 0; padding: 0; font: inherit; color: hsl(var(--primary-texte)); text-decoration: underline; cursor: pointer; }
+.qc-porte-consent { display: grid; grid-template-columns: 1.15rem minmax(0, 1fr); gap: .55rem; align-items: start; font-size: .8rem; line-height: 1.45; color: hsl(var(--muted-foreground)); cursor: pointer; }
+.qc-porte-consent input { margin: .12rem 0 0; width: 1.15rem; height: 1.15rem; accent-color: hsl(var(--primary)); cursor: pointer; }
+.qc-porte-consent a { color: hsl(var(--primary-texte)); text-decoration: underline; }
+.qc-porte .qc-porte-bouton { width: 100%; }
+.qc-porte .qc-porte-bouton[disabled] { opacity: .7; cursor: wait; }
+.qc-porte-erreur { margin: 0; font-size: .85rem; font-weight: 600; color: hsl(0 68% 46%); }
+.dark .qc-porte-erreur { color: hsl(0 80% 72%); }
+@keyframes qcPorteSecoue { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+.qc-porte--secoue { animation: qcPorteSecoue .3s ease; }
+@media (prefers-reduced-motion: reduce) { .qc-flou, .qc-porte { transition: none; } .qc-porte--secoue { animation: none; } }
+
 @media print {
   #site-header, body > footer, .quiz-page-hero, .seo-content, .wave-divider,
   .bilan-fin .bilan-actions, .bilan-fin .bilan-sep, .bilan-paywall, .pub { display: none !important; }

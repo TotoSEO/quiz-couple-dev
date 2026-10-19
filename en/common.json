@@ -182,6 +182,23 @@
     "commentPlaceholder": "Share your experience...",
     "stars": "stars"
   },
+  "capture": {
+    "sur": "Your full results",
+    "titre": "To unlock the rest of your results, enter your email",
+    "texte": "The details of your result, the advice and what comes next appear right after.",
+    "placeholder": "your@email.com",
+    "consentement": "I agree to receive Quiz Couple's tips and offers by email. Unsubscribe in one click, any time.",
+    "confidentialite": "Privacy",
+    "bouton": "See my results",
+    "envoi": "One moment...",
+    "suggestion": "Did you mean {{domaine}}?",
+    "erreurs": {
+      "format": "This email address doesn't look complete.",
+      "domaine": "This address can't receive emails. Check the domain.",
+      "jetable": "Disposable addresses aren't accepted.",
+      "consentement": "Tick the box to continue."
+    }
+  },
   "blog": {
     "pageTitle": "Blog - Tips & Advice for Couples | Quiz Couple",
     "pageDescription": "Discover our articles and tips to strengthen your relationship. Advice, quizzes and reflections to understand each other better.",

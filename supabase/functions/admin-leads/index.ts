@@ -43,6 +43,34 @@ serve(async (req) => {
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
+    // GET ?vue=export : les abonnés e-mail (table abonnes, migration
+    // 20261020100000) en CSV, avec la langue, la source, le statut et les
+    // dates : le fichier à importer dans l'outil d'envoi, langue par langue.
+    // Tous les statuts sont là (une colonne), pour filtrer dans un tableur.
+    const url = new URL(req.url);
+    if (req.method === 'GET' && url.searchParams.get('vue') === 'export') {
+      const csv = (v: unknown) => {
+        const t = v == null ? '' : String(v);
+        return /[",\n\r;]/.test(t) ? '"' + t.replace(/"/g, '""') + '"' : t;
+      };
+      const lignes: string[] = ['email,lang,source,statut,captures,consent_at,created_at'];
+      for (let depuis = 0; ; depuis += 1000) {
+        const { data, error } = await supabase
+          .from('abonnes')
+          .select('email, lang, source, statut, captures, consent_at, created_at')
+          .order('created_at', { ascending: true })
+          .range(depuis, depuis + 999);
+        if (error) throw error;
+        for (const a of data || []) {
+          lignes.push([a.email, a.lang, a.source, a.statut, a.captures, a.consent_at, a.created_at].map(csv).join(','));
+        }
+        if (!data || data.length < 1000) break;
+      }
+      return new Response(lignes.join('\n') + '\n', {
+        headers: { ...corsHeaders, 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': 'attachment; filename="abonnes-quiz-couple.csv"' },
+      });
+    }
+
     // GET: list all leads
     if (req.method === 'GET') {
       const { data: leads, error } = await supabase

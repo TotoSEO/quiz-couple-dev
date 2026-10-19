@@ -182,6 +182,23 @@
     "commentPlaceholder": "Condividi la tua esperienza...",
     "stars": "stelle"
   },
+  "capture": {
+    "sur": "I tuoi risultati completi",
+    "titre": "Per sbloccare il resto dei tuoi risultati, inserisci la tua e-mail",
+    "texte": "Il dettaglio del tuo risultato, i consigli e il seguito compaiono subito dopo.",
+    "placeholder": "tua@email.it",
+    "consentement": "Accetto di ricevere i consigli e le offerte di Quiz Couple via e-mail. Disiscrizione con un clic, in qualsiasi momento.",
+    "confidentialite": "Privacy",
+    "bouton": "Vedere i miei risultati",
+    "envoi": "Un attimo...",
+    "suggestion": "Volevi dire {{domaine}}?",
+    "erreurs": {
+      "format": "Questo indirizzo e-mail non sembra completo.",
+      "domaine": "Questo indirizzo non può ricevere e-mail. Controlla il dominio.",
+      "jetable": "Gli indirizzi usa e getta non sono accettati.",
+      "consentement": "Spunta la casella per continuare."
+    }
+  },
   "blog": {
     "pageTitle": "Blog - Consigli e suggerimenti per coppie | Quiz Couple",
     "pageDescription": "Scopri i nostri articoli e consigli per rafforzare la tua relazione di coppia. Suggerimenti, test e riflessioni per capirsi meglio.",
