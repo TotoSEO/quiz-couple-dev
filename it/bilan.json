@@ -74,7 +74,7 @@
     },
     "rejoindre": {
       "titre": "{{autre}} ti propone di fare il vostra valutazione di coppia",
-      "texte": "Un centinaio di domande concrete sulla vostra vita a due. Rispondi per conto tuo, senza vedere le risposte di {{autre}}, e viceversa. Quando avete finito tutti e due, il vostro report mette le vostre due risposte una di fronte all'altra, tema per tema.",
+      "texte": "100 domande concrete sulla vostra vita a due. Rispondi per conto tuo, senza vedere le risposte di {{autre}}, e viceversa. Quando avete finito tutti e due, il vostro report mette le vostre due risposte una di fronte all'altra, tema per tema.",
       "duree": "Calcola dai 25 ai 30 minuti. Puoi fare una pausa quando vuoi, tutto viene salvato.",
       "situationTitre": "La vostra situazione, come l'ha descritta {{autre}}",
       "situationCorriger": "Correggi",
@@ -548,7 +548,7 @@
   "lp": {
     "badge": "Valutazione di coppia",
     "titre": "Volete la stessa vita, tutti e due?",
-    "sousTitre": "Una valutazione completa della vostra relazione, costruita sulla ricerca in psicologia di coppia: un centinaio di domande precise su dodici aree della vita insieme, e un report che vi dice, argomento per argomento, dove vi ritrovate e di cosa bisogna parlare. In due, ciascuno per conto suo, o da soli se l'altro non è pronto a parlarne.",
+    "sousTitre": "Una valutazione completa della vostra relazione, costruita sulla ricerca in psicologia di coppia: 100 domande precise su dodici aree della vita insieme, e un report che vi dice, argomento per argomento, dove vi ritrovate e di cosa bisogna parlare. In due, ciascuno per conto suo, o da soli se l'altro non è pronto a parlarne.",
     "points": [
       "Ciascuno risponde sul proprio telefono, senza vedere le risposte dell'altro",
       "Domande costruite a partire dalla ricerca in psicologia di coppia",
@@ -722,7 +722,7 @@
         }
       ],
       "fin": "Sulle grandi domande (i figli, dove vivere, la fedeltà...), ciascuno può anche segnare la propria risposta come non negoziabile. Il report comincia allora da lì.",
-      "cta": "Vedere le altre cento"
+      "cta": "Vedere le 100 domande"
     },
     "pour": {
       "titre": "Per le coppie che vogliono vederci chiaro",
@@ -760,7 +760,7 @@
           "c": [
             "Quelle di un professionista, nel corso delle sedute",
             "Inventate nel momento in cui le chiedi, spesso vaghe: «Comunicate bene?»",
-            "Un centinaio, scritte in anticipo e fondate sulla ricerca: «Chi pensa agli appuntamenti dal medico?»"
+            "Cento, scritte in anticipo e fondate sulla ricerca: «Chi pensa agli appuntamenti dal medico?»"
           ]
         },
         {
@@ -830,7 +830,7 @@
       "unite": "per la coppia, in una volta",
       "aide": "Pagate solo alla fine, una volta date le vostre risposte. Un solo pagamento, dell'uno o dell'altro. Nessun abbonamento, nessun account.",
       "inclus": [
-        "Un centinaio di domande su dodici aree",
+        "100 domande su dodici aree",
         "Il report completo, una quarantina di pagine con i suoi grafici",
         "Le vostre prossime quattro conversazioni, con spunti per condurle",
         "Il PDF via e-mail e la versione online per sei mesi",
@@ -865,7 +865,7 @@
       "items": [
         {
           "q": "Quanto tempo ci vuole per fare la valutazione?",
-          "a": "Contate 25-30 minuti ciascuno, per un centinaio di domande. Niente vi obbliga a fare tutto in una volta: ogni risposta viene salvata, e riprendete da dove eravate."
+          "a": "Contate 25-30 minuti ciascuno, per 100 domande. Niente vi obbliga a fare tutto in una volta: ogni risposta viene salvata, e riprendete da dove eravate."
         },
         {
           "q": "Il mio partner vedrà tutte le mie risposte?",

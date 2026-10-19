@@ -74,7 +74,7 @@
     },
     "rejoindre": {
       "titre": "{{autre}} te propone hacer vuestra evaluación de pareja",
-      "texte": "Un centenar de preguntas concretas sobre vuestra vida en pareja. Respondes por tu lado, sin ver las respuestas de {{autre}}, y al revés. Cuando hayáis terminado los dos, vuestro informe pone vuestras dos respuestas frente a frente, tema por tema.",
+      "texte": "100 preguntas concretas sobre vuestra vida en pareja. Respondes por tu lado, sin ver las respuestas de {{autre}}, y al revés. Cuando hayáis terminado los dos, vuestro informe pone vuestras dos respuestas frente a frente, tema por tema.",
       "duree": "Calcula entre 25 y 30 minutos. Puedes hacer una pausa cuando quieras, todo queda guardado.",
       "situationTitre": "Vuestra situación, tal como la ha descrito {{autre}}",
       "situationCorriger": "Corregir",
@@ -548,7 +548,7 @@
   "lp": {
     "badge": "Evaluación de pareja",
     "titre": "¿Queréis la misma vida, los dos?",
-    "sousTitre": "Una evaluación completa de vuestra relación, construida sobre la investigación en psicología de pareja: un centenar de preguntas concretas sobre doce áreas de la vida en pareja, y un informe que os dice, tema por tema, dónde coincidís y de qué hay que hablar. En pareja, cada uno por su lado, o a solas si el otro no está listo para hablarlo.",
+    "sousTitre": "Una evaluación completa de vuestra relación, construida sobre la investigación en psicología de pareja: 100 preguntas concretas sobre doce áreas de la vida en pareja, y un informe que os dice, tema por tema, dónde coincidís y de qué hay que hablar. En pareja, cada uno por su lado, o a solas si el otro no está listo para hablarlo.",
     "points": [
       "Cada uno responde en su teléfono, sin ver las respuestas del otro",
       "Preguntas construidas a partir de la investigación en psicología de pareja",
@@ -722,7 +722,7 @@
         }
       ],
       "fin": "En las grandes preguntas (los hijos, dónde vivir, la fidelidad...), cada uno puede además marcar su respuesta como innegociable. El informe empieza entonces por ahí.",
-      "cta": "Ver las otras cien"
+      "cta": "Ver las 100 preguntas"
     },
     "pour": {
       "titre": "Para las parejas que quieren ver claro",
@@ -760,7 +760,7 @@
           "c": [
             "Las de un profesional, a lo largo de las sesiones",
             "Inventadas en el momento en que las pides, a menudo vagas: «¿Os comunicáis bien?»",
-            "Un centenar, escritas de antemano y apoyadas en la investigación: «¿Quién piensa en las citas con el médico?»"
+            "Cien, escritas de antemano y apoyadas en la investigación: «¿Quién piensa en las citas con el médico?»"
           ]
         },
         {
@@ -830,7 +830,7 @@
       "unite": "para la pareja, de una vez",
       "aide": "Solo pagáis al final, una vez dadas vuestras respuestas. Un solo pago, de uno o del otro. Sin suscripción, sin cuenta.",
       "inclus": [
-        "Un centenar de preguntas sobre doce áreas",
+        "100 preguntas sobre doce áreas",
         "El informe completo, unas cuarenta páginas con sus gráficos",
         "Vuestras cuatro próximas conversaciones, con pistas para llevarlas",
         "El PDF por correo y la versión en línea durante seis meses",
@@ -865,7 +865,7 @@
       "items": [
         {
           "q": "¿Cuánto tiempo lleva hacer la evaluación?",
-          "a": "Contad 25 a 30 minutos cada uno, para un centenar de preguntas. Nada os obliga a hacerlo todo de una vez: cada respuesta queda guardada, y retomáis donde lo dejasteis."
+          "a": "Contad 25 a 30 minutos cada uno, para 100 preguntas. Nada os obliga a hacerlo todo de una vez: cada respuesta queda guardada, y retomáis donde lo dejasteis."
         },
         {
           "q": "¿Mi pareja verá todas mis respuestas?",

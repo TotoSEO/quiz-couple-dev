@@ -165,7 +165,7 @@ Quand un chiffre ne vient que d'articles de presse ou de résumés, c'est
   Economy* ; la mobilité d'un couple pour le travail de l'un, au détriment
   de la carrière de l'autre : log5.
 
-### Les enfants (enf1 à enf8)
+### Les enfants (enf1 à enf14)
 
 - **Thomson (1997)**, « Couple childbearing desires, intentions, and
   births », *Demography* 34(3), 343-354 ; Thomson & Hoem (1998), même
@@ -186,8 +186,28 @@ Quand un chiffre ne vient que d'articles de presse ou de résumés, c'est
   enf4, enf5, enf7.
 - **Ganong & Coleman**, travaux sur les familles recomposées : le beau-parent
   gagne d'abord l'affection avant de poser des règles. enf8.
+- **Doss et al. (2009)**, déjà cité, et **Feinberg (2003)** pour les couples
+  qui ont déjà des enfants : le temps à deux qui disparaît après la naissance
+  (enf2b) et le sentiment de former une équipe de parents, la coparentalité,
+  qui pèse plus sur le couple que le partage des tâches (enf3b).
+- **Agrillo & Nelini (2008)**, « Childfree by choice: a review », *Journal of
+  Cultural Geography* 25(3), 347-363 ; **Blackstone & Stewart (2012)**,
+  « Choosing to be childfree », *Sociology Compass* 6(9), 718-727 ; **Neal &
+  Neal (2022)**, « Prevalence, age of decision, and interpersonal warmth
+  judgements of childfree adults », *Scientific Reports* 12, 11907. La
+  décision de ne pas avoir d'enfant se prend tôt et bouge peu ; ce qui pèse
+  sur le couple, c'est que l'un des deux change (enf9), le projet de vie qui
+  prend la place (enf11) et ce qu'on veut laisser (val2b).
+- **Park (2002)**, « Stigma management among the voluntarily childless »,
+  *Sociological Perspectives* 45(1), 21-45 : la pression de l'entourage et
+  les façons d'y répondre (enf10).
+- **Dykstra & Hagestad (2007)**, « Roads less taken: Developing a nuanced
+  view of older adults without children », *Journal of Family Issues* 28(10),
+  1275-1310 : les personnes âgées sans enfant ne sont pas plus isolées quand
+  elles ont construit un entourage (enf13), et le rôle auprès des enfants des
+  proches ou le soin donné ailleurs (enf12, enf14).
 
-### Les valeurs (val1 à val8)
+### Les valeurs (val1 à val8, et val2b)
 
 - **Luo & Klohnen (2005)**, « Assortative mating and marital quality in
   newlyweds: A couple-centered approach », *Journal of Personality and
@@ -304,6 +324,24 @@ Quand un chiffre ne vient que d'articles de presse ou de résumés, c'est
   attitudes de dispute).
 - Les cinq questions `signal` font la page « Signaux de vigilance » : chaque
   attitude, la fréquence donnée par chacun des deux, sans verdict.
+
+## Cent questions pour tout le monde
+
+Depuis le 19 octobre 2026 (Thomas : « il en faut 100, c'est symbolique »),
+chaque personne répond à exactement cent questions, quelle que soit sa
+situation et quoi qu'elle réponde. La réserve en compte 118 : 90 posées à
+tout le monde, et 28 à condition, par paires. Chaque question qui dépend de
+la situation a sa jumelle dans l'autre cas (quo1 et quo1b selon qu'on vit
+ensemble ou pas, arg7 et arg7b, log3 et log3b, enf1 et enf1b, val3 et
+val3b...) ; sur les enfants, chaque combinaison (enfants ou pas, enfants d'une
+relation précédente ou pas) donne trois questions. Les sept questions qui
+disparaissent quand on répond « Non » à « Avoir des enfants » (enf2 à enf7
+et val2) sont remplacées par sept questions sur la vie sans enfants (enf9 à
+enf14 et val2b, `siRep: { enf1: [3] }`), cachées tant que enf1 n'a pas de
+réponse (`alternative: true` dans coeur.mjs) pour que le total affiché ne
+bouge pas. Le test `coeur.test.mjs` parcourt les 384 situations et les cinq
+réponses possibles à enf1 : 100 à chaque fois. Le domaine « Où et comment
+vivre » reste à six questions, « Comment vous allez » à douze.
 
 ## Le poids des questions
 

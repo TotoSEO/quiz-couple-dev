@@ -757,6 +757,16 @@
           ],
           "eviter": "Laisser l'autre tout gérer, puis lui reprocher ses choix."
         },
+        "arg7b": {
+          "q": "Quand vous êtes ensemble (sorties, restaurants, week-ends), qui paie le plus souvent ?",
+          "court": "Qui paie quand on sort",
+          "pourquoi": "Sans vie commune, l'argent du couple, c'est surtout celui des sorties. Celui qui paie presque toujours finit par le remarquer ; celui qui ne paie presque jamais, souvent pas.",
+          "parler": [
+            "Tu trouves que c'est équilibré, ce que chacun met quand on sort ?",
+            "On fait comment quand l'un de nous gagne nettement moins que l'autre ?"
+          ],
+          "eviter": "Compter chaque addition dans sa tête sans jamais en parler."
+        },
         "arg8": {
           "q": "Aider financièrement un membre de votre famille, même pour une grosse somme :",
           "o": [
@@ -983,6 +993,38 @@
           ],
           "eviter": "En parler sous le coup de la fatigue d'une mauvaise nuit, ou sous le charme d'un bébé croisé chez des amis."
         },
+        "enf2b": {
+          "q": "Depuis que vous avez des enfants, le temps rien que pour vous deux...",
+          "o": [
+            "On le protège, c'est sacré",
+            "On essaie, sans toujours y arriver",
+            "Il est rare",
+            "Il n'y en a presque plus"
+          ],
+          "court": "Du temps à deux depuis les enfants",
+          "pourquoi": "C'est ce que la recherche montre le plus nettement après une naissance : le couple passe derrière, et des années plus tard il a du mal à repasser devant. Les couples qui tiennent sont ceux qui gardent des moments à deux, même courts.",
+          "parler": [
+            "C'est quoi, pour toi, un vrai moment à deux en ce moment ?",
+            "Qu'est-ce qu'on pourrait caler chaque semaine, rien que nous ?"
+          ],
+          "eviter": "Attendre que les enfants soient grands pour s'occuper du couple."
+        },
+        "enf3b": {
+          "q": "Face aux enfants, vous êtes deux parents...",
+          "o": [
+            "Qui font front commun, quoi qu'il arrive",
+            "Qui se complètent : l'un plus ferme, l'autre plus souple",
+            "Qui font chacun à sa façon",
+            "Dont l'un porte l'essentiel des décisions"
+          ],
+          "court": "Deux parents face aux enfants",
+          "pourquoi": "Les chercheurs appellent ça la coparentalité : pas forcément la même éducation, mais le sentiment de former une équipe. C'est ce qui pèse le plus sur le couple une fois les enfants là, bien plus que le nombre de couches changées.",
+          "parler": [
+            "Tu te sens soutenu(e) par moi devant les enfants ?",
+            "Sur quoi on se contredit le plus souvent devant eux ?"
+          ],
+          "eviter": "Régler un désaccord d'éducation devant les enfants, en prenant l'un d'eux à témoin."
+        },
         "enf4": {
           "q": "Pour élever un enfant, vous êtes plutôt...",
           "o": [
@@ -1056,6 +1098,96 @@
             "Il y a des choses que tu préfères que je ne fasse pas ?"
           ],
           "eviter": "Faire de l'éducation des enfants un terrain de compétition avec l'ex."
+        },
+        "enf9": {
+          "q": "Si votre partenaire se mettait à vouloir un enfant, vous...",
+          "o": [
+            "Ce serait un vrai problème entre nous",
+            "On en parlerait, mais je ne pense pas changer d'avis",
+            "Je pourrais reconsidérer la question",
+            "Je suivrais sans doute"
+          ],
+          "court": "Si l'autre change d'avis",
+          "pourquoi": "Ne pas vouloir d'enfant est une décision qui se prend tôt chez la plupart des gens et qui bouge peu avec l'âge. Mais dans un couple, il suffit que l'un des deux change pour que tout soit à rediscuter.",
+          "parler": [
+            "Qu'est-ce qui pourrait te faire changer d'avis, s'il y a quelque chose ?",
+            "Si l'un de nous changeait d'avis, on ferait quoi ?"
+          ],
+          "eviter": "Penser que l'autre finira par vouloir la même chose que vous."
+        },
+        "enf10": {
+          "q": "Quand la famille ou les amis demandent « et les enfants, c'est pour quand ? », vous...",
+          "o": [
+            "Je dis clairement que ce n'est pas prévu",
+            "J'élude, avec humour ou autrement",
+            "Ça me pèse à chaque fois",
+            "Je laisse mon ou ma partenaire répondre"
+          ],
+          "court": "La question des autres",
+          "pourquoi": "Les couples sans enfant par choix entendent la question pendant des années, de la famille, des collègues, des amis. Ce que chacun ressent face à cette pression, et comment il y répond, dit beaucoup de la solidité du choix à deux.",
+          "parler": [
+            "Qui te la pose le plus souvent, et qu'est-ce que tu réponds ?",
+            "Tu voudrais qu'on réponde la même chose tous les deux ?"
+          ],
+          "eviter": "Laisser l'un des deux encaisser seul les remarques."
+        },
+        "enf11": {
+          "q": "Sans enfants, le projet qui compte le plus pour vous deux, c'est...",
+          "o": [
+            "Voyager, découvrir",
+            "Un projet professionnel ou créatif",
+            "Une maison, un lieu bien à nous",
+            "Du temps libre, sans grand projet"
+          ],
+          "court": "Le projet à la place",
+          "pourquoi": "Un couple sans enfant se construit autour d'autre chose : des voyages, un métier, un lieu, ou simplement du temps. Quand les deux n'ont pas le même « autre chose », l'un a vite l'impression de vivre le projet de l'autre.",
+          "parler": [
+            "Dans dix ans, tu nous vois où, et en train de faire quoi ?",
+            "Qu'est-ce qu'on fait de la liberté que ça nous laisse ?"
+          ],
+          "eviter": "Remplir le temps sans jamais décider à deux de ce qu'on en fait."
+        },
+        "enf12": {
+          "q": "Les enfants des autres (neveux, nièces, enfants d'amis), qui a le plus envie de passer du temps avec eux ?",
+          "court": "Les enfants des autres",
+          "pourquoi": "Ne pas vouloir d'enfant ne dit rien de ce qu'on ressent avec les enfants des autres. Quand l'un adore être tonton ou marraine et que l'autre les fuit, les week-ends en famille ne se vivent pas pareil.",
+          "parler": [
+            "Qu'est-ce que tu aimes, ou pas, dans le temps passé avec les enfants de nos proches ?",
+            "Être parrain ou marraine, ça te dirait ?"
+          ],
+          "eviter": "Imposer à l'autre, auprès des enfants des proches, un rôle qu'il n'a pas choisi."
+        },
+        "enf13": {
+          "q": "Vieillir sans enfants (qui sera là, la solitude, la dépendance), vous y pensez...",
+          "o": [
+            "Souvent, et ça m'inquiète",
+            "De temps en temps",
+            "Rarement",
+            "Jamais, on s'organisera le moment venu"
+          ],
+          "court": "Vieillir sans enfants",
+          "pourquoi": "C'est l'argument qu'on oppose le plus aux couples sans enfant, et la recherche ne le confirme pas : les personnes âgées sans enfant ne sont pas plus isolées, à condition d'avoir construit un entourage. Encore faut-il que les deux y pensent de la même façon.",
+          "parler": [
+            "Qu'est-ce qui te rassurerait pour plus tard ?",
+            "Sur qui on pourra compter, et qui pourra compter sur nous ?"
+          ],
+          "eviter": "Balayer l'inquiétude de l'autre d'un « on verra bien »."
+        },
+        "enf14": {
+          "q": "Avoir quelqu'un ou quelque chose dont prendre soin à deux (un animal, des filleuls, un engagement) :",
+          "o": [
+            "Oui, c'est important pour moi",
+            "Oui, pourquoi pas",
+            "Pas spécialement",
+            "Non, je préfère rester libre"
+          ],
+          "court": "Prendre soin, autrement",
+          "pourquoi": "Beaucoup de couples sans enfant mettent cette envie ailleurs : un chien, un jardin, des filleuls, une association. Quand l'un en a besoin et pas l'autre, c'est une petite frustration qui dure.",
+          "parler": [
+            "Tu as envie de t'occuper de quelqu'un ou de quelque chose, en ce moment ?",
+            "Qu'est-ce qu'on pourrait avoir ou faire ensemble dans ce sens ?"
+          ],
+          "eviter": "Prendre un animal pour l'un des deux seulement."
         }
       }
     },
@@ -1100,6 +1232,22 @@
             "Si nos familles nous mettaient la pression, on répondrait quoi ?"
           ],
           "eviter": "Laisser les grands-parents décider à votre place."
+        },
+        "val2b": {
+          "q": "Ce que vous laisserez derrière vous (une œuvre, une entreprise, une transmission à des proches), ça compte pour vous...",
+          "o": [
+            "Beaucoup",
+            "Un peu",
+            "Pas vraiment",
+            "Pas du tout"
+          ],
+          "court": "Ce qu'on laisse derrière soi",
+          "pourquoi": "Sans enfants, la question de ce qu'on transmet se pose autrement : une œuvre, un savoir, un lieu, un engagement, ou rien de particulier. Deux personnes qui n'y mettent pas la même importance ne feront pas les mêmes choix de vie.",
+          "parler": [
+            "Qu'est-ce que tu aimerais laisser, ou transmettre, et à qui ?",
+            "C'est important pour toi qu'on construise quelque chose qui nous dépasse ?"
+          ],
+          "eviter": "Ramener toute transmission aux enfants : il y en a d'autres."
         },
         "val3": {
           "q": "Le mariage ou le PACS, pour vous...",

@@ -459,6 +459,18 @@ marque les sujets de poids 3 « Sujet décisif » et la synthèse de fin compte
 le « socle » : la part des sujets décisifs sur lesquels les deux sont
 d'accord.
 
+### Cent questions, exactement
+
+Thomas : « il en faut 100, c'est symbolique ». La v2 en posait de 97 à 101
+selon la situation, et 90 à qui ne voulait pas d'enfant. Désormais chaque
+question à condition a sa jumelle dans l'autre cas, et les sept questions
+qui disparaissent quand on répond « Non » à « Avoir des enfants » sont
+remplacées par sept questions sur la vie sans enfants (si l'autre change
+d'avis, la question des proches, le projet à la place, les enfants des
+autres, vieillir sans enfants, prendre soin autrement, ce qu'on laisse). Le
+détail est dans RECHERCHE.md (« Cent questions pour tout le monde ») ; la
+page de vente, les encarts et l'application disent « 100 questions ».
+
 ### Des réponses sans bonne réponse
 
 Aucune option ne doit se lire comme la bonne ou la mauvaise réponse, ni

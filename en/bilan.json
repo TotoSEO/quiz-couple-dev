@@ -74,7 +74,7 @@
     },
     "rejoindre": {
       "titre": "{{autre}} would like you to do your relationship assessment together",
-      "texte": "About a hundred concrete questions about your life together. You answer on your side, without seeing {{autre}}'s answers, and the other way round. When you've both finished, your report puts your two answers side by side, topic by topic.",
+      "texte": "100 concrete questions about your life together. You answer on your side, without seeing {{autre}}'s answers, and the other way round. When you've both finished, your report puts your two answers side by side, topic by topic.",
       "duree": "Allow 25 to 30 minutes. You can take a break whenever you like, everything is saved.",
       "situationTitre": "Your situation, as {{autre}} described it",
       "situationCorriger": "Correct",
@@ -548,7 +548,7 @@
   "lp": {
     "badge": "Relationship assessment",
     "titre": "Do you both want the same life?",
-    "sousTitre": "A complete assessment of your relationship, built on research in couple psychology: about a hundred specific questions across twelve areas of life together, and a report that tells you, topic by topic, where you meet and what you need to talk about. Together, each on your own side, or on your own if the other isn't ready to talk about it.",
+    "sousTitre": "A complete assessment of your relationship, built on research in couple psychology: 100 specific questions across twelve areas of life together, and a report that tells you, topic by topic, where you meet and what you need to talk about. Together, each on your own side, or on your own if the other isn't ready to talk about it.",
     "points": [
       "You each answer on your own phone, without seeing the other's answers",
       "Questions built from research in couple psychology",
@@ -722,7 +722,7 @@
         }
       ],
       "fin": "On the big questions (children, where to live, fidelity...), each of you can also mark an answer as a deal-breaker. The report then starts there.",
-      "cta": "See the hundred others"
+      "cta": "See all 100 questions"
     },
     "pour": {
       "titre": "For couples who want to see clearly",
@@ -760,7 +760,7 @@
           "c": [
             "A professional's, over the sessions",
             "Made up when you ask for them, often vague: \"Do you communicate well?\"",
-            "About a hundred, written in advance and backed by research: \"Who thinks of the doctor's appointments?\""
+            "A hundred, written in advance and backed by research: \"Who thinks of the doctor's appointments?\""
           ]
         },
         {
@@ -830,7 +830,7 @@
       "unite": "for the couple, in one go",
       "aide": "You only pay at the end, once your answers are in. One payment, by either of you. No subscription, no account.",
       "inclus": [
-        "About a hundred questions across twelve areas",
+        "100 questions across twelve areas",
         "The full report, about forty pages with its charts",
         "Your next four conversations, with ways to lead them",
         "The PDF by email and the online version for six months",
@@ -865,7 +865,7 @@
       "items": [
         {
           "q": "How long does the assessment take?",
-          "a": "Allow 25 to 30 minutes each, for about a hundred questions. Nothing forces you to do it all at once: every answer is saved, and you pick up where you left off."
+          "a": "Allow 25 to 30 minutes each, for 100 questions. Nothing forces you to do it all at once: every answer is saved, and you pick up where you left off."
         },
         {
           "q": "Will my partner see all my answers?",

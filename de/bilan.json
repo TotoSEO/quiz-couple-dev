@@ -548,7 +548,7 @@
   "lp": {
     "badge": "Beziehungsanalyse",
     "titre": "Wollt ihr beide dasselbe Leben?",
-    "sousTitre": "Eine vollständige Analyse eurer Beziehung, aufgebaut auf der Forschung der Paarpsychologie: rund hundert genaue Fragen zu zwölf Bereichen des gemeinsamen Lebens, und ein Bericht, der euch Thema für Thema sagt, wo ihr euch trefft und worüber ihr reden solltet. Zu zweit, jeder für sich, oder allein, wenn der andere noch nicht bereit ist, darüber zu reden.",
+    "sousTitre": "Eine vollständige Analyse eurer Beziehung, aufgebaut auf der Forschung der Paarpsychologie: 100 genaue Fragen zu zwölf Bereichen des gemeinsamen Lebens, und ein Bericht, der euch Thema für Thema sagt, wo ihr euch trefft und worüber ihr reden solltet. Zu zweit, jeder für sich, oder allein, wenn der andere noch nicht bereit ist, darüber zu reden.",
     "points": [
       "Jeder antwortet auf dem eigenen Handy, ohne die Antworten des anderen zu sehen",
       "Fragen, die auf der Forschung der Paarpsychologie aufbauen",
@@ -722,7 +722,7 @@
         }
       ],
       "fin": "Bei den großen Fragen (Kinder, Wohnort, Treue...) kann jeder seine Antwort auch als nicht verhandelbar markieren. Der Bericht fängt dann damit an.",
-      "cta": "Die hundert anderen sehen"
+      "cta": "Alle 100 Fragen sehen"
     },
     "pour": {
       "titre": "Für Paare, die klar sehen wollen",
@@ -760,7 +760,7 @@
           "c": [
             "Die einer Fachperson, im Lauf der Sitzungen",
             "Im Moment der Anfrage erfunden, oft vage: „Kommuniziert ihr gut?“",
-            "Rund hundert, vorab geschrieben und auf die Forschung gestützt: „Wer denkt an die Arzttermine?“"
+            "Hundert, vorab geschrieben und auf die Forschung gestützt: „Wer denkt an die Arzttermine?“"
           ]
         },
         {
@@ -830,7 +830,7 @@
       "unite": "für das Paar, einmalig",
       "aide": "Ihr zahlt erst am Ende, wenn eure Antworten abgegeben sind. Eine einzige Zahlung, von einem von euch. Kein Abo, kein Konto.",
       "inclus": [
-        "Rund hundert Fragen zu zwölf Bereichen",
+        "100 Fragen zu zwölf Bereichen",
         "Der vollständige Bericht, rund vierzig Seiten mit Grafiken",
         "Eure nächsten vier Gespräche, mit Hilfen, sie zu führen",
         "Das PDF per E-Mail und die Online-Version sechs Monate lang",
@@ -865,7 +865,7 @@
       "items": [
         {
           "q": "Wie lange dauert die Analyse?",
-          "a": "Rechnet mit 25 bis 30 Minuten pro Person, für rund hundert Fragen. Nichts zwingt euch, alles auf einmal zu machen: Jede Antwort wird gespeichert, und ihr macht da weiter, wo ihr aufgehört habt."
+          "a": "Rechnet mit 25 bis 30 Minuten pro Person, für 100 Fragen. Nichts zwingt euch, alles auf einmal zu machen: Jede Antwort wird gespeichert, und ihr macht da weiter, wo ihr aufgehört habt."
         },
         {
           "q": "Sieht mein Partner oder meine Partnerin alle meine Antworten?",

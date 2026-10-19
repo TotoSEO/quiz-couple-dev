@@ -757,6 +757,16 @@
           ],
           "eviter": "Letting the other handle everything, then criticising their choices."
         },
+        "arg7b": {
+          "q": "When you're together (going out, restaurants, weekends), who pays most often?",
+          "court": "Who pays when you go out",
+          "pourquoi": "Without a shared home, the couple's money is mostly the money spent going out. The one who almost always pays ends up noticing; the one who almost never pays often doesn't.",
+          "parler": [
+            "Do you think what each of us puts in when we go out is fair?",
+            "What do we do when one of us earns clearly less than the other?"
+          ],
+          "eviter": "Keeping a tally of every bill in your head without ever talking about it."
+        },
         "arg8": {
           "q": "Helping a family member financially, even with a large sum:",
           "o": [
@@ -983,6 +993,38 @@
           ],
           "eviter": "Talking about it exhausted after a bad night, or charmed by a friend's baby."
         },
+        "enf2b": {
+          "q": "Since you've had children, time just for the two of you...",
+          "o": [
+            "We protect it, it's sacred",
+            "We try, without always managing",
+            "It's rare",
+            "There's almost none left"
+          ],
+          "court": "Couple time since the children",
+          "pourquoi": "It's what research shows most clearly after a birth: the couple moves to the back, and years later struggles to get to the front again. The couples that last are the ones who keep moments for two, even short ones.",
+          "parler": [
+            "What counts as real time for the two of us right now, for you?",
+            "What could we set aside every week, just us?"
+          ],
+          "eviter": "Waiting for the children to grow up before looking after the couple."
+        },
+        "enf3b": {
+          "q": "With the children, you are two parents who...",
+          "o": [
+            "Stand together, whatever happens",
+            "Complement each other: one firmer, the other softer",
+            "Each do things their own way",
+            "One of whom makes most of the decisions"
+          ],
+          "court": "Two parents with the children",
+          "pourquoi": "Researchers call it co-parenting: not necessarily the same parenting style, but the feeling of being a team. It's what weighs most on the couple once the children are there, far more than the number of nappies changed.",
+          "parler": [
+            "Do you feel backed up by me in front of the children?",
+            "What do we contradict each other about most often in front of them?"
+          ],
+          "eviter": "Settling a parenting disagreement in front of the children, with one of them as a witness."
+        },
         "enf4": {
           "q": "When it comes to raising a child, you're more...",
           "o": [
@@ -1056,6 +1098,96 @@
             "Are there things you'd rather I didn't do?"
           ],
           "eviter": "Turning the children's upbringing into a competition with the ex."
+        },
+        "enf9": {
+          "q": "If your partner started wanting a child, you would...",
+          "o": [
+            "See it as a real problem between us",
+            "Talk about it, but I don't think I'd change my mind",
+            "Possibly reconsider",
+            "Probably go along with it"
+          ],
+          "court": "If the other changes their mind",
+          "pourquoi": "Not wanting children is a decision most people make early and that changes little with age. But in a couple, it only takes one of the two to change for everything to be back on the table.",
+          "parler": [
+            "What could make you change your mind, if anything?",
+            "If one of us changed their mind, what would we do?"
+          ],
+          "eviter": "Assuming the other will end up wanting the same thing as you."
+        },
+        "enf10": {
+          "q": "When family or friends ask \"so, when are the kids coming?\", you...",
+          "o": [
+            "Say clearly that it isn't planned",
+            "Dodge it, with humour or otherwise",
+            "Find it hard every time",
+            "Let my partner answer"
+          ],
+          "court": "Other people's question",
+          "pourquoi": "Couples who are childfree by choice hear the question for years, from family, colleagues and friends. How each of you feels under that pressure, and how you answer it, says a lot about how solid the choice is as a couple.",
+          "parler": [
+            "Who asks you most often, and what do you answer?",
+            "Would you like us to give the same answer, both of us?"
+          ],
+          "eviter": "Letting one of you take the remarks alone."
+        },
+        "enf11": {
+          "q": "Without children, the project that matters most to the two of you is...",
+          "o": [
+            "Travelling, discovering",
+            "A professional or creative project",
+            "A house, a place of our own",
+            "Free time, with no big project"
+          ],
+          "court": "The project instead",
+          "pourquoi": "A childfree couple builds itself around something else: travel, a career, a place, or simply time. When the two don't share the same \"something else\", one soon feels like they're living the other's project.",
+          "parler": [
+            "In ten years, where do you see us, and doing what?",
+            "What do we do with the freedom it leaves us?"
+          ],
+          "eviter": "Filling the time without ever deciding together what to do with it."
+        },
+        "enf12": {
+          "q": "Other people's children (nephews, nieces, friends' kids): who most wants to spend time with them?",
+          "court": "Other people's children",
+          "pourquoi": "Not wanting children says nothing about how you feel around other people's. When one loves being the uncle or the godmother and the other avoids them, family weekends aren't lived the same way.",
+          "parler": [
+            "What do you like, or not, about time spent with our relatives' children?",
+            "Being a godparent, would that appeal to you?"
+          ],
+          "eviter": "Imposing on the other a role with relatives' children that they didn't choose."
+        },
+        "enf13": {
+          "q": "Growing old without children (who will be there, loneliness, dependence): you think about it...",
+          "o": [
+            "Often, and it worries me",
+            "From time to time",
+            "Rarely",
+            "Never, we'll sort it out when the time comes"
+          ],
+          "court": "Growing old without children",
+          "pourquoi": "It's the argument most often thrown at childfree couples, and research doesn't back it up: older people without children aren't more isolated, provided they've built a circle around them. The two of you still need to think about it the same way.",
+          "parler": [
+            "What would reassure you about later on?",
+            "Who will we be able to count on, and who will be able to count on us?"
+          ],
+          "eviter": "Brushing off the other's worry with a \"we'll see\"."
+        },
+        "enf14": {
+          "q": "Having someone or something to take care of together (a pet, godchildren, a commitment):",
+          "o": [
+            "Yes, it matters to me",
+            "Yes, why not",
+            "Not especially",
+            "No, I'd rather stay free"
+          ],
+          "court": "Caring, differently",
+          "pourquoi": "Many childfree couples put that urge elsewhere: a dog, a garden, godchildren, a charity. When one needs it and the other doesn't, it's a small frustration that lasts.",
+          "parler": [
+            "Do you feel like looking after someone or something at the moment?",
+            "What could we have or do together along those lines?"
+          ],
+          "eviter": "Getting a pet for only one of you."
         }
       }
     },
@@ -1100,6 +1232,22 @@
             "If our families put pressure on us, what would we say?"
           ],
           "eviter": "Letting the grandparents decide for you."
+        },
+        "val2b": {
+          "q": "What you'll leave behind you (a body of work, a business, something passed on to loved ones) matters to you...",
+          "o": [
+            "A lot",
+            "A little",
+            "Not really",
+            "Not at all"
+          ],
+          "court": "What you leave behind",
+          "pourquoi": "Without children, the question of what you pass on comes up differently: a body of work, knowledge, a place, a commitment, or nothing in particular. Two people who don't give it the same importance won't make the same life choices.",
+          "parler": [
+            "What would you like to leave, or pass on, and to whom?",
+            "Does it matter to you that we build something bigger than us?"
+          ],
+          "eviter": "Reducing everything you pass on to children: there are other ways."
         },
         "val3": {
           "q": "Marriage or a civil partnership, for you...",

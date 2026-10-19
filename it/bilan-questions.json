@@ -757,6 +757,16 @@
           ],
           "eviter": "Lasciare che l'altro gestisca tutto, e poi criticare le sue scelte."
         },
+        "arg7b": {
+          "q": "Quando siete insieme (uscite, ristoranti, weekend), chi paga più spesso?",
+          "court": "Chi paga quando si esce",
+          "pourquoi": "Senza vita in comune, i soldi della coppia sono soprattutto quelli delle uscite. Chi paga quasi sempre finisce per accorgersene; chi non paga quasi mai, spesso no.",
+          "parler": [
+            "Ti sembra equilibrato quello che mette ciascuno quando usciamo?",
+            "Come facciamo quando uno di noi guadagna nettamente meno dell'altro?"
+          ],
+          "eviter": "Tenere il conto di ogni scontrino nella testa senza parlarne mai."
+        },
         "arg8": {
           "q": "Aiutare economicamente un familiare, anche con una cifra importante:",
           "o": [
@@ -983,6 +993,38 @@
           ],
           "eviter": "Parlarne sfiniti dopo una brutta notte, o inteneriti dal bebè di amici."
         },
+        "enf2b": {
+          "q": "Da quando avete figli, il tempo solo per voi due...",
+          "o": [
+            "Lo proteggiamo, è sacro",
+            "Ci proviamo, senza riuscirci sempre",
+            "È raro",
+            "Non ce n'è quasi più"
+          ],
+          "court": "Tempo in due da quando ci sono i figli",
+          "pourquoi": "È quello che la ricerca mostra più chiaramente dopo una nascita: la coppia passa in secondo piano e, anni dopo, fatica a tornare in primo. Le coppie che reggono sono quelle che si tengono dei momenti in due, anche brevi.",
+          "parler": [
+            "Cos'è per te un vero momento in due, in questo periodo?",
+            "Cosa potremmo fissare ogni settimana, solo noi?"
+          ],
+          "eviter": "Aspettare che i figli siano grandi per occuparsi della coppia."
+        },
+        "enf3b": {
+          "q": "Davanti ai figli, siete due genitori che...",
+          "o": [
+            "Fanno fronte comune, qualunque cosa succeda",
+            "Si completano: uno più fermo, l'altro più morbido",
+            "Fanno ciascuno a modo suo",
+            "Di cui uno porta la maggior parte delle decisioni"
+          ],
+          "court": "Due genitori davanti ai figli",
+          "pourquoi": "I ricercatori la chiamano cogenitorialità: non per forza la stessa educazione, ma la sensazione di essere una squadra. È quello che pesa di più sulla coppia una volta che i figli ci sono, molto più del numero di pannolini cambiati.",
+          "parler": [
+            "Ti senti sostenuto o sostenuta da me davanti ai bambini?",
+            "Su cosa ci contraddiciamo più spesso davanti a loro?"
+          ],
+          "eviter": "Risolvere un disaccordo educativo davanti ai figli, prendendone uno a testimone."
+        },
         "enf4": {
           "q": "Per crescere un figlio, sei più...",
           "o": [
@@ -1056,6 +1098,96 @@
             "Ci sono cose che preferisci che io non faccia?"
           ],
           "eviter": "Trasformare l'educazione dei bambini in una gara con l'ex."
+        },
+        "enf9": {
+          "q": "Se il tuo partner cominciasse a volere un figlio, tu...",
+          "o": [
+            "Sarebbe un vero problema tra noi",
+            "Ne parleremmo, ma non credo che cambierei idea",
+            "Potrei riconsiderare la questione",
+            "Probabilmente lo seguirei"
+          ],
+          "court": "Se l'altro cambia idea",
+          "pourquoi": "Non volere figli è una decisione che la maggior parte delle persone prende presto e che cambia poco con l'età. Ma in una coppia basta che uno dei due cambi perché tutto torni in discussione.",
+          "parler": [
+            "Cosa potrebbe farti cambiare idea, se c'è qualcosa?",
+            "Se uno di noi cambiasse idea, cosa faremmo?"
+          ],
+          "eviter": "Pensare che l'altro finirà per volere la stessa cosa che vuoi tu."
+        },
+        "enf10": {
+          "q": "Quando la famiglia o gli amici chiedono «e i figli, per quando?», tu...",
+          "o": [
+            "Dico chiaramente che non è previsto",
+            "Glisso, con ironia o in altro modo",
+            "Mi pesa ogni volta",
+            "Lascio rispondere il mio partner"
+          ],
+          "court": "La domanda degli altri",
+          "pourquoi": "Le coppie senza figli per scelta sentono la domanda per anni, dalla famiglia, dai colleghi, dagli amici. Quello che ciascuno prova davanti a questa pressione, e come risponde, dice molto di quanto la scelta sia solida in due.",
+          "parler": [
+            "Chi te lo chiede più spesso, e cosa rispondi?",
+            "Vorresti che rispondessimo la stessa cosa tutti e due?"
+          ],
+          "eviter": "Lasciare che uno dei due incassi da solo i commenti."
+        },
+        "enf11": {
+          "q": "Senza figli, il progetto che conta di più per voi due è...",
+          "o": [
+            "Viaggiare, scoprire",
+            "Un progetto professionale o creativo",
+            "Una casa, un posto tutto nostro",
+            "Tempo libero, senza grandi progetti"
+          ],
+          "court": "Il progetto al posto loro",
+          "pourquoi": "Una coppia senza figli si costruisce intorno ad altro: viaggi, un mestiere, un posto, o semplicemente tempo. Quando i due non hanno lo stesso «altro», uno ha presto l'impressione di vivere il progetto dell'altro.",
+          "parler": [
+            "Tra dieci anni, dove ci vedi, e a fare cosa?",
+            "Cosa facciamo della libertà che questo ci lascia?"
+          ],
+          "eviter": "Riempire il tempo senza mai decidere in due cosa farne."
+        },
+        "enf12": {
+          "q": "I figli degli altri (nipoti, figli di amici): chi ha più voglia di passare del tempo con loro?",
+          "court": "I figli degli altri",
+          "pourquoi": "Non volere figli non dice niente di quello che si prova con i figli degli altri. Quando uno adora fare lo zio o la madrina e l'altro li evita, i weekend in famiglia non si vivono allo stesso modo.",
+          "parler": [
+            "Cosa ti piace, o no, del tempo passato con i figli dei nostri cari?",
+            "Fare il padrino o la madrina, ti andrebbe?"
+          ],
+          "eviter": "Imporre all'altro, con i figli dei cari, un ruolo che non ha scelto."
+        },
+        "enf13": {
+          "q": "Invecchiare senza figli (chi ci sarà, la solitudine, la dipendenza): ci pensi...",
+          "o": [
+            "Spesso, e mi preoccupa",
+            "Ogni tanto",
+            "Raramente",
+            "Mai, ci organizzeremo al momento"
+          ],
+          "court": "Invecchiare senza figli",
+          "pourquoi": "È l'argomento che si oppone più spesso alle coppie senza figli, e la ricerca non lo conferma: le persone anziane senza figli non sono più isolate, a patto di essersi costruite una cerchia. Ma bisogna che tutti e due ci pensino allo stesso modo.",
+          "parler": [
+            "Cosa ti rassicurerebbe per il futuro?",
+            "Su chi potremo contare, e chi potrà contare su di noi?"
+          ],
+          "eviter": "Liquidare la preoccupazione dell'altro con un «vedremo»."
+        },
+        "enf14": {
+          "q": "Avere qualcuno o qualcosa di cui prendersi cura in due (un animale, dei figliocci, un impegno):",
+          "o": [
+            "Sì, è importante per me",
+            "Sì, perché no",
+            "Non particolarmente",
+            "No, preferisco restare libero/a"
+          ],
+          "court": "Prendersi cura, in altro modo",
+          "pourquoi": "Molte coppie senza figli mettono questo desiderio altrove: un cane, un giardino, dei figliocci, un'associazione. Quando uno ne ha bisogno e l'altro no, è una piccola frustrazione che dura.",
+          "parler": [
+            "Hai voglia di occuparti di qualcuno o di qualcosa, in questo periodo?",
+            "Cosa potremmo avere o fare insieme in questo senso?"
+          ],
+          "eviter": "Prendere un animale per uno solo dei due."
         }
       }
     },
@@ -1100,6 +1232,22 @@
             "Se le nostre famiglie facessero pressione, cosa risponderemmo?"
           ],
           "eviter": "Lasciare che siano i nonni a decidere per voi."
+        },
+        "val2b": {
+          "q": "Quello che lascerete dietro di voi (un'opera, un'impresa, qualcosa da trasmettere ai vostri cari) conta per te...",
+          "o": [
+            "Molto",
+            "Un po'",
+            "Non molto",
+            "Per niente"
+          ],
+          "court": "Quello che si lascia",
+          "pourquoi": "Senza figli, la domanda su cosa si trasmette si pone in modo diverso: un'opera, un sapere, un posto, un impegno, o niente di particolare. Due persone che non ci danno la stessa importanza non faranno le stesse scelte di vita.",
+          "parler": [
+            "Cosa ti piacerebbe lasciare, o trasmettere, e a chi?",
+            "È importante per te che costruiamo qualcosa che vada oltre noi?"
+          ],
+          "eviter": "Ridurre ogni trasmissione ai figli: ce ne sono altre."
         },
         "val3": {
           "q": "Sposarsi o unirsi civilmente, per te...",

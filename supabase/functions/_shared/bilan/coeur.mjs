@@ -69,8 +69,18 @@ export const SITUATION = [
 //            défense, fermeture) ou à sa solidité (réparer après) ; elles
 //            forment la page « Signaux de vigilance » du rapport.
 // `si` : conditions sur la situation ; `siRep` : sur ses propres réponses
-// (on ne demande pas comment élever un enfant à qui n'en veut pas).
+// (on ne demande pas comment élever un enfant à qui n'en veut pas) ;
+// `alternative` : la branche de remplacement d'un `siRep`, cachée tant que la
+// question de référence n'a pas de réponse.
 const VEUT_ENFANTS = { enf1: [0, 1, 2] };
+// Et l'inverse : « Non » à enf1. Les questions sur l'éducation ou le calendrier
+// disparaissent alors, et autant de questions sur la vie sans enfants (si
+// l'autre change d'avis, la pression de l'entourage, le projet à la place,
+// vieillir sans enfants...) prennent leur place, pour que tout le monde
+// réponde à cent questions, exactement : chaque question à condition a sa
+// jumelle dans l'autre cas (19 octobre 2026, Thomas : « il en faut 100, c'est
+// symbolique »).
+const SANS_ENFANTS = { enf1: [3] };
 
 export const DOMAINES = [
   { id: 'quotidien', questions: [
@@ -123,6 +133,7 @@ export const DOMAINES = [
     { id: 'arg5', type: 'choix', n: 4, poids: 1, proches: [[1, 2]] },
     { id: 'arg6', type: 'echelle', n: 4, poids: 2 },
     { id: 'arg7', type: 'qui', poids: 1, si: { ensemble: 'oui' } },
+    { id: 'arg7b', type: 'qui', poids: 1, si: { ensemble: 'non' } },
     { id: 'arg8', type: 'echelle', n: 4, poids: 2 },
   ] },
   { id: 'logement', questions: [
@@ -138,18 +149,32 @@ export const DOMAINES = [
   { id: 'enfants', questions: [
     { id: 'enf1', type: 'echelle', n: 4, poids: 3, decisif: true, si: { enfants: 'non' } },
     { id: 'enf2', type: 'echelle', n: 4, poids: 3, decisif: true, si: { enfants: 'non' }, siRep: VEUT_ENFANTS },
-    { id: 'enf3', type: 'choix', n: 4, poids: 2, si: { enfants: 'non' }, siRep: VEUT_ENFANTS,
+    // enf3 laisse sa place à enf8 (la famille recomposée) quand l'un des deux a
+    // déjà des enfants : trois questions dans chaque cas.
+    { id: 'enf3', type: 'choix', n: 4, poids: 2, si: { enfants: 'non', enfantsAvant: 'non' }, siRep: VEUT_ENFANTS,
       proches: [[0, 1], [1, 2], [0, 3], [1, 3], [2, 3]] },
     { id: 'enf1b', type: 'echelle', n: 4, poids: 3, decisif: true, si: { enfants: 'oui' } },
+    { id: 'enf2b', type: 'echelle', n: 4, poids: 2, si: { enfants: 'oui' } },
+    { id: 'enf3b', type: 'echelle', n: 4, poids: 2, si: { enfants: 'oui', enfantsAvant: 'non' } },
     { id: 'enf4', type: 'echelle', n: 4, poids: 2, siRep: VEUT_ENFANTS },
     { id: 'enf5', type: 'qui', poids: 2, siRep: VEUT_ENFANTS },
     { id: 'enf6', type: 'echelle', n: 4, poids: 2, siRep: VEUT_ENFANTS },
     { id: 'enf7', type: 'echelle', n: 4, poids: 1, siRep: VEUT_ENFANTS },
     { id: 'enf8', type: 'echelle', n: 4, poids: 2, si: { enfantsAvant: 'oui' } },
+    // La vie sans enfants, à la place de enf2 et enf4 à enf7 (et de enf3 sans
+    // enfants d'avant) pour qui a répondu « Non » à enf1.
+    { id: 'enf9', type: 'echelle', n: 4, poids: 2, si: { enfants: 'non' }, siRep: SANS_ENFANTS, alternative: true },
+    { id: 'enf10', type: 'echelle', n: 4, poids: 1, si: { enfants: 'non' }, siRep: SANS_ENFANTS, alternative: true },
+    { id: 'enf11', type: 'choix', n: 4, poids: 2, si: { enfants: 'non' }, siRep: SANS_ENFANTS, alternative: true,
+      proches: [[0, 3], [1, 2]] },
+    { id: 'enf12', type: 'qui', poids: 1, si: { enfants: 'non' }, siRep: SANS_ENFANTS, alternative: true },
+    { id: 'enf13', type: 'echelle', n: 4, poids: 2, si: { enfants: 'non' }, siRep: SANS_ENFANTS, alternative: true },
+    { id: 'enf14', type: 'echelle', n: 4, poids: 1, si: { enfants: 'non', enfantsAvant: 'non' }, siRep: SANS_ENFANTS, alternative: true },
   ] },
   { id: 'valeurs', questions: [
     { id: 'val1', type: 'echelle', n: 4, poids: 2, sensible: true },
     { id: 'val2', type: 'echelle', n: 4, poids: 3, decisif: true, sensible: true, siRep: VEUT_ENFANTS },
+    { id: 'val2b', type: 'echelle', n: 4, poids: 2, si: { enfants: 'non' }, siRep: SANS_ENFANTS, alternative: true },
     { id: 'val3', type: 'echelle', n: 4, poids: 3, decisif: true, si: { engagement: 'rien' } },
     { id: 'val3b', type: 'echelle', n: 4, poids: 2, si: { engagement: ['maries', 'pacses'] } },
     { id: 'val4', type: 'echelle', n: 4, poids: 1 },
@@ -274,8 +299,12 @@ export function applicable(q, situation, reponses) {
       if (!r || !applicable(r.q, situation, reponses)) continue;
       const v = reponses ? reponses[ref] : undefined;
       // Tant que la question de référence n'a pas de réponse, on garde la
-      // question : la page les pose dans l'ordre, la référence vient avant.
-      if (v !== undefined && v !== null && !valeurs.includes(v)) return false;
+      // branche par défaut (la page pose les questions dans l'ordre, la
+      // référence vient avant) et on cache la branche de remplacement
+      // (`alternative`) : sinon le total compterait les deux branches et la
+      // personne verrait « sur 107 » avant « sur 100 ».
+      if (v === undefined || v === null) { if (q.alternative) return false; continue; }
+      if (!valeurs.includes(v)) return false;
     }
   }
   return true;

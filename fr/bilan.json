@@ -74,7 +74,7 @@
     },
     "rejoindre": {
       "titre": "{{autre}} vous propose de faire votre évaluation de couple",
-      "texte": "Une centaine de questions concrètes sur votre vie à deux. Vous répondez de votre côté, sans voir les réponses de {{autre}}, et inversement. Quand vous avez fini tous les deux, votre rapport met vos deux réponses face à face, sujet par sujet.",
+      "texte": "100 questions concrètes sur votre vie à deux. Vous répondez de votre côté, sans voir les réponses de {{autre}}, et inversement. Quand vous avez fini tous les deux, votre rapport met vos deux réponses face à face, sujet par sujet.",
       "duree": "Comptez 25 à 30 minutes. Vous pouvez faire une pause quand vous voulez, tout est enregistré.",
       "situationTitre": "Votre situation, telle que {{autre}} l'a décrite",
       "situationCorriger": "Corriger",
@@ -548,7 +548,7 @@
   "lp": {
     "badge": "Évaluation de couple",
     "titre": "Voulez-vous la même vie, tous les deux ?",
-    "sousTitre": "Une évaluation complète de votre relation, construite sur la recherche en psychologie du couple : une centaine de questions précises sur douze domaines de la vie à deux, et un rapport qui vous dit, sujet par sujet, où vous vous rejoignez et de quoi il faut parler. À deux, chacun de son côté, ou seul(e) si l'autre n'est pas prêt(e) à en parler.",
+    "sousTitre": "Une évaluation complète de votre relation, construite sur la recherche en psychologie du couple : 100 questions précises sur douze domaines de la vie à deux, et un rapport qui vous dit, sujet par sujet, où vous vous rejoignez et de quoi il faut parler. À deux, chacun de son côté, ou seul(e) si l'autre n'est pas prêt(e) à en parler.",
     "points": [
       "Chacun répond sur son téléphone, sans voir les réponses de l'autre",
       "Des questions construites à partir de la recherche en psychologie du couple",
@@ -722,7 +722,7 @@
         }
       ],
       "fin": "Sur les grandes questions (les enfants, le lieu de vie, la fidélité...), chacun peut aussi marquer sa réponse « non négociable ». Le rapport commence alors par là.",
-      "cta": "Voir les cent autres"
+      "cta": "Voir les 100 questions"
     },
     "pour": {
       "titre": "Pour les couples qui veulent y voir clair",
@@ -760,7 +760,7 @@
           "c": [
             "Celles d'un professionnel, au fil des séances",
             "Inventées au moment où vous les demandez, souvent vagues : « Communiquez-vous bien ? »",
-            "Une centaine, écrites à l'avance et appuyées sur la recherche : « Qui pense aux rendez-vous chez le médecin ? »"
+            "Cent, écrites à l'avance et appuyées sur la recherche : « Qui pense aux rendez-vous chez le médecin ? »"
           ]
         },
         {
@@ -830,7 +830,7 @@
       "unite": "pour le couple, en une fois",
       "aide": "Vous ne payez qu'à la fin, une fois vos réponses données. Un seul paiement, par l'un ou l'autre. Pas d'abonnement, pas de compte.",
       "inclus": [
-        "Une centaine de questions sur douze domaines",
+        "100 questions sur douze domaines",
         "Le rapport complet, une quarantaine de pages avec ses graphiques",
         "Vos quatre prochaines conversations, avec de quoi les mener",
         "Le PDF par e-mail et la version en ligne pendant six mois",
@@ -865,7 +865,7 @@
       "items": [
         {
           "q": "Combien de temps faut-il pour faire l'évaluation ?",
-          "a": "Comptez 25 à 30 minutes chacun, pour une centaine de questions. Rien ne vous oblige à tout faire d'un coup : chaque réponse est enregistrée, et vous reprenez là où vous en étiez."
+          "a": "Comptez 25 à 30 minutes chacun, pour 100 questions. Rien ne vous oblige à tout faire d'un coup : chaque réponse est enregistrée, et vous reprenez là où vous en étiez."
         },
         {
           "q": "Mon ou ma partenaire verra-t-il toutes mes réponses ?",

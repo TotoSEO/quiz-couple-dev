@@ -42,18 +42,25 @@ test('chaque question a un identifiant unique et un type connu', () => {
   assert.equal(C.DOMAINES.length, 12);
 });
 
-test('environ 100 questions par personne, quelle que soit la situation', () => {
+test('exactement 100 questions par personne, quelle que soit la situation et la réponse sur les enfants', () => {
+  // Thomas, 19 octobre 2026 : « il en faut 100, c'est symbolique ». Chaque
+  // question à condition a sa jumelle dans l'autre cas, et la branche de
+  // remplacement d'un siRep est cachée tant que la référence n'a pas de
+  // réponse : le total vaut 100 à chaque instant, avant comme après enf1.
   const valeurs = C.SITUATION.map((s) => s.valeurs);
   const combos = valeurs.reduce((acc, v) => acc.flatMap((a) => v.map((x) => [...a, x])), [[]]);
   for (const combo of combos) {
     const sit = Object.fromEntries(C.SITUATION.map((s, i) => [s.id, combo[i]]));
     assert.ok(C.situationValide(sit));
-    const tout = C.questionsPour(sit, {}).length;
-    assert.ok(tout >= 94 && tout <= 105, JSON.stringify(sit) + ' : ' + tout);
-    // Chaque domaine garde au moins cinq questions.
-    for (const d of C.DOMAINES) {
-      const n = C.questionsPour(sit, {}).filter((x) => x.domaine === d.id).length;
-      assert.ok(n >= 5, d.id + ' ' + JSON.stringify(sit) + ' : ' + n);
+    const reponses = sit.enfants === 'non' ? [{}, { enf1: 0 }, { enf1: 1 }, { enf1: 2 }, { enf1: 3 }] : [{}];
+    for (const rep of reponses) {
+      const liste = C.questionsPour(sit, rep);
+      assert.equal(liste.length, 100, JSON.stringify(sit) + ' ' + JSON.stringify(rep) + ' : ' + liste.length);
+      // Chaque domaine garde au moins cinq questions.
+      for (const d of C.DOMAINES) {
+        const n = liste.filter((x) => x.domaine === d.id).length;
+        assert.ok(n >= 5, d.id + ' ' + JSON.stringify(sit) + ' : ' + n);
+      }
     }
   }
 });
@@ -63,6 +70,11 @@ test('qui ne veut pas d\'enfants ne répond pas aux questions sur leur éducatio
   const ids = C.questionsPour(SIT, rep).map((x) => x.id);
   for (const id of ['enf2', 'enf3', 'enf4', 'enf5', 'enf6', 'enf7', 'val2']) assert.ok(!ids.includes(id), id);
   assert.ok(ids.includes('enf1'));
+  // ... et répond à la place aux questions sur la vie sans enfants, cachées
+  // tant que enf1 n'a pas de réponse.
+  for (const id of ['enf9', 'enf10', 'enf11', 'enf12', 'enf13', 'enf14', 'val2b']) assert.ok(ids.includes(id), id);
+  const avant = C.questionsPour(SIT, {}).map((x) => x.id);
+  assert.ok(avant.includes('enf2') && !avant.includes('enf9') && !avant.includes('val2b'));
   const avec = C.questionsPour({ ...SIT, enfants: 'oui' }, {}).map((x) => x.id);
   assert.ok(avec.includes('enf1b') && avec.includes('enf4') && !avec.includes('enf1'));
 });
