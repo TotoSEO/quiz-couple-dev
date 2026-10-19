@@ -504,6 +504,14 @@ test('les liens perdus : « recevoir mon lien » et « retrouver mon évaluation
   const n = courriel.envoyes.length;
   assert.equal((await appel({ action: 'retrouver', email: 'personne@exemple.fr' }, '9.9.9.9')).statut, 200);
   assert.equal(courriel.envoyes.length, n, 'pas de second envoi en dix minutes');
+  // Le plafond du jour (LIENS_PAR_JOUR), compté en base : au-delà, « trop »
+  // pour « recevoir mon lien » comme pour « retrouver », et aucun e-mail.
+  const deja = courriel.envoyes.length;
+  for (let i = 0; i < 40; i++) stockage.compteurs.push({ evenement: i % 2 ? 'lien_envoye' : 'retrouver_envoye', cle: '', montant: 0 });
+  assert.equal((await appel({ action: 'lien', id: c.id, jeton: jetonNeuf, email: 'camille@exemple.fr' })).statut, 429, 'plafond du jour : lien');
+  assert.equal((await appel({ action: 'retrouver', email: 'autre@exemple.fr' }, '7.7.7.7')).statut, 429, 'plafond du jour : retrouver');
+  assert.equal(courriel.envoyes.length, deja, 'rien ne part au-delà du plafond');
+  stockage.compteurs.length = 0;
   // Une adresse mal formée : 400 ; cinq demandes par heure et par IP.
   assert.equal((await appel({ action: 'retrouver', email: 'nimporte' })).statut, 400);
   for (let i = 0; i < 2; i++) assert.equal((await appel({ action: 'retrouver', email: 'x' + i + '@exemple.fr' }, '9.9.9.9')).statut, 200);

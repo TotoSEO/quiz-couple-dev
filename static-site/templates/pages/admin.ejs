@@ -11,6 +11,11 @@
   const accueilSite = lang === 'fr' ? '/' : '/' + lang + '/';
 %>
 <link rel="stylesheet" href="/css/admin.css">
+<%# L'admin ne se charge jamais dans un cadre d'un autre site : GitHub Pages ne
+    pose pas d'en-tête X-Frame-Options, ce script tient lieu de protection
+    contre le détournement de clic sur les boutons de modération (audit du
+    20 octobre 2026). %>
+<script>if (window.top !== window.self) { try { window.top.location.replace(window.location.href); } catch (e) { document.documentElement.innerHTML = ''; } }</script>
 
 <div id="admin-app" class="adm" data-url="<%= supabaseUrl %>" data-key="<%= supabaseKey %>">
 
