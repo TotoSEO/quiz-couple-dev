@@ -1,0 +1,234 @@
+{
+  "jour": "2026-11-10",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-103",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Choisir un film : sur le canapé, il propose, elle refuse ; elle propose, il refuse ; une heure plus tard ils cherchent toujours, la tête dans les mains ; ils dorment l'un sur l'autre. Quatre plans, 15 secondes.",
+        "son": {
+          "ambiance": "drole"
+        },
+        "plans": [
+          {
+            "duree": 3.5,
+            "description": "Les deux sont assis sur le canapé face à nous, la télé allumée devant eux. Lui a une idée (une ampoule), elle fait non de la tête, les bras croisés. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "idee",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "perplexe",
+                    "bras": "croises"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "quand on doit choisir un film",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 3.5,
+            "description": "C'est au tour d'elle : elle a une idée, la patte en l'air. Lui fait la tête, les bras croisés, la bouche de travers.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "boude",
+                    "bras": "croises"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "idee",
+                    "bras": "tend_haut_d",
+                    "signes": [
+                      "ampoule"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Les deux ont la tête dans les mains, les yeux plats, devant la télé. Le texte « 1 h plus tard » à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 226,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fatigue",
+                    "bras": "visage"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 414,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "fatigue",
+                    "bras": "visage"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "textes": [
+              {
+                "texte": "1 h plus tard",
+                "de": 0.2,
+                "place": "haut"
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          },
+          {
+            "duree": 4,
+            "transition": "fondu",
+            "description": "Les deux dorment l'un contre l'autre sur le canapé, la tête de l'un sur l'épaule de l'autre, des zzz au-dessus. La télé est toujours allumée.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 270,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo",
+                    "signes": [
+                      "zzz"
+                    ]
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 370,
+                    "y": 318,
+                    "taille": 210,
+                    "pose": "assis",
+                    "expression": "dodo"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "tele",
+                "x": 320,
+                "y": 150,
+                "echelle": 0.8
+              }
+            ],
+            "meubles": [
+              "canape_fond"
+            ]
+          }
+        ]
+      },
+      "legende": "envoie ça sans rien dire",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

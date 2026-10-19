@@ -1,0 +1,194 @@
+{
+  "jour": "2026-11-12",
+  "creneau": "matin",
+  "format": "reel",
+  "gabarit": "mipaps-reel",
+  "categorie": "mipaps-anime",
+  "sujet": "ani-107",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-reel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "« T'as quoi ? » « rien » : il boude de dos en jetant des regards, elle passe sans rien remarquer, il se met sur son chemin, elle le prend dans ses bras. Quatre plans, 13 secondes.",
+        "son": {
+          "ambiance": "tendre"
+        },
+        "plans": [
+          {
+            "duree": 3,
+            "description": "Il est debout, de trois quarts, les bras croisés, la bouche de travers. Il jette un regard par-dessus l'épaule à 1,8 s. Le texte à 0,2 s.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "pose": "debout",
+                    "expression": "boude",
+                    "bras": "croises",
+                    "angle": 150
+                  },
+                  {
+                    "a": 1.8,
+                    "expression": "attend"
+                  }
+                ]
+              }
+            ],
+            "textes": [
+              {
+                "texte": "« t’as quoi ? » « rien »",
+                "de": 0.2,
+                "place": "haut",
+                "style": "titre"
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle entre par la gauche en marchant de profil, tranquille, sans le voir. Lui la suit des yeux, perplexe, les bras croisés. Elle s'arrête à droite à 2,6 s.",
+            "persos": [
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": -140,
+                    "angle": 90,
+                    "pose": "marche",
+                    "expression": "content"
+                  },
+                  {
+                    "a": 2.6,
+                    "x": 480,
+                    "pose": "debout"
+                  }
+                ]
+              },
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "pose": "debout",
+                    "expression": "perplexe",
+                    "bras": "croises",
+                    "angle": 150
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 3,
+            "transition": "fondu",
+            "description": "Il se déplace vers elle et se plante juste devant, les bras croisés, boudeur. Elle le regarde, blasée, un sourcil levé.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 300,
+                    "pose": "marche",
+                    "expression": "boude",
+                    "bras": "croises",
+                    "angle": 90
+                  },
+                  {
+                    "a": 1.2,
+                    "x": 400,
+                    "pose": "debout",
+                    "expression": "boude",
+                    "angle": 0
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 500,
+                    "pose": "debout",
+                    "expression": "blase"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "duree": 3.5,
+            "transition": "fondu",
+            "description": "Elle le prend dans ses bras, les deux serrés au milieu, yeux fermés, trois cœurs flottent au-dessus d'eux.",
+            "persos": [
+              {
+                "perso": "lui",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 385,
+                    "expression": "calin",
+                    "bras": "tend_g",
+                    "pose": "penche_g"
+                  }
+                ]
+              },
+              {
+                "perso": "elle",
+                "etapes": [
+                  {
+                    "a": 0,
+                    "x": 285,
+                    "expression": "calin",
+                    "bras": "tend_d",
+                    "pose": "penche_d"
+                  }
+                ]
+              }
+            ],
+            "objets": [
+              {
+                "objet": "coeur",
+                "x": 335,
+                "y": 150,
+                "echelle": 0.5,
+                "de": 0.5,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 240,
+                "y": 190,
+                "echelle": 0.32,
+                "de": 0.9,
+                "flotte": true
+              },
+              {
+                "objet": "coeur",
+                "x": 435,
+                "y": 200,
+                "echelle": 0.36,
+                "de": 1.3,
+                "flotte": true
+              }
+            ]
+          }
+        ]
+      },
+      "legende": "tague-le",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "jour": "2026-11-11",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-133",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Fâchée mais affamée : elle boude, il cuisine, ça sent bon, elle jette un œil, elle boude en mangeant.",
+        "pages": [
+          {
+            "texte": "quand t'es fâchée mais que t'as faim",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "boude",
+                  "bras": "croises",
+                  "x": 320,
+                  "taille": 280
+                }
+              ]
+            }
+          },
+          {
+            "texte": "il se met à cuisiner",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "bras": "tient",
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "boude",
+                  "bras": "croises",
+                  "angle": 140,
+                  "x": 420,
+                  "taille": 260
+                },
+                {
+                  "objet": "burger",
+                  "x": 250,
+                  "y": 320,
+                  "echelle": 0.6
+                }
+              ]
+            }
+          },
+          {
+            "texte": "ça sent bon. tu jettes un œil.",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "gourmand",
+                  "angle": 40,
+                  "x": 300,
+                  "taille": 270
+                },
+                {
+                  "objet": "burger",
+                  "x": 470,
+                  "y": 320,
+                  "echelle": 0.7
+                }
+              ]
+            }
+          },
+          {
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "elle",
+                  "expression": "boude",
+                  "bras": "tient",
+                  "x": 320,
+                  "taille": 270
+                },
+                {
+                  "objet": "burger",
+                  "x": 320,
+                  "y": 330,
+                  "echelle": 0.6
+                }
+              ]
+            },
+            "appel": "c'est qui chez vous ?"
+          }
+        ]
+      },
+      "legende": "c'est qui chez vous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}

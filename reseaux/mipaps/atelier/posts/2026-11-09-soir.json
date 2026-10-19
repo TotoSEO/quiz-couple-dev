@@ -1,0 +1,177 @@
+{
+  "jour": "2026-11-09",
+  "creneau": "soir",
+  "format": "carrousel",
+  "gabarit": "mipaps-carrousel",
+  "categorie": "mipaps-histoire",
+  "sujet": "his-107",
+  "idee_id": null,
+  "variantes": {
+    "fr": {
+      "recette": {
+        "gabarit": "mipaps-carrousel",
+        "langue": "fr",
+        "theme": "light",
+        "idee": "Un dimanche : on prévoit plein de trucs, mais on est toujours au lit, on hésite à sortir, on commande à manger, et on remet tout au week-end prochain.",
+        "pages": [
+          {
+            "texte": "dimanche, 10 h : on va faire plein de trucs",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "joie",
+                  "bras": "leves",
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "joie",
+                  "bras": "leves",
+                  "x": 410,
+                  "taille": 260
+                },
+                {
+                  "objet": "etincelles",
+                  "x": 330,
+                  "y": 110,
+                  "echelle": 0.6
+                }
+              ]
+            }
+          },
+          {
+            "texte": "13 h : toujours au lit",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "lit_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "y": 346,
+                  "pose": "debout",
+                  "bras": "aucun",
+                  "pattes": "aucune",
+                  "x": 250,
+                  "taille": 200
+                },
+                {
+                  "perso": "elle",
+                  "expression": "content",
+                  "y": 346,
+                  "pose": "debout",
+                  "bras": "aucun",
+                  "pattes": "aucune",
+                  "x": 400,
+                  "taille": 200
+                },
+                {
+                  "meuble": "lit_couette"
+                }
+              ]
+            }
+          },
+          {
+            "texte": "16 h : on hésite à sortir",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "pensif",
+                  "bras": "menton",
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "perplexe",
+                  "x": 410,
+                  "taille": 260
+                },
+                {
+                  "objet": "fenetre",
+                  "x": 330,
+                  "y": 160,
+                  "echelle": 0.8
+                }
+              ]
+            }
+          },
+          {
+            "texte": "19 h : on commande à manger",
+            "dessin": {
+              "elements": [
+                {
+                  "perso": "lui",
+                  "expression": "content",
+                  "bras": "tient",
+                  "x": 250,
+                  "taille": 260
+                },
+                {
+                  "perso": "elle",
+                  "expression": "gourmand",
+                  "x": 410,
+                  "taille": 260
+                },
+                {
+                  "objet": "pizza",
+                  "x": 330,
+                  "y": 330,
+                  "echelle": 0.8
+                }
+              ]
+            }
+          },
+          {
+            "texte": "on fera tout ça le week-end prochain.",
+            "dessin": {
+              "elements": [
+                {
+                  "meuble": "lit_fond"
+                },
+                {
+                  "perso": "lui",
+                  "expression": "dodo",
+                  "y": 346,
+                  "pose": "debout",
+                  "bras": "aucun",
+                  "pattes": "aucune",
+                  "signes": [
+                    "zzz"
+                  ],
+                  "x": 250,
+                  "taille": 200
+                },
+                {
+                  "perso": "elle",
+                  "expression": "dodo",
+                  "y": 346,
+                  "pose": "debout",
+                  "bras": "aucun",
+                  "pattes": "aucune",
+                  "x": 400,
+                  "taille": 200
+                },
+                {
+                  "meuble": "lit_couette"
+                }
+              ]
+            },
+            "appel": "vous aussi ou c'est que nous ?"
+          }
+        ]
+      },
+      "legende": "vous aussi ou c'est que nous ?",
+      "hashtags": [
+        "#lesmipaps",
+        "#couple",
+        "#humour",
+        "#relation"
+      ]
+    }
+  }
+}
