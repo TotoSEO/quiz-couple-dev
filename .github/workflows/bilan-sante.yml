@@ -1,0 +1,81 @@
+name: Évaluation de couple · santé
+
+# Un contrôle à lancer à la main (« Run workflow ») pour savoir si la vente
+# peut marcher, sans rien créer ni envoyer : les secrets que les fonctions
+# attendent sont-ils posés chez Supabase (noms seulement, jamais les
+# valeurs), les fonctions bilan, bilan-stripe et lead-capture répondent-elles,
+# le webhook refuse-t-il bien un événement sans signature, et la page de
+# vente publiée est-elle ouverte (indexable) ou fermée ? Mode d'emploi dans
+# docs/bilan/STRIPE.md. Le job échoue si un secret manque ou si une fonction
+# ne répond pas comme attendu.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sante:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+    steps:
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Les secrets des fonctions (noms seulement)
+        run: |
+          supabase secrets list --project-ref "$SUPABASE_PROJECT_REF" -o json > secrets.json
+          echo "Secrets posés chez Supabase :"
+          jq -r '.[].name' secrets.json | sort | sed 's/^/  - /'
+          manque=0
+          for s in STRIPE_SECRET_KEY STRIPE_WEBHOOK_SECRET RESEND_API_KEY ADMIN_PASSWORD; do
+            if jq -e --arg n "$s" '.[] | select(.name == $n)' secrets.json > /dev/null; then
+              echo "✓ $s"
+            else
+              echo "::error::Secret absent chez Supabase : $s"
+              manque=1
+            fi
+          done
+          rm -f secrets.json
+          exit $manque
+
+      - name: La fonction bilan répond
+        run: |
+          url="https://$SUPABASE_PROJECT_REF.supabase.co/functions/v1/bilan"
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST "$url" \
+            -H 'Content-Type: application/json' \
+            -d '{"action":"vue","id":"00000000-0000-0000-0000-000000000000","jeton":"abcdefghijklmnopqrstuvwxyz0123456789abcd"}')
+          echo "bilan (vue d'un identifiant inconnu) : $code $(head -c 200 reponse.json)"
+          # 404 « introuvable » ou 400 « lien » : la fonction est là et contrôle
+          # ce qu'on lui envoie. Tout autre code est une panne.
+          case "$code" in 400|404) ;; *) echo "::error::bilan répond $code"; exit 1;; esac
+
+      - name: Le webhook Stripe refuse un événement sans signature
+        run: |
+          url="https://$SUPABASE_PROJECT_REF.supabase.co/functions/v1/bilan-stripe"
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST "$url" \
+            -H 'Content-Type: application/json' -d '{"type":"checkout.session.completed"}')
+          echo "bilan-stripe (sans signature) : $code $(head -c 200 reponse.json)"
+          # 400 « signature » : le secret est posé et la signature est exigée.
+          # 503 « secret » : STRIPE_WEBHOOK_SECRET manque dans la fonction.
+          if [ "$code" != "400" ]; then echo "::error::bilan-stripe répond $code au lieu de 400"; exit 1; fi
+
+      - name: La porte e-mail (lead-capture) répond
+        run: |
+          url="https://$SUPABASE_PROJECT_REF.supabase.co/functions/v1/lead-capture"
+          code=$(curl -sS -o reponse.json -w '%{http_code}' -X POST "$url" \
+            -H 'Content-Type: application/json' -d '{}')
+          echo "lead-capture (corps vide) : $code $(head -c 200 reponse.json)"
+          if [ "$code" != "400" ]; then echo "::error::lead-capture répond $code au lieu de 400"; exit 1; fi
+
+      - name: La page de vente publiée
+        run: |
+          page=$(curl -sS -L https://quiz-couple.com/evaluation-de-couple/)
+          if echo "$page" | grep -q '<meta name="robots" content="noindex'; then
+            echo "Page fermée (noindex) : BILAN_OUVERT est à false dans la construction publiée."
+          else
+            echo "Page ouverte : indexable, dans les menus, paiement proposé si la clé Stripe est là."
+          fi
+          echo "$page" | grep -o 'Dernière mise à jour[^<]*' | head -1 || true

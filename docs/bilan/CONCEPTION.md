@@ -492,7 +492,10 @@ lien du site n'y mène, et les écrans de résultat des tests n'en parlent pas.
    quiz-couple.com vérifié.
 3. **Stripe** : secrets `STRIPE_SECRET_KEY` et `STRIPE_WEBHOOK_SECRET`,
    webhook avec les trois événements, reçus activés.
-4. Passer `BILAN_OUVERT` à `true`.
+4. Lancer le workflow « Évaluation de couple · santé » (`bilan-sante.yml`,
+   « Run workflow ») : il dit si les trois secrets sont posés et si les
+   fonctions répondent, sans rien créer.
+5. Passer `BILAN_OUVERT` à `true`.
 
 Le mode d'emploi détaillé est dans `docs/bilan/STRIPE.md`.
 
