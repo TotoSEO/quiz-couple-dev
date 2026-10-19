@@ -11,6 +11,13 @@
     "Etwas mehr {nom}",
     "Beide gleich"
   ],
+  "quiPercu": [
+    "Vor allem {autre}",
+    "Etwas mehr {autre}",
+    "Beide gleich",
+    "Etwas mehr du",
+    "Vor allem du"
+  ],
   "situation": {
     "ensemble": {
       "q": "Wohnt ihr zusammen?",
@@ -68,6 +75,7 @@
   "domaines": {
     "quotidien": {
       "titre": "Der Alltag zu Hause",
+      "bref": "Alltag",
       "intro": "Haushalt, Ordnung, der Rhythmus der Woche. Meistens sind es die kleinen Dinge, die die großen Streits auslösen, deshalb fangen wir hier an.",
       "rapport": {
         "fort": "Im Alltag tickt ihr gleich. Das ist seltener, als man denkt, und erspart euch viele kleine Reibereien.",
@@ -231,6 +239,7 @@
     },
     "temps": {
       "titre": "Zeit zu zweit und Zeit für sich",
+      "bref": "Zeit",
       "intro": "Wie viel Zeit zusammen, wie viel jeder für sich, und was ihr damit macht.",
       "rapport": {
         "fort": "Ihr habt dieselbe Vorstellung vom Gleichgewicht zwischen Zeit zu zweit und Zeit für sich. Passt gut darauf auf: Es ist das Erste, was das Leben auffrisst.",
@@ -386,6 +395,7 @@
     },
     "entourage": {
       "titre": "Familie und Freunde",
+      "bref": "Umfeld",
       "intro": "Eure Familien, die Feiertage, eure Freunde, Abende ohne den anderen. Alles, was um eure Beziehung herum passiert.",
       "rapport": {
         "fort": "Ihr seht eure Familien und Freunde gleich. Die Feiertage dürften entspannt laufen!",
@@ -509,6 +519,7 @@
     },
     "travail": {
       "titre": "Arbeit und Ziele",
+      "bref": "Arbeit",
       "intro": "Welchen Platz die Arbeit in eurem Leben hat, eure Pläne, und was ihr bereit seid, für den anderen zu ändern.",
       "rapport": {
         "fort": "Ihr gebt der Arbeit denselben Platz in eurem Leben. Das erspart euch das Gefühl, nach dem Job des anderen an zweiter Stelle zu kommen.",
@@ -632,6 +643,7 @@
     },
     "argent": {
       "titre": "Geld",
+      "bref": "Geld",
       "intro": "Gemeinsames Konto oder nicht, Kosten aufteilen, sparen. Geld ist eines der Themen, die Paare am meisten meiden, hier ist die Gelegenheit.",
       "rapport": {
         "fort": "Ihr seht Geld gleich. Das ist ein echter Vorteil, denn es ist einer der ersten Streitgründe in Beziehungen.",
@@ -765,6 +777,7 @@
     },
     "logement": {
       "titre": "Wo und wie wohnen",
+      "bref": "Wohnen",
       "intro": "Zusammenziehen, Stadt oder Land, kaufen, weit wegziehen. Die Entscheidungen, die man nicht halbieren kann.",
       "rapport": {
         "fort": "Ihr seht euch am selben Ort und auf dieselbe Art leben. Für die großen Entscheidungen ist das eine solide Grundlage.",
@@ -898,6 +911,7 @@
     },
     "enfants": {
       "titre": "Kinder",
+      "bref": "Kinder",
       "intro": "Ob ihr welche wollt, wann, wie viele, wie ihr sie erziehen wollt. Oder, wenn ihr schon welche habt, wie ihr euch organisiert.",
       "rapport": {
         "fort": "Bei den Kindern seid ihr auf einer Wellenlänge. Das ist wahrscheinlich das Thema, bei dem es am meisten zählt.",
@@ -1047,6 +1061,7 @@
     },
     "valeurs": {
       "titre": "Werte",
+      "bref": "Werte",
       "intro": "Religion, Bindung, was dir am wichtigsten ist und was du weitergeben möchtest.",
       "rapport": {
         "fort": "Ihr teilt dieselben Werte. Das hilft am meisten, wenn schwierige Entscheidungen anstehen.",
@@ -1202,6 +1217,7 @@
     },
     "disputes": {
       "titre": "Kommunikation und Streit",
+      "bref": "Streit",
       "intro": "Wie ihr sagt, was euch stört, wie ihr streitet und wie ihr euch wieder versöhnt.",
       "rapport": {
         "fort": "Ihr geht gleich mit Spannungen um. Ihr streitet wie alle, aber wenn es passiert, versteht ihr euch.",
@@ -1394,6 +1410,7 @@
     },
     "confiance": {
       "titre": "Vertrauen und Treue",
+      "bref": "Vertrauen",
       "intro": "Das Handy, die Exes, Eifersucht, und was jeder von euch Fremdgehen nennt.",
       "rapport": {
         "fort": "Ihr habt dieselbe Vorstellung von Vertrauen und Treue. Viele Paare haben das nie laut ausgesprochen. Ihr wisst es jetzt.",
@@ -1533,6 +1550,7 @@
     },
     "intimite": {
       "titre": "Intimität und Zärtlichkeit",
+      "bref": "Intimität",
       "intro": "Lust, Zärtlichkeit und wie ihr darüber redet. Nur {autre} sieht diese Antworten.",
       "rapport": {
         "fort": "Ihr habt dieselben Wünsche und dieselbe Art, sie zu leben. Das ist kostbar, und man muss es pflegen.",
@@ -1663,6 +1681,7 @@
     },
     "meteo": {
       "titre": "Wie es euch geht",
+      "bref": "Klima",
       "intro": "Zum Schluss acht Fragen dazu, wie du dich gerade in eurer Beziehung fühlst. Hier gibt es keine Übereinstimmung zu finden, sag einfach, wie es läuft.",
       "questions": {
         "met1": {

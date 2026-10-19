@@ -11,6 +11,13 @@
     "Un poco más {nom}",
     "Los dos por igual"
   ],
+  "quiPercu": [
+    "Sobre todo {autre}",
+    "Un poco más {autre}",
+    "Los dos por igual",
+    "Un poco más tú",
+    "Sobre todo tú"
+  ],
   "situation": {
     "ensemble": {
       "q": "¿Vivís juntos?",
@@ -68,6 +75,7 @@
   "domaines": {
     "quotidien": {
       "titre": "El día a día en casa",
+      "bref": "Día a día",
       "intro": "Las tareas, el orden, el ritmo de la semana. Suelen ser las cosas pequeñas las que provocan las grandes discusiones, así que empezamos por aquí.",
       "rapport": {
         "fort": "En el día a día funcionáis igual. Es más raro de lo que parece, y os ahorra muchos roces pequeños.",
@@ -231,6 +239,7 @@
     },
     "temps": {
       "titre": "El tiempo en pareja y el tiempo para uno",
+      "bref": "Tiempo",
       "intro": "Cuánto tiempo juntos, cuánto tiempo cada uno por su lado, y qué hacéis con él.",
       "rapport": {
         "fort": "Tenéis la misma idea del equilibrio entre el tiempo juntos y el tiempo para uno. Cuidadlo: es lo primero que la vida se come.",
@@ -386,6 +395,7 @@
     },
     "entourage": {
       "titre": "Familia y amigos",
+      "bref": "Entorno",
       "intro": "Las familias, las fiestas, los amigos, las salidas sin el otro. Todo lo que rodea a vuestra pareja.",
       "rapport": {
         "fort": "Veis a vuestras familias y a vuestros amigos de la misma manera. ¡Las fiestas de fin de año deberían ir bien!",
@@ -509,6 +519,7 @@
     },
     "travail": {
       "titre": "El trabajo y las ambiciones",
+      "bref": "Trabajo",
       "intro": "El lugar del trabajo en tu vida, tus proyectos y lo que estás dispuesto a cambiar por el otro.",
       "rapport": {
         "fort": "Le dais al trabajo el mismo lugar en vuestras vidas. Eso os ahorra la sensación de ir detrás del trabajo del otro.",
@@ -632,6 +643,7 @@
     },
     "argent": {
       "titre": "El dinero",
+      "bref": "Dinero",
       "intro": "Cuenta común o no, reparto de gastos, ahorro. El dinero es uno de los temas que más se evitan en pareja, así que aquí tenéis la ocasión.",
       "rapport": {
         "fort": "Tenéis la misma forma de ver el dinero. Es una gran ventaja, porque es uno de los primeros motivos de discusión en pareja.",
@@ -765,6 +777,7 @@
     },
     "logement": {
       "titre": "Dónde y cómo vivir",
+      "bref": "Vivienda",
       "intro": "Iros a vivir juntos, la ciudad o el campo, comprar, irse lejos. Las decisiones que no se pueden partir por la mitad.",
       "rapport": {
         "fort": "Os veis viviendo en el mismo sitio y de la misma manera. Para las grandes decisiones, es una base sólida.",
@@ -898,6 +911,7 @@
     },
     "enfants": {
       "titre": "Los hijos",
+      "bref": "Hijos",
       "intro": "Quererlos o no, cuándo, cuántos, cómo educarlos. O, si ya los tenéis, cómo os organizáis.",
       "rapport": {
         "fort": "Con los hijos estáis en la misma onda. Seguramente es el tema en el que más importa.",
@@ -1047,6 +1061,7 @@
     },
     "valeurs": {
       "titre": "Los valores",
+      "bref": "Valores",
       "intro": "La religión, el compromiso, lo que más cuenta para ti y lo que quieres transmitir.",
       "rapport": {
         "fort": "Compartís los mismos valores. Es lo que más ayuda cuando hay que tomar decisiones difíciles.",
@@ -1202,6 +1217,7 @@
     },
     "disputes": {
       "titre": "Comunicación y discusiones",
+      "bref": "Discusiones",
       "intro": "Cómo decís lo que no va bien, cómo discutís y cómo hacéis las paces.",
       "rapport": {
         "fort": "Gestionáis las tensiones de la misma manera. Discutís como todo el mundo, pero cuando pasa os entendéis.",
@@ -1394,6 +1410,7 @@
     },
     "confiance": {
       "titre": "Confianza y fidelidad",
+      "bref": "Confianza",
       "intro": "El móvil, los ex, los celos, y lo que cada uno llama engañar.",
       "rapport": {
         "fort": "Tenéis la misma idea de la confianza y de la fidelidad. Muchas parejas nunca lo han dicho en voz alta. Vosotros ya lo sabéis.",
@@ -1533,6 +1550,7 @@
     },
     "intimite": {
       "titre": "Intimidad y ternura",
+      "bref": "Intimidad",
       "intro": "El deseo, la ternura y cómo habláis de ello. Solo {autre} verá estas respuestas.",
       "rapport": {
         "fort": "Tenéis los mismos deseos y la misma manera de vivirlos. Es algo valioso, y hay que cuidarlo.",
@@ -1663,6 +1681,7 @@
     },
     "meteo": {
       "titre": "Cómo estáis",
+      "bref": "Clima",
       "intro": "Para terminar, ocho preguntas sobre cómo te sientes en tu pareja ahora mismo. Aquí no hay que estar de acuerdo, solo decir cómo va.",
       "questions": {
         "met1": {

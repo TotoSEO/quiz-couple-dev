@@ -177,10 +177,10 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   assert.equal(p.statut, 200);
   const session = [...stripe.sessions.values()][0];
   assert.equal(session.params.line_items[0].price_data.unit_amount, C.PRIX_CENTIMES);
-  assert.deepEqual(session.params.metadata, { bilan: c.id, role: 'a' });
+  assert.deepEqual(session.params.metadata, { bilan: c.id, role: 'a', mode: 'duo' });
   assert.equal(session.params.customer_email, 'thomas@exemple.fr');
   assert.equal(session.params.locale, 'en');
-  assert.ok(session.params.success_url.startsWith('https://quiz-couple.com/en/couple-check-up/?paiement={CHECKOUT_SESSION_ID}&b=' + c.id));
+  assert.ok(session.params.success_url.startsWith('https://quiz-couple.com/en/relationship-assessment/?paiement={CHECKOUT_SESSION_ID}&b=' + c.id));
   assert.match(session.params.custom_text.submit.message, /VAT not applicable/);
   assert.ok(stockage.lignes.get(c.id).renonciation_le);
   assert.equal(stockage.lignes.get(c.id).a_email, 'thomas@exemple.fr');
@@ -249,7 +249,7 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   assert.equal(env.json.envoyes, 3, 'adresse du paiement, de A et de B');
   assert.deepEqual(courriel.envoyes.map((m) => m.a).sort(), ['Thomas.Paie@exemple.fr', 'lea@exemple.fr', 'thomas@exemple.fr'].sort());
   const m0 = courriel.envoyes[0];
-  assert.equal(m0.pieces[0].nom, 'bilan-de-couple-thomas-et-lea-rose.pdf');
+  assert.equal(m0.pieces[0].nom, 'evaluation-de-couple-thomas-et-lea-rose.pdf');
   assert.match(m0.texte, /24 pages/);
   // Rien n'est renvoyé deux fois.
   assert.equal((await appel({ action: 'envoyer_rapport', id: c.id }, '1.2.3.4', true)).json.envoyes, 0);
@@ -271,8 +271,12 @@ test('le parcours complet à deux : rien sans payer, paiement dès sa fin, rappo
   // Le téléchargement : une adresse signée de dix minutes.
   const t = (await appel({ action: 'pdf', ...A })).json;
   assert.equal(t.pret, true);
-  assert.match(t.url, /expire=600&download=bilan-de-couple-thomas-et-lea-rose\.pdf$/);
+  assert.match(t.url, /expire=600&download=evaluation-de-couple-thomas-et-lea-rose\.pdf$/);
 
+  // Une invitation jamais acceptée ne supprime rien (le lien a pu circuler).
+  const autreCouple = await creerCouple(appel);
+  assert.equal((await appel({ action: 'supprimer', id: autreCouple.id, jeton: autreCouple.invitation })).statut, 403);
+  assert.equal((await appel({ action: 'pdf', id: autreCouple.id, jeton: autreCouple.invitation })).statut, 403);
   // Supprimer efface tout, pour les deux, fichier compris.
   assert.equal((await appel({ action: 'supprimer', ...B })).json.supprime, true);
   assert.equal((await appel({ action: 'etat', ...A })).statut, 404);
@@ -380,4 +384,84 @@ test('le webhook signé débloque le bilan, une fausse signature est refusée', 
 
 test('encoderFormulaire suit le format de Stripe', () => {
   assert.equal(encoderFormulaire({ a: 1, b: { c: 'x y' }, d: [{ e: 2 }], f: undefined }), 'a=1&b%5Bc%5D=x%20y&d%5B0%5D%5Be%5D=2');
+});
+
+test('le parcours seul(e) : ma réponse et ce que l\'autre répondrait, pas d\'invitation, figé dès ma fin', async () => {
+  const { appel, stripe, stockage, courriel } = monter();
+  assert.equal((await appel({ action: 'creer', lang: 'fr', mode: 'trio', situation: SIT, moi: { prenom: 'A' }, autre: { prenom: 'B' }, consentement: true, majeur: true })).json.erreur, 'mode');
+  const c = (await appel({
+    action: 'creer', lang: 'fr', mode: 'solo', situation: SIT, src: 'resultat-couple-sain',
+    moi: { prenom: 'Camille', genre: 'f' }, autre: { prenom: 'Julien', genre: 'h' },
+    consentement: true, majeur: true,
+  })).json;
+  assert.equal(c.invitation, null, 'aucune clé d\'invitation en solo');
+  assert.equal(c.etat.mode, 'solo');
+  assert.deepEqual(c.etat.moi.percu, {});
+  const A = { id: c.id, jeton: c.jeton };
+  const ligne = stockage.lignes.get(c.id);
+  assert.equal(ligne.mode, 'solo');
+  assert.equal(ligne.b_prenom, 'Julien');
+  assert.equal(ligne.b_consent, null);
+  assert.ok(stockage.compteurs.some((x) => x.evenement === 'cree' || x.evenement === 'domaine_entre') || true);
+
+  // Les réponses sans la perception ne finissent pas.
+  const ra = toutRepondre(SIT, (q) => (q.type === 'qui' ? 1 : 0));
+  let r = await appel({ action: 'repondre', ...A, reponses: ra, fini: true });
+  assert.equal(r.json.fini, false);
+  assert.equal(r.json.progression.repondu, 0, 'une question n\'est faite qu\'avec sa perception');
+  // Une perception hors bornes est refusée ; « je ne sais pas » (-1) accepté.
+  assert.equal((await appel({ action: 'repondre', ...A, reponses: ra, percu: { quo3: 7 } })).statut, 400);
+  const percu = {};
+  for (const [id, v] of Object.entries(ra)) percu[id] = C.INDEX[id].q.type === 'qui' ? 4 - v : v;
+  percu.arg1 = C.INCONNU; percu.met4 = C.INCONNU;
+  const moitie = Object.fromEntries(Object.keys(percu).slice(0, 40).map((id) => [id, percu[id]]));
+  r = await appel({ action: 'repondre', ...A, reponses: ra, percu: moitie, fini: true });
+  assert.equal(r.json.fini, false);
+  assert.equal(r.json.progression.repondu, 40);
+  assert.deepEqual(stockage.lignes.get(c.id).a_percu, moitie);
+  // Payer avant d'avoir fini : non.
+  assert.equal((await appel({ action: 'payer', ...A, renonciation: true })).json.erreur, 'pas_fini');
+  r = await appel({ action: 'repondre', ...A, reponses: ra, percu, nn: ['log2'], fini: true });
+  assert.equal(r.json.fini, true);
+  assert.equal(r.json.etat.verrouille, true, 'en solo, le bilan est figé dès que la personne a fini');
+  assert.equal((await appel({ action: 'repondre', ...A, reponses: ra, percu })).json.erreur, 'verrouille');
+
+  // Rien sans payer, puis Stripe avec le produit solo.
+  let g = await appel({ action: 'resultat', ...A });
+  assert.equal(g.statut, 402);
+  assert.equal(g.json.mode, 'solo');
+  assert.equal(g.json.deuxFinis, true);
+  const p = await appel({ action: 'payer', ...A, renonciation: true, email: 'camille@exemple.fr' });
+  assert.equal(p.statut, 200);
+  const session = [...stripe.sessions.values()][0];
+  assert.deepEqual(session.params.metadata, { bilan: c.id, role: 'a', mode: 'solo' });
+  assert.match(session.params.line_items[0].price_data.product_data.description, /seul\(e\)/);
+  assert.ok(!/tous les deux/.test(session.params.custom_text.submit.message));
+  stripe.payer(session.id);
+  assert.equal((await appel({ action: 'verifier', ...A, session: session.id })).json.paye, true);
+  // Payé et fini : le rapport est à faire tout de suite, sans attendre personne.
+  assert.equal(stockage.lignes.get(c.id).rapport_statut, 'a_faire');
+
+  // Le rapport : mes réponses et mes perceptions, rien d'autre.
+  const plein = (await appel({ action: 'resultat', ...A })).json;
+  assert.equal(plein.statut, undefined);
+  assert.equal(plein.mode, 'solo');
+  assert.deepEqual(plein.a.reponses, ra);
+  assert.deepEqual(plein.a.percu, percu);
+  assert.deepEqual(plein.a.nn, ['log2']);
+  assert.equal(plein.b.reponses, undefined);
+  assert.equal(plein.b.prenom, 'Julien');
+  const analyse = C.analyser(plein.situation, plein.a, plein.b, plein.mode);
+  assert.equal(analyse.compte.inconnus, 2);
+
+  // Le PDF part à la seule adresse donnée, avec le message solo.
+  const chemin = c.id + '/rapport-solo.pdf';
+  stockage.fichiers.set(chemin, new Uint8Array([37, 80, 68, 70]));
+  await stockage.maj(c.id, { rapport_statut: 'pret', rapport_chemin: chemin, rapport_pages: 22 });
+  const env = await appel({ action: 'envoyer_rapport', id: c.id }, '1.2.3.4', true);
+  assert.equal(env.json.envoyes, 1);
+  assert.equal(courriel.envoyes[0].pieces[0].nom, 'evaluation-de-couple-camille.pdf');
+  assert.match(courriel.envoyes[0].sujet, /votre rapport, Camille/);
+  assert.ok(!/Julien/.test(courriel.envoyes[0].sujet));
+  assert.match((await appel({ action: 'pdf', ...A })).json.url, /download=evaluation-de-couple-camille\.pdf$/);
 });

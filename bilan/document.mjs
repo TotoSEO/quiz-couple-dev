@@ -2,6 +2,8 @@
 // partagé (supabase/functions/_shared/bilan/rapport.mjs), sa feuille de
 // style avec les polices en data: URI (rien à aller chercher pendant
 // l'impression), les marges A4 et le pied de page dans la langue du rapport.
+// La couverture (première page) et les pages d'ouverture de chapitre (page
+// nommée `chapitre`, posée par .rap-ouv) n'ont ni marge ni pied de page.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -15,7 +17,7 @@ const BILAN = path.join(RACINE, 'supabase', 'functions', '_shared', 'bilan');
 const POLICES = path.join(RACINE, 'public', 'fonts', 'bilan');
 
 // Les mentions de l'éditeur, en bas de la dernière page.
-export const EDITEUR = 'Quiz Couple · quiz-couple.com · Visibilitea, entreprise individuelle · SIRET 940 106 800 00011';
+export const EDITEUR = 'Quiz Couple · quiz-couple.com · Visibilitea, entreprise individuelle · 4 rue de Bruges, 67000 Strasbourg · SIRET 940 106 800 00011';
 
 const cache = new Map();
 export function textes(lang) {
@@ -48,6 +50,7 @@ function regleDePage(T) {
   @bottom-left { ${pied} }
   @bottom-right { content: counter(page) " / " counter(pages); ${pied} text-align: right; } }
 @page :first { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+@page chapitre { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
 ${styleDePage(T)}
 html, body { margin: 0; padding: 0; background: #fff; }`;
 }
@@ -57,7 +60,8 @@ export function documentPdf(donnees) {
   const lang = donnees.lang || 'fr';
   const { T, Q } = textes(lang);
   const r = rapportHtml(donnees, T, Q, { format: 'pdf', couper: couperPour(lang), editeur: EDITEUR });
-  const titre = (T.rapport && T.rapport.surtitre ? T.rapport.surtitre + ' · ' : '') + donnees.a.prenom + ' & ' + donnees.b.prenom;
+  const titre = (T.rapport && T.rapport.surtitre ? T.rapport.surtitre + ' · ' : '') + donnees.a.prenom
+    + (donnees.mode === 'solo' ? '' : ' & ' + donnees.b.prenom);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const html = `<!doctype html>
 <html lang="${esc(lang)}"><head><meta charset="utf-8"><title>${esc(titre)}</title>

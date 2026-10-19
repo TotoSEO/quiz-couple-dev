@@ -11,6 +11,13 @@
     "A bit more {nom}",
     "Both equally"
   ],
+  "quiPercu": [
+    "Mostly {autre}",
+    "A bit more {autre}",
+    "Both equally",
+    "A bit more you",
+    "Mostly you"
+  ],
   "situation": {
     "ensemble": {
       "q": "Do you live together?",
@@ -68,6 +75,7 @@
   "domaines": {
     "quotidien": {
       "titre": "Everyday life at home",
+      "bref": "Home",
       "intro": "Chores, tidiness, the rhythm of the week. It's usually the small things that cause the big arguments, so we start here.",
       "rapport": {
         "fort": "Day to day, you work the same way. That's rarer than people think, and it saves you a lot of small frictions.",
@@ -231,6 +239,7 @@
     },
     "temps": {
       "titre": "Time together and time for yourself",
+      "bref": "Time",
       "intro": "How much time together, how much time apart, and what you do with it.",
       "rapport": {
         "fort": "You have the same idea of the balance between time together and time for yourself. Hold on to it: it's the first thing life eats into.",
@@ -386,6 +395,7 @@
     },
     "entourage": {
       "titre": "Family and friends",
+      "bref": "Family",
       "intro": "Your families, the holidays, your friends, nights out without the other. Everything around your relationship.",
       "rapport": {
         "fort": "You see your families and friends the same way. The holidays should go smoothly!",
@@ -509,6 +519,7 @@
     },
     "travail": {
       "titre": "Work and ambitions",
+      "bref": "Work",
       "intro": "The place work has in your life, your plans, and what you're ready to change for the other.",
       "rapport": {
         "fort": "You give work the same place in your lives. That saves you the feeling of coming second to the other's job.",
@@ -632,6 +643,7 @@
     },
     "argent": {
       "titre": "Money",
+      "bref": "Money",
       "intro": "Joint account or not, splitting costs, saving. Money is one of the topics couples avoid most, so here's your chance.",
       "rapport": {
         "fort": "You see money the same way. That's a real asset, because it's one of the first things couples argue about.",
@@ -765,6 +777,7 @@
     },
     "logement": {
       "titre": "Where and how to live",
+      "bref": "Housing",
       "intro": "Moving in, city or countryside, buying, leaving. The decisions you can't split down the middle.",
       "rapport": {
         "fort": "You see yourselves living in the same place, in the same way. For big decisions, that's a solid base.",
@@ -898,6 +911,7 @@
     },
     "enfants": {
       "titre": "Children",
+      "bref": "Children",
       "intro": "Wanting them or not, when, how many, how to raise them. Or, if you already have them, how you organise things.",
       "rapport": {
         "fort": "On children, you're on the same wavelength. It's probably the topic where that matters most.",
@@ -1047,6 +1061,7 @@
     },
     "valeurs": {
       "titre": "Values",
+      "bref": "Values",
       "intro": "Religion, commitment, what matters most to you, and what you want to pass on.",
       "rapport": {
         "fort": "You share the same values. It's what helps most when you have to make hard decisions.",
@@ -1202,6 +1217,7 @@
     },
     "disputes": {
       "titre": "Communication and arguments",
+      "bref": "Arguments",
       "intro": "How you say what's wrong, how you argue, and how you make up.",
       "rapport": {
         "fort": "You handle tension the same way. You argue like everyone does, but you understand each other when it happens.",
@@ -1394,6 +1410,7 @@
     },
     "confiance": {
       "titre": "Trust and fidelity",
+      "bref": "Trust",
       "intro": "Phones, exes, jealousy, and what each of you calls cheating.",
       "rapport": {
         "fort": "You have the same idea of trust and fidelity. Many couples have never said it out loud. Now you know.",
@@ -1533,6 +1550,7 @@
     },
     "intimite": {
       "titre": "Intimacy and tenderness",
+      "bref": "Intimacy",
       "intro": "Desire, tenderness, and how you talk about them. Only {autre} will see these answers.",
       "rapport": {
         "fort": "You have the same desires and the same way of living them. That's precious, and it needs looking after.",
@@ -1663,6 +1681,7 @@
     },
     "meteo": {
       "titre": "How you're doing",
+      "bref": "Mood",
       "intro": "To finish, eight questions about how you feel in your relationship right now. There's no agreement to find here, just say how it's going.",
       "questions": {
         "met1": {

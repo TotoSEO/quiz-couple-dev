@@ -157,10 +157,10 @@
       "erreur": "We can't check the payment right now. If you've paid, reload the page in a minute."
     },
     "rapport": {
-      "surtitre": "Couple check-up",
-      "pied": "Couple check-up · confidential",
+      "surtitre": "Relationship assessment",
+      "pied": "Relationship assessment · confidential",
       "couverture": {
-        "de": "The couple check-up of",
+        "de": "The relationship assessment of",
         "et": "and",
         "date": "Report issued on {{date}}",
         "chiffres": "{{domaines}} areas · {{questions}} questions compared",
@@ -176,6 +176,7 @@
         "proche": "Your answers are close.",
         "ecart": "Your answers are far apart.",
         "nn": "One of you marked this topic as a deal-breaker.",
+        "poids": "A question that shapes a whole life (a child, where to live, fidelity, the money you share) weighs three times as much as an everyday one in your scores. It carries this label.",
         "sommaire": "In this report",
         "nnTag": "Deal-breaker"
       },
@@ -184,16 +185,31 @@
         "carte": "The map of your areas",
         "conversations": "Your next four conversations",
         "bloquants": "Sticking points and deal-breakers",
+        "ombre": "Your blind spots",
         "climat": "How your relationship feels right now",
         "signaux": "Your warning signs",
         "roles": "Who does what, as each of you sees it",
         "domaines": "Area by area",
+        "fin": "To finish",
         "suite": "What now?"
       },
+      "ouvertures": {
+        "synthese": "Two numbers, and what they mean for the two of you.",
+        "carte": "Twelve areas of life together, from the most aligned to the most debated.",
+        "conversations": "The four topics to start with, and how to bring them up.",
+        "bloquants": "What one of you can't compromise on.",
+        "ombre": "What you don't know about {{b}}, and what deserves a question.",
+        "climat": "How each of you feels in the relationship, right now.",
+        "signaux": "The arguing habits that wear a couple down, and where you stand.",
+        "roles": "Who takes care of what, as each of you sees it.",
+        "domaines": "All your answers, topic by topic.",
+        "fin": "What to remember, and where to start.",
+        "suite": "How to talk about it, and when to take stock again."
+      },
       "synthese": {
-        "intro": "Two numbers sum up your check-up. The first shows how much you want the same life together. The second shows how each of you feels in the relationship right now. The two don't always go together: you can be very aligned and going through a rough patch, or the other way round.",
+        "intro": "Two numbers sum up your assessment. The first shows how much you want the same life together. The second shows how each of you feels in the relationship right now. The two don't always go together: you can be very aligned and going through a rough patch, or the other way round.",
         "alignement": "Your alignment",
-        "alignementAide": "How closely your answers about life together match. The big decisions count double.",
+        "alignementAide": "How closely your answers about life together match. Decisive topics count triple.",
         "climat": "Your climate",
         "climatAide": "How each of you feels in the relationship right now.",
         "climatDe": "{{nom}}: {{n}}%",
@@ -202,8 +218,11 @@
           "proches": "Close answers",
           "ecarts": "Gaps",
           "bloquants": "Sticking points",
-          "vigilance": "Signs to look at"
+          "vigilance": "Signs to look at",
+          "inconnus": "Blind spots"
         },
+        "radar": "Your areas at a glance",
+        "radarAide": "The closer the shape gets to the edge, the more your answers meet in that area. The exact figures are in the next chapter.",
         "forts": "Where you're closest",
         "faibles": "Where you're furthest apart",
         "rassemble": "What brings you together",
@@ -262,7 +281,8 @@
         },
         "accords": "same answers",
         "proches": "close",
-        "ecarts": "gaps"
+        "ecarts": "gaps",
+        "inconnus": "don't know"
       },
       "conversations": {
         "intro": "The topics where your answers are furthest apart, on what matters most, one per area. Keep one per evening, when things are calm, rather than all at once.",
@@ -276,8 +296,32 @@
         "nnIntro": "The topics where each of you said you couldn't compromise, with their answer.",
         "nnAucun": "Nothing marked."
       },
+      "ombre": {
+        "intro": "You answered for yourself, then said what {{nom}} would answer. When you didn't know, you said so: this chapter gathers those topics. They aren't problems, they're questions to ask.",
+        "part": "Your share of blind spots",
+        "bandes": {
+          "peu": {
+            "titre": "Few blind spots",
+            "texte": "On only {{n}} topics, you didn't know what {{nom}} would answer. You know their way of seeing things well."
+          },
+          "quelques": {
+            "titre": "A few blind spots",
+            "texte": "On {{n}} topics, you didn't know what {{nom}} would answer. That's the case for most couples: people rarely talk about everything."
+          },
+          "large": {
+            "titre": "A large share of blind spots",
+            "texte": "On {{n}} topics, you didn't know what {{nom}} would answer. That isn't bad news: it's the list of conversations you haven't had yet."
+          }
+        },
+        "listeTitre": "The topics you don't know about",
+        "listeAide": "Each one is a question to ask {{nom}}, as it is. Decisive topics carry their label.",
+        "aucune": "You were able to answer for {{nom}} every time. So the report compares your answers with what you imagine theirs to be: the next step is to check with {{nom}}."
+      },
       "climat": {
         "intro": "These questions aren't looking for agreement: they show how each of you is experiencing the relationship right now. A gap here means you're not living the same relationship, which happens much more often than people think.",
+        "parDomaine": "The mood, area by area",
+        "parDomaineAide": "For the areas with questions about how you feel (arguments, intimacy and the general mood), each of you on the same line, from 0 to 100%. Two markers far apart: you aren't living the same thing.",
+        "questions": "Question by question",
         "ecart": "You don't feel it the same way",
         "attention": "Worth watching",
         "de": "For {{nom}}",
@@ -300,17 +344,38 @@
         "chacunPlusTexte": "It's very common: you see what you do better than what the other does. The best thing is to list together what each of you takes care of, without keeping score.",
         "desequilibre": "You agree: it's mostly {{nom}} who takes care of it. Is that OK for both of you?",
         "accord": "You see it the same way.",
-        "aucun": "There's no question of this kind in your check-up."
+        "aucun": "There's no question of this kind in your assessment."
       },
       "domaines": {
         "intro": "All your answers, area by area: first what you agree on, then your differences, from the most important to the smallest.",
+        "domaine": "Area",
         "accords": "You agree",
         "accordsAucun": "No exact agreement in this area.",
         "differences": "Your differences",
         "differencesAucune": "No differences in this area.",
         "etats": "How you're experiencing it",
+        "inconnus": "What you don't know",
         "voirConversation": "You'll find it further up, with ways to talk about it: conversation {{n}}.",
         "voirBloquants": "You'll find it further up, with ways to talk about it: sticking points."
+      },
+      "fin": {
+        "intro": "You've read everything, or nearly. This last summary doesn't repeat the first one: it counts your answers differently, keeps what holds and what needs work, and suggests an order for talking about it.",
+        "repartition": "All your compared answers",
+        "accordsPart": "Share of same answers",
+        "accordsTexte": "Out of {{total}} questions compared, you gave the same answer {{n}} times, or {{part}}%. The rest is split between close answers and gaps.",
+        "socle": "Your foundation",
+        "socleAide": "The decisive topics where you gave exactly the same answer, out of all those you were asked.",
+        "forces": "What holds",
+        "chantiers": "What needs work",
+        "aucun": "Nothing to report here.",
+        "feuille": "Your roadmap",
+        "feuilleIntro": "One topic a week, in this order. Tick them off as you go.",
+        "semaine": "Week {{n}}",
+        "ensuite": "Then",
+        "ombreEtape": "Ask {{nom}} the {{n}} questions from your blind spots",
+        "sixMois": "In six months",
+        "refaire": "Do the assessment again",
+        "refaireTexte": "To see what has moved, and what has stayed put."
       },
       "cat": {
         "accord": "Agreement",
@@ -323,6 +388,7 @@
         "aConfirmer": "To check"
       },
       "nnDe": "Non-negotiable for {{nom}}",
+      "poidsFort": "Decisive topic",
       "pourquoi": "Why it matters",
       "parler": "To talk about it",
       "eviter": "Best avoided",
@@ -335,9 +401,63 @@
           "The point of the first chat is to understand the other person, not to convince them. A decision can wait until the following week.",
           "If things heat up, take a twenty-minute break and come back to it later. It works better than you'd think."
         ],
-        "refaire": "Doing the check-up again in six months or a year shows what has changed between you. Lots of couples redo it at every big step: moving in together, getting married, having a baby.",
+        "refaire": "Doing the assessment again in six months or a year shows what has changed between you. Lots of couples redo it at every big step: moving in together, getting married, having a baby.",
         "aide": "This check-up is a tool for talking, not a diagnosis. If you're going through a difficult time, a couples counsellor or therapist can help you go further.",
         "violence": "If you're afraid of your partner, this check-up isn't made for your situation. In the UK, the National Domestic Abuse Helpline (0808 2000 247) answers for free, 24/7, and in the US the National Domestic Violence Hotline (1-800-799-7233)."
+      },
+      "solo": {
+        "selonSuffixe": ", as you see it",
+        "couverture": {
+          "solo": "Your view of your relationship with {{nom}}",
+          "confidentiel": "Confidential: this report contains your answers and what you imagine your partner's to be."
+        },
+        "inconnuTag": "Don't know",
+        "inconnuLire": "You didn't know what your partner would answer: the topic is filed under your blind spots.",
+        "lire": {
+          "p1": "You answered on your own, in two steps: first for yourself, then by saying what {{b}} would answer, as far as you can tell. This report puts the two side by side, topic by topic: where you're sure you think alike, where you know you don't see things the same way, and where you don't know.",
+          "p3": "Read it for yourself first. Then, if {{b}} is willing to talk about it, the four conversations and your blind spots show where to start. And if one day {{b}} wants to answer too, an assessment done together will replace your guesses with their answers."
+        },
+        "synthese": {
+          "intro": "Two numbers sum up your assessment. The first says how much, as far as you can tell, you want the same life together: it compares your answers with the ones you attribute to your partner. The second says how you feel in the relationship right now, and how you think your partner feels in it.",
+          "alignement": "Your alignment, as you see it",
+          "alignementAide": "How closely your answers match the ones you imagine. Decisive topics count triple.",
+          "climatAide": "How you're experiencing the relationship right now, and how you think your partner is."
+        },
+        "carte": {
+          "intro": "Each bar shows how closely your answers match the ones you attribute to your partner, from 0 to 100%. The topics where you didn't know don't count in the score: they're counted separately."
+        },
+        "conversations": {
+          "intro": "The topics where you think you don't see things the way your partner does, on what matters most, one per area. These are your guesses: each conversation starts by checking whether you guessed right."
+        },
+        "bloquants": {
+          "intro": "Gaps, as far as you can tell, on questions you marked as deal-breakers. These are the first topics to check with your partner, without trying to convince them that evening: understand first.",
+          "nnIntro": "The topics you said you couldn't compromise on, with your answer."
+        },
+        "climat": {
+          "intro": "These questions aren't looking for agreement: they show how you're experiencing the relationship right now, and how you think your partner is. A gap here means that, as far as you can tell, you aren't living the same relationship.",
+          "parDomaineAide": "For the areas with questions about how you feel, your well-being and the one you attribute to your partner, on the same line, from 0 to 100%."
+        },
+        "roles": {
+          "intro": "For each topic, the line goes from \"mostly {{a}}\" to \"mostly {{b}}\". The first marker is your answer, the second what {{b}} would answer, as far as you can tell."
+        },
+        "domaines": {
+          "intro": "All your answers, area by area: first what you think you agree on, then your presumed differences, from the most important to the smallest, and what you don't know."
+        },
+        "fin": {
+          "accordsTexte": "Out of {{total}} questions where you could answer for your partner, you think you share the same answer {{n}} times, or {{part}}%.",
+          "socleAide": "The decisive topics where you're sure you think like your partner, out of all those you were asked."
+        },
+        "suite": {
+          "p1": "A report doesn't change anything on its own: what counts is what you do with it. You did it alone, and that's already a way of seeing clearly. Here's how to go about what comes next.",
+          "conseils": [
+            "Start by rereading your blind spots: they're simple questions to ask {{nom}}, without mentioning the report if you'd rather not.",
+            "Check your guesses one by one, starting with the conversations in the report: \"I thought you'd say... is that right?\"",
+            "Pick a calm moment, with no phones, and not in the middle of a tense one.",
+            "Talk about what you feel (\"I'm afraid that...\") rather than about what the other does.",
+            "If {{nom}} doesn't want to talk about it for now, this report still serves you: it says what matters to you, and what doesn't sit right. A relationship counsellor can also see you on your own."
+          ],
+          "refaire": "Doing the assessment together, when {{nom}} is willing, will replace your guesses with their answers. Lots of couples do it at every big step: moving in together, getting married, having a baby."
+        }
       },
       "ecran": {
         "telecharger": "Download the PDF",

@@ -68,7 +68,7 @@ export function verifierDansLaPage(hauteurPagePx) {
     if (dansSvg(el) && el.tagName.toLowerCase() !== 'svg') continue;
     const cs = getComputedStyle(el);
     if (cs.display === 'none' || cs.position === 'absolute' || cs.position === 'fixed') continue;
-    if (el.classList.contains('rap-couv')) continue; // la couverture va jusqu'aux bords de la feuille
+    if (el.classList.contains('rap-couv') || el.classList.contains('rap-ouv')) continue; // pleine page, jusqu'aux bords de la feuille
     const parent = el.parentElement;
     if (!parent || estLigne(el)) continue;
     const r = el.getBoundingClientRect();
@@ -105,7 +105,7 @@ export function verifierDansLaPage(hauteurPagePx) {
   // 4. Un bloc insécable ne dépasse pas une page.
   if (hauteurPagePx) {
     for (const el of racine.querySelectorAll('*')) {
-      if (el.classList.contains('rap-couv') || dansSvg(el)) continue;
+      if (el.classList.contains('rap-couv') || el.classList.contains('rap-ouv') || dansSvg(el)) continue;
       const cs = getComputedStyle(el);
       if (cs.breakInside !== 'avoid' && cs.pageBreakInside !== 'avoid') continue;
       const h = el.getBoundingClientRect().height;

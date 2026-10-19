@@ -7,13 +7,17 @@ import { messageRapport, emailPropre, masquerEmail, nomFichier, creerCourriel } 
 test('le message dans les cinq langues, sans accolade restée', () => {
   for (const lang of ['fr', 'en', 'es', 'de', 'it']) {
     for (const pages of [24, null]) {
-      const m = messageRapport({ lang, a: 'Léa', b: 'Thomas', pages });
-      for (const champ of [m.sujet, m.html, m.texte]) {
-        assert.ok(!/\{[a-z]+\}/i.test(champ), lang + ' : ' + champ.slice(0, 80));
-        assert.ok(champ.includes('Léa') || champ.includes('L&#39;') || champ.includes('Léa'), lang);
+      for (const mode of ['duo', 'solo']) {
+        const m = messageRapport({ lang, a: 'Léa', b: 'Thomas', pages, mode });
+        for (const champ of [m.sujet, m.html, m.texte]) {
+          assert.ok(!/\{[a-z]+\}/i.test(champ), lang + ' : ' + champ.slice(0, 80));
+          assert.ok(champ.includes('Léa'), lang);
+        }
+        assert.ok(m.html.includes('SIRET 940 106 800 00011'));
+        assert.ok(m.html.includes('67000 Strasbourg'));
+        if (pages) assert.ok(m.texte.includes('24'), lang);
+        if (mode === 'solo') assert.ok(!m.sujet.includes('Thomas'), lang + ' : le sujet solo ne nomme que la personne');
       }
-      assert.ok(m.html.includes('SIRET 940 106 800 00011'));
-      if (pages) assert.ok(m.texte.includes('24'), lang);
     }
   }
 });
@@ -30,9 +34,10 @@ test('adresses : contrôle, masque, nom de fichier', () => {
     assert.equal(emailPropre(faux), null, String(faux));
   }
   assert.equal(masquerEmail('lea@gmail.com'), 'l•••@gmail.com');
-  assert.equal(nomFichier('fr', 'Léa', 'Thomas'), 'bilan-de-couple-lea-et-thomas.pdf');
-  assert.equal(nomFichier('de', 'Jürgen', 'Anna-Maria Strauß'), 'beziehungs-check-jurgen-und-anna-maria-strauss.pdf');
-  assert.equal(nomFichier('en', '李', '!!'), 'couple-check-up-x-and-x.pdf');
+  assert.equal(nomFichier('fr', 'Léa', 'Thomas'), 'evaluation-de-couple-lea-et-thomas.pdf');
+  assert.equal(nomFichier('de', 'Jürgen', 'Anna-Maria Strauß'), 'beziehungsanalyse-jurgen-und-anna-maria-strauss.pdf');
+  assert.equal(nomFichier('en', '李', '!!'), 'relationship-assessment-x-and-x.pdf');
+  assert.equal(nomFichier('it', 'Giulia', 'Marco', 'solo'), 'valutazione-di-coppia-giulia.pdf');
 });
 
 test('envoi par Resend : en-têtes, pièce jointe, erreur remontée', async () => {

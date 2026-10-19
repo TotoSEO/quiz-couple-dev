@@ -63,11 +63,14 @@ function client({ url, cle }) {
 
 const iso = (ms) => new Date(Date.now() - ms).toISOString();
 
+// Payé et fini (des deux côtés en duo, de la personne seule en solo), et à
+// faire, en cours depuis trop longtemps, ou en erreur avec des essais devant.
 async function aFaire(db) {
   const vingt = encodeURIComponent(iso(20 * 60e3));
   const trente = encodeURIComponent(iso(30 * 60e3));
-  const filtre = `or=(rapport_statut.eq.a_faire,and(rapport_statut.eq.en_cours,rapport_maj.lt.${vingt}),and(rapport_statut.eq.erreur,rapport_essais.lt.${ESSAIS_MAX},rapport_maj.lt.${trente}))`;
-  return db.json(`/rest/v1/bilans?select=*&paye_le=not.is.null&a_fini=not.is.null&b_fini=not.is.null&${filtre}&order=paye_le.asc&limit=${PAR_PASSAGE}`);
+  const filtre = `and=(paye_le.not.is.null,a_fini.not.is.null,or(mode.eq.solo,b_fini.not.is.null),`
+    + `or(rapport_statut.eq.a_faire,and(rapport_statut.eq.en_cours,rapport_maj.lt.${vingt}),and(rapport_statut.eq.erreur,rapport_essais.lt.${ESSAIS_MAX},rapport_maj.lt.${trente})))`;
+  return db.json(`/rest/v1/bilans?select=*&${filtre}&order=paye_le.asc&limit=${PAR_PASSAGE}`);
 }
 
 // Prend la main sur un rapport, sauf si un autre passage l'a pris entre-temps.
@@ -89,13 +92,31 @@ async function maj(db, id, champs) {
 }
 
 function donneesDe(ligne) {
+  const solo = ligne.mode === 'solo';
   return {
     lang: ligne.lang,
+    mode: solo ? 'solo' : 'duo',
     situation: ligne.situation,
-    finiLe: ligne.a_fini > ligne.b_fini ? ligne.a_fini : ligne.b_fini,
-    a: { prenom: ligne.a_prenom, genre: ligne.a_genre, reponses: ligne.a_reponses || {}, nn: ligne.a_nn || [] },
-    b: { prenom: ligne.b_prenom, genre: ligne.b_genre, reponses: ligne.b_reponses || {}, nn: ligne.b_nn || [] },
+    finiLe: solo ? ligne.a_fini : (ligne.a_fini > ligne.b_fini ? ligne.a_fini : ligne.b_fini),
+    a: { prenom: ligne.a_prenom, genre: ligne.a_genre, reponses: ligne.a_reponses || {}, nn: ligne.a_nn || [], ...(solo ? { percu: ligne.a_percu || {} } : {}) },
+    b: solo ? { prenom: ligne.b_prenom, genre: ligne.b_genre }
+      : { prenom: ligne.b_prenom, genre: ligne.b_genre, reponses: ligne.b_reponses || {}, nn: ligne.b_nn || [] },
   };
+}
+
+// Un problème de mise en page, sans le texte du rapport : les contrôles
+// citent les mots qui débordent, et ces mots sont des réponses intimes. Ni
+// la base (rapport_erreur, lu dans l'admin) ni le journal du workflow ne
+// doivent les recevoir. On garde le type, la classe et les mesures.
+export function problemeAnonyme(p) {
+  const sansTexte = (v) => (typeof v === 'string' ? v.replace(/\s*«[^»]*»/g, '').trim() : v);
+  const propre = {};
+  for (const [k, v] of Object.entries(p || {})) {
+    if (['texte', 'autour', 'a', 'b', 'detail'].includes(k)) continue;
+    propre[k] = sansTexte(v);
+  }
+  if (p && p.type === 'police' && p.detail) propre.detail = p.detail;
+  return propre;
 }
 
 async function deposer(db, id, pdf) {
@@ -183,9 +204,10 @@ async function principal() {
           const r = await fabriquerPdf(navigateur, donneesDe(ligne));
           if (r.problemes.length) {
             echecs++;
+            const anonymes = r.problemes.map(problemeAnonyme);
             console.error(`[fabrique] ${court} REFUSÉ : ${r.problemes.length} problème(s) de mise en page`);
-            for (const p of r.problemes.slice(0, 10)) console.error('   ', JSON.stringify(p));
-            await maj(db, ligne.id, { rapport_statut: 'erreur', rapport_erreur: JSON.stringify(r.problemes.slice(0, 5)).slice(0, 1900) });
+            for (const p of anonymes.slice(0, 10)) console.error('   ', JSON.stringify(p));
+            await maj(db, ligne.id, { rapport_statut: 'erreur', rapport_erreur: JSON.stringify(anonymes.slice(0, 5)).slice(0, 1900) });
             continue;
           }
           const chemin = await deposer(db, ligne.id, r.pdf);
@@ -200,6 +222,8 @@ async function principal() {
           }
         } catch (e) {
           echecs++;
+          // Le message d'une exception ne cite jamais le rapport ; la pile
+          // reste dans le journal, pas en base.
           console.error(`[fabrique] ${court} ÉCHEC : ${e.stack || e.message}`);
           await maj(db, ligne.id, { rapport_statut: 'erreur', rapport_erreur: String(e.message || e).slice(0, 1900) }).catch(() => {});
         }
@@ -225,7 +249,9 @@ async function principal() {
   if (echecs) process.exit(1);
 }
 
-principal().catch((e) => {
-  console.error('[fabrique]', e.stack || e.message);
-  process.exit(1);
-});
+if (import.meta.url === `file://${process.argv[1]}`) {
+  principal().catch((e) => {
+    console.error('[fabrique]', e.stack || e.message);
+    process.exit(1);
+  });
+}

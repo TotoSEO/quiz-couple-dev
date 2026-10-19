@@ -1,4 +1,4 @@
-// Le bilan de couple : la structure des questions et tout le calcul.
+// L'évaluation de couple : la structure des questions et tout le calcul.
 //
 // Un seul fichier pour le serveur (fonction `bilan`, qui valide les réponses),
 // pour la page (le générateur le sert en /js/bilan-coeur.js, sans les
@@ -6,17 +6,30 @@
 // payé) et pour la fabrique du PDF (rapport/). Les textes sont ailleurs, un
 // fichier par langue : {lang}/bilan-questions.json.
 // Conception : docs/bilan/CONCEPTION.md ; la recherche derrière chaque
-// question : docs/bilan/RECHERCHE.md.
+// question et le poids qu'elle lui donne : docs/bilan/RECHERCHE.md.
 
-export const VERSION = 2;
+export const VERSION = 3;
 
 // Le prix du rapport complet, pour le couple (un seul paiement débloque le
-// rapport des deux). En centimes d'euro.
+// rapport des deux) comme pour une évaluation faite seul(e). En centimes.
 export const PRIX_CENTIMES = 990;
 // « Satisfaits ou remboursés » : 0 pour retirer la promesse partout.
 export const GARANTIE_JOURS = 14;
 // Durées de conservation, en jours (reprises par la migration et la page).
 export const CONSERVATION = { nonPaye: 60, paye: 183 };
+
+// Les deux façons de faire l'évaluation (Thomas, 19 octobre 2026 : « quand
+// ça va mal dans un couple ou que l'un est fermé à la discussion, ça doit
+// être obligatoire de pouvoir réaliser tout ça seul ») :
+//   duo   chacun répond de son côté, le rapport compare les deux séries ;
+//   solo  une seule personne répond deux fois à chaque question : ce qu'elle
+//         pense, puis ce que son ou sa partenaire répondrait d'après elle
+//         (ou « je ne sais pas »). Le rapport compare sa réponse à l'idée
+//         qu'elle se fait de l'autre, et compte les sujets où elle ne sait
+//         pas : les zones d'ombre.
+export const MODES = ['duo', 'solo'];
+// La valeur « je ne sais pas » d'une perception, en mode solo.
+export const INCONNU = -1;
 
 // La situation du couple, décrite à la création. Elle change les questions
 // posées, jamais les domaines : on garde les souhaits, on adapte les faits.
@@ -38,6 +51,16 @@ export const SITUATION = [
 //            l'autre » ; la réponse de l'autre est retournée avant de comparer
 //   etat     comment on vit les choses en ce moment, du mieux au moins bien ;
 //            ne compte pas dans l'accord, fait l'indice de climat
+// `poids` : ce que la question pèse dans son domaine (et dans le climat pour
+//            une question d'état), de 1 à 3 :
+//            1  une habitude, une préférence du quotidien ;
+//            2  un sujet qui structure la vie à deux, ou que la recherche
+//               relie nettement à la qualité d'une relation ;
+//            3  ce qui engage une vie (enfants, lieu de vie, fidélité,
+//               engagement) et les indicateurs les plus solides de la
+//               recherche (bonheur, engagement perçu, appréciation, mépris).
+//            Chaque poids est justifié dans docs/bilan/RECHERCHE.md. Une
+//            question décisive pèse toujours 3.
 // `decisif` : la question engage une vie, on peut la marquer non négociable.
 // `sensible` : sujet intime (religion, opinions, sexualité), jamais repris
 //              dans un texte qui pourrait être lu par-dessus l'épaule.
@@ -51,137 +74,137 @@ const VEUT_ENFANTS = { enf1: [0, 1, 2] };
 
 export const DOMAINES = [
   { id: 'quotidien', questions: [
-    { id: 'quo1', type: 'qui', si: { ensemble: 'oui' } },
-    { id: 'quo1b', type: 'qui', si: { ensemble: 'non' } },
-    { id: 'quo2', type: 'qui', si: { ensemble: 'oui' } },
-    { id: 'quo2b', type: 'qui', si: { ensemble: 'non' } },
-    { id: 'quo3', type: 'echelle', n: 4 },
-    { id: 'quo4', type: 'echelle', n: 4 },
-    { id: 'quo5', type: 'echelle', n: 4 },
-    { id: 'quo6', type: 'echelle', n: 4 },
-    { id: 'quo7', type: 'echelle', n: 4, decisif: true, si: { animal: 'non' } },
-    { id: 'quo7b', type: 'echelle', n: 4, si: { animal: 'oui' } },
-    { id: 'quo8', type: 'echelle', n: 4 },
+    { id: 'quo1', type: 'qui', poids: 2, si: { ensemble: 'oui' } },
+    { id: 'quo1b', type: 'qui', poids: 2, si: { ensemble: 'non' } },
+    { id: 'quo2', type: 'qui', poids: 2, si: { ensemble: 'oui' } },
+    { id: 'quo2b', type: 'qui', poids: 1, si: { ensemble: 'non' } },
+    { id: 'quo3', type: 'echelle', n: 4, poids: 1 },
+    { id: 'quo4', type: 'echelle', n: 4, poids: 1 },
+    { id: 'quo5', type: 'echelle', n: 4, poids: 1 },
+    { id: 'quo6', type: 'echelle', n: 4, poids: 1 },
+    { id: 'quo7', type: 'echelle', n: 4, poids: 3, decisif: true, si: { animal: 'non' } },
+    { id: 'quo7b', type: 'echelle', n: 4, poids: 1, si: { animal: 'oui' } },
+    { id: 'quo8', type: 'echelle', n: 4, poids: 1 },
   ] },
   { id: 'temps', questions: [
-    { id: 'tps1', type: 'echelle', n: 4 },
-    { id: 'tps2', type: 'echelle', n: 4 },
-    { id: 'tps3', type: 'echelle', n: 4 },
-    { id: 'tps4', type: 'echelle', n: 4 },
-    { id: 'tps5', type: 'echelle', n: 4 },
-    { id: 'tps6', type: 'choix', n: 4, proches: [[1, 2], [0, 3]] },
-    { id: 'tps7', type: 'echelle', n: 4 },
-    { id: 'tps8', type: 'echelle', n: 4 },
-    { id: 'tps9', type: 'echelle', n: 4 },
+    { id: 'tps1', type: 'echelle', n: 4, poids: 2 },
+    { id: 'tps2', type: 'echelle', n: 4, poids: 2 },
+    { id: 'tps3', type: 'echelle', n: 4, poids: 1 },
+    { id: 'tps4', type: 'echelle', n: 4, poids: 1 },
+    { id: 'tps5', type: 'echelle', n: 4, poids: 1 },
+    { id: 'tps6', type: 'choix', n: 4, poids: 1, proches: [[1, 2], [0, 3]] },
+    { id: 'tps7', type: 'echelle', n: 4, poids: 2 },
+    { id: 'tps8', type: 'echelle', n: 4, poids: 1 },
+    { id: 'tps9', type: 'echelle', n: 4, poids: 2 },
   ] },
   { id: 'entourage', questions: [
-    { id: 'ent1', type: 'echelle', n: 4 },
-    { id: 'ent2', type: 'echelle', n: 4 },
-    { id: 'ent3', type: 'choix', n: 4, miroir: { 0: 1, 1: 0 }, proches: [[0, 2], [1, 2]] },
-    { id: 'ent4', type: 'echelle', n: 4 },
-    { id: 'ent5', type: 'echelle', n: 4 },
-    { id: 'ent6', type: 'echelle', n: 4, decisif: true },
-    { id: 'ent7', type: 'echelle', n: 4 },
+    { id: 'ent1', type: 'echelle', n: 4, poids: 2 },
+    { id: 'ent2', type: 'echelle', n: 4, poids: 2 },
+    { id: 'ent3', type: 'choix', n: 4, poids: 1, miroir: { 0: 1, 1: 0 }, proches: [[0, 2], [1, 2]] },
+    { id: 'ent4', type: 'echelle', n: 4, poids: 1 },
+    { id: 'ent5', type: 'echelle', n: 4, poids: 2 },
+    { id: 'ent6', type: 'echelle', n: 4, poids: 3, decisif: true },
+    { id: 'ent7', type: 'echelle', n: 4, poids: 1 },
   ] },
   { id: 'travail', questions: [
-    { id: 'tra1', type: 'echelle', n: 4 },
-    { id: 'tra2', type: 'echelle', n: 4 },
-    { id: 'tra3', type: 'echelle', n: 4 },
-    { id: 'tra4', type: 'echelle', n: 4 },
-    { id: 'tra5', type: 'echelle', n: 4 },
-    { id: 'tra6', type: 'echelle', n: 4 },
-    { id: 'tra7', type: 'echelle', n: 4 },
+    { id: 'tra1', type: 'echelle', n: 4, poids: 2 },
+    { id: 'tra2', type: 'echelle', n: 4, poids: 2 },
+    { id: 'tra3', type: 'echelle', n: 4, poids: 2 },
+    { id: 'tra4', type: 'echelle', n: 4, poids: 1 },
+    { id: 'tra5', type: 'echelle', n: 4, poids: 1 },
+    { id: 'tra6', type: 'echelle', n: 4, poids: 2 },
+    { id: 'tra7', type: 'echelle', n: 4, poids: 1 },
   ] },
   { id: 'argent', questions: [
-    { id: 'arg1', type: 'echelle', n: 4 },
-    { id: 'arg2', type: 'choix', n: 4, proches: [[1, 2], [2, 3]] },
-    { id: 'arg3', type: 'echelle', n: 4 },
-    { id: 'arg4', type: 'echelle', n: 4 },
-    { id: 'arg5', type: 'choix', n: 4, proches: [[1, 2]] },
-    { id: 'arg6', type: 'echelle', n: 4 },
-    { id: 'arg7', type: 'qui', si: { ensemble: 'oui' } },
-    { id: 'arg8', type: 'echelle', n: 4 },
+    { id: 'arg1', type: 'echelle', n: 4, poids: 2 },
+    { id: 'arg2', type: 'choix', n: 4, poids: 2, proches: [[1, 2], [2, 3]] },
+    { id: 'arg3', type: 'echelle', n: 4, poids: 2 },
+    { id: 'arg4', type: 'echelle', n: 4, poids: 2 },
+    { id: 'arg5', type: 'choix', n: 4, poids: 1, proches: [[1, 2]] },
+    { id: 'arg6', type: 'echelle', n: 4, poids: 2 },
+    { id: 'arg7', type: 'qui', poids: 1, si: { ensemble: 'oui' } },
+    { id: 'arg8', type: 'echelle', n: 4, poids: 2 },
   ] },
   { id: 'logement', questions: [
-    { id: 'log1', type: 'echelle', n: 4, decisif: true, si: { ensemble: 'non' } },
-    { id: 'log2', type: 'choix', n: 4, decisif: true, proches: [[0, 1], [1, 2]] },
-    { id: 'log3', type: 'echelle', n: 4, decisif: true, si: { proprio: 'non' } },
-    { id: 'log3b', type: 'echelle', n: 4, si: { proprio: 'oui' } },
-    { id: 'log4', type: 'echelle', n: 4 },
-    { id: 'log5', type: 'echelle', n: 4, decisif: true },
-    { id: 'log6', type: 'echelle', n: 4, decisif: true },
-    { id: 'log7', type: 'qui', si: { ensemble: 'oui' } },
+    { id: 'log1', type: 'echelle', n: 4, poids: 3, decisif: true, si: { ensemble: 'non' } },
+    { id: 'log2', type: 'choix', n: 4, poids: 3, decisif: true, proches: [[0, 1], [1, 2]] },
+    { id: 'log3', type: 'echelle', n: 4, poids: 3, decisif: true, si: { proprio: 'non' } },
+    { id: 'log3b', type: 'echelle', n: 4, poids: 2, si: { proprio: 'oui' } },
+    { id: 'log4', type: 'echelle', n: 4, poids: 2 },
+    { id: 'log5', type: 'echelle', n: 4, poids: 3, decisif: true },
+    { id: 'log6', type: 'echelle', n: 4, poids: 3, decisif: true },
+    { id: 'log7', type: 'qui', poids: 1, si: { ensemble: 'oui' } },
   ] },
   { id: 'enfants', questions: [
-    { id: 'enf1', type: 'echelle', n: 4, decisif: true, si: { enfants: 'non' } },
-    { id: 'enf2', type: 'echelle', n: 4, decisif: true, si: { enfants: 'non' }, siRep: VEUT_ENFANTS },
-    { id: 'enf3', type: 'choix', n: 4, si: { enfants: 'non' }, siRep: VEUT_ENFANTS,
+    { id: 'enf1', type: 'echelle', n: 4, poids: 3, decisif: true, si: { enfants: 'non' } },
+    { id: 'enf2', type: 'echelle', n: 4, poids: 3, decisif: true, si: { enfants: 'non' }, siRep: VEUT_ENFANTS },
+    { id: 'enf3', type: 'choix', n: 4, poids: 2, si: { enfants: 'non' }, siRep: VEUT_ENFANTS,
       proches: [[0, 1], [1, 2], [0, 3], [1, 3], [2, 3]] },
-    { id: 'enf1b', type: 'echelle', n: 4, decisif: true, si: { enfants: 'oui' } },
-    { id: 'enf4', type: 'echelle', n: 4, siRep: VEUT_ENFANTS },
-    { id: 'enf5', type: 'qui', siRep: VEUT_ENFANTS },
-    { id: 'enf6', type: 'echelle', n: 4, siRep: VEUT_ENFANTS },
-    { id: 'enf7', type: 'echelle', n: 4, siRep: VEUT_ENFANTS },
-    { id: 'enf8', type: 'echelle', n: 4, si: { enfantsAvant: 'oui' } },
+    { id: 'enf1b', type: 'echelle', n: 4, poids: 3, decisif: true, si: { enfants: 'oui' } },
+    { id: 'enf4', type: 'echelle', n: 4, poids: 2, siRep: VEUT_ENFANTS },
+    { id: 'enf5', type: 'qui', poids: 2, siRep: VEUT_ENFANTS },
+    { id: 'enf6', type: 'echelle', n: 4, poids: 2, siRep: VEUT_ENFANTS },
+    { id: 'enf7', type: 'echelle', n: 4, poids: 1, siRep: VEUT_ENFANTS },
+    { id: 'enf8', type: 'echelle', n: 4, poids: 2, si: { enfantsAvant: 'oui' } },
   ] },
   { id: 'valeurs', questions: [
-    { id: 'val1', type: 'echelle', n: 4, sensible: true },
-    { id: 'val2', type: 'echelle', n: 4, decisif: true, sensible: true, siRep: VEUT_ENFANTS },
-    { id: 'val3', type: 'echelle', n: 4, decisif: true, si: { engagement: 'rien' } },
-    { id: 'val3b', type: 'echelle', n: 4, si: { engagement: ['maries', 'pacses'] } },
-    { id: 'val4', type: 'echelle', n: 4 },
-    { id: 'val5', type: 'choix', n: 4, proches: [[0, 1]] },
-    { id: 'val6', type: 'echelle', n: 4 },
-    { id: 'val7', type: 'echelle', n: 4 },
-    { id: 'val8', type: 'echelle', n: 4, sensible: true },
+    { id: 'val1', type: 'echelle', n: 4, poids: 2, sensible: true },
+    { id: 'val2', type: 'echelle', n: 4, poids: 3, decisif: true, sensible: true, siRep: VEUT_ENFANTS },
+    { id: 'val3', type: 'echelle', n: 4, poids: 3, decisif: true, si: { engagement: 'rien' } },
+    { id: 'val3b', type: 'echelle', n: 4, poids: 2, si: { engagement: ['maries', 'pacses'] } },
+    { id: 'val4', type: 'echelle', n: 4, poids: 1 },
+    { id: 'val5', type: 'choix', n: 4, poids: 2, proches: [[0, 1]] },
+    { id: 'val6', type: 'echelle', n: 4, poids: 2 },
+    { id: 'val7', type: 'echelle', n: 4, poids: 1 },
+    { id: 'val8', type: 'echelle', n: 4, poids: 1, sensible: true },
   ] },
   { id: 'disputes', questions: [
-    { id: 'dis1', type: 'echelle', n: 4 },
-    { id: 'dis2', type: 'choix', n: 4, proches: [[0, 2], [1, 3]] },
-    { id: 'dis3', type: 'echelle', n: 4 },
-    { id: 'dis4', type: 'qui' },
-    { id: 'dis5', type: 'echelle', n: 4 },
-    { id: 'dis6', type: 'choix', n: 4, proches: [[0, 2]] },
-    { id: 'dis7', type: 'echelle', n: 4 },
-    { id: 'dis8', type: 'etat', n: 4, signal: 'critique' },
-    { id: 'dis9', type: 'etat', n: 4, signal: 'mepris' },
-    { id: 'dis10', type: 'etat', n: 4, signal: 'defense' },
-    { id: 'dis11', type: 'etat', n: 4, signal: 'retrait' },
-    { id: 'dis12', type: 'etat', n: 4, signal: 'reparation' },
+    { id: 'dis1', type: 'echelle', n: 4, poids: 2 },
+    { id: 'dis2', type: 'choix', n: 4, poids: 2, proches: [[0, 2], [1, 3]] },
+    { id: 'dis3', type: 'echelle', n: 4, poids: 1 },
+    { id: 'dis4', type: 'qui', poids: 2 },
+    { id: 'dis5', type: 'echelle', n: 4, poids: 2 },
+    { id: 'dis6', type: 'choix', n: 4, poids: 2, proches: [[0, 2]] },
+    { id: 'dis7', type: 'echelle', n: 4, poids: 2 },
+    { id: 'dis8', type: 'etat', n: 4, poids: 2, signal: 'critique' },
+    { id: 'dis9', type: 'etat', n: 4, poids: 3, signal: 'mepris' },
+    { id: 'dis10', type: 'etat', n: 4, poids: 2, signal: 'defense' },
+    { id: 'dis11', type: 'etat', n: 4, poids: 2, signal: 'retrait' },
+    { id: 'dis12', type: 'etat', n: 4, poids: 2, signal: 'reparation' },
   ] },
   { id: 'confiance', questions: [
-    { id: 'con1', type: 'echelle', n: 4 },
-    { id: 'con2', type: 'echelle', n: 4, decisif: true },
-    { id: 'con3', type: 'echelle', n: 4 },
-    { id: 'con4', type: 'echelle', n: 4 },
-    { id: 'con5', type: 'echelle', n: 4 },
-    { id: 'con6', type: 'echelle', n: 4 },
-    { id: 'con7', type: 'echelle', n: 4, decisif: true, sensible: true },
-    { id: 'con8', type: 'echelle', n: 4 },
+    { id: 'con1', type: 'echelle', n: 4, poids: 1 },
+    { id: 'con2', type: 'echelle', n: 4, poids: 3, decisif: true },
+    { id: 'con3', type: 'echelle', n: 4, poids: 1 },
+    { id: 'con4', type: 'echelle', n: 4, poids: 1 },
+    { id: 'con5', type: 'echelle', n: 4, poids: 2 },
+    { id: 'con6', type: 'echelle', n: 4, poids: 1 },
+    { id: 'con7', type: 'echelle', n: 4, poids: 3, decisif: true, sensible: true },
+    { id: 'con8', type: 'echelle', n: 4, poids: 2 },
   ] },
   { id: 'intimite', sensible: true, questions: [
-    { id: 'int1', type: 'echelle', n: 4 },
-    { id: 'int2', type: 'echelle', n: 4 },
-    { id: 'int3', type: 'echelle', n: 4 },
-    { id: 'int4', type: 'qui' },
-    { id: 'int5', type: 'echelle', n: 4 },
-    { id: 'int6', type: 'etat', n: 4 },
-    { id: 'int7', type: 'etat', n: 4 },
-    { id: 'int8', type: 'etat', n: 4 },
+    { id: 'int1', type: 'echelle', n: 4, poids: 2 },
+    { id: 'int2', type: 'echelle', n: 4, poids: 2 },
+    { id: 'int3', type: 'echelle', n: 4, poids: 2 },
+    { id: 'int4', type: 'qui', poids: 1 },
+    { id: 'int5', type: 'echelle', n: 4, poids: 1 },
+    { id: 'int6', type: 'etat', n: 4, poids: 2 },
+    { id: 'int7', type: 'etat', n: 4, poids: 3 },
+    { id: 'int8', type: 'etat', n: 4, poids: 2 },
   ] },
   { id: 'meteo', meteo: true, questions: [
-    { id: 'met1', type: 'etat', n: 4 },
-    { id: 'met2', type: 'etat', n: 4 },
-    { id: 'met3', type: 'etat', n: 4 },
-    { id: 'met4', type: 'etat', n: 4 },
-    { id: 'met5', type: 'etat', n: 4 },
-    { id: 'met6', type: 'etat', n: 4 },
-    { id: 'met7', type: 'etat', n: 4 },
-    { id: 'met8', type: 'etat', n: 4 },
-    { id: 'met9', type: 'etat', n: 4 },
-    { id: 'met10', type: 'etat', n: 4 },
-    { id: 'met11', type: 'etat', n: 4 },
-    { id: 'met12', type: 'etat', n: 4 },
+    { id: 'met1', type: 'etat', n: 4, poids: 3 },
+    { id: 'met2', type: 'etat', n: 4, poids: 2 },
+    { id: 'met3', type: 'etat', n: 4, poids: 2 },
+    { id: 'met4', type: 'etat', n: 4, poids: 2 },
+    { id: 'met5', type: 'etat', n: 4, poids: 2 },
+    { id: 'met6', type: 'etat', n: 4, poids: 2 },
+    { id: 'met7', type: 'etat', n: 4, poids: 3 },
+    { id: 'met8', type: 'etat', n: 4, poids: 3 },
+    { id: 'met9', type: 'etat', n: 4, poids: 2 },
+    { id: 'met10', type: 'etat', n: 4, poids: 3 },
+    { id: 'met11', type: 'etat', n: 4, poids: 3 },
+    { id: 'met12', type: 'etat', n: 4, poids: 2 },
   ] },
 ];
 
@@ -189,6 +212,7 @@ export const DOMAINES = [
 export const INDEX = {};
 DOMAINES.forEach((d, di) => d.questions.forEach((q, qi) => {
   if (q.type === 'qui') q.n = 5;
+  if (!q.poids) q.poids = q.decisif ? 3 : 1;
   INDEX[q.id] = { q, d, di, qi };
 }));
 
@@ -202,10 +226,17 @@ DOMAINES.forEach((d, di) => d.questions.forEach((q, qi) => {
 export const BANDES_GLOBAL = [[90, 'onde'], [82, 'proches'], [74, 'creuser'], [65, 'apprivoiser'], [0, 'visions']];
 export const BANDES_METEO = [[80, 'beau'], [65, 'nuages'], [50, 'variable'], [35, 'orageux'], [0, 'tempete']];
 export const BANDES_DOMAINE = [[85, 'fort'], [70, 'moyen'], [0, 'faible']];
+// En mode solo : la part des sujets où la personne ne sait pas ce que l'autre
+// répondrait, en pourcentage des questions posées.
+export const BANDES_OMBRE = [[30, 'large'], [12, 'quelques'], [0, 'peu']];
 
 export function bande(table, valeur) {
   for (const [seuil, cle] of table) if (valeur >= seuil) return cle;
   return table[table.length - 1][1];
+}
+
+export function modeValide(m) {
+  return MODES.includes(m);
 }
 
 // ── La situation ────────────────────────────────────────────────────────
@@ -261,15 +292,22 @@ export function questionsPour(situation, reponses) {
   return liste;
 }
 
-export function progression(situation, reponses) {
+// Où en est une personne : les questions posées, celles qui ont une réponse,
+// et, en solo (percu donné), celles qui ont aussi leur perception. Une
+// question compte une fois ; elle est faite quand tout y est.
+export function progression(situation, reponses, percu) {
   const liste = questionsPour(situation, reponses);
   let repondu = 0;
-  for (const { id } of liste) if (estReponse(reponses?.[id])) repondu++;
+  for (const { id } of liste) {
+    if (!estReponse(reponses?.[id])) continue;
+    if (percu !== undefined && !estPerception(percu?.[id])) continue;
+    repondu++;
+  }
   return { repondu, total: liste.length };
 }
 
-export function complet(situation, reponses) {
-  const p = progression(situation, reponses);
+export function complet(situation, reponses, percu) {
+  const p = progression(situation, reponses, percu);
   return p.total > 0 && p.repondu === p.total;
 }
 
@@ -290,15 +328,21 @@ export function etapes(situation, reponses) {
 }
 
 function estReponse(v) {
-  return Number.isInteger(v);
+  return Number.isInteger(v) && v >= 0;
+}
+
+// Une perception : une réponse, ou « je ne sais pas ».
+function estPerception(v) {
+  return Number.isInteger(v) && v >= INCONNU;
 }
 
 // ── Validation de ce qu'envoie la page ──────────────────────────────────
 
-// Renvoie { reponses, nn } nettoyés, ou { erreur }. Une réponse est un entier
-// dans les bornes de sa question ; un non négociable ne se pose que sur une
-// question décisive à laquelle on a répondu.
-export function valideReponses(reponses, nn) {
+// Renvoie { reponses, nn, percu } nettoyés, ou { erreur }. Une réponse est
+// un entier dans les bornes de sa question ; une perception (mode solo) peut
+// aussi être INCONNU ; un non négociable ne se pose que sur une question
+// décisive à laquelle on a répondu.
+export function valideReponses(reponses, nn, percu) {
   if (!reponses || typeof reponses !== 'object' || Array.isArray(reponses)) return { erreur: 'reponses' };
   const propres = {};
   for (const [id, v] of Object.entries(reponses)) {
@@ -317,7 +361,20 @@ export function valideReponses(reponses, nn) {
       if (estReponse(propres[id]) && !liste.includes(id)) liste.push(id);
     }
   }
-  return { reponses: propres, nn: liste };
+  const resultat = { reponses: propres, nn: liste };
+  if (percu !== undefined && percu !== null) {
+    if (typeof percu !== 'object' || Array.isArray(percu)) return { erreur: 'percu' };
+    const p = {};
+    for (const [id, v] of Object.entries(percu)) {
+      const r = INDEX[id];
+      if (!r) return { erreur: 'percu:' + id };
+      if (v === null) continue;
+      if (!Number.isInteger(v) || v < INCONNU || v >= r.q.n) return { erreur: 'percu:' + id };
+      p[id] = v;
+    }
+    resultat.percu = p;
+  }
+  return resultat;
 }
 
 // ── Comparer deux réponses ──────────────────────────────────────────────
@@ -358,7 +415,7 @@ export function comparer(q, a, b) {
   return res;
 }
 
-// ── Le bilan d'un couple ────────────────────────────────────────────────
+// ── L'évaluation d'un couple ────────────────────────────────────────────
 
 function arrondi(x) {
   return Math.round(x * 100);
@@ -370,28 +427,40 @@ function nnDe(personne) {
 
 // A et B : { reponses: { id: valeur }, nn: [ids] }. Seules les questions
 // posées aux deux et répondues par les deux sont comparées.
-export function analyser(situation, A, B) {
+// En mode solo, B est ce que A pense que l'autre répondrait (A.percu) :
+// une perception INCONNU n'est pas comparée, elle fait une zone d'ombre.
+export function analyser(situation, A, B, mode) {
+  const solo = mode === 'solo';
   const ra = A?.reponses || {};
-  const rb = B?.reponses || {};
+  const rb = solo ? (A?.percu || {}) : (B?.reponses || {});
   const nnA = nnDe(A);
-  const nnB = nnDe(B);
+  const nnB = solo ? new Set() : nnDe(B);
   const items = [];
   const etats = [];
   const domaines = [];
+  const inconnus = [];
 
   for (const d of DOMAINES) {
     let somme = 0;
     let poids = 0;
-    const dom = { id: d.id, score: null, accords: 0, proches: 0, ecarts: 0, items: [], etats: [] };
+    const dom = { id: d.id, score: null, accords: 0, proches: 0, ecarts: 0, inconnus: 0, poses: 0, items: [], etats: [] };
     for (const q of d.questions) {
-      if (!applicable(q, situation, ra) || !applicable(q, situation, rb)) continue;
+      // En solo, les perceptions suivent les questions posées à A.
+      if (!applicable(q, situation, ra) || (!solo && !applicable(q, situation, rb))) continue;
       const a = ra[q.id];
       const b = rb[q.id];
-      if (!estReponse(a) || !estReponse(b)) continue;
+      if (!estReponse(a)) continue;
+      dom.poses++;
+      if (solo && b === INCONNU) {
+        inconnus.push({ id: q.id, domaine: d.id, type: q.type, decisif: !!q.decisif, poids: q.poids, nnA: nnA.has(q.id) });
+        dom.inconnus++;
+        continue;
+      }
+      if (!estReponse(b)) continue;
       if (q.type === 'etat') {
         const max = q.n - 1;
         const e = {
-          id: q.id, domaine: d.id, a, b, signal: q.signal || null,
+          id: q.id, domaine: d.id, a, b, signal: q.signal || null, poids: q.poids,
           sensible: !!(q.sensible || d.sensible),
           bienA: 1 - a / max, bienB: 1 - b / max,
           attentionA: a >= q.n / 2, attentionB: b >= q.n / 2,
@@ -405,7 +474,7 @@ export function analyser(situation, A, B) {
       const c = comparer(q, a, b);
       const item = {
         id: q.id, domaine: d.id, type: q.type, a, b,
-        p: c.p, cat: c.cat, oppose: !!c.oppose,
+        p: c.p, cat: c.cat, oppose: !!c.oppose, poids: q.poids,
         decisif: !!q.decisif, sensible: !!(q.sensible || d.sensible),
         nnA: nnA.has(q.id), nnB: nnB.has(q.id),
         chacunPlus: !!c.chacunPlus, desequilibre: c.desequilibre || null,
@@ -417,16 +486,17 @@ export function analyser(situation, A, B) {
         else if (item.cat === 'ecart') item.statut = 'aTrancher';
         else if (item.cat === 'proche' && nn) item.statut = 'aConfirmer';
       }
+      // La priorité d'un écart : un point bloquant d'abord, puis le poids
+      // de la question, puis la taille de l'écart.
       item.prio = (item.statut === 'bloquant' ? 100 : 0)
-        + (item.decisif ? 30 : 0)
+        + item.poids * 12
         + (1 - item.p) * 50
         + (item.cat === 'ecart' ? 10 : 0)
         + (item.chacunPlus ? 15 : 0)
         + (item.statut === 'aConfirmer' ? 10 : 0);
       item.prio = Math.round(item.prio * 10) / 10;
-      const w = item.decisif ? 2 : 1;
-      somme += item.p * w;
-      poids += w;
+      somme += item.p * item.poids;
+      poids += item.poids;
       dom[item.cat === 'accord' ? 'accords' : item.cat === 'proche' ? 'proches' : 'ecarts']++;
       items.push(item);
       dom.items.push(item);
@@ -434,18 +504,26 @@ export function analyser(situation, A, B) {
     if (poids > 0) dom.score = arrondi(somme / poids);
     dom.bande = dom.score === null ? null : bande(BANDES_DOMAINE, dom.score);
     dom.meteo = !!d.meteo;
+    // Le climat du domaine, pour chacun : la moyenne pondérée de ses
+    // questions d'état (disputes, intimité, météo seulement).
+    const pe = dom.etats.reduce((s, e) => s + e.poids, 0);
+    dom.climatA = pe ? arrondi(dom.etats.reduce((s, e) => s + e.bienA * e.poids, 0) / pe) : null;
+    dom.climatB = pe ? arrondi(dom.etats.reduce((s, e) => s + e.bienB * e.poids, 0) / pe) : null;
     domaines.push(dom);
   }
 
   const notes = domaines.filter((d) => !d.meteo && d.score !== null);
   const global = notes.length ? Math.round(notes.reduce((s, d) => s + d.score, 0) / notes.length) : null;
 
+  // Le climat : le bien-être moyen de chacun, les questions les plus solides
+  // de la recherche pesant plus (poids).
   let meteo = null;
   let meteoA = null;
   let meteoB = null;
   if (etats.length) {
-    meteoA = arrondi(etats.reduce((s, e) => s + e.bienA, 0) / etats.length);
-    meteoB = arrondi(etats.reduce((s, e) => s + e.bienB, 0) / etats.length);
+    const pe = etats.reduce((s, e) => s + e.poids, 0);
+    meteoA = arrondi(etats.reduce((s, e) => s + e.bienA * e.poids, 0) / pe);
+    meteoB = arrondi(etats.reduce((s, e) => s + e.bienB * e.poids, 0) / pe);
     meteo = Math.round((meteoA + meteoB) / 2);
   }
 
@@ -474,10 +552,18 @@ export function analyser(situation, A, B) {
 
   const rassemble = items
     .filter((i) => i.cat === 'accord' && !i.desequilibre)
-    .sort((x, y) => (y.decisif ? 1 : 0) - (x.decisif ? 1 : 0) || ordre(x.id) - ordre(y.id))
+    .sort((x, y) => y.poids - x.poids || ordre(x.id) - ordre(y.id))
     .slice(0, 8)
     .map((i) => i.id);
 
+  // Pour la synthèse de fin : les domaines les plus proches et les moins
+  // proches (trois de chaque, sans doublon), et la répartition de toutes les
+  // questions comparées.
+  const tries = notes.slice().sort((x, y) => y.score - x.score || ordre(x.id + '1') - ordre(y.id + '1'));
+  const forces = tries.slice(0, 3).map((d) => d.id);
+  const chantiers = tries.slice(-3).reverse().filter((d) => !forces.includes(d.id)).map((d) => d.id);
+
+  const poses = items.length + etats.length + inconnus.length;
   const compte = {
     accords: items.filter((i) => i.cat === 'accord').length,
     proches: items.filter((i) => i.cat === 'proche').length,
@@ -486,10 +572,16 @@ export function analyser(situation, A, B) {
     aTrancher: items.filter((i) => i.statut === 'aTrancher').length,
     attention: etats.filter((e) => e.attentionA || e.attentionB).length,
     vigilance: signaux.filter((x) => x.alerte).length,
+    inconnus: inconnus.length,
+    poses,
   };
+  // La part d'ombre, en solo : les sujets où la personne ne sait pas ce que
+  // l'autre répondrait, rapportés à tout ce qui lui a été posé.
+  const ombre = solo && poses ? Math.round(inconnus.length / poses * 100) : null;
 
   return {
     version: VERSION,
+    mode: solo ? 'solo' : 'duo',
     global,
     bandeGlobal: global === null ? null : bande(BANDES_GLOBAL, global),
     meteo, meteoA, meteoB,
@@ -501,6 +593,11 @@ export function analyser(situation, A, B) {
     conversations,
     signaux,
     rassemble,
+    forces,
+    chantiers,
+    inconnus,
+    ombre,
+    bandeOmbre: ombre === null ? null : bande(BANDES_OMBRE, ombre),
     chacunPlus: items.filter((i) => i.chacunPlus).map((i) => i.id),
     desequilibres: items.filter((i) => i.desequilibre).map((i) => ({ id: i.id, qui: i.desequilibre })),
     bloquants: items.filter((i) => i.statut === 'bloquant').map((i) => i.id),

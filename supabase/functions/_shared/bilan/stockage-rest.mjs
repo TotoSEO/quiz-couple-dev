@@ -113,9 +113,9 @@ export function creerStockageMemoire() {
     async inserer(ligne) {
       const id = crypto.randomUUID();
       const complete = {
-        id, cree_le: new Date().toISOString(), maj_le: new Date().toISOString(), src: null,
+        id, cree_le: new Date().toISOString(), maj_le: new Date().toISOString(), src: null, mode: 'duo',
         a_genre: null, b_genre: null, a_consent: null, b_consent: null,
-        a_reponses: {}, b_reponses: {}, a_nn: [], b_nn: [], a_fini: null, b_fini: null,
+        a_reponses: {}, b_reponses: {}, a_nn: [], b_nn: [], a_percu: {}, a_fini: null, b_fini: null,
         a_etape: null, b_etape: null, a_email: null, b_email: null,
         paye_le: null, paiement_session: null, paiement_intent: null, paiement_montant: null,
         paiement_role: null, paiement_email: null, renonciation_le: null, rembourse_le: null,
@@ -131,8 +131,9 @@ export function creerStockageMemoire() {
       const l = lignes.get(id);
       if (!l) return null;
       Object.assign(l, copie(champs));
-      // Comme le déclencheur bilans_avant_maj de la migration.
-      if (l.paye_le && l.a_fini && l.b_fini && !l.rapport_statut) {
+      // Comme le déclencheur bilans_avant_maj de la migration : payé et
+      // fini (des deux côtés en duo, de la personne seule en solo).
+      if (l.paye_le && l.a_fini && (l.mode === 'solo' || l.b_fini) && !l.rapport_statut) {
         l.rapport_statut = 'a_faire';
         l.rapport_maj = new Date().toISOString();
       }

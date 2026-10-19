@@ -157,10 +157,10 @@
       "erreur": "No podemos comprobar el pago ahora mismo. Si has pagado, recarga la página dentro de un minuto."
     },
     "rapport": {
-      "surtitre": "Chequeo de pareja",
-      "pied": "Chequeo de pareja · confidencial",
+      "surtitre": "Evaluación de pareja",
+      "pied": "Evaluación de pareja · confidencial",
       "couverture": {
-        "de": "El chequeo de pareja de",
+        "de": "La evaluación de pareja de",
         "et": "y",
         "date": "Informe elaborado el {{date}}",
         "chiffres": "{{domaines}} áreas · {{questions}} preguntas comparadas",
@@ -176,6 +176,7 @@
         "proche": "Vuestras respuestas están cerca.",
         "ecart": "Vuestras respuestas se alejan.",
         "nn": "Uno de los dos ha marcado este tema como innegociable.",
+        "poids": "Una pregunta que compromete toda una vida (un hijo, dónde vivir, la fidelidad, el dinero que se comparte) pesa tres veces más que una pregunta del día a día en vuestras puntuaciones. Lleva esta etiqueta.",
         "sommaire": "En este informe",
         "nnTag": "Innegociable"
       },
@@ -184,16 +185,31 @@
         "carte": "El mapa de vuestras áreas",
         "conversations": "Vuestras cuatro próximas conversaciones",
         "bloquants": "Puntos de bloqueo e innegociables",
+        "ombre": "Vuestras zonas de sombra",
         "climat": "El clima de vuestra pareja",
         "signaux": "Vuestras señales de alerta",
         "roles": "Quién hace qué, según cada uno",
         "domaines": "Área por área",
+        "fin": "Para terminar",
         "suite": "¿Y ahora qué?"
       },
+      "ouvertures": {
+        "synthese": "Dos cifras, y lo que significan para los dos.",
+        "carte": "Doce áreas de la vida en pareja, de la más acordada a la más discutida.",
+        "conversations": "Los cuatro temas por los que empezar, y cómo abordarlos.",
+        "bloquants": "Aquello en lo que uno de los dos no puede ceder.",
+        "ombre": "Lo que no sabes de {{b}}, y que merece una pregunta.",
+        "climat": "Cómo se siente cada uno en la pareja, ahora mismo.",
+        "signaux": "Las costumbres de discusión que desgastan a una pareja, y dónde estáis.",
+        "roles": "Quién se ocupa de qué, según cada uno.",
+        "domaines": "Todas vuestras respuestas, tema por tema.",
+        "fin": "Lo que hay que recordar, y por dónde empezar.",
+        "suite": "Cómo hablarlo, y cuándo volver a hacer balance."
+      },
       "synthese": {
-        "intro": "Dos cifras resumen vuestro chequeo. La primera dice hasta qué punto queréis la misma vida en pareja. La segunda dice cómo se siente cada uno en la pareja ahora mismo. No siempre van juntas: se puede estar muy alineados y pasar por una mala racha, o al revés.",
+        "intro": "Dos cifras resumen vuestro evaluación. La primera dice hasta qué punto queréis la misma vida en pareja. La segunda dice cómo se siente cada uno en la pareja ahora mismo. No siempre van juntas: se puede estar muy alineados y pasar por una mala racha, o al revés.",
         "alignement": "Vuestra alineación",
-        "alignementAide": "El acuerdo de vuestras respuestas sobre la vida en pareja. Las grandes decisiones cuentan el doble.",
+        "alignementAide": "El acuerdo de vuestras respuestas sobre la vida en pareja. Los temas decisivos cuentan el triple.",
         "climat": "Vuestro clima",
         "climatAide": "Cómo vive cada uno la pareja ahora mismo.",
         "climatDe": "{{nom}}: {{n}} %",
@@ -202,8 +218,11 @@
           "proches": "Respuestas cercanas",
           "ecarts": "Diferencias",
           "bloquants": "Puntos de bloqueo",
-          "vigilance": "Señales que mirar"
+          "vigilance": "Señales que mirar",
+          "inconnus": "Zonas de sombra"
         },
+        "radar": "Vuestras áreas de un vistazo",
+        "radarAide": "Cuanto más se acerca el trazo al borde, más coinciden vuestras respuestas en esa área. Las cifras exactas están en el capítulo siguiente.",
         "forts": "Donde estáis más cerca",
         "faibles": "Donde lo estáis menos",
         "rassemble": "Lo que os une",
@@ -262,7 +281,8 @@
         },
         "accords": "acuerdos",
         "proches": "cercanas",
-        "ecarts": "diferencias"
+        "ecarts": "diferencias",
+        "inconnus": "no lo sé"
       },
       "conversations": {
         "intro": "Los temas en los que vuestras respuestas más se alejan, sobre lo que más cuenta, uno por tema. Dejad uno para cada noche, con calma, en lugar de todos de golpe.",
@@ -276,8 +296,32 @@
         "nnIntro": "Los temas en los que cada uno dijo que no podría ceder, con su respuesta.",
         "nnAucun": "Nada marcado."
       },
+      "ombre": {
+        "intro": "Has respondido por ti, y luego has dicho lo que respondería {{nom}}. Cuando no lo sabías, lo has dicho: este capítulo reúne esos temas. No son problemas, son preguntas que hacer.",
+        "part": "Tu parte de sombra",
+        "bandes": {
+          "peu": {
+            "titre": "Pocas zonas de sombra",
+            "texte": "Solo en {{n}} temas no sabías lo que respondería {{nom}}. Conoces bien su forma de ver las cosas."
+          },
+          "quelques": {
+            "titre": "Algunas zonas de sombra",
+            "texte": "En {{n}} temas no sabías lo que respondería {{nom}}. Es lo que pasa en la mayoría de las parejas: pocas veces se habla de todo."
+          },
+          "large": {
+            "titre": "Una gran parte de sombra",
+            "texte": "En {{n}} temas no sabías lo que respondería {{nom}}. No es una mala noticia: es la lista de las conversaciones que todavía no habéis tenido."
+          }
+        },
+        "listeTitre": "Los temas en los que no sabes",
+        "listeAide": "Cada uno es una pregunta para hacerle a {{nom}}, tal cual. Los temas decisivos llevan su etiqueta.",
+        "aucune": "Has sabido responder por {{nom}} todas las veces. El informe compara entonces tus respuestas con lo que imaginas de las suyas: el siguiente paso es comprobarlo con {{nom}}."
+      },
       "climat": {
         "intro": "Estas preguntas no buscan un acuerdo: dicen cómo vive cada uno la pareja ahora mismo. Una diferencia aquí significa que no estáis viviendo la misma relación, algo que pasa mucho más a menudo de lo que se cree.",
+        "parDomaine": "El clima, área por área",
+        "parDomaineAide": "En las áreas que tienen preguntas sobre cómo os sentís (las discusiones, la intimidad y el clima general), el bienestar de cada uno en la misma línea, de 0 a 100 %. Dos marcas alejadas: no estáis viviendo lo mismo.",
+        "questions": "Pregunta por pregunta",
         "ecart": "No lo vivís igual",
         "attention": "A tener en cuenta",
         "de": "Para {{nom}}",
@@ -300,17 +344,38 @@
         "chacunPlusTexte": "Es muy habitual: uno ve mejor lo que hace él que lo que hace el otro. Lo mejor es hacer juntos la lista de lo que se encarga cada uno, sin llevar la cuenta.",
         "desequilibre": "Estáis de acuerdo: es sobre todo {{nom}} quien se encarga. ¿Os parece bien a los dos?",
         "accord": "Lo veis de la misma manera.",
-        "aucun": "No hay ninguna pregunta de este tipo en vuestro chequeo."
+        "aucun": "No hay ninguna pregunta de este tipo en vuestro evaluación."
       },
       "domaines": {
         "intro": "Todas vuestras respuestas, área por área: primero en qué estáis de acuerdo, luego vuestras diferencias, de la más importante a la más pequeña.",
+        "domaine": "Área",
         "accords": "Estáis de acuerdo",
         "accordsAucun": "Ningún acuerdo exacto en este tema.",
         "differences": "Vuestras diferencias",
         "differencesAucune": "Ninguna diferencia en este tema.",
         "etats": "Cómo lo vivís",
+        "inconnus": "Lo que no sabes",
         "voirConversation": "Lo encontraréis más arriba, con ideas para hablarlo: conversación {{n}}.",
         "voirBloquants": "Lo encontraréis más arriba, con ideas para hablarlo: puntos de bloqueo."
+      },
+      "fin": {
+        "intro": "Lo habéis leído todo, o casi. Este último resumen no repite el primero: cuenta vuestras respuestas de otra manera, se queda con lo que se sostiene y lo que pide trabajo, y propone un orden para hablarlo.",
+        "repartition": "Todas vuestras respuestas comparadas",
+        "accordsPart": "Parte de acuerdos",
+        "accordsTexte": "De {{total}} preguntas comparadas, habéis dado la misma respuesta {{n}} veces, es decir, el {{part}} %. El resto se reparte entre respuestas cercanas y diferencias.",
+        "socle": "Vuestra base",
+        "socleAide": "Los temas decisivos en los que habéis respondido exactamente igual, de todos los que os han planteado.",
+        "forces": "Lo que se sostiene",
+        "chantiers": "Lo que pide trabajo",
+        "aucun": "Nada que señalar aquí.",
+        "feuille": "Vuestra hoja de ruta",
+        "feuilleIntro": "Un tema por semana, en este orden. Id marcando sobre la marcha.",
+        "semaine": "Semana {{n}}",
+        "ensuite": "Después",
+        "ombreEtape": "Hacerle a {{nom}} las {{n}} preguntas de tus zonas de sombra",
+        "sixMois": "Dentro de seis meses",
+        "refaire": "Repetir la evaluación",
+        "refaireTexte": "Para ver lo que se ha movido, y lo que se ha quedado igual."
       },
       "cat": {
         "accord": "Acuerdo",
@@ -323,6 +388,7 @@
         "aConfirmer": "Por confirmar"
       },
       "nnDe": "No negociable para {{nom}}",
+      "poidsFort": "Tema decisivo",
       "pourquoi": "Por qué importa",
       "parler": "Para hablarlo",
       "eviter": "Mejor evitar",
@@ -335,9 +401,63 @@
           "El objetivo de la primera charla es entender al otro, no convencerle. Una decisión puede esperar a la semana siguiente.",
           "Si la cosa se calienta, haced una pausa de veinte minutos y retomadlo después. Funciona mejor de lo que parece."
         ],
-        "refaire": "Repetir el chequeo dentro de seis meses o un año muestra lo que ha cambiado entre vosotros. Muchas parejas lo repiten en cada gran etapa: irse a vivir juntos, casarse, tener un hijo.",
+        "refaire": "Repetir la evaluación dentro de seis meses o un año muestra lo que ha cambiado entre vosotros. Muchas parejas la repiten en cada gran etapa: irse a vivir juntos, casarse, tener un hijo.",
         "aide": "Este chequeo es una herramienta para hablar, no un diagnóstico. Si estáis pasando por una época difícil, un terapeuta de pareja puede ayudaros a ir más allá.",
         "violence": "Si tienes miedo de tu pareja, este chequeo no está pensado para tu situación: en España, el 016 atiende gratis las 24 horas y no deja rastro en la factura."
+      },
+      "solo": {
+        "selonSuffixe": ", según tú",
+        "couverture": {
+          "solo": "Tu mirada sobre tu pareja con {{nom}}",
+          "confidentiel": "Confidencial: este informe contiene tus respuestas y lo que imaginas de las de tu pareja."
+        },
+        "inconnuTag": "No lo sé",
+        "inconnuLire": "No sabías lo que respondería tu pareja: el tema está guardado en tus zonas de sombra.",
+        "lire": {
+          "p1": "Has respondido a solas, en dos tiempos: primero por ti, y luego diciendo lo que respondería {{b}} según tú. Este informe pone las dos cosas frente a frente, tema por tema: donde estás seguro o segura de pensar igual, donde sabes que no veis las cosas de la misma manera, y donde no lo sabes.",
+          "p3": "Léelo primero para ti. Después, si {{b}} está de acuerdo en hablarlo, las cuatro conversaciones y tus zonas de sombra dicen por dónde empezar. Y si algún día {{b}} quiere responder también, una evaluación en pareja sustituirá tus hipótesis por sus respuestas."
+        },
+        "synthese": {
+          "intro": "Dos cifras resumen tu evaluación. La primera dice hasta qué punto, según tú, queréis la misma vida en pareja: compara tus respuestas con las que le atribuyes a tu pareja. La segunda dice cómo te sientes en la pareja ahora mismo, y cómo crees que se siente tu pareja.",
+          "alignement": "Tu alineación, vista por ti",
+          "alignementAide": "El acuerdo entre tus respuestas y las que imaginas. Los temas decisivos cuentan el triple.",
+          "climatAide": "Cómo vives la pareja ahora mismo, y cómo crees que la vive tu pareja."
+        },
+        "carte": {
+          "intro": "Cada barra muestra el acuerdo entre tus respuestas y las que le atribuyes a tu pareja, de 0 a 100 %. Los temas en los que no sabías responder no entran en la puntuación: se cuentan aparte."
+        },
+        "conversations": {
+          "intro": "Los temas en los que crees no ver las cosas como tu pareja, sobre lo que más cuenta, uno por área. Son tus hipótesis: cada conversación empieza por comprobar si has acertado."
+        },
+        "bloquants": {
+          "intro": "Diferencias, según tú, en preguntas que has marcado como innegociables. Son los primeros temas que comprobar con tu pareja, sin intentar convencer esa noche: primero entender.",
+          "nnIntro": "Los temas en los que has dicho que no puedes ceder, con tu respuesta."
+        },
+        "climat": {
+          "intro": "Estas preguntas no buscan un acuerdo: dicen cómo vives la pareja ahora mismo, y cómo crees que la vive tu pareja. Una diferencia aquí significa que, según tú, no estáis viviendo la misma relación.",
+          "parDomaineAide": "En las áreas que tienen preguntas sobre cómo os sentís, tu bienestar y el que le atribuyes a tu pareja, en la misma línea, de 0 a 100 %."
+        },
+        "roles": {
+          "intro": "En cada tema, la línea va de «sobre todo {{a}}» a «sobre todo {{b}}». La primera marca es tu respuesta, la segunda lo que respondería {{b}} según tú."
+        },
+        "domaines": {
+          "intro": "Todas tus respuestas, área por área: primero en qué crees estar de acuerdo, luego vuestras diferencias supuestas, de la más importante a la más pequeña, y lo que no sabes."
+        },
+        "fin": {
+          "accordsTexte": "De {{total}} preguntas en las que has sabido responder por tu pareja, crees tener la misma respuesta {{n}} veces, es decir, el {{part}} %.",
+          "socleAide": "Los temas decisivos en los que estás seguro o segura de pensar como tu pareja, de todos los que te han planteado."
+        },
+        "suite": {
+          "p1": "Un informe no cambia nada por sí solo: lo que cuenta es lo que haces con él. Lo has hecho a solas, y eso ya es una forma de ver claro. Así es como seguir.",
+          "conseils": [
+            "Relee primero tus zonas de sombra: son preguntas sencillas que hacerle a {{nom}}, sin hablar del informe si lo prefieres.",
+            "Comprueba tus hipótesis una a una, empezando por las conversaciones del informe: «pensaba que dirías... ¿es así?».",
+            "Elige un momento tranquilo, sin teléfono, y no en medio de una tensión.",
+            "Habla de lo que sientes («yo tengo miedo de que...») más que de lo que hace el otro.",
+            "Si {{nom}} no quiere hablarlo por ahora, este informe te sirve igualmente: dice lo que cuenta para ti, y lo que no pasa. Un consejero de pareja también puede recibirte a solas."
+          ],
+          "refaire": "Repetir la evaluación en pareja, cuando {{nom}} esté de acuerdo, sustituirá tus hipótesis por sus respuestas. Muchas parejas la hacen en cada gran etapa: irse a vivir juntos, casarse, tener un hijo."
+        }
       },
       "ecran": {
         "telecharger": "Descargar el PDF",

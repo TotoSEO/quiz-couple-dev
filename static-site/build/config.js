@@ -51,7 +51,7 @@ export const ROUTE_SLUGS = {
   // Le bilan de couple payant (docs/bilan/CONCEPTION.md). Les mêmes adresses
   // sont écrites dans CHEMINS de supabase/functions/_shared/bilan/serveur.mjs
   // (le retour de Stripe), un test vérifie qu'elles ne divergent pas.
-  bilanCouple: { fr: 'bilan-de-couple', en: 'couple-check-up', es: 'chequeo-de-pareja', de: 'beziehungs-check', it: 'check-up-di-coppia' },
+  bilanCouple: { fr: 'evaluation-de-couple', en: 'relationship-assessment', es: 'evaluacion-de-pareja', de: 'beziehungsanalyse', it: 'valutazione-di-coppia' },
   cgv: { fr: 'conditions-generales-de-vente', en: 'terms-of-sale', es: 'condiciones-generales-de-venta', de: 'agb', it: 'condizioni-generali-di-vendita' },
   testSignesChinois: { fr: 'compatibilite-amoureuse-signes-chinois', en: 'chinese-zodiac-love-compatibility', es: 'compatibilidad-amorosa-signos-chinos', de: 'chinesische-sternzeichen-liebeskompatibilitaet', it: 'compatibilita-amorosa-segni-cinesi' },
   testDateNaissance: { fr: 'compatibilite-amoureuse-date-de-naissance', en: 'birth-date-love-compatibility', es: 'compatibilidad-amorosa-fecha-de-nacimiento', de: 'liebeskompatibilitaet-geburtsdatum', it: 'compatibilita-amorosa-data-di-nascita' },
@@ -375,7 +375,7 @@ export const VENDEUR = {
   dirigeant: 'Thomas Owaller',
   statut: { fr: 'Entreprise individuelle (EI) de Thomas Owaller', en: 'Sole proprietorship of Thomas Owaller (French entreprise individuelle)', es: 'Empresa individual de Thomas Owaller (entreprise individuelle francesa)', de: 'Einzelunternehmen von Thomas Owaller (französische entreprise individuelle)', it: 'Impresa individuale di Thomas Owaller (entreprise individuelle francese)' },
   siret: '940 106 800 00011',
-  adresse: '',
+  adresse: '4 rue de Bruges, 67000 Strasbourg',
   email: 'infoquizcouple@gmail.com',
 };
 

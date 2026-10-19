@@ -157,10 +157,10 @@
       "erreur": "Die Zahlung kann gerade nicht geprüft werden. Wenn du bezahlt hast, lade die Seite in einer Minute neu."
     },
     "rapport": {
-      "surtitre": "Beziehungs-Check",
-      "pied": "Beziehungs-Check · vertraulich",
+      "surtitre": "Beziehungsanalyse",
+      "pied": "Beziehungsanalyse · vertraulich",
       "couverture": {
-        "de": "Der Beziehungs-Check von",
+        "de": "Die Beziehungsanalyse von",
         "et": "und",
         "date": "Bericht erstellt am {{date}}",
         "chiffres": "{{domaines}} Bereiche · {{questions}} verglichene Fragen",
@@ -176,6 +176,7 @@
         "proche": "Eure Antworten liegen nah beieinander.",
         "ecart": "Eure Antworten liegen auseinander.",
         "nn": "Einer von euch hat dieses Thema als nicht verhandelbar markiert.",
+        "poids": "Eine Frage, die ein ganzes Leben prägt (ein Kind, wo ihr wohnt, Treue, das Geld, das ihr teilt), zählt in euren Werten dreimal so viel wie eine Alltagsfrage. Sie trägt dieses Etikett.",
         "sommaire": "In diesem Bericht",
         "nnTag": "Nicht verhandelbar"
       },
@@ -184,16 +185,31 @@
         "carte": "Die Karte eurer Bereiche",
         "conversations": "Eure nächsten vier Gespräche",
         "bloquants": "Knackpunkte und Unverhandelbares",
+        "ombre": "Eure blinden Flecken",
         "climat": "Das Klima in eurer Beziehung",
         "signaux": "Eure Warnsignale",
         "roles": "Wer macht was, aus der Sicht jedes Einzelnen",
         "domaines": "Bereich für Bereich",
+        "fin": "Zum Schluss",
         "suite": "Und jetzt?"
       },
+      "ouvertures": {
+        "synthese": "Zwei Zahlen, und was sie für euch beide bedeuten.",
+        "carte": "Zwölf Bereiche des gemeinsamen Lebens, vom einigsten bis zum meistdiskutierten.",
+        "conversations": "Die vier Themen, mit denen ihr anfangen solltet, und wie ihr sie ansprecht.",
+        "bloquants": "Das, wobei einer von euch keine Kompromisse machen kann.",
+        "ombre": "Was du über {{b}} nicht weißt, und was eine Frage verdient.",
+        "climat": "Wie sich jeder von euch gerade in der Beziehung fühlt.",
+        "signaux": "Die Streitgewohnheiten, die ein Paar zermürben, und wo ihr steht.",
+        "roles": "Wer sich um was kümmert, aus der Sicht jedes Einzelnen.",
+        "domaines": "Alle eure Antworten, Thema für Thema.",
+        "fin": "Was ihr behalten solltet, und womit ihr anfangt.",
+        "suite": "Wie ihr darüber redet, und wann ihr wieder Bilanz zieht."
+      },
       "synthese": {
-        "intro": "Zwei Zahlen fassen euren Check zusammen. Die erste zeigt, wie sehr ihr dasselbe gemeinsame Leben wollt. Die zweite zeigt, wie sich jeder von euch gerade in der Beziehung fühlt. Die beiden hängen nicht unbedingt zusammen: Man kann sich sehr einig sein und gerade eine schwierige Phase durchmachen, oder umgekehrt.",
+        "intro": "Zwei Zahlen fassen euren Analyse zusammen. Die erste zeigt, wie sehr ihr dasselbe gemeinsame Leben wollt. Die zweite zeigt, wie sich jeder von euch gerade in der Beziehung fühlt. Die beiden hängen nicht unbedingt zusammen: Man kann sich sehr einig sein und gerade eine schwierige Phase durchmachen, oder umgekehrt.",
         "alignement": "Eure Übereinstimmung",
-        "alignementAide": "Wie sehr eure Antworten zum gemeinsamen Leben übereinstimmen. Die großen Entscheidungen zählen doppelt.",
+        "alignementAide": "Wie sehr eure Antworten zum gemeinsamen Leben übereinstimmen. Entscheidende Themen zählen dreifach.",
         "climat": "Euer Klima",
         "climatAide": "Wie jeder von euch die Beziehung gerade erlebt.",
         "climatDe": "{{nom}}: {{n}} %",
@@ -202,8 +218,11 @@
           "proches": "Ähnliche Antworten",
           "ecarts": "Unterschiede",
           "bloquants": "Knackpunkte",
-          "vigilance": "Signale zum Hinsehen"
+          "vigilance": "Signale zum Hinsehen",
+          "inconnus": "Blinde Flecken"
         },
+        "radar": "Eure Bereiche auf einen Blick",
+        "radarAide": "Je näher die Linie an den Rand kommt, desto mehr treffen sich eure Antworten in diesem Bereich. Die genauen Zahlen stehen im nächsten Kapitel.",
         "forts": "Wo ihr euch am nächsten seid",
         "faibles": "Wo ihr am weitesten auseinanderliegt",
         "rassemble": "Was euch verbindet",
@@ -262,7 +281,8 @@
         },
         "accords": "gleich",
         "proches": "ähnlich",
-        "ecarts": "Unterschiede"
+        "ecarts": "Unterschiede",
+        "inconnus": "weiß nicht"
       },
       "conversations": {
         "intro": "Die Themen, bei denen eure Antworten am weitesten auseinanderliegen, bei dem, was am meisten zählt, eins pro Bereich. Nehmt euch eins pro Abend vor, in Ruhe, statt alles auf einmal.",
@@ -276,8 +296,32 @@
         "nnIntro": "Die Themen, bei denen jeder von euch gesagt hat, dass er keinen Kompromiss eingehen könnte, mit seiner Antwort.",
         "nnAucun": "Nichts markiert."
       },
+      "ombre": {
+        "intro": "Du hast für dich geantwortet und dann gesagt, was {{nom}} antworten würde. Wo du es nicht wusstest, hast du es gesagt: Dieses Kapitel sammelt diese Themen. Das sind keine Probleme, das sind Fragen, die du stellen kannst.",
+        "part": "Dein Anteil an blinden Flecken",
+        "bandes": {
+          "peu": {
+            "titre": "Wenige blinde Flecken",
+            "texte": "Nur bei {{n}} Themen wusstest du nicht, was {{nom}} antworten würde. Du kennst seine oder ihre Sicht auf die Dinge gut."
+          },
+          "quelques": {
+            "titre": "Ein paar blinde Flecken",
+            "texte": "Bei {{n}} Themen wusstest du nicht, was {{nom}} antworten würde. So geht es den meisten Paaren: Über alles redet man selten."
+          },
+          "large": {
+            "titre": "Ein großer Anteil an blinden Flecken",
+            "texte": "Bei {{n}} Themen wusstest du nicht, was {{nom}} antworten würde. Das ist keine schlechte Nachricht: Es ist die Liste der Gespräche, die ihr noch nicht geführt habt."
+          }
+        },
+        "listeTitre": "Die Themen, bei denen du es nicht weißt",
+        "listeAide": "Jedes ist eine Frage, die du {{nom}} so stellen kannst, wie sie dasteht. Entscheidende Themen tragen ihr Etikett.",
+        "aucune": "Du konntest jedes Mal für {{nom}} antworten. Der Bericht vergleicht also deine Antworten mit dem, was du dir von seinen oder ihren vorstellst: Der nächste Schritt ist, es mit {{nom}} zu überprüfen."
+      },
       "climat": {
         "intro": "Diese Fragen suchen keine Übereinstimmung: Sie zeigen, wie jeder von euch die Beziehung gerade erlebt. Ein Unterschied hier heißt, dass ihr nicht dieselbe Beziehung erlebt, und das kommt viel häufiger vor, als man denkt.",
+        "parDomaine": "Das Klima, Bereich für Bereich",
+        "parDomaineAide": "Für die Bereiche mit Fragen zum Befinden (Streit, Intimität und das allgemeine Klima) das Wohlbefinden jedes Einzelnen auf derselben Linie, von 0 bis 100 %. Zwei Markierungen weit auseinander: Ihr erlebt nicht dasselbe.",
+        "questions": "Frage für Frage",
         "ecart": "Ihr erlebt es nicht gleich",
         "attention": "Im Auge behalten",
         "de": "Für {{nom}}",
@@ -300,17 +344,38 @@
         "chacunPlusTexte": "Das ist sehr häufig: Man sieht besser, was man selbst macht, als was der andere macht. Am besten schreibt ihr gemeinsam auf, was jeder übernimmt, ohne Punkte zu zählen.",
         "desequilibre": "Ihr seid euch einig: Vor allem {{nom}} kümmert sich darum. Passt das für euch beide?",
         "accord": "Ihr seht es gleich.",
-        "aucun": "In eurem Check gibt es keine Frage dieser Art."
+        "aucun": "In eurer Analyse gibt es keine Frage dieser Art."
       },
       "domaines": {
         "intro": "Alle eure Antworten, Bereich für Bereich: zuerst, worin ihr euch einig seid, dann eure Unterschiede, vom wichtigsten bis zum kleinsten.",
+        "domaine": "Bereich",
         "accords": "Ihr seid euch einig",
         "accordsAucun": "Keine genaue Übereinstimmung in diesem Bereich.",
         "differences": "Eure Unterschiede",
         "differencesAucune": "Keine Unterschiede in diesem Bereich.",
         "etats": "Wie ihr es erlebt",
+        "inconnus": "Was du nicht weißt",
         "voirConversation": "Ihr findet es weiter oben, mit Ideen zum Gespräch: Gespräch {{n}}.",
         "voirBloquants": "Ihr findet es weiter oben, mit Ideen zum Gespräch: Knackpunkte."
+      },
+      "fin": {
+        "intro": "Ihr habt alles gelesen, oder fast. Diese letzte Zusammenfassung wiederholt die erste nicht: Sie zählt eure Antworten anders, hält fest, was trägt und was Arbeit braucht, und schlägt eine Reihenfolge für eure Gespräche vor.",
+        "repartition": "Alle eure verglichenen Antworten",
+        "accordsPart": "Anteil gleicher Antworten",
+        "accordsTexte": "Von {{total}} verglichenen Fragen habt ihr {{n}} Mal dieselbe Antwort gegeben, also {{part}} %. Der Rest verteilt sich auf ähnliche Antworten und Unterschiede.",
+        "socle": "Euer Fundament",
+        "socleAide": "Die entscheidenden Themen, bei denen ihr genau gleich geantwortet habt, von allen, die euch gestellt wurden.",
+        "forces": "Was trägt",
+        "chantiers": "Was Arbeit braucht",
+        "aucun": "Hier gibt es nichts zu vermerken.",
+        "feuille": "Euer Fahrplan",
+        "feuilleIntro": "Ein Thema pro Woche, in dieser Reihenfolge. Hakt nach und nach ab.",
+        "semaine": "Woche {{n}}",
+        "ensuite": "Danach",
+        "ombreEtape": "{{nom}} die {{n}} Fragen aus deinen blinden Flecken stellen",
+        "sixMois": "In sechs Monaten",
+        "refaire": "Die Analyse wiederholen",
+        "refaireTexte": "Um zu sehen, was sich bewegt hat und was geblieben ist."
       },
       "cat": {
         "accord": "Übereinstimmung",
@@ -323,6 +388,7 @@
         "aConfirmer": "Zu klären"
       },
       "nnDe": "Nicht verhandelbar für {{nom}}",
+      "poidsFort": "Entscheidendes Thema",
       "pourquoi": "Warum es wichtig ist",
       "parler": "Um darüber zu reden",
       "eviter": "Lieber vermeiden",
@@ -335,9 +401,63 @@
           "Ziel des ersten Gesprächs ist, den anderen zu verstehen, nicht ihn zu überzeugen. Eine Entscheidung kann bis zur nächsten Woche warten.",
           "Wenn es hitzig wird, macht zwanzig Minuten Pause und redet später weiter. Das hilft mehr, als man denkt."
         ],
-        "refaire": "Den Check in sechs Monaten oder einem Jahr zu wiederholen zeigt, was sich zwischen euch verändert hat. Viele Paare machen ihn bei jedem großen Schritt neu: zusammenziehen, heiraten, ein Kind bekommen.",
+        "refaire": "Die Analyse in sechs Monaten oder einem Jahr zu wiederholen zeigt, was sich zwischen euch verändert hat. Viele Paare machen sie bei jedem großen Schritt neu: zusammenziehen, heiraten, ein Kind bekommen.",
         "aide": "Dieser Check ist ein Werkzeug zum Reden, keine Diagnose. Wenn ihr gerade eine schwierige Zeit durchmacht, kann euch eine Paarberatung oder Paartherapie helfen, weiterzukommen.",
         "violence": "Wenn du Angst vor deinem Partner oder deiner Partnerin hast, ist dieser Check nicht für deine Situation gedacht: In Deutschland ist das Hilfetelefon „Gewalt gegen Frauen“ rund um die Uhr kostenlos und anonym unter 116 016 erreichbar, in Österreich die Frauenhelpline unter 0800 222 555."
+      },
+      "solo": {
+        "selonSuffixe": ", aus deiner Sicht",
+        "couverture": {
+          "solo": "Dein Blick auf deine Beziehung mit {{nom}}",
+          "confidentiel": "Vertraulich: Dieser Bericht enthält deine Antworten und das, was du dir von denen deines Partners oder deiner Partnerin vorstellst."
+        },
+        "inconnuTag": "Weiß nicht",
+        "inconnuLire": "Du wusstest nicht, was dein Partner oder deine Partnerin antworten würde: Das Thema steht bei deinen blinden Flecken.",
+        "lire": {
+          "p1": "Du hast allein geantwortet, in zwei Schritten: zuerst für dich, dann mit dem, was {{b}} deiner Meinung nach antworten würde. Dieser Bericht stellt beides einander gegenüber, Thema für Thema: wo du sicher bist, gleich zu denken, wo du weißt, dass ihr die Dinge nicht gleich seht, und wo du es nicht weißt.",
+          "p3": "Lies ihn zuerst für dich. Wenn {{b}} dann bereit ist, darüber zu reden, zeigen die vier Gespräche und deine blinden Flecken, womit ihr anfangen könnt. Und wenn {{b}} eines Tages selbst antworten möchte, ersetzt eine gemeinsame Analyse deine Vermutungen durch seine oder ihre Antworten."
+        },
+        "synthese": {
+          "intro": "Zwei Zahlen fassen deine Analyse zusammen. Die erste sagt, wie sehr ihr deiner Meinung nach dasselbe Leben zu zweit wollt: Sie vergleicht deine Antworten mit denen, die du deinem Partner oder deiner Partnerin zuschreibst. Die zweite sagt, wie du dich gerade in der Beziehung fühlst, und wie sich dein Partner oder deine Partnerin deiner Meinung nach darin fühlt.",
+          "alignement": "Eure Übereinstimmung, aus deiner Sicht",
+          "alignementAide": "Wie sehr deine Antworten zu denen passen, die du dir vorstellst. Entscheidende Themen zählen dreifach.",
+          "climatAide": "Wie du die Beziehung gerade erlebst, und wie dein Partner oder deine Partnerin sie deiner Meinung nach erlebt."
+        },
+        "carte": {
+          "intro": "Jeder Balken zeigt, wie sehr deine Antworten zu denen passen, die du deinem Partner oder deiner Partnerin zuschreibst, von 0 bis 100 %. Die Themen, bei denen du es nicht wusstest, zählen nicht in den Wert: Sie werden getrennt gezählt."
+        },
+        "conversations": {
+          "intro": "Die Themen, bei denen du glaubst, die Dinge nicht so zu sehen wie dein Partner oder deine Partnerin, bei dem, was am meisten zählt, eines pro Bereich. Das sind deine Vermutungen: Jedes Gespräch beginnt damit zu prüfen, ob du richtig geraten hast."
+        },
+        "bloquants": {
+          "intro": "Unterschiede, deiner Meinung nach, bei Fragen, die du als nicht verhandelbar markiert hast. Das sind die ersten Themen, die du mit deinem Partner oder deiner Partnerin überprüfen solltest, ohne an diesem Abend überzeugen zu wollen: erst verstehen.",
+          "nnIntro": "Die Themen, bei denen du gesagt hast, dass du keine Kompromisse machen kannst, mit deiner Antwort."
+        },
+        "climat": {
+          "intro": "Diese Fragen suchen keine Übereinstimmung: Sie zeigen, wie du die Beziehung gerade erlebst, und wie dein Partner oder deine Partnerin sie deiner Meinung nach erlebt. Ein Unterschied hier heißt, dass ihr deiner Meinung nach nicht dieselbe Beziehung erlebt.",
+          "parDomaineAide": "Für die Bereiche mit Fragen zum Befinden dein Wohlbefinden und das, was du deinem Partner oder deiner Partnerin zuschreibst, auf derselben Linie, von 0 bis 100 %."
+        },
+        "roles": {
+          "intro": "Bei jedem Thema reicht die Linie von „vor allem {{a}}“ bis „vor allem {{b}}“. Die erste Markierung ist deine Antwort, die zweite das, was {{b}} deiner Meinung nach antworten würde."
+        },
+        "domaines": {
+          "intro": "Alle deine Antworten, Bereich für Bereich: zuerst, worin ihr euch deiner Meinung nach einig seid, dann eure vermuteten Unterschiede, vom wichtigsten bis zum kleinsten, und was du nicht weißt."
+        },
+        "fin": {
+          "accordsTexte": "Von {{total}} Fragen, bei denen du für deinen Partner oder deine Partnerin antworten konntest, glaubst du {{n}} Mal dieselbe Antwort zu haben, also {{part}} %.",
+          "socleAide": "Die entscheidenden Themen, bei denen du sicher bist, wie dein Partner oder deine Partnerin zu denken, von allen, die dir gestellt wurden."
+        },
+        "suite": {
+          "p1": "Ein Bericht ändert allein nichts: Was zählt, ist, was du daraus machst. Du hast ihn allein gemacht, und das ist schon eine Art, klarer zu sehen. So gehst du es weiter an.",
+          "conseils": [
+            "Lies zuerst deine blinden Flecken noch einmal: Das sind einfache Fragen, die du {{nom}} stellen kannst, ohne den Bericht zu erwähnen, wenn du das lieber möchtest.",
+            "Überprüfe deine Vermutungen eine nach der anderen, angefangen bei den Gesprächen aus dem Bericht: „Ich dachte, du würdest sagen... stimmt das?“",
+            "Wähle einen ruhigen Moment, ohne Handy, und nicht mitten in einer Spannung.",
+            "Sprich darüber, was du fühlst („ich habe Angst, dass...“), statt darüber, was der oder die andere tut.",
+            "Wenn {{nom}} im Moment nicht darüber reden will, nützt dir dieser Bericht trotzdem: Er sagt, was dir wichtig ist und was nicht geht. Eine Paarberatung kann dich auch allein empfangen."
+          ],
+          "refaire": "Die Analyse zu zweit zu machen, wenn {{nom}} bereit ist, ersetzt deine Vermutungen durch seine oder ihre Antworten. Viele Paare machen sie bei jedem großen Schritt: zusammenziehen, heiraten, ein Kind bekommen."
+        }
       },
       "ecran": {
         "telecharger": "PDF herunterladen",

@@ -11,6 +11,13 @@
     "Un peu plus {nom}",
     "Autant l'un que l'autre"
   ],
+  "quiPercu": [
+    "Surtout {autre}",
+    "Un peu plus {autre}",
+    "Autant l'un que l'autre",
+    "Un peu plus vous",
+    "Surtout vous"
+  ],
   "situation": {
     "ensemble": {
       "q": "Vivez-vous ensemble ?",
@@ -68,6 +75,7 @@
   "domaines": {
     "quotidien": {
       "titre": "Le quotidien à la maison",
+      "bref": "Quotidien",
       "intro": "Les tâches, le rangement, le rythme de la semaine. Ce sont souvent les petits sujets qui font les grosses disputes, alors on commence par là.",
       "rapport": {
         "fort": "Au quotidien, vous fonctionnez de la même façon. C'est plus rare qu'on ne le croit, et ça vous évite beaucoup de petites frictions.",
@@ -231,6 +239,7 @@
     },
     "temps": {
       "titre": "Le temps à deux et le temps pour soi",
+      "bref": "Temps",
       "intro": "Combien de temps ensemble, combien de temps chacun de son côté, et ce que vous en faites.",
       "rapport": {
         "fort": "Vous avez la même idée de l'équilibre entre le temps à deux et le temps pour soi. Gardez-le précieusement : c'est la première chose que la vie vient grignoter.",
@@ -386,6 +395,7 @@
     },
     "entourage": {
       "titre": "Famille et amis",
+      "bref": "Entourage",
       "intro": "Les familles, les fêtes, les amis, les soirées sans l'autre. Tout ce qui entoure votre couple.",
       "rapport": {
         "fort": "Vous voyez vos familles et vos amis de la même façon. Les fêtes de fin d'année devraient bien se passer !",
@@ -509,6 +519,7 @@
     },
     "travail": {
       "titre": "Le travail et les ambitions",
+      "bref": "Travail",
       "intro": "La place du travail dans votre vie, vos projets, et ce que vous êtes prêts à changer pour l'autre.",
       "rapport": {
         "fort": "Vous donnez au travail la même place dans votre vie. Ça vous évite le sentiment de passer après le boulot de l'autre.",
@@ -632,6 +643,7 @@
     },
     "argent": {
       "titre": "L'argent",
+      "bref": "Argent",
       "intro": "Compte commun ou pas, partage des dépenses, épargne. L'argent est un des sujets qu'on évite le plus en couple, alors voilà l'occasion.",
       "rapport": {
         "fort": "Vous avez la même façon de voir l'argent. C'est un vrai atout, parce que c'est l'un des premiers sujets de dispute dans les couples.",
@@ -765,6 +777,7 @@
     },
     "logement": {
       "titre": "Où et comment vivre",
+      "bref": "Logement",
       "intro": "Emménager, la ville ou la campagne, acheter, partir. Les décisions qui ne se coupent pas en deux.",
       "rapport": {
         "fort": "Vous vous voyez vivre au même endroit, de la même façon. Pour les grandes décisions, c'est une base solide.",
@@ -898,6 +911,7 @@
     },
     "enfants": {
       "titre": "Les enfants",
+      "bref": "Enfants",
       "intro": "En vouloir ou pas, quand, combien, comment les élever. Ou, si vous en avez déjà, comment vous vous organisez.",
       "rapport": {
         "fort": "Sur les enfants, vous êtes sur la même longueur d'onde. C'est sans doute le sujet où c'est le plus important.",
@@ -1047,6 +1061,7 @@
     },
     "valeurs": {
       "titre": "Les valeurs",
+      "bref": "Valeurs",
       "intro": "La religion, l'engagement, ce qui compte le plus pour vous, et ce que vous voulez transmettre.",
       "rapport": {
         "fort": "Vous partagez les mêmes valeurs. C'est ce qui aide le plus quand il faut prendre des décisions difficiles.",
@@ -1202,6 +1217,7 @@
     },
     "disputes": {
       "titre": "La communication et les disputes",
+      "bref": "Disputes",
       "intro": "Comment vous dites ce qui ne va pas, comment vous vous disputez, et comment vous vous réconciliez.",
       "rapport": {
         "fort": "Vous avez la même façon de gérer les tensions. Vous vous disputez sûrement, comme tout le monde, mais vous vous comprenez quand ça arrive.",
@@ -1394,6 +1410,7 @@
     },
     "confiance": {
       "titre": "La confiance et la fidélité",
+      "bref": "Confiance",
       "intro": "Le téléphone, les ex, la jalousie, et ce que chacun appelle tromper.",
       "rapport": {
         "fort": "Vous avez la même idée de la confiance et de la fidélité. Beaucoup de couples ne se le sont jamais dit, vous le savez maintenant.",
@@ -1533,6 +1550,7 @@
     },
     "intimite": {
       "titre": "L'intimité et la tendresse",
+      "bref": "Intimité",
       "intro": "Le désir, la tendresse, et la façon d'en parler. Ces réponses ne seront vues que par {autre}.",
       "rapport": {
         "fort": "Vous avez les mêmes envies et la même façon de les vivre. C'est précieux, et ça s'entretient.",
@@ -1663,6 +1681,7 @@
     },
     "meteo": {
       "titre": "Comment vous allez",
+      "bref": "Climat",
       "intro": "Pour finir, huit questions sur la façon dont vous vivez votre couple en ce moment. Il n'y a pas d'accord à trouver ici, juste à dire comment ça va.",
       "questions": {
         "met1": {

@@ -157,10 +157,10 @@
       "erreur": "Impossible de vérifier le paiement pour l'instant. Si vous avez payé, rechargez la page dans une minute."
     },
     "rapport": {
-      "surtitre": "Bilan de couple",
-      "pied": "Bilan de couple · confidentiel",
+      "surtitre": "Évaluation de couple",
+      "pied": "Évaluation de couple · confidentiel",
       "couverture": {
-        "de": "Le bilan de couple de",
+        "de": "L'évaluation de couple de",
         "et": "et",
         "date": "Rapport établi le {{date}}",
         "chiffres": "{{domaines}} domaines · {{questions}} questions comparées",
@@ -176,6 +176,7 @@
         "proche": "Vos réponses sont voisines.",
         "ecart": "Vos réponses s'éloignent.",
         "nn": "L'un de vous a marqué ce sujet « non négociable ».",
+        "poids": "Une question qui engage une vie entière (un enfant, où vivre, la fidélité, l'argent qu'on partage) pèse trois fois plus qu'une question de quotidien dans vos scores. Elle porte cette étiquette.",
         "sommaire": "Dans ce rapport",
         "nnTag": "Non négociable"
       },
@@ -184,16 +185,31 @@
         "carte": "La carte de vos domaines",
         "conversations": "Vos quatre prochaines conversations",
         "bloquants": "Points bloquants et non négociables",
+        "ombre": "Vos zones d'ombre",
         "climat": "Le climat de votre couple",
         "signaux": "Vos signaux de vigilance",
         "roles": "Qui fait quoi, vu par chacun",
         "domaines": "Domaine par domaine",
+        "fin": "Pour finir",
         "suite": "Et maintenant ?"
       },
+      "ouvertures": {
+        "synthese": "Deux chiffres, et ce qu'ils veulent dire pour vous deux.",
+        "carte": "Douze domaines de la vie à deux, du plus accordé au plus discuté.",
+        "conversations": "Les quatre sujets par lesquels commencer, et comment les aborder.",
+        "bloquants": "Ce sur quoi l'un de vous ne peut pas transiger.",
+        "ombre": "Ce que vous ne savez pas de {{b}}, et qui mérite une question.",
+        "climat": "Comment chacun de vous se sent dans le couple, en ce moment.",
+        "signaux": "Les habitudes de dispute qui usent un couple, et où vous en êtes.",
+        "roles": "Qui s'occupe de quoi, vu par chacun.",
+        "domaines": "Toutes vos réponses, sujet par sujet.",
+        "fin": "Ce qu'il faut retenir, et par où commencer.",
+        "suite": "Comment en parler, et quand refaire le point."
+      },
       "synthese": {
-        "intro": "Deux chiffres résument votre bilan. Le premier dit à quel point vous voulez la même vie à deux. Le second dit comment chacun de vous se sent dans le couple en ce moment. Les deux ne vont pas forcément ensemble : on peut être très alignés et traverser une période difficile, ou l'inverse.",
+        "intro": "Deux chiffres résument votre évaluation. Le premier dit à quel point vous voulez la même vie à deux. Le second dit comment chacun de vous se sent dans le couple en ce moment. Les deux ne vont pas forcément ensemble : on peut être très alignés et traverser une période difficile, ou l'inverse.",
         "alignement": "Votre alignement",
-        "alignementAide": "L'accord de vos réponses sur la vie à deux. Les grandes décisions comptent double.",
+        "alignementAide": "L'accord de vos réponses sur la vie à deux. Les sujets décisifs comptent triple.",
         "climat": "Votre climat",
         "climatAide": "Comment chacun de vous vit le couple en ce moment.",
         "climatDe": "{{nom}} : {{n}} %",
@@ -202,8 +218,11 @@
           "proches": "Réponses proches",
           "ecarts": "Écarts",
           "bloquants": "Points bloquants",
-          "vigilance": "Signaux à regarder"
+          "vigilance": "Signaux à regarder",
+          "inconnus": "Zones d'ombre"
         },
+        "radar": "Vos domaines d'un coup d'œil",
+        "radarAide": "Plus le tracé s'approche du bord, plus vos réponses se rejoignent dans ce domaine. Les chiffres exacts sont au chapitre suivant.",
         "forts": "Là où vous êtes le plus proches",
         "faibles": "Là où vous l'êtes le moins",
         "rassemble": "Ce qui vous rassemble",
@@ -262,7 +281,8 @@
         },
         "accords": "accords",
         "proches": "proches",
-        "ecarts": "écarts"
+        "ecarts": "écarts",
+        "inconnus": "je ne sais pas"
       },
       "conversations": {
         "intro": "Les sujets où vos réponses s'éloignent le plus, sur ce qui compte le plus, un par domaine. Gardez-en un par soirée, au calme, plutôt que tout d'un coup.",
@@ -276,8 +296,32 @@
         "nnIntro": "Les sujets sur lesquels chacun de vous a dit ne pas pouvoir faire de compromis, avec sa réponse.",
         "nnAucun": "Rien de marqué."
       },
+      "ombre": {
+        "intro": "Vous avez répondu pour vous, puis dit ce que {{nom}} répondrait. Quand vous ne saviez pas, vous l'avez dit : ce chapitre rassemble ces sujets. Ce ne sont pas des problèmes, ce sont des questions à poser.",
+        "part": "Votre part d'ombre",
+        "bandes": {
+          "peu": {
+            "titre": "Peu de zones d'ombre",
+            "texte": "Sur {{n}} sujets seulement, vous ne saviez pas ce que {{nom}} répondrait. Vous connaissez bien sa façon de voir les choses."
+          },
+          "quelques": {
+            "titre": "Quelques zones d'ombre",
+            "texte": "Sur {{n}} sujets, vous ne saviez pas ce que {{nom}} répondrait. C'est le cas de la plupart des couples : on parle rarement de tout."
+          },
+          "large": {
+            "titre": "Une large part d'ombre",
+            "texte": "Sur {{n}} sujets, vous ne saviez pas ce que {{nom}} répondrait. Ce n'est pas une mauvaise nouvelle : c'est la liste des conversations que vous n'avez pas encore eues."
+          }
+        },
+        "listeTitre": "Les sujets où vous ne savez pas",
+        "listeAide": "Chacun est une question à poser à {{nom}}, telle quelle. Les sujets décisifs portent leur étiquette.",
+        "aucune": "Vous avez su répondre pour {{nom}} à chaque fois. Le rapport compare donc vos réponses à ce que vous imaginez des siennes : la prochaine étape est de vérifier avec {{nom}}."
+      },
       "climat": {
         "intro": "Ces questions ne cherchent pas un accord : elles disent comment chacun de vous vit le couple en ce moment. Un écart ici veut dire que vous ne vivez pas la même relation, ce qui arrive bien plus souvent qu'on ne le croit.",
+        "parDomaine": "Le climat, domaine par domaine",
+        "parDomaineAide": "Pour les domaines qui ont des questions de ressenti (les disputes, l'intimité et le climat général), le bien-être de chacun sur la même ligne, de 0 à 100 %. Deux repères éloignés : vous ne vivez pas la même chose.",
+        "questions": "Question par question",
         "ecart": "Vous ne le vivez pas pareil",
         "attention": "À surveiller",
         "de": "Pour {{nom}}",
@@ -300,17 +344,38 @@
         "chacunPlusTexte": "C'est très courant : on voit mieux ce qu'on fait que ce que fait l'autre. Le mieux est de faire la liste ensemble de ce que chacun prend en charge, sans compter les points.",
         "desequilibre": "Vous êtes d'accord : c'est surtout {{nom}} qui s'en occupe. Est-ce que ça vous va, à tous les deux ?",
         "accord": "Vous voyez les choses de la même façon.",
-        "aucun": "Aucune question de ce type dans votre bilan."
+        "aucun": "Aucune question de ce type dans votre évaluation."
       },
       "domaines": {
         "intro": "Toutes vos réponses, domaine par domaine : d'abord ce sur quoi vous êtes d'accord, puis vos différences, de la plus importante à la plus légère.",
+        "domaine": "Domaine",
         "accords": "Vous êtes d'accord",
         "accordsAucun": "Aucun accord exact dans ce domaine.",
         "differences": "Vos différences",
         "differencesAucune": "Aucune différence dans ce domaine.",
         "etats": "Comment vous le vivez",
+        "inconnus": "Ce que vous ne savez pas",
         "voirConversation": "Vous le retrouvez plus haut, avec de quoi en parler : conversation {{n}}.",
         "voirBloquants": "Vous le retrouvez plus haut, avec de quoi en parler : points bloquants."
+      },
+      "fin": {
+        "intro": "Vous avez tout lu, ou presque. Cette dernière synthèse ne reprend pas la première : elle compte vos réponses autrement, retient ce qui tient et ce qui demande du travail, et propose un ordre pour en parler.",
+        "repartition": "Toutes vos réponses comparées",
+        "accordsPart": "Part d'accords",
+        "accordsTexte": "Sur {{total}} questions comparées, vous avez donné {{n}} fois la même réponse, soit {{part}} %. Le reste se partage entre réponses voisines et écarts.",
+        "socle": "Votre socle",
+        "socleAide": "Les sujets décisifs sur lesquels vous avez répondu exactement pareil, sur tous ceux qui vous ont été posés.",
+        "forces": "Ce qui tient",
+        "chantiers": "Ce qui demande du travail",
+        "aucun": "Rien à signaler ici.",
+        "feuille": "Votre feuille de route",
+        "feuilleIntro": "Un sujet par semaine, dans cet ordre. Cochez au fur et à mesure.",
+        "semaine": "Semaine {{n}}",
+        "ensuite": "Ensuite",
+        "ombreEtape": "Poser à {{nom}} les {{n}} questions de vos zones d'ombre",
+        "sixMois": "Dans six mois",
+        "refaire": "Refaire l'évaluation",
+        "refaireTexte": "Pour voir ce qui a bougé, et ce qui est resté là."
       },
       "cat": {
         "accord": "Accord",
@@ -323,6 +388,7 @@
         "aConfirmer": "À confirmer"
       },
       "nnDe": "Non négociable pour {{nom}}",
+      "poidsFort": "Sujet décisif",
       "pourquoi": "Pourquoi ça compte",
       "parler": "Pour en parler",
       "eviter": "À éviter",
@@ -335,9 +401,63 @@
           "Le but du premier échange est de comprendre l'autre, pas de le convaincre. Une décision peut attendre la semaine suivante.",
           "Si ça chauffe, faites une pause de vingt minutes et reprenez plus tard. Ça marche mieux qu'on ne le croit."
         ],
-        "refaire": "Refaire le bilan dans six mois ou un an montre ce qui a bougé entre vous. Beaucoup de couples le refont à chaque grande étape : emménager, se marier, avoir un enfant.",
+        "refaire": "Refaire l'évaluation dans six mois ou un an montre ce qui a bougé entre vous. Beaucoup de couples la refont à chaque grande étape : emménager, se marier, avoir un enfant.",
         "aide": "Ce rapport est un outil pour parler, pas un diagnostic. Si vous traversez une période difficile, un conseiller conjugal ou un thérapeute de couple peut vous accompagner.",
         "violence": "Si vous avez peur de votre partenaire, ce bilan n'est pas fait pour votre situation. En France, le 3919 répond gratuitement et anonymement, 24 h sur 24."
+      },
+      "solo": {
+        "selonSuffixe": ", selon vous",
+        "couverture": {
+          "solo": "Votre regard sur votre couple avec {{nom}}",
+          "confidentiel": "Confidentiel : ce rapport contient vos réponses et ce que vous imaginez de celles de votre partenaire."
+        },
+        "inconnuTag": "Je ne sais pas",
+        "inconnuLire": "Vous ne saviez pas ce que votre partenaire répondrait : le sujet est rangé dans vos zones d'ombre.",
+        "lire": {
+          "p1": "Vous avez répondu seul(e), en deux temps : d'abord pour vous, puis en disant ce que {{b}} répondrait d'après vous. Ce rapport met les deux face à face, sujet par sujet : là où vous êtes sûr(e) de penser pareil, là où vous savez que vous ne voyez pas les choses de la même façon, et là où vous ne savez pas.",
+          "p3": "Lisez-le pour vous d'abord. Puis, si {{b}} est d'accord pour en parler, les quatre conversations et vos zones d'ombre donnent par où commencer. Et si un jour {{b}} veut répondre à son tour, une évaluation à deux remplacera vos hypothèses par ses réponses."
+        },
+        "synthese": {
+          "intro": "Deux chiffres résument votre évaluation. Le premier dit à quel point, d'après vous, vous voulez la même vie à deux : il compare vos réponses à celles que vous prêtez à votre partenaire. Le second dit comment vous vous sentez dans le couple en ce moment, et comment vous pensez que votre partenaire s'y sent.",
+          "alignement": "Votre alignement, vu par vous",
+          "alignementAide": "L'accord entre vos réponses et celles que vous imaginez. Les sujets décisifs comptent triple.",
+          "climatAide": "Comment vous vivez le couple en ce moment, et comment vous pensez que votre partenaire le vit."
+        },
+        "carte": {
+          "intro": "Chaque barre montre l'accord entre vos réponses et celles que vous prêtez à votre partenaire, de 0 à 100 %. Les sujets où vous ne saviez pas répondre n'entrent pas dans le score : ils sont comptés à part."
+        },
+        "conversations": {
+          "intro": "Les sujets où vous pensez ne pas voir les choses comme votre partenaire, sur ce qui compte le plus, un par domaine. Ce sont vos hypothèses : chaque conversation commence par vérifier si vous avez bien deviné."
+        },
+        "bloquants": {
+          "intro": "Des écarts, d'après vous, sur des questions que vous avez marquées « non négociable ». Ce sont les premiers sujets à vérifier avec votre partenaire, sans chercher à convaincre ce soir-là : d'abord comprendre.",
+          "nnIntro": "Les sujets sur lesquels vous avez dit ne pas pouvoir faire de compromis, avec votre réponse."
+        },
+        "climat": {
+          "intro": "Ces questions ne cherchent pas un accord : elles disent comment vous vivez le couple en ce moment, et comment vous pensez que votre partenaire le vit. Un écart ici veut dire que, d'après vous, vous ne vivez pas la même relation.",
+          "parDomaineAide": "Pour les domaines qui ont des questions de ressenti, votre bien-être et celui que vous prêtez à votre partenaire, sur la même ligne, de 0 à 100 %."
+        },
+        "roles": {
+          "intro": "Sur chaque sujet, la ligne va de « surtout {{a}} » à « surtout {{b}} ». Le premier repère est votre réponse, le second ce que {{b}} répondrait d'après vous."
+        },
+        "domaines": {
+          "intro": "Toutes vos réponses, domaine par domaine : d'abord ce sur quoi vous pensez être d'accord, puis vos différences supposées, de la plus importante à la plus légère, et ce que vous ne savez pas."
+        },
+        "fin": {
+          "accordsTexte": "Sur {{total}} questions où vous avez su répondre pour votre partenaire, vous pensez avoir la même réponse {{n}} fois, soit {{part}} %.",
+          "socleAide": "Les sujets décisifs sur lesquels vous êtes sûr(e) de penser comme votre partenaire, sur tous ceux qui vous ont été posés."
+        },
+        "suite": {
+          "p1": "Un rapport ne change rien tout seul : ce qui compte, c'est ce que vous en faites. Vous l'avez fait seul(e), et c'est déjà une façon d'y voir clair. Voici comment s'y prendre pour la suite.",
+          "conseils": [
+            "Relisez d'abord vos zones d'ombre : ce sont des questions simples à poser à {{nom}}, sans parler du rapport si vous préférez.",
+            "Vérifiez vos hypothèses une à une, en commençant par les conversations du rapport : « je pensais que tu dirais... c'est ça ? »",
+            "Choisissez un moment calme, sans téléphone, et pas au milieu d'une tension.",
+            "Parlez de ce que vous ressentez (« moi, j'ai peur que... ») plutôt que de ce que l'autre fait.",
+            "Si {{nom}} ne veut pas en parler pour l'instant, ce rapport vous sert quand même : il dit ce qui compte pour vous, et ce qui ne passe pas. Un conseiller conjugal peut aussi vous recevoir seul(e)."
+          ],
+          "refaire": "Refaire l'évaluation à deux, quand {{nom}} sera d'accord, remplacera vos hypothèses par ses réponses. Beaucoup de couples la font à chaque grande étape : emménager, se marier, avoir un enfant."
+        }
       },
       "ecran": {
         "telecharger": "Télécharger le PDF",

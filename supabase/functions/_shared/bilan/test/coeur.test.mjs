@@ -33,6 +33,8 @@ test('chaque question a un identifiant unique et un type connu', () => {
       vus.add(q.id);
       assert.ok(['echelle', 'choix', 'qui', 'etat'].includes(q.type), q.id);
       assert.ok(Number.isInteger(q.n) && q.n >= 2, q.id);
+      assert.ok([1, 2, 3].includes(q.poids), q.id + ' : poids');
+      if (q.decisif) assert.equal(q.poids, 3, q.id + ' : une question décisive pèse 3');
       for (const [x, y] of q.proches || []) assert.ok(x < q.n && y < q.n, q.id);
       if (q.siRep) for (const ref of Object.keys(q.siRep)) assert.ok(C.INDEX[ref], q.id + ' → ' + ref);
     }
@@ -237,4 +239,83 @@ test('accorder et remplir', () => {
   assert.equal(C.accorder('{a|b|c}', null), 'c');
   assert.equal(C.remplir('Surtout {autre}', { autre: 'Léa' }), 'Surtout Léa');
   assert.equal(C.remplir('{inconnu}', {}), '{inconnu}');
+});
+
+test('les poids : une question décisive pèse 3, le score d\'un domaine suit les poids', () => {
+  const ra = toutRepondre(SIT, () => 1);
+  const rb = { ...ra };
+  for (const [id, v] of Object.entries(ra)) if (C.INDEX[id].q.type === 'qui') rb[id] = 4 - v;
+  // Un écart complet sur une question de poids 1 (rangement) pèse moins
+  // qu'un écart complet sur une question de poids 3 (l'étranger, décisive).
+  const legere = C.analyser(SIT, { reponses: { ...ra, quo3: 0 } }, { reponses: { ...rb, quo3: 3 } });
+  const lourde = C.analyser(SIT, { reponses: { ...ra, log6: 0 } }, { reponses: { ...rb, log6: 3 } });
+  const quotidien = legere.domaines.find((d) => d.id === 'quotidien').score;
+  const logement = lourde.domaines.find((d) => d.id === 'logement').score;
+  assert.ok(quotidien > logement, quotidien + ' > ' + logement);
+  // Et la question lourde passe devant dans les divergences.
+  const deux = C.analyser(SIT, { reponses: { ...ra, quo3: 0, log6: 0 } }, { reponses: { ...rb, quo3: 3, log6: 3 } });
+  assert.equal(deux.divergences[0], 'log6');
+  assert.deepEqual(deux.forces.length, 3);
+  assert.ok(deux.chantiers.includes('logement'));
+  assert.ok(!deux.forces.some((f) => deux.chantiers.includes(f)));
+});
+
+test('le climat est pondéré : le bonheur pèse plus que connaître la vie de l\'autre', () => {
+  const ra = toutRepondre(SIT, () => 0);
+  const rb = { ...ra };
+  for (const [id, v] of Object.entries(ra)) if (C.INDEX[id].q.type === 'qui') rb[id] = 4 - v;
+  const bonheur = C.analyser(SIT, { reponses: ra }, { reponses: { ...rb, met1: 3 } });
+  const vie = C.analyser(SIT, { reponses: ra }, { reponses: { ...rb, met12: 3 } });
+  assert.ok(bonheur.meteoB < vie.meteoB);
+  const dom = bonheur.domaines.find((d) => d.id === 'meteo');
+  assert.equal(dom.climatA, 100);
+  assert.ok(dom.climatB < 100);
+  assert.equal(bonheur.domaines.find((d) => d.id === 'argent').climatA, null);
+});
+
+test('mode solo : la perception remplace l\'autre, « je ne sais pas » fait une zone d\'ombre', () => {
+  const ra = toutRepondre(SIT, () => 1);
+  const percu = {};
+  for (const [id, v] of Object.entries(ra)) percu[id] = C.INDEX[id].q.type === 'qui' ? 4 - v : v;
+  // Trois sujets où la personne ne sait pas, dont une question décisive.
+  percu.arg1 = C.INCONNU; percu.enf1 = C.INCONNU; percu.met4 = C.INCONNU;
+  // Et un écart qu'elle imagine.
+  percu.log6 = 3;
+  const a = C.analyser(SIT, { reponses: ra, nn: ['log6'], percu }, null, 'solo');
+  assert.equal(a.mode, 'solo');
+  assert.equal(a.compte.inconnus, 3);
+  assert.deepEqual(a.inconnus.map((i) => i.id).sort(), ['arg1', 'enf1', 'met4']);
+  assert.ok(a.inconnus.find((i) => i.id === 'enf1').decisif);
+  assert.ok(!a.items.find((i) => i.id === 'arg1'), 'une perception inconnue n\'est pas comparée');
+  assert.ok(!a.etats.find((e) => e.id === 'met4'));
+  assert.equal(a.domaines.find((d) => d.id === 'argent').inconnus, 1);
+  assert.ok(a.ombre > 0 && a.ombre < 10, 'ombre ' + a.ombre);
+  assert.equal(a.bandeOmbre, 'peu');
+  assert.equal(a.items.find((i) => i.id === 'log6').statut, 'bloquant');
+  assert.deepEqual(a.nonNegociables.b, [], 'en solo, l\'autre n\'a rien marqué');
+  // Le mode duo ignore percu.
+  const duo = C.analyser(SIT, { reponses: ra, percu }, { reponses: ra });
+  assert.equal(duo.mode, 'duo');
+  assert.equal(duo.compte.inconnus, 0);
+  assert.equal(duo.ombre, null);
+});
+
+test('progression et validation en solo : chaque question attend sa perception', () => {
+  const rep = toutRepondre(SIT, () => 0);
+  const total = C.progression(SIT, rep).total;
+  assert.equal(C.progression(SIT, rep, {}).repondu, 0);
+  assert.equal(C.progression(SIT, rep, {}).total, total);
+  const percu = {};
+  for (const id of Object.keys(rep)) percu[id] = C.INCONNU;
+  assert.equal(C.progression(SIT, rep, percu).repondu, total);
+  assert.ok(C.complet(SIT, rep, percu));
+  assert.ok(!C.complet(SIT, rep, {}));
+  assert.ok(C.complet(SIT, rep), 'en duo, les réponses suffisent');
+  assert.deepEqual(C.valideReponses({ quo3: 1 }, [], { quo3: -1 }).percu, { quo3: -1 });
+  assert.ok(C.valideReponses({ quo3: 1 }, [], { quo3: -2 }).erreur);
+  assert.ok(C.valideReponses({ quo3: 1 }, [], { quo3: 4 }).erreur);
+  assert.ok(C.valideReponses({ quo3: 1 }, [], { zzz: 0 }).erreur);
+  assert.ok(C.valideReponses({ quo3: 1 }, [], [1]).erreur);
+  assert.equal(C.valideReponses({ quo3: 1 }).percu, undefined);
+  assert.ok(C.modeValide('solo') && C.modeValide('duo') && !C.modeValide('trio'));
 });

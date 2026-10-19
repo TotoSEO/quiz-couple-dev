@@ -1,7 +1,8 @@
 // Des rapports d'exemple, pour vérifier le gabarit dans les cinq langues et
 // dans les cas difficiles (prénoms de trente signes, couple sans genre
-// déclaré, couple d'accord sur tout, couple d'accord sur rien), avec les
-// mêmes contrôles que la fabrique. Les couples sont inventés.
+// déclaré, couple d'accord sur tout, couple d'accord sur rien, évaluation
+// faite seul(e) avec peu ou beaucoup de « je ne sais pas »), avec les mêmes
+// contrôles que la fabrique. Les couples sont inventés.
 //
 //   node bilan/exemples.mjs <dossier de sortie> [langue...]
 //
@@ -34,8 +35,10 @@ export const PRENOMS = {
 };
 const LONGS = ['Anna-Katharina Schwarzenberger', 'Maximilian-Alexander Ostermann'];
 
-// pareil : la chance que B réponde comme A ; voisin : à une case.
-export function couple({ lang, graine = 7, pareil = 0.55, voisin = 0.25, climat = 0.75, prenoms, genres = ['f', 'h'] }) {
+// pareil : la chance que B réponde comme A ; voisin : à une case. En solo
+// (`solo`), les réponses de B deviennent ce que A imagine (a.percu), et
+// `inconnu` est la chance que A réponde « je ne sais pas » à une question.
+export function couple({ lang, graine = 7, pareil = 0.55, voisin = 0.25, climat = 0.75, prenoms, genres = ['f', 'h'], solo = false, inconnu = 0.15 }) {
   const r = hasard(graine);
   const situation = { ensemble: 'oui', duree: '3a10', engagement: 'rien', enfants: 'non', enfantsAvant: 'non', proprio: 'non', animal: 'non' };
   const A = {};
@@ -63,8 +66,21 @@ export function couple({ lang, graine = 7, pareil = 0.55, voisin = 0.25, climat 
   }
   const decisives = Object.keys(A).filter((id) => C.INDEX[id].q.decisif);
   const p = prenoms || PRENOMS[lang] || PRENOMS.fr;
+  if (solo) {
+    const percu = {};
+    for (const id of Object.keys(A)) percu[id] = r() < inconnu ? C.INCONNU : B[id];
+    return {
+      lang,
+      mode: 'solo',
+      situation,
+      finiLe: '2026-10-18T19:30:00Z',
+      a: { prenom: p[0], genre: genres[0], reponses: A, nn: decisives.slice(0, 2), percu },
+      b: { prenom: p[1], genre: genres[1] },
+    };
+  }
   return {
     lang,
+    mode: 'duo',
     situation,
     finiLe: '2026-10-18T19:30:00Z',
     a: { prenom: p[0], genre: genres[0], reponses: A, nn: decisives.slice(0, 2) },
@@ -78,6 +94,8 @@ export function jeuxDEssai(lang) {
     { nom: 'longs', d: couple({ lang, graine: 11, prenoms: LONGS, genres: [null, null], pareil: 0.3, voisin: 0.2, climat: 0.4 }) },
     { nom: 'proches', d: couple({ lang, graine: 3, pareil: 0.92, voisin: 0.08, climat: 0.95, genres: ['h', 'f'] }) },
     { nom: 'eloignes', d: couple({ lang, graine: 5, pareil: 0.05, voisin: 0.1, climat: 0.1, genres: ['f', 'f'] }) },
+    { nom: 'solo', d: couple({ lang, graine: 17, solo: true, inconnu: 0.15, genres: ['h', 'f'] }) },
+    { nom: 'solo-ombre', d: couple({ lang, graine: 19, solo: true, inconnu: 0.45, pareil: 0.35, voisin: 0.25, climat: 0.5, prenoms: LONGS, genres: [null, null] }) },
   ];
 }
 
