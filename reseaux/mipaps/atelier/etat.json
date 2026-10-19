@@ -1,12 +1,12 @@
 {
-  "genere_le": "2026-10-18T07:59:42.421Z",
+  "genere_le": "2026-10-19T03:13:33.192Z",
   "langue": "fr",
   "compte": {
     "nom": "mipaps_stories",
     "actif": true
   },
   "fuseau": "Europe/Paris",
-  "aujourdhui": "2026-10-18",
+  "aujourdhui": "2026-10-19",
   "melange": {
     "midi": "mipaps-post",
     "soir": {
@@ -20,7 +20,7 @@
     },
     "matin": "mipaps-anime"
   },
-  "reserve_jours": 22,
+  "reserve_jours": 21,
   "a_remplir": [
     {
       "jour": "2026-11-09",
@@ -1136,6 +1136,21 @@
       "jour": "2027-01-26",
       "creneau": "soir",
       "categorie": "mipaps-statique"
+    },
+    {
+      "jour": "2027-01-27",
+      "creneau": "matin",
+      "categorie": "mipaps-anime"
+    },
+    {
+      "jour": "2027-01-27",
+      "creneau": "midi",
+      "categorie": "mipaps-post"
+    },
+    {
+      "jour": "2027-01-27",
+      "creneau": "soir",
+      "categorie": "mipaps-histoire"
     }
   ],
   "a_corriger": [],
@@ -1399,7 +1414,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": "on s'engueule pour la vaisselle. on s'endort collés.",
       "erreur": null
     },
@@ -1408,7 +1423,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-carrousel",
       "categorie": "mipaps-histoire",
-      "statut": "rendu",
+      "statut": "publie",
       "texte": null,
       "erreur": null
     },
@@ -1427,7 +1442,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "rendu",
-      "texte": "j'ai trop hâte de me blottir",
+      "texte": "j'ai trop hâte de me blottir contre toi ce soir",
       "erreur": null
     },
     {
@@ -1453,7 +1468,7 @@
       "creneau": "midi",
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "j'ai froid. viens.",
       "erreur": null
     },
@@ -1462,7 +1477,7 @@
       "creneau": "soir",
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
-      "statut": "a_rendre",
+      "statut": "rendu",
       "texte": "tu me manques déjà et t'es parti depuis 4 minutes",
       "erreur": null
     },
@@ -1481,7 +1496,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "liste de courses",
+      "texte": "notre liste de courses",
       "erreur": null
     },
     {
@@ -1517,7 +1532,7 @@
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
       "statut": "a_rendre",
-      "texte": "j'ai pas besoin de grand-chose, juste toi et des frites.",
+      "texte": "t'es la personne à qui je veux raconter les trucs nuls de ma journée",
       "erreur": null
     },
     {
@@ -1535,7 +1550,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "t'es où ?",
+      "texte": "je t'écris « t'es où ? » alors que t'es dans la pièce d'à côté",
       "erreur": null
     },
     {
@@ -1571,7 +1586,7 @@
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
       "statut": "a_rendre",
-      "texte": "promis, je te garde",
+      "texte": "même fâchée, je veux que tu restes à côté",
       "erreur": null
     },
     {
@@ -1616,7 +1631,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "je t'aime plus que les frites.",
+      "texte": "ton pull est mieux sur moi",
       "erreur": null
     },
     {
@@ -1652,7 +1667,7 @@
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
       "statut": "a_rendre",
-      "texte": "ma maison, c'est là où t'es",
+      "texte": "j'adore quand tu t'endors au milieu d'une phrase",
       "erreur": null
     },
     {
@@ -1670,7 +1685,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "ok j'avoue c'était moi",
+      "texte": "ok j'avoue c'est moi qui ai mangé la dernière part",
       "erreur": null
     },
     {
@@ -1697,7 +1712,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "bon. je vais te faire confiance sur ce coup-là.",
+      "texte": "je suis pas fâchée.",
       "erreur": null
     },
     {
@@ -1751,7 +1766,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "6 h de crise pour finir sur « c'est pas si grave »",
+      "texte": "on s'est disputés une heure et plus personne se souvient pourquoi",
       "erreur": null
     },
     {
@@ -1760,7 +1775,7 @@
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
       "statut": "a_rendre",
-      "texte": "merci d'être toi",
+      "texte": "je t'aime même quand tu manges dans mon assiette",
       "erreur": null
     },
     {
@@ -1832,7 +1847,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "mouahaha tu peux plus partir maintenant",
+      "texte": "nan mais regarde ça",
       "erreur": null
     },
     {
@@ -1913,7 +1928,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "JE T'AIME !!!",
+      "texte": "ce qu'on mange quand on sait pas quoi manger",
       "erreur": null
     },
     {
@@ -1967,7 +1982,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "merci d'avoir été là le jour où j'ai pas répondu au téléphone.",
+      "texte": "je sais que c'est toi rien qu'à ta façon de fermer la porte en rentrant.",
       "erreur": null
     },
     {
@@ -1985,7 +2000,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "mais je dis rien.",
+      "texte": "t'as entendu ce bruit ?",
       "erreur": null
     },
     {
@@ -2003,7 +2018,7 @@
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
       "statut": "a_rendre",
-      "texte": "t'es mon endroit préféré",
+      "texte": "on a nos blagues que personne d'autre comprend",
       "erreur": null
     },
     {
@@ -2021,7 +2036,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "quand je suis normale, il croit que je suis triste.",
+      "texte": "« t'as quoi ? » « rien, c'est juste ma tête »",
       "erreur": null
     },
     {
@@ -2030,7 +2045,7 @@
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
       "statut": "a_rendre",
-      "texte": "je t'aime en silence aussi",
+      "texte": "quand ça va pas, c'est ton nom que je cherche dans mon téléphone",
       "erreur": null
     },
     {
@@ -2057,7 +2072,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "on est à 400 km l'un de l'autre. je compte les jours avant vendredi.",
+      "texte": "avant de dormir, chez nous",
       "erreur": null
     },
     {
@@ -2066,7 +2081,7 @@
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
       "statut": "a_rendre",
-      "texte": "le bonnet est resté sur ta tête toute la nuit",
+      "texte": "les mêmes films de noël chaque année, et on pleure toujours au même moment",
       "erreur": null
     },
     {
@@ -2084,7 +2099,7 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "le plus beau cadeau c'est toi. (mais j'ai aimé les frites aussi)",
+      "texte": "noël dans ta famille : j'en peux plus et on me ressert quand même",
       "erreur": null
     },
     {
@@ -2093,7 +2108,7 @@
       "gabarit": "mipaps-statique",
       "categorie": "mipaps-statique",
       "statut": "a_rendre",
-      "texte": "bonne année mon amoureux. encore une avec toi.",
+      "texte": "on avait prévu de faire la fête toute la nuit. on dormait avant minuit.",
       "erreur": null
     },
     {
@@ -2102,14 +2117,14 @@
       "gabarit": "mipaps-post",
       "categorie": "mipaps-post",
       "statut": "a_rendre",
-      "texte": "nouvelle année et toujours la même équipe, avec les mêmes frites.",
+      "texte": "nouvelle année, même résolution : se coucher plus tôt. l'an dernier, on a tenu jusqu'au 2 janvier.",
       "erreur": null
     }
   ],
   "idees": [],
   "prochain_creneau": {
     "mipaps-anime": {
-      "jour": "2026-10-19",
+      "jour": "2026-10-20",
       "creneau": "matin"
     },
     "mipaps-statique": {
@@ -2117,7 +2132,7 @@
       "creneau": "soir"
     },
     "mipaps-histoire": {
-      "jour": "2026-10-18",
+      "jour": "2026-10-19",
       "creneau": "soir"
     },
     "mipaps-post": {
@@ -2237,6 +2252,34 @@
       "vues": 242,
       "partages": 0,
       "enregistrements": 1
+    },
+    {
+      "variante_id": "cdcbec6a-af81-4446-bbe2-d0c06bc7847f",
+      "releve": "j7",
+      "vues": 255,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "a6c79621-e0dd-48e2-b664-1fd3a33451b6",
+      "releve": "j7",
+      "vues": 0,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "ec1d8f45-f73a-45f2-bf23-5f4434f82e11",
+      "releve": "j7",
+      "vues": 0,
+      "partages": 0,
+      "enregistrements": 0
+    },
+    {
+      "variante_id": "d657f00d-a17f-4d62-af7f-2eb25019ac2c",
+      "releve": "j7",
+      "vues": 192,
+      "partages": 0,
+      "enregistrements": 0
     }
   ]
 }
